@@ -1,0 +1,1906 @@
+
+Log Entry : 15:36:21 2024年10月7日 
+Error page: http://10.211.55.3:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Exception while reading from stream
+   在 Npgsql.Internal.NpgsqlReadBuffer.<<Ensure>g__EnsureLong|40_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.<<ReadMessage>g__ReadMessageSequential|43_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.<Read>d__42.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.Read()
+   在 System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   在 System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   在 System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16869
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 275
+
+------------------------------------
+
+Log Entry : 19:14:39 2024年10月7日 
+Error page: http://10.211.55.3:5000/Source/Web/TTWorkPlanGanttForProject.aspx?pid=473&verID=0&BusinessType=COMPARE
+可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 TTWorkPlanGanttForProject.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTWorkPlanGanttForProject.aspx.cs:行号 151
+
+------------------------------------
+
+Log Entry : 22:58:08 2024年10月7日 
+URL: http://10.211.55.3:5000/Source/Web/TTReqHandlePage.aspx?ModuleName=需求管理&ModuleType=SYSTEM
+Message 未将对象引用设置到对象的实例。
+   在 TTReqHandlePage.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTReqHandlePage.aspx.cs:行号 26
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 22:59:47 2024年10月7日 
+URL: http://10.211.55.3:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopMainTop.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 38
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 23:05:27 2024年10月7日 
+URL: http://10.211.55.3:5000/Source/Web/TakeTopLRExLeft.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopLRExLeft.AsyncWork() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopLRExLeft.aspx.cs:行号 85
+   在 TakeTopLRExLeft.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopLRExLeft.aspx.cs:行号 27
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 23:05:47 2024年10月7日 
+URL: http://10.211.55.3:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopMainTop.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 38
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 10:58:01 2024年10月8日 
+URL: http://10.211.55.3:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:行号 31
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 6:51:53 2024年10月11日 
+Error page: 
+Exception while writing to stream
+   在 Npgsql.Internal.NpgsqlWriteBuffer.<Flush>d__28.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.<<ExecuteReader>g__NonMultiplexingWriteWrapper|107_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16843
+   在 ShareClass.LoadLanguageForDropList(DropDownList DL_Language) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 854
+   在 _default.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\default.aspx.cs:行号 125
+
+------------------------------------
+
+Log Entry : 6:51:53 2024年10月11日 
+URL: http://10.211.55.3:5000/Source/Web/TTUserPWDFindSAAS.aspx
+Message 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+
+
+------------------------------------
+
+Log Entry : 6:51:54 2024年10月11日 
+URL: http://10.211.55.3:5000/Source/Web/TTUserRegisteredSAAS.aspx
+Message 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+
+
+------------------------------------
+
+Log Entry : 6:52:03 2024年10月11日 
+Error page: 
+3D000: ���ݿ� "taketopdecmpdb" ������
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlConnector.<Open>d__183.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.ConnectorPool.<OpenNewConnector>d__41.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.ConnectorPool.<<Rent>g__RentAsync|38_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnection.<<Open>g__OpenAsync|45_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16843
+   在 ShareClass.LoadLanguageForDropList(DropDownList DL_Language) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 854
+   在 _default.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\default.aspx.cs:行号 125
+
+------------------------------------
+
+Log Entry : 6:52:03 2024年10月11日 
+URL: http://10.211.55.3:5000/Source/Web/TTUserPWDFindSAAS.aspx
+Message 3D000: ���ݿ� "taketopdecmpdb" ������
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlConnector.<Open>d__183.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.ConnectorPool.<OpenNewConnector>d__41.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.ConnectorPool.<<Rent>g__RentAsync|38_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnection.<<Open>g__OpenAsync|45_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 TakeTopSecurity.TakeTopLicense.biWfPGGZOgPbkKqFrNx(Object , Object , Object )
+   在 TakeTopSecurity.TakeTopLicense.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName)
+   在 TakeTopSecurity.TakeTopLicense.GetVerType(String strServerName)
+   在 TTUserPWDFindSAAS.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTUserPWDFindSAAS.aspx.cs:行号 35
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 6:52:03 2024年10月11日 
+URL: http://10.211.55.3:5000/Source/Web/TTUserRegisteredSAAS.aspx
+Message 3D000: ���ݿ� "taketopdecmpdb" ������
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlConnector.<Open>d__183.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.ConnectorPool.<OpenNewConnector>d__41.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.ConnectorPool.<<Rent>g__RentAsync|38_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnection.<<Open>g__OpenAsync|45_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 TakeTopSecurity.TakeTopLicense.biWfPGGZOgPbkKqFrNx(Object , Object , Object )
+   在 TakeTopSecurity.TakeTopLicense.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName)
+   在 TakeTopSecurity.TakeTopLicense.GetVerType(String strServerName)
+   在 TTUserRegisteredSAAS.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTUserRegisteredSAAS.aspx.cs:行号 36
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 14:05:46 2024年10月11日 
+URL: http://10.211.55.3:5000/Source/Web/TTProjectTaskManageMain.aspx?ModuleName=项目任务管理&ModuleType=SYSTEM
+Message 未将对象引用设置到对象的实例。
+   在 TTProjectTaskManageMain.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTProjectTaskManageMain.aspx.cs:行号 22
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 14:50:16 2024年10月11日 
+URL: http://10.211.55.3:5000/Source/Web/TTTaskHandlePage.aspx?ModuleName=我的任务&ModuleType=SYSTEM
+Message 未将对象引用设置到对象的实例。
+   在 TTTaskHandlePage.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTTaskHandlePage.aspx.cs:行号 26
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 16:46:47 2024年10月13日 
+Error page: http://10.211.55.3:5000/Source/Web/TTWorkPlanGanttForStandardProjectPlan.aspx?pid=483
+可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 TTWorkPlanGanttForStandardProjectPlan.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTWorkPlanGanttForStandardProjectPlan.aspx.cs:行号 101
+
+------------------------------------
+
+Log Entry : 16:46:48 2024年10月13日 
+Error page: http://10.211.55.3:5000/Source/Web/TTWorkPlanGanttForProject.aspx?pid=483
+可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 TTWorkPlanGanttForProject.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTWorkPlanGanttForProject.aspx.cs:行号 151
+
+------------------------------------
+
+Log Entry : 16:48:00 2024年10月13日 
+Error page: http://10.211.55.3:5000/Source/Web/TTWorkPlanGanttForStandardProjectPlan.aspx?pid=483
+可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 TTWorkPlanGanttForStandardProjectPlan.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTWorkPlanGanttForStandardProjectPlan.aspx.cs:行号 101
+
+------------------------------------
+
+Log Entry : 16:48:00 2024年10月13日 
+Error page: http://10.211.55.3:5000/Source/Web/TTWorkPlanGanttForProject.aspx?pid=483
+可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 TTWorkPlanGanttForProject.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTWorkPlanGanttForProject.aspx.cs:行号 151
+
+------------------------------------
+
+Log Entry : 16:48:05 2024年10月13日 
+Error page: http://10.211.55.3:5000/Source/Web/TTWorkPlanGanttForProject.aspx?pid=483
+可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 TTWorkPlanGanttForProject.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTWorkPlanGanttForProject.aspx.cs:行号 151
+
+------------------------------------
+
+Log Entry : 16:48:54 2024年10月13日 
+Error page: http://10.211.55.3:5000/Source/Web/TTWorkPlanGanttForProject.aspx?pid=483
+可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 TTWorkPlanGanttForProject.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTWorkPlanGanttForProject.aspx.cs:行号 151
+
+------------------------------------
+
+Log Entry : 16:56:37 2024年10月13日 
+URL: http://10.211.55.3:5000/Source/Web/TTPersonalSpaceTask.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceTask.AsyncWork() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceTask.aspx.cs:行号 89
+   在 TTPersonalSpaceTask.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceTask.aspx.cs:行号 75
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:13:02 2024年10月15日 
+URL: http://10.211.55.3:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:行号 31
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 20:50:01 2024年10月15日 
+URL: http://10.211.55.3:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:行号 31
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 20:00:20 2024年10月16日 
+Error page: 
+Exception while writing to stream
+   在 Npgsql.Internal.NpgsqlWriteBuffer.<Flush>d__28.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.<<ExecuteReader>g__NonMultiplexingWriteWrapper|107_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16843
+   在 ShareClass.LoadLanguageForDropList(DropDownList DL_Language) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 854
+   在 _default.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\default.aspx.cs:行号 125
+
+------------------------------------
+
+Log Entry : 20:00:20 2024年10月16日 
+URL: http://10.211.55.3:5000/Source/Web/TTUserPWDFindSAAS.aspx
+Message 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+
+
+------------------------------------
+
+Log Entry : 21:38:25 2024年10月16日 
+Error page: http://10.211.55.3:5000/Source/Web/TTWorkPlanGanttForStandardProjectPlan.aspx?pid=452
+可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 TTWorkPlanGanttForStandardProjectPlan.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTWorkPlanGanttForStandardProjectPlan.aspx.cs:行号 101
+
+------------------------------------
+
+Log Entry : 21:38:31 2024年10月16日 
+Error page: http://10.211.55.3:5000/Source/Web/TTWorkPlanGanttForProject.aspx?pid=483
+可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 TTWorkPlanGanttForProject.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTWorkPlanGanttForProject.aspx.cs:行号 151
+
+------------------------------------
+
+Log Entry : 21:38:32 2024年10月16日 
+Error page: http://10.211.55.3:5000/Source/Web/TTWorkPlanGanttForStandardProjectPlan.aspx?pid=483
+可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 TTWorkPlanGanttForStandardProjectPlan.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTWorkPlanGanttForStandardProjectPlan.aspx.cs:行号 101
+
+------------------------------------
+
+Log Entry : 17:14:53 2024年10月18日 
+Error page: 
+Exception while writing to stream
+   在 Npgsql.Internal.NpgsqlWriteBuffer.<Flush>d__28.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.<<ExecuteReader>g__NonMultiplexingWriteWrapper|107_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16843
+   在 ShareClass.LoadLanguageForDropList(DropDownList DL_Language) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 854
+   在 _default.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\default.aspx.cs:行号 125
+
+------------------------------------
+
+Log Entry : 17:14:54 2024年10月18日 
+URL: http://10.211.55.3:5000/Source/Web/TTUserPWDFindSAAS.aspx
+Message 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+
+
+------------------------------------
+
+Log Entry : 17:14:54 2024年10月18日 
+URL: http://10.211.55.3:5000/Source/Web/TTUserRegisteredSAAS.aspx
+Message 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+
+
+------------------------------------
+
+Log Entry : 15:47:26 2024年10月20日 
+Error page: 
+Exception while connecting
+   在 Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   在 Npgsql.NpgsqlConnector.<RawOpen>d__187.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnector.<Open>d__183.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.ConnectorPool.<OpenNewConnector>d__41.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.ConnectorPool.<<Rent>g__RentAsync|38_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnection.<<Open>g__OpenAsync|45_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16843
+   在 ShareClass.LoadLanguageForDropList(DropDownList DL_Language) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 854
+   在 _default.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\default.aspx.cs:行号 125
+
+------------------------------------
+
+Log Entry : 16:44:30 2024年10月20日 
+Error page: 
+Exception while connecting
+   在 Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   在 Npgsql.NpgsqlConnector.<RawOpen>d__187.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnector.<Open>d__183.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.ConnectorPool.<OpenNewConnector>d__41.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.ConnectorPool.<<Rent>g__RentAsync|38_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnection.<<Open>g__OpenAsync|45_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16843
+   在 ShareClass.LoadLanguageForDropList(DropDownList DL_Language) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 854
+   在 _default.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\default.aspx.cs:行号 125
+
+------------------------------------
+
+Log Entry : 16:44:48 2024年10月20日 
+URL: http://10.211.55.3:5000/Source/Web/TTUserPWDFindSAAS.aspx
+Message 由于目标计算机积极拒绝，无法连接。
+   在 Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+
+
+------------------------------------
+
+Log Entry : 16:44:50 2024年10月20日 
+URL: http://10.211.55.3:5000/Source/Web/TTUserRegisteredSAAS.aspx
+Message 由于目标计算机积极拒绝，无法连接。
+   在 Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+
+
+------------------------------------
+
+Log Entry : 17:04:18 2024年10月20日 
+Error page: 
+Exception while connecting
+   在 Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   在 Npgsql.NpgsqlConnector.<RawOpen>d__187.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnector.<Open>d__183.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.ConnectorPool.<OpenNewConnector>d__41.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.ConnectorPool.<<Rent>g__RentAsync|38_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnection.<<Open>g__OpenAsync|45_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16843
+   在 ShareClass.LoadLanguageForDropList(DropDownList DL_Language) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 854
+   在 _default.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\default.aspx.cs:行号 125
+
+------------------------------------
+
+Log Entry : 17:13:42 2024年10月20日 
+Error page: 
+Exception while connecting
+   在 Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   在 Npgsql.NpgsqlConnector.<RawOpen>d__187.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnector.<Open>d__183.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.ConnectorPool.<OpenNewConnector>d__41.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.ConnectorPool.<<Rent>g__RentAsync|38_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnection.<<Open>g__OpenAsync|45_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16843
+   在 ShareClass.LoadLanguageForDropList(DropDownList DL_Language) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 854
+   在 _default.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\default.aspx.cs:行号 125
+
+------------------------------------
+
+Log Entry : 17:14:27 2024年10月20日 
+URL: http://10.211.55.3:5000/Source/Web/TTUserPWDFindSAAS.aspx
+Message 由于目标计算机积极拒绝，无法连接。
+   在 Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+
+
+------------------------------------
+
+Log Entry : 17:14:30 2024年10月20日 
+URL: http://10.211.55.3:5000/Source/Web/TTUserRegisteredSAAS.aspx
+Message 由于目标计算机积极拒绝，无法连接。
+   在 Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+
+
+------------------------------------
+
+Log Entry : 12:30:02 2024年10月21日 
+Error page: 
+42P01: 关系 "t_systemlanguage" 不存在
+
+POSITION: 49
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16843
+   在 ShareClass.LoadLanguageForDropList(DropDownList DL_Language) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 854
+   在 _default.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\default.aspx.cs:行号 125
+
+------------------------------------
+
+Log Entry : 12:30:49 2024年10月21日 
+URL: http://10.211.55.3:5000/Source/Web/TTUserPWDFindSAAS.aspx
+Message 42P01: 关系 "t_licenseverification" 不存在
+
+POSITION: 32
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 TakeTopSecurity.TakeTopLicense.biWfPGGZOgPbkKqFrNx(Object , Object , Object )
+   在 TakeTopSecurity.TakeTopLicense.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName)
+   在 TakeTopSecurity.TakeTopLicense.GetVerType(String strServerName)
+   在 TTUserPWDFindSAAS.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTUserPWDFindSAAS.aspx.cs:行号 35
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 12:30:49 2024年10月21日 
+URL: http://10.211.55.3:5000/Source/Web/TTUserRegisteredSAAS.aspx
+Message 42P01: 关系 "t_licenseverification" 不存在
+
+POSITION: 32
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 TakeTopSecurity.TakeTopLicense.biWfPGGZOgPbkKqFrNx(Object , Object , Object )
+   在 TakeTopSecurity.TakeTopLicense.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName)
+   在 TakeTopSecurity.TakeTopLicense.GetVerType(String strServerName)
+   在 TTUserRegisteredSAAS.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTUserRegisteredSAAS.aspx.cs:行号 36
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 12:38:02 2024年10月21日 
+Error page: 
+42P01: 关系 "t_systemlanguage" 不存在
+
+POSITION: 49
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16843
+   在 ShareClass.LoadLanguageForDropList(DropDownList DL_Language) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 854
+   在 _default.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\default.aspx.cs:行号 125
+
+------------------------------------
+
+Log Entry : 13:14:24 2024年10月21日 
+URL: http://10.211.55.3:5001/Source/Web/TTUserRegisteredSAAS.aspx
+Message 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+
+
+------------------------------------
+
+Log Entry : 13:14:27 2024年10月21日 
+URL: http://10.211.55.3:5001/Source/Web/TTUserPWDFindSAAS.aspx
+Message 由于目标计算机积极拒绝，无法连接。
+   在 Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+
+
+------------------------------------
+
+Log Entry : 13:16:40 2024年10月21日 
+Error page: 
+3D000: ���ݿ� "taketopdecmpdb" ������
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlConnector.<Open>d__183.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.ConnectorPool.<OpenNewConnector>d__41.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.ConnectorPool.<<Rent>g__RentAsync|38_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnection.<<Open>g__OpenAsync|45_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16843
+   在 ShareClass.LoadLanguageForDropList(DropDownList DL_Language) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 854
+   在 _default.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\default.aspx.cs:行号 125
+
+------------------------------------
+
+Log Entry : 13:16:54 2024年10月21日 
+Error page: 
+42P01: 关系 "t_systemlanguage" 不存在
+
+POSITION: 49
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16843
+   在 ShareClass.LoadLanguageForDropList(DropDownList DL_Language) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 854
+   在 _default.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\default.aspx.cs:行号 125
+
+------------------------------------
+
+Log Entry : 13:32:31 2024年10月21日 
+URL: http://10.211.55.3:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:行号 31
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:32:31 2024年10月21日 
+URL: http://10.211.55.3:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:行号 31
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:32:41 2024年10月21日 
+URL: http://10.211.55.3:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:行号 31
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 8:08:59 2024年10月22日 
+URL: http://10.211.55.3:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:行号 31
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 11:10:51 2024年10月24日 
+Error page: 
+Exception while writing to stream
+   在 Npgsql.Internal.NpgsqlWriteBuffer.<Flush>d__28.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.<<ExecuteReader>g__NonMultiplexingWriteWrapper|107_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16843
+   在 ShareClass.LoadLanguageForDropList(DropDownList DL_Language) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 854
+   在 _default.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\default.aspx.cs:行号 125
+
+------------------------------------
+
+Log Entry : 11:10:51 2024年10月24日 
+URL: http://10.211.55.3:5000/Source/Web/TTUserPWDFindSAAS.aspx
+Message 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+
+
+------------------------------------
+
+Log Entry : 11:10:52 2024年10月24日 
+URL: http://10.211.55.3:5000/Source/Web/TTUserRegisteredSAAS.aspx
+Message 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+
+
+------------------------------------
+
+Log Entry : 11:22:31 2024年10月24日 
+Error page: 
+Exception while writing to stream
+   在 Npgsql.Internal.NpgsqlWriteBuffer.<Flush>d__28.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.<<ExecuteReader>g__NonMultiplexingWriteWrapper|107_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16843
+   在 ShareClass.LoadLanguageForDropList(DropDownList DL_Language) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 854
+   在 _default.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\default.aspx.cs:行号 125
+
+------------------------------------
+
+Log Entry : 11:22:32 2024年10月24日 
+URL: http://10.211.55.3:5000/Source/Web/TTUserPWDFindSAAS.aspx
+Message 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+
+
+------------------------------------
+
+Log Entry : 11:22:32 2024年10月24日 
+URL: http://10.211.55.3:5000/Source/Web/TTUserRegisteredSAAS.aspx
+Message 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+
+
+------------------------------------
+
+Log Entry : 18:37:58 2024年10月25日 
+Error page: 
+Exception while writing to stream
+   在 Npgsql.Internal.NpgsqlWriteBuffer.<Flush>d__28.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.<<ExecuteReader>g__NonMultiplexingWriteWrapper|107_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16843
+   在 ShareClass.LoadLanguageForDropList(DropDownList DL_Language) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 854
+   在 _default.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\default.aspx.cs:行号 125
+
+------------------------------------
+
+Log Entry : 18:37:58 2024年10月25日 
+URL: http://10.211.55.3:5000/Source/Web/TTUserPWDFindSAAS.aspx
+Message 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+
+
+------------------------------------
+
+Log Entry : 12:53:42 2024年10月26日 
+URL: http://10.211.55.3:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopMainTop.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 38
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 23:25:30 2024年10月26日 
+URL: http://10.211.55.3:5000/Source/Web/TTDIYWorkFlowForm.aspx?TargetID=385
+Message 未能找到文件“E:\TakeTopDECMPWinSolution\Source\Web\Doc\WorkFlowTemplate\特种合同评审表单2024092500094828.xsn”。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   在 System.IO.File.Open(String path, FileMode mode)
+   在 TakeTopWF.WFSubmitHandle.RegisterWorkFlowTemplate(String strTemName, HttpContext Context, String uri, String PublishUrl, Label xdoc, Label LB_XSNFile)
+   在 _TTDIYWorkFlowForm.DL_WorkFlowTemplate_SelectedIndexChanged(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTDIYWorkFlowForm.aspx.cs:行号 64
+   在 System.Web.UI.WebControls.ListControl.OnSelectedIndexChanged(EventArgs e)
+   在 System.Web.UI.WebControls.DropDownList.RaisePostDataChangedEvent()
+   在 System.Web.UI.WebControls.DropDownList.System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent()
+   在 System.Web.UI.Page.RaiseChangedEvents()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 10:48:58 2024年10月27日 
+Error page: http://10.211.55.3:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Unknown message code: 0
+   在 Npgsql.Util.PGUtil.ValidateBackendMessageCode(BackendMessageCode code)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.<<ReadMessage>g__ReadMessageSequential|43_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.<Read>d__42.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.Read()
+   在 System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   在 System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   在 System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16869
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 275
+
+------------------------------------
+
+Log Entry : 10:48:58 2024年10月27日 
+Error page: http://10.211.55.3:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Unknown message code: 0
+   在 Npgsql.Util.PGUtil.ValidateBackendMessageCode(BackendMessageCode code)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16869
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 275
+
+------------------------------------
+
+Log Entry : 10:48:58 2024年10月27日 
+Error page: http://10.211.55.3:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Unknown message code: 0
+   在 Npgsql.Util.PGUtil.ValidateBackendMessageCode(BackendMessageCode code)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16869
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 275
+
+------------------------------------
+
+Log Entry : 10:48:58 2024年10月27日 
+Error page: http://10.211.55.3:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Unknown message code: 0
+   在 Npgsql.Util.PGUtil.ValidateBackendMessageCode(BackendMessageCode code)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16869
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 275
+
+------------------------------------
+
+Log Entry : 10:48:58 2024年10月27日 
+Error page: http://10.211.55.3:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Unknown message code: 0
+   在 Npgsql.Util.PGUtil.ValidateBackendMessageCode(BackendMessageCode code)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16869
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 275
+
+------------------------------------
+
+Log Entry : 10:48:58 2024年10月27日 
+Unknown message code: 0
+
+------------------------------------
+
+Log Entry : 10:48:58 2024年10月27日 
+Unknown message code: 0
+
+------------------------------------
+
+Log Entry : 11:00:05 2024年10月27日 
+Error page: http://10.211.55.3:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Exception while reading from stream
+   在 Npgsql.Internal.NpgsqlReadBuffer.<<Ensure>g__EnsureLong|40_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.<<ReadMessage>g__ReadMessageSequential|43_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.<Read>d__42.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.Read()
+   在 System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   在 System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   在 System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16869
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 275
+
+------------------------------------
+
+Log Entry : 16:10:19 2024年10月30日 
+Error page: http://10.211.55.3:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssBluezh-CN
+Exception while reading from stream
+   在 Npgsql.Internal.NpgsqlReadBuffer.<<Ensure>g__EnsureLong|40_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.<<ReadMessage>g__ReadMessageSequential|43_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.<Read>d__42.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.Read()
+   在 System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   在 System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   在 System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16869
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 275
+
+------------------------------------
+
+Log Entry : 22:04:02 2024年11月3日 
+Error page: 
+Exception while writing to stream
+   在 Npgsql.Internal.NpgsqlWriteBuffer.<Flush>d__28.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.<<ExecuteReader>g__NonMultiplexingWriteWrapper|107_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16843
+   在 ShareClass.LoadLanguageForDropList(DropDownList DL_Language) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 854
+   在 _default.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\default.aspx.cs:行号 125
+
+------------------------------------
+
+Log Entry : 22:04:03 2024年11月3日 
+URL: http://10.211.55.3:5000/Source/Web/TTUserRegisteredSAAS.aspx
+Message 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+
+
+------------------------------------
+
+Log Entry : 22:04:03 2024年11月3日 
+URL: http://10.211.55.3:5000/Source/Web/TTUserPWDFindSAAS.aspx
+Message 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+
+
+------------------------------------
+
+Log Entry : 5:30:59 2024年11月7日 
+Error page: http://10.211.55.3:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssBluezh-CN
+Exception while reading from stream
+   在 Npgsql.Internal.NpgsqlReadBuffer.<<Ensure>g__EnsureLong|40_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.<<ReadMessage>g__ReadMessageSequential|43_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.<Read>d__42.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.Read()
+   在 System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   在 System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   在 System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName)
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode)
+
+------------------------------------
+
+Log Entry : 17:56:34 2024年11月10日 
+Error page: http://10.211.55.3:5000/Source/Web/TTWorkPlanGanttForProject.aspx?pid=482
+可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 TTWorkPlanGanttForProject.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTWorkPlanGanttForProject.aspx.cs:行号 151
+
+------------------------------------
+
+Log Entry : 17:56:34 2024年11月10日 
+Error page: http://10.211.55.3:5000/Source/Web/TTWorkPlanGanttForStandardProjectPlan.aspx?pid=482
+可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 TTWorkPlanGanttForStandardProjectPlan.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTWorkPlanGanttForStandardProjectPlan.aspx.cs:行号 101
+
+------------------------------------
+
+Log Entry : 17:57:11 2024年11月10日 
+Error page: http://10.211.55.3:5000/Source/Web/TTWorkPlanGanttForStandardProjectPlan.aspx?pid=482
+可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 TTWorkPlanGanttForStandardProjectPlan.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTWorkPlanGanttForStandardProjectPlan.aspx.cs:行号 101
+
+------------------------------------
+
+Log Entry : 17:57:11 2024年11月10日 
+Error page: http://10.211.55.3:5000/Source/Web/TTWorkPlanGanttForProject.aspx?pid=482
+可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 TTWorkPlanGanttForProject.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTWorkPlanGanttForProject.aspx.cs:行号 151
+
+------------------------------------
+
+Log Entry : 17:57:20 2024年11月10日 
+Error page: http://10.211.55.3:5000/Source/Web/TTWorkPlanGanttForProject.aspx?pid=482
+可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 TTWorkPlanGanttForProject.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTWorkPlanGanttForProject.aspx.cs:行号 151
+
+------------------------------------
+
+Log Entry : 17:58:19 2024年11月10日 
+Error page: http://10.211.55.3:5000/Source/Web/TTWorkPlanGanttForProject.aspx?pid=482
+可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 TTWorkPlanGanttForProject.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTWorkPlanGanttForProject.aspx.cs:行号 151
+
+------------------------------------
+
+Log Entry : 10:38:06 2024年11月12日 
+URL: http://10.211.55.3:5000/Source/Web/TTProjectRelatedItem.aspx?ProjectID=502
+Message 未将对象引用设置到对象的实例。
+   在 TTProjectRelatedItem.ExelToDBTestForItem() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTProjectRelatedItem.aspx.cs:行号 852
+   在 TTProjectRelatedItem.ExcelToDataTrainingForItem() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTProjectRelatedItem.aspx.cs:行号 683
+   在 TTProjectRelatedItem.btn_ExcelToDataTraining_Click(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTProjectRelatedItem.aspx.cs:行号 343
+   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 10:05:48 2024年11月25日 
+URL: http://10.211.55.3:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssBluezh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:行号 31
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 10:05:48 2024年11月25日 
+URL: http://10.211.55.3:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssBluezh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:行号 31
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 10:05:49 2024年11月25日 
+URL: http://10.211.55.3:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssBluezh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:行号 31
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 15:52:49 2024年11月26日 
+URL: http://172.21.176.1:5000/Source/Web/TakeTopLRExInnerMDI.aspx
+Message 未将对象引用设置到对象的实例。
+   在 ASP.taketoplrexinnermdi_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopLRExInnerMDI.aspx:行号 34
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 15:52:56 2024年11月26日 
+URL: http://172.21.176.1:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssBluezh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:行号 31
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 15:59:30 2024年11月26日 
+Error page: http://10.211.55.3:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssBluezh-CN
+Unknown message code: 8
+   在 Npgsql.Util.PGUtil.ValidateBackendMessageCode(BackendMessageCode code)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.<<ReadMessage>g__ReadMessageSequential|43_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.<Read>d__42.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.Read()
+   在 System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   在 System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   在 System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16869
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 322
+
+------------------------------------
+
+Log Entry : 15:59:30 2024年11月26日 
+Error page: http://10.211.55.3:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssBluezh-CN
+Unknown message code: 0
+   在 Npgsql.Util.PGUtil.ValidateBackendMessageCode(BackendMessageCode code)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16869
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 322
+
+------------------------------------
+
+Log Entry : 15:59:30 2024年11月26日 
+Error page: http://10.211.55.3:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssBluezh-CN
+Unknown message code: 0
+   在 Npgsql.Util.PGUtil.ValidateBackendMessageCode(BackendMessageCode code)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16869
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 322
+
+------------------------------------
+
+Log Entry : 15:59:30 2024年11月26日 
+Error page: http://10.211.55.3:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssBluezh-CN
+Unknown message code: 0
+   在 Npgsql.Util.PGUtil.ValidateBackendMessageCode(BackendMessageCode code)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16869
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 322
+
+------------------------------------
+
+Log Entry : 15:59:31 2024年11月26日 
+Error page: http://10.211.55.3:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssBluezh-CN
+Unknown message code: 0
+   在 Npgsql.Util.PGUtil.ValidateBackendMessageCode(BackendMessageCode code)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16869
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 322
+
+------------------------------------
+
+Log Entry : 15:59:31 2024年11月26日 
+Unknown message code: 0
+
+------------------------------------
+
+Log Entry : 15:59:49 2024年11月26日 
+Unknown message code: 0
+
+------------------------------------
+
+Log Entry : 16:00:10 2024年11月26日 
+Unknown message code: 0
+
+------------------------------------
+
+Log Entry : 16:00:31 2024年11月26日 
+Unknown message code: 0
+
+------------------------------------
+
+Log Entry : 16:00:52 2024年11月26日 
+Unknown message code: 0
+
+------------------------------------
+
+Log Entry : 16:05:06 2024年11月26日 
+URL: http://10.211.55.3:5000/Source/Web/TTPersonalSpaceWorkflowForOuter.aspx?UserCode=C5468&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceWorkflowForOuter.AsyncWork() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceWorkflowForOuter.aspx.cs:行号 82
+   在 TTPersonalSpaceWorkflowForOuter.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceWorkflowForOuter.aspx.cs:行号 67
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 16:07:03 2024年11月26日 
+URL: http://10.211.55.3:5000/Source/Web/TakeTopCSMainTop.aspx?UserCode=C5468&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopCSMainTop.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopCSMainTop.aspx.cs:行号 20
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 16:07:03 2024年11月26日 
+URL: http://10.211.55.3:5000/Source/Web/TTPersonalSpaceWorkflowForOuter.aspx?UserCode=C5468&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceWorkflowForOuter.AsyncWork() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceWorkflowForOuter.aspx.cs:行号 82
+   在 TTPersonalSpaceWorkflowForOuter.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceWorkflowForOuter.aspx.cs:行号 67
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 16:18:58 2024年11月26日 
+URL: http://10.211.55.3:5000/Source/Web/TTPersonalSpaceProject.aspx?UserCode=C7094&Flag=CssBluezh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceProject.AsyncWork() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceProject.aspx.cs:行号 85
+   在 TTPersonalSpaceProject.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceProject.aspx.cs:行号 71
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 16:18:58 2024年11月26日 
+URL: http://10.211.55.3:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssBluezh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:行号 31
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 11:41:24 2024年11月27日 
+URL: http://10.211.55.3:5000/Source/Web/TTPersonalSpaceToDoList.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceToDoList.AsyncWork() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceToDoList.aspx.cs:行号 76
+   在 TTPersonalSpaceToDoList.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceToDoList.aspx.cs:行号 62
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 11:41:29 2024年11月27日 
+URL: http://10.211.55.3:5000/Source/Web/TTPersonalSpaceToDoList.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceToDoList.AsyncWork() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceToDoList.aspx.cs:行号 76
+   在 TTPersonalSpaceToDoList.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceToDoList.aspx.cs:行号 62
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 17:27:53 2024年11月28日 
+Error page: http://10.211.55.3:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Exception while reading from stream
+   在 Npgsql.Internal.NpgsqlReadBuffer.<<Ensure>g__EnsureLong|40_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.<<ReadMessage>g__ReadMessageSequential|43_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.<Read>d__42.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.Read()
+   在 System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   在 System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   在 System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16879
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 312
+
+------------------------------------
+

@@ -1,0 +1,19 @@
+
+Log Entry : 20:10:50 2024年7月29日 
+kkk
+
+------------------------------------
+
+Log Entry : 12:08:43 2024年7月31日 
+URL: http://10.211.55.3:5000/Web/WFDesigner/TTTakeTopMFChartViewJS.aspx?IdentifyString=2020060217063966
+Message 只能有一个“page”指令。
+   在 System.Web.UI.TemplateParser.ProcessError(String message)
+   在 System.Web.UI.TemplateParser.ProcessDirective(String directiveName, IDictionary directive)
+   在 System.Web.UI.BaseTemplateParser.ProcessDirective(String directiveName, IDictionary directive)
+   在 System.Web.UI.TemplateControlParser.ProcessDirective(String directiveName, IDictionary directive)
+   在 System.Web.UI.PageParser.ProcessDirective(String directiveName, IDictionary directive)
+   在 System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+
+
+------------------------------------
+
