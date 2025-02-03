@@ -100,6 +100,7 @@
                 </div>
                     <div class="loginright">
                     <div class="loginForm clearfix">
+                           <h2></h2>
                         <!-- <h3>taketop login</h3> -->
                         <p>
                             <em class="emt"><asp:Label ID="LB_UserID" runat="server" Text="<%$ Resources:lang,UserAccount%>"></asp:Label>:</em>
