@@ -19,9 +19,9 @@
 
         #AboveDiv {
             max-width: 1024px;
-            width: expression (document.body.clientWidth >= 1024? "1024px" : "auto" ));
+            width: expression(document.body.clientWidth >= 1024? "1024px" : "auto");
             min-width: 277px;
-            width: expression (document.body.clientWidth <= 277? "277px" : "auto" ));
+            width: expression(document.body.clientWidth <= 277? "277px" : "auto");
         }
 
         input#TB_UserCode {
@@ -87,7 +87,8 @@
         }
 
         a:active, button:active, input[type="submit"]:active {
-            /*background: url(ImagesSkin/MouseActive.gif);*/
+            background: #fe3c69;
+            opacity: 0.8;
         }
 
         #info {
