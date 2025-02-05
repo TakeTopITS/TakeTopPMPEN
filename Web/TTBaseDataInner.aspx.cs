@@ -1,5 +1,6 @@
 ﻿using ProjectMgt.BLL;
 using ProjectMgt.Model;
+
 using System;
 using System.Collections;
 using System.Data;
@@ -33,6 +34,9 @@ public partial class TTBaseDataInner : System.Web.UI.Page
         if (Page.IsPostBack == false)
         {
             LB_SelectedProjectType.Text = "";
+
+            LoadAIInterface();
+
             LoadProjectType();
             LoadProjectStatus("", strLangCode);
 
@@ -51,6 +55,42 @@ public partial class TTBaseDataInner : System.Web.UI.Page
 
             ShareClass.LoadLanguageForDropList(ddlLangSwitcher);
             ddlLangSwitcher.SelectedValue = strLangCode;
+        }
+    }
+
+    protected void BT_AISave_Click(object sender, EventArgs e)
+    {
+        string strHQL;
+
+        string strAIType, strAIURL, strAIModel;
+
+        strAIType = DL_AIType.SelectedValue.Trim();
+        strAIURL = TB_AIURL.Text.Trim();
+        strAIModel = TB_AIModel.Text.Trim();
+
+        strHQL = string.Format(@"Update T_AIInterface Set AIType = '{0}', URL = '{1}', Model = '{2}'", strAIType, strAIURL, strAIModel);
+
+        try
+        {
+            ShareClass.RunSqlCommand(strHQL);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+        }
+        catch
+        {
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+        }
+    }
+
+    protected void LoadAIInterface()
+    {
+        string strHQL;
+        strHQL = "Select * From T_AIInterface";
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_AIInterface");
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+            DL_AIType.SelectedValue = ds.Tables[0].Rows[0]["AIType"].ToString().Trim();
+            TB_AIURL.Text = ds.Tables[0].Rows[0]["URL"].ToString().Trim();
+            TB_AIModel.Text = ds.Tables[0].Rows[0]["Model"].ToString().Trim();
         }
     }
 
@@ -306,7 +346,7 @@ public partial class TTBaseDataInner : System.Web.UI.Page
 
             strHQL = "Insert Into T_FunInforDialBox(InforName,SQLCode ,Status,CreateTime,BoxType,LinkAddress ,IsSendMsg ,IsSendEmail,SortNumber,MobileLinkAddress ,IsForceInfor,UserType,HomeName,LangCode)";
             strHQL += " Select InforName,SQLCode ,Status,CreateTime,BoxType,LinkAddress ,IsSendMsg ,IsSendEmail,SortNumber,MobileLinkAddress ,IsForceInfor,UserType,HomeName," + "'" + strLangCode + "'" + " From T_FunInforDialBox";
-            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(InforName)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(InforName)) || ltrim(rtrim(LangCode))  From T_FunInforDialBox Where LangCode = " + "'" + strLangCode + "'" + ")";            ShareClass.RunSqlCommand(strHQL);
+            strHQL += " Where LangCode = '" + strFromLangCode + "' and ltrim(rtrim(InforName)) || " + "'" + strLangCode + "'" + " Not in (Select ltrim(rtrim(InforName)) || ltrim(rtrim(LangCode))  From T_FunInforDialBox Where LangCode = " + "'" + strLangCode + "'" + ")"; ShareClass.RunSqlCommand(strHQL);
             ShareClass.RunSqlCommand(strHQL);
 
             LoadWLType(strLangCode);

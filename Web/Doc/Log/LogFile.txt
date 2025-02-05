@@ -1903,4 +1903,929 @@ Exception while reading from stream
    在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 312
 
 ------------------------------------
+
+Log Entry : 21:36:50 2025年2月3日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message 现在无法开始异步操作。异步操作只能在异步处理程序或模块中开始，或在页生存期中的特定事件过程中开始。如果此异常在执行 Page 时发生，请确保 Page 标记为 <%@ Page Async="true" %>。此异常也可能表明试图调用“异步无效”方法，在 ASP.NET 请求处理内一般不支持这种方法。相反，该异步方法应该返回一个任务，而调用方应该等待该任务。
+   在 System.Web.AspNetSynchronizationContext.OperationStarted()
+   在 System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Create()
+   在 TTAIHandlerByDeepSeek.btnGenerateText_Click(Object sender, EventArgs e)
+   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 21:37:18 2025年2月3日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message 分析特性“page”时出错: 无法从其“Page”属性的字符串表示形式“”创建“System.Web.UI.Page”类型的对象。
+   在 System.Web.UI.TemplateParser.ProcessError(String message)
+   在 System.Web.UI.TemplateControlParser.ProcessUnknownMainDirectiveAttribute(String filter, String attribName, String value)
+   在 System.Web.UI.PageParser.ProcessUnknownMainDirectiveAttribute(String filter, String attribName, String value)
+   在 System.Web.UI.TemplateParser.ProcessMainDirective(IDictionary mainDirective)
+   在 System.Web.UI.TemplateControlParser.ProcessMainDirective(IDictionary mainDirective)
+   在 System.Web.UI.PageParser.ProcessMainDirective(IDictionary mainDirective)
+   在 System.Web.UI.TemplateParser.ProcessDirective(String directiveName, IDictionary directive)
+   在 System.Web.UI.BaseTemplateParser.ProcessDirective(String directiveName, IDictionary directive)
+   在 System.Web.UI.TemplateControlParser.ProcessDirective(String directiveName, IDictionary directive)
+   在 System.Web.UI.PageParser.ProcessDirective(String directiveName, IDictionary directive)
+   在 System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+
+
+------------------------------------
+
+Log Entry : 21:37:46 2025年2月3日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message 现在无法开始异步操作。异步操作只能在异步处理程序或模块中开始，或在页生存期中的特定事件过程中开始。如果此异常在执行 Page 时发生，请确保 Page 标记为 <%@ Page Async="true" %>。此异常也可能表明试图调用“异步无效”方法，在 ASP.NET 请求处理内一般不支持这种方法。相反，该异步方法应该返回一个任务，而调用方应该等待该任务。
+   在 System.Web.AspNetSynchronizationContext.OperationStarted()
+   在 System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Create()
+   在 TTAIHandlerByDeepSeek.btnGenerateText_Click(Object sender, EventArgs e)
+   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 23:59:45 2025年2月3日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message 提供的请求 URI 无效。请求 URI 必须为绝对 URI 或必须设置 BaseAddress。
+   在 System.Net.Http.HttpClient.PrepareRequestMessage(HttpRequestMessage request)
+   在 System.Net.Http.HttpClient.SendAsync(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken)
+   在 System.Net.Http.HttpClient.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   在 System.Net.Http.HttpClient.PostAsync(Uri requestUri, HttpContent content, CancellationToken cancellationToken)
+   在 System.Net.Http.HttpClient.PostAsync(String requestUri, HttpContent content)
+   在 TTAIHandlerByDeepSeek.<CallLocalApi>d__10.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 52
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__9.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 32
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 0:04:47 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message Additional text encountered after finished reading JSON content: {. Path '', line 2, position 0.
+   在 Newtonsoft.Json.JsonTextReader.Read()
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   在 TTAIHandlerByDeepSeek.<CallLocalApi>d__10.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 54
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__9.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 26
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 0:12:53 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message Additional text encountered after finished reading JSON content: {. Path '', line 2, position 0.
+   在 Newtonsoft.Json.JsonTextReader.Read()
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   在 TTAIHandlerByDeepSeek.<CallLocalApi>d__10.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 55
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__9.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 26
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 12:11:24 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'System.Collections.Generic.List`1[TTAIHandlerByDeepSeek+ResponseItem]' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'model', line 1, position 9.
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   在 TTAIHandlerByDeepSeek.<CallLocalApi>d__10.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 56
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__9.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 26
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 12:15:58 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message After parsing a value an unexpected character was encountered: {. Path '[0]', line 2, position 0.
+   在 Newtonsoft.Json.JsonTextReader.ParsePostValue(Boolean ignoreComments)
+   在 Newtonsoft.Json.JsonTextReader.Read()
+   在 Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   在 TTAIHandlerByDeepSeek.<CallLocalApi>d__10.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 60
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__9.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 26
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 12:24:57 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message 输入字符串的格式不正确。
+   在 System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   在 System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   在 System.String.Format(String format, Object[] args)
+   在 TTAIHandlerByDeepSeek.<CallLocalApi>d__10.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 55
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__9.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 26
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 12:27:18 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message 输入字符串的格式不正确。
+   在 System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   在 System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   在 System.String.Format(String format, Object[] args)
+   在 TTAIHandlerByDeepSeek.<CallLocalApi>d__10.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 55
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__9.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 26
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 12:28:52 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message 输入字符串的格式不正确。
+   在 System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   在 System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   在 System.String.Format(String format, Object[] args)
+   在 TTAIHandlerByDeepSeek.<CallLocalApi>d__10.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 55
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__9.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 26
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 12:34:15 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message After parsing a value an unexpected character was encountered: {. Path '[0]', line 2, position 0.
+   在 Newtonsoft.Json.JsonTextReader.ParsePostValue(Boolean ignoreComments)
+   在 Newtonsoft.Json.JsonTextReader.Read()
+   在 Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   在 TTAIHandlerByDeepSeek.<CallLocalApi>d__10.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 60
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__9.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 26
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 12:43:23 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message After parsing a value an unexpected character was encountered: {. Path '[0]', line 2, position 0.
+   在 Newtonsoft.Json.JsonTextReader.ParsePostValue(Boolean ignoreComments)
+   在 Newtonsoft.Json.JsonTextReader.Read()
+   在 Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   在 Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   在 Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   在 Newtonsoft.Json.Linq.JArray.Parse(String json, JsonLoadSettings settings)
+   在 Newtonsoft.Json.Linq.JArray.Parse(String json)
+   在 TTAIHandlerByDeepSeek.<CallLocalApi>d__10.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 62
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__9.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 27
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 12:43:50 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message Error reading JArray from JsonReader. Current JsonReader item is not an array: StartObject. Path '', line 1, position 1.
+   在 Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   在 Newtonsoft.Json.Linq.JArray.Parse(String json, JsonLoadSettings settings)
+   在 Newtonsoft.Json.Linq.JArray.Parse(String json)
+   在 TTAIHandlerByDeepSeek.<CallLocalApi>d__10.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 62
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__9.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 27
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 12:44:57 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message Error reading JArray from JsonReader. Current JsonReader item is not an array: StartObject. Path '', line 1, position 1.
+   在 Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   在 Newtonsoft.Json.Linq.JArray.Parse(String json, JsonLoadSettings settings)
+   在 Newtonsoft.Json.Linq.JArray.Parse(String json)
+   在 TTAIHandlerByDeepSeek.<CallLocalApi>d__10.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 64
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__9.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 28
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 12:45:19 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message Error reading JArray from JsonReader. Current JsonReader item is not an array: StartObject. Path '', line 1, position 1.
+   在 Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   在 Newtonsoft.Json.Linq.JArray.Parse(String json, JsonLoadSettings settings)
+   在 Newtonsoft.Json.Linq.JArray.Parse(String json)
+   在 TTAIHandlerByDeepSeek.<CallLocalApi>d__10.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 64
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__9.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 28
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 12:45:45 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message Error reading JArray from JsonReader. Current JsonReader item is not an array: StartObject. Path '', line 1, position 1.
+   在 Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   在 Newtonsoft.Json.Linq.JArray.Parse(String json, JsonLoadSettings settings)
+   在 Newtonsoft.Json.Linq.JArray.Parse(String json)
+   在 TTAIHandlerByDeepSeek.<CallLocalApi>d__10.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 64
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__9.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 28
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 12:46:24 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message Error reading JArray from JsonReader. Current JsonReader item is not an array: StartObject. Path '', line 1, position 1.
+   在 Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   在 Newtonsoft.Json.Linq.JArray.Parse(String json, JsonLoadSettings settings)
+   在 Newtonsoft.Json.Linq.JArray.Parse(String json)
+   在 TTAIHandlerByDeepSeek.<CallLocalApi>d__10.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 64
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__9.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 28
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 12:47:21 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message Error reading JArray from JsonReader. Current JsonReader item is not an array: StartObject. Path '', line 1, position 1.
+   在 Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   在 Newtonsoft.Json.Linq.JArray.Parse(String json, JsonLoadSettings settings)
+   在 Newtonsoft.Json.Linq.JArray.Parse(String json)
+   在 TTAIHandlerByDeepSeek.<CallLocalApi>d__10.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 64
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__9.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 28
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 13:22:21 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message 索引和长度必须引用该字符串内的位置。
+参数名: length
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 TTAIHandlerByDeepSeek.<CallLocalApi>d__10.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 56
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__9.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 27
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 13:22:39 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message StartIndex 不能小于 0。
+参数名: startIndex
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 TTAIHandlerByDeepSeek.<CallLocalApi>d__10.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 56
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__9.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 27
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 14:20:15 2025年2月4日 
+URL: http://localhost:5000/Source/Web/TakeTopLRExInnerMDI.aspx
+Message 未将对象引用设置到对象的实例。
+   在 ASP.taketoplrexinnermdi_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopLRExInnerMDI.aspx:行号 34
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 15:37:28 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message 42703: 字段 "aitype" 不存在
+
+POSITION: 8
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16853
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__1.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 31
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 15:40:58 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message 42703: 字段 "aitype" 不存在
+
+POSITION: 8
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16853
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__1.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 31
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 15:45:01 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message 42703: 字段 "aitype" 不存在
+
+POSITION: 8
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16853
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__1.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 31
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 15:47:07 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message 42703: 字段 "aitype" 不存在
+
+POSITION: 8
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16853
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__1.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 31
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Util.WithinCancellableCallbackTaskAwaitable.WithinCancellableCallbackTaskAwaiter.GetResult()
+   在 System.Web.UI.Page.<ProcessRequestMainAsync>d__523.MoveNext()
+
+
+------------------------------------
+
+Log Entry : 15:52:22 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message 正在中止线程。
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__12.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 65
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+
+
+------------------------------------
+
+Log Entry : 15:56:37 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message 正在中止线程。
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__12.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 65
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+
+
+------------------------------------
+
+Log Entry : 15:58:07 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message 正在中止线程。
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__12.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 65
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+
+
+------------------------------------
+
+Log Entry : 17:03:20 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message 正在中止线程。
+   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.AbortCurrentThread()
+   在 System.Web.HttpResponse.End()
+   在 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   在 System.Web.HttpResponse.Redirect(String url)
+   在 TTAIHandlerByDeepSeek.<Page_Load>d__11.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 21
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+
+
+------------------------------------
+
+Log Entry : 17:04:37 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message 正在中止线程。
+   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.AbortCurrentThread()
+   在 System.Web.HttpResponse.End()
+   在 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   在 System.Web.HttpResponse.Redirect(String url)
+   在 TTAIHandlerByDeepSeek.<Page_Load>d__11.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 21
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+
+
+------------------------------------
+
+Log Entry : 17:05:36 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTAIHandlerByDeepSeek.aspx
+Message 正在中止线程。
+   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.AbortCurrentThread()
+   在 System.Web.HttpResponse.End()
+   在 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   在 System.Web.HttpResponse.Redirect(String url)
+   在 TTAIHandlerByDeepSeek.<btnGenerateText_Click>d__1.MoveNext() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAIHandlerByDeepSeek.aspx.cs:行号 32
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_0(Object state)
+   在 System.Web.AspNetSynchronizationContext.<>c__DisplayClass22_0.<Post>b__0()
+   在 System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+
+
+------------------------------------
+
+Log Entry : 17:41:54 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TTBaseDataInner.aspx?ModuleName=基础数据(内置)&ModuleType=SYSTEM
+Message 未将对象引用设置到对象的实例。
+   在 TTBaseDataInner.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTBaseDataInner.aspx.cs:行号 20
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 18:38:29 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TakeTopLRExInnerMDI.aspx
+Message 未将对象引用设置到对象的实例。
+   在 ASP.taketoplrexinnermdi_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopLRExInnerMDI.aspx:行号 34
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 19:35:38 2025年2月4日 
+URL: http://192.168.2.13:5000/Source/Web/TakeTopLRExInnerMDI.aspx
+Message 未将对象引用设置到对象的实例。
+   在 ASP.taketoplrexinnermdi_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopLRExInnerMDI.aspx:行号 34
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 19:36:53 2025年2月4日 
+53300: �Բ���, �Ѿ���̫��Ŀͻ�
+
+------------------------------------
+
+Log Entry : 19:36:59 2025年2月4日 
+53300: �Բ���, �Ѿ���̫��Ŀͻ�
+
+------------------------------------
+
+Log Entry : 19:37:19 2025年2月4日 
+53300: �Բ���, �Ѿ���̫��Ŀͻ�
+
+------------------------------------
+
+Log Entry : 19:37:40 2025年2月4日 
+53300: �Բ���, �Ѿ���̫��Ŀͻ�
+
+------------------------------------
+
+Log Entry : 19:41:17 2025年2月4日 
+53300: �Բ���, �Ѿ���̫��Ŀͻ�
+
+------------------------------------
+
+Log Entry : 19:41:25 2025年2月4日 
+53300: �Բ���, �Ѿ���̫��Ŀͻ�
+
+------------------------------------
+
+Log Entry : 19:41:27 2025年2月4日 
+53300: �Բ���, �Ѿ���̫��Ŀͻ�
+
+------------------------------------
+
+Log Entry : 19:41:28 2025年2月4日 
+53300: �Բ���, �Ѿ���̫��Ŀͻ�
+
+------------------------------------
+
+Log Entry : 19:41:51 2025年2月4日 
+53300: �Բ���, �Ѿ���̫��Ŀͻ�
+
+------------------------------------
+
+Log Entry : 19:49:25 2025年2月4日 
+53300: �Բ���, �Ѿ���̫��Ŀͻ�
+
+------------------------------------
+
+Log Entry : 19:49:29 2025年2月4日 
+53300: �Բ���, �Ѿ���̫��Ŀͻ�
+
+------------------------------------
+
+Log Entry : 19:49:32 2025年2月4日 
+53300: �Բ���, �Ѿ���̫��Ŀͻ�
+
+------------------------------------
+
+Log Entry : 19:49:38 2025年2月4日 
+53300: �Բ���, �Ѿ���̫��Ŀͻ�
+
+------------------------------------
+
+Log Entry : 19:50:07 2025年2月4日 
+53300: �Բ���, �Ѿ���̫��Ŀͻ�
+
+------------------------------------
+
+Log Entry : 19:50:13 2025年2月4日 
+53300: �Բ���, �Ѿ���̫��Ŀͻ�
+
+------------------------------------
 

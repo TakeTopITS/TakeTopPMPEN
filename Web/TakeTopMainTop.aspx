@@ -238,7 +238,7 @@
                                                     <table>
                                                         <tr>
                                                             <td id="TD_LeftBarExtend" width="70px" align="right" onclick="javascript: ChangeMenu(1);" style="padding-top: 2px; padding-right: 10px; font-size: small;">
-                                                                <asp:ImageButton ID="IM_Extend" ImageUrl="ImagesSkin/extend.png" Width="23" Height="20" runat="server"  OnClick="BT_Extend_Click"/>
+                                                                <asp:ImageButton ID="IM_Extend" ImageUrl="ImagesSkin/extend.png" Width="23" Height="20" runat="server" OnClick="BT_Extend_Click" />
                                                             </td>
 
                                                             <td style="width: 70%; color: white; text-align: left; font-size: small;">
@@ -267,10 +267,20 @@
                                                                 </a>
                                                             </td>
                                                             <td width="10px">&nbsp;</td>
-                                                            <td width="20px" align="right">
-                                                                <a runat="server" class="titleSpan" href="javascript:top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTAPPQRCodeForLocalSAAS.aspx', '', 800, 600,window.location);">
-                                                                    <img src="ImagesSkin/App.png" width="22" height="22"></a>
+                                                            <td width="20px" align="left">
+                                                                <asp:HyperLink ID="HL_AIURL" runat="server" NavigateUrl="https://www.deepseek.com" Target="_blank" Visible="false">
+                                                                      <img src="ImagesSkin/AI.png" width="22" height="22" alt="">
+                                                                </asp:HyperLink>
+                                                                <a id="a_AIURL" runat="server"  class="titleSpan" href="javascript:top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTAIHandlerByDeepSeek.aspx', '', 800, 600,window.location);" visible="false">
+                                                                    <img src="ImagesSkin/AI.png" width="22" height="22" alt="">
+                                                                </a>
                                                             </td>
+                                                            <td width="10px">&nbsp;</td>
+                                                            <td width="20px" align="right">
+                                                                <a runat="server" class="titleSpan" href="javascript:top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTAPPQRCodeForLocalSAAS.aspx', '', 800, 600,window.location);" visible="false">
+                                                                    <img src="ImagesSkin/App.png" width="22" height="22" alt=""></a>
+                                                            </td>
+
                                                             <td align="right" style="display: none;">
                                                                 <asp:Button ID="BT_OpenIMByPC" CssClass="inpuIMOpen" Visible="false" runat="server"
                                                                     OnClick="BT_OpenIMByPC_Click" />

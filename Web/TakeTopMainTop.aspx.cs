@@ -38,14 +38,17 @@ public partial class TakeTopMainTop : System.Web.UI.Page
         strLangCode = Session["LangCode"].ToString();
         strUserCode = Session["UserCode"].ToString();
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickParentA", "aHandlerForSpecialPopWindow();", true);
+        //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickParentA", "aHandlerForSpecialPopWindow();", true);
         if (Page.IsPostBack == false)
         {
+            //设置AI接口URL
+            SetAIURL();
+
             if (Session["SystemVersionType"].ToString() == "SAAS")
             {
                 Response.Redirect("TakeTopMainTopSAAS.aspx");
             }
-
+        
             strUserName = ShareClass.GetUserName(strUserCode);
             LB_UserName.Text = strUserName;
             LB_SystemMsg.Text = Resources.lang.NiHao + "，" + Resources.lang.HuanYingNiShiYong + " " + System.Configuration.ConfigurationManager.AppSettings["SystemName"];       
@@ -60,6 +63,35 @@ public partial class TakeTopMainTop : System.Web.UI.Page
             LB_UnHandledCase.Text = GetUNHandledWorkCount(strUserCode, strLangCode).ToString() + " " + Resources.lang.ToDoList;
 
             AsyncWork();
+        }
+    }
+
+    //设置AI接口URL
+    public void SetAIURL()
+    {
+        string strAIType, strAIURL;
+        string strHQL;
+
+        strHQL = "Select AIType,URL,Model From T_AIInterface";
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_AIInterface");
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+            strAIType = ds.Tables[0].Rows[0]["AIType"].ToString().Trim();
+            strAIURL = ds.Tables[0].Rows[0]["URL"].ToString().Trim();
+
+            if (strAIType == "Outer")
+            {
+                HL_AIURL.Visible = true;
+                HL_AIURL.NavigateUrl = strAIURL;
+
+                a_AIURL.Visible = false;
+            }
+            else
+            {
+                a_AIURL.Visible = true;
+
+                HL_AIURL.Visible = false;
+            }
         }
     }
 

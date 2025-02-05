@@ -168,7 +168,7 @@
     <script type="text/javascript" src="js/popwindow.js"></script>
     <script type="text/javascript" language="javascript">
         $(function () {
-         
+
             window.parent.parent.document.getElementById("rightFrame").rows = '0,*';
 
             if (top.location != self.location) { } else { CloseWebPage(); }
@@ -315,7 +315,7 @@
                         <ul id="navlist">
                             <li style="padding-top: 7px;">
                                 <asp:ImageButton ID="IM_Extend" ImageUrl="ImagesSkin/extend.png" Width="23" Height="20"
-                                    OnClientClick="javascript: ChangeMenu(1);" runat="server"  OnClick="BT_Extend_Click" />
+                                    OnClientClick="javascript: ChangeMenu(1);" runat="server" OnClick="BT_Extend_Click" />
                             </li>
                             <asp:Repeater ID="RP_NewsTypeList" runat="server" OnItemCommand="RP_NewsTypeList_ItemCommand">
                                 <ItemTemplate>
@@ -357,6 +357,15 @@
                             <a runat="server" class="titleSpan" href="javascript:top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTPersonalSpaceModuleSetForUser.aspx', 'ModuleSelect', 800, 600, window.location);">
                                 <img src="ImagesSkin/ModuleSelect.png" width="22" height="22"></a>
                         </td>
+                        <td width="40px" align="center" style="padding-top: 7px; padding-bottom: 5px;">
+                            <asp:HyperLink ID="HL_AIURL" runat="server" NavigateUrl="https://www.deepseek.com" Target="_blank" Visible="false">
+                                <img src="ImagesSkin/AI.png" width="22" height="22" alt="">
+                            </asp:HyperLink>
+                            <a id="a_AIURL" runat="server" class="titleSpan" href="javascript:top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTAIHandlerByDeepSeek.aspx', '', 800, 600,window.location);" visible="false">
+                                <img src="ImagesSkin/AI.png" width="22" height="22" alt="">
+                            </a>
+                        </td>
+
                         <td width="40px" align="center" style="padding-top: 7px; padding-bottom: 5px;">
                             <a runat="server" class="titleSpan" href="javascript:top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTAPPQRCodeForLocalSAAS.aspx', '', 800, 600,window.location);">
                                 <img src="ImagesSkin/App.png" width="22" height="22"></a>

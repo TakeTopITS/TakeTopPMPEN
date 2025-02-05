@@ -35,7 +35,7 @@
                                     <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left">
-                                                <table width="665" border="0" align="left" cellpadding="0" cellspacing="0">
+                                                <table width="1565" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
@@ -65,6 +65,40 @@
                                                                     </td>
                                                                 </tr>
                                                             </table>
+                                                        </td>
+                                                        <td width="60px;"</td>
+                                                        <td>
+                                                            <table>
+                                                                <tr>
+                                                                    <td align="right">AI Seeting：</td>
+                                                                    <td>
+                                                                        <asp:Label ID="LB_AIType" runat="server" Text="AIType"></asp:Label>
+                                                                    </td>
+                                                                    <td>
+                                                                        <asp:DropDownList ID="DL_AIType" AccessKey="A" runat="server" AutoPostBack="false">
+                                                                            <asp:ListItem Value="Local" Text="Local"></asp:ListItem>
+                                                                            <asp:ListItem Value="Outer" Text="Outer"></asp:ListItem>
+
+                                                                        </asp:DropDownList>
+                                                                    </td>
+                                                                    <td>
+                                                                        <asp:Label ID="Label4" runat="server" Text="AIURL"></asp:Label>
+                                                                    </td>
+                                                                    <td>
+                                                                        <asp:TextBox ID="TB_AIURL" runat="server" Width="180px"></asp:TextBox>
+                                                                    </td>
+                                                                    <td>
+                                                                        <asp:Label ID="Label15" runat="server" Text="AIModel"></asp:Label>
+                                                                    </td>
+                                                                    <td>
+                                                                        <asp:TextBox ID="TB_AIModel" runat="server" Width="150px"></asp:TextBox>
+                                                                    </td>
+                                                                    <td>
+                                                                        <asp:Button ID="BT_AISave" runat="server" CssClass="inpu"  Text="<%$ Resources:lang,BaoCun%>" OnClick="BT_AISave_Click" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -98,7 +132,7 @@
                                                                                     <strong>
                                                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,GuanJianCi%>"></asp:Label></strong>
                                                                                 </td>
-                                                                               <%-- <td width="14%" align="center">
+                                                                                <%-- <td width="14%" align="center">
                                                                                     <strong>
                                                                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XiangMuJingLiKeGaiZhuangTai%>"></asp:Label></strong>
                                                                                 </td>
@@ -149,7 +183,7 @@
                                                                     <asp:BoundColumn DataField="KeyWord" HeaderText="关键词">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:BoundColumn>
-                                                                   <%-- <asp:BoundColumn DataField="AllowPMChangeStatus" HeaderText="项目经理可改状态">
+                                                                    <%-- <asp:BoundColumn DataField="AllowPMChangeStatus" HeaderText="项目经理可改状态">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="14%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:BoundColumn DataField="AutoRunWFAfterMakeProject" HeaderText="立项后自动发起流程">
@@ -297,7 +331,7 @@
                                                                                     <asp:TextBox ID="TB_ProjectTypeSort" runat="server" Width="30px" Text="1"></asp:TextBox></td>
 
                                                                             </tr>
-                                                                            <tr style="display:none;">
+                                                                            <tr style="display: none;">
                                                                                 <td>
                                                                                     <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,YXXMJLGXMZT%>"></asp:Label></td>
                                                                                 <td>
@@ -323,7 +357,7 @@
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                             </tr>
-                                                                             <tr style="display:none;">
+                                                                            <tr style="display: none;">
                                                                                 <td colspan="3">
                                                                                     <asp:Label ID="Label65" runat="server" Text="<%$ Resources:lang,RWJDYXJHJDYQRM%>"></asp:Label></td>
                                                                                 <td>

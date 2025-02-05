@@ -4270,4 +4270,21 @@ Insert Into T_ProModule(UserCode,ModuleName,ModuleType,UserType,ModuleDefinition
 			Update public.t_promodulelevelforpage Set pagename = 'TTProjectRelatedDocSAAS.aspx?ProjectID=' Where PageName = 'TTProjectRelatedDoc.aspxSAAS?ProjectID=';
 		</SQLText>
 	</DataBaseUpgradeFile>
+	<DataBaseUpgradeFile>
+		<ID>3568</ID>
+		<SQLText>
+			CREATE TABLE IF NOT EXISTS public.t_AIInterface
+			(
+			AItype character(20) COLLATE pg_catalog."default" NOT NULL,
+			URL character(200) COLLATE pg_catalog."default" NOT NULL,
+			Model character(200) COLLATE pg_catalog."default" NOT NULL
+			)
+		</SQLText>
+	</DataBaseUpgradeFile>
+	<DataBaseUpgradeFile>
+		<ID>3569</ID>
+		<SQLText>
+			Insert Into t_AIInterface(AIType,URL,Model) values('Local','http://127.0.0.1:11434','deepseek-r1:1.5b');
+		</SQLText>
+	</DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
