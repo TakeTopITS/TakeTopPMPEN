@@ -105,6 +105,10 @@ public partial class TTAIHandlerByDeepSeek : System.Web.UI.Page
                         string jsonString = await response.Content.ReadAsStringAsync();
 
                         jsonString = jsonString.Replace("\\u003cthink\\u003e", "").Replace("\\u003c/think\\u003e", "");
+                        jsonString = jsonString.Replace("***", "");
+                        jsonString = jsonString.Replace("**", "");
+                        jsonString = jsonString.Replace("###", "");
+                        jsonString = jsonString.Replace("##", "");
                         jsonString = jsonString.Replace("\\n", "<br>");
 
                         // 提取所有 "response": 后面的字符串
@@ -133,7 +137,7 @@ public partial class TTAIHandlerByDeepSeek : System.Web.UI.Page
                         }
 
                         // 用空格连接所有 response 值
-                        string combinedResponse = string.Join(" ", responses);
+                        string combinedResponse = string.Join("", responses);
 
                         return combinedResponse;
                     }

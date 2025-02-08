@@ -35,6 +35,7 @@
                                 </td>
                                 <td>
                                     <asp:ImageButton ID="btnGenerateText" ImageUrl="ImagesSkin/AIGenerate.png" runat="server" Text="生成" OnClick="btnGenerateText_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';" />
+
                                 </td>
                             </tr>
                         </table>
@@ -42,8 +43,13 @@
                 </div>
                 <br />
                 <asp:Label ID="lblGeneratedText" runat="server" Text=""></asp:Label>
-                <div style="display:none;">  <asp:HyperLink ID="HL_AIURL" runat="server" Target="_blank" ></asp:HyperLink></div>
-               
+                <br />
+                <br />
+                <br />
+                <div style="display: none;">
+                    <asp:HyperLink ID="HL_AIURL" runat="server" Target="_blank"></asp:HyperLink>
+                </div>
+
             </ContentTemplate>
         </asp:UpdatePanel>
         <div style="position: absolute; left: 50%; top: 50%;">
