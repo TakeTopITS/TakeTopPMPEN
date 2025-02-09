@@ -13,6 +13,19 @@
         function AIURLClick() {
 
             document.getElementById('HL_AIURL').click();
+        }
+
+      
+        //文本框加回车键功能
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                // 检查焦点是否在输入框内
+                if (document.activeElement === document.getElementById('txtPrompt')) {
+                    // 模拟点击按钮
+                    document.getElementById('btnGenerateText').click();
+                }
+            }
+        });
 
     </script>
 
