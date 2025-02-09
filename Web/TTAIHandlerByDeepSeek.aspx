@@ -15,7 +15,7 @@
             document.getElementById('HL_AIURL').click();
         }
 
-      
+
         //文本框加回车键功能
         document.addEventListener('keydown', function (event) {
             if (event.key === 'Enter') {
@@ -44,11 +44,13 @@
                                     <asp:TextBox ID="txtPrompt" runat="server" Width="500px" Height="60px" TextMode="MultiLine"></asp:TextBox>
                                 </td>
                                 <td>
+                                    <asp:ImageButton ID="btnGenerateText" ImageUrl="ImagesSkin/AIGenerate.png" runat="server" Text="生成" OnClick="btnGenerateText_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';" />
+                                </td>
+                                <td>
                                     <img id="IMG_Waiting" src="Images/Processing.gif" alt="Loading,please wait..." style="text-align: center; display: none;" />
                                 </td>
                                 <td>
-                                    <asp:ImageButton ID="btnGenerateText" ImageUrl="ImagesSkin/AIGenerate.png" runat="server" Text="生成" OnClick="btnGenerateText_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';" />
-
+                                    <asp:ImageButton ID="btnStopSeek" ImageUrl="ImagesSkin/AIStop.png" runat="server" Text="停止" OnClick="btnStopAI_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'none';" />
                                 </td>
                             </tr>
                         </table>
