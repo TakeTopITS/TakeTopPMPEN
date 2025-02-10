@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "E:\\TakeTopDECMPWinSolution\\Source\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|E:\\TakeTopDECMPWinSolution\\Source\\web\\ttaihandlerbydeepseek.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|e:\\taketopdecmpwinsolution\\source\\web\\ttaihandlerbydeepseek.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|solutionrelative:web\\ttaihandlerbydeepseek.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -18,11 +18,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TTAIHandlerByDeepSeek.aspx.cs",
+              "DocumentMoniker": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TTAIHandlerByDeepSeek.aspx.cs",
+              "RelativeDocumentMoniker": "Web\\TTAIHandlerByDeepSeek.aspx.cs",
+              "ToolTip": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TTAIHandlerByDeepSeek.aspx.cs",
+              "RelativeToolTip": "Web\\TTAIHandlerByDeepSeek.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T08:23:58.573Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -34,20 +47,7 @@
               "RelativeToolTip": "Web\\TTAIHandlerByDeepSeek.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-02-08T13:26:37.786Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TTAIHandlerByDeepSeek.aspx.cs",
-              "DocumentMoniker": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TTAIHandlerByDeepSeek.aspx.cs",
-              "RelativeDocumentMoniker": "Web\\TTAIHandlerByDeepSeek.aspx.cs",
-              "ToolTip": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TTAIHandlerByDeepSeek.aspx.cs",
-              "RelativeToolTip": "Web\\TTAIHandlerByDeepSeek.aspx.cs",
-              "ViewState": "AgIAALgAAAAAAAAAAAAUwLYAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T13:26:39.39Z",
+              "WhenOpened": "2025-02-09T08:23:57.125Z",
               "EditorCaption": ""
             }
           ]
