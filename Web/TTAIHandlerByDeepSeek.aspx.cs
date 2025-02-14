@@ -9,6 +9,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+using Microsoft.Extensions.AI;
+
 public partial class TTAIHandlerByDeepSeek : System.Web.UI.Page
 {
     protected async void Page_Load(object sender, EventArgs e)
@@ -69,6 +71,28 @@ public partial class TTAIHandlerByDeepSeek : System.Web.UI.Page
             lblGeneratedText.Text = ex.Message;
         }
     }
+
+    //private async Task<string> CallByMicrosoftAI(string apiUrl)
+    //{
+    //    // These variables are needed to access the Ollama Models
+    //    Uri modelEndpoint = new("http://localhost:11434");
+    //    string modelName = "deepseek-r1:1.5b";
+
+    //    // Initialize the chat client using OllamaChatClient - everything else the same!
+    //    IChatClient chatClient = new OllamaChatClient(modelEndpoint, modelName);
+
+    //    string question = "If I have 3 apples and eat 2, how many bananas do I have?";
+    //    var response = chatClient.CompleteStreamingAsync(question);
+
+    //    Console.WriteLine($">>> User: {question}");
+    //    Console.Write(">>>");
+    //    Console.WriteLine(">>> DeepSeek (might be a while): ");
+
+    //    await foreach (var item in response)
+    //    {
+    //        Console.Write(item);
+    //    }
+    //}
 
 
     private async Task<string> CallLocalApi(string apiUrl)
@@ -161,53 +185,6 @@ public partial class TTAIHandlerByDeepSeek : System.Web.UI.Page
 
     protected async void btnStopAI_Click(object sender, EventArgs e)
     {
-        //string localApiUrl, result;
-        //string strAIType, strAIURL;
-
-        //string strHQL;
-
-        //lblGeneratedText.Text = "";
-
-        ////if (txtPrompt.Text.Trim() == "")
-        ////{
-        ////    lblGeneratedText.Text = "Prompt can't be empty!";
-        ////    return;
-        ////}
-
-        //try
-        //{
-        //    strHQL = "Select AIType,URL,Model From T_AIInterface";
-        //    DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_AIInterface");
-        //    if (ds.Tables[0].Rows.Count > 0)
-        //    {
-        //        strAIType = ds.Tables[0].Rows[0]["AIType"].ToString().Trim();
-        //        strAIURL = ds.Tables[0].Rows[0]["URL"].ToString().Trim();
-
-        //        if (strAIType == "Local")
-        //        {
-        //            // DeepSeek 或 Ollama 的本地 API 地址
-        //            localApiUrl = strAIURL + "/api/stop"; // Ollama 的默认 API 地址
-
-        //            result = await StopAI(localApiUrl);
-
-        //            // 显示结果
-        //            lblGeneratedText.Text = result; // 假设页面上有一个 Label 控件
-        //        }
-        //        else
-        //        {
-        //            localApiUrl = strAIURL;
-                  
-        //        }
-        //    }
-        //    else
-        //    {
-                
-        //    }
-        //}
-        //catch (Exception ex)
-        //{
-            
-        //}
     }
 
     private async Task<string> StopAI(string apiUrl)

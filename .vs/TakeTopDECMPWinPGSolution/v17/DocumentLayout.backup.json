@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "E:\\TakeTopDECMPWinSolution\\Source\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|e:\\taketopdecmpwinsolution\\source\\web\\ttaihandlerbydeepseek.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|solutionrelative:web\\ttaihandlerbydeepseek.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|e:\\taketopdecmpwinsolution\\source\\web\\ttaihandlerbydeepseek.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|solutionrelative:web\\ttaihandlerbydeepseek.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|e:\\taketopdecmpwinsolution\\source\\web\\taketopsoftdownload_taketopsoftcloud.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|solutionrelative:web\\taketopsoftdownload_taketopsoftcloud.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,27 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TTAIHandlerByDeepSeek.aspx.cs",
-              "DocumentMoniker": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TTAIHandlerByDeepSeek.aspx.cs",
-              "RelativeDocumentMoniker": "Web\\TTAIHandlerByDeepSeek.aspx.cs",
-              "ToolTip": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TTAIHandlerByDeepSeek.aspx.cs",
-              "RelativeToolTip": "Web\\TTAIHandlerByDeepSeek.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-09T08:23:58.573Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TTAIHandlerByDeepSeek.aspx",
-              "DocumentMoniker": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TTAIHandlerByDeepSeek.aspx",
-              "RelativeDocumentMoniker": "Web\\TTAIHandlerByDeepSeek.aspx",
-              "ToolTip": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TTAIHandlerByDeepSeek.aspx",
-              "RelativeToolTip": "Web\\TTAIHandlerByDeepSeek.aspx",
+              "Title": "TakeTopSoftDownload_TakeTopSoftCloud.aspx",
+              "DocumentMoniker": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TakeTopSoftDownload_TakeTopSoftCloud.aspx",
+              "RelativeDocumentMoniker": "Web\\TakeTopSoftDownload_TakeTopSoftCloud.aspx",
+              "ToolTip": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TakeTopSoftDownload_TakeTopSoftCloud.aspx",
+              "RelativeToolTip": "Web\\TakeTopSoftDownload_TakeTopSoftCloud.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-02-09T08:23:57.125Z",
+              "WhenOpened": "2025-02-14T04:35:49.434Z",
               "EditorCaption": ""
             }
           ]
