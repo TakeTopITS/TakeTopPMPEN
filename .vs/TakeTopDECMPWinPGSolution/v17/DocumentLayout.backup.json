@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\TakeTopDECMPWinSolution\\Source\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|e:\\taketopdecmpwinsolution\\source\\web\\tttaketopanalystchartsetapp.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|solutionrelative:web\\tttaketopanalystchartsetapp.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|e:\\taketopdecmpwinsolution\\source\\web\\tttaketopanalystchartset.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|solutionrelative:web\\tttaketopanalystchartset.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TTTakeTopAnalystChartSetAPP.aspx",
+              "DocumentMoniker": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TTTakeTopAnalystChartSetAPP.aspx",
+              "RelativeDocumentMoniker": "Web\\TTTakeTopAnalystChartSetAPP.aspx",
+              "ToolTip": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TTTakeTopAnalystChartSetAPP.aspx",
+              "RelativeToolTip": "Web\\TTTakeTopAnalystChartSetAPP.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-02-15T15:17:13.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TTTakeTopAnalystChartSet.aspx",
+              "DocumentMoniker": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TTTakeTopAnalystChartSet.aspx",
+              "RelativeDocumentMoniker": "Web\\TTTakeTopAnalystChartSet.aspx",
+              "ToolTip": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TTTakeTopAnalystChartSet.aspx",
+              "RelativeToolTip": "Web\\TTTakeTopAnalystChartSet.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-02-15T15:17:12.179Z",
+              "EditorCaption": ""
             }
           ]
         }

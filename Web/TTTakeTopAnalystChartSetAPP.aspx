@@ -40,8 +40,8 @@
                 background-color: #663399;
             }
 
-            .card.blue {
-                background-color: #7092BE;
+            .card.grey {
+                background-color: #C0C0C0;
             }
 
             .card img {
