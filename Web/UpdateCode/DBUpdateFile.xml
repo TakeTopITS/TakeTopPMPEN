@@ -4264,15 +4264,15 @@ Insert Into T_ProModule(UserCode,ModuleName,ModuleType,UserType,ModuleDefinition
     <ID>3566</ID>
     <SQLText>SELECT setval('t_msgpushlog_id_seq', (SELECT MAX(id) FROM t_msgpushlog)+1);</SQLText>
   </DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3567</ID>
-		<SQLText>
+  <DataBaseUpgradeFile>
+    <ID>3567</ID>
+    <SQLText>
 			Update public.t_promodulelevelforpage Set pagename = 'TTProjectRelatedDocSAAS.aspx?ProjectID=' Where PageName = 'TTProjectRelatedDoc.aspxSAAS?ProjectID=';
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3568</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3568</ID>
+    <SQLText>
 			CREATE TABLE IF NOT EXISTS public.t_AIInterface
 			(
 			AItype character(20) COLLATE pg_catalog."default" NOT NULL,
@@ -4280,11 +4280,20 @@ Insert Into T_ProModule(UserCode,ModuleName,ModuleType,UserType,ModuleDefinition
 			Model character(200) COLLATE pg_catalog."default" NOT NULL
 			)
 		</SQLText>
-	</DataBaseUpgradeFile>
-	<DataBaseUpgradeFile>
-		<ID>3569</ID>
-		<SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3569</ID>
+    <SQLText>
 			Insert Into t_AIInterface(AIType,URL,Model) values('Local','http://127.0.0.1:11434','deepseek-r1:1.5b');
 		</SQLText>
-	</DataBaseUpgradeFile>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3570</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_procurrentyearrealcharge
+ AS
+ SELECT t_proexpense.projectid,effectdate,
+    sum(COALESCE(t_proexpense.confirmamount, 0::numeric)) AS realcharge
+   FROM t_proexpense Where EXTRACT(YEAR FROM effectdate) = EXTRACT(YEAR FROM CURRENT_DATE)
+  GROUP BY t_proexpense.projectid,effectdate</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>

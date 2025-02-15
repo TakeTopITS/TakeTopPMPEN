@@ -66,6 +66,12 @@ public partial class TakeTopSystemOtherCodeRunPage : System.Web.UI.Page
             ShareClass.UpdateEaryWarningOrder("未写本周计划");
             ShareClass.UpdateEaryWarningOrder("要审核的申请");
 
+            ShareClass.UpdateEaryWarningOrder("在执行项目状态");
+            ShareClass.UpdateEaryWarningOrder("项目年度回款状态");
+            ShareClass.UpdateEaryWarningOrder("延误项目状态");
+            ShareClass.UpdateEaryWarningOrder("年度项目工时状态");
+            ShareClass.UpdateEaryWarningOrder("在执行任务状态");
+
             //增加预警命令
             AddEarlyWarningOrder("待处理的缺陷");
 
@@ -79,6 +85,13 @@ public partial class TakeTopSystemOtherCodeRunPage : System.Web.UI.Page
             AddChartToUser(strUserCode);
         }
 
+        //增加预警命令
+        AddEarlyWarningOrder("在执行项目状态");
+        AddEarlyWarningOrder("项目年度回款状态");
+        AddEarlyWarningOrder("延误项目状态");
+        AddEarlyWarningOrder("年度项目工时状态");
+        AddEarlyWarningOrder("在执行任务状态");
+
         //判断现有系统是否已经在使用，正式使用了则执行下面代码
         if (intUserNumber > 2)
         {
@@ -89,6 +102,312 @@ public partial class TakeTopSystemOtherCodeRunPage : System.Web.UI.Page
         //设置数据库只读用户的只读密码，一般于报表设计者
         setDBUserIDPasswordForDBOnlyReadUser();
     }
+
+    //增加预警命令
+    public static void AddEarlyWarningOrder(string strFunName)
+    {
+        string strHQL, strUpdateHQL;
+        IList lst;
+
+        strHQL = "From FunInforDialBox as funInforDialBox where funInforDialBox.InforName = '" + strFunName + "'";
+        FunInforDialBoxBLL funInforDialBoxBLL = new FunInforDialBoxBLL();
+        lst = funInforDialBoxBLL.GetAllFunInforDialBoxs(strHQL);
+        if (lst.Count > 0)
+        {
+            return;
+        }
+
+        if (strFunName == "待处理的缺陷")
+        {
+            try
+            {
+                if (lst.Count == 0)
+                {
+                    FunInforDialBox funInforDialBox = new FunInforDialBox();
+
+                    strUpdateHQL = @"select * from T_DefectAssignRecord as defectAssignRecordBySystem where defectAssignRecordBySystem.OperatorCode = '[TAKETOPUSERCODE]' 
+                    and defectAssignRecordBySystem.Status in ('计划','受理','待处理') and defectAssignRecordBySystem.ID not in (select defectAssignRecord.PriorID 
+                    from T_DefectAssignRecord as defectAssignRecord) and defectAssignRecordBySystem.DefectID in 
+                    (select defectment.DefectID from T_Defectment as defectment where defectment.Status not in ('关闭','隐藏','删除','归档'))
+                    Order by defectAssignRecordBySystem.ID DESC";
+
+                    funInforDialBox.Status = "启用";
+                    funInforDialBox.SQLCode = strUpdateHQL;
+                    funInforDialBox.InforName = strFunName;
+                    funInforDialBox.HomeName = strFunName;
+                    funInforDialBox.LangCode = HttpContext.Current.Session["LangCode"].ToString();
+                    funInforDialBox.CreateTime = DateTime.Now;
+                    funInforDialBox.BoxType = "SYS";
+                    funInforDialBox.UserType = "INNER";
+                    funInforDialBox.IsForceInfor = "NO";
+                    funInforDialBox.LinkAddress = "TTDefectHandlePage.aspx";
+                    funInforDialBox.MobileLinkAddress = "TTDefectHandlePage.aspx";
+                    funInforDialBox.IsSendMsg = "YES";
+                    funInforDialBox.IsSendEmail = "YES";
+
+                    funInforDialBoxBLL.AddFunInforDialBox(funInforDialBox);
+                }
+            }
+            catch (Exception err)
+            {
+                LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
+            }
+        }
+
+        if (strFunName == "在执行项目状态")
+        {
+            try
+            {
+                if (lst.Count == 0)
+                {
+                    FunInforDialBox funInforDialBox = new FunInforDialBox();
+
+                    strUpdateHQL = @"SELECT A.XName as XName ,(B.YNumber ||','|| C.ZNumber) as YNumber
+FROM (
+    SELECT count(*) AS XName  
+    FROM T_Project 
+    WHERE PMCode = '[TAKETOPUSERCODE]'  
+      AND Status IN ('处理中')
+) AS A,
+(
+    SELECT count(*) AS YNumber  
+    FROM T_Project 
+    WHERE PMCode = '[TAKETOPUSERCODE]'  
+      AND Status IN ('处理中') and EXTRACT(YEAR FROM begindate) = EXTRACT(YEAR FROM CURRENT_DATE)
+) AS B,
+(
+    SELECT count(*) AS ZNumber  
+    FROM T_Project 
+    WHERE PMCode = '[TAKETOPUSERCODE]'  and EXTRACT(YEAR FROM begindate) = EXTRACT(YEAR FROM CURRENT_DATE)
+      AND Status IN ('验收','结案')
+) AS C;";
+
+                    funInforDialBox.Status = "启用";
+                    funInforDialBox.SQLCode = strUpdateHQL;
+                    funInforDialBox.InforName = strFunName;
+                    funInforDialBox.HomeName = strFunName;
+                    funInforDialBox.LangCode = HttpContext.Current.Session["LangCode"].ToString();
+                    funInforDialBox.CreateTime = DateTime.Now;
+                    funInforDialBox.BoxType = "SYS";
+                    funInforDialBox.UserType = "INNER";
+                    funInforDialBox.IsForceInfor = "NO";
+                    funInforDialBox.LinkAddress = "";
+                    funInforDialBox.MobileLinkAddress = "";
+                    funInforDialBox.IsSendMsg = "YES";
+                    funInforDialBox.IsSendEmail = "YES";
+
+                    funInforDialBoxBLL.AddFunInforDialBox(funInforDialBox);
+                }
+            }
+            catch (Exception err)
+            {
+                LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
+            }
+        }
+
+        if (strFunName == "项目年度回款状态")
+        {
+            try
+            {
+                if (lst.Count == 0)
+                {
+                    FunInforDialBox funInforDialBox = new FunInforDialBox();
+
+                    strUpdateHQL = @"SELECT A.XName as XName ,(B.YNumber ||','|| C.ZNumber) as YNumber
+FROM (
+   SELECT CoalEsce(Sum(receiveraccount),0) as XName FROM public.t_constractreceivables  where RelatedType = 'Project' and RelatedID 
+     In (Select ProjectID From T_Project Where PMCode = '[TAKETOPUSERCODE]')  and EXTRACT(YEAR FROM receivertime) = EXTRACT(YEAR FROM CURRENT_DATE)
+) AS A,
+(
+    Select CoalEsce(Sum(RealCharge),0) As YNumber from v_procurrentyearrealcharge  where ProjectID 
+     In (Select ProjectID From T_Project Where PMCode = '[TAKETOPUSERCODE]') 
+	 and EXTRACT(YEAR FROM effectdate) = EXTRACT(YEAR FROM CURRENT_DATE)
+) AS B,
+(
+ Select count(*) as ZNumber from V_ProRealCharge A,T_Project B where A.ProjectID 
+     In (Select ProjectID From T_Project Where PMCode = '[TAKETOPUSERCODE]') and A.RealCharge > B.Budget
+) AS C;";
+
+                    funInforDialBox.Status = "启用";
+                    funInforDialBox.SQLCode = strUpdateHQL;
+                    funInforDialBox.InforName = strFunName;
+                    funInforDialBox.HomeName = strFunName;
+                    funInforDialBox.LangCode = HttpContext.Current.Session["LangCode"].ToString();
+                    funInforDialBox.CreateTime = DateTime.Now;
+                    funInforDialBox.BoxType = "SYS";
+                    funInforDialBox.UserType = "INNER";
+                    funInforDialBox.IsForceInfor = "NO";
+                    funInforDialBox.LinkAddress = "";
+                    funInforDialBox.MobileLinkAddress = "";
+                    funInforDialBox.IsSendMsg = "YES";
+                    funInforDialBox.IsSendEmail = "YES";
+
+                    funInforDialBoxBLL.AddFunInforDialBox(funInforDialBox);
+                }
+            }
+            catch (Exception err)
+            {
+                LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
+            }
+        }
+
+        if (strFunName == "延误项目状态")
+        {
+            try
+            {
+                if (lst.Count == 0)
+                {
+                    FunInforDialBox funInforDialBox = new FunInforDialBox();
+
+                    strUpdateHQL = @"SELECT A.XName as XName ,(B.YNumber ||','|| C.ZNumber) as YNumber
+FROM (
+   SELECT count(*) AS XName  
+FROM T_Project 
+WHERE PMCode = '[TAKETOPUSERCODE]'  
+  AND FinishPercent <100
+  AND now() > (EndDate + interval '30 days')
+) AS A,
+(
+   
+   SELECT count(*) AS YNumber
+FROM T_Project 
+WHERE PMCode = '[TAKETOPUSERCODE]'  
+  AND FinishPercent = 100
+  AND now() > EndDate
+) AS B,
+(
+
+   SELECT count(*) AS ZNumber
+FROM T_Project 
+WHERE PMCode = '[TAKETOPUSERCODE]'  
+  AND FinishPercent <100
+  AND now() > (EndDate + interval '10 days')
+) AS C;";
+
+                    funInforDialBox.Status = "启用";
+                    funInforDialBox.SQLCode = strUpdateHQL;
+                    funInforDialBox.InforName = strFunName;
+                    funInforDialBox.HomeName = strFunName;
+                    funInforDialBox.LangCode = HttpContext.Current.Session["LangCode"].ToString();
+                    funInforDialBox.CreateTime = DateTime.Now;
+                    funInforDialBox.BoxType = "SYS";
+                    funInforDialBox.UserType = "INNER";
+                    funInforDialBox.IsForceInfor = "NO";
+                    funInforDialBox.LinkAddress = "";
+                    funInforDialBox.MobileLinkAddress = "";
+                    funInforDialBox.IsSendMsg = "YES";
+                    funInforDialBox.IsSendEmail = "YES";
+
+                    funInforDialBoxBLL.AddFunInforDialBox(funInforDialBox);
+                }
+            }
+            catch (Exception err)
+            {
+                LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
+            }
+        }
+
+
+        if (strFunName == "年度项目工时状态")
+        {
+            try
+            {
+                if (lst.Count == 0)
+                {
+                    FunInforDialBox funInforDialBox = new FunInforDialBox();
+
+                    strUpdateHQL = @"SELECT A.XName as XName ,(B.YNumber ||','|| C.ZNumber) as YNumber
+FROM (
+   SELECT CoalEsce(Sum(ManHour),0) as XName FROM public.T_DailyWork where ProjectID
+     In (Select ProjectID From T_Project Where PMCode = '[TAKETOPUSERCODE]')  and EXTRACT(YEAR FROM WorkDate) = EXTRACT(YEAR FROM CURRENT_DATE)
+) AS A,
+(
+   SELECT Count(Distinct UserCode) as YNumber FROM public.T_DailyWork where ProjectID
+     In (Select ProjectID From T_Project Where PMCode = '[TAKETOPUSERCODE]')  and EXTRACT(YEAR FROM WorkDate) = EXTRACT(YEAR FROM CURRENT_DATE)
+     
+) AS B,
+(
+  SELECT CoalEsce(Sum(Confirmbonus),0) as ZNumber FROM public.T_DailyWork where ProjectID
+     In (Select ProjectID From T_Project Where PMCode = '[TAKETOPUSERCODE]')  and EXTRACT(YEAR FROM WorkDate) = EXTRACT(YEAR FROM CURRENT_DATE)
+
+) AS C;";
+
+                    funInforDialBox.Status = "启用";
+                    funInforDialBox.SQLCode = strUpdateHQL;
+                    funInforDialBox.InforName = strFunName;
+                    funInforDialBox.HomeName = strFunName;
+                    funInforDialBox.LangCode = HttpContext.Current.Session["LangCode"].ToString();
+                    funInforDialBox.CreateTime = DateTime.Now;
+                    funInforDialBox.BoxType = "SYS";
+                    funInforDialBox.UserType = "INNER";
+                    funInforDialBox.IsForceInfor = "NO";
+                    funInforDialBox.LinkAddress = "";
+                    funInforDialBox.MobileLinkAddress = "";
+                    funInforDialBox.IsSendMsg = "YES";
+                    funInforDialBox.IsSendEmail = "YES";
+
+                    funInforDialBoxBLL.AddFunInforDialBox(funInforDialBox);
+                }
+            }
+            catch (Exception err)
+            {
+                LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
+            }
+        }
+
+        if (strFunName == "在执行任务状态")
+        {
+            try
+            {
+                if (lst.Count == 0)
+                {
+                    FunInforDialBox funInforDialBox = new FunInforDialBox();
+
+                    strUpdateHQL = @"SELECT A.XName as XName ,(B.YNumber ||','|| C.ZNumber) as YNumber
+FROM (
+    SELECT count(*) AS XName  
+    FROM T_ProjectTask 
+    WHERE makemancode = '[TAKETOPUSERCODE]'  
+      AND finishpercent <100 and Status IN ('处理中')
+) AS A,
+(
+    SELECT count(*) AS YNumber  
+    FROM T_ProjectTask 
+    WHERE makemancode = '[TAKETOPUSERCODE]'  
+      AND finishpercent <100 and Status IN ('处理中') and EXTRACT(YEAR FROM begindate) = EXTRACT(YEAR FROM CURRENT_DATE)
+) AS B,
+(
+    SELECT count(*) AS ZNumber  
+    FROM T_ProjectTask 
+    WHERE makemancode = '[TAKETOPUSERCODE]'  
+	and EXTRACT(YEAR FROM begindate) = EXTRACT(YEAR FROM CURRENT_DATE)
+      AND finishpercent = 100 AND Status IN ('完成','关闭')
+) AS C;";
+
+                    funInforDialBox.Status = "启用";
+                    funInforDialBox.SQLCode = strUpdateHQL;
+                    funInforDialBox.InforName = strFunName;
+                    funInforDialBox.HomeName = strFunName;
+                    funInforDialBox.LangCode = HttpContext.Current.Session["LangCode"].ToString();
+                    funInforDialBox.CreateTime = DateTime.Now;
+                    funInforDialBox.BoxType = "SYS";
+                    funInforDialBox.UserType = "INNER";
+                    funInforDialBox.IsForceInfor = "NO";
+                    funInforDialBox.LinkAddress = "";
+                    funInforDialBox.MobileLinkAddress = "";
+                    funInforDialBox.IsSendMsg = "YES";
+                    funInforDialBox.IsSendEmail = "YES";
+
+                    funInforDialBoxBLL.AddFunInforDialBox(funInforDialBox);
+                }
+            }
+            catch (Exception err)
+            {
+                LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
+            }
+        }
+    }
+
 
     //设置数据库只读用户的只读密码，一般于报表设计者
     protected static void setDBUserIDPasswordForDBOnlyReadUser()
@@ -109,7 +428,7 @@ public partial class TakeTopSystemOtherCodeRunPage : System.Web.UI.Page
                 ShareClass.RunSqlCommand(strHQL2);
             }
         }
-        catch( Exception err)
+        catch (Exception err)
         {
             LogClass.WriteLogFile(err.Message.ToString());
         }
@@ -219,54 +538,7 @@ public partial class TakeTopSystemOtherCodeRunPage : System.Web.UI.Page
         {
             LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
         }
-
     }
-
-    //增加预警命令
-    public static void AddEarlyWarningOrder(string strFunName)
-    {
-        string strHQL, strUpdateHQL;
-        IList lst;
-
-        try
-        {
-            strHQL = "From FunInforDialBox as funInforDialBox where funInforDialBox.InforName = '" + strFunName + "'";
-            FunInforDialBoxBLL funInforDialBoxBLL = new FunInforDialBoxBLL();
-            lst = funInforDialBoxBLL.GetAllFunInforDialBoxs(strHQL);
-
-            if (lst.Count == 0)
-            {
-                FunInforDialBox funInforDialBox = new FunInforDialBox();
-
-                strUpdateHQL = @"select * from T_DefectAssignRecord as defectAssignRecordBySystem where defectAssignRecordBySystem.OperatorCode = '[TAKETOPUSERCODE]' 
-                    and defectAssignRecordBySystem.Status in ('计划','受理','待处理') and defectAssignRecordBySystem.ID not in (select defectAssignRecord.PriorID 
-                    from T_DefectAssignRecord as defectAssignRecord) and defectAssignRecordBySystem.DefectID in 
-                    (select defectment.DefectID from T_Defectment as defectment where defectment.Status not in ('关闭','隐藏','删除','归档'))
-                    Order by defectAssignRecordBySystem.ID DESC";
-
-                funInforDialBox.Status = "启用";
-                funInforDialBox.SQLCode = strUpdateHQL;
-                funInforDialBox.InforName = strFunName;
-                funInforDialBox.HomeName = strFunName;
-                funInforDialBox.LangCode = HttpContext.Current.Session["LangCode"].ToString();
-                funInforDialBox.CreateTime = DateTime.Now;
-                funInforDialBox.BoxType = "SYS";
-                funInforDialBox.UserType = "INNER";
-                funInforDialBox.IsForceInfor = "NO";
-                funInforDialBox.LinkAddress = "TTDefectHandlePage.aspx";
-                funInforDialBox.MobileLinkAddress = "TTDefectHandlePage.aspx";
-                funInforDialBox.IsSendMsg = "YES";
-                funInforDialBox.IsSendEmail = "YES";
-
-                funInforDialBoxBLL.AddFunInforDialBox(funInforDialBox);
-            }
-        }
-        catch (Exception err)
-        {
-            LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
-        }
-    }
-
 
     //初始化系统分析图
     public static void InitialSystemAnalystChart(string strToUserCode, string strFromUserCode)

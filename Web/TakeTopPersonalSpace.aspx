@@ -78,7 +78,7 @@
         /*����*/
         #nav1 {
             width: 98%;
-            height: 323px;
+            height: 250px;
             background: #fff;
             border-radius: 8px;
             margin: 15px 0;
@@ -221,8 +221,6 @@
             top.frames[0].frames[2].parent.frames["leftMiddleFrame"].setExtendValue(isFalse);
 
         }
-
-
 
         //弹出消息框
         function clickPopMsgWindow() {

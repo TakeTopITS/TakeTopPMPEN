@@ -437,6 +437,223 @@ public static class ShareClass
                 LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
             }
         }
+
+        if (strFunName == "在执行项目状态")
+        {
+            try
+            {
+                strHQL = "From FunInforDialBox as funInforDialBox where funInforDialBox.InforName = '" + strFunName + "'";
+                FunInforDialBoxBLL funInforDialBoxBLL = new FunInforDialBoxBLL();
+                lst = funInforDialBoxBLL.GetAllFunInforDialBoxs(strHQL);
+                FunInforDialBox funInforDialBox = (FunInforDialBox)lst[0];
+
+                intID = funInforDialBox.ID;
+
+                strUpdateHQL = @"SELECT A.XName as XName ,(B.YNumber ||','|| C.ZNumber) as YNumber
+FROM (
+    SELECT count(*) AS XName  
+    FROM T_Project 
+    WHERE PMCode = '[TAKETOPUSERCODE]'  
+      AND Status IN ('处理中')
+) AS A,
+(
+    SELECT count(*) AS YNumber  
+    FROM T_Project 
+    WHERE PMCode = '[TAKETOPUSERCODE]'  
+      AND Status IN ('处理中') and EXTRACT(YEAR FROM begindate) = EXTRACT(YEAR FROM CURRENT_DATE)
+) AS B,
+(
+    SELECT count(*) AS ZNumber  
+    FROM T_Project 
+    WHERE PMCode = '[TAKETOPUSERCODE]'  and EXTRACT(YEAR FROM begindate) = EXTRACT(YEAR FROM CURRENT_DATE)
+      AND Status IN ('验收','结案')
+) AS C;";
+
+                if (funInforDialBox.SQLCode != strUpdateHQL)
+                {
+                    funInforDialBox.SQLCode = strUpdateHQL;
+
+                    funInforDialBoxBLL.UpdateFunInforDialBox(funInforDialBox, intID);
+                }
+            }
+            catch (Exception err)
+            {
+                LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
+            }
+        }
+
+        if (strFunName == "项目年度回款状态")
+        {
+            try
+            {
+                strHQL = "From FunInforDialBox as funInforDialBox where funInforDialBox.InforName = '" + strFunName + "'";
+                FunInforDialBoxBLL funInforDialBoxBLL = new FunInforDialBoxBLL();
+                lst = funInforDialBoxBLL.GetAllFunInforDialBoxs(strHQL);
+                FunInforDialBox funInforDialBox = (FunInforDialBox)lst[0];
+
+                intID = funInforDialBox.ID;
+
+                strUpdateHQL = @"SELECT A.XName as XName ,(B.YNumber ||','|| C.ZNumber) as YNumber
+FROM (
+   SELECT CoalEsce(Sum(receiveraccount),0) as XName FROM public.t_constractreceivables  where RelatedType = 'Project' and RelatedID 
+     In (Select ProjectID From T_Project Where PMCode = '[TAKETOPUSERCODE]')  and EXTRACT(YEAR FROM receivertime) = EXTRACT(YEAR FROM CURRENT_DATE)
+) AS A,
+(
+    Select CoalEsce(Sum(RealCharge),0) As YNumber from v_procurrentyearrealcharge  where ProjectID 
+     In (Select ProjectID From T_Project Where PMCode = '[TAKETOPUSERCODE]') 
+	 and EXTRACT(YEAR FROM effectdate) = EXTRACT(YEAR FROM CURRENT_DATE)
+) AS B,
+(
+ Select count(*) as ZNumber from V_ProRealCharge A,T_Project B where A.ProjectID 
+     In (Select ProjectID From T_Project Where PMCode = '[TAKETOPUSERCODE]') and A.RealCharge > B.Budget
+) AS C";
+
+                if (funInforDialBox.SQLCode != strUpdateHQL)
+                {
+                    funInforDialBox.SQLCode = strUpdateHQL;
+
+                    funInforDialBoxBLL.UpdateFunInforDialBox(funInforDialBox, intID);
+                }
+            }
+            catch (Exception err)
+            {
+                LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
+            }
+        }
+
+        if (strFunName == "延误项目状态")
+        {
+            try
+            {
+                strHQL = "From FunInforDialBox as funInforDialBox where funInforDialBox.InforName = '" + strFunName + "'";
+                FunInforDialBoxBLL funInforDialBoxBLL = new FunInforDialBoxBLL();
+                lst = funInforDialBoxBLL.GetAllFunInforDialBoxs(strHQL);
+                FunInforDialBox funInforDialBox = (FunInforDialBox)lst[0];
+
+                intID = funInforDialBox.ID;
+
+                strUpdateHQL = @"SELECT A.XName as XName ,(B.YNumber ||','|| C.ZNumber) as YNumber
+FROM (
+   SELECT count(*) AS XName  
+FROM T_Project 
+WHERE PMCode = '[TAKETOPUSERCODE]'  
+  AND FinishPercent <100
+  AND now() > (EndDate + interval '30 days')
+) AS A,
+(
+   
+   SELECT count(*) AS YNumber
+FROM T_Project 
+WHERE PMCode = '[TAKETOPUSERCODE]'  
+  AND FinishPercent = 100
+  AND now() > EndDate
+) AS B,
+(
+
+   SELECT count(*) AS ZNumber
+FROM T_Project 
+WHERE PMCode = '[TAKETOPUSERCODE]'  
+  AND FinishPercent <100
+  AND now() > (EndDate + interval '10 days')
+) AS C;";
+
+                if (funInforDialBox.SQLCode != strUpdateHQL)
+                {
+                    funInforDialBox.SQLCode = strUpdateHQL;
+
+                    funInforDialBoxBLL.UpdateFunInforDialBox(funInforDialBox, intID);
+                }
+            }
+            catch (Exception err)
+            {
+                LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
+            }
+        }
+
+        if (strFunName == "年度项目工时状态")
+        {
+            try
+            {
+                strHQL = "From FunInforDialBox as funInforDialBox where funInforDialBox.InforName = '" + strFunName + "'";
+                FunInforDialBoxBLL funInforDialBoxBLL = new FunInforDialBoxBLL();
+                lst = funInforDialBoxBLL.GetAllFunInforDialBoxs(strHQL);
+                FunInforDialBox funInforDialBox = (FunInforDialBox)lst[0];
+
+                intID = funInforDialBox.ID;
+
+                strUpdateHQL = @"SELECT A.XName as XName ,(B.YNumber ||','|| C.ZNumber) as YNumber
+FROM (
+   SELECT CoalEsce(Sum(ManHour),0) as XName FROM public.T_DailyWork where ProjectID
+     In (Select ProjectID From T_Project Where PMCode = '[TAKETOPUSERCODE]')  and EXTRACT(YEAR FROM WorkDate) = EXTRACT(YEAR FROM CURRENT_DATE)
+) AS A,
+(
+   SELECT Count(Distinct UserCode) as YNumber FROM public.T_DailyWork where ProjectID
+     In (Select ProjectID From T_Project Where PMCode = '[TAKETOPUSERCODE]')  and EXTRACT(YEAR FROM WorkDate) = EXTRACT(YEAR FROM CURRENT_DATE)
+     
+) AS B,
+(
+  SELECT CoalEsce(Sum(Confirmbonus),0) as ZNumber FROM public.T_DailyWork where ProjectID
+     In (Select ProjectID From T_Project Where PMCode = '[TAKETOPUSERCODE]')  and EXTRACT(YEAR FROM WorkDate) = EXTRACT(YEAR FROM CURRENT_DATE)
+
+) AS C;";
+
+                if (funInforDialBox.SQLCode != strUpdateHQL)
+                {
+                    funInforDialBox.SQLCode = strUpdateHQL;
+
+                    funInforDialBoxBLL.UpdateFunInforDialBox(funInforDialBox, intID);
+                }
+            }
+            catch (Exception err)
+            {
+                LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
+            }
+        }
+
+        if (strFunName == "在执行任务状态")
+        {
+            try
+            {
+                strHQL = "From FunInforDialBox as funInforDialBox where funInforDialBox.InforName = '" + strFunName + "'";
+                FunInforDialBoxBLL funInforDialBoxBLL = new FunInforDialBoxBLL();
+                lst = funInforDialBoxBLL.GetAllFunInforDialBoxs(strHQL);
+                FunInforDialBox funInforDialBox = (FunInforDialBox)lst[0];
+
+                intID = funInforDialBox.ID;
+
+                strUpdateHQL = @"SELECT A.XName as XName ,(B.YNumber ||','|| C.ZNumber) as YNumber
+FROM (
+    SELECT count(*) AS XName  
+    FROM T_ProjectTask 
+    WHERE makemancode = '[TAKETOPUSERCODE]'  
+      AND finishpercent <100 and Status IN ('处理中')
+) AS A,
+(
+    SELECT count(*) AS YNumber  
+    FROM T_ProjectTask 
+    WHERE makemancode = '[TAKETOPUSERCODE]'  
+      AND finishpercent <100 and Status IN ('处理中') and EXTRACT(YEAR FROM begindate) = EXTRACT(YEAR FROM CURRENT_DATE)
+) AS B,
+(
+    SELECT count(*) AS ZNumber  
+    FROM T_ProjectTask 
+    WHERE makemancode = '[TAKETOPUSERCODE]'  
+	and EXTRACT(YEAR FROM begindate) = EXTRACT(YEAR FROM CURRENT_DATE)
+      AND finishpercent = 100 AND Status IN ('完成','关闭')
+) AS C;";
+
+                if (funInforDialBox.SQLCode != strUpdateHQL)
+                {
+                    funInforDialBox.SQLCode = strUpdateHQL;
+
+                    funInforDialBoxBLL.UpdateFunInforDialBox(funInforDialBox, intID);
+                }
+            }
+            catch (Exception err)
+            {
+                LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
+            }
+        }
     }
 
     //初始化用户模组

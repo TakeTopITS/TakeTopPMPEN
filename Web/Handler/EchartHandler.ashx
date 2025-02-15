@@ -49,6 +49,7 @@ public class EchartHandler : IHttpHandler, IRequiresSessionState
         {
             string strSqlCode = context.Request["SqlCode"].Trim();
 
+
             sql = ShareClass.UnEscape(strSqlCode);
             sql = sql.Replace("[TAKETOPUSERCODE]", strUserCode).Replace("[TAKETOPDEPARTSTRING]", strDepartString).Replace("[TAKETOPLANGCODE]", strLangCode);
 
@@ -61,6 +62,9 @@ public class EchartHandler : IHttpHandler, IRequiresSessionState
             if (ds.Tables[0].Rows.Count > 0)
             {
                 lists = new List<object>();
+
+
+
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
                     if (strFormType == "Column1" || strFormType == "Bar1")
@@ -68,7 +72,7 @@ public class EchartHandler : IHttpHandler, IRequiresSessionState
                         var obj1 = new { XName = dr["XName"], YNumber = dr["YNumber"] };
                         lists.Add(obj1);
                     }
-                    else if (strFormType == "Column2" || strFormType == "Bar2")
+                    else if (strFormType == "Column2" || strFormType == "Bar2" )
                     {
                         var obj2 = new { XName = dr["XName"], YNumber = dr["YNumber"], ZNumber = dr["ZNumber"] };
                         lists.Add(obj2);
@@ -144,7 +148,7 @@ public class EchartHandler : IHttpHandler, IRequiresSessionState
         }
         catch (Exception err)
         {
-            LogClass.WriteLogFile(err.Message.ToString());
+            LogClass.WriteLogFile("Error page: " + err.Message.ToString() + "\n" + err.StackTrace);
         }
     }
 
