@@ -20,7 +20,7 @@
     <script type="text/javascript" language="javascript">
         $(function () {
 
-             /*  if (top.location != self.location) { } else { CloseWebPage(); }*/
+            /*  if (top.location != self.location) { } else { CloseWebPage(); }*/
 
         });
 
@@ -50,20 +50,17 @@
                 <ContentTemplate>
                     <table width="100%" cellpadding="0" cellspacing="0">
                         <tr>
-                            <td valign="top" align="Center" style="padding: 5px 1px 1px 1px;" onmouseenter="javascript:displayScroll();" onmousemove="javascript:displayScroll();" onmouseover="javascript:displayScroll();"  onmouseout="javascript:hideScroll();">
+                            <td valign="top" align="Center" style="padding: 5px 1px 1px 1px;" onmouseenter="javascript:displayScroll();" onmousemove="javascript:displayScroll();" onmouseover="javascript:displayScroll();" onmouseout="javascript:hideScroll();">
                                 <div id="divRenyList" class="renyList" style="width: 100%; height: 175px; text-align: center; overflow: hidden;">
-
-
                                     <asp:Repeater ID="RP_ChartList" runat="server">
                                         <ItemTemplate>
                                             <asp:Label ID="LB_ChartName" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ChartName") %>' Visible="false"></asp:Label>
                                             <asp:Label ID="LB_ChartType" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ChartType") %>' Visible="false"></asp:Label>
                                             <asp:Label ID="LB_SqlCode" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"SqlCode") %>' Visible="false"></asp:Label>
-                                            <iframe src="TTTakeTopAnalystChartSetAPP.aspx?FormType=<%# DataBinder.Eval(Container.DataItem,"FormType") %>&ChartType=<%# DataBinder.Eval(Container.DataItem,"ChartType") %>&ChartName=<%# DataBinder.Eval(Container.DataItem,"ChartName") %>" style="width: 300px; height: 168px; border: 0px solid white; overflow: hidden;"></iframe>
+
+                                            <iframe id="iframeChart" src="TTTakeTopAnalystChartSet.aspx?FormType=<%# DataBinder.Eval(Container.DataItem,"FormType") %>&ChartType=<%# DataBinder.Eval(Container.DataItem,"ChartType") %>&ChartName=<%# DataBinder.Eval(Container.DataItem,"ChartName") %>" style="width: 300px; height: 295px; border: 1px solid white; overflow: hidden;"></iframe>
                                         </ItemTemplate>
                                     </asp:Repeater>
-
-
                                 </div>
                             </td>
                         </tr>

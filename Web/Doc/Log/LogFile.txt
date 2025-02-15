@@ -19659,4 +19659,539 @@ Message 未将对象引用设置到对象的实例。
 
 
 ------------------------------------
+
+Log Entry : 15:29:57 2025年2月15日 
+Error page: http://10.211.55.14:5001/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Unknown message code: 57
+   在 Npgsql.Util.PGUtil.ValidateBackendMessageCode(BackendMessageCode code)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.<<ReadMessage>g__ReadMessageSequential|43_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.<Read>d__42.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.Read()
+   在 System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   在 System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   在 System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16597
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 344
+
+------------------------------------
+
+Log Entry : 15:29:57 2025年2月15日 
+Error page: http://10.211.55.14:5001/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Unknown message code: 52
+   在 Npgsql.Util.PGUtil.ValidateBackendMessageCode(BackendMessageCode code)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16597
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 344
+
+------------------------------------
+
+Log Entry : 15:40:00 2025年2月15日 
+Error page: http://10.211.55.14:5001/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Exception while reading from stream
+   在 Npgsql.Internal.NpgsqlReadBuffer.<<Ensure>g__EnsureLong|40_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16597
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 344
+
+------------------------------------
+
+Log Entry : 17:13:47 2025年2月15日 
+URL: http://10.211.55.14:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopMainTop.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 38
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 18:29:20 2025年2月15日 
+From FunInforDialBox as funInforDialBox where funInforDialBox.InforName = '待处理的缺陷'
+
+------------------------------------
+
+Log Entry : 18:29:20 2025年2月15日 
+From FunInforDialBox as funInforDialBox where funInforDialBox.InforName = '在执行项目状态'
+
+------------------------------------
+
+Log Entry : 18:29:20 2025年2月15日 
+From FunInforDialBox as funInforDialBox where funInforDialBox.InforName = '项目年度回款状态'
+
+------------------------------------
+
+Log Entry : 18:29:20 2025年2月15日 
+From FunInforDialBox as funInforDialBox where funInforDialBox.InforName = '延误项目状态'
+
+------------------------------------
+
+Log Entry : 18:29:20 2025年2月15日 
+From FunInforDialBox as funInforDialBox where funInforDialBox.InforName = '年度项目工时状态'
+
+------------------------------------
+
+Log Entry : 18:29:20 2025年2月15日 
+From FunInforDialBox as funInforDialBox where funInforDialBox.InforName = '在执行任务状态'
+
+------------------------------------
+
+Log Entry : 18:29:22 2025年2月15日 
+From FunInforDialBox as funInforDialBox where funInforDialBox.InforName = '待处理的缺陷'
+
+------------------------------------
+
+Log Entry : 18:29:22 2025年2月15日 
+From FunInforDialBox as funInforDialBox where funInforDialBox.InforName = '在执行项目状态'
+
+------------------------------------
+
+Log Entry : 18:29:22 2025年2月15日 
+From FunInforDialBox as funInforDialBox where funInforDialBox.InforName = '项目年度回款状态'
+
+------------------------------------
+
+Log Entry : 18:29:22 2025年2月15日 
+From FunInforDialBox as funInforDialBox where funInforDialBox.InforName = '延误项目状态'
+
+------------------------------------
+
+Log Entry : 18:29:22 2025年2月15日 
+From FunInforDialBox as funInforDialBox where funInforDialBox.InforName = '年度项目工时状态'
+
+------------------------------------
+
+Log Entry : 18:29:22 2025年2月15日 
+From FunInforDialBox as funInforDialBox where funInforDialBox.InforName = '在执行任务状态'
+
+------------------------------------
+
+Log Entry : 20:04:26 2025年2月15日 
+URL: http://10.211.55.14:5000/Source/Web/TTPersonalSpaceAnalysisChart.aspx?Type=驾驶舱&HomeName=驾驶舱
+Message CommandText property has not been initialized
+   在 Npgsql.NpgsqlCommand.ProcessRawQuery(Boolean standardConformingStrings, Boolean deriveParameters)
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16571
+   在 ShareClass.LoadSytemChart(String strUserCode, String strFormType, Repeater RP_ChartList) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 15973
+   在 TTPersonalSpaceAnalysisChart.AsyncWork() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceAnalysisChart.aspx.cs:行号 88
+   在 TTPersonalSpaceAnalysisChart.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceAnalysisChart.aspx.cs:行号 71
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 20:04:29 2025年2月15日 
+URL: http://10.211.55.14:5000/Source/Web/TTPersonalSpaceAnalysisChart.aspx?Type=驾驶舱&HomeName=驾驶舱
+Message CommandText property has not been initialized
+   在 Npgsql.NpgsqlCommand.ProcessRawQuery(Boolean standardConformingStrings, Boolean deriveParameters)
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16571
+   在 ShareClass.LoadSytemChart(String strUserCode, String strFormType, Repeater RP_ChartList) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 15973
+   在 TTPersonalSpaceAnalysisChart.AsyncWork() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceAnalysisChart.aspx.cs:行号 88
+   在 TTPersonalSpaceAnalysisChart.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceAnalysisChart.aspx.cs:行号 71
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 20:04:31 2025年2月15日 
+URL: http://10.211.55.14:5000/Source/Web/TTPersonalSpaceAnalysisChart.aspx?Type=驾驶舱&HomeName=驾驶舱
+Message CommandText property has not been initialized
+   在 Npgsql.NpgsqlCommand.ProcessRawQuery(Boolean standardConformingStrings, Boolean deriveParameters)
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16571
+   在 ShareClass.LoadSytemChart(String strUserCode, String strFormType, Repeater RP_ChartList) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 15973
+   在 TTPersonalSpaceAnalysisChart.AsyncWork() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceAnalysisChart.aspx.cs:行号 88
+   在 TTPersonalSpaceAnalysisChart.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceAnalysisChart.aspx.cs:行号 71
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 20:04:33 2025年2月15日 
+URL: http://10.211.55.14:5000/Source/Web/TTPersonalSpaceAnalysisChart.aspx?Type=驾驶舱&HomeName=驾驶舱
+Message CommandText property has not been initialized
+   在 Npgsql.NpgsqlCommand.ProcessRawQuery(Boolean standardConformingStrings, Boolean deriveParameters)
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16571
+   在 ShareClass.LoadSytemChart(String strUserCode, String strFormType, Repeater RP_ChartList) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 15973
+   在 TTPersonalSpaceAnalysisChart.AsyncWork() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceAnalysisChart.aspx.cs:行号 88
+   在 TTPersonalSpaceAnalysisChart.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceAnalysisChart.aspx.cs:行号 71
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 20:04:35 2025年2月15日 
+URL: http://10.211.55.14:5000/Source/Web/TTPersonalSpaceAnalysisChart.aspx?Type=驾驶舱&HomeName=驾驶舱
+Message CommandText property has not been initialized
+   在 Npgsql.NpgsqlCommand.ProcessRawQuery(Boolean standardConformingStrings, Boolean deriveParameters)
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16571
+   在 ShareClass.LoadSytemChart(String strUserCode, String strFormType, Repeater RP_ChartList) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 15973
+   在 TTPersonalSpaceAnalysisChart.AsyncWork() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceAnalysisChart.aspx.cs:行号 88
+   在 TTPersonalSpaceAnalysisChart.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceAnalysisChart.aspx.cs:行号 71
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 20:04:37 2025年2月15日 
+URL: http://10.211.55.14:5000/Source/Web/TTPersonalSpaceAnalysisChart.aspx?Type=驾驶舱&HomeName=驾驶舱
+Message CommandText property has not been initialized
+   在 Npgsql.NpgsqlCommand.ProcessRawQuery(Boolean standardConformingStrings, Boolean deriveParameters)
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16571
+   在 ShareClass.LoadSytemChart(String strUserCode, String strFormType, Repeater RP_ChartList) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 15973
+   在 TTPersonalSpaceAnalysisChart.AsyncWork() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceAnalysisChart.aspx.cs:行号 88
+   在 TTPersonalSpaceAnalysisChart.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceAnalysisChart.aspx.cs:行号 71
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 20:05:30 2025年2月15日 
+URL: http://10.211.55.14:5000/Source/Web/TTPersonalSpaceAnalysisChart.aspx?Type=驾驶舱&HomeName=驾驶舱
+Message CommandText property has not been initialized
+   在 Npgsql.NpgsqlCommand.ProcessRawQuery(Boolean standardConformingStrings, Boolean deriveParameters)
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16571
+   在 ShareClass.LoadSytemChart(String strUserCode, String strFormType, Repeater RP_ChartList) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 15973
+   在 TTPersonalSpaceAnalysisChart.AsyncWork() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceAnalysisChart.aspx.cs:行号 88
+   在 TTPersonalSpaceAnalysisChart.Timer1_Tick(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceAnalysisChart.aspx.cs:行号 71
+   在 System.Web.UI.Timer.OnTick(EventArgs e)
+   在 System.Web.UI.Timer.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Timer.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 20:40:54 2025年2月15日 
+URL: http://10.211.55.14:5000/Source/Web/TTAPPPersonalSpaceAnalysisChart.aspx?Flag=CssGreenzh-CN
+Message 42703: 字段 "charttype" 不存在
+
+POSITION: 383
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16571
+   在 TTAPPPersonalSpaceAnalysisChart.LoadSytemChart(String strUserCode, String strFormType, Repeater RP_ChartList) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAPPPersonalSpaceAnalysisChart.aspx.cs:行号 112
+   在 TTAPPPersonalSpaceAnalysisChart.AsyncWork() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAPPPersonalSpaceAnalysisChart.aspx.cs:行号 93
+   在 TTAPPPersonalSpaceAnalysisChart.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAPPPersonalSpaceAnalysisChart.aspx.cs:行号 39
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 20:43:13 2025年2月15日 
+URL: http://10.211.55.14:5000/Source/Web/TTAPPPersonalSpaceAnalysisChart.aspx?Flag=CssGreenzh-CN
+Message CommandText property has not been initialized
+   在 Npgsql.NpgsqlCommand.ProcessRawQuery(Boolean standardConformingStrings, Boolean deriveParameters)
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16571
+   在 TTAPPPersonalSpaceAnalysisChart.LoadSytemChart(String strUserCode, String strFormType, Repeater RP_ChartList) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAPPPersonalSpaceAnalysisChart.aspx.cs:行号 120
+   在 TTAPPPersonalSpaceAnalysisChart.AsyncWork() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAPPPersonalSpaceAnalysisChart.aspx.cs:行号 93
+   在 TTAPPPersonalSpaceAnalysisChart.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAPPPersonalSpaceAnalysisChart.aspx.cs:行号 39
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 20:44:13 2025年2月15日 
+Select trim(A.FormType) as FormType,trim(A.ChartName) as ChartName,(Select trim(SqlCode) From T_SystemAnalystChartManagement Where ChartName = A.ChartName and charttype Not In ('HRuningProjectStatus','HDelayProjectStatus','HAnnualPaymentStatus','HAnnualWorkHourStatus','HRuningTaskStatus') ) as SqlCode,(Select trim(ChartType) From T_SystemAnalystChartManagement Where ChartName = A.ChartName ) as ChartType  From T_SystemAnalystChartRelatedUser A  Where A.UserCode = 'C7094' and A.FormType = 'PersonalSpacePage' Order By A.SortNumber ASC
+
+------------------------------------
+
+Log Entry : 20:44:13 2025年2月15日 
+URL: http://10.211.55.14:5000/Source/Web/TTAPPPersonalSpaceAnalysisChart.aspx?Flag=CssGreenzh-CN
+Message CommandText property has not been initialized
+   在 Npgsql.NpgsqlCommand.ProcessRawQuery(Boolean standardConformingStrings, Boolean deriveParameters)
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16571
+   在 TTAPPPersonalSpaceAnalysisChart.LoadSytemChart(String strUserCode, String strFormType, Repeater RP_ChartList) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAPPPersonalSpaceAnalysisChart.aspx.cs:行号 122
+   在 TTAPPPersonalSpaceAnalysisChart.AsyncWork() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAPPPersonalSpaceAnalysisChart.aspx.cs:行号 93
+   在 TTAPPPersonalSpaceAnalysisChart.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAPPPersonalSpaceAnalysisChart.aspx.cs:行号 39
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 20:46:35 2025年2月15日 
+Select trim(A.FormType) as FormType,trim(A.ChartName) as ChartName,(Select trim(SqlCode) From T_SystemAnalystChartManagement Where ChartName = A.ChartName and charttype Not In ('HRuningProjectStatus','HDelayProjectStatus','HAnnualPaymentStatus','HAnnualWorkHourStatus','HRuningTaskStatus') ) as SqlCode,(Select trim(ChartType) From T_SystemAnalystChartManagement Where ChartName = A.ChartName ) as ChartType  From T_SystemAnalystChartRelatedUser A  Where A.UserCode = 'C7094' and A.FormType = 'PersonalSpacePage' Order By A.SortNumber ASC
+
+------------------------------------
+
+Log Entry : 20:46:35 2025年2月15日 
+URL: http://10.211.55.14:5000/Source/Web/TTAPPPersonalSpaceAnalysisChart.aspx?Flag=CssGreenzh-CN
+Message CommandText property has not been initialized
+   在 Npgsql.NpgsqlCommand.ProcessRawQuery(Boolean standardConformingStrings, Boolean deriveParameters)
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16571
+   在 TTAPPPersonalSpaceAnalysisChart.LoadSytemChart(String strUserCode, String strFormType, Repeater RP_ChartList) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAPPPersonalSpaceAnalysisChart.aspx.cs:行号 122
+   在 TTAPPPersonalSpaceAnalysisChart.AsyncWork() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAPPPersonalSpaceAnalysisChart.aspx.cs:行号 93
+   在 TTAPPPersonalSpaceAnalysisChart.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTAPPPersonalSpaceAnalysisChart.aspx.cs:行号 39
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 20:49:46 2025年2月15日 
+Select trim(A.FormType) as FormType,trim(A.ChartName) as ChartName,(Select trim(SqlCode) From T_SystemAnalystChartManagement Where ChartName = A.ChartName and charttype Not In ('HRuningProjectStatus','HDelayProjectStatus','HAnnualPaymentStatus','HAnnualWorkHourStatus','HRuningTaskStatus') ) as SqlCode,(Select trim(ChartType) From T_SystemAnalystChartManagement Where ChartName = A.ChartName ) as ChartType  From T_SystemAnalystChartRelatedUser A  Where A.UserCode = 'C7094' and A.FormType = 'PersonalSpacePage' and chartName Not In (Select ChartName From T_SystemAnalystChartManagement where ChartType In  ('HRuningProjectStatus','HDelayProjectStatus','HAnnualPaymentStatus','HAnnualWorkHourStatus','HRuningTaskStatus')) Order By A.SortNumber ASC
+
+------------------------------------
 

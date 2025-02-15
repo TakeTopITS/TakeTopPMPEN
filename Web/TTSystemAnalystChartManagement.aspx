@@ -156,8 +156,8 @@
                                                                 <asp:ListItem Value="Gauge" Text="仪表盘" />
                                                                 <asp:ListItem Value="HRuningProjectStatus" Text="在执行项目状态" />
                                                                 <asp:ListItem Value="HDelayProjectStatus" Text="延误项目状态" />
-                                                                <asp:ListItem Value="HDAnnualPaymentStatus" Text="年度回款状态" />
-                                                                <asp:ListItem Value="HDAnnualWorkHourStatus" Text="年度工时状态" />
+                                                                <asp:ListItem Value="HAnnualPaymentStatus" Text="年度回款状态" />
+                                                                <asp:ListItem Value="HAnnualWorkHourStatus" Text="年度工时状态" />
                                                                 <asp:ListItem Value="HRuningTaskStatus" Text="年度任务状态" />
                                                             </asp:DropDownList>
                                                         </td>

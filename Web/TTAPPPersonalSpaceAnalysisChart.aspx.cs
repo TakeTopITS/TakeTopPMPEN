@@ -90,8 +90,52 @@ public partial class TTAPPPersonalSpaceAnalysisChart : System.Web.UI.Page
 
         }).Start();
 
-        ShareClass.LoadSytemChart(strUserCode, "PersonalSpacePage", RP_ChartList);
+        LoadSytemChart(strUserCode, "PersonalSpacePage", RP_ChartList);
     }
+
+    public static void LoadSytemChart(string strUserCode, string strFormType, Repeater RP_ChartList)
+    {
+        string strHQL, strSql;
+        string strLangCode = HttpContext.Current.Session["LangCode"].ToString();
+        string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthoritySuperUser(strUserCode);
+        HttpContext.Current.Session["DepartString"] = strDepartString;
+
+        strHQL = "Select * From T_SystemAnalystChartRelatedUser Where UserCode = '" + strUserCode + "'" + " and FormType = '" + strFormType + "'";
+        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_SystemAnalystChartManagement");
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+            strHQL = "Select trim(A.FormType) as FormType,trim(A.ChartName) as ChartName,(Select trim(SqlCode) From T_SystemAnalystChartManagement Where ChartName = A.ChartName and charttype Not In ('HRuningProjectStatus','HDelayProjectStatus','HAnnualPaymentStatus','HAnnualWorkHourStatus','HRuningTaskStatus') ) as SqlCode,(Select trim(ChartType) From T_SystemAnalystChartManagement Where ChartName = A.ChartName ) as ChartType  From T_SystemAnalystChartRelatedUser A ";
+            strHQL += " Where A.UserCode = '" + strUserCode + "' and A.FormType = '" + strFormType + "'";
+            strHQL += " and chartName Not In (Select ChartName From T_SystemAnalystChartManagement where ChartType In  ('HRuningProjectStatus','HDelayProjectStatus','HAnnualPaymentStatus','HAnnualWorkHourStatus','HRuningTaskStatus'))";
+            strHQL += " Order By A.SortNumber ASC";
+
+            LogClass.WriteLogFile(strHQL);
+        }
+        ds = ShareClass.GetDataSetFromSql(strHQL, "T_SystemAnalystChartManagement");
+
+        DataSet dsBackup = ds;
+
+        for (int i = 0; i < dsBackup.Tables[0].Rows.Count; i++)
+        {
+            strSql = dsBackup.Tables[0].Rows[i]["SqlCode"].ToString();
+            strSql = strSql.Replace("[TAKETOPUSERCODE]", strUserCode).Replace("[TAKETOPDEPARTSTRING]", strDepartString).Replace("[TAKETOPLANGCODE]", strLangCode);
+            DataSet dsSql = ShareClass.GetDataSetFromSql(strSql, "T_Sql");
+            if (dsSql.Tables[0].Rows.Count == 0)
+            {
+                try
+                {
+                    ds.Tables[0].Rows[i].Delete();
+                }
+                catch
+                {
+                }
+            }
+        }
+
+        RP_ChartList.DataSource = ds;
+        RP_ChartList.DataBind();
+    }
+
 
 
     //增加分析图给用户

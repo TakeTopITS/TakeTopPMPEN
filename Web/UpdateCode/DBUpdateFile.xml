@@ -4296,4 +4296,12 @@ Insert Into T_ProModule(UserCode,ModuleName,ModuleType,UserType,ModuleDefinition
    FROM t_proexpense Where EXTRACT(YEAR FROM effectdate) = EXTRACT(YEAR FROM CURRENT_DATE)
   GROUP BY t_proexpense.projectid,effectdate</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3571</ID>
+    <SQLText>Delete From public.t_funinfordialbox Where InforName IN ('在执行项目状态','项目年度回款状态','延误项目状态','年度项目工时状态','在执行任务状态')</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3572</ID>
+    <SQLText>Delete From public.t_systemanalystchartmanagement Where ChartName IN ('在执行项目状态','项目年度回款状态','延误项目状态','年度项目工时状态','在执行任务状态')</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>

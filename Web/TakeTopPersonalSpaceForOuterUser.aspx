@@ -77,7 +77,7 @@
         /*����*/
         #nav1 {
             width: 98%;
-            height: 323px;
+           height: 250px;
             background: #fff;
             border-radius: 8px;
             margin: 15px 0;

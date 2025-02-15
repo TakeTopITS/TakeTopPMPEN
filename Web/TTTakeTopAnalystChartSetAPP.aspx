@@ -8,6 +8,59 @@
 <head runat="server">
     <title></title>
     <script src="js/jquery-1.10.2.min.js"></script>
+
+    <style>
+        .card-container {
+            display: flex;
+            gap: 10px;
+            vertical-align: bottom;
+        }
+
+        .card {
+            width: 100%;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+            .card.blue {
+                background-color: #7cb3e6;
+            }
+
+            .card.red {
+                background-color: #d9534f;
+            }
+
+            .card.green {
+                background-color: #5cb85c;
+            }
+
+            .card.purple {
+                background-color: #663399;
+            }
+
+            .card.blue {
+                background-color: #7092BE;
+            }
+
+            .card img {
+                max-width: 30px;
+                margin-bottom: 10px;
+            }
+
+            .card h3 {
+                margin: 0;
+                font-size: 18px;
+                color: white;
+            }
+
+            .card p {
+                margin: 5px 0;
+                font-size: 14px;
+                color: white;
+            }
+    </style>
 </head>
 
 <body>
@@ -984,6 +1037,196 @@
                     }
                 });
             }
+
+            if (chartType == 'HRuningProjectStatus') {
+
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card blue' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/Running.png' alt = 'Clock Icon'/> </td><td align='left'>  在执行项目总数 : <span id='spanXNumber'></span></h3> <p>年度新增: <span id='spanYNumber'></span></p> <p>年度完成 : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+
+
+                $.ajax({
+                    type: "post",
+                    async: false,
+                    url: "Handler/EchartHandler.ashx",
+                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //发送到服务器的参数
+                    datatype: "json",
+                    success: function (result) {
+                        if (result) {
+                            eval("var transresult=" + result);
+
+                            /*  alert(result);*/
+
+                            for (var i = 0; i < transresult.length; i++) {
+
+                                /*   eLegend.push(transresult[i].XName);*/
+                                document.getElementById("spanXNumber").innerHTML = transresult[i].XName;
+
+
+                                let str = transresult[i].YNumber;
+                                let parts = str.split(',');
+
+                                document.getElementById("spanYNumber").innerHTML = parts[0];
+                                document.getElementById("spanZNumber").innerHTML = parts[1];
+
+                            }
+                        }
+                    },
+                    error: function (errorMsg) {
+                        /*  alert("Error");*/
+                    }
+                });
+            }
+
+            if (chartType == 'HDelayProjectStatus') {
+
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card red' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/Process.png' alt = 'Clock Icon'/> </td><td align='left'>  严重延误项目数 : <span id='spanXNumber'></span></h3> <p>进度正常: <span id='spanYNumber'></span></p> <p>轻度延误 : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+
+
+                $.ajax({
+                    type: "post",
+                    async: false,
+                    url: "Handler/EchartHandler.ashx",
+                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //发送到服务器的参数
+                    datatype: "json",
+                    success: function (result) {
+                        if (result) {
+                            eval("var transresult=" + result);
+
+                            /*  alert(result);*/
+
+                            for (var i = 0; i < transresult.length; i++) {
+
+                                /*   eLegend.push(transresult[i].XName);*/
+                                document.getElementById("spanXNumber").innerHTML = transresult[i].XName;
+
+
+                                let str = transresult[i].YNumber;
+                                let parts = str.split(',');
+
+                                document.getElementById("spanYNumber").innerHTML = parts[0];
+                                document.getElementById("spanZNumber").innerHTML = parts[1];
+
+                            }
+                        }
+                    },
+                    error: function (errorMsg) {
+                        /* alert("Error");*/
+                    }
+                });
+            }
+
+            if (chartType == 'HAnnualPaymentStatus') {
+
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card green' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/PaymentCollection.png' alt = 'Clock Icon'/> </td><td align='left'>  年度项目回款 : <span id='spanXNumber'></span></h3> <p>年度成本核算: <span id='spanYNumber'></span></p> <p>成本超支项目数 : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+
+
+                $.ajax({
+                    type: "post",
+                    async: false,
+                    url: "Handler/EchartHandler.ashx",
+                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //发送到服务器的参数
+                    datatype: "json",
+                    success: function (result) {
+                        if (result) {
+                            eval("var transresult=" + result);
+
+
+                            for (var i = 0; i < transresult.length; i++) {
+
+                                /*   eLegend.push(transresult[i].XName);*/
+                                document.getElementById("spanXNumber").innerHTML = transresult[i].XName;
+
+
+                                let str = transresult[i].YNumber;
+                                let parts = str.split(',');
+
+                                document.getElementById("spanYNumber").innerHTML = parts[0];
+                                document.getElementById("spanZNumber").innerHTML = parts[1];
+
+                            }
+                        }
+                    },
+                    error: function (errorMsg) {
+                        /*alert("Error");*/
+                    }
+                });
+            }
+
+            if (chartType == 'HAnnualWorkHourStatus') {
+
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card purple' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/WorkHour.png' alt = 'Clock Icon'/> </td><td align='left'>  年度项目工时投入 : <span id='spanXNumber'></span></h3> <p>年度填报人数: <span id='spanYNumber'></span></p> <p>人工成本 : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+
+
+                $.ajax({
+                    type: "post",
+                    async: false,
+                    url: "Handler/EchartHandler.ashx",
+                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //发送到服务器的参数
+                    datatype: "json",
+                    success: function (result) {
+                        if (result) {
+                            eval("var transresult=" + result);
+
+
+                            for (var i = 0; i < transresult.length; i++) {
+
+                                /*   eLegend.push(transresult[i].XName);*/
+                                document.getElementById("spanXNumber").innerHTML = transresult[i].XName;
+
+
+                                let str = transresult[i].YNumber;
+                                let parts = str.split(',');
+
+                                document.getElementById("spanYNumber").innerHTML = parts[0];
+                                document.getElementById("spanZNumber").innerHTML = parts[1];
+
+                            }
+                        }
+                    },
+                    error: function (errorMsg) {
+                        /* alert("Error");*/
+                    }
+                });
+            }
+
+            if (chartType == 'HRuningTaskStatus') {
+
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card blue' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/RunningTask.png' alt = 'Clock Icon'/> </td><td align='left'>  在执行任务总数 : <span id='spanXNumber'></span></h3> <p>年度新增: <span id='spanYNumber'></span></p> <p>年度完成 : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+
+
+                $.ajax({
+                    type: "post",
+                    async: false,
+                    url: "Handler/EchartHandler.ashx",
+                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //发送到服务器的参数
+                    datatype: "json",
+                    success: function (result) {
+                        if (result) {
+                            eval("var transresult=" + result);
+
+                            /*  alert(result);*/
+
+                            for (var i = 0; i < transresult.length; i++) {
+
+                                /*   eLegend.push(transresult[i].XName);*/
+                                document.getElementById("spanXNumber").innerHTML = transresult[i].XName;
+
+
+                                let str = transresult[i].YNumber;
+                                let parts = str.split(',');
+
+                                document.getElementById("spanYNumber").innerHTML = parts[0];
+                                document.getElementById("spanZNumber").innerHTML = parts[1];
+
+                            }
+                        }
+                    },
+                    error: function (errorMsg) {
+                        /* alert("Error");*/
+                    }
+                });
+            }
+
+            //
 
 
         });  //end page ready

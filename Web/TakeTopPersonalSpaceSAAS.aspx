@@ -78,7 +78,7 @@
         /*����*/
         #nav1 {
             width: 98%;
-            height: 323px;
+            height: 250px;
             background: #fff;
             border-radius: 8px;
             margin: 15px 0;
@@ -310,7 +310,7 @@
                         <ul id="navlist">
                             <li style="padding-top: 7px;">
                                 <asp:ImageButton ID="IM_Extend" ImageUrl="ImagesSkin/extend.png" Width="23" Height="20"
-                                    OnClientClick="javascript: ChangeMenu(1);" runat="server"  OnClick="BT_Extend_Click" />
+                                    OnClientClick="javascript: ChangeMenu(1);" runat="server" OnClick="BT_Extend_Click" />
                             </li>
                             <asp:Repeater ID="RP_NewsTypeList" runat="server">
                                 <ItemTemplate>

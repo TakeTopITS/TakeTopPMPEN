@@ -37,8 +37,8 @@
             }
 
             .card.blue {
-             background-color: #7092BE;
-   }
+                background-color: #7092BE;
+            }
 
             .card img {
                 max-width: 30px;
@@ -556,7 +556,7 @@
 
                         {
                             name: '',
-                            type: 'bar', 
+                            type: 'bar',
                             center: ['50%', '30%'],
                             data: [],
                             markPoint: {
@@ -1082,7 +1082,7 @@
                         }
                     },
                     error: function (errorMsg) {
-                      /*  alert("Error");*/
+                        /*  alert("Error");*/
                     }
                 });
             }
@@ -1120,12 +1120,12 @@
                         }
                     },
                     error: function (errorMsg) {
-                       /* alert("Error");*/
+                        /* alert("Error");*/
                     }
                 });
             }
 
-            if (chartType == 'HDAnnualPaymentStatus') {
+            if (chartType == 'HAnnualPaymentStatus') {
 
                 document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card green' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/PaymentCollection.png' alt = 'Clock Icon'/> </td><td align='left'>  年度项目回款 : <span id='spanXNumber'></span></h3> <p>年度成本核算: <span id='spanYNumber'></span></p> <p>成本超支项目数 : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
 
@@ -1162,7 +1162,7 @@
                 });
             }
 
-            if (chartType == 'HDAnnualWorkHourStatus') {
+            if (chartType == 'HAnnualWorkHourStatus') {
 
                 document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card purple' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/WorkHour.png' alt = 'Clock Icon'/> </td><td align='left'>  年度项目工时投入 : <span id='spanXNumber'></span></h3> <p>年度填报人数: <span id='spanYNumber'></span></p> <p>人工成本 : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
 
@@ -1194,7 +1194,7 @@
                         }
                     },
                     error: function (errorMsg) {
-                       /* alert("Error");*/
+                        /* alert("Error");*/
                     }
                 });
             }
@@ -1232,7 +1232,7 @@
                         }
                     },
                     error: function (errorMsg) {
-                       /* alert("Error");*/
+                        /* alert("Error");*/
                     }
                 });
             }
