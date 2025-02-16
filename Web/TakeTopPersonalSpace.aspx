@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" Async="true" CodeFile="TakeTopPersonalSpace.aspx.cs" Inherits="TakeTopPersonalSpace" %>
+<%@ Page Language="C#" AutoEventWireup="true" Async="true" CodeFile="TakeTopPersonalSpace.aspx.cs" Inherits="TakeTopPersonalSpace" %>
 
 <%@ OutputCache Duration="2678400" VaryByParam="*" %>
 
@@ -78,7 +78,7 @@
         
         #nav1 {
             width: 98%;
-            height: 200px;
+            height: 185px;
             background: #fff;
             border-radius: 8px;
             margin: 15px 0;
@@ -88,7 +88,7 @@
             align-items: center;
         }
 
-        
+     
         #nav2 {
             width: 98%;
         }
@@ -142,7 +142,7 @@
 
         #div_username {
             /*  display: flex;*/
-            align-items: center; /* å‚ç›´å±…ä¸­ */
+            align-items: center; /* ´¹Ö±¾ÓÖĞ */
             color: white;
             font-size: 12px;
         }
@@ -151,7 +151,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%); /* è®©å›¾æ ‡ç›¸å¯¹äºå…¶è‡ªèº«ä¸­å¿ƒç‚¹å®šä½ */
+            transform: translate(-50%, -50%); /* ÈÃÍ¼±êÏà¶ÔÓÚÆä×ÔÉíÖĞĞÄµã¶¨Î» */
         }
 
         .TextColor {
@@ -215,21 +215,21 @@
 
         }
 
-        //è®¾ç½®å·¦è¾¹æ å…ƒç´ çš„å€¼
+        //ÉèÖÃ×ó±ßÀ¸ÔªËØµÄÖµ
         function setExtendValue(isFalse) {
 
             top.frames[0].frames[2].parent.frames["leftMiddleFrame"].setExtendValue(isFalse);
 
         }
 
-        //å¼¹å‡ºæ¶ˆæ¯æ¡†
+        //µ¯³öÏûÏ¢¿ò
         function clickPopMsgWindow() {
 
             top.frames[0].frames[2].parent.frames["rightTopFrame"].clickPopMsgWindow();
         }
 
 
-        //è®¾ç½®å±å¹•çŠ¶æ€
+        //ÉèÖÃÆÁÄ»×´Ì¬
         var varScreenFull = false;
         function setScreenStatus() {
 
@@ -245,7 +245,7 @@
             }
         }
 
-        //å…¨å±
+        //È«ÆÁ
         function fullScreen() {
 
             var el = top.document.documentElement;
@@ -267,7 +267,7 @@
 
         }
 
-        //é€€å‡ºå…¨å±
+        //ÍË³öÈ«ÆÁ
         function exitScreen() {
 
             var el = document;
@@ -415,40 +415,3 @@
     oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';
 </script>
 </html>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>

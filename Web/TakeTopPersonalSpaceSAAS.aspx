@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Async="true" CodeFile="TakeTopPersonalSpaceSAAS.aspx.cs" Inherits="TakeTopPersonalSpaceSAAS" %>
+<%@ page language="C#" autoeventwireup="true" async="true" inherits="TakeTopPersonalSpaceSAAS, App_Web_ntpreqpb" %>
 
 <%@ OutputCache Duration="2678400" VaryByParam="*" %>
 
@@ -78,7 +79,7 @@
         
         #nav1 {
             width: 98%;
-            height: 200px;
+            height: 185px;
             background: #fff;
             border-radius: 8px;
             margin: 15px 0;
@@ -430,41 +431,3 @@
 
 </script>
 </html>
-
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>
-<%--***--%>

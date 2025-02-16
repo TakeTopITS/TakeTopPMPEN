@@ -3,20 +3,15 @@
   "WorkspaceRootPath": "E:\\TakeTopDECMPWinSolution\\Source\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|e:\\taketopdecmpwinsolution\\source\\web\\ttpersonalspaceanalysischart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|solutionrelative:web\\ttpersonalspaceanalysischart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|e:\\taketopdecmpwinsolution\\source\\web\\tttaketopanalystchartset.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|solutionrelative:web\\tttaketopanalystchartset.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|e:\\taketopdecmpwinsolution\\source\\web\\taketoppersonalspace.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|solutionrelative:web\\taketoppersonalspace.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\CompilingPackages\\TakeTopUpdate\\TTTakeTopAnalystChartSetAPP.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|e:\\taketopdecmpwinsolution\\source\\web\\taketoppersonalspaceforouteruser.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|solutionrelative:web\\taketoppersonalspaceforouteruser.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|e:\\taketopdecmpwinsolution\\source\\web\\taketoppersonalspacesaas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|solutionrelative:web\\taketoppersonalspacesaas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|e:\\taketopdecmpwinsolution\\source\\web\\tttaketopanalystchartsetapp.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|solutionrelative:web\\tttaketopanalystchartsetapp.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,53 +30,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TTPersonalSpaceAnalysisChart.aspx",
-              "DocumentMoniker": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TTPersonalSpaceAnalysisChart.aspx",
-              "RelativeDocumentMoniker": "Web\\TTPersonalSpaceAnalysisChart.aspx",
-              "ToolTip": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TTPersonalSpaceAnalysisChart.aspx",
-              "RelativeToolTip": "Web\\TTPersonalSpaceAnalysisChart.aspx",
+              "Title": "TTTakeTopAnalystChartSet.aspx",
+              "DocumentMoniker": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TTTakeTopAnalystChartSet.aspx",
+              "RelativeDocumentMoniker": "Web\\TTTakeTopAnalystChartSet.aspx",
+              "ToolTip": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TTTakeTopAnalystChartSet.aspx",
+              "RelativeToolTip": "Web\\TTTakeTopAnalystChartSet.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-02-16T00:52:32.811Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TakeTopPersonalSpaceSAAS.aspx",
-              "DocumentMoniker": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TakeTopPersonalSpaceSAAS.aspx",
-              "RelativeDocumentMoniker": "Web\\TakeTopPersonalSpaceSAAS.aspx",
-              "ToolTip": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TakeTopPersonalSpaceSAAS.aspx",
-              "RelativeToolTip": "Web\\TakeTopPersonalSpaceSAAS.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-02-16T00:52:06.931Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TakeTopPersonalSpaceForOuterUser.aspx",
-              "DocumentMoniker": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TakeTopPersonalSpaceForOuterUser.aspx",
-              "RelativeDocumentMoniker": "Web\\TakeTopPersonalSpaceForOuterUser.aspx",
-              "ToolTip": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TakeTopPersonalSpaceForOuterUser.aspx",
-              "RelativeToolTip": "Web\\TakeTopPersonalSpaceForOuterUser.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-02-16T00:25:31.745Z",
+              "WhenOpened": "2025-02-16T13:37:51.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TakeTopPersonalSpace.aspx",
-              "DocumentMoniker": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TakeTopPersonalSpace.aspx",
-              "RelativeDocumentMoniker": "Web\\TakeTopPersonalSpace.aspx",
-              "ToolTip": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TakeTopPersonalSpace.aspx",
-              "RelativeToolTip": "Web\\TakeTopPersonalSpace.aspx",
+              "Title": "TTTakeTopAnalystChartSetAPP.aspx",
+              "DocumentMoniker": "E:\\CompilingPackages\\TakeTopUpdate\\TTTakeTopAnalystChartSetAPP.aspx",
+              "RelativeDocumentMoniker": "..\\..\\CompilingPackages\\TakeTopUpdate\\TTTakeTopAnalystChartSetAPP.aspx",
+              "ToolTip": "E:\\CompilingPackages\\TakeTopUpdate\\TTTakeTopAnalystChartSetAPP.aspx",
+              "RelativeToolTip": "..\\..\\CompilingPackages\\TakeTopUpdate\\TTTakeTopAnalystChartSetAPP.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-02-16T00:25:30.094Z",
+              "WhenOpened": "2025-02-16T13:35:58.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TTTakeTopAnalystChartSetAPP.aspx",
+              "DocumentMoniker": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TTTakeTopAnalystChartSetAPP.aspx",
+              "RelativeDocumentMoniker": "Web\\TTTakeTopAnalystChartSetAPP.aspx",
+              "ToolTip": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TTTakeTopAnalystChartSetAPP.aspx",
+              "RelativeToolTip": "Web\\TTTakeTopAnalystChartSetAPP.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-02-16T13:15:31.782Z",
               "EditorCaption": ""
             }
           ]

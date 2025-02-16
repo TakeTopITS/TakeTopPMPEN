@@ -93,7 +93,7 @@
 
 
 
-        /*����*/
+       
         #nav1 {
             width: 98%;
             height: 323px;
@@ -106,7 +106,7 @@
             align-items: center;
         }
 
-        /*����*/
+       
         #nav2 {
             width: 98%;
         }

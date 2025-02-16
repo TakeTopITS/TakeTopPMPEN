@@ -1,7 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTTakeTopAnalystChartSetAPP.aspx.cs" Inherits="TTTakeTopAnalystChartSetAPP" %>
 
-
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -25,7 +23,7 @@
         }
 
             .card.blue {
-                background-color: #7cb3e6;
+                background-color: #367E7F;
             }
 
             .card.red {
@@ -36,12 +34,12 @@
                 background-color: #5cb85c;
             }
 
-            .card.purple {
-                background-color: #663399;
+            .card.lightblue {
+                background-color: #7092BE;
             }
 
-            .card.grey {
-                background-color: #C0C0C0;
+            .card.brown {
+                background-color: #818049;
             }
 
             .card img {
@@ -1153,7 +1151,7 @@
 
             if (chartType == 'HAnnualWorkHourStatus') {
 
-                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card purple' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/WorkHour.png' alt = 'Clock Icon'/> </td><td align='left'>  年度项目工时投入 : <span id='spanXNumber'></span></h3> <p>年度填报人数: <span id='spanYNumber'></span></p> <p>人工成本 : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card brown' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/WorkHour.png' alt = 'Clock Icon'/> </td><td align='left'>  年度项目工时投入 : <span id='spanXNumber'></span></h3> <p>年度填报人数: <span id='spanYNumber'></span></p> <p>人工成本 : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
 
 
                 $.ajax({
@@ -1190,7 +1188,7 @@
 
             if (chartType == 'HRuningTaskStatus') {
 
-                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card blue' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/RunningTask.png' alt = 'Clock Icon'/> </td><td align='left'>  在执行任务总数 : <span id='spanXNumber'></span></h3> <p>年度新增: <span id='spanYNumber'></span></p> <p>年度完成 : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card lightblue' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/RunningTask.png' alt = 'Clock Icon'/> </td><td align='left'>  在执行任务总数 : <span id='spanXNumber'></span></h3> <p>年度新增: <span id='spanYNumber'></span></p> <p>年度完成 : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
 
 
                 $.ajax({

@@ -20199,4 +20199,571 @@ Message CommandText property has not been initialized
 Select trim(A.FormType) as FormType,trim(A.ChartName) as ChartName,(Select trim(SqlCode) From T_SystemAnalystChartManagement Where ChartName = A.ChartName and charttype Not In ('HRuningProjectStatus','HDelayProjectStatus','HAnnualPaymentStatus','HAnnualWorkHourStatus','HRuningTaskStatus') ) as SqlCode,(Select trim(ChartType) From T_SystemAnalystChartManagement Where ChartName = A.ChartName ) as ChartType  From T_SystemAnalystChartRelatedUser A  Where A.UserCode = 'C7094' and A.FormType = 'PersonalSpacePage' and chartName Not In (Select ChartName From T_SystemAnalystChartManagement where ChartType In  ('HRuningProjectStatus','HDelayProjectStatus','HAnnualPaymentStatus','HAnnualWorkHourStatus','HRuningTaskStatus')) Order By A.SortNumber ASC
 
 ------------------------------------
+
+Log Entry : 13:26:08 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HDelayProjectStatus&ChartName=延误项目状态
+Message E:\TakeTopDECMPWinSolution\Source\Web\TTTakeTopAnalystChartSet.aspx(42): error CS1061: 'tttaketopanalystchartset_aspx' does not contain a definition for 'Timer1_Tick' and no extension method 'Timer1_Tick' accepting a first argument of type 'tttaketopanalystchartset_aspx' could be found (are you missing a using directive or an assembly reference?)
+   在 System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+
+
+------------------------------------
+
+Log Entry : 13:26:50 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HRuningProjectStatus&ChartName=在执行项目状态
+Message E:\TakeTopDECMPWinSolution\Source\Web\TTTakeTopAnalystChartSet.aspx(42): error CS1061: 'tttaketopanalystchartset_aspx' does not contain a definition for 'Timer1_Tick' and no extension method 'Timer1_Tick' accepting a first argument of type 'tttaketopanalystchartset_aspx' could be found (are you missing a using directive or an assembly reference?)
+
+
+
+------------------------------------
+
+Log Entry : 13:28:33 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=Pie&ChartName=所有成员的项目状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:33 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=Gauge&ChartName=我参与的项目状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:33 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=Pie&ChartName=直接成员的项目状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:36 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HDelayProjectStatus&ChartName=延误项目状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:36 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HAnnualPaymentStatus&ChartName=项目年度回款状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:36 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HAnnualWorkHourStatus&ChartName=年度项目工时状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:36 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HRuningTaskStatus&ChartName=在执行任务状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:36 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=Pie&ChartName=所有成员的项目状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:36 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=Gauge&ChartName=我参与的项目状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:36 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=Pie&ChartName=直接成员的项目状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:36 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HAnnualPaymentStatus&ChartName=项目年度回款状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:36 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HAnnualWorkHourStatus&ChartName=年度项目工时状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:36 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HRuningTaskStatus&ChartName=在执行任务状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:36 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=Pie&ChartName=所有成员的项目状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:36 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=Gauge&ChartName=我参与的项目状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:37 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=Pie&ChartName=直接成员的项目状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:37 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HAnnualPaymentStatus&ChartName=项目年度回款状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:37 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HRuningTaskStatus&ChartName=在执行任务状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:38 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HDelayProjectStatus&ChartName=延误项目状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:38 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HRuningProjectStatus&ChartName=在执行项目状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:38 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HRuningProjectStatus&ChartName=在执行项目状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:39 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HDelayProjectStatus&ChartName=延误项目状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 13:28:39 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HRuningProjectStatus&ChartName=在执行项目状态
+Message 未能为 UpdatePanel“UpdatePanel1”中的触发器找到 ID 为“Timer1”的控件。
+   在 System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(Boolean searchNamingContainers)
+   在 System.Web.UI.AsyncPostBackTrigger.Initialize()
+   在 System.Web.UI.UpdatePanelTriggerCollection.Initialize()
+   在 System.Web.UI.UpdatePanel.Initialize()
+   在 System.Web.UI.UpdatePanel.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 21:04:22 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:行号 31
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 21:05:52 2025年2月16日 
+Error page: http://10.211.55.19:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Unknown message code: 0
+   在 Npgsql.Util.PGUtil.ValidateBackendMessageCode(BackendMessageCode code)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.<<ReadMessage>g__ReadMessageSequential|43_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.<Read>d__42.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.Read()
+   在 System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   在 System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   在 System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16597
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 344
+
+------------------------------------
+
+Log Entry : 21:05:53 2025年2月16日 
+Error page: http://10.211.55.19:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Unknown message code: 0
+   在 Npgsql.Util.PGUtil.ValidateBackendMessageCode(BackendMessageCode code)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16597
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 344
+
+------------------------------------
+
+Log Entry : 21:05:53 2025年2月16日 
+Error page: http://10.211.55.19:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Unknown message code: 0
+   在 Npgsql.Util.PGUtil.ValidateBackendMessageCode(BackendMessageCode code)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16597
+   在 TakeTopMainTop.OpenMessageWindow(String strUserCode) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 344
+
+------------------------------------
+
+Log Entry : 21:05:53 2025年2月16日 
+Unknown message code: 0
+
+------------------------------------
+
+Log Entry : 21:06:03 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTPersonalSpaceNews.aspx?Flag=CssGreenzh-CN
+Message Unknown message code: 0
+   在 Npgsql.Util.PGUtil.ValidateBackendMessageCode(BackendMessageCode code)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution\Source\Web\App_Code\ShareClass.cs:行号 16597
+   在 TTPersonalSpaceNews.AsyncWork() 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceNews.aspx.cs:行号 101
+   在 TTPersonalSpaceNews.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceNews.aspx.cs:行号 35
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 21:07:36 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TakeTopMainTop.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TakeTopMainTop.aspx.cs:行号 38
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 21:07:45 2025年2月16日 
+URL: http://10.211.55.19:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:行号 31
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
 
