@@ -3,19 +3,20 @@
   "WorkspaceRootPath": "E:\\TakeTopDECMPWinSolution\\Source\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\CompilingPackages\\TakeTopUpdate\\TTPersonalSpaceAnalysisChart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|e:\\taketopdecmpwinsolution\\source\\web\\taketoppersonalspace.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|solutionrelative:web\\taketoppersonalspace.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|e:\\taketopdecmpwinsolution\\source\\web\\ttpersonalspaceanalysischart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|solutionrelative:web\\ttpersonalspaceanalysischart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|e:\\taketopdecmpwinsolution\\source\\web\\ttapppersonalspaceanalysischart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|solutionrelative:web\\ttapppersonalspaceanalysischart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|e:\\taketopdecmpwinsolution\\source\\web\\taketoppersonalspaceforouteruser.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|solutionrelative:web\\taketoppersonalspaceforouteruser.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|e:\\taketopdecmpwinsolution\\source\\web\\taketoppersonalspace.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|solutionrelative:web\\taketoppersonalspace.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|e:\\taketopdecmpwinsolution\\source\\web\\taketoppersonalspacesaas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{26DE7C11-44E9-4A26-8115-F16BEDB7F0E2}|E:\\TakeTopDECMPWinSolution\\Source\\Web|solutionrelative:web\\taketoppersonalspacesaas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,20 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TTPersonalSpaceAnalysisChart.aspx",
-              "DocumentMoniker": "E:\\CompilingPackages\\TakeTopUpdate\\TTPersonalSpaceAnalysisChart.aspx",
-              "RelativeDocumentMoniker": "..\\..\\CompilingPackages\\TakeTopUpdate\\TTPersonalSpaceAnalysisChart.aspx",
-              "ToolTip": "E:\\CompilingPackages\\TakeTopUpdate\\TTPersonalSpaceAnalysisChart.aspx",
-              "RelativeToolTip": "..\\..\\CompilingPackages\\TakeTopUpdate\\TTPersonalSpaceAnalysisChart.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-02-15T23:22:03.263Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
               "$type": "Document",
@@ -50,29 +42,38 @@
               "RelativeToolTip": "Web\\TTPersonalSpaceAnalysisChart.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-02-15T23:18:15.487Z",
+              "WhenOpened": "2025-02-16T00:52:32.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TakeTopPersonalSpaceSAAS.aspx",
+              "DocumentMoniker": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TakeTopPersonalSpaceSAAS.aspx",
+              "RelativeDocumentMoniker": "Web\\TakeTopPersonalSpaceSAAS.aspx",
+              "ToolTip": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TakeTopPersonalSpaceSAAS.aspx",
+              "RelativeToolTip": "Web\\TakeTopPersonalSpaceSAAS.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-02-16T00:52:06.931Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TTAPPPersonalSpaceAnalysisChart.aspx",
-              "DocumentMoniker": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TTAPPPersonalSpaceAnalysisChart.aspx",
-              "RelativeDocumentMoniker": "Web\\TTAPPPersonalSpaceAnalysisChart.aspx",
-              "ToolTip": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TTAPPPersonalSpaceAnalysisChart.aspx",
-              "RelativeToolTip": "Web\\TTAPPPersonalSpaceAnalysisChart.aspx",
+              "Title": "TakeTopPersonalSpaceForOuterUser.aspx",
+              "DocumentMoniker": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TakeTopPersonalSpaceForOuterUser.aspx",
+              "RelativeDocumentMoniker": "Web\\TakeTopPersonalSpaceForOuterUser.aspx",
+              "ToolTip": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TakeTopPersonalSpaceForOuterUser.aspx",
+              "RelativeToolTip": "Web\\TakeTopPersonalSpaceForOuterUser.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-02-15T23:12:25.091Z",
+              "WhenOpened": "2025-02-16T00:25:31.745Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "TakeTopPersonalSpace.aspx",
               "DocumentMoniker": "E:\\TakeTopDECMPWinSolution\\Source\\Web\\TakeTopPersonalSpace.aspx",
               "RelativeDocumentMoniker": "Web\\TakeTopPersonalSpace.aspx",
@@ -80,7 +81,7 @@
               "RelativeToolTip": "Web\\TakeTopPersonalSpace.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-02-15T23:11:14.61Z",
+              "WhenOpened": "2025-02-16T00:25:30.094Z",
               "EditorCaption": ""
             }
           ]

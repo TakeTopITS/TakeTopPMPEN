@@ -74,10 +74,10 @@
 
 
 
-        /*����*/
+        
         #nav1 {
             width: 98%;
-           height: 250px;
+            height: 200px;
             background: #fff;
             border-radius: 8px;
             margin: 15px 0;
@@ -87,7 +87,7 @@
             align-items: center;
         }
 
-        /*����*/
+        
         #nav2 {
             width: 98%;
         }

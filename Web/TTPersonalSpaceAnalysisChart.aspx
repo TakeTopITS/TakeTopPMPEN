@@ -48,7 +48,7 @@
                     <table width="98%" cellpadding="0" cellspacing="0">
                         <tr>
                             <td valign="top" align="center" style="padding: 10px 1px 1px 1px; border: 0px solid rgba(193, 189, 189, 0.39)" onmouseenter="javascript:displayScroll();" onmousemove="javascript:displayScroll();" onmouseover="javascript:displayScroll();" onmouseout="javascript:hideScroll();">
-                                <div id="divRenyList" class="renyList" style="width: 100%; height: 230px; overflow: hidden;">
+                                <div id="divRenyList" class="renyList" style="width: 100%; height: 180px; overflow: hidden;">
 
                                     <asp:Repeater ID="RP_ChartList" runat="server">
                                         <ItemTemplate>
