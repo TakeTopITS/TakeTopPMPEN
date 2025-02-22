@@ -27631,14 +27631,14 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="JingDuZhengChang" xml:space="preserve">
     <value>On schedule</value>
   </data>
-  <data name="QIngDuYanWu" xml:space="preserve">
+  <data name="QingDuYanWu" xml:space="preserve">
     <value>Slight delay</value>
   </data>
   <data name="NianDuXiangMuHuiKan" xml:space="preserve">
     <value>Annual project repayment</value>
   </data>
   <data name="NianDuChengBenHeShuan" xml:space="preserve">
-    <value />
+    <value>Annual costing</value>
   </data>
   <data name="ChengBenChaoZiXiangMuShu" xml:space="preserve">
     <value>Number of projects over budget</value>
@@ -27651,5 +27651,8 @@ The progress of the task affects the schedule to be confirmed</value>
   </data>
   <data name="ZaiZhiXingRenWuZhongShu" xml:space="preserve">
     <value>Total number of tasks in execution</value>
+  </data>
+  <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
+    <value>Annual payment of the project</value>
   </data>
 </root>

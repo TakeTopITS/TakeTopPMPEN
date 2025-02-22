@@ -1,305 +1,284 @@
 
-Log Entry : 9:17:44 PM Friday, February 21, 2025 
-Select Distinct B.ID,A.ID as SystemModuleID,A.ModuleName,A.HomeModuleName,A.ParentModule,A.PageName,A.ModuleType,B.ModuleDefinition as UserModuleDefinition,A.ModuleDefinition as SystemModuleDefinition,
-                A.UserType,A.IconURL,A.SortNumber,A.DIYFlow From T_ProModuleLevel A, T_ProModule B Where rtrim(A.ModuleName)
-                ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType) and (CHAR_LENGTH(B.ModuleDefinition) > 0 Or CHAR_LENGTH(A.ModuleDefinition) > 0) and B.ID = 34658 and A.LangCode ='en'
-
-------------------------------------
-
-Log Entry : 9:20:49 PM Friday, February 21, 2025 
-Select Distinct B.ID,A.ID as SystemModuleID,A.ModuleName,A.HomeModuleName,A.ParentModule,A.PageName,A.ModuleType,B.ModuleDefinition as UserModuleDefinition,A.ModuleDefinition as SystemModuleDefinition,
-                A.UserType,A.IconURL,A.SortNumber,A.DIYFlow From T_ProModuleLevel A, T_ProModule B Where rtrim(A.ModuleName)
-                ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType) and (CHAR_LENGTH(B.ModuleDefinition) > 0 Or CHAR_LENGTH(A.ModuleDefinition) > 0) and B.ID = 34658
-
-------------------------------------
-
-Log Entry : 9:27:13 PM Friday, February 21, 2025 
-Select Distinct B.ID,A.ID as SystemModuleID,A.ModuleName,A.HomeModuleName,A.ParentModule,A.PageName,A.ModuleType,B.ModuleDefinition as UserModuleDefinition,A.ModuleDefinition as SystemModuleDefinition,
-                A.UserType,A.IconURL,A.SortNumber,A.DIYFlow From T_ProModuleLevel A, T_ProModule B Where rtrim(A.ModuleName)
-                ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType) and (CHAR_LENGTH(B.ModuleDefinition) > 0 Or CHAR_LENGTH(A.ModuleDefinition) > 0) and B.ID = 34658
-
-------------------------------------
-
-Log Entry : 9:27:14 PM Friday, February 21, 2025 
-Select A.HomeModuleName  From T_ProModuleLevel A, T_ProModule B  Where rtrim(A.ModuleName)
-                ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType)  and A.Visible = 'YES' and A.IsDeleted = 'NO' 
-                and A.ModuleType Not In ('APP','DIYAPP','SITE') and A.UserType = 'INNER' and B.UserType = 'INNER' 
-                and B.UserCode = 'C7094' and B.Visible = 'YES' and B.ModuleType Not In ('APP','DIYAPP','SITE') and A.ModuleName = '项目立项' and A.PageName = 'TTMakeProject.aspx' 
-                and A.LangCode = 'en' Order By A.SortNumber ASC
-
-------------------------------------
-
-Log Entry : 9:27:14 PM Friday, February 21, 2025 
-Select A.HomeModuleName  From T_ProModuleLevel A, T_ProModule B  Where rtrim(A.ModuleName)
-                ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType)  and A.Visible = 'YES' and A.IsDeleted = 'NO' 
-                and A.ModuleType Not In ('APP','DIYAPP','SITE') and A.UserType = 'INNER' and B.UserType = 'INNER' 
-                and B.UserCode = 'C7094' and B.Visible = 'YES' and B.ModuleType Not In ('APP','DIYAPP','SITE') and A.ModuleName = 'ProjectManagement' and A.PageName = 'TTProjectManage.aspx' 
-                and A.LangCode = 'en' Order By A.SortNumber ASC
-
-------------------------------------
-
-Log Entry : 9:27:14 PM Friday, February 21, 2025 
-Select A.HomeModuleName  From T_ProModuleLevel A, T_ProModule B  Where rtrim(A.ModuleName)
-                ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType)  and A.Visible = 'YES' and A.IsDeleted = 'NO' 
-                and A.ModuleType Not In ('APP','DIYAPP','SITE') and A.UserType = 'INNER' and B.UserType = 'INNER' 
-                and B.UserCode = 'C7094' and B.Visible = 'YES' and B.ModuleType Not In ('APP','DIYAPP','SITE') and A.ModuleName = '项目任务管理' and A.PageName = 'TTProjectTaskManageMain.aspx' 
-                and A.LangCode = 'en' Order By A.SortNumber ASC
-
-------------------------------------
-
-Log Entry : 9:27:14 PM Friday, February 21, 2025 
-Select A.HomeModuleName  From T_ProModuleLevel A, T_ProModule B  Where rtrim(A.ModuleName)
-                ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType)  and A.Visible = 'YES' and A.IsDeleted = 'NO' 
-                and A.ModuleType Not In ('APP','DIYAPP','SITE') and A.UserType = 'INNER' and B.UserType = 'INNER' 
-                and B.UserCode = 'C7094' and B.Visible = 'YES' and B.ModuleType Not In ('APP','DIYAPP','SITE') and A.ModuleName = '工作流管理' and A.PageName = 'TTWLManage.aspx' 
-                and A.LangCode = 'en' Order By A.SortNumber ASC
-
-------------------------------------
-
-Log Entry : 9:27:14 PM Friday, February 21, 2025 
-Select A.HomeModuleName  From T_ProModuleLevel A, T_ProModule B  Where rtrim(A.ModuleName)
-                ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType)  and A.Visible = 'YES' and A.IsDeleted = 'NO' 
-                and A.ModuleType Not In ('APP','DIYAPP','SITE') and A.UserType = 'INNER' and B.UserType = 'INNER' 
-                and B.UserCode = 'C7094' and B.Visible = 'YES' and B.ModuleType Not In ('APP','DIYAPP','SITE') and A.ModuleName = 'ProjectRequirementManagement' and A.PageName = 'TTProjectReqManageMain.aspx' 
-                and A.LangCode = 'en' Order By A.SortNumber ASC
-
-------------------------------------
-
-Log Entry : 9:27:14 PM Friday, February 21, 2025 
-Select A.HomeModuleName  From T_ProModuleLevel A, T_ProModule B  Where rtrim(A.ModuleName)
-                ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType)  and A.Visible = 'YES' and A.IsDeleted = 'NO' 
-                and A.ModuleType Not In ('APP','DIYAPP','SITE') and A.UserType = 'INNER' and B.UserType = 'INNER' 
-                and B.UserCode = 'C7094' and B.Visible = 'YES' and B.ModuleType Not In ('APP','DIYAPP','SITE') and A.ModuleName = '预算管理' and A.PageName = 'TTBDBudgetManagement.aspx' 
-                and A.LangCode = 'en' Order By A.SortNumber ASC
-
-------------------------------------
-
-Log Entry : 9:27:14 PM Friday, February 21, 2025 
-Select A.HomeModuleName  From T_ProModuleLevel A, T_ProModule B  Where rtrim(A.ModuleName)
-                ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType)  and A.Visible = 'YES' and A.IsDeleted = 'NO' 
-                and A.ModuleType Not In ('APP','DIYAPP','SITE') and A.UserType = 'INNER' and B.UserType = 'INNER' 
-                and B.UserCode = 'C7094' and B.Visible = 'YES' and B.ModuleType Not In ('APP','DIYAPP','SITE') and A.ModuleName = 'KnowledgeManagement' and A.PageName = 'TTDocumentManage.aspx' 
-                and A.LangCode = 'en' Order By A.SortNumber ASC
-
-------------------------------------
-
-Log Entry : 9:27:14 PM Friday, February 21, 2025 
-Select A.HomeModuleName  From T_ProModuleLevel A, T_ProModule B  Where rtrim(A.ModuleName)
-                ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType)  and A.Visible = 'YES' and A.IsDeleted = 'NO' 
-                and A.ModuleType Not In ('APP','DIYAPP','SITE') and A.UserType = 'INNER' and B.UserType = 'INNER' 
-                and B.UserCode = 'C7094' and B.Visible = 'YES' and B.ModuleType Not In ('APP','DIYAPP','SITE') and A.ModuleName = 'FinanceManagement' and A.PageName = 'TTReceivablesPayableAlert.aspx' 
-                and A.LangCode = 'en' Order By A.SortNumber ASC
-
-------------------------------------
-
-Log Entry : 9:27:14 PM Friday, February 21, 2025 
-Select A.HomeModuleName  From T_ProModuleLevel A, T_ProModule B  Where rtrim(A.ModuleName)
-                ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType)  and A.Visible = 'YES' and A.IsDeleted = 'NO' 
-                and A.ModuleType Not In ('APP','DIYAPP','SITE') and A.UserType = 'INNER' and B.UserType = 'INNER' 
-                and B.UserCode = 'C7094' and B.Visible = 'YES' and B.ModuleType Not In ('APP','DIYAPP','SITE') and A.ModuleName = '客户关系' and A.PageName = 'TTCustomerQuestionManage.aspx' 
-                and A.LangCode = 'en' Order By A.SortNumber ASC
-
-------------------------------------
-
-Log Entry : 9:27:14 PM Friday, February 21, 2025 
-Select A.HomeModuleName  From T_ProModuleLevel A, T_ProModule B  Where rtrim(A.ModuleName)
-                ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType)  and A.Visible = 'YES' and A.IsDeleted = 'NO' 
-                and A.ModuleType Not In ('APP','DIYAPP','SITE') and A.UserType = 'INNER' and B.UserType = 'INNER' 
-                and B.UserCode = 'C7094' and B.Visible = 'YES' and B.ModuleType Not In ('APP','DIYAPP','SITE') and A.ModuleName = 'ShippingOrder' and A.PageName = 'TTGoodsShipmentOrder.aspx' 
-                and A.LangCode = 'en' Order By A.SortNumber ASC
-
-------------------------------------
-
-Log Entry : 9:27:14 PM Friday, February 21, 2025 
-Select A.HomeModuleName  From T_ProModuleLevel A, T_ProModule B  Where rtrim(A.ModuleName)
-                ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType)  and A.Visible = 'YES' and A.IsDeleted = 'NO' 
-                and A.ModuleType Not In ('APP','DIYAPP','SITE') and A.UserType = 'INNER' and B.UserType = 'INNER' 
-                and B.UserCode = 'C7094' and B.Visible = 'YES' and B.ModuleType Not In ('APP','DIYAPP','SITE') and A.ModuleName = 'Collection' and A.PageName = 'TTAccountReceivablesRecord.aspx' 
-                and A.LangCode = 'en' Order By A.SortNumber ASC
-
-------------------------------------
-
-Log Entry : 9:38:50 PM Friday, February 21, 2025 
-Select Distinct B.ID,A.ID as SystemModuleID,A.ModuleName,A.HomeModuleName,A.ParentModule,A.PageName,A.ModuleType,B.ModuleDefinition as UserModuleDefinition,A.ModuleDefinition as SystemModuleDefinition,
-                A.UserType,A.IconURL,A.SortNumber,A.DIYFlow From T_ProModuleLevel A, T_ProModule B Where rtrim(A.ModuleName)
-                ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType) and (CHAR_LENGTH(B.ModuleDefinition) > 0 Or CHAR_LENGTH(A.ModuleDefinition) > 0) and B.ID = 34658
-
-------------------------------------
-
-Log Entry : 9:49:36 PM Friday, February 21, 2025 
-Select Distinct B.ID,A.ID as SystemModuleID,A.ModuleName,A.HomeModuleName,A.ParentModule,A.PageName,A.ModuleType,B.ModuleDefinition as UserModuleDefinition,A.ModuleDefinition as SystemModuleDefinition,
-                A.UserType,A.IconURL,A.SortNumber,A.DIYFlow From T_ProModuleLevel A, T_ProModule B Where rtrim(A.ModuleName)
-                ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType) and (CHAR_LENGTH(B.ModuleDefinition) > 0 Or CHAR_LENGTH(A.ModuleDefinition) > 0) and B.ID = 34658
-
-------------------------------------
-
-Log Entry : 9:52:12 PM Friday, February 21, 2025 
-Select Distinct B.ID,A.ID as SystemModuleID,A.ModuleName,A.HomeModuleName,A.ParentModule,A.PageName,A.ModuleType,B.ModuleDefinition as UserModuleDefinition,A.ModuleDefinition as SystemModuleDefinition,
-                A.UserType,A.IconURL,A.SortNumber,A.DIYFlow From T_ProModuleLevel A, T_ProModule B Where rtrim(A.ModuleName)
-                ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType) and (CHAR_LENGTH(B.ModuleDefinition) > 0 Or CHAR_LENGTH(A.ModuleDefinition) > 0) and B.ID = 34658
-
-------------------------------------
-
-Log Entry : 21:53:46 2025年2月21日 
-Select Distinct B.ID,A.ID as SystemModuleID,A.ModuleName,A.HomeModuleName,A.ParentModule,A.PageName,A.ModuleType,B.ModuleDefinition as UserModuleDefinition,A.ModuleDefinition as SystemModuleDefinition,
-                A.UserType,A.IconURL,A.SortNumber,A.DIYFlow From T_ProModuleLevel A, T_ProModule B Where rtrim(A.ModuleName)
-                ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType) and (CHAR_LENGTH(B.ModuleDefinition) > 0 Or CHAR_LENGTH(A.ModuleDefinition) > 0) and B.ID = 34658
-
-------------------------------------
-
-Log Entry : 9:57:04 PM Friday, February 21, 2025 
-Select Distinct B.ID,A.ID as SystemModuleID,A.ModuleName,A.HomeModuleName,A.ParentModule,A.PageName,A.ModuleType,B.ModuleDefinition as UserModuleDefinition,A.ModuleDefinition as SystemModuleDefinition,
-                A.UserType,A.IconURL,A.SortNumber,A.DIYFlow From T_ProModuleLevel A, T_ProModule B Where rtrim(A.ModuleName)
-                ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType) and (CHAR_LENGTH(B.ModuleDefinition) > 0 Or CHAR_LENGTH(A.ModuleDefinition) > 0) and B.ID = 34658
-
-------------------------------------
-
-Log Entry : 23:48:54 2025年2月21日 
-Error page: 未将对象引用设置到对象的实例。
-   在 TakeTopSecurity.TakeTopLicense.GetCpuInfo() 位置 E:\TakeTopDECMPWinSolution\Component\KeyComponent\TakeTopSecurity\TakeTopSecurity.cs:行号 1042
-   在 TTVersionRegister.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTVersionRegister.aspx.cs:行号 76
-
-------------------------------------
-
-Log Entry : 23:52:28 2025年2月21日 
-URL: http://10.211.55.21:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
-Message 未将对象引用设置到对象的实例。
-   在 TakeTopMainTop.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TakeTopMainTop.aspx.cs:行号 38
-   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
-   在 System.Web.UI.Control.OnLoad(EventArgs e)
-   在 System.Web.UI.Control.LoadRecursive()
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-------------------------------------
-
-Log Entry : 12:33:03 AM Saturday, February 22, 2025 
-URL: http://10.211.55.21:5000/Source/Web/TakeTopLRExInnerMDI.aspx
+Log Entry : 10:05:12 PM Saturday, February 22, 2025 
+URL: http://10.211.55.22:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssGreenen
 Message Object reference not set to an instance of an object.
-   at ASP.taketoplrexinnermdi_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TakeTopLRExInnerMDI.aspx:line 34
-   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
-   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
-   at System.Web.UI.Page.Render(HtmlTextWriter writer)
-   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
-   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
-   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) in E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:line 31
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
    at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
 
 
 ------------------------------------
 
-Log Entry : 1:31:01 2025年2月22日 
-True
-
-------------------------------------
-
-Log Entry : 1:31:16 2025年2月22日 
-True
-
-------------------------------------
-
-Log Entry : 1:37:04 2025年2月22日 
-URL: http://10.211.55.21:5000/Source/Web/TakeTopMainTop.aspx?UserCode=C7094&Flag=CssGreenzh-CN
-Message 未将对象引用设置到对象的实例。
-   在 TakeTopMainTop.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TakeTopMainTop.aspx.cs:行号 38
-   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
-   在 System.Web.UI.Control.OnLoad(EventArgs e)
-   在 System.Web.UI.Control.LoadRecursive()
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-------------------------------------
-
-Log Entry : 1:38:50 2025年2月22日 
-URL: http://10.211.55.21:5000/Source/Web/TTConstractUnHandleReceivePay.aspx?ModuleName=ContractPaymentWarning&ModuleType=SYSTEM
-Message 未将对象引用设置到对象的实例。
-   在 TTConstractUnHandleReceivePay.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTConstractUnHandleReceivePay.aspx.cs:行号 25
-   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
-   在 System.Web.UI.Control.OnLoad(EventArgs e)
-   在 System.Web.UI.Control.LoadRecursive()
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-------------------------------------
-
-Log Entry : 16:32:39 2025年2月22日 
-Error page: 
-Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect): [ProjectMgt.Model.SystemAnalystChartManagement#0]
-   在 ProjectMgt.DAL.EntityControl.UpdateEntity(Object entity, Object key) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\DAL\EntityControl.cs:行号 89
-   在 ProjectMgt.DAL.SystemAnalystChartManagementDAL.UpdateSystemAnalystChartManagement(SystemAnalystChartManagement systemAnalystChartManagement, Int32 ID) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\DAL\SystemAnalystChartManagementDAL.cs:行号 23
-   在 ProjectMgt.BLL.SystemAnalystChartManagementBLL.UpdateSystemAnalystChartManagement(SystemAnalystChartManagement systemAnalystChartManagement, Int32 ID) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\BLL\SystemAnalystChartManagementBLL.cs:行号 19
-   在 TakeTopSystemOtherCodeRunPage.UpdateSystemAnalystChart(String strChartName) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TakeTopSystemOtherCodeRunPage.aspx.cs:行号 370
-
-------------------------------------
-
-Log Entry : 17:18:28 2025年2月22日 
-Error page: 
-Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect): [ProjectMgt.Model.SystemAnalystChartManagement#0]
-   在 ProjectMgt.DAL.EntityControl.UpdateEntity(Object entity, Object key) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\DAL\EntityControl.cs:行号 89
-   在 ProjectMgt.DAL.SystemAnalystChartManagementDAL.UpdateSystemAnalystChartManagement(SystemAnalystChartManagement systemAnalystChartManagement, Int32 ID) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\DAL\SystemAnalystChartManagementDAL.cs:行号 23
-   在 ProjectMgt.BLL.SystemAnalystChartManagementBLL.UpdateSystemAnalystChartManagement(SystemAnalystChartManagement systemAnalystChartManagement, Int32 ID) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\BLL\SystemAnalystChartManagementBLL.cs:行号 19
-   在 TakeTopSystemOtherCodeRunPage.UpdateSystemAnalystChart(String strChartName) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TakeTopSystemOtherCodeRunPage.aspx.cs:行号 370
-
-------------------------------------
-
-Log Entry : 17:19:08 2025年2月22日 
-URL: http://10.211.55.22:5000/Source/Web/TTSystemModuleSet.aspx?ModuleName=SystemModuleSetting&ModuleType=SYSTEM
-Message Timeout during reading attempt
-
-
-
-------------------------------------
-
-Log Entry : 17:24:01 2025年2月22日 
-Error page: 
-Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect): [ProjectMgt.Model.SystemAnalystChartManagement#0]
-   在 ProjectMgt.DAL.EntityControl.UpdateEntity(Object entity, Object key) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\DAL\EntityControl.cs:行号 89
-   在 ProjectMgt.DAL.SystemAnalystChartManagementDAL.UpdateSystemAnalystChartManagement(SystemAnalystChartManagement systemAnalystChartManagement, Int32 ID) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\DAL\SystemAnalystChartManagementDAL.cs:行号 23
-   在 ProjectMgt.BLL.SystemAnalystChartManagementBLL.UpdateSystemAnalystChartManagement(SystemAnalystChartManagement systemAnalystChartManagement, Int32 ID) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\BLL\SystemAnalystChartManagementBLL.cs:行号 19
-   在 TakeTopSystemOtherCodeRunPage.UpdateSystemAnalystChart(String strChartName) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TakeTopSystemOtherCodeRunPage.aspx.cs:行号 370
-
-------------------------------------
-
-Log Entry : 17:25:57 2025年2月22日 
-Error page: 未将对象引用设置到对象的实例。
-   在 TakeTopSecurity.TakeTopLicense.GetCpuInfo() 位置 E:\TakeTopDECMPWinSolution\Component\KeyComponent\TakeTopSecurity\TakeTopSecurity.cs:行号 1042
-   在 TTVersionRegister.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTVersionRegister.aspx.cs:行号 76
-
-------------------------------------
-
-Log Entry : 17:26:08 2025年2月22日 
-Error page: 
-Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect): [ProjectMgt.Model.SystemAnalystChartManagement#0]
-   在 ProjectMgt.DAL.EntityControl.UpdateEntity(Object entity, Object key) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\DAL\EntityControl.cs:行号 89
-   在 ProjectMgt.DAL.SystemAnalystChartManagementDAL.UpdateSystemAnalystChartManagement(SystemAnalystChartManagement systemAnalystChartManagement, Int32 ID) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\DAL\SystemAnalystChartManagementDAL.cs:行号 23
-   在 ProjectMgt.BLL.SystemAnalystChartManagementBLL.UpdateSystemAnalystChartManagement(SystemAnalystChartManagement systemAnalystChartManagement, Int32 ID) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\BLL\SystemAnalystChartManagementBLL.cs:行号 19
-   在 TakeTopSystemOtherCodeRunPage.UpdateSystemAnalystChart(String strChartName) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TakeTopSystemOtherCodeRunPage.aspx.cs:行号 370
-
-------------------------------------
-
-Log Entry : 17:46:48 2025年2月22日 
+Log Entry : 22:36:12 2025年2月22日 
 URL: http://10.211.55.22:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssGreenzh-CN
 Message 未将对象引用设置到对象的实例。
-   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e)
+   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:行号 31
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 10:53:11 PM Saturday, February 22, 2025 
+URL: http://10.211.55.22:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssGreenen
+Message Object reference not set to an instance of an object.
+   at TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) in E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:line 31
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 23:25:04 2025年2月22日 
+URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HRuningTaskStatus&ChartName=在执行任务状态
+Message 未将对象引用设置到对象的实例。
+   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 23:25:04 2025年2月22日 
+URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=Gauge&ChartName=我主导的项目状态
+Message 未将对象引用设置到对象的实例。
+   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 23:25:04 2025年2月22日 
+URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=Pie&ChartName=我参与的项目状态
+Message 未将对象引用设置到对象的实例。
+   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 23:25:04 2025年2月22日 
+URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=Pie&ChartName=所有成员的项目状态
+Message 未将对象引用设置到对象的实例。
+   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 23:25:08 2025年2月22日 
+URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HAnnualPaymentStatus&ChartName=项目年度回款状态
+Message 未将对象引用设置到对象的实例。
+   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 23:25:08 2025年2月22日 
+URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HDelayProjectStatus&ChartName=延误项目状态
+Message 未将对象引用设置到对象的实例。
+   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 23:25:08 2025年2月22日 
+URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HAnnualWorkHourStatus&ChartName=年度项目工时状态
+Message 未将对象引用设置到对象的实例。
+   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 23:25:08 2025年2月22日 
+URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HRuningProjectStatus&ChartName=在执行项目状态
+Message 未将对象引用设置到对象的实例。
+   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 23:26:00 2025年2月22日 
+URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=Gauge&ChartName=我主导的项目状态
+Message 未将对象引用设置到对象的实例。
+   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 23:26:00 2025年2月22日 
+URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=Pie&ChartName=我参与的项目状态
+Message 未将对象引用设置到对象的实例。
+   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 23:26:00 2025年2月22日 
+URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=Pie&ChartName=所有成员的项目状态
+Message 未将对象引用设置到对象的实例。
+   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 23:26:02 2025年2月22日 
+URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HDelayProjectStatus&ChartName=延误项目状态
+Message 未将对象引用设置到对象的实例。
+   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 23:26:12 2025年2月22日 
+URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HAnnualWorkHourStatus&ChartName=年度项目工时状态
+Message 未将对象引用设置到对象的实例。
+   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 23:26:13 2025年2月22日 
+URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HAnnualPaymentStatus&ChartName=项目年度回款状态
+Message 未将对象引用设置到对象的实例。
+   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 23:26:13 2025年2月22日 
+URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HRuningTaskStatus&ChartName=在执行任务状态
+Message 未将对象引用设置到对象的实例。
+   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 23:26:14 2025年2月22日 
+URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HRuningProjectStatus&ChartName=在执行项目状态
+Message 未将对象引用设置到对象的实例。
+   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+------------------------------------
+
+Log Entry : 23:37:47 2025年2月22日 
+URL: http://10.211.55.22:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssGreenzh-CN
+Message 未将对象引用设置到对象的实例。
+   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:行号 31
    在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
    在 System.Web.UI.Control.OnLoad(EventArgs e)
    在 System.Web.UI.Control.LoadRecursive()

@@ -27870,8 +27870,40 @@
   <data name="ZZYuanMiMaChuWuHouWeiKong2" xml:space="preserve">
     <value>保存失敗，原密碼錯誤或為空，請檢查！</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="NianDuChengBenHeShuan" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
+    <value>在执行项目总数</value>
+  </data>
+  <data name="NianDuXingZeng" xml:space="preserve">
+    <value>年度新增</value>
+  </data>
+  <data name="NianDuWanCheng" xml:space="preserve">
+    <value>年度完成</value>
+  </data>
+  <data name="NianDuYanWuXiangMuShu" xml:space="preserve">
+    <value>严重延误项目数 </value>
+  </data>
+  <data name="JingDuZhengChang" xml:space="preserve">
+    <value>进度正常</value>
+  </data>
+  <data name="QingDuYanWu" xml:space="preserve">
+    <value>轻度延误</value>
+  </data>
+  <data name="NianDuChengBenHeShuan" xml:space="preserve">
+    <value>年度成本核算</value>
+  </data>
+  <data name="ChengBenChaoZiXiangMuShu" xml:space="preserve">
+    <value>成本超支项目数</value>
+  </data>
+  <data name="NianDuXiangMuGongShiTouRu" xml:space="preserve">
+    <value>年度项目工时投入</value>
+  </data>
+  <data name="NianDuTeiBaoRenShu" xml:space="preserve">
+    <value>年度填报人数</value>
+  </data>
+  <data name="ZaiZhiXingRenWuZhongShu" xml:space="preserve">
+    <value>在执行任务总数</value>
+  </data>
+  <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
+    <value>项目年度回款</value>
   </data>
 </root>

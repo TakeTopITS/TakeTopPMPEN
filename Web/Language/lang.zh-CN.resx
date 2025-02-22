@@ -946,10 +946,10 @@
     <value>黑色</value>
   </data>
   <data name="BoHui" xml:space="preserve">
-    <value>终止</value>
+    <value>驳回</value>
   </data>
   <data name="BoHuiZhongZhi" xml:space="preserve">
-    <value>终止</value>
+    <value>驳回终止</value>
   </data>
   <data name="BoKouJianTu" xml:space="preserve">
     <value>箔口简图</value>
@@ -9650,6 +9650,7 @@
   </data>
   <data name="QESGongChengShi" xml:space="preserve">
     <value>QES工程师</value>
+    <comment>操</comment>
   </data>
   <data name="QianBuZhou" xml:space="preserve">
     <value>前步骤</value>
@@ -15493,7 +15494,7 @@
     <value>(依工作日志和上传文档计算)</value>
   </data>
   <data name="YGZYGDMCYAQKLBNSYDeleteUpdateDropInsertAlterYuJu" xml:space="preserve">
-    <value>域规则：员工代码：[TAKETOPUSERCODE]，管理部门串：[TAKETOPSUPERDEPARTSTRING] ，出于安全考虑，不能使用含Delete,Update,Drop,Insert,Alter语句）</value>
+    <value>域规则：员工代码：[TAKETOPUSERCODE]，出于安全考虑，不能使用含Delete,Update,Drop,Insert,Alter语句）</value>
   </data>
   <data name="XTFXTYGZ" xml:space="preserve">
     <value>域规则：X轴：XName, Y轴：YNumber, 员工代码：[TAKETOPUSERCODE]，部门串：[TAKETOPDEPARTSTRING] ,语言代码【TAKETOPLANGCODE】,出于安全考虑，不能使用含Delete,Update,Drop,Insert,Alter语句）</value>
@@ -18259,7 +18260,7 @@
     <value>编号不能为非法字符！</value>
   </data>
   <data name="ZZBHCG" xml:space="preserve">
-    <value>已终止！</value>
+    <value>驳回成功！</value>
   </data>
   <data name="ZZBHGDHBNWFFZF" xml:space="preserve">
     <value>不合格代号不能为非法字符！</value>
@@ -23290,7 +23291,7 @@
     <value>以上任何一项都不能为空，请检查！</value>
   </data>
   <data name="ZZYSZSTRAGENCYNAMEWNDGZLSPDLRXZXSWNZJJK" xml:space="preserve">
-    <value>已设置  " + strAgencyName + " 为你的工作流审批代理人，取消只需设为你自己即可！</value>
+    <value>已设置你的工作流审批代理人，取消只需设为你自己即可！</value>
   </data>
   <data name="ZZYTBNWFFZF" xml:space="preserve">
     <value>用途不能为非法字符！</value>
@@ -25078,7 +25079,7 @@
     <value>预算与费用报表</value>
   </data>
   <data name="JHZTFBT" xml:space="preserve">
-    <value>计划状态分布图</value>
+    <value>计划完成率分布图</value>
   </data>
   <data name="ABMTJFYFB" xml:space="preserve">
     <value>按部门统计费用分布</value>
@@ -26239,7 +26240,7 @@
     <value>用户维护</value>
   </data>
   <data name="ZZJGWEBYHSYJDYNDZCSAPPLICENSEGDDSMBNZXZXDWEBYHL" xml:space="preserve">
-    <value>警告，WEB用户数已经等于你的注册授权APP License规定的数目，不能再新增新的WEB用户了！</value>
+    <value>警告，WEB用户数已经等于你的注册授权License规定的数目，不能再新增新的WEB用户了！</value>
   </data>
   <data name="YeMianMoZuSheDing" xml:space="preserve">
     <value>页面模组设定</value>
@@ -27410,5 +27411,122 @@
   </data>
   <data name="ZZYuanMiMaChuWuHouWeiKong" xml:space="preserve">
     <value>保存失败，原密码错误或为空，请检查！</value>
+  </data>
+  <data name="MYQXSYCGN" xml:space="preserve">
+    <value>你没有权限使用此功能！</value>
+  </data>
+  <data name="ZZHHCG" xml:space="preserve">
+    <value>返回成功！</value>
+  </data>
+  <data name="CaoShi" xml:space="preserve">
+    <value>超时</value>
+  </data>
+  <data name="ZiDong" xml:space="preserve">
+    <value>自动</value>
+  </data>
+  <data name="ZZJBSCCG" xml:space="preserve">
+    <value>加班申请生成成功！</value>
+  </data>
+  <data name="TaoHuangTu" xml:space="preserve">
+    <value>导航图</value>
+  </data>
+  <data name="GuanLianTaoHuangYeMian" xml:space="preserve">
+    <value>点击显示导航页面</value>
+  </data>
+  <data name="APPURLMiaoShu" xml:space="preserve">
+    <value>请用微信或其它工具扫描下面二维码，打开你的APP登录界面，并把此登录界面的地址收藏！</value>
+  </data>
+  <data name="APPURLShouChang" xml:space="preserve">
+    <value>收藏后，以后用此地址登录APP！</value>
+  </data>
+  <data name="ChangGui" xml:space="preserve">
+    <value>常规</value>
+  </data>
+  <data name="BuConXieYi" xml:space="preserve">
+    <value>补充协议</value>
+  </data>
+  <data name="GongChunLiangQinDan" xml:space="preserve">
+    <value>工程量清单</value>
+  </data>
+  <data name="HeTongYiJi" xml:space="preserve">
+    <value>合同依据</value>
+  </data>
+  <data name="ShangChuanWordDoc" xml:space="preserve">
+    <value>上传(word文档)</value>
+  </data>
+  <data name="XiangMuQiTaXinXi" xml:space="preserve">
+    <value>项目其他信息</value>
+  </data>
+  <data name="CongWordDocDaoRu" xml:space="preserve">
+    <value>从Word文档导入</value>
+  </data>
+  <data name="ZhanKaiZouBianLian" xml:space="preserve">
+    <value>展开左边栏</value>
+  </data>
+  <data name="ZhaoBiaoGuanLi" xml:space="preserve">
+    <value>招标管理</value>
+  </data>
+  <data name="DuWenJianShangZhuan" xml:space="preserve">
+    <value>多文件上传</value>
+  </data>
+  <data name="PingShenZhangTai" xml:space="preserve">
+    <value>评审状态</value>
+  </data>
+  <data name="NoReviewed" xml:space="preserve">
+    <value>未评</value>
+  </data>
+  <data name="LastestReviewer" xml:space="preserve">
+    <value>最新审核人</value>
+  </data>
+  <data name="ZZGZLFQCG" xml:space="preserve">
+    <value>工作流发起成功！</value>
+  </data>
+  <data name="GengDuXinXi" xml:space="preserve">
+    <value>更多...</value>
+  </data>
+  <data name="DuYiYanDuiBi" xml:space="preserve">
+    <value>多语言替换</value>
+  </data>
+  <data name="YiBenYuDuiBi" xml:space="preserve">
+    <value>与本语对比</value>
+  </data>
+  <data name="ZZJGWEBYHYJZGSQWEBYHSQJC" xml:space="preserve">
+    <value>警告，WEB用户数已经超过授权的WEB用户数，请检查！</value>
+  </data>
+  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
+    <value>在执行项目总数</value>
+  </data>
+  <data name="NianDuXingZeng" xml:space="preserve">
+    <value>年度新增</value>
+  </data>
+  <data name="NianDuWanCheng" xml:space="preserve">
+    <value>年度完成</value>
+  </data>
+  <data name="NianDuYanWuXiangMuShu" xml:space="preserve">
+    <value>严重延误项目数 </value>
+  </data>
+  <data name="JingDuZhengChang" xml:space="preserve">
+    <value>进度正常</value>
+  </data>
+  <data name="QingDuYanWu" xml:space="preserve">
+    <value>轻度延误</value>
+  </data>
+  <data name="NianDuChengBenHeShuan" xml:space="preserve">
+    <value>年度成本核算</value>
+  </data>
+  <data name="ChengBenChaoZiXiangMuShu" xml:space="preserve">
+    <value>成本超支项目数</value>
+  </data>
+  <data name="NianDuXiangMuGongShiTouRu" xml:space="preserve">
+    <value>年度项目工时投入</value>
+  </data>
+  <data name="NianDuTeiBaoRenShu" xml:space="preserve">
+    <value>年度填报人数</value>
+  </data>
+  <data name="ZaiZhiXingRenWuZhongShu" xml:space="preserve">
+    <value>在执行任务总数</value>
+  </data>
+  <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
+    <value>项目年度回款</value>
   </data>
 </root>
