@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -30,7 +30,7 @@ public partial class TTProjectMemberManHourReportForAlone : System.Web.UI.Page
 
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text =  Resources.lang.XiangMu + ": " + strProjectID + " " + strProjectName + " æˆå‘˜å·¥æ—¶è¡¨";
+        LB_ReportName.Text =  Resources.lang.XiangMu + ": " + strProjectID + " " + strProjectName + " ³ÉÔ±¹¤Ê±±í";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
@@ -120,13 +120,13 @@ public partial class TTProjectMemberManHourReportForAlone : System.Web.UI.Page
         strBeginTime = DateTime.Parse(DLC_BeginDate.Text).ToString("yyyyMMdd");
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyyMMdd");
 
-        strHQL = @"Select DepartCode as 'éƒ¨é—¨',
-                   UserName as 'å§“å',
-                   DepartCode as 'éƒ¨é—¨ä»£ç ',
-                   DepartName as 'éƒ¨é—¨åç§°',
-                   WorkDate as 'å·¥ä½œæ—¶é—´',
-                   sum(ManHour) as 'ç”³æŠ¥å·¥æ—¶',
-                   sum(ConfirmManHour) as 'ç¡®è®¤å·¥æ—¶'
+        strHQL = @"Select DepartCode as '²¿ÃÅ',
+                   UserName as 'ĞÕÃû',
+                   DepartCode as '²¿ÃÅ´úÂë',
+                   DepartName as '²¿ÃÅÃû³Æ',
+                   WorkDate as '¹¤×÷Ê±¼ä',
+                   sum(ManHour) as 'Éê±¨¹¤Ê±',
+                   sum(ConfirmManHour) as 'È·ÈÏ¹¤Ê±'
                    From V_ProjectMemberManHourSummary";
         strHQL += " Where ProjectID = " + strProjectID;
         strHQL += " and to_char(WorkDate,'yyyymmdd') >= " + "'" + strBeginTime + "'";
@@ -137,9 +137,9 @@ public partial class TTProjectMemberManHourReportForAlone : System.Web.UI.Page
 
         DataTable dtProject = ShareClass.GetDataSetFromSql(strHQL, "project").Tables[0];
 
-        Export3Excel(dtProject, Resources.lang.XiangMu + ": " + strProjectID + " " + strProjectName + " æˆå‘˜å·¥æ—¶æ±‡æ€»è¡¨.xls");
+        Export3Excel(dtProject, Resources.lang.XiangMu + ": " + strProjectID + " " + strProjectName + " ³ÉÔ±¹¤Ê±»ã×Ü±í.xls");
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¯¼å‡ºæˆåŠŸï¼');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µ¼³ö³É¹¦£¡');", true);
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

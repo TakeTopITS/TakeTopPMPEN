@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -155,8 +155,8 @@ public partial class TTTakeTopIMDetailView : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Document as document where document.RelatedType = '协作' and document.RelatedID = " + strCoID;
-        strHQL += " and rtrim(ltrim(document.Status)) <> '删除' Order by document.DocID DESC";
+        strHQL = "from Document as document where document.RelatedType = 'Э��' and document.RelatedID = " + strCoID;
+        strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);
 

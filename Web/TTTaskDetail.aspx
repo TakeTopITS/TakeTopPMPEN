@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTTaskDetail.aspx.cs" Inherits="TTTaskDetail" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTTaskDetail.aspx.cs" Inherits="TTTaskDetail" %>
 
 <!DOCTYPE html>
 

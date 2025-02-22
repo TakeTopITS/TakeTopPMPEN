@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCarStatus.aspx.cs" Inherits="TTCarStatus" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCarStatus.aspx.cs" Inherits="TTCarStatus" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI.BusyBox" TagPrefix="nickleebusybox" %>
 <%@ Register Assembly="NickLee.Web.UI.VB" Namespace="NickLee.Web.UI.VB" TagPrefix="NickLeeVB" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>车辆状态图</title>
+    <title>����״̬ͼ</title>
     <link href="css/Schedule.css" rel="stylesheet" type="text/css" />
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 </head>

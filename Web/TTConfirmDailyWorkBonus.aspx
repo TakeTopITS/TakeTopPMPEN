@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConfirmDailyWorkBonus.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConfirmDailyWorkBonus.aspx.cs"
     Inherits="TTConfirmDailyWorkBonus" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -46,13 +46,13 @@
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
                                                         <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>£º
                                                         <asp:Label ID="LB_ProjectID" runat="server"></asp:Label>
                                                             &nbsp;<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,GongZuoRiZhiJiangJinQueRen%>"></asp:Label>
-                                                            ï¼ˆ<asp:HyperLink ID="HL_ProjectDailyWorkBonusReport" runat="server" Target="_blank">
-                                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,GongZuoRiZhiJiangJinBaoBiao%>"></asp:Label>å·¥
+                                                            £¨<asp:HyperLink ID="HL_ProjectDailyWorkBonusReport" runat="server" Target="_blank">
+                                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,GongZuoRiZhiJiangJinBaoBiao%>"></asp:Label>¹¤
                                                             </asp:HyperLink>
-                                                            ï¼‰
+                                                            £©
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -87,7 +87,7 @@
                                                             <table style="width: 98%;">
                                                                 <tr>
                                                                     <td style="background: #f0f0f0; text-align: left; width: 55%; height: 25px;" colspan="2">
-                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ChaXunFanWeiShi%>"></asp:Label>ï¼š<asp:Label ID="LB_QueryScope" runat="server"  Font-Names="Arial,å®‹ä½“"
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ChaXunFanWeiShi%>"></asp:Label>£º<asp:Label ID="LB_QueryScope" runat="server"  Font-Names="Arial,ËÎÌå"
                                                                             Font-Size="9pt"></asp:Label>
                                                                         <asp:Label ID="LB_Sql" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="11pt"
                                                                             Height="16px"  Visible="False" Width="46px"></asp:Label>
@@ -97,9 +97,9 @@
                                                                              Visible="False"></asp:Label>
                                                                     </td>
                                                                     <td style="background: #f0f0f0; text-align: right; width: 45%; height: 25px;" colspan="2">
-                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,YuanJiangJinZongE%>"></asp:Label>ï¼š<asp:Label ID="LB_Bonus" runat="server"></asp:Label>
+                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,YuanJiangJinZongE%>"></asp:Label>£º<asp:Label ID="LB_Bonus" runat="server"></asp:Label>
                                                                         &nbsp;&nbsp;
-                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,QueRenJiangJinZongE%>"></asp:Label>ï¼š<asp:Label ID="LB_ConfirmBonus" runat="server"></asp:Label>
+                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,QueRenJiangJinZongE%>"></asp:Label>£º<asp:Label ID="LB_ConfirmBonus" runat="server"></asp:Label>
                                                                     </td>
                                                                 </tr>
                                                             </table>

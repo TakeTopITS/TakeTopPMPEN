@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,7 +13,7 @@ using ProjectMgt.BLL;
 
 public partial class WeiXinIndex : System.Web.UI.Page
 {
-    ////ä¸å¾®ä¿¡å…¬ä¼—è´¦å·åå°çš„Tokenè®¾ç½®ä¿æŒä¸€è‡´ï¼ŒåŒºåˆ†å¤§å°å†™ã€‚
+    ////ÓëÎ¢ĞÅ¹«ÖÚÕËºÅºóÌ¨µÄTokenÉèÖÃ±£³ÖÒ»ÖÂ£¬Çø·Ö´óĞ¡Ğ´¡£
     //private readonly string Token = "TakeTopMISToken";
 
     protected void Page_Load(object sender, EventArgs e)
@@ -32,7 +32,7 @@ public partial class WeiXinIndex : System.Web.UI.Page
     }
 
     /// <summary>
-    /// å¤„ç†å¾®ä¿¡æœåŠ¡å™¨éªŒè¯æ¶ˆæ¯
+    /// ´¦ÀíÎ¢ĞÅ·şÎñÆ÷ÑéÖ¤ÏûÏ¢
     /// </summary>
     private void Auth(string strToken)
     {
@@ -43,15 +43,15 @@ public partial class WeiXinIndex : System.Web.UI.Page
 
         if (Request.HttpMethod == "GET")
         {
-            //get method - ä»…åœ¨å¾®ä¿¡åå°å¡«å†™URLéªŒè¯æ—¶è§¦å‘
+            //get method - ½öÔÚÎ¢ĞÅºóÌ¨ÌîĞ´URLÑéÖ¤Ê±´¥·¢
             if (CheckSignature.Check(signature, timestamp, nonce, strToken))
             {
-                WriteContent(echostr); //è¿”å›éšæœºå­—ç¬¦ä¸²åˆ™è¡¨ç¤ºéªŒè¯é€šè¿‡
+                WriteContent(echostr); //·µ»ØËæ»ú×Ö·û´®Ôò±íÊ¾ÑéÖ¤Í¨¹ı
             }
             else
             {
-                WriteContent("failed:" + signature + "," + CheckSignature.GetSignature(timestamp, nonce, strToken) + "ã€‚" +
-                            "å¦‚æœä½ åœ¨æµè§ˆå™¨ä¸­çœ‹åˆ°è¿™å¥è¯ï¼Œè¯´æ˜æ­¤åœ°å€å¯ä»¥è¢«ä½œä¸ºå¾®ä¿¡å…¬ä¼—è´¦å·åå°çš„Urlï¼Œè¯·æ³¨æ„ä¿æŒTokenä¸€è‡´ã€‚");
+                WriteContent("failed:" + signature + "," + CheckSignature.GetSignature(timestamp, nonce, strToken) + "¡£" +
+                            "Èç¹ûÄãÔÚä¯ÀÀÆ÷ÖĞ¿´µ½Õâ¾ä»°£¬ËµÃ÷´ËµØÖ·¿ÉÒÔ±»×÷ÎªÎ¢ĞÅ¹«ÖÚÕËºÅºóÌ¨µÄUrl£¬Çë×¢Òâ±£³ÖTokenÒ»ÖÂ¡£");
             }
             Response.End();
         }

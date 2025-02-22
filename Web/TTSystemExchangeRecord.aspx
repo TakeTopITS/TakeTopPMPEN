@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSystemExchangeRecord.aspx.cs" Inherits="TTSystemExchangeRecord" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSystemExchangeRecord.aspx.cs" Inherits="TTSystemExchangeRecord" %>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>数据交换执行日志</title>
+    <title>���ݽ���ִ����־</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />  
 
      <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>

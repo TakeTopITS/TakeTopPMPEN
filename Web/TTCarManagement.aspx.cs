@@ -1,4 +1,4 @@
-锘縰sing System; using System.Resources;
+using System; using System.Resources;
 using System.Collections;
 using System.ComponentModel;
 using System.Data;
@@ -27,14 +27,14 @@ public partial class TTCarManagement : System.Web.UI.Page
         LB_UserCode.Text = strUserCode;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","杞﹁締绠＄悊", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","车辆管理", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
             return;
         }
 
-        //this.Title = "杞﹁締绠＄悊---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
+        //this.Title = "车辆管理---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
 
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack == false)

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCompletionDataManage.aspx.cs" Inherits="TTCompletionDataManage" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCompletionDataManage.aspx.cs" Inherits="TTCompletionDataManage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -41,20 +41,20 @@
                                         <td align="left">
                                             <table>
                                                 <tr>
-                                                     <td>( <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZHCXFL%>"></asp:Label>ï¼š</td>
+                                                     <td>( <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZHCXFL%>"></asp:Label>£º</td>
                                                     <td>
                                                         <asp:DropDownList ID="DL_DocType" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DL_DocType_SelectedIndexChanged">
-                                                            <asp:ListItem Value="å›¾çº¸" Text="<%$ Resources:lang,TuZhi%>"/>
-                                                            <asp:ListItem Value="æ–‡ä»¶" Text="<%$ Resources:lang,WenJian%>"/>
+                                                            <asp:ListItem Value="Drawing" Text="<%$ Resources:lang,TuZhi%>"/>
+                                                            <asp:ListItem Value="Document" Text="<%$ Resources:lang,WenJian%>"/>
                                                         </asp:DropDownList></td>
                                                      <td>
-                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZiLiaoLeiXing%>"></asp:Label>ï¼š</td>
+                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZiLiaoLeiXing%>"></asp:Label>£º</td>
                                                      <td>
                                                          <asp:DropDownList ID="DL_DocGraphType" runat="server">
                                                          </asp:DropDownList>
                                                      </td>
                                                     <td>
-                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZiLiaoMingCheng%>"></asp:Label>ï¼š </td>
+                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZiLiaoMingCheng%>"></asp:Label>£º </td>
                                                     <td>
                                                         <asp:TextBox ID="TB_DocName" runat="server" Width="120px"></asp:TextBox></td>
                                                    
@@ -117,25 +117,25 @@
                                                         GridLines="None" Height="1px"  ShowHeader="False" OnPageIndexChanged="DataGrid1_PageIndexChanged" Width="98%">
                                                     
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="åºå·">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="FileName" HeaderText="é¢˜å">
+                                                        <asp:BoundColumn DataField="FileName" HeaderText="ÌâÃû">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DocType" HeaderText="è½½ä½“ç±»åž‹">
+                                                        <asp:BoundColumn DataField="DocType" HeaderText="ÔØÌåÀàÐÍ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="FileWay" HeaderText="å½’æ¡£å•ä½">
+                                                        <asp:BoundColumn DataField="FileWay" HeaderText="¹éµµµ¥Î»">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ProjectID" HeaderText="é¡¹ç›®ç¼–å·">
+                                                        <asp:BoundColumn DataField="ProjectID" HeaderText="ÏîÄ¿±àºÅ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DocumentNo" HeaderText="æ–‡ä»¶ç¼–å·">
+                                                        <asp:BoundColumn DataField="DocumentNo" HeaderText="ÎÄ¼þ±àºÅ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DispatchDepartment" HeaderText="è®¾è®¡å•ä½">
+                                                        <asp:BoundColumn DataField="DispatchDepartment" HeaderText="Éè¼Æµ¥Î»">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:TemplateColumn>
@@ -144,13 +144,13 @@
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:HyperLinkColumn DataNavigateUrlField="FilePath" Visible="false" DataNavigateUrlFormatString="{0}" DataTextField="FileName" HeaderText="è½½ä½“ç±»åž‹" Target="_blank">
+                                                        <asp:HyperLinkColumn DataNavigateUrlField="FilePath" Visible="false" DataNavigateUrlFormatString="{0}" DataTextField="FileName" HeaderText="ÔØÌåÀàÐÍ" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:HyperLinkColumn>
-                                                        <asp:BoundColumn DataField="Creator" HeaderText="æ”¶æ–‡äºº" Visible="false">
+                                                        <asp:BoundColumn DataField="Creator" HeaderText="ÊÕÎÄÈË" Visible="false">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CreateDate" HeaderText="æ”¶æ–‡æ—¥æœŸ" DataFormatString="{0:yyyy-MM-dd}" Visible="false">
+                                                        <asp:BoundColumn DataField="CreateDate" HeaderText="ÊÕÎÄÈÕÆÚ" DataFormatString="{0:yyyy-MM-dd}" Visible="false">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%"/>
                                                         </asp:BoundColumn>
                                                         <asp:TemplateColumn Visible="false">
@@ -201,31 +201,31 @@
                                                         GridLines="None" Height="1px"  ShowHeader="False" OnPageIndexChanged="DataGrid3_PageIndexChanged" Width="98%">
                                                     
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="åºå·">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="FileName" HeaderText="é¢˜å">
+                                                        <asp:BoundColumn DataField="FileName" HeaderText="ÌâÃû">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DocType" HeaderText="è½½ä½“ç±»åž‹">
+                                                        <asp:BoundColumn DataField="DocType" HeaderText="ÔØÌåÀàÐÍ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:HyperLinkColumn DataNavigateUrlField="FilePath" Visible="false" DataNavigateUrlFormatString="{0}" DataTextField="FileName" HeaderText="è½½ä½“ç±»åž‹" Target="_blank">
+                                                        <asp:HyperLinkColumn DataNavigateUrlField="FilePath" Visible="false" DataNavigateUrlFormatString="{0}" DataTextField="FileName" HeaderText="ÔØÌåÀàÐÍ" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="12%" />
                                                         </asp:HyperLinkColumn>
-                                                        <asp:BoundColumn DataField="FileNum" HeaderText="ä»½æ•°">
+                                                        <asp:BoundColumn DataField="FileNum" HeaderText="·ÝÊý">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="TableNum" HeaderText="è¡¨/ä»½">
+                                                        <asp:BoundColumn DataField="TableNum" HeaderText="±í/·Ý">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="FigureNum" HeaderText="å›¾/ä»½">
+                                                        <asp:BoundColumn DataField="FigureNum" HeaderText="Í¼/·Ý">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ProjectID" HeaderText="é¡¹ç›®ç¼–å·">
+                                                        <asp:BoundColumn DataField="ProjectID" HeaderText="ÏîÄ¿±àºÅ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="FileNo" HeaderText="æ¡£æ¡ˆå·">
+                                                        <asp:BoundColumn DataField="FileNo" HeaderText="µµ°¸ºÅ">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:TemplateColumn>
@@ -234,10 +234,10 @@
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="FigureDate" HeaderText="æ”¶å›¾æ—¥æœŸ" DataFormatString="{0:yyyy-MM-dd}" Visible="false">
+                                                        <asp:BoundColumn DataField="FigureDate" HeaderText="ÊÕÍ¼ÈÕÆÚ" DataFormatString="{0:yyyy-MM-dd}" Visible="false">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Center" Width="12%"/>
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Creator" HeaderText="ä¸Šä¼ è€…" Visible="false">
+                                                        <asp:BoundColumn DataField="Creator" HeaderText="ÉÏ´«Õß" Visible="false">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
                                                     </Columns>
@@ -299,31 +299,31 @@
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="é¡ºåºå·">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="Ë³ÐòºÅ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="FileName" HeaderText="æ–‡ä»¶åç§°">
+                                                        <asp:BoundColumn DataField="FileName" HeaderText="ÎÄ¼þÃû³Æ">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="IssuingDate" HeaderText="å‘æ”¾æ—¥æœŸ" DataFormatString="{0:yyyy-MM-dd}">
+                                                        <asp:BoundColumn DataField="IssuingDate" HeaderText="·¢·ÅÈÕÆÚ" DataFormatString="{0:yyyy-MM-dd}">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Center" Width="12%"/>
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DocType" HeaderText="è½½ä½“ç±»åž‹">
+                                                        <asp:BoundColumn DataField="DocType" HeaderText="ÔØÌåÀàÐÍ">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ReceivingDepartment" HeaderText="é¢†å–éƒ¨é—¨">
+                                                        <asp:BoundColumn DataField="ReceivingDepartment" HeaderText="ÁìÈ¡²¿ÃÅ">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Attachments" HeaderText="ä»½æ•°">
+                                                        <asp:BoundColumn DataField="Attachments" HeaderText="·ÝÊý">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DocumentNo" HeaderText="æ–‡ä»¶ç¼–å·">
+                                                        <asp:BoundColumn DataField="DocumentNo" HeaderText="ÎÄ¼þ±àºÅ">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Recipients" HeaderText="ç­¾æ”¶äºº" Visible="false">
+                                                        <asp:BoundColumn DataField="Recipients" HeaderText="Ç©ÊÕÈË" Visible="false">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:HyperLinkColumn Visible="false" DataNavigateUrlField="FilePath" DataNavigateUrlFormatString="{0}" DataTextField="FileName" HeaderText="ç”µå­ç‰ˆ" Target="_blank">
+                                                        <asp:HyperLinkColumn Visible="false" DataNavigateUrlField="FilePath" DataNavigateUrlFormatString="{0}" DataTextField="FileName" HeaderText="µç×Ó°æ" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="12%" />
                                                         </asp:HyperLinkColumn>
                                                         <asp:TemplateColumn Visible="false">
@@ -382,34 +382,34 @@
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="é¡ºåºå·">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="Ë³ÐòºÅ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="FileName" HeaderText="åç§°">
+                                                        <asp:BoundColumn DataField="FileName" HeaderText="Ãû³Æ">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Left" Width="18%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="IssueDate" HeaderText="å‘å›¾æ—¥æœŸ" DataFormatString="{0:yyyy-MM-dd}">
+                                                        <asp:BoundColumn DataField="IssueDate" HeaderText="·¢Í¼ÈÕÆÚ" DataFormatString="{0:yyyy-MM-dd}">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Center" Width="12%"/>
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DocType" HeaderText="è½½ä½“ç±»åž‹">
+                                                        <asp:BoundColumn DataField="DocType" HeaderText="ÔØÌåÀàÐÍ">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="FileNum" HeaderText="ä»½æ•°">
+                                                        <asp:BoundColumn DataField="FileNum" HeaderText="·ÝÊý">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="TableNum" HeaderText="è¡¨/ä»½">
+                                                        <asp:BoundColumn DataField="TableNum" HeaderText="±í/·Ý">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="FigureNum" HeaderText="å›¾/ä»½">
+                                                        <asp:BoundColumn DataField="FigureNum" HeaderText="Í¼/·Ý">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="FileNo" HeaderText="æ¡£æ¡ˆå·">
+                                                        <asp:BoundColumn DataField="FileNo" HeaderText="µµ°¸ºÅ">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Recipients" HeaderText="ç­¾æ”¶äºº" Visible="false">
+                                                        <asp:BoundColumn DataField="Recipients" HeaderText="Ç©ÊÕÈË" Visible="false">
                                                             <ItemStyle  CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:HyperLinkColumn Visible="false" DataNavigateUrlField="FilePath" DataNavigateUrlFormatString="{0}" DataTextField="FileName" HeaderText="ç”µå­ç‰ˆ" Target="_blank">
+                                                        <asp:HyperLinkColumn Visible="false" DataNavigateUrlField="FilePath" DataNavigateUrlFormatString="{0}" DataTextField="FileName" HeaderText="µç×Ó°æ" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="12%" />
                                                         </asp:HyperLinkColumn>
                                                         <asp:TemplateColumn Visible="false">

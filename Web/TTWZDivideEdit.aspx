@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZDivideEdit.aspx.cs" Inherits="TTWZDivideEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZDivideEdit.aspx.cs" Inherits="TTWZDivideEdit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ä¸“ä¸šåˆ’åˆ†ç¼–è¾‘</title>
+    <title>×¨Òµ»®·Ö±à¼­</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -14,7 +14,7 @@
             $("#btnSelect").click(function () {
                 var url = "TTWZSelectorDLCode.aspx";
 
-                popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + "TXT_DLCode" + "&ctrlName=" + name, 'é€‰æ‹©ç‰©æ–™ç±»åž‹', 600, 500);	
+                popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + "TXT_DLCode" + "&ctrlName=" + name, 'Ñ¡ÔñÎïÁÏÀàÐÍ', 600, 500);	
 
             });
 
@@ -63,13 +63,13 @@
                                                 <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZhuanYeBianHao%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZhuanYeBianHao%>"></asp:Label>£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_DivideCode" runat="server" ReadOnly="true"></asp:TextBox><font color="red">*<asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiTongZiDongShengCheng%>"></asp:Label></font>
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhuanYeLeiBie%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhuanYeLeiBie%>"></asp:Label>£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_DivideType" runat="server"></asp:TextBox>
@@ -77,16 +77,16 @@
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,SheJiDaLei%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,SheJiDaLei%>"></asp:Label>£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="3">
-                                                            <asp:TextBox ID="TXT_DLCode" runat="server" Width="370"></asp:TextBox>&nbsp;&nbsp;<input type="button" class="inpu" value="é€‰æ‹©" id="btnSelect" />
+                                                            <asp:TextBox ID="TXT_DLCode" runat="server" Width="370"></asp:TextBox>&nbsp;&nbsp;<input type="button" class="inpu" value="Ñ¡Ôñ" id="btnSelect" />
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: center" class="formItemBgStyle" colspan="4">
                                                             <asp:Button ID="btnSave" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnSave_Click" />&nbsp;&nbsp;
-                                                            <input type="button" value="è¿”å›ž" id="BT_Return" class="inpu" onclick="window.location.href = 'TTWZDivideList.aspx'" />
+                                                            <input type="button" value="·µ»Ø" id="BT_Return" class="inpu" onclick="window.location.href = 'TTWZDivideList.aspx'" />
                                                         </td>
                                                     </tr>
                                                 </table>

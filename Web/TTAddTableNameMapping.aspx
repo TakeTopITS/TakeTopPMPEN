@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAddTableNameMapping.aspx.cs" Inherits="TTAddTableNameMapping" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAddTableNameMapping.aspx.cs" Inherits="TTAddTableNameMapping" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Ê∑ªÂä†Êï∞ÊçÆ‰∫§‰∫íÂ≠óÊÆµÈÖçÂØπ</title>
+    <title>ÃÌº” ˝æ›Ωªª•◊÷∂Œ≈‰∂‘</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript">
@@ -16,7 +16,7 @@
                 var strDescription = $("#TXT_Description").val();
 
                 if (strTableName == "" || strTableName == null) {
-                    alert("Êï∞ÊçÆË°®Âêç‰∏çËÉΩ‰∏∫Á©∫ÔºÅ");
+                    alert(" ˝æ›±Ì√˚≤ªƒ‹Œ™ø’£°");
                     $("#TXT_TableName").focus();
                     return;
                 }
@@ -31,12 +31,12 @@
                     data: da,
                     success: function (json) {
                         alert(json);
-                        if (json == "‰øùÂ≠òÊàêÂäüÔºÅ") {
+                        if (json == "±£¥Ê≥…π¶£°") {
                             window.location.href = "TTTableNameMapppingList.aspx";
                         }
                     },
                     error: function () {
-                        alert("Â§±Ë¥•");
+                        alert("Failed");
                     }
 
                 });
@@ -84,13 +84,13 @@
                                         <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                             <tr style="font-weight: bold; font-size: 11pt">
                                                 <td style="text-align: left" class="formItemBgStyle">
-                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShuJuBiaoMing%>"></asp:Label>Ôºö
+                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShuJuBiaoMing%>"></asp:Label>£∫
                                                 </td>
                                                 <td style="text-align: left" class="formItemBgStyle">
                                                     <input type="text" id="TXT_TableName" style="width: 320px" runat="server" />
                                                 </td>
                                                 <td style="text-align: left" class="formItemBgStyle">
-                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MiaoShu%>"></asp:Label>Ôºö
+                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MiaoShu%>"></asp:Label>£∫
                                                 </td>
                                                 <td style="text-align: left" class="formItemBgStyle">
                                                     <textarea id="TXT_Description" cols="50" rows="4" runat="server" runat="server"></textarea>
@@ -98,7 +98,7 @@
                                             </tr>
                                             <tr style="font-weight: bold; font-size: 11pt">
                                                 <td style="text-align: left" class="formItemBgStyle" colspan="6">
-                                                    <input type="button" value="‰øùÂ≠ò" id="BT_Save" class="inpu" />
+                                                    <input type="button" value="±£¥Ê" id="BT_Save" class="inpu" />
                                                 </td>
                                             </tr>
                                         </table>

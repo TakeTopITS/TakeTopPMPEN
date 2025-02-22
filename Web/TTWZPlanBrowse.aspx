@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPlanBrowse.aspx.cs" Inherits="TTWZPlanBrowse" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPlanBrowse.aspx.cs" Inherits="TTWZPlanBrowse" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -68,7 +68,7 @@
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="6">&nbsp;</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiHuaBianHao%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiHuaBianHao%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:Label ID="LB_PlanCode" runat="server" Text="**"></asp:Label>
                                                                     </td>
@@ -93,17 +93,17 @@
                                                                
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,XiangMuBianMa%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,XiangMuBianMa%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:Label ID="LB_ProjectCode" runat="server" Text="**"></asp:Label>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,XiangMuMingCheng%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,XiangMuMingCheng%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="3">
                                                                         <asp:Label ID="LB_ProjectName" runat="server" Text="**"></asp:Label>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,TiJiaoRiQi%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,TiJiaoRiQi%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:Label ID="LB_CommitTime" runat="server" Text="**"></asp:Label>
                                                                     </td>
@@ -113,17 +113,17 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZiBianHao%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZiBianHao%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:Label ID="LB_SinceNumber" runat="server" Text="**"></asp:Label>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,JiHuaMingCheng%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,JiHuaMingCheng%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="3">
                                                                         <asp:Label ID="LB_PlanName" runat="server" Text="**"></asp:Label>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,JiHuaBianZhi%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,JiHuaBianZhi%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:Label ID="LB_PlanMarkerName" runat="server" Text="**"></asp:Label>
                                                                     </td>
@@ -133,22 +133,22 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,GongYingFangShi%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,GongYingFangShi%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:Label ID="LB_SupplyMethod" runat="server" Text="**"></asp:Label>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,KuBie%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,KuBie%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:Label ID="LB_StoreRoom" runat="server" Text="**"></asp:Label>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,QianShouRiQi%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,QianShouRiQi%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:Label ID="LB_SignTime" runat="server" Text="**"></asp:Label>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,CaiGouGongChengShi%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,CaiGouGongChengShi%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:Label ID="LB_PurchaseEngineerName" runat="server" Text="**"></asp:Label>
                                                                     </td>
@@ -158,18 +158,18 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,LingLiaoDanWei%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,LingLiaoDanWei%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:Label ID="LB_PickingUnit" runat="server" Text="**"></asp:Label>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="2">&nbsp;</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,ShenHeRiQi%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,ShenHeRiQi%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:Label ID="LB_ApproveTime" runat="server" Text="**"></asp:Label>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,FeiKongZhuGuan%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,FeiKongZhuGuan%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:Label ID="LB_FeeManageName" runat="server" Text="**"></asp:Label>
                                                                     </td>
@@ -179,17 +179,17 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,JianLiDanWei%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,JianLiDanWei%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:Label ID="LB_SupervisorUnit" runat="server" Text="**"></asp:Label>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="2">&nbsp;</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,ShenHe%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,ShenHe%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">&nbsp;
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,ZhuGuan%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,ZhuGuan%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">&nbsp;
                                                                     </td>
                                                                 </tr>
@@ -198,17 +198,17 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,JianSheDanWei%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,JianSheDanWei%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:Label ID="LB_BuildUnit" runat="server" Text="**"></asp:Label>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="2">&nbsp;</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,ShenHe%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,ShenHe%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">&nbsp;
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,ZhuGuan%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,ZhuGuan%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">&nbsp;
                                                                     </td>
                                                                 </tr>
@@ -219,12 +219,12 @@
                                                                       <td style="text-align: center" class="formItemBgStyle" colspan="4">
                                                                         <p class="noprint">
                                                                             <input id="print" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                                                type="button" value="å…³é—­" />&nbsp;
-                                                                        <input id="print0" class="inpu" onclick="printpage();" type="button" value="æ‰“å°" />
+                                                                                type="button" value="Closed" />&nbsp;
+                                                                        <input id="print0" class="inpu" onclick="printpage();" type="button" value="´òÓ¡" />
                                                                         </p>
                                                                     </td>
                                                                     <td style="text-align: center" class="formItemBgStyle" colspan="4">
-                                                                        <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,BianZhiRiQi%>"></asp:Label>ï¼š&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                        <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,BianZhiRiQi%>"></asp:Label>£º&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                         <asp:Label ID="LB_Year" runat="server" Text="yyyy"></asp:Label><asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,Nian%>"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;
                                                                         <asp:Label ID="LB_Month" runat="server" Text="MM"></asp:Label><asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,Yue%>"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;
                                                                         <asp:Label ID="LB_Day" runat="server" Text="dd"></asp:Label><asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,Ri%>"></asp:Label>

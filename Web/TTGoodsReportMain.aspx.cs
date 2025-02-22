@@ -1,4 +1,4 @@
-﻿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections;
 using System.Configuration;
 using System.Data;

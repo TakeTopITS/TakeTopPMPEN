@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -30,28 +30,28 @@ public partial class TTConstractDIYQueryReport : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickParentA", " aHandler();", true);
         if (Page.IsPostBack != true)
         {
-            strHQL = @"SELECT     ConstractCode  åˆåŒä»£ç 
-		  ,ConstractName  åˆåŒåç§°
-		  ,Type   æ€»ç±»
-		  ,ConstractClass  å°ç±»
-		  ,Amount  é‡‘é¢
-		  ,Currency  å¸åˆ«
-		  ,ReAndPayType  æ”¶ä»˜æ¬¾æ–¹å¼
-		  ,StartDate  å¼€å§‹æ—¶é—´
-		  ,EndDate  ç»“æŸæ—¶é—´
-		  ,MainContent  ä¸»è¦å†…å®¹
-		  ,Exception  å¼‚å¸¸æƒ…å†µ
-		  ,PartA  ç”²æ–¹
-		  ,PartAOperator  ç”²æ–¹è´Ÿè´£äºº
-		  ,PartB  ä¹™æ–¹
-		  ,PartBOperator  ä¹™æ–¹è´Ÿè´£äºº
-		  ,SignDate  ç­¾è®¢æ—¥æœŸ
-		  ,Status  çŠ¶æ€
-		  ,RecordTime  è®°å½•æ—¶é—´
-		  ,RecorderCode  è®°å½•äººä»£ç 
-		  ,RecorderName  è®°å½•äººåç§°
-          ,F_GetConstractRelatedProjectName(ConstractCode)  å…³è”é¡¹ç›®
-          ,F_GetConstractRelatedSales(ConstractCode)  ä¸šåŠ¡å‘˜		  
+            strHQL = @"SELECT     ConstractCode  ºÏÍ¬´úÂë
+		  ,ConstractName  ºÏÍ¬Ãû³Æ
+		  ,Type   ×ÜÀà
+		  ,ConstractClass  Ğ¡Àà
+		  ,Amount  ½ğ¶î
+		  ,Currency  ±Ò±ğ
+		  ,ReAndPayType  ÊÕ¸¶¿î·½Ê½
+		  ,StartDate  ¿ªÊ¼Ê±¼ä
+		  ,EndDate  ½áÊøÊ±¼ä
+		  ,MainContent  Ö÷ÒªÄÚÈİ
+		  ,Exception  Òì³£Çé¿ö
+		  ,PartA  ¼×·½
+		  ,PartAOperator  ¼×·½¸ºÔğÈË
+		  ,PartB  ÒÒ·½
+		  ,PartBOperator  ÒÒ·½¸ºÔğÈË
+		  ,SignDate  Ç©¶©ÈÕÆÚ
+		  ,Status  ×´Ì¬
+		  ,RecordTime  ¼ÇÂ¼Ê±¼ä
+		  ,RecorderCode  ¼ÇÂ¼ÈË´úÂë
+		  ,RecorderName  ¼ÇÂ¼ÈËÃû³Æ
+          ,F_GetConstractRelatedProjectName(ConstractCode)  ¹ØÁªÏîÄ¿
+          ,F_GetConstractRelatedSales(ConstractCode)  ÒµÎñÔ±		  
 		FROM T_Constract
 		Where    
           to_char(SignDate,'yyyymmdd') > '20150191'            
@@ -151,7 +151,7 @@ public partial class TTConstractDIYQueryReport : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = "åˆåŒæŸ¥è¯¢æŠ¥è¡¨" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = "ºÏÍ¬²éÑ¯±¨±í" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
 
                 string strHQL = TB_SQLCode.Text.Trim();
 

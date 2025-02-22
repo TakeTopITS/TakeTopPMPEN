@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAllNews.aspx.cs" Inherits="TTAllNews" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAllNews.aspx.cs" Inherits="TTAllNews" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -65,14 +65,14 @@
                                         <table>
                                             <tr>
                                                 <td>
-                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XinWenBiaoTi%>"></asp:Label>ï¼š
+                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XinWenBiaoTi%>"></asp:Label>£º
                                                 </td>
                                                 <td>
                                                     <asp:TextBox ID="TB_NewsTitle" runat="server"></asp:TextBox>
                                                 </td>
                                                 <td>&nbsp;</td>
                                                 <td>
-                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XinWenNeiRong%>"></asp:Label>ï¼š
+                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XinWenNeiRong%>"></asp:Label>£º
                                                 </td>
                                                 <td>
                                                     <asp:TextBox ID="TB_NewsContent" runat="server"></asp:TextBox>
@@ -86,7 +86,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhuTi%>"></asp:Label>ï¼š<asp:Label ID="LB_ID" runat="server"></asp:Label>
+                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhuTi%>"></asp:Label>£º<asp:Label ID="LB_ID" runat="server"></asp:Label>
                                         &nbsp;<asp:Label ID="LB_Title" runat="server"></asp:Label>
                                         <br />
                                     </td>

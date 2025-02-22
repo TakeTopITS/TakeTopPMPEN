@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDWeekReport.aspx.cs" Inherits="TTGDWeekReport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDWeekReport.aspx.cs" Inherits="TTGDWeekReport" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ÊØèÂë®Â∑•‰ΩúÈáèÊä•Âëä</title>
+    <title>√ø÷‹π§◊˜¡ø±®∏Ê</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/My97DatePicker/WdatePicker.js"></script>
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -55,9 +55,9 @@
                                     <table width="100%" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left" class="formItemBgStyle">
-                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,KaiShiShiJian%>"></asp:Label>Ôºö<asp:TextBox ID="TXT_StartTime" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox>&nbsp;
+                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,KaiShiShiJian%>"></asp:Label>£∫<asp:TextBox ID="TXT_StartTime" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox>&nbsp;
                                                 <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,Zhi%>"></asp:Label>&nbsp;
-                                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label>Ôºö<asp:TextBox ID="TXT_EndTime" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox>&nbsp;
+                                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label>£∫<asp:TextBox ID="TXT_EndTime" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox>&nbsp;
                                                 <asp:Button ID="BT_Search" runat="server" CssClass="inpuLong" Text="<%$ Resources:lang,ChaXun%>" OnClick="BT_Search_Click" />
                                             </td>
                                         </tr>
@@ -98,13 +98,13 @@
                                                         Width="100%" OnPageIndexChanged="DG_List_PageIndexChanged">
                                                         <Columns>
                                                       
-                                                            <asp:BoundColumn DataField="Area" HeaderText="Âå∫Âüü">
+                                                            <asp:BoundColumn DataField="Area" HeaderText="«¯”Ú">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Mold" HeaderText="ÁÑäÊé•ÂΩ¢Âºè">
+                                                            <asp:BoundColumn DataField="Mold" HeaderText="∫∏Ω”–Œ Ω">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="TotalSize" HeaderText="ÂØ∏Âè£ÂêàËÆ°">
+                                                            <asp:BoundColumn DataField="TotalSize" HeaderText="¥Áø⁄∫œº∆">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                             </asp:BoundColumn>
 

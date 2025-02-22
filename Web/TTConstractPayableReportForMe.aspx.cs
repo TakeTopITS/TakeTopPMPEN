@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -34,7 +34,7 @@ public partial class TTConstractPayableReportForMe : System.Web.UI.Page
         strLikeUserCode = "%" + strUserCode + "%";
 
 
-        //this.Title = "åˆåŒä»˜æ¬¾æƒ…å†µè¡¨";
+        //this.Title = "ºÏÍ¬¸¶¿îÇé¿ö±í";
 
         LB_UserCode.Text = strUserCode;
         strUserName = Session["UserName"].ToString();

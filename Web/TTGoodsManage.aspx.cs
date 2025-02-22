@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -21,8 +21,8 @@ public partial class TTGoodsManage : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //é’Ÿç¤¼æœˆä½œå“ï¼ˆjack.erp@gmail.com)
-        //Taketop Software 2006ï¼2012
+        //ÖÓÀñÔÂ×÷Æ·£¨jack.erp@gmail.com)
+        //Taketop Software 2006£­2012
 
         string strUserCode = Session["UserCode"].ToString();
         string strHQL;
@@ -30,14 +30,14 @@ public partial class TTGoodsManage : System.Web.UI.Page
         string strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "åº“å­˜ç®¡ç†", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "¿â´æ¹ÜÀí", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
             return;
         }
 
-        //this.Title = "ç‰©æ–™ç®¡ç†---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
+        //this.Title = "ÎïÁÏ¹ÜÀí---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
 
         LB_UserCode.Text = strUserCode;
         strUserName = ShareClass.GetUserName(strUserCode);
@@ -60,7 +60,7 @@ public partial class TTGoodsManage : System.Web.UI.Page
             strHQL = "from Goods as goods where ";
             strHQL += " goods.OwnerCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
             strHQL += " and goods.Number > 0";
-            strHQL += " and goods.Status = 'åœ¨ç”¨' Order by goods.ID DESC";
+            strHQL += " and goods.Status = 'InUse' Order by goods.ID DESC";
             GoodsBLL goodsBLL = new GoodsBLL();
             lst = goodsBLL.GetAllGoodss(strHQL);
             DataGrid1.DataSource = lst;
@@ -87,7 +87,7 @@ public partial class TTGoodsManage : System.Web.UI.Page
 
             strHQL = "from Goods as goods where goods.OwnerCode in (select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + ") ";
             strHQL += " and goods.Number > 0";
-            strHQL += " and goods.Status = 'åœ¨ç”¨' Order by goods.ID DESC";
+            strHQL += " and goods.Status = 'InUse' Order by goods.ID DESC";
             GoodsBLL goodsBLL = new GoodsBLL();
             lst = goodsBLL.GetAllGoodss(strHQL);
             DataGrid1.DataSource = lst;
@@ -122,7 +122,7 @@ public partial class TTGoodsManage : System.Web.UI.Page
         strHQL += " and goods.Manufacturer Like " + "'" + strVendor + "'";
         strHQL += " and goods.OwnerCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
         strHQL += " and goods.Number > 0";
-        strHQL += " and goods.Status = 'åœ¨ç”¨' Order by goods.ID DESC";
+        strHQL += " and goods.Status = 'InUse' Order by goods.ID DESC";
         GoodsBLL goodsBLL = new GoodsBLL();
         lst = goodsBLL.GetAllGoodss(strHQL);
         DataGrid1.DataSource = lst;
@@ -144,7 +144,7 @@ public partial class TTGoodsManage : System.Web.UI.Page
 
         strHQL = "from Goods as goods where goods.OwnerCode = " + "'" + strUserCode + "'";
         strHQL += " and goods.Number > 0";
-        strHQL += " and goods.Status = 'åœ¨ç”¨' Order by goods.ID DESC";
+        strHQL += " and goods.Status = 'InUse' Order by goods.ID DESC";
         GoodsBLL goodsBLL = new GoodsBLL();
         lst = goodsBLL.GetAllGoodss(strHQL);
         DataGrid1.DataSource = lst;

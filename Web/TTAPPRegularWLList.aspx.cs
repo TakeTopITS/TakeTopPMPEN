@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -37,7 +37,7 @@ public partial class TTAPPRegularWLList : System.Web.UI.Page
     }
 
 
-    //鐢熸垚甯哥敤宸ヤ綔娴佺敵璇锋爲
+    //生成常用工作流申请树
     public void LoadWorkflowTemplate(String strUserCode)
     {
         string strHQL;

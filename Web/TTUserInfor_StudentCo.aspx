@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInfor_StudentCo.aspx.cs" Inherits="TTUserInfor_StudentCo" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInfor_StudentCo.aspx.cs" Inherits="TTUserInfor_StudentCo" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>å­¦ç”Ÿæ”¶è´¹</title>
+    <title>Ñ§ÉúÊÕ·Ñ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/My97DatePicker/WdatePicker.js"></script>
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -169,35 +169,35 @@
                                                                                 </asp:TemplateColumn>
 
 
-                                                                                <asp:BoundColumn DataField="StudentCode" HeaderText="å­¦ç”Ÿç¼–è¾‘">
+                                                                                <asp:BoundColumn DataField="StudentCode" HeaderText="Ñ§Éú±à¼­">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="StudentName" HeaderText="å­¦ç”Ÿå§“å">
+                                                                                <asp:BoundColumn DataField="StudentName" HeaderText="Ñ§ÉúÐÕÃû">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="CollectTime" HeaderText="æ”¶è´¹æ—¶é—´" DataFormatString="{0:yyyy-MM-dd}">
+                                                                                <asp:BoundColumn DataField="CollectTime" HeaderText="ÊÕ·ÑÊ±¼ä" DataFormatString="{0:yyyy-MM-dd}">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="CostProject" HeaderText="æ”¶è´¹é¡¹ç›®">
+                                                                                <asp:BoundColumn DataField="CostProject" HeaderText="ÊÕ·ÑÏîÄ¿">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="CostDemial" HeaderText="æ”¶è´¹é‡‘é¢ ">
+                                                                                <asp:BoundColumn DataField="CostDemial" HeaderText="ÊÕ·Ñ½ð¶î ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
 
-                                                                                <asp:BoundColumn DataField="WangFeePerSemester" HeaderText="ä¿æ•™è´¹">
+                                                                                <asp:BoundColumn DataField="WangFeePerSemester" HeaderText="±£½Ì·Ñ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Meals" HeaderText="è†³è´¹">
+                                                                                <asp:BoundColumn DataField="Meals" HeaderText="ÉÅ·Ñ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="CustodyAfterClass" HeaderText="æ‰˜ç®¡è´¹">
+                                                                                <asp:BoundColumn DataField="CustodyAfterClass" HeaderText="ÍÐ¹Ü·Ñ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="ActivityCost" HeaderText="å¤–å‡ºæ´»åŠ¨è´¹ç”¨">
+                                                                                <asp:BoundColumn DataField="ActivityCost" HeaderText="Íâ³ö»î¶¯·ÑÓÃ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="ReplaceCosts" HeaderText="ä»£æ”¶ä»£æ”¯ç”Ÿæ´»ç”¨å“è´¹">
+                                                                                <asp:BoundColumn DataField="ReplaceCosts" HeaderText="´úÊÕ´úÖ§Éú»îÓÃÆ··Ñ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
 

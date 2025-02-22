@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -33,7 +33,7 @@ public partial class LeftTree : System.Web.UI.Page
         if (!Page.IsPostBack)
         {
             try
-            {            ///åˆå§‹åŒ–æ“ä½œæ ‘
+            {            ///³õÊ¼»¯²Ù×÷Ê÷
                 InitOperationTree();
 
                 string strUserCode = Session["UserCode"].ToString();
@@ -74,7 +74,7 @@ public partial class LeftTree : System.Web.UI.Page
 
         string strUserCode = Session["UserCode"].ToString();
 
-        ///æ‰¾åˆ°â€œé‚®ä»¶æ–‡ä»¶å¤¹â€èŠ‚ç‚¹
+        ///ÕÒµ½¡°ÓÊ¼şÎÄ¼ş¼Ğ¡±½Úµã
         TreeNode mailFolderNode = OperationView.FindNode("-1/0");
         if (mailFolderNode == null)
         {
@@ -150,7 +150,7 @@ public partial class LeftTree : System.Web.UI.Page
 
                     for (int i = 1; i <= intMailCount; i++)
                     {
-                        //strAliasName:ç™»å½•å strPassword:å¯†ç  
+                        //strAliasName:µÇÂ¼Ãû strPassword:ÃÜÂë 
                         ReceiveMail(strPop3Server, strUserCode, strAliasName, strPassword, intPort, strEnablePOP3SSL);
                     }
                 }
@@ -205,13 +205,13 @@ public partial class LeftTree : System.Web.UI.Page
 
             if (strEnablePOP3SSL == "YES")
             {
-                //å¯ç”¨SSL
+                //ÆôÓÃSSL
                 _POP3Client.StartTLS();
             }
 
 
             var q = (from POP3_ClientMessage x in _POP3Client.Messages select x).OrderBy(x => -x.SequenceNumber);
-            foreach (POP3_ClientMessage message in q)//å€’åºå¯¹äºæ–°é‚®ä»¶æ¯”è¾ƒå¿« 
+            foreach (POP3_ClientMessage message in q)//µ¹Ğò¶ÔÓÚĞÂÓÊ¼ş±È½Ï¿ì 
             {
                 try
                 {
@@ -224,7 +224,7 @@ public partial class LeftTree : System.Web.UI.Page
 
                 //try
                 //{
-                ///ä¿å­˜æ”¶å–é‚®ä»¶çš„é™„ä»¶
+                ///±£´æÊÕÈ¡ÓÊ¼şµÄ¸½¼ş
                 mime = Mail_Message.ParseFromByte(message.MessageToByte());
 
                 if (mime.BodyHtmlText != null)
@@ -253,16 +253,16 @@ public partial class LeftTree : System.Web.UI.Page
                 }
 
 
-                //æ”¶å–é‚®ä»¶
+                //ÊÕÈ¡ÓÊ¼ş
                 if (nMailID > 0)
                 {
                     for (n = 0; n < mime.Attachments.Length; n++)
                     {
-                        ///æ·»åŠ å•ä¸ªé™„ä»¶  
+                        ///Ìí¼Óµ¥¸ö¸½¼ş  
                         ///    
                         try
                         {
-                            //ä¸‹é¢æ˜¯æ¥æ”¶é™„ä»¶çš„æ–¹æ³•
+                            //ÏÂÃæÊÇ½ÓÊÕ¸½¼şµÄ·½·¨
                             decodedDataStream = ((MIME_b_SinglepartBase)mime.Attachments[n].Body).GetDataStream();
                             file1 = mime.Attachments[n].ContentType.Param_Name;
 
@@ -275,7 +275,7 @@ public partial class LeftTree : System.Web.UI.Page
                                 intMailAttachmentContain = int.Parse(fs.Length.ToString());
                             }
 
-                            ///ä¿å­˜æ”¶å–é‚®ä»¶çš„é™„ä»¶  
+                            ///±£´æÊÕÈ¡ÓÊ¼şµÄ¸½¼ş  
                             imail.SaveAsMailAttachment(
                                 file1,
                                 "Doc\\" + DateTime.Now.ToString("yyyyMM") + "\\" + strUserCode + "\\MailAttachments\\" + file1,
@@ -290,12 +290,12 @@ public partial class LeftTree : System.Web.UI.Page
                 }
 
 
-                //åˆ é™¤å·²æ”¶å–çš„é‚®ä»¶
+                //É¾³ıÒÑÊÕÈ¡µÄÓÊ¼ş
                 message.MarkForDeletion();
 
                 //}
                 //catch (Exception ex)
-                //{   ///è·³è½¬åˆ°å¼‚å¸¸é”™è¯¯å¤„ç†é¡µé¢
+                //{   ///Ìø×ªµ½Òì³£´íÎó´¦ÀíÒ³Ãæ
                 //    Response.Redirect("TTErrorPage.aspx?ErrorMsg=" + ex.Message.Replace("<br>", "").Replace("\n", "")
                 //        + "&ErrorUrl=" + Request.Url.ToString().Replace("<br>", "").Replace("\n", ""));
                 //}
@@ -307,7 +307,7 @@ public partial class LeftTree : System.Web.UI.Page
         }
         catch (Exception x)
         {
-            //MessageBox.Show("æ¥æ”¶é‚®ä»¶æ—¶å‘ç”Ÿå¼‚å¸¸ï¼š " + x.Message, "æ¥æ”¶é‚®ä»¶", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            //MessageBox.Show("½ÓÊÕÓÊ¼şÊ±·¢ÉúÒì³££º " + x.Message, "½ÓÊÕÓÊ¼ş", MessageBoxButtons.OK, MessageBoxIcon.Hand);
         }
     }
 
@@ -338,7 +338,7 @@ public partial class LeftTree : System.Web.UI.Page
 
         strEnableSMTPSSL = mailProfile.EnableSMTPSSL.Trim();
 
-        ///æ·»åŠ å‘ä»¶äººåœ°å€
+        ///Ìí¼Ó·¢¼şÈËµØÖ·
         from = mailProfile.Email.Trim();
 
         intMailID = mails.MailID;
@@ -359,25 +359,25 @@ public partial class LeftTree : System.Web.UI.Page
         }
         nContain += mails.CCAddress.Trim().Length;
 
-        ///æ·»åŠ é‚®ä»¶ä¸»é¢˜
+        ///Ìí¼ÓÓÊ¼şÖ÷Ìâ
         mailMsg.Subject = mails.Title.Trim();
-        mailMsg.Subject = mailMsg.Subject.Replace("å®¡æ‰¹é€šçŸ¥", Resources.lang.ZZShengPiTongZhi);
+        mailMsg.Subject = mailMsg.Subject.Replace("ÉóÅúÍ¨Öª", Resources.lang.ZZShengPiTongZhi);
 
         nContain += mails.Title.Trim().Length;
 
-        ///æ·»åŠ é‚®ä»¶å†…å®¹
+        ///Ìí¼ÓÓÊ¼şÄÚÈİ
         mailMsg.Body = mails.Body.Trim();
 
-        mailMsg.Body = mailMsg.Body.Replace("é€šçŸ¥ï¼šä½ å¥½ï¼Œä½ æœ‰å®¡æ‰¹å·¥ä½œï¼Œå†…å®¹ï¼šè‡ªå®¡ ï¼Œè¯·åŠæ—¶ç™»å½•ç®¡ç†å¹³å°è¿›è¡Œå¤„ç†ï¼Œæ­¤ä¿¡æ¯æ¥è‡ªï¼šç³»ç»Ÿç®¡ç†å‘˜ï¼", Resources.lang.ZZTZNHNYSPGZNRZSQJSDLGLPTJXCLZXXLZXTGLY);
-        mailMsg.Body = mailMsg.Body.Replace("é€šçŸ¥ï¼šä½ å¥½ï¼Œä½ æœ‰å®¡æ‰¹å·¥ä½œï¼Œå†…å®¹ï¼š", Resources.lang.ZZTZNHNYSPGZNR);
-        mailMsg.Body = mailMsg.Body.Replace("è¯·åŠæ—¶ç™»å½•ç®¡ç†å¹³å°è¿›è¡Œå¤„ç†ï¼Œæ­¤ä¿¡æ¯æ¥è‡ªï¼šç³»ç»Ÿç®¡ç†å‘˜ï¼", Resources.lang.ZZQJSDLGLPTJXCLZXXLZXTGLY);
+        mailMsg.Body = mailMsg.Body.Replace("Í¨Öª£ºÄãºÃ£¬ÄãÓĞÉóÅú¹¤×÷£¬ÄÚÈİ£º×ÔÉó £¬Çë¼°Ê±µÇÂ¼¹ÜÀíÆ½Ì¨½øĞĞ´¦Àí£¬´ËĞÅÏ¢À´×Ô£ºÏµÍ³¹ÜÀíÔ±£¡", Resources.lang.ZZTZNHNYSPGZNRZSQJSDLGLPTJXCLZXXLZXTGLY);
+        mailMsg.Body = mailMsg.Body.Replace("Í¨Öª£ºÄãºÃ£¬ÄãÓĞÉóÅú¹¤×÷£¬ÄÚÈİ£º", Resources.lang.ZZTZNHNYSPGZNR);
+        mailMsg.Body = mailMsg.Body.Replace("Çë¼°Ê±µÇÂ¼¹ÜÀíÆ½Ì¨½øĞĞ´¦Àí£¬´ËĞÅÏ¢À´×Ô£ºÏµÍ³¹ÜÀíÔ±£¡", Resources.lang.ZZQJSDLGLPTJXCLZXXLZXTGLY);
 
         mailMsg.BodyEncoding = Encoding.UTF8;
         mailMsg.IsBodyHtml = true;
 
         nContain += mails.Body.Trim().Length;
 
-        //åŠ é‚®ä»¶é™„ä»¶
+        //¼ÓÓÊ¼ş¸½¼ş
         strHQL = "FROM Attachments as attachments where ";
         strHQL += " attachments.MailID in ( select mails.MailID FROM Mails as mails where mails.FolderID = " + intWaitingFoldID.ToString() + ")";
         AttachmentsBLL attachmentsBLL = new AttachmentsBLL();
@@ -387,7 +387,7 @@ public partial class LeftTree : System.Web.UI.Page
 
         for (int i = 0; i < lst.Count; i++)
         {
-            ///æ·»åŠ å•ä¸ªé™„ä»¶
+            ///Ìí¼Óµ¥¸ö¸½¼ş
             attachments = (ProjectMgt.Model.Attachments)lst[i];
             strURL = Server.MapPath(attachments.Url);
 
@@ -405,12 +405,12 @@ public partial class LeftTree : System.Web.UI.Page
             SmtpClient smtpClient = new SmtpClient(mailProfile.SmtpServerIP, mailProfile.SmtpServerPort);
             if (strEnableSMTPSSL == "YES")
             {
-                //å¯ç”¨SSL
+                //ÆôÓÃSSL
                 smtpClient.EnableSsl = true;
             }
             smtpClient.UseDefaultCredentials = false;
             smtpClient.Credentials = new NetworkCredential(mailProfile.AliasName.Trim(), mailProfile.Password.Trim());
-            /*æŒ‡å®šå¦‚ä½•å¤„ç†å¾…å‘çš„é‚®ä»¶*/
+            /*Ö¸¶¨ÈçºÎ´¦Àí´ı·¢µÄÓÊ¼ş*/
             smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
 
            
@@ -427,7 +427,7 @@ public partial class LeftTree : System.Web.UI.Page
             }
         }
         catch (Exception ex)
-        {   ///è·³è½¬åˆ°å¼‚å¸¸é”™è¯¯å¤„ç†é¡µé¢
+        {   ///Ìø×ªµ½Òì³£´íÎó´¦ÀíÒ³Ãæ
             Response.Redirect("TTErrorPage.aspx?ErrorMsg=" + ex.Message.Replace("<br>", "").Replace("\n", "")
                 + "&ErrorUrl=" + Request.Url.ToString().Replace("<br>", "").Replace("\n", ""));
         }

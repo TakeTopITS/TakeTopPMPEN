@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPGetUserPositionForIOSAndroid.aspx.cs" Inherits="TTAPPGetUserPositionForIOSAndroid" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPGetUserPositionForIOSAndroid.aspx.cs" Inherits="TTAPPGetUserPositionForIOSAndroid" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
 
@@ -86,7 +86,7 @@
                                             </td>
 
                                             <td class="titleziAPP" style="width: 100px; text-align: center; padding-top: 5px;">
-                                                <img id="IMG_Waiting" src="Images/Processing.gif" alt="请稍候，处理中..." style="display: none;" />
+                                                <img id="IMG_Waiting" src="Images/Processing.gif" alt="���Ժ򣬴�����..." style="display: none;" />
                                             </td>
                                         </tr>
                                     </table>
@@ -126,12 +126,12 @@
                     <table width="99%">
                         <tr>
                             <td alight="right">
-                                <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,Jing%>"></asp:Label>：</td>
+                                <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,Jing%>"></asp:Label>��</td>
                             <td>
                                 <input type="text" id="LNG_value" runat="server" style="width: 100px;" readonly></input>
                             </td>
                             <td>
-                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,Wei%>"></asp:Label>：</td>
+                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,Wei%>"></asp:Label>��</td>
                             <td>
                                 <input type="text" id="LAT_value" runat="server" style="width: 100px;" readonly></input>
                             </td>
@@ -168,7 +168,7 @@
 
 <script type="text/javascript">
 
-    var isWxConfigReady = false; //config是否验证通过
+    var isWxConfigReady = false; //config�Ƿ���֤ͨ��
     var loadingIndex;
     var mk, map;
     function wxApi() {
@@ -179,32 +179,32 @@
             , content: 'ImagesSkin/Processing.gif'
         });
         wx.config({
-            debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-            appId: '<%=signModel.appId %>', // 必填，公众号的唯一标识
-            timestamp: '<%=signModel.time %>', // 必填，生成签名的时间戳(随便填写)
-            nonceStr: '<%=signModel.randstr %>', // 必填，生成签名的随机串(随便填写)
-            signature: '<%=signModel.signstr %>', // 必填，签名，见附录1
+            debug: false, // ��������ģʽ,���õ�����api�ķ���ֵ���ڿͻ���alert��������Ҫ�鿴����Ĳ�����������pc�˴򿪣�������Ϣ��ͨ��log���������pc��ʱ�Ż��ӡ��
+            appId: '<%=signModel.appId %>', // ������ںŵ�Ψһ��ʶ
+            timestamp: '<%=signModel.time %>', // �������ǩ����ʱ���(�����д)
+            nonceStr: '<%=signModel.randstr %>', // �������ǩ���������(�����д)
+            signature: '<%=signModel.signstr %>', // ���ǩ��������¼1
 
             jsApiList: [
                 'getLocation',
                 'openLocation'
-            ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+            ] // �����Ҫʹ�õ�JS�ӿ��б�������JS�ӿ��б�����¼2
         });
 
 
         wx.ready(function () {
             layer.close(loadingIndex);
-            // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+            // config��Ϣ��֤���ִ��ready���������нӿڵ��ö�������config�ӿڻ�ý��֮��config��һ���ͻ��˵��첽���������������Ҫ��ҳ�����ʱ�͵�����ؽӿڣ��������ؽӿڷ���ready�����е�����ȷ����ȷִ�С������û�����ʱ�ŵ��õĽӿڣ������ֱ�ӵ��ã�����Ҫ����ready�����С�
             isWxConfigReady = true;
 
             wx.getLocation({
-                type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+                type: 'wgs84', // Ĭ��Ϊwgs84��gps���꣬���Ҫ����ֱ�Ӹ�openLocation�õĻ������꣬�ɴ���'gcj02'
                 success: function (res) {
-                    var latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
-                    var longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
+                    var latitude = res.latitude; // γ�ȣ�����������ΧΪ90 ~ -90
+                    var longitude = res.longitude; // ���ȣ�����������ΧΪ180 ~ -180��
 
-                    var lng = '';	//百度经度
-                    var lat = '';	//百度纬度
+                    var lng = '';	//�ٶȾ���
+                    var lat = '';	//�ٶ�γ��
                     var convertor = new BMap.Convertor();
                     var ggPoint = new BMap.Point(longitude, latitude);
                     var pointArr = [];
@@ -225,7 +225,7 @@
 
                         }
                         else {
-                            alert('坐标转换失败');
+                            alert('����ת��ʧ��');
                         }
                     });
 
@@ -233,12 +233,12 @@
 
 
                     //wx.openLocation({
-                    //latitude: latitude, // 纬度，浮点数，范围为90 ~ -90
-                    //longitude: longitude, // 经度，浮点数，范围为180 ~ -180。
-                    //name: '我的位置', // 位置名
-                    //address: '', // 地址详情说明
-                    //scale: 10, // 地图缩放级别,整形值,范围从1~28。默认为最大
-                    //infoUrl: '' // 在查看位置界面底部显示的超链接,可点击跳转
+                    //latitude: latitude, // γ�ȣ�����������ΧΪ90 ~ -90
+                    //longitude: longitude, // ���ȣ�����������ΧΪ180 ~ -180��
+                    //name: '�ҵ�λ��', // λ����
+                    //address: '', // ��ַ����˵��
+                    //scale: 10, // ��ͼ���ż���,����ֵ,��Χ��1~28��Ĭ��Ϊ���
+                    //infoUrl: '' // �ڲ鿴λ�ý���ײ���ʾ�ĳ�����,�ɵ����ת
                     //});
                 }
             });
@@ -246,7 +246,7 @@
         wx.error(function (res) {
             layer.close(loadingIndex);
             alert('failed' + JSON.stringify(res));
-            // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+            // config��Ϣ��֤ʧ�ܻ�ִ��error��������ǩ�����ڵ�����֤ʧ�ܣ����������Ϣ���Դ�config��debugģʽ�鿴��Ҳ�����ڷ��ص�res�����в鿴������SPA�������������ǩ����
         });
     }
 

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -20,8 +20,8 @@ public partial class TTAllConstract : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //é’Ÿç¤¼æœˆä½œå“ï¼ˆjack.erp@gmail.com)
-        //Taketop Software 2006ï¼2012
+        //ÖÓÀñÔÂ×÷Æ·£¨jack.erp@gmail.com)
+        //Taketop Software 2006£­2012
 
         string strDepartCode;
         string strUserCode = Session["UserCode"].ToString();
@@ -32,7 +32,7 @@ public partial class TTAllConstract : System.Web.UI.Page
         string strDepartString;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "æŸ¥çœ‹æ‰€æœ‰åˆåŒ", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "²é¿´ËùÓĞºÏÍ¬", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -66,9 +66,9 @@ public partial class TTAllConstract : System.Web.UI.Page
             strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
             ShareClass.LoadUserByDepartCodeForDataGrid(strDepartCode, DataGrid3);
 
-            LB_ConstractOwner.Text = "æˆ‘çš„æ‰€æœ‰åˆåŒåˆ—è¡¨ï¼š";
+            LB_ConstractOwner.Text = "ÎÒµÄËùÓĞºÏÍ¬ÁĞ±í£º";
 
-            strHQL = "from Constract as constract where constract.Status not in ('å½’æ¡£','åˆ é™¤') ";
+            strHQL = "from Constract as constract where constract.Status not in ('Archived','Deleted') ";
             strHQL += " and constract.RecorderCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
             strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
             ConstractBLL constractBLL = new ConstractBLL();
@@ -78,31 +78,31 @@ public partial class TTAllConstract : System.Web.UI.Page
 
             LB_Sql.Text = strHQL;
 
-            //åˆ›å»ºåˆ†æå›¾å½¢
+            //´´½¨·ÖÎöÍ¼ĞÎ
             CreateConstractAnalystChart(strDepartString);
         }
     }
 
-    //åˆ›å»ºåˆ†æå›¾å½¢
+    //´´½¨·ÖÎöÍ¼ĞÎ
     protected void CreateConstractAnalystChart(string  strDepartString)
     {
         string strChartTitle, strCmdText;
         strChartTitle = Resources.lang.HTLXBLT;
         strCmdText = @"Select Type as XName, Count(*) as YNumber
-            From T_Constract Where Status not in ('å½’æ¡£','åˆ é™¤') and RecorderCode in (Select UserCode From T_ProjectMember Where DepartCode in " + strDepartString + ")";
+            From T_Constract Where Status not in ('Archived','Deleted') and RecorderCode in (Select UserCode From T_ProjectMember Where DepartCode in " + strDepartString + ")";
         strCmdText += " Group By Type";
         IFrame_Chart_ConstractType.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
         strChartTitle = Resources.lang.HTZTBLT;
         strCmdText = @"Select Status as XName, Count(*) as YNumber
-             From T_Constract Where Status not in ('å½’æ¡£','åˆ é™¤') and RecorderCode in (Select UserCode From T_ProjectMember Where DepartCode in " + strDepartString + ")";
+             From T_Constract Where Status not in ('Archived','Deleted') and RecorderCode in (Select UserCode From T_ProjectMember Where DepartCode in " + strDepartString + ")";
         strCmdText += " Group By Status";
         IFrame_Chart_ConstractStatus.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
         strChartTitle = Resources.lang.HTZCQST;
         strCmdText = @"Select SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,7) as XName,COALESCE(Sum(A.Amount * B.ExchangeRate),0) as YNumber
             From T_Constract A,T_CurrencyType B Where A.Currency = B.Type And CAST(SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,5) as int) > extract(year from now()) - 4   
-            And A.Status not in ('å½’æ¡£','åˆ é™¤') and A.RecorderCode in (Select UserCode From T_ProjectMember Where DepartCode in " + strDepartString + ")";
+            And A.Status not in ('Archived','Deleted') and A.RecorderCode in (Select UserCode From T_ProjectMember Where DepartCode in " + strDepartString + ")";
         strCmdText += " Group By SUBSTRING (to_char(A.SignDate,'yyyymmdd'),0,7)";
         IFrame_Chart_ConstractAmountTendency.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Line&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
     }
@@ -120,15 +120,15 @@ public partial class TTAllConstract : System.Web.UI.Page
             strDepartCode = treeNode.Target.Trim();
             strDepartName = ShareClass.GetDepartName(strDepartCode);
 
-            LB_ConstractOwner.Text = strDepartName + " ç­¾è®¢çš„åˆåŒåˆ—è¡¨ï¼š";
+            LB_ConstractOwner.Text = strDepartName + " Ç©¶©µÄºÏÍ¬ÁĞ±í£º";
 
             ShareClass.LoadUserByDepartCodeForDataGrid(strDepartCode, DataGrid3);
 
-            LB_ConstractOwner.Text = strDepartName + " ç­¾è®¢çš„åˆåŒåˆ—è¡¨ï¼š";
+            LB_ConstractOwner.Text = strDepartName + " Ç©¶©µÄºÏÍ¬ÁĞ±í£º";
 
             string strDepartString;
             strDepartString = LB_DepartString.Text.Trim();
-            strHQL = "from Constract as constract where constract.ConstractCode in (Select constractSales.ConstractCode From ConstractSales as constractSales Where constractSales.SalesName in (select projectMember.UserName from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))  and constract.Status not in ('å½’æ¡£','åˆ é™¤') ";
+            strHQL = "from Constract as constract where constract.ConstractCode in (Select constractSales.ConstractCode From ConstractSales as constractSales Where constractSales.SalesName in (select projectMember.UserName from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))  and constract.Status not in ('Archived','Deleted') ";
             strHQL += " and constract.RecorderCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
             strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
             ConstractBLL constractBLL = new ConstractBLL();
@@ -141,14 +141,14 @@ public partial class TTAllConstract : System.Web.UI.Page
 
             strChartTitle = Resources.lang.HTLXBLT;
             strCmdText = @"Select Type as XName, Count(*) as YNumber
-            From T_Constract Where ConstractCode in (Select ConstractCode From T_ConstractSales Where SalesName in (select UserName from T_ProjectMember where DepartCode = " + "'" + strDepartCode + "'" + "))  and Status not in ('å½’æ¡£','åˆ é™¤') ";
+            From T_Constract Where ConstractCode in (Select ConstractCode From T_ConstractSales Where SalesName in (select UserName from T_ProjectMember where DepartCode = " + "'" + strDepartCode + "'" + "))  and Status not in ('Archived','Deleted') ";
             strCmdText += " and RecorderCode in (Select UserCode From T_ProjectMember Where DepartCode in " + strDepartString + ")";
             strCmdText += " Group By Type";
             IFrame_Chart_ConstractType.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
             strChartTitle = Resources.lang.HTZTBLT;
             strCmdText = @"Select Status as XName, Count(*) as YNumber
-            From T_Constract Where ConstractCode in (Select ConstractCode From T_ConstractSales Where SalesName in (select UserName from T_ProjectMember where DepartCode = " + "'" + strDepartCode + "'" + "))  and Status not in ('å½’æ¡£','åˆ é™¤') ";
+            From T_Constract Where ConstractCode in (Select ConstractCode From T_ConstractSales Where SalesName in (select UserName from T_ProjectMember where DepartCode = " + "'" + strDepartCode + "'" + "))  and Status not in ('Archived','Deleted') ";
             strCmdText += " and RecorderCode in (Select UserCode From T_ProjectMember Where DepartCode in " + strDepartString + ")";
             strCmdText += " Group By Type";
             IFrame_Chart_ConstractStatus.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
@@ -156,7 +156,7 @@ public partial class TTAllConstract : System.Web.UI.Page
             strChartTitle = Resources.lang.HTZCQST;
             strCmdText = @"Select SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,7) as XName,COALESCE(Sum(A.Amount * B.ExchangeRate),0) as YNumber
             From T_Constract A,T_CurrencyType B Where A.Currency = B.Type and CAST(SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,5) as int) > extract(year from now()) - 4   
-            and A.ConstractCode in (Select ConstractCode From T_ConstractSales Where SalesName in (select UserName from T_ProjectMember where DepartCode = " + "'" + strDepartCode + "'" + "))  and Status not in ('å½’æ¡£','åˆ é™¤') ";
+            and A.ConstractCode in (Select ConstractCode From T_ConstractSales Where SalesName in (select UserName from T_ProjectMember where DepartCode = " + "'" + strDepartCode + "'" + "))  and Status not in ('Archived','Deleted') ";
             strCmdText += " and A.RecorderCode in (Select UserCode From T_ProjectMember Where DepartCode in " + strDepartString + ")";
             strCmdText += " Group By SUBSTRING (to_char(A.SignDate,'yyyymmdd'),0,7)";
             IFrame_Chart_ConstractAmountTendency.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Line&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
@@ -173,11 +173,11 @@ public partial class TTAllConstract : System.Web.UI.Page
         string strUserCode = ((Button)e.Item.FindControl("BT_UserCode")).Text.Trim();
         string strUserName = ((Button)e.Item.FindControl("BT_UserName")).Text.Trim();
 
-        LB_ConstractOwner.Text = strUserName + " ç­¾è®¢çš„åˆåŒåˆ—è¡¨ï¼š";
+        LB_ConstractOwner.Text = strUserName + " Ç©¶©µÄºÏÍ¬ÁĞ±í£º";
 
         string strDepartString;
         strDepartString = LB_DepartString.Text.Trim();
-        strHQL = "from Constract as constract where constract.ConstractCode in (Select constractSales.ConstractCode from ConstractSales as constractSales Where constractSales.SalesName = " + "'" + strUserName + "'" + ")  and constract.Status not in ('å½’æ¡£','åˆ é™¤')  ";
+        strHQL = "from Constract as constract where constract.ConstractCode in (Select constractSales.ConstractCode from ConstractSales as constractSales Where constractSales.SalesName = " + "'" + strUserName + "'" + ")  and constract.Status not in ('Archived','Deleted')  ";
         strHQL += " and constract.RecorderCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
         strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
 
@@ -222,7 +222,7 @@ public partial class TTAllConstract : System.Web.UI.Page
 
         string strDepartString;
         strDepartString = LB_DepartString.Text.Trim();
-        strHQL = "from Constract as constract where constract.ConstractClass = " + "'" + strConstractClass + "'" + " and constract.Status not in ('å½’æ¡£','åˆ é™¤') ";
+        strHQL = "from Constract as constract where constract.ConstractClass = " + "'" + strConstractClass + "'" + " and constract.Status not in ('Archived','Deleted') ";
         strHQL += " and constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")";
         strHQL += " and constract.RecorderCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
         strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
@@ -234,12 +234,12 @@ public partial class TTAllConstract : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_ConstractOwner.Text = "å¤§ç±»: " + strConstractClass + " çš„åˆåŒï¼š";
+        LB_ConstractOwner.Text = "´óÀà: " + strConstractClass + " µÄºÏÍ¬£º";
 
         string strChartTitle, strCmdText;
 
         strChartTitle = Resources.lang.HTZTBLT;
-        strCmdText = @"Select Status as XName, Count(*) as YNumber From T_Constract  Where ConstractClass = " + "'" + strConstractClass + "'" + " and Status not in ('å–æ¶ˆ','åˆ é™¤') ";
+        strCmdText = @"Select Status as XName, Count(*) as YNumber From T_Constract  Where ConstractClass = " + "'" + strConstractClass + "'" + " and Status not in ('Cancel','Deleted') ";
         strHQL += " and ConstractCode in (select ConstractCode from T_ConstractRelatedUser where UserCode = " + "'" + strUserCode + "'" + ")";
         strHQL += " and RecorderCode in (Select UserCode From T_ProjectMember Where DepartCode in " + strDepartString + ")";
         strCmdText += " Group By Status";
@@ -247,7 +247,7 @@ public partial class TTAllConstract : System.Web.UI.Page
 
         strChartTitle = Resources.lang.HTZCQST;
         strCmdText = @"Select SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,7) as SignMonth,COALESCE(Sum(A.Amount* B.ExchangeRate),0) as MonthAmount
-            From T_Constract A,T_CurrencyType B Where A.Currency = B.Type And CAST(SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,5) as int) > extract(year from now()) - 4  and A.ConstractClass = " + "'" + strConstractClass + "'" + " and A.Status not in ('å–æ¶ˆ','åˆ é™¤') ";
+            From T_Constract A,T_CurrencyType B Where A.Currency = B.Type And CAST(SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,5) as int) > extract(year from now()) - 4  and A.ConstractClass = " + "'" + strConstractClass + "'" + " and A.Status not in ('Cancel','Deleted') ";
         strHQL += " and A.ConstractCode in (select ConstractCode from T_ConstractRelatedUser where UserCode = " + "'" + strUserCode + "'" + ")";
         strHQL += " and A.RecorderCode in (Select UserCode From T_ProjectMember Where DepartCode in " + strDepartString + ")";
         strCmdText += " Group By SUBSTRING (to_char(A.SignDate,'yyyymmdd'),0,7)";
@@ -263,7 +263,7 @@ public partial class TTAllConstract : System.Web.UI.Page
         string strDepartString;
         strDepartString = LB_DepartString.Text.Trim();
 
-        LB_ConstractOwner.Text = "æ‰€æœ‰åˆåŒåˆ—è¡¨ï¼š";
+        LB_ConstractOwner.Text = "ËùÓĞºÏÍ¬ÁĞ±í£º";
 
 
         string strSalesName = "%" + TB_SalesName.Text.Trim() + "%";
@@ -284,7 +284,7 @@ public partial class TTAllConstract : System.Web.UI.Page
             strConstractClass = "%%";
         }
 
-        strHQL = "from Constract as constract where constract.ConstractClass like " + "'" + strConstractClass + "'" + " and constract.Status not in ('å½’æ¡£','åˆ é™¤') ";
+        strHQL = "from Constract as constract where constract.ConstractClass like " + "'" + strConstractClass + "'" + " and constract.Status not in ('Archived','Deleted') ";
         strHQL += " and constract.Type Like " + "'" + strType + "'";
         if (strSalesName != "%%")
         {
@@ -306,7 +306,7 @@ public partial class TTAllConstract : System.Web.UI.Page
         string strChartTitle, strCmdText;
 
         strChartTitle = Resources.lang.HTZTBLT;
-        strCmdText = @"Select Status as XName, Count(*) as YNumber From T_Constract  Where Type Like " + "'" + strType + "'" + " and Status not in ('å–æ¶ˆ','åˆ é™¤') ";
+        strCmdText = @"Select Status as XName, Count(*) as YNumber From T_Constract  Where Type Like " + "'" + strType + "'" + " and Status not in ('Cancel','Deleted') ";
         strCmdText += " and Type Like " + "'" + strType + "'";
         if (strSalesName != "%%")
         {
@@ -321,7 +321,7 @@ public partial class TTAllConstract : System.Web.UI.Page
 
         strChartTitle = Resources.lang.HTZCQST;
         strCmdText = @"Select SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,7) as XName,COALESCE(Sum(A.Amount* B.ExchangeRate),0) as YNumber
-            From T_Constract A,T_CurrencyType B Where A.Currency = B.Type and CAST(SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,5) as int) > extract(year from now()) - 4   and A.Status not in ('å–æ¶ˆ','åˆ é™¤') ";
+            From T_Constract A,T_CurrencyType B Where A.Currency = B.Type and CAST(SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,5) as int) > extract(year from now()) - 4   and A.Status not in ('Cancel','Deleted') ";
         strCmdText += " and A.Type Like " + "'" + strType + "'";
         if (strSalesName != "%%")
         {
@@ -335,7 +335,7 @@ public partial class TTAllConstract : System.Web.UI.Page
         IFrame_Chart_ConstractAmountTendency.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Line&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
     }
 
-    //åˆ›å»ºåˆ†æå›¾å½¢
+    //´´½¨·ÖÎöÍ¼ĞÎ
     protected void DataGrid1_PageIndexChanged(object sender, DataGridPageChangedEventArgs e)
     {
         DataGrid1.CurrentPageIndex = e.NewPageIndex;

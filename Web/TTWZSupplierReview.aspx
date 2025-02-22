@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSupplierReview.aspx.cs" Inherits="TTWZSupplierReview" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSupplierReview.aspx.cs" Inherits="TTWZSupplierReview" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>‰æõÂ∫îÂïÜËµÑÊ†ºÂ§çÂÆ°</title>
+    <title>π©”¶…Ã◊ ∏Ò∏¥…Û</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -25,21 +25,21 @@
             $("#BT_NewBrowse").attr("class", "inpu");
             $("#BT_NewBrowse").removeAttr("disabled");
 
-            if (objProgress == "ÁôªËÆ∞" && objAuditor == objUserCode) {
+            if (objProgress == "µ«º«" && objAuditor == objUserCode) {
                 $("#BT_NewEdit").attr("class", "inpu");
-                $("#BT_NewEdit").removeAttr("disabled");                            //ÁºñËæë
+                $("#BT_NewEdit").removeAttr("disabled");                            //±‡º≠
                 $("#BT_NewReview").attr("class", "inpu");
-                $("#BT_NewReview").removeAttr("disabled");                          //Â§çÂÆ°
+                $("#BT_NewReview").removeAttr("disabled");                          //∏¥…Û
                 $("#BT_NewReviewReturn").attr("disabled", "disabled");
-                $("#BT_NewReviewReturn").removeClass("inpu");                         //Â§çÂÆ°ÈÄÄÂõû
+                $("#BT_NewReviewReturn").removeClass("inpu");                         //∏¥…ÛÕÀªÿ
             }
-            else if (objProgress == "Â§çÂÆ°" && objAuditor == objUserCode) {
+            else if (objProgress == "∏¥…Û" && objAuditor == objUserCode) {
                 $("#BT_NewEdit").attr("disabled", "disabled");
-                $("#BT_NewEdit").removeClass("inpu");                            //ÁºñËæë
+                $("#BT_NewEdit").removeClass("inpu");                            //±‡º≠
                 $("#BT_NewReview").attr("disabled", "disabled");
-                $("#BT_NewReview").removeClass("inpu");                          //Â§çÂÆ°
+                $("#BT_NewReview").removeClass("inpu");                          //∏¥…Û
                 $("#BT_NewReviewReturn").attr("class", "inpu");
-                $("#BT_NewReviewReturn").removeAttr("disabled");                         //Â§çÂÆ°ÈÄÄÂõû
+                $("#BT_NewReviewReturn").removeAttr("disabled");                         //∏¥…ÛÕÀªÿ
             }
             else {
                 $("#BT_NewEdit").attr("disabled", "disabled");
@@ -118,20 +118,20 @@
                                                                         <table class="formBgStyle">
                                                                             <tr>
                                                                                 <td class="formItemBgStyle">
-                                                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,GongFangBianHao%>"></asp:Label>Ôºö</td>
+                                                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,GongFangBianHao%>"></asp:Label>£∫</td>
                                                                                 <td class="formItemBgStyle">
                                                                                     <asp:HiddenField ID="HF_SupplierCode" runat="server" />
                                                                                     <asp:TextBox ID="TXT_SupplierNumber" runat="server" ReadOnly="true"></asp:TextBox>
                                                                                 </td>
                                                                                 <td class="formItemBgStyle">
-                                                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,GongFangMingCheng%>"></asp:Label>Ôºö</td>
+                                                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,GongFangMingCheng%>"></asp:Label>£∫</td>
                                                                                 <td class="formItemBgStyle" colspan="2">
                                                                                     <asp:TextBox ID="TXT_SupplierName" runat="server" Width="280" ReadOnly="true"></asp:TextBox>
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td class="formItemBgStyle">
-                                                                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,FuShenZiLiao%>"></asp:Label>Ôºö</td>
+                                                                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,FuShenZiLiao%>"></asp:Label>£∫</td>
                                                                                 <td class="formItemBgStyle">
 
                                                                                     <asp:FileUpload ID="FUP_ReviewDocument" runat="server" />
@@ -141,14 +141,14 @@
                                                                                     <asp:HiddenField ID="HF_ReviewDocumentURL" runat="server" />
                                                                                 </td>
                                                                                 <td class="formItemBgStyle">
-                                                                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,FuShenJieLun%>"></asp:Label>Ôºö</td>
+                                                                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,FuShenJieLun%>"></asp:Label>£∫</td>
                                                                                 <td class="formItemBgStyle">
                                                                                     <asp:DropDownList ID="DDL_ReviewResult" runat="server">
                                                                                         <asp:ListItem Text="" Value="" />
-                                                                                        <asp:ListItem Text="<%$ Resources:lang,BaoChi%>" Value="‰øùÊåÅ" />
-                                                                                        <asp:ListItem Text="<%$ Resources:lang,ShengJi%>" Value="ÂçáÁ∫ß" />
-                                                                                        <asp:ListItem Text="<%$ Resources:lang,JiangJi%>" Value="ÈôçÁ∫ß" />
-                                                                                        <asp:ListItem Text="<%$ Resources:lang,QuXiao%>" Value="ÂèñÊ∂à" />
+                                                                                        <asp:ListItem Text="<%$ Resources:lang,BaoChi%>" Value="±£≥÷" />
+                                                                                        <asp:ListItem Text="<%$ Resources:lang,ShengJi%>" Value="…˝º∂" />
+                                                                                        <asp:ListItem Text="<%$ Resources:lang,JiangJi%>" Value="Ωµº∂" />
+                                                                                        <asp:ListItem Text="<%$ Resources:lang,QuXiao%>" Value="Cancel" />
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                                 <td class="formItemBgStyle" style="text-align: center;">
@@ -159,16 +159,16 @@
                                                                             </tr>
                                                                             <tr>
                                                                                 <td class="formItemBgStyle">
-                                                                                    <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>Ôºö</td>
+                                                                                    <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>£∫</td>
                                                                                 <td class="formItemBgStyle">
                                                                                     <asp:DropDownList ID="DDL_Progress" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_Progress_SelectedIndexChanged">
                                                                                         <asp:ListItem Text="" Value="" />
-                                                                                        <asp:ListItem Text="<%$ Resources:lang,DengJi%>" Value="ÁôªËÆ∞" />
-                                                                                        <asp:ListItem Text="<%$ Resources:lang,FuShen%>" Value="Â§çÂÆ°" />
+                                                                                        <asp:ListItem Text="<%$ Resources:lang,DengJi%>" Value="µ«º«" />
+                                                                                        <asp:ListItem Text="<%$ Resources:lang,FuShen%>" Value="∏¥…Û" />
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                                 <td class="formItemBgStyle" colspan="3">
-                                                                                    <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,JiLuCaoZuo%>"></asp:Label>Ôºö
+                                                                                    <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,JiLuCaoZuo%>"></asp:Label>£∫
                                                                         <asp:Button ID="BT_NewEdit" runat="server" CssClass="inpu" Text="<%$ Resources:lang,BianJi%>" OnClick="BT_NewEdit_Click" />&nbsp;
                                                                         <asp:Button ID="BT_NewReview" runat="server" CssClass="inpu" Text="<%$ Resources:lang,FuShen%>" OnClick="BT_NewReview_Click" />&nbsp;
                                                                         <asp:Button ID="BT_NewReviewReturn" runat="server" CssClass="inpu" Text="<%$ Resources:lang,FuShenTuiHui%>" OnClick="BT_NewReviewReturn_Click" />&nbsp;
@@ -191,7 +191,7 @@
                                                                         <table cellpadding="0" cellspacing="0" width="100%">
                                                                             <tr style="font-size: 10pt;">
                                                                                 <td style="height: 14px; text-align: left">
-                                                                                    <asp:Label ID="Label49" runat="server" Text="<%$ Resources:lang,DuiYingShenPiJiLu %>"></asp:Label>Ôºö
+                                                                                    <asp:Label ID="Label49" runat="server" Text="<%$ Resources:lang,DuiYingShenPiJiLu %>"></asp:Label>£∫
                                                                                 </td>
                                                                             </tr>
                                                                             <tr style="font-size: 10pt">
@@ -242,17 +242,17 @@
 
                                                                                         <ItemStyle CssClass="itemStyle" />
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="WLID" HeaderText="ÁºñÂè∑">
+                                                                                            <asp:BoundColumn DataField="WLID" HeaderText="±‡∫≈">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTWorkFlowViewMain.aspx?WLID={0}"
-                                                                                                DataTextField="WLName" HeaderText="Â∑•‰ΩúÊµÅ" Target="_blank">
+                                                                                                DataTextField="WLName" HeaderText="Workflow" Target="_blank">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="45%" />
                                                                                             </asp:HyperLinkColumn>
-                                                                                            <asp:BoundColumn DataField="CreateTime" HeaderText="Áî≥ËØ∑Êó∂Èó¥">
+                                                                                            <asp:BoundColumn DataField="CreateTime" HeaderText="…Í«Î ±º‰">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:TemplateColumn HeaderText="Áä∂ÊÄÅ">
+                                                                                            <asp:TemplateColumn HeaderText="◊¥Ã¨">
                                                                                                 <ItemTemplate>
                                                                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                                 </ItemTemplate>
@@ -260,7 +260,7 @@
                                                                                             </asp:TemplateColumn>
                                                                                             <asp:TemplateColumn>
                                                                                                 <ItemTemplate>
-                                                                                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# DataBinder.Eval(Container, "DataItem.WLID", "TTWLRelatedDoc.aspx?DocType=ÂÆ°Ê†∏&WLID={0}") %>'
+                                                                                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# DataBinder.Eval(Container, "DataItem.WLID", "TTWLRelatedDoc.aspx?DocType=…Û∫À&WLID={0}") %>'
                                                                                                         Target="_blank"><img class="noBorder" src="ImagesSkin/Doc.gif" /></asp:HyperLink>
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
@@ -441,11 +441,11 @@
                                                                             </HeaderTemplate>
                                                                             <ItemTemplate>
 
-                                                                                <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("ID")+"|"+Eval("Progress")+"|"+Eval("Auditor") %>' CommandName="click" CssClass="notTab">Êìç‰Ωú</asp:LinkButton>
+                                                                                <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("ID")+"|"+Eval("Progress")+"|"+Eval("Auditor") %>' CommandName="click" CssClass="notTab">≤Ÿ◊˜</asp:LinkButton>
 
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="SupplierNumber" HeaderText="‰æõÊñπÁºñÂè∑">
+                                                                        <asp:BoundColumn DataField="SupplierNumber" HeaderText="π©∑Ω±‡∫≈">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:TemplateColumn>
@@ -466,10 +466,10 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("MainSupplier").ToString(), 190) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="Grade" HeaderText="Á∫ßÂà´">
+                                                                        <asp:BoundColumn DataField="Grade" HeaderText="º∂±">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                                         </asp:BoundColumn>
-                                                                        <%--<asp:BoundColumn DataField="ApproveTime" HeaderText="ÁôªËÆ∞Êó•Êúü">
+                                                                        <%--<asp:BoundColumn DataField="ApproveTime" HeaderText="µ«º«»’∆⁄">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                                         </asp:BoundColumn>--%>
                                                                         <asp:TemplateColumn>
@@ -481,7 +481,7 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("ApproveTime").ToString(), 190) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <%--<asp:BoundColumn DataField="ReviewDate" HeaderText="Â§çÂÆ°Êó•Êúü">
+                                                                        <%--<asp:BoundColumn DataField="ReviewDate" HeaderText="∏¥…Û»’∆⁄">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                                         </asp:BoundColumn>--%>
                                                                         <asp:TemplateColumn>
@@ -493,7 +493,7 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("ReviewDate").ToString(), 190) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="QualityEngineerName" HeaderText="Ë¥®‰øùÂ∑•Á®ãÂ∏à">
+                                                                        <asp:BoundColumn DataField="QualityEngineerName" HeaderText="÷ ±£π§≥Ã ¶">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:TemplateColumn>
@@ -514,10 +514,10 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("ReviewResult").ToString(), 7) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="AuditorName" HeaderText="Ë¥£‰ªªÂ∑•Á®ãÂ∏à">
+                                                                        <asp:BoundColumn DataField="AuditorName" HeaderText="‘»Œπ§≥Ã ¶">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Progress" HeaderText="ËøõÂ∫¶">
+                                                                        <asp:BoundColumn DataField="Progress" HeaderText="Ω¯∂»">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:TemplateColumn>
@@ -700,7 +700,7 @@
                                                                                 <%#DataBinder.Eval(Container.DataItem, "InTime", "{0:yyyy/MM/dd}")%>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="IsMark" HeaderText="‰ΩøÁî®Ê†áËÆ∞">
+                                                                        <asp:BoundColumn DataField="IsMark" HeaderText=" π”√±Íº«">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                                         </asp:BoundColumn>
                                                                     </Columns>

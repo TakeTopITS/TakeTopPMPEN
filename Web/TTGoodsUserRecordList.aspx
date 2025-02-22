@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsUserRecordList.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsUserRecordList.aspx.cs"
     Inherits="TTGoodsUserRecordList" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -105,26 +105,26 @@
                                                         <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" ShowHeader="false"
                                                             Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                                <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="UserCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                    DataTextField="UserName" HeaderText="ç”¨æˆ·" Target="_blank">
+                                                                    DataTextField="UserName" HeaderText="ÓÃ»§" Target="_blank">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:HyperLinkColumn>
-                                                                <asp:BoundColumn DataField="Type" HeaderText="ç±»åž‹">
+                                                                <asp:BoundColumn DataField="Type" HeaderText="ÀàÐÍ">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="Number" HeaderText="æ•°é‡">
+                                                                <asp:BoundColumn DataField="Number" HeaderText="ÊýÁ¿">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="Position" HeaderText="ä½ç½®">
+                                                                <asp:BoundColumn DataField="Position" HeaderText="Î»ÖÃ">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="BeginUseTime" HeaderText="å¼€å§‹ä½¿ç”¨æ—¶é—´" DataFormatString="{0:yyyy/MM/dd}">
+                                                                <asp:BoundColumn DataField="BeginUseTime" HeaderText="¿ªÊ¼Ê¹ÓÃÊ±¼ä" DataFormatString="{0:yyyy/MM/dd}">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="18%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="EndUseTime" HeaderText="ç»“æŸä½¿ç”¨æ—¶é—´" DataFormatString="{0:yyyy/MM/dd}">
+                                                                <asp:BoundColumn DataField="EndUseTime" HeaderText="½áÊøÊ¹ÓÃÊ±¼ä" DataFormatString="{0:yyyy/MM/dd}">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="18%" />
                                                                 </asp:BoundColumn>
                                                             </Columns>

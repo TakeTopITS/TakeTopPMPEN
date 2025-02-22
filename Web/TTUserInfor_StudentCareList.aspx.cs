@@ -1,4 +1,4 @@
-锘縰sing System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -93,7 +93,7 @@ public partial class TTUserInfor_StudentCareList : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_StudentNumber.Text = "瀛︾敓鏁帮細" + dtStudent.Rows.Count.ToString() ;
+        LB_StudentNumber.Text = "学生数：" + dtStudent.Rows.Count.ToString() ;
     }
 
 
@@ -120,7 +120,7 @@ public partial class TTUserInfor_StudentCareList : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_StudentNumber.Text = "瀛︾敓鏁帮細" + dtStudent.Rows.Count.ToString() ;
+        LB_StudentNumber.Text = "学生数：" + dtStudent.Rows.Count.ToString() ;
     }
 
     protected void TreeView1_SelectedNodeChanged(object sender, EventArgs e)

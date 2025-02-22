@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPublishNotice.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPublishNotice.aspx.cs"
     Inherits="TTPublishNotice" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
@@ -117,32 +117,32 @@
                                                     PageSize="8" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None"
                                                     ShowHeader="False">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="DocID" HeaderText="åºå·">
+                                                        <asp:BoundColumn DataField="DocID" HeaderText="ÐòºÅ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DocType" HeaderText="ç±»åž‹">
+                                                        <asp:BoundColumn DataField="DocType" HeaderText="ÀàÐÍ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
-                                                            DataTextField="DocName" HeaderText="æ–‡ä»¶å" Target="_blank">
+                                                            DataTextField="DocName" HeaderText="ÎÄ¼þÃû" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                         </asp:HyperLinkColumn>
-                                                        <asp:BoundColumn DataField="RelatedDepartName" HeaderText="å½’å±žéƒ¨é—¨">
+                                                        <asp:BoundColumn DataField="RelatedDepartName" HeaderText="¹éÊô²¿ÃÅ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Scope" HeaderText="èŒƒå›´">
+                                                        <asp:BoundColumn DataField="Scope" HeaderText="·¶Î§">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Author" HeaderText="ä½œè€…">
+                                                        <asp:BoundColumn DataField="Author" HeaderText="×÷Õß">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UploadManName" HeaderText="ä¸Šä¼ è€…">
+                                                        <asp:BoundColumn DataField="UploadManName" HeaderText="ÉÏ´«Õß">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UploadTime" HeaderText="ä¸Šä¼ æ—¶é—´">
+                                                        <asp:BoundColumn DataField="UploadTime" HeaderText="ÉÏ´«Ê±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                         </asp:BoundColumn>
-                                                        <asp:ButtonColumn CommandName="Delete" Text="&lt;div&gt;&lt;img src=ImagesSkin/icon_del.gif border=0 alt='åˆ é™¤' /&gt;&lt;/div&gt;">
+                                                        <asp:ButtonColumn CommandName="Delete" Text="&lt;div&gt;&lt;img src=ImagesSkin/icon_del.gif border=0 alt='Deleted' /&gt;&lt;/div&gt;">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:ButtonColumn>
                                                         <asp:BoundColumn DataField="Address" Visible="False"></asp:BoundColumn>
@@ -174,7 +174,7 @@
                                                     <tr style="font-size: 12pt">
                                                         <td class="formItemBgStyle" align="left">
                                                             <span style="font-size: 10pt;">
-                                                                <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,WenJianShangChuan%>"></asp:Label>ï¼š</span>
+                                                                <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,WenJianShangChuan%>"></asp:Label>£º</span>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -182,22 +182,22 @@
                                                             <table>
                                                                 <tr>
                                                                     <td>
-                                                                        <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>ï¼š
+                                                                        <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º
                                                                     </td>
                                                                     <td>
                                                                         <asp:DropDownList ID="DL_DocType" runat="server">
-                                                                            <asp:ListItem Value="å…¬å‘Šæ–‡ä»¶" Text="<%$ Resources:lang,GongGaoWenJian%>" />
-                                                                            <asp:ListItem Value="é€šçŸ¥æ–‡ä»¶" Text="<%$ Resources:lang,TongZhiWenJian%>" />
+                                                                            <asp:ListItem Value="AnnouncementDocument" Text="<%$ Resources:lang,GongGaoWenJian%>" />
+                                                                            <asp:ListItem Value="NotificationDocument" Text="<%$ Resources:lang,TongZhiWenJian%>" />
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                     <td>&nbsp;
-                                                                    <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,ZuoZhe%>"></asp:Label>ï¼š
+                                                                    <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,ZuoZhe%>"></asp:Label>£º
                                                                     </td>
                                                                     <td>
                                                                         <asp:TextBox ID="TB_Author" runat="server" Width="65px"></asp:TextBox>
                                                                     </td>
                                                                     <td>&nbsp;&nbsp;
-                                                                    <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,GuiShuBuMen%>"></asp:Label>ï¼š
+                                                                    <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,GuiShuBuMen%>"></asp:Label>£º
                                                                     </td>
                                                                     <td>
                                                                         <asp:TextBox ID="TB_DepartCode" runat="server" Width="80px"></asp:TextBox>
@@ -209,12 +209,12 @@
                                                                         <asp:Label ID="LB_DepartName" runat="server"></asp:Label>
                                                                     </td>
                                                                     <td>&nbsp;&nbsp;
-                                                                    <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,FanWei%>"></asp:Label>ï¼š
+                                                                    <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,FanWei%>"></asp:Label>£º
                                                                     </td>
                                                                     <td>
                                                                         <asp:DropDownList ID="DL_Scope" runat="server">
-                                                                            <asp:ListItem Value="å†…éƒ¨" Text="<%$ Resources:lang,NeiBu%>" />
-                                                                            <asp:ListItem Value="å¤–éƒ¨" Text="<%$ Resources:lang,WaiBu%>" />
+                                                                            <asp:ListItem Value="Internal" Text="<%$ Resources:lang,NeiBu%>" />
+                                                                            <asp:ListItem Value="External" Text="<%$ Resources:lang,WaiBu%>" />
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                 </tr>

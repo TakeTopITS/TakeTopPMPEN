@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -29,7 +29,7 @@ public partial class TTProjectManHourIncomeAndExpenseReport : System.Web.UI.Page
 
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text = "é¡¹ç›®å·¥æ—¶å’Œè´¹ç”¨æ±‡æ€»è¡¨";
+        LB_ReportName.Text = "ÏîÄ¿¹¤Ê±ºÍ·ÑÓÃ»ã×Ü±í";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack == false)
         {
@@ -91,11 +91,11 @@ public partial class TTProjectManHourIncomeAndExpenseReport : System.Web.UI.Page
         }
         else
         {
-            dv.RowFilter = "é¡¹ç›®åç§° Like '%" + strProjectName + "%'";
+            dv.RowFilter = "ÏîÄ¿Ãû³Æ Like '%" + strProjectName + "%'";
         }
 
-        dv.RowFilter += " And é¡¹ç›®è´Ÿè´£äºº Like '%" + strPMName + "%'";
-        dv.RowFilter += " And å¼€å§‹æ—¶é—´ >= '" + strBeginTime + "' And ç»“æŸæ—¶é—´ <= '" + strEndTime + "'";
+        dv.RowFilter += " And ÏîÄ¿¸ºÔğÈË Like '%" + strPMName + "%'";
+        dv.RowFilter += " And ¿ªÊ¼Ê±¼ä >= '" + strBeginTime + "' And ½áÊøÊ±¼ä <= '" + strEndTime + "'";
         dv.Sort += " ProjectID DESC";
 
         GridView1.DataSource = dv;
@@ -133,9 +133,9 @@ public partial class TTProjectManHourIncomeAndExpenseReport : System.Web.UI.Page
         }
         else
         {
-            dv.RowFilter = "é¡¹ç›®åç§° Like '%" + strProjectName + "%'";
+            dv.RowFilter = "ÏîÄ¿Ãû³Æ Like '%" + strProjectName + "%'";
         }
-        dv.RowFilter += " And å¼€å§‹æ—¶é—´ >= '" + strBeginTime + "' And ç»“æŸæ—¶é—´ <= '" + strEndTime + "'";
+        dv.RowFilter += " And ¿ªÊ¼Ê±¼ä >= '" + strBeginTime + "' And ½áÊøÊ±¼ä <= '" + strEndTime + "'";
         dv.Sort += " ProjectID DESC";
 
         GridView1.DataSource = dv;
@@ -143,11 +143,11 @@ public partial class TTProjectManHourIncomeAndExpenseReport : System.Web.UI.Page
 
         DataTable dtProject = dv.ToTable();
 
-        Export3Excel(dtProject, "é¡¹ç›®å·¥æ—¶å’Œè´¹ç”¨æ±‡æ€»æŠ¥è¡¨.xls");
+        Export3Excel(dtProject, "ÏîÄ¿¹¤Ê±ºÍ·ÑÓÃ»ã×Ü±¨±í.xls");
 
         LB_ResultNumber.Text = GridView1.Rows.Count.ToString();
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¯¼å‡ºæˆåŠŸï¼');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µ¼³ö³É¹¦£¡');", true);
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

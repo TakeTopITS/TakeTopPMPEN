@@ -142,7 +142,7 @@
                                                                     </asp:ButtonColumn>
                                                                     <asp:TemplateColumn HeaderText="Delete">
                                                                         <ItemTemplate>
-                                                                            <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='删除' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                                            <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:TemplateColumn>
@@ -347,8 +347,8 @@
                                                             </td>
                                                             <td align="left" class="formItemBgStyle">
                                                                 <asp:DropDownList ID="DL_Status" runat="server">
-                                                                    <asp:ListItem Value="正常" Text="<%$ Resources:lang,ZhengChang%>" />
-                                                                    <asp:ListItem Value="取消" Text="<%$ Resources:lang,QuXiao%>" />
+                                                                    <asp:ListItem Value="Normal" Text="<%$ Resources:lang,ZhengChang%>" />
+                                                                    <asp:ListItem Value="Cancel" Text="<%$ Resources:lang,QuXiao%>" />
                                                                 </asp:DropDownList>
                                                             </td>
                                                         </tr>

@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDIsomJointEdit.aspx.cs" Inherits="TTGDIsomJointEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDIsomJointEdit.aspx.cs" Inherits="TTGDIsomJointEdit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ÂçïÁ∫øÂõæÊé•Â§¥ÁºñËæë</title>
+    <title>µ•œﬂÕºΩ”Õ∑±‡º≠</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
@@ -21,54 +21,54 @@
         function SelectStandardSize() {
             var url = "TTGDSelectorStandardSizeList.aspx";
 
-            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + id + "&ctrlName=" + name, 'ÈÄâÊã©Â∞∫ÂØ∏', 900, 500);
+            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + id + "&ctrlName=" + name, '—°‘Ò≥ﬂ¥Á', 900, 500);
         }
 
         function SelectWeldType() {
             var url = "TTGDSelectorWeldTypeList.aspx";
 
-            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + id + "&ctrlName=" + name, 'ÈÄâÊã©ÁÑäÊé•Á±ªÂûã', 900, 500);
+            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + id + "&ctrlName=" + name, '—°‘Ò∫∏Ω”¿‡–Õ', 900, 500);
         }
 
         function SelectWPSNo() {
             var url = "TTGDSelectorWPSNoList.aspx";
 
-            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + id + "&ctrlName=" + name, 'ÈÄâÊã©WPSÂ∑•Ëâ∫', 900, 500);
+            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + id + "&ctrlName=" + name, '—°‘ÒWPSπ§“’', 900, 500);
           
         }
 
         function SelectApplication() {
             var url = "TTGDSelectorApplicationList.aspx";
 
-            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + id + "&ctrlName=" + name, 'ÈÄâÊã©‰ªãË¥®', 900, 500);
+            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + id + "&ctrlName=" + name, '—°‘ÒΩÈ÷ ', 900, 500);
 
         }
 
         function SelectPressure() {
             var url = "TTGDSelectorPressureList.aspx";
 
-            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + id + "&ctrlName=" + name, 'ÈÄâÊã©ËØïÂéãÂåÖÂè∑', 900, 500);
+            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + id + "&ctrlName=" + name, '—°‘Ò ‘—π∞¸∫≈', 900, 500);
 
         }
 
-        //ÁÑäÂ∑•
+        //∫∏π§
         function SelectWelders(url, id, name) {
 
-            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + id + "&ctrlName=" + name, 'ÈÄâÊã©ÁÑäÂ∑•', 900, 500);
+            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + id + "&ctrlName=" + name, '—°‘Ò∫∏π§', 900, 500);
 
         }
 
         //FRI
         function SelectFri(url, id) {
 
-            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + id , 'ÈÄâÊã©FRI', 900, 500);
+            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + id , '—°‘ÒFRI', 900, 500);
 
           }
 
 
         function LoadParentLit() {
 
-            alert("‰øùÂ≠òÊàêÂäüÔºÅ");
+            alert("±£¥Ê≥…π¶£°");
 
             if (navigator.userAgent.indexOf("Firefox") >= 0) {
 
@@ -132,35 +132,35 @@
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JieTouHao%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JieTouHao%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_JointNo" runat="server"></asp:TextBox>
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,BianGeng%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,BianGeng%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_Rev" runat="server"></asp:TextBox>
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ChiCun%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ChiCun%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_Size" runat="server"></asp:TextBox>&nbsp;
-                                                            <input type="button" id="btnPerson" class="inpu" runat="server" value="ÈÄâÊã©" onclick="SelectStandardSize();" />
+                                                            <input type="button" id="btnPerson" class="inpu" runat="server" value="—°‘Ò" onclick="SelectStandardSize();" />
                                                         </td>
 
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_Mold" runat="server"></asp:TextBox>&nbsp;
-                                                            <input type="button" id="Button1" class="inpu" runat="server" value="ÈÄâÊã©" onclick="SelectWeldType();" />
+                                                            <input type="button" id="Button1" class="inpu" runat="server" value="—°‘Ò" onclick="SelectWeldType();" />
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">S/FÔºö
+                                                        <td style="text-align: left" class="formItemBgStyle">S/F£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:DropDownList ID="DDL_SF" runat="server">
@@ -170,34 +170,34 @@
                                                             <%--<asp:TextBox ID="TXT_SF" runat="server"></asp:TextBox>--%>
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,JieZhiDaiHao%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,JieZhiDaiHao%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_MediumCode" runat="server"></asp:TextBox>&nbsp;
-                                                            <input type="button" id="Button2" class="inpu" runat="server" value="ÈÄâÊã©" onclick="SelectApplication();" />
+                                                            <input type="button" id="Button2" class="inpu" runat="server" value="—°‘Ò" onclick="SelectApplication();" />
                                                         </td>
 
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,GuanJianHaoAnZhuangRiQi%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,GuanJianHaoAnZhuangRiQi%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_Pipefittings" runat="server"></asp:TextBox>&nbsp;&nbsp;<asp:TextBox ID="TXT_InstallationTime" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox>
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,DaDiHanGong%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,DaDiHanGong%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:HiddenField ID="HF_RanderWelder1" runat="server" />
                                                             <asp:TextBox ID="TXT_RanderWelder1" runat="server"></asp:TextBox>&nbsp;
-                                                            <input type="button" value="ÈÄâÊã©" id="BT_SelectPrice" class="inpu" onclick="SelectWelders('TTGDSelectorWeldersList.aspx', 'HF_RanderWelder1', 'TXT_RanderWelder1')" /><br />
+                                                            <input type="button" value="—°‘Ò" id="BT_SelectPrice" class="inpu" onclick="SelectWelders('TTGDSelectorWeldersList.aspx', 'HF_RanderWelder1', 'TXT_RanderWelder1')" /><br />
                                                             <asp:HiddenField ID="HF_RanderWelder2" runat="server" />
                                                             <asp:TextBox ID="TXT_RanderWelder2" runat="server"></asp:TextBox>&nbsp;
-                                                            <input type="button" value="ÈÄâÊã©" id="Button3" class="inpu" onclick="SelectWelders('TTGDSelectorWeldersList.aspx', 'HF_RanderWelder2', 'TXT_RanderWelder2')" />
+                                                            <input type="button" value="—°‘Ò" id="Button3" class="inpu" onclick="SelectWelders('TTGDSelectorWeldersList.aspx', 'HF_RanderWelder2', 'TXT_RanderWelder2')" />
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,DaDiRiQi%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,DaDiRiQi%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_RanderTime" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox>
@@ -206,51 +206,51 @@
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,GaiMianHanGong%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,GaiMianHanGong%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:HiddenField ID="HF_CoveringWelder1" runat="server" />
                                                             <asp:TextBox ID="TXT_CoveringWelder1" runat="server"></asp:TextBox>&nbsp;
-                                                            <input type="button" value="ÈÄâÊã©" id="Button4" class="inpu" onclick="SelectWelders('TTGDSelectorWeldersList.aspx', 'HF_CoveringWelder1', 'TXT_CoveringWelder1')" /><br />
+                                                            <input type="button" value="—°‘Ò" id="Button4" class="inpu" onclick="SelectWelders('TTGDSelectorWeldersList.aspx', 'HF_CoveringWelder1', 'TXT_CoveringWelder1')" /><br />
                                                             <asp:HiddenField ID="HF_CoveringWelder2" runat="server" />
                                                             <asp:TextBox ID="TXT_CoveringWelder2" runat="server"></asp:TextBox>&nbsp;
-                                                            <input type="button" value="ÈÄâÊã©" id="Button5" class="inpu" onclick="SelectWelders('TTGDSelectorWeldersList.aspx', 'HF_CoveringWelder2', 'TXT_CoveringWelder2')" />
+                                                            <input type="button" value="—°‘Ò" id="Button5" class="inpu" onclick="SelectWelders('TTGDSelectorWeldersList.aspx', 'HF_CoveringWelder2', 'TXT_CoveringWelder2')" />
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,GaiMianRiQi%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,GaiMianRiQi%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_CoveringTime" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox>
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">WPS NoÔºö
+                                                        <td style="text-align: left" class="formItemBgStyle">WPS No£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_WPSNo" runat="server"></asp:TextBox>&nbsp;
-                                                            <input type="button" id="Button10" class="inpu" runat="server" value="ÈÄâÊã©" onclick="SelectWPSNo();" />
+                                                            <input type="button" id="Button10" class="inpu" runat="server" value="—°‘Ò" onclick="SelectWPSNo();" />
                                                         </td>
 
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,ShiYaBaoHao%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,ShiYaBaoHao%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_PressurePackNo" runat="server"></asp:TextBox>&nbsp;
-                                                            <input type="button" id="Button11" class="inpu" runat="server" value="ÈÄâÊã©" onclick="SelectPressure();" />
+                                                            <input type="button" id="Button11" class="inpu" runat="server" value="—°‘Ò" onclick="SelectPressure();" />
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">FRI1-4Ôºö
+                                                        <td style="text-align: left" class="formItemBgStyle">FRI1-4£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_FRI1" runat="server" Width="50"></asp:TextBox>&nbsp;
-                                                            <input type="button" value="ÈÄâÊã©" id="Button7" class="inpu" onclick="SelectFri('TTGDSelectorFriList.aspx', 'TXT_FRI1')" />
+                                                            <input type="button" value="—°‘Ò" id="Button7" class="inpu" onclick="SelectFri('TTGDSelectorFriList.aspx', 'TXT_FRI1')" />
                                                             <asp:TextBox ID="TXT_FRI2" runat="server" Width="50"></asp:TextBox>&nbsp;
-                                                            <input type="button" value="ÈÄâÊã©" id="Button6" class="inpu" onclick="SelectFri('TTGDSelectorFriList.aspx', 'TXT_FRI2')" /><br />
+                                                            <input type="button" value="—°‘Ò" id="Button6" class="inpu" onclick="SelectFri('TTGDSelectorFriList.aspx', 'TXT_FRI2')" /><br />
                                                             <asp:TextBox ID="TXT_FRI3" runat="server" Width="50"></asp:TextBox>&nbsp;
-                                                            <input type="button" value="ÈÄâÊã©" id="Button8" class="inpu" onclick="SelectFri('TTGDSelectorFriList.aspx', 'TXT_FRI3')" />
+                                                            <input type="button" value="—°‘Ò" id="Button8" class="inpu" onclick="SelectFri('TTGDSelectorFriList.aspx', 'TXT_FRI3')" />
                                                             <asp:TextBox ID="TXT_FRI4" runat="server" Width="50"></asp:TextBox>&nbsp;
-                                                            <input type="button" value="ÈÄâÊã©" id="Button9" class="inpu" onclick="SelectFri('TTGDSelectorFriList.aspx', 'TXT_FRI4')" />
+                                                            <input type="button" value="—°‘Ò" id="Button9" class="inpu" onclick="SelectFri('TTGDSelectorFriList.aspx', 'TXT_FRI4')" />
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">Fit-UpÔºö
+                                                        <td style="text-align: left" class="formItemBgStyle">Fit-Up£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_FitUpTime" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox><br />
@@ -260,19 +260,19 @@
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,WaiGuan%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,WaiGuan%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_VisualTime" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox><br />
                                                             <asp:TextBox ID="TXT_Visual" runat="server"></asp:TextBox>
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">RTÔºö
+                                                        <td style="text-align: left" class="formItemBgStyle">RT£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_RTTime" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox><br />
                                                             <asp:TextBox ID="TXT_RT" runat="server"></asp:TextBox>
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">PTÔºö
+                                                        <td style="text-align: left" class="formItemBgStyle">PT£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_PTTime" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox><br />
@@ -282,19 +282,19 @@
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,ReChuLi%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,ReChuLi%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_PWHTTime" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox><br />
                                                             <asp:TextBox ID="TXT_PWHT" runat="server"></asp:TextBox>
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">PMIÔºö
+                                                        <td style="text-align: left" class="formItemBgStyle">PMI£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_PMITime" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox><br />
                                                             <asp:TextBox ID="TXT_PMI" runat="server"></asp:TextBox>
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">MTÔºö
+                                                        <td style="text-align: left" class="formItemBgStyle">MT£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_MTTime" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox><br />
@@ -304,19 +304,19 @@
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,LiShiYe%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,LiShiYe%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_HistorySheet" runat="server"></asp:TextBox>
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,YaLiShiYan%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,YaLiShiYan%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_PressTest" runat="server"></asp:TextBox>
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,ChouQianXiangQing%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,ChouQianXiangQing%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_RTLotDetailsRT1" runat="server" Width="50"></asp:TextBox>&nbsp;
@@ -328,9 +328,9 @@
                                                     <tr>
                                                         <td style="text-align: center" class="formItemBgStyle" colspan="6">
                                                             <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnOK_Click" />&nbsp;&nbsp;
-                                                            <%--<input type="button" value="ËøîÂõû" id="BT_Return" class="inpu" onclick="ClickReturnRedict();" />--%>
+                                                            <%--<input type="button" value="∑µªÿ" id="BT_Return" class="inpu" onclick="ClickReturnRedict();" />--%>
                                                             <input id="btnClose()" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                                type="button" value="ÂÖ≥Èó≠" />
+                                                                type="button" value="Closed" />
                                                         </td>
                                                     </tr>
                                                 </table>

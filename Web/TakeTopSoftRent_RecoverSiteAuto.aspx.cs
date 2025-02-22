@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration.Internal;
@@ -82,7 +82,7 @@ public partial class TakeTopSoftRent_RecoverSiteAuto : System.Web.UI.Page
             string strServerType = Request.QueryString["ServerType"];
 
             string strRentProductVersionType;
-            if (strRentProductVersion == "é›†å›¢ç‰ˆ")
+            if (strRentProductVersion == "GroupEdition")
             {
                 strRentProductVersionType = "YES";
             }
@@ -96,14 +96,14 @@ public partial class TakeTopSoftRent_RecoverSiteAuto : System.Web.UI.Page
 
             if (VerifyWebSiteAppIsExist(strSiteName, strSiteAppName))
             {
-                LB_Message.Text = "æ¢å¤å¤±è´¥ï¼Œå­˜åœ¨ç›¸åŒåç§°çš„ç«™ç‚¹ï¼Œè¯·æ£€æŸ¥ï¼";
+                LB_Message.Text = "»Ö¸´Ê§°Ü£¬´æÔÚÏàÍ¬Ãû³ÆµÄÕ¾µã£¬Çë¼ì²é£¡";
                 return;
             }
 
-            //æ¢å¤ç«™ç‚¹åº”ç”¨
+            //»Ö¸´Õ¾µãÓ¦ÓÃ
             RecoverSiteAPP(strRentProductType, strRentProductVersionType, strSiteAppSystemName, strSiteAppName, strSiteAppURL, strSiteName, strSiteBindingInfo, strSiteDirectory, strSiteTemplateDirectory, strSiteVirtualDirectoryName, strSiteVirtualDirectoryPhysicalPath, strSiteDBName, strSiteDBRestoreFile, strSiteDBSetupDirectory, strSiteDBLoginUserID, strSiteDBUserLoginPassword, strIsOEM);
 
-            LB_Message.Text = "ç«™ç‚¹æ¢å¤æˆåŠŸï¼Œä½ å¯ä»¥æ‰“å¼€å’Œæ”¶è—æ­¤ç«™ç‚¹ <br/> <a href='" + strSiteAppURL + "' target='_blank'>" + strSiteAppURL + "</a>";
+            LB_Message.Text = "Õ¾µã»Ö¸´³É¹¦£¬Äã¿ÉÒÔ´ò¿ªºÍÊÕ²Ø´ËÕ¾µã <br/> <a href='" + strSiteAppURL + "' target='_blank'>" + strSiteAppURL + "</a>";
             LB_CloseMessage.Visible = false;
 
             //LB_Message.Text = strSiteDBRestoreFile;
@@ -114,19 +114,19 @@ public partial class TakeTopSoftRent_RecoverSiteAuto : System.Web.UI.Page
         }
     }
 
-    //-------------æ¢å¤ç«™ç‚¹åº”ç”¨------------------------------------------------------------------
+    //-------------»Ö¸´Õ¾µãÓ¦ÓÃ------------------------------------------------------------------
     /// <summary> 
-    /// æ¢å¤ä¸€ä¸ªç«™ç‚¹åº”ç”¨
+    /// »Ö¸´Ò»¸öÕ¾µãÓ¦ÓÃ
     /// </summary> 
     /// <param name="siteName"></param> 
     /// <param name="bindingInfo">"*:&lt;port&gt;:&lt;hostname&gt;" <example>"*:80:myhost.com"</example></param> 
     /// <param name="physicalPath"></param> 
     public void RecoverSiteAPP(string strRentProductType, string strRentProductVersionType, string strSysteName, string strSiteAppName, string strSiteAppURL, string strSiteName, string strBindingInfo, string strSiteDirectory, string strSiteTemplateDirectory, string strSiteVirtualDirectoryName, string strSiteVirtualDirectoryPhysicalPath, string strSiteDBName, string strDBRestoreFile, string strDBSetupDirectory, string strDBLoginUserID, string strDBUserLoginPassword, string strIsOEM)
     {
-        //æŠŠæ ·æ¿ç«™ç‚¹æ–‡ä»¶å¤åˆ¶åˆ°ç«™ç‚¹
+        //°ÑÑù°åÕ¾µãÎÄ¼ş¸´ÖÆµ½Õ¾µã
         CopySiteFile(strSiteTemplateDirectory, strSiteDirectory);
 
-        ////é…ç½®POSTGRESQLæ•°æ®åº“çš„ç¯å¢ƒå˜é‡
+        ////ÅäÖÃPOSTGRESQLÊı¾İ¿âµÄ»·¾³±äÁ¿
         //try
         //{
         //    ShareClass.ConfigPostgreSqlPGPassFile(strSiteDBName);
@@ -136,26 +136,26 @@ public partial class TakeTopSoftRent_RecoverSiteAuto : System.Web.UI.Page
         //    LogClass.WriteLogFile("Error page: " + err.Message.ToString() + "\n" + err.StackTrace);
         //}
 
-        //æ·»åŠ æ•°æ®åº“ç™»å½•ç”¨æˆ·
+        //Ìí¼ÓÊı¾İ¿âµÇÂ¼ÓÃ»§
         ShareClass.CreateDBUserAccount(strDBLoginUserID, strDBUserLoginPassword, "YES");
 
-        //ä»ç”¨æˆ·å¤‡ä»½æ•°æ®åº“æ¢å¤æ•°æ®åº“
+        //´ÓÓÃ»§±¸·İÊı¾İ¿â»Ö¸´Êı¾İ¿â
         ShareClass.RestoreDatabaseFromOEMUserDB(strSiteDBName, strDBRestoreFile);
 
-        //æˆäºˆç”¨æˆ·æ•°æ®åº“æƒé™
+        //ÊÚÓèÓÃ»§Êı¾İ¿âÈ¨ÏŞ
         ShareClass.AuthorizationDBToUser(strDBLoginUserID,strDBUserLoginPassword, strSiteDBName, "YES");
 
-        //ModifyWebConfigDBConnectionString ä¿®æ”¹web.configçš„è¿æ¥æ•°æ®åº“çš„å­—ç¬¦ä¸²ã€å¹³å°åç§°å’Œæ˜¯å¦OEMç‰ˆ
+        //ModifyWebConfigDBConnectionString ĞŞ¸Äweb.configµÄÁ¬½ÓÊı¾İ¿âµÄ×Ö·û´®¡¢Æ½Ì¨Ãû³ÆºÍÊÇ·ñOEM°æ
         ShareClass.ModifyWebConfigDBConnectionStringAndSystemName(strSiteDirectory, "connection.connection_string", "SQLCONNECTIONSTRING", "extganttDataContextConnectionString", strDBLoginUserID, strDBUserLoginPassword, strSiteDBName, strSysteName, strSiteAppURL, strRentProductType, strRentProductVersionType, strIsOEM);
 
-        //C:\Windows\System32\inetsrv\config è¿™ä¸ªç›®å½•è¦èµ‹äºIIS_USERç”¨æˆ·å…¨éƒ¨æƒé™ï¼Œå¦åˆ™ä¼šå‡ºç°é”™è¯¯
+        //C:\Windows\System32\inetsrv\config Õâ¸öÄ¿Â¼Òª¸³ÓÚIIS_USERÓÃ»§È«²¿È¨ÏŞ£¬·ñÔò»á³öÏÖ´íÎó
         RecoverSiteAPP(strSiteAppName, strSiteName, "http", strBindingInfo, strSiteDirectory, true, strSiteAppName + "Pool", ProcessModelIdentityType.NetworkService, null, null, ManagedPipelineMode.Integrated, null);
 
-        //æ¢å¤ç½‘ç«™åº”ç”¨çš„è™šæ‹Ÿç›®å½•
+        //»Ö¸´ÍøÕ¾Ó¦ÓÃµÄĞéÄâÄ¿Â¼
         CreateSiteAppVDir(strSiteName, strSiteAppName, strSiteVirtualDirectoryName, strSiteVirtualDirectoryPhysicalPath);
     }
 
-    //æ¢å¤ä¸€ä¸ªç½‘ç«™çš„åº”ç”¨
+    //»Ö¸´Ò»¸öÍøÕ¾µÄÓ¦ÓÃ
     private void RecoverSiteAPP(string strSiteAppName, string strSiteName, string protocol, string bindingInformation, string physicalPath,
            bool createAppPool, string appPoolName, ProcessModelIdentityType identityType,
            string appPoolUserName, string appPoolPassword, ManagedPipelineMode appPoolPipelineMode, string managedRuntimeVersion)
@@ -186,13 +186,13 @@ public partial class TakeTopSoftRent_RecoverSiteAuto : System.Web.UI.Page
                     pool.ProcessModel.Password = appPoolPassword;
                 }
 
-                //è®¾ä¸ºç»å…¸æ¨¡å¼
+                //ÉèÎª¾­µäÄ£Ê½
                 pool.ManagedPipelineMode = ManagedPipelineMode.Classic;
 
-                //è®¾ç½®webåº”ç”¨ç¨‹åºæ± çš„Frameworkç‰ˆæœ¬
+                //ÉèÖÃwebÓ¦ÓÃ³ÌĞò³ØµÄFramework°æ±¾
                 pool.ManagedRuntimeVersion = "v4.0";
 
-                //è®¾ç½®æ˜¯å¦å¯ç”¨32ä½åº”ç”¨ç¨‹åº
+                //ÉèÖÃÊÇ·ñÆôÓÃ32Î»Ó¦ÓÃ³ÌĞò
                 pool.SetAttributeValue("enable32BitAppOnWin64", true);
                 pool.ProcessModel.IdentityType = ProcessModelIdentityType.ApplicationPoolIdentity;
 
@@ -204,7 +204,7 @@ public partial class TakeTopSoftRent_RecoverSiteAuto : System.Web.UI.Page
     }
 
 
-    //æ¢å¤ä¸€ä¸ªç½‘ç«™åº”ç”¨çš„è™šæ‹Ÿç›®å½•
+    //»Ö¸´Ò»¸öÍøÕ¾Ó¦ÓÃµÄĞéÄâÄ¿Â¼
     public void CreateSiteAppVDir(string siteName, string siteAppName, string vDirName, string physicalPath)
     {
         using (ServerManager mgr = new ServerManager())
@@ -223,7 +223,7 @@ public partial class TakeTopSoftRent_RecoverSiteAuto : System.Web.UI.Page
 
             try
             {
-                //æ²¡æœ‰ç›®å½•çš„å°±æ¢å¤ç›®å½•
+                //Ã»ÓĞÄ¿Â¼µÄ¾Í»Ö¸´Ä¿Â¼
                 ShareClass.CreateDirectory(physicalPath);
 
                 app.VirtualDirectories.Add(vDirName, physicalPath);
@@ -235,7 +235,7 @@ public partial class TakeTopSoftRent_RecoverSiteAuto : System.Web.UI.Page
         }
     }
 
-    //åˆ¤æ–­ç«™ç‚¹åº”ç”¨æ˜¯å¦å­˜åœ¨
+    //ÅĞ¶ÏÕ¾µãÓ¦ÓÃÊÇ·ñ´æÔÚ
     public bool VerifyWebSiteAppIsExist(string siteName, string siteAppName)
     {
         using (ServerManager mgr = new ServerManager())
@@ -255,7 +255,7 @@ public partial class TakeTopSoftRent_RecoverSiteAuto : System.Web.UI.Page
         }
     }
 
-    //å¤åˆ¶æ–‡ä»¶å¤¹
+    //¸´ÖÆÎÄ¼ş¼Ğ
     public static bool CopyDirectory(string SourcePath, string DestinationPath, bool overwriteexisting)
     {
         bool ret = false;
@@ -292,12 +292,12 @@ public partial class TakeTopSoftRent_RecoverSiteAuto : System.Web.UI.Page
 
 
 
-    //-------------å¤åˆ¶ç«™ç‚¹æ–‡ä»¶------------------------------------------------------------------
+    //-------------¸´ÖÆÕ¾µãÎÄ¼ş------------------------------------------------------------------
     public static bool CopySiteFile(string strFromDirectory, string strToDirectory)
     {
         try
         {
-            //æ²¡æœ‰ç›®å½•çš„å°±æ¢å¤ç›®å½•
+            //Ã»ÓĞÄ¿Â¼µÄ¾Í»Ö¸´Ä¿Â¼
             ShareClass.CreateDirectory(strToDirectory);
 
             bool blCopy = ShareClass.CopyDirectory(strFromDirectory, strToDirectory, false);
@@ -311,18 +311,18 @@ public partial class TakeTopSoftRent_RecoverSiteAuto : System.Web.UI.Page
 
     //----------------------------------------------------------------------------------------------
     /// <summary> 
-    /// æ¢å¤ä¸€ä¸ªç«™ç‚¹
+    /// »Ö¸´Ò»¸öÕ¾µã
     /// </summary> 
     /// <param name="siteName"></param> 
     /// <param name="bindingInfo">"*:&lt;port&gt;:&lt;hostname&gt;" <example>"*:80:myhost.com"</example></param> 
     /// <param name="physicalPath"></param> 
     public void CreateSite(string siteName, string bindingInfo, string physicalPath)
     {
-        //C:\Windows\System32\inetsrv\config è¿™ä¸ªç›®å½•è¦èµ‹äºIIS_USERç”¨æˆ·å…¨éƒ¨æƒé™ï¼Œå¦åˆ™ä¼šå‡ºç°é”™è¯¯
+        //C:\Windows\System32\inetsrv\config Õâ¸öÄ¿Â¼Òª¸³ÓÚIIS_USERÓÃ»§È«²¿È¨ÏŞ£¬·ñÔò»á³öÏÖ´íÎó
         createSite(siteName, "http", bindingInfo, physicalPath, true, siteName + "Pool", ProcessModelIdentityType.NetworkService, null, null, ManagedPipelineMode.Integrated, null);
     }
 
-    //æ¢å¤ä¸€ä¸ªç«™ç‚¹
+    //»Ö¸´Ò»¸öÕ¾µã
     private void createSite(string siteName, string protocol, string bindingInformation, string physicalPath,
             bool createAppPool, string appPoolName, ProcessModelIdentityType identityType,
             string appPoolUserName, string appPoolPassword, ManagedPipelineMode appPoolPipelineMode, string managedRuntimeVersion)
@@ -332,7 +332,7 @@ public partial class TakeTopSoftRent_RecoverSiteAuto : System.Web.UI.Page
             Site site;
             try
             {
-                //æ¢å¤ç«™ç‚¹æ—¶ç”¨è¿™ä¸ª
+                //»Ö¸´Õ¾µãÊ±ÓÃÕâ¸ö
                 site = mgr.Sites.Add(siteName, protocol, bindingInformation, physicalPath);
             }
             catch (Exception err)
@@ -355,20 +355,20 @@ public partial class TakeTopSoftRent_RecoverSiteAuto : System.Web.UI.Page
                 }
                 //if (appPoolPipelineMode != pool.ManagedPipelineMode)
                 //{
-                //    //è®¾ä¸ºé›†æˆæ¨¡å¼
+                //    //ÉèÎª¼¯³ÉÄ£Ê½
                 //    pool.ManagedPipelineMode = appPoolPipelineMode;
                 //}
 
-                //è®¾ä¸ºç»å…¸æ¨¡å¼
+                //ÉèÎª¾­µäÄ£Ê½
                 pool.ManagedPipelineMode = ManagedPipelineMode.Classic;
 
-                //è®¾ç½®webåº”ç”¨ç¨‹åºæ± çš„Frameworkç‰ˆæœ¬
+                //ÉèÖÃwebÓ¦ÓÃ³ÌĞò³ØµÄFramework°æ±¾
                 pool.ManagedRuntimeVersion = "v4.0";
 
-                //è®¾ç½®æ˜¯å¦å¯ç”¨32ä½åº”ç”¨ç¨‹åº
+                //ÉèÖÃÊÇ·ñÆôÓÃ32Î»Ó¦ÓÃ³ÌĞò
                 pool.SetAttributeValue("enable32BitAppOnWin64", true);
 
-                //æ¢å¤ç«™ç‚¹æ—¶ç”¨è¿™ä¸ª
+                //»Ö¸´Õ¾µãÊ±ÓÃÕâ¸ö
                 site.Applications["/"].ApplicationPoolName = pool.Name;
             }
 

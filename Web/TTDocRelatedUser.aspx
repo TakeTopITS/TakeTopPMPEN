@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" EnableEventValidation="false" CodeFile="TTDocRelatedUser.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" EnableEventValidation="false" CodeFile="TTDocRelatedUser.aspx.cs"
     Inherits="TTDocRelatedUser" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
@@ -97,7 +97,7 @@
                                         
                                         <ItemStyle CssClass="itemStyle" />
                                         <Columns>
-                                            <asp:TemplateColumn HeaderText="éƒ¨é—¨äººå‘˜ï¼š">
+                                            <asp:TemplateColumn HeaderText="²¿ÃÅÈËÔ±£º">
                                                 <ItemTemplate>
                                                     <asp:Button ID="BT_UserCode" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>'
                                                         CssClass="inpu" />

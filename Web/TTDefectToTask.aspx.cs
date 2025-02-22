@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -41,7 +41,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
         strLangCode = Session["LangCode"].ToString();
         strIsMobileDevice = Session["IsMobileDevice"].ToString();
 
-        //CKEditoråˆå§‹åŒ–
+        //CKEditor³õÊ¼»¯
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_Operation);
@@ -56,7 +56,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
         lst = defectmentBLL.GetAllDefectments(strHQL);
 
         Defectment defectment = (Defectment)lst[0];
-        //this.Title = "ç¼ºé™·ï¼š" + strDefectID + defectment.DefectName + " è½¬æˆé¡¹ç›®ä»»åŠ¡";
+        //this.Title = "È±Ïİ£º" + strDefectID + defectment.DefectName + " ×ª³ÉÏîÄ¿ÈÎÎñ";
 
         DataList1.DataSource = lst;
         DataList1.DataBind();
@@ -99,25 +99,25 @@ public partial class TTDefectToTask : System.Web.UI.Page
 
             if (strIsMobileDevice == "YES")
             {
-                HT_Operation.Text = "ç¼ºé™·å†…å®¹ï¼š" + defectment.DefectDetail.Trim() + "<br/><br/>éªŒæ”¶æ ‡å‡†ï¼š" + defectment.AcceptStandard.Trim();
+                HT_Operation.Text = "È±ÏİÄÚÈİ£º" + defectment.DefectDetail.Trim() + "<br/><br/>ÑéÊÕ±ê×¼£º" + defectment.AcceptStandard.Trim();
             }
             else
             {
-                HE_Operation.Text = "ç¼ºé™·å†…å®¹ï¼š" + defectment.DefectDetail.Trim() + "<br/><br/>éªŒæ”¶æ ‡å‡†ï¼š" + defectment.AcceptStandard.Trim();
+                HE_Operation.Text = "È±ÏİÄÚÈİ£º" + defectment.DefectDetail.Trim() + "<br/><br/>ÑéÊÕ±ê×¼£º" + defectment.AcceptStandard.Trim();
             }
 
             LoadProjectTask();
 
             SetProTaskColor();
 
-            //BusinessForm,åˆ—å‡ºä¸šåŠ¡è¡¨å•ç±»å‹ 
+            //BusinessForm,ÁĞ³öÒµÎñ±íµ¥ÀàĞÍ 
             ShareClass.LoadWorkflowType(DL_WLType, strLangCode);
         }
     }
 
     protected void BT_Create_Click(object sender, EventArgs e)
     {
-        //BusinessFormï¼Œéšè—ä¸šåŠ¡è¡¨å•å…ƒç´ 
+        //BusinessForm£¬Òş²ØÒµÎñ±íµ¥ÔªËØ
         Panel_RelatedBusiness.Visible = false;
 
         LB_TaskNO.Text = "";
@@ -192,7 +192,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
                 LB_Status.Text = strTaskStatus;
 
                 LB_TaskName.Visible = true;
-                LB_TaskName.Text = "ä»»åŠ¡ï¼š" + projectTask.TaskID.ToString().Trim() + "  " + projectTask.Task.Trim() + " çš„åˆ†æ´¾è®°å½•ï¼š";
+                LB_TaskName.Text = "ÈÎÎñ£º" + projectTask.TaskID.ToString().Trim() + "  " + projectTask.Task.Trim() + " µÄ·ÖÅÉ¼ÇÂ¼£º";
 
                 HL_TaskRelatedDoc.Enabled = true;
                 HL_TaskRelatedDoc.NavigateUrl = "TTProTaskRelatedDoc.aspx?TaskID=" + strTaskID;
@@ -215,7 +215,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
 
                 LoadAssignRecord(strTaskID);
 
-                //BusinessFormï¼Œåˆ—å‡ºå…³è”è¡¨å•æ¨¡æ¿
+                //BusinessForm£¬ÁĞ³ö¹ØÁª±íµ¥Ä£°å
                 try
                 {
                     Panel_RelatedBusiness.Visible = true;
@@ -241,11 +241,11 @@ public partial class TTDefectToTask : System.Web.UI.Page
                 {
                 }
 
-                //BusinessForm,è£…è½½å…³è”ä¿¡æ¯
+                //BusinessForm,×°ÔØ¹ØÁªĞÅÏ¢
                 TabContainer1.ActiveTabIndex = 0;
                 ShareClass.LoadBusinessForm("Task", strTaskID, DL_WFTemplate.SelectedValue.Trim(), IFrame_RelatedInformation);
 
-                if (strTaskStatus == "å…³é—­")
+                if (strTaskStatus == "Closed")
                 {
                     //BT_Update.Enabled = false;
                     //BT_Delete.Enabled = false;
@@ -361,7 +361,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
 
             strTaskStatus = LB_Status.Text.Trim();
 
-            if (strTaskStatus == "å…³é—­")
+            if (strTaskStatus == "Closed")
             {
                 BT_UpdateAssign.Enabled = false;
                 BT_DeleteAssign.Enabled = false;
@@ -497,11 +497,11 @@ public partial class TTDefectToTask : System.Web.UI.Page
                 LB_TaskNO.Text = strTaskID;
 
                 LB_TaskName.Visible = true;
-                LB_TaskName.Text = "ä»»åŠ¡ï¼š" + strTaskID + "  " + strTask + " çš„åˆ†æ´¾è®°å½•ï¼š";
+                LB_TaskName.Text = "ÈÎÎñ£º" + strTaskID + "  " + strTask + " µÄ·ÖÅÉ¼ÇÂ¼£º";
 
-                //è‡ªåŠ¨åˆ†æ´¾ä»»åŠ¡ç»™åˆ›å»ºè€…
+                //×Ô¶¯·ÖÅÉÈÎÎñ¸ø´´½¨Õß
                 string strHQL3 = "Insert Into T_TaskAssignRecord(TaskID,Task,Type,OperatorCode,OperatorName,OperatorContent,OperationTime,BeginDate,EndDate,AssignManCode,AssignManName,Content,Operation,PriorID,RouteNumber,MakeDate,Status,FinishedNumber,UnitName,MoveTime)";
-                strHQL3 += " Select A.TaskID,A.Task,'Task',A.MakeManCode,A.MakeManName,'',now(),A.BeginDate,A.EndDate,A.MakeManCode,A.MakeManName,'',A.Task,0,A.TaskID,now(),'å¾…å¤„ç†',0,UnitName,now()";
+                strHQL3 += " Select A.TaskID,A.Task,'Task',A.MakeManCode,A.MakeManName,'',now(),A.BeginDate,A.EndDate,A.MakeManCode,A.MakeManName,'',A.Task,0,A.TaskID,now(),'ToHandle',0,UnitName,now()";
                 strHQL3 += " From T_ProjectTask A Where A.TaskID = " + strTaskID;
                 strHQL3 += " and A.TaskID Not In (Select TaskID From T_TaskAssignRecord)";
                 ShareClass.RunSqlCommand(strHQL3);
@@ -602,7 +602,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
             {
                 projectTaskBLL.UpdateProjectTask(projectTask, int.Parse(strTaskID));
 
-                //BusinessFormï¼Œå…³è”ç›¸åº”çš„ä¸šåŠ¡è¡¨å•æ¨¡æ¿
+                //BusinessForm£¬¹ØÁªÏàÓ¦µÄÒµÎñ±íµ¥Ä£°å
                 ShareClass.SaveRelatedBusinessForm("Task", strTaskID, DL_WFTemplate.SelectedValue, DL_AllowUpdate.SelectedValue, strUserCode);
 
                 LoadProjectTask();
@@ -635,7 +635,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
         IList lst = projectTaskBLL.GetAllProjectTasks(strHQL);
         projectTask = (ProjectTask)lst[0];
 
-        projectTask.Status = "å…³é—­";
+        projectTask.Status = "Closed";
 
         try
         {
@@ -649,7 +649,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
             BT_UpdateAssign.Enabled = false;
             BT_Assign.Enabled = false;
 
-            LB_Status.Text = "å…³é—­";
+            LB_Status.Text = "Closed";
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGBCG + "')", true);
         }
@@ -669,7 +669,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
         IList lst = projectTaskBLL.GetAllProjectTasks(strHQL);
         projectTask = (ProjectTask)lst[0];
 
-        projectTask.Status = "å¤„ç†ä¸­";
+        projectTask.Status = "InProgress";
 
         try
         {
@@ -681,7 +681,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
             //BT_Update.Enabled = true;
             //BT_Delete.Enabled = true;
 
-            LB_Status.Text = "å¤„ç†ä¸­";
+            LB_Status.Text = "InProgress";
         }
         catch
         {
@@ -795,7 +795,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
         strHQL1 += " and ((to_char(BeginDate,'yyyymmdd') >= to_char(cast('" + DLC_BeginDate.Text + "' as timestamp) ,'yyyymmdd') and to_char(BeginDate,'yyyymmdd') <= to_char( cast('" + DLC_EndDate.Text + "' as timestamp),'yyyymmdd'))";
         strHQL1 += " or (to_char(EndDate,'yyyymmdd') >= to_char(cast('" + DLC_BeginDate.Text + "' as timestamp),'yyyymmdd') and to_char(EndDate,'yyyymmdd') <= to_char(cast('" + DLC_EndDate.Text + "' as timestamp),'yyyymmdd'))";
         strHQL1 += " or (to_char(BeginDate,'yyyymmdd') <= to_char(cast('" + DLC_BeginDate.Text + "' as timestamp),'yyyymmdd') and to_char(EndDate,'yyyymmdd') >= to_char(cast('" + DLC_EndDate.Text + "' as timestamp),'yyyymmdd')))";
-        strHQL1 += " and Type ='ä»»åŠ¡'";
+        strHQL1 += " and Type ='Task'";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL1, "V_ProjectMember_WorkLoadSchedule");
 
@@ -823,7 +823,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
         strHQL1 += " and ((to_char(BeginDate,'yyyymmdd') >= to_char(cast('" + DLC_BeginDate.Text + "' as timestamp) ,'yyyymmdd') and to_char(BeginDate,'yyyymmdd') <= to_char( cast('" + DLC_EndDate.Text + "' as timestamp),'yyyymmdd'))";
         strHQL1 += " or (to_char(EndDate,'yyyymmdd') >= to_char(cast('" + DLC_BeginDate.Text + "' as timestamp),'yyyymmdd') and to_char(EndDate,'yyyymmdd') <= to_char(cast('" + DLC_EndDate.Text + "' as timestamp),'yyyymmdd'))";
         strHQL1 += " or (to_char(BeginDate,'yyyymmdd') <= to_char(cast('" + DLC_BeginDate.Text + "' as timestamp),'yyyymmdd') and to_char(EndDate,'yyyymmdd') >= to_char(cast('" + DLC_EndDate.Text + "' as timestamp),'yyyymmdd')))";
-        strHQL1 += " and Type ='ä»»åŠ¡'";
+        strHQL1 += " and Type ='Task'";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL1, "V_ProjectMember_WorkLoadSchedule");
 
@@ -895,7 +895,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
         taskAssignRecord.PriorID = intPriorID;
         taskAssignRecord.RouteNumber = GetRouteNumber(intTaskID.ToString());
         taskAssignRecord.MakeDate = dtMakeDate;
-        taskAssignRecord.Status = "å¾…å¤„ç†";
+        taskAssignRecord.Status = "ToHandle";
 
         taskAssignRecord.FinishedNumber = 0;
         taskAssignRecord.UnitName = ""; 
@@ -908,7 +908,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
             strAssignID = ShareClass.GetMyCreatedMaxTaskAssignRecordID(intTaskID.ToString(), strUserCode);
             LB_ID.Text = strAssignID;
 
-            //BusinessForm,å¤„ç†å…³è”çš„ä¸šåŠ¡è¡¨å•æ•°æ®
+            //BusinessForm,´¦Àí¹ØÁªµÄÒµÎñ±íµ¥Êı¾İ
             ShareClass.InsertOrUpdateTaskAssignRecordWFXMLData("Task", intTaskID.ToString(), "TaskRecord", strAssignID, strUserCode);
 
 
@@ -917,11 +917,11 @@ public partial class TTDefectToTask : System.Web.UI.Page
             BT_Assign.Enabled = true;
 
             LoadAssignRecord(LB_TaskNO.Text.Trim());
-            UpdateTaskStatus(intTaskID.ToString(), "å¤„ç†ä¸­");
+            UpdateTaskStatus(intTaskID.ToString(), "InProgress");
 
-            ShareClass.SendInstantMessage(Resources.lang.RenWuFenPaiTongZhi, ShareClass.GetUserName(strUserCode) + Resources.lang.GeiNiFenPaiLeRenWu + " :" + intTaskID.ToString() + "  " + strTask + "ï¼Œ" + Resources.lang.QingJiShiChuLi, strUserCode, strOperatorCode);
+            ShareClass.SendInstantMessage(Resources.lang.RenWuFenPaiTongZhi, ShareClass.GetUserName(strUserCode) + Resources.lang.GeiNiFenPaiLeRenWu + " :" + intTaskID.ToString() + "  " + strTask + "£¬" + Resources.lang.QingJiShiChuLi, strUserCode, strOperatorCode);
 
-            TB_Message.Text = ShareClass.GetUserName(strUserCode) + Resources.lang.GeiNiFenPaiLeRenWu + " :" + intTaskID.ToString() + "  " + "ï¼Œ" + Resources.lang.QingJiShiChuLi;
+            TB_Message.Text = ShareClass.GetUserName(strUserCode) + Resources.lang.GeiNiFenPaiLeRenWu + " :" + intTaskID.ToString() + "  " + "£¬" + Resources.lang.QingJiShiChuLi;
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFPCG + "')", true);
 
@@ -935,7 +935,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
 
     }
 
-    //BusinessForm,å·¥ä½œæµç±»å‹æŸ¥è¯¢
+    //BusinessForm,¹¤×÷Á÷ÀàĞÍ²éÑ¯
     protected void DL_WLType_SelectedIndexChanged(object sender, EventArgs e)
     {
         string strHQL, strWLType;
@@ -945,7 +945,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
         {
             return;
         }
-        strHQL = "Select TemName From T_WorkFlowTemplate Where type = " + "'" + strWLType + "'" + " and Visible = 'YES' and Authority = 'æ‰€æœ‰'";
+        strHQL = "Select TemName From T_WorkFlowTemplate Where type = " + "'" + strWLType + "'" + " and Visible = 'YES' and Authority = 'All'";
         strHQL += " Order by SortNumber ASC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTemplate");
         DL_WFTemplate.DataSource = ds;
@@ -957,7 +957,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
     }
 
 
-    //BusinessForm,å¯åŠ¨å…³è”çš„ä¸šåŠ¡è¡¨å•
+    //BusinessForm,Æô¶¯¹ØÁªµÄÒµÎñ±íµ¥
     protected void BT_StartupBusinessForm_Click(object sender, EventArgs e)
     {
         string strURL;
@@ -984,7 +984,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
     }
 
 
-    //BusinessForm,åˆ é™¤å…³è”çš„ä¸šåŠ¡è¡¨å•
+    //BusinessForm,É¾³ı¹ØÁªµÄÒµÎñ±íµ¥
     protected void BT_DeleteBusinessForm_Click(object sender, EventArgs e)
     {
         string strHQL;
@@ -1099,7 +1099,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
             dtNowDate = DateTime.Now;
             strStatus = DataGrid1.Items[i].Cells[12].Text.Trim();
 
-            if (strStatus != "å®Œæˆ" | strStatus != "å…³é—­")
+            if (strStatus != "Completed" | strStatus != "Closed")
             {
                 if (dtFinishedDate < dtNowDate)
                 {
@@ -1121,7 +1121,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
             dtNowDate = DateTime.Now;
             strStatus = DataGrid2.Items[i].Cells[10].Text.Trim();
 
-            if (strStatus != "å®Œæˆ" & strStatus != "å·²å®Œæˆ")
+            if (strStatus != "Completed" & strStatus != "ÒÑÍê³É")
             {
                 if (dtFinishedDate < dtNowDate)
                 {
@@ -1202,7 +1202,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
         lst = defectAssignRecordBLL.GetAllDefectAssignRecords(strHQL);
         DefectAssignRecord defectAssignRecord = (DefectAssignRecord)lst[0];
 
-        defectAssignRecord.Status = "è½¬ä»»";
+        defectAssignRecord.Status = "ToTask";
 
         try
         {
@@ -1222,7 +1222,7 @@ public partial class TTDefectToTask : System.Web.UI.Page
 
         Defectment defectment = (Defectment)lst[0];
 
-        defectment.Status = "è½¬ä»»";
+        defectment.Status = "ToTask";
 
         try
         {

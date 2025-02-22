@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -30,7 +30,7 @@ public partial class TTBMPurchaseApplicationPaymentApplicantQueryCenter : System
         strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "鍒嗗寘浠樻鏌ヨ", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "分包付款查询", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -65,7 +65,7 @@ public partial class TTBMPurchaseApplicationPaymentApplicantQueryCenter : System
                     }
                     e.Item.ForeColor = Color.Red;
 
-                    LoadRelatedWL("鍒嗗寘浠樻鐢宠", "椤圭洰", int.Parse(strID));
+                    LoadRelatedWL("分包付款申请", "Project", int.Parse(strID));
 
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
                 }

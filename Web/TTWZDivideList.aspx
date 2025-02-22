@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZDivideList.aspx.cs" Inherits="TTWZDivideList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZDivideList.aspx.cs" Inherits="TTWZDivideList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ä¸“ä¸šåˆ’åˆ†</title>
+    <title>×¨Òµ»®·Ö</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -54,7 +54,7 @@
                                     <table width="100%" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left" class="formItemBgStyle">
-                                                <input type="button" class="inpuLong" value="æ–°å¢žä¸“ä¸šåˆ’åˆ†" onclick="window.location.href = 'TTWZDivideEdit.aspx'" />
+                                                <input type="button" class="inpuLong" value="ÐÂÔö×¨Òµ»®·Ö" onclick="window.location.href = 'TTWZDivideEdit.aspx'" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -108,14 +108,14 @@
                                                                 <ItemTemplate>
                                                                     <a href='TTWZDivideEdit.aspx?strDivideCode=<%# DataBinder.Eval(Container.DataItem,"DivideCode") %>'>
                                                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,BianJi%>"></asp:Label></a>
-                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"DivideCode") %>' CommandName="del" CssClass="notTab" Visible='<%# Eval("IsMark").ToString()=="0" ? true : false %>'>åˆ é™¤</asp:LinkButton>
-                                                                    <%--<asp:Button runat="server" Text="åˆ é™¤" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"DivideCode") %>' CommandName="del" CssClass="inpu" Visible='<%# Eval("IsMark").ToString()=="0" ? true : false %>' />--%>
+                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"DivideCode") %>' CommandName="del" CssClass="notTab" Visible='<%# Eval("IsMark").ToString()=="0" ? true : false %>'>É¾³ý</asp:LinkButton>
+                                                                    <%--<asp:Button runat="server" Text="Deleted" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"DivideCode") %>' CommandName="del" CssClass="inpu" Visible='<%# Eval("IsMark").ToString()=="0" ? true : false %>' />--%>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="DivideCode" HeaderText="ä¸“ä¸šç¼–å·">
+                                                            <asp:BoundColumn DataField="DivideCode" HeaderText="×¨Òµ±àºÅ">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             </asp:BoundColumn>
-                                                            <%--<asp:BoundColumn DataField="DivideType" HeaderText="ä¸“ä¸šç±»åˆ«">
+                                                            <%--<asp:BoundColumn DataField="DivideType" HeaderText="×¨ÒµÀà±ð">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
                                                             </asp:BoundColumn>--%>
                                                             <asp:TemplateColumn>
@@ -127,7 +127,7 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("DivideType").ToString(), 25) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <%--<asp:BoundColumn DataField="DLCode" HeaderText="æ¶‰åŠå¤§ç±»">
+                                                            <%--<asp:BoundColumn DataField="DLCode" HeaderText="Éæ¼°´óÀà">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
                                                             </asp:BoundColumn>--%>
                                                             <asp:TemplateColumn>
@@ -139,7 +139,7 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("DLCode").ToString(), 60) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="IsMark" HeaderText="ä½¿ç”¨æ ‡è®°">
+                                                            <asp:BoundColumn DataField="IsMark" HeaderText="Ê¹ÓÃ±ê¼Ç">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDRTResult.aspx.cs" Inherits="TTGDRTResult" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDRTResult.aspx.cs" Inherits="TTGDRTResult" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -57,10 +57,10 @@
                                                 <table>
                                                     <tr>
                                                         <td>
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>Ôºö<asp:DropDownList ID="DDL_GDProject" runat="server"></asp:DropDownList>&nbsp;
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DanXianTuHao%>"></asp:Label>Ôºö<asp:DropDownList ID="DDL_Isom_no" runat="server"></asp:DropDownList><br />
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>£∫<asp:DropDownList ID="DDL_GDProject" runat="server"></asp:DropDownList>&nbsp;
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DanXianTuHao%>"></asp:Label>£∫<asp:DropDownList ID="DDL_Isom_no" runat="server"></asp:DropDownList><br />
                                                             <asp:Button ID="BT_Search" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ChaXun%>" OnClick="BT_Search_Click" /><br />
-                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,QuYangHao%>"></asp:Label>Ôºö<asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,QuYangHao%>"></asp:Label>£∫<asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
                                                         </td>
                                                         <td>
                                                             <asp:Button ID="BT_RefuseJoint" runat="server" CssClass="inpuLong" Text="<%$ Resources:lang,XianShiBeiJuJieTou%>" />&nbsp;
@@ -178,57 +178,57 @@
                                                             <%--<asp:TemplateColumn>
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                 <HeaderTemplate>
-                                                                    Êìç‰Ωú
+                                                                    ≤Ÿ◊˜
                                                                 </HeaderTemplate>
                                                                 <ItemTemplate>
 
-                                                                    <a href='TTGDPressureTestEdit.aspx?id=<%# DataBinder.Eval(Container.DataItem,"ID") %>'>ÁºñËæë</a>
+                                                                    <a href='TTGDPressureTestEdit.aspx?id=<%# DataBinder.Eval(Container.DataItem,"ID") %>'>±‡º≠</a>
                                                                     
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>--%>
-                                                            <asp:BoundColumn DataField="TestLoopNo" HeaderText="Á≠âÁ∫ß">
+                                                            <asp:BoundColumn DataField="TestLoopNo" HeaderText="µ»º∂">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="PressTestRec" HeaderText="ÂçïÁ∫øÂõæÂè∑È°µÁ†Å">
+                                                            <asp:BoundColumn DataField="PressTestRec" HeaderText="µ•œﬂÕº∫≈“≥¬Î">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="PressDate" HeaderText="Êé•Â§¥Êï∞">
+                                                            <asp:BoundColumn DataField="PressDate" HeaderText="Ω”Õ∑ ˝">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ReinstRec" HeaderText="Â∞∫ÂØ∏">
+                                                            <asp:BoundColumn DataField="ReinstRec" HeaderText="≥ﬂ¥Á">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ReinstDate" HeaderText="ÊâìÂ∫ïÁÑäÂ∑•1">
+                                                            <asp:BoundColumn DataField="ReinstDate" HeaderText="¥Úµ◊∫∏π§1">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="FlushingBlock" HeaderText="ÊâìÂ∫ïÁÑäÂ∑•2">
+                                                            <asp:BoundColumn DataField="FlushingBlock" HeaderText="¥Úµ◊∫∏π§2">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="FlushingRec" HeaderText="ÁõñÈù¢ÁÑäÂ∑•1">
+                                                            <asp:BoundColumn DataField="FlushingRec" HeaderText="∏«√Ê∫∏π§1">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="FlushingDate" HeaderText="ÁõñÈù¢ÁÑäÂ∑•2">
+                                                            <asp:BoundColumn DataField="FlushingDate" HeaderText="∏«√Ê∫∏π§2">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="LeakTestRec" HeaderText="ËøîÂ∑•ÁÑäÂ∑•1">
+                                                            <asp:BoundColumn DataField="LeakTestRec" HeaderText="∑µπ§∫∏π§1">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="LeakDate" HeaderText="ËøîÂ∑•ÁÑäÂ∑•2">
+                                                            <asp:BoundColumn DataField="LeakDate" HeaderText="∑µπ§∫∏π§2">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Remarks" HeaderText="RTÊ†∑Êú¨Âè∑">
+                                                            <asp:BoundColumn DataField="Remarks" HeaderText="RT—˘±æ∫≈">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="LeakTestRec" HeaderText="RTËÆ∞ÂΩï1">
+                                                            <asp:BoundColumn DataField="LeakTestRec" HeaderText="RTº«¬º1">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="LeakTestRec" HeaderText="RTËÆ∞ÂΩï2">
+                                                            <asp:BoundColumn DataField="LeakTestRec" HeaderText="RTº«¬º2">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="LeakTestRec" HeaderText="RTÊé¢‰º§Êó•Êúü1">
+                                                            <asp:BoundColumn DataField="LeakTestRec" HeaderText="RTÃΩ…À»’∆⁄1">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="LeakTestRec" HeaderText="RTÊé¢‰º§Êó•Êúü2">
+                                                            <asp:BoundColumn DataField="LeakTestRec" HeaderText="RTÃΩ…À»’∆⁄2">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="LeakTestRec" HeaderText="R1-F1">
@@ -237,16 +237,16 @@
                                                             <asp:BoundColumn DataField="LeakTestRec" HeaderText="R1-F2">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="LeakTestRec" HeaderText="RTÁªìÊûú">
+                                                            <asp:BoundColumn DataField="LeakTestRec" HeaderText="RTΩ·π˚">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="LeakTestRec" HeaderText="ÊâìÂ∫ï">
+                                                            <asp:BoundColumn DataField="LeakTestRec" HeaderText="¥Úµ◊">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="LeakTestRec" HeaderText="ÁõñÈù¢">
+                                                            <asp:BoundColumn DataField="LeakTestRec" HeaderText="∏«√Ê">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="LeakTestRec" HeaderText="ËøîÂ∑•ÁâáÂ≠ê">
+                                                            <asp:BoundColumn DataField="LeakTestRec" HeaderText="∑µπ§∆¨◊”">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

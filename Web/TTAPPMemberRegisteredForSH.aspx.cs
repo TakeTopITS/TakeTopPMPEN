@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -30,7 +30,7 @@ public partial class TTAPPMemberRegisteredForSH : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
         {
-            //æ£€æŸ¥æ³¨æ˜¯å¦ä¸ºSAASç‰ˆæœ¬
+            //¼ì²é×¢ÊÇ·ñÎªSAAS°æ±¾
             string strServerName = System.Configuration.ConfigurationManager.AppSettings["ServerName"];
             TakeTopLicense license = new TakeTopLicense();
             //string strSystemVersionType = license.GetVerType(strServerName); ;
@@ -220,7 +220,7 @@ public partial class TTAPPMemberRegisteredForSH : System.Web.UI.Page
                     ShareClass.RunSqlCommand(strHQL);
                 }
 
-                //ç»™å‘˜å·¥å¢åŠ è€ƒå‹¤è§„åˆ™
+                //¸øÔ±¹¤Ôö¼Ó¿¼ÇÚ¹æÔò
                 try
                 {
                     strHQL = "Insert Into T_UserAttendanceRule(UserCode,UserName,CreateDate,MCheckInStart,MCheckInEnd,MCheckOutStart,MCheckOutEnd,";
@@ -228,9 +228,9 @@ public partial class TTAPPMemberRegisteredForSH : System.Web.UI.Page
                     strHQL += "OCheckInStart,OCheckInEnd,OCheckOutStart,OCheckOutEnd,Status,MCheckInIsMust,MCheckOutIsMust,ACheckInIsMust,ACheckOutIsMust,NCheckInIsMust,NCheckOutIsMust,OCheckInIsMust,OCheckOutIsMust,LargestDistance,LeaderCode,LeaderName,OfficeLongitude,OfficeLatitude)";
                     strHQL += " Select A.UserCode,A.UserName,now(),B.MCheckInStart,B.MCheckInEnd,B.MCheckOutStart,B.MCheckOutEnd,";
                     strHQL += "B.ACheckInStart,B.ACheckInEnd,B.ACheckOutStart,B.ACheckOutEnd,B.NCheckInStart,B.NCheckInEnd,B.NCheckOutStart,B.NCheckOutEnd,";
-                    strHQL += "B.OCheckInStart,B.OCheckInEnd,B.OCheckOutStart,B.OCheckOutEnd,'å¤„ç†ä¸­',B.MCheckInIsMust,B.MCheckOutIsMust,B.ACheckInIsMust,B.ACheckOutIsMust,B.NCheckInIsMust,B.NCheckOutIsMust,B.OCheckInIsMust,B.OCheckOutIsMust,B.LargestDistance,'','',OfficeLongitude,OfficeLatitude";
+                    strHQL += "B.OCheckInStart,B.OCheckInEnd,B.OCheckOutStart,B.OCheckOutEnd,'InProgress',B.MCheckInIsMust,B.MCheckOutIsMust,B.ACheckInIsMust,B.ACheckOutIsMust,B.NCheckInIsMust,B.NCheckOutIsMust,B.OCheckInIsMust,B.OCheckOutIsMust,B.LargestDistance,'','',OfficeLongitude,OfficeLatitude";
                     strHQL += " From T_ProjectMember A, T_AttendanceRule B";
-                    strHQL += " Where A.UserCode = '" + strUserCode + "' and A.UserCode not in (Select UserCode From T_UserAttendanceRule) and A.Status not in ('ç¦»èŒ','ç»ˆæ­¢') ";
+                    strHQL += " Where A.UserCode = '" + strUserCode + "' and A.UserCode not in (Select UserCode From T_UserAttendanceRule) and A.Status not in ('Resign','Stop') ";
                     ShareClass.RunSqlCommand(strHQL);
                 }
                 catch
@@ -244,7 +244,7 @@ public partial class TTAPPMemberRegisteredForSH : System.Web.UI.Page
                 {
                     try
                     {
-                        msg.SendPhoneMSMBySP(strUserCode, "ç™»è®°æˆåŠŸï¼Œæ¬¢è¿ä½ æˆä¸ºå•†ä¼šå‡†æˆå‘˜ï¼Œä½ çš„" + Resources.lang.ZhangHao + ": " + TB_UserCode.Text.Trim() + ", " + Resources.lang.Password + ": " + strPassword, "å•†ä¼šç®¡ç†å‘˜");
+                        msg.SendPhoneMSMBySP(strUserCode, "µÇ¼Ç³É¹¦£¬»¶Ó­Äã³ÉÎªÉÌ»á×¼³ÉÔ±£¬ÄãµÄ" + Resources.lang.ZhangHao + ": " + TB_UserCode.Text.Trim() + ", " + Resources.lang.Password + ": " + strPassword, "ÉÌ»á¹ÜÀíÔ±");
                     }
                     catch
                     {
@@ -252,7 +252,7 @@ public partial class TTAPPMemberRegisteredForSH : System.Web.UI.Page
 
                     try
                     {
-                        msg.SendMail(strUserCode, "ç™»è®°æˆåŠŸï¼Œæ¬¢è¿ä½ æˆä¸ºå•†ä¼šå‡†æˆå‘˜ï¼Œä½ çš„" + Resources.lang.ZhangHao + Resources.lang.Password, Resources.lang.ZhangHao + ": " + TB_UserCode.Text.Trim() + ", " + Resources.lang.MiMa + ": " + strPassword, "å•†ä¼šç®¡ç†å‘˜");
+                        msg.SendMail(strUserCode, "µÇ¼Ç³É¹¦£¬»¶Ó­Äã³ÉÎªÉÌ»á×¼³ÉÔ±£¬ÄãµÄ" + Resources.lang.ZhangHao + Resources.lang.Password, Resources.lang.ZhangHao + ": " + TB_UserCode.Text.Trim() + ", " + Resources.lang.MiMa + ": " + strPassword, "ÉÌ»á¹ÜÀíÔ±");
                     }
                     catch
                     {
@@ -260,11 +260,11 @@ public partial class TTAPPMemberRegisteredForSH : System.Web.UI.Page
 
                 }).Start();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click2", "alert('ç™»è®°æˆåŠŸï¼Œæ¬¢è¿ä½ æˆä¸ºå•†ä¼šå‡†æˆå‘˜ï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click2", "alert('µÇ¼Ç³É¹¦£¬»¶Ó­Äã³ÉÎªÉÌ»á×¼³ÉÔ±£¡')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click3", "alert('ç™»è®°å¤±è´¥ï¼Œè¯·è”ç³»å•†ä¼šç®¡ç†å‘˜')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click3", "alert('µÇ¼ÇÊ§°Ü£¬ÇëÁªÏµÉÌ»á¹ÜÀíÔ±')", true);
             }
         }
         else
@@ -436,11 +436,11 @@ public partial class TTAPPMemberRegisteredForSH : System.Web.UI.Page
 
             if (strFileName1 != "")
             {
-                //è·å–åˆå§‹æ–‡ä»¶å
-                i = strFileName1.LastIndexOf("."); //å–å¾—æ–‡ä»¶åä¸­æœ€åä¸€ä¸ª"."çš„ç´¢å¼•
-                string strNewExt = strFileName1.Substring(i); //è·å–æ–‡ä»¶æ‰©å±•å
+                //»ñÈ¡³õÊ¼ÎÄ¼şÃû
+                i = strFileName1.LastIndexOf("."); //È¡µÃÎÄ¼şÃûÖĞ×îºóÒ»¸ö"."µÄË÷Òı
+                string strNewExt = strFileName1.Substring(i); //»ñÈ¡ÎÄ¼şÀ©Õ¹Ãû
 
-                DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+                DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
 
                 string strFileName2 = System.IO.Path.GetFileName(strFileName1);
                 string strExtName = Path.GetExtension(strFileName2);
@@ -532,7 +532,7 @@ public partial class TTAPPMemberRegisteredForSH : System.Web.UI.Page
 
     protected bool CheckUserLoginManage(string strUserCode, string strUserName)
     {
-        //æ ¹æ®ç”¨æˆ·ç™»å½•IPåˆ¤æ–­æ˜¯å¦é˜»æ­¢ç”¨æˆ·ç™»å½•ç³»ç»Ÿ
+        //¸ù¾İÓÃ»§µÇÂ¼IPÅĞ¶ÏÊÇ·ñ×èÖ¹ÓÃ»§µÇÂ¼ÏµÍ³
         string strHQL;
         string strLoginID, strIsAllMember, strIsForbidLogin, strLoginUserCode;
         string strMsg, strIP, strUserHostAddress;

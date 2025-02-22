@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTBMBidFile.aspx.cs" Inherits="TTBMBidFile" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTBMBidFile.aspx.cs" Inherits="TTBMBidFile" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -57,9 +57,9 @@
                                     <table cellpadding="2" cellspacing="0" class="formBgStyle" width="75%">
                                         <tr>
                                               <td align="center">
-                                                <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,WenJianXinXi%>"></asp:Label>ï¼š<asp:TextBox ID="TextBox1" runat="server" Width="120px"></asp:TextBox>
+                                                <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,WenJianXinXi%>"></asp:Label>£º<asp:TextBox ID="TextBox1" runat="server" Width="120px"></asp:TextBox>
                                            
-                                                <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZhaoBiaoFangAnXinXi%>"></asp:Label>ï¼š<asp:TextBox ID="TextBox2" runat="server" Width="120px"></asp:TextBox>
+                                                <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZhaoBiaoFangAnXinXi%>"></asp:Label>£º<asp:TextBox ID="TextBox2" runat="server" Width="120px"></asp:TextBox>
                                            
                                                 <asp:Button ID="BT_Query" runat="server" CssClass="inpu" OnClick="BT_Query_Click" Text="<%$ Resources:lang,ChaXun%>" />
                                             </td>
@@ -114,31 +114,31 @@
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <Columns>
-                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ä¿®æ”¹' /&gt;&lt;/div&gt;">
+                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ÐÞ¸Ä' /&gt;&lt;/div&gt;">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:ButtonColumn>
                                                         <asp:TemplateColumn HeaderText="Delete">
                                                             <ItemTemplate>
-                                                                <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='åˆ é™¤' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                                <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="FileName" HeaderText="æ–‡ä»¶åç§°">
+                                                        <asp:BoundColumn DataField="FileName" HeaderText="ÎÄ¼þÃû³Æ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="BidPlanName" HeaderText="æ‹›æ ‡è®¡åˆ’åç§°">
+                                                        <asp:BoundColumn DataField="BidPlanName" HeaderText="ÕÐ±ê¼Æ»®Ãû³Æ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:HyperLinkColumn DataNavigateUrlField="FilePath" DataNavigateUrlFormatString="{0}" DataTextField="FileName" HeaderText="æ–‡ä»¶ä¸‹è½½" Target="_blank">
+                                                        <asp:HyperLinkColumn DataNavigateUrlField="FilePath" DataNavigateUrlFormatString="{0}" DataTextField="FileName" HeaderText="ÎÄ¼þÏÂÔØ" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                                         </asp:HyperLinkColumn>
                                                     </Columns>
@@ -168,7 +168,7 @@
                             <table cellpadding="2" cellspacing="0" class="formBgStyle" width="900px">
                                 <tr>
                                     <td align="right" style="width: 150px" class="formItemBgStyle">
-                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,WenJianMingCheng%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,WenJianMingCheng%>"></asp:Label>£º
                                     </td>
                                     <td colspan="3" align="left" class="formItemBgStyle">
                                         <asp:Label ID="LB_ID" runat="server"></asp:Label>
@@ -177,7 +177,7 @@
                                 </tr>
                                 <tr style="color: #000000">
                                     <td align="right" class="formItemBgStyle" style="width: 150px; height: 30px">
-                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,FuJian%>"></asp:Label>ï¼š</td>
+                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,FuJian%>"></asp:Label>£º</td>
                                     <td align="left" class="formItemBgStyle" colspan="3" style="height: 30px">
                                         <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
                                             <ContentTemplate>

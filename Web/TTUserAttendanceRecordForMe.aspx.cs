@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -28,7 +28,7 @@ public partial class TTUserAttendanceRecordForMe : System.Web.UI.Page
         strUserName = ShareClass.GetUserName(strUserCode);
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "查看所有项目", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "�鿴������Ŀ", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -71,7 +71,7 @@ public partial class TTUserAttendanceRecordForMe : System.Web.UI.Page
 
         string strDisplayType = DL_DisplayType.SelectedValue.Trim();
 
-        if (strDisplayType == "显示异常")
+        if (strDisplayType == "DisplayAbnormal")
         {
             strHQL = "Select * From T_UserAttendanceRecord  where ";
             strHQL += " (LateMinute <> 0 or EarlyMinute <> 0 or (MCheckInDistance > LargestDistance Or MCheckOutDistance > LargestDistance Or ACheckInDistance > LargestDistance Or ACheckOutDistance > LargestDistance Or NCheckInDistance > LargestDistance Or NCheckOutDistance > LargestDistance Or OCheckInDistance > LargestDistance Or OCheckOutDistance > LargestDistance))";
@@ -104,7 +104,7 @@ public partial class TTUserAttendanceRecordForMe : System.Web.UI.Page
       
         string strDisplayType = DL_DisplayType.SelectedValue.Trim();
 
-        if (strDisplayType == "显示异常")
+        if (strDisplayType == "DisplayAbnormal")
         {
             strHQL = "Select * From T_UserAttendanceRecord  where ";
             strHQL += " (LateMinute <> 0 or EarlyMinute <> 0 or (MCheckInDistance > LargestDistance Or MCheckOutDistance > LargestDistance Or ACheckInDistance > LargestDistance Or ACheckOutDistance > LargestDistance Or NCheckInDistance > LargestDistance Or NCheckOutDistance > LargestDistance Or OCheckInDistance > LargestDistance Or OCheckOutDistance > LargestDistance))";

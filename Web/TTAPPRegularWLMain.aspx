@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPRegularWLMain.aspx.cs" Inherits="TTAPPRegularWLMain" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPRegularWLMain.aspx.cs" Inherits="TTAPPRegularWLMain" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
 <!DOCTYPE html>

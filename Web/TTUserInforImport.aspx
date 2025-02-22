@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInforImport.aspx.cs" Inherits="TTUserInforImport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInforImport.aspx.cs" Inherits="TTUserInforImport" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
@@ -7,7 +7,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>æˆ‘çš„äººäº‹</title>
+    <title>ÎÒµÄÈËÊÂ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -77,7 +77,7 @@
                                                             <span style="color: #ff0000">*</span>
                                                         </td>
                                                         <td align="center" rowspan="6" class="formItemBgStyle" colspan="2">
-                                                            <asp:Image ID="IM_MemberPhoto" runat="server" Height="95%" Width="199px" AlternateText="å‘˜å·¥ç…§ç‰‡" ImageAlign="Middle" />
+                                                            <asp:Image ID="IM_MemberPhoto" runat="server" Height="95%" Width="199px" AlternateText="Ô±¹¤ÕÕÆ¬" ImageAlign="Middle" />
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -97,8 +97,8 @@
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:DropDownList ID="DL_Gender" runat="server">
-                                                                <asp:ListItem Value="ç”·" Text="<%$ Resources:lang,Nan%>" />
-                                                                <asp:ListItem Value="å¥³" Text="<%$ Resources:lang,Nv%>" />
+                                                                <asp:ListItem Value="Male" Text="<%$ Resources:lang,Nan%>" />
+                                                                <asp:ListItem Value="Female" Text="<%$ Resources:lang,Nv%>" />
                                                             </asp:DropDownList>
                                                         </td>
                                                     </tr>
@@ -201,7 +201,7 @@
                                                             <asp:TextBox ID="TB_MobilePhone" runat="server" Width="100px"></asp:TextBox>
                                                             <span style="color: #ff0000">*</span>
                                                         </td>
-                                                        <td style="text-align: right" class="formItemBgStyle">E_Mailï¼š
+                                                        <td style="text-align: right" class="formItemBgStyle">E_Mail£º
                                                         </td>
                                                         <td class="formItemBgStyle">
                                                             <asp:TextBox ID="TB_EMail" runat="server" Width="120px"></asp:TextBox>
@@ -214,9 +214,9 @@
                                                         </td>
                                                         <td style="text-align: left;" class="formItemBgStyle">
                                                             <asp:DropDownList ID="DL_Status" runat="server">
-                                                                <asp:ListItem Value="åœ¨èŒ" Text="<%$ Resources:lang,ZaiZhi%>" />
-                                                                <asp:ListItem Value="ç¦»èŒ" Text="<%$ Resources:lang,LiZhi%>" />
-                                                                <asp:ListItem Value="ç»ˆæ­¢" Text="<%$ Resources:lang,ZhongZhi%>"> </asp:ListItem>
+                                                                <asp:ListItem Value="Employed" Text="<%$ Resources:lang,ZaiZhi%>" />
+                                                                <asp:ListItem Value="Resign" Text="<%$ Resources:lang,LiZhi%>" />
+                                                                <asp:ListItem Value="Stop" Text="<%$ Resources:lang,ZhongZhi%>"> </asp:ListItem>
                                                             </asp:DropDownList></td>
                                             </td>
                                             <td style="height: 12px; text-align: right;" class="formItemBgStyle">
@@ -312,7 +312,7 @@
                                                             <Upload:InputFile ID="FileUpload_Training" runat="server" Width="400px" />
                                                             <br />
                                                             <asp:Button ID="btn_ExcelToDB" runat="server" CssClass="inpu" OnClick="btn_ExcelToDB_Click" Text="<%$ Resources:lang,DaoRuShuJu%>" />
-                                                            <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,ShuJuXingZhengMoBanGeShi%>"></asp:Label><a href="Template/æˆå‘˜æ•°æ®å¯¼å…¥æ–°å¢žæ¨¡ç‰ˆ.xls"><asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,SJDRXZMB%>"></asp:Label></a>
+                                                            <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,ShuJuXingZhengMoBanGeShi%>"></asp:Label><a href="Template/³ÉÔ±Êý¾Ýµ¼ÈëÐÂÔöÄ£°æ.xls"><asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,SJDRXZMB%>"></asp:Label></a>
                                                             <div id="ProgressBar">
                                                                 <Upload:ProgressBar ID="ProgressBar1" runat="server" Height="100px" Width="500px">
                                                                 </Upload:ProgressBar>
@@ -380,23 +380,23 @@
                                         ShowHeader="false" CellPadding="1" ForeColor="#333333" GridLines="None">
                                         <Columns>
 
-                                            <asp:TemplateColumn HeaderText="éƒ¨é—¨äººå‘˜ï¼š">
+                                            <asp:TemplateColumn HeaderText="²¿ÃÅÈËÔ±£º">
                                                 <ItemTemplate>
                                                     <asp:Button ID="BT_UserCode" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>'
                                                         CssClass="inpu" />
                                                 </ItemTemplate>
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                             </asp:TemplateColumn>
-                                            <asp:BoundColumn DataField="UserName" HeaderText="æˆå‘˜å§“å">
+                                            <asp:BoundColumn DataField="UserName" HeaderText="³ÉÔ±ÐÕÃû">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="CreaterName" HeaderText="æ“ä½œäºº">
+                                            <asp:BoundColumn DataField="CreaterName" HeaderText="²Ù×÷ÈË">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="CreateTime" HeaderText="æ›´æ–°æ—¶é—´" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}">
+                                            <asp:BoundColumn DataField="CreateTime" HeaderText="¸üÐÂÊ±¼ä" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                            <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
                                         </Columns>

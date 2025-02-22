@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPayList.aspx.cs" Inherits="TTWZPayList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPayList.aspx.cs" Inherits="TTWZPayList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>‰ªòÊ¨æËÆ°Âàí</title>
+    <title>∏∂øÓº∆ªÆ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -21,28 +21,28 @@
         function ControlStatusChange(objProgress) {
 
             $("#BT_NewDetail").attr("class", "inpu");
-            $("#BT_NewDetail").removeAttr("disabled");                          //ÊòéÁªÜ
+            $("#BT_NewDetail").removeAttr("disabled");                          //√˜œ∏
 
             //alert(objProgress);
-            if (objProgress == "ÂΩïÂÖ•") {
+            if (objProgress == "¬º»Î") {
                 $("#BT_NewEdit").attr("class", "inpu");
-                $("#BT_NewEdit").removeAttr("disabled");                            //ÁºñËæë
+                $("#BT_NewEdit").removeAttr("disabled");                            //±‡º≠
                 $("#BT_NewDelete").attr("class", "inpu");
-                $("#BT_NewDelete").removeAttr("disabled");                            //Âà†Èô§
+                $("#BT_NewDelete").removeAttr("disabled");                            //…æ≥˝
                 $("#BT_NewReport").attr("class", "inpu");
-                $("#BT_NewReport").removeAttr("disabled");                          //Êä•Êâπ
+                $("#BT_NewReport").removeAttr("disabled");                          //±®≈˙
                 $("#BT_NewExecute").attr("disabled", "disabled");
-                $("#BT_NewExecute").removeClass("inpu");                         //ÊâßË°å
+                $("#BT_NewExecute").removeClass("inpu");                         //÷¥––
             }
-            else if (objProgress == "ÊâπÂáÜ") {
+            else if (objProgress == "Approved") {
                 $("#BT_NewEdit").attr("disabled", "disabled");
-                $("#BT_NewEdit").removeClass("inpu");                            //Âà†Èô§
+                $("#BT_NewEdit").removeClass("inpu");                            //…æ≥˝
                 $("#BT_NewDelete").attr("disabled", "disabled");
-                $("#BT_NewDelete").removeClass("inpu");                          //Âà†Èô§
+                $("#BT_NewDelete").removeClass("inpu");                          //…æ≥˝
                 $("#BT_NewReport").attr("disabled", "disabled");
-                $("#BT_NewReport").removeClass("inpu");                            //Êä•Êâπ
+                $("#BT_NewReport").removeClass("inpu");                            //±®≈˙
                 $("#BT_NewExecute").attr("class", "inpu");
-                $("#BT_NewExecute").removeAttr("disabled");                         //ÊâßË°å
+                $("#BT_NewExecute").removeAttr("disabled");                         //÷¥––
             }
             else {
                 $("#BT_NewEdit").attr("disabled", "disabled");
@@ -116,21 +116,21 @@
                                                 <table class="formBgStyle" width="40%">
                                                     <tr>
                                                         <td class="formItemBgStyle">
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,YingFuKuanID%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,YingFuKuanID%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="3">
-                                                            <asp:TextBox ID="TXT_PayID" runat="server" ReadOnly="true"></asp:TextBox><font color="red"><asp:Label ID="Label3" runat="server" ></asp:Label>*Á≥ªÁªüËá™Âä®ÁîüÊàê</font>
+                                                            <asp:TextBox ID="TXT_PayID" runat="server" ReadOnly="true"></asp:TextBox><font color="red"><asp:Label ID="Label3" runat="server" ></asp:Label>*œµÕ≥◊‘∂Ø…˙≥…</font>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XiangMuBianMa%>"></asp:Label>Ôºö</td>
+                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XiangMuBianMa%>"></asp:Label>£∫</td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:DropDownList ID="DDL_Project" DataTextField="ProjectCode" DataValueField="ProjectCode" runat="server">
                                                             </asp:DropDownList>
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,YingFuKuanMingChen%>"></asp:Label>Ôºö</td>
+                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,YingFuKuanMingChen%>"></asp:Label>£∫</td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_PayName" runat="server"></asp:TextBox>
                                                         </td>
@@ -221,21 +221,21 @@
                                                                 </HeaderTemplate>
                                                                 <ItemTemplate>
 
-                                                                    <asp:LinkButton ID="LinkButton5" runat="server" CommandArgument='<%#Eval("PayID")+"|"+Eval("Progress") %>' CommandName="click" CssClass="notTab">Êìç‰Ωú</asp:LinkButton>
-                                                                    <%--<asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%#Eval("PayID") %>' CommandName="del" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="ÂΩïÂÖ•" ? true : false %>'>Âà†Èô§</asp:LinkButton>--%>
-                                                                    <%--<asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%#Eval("PayID") %>' CommandName="edit" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="ÂΩïÂÖ•" ? true : false %>'>ÁºñËæë</asp:LinkButton>--%>
-                                                                    <%--<asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%#Eval("PayID") %>' CommandName="request" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="ÂΩïÂÖ•" ? true : false %>'>Êä•Êâπ</asp:LinkButton>--%>
-                                                                    <%--<asp:LinkButton ID="LinkButton4" runat="server" CommandArgument='<%#Eval("PayID") %>' CommandName="execute" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="ÊâπÂáÜ" ? true : false %>'>ÊâßË°å</asp:LinkButton>--%>
-                                                                    <%--<a href='TTWZPayDetail.aspx?PayID=<%# DataBinder.Eval(Container.DataItem,"PayID") %>'>ÊòéÁªÜ</a>--%>
+                                                                    <asp:LinkButton ID="LinkButton5" runat="server" CommandArgument='<%#Eval("PayID")+"|"+Eval("Progress") %>' CommandName="click" CssClass="notTab">≤Ÿ◊˜</asp:LinkButton>
+                                                                    <%--<asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%#Eval("PayID") %>' CommandName="del" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="¬º»Î" ? true : false %>'>…æ≥˝</asp:LinkButton>--%>
+                                                                    <%--<asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%#Eval("PayID") %>' CommandName="edit" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="¬º»Î" ? true : false %>'>±‡º≠</asp:LinkButton>--%>
+                                                                    <%--<asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%#Eval("PayID") %>' CommandName="request" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="¬º»Î" ? true : false %>'>±®≈˙</asp:LinkButton>--%>
+                                                                    <%--<asp:LinkButton ID="LinkButton4" runat="server" CommandArgument='<%#Eval("PayID") %>' CommandName="execute" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Approved" ? true : false %>'>÷¥––</asp:LinkButton>--%>
+                                                                    <%--<a href='TTWZPayDetail.aspx?PayID=<%# DataBinder.Eval(Container.DataItem,"PayID") %>'>√˜œ∏</a>--%>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="PayID" HeaderText="Â∫î‰ªòÊ¨æID">
+                                                            <asp:BoundColumn DataField="PayID" HeaderText="”¶∏∂øÓID">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ProjectCode" HeaderText="È°πÁõÆÁºñÁ†Å">
+                                                            <asp:BoundColumn DataField="ProjectCode" HeaderText="œÓƒø±‡¬Î">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             </asp:BoundColumn>
-                                                            <%--<asp:BoundColumn DataField="PayName" HeaderText="È¢Ñ‰ªòÊ¨æÂêçÁß∞">
+                                                            <%--<asp:BoundColumn DataField="PayName" HeaderText="‘§∏∂øÓ√˚≥∆">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             </asp:BoundColumn>--%>
                                                             <asp:TemplateColumn>
@@ -247,19 +247,19 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("PayName").ToString(), 190) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="PayTotal" HeaderText="‰ªòÊ¨æÊÄªÈ¢ù">
+                                                            <asp:BoundColumn DataField="PayTotal" HeaderText="∏∂øÓ◊‹∂Ó">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="10%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="PayTime" HeaderText="‰ªòÊ¨æÊó•Êúü">
+                                                            <asp:BoundColumn DataField="PayTime" HeaderText="∏∂øÓ»’∆⁄">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="MarkerName" HeaderText="ÁºñÂà∂‰∫∫">
+                                                            <asp:BoundColumn DataField="MarkerName" HeaderText="±‡÷∆»À">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Progress" HeaderText="ËøõÂ∫¶">
+                                                            <asp:BoundColumn DataField="Progress" HeaderText="Ω¯∂»">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="IsMark" HeaderText="‰ΩøÁî®Ê†áËÆ∞">
+                                                            <asp:BoundColumn DataField="IsMark" HeaderText=" π”√±Íº«">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMailSignInfo.aspx.cs" Inherits="TTMailSignInfo" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMailSignInfo.aspx.cs" Inherits="TTMailSignInfo" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -63,7 +63,7 @@
                                                     </asp:ListBox>
                                                 </td>
                                                 <td align="right" class="formItemBgStyle" width="50">
-                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>ï¼š</td>
+                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º</td>
                                                 <td  align="left" class="formItemBgStyle">
                                                   
                                                     <asp:TextBox ID="TB_Title" runat="server" Width="90%"></asp:TextBox>
@@ -73,7 +73,7 @@
                                             </tr>
                                             <tr>
                                                 <td align="right" class="formItemBgStyle" valign="top">
-                                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>ï¼š 
+                                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>£º 
                                                 </td>
                                                 <td  align="left" class="formItemBgStyle">
                                                    <table width ="100%">
@@ -84,7 +84,7 @@
                                                     </td>
                                                     <td>
                                                       
-                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,BeiZhu%>"></asp:Label>ï¼š<br /> [DateTime]<asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,DBFSYJSJSZQMSBTFSYJFSSHHYFSSJTHT%>"></asp:Label></td>
+                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,BeiZhu%>"></asp:Label>£º<br /> [DateTime]<asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,DBFSYJSJSZQMSBTFSYJFSSHHYFSSJTHT%>"></asp:Label></td>
                                                     </tr>
                                                     </table>
                                                 
@@ -92,11 +92,11 @@
                                             </tr>
                                             <tr>
                                                 <td align="right" class="formItemBgStyle" style="width: 50px; height: 29px">
-                                                    <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>ï¼š</td>
+                                                    <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º</td>
                                                 <td align="left" style="height: 29px" class="formItemBgStyle">
                                                     <asp:DropDownList ID="DL_Status" runat="server">
-                                                    <asp:ListItem Value="å¤„ç†ä¸­" Text="<%$ Resources:lang,HuoDong%>"/>
-                                                    <asp:ListItem Value="å¤‡ç”¨" Text="<%$ Resources:lang,BeiYong%>"/>
+                                                    <asp:ListItem Value="InProgress" Text="<%$ Resources:lang,HuoDong%>"/>
+                                                    <asp:ListItem Value="Backup" Text="<%$ Resources:lang,BeiYong%>"/>
                                                     </asp:DropDownList>
                                                 </td>
                                             </tr>

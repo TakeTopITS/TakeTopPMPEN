@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
 using System.Collections;
@@ -14,14 +14,14 @@ public partial class TTBaseDataInnerSAAS : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //é’Ÿç¤¼æœˆä½œå“ï¼ˆjack.erp@gmail.com)
-        //æ³°é¡¶è½¯ä»¶2006ï¼2012
+        //ÖÓÀñÔÂ×÷Æ·£¨jack.erp@gmail.com)
+        //Ì©¶¥Èí¼ş2006£­2012
 
         string strUserCode = Session["UserCode"].ToString();
         strLangCode = Session["LangCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "åŸºç¡€æ•°æ®(å†…ç½®)", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "»ù´¡Êı¾İ(ÄÚÖÃ)", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -298,7 +298,7 @@ public partial class TTBaseDataInnerSAAS : System.Web.UI.Page
         string strID = LB_ID.Text.Trim();
         string strStatus = TB_ProjectStatus.Text.Trim();
         string strProjectType = LB_SelectedProjectType.Text.Trim();
-        string strStatusString = "æ–°å»º,è¯„å®¡,å—ç†,æ´»åŠ¨,æ‹’ç»,ç»“æ¡ˆ,å–æ¶ˆ,æŒ‚èµ·,å½’æ¡£,éšè—,åˆ é™¤";
+        string strStatusString = "ĞÂ½¨,ÆÀÉó,ÊÜÀí,»î¶¯,¾Ü¾ø,½á°¸,È¡Ïû,¹ÒÆğ,¹éµµ,Òş²Ø,É¾³ı";
 
         if (strStatusString.IndexOf(strStatus) == -1)
         {
@@ -378,13 +378,13 @@ public partial class TTBaseDataInnerSAAS : System.Web.UI.Page
         {
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGGSBJC + "')", true);
 
-            if (strControl == "æ˜¯")
+            if (strControl == "YES")
             {
-                DL_ReviewControl.SelectedValue = "å¦";
+                DL_ReviewControl.SelectedValue = "NO";
             }
             else
             {
-                DL_ReviewControl.SelectedValue = "æ˜¯";
+                DL_ReviewControl.SelectedValue = "YES";
             }
         }
     }

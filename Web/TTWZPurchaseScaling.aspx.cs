@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
@@ -167,7 +167,7 @@ public partial class TTWZPurchaseScaling : System.Web.UI.Page
 
     private void DataPurchaseSupplierBinder(string strPurchaseCode)
     {
-        //åŠ è½½ä¾›åº”å•†
+        //¼ÓÔØ¹©Ó¦ÉÌ
         string strPurchaseSupplierHQL = string.Format(@"select s.*,ps.PurchaseCode,p.UserName as PushPersonName from T_WZSupplier s
                     left join T_WZPurchaseSupplier ps on s.SupplierCode = ps.SupplierCode
                     left join T_ProjectMember p on s.PushPerson = p.UserCode
@@ -234,11 +234,11 @@ public partial class TTWZPurchaseScaling : System.Web.UI.Page
                 strHQL = "Update T_WZPurchase Set TotalMoney = " + strTotalMoney + " Where PurchaseCode = " + "'" + strPurchaseCode + "'";
                 ShareClass.RunSqlCommand(strHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å®šæ ‡æˆåŠŸï¼');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¶¨±ê³É¹¦£¡');", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å®šæ ‡å¤±è´¥ï¼Œè¯·æ£€æŸ¥ï¼');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¶¨±êÊ§°Ü£¬Çë¼ì²é£¡');", true);
             }
         }
     }
@@ -292,11 +292,11 @@ public partial class TTWZPurchaseScaling : System.Web.UI.Page
                 strHQL = "Update T_WZPurchase Set TotalMoney = " + strTotalMoney + " Where PurchaseCode = " + "'" + strPurchaseCode + "'";
                 ShareClass.RunSqlCommand(strHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å®šæ ‡æˆåŠŸï¼');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¶¨±ê³É¹¦£¡');", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å®šæ ‡å¤±è´¥ï¼Œè¯·æ£€æŸ¥ï¼');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¶¨±êÊ§°Ü£¬Çë¼ì²é£¡');", true);
             }
         }
     }

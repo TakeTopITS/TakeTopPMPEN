@@ -1,9 +1,9 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTReportCenter.aspx.cs" Inherits="TTReportCenter" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTReportCenter.aspx.cs" Inherits="TTReportCenter" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>æˆ‘è¦é˜…è¯»çš„æŠ¥è¡¨</title>
+    <title>ÎÒÒªÔÄ¶ÁµÄ±¨±í</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
@@ -12,8 +12,8 @@
             if (top.location != self.location) { } else { CloseWebPage(); }
         });
 
-        function autoheight() {Â //å‡½æ•°ï¼šè·å–å°ºå¯¸
-            //è·å–æµè§ˆå™¨çª—å£é«˜åº¦
+        function autoheight() {?//º¯Êı£º»ñÈ¡³ß´ç
+            //»ñÈ¡ä¯ÀÀÆ÷´°¿Ú¸ß¶È
             var winHeight = 0;
             if (window.innerHeight)
                 winHeight = window.innerHeight;
@@ -27,7 +27,7 @@
             document.getElementById("LLB_ReportTemplate").style.height = (winHeight - 70) + "px";
         }
 
-        window.onresize = autoheight;Â //æµè§ˆå™¨çª—å£å‘ç”Ÿå˜åŒ–æ—¶åŒæ—¶å˜åŒ–DIVé«˜åº¦
+        window.onresize = autoheight;?//ä¯ÀÀÆ÷´°¿Ú·¢Éú±ä»¯Ê±Í¬Ê±±ä»¯DIV¸ß¶È
 
     </script>
 
@@ -164,10 +164,10 @@
                                                     Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False"
                                                     CellPadding="4" ForeColor="#333333" GridLines="None">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="åºå·">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="ĞòºÅ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                         </asp:BoundColumn>
-                                                        <asp:TemplateColumn HeaderText="æŠ¥è¡¨æ–‡ä»¶">
+                                                        <asp:TemplateColumn HeaderText="±¨±íÎÄ¼ş">
                                                             <ItemTemplate>
                                                                 <asp:Button ID="BT_ReportName" CommandName="Open" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ReportName") %>'
                                                                     CssClass="inpuLongest" Width="99%" />
@@ -175,17 +175,17 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="35%" />
                                                         </asp:TemplateColumn>
                                                         <%--<asp:HyperLinkColumn DataNavigateUrlField="ReportURL" DataNavigateUrlFormatString="{0}"
-                                                        DataTextField="ReportName" HeaderText="æŠ¥è¡¨æ–‡ä»¶" Target="_blank">
+                                                        DataTextField="ReportName" HeaderText="±¨±íÎÄ¼ş" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
                                                     </asp:HyperLinkColumn>--%>
-                                                        <asp:BoundColumn DataField="TemName" HeaderText="æ¨¡æ¿">
+                                                        <asp:BoundColumn DataField="TemName" HeaderText="Ä£°å">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                            DataTextField="CreatorName" HeaderText="ä¸Šä¼ è€…" Target="_blank">
+                                                            DataTextField="CreatorName" HeaderText="ÉÏ´«Õß" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:HyperLinkColumn>
-                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="åˆ›å»ºæ—¶é—´">
+                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="´´½¨Ê±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="18%" />
                                                         </asp:BoundColumn>
                                                       

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -30,7 +30,7 @@ public partial class TTProjectMemberTaskDetailReport : System.Web.UI.Page
 
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text = "é¡¹ç›®æˆå‘˜ä»»åŠ¡è¡¨";
+        LB_ReportName.Text = "ÏîÄ¿³ÉÔ±ÈÎÎñ±í";
 
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
@@ -152,19 +152,19 @@ public partial class TTProjectMemberTaskDetailReport : System.Web.UI.Page
 
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select DepartCode as 'ç»„åˆ«',
-                   UserName as 'å§“å',
-                   ProjectName as 'é¡¹ç›®',
-                   PlanName as 'è®¡åˆ’',
-                   TaskName as 'ä»»åŠ¡',
-                   PlanBeginTime as 'è®¡åˆ’é¢„è®¡å¼€å§‹æ—¶é—´',
-                   PlanEndTime as 'è®¡åˆ’é¢„è®¡ç»“æŸæ—¶é—´',
-                   TaskBeginDate as 'ä»»åŠ¡é¢„è®¡å¼€å§‹æ—¶é—´',
-                   TaskFirstOperateTime as 'ä»»åŠ¡å—ç†æ—¶é—´',
-                   TaskEndDate as 'ä»»åŠ¡é¢„è®¡ç»“æŸæ—¶é—´',
-                   TaskLastestOperateTime as 'ä»»åŠ¡æœ€æ–°æ“ä½œæ—¶é—´',
-                   Status as 'ä»»åŠ¡çŠ¶æ€',
-                   TaskLog as 'ä»»åŠ¡æ—¥å¿—'
+        strHQL = @"Select DepartCode as '×é±ğ',
+                   UserName as 'ĞÕÃû',
+                   ProjectName as 'Project',
+                   PlanName as 'Plan',
+                   TaskName as 'Task',
+                   PlanBeginTime as '¼Æ»®Ô¤¼Æ¿ªÊ¼Ê±¼ä',
+                   PlanEndTime as '¼Æ»®Ô¤¼Æ½áÊøÊ±¼ä',
+                   TaskBeginDate as 'ÈÎÎñÔ¤¼Æ¿ªÊ¼Ê±¼ä',
+                   TaskFirstOperateTime as 'ÈÎÎñÊÜÀíÊ±¼ä',
+                   TaskEndDate as 'ÈÎÎñÔ¤¼Æ½áÊøÊ±¼ä',
+                   TaskLastestOperateTime as 'ÈÎÎñ×îĞÂ²Ù×÷Ê±¼ä',
+                   Status as 'ÈÎÎñ×´Ì¬',
+                   TaskLog as 'ÈÎÎñÈÕÖ¾'
                    From V_ProjectMemberTaskDetailReport";
 
 
@@ -189,9 +189,9 @@ public partial class TTProjectMemberTaskDetailReport : System.Web.UI.Page
         LB_ResultNumber.Text = dtProject.Rows.Count.ToString();
 
 
-        Export3Excel(dtProject, "é¡¹ç›®æˆå‘˜ä»»åŠ¡.xls");
+        Export3Excel(dtProject, "ÏîÄ¿³ÉÔ±ÈÎÎñ.xls");
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¯¼å‡ºæˆåŠŸï¼');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µ¼³ö³É¹¦£¡');", true);
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

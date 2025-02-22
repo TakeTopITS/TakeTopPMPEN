@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -28,7 +28,7 @@ public partial class TTReceivablesPayableAlertSAAS : System.Web.UI.Page
         string strUserName = Session["UserName"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "收付款预警", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "�ո���Ԥ��", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -58,7 +58,7 @@ public partial class TTReceivablesPayableAlertSAAS : System.Web.UI.Page
         strPayer = TB_Payer.Text.Trim();
         strPayer = "%" + strPayer + "%";
       
-        strHQL = "Select * from T_ConstractReceivables as constractReceivables where constractReceivables.Status not in ('完成','取消') and to_char( constractReceivables.ReceivablesTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd') ";
+        strHQL = "Select * from T_ConstractReceivables as constractReceivables where constractReceivables.Status not in ('Completed','Cancel') and to_char( constractReceivables.ReceivablesTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd') ";
         strHQL += " and constractReceivables.OperatorCode = " + "'" + strUserCode + "'";
         strHQL += " and constractReceivables.Payer Like " + "'" + strPayer + "'";
         strHQL += " and constractReceivables.ConstractCode = ''";
@@ -95,7 +95,7 @@ public partial class TTReceivablesPayableAlertSAAS : System.Web.UI.Page
         strReceiver = "%" + TB_Receiver.Text.Trim() + "%";
 
        
-        strHQL = "Select * from T_ConstractPayable as constractPayable where constractPayable.Status not in ('完成','取消') and to_char(constractPayable.PayableTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd')";
+        strHQL = "Select * from T_ConstractPayable as constractPayable where constractPayable.Status not in ('Completed','Cancel') and to_char(constractPayable.PayableTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd')";
         strHQL += " and constractPayable.OperatorCode = " + "'" + strUserCode + "'";
         strHQL += " and constractPayable.Receiver Like " + "'" + strReceiver + "'";
         strHQL += " and constractPayable.ConstractCode = ''";
@@ -125,7 +125,7 @@ public partial class TTReceivablesPayableAlertSAAS : System.Web.UI.Page
 
         decimal deReceivablesAccount = 0, deReceiverAccount = 0, deReceiverInvoiceAccount = 0, deUNReceiveAmount = 0;
 
-        strHQL = "Select * from T_ConstractReceivables as constractReceivables where constractReceivables.Status not in ('完成','取消') and to_char( constractReceivables.ReceivablesTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd') ";
+        strHQL = "Select * from T_ConstractReceivables as constractReceivables where constractReceivables.Status not in ('Completed','Cancel') and to_char( constractReceivables.ReceivablesTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd') ";
         strHQL += " and constractReceivables.OperatorCode = " + "'" + strUserCode + "'";
         strHQL += " and constractReceivables.ConstractCode = ''";
         strHQL += " Order by constractReceivables.ID DESC";
@@ -156,7 +156,7 @@ public partial class TTReceivablesPayableAlertSAAS : System.Web.UI.Page
         decimal dePayableAccount = 0, deOutOfPocketAccount = 0, dePayerInvoiceAccount = 0, deUNPayAmount = 0;
 
      
-        strHQL = "Select * from T_ConstractPayable as constractPayable where constractPayable.Status not in ('完成','取消') and to_char(constractPayable.PayableTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd')";
+        strHQL = "Select * from T_ConstractPayable as constractPayable where constractPayable.Status not in ('Completed','Cancel') and to_char(constractPayable.PayableTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd')";
         strHQL += " and constractPayable.OperatorCode = " + "'" + strUserCode + "'";
         strHQL += " and constractPayable.ConstractCode = ''";
         strHQL += " Order by constractPayable.ID DESC";

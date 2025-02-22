@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZTurnDetailBrowse.aspx.cs" Inherits="TTWZTurnDetailBrowse" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZTurnDetailBrowse.aspx.cs" Inherits="TTWZTurnDetailBrowse" %>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -8,7 +8,7 @@
     <title></title>
     <style type="text/css">
         body {
-            font-family: å¾®è½¯é›…é»‘,å®‹ä½“;
+            font-family: Î¢ÈíÑÅºÚ,ËÎÌå;
             font-size: 1.5em;
         }
     </style>
@@ -52,7 +52,7 @@
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
                                                         <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                            <asp:Label ID="Label1" runat="server" Text="å™¨æå‡­è¯ç§»äº¤å•"></asp:Label>
+                                                            <asp:Label ID="Label1" runat="server" Text="Æ÷²ÄÆ¾Ö¤ÒÆ½»µ¥"></asp:Label>
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -76,36 +76,36 @@
                                                                 <tr>
                                                                     <td style="text-align: center" class="formItemBgStyle" colspan="3">
                                                                         <h1>
-                                                                            <asp:Label ID="Label2" runat="server" Text="ä¸­çŸ³æ²¹ç¬¬äºŒå»ºè®¾å…¬å¸å™¨æå‡­è¯ç§»äº¤å•"></asp:Label></h1>
+                                                                            <asp:Label ID="Label2" runat="server" Text="ÖÐÊ¯ÓÍµÚ¶þ½¨Éè¹«Ë¾Æ÷²ÄÆ¾Ö¤ÒÆ½»µ¥"></asp:Label></h1>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: right" class="formItemBgStyle" colspan="4">
 
-                                                                        <asp:Label ID="Label5" runat="server" Text="ç§»äº¤å•ç¼–å·"></asp:Label>
-                                                                        ï¼š 
+                                                                        <asp:Label ID="Label5" runat="server" Text="ÒÆ½»µ¥±àºÅ"></asp:Label>
+                                                                        £º 
                                                                          <asp:Label ID="LB_TurnCode" runat="server"></asp:Label>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="formItemBgStyle" colspan="2" style="text-align: left">
-                                                                        <asp:Label ID="Label26" runat="server" Text="å·¥ç¨‹é¡¹ç›®"></asp:Label>
-                                                                        ï¼š 
+                                                                        <asp:Label ID="Label26" runat="server" Text="¹¤³ÌÏîÄ¿"></asp:Label>
+                                                                        £º 
                                                                          <asp:Label ID="LB_ProjectName" runat="server"></asp:Label>
                                                                     </td>
                                                                     <td class="formItemBgStyle" style="text-align: right">
-                                                                        <asp:Label ID="Label3" runat="server" Text="ç§»äº¤æ—¥æœŸ"></asp:Label>
-                                                                        ï¼š 
+                                                                        <asp:Label ID="Label3" runat="server" Text="ÒÆ½»ÈÕÆÚ"></asp:Label>
+                                                                        £º 
                                                                          <asp:Label ID="LB_TurnDate" runat="server"></asp:Label>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="2">
-                                                                        <asp:Label ID="Label4" runat="server" Text="æ–½å·¥å•ä½"></asp:Label>ï¼š
+                                                                        <asp:Label ID="Label4" runat="server" Text="Ê©¹¤µ¥Î»"></asp:Label>£º
                                                                         <asp:Label ID="LB_PickingUnit" runat="server"></asp:Label>
                                                                     </td>
                                                                     <td style="text-align: right" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label27" runat="server" Text="åˆ¶è¡¨æ—¶é—´"></asp:Label>ï¼š
+                                                                        <asp:Label ID="Label27" runat="server" Text="ÖÆ±íÊ±¼ä"></asp:Label>£º
                                                                         <asp:Label ID="LB_CurrentDate" runat="server"></asp:Label>
                                                                     </td>
                                                                 </tr>
@@ -122,7 +122,7 @@
                                                                                             <tr>
                                                                                                 <td width="5%" align="center">
                                                                                                     <strong>
-                                                                                                        <asp:Label ID="Label17" runat="server" Text="æ–™å•å·"></asp:Label></strong>
+                                                                                                        <asp:Label ID="Label17" runat="server" Text="ÁÏµ¥ºÅ"></asp:Label></strong>
                                                                                                 </td>
                                                                                                 <td width="7%" align="left">
                                                                                                     <strong>
@@ -130,28 +130,28 @@
                                                                                                 </td>
                                                                                                 <td width="7%" align="left">
                                                                                                     <strong>
-                                                                                                        <asp:Label ID="Label8" runat="server" Text="è§„æ ¼åž‹å·"></asp:Label></strong>
+                                                                                                        <asp:Label ID="Label8" runat="server" Text="¹æ¸ñÐÍºÅ"></asp:Label></strong>
                                                                                                 </td>
                                                                                                 <td width="5%" align="center">
                                                                                                     <strong>
-                                                                                                        <asp:Label ID="Label7" runat="server" Text="è®¡é‡å•ä½"></asp:Label></strong>
+                                                                                                        <asp:Label ID="Label7" runat="server" Text="¼ÆÁ¿µ¥Î»"></asp:Label></strong>
                                                                                                 </td>
                                                                                                 <td width="5%" align="right">
                                                                                                     <strong>
-                                                                                                        <asp:Label ID="Label19" runat="server" Text="è®¡åˆ’æ•°é‡"></asp:Label></strong>
+                                                                                                        <asp:Label ID="Label19" runat="server" Text="¼Æ»®ÊýÁ¿"></asp:Label></strong>
                                                                                                 </td>
                                                                                                 <td width="5%" align="right">
                                                                                                     <strong>
-                                                                                                        <asp:Label ID="Label6" runat="server" Text="å®žå‘æ•°é‡"></asp:Label></strong>
+                                                                                                        <asp:Label ID="Label6" runat="server" Text="Êµ·¢ÊýÁ¿"></asp:Label></strong>
                                                                                                 </td>
 
                                                                                                 <td width="5%" align="center">
                                                                                                     <strong>
-                                                                                                        <asp:Label ID="Label28" runat="server" Text="IDè®¡åˆ’"></asp:Label></strong>
+                                                                                                        <asp:Label ID="Label28" runat="server" Text="ID¼Æ»®"></asp:Label></strong>
                                                                                                 </td>
                                                                                                 <td width="5%" align="center">
                                                                                                     <strong>
-                                                                                                        <asp:Label ID="Label29" runat="server" Text="å›¾å·"></asp:Label></strong>
+                                                                                                        <asp:Label ID="Label29" runat="server" Text="Í¼ºÅ"></asp:Label></strong>
                                                                                                 </td>
                                                                                                 <td width="5%" align="center">
                                                                                                     <strong>
@@ -159,15 +159,15 @@
                                                                                                 </td>
                                                                                                 <td width="4%" align="center">
                                                                                                     <strong>
-                                                                                                        <asp:Label ID="Label31" runat="server" Text="æ”¶æ–™"></asp:Label></strong>
+                                                                                                        <asp:Label ID="Label31" runat="server" Text="ÊÕÁÏ"></asp:Label></strong>
                                                                                                 </td>
                                                                                                 <td width="4%" align="center">
                                                                                                     <strong>
-                                                                                                        <asp:Label ID="Label32" runat="server" Text="è´¨è¯"></asp:Label></strong>
+                                                                                                        <asp:Label ID="Label32" runat="server" Text="ÖÊÖ¤"></asp:Label></strong>
                                                                                                 </td>
                                                                                                 <td width="4%" align="center">
                                                                                                     <strong>
-                                                                                                        <asp:Label ID="Label33" runat="server" Text="è¿”å•"></asp:Label></strong>
+                                                                                                        <asp:Label ID="Label33" runat="server" Text="·µµ¥"></asp:Label></strong>
                                                                                                 </td>
                                                                                             </tr>
                                                                                         </table>
@@ -199,20 +199,20 @@
                                                                                             <%# ShareClass.StringCutByRequire(Eval("ObjectName").ToString(), 192) %>
                                                                                         </ItemTemplate>
                                                                                     </asp:TemplateColumn>
-                                                                                    <asp:BoundColumn DataField="Model" HeaderText="è§„æ ¼åž‹å·">
+                                                                                    <asp:BoundColumn DataField="Model" HeaderText="¹æ¸ñÐÍºÅ">
                                                                                         <ItemStyle CssClass="itemBorderBlack" HorizontalAlign="Left" Width="7%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="UnitName" HeaderText="è®¡é‡å•ä½">
+                                                                                    <asp:BoundColumn DataField="UnitName" HeaderText="¼ÆÁ¿µ¥Î»">
                                                                                         <ItemStyle CssClass="itemBorderBlack" HorizontalAlign="Center" Width="5%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="TicketNumber" HeaderText="è®¡åˆ’æ•°é‡">
+                                                                                    <asp:BoundColumn DataField="TicketNumber" HeaderText="¼Æ»®ÊýÁ¿">
                                                                                         <ItemStyle CssClass="itemBorderBlack" HorizontalAlign="Right" Width="5%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="ActualNumber" HeaderText="å®žé¢†æ•°é‡">
+                                                                                    <asp:BoundColumn DataField="ActualNumber" HeaderText="ÊµÁìÊýÁ¿">
                                                                                         <ItemStyle CssClass="itemBorderBlack" HorizontalAlign="Right" Width="5%" />
                                                                                     </asp:BoundColumn>
 
-                                                                                    <asp:BoundColumn DataField="PickingPlanCode" HeaderText="IDè®¡åˆ’">
+                                                                                    <asp:BoundColumn DataField="PickingPlanCode" HeaderText="ID¼Æ»®">
                                                                                         <ItemStyle CssClass="itemBorderBlack" HorizontalAlign="center" Width="5%" />
                                                                                     </asp:BoundColumn>
 
@@ -235,13 +235,13 @@
                                                                                             <%--  <%#DataBinder.Eval(Container.DataItem, "PickingTime", "{0:yyyy/MM/dd}")%--%>
                                                                                         </ItemTemplate>
                                                                                     </asp:TemplateColumn>
-                                                                                    <asp:BoundColumn HeaderText="æ”¶æ–™å‘˜">
+                                                                                    <asp:BoundColumn HeaderText="ÊÕÁÏÔ±">
                                                                                         <ItemStyle CssClass="itemBorderBlack" HorizontalAlign="Center"  Width="4%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn HeaderText="è´¨è¯">
+                                                                                    <asp:BoundColumn HeaderText="ÖÊÖ¤">
                                                                                         <ItemStyle CssClass="itemBorderBlack" HorizontalAlign="Center" Width="4%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn HeaderText="è¿”å•">
+                                                                                    <asp:BoundColumn HeaderText="·µµ¥">
                                                                                         <ItemStyle CssClass="itemBorderBlack" HorizontalAlign="Center" Width="4%" />
                                                                                     </asp:BoundColumn>
                                                                                 </Columns>
@@ -259,12 +259,12 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: center" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label20" runat="server" Text="è®¡åˆ’å‘˜"></asp:Label>ï¼š<asp:Label ID="LB_PurchaseManager" runat="server"></asp:Label>
+                                                                        <asp:Label ID="Label20" runat="server" Text="¼Æ»®Ô±"></asp:Label>£º<asp:Label ID="LB_PurchaseManager" runat="server"></asp:Label>
                                                                     </td>
-                                                                    <td style="text-align: center" class="formItemBgStyle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label21" runat="server" Text="é¢†æ–™äºº"></asp:Label>ï¼š&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    <td style="text-align: center" class="formItemBgStyle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label21" runat="server" Text="ÁìÁÏÈË"></asp:Label>£º&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                     </td>
                                                                     <td style="text-align: center" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label22" runat="server" Text="ææ–™å‘˜"></asp:Label>ï¼š
+                                                                        <asp:Label ID="Label22" runat="server" Text="²ÄÁÏÔ±"></asp:Label>£º
                                                                         <asp:Label ID="LB_MaterialPersonName" runat="server"></asp:Label>
                                                                     </td>
                                                                 </tr>
@@ -272,8 +272,8 @@
                                                                     <td style="text-align: center" class="formItemBgStyle" colspan="3">
                                                                         <p class="noprint">
                                                                             <input id="print" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                                                type="button" value="å…³é—­" />
-                                                                            <input id="print0" class="inpu" onclick="printpage();" type="button" value="æ‰“å°" />
+                                                                                type="button" value="Closed" />
+                                                                            <input id="print0" class="inpu" onclick="printpage();" type="button" value="´òÓ¡" />
                                                                         </p>
                                                                         <asp:Label ID="LB_TurnDetail" runat="server" Visible="false"></asp:Label>
                                                                     </td>

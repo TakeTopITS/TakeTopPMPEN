@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopMainTop.aspx.cs" Inherits="TakeTopMainTop" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopMainTop.aspx.cs" Inherits="TakeTopMainTop" %>
 
 <%@ OutputCache Duration="360" VaryByParam="*" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
@@ -14,7 +14,7 @@
             overflow-y: auto;
         }
 
-        /*--------------------------------å³æ—¶é€šæ---------------------------*/
+        /*--------------------------------¼´Ê±Í¨Ìá---------------------------*/
         .inpuIMOpen {
             background: url("ImagesSkin/TakeTopIMRunning.gif");
             margin: 0px;
@@ -67,7 +67,7 @@
 
             #navlist a:link, #navlist a:visited {
                 display: block;
-                font: 14px/33px "å¾®è½¯é›…é»‘", "é»‘ä½“";
+                font: 14px/33px "Î¢ÈíÑÅºÚ", "ºÚÌå";
                 color: #ffffff;
             }
 
@@ -83,7 +83,7 @@
 
         #div_username {
             /*  display: flex;*/
-            align-items: center; /* å‚ç›´å±…ä¸­ */
+            align-items: center; /* ´¹Ö±¾ÓÖĞ */
             color: white;
             font-size: 12px;
         }
@@ -92,7 +92,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%); /* è®©å›¾æ ‡ç›¸å¯¹äºå…¶è‡ªèº«ä¸­å¿ƒç‚¹å®šä½ */
+            transform: translate(-50%, -50%); /* ÈÃÍ¼±êÏà¶ÔÓÚÆä×ÔÉíÖĞĞÄµã¶¨Î» */
         }
     </style>
 
@@ -124,7 +124,7 @@
             dg.ShowDialog();
         }
 
-        //å…³è”æ‰€æœ‰å­å±‚
+        //¹ØÁªËùÓĞ×Ó²ã
         function reloadPage(url) {
 
             /*  url = url.replace("?", "&");*/
@@ -178,7 +178,7 @@
 
         }
 
-        //è®¾ç½®å·¦è¾¹æ å…ƒç´ çš„å€¼
+        //ÉèÖÃ×ó±ßÀ¸ÔªËØµÄÖµ
         function setExtendValue(isFalse) {
 
             top.frames[0].frames[2].parent.frames["leftMiddleFrame"].setExtendValue(isFalse);
@@ -206,7 +206,7 @@
 
         });
 
-        //å¼¹å‡ºæ¶ˆæ¯æ¡†
+        //µ¯³öÏûÏ¢¿ò
         function clickPopMsgWindow() {
 
             /* alert(this.document.getElementById("BT_PopMsg"));*/
@@ -373,13 +373,13 @@
                         &nbsp;
                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,CurrentUser%>"></asp:Label>:<asp:Label
                             ID="LB_CurrentUserName" runat="server"></asp:Label>&nbsp;&nbsp;
-                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,SystemMessage%>"></asp:Label>ï¼š
+                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,SystemMessage%>"></asp:Label>£º
                         <div id='blink' style="display: none;">
                             <a href="TTUnHandledCaseMain.aspx" target="_blank">+
                                 <asp:Label ID="LB_UnHandledCase" runat="server" Target="_blank" Enabled="false"></asp:Label>
                             </a>
                         </div>
-                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,Online%>"></asp:Label>ï¼š<asp:HyperLink ID="HL_ActiveUserCount"
+                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,Online%>"></asp:Label>£º<asp:HyperLink ID="HL_ActiveUserCount"
                             Style="text-decoration: none;" runat="server" Target="rightTabFrame">0</asp:HyperLink>
                     </div>
                 </ContentTemplate>

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsMainPlanMaterialDetailDataReport.aspx.cs" Inherits="TTGoodsMainPlanMaterialDetailDataReport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsMainPlanMaterialDetailDataReport.aspx.cs" Inherits="TTGoodsMainPlanMaterialDetailDataReport" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -45,7 +45,7 @@
                             <tr>
                                 <td width="" align="right">
                                     <a href="#" onclick="preview1()">
-                                        <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" />
+                                        <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" />
                                     </a>
                                 </td>
 
@@ -173,54 +173,54 @@
                                         ShowHeader="false" Height="1px"
                                         Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                         <Columns>
-                                            <asp:BoundColumn DataField="ItemCode" HeaderText="ä»£ç ">
+                                            <asp:BoundColumn DataField="ItemCode" HeaderText="´úÂë">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="ItemName" HeaderText="åç§°">
+                                            <asp:BoundColumn DataField="ItemName" HeaderText="Ãû³Æ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="ModelNumber" HeaderText="åž‹å·">
+                                            <asp:BoundColumn DataField="ModelNumber" HeaderText="ÐÍºÅ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="13%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Specification" HeaderText="è§„æ ¼">
+                                            <asp:BoundColumn DataField="Specification" HeaderText="¹æ¸ñ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Brand" HeaderText="å“ç‰Œ">
+                                            <asp:BoundColumn DataField="Brand" HeaderText="Æ·ÅÆ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="6%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Unit" HeaderText="å•ä½">
+                                            <asp:BoundColumn DataField="Unit" HeaderText="µ¥Î»">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="TotalRequireNumber" HeaderText="éœ€æ±‚é‡">
+                                            <asp:BoundColumn DataField="TotalRequireNumber" HeaderText="ÐèÇóÁ¿">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
-                                            <asp:TemplateColumn HeaderText="åº“å­˜é‡">
+                                            <asp:TemplateColumn HeaderText="¿â´æÁ¿">
                                                 <ItemTemplate>
                                                     <%#   GetGoodsInventoryNumber(Eval("ItemCode").ToString(),Eval("ModelNumber").ToString(),Eval("Specification").ToString(),Eval("Unit").ToString()) %>
                                                 </ItemTemplate>
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="5%" />
                                             </asp:TemplateColumn>
 
-                                            <asp:BoundColumn DataField="TotalCheckOutNumber" HeaderText="å‡ºåº“é‡">
+                                            <asp:BoundColumn DataField="TotalCheckOutNumber" HeaderText="³ö¿âÁ¿">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="MoreThanCheckOutNumber" HeaderText="è¶…é¢†é‡">
+                                            <asp:BoundColumn DataField="MoreThanCheckOutNumber" HeaderText="³¬ÁìÁ¿">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="LessThanCheckInNumber" HeaderText="æ¬ æ–™é‡">
+                                            <asp:BoundColumn DataField="LessThanCheckInNumber" HeaderText="Ç·ÁÏÁ¿">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
 
-                                            <asp:TemplateColumn HeaderText="å·²è®¢è´­æœªå…¥åº“é‡">
+                                            <asp:TemplateColumn HeaderText="ÒÑ¶©¹ºÎ´Èë¿âÁ¿">
                                                 <ItemTemplate>
                                                     <%#   GetGoodsNoCheckInNumberByHavePurchase(Eval("PlanVerID").ToString(),Eval("ItemCode").ToString(),Eval("ModelNumber").ToString(),Eval("Specification").ToString(),Eval("Unit").ToString(),Eval("TotalCheckInNumber").ToString()) %>
                                                 </ItemTemplate>
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="7%" />
                                             </asp:TemplateColumn>
 
-                                            <asp:BoundColumn DataField="TotalReturnNumber" HeaderText="é€€æ–™æ•°é‡">
+                                            <asp:BoundColumn DataField="TotalReturnNumber" HeaderText="ÍËÁÏÊýÁ¿">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
 

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAssetSafetyStockReport.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAssetSafetyStockReport.aspx.cs"
     Inherits="TTAssetSafetyStockReport" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -45,13 +45,13 @@
 
                             <tr>
                                 <td style="text-align: right;">
-                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>ï¼š
+                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>£º
                                 </td>
                                 <td>
                                     <asp:TextBox ID="TB_AssetCode" runat="server" Width="190px"></asp:TextBox>
                                 </td>
                                 <td style="text-align: right;">
-                                    <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>ï¼š
+                                    <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º
                                 </td>
                                 <td>
                                     <asp:TextBox ID="TB_AssetName" runat="server" Width="190px"></asp:TextBox>
@@ -59,7 +59,7 @@
                             </tr>
                             <tr>
                                 <td style="text-align: right;">
-                                    <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,GuiGe%>"></asp:Label>ï¼š</td>
+                                    <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,GuiGe%>"></asp:Label>£º</td>
                                 <td>
                                     <asp:TextBox ID="TB_Spec" runat="server" Width="99%"></asp:TextBox>
                                 </td>
@@ -67,7 +67,7 @@
                                 <td>
                                     <asp:Button ID="BT_Find" runat="server" CssClass="inpu" OnClick="BT_Find_Click" Text="<%$ Resources:lang,ChaXun%>" />
                                     &nbsp; <a href="#" onclick="preview1()">
-                                        <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" /></a></td>
+                                        <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" /></a></td>
                             </tr>
                             <tr>
                                 <td style="text-align: right;">&nbsp;</td>
@@ -146,29 +146,29 @@
                                         ShowHeader="false" Height="1px" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                         Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" PageSize="25">
                                         <Columns>
-                                            <asp:BoundColumn DataField="AssetCode" HeaderText="ä»£ç ">
+                                            <asp:BoundColumn DataField="AssetCode" HeaderText="´úÂë">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Type" HeaderText="ç±»åž‹">
+                                            <asp:BoundColumn DataField="Type" HeaderText="ÀàÐÍ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="AssetCode" DataNavigateUrlFormatString="TTAssetInforView.aspx?AssetCode={0}"
-                                                DataTextField="AssetName" HeaderText="åç§°" Target="_blank">
+                                                DataTextField="AssetName" HeaderText="Ãû³Æ" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                             </asp:HyperLinkColumn>
-                                            <asp:BoundColumn DataField="Specification" HeaderText="è§„æ ¼">
+                                            <asp:BoundColumn DataField="Specification" HeaderText="¹æ¸ñ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="SafetyStock" HeaderText="å®‰å…¨åº“å­˜">
+                                            <asp:BoundColumn DataField="SafetyStock" HeaderText="°²È«¿â´æ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="StockNumber" HeaderText="çœŸå®žåº“å­˜">
+                                            <asp:BoundColumn DataField="StockNumber" HeaderText="ÕæÊµ¿â´æ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Banlance" HeaderText="å·®é¢">
+                                            <asp:BoundColumn DataField="Banlance" HeaderText="²î¶î">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="UnitName" HeaderText="å•ä½">
+                                            <asp:BoundColumn DataField="UnitName" HeaderText="µ¥Î»">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
                                         </Columns>
@@ -183,7 +183,7 @@
                             </tr>
                             <tr>
                                 <td style=" text-align: center;">
-                                    <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,Di%>"></asp:Label>ï¼š<asp:Label ID="LB_PageIndex" runat="server"></asp:Label>
+                                    <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,Di%>"></asp:Label>£º<asp:Label ID="LB_PageIndex" runat="server"></asp:Label>
                                     &nbsp;<asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,YeGong%>"></asp:Label>
                                     <asp:Label ID="LB_TotalPageNumber" runat="server"></asp:Label>
                                     &nbsp;<asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,Ye%>"></asp:Label>

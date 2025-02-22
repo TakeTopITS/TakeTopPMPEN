@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConstractMainContentView.aspx.cs" Inherits="TTConstractMainContentView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConstractMainContentView.aspx.cs" Inherits="TTConstractMainContentView" %>
 
 <!DOCTYPE html>
 
@@ -41,7 +41,7 @@
 
                         <td style="padding-left: 10px;">
                             <a href="#" onclick="preview()">
-                                <img src="ImagesSkin/print.gif" alt="打印" border="0" />
+                                <img src="ImagesSkin/print.gif" alt="��ӡ" border="0" />
                             </a>
                         </td>
 

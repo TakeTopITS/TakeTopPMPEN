@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZObjectCodeEdit.aspx.cs" Inherits="TTWZObjectCodeEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZObjectCodeEdit.aspx.cs" Inherits="TTWZObjectCodeEdit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Áâ©ËµÑ‰ª£Á†ÅÂØºÂÖ•</title>
+    <title>ŒÔ◊ ¥˙¬Îµº»Î</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -24,22 +24,22 @@
            
         });
 
-        /*Êñá‰ª∂ÈÄâÊã©È™åËØÅ*/
+        /*Œƒº˛—°‘Ò—È÷§*/
         function checkFile(obj, postfix) {
             var postfix = postfix || "";
             var fileName = $(obj).val();
             if (fileName == "") {
-                alert('ËØ∑ÈÄâÊã©Ë¶ÅÂØºÂÖ•ÁöÑÊñá‰ª∂ÔºÅ');
+                alert('«Î—°‘Ò“™µº»ÎµƒŒƒº˛£°');
                 return false;
             }
-            // Êñá‰ª∂Á±ªÂûãÈ™åËØÅ.
+            // Œƒº˛¿‡–Õ—È÷§.
             if (postfix != "") {
                 var re = new RegExp("(." + postfix + ")$");
                 if (re.test(fileName.toLowerCase())) {
                     return true;
                 }
                 else {
-                    alert("ÂØºÂÖ•ÁöÑÊñá‰ª∂ÂøÖÈ°ª‰∏∫." + postfix + "Á±ªÂûãÁöÑÊñá‰ª∂ÔºÅ");
+                    alert("µº»ÎµƒŒƒº˛±ÿ–ÎŒ™." + postfix + "¿‡–ÕµƒŒƒº˛£°");
                     return false;
                 }
             }
@@ -86,7 +86,7 @@
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td align="left" style="width: 45%; padding: 5px 5px 5px 5px; display: none;" class="formItemBgStyle" valign="top">
-                                                            <input type="button" value="ËøîÂõû" onclick="window.location.href = 'TTWZObjectCodeList.aspx'" class="inpu" />
+                                                            <input type="button" value="∑µªÿ" onclick="window.location.href = 'TTWZObjectCodeList.aspx'" class="inpu" />
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -94,12 +94,12 @@
                                                             <table class="formBgStyle" width="100%">
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XuanZeDaoRuWenJian%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XuanZeDaoRuWenJian%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:FileUpload ID="fileExcel" runat="server" />
                                                                         <asp:Button ID="btnImport" runat="server" Text="<%$ Resources:lang,DaoRu%>" OnClick="btnImport_Click" CssClass="inpu" />&nbsp;&nbsp;
                                                                         <asp:Button ID="BT_Pass" runat="server" Text="<%$ Resources:lang,TBDWZDMB%>" OnClick="BT_Pass_Click" CssClass="inpuLong" />&nbsp;&nbsp;
-                                                                        <input type="button" value="ËøîÂõû" onclick="window.location.href = 'TTWZObjectCodeList.aspx'" class="inpu" />
+                                                                        <input type="button" value="∑µªÿ" onclick="window.location.href = 'TTWZObjectCodeList.aspx'" class="inpu" />
                                                                         <div id="divLoading" style="display: none; color: Red; position: absolute;">
                                                                             <img src="resources/Images/Loading.gif" /><asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,ZhengZaiDaoRuZhongQingShaoHou%>"></asp:Label>
                                                                         </div>
@@ -130,9 +130,9 @@
                                                                     <td>
                                                                         <fieldset>
                                                                             <legend>
-                                                                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhuYiShiXiang%>"></asp:Label>Ôºö</legend>
-                                                                            <font color="red">1„ÄÅ<asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,TXSJSYXSJLWBTXXLDMWZMCGGXHBZJBJLDWHSDWHSXSDZMSDZBZ%>"></asp:Label>Ôºö<a href="Template/Áâ©ËµÑ‰ª£Á†Å.xls"><asp:Label ID="Label57" runat="server" Text="<%$ Resources:lang,ShuJuDaoRuMuBan%>"></asp:Label></a><br />
-                                                                                2„ÄÅ<asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,DRSHBYQDSJQK%>"></asp:Label>Ôºõ<br />
+                                                                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhuYiShiXiang%>"></asp:Label>£∫</legend>
+                                                                            <font color="red">1°¢<asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,TXSJSYXSJLWBTXXLDMWZMCGGXHBZJBJLDWHSDWHSXSDZMSDZBZ%>"></asp:Label>£∫<a href="Template/ŒÔ◊ ¥˙¬Î.xls"><asp:Label ID="Label57" runat="server" Text="<%$ Resources:lang,ShuJuDaoRuMuBan%>"></asp:Label></a><br />
+                                                                                2°¢<asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,DRSHBYQDSJQK%>"></asp:Label>£ª<br />
                                                                             </font>
                                                                         </fieldset>
                                                                     </td>
@@ -206,13 +206,13 @@
                                                                 CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="5" ShowHeader="false"
                                                                 Width="100%" OnPageIndexChanged="DG_List_PageIndexChanged">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="ObjectCode" HeaderText="Áâ©ËµÑ‰ª£Á†Å">
+                                                                    <asp:BoundColumn DataField="ObjectCode" HeaderText="ŒÔ◊ ¥˙¬Î">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="XLCode" HeaderText="Â∞èÁ±ª‰ª£Á†Å">
+                                                                    <asp:BoundColumn DataField="XLCode" HeaderText="–°¿‡¥˙¬Î">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                     </asp:BoundColumn>
-                                                                    <%--<asp:BoundColumn DataField="ObjectName" HeaderText="Áâ©ËµÑÂêçÁß∞">
+                                                                    <%--<asp:BoundColumn DataField="ObjectName" HeaderText="ŒÔ◊ √˚≥∆">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                     </asp:BoundColumn>--%>
                                                                     <asp:TemplateColumn>
@@ -224,7 +224,7 @@
                                                                             <%# ShareClass.StringCutByRequire(Eval("ObjectName").ToString(), 20) %>
                                                                         </ItemTemplate>
                                                                     </asp:TemplateColumn>
-                                                                    <%--<asp:BoundColumn DataField="Criterion" HeaderText="Ê†áÂáÜ">
+                                                                    <%--<asp:BoundColumn DataField="Criterion" HeaderText="±Í◊º">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="6%" />
                                                                     </asp:BoundColumn>--%>
                                                                     <asp:TemplateColumn>
@@ -236,10 +236,10 @@
                                                                             <%# ShareClass.StringCutByRequire(Eval("Criterion").ToString(), 20) %>
                                                                         </ItemTemplate>
                                                                     </asp:TemplateColumn>
-                                                                    <asp:BoundColumn DataField="Grade" HeaderText="Á∫ßÂà´">
+                                                                    <asp:BoundColumn DataField="Grade" HeaderText="º∂±">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                     </asp:BoundColumn>
-                                                                    <%--<asp:BoundColumn DataField="Model" HeaderText="ËßÑÊ†ºÂûãÂè∑">
+                                                                    <%--<asp:BoundColumn DataField="Model" HeaderText="πÊ∏Ò–Õ∫≈">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="6%" />
                                                                     </asp:BoundColumn>--%>
                                                                     <asp:TemplateColumn>
@@ -251,16 +251,16 @@
                                                                             <%# ShareClass.StringCutByRequire(Eval("Model").ToString(), 20) %>
                                                                         </ItemTemplate>
                                                                     </asp:TemplateColumn>
-                                                                    <asp:BoundColumn DataField="UnitName" HeaderText="ËÆ°ÈáèÂçï‰Ωç">
+                                                                    <asp:BoundColumn DataField="UnitName" HeaderText="º∆¡øµ•Œª">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="ConvertUnitName" HeaderText="Êç¢ÁÆóÂçï‰Ωç">
+                                                                    <asp:BoundColumn DataField="ConvertUnitName" HeaderText="ªªÀ„µ•Œª">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="ConvertRatio" HeaderText="Êç¢ÁÆóÁ≥ªÊï∞">
+                                                                    <asp:BoundColumn DataField="ConvertRatio" HeaderText="ªªÀ„œµ ˝">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="4%" />
                                                                     </asp:BoundColumn>
-                                                                    <%--<asp:BoundColumn DataField="ReferDesc" HeaderText="ÂØπÁÖßÊèèËø∞">
+                                                                    <%--<asp:BoundColumn DataField="ReferDesc" HeaderText="∂‘’’√Ë ˆ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                                     </asp:BoundColumn>--%>
                                                                     <asp:TemplateColumn>
@@ -272,7 +272,7 @@
                                                                             <%# ShareClass.StringCutByRequire(Eval("ReferDesc").ToString(), 20) %>
                                                                         </ItemTemplate>
                                                                     </asp:TemplateColumn>
-                                                                    <%--<asp:BoundColumn DataField="ReferStandard" HeaderText="ÂØπÁÖßÊ†áÂáÜ">
+                                                                    <%--<asp:BoundColumn DataField="ReferStandard" HeaderText="∂‘’’±Í◊º">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                                     </asp:BoundColumn>--%>
                                                                     <asp:TemplateColumn>

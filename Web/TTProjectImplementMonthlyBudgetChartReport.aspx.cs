@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -27,7 +27,7 @@ public partial class TTProjectImplementMonthlyBudgetChartReport : System.Web.UI.
         strLangCode = Session["LangCode"].ToString();
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text = "é¡¹ç›®æ¯æœˆé¢„ç®—ç»Ÿè®¡æŠ¥è¡¨";
+        LB_ReportName.Text = "ÏîÄ¿Ã¿ÔÂÔ¤ËãÍ³¼Æ±¨±í";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
@@ -78,7 +78,7 @@ public partial class TTProjectImplementMonthlyBudgetChartReport : System.Web.UI.
 
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) + 'é¢„ç®—') as 'é¢„ç®—',SUM(COALESCE(Amount,0)) as 'é‡‘é¢' From V_ProjectBudgetChartForEveryMonth
+        strHQL = @"Select (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) + 'Budget') as 'Budget',SUM(COALESCE(Amount,0)) as '½ð¶î' From V_ProjectBudgetChartForEveryMonth
                  Where ";
         if (strProjectID != "")
         {
@@ -90,8 +90,8 @@ public partial class TTProjectImplementMonthlyBudgetChartReport : System.Web.UI.
         }
         strHQL += " And PMName Like '%" + strPMName + "%'";
         strHQL += " And BeginDate >= '" + strBeginTime + "' And BeginDate <= '" + strEndTime + "'";
-        strHQL += " Group By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) +'é¢„ç®—') ";
-        strHQL += " Order By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) +'é¢„ç®—')  ASC";
+        strHQL += " Group By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) +'Budget') ";
+        strHQL += " Order By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) +'Budget')  ASC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectBudgetChartForEveryMonth");
 
         GridView1.DataSource = ds;
@@ -119,7 +119,7 @@ public partial class TTProjectImplementMonthlyBudgetChartReport : System.Web.UI.
 
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) + 'é¢„ç®—') as 'é¢„ç®—',SUM(COALESCE(Amount,0)) as 'é‡‘é¢' From V_ProjectBudgetChartForEveryMonth
+        strHQL = @"Select (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) + 'Budget') as 'Budget',SUM(COALESCE(Amount,0)) as '½ð¶î' From V_ProjectBudgetChartForEveryMonth
                  Where ";
         if (strProjectID != "")
         {
@@ -131,8 +131,8 @@ public partial class TTProjectImplementMonthlyBudgetChartReport : System.Web.UI.
         }
         strHQL += " And PMName Like '%" + strPMName + "%'";
         strHQL += " And BeginDate >= '" + strBeginTime + "' And BeginDate <= '" + strEndTime + "'";
-        strHQL += " Group By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) +'é¢„ç®—') ";
-        strHQL += " Order By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) +'é¢„ç®—')  ASC";
+        strHQL += " Group By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) +'Budget') ";
+        strHQL += " Order By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) +'Budget')  ASC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectBudgetChartForEveryMonth");
 
 
@@ -141,11 +141,11 @@ public partial class TTProjectImplementMonthlyBudgetChartReport : System.Web.UI.
 
         DataTable dtProject = ds.Tables[0];
 
-        Export3Excel(dtProject, "é¡¹ç›®æ¯æœˆé¢„ç®—ç»Ÿè®¡æŠ¥è¡¨.xls");
+        Export3Excel(dtProject, "ÏîÄ¿Ã¿ÔÂÔ¤ËãÍ³¼Æ±¨±í.xls");
 
         LB_ResultNumber.Text = GridView1.Rows.Count.ToString();
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¯¼å‡ºæˆåŠŸï¼');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µ¼³ö³É¹¦£¡');", true);
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)
@@ -170,7 +170,7 @@ public partial class TTProjectImplementMonthlyBudgetChartReport : System.Web.UI.
         Response.End();
     }
 
-    //åˆ›å»ºåˆ†æžå›¾å½¢
+    //´´½¨·ÖÎöÍ¼ÐÎ
     protected void CreateProjectMalesStoneAnalystChart(string strUserCode)
     {
         string strChartTitle;
@@ -190,9 +190,9 @@ public partial class TTProjectImplementMonthlyBudgetChartReport : System.Web.UI.
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
         LB_ReportTime.Text = "( " + strBeginTime + "---" + strEndTime + " )";
-        strChartTitle = "æœˆåº¦é¢„ç®—";
+        strChartTitle = "ÔÂ¶ÈÔ¤Ëã";
 
-        strHQL = @"Select (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) + 'é¢„ç®—') as XName,SUM(COALESCE(Amount,0)) as YNumber From V_ProjectBudgetChartForEveryMonth
+        strHQL = @"Select (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) + 'Budget') as XName,SUM(COALESCE(Amount,0)) as YNumber From V_ProjectBudgetChartForEveryMonth
                  Where ";
         if (strProjectID != "")
         {
@@ -204,8 +204,8 @@ public partial class TTProjectImplementMonthlyBudgetChartReport : System.Web.UI.
         }
         strHQL += " And PMName Like '%" + strPMName + "%'";
         strHQL += " And BeginDate >= '" + strBeginTime + "' And BeginDate <= '" + strEndTime + "'";
-        strHQL += " Group By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) +'é¢„ç®—') ";
-        strHQL += " Order By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) +'é¢„ç®—')  ASC";
+        strHQL += " Group By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) +'Budget') ";
+        strHQL += " Order By (SUBSTRING (to_char(CreateTime,'yyyymmdd'),0,7) +'Budget')  ASC";
         IFrame_Chart1.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Column&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strHQL);
 
         LB_ReceivableAmount.Text = SumReceivableAmount();

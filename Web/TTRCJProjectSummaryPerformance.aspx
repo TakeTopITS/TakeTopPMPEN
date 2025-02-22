@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTRCJProjectSummaryPerformance.aspx.cs" Inherits="TTRCJProjectSummaryPerformance" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTRCJProjectSummaryPerformance.aspx.cs" Inherits="TTRCJProjectSummaryPerformance" %>
      
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -7,7 +7,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>È°πÁõÆÊî∂ÊîØÁª©ÊïàÊ±áÊÄªËØ¶ÁªÜ‰ø°ÊÅØ</title>
+    <title>œÓƒø ’÷ßº®–ßª„◊‹œÍœ∏–≈œ¢</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -51,7 +51,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">È°πÁõÆÊî∂ÊîØÁª©ÊïàÊ±áÊÄªÂàóË°®‰ø°ÊÅØ
+                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">œÓƒø ’÷ßº®–ßª„◊‹¡–±Ì–≈œ¢
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -63,7 +63,7 @@
                                                 <table width="180" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td>
-                                                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">ËøîÂõû</asp:LinkButton>
+                                                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">∑µªÿ</asp:LinkButton>
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -83,30 +83,30 @@
                                                             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" OnRowDataBound="GridView1_RowDataBound" OnRowCommand="GridView1_RowCommand">
                                                                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                                                 <Columns>
-                                                                    <asp:ButtonField CommandName="RefreshButton" Text="Âà∑Êñ∞" />
-                                                                    <asp:BoundField DataField="ProjectID" HeaderText="È°πÁõÆÂè∑" />
-                                                                    <asp:BoundField DataField="ProjectYear" HeaderText="Âπ¥‰ªΩ" />
-                                                                    <asp:BoundField DataField="ProjectMonth" HeaderText="Êúà‰ªΩ" />
-                                                                    <asp:BoundField DataField="ProjectSTCV" HeaderText="ÂêàÂêåÈ¢ù(STCV)" />
-                                                                    <asp:BoundField DataField="ProjectBCWS" HeaderText="ËÆ°ÂàíÊÄªÈ¢ù(BCWS)" />
-                                                                    <asp:BoundField DataField="ProjectBCWP" HeaderText="Êå£ÂÄºÊÄªÈ¢ù(BCWP)" />
-                                                                    <asp:BoundField DataField="ProjectBCRWP" HeaderText="Â∫îÊî∂ÊÄªÈ¢ù(BCRWP)" />
-                                                                    <asp:BoundField DataField="ProjectPBCWP" HeaderText="ÂÆûÊî∂ÊÄªÈ¢ù(PBCWP)" />
-                                                                    <asp:BoundField DataField="ProjectEAV" HeaderText="ÁªìÁÆóÂ∑ÆÂºÇ(EAV)" />
-                                                                    <asp:BoundField DataField="ProjectRV" HeaderText="ÂõûÊ¨æÂÅèÂ∑Æ(RV)" />
-                                                                    <asp:BoundField DataField="ProjectACWP" HeaderText="ÂÆûÈôÖÊàêÊú¨(ACWP)" />
-                                                                    <asp:BoundField DataField="ProjectAI" HeaderText="ÁªìÁÆóÁª©Êïà(AI)" DataFormatString="{0:p}" />
-                                                                    <asp:BoundField DataField="ProjectBVI" HeaderText="Ë¥¶ÂçïÁª©Êïà(BVI)" DataFormatString="{0:p}" />
-                                                                    <asp:BoundField DataField="ProjectRVI" HeaderText="ÂõûÊ¨æÁª©Êïà(RVI)" DataFormatString="{0:p}" />
-                                                                    <asp:BoundField DataField="ProjectPL" HeaderText="Â∑•Á®ãÂà©Ê∂¶(P&amp;L)" />
-                                                                    <asp:BoundField DataField="ProjectRP" HeaderText="ÊàêÊú¨Áª©ÊïàÔºàRPÔºâ" DataFormatString="{0:p}" />
-                                                                    <asp:BoundField DataField="ProjectTotalSpending" HeaderText="ÊÄªÊîØÂá∫" />
-                                                                    <asp:BoundField DataField="ProjectTotalIncome" HeaderText="ÊÄªÊî∂ÂÖ•" />
-                                                                    <asp:BoundField DataField="ProjectIncomeDifference" HeaderText="Êî∂ÊîØÊÄªÂ∑Æ" />
-                                                                    <asp:BoundField DataField="ProjectContractReceived" HeaderText="ÂêàÂêåÂ∑≤Êî∂" />
-                                                                    <asp:BoundField DataField="ProjectCPB" HeaderText="ÂêàÂêåÂÅèÂ∑Æ(CPB)" />
-                                                                    <asp:BoundField DataField="ThisMonthFinished" HeaderText="ÂΩìÊúàÂÆåÊàêÁéá" />
-                                                                    <asp:BoundField DataField="TotalMonthFinished" HeaderText="ÊúÄÁªàÂÆåÊàêÁéá" />
+                                                                    <asp:ButtonField CommandName="RefreshButton" Text="À¢–¬" />
+                                                                    <asp:BoundField DataField="ProjectID" HeaderText="œÓƒø∫≈" />
+                                                                    <asp:BoundField DataField="ProjectYear" HeaderText="ƒÍ∑›" />
+                                                                    <asp:BoundField DataField="ProjectMonth" HeaderText="‘¬∑›" />
+                                                                    <asp:BoundField DataField="ProjectSTCV" HeaderText="∫œÕ¨∂Ó(STCV)" />
+                                                                    <asp:BoundField DataField="ProjectBCWS" HeaderText="º∆ªÆ◊‹∂Ó(BCWS)" />
+                                                                    <asp:BoundField DataField="ProjectBCWP" HeaderText="’ı÷µ◊‹∂Ó(BCWP)" />
+                                                                    <asp:BoundField DataField="ProjectBCRWP" HeaderText="”¶ ’◊‹∂Ó(BCRWP)" />
+                                                                    <asp:BoundField DataField="ProjectPBCWP" HeaderText=" µ ’◊‹∂Ó(PBCWP)" />
+                                                                    <asp:BoundField DataField="ProjectEAV" HeaderText="Ω·À„≤Ó“Ï(EAV)" />
+                                                                    <asp:BoundField DataField="ProjectRV" HeaderText="ªÿøÓ∆´≤Ó(RV)" />
+                                                                    <asp:BoundField DataField="ProjectACWP" HeaderText=" µº ≥…±æ(ACWP)" />
+                                                                    <asp:BoundField DataField="ProjectAI" HeaderText="Ω·À„º®–ß(AI)" DataFormatString="{0:p}" />
+                                                                    <asp:BoundField DataField="ProjectBVI" HeaderText="’Àµ•º®–ß(BVI)" DataFormatString="{0:p}" />
+                                                                    <asp:BoundField DataField="ProjectRVI" HeaderText="ªÿøÓº®–ß(RVI)" DataFormatString="{0:p}" />
+                                                                    <asp:BoundField DataField="ProjectPL" HeaderText="π§≥Ã¿˚»Û(P&amp;L)" />
+                                                                    <asp:BoundField DataField="ProjectRP" HeaderText="≥…±æº®–ß£®RP£©" DataFormatString="{0:p}" />
+                                                                    <asp:BoundField DataField="ProjectTotalSpending" HeaderText="◊‹÷ß≥ˆ" />
+                                                                    <asp:BoundField DataField="ProjectTotalIncome" HeaderText="◊‹ ’»Î" />
+                                                                    <asp:BoundField DataField="ProjectIncomeDifference" HeaderText=" ’÷ß◊‹≤Ó" />
+                                                                    <asp:BoundField DataField="ProjectContractReceived" HeaderText="∫œÕ¨“— ’" />
+                                                                    <asp:BoundField DataField="ProjectCPB" HeaderText="∫œÕ¨∆´≤Ó(CPB)" />
+                                                                    <asp:BoundField DataField="ThisMonthFinished" HeaderText="µ±‘¬ÕÍ≥…¬ " />
+                                                                    <asp:BoundField DataField="TotalMonthFinished" HeaderText="◊Ó÷’ÕÍ≥…¬ " />
                                                                 </Columns>
                                                                 <EditRowStyle BackColor="#999999" />
                                                                 <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -146,10 +146,10 @@
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
                                                         <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi"><u><span style="font-size:10.5pt;mso-bidi-font-size:
-11.0pt;font-family:ÂÆã‰Ωì;mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;
+11.0pt;font-family:ÀŒÃÂ;mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;
 mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:
 minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi;
-mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">Êå£ÂÄºÂàÜÊûêÂõæ</span></u>&nbsp;</td>
+mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">’ı÷µ∑÷ŒˆÕº</span></u>&nbsp;</td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
                                                         </td>
@@ -186,7 +186,7 @@ mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">Êå£Â
                                                                     </asp:Legend>
                                                                 </Legends>
                                                                 <Titles>
-                                                                    <asp:Title Name="Title1" Text="Êå£ÂÄºÂàÜÊûêÂõæ">
+                                                                    <asp:Title Name="Title1" Text="’ı÷µ∑÷ŒˆÕº">
                                                                     </asp:Title>
                                                                 </Titles>
                                                             </asp:Chart>--%>
@@ -205,7 +205,7 @@ mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">Êå£Â
             <div style="position: absolute; left: 40%; top: 40%;">
                 <asp:UpdateProgress ID="TakeTopUp" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
                     <ProgressTemplate>
-                        <img src="Images/Processing.gif" alt="ËØ∑Á®çÂÄôÔºåÂ§ÑÁêÜ‰∏≠..." />
+                        <img src="Images/Processing.gif" alt="«Î…‘∫Ú£¨¥¶¿Ì÷–..." />
                     </ProgressTemplate>
                 </asp:UpdateProgress>
             </div>

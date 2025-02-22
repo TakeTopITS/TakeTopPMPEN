@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZCompactListPrintDetail.aspx.cs" Inherits="TTWZCompactListPrintDetail" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZCompactListPrintDetail.aspx.cs" Inherits="TTWZCompactListPrintDetail" %>
 
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -12,7 +12,7 @@
 
     <style type="text/css">
         body {
-            font-family: å¾®è½¯é›…é»‘,å®‹ä½“;
+            font-family: Î¢ÈíÑÅºÚ,ËÎÌå;
             font-size: 1em;
         }
     </style>
@@ -155,16 +155,16 @@
                                     Width="100%">
                                     <Columns>
 
-                                        <asp:BoundColumn DataField="CompactCode" HeaderText="åˆåŒç¼–å·">
+                                        <asp:BoundColumn DataField="CompactCode" HeaderText="ºÏÍ¬±àºÅ">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="PurchaseCode" HeaderText="é‡‡è´­ç¼–å·">
+                                        <asp:BoundColumn DataField="PurchaseCode" HeaderText="²É¹º±àºÅ">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="PlanCode" HeaderText="è®¡åˆ’ç¼–å·">
+                                        <asp:BoundColumn DataField="PlanCode" HeaderText="¼Æ»®±àºÅ">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="ObjectCode" HeaderText="ç‰©èµ„ä»£ç ">
+                                        <asp:BoundColumn DataField="ObjectCode" HeaderText="Îï×Ê´úÂë">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                         </asp:BoundColumn>
                                         <asp:TemplateColumn>
@@ -203,16 +203,16 @@
                                                 <%# ShareClass.StringCutByRequire(Eval("Grade").ToString(), 8) %>
                                             </ItemTemplate>
                                         </asp:TemplateColumn>
-                                        <asp:BoundColumn DataField="UnitName" HeaderText="è®¡é‡å•ä½">
+                                        <asp:BoundColumn DataField="UnitName" HeaderText="¼ÆÁ¿µ¥Î»">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="CompactNumber" HeaderText="åˆåŒæ•°é‡">
+                                        <asp:BoundColumn DataField="CompactNumber" HeaderText="ºÏÍ¬ÊýÁ¿">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="5%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="CompactPrice" HeaderText="åˆåŒå•ä»·">
+                                        <asp:BoundColumn DataField="CompactPrice" HeaderText="ºÏÍ¬µ¥¼Û">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="5%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="CompactMoney" HeaderText="åˆåŒé‡‘é¢">
+                                        <asp:BoundColumn DataField="CompactMoney" HeaderText="ºÏÍ¬½ð¶î">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="5%" />
                                         </asp:BoundColumn>
 
@@ -225,14 +225,14 @@
                                                 <%# ShareClass.StringCutByRequire(Eval("CheckCode").ToString(), 8) %>
                                             </ItemTemplate>
                                         </asp:TemplateColumn>
-                                        <asp:BoundColumn DataField="IsCheck" HeaderText="ææ£€æ ‡å¿—">
+                                        <asp:BoundColumn DataField="IsCheck" HeaderText="²Ä¼ì±êÖ¾">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                         </asp:BoundColumn>
 
-                                        <asp:BoundColumn DataField="CollectNumber" HeaderText="æ”¶æ–™æ•°é‡">
+                                        <asp:BoundColumn DataField="CollectNumber" HeaderText="ÊÕÁÏÊýÁ¿">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="3%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="CollectMoney" HeaderText="æ”¶æ–™é‡‘é¢">
+                                        <asp:BoundColumn DataField="CollectMoney" HeaderText="ÊÕÁÏ½ð¶î">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="3%" />
                                         </asp:BoundColumn>
 

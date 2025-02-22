@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Data;
 using System.Configuration;
 using System.Collections;
@@ -17,21 +17,21 @@ public partial class TTSetMemberAgency : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //é’Ÿç¤¼æœˆä½œå“ï¼ˆjack.erp@gmail.com)
-        //æ³°é¡¶è½¯ä»¶2006ï¼2012
+        //ÖÓÀñÔÂ×÷Æ·£¨jack.erp@gmail.com)
+        //Ì©¶¥Èí¼ş2006£­2012
 
         string strUserCode = Session["UserCode"].ToString();
         string strHQL;
         IList lst;
 
-        //this.Title = "æˆ‘çš„ç›´æ¥æˆå‘˜è®¾ç½®---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
+        //this.Title = "ÎÒµÄÖ±½Ó³ÉÔ±ÉèÖÃ---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
 
         LB_UserCode.Text = strUserCode;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
 
 
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","æˆ‘çš„ç›´æ¥æˆå‘˜è®¾ç½®", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","ÎÒµÄÖ±½Ó³ÉÔ±ÉèÖÃ", strUserCode);
 
         if (blVisible == false)
         {

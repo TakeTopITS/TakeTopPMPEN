@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
 using System.Collections;
@@ -32,7 +32,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strUserName = Session["UserName"].ToString();
 
-        //WorkFlow,å¦‚æœæ˜¯ç”±å·¥ä½œæµå¯åŠ¨çš„ä¸šåŠ¡ï¼Œé‚£ä¹ˆç»™ä¸‹é¢ä¸‰ä¸ªå˜é‡èµ‹å€¼
+        //WorkFlow,Èç¹ûÊÇÓÉ¹¤×÷Á÷Æô¶¯µÄÒµÎñ£¬ÄÇÃ´¸øÏÂÃæÈı¸ö±äÁ¿¸³Öµ
         strRelatedWorkflowID = Request.QueryString["RelatedWorkflowID"];
         strRelatedWorkflowStepID = Request.QueryString["RelatedWorkflowStepID"];
         strRelatedWorkflowStepDetailID = Request.QueryString["RelatedWorkflowStepDetailID"];
@@ -43,7 +43,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
         strDetailTableCanEdit = Request.QueryString["DetailTableCanEdit"];
         strDetailTableCanDelete = Request.QueryString["DetailTableCanDelete"];
 
-        //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
         strToDoWLID = Request.QueryString["WLID"]; strToDoWLDetailID = Request.QueryString["WLStepDetailID"];
         strWLBusinessID = Request.QueryString["BusinessID"];
         if (strProjectID == null & strWLBusinessID != null)
@@ -67,7 +67,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
 
             ShareClass.LoadCurrencyType(DL_CurrencyType);
 
-            ShareClass.LoadWFTemplate(strUserCode, "ç­¾è¯ç®¡ç†", DL_TemName);
+            ShareClass.LoadWFTemplate(strUserCode, "VisaManagement", DL_TemName);
 
             ShareClass.InitialInvolvedProjectTree(TreeView2, strUserCode);
 
@@ -118,7 +118,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
 
             strVisaID = e.Item.Cells[3].Text.Trim();
 
-            intWLNumber = GetRelatedWorkFlowNumber("ç­¾è¯ç®¡ç†", "åˆåŒç­¾è¯", strVisaID);
+            intWLNumber = GetRelatedWorkFlowNumber("VisaManagement", "ºÏÍ¬Ç©Ö¤", strVisaID);
             if (intWLNumber > 0)
             {
                 BT_NewMain.Visible = false;
@@ -130,8 +130,8 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
                 BT_SubmitApply.Enabled = true;
             }
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç­¾è¯ç®¡ç†", "åˆåŒç­¾è¯", strVisaID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("VisaManagement", "ºÏÍ¬Ç©Ö¤", strVisaID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_NewMain.Visible = true;
@@ -166,7 +166,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
 
                 TB_WLName.Text = Resources.lang.HeTongQiaZhen + constractPayableVisa.VisaName.Trim() + Resources.lang.ShenQing;
 
-                LoadRelatedWL("ç­¾è¯ç®¡ç†", "åˆåŒç­¾è¯", constractPayableVisa.ID);
+                LoadRelatedWL("VisaManagement", "ºÏÍ¬Ç©Ö¤", constractPayableVisa.ID);
 
                 if (e.CommandName == "Update")
                 {
@@ -183,7 +183,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
             {
                 strUserCode = LB_UserCode.Text.Trim();
 
-                intWLNumber = GetRelatedWorkFlowNumber("ç­¾è¯ç®¡ç†", "åˆåŒç­¾è¯", strVisaID);
+                intWLNumber = GetRelatedWorkFlowNumber("VisaManagement", "ºÏÍ¬Ç©Ö¤", strVisaID);
                 if (intWLNumber > 0)
                 {
                     return;
@@ -197,8 +197,8 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
                     strHQL = "Delete From T_ConstractPayableVisaDetail Where VisaID = " + strVisaID;
                     ShareClass.RunSqlCommand(strHQL);
 
-                    //Workflow,åˆ é™¤æµç¨‹æ¨¡ç»„å…³è”è®°å½•
-                    ShareClass.DeleteModuleToRelatedWorkflow(strRelatedWorkflowID, strRelatedWorkflowStepID, strRelatedWorkflowStepDetailID, "èµ„äº§é‡‡è´­å•", strVisaID);
+                    //Workflow,É¾³ıÁ÷³ÌÄ£×é¹ØÁª¼ÇÂ¼
+                    ShareClass.DeleteModuleToRelatedWorkflow(strRelatedWorkflowID, strRelatedWorkflowStepID, strRelatedWorkflowStepDetailID, "×Ê²ú²É¹ºµ¥", strVisaID);
 
                     BT_SubmitApply.Enabled = false;
 
@@ -264,7 +264,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
         constractPayableVisa.VisaAmount = 0;
         constractPayableVisa.CurrencyType = strCurrencyType;
         constractPayableVisa.Comment = strComment;
-        constractPayableVisa.Status = "æ–°å»º";
+        constractPayableVisa.Status = "New";
 
         constractPayableVisa.OperatorCode = strUserCode;
         constractPayableVisa.OperatorName = strUserName;
@@ -335,16 +335,16 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
             constractPayableVisaBLL.UpdateConstractPayableVisa(constractPayableVisa, int.Parse(strVisaID));
             LoadConstractPayableVisa(strProjectID, strUserCode);
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç­¾è¯ç®¡ç†", "åˆåŒ", strVisaID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("VisaManagement", "ºÏÍ¬", strVisaID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 string strCmdText;
 
                 if (strToDoWLID == null)
                 {
-                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ç­¾è¯ç®¡ç†", "åˆåŒ", strVisaID);
+                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("VisaManagement", "ºÏÍ¬", strVisaID);
                 }
 
                 if (strToDoWLDetailID == null)
@@ -410,7 +410,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
 
             strVisaID = LB_VisaID.Text.Trim();
 
-            int intWLNumber = GetRelatedWorkFlowNumber("ç­¾è¯ç®¡ç†", "åˆåŒ", strVisaID);
+            int intWLNumber = GetRelatedWorkFlowNumber("VisaManagement", "ºÏÍ¬", strVisaID);
             if (intWLNumber > 0)
             {
                 BT_NewMain.Visible = false;
@@ -422,8 +422,8 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
                 BT_NewDetail.Visible = true;
             }
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç­¾è¯ç®¡ç†", "åˆåŒ", strVisaID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("VisaManagement", "ºÏÍ¬", strVisaID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_NewMain.Visible = true;
@@ -458,7 +458,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
 
             if (e.CommandName == "Delete")
             {
-                intWLNumber = GetRelatedWorkFlowNumber("ç­¾è¯ç®¡ç†", "åˆåŒç­¾è¯", strVisaID);
+                intWLNumber = GetRelatedWorkFlowNumber("VisaManagement", "ºÏÍ¬Ç©Ö¤", strVisaID);
                 if (intWLNumber > 0)
                 {
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -477,15 +477,15 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
 
                     LoadConstractPayableVisaDetail(strVisaID);
 
-                    //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                    //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-                    strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç­¾è¯ç®¡ç†", "åˆåŒç­¾è¯", strVisaID, "0");
+                    //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+                    //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+                    strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("VisaManagement", "ºÏÍ¬Ç©Ö¤", strVisaID, "0");
                     if (strToDoWLID != null | strAllowFullEdit == "YES")
                     {
                         string strCmdText = "select * from T_ConstractPayableVisa where ID = " + strVisaID;
                         if (strToDoWLID == null)
                         {
-                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ç­¾è¯ç®¡ç†", "åˆåŒç­¾è¯", strVisaID);
+                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("VisaManagement", "ºÏÍ¬Ç©Ö¤", strVisaID);
                         }
 
                         if (strToDoWLDetailID == null)
@@ -542,7 +542,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
         }
 
         strVisaID = LB_VisaID.Text.Trim();
-        int intWLNumber = GetRelatedWorkFlowNumber("ç­¾è¯ç®¡ç†", "åˆåŒç­¾è¯", strVisaID);
+        int intWLNumber = GetRelatedWorkFlowNumber("VisaManagement", "ºÏÍ¬Ç©Ö¤", strVisaID);
         if (intWLNumber > 0 & strToDoWLID == null)
         {
             BT_SubmitApply.Enabled = false;
@@ -611,16 +611,16 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
                 LoadConstractPayableVisaDetail(strVisaID);
                 LoadConstractPayableVisa(strProjectID, strUserCode);
 
-                //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç­¾è¯ç®¡ç†", "åˆåŒ", strVisaID, "0");
+                //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+                //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("VisaManagement", "ºÏÍ¬", strVisaID, "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     string strCmdText;
 
                     if (strToDoWLID == null)
                     {
-                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ç­¾è¯ç®¡ç†", "åˆåŒ", strVisaID);
+                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("VisaManagement", "ºÏÍ¬", strVisaID);
                     }
 
                     if (strToDoWLDetailID == null)
@@ -704,16 +704,16 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
                 LoadConstractPayableVisaDetail(strVisaID);
                 LoadConstractPayableVisa(strProjectID, strUserCode);
 
-                //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç­¾è¯ç®¡ç†", "åˆåŒ", strVisaID, "0");
+                //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+                //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("VisaManagement", "ºÏÍ¬", strVisaID, "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     string strCmdText;
 
                     if (strToDoWLID == null)
                     {
-                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ç­¾è¯ç®¡ç†", "åˆåŒ", strVisaID);
+                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("VisaManagement", "ºÏÍ¬", strVisaID);
                     }
 
                     if (strToDoWLDetailID == null)
@@ -749,7 +749,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
         }
     }
 
-    //æ›´æ–°åˆåŒç­¾è¯çš„æ€»é‡‘é¢
+    //¸üĞÂºÏÍ¬Ç©Ö¤µÄ×Ü½ğ¶î
     protected decimal SumTotalConstractPayableVisaAmount(string strVisaID)
     {
         string strHQL;
@@ -830,28 +830,28 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
         workFlow.CreatorCode = strCreatorCode;
         workFlow.CreatorName = strCreatorName;
         workFlow.CreateTime = DateTime.Now;
-        workFlow.RelatedType = "åˆåŒç­¾è¯";
-        workFlow.Status = "æ–°å»º";
+        workFlow.RelatedType = "ºÏÍ¬Ç©Ö¤";
+        workFlow.Status = "New";
         workFlow.RelatedID = int.Parse(strVisaID);
-        workFlow.DIYNextStep = "Yes"; workFlow.IsPlanMainWorkflow = "NO";
+        workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
 
 
         if (CB_SMS.Checked == true)
         {
-            workFlow.ReceiveSMS = "Yes";
+            workFlow.ReceiveSMS = "YES";
         }
         else
         {
-            workFlow.ReceiveSMS = "No";
+            workFlow.ReceiveSMS = "NO";
         }
 
         if (CB_Mail.Checked == true)
         {
-            workFlow.ReceiveEMail = "Yes";
+            workFlow.ReceiveEMail = "YES";
         }
         else
         {
-            workFlow.ReceiveEMail = "No";
+            workFlow.ReceiveEMail = "NO";
         }
 
         try
@@ -860,10 +860,10 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
 
             strWLID = ShareClass.GetMyCreatedWorkFlowID(strUserCode);
 
-            LoadRelatedWL(strWLType, "åˆåŒç­¾è¯", int.Parse(strVisaID));
+            LoadRelatedWL(strWLType, "ºÏÍ¬Ç©Ö¤", int.Parse(strVisaID));
 
-            UpdateConstractPayableVisaStatus(strVisaID, "å¤„ç†ä¸­");
-            DL_VisaStatus.SelectedValue = "å¤„ç†ä¸­";
+            UpdateConstractPayableVisaStatus(strVisaID, "InProgress");
+            DL_VisaStatus.SelectedValue = "InProgress";
 
             strCmdText = "select ID as DetailVisaID, * from T_ConstractPayableVisa where ID = " + strVisaID;
             strXMLFile2 = Server.MapPath(strXMLFile2);
@@ -913,7 +913,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'ç­¾è¯ç®¡ç†'";
+        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'VisaManagement'";
         strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC";
         WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
         lst = workFlowTemplateBLL.GetAllWorkFlowTemplates(strHQL);
@@ -945,7 +945,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
         strHQL = "from ConstractPayableVisa as constractPayableVisa where constractPayableVisa.ProjectID = " + strProjectID + " and constractPayableVisa.OperatorCode = " + "'" + strOperatorCode + "'";
         strHQL += " Order by constractPayableVisa.ID DESC";
 
-        //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
         if (strToDoWLID != null & strWLBusinessID != null)
         {
             strHQL = "from ConstractPayableVisa as constractPayableVisa where constractPayableVisa.ID = " + strWLBusinessID;
@@ -964,7 +964,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
     {
         string strHQL;
 
-        strHQL = "Select * from T_Constract where Status not in ('å½’æ¡£','åˆ é™¤') ";
+        strHQL = "Select * from T_Constract where Status not in ('Archived','Deleted') ";
         strHQL += " and ConstractCode in (select ConstractCode from T_ConstractPayable where ID in";
         strHQL += " (Select ConstractPayableID From T_ConstractPayableVisa Where ID = " + strVisaID + "))";
         strHQL += " order by SignDate DESC,ConstractCode DESC";
@@ -1064,7 +1064,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
         return lst.Count;
     }
 
-    //Workflow,å–å¾—å•æ®åˆ›å»ºäººä»£ç 
+    //Workflow,È¡µÃµ¥¾İ´´½¨ÈË´úÂë
     protected string getConstractPayableVisaCreatorCode(string strVisaID)
     {
         string strHQL;

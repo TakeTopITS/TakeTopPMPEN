@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMultiFileUploadDemo.aspx.cs" Inherits="TTMultiFileUploadDemo" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMultiFileUploadDemo.aspx.cs" Inherits="TTMultiFileUploadDemo" %>
 
 <!DOCTYPE html>
 
@@ -10,7 +10,7 @@
     <link href="webuploader.css" rel="stylesheet" />
     <script src="webuploader.js"></script>
     <script type="text/javascript">
-        // æ–‡ä»¶ä¸Šä¼ 
+        // ÎÄ¼şÉÏ´«
         jQuery(function () {
             var $ = jQuery,
                 $list = $('#thelist'),
@@ -20,32 +20,32 @@
 
             uploader = WebUploader.create({
 
-                // ä¸å‹ç¼©image
+                // ²»Ñ¹Ëõimage
                 resize: false,
 
-                // swfæ–‡ä»¶è·¯å¾„
+                // swfÎÄ¼şÂ·¾¶
                 swf: 'WebUploader/Uploader.swf',
 
-                // æ–‡ä»¶æ¥æ”¶æœåŠ¡ç«¯ã€‚
+                // ÎÄ¼ş½ÓÊÕ·şÎñ¶Ë¡£
                 server: 'UploadHandler.ashx',
 
-                // é€‰æ‹©æ–‡ä»¶çš„æŒ‰é’®ã€‚å¯é€‰ã€‚
-                // å†…éƒ¨æ ¹æ®å½“å‰è¿è¡Œæ˜¯åˆ›å»ºï¼Œå¯èƒ½æ˜¯inputå…ƒç´ ï¼Œä¹Ÿå¯èƒ½æ˜¯flash.
+                // Ñ¡ÔñÎÄ¼şµÄ°´Å¥¡£¿ÉÑ¡¡£
+                // ÄÚ²¿¸ù¾İµ±Ç°ÔËĞĞÊÇ´´½¨£¬¿ÉÄÜÊÇinputÔªËØ£¬Ò²¿ÉÄÜÊÇflash.
                 pick: '#picker'
 
             });
 
 
-            //ä¸Šä¼ å‰é™„ä»¶å‚æ•°
+            //ÉÏ´«Ç°¸½¼ş²ÎÊı
             uploader.on('uploadBeforeSend', function (obj, data) {
 
-                //åˆ¤æ–­æ–‡æ¡£ç±»å‹æ˜¯å¦ä¸ºç©º
+                //ÅĞ¶ÏÎÄµµÀàĞÍÊÇ·ñÎª¿Õ
                 if (document.getElementById("TB_DocType").value == "") {
-                    alert("è­¦å‘Šï¼Œè¯·é€‰æ‹©æ–‡ä»¶ç±»å‹ï¼ˆWarning,Doc type can not be nullï¼‰ï¼")
+                    alert("¾¯¸æ£¬ÇëÑ¡ÔñÎÄ¼şÀàĞÍ£¨Warning,Doc type can not be null£©£¡")
                     return;
                 }
 
-                //ä¼ å…¥è¡¨å•å‚æ•°
+                //´«Èë±íµ¥²ÎÊı
                 data = $.extend(data, {
                     a: $("#<%=TB_DocType.ClientID%>").val(),
                     b: "b",
@@ -55,20 +55,20 @@
 
             });
 
-            // å½“æœ‰æ–‡ä»¶æ·»åŠ è¿›æ¥çš„æ—¶å€™
+            // µ±ÓĞÎÄ¼şÌí¼Ó½øÀ´µÄÊ±ºò
             uploader.on('fileQueued', function (file) {
                 $list.append('<div id="' + file.id + '" class="item">' +
                     '<h4 class="info">' + file.name + '</h4>' +
-                    '<p class="state">ç­‰å¾…ä¸Šä¼ ...</p>' +
+                    '<p class="state">µÈ´ıÉÏ´«...</p>' +
                     '</div>');
             });
 
-            // æ–‡ä»¶ä¸Šä¼ è¿‡ç¨‹ä¸­åˆ›å»ºè¿›åº¦æ¡å®æ—¶æ˜¾ç¤ºã€‚
+            // ÎÄ¼şÉÏ´«¹ı³ÌÖĞ´´½¨½ø¶ÈÌõÊµÊ±ÏÔÊ¾¡£
             uploader.on('uploadProgress', function (file, percentage) {
                 var $li = $('#' + file.id),
                     $percent = $li.find('.progress .progress-bar');
 
-                // é¿å…é‡å¤åˆ›å»º
+                // ±ÜÃâÖØ¸´´´½¨
                 if (!$percent.length) {
                     $percent = $('<div class="progress progress-striped active">' +
                         '<div class="progress-bar" role="progressbar" style="width: 0%">' +
@@ -76,17 +76,17 @@
                         '</div>').appendTo($li).find('.progress-bar');
                 }
 
-                $li.find('p.state').text('ä¸Šä¼ ä¸­');
+                $li.find('p.state').text('ÉÏ´«ÖĞ');
 
                 $percent.css('width', percentage * 100 + '%');
             });
 
             uploader.on('uploadSuccess', function (file) {
-                $('#' + file.id).find('p.state').text('å·²ä¸Šä¼ ');
+                $('#' + file.id).find('p.state').text('ÒÑÉÏ´«');
             });
 
             uploader.on('uploadError', function (file) {
-                $('#' + file.id).find('p.state').text('ä¸Šä¼ å‡ºé”™');
+                $('#' + file.id).find('p.state').text('ÉÏ´«³ö´í');
             });
 
             uploader.on('uploadComplete', function (file) {
@@ -103,9 +103,9 @@
                 }
 
                 if (state === 'uploading') {
-                    $btn.text('æš‚åœä¸Šä¼ ');
+                    $btn.text('ÔİÍ£ÉÏ´«');
                 } else {
-                    $btn.text('å¼€å§‹ä¸Šä¼ ');
+                    $btn.text('¿ªÊ¼ÉÏ´«');
                 }
             });
 
@@ -124,7 +124,7 @@
         <table>
             <tr>
                 <td style="width: 100%; height: 25px; text-align: left;">
-                    <asp:Label ID="LB_tbType" runat="server" Text="a"></asp:Label>ï¼š
+                    <asp:Label ID="LB_tbType" runat="server" Text="a"></asp:Label>£º
                     <asp:Label ID="LB_DocTypeID" runat="server"></asp:Label><asp:TextBox ID="TB_DocType" runat="server" Width="125px"></asp:TextBox>
 
                     <asp:Label ID="LB_tbAuthority" runat="server" Text="b"></asp:Label>:<asp:DropDownList ID="DL_Visible" runat="server"  DataTextField="HomeName"
@@ -136,9 +136,9 @@
         <div id="uploader" class="wu-example">
             <div id="thelist" class="uploader-list"></div>
             <div class="btns">
-                <div id="picker">é€‰æ‹©æ–‡ä»¶</div>
+                <div id="picker">Ñ¡ÔñÎÄ¼ş</div>
 
-                <button id="ctlBtn" class="btn btn-default">å¼€å§‹ä¸Šä¼ </button>
+                <button id="ctlBtn" class="btn btn-default">¿ªÊ¼ÉÏ´«</button>
 
             </div>
         </div>

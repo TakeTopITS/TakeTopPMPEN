@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
 using System.Collections;
@@ -52,7 +52,7 @@ public partial class TTWorkFlowList : System.Web.UI.Page
             HL_Expense.NavigateUrl = "TTProExpenseView.aspx?WorkflowID=" + strWLID;
 
 
-            ////æ˜¾ç¤ºæµç¨‹çº¢ç»¿ç¯
+            ////ÏÔÊ¾Á÷³ÌºìÂÌµÆ
             //ShareClass.DisplayRelatedWFStepDump(strTemName, strWLID, strStatus, Repeater1);
 
             string strDesignType = ShareClass.GetWLTemplateDesignType(strTemName);
@@ -165,7 +165,7 @@ public partial class TTWorkFlowList : System.Web.UI.Page
                 {
                     workFlowTStep = (WorkFlowTStep)lst[i];
 
-                    if (strWFStatus == "é€šè¿‡")
+                    if (strWFStatus == "Passed")
                     {
                         ((ImageButton)Repeater1.Items[i].FindControl("IBT_WFStep")).ImageUrl = "Images/GreenDump.png";
                     }
@@ -181,7 +181,7 @@ public partial class TTWorkFlowList : System.Web.UI.Page
                         {
                             if (j == intSortNumber)
                             {
-                                if (strWFStepStatus == "é€šè¿‡")
+                                if (strWFStepStatus == "Passed")
                                 {
                                     ((ImageButton)Repeater1.Items[i].FindControl("IBT_WFStep")).ImageUrl = "Images/GreenDump.png";
                                 }
@@ -306,7 +306,7 @@ public partial class TTWorkFlowList : System.Web.UI.Page
 
         try
         {
-            strHQL = "from Approve as approve where approve.Type = 'å·¥ä½œæµ' and approve.RelatedID = " + strWLID + " and approve.StepID = " + strStepID + " Order by approve.ID DESC";
+            strHQL = "from Approve as approve where approve.Type = 'Workflow' and approve.RelatedID = " + strWLID + " and approve.StepID = " + strStepID + " Order by approve.ID DESC";
 
             ApproveBLL approveBLL = new ApproveBLL();
             lst = approveBLL.GetAllApproves(strHQL);
@@ -319,7 +319,7 @@ public partial class TTWorkFlowList : System.Web.UI.Page
         }
     }
 
-    //å–å¾—æ­¤å·¥ä½œæµç›¸å…³å­å·¥ä½œæµåˆ—è¡¨
+    //È¡µÃ´Ë¹¤×÷Á÷Ïà¹Ø×Ó¹¤×÷Á÷ÁĞ±í
     protected void LoadChildWorkflow(string strWLID)
     {
         string strHQL;

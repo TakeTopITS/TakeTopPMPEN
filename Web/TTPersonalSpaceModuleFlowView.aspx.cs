@@ -22,11 +22,11 @@ public partial class TTPersonalSpaceModuleFlowView : System.Web.UI.Page
         {
             if (strUserType == "INNER")
             {
-                strID = GetSystemModuleID("操作导航", strUserCode, strUserType, Session["LangCode"].ToString());
+                strID = GetSystemModuleID("OperateNavigation", strUserCode, strUserType, Session["LangCode"].ToString());
             }
             else
             {
-                strID = GetSystemModuleID("操作导航", strUserCode, strUserType, Session["LangCode"].ToString());
+                strID = GetSystemModuleID("OperateNavigation", strUserCode, strUserType, Session["LangCode"].ToString());
             }
         }
 

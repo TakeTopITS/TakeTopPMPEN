@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMeetingManage.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMeetingManage.aspx.cs"
     Inherits="TTMeetingManage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -61,7 +61,7 @@
                                                     <tr>
                                                         <td style="width: 100%; text-align: left;">
                                                             <span style="font-size: 10pt">
-                                                                <asp:Label ID="Label1324242" runat="server" Text="<%$ Resources:lang,WoYaoCanJiaDeHuiYi%>"></asp:Label>ï¼š</span>
+                                                                <asp:Label ID="Label1324242" runat="server" Text="<%$ Resources:lang,WoYaoCanJiaDeHuiYi%>"></asp:Label>£º</span>
                                                             <asp:Label ID="LB_UserCode" runat="server" Visible="False"></asp:Label>
                                                         </td>
                                                     </tr>
@@ -166,7 +166,7 @@
                                                     <tr>
                                                         <td align="left">
                                                             <span style="font-size: 10pt">
-                                                                <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,WoYiCanJiaDeHuiYi%>"></asp:Label>ï¼š</span>
+                                                                <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,WoYiCanJiaDeHuiYi%>"></asp:Label>£º</span>
                                                         </td>
                                                     </tr>
                                                     <tr>

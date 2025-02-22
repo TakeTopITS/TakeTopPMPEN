@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSuperPlanManagement.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSuperPlanManagement.aspx.cs"
     Inherits="TTSuperPlanManagement" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -101,7 +101,7 @@
                                                                             
                                                                             <ItemStyle CssClass="itemBorder" />
                                                                             <Columns>
-                                                                                <asp:TemplateColumn HeaderText="éƒ¨é—¨æˆå‘˜ï¼š">
+                                                                                <asp:TemplateColumn HeaderText="²¿ÃÅ³ÉÔ±£º">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_UserCode" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>'
                                                                                             Style="text-align: center" />
@@ -155,7 +155,7 @@
                                                                         <table>
                                                                             <tr>
                                                                                 <td style="color: #394f66; background-image: url('ImagesSkin/titleBG.jpg')">
-                                                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,JiHuaHao%>"></asp:Label>ï¼š
+                                                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,JiHuaHao%>"></asp:Label>£º
                                                                                 </td>
                                                                                 <td style="color: #394f66; background-image: url('ImagesSkin/titleBG.jpg')">
                                                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_PlanID" runat="server" Precision="0" Width="53px">0</NickLee:NumberBox>
@@ -295,7 +295,7 @@
                                                                                 <td align="left" valign="top">
                                                                                     <cc2:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" runat="server" ActiveTabIndex="0"
                                                                                         Width="90%">
-                                                                                        <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="æ‰§è¡Œæ—¥å¿—" TabIndex="0">
+                                                                                        <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="Ö´ÐÐÈÕÖ¾" TabIndex="0">
 
                                                                                             <HeaderTemplate>
 
@@ -393,7 +393,7 @@
                                                                                                 </asp:DataList>
                                                                                             </ContentTemplate>
                                                                                         </cc2:TabPanel>
-                                                                                        <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="å…³é”®ç›®æ ‡" TabIndex="1">
+                                                                                        <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="¹Ø¼üÄ¿±ê" TabIndex="1">
 
                                                                                             <HeaderTemplate>
 
@@ -459,17 +459,17 @@
 
                                                                                                                 <Columns>
 
-                                                                                                                    <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                                                                                    <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
 
                                                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
                                                                                                                     </asp:BoundColumn>
 
-                                                                                                                    <asp:BoundColumn DataField="Target" HeaderText="ç›®æ ‡">
+                                                                                                                    <asp:BoundColumn DataField="Target" HeaderText="Ä¿±ê">
 
                                                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="70%" />
                                                                                                                     </asp:BoundColumn>
 
-                                                                                                                    <asp:TemplateColumn HeaderText="è¿›åº¦">
+                                                                                                                    <asp:TemplateColumn HeaderText="½ø¶È">
 
                                                                                                                         <ItemTemplate>
 
@@ -498,7 +498,7 @@
                                                                                                 </table>
                                                                                             </ContentTemplate>
                                                                                         </cc2:TabPanel>
-                                                                                        <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="é¢†å¯¼è¯„æ ¸" TabIndex="2">
+                                                                                        <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="Áìµ¼ÆÀºË" TabIndex="2">
 
                                                                                             <HeaderTemplate>
 

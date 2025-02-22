@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -66,10 +66,10 @@ public partial class TakeTopMainSkinSelect : System.Web.UI.Page
             //    Session["CssDirectoryChangeNumber"] = "1";
             //}
 
-            //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—
+            //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾
             ChangePageCache("Skin");
 
-            //é‡æ–°æ‰“å¼€ç›¸åº”çš„ä¸»é¡µï¼Œä»¥åˆ·æ–°é¡µé¢
+            //ÖØĞÂ´ò¿ªÏàÓ¦µÄÖ÷Ò³£¬ÒÔË¢ĞÂÒ³Ãæ
             OpenTopMDIPage(strUserType, projectMember.CssDirectory.Trim() + projectMember.LangCode.Trim());
         }
         catch
@@ -95,10 +95,10 @@ public partial class TakeTopMainSkinSelect : System.Web.UI.Page
 
             Session["CssDirectory"] = BT_Black.ToolTip;
 
-            //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—
+            //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾
             ChangePageCache("Skin");
 
-            //é‡æ–°æ‰“å¼€ç›¸åº”çš„ä¸»é¡µï¼Œä»¥åˆ·æ–°é¡µé¢
+            //ÖØĞÂ´ò¿ªÏàÓ¦µÄÖ÷Ò³£¬ÒÔË¢ĞÂÒ³Ãæ
             OpenTopMDIPage(strUserType, projectMember.CssDirectory.Trim() + projectMember.LangCode.Trim());
         }
         catch
@@ -124,10 +124,10 @@ public partial class TakeTopMainSkinSelect : System.Web.UI.Page
 
             Session["CssDirectory"] = BT_Green.ToolTip;
 
-            //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—
+            //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾
             ChangePageCache("Skin");
 
-            //é‡æ–°æ‰“å¼€ç›¸åº”çš„ä¸»é¡µï¼Œä»¥åˆ·æ–°é¡µé¢
+            //ÖØĞÂ´ò¿ªÏàÓ¦µÄÖ÷Ò³£¬ÒÔË¢ĞÂÒ³Ãæ
             OpenTopMDIPage(strUserType, projectMember.CssDirectory.Trim() + projectMember.LangCode.Trim());
         }
         catch
@@ -153,10 +153,10 @@ public partial class TakeTopMainSkinSelect : System.Web.UI.Page
 
             Session["CssDirectory"] = BT_Grey.ToolTip;
 
-            //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—
+            //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾
             ChangePageCache("Skin");
 
-            //é‡æ–°æ‰“å¼€ç›¸åº”çš„ä¸»é¡µï¼Œä»¥åˆ·æ–°é¡µé¢
+            //ÖØĞÂ´ò¿ªÏàÓ¦µÄÖ÷Ò³£¬ÒÔË¢ĞÂÒ³Ãæ
             OpenTopMDIPage(strUserType, projectMember.CssDirectory.Trim() + projectMember.LangCode.Trim());
         }
         catch
@@ -182,10 +182,10 @@ public partial class TakeTopMainSkinSelect : System.Web.UI.Page
 
             Session["CssDirectory"] = BT_Red.ToolTip;
 
-            //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—
+            //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾
             ChangePageCache("Skin");
 
-            //é‡æ–°æ‰“å¼€ç›¸åº”çš„ä¸»é¡µï¼Œä»¥åˆ·æ–°é¡µé¢
+            //ÖØĞÂ´ò¿ªÏàÓ¦µÄÖ÷Ò³£¬ÒÔË¢ĞÂÒ³Ãæ
             OpenTopMDIPage(strUserType, projectMember.CssDirectory.Trim() + projectMember.LangCode.Trim());
         }
         catch
@@ -211,10 +211,10 @@ public partial class TakeTopMainSkinSelect : System.Web.UI.Page
 
             Session["CssDirectory"] = BT_Gold.ToolTip;
 
-            //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—
+            //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾
             ChangePageCache("Skin");
 
-            //é‡æ–°æ‰“å¼€ç›¸åº”çš„ä¸»é¡µï¼Œä»¥åˆ·æ–°é¡µé¢
+            //ÖØĞÂ´ò¿ªÏàÓ¦µÄÖ÷Ò³£¬ÒÔË¢ĞÂÒ³Ãæ
             OpenTopMDIPage(strUserType, projectMember.CssDirectory.Trim() + projectMember.LangCode.Trim());
         }
         catch
@@ -250,10 +250,10 @@ public partial class TakeTopMainSkinSelect : System.Web.UI.Page
                 Session["LangCode"] = strLangCode;
                 Response.SetCookie(new HttpCookie("LangCode", strLangCode));
 
-                //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—
+                //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾
                 ChangePageCache("Language");
 
-                //é‡æ–°æ‰“å¼€ç›¸åº”çš„ä¸»é¡µï¼Œä»¥åˆ·æ–°é¡µé¢
+                //ÖØĞÂ´ò¿ªÏàÓ¦µÄÖ÷Ò³£¬ÒÔË¢ĞÂÒ³Ãæ
                 OpenTopMDIPage(strUserType, projectMember.CssDirectory.Trim() + projectMember.LangCode.Trim());
             }
             catch
@@ -262,33 +262,33 @@ public partial class TakeTopMainSkinSelect : System.Web.UI.Page
         }
     }
 
-    //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—ï¼Œå¹¶åˆ·æ–°é¡µé¢ç¼“å­˜
+    //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾£¬²¢Ë¢ĞÂÒ³Ãæ»º´æ
     protected void ChangePageCache(string strClickType)
     {
-        ////è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—
+        ////ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾
         //ShareClass.SetPageCacheMark("1");
         //Session["CssDirectoryChangeNumber"] = "1";
 
-        //ä¸´æ—¶ç”¨æ³•ï¼Œè®¾ä¸ºä¸Šé¢çš„1æ‰ä¼šåˆ·æ–°é¡µé¢çº§å­˜
+        //ÁÙÊ±ÓÃ·¨£¬ÉèÎªÉÏÃæµÄ1²Å»áË¢ĞÂÒ³Ãæ¼¶´æ
         ShareClass.SetPageCacheMark("2");
         Session["CssDirectoryChangeNumber"] = "2";
 
         ChangePageCache();
     }
 
-    //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—ï¼Œå¹¶åˆ·æ–°é¡µé¢ç¼“å­˜
+    //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾£¬²¢Ë¢ĞÂÒ³Ãæ»º´æ
     protected void ChangePageCache()
     {
-        //æ›´æ–°é¡µé¢ç¼“å­˜ï¼Œåˆ·æ–°é¡µé¢
+        //¸üĞÂÒ³Ãæ»º´æ£¬Ë¢ĞÂÒ³Ãæ
         ShareClass.AddSpaceLineToFile("TTPersonalSpaceModuleFlowView.aspx", "<%--***--%>");
         ShareClass.AddSpaceLineToFile("TTModuleFlowChartViewJS.aspx", "<%--***--%>");
         ShareClass.AddSpaceLineToFile("WFDesigner/TTTakeTopMFChartViewJS.aspx", "<%--***--%>");
     }
 
-    //æ‰“å¼€ç›¸åº”çš„ä¸»é¡µ
+    //´ò¿ªÏàÓ¦µÄÖ÷Ò³
     protected void OpenTopMDIPage(string strUserType, string strSkinFlag)
     {
-        //è®¾ç½®ä¸»ç•Œé¢é“¾æ¥çš„URLå‚æ•°ï¼Œä»¥åˆ·æ–°ç¼“å­˜
+        //ÉèÖÃÖ÷½çÃæÁ´½ÓµÄURL²ÎÊı£¬ÒÔË¢ĞÂ»º´æ
         Session["SkinFlag"] = strSkinFlag;
 
         if (Session["SystemVersionType"].ToString() == "SAAS")

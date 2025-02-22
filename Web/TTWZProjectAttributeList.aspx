@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZProjectAttributeList.aspx.cs" Inherits="TTWZProjectAttributeList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZProjectAttributeList.aspx.cs" Inherits="TTWZProjectAttributeList" %>
 
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
@@ -47,7 +47,7 @@
                                 <table width="100%" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td align="left" class="formItemBgStyle">
-                                            <input type="button" class="inpuLong" value="æ–°å¢žé¡¹ç›®å±žæ€§" onclick="window.location.href = 'TTWZProjectAttributeEdit.aspx'" />
+                                            <input type="button" class="inpuLong" value="ÐÂÔöÏîÄ¿ÊôÐÔ" onclick="window.location.href = 'TTWZProjectAttributeEdit.aspx'" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -93,8 +93,8 @@
                                                             <ItemTemplate>
                                                                 <a href='TTWZProjectAttributeEdit.aspx?id=<%# DataBinder.Eval(Container.DataItem,"ID") %>' class="notTab">
                                                                     <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,BianJi%>"></asp:Label></a>
-                                                                <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab" Visible='<%# Eval("IsMark").ToString()=="0" ? true : false %>'>åˆ é™¤</asp:LinkButton>
-                                                                <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="åˆ é™¤" />--%>
+                                                                <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab" Visible='<%# Eval("IsMark").ToString()=="0" ? true : false %>'>É¾³ý</asp:LinkButton>
+                                                                <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="Deleted" />--%>
                                                             </ItemTemplate>
                                                         </asp:TemplateColumn>
                                                         <asp:TemplateColumn>
@@ -133,7 +133,7 @@
                                 <table width="100%" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td align="left" class="formItemBgStyle">
-                                            <input type="button" class="inpuLong" value="æ–°å¢žé¡¹ç›®æ€§è´¨" onclick="window.location.href = 'TTWZProjectNatureEdit.aspx'" />
+                                            <input type="button" class="inpuLong" value="ÐÂÔöÏîÄ¿ÐÔÖÊ" onclick="window.location.href = 'TTWZProjectNatureEdit.aspx'" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -179,8 +179,8 @@
                                                             <ItemTemplate>
                                                                 <a href='TTWZProjectNatureEdit.aspx?id=<%# DataBinder.Eval(Container.DataItem,"ID") %>' class="notTab">
                                                                     <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,BianJi%>"></asp:Label></a>
-                                                                <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab" Visible='<%# Eval("IsMark").ToString()=="0" ? true : false %>'>åˆ é™¤</asp:LinkButton>
-                                                                <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="åˆ é™¤" />--%>
+                                                                <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab" Visible='<%# Eval("IsMark").ToString()=="0" ? true : false %>'>É¾³ý</asp:LinkButton>
+                                                                <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="Deleted" />--%>
                                                             </ItemTemplate>
                                                         </asp:TemplateColumn>
                                                         <asp:TemplateColumn>
@@ -216,14 +216,14 @@
                                     </tr>
                                 </table>
                                 <cc1:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" Width="100%" runat="server" ActiveTabIndex="0">
-                                    <cc1:TabPanel ID="TabPanel1" runat="server" HeaderText="é¡¹ç›®å±žæ€§" TabIndex="0">
+                                    <cc1:TabPanel ID="TabPanel1" runat="server" HeaderText="ÏîÄ¿ÊôÐÔ" TabIndex="0">
                                         <HeaderTemplate>
                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMuShuXing%>"></asp:Label>
                                         </HeaderTemplate>
                                         <ContentTemplate>
                                         </ContentTemplate>
                                     </cc1:TabPanel>
-                                    <cc1:TabPanel ID="TabPanel2" runat="server" HeaderText="é¡¹ç›®æ€§è´¨">
+                                    <cc1:TabPanel ID="TabPanel2" runat="server" HeaderText="ÏîÄ¿ÐÔÖÊ">
                                         <HeaderTemplate>
                                             <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,XiangMuXingZhi%>"></asp:Label>
                                         </HeaderTemplate>

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -32,7 +32,7 @@ public partial class TTGoodsMainPlanMaterialDetailDataReport : System.Web.UI.Pag
         string strPlanVerID = Request.QueryString["PlanVerID"];
         string strMRPVerID = Request.QueryString["MRPVerID"];
 
-        //this.Title = "ç›˜ç‚¹æŠ¥è¡¨";
+        //this.Title = "ÅÌµã±¨±í";
 
         LB_UserCode.Text = strUserCode;
         strUserName = ShareClass.GetUserName(strUserCode);
@@ -86,7 +86,7 @@ public partial class TTGoodsMainPlanMaterialDetailDataReport : System.Web.UI.Pag
         }
     }
 
-    //å–å¾—å½“æœˆç»“ä½™åº“å­˜é‡
+    //È¡µÃµ±ÔÂ½áÓà¿â´æÁ¿
     public decimal GetGoodsInventoryNumber(string strGoodsCode, string strModelNumber, string strSpecification, string strUnit)
     {
         string strHQL;
@@ -120,7 +120,7 @@ public partial class TTGoodsMainPlanMaterialDetailDataReport : System.Web.UI.Pag
         return deInventoryNumber;
     }
 
-    //å–å¾—å·²è®¢è´­æœªå…¥åº“é‡
+    //È¡µÃÒÑ¶©¹ºÎ´Èë¿âÁ¿
     public decimal GetGoodsNoCheckInNumberByHavePurchase(string strRelatedID, string strGoodsCode, string strModelNumber, string strSpecification, string strUnit, string strTotalCheckInNumber)
     {
         string strHQL;

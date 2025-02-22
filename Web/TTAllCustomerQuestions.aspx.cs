@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.ComponentModel;
@@ -26,7 +26,7 @@ public partial class TTAllCustomerQuestions : System.Web.UI.Page
         strStatus = DL_ServiceStatus.SelectedValue.Trim();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","查看所有客户服务", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","�鿴���пͻ�����", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -98,20 +98,20 @@ public partial class TTAllCustomerQuestions : System.Web.UI.Page
         strUserCode = "%" + strUserCode + "%";
 
 
-        strHQL = "Select * from T_CustomerQuestion  where OperatorStatus = '受理' ";
+        strHQL = "Select * from T_CustomerQuestion  where OperatorStatus = 'Accepted' ";
         strHQL += " and ((RecorderCode in (select UserCode  From T_ProjectMember  Where DepartCode in " + strDepartString + "))";
         strHQL += " or (OperatorCode in (select UserCode  From T_ProjectMember  Where DepartCode in " + strDepartString + ")))";
         //strHQL += " and ID in (Select QuestionID From T_CustomerQuestionHandleRecord Where  to_char( NextServiceTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd') and ID in (Select Max(ID) From T_CustomerQuestionHandleRecord Group By QuestionID)) ";
 
-        if (strStatus == "预警的")
+        if (strStatus == "Warning")
         {
-            strHQL = "Select * from T_CustomerQuestion  where OperatorStatus = '受理' ";
+            strHQL = "Select * from T_CustomerQuestion  where OperatorStatus = 'Accepted' ";
             strHQL += " and ((RecorderCode in (select UserCode  From T_ProjectMember  Where DepartCode in " + strDepartString + "))";
             strHQL += " or (OperatorCode in (select UserCode  From T_ProjectMember  Where DepartCode in " + strDepartString + ")))";
             strHQL += " and ID in (Select QuestionID From T_CustomerQuestionHandleRecord Where  to_char( NextServiceTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd') and ID in (Select Max(ID) From T_CustomerQuestionHandleRecord Group By QuestionID)) ";
         }
 
-        if (strStatus == "待处理")
+        if (strStatus == "ToHandle")
         {
             strHQL = "Select * from T_CustomerQuestion  ";
             strHQL += " where (((RecorderCode in (select UserCode  From T_ProjectMember  Where DepartCode in " + strDepartString + ")))";
@@ -119,30 +119,30 @@ public partial class TTAllCustomerQuestions : System.Web.UI.Page
             strHQL += " and (OperatorCode = ''))";
         }
 
-        if (strStatus == "处理中")
+        if (strStatus == "InProgress")
         {
-            strHQL = "Select * from T_CustomerQuestion  where OperatorStatus = '受理' ";
+            strHQL = "Select * from T_CustomerQuestion  where OperatorStatus = 'Accepted' ";
             strHQL += " and ((RecorderCode in (select UserCode  From T_ProjectMember  Where DepartCode in " + strDepartString + "))";
             strHQL += " or (OperatorCode in (select UserCode  From T_ProjectMember  Where DepartCode in " + strDepartString + ")))";
             strHQL += " or ((RecorderCode = '')";
             strHQL += " and (OperatorCode = '')))";
         }
 
-        if (strStatus == "已处理")
+        if (strStatus == "Processed")
         {
-            strHQL = "Select * from T_CustomerQuestion  where OperatorStatus = '完成'  ";
+            strHQL = "Select * from T_CustomerQuestion  where OperatorStatus = 'Completed'  ";
             strHQL += " and ((RecorderCode in (select UserCode  From T_ProjectMember  Where DepartCode in " + strDepartString + "))";
             strHQL += " or (OperatorCode in (select UserCode  From T_ProjectMember  Where DepartCode in " + strDepartString + ")))";
         }
 
-        if (strStatus == "已删除")
+        if (strStatus == "Deleted")
         {
-            strHQL = "Select * from T_CustomerQuestion  where OperatorStatus = '删除'  ";
+            strHQL = "Select * from T_CustomerQuestion  where OperatorStatus = 'Deleted'  ";
             strHQL += " and ((RecorderCode in (select UserCode  From T_ProjectMember  Where DepartCode in " + strDepartString + "))";
             strHQL += " or (OperatorCode in (select UserCode  From T_ProjectMember  Where DepartCode in " + strDepartString + ")))";
         }
 
-        if (strStatus == "所有")
+        if (strStatus == "All")
         {
             strHQL = "Select * from T_CustomerQuestion  ";
             strHQL += " where ((RecorderCode in (select UserCode  From T_ProjectMember  Where DepartCode in " + strDepartString + "))";

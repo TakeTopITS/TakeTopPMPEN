@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDSelectorPressureList.aspx.cs" Inherits="TTGDSelectorPressureList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDSelectorPressureList.aspx.cs" Inherits="TTGDSelectorPressureList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -10,7 +10,7 @@
     <script src="js/allAHandler.js" type="text/javascript"></script>
     <script type="text/jscript">
 
-        //ÂçïÈÄâÊã©ÊåâÈíÆÂà§Êñ≠
+        //µ•—°‘Ò∞¥≈•≈–∂œ
         function chooseUpdate() {
             var str = "";
             $("input[name=name1]").each(function () {
@@ -20,7 +20,7 @@
             });
 
             if (str == "") {
-                alert('ËØ∑ÈÄâÊã©ËÆ∞ÂΩïÈ°πÔºÅ');
+                alert('«Î—°‘Òº«¬ºœÓ£°');
                 return false;
             }
             else {
@@ -114,7 +114,7 @@
                                                                         <input id='<%#Eval("PressureCode") %>' type="radio" name="name1" />
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="PressureCode" HeaderText="ËØïÂéãÂåÖÂè∑">
+                                                                <asp:BoundColumn DataField="PressureCode" HeaderText=" ‘—π∞¸∫≈">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="90%" />
                                                                 </asp:BoundColumn>
                                                             </Columns>
@@ -132,10 +132,10 @@
                                             <tr>
                                                 <td class="formItemBgStyle">
                                                     <div style="text-align: center">
-                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="Á°ÆÂÆö" />
+                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="»∑∂®" />
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                            type="button" value="ÂÖ≥Èó≠" />
+                                                            type="button" value="Closed" />
                                                     </div>
                                                 </td>
                                             </tr>

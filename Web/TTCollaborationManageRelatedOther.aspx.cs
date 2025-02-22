@@ -1,4 +1,4 @@
-锘縰sing System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -18,7 +18,7 @@ using ProjectMgt.BLL;
 
 public partial class TTCollaborationManageRelatedOther : System.Web.UI.Page
 {
-    //鍔犱笂鍏宠仈RelatedID,RelatedType,RelatedCode TODO:CAOJIAN(鏇瑰仴)2013-5-18
+    //加上关联RelatedID,RelatedType,RelatedCode TODO:CAOJIAN(曹健)2013-5-18
     string strRelatedType, strRelatedID, strRelatedCode;
 
     protected void Page_Load(object sender, EventArgs e)
@@ -28,7 +28,7 @@ public partial class TTCollaborationManageRelatedOther : System.Web.UI.Page
 
         string strUserCode, strUserName;
 
-        //this.Title = "鎴戠殑鍗忎綔---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
+        //this.Title = "我的协作---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
 
         strUserCode = Session["UserCode"].ToString();
 
@@ -37,14 +37,14 @@ public partial class TTCollaborationManageRelatedOther : System.Web.UI.Page
         LB_UserName.Text = strUserName;
 
         //ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","鎴戠殑鍗忎綔", strUserCode);
+        //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","我的协作", strUserCode);
         //if (blVisible == false)
         //{
         //    Response.Redirect("TTDisplayErrors.aspx");
         //    return;
         //}
 
-        //鍔犱笂鍏宠仈RelatedID,RelatedType,RelatedCode TODO:CAOJIAN(鏇瑰仴)2013-5-18
+        //加上关联RelatedID,RelatedType,RelatedCode TODO:CAOJIAN(曹健)2013-5-18
         strRelatedType = Request.QueryString["RelatedType"];
         if (strRelatedType == null)
         {
@@ -70,7 +70,7 @@ public partial class TTCollaborationManageRelatedOther : System.Web.UI.Page
 
             CollaborationBLL collaborationBLL = new CollaborationBLL();
 
-            strHQL = "select * from T_Collaboration where rtrim(ltrim(status)) <> '鍏抽棴' and  CoID in ( ";
+            strHQL = "select * from T_Collaboration where rtrim(ltrim(status)) <> 'Closed' and  CoID in ( ";
             strHQL += " select A.CoID from T_CollaborationMember A,T_CollaborationLog B ";
             strHQL += " where A.CoID = B.CoID and A.UserCode = " + "'" + strUserCode + "'";
             strHQL += " and A.UserCode not in (select C.UserCode from T_CollaborationLog C where C.CoID = B.CoID)) ";
@@ -79,7 +79,7 @@ public partial class TTCollaborationManageRelatedOther : System.Web.UI.Page
                 strHQL += " and RelatedCode = '" + strRelatedCode + "'";
             }
             strHQL += " UNION ";
-            strHQL += " select * from T_Collaboration where rtrim(ltrim(status)) <> '鍏抽棴' and  CoID in ( ";
+            strHQL += " select * from T_Collaboration where rtrim(ltrim(status)) <> 'Closed' and  CoID in ( ";
             strHQL += " select A.CoID from T_CollaborationLog A ,T_CollaborationLog B ";
             strHQL += " where A.CoID = B.CoID and  A.CreateTime > B.CreateTime and A.UserCode <> B.UserCode ";
             strHQL += " and A.UserCode <> " + "'" + strUserCode + "'";
@@ -98,7 +98,7 @@ public partial class TTCollaborationManageRelatedOther : System.Web.UI.Page
 
             LB_Sql4.Text = strHQL;
 
-            strHQL = "from Collaboration as collaboration where ltrim(rtrim(collaboration.Status)) <> '鍏抽棴' and  collaboration.CoID in ";
+            strHQL = "from Collaboration as collaboration where ltrim(rtrim(collaboration.Status)) <> 'Closed' and  collaboration.CoID in ";
             strHQL += "(Select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + ")";
             if (!string.IsNullOrEmpty(strRelatedCode))
             {
@@ -140,7 +140,7 @@ public partial class TTCollaborationManageRelatedOther : System.Web.UI.Page
         strUserName = LB_UserName.Text.Trim();
 
         CollaborationBLL collaborationBLL = new CollaborationBLL();
-        strHQL = "select * from T_Collaboration where rtrim(ltrim(status)) <> '鍏抽棴' and  CoID in ( ";
+        strHQL = "select * from T_Collaboration where rtrim(ltrim(status)) <> 'Closed' and  CoID in ( ";
         strHQL += " select A.CoID from T_CollaborationMember A,T_CollaborationLog B ";
         strHQL += " where A.CoID = B.CoID and A.UserCode = " + "'" + strUserCode + "'";
         strHQL += " and A.UserCode not in (select C.UserCode from T_CollaborationLog C where C.CoID = B.CoID)) ";
@@ -149,7 +149,7 @@ public partial class TTCollaborationManageRelatedOther : System.Web.UI.Page
             strHQL += " and RelatedCode = '" + strRelatedCode + "'";
         }
         strHQL += " UNION ";
-        strHQL += " select * from T_Collaboration where rtrim(ltrim(status)) <> '鍏抽棴' and  CoID in ( ";
+        strHQL += " select * from T_Collaboration where rtrim(ltrim(status)) <> 'Closed' and  CoID in ( ";
         strHQL += " select A.CoID from T_CollaborationLog A ,T_CollaborationLog B ";
         strHQL += " where A.CoID = B.CoID and  A.CreateTime > B.CreateTime and A.UserCode <> B.UserCode ";
         strHQL += " and A.UserCode <> " + "'" + strUserCode + "'";
@@ -169,7 +169,7 @@ public partial class TTCollaborationManageRelatedOther : System.Web.UI.Page
         LB_Sql4.Text = strHQL;
 
 
-        strHQL = "from Collaboration as collaboration where ltrim(rtrim(collaboration.Status)) <> '鍏抽棴' and collaboration.CoID in ";
+        strHQL = "from Collaboration as collaboration where ltrim(rtrim(collaboration.Status)) <> 'Closed' and collaboration.CoID in ";
         strHQL += "(Select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + ")";
         if (!string.IsNullOrEmpty(strRelatedCode))
         {

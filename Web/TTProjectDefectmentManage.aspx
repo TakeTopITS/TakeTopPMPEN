@@ -1,11 +1,11 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectDefectmentManage.aspx.cs" Inherits="TTProjectDefectmentManage" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectDefectmentManage.aspx.cs" Inherits="TTProjectDefectmentManage" %>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc2" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>é¡¹ç›®ç¼ºé™·ç”³è¯·</title>
+    <title>ÏîÄ¿È±ÏÝÉêÇë</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -88,7 +88,7 @@
                                                     <tr>
                                                         <td style="width: 100%; height: 3px; padding: 5px 5px 5px 5px;" align="left">
                                                             <cc2:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" runat="server" ActiveTabIndex="0" Width="100%">
-                                                                <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="æˆ‘è¦å¤„ç†çš„ç¼ºé™·ï¼š">
+                                                                <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="ÎÒÒª´¦ÀíµÄÈ±ÏÝ£º">
                                                                     <HeaderTemplate>
                                                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,WoYaoChuLiDeQueXian%>"></asp:Label>
                                                                     </HeaderTemplate>
@@ -158,29 +158,29 @@
 
                                                                                         <ItemStyle CssClass="itemStyle" />
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                                                            <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTProjectDefectDetail.aspx?ID={0}"
-                                                                                                DataTextField="Operation" HeaderText="æˆ‘çš„å·¥ä½œ" Target="_blank">
+                                                                                                DataTextField="Operation" HeaderText="ÎÒµÄ¹¤×÷" Target="_blank">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                                                             </asp:HyperLinkColumn>
-                                                                                            <asp:BoundColumn DataField="DefectID" HeaderText="ç¼ºé™·å·">
+                                                                                            <asp:BoundColumn DataField="DefectID" HeaderText="È±ÏÝºÅ">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="DefectName" HeaderText="ç¼ºé™·å">
+                                                                                            <asp:BoundColumn DataField="DefectName" HeaderText="È±ÏÝÃû">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="23%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="AssignManName" HeaderText="åˆ†æ´¾äºº">
+                                                                                            <asp:BoundColumn DataField="AssignManName" HeaderText="·ÖÅÉÈË">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="å¼€å§‹æ—¶é—´">
+                                                                                            <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="¿ªÊ¼Ê±¼ä">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ç»“æŸæ—¶é—´">
+                                                                                            <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="½áÊøÊ±¼ä">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                                                            <asp:TemplateColumn HeaderText="×´Ì¬">
                                                                                                 <ItemTemplate>
                                                                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                                 </ItemTemplate>
@@ -200,7 +200,7 @@
                                                                         </table>
                                                                     </ContentTemplate>
                                                                 </cc2:TabPanel>
-                                                                <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="å·²å¤„ç†ä½†æ²¡åˆ†æ´¾çš„ç¼ºé™·">
+                                                                <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="ÒÑ´¦Àíµ«Ã»·ÖÅÉµÄÈ±ÏÝ">
                                                                     <ContentTemplate>
                                                                         <table style="width: 100%;">
                                                                             <tr>
@@ -265,29 +265,29 @@
 
                                                                                         <ItemStyle CssClass="itemStyle" />
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                                                            <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTProjectDefectDetail.aspx?ID={0}"
-                                                                                                DataTextField="Operation" HeaderText="æˆ‘çš„å·¥ä½œ" Target="_blank">
+                                                                                                DataTextField="Operation" HeaderText="ÎÒµÄ¹¤×÷" Target="_blank">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                                                             </asp:HyperLinkColumn>
-                                                                                            <asp:BoundColumn DataField="DefectID" HeaderText="ç¼ºé™·å·">
+                                                                                            <asp:BoundColumn DataField="DefectID" HeaderText="È±ÏÝºÅ">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="DefectName" HeaderText="ç¼ºé™·å">
+                                                                                            <asp:BoundColumn DataField="DefectName" HeaderText="È±ÏÝÃû">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="23%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="AssignManName" HeaderText="åˆ†æ´¾äºº">
+                                                                                            <asp:BoundColumn DataField="AssignManName" HeaderText="·ÖÅÉÈË">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="å¼€å§‹æ—¶é—´">
+                                                                                            <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="¿ªÊ¼Ê±¼ä">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ç»“æŸæ—¶é—´">
+                                                                                            <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="½áÊøÊ±¼ä">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                                                            <asp:TemplateColumn HeaderText="×´Ì¬">
                                                                                                 <ItemTemplate>
                                                                                                     <%# ShareClass.GetStatusHomeNameByDefectmentStatus(Eval("Status").ToString()) %>
                                                                                                 </ItemTemplate>
@@ -317,7 +317,7 @@
                                                     <tr>
                                                         <td style="width: 100%; height: 3px; text-align: left;">
                                                             <span style="font-size: 10pt;">
-                                                                <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,WoYiFenPaiDeQueXian%>"></asp:Label>ï¼š</span>
+                                                                <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,WoYiFenPaiDeQueXian%>"></asp:Label>£º</span>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -383,29 +383,29 @@
 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                                    <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTProjectDefectDetail.aspx?ID={0}"
-                                                                        DataTextField="Operation" HeaderText="æˆ‘çš„å·¥ä½œ" Target="_blank">
+                                                                        DataTextField="Operation" HeaderText="ÎÒµÄ¹¤×÷" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                                     </asp:HyperLinkColumn>
-                                                                    <asp:BoundColumn DataField="DefectID" HeaderText="ç¼ºé™·å·">
+                                                                    <asp:BoundColumn DataField="DefectID" HeaderText="È±ÏÝºÅ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="DefectName" HeaderText="ç¼ºé™·å">
+                                                                    <asp:BoundColumn DataField="DefectName" HeaderText="È±ÏÝÃû">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="23%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="AssignManName" HeaderText="åˆ†æ´¾äºº">
+                                                                    <asp:BoundColumn DataField="AssignManName" HeaderText="·ÖÅÉÈË">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="å¼€å§‹æ—¶é—´">
+                                                                    <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="¿ªÊ¼Ê±¼ä">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ç»“æŸæ—¶é—´">
+                                                                    <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="½áÊøÊ±¼ä">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                                    <asp:TemplateColumn HeaderText="×´Ì¬">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass.GetStatusHomeNameByDefectmentStatus(Eval("Status").ToString()) %>
                                                                         </ItemTemplate>
@@ -429,7 +429,7 @@
                                                     <tr>
                                                         <td style="width: 100%; height: 3px; text-align: left;">
                                                             <span style="font-size: 10pt;">
-                                                                <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,WYCLBYFPDXQ%>"></asp:Label>ï¼š</span>
+                                                                <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,WYCLBYFPDXQ%>"></asp:Label>£º</span>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -495,29 +495,29 @@
 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                                    <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTProjectDefectDetail.aspx?ID={0}"
-                                                                        DataTextField="Operation" HeaderText="æˆ‘çš„å·¥ä½œ" Target="_blank">
+                                                                        DataTextField="Operation" HeaderText="ÎÒµÄ¹¤×÷" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                                     </asp:HyperLinkColumn>
-                                                                    <asp:BoundColumn DataField="DefectID" HeaderText="ç¼ºé™·å·">
+                                                                    <asp:BoundColumn DataField="DefectID" HeaderText="È±ÏÝºÅ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="DefectName" HeaderText="ç¼ºé™·å">
+                                                                    <asp:BoundColumn DataField="DefectName" HeaderText="È±ÏÝÃû">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="23%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="AssignManName" HeaderText="åˆ†æ´¾äºº">
+                                                                    <asp:BoundColumn DataField="AssignManName" HeaderText="·ÖÅÉÈË">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="å¼€å§‹æ—¶é—´">
+                                                                    <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="¿ªÊ¼Ê±¼ä">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ç»“æŸæ—¶é—´">
+                                                                    <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="½áÊøÊ±¼ä">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                                    <asp:TemplateColumn HeaderText="×´Ì¬">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass.GetStatusHomeNameByDefectmentStatus(Eval("Status").ToString()) %>
                                                                         </ItemTemplate>
@@ -541,7 +541,7 @@
                                                     <tr>
                                                         <td style="width: 100%; height: 3px; text-align: left;">
                                                             <span style="font-size: 10pt;">
-                                                                <asp:Label ID="Label37" runat="server" Text="<%$ Resources:lang,WoJianLiDeQueXian%>"></asp:Label>ï¼š</span>
+                                                                <asp:Label ID="Label37" runat="server" Text="<%$ Resources:lang,WoJianLiDeQueXian%>"></asp:Label>£º</span>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -596,30 +596,30 @@
                                                                 ShowHeader="false" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                                 OnPageIndexChanged="DataGrid5_PageIndexChanged" PageSize="6" Width="95%">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="DefectID" HeaderText="ç¼–å·">
+                                                                    <asp:BoundColumn DataField="DefectID" HeaderText="±àºÅ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="DefectID" DataNavigateUrlFormatString="TTCreateProjectDefectDetail.aspx?DefectID={0}"
-                                                                        DataTextField="DefectName" HeaderText="ç¼ºé™·åç§°" Target="_blank">
+                                                                        DataTextField="DefectName" HeaderText="È±ÏÝÃû³Æ" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                                     </asp:HyperLinkColumn>
-                                                                    <asp:BoundColumn DataField="DefectType" HeaderText="ç±»åž‹">
+                                                                    <asp:BoundColumn DataField="DefectType" HeaderText="ÀàÐÍ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="DefectFinishedDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ç¼ºé™·æ—¥æœŸ">
+                                                                    <asp:BoundColumn DataField="DefectFinishedDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="È±ÏÝÈÕÆÚ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="MakeDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="å»ºç«‹æ—¥æœŸ">
+                                                                    <asp:BoundColumn DataField="MakeDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="½¨Á¢ÈÕÆÚ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                                    <asp:TemplateColumn HeaderText="×´Ì¬">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                     </asp:TemplateColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="DefectID" DataNavigateUrlFormatString="TTDefectAssignRecord.aspx?DefectID={0}"
-                                                                        Text="<%$ Resources:lang,AssignRecord %>" HeaderText="åˆ†æ´¾è®°å½•" Target="_blank">
+                                                                        Text="<%$ Resources:lang,AssignRecord %>" HeaderText="·ÖÅÉ¼ÇÂ¼" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                     </asp:HyperLinkColumn>
 

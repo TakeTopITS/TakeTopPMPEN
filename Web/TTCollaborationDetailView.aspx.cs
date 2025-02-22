@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -38,7 +38,7 @@ public partial class TTCollaborationDetailView : System.Web.UI.Page
 
         strCreatorCode = collaboration.CreatorCode.Trim();
 
-        //this.Title = "协作：" + strCoID + " " + collaboration.CollaborationName.Trim() + " 记录";
+        //this.Title = "Э����" + strCoID + " " + collaboration.CollaborationName.Trim() + " ��¼";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickParentA", " aHandler();", true); if (Page.IsPostBack == false)
         {
@@ -80,8 +80,8 @@ public partial class TTCollaborationDetailView : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Document as document where document.RelatedType = '协作' and document.RelatedID = " + strCoID;
-        strHQL += " and rtrim(ltrim(document.Status)) <> '删除' Order by document.DocID DESC";
+        strHQL = "from Document as document where document.RelatedType = 'Э��' and document.RelatedID = " + strCoID;
+        strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);
 
@@ -125,9 +125,9 @@ public partial class TTCollaborationDetailView : System.Web.UI.Page
 
         strStatus = collaboration.Status.Trim();
 
-        if (strStatus == "新建")
+        if (strStatus == "New")
         {
-            collaboration.Status = "处理中";
+            collaboration.Status = "InProgress";
 
             try
             {

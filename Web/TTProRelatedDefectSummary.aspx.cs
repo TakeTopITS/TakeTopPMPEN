@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -28,7 +28,7 @@ public partial class TTProRelatedDefectSummary : System.Web.UI.Page
         IList lst;
         string strUserName;
 
-        //this.Title = Resources.lang.Project + strProjectID + " ç›¸å…³éœ€æ±‚";
+        //this.Title = Resources.lang.Project + strProjectID + " Ïà¹ØÐèÇó";
 
         LB_UserCode.Text = strUserCode;
         strUserName = GetUserName(strUserCode);

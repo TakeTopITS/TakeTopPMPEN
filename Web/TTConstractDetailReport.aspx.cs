@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -33,7 +33,7 @@ public partial class TTConstractDetailReport : System.Web.UI.Page
         strLikeUserCode = "%" + strUserCode + "%";
 
 
-        //this.Title = "åˆåŒåˆ©æ¶¦æŠ¥è¡¨";
+        //this.Title = "ºÏÍ¬ÀûÈó±¨±í";
 
         LB_UserCode.Text = strUserCode;
         strUserName = Session["UserName"].ToString();
@@ -48,28 +48,28 @@ public partial class TTConstractDetailReport : System.Web.UI.Page
             LB_DepartString.Text = strDepartString;
 
 
-            //strHQL = @"select c.PartA as 'å•ä½',
-            //    c.ConstractCode as 'åˆåŒå·',
-            //    COALESCE(i.InvoiceAmount,0) as 'å¼€ç¥¨é‡‘é¢',
-            //    COALESCE(p.PayableAccount,0) as 'è®¢è´§é‡‘é¢',
-            //    COALESCE(r.PayableRecordAmount,0) as 'å›½å¤–è¿›è´§æˆæœ¬',
-            //    COALESCE(p.PayableAccount,0) as 'å›½å†…è¿›è´§æˆæœ¬',
-            //    COALESCE(f.InnerEntryTax,0) as 'è¿›å£å…³ç¨',
-            //    COALESCE(f.InnerAddedValueTax,0) as 'è¿›å£å¢å€¼ç¨',
-            //    COALESCE(p.PayOtherAccount,0) as 'å…¶ä»–è´¹ç”¨æ€»é¢',
-            //    COALESCE(r.HandlingCharge,0) as 'é“¶è¡Œæ‰‹ç»­è´¹',
-            //    COALESCE(p.OtherAccount,0) as 'å…¶ä»–ä»˜è´¹',
-            //    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) as 'åº”äº¤å¢å€¼ç¨',
-            //    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) * 12 / 100 as 'åº”äº¤åœ°ç¨',
-            //    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 as 'å°èŠ±ç¨',
-            //    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 as 'é˜²æ´ªè´¹',
+            //strHQL = @"select c.PartA as 'µ¥Î»',
+            //    c.ConstractCode as 'ºÏÍ¬ºÅ',
+            //    COALESCE(i.InvoiceAmount,0) as '¿ªÆ±½ğ¶î',
+            //    COALESCE(p.PayableAccount,0) as '¶©»õ½ğ¶î',
+            //    COALESCE(r.PayableRecordAmount,0) as '¹úÍâ½ø»õ³É±¾',
+            //    COALESCE(p.PayableAccount,0) as '¹úÄÚ½ø»õ³É±¾',
+            //    COALESCE(f.InnerEntryTax,0) as '½ø¿Ú¹ØË°',
+            //    COALESCE(f.InnerAddedValueTax,0) as '½ø¿ÚÔöÖµË°',
+            //    COALESCE(p.PayOtherAccount,0) as 'ÆäËû·ÑÓÃ×Ü¶î',
+            //    COALESCE(r.HandlingCharge,0) as 'ÒøĞĞÊÖĞø·Ñ',
+            //    COALESCE(p.OtherAccount,0) as 'ÆäËû¸¶·Ñ',
+            //    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) as 'Ó¦½»ÔöÖµË°',
+            //    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) * 12 / 100 as 'Ó¦½»µØË°',
+            //    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 as 'Ó¡»¨Ë°',
+            //    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 as '·Àºé·Ñ',
             //    (COALESCE(i.InvoiceAmount,0)-COALESCE(r.PayableRecordAmount,0)-COALESCE(p.PayableAccount,0)-COALESCE(f.InnerEntryTax,0)-
             //    COALESCE(f.InnerAddedValueTax,0)-COALESCE(p.PayOtherAccount,0)-COALESCE(r.HandlingCharge,0)-COALESCE(p.OtherAccount,0)-0)-
             //    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) -
             //    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) * 12 / 100 -
             //    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 - 
             //    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000
-            //    as 'åˆåŒåˆ©æ¶¦'
+            //    as 'ºÏÍ¬ÀûÈó'
             //    from dbo.T_Constract c
             //    left join 
             //    (
@@ -130,28 +130,28 @@ public partial class TTConstractDetailReport : System.Web.UI.Page
         strConstractName = "%" + TB_ConstractName.Text.Trim() + "%";
 
 
-        strHQL = @"select c.PartA as 'å•ä½',
-                    c.ConstractCode as 'åˆåŒå·',
-                    COALESCE(i.InvoiceAmount,0) as 'åˆåŒé‡‘é¢',
-                    COALESCE(p.PayableAccount,0) as 'è®¢è´§é‡‘é¢',
-                    COALESCE(r.PayableRecordAmount,0) as 'å›½å¤–è¿›è´§æˆæœ¬',
-                    COALESCE(p.PayableAccount,0) as 'å›½å†…è¿›è´§æˆæœ¬',
-                    COALESCE(f.InnerEntryTax,0) as 'è¿›å£å…³ç¨',
-                    COALESCE(f.InnerAddedValueTax,0) as 'è¿›å£å¢å€¼ç¨',
-                    COALESCE(p.PayOtherAccount,0) as 'å…¶ä»–è´¹ç”¨æ€»é¢',
-                    COALESCE(r.HandlingCharge,0) as 'é“¶è¡Œæ‰‹ç»­è´¹',
-                    COALESCE(p.OtherAccount,0) as 'å…¶ä»–ä»˜è´¹',
-                    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) as 'åº”äº¤å¢å€¼ç¨',
-                    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) * 12 / 100 as 'åº”äº¤åœ°ç¨',
-                    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 as 'å°èŠ±ç¨',
-                    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 as 'é˜²æ´ªè´¹',
+        strHQL = @"select c.PartA as 'µ¥Î»',
+                    c.ConstractCode as 'ºÏÍ¬ºÅ',
+                    COALESCE(i.InvoiceAmount,0) as 'ºÏÍ¬½ğ¶î',
+                    COALESCE(p.PayableAccount,0) as '¶©»õ½ğ¶î',
+                    COALESCE(r.PayableRecordAmount,0) as '¹úÍâ½ø»õ³É±¾',
+                    COALESCE(p.PayableAccount,0) as '¹úÄÚ½ø»õ³É±¾',
+                    COALESCE(f.InnerEntryTax,0) as '½ø¿Ú¹ØË°',
+                    COALESCE(f.InnerAddedValueTax,0) as '½ø¿ÚÔöÖµË°',
+                    COALESCE(p.PayOtherAccount,0) as 'ÆäËû·ÑÓÃ×Ü¶î',
+                    COALESCE(r.HandlingCharge,0) as 'ÒøĞĞÊÖĞø·Ñ',
+                    COALESCE(p.OtherAccount,0) as 'ÆäËû¸¶·Ñ',
+                    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) as 'Ó¦½»ÔöÖµË°',
+                    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) * 12 / 100 as 'Ó¦½»µØË°',
+                    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 as 'Ó¡»¨Ë°',
+                    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 as '·Àºé·Ñ',
                     (COALESCE(i.InvoiceAmount,0)-COALESCE(r.PayableRecordAmount,0)-COALESCE(p.PayableAccount,0)-COALESCE(f.InnerEntryTax,0)-
                     COALESCE(f.InnerAddedValueTax,0)-COALESCE(p.PayOtherAccount,0)-COALESCE(r.HandlingCharge,0)-COALESCE(p.OtherAccount,0)-0)-
                     (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) -
                     (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) * 12 / 100 -
                     COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 - 
                     COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000
-                    as 'åˆåŒåˆ©æ¶¦'
+                    as 'ºÏÍ¬ÀûÈó'
                     from T_Constract c
                     left join 
                     (

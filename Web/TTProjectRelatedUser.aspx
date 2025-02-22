@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" EnableEventValidation="false" CodeFile="TTProjectRelatedUser.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" EnableEventValidation="false" CodeFile="TTProjectRelatedUser.aspx.cs"
     Inherits="TTProjectRelatedUser" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -178,40 +178,40 @@
                                                     ShowHeader="False" OnItemCommand="DataGrid2_ItemCommand" Width="100%"
                                                     CellPadding="4" ForeColor="#333333" GridLines="None">
                                                     <Columns>
-                                                        <asp:ButtonColumn CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ä¿®æ”¹' /&gt;&lt;/div&gt;">
+                                                        <asp:ButtonColumn CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ÐÞ¸Ä' /&gt;&lt;/div&gt;">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:ButtonColumn>
                                                         <asp:TemplateColumn HeaderText="Delete">
                                                             <ItemTemplate>
-                                                                <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='åˆ é™¤' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                                <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:TemplateColumn>
                                                         <asp:BoundColumn DataField="ID" HeaderText="ID">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserCode" HeaderText="ä»£ç ">
+                                                        <asp:BoundColumn DataField="UserCode" HeaderText="´úÂë">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="åç§°">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="Ãû³Æ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DepartName" HeaderText="éƒ¨é—¨">
+                                                        <asp:BoundColumn DataField="DepartName" HeaderText="²¿ÃÅ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Actor" HeaderText="è§’è‰²">
+                                                        <asp:BoundColumn DataField="Actor" HeaderText="½ÇÉ«">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UnitHourSalary" HeaderText="æ—¶è–ª">
+                                                        <asp:BoundColumn DataField="UnitHourSalary" HeaderText="Ê±Ð½">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CanUpdatePlan" HeaderText="å¯æ”¹è®¡åˆ’">
+                                                        <asp:BoundColumn DataField="CanUpdatePlan" HeaderText="¿É¸Ä¼Æ»®">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="JoinDate" HeaderText="åŠ å…¥æ—¶é—´" DataFormatString="{0:yyyy/MM/dd}">
+                                                        <asp:BoundColumn DataField="JoinDate" HeaderText="¼ÓÈëÊ±¼ä" DataFormatString="{0:yyyy/MM/dd}">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ActorGroup" HeaderText="è§’è‰²ç»„">
+                                                        <asp:BoundColumn DataField="ActorGroup" HeaderText="½ÇÉ«×é">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="14%" />
                                                         </asp:BoundColumn>
                                                     </Columns>
@@ -247,10 +247,10 @@
 
                                                                         <asp:Label ID="LB_tbActorGroupList" runat="server" Text="<%$ Resources:lang,ActorGroupList %>" />: </td>
 
-                                                                    <td>ï¼ˆ</td>
+                                                                    <td>£¨</td>
 
                                                                     <td>
-                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,JueSeZuMingCheng %>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,JueSeZuMingCheng %>"></asp:Label>£º</td>
 
                                                                     <td>
 
@@ -291,7 +291,7 @@
                                                                 <tr>
 
                                                                     <td style="height: 10px; text-align: left">
-                                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,CJJSZBBXMCYGHWJSZCY %>"></asp:Label>ï¼š
+                                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,CJJSZBBXMCYGHWJSZCY %>"></asp:Label>£º
                                                                     </td>
                                                                 </tr>
 
@@ -399,7 +399,7 @@
                                             <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
 
                                             <Columns>
-                                                <asp:TemplateColumn HeaderText="éƒ¨é—¨äººå‘˜ï¼š">
+                                                <asp:TemplateColumn HeaderText="²¿ÃÅÈËÔ±£º">
                                                     <ItemTemplate>
                                                         <asp:Button ID="BT_UserCode" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>'
                                                             CssClass="inpu" />
@@ -480,9 +480,9 @@
 
                                                                 <asp:DropDownList ID="DL_SalaryMethod" runat="server">
 
-                                                                    <asp:ListItem Value="ææˆ" />
+                                                                    <asp:ListItem Value="Ìá³É" />
 
-                                                                    <asp:ListItem Value="å·¥æ—¶" />
+                                                                    <asp:ListItem Value="¹¤Ê±" />
                                                                 </asp:DropDownList>
                                                             </td>
 
@@ -564,7 +564,7 @@
                                                         <tr>
 
                                                             <td style="text-align: right;" class="formItemBgStyle">
-                                                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,KeGaiJiHua %>"></asp:Label>ï¼š
+                                                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,KeGaiJiHua %>"></asp:Label>£º
                                                             </td>
 
                                                             <td style="text-align: left;" class="formItemBgStyle">
@@ -586,17 +586,17 @@
 
                                                                 <asp:DropDownList ID="DL_Status" runat="server">
 
-                                                                    <asp:ListItem Value="è®¡åˆ’" />
+                                                                    <asp:ListItem Value="Plan" />
 
-                                                                    <asp:ListItem Value="å—ç†" />
+                                                                    <asp:ListItem Value="Accepted" />
 
-                                                                    <asp:ListItem Value="æ‹’ç»" />
+                                                                    <asp:ListItem Value="Rejected" />
 
-                                                                    <asp:ListItem Value="å¤„ç†ä¸­" />
+                                                                    <asp:ListItem Value="InProgress" />
 
-                                                                    <asp:ListItem Value="æš‚åœ" />
+                                                                    <asp:ListItem Value="Pause" />
 
-                                                                    <asp:ListItem Value="ç»ˆæ­¢" />
+                                                                    <asp:ListItem Value="Stop" />
                                                                 </asp:DropDownList>
                                                             </td>
                                                         </tr>

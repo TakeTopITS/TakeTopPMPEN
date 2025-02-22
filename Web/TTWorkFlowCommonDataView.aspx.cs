@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Collections;
 using System.Data;
 using System.Web.UI;
@@ -50,23 +50,23 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                 LB_WorkflowStatus.Text = GetStatusHomeNameByWorkflowStatus(strWLID);
                 LB_Owner.Text = System.Configuration.ConfigurationManager.AppSettings["CopyRight"];
 
-                //ÈôÑÂä†Áî®Êà∑Ëá™ÂÆö‰πâÁöÑJSCodeÂà∞È°µÈù¢
+                //∏Ωº””√ªß◊‘∂®“ÂµƒJSCodeµΩ“≥√Ê
                 string strWFCreatorCode = GetWFCreatorCodeByWorkflowID(strWLID);
                 TakeTopWF.WFShareClass.AttachUserJSCodeFromWFTemplate(strTemName, LIT_AttachUserJSCode, strWFCreatorCode, "", "0", "");
 
-                //ÈôÑÂä†Â∑•‰ΩúÊµÅÊ≠•È™§Áî®Êà∑Ëá™ÂÆö‰πâÁöÑJSCodeÂà∞È°µÈù¢
+                //∏Ωº”π§◊˜¡˜≤Ω÷Ë”√ªß◊‘∂®“ÂµƒJSCodeµΩ“≥√Ê
                 if (strStepID != "0")
                 {
                     string strCurrentStepSortNumber = ShareClass.GetWorkFlowCurrentStepSortNumber(strStepID).ToString();
                     TakeTopWF.WFShareClass.AttachUserJSCodeFromWFTemplateStep(strTemName, strCurrentStepSortNumber, LIT_AttachUserWFStepJSCode, strWFCreatorCode);
                 }
 
-                //ÊääÁªùÂØπË∑ØÂæÑËΩ¨‰∏∫Áõ∏ÂØπË∑ØÂæÑ
+                //∞—æ¯∂‘¬∑æ∂◊™Œ™œ‡∂‘¬∑æ∂
                 string strXMLFileName, strXMLFileURL;
-                strXMLFileName = System.IO.Path.GetFileName(strXMLFile);//Êñá‰ª∂Âêç 
+                strXMLFileName = System.IO.Path.GetFileName(strXMLFile);//Œƒº˛√˚ 
                 strXMLFileURL = "Doc\\" + "XML" + "\\" + strXMLFileName;
 
-                //ÂèñÊúÄÊñ∞ÊµÅÁ®ãË°®ÂçïÊï∞ÊçÆÊñá‰ª∂ÔºåÂπ∂Âú®ÊõøÊç¢‰∏çÂèØËßÜÂüü
+                //»°◊Ó–¬¡˜≥Ã±Ìµ• ˝æ›Œƒº˛£¨≤¢‘⁄ÃÊªª≤ªø… ””Ú
                 WFDataHandle wfDataHandle = new WFDataHandle();
                 strUnVisibleFieldXMLFile = wfDataHandle.GetXMLFileAfterReplaceWFXmlUNVisibleFieldNode(strWLID, strID, strXMLFileURL);
                 LB_UnVisibleFieldXMLFile.Text = strUnVisibleFieldXMLFile;
@@ -86,7 +86,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     ((Label)(DataList43.Items[0].FindControl("LB_TotalOvertimeDaysForCurrrentMonth"))).Text = ShareClass.GetTotalOvertimeDayNumberInCurrentMonth(strOvertimeType, strOvertimeApplicantCode, strOvertimeStartTime);
                     ((Label)(DataList43.Items[0].FindControl("LB_TotalOvertimeDaysForCurrrentYear"))).Text = ShareClass.GetTotalOvertimeDayNumberInCurrentYear(strOvertimeType, strOvertimeApplicantCode, strOvertimeStartTime);
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList43, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -100,7 +100,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList1.DataSource = ds;
                     DataList1.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList1, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -114,7 +114,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList2.DataSource = ds;
                     DataList2.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList2, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -127,7 +127,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList3.DataSource = ds;
                     DataList3.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList3, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -140,7 +140,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList4.DataSource = ds;
                     DataList4.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList4, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -153,7 +153,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList5.DataSource = ds;
                     DataList5.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList5, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -166,7 +166,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList7.DataSource = ds;
                     DataList7.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList7, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -179,7 +179,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList8.DataSource = ds;
                     DataList8.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList8, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -192,7 +192,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList9.DataSource = ds;
                     DataList9.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList9, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -205,7 +205,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList10.DataSource = ds;
                     DataList10.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList10, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -218,7 +218,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList11.DataSource = ds;
                     DataList11.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList11, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -231,7 +231,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList12.DataSource = ds;
                     DataList12.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList12, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -244,7 +244,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList13.DataSource = ds;
                     DataList13.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList13, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -257,7 +257,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList14.DataSource = ds;
                     DataList14.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList14, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -270,7 +270,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList15.DataSource = ds;
                     DataList15.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList15, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -283,7 +283,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList16.DataSource = ds;
                     DataList16.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList16, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -296,7 +296,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList17.DataSource = ds;
                     DataList17.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList17, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -309,7 +309,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList18.DataSource = ds;
                     DataList18.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList18, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -322,7 +322,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList19.DataSource = ds;
                     DataList19.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList19, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -335,7 +335,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList20.DataSource = ds;
                     DataList20.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList20, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -355,7 +355,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     ((Label)(DataList21.Items[0].FindControl("LB_TotalLeaveDaysForCurrrentMonth"))).Text = ShareClass.GetTotalLeaveDayNumberInCurrentMonth(strLeaveType, strLeaveApplicantCode, strLeaveStartTime);
                     ((Label)(DataList21.Items[0].FindControl("LB_TotalLeaveDaysForCurrrentYear"))).Text = ShareClass.GetTotalLeaveDayNumberInCurrentYear(strLeaveType, strLeaveApplicantCode, strLeaveStartTime);
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList21, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -369,7 +369,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList22.DataSource = ds;
                     DataList22.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList22, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -382,7 +382,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList23.DataSource = ds;
                     DataList23.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList23, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -395,7 +395,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList24.DataSource = ds;
                     DataList24.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList24, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -408,7 +408,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList25.DataSource = ds;
                     DataList25.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList25, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -421,7 +421,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList26.DataSource = ds;
                     DataList26.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList26, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -434,7 +434,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList39.DataSource = ds;
                     DataList39.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList39, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -447,7 +447,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList40.DataSource = ds;
                     DataList40.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList40, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -460,7 +460,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList41.DataSource = ds;
                     DataList41.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList41, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -473,7 +473,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList27.DataSource = ds;
                     DataList27.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList27, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -486,7 +486,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList28.DataSource = ds;
                     DataList28.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList28, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -499,7 +499,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList30.DataSource = ds;
                     DataList30.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList30, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -512,7 +512,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList36.DataSource = ds;
                     DataList36.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList36, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -525,7 +525,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList37.DataSource = ds;
                     DataList37.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList37, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -538,7 +538,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList38.DataSource = ds;
                     DataList38.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList38, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -552,7 +552,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList42.DataSource = ds;
                     DataList42.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList42, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch (Exception err)
@@ -569,7 +569,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     ExpenseClaim expenseClaim = GetExpenseClaim(strECID);
                     ((Label)(DataList6.Items[0].FindControl("LB_Status"))).Text = expenseClaim.Status.Trim();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList6, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -586,7 +586,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     ProjectMaterialPaymentApplicant projectMaterialPaymentApplicant = GetProjectMaterialPaymentApplicant(strPPOID);
                     ((Label)(DataList31.Items[0].FindControl("LB_Status"))).Text = projectMaterialPaymentApplicant.Status.Trim();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList31, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -603,7 +603,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     BMPurchaseApplication bMPurchaseApplication = GetBMPurchaseApplication(strBMPOID);
                     ((Label)(DataList32.Items[0].FindControl("LB_Status"))).Text = bMPurchaseApplication.Status.Trim();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList32, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -621,7 +621,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     ((Label)(DataList33.Items[0].FindControl("LB_Status"))).Text = projectMaterialPaymentApplicant.Status.Trim();
 
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList33, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -638,7 +638,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     SupplierAssetPaymentApplicant supplierAssetPaymentApplicant = GetSupplierAssetPaymentApplicant(strPPOID);
                     ((Label)(DataList34.Items[0].FindControl("LB_Status"))).Text = supplierAssetPaymentApplicant.Status.Trim();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList34, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch
@@ -679,7 +679,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     ((TextBox)(DataList35.Items[0].FindControl("TB_RelatedImpact"))).Text = constractPayableVisa.RelatedImpact;
                     ((TextBox)(DataList35.Items[0].FindControl("TB_RelatedResult"))).Text = constractPayableVisa.RelatedResult;
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList35, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch (Exception err)
@@ -693,7 +693,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     DataList44.DataSource = ds;
                     DataList44.DataBind();
 
-                    //ËÆæÁΩÆ‚Äú‰øÆÊîπ‚ÄùÈìæÊé•‰∏∫‰∏çÂèØËßÜ
+                    //…Ë÷√°∞–ﬁ∏ƒ°±¡¥Ω”Œ™≤ªø… ”
                     SetControlDisable(DataList44, "HL_WLBusinessUpdate", strWFStatus, strWFStepStatus, strIsAllowFullEdit);
                 }
                 catch(Exception err)
@@ -710,7 +710,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     LoadWorkflowApproveRecord(strWLID);
                     //LoadWorkflowDataFileList(strID);
 
-                    //ÂèñÂíå‰∏äÁ∫ßÊµÅÁ®ãÁöÑÂÆ°ÊâπËÆ∞ÂΩï
+                    //»°∫Õ…œº∂¡˜≥Ãµƒ…Û≈˙º«¬º
                     string strParentWFID, strParentWFStepID;
                     strParentWFID = ShareClass.GetParentWorklowID(strWLID);
                     strParentWFStepID = ShareClass.GetParentWorklowStepID(strWLID);
@@ -736,12 +736,12 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
         }
     }
 
-    //ËÆæÁΩÆÂÖÉÁ¥†‰∏∫‰∏çÂèØËßÜ
+    //…Ë÷√‘™ÀÿŒ™≤ªø… ”
     protected void SetControlDisable(DataList dataList, string strControlName, string strWFStatus, string strWFStepStatus, string strIsAllowFullEdit)
     {
         try
         {
-            if (strWFStatus == "ÈÄöËøá" | strWFStatus == "ÁªìÊ°à" | strIsAllowFullEdit == "NO" | strWFStepStatus == "ÈÄöËøá")
+            if (strWFStatus == "Passed" | strWFStatus == "CaseClosed" | strIsAllowFullEdit == "NO" | strWFStepStatus == "Passed")
             {
                 ((HyperLink)(dataList.Items[0].FindControl(strControlName))).Visible = false;
             }
@@ -751,7 +751,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
         }
     }
 
-    //ÂèñÂæóÊòØÂê¶ÂÖÅËÆ∏ÂÖ®Ë°®ÁºñËæë
+    //»°µ√ «∑Ò‘ –Ì»´±Ì±‡º≠
     protected string GetWorkflowStepDetailAllowFullEdit(string strStepDetailID)
     {
         string strHQL;
@@ -779,7 +779,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
         }
     }
 
-    //ÂèñÂæóÂ∑•‰ΩúÊµÅÊ≠•È™§ÁöÑÁä∂ÊÄÅ
+    //»°µ√π§◊˜¡˜≤Ω÷Ëµƒ◊¥Ã¨
     protected string GetWorkflowStepStatus(string strStepID)
     {
         string strHQL;
@@ -798,7 +798,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
         }
         else
         {
-            return "Â§ÑÁêÜ‰∏≠";
+            return "InProgress";
         }
     }
 
@@ -844,12 +844,12 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
 
             ExpenseClaim expenseClaim = GetExpenseClaim(strECID);
 
-            //ÊèíÂÖ•Â∫îÊî∂Â∫î‰ªòÊï∞ÊçÆÂà∞Â∫îÊî∂Â∫î‰ªòË°®
+            //≤Â»Î”¶ ’”¶∏∂ ˝æ›µΩ”¶ ’”¶∏∂±Ì
             //decimal deAmount = expenseClaim.Amount;
             string strCurrencyType = expenseClaim.CurrencyType.Trim();
             string strReAndPayer = expenseClaim.ApplicantCode.Trim() + expenseClaim.ApplicantName.Trim();
             string strStatus = expenseClaim.Status.Trim();
-            string strPayMethod = "ËΩ¨Ë¥¶";
+            string strPayMethod = "◊™’À";
 
             strApplicantCode = expenseClaim.ApplicantCode.Trim();
             strRelatedType = expenseClaim.RelatedType.Trim();
@@ -857,13 +857,13 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
 
             int intProjectID = 1;
 
-            if (strStatus != "Â∑≤ËÆ∞Ë¥¶")
+            if (strStatus != "Recorded")
             {
                 decimal deDetailAmount;
 
                 LB_WorkflowStatus.Text = strWFStatus;
 
-                if (strWFStatus == "ÈÄöËøá" | strWFStatus == "ÁªìÊ°à")
+                if (strWFStatus == "Passed" | strWFStatus == "CaseClosed")
                 {
                     strHQL = "From ExpenseClaimDetail as expenseClaimDetail Where expenseClaimDetail.ECID = " + strECID;
                     ExpenseClaimDetailBLL expenseClaimDetailBLL = new ExpenseClaimDetailBLL();
@@ -883,9 +883,9 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                         strHQL = "Update T_ConstractPayable Set OutOfPocketAccount = " + deDetailAmount.ToString() + ",UNPayAmount = 0 Where ID = " + intReAndPayalbeID.ToString();
                         ShareClass.RunSqlCommand(strHQL);
 
-                        if (strRelatedType != "È°πÁõÆ")
+                        if (strRelatedType != "Project")
                         {
-                            //ÊääÊä•ÈîÄË¥πÁî®ÂàóÂÖ•È¢ÑÁÆóË¥πÁî®
+                            //∞—±®œ˙∑—”√¡–»Î‘§À„∑—”√
                             if (strAccountCode != "")
                             {
                                 ShareClass.AddClaimExpenseToBudget(strAccountCode, strAccountName, 0, strApplicantCode, deDetailAmount, DateTime.Now.Year, DateTime.Now.Month);
@@ -893,16 +893,16 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                         }
                     }
 
-                    strHQL = "Update T_ExpenseClaim Set Status = 'Â∑≤ËÆ∞Ë¥¶' Where ECID = " + strECID;
+                    strHQL = "Update T_ExpenseClaim Set Status = 'Recorded' Where ECID = " + strECID;
                     ShareClass.RunSqlCommand(strHQL);
 
-                    ((Label)(DataList6.Items[0].FindControl("LB_Status"))).Text = "Â∑≤ËÆ∞Ë¥¶";
+                    ((Label)(DataList6.Items[0].FindControl("LB_Status"))).Text = "Recorded";
 
                     ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJZCG + "')", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Âè™ÊúâÊµÅÁ®ãÁä∂ÊÄÅ‰∏∫ÈÄöËøáÊàñÁªìÊ°àÁöÑÊâçËÉΩËÆ∞Ë¥¶ÔºÅ')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('÷ª”–¡˜≥Ã◊¥Ã¨Œ™Õ®π˝ªÚΩ·∞∏µƒ≤≈ƒ‹º«’À£°')", true);
                 }
             }
             else
@@ -925,7 +925,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
 
             ProjectMaterialPaymentApplicant projectMaterialPaymentApplicant = GetProjectMaterialPaymentApplicant(strAOID);
 
-            //ÊèíÂÖ•Â∫îÊî∂Â∫î‰ªòÊï∞ÊçÆÂà∞Â∫îÊî∂Â∫î‰ªòË°®
+            //≤Â»Î”¶ ’”¶∏∂ ˝æ›µΩ”¶ ’”¶∏∂±Ì
             //decimal deAmount = projectMaterialPaymentApplicant.CurrentTotalPaymentAmount;
             string strCurrencyType = projectMaterialPaymentApplicant.CurrencyType.Trim();
             string strReAndPayer = projectMaterialPaymentApplicant.PartA.Trim();
@@ -937,11 +937,11 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
 
             decimal deDetailAmount;
 
-            if (strStatus != "Â∑≤ËÆ∞Ë¥¶")
+            if (strStatus != "Recorded")
             {
                 LB_WorkflowStatus.Text = strWFStatus;
 
-                if (strWFStatus == "ÈÄöËøá" | strWFStatus == "ÁªìÊ°à")
+                if (strWFStatus == "Passed" | strWFStatus == "CaseClosed")
                 {
                     strHQL = "From ProjectMaterialPaymentApplicantDetail as projectMaterialPaymentApplicantDetail Where projectMaterialPaymentApplicantDetail.AOID = " + strAOID;
                     ProjectMaterialPaymentApplicantDetailBLL projectMaterialPaymentApplicantDetailBLL = new ProjectMaterialPaymentApplicantDetailBLL();
@@ -961,14 +961,14 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                         strHQL = "Update T_ConstractPayable Set OutOfPocketAccount = " + deDetailAmount.ToString() + ",UNPayAmount = 0 Where ID = " + intReAndPayalbeID.ToString();
                         ShareClass.RunSqlCommand(strHQL);
 
-                        //ÊääÁî≥Êä•Ë¥πÁî®ÂàóÂÖ•È°πÁõÆË¥πÁî®
+                        //∞—…Í±®∑—”√¡–»ÎœÓƒø∑—”√
                         if (intProjectID > 1)
                         {
-                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, "Áâ©ËµÑÈááË¥≠Ë¥πÁî®", deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
+                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, "ŒÔ◊ ≤…π∫∑—”√", deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
                         }
                     }
 
-                    strHQL = "Update T_ProjectMaterialPaymentApplicant Set Status = 'Â∑≤ËÆ∞Ë¥¶' Where AOID = " + strAOID;
+                    strHQL = "Update T_ProjectMaterialPaymentApplicant Set Status = 'Recorded' Where AOID = " + strAOID;
                     ShareClass.RunSqlCommand(strHQL);
 
 
@@ -976,7 +976,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Âè™ÊúâÊµÅÁ®ãÁä∂ÊÄÅ‰∏∫ÈÄöËøáÊàñÁªìÊ°àÁöÑÊâçËÉΩËÆ∞Ë¥¶ÔºÅ')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('÷ª”–¡˜≥Ã◊¥Ã¨Œ™Õ®π˝ªÚΩ·∞∏µƒ≤≈ƒ‹º«’À£°')", true);
                 }
             }
             else
@@ -998,7 +998,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
 
             BMPurchaseApplication bMPurchaseApplication = GetBMPurchaseApplication(strID);
 
-            //ÊèíÂÖ•Â∫îÊî∂Â∫î‰ªòÊï∞ÊçÆÂà∞Â∫îÊî∂Â∫î‰ªòË°®
+            //≤Â»Î”¶ ’”¶∏∂ ˝æ›µΩ”¶ ’”¶∏∂±Ì
             decimal deAmount = bMPurchaseApplication.TotalPayAmount;
             string strCurrencyType = bMPurchaseApplication.CurrencyType.Trim();
             string strReAndPayer = bMPurchaseApplication.SupplierName.Trim();
@@ -1008,11 +1008,11 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
             string strApplicantName = bMPurchaseApplication.Application;
             strAccountCode = bMPurchaseApplication.AccountCode.Trim();
             strAccountName = bMPurchaseApplication.AccountName.Trim();
-            string strPayMethod = "ËΩ¨Ë¥¶";
+            string strPayMethod = "◊™’À";
 
-            if (strStatus != "Â∑≤ËÆ∞Ë¥¶")
+            if (strStatus != "Recorded")
             {
-                if (strWFStatus == "ÈÄöËøá" | strWFStatus == "ÁªìÊ°à")
+                if (strWFStatus == "Passed" | strWFStatus == "CaseClosed")
                 {
                     intReAndPayalbeID = ShareClass.InsertReceivablesOrPayableByAccount("Payables", "BMOPO", "BMOPO", strID, strID, strAccountCode, strAccountName, deAmount, strCurrencyType, strReAndPayer, strApplicantCode, intProjectID);
                     ShareClass.InsertReceivablesOrPayableRecord("Payables", intReAndPayalbeID, deAmount, strCurrencyType, strPayMethod, strReAndPayer, strApplicantCode, intProjectID);
@@ -1020,22 +1020,22 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     strHQL = "Update T_ConstractPayable Set OutOfPocketAccount = " + deAmount.ToString() + ",UNPayAmount = 0 Where ID = " + intReAndPayalbeID.ToString();
                     ShareClass.RunSqlCommand(strHQL);
 
-                    //ÊääÁî≥Êä•Ë¥πÁî®ÂàóÂÖ•È°πÁõÆË¥πÁî®
+                    //∞—…Í±®∑—”√¡–»ÎœÓƒø∑—”√
                     if (intProjectID > 1)
                     {
-                        ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, "Â∑•Á®ãÂàÜÂåÖË¥πÁî®", deAmount, strCurrencyType, strApplicantCode, strApplicantName);
+                        ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, "π§≥Ã∑÷∞¸∑—”√", deAmount, strCurrencyType, strApplicantCode, strApplicantName);
                     }
 
-                    strHQL = "Update T_BMPurchaseApplication Set Status = 'Â∑≤ËÆ∞Ë¥¶' Where ID = " + strID;
+                    strHQL = "Update T_BMPurchaseApplication Set Status = 'Recorded' Where ID = " + strID;
                     ShareClass.RunSqlCommand(strHQL);
 
-                    ((Label)(DataList32.Items[0].FindControl("LB_Status"))).Text = "Â∑≤ËÆ∞Ë¥¶";
+                    ((Label)(DataList32.Items[0].FindControl("LB_Status"))).Text = "Recorded";
 
                     ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJZCG + "')", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Âè™ÊúâÊµÅÁ®ãÁä∂ÊÄÅ‰∏∫ÈÄöËøáÊàñÁªìÊ°àÁöÑÊâçËÉΩËÆ∞Ë¥¶ÔºÅ')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('÷ª”–¡˜≥Ã◊¥Ã¨Œ™Õ®π˝ªÚΩ·∞∏µƒ≤≈ƒ‹º«’À£°')", true);
                 }
             }
             else
@@ -1059,7 +1059,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
 
             ProjectMaterialPaymentApplicant projectMaterialPaymentApplicant = GetProjectMaterialPaymentApplicant(strAOID);
 
-            //ÊèíÂÖ•Â∫îÊî∂Â∫î‰ªòÊï∞ÊçÆÂà∞Â∫îÊî∂Â∫î‰ªòË°®
+            //≤Â»Î”¶ ’”¶∏∂ ˝æ›µΩ”¶ ’”¶∏∂±Ì
             //decimal deAmount = projectMaterialPaymentApplicant.CurrentTotalPaymentAmount;
             string strCurrencyType = projectMaterialPaymentApplicant.CurrencyType.Trim();
             string strReAndPayer = projectMaterialPaymentApplicant.PartA.Trim();
@@ -1071,11 +1071,11 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
 
             decimal deDetailAmount;
 
-            if (strStatus != "Â∑≤ËÆ∞Ë¥¶")
+            if (strStatus != "Recorded")
             {
                 LB_WorkflowStatus.Text = strWFStatus;
 
-                if (strWFStatus == "ÈÄöËøá" | strWFStatus == "ÁªìÊ°à")
+                if (strWFStatus == "Passed" | strWFStatus == "CaseClosed")
                 {
                     strHQL = "From ProjectMaterialPaymentApplicantDetail as projectMaterialPaymentApplicantDetail Where projectMaterialPaymentApplicantDetail.AOID = " + strAOID;
                     ProjectMaterialPaymentApplicantDetailBLL projectMaterialPaymentApplicantDetailBLL = new ProjectMaterialPaymentApplicantDetailBLL();
@@ -1095,14 +1095,14 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                         strHQL = "Update T_ConstractPayable Set OutOfPocketAccount = " + deDetailAmount.ToString() + ",UNPayAmount = 0 Where ID = " + intReAndPayalbeID.ToString();
                         ShareClass.RunSqlCommand(strHQL);
 
-                        //ÊääÁî≥Êä•Ë¥πÁî®ÂàóÂÖ•È°πÁõÆË¥πÁî®
+                        //∞—…Í±®∑—”√¡–»ÎœÓƒø∑—”√
                         if (intProjectID > 1)
                         {
-                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, "Áâ©ËµÑÈááË¥≠Ë¥πÁî®", deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
+                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, "ŒÔ◊ ≤…π∫∑—”√", deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
                         }
                     }
 
-                    strHQL = "Update T_ProjectMaterialPaymentApplicant Set Status = 'Â∑≤ËÆ∞Ë¥¶' Where AOID = " + strAOID;
+                    strHQL = "Update T_ProjectMaterialPaymentApplicant Set Status = 'Recorded' Where AOID = " + strAOID;
                     ShareClass.RunSqlCommand(strHQL);
 
 
@@ -1110,7 +1110,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Âè™ÊúâÊµÅÁ®ãÁä∂ÊÄÅ‰∏∫ÈÄöËøáÊàñÁªìÊ°àÁöÑÊâçËÉΩËÆ∞Ë¥¶ÔºÅ')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('÷ª”–¡˜≥Ã◊¥Ã¨Œ™Õ®π˝ªÚΩ·∞∏µƒ≤≈ƒ‹º«’À£°')", true);
                 }
             }
             else
@@ -1133,7 +1133,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
 
             SupplierAssetPaymentApplicant supplierAssetPaymentApplicant = GetSupplierAssetPaymentApplicant(strAOID);
 
-            //ÊèíÂÖ•Â∫îÊî∂Â∫î‰ªòÊï∞ÊçÆÂà∞Â∫îÊî∂Â∫î‰ªòË°®
+            //≤Â»Î”¶ ’”¶∏∂ ˝æ›µΩ”¶ ’”¶∏∂±Ì
             //decimal deAmount = supplierAssetPaymentApplicant.CurrentTotalPaymentAmount;
             string strCurrencyType = supplierAssetPaymentApplicant.CurrencyType.Trim();
             string strReAndPayer = supplierAssetPaymentApplicant.PartA.Trim();
@@ -1145,11 +1145,11 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
 
             decimal deDetailAmount;
 
-            if (strStatus != "Â∑≤ËÆ∞Ë¥¶")
+            if (strStatus != "Recorded")
             {
                 LB_WorkflowStatus.Text = strWFStatus;
 
-                if (strWFStatus == "ÈÄöËøá" | strWFStatus == "ÁªìÊ°à")
+                if (strWFStatus == "Passed" | strWFStatus == "CaseClosed")
                 {
                     strHQL = "From SupplierAssetPaymentApplicantDetail as supplierAssetPaymentApplicantDetail Where supplierAssetPaymentApplicantDetail.AOID = " + strAOID;
                     SupplierAssetPaymentApplicantDetailBLL supplierAssetPaymentApplicantDetailBLL = new SupplierAssetPaymentApplicantDetailBLL();
@@ -1169,14 +1169,14 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                         strHQL = "Update T_ConstractPayable Set OutOfPocketAccount = " + deDetailAmount.ToString() + ",UNPayAmount = 0 Where ID = " + intReAndPayalbeID.ToString();
                         ShareClass.RunSqlCommand(strHQL);
 
-                        //ÊääÁî≥Êä•Ë¥πÁî®ÂàóÂÖ•È°πÁõÆË¥πÁî®
+                        //∞—…Í±®∑—”√¡–»ÎœÓƒø∑—”√
                         if (intProjectID > 1)
                         {
-                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, "ËµÑ‰∫ßÈááË¥≠Ë¥πÁî®", deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
+                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, "◊ ≤˙≤…π∫∑—”√", deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
                         }
                     }
 
-                    strHQL = "Update T_SupplierAssetPaymentApplicant Set Status = 'Â∑≤ËÆ∞Ë¥¶' Where AOID = " + strAOID;
+                    strHQL = "Update T_SupplierAssetPaymentApplicant Set Status = 'Recorded' Where AOID = " + strAOID;
                     ShareClass.RunSqlCommand(strHQL);
 
 
@@ -1184,7 +1184,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Âè™ÊúâÊµÅÁ®ãÁä∂ÊÄÅ‰∏∫ÈÄöËøáÊàñÁªìÊ°àÁöÑÊâçËÉΩËÆ∞Ë¥¶ÔºÅ')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('÷ª”–¡˜≥Ã◊¥Ã¨Œ™Õ®π˝ªÚΩ·∞∏µƒ≤≈ƒ‹º«’À£°')", true);
                 }
             }
             else
@@ -1213,7 +1213,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
 
             LB_WorkflowStatus.Text = strWFStatus;
 
-            if (strWFStatus != "ÈÄöËøá" | strWFStatus != "ÁªìÊ°à")
+            if (strWFStatus != "Passed" | strWFStatus != "CaseClosed")
             {
                 strHQL = "Update T_ConstractPayableVisa Set RelatedImpact = '" + strRelatedImpact + "' Where ID = " + strID;
                 ShareClass.RunSqlCommand(strHQL);
@@ -1222,7 +1222,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Âè™ÊúâÊµÅÁ®ãÁä∂ÊÄÅ‰∏ç‰∏∫ÈÄöËøáÊàñÁªìÊ°àÁöÑÊâçËÉΩ‰øùÂ≠òÔºÅ')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('÷ª”–¡˜≥Ã◊¥Ã¨≤ªŒ™Õ®π˝ªÚΩ·∞∏µƒ≤≈ƒ‹±£¥Ê£°')", true);
             }
         }
 
@@ -1232,7 +1232,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
 
             LB_WorkflowStatus.Text = strWFStatus;
 
-            if (strWFStatus != "ÈÄöËøá" | strWFStatus != "ÁªìÊ°à")
+            if (strWFStatus != "Passed" | strWFStatus != "CaseClosed")
             {
                 strHQL = "Update T_ConstractPayableVisa Set RelatedResult = '" + strRelatedResult + "' Where ID = " + strID;
                 ShareClass.RunSqlCommand(strHQL);
@@ -1241,14 +1241,14 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Âè™ÊúâÊµÅÁ®ãÁä∂ÊÄÅ‰∏ç‰∏∫ÈÄöËøáÊàñÁªìÊ°àÁöÑÊâçËÉΩ‰øùÂ≠òÔºÅ')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('÷ª”–¡˜≥Ã◊¥Ã¨≤ªŒ™Õ®π˝ªÚΩ·∞∏µƒ≤≈ƒ‹±£¥Ê£°')", true);
             }
         }
     }
 
 
 
-    //ÂèñÂæóÁâ©ËµÑ‰æõÂ∫îÂïÜÁöÑÁ¥ØËÆ°ÈáëÈ¢ù
+    //»°µ√ŒÔ◊ π©”¶…Ãµƒ¿€º∆Ω∂Ó
     public decimal GetTotalProjectMaterialPaymentApplicantAmount(string strSupplier, string strProjectID)
     {
         string strHQL;
@@ -1270,7 +1270,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
         }
     }
 
-    //ÂèñÂæóÁâ©ËµÑÂ∑≤‰ªò‰æõÂ∫îÂïÜÁöÑÁ¥ØËÆ°ÈáëÈ¢ù
+    //»°µ√ŒÔ◊ “—∏∂π©”¶…Ãµƒ¿€º∆Ω∂Ó
     public decimal GetProjectTotalAleadyMaterialPaymentApplicantAmount(string strSupplier, string strProjectID)
     {
         string strHQL;
@@ -1280,7 +1280,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
         {
             strHQL += " and ProjectID = " + strProjectID;
         }
-        strHQL += " and Status = 'Â∑≤ËÆ∞Ë¥¶'";
+        strHQL += " and Status = 'Recorded'";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectMaterialPaymentApplicant");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -1293,7 +1293,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
         }
     }
 
-    //ÂèñÂæóËµÑ‰∫ß‰æõÂ∫îÂïÜÁöÑÁ¥ØËÆ°ÈáëÈ¢ù
+    //»°µ√◊ ≤˙π©”¶…Ãµƒ¿€º∆Ω∂Ó
     public decimal GetTotalSupplierAssetPaymentApplicantAmount(string strSupplier, string strProjectID)
     {
         string strHQL;
@@ -1315,7 +1315,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
         }
     }
 
-    //ÂèñÂæóËµÑ‰∫ßÂ∑≤‰ªò‰æõÂ∫îÂïÜÁöÑÁ¥ØËÆ°ÈáëÈ¢ù
+    //»°µ√◊ ≤˙“—∏∂π©”¶…Ãµƒ¿€º∆Ω∂Ó
     public decimal GetSupplierAssetAleadyMaterialPaymentApplicantAmount(string strSupplier, string strProjectID)
     {
         string strHQL;
@@ -1325,7 +1325,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
         {
             strHQL += " and ProjectID = " + strProjectID;
         }
-        strHQL += " and Status = 'Â∑≤ËÆ∞Ë¥¶'";
+        strHQL += " and Status = 'Recorded'";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_SupplierAssetPaymentApplicant");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -1339,7 +1339,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
     }
 
 
-    //ÂèñÂæóÂàÜÂåÖ‰æõÂ∫îÂïÜÁöÑ‰ªòÊ¨æÊÄªÈ¢ù
+    //»°µ√∑÷∞¸π©”¶…Ãµƒ∏∂øÓ◊‹∂Ó
     public decimal GetTotalBMPurchaseApplicationAmount(string strSupplierName, string strProjectID)
     {
         string strHQL;
@@ -1361,7 +1361,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
         }
     }
 
-    //ÂèñÂæóÂàÜÂåÖ‰æõÂ∫îÂïÜÁöÑÂ∑≤‰ªòÊ¨æÊÄªÈ¢ù
+    //»°µ√∑÷∞¸π©”¶…Ãµƒ“—∏∂øÓ◊‹∂Ó
     public decimal GetTotalAleadyBMPurchaseApplicationAmount(string strSupplierName, string strProjectID)
     {
         string strHQL;
@@ -1371,7 +1371,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
         {
             strHQL += " and ProjectID = " + strProjectID;
         }
-        strHQL += " and Status = 'Â∑≤ËÆ∞Ë¥¶'";
+        strHQL += " and Status = 'Recorded'";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_BMPurchaseApplication");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -1423,13 +1423,13 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
         return bMPurchaseApplication;
     }
 
-    //ÂèñÂæóÈùûÂÖ∑‰Ωì‰∏öÂä°ÂØπÈîÄÊä•ÈîÄÊ¨æÁöÑÁî≥ËØ∑‰∫∫‰ª£Á†Å
+    //»°µ√∑«æﬂÃÂ“µŒÒ∂‘œ˙±®œ˙øÓµƒ…Í«Î»À¥˙¬Î
     protected string GetExpenseClaimApplicantCode(string strECID)
     {
         string strHQL;
 
         strHQL = "Select ApplicantCode From T_ExpenseClaim Where ECID = " + strECID;
-        strHQL += " and RelatedType = 'ÂÖ∂ÂÆÉ' ";
+        strHQL += " and RelatedType = 'Other' ";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ExpenseClaim");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -1517,7 +1517,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
         return ShareClass.GetStatusHomeNameByWorkflowStatus(strStatus);
     }
 
-    //ÂàóÂá∫ÂÆ°Ê†∏ËÆ∞ÂΩï
+    //¡–≥ˆ…Û∫Àº«¬º
     protected void LoadWorkflowApproveRecord(string strWFID)
     {
         string strHQL;
@@ -1555,16 +1555,16 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
-        strHQL = "from Document as document where document.Status <> 'Âà†Èô§' ";
-        strHQL += " and (document.RelatedType = 'Â∑•‰ΩúÊµÅ' and (document.RelatedID = " + strWLID + " Or document.RelatedID in (Select wfStepRelatedWF.WFChildID From WFStepRelatedWF as wfStepRelatedWF Where wfStepRelatedWF.WFID = " + strWLID + ")";
+        strHQL = "from Document as document where document.Status <> 'Deleted' ";
+        strHQL += " and (document.RelatedType = 'Workflow' and (document.RelatedID = " + strWLID + " Or document.RelatedID in (Select wfStepRelatedWF.WFChildID From WFStepRelatedWF as wfStepRelatedWF Where wfStepRelatedWF.WFID = " + strWLID + ")";
         strHQL += " Or document.RelatedID in (Select wfStepRelatedWF.WFID From WFStepRelatedWF as wfStepRelatedWF Where wfStepRelatedWF.WFChildID = " + strWLID + "))";
-        strHQL += " or ((document.RelatedType = '‰ºöËÆÆ' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Â∑•‰ΩúÊµÅ' and (meeting.RelatedID = " + strWLID + " or meeting.RelatedID in (Select wfStepRelatedWF.WFChildID From WFStepRelatedWF as wfStepRelatedWF Where wfStepRelatedWF.WFID = " + strWLID + "))))";
+        strHQL += " or ((document.RelatedType = 'ª·“È' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Workflow' and (meeting.RelatedID = " + strWLID + " or meeting.RelatedID in (Select wfStepRelatedWF.WFChildID From WFStepRelatedWF as wfStepRelatedWF Where wfStepRelatedWF.WFID = " + strWLID + "))))";
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or ( document.Visible = '‰ºöËÆÆ')))";
+        strHQL += " or ( document.Visible = 'ª·“È')))";
         strHQL += " and (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or (document.Visible in ( 'ÈÉ®Èó®','ÂÖ®‰Ωì')))";
+        strHQL += " or (document.Visible in ( '≤ø√≈','»´ÃÂ')))";
         strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))))";
-        strHQL += " and rtrim(ltrim(document.Status)) <> 'Âà†Èô§' Order by document.DocID DESC";
+        strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);
         DataGrid2.DataSource = lst;
@@ -1584,27 +1584,27 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
             return;
         }
 
-        if (ds.Tables[0].Rows[0]["RelatedType"].ToString().Trim() == "È°πÁõÆ")
+        if (ds.Tables[0].Rows[0]["RelatedType"].ToString().Trim() == "Project")
         {
             strProjectID = ds.Tables[0].Rows[0]["RelatedID"].ToString().Trim();
 
-            strHQL = "from Document as document where (((document.RelatedType = 'È°πÁõÆ' and document.RelatedID = " + strProjectID + ")";
+            strHQL = "from Document as document where (((document.RelatedType = 'Project' and document.RelatedID = " + strProjectID + ")";
             strHQL += " and (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( 'ÈÉ®Èó®','ÂÖ®‰Ωì')))";
+            strHQL += " or (document.Visible in ( '≤ø√≈','»´ÃÂ')))";
             strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))))";
 
-            strHQL += " or (((document.RelatedType = 'ÈúÄÊ±Ç' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
-            //strHQL += " or (document.RelatedType = 'Â∑•‰ΩúÊµÅ' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'È°πÁõÆ' and workFlow.RelatedID = " + strProjectID + "))";
+            strHQL += " or (((document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
+            //strHQL += " or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + "))";
 
-            strHQL += " or (document.RelatedType = 'È£éÈô©' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";
-            strHQL += " or (document.RelatedType = '‰ªªÂä°' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
-            strHQL += " or (document.RelatedType = 'ËÆ°Âàí' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
-            //strHQL += " or (document.RelatedType = 'Â∑•‰ΩúÊµÅ' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'ËÆ°Âàí' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + ")))";
-            strHQL += " or (document.RelatedType = '‰ºöËÆÆ' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID = " + strProjectID + "))";
+            strHQL += " or (document.RelatedType = '∑Áœ’' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";
+            strHQL += " or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
+            strHQL += " or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
+            //strHQL += " or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + ")))";
+            strHQL += " or (document.RelatedType = 'ª·“È' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID = " + strProjectID + "))";
 
-            strHQL += " and ((document.Visible in ('‰ºöËÆÆ','ÈÉ®Èó®') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";
-            strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' )))))";
-            strHQL += " and rtrim(ltrim(document.Status)) <> 'Âà†Èô§' Order by document.DocID DESC";
+            strHQL += " and ((document.Visible in ('ª·“È','≤ø√≈') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";
+            strHQL += " or (document.Visible = '»´ÃÂ' )))))";
+            strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
 
             DocumentBLL documentBLL = new DocumentBLL();
             lst = documentBLL.GetAllDocuments(strHQL);

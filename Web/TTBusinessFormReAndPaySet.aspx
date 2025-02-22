@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTBusinessFormReAndPaySet.aspx.cs" Inherits="TTBusinessFormReAndPaySet" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTBusinessFormReAndPaySet.aspx.cs" Inherits="TTBusinessFormReAndPaySet" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc2" %>
@@ -70,15 +70,15 @@
                                                                 <asp:DataGrid ID="DataGrid3" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"  Width="100%">
                                                                     
                                                                     <Columns>
-                                                                        <asp:BoundColumn DataField="FormCode" HeaderText="ä»£ç ">
+                                                                        <asp:BoundColumn DataField="FormCode" HeaderText="´úÂë">
                                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Width="40%" />
                                                                             <ItemStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="FormName" HeaderText="åç§°">
+                                                                        <asp:BoundColumn DataField="FormName" HeaderText="Ãû³Æ">
                                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Width="40%" />
                                                                             <ItemStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:TemplateColumn HeaderText="æ”¶ä»˜">
+                                                                        <asp:TemplateColumn HeaderText="ÊÕ¸¶">
                                                                             <ItemTemplate>
                                                                                 <asp:DropDownList ID="DL_ReceiveOrPay" runat="server">
                                                                                     <asp:ListItem Value="NONE" Text="<%$ Resources:lang,Wu%>"/>
@@ -89,7 +89,7 @@
                                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Width="10%" />
                                                                             <ItemStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
                                                                         </asp:TemplateColumn>
-                                                                       <asp:TemplateColumn HeaderText="å…³è”ç§‘ç›®">
+                                                                       <asp:TemplateColumn HeaderText="¹ØÁª¿ÆÄ¿">
                                                                             <ItemTemplate>
                                                                                 <asp:DropDownList ID="DL_RelatedAccount" runat="server" DataTextField ="AccountName" DataValueField ="AccountName">
                                                                                 </asp:DropDownList>

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -88,56 +88,56 @@ public partial class TTUserAttendanceRecordSAAS : System.Web.UI.Page
         LB_MemberName.Text = userAttendanceRecord.UserName.Trim();
 
 
-        if (strShiftType == "上午上班时间")
+        if (strShiftType == "MorningWorkStartTime")
         {
             DLC_AttendanceDate.Text = userAttendanceRecord.MCheckIn.ToString("yyyy-MM-dd");
             DL_Hour.SelectedValue = userAttendanceRecord.MCheckIn.Hour.ToString();
             DL_Minute.SelectedValue = userAttendanceRecord.MCheckIn.Minute.ToString();
             NB_Distance.Amount = userAttendanceRecord.MCheckInDistance;
         }
-        if (strShiftType == "上午下班时间")
+        if (strShiftType == "MorningWorkEndTime")
         {
             DLC_AttendanceDate.Text = userAttendanceRecord.MCheckOut.ToString("yyyy-MM-dd");
             DL_Hour.SelectedValue = userAttendanceRecord.MCheckOut.Hour.ToString();
             DL_Minute.SelectedValue = userAttendanceRecord.MCheckOut.Minute.ToString();
             NB_Distance.Amount = userAttendanceRecord.MCheckOutDistance;
         }
-        if (strShiftType == "下午上班时间")
+        if (strShiftType == "AfternoonWorkStartTime")
         {
             DLC_AttendanceDate.Text = userAttendanceRecord.ACheckIn.ToString("yyyy-MM-dd");
             DL_Hour.SelectedValue = userAttendanceRecord.ACheckIn.Hour.ToString();
             DL_Minute.SelectedValue = userAttendanceRecord.ACheckIn.Minute.ToString();
             NB_Distance.Amount = userAttendanceRecord.ACheckInDistance;
         }
-        if (strShiftType == "下午下班时间")
+        if (strShiftType == "AfternoonWorkEndTime")
         {
             DLC_AttendanceDate.Text = userAttendanceRecord.ACheckOut.ToString("yyyy-MM-dd");
             DL_Hour.SelectedValue = userAttendanceRecord.ACheckOut.Hour.ToString();
             DL_Minute.SelectedValue = userAttendanceRecord.ACheckOut.Minute.ToString();
             NB_Distance.Amount = userAttendanceRecord.ACheckOutDistance;
         }
-        if (strShiftType == "晚班上班时间")
+        if (strShiftType == "NightShiftStartTime")
         {
             DLC_AttendanceDate.Text = userAttendanceRecord.NCheckIn.ToString("yyyy-MM-dd");
             DL_Hour.SelectedValue = userAttendanceRecord.NCheckIn.Hour.ToString();
             DL_Minute.SelectedValue = userAttendanceRecord.NCheckIn.Minute.ToString();
             NB_Distance.Amount = userAttendanceRecord.NCheckInDistance;
         }
-        if (strShiftType == "晚班下班时间")
+        if (strShiftType == "NightShiftEndTime")
         {
             DLC_AttendanceDate.Text = userAttendanceRecord.NCheckOut.ToString("yyyy-MM-dd");
             DL_Hour.SelectedValue = userAttendanceRecord.NCheckOut.Hour.ToString();
             DL_Minute.SelectedValue = userAttendanceRecord.NCheckOut.Minute.ToString();
             NB_Distance.Amount = userAttendanceRecord.NCheckOutDistance;
         }
-        if (strShiftType == "午夜上班时间")
+        if (strShiftType == "MidnightWorkStartTime")
         {
             DLC_AttendanceDate.Text = userAttendanceRecord.OCheckIn.ToString("yyyy-MM-dd");
             DL_Hour.SelectedValue = userAttendanceRecord.OCheckIn.Hour.ToString();
             DL_Minute.SelectedValue = userAttendanceRecord.OCheckIn.Minute.ToString();
             NB_Distance.Amount = userAttendanceRecord.OCheckInDistance;
         }
-        if (strShiftType == "午夜下班时间")
+        if (strShiftType == "MidnightWorkEndTime")
         {
             DLC_AttendanceDate.Text = userAttendanceRecord.OCheckOut.ToString("yyyy-MM-dd");
             DL_Hour.SelectedValue = userAttendanceRecord.OCheckOut.Hour.ToString();
@@ -182,56 +182,56 @@ public partial class TTUserAttendanceRecordSAAS : System.Web.UI.Page
         UserAttendanceRecord userAttendanceRecord = (UserAttendanceRecord)lst[0];
 
 
-        if (strShiftType == "上午上班时间")
+        if (strShiftType == "MorningWorkStartTime")
         {
             DLC_AttendanceDate.Text = userAttendanceRecord.MCheckIn.ToString("yyyy-MM-dd");
             DL_Hour.SelectedValue = userAttendanceRecord.MCheckIn.Hour.ToString();
             DL_Minute.SelectedValue = userAttendanceRecord.MCheckIn.Minute.ToString();
             NB_Distance.Amount = userAttendanceRecord.MCheckInDistance;
         }
-        if (strShiftType == "上午下班时间")
+        if (strShiftType == "MorningWorkEndTime")
         {
             DLC_AttendanceDate.Text = userAttendanceRecord.MCheckOut.ToString("yyyy-MM-dd");
             DL_Hour.SelectedValue = userAttendanceRecord.MCheckOut.Hour.ToString();
             DL_Minute.SelectedValue = userAttendanceRecord.MCheckOut.Minute.ToString();
             NB_Distance.Amount = userAttendanceRecord.MCheckOutDistance;
         }
-        if (strShiftType == "下午上班时间")
+        if (strShiftType == "AfternoonWorkStartTime")
         {
             DLC_AttendanceDate.Text = userAttendanceRecord.ACheckIn.ToString("yyyy-MM-dd");
             DL_Hour.SelectedValue = userAttendanceRecord.ACheckIn.Hour.ToString();
             DL_Minute.SelectedValue = userAttendanceRecord.ACheckIn.Minute.ToString();
             NB_Distance.Amount = userAttendanceRecord.ACheckInDistance;
         }
-        if (strShiftType == "下午下班时间")
+        if (strShiftType == "AfternoonWorkEndTime")
         {
             DLC_AttendanceDate.Text = userAttendanceRecord.ACheckOut.ToString("yyyy-MM-dd");
             DL_Hour.SelectedValue = userAttendanceRecord.ACheckOut.Hour.ToString();
             DL_Minute.SelectedValue = userAttendanceRecord.ACheckOut.Minute.ToString();
             NB_Distance.Amount = userAttendanceRecord.ACheckOutDistance;
         }
-        if (strShiftType == "晚班上班时间")
+        if (strShiftType == "NightShiftStartTime")
         {
             DLC_AttendanceDate.Text = userAttendanceRecord.NCheckIn.ToString("yyyy-MM-dd");
             DL_Hour.SelectedValue = userAttendanceRecord.NCheckIn.Hour.ToString();
             DL_Minute.SelectedValue = userAttendanceRecord.NCheckIn.Minute.ToString();
             NB_Distance.Amount = userAttendanceRecord.NCheckInDistance;
         }
-        if (strShiftType == "晚班下班时间")
+        if (strShiftType == "NightShiftEndTime")
         {
             DLC_AttendanceDate.Text = userAttendanceRecord.NCheckOut.ToString("yyyy-MM-dd");
             DL_Hour.SelectedValue = userAttendanceRecord.NCheckOut.Hour.ToString();
             DL_Minute.SelectedValue = userAttendanceRecord.NCheckOut.Minute.ToString();
             NB_Distance.Amount = userAttendanceRecord.NCheckOutDistance;
         }
-        if (strShiftType == "午夜上班时间")
+        if (strShiftType == "MidnightWorkStartTime")
         {
             DLC_AttendanceDate.Text = userAttendanceRecord.OCheckIn.ToString("yyyy-MM-dd");
             DL_Hour.SelectedValue = userAttendanceRecord.OCheckIn.Hour.ToString();
             DL_Minute.SelectedValue = userAttendanceRecord.OCheckIn.Minute.ToString();
             NB_Distance.Amount = userAttendanceRecord.OCheckInDistance;
         }
-        if (strShiftType == "午夜下班时间")
+        if (strShiftType == "MidnightWorkEndTime")
         {
             DLC_AttendanceDate.Text = userAttendanceRecord.OCheckOut.ToString("yyyy-MM-dd");
             DL_Hour.SelectedValue = userAttendanceRecord.OCheckOut.Hour.ToString();
@@ -267,42 +267,42 @@ public partial class TTUserAttendanceRecordSAAS : System.Web.UI.Page
 
         try
         {
-            if (strShiftType == "上午上班时间")
+            if (strShiftType == "MorningWorkStartTime")
             {
                 userAttendanceRecord.MCheckIn = DateTime.Parse(strAttendanceTime);
                 userAttendanceRecord.MCheckInDistance = NB_Distance.Amount;
             }
-            if (strShiftType == "上午下班时间")
+            if (strShiftType == "MorningWorkEndTime")
             {
                 userAttendanceRecord.MCheckOut = DateTime.Parse(strAttendanceTime);
                 userAttendanceRecord.MCheckOutDistance = NB_Distance.Amount;
             }
-            if (strShiftType == "下午上班时间")
+            if (strShiftType == "AfternoonWorkStartTime")
             {
                 userAttendanceRecord.ACheckIn = DateTime.Parse(strAttendanceTime);
                 userAttendanceRecord.ACheckInDistance = NB_Distance.Amount;
             }
-            if (strShiftType == "下午下班时间")
+            if (strShiftType == "AfternoonWorkEndTime")
             {
                 userAttendanceRecord.ACheckOut = DateTime.Parse(strAttendanceTime);
                 userAttendanceRecord.ACheckOutDistance = NB_Distance.Amount;
             }
-            if (strShiftType == "晚班上班时间")
+            if (strShiftType == "NightShiftStartTime")
             {
                 userAttendanceRecord.NCheckIn = DateTime.Parse(strAttendanceTime);
                 userAttendanceRecord.NCheckInDistance = NB_Distance.Amount;
             }
-            if (strShiftType == "晚班下班时间")
+            if (strShiftType == "NightShiftEndTime")
             {
                 userAttendanceRecord.NCheckOut = DateTime.Parse(strAttendanceTime);
                 userAttendanceRecord.NCheckOutDistance = NB_Distance.Amount;
             }
-            if (strShiftType == "午夜上班时间")
+            if (strShiftType == "MidnightWorkStartTime")
             {
                 userAttendanceRecord.OCheckIn = DateTime.Parse(strAttendanceTime);
                 userAttendanceRecord.OCheckInDistance = NB_Distance.Amount;
             }
-            if (strShiftType == "午夜下班时间")
+            if (strShiftType == "MidnightWorkEndTime")
             {
                 userAttendanceRecord.OCheckIn = DateTime.Parse(strAttendanceTime);
                 userAttendanceRecord.OCheckOutDistance = NB_Distance.Amount;
@@ -360,7 +360,7 @@ public partial class TTUserAttendanceRecordSAAS : System.Web.UI.Page
 
         strHQL = " select extract(epoch FROM (A.MCheckIn-(to_char(A.MCheckIn,'yyyymmdd') || ' ' || rtrim(ltrim(B.MCheckInEnd)) ||':00.000')::timestamp))/60";
         strHQL += " From T_UserAttendanceRecord A,T_userAttendanceRule B ";
-        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = '处理中'";
+        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = 'InProgress'";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_LateMinute");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -375,7 +375,7 @@ public partial class TTUserAttendanceRecordSAAS : System.Web.UI.Page
 
         strHQL = " Select extract(epoch FROM (A.ACheckIn-(to_char(A.ACheckIn,'yyyymmdd') || ' ' || rtrim(ltrim(B.ACheckInEnd)) ||':00.000')::timestamp))/60";
         strHQL += " From T_UserAttendanceRecord A,T_userAttendanceRule B ";
-        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = '处理中'";
+        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = 'InProgress'";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_LateMinute");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -390,7 +390,7 @@ public partial class TTUserAttendanceRecordSAAS : System.Web.UI.Page
 
         strHQL = " Select extract(epoch FROM (A.NCheckIn-(to_char(A.NCheckIn,'yyyymmdd') || ' ' || rtrim(ltrim(B.NCheckInEnd)) ||':00.000')::timestamp))/60";
         strHQL += " From T_UserAttendanceRecord A,T_userAttendanceRule B ";
-        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = '处理中'";
+        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = 'InProgress'";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_LateMinute");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -406,7 +406,7 @@ public partial class TTUserAttendanceRecordSAAS : System.Web.UI.Page
 
         strHQL = " Select extract(epoch FROM (A.OCheckIn-(to_char(A.OCheckIn,'yyyymmdd') || ' ' || rtrim(ltrim(B.OCheckInEnd)) ||':00.000')::timestamp))/60";
         strHQL += " From T_UserAttendanceRecord A,T_userAttendanceRule B ";
-        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = '处理中'";
+        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = 'InProgress'";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_LateMinute");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -434,7 +434,7 @@ public partial class TTUserAttendanceRecordSAAS : System.Web.UI.Page
 
         strHQL = " Select extract(epoch FROM ((to_char(A.MCheckOut,'yyyymmdd') || ' ' || rtrim(ltrim(B.MCheckOutStart)) ||':00.000')::timestamp)-A.MCheckOut)/60";
         strHQL += " From T_UserAttendanceRecord A,T_userAttendanceRule B ";
-        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = '处理中'";
+        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = 'InProgress'";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_EarlyMinute");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -449,7 +449,7 @@ public partial class TTUserAttendanceRecordSAAS : System.Web.UI.Page
 
         strHQL = " Select extract(epoch FROM ((to_char(A.ACheckOut,'yyyymmdd') || ' ' || rtrim(ltrim(B.ACheckOutStart)) ||':00.000')::timestamp)-A.ACheckOut)/60";
         strHQL += " From T_UserAttendanceRecord A,T_userAttendanceRule B ";
-        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = '处理中'";
+        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = 'InProgress'";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_EarlyMinute");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -464,7 +464,7 @@ public partial class TTUserAttendanceRecordSAAS : System.Web.UI.Page
 
         strHQL = " Select extract(epoch FROM ((to_char(A.NCheckOut,'yyyymmdd') || ' ' || rtrim(ltrim(B.NCheckOutStart)) ||':00.000')::timestamp)-A.NCheckOut)/60";
         strHQL += " From T_UserAttendanceRecord A,T_userAttendanceRule B ";
-        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = '处理中'";
+        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = 'InProgress'";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_EarlyMinute");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -480,7 +480,7 @@ public partial class TTUserAttendanceRecordSAAS : System.Web.UI.Page
 
         strHQL = " Select extract(epoch FROM ((to_char(A.OCheckOut,'yyyymmdd') || ' ' || rtrim(ltrim(B.OCheckOutStart)) ||':00.000')::timestamp)-A.OCheckOut)/60";
         strHQL += " From T_UserAttendanceRecord A,T_userAttendanceRule B ";
-        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = '处理中'";
+        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = 'InProgress'";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_EarlyMinute");
 
         if (ds.Tables[0].Rows.Count > 0)

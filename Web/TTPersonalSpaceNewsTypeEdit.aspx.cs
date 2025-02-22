@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections;
 using System.Data;
 using System.Drawing;
@@ -16,8 +16,8 @@ public partial class TTPersonalSpaceNewsTypeEdit : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //é’Ÿç¤¼æœˆä½œå“ï¼ˆjack.erp@gmail.com)
-        //æ³°é¡¶è½¯ä»¶2006ï¼2012
+        //ÖÓÀñÔÂ×÷Æ·£¨jack.erp@gmail.com)
+        //Ì©¶¥Èí¼ş2006£­2012
 
         string strUserCode = Session["UserCode"].ToString();
         strLangCode = Session["LangCode"].ToString();
@@ -25,7 +25,7 @@ public partial class TTPersonalSpaceNewsTypeEdit : System.Web.UI.Page
         LB_UserCode.Text = strUserCode;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "æ–°é—»ç±»å‹è®¾ç½®", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ĞÂÎÅÀàĞÍÉèÖÃ", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -153,7 +153,7 @@ public partial class TTPersonalSpaceNewsTypeEdit : System.Web.UI.Page
 
             LoadNewsTypeList(ddlLangSwitcher.SelectedValue.Trim());
 
-            //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—ï¼Œå¹¶åˆ·æ–°é¡µé¢ç¼“å­˜
+            //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾£¬²¢Ë¢ĞÂÒ³Ãæ»º´æ
             ChangePageCache();
         }
         catch (Exception err)
@@ -187,7 +187,7 @@ public partial class TTPersonalSpaceNewsTypeEdit : System.Web.UI.Page
 
             LoadNewsTypeList(ddlLangSwitcher.SelectedValue.Trim());
 
-            //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—ï¼Œå¹¶åˆ·æ–°é¡µé¢ç¼“å­˜
+            //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾£¬²¢Ë¢ĞÂÒ³Ãæ»º´æ
             ChangePageCache();
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
@@ -216,7 +216,7 @@ public partial class TTPersonalSpaceNewsTypeEdit : System.Web.UI.Page
 
             LoadNewsTypeList(ddlLangSwitcher.SelectedValue.Trim());
 
-            //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—ï¼Œå¹¶åˆ·æ–°é¡µé¢ç¼“å­˜
+            //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾£¬²¢Ë¢ĞÂÒ³Ãæ»º´æ
             ChangePageCache();
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
@@ -256,7 +256,7 @@ public partial class TTPersonalSpaceNewsTypeEdit : System.Web.UI.Page
 
             }
 
-            //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—ï¼Œå¹¶åˆ·æ–°é¡µé¢ç¼“å­˜
+            //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾£¬²¢Ë¢ĞÂÒ³Ãæ»º´æ
             ChangePageCache();
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
@@ -336,14 +336,14 @@ public partial class TTPersonalSpaceNewsTypeEdit : System.Web.UI.Page
         }
     }
 
-    //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—ï¼Œå¹¶åˆ·æ–°é¡µé¢ç¼“å­˜
+    //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾£¬²¢Ë¢ĞÂÒ³Ãæ»º´æ
     protected void ChangePageCache()
     {
-        //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—
+        //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾
         ShareClass.SetPageCacheMark("1");
         Session["CssDirectoryChangeNumber"] = "1";
 
-        //ç»™ä¸»ç•Œé¢ä¸ªäººç©ºé—´æ·»åŠ ç©ºè¡Œä»¥åˆ·æ–°é¡µé¢ç¼“å­˜
+        //¸øÖ÷½çÃæ¸öÈË¿Õ¼äÌí¼Ó¿ÕĞĞÒÔË¢ĞÂÒ³Ãæ»º´æ
         ShareClass.AddSpaceLineToPersonalSpaceForRefreshCache();
     }
 }

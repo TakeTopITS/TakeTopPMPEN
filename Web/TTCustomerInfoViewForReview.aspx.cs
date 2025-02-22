@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Configuration;
@@ -109,7 +109,7 @@ public partial class TTCustomerInfoViewForReview : System.Web.UI.Page
 
             LoadCustomerInfor(strCustomerCode);
 
-            //鎺ㄩ�佷俊鎭粰瀹㈡湇涓荤
+            //推送信息给客服主管
             try
             {
                 string strCreatorCode = customer.CreatorCode.Trim();
@@ -163,7 +163,7 @@ public partial class TTCustomerInfoViewForReview : System.Web.UI.Page
 
             LoadCustomerInfor(strCustomerCode);
 
-            //鎺ㄩ�佷俊鎭粰瀹㈡湇涓荤
+            //推送信息给客服主管
             try
             {
                 string strCreatorCode = customer.CreatorCode.Trim();
@@ -269,7 +269,7 @@ public partial class TTCustomerInfoViewForReview : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Constract as constract where constract.Status <> '褰掓。'";
+        strHQL = "from Constract as constract where constract.Status <> 'Archived'";
         strHQL += " and constract.RelatedCustomerCode = " + "'" + strCustomerCode + "'";
         strHQL += " Order by constract.SignDate DESC";
         ConstractBLL constractBLL = new ConstractBLL();

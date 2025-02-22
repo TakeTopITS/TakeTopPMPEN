@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -26,7 +26,7 @@ public partial class TTUserInforSimple : System.Web.UI.Page
 
         string strUserName = ShareClass.GetUserName(strUserCode);
 
-        //this.Title = "ç”¨æˆ·ï¼š" + strUserCode +" " + strUserName + "  çš„èµ„æ–™";
+        //this.Title = "ÓÃ»§£º" + strUserCode +" " + strUserName + "  µÄ×ÊÁÏ";
 
         if (Page.IsPostBack == false)
         {

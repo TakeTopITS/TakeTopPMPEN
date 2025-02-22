@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using System;
 using System.Data;
 using System.Web.UI;
@@ -15,14 +15,14 @@ public partial class TTCarOilVolumeChargeSummaryReport : System.Web.UI.Page
         string strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "è½¦è¾†æ²¹è€—ç»Ÿè®¡æŠ¥è¡¨", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "³µÁ¾ÓÍºÄÍ³¼Æ±¨±í", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
             return;
         }
 
-        //this.Title = " è½¦è¾†æ²¹è€—ç»Ÿè®¡æŠ¥è¡¨";
+        //this.Title = " ³µÁ¾ÓÍºÄÍ³¼Æ±¨±í";
 
         LB_UserCode.Text = strUserCode;
         strUserName = Session["UserName"].ToString();

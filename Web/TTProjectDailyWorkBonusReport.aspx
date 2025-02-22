@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectDailyWorkBonusReport.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectDailyWorkBonusReport.aspx.cs"
     Inherits="TTProjectDailyWorkBonusReport" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -36,7 +36,7 @@
                     <tr>
                         <td style="width: 100%; height: 80px; font-size: xx-large; text-align: center;">
                             <br />
-                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>ï¼š<asp:Label ID="LB_Project" runat="server"></asp:Label>
+                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>£º<asp:Label ID="LB_Project" runat="server"></asp:Label>
                             <br />
                             <br />
                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,GongZuoJiangJinBaoBiao%>"></asp:Label><br />
@@ -51,7 +51,7 @@
                             <table style="width: 90%;">
                                 <tr>
                                     <td style="text-align: left;">
-                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZongJinE%>"></asp:Label>ï¼š<asp:Label ID="LB_TotalAmount" runat="server"></asp:Label>
+                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZongJinE%>"></asp:Label>£º<asp:Label ID="LB_TotalAmount" runat="server"></asp:Label>
                                          
                                          <asp:Label ID="LB_UserCode" runat="server" Visible="False"></asp:Label> 
                                         <asp:Label ID="LB_UserName" runat="server" 
@@ -60,7 +60,7 @@
                                     </td>
                                     <td>
                                         <a href="javascript:window.print()">
-                                            <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" /></a>
+                                            <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" /></a>
                                     </td>
                                 </tr>
                             </table>
@@ -99,13 +99,13 @@
                                 Height="1px" OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="25" Width="100%"
                                 CellPadding="4" ForeColor="#333333" GridLines="None">
                                 <Columns>
-                                    <asp:BoundColumn DataField="UserCode" HeaderText="ä»£ç ">
+                                    <asp:BoundColumn DataField="UserCode" HeaderText="´úÂë">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="UserName" HeaderText="å§“å">
+                                    <asp:BoundColumn DataField="UserName" HeaderText="ÐÕÃû">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="Bonus" HeaderText="å¥–é‡‘">
+                                    <asp:BoundColumn DataField="Bonus" HeaderText="½±½ð">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="65%" />
                                     </asp:BoundColumn>
                                 </Columns>
@@ -120,7 +120,7 @@
                     </tr>
                     <tr>
                         <td style="width: 1200px; text-align: center;">
-                            <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,Di%>"></asp:Label>ï¼š<asp:Label ID="LB_PageIndex" runat="server"></asp:Label>
+                            <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,Di%>"></asp:Label>£º<asp:Label ID="LB_PageIndex" runat="server"></asp:Label>
                             &nbsp;<asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,Ye%>"></asp:Label> ,<asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,Gong%>"></asp:Label>
                         <asp:Label ID="LB_TotalPageNumber" runat="server"></asp:Label>
                             &nbsp;<asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,Ye%>"></asp:Label>

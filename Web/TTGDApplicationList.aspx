@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDApplicationList.aspx.cs" Inherits="TTGDApplicationList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDApplicationList.aspx.cs" Inherits="TTGDApplicationList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ç”¨é€”åˆ—è¡¨</title>
+    <title>ÓÃÍ¾ÁÐ±í</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
@@ -54,7 +54,7 @@
                                     <table width="100%" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left" class="formItemBgStyle">
-                                                <input type="button" class="inpuLong" value="æ–°å¢žç”¨é€”" onclick="window.location.href = 'TTGDApplicationEdit.aspx'" />
+                                                <input type="button" class="inpuLong" value="ÐÂÔöÓÃÍ¾" onclick="window.location.href = 'TTGDApplicationEdit.aspx'" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -110,20 +110,20 @@
                                                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,BianJi%>"></asp:Label></a>
                                                                     <asp:LinkButton ID="LB_Del" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab">
                                                                         <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,ShanChu%>"></asp:Label></asp:LinkButton>
-                                                                    <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="åˆ é™¤" />--%>
+                                                                    <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="Deleted" />--%>
                                                                     
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="LineUser" HeaderText="ç®¡çº¿ç”¨é€”">
+                                                            <asp:BoundColumn DataField="LineUser" HeaderText="¹ÜÏßÓÃÍ¾">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Instructions" HeaderText="è¯´æ˜Ž">
+                                                            <asp:BoundColumn DataField="Instructions" HeaderText="ËµÃ÷">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="24%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="TheSystem" HeaderText="ç³»ç»Ÿ">
+                                                            <asp:BoundColumn DataField="TheSystem" HeaderText="ÏµÍ³">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Remark" HeaderText="å¤‡æ³¨">
+                                                            <asp:BoundColumn DataField="Remark" HeaderText="±¸×¢">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -35,7 +35,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
 
         strProjectID = "1";
 
-        //ä»Žæµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖÐ´ò¿ªµÄÒµÎñµ¥
         strToDoWLID = Request.QueryString["WLID"]; strToDoWLDetailID= Request.QueryString["WLStepDetailID"];
         strWLBusinessID = Request.QueryString["BusinessID"];
 
@@ -62,7 +62,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
             strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthorityAsset(strUserCode);
             LB_DepartString.Text = strDepartString;
 
-            //å–å¾—ä¼šè®¡ç§‘ç›®åˆ—è¡¨
+            //È¡µÃ»á¼Æ¿ÆÄ¿ÁÐ±í
             ShareClass.LoadAccountForDDL(DL_Account);
 
             strHQL = "from JNUnit as jnUnit order by jnUnit.SortNumber ASC";
@@ -149,7 +149,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
         }
     }
 
-    //è®¡ç®—å‡ºæœªç”³è¯·ä»˜æ¬¾æ•°
+    //¼ÆËã³öÎ´ÉêÇë¸¶¿îÊý
     protected decimal SummaryNoApplyNumber(string strSourceType, string strSourceID)
     {
         string strHQL;
@@ -182,7 +182,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
         }
     }
 
-    //è®¡ç®—å‡ºæœªç”³è¯·ä»˜æ¬¾é¢
+    //¼ÆËã³öÎ´ÉêÇë¸¶¿î¶î
     protected decimal SummaryNoApplyAmount(string strSourceType, string strSourceID)
     {
         string strHQL;
@@ -286,7 +286,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
 
             strAOID = e.Item.Cells[3].Text.Trim();
 
-            intWLNumber = GetRelatedWorkFlowNumber(DL_WFType.SelectedValue.Trim(), "é¡¹ç›®", strAOID);
+            intWLNumber = GetRelatedWorkFlowNumber(DL_WFType.SelectedValue.Trim(), "Project", strAOID);
             if (intWLNumber > 0)
             {
                 BT_NewMain.Visible = false;
@@ -302,8 +302,8 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
                 BT_SubmitApply.Enabled = true;
             }
 
-            //ä»Žæµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue(DL_WFType.SelectedValue.Trim(), "é¡¹ç›®", strAOID, "0");
+            //´ÓÁ÷³ÌÖÐ´ò¿ªµÄÒµÎñµ¥
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue(DL_WFType.SelectedValue.Trim(), "Project", strAOID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_NewMain.Visible = true;
@@ -365,7 +365,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
 
                 LoadSupplierAssetPaymentApplicantDetail(strAOID);
 
-                //å–å¾—æ­¤ä¾›åº”å•†å…³è”çš„å…¥åº“å•æ˜Žç»†
+                //È¡µÃ´Ë¹©Ó¦ÉÌ¹ØÁªµÄÈë¿âµ¥Ã÷Ï¸
                 if (TB_PartA.Text.Trim() != "")
                 {
                     LoadAssetCheckInOrderDetail(TB_PartA.Text.Trim());
@@ -373,7 +373,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
 
                 TB_WLName.Text = Resources.lang.GongYingShangWuZiCaiGouFuKuanShengQing + supplierAssetPaymentApplicant.AOName.Trim() ;
 
-                LoadRelatedWL(DL_WFType.SelectedValue.Trim(), "é¡¹ç›®", supplierAssetPaymentApplicant.AOID);
+                LoadRelatedWL(DL_WFType.SelectedValue.Trim(), "Project", supplierAssetPaymentApplicant.AOID);
 
                 if (e.CommandName == "Update")
                 {
@@ -395,8 +395,8 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
 
             if (e.CommandName == "Delete")
             {
-                intWLNumber = GetRelatedWorkFlowNumber(DL_WFType.SelectedValue.Trim(), "é¡¹ç›®", strAOID);
-                if (intWLNumber > 0 | supplierAssetPaymentApplicant.Status == "å·²è®°è´¦")
+                intWLNumber = GetRelatedWorkFlowNumber(DL_WFType.SelectedValue.Trim(), "Project", strAOID);
+                if (intWLNumber > 0 | supplierAssetPaymentApplicant.Status == "Recorded")
                 {
                     ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBCSQDYTJSPHYJC + "')", true);
                     return;
@@ -522,7 +522,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
 
         supplierAssetPaymentApplicant.BankCode = TB_BankCode.Text.Trim();
         supplierAssetPaymentApplicant.BankName = TB_BankName.Text.Trim();
-        supplierAssetPaymentApplicant.Status = "æ–°å»º";
+        supplierAssetPaymentApplicant.Status = "New";
         if (DL_RelatedType.SelectedValue == "Other")
         {
             try
@@ -549,7 +549,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
             strAOID = ShareClass.GetMyCreatedMaxSupplierAssetPaymentApplicantID(strUserCode);
             LB_AOID.Text = strAOID;
 
-            //è‡ªåŠ¨äº§ç”Ÿå•å·
+            //×Ô¶¯²úÉúµ¥ºÅ
             string strNewPOCode = ShareClass.GetCodeByRule("PayApplyOrderCode", "PayApplyOrderCode", strAOID);
             if (strNewPOCode != "")
             {
@@ -705,7 +705,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
 
         supplierAssetPaymentApplicant.BankCode = TB_BankCode.Text.Trim();
         supplierAssetPaymentApplicant.BankName = TB_BankName.Text.Trim();
-        supplierAssetPaymentApplicant.Status = "æ–°å»º";
+        supplierAssetPaymentApplicant.Status = "New";
 
         if (DL_RelatedType.SelectedValue == "Other")
         {
@@ -731,15 +731,15 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
             supplierAssetPaymentApplicantBLL.UpdateSupplierAssetPaymentApplicant(supplierAssetPaymentApplicant, int.Parse(strAOID));
             LoadSupplierAssetPaymentApplicant(strUserCode);
 
-            //ä»Žæµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue(DL_WFType.SelectedValue.Trim(), "é¡¹ç›®", strAOID, "0");
+            //´ÓÁ÷³ÌÖÐ´ò¿ªµÄÒµÎñµ¥
+            //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊý¾ÝÎÄ¼þ
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue(DL_WFType.SelectedValue.Trim(), "Project", strAOID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 string strCmdText = "select AOID as DetailAOID, * from V_SupplierAssetPaymentApplicant where AOID = " + strAOID;
                 if (strToDoWLID == null)
                 {
-                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID(DL_WFType.SelectedValue.Trim(), "é¡¹ç›®", strAOID);
+                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID(DL_WFType.SelectedValue.Trim(), "Project", strAOID);
                 }
 
                 if (strToDoWLID != null)
@@ -1093,7 +1093,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
 
             strAOID = LB_AOID.Text.Trim();
 
-            int intWLNumber = GetRelatedWorkFlowNumber(DL_WFType.SelectedValue.Trim(), "é¡¹ç›®", strAOID);
+            int intWLNumber = GetRelatedWorkFlowNumber(DL_WFType.SelectedValue.Trim(), "Project", strAOID);
             if (intWLNumber > 0)
             {
                 BT_NewMain.Visible = false;
@@ -1105,8 +1105,8 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
                 BT_NewDetail.Visible = true;
             }
 
-            //ä»Žæµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue(DL_WFType.SelectedValue.Trim(), "é¡¹ç›®", strAOID, "0");
+            //´ÓÁ÷³ÌÖÐ´ò¿ªµÄÒµÎñµ¥
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue(DL_WFType.SelectedValue.Trim(), "Project", strAOID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_NewMain.Visible = true;
@@ -1160,7 +1160,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
                 NB_RecordSourceID.Amount = supplierAssetPaymentApplicantDetail.SourceID;
 
 
-                //åˆ·æ–°å…³è”çš„å…¥åº“å•æ˜Žç»†
+                //Ë¢ÐÂ¹ØÁªµÄÈë¿âµ¥Ã÷Ï¸
                 if (supplierAssetPaymentApplicantDetail.SourceType.Trim() == "CheckInOrderRecord")
                 {
                     LoadAssetCheckInOrderDetailByID(supplierAssetPaymentApplicantDetail.SourceID.ToString());
@@ -1172,7 +1172,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
 
             if (e.CommandName == "Delete")
             {
-                intWLNumber = GetRelatedWorkFlowNumber(DL_WFType.SelectedValue.Trim(), "é¡¹ç›®", strAOID);
+                intWLNumber = GetRelatedWorkFlowNumber(DL_WFType.SelectedValue.Trim(), "Project", strAOID);
                 if (intWLNumber > 0 & strToDoWLID == null)
                 {
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -1200,7 +1200,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
 
                     UpdateSupplierAssetPaymentApplicantAmount(strAOID, SumSupplierAssetPaymentApplicantAmount(strAOID));
 
-                    //åˆ·æ–°å…³è”çš„å…¥åº“å•æ˜Žç»†
+                    //Ë¢ÐÂ¹ØÁªµÄÈë¿âµ¥Ã÷Ï¸
                     if (supplierAssetPaymentApplicantDetail.SourceType.Trim() == "CheckInOrderRecord")
                     {
                         strHQL = "Update T_AssetCheckInOrderDetail Set Status = 'NO' Where ID = " + supplierAssetPaymentApplicantDetail.SourceID.ToString();
@@ -1209,9 +1209,9 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
                         LoadAssetCheckInOrderDetailByID(supplierAssetPaymentApplicantDetail.SourceID.ToString());
                     }
 
-                    //ä»Žæµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                    //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-                    strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue(DL_WFType.SelectedValue.Trim(), "é¡¹ç›®", strAOID, "0");
+                    //´ÓÁ÷³ÌÖÐ´ò¿ªµÄÒµÎñµ¥
+                    //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊý¾ÝÎÄ¼þ
+                    strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue(DL_WFType.SelectedValue.Trim(), "Project", strAOID, "0");
                     if (strToDoWLID != null | strAllowFullEdit == "YES")
                     {
                         string strCmdText;
@@ -1219,7 +1219,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
                         strCmdText = "select AOID as DetailAOID, * from V_SupplierAssetPaymentApplicant where AOID = " + strAOID;
                         if (strToDoWLID == null)
                         {
-                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID(DL_WFType.SelectedValue.Trim(), "é¡¹ç›®", strAOID);
+                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID(DL_WFType.SelectedValue.Trim(), "Project", strAOID);
                         }
 
                         if (strToDoWLID != null)
@@ -1246,7 +1246,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
         }
     }
 
-    //ç»™å“ç‰Œå’Œå·¥è‰ºå­—æ®µèµ‹å€¼
+    //¸øÆ·ÅÆºÍ¹¤ÒÕ×Ö¶Î¸³Öµ
     protected void setAssetManufacturerAndProcessRoute(string strRecordID)
     {
         string strHQL;
@@ -1265,7 +1265,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
     {
         LB_ID.Text = "";
 
-        //å–å¾—æ­¤ä¾›åº”å•†å…³è”çš„å…¥åº“å•æ˜Žç»†
+        //È¡µÃ´Ë¹©Ó¦ÉÌ¹ØÁªµÄÈë¿âµ¥Ã÷Ï¸
         if (TB_PartA.Text.Trim() != "")
         {
             LoadAssetCheckInOrderDetail(TB_PartA.Text.Trim());
@@ -1290,7 +1290,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
         }
 
         strAOID = LB_AOID.Text.Trim();
-        int intWLNumber = GetRelatedWorkFlowNumber(DL_WFType.SelectedValue.Trim(), "é¡¹ç›®", strAOID);
+        int intWLNumber = GetRelatedWorkFlowNumber(DL_WFType.SelectedValue.Trim(), "Project", strAOID);
         if (intWLNumber > 0 & strToDoWLID == null)
         {
             BT_SubmitApply.Enabled = false;
@@ -1346,7 +1346,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
 
         if (DL_RelatedType.SelectedValue.Trim() == "Project")
         {
-            //æ£€æŸ¥ç›¸åº”ç§‘ç›®é¡¹ç›®é¢„ç®—æœ‰æ²¡æœ‰è¶…æ”¯ //æ£€æŸ¥ç›¸åº”ç§‘ç›®é¡¹ç›®é¢„ç®—æœ‰æ²¡æœ‰è¶…æ”¯
+            //¼ì²éÏàÓ¦¿ÆÄ¿ÏîÄ¿Ô¤ËãÓÐÃ»ÓÐ³¬Ö§ //¼ì²éÏàÓ¦¿ÆÄ¿ÏîÄ¿Ô¤ËãÓÐÃ»ÓÐ³¬Ö§
             if (ShareClass.CheckProjectExpenseBudget(strProjectID, NB_RelatedID.Amount.ToString(), NB_Amount.Amount) == false)
             {
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBZFYCGKMYSHXMZYSJC + "')", true);
@@ -1400,7 +1400,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
 
                 UpdateSupplierAssetPaymentApplicantAmount(strAOID, SumSupplierAssetPaymentApplicantAmount(strAOID));
 
-                //åˆ·æ–°å…³è”çš„å…¥åº“å•æ˜Žç»†
+                //Ë¢ÐÂ¹ØÁªµÄÈë¿âµ¥Ã÷Ï¸
                 if (strSourceType == "CheckInOrderRecord")
                 {
                     string strHQL = "Update T_AssetCheckInOrderDetail Set Status = 'YES' Where ID = " + intSourceID.ToString();
@@ -1409,9 +1409,9 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
                     LoadAssetCheckInOrderDetail(TB_PartA.Text.Trim());
                 }
 
-                //ä»Žæµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue(DL_WFType.SelectedValue.Trim(), "é¡¹ç›®", strAOID, "0");
+                //´ÓÁ÷³ÌÖÐ´ò¿ªµÄÒµÎñµ¥
+                //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊý¾ÝÎÄ¼þ
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue(DL_WFType.SelectedValue.Trim(), "Project", strAOID, "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     string strCmdText;
@@ -1419,7 +1419,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
                     strCmdText = "select AOID as DetailAOID, * from V_SupplierAssetPaymentApplicant where AOID = " + strAOID;
                     if (strToDoWLID == null)
                     {
-                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID(DL_WFType.SelectedValue.Trim(), "é¡¹ç›®", strAOID);
+                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID(DL_WFType.SelectedValue.Trim(), "Project", strAOID);
                     }
 
                     if (strToDoWLID != null)
@@ -1484,7 +1484,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
 
         if (DL_RelatedType.SelectedValue.Trim() == "Project")
         {
-            //æ£€æŸ¥ç›¸åº”ç§‘ç›®é¡¹ç›®é¢„ç®—æœ‰æ²¡æœ‰è¶…æ”¯ //æ£€æŸ¥ç›¸åº”ç§‘ç›®é¡¹ç›®é¢„ç®—æœ‰æ²¡æœ‰è¶…æ”¯
+            //¼ì²éÏàÓ¦¿ÆÄ¿ÏîÄ¿Ô¤ËãÓÐÃ»ÓÐ³¬Ö§ //¼ì²éÏàÓ¦¿ÆÄ¿ÏîÄ¿Ô¤ËãÓÐÃ»ÓÐ³¬Ö§
             if (ShareClass.CheckProjectExpenseBudget(strProjectID, NB_RelatedID.Amount.ToString(), NB_Amount.Amount) == false)
             {
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBZFYCGKMYSHXMZYSJC + "')", true);
@@ -1533,18 +1533,18 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
 
                 LoadSupplierAssetPaymentApplicantDetail(strAOID);
 
-                //æ›´æ–°èµ„äº§é‡‡è´­ä»˜æ¬¾ç”³è¯·å•æ€»é‡‘é¢
+                //¸üÐÂ×Ê²ú²É¹º¸¶¿îÉêÇëµ¥×Ü½ð¶î
                 UpdateSupplierAssetPaymentApplicantAmount(strAOID, SumSupplierAssetPaymentApplicantAmount(strAOID));
 
-                //åˆ·æ–°å…³è”çš„å…¥åº“å•æ˜Žç»†
+                //Ë¢ÐÂ¹ØÁªµÄÈë¿âµ¥Ã÷Ï¸
                 if (strSourceType == "CheckInOrderRecord")
                 {
                     LoadAssetCheckInOrderDetail(LB_CheckInOrderID.Text);
                 }
 
-                //ä»Žæµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue(DL_WFType.SelectedValue.Trim(), "é¡¹ç›®", strAOID, "0");
+                //´ÓÁ÷³ÌÖÐ´ò¿ªµÄÒµÎñµ¥
+                //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊý¾ÝÎÄ¼þ
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue(DL_WFType.SelectedValue.Trim(), "Project", strAOID, "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     string strCmdText;
@@ -1552,7 +1552,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
                     strCmdText = "select AOID as DetailAOID, * from V_SupplierAssetPaymentApplicant where AOID = " + strAOID;
                     if (strToDoWLID == null)
                     {
-                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID(DL_WFType.SelectedValue.Trim(), "é¡¹ç›®", strAOID);
+                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID(DL_WFType.SelectedValue.Trim(), "Project", strAOID);
                     }
 
                     if (strToDoWLID != null)
@@ -1639,28 +1639,28 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
         workFlow.CreatorCode = strCreatorCode;
         workFlow.CreatorName = strCreatorName;
         workFlow.CreateTime = DateTime.Now;
-        workFlow.RelatedType = "é¡¹ç›®";
-        workFlow.Status = "æ–°å»º";
+        workFlow.RelatedType = "Project";
+        workFlow.Status = "New";
         workFlow.RelatedID = int.Parse(strAOID);
-        workFlow.DIYNextStep = "Yes";
+        workFlow.DIYNextStep = "YES";
         workFlow.IsPlanMainWorkflow = "NO";
 
         if (CB_SMS.Checked == true)
         {
-            workFlow.ReceiveSMS = "Yes";
+            workFlow.ReceiveSMS = "YES";
         }
         else
         {
-            workFlow.ReceiveSMS = "No";
+            workFlow.ReceiveSMS = "NO";
         }
 
         if (CB_Mail.Checked == true)
         {
-            workFlow.ReceiveEMail = "Yes";
+            workFlow.ReceiveEMail = "YES";
         }
         else
         {
-            workFlow.ReceiveEMail = "No";
+            workFlow.ReceiveEMail = "NO";
         }
 
         try
@@ -1669,10 +1669,10 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
 
             strWLID = ShareClass.GetMyCreatedWorkFlowID(strUserCode);
 
-            LoadRelatedWL(strWLType, "é¡¹ç›®", int.Parse(strAOID));
+            LoadRelatedWL(strWLType, "Project", int.Parse(strAOID));
 
-            UpdateAssetPurchaseStatus(strAOID, "å¤„ç†ä¸­");
-            DL_AOStatus.SelectedValue = "å¤„ç†ä¸­";
+            UpdateAssetPurchaseStatus(strAOID, "InProgress");
+            DL_AOStatus.SelectedValue = "InProgress";
 
             strCmdText = "select AOID as DetailAOID, * from V_SupplierAssetPaymentApplicant where AOID = " + strAOID;
             strXMLFile2 = Server.MapPath(strXMLFile2);
@@ -1714,7 +1714,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'èµ„äº§é‡‡è´­ä»˜æ¬¾ç”³è¯·'";
+        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'AssetProcurementPaymentRequest'";
         strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC";
         WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
         lst = workFlowTemplateBLL.GetAllWorkFlowTemplates(strHQL);
@@ -2127,7 +2127,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
         strHQL += " or supplierAssetPaymentApplicant.UserCode in (select  memberLevel.UnderCode from MemberLevel as memberLevel where memberLevel.UserCode = " + "'" + strUserCode + "'" + ")) ";
         strHQL += " Order by supplierAssetPaymentApplicant.AOID DESC";
 
-        //ä»Žæµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖÐ´ò¿ªµÄÒµÎñµ¥
         if (strToDoWLID != null & strWLBusinessID != null)
         {
             strHQL = "from SupplierAssetPaymentApplicant as supplierAssetPaymentApplicant where supplierAssetPaymentApplicant.AOID = " + strWLBusinessID;
@@ -2302,7 +2302,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
 
     public static void SetInterval(DropDownList DDL, string strParentID, string interval)
     {
-        interval += "â”œ";
+        interval += "©À";
 
         DataTable list = GetAccountList(strParentID);
         if (list.Rows.Count > 0 && list != null)
@@ -2311,7 +2311,7 @@ public partial class TTSupplierAssetPaymentApplicant : System.Web.UI.Page
             {
                 DDL.Items.Add(new ListItem(string.Format("{0}{1}", interval, list.Rows[i]["AccountType"].ToString().Trim() + "-" + list.Rows[i]["AccountName"].ToString().Trim()), list.Rows[i]["AccountCode"].ToString().Trim()));
 
-                ///é€’å½’
+                ///µÝ¹é
                 SetInterval(DDL, list.Rows[i]["ID"].ToString().Trim(), interval);
             }
         }

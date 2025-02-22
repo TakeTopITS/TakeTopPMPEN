@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -27,7 +27,7 @@ public partial class TTPersonalSpaceNews : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            //æ¸…ç©ºé¡µé¢ç¼“å­˜ï¼Œç”¨äºŽæ”¹å˜çš®è‚¤
+            //Çå¿ÕÒ³Ãæ»º´æ£¬ÓÃÓÚ¸Ä±äÆ¤·ô
             SetPageNoCache();
 
             intRunNumber = 0;
@@ -36,12 +36,12 @@ public partial class TTPersonalSpaceNews : System.Web.UI.Page
         }
     }
 
-    //æ¸…ç©ºé¡µé¢ç¼“å­˜ï¼Œç”¨äºŽæ”¹å˜çš®è‚¤
+    //Çå¿ÕÒ³Ãæ»º´æ£¬ÓÃÓÚ¸Ä±äÆ¤·ô
     public void SetPageNoCache()
     {
         if (Session["CssDirectoryChangeNumber"].ToString() == "1")
         {
-            //æ¸…é™¤å…¨éƒ¨ç¼“å­˜
+            //Çå³ýÈ«²¿»º´æ
             IDictionaryEnumerator allCaches = Page.Cache.GetEnumerator();
             while (allCaches.MoveNext())
             {
@@ -90,13 +90,13 @@ public partial class TTPersonalSpaceNews : System.Web.UI.Page
             strHQL += " Where (RelatedDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))  or RelatedDepartCode = '" + strDepartCode + "')";
             if (strUserType == "INNER")
             {
-                //strHQL += " And Type = 'å†…éƒ¨'";
+                //strHQL += " And Type = 'Internal'";
             }
             else
             {
-                strHQL += " And Type = 'å¤–éƒ¨'";
+                strHQL += " And Type = 'External'";
             }
-            strHQL += " and Status = 'å‘å¸ƒ' and IsHead = 'YES'";
+            strHQL += " and Status = '·¢²¼' and IsHead = 'YES'";
             strHQL += " Order By ID DESC limit 1";
             DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");
             if (ds.Tables[0].Rows.Count > 0)
@@ -121,14 +121,14 @@ public partial class TTPersonalSpaceNews : System.Web.UI.Page
             strHQL += " Where (RelatedDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))  or RelatedDepartCode = '" + strDepartCode + "')";
             if (strUserType == "INNER")
             {
-                //strHQL += " And Type = 'å†…éƒ¨'";
+                //strHQL += " And Type = 'Internal'";
             }
             else
             {
-                strHQL += " And Type = 'å¤–éƒ¨'";
+                strHQL += " And Type = 'External'";
             }
             strHQL += " and NewsType = '" + strNewsType + "'";
-            strHQL += " and Status = 'å‘å¸ƒ' and IsHead != 'YES'";
+            strHQL += " and Status = '·¢²¼' and IsHead != 'YES'";
             strHQL += " Order By ID DESC Limit 1";
             DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");
             if (ds.Tables[0].Rows.Count > 0)

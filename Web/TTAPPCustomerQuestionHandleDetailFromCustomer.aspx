@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPCustomerQuestionHandleDetailFromCustomer.aspx.cs" Inherits="TTAPPCustomerQuestionHandleDetailFromCustomer" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPCustomerQuestionHandleDetailFromCustomer.aspx.cs" Inherits="TTAPPCustomerQuestionHandleDetailFromCustomer" %>
 
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
@@ -26,10 +26,10 @@
     <script src="js/exif.js" type="text/javascript"></script>
     <script type="text/javascript" language="javascript">
 
-        //È°µÈù¢Âä†ËΩΩÂÆåÊàê,ajaxÂõûÂèëÂä†ËΩΩÂÆåÊàêÂêéÊâßË°åÁöÑÊìç‰ΩúÔºå‰º†ÂÖ•‰∏Ä‰∏™funtion
-        //$loadË∞ÉÁî®Á§∫‰æã
+        //“≥√Êº”‘ÿÕÍ≥…,ajaxªÿ∑¢º”‘ÿÕÍ≥…∫Û÷¥––µƒ≤Ÿ◊˜£¨¥´»Î“ª∏ˆfuntion
+        //$loadµ˜”√ æ¿˝
         //$load(function () {
-        //    //ÈúÄË¶ÅÈ°µÈù¢Âä†ËΩΩÂÆåÊàêÊâßË°åÁöÑ‰ª£Á†Å
+        //    //–Ë“™“≥√Êº”‘ÿÕÍ≥…÷¥––µƒ¥˙¬Î
         //});
         var $load = function (loadFunc) {
             $(function () {
@@ -45,7 +45,7 @@
         $load(function () {
              /*  if (top.location != self.location) { } else { CloseWebPage(); }*/
 
-            //ÈÄâÊã©ÂõæÁâáÂêéÂéãÁº©ÂõæÁâá
+            //—°‘ÒÕº∆¨∫Û—πÀıÕº∆¨
             $("#AttachFile").change(function () {
 
                 //alert("KKK");
@@ -53,10 +53,10 @@
                 //console.log(this.files[0]);
                 var _ua = window.navigator.userAgent;
                 var _simpleFile = this.files[0];
-                //Âà§Êñ≠ÊòØÂê¶‰∏∫ÂõæÁâá
+                //≈–∂œ «∑ÒŒ™Õº∆¨
                 if (!/\/(?:jpeg|png|gif|png|bmp)/i.test(_simpleFile.type)) return;
 
-                //Êèí‰ª∂exif.jsËé∑ÂèñiosÂõæÁâáÁöÑÊñπÂêë‰ø°ÊÅØ
+                //≤Âº˛exif.jsªÒ»°iosÕº∆¨µƒ∑ΩœÚ–≈œ¢
                 var _orientation;
                 //if (_ua.indexOf('iphone') > 0) {
                 EXIF.getData(_simpleFile, function () {
@@ -66,7 +66,7 @@
 
 
 
-                //1.ËØªÂèñÊñá‰ª∂ÔºåÈÄöËøáFileReaderÔºåÂ∞ÜÂõæÁâáÊñá‰ª∂ËΩ¨Âåñ‰∏∫DataURLÔºåÂç≥data:img/png;base64ÔºåÂºÄÂ§¥ÁöÑurlÔºåÂèØ‰ª•Áõ¥Êé•ÊîæÂú®image.src‰∏≠;
+                //1.∂¡»°Œƒº˛£¨Õ®π˝FileReader£¨Ω´Õº∆¨Œƒº˛◊™ªØŒ™DataURL£¨º¥data:img/png;base64£¨ø™Õ∑µƒurl£¨ø…“‘÷±Ω”∑≈‘⁄image.src÷–;
                 var _reader = new FileReader(),
                     _img = new Image(),
                     _url;
@@ -87,24 +87,24 @@
 
 
         /**
-         * ËÆ°ÁÆóÂõæÁâáÁöÑÂ∞∫ÂØ∏ÔºåÊ†πÊçÆÂ∞∫ÂØ∏ÂéãÁº©
-         * 1. iphoneÊâãÊú∫html5‰∏ä‰º†ÂõæÁâáÊñπÂêëÈóÆÈ¢òÔºåÂÄüÂä©exif.js
-         * 2. ÂÆâÂçìUCÊµèËßàÂô®‰∏çÊîØÊåÅ new Blob()Ôºå‰ΩøÁî®BlobBuilder
-         * @param {Object} _img     ÂõæÁâá
-         * @param {Number} _orientation ÁÖßÁâá‰ø°ÊÅØ
-         * @return {String}       ÂéãÁº©Âêébase64Ê†ºÂºèÁöÑÂõæÁâá
+         * º∆À„Õº∆¨µƒ≥ﬂ¥Á£¨∏˘æ›≥ﬂ¥Á—πÀı
+         * 1. iphone ÷ª˙html5…œ¥´Õº∆¨∑ΩœÚŒ Ã‚£¨ΩË÷˙exif.js
+         * 2. ∞≤◊øUC‰Ø¿¿∆˜≤ª÷ß≥÷ new Blob()£¨ π”√BlobBuilder
+         * @param {Object} _img     Õº∆¨
+         * @param {Number} _orientation ’’∆¨–≈œ¢
+         * @return {String}       —πÀı∫Ûbase64∏Ò ΩµƒÕº∆¨
          */
         function compress(_img, _orientation) {
-            //2.ËÆ°ÁÆóÁ¨¶ÂêàÁõÆÊ†áÂ∞∫ÂØ∏ÂÆΩÈ´òÂÄºÔºåËã•‰∏ä‰º†ÂõæÁâáÁöÑÂÆΩÈ´òÈÉΩÂ§ß‰∫éÁõÆÊ†áÂõæÔºåÂØπÁõÆÊ†áÂõæÁ≠âÊØîÂéãÁº©ÔºõÂ¶ÇÊûúÊúâ‰∏ÄËæπÂ∞è‰∫éÔºåÂØπ‰∏ä‰º†ÂõæÁâáÁ≠âÊØîÊîæÂ§ß„ÄÇ
-            var _goalWidth = 640,         //ÁõÆÊ†áÂÆΩÂ∫¶
-                _goalHeight = 480,         //ÁõÆÊ†áÈ´òÂ∫¶
-                _imgWidth = _img.naturalWidth,   //ÂõæÁâáÂÆΩÂ∫¶
-                _imgHeight = _img.naturalHeight,  //ÂõæÁâáÈ´òÂ∫¶
-                _tempWidth = _imgWidth,      //ÊîæÂ§ßÊàñÁº©Â∞èÂêéÁöÑ‰∏¥Êó∂ÂÆΩÂ∫¶
-                _tempHeight = _imgHeight,     //ÊîæÂ§ßÊàñÁº©Â∞èÂêéÁöÑ‰∏¥Êó∂ÂÆΩÂ∫¶
-                _r = 0;              //ÂéãÁº©ÊØî
+            //2.º∆À„∑˚∫œƒø±Í≥ﬂ¥ÁøÌ∏ﬂ÷µ£¨»Ù…œ¥´Õº∆¨µƒøÌ∏ﬂ∂º¥Û”⁄ƒø±ÍÕº£¨∂‘ƒø±ÍÕºµ»±»—πÀı£ª»Áπ˚”–“ª±ﬂ–°”⁄£¨∂‘…œ¥´Õº∆¨µ»±»∑≈¥Û°£
+            var _goalWidth = 640,         //ƒø±ÍøÌ∂»
+                _goalHeight = 480,         //ƒø±Í∏ﬂ∂»
+                _imgWidth = _img.naturalWidth,   //Õº∆¨øÌ∂»
+                _imgHeight = _img.naturalHeight,  //Õº∆¨∏ﬂ∂»
+                _tempWidth = _imgWidth,      //∑≈¥ÛªÚÀı–°∫Ûµƒ¡Ÿ ±øÌ∂»
+                _tempHeight = _imgHeight,     //∑≈¥ÛªÚÀı–°∫Ûµƒ¡Ÿ ±øÌ∂»
+                _r = 0;              //—πÀı±»
 
-            if (_imgWidth > _goalWidth || _imgHeight > _goalHeight) {//ÂÆΩÊàñÈ´òÂ§ß‰∫éÁõÆÊ†áÂõæÔºåÈúÄÁ≠âÊØîÂéãÁº©
+            if (_imgWidth > _goalWidth || _imgHeight > _goalHeight) {//øÌªÚ∏ﬂ¥Û”⁄ƒø±ÍÕº£¨–Ëµ»±»—πÀı
                 _r = _imgWidth / _goalWidth;
                 if (_imgHeight / _goalHeight < _r) {
                     _r = _imgHeight / _goalHeight;
@@ -113,7 +113,7 @@
                 _tempHeight = Math.ceil(_imgHeight / _r);
             }
 
-            //3.Âà©Áî®canvasÂØπÂõæÁâáËøõË°åË£ÅÂâ™ÔºåÁ≠âÊØîÊîæÂ§ßÊàñÁº©Â∞èÂêéËøõË°åÂ±Ö‰∏≠Ë£ÅÂâ™
+            //3.¿˚”√canvas∂‘Õº∆¨Ω¯––≤√ºÙ£¨µ»±»∑≈¥ÛªÚÀı–°∫ÛΩ¯––æ”÷–≤√ºÙ
             var _canvas = $("#myCanvas")[0];
 
             var _context = _canvas.getContext('2d');
@@ -121,15 +121,15 @@
             _canvas.height = _tempHeight;
             var _degree;
 
-            //ios bugÔºåiphoneÊâãÊú∫‰∏äÂèØËÉΩ‰ºöÈÅáÂà∞ÂõæÁâáÊñπÂêëÈîôËØØÈóÆÈ¢ò
+            //ios bug£¨iphone ÷ª˙…œø…ƒ‹ª·”ˆµΩÕº∆¨∑ΩœÚ¥ÌŒÛŒ Ã‚
             switch (_orientation) {
-                //iphoneÊ®™Â±èÊãçÊëÑÔºåÊ≠§Êó∂homeÈîÆÂú®Â∑¶‰æß
+                //iphone∫·∆¡≈ƒ…„£¨¥À ±homeº¸‘⁄◊Û≤‡
                 case 3:
                     _degree = 180;
                     _tempWidth = -_imgWidth;
                     _tempHeight = -_imgHeight;
                     break;
-                //iphoneÁ´ñÂ±èÊãçÊëÑÔºåÊ≠§Êó∂homeÈîÆÂú®‰∏ãÊñπ(Ê≠£Â∏∏ÊãøÊâãÊú∫ÁöÑÊñπÂêë)
+                //iphone ˙∆¡≈ƒ…„£¨¥À ±homeº¸‘⁄œ¬∑Ω(’˝≥£ƒ√ ÷ª˙µƒ∑ΩœÚ)
                 case 6:
                     _canvas.width = _imgHeight;
                     _canvas.height = _imgWidth;
@@ -137,7 +137,7 @@
                     _tempWidth = _imgWidth;
                     _tempHeight = -_imgHeight;
                     break;
-                //iphoneÁ´ñÂ±èÊãçÊëÑÔºåÊ≠§Êó∂homeÈîÆÂú®‰∏äÊñπ
+                //iphone ˙∆¡≈ƒ…„£¨¥À ±homeº¸‘⁄…œ∑Ω
                 case 8:
                     _canvas.width = _imgHeight;
                     _canvas.height = _imgWidth;
@@ -153,7 +153,7 @@
             } else {
                 _context.drawImage(_img, 0, 0, _tempWidth, _tempHeight);
             }
-            //toDataURLÊñπÊ≥ïÔºåÂèØ‰ª•Ëé∑ÂèñÊ†ºÂºè‰∏∫"data:image/png;base64,***"ÁöÑbase64ÂõæÁâá‰ø°ÊÅØÔºõ
+            //toDataURL∑Ω∑®£¨ø…“‘ªÒ»°∏Ò ΩŒ™"data:image/png;base64,***"µƒbase64Õº∆¨–≈œ¢£ª
             var _data = _canvas.toDataURL('image/jpeg');
             return _data;
         }
@@ -161,21 +161,21 @@
         function upload() {
 
             $.ajax({
-                //Êèê‰∫§Êï∞ÊçÆÁöÑÁ±ªÂûã POST GET
+                //Ã·Ωª ˝æ›µƒ¿‡–Õ POST GET
                 type: "POST",
-                //Êèê‰∫§ÁöÑÁΩëÂùÄ
+                //Ã·ΩªµƒÕ¯÷∑
                 url: "Handler/UploadPhotoToServerSite.ashx",
-                //Êèê‰∫§ÁöÑÊï∞ÊçÆ
+                //Ã·Ωªµƒ ˝æ›
                 data: { FileData: $("#imgData").val(), FileName: $("#AttachFile").val() },
-                //ËøîÂõûÊï∞ÊçÆÁöÑÊ†ºÂºè
-                //Âú®ËØ∑Ê±Ç‰πãÂâçË∞ÉÁî®ÁöÑÂáΩÊï∞
+                //∑µªÿ ˝æ›µƒ∏Ò Ω
+                //‘⁄«Î«Û÷Æ«∞µ˜”√µƒ∫Ø ˝
                 beforeSend: function () {
                     $("#IMG_Waiting").show();
                 },
                 error: function (XMLHttpRequest, textStatus, errorThrown) {
                     console.log(XMLHttpRequest);
                 },
-                //ÊàêÂäüËøîÂõû‰πãÂêéË∞ÉÁî®ÁöÑÂáΩÊï∞             
+                //≥…π¶∑µªÿ÷Æ∫Ûµ˜”√µƒ∫Ø ˝             
                 success: function (data) {
 
                     if (data.indexOf("img") > 0) {
@@ -186,7 +186,7 @@
                         alert(data);
                     }
                 },
-                //Ë∞ÉÁî®ÊâßË°åÂêéË∞ÉÁî®ÁöÑÂáΩÊï∞
+                //µ˜”√÷¥––∫Ûµ˜”√µƒ∫Ø ˝
                 complete: function (XMLHttpRequest, textStatus) {
                     $("#IMG_Waiting").hide();
                 }
@@ -250,7 +250,7 @@
                                                         <tr>
                                                             <td align="left" valign="top" >
                                                                 <div style="width: 97vw; text-align:right;">
-                                                                    <asp:Button ID="BT_Create" runat="server" CssClass="inpu" OnClick="BT_Create_Click" Text="+ÈúÄÊ±Ç" />
+                                                                    <asp:Button ID="BT_Create" runat="server" CssClass="inpu" OnClick="BT_Create_Click" Text="+–Ë«Û" />
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -263,30 +263,33 @@
                                                                     Width="100%">
                                                                     <ItemStyle CssClass="itemStyle" />
                                                                     <Columns>
-                                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='‰øÆÊîπ' /&gt;&lt;/div&gt;">
+                                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='–ﬁ∏ƒ' /&gt;&lt;/div&gt;">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                         </asp:ButtonColumn>
                                                                         <asp:TemplateColumn HeaderText="Delete">
                                                                             <ItemTemplate>
-                                                                                <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Âà†Èô§' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                                                <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                                             </ItemTemplate>
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="right" Width="3%" />
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="ID" HeaderText="ÁºñÂè∑">
+                                                                        <asp:BoundColumn DataField="ID" HeaderText="±‡∫≈">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Type" HeaderText="Á±ªÂûã">
+                                                                        <asp:BoundColumn DataField="Type" HeaderText="¿‡–Õ">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTCustomerQuestionHandleDetail.aspx?ID={0}" DataTextField="Question" HeaderText="ÊúçÂä°ÈúÄÊ±Ç" Target="_blank">
+                                                                        <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTCustomerQuestionHandleDetail.aspx?ID={0}" DataTextField="Question" HeaderText="∑˛ŒÒ–Ë«Û" Target="_blank">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                                         </asp:HyperLinkColumn>
-                                                                        <asp:HyperLinkColumn DataNavigateUrlField="OperatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}" DataTextField="OperatorName" HeaderText="ÂèóÁêÜ‰∫∫" Target="_blank">
+                                                                        <asp:HyperLinkColumn DataNavigateUrlField="OperatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}" DataTextField="OperatorName" HeaderText=" ‹¿Ì»À" Target="_blank">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                         </asp:HyperLinkColumn>
-                                                                        <asp:BoundColumn DataField="OperatorStatus" HeaderText="ÂèóÁêÜÁä∂ÊÄÅ">
-                                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
-                                                                        </asp:BoundColumn>
+                                                                        <asp:TemplateColumn HeaderText="◊¥Ã¨">
+    <ItemTemplate>
+        <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("OperatorStatus").ToString()) %>
+    </ItemTemplate>
+    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
+</asp:TemplateColumn>
                                                                         <asp:TemplateColumn>
                                                                             <ItemTemplate>
                                                                                 <table>
@@ -321,7 +324,7 @@
                                                                                    
                                                                                     <td>
                                                                                         <asp:Label ID="Label48" runat="server" Text="<%$ Resources:lang,FuWuChuLiXiJie%>"></asp:Label>
-                                                                                        Ôºö</td>
+                                                                                        £∫</td>
                                                                                     <td style="text-align:center;">
                                                                                         <asp:Button ID="BT_Accept" runat="server" CssClass="inpu" OnClick="BT_Accept_Click"
                                                                                             Text="<%$ Resources:lang,ShouLi%>" />
@@ -332,7 +335,7 @@
                                                                                
                                                                                     <td>
                                                                                         <asp:Label ID="Label51" runat="server" Text="<%$ Resources:lang,CYHSJ%>"></asp:Label>
-                                                                                        Ôºö</td>
+                                                                                        £∫</td>
                                                                                     <td>
                                                                                         <asp:DropDownList ID="DL_IsImportant" runat="server" Width="99%" AutoPostBack="true" OnSelectedIndexChanged="DL_IsImportant_SelectedIndexChanged">
                                                                                             <asp:ListItem>NO</asp:ListItem>
@@ -345,7 +348,7 @@
                                                                               
                                                                                     <td>
                                                                                         <asp:Label ID="Label49" runat="server" Text="<%$ Resources:lang,ZhiJieChengYuan%>"></asp:Label>
-                                                                                        Ôºö</td>
+                                                                                        £∫</td>
                                                                                     <td>
                                                                                         <asp:DropDownList ID="DL_Operator" runat="server" DataTextField="UserName" DataValueField="UserCode">
                                                                                         </asp:DropDownList>
@@ -371,7 +374,7 @@
                                                                                     </td>
 
                                                                                     <%-- <td style="padding-left: 5px;">
-                                                                                        <asp:HyperLink ID="HL_CustomerCollector" runat="server" NavigateUrl="TTRelatedDIYWorkflowForm.aspx?RelatedType=CustomerService&RelatedID=2" Text="‰ø°ÊÅØÊî∂ÈõÜ" Target="_blank"></asp:HyperLink>
+                                                                                        <asp:HyperLink ID="HL_CustomerCollector" runat="server" NavigateUrl="TTRelatedDIYWorkflowForm.aspx?RelatedType=CustomerService&RelatedID=2" Text="–≈œ¢ ’ºØ" Target="_blank"></asp:HyperLink>
                                                                                     </td>--%>
 
                                                                                     <td style="padding-left: 5px;">
@@ -501,12 +504,12 @@
 
                                                                             <td class="tdLeft" style="width: 5%; text-align: center;">
 
-                                                                                <asp:LinkButton ID="LinkButton1" runat="server" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='‰øÆÊîπ' /&gt;&lt;/div&gt;" CssClass="inpu" CommandName="Update" />
+                                                                                <asp:LinkButton ID="LinkButton1" runat="server" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='–ﬁ∏ƒ' /&gt;&lt;/div&gt;" CssClass="inpu" CommandName="Update" />
                                                                             </td>
 
                                                                             <%-- <td class="tdLeft" style="width: 5%; text-align: center;">
 
-                                                                                <asp:LinkButton ID="LinkButton2" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Âà†Èô§' /&gt;&lt;/div&gt;" />
+                                                                                <asp:LinkButton ID="LinkButton2" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;" />
                                                                             </td>--%>
 
                                                                             <td class="tdLeft" style="width: 10%; text-align: center;">
@@ -818,7 +821,7 @@
 
                                 <tr>
                                     <td class="formItemBgStyle" style="text-align: left; width: 15%;">
-                                        <asp:Label ID="Label10" runat="server" Text="ÂÆ¢Êà∑ÂïÜÊú∫Èò∂ÊÆµ"></asp:Label>
+                                        <asp:Label ID="Label10" runat="server" Text="øÕªß…Ãª˙Ω◊∂Œ"></asp:Label>
                                     </td>
                                      </tr>
                                 <tr>
@@ -952,12 +955,12 @@
                                         <asp:TextBox ID="TB_HandleWay" runat="server" width="60%"></asp:TextBox>
                                         <asp:DropDownList ID="DL_HandleWay" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DL_ContactWay_SelectedIndexChanged">
                                             <asp:ListItem Value="" Text="<%$ Resources:lang,QingXuanZe%>" />
-                                            <asp:ListItem Value="ÁîµËØù" Text="<%$ Resources:lang,DianHua%>" />
+                                            <asp:ListItem Value="µÁª∞" Text="<%$ Resources:lang,DianHua%>" />
                                             <asp:ListItem Value="IM" Text="<%$ Resources:lang,IM%>" />
-                                            <asp:ListItem Value="ËøúÁ®ãÊéßÂà∂" Text="<%$ Resources:lang,YuanChengKongZhi%>" />
+                                            <asp:ListItem Value="‘∂≥Ãøÿ÷∆" Text="<%$ Resources:lang,YuanChengKongZhi%>" />
                                             <asp:ListItem Value="EMail" Text="<%$ Resources:lang,EMail%>" />
-                                            <asp:ListItem Value="‰∏äÈó®ÊãúËÆø" Text="<%$ Resources:lang,ShangMenBaiFang%>" />
-                                            <asp:ListItem Value="ÂÖ∂ÂÆÉÊñπÂºè" Text="<%$ Resources:lang,QiTaFangShi%>" />
+                                            <asp:ListItem Value="…œ√≈∞›∑√" Text="<%$ Resources:lang,ShangMenBaiFang%>" />
+                                            <asp:ListItem Value="∆‰À¸∑Ω Ω" Text="<%$ Resources:lang,QiTaFangShi%>" />
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -969,11 +972,11 @@
                                 <tr>
                                     <td style="text-align: left;" class="formItemBgStyle">
                                         <asp:DropDownList ID="DL_HandleStatus" runat="server" width="99%">
-                                            <asp:ListItem Value="Â§ÑÁêÜ‰∏≠" Text="<%$ Resources:lang,ChuLiZhong%>" />
-                                            <asp:ListItem Value="ËØÑÂÆ°‰∏≠" Text="<%$ Resources:lang,PingShenZhong%>" />
-                                            <asp:ListItem Value="ÊåÇËµ∑" Text="<%$ Resources:lang,GuaQi%>" />
-                                            <asp:ListItem Value="ÂÆåÊàê" Text="<%$ Resources:lang,WanCheng%>" />
-                                            <asp:ListItem Value="ÂèñÊ∂à" Text="<%$ Resources:lang,QuXiao%>" />
+                                            <asp:ListItem Value="InProgress" Text="<%$ Resources:lang,ChuLiZhong%>" />
+                                            <asp:ListItem Value="Reviewing" Text="<%$ Resources:lang,PingShenZhong%>" />
+                                            <asp:ListItem Value="Suspended" Text="<%$ Resources:lang,GuaQi%>" />
+                                            <asp:ListItem Value="Completed" Text="<%$ Resources:lang,WanCheng%>" />
+                                            <asp:ListItem Value="Cancel" Text="<%$ Resources:lang,QuXiao%>" />
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -986,9 +989,9 @@
                                     <td style="text-align: left;" class="formItemBgStyle">
                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_UsedTime" runat="server" width="60%" Amount="1">1.00</NickLee:NumberBox>
                                         <asp:DropDownList ID="DL_TimeUnit" runat="server">
-                                            <asp:ListItem Value="ÂàÜÈíü" Text="<%$ Resources:lang,FenZhong%>" />
-                                            <asp:ListItem Value="Â∞èÊó∂" Text="<%$ Resources:lang,XiaoShi%>" />
-                                            <asp:ListItem Value="Â§©" Text="<%$ Resources:lang,Tian%>" />
+                                            <asp:ListItem Value="∑÷÷”" Text="<%$ Resources:lang,FenZhong%>" />
+                                            <asp:ListItem Value="–° ±" Text="<%$ Resources:lang,XiaoShi%>" />
+                                            <asp:ListItem Value="ÃÏ" Text="<%$ Resources:lang,Tian%>" />
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -1033,7 +1036,7 @@
                                                         <Upload:InputFile ID="AttachFile" runat="server"  name="photo" accept="image/*;capture=camera"  Width="180px" />
                                                         <input  type="hidden" val="" id="imgData"  runat="server" />
                                                         &nbsp;<input type="button" id="BtnUP" onclick="upload()"  value="Upload" />
-                                                        <img id="IMG_Uploading" src="Images/Processing.gif" alt="ËØ∑Á®çÂÄôÔºåÂ§ÑÁêÜ‰∏≠..." style="display: none;" />
+                                                        <img id="IMG_Uploading" src="Images/Processing.gif" alt="«Î…‘∫Ú£¨¥¶¿Ì÷–..." style="display: none;" />
 
                                                         <br />
 

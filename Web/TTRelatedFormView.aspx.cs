@@ -102,22 +102,22 @@ public partial class TTRelatedFormView : System.Web.UI.Page
             Response.Redirect("TTAssetPurchaseOrderView.aspx?POID=" + strRelatedID);
         }
         
-        if ((strRelatedType == "项目") | (strRelatedType == "Project"))
+        if ((strRelatedType == "Project") | (strRelatedType == "Project"))
         {
             Response.Redirect("TTProjectDetailView.aspx?ProjectID=" + strRelatedID);
         }
 
-        if ((strRelatedType == "需求") | (strRelatedType == "Requirement"))
+        if ((strRelatedType == "Requirement") | (strRelatedType == "Requirement"))
         {
             Response.Redirect("TTReqView.aspx?ReqID=" + strRelatedID);
         }
 
-        if (strRelatedType == "工作流")
+        if (strRelatedType == "Workflow")
         {
             Response.Redirect("TTWorkFlowView.aspx?WLID=" + strRelatedID);
         }
 
-        if (strRelatedType == "风险")
+        if (strRelatedType == "Risk")
         {
             Response.Redirect("TTProjectRiskView.aspx?RiskID=" + strRelatedID);
         }
@@ -127,12 +127,12 @@ public partial class TTRelatedFormView : System.Web.UI.Page
             Response.Redirect("TTMeetingView.aspx?ID=" + strRelatedID);
         }
 
-        if (strRelatedType == "任务")
+        if (strRelatedType == "Task")
         {
             Response.Redirect("TTProjectTaskView.aspx?TaskID=" + strRelatedID);
         }
 
-        if (strRelatedType == "费用报销")
+        if (strRelatedType == "ExpenseReimbursement")
         {
             Response.Redirect("TTExpenseClaimListView.aspx?ECID=" + strRelatedID);
         }
@@ -147,7 +147,7 @@ public partial class TTRelatedFormView : System.Web.UI.Page
             Response.Redirect("TTConstractView.aspx?ID=" + strRelatedID);
         }
 
-        if (strRelatedType == "计划")
+        if (strRelatedType == "Plan")
         {
             Response.Redirect("TTProjectPlanView.aspx?PlanID=" + strRelatedID);
         }
@@ -162,7 +162,7 @@ public partial class TTRelatedFormView : System.Web.UI.Page
             Response.Redirect("TTPlanView.aspx?PlanID=" + strRelatedID);
         }
 
-        if (strRelatedType == "其它")
+        if (strRelatedType == "Other")
         {
             Response.Write("--此业务无关联表单！");
 

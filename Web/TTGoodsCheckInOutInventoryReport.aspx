@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsCheckInOutInventoryReport.aspx.cs" Inherits="TTGoodsCheckInOutInventoryReport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsCheckInOutInventoryReport.aspx.cs" Inherits="TTGoodsCheckInOutInventoryReport" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -45,13 +45,13 @@
 
                             <tr>
                                 <td style="text-align: right;">
-                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>ï¼š
+                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>£º
                                 </td>
                                 <td>
                                     <asp:TextBox ID="TB_GoodsCode" runat="server" Width="200px"></asp:TextBox>
                                 </td>
                                 <td style="text-align: right;">
-                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>ï¼š
+                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º
                                 </td>
                                 <td>
                                     <asp:TextBox ID="TB_GoodsName" runat="server" Width="99%"></asp:TextBox>
@@ -59,12 +59,12 @@
                             </tr>
                             <tr>
                                 <td style="text-align: right;">
-                                    <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,XingHao%>"></asp:Label>ï¼š</td>
+                                    <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,XingHao%>"></asp:Label>£º</td>
                                 <td>
                                     <asp:TextBox ID="TB_ModelNumber" runat="server" Width="200px"></asp:TextBox>
                                 </td>
                                 <td style="text-align: right;">
-                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,GuiGe%>"></asp:Label>ï¼š</td>
+                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,GuiGe%>"></asp:Label>£º</td>
                                 <td>
                                     <asp:TextBox ID="TB_Spec" runat="server" Width="250px"></asp:TextBox>
                                 </td>
@@ -75,12 +75,12 @@
 
                             <tr>
                                 <td style="text-align: right;">
-                                    <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,YueFen%>"></asp:Label>ï¼š
+                                    <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,YueFen%>"></asp:Label>£º
 
                                 </td>
                                 <td colspan="3">
                                     <asp:TextBox ID="TB_Monthly" runat="server" Width="200px"></asp:TextBox>
-                                    (<asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,GeShi%>"></asp:Label>ï¼š201507)</td>
+                                    (<asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,GeShi%>"></asp:Label>£º201507)</td>
 
                             </tr>
 
@@ -92,7 +92,7 @@
                                 </td>
                                 <td align ="center">
                                     <a href="#" onclick="preview1()">
-                                        <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" /></a>
+                                        <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" /></a>
                                     <asp:Label ID="LB_UserCode" runat="server"
                                         Visible="False"></asp:Label>
                                     <asp:Label ID="LB_UserName" runat="server"
@@ -173,33 +173,33 @@
                                         ShowHeader="false" Height="1px"
                                         Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                         <Columns>
-                                            <asp:BoundColumn DataField="CheckTime" HeaderText="æœˆä»½">
+                                            <asp:BoundColumn DataField="CheckTime" HeaderText="ÔÂ·Ý">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="GoodsCode" HeaderText="ä»£ç ">
+                                            <asp:BoundColumn DataField="GoodsCode" HeaderText="´úÂë">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="GoodsCode" DataNavigateUrlFormatString="TTGoodsInforView.aspx?GoodsCode={0}"
-                                                DataTextField="GoodsName" HeaderText="åç§°" Target="_blank">
+                                                DataTextField="GoodsName" HeaderText="Ãû³Æ" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                             </asp:HyperLinkColumn>
-                                            <asp:BoundColumn DataField="ModelNumber" HeaderText="åž‹å·">
+                                            <asp:BoundColumn DataField="ModelNumber" HeaderText="ÐÍºÅ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Spec" HeaderText="è§„æ ¼">
+                                            <asp:BoundColumn DataField="Spec" HeaderText="¹æ¸ñ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="UnitName" HeaderText="å•ä½">
+                                            <asp:BoundColumn DataField="UnitName" HeaderText="µ¥Î»">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="TotalCheckInNumber" HeaderText="å…¥åº“é‡">
+                                            <asp:BoundColumn DataField="TotalCheckInNumber" HeaderText="Èë¿âÁ¿">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="TotalCheckOutNumber" HeaderText="å‡ºåº“é‡">
+                                            <asp:BoundColumn DataField="TotalCheckOutNumber" HeaderText="³ö¿âÁ¿">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
 
-                                            <asp:TemplateColumn HeaderText="åº“å­˜é‡">
+                                            <asp:TemplateColumn HeaderText="¿â´æÁ¿">
                                                 <ItemTemplate>
                                                     <%#   GetInventoryNumberByMonth(Eval("CheckTime").ToString(),Eval("GoodsCode").ToString(),Eval("ModelNumber").ToString(),Eval("Spec").ToString(),Eval("UnitName").ToString()) %>
                                                 </ItemTemplate>

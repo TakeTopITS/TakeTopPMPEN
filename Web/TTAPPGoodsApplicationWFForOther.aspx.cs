@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -41,7 +41,7 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
             strRelatedID = "0";
         }
 
-        //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
         strToDoWLID = Request.QueryString["WLID"]; strToDoWLDetailID = Request.QueryString["WLStepDetailID"];
         strWLBusinessID = Request.QueryString["BusinessID"];
 
@@ -74,8 +74,8 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
             TB_ApplicantCode.Text = LB_UserCode.Text.Trim();
             LB_ApplicantName.Text = LB_UserName.Text.Trim();
 
-            //ç‰©æ–™é¢†ç”¨
-            ShareClass.LoadWFTemplate(strUserCode, "ç‰©æ–™é¢†ç”¨", DL_TemName);
+            //ÎïÁÏÁìÓÃ
+            ShareClass.LoadWFTemplate(strUserCode, "MaterialWithdrawal", DL_TemName);
             LoadGoodsApplication(strUserCode, strRelatedType, strRelatedID);
         }
     }
@@ -94,7 +94,7 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
             {
                 strAAID = e.Item.Cells[3].Text.Trim();
 
-                intWLNumber = LoadRelatedWL("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", int.Parse(strAAID));
+                intWLNumber = LoadRelatedWL("MaterialWithdrawal", "ÎïÁÏ", int.Parse(strAAID));
                 if (intWLNumber > 0)
                 {
                     BT_NewMain.Visible = false;
@@ -110,8 +110,8 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
                     BT_SubmitApply.Enabled = true;
                 }
 
-                //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strAAID, "0");
+                //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialWithdrawal", "ÎïÁÏ", strAAID, "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     BT_NewMain.Visible = true;
@@ -160,7 +160,7 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
 
                 if (e.CommandName == "Delete")
                 {
-                    intWLNumber = LoadRelatedWL("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", int.Parse(strAAID));
+                    intWLNumber = LoadRelatedWL("MaterialWithdrawal", "ÎïÁÏ", int.Parse(strAAID));
                     if (intWLNumber > 0)
                     {
                         return;
@@ -275,10 +275,10 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
 
 
             LoadGoodsApplication(strUserCode, strRelatedType, strRelatedID);
-            LoadRelatedWL("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", int.Parse(strAAID));
+            LoadRelatedWL("MaterialWithdrawal", "ÎïÁÏ", int.Parse(strAAID));
 
 
-            DL_Status.SelectedValue = "æ–°å»º";
+            DL_Status.SelectedValue = "New";
 
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
@@ -334,15 +334,15 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
             goodsApplicationBLL.UpdateGoodsApplication(goodsApplication, int.Parse(strAAID));
             LoadGoodsApplication(strUserCode, strRelatedType, strRelatedID);
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strAAID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialWithdrawal", "ÎïÁÏ", strAAID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 string strCmdText = "select AAID as OtherAAID,AAID as DetailAAID, * from T_GoodsApplication where AAID = " + strAAID;
                 if (strToDoWLID == null)
                 {
-                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strAAID);
+                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialWithdrawal", "ÎïÁÏ", strAAID);
                 }
 
                 if (strToDoWLID != null)
@@ -537,7 +537,7 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
             string strStatus = DL_Status.SelectedValue.Trim();
             string strAAID = LB_AAID.Text.Trim();
 
-            int intWLNumber = GetRelatedWorkFlowNumber("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strAAID);
+            int intWLNumber = GetRelatedWorkFlowNumber("MaterialWithdrawal", "ÎïÁÏ", strAAID);
             if (intWLNumber > 0)
             {
                 BT_NewMain.Visible = false;
@@ -551,7 +551,7 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
                 BT_SubmitApply.Enabled = true;
             }
 
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strAAID, "0");
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialWithdrawal", "ÎïÁÏ", strAAID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_NewMain.Visible = true;
@@ -607,7 +607,7 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
 
             if (e.CommandName == "Delete")
             {
-                intWLNumber = GetRelatedWorkFlowNumber("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strAAID);
+                intWLNumber = GetRelatedWorkFlowNumber("MaterialWithdrawal", "ÎïÁÏ", strAAID);
 
                 if (intWLNumber > 0 & strToDoWLID == null)
                 {
@@ -640,9 +640,9 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
 
                     LoadGoodsApplicationDetail(strAAID);
 
-                    //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                    //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-                    strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strAAID, "0");
+                    //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+                    //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+                    strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialWithdrawal", "ÎïÁÏ", strAAID, "0");
                     if (strToDoWLID != null | strAllowFullEdit == "YES")
                     {
                         string strCmdText;
@@ -650,7 +650,7 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
                         strCmdText = "select AAID as OtherAAID,AAID as DetailAAID, * from T_GoodsApplication where AAID = " + strAAID;
                         if (strToDoWLID == null)
                         {
-                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strAAID);
+                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialWithdrawal", "ÎïÁÏ", strAAID);
                         }
 
                         if (strToDoWLID != null)
@@ -703,7 +703,7 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
         }
 
         strAAID = LB_AAID.Text.Trim();
-        int intWLNumber = GetRelatedWorkFlowNumber("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strAAID);
+        int intWLNumber = GetRelatedWorkFlowNumber("MaterialWithdrawal", "ÎïÁÏ", strAAID);
         if (intWLNumber > 0 & strToDoWLID == null)
         {
             BT_SubmitApply.Enabled = false;
@@ -788,9 +788,9 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
 
             LoadGoodsApplicationDetail(strAAID);
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strAAID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialWithdrawal", "ÎïÁÏ", strAAID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 string strCmdText;
@@ -798,7 +798,7 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
                 strCmdText = "select AAID as OtherAAID,AAID as DetailAAID, * from T_GoodsApplication where AAID = " + strAAID;
                 if (strToDoWLID == null)
                 {
-                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strAAID);
+                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialWithdrawal", "ÎïÁÏ", strAAID);
                 }
 
                 if (strToDoWLID != null)
@@ -871,9 +871,9 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
 
             LoadGoodsApplicationDetail(strAAID);
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strAAID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialWithdrawal", "ÎïÁÏ", strAAID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 string strCmdText;
@@ -881,7 +881,7 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
                 strCmdText = "select AAID as OtherAAID,AAID as DetailAAID, * from T_GoodsApplication where AAID = " + strAAID;
                 if (strToDoWLID == null)
                 {
-                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strAAID);
+                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialWithdrawal", "ÎïÁÏ", strAAID);
                 }
 
                 if (strToDoWLID != null)
@@ -980,47 +980,47 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
         lst = goodsApplicationBLL.GetAllGoodsApplications(strHQL);
         GoodsApplication goodsApplication = (GoodsApplication)lst[0];
 
-        goodsApplication.Status = "å¤„ç†ä¸­";
+        goodsApplication.Status = "InProgress";
 
         try
         {
             goodsApplicationBLL.UpdateGoodsApplication(goodsApplication, int.Parse(strAAID));
 
-            strXMLFileName = "ç‰©æ–™é¢†ç”¨" + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xml";
+            strXMLFileName = "MaterialWithdrawal" + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xml";
             strXMLFile2 = "Doc\\" + "XML" + "\\" + strXMLFileName;
 
             WorkFlowBLL workFlowBLL = new WorkFlowBLL();
             WorkFlow workFlow = new WorkFlow();
 
             workFlow.WLName = strAAName;
-            workFlow.WLType = "ç‰©æ–™é¢†ç”¨";
-            workFlow.Status = "æ–°å»º";
+            workFlow.WLType = "MaterialWithdrawal";
+            workFlow.Status = "New";
             workFlow.TemName = DL_TemName.SelectedValue.Trim();
             workFlow.CreateTime = DateTime.Now;
             workFlow.CreatorCode = strUserCode;
             workFlow.CreatorName = ShareClass.GetUserName(strUserCode);
             workFlow.Description = strApplyReason;
             workFlow.XMLFile = strXMLFile2;
-            workFlow.RelatedType = "ç‰©æ–™";
+            workFlow.RelatedType = "ÎïÁÏ";
             workFlow.RelatedID = goodsApplication.AAID;
-            workFlow.DIYNextStep = "Yes"; workFlow.IsPlanMainWorkflow = "NO";
+            workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
 
             if (CB_SMS.Checked == true)
             {
-                workFlow.ReceiveSMS = "Yes";
+                workFlow.ReceiveSMS = "YES";
             }
             else
             {
-                workFlow.ReceiveSMS = "No";
+                workFlow.ReceiveSMS = "NO";
             }
 
             if (CB_Mail.Checked == true)
             {
-                workFlow.ReceiveEMail = "Yes";
+                workFlow.ReceiveEMail = "YES";
             }
             else
             {
-                workFlow.ReceiveEMail = "No";
+                workFlow.ReceiveEMail = "NO";
             }
 
             try
@@ -1033,7 +1033,7 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
                 strXMLFile2 = Server.MapPath(strXMLFile2);
                 xmlProcess.DbToXML(strCmdText, "T_GoodsApplication", strXMLFile2);
 
-                LoadRelatedWL("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", int.Parse(strAAID));
+                LoadRelatedWL("MaterialWithdrawal", "ÎïÁÏ", int.Parse(strAAID));
 
                 //BT_New.Enabled = false;
                 //BT_Update.Enabled = false;
@@ -1041,7 +1041,7 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
                 //BT_NewAA.Enabled = true;
                 //BT_UpdateAA.Enabled = false;
                 //BT_DeleteAA.Enabled = false;
-                //DL_Status.SelectedValue = "å¤„ç†ä¸­";
+                //DL_Status.SelectedValue = "InProgress";
 
                 BT_SubmitApply.Enabled = false;
 
@@ -1083,7 +1083,7 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'ç‰©æ–™é¢†ç”¨'";
+        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'MaterialWithdrawal'";
         strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC";
         WorkFlowBLL workFlowBLL = new WorkFlowBLL();
         lst = workFlowBLL.GetAllWorkFlows(strHQL);
@@ -1143,7 +1143,7 @@ public partial class TTAPPGoodsApplicationWFForOther : System.Web.UI.Page
         strHQL += " and goodsApplication.RelatedType = " + "'" + strRelatedType + "'" + " and goodsApplication.RelatedID = " + strRelatedID;
         strHQL += " Order by goodsApplication.AAID DESC";
 
-        //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
         if (strToDoWLID != null & strWLBusinessID != null)
         {
             strHQL = "from GoodsApplication as goodsApplication where goodsApplication.AAID = " + strWLBusinessID;

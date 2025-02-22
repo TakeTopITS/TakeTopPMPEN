@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -58,7 +58,7 @@ public partial class TTAPPUserAttendanceRecordForMeSAAS : System.Web.UI.Page
 
         LB_LeaderCode.Text = strLeaderCode;
 
-        if (strDisplayType == "显示异常")
+        if (strDisplayType == "DisplayAbnormal")
         {
             strHQL = "Select * From T_UserAttendanceRecord  where ";
             strHQL += " (LateMinute <> 0 or EarlyMinute <> 0 or (MCheckInDistance > LargestDistance Or MCheckOutDistance > LargestDistance Or ACheckInDistance > LargestDistance Or ACheckOutDistance > LargestDistance Or NCheckInDistance > LargestDistance Or NCheckOutDistance > LargestDistance Or OCheckInDistance > LargestDistance Or OCheckOutDistance > LargestDistance))";
@@ -98,7 +98,7 @@ public partial class TTAPPUserAttendanceRecordForMeSAAS : System.Web.UI.Page
             return;
         }
 
-        if (strDisplayType == "显示异常")
+        if (strDisplayType == "DisplayAbnormal")
         {
             strHQL = "Select * From T_UserAttendanceRecord  where ";
             strHQL += " (LateMinute <> 0 or EarlyMinute <> 0 or (MCheckInDistance > LargestDistance Or MCheckOutDistance > LargestDistance Or ACheckInDistance > LargestDistance Or ACheckOutDistance > LargestDistance Or NCheckInDistance > LargestDistance Or NCheckOutDistance > LargestDistance Or OCheckInDistance > LargestDistance Or OCheckOutDistance > LargestDistance))";

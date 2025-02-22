@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTBaseDataCommunicationInterfaceSetting.aspx.cs" Inherits="TTBaseDataCommunicationInterfaceSetting" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTBaseDataCommunicationInterfaceSetting.aspx.cs" Inherits="TTBaseDataCommunicationInterfaceSetting" %>
 
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -83,9 +83,9 @@
                                                         </b></td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="center">„Äê<a href="Template/Áü≠‰ø°ÊúçÂä°ÂïÜËÆæÁΩÆÊ†ºÂºè.pdf" target="_blank"> <span style="font-size: x-small;">
+                                                        <td align="center">°æ<a href="Template/∂Ã–≈∑˛ŒÒ…Ã…Ë÷√∏Ò Ω.pdf" target="_blank"> <span style="font-size: x-small;">
                                                             <asp:Label ID="Label96" runat="server" Text="<%$ Resources:lang,GeShiShiLi%>"></asp:Label>
-                                                        </span></a>„Äë </td>
+                                                        </span></a>°ø </td>
                                                     </tr>
                                                 </table>
                                             </td>
@@ -169,15 +169,18 @@
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="SPName" HeaderText="ÊúçÂä°ÂïÜ">
+                                                        <asp:BoundColumn DataField="SPName" HeaderText="∑˛ŒÒ…Ã">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="SPInterface" HeaderText="Êé•Âè£">
+                                                        <asp:BoundColumn DataField="SPInterface" HeaderText="Ω”ø⁄">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="60%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Status" HeaderText="Áä∂ÊÄÅ">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-                                                        </asp:BoundColumn>
+                                                        <asp:TemplateColumn HeaderText="◊¥Ã¨">
+    <ItemTemplate>
+        <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
+    </ItemTemplate>
+    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
+</asp:TemplateColumn>
                                                     </Columns>
                                                 </asp:DataGrid>
                                                 <br />
@@ -188,8 +191,8 @@
                                                 <asp:TextBox ID="TB_SPInterface" runat="server" Height="60px" TextMode="MultiLine" Width="99%"></asp:TextBox>
                                                 <asp:Label ID="Label98" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>
                                                 <asp:DropDownList ID="DL_SPInterfaceSTatus" runat="server">
-                                                    <asp:ListItem Text="<%$ Resources:lang,HuoDong%>" Value="Â§ÑÁêÜ‰∏≠" />
-                                                    <asp:ListItem Text="<%$ Resources:lang,BeiYong%>" Value="Â§áÁî®" />
+                                                    <asp:ListItem Text="<%$ Resources:lang,HuoDong%>" Value="InProgress" />
+                                                    <asp:ListItem Text="<%$ Resources:lang,BeiYong%>" Value="Backup" />
                                                 </asp:DropDownList>
                                                 &nbsp;&nbsp;
                                             <br />
@@ -251,10 +254,10 @@
                                                                 </ItemTemplate>
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="16%" />
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="BeginSegment" HeaderText="ÂºÄÂßãÁΩëÊÆµ">
+                                                            <asp:BoundColumn DataField="BeginSegment" HeaderText="ø™ ºÕ¯∂Œ">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="42%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="EndSegment" HeaderText="ÁªìÊùüÁΩëÊÆµ">
+                                                            <asp:BoundColumn DataField="EndSegment" HeaderText="Ω· ¯Õ¯∂Œ">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="42%" />
                                                             </asp:BoundColumn>
                                                         </Columns>
@@ -306,13 +309,13 @@
                                                                 </ItemTemplate>
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="ServerIP" HeaderText="Êé•Âè£">
+                                                            <asp:BoundColumn DataField="ServerIP" HeaderText="Ω”ø⁄">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="30%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ServerPort" HeaderText="Áä∂ÊÄÅ">
+                                                            <asp:BoundColumn DataField="ServerPort" HeaderText="◊¥Ã¨">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="WebSite" HeaderText="ÁΩëÂùÄ">
+                                                            <asp:BoundColumn DataField="WebSite" HeaderText="Õ¯÷∑">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="40%" />
                                                             </asp:BoundColumn>
                                                         </Columns>
@@ -320,19 +323,19 @@
                                                     <table>
                                                         <tr>
                                                             <td align="right">
-                                                                <asp:Label ID="Label198" runat="server" Text="<%$ Resources:lang,FuWuQiIP%>"></asp:Label>Ôºö</td>
+                                                                <asp:Label ID="Label198" runat="server" Text="<%$ Resources:lang,FuWuQiIP%>"></asp:Label>£∫</td>
                                                             <td align="left">
                                                                 <asp:TextBox ID="TB_RTXServerIP" runat="server" Text="127...1" Width="350px"></asp:TextBox></td>
                                                         </tr>
                                                         <tr>
                                                             <td align="right">
-                                                                <asp:Label ID="Label199" runat="server" Text="<%$ Resources:lang,DuanKou%>"></asp:Label>Ôºö</td>
+                                                                <asp:Label ID="Label199" runat="server" Text="<%$ Resources:lang,DuanKou%>"></asp:Label>£∫</td>
                                                             <td align="left">
                                                                 <asp:TextBox ID="TB_RTXServerPort" runat="server" Text="86" Width="350px"></asp:TextBox></td>
                                                         </tr>
                                                         <tr>
                                                             <td align="right">
-                                                                <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,WangZhi%>"></asp:Label>Ôºö</td>
+                                                                <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,WangZhi%>"></asp:Label>£∫</td>
                                                             <td align="left">
                                                                 <asp:TextBox ID="TB_RTXWebSite" runat="server" Width="350px"></asp:TextBox></td>
                                                         </tr>

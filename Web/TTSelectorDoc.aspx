@@ -1,14 +1,14 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSelectorDoc.aspx.cs" Inherits="TTSelectorDoc" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSelectorDoc.aspx.cs" Inherits="TTSelectorDoc" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ÊñáÊ°£</title>
+    <title>Œƒµµ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/jscript" language="javascript">
-        //Â§çÈÄâÊ°ÜÂÖ®ÈÄâ
+        //∏¥—°øÚ»´—°
         function ChooseAll(item) {
             $("input[name=dlCode]").each(function () {
                 if (item.checked == true) {
@@ -21,22 +21,22 @@
         }
 
 
-        //Â§öÈÄâÊã©ÊåâÈíÆÂà§Êñ≠
+        //∂‡—°‘Ò∞¥≈•≈–∂œ
         function chooseUpdate() {
             var str = "";
             $("input[name=dlCode]").each(function () {
                 if ($(this).attr("checked")) {
-                    str = str + $(this).attr("id") + ","; // Êï¥‰∏™‰ª•,ÈöîÂºÄ
+                    str = str + $(this).attr("id") + ","; // ’˚∏ˆ“‘,∏Ùø™
                 }
             });
             if (str == "") {
-                alert('ËØ∑ÈÄâÊã©ËÆ∞ÂΩïÈ°πÔºÅ');
+                alert('«Î—°‘Òº«¬ºœÓ£°');
                 return false;
             }
             else {
                 window.returnValue = str;
 
-                alert("Êé®ÈÄÅÊàêÂäü");
+                alert("Õ∆ÀÕ≥…π¶");
 
                 //window.close();
                 //return true;
@@ -96,7 +96,7 @@
                                                                         <tr>
                                                                             <td width="5%" align="center">
                                                                                 <strong>
-                                                                                    <input id='checkAll' type="checkbox" onclick="ChooseAll(this)" style="display: none;" /><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,PingHeYiJian%>"></asp:Label>Êìç‰Ωú</strong>
+                                                                                    <input id='checkAll' type="checkbox" onclick="ChooseAll(this)" style="display: none;" /><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,PingHeYiJian%>"></asp:Label>≤Ÿ◊˜</strong>
                                                                             </td>
                                                                             <td width="6%" align="center">
                                                                                 <strong>
@@ -133,10 +133,10 @@
 
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="DocID" HeaderText="Â∫èÂè∑">
+                                                                <asp:BoundColumn DataField="DocID" HeaderText="–Ú∫≈">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="DocType" HeaderText="Á±ªÂûã">
+                                                                <asp:BoundColumn DataField="DocType" HeaderText="¿‡–Õ">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:TemplateColumn>
@@ -163,11 +163,11 @@
                                             <tr>
                                                 <td class="formItemBgStyle">
                                                     <div style="text-align: center">
-                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="Á°ÆÂÆö" />
+                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="»∑∂®" />
                                                         &nbsp;&nbsp;
                                                       
                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                            type="button" value="ÂÖ≥Èó≠" />
+                                                            type="button" value="Closed" />
                                                     </div>
                                                 </td>
                                             </tr>

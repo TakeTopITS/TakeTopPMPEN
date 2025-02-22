@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -34,7 +34,7 @@ public partial class TTLTCustomerRequirementHandleDetail : System.Web.UI.Page
 
         strIsMobileDevice = Session["IsMobileDevice"].ToString();
 
-        //CKEditoråˆå§‹åŒ–      
+        //CKEditor³õÊ¼»¯      
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_CustomerComment);
@@ -55,7 +55,7 @@ public partial class TTLTCustomerRequirementHandleDetail : System.Web.UI.Page
         strOperatorCode = customerQuestion.OperatorCode.Trim();
         strOperatorStatus = customerQuestion.OperatorStatus.Trim();
 
-        //this.Title = "å®¢æˆ·é—®é¢˜ï¼š" + strQuestionID + " " + customerQuestion.Question.Trim() + " å¤„ç†";
+        //this.Title = "¿Í»§ÎÊÌâ£º" + strQuestionID + " " + customerQuestion.Question.Trim() + " ´¦Àí";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
@@ -135,7 +135,7 @@ public partial class TTLTCustomerRequirementHandleDetail : System.Web.UI.Page
             LoadRelatedDoc(strQuestionID);
             LoadCustomerQuestionRelatedCandidate(strQuestionID);
 
-            //åˆ—å‡ºç›´æ¥æˆå‘˜
+            //ÁĞ³öÖ±½Ó³ÉÔ±
             ShareClass.LoadMemberByUserCodeForDropDownList(strUserCode, DL_Operator);
         }
     }
@@ -151,10 +151,10 @@ public partial class TTLTCustomerRequirementHandleDetail : System.Web.UI.Page
 
         CustomerQuestion customerQuestion = (CustomerQuestion)lst[0];
 
-        customerQuestion.Status = "å¤„ç†ä¸­";
+        customerQuestion.Status = "InProgress";
         customerQuestion.OperatorCode = strUserCode;
         customerQuestion.OperatorName = strUserName;
-        customerQuestion.OperatorStatus = "å—ç†";
+        customerQuestion.OperatorStatus = "Accepted";
 
         try
         {
@@ -186,7 +186,7 @@ public partial class TTLTCustomerRequirementHandleDetail : System.Web.UI.Page
 
         CustomerQuestion customerQuestion = (CustomerQuestion)lst[0];
 
-        customerQuestion.Status = "æ–°å»º";
+        customerQuestion.Status = "New";
         customerQuestion.OperatorCode = "";
         customerQuestion.OperatorName = "";
         customerQuestion.OperatorStatus = "";
@@ -249,8 +249,8 @@ public partial class TTLTCustomerRequirementHandleDetail : System.Web.UI.Page
 
         customerQuestion.OperatorCode = strUserCode;
         customerQuestion.OperatorName = strUserName;
-        customerQuestion.OperatorStatus = "å®Œæˆ";
-        customerQuestion.Status = "å®Œæˆ";
+        customerQuestion.OperatorStatus = "Completed";
+        customerQuestion.Status = "Completed";
 
         try
         {
@@ -278,8 +278,8 @@ public partial class TTLTCustomerRequirementHandleDetail : System.Web.UI.Page
 
         customerQuestion.OperatorCode = strUserCode;
         customerQuestion.OperatorName = strUserName;
-        customerQuestion.OperatorStatus = "åˆ é™¤";
-        customerQuestion.Status = "åˆ é™¤";
+        customerQuestion.OperatorStatus = "Deleted";
+        customerQuestion.Status = "Deleted";
 
         try
         {
@@ -307,7 +307,7 @@ public partial class TTLTCustomerRequirementHandleDetail : System.Web.UI.Page
 
         CustomerQuestion customerQuestion = (CustomerQuestion)lst[0];
 
-        customerQuestion.Status = "æ–°å»º";
+        customerQuestion.Status = "New";
         customerQuestion.OperatorCode = strOperatorCode;
         customerQuestion.OperatorName = ShareClass.GetUserName(strOperatorCode);
         customerQuestion.OperatorStatus = "";
@@ -321,7 +321,7 @@ public partial class TTLTCustomerRequirementHandleDetail : System.Web.UI.Page
             BT_Add.Enabled = true;
             BT_Finish.Enabled = true;
 
-            //æ¨é€æ¶ˆæ¯ç»™å—ç†äºº
+            //ÍÆËÍÏûÏ¢¸øÊÜÀíÈË
             Msg msg = new Msg();
             string strMsg = Resources.lang.FuWuXuQiu + ":" + customerQuestion.Question.Trim() + "," + Resources.lang.ZZYaoNiChuLi;
             msg.SendMSM("Message",strOperatorCode, strMsg, strUserCode);
@@ -741,8 +741,8 @@ public partial class TTLTCustomerRequirementHandleDetail : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Document as document where document.RelatedType = 'å®¢æœ' and document.RelatedID = " + strQuestionID;
-        strHQL += " and rtrim(ltrim(document.Status)) <> 'åˆ é™¤' Order by document.DocID DESC";
+        strHQL = "from Document as document where document.RelatedType = '¿Í·ş' and document.RelatedID = " + strQuestionID;
+        strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);
 

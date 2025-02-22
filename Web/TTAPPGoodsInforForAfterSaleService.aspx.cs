@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -24,8 +24,8 @@ public partial class TTAPPGoodsInforForAfterSaleService : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //é’Ÿç¤¼æœˆä½œå“ï¼ˆjack.erp@gmail.com)
-        //Taketop Software 2006ï¼2012
+        //ÖÓÀñÔÂ×÷Æ·£¨jack.erp@gmail.com)
+        //Taketop Software 2006£­2012
 
         string strHQL;
         IList lst;
@@ -40,7 +40,7 @@ public partial class TTAPPGoodsInforForAfterSaleService : System.Web.UI.Page
 
         try
         {
-            //æ‰«ç åŠŸèƒ½å¿…é¡»
+            //É¨Âë¹¦ÄÜ±ØĞë
             signModel = TakeTopCore.WXHelper.GetWXInfo(Request.Url.ToString());
             if (signModel != null)
             {

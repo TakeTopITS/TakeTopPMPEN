@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Configuration;
@@ -34,7 +34,7 @@ public partial class TTAppCustomerManagement : System.Web.UI.Page
         string strDepartString;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "瀹㈡埛绠＄悊", strUserCode);
+        bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "客户管理", strUserCode);
 
         if (blVisible == false)
         {
@@ -156,7 +156,7 @@ public partial class TTAppCustomerManagement : System.Web.UI.Page
         DL_IndustryTypeFind.Items.Insert(0, new ListItem("--Select--", ""));
     }
 
-    //鍙栧緱瀹㈡埛ID
+    //取得客户ID
     protected string getCustomerID(string strCustomerCode)
     {
         string strHQL;

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDWeekWorkloadList.aspx.cs" Inherits="TTGDWeekWorkloadList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDWeekWorkloadList.aspx.cs" Inherits="TTGDWeekWorkloadList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -57,16 +57,16 @@
                                                 <table class="formBgStyle">
                                                     <tr>
                                                         <td class="formItemBgStyle">
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>ï¼š<asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>£º<asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
                                                         </td>
                                                         <td class="formItemBgStyle">
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,QuYu%>"></asp:Label>ï¼š<asp:DropDownList ID="DropDownList2" runat="server"></asp:DropDownList>
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,QuYu%>"></asp:Label>£º<asp:DropDownList ID="DropDownList2" runat="server"></asp:DropDownList>
                                                         </td>
                                                         <td class="formItemBgStyle">
-                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,KaiShiShiJian%>"></asp:Label>ï¼š<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,KaiShiShiJian%>"></asp:Label>£º<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                                                         </td>
                                                         <td class="formItemBgStyle">
-                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label>ï¼š<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label>£º<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
                                                         </td>
                                                         <td class="formItemBgStyle">
                                                             <asp:Button ID="BT_Search" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ChaXun%>" />
@@ -122,13 +122,13 @@
                                                         CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="20" ShowHeader="false"
                                                         Width="100%" OnItemCommand="DG_List_ItemCommand" OnPageIndexChanged="DG_List_PageIndexChanged">
                                                         <Columns>
-                                                            <asp:BoundColumn DataField="ProjectCode" HeaderText="é¡¹ç›®å·">
+                                                            <asp:BoundColumn DataField="ProjectCode" HeaderText="ÏîÄ¿ºÅ">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ProjectName" HeaderText="é¡¹ç›®åç§°">
+                                                            <asp:BoundColumn DataField="ProjectName" HeaderText="ÏîÄ¿Ãû³Æ">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="35%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ProjectAddress" HeaderText="åœ°ç‚¹">
+                                                            <asp:BoundColumn DataField="ProjectAddress" HeaderText="µØµã">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="35%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

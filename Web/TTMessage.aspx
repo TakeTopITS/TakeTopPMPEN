@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMessage.aspx.cs" Inherits="TTMessage" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMessage.aspx.cs" Inherits="TTMessage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -27,7 +27,7 @@
                             <table style="width: 170px">
                                 <tr>
                                     <td style="width: 130px; height: 8px; text-align: left">
-                                        <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,YiYueDuDeXinWen%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,YiYueDuDeXinWen%>"></asp:Label>£º
                                     </td>
                                     <td style="width: 50px; height: 8px; text-align: left">
                                         <asp:HyperLink ID="HL_HeadLine" runat="server" Font-Size="10pt" ForeColor="Red" NavigateUrl="~/TTHeadLine.aspx"
@@ -36,7 +36,7 @@
                                 </tr>
                                 <tr>
                                     <td style="width: 130px; height: 8px; text-align: left">
-                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,YaoChuLiDeXieZuo%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,YaoChuLiDeXieZuo%>"></asp:Label>£º
                                     </td>
                                     <td style="width: 50px; height: 8px; text-align: left">
                                         <asp:HyperLink ID="HL_Collaboration" runat="server" Font-Size="10pt" ForeColor="Red"
@@ -45,7 +45,7 @@
                                 </tr>
                                 <tr>
                                     <td style="width: 130px; height: 8px; text-align: left">
-                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YaoShenHeDeShenQing%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YaoShenHeDeShenQing%>"></asp:Label>£º
                                     </td>
                                     <td style="width: 50px; height: 8px; text-align: left">
                                         <asp:HyperLink ID="HL_UnCheckWL" runat="server" Font-Size="10pt" ForeColor="Red"
@@ -55,7 +55,7 @@
                                 <tr>
                                     <td style="width: 130px; height: 18px; text-align: left">
                                         <span style="font-size: 10pt">
-                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,WeiYueDuDeYouJian%>"></asp:Label>ï¼š</span>
+                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,WeiYueDuDeYouJian%>"></asp:Label>£º</span>
                                     </td>
                                     <td style="width: 50px; height: 18px; text-align: left">
                                         <asp:HyperLink ID="HL_UNReadEMail" runat="server" Font-Size="10pt" ForeColor="Red"
@@ -65,7 +65,7 @@
                                 <tr>
                                     <td style="width: 130px; height: 18px; text-align: left">
                                         <span style="font-size: 10pt">
-                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,YaoCanJiaDeHuiYi%>"></asp:Label>ï¼š</span>
+                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,YaoCanJiaDeHuiYi%>"></asp:Label>£º</span>
                                     </td>
                                     <td style="width: 50px; height: 18px; text-align: left">
                                         <asp:HyperLink ID="HL_UNAttendMeeting" runat="server" Font-Size="10pt" ForeColor="Red"
@@ -75,7 +75,7 @@
                                 <tr>
                                     <td style="width: 130px; height: 18px; text-align: left">
                                         <span style="font-size: 10pt">
-                                            <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,DaiChuLiDeFengXian%>"></asp:Label>ï¼š</span>
+                                            <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,DaiChuLiDeFengXian%>"></asp:Label>£º</span>
                                     </td>
                                     <td style="width: 50px; height: 18px; text-align: left">
                                         <asp:HyperLink ID="HL_UNHandledRisk" runat="server" Font-Size="10pt" ForeColor="Red"
@@ -85,7 +85,7 @@
                                 <tr>
                                     <td style="width: 130px; height: 18px; text-align: left;">
                                         <span style="font-size: 10pt">
-                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,DaiChuLiDeRenWu%>"></asp:Label>ï¼š</span>
+                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,DaiChuLiDeRenWu%>"></asp:Label>£º</span>
                                     </td>
                                     <td style="width: 50px; height: 18px; text-align: left;">
                                         <asp:HyperLink ID="HL_UNHnadledTask" runat="server" Font-Size="10pt" ForeColor="Red"
@@ -95,7 +95,7 @@
                                 <tr>
                                     <td style="width: 130px; height: 11px; text-align: left;">
                                         <span style="font-size: 10pt">
-                                            <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,DaiChuLiDeXuQiu%>"></asp:Label>ï¼š</span>
+                                            <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,DaiChuLiDeXuQiu%>"></asp:Label>£º</span>
                                     </td>
                                     <td style="width: 50px; height: 11px; text-align: left;">
                                         <asp:HyperLink ID="HL_UNHandledReq" runat="server" Font-Size="10pt" ForeColor="Red"
@@ -105,7 +105,7 @@
                                 <tr>
                                     <td style="width: 130px; height: 18px; text-align: left;">
                                         <span style="font-size: 10pt">
-                                            <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,DaiChuLiDeXiangMu%>"></asp:Label>ï¼š</span>
+                                            <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,DaiChuLiDeXiangMu%>"></asp:Label>£º</span>
                                     </td>
                                     <td style="width: 50px; height: 18px; text-align: left;">
                                         <asp:HyperLink ID="HL_UNHandledPro" runat="server" Font-Size="10pt" ForeColor="Red"

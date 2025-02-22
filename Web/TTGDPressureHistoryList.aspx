@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDPressureHistoryList.aspx.cs" Inherits="TTGDPressureHistoryList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDPressureHistoryList.aspx.cs" Inherits="TTGDPressureHistoryList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ËØïÂéãÂåÖÂéÜÂè≤Áä∂ÊÄÅ</title>
+    <title> ‘—π∞¸¿˙ ∑◊¥Ã¨</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
@@ -56,8 +56,8 @@
                                             <td>
                                                 <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr style="font-weight: bold; font-size: 11pt">
-                                                        <td align="left" class="formItemBgStyle">Testloop No.Ôºö<asp:DropDownList ID="DDL_Testlopp" runat="server" OnSelectedIndexChanged="DDL_Testlopp_SelectedIndexChanged"></asp:DropDownList><br />
-                                                            Isome NO.Ôºö<asp:TextBox ID="TXT_Isom_no" runat="server"></asp:TextBox>
+                                                        <td align="left" class="formItemBgStyle">Testloop No.£∫<asp:DropDownList ID="DDL_Testlopp" runat="server" OnSelectedIndexChanged="DDL_Testlopp_SelectedIndexChanged"></asp:DropDownList><br />
+                                                            Isome NO.£∫<asp:TextBox ID="TXT_Isom_no" runat="server"></asp:TextBox>
                                                         </td>
                                                         <td align="left" class="formItemBgStyle">
                                                             <asp:DataGrid ID="DG_PictureList" runat="server" AllowPaging="False" AutoGenerateColumns="False"

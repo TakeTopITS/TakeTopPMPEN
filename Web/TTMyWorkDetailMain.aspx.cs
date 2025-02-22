@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -25,7 +25,7 @@ public partial class TTMyWorkDetailMain : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        //璁剧疆鏄惁鑷畾涔夊伐浣滄祦妯＄粍妯″紡
+        //设置是否自定义工作流模组模式
         Session["DIYWFModule"] = "NO";
 
         string strUserCode, strCreatorCode;

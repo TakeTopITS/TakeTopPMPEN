@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectPlanCopy.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectPlanCopy.aspx.cs"
     Inherits="TTProjectPlanCopy" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>é¡¹ç›®å·¥ä½œè®¡åˆ’</title>
+    <title>ÏîÄ¿¹¤×÷¼Æ»®</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
@@ -37,10 +37,10 @@
                                     <td align="left" background="ImagesSkin/main_top_bj.jpg">
                                         <table>
                                             <tr>
-                                                <td>ï¼ˆ
+                                                <td>£¨
                                                 </td>
                                                 <td>
-                                                    <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ZhiDingJiHuaBanBenHao%>"></asp:Label>ï¼š
+                                                    <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ZhiDingJiHuaBanBenHao%>"></asp:Label>£º
                                                 </td>
                                                 <td>
                                                     <NickLee:NumberBox ID="NB_NewVerID" runat="server"
@@ -48,11 +48,11 @@
                                                                  1</NickLee:NumberBox>
                                                 </td>
                                                 <td>
-                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiHuaLeiXing%>"></asp:Label>ï¼š
+                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiHuaLeiXing%>"></asp:Label>£º
                                                 </td>
                                                 <td>
                                                     <asp:DropDownList ID="DL_VersionType" runat="server">
-                                                        <asp:ListItem Value="å¤‡ç”¨" Text="<%$ Resources:lang,BeiYong%>" />
+                                                        <asp:ListItem Value="Backup" Text="<%$ Resources:lang,BeiYong%>" />
                                                     </asp:DropDownList></td>
                                                 <td>
                                                     <asp:Button ID="BT_NewVersion" runat="server" CssClass="inpu"
@@ -62,7 +62,7 @@
                                                     <asp:Button ID="BT_DeleteVersion" runat="server" CssClass="inpu"
                                                         OnClick="BT_DeleteVersion_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="<%$ Resources:lang,ShanChu%>" />
                                                 </td>
-                                                <td>ï¼‰</td>
+                                                <td>£©</td>
                                                 <td></td>
                                                 <td>(
                                                 </td>
@@ -98,7 +98,7 @@
                                                         <asp:ListItem Value="NO" Text="<%$ Resources:lang,Fou%>" />
                                                     </asp:DropDownList></td>
                                                 <td style="display: none;">
-                                                    <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,GuanLianLiuChengMuBanTongBu%>"></asp:Label>ï¼š
+                                                    <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,GuanLianLiuChengMuBanTongBu%>"></asp:Label>£º
                                                      <asp:DropDownList ID="DL_WFTemplateCopy" runat="server">
                                                          <asp:ListItem Value="NO" Text="<%$ Resources:lang,Fou%>" />
                                                          <asp:ListItem Value="YES" Text="<%$ Resources:lang,Shi%>" />
@@ -108,7 +108,7 @@
                                                 <td>
                                                     <asp:Button ID="BT_CopyVersion" runat="server" CssClass="inpu" OnClientClick="return confirm(getCopyProjectPlanMsgByLangCode())"
                                                         OnClick="BT_CopyVersion_Click" Text="<%$ Resources:lang,FuZhi%>" Enabled="False" /></td>
-                                                <td>ï¼‰
+                                                <td>£©
                                                 </td>
                                             </tr>
                                         </table>
@@ -137,7 +137,7 @@
                                                 <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,GanTeTu%>"></asp:Label>
                                             </asp:HyperLink>
                                         </div>
-                                        <asp:TreeView ID="TreeView3" runat="server" Font-Bold="False" Font-Names="å®‹ä½“" Font-Size="10pt"
+                                        <asp:TreeView ID="TreeView3" runat="server" Font-Bold="False" Font-Names="ËÎÌå" Font-Size="10pt"
                                             NodeWrap="True" ShowLines="True" Width="400px">
                                             <RootNodeStyle CssClass="rootNode" />
                                             <NodeStyle CssClass="treeNode" />
@@ -149,7 +149,7 @@
                                         <table style="width: 360px;">
                                             <tr>
                                                 <td align="left" width="80px">
-                                                    <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,XuanZeBanBen%>"></asp:Label>ï¼š
+                                                    <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,XuanZeBanBen%>"></asp:Label>£º
                                                 </td>
                                                 <td>
                                                     <asp:DropDownList ID="DL_VersionID" runat="server" AutoPostBack="True" DataTextField="VerID"
@@ -157,14 +157,14 @@
                                                         Width="60px">
                                                     </asp:DropDownList>
                                                 </td>
-                                                <td>&nbsp;<asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>ï¼š
+                                                <td>&nbsp;<asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º
                                                 </td>
                                                 <td>
                                                     <asp:DropDownList ID="DL_ChangeVersionType" runat="server" AutoPostBack="True"
                                                         OnSelectedIndexChanged="DL_ChangeVersionType_SelectedIndexChanged">
-                                                        <asp:ListItem Value="åœ¨ç”¨" Text="<%$ Resources:lang,ZaiYong%>" />
-                                                        <asp:ListItem Value="å¤‡ç”¨" Text="<%$ Resources:lang,BeiYong%>" />
-                                                        <asp:ListItem Value="åŸºå‡†" Text="<%$ Resources:lang,JiZhun%>" />
+                                                        <asp:ListItem Value="InUse" Text="<%$ Resources:lang,ZaiYong%>" />
+                                                        <asp:ListItem Value="Backup" Text="<%$ Resources:lang,BeiYong%>" />
+                                                        <asp:ListItem Value="Baseline" Text="<%$ Resources:lang,JiZhun%>" />
                                                     </asp:DropDownList>
                                                 </td>
                                                 <td width="100px" align="right">
@@ -175,7 +175,7 @@
                                             </tr>
                                             <tr>
                                                 <td colspan="5" align="left">
-                                                    <asp:TreeView ID="TreeView1" runat="server" Font-Bold="False" Font-Names="å®‹ä½“" Font-Size="10pt"
+                                                    <asp:TreeView ID="TreeView1" runat="server" Font-Bold="False" Font-Names="ËÎÌå" Font-Size="10pt"
                                                         NodeWrap="True" ShowLines="True" Width="360px">
                                                         <RootNodeStyle CssClass="rootNode" />
                                                         <NodeStyle CssClass="treeNode" />

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteContainer.aspx.cs" Inherits="TakeTopSiteContainer" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteContainer.aspx.cs" Inherits="TakeTopSiteContainer" %>
 
 <!DOCTYPE html>
 
@@ -211,7 +211,7 @@
                     <td width="100px" align="left">
                         <a href="javascript:ChangeMenu(1)">
 
-                            <asp:Image ID="IM_RightToLeft" ImageUrl="Logo/website/Images/tupian.png" Width="50" Height="169" border="0" alt="éšè—å·¦è¾¹æ " runat="server" />
+                            <asp:Image ID="IM_RightToLeft" ImageUrl="Logo/website/Images/tupian.png" Width="50" Height="169" border="0" alt="Òþ²Ø×ó±ßÀ¸" runat="server" />
 
                         </a>
 

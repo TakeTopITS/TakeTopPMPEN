@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#"  ValidateRequest="false" CodeFile="TTMailReply.aspx.cs" Inherits="TTMailReply" %>
+<%@ Page Language="C#"  ValidateRequest="false" CodeFile="TTMailReply.aspx.cs" Inherits="TTMailReply" %>
 
 <%@ Register Assembly="Brettle.Web.NeatUpload" Namespace="Brettle.Web.NeatUpload"
     TagPrefix="Upload" %>
@@ -8,7 +8,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ÂèëÈÄÅÈÇÆ‰ª∂</title>
+    <title>∑¢ÀÕ” º˛</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script language="javascript" type="text/javascript">
         function addFile() {
@@ -168,7 +168,7 @@
 
                                             <ItemStyle CssClass="itemStyle" />
                                             <Columns>
-                                                <asp:BoundColumn DataField="AttachmentID" HeaderText="ÁºñÂè∑">
+                                                <asp:BoundColumn DataField="AttachmentID" HeaderText="±‡∫≈">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                 </asp:BoundColumn>
                                                 <asp:TemplateColumn>
@@ -198,7 +198,7 @@
                                                     <Upload:InputFile ID="AttachFile" runat="server" Width="300px" />
                                                     &nbsp;<asp:Button ID="BtnUP" runat="server" OnClick="BtnUP_Click" Text="<%$ Resources:lang,ShangChuan%>" />
                                                     <br />
-                                                    <span style="font-size: xx-small; color: #FF3300;">Ôºà<asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,ZWBJMBNCG10GHZ%>"></asp:Label>Ôºâ<br />
+                                                    <span style="font-size: xx-small; color: #FF3300;">£®<asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,ZWBJMBNCG10GHZ%>"></asp:Label>£©<br />
                                                     </span>
                                                     <br />
                                                     <div id="ProgressBar">
@@ -214,9 +214,9 @@
                                         <asp:Panel ID="Panel_BigAttachment" runat="server" Style="width: 90%;" Visible="true">
                                             <div>
                                                 <asp:CheckBox ID="CB_BigAttachment" Text="<%$ Resources:lang,DaFuJianMoShi%>" runat="server"></asp:CheckBox>
-                                                <span style="font-size: xx-small; color: #FF3300;">Ôºà<asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,DaFuJian%>"></asp:Label>[</span><span
+                                                <span style="font-size: xx-small; color: #FF3300;">£®<asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,DaFuJian%>"></asp:Label>[</span><span
                                                     style="font-size: xx-small; color: #3333CC;"><asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,YBDY2M%>"></asp:Label></span>]<span
-                                                        style="font-size: xx-small; color: #FF3300;"><asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,XTHZDZYJZWDBZJLJGSJFXZ%>"></asp:Label>Ôºâ </span>
+                                                        style="font-size: xx-small; color: #FF3300;"><asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,XTHZDZYJZWDBZJLJGSJFXZ%>"></asp:Label>£© </span>
                                             </div>
                                         </asp:Panel>
                                     </td>
@@ -280,23 +280,23 @@
                                                     <tr>
                                                         <td width="20%" align="left">
                                                             <span style="font-size: 10pt">
-                                                                <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>Ôºö</span>
+                                                                <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£∫</span>
                                                             <asp:DropDownList ID="DL_ContactType" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DL_ContactType_SelectedIndexChanged">
-                                                                <asp:ListItem Value="ÂÆ¢Êà∑" Text="<%$ Resources:lang,KeHu%>" />
-                                                                <asp:ListItem Value="‰æõÂ∫îÂïÜ" Text="<%$ Resources:lang,GongYingShang%>" />
-                                                                <asp:ListItem Value="Âêå‰∫ã" Text="<%$ Resources:lang,TongShi%>" />
-                                                                <asp:ListItem Value="ÊúãÂèã" Text="<%$ Resources:lang,PengYou%>" />
-                                                                <asp:ListItem Value="ÂêåÂ≠¶" Text="<%$ Resources:lang,TongXue%>" />
-                                                                <asp:ListItem Value="‰∫≤Â±û" Text="<%$ Resources:lang,QinShu%>" />
-                                                                <asp:ListItem Value="ÂÖ∂ÂÆÉ" Text="<%$ Resources:lang,QiTa%>" />
+                                                                <asp:ListItem Value="Customer" Text="<%$ Resources:lang,KeHu%>" />
+                                                                <asp:ListItem Value="Supplier" Text="<%$ Resources:lang,GongYingShang%>" />
+                                                                <asp:ListItem Value="Colleague" Text="<%$ Resources:lang,TongShi%>" />
+                                                                <asp:ListItem Value="Friend" Text="<%$ Resources:lang,PengYou%>" />
+                                                                <asp:ListItem Value="Classmate" Text="<%$ Resources:lang,TongXue%>" />
+                                                                <asp:ListItem Value="Relative" Text="<%$ Resources:lang,QinShu%>" />
+                                                                <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>" />
                                                             </asp:DropDownList>
                                                             <span style="font-size: 10pt">
-                                                                <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>Ôºö</span><asp:TextBox ID="TB_HazyName" runat="server"
+                                                                <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£∫</span><asp:TextBox ID="TB_HazyName" runat="server"
                                                                     Width="100px"></asp:TextBox>
                                                             <asp:Button ID="BT_HazyFind" runat="server" CssClass="inpu" Font-Size="9pt" Height="22px"
                                                                 OnClick="BT_HazyFind_Click" Text="<%$ Resources:lang,MoHuChaXun%>" />
                                                             <span style="font-size: 9pt">
-                                                                <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,GongSi%>"></asp:Label>Ôºö<asp:TextBox ID="TB_HazyCompany" runat="server" Width="150px"></asp:TextBox>
+                                                                <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,GongSi%>"></asp:Label>£∫<asp:TextBox ID="TB_HazyCompany" runat="server" Width="150px"></asp:TextBox>
                                                                 <asp:Button ID="BT_FindCompany" runat="server" CssClass="inpu" OnClick="BT_FindCompany_Click"
                                                                     Text="<%$ Resources:lang,MoHuChaXun%>" />
                                                             </span>
@@ -367,7 +367,7 @@
         <div style="position: absolute; left: 40%; top: 80%;">
             <asp:UpdateProgress ID="TakeTopUp" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
                 <ProgressTemplate>
-                    <img src="Images/MailSend.gif" alt="ËØ∑Á®çÂÄôÔºåÂ§ÑÁêÜ‰∏≠..." />
+                    <img src="Images/MailSend.gif" alt="«Î…‘∫Ú£¨¥¶¿Ì÷–..." />
                 </ProgressTemplate>
             </asp:UpdateProgress>
         </div>

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectIncomeAndExpenseReportForFIN.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectIncomeAndExpenseReportForFIN.aspx.cs"
     Inherits="TTProjectIncomeAndExpenseReportForFIN" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -53,7 +53,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%></td>
                                                         <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>ï¼š<asp:Label ID="LB_ProjectID" runat="server"></asp:Label>
+                                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>£º<asp:Label ID="LB_ProjectID" runat="server"></asp:Label>
                                                             &nbsp;<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShouRuJieSuan%>"></asp:Label>
                                                             <asp:Label ID="LB_Sql" runat="server" Font-Bold="False" Font-Italic="False" Height="12px"
                                                                 Visible="False" Width="46px"></asp:Label>
@@ -96,7 +96,7 @@
                                                                         &nbsp;
                                                                      <asp:Label ID="LB_UserName" runat="server" Visible="false"></asp:Label>
                                                                         <a href="#" onclick="preview1()">
-                                                                            <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" />
+                                                                            <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" />
                                                                         </a>
                                                                     </td>
                                                                     <td style="background: #f0f0f0; text-align: right; width: 35%; height: 25px;" colspan="2">
@@ -166,19 +166,19 @@
 
                                                                                         <ItemStyle CssClass="itemStyle" />
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="UserCode" HeaderText="ä»£ç ">
+                                                                                            <asp:BoundColumn DataField="UserCode" HeaderText="´úÂë">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="UserName" HeaderText="åç§°">
+                                                                                            <asp:BoundColumn DataField="UserName" HeaderText="Ãû³Æ">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="50%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="TotalSalary" HeaderText="æ”¶å…¥">
+                                                                                            <asp:BoundColumn DataField="TotalSalary" HeaderText="ÊÕÈë">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="TotalExpense" HeaderText="æ”¯å‡º">
+                                                                                            <asp:BoundColumn DataField="TotalExpense" HeaderText="Ö§³ö">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="TotalIncome" HeaderText="æ”¶å…¥æ”¯å‡ºå·®é¢">
+                                                                                            <asp:BoundColumn DataField="TotalIncome" HeaderText="ÊÕÈëÖ§³ö²î¶î">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                                             </asp:BoundColumn>
                                                                                         </Columns>

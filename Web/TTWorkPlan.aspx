@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkPlan.aspx.cs" Inherits="TTWorkPlan" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkPlan.aspx.cs" Inherits="TTWorkPlan" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -8,7 +8,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ÏîÄ¿¹¤×÷¼Æ»®</title>
+    <title>????1�����????</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 
     <style type="text/css">
@@ -167,7 +167,7 @@
                                         </td>
                                         <td style="padding-top: 5px;">
                                             <asp:DropDownList ID="DL_VersionType" runat="server">
-                                                <asp:ListItem Value="备用" Text="<%$ Resources:lang,BeiYong%>" />
+                                                <asp:ListItem Value="Backup" Text="<%$ Resources:lang,BeiYong%>" />
                                             </asp:DropDownList>
                                         </td>
                                         <td style="padding-top: 5px;">
@@ -198,8 +198,8 @@
                                         </td>
                                         <td style="padding-top: 5px;">
                                             <asp:DropDownList ID="DL_PlanDocCopy" runat="server">
-                                                <asp:ListItem Text="<%$ Resources:lang,Shi%>" Value="是" />
-                                                <asp:ListItem Text="<%$ Resources:lang,Fou%>" Value="否" />
+                                                <asp:ListItem Text="<%$ Resources:lang,Shi%>" Value="YES" />
+                                                <asp:ListItem Text="<%$ Resources:lang,Fou%>" Value="NO" />
                                             </asp:DropDownList>
                                         </td>
                                         <td style="padding-top: 6px;">
@@ -248,16 +248,16 @@
                                                                 <td>
                                                                     <asp:DropDownList ID="DL_ChangeVersionType" runat="server" OnSelectedIndexChanged="DL_ChangeVersionType_SelectedIndexChanged"
                                                                         Width="50px" Height="21px" AutoPostBack="True">
-                                                                        <asp:ListItem Value="在用" Text="<%$ Resources:lang,ZaiYong%>"> </asp:ListItem>
-                                                                        <asp:ListItem Value="备用" Text="<%$ Resources:lang,BeiYong%>"> </asp:ListItem>
-                                                                        <asp:ListItem Value="基准" Text="<%$ Resources:lang,jiZhun%>" />
+                                                                        <asp:ListItem Value="InUse" Text="<%$ Resources:lang,ZaiYong%>"> </asp:ListItem>
+                                                                        <asp:ListItem Value="Backup" Text="<%$ Resources:lang,BeiYong%>"> </asp:ListItem>
+                                                                        <asp:ListItem Value="Baseline" Text="<%$ Resources:lang,jiZhun%>" />
                                                                     </asp:DropDownList>
                                                                 </td>
                                                                 <td>
                                                                     <asp:DropDownList ID="DL_ExpandType" runat="server" Height="21px" AutoPostBack="True"
                                                                         OnSelectedIndexChanged="DL_ExpandType_SelectedIndexChanged">
-                                                                        <asp:ListItem Value="展开所有" Text="<%$ Resources:lang,ZhanKaiSuoYou%>" />
-                                                                        <asp:ListItem Value="展开参与" Text="<%$ Resources:lang,ZhanKaiCanYu%>" />
+                                                                        <asp:ListItem Value="ExpandAll" Text="<%$ Resources:lang,ZhanKaiSuoYou%>" />
+                                                                        <asp:ListItem Value="ExpandJoin" Text="<%$ Resources:lang,ZhanKaiCanYu%>" />
                                                                     </asp:DropDownList>
                                                                 </td>
                                                                 <td>
@@ -268,7 +268,7 @@
                                                         <hr />
                                                         <div id="PlanTreeDivID" style="width: 300px; height: 600px; overflow: auto; vertical-align: top;">
                                                             <asp:TreeView ID="TreeView1" runat="server" NodeWrap="True" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged"
-                                                                ShowLines="True" Font-Bold="False" Font-Names="ËÎÌå" Style="width: 300px; height: 100%;">
+                                                                ShowLines="True" Font-Bold="False" Font-Names="??��?" Style="width: 300px; height: 100%;">
                                                                 <RootNodeStyle CssClass="rootNode" />
                                                                 <NodeStyle CssClass="treeNode" />
                                                                 <LeafNodeStyle CssClass="leafNode" />
@@ -380,8 +380,8 @@
                                                             <tr>
                                                                 <td style="text-align: left;">
                                                                     <asp:DropDownList ID="DL_PlanType" runat="server" CssClass="DDList">
-                                                                        <asp:ListItem Value="计划" Text="<%$ Resources:lang,JiHua%>" />
-                                                                        <asp:ListItem Value="里程碑" Text="<%$ Resources:lang,LiChengBei%>" />
+                                                                        <asp:ListItem Value="Plan" Text="<%$ Resources:lang,JiHua%>" />
+                                                                        <asp:ListItem Value="Milestone" Text="<%$ Resources:lang,LiChengBei%>" />
                                                                     </asp:DropDownList>
                                                                 </td>
                                                                 <td style="width: 15%; text-align: right;">
@@ -471,7 +471,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: right;" class="formItemBgStyle">
-                                                        <asp:Label ID="Label8" runat="server" Text="交付进度" />
+                                                        <asp:Label ID="Label8" runat="server" Text="��������" />
                                                     </td>
                                                     <td style="text-align: left;" class="formItemBgStyle">
 
@@ -492,7 +492,7 @@
                                                                      0 0.00
                                                         </NickLee:NumberBox>
 
-                                                        <%--  <asp:Label ID="Label12" runat="server" Text="µ¥Î»" />£º--%>
+                                                        <%--  <asp:Label ID="Label12" runat="server" Text="�̣�??" />��o--%>
                                                         <asp:DropDownList ID="DL_UnitName" runat="server" DataTextField="UnitName" DataValueField="UnitName" CssClass="DDList">
                                                         </asp:DropDownList>
 
@@ -608,7 +608,7 @@
                                                             Target="_blank" Text="<%$ Resources:lang,ShiShiWenDangTuiSong%>"></asp:HyperLink>
                                                         &nbsp;
                                                          <asp:HyperLink ID="HL_RunProjectPlanByWF" runat="server" Enabled="False" Target="_blank" Visible="false"
-                                                             Text="<%$ Resources:lang,hlRunProjectPlanByWF%>">£©</asp:HyperLink>
+                                                             Text="<%$ Resources:lang,hlRunProjectPlanByWF%>">��?</asp:HyperLink>
                                                         &nbsp;
                                                           <asp:HyperLink ID="HL_RelatedWorkFlowTemplate" runat="server" Target="_blank" Visible="false"
                                                               Enabled="false" Text="<%$ Resources:lang,RelatedWFTemplate%>"></asp:HyperLink>

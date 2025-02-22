@@ -1,4 +1,4 @@
-﻿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -54,7 +54,7 @@ public partial class TTMakeBookInfoDetail : System.Web.UI.Page
             lbl_Version.Text = bookInformation.Version;
             lbl_Title.Text = bookInformation.BookName;
             strBookImage = bookInformation.BookImage;
-            if (bookInformation.BookType.Trim().Equals("图书"))
+            if (bookInformation.BookType.Trim().Equals("ͼ��"))
             {
                 Panel_Book.Visible = true;
                 Panel_Stand.Visible = false;

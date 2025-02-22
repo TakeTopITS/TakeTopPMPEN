@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTBMWinResultView.aspx.cs" Inherits="TTBMWinResultView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTBMWinResultView.aspx.cs" Inherits="TTBMWinResultView" %>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -28,7 +28,7 @@
                         <table cellpadding="2" cellspacing="0" class="formBgStyle" width="98%">
                             <tr style="color: #000000">
                                 <td align="center" class="formItemBgStyle">
-                                    <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ZhaoBiaoFangAn%>"></asp:Label>ï¼š
+                                    <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ZhaoBiaoFangAn%>"></asp:Label>£º
                                     <asp:Label ID="lbl_BidRemark" runat="server"></asp:Label>
                                 </td>
                             </tr>
@@ -73,12 +73,12 @@
                                         <ItemStyle CssClass="itemStyle" />
                                         <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                         <Columns>
-                                            <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·" Visible="false">
+                                            <asp:BoundColumn DataField="ID" HeaderText="±àºÅ" Visible="false">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="1%" />
                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                     HorizontalAlign="Center" />
                                             </asp:BoundColumn>
-                                            <asp:TemplateColumn HeaderText="ä¾›åº”å•†">
+                                            <asp:TemplateColumn HeaderText="Supplier">
                                                 <ItemTemplate>
                                                     <%# GetBMSupplierInfoName(Eval("SupplierCode").ToString()) %>
                                                 </ItemTemplate>
@@ -86,33 +86,33 @@
                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                     HorizontalAlign="Center" />
                                             </asp:TemplateColumn>
-                                            <asp:BoundColumn DataField="BiddingContent" HeaderText="æŠ•æ ‡å†…å®¹">
+                                            <asp:BoundColumn DataField="BiddingContent" HeaderText="Í¶±êÄÚÈÝ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                     HorizontalAlign="Center" />
                                             </asp:BoundColumn>
-                                            <asp:TemplateColumn HeaderText="ä¸“å®¶è¯„æ ‡è®°å½•">
+                                            <asp:TemplateColumn HeaderText="×¨¼ÒÆÀ±ê¼ÇÂ¼">
                                                 <ItemTemplate>
                                                     <%# GetBMSupBidByExpResult(Eval("ID").ToString()) %>
                                                 </ItemTemplate>
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="45%" />
                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                             </asp:TemplateColumn>
-                                            <asp:BoundColumn DataField="BiddingDate" HeaderText="æŠ•æ ‡æ—¥æœŸ" DataFormatString="{0:yyyy-MM-dd}" Visible="false">
+                                            <asp:BoundColumn DataField="BiddingDate" HeaderText="Í¶±êÈÕÆÚ" DataFormatString="{0:yyyy-MM-dd}" Visible="false">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                     HorizontalAlign="Center" />
                                             </asp:BoundColumn>
-                                             <asp:TemplateColumn HeaderText="å‘èµ·æµç¨‹">
+                                             <asp:TemplateColumn HeaderText="·¢ÆðÁ÷³Ì">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         <ItemTemplate>
-                                                            <a href='TTBMBidPlanRelatedWorkflowListView.aspx?RelatedID=<%# DataBinder.Eval(Container.DataItem,"AnnInvitationID") %>&SupplierID=<%# DataBinder.Eval(Container.DataItem,"SupplierCode") %>' target="_blank">æŠ¥ä»·åˆ—è¡¨
+                                                            <a href='TTBMBidPlanRelatedWorkflowListView.aspx?RelatedID=<%# DataBinder.Eval(Container.DataItem,"AnnInvitationID") %>&SupplierID=<%# DataBinder.Eval(Container.DataItem,"SupplierCode") %>' target="_blank">±¨¼ÛÁÐ±í
                                                             </a>
                                                         </ItemTemplate>
                                                         <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
                                                             HorizontalAlign="Center" />
                                                     </asp:TemplateColumn>
-                                            <asp:TemplateColumn HeaderText="ä¸­æ ‡çŠ¶æ€">
+                                            <asp:TemplateColumn HeaderText="ÖÐ±ê×´Ì¬">
                                                 <ItemTemplate>
                                                     <%# GetBMSupplierBidStatus(Eval("BidStatus").ToString()) %>
                                                 </ItemTemplate>

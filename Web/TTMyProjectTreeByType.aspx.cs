@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -36,20 +36,20 @@ public partial class TTMyProjectTreeByType : System.Web.UI.Page
         string strHQL, strUserCode, strProjectType;
         IList lst;
 
-        //Ê∑ªÂä†Ê†πËäÇÁÇπ
+        //ÃÌº”∏˘Ω⁄µ„
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>ÊåâÁ±ªÂûãÊµèËßàÊàëÁöÑÈ°πÁõÆ</B>";
+        node1.Text = "<B>∞¥¿‡–Õ‰Ø¿¿Œ“µƒœÓƒø</B>";
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
 
         strUserCode = LB_UserCode.Text.Trim();
         strHQL = "from ProjectType as projectType Where";
-        strHQL += " projectType.Type in (Select project.ProjectType from Project as project Where project.PMCode = " + "'" + strUserCode + "'" + " and project.Status not in ('Âà†Èô§','ÂΩíÊ°£'))";
+        strHQL += " projectType.Type in (Select project.ProjectType from Project as project Where project.PMCode = " + "'" + strUserCode + "'" + " and project.Status not in ('Deleted','Archived'))";
         strHQL += " Order By projectType.SortNumber ASC";
         ProjectTypeBLL projectTypeBLL = new ProjectTypeBLL();
         lst = projectTypeBLL.GetAllProjectTypes(strHQL);
@@ -83,7 +83,7 @@ public partial class TTMyProjectTreeByType : System.Web.UI.Page
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
-        strHQL = "from Project as project where project.ProjectType = " + "'" + strProjectType + "'" + " and project.Status not in ('Âà†Èô§','ÂΩíÊ°£') and " + " project.PMCode = " + "'" + strUserCode + "'" + " order by project.ProjectID DESC";
+        strHQL = "from Project as project where project.ProjectType = " + "'" + strProjectType + "'" + " and project.Status not in ('Deleted','Archived') and " + " project.PMCode = " + "'" + strUserCode + "'" + " order by project.ProjectID DESC";
         lst1 = projectBLL.GetAllProjects(strHQL);
 
         for (int i = 0; i < lst1.Count; i++)

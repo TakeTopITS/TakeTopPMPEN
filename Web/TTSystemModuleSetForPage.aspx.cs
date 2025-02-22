@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -34,7 +34,7 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
         strForbitModule = Session["ForbitModule"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility("TTSystemModuleSet", "ç³»ç»Ÿæ¨¡ç»„è®¾å®š", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility("TTSystemModuleSet", "ÏµÍ³Ä£×éÉè¶¨", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -67,7 +67,7 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
         string strHQL;
         string strModuleID, strModuleName, strModuleType, strHomeModuleName;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         treeView.Nodes.Clear();
         TreeNode node1 = new TreeNode();
         TreeNode node2 = new TreeNode();
@@ -400,11 +400,11 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
 
             if (strFileName1 != "")
             {
-                //è·å–åˆå§‹æ–‡ä»¶å
-                i = strFileName1.LastIndexOf("."); //å–å¾—æ–‡ä»¶åä¸­æœ€åä¸€ä¸ª"."çš„ç´¢å¼•
-                string strNewExt = strFileName1.Substring(i); //è·å–æ–‡ä»¶æ‰©å±•å
+                //»ñÈ¡³õÊ¼ÎÄ¼şÃû
+                i = strFileName1.LastIndexOf("."); //È¡µÃÎÄ¼şÃûÖĞ×îºóÒ»¸ö"."µÄË÷Òı
+                string strNewExt = strFileName1.Substring(i); //»ñÈ¡ÎÄ¼şÀ©Õ¹Ãû
 
-                DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+                DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
 
                 string strFileName2 = System.IO.Path.GetFileName(strFileName1);
                 string strExtName = Path.GetExtension(strFileName2);
@@ -580,7 +580,7 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
             InitialModuleTree(TreeView1, strUserType, ddlLangSwitcher.SelectedValue.Trim());
             InitialModuleTree(TreeView2, strUserType, ddlLangSwitcher.SelectedValue.Trim());
 
-            //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—ï¼Œå¹¶åˆ·æ–°é¡µé¢ç¼“å­˜
+            //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾£¬²¢Ë¢ĞÂÒ³Ãæ»º´æ
             ChangePageCache();
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXJCG + "')", true);
@@ -684,7 +684,7 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
             InitialModuleTree(TreeView1, strUserType, ddlLangSwitcher.SelectedValue.Trim());
             InitialModuleTree(TreeView2, strUserType, ddlLangSwitcher.SelectedValue.Trim());
 
-            //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—ï¼Œå¹¶åˆ·æ–°é¡µé¢ç¼“å­˜
+            //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾£¬²¢Ë¢ĞÂÒ³Ãæ»º´æ
             ChangePageCache();
         }
         catch
@@ -728,7 +728,7 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
             InitialModuleTree(TreeView1, strUserType, ddlLangSwitcher.SelectedValue.Trim());
             InitialModuleTree(TreeView2, strUserType, ddlLangSwitcher.SelectedValue.Trim());
 
-            //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—ï¼Œå¹¶åˆ·æ–°é¡µé¢ç¼“å­˜
+            //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾£¬²¢Ë¢ĞÂÒ³Ãæ»º´æ
             ChangePageCache();
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
@@ -789,7 +789,7 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
                 LoadChildModule(TB_ModuleName.Text.Trim(), strModuleType, strUserType, strLangCode);
             }
 
-            //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—ï¼Œå¹¶åˆ·æ–°é¡µé¢ç¼“å­˜
+            //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾£¬²¢Ë¢ĞÂÒ³Ãæ»º´æ
             ChangePageCache();
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
@@ -966,14 +966,14 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
         return ds.Tables[0].Rows.Count;
     }
 
-    //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—ï¼Œå¹¶åˆ·æ–°é¡µé¢ç¼“å­˜
+    //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾£¬²¢Ë¢ĞÂÒ³Ãæ»º´æ
     protected void ChangePageCache()
     {
-        //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—
+        //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾
         ShareClass.SetPageCacheMark("1");
         Session["CssDirectoryChangeNumber"] = "1";
 
-        //ç»™ä¸»ç•Œé¢ä¸ªäººç©ºé—´æ·»åŠ ç©ºè¡Œä»¥åˆ·æ–°é¡µé¢ç¼“å­˜
+        //¸øÖ÷½çÃæ¸öÈË¿Õ¼äÌí¼Ó¿ÕĞĞÒÔË¢ĞÂÒ³Ãæ»º´æ
         ShareClass.AddSpaceLineToPersonalSpaceForRefreshCache();
     }
 

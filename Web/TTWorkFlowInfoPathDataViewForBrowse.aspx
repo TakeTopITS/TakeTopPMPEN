@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkFlowInfoPathDataViewForBrowse.aspx.cs" Inherits="TTWorkFlowInfoPathDataViewForBrowse" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkFlowInfoPathDataViewForBrowse.aspx.cs" Inherits="TTWorkFlowInfoPathDataViewForBrowse" %>
 
 <%@ Register Assembly="TakeTopForm.JS" Namespace="TakeTopInfoPathSoft.JS" TagPrefix="cc1" %>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -149,7 +149,7 @@
             document.getElementById("BT_SaveXMLFile").click();
         }
 
-        // æ”¶ç¼©å±•å¼€æ•ˆæœ
+        // ÊÕËõÕ¹¿ªĞ§¹û
         function hideDivByApp() {
 
             var system = {
@@ -162,7 +162,7 @@
 
             };
 
-            //æ£€æµ‹å¹³å°
+            //¼ì²âÆ½Ì¨
 
             var p = navigator.platform;
 
@@ -174,8 +174,8 @@
 
             system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
 
-            //è·³è½¬è¯­å¥
-            if (system.win || system.mac || system.xll) {//è½¬å‘åå°ç™»é™†é¡µé¢
+            //Ìø×ªÓï¾ä
+            if (system.win || system.mac || system.xll) {//×ªÏòºóÌ¨µÇÂ½Ò³Ãæ
 
             } else {
 
@@ -184,7 +184,7 @@
             }
         }
 
-        //è®¾ç½®æ—¥æœŸé€‰æ‹©æ¡†çš„å®½åº¦ï¼Œä½¿ä¹‹ä¸æŠ˜å 
+        //ÉèÖÃÈÕÆÚÑ¡Ôñ¿òµÄ¿í¶È£¬Ê¹Ö®²»ÕÛµş
         function changeDateBoxWidth() {
             var cNodes = document.getElementsByClassName("xdDTText xdBehavior_FormattingNoBUI");
 
@@ -194,7 +194,7 @@
             }
         }
 
-        //å­˜è´®è¡¨å•å†…å®¹
+        //´æÖü±íµ¥ÄÚÈİ
         function SaveDIYFormDate() {
 
             if (this.document.getElementById('BT_BackupSaveXMLFile') != undefined) {
@@ -216,7 +216,7 @@
 
             if (top.location != self.location) { } else { CloseWebPage(); }
 
-            //ä¾æµç¨‹æ¨¡æ¿æ­¥éª¤å®šä¹‰çš„æ­¤å‡½æ•°è®¾ç½®è¡¨å•å„ç§å±æ€§
+            //ÒÀÁ÷³ÌÄ£°å²½Öè¶¨ÒåµÄ´Ëº¯ÊıÉèÖÃ±íµ¥¸÷ÖÖÊôĞÔ
             try {
                 setWorkflowForm();
             }
@@ -225,7 +225,7 @@
             }
         });
 
-        //æ˜¾ç¤ºæˆ–éšè—å…¶å®ƒæµç¨‹ç›¸å…³æ–‡æ¡£
+        //ÏÔÊ¾»òÒş²ØÆäËüÁ÷³ÌÏà¹ØÎÄµµ
         function changeProjectDocDataGridVisible() {
             if (document.getElementById('TR_OtherDoc').style.display == 'block') {
                 document.getElementById('TR_OtherDoc').style.display = "none";
@@ -246,7 +246,7 @@
     </object>
     <form id="form1" runat="server">
         <a id="aPrintForm" runat="server" href="#" onclick="preview1()">
-            <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" />Form
+            <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" />Form
         </a>
         <cc1:JSInfoPathRefer ID="JSInfoPathRefer1" runat="server" />
 

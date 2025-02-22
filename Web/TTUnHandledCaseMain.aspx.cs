@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +9,6 @@ public partial class TTUnHandledCaseMain : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //this.Title = "å¾…å¤„ç†äº‹é¡¹---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
+        //this.Title = "´ı´¦ÀíÊÂÏî---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
     }
 }

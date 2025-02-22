@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -27,12 +27,12 @@ public partial class Index : System.Web.UI.Page
     {
         string strUserCode = Session["UserCode"].ToString();
 
-        //this.Title = "鎴戠殑閭欢绠＄悊---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
+        //this.Title = "我的邮件管理---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
         if (!Page.IsPostBack)
         {
             try
             {
-                ///鑾峰彇绯荤粺閰嶇疆淇℃伅
+                ///获取系统配置信息
                 BindWebMailProfile();
             }
             catch (Exception err)
@@ -40,7 +40,7 @@ public partial class Index : System.Web.UI.Page
                 LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
             }
 
-            //鍒涘缓鐢ㄦ埛閭欢闄勪欢瀛樻斁鐩綍;
+            //创建用户邮件附件存放目录;
             // CreateUserDirectory(strUserCode);
         }
     }
@@ -48,7 +48,7 @@ public partial class Index : System.Web.UI.Page
     {
         if (Session["Profile"] == null)
         {
-            ///鑾峰彇绯荤粺閰嶇疆淇℃伅
+            ///获取系统配置信息
             IMail mail = new Mail();
             NpgsqlDataReader dr = mail.GetWebMailProfile();
             if (dr.Read() & dr.HasRows)
@@ -59,7 +59,7 @@ public partial class Index : System.Web.UI.Page
                 profile.Email = dr["Email"].ToString();
                 profile.MailServerIP = dr["MailServerIP"].ToString();
                 profile.MailServerPort = Int32.Parse(dr["MailServerPort"].ToString());
-                ///淇濆瓨閭欢閰嶇疆灞炴�у埌搴旂敤绋嬪簭涓婁笅鏂囦腑
+                ///保存邮件配置属性到应用程序上下文中
                 HttpContext.Current.Application.Add("WebMailProfile", profile);
             }
             dr.Close();

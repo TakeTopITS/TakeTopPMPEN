@@ -1,4 +1,4 @@
-﻿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -24,7 +24,7 @@ public partial class TTAllDeletedDocumentView : System.Web.UI.Page
         LB_UserCode.Text = strUserCode;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "查看所有项目", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "�鿴������Ŀ", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -58,7 +58,7 @@ public partial class TTAllDeletedDocumentView : System.Web.UI.Page
 
         strDocName = "%" + strDocName + "%";
         strHQL = "from Document as document where document.DocName like " + "'" + strDocName + "'";
-        strHQL += " and document.Status = '删除' ";
+        strHQL += " and document.Status = 'Deleted' ";
         strHQL += " Order by document.DocID DESC";
 
         DocumentBLL documentBLL = new DocumentBLL();
@@ -91,7 +91,7 @@ public partial class TTAllDeletedDocumentView : System.Web.UI.Page
 
         strUploadManName = "%" + strUploadManName + "%";
         strHQL = "from Document as document where document.UploadManName like " + "'" + strUploadManName + "'";
-        strHQL += " and document.Status = '删除' ";
+        strHQL += " and document.Status = 'Deleted' ";
         strHQL += " Order by document.DocID DESC";
 
         DocumentBLL documentBLL = new DocumentBLL();
@@ -117,7 +117,7 @@ public partial class TTAllDeletedDocumentView : System.Web.UI.Page
         lst = documentBLL.GetAllDocuments(strHQL);
         Document document = (Document)lst[0];
 
-        document.Status = "处理中";
+        document.Status = "InProgress";
 
         try
         {
@@ -171,7 +171,7 @@ public partial class TTAllDeletedDocumentView : System.Web.UI.Page
         IList lst;
         string strDepartCode = GetDepartCode(strUserCode);
 
-        strHQL = "from Document as document where document.Status = '删除' Order by document.DocID DESC";
+        strHQL = "from Document as document where document.Status = 'Deleted' Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);
         DataGrid1.DataSource = lst;

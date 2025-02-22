@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -38,7 +38,7 @@ public partial class TTProRelatedUserSummary : System.Web.UI.Page
         lst = projectBLL.GetAllProjects(strHQL);
         Project project = (Project)lst[0];
 
-        //this.Title = Resources.lang.Project + strProjectID + " " + project.ProjectName + "çš„é¡¹ç›®æˆå‘˜";
+        //this.Title = Resources.lang.Project + strProjectID + " " + project.ProjectName + "µÄÏîÄ¿³ÉÔ±";
 
 
        if (Page.IsPostBack != true)

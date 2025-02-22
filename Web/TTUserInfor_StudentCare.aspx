@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInfor_StudentCare.aspx.cs" Inherits="TTUserInfor_StudentCare" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInfor_StudentCare.aspx.cs" Inherits="TTUserInfor_StudentCare" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Â≠¶Áîü‰øùÂÅ•</title>
+    <title>—ß…˙±£Ω°</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/My97DatePicker/WdatePicker.js"></script>
 
@@ -149,7 +149,7 @@
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td style="text-align: left" class="formItemBgStyle">ÂøÉÔºö</td>
+                                                                                <td style="text-align: left" class="formItemBgStyle">–ƒ£∫</td>
                                                                                 <td style="text-align: left" class="formItemBgStyle">
                                                                                     <asp:TextBox ID="TXT_Heart" runat="server"></asp:TextBox>
                                                                                 </td>
@@ -254,13 +254,13 @@
                                                                                     </ItemTemplate>
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:TemplateColumn>
-                                                                                <asp:BoundColumn DataField="StudentCode" HeaderText="Áî®Êà∑ÁºñÂè∑">
+                                                                                <asp:BoundColumn DataField="StudentCode" HeaderText="”√ªß±‡∫≈">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="StudentName" HeaderText="ÂßìÂêç">
+                                                                                <asp:BoundColumn DataField="StudentName" HeaderText="–’√˚">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="CheckTime" HeaderText="Ê£ÄÊü•Êó•Êúü">
+                                                                                <asp:BoundColumn DataField="CheckTime" HeaderText="ºÏ≤È»’∆⁄">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:TemplateColumn HeaderText="">

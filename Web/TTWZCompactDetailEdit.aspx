@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZCompactDetailEdit.aspx.cs" Inherits="TTWZCompactDetailEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZCompactDetailEdit.aspx.cs" Inherits="TTWZCompactDetailEdit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ÂêàÂêåÊòéÁªÜÁºñËæë</title>
+    <title>∫œÕ¨√˜œ∏±‡º≠</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -89,31 +89,31 @@
                                                             <table class="formBgStyle" width="80%">
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,HeTongShuLiang%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,HeTongShuLiang%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_CompactNumber" runat="server"></asp:TextBox>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,HeTongDanJia%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,HeTongDanJia%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_CompactPrice" runat="server"></asp:TextBox>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,HeTongJinE%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,HeTongJinE%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_CompactMoney" runat="server"></asp:TextBox>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                      <td style="text-align: left" class="formItemBgStyle">
-                                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ShengChanChangJia%>"></asp:Label>Ôºö</td>
+                                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ShengChanChangJia%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="5">
                                                                         <asp:TextBox ID="TXT_Factory" runat="server" Width="500px"></asp:TextBox>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,GuiGeShuBianHao%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,GuiGeShuBianHao%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="5">
                                                                         <asp:TextBox ID="TXT_StandardCode" runat="server" Width="500px"></asp:TextBox>
                                                                     </td>
@@ -121,7 +121,7 @@
                                                                 
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,BeiZhu%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,BeiZhu%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="5">
                                                                         <asp:TextBox ID="TXT_Remark" runat="server" Width="500px"></asp:TextBox>
                                                                     </td>
@@ -130,7 +130,7 @@
                                                                     <td style="text-align: center" class="formItemBgStyle" colspan="6">
                                                                         <asp:Button ID="BT_Save" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="BT_Save_Click" />&nbsp;
                                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                                            type="button" value="ÂÖ≥Èó≠" />
+                                                                            type="button" value="Closed" />
                                                                     </td>
                                                                 </tr>
                                                                 

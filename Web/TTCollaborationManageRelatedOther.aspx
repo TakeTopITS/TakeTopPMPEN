@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCollaborationManageRelatedOther.aspx.cs" Inherits="TTCollaborationManageRelatedOther" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCollaborationManageRelatedOther.aspx.cs" Inherits="TTCollaborationManageRelatedOther" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -83,7 +83,7 @@
                                                             <tr style="font-size: 10pt">
                                                                 <td style="text-align: left">
                                                                     <span>
-                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,WoYaoChuLiDeXieZuo%>"></asp:Label>ï¼š</span>
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,WoYaoChuLiDeXieZuo%>"></asp:Label>£º</span>
                                                                 </td>
                                                             </tr>
                                                             <tr>
@@ -130,22 +130,22 @@
                                                                         CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                         <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                         <Columns>
-                                                                            <asp:BoundColumn DataField="CoID" HeaderText="ç¼–å·">
+                                                                            <asp:BoundColumn DataField="CoID" HeaderText="±àºÅ">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                             </asp:BoundColumn>
                                                                             <asp:HyperLinkColumn DataNavigateUrlField="CoID" DataNavigateUrlFormatString="TTCollaborationDetailMain.aspx?CoID={0}"
-                                                                                DataTextField="CollaborationName" HeaderText="åä½œ" Target="_blank">
+                                                                                DataTextField="CollaborationName" HeaderText="Ð­×÷" Target="_blank">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="45%" />
                                                                             </asp:HyperLinkColumn>
                                                                             <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                                DataTextField="CreatorName" HeaderText="åˆ›å»ºè€…" Target="_blank">
+                                                                                DataTextField="CreatorName" HeaderText="´´½¨Õß" Target="_blank">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                             </asp:HyperLinkColumn>
-                                                                            <asp:BoundColumn DataField="CreateTime" HeaderText="åˆ›å»ºæ—¶é—´">
+                                                                            <asp:BoundColumn DataField="CreateTime" HeaderText="´´½¨Ê±¼ä">
 
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                                            <asp:TemplateColumn HeaderText="×´Ì¬">
                                                                                 <ItemTemplate>
                                                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                 </ItemTemplate>
@@ -174,7 +174,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <td style="text-align: left">
-                                                                    <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,WoCanYuDeXieZuo%>"></asp:Label>ï¼š
+                                                                    <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,WoCanYuDeXieZuo%>"></asp:Label>£º
                                                                 </td>
                                                             </tr>
                                                             <tr>
@@ -222,21 +222,21 @@
                                                                         CellPadding="4" ForeColor="#333333" GridLines="None" ShowHeader="false">
                                                                         <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                         <Columns>
-                                                                            <asp:BoundColumn DataField="CoID" HeaderText="ç¼–å·">
+                                                                            <asp:BoundColumn DataField="CoID" HeaderText="±àºÅ">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                             </asp:BoundColumn>
                                                                             <asp:HyperLinkColumn DataNavigateUrlField="CoID" DataNavigateUrlFormatString="TTCollaborationDetailMain.aspx?CoID={0}"
-                                                                                DataTextField="CollaborationName" HeaderText="åä½œ" Target="_blank">
+                                                                                DataTextField="CollaborationName" HeaderText="Ð­×÷" Target="_blank">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="45%" />
                                                                             </asp:HyperLinkColumn>
                                                                             <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                                DataTextField="CreatorName" HeaderText="åˆ›å»ºè€…" Target="_blank">
+                                                                                DataTextField="CreatorName" HeaderText="´´½¨Õß" Target="_blank">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                             </asp:HyperLinkColumn>
-                                                                            <asp:BoundColumn DataField="CreateTime" HeaderText="åˆ›å»ºæ—¶é—´">
+                                                                            <asp:BoundColumn DataField="CreateTime" HeaderText="´´½¨Ê±¼ä">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                                            <asp:TemplateColumn HeaderText="×´Ì¬">
                                                                                 <ItemTemplate>
                                                                                     <%# ShareClass.GetStatusHomeNameByRequirementStatus(Eval("Status").ToString()) %>
                                                                                 </ItemTemplate>
@@ -266,7 +266,7 @@
                                                             <tr>
                                                                 <td style="width: 100%; height: 1px; text-align: left">
                                                                     <span style="font-size: 10pt">
-                                                                        <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,WoJianLiDeXieZuo%>"></asp:Label>ï¼š</span>
+                                                                        <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,WoJianLiDeXieZuo%>"></asp:Label>£º</span>
                                                                 </td>
                                                             </tr>
                                                             <tr>
@@ -314,22 +314,22 @@
                                                                         CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                         <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                                         <Columns>
-                                                                            <asp:BoundColumn DataField="CoID" HeaderText="ç¼–å·">
+                                                                            <asp:BoundColumn DataField="CoID" HeaderText="±àºÅ">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                             </asp:BoundColumn>
                                                                             <asp:HyperLinkColumn DataNavigateUrlField="CoID" DataNavigateUrlFormatString="TTCollaborationDetailMain.aspx?CoID={0}"
-                                                                                DataTextField="CollaborationName" HeaderText="åä½œ" Target="_blank">
+                                                                                DataTextField="CollaborationName" HeaderText="Ð­×÷" Target="_blank">
 
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Font-Size="Small" Width="45%" />
                                                                             </asp:HyperLinkColumn>
                                                                             <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                                DataTextField="CreatorName" HeaderText="åˆ›å»ºè€…" Target="_blank">
+                                                                                DataTextField="CreatorName" HeaderText="´´½¨Õß" Target="_blank">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                             </asp:HyperLinkColumn>
-                                                                            <asp:BoundColumn DataField="CreateTime" HeaderText="åˆ›å»ºæ—¶é—´">
+                                                                            <asp:BoundColumn DataField="CreateTime" HeaderText="´´½¨Ê±¼ä">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                                            <asp:TemplateColumn HeaderText="×´Ì¬">
                                                                                 <ItemTemplate>
                                                                                     <%# ShareClass.GetStatusHomeNameByRequirementStatus(Eval("Status").ToString()) %>
                                                                                 </ItemTemplate>

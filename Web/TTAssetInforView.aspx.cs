@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Data;
 using System.Configuration;
 using System.Drawing;
@@ -50,7 +50,7 @@ public partial class TTAssetInforView : System.Web.UI.Page
 
             Asset asset = (Asset)lst[0];
 
-            //this.Title = "èµ„äº§ï¼š" + asset.AssetCode + " " + asset.AssetName + " èµ„æ–™ï¼";
+            //this.Title = "×Ê²ú£º" + asset.AssetCode + " " + asset.AssetName + " ×ÊÁÏ£¡";
 
             DataList1.DataSource = lst;
             DataList1.DataBind();

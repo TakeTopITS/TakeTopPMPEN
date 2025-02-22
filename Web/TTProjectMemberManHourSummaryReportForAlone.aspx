@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectMemberManHourSummaryReportForAlone.aspx.cs" Inherits="TTProjectMemberManHourSummaryReportForAlone" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectMemberManHourSummaryReportForAlone.aspx.cs" Inherits="TTProjectMemberManHourSummaryReportForAlone" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
@@ -7,7 +7,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>È°πÁõÆÊàêÂëò‰ªªÂä°Êä•Ë°®</title>
+    <title>œÓƒø≥…‘±»ŒŒÒ±®±Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/My97DatePicker/WdatePicker.js"></script>
 
@@ -47,7 +47,7 @@
                                 <table>
                                     <tr>
                                         <td>
-                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ChengYuanMingCheng%>"></asp:Label>Ôºö
+                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ChengYuanMingCheng%>"></asp:Label>£∫
                                         </td>
                                         <td>
 
@@ -62,7 +62,7 @@
                                                 Text="<%$ Resources:lang,DaoChu%>" />
 
                                             &nbsp;&nbsp;   <a href="#" onclick="preview1()">
-                                                <img src="ImagesSkin/print.gif" alt="ÊâìÂç∞" border="0" />
+                                                <img src="ImagesSkin/print.gif" alt="¥Ú”°" border="0" />
                                         </td>
                                     </tr>
                                 </table>
@@ -88,10 +88,10 @@
                                     <tr>
                                         <td align="right">
                                             <strong>
-                                                <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZongShenBaoGongShi%>"></asp:Label>Ôºö
+                                                <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZongShenBaoGongShi%>"></asp:Label>£∫
                                             <asp:Label ID="LB_TotalManHour" runat="server"></asp:Label>
                                                 &nbsp;
-                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZongQueRenGongShi%>"></asp:Label>Ôºö<asp:Label ID="LB_TotalConfirmManHour" runat="server"></asp:Label></strong>
+                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZongQueRenGongShi%>"></asp:Label>£∫<asp:Label ID="LB_TotalConfirmManHour" runat="server"></asp:Label></strong>
                                         </td>
                                     </tr>
                                 </table>

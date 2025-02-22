@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -31,7 +31,7 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
         strRelatedType = Request.QueryString["RelatedType"];
         strRelatedID = Request.QueryString["RelatedID"];
 
-        //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
         strToDoWLID = Request.QueryString["WLID"]; strToDoWLDetailID = Request.QueryString["WLStepDetailID"];
         strWLBusinessID = Request.QueryString["BusinessID"];
 
@@ -51,7 +51,7 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
             LoadOvertimeType();
             LoadOvertimeApplyForm(strUserCode);
 
-            ShareClass.LoadWFTemplate(strUserCode, "è€ƒå‹¤ç®¡ç†", DL_TemName);
+            ShareClass.LoadWFTemplate(strUserCode, "AttendanceManagement", DL_TemName);
 
             LB_UserCode.Text = strUserCode;
             LB_UserName.Text = ShareClass.GetUserName(strUserCode);
@@ -93,7 +93,7 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
         }
         else
         {
-            RB_OvertimeType.Items.Add(new ListItem("-1 æ— åŠ ç­ç±»å‹", ""));
+            RB_OvertimeType.Items.Add(new ListItem("-1 ÎŞ¼Ó°àÀàĞÍ", ""));
         }
     }
 
@@ -125,7 +125,7 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
     }
 
-    //å–å¾—è§„å®šä¸Šç­å·¥ä½œå°æ—¶æ•°
+    //È¡µÃ¹æ¶¨ÉÏ°à¹¤×÷Ğ¡Ê±Êı
     protected decimal GetDayHourNumHour()
     {
         decimal flag = 8;
@@ -140,7 +140,7 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
         return flag;
     }
 
-    //å–å¾—è§„å®šä¸Šç­å·¥ä½œæ—¶é—´å¯¹è±¡
+    //È¡µÃ¹æ¶¨ÉÏ°à¹¤×÷Ê±¼ä¶ÔÏó
     protected DayHourNum GetDayHourNum()
     {
         string strHQL = "From DayHourNum as dayHourNum Order By dayHourNum.ID Asc ";
@@ -159,7 +159,7 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
 
 
     /// <summary>
-    /// è·å–è¯·å‡æ—¶é—´æ•°(å°æ—¶ï¼‰
+    /// »ñÈ¡Çë¼ÙÊ±¼äÊı(Ğ¡Ê±£©
     /// </summary>
     /// <param name="starttime"></param>
     /// <param name="endtime"></param>
@@ -194,7 +194,7 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
     }
 
     /// <summary>
-    /// è·å–æ—¶é—´ç‚¹-åŸºç¡€æ•°æ®
+    /// »ñÈ¡Ê±¼äµã-»ù´¡Êı¾İ
     /// </summary>
     /// <param name="strStartTime"></param>
     /// <param name="strEndTime"></param>
@@ -269,7 +269,7 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
 
         if (DLC_StartTime.Text.Trim() != DLC_EndTime.Text.Trim())
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('è­¦å‘Šï¼Œå¼€å§‹æ—¶é—´å’Œç»“æŸæ—¶é—´å¿…é¡»æ˜¯åŒä¸€å¤©ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¾¯¸æ£¬¿ªÊ¼Ê±¼äºÍ½áÊøÊ±¼ä±ØĞëÊÇÍ¬Ò»Ìì£¬Çë¼ì²é£¡')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
             return;
         }
@@ -286,7 +286,7 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
 
         if (dtEndTime.Year != dtStartTime.Year & dtEndTime.Month != dtStartTime.Month)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('è­¦å‘Šï¼Œä¸èƒ½ç”³è¯·è·¨å¹´å’Œè·¨æœˆçš„åŠ ç­ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¾¯¸æ£¬²»ÄÜÉêÇë¿çÄêºÍ¿çÔÂµÄ¼Ó°à£¬Çë¼ì²é£¡')", true);
             DLC_StartTime.Focus();
             DLC_EndTime.Focus();
 
@@ -309,7 +309,7 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
         overtimeApplyForm.UserName = LB_UserName.Text.Trim();
         overtimeApplyForm.Status = DL_Status.SelectedValue.Trim();
 
-        //æ¯å¤©è§„å®šä¸Šç­å°æ—¶æ•°
+        //Ã¿Ìì¹æ¶¨ÉÏ°àĞ¡Ê±Êı
         decimal strHourStand = GetDayHourNumHour();
 
         overtimeApplyForm.HourNum = GetOvertimeApplyHours(dtStartTime, dtEndTime);
@@ -323,7 +323,7 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
 
             LoadOvertimeApplyForm(strUserCode);
 
-            LoadRelatedWL("è€ƒå‹¤ç®¡ç†", "åŠ ç­", int.Parse(LB_ID.Text.Trim()));
+            LoadRelatedWL("AttendanceManagement", "¼Ó°à", int.Parse(LB_ID.Text.Trim()));
 
             string strOvertimeType;
             strOvertimeType = RB_OvertimeType.SelectedValue.Trim();
@@ -379,7 +379,7 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
 
         if (DLC_StartTime.Text.Trim() != DLC_EndTime.Text.Trim())
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('è­¦å‘Šï¼Œå¼€å§‹æ—¶é—´å’Œç»“æŸæ—¶é—´å¿…é¡»æ˜¯åŒä¸€å¤©ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¾¯¸æ£¬¿ªÊ¼Ê±¼äºÍ½áÊøÊ±¼ä±ØĞëÊÇÍ¬Ò»Ìì£¬Çë¼ì²é£¡')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
             return;
@@ -397,7 +397,7 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
 
         if (dtEndTime.Year != dtStartTime.Year & dtEndTime.Month != dtStartTime.Month)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('è­¦å‘Šï¼Œä¸èƒ½ç”³è¯·è·¨å¹´å’Œè·¨æœˆçš„åŠ ç­ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¾¯¸æ£¬²»ÄÜÉêÇë¿çÄêºÍ¿çÔÂµÄ¼Ó°à£¬Çë¼ì²é£¡')", true);
             DLC_StartTime.Focus();
             DLC_EndTime.Focus();
 
@@ -442,15 +442,15 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
                 LB_TotalOvertimeDaysForCurrentMonth.Text = ShareClass.GetTotalOvertimeDayNumberInCurrentMonth(strOvertimeType, strUserCode, DateTime.Now.ToString("yyyyMMdd"));
                 LB_TotalOvertimeDaysForCurrentYear.Text = ShareClass.GetTotalOvertimeDayNumberInCurrentYear(strOvertimeType, strUserCode, DateTime.Now.ToString("yyyyMMdd"));
 
-                //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("è€ƒå‹¤ç®¡ç†", "åŠ ç­", LB_ID.Text.Trim(), "0");
+                //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+                //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AttendanceManagement", "¼Ó°à", LB_ID.Text.Trim(), "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     string strCmdText = "select * from T_OvertimeApplyForm where ID = " + LB_ID.Text;
                     if (strToDoWLID == null)
                     {
-                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("è€ƒå‹¤ç®¡ç†", "åŠ ç­", LB_ID.Text.Trim());
+                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("AttendanceManagement", "¼Ó°à", LB_ID.Text.Trim());
                     }
 
                     if (strToDoWLID != null)
@@ -486,21 +486,21 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
 
         XMLProcess xmlProcess = new XMLProcess();
 
-        strHQL = "Update T_OvertimeApplyForm Set Status = 'å¤„ç†ä¸­' Where ID = " + strID;
+        strHQL = "Update T_OvertimeApplyForm Set Status = 'InProgress' Where ID = " + strID;
 
         //try
         //{
         ShareClass.RunSqlCommand(strHQL);
 
-        strXMLFileName = "åŠ ç­ç”³è¯·" + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xml";
+        strXMLFileName = "¼Ó°àÉêÇë" + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xml";
         strXMLFile2 = "Doc\\" + "XML" + "\\" + strXMLFileName;
 
         WorkFlowBLL workFlowBLL = new WorkFlowBLL();
         WorkFlow workFlow = new WorkFlow();
 
-        workFlow.WLName = strUserCode + ShareClass.GetUserName(strUserCode) + " çš„åŠ ç­ç”³è¯·";
-        workFlow.WLType = "è€ƒå‹¤ç®¡ç†";
-        workFlow.Status = "æ–°å»º";
+        workFlow.WLName = strUserCode + ShareClass.GetUserName(strUserCode) + " µÄ¼Ó°àÉêÇë";
+        workFlow.WLType = "AttendanceManagement";
+        workFlow.Status = "New";
         workFlow.TemName = DL_TemName.SelectedValue.Trim();
         workFlow.CreateTime = DateTime.Now;
         workFlow.CreatorCode = strUserCode;
@@ -515,29 +515,29 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
         }
         else
         {
-            workFlow.RelatedType = "åŠ ç­";
+            workFlow.RelatedType = "¼Ó°à";
             workFlow.RelatedID = int.Parse(strID);
         }
 
         workFlow.RelatedCode = "OvertimeApply" + strID;
-        workFlow.DIYNextStep = "Yes"; workFlow.IsPlanMainWorkflow = "NO";
+        workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
 
         if (CB_SMS.Checked == true)
         {
-            workFlow.ReceiveSMS = "Yes";
+            workFlow.ReceiveSMS = "YES";
         }
         else
         {
-            workFlow.ReceiveSMS = "No";
+            workFlow.ReceiveSMS = "NO";
         }
 
         if (CB_Mail.Checked == true)
         {
-            workFlow.ReceiveEMail = "Yes";
+            workFlow.ReceiveEMail = "YES";
         }
         else
         {
-            workFlow.ReceiveEMail = "No";
+            workFlow.ReceiveEMail = "NO";
         }
 
         //try
@@ -550,9 +550,9 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
         strXMLFile2 = Server.MapPath(strXMLFile2);
         xmlProcess.DbToXML(strCmdText, "T_OvertimeApplyForm", strXMLFile2);
 
-        LoadRelatedWL("è€ƒå‹¤ç®¡ç†", "åŠ ç­", int.Parse(LB_ID.Text.Trim()));
+        LoadRelatedWL("AttendanceManagement", "¼Ó°à", int.Parse(LB_ID.Text.Trim()));
 
-        DL_Status.SelectedValue = "å¤„ç†ä¸­";
+        DL_Status.SelectedValue = "InProgress";
 
         //BT_Update.Visible = false;
         //BT_Delete.Visible = false;
@@ -603,7 +603,7 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
         {
             string strID = e.Item.Cells[3].Text.Trim();
 
-            int intWLNumber = LoadRelatedWL("è€ƒå‹¤ç®¡ç†", "åŠ ç­", int.Parse(strID));
+            int intWLNumber = LoadRelatedWL("AttendanceManagement", "¼Ó°à", int.Parse(strID));
             if (intWLNumber > 0)
             {
                 BT_New.Visible = false;
@@ -615,8 +615,8 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
                 BT_SubmitApply.Enabled = true;
             }
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("è€ƒå‹¤ç®¡ç†", "åŠ ç­", strID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AttendanceManagement", "¼Ó°à", strID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_New.Visible = true;
@@ -653,7 +653,7 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
                 TB_Duty.Text = overtimeApplyForm.Duty.Trim();
                 LB_DepartName.Text = overtimeApplyForm.DepartName.Trim();
 
-                LoadRelatedWL("è€ƒå‹¤ç®¡ç†", "åŠ ç­", int.Parse(LB_ID.Text.Trim()));
+                LoadRelatedWL("AttendanceManagement", "¼Ó°à", int.Parse(LB_ID.Text.Trim()));
 
                 string strOvertimeType;
                 strOvertimeType = RB_OvertimeType.SelectedValue.Trim();
@@ -732,7 +732,7 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'è€ƒå‹¤ç®¡ç†'";
+        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'AttendanceManagement'";
         strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC";
         WorkFlowBLL workFlowBLL = new WorkFlowBLL();
         lst = workFlowBLL.GetAllWorkFlows(strHQL);
@@ -774,7 +774,7 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
     {
         string strHQL = "From OvertimeApplyForm as overtimeApplyForm Where overtimeApplyForm.Creator = '" + strusercode + "' Order By overtimeApplyForm.ID DESC";
 
-        //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
         if (strToDoWLID != null & strWLBusinessID != null)
         {
             strHQL = "From OvertimeApplyForm as overtimeApplyForm Where overtimeApplyForm.ID = " + strWLBusinessID;
@@ -845,7 +845,7 @@ public partial class TTOvertimeApplyFormWF : System.Web.UI.Page
         DL_EndTimeMinute.Text = System.DateTime.Now.Minute.ToString();
     }
 
-    //å–å¾—æ­¤å‘˜å·¥å½“å¹´çš„æ­¤ç±»å‹çš„è¯·å‡å¤©æ•°
+    //È¡µÃ´ËÔ±¹¤µ±ÄêµÄ´ËÀàĞÍµÄÇë¼ÙÌìÊı
     protected string GetTotalOvertimeDayNumberInCurrentYear(string strOvertimeType, string strApplicantCode)
     {
         string strHQL;

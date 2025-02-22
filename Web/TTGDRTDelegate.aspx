@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDRTDelegate.aspx.cs" Inherits="TTGDRTDelegate" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDRTDelegate.aspx.cs" Inherits="TTGDRTDelegate" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -57,8 +57,8 @@
                                                 <table>
                                                     <tr>
                                                         <td>
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>ï¼š<asp:DropDownList ID="DDL_GDProject" runat="server"></asp:DropDownList>&nbsp;
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DengXianDengJi%>"></asp:Label>ï¼š<asp:DropDownList ID="DDL_GDPipingClass" runat="server"></asp:DropDownList><br />
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>£º<asp:DropDownList ID="DDL_GDProject" runat="server"></asp:DropDownList>&nbsp;
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DengXianDengJi%>"></asp:Label>£º<asp:DropDownList ID="DDL_GDPipingClass" runat="server"></asp:DropDownList><br />
                                                             <asp:Button ID="BT_Search" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ChaXun%>" OnClick="BT_Search_Click" /><br />
 
                                                             <asp:TextBox ID="TXT_CreateNewLotNo" runat="server"></asp:TextBox>&nbsp;<asp:Button ID="BT_CreateNewLotNo" runat="server" CssClass="inpuLong" Text="Create New Lot No." OnClick="BT_CreateNewLotNo_Click" />
@@ -103,8 +103,8 @@
                                                                             </HeaderTemplate>
                                                                             <ItemTemplate>
                                                                                 
-                                                                                <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"Isom_no") %>' CommandName="click" CssClass="notTab">ç¼–è¾‘</asp:LinkButton>
-                                                                                <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"Isom_no") %>' CommandName="click" Text="ç‚¹å‡»" />--%>
+                                                                                <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"Isom_no") %>' CommandName="click" CssClass="notTab">±à¼­</asp:LinkButton>
+                                                                                <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"Isom_no") %>' CommandName="click" Text="µã»÷" />--%>
 
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
@@ -202,7 +202,7 @@
                                                                 </HeaderTemplate>
                                                                 <ItemTemplate>
 
-                                                                    <%--<a href='TTGDPressureTestEdit.aspx?id=<%# DataBinder.Eval(Container.DataItem,"ID") %>'>ç¼–è¾‘</a>--%>
+                                                                    <%--<a href='TTGDPressureTestEdit.aspx?id=<%# DataBinder.Eval(Container.DataItem,"ID") %>'>±à¼­</a>--%>
                                                                     <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="click" CssClass="notTab">
                                                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,BianJi%>"></asp:Label></asp:LinkButton>
                                                                     

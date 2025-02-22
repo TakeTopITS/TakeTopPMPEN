@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="WeiXinIndex.aspx.cs" Inherits="WeiXinIndex" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="WeiXinIndex.aspx.cs" Inherits="WeiXinIndex" %>
 
 <!DOCTYPE html>
 

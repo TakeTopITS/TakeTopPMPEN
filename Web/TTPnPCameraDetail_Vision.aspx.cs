@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
@@ -28,8 +28,8 @@ public partial class TTPnPCameraDetail_Vision : System.Web.UI.Page
 
     private void DataBindCameraInfo(string strForeignID, string strType)
     {
-        string strCameraInfoHQL = string.Format(@"select TypeName = (case when i.CameraType = 1 then 'ç»„ç»‡æž¶æž„éƒ¨'
-			                    when i.CameraType = 2 then 'é¡¹ç›®éƒ¨'
+        string strCameraInfoHQL = string.Format(@"select TypeName = (case when i.CameraType = 1 then '×éÖ¯¼Ü¹¹²¿'
+			                    when i.CameraType = 2 then 'ÏîÄ¿²¿'
 			                    end )
                                 ,DPName = (case when i.CameraType = 1 then d.DepartName
 			                                when i.CameraType = 2 then p.ProjectName

@@ -1,4 +1,4 @@
-﻿using com.sun.corba.se.impl.protocol;
+using com.sun.corba.se.impl.protocol;
 
 using System;
 using System.Drawing;

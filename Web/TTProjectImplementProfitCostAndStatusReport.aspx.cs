@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -27,7 +27,7 @@ public partial class TTProjectImplementProfitCostAndStatusReport : System.Web.UI
         strLangCode = Session["LangCode"].ToString();
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text = "é¡¹ç›®åˆ©æ¶¦æˆæœ¬çŠ¶æ€æŠ¥è¡¨";
+        LB_ReportName.Text = "ÏîÄ¿ÀûÈó³É±¾×´Ì¬±¨±í";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
@@ -45,7 +45,7 @@ public partial class TTProjectImplementProfitCostAndStatusReport : System.Web.UI
         }
     }
 
-    //åˆ›å»ºåˆ†æå›¾å½¢
+    //´´½¨·ÖÎöÍ¼ĞÎ
     protected void CreateProjectMalesStoneAnalystChart(string strUserCode)
     {
         string strHQL;
@@ -64,7 +64,7 @@ public partial class TTProjectImplementProfitCostAndStatusReport : System.Web.UI
 
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strChartTitle = "åˆ©æ¶¦æˆæœ¬åˆ†å¸ƒå›¾";
+        strChartTitle = "ÀûÈó³É±¾·Ö²¼Í¼";
         strHQL = @"Select Account as XName,SUM(Amount) as YNumber From V_ProjectProfitAndCostChart 
                       Where ";
 
@@ -82,7 +82,7 @@ public partial class TTProjectImplementProfitCostAndStatusReport : System.Web.UI
         IFrame_Chart_ProfitCost.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strHQL);
 
 
-        strChartTitle = "é¡¹ç›®çŠ¶æ€åˆ†å¸ƒå›¾";
+        strChartTitle = "ÏîÄ¿×´Ì¬·Ö²¼Í¼";
         strHQL = @"Select Status as XName,COUNT(*) as YNumber From V_ProjectStatusNumberChart
                       Where ";
 
@@ -139,7 +139,7 @@ public partial class TTProjectImplementProfitCostAndStatusReport : System.Web.UI
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyy-MM-dd");
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select Account as 'ç§‘ç›®',SUM(Amount) as 'é‡‘é¢' From V_ProjectProfitAndCostChart 
+        strHQL = @"Select Account as '¿ÆÄ¿',SUM(Amount) as '½ğ¶î' From V_ProjectProfitAndCostChart 
                       Where ";
 
         if (strProjectID != "")
@@ -200,11 +200,11 @@ public partial class TTProjectImplementProfitCostAndStatusReport : System.Web.UI
 
         DataTable dtProject = ds.Tables[0];
 
-        Export3Excel(dtProject, "é¡¹ç›®åˆ©æ¶¦æˆæœ¬ç»Ÿè®¡è¡¨.xls");
+        Export3Excel(dtProject, "ÏîÄ¿ÀûÈó³É±¾Í³¼Æ±í.xls");
 
         LB_ResultNumber.Text = GridView1.Rows.Count.ToString();
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¯¼å‡ºæˆåŠŸï¼');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µ¼³ö³É¹¦£¡');", true);
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

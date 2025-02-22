@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -52,8 +52,8 @@ public partial class TTProjectRelatedUserSAAS : System.Web.UI.Page
 
             LoadProjectRelatedUser(strProjectID);
 
-            TB_SMS.Text = strUserName.Trim() + Resources.lang.BaNiJiaRuLeXiangMU + "Ôºö" + strProjectID + " " + strProjectName + Resources.lang.QingJiShiChuLi + "ÔºÅ";
-            TB_PersonalSMS.Text = strUserName.Trim() + Resources.lang.BaNiJiaRuLeXiangMU + "Ôºö" + strProjectID + " " + strProjectName + Resources.lang.QingJiShiChuLi + "ÔºÅ";
+            TB_SMS.Text = strUserName.Trim() + Resources.lang.BaNiJiaRuLeXiangMU + "£∫" + strProjectID + " " + strProjectName + Resources.lang.QingJiShiChuLi + "£°";
+            TB_PersonalSMS.Text = strUserName.Trim() + Resources.lang.BaNiJiaRuLeXiangMU + "£∫" + strProjectID + " " + strProjectName + Resources.lang.QingJiShiChuLi + "£°";
         }
     }
 

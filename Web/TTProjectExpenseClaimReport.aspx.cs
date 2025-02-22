@@ -1,4 +1,4 @@
-﻿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -34,7 +34,7 @@ public partial class TTProjectExpenseClaimReport : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strUserName = GetUserName(strUserCode);
 
-        //this.Title = Resources.lang.Project + strProjectID + " " + strProjectName + " 费用报销汇总！";
+        //this.Title = Resources.lang.Project + strProjectID + " " + strProjectName + " ���ñ������ܣ�";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack == false)
         {
@@ -44,7 +44,7 @@ public partial class TTProjectExpenseClaimReport : System.Web.UI.Page
 
             ShareClass.InitialProjectMemberTree(TreeView1, strProjectID);
 
-            strHQL = "from ExpenseClaim as expenseClaim where expenseClaim.RelatedType = '项目'  and expenseClaim.RelatedID = " + strProjectID + " and expenseClaim.ApplicantCode = " + "'" + strUserCode + "'" + " Order by expenseClaim.ECID DESC";
+            strHQL = "from ExpenseClaim as expenseClaim where expenseClaim.RelatedType = 'Project'  and expenseClaim.RelatedID = " + strProjectID + " and expenseClaim.ApplicantCode = " + "'" + strUserCode + "'" + " Order by expenseClaim.ECID DESC";
             ExpenseClaimBLL expenseClaimBLL = new ExpenseClaimBLL();
             lst = expenseClaimBLL.GetAllExpenseClaims(strHQL);
 
@@ -92,7 +92,7 @@ public partial class TTProjectExpenseClaimReport : System.Web.UI.Page
                 strUserCode = proRelatedUser.UserCode.Trim();
                 strUserName = proRelatedUser.UserName.Trim();
 
-                strHQL = "from ExpenseClaim as expenseClaim where expenseClaim.RelatedType = '项目'  and expenseClaim.RelatedID = " + strProjectID + " and expenseClaim.ApplicantCode = " + "'" + strUserCode + "'" + " Order by expenseClaim.ECID DESC";
+                strHQL = "from ExpenseClaim as expenseClaim where expenseClaim.RelatedType = 'Project'  and expenseClaim.RelatedID = " + strProjectID + " and expenseClaim.ApplicantCode = " + "'" + strUserCode + "'" + " Order by expenseClaim.ECID DESC";
                 ExpenseClaimBLL expenseClaimBLL = new ExpenseClaimBLL();
                 lst = expenseClaimBLL.GetAllExpenseClaims(strHQL);
 
@@ -112,7 +112,7 @@ public partial class TTProjectExpenseClaimReport : System.Web.UI.Page
                 LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll + strUserCode + strUserName;
                 LB_Sql.Text = strHQL;
 
-                LoadRelatedWL("费用报销", "项目", 0);
+                LoadRelatedWL("ExpenseReimbursement", "Project", 0);
                 LoadRelatedExpenseClaimDetail("0");
             }
         }
@@ -139,7 +139,7 @@ public partial class TTProjectExpenseClaimReport : System.Web.UI.Page
             e.Item.ForeColor = Color.Red;
 
 
-            LoadRelatedWL("费用报销", "项目", int.Parse(strID));
+            LoadRelatedWL("ExpenseReimbursement", "Project", int.Parse(strID));
             LoadRelatedExpenseClaimDetail(strID);
         }
     }
@@ -177,7 +177,7 @@ public partial class TTProjectExpenseClaimReport : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from ExpenseClaim as expenseClaim where expenseClaim.RelatedType =  '项目'" + " and expenseClaim.RelatedID = " + strProjectID + "  Order by expenseClaim.ECID DESC";
+        strHQL = "from ExpenseClaim as expenseClaim where expenseClaim.RelatedType =  'Project'" + " and expenseClaim.RelatedID = " + strProjectID + "  Order by expenseClaim.ECID DESC";
         ExpenseClaimBLL expenseClaimBLL = new ExpenseClaimBLL();
         lst = expenseClaimBLL.GetAllExpenseClaims(strHQL);
 
@@ -196,7 +196,7 @@ public partial class TTProjectExpenseClaimReport : System.Web.UI.Page
 
         LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll;
 
-        LoadRelatedWL("费用报销", "项目", 0);
+        LoadRelatedWL("ExpenseReimbursement", "Project", 0);
         LoadRelatedExpenseClaimDetail("0");
     }
 

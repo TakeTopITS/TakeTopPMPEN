@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectRelatedItemBomCopy.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectRelatedItemBomCopy.aspx.cs"
     Inherits="TTProjectRelatedItemBomCopy" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>é¡¹ç›®å·¥ä½œè®¡åˆ’</title>
+    <title>ÏîÄ¿¹¤×÷¼Æ»®</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
@@ -54,7 +54,7 @@
                                                                 </td>
                                                                 <td>(
                                                                 <asp:Label ID="LB_tiItemBOMVersionID" runat="server" Text="<%$ Resources:lang,VersionID%>"></asp:Label>
-                                                                    ï¼š
+                                                                    £º
                                                                 <NickLee:NumberBox MaxAmount="1000000000000" ID="NB_NewVerID" runat="server" Amount="1" MinAmount="1" Precision="0"
                                                                     Width="30px"> 
                                                         1
@@ -62,14 +62,14 @@
                                                                     &nbsp;
                                                                 <asp:Label ID="LB_tiProjectItemBOMType" runat="server" Text="<%$ Resources:lang,Type%>"></asp:Label>
                                                                     <asp:DropDownList ID="DL_VersionType" runat="server">
-                                                                        <asp:ListItem Value="å¤‡ç”¨" Text="<%$ Resources:lang,BeiYong%>"/>
-                                                                        <asp:ListItem Value="åŸºå‡†" Text="<%$ Resources:lang,JiZhun%>"/>
+                                                                        <asp:ListItem Value="Backup" Text="<%$ Resources:lang,BeiYong%>"/>
+                                                                        <asp:ListItem Value="Baseline" Text="<%$ Resources:lang,JiZhun%>"/>
                                                                     </asp:DropDownList>
                                                                     <asp:Button ID="BT_NewVersion" runat="server" CssClass="ButtonCss" Height="20px"
                                                                         OnClick="BT_NewVersion_Click" Text="<%$ Resources:lang,New%>" />
                                                                     &nbsp;<asp:Button ID="BT_DeleteVersion" runat="server" CssClass="ButtonCss" Height="20px" OnClientClick="return confirm(getDeleteMsgByLangCode())"
                                                                         OnClick="BT_DeleteVersion_Click" Text="<%$ Resources:lang,Delete%>" />
-                                                                    ï¼‰(<asp:Label ID="LB_tiCopyBOM" runat="server" Text="<%$ Resources:lang,Copy%>"></asp:Label>
+                                                                    £©(<asp:Label ID="LB_tiCopyBOM" runat="server" Text="<%$ Resources:lang,Copy%>"></asp:Label>
                                                                     BOM:<asp:Label ID="LB_tbFrom" runat="server" Text="<%$ Resources:lang,From%>"></asp:Label>
                                                                     &nbsp;<asp:Label ID="LB_OldProjectID" runat="server"></asp:Label>
                                                                     &nbsp;BOM<asp:Label ID="LB_tiFromVersion" runat="server" Text="<%$ Resources:lang,Version%>"></asp:Label>
@@ -106,7 +106,7 @@
                                                         </asp:TreeView>
                                                     </td>
                                                     <td style="width: 300px; padding: 5px 5px 0px 5px; text-align: left; vertical-align: top; border-right: solid 1px #D8D8D8">
-                                                        <asp:TreeView ID="TreeView3" runat="server" Font-Bold="False" Font-Names="å®‹ä½“" Font-Size="10pt"
+                                                        <asp:TreeView ID="TreeView3" runat="server" Font-Bold="False" Font-Names="ËÎÌå" Font-Size="10pt"
                                                             NodeWrap="True" ShowLines="True" Width="300px">
                                                             <RootNodeStyle CssClass="rootNode" /><NodeStyle CssClass="treeNode" /><LeafNodeStyle CssClass="leafNode" /><SelectedNodeStyle CssClass="selectNode" ForeColor ="Red" />
                                                         </asp:TreeView>
@@ -115,19 +115,19 @@
                                                         <table style="width: 100%;">
                                                             <tr>
                                                                 <td>
-                                                                    <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XuanZeBanBen%>"></asp:Label>ï¼š
+                                                                    <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XuanZeBanBen%>"></asp:Label>£º
                                                                 <asp:DropDownList ID="DL_VersionID" runat="server" AutoPostBack="True" DataTextField="VerID"
                                                                     DataValueField="ID" Height="21px" OnSelectedIndexChanged="DL_Version_SelectedIndexChanged"
                                                                     Width="40px">
                                                                 </asp:DropDownList>
-                                                                    &nbsp;<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>ï¼š<asp:DropDownList ID="DL_ChangeVersionType" runat="server" AutoPostBack="True"
+                                                                    &nbsp;<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º<asp:DropDownList ID="DL_ChangeVersionType" runat="server" AutoPostBack="True"
                                                                         OnSelectedIndexChanged="DL_ChangeVersionType_SelectedIndexChanged">
-                                                                        <asp:ListItem Value="åœ¨ç”¨" Text="<%$ Resources:lang,ZaiYong%>"/>
-                                                                        <asp:ListItem Value="å¤‡ç”¨" Text="<%$ Resources:lang,BeiYong%>"/>
-                                                                        <asp:ListItem Value="åŸºå‡†" Text="<%$ Resources:lang,JiZhun%>"/>
+                                                                        <asp:ListItem Value="InUse" Text="<%$ Resources:lang,ZaiYong%>"/>
+                                                                        <asp:ListItem Value="Backup" Text="<%$ Resources:lang,BeiYong%>"/>
+                                                                        <asp:ListItem Value="Baseline" Text="<%$ Resources:lang,JiZhun%>"/>
                                                                     </asp:DropDownList>
                                                                     <br />
-                                                                    <asp:TreeView ID="TreeView1" runat="server" Font-Bold="False" Font-Names="å®‹ä½“" Font-Size="10pt"
+                                                                    <asp:TreeView ID="TreeView1" runat="server" Font-Bold="False" Font-Names="ËÎÌå" Font-Size="10pt"
                                                                         NodeWrap="True" ShowLines="True" Width="300px">
                                                                         <RootNodeStyle CssClass="rootNode" /><NodeStyle CssClass="treeNode" /><LeafNodeStyle CssClass="leafNode" /><SelectedNodeStyle CssClass="selectNode" ForeColor ="Red" />
                                                                     </asp:TreeView>

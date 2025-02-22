@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections;
 using System.Data;
 using System.Web.UI;
@@ -53,26 +53,26 @@ public partial class TTWFChartViewSL : System.Web.UI.Page
                     {
                         strGUIDStep = strWFDefinition.Substring(strWFDefinition.IndexOf(strGUID, 0), 250);
 
-                        if (strStatus == "å¤„ç†ä¸­")
+                        if (strStatus == "InProgress")
                         {
-                            strNewStepName = strStepName + "â˜…â˜…â˜…ã€" + Resources.lang.JinXingZhong + "ã€‘";
+                            strNewStepName = strStepName + "¡ï¡ï¡ï¡¾" + Resources.lang.JinXingZhong + "¡¿";
                             strNewGUIDStep = strGUIDStep.Replace(strStepName, strNewStepName);
 
                             strWFDefinition = strWFDefinition.Replace(strGUIDStep, strNewGUIDStep);
                         }
 
-                        if (strStatus == "é€šè¿‡")
+                        if (strStatus == "Passed")
                         {
-                            strNewStepName = strStepName + "âœ”âœ”âœ”ã€" + Resources.lang.TongGuo + "ã€‘";
+                            strNewStepName = strStepName + "???¡¾" + Resources.lang.TongGuo + "¡¿";
                             strNewGUIDStep = strGUIDStep.Replace(strStepName, strNewStepName);
 
                             strWFDefinition = strWFDefinition.Replace(strGUIDStep, strNewGUIDStep);
                         }
 
 
-                        if (strStatus == "é©³å›")
+                        if (strStatus == "Rejected")
                         {
-                            strNewStepName = strStepName + "X X Xã€" + Resources.lang.BoHui + "ã€‘";
+                            strNewStepName = strStepName + "X X X¡¾" + Resources.lang.BoHui + "¡¿";
                             strNewGUIDStep = strGUIDStep.Replace(strStepName, strNewStepName);
 
                             strWFDefinition = strWFDefinition.Replace(strGUIDStep, strNewGUIDStep);
@@ -88,7 +88,7 @@ public partial class TTWFChartViewSL : System.Web.UI.Page
         }
     }
 
-    //æ£€æŸ¥æ­¥éª¤æ˜¯ä¸æ˜¯å±äºæ­¤GUIDï¼Œé˜²æ­¢æ­¥éª¤é‡å‘½å‡ºé”™
+    //¼ì²é²½ÖèÊÇ²»ÊÇÊôÓÚ´ËGUID£¬·ÀÖ¹²½ÖèÖØÃü³ö´í
     protected bool CheckStepNameIsBelongToGUID(string strGUID, string strStepName, string strWFDefinition)
     {
         string strGUIDStep;

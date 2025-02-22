@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSupplierList.aspx.cs" Inherits="TTWZSupplierList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSupplierList.aspx.cs" Inherits="TTWZSupplierList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>‰æõÊñπÂàóË°®</title>
+    <title>π©∑Ω¡–±Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -25,35 +25,35 @@
             $("#BT_NewBrowse").attr("class", "inpu");
             $("#BT_NewBrowse").removeAttr("disabled");
 
-            if (objProgress == "Áî≥ËØ∑") {
+            if (objProgress == "…Í«Î") {
                 $("#BT_NewEdit").attr("class", "inpu");
-                $("#BT_NewEdit").removeAttr("disabled");                                //ÁºñËæë
+                $("#BT_NewEdit").removeAttr("disabled");                                //±‡º≠
                 $("#BT_Submit").attr("class", "inpu");
-                $("#BT_Submit").removeAttr("disabled");                                 //Êèê‰∫§
+                $("#BT_Submit").removeAttr("disabled");                                 //Ã·Ωª
                 $("#BT_SubmitReturn").attr("disabled", "disabled");
-                $("#BT_SubmitReturn").removeClass("inpu");                            //Êèê‰∫§ÈÄÄÂõû
+                $("#BT_SubmitReturn").removeClass("inpu");                            //Ã·ΩªÕÀªÿ
                 $("#BT_NewDelete").attr("class", "inpu");
-                $("#BT_NewDelete").removeAttr("disabled");                            //Âà†Èô§
+                $("#BT_NewDelete").removeAttr("disabled");                            //…æ≥˝
             }
-            else if (objProgress == "Êèê‰∫§") {
+            else if (objProgress == "Ã·Ωª") {
                 $("#BT_NewEdit").attr("disabled", "disabled");
-                $("#BT_NewEdit").removeClass("inpu");                            //ÁºñËæë
+                $("#BT_NewEdit").removeClass("inpu");                            //±‡º≠
                 $("#BT_Submit").attr("disabled", "disabled");
-                $("#BT_Submit").removeClass("inpu");                            //Êèê‰∫§
+                $("#BT_Submit").removeClass("inpu");                            //Ã·Ωª
                 $("#BT_SubmitReturn").attr("class", "inpu");
-                $("#BT_SubmitReturn").removeAttr("disabled");                                 //Êèê‰∫§ÈÄÄÂõû
+                $("#BT_SubmitReturn").removeAttr("disabled");                                 //Ã·ΩªÕÀªÿ
                 $("#BT_NewDelete").attr("disabled", "disabled");
-                $("#BT_NewDelete").removeClass("inpu");                            //Âà†Èô§
+                $("#BT_NewDelete").removeClass("inpu");                            //…æ≥˝
             }
             else {
                 $("#BT_NewEdit").attr("disabled", "disabled");
-                $("#BT_NewEdit").removeClass("inpu");                            //ÁºñËæë
+                $("#BT_NewEdit").removeClass("inpu");                            //±‡º≠
                 $("#BT_Submit").attr("disabled", "disabled");
-                $("#BT_Submit").removeClass("inpu");                            //Êèê‰∫§
+                $("#BT_Submit").removeClass("inpu");                            //Ã·Ωª
                 $("#BT_SubmitReturn").attr("disabled", "disabled");
-                $("#BT_SubmitReturn").removeClass("inpu");                            //Êèê‰∫§ÈÄÄÂõû
+                $("#BT_SubmitReturn").removeClass("inpu");                            //Ã·ΩªÕÀªÿ
                 $("#BT_NewDelete").attr("disabled", "disabled");
-                $("#BT_NewDelete").removeClass("inpu");                            //Âà†Èô§
+                $("#BT_NewDelete").removeClass("inpu");                            //…æ≥˝
             }
         }
 
@@ -161,10 +161,10 @@
                                                     <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                         <tr>
                                                             <td align="left" class="formItemBgStyle">
-                                                                <%--<input type="button" class="inpu" value="Áî≥ËØ∑ÁôªËÆ∞" onclick="window.location.href = 'TTWZSupplierEdit.aspx'" />--%>
+                                                                <%--<input type="button" class="inpu" value="…Í«Îµ«º«" onclick="window.location.href = 'TTWZSupplierEdit.aspx'" />--%>
                                                                 <asp:Button ID="BT_NewAdd" runat="server" CssClass="auto-style1" Text="<%$ Resources:lang,ShenQingDengJi%>" OnClick="BT_NewAdd_Click" />
                                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiLuCaoZuo%>"></asp:Label>Ôºö<asp:Button ID="BT_NewEdit" runat="server" CssClass="inpu" Text="<%$ Resources:lang,BianJi%>" OnClick="BT_NewEdit_Click" />&nbsp;
+                                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiLuCaoZuo%>"></asp:Label>£∫<asp:Button ID="BT_NewEdit" runat="server" CssClass="inpu" Text="<%$ Resources:lang,BianJi%>" OnClick="BT_NewEdit_Click" />&nbsp;
                                                                          <asp:Button ID="BT_Submit" runat="server" CssClass="inpu" Text="<%$ Resources:lang,TiJiao%>" OnClick="BT_Submit_Click" />&nbsp;
                                                                          <asp:Button ID="BT_SubmitReturn" runat="server" CssClass="inpu" Text="<%$ Resources:lang,TiJiaoTuiHui%>" OnClick="BT_SubmitReturn_Click" />&nbsp;
                                                                          <asp:Button ID="BT_NewDelete" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ShanChu%>" OnClick="BT_NewDelete_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())" />&nbsp;
@@ -289,12 +289,12 @@
                                                                                     <asp:LinkButton runat="server" CommandArgument='<%# Eval("ID")+"|"+Eval("Progress") %>' CommandName="click" CssClass="notTab">
                                                                                         <asp:Label ID="Label42" runat="server" Text="<%$ Resources:lang,CaoZuo%>"></asp:Label>
                                                                                     </asp:LinkButton>
-                                                                                    <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="edit" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Áî≥ËØ∑" ? true : false %>'>ÁºñËæë</asp:LinkButton>--%>
-                                                                                    <%--<asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="submit" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Áî≥ËØ∑" ? true : false %>'>Êèê‰∫§</asp:LinkButton>--%>
-                                                                                    <%--<asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="submitReturn" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Êèê‰∫§" ? true : false %>'>Êèê‰∫§ÈÄÄÂõû</asp:LinkButton>--%>
+                                                                                    <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="edit" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="…Í«Î" ? true : false %>'>±‡º≠</asp:LinkButton>--%>
+                                                                                    <%--<asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="submit" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="…Í«Î" ? true : false %>'>Ã·Ωª</asp:LinkButton>--%>
+                                                                                    <%--<asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="submitReturn" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Ã·Ωª" ? true : false %>'>Ã·ΩªÕÀªÿ</asp:LinkButton>--%>
                                                                                 </ItemTemplate>
                                                                             </asp:TemplateColumn>
-                                                                            <asp:BoundColumn DataField="SupplierNumber" HeaderText="‰æõÊñπÁºñÂè∑">
+                                                                            <asp:BoundColumn DataField="SupplierNumber" HeaderText="π©∑Ω±‡∫≈">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                             </asp:BoundColumn>
                                                                             <asp:TemplateColumn>
@@ -450,10 +450,10 @@
                                                                                     <%#DataBinder.Eval(Container.DataItem, "InTime", "{0:yyyy/MM/dd}")%>
                                                                                 </ItemTemplate>
                                                                             </asp:TemplateColumn>
-                                                                            <asp:BoundColumn DataField="Progress" HeaderText="ËøõÂ∫¶">
+                                                                            <asp:BoundColumn DataField="Progress" HeaderText="Ω¯∂»">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:BoundColumn DataField="IsMark" HeaderText="‰ΩøÁî®Ê†áËÆ∞">
+                                                                            <asp:BoundColumn DataField="IsMark" HeaderText=" π”√±Íº«">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                             </asp:BoundColumn>
                                                                         </Columns>
@@ -501,10 +501,10 @@
                                                                                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                                                 <tr>
                                                                                                     <td width="80%" align="center">
-                                                                                                        <strong>Ê®°ÊùøÂêçÁß∞</strong>
+                                                                                                        <strong>ƒ£∞Â√˚≥∆</strong>
                                                                                                     </td>
                                                                                                     <td width="20%" align="center">
-                                                                                                        <strong>Êìç‰Ωú</strong>
+                                                                                                        <strong>≤Ÿ◊˜</strong>
                                                                                                     </td>
                                                                                                 </tr>
                                                                                             </table>
@@ -518,7 +518,7 @@
                                                                                     CellPadding="4" ForeColor="#333333" GridLines="None" ShowHeader="false"
                                                                                     Width="100%">
                                                                                     <Columns>
-                                                                                        <asp:BoundColumn DataField="TemplateFileName" HeaderText="Ê®°ÊùøÂêçÁß∞">
+                                                                                        <asp:BoundColumn DataField="TemplateFileName" HeaderText="ƒ£∞Â√˚≥∆">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="80%" />
                                                                                         </asp:BoundColumn>
                                                                                         <asp:TemplateColumn>

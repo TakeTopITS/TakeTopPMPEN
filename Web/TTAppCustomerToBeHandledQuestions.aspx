@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppCustomerToBeHandledQuestions.aspx.cs" Inherits="TTAppCustomerToBeHandledQuestions" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppCustomerToBeHandledQuestions.aspx.cs" Inherits="TTAppCustomerToBeHandledQuestions" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
 
@@ -37,7 +37,7 @@
             SetDataGridTrClickLink();
         });
 
-        //ÁÇπÂáªDATAGRIDË°åÂÜÖ‰ªª‰Ωï‰∏ÄÁÇπÔºåÈÉΩËÉΩËß¶ÂèëË°åÂÜÖÁöÑÈìæÊé•
+        //µ„ª˜DATAGRID––ƒ⁄»Œ∫Œ“ªµ„£¨∂ºƒ‹¥•∑¢––ƒ⁄µƒ¡¥Ω”
         function SetDataGridTrClickLink() {
 
 
@@ -77,7 +77,7 @@
                                                         </td>
                                                     </tr>
                                                 </table>
-                                                <img id="IMG_Waiting" src="Images/Processing.gif" alt="ËØ∑Á®çÂÄôÔºåÂ§ÑÁêÜ‰∏≠..." style="display: none;" />
+                                                <img id="IMG_Waiting" src="Images/Processing.gif" alt="«Î…‘∫Ú£¨¥¶¿Ì÷–..." style="display: none;" />
                                             </a>
                                         </td>
                                         <td></td>
@@ -101,7 +101,7 @@
                                             <table style="width: 100%; height: 1px">
                                                 <tr>
                                                     <td style="text-align: left;">
-                                                        <asp:Label ID="Lbel1" runat="server" Text="<%$ Resources:lang,ToBeAsigned%>" />Ôºö
+                                                        <asp:Label ID="Lbel1" runat="server" Text="<%$ Resources:lang,ToBeAsigned%>" />£∫
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -166,16 +166,16 @@
 
 
 
-                                                                <%--                                                                <asp:BoundColumn DataField="ID" HeaderText="ÁºñÂè∑">
+                                                                <%--                                                                <asp:BoundColumn DataField="ID" HeaderText="±‡∫≈">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="18%" />
                                                                 </asp:BoundColumn>
 
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTAppCustomerToBeHandledQuestionsDetail.aspx?ID={0}"
-                                                                    DataTextField="Question" HeaderText="ÈóÆÈ¢ò">
+                                                                    DataTextField="Question" HeaderText="Œ Ã‚">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                                 </asp:HyperLinkColumn>
 
-                                                                <asp:BoundColumn DataField="UserPosition" HeaderText="Âå∫Âüü">
+                                                                <asp:BoundColumn DataField="UserPosition" HeaderText="«¯”Ú">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                                                 </asp:BoundColumn>--%>
                                                             </Columns>
@@ -190,7 +190,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: left;">
-                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,MemberCustomerSevice%>" />Ôºö
+                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,MemberCustomerSevice%>" />£∫
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -255,18 +255,18 @@
 
 
 
-                                                                <%--  <asp:BoundColumn DataField="ID" HeaderText="ÁºñÂè∑">
+                                                                <%--  <asp:BoundColumn DataField="ID" HeaderText="±‡∫≈">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="18%" />
                                                                 </asp:BoundColumn>
 
 
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTAppCustomerQuestionHandleDetailForMembers.aspx?ID={0}"
-                                                                    DataTextField="Question" HeaderText="ÈóÆÈ¢ò" Target="_blank">
+                                                                    DataTextField="Question" HeaderText="Œ Ã‚" Target="_blank">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                                 </asp:HyperLinkColumn>
 
 
-                                                                <asp:BoundColumn DataField="OperatorName" HeaderText="ÂèóÁêÜ‰∫∫">
+                                                                <asp:BoundColumn DataField="OperatorName" HeaderText=" ‹¿Ì»À">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                                                 </asp:BoundColumn>--%>
                                                             </Columns>

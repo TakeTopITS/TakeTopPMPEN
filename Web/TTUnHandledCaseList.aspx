@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUnHandledCaseList.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUnHandledCaseList.aspx.cs"
     Inherits="TTUnHandledCaseList" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
@@ -24,7 +24,7 @@
                                     <asp:DataGrid ID="DataGrid1" runat="server" AllowPaging="False" AutoGenerateColumns="False" PageSize="18" Width="100%"
                                         CellPadding="0" ForeColor="#333333" GridLines="None" ShowHeader="False" Height="1px">
                                         <Columns>
-                                            <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·" Visible="false">
+                                            <asp:BoundColumn DataField="ID" HeaderText="±àºÅ" Visible="false">
                                                 <ItemStyle CssClass="dibian2" HorizontalAlign="Center" Width="1%" />
                                             </asp:BoundColumn>
                                             <asp:TemplateColumn>
@@ -33,7 +33,7 @@
                                                         <table>
                                                             <tr>
                                                                 <td>
-                                                                    <%#DataBinder .Eval (Container .DataItem,"HomeName") %> ï¼š
+                                                                    <%#DataBinder .Eval (Container .DataItem,"HomeName") %> £º
                                                                 </td>
                                                                 <td><%# GetNumberCount(Eval("SQLCode").ToString()) %>
                                                                 </td>

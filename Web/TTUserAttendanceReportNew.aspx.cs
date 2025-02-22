@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -32,7 +32,7 @@ using NPOI.SS.Util;
 using NPOI.XSSF.UserModel;
 using NPOI.SS.UserModel;
 
-//å¼•å…¥JSON
+//ÒıÈëJSON
 using Newtonsoft.Json.Linq;
 
 
@@ -117,7 +117,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
         catch(Exception ex)
         {
             LogClass.WriteLogFile(ex.Message.ToString());
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('é”™è¯¯ï¼Œéƒ¨é—¨å’Œå­éƒ¨é—¨å‘˜å·¥äººæ•°å¤ªå¤šï¼Œå†…å­˜ä¸å¤Ÿï¼Œè¯·æ£€æŸ¥!')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('´íÎó£¬²¿ÃÅºÍ×Ó²¿ÃÅÔ±¹¤ÈËÊıÌ«¶à£¬ÄÚ´æ²»¹»£¬Çë¼ì²é!')", true);
         }
     }
 
@@ -130,7 +130,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
         if (strDepartCode == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('è­¦å‘Šï¼Œè¯·å…ˆé€‰æ‹©éƒ¨é—¨å†æŸ¥è¯¢ï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¾¯¸æ£¬ÇëÏÈÑ¡Ôñ²¿ÃÅÔÙ²éÑ¯£¡')", true);
             return null;
         }
 
@@ -152,20 +152,20 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
         strStartTime = startTime.ToString("yyyy-MM-dd");
         strEndTime = endTime.ToString("yyyy-MM-dd");
-        Label4.Text = string.Format("ç»Ÿè®¡æ—¶é—´ï¼š{0}è‡³{1}", strStartTime, strEndTime);
+        Label4.Text = string.Format("Í³¼ÆÊ±¼ä£º{0}ÖÁ{1}", strStartTime, strEndTime);
 
         if (strStartTime.Substring(0, 8) != strEndTime.Substring(0, 8))
         {
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click",
-                "alert('è­¦å‘Šï¼Œå¼€å§‹ç»“æŸæ—¥æœŸåªèƒ½é€‰æ‹©åŒä¸€ä¸ªæœˆä»½ï¼')", true);
+                "alert('¾¯¸æ£¬¿ªÊ¼½áÊøÈÕÆÚÖ»ÄÜÑ¡ÔñÍ¬Ò»¸öÔÂ·İ£¡')", true);
             return null;
         }
 
         strDepartCode = strDepartCode + "%";
         strUserName = "%" + strUserName + "%";
-        //è·å¾—æ‰€æœ‰ç”¨æˆ·åˆ—è¡¨
+        //»ñµÃËùÓĞÓÃ»§ÁĞ±í
         DataSet alluser = GetAllUser(strDepartCode, strUserName);
-        //å¯¹æ‰€æœ‰ç”¨æˆ·é€ä¸€è·å¾—JSONç»“æœä¸²
+        //¶ÔËùÓĞÓÃ»§ÖğÒ»»ñµÃJSON½á¹û´®
         DataSet ds = GetAllJSONData(strStartTime, strEndTime, alluser);
 
         return ds;
@@ -195,7 +195,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
         return ds;
     }
 
-    //é€šè¿‡éƒ¨é—¨å’Œç”¨æˆ·æ¡ä»¶è·å¾—æ‰€æœ‰ç”¨æˆ·
+    //Í¨¹ı²¿ÃÅºÍÓÃ»§Ìõ¼ş»ñµÃËùÓĞÓÃ»§
     private static DataSet GetAllUser(string departcode, string username)
     {
         string sqlcmd = string.Format("select distinct departcode,UserName from t_projectmember where departcode like '{0}' and username like '{1}' order by departcode", departcode, username);
@@ -205,17 +205,17 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
         return ds;
     }
 
-    //è¿è¡Œè¿”å›JSONï¼Œå¹¶å°†JSONè½¬ä¸ºDataSet
+    //ÔËĞĞ·µ»ØJSON£¬²¢½«JSON×ªÎªDataSet
     public static string RunSqlCommandJSon(string strCmdText)
     {
         NpgsqlConnection myConnection = new NpgsqlConnection(
                ConfigurationManager.ConnectionStrings["SQLCONNECTIONSTRING"].ConnectionString);
 
-        ///åˆ›å»ºCommand
+        ///´´½¨Command
         NpgsqlCommand myCommand = new NpgsqlCommand(strCmdText, myConnection);
         myCommand.CommandTimeout = 600;
 
-        ///æ‰“å¼€é“¾æ¥
+        ///´ò¿ªÁ´½Ó
         myConnection.Open();
 
         var result = myCommand.ExecuteScalar();
@@ -226,25 +226,25 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
     }
 
-    //JSONè½¬ä¸ºDataSetå‡½æ•°
+    //JSON×ªÎªDataSetº¯Êı
     public static DataSet JSonConvertDataset(string jsonstr)
     {
         DataSet ds = new DataSet();
-        // å°† JSON å­—ç¬¦ä¸²è§£æä¸º JArray å¯¹è±¡
+        // ½« JSON ×Ö·û´®½âÎöÎª JArray ¶ÔÏó
         JArray jsonArray = JArray.Parse(jsonstr);
 
         //LogClass.WriteLogFile(jsonArray.ToString());
 
-        // åˆ›å»º DataTable
+        // ´´½¨ DataTable
         DataTable dataTable = new DataTable();
 
-        // æ·»åŠ åˆ—
+        // Ìí¼ÓÁĞ
         foreach (JProperty property in jsonArray[0])
         {
             dataTable.Columns.Add(property.Name);
         }
 
-        // æ·»åŠ è¡Œ
+        // Ìí¼ÓĞĞ
         foreach (JObject jsonObject in jsonArray)
         {
             DataRow row = dataTable.NewRow();
@@ -309,16 +309,16 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
         var dt = ds.Tables[0];
         Random a = new Random();
-        string fileName = "å‘˜å·¥è€ƒå‹¤æŠ¥è¡¨" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+        string fileName = "Ô±¹¤¿¼ÇÚ±¨±í" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
 
         try
         {
             IWorkbook workbook = new HSSFWorkbook();
             ISheet sheet = workbook.CreateSheet("Sheet1");
-            //åˆ é™¤å¤šä½™åˆ—UserCodeã€å·¥å·1ã€å·¥å·2
+            //É¾³ı¶àÓàÁĞUserCode¡¢¹¤ºÅ1¡¢¹¤ºÅ2
             dt.Columns.Remove("UserCode");
-            dt.Columns.Remove("å·¥å·1");
-            dt.Columns.Remove("å·¥å·2");
+            dt.Columns.Remove("¹¤ºÅ1");
+            dt.Columns.Remove("¹¤ºÅ2");
             var colNum = dt.Columns.Count;
 
             var startTime = DateTime.Parse(DLC_StartTime.Text);
@@ -328,16 +328,16 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
             var totalDays = endTime.Subtract(startTime).Days + 1;
 
             var rowIndex = 0;
-            //æ ‡é¢˜
+            //±êÌâ
             CellRangeAddress region = new CellRangeAddress(rowIndex, rowIndex, 0, colNum - 1);
             sheet.AddMergedRegion(region);
             var cell = sheet.CreateRow(rowIndex).CreateCell(0);
-            cell.SetCellValue("æœˆåº¦æ±‡æ€»    ç»Ÿè®¡æ—¥æœŸï¼š" + strStartTime + "è‡³" + strEndTime);
+            cell.SetCellValue("ÔÂ¶È»ã×Ü    Í³¼ÆÈÕÆÚ£º" + strStartTime + "ÖÁ" + strEndTime);
 
             var style = workbook.CreateCellStyle() as HSSFCellStyle;
             var font = workbook.CreateFont() as HSSFFont;
-            font.IsBold = true;//åŠ ç²—
-            font.FontName = "å®‹ä½“";
+            font.IsBold = true;//¼Ó´Ö
+            font.FontName = "ËÎÌå";
             font.FontHeightInPoints = 24;
             style.SetFont(font);
             ((HSSFSheet)sheet).SetEnclosedBorderOfRegion(region, NPOI.SS.UserModel.BorderStyle.Thin, HSSFColor.Black.Index);
@@ -345,15 +345,15 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
             rowIndex++;
 
-            //æŠ¥è¡¨ç”Ÿæˆæ—¶é—´
+            //±¨±íÉú³ÉÊ±¼ä
             region = new CellRangeAddress(rowIndex, rowIndex, 0, colNum - 1);
             sheet.AddMergedRegion(region);
             cell = sheet.CreateRow(rowIndex).CreateCell(0);
-            //            cell.SetCellValue("æœˆåº¦æ±‡æ€»    ç»Ÿè®¡æ—¥æœŸï¼š" + strStartTime + "è‡³" + strEndTime);
-            cell.SetCellValue("æŠ¥è¡¨ç”Ÿæˆæ—¶é—´ï¼š" + DateTime.Now.ToString("yyyy-MM-dd HH:mm"));
+            //            cell.SetCellValue("ÔÂ¶È»ã×Ü    Í³¼ÆÈÕÆÚ£º" + strStartTime + "ÖÁ" + strEndTime);
+            cell.SetCellValue("±¨±íÉú³ÉÊ±¼ä£º" + DateTime.Now.ToString("yyyy-MM-dd HH:mm"));
             style = workbook.CreateCellStyle() as HSSFCellStyle;
             font = workbook.CreateFont() as HSSFFont;
-            font.FontName = "å®‹ä½“";
+            font.FontName = "ËÎÌå";
             font.FontHeightInPoints = 14;
             style.SetFont(font);
             ((HSSFSheet)sheet).SetEnclosedBorderOfRegion(region, NPOI.SS.UserModel.BorderStyle.Thin, HSSFColor.Black.Index);
@@ -364,15 +364,15 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
             style = workbook.CreateCellStyle() as HSSFCellStyle;
             font = workbook.CreateFont() as HSSFFont;
-            font.FontName = "å®‹ä½“";
+            font.FontName = "ËÎÌå";
             font.FontHeightInPoints = 12;
             style.SetFont(font);
             SetCellBorder(style);
-            //è¡¨å¤´
+            //±íÍ·
 
             var row1 = sheet.CreateRow(rowIndex);
             var row2 = sheet.CreateRow(rowIndex + 1);
-            string[] cols = new string[] { "å§“å", "éƒ¨é—¨", "å·¥å·", "èŒä½" };
+            string[] cols = new string[] { "ĞÕÃû", "²¿ÃÅ", "¹¤ºÅ", "Ö°Î»" };
             var colIndex = 0;
             for (; colIndex < cols.Length; colIndex++)
             {
@@ -386,7 +386,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
             }
 
 
-            //è¯·å‡
+            //Çë¼Ù
             var leaveDt = GetLeaveTypeAll();
             if (leaveDt.Rows.Count > 1)
             {
@@ -395,7 +395,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
             }
 
             cell = row1.CreateCell(colIndex);
-            cell.SetCellValue("è¯·å‡(å°æ—¶)");
+            cell.SetCellValue("Çë¼Ù(Ğ¡Ê±)");
             ((HSSFSheet)sheet).SetEnclosedBorderOfRegion(region, NPOI.SS.UserModel.BorderStyle.Thin, HSSFColor.Black.Index);
             cell.CellStyle = style;
 
@@ -408,8 +408,8 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
             cols = new string[]
             {
-                "å‡ºå‹¤å¤©æ•°", "åº”å‡ºå‹¤å¤©æ•°", "è¿Ÿåˆ°æ¬¡æ•°", "è¿Ÿåˆ°æ—¶é•¿(åˆ†é’Ÿ)", "æ—·å·¥è¿Ÿåˆ°æ¬¡æ•°",
-                "æ—©é€€æ¬¡æ•°", "æ—©é€€æ—¶é•¿(åˆ†é’Ÿ)", "æ—·å·¥å¤©æ•°", "å¤œç­å¤©æ•°"
+                "³öÇÚÌìÊı", "Ó¦³öÇÚÌìÊı", "³Ùµ½´ÎÊı", "³Ùµ½Ê±³¤(·ÖÖÓ)", "¿õ¹¤³Ùµ½´ÎÊı",
+                "ÔçÍË´ÎÊı", "ÔçÍËÊ±³¤(·ÖÖÓ)", "¿õ¹¤ÌìÊı", "Ò¹°àÌìÊı"
             };
 
             for (var i = 0; i < cols.Length; i++)
@@ -423,7 +423,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
                 cell.CellStyle = style;
             }
 
-            //åŠ ç­
+            //¼Ó°à
             var overtimeDt = GetOvertimeTypeAll();
             if (overtimeDt.Rows.Count > 1)
             {
@@ -432,7 +432,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
             }
 
             cell = row1.CreateCell(colIndex);
-            cell.SetCellValue("åŠ ç­æ—¶é•¿(å°æ—¶)");
+            cell.SetCellValue("¼Ó°àÊ±³¤(Ğ¡Ê±)");
             ((HSSFSheet)sheet).SetEnclosedBorderOfRegion(region, NPOI.SS.UserModel.BorderStyle.Thin, HSSFColor.Black.Index);
             cell.CellStyle = style;
 
@@ -443,11 +443,11 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
                 cell.CellStyle = style;
             }
 
-            //è€ƒå‹¤ç»“æœ
+            //¿¼ÇÚ½á¹û
             region = new CellRangeAddress(rowIndex, rowIndex, colIndex, colIndex + totalDays - 1);
             sheet.AddMergedRegion(region);
             cell = row1.CreateCell(colIndex);
-            cell.SetCellValue("è€ƒå‹¤ç»“æœ");
+            cell.SetCellValue("¿¼ÇÚ½á¹û");
             ((HSSFSheet)sheet).SetEnclosedBorderOfRegion(region, NPOI.SS.UserModel.BorderStyle.Thin, HSSFColor.Black.Index);
             cell.CellStyle = style;
 
@@ -460,7 +460,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
             rowIndex++;
 
-            //æ•°æ®  
+            //Êı¾İ  
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 rowIndex++;
@@ -473,15 +473,15 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
                 }
             }
 
-            //è½¬ä¸ºå­—èŠ‚æ•°ç»„  
+            //×ªÎª×Ö½ÚÊı×é  
             MemoryStream stream = new MemoryStream();
             workbook.Write(stream);
             var buf = stream.ToArray();
 
-            //å¼€å§‹è°ƒç”¨htmlé¡µé¢ä¸‹è½½çª—
+            //¿ªÊ¼µ÷ÓÃhtmlÒ³ÃæÏÂÔØ´°
             Response.ContentType = "application/octet-stream;";
 
-            //é€šçŸ¥æµè§ˆå™¨ä¸‹è½½æ–‡ä»¶è€Œä¸æ˜¯æ‰“å¼€;å¯¹ä¸­æ–‡åç§°è¿›è¡Œç¼–ç 
+            //Í¨Öªä¯ÀÀÆ÷ÏÂÔØÎÄ¼ş¶ø²»ÊÇ´ò¿ª;¶ÔÖĞÎÄÃû³Æ½øĞĞ±àÂë
             Response.AddHeader("Content-Disposition", "attachment; filename=\"" + HttpUtility.UrlEncode(fileName, System.Text.Encoding.UTF8) + "\"");
             Response.BinaryWrite(buf);
             Response.Flush();
@@ -528,10 +528,10 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
         NpgsqlConnection myConnection = new NpgsqlConnection(
               ConfigurationManager.ConnectionStrings["SQLCONNECTIONSTRING"].ConnectionString);
 
-        ///åˆ›å»ºCommand
+        ///´´½¨Command
         NpgsqlCommand myCommand = new NpgsqlCommand(pro, myConnection);
 
-        ///æ‰“å¼€é“¾æ¥
+        ///´ò¿ªÁ´½Ó
         myConnection.Open();
 
         // Create a database reader
@@ -545,7 +545,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
         NpgsqlDataAdapter sda = new NpgsqlDataAdapter();
         sda.SelectCommand = myCommand;
-        sda.SelectCommand.CommandTimeout = 600;  //å–æ¶ˆè¶…æ—¶é»˜è®¤è®¾ç½®  é»˜è®¤æ˜¯30s   å¢åŠ ä¸€æ¡è®¾ç½®
+        sda.SelectCommand.CommandTimeout = 600;  //È¡Ïû³¬Ê±Ä¬ÈÏÉèÖÃ  Ä¬ÈÏÊÇ30s   Ôö¼ÓÒ»ÌõÉèÖÃ
         DataSet ds = new DataSet();
         sda.Fill(ds);
 
@@ -564,7 +564,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
     //    if (strDepartCode == "")
     //    {
-    //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('è­¦å‘Šï¼Œè¯·å…ˆé€‰æ‹©éƒ¨é—¨å†æŸ¥è¯¢ï¼')", true);
+    //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¾¯¸æ£¬ÇëÏÈÑ¡Ôñ²¿ÃÅÔÙ²éÑ¯£¡')", true);
     //        return null;
     //    }
 
@@ -586,12 +586,12 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
     //    strStartTime = startTime.ToString("yyyy-MM-dd");
     //    strEndTime = endTime.ToString("yyyy-MM-dd");
-    //    Label4.Text = string.Format("ç»Ÿè®¡æ—¶é—´ï¼š{0}è‡³{1}", strStartTime, strEndTime);
+    //    Label4.Text = string.Format("Í³¼ÆÊ±¼ä£º{0}ÖÁ{1}", strStartTime, strEndTime);
 
     //    if (strStartTime.Substring(0, 8) != strEndTime.Substring(0, 8))
     //    {
     //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click",
-    //            "alert('è­¦å‘Šï¼Œå¼€å§‹ç»“æŸæ—¥æœŸåªèƒ½é€‰æ‹©åŒä¸€ä¸ªæœˆä»½ï¼')", true);
+    //            "alert('¾¯¸æ£¬¿ªÊ¼½áÊøÈÕÆÚÖ»ÄÜÑ¡ÔñÍ¬Ò»¸öÔÂ·İ£¡')", true);
     //        return null;
     //    }
 

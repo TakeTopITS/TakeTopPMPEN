@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -29,7 +29,7 @@ public partial class TTDefectHandlePage : System.Web.UI.Page
         strUserName = ShareClass.GetUserName(strUserCode);
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "需求管理", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "�������", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -78,40 +78,40 @@ public partial class TTDefectHandlePage : System.Web.UI.Page
         DataSet ds;
 
         strHQL = "Select * from T_DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and defectAssignRecord.Status in ('计划','受理','待处理')";
-        strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from T_Defectment as defectment where defectment.Status not in ('关闭','隐藏','删除','归档'))";
+        strHQL += " and defectAssignRecord.Status in ('Plan','Accepted','ToHandle')";
+        strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from T_Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by defectAssignRecord.MoveTime DESC limit 40";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_DefectAssignRecord");
         DataList_ToBeHandled.DataSource = ds;
         DataList_ToBeHandled.DataBind();
-        SetDefectRecordColor(ds, DataList_ToBeHandled, "待处理");
+        SetDefectRecordColor(ds, DataList_ToBeHandled, "ToHandle");
 
         strHQL = "Select * from T_DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and defectAssignRecord.Status in ('处理中','处理中')";
-        strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from T_Defectment as defectment where defectment.Status not in ('关闭','隐藏','删除','归档'))";
+        strHQL += " and defectAssignRecord.Status in ('InProgress','InProgress')";
+        strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from T_Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by defectAssignRecord.MoveTime DESC limit 40";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_DefectAssignRecord");
         DataList_Handling.DataSource = ds;
         DataList_Handling.DataBind();
-        SetDefectRecordColor(ds, DataList_Handling, "处理中");
+        SetDefectRecordColor(ds, DataList_Handling, "InProgress");
 
         strHQL = "Select * from T_DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and defectAssignRecord.Status in ('拒绝','挂起','取消','完成','已完成')";
-        strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from T_Defectment as defectment where defectment.Status not in ('关闭','隐藏','删除','归档'))";
+        strHQL += " and defectAssignRecord.Status in ('�ܾ�','Suspended','Cancel','Completed','�����')";
+        strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from T_Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by defectAssignRecord.MoveTime DESC limit 40";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_DefectAssignRecord");
         DataList_FinishedUnAssigned.DataSource = ds;
         DataList_FinishedUnAssigned.DataBind();
-        SetDefectRecordColor(ds, DataList_FinishedUnAssigned, "已完成");
+        SetDefectRecordColor(ds, DataList_FinishedUnAssigned, "�����");
 
         strHQL = "Select * from T_DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and defectAssignRecord.Status = '已分派'";
-        strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from T_Defectment as defectment where defectment.Status not in ('关闭','隐藏','删除','归档'))";
+        strHQL += " and defectAssignRecord.Status = '�ѷ���'";
+        strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from T_Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by defectAssignRecord.MoveTime DESC limit 40";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_DefectAssignRecord");
         DataList_Assigned.DataSource = ds;
         DataList_Assigned.DataBind();
-        SetDefectRecordColor(ds, DataList_Assigned,"已分派");
+        SetDefectRecordColor(ds, DataList_Assigned,"�ѷ���");
     }
 
     protected void LoadDefectment(string strUserCode)
@@ -156,9 +156,9 @@ public partial class TTDefectHandlePage : System.Web.UI.Page
 
         //    strStatus = ds.Tables[0].Rows[i]["Status"].ToString().Trim();
 
-        //    if (strStatus != "完成" & strStatus != "已完成")
+        //    if (strStatus != "Completed" & strStatus != "�����")
         //    {
-        //        if (strTaskStatus != "已分派")
+        //        if (strTaskStatus != "�ѷ���")
         //        {
         //            if (dtFinishedDate < dtNowDate)
         //            {
@@ -172,7 +172,7 @@ public partial class TTDefectHandlePage : System.Web.UI.Page
         //    }
         //    else
         //    {
-        //        if (strTaskStatus == "已分派")
+        //        if (strTaskStatus == "�ѷ���")
         //        {
         //            dataList.Items[i].BackColor = Color.Green;
         //        }

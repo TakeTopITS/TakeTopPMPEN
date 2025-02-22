@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -18,7 +18,7 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strProjectID = Request.QueryString["ProjectID"];
 
-        //this.Title = Resources.lang.Project + strProjectID + " " + ShareClass.GetProjectName(strProjectID.Trim()) + "çš„é¡¹ç›®æ–‡æ§";
+        //this.Title = Resources.lang.Project + strProjectID + " " + ShareClass.GetProjectName(strProjectID.Trim()) + "µÄÏîÄ¿ÎÄ¿Ø";
 
         LB_UserCode.Text = strUserCode.Trim();
         LB_UserName.Text = ShareClass.GetUserName(strUserCode.Trim());
@@ -43,7 +43,7 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
     }
 
     /// <summary>
-    /// æ ¹æ®æƒ…å†µæ˜¾ç¤ºå³è¾¹åˆ—è¡¨ä¿¡æ¯ï¼Œ1 æ”¶å›¾ç™»è®°,2 å‘å›¾ç™»è®°,3 æ”¶æ–‡ç™»è®°,4 å‘æ–‡ç™»è®°
+    /// ¸ù¾İÇé¿öÏÔÊ¾ÓÒ±ßÁĞ±íĞÅÏ¢£¬1 ÊÕÍ¼µÇ¼Ç,2 ·¢Í¼µÇ¼Ç,3 ÊÕÎÄµÇ¼Ç,4 ·¢ÎÄµÇ¼Ç
     /// </summary>
     protected void BindInformation()
     {
@@ -103,26 +103,26 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
     }
 
     /// <summary>
-    /// å®šä¹‰æ–‡æ§ç±»å‹æ ‘
+    /// ¶¨ÒåÎÄ¿ØÀàĞÍÊ÷
     /// </summary>
-    /// <param name="tv">æ§ä»¶</param>
-    /// <param name="strUserCode">ç”¨æˆ·ç¼–ç </param>
-    /// <param name="strprojectid">é¡¹ç›®ç¼–å·</param>
-    /// <param name="strprojectname">é¡¹ç›®åç§°</param>
+    /// <param name="tv">¿Ø¼ş</param>
+    /// <param name="strUserCode">ÓÃ»§±àÂë</param>
+    /// <param name="strprojectid">ÏîÄ¿±àºÅ</param>
+    /// <param name="strprojectname">ÏîÄ¿Ãû³Æ</param>
     protected void DocTypeTree(TreeView tv, string strUserCode, string strprojectid, string strprojectname)
     {
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         tv.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = Resources.lang.Project + strprojectid + " " + strprojectname + " æ–‡æ§åˆ—è¡¨";
+        node1.Text = Resources.lang.Project + strprojectid + " " + strprojectname + " ÎÄ¿ØÁĞ±í";
         node1.Target = "0";
         node1.Expanded = true;
         tv.Nodes.Add(node1);
 
-        string namelist = "æ”¶å›¾ç™»è®°,å‘å›¾ç™»è®°,æ”¶æ–‡ç™»è®°,å‘æ–‡ç™»è®°";
+        string namelist = "ÊÕÍ¼µÇ¼Ç,·¢Í¼µÇ¼Ç,ÊÕÎÄµÇ¼Ç,·¢ÎÄµÇ¼Ç";
         string[] tempNameList = namelist.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
 
         for (int i = 0; i < tempNameList.Length; i++)
@@ -140,7 +140,7 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
     }
 
     /// <summary>
-    /// æ ¹æ®çˆ¶èŠ‚ç‚¹åç§°ï¼Œè·å–å…¶å­èŠ‚ç‚¹åç§°
+    /// ¸ù¾İ¸¸½ÚµãÃû³Æ£¬»ñÈ¡Æä×Ó½ÚµãÃû³Æ
     /// </summary>
     /// <param name="strParentName"></param>
     /// <returns></returns>
@@ -166,12 +166,12 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
     }
 
     /// <summary>
-    /// æ”¶å›¾ç™»è®°
+    /// ÊÕÍ¼µÇ¼Ç
     /// </summary>
     protected void LoadProGraphRegistration()
     {
         string strHQL = "Select * From T_ProGraphRegistration Where ProjectID='" + strProjectID + "' ";
-        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != "æ”¶å›¾ç™»è®°")
+        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != "ÊÕÍ¼µÇ¼Ç")
         {
             strHQL += " and DocType='" + lbl_TreeViewName.Text.Trim() + "' ";
         }
@@ -184,17 +184,17 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
         DataGrid3.DataBind();
         lbl_sql3.Text = strHQL;
 
-        LB_FindCondition.Text = "æ”¶å›¾ç™»è®°åˆ—è¡¨";
-        LB_ProGraphRegistrationCount.Text = "æ€»æ•°ï¼š" + ds.Tables[0].Rows.Count.ToString();
+        LB_FindCondition.Text = "ÊÕÍ¼µÇ¼ÇÁĞ±í";
+        LB_ProGraphRegistrationCount.Text = "×ÜÊı£º" + ds.Tables[0].Rows.Count.ToString();
     }
 
     /// <summary>
-    /// å‘å›¾ç™»è®°
+    /// ·¢Í¼µÇ¼Ç
     /// </summary>
     protected void LoadProSendFigureRegistration()
     {
         string strHQL = "Select * From T_ProSendFigureRegistration Where FileNo in (Select FileNo From T_ProGraphRegistration Where ProjectID='" + strProjectID + "') ";
-        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != "æ”¶å›¾ç™»è®°")
+        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != "ÊÕÍ¼µÇ¼Ç")
         {
             strHQL += " and DocType='" + lbl_TreeViewName.Text.Trim() + "' ";
         }
@@ -207,17 +207,17 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
         DataGrid5.DataBind();
         lbl_sql4.Text = strHQL;
 
-        LB_FindCondition.Text = "å‘å›¾ç™»è®°åˆ—è¡¨";
-        LB_ProSendFigureRegistrationCount.Text = "æ€»æ•°ï¼š" + ds.Tables[0].Rows.Count.ToString();
+        LB_FindCondition.Text = "·¢Í¼µÇ¼ÇÁĞ±í";
+        LB_ProSendFigureRegistrationCount.Text = "×ÜÊı£º" + ds.Tables[0].Rows.Count.ToString();
     }
 
     /// <summary>
-    /// æ”¶æ–‡ç™»è®°
+    /// ÊÕÎÄµÇ¼Ç
     /// </summary>
     protected void LoadProReceiptRegistration()
     {
         string strHQL = "Select * From T_ProReceiptRegistration Where ProjectID='" + strProjectID + "' ";
-        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != "æ”¶æ–‡ç™»è®°")
+        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != "ÊÕÎÄµÇ¼Ç")
         {
             strHQL += " and DocType='" + lbl_TreeViewName.Text.Trim() + "' ";
         }
@@ -230,17 +230,17 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
         DataGrid1.DataBind();
         lbl_sql1.Text = strHQL;
 
-        LB_FindCondition.Text = "æ”¶æ–‡ç™»è®°åˆ—è¡¨";
-        LB_ProReceiptRegistrationCount.Text = "æ€»æ•°ï¼š" + ds.Tables[0].Rows.Count.ToString();
+        LB_FindCondition.Text = "ÊÕÎÄµÇ¼ÇÁĞ±í";
+        LB_ProReceiptRegistrationCount.Text = "×ÜÊı£º" + ds.Tables[0].Rows.Count.ToString();
     }
 
     /// <summary>
-    /// å‘æ–‡ç™»è®°
+    /// ·¢ÎÄµÇ¼Ç
     /// </summary>
     protected void LoadProIssueRegistration()
     {
         string strHQL = "Select * From T_ProIssueRegistration Where DocumentNo in (Select DocumentNo From T_ProReceiptRegistration Where ProjectID='" + strProjectID + "') ";
-        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != "æ”¶æ–‡ç™»è®°")
+        if (lbl_TreeViewName.Text.Trim() != "" && lbl_TreeViewName.Text.Trim() != "ÊÕÎÄµÇ¼Ç")
         {
             strHQL += " and DocType='" + lbl_TreeViewName.Text.Trim() + "' ";
         }
@@ -253,12 +253,12 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
         DataGrid2.DataBind();
         lbl_sql2.Text = strHQL;
 
-        LB_FindCondition.Text = "å‘æ–‡ç™»è®°åˆ—è¡¨";
-        LB_ProIssueRegistrationCount.Text = "æ€»æ•°ï¼š" + ds.Tables[0].Rows.Count.ToString();
+        LB_FindCondition.Text = "·¢ÎÄµÇ¼ÇÁĞ±í";
+        LB_ProIssueRegistrationCount.Text = "×ÜÊı£º" + ds.Tables[0].Rows.Count.ToString();
     }
 
     /// <summary>
-    /// ç»‘å®šæ”¶å›¾ç™»è®°ä¸­çš„æ¡£æ¡ˆå·åŠåç§°
+    /// °ó¶¨ÊÕÍ¼µÇ¼ÇÖĞµÄµµ°¸ºÅ¼°Ãû³Æ
     /// </summary>
     protected void LoadProGraphRegistrationName()
     {
@@ -273,7 +273,7 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
     }
 
     /// <summary>
-    /// ç»‘å®šæ”¶æ–‡ç™»è®°ä¸­çš„æ–‡ä»¶ç¼–å·åŠåç§°
+    /// °ó¶¨ÊÕÎÄµÇ¼ÇÖĞµÄÎÄ¼ş±àºÅ¼°Ãû³Æ
     /// </summary>
     protected void LoadProReceiptRegistrationName()
     {
@@ -288,39 +288,39 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
     }
 
     /// <summary>
-    /// ç»‘å®šç±»å‹
+    /// °ó¶¨ÀàĞÍ
     /// </summary>
     protected void LoadProDocType()
     {
-        DataTable dt = GetList("æ”¶å›¾ç™»è®°");
+        DataTable dt = GetList("ÊÕÍ¼µÇ¼Ç");
         if (dt != null && dt.Rows.Count > 0)
         {
             ddl_DocType.Items.Clear();
-            ddl_DocType.Items.Insert(0, new ListItem("æ”¶å›¾ç™»è®°", "æ”¶å›¾ç™»è®°"));
-            SetInterval(ddl_DocType, "æ”¶å›¾ç™»è®°", " ");
+            ddl_DocType.Items.Insert(0, new ListItem("ÊÕÍ¼µÇ¼Ç", "ÊÕÍ¼µÇ¼Ç"));
+            SetInterval(ddl_DocType, "ÊÕÍ¼µÇ¼Ç", " ");
         }
         else
         {
             ddl_DocType.Items.Clear();
-            ddl_DocType.Items.Insert(0, new ListItem("æ”¶å›¾ç™»è®°", "æ”¶å›¾ç™»è®°"));
+            ddl_DocType.Items.Insert(0, new ListItem("ÊÕÍ¼µÇ¼Ç", "ÊÕÍ¼µÇ¼Ç"));
         }
 
-        dt = GetList("æ”¶æ–‡ç™»è®°");
+        dt = GetList("ÊÕÎÄµÇ¼Ç");
         if (dt != null && dt.Rows.Count > 0)
         {
             ddl_DocType1.Items.Clear();
-            ddl_DocType1.Items.Insert(0, new ListItem("æ”¶æ–‡ç™»è®°", "æ”¶æ–‡ç™»è®°"));
-            SetInterval(ddl_DocType1, "æ”¶æ–‡ç™»è®°", " ");
+            ddl_DocType1.Items.Insert(0, new ListItem("ÊÕÎÄµÇ¼Ç", "ÊÕÎÄµÇ¼Ç"));
+            SetInterval(ddl_DocType1, "ÊÕÎÄµÇ¼Ç", " ");
         }
         else
         {
             ddl_DocType1.Items.Clear();
-            ddl_DocType1.Items.Insert(0, new ListItem("æ”¶æ–‡ç™»è®°", "æ”¶æ–‡ç™»è®°"));
+            ddl_DocType1.Items.Insert(0, new ListItem("ÊÕÎÄµÇ¼Ç", "ÊÕÎÄµÇ¼Ç"));
         }
     }
 
     /// <summary>
-    /// è·å–é¡¹ç›®æ–‡æ§ç±»å‹
+    /// »ñÈ¡ÏîÄ¿ÎÄ¿ØÀàĞÍ
     /// </summary>
     protected DataTable GetList(string strParentName)
     {
@@ -336,7 +336,7 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
 
     protected void SetInterval(DropDownList DDL, string strParentName, string interval)
     {
-        interval += "â”œ";
+        interval += "©À";
 
         DataTable list = GetList(strParentName);
         if (list.Rows.Count > 0 && list != null)
@@ -345,7 +345,7 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
             {
                 DDL.Items.Add(new ListItem(string.Format("{0}{1}", interval, list.Rows[i]["ClassificationName"].ToString().Trim()), list.Rows[i]["ClassificationName"].ToString().Trim()));
 
-                ///é€’å½’
+                ///µİ¹é
                 SetInterval(DDL, list.Rows[i]["ClassificationName"].ToString().Trim(), interval);
             }
         }
@@ -401,7 +401,7 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
         }
         lbl_ParamaValue.Text = strDocTypeID;
 
-        if (strDocTypeName.Contains(Resources.lang.Project) && strDocTypeName.Contains("æ–‡æ§åˆ—è¡¨"))
+        if (strDocTypeName.Contains(Resources.lang.Project) && strDocTypeName.Contains("ÎÄ¿ØÁĞ±í"))
         {
             lbl_TreeViewName.Text = "";
         }
@@ -410,10 +410,10 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
             if (strDocTypeName.Contains("."))
             {
                 lbl_TreeViewName.Text = strDocTypeName.Substring(strDocTypeName.LastIndexOf(".") + 1);
-                if (lbl_TreeViewName.Text == "å‘å›¾ç™»è®°")
-                    lbl_TreeViewName.Text = "æ”¶å›¾ç™»è®°";
-                else if (lbl_TreeViewName.Text == "å‘æ–‡ç™»è®°")
-                    lbl_TreeViewName.Text = "æ”¶æ–‡ç™»è®°";
+                if (lbl_TreeViewName.Text == "·¢Í¼µÇ¼Ç")
+                    lbl_TreeViewName.Text = "ÊÕÍ¼µÇ¼Ç";
+                else if (lbl_TreeViewName.Text == "·¢ÎÄµÇ¼Ç")
+                    lbl_TreeViewName.Text = "ÊÕÎÄµÇ¼Ç";
             }
             else
             {
@@ -445,10 +445,10 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
                 TB_FileWay.Text = proReceiptRegistration.FileWay.Trim();
                 if (string.IsNullOrEmpty(proReceiptRegistration.DestroyPeople) || proReceiptRegistration.DestroyPeople.Trim() == "")
                 {
-                    ddl_IsDestroy.SelectedValue = "å¦";
+                    ddl_IsDestroy.SelectedValue = "NO";
                 }
                 else
-                    ddl_IsDestroy.SelectedValue = "æ˜¯";
+                    ddl_IsDestroy.SelectedValue = "YES";
                 DLC_CreateDate.Text = proReceiptRegistration.CreateDate.ToString("yyyy-MM-dd");
                 TB_Creator1.Text = proReceiptRegistration.Creator.Trim();
                 ddl_DocType1.SelectedValue = proReceiptRegistration.DocType.Trim();
@@ -489,10 +489,10 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
                 TB_ReceivingDepartment.Text = proIssueRegistration.ReceivingDepartment.Trim();
                 if (string.IsNullOrEmpty(proIssueRegistration.Recycling) || proIssueRegistration.Recycling.Trim() == "")
                 {
-                    ddl_IsRecycle.SelectedValue = "å¦";
+                    ddl_IsRecycle.SelectedValue = "NO";
                 }
                 else
-                    ddl_IsRecycle.SelectedValue = "æ˜¯";
+                    ddl_IsRecycle.SelectedValue = "YES";
                 DLC_IssuingDate.Text = proIssueRegistration.IssuingDate.ToString("yyyy-MM-dd");
                 lbl_FilePath1.Text = proIssueRegistration.FilePath.Trim();
                 RP_SendFile.DataSource = lst;
@@ -587,10 +587,10 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
 
                 if (proSendFigureRegistration.BackPer.Trim() == "" || string.IsNullOrEmpty(proSendFigureRegistration.BackPer))
                 {
-                    ddl_IsBack.SelectedValue = "å¦";
+                    ddl_IsBack.SelectedValue = "NO";
                 }
                 else
-                    ddl_IsBack.SelectedValue = "æ˜¯";
+                    ddl_IsBack.SelectedValue = "YES";
             }
             lbl_TreeViewName.Text = proSendFigureRegistration.DocType.Trim();
         }
@@ -609,13 +609,13 @@ public partial class TTProjDocumentControlView : System.Web.UI.Page
 
     protected string GetStatusValue(string obj)
     {
-        string flag = "å¦";
+        string flag = "NO";
         if (string.IsNullOrEmpty(obj) || obj.Trim() == "")
         {
-            flag = "å¦";
+            flag = "NO";
         }
         else
-            flag = "æ˜¯";
+            flag = "YES";
         return flag;
     }
 }

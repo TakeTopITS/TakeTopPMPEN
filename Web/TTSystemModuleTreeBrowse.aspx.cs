@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using System;
 using System.Data;
 using System.Web.UI;
@@ -20,7 +20,7 @@ public partial class TTSystemModuleTreeBrowse : System.Web.UI.Page
         strForbitModule = Session["ForbitModule"].ToString();
 
         //ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ç³»ç»Ÿæ¨¡ç»„è®¾å®š", strUserCode);
+        //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ÏµÍ³Ä£×éÉè¶¨", strUserCode);
         //if (blVisible == false)
         //{
         //    Response.Redirect("TTDisplayErrors.aspx");
@@ -35,14 +35,14 @@ public partial class TTSystemModuleTreeBrowse : System.Web.UI.Page
             ShareClass.LoadLanguageForDropList(ddlLangSwitcher);
             ddlLangSwitcher.SelectedValue = strLangCode;
 
-            //ç”Ÿæˆæ¨¡ç»„æ ‘
+            //Éú³ÉÄ£×éÊ÷
             InitialModuleTree();
 
             LB_ModuleNumber.Text = intModuleNumber.ToString();
         }
     }
 
-    //å†…éƒ¨ç”¨æˆ·ç”¨æ¨¡ç»„
+    //ÄÚ²¿ÓÃ»§ÓÃÄ£×é
     protected void InitialModuleTree()
     {
         InitialModuleTreeForInner(TreeView1, ddlLangSwitcher.SelectedValue.Trim());
@@ -57,7 +57,7 @@ public partial class TTSystemModuleTreeBrowse : System.Web.UI.Page
         string strHQL;
         string strModuleID, strModuleName, strModuleType, strHomeModuleName;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         treeView.Nodes.Clear();
         TreeNode node1 = new TreeNode();
         TreeNode node2 = new TreeNode();
@@ -151,13 +151,13 @@ public partial class TTSystemModuleTreeBrowse : System.Web.UI.Page
     }
 
 
-    //å¤–éƒ¨ç”¨æˆ·ç”¨æ¨¡ç»„
+    //Íâ²¿ÓÃ»§ÓÃÄ£×é
     protected void InitialModuleTreeForOuter(TreeView treeView, string strLangCode)
     {
         string strHQL;
         string strModuleID, strModuleName, strModuleType, strHomeModuleName;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         //treeView.Nodes.Clear();
         TreeNode node1 = new TreeNode();
         TreeNode node2 = new TreeNode();
@@ -250,18 +250,18 @@ public partial class TTSystemModuleTreeBrowse : System.Web.UI.Page
         }
     }
 
-    //é¡µé¢æ¨¡ç»„
+    //Ò³ÃæÄ£×é
     protected void InitialModuleTreeForPage(TreeView treeView, string strLangCode)
     {
         string strHQL;
         string strModuleID, strModuleName, strModuleType, strHomeModuleName;
 
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeNode node1 = new TreeNode();
         TreeNode node2 = new TreeNode();
 
-        node1.Text = "<b>é¡µé¢æ¨¡ç»„<b>";
+        node1.Text = "<b>Ò³ÃæÄ£×é<b>";
         node1.Target = "0";
         node1.Expanded = true;
         treeView.Nodes.Add(node1);

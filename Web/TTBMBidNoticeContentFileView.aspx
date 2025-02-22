@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTBMBidNoticeContentFileView.aspx.cs" Inherits="TTBMBidNoticeContentFileView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTBMBidNoticeContentFileView.aspx.cs" Inherits="TTBMBidNoticeContentFileView" %>
 
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -39,7 +39,7 @@
                                                         <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                     </td>
                                                     <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                        <asp:Label ID="Label1" runat="server" Text="é¢„ä¸­æ ‡é€šçŸ¥ä¹¦æ–‡ä»¶"></asp:Label>
+                                                        <asp:Label ID="Label1" runat="server" Text="Ô¤ÖÐ±êÍ¨ÖªÊéÎÄ¼þ"></asp:Label>
                                                     </td>
                                                     <td width="5">
                                                         <%--<img src="ImagesSkin/main_top_r.jpg" width="5" height="31" alt="" />--%>
@@ -58,9 +58,9 @@
                                 <table cellpadding="2" cellspacing="0" class="formBgStyle" width="75%">
                                     <tr>
                                            <td align="center">
-                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,WenJianXinXi%>"></asp:Label>ï¼š<asp:TextBox ID="TextBox1" runat="server" Width="120px"></asp:TextBox>
+                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,WenJianXinXi%>"></asp:Label>£º<asp:TextBox ID="TextBox1" runat="server" Width="120px"></asp:TextBox>
                                        
-                                            <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZhaoBiaoFangAnXinXi%>"></asp:Label>ï¼š<asp:TextBox ID="TextBox2" runat="server" Width="120px"></asp:TextBox>
+                                            <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZhaoBiaoFangAnXinXi%>"></asp:Label>£º<asp:TextBox ID="TextBox2" runat="server" Width="120px"></asp:TextBox>
                                       
                                             <asp:Button ID="BT_Query" runat="server" CssClass="inpu" OnClick="BT_Query_Click" Text="<%$ Resources:lang,ChaXun%>" />
                                         </td>
@@ -68,7 +68,7 @@
                                 </table>
                                 <table cellpadding="2" cellspacing="0" class="formBgStyle" width="1000px">
                                     <tr>
-                                        <td align="center" style="text-align: left" class="formItemBgStyle">&nbsp;&nbsp;&nbsp; <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhaoBiaoWenJianLieBiao%>"></asp:Label>ï¼š</td>
+                                        <td align="center" style="text-align: left" class="formItemBgStyle">&nbsp;&nbsp;&nbsp; <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhaoBiaoWenJianLieBiao%>"></asp:Label>£º</td>
                                     </tr>
                                     <tr>
                                         <td align="center" class="formItemBgStyle">
@@ -101,17 +101,17 @@
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                    <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="FileName" HeaderText="æ–‡ä»¶åç§°">
+                                                    <asp:BoundColumn DataField="FileName" HeaderText="ÎÄ¼þÃû³Æ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:HyperLinkColumn DataNavigateUrlField="FilePath" DataNavigateUrlFormatString="{0}" DataTextField="FileName" HeaderText="æ–‡ä»¶ä¸‹è½½" Target="_blank">
+                                                    <asp:HyperLinkColumn DataNavigateUrlField="FilePath" DataNavigateUrlFormatString="{0}" DataTextField="FileName" HeaderText="ÎÄ¼þÏÂÔØ" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                     </asp:HyperLinkColumn>
                                                 </Columns>

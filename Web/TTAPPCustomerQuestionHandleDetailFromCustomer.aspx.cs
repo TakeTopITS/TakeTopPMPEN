@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -30,7 +30,7 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
 
         strIsMobileDevice = Session["IsMobileDevice"].ToString();
 
-        //CKEditoråˆå§‹åŒ–      
+        //CKEditor³õÊ¼»¯      
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_CustomerComment);
@@ -79,7 +79,7 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
             LB_Question.Text = ShareClass.GetCustomerNameFromCustomerCode(strCustomerCode);
 
             LoadCustomerQuestionType();
-            //åˆ—å‡ºç›´æ¥æˆå‘˜
+            //ÁĞ³öÖ±½Ó³ÉÔ±
             ShareClass.LoadMemberByUserCodeForDropDownList(strUserCode, DL_Operator);
 
             strHQL = "from CustomerQuestion as customerQuestion where ";
@@ -104,7 +104,7 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
                 NB_PreDays.Amount = 5;
                 DL_IsImportant.SelectedValue = customerQuestion.IsImportant.Trim();
 
-                //å•†æœºä¿¡æ¯
+                //ÉÌ»úĞÅÏ¢
                 TB_BusinessName.Text = customerQuestion.BusinessName.Trim();
                 DLC_ExpectedTime.Text = customerQuestion.ExpectedTime.ToString("yyyy-MM-dd");
                 TB_CustomerName.Text = customerQuestion.CustomerName.Trim();
@@ -169,7 +169,7 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
                 LoadCustomerQuestionHandleRecord(strQuestionID);
                 //LoadRelatedDoc(strQuestionID);
 
-                //åˆ—å‡ºç›´æ¥æˆå‘˜
+                //ÁĞ³öÖ±½Ó³ÉÔ±
                 ShareClass.LoadMemberByUserCodeForDropDownList(strUserCode, DL_Operator);
             }
             else
@@ -179,7 +179,7 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
                 HL_ResoveResultReview.Enabled = false;
             }
 
-            //è‡ªåŠ¨å—ç†
+            //×Ô¶¯ÊÜÀí
             AgreeCustomerQuestion();
 
             InitialCustomerQuestionTree(strCustomerCode);
@@ -248,7 +248,7 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
 
                     strStatus = customerQuestion.Status.Trim();
 
-                    //å•†æœºä¿¡æ¯
+                    //ÉÌ»úĞÅÏ¢
                     TB_BusinessName.Text = customerQuestion.BusinessName.Trim();
                     DLC_ExpectedTime.Text = customerQuestion.ExpectedTime.ToString("yyyy-MM-dd");
                     TB_CustomerName.Text = customerQuestion.CustomerName.Trim();
@@ -302,7 +302,7 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
 
                 strStatus = customerQuestion.Status.Trim();
 
-                if (strNow == strHandleTime & strStatus == "æ–°å»º")
+                if (strNow == strHandleTime & strStatus == "New")
                 {
                     customerQuestionBLL.DeleteCustomerQuestion(customerQuestion);
 
@@ -408,7 +408,7 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
             TB_CustomerAcceptor.Text = customerQuestion.ContactPerson;
             TB_AcceptorContactWay.Text = customerQuestion.PhoneNumber.Trim();
 
-            //å•†æœºä¿¡æ¯
+            //ÉÌ»úĞÅÏ¢
             TB_BusinessName.Text = customerQuestion.BusinessName.Trim();
             DLC_ExpectedTime.Text = customerQuestion.ExpectedTime.ToString("yyyy-MM-dd");
             TB_CustomerName.Text = customerQuestion.CustomerName.Trim();
@@ -435,7 +435,7 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
 
 
             BT_TransferOperator.Enabled = true;
-            if (strNow == strHandleTime | strStatus == "æ–°å»º")
+            if (strNow == strHandleTime | strStatus == "New")
             {
                 BT_NewRecord.Enabled = true;
             }
@@ -529,7 +529,7 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
         TB_PostCode.Text = customerQuestion.PostCode.Trim();
 
 
-        //å•†æœºä¿¡æ¯
+        //ÉÌ»úĞÅÏ¢
         TB_BusinessName.Text = customerQuestion.BusinessName.Trim();
         DLC_ExpectedTime.Text = customerQuestion.ExpectedTime.ToString("yyyy-MM-dd");
         TB_CustomerName.Text = customerQuestion.CustomerName.Trim();
@@ -591,7 +591,7 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
 
     protected void AddQuestion()
     {
-        //è‡ªåŠ¨å—ç†
+        //×Ô¶¯ÊÜÀí
         AddCustomerQuestion();
 
         InitialCustomerQuestionTree(strCustomerCode);
@@ -651,7 +651,7 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
             customerQuestion.AnswerTime = dtAnswerTime;
             customerQuestion.RecorderCode = strUserCode;
             customerQuestion.SummitTime = DateTime.Now;
-            customerQuestion.Status = "æ–°å»º";
+            customerQuestion.Status = "New";
 
             customerQuestion.RecorderCode = strUserCode;
 
@@ -660,7 +660,7 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
             customerQuestion.OperatorStatus = "";
             customerQuestion.FromWebSite = "";
 
-            //å•†æœºä¿¡æ¯
+            //ÉÌ»úĞÅÏ¢
             TB_CustomerName.Text = strCompany;
             TB_CustomerManager.Text = strContactPerson;
             TB_BusinessName.Text = strQuestion;
@@ -770,7 +770,7 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
 
     protected void UpdateQuestion()
     {
-        //è‡ªåŠ¨å—ç†
+        //×Ô¶¯ÊÜÀí
         UpdateCustomerQuestion();
 
         InitialCustomerQuestionTree(strCustomerCode);
@@ -831,7 +831,7 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
             customerQuestion.Type = strType;
             customerQuestion.AnswerTime = dtAnswerTime;
 
-            //å•†æœºä¿¡æ¯
+            //ÉÌ»úĞÅÏ¢
             TB_CustomerName.Text = strCompany;
             TB_CustomerManager.Text = strContactPerson;
             TB_BusinessName.Text = strQuestion;
@@ -969,10 +969,10 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
         {
             CustomerQuestion customerQuestion = (CustomerQuestion)lst[0];
 
-            customerQuestion.Status = "å¤„ç†ä¸­";
+            customerQuestion.Status = "InProgress";
             customerQuestion.OperatorCode = strUserCode;
             customerQuestion.OperatorName = strUserName;
-            customerQuestion.OperatorStatus = "å—ç†";
+            customerQuestion.OperatorStatus = "Accepted";
 
             try
             {
@@ -1045,15 +1045,15 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
             customerQuestion.AnswerTime = dtAnswerTime;
             customerQuestion.RecorderCode = strUserCode;
             customerQuestion.SummitTime = DateTime.Now;
-            customerQuestion.Status = "å¤„ç†ä¸­";
+            customerQuestion.Status = "InProgress";
 
             customerQuestion.OperatorCode = strUserCode;
             customerQuestion.OperatorName = ShareClass.GetUserName(strUserCode);
-            customerQuestion.OperatorStatus = "å—ç†";
+            customerQuestion.OperatorStatus = "Accepted";
             customerQuestion.FromWebSite = "";
 
 
-            //å•†æœºä¿¡æ¯
+            //ÉÌ»úĞÅÏ¢
             TB_CustomerName.Text = strCustomerName;
             TB_CustomerManager.Text = customer.ContactName.Trim();
             TB_BusinessName.Text = strQuestion;
@@ -1179,7 +1179,7 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
 
         CustomerQuestion customerQuestion = (CustomerQuestion)lst[0];
 
-        customerQuestion.Status = "æ–°å»º";
+        customerQuestion.Status = "New";
         customerQuestion.OperatorCode = "";
         customerQuestion.OperatorName = "";
         customerQuestion.OperatorStatus = "";
@@ -1249,8 +1249,8 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
 
         customerQuestion.OperatorCode = strUserCode;
         customerQuestion.OperatorName = strUserName;
-        customerQuestion.OperatorStatus = "å®Œæˆ";
-        customerQuestion.Status = "å®Œæˆ";
+        customerQuestion.OperatorStatus = "Completed";
+        customerQuestion.Status = "Completed";
 
         try
         {
@@ -1280,7 +1280,7 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
 
         CustomerQuestion customerQuestion = (CustomerQuestion)lst[0];
 
-        customerQuestion.Status = "æ–°å»º";
+        customerQuestion.Status = "New";
         customerQuestion.OperatorCode = strOperatorCode;
         customerQuestion.OperatorName = ShareClass.GetUserName(strOperatorCode);
         customerQuestion.OperatorStatus = "";
@@ -1294,7 +1294,7 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
 
             LoadCustomerQuestion(strQuestionID);
 
-            //æ¨é€æ¶ˆæ¯ç»™å—ç†äºº
+            //ÍÆËÍÏûÏ¢¸øÊÜÀíÈË
             Msg msg = new Msg();
             string strMsg = Resources.lang.FuWuXuQiu + ":" + customerQuestion.Question.Trim() + "," + Resources.lang.ZZYaoNiChuLi;
             msg.SendMSM("Message", strOperatorCode, strMsg, strUserCode);
@@ -1593,7 +1593,7 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
 
         DataSet ds2, ds3, ds4;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
@@ -1602,7 +1602,7 @@ public partial class TTAPPCustomerQuestionHandleDetailFromCustomer : System.Web.
         TreeNode node4 = new TreeNode();
 
         node1.Text = "<B>" + Resources.lang.KeHu + ": " + GetCustomerName(strCustomerCode) + Resources.lang.FuWuJiLu + "</B>";
-        node1.Target = "å®¢æˆ·æœåŠ¡éœ€æ±‚åˆ—è¡¨";
+        node1.Target = "¿Í»§·şÎñĞèÇóÁĞ±í";
         node1.Expanded = false;
         TreeView1.Nodes.Add(node1);
 

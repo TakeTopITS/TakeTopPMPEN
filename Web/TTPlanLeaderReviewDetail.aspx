@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPlanLeaderReviewDetail.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPlanLeaderReviewDetail.aspx.cs"
     Inherits="TTPlanLeaderReviewDetail" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -173,7 +173,7 @@
                                                 <tr>
                                                     <td align="left" class="tdTopLine">
                                                         <b>
-                                                            <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,WoDeChuLiZhuangTai%>"></asp:Label>ï¼š</b>
+                                                            <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,WoDeChuLiZhuangTai%>"></asp:Label>£º</b>
                                                         <asp:Label ID="LB_LeaderStatus" runat="server"></asp:Label>
                                                     </td>
                                                 </tr>
@@ -183,7 +183,7 @@
                                     <tr>
                                         <td colspan="2" style="text-align: left; font-weight: bold; height: 24px; color: #394f66; background-image: url('ImagesSkin/titleBG.jpg')">
                                             <b>
-                                                <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,ShenHeNeiRong%>"></asp:Label>ï¼š</b><asp:Button ID="BT_Agree" runat="server" CssClass="inpu" OnClick="BT_Agree_Click"
+                                                <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,ShenHeNeiRong%>"></asp:Label>£º</b><asp:Button ID="BT_Agree" runat="server" CssClass="inpu" OnClick="BT_Agree_Click"
                                                     Text="<%$ Resources:lang,PiZhun%>" />
 
                                             <asp:Button ID="BT_CancelAgree" runat="server" CssClass="inpu" OnClick="BT_CancelAgree_Click"
@@ -203,7 +203,7 @@
                                                 <tr>
                                                     <td width="65%">
                                                         <cc2:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" runat="server" ActiveTabIndex="0" Width="100%">
-                                                            <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="è¯„è®ºè®°å½•" TabIndex="0">
+                                                            <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="ÆÀÂÛ¼ÇÂ¼" TabIndex="0">
 
                                                                 <HeaderTemplate>
                                                                     <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,ShenHeJiLu%>"></asp:Label>
@@ -325,7 +325,7 @@
 
                                                                 </ContentTemplate>
                                                             </cc2:TabPanel>
-                                                            <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="å…³é”®ç›®æ ‡è¿›åº¦" TabIndex="1">
+                                                            <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="¹Ø¼üÄ¿±ê½ø¶È" TabIndex="1">
                                                                 <HeaderTemplate>
                                                                     <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,GuanJianMuBiaoJinDu%>"></asp:Label>
 
@@ -383,17 +383,17 @@
 
                                                                         <Columns>
 
-                                                                            <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                                            <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
 
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                             </asp:BoundColumn>
 
-                                                                            <asp:BoundColumn DataField="Target" HeaderText="ç›®æ ‡">
+                                                                            <asp:BoundColumn DataField="Target" HeaderText="Ä¿±ê">
 
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="70%" />
                                                                             </asp:BoundColumn>
 
-                                                                            <asp:TemplateColumn HeaderText="è¿›åº¦">
+                                                                            <asp:TemplateColumn HeaderText="½ø¶È">
 
                                                                                 <ItemTemplate>
 
@@ -425,7 +425,7 @@
                                                             <tr>
                                                                 <td>
                                                                     <i>
-                                                                        <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,JiHuaZheRiZhi%>"></asp:Label>ï¼š</i>
+                                                                        <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,JiHuaZheRiZhi%>"></asp:Label>£º</i>
                                                                     <asp:DataList ID="DataList1" runat="server" CellPadding="0" ForeColor="#333333" Height="1px"
                                                                         Width="100%">
                                                                         <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
@@ -435,10 +435,10 @@
                                                                             <table cellpadding="4" cellspacing="0" width="100%">
                                                                                 <tr>
                                                                                     <td class="tdLeft" align="left" style="color: Blue; font-style: italic;">
-                                                                                        <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>ï¼š
+                                                                                        <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>£º
                                                                                     <asp:Label ID="LB_LogProgress" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"Progress")%> '></asp:Label>
                                                                                         %
-                                                                                        <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,ShiJian%>"></asp:Label>ï¼š
+                                                                                        <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,ShiJian%>"></asp:Label>£º
                                                                                     <%#DataBinder.Eval(Container.DataItem, "WorkTime", "{0:yyyy/MM/dd hh:MM:ss}")%>
                                                                                     </td>
                                                                                 </tr>
@@ -485,7 +485,7 @@
                                 <tr>
                                     <td style="width: 90px; text-align: right;" class="formItemBgStyle">
                                         <asp:Label ID="LB_ID" runat="server" Visible ="false"></asp:Label>
-                                        <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,ShenHeYiJian%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,ShenHeYiJian%>"></asp:Label>£º
                                     </td>
 
                                     <td style="text-align: left;" class="formItemBgStyle">
@@ -500,7 +500,7 @@
                                 <tr>
 
                                     <td style="width: 90px; text-align: right;" class="formItemBgStyle">
-                                        <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,PingFen%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,PingFen%>"></asp:Label>£º
                                     </td>
 
                                     <td style="text-align: left;" class="formItemBgStyle">

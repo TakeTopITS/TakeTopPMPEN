@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
 using System.Collections;
@@ -16,14 +16,14 @@ public partial class TTGoodsProductionOrderKeepAcccount : System.Web.UI.Page
 
         strUserCode = Session["UserCode"].ToString();
 
-        //this.Title = "ç‰©æ–™ç”Ÿäº§";
+        //this.Title = "MaterialProduction";
 
         LB_UserCode.Text = strUserCode;
         strUserName = ShareClass.GetUserName(strUserCode);
         LB_UserName.Text = strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ä½œä¸šè´¹ç”¨è®°è´¦", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "×÷Òµ·ÑÓÃ¼ÇÕË", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -36,7 +36,7 @@ public partial class TTGoodsProductionOrderKeepAcccount : System.Web.UI.Page
             strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthorityAsset(strUserCode);
             LB_DepartString.Text = strDepartString;
 
-            //å–å¾—ä¼šè®¡ç§‘ç›®åˆ—è¡¨
+            //È¡µÃ»á¼Æ¿ÆÄ¿ÁĞ±í
             ShareClass.LoadAccountForDDL(DL_Account);
 
             LoadGoodsProductionOrder(strUserCode);
@@ -84,7 +84,7 @@ public partial class TTGoodsProductionOrderKeepAcccount : System.Web.UI.Page
 
         GoodsProductionOrder goodsProductionOrder = GetGoodsProductionOrder(strPDID);
 
-        //æ’å…¥åº”æ”¶åº”ä»˜æ•°æ®åˆ°åº”æ”¶åº”ä»˜è¡¨
+        //²åÈëÓ¦ÊÕÓ¦¸¶Êı¾İµ½Ó¦ÊÕÓ¦¸¶±í
         string strCurrencyType = goodsProductionOrder.CurrencyType;
         string strReAndPayer = goodsProductionOrder.BelongDepartName.Trim();
         string strStatus = goodsProductionOrder.Status.Trim();
@@ -96,7 +96,7 @@ public partial class TTGoodsProductionOrderKeepAcccount : System.Web.UI.Page
 
         decimal deDetailAmount = goodsProductionOrder.Amount;
 
-        if (strStatus != "å·²è®°è´¦")
+        if (strStatus != "Recorded")
         {
             intReAndPayalbeID = ShareClass.InsertReceivablesOrPayableByAccount("Payables", "GoodsPD", "GoodsPD", strPDID, strPDID, strAccountCode, strAccountName, deDetailAmount, strCurrencyType, strReAndPayer, strApplicantCode, intRelatedID);
             ShareClass.InsertReceivablesOrPayableRecord("Payables", intReAndPayalbeID, deDetailAmount, strCurrencyType, strPayMethod, strReAndPayer, strApplicantCode, intRelatedID);
@@ -104,14 +104,14 @@ public partial class TTGoodsProductionOrderKeepAcccount : System.Web.UI.Page
             strHQL = "Update T_ConstractPayable Set OutOfPocketAccount = " + deDetailAmount.ToString() + ",UNPayAmount = 0 Where ID = " + intReAndPayalbeID.ToString();
             ShareClass.RunSqlCommand(strHQL);
 
-            //æŠŠç”³æŠ¥è´¹ç”¨åˆ—å…¥é¡¹ç›®è´¹ç”¨
+            //°ÑÉê±¨·ÑÓÃÁĞÈëÏîÄ¿·ÑÓÃ
             if (strRelatedType == "Project" & intRelatedID > 1)
             {
-                ShareClass.AddConstractPayAmountToProExpense(intRelatedID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, "ç”Ÿäº§åŠ å·¥è´¹ç”¨", deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
+                ShareClass.AddConstractPayAmountToProExpense(intRelatedID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, "Éú²ú¼Ó¹¤·ÑÓÃ", deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
             }
 
 
-            strHQL = "Update T_GoodsProductionOrder Set Status = 'å·²è®°è´¦' Where PDID = " + strPDID;
+            strHQL = "Update T_GoodsProductionOrder Set Status = 'Recorded' Where PDID = " + strPDID;
             ShareClass.RunSqlCommand(strHQL);
 
 
@@ -170,7 +170,7 @@ public partial class TTGoodsProductionOrderKeepAcccount : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        //Workflow,å¯¹æµç¨‹ç›¸å…³æ¨¡ç»„ä½œåˆ¤æ–­
+        //Workflow,¶ÔÁ÷³ÌÏà¹ØÄ£×é×÷ÅĞ¶Ï
 
         strHQL = "from GoodsProductionOrder as goodsProductionOrder where goodsProductionOrder.CreatorCode = " + "'" + strUserCode + "'";
         strHQL += " or goodsProductionOrder.CreatorCode in (select memberLevel.UnderCode from MemberLevel as memberLevel where memberLevel.UserCode = " + "'" + strUserCode + "'" + ") ";

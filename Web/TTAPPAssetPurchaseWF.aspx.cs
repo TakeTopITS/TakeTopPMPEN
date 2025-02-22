@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -37,7 +37,7 @@ public partial class TTAPPAssetPurchaseWF : System.Web.UI.Page
         LB_UserCode.Text = strUserCode;
         LB_UserName.Text = strUserName;
 
-        //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
         strToDoWLID = Request.QueryString["WLID"]; strToDoWLDetailID= Request.QueryString["WLStepDetailID"];
         strWLBusinessID = Request.QueryString["BusinessID"];
 
@@ -68,7 +68,7 @@ public partial class TTAPPAssetPurchaseWF : System.Web.UI.Page
             TB_ApplicantCode.Text = strUserCode;
             LB_ApplicantName.Text = strUserCode;
 
-            ShareClass.LoadWFTemplate(strUserCode, "èµ„äº§é‡‡è´­", DL_TemName);
+            ShareClass.LoadWFTemplate(strUserCode, "AssetProcurement", DL_TemName);
             LoadAssetPurchaseOrder(strUserCode);
 
             ShareClass.LoadMemberByUserCodeForDataGrid(strUserCode, "All", DataGrid3);
@@ -151,7 +151,7 @@ public partial class TTAPPAssetPurchaseWF : System.Web.UI.Page
 
             strPOID = e.Item.Cells[3].Text.Trim();
 
-            intWLNumber = GetRelatedWorkFlowNumber("èµ„äº§é‡‡è´­", "èµ„äº§", strPOID);
+            intWLNumber = GetRelatedWorkFlowNumber("AssetProcurement", "Assets", strPOID);
             if (intWLNumber > 0)
             {
                 BT_NewMain.Visible = false;
@@ -165,8 +165,8 @@ public partial class TTAPPAssetPurchaseWF : System.Web.UI.Page
                 BT_SubmitApply.Enabled = true;
             }
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("èµ„äº§é‡‡è´­", "èµ„äº§", strPOID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AssetProcurement", "Assets", strPOID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_NewMain.Visible = true;
@@ -206,7 +206,7 @@ public partial class TTAPPAssetPurchaseWF : System.Web.UI.Page
 
                 TB_WLName.Text = Resources.lang.GouMai + assetPurchaseOrder.POName.Trim() + Resources.lang.ShenQing;
 
-                LoadRelatedWL("èµ„äº§é‡‡è´­", "èµ„äº§", assetPurchaseOrder.POID);
+                LoadRelatedWL("AssetProcurement", "Assets", assetPurchaseOrder.POID);
 
                 BT_SubmitApply.Enabled = true;
 
@@ -225,7 +225,7 @@ public partial class TTAPPAssetPurchaseWF : System.Web.UI.Page
             {
                 strUserCode = LB_UserCode.Text.Trim();
 
-                intWLNumber = GetRelatedWorkFlowNumber("èµ„äº§é‡‡è´­", "èµ„äº§", strPOID);
+                intWLNumber = GetRelatedWorkFlowNumber("AssetProcurement", "Assets", strPOID);
                 if (intWLNumber > 0)
                 {
                     return;
@@ -319,7 +319,7 @@ public partial class TTAPPAssetPurchaseWF : System.Web.UI.Page
         assetPurchaseOrder.Amount = 0;
         assetPurchaseOrder.CurrencyType = strCurrencyType;
         assetPurchaseOrder.Comment = strComment;
-        assetPurchaseOrder.Status = "æ–°å»º";
+        assetPurchaseOrder.Status = "New";
 
         assetPurchaseOrder.RelatedType = DL_RelatedType.SelectedValue.Trim();
         assetPurchaseOrder.RelatedID = int.Parse(NB_RelatedID.Amount.ToString());
@@ -340,7 +340,7 @@ public partial class TTAPPAssetPurchaseWF : System.Web.UI.Page
             LoadAssetPurchaseOrder(strPurManCode);
             LoadAssetPurchaseOrderDetail(strPOID);
 
-            LoadRelatedWL("èµ„äº§é‡‡è´­", "èµ„äº§", assetPurchaseOrder.POID);
+            LoadRelatedWL("AssetProcurement", "Assets", assetPurchaseOrder.POID);
         }
         catch
         {
@@ -411,15 +411,15 @@ public partial class TTAPPAssetPurchaseWF : System.Web.UI.Page
             assetPurchaseOrderBLL.UpdateAssetPurchaseOrder(assetPurchaseOrder, int.Parse(strPOID));
             LoadAssetPurchaseOrder(strUserCode);
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("èµ„äº§é‡‡è´­", "èµ„äº§", strPOID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AssetProcurement", "Assets", strPOID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 string strCmdText = "select POID as DetailPOID, * from T_AssetPurchaseOrder where POID = " + strPOID;
                 if (strToDoWLID == null)
                 {
-                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("èµ„äº§é‡‡è´­", "èµ„äº§", strPOID);
+                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("AssetProcurement", "Assets", strPOID);
                 }
 
                 if (strToDoWLID != null)
@@ -572,7 +572,7 @@ public partial class TTAPPAssetPurchaseWF : System.Web.UI.Page
 
             strPOID = LB_POID.Text.Trim();
 
-            int intWLNumber = GetRelatedWorkFlowNumber("èµ„äº§é‡‡è´­", "èµ„äº§", strPOID);
+            int intWLNumber = GetRelatedWorkFlowNumber("AssetProcurement", "Assets", strPOID);
             if (intWLNumber > 0)
             {
                 BT_NewMain.Visible = false;
@@ -586,8 +586,8 @@ public partial class TTAPPAssetPurchaseWF : System.Web.UI.Page
                 BT_SubmitApply.Enabled = true;
             }
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("èµ„äº§é‡‡è´­", "èµ„äº§", strPOID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AssetProcurement", "Assets", strPOID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_NewMain.Visible = true;
@@ -633,7 +633,7 @@ public partial class TTAPPAssetPurchaseWF : System.Web.UI.Page
 
             if (e.CommandName == "Delete")
             {
-                intWLNumber = GetRelatedWorkFlowNumber("èµ„äº§é‡‡è´­", "èµ„äº§", strPOID);
+                intWLNumber = GetRelatedWorkFlowNumber("AssetProcurement", "Assets", strPOID);
                 if (intWLNumber > 0 & strToDoWLID == null)
                 {
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -654,15 +654,15 @@ public partial class TTAPPAssetPurchaseWF : System.Web.UI.Page
                     NB_Amount.Amount = SumPurchaseOrderAmount(strPOID);
                     UpdatePurchaseOrderAmount(strPOID, NB_Amount.Amount);
 
-                    //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                    //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-                    strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("èµ„äº§é‡‡è´­", "èµ„äº§", strPOID, "0");
+                    //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+                    //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+                    strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AssetProcurement", "Assets", strPOID, "0");
                     if (strToDoWLID != null | strAllowFullEdit == "YES")
                     {
                         string strCmdText = "select POID as DetailPOID, * from T_AssetPurchaseOrder where POID = " + strPOID;
                         if (strToDoWLID == null)
                         {
-                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("èµ„äº§é‡‡è´­", "èµ„äº§", strPOID);
+                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("AssetProcurement", "Assets", strPOID);
                         }
 
                         if (strToDoWLID != null)
@@ -714,7 +714,7 @@ public partial class TTAPPAssetPurchaseWF : System.Web.UI.Page
         }
 
         strPOID = LB_POID.Text.Trim();
-        int intWLNumber = GetRelatedWorkFlowNumber("èµ„äº§é‡‡è´­", "èµ„äº§", strPOID);
+        int intWLNumber = GetRelatedWorkFlowNumber("AssetProcurement", "Assets", strPOID);
         if (intWLNumber > 0 & strToDoWLID == null)
         {
             BT_SubmitApply.Enabled = false;
@@ -827,15 +827,15 @@ public partial class TTAPPAssetPurchaseWF : System.Web.UI.Page
                 UpdatePurchaseOrderAmount(strPOID, NB_Amount.Amount);
 
 
-                //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("èµ„äº§é‡‡è´­", "èµ„äº§", strPOID, "0");
+                //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+                //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AssetProcurement", "Assets", strPOID, "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     string strCmdText = "select POID as DetailPOID, * from T_AssetPurchaseOrder where POID = " + strPOID;
                     if (strToDoWLID == null)
                     {
-                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("èµ„äº§é‡‡è´­", "èµ„äº§", strPOID);
+                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("AssetProcurement", "Assets", strPOID);
                     }
 
                     if (strToDoWLID != null)
@@ -957,15 +957,15 @@ public partial class TTAPPAssetPurchaseWF : System.Web.UI.Page
                 NB_Amount.Amount = SumPurchaseOrderAmount(strPOID);
                 UpdatePurchaseOrderAmount(strPOID, NB_Amount.Amount);
 
-                //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("èµ„äº§é‡‡è´­", "èµ„äº§", strPOID, "0");
+                //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+                //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AssetProcurement", "Assets", strPOID, "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     string strCmdText = "select POID as DetailPOID, * from T_AssetPurchaseOrder where POID = " + strPOID;
                     if (strToDoWLID == null)
                     {
-                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("èµ„äº§é‡‡è´­", "èµ„äº§", strPOID);
+                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("AssetProcurement", "Assets", strPOID);
                     }
 
                     if (strToDoWLID != null)
@@ -1038,27 +1038,27 @@ public partial class TTAPPAssetPurchaseWF : System.Web.UI.Page
         workFlow.CreatorCode = strCreatorCode;
         workFlow.CreatorName = strCreatorName;
         workFlow.CreateTime = DateTime.Now;
-        workFlow.RelatedType = "èµ„äº§";
-        workFlow.Status = "æ–°å»º";
+        workFlow.RelatedType = "Assets";
+        workFlow.Status = "New";
         workFlow.RelatedID = int.Parse(strPOID);
-        workFlow.DIYNextStep = "Yes"; workFlow.IsPlanMainWorkflow = "NO";
+        workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
 
         if (CB_SMS.Checked == true)
         {
-            workFlow.ReceiveSMS = "Yes";
+            workFlow.ReceiveSMS = "YES";
         }
         else
         {
-            workFlow.ReceiveSMS = "No";
+            workFlow.ReceiveSMS = "NO";
         }
 
         if (CB_Mail.Checked == true)
         {
-            workFlow.ReceiveEMail = "Yes";
+            workFlow.ReceiveEMail = "YES";
         }
         else
         {
-            workFlow.ReceiveEMail = "No";
+            workFlow.ReceiveEMail = "NO";
         }
 
         try
@@ -1067,10 +1067,10 @@ public partial class TTAPPAssetPurchaseWF : System.Web.UI.Page
 
             strWLID = ShareClass.GetMyCreatedWorkFlowID(strUserCode);
 
-            LoadRelatedWL(strWLType, "èµ„äº§", int.Parse(strPOID));
+            LoadRelatedWL(strWLType, "Assets", int.Parse(strPOID));
 
-            UpdateAssetPurchaseStatus(strPOID, "å¤„ç†ä¸­");
-            DL_POStatus.SelectedValue = "å¤„ç†ä¸­";
+            UpdateAssetPurchaseStatus(strPOID, "InProgress");
+            DL_POStatus.SelectedValue = "InProgress";
 
             strCmdText = "select * from T_AssetPurchaseOrder where POID = " + strPOID;
             strXMLFile2 = Server.MapPath(strXMLFile2);
@@ -1110,7 +1110,7 @@ public partial class TTAPPAssetPurchaseWF : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'èµ„äº§é‡‡è´­'";
+        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'AssetProcurement'";
         strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC";
         WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
         lst = workFlowTemplateBLL.GetAllWorkFlowTemplates(strHQL);
@@ -1246,7 +1246,7 @@ public partial class TTAPPAssetPurchaseWF : System.Web.UI.Page
 
         strHQL = "from AssetPurchaseOrder as assetPurchaseOrder where assetPurchaseOrder.OperatorCode = " + "'" + strOperatorCode + "'" + " Order by assetPurchaseOrder.POID DESC";
         
-        //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
         if (strToDoWLID != null & strWLBusinessID != null)
         {
             strHQL = "from AssetPurchaseOrder as assetPurchaseOrder where assetPurchaseOrder.POID = " + strWLBusinessID;
@@ -1276,7 +1276,7 @@ public partial class TTAPPAssetPurchaseWF : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Constract as constract where constract.Status <> 'å½’æ¡£'";
+        strHQL = "from Constract as constract where constract.Status <> 'Archived'";
         strHQL += " and constract.ConstractCode in (select constractRelatedAssetPurchaseOrder.ConstractCode from ConstractRelatedAssetPurchaseOrder as constractRelatedAssetPurchaseOrder where constractRelatedAssetPurchaseOrder.POID = " + strPOID + ")";
         strHQL += " Order by constract.SignDate DESC";
         ConstractBLL constractBLL = new ConstractBLL();

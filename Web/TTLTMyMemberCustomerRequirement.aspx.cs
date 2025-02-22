@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.ComponentModel;
@@ -25,7 +25,7 @@ public partial class TTLTMyMemberCustomerRequirement : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "直接成员招聘", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ֱ�ӳ�Ա��Ƹ", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -71,16 +71,16 @@ public partial class TTLTMyMemberCustomerRequirement : System.Web.UI.Page
         //strHQL += " and (customerQuestion.OperatorCode = ''))";
         strHQL += " order by customerQuestion.ID DESC";
 
-        if (strStatus == "预警的")
+        if (strStatus == "Warning")
         {
-            strHQL = "Select * from T_CustomerQuestion as customerQuestion where customerQuestion.OperatorStatus = '受理' ";
+            strHQL = "Select * from T_CustomerQuestion as customerQuestion where customerQuestion.OperatorStatus = 'Accepted' ";
             strHQL += " and ((customerQuestion.RecorderCode = " + "'" + strOperatorCode + "'" + ")";
             strHQL += " or (customerQuestion.OperatorCode = " + "'" + strOperatorCode + "'" + "))";
             strHQL += " and customerQuestion.ID in (Select customerQuestionHandleRecord.QuestionID From T_CustomerQuestionHandleRecord as customerQuestionHandleRecord Where  to_char( customerQuestionHandleRecord.NextServiceTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd') and customerQuestionHandleRecord.ID in (Select Max(customerQuestionHandleRecord1.ID) From T_CustomerQuestionHandleRecord as customerQuestionHandleRecord1 Group By customerQuestionHandleRecord1.QuestionID) ) ";
             strHQL += " order by customerQuestion.ID DESC";
         }
 
-        if (strStatus == "待处理")
+        if (strStatus == "ToHandle")
         {
             strHQL = "Select * from T_CustomerQuestion as customerQuestion where ";
             strHQL += " ((customerQuestion.RecorderCode = " + "'" + strOperatorCode + "'" + ")";
@@ -88,26 +88,26 @@ public partial class TTLTMyMemberCustomerRequirement : System.Web.UI.Page
             strHQL += " order by customerQuestion.ID DESC";
         }
 
-        if (strStatus == "处理中")
+        if (strStatus == "InProgress")
         {
-            strHQL = "Select * from T_CustomerQuestion as customerQuestion where customerQuestion.OperatorStatus = '受理' ";
+            strHQL = "Select * from T_CustomerQuestion as customerQuestion where customerQuestion.OperatorStatus = 'Accepted' ";
             strHQL += " and ((customerQuestion.RecorderCode = " + "'" + strOperatorCode + "'" + ")";
             strHQL += " or (customerQuestion.OperatorCode = " + "'" + strOperatorCode + "'" + "))";
 
             strHQL += " order by customerQuestion.ID DESC";
         }
 
-        if (strStatus == "已处理")
+        if (strStatus == "Processed")
         {
-            strHQL = "Select * from T_CustomerQuestion as customerQuestion where customerQuestion.OperatorStatus = '完成'  ";
+            strHQL = "Select * from T_CustomerQuestion as customerQuestion where customerQuestion.OperatorStatus = 'Completed'  ";
             strHQL += " and ((customerQuestion.RecorderCode = " + "'" + strOperatorCode + "'" + ")";
             strHQL += " or (customerQuestion.OperatorCode = " + "'" + strOperatorCode + "'" + "))";
             strHQL += " order by customerQuestion.ID DESC";
         }
 
-        if (strStatus == "已删除")
+        if (strStatus == "Deleted")
         {
-            strHQL = "Select * from T_CustomerQuestion as customerQuestion where customerQuestion.OperatorStatus = '删除'  ";
+            strHQL = "Select * from T_CustomerQuestion as customerQuestion where customerQuestion.OperatorStatus = 'Deleted'  ";
             strHQL += " and ((customerQuestion.RecorderCode = " + "'" + strOperatorCode + "'" + ")";
             strHQL += " or (customerQuestion.OperatorCode = " + "'" + strOperatorCode + "'" + "))";
             strHQL += " order by customerQuestion.ID DESC";
@@ -149,22 +149,22 @@ public partial class TTLTMyMemberCustomerRequirement : System.Web.UI.Page
 
         string strStatus = DL_ServiceStatus.SelectedValue.Trim();
 
-        strHQL = "Select * from T_CustomerQuestion as customerQuestion where customerQuestion.OperatorStatus = '受理' ";
+        strHQL = "Select * from T_CustomerQuestion as customerQuestion where customerQuestion.OperatorStatus = 'Accepted' ";
         strHQL += " and ((customerQuestion.RecorderCode in (select memberLevel.UnderCode  From T_MemberLevel as memberLevel Where memberLevel.UserCode = " + "'" + strUserCode + "'" + "))";
         strHQL += " or (customerQuestion.OperatorCode  in (select memberLevel.UnderCode  From MemberLevel as memberLevel Where memberLevel.UserCode = " + "'" + strUserCode + "'" + ")))";
         strHQL += " and customerQuestion.ID in (Select customerQuestionHandleRecord.QuestionID From T_CustomerQuestionHandleRecord as customerQuestionHandleRecord Where  to_char( customerQuestionHandleRecord.NextServiceTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd') and customerQuestionHandleRecord.ID in (Select Max(customerQuestionHandleRecord1.ID) From T_CustomerQuestionHandleRecord as customerQuestionHandleRecord1 Group By customerQuestionHandleRecord1.QuestionID) ) ";
         strHQL += " order by customerQuestion.ID DESC";
 
-        if (strStatus == "预警的")
+        if (strStatus == "Warning")
         {
-            strHQL = "Select * from T_CustomerQuestion as customerQuestion where customerQuestion.OperatorStatus = '受理' ";
+            strHQL = "Select * from T_CustomerQuestion as customerQuestion where customerQuestion.OperatorStatus = 'Accepted' ";
             strHQL += " and ((customerQuestion.RecorderCode in (select memberLevel.UnderCode  From T_MemberLevel as memberLevel Where memberLevel.UserCode = " + "'" + strUserCode + "'" + "))";
             strHQL += " or (customerQuestion.OperatorCode  in (select memberLevel.UnderCode  From T_MemberLevel as memberLevel Where memberLevel.UserCode = " + "'" + strUserCode + "'" + ")))";
             strHQL += " and customerQuestion.ID in (Select customerQuestionHandleRecord.QuestionID From T_CustomerQuestionHandleRecord as customerQuestionHandleRecord Where  to_char( customerQuestionHandleRecord.NextServiceTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd') and customerQuestionHandleRecord.ID in (Select Max(customerQuestionHandleRecord1.ID) From T_CustomerQuestionHandleRecord as customerQuestionHandleRecord1 Group By customerQuestionHandleRecord1.QuestionID) ) ";
             strHQL += " order by customerQuestion.ID DESC";
         }
 
-        if (strStatus == "待处理")
+        if (strStatus == "ToHandle")
         {
             strHQL = "Select * from T_CustomerQuestion as customerQuestion where ";
             strHQL += " (customerQuestion.RecorderCode in (select memberLevel.UnderCode  From T_MemberLevel as memberLevel Where memberLevel.UserCode = " + "'" + strUserCode + "'" + "))";
@@ -172,25 +172,25 @@ public partial class TTLTMyMemberCustomerRequirement : System.Web.UI.Page
             strHQL += " order by customerQuestion.ID DESC";
         }
 
-        if (strStatus == "处理中")
+        if (strStatus == "InProgress")
         {
-            strHQL = "Select * from T_CustomerQuestion as customerQuestion where customerQuestion.OperatorStatus = '受理' ";
+            strHQL = "Select * from T_CustomerQuestion as customerQuestion where customerQuestion.OperatorStatus = 'Accepted' ";
             strHQL += " and ((customerQuestion.RecorderCode in (select memberLevel.UnderCode  From MemberLevel as memberLevel Where memberLevel.UserCode = " + "'" + strUserCode + "'" + "))";
             strHQL += " or (customerQuestion.OperatorCode  in (select memberLevel.UnderCode  From MemberLevel as memberLevel Where memberLevel.UserCode = " + "'" + strUserCode + "'" + ")))";
             strHQL += " order by customerQuestion.ID DESC";
         }
 
-        if (strStatus == "已处理")
+        if (strStatus == "Processed")
         {
-            strHQL = "Select * from T_CustomerQuestion as customerQuestion where customerQuestion.OperatorStatus = '完成' ";
+            strHQL = "Select * from T_CustomerQuestion as customerQuestion where customerQuestion.OperatorStatus = 'Completed' ";
             strHQL += " and ((customerQuestion.RecorderCode in (select memberLevel.UnderCode  From MemberLevel as memberLevel Where memberLevel.UserCode = " + "'" + strUserCode + "'" + "))";
             strHQL += " or (customerQuestion.OperatorCode  in (select memberLevel.UnderCode  From MemberLevel as memberLevel Where memberLevel.UserCode = " + "'" + strUserCode + "'" + ")))";
             strHQL += " order by customerQuestion.ID DESC";
         }
 
-        if (strStatus == "已删除")
+        if (strStatus == "Deleted")
         {
-            strHQL = "Select * from T_CustomerQuestion as customerQuestion where customerQuestion.OperatorStatus = '删除'  ";
+            strHQL = "Select * from T_CustomerQuestion as customerQuestion where customerQuestion.OperatorStatus = 'Deleted'  ";
             strHQL += " and ((customerQuestion.RecorderCode in (select memberLevel.UnderCode  From MemberLevel as memberLevel Where memberLevel.UserCode = " + "'" + strUserCode + "'" + "))";
             strHQL += " or (customerQuestion.OperatorCode  in (select memberLevel.UnderCode  From MemberLevel as memberLevel Where memberLevel.UserCode = " + "'" + strUserCode + "'" + ")))";
             strHQL += " order by customerQuestion.ID DESC";

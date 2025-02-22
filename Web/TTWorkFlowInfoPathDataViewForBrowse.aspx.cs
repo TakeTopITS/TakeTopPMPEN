@@ -1,4 +1,4 @@
-ï»¿using TakeTopInfoPathSoft.Service;
+using TakeTopInfoPathSoft.Service;
 using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
@@ -52,7 +52,7 @@ public partial class TTWorkFlowInfoPathDataViewForBrowse : System.Web.UI.Page
             strWLTemName = ds.Tables[0].Rows[0]["TemName"].ToString().Trim();
             strWFName = ds.Tables[0].Rows[0]["WLName"].ToString().Trim();
 
-            //å¦‚æœæ•°æ®åº“è¡¨ä¸­å­˜åœ¨æ­¤å·¥ä½œæµçš„æ•°æ®ï¼Œé‚£ä¹ˆæŠŠè¡¨ä¸­æ•°æ®é™„åŠ åˆ°è¡¨å•ä¸­
+            //Èç¹ûÊı¾İ¿â±íÖĞ´æÔÚ´Ë¹¤×÷Á÷µÄÊı¾İ£¬ÄÇÃ´°Ñ±íÖĞÊı¾İ¸½¼Óµ½±íµ¥ÖĞ
             intMainTableID = GetWorkflowMainTableID(strWLID);
             strNewWFXMLFile = TakeTopXML.TableConvertToFormByMainID(strWLID, intMainTableID, strWLTemName, Server.MapPath(strWFXMLFile));
             if (strNewWFXMLFile != "")
@@ -64,13 +64,13 @@ public partial class TTWorkFlowInfoPathDataViewForBrowse : System.Web.UI.Page
             {
                 strWFStatus = ds.Tables[0].Rows[0]["Status"].ToString().Trim();
 
-                //å–æœ€æ–°æµç¨‹è¡¨å•æ•°æ®æ–‡ä»¶ï¼Œå¹¶åœ¨æ›¿æ¢ä¸å¯è§†åŸŸ
+                //È¡×îĞÂÁ÷³Ì±íµ¥Êı¾İÎÄ¼ş£¬²¢ÔÚÌæ»»²»¿ÉÊÓÓò
                 WFDataHandle wfDataHandle = new WFDataHandle();
                 strUnVisibleFieldXMLFile = wfDataHandle.GetXMLFileAfterReplaceWFXmlUNVisibleFieldNode(strWLID, strID, strWFXMLFile);
 
                 LB_UnVisibleFieldXMLFile.Text = strUnVisibleFieldXMLFile;
 
-                //æ³¨å†Œæµç¨‹è¡¨å•æ¨¡æ¿å¹¶è£…è½½æµç¨‹è¡¨å•æ•°æ®
+                //×¢²áÁ÷³Ì±íµ¥Ä£°å²¢×°ÔØÁ÷³Ì±íµ¥Êı¾İ
                 wfDataHandle.RegisterWFTemplateAndLoadWFFormData(strXSNFile, strUnVisibleFieldXMLFile, this.uri, PublishUrl, xdoc, this.Context);
 
                 PublishUrl = wfDataHandle.wfPublishUrl.ToString();
@@ -116,7 +116,7 @@ public partial class TTWorkFlowInfoPathDataViewForBrowse : System.Web.UI.Page
         return ds;
     }
 
-    //å–å¾—å·¥ä½œæµå…³è”çš„MainTableID
+    //È¡µÃ¹¤×÷Á÷¹ØÁªµÄMainTableID
     protected int GetWorkflowMainTableID(string strWFID)
     {
         string strHQL;
@@ -140,7 +140,7 @@ public partial class TTWorkFlowInfoPathDataViewForBrowse : System.Web.UI.Page
         }
     }
 
-    //å–å¾—æ­¤æ­¥çš„æ•°æ®æ–‡ä»¶
+    //È¡µÃ´Ë²½µÄÊı¾İÎÄ¼ş
     protected string GetWorkflowStepDetailXMLFile(string strID)
     {
         string strHQL;

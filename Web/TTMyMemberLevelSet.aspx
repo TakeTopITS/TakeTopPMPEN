@@ -1,9 +1,9 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMyMemberLevelSet.aspx.cs" Inherits="TTMyMemberLevelSet" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMyMemberLevelSet.aspx.cs" Inherits="TTMyMemberLevelSet" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ç›´æŽ¥ä¸‹å±žè®¾ç½®</title>
+    <title>Ö±½ÓÏÂÊôÉèÖÃ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -93,41 +93,41 @@
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <HeaderStyle HorizontalAlign="Center" CssClass="itemStyle" />
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="UserCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                            DataTextField="UserName" HeaderText="å§“å" Target="_blank">
+                                                            DataTextField="UserName" HeaderText="ÐÕÃû" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:HyperLinkColumn>
-                                                        <asp:BoundColumn DataField="ProjectVisible" HeaderText="é¡¹ç›®å¯è§†">
+                                                        <asp:BoundColumn DataField="ProjectVisible" HeaderText="ÏîÄ¿¿ÉÊÓ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ProjectVisible" HeaderText="é¡¹ç›®å¯è§†">
+                                                        <asp:BoundColumn DataField="ProjectVisible" HeaderText="ÏîÄ¿¿ÉÊÓ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="PlanVisible" HeaderText="è®¡åˆ’å¯è§†">
+                                                        <asp:BoundColumn DataField="PlanVisible" HeaderText="¼Æ»®¿ÉÊÓ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="KPIVisible" HeaderText="KPIå¯è§†">
+                                                        <asp:BoundColumn DataField="KPIVisible" HeaderText="KPI¿ÉÊÓ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ScheduleVisible" HeaderText="æ—¥ç¨‹å¯è§†">
+                                                        <asp:BoundColumn DataField="ScheduleVisible" HeaderText="ÈÕ³Ì¿ÉÊÓ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="WorkloadVisible" HeaderText="è´Ÿè·å¯è§†">
+                                                        <asp:BoundColumn DataField="WorkloadVisible" HeaderText="¸ººÉ¿ÉÊÓ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CustomerServiceVisible" HeaderText="å®¢æˆ·å¯è§†">
+                                                        <asp:BoundColumn DataField="CustomerServiceVisible" HeaderText="¿Í»§¿ÉÊÓ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ConstractVisible" HeaderText="åˆåŒå¯è§†">
+                                                        <asp:BoundColumn DataField="ConstractVisible" HeaderText="ºÏÍ¬¿ÉÊÓ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="PositionVisible" HeaderText="ä½ç½®å¯è§†">
+                                                        <asp:BoundColumn DataField="PositionVisible" HeaderText="Î»ÖÃ¿ÉÊÓ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                         </asp:BoundColumn>
-                                                        <asp:TemplateColumn HeaderText="é¡ºåº">
+                                                        <asp:TemplateColumn HeaderText="Ë³Ðò">
                                                             <ItemTemplate>
                                                                 <asp:TextBox ID="TB_SortNumber" runat="server" Width="40px" Text='<%# DataBinder.Eval(Container.DataItem,"SortNumber").ToString().Trim() %>'></asp:TextBox>
                                                             </ItemTemplate>

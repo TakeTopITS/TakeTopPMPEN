@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -36,7 +36,7 @@ public partial class TTProjectRiskView : System.Web.UI.Page
         lst = projectRiskBLL.GetAllProjectRisks(strHQL);
 
         ProjectRisk projectRisk = (ProjectRisk)lst[0];
-        //this.Title = "é£Žé™©ï¼š" + strRiskID + " " + projectRisk.Risk + " è¯¦ç»†å†…å®¹";
+        //this.Title = "·çÏÕ£º" + strRiskID + " " + projectRisk.Risk + " ÏêÏ¸ÄÚÈÝ";
 
         DataList1.DataSource = lst;
         DataList1.DataBind();

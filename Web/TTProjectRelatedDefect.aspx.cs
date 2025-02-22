@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -37,7 +37,7 @@ public partial class TTProjectRelatedDefect : System.Web.UI.Page
         lst = projectBLL.GetAllProjects(strHQL);
         Project project = (Project)lst[0];
 
-        //this.Title = Resources.lang.Project + strProjectID + project.ProjectName + "的相关缺陷";
+        //this.Title = Resources.lang.Project + strProjectID + project.ProjectName + "�����ȱ��";
 
         LB_UserCode.Text = strUserCode;
         LB_UserName.Text = strUserName;
@@ -69,7 +69,7 @@ public partial class TTProjectRelatedDefect : System.Web.UI.Page
         DataGrid2.DataSource = lst;
         DataGrid2.DataBind();
 
-        LB_DefectType.Text = "所有";
+        LB_DefectType.Text = "All";
     }
 
 
@@ -99,7 +99,7 @@ public partial class TTProjectRelatedDefect : System.Web.UI.Page
 
         if (e.CommandName != "Page")
         {
-            if (strStatus == "结案" || strStatus == "挂起" || strStatus == "取消")
+            if (strStatus == "CaseClosed" || strStatus == "Suspended" || strStatus == "Cancel")
             {
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBCXMYBJAGHX + "')", true);
             }

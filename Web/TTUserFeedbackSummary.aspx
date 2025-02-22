@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserFeedbackSummary.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserFeedbackSummary.aspx.cs"
     Inherits="TTUserFeedbackSummary" %>
 
 
@@ -52,7 +52,7 @@
                                 </tr>
                                 <tr>
                                     <td style="width: 150px; text-align: right">
-                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,FanKuiYiJian%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,FanKuiYiJian%>"></asp:Label>£º
                                     </td>
                                     <td colspan="3" style="width: 550px; text-align: left">
                                         <span style="font-size: 9pt">

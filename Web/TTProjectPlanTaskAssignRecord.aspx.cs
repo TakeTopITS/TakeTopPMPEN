@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -35,7 +35,7 @@ public partial class TTProjectPlanTaskAssignRecord : System.Web.UI.Page
             DataList2.DataBind();
 
             strPlan = ShareClass.GetProjectPlanDetail(strPlanID);
-            LB_Title.Text = "è®¡åˆ’ï¼š" + strPlanID + strPlan + " ä»»åŠ¡çš„æ‰€æœ‰åˆ†æ´¾è®°å½•ï¼";
+            LB_Title.Text = "¼Æ»®£º" + strPlanID + strPlan + " ÈÎÎñµÄËùÓĞ·ÖÅÉ¼ÇÂ¼£¡";
         }
     }
 

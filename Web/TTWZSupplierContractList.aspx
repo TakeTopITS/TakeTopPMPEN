@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSupplierContractList.aspx.cs" Inherits="TTWZSupplierContractList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSupplierContractList.aspx.cs" Inherits="TTWZSupplierContractList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ÂêàÂêåÁõëÂÆ°</title>
+    <title>∫œÕ¨º‡…Û</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -22,35 +22,35 @@
             $("#BT_NewBrowse").attr("class", "inpu");
             $("#BT_NewBrowse").removeAttr("disabled");
 
-            if (objProgress == "Êèê‰∫§2") {
+            if (objProgress == "Ã·Ωª2") {
                 $("#BT_NewEdit").attr("class", "inpu");
-                $("#BT_NewEdit").removeAttr("disabled");                            //ÁºñËæë
+                $("#BT_NewEdit").removeAttr("disabled");                            //±‡º≠
                 $("#BT_NewReport").attr("class", "inpu");
-                $("#BT_NewReport").removeAttr("disabled");                          //Êä•Êâπ
+                $("#BT_NewReport").removeAttr("disabled");                          //±®≈˙
                 $("#BT_NewReportReturn").attr("disabled", "disabled");
-                $("#BT_NewReportReturn").removeClass("inpu");                         //Êä•ÊâπÈÄÄÂõû
+                $("#BT_NewReportReturn").removeClass("inpu");                         //±®≈˙ÕÀªÿ
                 $("#BT_NewSubmitReturn").attr("class", "inpu");
-                $("#BT_NewSubmitReturn").removeAttr("disabled");                          //Êèê‰∫§ÈÄÄÂõû
+                $("#BT_NewSubmitReturn").removeAttr("disabled");                          //Ã·ΩªÕÀªÿ
             }
-            else if (objProgress == "Êèê‰∫§3") {
+            else if (objProgress == "Ã·Ωª3") {
                 $("#BT_NewEdit").attr("disabled", "disabled");
-                $("#BT_NewEdit").removeClass("inpu");                            //ÁºñËæë
+                $("#BT_NewEdit").removeClass("inpu");                            //±‡º≠
                 $("#BT_NewReport").attr("disabled", "disabled");
-                $("#BT_NewReport").removeClass("inpu");                          //Êä•Êâπ
+                $("#BT_NewReport").removeClass("inpu");                          //±®≈˙
                 $("#BT_NewReportReturn").attr("class", "inpu");
-                $("#BT_NewReportReturn").removeAttr("disabled");                         //Êä•ÊâπÈÄÄÂõû
+                $("#BT_NewReportReturn").removeAttr("disabled");                         //±®≈˙ÕÀªÿ
                 $("#BT_NewSubmitReturn").attr("disabled", "disabled");
-                $("#BT_NewSubmitReturn").removeClass("inpu");                            //Êèê‰∫§ÈÄÄÂõû
+                $("#BT_NewSubmitReturn").removeClass("inpu");                            //Ã·ΩªÕÀªÿ
             }
             else {
                 $("#BT_NewEdit").attr("disabled", "disabled");
-                $("#BT_NewEdit").removeClass("inpu");                            //ÁºñËæë
+                $("#BT_NewEdit").removeClass("inpu");                            //±‡º≠
                 $("#BT_NewReport").attr("disabled", "disabled");
-                $("#BT_NewReport").removeClass("inpu");                          //Êä•Êâπ
+                $("#BT_NewReport").removeClass("inpu");                          //±®≈˙
                 $("#BT_NewReportReturn").attr("disabled", "disabled");
-                $("#BT_NewReportReturn").removeClass("inpu");                         //Êä•ÊâπÈÄÄÂõû
+                $("#BT_NewReportReturn").removeClass("inpu");                         //±®≈˙ÕÀªÿ
                 $("#BT_NewSubmitReturn").attr("disabled", "disabled");
-                $("#BT_NewSubmitReturn").removeClass("inpu");                         //Êèê‰∫§ÈÄÄÂõû
+                $("#BT_NewSubmitReturn").removeClass("inpu");                         //Ã·ΩªÕÀªÿ
             }
 
         }
@@ -118,7 +118,7 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="formItemBgStyle">
-                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ShenPiWenJian%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ShenPiWenJian%>"></asp:Label>£∫</td>
                                                                     <td class="formItemBgStyle">
                                                                         <asp:FileUpload ID="FUP_ApprovalDocument" runat="server" />
                                                                         <asp:Button ID="BT_ApprovalDocument" runat="server" Text="<%$ Resources:lang,ShangChuan%>" CssClass="inpu" OnClick="BT_ReviewDocument_Click" /><br />
@@ -127,27 +127,27 @@
                                                                         <asp:HiddenField ID="HF_ApprovalDocumentURL" runat="server" />
                                                                     </td>
                                                                     <td class="formItemBgStyle">
-                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhuGuanLingDao%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhuGuanLingDao%>"></asp:Label>£∫</td>
                                                                     <td class="formItemBgStyle">
                                                                         <asp:HiddenField ID="HF_CompetentLeadership" runat="server" />
                                                                         <asp:TextBox ID="TXT_CompetentLeadership" runat="server"></asp:TextBox>
-                                                                        <input type="button" id="btnCompetentLeadership" class="inpu" runat="server" value="ÈÄâÊã©" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_CompetentLeadership', 'TXT_CompetentLeadership')" />
+                                                                        <input type="button" id="btnCompetentLeadership" class="inpu" runat="server" value="—°‘Ò" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_CompetentLeadership', 'TXT_CompetentLeadership')" />
                                                                     </td>
                                                                     
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="formItemBgStyle">
-                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>£∫</td>
                                                                     <td class="formItemBgStyle">
                                                                         <%--<asp:DropDownList ID="DDL_Progress" runat="server">
                                                                             <asp:ListItem Text="" Value=""/>
-                                                                            <asp:ListItem Text="Êèê‰∫§1" Value="Êèê‰∫§1"/>
-                                                                            <asp:ListItem Text="Êèê‰∫§2" Value="Êèê‰∫§2"/>
+                                                                            <asp:ListItem Text="Ã·Ωª1" Value="Ã·Ωª1"/>
+                                                                            <asp:ListItem Text="Ã·Ωª2" Value="Ã·Ωª2"/>
                                                                         </asp:DropDownList>--%>
                                                                         <asp:DropDownList ID="DDL_Progress" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_Progress_SelectedIndexChanged">
                                                                          
-                                                                            <asp:ListItem Text="<%$ Resources:lang,TiJiaoEr%>" Value="Êèê‰∫§2"/>
-                                                                            <asp:ListItem Text="<%$ Resources:lang,TiJiaoSan%>" Value="Êèê‰∫§3"/>
+                                                                            <asp:ListItem Text="<%$ Resources:lang,TiJiaoEr%>" Value="Ã·Ωª2"/>
+                                                                            <asp:ListItem Text="<%$ Resources:lang,TiJiaoSan%>" Value="Ã·Ωª3"/>
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                     <td class="formItemBgStyle" colspan="2">
@@ -160,7 +160,7 @@
                                                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,GongYingShangJiLuGong%>"></asp:Label><asp:Label ID="LB_Record" runat="server" Text="0"></asp:Label><asp:Label ID="Label51" runat="server" Text="<%$ Resources:lang,Tiao%>"></asp:Label>
                                                                     </td>
                                                                     <td class="formItemBgStyle" colspan="2">
-                                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,JiLuCaoZuo%>"></asp:Label>Ôºö
+                                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,JiLuCaoZuo%>"></asp:Label>£∫
                                                                         <asp:Button ID="BT_NewEdit" runat="server" CssClass="inpu" Text="<%$ Resources:lang,BianJi%>" OnClick="BT_NewEdit_Click" />
                                                                         <asp:Button ID="BT_NewReport" runat="server" CssClass="inpu" Text="<%$ Resources:lang,BaoPi%>" OnClick="BT_NewReport_Click" />
                                                                         <asp:Button ID="BT_NewReportReturn" runat="server" CssClass="inpu" Text="<%$ Resources:lang,BaoPiTuiHui%>" OnClick="BT_NewReportReturn_Click" />
@@ -304,7 +304,7 @@
                                                                                 
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="SupplierNumber" HeaderText="‰æõÊñπÁºñÂè∑">
+                                                                        <asp:BoundColumn DataField="SupplierNumber" HeaderText="π©∑Ω±‡∫≈">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:TemplateColumn>
@@ -496,10 +496,10 @@
                                                                                 <%#DataBinder.Eval(Container.DataItem, "InTime", "{0:yyyy/MM/dd}")%>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="Progress" HeaderText="ËøõÂ∫¶">
+                                                                        <asp:BoundColumn DataField="Progress" HeaderText="Ω¯∂»">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                         </asp:BoundColumn>
-                                                                         <asp:BoundColumn DataField="IsMark" HeaderText="‰ΩøÁî®Ê†áËÆ∞">
+                                                                         <asp:BoundColumn DataField="IsMark" HeaderText=" π”√±Íº«">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                             </asp:BoundColumn>
                                                                     </Columns>

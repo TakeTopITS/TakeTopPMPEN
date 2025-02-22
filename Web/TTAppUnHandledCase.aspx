@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppUnHandledCase.aspx.cs" Inherits="TTAppUnHandledCase" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppUnHandledCase.aspx.cs" Inherits="TTAppUnHandledCase" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
 
@@ -39,7 +39,7 @@
 
         });
 
-        //ÁÇπÂáªDATAGRIDË°åÂÜÖ‰ªª‰Ωï‰∏ÄÁÇπÔºåÈÉΩËÉΩËß¶ÂèëË°åÂÜÖÁöÑÈìæÊé•
+        //µ„ª˜DATAGRID––ƒ⁄»Œ∫Œ“ªµ„£¨∂ºƒ‹¥•∑¢––ƒ⁄µƒ¡¥Ω”
         function SetDataGridTrClickLink() {
 
             setTrClickLink("DataGrid1");
@@ -71,7 +71,7 @@
                                             </td>
                                         </tr>
                                     </table>
-                                    <img id="IMG_Waiting" src="Images/Processing.gif" alt="ËØ∑Á®çÂÄôÔºåÂ§ÑÁêÜ‰∏≠..." style="display: none;" />
+                                    <img id="IMG_Waiting" src="Images/Processing.gif" alt="«Î…‘∫Ú£¨¥¶¿Ì÷–..." style="display: none;" />
                                 </a>
                             </td>
                         </tr>
@@ -108,11 +108,11 @@
                                         </asp:TemplateColumn>
 
 
-                                        <%--                                        <asp:BoundColumn DataField="ID" HeaderText="ÁºñÂè∑" Visible="false">
+                                        <%--                                        <asp:BoundColumn DataField="ID" HeaderText="±‡∫≈" Visible="false">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="1%" />
                                         </asp:BoundColumn>
                                         <asp:HyperLinkColumn DataNavigateUrlField="MobileLinkAddress"
-                                            DataTextField="InforName" HeaderText="‰∫ãÈ°π">
+                                            DataTextField="InforName" HeaderText=" ¬œÓ">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="79%" />
                                         </asp:HyperLinkColumn>
                                         <asp:TemplateColumn>

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Collections.Generic;
 using System.Configuration;
@@ -68,32 +68,32 @@ public partial class TTPersonalSpaceReportView : System.Web.UI.Page
         var path = Server.MapPath(strReportURL);
         report.Load(path);
 
-        //////---------------------------------------------------ä¸ªæ€§åŒ–æ•°æ®åº“åªè¯»ç”¨æˆ· BEGIN------------------------------------------ -
-        ////åˆ é™¤æ‰€æœ‰çš„æ­¤æ¨¡æ¿çš„æ•°æ®åº“è¿æ¥ä¸²
+        //////---------------------------------------------------¸öĞÔ»¯Êı¾İ¿âÖ»¶ÁÓÃ»§ BEGIN------------------------------------------ -
+        ////É¾³ıËùÓĞµÄ´ËÄ£°åµÄÊı¾İ¿âÁ¬½Ó´®
         report.Dictionary.Databases.Clear();
 
         for (int i = 0; i < report.Dictionary.Databases.Count; i++)
         {
             if (report.Dictionary.Databases[i].Name == "TAKETOPDBConnect")
             {
-                //åˆ é™¤æ­¤æ¨¡æ¿çš„æ•°æ®åº“è¿æ¥ä¸²
+                //É¾³ı´ËÄ£°åµÄÊı¾İ¿âÁ¬½Ó´®
                 report.Dictionary.Databases.RemoveAt(i);
 
-                //é‡æ–°å»ºç«‹æ­¤æ¨¡æ¿çš„æ•°æ®åº“è¿æ¥ä¸²
+                //ÖØĞÂ½¨Á¢´ËÄ£°åµÄÊı¾İ¿âÁ¬½Ó´®
                 report.Dictionary.Databases.Insert(i, new StiPostgreSQLDatabase("TAKETOPDBConnect", GetReportDBConnectString()));
             }
         }
         if (report.Dictionary.Databases.Count == 0)
         {
-            //é‡æ–°å»ºç«‹æ­¤æ¨¡æ¿çš„æ•°æ®åº“è¿æ¥ä¸²
+            //ÖØĞÂ½¨Á¢´ËÄ£°åµÄÊı¾İ¿âÁ¬½Ó´®
             report.Dictionary.Databases.Add(new StiPostgreSQLDatabase("TAKETOPDBConnect", GetReportDBConnectString()));
         }
-        //////---------------------------------------------------ä¸ªæ€§åŒ–æ•°æ®åº“åªè¯»ç”¨æˆ· END-------------------------------------------
+        //////---------------------------------------------------¸öĞÔ»¯Êı¾İ¿âÖ»¶ÁÓÃ»§ END-------------------------------------------
 
         StiWebViewer1.Report = report;
     }
 
-    //å–å¾—æ•°æ®åº“è¿æ¥ä¸²
+    //È¡µÃÊı¾İ¿âÁ¬½Ó´®
     public string GetReportDBConnectString()
     {
         string strConnectString, strNewConnectString;
@@ -117,10 +117,10 @@ public partial class TTPersonalSpaceReportView : System.Web.UI.Page
             string strPassword = GetDatabaseReadOnlyUsePassword();
             string strDatabase = strConnectStringList[4].Replace("Database=", "");
 
-            //åˆ›å»ºæ•°æ®åº“ç”¨æˆ·
+            //´´½¨Êı¾İ¿âÓÃ»§
             ShareClass.CreateDBUserAccount(strDBUserID, strPassword, "NO");
 
-            //å»ºæ–°æ•°æ®åº“è¿æ¥ä¸²
+            //½¨ĞÂÊı¾İ¿âÁ¬½Ó´®
             strNewConnectString = strConnectStringList[0] + ";" + strConnectStringList[1] + ";User Id=" + strDBUserID + ";Password=" + strPassword + ";Database=" + strDatabase + ";Pooling=true;Minimum Pool Size=100;Maximum Pool Size=1024;Timeout=1000;";
 
             return strNewConnectString;

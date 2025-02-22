@@ -1,4 +1,4 @@
-Ôªøusing System; using System.Resources;
+using System; using System.Resources;
 using System.Data;
 using System.Configuration;
 using System.Collections;
@@ -33,7 +33,7 @@ public partial class TTDepartmentInfoView : System.Web.UI.Page
 
         strDepartName = department.DepartName.Trim();
 
-        //this.Title = Resources.lang.ZZZBuMen + strDepartCode + " " + strDepartName + " ËµÑÊñôÔºÅ";
+        //this.Title = Resources.lang.ZZZBuMen + strDepartCode + " " + strDepartName + " ◊ ¡œ£°";
 
 
         string strUserCode = Session["UserCode"].ToString();if (Page.IsPostBack == false)

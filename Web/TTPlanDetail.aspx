@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPlanDetail.aspx.cs" Inherits="TTPlanDetail" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPlanDetail.aspx.cs" Inherits="TTPlanDetail" %>
 
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -181,7 +181,7 @@
                                             <table>
                                                 <tr>
                                                     <td>
-                                                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,ZiPingFen%>"></asp:Label>ï¼š
+                                                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,ZiPingFen%>"></asp:Label>£º
                                                     </td>
                                                     <td>
                                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_ScoringBySelf" runat="server" OnBlur="" OnFocus="" OnKeyPress=""
@@ -212,7 +212,7 @@
                                             <table width="100%">
                                                 <tr>
                                                     <td width="120px" style="padding-top: 5px;"><b>
-                                                        <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,JiHuaRiZhi%>"></asp:Label>ï¼š</b></td>
+                                                        <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,JiHuaRiZhi%>"></asp:Label>£º</b></td>
                                                     <td width="150px" align="left">
                                                         <asp:Button ID="BT_ImportSamePeriodSchedule" runat="server" CssClass="inpuLong" Text="<%$ Resources:lang,CTQRCZDR%>" OnClick="BT_ImportSamePeriodSchedule_Click" />
                                                     </td>
@@ -232,7 +232,7 @@
 
 
                                                         <cc2:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" runat="server" ActiveTabIndex="0" Width="100%">
-                                                            <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="æ‰§è¡Œæ—¥å¿—" TabIndex="0">
+                                                            <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="Ö´ÐÐÈÕÖ¾" TabIndex="0">
                                                                 <HeaderTemplate>
                                                                     <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,ZhiXingRiZhi%>"></asp:Label>
                                                                 </HeaderTemplate>
@@ -316,7 +316,7 @@
                                                                     </table>
                                                                 </ContentTemplate>
                                                             </cc2:TabPanel>
-                                                            <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="å…³é”®ç›®æ ‡" TabIndex="1">
+                                                            <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="¹Ø¼üÄ¿±ê" TabIndex="1">
                                                                 <HeaderTemplate>
                                                                     <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,GuanJianMuBiao%>"></asp:Label>
                                                                 </HeaderTemplate>
@@ -348,13 +348,13 @@
                                                                                 <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" GridLines="None"
                                                                                     OnItemCommand="DataGrid1_ItemCommand" ShowHeader="False" Width="100%">
                                                                                     <Columns>
-                                                                                         <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                                                         <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                         </asp:BoundColumn>
-                                                                                        <asp:BoundColumn DataField="Target" HeaderText="ç›®æ ‡">
+                                                                                        <asp:BoundColumn DataField="Target" HeaderText="Ä¿±ê">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="70%" />
                                                                                         </asp:BoundColumn>
-                                                                                        <asp:TemplateColumn HeaderText="è¿›åº¦">
+                                                                                        <asp:TemplateColumn HeaderText="½ø¶È">
                                                                                             <ItemTemplate>
                                                                                                 <asp:TextBox ID="NB_TargetProgress" Text='<%# DataBinder.Eval(Container.DataItem,"Progress")%>' Width="50px" runat="server"></asp:TextBox>%
                                                                                                 
@@ -382,7 +382,7 @@
                                                             <tr>
                                                                 <td align="left">
                                                                     <i>
-                                                                    <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,LingDaoPingHe%>"></asp:Label>ï¼š</i>
+                                                                    <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,LingDaoPingHe%>"></asp:Label>£º</i>
                                                                     <asp:DataList ID="DataList1" runat="server" CellPadding="0" ForeColor="#333333" Height="1px"
                                                                         Width="100%">
                                                                         <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
@@ -393,9 +393,9 @@
                                                                                 <tr>
                                                                                     <td class="tdLeft" align="left" style="color: Blue; font-style: italic;">
                                                                                         <%#DataBinder.Eval(Container.DataItem, "LeaderName")%>
-                                                                                        <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,PingFen%>"></asp:Label>ï¼š
+                                                                                        <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,PingFen%>"></asp:Label>£º
                                                                                     <%#DataBinder.Eval(Container.DataItem, "Scoring")%>
-                                                                                        <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,ShiJian%>"></asp:Label>ï¼š
+                                                                                        <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,ShiJian%>"></asp:Label>£º
                                                                                     <%#DataBinder.Eval(Container.DataItem, "ReviewTime","{0:yyyy/MM/dd hh:MM:ss}")%>
                                                                                     </td>
                                                                                 </tr>
@@ -436,14 +436,14 @@
                                 <tr>
                                     <td class="formItemBgStyle" style="width: 90px; text-align: right;">
                                         <asp:Label ID="LB_ID" runat="server" Visible ="false"></asp:Label>
-                                        <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>ï¼š </td>
+                                        <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>£º </td>
                                     <td class="formItemBgStyle" style="text-align: left;">
                                         <CKEditor:CKEditorControl ID="HE_LogDetail" runat="server" Width="100%" Height="200px" Visible="false" /><CKEditor:CKEditorControl runat="server" ID="HT_LogDetail" Width="100%" Height="200px" Visible="False" />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="formItemBgStyle" style="width: 90px; text-align: right;">
-                                        <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>ï¼š </td>
+                                        <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>£º </td>
                                     <td class="formItemBgStyle" style="text-align: left;">
                                         <NickLee:NumberBox ID="NB_PlanProgress" runat="server" MaxAmount="100" MinAmount="0"
                                             OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Precision="0" Width="50px">0</NickLee:NumberBox>% </td>

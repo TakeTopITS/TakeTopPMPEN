@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -27,7 +27,7 @@ public partial class TTProjectImplementMileStoneStatusReport : System.Web.UI.Pag
         strLangCode = Session["LangCode"].ToString();
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text = "é¡¹ç›®é‡Œç¨‹ç¢‘çŠ¶æ€æŠ¥è¡¨";
+        LB_ReportName.Text = "ÏîÄ¿Àï³Ì±®×´Ì¬±¨±í";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
@@ -99,7 +99,7 @@ public partial class TTProjectImplementMileStoneStatusReport : System.Web.UI.Pag
         for (int i = 0; i < DataGrid1.Items.Count; i++)
         {
             strPlanProjectID = ds.Tables[0].Rows[i]["ProjectID"].ToString();
-            strPlanVerID = ShareClass.GetProjectPlanVerID(strPlanProjectID, "åœ¨ç”¨").ToString();
+            strPlanVerID = ShareClass.GetProjectPlanVerID(strPlanProjectID, "InUse").ToString();
             if (strPlanVerID != "0")
             {
                 Repeater mileStoneRepeater = (Repeater)DataGrid1.Items[i].FindControl("Repeater1");

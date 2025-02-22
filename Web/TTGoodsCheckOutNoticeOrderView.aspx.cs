@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -29,7 +29,7 @@ public partial class TTGoodsCheckOutNoticeOrderView : System.Web.UI.Page
         string strUserCode = Session["UserCode"].ToString();
 
 
-        //this.Title = "Áâ©ÊñôÈ¢ÜÁî®Âçï";
+        //this.Title = "ŒÔ¡œ¡Ï”√µ•";
 
         strCOOID = Request.QueryString["COOID"];
 

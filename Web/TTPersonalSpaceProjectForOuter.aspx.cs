@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -33,7 +33,7 @@ public partial class TTPersonalSpaceProjectForOuter : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickParentA", "aHandlerForSpecialPopWindow();", true);
         if (Page.IsPostBack == false)
         {
-            //清空页面缓存，用于改变皮肤
+            //���ҳ�滺�棬���ڸı�Ƥ��
             SetPageNoCache();
 
             intRunNumber = 0;
@@ -42,12 +42,12 @@ public partial class TTPersonalSpaceProjectForOuter : System.Web.UI.Page
         }
     }
 
-    //清空页面缓存，用于改变皮肤
+    //���ҳ�滺�棬���ڸı�Ƥ��
     public void SetPageNoCache()
     {
         if (Session["CssDirectoryChangeNumber"].ToString() == "1")
         {
-            //清除全部缓存
+            //���ȫ������
             IDictionaryEnumerator allCaches = Page.Cache.GetEnumerator();
             while (allCaches.MoveNext())
             {
@@ -106,7 +106,7 @@ public partial class TTPersonalSpaceProjectForOuter : System.Web.UI.Page
     {
         string strHQL;
 
-        strHQL = "Select * from T_Project as project where project.PMCode = " + "'" + strUserCode + "'" + " and project.Status not in ('新建',  '隐藏','删除','归档')  Order by project.ProjectID DESC";
+        strHQL = "Select * from T_Project as project where project.PMCode = " + "'" + strUserCode + "'" + " and project.Status not in ('New',  'Hided','Deleted','Archived')  Order by project.ProjectID DESC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_Project");
         DataGrid2.DataSource = ds;
         DataGrid2.DataBind();
@@ -117,7 +117,7 @@ public partial class TTPersonalSpaceProjectForOuter : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('新建','评审','隐藏','删除','归档','暂停','终止') Order by proRelatedUser.ProjectID DESC";
+        strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('New','Review','Hided','Deleted','Archived','Pause','Stop') Order by proRelatedUser.ProjectID DESC";
         ProRelatedUserBLL proRelatedUserBLL = new ProRelatedUserBLL();
         lst = proRelatedUserBLL.GetAllProRelatedUsers(strHQL);
 
@@ -130,9 +130,9 @@ public partial class TTPersonalSpaceProjectForOuter : System.Web.UI.Page
         string strHQL;
 
         strHQL = "select C.*,COALESCE(D.TotalBL,0) PercentRea from T_Project C left join (select A.ProjectID,COALESCE(B.TotalRea,0)/CASE WHEN A.Total = 0 Then 1 END as TotalBL from (select " +
-                "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='基础' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
-                "T_ProjectCostManage where Type='操作' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
-                "C.Status not in ('新建','隐藏','删除','归档') Order by C.ProjectID DESC";
+                "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='Base' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
+                "T_ProjectCostManage where Type='Operation' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
+                "C.Status not in ('New','Hided','Deleted','Archived') Order by C.ProjectID DESC";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectCost");
         DataGrid8.DataSource = ds;
@@ -148,7 +148,7 @@ public partial class TTPersonalSpaceProjectForOuter : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
 
-        string strHQL = "from Project as project where project.PMCode = " + "'" + strUserCode + "'" + " and project.Status not in ('新建',  '隐藏','删除','归档')  Order by project.ProjectID DESC";
+        string strHQL = "from Project as project where project.PMCode = " + "'" + strUserCode + "'" + " and project.Status not in ('New',  'Hided','Deleted','Archived')  Order by project.ProjectID DESC";
 
         ProjectBLL projectBLL = new ProjectBLL();
         IList lst = projectBLL.GetAllProjects(strHQL);
@@ -166,7 +166,7 @@ public partial class TTPersonalSpaceProjectForOuter : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
 
-        string strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('新建','评审','隐藏','删除','归档','暂停','终止') Order by proRelatedUser.ProjectID DESC";
+        string strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('New','Review','Hided','Deleted','Archived','Pause','Stop') Order by proRelatedUser.ProjectID DESC";
 
         ProjectBLL projectBLL = new ProjectBLL();
         IList lst = projectBLL.GetAllProjects(strHQL);
@@ -188,9 +188,9 @@ public partial class TTPersonalSpaceProjectForOuter : System.Web.UI.Page
 
         string strHQL;
         strHQL = "select C.*,COALESCE(D.TotalBL,0) PercentRea from T_Project C left join (select A.ProjectID,COALESCE(B.TotalRea,0)/CASE WHEN A.Total = 0 Then 1 END as TotalBL from (select " +
-                "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='基础' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
-                "T_ProjectCostManage where Type='操作' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
-                "C.Status not in ('新建','隐藏','删除','归档') Order by C.ProjectID DESC";
+                "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='Base' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
+                "T_ProjectCostManage where Type='Operation' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
+                "C.Status not in ('New','Hided','Deleted','Archived') Order by C.ProjectID DESC";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectCost");
         DataGrid8.DataSource = ds;

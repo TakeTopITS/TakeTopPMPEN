@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections.Generic;
 
 using System.Drawing;
@@ -33,7 +33,7 @@ public partial class TTAllSMSSendReport : System.Web.UI.Page
         string strUserName;
         string strUserCode = Session["UserCode"].ToString();
 
-        //this.Title = "çŸ­ä¿¡å‘é€æŠ¥è¡¨";
+        //this.Title = "¶ÌĞÅ·¢ËÍ±¨±í";
 
         LB_UserCode.Text = strUserCode;
         strUserName = Session["UserName"].ToString();

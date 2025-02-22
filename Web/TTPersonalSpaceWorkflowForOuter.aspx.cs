@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -29,7 +29,7 @@ public partial class TTPersonalSpaceWorkflowForOuter : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickParentA", "aHandlerForSpecialPopWindow();", true);
         if (Page.IsPostBack == false)
         {
-            //清空页面缓存，用于改变皮肤
+            //���ҳ�滺�棬���ڸı�Ƥ��
             SetPageNoCache();
 
             intRunNumber = 0;
@@ -38,12 +38,12 @@ public partial class TTPersonalSpaceWorkflowForOuter : System.Web.UI.Page
         }
     }
 
-    //清空页面缓存，用于改变皮肤
+    //���ҳ�滺�棬���ڸı�Ƥ��
     public void SetPageNoCache()
     {
         if (Session["CssDirectoryChangeNumber"].ToString() == "1")
         {
-            //清除全部缓存
+            //���ȫ������
             IDictionaryEnumerator allCaches = Page.Cache.GetEnumerator();
             while (allCaches.MoveNext())
             {
@@ -101,8 +101,8 @@ public partial class TTPersonalSpaceWorkflowForOuter : System.Web.UI.Page
         string strHQL;
 
         strHQL = string.Format(@"Select * From (Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B 
-                 Where A.WLID = B.WLID And A.Status In ('处理中','审核中','会签中','复核中') 
-                 And B.Status Not In ('修改中','关闭','通过','结案') And (trim(A.OperatorCode) = '{0}' Or A.OperatorCode in ( Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = '{0}' and AgencyStatus = 1))
+                 Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') 
+                 And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And (trim(A.OperatorCode) = '{0}' Or A.OperatorCode in ( Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = '{0}' and AgencyStatus = 1))
 																 And A.IsOperator = 'YES' ) C Order By C.StepID DESC", strUserCode);
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowDetail");
 
@@ -115,7 +115,7 @@ public partial class TTPersonalSpaceWorkflowForOuter : System.Web.UI.Page
         string strHQL;
 
         strHQL = "Select WLID,WLName,Status From T_WorkFlow Where CreatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and Status <> '结案'";
+        strHQL += " and Status <> 'CaseClosed'";
         strHQL += " Order By WLID DESC";
         DataSet ds = new DataSet();
 
@@ -135,7 +135,7 @@ public partial class TTPersonalSpaceWorkflowForOuter : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         strHQL = "Select WLID,WLName,Status From T_WorkFlow Where CreatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and Status <> '结案'";
+        strHQL += " and Status <> 'CaseClosed'";
         strHQL += " Order By WLID DESC";
         DataSet ds = new DataSet();
 
@@ -156,8 +156,8 @@ public partial class TTPersonalSpaceWorkflowForOuter : System.Web.UI.Page
         string strHQL;
 
         strHQL = string.Format(@"Select * From (Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B 
-                 Where A.WLID = B.WLID And A.Status In ('处理中','审核中','会签中','复核中') 
-                 And B.Status Not In ('修改中','关闭','通过','结案') And (trim(A.OperatorCode) = '{0}' Or A.OperatorCode in ( Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = '{0}' and AgencyStatus = 1))
+                 Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') 
+                 And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And (trim(A.OperatorCode) = '{0}' Or A.OperatorCode in ( Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = '{0}' and AgencyStatus = 1))
 																 And A.IsOperator = 'YES' ) C Order By C.StepID DESC", strUserCode);
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowDetail");
 

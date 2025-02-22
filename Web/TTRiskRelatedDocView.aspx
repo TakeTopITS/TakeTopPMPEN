@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTRiskRelatedDocView.aspx.cs" Inherits="TTRiskRelatedDocView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTRiskRelatedDocView.aspx.cs" Inherits="TTRiskRelatedDocView" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -106,27 +106,27 @@
                                         Height="1px" PageSize="20" Width="100%" CellPadding="4" ForeColor="#333333" ShowHeader="false"
                                         GridLines="None">
                                         <Columns>
-                                            <asp:BoundColumn DataField="DocID" HeaderText="åºå·">
+                                            <asp:BoundColumn DataField="DocID" HeaderText="ÐòºÅ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="RelatedType" HeaderText="å¤§ç±»">
+                                            <asp:BoundColumn DataField="RelatedType" HeaderText="´óÀà">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="DocType" HeaderText="ç±»åž‹">
+                                            <asp:BoundColumn DataField="DocType" HeaderText="ÀàÐÍ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
-                                                DataTextField="DocName" HeaderText="æ–‡ä»¶å" Target="_blank">
+                                                DataTextField="DocName" HeaderText="ÎÄ¼þÃû" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="42%" />
                                             </asp:HyperLinkColumn>
-                                            <asp:BoundColumn DataField="Author" HeaderText="ä½œè€…">
+                                            <asp:BoundColumn DataField="Author" HeaderText="×÷Õß">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="UploadManCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                DataTextField="UploadManName" HeaderText="ä¸Šä¼ è€…" Target="_blank">
+                                                DataTextField="UploadManName" HeaderText="ÉÏ´«Õß" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:HyperLinkColumn>
-                                            <asp:BoundColumn DataField="UploadTime" HeaderText="ä¸Šä¼ æ—¶é—´">
+                                            <asp:BoundColumn DataField="UploadTime" HeaderText="ÉÏ´«Ê±¼ä">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="Address" Visible="False"></asp:BoundColumn>

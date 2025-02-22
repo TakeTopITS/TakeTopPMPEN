@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -40,7 +40,7 @@ public partial class TakeTopPersonalSpaceSAAS : System.Web.UI.Page
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickLeftBar", "clickLeftBarExtend();", true);
             }
 
-            //æ¸…ç©ºé¡µé¢ç¼“å­˜ï¼Œç”¨äºæ”¹å˜çš®è‚¤
+            //Çå¿ÕÒ³Ãæ»º´æ£¬ÓÃÓÚ¸Ä±äÆ¤·ô
             SetPageNoCache();
 
             intRunNumber = 0;
@@ -69,7 +69,7 @@ public partial class TakeTopPersonalSpaceSAAS : System.Web.UI.Page
 
         try
         {
-            //æ›´æ–°å·¦è¾¹æ å±•å¼€çŠ¶æ€
+            //¸üĞÂ×ó±ßÀ¸Õ¹¿ª×´Ì¬
             ShareClass.UpdateLeftBarExtendStatus(strUserCode, strLeftBarExtend);
 
             Session["LeftBarExtend"] = strLeftBarExtend;
@@ -85,12 +85,12 @@ public partial class TakeTopPersonalSpaceSAAS : System.Web.UI.Page
         }
     }
 
-    //æ¸…ç©ºé¡µé¢ç¼“å­˜ï¼Œç”¨äºæ”¹å˜çš®è‚¤
+    //Çå¿ÕÒ³Ãæ»º´æ£¬ÓÃÓÚ¸Ä±äÆ¤·ô
     public void SetPageNoCache()
     {
         if (Session["CssDirectoryChangeNumber"].ToString() == "1")
         {
-            //æ¸…é™¤å…¨éƒ¨ç¼“å­˜
+            //Çå³ıÈ«²¿»º´æ
             IDictionaryEnumerator allCaches = Page.Cache.GetEnumerator();
             while (allCaches.MoveNext())
             {
@@ -154,7 +154,7 @@ public partial class TakeTopPersonalSpaceSAAS : System.Web.UI.Page
         BindNewsAndNoticeTypeData();
 
         strHQL = string.Format(@"Insert Into t_promodulelevelforpageuser(modulename,usercode,usertype,visible,sortnumber) 
-               select modulename,'{0}','{1}',visible,sortnumber from T_ProModuleLevelForPage  Where ParentModule = 'ä¸ªäººç©ºé—´SAAS'
+               select modulename,'{0}','{1}',visible,sortnumber from T_ProModuleLevelForPage  Where ParentModule = 'PersonalSpaceSaaS'
                and PageName <> 'TTPersonalSpaceNews.aspx' and LangCode = '{2}' and Visible ='YES' and IsDeleted = 'NO'
                and modulename not in (select modulename from t_promodulelevelforpageuser where usercode = '{0}' and UserType = '{1}') 
                Order By SortNumber ASC", strUserCode, strUserType, strLangCode);
@@ -162,13 +162,13 @@ public partial class TakeTopPersonalSpaceSAAS : System.Web.UI.Page
 
 
         strHQL = String.Format(@"Select distinct B.HomeModuleName,(rtrim(B.PageName)||'?UserCode={0}') as ModulePage,A.SortNumber  From T_ProModuleLevelForPageUser A,T_ProModuleLevelForPage B 
-                Where A.ModuleName = B.ModuleName and A.UserType= '{1}' and B.Visible = 'YES' and B.IsDeleted = 'NO' and A.UserCode = '{0}' and B.ParentModule = 'ä¸ªäººç©ºé—´SAAS'
+                Where A.ModuleName = B.ModuleName and A.UserType= '{1}' and B.Visible = 'YES' and B.IsDeleted = 'NO' and A.UserCode = '{0}' and B.ParentModule = 'PersonalSpaceSaaS'
                 and B.PageName <> 'TTPersonalSpaceNews.aspx' and B.LangCode = '{2}' and A.Visible ='YES' Order By A.SortNumber ASC", strUserCode, strUserType, strLangCode);
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProModuleLevelForPage");
         if (ds.Tables[0].Rows.Count == 0)
         {
             strHQL = String.Format(@"Select distinct B.HomeModuleName, (rtrim(B.PageName)||'?UserCode={0}') as ModulePage,A.SortNumber  From T_ProModuleLevelForPageUser A,T_ProModuleLevelForPage B  
-              Where A.ModuleName = B.ModuleName and A.UserType= '{1}' and B.Visible = 'YES' and B.IsDeleted = 'NO' and B.ParentModule = 'ä¸ªäººç©ºé—´SAAS'  and B.LangCode = 'zh-CN' 
+              Where A.ModuleName = B.ModuleName and A.UserType= '{1}' and B.Visible = 'YES' and B.IsDeleted = 'NO' and B.ParentModule = 'PersonalSpaceSaaS'  and B.LangCode = 'zh-CN' 
             and A.Visible ='YES' Order By A.SortNumber ASC", strUserCode, strUserType, strLangCode);
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProModuleLevelForPage");
         }

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections;
 using System.Data;
 using System.Drawing;
@@ -27,7 +27,7 @@ public partial class TTMakeGoodsByQRCode : System.Web.UI.Page
         LB_UserName.Text = strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "å…¥åº“å•", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "Èë¿âµ¥", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -241,7 +241,7 @@ public partial class TTMakeGoodsByQRCode : System.Web.UI.Page
             {
                 if (ts.Days > 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('åˆ é™¤å¤±è´¥ï¼Œåªèƒ½åˆ é™¤å½“å¤©çš„è®°å½•ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('É¾³ıÊ§°Ü£¬Ö»ÄÜÉ¾³ıµ±ÌìµÄ¼ÇÂ¼£¬Çë¼ì²é£¡')", true);
                     return;
                 }
 
@@ -425,7 +425,7 @@ public partial class TTMakeGoodsByQRCode : System.Web.UI.Page
         {
             goodsCheckInOrderBLL.UpdateGoodsCheckInOrder(goodsCheckInOrder, int.Parse(strCIOID));
 
-            //Liujp 2013-07-17 æ›´æ–°ç‰©æ–™ç™»è®°å…¥åº“è¡¨æ—¶ï¼Œæ›´æ–°ç‰©æ–™è¡¨ä¸­ä»“åº“å­—æ®µ
+            //Liujp 2013-07-17 ¸üĞÂÎïÁÏµÇ¼ÇÈë¿â±íÊ±£¬¸üĞÂÎïÁÏ±íÖĞ²Ö¿â×Ö¶Î
             ShareClass.UpdateGoodsPositionByGoodsCheckInOrder(strCIOID, strWareHouse);
 
             LoadGoodsCheckInOrder(strCreatorCode);
@@ -1312,7 +1312,7 @@ public partial class TTMakeGoodsByQRCode : System.Web.UI.Page
                 HL_ItemPhoto.NavigateUrl = IM_ItemPhoto.ImageUrl;
                 TB_PhotoURL.Text = IM_ItemPhoto.ImageUrl;
 
-                //å–å¾—å…¥åº“å•æ˜ç»†çš„å…¶å®ƒå±æ€§
+                //È¡µÃÈë¿âµ¥Ã÷Ï¸µÄÆäËüÊôĞÔ
                 LoadGoodsCheckInDetailOtherColumn(strID);
 
                 BT_TakePhoto.Enabled = true;
@@ -1343,7 +1343,7 @@ public partial class TTMakeGoodsByQRCode : System.Web.UI.Page
                 {
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('åˆ é™¤å¤±è´¥ï¼Œåªèƒ½åˆ é™¤å½“å¤©çš„è®°å½•ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('É¾³ıÊ§°Ü£¬Ö»ÄÜÉ¾³ıµ±ÌìµÄ¼ÇÂ¼£¬Çë¼ì²é£¡')", true);
                     return;
                 }
 
@@ -1366,7 +1366,7 @@ public partial class TTMakeGoodsByQRCode : System.Web.UI.Page
                     BT_TakePhoto.Enabled = false;
                     BT_DeletePhoto.Enabled = false;
 
-                    //æ›´æ–°ç›¸å…³å•æ®å…¥åº“æ•°é‡
+                    //¸üĞÂÏà¹Øµ¥¾İÈë¿âÊıÁ¿
                     ShareClass.UpdateGoodsRelatedBusinessNubmer(DL_RelatedType.SelectedValue.Trim(), NB_RelatedID.Amount.ToString(), goodsCheckInOrderDetail.GoodsCode.Trim(), strSourceType, strSourceID, DataGrid21);
 
                     LoadGoodsPurchaseOrderRecord(LB_POID.Text.Trim());
@@ -1386,13 +1386,13 @@ public partial class TTMakeGoodsByQRCode : System.Web.UI.Page
 
                     if (ShareClass.GetGoodsStockCountMethod(TB_WHName.Text.Trim()) == "FIFO")
                     {
-                        //åˆ é™¤ç‰©æ–™æ˜ç»†è¡¨ç›¸åŒè®°å½•
+                        //É¾³ıÎïÁÏÃ÷Ï¸±íÏàÍ¬¼ÇÂ¼
                         strHQL = "Delete From T_Goods Where ID =" + strGoodsID;
                         ShareClass.RunSqlCommand(strHQL);
                     }
                     else
                     {
-                        //æŒ‰ç§»åŠ¨åŠ æƒå¹³å‡æ–¹æ³•è®¡ç®—
+                        //°´ÒÆ¶¯¼ÓÈ¨Æ½¾ù·½·¨¼ÆËã
                         ShareClass.CountGoodsStockByMWAM(strGoodsID, 0 - deNumber, dePrice, 0, 0);
                     }
 
@@ -1409,7 +1409,7 @@ public partial class TTMakeGoodsByQRCode : System.Web.UI.Page
     }
 
 
-    //å–å¾—å…¥åº“å•æ˜ç»†çš„å…¶å®ƒå±æ€§
+    //È¡µÃÈë¿âµ¥Ã÷Ï¸µÄÆäËüÊôĞÔ
     protected void LoadGoodsCheckInDetailOtherColumn(string strCIODetailID)
     {
         string strHQL;
@@ -1953,11 +1953,11 @@ public partial class TTMakeGoodsByQRCode : System.Web.UI.Page
 
         //    if (strFileName1 != "")
         //    {
-        //        //è·å–åˆå§‹æ–‡ä»¶å
-        //        i = strFileName1.LastIndexOf("."); //å–å¾—æ–‡ä»¶åä¸­æœ€åä¸€ä¸ª"."çš„ç´¢å¼•
-        //        string strNewExt = strFileName1.Substring(i); //è·å–æ–‡ä»¶æ‰©å±•å
+        //        //»ñÈ¡³õÊ¼ÎÄ¼şÃû
+        //        i = strFileName1.LastIndexOf("."); //È¡µÃÎÄ¼şÃûÖĞ×îºóÒ»¸ö"."µÄË÷Òı
+        //        string strNewExt = strFileName1.Substring(i); //»ñÈ¡ÎÄ¼şÀ©Õ¹Ãû
 
-        //        DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+        //        DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
 
         //        string strFileName2 = System.IO.Path.GetFileName(strFileName1);
         //        string strExtName = Path.GetExtension(strFileName2);
@@ -2292,7 +2292,7 @@ public partial class TTMakeGoodsByQRCode : System.Web.UI.Page
             goodsCheckInOrderDetail.Manufacturer = strManufacturer;
 
             goodsCheckInOrderDetail.Memo = strMemo;
-            goodsCheckInOrderDetail.Status = "åœ¨ç”¨";
+            goodsCheckInOrderDetail.Status = "InUse";
 
 
             if (strSourceRelatedID == "")
@@ -2334,7 +2334,7 @@ public partial class TTMakeGoodsByQRCode : System.Web.UI.Page
                 BT_TakePhoto.Enabled = true;
                 BT_DeletePhoto.Enabled = true;
 
-                //æ›´æ–°å…¥åº“å•æ˜ç»†çš„å…¶å®ƒå±æ€§
+                //¸üĞÂÈë¿âµ¥Ã÷Ï¸µÄÆäËüÊôĞÔ
                 UpdateGoodsCheckInDetailForOtherColumn(LB_ID.Text);
 
                 NB_Amount.Amount = SumGoodsCheckInOrderAmount(strCIOID);
@@ -2342,7 +2342,7 @@ public partial class TTMakeGoodsByQRCode : System.Web.UI.Page
                 strHQL += " Where CheckInID = " + strCIOID;
                 ShareClass.RunSqlCommand(strHQL);
 
-                //æ›´æ–°ç›¸å…³å•æ®å…¥åº“æ•°é‡
+                //¸üĞÂÏà¹Øµ¥¾İÈë¿âÊıÁ¿
                 ShareClass.UpdateGoodsRelatedBusinessNubmer(DL_RelatedType.SelectedValue.Trim(), NB_RelatedID.Amount.ToString(), goodsCheckInOrderDetail.GoodsCode.Trim(), strSourceType, strSourceID, DataGrid21);
 
                 LoadGoodsCheckInOrderDetail(strCIOID);
@@ -2364,13 +2364,13 @@ public partial class TTMakeGoodsByQRCode : System.Web.UI.Page
                 strProductionEquipmentNumber = TB_ProductionEquipmentNumber.Text.Trim();
                 strMaterialFormNumber = TB_MaterialFormNumber.Text.Trim();
 
-                //æ·»åŠ ç›¸åŒè®°å½•åˆ°ç‰©æ–™è¡¨
+                //Ìí¼ÓÏàÍ¬¼ÇÂ¼µ½ÎïÁÏ±í
                 ShareClass.addOrUpdateGoods(strCountMethod, "0", strCIOID, strGoodsCode, strGoodsName, strSN, deNumber, strUnitName,
                     strOwnerCode, strType, strSpec, strModelNumber, strPosition,TB_WHPosition.Text.Trim(), dePrice, strIsTaxPrice, strCurrencyType, dtBuyTime, intWarrantyPeriod,
                     strManufacturer, strMemo, LB_ID.Text, strPhotoURL, 0, 0,
                     strBatchNumber, DateTime.Parse(strProductDate), DateTime.Parse(strExpiryDate), strProductionEquipmentNumber, strMaterialFormNumber);
 
-                //ä¿å­˜äº§å“å›¾ç‰‡
+                //±£´æ²úÆ·Í¼Æ¬
                 UpdateGoodsPhoto(LB_ID.Text);
 
                 IM_ItemPhoto.ImageUrl = "";
@@ -2452,7 +2452,7 @@ public partial class TTMakeGoodsByQRCode : System.Web.UI.Page
             lst = goodsCheckInOrderDetailBLL.GetAllGoodsCheckInOrderDetails(strHQL);
             GoodsCheckInOrderDetail goodsCheckInOrderDetail = (GoodsCheckInOrderDetail)lst[0];
 
-            //å–å¾—åŸæ¥çš„æ•°é‡å’Œä»·æ ¼
+            //È¡µÃÔ­À´µÄÊıÁ¿ºÍ¼Û¸ñ
             decimal deOldCheckInNumber = goodsCheckInOrderDetail.Number;
             decimal deOldCheckInPrice = goodsCheckInOrderDetail.Price;
 
@@ -2536,10 +2536,10 @@ public partial class TTMakeGoodsByQRCode : System.Web.UI.Page
                 strHQL += " Where CheckInID = " + strCIOID;
                 ShareClass.RunSqlCommand(strHQL);
 
-                //æ›´æ–°å…¥åº“å•æ˜ç»†çš„å…¶å®ƒå±æ€§
+                //¸üĞÂÈë¿âµ¥Ã÷Ï¸µÄÆäËüÊôĞÔ
                 UpdateGoodsCheckInDetailForOtherColumn(LB_ID.Text);
 
-                //æ›´æ–°ç›¸å…³å•æ®å…¥åº“æ•°é‡
+                //¸üĞÂÏà¹Øµ¥¾İÈë¿âÊıÁ¿
                 ShareClass.UpdateGoodsRelatedBusinessNubmer(DL_RelatedType.SelectedValue.Trim(), NB_RelatedID.Amount.ToString(), goodsCheckInOrderDetail.GoodsCode.Trim(), strSourceType, strSourceID, DataGrid21);
 
                 LoadGoodsPurchaseOrderRecord(LB_POID.Text.Trim());
@@ -2554,7 +2554,7 @@ public partial class TTMakeGoodsByQRCode : System.Web.UI.Page
                     }
                 }
                
-                //æ·»åŠ ç›¸åŒè®°å½•åˆ°ç‰©æ–™æ˜ç»†è¡¨
+                //Ìí¼ÓÏàÍ¬¼ÇÂ¼µ½ÎïÁÏÃ÷Ï¸±í
                 string strGoodsID = goodsCheckInOrderDetail.ToGoodsID.ToString();
                 string strCountMethod = ShareClass.GetGoodsStockCountMethod(TB_WHName.Text.Trim());
                 string strPhotoURL = HL_ItemPhoto.NavigateUrl.Trim();
@@ -2571,7 +2571,7 @@ public partial class TTMakeGoodsByQRCode : System.Web.UI.Page
                    strManufacturer, strMemo, strID, strPhotoURL, deOldCheckInNumber, deOldCheckInPrice,
                     strBatchNumber, DateTime.Parse(strProductDate), DateTime.Parse(strExpiryDate), strProductionEquipmentNumber, strMaterialFormNumber);
 
-                //ä¿å­˜äº§å“å›¾ç‰‡
+                //±£´æ²úÆ·Í¼Æ¬
                 UpdateGoodsPhoto(LB_ID.Text);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -2585,7 +2585,7 @@ public partial class TTMakeGoodsByQRCode : System.Web.UI.Page
         }
     }
 
-    //æ›´æ–°å…¥åº“å•æ˜ç»†çš„å…¶å®ƒå±æ€§
+    //¸üĞÂÈë¿âµ¥Ã÷Ï¸µÄÆäËüÊôĞÔ
     protected void UpdateGoodsCheckInDetailForOtherColumn(string strCIODetailID)
     {
         string strHQL;
@@ -2652,7 +2652,7 @@ public partial class TTMakeGoodsByQRCode : System.Web.UI.Page
         goodsCheckInOrderDetail.Manufacturer = strManufacturer;
         goodsCheckInOrderDetail.WarrantyPeriod = intWarrantyPeriod;
         goodsCheckInOrderDetail.Memo = strMemo;
-        goodsCheckInOrderDetail.Status = "åœ¨ç”¨";
+        goodsCheckInOrderDetail.Status = "InUse";
 
 
         try
@@ -2948,7 +2948,7 @@ public partial class TTMakeGoodsByQRCode : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Constract as constract where  constract.Status not in ('å½’æ¡£','åˆ é™¤') ";
+        strHQL = "from Constract as constract where  constract.Status not in ('Archived','Deleted') ";
         strHQL += " and (constract.RecorderCode = " + "'" + strUserCode + "'" + " Or constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + "))";
         strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
 

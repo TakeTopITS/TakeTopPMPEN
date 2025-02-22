@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSelectorProjectPlan.aspx.cs" Inherits="TTSelectorProjectPlan" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSelectorProjectPlan.aspx.cs" Inherits="TTSelectorProjectPlan" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -83,7 +83,7 @@
                                                             Width="100%" OnItemCommand="DG_List_ItemCommand">
                                                             <Columns>
                                                                
-                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="é¡¹ç›®å·">
+                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="ÏîÄ¿ºÅ">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:TemplateColumn>
@@ -119,7 +119,7 @@
 
                                                     </div>
 
-                                                     <%--é¡¹ç›®ï¼š<asp:DropDownList ID="DDL_Project" runat="server"></asp:DropDownList>--%>
+                                                     <%--ÏîÄ¿£º<asp:DropDownList ID="DDL_Project" runat="server"></asp:DropDownList>--%>
 
                                                 </td>
                                             </tr>

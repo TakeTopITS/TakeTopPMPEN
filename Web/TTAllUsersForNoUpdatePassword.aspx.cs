@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -21,8 +21,8 @@ public partial class TTAllUsersForNoUpdatePassword : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //é’Ÿç¤¼æœˆä½œå“ï¼ˆjack.erp@gmail.com)
-        //Taketop Software 2006ï¼2012
+        //ÖÓÀñÔÂ×÷Æ·£¨jack.erp@gmail.com)
+        //Taketop Software 2006£­2012
 
         string strUserCode = Session["UserCode"].ToString();
         string strHQL;
@@ -31,7 +31,7 @@ public partial class TTAllUsersForNoUpdatePassword : System.Web.UI.Page
         string strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "æŸ¥çœ‹æ‰€æœ‰æˆå‘˜", strUserCode);
+        //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "²é¿´ËùÓÐ³ÉÔ±", strUserCode);
         //if (blVisible == false)
         //{
         //    Response.Redirect("TTDisplayErrors.aspx");
@@ -63,14 +63,14 @@ public partial class TTAllUsersForNoUpdatePassword : System.Web.UI.Page
             LB_UserNumber.Text = Resources.lang.GCXD + lst.Count.ToString();
             LB_Sql.Text = strHQL;
 
-            strHQL = "from ProjectMember as projectMember where projectMember.Gender = 'ç”·'";
+            strHQL = "from ProjectMember as projectMember where projectMember.Gender = 'Male'";
             strHQL += " and projectMember.Password = '25D55AD283AA400AF464C76D713C07AD'";
             strHQL += " and projectMember.DepartCode in " + strDepartString;
             strHQL += " and projectMember.UserCode in (Select systemActiveUser.UserCode From SystemActiveUser as systemActiveUser)";
             lst = projectMemberBLL.GetAllProjectMembers(strHQL);
             LB_MaleUserNumber.Text = lst.Count.ToString();
 
-            strHQL = "from ProjectMember as projectMember where projectMember.Gender = 'å¥³'";
+            strHQL = "from ProjectMember as projectMember where projectMember.Gender = 'Female'";
             strHQL += " and projectMember.Password = '25D55AD283AA400AF464C76D713C07AD'";
             strHQL += " and projectMember.DepartCode in " + strDepartString;
             strHQL += " and projectMember.UserCode in (Select systemActiveUser.UserCode From SystemActiveUser as systemActiveUser)";
@@ -111,14 +111,14 @@ public partial class TTAllUsersForNoUpdatePassword : System.Web.UI.Page
         LB_Sql.Text = strHQL;
 
 
-        strHQL = "from ProjectMember as projectMember where projectMember.Gender = 'ç”·'";
+        strHQL = "from ProjectMember as projectMember where projectMember.Gender = 'Male'";
         strHQL += " and projectMember.Password = '25D55AD283AA400AF464C76D713C07AD'";
         strHQL += " and projectMember.DepartCode in " + strDepartString;
         strHQL += " and projectMember.UserCode in (Select systemActiveUser.UserCode From SystemActiveUser as systemActiveUser)";
         lst = projectMemberBLL.GetAllProjectMembers(strHQL);
         LB_MaleUserNumber.Text = lst.Count.ToString();
 
-        strHQL = "from ProjectMember as projectMember where projectMember.Gender = 'å¥³'";
+        strHQL = "from ProjectMember as projectMember where projectMember.Gender = 'Female'";
         strHQL += " and projectMember.Password = '25D55AD283AA400AF464C76D713C07AD'";
         strHQL += " and projectMember.DepartCode in " + strDepartString;
         strHQL += " and projectMember.UserCode in (Select systemActiveUser.UserCode From SystemActiveUser as systemActiveUser)";
@@ -137,7 +137,7 @@ public partial class TTAllUsersForNoUpdatePassword : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = "ç”¨æˆ·æˆå‘˜ä¿¡æ¯_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = "ÓÃ»§³ÉÔ±ÐÅÏ¢_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 CreateExcel(fileName);
             }
             catch (Exception ex)
@@ -152,14 +152,14 @@ public partial class TTAllUsersForNoUpdatePassword : System.Web.UI.Page
         string strHQL;
         string strDepartCode = LB_DepartCode.Text.Trim();
 
-        if (strDepartCode == "")//æ‰€æœ‰æˆå‘˜çš„æƒ…å†µ
+        if (strDepartCode == "")//ËùÓÐ³ÉÔ±µÄÇé¿ö
         {
             string strDepartString = LB_DepartString.Text.Trim();
 
-            strHQL = string.Format(@"Select UserCode ä»£ç ,UserName å§“å,Gender æ€§åˆ«,Age å¹´é¾„,DepartCode éƒ¨é—¨ä»£ç ,DepartName éƒ¨é—¨åç§°,
-                Duty èŒè´£,OfficePhone åŠžå…¬ç”µè¯,MobilePhone ç§»åŠ¨ç”µè¯,EMail EMail,WorkScope å·¥ä½œèŒƒå›´,JoinDate åŠ å…¥æ—¥æœŸ,Status çŠ¶æ€,
-                RefUserCode å‚è€ƒå·¥å·,IDCard èº«ä»½è¯å·,SortNumber é¡ºåºå·,(case when UserCode in (select UserCode from T_SystemActiveUser) then 'å·²å¼€é€š'
-								 else 'æœªå¼€é€š' end) æƒé™ 
+            strHQL = string.Format(@"Select UserCode ´úÂë,UserName ÐÕÃû,Gender ÐÔ±ð,Age ÄêÁä,DepartCode ²¿ÃÅ´úÂë,DepartName ²¿ÃÅÃû³Æ,
+                Duty Ö°Ôð,OfficePhone °ì¹«µç»°,MobilePhone ÒÆ¶¯µç»°,EMail EMail,WorkScope ¹¤×÷·¶Î§,JoinDate ¼ÓÈëÈÕÆÚ,Status ×´Ì¬,
+                RefUserCode ²Î¿¼¹¤ºÅ,IDCard Éí·ÝÖ¤ºÅ,SortNumber Ë³ÐòºÅ,(case when UserCode in (select UserCode from T_SystemActiveUser) then 'ÒÑ¿ªÍ¨'
+								 else 'Î´¿ªÍ¨' end) È¨ÏÞ 
                 From T_ProjectMember Where DepartCode in ") + strDepartString + " ";
 
             if (!string.IsNullOrEmpty(DL_Status.SelectedValue.Trim()))
@@ -178,12 +178,12 @@ public partial class TTAllUsersForNoUpdatePassword : System.Web.UI.Page
             strHQL += " and UserCode in (Select UserCode From T_SystemActiveUser)";
             strHQL += " Order by SortNumber ASC";
         }
-        else//æŒ‰ç»„ç»‡æž¶æž„æŸ¥è¯¢çš„
+        else//°´×éÖ¯¼Ü¹¹²éÑ¯µÄ
         {
-            strHQL = string.Format(@"Select UserCode ä»£ç ,UserName å§“å,Gender æ€§åˆ«,Age å¹´é¾„,DepartCode éƒ¨é—¨ä»£ç ,DepartName éƒ¨é—¨åç§°,
-                Duty èŒè´£,OfficePhone åŠžå…¬ç”µè¯,MobilePhone ç§»åŠ¨ç”µè¯,EMail EMail,WorkScope å·¥ä½œèŒƒå›´,JoinDate åŠ å…¥æ—¥æœŸ,Status çŠ¶æ€,
-                RefUserCode å‚è€ƒå·¥å·,IDCard èº«ä»½è¯å·,SortNumber é¡ºåºå·,(case when UserCode in (select UserCode from T_SystemActiveUser) then 'å·²å¼€é€š'
-								 else 'æœªå¼€é€š' end) æƒé™ 
+            strHQL = string.Format(@"Select UserCode ´úÂë,UserName ÐÕÃû,Gender ÐÔ±ð,Age ÄêÁä,DepartCode ²¿ÃÅ´úÂë,DepartName ²¿ÃÅÃû³Æ,
+                Duty Ö°Ôð,OfficePhone °ì¹«µç»°,MobilePhone ÒÆ¶¯µç»°,EMail EMail,WorkScope ¹¤×÷·¶Î§,JoinDate ¼ÓÈëÈÕÆÚ,Status ×´Ì¬,
+                RefUserCode ²Î¿¼¹¤ºÅ,IDCard Éí·ÝÖ¤ºÅ,SortNumber Ë³ÐòºÅ,(case when UserCode in (select UserCode from T_SystemActiveUser) then 'ÒÑ¿ªÍ¨'
+								 else 'Î´¿ªÍ¨' end) È¨ÏÞ 
                 From T_ProjectMember Where DepartCode = '") + strDepartCode + "' and  Password = '25D55AD283AA400AF464C76D713C07AD'" +
                  " and UserCode in (Select UserCode From T_SystemActiveUser)" +
                 " Order by SortNumber ASC ";
@@ -201,11 +201,11 @@ public partial class TTAllUsersForNoUpdatePassword : System.Web.UI.Page
         IList lst = systemActiveUserBLL.GetAllSystemActiveUsers(strHQL);
         if (lst.Count > 0 && lst != null)
         {
-            return "å·²å¼€é€š";
+            return "ÒÑ¿ªÍ¨";
         }
         else
         {
-            return "æœªå¼€é€š";
+            return "Î´¿ªÍ¨";
         }
     }
 }

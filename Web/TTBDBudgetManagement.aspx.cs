@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,7 +20,7 @@ public partial class TTBDBudgetManagement : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "预算管理", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "BudgetManagement", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -91,7 +91,7 @@ public partial class TTBDBudgetManagement : System.Web.UI.Page
 
             LoadBMBaseDataRecordList();
 
-            //取得剩余预算
+            //ȡ��ʣ��Ԥ��
             GetBMBaseDataMoneyNum(bdBaseData.DepartCode.Trim(), bdBaseData.AccountName.Trim(), bdBaseData.YearNum, bdBaseData.MonthNum, bdBaseData.Type.Trim());
         }
     }
@@ -104,7 +104,7 @@ public partial class TTBDBudgetManagement : System.Web.UI.Page
 
         strDepartString = lbl_DepartString.Text.Trim();
 
-        strHQL = "Select * From T_BDBaseData Where (Type='基础' or Type='预算')";
+        strHQL = "Select * From T_BDBaseData Where (Type='Base' or Type='Budget')";
         strHQL += " and DepartCode In " + strDepartString;
 
         if (!string.IsNullOrEmpty(TB_DepartName.Text.Trim()))
@@ -150,7 +150,7 @@ public partial class TTBDBudgetManagement : System.Web.UI.Page
             LB_DepartCode.Text = "";
         }
 
-        strHQL = "Select A.*,B.UserName From T_BDBaseDataRecord A,T_ProjectMember B Where A.EnterCode=B.UserCode and (A.Type='操作' or A.Type='实际')";
+        strHQL = "Select A.*,B.UserName From T_BDBaseDataRecord A,T_ProjectMember B Where A.EnterCode=B.UserCode and (A.Type='Operation' or A.Type='ʵ��')";
         strHQL += " and B.DepartCode In " + strDepartString;
 
        
@@ -203,7 +203,7 @@ public partial class TTBDBudgetManagement : System.Web.UI.Page
 
         BDBaseDataRecordBLL bdBaseDataRecordBLL = new BDBaseDataRecordBLL();
         strHQL = "From BDBaseDataRecord as bdBaseDataRecord where bdBaseDataRecord.DepartCode = '" + strDepartCode + "' and bdBaseDataRecord.AccountName='" + strAccountName + "' and " +
-                "bdBaseDataRecord.YearNum='" + strYearNum.ToString() + "' and bdBaseDataRecord.MonthNum = '" + strMonthNum.ToString() + "' and bdBaseDataRecord.Type='操作' ";
+                "bdBaseDataRecord.YearNum='" + strYearNum.ToString() + "' and bdBaseDataRecord.MonthNum = '" + strMonthNum.ToString() + "' and bdBaseDataRecord.Type='Operation' ";
         lst = bdBaseDataRecordBLL.GetAllBDBaseDataRecords(strHQL);
         if (lst.Count > 0 && lst != null)
         {

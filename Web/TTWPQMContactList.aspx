@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMContactList.aspx.cs" Inherits="TTWPQMContactList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMContactList.aspx.cs" Inherits="TTWPQMContactList" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -8,7 +8,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ËÅîÁªúÂçïÁÆ°ÁêÜ</title>
+    <title>¡™¬Áµ•π‹¿Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script src="js/allAHandler.js" type="text/javascript"></script>
@@ -235,7 +235,7 @@
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="ÁºñÂè∑">
+                                                    <asp:TemplateColumn HeaderText="±‡∫≈">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
@@ -243,47 +243,47 @@
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="WeldProCode" HeaderText="Â∑•Ëâ∫ËØÑÂÆöÁºñÁ†Å">
+                                                    <asp:BoundColumn DataField="WeldProCode" HeaderText="π§“’∆¿∂®±‡¬Î">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="ContactClient" HeaderText="ÂßîÊâò‰∫∫">
+                                                    <asp:BoundColumn DataField="ContactClient" HeaderText="ŒØÕ–»À">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="CommissionedDate" HeaderText="ÂßîÊâòÊó•Êúü" DataFormatString="{0:yyyy-MM-dd}">
+                                                    <asp:BoundColumn DataField="CommissionedDate" HeaderText="ŒØÕ–»’∆⁄" DataFormatString="{0:yyyy-MM-dd}">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="GroupForm" HeaderText="ÁªÑÂØπÂΩ¢Âºè">
+                                                    <asp:BoundColumn DataField="GroupForm" HeaderText="◊È∂‘–Œ Ω">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="TaskSendUnit" HeaderText="ÂèëÈÄÅÂçï‰Ωç">
+                                                    <asp:BoundColumn DataField="TaskSendUnit" HeaderText="∑¢ÀÕµ•Œª">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="SendPerson" HeaderText="ÂèëÈÄÅËÅîÁ≥ª‰∫∫">
+                                                    <asp:BoundColumn DataField="SendPerson" HeaderText="∑¢ÀÕ¡™œµ»À">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="TaskReceiveUnit" HeaderText="Êé•Êî∂Âçï‰Ωç">
+                                                    <asp:BoundColumn DataField="TaskReceiveUnit" HeaderText="Ω” ’µ•Œª">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="ReceivePerson" HeaderText="Êé•Êî∂ËÅîÁ≥ª‰∫∫">
+                                                    <asp:BoundColumn DataField="ReceivePerson" HeaderText="Ω” ’¡™œµ»À">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="ContactNote" HeaderText="Â§áÊ≥®">
+                                                    <asp:BoundColumn DataField="ContactNote" HeaderText="±∏◊¢">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="12%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />

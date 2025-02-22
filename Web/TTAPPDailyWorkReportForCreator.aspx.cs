@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -31,7 +31,7 @@ public partial class TTAPPDailyWorkReportForCreator : System.Web.UI.Page
 
         strProjectID = Request.QueryString["ProjectID"];
 
-        //æ£€æŸ¥ç”¨æˆ·æ˜¯å¦é¡¹ç›®æˆå‘˜
+        //¼ì²éÓÃ»§ÊÇ·ñÏîÄ¿³ÉÔ±
         if (ShareClass.CheckUserIsProjectCreator(strProjectID, strUserCode) == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -69,12 +69,12 @@ public partial class TTAPPDailyWorkReportForCreator : System.Web.UI.Page
     }
     protected void IB_ProPlanGanttNew_Click(object sender, ImageClickEventArgs e)
     {
-        //æ·»åŠ æ´»åŠ¨è®¡åˆ’é“¾æ¥
+        //Ìí¼Ó»î¶¯¼Æ»®Á´½Ó
         string strProjectID;
         string strURL;
 
         strProjectID = LB_ProjectID.Text;
-        string strVerID = ShareClass.GetProjectPlanVersion(strProjectID, "åœ¨ç”¨").ToString();
+        string strVerID = ShareClass.GetProjectPlanVersion(strProjectID, "InUse").ToString();
         if (strVerID != "0")
         {
             strURL = "popShowByURL('" + "TTWorkPlanGanttForProject.aspx?pid=" + strProjectID + "&VerID=" + strVerID + "','Project Plan Gantt',800,600,window.location)";

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMWeldProcedureSpe.aspx.cs" Inherits="TTWPQMWeldProcedureSpe" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMWeldProcedureSpe.aspx.cs" Inherits="TTWPQMWeldProcedureSpe" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -8,7 +8,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>é¢„ç„ŠæŽ¥å·¥è‰ºè§„ç¨‹</title>
+    <title>Ô¤º¸½Ó¹¤ÒÕ¹æ³Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script src="js/allAHandler.js" type="text/javascript"></script>
@@ -306,7 +306,7 @@
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="ç¼–å·">
+                                                    <asp:TemplateColumn HeaderText="±àºÅ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
@@ -314,40 +314,40 @@
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="WeldProCode" HeaderText="ç„ŠæŽ¥å·¥è‰ºè¯„å®š">
+                                                    <asp:BoundColumn DataField="WeldProCode" HeaderText="º¸½Ó¹¤ÒÕÆÀ¶¨">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="WeldingType" HeaderText="ç„ŠæŽ¥ç±»åž‹">
+                                                    <asp:BoundColumn DataField="WeldingType" HeaderText="º¸½ÓÀàÐÍ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="FigureNumber" HeaderText="å›¾å·">
+                                                    <asp:BoundColumn DataField="FigureNumber" HeaderText="Í¼ºÅ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="WeldingTechnology" HeaderText="ç„ŠæŽ¥æŠ€æœ¯">
+                                                    <asp:BoundColumn DataField="WeldingTechnology" HeaderText="º¸½Ó¼¼Êõ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="13%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="WeldingPosition" HeaderText="ç„ŠæŽ¥ä½ç½®">
+                                                    <asp:BoundColumn DataField="WeldingPosition" HeaderText="º¸½ÓÎ»ÖÃ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="AfterHot" HeaderText="ç„ŠåŽçƒ­å¤„ç†æ–¹æ³•">
+                                                    <asp:BoundColumn DataField="AfterHot" HeaderText="Post-WeldHeatTreatmentMethod">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="14%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:HyperLinkColumn DataNavigateUrlField="WeldedJointDiagram" DataNavigateUrlFormatString="{0}" DataTextField="JointNumber" HeaderText="ç„ŠæŽ¥æŽ¥å¤´ç®€å›¾" Target="_blank">
+                                                    <asp:HyperLinkColumn DataNavigateUrlField="WeldedJointDiagram" DataNavigateUrlFormatString="{0}" DataTextField="JointNumber" HeaderText="º¸½Ó½ÓÍ·¼òÍ¼" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                     </asp:HyperLinkColumn>
-                                                    <asp:BoundColumn DataField="WeldingProcess" HeaderText="ç„ŠæŽ¥å·¥è‰ºç¨‹åº">
+                                                    <asp:BoundColumn DataField="WeldingProcess" HeaderText="º¸½Ó¹¤ÒÕ³ÌÐò">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="16%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />

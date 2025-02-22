@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -111,7 +111,7 @@ public partial class TTGoodsMRPOutSourceRequirementPlanView : System.Web.UI.Page
         string strHQL;
 
         strHQL = "Select * From T_ItemMainPlanRelatedItemProductPlan Where PlanVerID = " + strPlanVerID + " and PlanMRPVerID = " + strPlanMRPVerID;
-        strHQL += " and ItemCode in (Select ItemCode From T_Item Where Type = '外协件')";
+        strHQL += " and ItemCode in (Select ItemCode From T_Item Where Type = 'OutParts')";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ItemMainPlanRelatedItemProductPlan");
 
         DataGrid3.DataSource = ds;

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -72,8 +72,8 @@ public partial class TTProjectRelatedUser_BYJF : System.Web.UI.Page
             LoadProjectRelatedUser(strProjectID);
             LoadActorGroup(strUserCode, LB_DepartString.Text.Trim(), strLangCode);
 
-            TB_SMS.Text = strUserName.Trim() + Resources.lang.BaNiJiaRuLeXiangMU + "ï¼š" + strProjectID + " " + strProjectName + Resources.lang.QingJiShiChuLi + "ï¼";
-            TB_PersonalSMS.Text = strUserName.Trim() + Resources.lang.BaNiJiaRuLeXiangMU + "ï¼š" + strProjectID + " " + strProjectName + Resources.lang.QingJiShiChuLi + "ï¼";
+            TB_SMS.Text = strUserName.Trim() + Resources.lang.BaNiJiaRuLeXiangMU + "£º" + strProjectID + " " + strProjectName + Resources.lang.QingJiShiChuLi + "£¡";
+            TB_PersonalSMS.Text = strUserName.Trim() + Resources.lang.BaNiJiaRuLeXiangMU + "£º" + strProjectID + " " + strProjectName + Resources.lang.QingJiShiChuLi + "£¡";
         }
     }
 
@@ -294,7 +294,7 @@ public partial class TTProjectRelatedUser_BYJF : System.Web.UI.Page
         strHQL1 += " and ((to_char(BeginDate,'yyyymmdd') >= to_char(cast('" + strJoinDate + "' as timestamp) ,'yyyymmdd') and to_char(BeginDate,'yyyymmdd') <= to_char( cast('" + strLeaveDate + "' as timestamp),'yyyymmdd'))";
         strHQL1 += " or (to_char(EndDate,'yyyymmdd') >= to_char(cast('" + strJoinDate + "' as timestamp),'yyyymmdd') and to_char(EndDate,'yyyymmdd') <= to_char(cast('" + strLeaveDate + "' as timestamp),'yyyymmdd'))";
         strHQL1 += " or (to_char(BeginDate,'yyyymmdd') <= to_char(cast('" + strJoinDate + "' as timestamp),'yyyymmdd') and to_char(EndDate,'yyyymmdd') >= to_char(cast('" + strLeaveDate + "' as timestamp),'yyyymmdd')))";
-        strHQL1 += " and Type ='é¡¹ç›®' and ProjectID <> " + strProjectID;
+        strHQL1 += " and Type ='Project' and ProjectID <> " + strProjectID;
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL1, "V_ProjectMember_WorkLoadSchedule");
         if (ds.Tables[0].Rows.Count > 0)
         {
@@ -319,7 +319,7 @@ public partial class TTProjectRelatedUser_BYJF : System.Web.UI.Page
         strHQL1 += " and ((to_char(BeginDate,'yyyymmdd') >= to_char(cast('" + strJoinDate + "' as timestamp) ,'yyyymmdd') and to_char(BeginDate,'yyyymmdd') <= to_char( cast('" + strLeaveDate + "' as timestamp),'yyyymmdd'))";
         strHQL1 += " or (to_char(EndDate,'yyyymmdd') >= to_char(cast('" + strJoinDate + "' as timestamp),'yyyymmdd') and to_char(EndDate,'yyyymmdd') <= to_char(cast('" + strLeaveDate + "' as timestamp),'yyyymmdd'))";
         strHQL1 += " or (to_char(BeginDate,'yyyymmdd') <= to_char(cast('" + strJoinDate + "' as timestamp),'yyyymmdd') and to_char(EndDate,'yyyymmdd') >= to_char(cast('" + strLeaveDate + "' as timestamp),'yyyymmdd')))";
-        strHQL1 += " and Type ='é¡¹ç›®' and ProjectID <> " + strProjectID;
+        strHQL1 += " and Type ='Project' and ProjectID <> " + strProjectID;
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL1, "V_ProjectMember_WorkLoadSchedule");
         if (ds.Tables[0].Rows.Count > 0)
         {
@@ -502,7 +502,7 @@ public partial class TTProjectRelatedUser_BYJF : System.Web.UI.Page
             lst = actorGroupBLL.GetAllActorGroups(strHQL);
 
             actorGroup.GroupName = strGroupName;
-            actorGroup.Type = "éƒ¨åˆ†";
+            actorGroup.Type = "²¿·Ö";
             actorGroup.MakeUserCode = strUserCode;
             actorGroup.SortNumber = lst.Count + 1;
             actorGroup.IdentifyString = DateTime.Now.ToString("yyyyMMddHHMMssff");
@@ -586,10 +586,10 @@ public partial class TTProjectRelatedUser_BYJF : System.Web.UI.Page
                         relatedUser.JoinDate = DateTime.Now;
                         relatedUser.LeaveDate = GetProjectEndDate(strProjectID);
                         relatedUser.ActorGroup = strGroupName;
-                        relatedUser.SalaryMethod = "ææˆ";
+                        relatedUser.SalaryMethod = "Ìá³É";
                         relatedUser.PromissionScale = 0;
                         relatedUser.UnitHourSalary = GetUserHourlySalary(actorGroupDetail.UserCode.Trim());
-                        relatedUser.Status = "è®¡åˆ’";
+                        relatedUser.Status = "Plan";
                         relatedUser.CanUpdatePlan = strCanUpdatePlan;
 
                         relatedUserBLL.AddRelatedUser(relatedUser);
@@ -613,7 +613,7 @@ public partial class TTProjectRelatedUser_BYJF : System.Web.UI.Page
                     {
                         relatedUserBLL.DeleteRelatedUser(relatedUser);
 
-                        //åˆ é™¤æ­¤é¡¹ç›®è§¦è‰²ç»„çš„ç›¸å…³æˆå‘˜
+                        //É¾³ı´ËÏîÄ¿´¥É«×éµÄÏà¹Ø³ÉÔ±
                         strHQL = "  delete from T_ActorGroupDetail  where UserCode = " + "'" + strUserCode + "'" + " and GroupName";
                         strHQL += "  in (Select ActorGroupName from T_ProjectRelatedActorGroup where ProjectID = " + strProjectID + ")";
 
@@ -810,7 +810,7 @@ public partial class TTProjectRelatedUser_BYJF : System.Web.UI.Page
         string strGroupName = TB_ActorGroupName.Text.Trim();
         strGroupName = "%" + strGroupName + "%";
 
-        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('ä¸ªäºº','éƒ¨é—¨','å…¬å¸','é›†å›¢','æ‰€æœ‰')";
+        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('¸öÈË','²¿ÃÅ','¹«Ë¾','¼¯ÍÅ','All')";
         strHQL += " and GroupName Like " + "'" + strGroupName + "'";
         strHQL += " and (actorGroup.BlongDepartCode in " + LB_DepartString.Text.Trim();
         strHQL += " Or actorGroup.MakeUserCode = " + "'" + strUserCode + "'" + ")";
@@ -827,7 +827,7 @@ public partial class TTProjectRelatedUser_BYJF : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('ä¸ªäºº','éƒ¨é—¨','å…¬å¸','é›†å›¢','æ‰€æœ‰')";
+        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('¸öÈË','²¿ÃÅ','¹«Ë¾','¼¯ÍÅ','All')";
         strHQL += " and (actorGroup.BelongDepartCode in " + strDepartString;
         strHQL += " Or actorGroup.MakeUserCode = " + "'" + strUserCode + "'" + ")";
         strHQL += " and actorGroup.LangCode = " + "'" + strLangCode + "'";

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -20,8 +20,8 @@ public partial class TTProjectRelatedConstract : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //é’Ÿç¤¼æœˆä½œå“ï¼ˆjack.erp@gmail.com)
-        //Taketop Software 2006ï¼2012
+        //ÖÓÀñÔÂ×÷Æ·£¨jack.erp@gmail.com)
+        //Taketop Software 2006£­2012
 
         string strUserCode = Session["UserCode"].ToString();
         string strHQL;
@@ -42,7 +42,7 @@ public partial class TTProjectRelatedConstract : System.Web.UI.Page
 
         if (lst.Count > 0)
         {
-            //this.Title = Resources.lang.Project + strProjectID + " " + strProjectName + " çš„ç›¸å…³åˆåŒ";
+            //this.Title = Resources.lang.Project + strProjectID + " " + strProjectName + " µÄÏà¹ØºÏÍ¬";
         }
 
         LB_UserCode.Text = strUserCode;

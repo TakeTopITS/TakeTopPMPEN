@@ -1,4 +1,4 @@
-Ôªøusing System; using System.Resources;
+using System; using System.Resources;
 using System.Data;
 using System.Configuration;
 using System.Drawing;
@@ -34,7 +34,7 @@ public partial class TTItemInforView : System.Web.UI.Page
 
             Item item = (Item)lst[0];
 
-            //this.Title = "Áâ©ÊñôÔºö" + item.ItemCode + " " + item.ItemName + " ËµÑÊñôÔºÅ";
+            //this.Title = "ŒÔ¡œ£∫" + item.ItemCode + " " + item.ItemName + " ◊ ¡œ£°";
 
             DataList1.DataSource = lst;
             DataList1.DataBind();

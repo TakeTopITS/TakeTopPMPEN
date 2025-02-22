@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConstractUploadDocForParentWindow.aspx.cs" Inherits="TTConstractUploadDocForParentWindow" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConstractUploadDocForParentWindow.aspx.cs" Inherits="TTConstractUploadDocForParentWindow" %>
 
 <!DOCTYPE html>
 
@@ -25,7 +25,7 @@
             varDocURL = varDocURL.replace(/TAKETOP888888/g, "/");
 
 
-            ////ç”¨äºŽPageOffice
+            ////ÓÃÓÚPageOffice
             //window.parent.document.getElementById('TabContainer4_TabPanel15_HL_ConstractMainDoc').href = "javascript:POBrowser.openWindowModeless('TTOpenWord.aspx?DocURL=" + varDocURL + "', 'fullscreen=yes;');";
 
             window.parent.document.getElementById('TabContainer4_TabPanel15_HL_ContentDocURL').href = varDocURL;

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTHeadLineEdit.aspx.cs" Inherits="TTHeadLineEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTHeadLineEdit.aspx.cs" Inherits="TTHeadLineEdit" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
@@ -137,41 +137,41 @@
                                                     <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <Columns>
-                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ÃÃžÂ¸Ã„' /&gt;&lt;/div&gt;">
+                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='DT??' /&gt;&lt;/div&gt;">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:ButtonColumn>
                                                         <asp:TemplateColumn HeaderText="Delete">
                                                             <ItemTemplate>
-                                                                <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm('Ã„ÃºÃˆÂ·Â¶Â¨Ã’ÂªÃ‰Â¾Â³Ã½Ã‚Ã°(Are you sure you want to delete it)Â£Â¿')" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Ã‰Â¾Â³Ã½' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                                <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm('?¨²¨¨¡¤?¡§¨°a¨¦?3y?e(Are you sure you want to delete it)¡ê?')" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='¨¦?3y' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:TemplateColumn>
                                                         <asp:BoundColumn DataField="ID" HeaderText="ID">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Title" HeaderText="Ã–Ã·ÃŒÃ¢">
+                                                        <asp:BoundColumn DataField="Title" HeaderText="?¡Â¨¬a">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="37%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="NewsType" HeaderText="Â·Â¶ÃŽÂ§">
+                                                        <asp:BoundColumn DataField="NewsType" HeaderText="¡¤??¡ì">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Type" HeaderText="Ã€Ã ÃÃ">
-                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
-                                                        </asp:BoundColumn>
-
-                                                        <asp:BoundColumn DataField="IsHead" HeaderText="ÃÂ·ÃŒÃµ">
+                                                        <asp:BoundColumn DataField="Type" HeaderText="¨¤¨¤D¨ª">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                         </asp:BoundColumn>
 
-                                                        <asp:BoundColumn DataField="RelatedDepartName" HeaderText="Â¹Ã©ÃŠÃ´Â²Â¿ÃƒÃ…">
+                                                        <asp:BoundColumn DataField="IsHead" HeaderText="¨ª¡¤¨¬?">
+                                                            <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
+                                                        </asp:BoundColumn>
+
+                                                        <asp:BoundColumn DataField="RelatedDepartName" HeaderText="1¨¦¨º?2???">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
 
-                                                        <asp:BoundColumn DataField="PublishTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="Â·Â¢Â²Â¼ÃŠÂ±Â¼Ã¤">
+                                                        <asp:BoundColumn DataField="PublishTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="¡¤¡é2?¨º¡À??">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
 
-                                                        <asp:TemplateColumn HeaderText="Ã—Â´ÃŒÂ¬">
+                                                        <asp:TemplateColumn HeaderText="¡Á¡ä¨¬?">
                                                             <ItemTemplate>
                                                                 <%# ShareClass. GetStatusHomeNameByProjectStatus(Eval("Status").ToString(),Eval("Status").ToString()) %>
                                                             </ItemTemplate>
@@ -199,7 +199,7 @@
                                 <tr>
                                     <td width="8%" align="right" class="formItemBgStyle">
                                         <asp:Label ID="LB_ID" Visible="false" runat="server"></asp:Label>
-                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZhuTi%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZhuTi%>"></asp:Label>£º
                                     </td>
                                     <td align="left" class="formItemBgStyle">
                                         <asp:TextBox ID="TB_Title" runat="server" Width="97%"></asp:TextBox>
@@ -207,7 +207,7 @@
                                 </tr>
                                 <tr >
                                     <td align="right" class="formItemBgStyle">
-                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,GuiShuBuMen%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,GuiShuBuMen%>"></asp:Label>£º
                                     </td>
                                     <td align="left" class="formItemBgStyle">
                                         <table>
@@ -233,8 +233,8 @@
                                                 </td>
                                                 <td>
                                                     <asp:DropDownList ID="DL_Type" runat="server">
-                                                        <asp:ListItem Value="å†…éƒ¨" Text="<%$ Resources:lang,NeiBu%>" />
-                                                        <asp:ListItem Value="å¤–éƒ¨" Text="<%$ Resources:lang,WaiBu%>" />
+                                                        <asp:ListItem Value="Internal" Text="<%$ Resources:lang,NeiBu%>" />
+                                                        <asp:ListItem Value="External" Text="<%$ Resources:lang,WaiBu%>" />
                                                     </asp:DropDownList>
                                                 </td>
 
@@ -261,9 +261,9 @@
                                                 </td>
                                                 <td style="display: none;">
                                                     <asp:DropDownList ID="DL_Statu" runat="server" Enabled="false">
-                                                        <asp:ListItem Value="æ–°å»º" Text="<%$ Resources:lang,XinJian%>" />
-                                                        <asp:ListItem Value="å‘å¸ƒ" Text="<%$ Resources:lang,FaBu%>" />
-                                                        <asp:ListItem Value="å½’æ¡£" Text="<%$ Resources:lang,GuiDang%>" />
+                                                        <asp:ListItem Value="New" Text="<%$ Resources:lang,XinJian%>" />
+                                                        <asp:ListItem Value="·¢²¼" Text="<%$ Resources:lang,FaBu%>" />
+                                                        <asp:ListItem Value="Archived" Text="<%$ Resources:lang,GuiDang%>" />
                                                     </asp:DropDownList>
                                                 </td>
                                             </tr>
@@ -280,7 +280,7 @@
                                                     <table>
                                                         <tr>
                                                             <td style="padding-left: 30px;">
-                                                                <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,CongWordDocDaoRu%>"></asp:Label>ï¼š
+                                                                <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,CongWordDocDaoRu%>"></asp:Label>£º
                                                             </td>
                                                             <td>
                                                                 <div onclick="popShowByURLForFixedSize('TTHeadLineUploadDocForParentWindow.aspx','Upload Doc', 600, 500)">
@@ -295,7 +295,7 @@
                                                             </td>
                                                             <td  style="width: 100px; text-align: center;">
                                                                 <asp:Button ID="BT_Import" Text="<%$ Resources:lang,DaoRu %>" CssClass="inpu" runat="server" OnClick="BT_Import_Click"
-                                                                    OnClientClick="return confirm('æç¤ºï¼Œå¯¼å…¥ä¹‹åŽä¼šè¦†ç›–åŽŸå…ˆçš„å†…å®¹ï¼Œç¡®å®šè¦å¯¼å…¥å—(Warning, importing will overwrite the original content. Are you sure you want to import)ï¼Ÿ')" />
+                                                                    OnClientClick="return confirm('ÌáÊ¾£¬µ¼ÈëÖ®ºó»á¸²¸ÇÔ­ÏÈµÄÄÚÈÝ£¬È·¶¨Òªµ¼ÈëÂð(Warning, importing will overwrite the original content. Are you sure you want to import)£¿')" />
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -307,7 +307,7 @@
                                 </tr>
                                 <tr>
                                     <td align="right" valign="top" class="formItemBgStyle">
-                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>£º
                                     </td>
                                     <td align="left" class="formItemBgStyle">
                                         <CKEditor:CKEditorControl ID="CKE_MainContent" Width="98%" Height="550px" runat="server" Visible="False">

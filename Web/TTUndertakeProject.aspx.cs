@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -19,8 +19,8 @@ public partial class TTUndertakeProject : System.Web.UI.Page
     string strLangCode;
     protected void Page_Load(object sender, EventArgs e)
     {
-        //é’Ÿç¤¼æœˆä½œå“ï¼ˆjack.erp@gmail.com)
-        //æ³°é¡¶è½¯ä»¶ï¼ˆTakeTop Software)2006ï¼2012
+        //ÖÓÀñÔÂ×÷Æ·£¨jack.erp@gmail.com)
+        //Ì©¶¥Èí¼ş£¨TakeTop Software)2006£­2012
 
         strLangCode = Session["LangCode"].ToString();
 
@@ -42,8 +42,8 @@ public partial class TTUndertakeProject : System.Web.UI.Page
             LB_UserName.Text = strUserName;
 
             strHQL = string.Format(@"WITH Cost AS (
-                    SELECT ProjectID, SUM(CASE WHEN Type='åŸºç¡€' THEN Total ELSE 0 END) AS BaseCost,
-                    SUM(CASE WHEN Type='æ“ä½œ' THEN Total ELSE 0 END) AS OpCost
+                    SELECT ProjectID, SUM(CASE WHEN Type='Base' THEN Total ELSE 0 END) AS BaseCost,
+                    SUM(CASE WHEN Type='Operation' THEN Total ELSE 0 END) AS OpCost
                     FROM T_ProjectCostManage
                     GROUP BY ProjectID
                     ), Rea AS (
@@ -57,7 +57,7 @@ public partial class TTUndertakeProject : System.Web.UI.Page
                     WHERE C.PMCode = '{0}'
                     AND ((C.ProjectStartupNeedSupperConfirm = 'YES' AND C.ConfirmedBySupper = 'YES')
                     OR C.ProjectStartupNeedSupperConfirm = 'NO')
-                    AND C.Status NOT IN ('éšè—', 'åˆ é™¤', 'å½’æ¡£')
+                    AND C.Status NOT IN ('Hided', 'Deleted', 'Archived')
                     ORDER BY C.ProjectID DESC LIMIT 30;", strUserCode);
 
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectCost");
@@ -89,8 +89,8 @@ public partial class TTUndertakeProject : System.Web.UI.Page
 
 
         string strHQL = "select C.*,COALESCE(D.TotalBL,0) PercentRea from T_Project C left join (select A.ProjectID,COALESCE(B.TotalRea,0)/CASE WHEN A.Total = 0 Then 1 END as TotalBL from (select " +
-            "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='åŸºç¡€' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
-            "T_ProjectCostManage where Type='æ“ä½œ' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID " +
+            "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='Base' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
+            "T_ProjectCostManage where Type='Operation' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID " +
             " left join T_ProjectType E on C.ProjectType = E.Type " +
             " where C.PMCode='" + strUserCode + "' and " + "((E.ProjectStartupNeedSupperConfirm = 'YES' and C.ConfirmedBySupper = 'YES') or E.ProjectStartupNeedSupperConfirm = 'NO') " +
             " and C.Status = '" + strStatus + "' Order by C.ProjectID DESC";
@@ -119,11 +119,11 @@ public partial class TTUndertakeProject : System.Web.UI.Page
 
 
         string strHQL ="select C.*,COALESCE(D.TotalBL,0) PercentRea from T_Project C left join (select A.ProjectID,COALESCE(B.TotalRea,0)/CASE WHEN A.Total = 0 Then 1 END as TotalBL from (select " +
-            "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='åŸºç¡€' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
-            "T_ProjectCostManage where Type='æ“ä½œ' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID" +
+            "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='Base' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
+            "T_ProjectCostManage where Type='Operation' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID" +
             " left join T_ProjectType E on C.ProjectType = E.Type " +
             " where C.PMCode='" + strUserCode + "' and " + "((E.ProjectStartupNeedSupperConfirm = 'YES' and C.ConfirmedBySupper = 'YES') or E.ProjectStartupNeedSupperConfirm = 'NO') " +
-            " and C.Status not in ('éšè—','åˆ é™¤','å½’æ¡£') Order by C.ProjectID DESC";
+            " and C.Status not in ('Hided','Deleted','Archived') Order by C.ProjectID DESC";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectCost");
         DataGrid1.DataSource = ds;
@@ -267,7 +267,7 @@ public partial class TTUndertakeProject : System.Web.UI.Page
 
                 deBudget = project.Budget;
 
-                //å®é™…è´¹ç”¨å’Œé¢„ç®—å¯¹æ¯”
+                //Êµ¼Ê·ÑÓÃºÍÔ¤Ëã¶Ô±È
                 strHQL = "from ProRealCharge as proRealCharge where proRealCharge.ProjectID = " + strProjectID;
                 lst = proRealChargeBLL.GetAllProRealCharges(strHQL);
                 if (lst.Count == 0)
@@ -307,7 +307,7 @@ public partial class TTUndertakeProject : System.Web.UI.Page
                     }
                 }
 
-                //æ ‡å‡†æˆæœ¬å’Œé¢„ç®—å¯¹æ¯”
+                //±ê×¼³É±¾ºÍÔ¤Ëã¶Ô±È
                 deDefaultBudget = ShareClass.GetProjectDefaultFinishCost(strProjectID);
                 if (deBudget == 0)
                 {
@@ -330,7 +330,7 @@ public partial class TTUndertakeProject : System.Web.UI.Page
                 if (deBudgetHeight > 150)
                     deBudgetHeight = 150;
 
-                string strConstractAmontToolTip = "åˆåŒæ€»é¢ï¼š" + GetProjectRelatedConstractTotalReceivablesAmount(strProjectID) + ",åˆåŒåº”æ”¶æ€»é¢ï¼š" + GetProjectRelatedConstractTotalReceivablesAmount(strProjectID) + ",åˆåŒå®æ”¶æ€»é¢ï¼š" + GetProjectRelatedConstractTotalReceiverAmount(strProjectID);
+                string strConstractAmontToolTip = "ºÏÍ¬×Ü¶î£º" + GetProjectRelatedConstractTotalReceivablesAmount(strProjectID) + ",ºÏÍ¬Ó¦ÊÕ×Ü¶î£º" + GetProjectRelatedConstractTotalReceivablesAmount(strProjectID) + ",ºÏÍ¬ÊµÊÕ×Ü¶î£º" + GetProjectRelatedConstractTotalReceiverAmount(strProjectID);
 
                 if (i == 0)
                 {
@@ -351,8 +351,8 @@ public partial class TTUndertakeProject : System.Web.UI.Page
                     LB_ProBdg1.Text = strBudgetProjectID;
                     LB_ProBdg1.ToolTip = strConstractAmontToolTip;
 
-                    IMB_ProCost1.ToolTip = "å·²å‘ç”Ÿè´¹ç”¨ï¼š" + deRealCharge.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
-                    IMB_ProBdg1.ToolTip = "å½“å‰æ—¥æœŸé¢„ç®—ï¼š" + deDefaultBudget.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                    IMB_ProCost1.ToolTip = "ÒÑ·¢Éú·ÑÓÃ£º" + deRealCharge.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                    IMB_ProBdg1.ToolTip = "µ±Ç°ÈÕÆÚÔ¤Ëã£º" + deDefaultBudget.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
                 }
 
                 if (i == 1)
@@ -374,8 +374,8 @@ public partial class TTUndertakeProject : System.Web.UI.Page
                     LB_ProBdg2.Text = strBudgetProjectID;
                     LB_ProBdg2.ToolTip = strConstractAmontToolTip;
 
-                    IMB_ProCost2.ToolTip = "å·²å‘ç”Ÿè´¹ç”¨ï¼š" + deRealCharge.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
-                    IMB_ProBdg2.ToolTip = "å½“å‰æ—¥æœŸé¢„ç®—ï¼š" + deDefaultBudget.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                    IMB_ProCost2.ToolTip = "ÒÑ·¢Éú·ÑÓÃ£º" + deRealCharge.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                    IMB_ProBdg2.ToolTip = "µ±Ç°ÈÕÆÚÔ¤Ëã£º" + deDefaultBudget.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
                 }
 
                 if (i == 2)
@@ -397,8 +397,8 @@ public partial class TTUndertakeProject : System.Web.UI.Page
                     LB_ProBdg3.Text = strBudgetProjectID;
                     LB_ProBdg3.ToolTip = strConstractAmontToolTip;
 
-                    IMB_ProCost3.ToolTip = "å·²å‘ç”Ÿè´¹ç”¨ï¼š" + deRealCharge.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
-                    IMB_ProBdg3.ToolTip = "å½“å‰æ—¥æœŸé¢„ç®—ï¼š" + deDefaultBudget.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                    IMB_ProCost3.ToolTip = "ÒÑ·¢Éú·ÑÓÃ£º" + deRealCharge.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                    IMB_ProBdg3.ToolTip = "µ±Ç°ÈÕÆÚÔ¤Ëã£º" + deDefaultBudget.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
                 }
 
                 if (i == 3)
@@ -421,8 +421,8 @@ public partial class TTUndertakeProject : System.Web.UI.Page
                     LB_ProBdg4.Text = strBudgetProjectID;
                     LB_ProBdg4.ToolTip = strConstractAmontToolTip;
 
-                    IMB_ProCost4.ToolTip = "å·²å‘ç”Ÿè´¹ç”¨ï¼š" + deRealCharge.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
-                    IMB_ProBdg4.ToolTip = "å½“å‰æ—¥æœŸé¢„ç®—ï¼š" + deDefaultBudget.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                    IMB_ProCost4.ToolTip = "ÒÑ·¢Éú·ÑÓÃ£º" + deRealCharge.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                    IMB_ProBdg4.ToolTip = "µ±Ç°ÈÕÆÚÔ¤Ëã£º" + deDefaultBudget.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
                 }
 
                 if (i == 4)
@@ -444,8 +444,8 @@ public partial class TTUndertakeProject : System.Web.UI.Page
                     LB_ProBdg5.Text = strBudgetProjectID;
                     LB_ProBdg5.ToolTip = strConstractAmontToolTip;
 
-                    IMB_ProCost5.ToolTip = "å·²å‘ç”Ÿè´¹ç”¨ï¼š" + deRealCharge.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
-                    IMB_ProBdg5.ToolTip = "å½“å‰æ—¥æœŸé¢„ç®—ï¼š" + deDefaultBudget.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                    IMB_ProCost5.ToolTip = "ÒÑ·¢Éú·ÑÓÃ£º" + deRealCharge.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                    IMB_ProBdg5.ToolTip = "µ±Ç°ÈÕÆÚÔ¤Ëã£º" + deDefaultBudget.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
                 }
 
                 if (i == 5)
@@ -467,8 +467,8 @@ public partial class TTUndertakeProject : System.Web.UI.Page
                     LB_ProBdg6.Text = strBudgetProjectID;
                     LB_ProBdg6.ToolTip = strConstractAmontToolTip;
 
-                    IMB_ProCost6.ToolTip = "å·²å‘ç”Ÿè´¹ç”¨ï¼š" + deRealCharge.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
-                    IMB_ProBdg6.ToolTip = "å½“å‰æ—¥æœŸé¢„ç®—ï¼š" + deDefaultBudget.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                    IMB_ProCost6.ToolTip = "ÒÑ·¢Éú·ÑÓÃ£º" + deRealCharge.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                    IMB_ProBdg6.ToolTip = "µ±Ç°ÈÕÆÚÔ¤Ëã£º" + deDefaultBudget.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
                 }
 
                 if (i == 6)
@@ -490,8 +490,8 @@ public partial class TTUndertakeProject : System.Web.UI.Page
                     LB_ProBdg7.Text = strBudgetProjectID;
                     LB_ProBdg7.ToolTip = strConstractAmontToolTip;
 
-                    IMB_ProCost7.ToolTip = "å·²å‘ç”Ÿè´¹ç”¨ï¼š" + deRealCharge.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
-                    IMB_ProBdg7.ToolTip = "å½“å‰æ—¥æœŸé¢„ç®—ï¼š" + deDefaultBudget.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                    IMB_ProCost7.ToolTip = "ÒÑ·¢Éú·ÑÓÃ£º" + deRealCharge.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                    IMB_ProBdg7.ToolTip = "µ±Ç°ÈÕÆÚÔ¤Ëã£º" + deDefaultBudget.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
                 }
 
                 if (i == 7)
@@ -513,8 +513,8 @@ public partial class TTUndertakeProject : System.Web.UI.Page
                     LB_ProBdg8.Text = strBudgetProjectID;
                     LB_ProBdg8.ToolTip = strConstractAmontToolTip;
 
-                    IMB_ProBdg8.ToolTip = "å·²å‘ç”Ÿè´¹ç”¨ï¼š" + deRealCharge.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
-                    IMB_ProBdg8.ToolTip = "å½“å‰æ—¥æœŸé¢„ç®—ï¼š" + deDefaultBudget.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                    IMB_ProBdg8.ToolTip = "ÒÑ·¢Éú·ÑÓÃ£º" + deRealCharge.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                    IMB_ProBdg8.ToolTip = "µ±Ç°ÈÕÆÚÔ¤Ëã£º" + deDefaultBudget.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
                 }
 
                 if (i == 8)
@@ -536,8 +536,8 @@ public partial class TTUndertakeProject : System.Web.UI.Page
                     LB_ProBdg9.Text = strBudgetProjectID;
                     LB_ProBdg9.ToolTip = strConstractAmontToolTip;
 
-                    IMB_ProCost9.ToolTip = "å·²å‘ç”Ÿè´¹ç”¨ï¼š" + deRealCharge.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
-                    IMB_ProBdg9.ToolTip = "å½“å‰æ—¥æœŸé¢„ç®—ï¼š" + deDefaultBudget.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                    IMB_ProCost9.ToolTip = "ÒÑ·¢Éú·ÑÓÃ£º" + deRealCharge.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                    IMB_ProBdg9.ToolTip = "µ±Ç°ÈÕÆÚÔ¤Ëã£º" + deDefaultBudget.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
                 }
 
                 if (i == 9)
@@ -559,8 +559,8 @@ public partial class TTUndertakeProject : System.Web.UI.Page
                     LB_ProBdg10.Text = strBudgetProjectID;
                     LB_ProBdg10.ToolTip = strConstractAmontToolTip;
 
-                    IMB_ProCost10.ToolTip = "å·²å‘ç”Ÿè´¹ç”¨ï¼š" + deRealCharge.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
-                    IMB_ProBdg10.ToolTip = "å½“å‰æ—¥æœŸé¢„ç®—ï¼š" + deDefaultBudget.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                    IMB_ProCost10.ToolTip = "ÒÑ·¢Éú·ÑÓÃ£º" + deRealCharge.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                    IMB_ProBdg10.ToolTip = "µ±Ç°ÈÕÆÚÔ¤Ëã£º" + deDefaultBudget.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
                 }
             }
         }
@@ -631,9 +631,9 @@ public partial class TTUndertakeProject : System.Web.UI.Page
         strFindCondition = "%" + TB_ProjectName.Text.Trim() + "%";
 
         strHQL = "select C.*,COALESCE(D.TotalBL,0) PercentRea from T_Project C left join (select A.ProjectID,COALESCE(B.TotalRea,0)/CASE WHEN A.Total = 0 Then 1 END as TotalBL from (select " +
-            "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='åŸºç¡€' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
-            "T_ProjectCostManage where Type='æ“ä½œ' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.PMCode='" + strUserCode + "' and " +
-            "C.Status not in ('éšè—','åˆ é™¤','å½’æ¡£') and C.ProjectName like '" + strFindCondition + "' Order by C.ProjectID DESC";
+            "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='Base' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
+            "T_ProjectCostManage where Type='Operation' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.PMCode='" + strUserCode + "' and " +
+            "C.Status not in ('Hided','Deleted','Archived') and C.ProjectName like '" + strFindCondition + "' Order by C.ProjectID DESC";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectCost");
         DataGrid1.DataSource = ds;
@@ -666,16 +666,16 @@ public partial class TTUndertakeProject : System.Web.UI.Page
         if (strFindCondition == "")
         {
             strHQL = "select C.*,COALESCE(D.TotalBL,0) PercentRea from T_Project C left join (select A.ProjectID,COALESCE(B.TotalRea,0)/CASE WHEN A.Total = 0 Then 1 END as TotalBL from (select " +
-                "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='åŸºç¡€' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
-                "T_ProjectCostManage where Type='æ“ä½œ' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.PMCode='" + strUserCode + "' and " +
-                "C.Status not in ('éšè—','åˆ é™¤','å½’æ¡£') Order by C.ProjectID DESC";
+                "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='Base' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
+                "T_ProjectCostManage where Type='Operation' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.PMCode='" + strUserCode + "' and " +
+                "C.Status not in ('Hided','Deleted','Archived') Order by C.ProjectID DESC";
         }
         else
         {
             strHQL = "select C.*,COALESCE(D.TotalBL,0) PercentRea from T_Project C left join (select A.ProjectID,COALESCE(B.TotalRea,0)/CASE WHEN A.Total = 0 Then 1 END as TotalBL from (select " +
-                "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='åŸºç¡€' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
-                "T_ProjectCostManage where Type='æ“ä½œ' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.PMCode='" + strUserCode + "' and " +
-                "C.Status not in ('éšè—','åˆ é™¤','å½’æ¡£') and C.ProjectID = " + strFindCondition + " Order by C.ProjectID DESC";
+                "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='Base' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
+                "T_ProjectCostManage where Type='Operation' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.PMCode='" + strUserCode + "' and " +
+                "C.Status not in ('Hided','Deleted','Archived') and C.ProjectID = " + strFindCondition + " Order by C.ProjectID DESC";
         }
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectCost");
@@ -706,9 +706,9 @@ public partial class TTUndertakeProject : System.Web.UI.Page
 
 
         strHQL = "select C.*,COALESCE(D.TotalBL,0) PercentRea from T_Project C left join (select A.ProjectID,COALESCE(B.TotalRea,0)/CASE WHEN A.Total = 0 Then 1 END as TotalBL from (select " +
-            "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='åŸºç¡€' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
-            "T_ProjectCostManage where Type='æ“ä½œ' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.PMCode='" + strUserCode + "' and " +
-            "C.Status not in ('éšè—','åˆ é™¤','å½’æ¡£') and C.UserName like '" + strFindCondition + "' Order by C.ProjectID DESC";
+            "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='Base' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
+            "T_ProjectCostManage where Type='Operation' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.PMCode='" + strUserCode + "' and " +
+            "C.Status not in ('Hided','Deleted','Archived') and C.UserName like '" + strFindCondition + "' Order by C.ProjectID DESC";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectCost");
         DataGrid1.DataSource = ds;
@@ -739,9 +739,9 @@ public partial class TTUndertakeProject : System.Web.UI.Page
         strUserCode = LB_UserCode.Text.Trim();
 
         strHQL = "select C.*,COALESCE(D.TotalBL,0) PercentRea from T_Project C left join (select A.ProjectID,COALESCE(B.TotalRea,0)/CASE WHEN A.Total = 0 Then 1 END as TotalBL from (select " +
-            "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='åŸºç¡€' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
-            "T_ProjectCostManage where Type='æ“ä½œ' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.PMCode='" + strUserCode + "' and " +
-            "C.Status not in ('éšè—','åˆ é™¤','å½’æ¡£') and to_char(C.BeginDate,'yyyymmdd') >= '" + strStartDate + "' and to_char(C.EndDate,'yyyymmdd') <= '" + strEndDate + "' Order by C.ProjectID DESC";
+            "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='Base' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
+            "T_ProjectCostManage where Type='Operation' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.PMCode='" + strUserCode + "' and " +
+            "C.Status not in ('Hided','Deleted','Archived') and to_char(C.BeginDate,'yyyymmdd') >= '" + strStartDate + "' and to_char(C.EndDate,'yyyymmdd') <= '" + strEndDate + "' Order by C.ProjectID DESC";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectCost");
         DataGrid1.DataSource = ds;

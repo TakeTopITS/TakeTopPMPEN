@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -28,7 +28,7 @@ public partial class TTProjectMemberManHourReport : System.Web.UI.Page
 
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text = "é¡¹ç›®æˆå‘˜å·¥æ—¶æ±‡æ€»è¡¨";
+        LB_ReportName.Text = "ÏîÄ¿³ÉÔ±¹¤Ê±»ã×Ü±í";
 
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
@@ -98,14 +98,14 @@ public partial class TTProjectMemberManHourReport : System.Web.UI.Page
         strBeginTime = DateTime.Parse(DLC_BeginDate.Text).ToString("yyyyMMdd");
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyyMMdd");
 
-        strHQL = @"Select UserCode as 'ä»£ç ',
-                   UserName as 'å§“å',
-                   DepartCode as 'éƒ¨é—¨ä»£ç ',
-                   DepartName as 'éƒ¨é—¨åç§°',
-                   ProjectID as 'é¡¹ç›®ID',
-                   ProjectName as 'é¡¹ç›®',
-                   sum(ManHour) as 'ç”³æŠ¥å·¥æ—¶',
-                   sum(ConfirmManHour) as 'ç¡®è®¤å·¥æ—¶'
+        strHQL = @"Select UserCode as '´úÂë',
+                   UserName as 'ĞÕÃû',
+                   DepartCode as '²¿ÃÅ´úÂë',
+                   DepartName as '²¿ÃÅÃû³Æ',
+                   ProjectID as 'ÏîÄ¿ID',
+                   ProjectName as 'Project',
+                   sum(ManHour) as 'Éê±¨¹¤Ê±',
+                   sum(ConfirmManHour) as 'È·ÈÏ¹¤Ê±'
                    From V_ProjectMemberManHourSummary";
 
         strHQL += " Where DepartName Like " + "'" + strDepartName + "'";
@@ -125,9 +125,9 @@ public partial class TTProjectMemberManHourReport : System.Web.UI.Page
 
         DataTable dtProject = ShareClass.GetDataSetFromSql(strHQL, "project").Tables[0];
 
-        Export3Excel(dtProject, "é¡¹ç›®æˆå‘˜å·¥æ—¶æ±‡æ€»è¡¨.xls");
+        Export3Excel(dtProject, "ÏîÄ¿³ÉÔ±¹¤Ê±»ã×Ü±í.xls");
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¯¼å‡ºæˆåŠŸï¼');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µ¼³ö³É¹¦£¡');", true);
     }
 
     protected void SumManHour(DataSet ds)

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPictureFile.aspx.cs" Inherits="TTPictureFile" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPictureFile.aspx.cs" Inherits="TTPictureFile" %>
 
 <!DOCTYPE html>
 
@@ -7,17 +7,17 @@
     <title></title>
     <script src="js/jquery-1.7.2.min.js"></script>
     <script>
-        //åˆ¤æ–­æµè§ˆå™¨æ˜¯å¦æ”¯æŒHTML5 Canvas           
+        //ÅĞ¶Ïä¯ÀÀÆ÷ÊÇ·ñÖ§³ÖHTML5 Canvas           
         window.onload = function () {
             try {
-                //åŠ¨æ€åˆ›å»ºä¸€ä¸ªcanvaså…ƒ ï¼Œå¹¶è·å–ä»–2Dcontextã€‚å¦‚æœå‡ºç°å¼‚å¸¸åˆ™è¡¨ç¤ºä¸æ”¯æŒ                   
+                //¶¯Ì¬´´½¨Ò»¸öcanvasÔª £¬²¢»ñÈ¡Ëû2Dcontext¡£Èç¹û³öÏÖÒì³£Ôò±íÊ¾²»Ö§³Ö                   
                 document.createElement("canvas").getContext("2d");
-                //document.getElementById("support").innerHTML = "æµè§ˆå™¨æ”¯æŒHTML5 CANVAS";
+                //document.getElementById("support").innerHTML = "ä¯ÀÀÆ÷Ö§³ÖHTML5 CANVAS";
             } catch (e) {
-                document.getElementById("support").innerHTML = "æµè§ˆå™¨ä¸æ”¯æŒHTML5 CANVAS";
+                document.getElementById("support").innerHTML = "ä¯ÀÀÆ÷²»Ö§³ÖHTML5 CANVAS";
             }
         };
-        //è¿™æ®µä»£ ä¸»è¦æ˜¯è·å–æ‘„åƒå¤´çš„è§†é¢‘æµå¹¶æ˜¾ç¤ºåœ¨Video ç­¾ä¸­           
+        //Õâ¶Î´ú Ö÷ÒªÊÇ»ñÈ¡ÉãÏñÍ·µÄÊÓÆµÁ÷²¢ÏÔÊ¾ÔÚVideo Ç©ÖĞ           
         window.addEventListener("DOMContentLoaded", function () {
             var canvas = document.getElementById("canvas"),
                 context = canvas.getContext("2d"),
@@ -26,7 +26,7 @@
                 errBack = function (error) {
                     console.log("Video capture error: ", error.code);
                 };
-            //navigator.getUserMediaè¿™ä¸ªå†™æ³•åœ¨Operaä¸­å¥½åƒæ˜¯navigator.getUserMedianow               
+            //navigator.getUserMediaÕâ¸öĞ´·¨ÔÚOperaÖĞºÃÏñÊÇnavigator.getUserMedianow               
             if (navigator.getUserMedia) {
                 navigator.getUserMedia(videoObj, function (stream) {
                     video.src = stream;
@@ -38,25 +38,25 @@
                     video.play();
                 }, errBack);
             }
-            //è¿™ä¸ªæ˜¯æ‹ç…§æŒ‰é’®çš„äº‹ä»¶ï¼Œ       
+            //Õâ¸öÊÇÅÄÕÕ°´Å¥µÄÊÂ¼ş£¬       
             $("#snap").click(function () {
                 context.drawImage(video, 0, 0, 320, 320);
                 CatchCode();
             });
-        }, false);                     //å®šæ—¶å™¨         
+        }, false);                     //¶¨Ê±Æ÷         
         //var interval = setInterval(CatchCode, "300");
-        //è¿™ä¸ªæ˜¯ åˆ·æ–°ä¸Š å›¾åƒçš„          
+        //Õâ¸öÊÇ Ë¢ĞÂÉÏ Í¼ÏñµÄ          
         function CatchCode() {
             //$("#snap").click();
-            //å®é™…è¿ç”¨å¯ä¸å†™ï¼Œæµ‹è¯•ä»£ ï¼Œ ä¸ºå•å‡»æ‹ç…§æŒ‰é’®å°±è·å–äº†å½“å‰å›¾åƒï¼Œæœ‰å…¶ä»–ç”¨é€”            
+            //Êµ¼ÊÔËÓÃ¿É²»Ğ´£¬²âÊÔ´ú £¬ Îªµ¥»÷ÅÄÕÕ°´Å¥¾Í»ñÈ¡ÁËµ±Ç°Í¼Ïñ£¬ÓĞÆäËûÓÃÍ¾            
             var canvans = document.getElementById("canvas");
-            //è·å–æµè§ˆå™¨é¡µé¢çš„ç”»å¸ƒå¯¹è±¡                      
-            //ä»¥ä¸‹å¼€å§‹ç¼– æ•°æ®                                    
+            //»ñÈ¡ä¯ÀÀÆ÷Ò³ÃæµÄ»­²¼¶ÔÏó                      
+            //ÒÔÏÂ¿ªÊ¼±à Êı¾İ                                    
             var imgData = canvans.toDataURL();
-            //å°†å›¾åƒè½¬æ¢ä¸ºbase64æ•°æ®            
+            //½«Í¼Ïñ×ª»»Îªbase64Êı¾İ            
             var base64Data = imgData.substr(22);
-            //åœ¨å‰ç«¯æˆªå–22ä½ä¹‹åçš„å­—ç¬¦ä¸²ä½œä¸ºå›¾åƒæ•°æ®              
-            //å¼€å§‹å¼‚æ­¥ä¸Š    
+            //ÔÚÇ°¶Ë½ØÈ¡22Î»Ö®ºóµÄ×Ö·û´®×÷ÎªÍ¼ÏñÊı¾İ              
+            //¿ªÊ¼Òì²½ÉÏ    
             $.post("Handler/uploadImgCode.ashx", { "img": base64Data }, function (data, status) {
                 //alert(status+"11"+data);
                 if (status == "success") {
@@ -82,7 +82,7 @@
                     else {
                         // alert(data);                  
                     }
-                } else { alert("æ•°æ®ä¸Š å¤±è´¥"); }
+                } else { alert("Êı¾İÉÏ Ê§°Ü"); }
             }, "text");
         }
 

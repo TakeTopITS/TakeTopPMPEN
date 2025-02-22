@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -22,8 +22,8 @@ public partial class TTMyWorkflowBackupByReview : System.Web.UI.Page
     string strUserCode, strUserName;
     protected void Page_Load(object sender, EventArgs e)
     {
-        //ÈíüÁ§ºÊúà‰ΩúÂìÅÔºàjack.erp@gmail.com)
-        //Ê≥∞È°∂ËΩØ‰ª∂(TakeTop Software)       
+        //÷”¿Ò‘¬◊˜∆∑£®jack.erp@gmail.com)
+        //Ã©∂•»Ìº˛(TakeTop Software)       
         string strHQL;
         IList lst;
 
@@ -39,7 +39,7 @@ public partial class TTMyWorkflowBackupByReview : System.Web.UI.Page
         LB_UserName.Text = strUserName;
 
         //ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "Êü•ÁúãÊâÄÊúâÂ∑•‰ΩúÊµÅ", strUserCode);
+        //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "≤Èø¥À˘”–π§◊˜¡˜", strUserCode);
         //if (blVisible == false)
         //{
         //    Response.Redirect("TTDisplayErrors.aspx");
@@ -66,7 +66,7 @@ public partial class TTMyWorkflowBackupByReview : System.Web.UI.Page
 
             strHQL = "from WLStatus as wlStatus ";
             strHQL += " Where wlStatus.LangCode = " + "'" + strLangCode + "'";
-            strHQL += " and wlStatus.Status <> 'Êñ∞Âª∫'";
+            strHQL += " and wlStatus.Status <> 'New'";
             strHQL += " order by wlStatus.SortNumber ASC";
             WLStatusBLL wlStatusBLL = new WLStatusBLL();
             lst = wlStatusBLL.GetAllWLStatuss(strHQL);
@@ -103,7 +103,7 @@ public partial class TTMyWorkflowBackupByReview : System.Web.UI.Page
         strDepartString = LB_DepartString.Text.Trim();
         strHQL = "Select * from T_WorkFlowBackup  ";
         strHQL += " Where WLID in (Select WLID From T_WorkFlowStepDetailBackup Where Status <> '' And OperatorCode = " + "'" + strUserCode + "')";
-        strHQL += " and Status <> 'Êñ∞Âª∫'";
+        strHQL += " and Status <> 'New'";
         strHQL += " Order by WLID DESC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowBackup");
         DataGrid3.DataSource = ds;
@@ -128,7 +128,7 @@ public partial class TTMyWorkflowBackupByReview : System.Web.UI.Page
         strDepartString = LB_DepartString.Text.Trim();
         strHQL = "Select * from T_WorkFlowBackup where CreatorCode = " + "'" + strOperatorCode + "'";
         strHQL += " and WLID in (Select WLID From T_WorkFlowStepDetailBackup Where Status <> '' And OperatorCode = " + "'" + strUserCode + "')";
-        strHQL += " and Status <> 'Êñ∞Âª∫'";
+        strHQL += " and Status <> 'New'";
         strHQL += " Order by WLID DESC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowBackup");
         DataGrid3.DataSource = ds;
@@ -155,7 +155,7 @@ public partial class TTMyWorkflowBackupByReview : System.Web.UI.Page
         {
             strHQL = "Select * From T_WorkFlowBackup where Status = " + "'" + strStatus + "'";
             strHQL += " and WLID in (Select WLID From T_WorkFlowStepDetailBackup Where Status <> '' And OperatorCode = " + "'" + strUserCode + "')";
-            strHQL += " and Status <> 'Êñ∞Âª∫'";
+            strHQL += " and Status <> 'New'";
             strHQL += " Order by WLID DESC";
 
             LB_QueryScope.Text = Resources.lang.ZZApplicantAll + " " + Resources.lang.ZhuangTai + ":" + strStatus;
@@ -166,7 +166,7 @@ public partial class TTMyWorkflowBackupByReview : System.Web.UI.Page
             {
                 strHQL = "Select * From T_WorkFlowBackup where CreatorCode in (select UserCode from T_ProjectMember where DepartCode = " + "'" + strDepartCode + "'" + ") and " + "Status = " + "'" + strStatus + "'";
                 strHQL += " and WLID in (Select WLID From T_WorkFlowStepDetailBackup Where Status <> '' And OperatorCode = " + "'" + strUserCode + "')";
-                strHQL += " and Status <> 'Êñ∞Âª∫'";
+                strHQL += " and Status <> 'New'";
                 strHQL += " Order by WLID DESC";
                 LB_QueryScope.Text = Resources.lang.ZZZBuMen + strDepartCode + " " + strDepartName + Resources.lang.ZhuangTai + ":" + strStatus;
             }
@@ -175,7 +175,7 @@ public partial class TTMyWorkflowBackupByReview : System.Web.UI.Page
                 string strOperatorName = LB_OperatorName.Text.Trim();
                 strHQL = "Select * From T_WorkFlowBackup where CreatorCode = " + "'" + strOperatorCode + "'" + " and CreatorCode in (select UserCode from T_ProjectMember where DepartCode = " + "'" + strDepartCode + "'" + ") and " + "Status = " + "'" + strStatus + "'";
                 strHQL += " and WLID in (Select WLID From T_WorkFlowStepDetailBackup Where Status <> '' And OperatorCode = " + "'" + strUserCode + "')";
-                strHQL += " and Status <> 'Êñ∞Âª∫'";
+                strHQL += " and Status <> 'New'";
                 strHQL += " Order by WLID DESC";
                 LB_QueryScope.Text = Resources.lang.ZZApplicant + strOperatorCode + strOperatorName + Resources.lang.ZhuangTai + ":" + strStatus;
             }
@@ -226,7 +226,7 @@ public partial class TTMyWorkflowBackupByReview : System.Web.UI.Page
         {
             strHQL = "Select * From T_WorkFlowBackup where WLID = " + strWFID;
             strHQL += " and WLID in (Select WLID From T_WorkFlowStepDetailBackup Where Status <> '' And OperatorCode = " + "'" + strUserCode + "')";
-            strHQL += " and Status <> 'Êñ∞Âª∫'";
+            strHQL += " and Status <> 'New'";
             strHQL += " Order by WLID DESC";
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowBackup");
             DataGrid3.DataSource = ds;
@@ -256,7 +256,7 @@ public partial class TTMyWorkflowBackupByReview : System.Web.UI.Page
 
         strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
-        strHQL = "Select TemName From T_WorkFlowTemplate Where Authority = 'ÊâÄÊúâ'";
+        strHQL = "Select TemName From T_WorkFlowTemplate Where Authority = 'All'";
         strHQL += " and Type = " + "'" + strWFType + "'";
         //strHQL += " and (BelongDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))";
 
@@ -322,7 +322,7 @@ public partial class TTMyWorkflowBackupByReview : System.Web.UI.Page
             strHQL += " and to_char(CreateTime,'yyyymmdd') >= " + "'" + strStartTime + "'" + " and to_char(CreateTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
             strHQL += " and CreatorName Like " + "'" + strCreatorName + "'";
             strHQL += " and WLID in (Select WLID From T_WorkFlowStepDetailBackup Where Status <> '' And OperatorCode = " + "'" + strUserCode + "')";
-            strHQL += " and Status <> 'Êñ∞Âª∫'";
+            strHQL += " and Status <> 'New'";
             strHQL += " Order by WLID DESC";
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowBackup");
             DataGrid3.DataSource = ds;

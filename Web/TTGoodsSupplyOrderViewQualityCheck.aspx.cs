@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 
 using System.Drawing;
@@ -32,7 +32,7 @@ public partial class TTGoodsSupplyOrderViewQualityCheck : System.Web.UI.Page
 
         strSUID = Request.QueryString["SUID"];
 
-        //this.Title = "‰æõË¥ßÂçï";
+        //this.Title = "π©ªıµ•";
 
 
         if (Page.IsPostBack != true)

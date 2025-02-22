@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAllDeletedDocumentView.aspx.cs" Inherits="TTAllDeletedDocumentView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAllDeletedDocumentView.aspx.cs" Inherits="TTAllDeletedDocumentView" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -60,10 +60,10 @@
                                     <table style="margin-top: 5px; width: 98%;">
                                         <tr>
                                             <td style="background: #f0f0f0; width: 100%; text-align: left">
-                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZongHeChaXun%>"></asp:Label>ï¼š<span><asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,WenJianMing%>"></asp:Label>ï¼š<asp:TextBox ID="TB_HazyFind" runat="server" Width="150px"></asp:TextBox>
+                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZongHeChaXun%>"></asp:Label>£º<span><asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,WenJianMing%>"></asp:Label>£º<asp:TextBox ID="TB_HazyFind" runat="server" Width="150px"></asp:TextBox>
                                                     <asp:Button ID="BT_HazyFind" runat="server" OnClick="BT_HazyFind_Click"
                                                         CssClass="inpu" Text="<%$ Resources:lang,MoHuChaXun%>" />&nbsp;
-                                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ShangChuanZhe%>"></asp:Label>ï¼š<asp:TextBox ID="TB_UploaderName"
+                                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ShangChuanZhe%>"></asp:Label>£º<asp:TextBox ID="TB_UploaderName"
                                                         runat="server" Width="72px"></asp:TextBox>
                                                     <asp:Button ID="BT_UploaderFind" runat="server" OnClick="BT_UploaderFind_Click" Text="<%$ Resources:lang,ChaXun%>"
                                                         CssClass="inpu" /></span>
@@ -133,27 +133,27 @@
 
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="DocID" HeaderText="åºå·">
+                                                        <asp:BoundColumn DataField="DocID" HeaderText="ÐòºÅ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="RelatedType" HeaderText="å¤§ç±»">
+                                                        <asp:BoundColumn DataField="RelatedType" HeaderText="´óÀà">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DocType" HeaderText="ç±»åž‹">
+                                                        <asp:BoundColumn DataField="DocType" HeaderText="ÀàÐÍ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
-                                                            DataTextField="DocName" HeaderText="æ–‡ä»¶å" Target="_blank">
+                                                            DataTextField="DocName" HeaderText="ÎÄ¼þÃû" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="33%" />
                                                         </asp:HyperLinkColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="UploadManCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                            DataTextField="UploadManName" HeaderText="ä¸Šä¼ è€…" Target="_blank">
+                                                            DataTextField="UploadManName" HeaderText="ÉÏ´«Õß" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:HyperLinkColumn>
-                                                        <asp:BoundColumn DataField="UploadTime" HeaderText="ä¸Šä¼ æ—¶é—´">
+                                                        <asp:BoundColumn DataField="UploadTime" HeaderText="ÉÏ´«Ê±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                         </asp:BoundColumn>
-                                                        <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                        <asp:TemplateColumn HeaderText="×´Ì¬">
                                                             <ItemTemplate>
                                                                 <%# ShareClass.GetStatusHomeNameByRequirementStatus(Eval("Status").ToString()) %>
                                                             </ItemTemplate>

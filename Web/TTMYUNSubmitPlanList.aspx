@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMYUNSubmitPlanList.aspx.cs" Inherits="TTMYUNSubmitPlanList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMYUNSubmitPlanList.aspx.cs" Inherits="TTMYUNSubmitPlanList" %>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -122,39 +122,39 @@
 
                                                             <ItemStyle CssClass="itemStyle" />
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="PlanID" HeaderText="ç¼–å·">
+                                                                <asp:BoundColumn DataField="PlanID" HeaderText="±àºÅ">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="PlanType" HeaderText="ç±»åž‹">
+                                                                <asp:BoundColumn DataField="PlanType" HeaderText="ÀàÐÍ">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="PlanID" DataNavigateUrlFormatString="TTPlanDetailView.aspx?PlanID={0}"
-                                                                    DataTextField="PlanName" HeaderText="è®¡åˆ’" Target="_blank">
+                                                                    DataTextField="PlanName" HeaderText="Plan" Target="_blank">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="25%" />
                                                                 </asp:HyperLinkColumn>
-                                                                <asp:BoundColumn DataField="StartTime" HeaderText="å¼€å§‹æ—¶é—´" DataFormatString="{0:yyyy/MM/dd}">
+                                                                <asp:BoundColumn DataField="StartTime" HeaderText="¿ªÊ¼Ê±¼ä" DataFormatString="{0:yyyy/MM/dd}">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="EndTime" HeaderText="ç»“æŸæ—¶é—´" DataFormatString="{0:yyyy/MM/dd}">
+                                                                <asp:BoundColumn DataField="EndTime" HeaderText="½áÊøÊ±¼ä" DataFormatString="{0:yyyy/MM/dd}">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="Progress" HeaderText="è¿›åº¦">
+                                                                <asp:BoundColumn DataField="Progress" HeaderText="½ø¶È">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="ScoringBySelf" HeaderText="è‡ªè¯„åˆ†">
+                                                                <asp:BoundColumn DataField="ScoringBySelf" HeaderText="×ÔÆÀ·Ö">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="ScoringByLeader" HeaderText="ä¸Šçº§è¯„åˆ†">
+                                                                <asp:BoundColumn DataField="ScoringByLeader" HeaderText="ÉÏ¼¶ÆÀ·Ö">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                                <asp:TemplateColumn HeaderText="×´Ì¬">
                                                                     <ItemTemplate>
                                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                     </ItemTemplate>
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                                 </asp:TemplateColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                    DataTextField="CreatorName" HeaderText="åˆ¶å®šè€…" Target="_blank">
+                                                                    DataTextField="CreatorName" HeaderText="ÖÆ¶¨Õß" Target="_blank">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                 </asp:HyperLinkColumn>
                                                             </Columns>

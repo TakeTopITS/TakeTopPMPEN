@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopLRExInnerMDISAAS.aspx.cs" Inherits="TakeTopLRExInnerMDISAAS" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopLRExInnerMDISAAS.aspx.cs" Inherits="TakeTopLRExInnerMDISAAS" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -33,7 +33,7 @@
 
 
 <noframes>
-    <body>ä½ çš„æµè§ˆå™¨ä¸æ”¯æŒæ¡†æ¶ï¼</body>
+    <body>ÄãµÄä¯ÀÀÆ÷²»Ö§³Ö¿ò¼Ü£¡</body>
 </noframes>
 <script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
 </html>

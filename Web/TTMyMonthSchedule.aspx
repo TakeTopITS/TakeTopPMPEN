@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMyMonthSchedule.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMyMonthSchedule.aspx.cs"
     Inherits="TTMyMonthSchedule" Culture="zh-CN" %>
 
 <%@ Register Assembly="DayPilot" Namespace="DayPilot.Web.Ui" TagPrefix="DayPilot" %>

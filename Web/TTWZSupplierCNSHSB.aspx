@@ -1,13 +1,13 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSupplierCNSHSB.aspx.cs" Inherits="TTWZSupplierCNSHSB" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSupplierCNSHSB.aspx.cs" Inherits="TTWZSupplierCNSHSB" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>ä¼šå‘˜æ³¨å†Œ,ä¸­å›½çŸ³åŒ–è®¾å¤‡ç½‘</title>
-<meta name="description" content="ä¸­å›½çŸ³åŒ–è®¾å¤‡ç½‘ä¸»è¦ä¸ºçŸ³æ²¹ï¼ŒåŒ–å·¥ï¼Œç…¤åŒ–å·¥ï¼Œé£Ÿå“ï¼Œç²¾ç»†åŒ–å·¥ï¼Œå»ºæï¼ŒåŒ»è¯ï¼Œå†¶é‡‘ï¼Œç‚¼åŒ–ï¼Œæ¶‚æ–™ï¼Œæ²¹æ¼†ï¼Œç²‰ä½“ï¼Œå†œè¯ï¼Œæ ¸ç”µï¼ŒåŒ–è‚¥ç­‰è¡Œä¸šæä¾›çŸ³åŒ–è®¾å¤‡ï¼ŒçŸ³æ²¹æœºæ¢°ï¼ŒåŒ–å·¥æœºæ¢°ï¼Œæ¶‚æ–™æ²¹æ¼†æœºæ¢°ï¼Œé£Ÿå“æœºæ¢°ï¼Œç²‰ä½“è®¾å¤‡ï¼Œåˆ¶è¯æœºæ¢°ï¼Œç‚¼åŒ–è®¾å¤‡ï¼Œå‹åŠ›å®¹å™¨ï¼Œç…¤åŒ–å·¥è®¾å¤‡ç­‰ç›¸å…³è®¾å¤‡ï¼ŒåŒæ—¶ä¸­å›½çŸ³åŒ–è®¾å¤‡ç½‘å¹¶ä¸ºçŸ³æ²¹å’ŒåŒ–å·¥è®¾å¤‡å‚å•†æä¾›æŠ€æœ¯ï¼Œäº¤æ˜“ä¿¡æ¯ç­‰æœåŠ¡ã€‚ä¸­å›½çŸ³åŒ–è®¾å¤‡ç½‘æ¬¢è¿ä½ è®¿é—®å’¨è¯¢ï¼" />
-<meta name="keywords" content="çŸ³åŒ–è®¾å¤‡|çŸ³åŒ–æœºæ¢°è®¾å¤‡|åŒ–å·¥æœºæ¢°è®¾å¤‡|è¯åŒ–è®¾å¤‡" />
+<title>»áÔ±×¢²á,ÖĞ¹úÊ¯»¯Éè±¸Íø</title>
+<meta name="description" content="ÖĞ¹úÊ¯»¯Éè±¸ÍøÖ÷ÒªÎªÊ¯ÓÍ£¬»¯¹¤£¬Ãº»¯¹¤£¬Ê³Æ·£¬¾«Ï¸»¯¹¤£¬½¨²Ä£¬Ò½Ò©£¬Ò±½ğ£¬Á¶»¯£¬Í¿ÁÏ£¬ÓÍÆá£¬·ÛÌå£¬Å©Ò©£¬ºËµç£¬»¯·ÊµÈĞĞÒµÌá¹©Ê¯»¯Éè±¸£¬Ê¯ÓÍ»úĞµ£¬»¯¹¤»úĞµ£¬Í¿ÁÏÓÍÆá»úĞµ£¬Ê³Æ·»úĞµ£¬·ÛÌåÉè±¸£¬ÖÆÒ©»úĞµ£¬Á¶»¯Éè±¸£¬Ñ¹Á¦ÈİÆ÷£¬Ãº»¯¹¤Éè±¸µÈÏà¹ØÉè±¸£¬Í¬Ê±ÖĞ¹úÊ¯»¯Éè±¸Íø²¢ÎªÊ¯ÓÍºÍ»¯¹¤Éè±¸³§ÉÌÌá¹©¼¼Êõ£¬½»Ò×ĞÅÏ¢µÈ·şÎñ¡£ÖĞ¹úÊ¯»¯Éè±¸Íø»¶Ó­Äã·ÃÎÊ×ÉÑ¯£¡" />
+<meta name="keywords" content="Ê¯»¯Éè±¸|Ê¯»¯»úĞµÉè±¸|»¯¹¤»úĞµÉè±¸|Ò©»¯Éè±¸" />
 <script src="http://www.cnshsb.com/script/prototype.js" type="text/javascript"></script>
 <script src="http://www.cnshsb.com/script/index.js" type="text/javascript"></script>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -23,7 +23,7 @@
 <div id="top">
    <div id="top_sider"><Span style="float:left; padding-left:10px;">
        <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ZGSHSBWSZSYSXCXB%>"></asp:Label><a href="#" class="Thome" onclick="setHomepage('http://www.cnshsb.com')" >
-           <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,SheWeiShouYe%>"></asp:Label></a> | <a href="#" onclick="window.external.addFavorite('http://www.cnshsb.com','çŸ³åŒ–è®¾å¤‡|çŸ³åŒ–æœºæ¢°è®¾å¤‡|åŒ–å·¥æœºæ¢°è®¾å¤‡|è¯åŒ–è®¾å¤‡')">
+           <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,SheWeiShouYe%>"></asp:Label></a> | <a href="#" onclick="window.external.addFavorite('http://www.cnshsb.com','Ê¯»¯Éè±¸|Ê¯»¯»úĞµÉè±¸|»¯¹¤»úĞµÉè±¸|Ò©»¯Éè±¸')">
                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,TianJiaShouCang%>"></asp:Label></a> | <a href="http://www.cnshsb.com/main.php?action=admin_shop_set">
                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,WangZhanJianShe%>"></asp:Label></a> | <a href="http://www.cnshsb.com/aboutus.php?type=6">
                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,WangLuoTuiGuang%>"></asp:Label></a> | <a href="http://www.cnshsb.com/aboutus.php?type=6">
@@ -165,7 +165,7 @@
 		</div>
 </div>
 </div>
-<!--å¤´ç»“æŸ-->
+<!--Í·½áÊø-->
 <div class="clear"></div>
     <div id="middleadsec">
     <script src='http://www.cnshsb.com/api/ad.php?id=14'></script>
@@ -177,19 +177,19 @@
     </div>		
 </div>
 <script type=text/javascript>
-    var allnotblank = 'æ‰€æœ‰é€‰é¡¹ä¸èƒ½ä¸ºç©º';
-    var passlength = 'å¯†ç ä¸èƒ½å°‘äº4ä¸ªå­—ç¬¦ï¼';
-    var passistooleng = 'å¯†ç ä¸èƒ½è¶…è¿‡20ä¸ªå­—ç¬¦ï¼';
-    var passnotsame = 'å¯†ç è¾“å…¥ä¸ä¸€è‡³ï¼';
-    var emailerror = 'E-mailæ ¼å¼ä¸æ­£ç¡®ï¼';
-    var randcodeerror = 'è¯·æ­£ç¡®å¡«å†™éªŒè¯é—®é¢˜';
-    var randcodeisemp = 'è¯·è¾“å…¥éªŒè¯ç ';
-    var rcodeiserror = 'è¯·æ­£ç¡®å¡«å†™éªŒè¯ç ';
-    var enterusername = 'è¯·å¡«å†™ç”¨æˆ·å';
-    var unameisfour = 'ç”¨æˆ·åå¿…é¡»å¤§äº4ä½';
-    var unameisen = 'ç”¨æˆ·åä¸å…è®¸ç”¨ä¸­æ–‡';
-    var usernameprotect = 'ç”¨æˆ·åå·²å­˜åœ¨æˆ–è€…å—åˆ°ä¿æŠ¤ç¦æ­¢ä½¿ç”¨ï¼';
-    var have_blank = 'ç”¨æˆ·åä¸­ä¸å…è®¸æœ‰ç©ºæ ¼ï¼';
+    var allnotblank = 'ËùÓĞÑ¡Ïî²»ÄÜÎª¿Õ';
+    var passlength = 'ÃÜÂë²»ÄÜÉÙÓÚ4¸ö×Ö·û£¡';
+    var passistooleng = 'ÃÜÂë²»ÄÜ³¬¹ı20¸ö×Ö·û£¡';
+    var passnotsame = 'ÃÜÂëÊäÈë²»Ò»ÖÁ£¡';
+    var emailerror = 'E-mail¸ñÊ½²»ÕıÈ·£¡';
+    var randcodeerror = 'ÇëÕıÈ·ÌîĞ´ÑéÖ¤ÎÊÌâ';
+    var randcodeisemp = 'ÇëÊäÈëÑéÖ¤Âë';
+    var rcodeiserror = 'ÇëÕıÈ·ÌîĞ´ÑéÖ¤Âë';
+    var enterusername = 'ÇëÌîĞ´ÓÃ»§Ãû';
+    var unameisfour = 'ÓÃ»§Ãû±ØĞë´óÓÚ4Î»';
+    var unameisen = 'ÓÃ»§Ãû²»ÔÊĞíÓÃÖĞÎÄ';
+    var usernameprotect = 'ÓÃ»§ÃûÒÑ´æÔÚ»òÕßÊÜµ½±£»¤½ûÖ¹Ê¹ÓÃ£¡';
+    var have_blank = 'ÓÃ»§ÃûÖĞ²»ÔÊĞíÓĞ¿Õ¸ñ£¡';
 </script>
 <script src="http://www.cnshsb.com/script/register.js" type=text/javascript></script>
 <script type="text/javascript">
@@ -216,7 +216,7 @@
                 $(ob).style.visibility = "hidden";
             $(ob).options.length = j + 1;
             $(ob).options[0].value = '';
-            $(ob).options[0].text = 'è¯·é€‰æ‹©è¡Œä¸šç±»åˆ«';
+            $(ob).options[0].text = 'ÇëÑ¡ÔñĞĞÒµÀà±ğ';
             $(ob).options[0].selected = true;
             //alert(j);
             for (var k in MyMe) {
@@ -237,7 +237,7 @@
         }
     }
 </script>
-<!--ä¸»ä½“å¼€å§‹ -->
+<!--Ö÷Ìå¿ªÊ¼ -->
 <div id="mainbody1" class="m1">
     	<div class="leftbar">
 	<div class="title4"><div class="title_left2 L2">
@@ -276,7 +276,7 @@
 				<div class="clear"></div>
 				</div>
 		</div>		
-		<!--ä¸»ä½“å³ä¾§ç»“æŸ -->
+		<!--Ö÷ÌåÓÒ²à½áÊø -->
 
 </div>
 <div class="pic1"><img src="image/green/pic02.gif" width="960" height="70" /></div>

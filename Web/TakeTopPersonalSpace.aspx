@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" Async="true" CodeFile="TakeTopPersonalSpace.aspx.cs" Inherits="TakeTopPersonalSpace" %>
+ï»¿<%@ Page Language="C#" AutoEventWireup="true" Async="true" CodeFile="TakeTopPersonalSpace.aspx.cs" Inherits="TakeTopPersonalSpace" %>
 
 <%@ OutputCache Duration="2678400" VaryByParam="*" %>
 
@@ -142,7 +142,7 @@
 
         #div_username {
             /*  display: flex;*/
-            align-items: center; /* ´¹Ö±¾ÓÖÐ */
+            align-items: center; /* ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ */
             color: white;
             font-size: 12px;
         }
@@ -151,7 +151,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%); /* ÈÃÍ¼±êÏà¶ÔÓÚÆä×ÔÉíÖÐÐÄµã¶¨Î» */
+            transform: translate(-50%, -50%); /* ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµã¶¨Î» */
         }
 
         .TextColor {
@@ -215,21 +215,21 @@
 
         }
 
-        //ÉèÖÃ×ó±ßÀ¸ÔªËØµÄÖµ
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Øµï¿½Öµ
         function setExtendValue(isFalse) {
 
             top.frames[0].frames[2].parent.frames["leftMiddleFrame"].setExtendValue(isFalse);
 
         }
 
-        //µ¯³öÏûÏ¢¿ò
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½
         function clickPopMsgWindow() {
 
             top.frames[0].frames[2].parent.frames["rightTopFrame"].clickPopMsgWindow();
         }
 
 
-        //ÉèÖÃÆÁÄ»×´Ì¬
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»×´Ì¬
         var varScreenFull = false;
         function setScreenStatus() {
 
@@ -245,7 +245,7 @@
             }
         }
 
-        //È«ÆÁ
+        //È«ï¿½ï¿½
         function fullScreen() {
 
             var el = top.document.documentElement;
@@ -267,7 +267,7 @@
 
         }
 
-        //ÍË³öÈ«ÆÁ
+        //ï¿½Ë³ï¿½È«ï¿½ï¿½
         function exitScreen() {
 
             var el = document;
@@ -414,4 +414,4 @@
     var oLink = document.getElementById('mainCss');
     oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';
 </script>
-</html>
+</html><%--***--%>

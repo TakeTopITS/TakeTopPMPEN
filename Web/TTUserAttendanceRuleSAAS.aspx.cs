@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -41,9 +41,9 @@ public partial class TTUserAttendanceRuleSAAS : System.Web.UI.Page
             strHQL += "OCheckInStart,OCheckInEnd,OCheckOutStart,OCheckOutEnd,Status,MCheckInIsMust,MCheckOutIsMust,ACheckInIsMust,ACheckOutIsMust,NCheckInIsMust,NCheckOutIsMust,OCheckInIsMust,OCheckOutIsMust,LargestDistance,LeaderCode,LeaderName,OfficeLongitude,OfficeLatitude,Address)";
             strHQL += " Select distinct A.UserCode,A.UserName ,now(),B.MCheckInStart,B.MCheckInEnd,B.MCheckOutStart,B.MCheckOutEnd,";
             strHQL += "B.ACheckInStart,B.ACheckInEnd,B.ACheckOutStart,B.ACheckOutEnd,B.NCheckInStart,B.NCheckInEnd,B.NCheckOutStart,B.NCheckOutEnd,";
-            strHQL += "B.OCheckInStart,B.OCheckInEnd,B.OCheckOutStart,B.OCheckOutEnd,'处理中',B.MCheckInIsMust,B.MCheckOutIsMust,B.ACheckInIsMust,B.ACheckOutIsMust,B.NCheckInIsMust,B.NCheckOutIsMust,B.OCheckInIsMust,B.OCheckOutIsMust,B.LargestDistance,'" + strUserCode + "','" + strUserName + "',B.OfficeLongitude,B.OfficeLatitude,B.Address";
+            strHQL += "B.OCheckInStart,B.OCheckInEnd,B.OCheckOutStart,B.OCheckOutEnd,'InProgress',B.MCheckInIsMust,B.MCheckOutIsMust,B.ACheckInIsMust,B.ACheckOutIsMust,B.NCheckInIsMust,B.NCheckOutIsMust,B.OCheckInIsMust,B.OCheckOutIsMust,B.LargestDistance,'" + strUserCode + "','" + strUserName + "',B.OfficeLongitude,B.OfficeLatitude,B.Address";
             strHQL += " From T_ProjectMember A, T_AttendanceRule B";
-            strHQL += " Where A.UserCode = '" +strUserCode + "' and A.UserCode not in (Select LeaderCode From T_UserAttendanceRule Where UserCode = LeaderCode and LeaderCode ='" +strUserCode+ "') and A.Status not in ('离职','终止') ";
+            strHQL += " Where A.UserCode = '" +strUserCode + "' and A.UserCode not in (Select LeaderCode From T_UserAttendanceRule Where UserCode = LeaderCode and LeaderCode ='" +strUserCode+ "') and A.Status not in ('Resign','Stop') ";
 
             ShareClass.RunSqlCommand(strHQL);
 
@@ -239,9 +239,9 @@ public partial class TTUserAttendanceRuleSAAS : System.Web.UI.Page
             strID = ShareClass.GetMyCreatedMaxUserAttendanceRule(strUserCode);
             LB_ID.Text = strID;
 
-            if (strStatus == "处理中")
+            if (strStatus == "InProgress")
             {
-                strHQL = "Update T_UserAttendanceRule Set Status = '备用' Where ID <> " + strID + " and UserCode = " + "'" + strUserCode + "'";
+                strHQL = "Update T_UserAttendanceRule Set Status = 'Backup' Where ID <> " + strID + " and UserCode = " + "'" + strUserCode + "'";
                 ShareClass.RunSqlCommand(strHQL);
             }
 
@@ -363,9 +363,9 @@ public partial class TTUserAttendanceRuleSAAS : System.Web.UI.Page
         {
             userAttendanceRuleBLL.UpdateUserAttendanceRule(userAttendanceRule, int.Parse(strID));
 
-            if (strStatus == "处理中")
+            if (strStatus == "InProgress")
             {
-                strHQL = "Update T_UserAttendanceRule Set Status = '备用' Where ID <> " + strID + " and UserCode = " + "'" + strUserCode + "'";
+                strHQL = "Update T_UserAttendanceRule Set Status = 'Backup' Where ID <> " + strID + " and UserCode = " + "'" + strUserCode + "'";
                 ShareClass.RunSqlCommand(strHQL);
             }
 

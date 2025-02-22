@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTBaseDataOuter.aspx.cs" Inherits="TTBaseDataOuter" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTBaseDataOuter.aspx.cs" Inherits="TTBaseDataOuter" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
@@ -566,13 +566,13 @@
                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="ÂêçÁß∞">
+                                    <asp:TemplateColumn HeaderText="√˚≥∆">
                                         <ItemTemplate>
                                             <asp:Button ID="BT_KPIType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                         </ItemTemplate>
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                     </asp:TemplateColumn>
-                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                     </asp:BoundColumn>
                                 </Columns>
@@ -683,16 +683,16 @@
                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="Â∫èÂè∑">
+                                    <asp:TemplateColumn HeaderText="–Ú∫≈">
                                         <ItemTemplate>
                                             <asp:Button ID="BT_PositionID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                         </ItemTemplate>
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                     </asp:TemplateColumn>
-                                    <asp:BoundColumn DataField="Position" HeaderText="ËÅåÁß∞">
+                                    <asp:BoundColumn DataField="Position" HeaderText="÷∞≥∆">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                     </asp:BoundColumn>
                                 </Columns>
@@ -744,16 +744,16 @@
                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="ËÅåÂä°">
+                                    <asp:TemplateColumn HeaderText="÷∞ŒÒ">
                                         <ItemTemplate>
                                             <asp:Button ID="BT_Duty" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Duty") %>' />
                                         </ItemTemplate>
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                     </asp:TemplateColumn>
-                                    <asp:BoundColumn DataField="KeyWord" HeaderText="ÂÖ≥ÈîÆÂ≠ó">
+                                    <asp:BoundColumn DataField="KeyWord" HeaderText="πÿº¸◊÷">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                     </asp:BoundColumn>
                                 </Columns>
@@ -801,13 +801,13 @@
                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="Á±ªÂûãÂêçÁß∞">
+                                    <asp:TemplateColumn HeaderText="¿‡–Õ√˚≥∆">
                                         <ItemTemplate>
                                             <asp:Button ID="BT_TypeName" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"TypeName").ToString().Trim() %>' />
                                         </ItemTemplate>
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                     </asp:TemplateColumn>
-                                    <asp:BoundColumn DataField="SortNo" HeaderText="ÊéíÂ∫è">
+                                    <asp:BoundColumn DataField="SortNo" HeaderText="≈≈–Ú">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                     </asp:BoundColumn>
                                 </Columns>
@@ -850,13 +850,13 @@
                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="ÂêçÁß∞">
+                                    <asp:TemplateColumn HeaderText="√˚≥∆">
                                         <ItemTemplate>
                                             <asp:Button ID="BT_LeaveType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                         </ItemTemplate>
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                     </asp:TemplateColumn>
-                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                     </asp:BoundColumn>
                                 </Columns>
@@ -894,11 +894,11 @@
                     </tr>
                     <tr>
                         <td style="height: 19px;"><strong>
-                            <asp:Label ID="Label21" runat="server" Text="Âä†Áè≠Á±ªÂûã"></asp:Label>
+                            <asp:Label ID="Label21" runat="server" Text="º”∞‡¿‡–Õ"></asp:Label>
                         </strong></td>
                         <td>&nbsp;</td>
                         <td align="center"><strong>
-                            <asp:Label ID="Label492291" runat="server" Text="ËäÇÊó•Á±ªÂûã"></asp:Label>
+                            <asp:Label ID="Label492291" runat="server" Text="Ω⁄»’¿‡–Õ"></asp:Label>
                         </strong></td>
                         <td>&nbsp;</td>
                         <td align="center" colspan="4">&nbsp;</td>
@@ -934,13 +934,13 @@
                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="ÂêçÁß∞">
+                                    <asp:TemplateColumn HeaderText="√˚≥∆">
                                         <ItemTemplate>
                                             <asp:Button ID="BT_OvertimeType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                         </ItemTemplate>
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                     </asp:TemplateColumn>
-                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                     </asp:BoundColumn>
                                 </Columns>
@@ -987,13 +987,13 @@
                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="ÂêçÁß∞">
+                                    <asp:TemplateColumn HeaderText="√˚≥∆">
                                         <ItemTemplate>
                                             <asp:Button ID="BT_FestivalsType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                         </ItemTemplate>
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                     </asp:TemplateColumn>
-                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                     </asp:BoundColumn>
                                 </Columns>
@@ -1139,86 +1139,86 @@
                                         </ItemTemplate>
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                     </asp:TemplateColumn>
-                                    <asp:BoundColumn DataField="MCheckInStart" HeaderText="Êó©Áè≠‰∏äÁè≠ÂºÄÂßãÊó∂Èó¥">
+                                    <asp:BoundColumn DataField="MCheckInStart" HeaderText="‘Á∞‡…œ∞‡ø™ º ±º‰">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="MCheckInEnd" HeaderText="Êó©Áè≠‰∏äÁè≠ÁªìÊùüÊó∂Èó¥">
+                                    <asp:BoundColumn DataField="MCheckInEnd" HeaderText="‘Á∞‡…œ∞‡Ω· ¯ ±º‰">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="MCheckInIsMust" HeaderText="Êó©Áè≠‰∏äÁè≠ÂøÖÈ°ª">
+                                    <asp:BoundColumn DataField="MCheckInIsMust" HeaderText="‘Á∞‡…œ∞‡±ÿ–Î">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="1%" />
                                     </asp:BoundColumn>
 
-                                    <asp:BoundColumn DataField="MCheckOutStart" HeaderText="Êó©Áè≠‰∏ãÁè≠ÂºÄÂßãÊó∂Èó¥">
+                                    <asp:BoundColumn DataField="MCheckOutStart" HeaderText="‘Á∞‡œ¬∞‡ø™ º ±º‰">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="MCheckOutEnd" HeaderText="Êó©Áè≠‰∏ãÁè≠ÁªìÊùüÊó∂Èó¥">
+                                    <asp:BoundColumn DataField="MCheckOutEnd" HeaderText="‘Á∞‡œ¬∞‡Ω· ¯ ±º‰">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="MCheckOutIsMust" HeaderText="Êó©Áè≠‰∏ãÁè≠ÂøÖÈ°ª">
+                                    <asp:BoundColumn DataField="MCheckOutIsMust" HeaderText="‘Á∞‡œ¬∞‡±ÿ–Î">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="1%" />
                                     </asp:BoundColumn>
 
-                                    <asp:BoundColumn DataField="ACheckInStart" HeaderText="‰∏≠Áè≠‰∏äÁè≠ÂºÄÂßãÊó∂Èó¥">
+                                    <asp:BoundColumn DataField="ACheckInStart" HeaderText="÷–∞‡…œ∞‡ø™ º ±º‰">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="ACheckInEnd" HeaderText="‰∏≠Áè≠‰∏äÁè≠ÁªìÊùüÊó∂Èó¥">
+                                    <asp:BoundColumn DataField="ACheckInEnd" HeaderText="÷–∞‡…œ∞‡Ω· ¯ ±º‰">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="ACheckInIsMust" HeaderText="‰∏≠‰∏äÂçà‰∏äÁè≠ÂøÖÈ°ª">
+                                    <asp:BoundColumn DataField="ACheckInIsMust" HeaderText="÷–…œŒÁ…œ∞‡±ÿ–Î">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="1%" />
                                     </asp:BoundColumn>
 
-                                    <asp:BoundColumn DataField="ACheckOutStart" HeaderText="‰∏≠Áè≠‰∏ãÁè≠ÂºÄÂßãÊó∂Èó¥">
+                                    <asp:BoundColumn DataField="ACheckOutStart" HeaderText="÷–∞‡œ¬∞‡ø™ º ±º‰">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="ACheckOutEnd" HeaderText="‰∏≠Áè≠‰∏ãÁè≠ÁªìÊùüÊó∂Èó¥">
+                                    <asp:BoundColumn DataField="ACheckOutEnd" HeaderText="÷–∞‡œ¬∞‡Ω· ¯ ±º‰">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="ACheckOutIsMust" HeaderText="‰∏≠Âçà‰∏ãÁè≠ÂøÖÈ°ª">
+                                    <asp:BoundColumn DataField="ACheckOutIsMust" HeaderText="÷–ŒÁœ¬∞‡±ÿ–Î">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="1%" />
                                     </asp:BoundColumn>
 
-                                    <asp:BoundColumn DataField="NCheckInStart" HeaderText="ÊôöÁè≠‰∏äÁè≠ÂºÄÂßãÊó∂Èó¥">
+                                    <asp:BoundColumn DataField="NCheckInStart" HeaderText="ÕÌ∞‡…œ∞‡ø™ º ±º‰">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="NCheckInEnd" HeaderText="ÊôöÁè≠‰∏äÁè≠ÁªìÊùüÊó∂Èó¥">
+                                    <asp:BoundColumn DataField="NCheckInEnd" HeaderText="ÕÌ∞‡…œ∞‡Ω· ¯ ±º‰">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="NCheckInIsMust" HeaderText="ÊôöÁè≠‰∏äÁè≠ÂøÖÈ°ª">
+                                    <asp:BoundColumn DataField="NCheckInIsMust" HeaderText="ÕÌ∞‡…œ∞‡±ÿ–Î">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="1%" />
                                     </asp:BoundColumn>
 
-                                    <asp:BoundColumn DataField="NCheckOutStart" HeaderText="ÊôöÁè≠‰∏ãÁè≠ÂºÄÂßãÊó∂Èó¥">
+                                    <asp:BoundColumn DataField="NCheckOutStart" HeaderText="ÕÌ∞‡œ¬∞‡ø™ º ±º‰">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="NCheckOutEnd" HeaderText="ÊôöÁè≠‰∏ãÁè≠ÁªìÊùüÊó∂Èó¥">
+                                    <asp:BoundColumn DataField="NCheckOutEnd" HeaderText="ÕÌ∞‡œ¬∞‡Ω· ¯ ±º‰">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="NCheckOutIsMust" HeaderText="ÊôöÁè≠‰∏ãÁè≠ÂøÖÈ°ª">
+                                    <asp:BoundColumn DataField="NCheckOutIsMust" HeaderText="ÕÌ∞‡œ¬∞‡±ÿ–Î">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="1%" />
                                     </asp:BoundColumn>
 
-                                    <asp:BoundColumn DataField="OCheckInStart" HeaderText="Âä†Áè≠‰∏äÁè≠ÂºÄÂßãÊó∂Èó¥">
+                                    <asp:BoundColumn DataField="OCheckInStart" HeaderText="º”∞‡…œ∞‡ø™ º ±º‰">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="OCheckInEnd" HeaderText="Âä†Áè≠‰∏äÁè≠ÁªìÊùüÊó∂Èó¥">
+                                    <asp:BoundColumn DataField="OCheckInEnd" HeaderText="º”∞‡…œ∞‡Ω· ¯ ±º‰">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="OCheckInIsMust" HeaderText="Âä†Áè≠‰∏äÁè≠ÂøÖÈ°ª">
+                                    <asp:BoundColumn DataField="OCheckInIsMust" HeaderText="º”∞‡…œ∞‡±ÿ–Î">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="1%" />
                                     </asp:BoundColumn>
 
-                                    <asp:BoundColumn DataField="OCheckOutStart" HeaderText="Âä†Áè≠‰∏ãÁè≠ÂºÄÂßãÊó∂Èó¥">
+                                    <asp:BoundColumn DataField="OCheckOutStart" HeaderText="º”∞‡œ¬∞‡ø™ º ±º‰">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="OCheckOutEnd" HeaderText="Âä†Áè≠‰∏ãÁè≠ÁªìÊùüÊó∂Èó¥">
+                                    <asp:BoundColumn DataField="OCheckOutEnd" HeaderText="º”∞‡œ¬∞‡Ω· ¯ ±º‰">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="OCheckOutIsMust" HeaderText="Âä†Áè≠‰∏ãÁè≠ÂøÖÈ°ª">
+                                    <asp:BoundColumn DataField="OCheckOutIsMust" HeaderText="º”∞‡œ¬∞‡±ÿ–Î">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="1%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="LargestDistance" HeaderText="ÂÖÅËÆ∏ÊúÄÂ§ßË∑ùÁ¶ª">
+                                    <asp:BoundColumn DataField="LargestDistance" HeaderText="‘ –Ì◊Ó¥Ûæ‡¿Î">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                     </asp:BoundColumn>
                                 </Columns>
@@ -1230,7 +1230,7 @@
                             <asp:Label ID="Label284" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>
                             <asp:Label ID="LB_AttendanceRuleID" runat="server"></asp:Label>
                         </td>
-                        <td align="left" colspan="7"><span style="color: #CC;">Ôºà<asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,GeShiShiLiZhuYiFenZhongGeShiHeFanWei%>"></asp:Label>
+                        <td align="left" colspan="7"><span style="color: #CC;">£®<asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,GeShiShiLiZhuYiFenZhongGeShiHeFanWei%>"></asp:Label>
                             --&gt;<asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,XSGSHFW%>"></asp:Label>
                             &gt;<asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,FZHXSDBNWFS%>"></asp:Label>
                         </span></td>
@@ -1333,7 +1333,7 @@
                             <asp:Label ID="Label100" runat="server" Text="<%$ Resources:lang,DiZhi%>"></asp:Label>
                             <asp:TextBox ID="TB_Address" runat="server" Width="300px"></asp:TextBox>
                             <a class="titleSpan" onclick="popShowByURL('TTUserAttendanceRuleBaiDuMap.aspx','BaiDuMap', 600, 500)">
-                                <img src="ImagesSkin/GPS.jpg" alt="ÂèñÁªèÁ∫¨Â∫¶" width="20" height="20" style="border: 0px;">
+                                <img src="ImagesSkin/GPS.jpg" alt="»°æ≠Œ≥∂»" width="20" height="20" style="border: 0px;">
                             </a>
                             &nbsp;&nbsp;<asp:Label ID="Label2119" runat="server" Text="<%$ Resources:lang,YunXiZuiDaJuLi%>"></asp:Label>
                             <NickLee:NumberBox ID="NB_LargestDistance" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" Width="80px">0.00</NickLee:NumberBox>
@@ -1381,7 +1381,7 @@
                         </b></td>
                         <td style="height: 7px;">
                             <strong>
-                                <asp:Label ID="Label492273" runat="server" Text="Áº∫Èô∑Á±ªÂûã"></asp:Label>
+                                <asp:Label ID="Label492273" runat="server" Text="»±œ›¿‡–Õ"></asp:Label>
                             </strong>&nbsp;</td>
                     </tr>
                     <tr>
@@ -1415,13 +1415,13 @@
                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="Âçï‰Ωç">
+                                    <asp:TemplateColumn HeaderText="µ•Œª">
                                         <ItemTemplate>
                                             <asp:Button ID="BT_UnitName" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UnitName") %>' />
                                         </ItemTemplate>
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                     </asp:TemplateColumn>
-                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                     </asp:BoundColumn>
                                 </Columns>
@@ -1457,7 +1457,7 @@
                                                 </strong>
                                                 </td>
                                                 <td align="center" width="20%"><strong>
-                                                    <asp:Label ID="Label61" runat="server" Text="Êú¨Â∏Å"></asp:Label>
+                                                    <asp:Label ID="Label61" runat="server" Text="±æ±“"></asp:Label>
                                                 </strong>
                                                 </td>
                                             </tr>
@@ -1481,13 +1481,13 @@
                                         </ItemTemplate>
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                     </asp:TemplateColumn>
-                                    <asp:BoundColumn DataField="ExchangeRate" HeaderText="Ê±áÁéá">
+                                    <asp:BoundColumn DataField="ExchangeRate" HeaderText="ª„¬ ">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="20%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="SortNo" HeaderText="È°∫ÂÖÖÂè∑">
+                                    <asp:BoundColumn DataField="SortNo" HeaderText="À≥≥‰∫≈">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="IsHome" HeaderText="Êú¨Â∏Å">
+                                    <asp:BoundColumn DataField="IsHome" HeaderText="±æ±“">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                     </asp:BoundColumn>
                                 </Columns>
@@ -1495,7 +1495,7 @@
                             <asp:Label ID="Label47" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>
                             <asp:TextBox ID="TB_CurrencyType" runat="server" Width="110px"></asp:TextBox>
 
-                            <asp:Label ID="Label60" runat="server" Text="Êú¨Â∏Å"></asp:Label>
+                            <asp:Label ID="Label60" runat="server" Text="±æ±“"></asp:Label>
                             <asp:DropDownList ID="DL_IsHomeCurrency" runat="server">
                                 <asp:ListItem Value="NO">NO</asp:ListItem>
                                 <asp:ListItem Value="YES">YES</asp:ListItem>
@@ -1541,13 +1541,13 @@
                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="Á±ªÂûã">
+                                    <asp:TemplateColumn HeaderText="¿‡–Õ">
                                         <ItemTemplate>
                                             <asp:Button ID="BT_ActorGroupType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                         </ItemTemplate>
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                     </asp:TemplateColumn>
-                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                     </asp:BoundColumn>
                                 </Columns>
@@ -1593,13 +1593,13 @@
                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="Á±ªÂûã">
+                                    <asp:TemplateColumn HeaderText="¿‡–Õ">
                                         <ItemTemplate>
                                             <asp:Button ID="BT_IndustryType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                         </ItemTemplate>
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                     </asp:TemplateColumn>
-                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                     </asp:BoundColumn>
                                 </Columns>
@@ -1645,13 +1645,13 @@
                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="Â∑•Ëâ∫">
+                                    <asp:TemplateColumn HeaderText="π§“’">
                                         <ItemTemplate>
                                             <asp:Button ID="BT_ProcessName" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ProcessName") %>' />
                                         </ItemTemplate>
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                     </asp:TemplateColumn>
-                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                     </asp:BoundColumn>
                                 </Columns>
@@ -1698,13 +1698,13 @@
                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                 <ItemStyle CssClass="itemStyle" />
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="Á±ªÂûã">
+                                    <asp:TemplateColumn HeaderText="¿‡–Õ">
                                         <ItemTemplate>
                                             <asp:Button ID="BT_DefectType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                         </ItemTemplate>
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                     </asp:TemplateColumn>
-                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                     </asp:BoundColumn>
                                 </Columns>
@@ -1780,13 +1780,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="ÂêçÁß∞">
+                                                    <asp:TemplateColumn HeaderText="√˚≥∆">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ReportType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -1835,13 +1835,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="ÂêçÁß∞">
+                                                    <asp:TemplateColumn HeaderText="√˚≥∆">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_CarType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -1889,13 +1889,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Â∫èÂè∑">
+                                                    <asp:TemplateColumn HeaderText="–Ú∫≈">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="OilName" HeaderText="ÂêçÁß∞ÂèäÂûãÂè∑">
+                                                    <asp:BoundColumn DataField="OilName" HeaderText="√˚≥∆º∞–Õ∫≈">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="70%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -1943,13 +1943,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="ÂêçÁß∞">
+                                                    <asp:TemplateColumn HeaderText="√˚≥∆">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_CustomerQuestionType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -1996,13 +1996,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Á±ªÂûã">
+                                                    <asp:TemplateColumn HeaderText="¿‡–Õ">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_MeetingType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -2049,13 +2049,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Èò∂ÊÆµ">
+                                                    <asp:TemplateColumn HeaderText="Ω◊∂Œ">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_Stage" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Stage") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="Possibility" HeaderText="ÂèØËÉΩÊÄß">
+                                                    <asp:BoundColumn DataField="Possibility" HeaderText="ø…ƒ‹–‘">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -2103,13 +2103,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="ÂêçÁß∞">
+                                                    <asp:TemplateColumn HeaderText="√˚≥∆">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_Stage" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Stage") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -2154,7 +2154,7 @@
                                             <asp:Label ID="Label225" runat="server" Text="<%$ Resources:lang,KHXQFWRYYYWZ%>"></asp:Label>
                                         </strong>
                                             <br />
-                                            (Ê†ºÂºèÂ¶ÇTTCustomerQuestion.aspx?WebSite=WW.TAKETOPITS.COM)</td>
+                                            (∏Ò Ω»ÁTTCustomerQuestion.aspx?WebSite=WW.TAKETOPITS.COM)</td>
                                     </tr>
                                     <tr>
                                         <td valign="top" align="center">
@@ -2181,13 +2181,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Á±ªÂûãÂêçÁß∞">
+                                                    <asp:TemplateColumn HeaderText="¿‡–Õ√˚≥∆">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ConstractBigType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"BigType") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="ÊéíÂ∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="≈≈–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -2238,16 +2238,16 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Á±ªÂûã">
+                                                    <asp:TemplateColumn HeaderText="¿‡–Õ">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ConstractType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="KeyWord" HeaderText="ÂÖ≥ÈîÆËØç">
+                                                    <asp:BoundColumn DataField="KeyWord" HeaderText="πÿº¸¥ ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
                                                     <asp:TemplateColumn>
@@ -2303,13 +2303,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="ÂêçÁß∞">
+                                                    <asp:TemplateColumn HeaderText="√˚≥∆">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_BankName" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"BankName") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -2355,13 +2355,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="ÂêçÁß∞">
+                                                    <asp:TemplateColumn HeaderText="√˚≥∆">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ReceivePayType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -2385,19 +2385,19 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="ÂüüÂêç">
+                                                    <asp:TemplateColumn HeaderText="”Ú√˚">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_WebSite" runat="server" CssClass="inpuLongest" Text='<%# DataBinder.Eval(Container.DataItem,"WebSite") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="UserCode" HeaderText="‰ª£Á†Å">
+                                                    <asp:BoundColumn DataField="UserCode" HeaderText="¥˙¬Î">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="UserName" HeaderText="ÂêçÁß∞">
+                                                    <asp:BoundColumn DataField="UserName" HeaderText="√˚≥∆">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="100%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -2453,10 +2453,10 @@
                                     </tr>
                                     <tr>
                                         <td style="height: 19px;"><strong>
-                                            <asp:Label ID="Label16" runat="server" Text="ÂèëÁ•®Á±ªÂûã"></asp:Label>
+                                            <asp:Label ID="Label16" runat="server" Text="∑¢∆±¿‡–Õ"></asp:Label>
                                         </strong></td>
                                         <td><strong>
-                                            <asp:Label ID="Label18" runat="server" Text="ÈîÄÂîÆÁ±ªÂûã"></asp:Label>
+                                            <asp:Label ID="Label18" runat="server" Text="œ˙ €¿‡–Õ"></asp:Label>
                                         </strong></td>
                                         <td align="center">&nbsp;</td>
                                         <td>&nbsp;</td>
@@ -2488,13 +2488,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Á±ªÂûãÂêçÁß∞">
+                                                    <asp:TemplateColumn HeaderText="¿‡–Õ√˚≥∆">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_InvoiceType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="ÊéíÂ∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="≈≈–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -2533,13 +2533,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Á±ªÂûãÂêçÁß∞">
+                                                    <asp:TemplateColumn HeaderText="¿‡–Õ√˚≥∆">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_SaleType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="ÊéíÂ∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="≈≈–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -2587,7 +2587,7 @@
                                             <asp:Label ID="Label59" runat="server" Text="<%$ Resources:lang,ZiChanDiaoHuanLeiXing%>"></asp:Label>
                                         </strong></td>
                                         <td><strong>
-                                            <asp:Label ID="Label6" runat="server" Text="ÂåÖË£ÖÊñπÂºè"></asp:Label>
+                                            <asp:Label ID="Label6" runat="server" Text="∞¸◊∞∑Ω Ω"></asp:Label>
                                         </strong></td>
                                         <td><strong>
                                             <asp:Label ID="Label374" runat="server" Text="<%$ Resources:lang,ChuKuLeiXing%>"></asp:Label>
@@ -2627,13 +2627,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Á±ªÂûã">
+                                                    <asp:TemplateColumn HeaderText="¿‡–Õ">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_AssetType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -2678,13 +2678,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Á±ªÂûã">
+                                                    <asp:TemplateColumn HeaderText="¿‡–Õ">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_MTType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -2730,13 +2730,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Á±ªÂûã">
+                                                    <asp:TemplateColumn HeaderText="¿‡–Õ">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ChangeType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -2791,13 +2791,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Á±ªÂûã">
+                                                    <asp:TemplateColumn HeaderText="¿‡–Õ">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_PackingType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -2846,13 +2846,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Á±ªÂûãÂêçÁß∞">
+                                                    <asp:TemplateColumn HeaderText="¿‡–Õ√˚≥∆">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_GoodsShipmentType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"TypeName").ToString().Trim() %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="ÊéíÂ∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="≈≈–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -2892,13 +2892,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Á±ªÂûãÂêçÁß∞">
+                                                    <asp:TemplateColumn HeaderText="¿‡–Õ√˚≥∆">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_GoodsCheckInType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"TypeName").ToString().Trim() %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="ÊéíÂ∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="≈≈–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -2973,13 +2973,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Á±ªÂûã">
+                                                    <asp:TemplateColumn HeaderText="¿‡–Õ">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_TaskType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -3025,13 +3025,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Á±ªÂûã">
+                                                    <asp:TemplateColumn HeaderText="¿‡–Õ">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ReqType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -3076,13 +3076,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Êìç‰Ωú">
+                                                    <asp:TemplateColumn HeaderText="Operation">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_Operation" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Operation") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -3128,13 +3128,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Á±ªÂûã">
+                                                    <asp:TemplateColumn HeaderText="¿‡–Õ">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_TaskRecordType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -3180,13 +3180,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="ÂêçÁß∞">
+                                                    <asp:TemplateColumn HeaderText="√˚≥∆">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_PlanType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -3247,16 +3247,16 @@
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="EveryCharPrice" HeaderText="Â≠óÁ¨¶Âçï‰ª∑">
+                                                    <asp:BoundColumn DataField="EveryCharPrice" HeaderText="◊÷∑˚µ•º€">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="CharUpper" HeaderText="Â≠óÁ¨¶‰∏äÈôê">
+                                                    <asp:BoundColumn DataField="CharUpper" HeaderText="◊÷∑˚…œœﬁ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="EveryDocPrice" HeaderText="ÊñáÊ°£Âçï‰ª∑">
+                                                    <asp:BoundColumn DataField="EveryDocPrice" HeaderText="Œƒµµµ•º€">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="DocUpper" HeaderText="ÊñáÊ°£‰∏äÈôê">
+                                                    <asp:BoundColumn DataField="DocUpper" HeaderText="Œƒµµ…œœﬁ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -3287,16 +3287,16 @@
                                         </strong></td>
                                         <td style="height: 7px;">
                                             <strong>
-                                                <asp:Label ID="Label62" runat="server" Text="ÊâøÂåÖÂïÜÂ§ßÁ±ª"></asp:Label>
+                                                <asp:Label ID="Label62" runat="server" Text="≥–∞¸…Ã¥Û¿‡"></asp:Label>
                                             </strong></td>
                                         <td style="height: 7px;">
                                             <strong>
-                                                <asp:Label ID="Label492272" runat="server" Text="ÊâøÂåÖÂïÜÂ∞èÁ±ª"></asp:Label>
+                                                <asp:Label ID="Label492272" runat="server" Text="≥–∞¸…Ã–°¿‡"></asp:Label>
                                             </strong>
                                         </td>
                                         <td style="height: 7px;" colspan="2">
                                             <strong>
-                                                <asp:Label ID="Label81" runat="server" Text="ÊâøÂåÖÁ±ªÂûã"></asp:Label>
+                                                <asp:Label ID="Label81" runat="server" Text="≥–∞¸¿‡–Õ"></asp:Label>
                                             </strong></td>
                                     </tr>
                                     <tr>
@@ -3342,25 +3342,25 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Â∫èÂè∑">
+                                                    <asp:TemplateColumn HeaderText="–Ú∫≈">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_CodeRuleID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="CodeType" HeaderText="‰ª£Á†ÅÁ±ªÂûã">
+                                                    <asp:BoundColumn DataField="CodeType" HeaderText="¥˙¬Î¿‡–Õ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="HeadChar" HeaderText="ÂºÄÂ§¥Â≠óÁ¨¶">
+                                                    <asp:BoundColumn DataField="HeadChar" HeaderText="ø™Õ∑◊÷∑˚">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="FieldName" HeaderText="ÂüüËßÑÂàô">
+                                                    <asp:BoundColumn DataField="FieldName" HeaderText="”ÚπÊ‘Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="FlowIDWidth" HeaderText="IDÂÆΩÂ∫¶">
+                                                    <asp:BoundColumn DataField="FlowIDWidth" HeaderText="IDøÌ∂»">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="IsStartup" HeaderText="ÂêØÂä®Âê¶">
+                                                    <asp:BoundColumn DataField="IsStartup" HeaderText="∆Ù∂Ø∑Ò">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="100%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -3439,13 +3439,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Á±ªÂûã">
+                                                    <asp:TemplateColumn HeaderText="¿‡–Õ">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_SupplierBigType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -3494,16 +3494,16 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Á±ªÂûã">
+                                                    <asp:TemplateColumn HeaderText="¿‡–Õ">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_SupplierSmallType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="BigType" HeaderText="Â§ßÁ±ª">
+                                                    <asp:BoundColumn DataField="BigType" HeaderText="¥Û¿‡">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -3557,13 +3557,13 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Á±ªÂûã">
+                                                    <asp:TemplateColumn HeaderText="¿‡–Õ">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_BMBidType" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="È°∫Â∫è">
+                                                    <asp:BoundColumn DataField="SortNumber" HeaderText="À≥–Ú">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
                                                     <asp:TemplateColumn>
@@ -3592,10 +3592,10 @@
                                     </tr>
                                     <tr>
                                         <td align="center" colspan="3"><strong>
-                                            <asp:Label ID="Label10" runat="server" Text="ÊäïÊ†á‰∏ì‰∏ö"></asp:Label>
+                                            <asp:Label ID="Label10" runat="server" Text="Õ∂±Í◊®“µ"></asp:Label>
                                         </strong></td>
                                         <td style="height: 7px;">
-                                            <asp:Label ID="Label19" runat="server" Text="ËµÑÈáëÊù•Ê∫ê"></asp:Label>
+                                            <asp:Label ID="Label19" runat="server" Text="◊ Ω¿¥‘¥"></asp:Label>
                                         </td>
                                         <td style="height: 7px;">&nbsp;</td>
                                         <td style="height: 7px;" colspan="2">&nbsp;</td>
@@ -3611,7 +3611,7 @@
                                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                             <tr>
                                                                 <td align="center" width="100%"><strong>
-                                                                    <asp:Label ID="Label98" runat="server" Text="‰∏ì‰∏ö"></asp:Label>
+                                                                    <asp:Label ID="Label98" runat="server" Text="◊®“µ"></asp:Label>
                                                                 </strong></td>
 
                                                             </tr>
@@ -3629,7 +3629,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Â∫èÂè∑">
+                                                    <asp:TemplateColumn HeaderText="–Ú∫≈">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_TenderContent" runat="server" CssClass="inpuLongest" Width="99%" Text='<%# DataBinder.Eval(Container.DataItem,"TenderContent") %>' />
                                                         </ItemTemplate>
@@ -3640,7 +3640,7 @@
                                             </asp:DataGrid>
                                             <br />
                                             <br />
-                                            <asp:Label ID="Label107" runat="server" Text="ÊâÄÂ±û‰∏ì‰∏ö"></asp:Label>
+                                            <asp:Label ID="Label107" runat="server" Text="À˘ Ù◊®“µ"></asp:Label>
                                             <asp:TextBox ID="TB_TenderContent" runat="server" Width="99%"></asp:TextBox>
                                             <br />
                                             <br />
@@ -3658,7 +3658,7 @@
                                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                             <tr>
                                                                 <td align="center" width="100%"><strong>
-                                                                    <asp:Label ID="Label24" runat="server" Text="ËµÑÈáëÊù•Ê∫ê"></asp:Label>
+                                                                    <asp:Label ID="Label24" runat="server" Text="◊ Ω¿¥‘¥"></asp:Label>
                                                                 </strong></td>
 
                                                             </tr>
@@ -3676,7 +3676,7 @@
                                                 <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="Â∫èÂè∑">
+                                                    <asp:TemplateColumn HeaderText="–Ú∫≈">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_FundingSource" runat="server" CssClass="inpu" Width="99%" Text='<%# DataBinder.Eval(Container.DataItem,"FundingSource") %>' />
                                                         </ItemTemplate>
@@ -3687,7 +3687,7 @@
                                             </asp:DataGrid>
                                             <br />
                                             <br />
-                                            <asp:Label ID="Label28" runat="server" Text="ËµÑÈáëÊù•Ê∫ê"></asp:Label>
+                                            <asp:Label ID="Label28" runat="server" Text="◊ Ω¿¥‘¥"></asp:Label>
                                             <asp:TextBox ID="TB_FundingSource" runat="server" Width="99%"></asp:TextBox>
                                             <br />
                                             <br />

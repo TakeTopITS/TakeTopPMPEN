@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -95,7 +95,7 @@ public partial class TTProjectWorkload : System.Web.UI.Page
 
         if (strWorkType == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('閿欒锛岀被鍨嬩笉鑳戒负绌猴紒')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('错误，类型不能为空！')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -136,7 +136,7 @@ public partial class TTProjectWorkload : System.Web.UI.Page
 
         if (strWorkType == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('閿欒锛岀被鍨嬩笉鑳戒负绌猴紒')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('错误，类型不能为空！')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }

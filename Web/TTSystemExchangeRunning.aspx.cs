@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -29,7 +29,7 @@ public partial class TTSystemExchangeRunning : System.Web.UI.Page
         string strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "鏁版嵁浜ゆ崲鏈嶅姟鍚姩", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "数据交换服务启动", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -55,7 +55,7 @@ public partial class TTSystemExchangeRunning : System.Web.UI.Page
 
         string strSqlOrderString, strDBServerName;
 
-        strHQL = "Select SqlOrderString,DBServerName From T_SystemExchangeOrder Where Status = '鍦ㄧ敤' Order By ID DESC";
+        strHQL = "Select SqlOrderString,DBServerName From T_SystemExchangeOrder Where Status = 'InUse' Order By ID DESC";
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_SystemExchangeOrder");
 
         for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
@@ -85,7 +85,7 @@ public partial class TTSystemExchangeRunning : System.Web.UI.Page
         string strDBServerName, strConnectString, strLoginString;
         string strDropLoginString, strDropServerString;
 
-        strHQL = "Select DBServerName, ConnectString,LoginString From T_SystemExchangeDBServer Where Status = '鍦ㄧ敤'";
+        strHQL = "Select DBServerName, ConnectString,LoginString From T_SystemExchangeDBServer Where Status = 'InUse'";
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_SystemExchangeDBServer");
 
         for (int i = 0; i < ds.Tables[0].Rows.Count; i++)

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,12 +18,12 @@ public partial class TTConstractManageAccount : System.Web.UI.Page
         {
             if (!IsPostBack)
             {
-                //åŠ è½½çŠ¶æ€
+                //¼ÓÔØ×´Ì¬
                 LoadAllConstractStatus();
-                //åŠ è½½ç±»å‹
+                //¼ÓÔØÀàĞÍ
                 LoadAllConstractype();
 
-				//ç”ŸæˆåˆåŒæ ‘
+				//Éú³ÉºÏÍ¬Ê÷
 				string strUserCode = Session["UserCode"].ToString();
 				//string strUserCode = "C7094";
 				InitialConstractTreeByAuthority(TreeView4, strUserCode);
@@ -66,7 +66,7 @@ public partial class TTConstractManageAccount : System.Web.UI.Page
             if (DDL_ConstractStatus.Items.Count > 0)
             {
                 DDL_ConstractStatus.ClearSelection();
-                DDL_ConstractStatus.Items.FindByText("æ‰§è¡Œä¸­").Selected = true;
+                DDL_ConstractStatus.Items.FindByText("Executing").Selected = true;
             }
         }
         catch
@@ -122,9 +122,9 @@ public partial class TTConstractManageAccount : System.Web.UI.Page
             T_Project.EndDate as proenddate,
             t_constract.startdate - t_constract.enddate as duration,
             t_constract.warranty,
-            CASE WHEN t_constract.type like '%æ”¶å…¥%' THEN (case when (select sum(T_ConstractReceivables.ReceivablesAccount) from T_ConstractReceivables where T_ConstractReceivables.ConstractCode=t_constract.constractcode)=0 
+            CASE WHEN t_constract.type like '%ÊÕÈë%' THEN (case when (select sum(T_ConstractReceivables.ReceivablesAccount) from T_ConstractReceivables where T_ConstractReceivables.ConstractCode=t_constract.constractcode)=0 
             then 0 else  (select T_ConstractReceivables.ReceiverAccount / T_ConstractReceivables.ReceivablesAccount from T_ConstractReceivables where T_ConstractReceivables.ConstractCode=t_constract.constractcode) end) 
-            WHEN t_constract.type like '%æ”¯å‡º%' THEN (case when (select sum(T_ConstractPayable.PayableAccount) from T_ConstractPayable,T_ConstractPayableRecord 
+            WHEN t_constract.type like '%Ö§³ö%' THEN (case when (select sum(T_ConstractPayable.PayableAccount) from T_ConstractPayable,T_ConstractPayableRecord 
             where T_ConstractPayableRecord.PayableID=T_ConstractPayable.ID and T_ConstractPayableRecord.ConstractCode=t_constract.constractcode)=0 then 0 
             else (select T_ConstractPayableRecord.OutOfPocketAccount / T_ConstractPayable.PayableAccount from T_ConstractPayable,T_ConstractPayableRecord 
             where T_ConstractPayableRecord.PayableID=T_ConstractPayable.ID and T_ConstractPayableRecord.ConstractCode=t_constract.constractcode) end) END AS prepaypercent,
@@ -192,7 +192,7 @@ public partial class TTConstractManageAccount : System.Web.UI.Page
         GetContractData(TB_ConstractID.Text , TB_ConstractName.Text , DDL_Constractype.SelectedValue , TB_ConstractCode.Text , DDL_ConstractStatus.SelectedValue , DLC_signdate.Text);
     }
 
-    //å®šä¹‰åˆåŒæ ‘ï¼ˆæ ¹æ®æƒé™ï¼‰
+    //¶¨ÒåºÏÍ¬Ê÷£¨¸ù¾İÈ¨ÏŞ£©
     public void InitialConstractTreeByAuthority(TreeView ConstractTreeView, string strUserCode)
     {
         string strHQL;
@@ -200,7 +200,7 @@ public partial class TTConstractManageAccount : System.Web.UI.Page
 
         String strConstractCode, strConstractName;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         ConstractTreeView.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
@@ -215,7 +215,7 @@ public partial class TTConstractManageAccount : System.Web.UI.Page
 
         strHQL = "from Constract as constract where ";
         strHQL += " constract.ParentCode = ''";
-        strHQL += " and constract.Status not in ('å½’æ¡£','åˆ é™¤') ";
+        strHQL += " and constract.Status not in ('Archived','Deleted') ";
         strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
 
         ConstractBLL constractBLL = new ConstractBLL();
@@ -253,7 +253,7 @@ public partial class TTConstractManageAccount : System.Web.UI.Page
 
         strHQL = "from Constract as constract where ";
         strHQL += " constract.ParentCode = " + "'" + strParentCode + "'";
-        strHQL += " and constract.Status not in ('å½’æ¡£','åˆ é™¤') ";
+        strHQL += " and constract.Status not in ('Archived','Deleted') ";
         strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
 
         lst1 = constractBLL.GetAllConstracts(strHQL);
@@ -274,7 +274,7 @@ public partial class TTConstractManageAccount : System.Web.UI.Page
 
             strHQL = "from Constract as constract where ";
             strHQL += " constract.ParentCode = " + "'" + strConstractCode + "'";
-            strHQL += " and constract.Status not in ('å½’æ¡£','åˆ é™¤') ";
+            strHQL += " and constract.Status not in ('Archived','Deleted') ";
             strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
             lst2 = constractBLL.GetAllConstracts(strHQL);
 
@@ -309,7 +309,7 @@ public partial class TTConstractManageAccount : System.Web.UI.Page
 
 public class EmptyGridview
 {
-    private static string emptyText = "æ²¡æœ‰æŸ¥è¯¢åˆ°ç›¸åº”ä¿¡æ¯";
+    private static string emptyText = "Ã»ÓĞ²éÑ¯µ½ÏàÓ¦ĞÅÏ¢";
 
     public EmptyGridview()
     {

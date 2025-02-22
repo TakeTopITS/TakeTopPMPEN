@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Data;
 using System.Configuration;
 using System.Collections;
@@ -24,7 +24,7 @@ public partial class TTWZSelectorDepartment2 : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         //ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
 
-        //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","ç»„ç»‡æž¶æž„è®¾ç½®", strUserCode);
+        //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","×éÖ¯¼Ü¹¹ÉèÖÃ", strUserCode);
 
         //if (blVisible == false)
         //{
@@ -32,7 +32,7 @@ public partial class TTWZSelectorDepartment2 : System.Web.UI.Page
         //    return;
         //}
 
-        //this.Title = "ç»„ç»‡æž¶æž„è®¾ç½®---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
+        //this.Title = "×éÖ¯¼Ü¹¹ÉèÖÃ---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)

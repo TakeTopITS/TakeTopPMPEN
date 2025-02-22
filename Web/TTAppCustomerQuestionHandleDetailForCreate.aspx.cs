@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -34,7 +34,7 @@ public partial class TTAppCustomerQuestionHandleDetailForCreate : System.Web.UI.
 
         strIsMobileDevice = Session["IsMobileDevice"].ToString();
 
-        //CKEditoråˆå§‹åŒ–      
+        //CKEditor³õÊ¼»¯      
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_CustomerComment);
@@ -143,7 +143,7 @@ public partial class TTAppCustomerQuestionHandleDetailForCreate : System.Web.UI.
 
             LoadCustomerQuestionHandleRecord(strQuestionID);
 
-            //åˆ—å‡ºç›´æ¥æˆå‘˜
+            //ÁĞ³öÖ±½Ó³ÉÔ±
             ShareClass.LoadMemberByUserCodeForDropDownList(strUserCode, DL_Operator);
         }
     }
@@ -159,10 +159,10 @@ public partial class TTAppCustomerQuestionHandleDetailForCreate : System.Web.UI.
 
         CustomerQuestion customerQuestion = (CustomerQuestion)lst[0];
 
-        customerQuestion.Status = "å¤„ç†ä¸­";
+        customerQuestion.Status = "InProgress";
         customerQuestion.OperatorCode = strUserCode;
         customerQuestion.OperatorName = strUserName;
-        customerQuestion.OperatorStatus = "å—ç†";
+        customerQuestion.OperatorStatus = "Accepted";
 
         try
         {
@@ -196,7 +196,7 @@ public partial class TTAppCustomerQuestionHandleDetailForCreate : System.Web.UI.
 
         CustomerQuestion customerQuestion = (CustomerQuestion)lst[0];
 
-        customerQuestion.Status = "æ–°å»º";
+        customerQuestion.Status = "New";
         customerQuestion.OperatorCode = "";
         customerQuestion.OperatorName = "";
         customerQuestion.OperatorStatus = "";
@@ -213,11 +213,11 @@ public partial class TTAppCustomerQuestionHandleDetailForCreate : System.Web.UI.
 
             BT_TransferOperator.Enabled = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('é€€å‡º" + Resources.lang.ZZSLCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÍË³ö" + Resources.lang.ZZSLCG + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('é€€å‡º" + Resources.lang.ZZSLSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÍË³ö" + Resources.lang.ZZSLSBJC + "')", true);
         }
     }
 
@@ -260,8 +260,8 @@ public partial class TTAppCustomerQuestionHandleDetailForCreate : System.Web.UI.
 
         customerQuestion.OperatorCode = strUserCode;
         customerQuestion.OperatorName = strUserName;
-        customerQuestion.OperatorStatus = "å®Œæˆ";
-        customerQuestion.Status = "å®Œæˆ";
+        customerQuestion.OperatorStatus = "Completed";
+        customerQuestion.Status = "Completed";
 
         try
         {
@@ -289,8 +289,8 @@ public partial class TTAppCustomerQuestionHandleDetailForCreate : System.Web.UI.
 
         customerQuestion.OperatorCode = strUserCode;
         customerQuestion.OperatorName = strUserName;
-        customerQuestion.OperatorStatus = "åˆ é™¤";
-        customerQuestion.Status = "åˆ é™¤";
+        customerQuestion.OperatorStatus = "Deleted";
+        customerQuestion.Status = "Deleted";
 
         try
         {
@@ -318,7 +318,7 @@ public partial class TTAppCustomerQuestionHandleDetailForCreate : System.Web.UI.
 
         CustomerQuestion customerQuestion = (CustomerQuestion)lst[0];
 
-        customerQuestion.Status = "æ–°å»º";
+        customerQuestion.Status = "New";
         customerQuestion.OperatorCode = strOperatorCode;
         customerQuestion.OperatorName = ShareClass.GetUserName(strOperatorCode);
         customerQuestion.OperatorStatus = "";
@@ -333,7 +333,7 @@ public partial class TTAppCustomerQuestionHandleDetailForCreate : System.Web.UI.
             BT_Finish.Enabled = true;
 
 
-            //æ¨é€æ¶ˆæ¯ç»™å—ç†äºº
+            //ÍÆËÍÏûÏ¢¸øÊÜÀíÈË
             Msg msg = new Msg();
             string strMsg = Resources.lang.FuWuXuQiu + ":" + customerQuestion.Question.Trim() + "," + Resources.lang.ZZYaoNiChuLi;
             msg.SendMSM("Message",strOperatorCode, strMsg, strUserCode);
@@ -363,11 +363,11 @@ public partial class TTAppCustomerQuestionHandleDetailForCreate : System.Web.UI.
         {
             string strFileName1, strExtendName;
 
-            strFileName1 = this.AttachFile.FileName;//è·å–ä¸Šä¼ æ–‡ä»¶çš„æ–‡ä»¶å,åŒ…æ‹¬åç¼€
+            strFileName1 = this.AttachFile.FileName;//»ñÈ¡ÉÏ´«ÎÄ¼şµÄÎÄ¼şÃû,°üÀ¨ºó×º
 
-            strExtendName = System.IO.Path.GetExtension(strFileName1);//è·å–æ‰©å±•å
+            strExtendName = System.IO.Path.GetExtension(strFileName1);//»ñÈ¡À©Õ¹Ãû
 
-            DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+            DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
 
             string strFileName2 = System.IO.Path.GetFileName(strFileName1);
             string strExtName = Path.GetExtension(strFileName2);
@@ -392,7 +392,7 @@ public partial class TTAppCustomerQuestionHandleDetailForCreate : System.Web.UI.
 
                     if (strExtName.ToUpper().IndexOf("JPG|JPEG|PNG|BMP|GIF") >= 0)
                     {
-                        //ç¼©å°å°ºå¯¸ï¼Œä¾¿äºä¸Šä¼ 
+                        //ËõĞ¡³ß´ç£¬±ãÓÚÉÏ´«
                         ShareClass.ReducesPic(strDocSavePath, strFileName3, 640, 480, 3);
                     }
 

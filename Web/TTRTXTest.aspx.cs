@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Data;
 using System.Configuration;
 using System.Collections;
@@ -14,47 +14,47 @@ using RTXClient;
 
 public partial class TTRTXTest : System.Web.UI.Page
 {
-    RTXSAPILib.RTXSAPIRootObj RootObj;  //å£°æ˜ä¸€ä¸ªæ ¹å¯¹è±¡
+    RTXSAPILib.RTXSAPIRootObj RootObj;  //ÉùÃ÷Ò»¸ö¸ù¶ÔÏó
     protected void Page_Load(object sender, EventArgs e)
     {
         string strUserCode = Session["UserCode"].ToString();
 
         try
         {
-            RootObj = new RTXSAPIRootObj();     //åˆ›å»ºæ ¹å¯¹è±¡
-            RootObj.ServerIP = txtSvrIP.Text; //è®¾ç½®æœåŠ¡å™¨IP
-            RootObj.ServerPort = Convert.ToInt16(txtSvrPort.Text); //è®¾ç½®æœåŠ¡å™¨ç«¯å£
+            RootObj = new RTXSAPIRootObj();     //´´½¨¸ù¶ÔÏó
+            RootObj.ServerIP = txtSvrIP.Text; //ÉèÖÃ·şÎñÆ÷IP
+            RootObj.ServerPort = Convert.ToInt16(txtSvrPort.Text); //ÉèÖÃ·şÎñÆ÷¶Ë¿Ú
         }
         catch
         {
-            Response.Write("åˆ›å»ºRTXæœåŠ¡å¤±è´¥ï¼Œè¯·æ£€æŸ¥ï¼");
+            Response.Write("´´½¨RTX·şÎñÊ§°Ü£¬Çë¼ì²é£¡");
         }
 
     }
     protected void Button1_Click(object sender, EventArgs e)
-    {//å‘é€ä¿¡æ¯
+    {//·¢ËÍĞÅÏ¢
         try
         {
-            RootObj.SendNotify(txtReceivers.Text, txtMsgTitle.Text, Convert.ToInt32(txtTime.Text), txtMsgContent.Text); //è·å–ç‰ˆæœ¬ä¿¡æ¯
+            RootObj.SendNotify(txtReceivers.Text, txtMsgTitle.Text, Convert.ToInt32(txtTime.Text), txtMsgContent.Text); //»ñÈ¡°æ±¾ĞÅÏ¢
 
-            txtResult.Text = "å‘é€æˆåŠŸï¼";
+            txtResult.Text = "·¢ËÍ³É¹¦£¡";
         }
         catch
         {
-            txtResult.Text = "å‘é€å¤±è´¥ï¼";
+            txtResult.Text = "·¢ËÍÊ§°Ü£¡";
         }
     }
 
     protected void Button2_Click(object sender, EventArgs e)
     {
-        //æŸ¥è¯¢çŠ¶æ€
+        //²éÑ¯×´Ì¬
         try
         {
-            txtResult.Text = RootObj.QueryUserState(txtUserName.Text); //è·å–ç”¨æˆ·çŠ¶æ€
+            txtResult.Text = RootObj.QueryUserState(txtUserName.Text); //»ñÈ¡ÓÃ»§×´Ì¬
         }
         catch 
         {
-            txtResult.Text = "è·å–ç”¨æˆ·çŠ¶æ€å¤±è´¥ï¼";
+            txtResult.Text = "»ñÈ¡ÓÃ»§×´Ì¬Ê§°Ü£¡";
         }
     }
    
@@ -62,23 +62,23 @@ public partial class TTRTXTest : System.Web.UI.Page
     {
         try
         {
-            txtResult.Text = RootObj.GetVersion(); //è·å–ç‰ˆæœ¬ä¿¡æ¯
+            txtResult.Text = RootObj.GetVersion(); //»ñÈ¡°æ±¾ĞÅÏ¢
             
         }
         catch 
         {
-            txtResult.Text = "è·å–ç‰ˆæœ¬ä¿¡æ¯å¤±è´¥ï¼";
+            txtResult.Text = "»ñÈ¡°æ±¾ĞÅÏ¢Ê§°Ü£¡";
         }
     }
     protected void Button5_Click(object sender, EventArgs e)
     {
         try
         {
-            txtResult.Text = RootObj.GetUserRightList(txtUserName.Text); //è·å–ç”¨æˆ·æƒé™åˆ—è¡¨
+            txtResult.Text = RootObj.GetUserRightList(txtUserName.Text); //»ñÈ¡ÓÃ»§È¨ÏŞÁĞ±í
         }
         catch 
         {
-            txtResult.Text = "è·å–ç”¨æˆ·æƒé™ä¿¡æ¯å¤±è´¥ï¼";
+            txtResult.Text = "»ñÈ¡ÓÃ»§È¨ÏŞĞÅÏ¢Ê§°Ü£¡";
         }
     }
 }

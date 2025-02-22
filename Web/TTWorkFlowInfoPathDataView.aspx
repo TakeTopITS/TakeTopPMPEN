@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkFlowInfoPathDataView.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkFlowInfoPathDataView.aspx.cs"
     Inherits="_TTWorkFlowInfoPathDataView" Debug="true" ValidateRequest="false" %>
 
 <%@ Register Assembly="TakeTopForm.JS" Namespace="TakeTopInfoPathSoft.JS" TagPrefix="cc1" %>
@@ -13,7 +13,7 @@
 
     <script src="js/jquery-1.7.2.min.js"></script>
 
-    <!--pageoffic.js‰∏ÄÂÆöË¶ÅÂºïÁî®-->
+    <!--pageoffic.js“ª∂®“™“˝”√-->
  <%--   <script type="text/javascript" src="js/pageoffice.js"></script>--%>
 
 
@@ -201,7 +201,7 @@
             document.getElementById("BT_SaveXMLFile").click();
         }
 
-        // Êî∂Áº©Â±ïÂºÄÊïàÊûú
+        //  ’Àı’πø™–ßπ˚
         function hideDivByApp() {
 
             var system = {
@@ -214,7 +214,7 @@
 
             };
 
-            //Ê£ÄÊµãÂπ≥Âè∞
+            //ºÏ≤‚∆ΩÃ®
 
             var p = navigator.platform;
 
@@ -226,8 +226,8 @@
 
             system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
 
-            //Ë∑≥ËΩ¨ËØ≠Âè•
-            if (system.win || system.mac || system.xll) {//ËΩ¨ÂêëÂêéÂè∞ÁôªÈôÜÈ°µÈù¢
+            //Ã¯◊™”Ôæ‰
+            if (system.win || system.mac || system.xll) {//◊™œÚ∫ÛÃ®µ«¬Ω“≥√Ê
 
             } else {
 
@@ -236,7 +236,7 @@
             }
         }
 
-        //ËÆæÁΩÆÊó•ÊúüÈÄâÊã©Ê°ÜÁöÑÂÆΩÂ∫¶Ôºå‰Ωø‰πã‰∏çÊäòÂè†
+        //…Ë÷√»’∆⁄—°‘ÒøÚµƒøÌ∂»£¨ π÷Æ≤ª’€µ˛
         function changeDateBoxWidth() {
             var cNodes = document.getElementsByClassName("xdDTText xdBehavior_FormattingNoBUI");
 
@@ -246,7 +246,7 @@
             }
         }
 
-        //Â≠òË¥ÆË°®ÂçïÂÜÖÂÆπ
+        //¥Ê÷¸±Ìµ•ƒ⁄»›
         function SaveDIYFormDate() {
 
             if (this.document.getElementById('BT_BackupSaveXMLFile') != undefined) {
@@ -268,7 +268,7 @@
 
             if (top.location != self.location) { } else { CloseWebPage(); }
 
-            //‰æùÊµÅÁ®ãÊ®°ÊùøÊ≠•È™§ÂÆö‰πâÁöÑÊ≠§ÂáΩÊï∞ËÆæÁΩÆË°®ÂçïÂêÑÁßçÂ±ûÊÄß
+            //“¿¡˜≥Ãƒ£∞Â≤Ω÷Ë∂®“Âµƒ¥À∫Ø ˝…Ë÷√±Ìµ•∏˜÷÷ Ù–‘
             try {
                 setWorkflowForm();
             }
@@ -277,7 +277,7 @@
             }
         });
 
-        //ÊòæÁ§∫ÊàñÈöêËóèÂÖ∂ÂÆÉÊµÅÁ®ãÁõ∏ÂÖ≥ÊñáÊ°£
+        //œ‘ æªÚ“˛≤ÿ∆‰À¸¡˜≥Ãœ‡πÿŒƒµµ
         function changeProjectDocDataGridVisible() {
             if (document.getElementById('TR_OtherDoc').style.display == 'block') {
                 document.getElementById('TR_OtherDoc').style.display = "none";
@@ -405,7 +405,7 @@
                         </tr>
                         <tr>
                             <td class="tdLeft" style="width: 7%; text-align: center; font-size: 10pt">
-                                <asp:Label ID="Label13" runat="server" Text="ÂêàÂêåÂÜÖÂÆπ"></asp:Label>
+                                <asp:Label ID="Label13" runat="server" Text="∫œÕ¨ƒ⁄»›"></asp:Label>
                             </td>
                             <td class="tdRight" colspan="10" style="text-align: left; padding-left: 5px">
                                 <table>
@@ -696,7 +696,7 @@
                                     align="center">
                                     <tr>
                                         <td style="text-align: left; width: 15%;">
-                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZhaoBiaoBianHao%>"></asp:Label>Ôºö
+                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZhaoBiaoBianHao%>"></asp:Label>£∫
                                         </td>
                                         <td align="left">
 
@@ -704,12 +704,12 @@
                                                          
                                         </td>
                                         <td style="text-align: left; width: 10%;">
-                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuMingCheng%>"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuMingCheng%>"></asp:Label>£∫</td>
                                         <td align="left" style="width: 30%;">
                                             <%# DataBinder.Eval(Container.DataItem,"ProjectName") %>
                                         </td>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,HeTongHao%>"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,HeTongHao%>"></asp:Label>£∫</td>
                                         <td align="left" colspan="2">
 
                                             <%# DataBinder.Eval(Container.DataItem,"CompactCode") %>
@@ -717,25 +717,25 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhaoBianDaiLi%>"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhaoBianDaiLi%>"></asp:Label>£∫</td>
                                         <td align="left" colspan="3">
                                             <%# DataBinder.Eval(Container.DataItem,"BiddingAgent") %>
                                         </td>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,LianXiDianHua%>"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,LianXiDianHua%>"></asp:Label>£∫</td>
                                         <td align="left">
                                             <%# DataBinder.Eval(Container.DataItem,"BiddingAgentPhone") %>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label7" runat="server" Text="ÊãõÊ†á‰∫∫"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label7" runat="server" Text="’–±Í»À"></asp:Label>£∫</td>
                                         <td align="left" colspan="3">
 
                                             <%# DataBinder.Eval(Container.DataItem,"UserCode") %>
                                         </td>
                                         <td style="text-align: left; width: 15%;">
-                                            <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,LianXiDianHua%>"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,LianXiDianHua%>"></asp:Label>£∫</td>
                                         <td align="left">
 
                                             <%# DataBinder.Eval(Container.DataItem,"UserCodePhone") %>
@@ -744,20 +744,20 @@
                                     <tr style="display: none;">
 
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label44" runat="server" Text="<%$ Resources:lang,XiaoShou%>"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label44" runat="server" Text="<%$ Resources:lang,XiaoShou%>"></asp:Label>£∫</td>
                                         <td align="left" colspan="3">
 
                                             <%# DataBinder.Eval(Container.DataItem,"SalesCode") %>
                                         </td>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label45" runat="server" Text="<%$ Resources:lang,LianXiDianHua%>"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label45" runat="server" Text="<%$ Resources:lang,LianXiDianHua%>"></asp:Label>£∫</td>
                                         <td align="left">
                                             <%# DataBinder.Eval(Container.DataItem,"SalesCodePhone") %>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label9" runat="server" Text="È°πÁõÆÁªèÁêÜ"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label9" runat="server" Text="œÓƒøæ≠¿Ì"></asp:Label>£∫</td>
                                         <td align="right" colspan="2">
                                             <table width="100%">
                                                 <tr>
@@ -772,7 +772,7 @@
                                             </table>
                                         </td>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label10" runat="server" Text="ÊäÄÊúØË¥üË¥£‰∫∫"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label10" runat="server" Text="ºº ı∏∫‘»À"></asp:Label>£∫</td>
                                         <td colspan="2" style="text-align: left;">
                                             <table>
                                                 <tr>
@@ -789,7 +789,7 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label46" runat="server" Text="È°πÁõÆÁªèÂäû‰∫∫"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label46" runat="server" Text="œÓƒøæ≠∞Ï»À"></asp:Label>£∫</td>
                                         <td align="right" colspan="2">
                                             <table width="100%">
                                                 <tr>
@@ -804,7 +804,7 @@
                                             </table>
                                         </td>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label49" runat="server" Text="ÂÜÖÂ§ñÂ±ûÊÄß"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label49" runat="server" Text="ƒ⁄Õ‚ Ù–‘"></asp:Label>£∫</td>
                                         <td align="left" colspan="2">
 
 
@@ -813,13 +813,13 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,BiaoShuGouMaiRiQi%>"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,BiaoShuGouMaiRiQi%>"></asp:Label>£∫</td>
                                         <td align="left">
 
                                             <%# DataBinder.Eval(Container.DataItem,"TenderBuyTime") %>
                                         </td>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,TiQianYuJingTianShu%>"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,TiQianYuJingTianShu%>"></asp:Label>£∫</td>
                                         <td align="left">
 
                                             <%# DataBinder.Eval(Container.DataItem,"TenderBuyDay") %>
@@ -832,13 +832,13 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label47" runat="server" Text="ÊäïÊ†áÊä•‰ª∑"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label47" runat="server" Text="Õ∂±Í±®º€"></asp:Label>£∫</td>
                                         <td align="left" colspan="3">
 
                                             <%# DataBinder.Eval(Container.DataItem,"BiddingPrice") %>
                                         </td>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label48" runat="server" Text="ÊéßÂà∂‰ª∑"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label48" runat="server" Text="øÿ÷∆º€"></asp:Label>£∫</td>
                                         <td align="left" colspan="3">
 
                                             <%# DataBinder.Eval(Container.DataItem,"ControlPrice") %>
@@ -847,21 +847,21 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,BaoZhengJin%>"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,BaoZhengJin%>"></asp:Label>£∫</td>
                                         <td align="left">
 
                                             <%# DataBinder.Eval(Container.DataItem,"Margin") %>
                                                         
                                         </td>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,BaoZhengJinZhiFuRiQi%>"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,BaoZhengJinZhiFuRiQi%>"></asp:Label>£∫</td>
                                         <td align="left">
 
                                             <%# DataBinder.Eval(Container.DataItem,"MarginTime") %>
                                                        
                                         </td>
                                         <td align="left" colspan="3">
-                                            <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,TiQianYuJingTianShu%>"></asp:Label>Ôºö
+                                            <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,TiQianYuJingTianShu%>"></asp:Label>£∫
 
                                                          <%# DataBinder.Eval(Container.DataItem,"MarginDay") %>
 
@@ -872,20 +872,20 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,BaoZhengJinShouHuiRiQi%>"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,BaoZhengJinShouHuiRiQi%>"></asp:Label>£∫</td>
                                         <td align="left">
 
                                             <%# DataBinder.Eval(Container.DataItem,"ReceiveMarginTime") %>
                                                     
                                         </td>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,BaoZhengJinShouHuiShu%>"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,BaoZhengJinShouHuiShu%>"></asp:Label>£∫</td>
                                         <td align="left">
                                             <%# DataBinder.Eval(Container.DataItem,"ReceiveMargin") %>
                                         </td>
 
                                         <td align="left" colspan="3">
-                                            <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,TiQianYuJingTianShu%>"></asp:Label>Ôºö
+                                            <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,TiQianYuJingTianShu%>"></asp:Label>£∫
 
                                                            <%# DataBinder.Eval(Container.DataItem,"ReceiveMarginDay") %>
 
@@ -896,13 +896,13 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,KaiBiaoRiQi%>"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,KaiBiaoRiQi%>"></asp:Label>£∫</td>
                                         <td align="left">
 
                                             <%# DataBinder.Eval(Container.DataItem,"BidOpeningDate") %>
                                         </td>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,TiQianYuJingTianShu%>"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,TiQianYuJingTianShu%>"></asp:Label>£∫</td>
                                         <td align="left">
 
                                             <%# DataBinder.Eval(Container.DataItem,"BidOpeningDay") %>
@@ -915,14 +915,14 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,ZBFJNRQ%>"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,ZBFJNRQ%>"></asp:Label>£∫</td>
                                         <td align="left">
 
                                             <%# DataBinder.Eval(Container.DataItem,"WinningFeeDate") %>
                                                        
                                         </td>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,TiQianYuJingTianShu%>"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,TiQianYuJingTianShu%>"></asp:Label>£∫</td>
                                         <td align="left">
                                             <%# DataBinder.Eval(Container.DataItem,"WinningFeeDay") %>
                                                        
@@ -936,7 +936,7 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label28" runat="server" Text="È°πÁõÆÊâÄÂ±û‰∏ì‰∏ö"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label28" runat="server" Text="œÓƒøÀ˘ Ù◊®“µ"></asp:Label>£∫</td>
                                         <td colspan="6" align="left" class="formItemBgStyle">
 
                                             <%# DataBinder.Eval(Container.DataItem,"TenderContent") %>
@@ -945,7 +945,7 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;">
-                                            <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,BeiZhu%>"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,BeiZhu%>"></asp:Label>£∫</td>
                                         <td align="left" class="formItemBgStyle" colspan="6">
 
                                             <%# DataBinder.Eval(Container.DataItem,"Remarks") %>
@@ -989,7 +989,7 @@
                 <td align="left" style="padding-left: 20px;">
                     <br />
                     <a id="aPrintDoc" name="aPrintDoc" href="#" onclick="preview2()">
-                        <img src="ImagesSkin/print.gif" alt="ÊâìÂç∞" border="0" />Comment
+                        <img src="ImagesSkin/print.gif" alt="¥Ú”°" border="0" />Comment
                     </a>
                     <!--startprint2-->
                     <%--  <table width="700px" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
@@ -1034,7 +1034,7 @@
                         GridLines="None" ForeColor="#333333" Height="1px" ShowHeader="False">
                         <AlternatingItemStyle BackColor="White"></AlternatingItemStyle>
                         <Columns>
-                            <%--   <asp:BoundColumn DataField="DocID" HeaderText="Â∫èÂè∑">
+                            <%--   <asp:BoundColumn DataField="DocID" HeaderText="–Ú∫≈">
                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
                             </asp:BoundColumn>--%>
 
@@ -1046,10 +1046,10 @@
                             </asp:TemplateColumn>
 
                             <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
-                                DataTextField="DocName" Target="downFrame" HeaderText="Êñá‰ª∂Âêç">
+                                DataTextField="DocName" Target="downFrame" HeaderText="Œƒº˛√˚">
                                 <ItemStyle HorizontalAlign="Left" CssClass="itemBorder"></ItemStyle>
                             </asp:HyperLinkColumn>
-                            <asp:BoundColumn DataField="Visible" HeaderText="ÊùÉÈôê">
+                            <asp:BoundColumn DataField="Visible" HeaderText="»®œﬁ">
                                 <ItemStyle HorizontalAlign="center" CssClass="itemBorder"></ItemStyle>
                             </asp:BoundColumn>
                             <%--   <asp:TemplateColumn>
@@ -1060,7 +1060,7 @@
                                 </ItemTemplate>
                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="center" VerticalAlign="Middle" Width="5%" />
                             </asp:TemplateColumn>--%>
-                            <asp:BoundColumn DataField="UploadManName" HeaderText="‰∏ä‰º†ËÄÖ">
+                            <asp:BoundColumn DataField="UploadManName" HeaderText="…œ¥´’ﬂ">
                                 <ItemStyle HorizontalAlign="center" CssClass="itemBorder"></ItemStyle>
                             </asp:BoundColumn>
                         </Columns>
@@ -1073,7 +1073,7 @@
 
                     <hr />
 
-                    <a onclick="javascript:changeProjectDocDataGridVisible();">--Other DocÔºà<asp:Label ID="LB_ProjectDocNumber" runat="server"></asp:Label>Ôºâ--</a>
+                    <a onclick="javascript:changeProjectDocDataGridVisible();">--Other Doc£®<asp:Label ID="LB_ProjectDocNumber" runat="server"></asp:Label>£©--</a>
                     <table width="100%">
                         <tr id="TR_OtherDoc" style="display: none;">
                             <td align="left">
@@ -1081,18 +1081,18 @@
                                     GridLines="None" ForeColor="#333333" Height="1px" Width="700px" ShowHeader="False">
                                     <AlternatingItemStyle BackColor="White"></AlternatingItemStyle>
                                     <Columns>
-                                        <asp:BoundColumn DataField="DocID" HeaderText="Â∫èÂè∑">
+                                        <asp:BoundColumn DataField="DocID" HeaderText="–Ú∫≈">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                         </asp:BoundColumn>
 
                                         <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
-                                            DataTextField="DocName" Target="downFrame" HeaderText="Êñá‰ª∂Âêç">
+                                            DataTextField="DocName" Target="downFrame" HeaderText="Œƒº˛√˚">
                                             <ItemStyle HorizontalAlign="Left" Width="25%" CssClass="itemBorder"></ItemStyle>
                                         </asp:HyperLinkColumn>
 
 
 
-                                        <asp:BoundColumn DataField="UploadManName" HeaderText="‰∏ä‰º†ËÄÖ">
+                                        <asp:BoundColumn DataField="UploadManName" HeaderText="…œ¥´’ﬂ">
                                             <ItemStyle HorizontalAlign="Left" Width="10%" CssClass="itemBorder"></ItemStyle>
                                         </asp:BoundColumn>
                                     </Columns>
@@ -1144,7 +1144,7 @@
                                             </tr>
                                             <tr>
                                                 <td colspan="4" style="text-overflow: ellipsis; word-break: keep-all; overflow: hidden;">
-                                                    <a href='<%# "TTWorkFlowInfoPathDataViewForBrowse.aspx?XSNFile=" +strXSNFile + "&WLID=" +strWLID + "&StepID=" + DataBinder.Eval(Container.DataItem,"StepID") +"&ID=" + DataBinder.Eval(Container.DataItem,"ID")  %>'>Ë°®ÂçïÊï∞ÊçÆ</a>
+                                                    <a href='<%# "TTWorkFlowInfoPathDataViewForBrowse.aspx?XSNFile=" +strXSNFile + "&WLID=" +strWLID + "&StepID=" + DataBinder.Eval(Container.DataItem,"StepID") +"&ID=" + DataBinder.Eval(Container.DataItem,"ID")  %>'>±Ìµ• ˝æ›</a>
 
                                                 </td>
                                             </tr>
@@ -1174,12 +1174,12 @@
                         </td>
                         <td align="center" style="width: 100px; padding-top: 5px;">
                             <a id="aPrintAll" runat="server" href="#" onclick="previewAll()">
-                                <img src="ImagesSkin/print.gif" alt="ÊâìÂç∞" border="0" />All
+                                <img src="ImagesSkin/print.gif" alt="¥Ú”°" border="0" />All
                             </a>
                         </td>
                         <td align="left" style="width: 100px; padding-top: 5px;">
                             <a id="aPrintForm" runat="server" href="#" onclick="preview1()">
-                                <img src="ImagesSkin/print.gif" alt="ÊâìÂç∞" border="0" />Form
+                                <img src="ImagesSkin/print.gif" alt="¥Ú”°" border="0" />Form
                             </a>
                             <input id="txtReturnValue" type="text" style="display: none;" />
                         </td>
@@ -1189,7 +1189,7 @@
                                     OnClick="BT_BackupSaveXMLFile_Click" />
 
                                 <asp:Label ID="LB_WLID" runat="server"></asp:Label>
-                                <asp:Image ID="IMG_LRArrow" ImageUrl="Images/UpDnArrow.png" Width="18" Height="24" border="0" alt="ÈöêËóèÂè≥ËæπÊ†è" runat="server" /></a>
+                                <asp:Image ID="IMG_LRArrow" ImageUrl="Images/UpDnArrow.png" Width="18" Height="24" border="0" alt="“˛≤ÿ”“±ﬂ¿∏" runat="server" /></a>
                                             <asp:Label ID="Label48" runat="server" Style="display: none;"></asp:Label>
                                 <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ChuLiZhuangTai%>"></asp:Label>:
                              <asp:Label ID="LB_WorkflowStatus" runat="server"></asp:Label>

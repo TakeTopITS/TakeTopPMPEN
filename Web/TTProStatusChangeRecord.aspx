@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProStatusChangeRecord.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProStatusChangeRecord.aspx.cs"
     Inherits="TTProStatusChangeRecord" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -62,7 +62,7 @@
                             <tr>
                                 <td style="height: 16px; padding: 5px 5px 5px 5px;" align="right">
                                     <a href="#" onclick="preview1()">
-                                        <img src="ImagesSkin/print.gif" alt="打印" border="0" />
+                                        <img src="ImagesSkin/print.gif" alt="��ӡ" border="0" />
                                     </a></td>
                             </tr>
                         </table>
@@ -134,26 +134,38 @@
 
                                         <ItemStyle CssClass="itemStyle" />
                                         <Columns>
-                                            <asp:BoundColumn DataField="ID" HeaderText="序号">
+                                            <asp:BoundColumn DataField="ID" HeaderText="���">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="UserCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                DataTextField="UserName" HeaderText="变更人" Target="_blank">
+                                                DataTextField="UserName" HeaderText="�����" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                             </asp:HyperLinkColumn>
-                                            <asp:BoundColumn DataField="OldStatus" HeaderText="原状态">
-                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
-                                            </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="OldStatusValue" HeaderText="原状态值">
-                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-                                            </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="NewStatus" HeaderText="新状态">
-                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
-                                            </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="NewStatusValue" HeaderText="新状态值">
-                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-                                            </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="ChangeTime" HeaderText="变更时间">
+                                            <asp:TemplateColumn HeaderText="״̬">
+    <ItemTemplate>
+        <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("OldStatus").ToString()) %>
+    </ItemTemplate>
+    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
+</asp:TemplateColumn>
+                                            <asp:TemplateColumn HeaderText="״̬">
+    <ItemTemplate>
+        <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("OldStatusValue").ToString()) %>
+    </ItemTemplate>
+    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
+</asp:TemplateColumn>
+                                            <asp:TemplateColumn HeaderText="״̬">
+    <ItemTemplate>
+        <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("NewStatus").ToString()) %>
+    </ItemTemplate>
+    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
+</asp:TemplateColumn>
+                                            <asp:TemplateColumn HeaderText="״̬">
+    <ItemTemplate>
+        <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("NewStatusValue").ToString()) %>
+    </ItemTemplate>
+    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
+</asp:TemplateColumn>
+                                            <asp:BoundColumn DataField="ChangeTime" HeaderText="���ʱ��">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                             </asp:BoundColumn>
                                         </Columns>

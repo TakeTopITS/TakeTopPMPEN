@@ -1,4 +1,4 @@
-Ôªøusing ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
 using System.Collections;
@@ -20,14 +20,14 @@ public partial class TTDocumentManageForDepartment : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
-        //this.Title = "ÈÉ®Èó®‰∫∫ÂëòÊñáÊ°£ÁÆ°ÁêÜ---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
+        //this.Title = "≤ø√≈»À‘±Œƒµµπ‹¿Ì---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
 
         LB_UserCode.Text = strUserCode;
         strUserName = ShareClass.GetUserName(strUserCode);
         LB_UserName.Text = strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ÈÉ®Èó®‰∫∫ÂëòÊñáÊ°£", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "≤ø√≈»À‘±Œƒµµ", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -57,25 +57,25 @@ public partial class TTDocumentManageForDepartment : System.Web.UI.Page
 
             strHQL = "from Document as document where ";
             strHQL += "  (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible = 'ÈÉ®Èó®' and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or document.Visible = 'ÈõÜÂõ¢' or document.Visible = 'ÊâÄÊúâ')";
+            strHQL += " or (document.Visible = '≤ø√≈' and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
+            strHQL += " or document.Visible = 'ºØÕ≈' or document.Visible = 'All')";
 
             strHQL += " or ((document.DocID in (Select docRelatedUser.DocID From DocRelatedUser as docRelatedUser where docRelatedUser.UserCode = " + "'" + strUserCode + "'" + "))";
-            strHQL += " or (document.Visible = 'ÂÖ¨Âè∏' and document.DocID in (Select docRelatedDepartment.DocID From DocRelatedDepartment as docRelatedDepartment where docRelatedDepartment.DepartCode in " + strParentDepartString + "))";
+            strHQL += " or (document.Visible = 'π´Àæ' and document.DocID in (Select docRelatedDepartment.DocID From DocRelatedDepartment as docRelatedDepartment where docRelatedDepartment.DepartCode in " + strParentDepartString + "))";
             strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))";
-            strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " ))";
-            strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " ))";
-            strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " ))";
-            strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedType = 'ÈúÄÊ±Ç' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
-            strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedType = 'È£éÈô©' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
-            strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedType = '‰ªªÂä°' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
-            strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedType = 'ËÆ°Âàí' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
-            strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select reqAssignRecord.ReqID from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'" + " or reqAssignRecord.AssignManCode = " + "'" + strUserCode + "'" + "))";
-            strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select planRelatedLeader.PlanID from PlanRelatedLeader as planRelatedLeader where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + "))";
-            strHQL += " or (document.RelatedType = 'ÂêàÂêå' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";
-            strHQL += " or (document.Visible = 'ÂÖ¨Âè∏' and (document.DepartCode in " + strParentDepartString + " or document.DepartCode in " + strUnderDepartString + "))))";
+            strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " ))";
+            strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " ))";
+            strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " ))";
+            strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
+            strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedType = '∑Áœ’' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
+            strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
+            strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
+            strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select reqAssignRecord.ReqID from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'" + " or reqAssignRecord.AssignManCode = " + "'" + strUserCode + "'" + "))";
+            strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select planRelatedLeader.PlanID from PlanRelatedLeader as planRelatedLeader where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + "))";
+            strHQL += " or (document.RelatedType = '∫œÕ¨' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";
+            strHQL += " or (document.Visible = 'π´Àæ' and (document.DepartCode in " + strParentDepartString + " or document.DepartCode in " + strUnderDepartString + "))))";
         
-            strHQL += " and document.Status <> 'Âà†Èô§'";
+            strHQL += " and document.Status <> 'Deleted'";
             strHQL += " Order by document.DocID DESC";
             DocumentBLL documentBLL = new DocumentBLL();
             lst = documentBLL.GetAllDocuments(strHQL);
@@ -117,25 +117,25 @@ public partial class TTDocumentManageForDepartment : System.Web.UI.Page
 
             strHQL = "from Document as document where document.DepartCode = " + "'" + strDepartCode + "'";
             strHQL += " and (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible = 'ÈÉ®Èó®' and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or document.Visible = 'ÈõÜÂõ¢' or document.Visible = 'ÊâÄÊúâ')";
+            strHQL += " or (document.Visible = '≤ø√≈' and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
+            strHQL += " or document.Visible = 'ºØÕ≈' or document.Visible = 'All')";
 
             strHQL += " or ((document.DocID in (Select docRelatedUser.DocID From DocRelatedUser as docRelatedUser where docRelatedUser.UserCode = " + "'" + strUserCode + "'" + "))";
-            strHQL += " or (document.Visible = 'ÂÖ¨Âè∏' and document.DocID in (Select docRelatedDepartment.DocID From DocRelatedDepartment as docRelatedDepartment where docRelatedDepartment.DepartCode in " + strParentDepartString + "))";
+            strHQL += " or (document.Visible = 'π´Àæ' and document.DocID in (Select docRelatedDepartment.DocID From DocRelatedDepartment as docRelatedDepartment where docRelatedDepartment.DepartCode in " + strParentDepartString + "))";
             strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))";
-            strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " ))";
-            strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " ))";
-            strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " ))";
-            strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedType = 'ÈúÄÊ±Ç' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
-            strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedType = 'È£éÈô©' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
-            strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedType = '‰ªªÂä°' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
-            strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedType = 'ËÆ°Âàí' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
-            strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select reqAssignRecord.ReqID from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'" + " or reqAssignRecord.AssignManCode = " + "'" + strUserCode + "'" + "))";
-            strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select planRelatedLeader.PlanID from PlanRelatedLeader as planRelatedLeader where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + "))";
-            strHQL += " or (document.RelatedType = 'ÂêàÂêå' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";
-            strHQL += " or (document.Visible = 'ÂÖ¨Âè∏' and (document.DepartCode in " + strParentDepartString + " or document.DepartCode in " + strUnderDepartString + "))))";
+            strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " ))";
+            strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " ))";
+            strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " ))";
+            strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
+            strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedType = '∑Áœ’' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
+            strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
+            strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
+            strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select reqAssignRecord.ReqID from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'" + " or reqAssignRecord.AssignManCode = " + "'" + strUserCode + "'" + "))";
+            strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select planRelatedLeader.PlanID from PlanRelatedLeader as planRelatedLeader where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + "))";
+            strHQL += " or (document.RelatedType = '∫œÕ¨' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";
+            strHQL += " or (document.Visible = 'π´Àæ' and (document.DepartCode in " + strParentDepartString + " or document.DepartCode in " + strUnderDepartString + "))))";
 
-            strHQL += " and document.Status <> 'Âà†Èô§'";
+            strHQL += " and document.Status <> 'Deleted'";
             strHQL += " Order by document.DocID DESC";
             DocumentBLL documentBLL = new DocumentBLL();
             lst = documentBLL.GetAllDocuments(strHQL);
@@ -167,25 +167,25 @@ public partial class TTDocumentManageForDepartment : System.Web.UI.Page
         LB_QueryScope.Text = Resources.lang.User + ":" + strUploadManName + Resources.lang.ZZDWDLB;
 
         strHQL = "from Document as document where document.UploadManCode = " + "'" + strUploadManCode + "'";
-        strHQL += " and (((document.Visible = 'ÈÉ®Èó®' and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or document.Visible = 'ÈõÜÂõ¢' or document.Visible = 'ÊâÄÊúâ')";
+        strHQL += " and (((document.Visible = '≤ø√≈' and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
+        strHQL += " or document.Visible = 'ºØÕ≈' or document.Visible = 'All')";
 
         strHQL += " or ((document.DocID in (Select docRelatedUser.DocID From DocRelatedUser as docRelatedUser where docRelatedUser.UserCode = " + "'" + strUserCode + "'" + "))";
-        strHQL += " or (document.Visible = 'ÂÖ¨Âè∏' and document.DocID in (Select docRelatedDepartment.DocID From DocRelatedDepartment as docRelatedDepartment where docRelatedDepartment.DepartCode in " + strParentDepartString + "))";
+        strHQL += " or (document.Visible = 'π´Àæ' and document.DocID in (Select docRelatedDepartment.DocID From DocRelatedDepartment as docRelatedDepartment where docRelatedDepartment.DepartCode in " + strParentDepartString + "))";
         strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))";
-        strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " ))";
-        strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " ))";
-        strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " ))";
-        strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedType = 'ÈúÄÊ±Ç' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
-        strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedType = 'È£éÈô©' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
-        strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedType = '‰ªªÂä°' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
-        strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedType = 'ËÆ°Âàí' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
-        strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select reqAssignRecord.ReqID from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'" + " or reqAssignRecord.AssignManCode = " + "'" + strUserCode + "'" + "))";
-        strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select planRelatedLeader.PlanID from PlanRelatedLeader as planRelatedLeader where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + "))";
-        strHQL += " or (document.RelatedType = 'ÂêàÂêå' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";
-        strHQL += " or (document.Visible = 'ÂÖ¨Âè∏' and (document.DepartCode in " + strParentDepartString + " or document.DepartCode in " + strUnderDepartString + "))))";
+        strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " ))";
+        strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " ))";
+        strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " ))";
+        strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
+        strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedType = '∑Áœ’' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
+        strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
+        strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
+        strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select reqAssignRecord.ReqID from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'" + " or reqAssignRecord.AssignManCode = " + "'" + strUserCode + "'" + "))";
+        strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select planRelatedLeader.PlanID from PlanRelatedLeader as planRelatedLeader where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + "))";
+        strHQL += " or (document.RelatedType = '∫œÕ¨' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";
+        strHQL += " or (document.Visible = 'π´Àæ' and (document.DepartCode in " + strParentDepartString + " or document.DepartCode in " + strUnderDepartString + "))))";
 
-        strHQL += " and document.Status <> 'Âà†Èô§'";
+        strHQL += " and document.Status <> 'Deleted'";
         strHQL += " Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
         IList lst = documentBLL.GetAllDocuments(strHQL);
@@ -215,25 +215,25 @@ public partial class TTDocumentManageForDepartment : System.Web.UI.Page
         strDocName = "%" + strDocName + "%";
         strHQL = "from Document as document where document.DocName like " + "'" + strDocName + "'" + " and document.DocType  Like  " + "'" + strDocType + "'"; ;
         strHQL += " and (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or (document.Visible = 'ÈÉ®Èó®' and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or document.Visible = 'ÈõÜÂõ¢' or document.Visible = 'ÊâÄÊúâ')";
+        strHQL += " or (document.Visible = '≤ø√≈' and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
+        strHQL += " or document.Visible = 'ºØÕ≈' or document.Visible = 'All')";
 
         strHQL += " or ((document.DocID in (Select docRelatedUser.DocID From DocRelatedUser as docRelatedUser where docRelatedUser.UserCode = " + "'" + strUserCode + "'" + "))";
-        strHQL += " or (document.Visible = 'ÂÖ¨Âè∏' and document.DocID in (Select docRelatedDepartment.DocID From DocRelatedDepartment as docRelatedDepartment where docRelatedDepartment.DepartCode in " + strParentDepartString + "))";
+        strHQL += " or (document.Visible = 'π´Àæ' and document.DocID in (Select docRelatedDepartment.DocID From DocRelatedDepartment as docRelatedDepartment where docRelatedDepartment.DepartCode in " + strParentDepartString + "))";
         strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))";
-        strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " ))";
-        strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " ))";
-        strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " ))";
-        strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedType = 'ÈúÄÊ±Ç' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
-        strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedType = 'È£éÈô©' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
-        strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedType = '‰ªªÂä°' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
-        strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedType = 'ËÆ°Âàí' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
-        strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select reqAssignRecord.ReqID from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'" + " or reqAssignRecord.AssignManCode = " + "'" + strUserCode + "'" + "))";
-        strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select planRelatedLeader.PlanID from PlanRelatedLeader as planRelatedLeader where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + "))";
-        strHQL += " or (document.RelatedType = 'ÂêàÂêå' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";
-        strHQL += " or (document.Visible = 'ÂÖ¨Âè∏' and (document.DepartCode in " + strParentDepartString + " or document.DepartCode in " + strUnderDepartString + "))))";
+        strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " ))";
+        strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " ))";
+        strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " ))";
+        strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
+        strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedType = '∑Áœ’' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
+        strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
+        strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID in (select proRelatedUser.ProjectID from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " )))";
+        strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select reqAssignRecord.ReqID from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'" + " or reqAssignRecord.AssignManCode = " + "'" + strUserCode + "'" + "))";
+        strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select planRelatedLeader.PlanID from PlanRelatedLeader as planRelatedLeader where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + "))";
+        strHQL += " or (document.RelatedType = '∫œÕ¨' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";
+        strHQL += " or (document.Visible = 'π´Àæ' and (document.DepartCode in " + strParentDepartString + " or document.DepartCode in " + strUnderDepartString + "))))";
 
-        strHQL += " and document.Status <> 'Âà†Èô§'";
+        strHQL += " and document.Status <> 'Deleted'";
         strHQL += " Order by document.DocID DESC";
 
         DocumentBLL documentBLL = new DocumentBLL();

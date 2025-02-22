@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZObjectBigList.aspx.cs" Inherits="TTWZObjectBigList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZObjectBigList.aspx.cs" Inherits="TTWZObjectBigList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Â§ßÁ±ªÂàóË°®</title>
+    <title>¥Û¿‡¡–±Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -54,12 +54,12 @@
                                     <table width="80%" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left" class="formItemBgStyle">
-                                                <input type="button" class="inpuLong" value="ÂàóË°®ÂØºÂÖ•" onclick="window.location.href = 'TTWZObjectBigEdit.aspx'" />
+                                                <input type="button" class="inpuLong" value="¡–±Ìµº»Î" onclick="window.location.href = 'TTWZObjectBigEdit.aspx'" />
                                             </td>
                                         </tr>
                                         <tr>
                                             <td align="left" class="formItemBgStyle">
-                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,DaLeiShuoMing%>"></asp:Label>Ôºö<asp:TextBox ID="TXT_DLDesc" Width="350px" runat="server"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,DaLeiShuoMing%>"></asp:Label>£∫<asp:TextBox ID="TXT_DLDesc" Width="350px" runat="server"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <asp:Button ID="BT_Save" CssClass="inpu" runat="server" Text="<%$ Resources:lang,BaoCun%>" OnClick="BT_Save_Click" />&nbsp;
                                         <asp:Button ID="BT_Cancel" CssClass="inpu" runat="server" Text="<%$ Resources:lang,QuXiao%>" OnClick="BT_Cancel_Click" />
                                             </td>
@@ -105,18 +105,18 @@
                                                         <asp:TemplateColumn>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                             <HeaderTemplate>
-                                                                <%--Êìç‰Ωú--%>
+                                                                <%--≤Ÿ◊˜--%>
                                                             </HeaderTemplate>
                                                             <ItemTemplate>
 
-                                                                <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# Eval("DLCode")+"|"+Eval("DLName")+"|"+Eval("DLDesc") %>' CommandName="click" CssClass="notTab">Êìç‰Ωú</asp:LinkButton>
+                                                                <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# Eval("DLCode")+"|"+Eval("DLName")+"|"+Eval("DLDesc") %>' CommandName="click" CssClass="notTab">≤Ÿ◊˜</asp:LinkButton>
 
                                                             </ItemTemplate>
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="DLCode" HeaderText="Â§ßÁ±ª‰ª£Á†Å">
+                                                        <asp:BoundColumn DataField="DLCode" HeaderText="¥Û¿‡¥˙¬Î">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                         </asp:BoundColumn>
-                                                        <%--<asp:BoundColumn DataField="DLName" HeaderText="Â§ßÁ±ªÂêçÁß∞">
+                                                        <%--<asp:BoundColumn DataField="DLName" HeaderText="¥Û¿‡√˚≥∆">
                                                     <HeaderStyle HorizontalAlign="Left" />
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                 </asp:BoundColumn>--%>
@@ -129,7 +129,7 @@
                                                                 <%# ShareClass.StringCutByRequire(Eval("DLName").ToString(), 190) %>
                                                             </ItemTemplate>
                                                         </asp:TemplateColumn>
-                                                        <%--<asp:BoundColumn DataField="DLDesc" HeaderText="Â§ßÁ±ªËØ¥Êòé">
+                                                        <%--<asp:BoundColumn DataField="DLDesc" HeaderText="¥Û¿‡Àµ√˜">
                                                                 <HeaderStyle HorizontalAlign="Left" />
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="74%" />
                                                             </asp:BoundColumn>--%>

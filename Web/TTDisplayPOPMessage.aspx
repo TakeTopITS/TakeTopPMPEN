@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTDisplayPOPMessage.aspx.cs" Inherits="TTDisplayPOPMessage" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTDisplayPOPMessage.aspx.cs" Inherits="TTDisplayPOPMessage" %>
 
 <!DOCTYPE html>
 

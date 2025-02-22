@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -62,7 +62,7 @@ public partial class TTAPPMyMemProjectsRunStatus : System.Web.UI.Page
 
             strHQL = "from Project as project where  ";
             strHQL += " project.PMCode in ( select memberLevel.UnderCode from MemberLevel as memberLevel where memberLevel.ProjectVisible = 'YES' and memberLevel.UserCode = " + "'" + strUserCode + "'" + ") ";
-            strHQL += " and project.Status not in ('删除','归档') ";
+            strHQL += " and project.Status not in ('Deleted','Archived') ";
             strHQL += " Order by project.ProjectID DESC";
             ProjectBLL projectBLL = new ProjectBLL();
             lst = projectBLL.GetAllProjects(strHQL);
@@ -91,7 +91,7 @@ public partial class TTAPPMyMemProjectsRunStatus : System.Web.UI.Page
         }
     }
 
-      //设置项目时间和超期天数
+      //������Ŀʱ��ͳ�������
     public static void SetProjectStartAndEndTime(DataGrid dataGrid, int intCellNumber)
     {
         int i;
@@ -119,7 +119,7 @@ public partial class TTAPPMyMemProjectsRunStatus : System.Web.UI.Page
 
             if (intDays > 0)
             {
-                if (strProjectStatus == "结案" | strProjectStatus == "取消")
+                if (strProjectStatus == "CaseClosed" | strProjectStatus == "Cancel")
                 {
                     ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_MoreTime")).Text = Resources.lang.ChaoQi;
                     ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_DelayDays")).Text = "0";
@@ -140,7 +140,7 @@ public partial class TTAPPMyMemProjectsRunStatus : System.Web.UI.Page
             }
             else
             {
-                if (strProjectStatus == "结案" | strProjectStatus == "取消")
+                if (strProjectStatus == "CaseClosed" | strProjectStatus == "Cancel")
                 {
                     ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_MoreTime")).Text = Resources.lang.ShengYu;
                     ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_DelayDays")).Text = "0";
@@ -175,7 +175,7 @@ public partial class TTAPPMyMemProjectsRunStatus : System.Web.UI.Page
         string strUserName = ShareClass.GetUserName(strUserCode);
 
         string strHQL = "from Project as project where project.PMCode = " + "'" + strUnderlingCode + "'";
-        strHQL += "  and project.Status not in ('删除','归档') Order by project.ProjectID DESC";
+        strHQL += "  and project.Status not in ('Deleted','Archived') Order by project.ProjectID DESC";
 
         LB_Underling.Text = strUnderlingCode;
 
@@ -251,7 +251,7 @@ public partial class TTAPPMyMemProjectsRunStatus : System.Web.UI.Page
         LB_Underling.Text = "";
 
         strHQL = "from Project as project where project.PMCode in ( select memberLevel.UnderCode from MemberLevel as memberLevel where memberLevel.ProjectVisible = 'YES' and memberLevel.UserCode = " + "'" + strUserCode + "'" + ")";
-        strHQL += "  and project.Status not in ('删除','归档') order by project.ProjectID DESC";
+        strHQL += "  and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
 
         ProjectBLL projectBLL = new ProjectBLL();
 
@@ -293,7 +293,7 @@ public partial class TTAPPMyMemProjectsRunStatus : System.Web.UI.Page
         if (strBTText == Resources.lang.ShowStatus)
         {
             DataGrid2.Visible = true;
-            BT_DisplayStatus.Text = "隐去项目状态";
+            BT_DisplayStatus.Text = "��ȥ��Ŀ״̬";
         }
         else
         {
@@ -318,7 +318,7 @@ public partial class TTAPPMyMemProjectsRunStatus : System.Web.UI.Page
         //    dtNowDate = DateTime.Now;
         //    strStatus = Project.Status.Trim();
 
-        //    if (strStatus != "结案")
+        //    if (strStatus != "CaseClosed")
         //    {
         //        if (dtFinishedDate < dtNowDate)
         //        {
@@ -391,7 +391,7 @@ public partial class TTAPPMyMemProjectsRunStatus : System.Web.UI.Page
 
         ProjectBLL projectBLL = new ProjectBLL();
         strHQL = "from Project as project where project.ProjectName like " + "'" + strFindCondition + "'" + " and project.PMCode in (select memberLevel.UnderCode from MemberLevel as memberLevel where memberLevel.ProjectVisible = 'YES' and memberLevel.UserCode = " + "'" + strUserCode + "'" + ")";
-        strHQL += "  and project.Status not in ('删除','归档') order by project.ProjectID DESC";
+        strHQL += "  and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         lst = projectBLL.GetAllProjects(strHQL);
 
         DataGrid3.DataSource = lst;
@@ -423,7 +423,7 @@ public partial class TTAPPMyMemProjectsRunStatus : System.Web.UI.Page
         {
             strHQL = "from Project as project where project.PMCode in (select memberLevel.UnderCode from MemberLevel as memberLevel where memberLevel.ProjectVisible = 'YES' and memberLevel.UserCode = " + "'" + strUserCode + "'" + ")";
 
-            strHQL += "  and project.Status not in ('删除','归档') order by project.ProjectID DESC";
+            strHQL += "  and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         }
         else
         {
@@ -459,7 +459,7 @@ public partial class TTAPPMyMemProjectsRunStatus : System.Web.UI.Page
         ProjectBLL projectBLL = new ProjectBLL();
         strHQL = "from Project as project where project.UserName like " + "'" + strFindCondition + "'" + " and project.PMCode in (select memberLevel.UnderCode from MemberLevel as memberLevel where memberLevel.ProjectVisible = 'YES' and memberLevel.UserCode = " + "'" + strUserCode + "'" + ")";
 
-        strHQL += "  and project.Status not in ('删除','归档') order by project.ProjectID DESC";
+        strHQL += "  and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         lst = projectBLL.GetAllProjects(strHQL);
 
         DataGrid3.DataSource = lst;
@@ -488,7 +488,7 @@ public partial class TTAPPMyMemProjectsRunStatus : System.Web.UI.Page
 
         strHQL = "from Project as project where to_char(project.BeginDate,'yyyymmdd') >= " + "'" + strStartDate + "'" + " and to_char(project.EndDate,'yyyymmdd') <= " + "'" + strEndDate + "'" + " and project.PMCode in ( select memberLevel.UnderCode from MemberLevel as memberLevel where memberLevel.ProjectVisible = 'YES' and memberLevel.UserCode = " + "'" + strUserCode + "'" + ")";
 
-        strHQL += " and project.Status not in ('删除','归档') Order by project.ProjectID DESC";
+        strHQL += " and project.Status not in ('Deleted','Archived') Order by project.ProjectID DESC";
         ProjectBLL projectBLL = new ProjectBLL();
         lst = projectBLL.GetAllProjects(strHQL);
 

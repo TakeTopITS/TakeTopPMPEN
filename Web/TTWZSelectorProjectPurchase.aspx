@@ -1,16 +1,16 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSelectorProjectPurchase.aspx.cs" Inherits="TTWZSelectorProjectPurchase" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSelectorProjectPurchase.aspx.cs" Inherits="TTWZSelectorProjectPurchase" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Áâ©ËµÑÈ°πÁõÆ</title>
+    <title>ŒÔ◊ œÓƒø</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js" type="text/javascript"></script>
     <script type="text/jscript">
 
-        //ÂçïÈÄâÊã©ÊåâÈíÆÂà§Êñ≠
+        //µ•—°‘Ò∞¥≈•≈–∂œ
         function chooseUpdate() {
             var str = "";
             $("input[name=name1]").each(function () {
@@ -20,7 +20,7 @@
             });
 
             if (str == "") {
-                alert('ËØ∑ÈÄâÊã©ËÆ∞ÂΩïÈ°πÔºÅ');
+                alert('«Î—°‘Òº«¬ºœÓ£°');
                 return false;
             }
             else {
@@ -90,7 +90,7 @@
                                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                     <tr>
                                                                         <td width="10%" align="center">
-                                                                            <strong>&nbsp;<%--Êìç‰Ωú--%></strong></td>
+                                                                            <strong>&nbsp;<%--≤Ÿ◊˜--%></strong></td>
                                                                         <td width="10%" align="center">
                                                                             <strong>
                                                                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMuBianMa%>"></asp:Label></strong>
@@ -118,7 +118,7 @@
                                                             <asp:TemplateColumn>
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 <HeaderTemplate>
-                                                                    <%--Êìç‰Ωú--%>
+                                                                    <%--≤Ÿ◊˜--%>
                                                                 </HeaderTemplate>
                                                                 <ItemTemplate>
 
@@ -126,7 +126,7 @@
 
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="ProjectCode" HeaderText="È°πÁõÆÁºñÁ†Å">
+                                                            <asp:BoundColumn DataField="ProjectCode" HeaderText="œÓƒø±‡¬Î">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             </asp:BoundColumn>
                                                             <asp:TemplateColumn>
@@ -138,7 +138,7 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("ProjectName").ToString(), 190) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="ProjectManagerName" HeaderText="È°πÁõÆÁªèÁêÜ">
+                                                            <asp:BoundColumn DataField="ProjectManagerName" HeaderText="œÓƒøæ≠¿Ì">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="50%" />
                                                             </asp:BoundColumn>
                                                         </Columns>
@@ -156,10 +156,10 @@
                                             <tr>
                                                 <td class="formItemBgStyle">
                                                     <div style="text-align: center">
-                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="Á°ÆÂÆö" />
+                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="»∑∂®" />
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                            type="button" value="ÂÖ≥Èó≠" />
+                                                            type="button" value="Closed" />
                                                     </div>
                                                 </td>
                                             </tr>

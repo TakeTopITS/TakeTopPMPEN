@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Drawing;
@@ -60,7 +60,7 @@ public partial class TTConstractView : System.Web.UI.Page
         strConstractID = constract.ConstractID.ToString();
 
         HL_BusinessForm.NavigateUrl = "TTRelatedDIYBusinessForm.aspx?RelatedType=Constract&RelatedID=" + strConstractID + "&IdentifyString=" + ShareClass.GetWLTemplateIdentifyString(ShareClass.getBusinessFormTemName("Constract", strConstractID));
-        //BusinessFormï¼Œå¦‚æœä¸å«ä¸šåŠ¡è¡¨å•ï¼Œå°±éšè—â€œç›¸å…³è¡¨å•æŒ‰é’®â€
+        //BusinessForm£¬Èç¹û²»º¬ÒµÎñ±íµ¥£¬¾ÍÒş²Ø¡°Ïà¹Ø±íµ¥°´Å¥¡±
         if (ShareClass.getRelatedBusinessFormTemName("Constract", strConstractID) == "")
         {
             HL_BusinessForm.Visible = false;
@@ -69,7 +69,7 @@ public partial class TTConstractView : System.Web.UI.Page
 
         strAuthority = GetConstractRelatedUserAuthority(strConstractCode, strUserCode);
 
-        //this.Title = "åˆåŒï¼š" + strConstractCode + " " + strConstractName + " è¯¦ç»†å†…å®¹";
+        //this.Title = "ºÏÍ¬£º" + strConstractCode + " " + strConstractName + " ÏêÏ¸ÄÚÈİ";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
@@ -97,9 +97,9 @@ public partial class TTConstractView : System.Web.UI.Page
             CountInvoiceAmount(strConstractCode);
 
 
-            LoadRelatedDocByDocType(strConstractCode, "è¡¥å……åè®®", DataGrid19);
-            LoadRelatedDocByDocType(strConstractCode, "åˆåŒä¾æ®", DataGrid20);
-            LoadRelatedDocByDocType(strConstractCode, "é¡¹ç›®å…¶ä»–ä¿¡æ¯", DataGrid21);
+            LoadRelatedDocByDocType(strConstractCode, "²¹³äĞ­Òé", DataGrid19);
+            LoadRelatedDocByDocType(strConstractCode, "ºÏÍ¬ÒÀ¾İ", DataGrid20);
+            LoadRelatedDocByDocType(strConstractCode, "ÏîÄ¿ÆäËûĞÅÏ¢", DataGrid21);
 
             LB_ConstractCode.Text = strConstractCode;
 
@@ -446,7 +446,7 @@ public partial class TTConstractView : System.Web.UI.Page
         }
     }
 
-    //æŒ‰ç±»å‹åˆ—å‡ºæ–‡æ¡£
+    //°´ÀàĞÍÁĞ³öÎÄµµ
     protected void LoadRelatedDocByDocType(string strConstractCode, string strDocType, DataGrid dataGrid)
     {
         string strHQL, strUserCode;
@@ -455,12 +455,12 @@ public partial class TTConstractView : System.Web.UI.Page
         strUserCode = LB_UserCode.Text.Trim();
 
         strHQL = "from Document as document where ";
-        strHQL += " (document.RelatedType = 'åˆåŒ' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + ")";
-        strHQL += " or document.RelatedType = 'å·¥ä½œæµ' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'åˆåŒ' and workFlow.RelatedID in ( select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + "))";
-        strHQL += " or document.RelatedType = 'åä½œ' and document.RelatedID in (Select collaboration.CoID From Collaboration as collaboration Where collaboration.RelatedType = 'CONSTRACT' and collaboration.RelatedCode =" + "'" + strConstractCode + "'" + "))";
+        strHQL += " (document.RelatedType = 'ºÏÍ¬' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + ")";
+        strHQL += " or document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'ºÏÍ¬' and workFlow.RelatedID in ( select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + "))";
+        strHQL += " or document.RelatedType = 'Ğ­×÷' and document.RelatedID in (Select collaboration.CoID From Collaboration as collaboration Where collaboration.RelatedType = 'CONSTRACT' and collaboration.RelatedCode =" + "'" + strConstractCode + "'" + "))";
         strHQL += " and document.DocType = '" + strDocType + "'";
 
-        strHQL += " and rtrim(ltrim(document.Status)) <> 'åˆ é™¤' Order by document.DocID DESC";
+        strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
 
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);

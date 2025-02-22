@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserSchedule.aspx.cs" Inherits="TTUserSchedule" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserSchedule.aspx.cs" Inherits="TTUserSchedule" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>È°πÁõÆÊàêÂëòËµÑÊñô</title>
+    <title>œÓƒø≥…‘±◊ ¡œ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -58,14 +58,14 @@
 
                                                     <td width="30%" align="center">
                                                         <strong>
-                                                            <asp:Label ID="Label3" runat="server" Text="Áè≠Ê¨°ÂêçÁß∞"></asp:Label></strong>
+                                                            <asp:Label ID="Label3" runat="server" Text="∞‡¥Œ√˚≥∆"></asp:Label></strong>
                                                     </td>
 
                                                     <td align="center" width="20%"><strong>
-                                                        <asp:Label ID="Label268" runat="server" Text="‰∏äÁè≠ÂºÄÂßãÊó∂Èó¥"></asp:Label>
+                                                        <asp:Label ID="Label268" runat="server" Text="…œ∞‡ø™ º ±º‰"></asp:Label>
                                                     </strong></td>
                                                     <td align="center" width="20%"><strong>
-                                                        <asp:Label ID="Label269" runat="server" Text="‰∏ãÁè≠ÁªìÊùüÊó∂Èó¥"></asp:Label>
+                                                        <asp:Label ID="Label269" runat="server" Text="œ¬∞‡Ω· ¯ ±º‰"></asp:Label>
                                                     </strong></td>
 
                                                     <td align="center" width="20%"><strong>
@@ -97,18 +97,18 @@
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                         </asp:TemplateColumn>
 
-                                        <asp:BoundColumn DataField="ScheduleName" HeaderText="Áè≠Ê¨°ÂêçÁß∞">
+                                        <asp:BoundColumn DataField="ScheduleName" HeaderText="∞‡¥Œ√˚≥∆">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                         </asp:BoundColumn>
 
-                                        <asp:BoundColumn DataField="CheckInStart" HeaderText="‰∏äÁè≠ÂºÄÂßãÊó∂Èó¥">
+                                        <asp:BoundColumn DataField="CheckInStart" HeaderText="…œ∞‡ø™ º ±º‰">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="CheckInEnd" HeaderText="‰∏äÁè≠ÁªìÊùüÊó∂Èó¥">
+                                        <asp:BoundColumn DataField="CheckInEnd" HeaderText="…œ∞‡Ω· ¯ ±º‰">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                         </asp:BoundColumn>
 
-                                        <asp:BoundColumn DataField="LargestDistance" HeaderText="ÂÖÅËÆ∏ÊúÄÂ§ßË∑ùÁ¶ª">
+                                        <asp:BoundColumn DataField="LargestDistance" HeaderText="‘ –Ì◊Ó¥Ûæ‡¿Î">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                         </asp:BoundColumn>
 
@@ -120,19 +120,19 @@
                     <table width="98%" cellpadding="3" cellspacing="0" class="formBgStyle">
                         <tr>
                             <td align="left" colspan="3" class="formItemBgStyle">
-                                <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>Ôºö<asp:Label ID="LB_ID" runat="server"></asp:Label>
-                                &nbsp;<asp:Label ID="Label1" runat="server" Text="Áè≠Ê¨°ÂêçÁß∞"></asp:Label>
+                                <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>£∫<asp:Label ID="LB_ID" runat="server"></asp:Label>
+                                &nbsp;<asp:Label ID="Label1" runat="server" Text="∞‡¥Œ√˚≥∆"></asp:Label>
                                 <asp:TextBox ID="tb_Name" runat="server" Width="50px"></asp:TextBox>
-                                &nbsp;<asp:Label ID="Label285" runat="server" Text="‰∏äÁè≠ÂºÄÂßãÊó∂Èó¥"></asp:Label>
+                                &nbsp;<asp:Label ID="Label285" runat="server" Text="…œ∞‡ø™ º ±º‰"></asp:Label>
                                 <asp:TextBox ID="TB_CheckInStart" runat="server" Width="50px"></asp:TextBox>
-                                &nbsp;<asp:Label ID="Label286" runat="server" Text="‰∏ãÁè≠ÁªìÊùüÊó∂Èó¥"></asp:Label>
+                                &nbsp;<asp:Label ID="Label286" runat="server" Text="œ¬∞‡Ω· ¯ ±º‰"></asp:Label>
                                 <asp:TextBox ID="TB_CheckInEnd" runat="server" Width="50px"></asp:TextBox>
                                 &nbsp;<asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,Longitude%>"></asp:Label>
                                 <asp:TextBox ID="TB_Longitude" runat="server" Width="100px"></asp:TextBox>
                                 <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,Latitude%>"></asp:Label>
                                 <asp:TextBox ID="TB_Latitude" runat="server" Width="100px"></asp:TextBox>
                                 <a class="titleSpan" href="http://api.map.baidu.com/lbsapi/getpoint/index.html">
-                                    <img src="ImagesSkin/GPS.jpg" alt="ÂèñÁªèÁ∫¨Â∫¶" width="20" height="20" style="border: 0px;">
+                                    <img src="ImagesSkin/GPS.jpg" alt="»°æ≠Œ≥∂»" width="20" height="20" style="border: 0px;">
                                 </a>
                                 &nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label2119" runat="server" Text="<%$ Resources:lang,YunXiZuiDaJuLi%>"></asp:Label>
                                 <NickLee:NumberBox ID="NB_LargestDistance" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" Width="80px">0.00</NickLee:NumberBox>

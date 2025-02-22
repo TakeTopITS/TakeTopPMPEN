@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -23,10 +23,10 @@ public partial class TTMyMemberPlansBackup : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //é’Ÿç¤¼æœˆä½œå“ï¼ˆjack.erp@gmail.com)
-        //æ³°é¡¶è½¯ä»¶2006ï¼2012
+        //ÖÓÀñÔÂ×÷Æ·£¨jack.erp@gmail.com)
+        //Ì©¶¥Èí¼ş2006£­2012
 
-        //CKEditoråˆå§‹åŒ–
+        //CKEditor³õÊ¼»¯
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_ReviewDetail);
@@ -91,7 +91,7 @@ public partial class TTMyMemberPlansBackup : System.Web.UI.Page
         if (treeNode.Target == "0")
         {
             strPlanID = treeNode.Target.Trim();
-            strPlanName = "æˆ‘çš„è®¡åˆ’";
+            strPlanName = "ÎÒµÄ¼Æ»®";
         }
         else
         {
@@ -128,7 +128,7 @@ public partial class TTMyMemberPlansBackup : System.Web.UI.Page
         dtEndTime = DateTime.Parse(ds.Tables[0].Rows[0]["EndTime"].ToString());
         strPlanType = ds.Tables[0].Rows[0]["PlanType"].ToString();
 
-        strChartTitle = ds.Tables[0].Rows[0]["PlanName"].ToString() + " " + strDepartName + " éƒ¨é—¨æˆå‘˜è®¡åˆ’è¯„åˆ†å¯¹æ¯”å›¾";
+        strChartTitle = ds.Tables[0].Rows[0]["PlanName"].ToString() + " " + strDepartName + " ²¿ÃÅ³ÉÔ±¼Æ»®ÆÀ·Ö¶Ô±ÈÍ¼";
 
         strHQL = "Select (CreatorCode || CreatorName) as XName,ScoringByLeader as YNumber From T_PlanBackup ";
         strHQL += " Where CreatorCode in (Select UserCode From T_ProjectMember Where DepartCode = " + "'" + strDepartCode + "'" + ")";
@@ -245,7 +245,7 @@ public partial class TTMyMemberPlansBackup : System.Web.UI.Page
         return ds;
     }
 
-    //å®šä¹‰äººä¸ªè®¡åˆ’æ ‘
+    //¶¨ÒåÈË¸ö¼Æ»®Ê÷
     protected void InitialPlanTreeByUserCode(TreeView TreeView1, String strUserCode, string strRelatedType)
     {
         string strHQL;
@@ -257,7 +257,7 @@ public partial class TTMyMemberPlansBackup : System.Web.UI.Page
 
         string strPlanID, strPlanName, strBackupPlanID;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
@@ -270,7 +270,7 @@ public partial class TTMyMemberPlansBackup : System.Web.UI.Page
 
         strHQL = "Select * from T_PlanBackup where UserCode = " + "'" + strUserCode + "'";
         strHQL += " and ParentID not in (Select BackupPlanID From T_Plan Where UserCode = " + "'" + strUserCode + "'" + ")";
-        strHQL += " and Status not in ('åˆ é™¤','å½’æ¡£') ";
+        strHQL += " and Status not in ('Deleted','Archived') ";
         if (strRelatedType != "OTHER")
         {
             strHQL += " and RelatedType = " + "'" + strRelatedType + "'";

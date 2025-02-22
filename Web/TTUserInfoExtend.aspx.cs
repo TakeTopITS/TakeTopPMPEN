@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -45,7 +45,7 @@ public partial class TTUserInfoExtend : System.Web.UI.Page
         {
             if (Request["UserCode"] != null)
             {
-                //å½“å‰ä¿®æ”¹çš„ç”¨æˆ·ç¼–å·
+                //µ±Ç°ĞŞ¸ÄµÄÓÃ»§±àºÅ
                 HF_UserCode.Value = Request["UserCode"];
 
                 string strSelectUserCode = Request["UserCode"];
@@ -161,7 +161,7 @@ public partial class TTUserInfoExtend : System.Web.UI.Page
 
         if (TB_EntryTotalYearMonth.Text == "")
         {
-            //è®¡ç®—å¸é¾„
+            //¼ÆËãË¾Áä
             sql = string.Format("select * from T_ProjectMember where UserCode='{0}' ", userCode);
             ds = ShareClass.GetDataSetFromSql(sql, "T_ProjectMember");
             if (ds != null && ds.Tables.Count > 0)
@@ -392,7 +392,7 @@ public partial class TTUserInfoExtend : System.Web.UI.Page
     }
 
     /// <summary>
-    /// è®¡ç®—å¸é¾„
+    /// ¼ÆËãË¾Áä
     /// </summary>
     /// <param name="startDateStr"></param>
     /// <param name="endDateStr"></param>
@@ -405,21 +405,21 @@ public partial class TTUserInfoExtend : System.Web.UI.Page
         {
             startDate = DateTime.Parse(startDateStr);
             endDate = DateTime.Now;
-            //æ—¥æœŸç›¸å·®æœˆä»½æ•°
+            //ÈÕÆÚÏà²îÔÂ·İÊı
             int month = ((endDate.Year - startDate.Year) * 12) + endDate.Month - startDate.Month;
-            yearMonth = string.Format("{0}å¹´{1}æœˆ", month / 12, month % 12);
+            yearMonth = string.Format("{0}Äê{1}ÔÂ", month / 12, month % 12);
         }
 
         return yearMonth;
     }
 
-    //è®¡ç®—å¸é¾„
+    //¼ÆËãË¾Áä
     protected void BT_Calc_Click(object sender, EventArgs e)
     {
         TB_EntryTotalYearMonth.Text = GetYearMonth(HF_JoinDate.Value);
     }
 
-    //åˆ¤æ–­å‘˜å·¥æ‰©å±•å±æ€§æ˜¯ä¸æ˜¯å­˜åœ¨
+    //ÅĞ¶ÏÔ±¹¤À©Õ¹ÊôĞÔÊÇ²»ÊÇ´æÔÚ
     protected int checkUserExtendDataIsExisted(string strUserCode)
     {
         string strHQL;
@@ -441,11 +441,11 @@ public partial class TTUserInfoExtend : System.Web.UI.Page
 
             if (strFileName1 != "")
             {
-                //è·å–åˆå§‹æ–‡ä»¶å
-                i = strFileName1.LastIndexOf("."); //å–å¾—æ–‡ä»¶åä¸­æœ€åä¸€ä¸ª"."çš„ç´¢å¼•
-                string strNewExt = strFileName1.Substring(i); //è·å–æ–‡ä»¶æ‰©å±•å
+                //»ñÈ¡³õÊ¼ÎÄ¼şÃû
+                i = strFileName1.LastIndexOf("."); //È¡µÃÎÄ¼şÃûÖĞ×îºóÒ»¸ö"."µÄË÷Òı
+                string strNewExt = strFileName1.Substring(i); //»ñÈ¡ÎÄ¼şÀ©Õ¹Ãû
 
-                DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+                DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
 
                 string strFileName2 = System.IO.Path.GetFileName(strFileName1);
                 string strExtName = Path.GetExtension(strFileName2);
@@ -453,9 +453,9 @@ public partial class TTUserInfoExtend : System.Web.UI.Page
 
 
                 string strDocSavePath = Server.MapPath("Doc") + "\\" + DateTime.Now.ToString("yyyyMM") + "\\" + userCode + "\\";
-                if (!Directory.Exists(strDocSavePath))//åˆ¤æ–­æ–‡ä»¶å¤¹æ˜¯å¦å·²ç»å­˜åœ¨
+                if (!Directory.Exists(strDocSavePath))//ÅĞ¶ÏÎÄ¼ş¼ĞÊÇ·ñÒÑ¾­´æÔÚ
                 {
-                    Directory.CreateDirectory(strDocSavePath);//åˆ›å»ºæ–‡ä»¶å¤¹
+                    Directory.CreateDirectory(strDocSavePath);//´´½¨ÎÄ¼ş¼Ğ
                 }
                 string strFileName3 = "Doc\\" + DateTime.Now.ToString("yyyyMM") + "\\" + userCode + "\\" + strFileName2;
                 string strFileName4 = strDocSavePath + strFileName2;
@@ -499,11 +499,11 @@ public partial class TTUserInfoExtend : System.Web.UI.Page
 
             if (strFileName1 != "")
             {
-                //è·å–åˆå§‹æ–‡ä»¶å
-                i = strFileName1.LastIndexOf("."); //å–å¾—æ–‡ä»¶åä¸­æœ€åä¸€ä¸ª"."çš„ç´¢å¼•
-                string strNewExt = strFileName1.Substring(i); //è·å–æ–‡ä»¶æ‰©å±•å
+                //»ñÈ¡³õÊ¼ÎÄ¼şÃû
+                i = strFileName1.LastIndexOf("."); //È¡µÃÎÄ¼şÃûÖĞ×îºóÒ»¸ö"."µÄË÷Òı
+                string strNewExt = strFileName1.Substring(i); //»ñÈ¡ÎÄ¼şÀ©Õ¹Ãû
 
-                DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+                DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
 
                 string strFileName2 = System.IO.Path.GetFileName(strFileName1);
                 string strExtName = Path.GetExtension(strFileName2);
@@ -511,9 +511,9 @@ public partial class TTUserInfoExtend : System.Web.UI.Page
 
 
                 string strDocSavePath = Server.MapPath("Doc") + "\\" + DateTime.Now.ToString("yyyyMM") + "\\" + userCode + "\\";
-                if (!Directory.Exists(strDocSavePath))//åˆ¤æ–­æ–‡ä»¶å¤¹æ˜¯å¦å·²ç»å­˜åœ¨
+                if (!Directory.Exists(strDocSavePath))//ÅĞ¶ÏÎÄ¼ş¼ĞÊÇ·ñÒÑ¾­´æÔÚ
                 {
-                    Directory.CreateDirectory(strDocSavePath);//åˆ›å»ºæ–‡ä»¶å¤¹
+                    Directory.CreateDirectory(strDocSavePath);//´´½¨ÎÄ¼ş¼Ğ
                 }
                 string strFileName3 = "Doc\\" + DateTime.Now.ToString("yyyyMM") + "\\" + userCode + "\\" + strFileName2;
                 string strFileName4 = strDocSavePath + strFileName2;
@@ -557,11 +557,11 @@ public partial class TTUserInfoExtend : System.Web.UI.Page
 
             if (strFileName1 != "")
             {
-                //è·å–åˆå§‹æ–‡ä»¶å
-                i = strFileName1.LastIndexOf("."); //å–å¾—æ–‡ä»¶åä¸­æœ€åä¸€ä¸ª"."çš„ç´¢å¼•
-                string strNewExt = strFileName1.Substring(i); //è·å–æ–‡ä»¶æ‰©å±•å
+                //»ñÈ¡³õÊ¼ÎÄ¼şÃû
+                i = strFileName1.LastIndexOf("."); //È¡µÃÎÄ¼şÃûÖĞ×îºóÒ»¸ö"."µÄË÷Òı
+                string strNewExt = strFileName1.Substring(i); //»ñÈ¡ÎÄ¼şÀ©Õ¹Ãû
 
-                DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+                DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
 
                 string strFileName2 = System.IO.Path.GetFileName(strFileName1);
                 string strExtName = Path.GetExtension(strFileName2);
@@ -569,9 +569,9 @@ public partial class TTUserInfoExtend : System.Web.UI.Page
 
 
                 string strDocSavePath = Server.MapPath("Doc") + "\\" + DateTime.Now.ToString("yyyyMM") + "\\" + userCode + "\\";
-                if (!Directory.Exists(strDocSavePath))//åˆ¤æ–­æ–‡ä»¶å¤¹æ˜¯å¦å·²ç»å­˜åœ¨
+                if (!Directory.Exists(strDocSavePath))//ÅĞ¶ÏÎÄ¼ş¼ĞÊÇ·ñÒÑ¾­´æÔÚ
                 {
-                    Directory.CreateDirectory(strDocSavePath);//åˆ›å»ºæ–‡ä»¶å¤¹
+                    Directory.CreateDirectory(strDocSavePath);//´´½¨ÎÄ¼ş¼Ğ
                 }
                 string strFileName3 = "Doc\\" + DateTime.Now.ToString("yyyyMM") + "\\" + userCode + "\\" + strFileName2;
                 string strFileName4 = strDocSavePath + strFileName2;
@@ -614,11 +614,11 @@ public partial class TTUserInfoExtend : System.Web.UI.Page
 
             if (strFileName1 != "")
             {
-                //è·å–åˆå§‹æ–‡ä»¶å
-                i = strFileName1.LastIndexOf("."); //å–å¾—æ–‡ä»¶åä¸­æœ€åä¸€ä¸ª"."çš„ç´¢å¼•
-                string strNewExt = strFileName1.Substring(i); //è·å–æ–‡ä»¶æ‰©å±•å
+                //»ñÈ¡³õÊ¼ÎÄ¼şÃû
+                i = strFileName1.LastIndexOf("."); //È¡µÃÎÄ¼şÃûÖĞ×îºóÒ»¸ö"."µÄË÷Òı
+                string strNewExt = strFileName1.Substring(i); //»ñÈ¡ÎÄ¼şÀ©Õ¹Ãû
 
-                DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+                DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
 
                 string strFileName2 = System.IO.Path.GetFileName(strFileName1);
                 string strExtName = Path.GetExtension(strFileName2);
@@ -626,9 +626,9 @@ public partial class TTUserInfoExtend : System.Web.UI.Page
 
 
                 string strDocSavePath = Server.MapPath("Doc") + "\\" + DateTime.Now.ToString("yyyyMM") + "\\" + userCode + "\\";
-                if (!Directory.Exists(strDocSavePath))//åˆ¤æ–­æ–‡ä»¶å¤¹æ˜¯å¦å·²ç»å­˜åœ¨
+                if (!Directory.Exists(strDocSavePath))//ÅĞ¶ÏÎÄ¼ş¼ĞÊÇ·ñÒÑ¾­´æÔÚ
                 {
-                    Directory.CreateDirectory(strDocSavePath);//åˆ›å»ºæ–‡ä»¶å¤¹
+                    Directory.CreateDirectory(strDocSavePath);//´´½¨ÎÄ¼ş¼Ğ
                 }
                 string strFileName3 = "Doc\\" + DateTime.Now.ToString("yyyyMM") + "\\" + userCode + "\\" + strFileName2;
                 string strFileName4 = strDocSavePath + strFileName2;
@@ -672,11 +672,11 @@ public partial class TTUserInfoExtend : System.Web.UI.Page
 
             if (strFileName1 != "")
             {
-                //è·å–åˆå§‹æ–‡ä»¶å
-                i = strFileName1.LastIndexOf("."); //å–å¾—æ–‡ä»¶åä¸­æœ€åä¸€ä¸ª"."çš„ç´¢å¼•
-                string strNewExt = strFileName1.Substring(i); //è·å–æ–‡ä»¶æ‰©å±•å
+                //»ñÈ¡³õÊ¼ÎÄ¼şÃû
+                i = strFileName1.LastIndexOf("."); //È¡µÃÎÄ¼şÃûÖĞ×îºóÒ»¸ö"."µÄË÷Òı
+                string strNewExt = strFileName1.Substring(i); //»ñÈ¡ÎÄ¼şÀ©Õ¹Ãû
 
-                DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+                DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
 
                 string strFileName2 = System.IO.Path.GetFileName(strFileName1);
                 string strExtName = Path.GetExtension(strFileName2);
@@ -684,9 +684,9 @@ public partial class TTUserInfoExtend : System.Web.UI.Page
 
 
                 string strDocSavePath = Server.MapPath("Doc") + "\\" + DateTime.Now.ToString("yyyyMM") + "\\" + userCode + "\\";
-                if (!Directory.Exists(strDocSavePath))//åˆ¤æ–­æ–‡ä»¶å¤¹æ˜¯å¦å·²ç»å­˜åœ¨
+                if (!Directory.Exists(strDocSavePath))//ÅĞ¶ÏÎÄ¼ş¼ĞÊÇ·ñÒÑ¾­´æÔÚ
                 {
-                    Directory.CreateDirectory(strDocSavePath);//åˆ›å»ºæ–‡ä»¶å¤¹
+                    Directory.CreateDirectory(strDocSavePath);//´´½¨ÎÄ¼ş¼Ğ
                 }
                 string strFileName3 = "Doc\\" + DateTime.Now.ToString("yyyyMM") + "\\" + userCode + "\\" + strFileName2;
                 string strFileName4 = strDocSavePath + strFileName2;

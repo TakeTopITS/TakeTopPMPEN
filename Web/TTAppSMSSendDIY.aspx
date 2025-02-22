@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppSMSSendDIY.aspx.cs" Inherits="TTAppSMSSendDIY" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppSMSSendDIY.aspx.cs" Inherits="TTAppSMSSendDIY" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
 
@@ -54,7 +54,7 @@
                                                 <%--<a href="javascript:window.history.go(-1)" target ="_top" onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';">--%>
                                                      <a href="javascript:window.history.go(-1)" target ="_top" onclick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';">
                                                 
-                                                <img id="IMG_Waiting" src="Images/Processing.gif" alt="è¯·ç¨å€™ï¼Œå¤„ç†ä¸­..." style ="display :none;" />
+                                                <img id="IMG_Waiting" src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖÐ..." style ="display :none;" />
                                                     <table width="245" border="0" align="left" cellpadding="0" cellspacing="0">
                                                         <tr>
                                                             <td width="29">
@@ -67,7 +67,7 @@
                                                             </td>
                                                         </tr>
                                                     </table>
-                                                      <img id="IMG1" src="Images/Processing.gif" alt="è¯·ç¨å€™ï¼Œå¤„ç†ä¸­..." style="display: none;" />
+                                                      <img id="IMG1" src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖÐ..." style="display: none;" />
                                                 </a>
                                             </td>
                                         </tr>
@@ -110,7 +110,7 @@
                                                 <br />
                                                 <table cellpadding="0" cellspacing="0" width="95%">
                                                     <tr>
-                                                        <td align="left" colspan="2" style="height: 29px;"><asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DuanXinLieBiao%>"></asp:Label>ï¼š
+                                                        <td align="left" colspan="2" style="height: 29px;"><asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DuanXinLieBiao%>"></asp:Label>£º
                                                          
                                                             <asp:Label ID="LB_UserCode" runat="server" Visible="False"></asp:Label>
                                                             <asp:Label ID="LB_Sql" runat="server" Visible="False"></asp:Label>
@@ -147,13 +147,13 @@
                                                                 CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnItemCommand="DataGrid4_ItemCommand"
                                                                 OnPageIndexChanged="DataGrid4_PageIndexChanged" ShowHeader="false" Width="100%">
                                                                 <Columns>
-                                                                    <asp:TemplateColumn HeaderText="ç¼–å·">
+                                                                    <asp:TemplateColumn HeaderText="±àºÅ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                                                         <ItemTemplate>
                                                                             <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                                         </ItemTemplate>
                                                                     </asp:TemplateColumn>
-                                                                    <asp:BoundColumn DataField="Message" HeaderText="ä¿¡æ¯å†…å®¹">
+                                                                    <asp:BoundColumn DataField="Message" HeaderText="ÐÅÏ¢ÄÚÈÝ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="55%" />
                                                                     </asp:BoundColumn>
                                                                 

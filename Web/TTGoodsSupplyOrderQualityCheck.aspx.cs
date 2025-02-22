@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -33,7 +33,7 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
         string strUserName;
         string strUserCode = Session["UserCode"].ToString();
 
-        //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
         strToDoWLID = Request.QueryString["WLID"]; strToDoWLDetailID = Request.QueryString["WLStepDetailID"];
         strWLBusinessID = Request.QueryString["BusinessID"];
 
@@ -71,7 +71,7 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
             DL_Type.DataBind();
             DL_Type.Items.Insert(0, new ListItem("--Select--", ""));
 
-            ShareClass.LoadWFTemplate(strUserCode, "ç‰©æ–™è´¨æ£€", DL_TemName);
+            ShareClass.LoadWFTemplate(strUserCode, "MaterialQualityInspection", DL_TemName);
 
             ShareClass.LoadCurrencyType(DL_CurrencyType);
             ShareClass.LoadVendorList(DL_VendorList, strUserCode);
@@ -98,7 +98,7 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
 
             strSUID = e.Item.Cells[3].Text.Trim();
 
-            intWLNumber = intWLNumber = GetRelatedWorkFlowNumber("ç‰©æ–™è´¨æ£€", "ç‰©æ–™", strSUID);
+            intWLNumber = intWLNumber = GetRelatedWorkFlowNumber("MaterialQualityInspection", "ÎïÁÏ", strSUID);
             if (intWLNumber > 0)
             {
                 BT_NewMain.Visible = false;
@@ -114,8 +114,8 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
                 BT_SubmitApply.Enabled = true;
             }
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™è´¨æ£€", "ç‰©æ–™", strSUID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialQualityInspection", "ÎïÁÏ", strSUID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_NewMain.Visible = true;
@@ -164,7 +164,7 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
 
                 TB_WLName.Text = Resources.lang.GongHuoDan + goodsSupplyOrder.SUName.Trim() + Resources.lang.ShenQing;
 
-                LoadRelatedWL("ç‰©æ–™è´¨æ£€", "ç‰©æ–™", goodsSupplyOrder.SUID);
+                LoadRelatedWL("MaterialQualityInspection", "ÎïÁÏ", goodsSupplyOrder.SUID);
 
                 if (e.CommandName == "Update")
                 {
@@ -204,12 +204,12 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
 
         strSourceType = DL_SourceType.SelectedValue.Trim();
 
-        if (strSourceType == "å…¶å®ƒ")
+        if (strSourceType == "Other")
         {
             NB_SourceID.Amount = 0;
         }
 
-        if (strSourceType == "é‡‡è´­å•")
+        if (strSourceType == "PurchaseOrder")
         {
             BT_SelectPO.Visible = true;
         }
@@ -284,7 +284,7 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
         goodsSupplyOrder.Amount = 0;
         goodsSupplyOrder.CurrencyType = strCurrencyType;
         goodsSupplyOrder.Comment = strComment;
-        goodsSupplyOrder.Status = "æ–°å»º";
+        goodsSupplyOrder.Status = "New";
 
         goodsSupplyOrder.SourceType = DL_SourceType.SelectedValue.Trim();
         goodsSupplyOrder.SourceID = int.Parse(NB_SourceID.Amount.ToString());
@@ -369,15 +369,15 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
             goodsSupplyOrderBLL.UpdateGoodsSupplyOrder(goodsSupplyOrder, int.Parse(strSUID));
             LoadGoodsSupplyOrder(strUserCode);
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™è´¨æ£€", "ç‰©æ–™", strSUID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialQualityInspection", "ÎïÁÏ", strSUID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 string strCmdText = "select SUID as DetailSUID, * from T_GoodsSupplyOrder where SUID = " + strSUID;
                 if (strToDoWLID == null)
                 {
-                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ç‰©æ–™è´¨æ£€", "ç‰©æ–™", strSUID);
+                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialQualityInspection", "ÎïÁÏ", strSUID);
                 }
 
                 if (strToDoWLID != null)
@@ -692,7 +692,7 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
 
             strSUID = LB_SUID.Text.Trim();
 
-            int intWLNumber = GetRelatedWorkFlowNumber("ç‰©æ–™è´¨æ£€", "ç‰©æ–™", strSUID);
+            int intWLNumber = GetRelatedWorkFlowNumber("MaterialQualityInspection", "ÎïÁÏ", strSUID);
             if (intWLNumber > 0)
             {
                 BT_NewMain.Visible = false;
@@ -706,8 +706,8 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
                 BT_SubmitApply.Enabled = true;
             }
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™è´¨æ£€", "ç‰©æ–™", strSUID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialQualityInspection", "ÎïÁÏ", strSUID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_NewMain.Visible = true;
@@ -759,7 +759,7 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
             if (e.CommandName == "Delete")
             {
                 strSUID = LB_SUID.Text.Trim();
-                intWLNumber = GetRelatedWorkFlowNumber("ç‰©æ–™è´¨æ£€", "ç‰©æ–™", strSUID);
+                intWLNumber = GetRelatedWorkFlowNumber("MaterialQualityInspection", "ÎïÁÏ", strSUID);
                 if (intWLNumber > 0 & strToDoWLID == null)
                 {
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
@@ -783,15 +783,15 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
                     NB_Amount.Amount = SumGoodsSupplyOrderAmount(strSUID);
                     UpdateGoodsSupplyOrderAmount(strSUID, NB_Amount.Amount);
 
-                    //æ›´æ”¹é€è´§å•ç›¸åº”é€è´§æ•°é‡
+                    //¸ü¸ÄËÍ»õµ¥ÏàÓ¦ËÍ»õÊıÁ¿
                     if (strSourceType == "GoodsPORecord")
                     {
                         UpdateGoodsPurchaseOrderAlreadySupplyNumber(strSourceType, intSourceID.ToString());
                     }
 
-                    //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                    //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-                    strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™è´¨æ£€", "ç‰©æ–™", strSUID, "0");
+                    //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+                    //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+                    strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialQualityInspection", "ÎïÁÏ", strSUID, "0");
                     if (strToDoWLID != null | strAllowFullEdit == "YES")
                     {
                         string strCmdText;
@@ -799,7 +799,7 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
                         strCmdText = "select SUID as DetailSUID, * from T_GoodsSupplyOrder where SUID = " + strSUID;
                         if (strToDoWLID == null)
                         {
-                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ç‰©æ–™è´¨æ£€", "ç‰©æ–™", strSUID);
+                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialQualityInspection", "ÎïÁÏ", strSUID);
                         }
 
                         if (strToDoWLID != null)
@@ -850,7 +850,7 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
         }
 
         strSUID = LB_SUID.Text.Trim();
-        int intWLNumber = GetRelatedWorkFlowNumber("ç‰©æ–™è´¨æ£€", "ç‰©æ–™", strSUID);
+        int intWLNumber = GetRelatedWorkFlowNumber("MaterialQualityInspection", "ÎïÁÏ", strSUID);
         if (intWLNumber > 0 & strToDoWLID == null)
         {
             BT_SubmitApply.Enabled = false;
@@ -983,15 +983,15 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
                 NB_Amount.Amount = SumGoodsSupplyOrderAmount(strSUID);
                 UpdateGoodsSupplyOrderAmount(strSUID, NB_Amount.Amount);
 
-                //æ›´æ”¹é€è´§å•ç›¸åº”é€è´§æ•°é‡
+                //¸ü¸ÄËÍ»õµ¥ÏàÓ¦ËÍ»õÊıÁ¿
                 if (strSourceType == "GoodsPORecord")
                 {
                     UpdateGoodsPurchaseOrderAlreadySupplyNumber(strSourceType, intSourceID.ToString());
                 }
 
-                //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™è´¨æ£€", "ç‰©æ–™", strSUID, "0");
+                //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+                //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialQualityInspection", "ÎïÁÏ", strSUID, "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     string strCmdText;
@@ -999,7 +999,7 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
                     strCmdText = "select SUID as DetailSUID, * from T_GoodsSupplyOrder where SUID = " + strSUID;
                     if (strToDoWLID == null)
                     {
-                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ç‰©æ–™è´¨æ£€", "ç‰©æ–™", strSUID);
+                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialQualityInspection", "ÎïÁÏ", strSUID);
                     }
 
                     if (strToDoWLID != null)
@@ -1159,15 +1159,15 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
                 NB_Amount.Amount = SumGoodsSupplyOrderAmount(strSUID);
                 UpdateGoodsSupplyOrderAmount(strSUID, NB_Amount.Amount);
 
-                //æ›´æ”¹é€è´§å•ç›¸åº”é€è´§æ•°é‡
+                //¸ü¸ÄËÍ»õµ¥ÏàÓ¦ËÍ»õÊıÁ¿
                 if (strSourceType == "GoodsPORecord")
                 {
                     UpdateGoodsPurchaseOrderAlreadySupplyNumber(strSourceType, intSourceID.ToString());
                 }
 
-                //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™è´¨æ£€", "ç‰©æ–™", strSUID, "0");
+                //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+                //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialQualityInspection", "ÎïÁÏ", strSUID, "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     string strCmdText;
@@ -1175,7 +1175,7 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
                     strCmdText = "select SUID as DetailSUID, * from T_GoodsSupplyOrder where SUID = " + strSUID;
                     if (strToDoWLID == null)
                     {
-                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ç‰©æ–™è´¨æ£€", "ç‰©æ–™", strSUID);
+                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialQualityInspection", "ÎïÁÏ", strSUID);
                     }
 
                     if (strToDoWLID != null)
@@ -1259,28 +1259,28 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
         workFlow.CreatorCode = strCreatorCode;
         workFlow.CreatorName = strCreatorName;
         workFlow.CreateTime = DateTime.Now;
-        workFlow.RelatedType = "ç‰©æ–™";
-        workFlow.Status = "æ–°å»º";
+        workFlow.RelatedType = "ÎïÁÏ";
+        workFlow.Status = "New";
         workFlow.RelatedID = int.Parse(strSUID);
-        workFlow.DIYNextStep = "Yes";
+        workFlow.DIYNextStep = "YES";
         workFlow.IsPlanMainWorkflow = "NO";
 
         if (CB_SMS.Checked == true)
         {
-            workFlow.ReceiveSMS = "Yes";
+            workFlow.ReceiveSMS = "YES";
         }
         else
         {
-            workFlow.ReceiveSMS = "No";
+            workFlow.ReceiveSMS = "NO";
         }
 
         if (CB_Mail.Checked == true)
         {
-            workFlow.ReceiveEMail = "Yes";
+            workFlow.ReceiveEMail = "YES";
         }
         else
         {
-            workFlow.ReceiveEMail = "No";
+            workFlow.ReceiveEMail = "NO";
         }
 
         try
@@ -1289,10 +1289,10 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
 
             strWLID = ShareClass.GetMyCreatedWorkFlowID(strUserCode);
 
-            LoadRelatedWL(strWLType, "ç‰©æ–™", int.Parse(strSUID));
+            LoadRelatedWL(strWLType, "ÎïÁÏ", int.Parse(strSUID));
 
-            UpdateGoodsSupplyStatus(strSUID, "å¤„ç†ä¸­");
-            DL_SUStatus.SelectedValue = "å¤„ç†ä¸­";
+            UpdateGoodsSupplyStatus(strSUID, "InProgress");
+            DL_SUStatus.SelectedValue = "InProgress";
 
             strCmdText = "select SUID as DetailSUID, * from T_GoodsSupplyOrder where SUID = " + strSUID;
             strXMLFile2 = Server.MapPath(strXMLFile2);
@@ -1335,7 +1335,7 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'ç‰©æ–™é‡‡è´­'";
+        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'MaterialProcurement'";
         strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC";
         WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
         lst = workFlowTemplateBLL.GetAllWorkFlowTemplates(strHQL);
@@ -1410,7 +1410,7 @@ public partial class TTGoodsSupplyOrderQualityCheck : System.Web.UI.Page
         strHQL = "from GoodsSupplyOrder as goodsSupplyOrder where (goodsSupplyOrder.OperatorCode in " + strDepartString  + ")";
         strHQL += " or (goodsSupplyOrder.OperatorCode = '" + strOperatorCode + "')";
         strHQL += " Order by goodsSupplyOrder.SUID DESC";
-        //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
         if (strToDoWLID != null & strWLBusinessID != null)
         {
             strHQL = "from GoodsSupplyOrder as goodsSupplyOrder where goodsSupplyOrder.SUID = " + strWLBusinessID;

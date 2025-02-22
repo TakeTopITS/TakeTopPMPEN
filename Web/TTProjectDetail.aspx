@@ -291,8 +291,8 @@
                                                                                 <td>
                                                                                     <asp:DropDownList ID="DL_StatusValue" OnSelectedIndexChanged=" DL_StatusValue_SelectedIndexChanged"
                                                                                         AutoPostBack="true" runat="server" Width="80px">
-                                                                                        <asp:ListItem Value="进行中" Text="<%$ Resources:lang,JinXingZhong%>" />
-                                                                                        <asp:ListItem Value="通过" Text="<%$ Resources:lang,TongGuo%>" />
+                                                                                        <asp:ListItem Value="InProgress" Text="<%$ Resources:lang,JinXingZhong%>" />
+                                                                                        <asp:ListItem Value="Passed" Text="<%$ Resources:lang,TongGuo%>" />
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                             </tr>

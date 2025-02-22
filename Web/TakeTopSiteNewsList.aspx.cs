@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -92,7 +92,7 @@ public partial class TakeTopSiteNewsList : System.Web.UI.Page
         string strHQL;
     
         strHQL = "Select ID,Title,Content,RelatedDepartName,PublisherCode,PublisherName,PublishTime From T_HeadLine ";
-        strHQL += "Where Type = 'Â§ñÈÉ®' and Status = 'ÂèëÂ∏É' ";
+        strHQL += "Where Type = 'External' and Status = '∑¢≤º' ";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
         strHQL += " Order By ID DESC";
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");

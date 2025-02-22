@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCustomerTrainInfoManage.aspx.cs" Inherits="TTCustomerTrainInfoManage" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCustomerTrainInfoManage.aspx.cs" Inherits="TTCustomerTrainInfoManage" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ÂüπËÆ≠ÁÆ°ÁêÜ</title>
+    <title>≈‡—µπ‹¿Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -121,55 +121,55 @@
                                                 <asp:DataGrid ID="DataGrid1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                     OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="15" Width="100%" ShowHeader="false">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="Â∫èÂè∑">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="–Ú∫≈">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="IDCard" HeaderText="Ë∫´‰ªΩËØÅÂè∑">
+                                                        <asp:BoundColumn DataField="IDCard" HeaderText="…Ì∑›÷§∫≈">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="ÂßìÂêç">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="–’√˚">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Gender" HeaderText="ÊÄßÂà´">
+                                                        <asp:BoundColumn DataField="Gender" HeaderText="–‘±">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ProfessionalSkillLevel" HeaderText="ÊäÄËÉΩÁ≠âÁ∫ß">
+                                                        <asp:BoundColumn DataField="ProfessionalSkillLevel" HeaderText="ººƒ‹µ»º∂">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ProfessionSkillNumber" HeaderText="ËÅå‰∏öÊäÄËÉΩËØÅ‰π¶ÁºñÂè∑">
+                                                        <asp:BoundColumn DataField="ProfessionSkillNumber" HeaderText="÷∞“µººƒ‹÷§ È±‡∫≈">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ValidityType" HeaderText="Á≠æÂÆöÂ∑•Áßç">
+                                                        <asp:BoundColumn DataField="ValidityType" HeaderText="«©∂®π§÷÷">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ReleaseTime" HeaderText="ÂèëËØÅÊó•Êúü" DataFormatString="{0:yyyy-MM-dd}">
+                                                        <asp:BoundColumn DataField="ReleaseTime" HeaderText="∑¢÷§»’∆⁄" DataFormatString="{0:yyyy-MM-dd}">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="AnnValidTime" HeaderText="ÂÆâÊÅêÊúâÊïàÊúü">
+                                                        <asp:BoundColumn DataField="AnnValidTime" HeaderText="∞≤ø÷”––ß∆⁄">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="AnnCertificateNo" HeaderText="ÂÆâÊÅêËØÅ‰π¶ÁºñÂè∑">
+                                                        <asp:BoundColumn DataField="AnnCertificateNo" HeaderText="∞≤ø÷÷§ È±‡∫≈">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="EnglishRiew" HeaderText="Ê∂âÂ§ñËã±ËØ≠ËÄÉÊ†∏">
+                                                        <asp:BoundColumn DataField="EnglishRiew" HeaderText="…ÊÕ‚”¢”Ôøº∫À">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="TrainingInfo" HeaderText="ÂüπËÆ≠Áõ∏ÂÖ≥‰ø°ÊÅØ">
+                                                        <asp:BoundColumn DataField="TrainingInfo" HeaderText="≈‡—µœ‡πÿ–≈œ¢">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Remark" HeaderText="Â§áÊ≥®">
+                                                        <asp:BoundColumn DataField="Remark" HeaderText="±∏◊¢">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
@@ -234,43 +234,43 @@
                                                 <asp:DataGrid ID="DataGrid6" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                     OnPageIndexChanged="DataGrid6_PageIndexChanged" PageSize="15" Width="100%" ShowHeader="false">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="Â∫èÂè∑">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="–Ú∫≈">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="IDCard" HeaderText="Ë∫´‰ªΩËØÅÂè∑">
+                                                        <asp:BoundColumn DataField="IDCard" HeaderText="…Ì∑›÷§∫≈">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="ÂßìÂêç">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="–’√˚">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="6%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Gender" HeaderText="ÊÄßÂà´">
+                                                        <asp:BoundColumn DataField="Gender" HeaderText="–‘±">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="TrainingProject" HeaderText="ÂüπËÆ≠È°πÁõÆ">
+                                                        <asp:BoundColumn DataField="TrainingProject" HeaderText="≈‡—µœÓƒø">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="TrainingAccord" HeaderText="ÂüπËÆ≠‰æùÊçÆ">
+                                                        <asp:BoundColumn DataField="TrainingAccord" HeaderText="≈‡—µ“¿æ›">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="TrainingUnit" HeaderText="‰∏æÂäûÂçï‰Ωç">
+                                                        <asp:BoundColumn DataField="TrainingUnit" HeaderText="æŸ∞Ïµ•Œª">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="TrainingAddress" HeaderText="ÂüπËÆ≠Âú∞ÁÇπ">
+                                                        <asp:BoundColumn DataField="TrainingAddress" HeaderText="≈‡—µµÿµ„">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="TrainingContent" HeaderText="ÂüπËÆ≠ÂÜÖÂÆπ">
+                                                        <asp:BoundColumn DataField="TrainingContent" HeaderText="≈‡—µƒ⁄»›">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="TrainingTime" HeaderText="ÂüπËÆ≠Êó•Êúü" DataFormatString="{0:yyyy-MM-dd}">
+                                                        <asp:BoundColumn DataField="TrainingTime" HeaderText="≈‡—µ»’∆⁄" DataFormatString="{0:yyyy-MM-dd}">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
@@ -337,47 +337,47 @@
                                                 <asp:DataGrid ID="DataGrid2" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                     OnPageIndexChanged="DataGrid2_PageIndexChanged" PageSize="15" Width="100%" ShowHeader="false">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="Â∫èÂè∑">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="–Ú∫≈">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="IDCard" HeaderText="Ë∫´‰ªΩËØÅÂè∑">
+                                                        <asp:BoundColumn DataField="IDCard" HeaderText="…Ì∑›÷§∫≈">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="ÂßìÂêç">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="–’√˚">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Gender" HeaderText="ÊÄßÂà´">
+                                                        <asp:BoundColumn DataField="Gender" HeaderText="–‘±">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="WorkType" HeaderText="Áî®Â∑•Á±ªÂà´">
+                                                        <asp:BoundColumn DataField="WorkType" HeaderText="”√π§¿‡±">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="SpeOpeType" HeaderText="‰Ωú‰∏öÁ±ªÂà´">
+                                                        <asp:BoundColumn DataField="SpeOpeType" HeaderText="◊˜“µ¿‡±">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="SpeOpeProject" HeaderText="ÂáÜÊìçÈ°πÁõÆ">
+                                                        <asp:BoundColumn DataField="SpeOpeProject" HeaderText="◊º≤ŸœÓƒø">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="SpeOpeStartTime" HeaderText="ÂèñËØÅÊó•Êúü" DataFormatString="{0:yyyy-MM-dd}">
+                                                        <asp:BoundColumn DataField="SpeOpeStartTime" HeaderText="»°÷§»’∆⁄" DataFormatString="{0:yyyy-MM-dd}">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="SpeOpeReviewTime" HeaderText="Â§çÂÆ°Êó•Êúü" DataFormatString="{0:yyyy-MM-dd}">
+                                                        <asp:BoundColumn DataField="SpeOpeReviewTime" HeaderText="∏¥…Û»’∆⁄" DataFormatString="{0:yyyy-MM-dd}">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="SpeOpeNumber" HeaderText="ËØÅ‰π¶ÁºñÂè∑">
+                                                        <asp:BoundColumn DataField="SpeOpeNumber" HeaderText="÷§ È±‡∫≈">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Remark" HeaderText="Â§áÊ≥®">
+                                                        <asp:BoundColumn DataField="Remark" HeaderText="±∏◊¢">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
@@ -444,47 +444,47 @@
                                                 <asp:DataGrid ID="DataGrid3" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                     OnPageIndexChanged="DataGrid3_PageIndexChanged" PageSize="15" Width="100%" ShowHeader="false">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="Â∫èÂè∑">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="–Ú∫≈">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="IDCard" HeaderText="Ë∫´‰ªΩËØÅÂè∑">
+                                                        <asp:BoundColumn DataField="IDCard" HeaderText="…Ì∑›÷§∫≈">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="ÂßìÂêç">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="–’√˚">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Gender" HeaderText="ÊÄßÂà´">
+                                                        <asp:BoundColumn DataField="Gender" HeaderText="–‘±">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="WorkType" HeaderText="Áî®Â∑•Á±ªÂà´">
+                                                        <asp:BoundColumn DataField="WorkType" HeaderText="”√π§¿‡±">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="SpeEquType" HeaderText="ËÆæÂ§áÁ±ªÂà´">
+                                                        <asp:BoundColumn DataField="SpeEquType" HeaderText="…Ë±∏¿‡±">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="SpeEquProject" HeaderText="ÂáÜÊìçÈ°πÁõÆ">
+                                                        <asp:BoundColumn DataField="SpeEquProject" HeaderText="◊º≤ŸœÓƒø">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="SpeEquStartTime" HeaderText="ÂèñËØÅÊó•Êúü" DataFormatString="{0:yyyy-MM-dd}">
+                                                        <asp:BoundColumn DataField="SpeEquStartTime" HeaderText="»°÷§»’∆⁄" DataFormatString="{0:yyyy-MM-dd}">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="SpeEquReviewTime" HeaderText="Â§çÂÆ°Êó•Êúü" DataFormatString="{0:yyyy-MM-dd}">
+                                                        <asp:BoundColumn DataField="SpeEquReviewTime" HeaderText="∏¥…Û»’∆⁄" DataFormatString="{0:yyyy-MM-dd}">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="SpeEquNumber" HeaderText="ËØÅ‰π¶ÁºñÂè∑">
+                                                        <asp:BoundColumn DataField="SpeEquNumber" HeaderText="÷§ È±‡∫≈">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Remark" HeaderText="Â§áÊ≥®">
+                                                        <asp:BoundColumn DataField="Remark" HeaderText="±∏◊¢">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
@@ -548,43 +548,43 @@
                                                 <asp:DataGrid ID="DataGrid4" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                     OnPageIndexChanged="DataGrid4_PageIndexChanged" PageSize="15" Width="100%" ShowHeader="false">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="Â∫èÂè∑">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="–Ú∫≈">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="IDCard" HeaderText="Ë∫´‰ªΩËØÅÂè∑">
+                                                        <asp:BoundColumn DataField="IDCard" HeaderText="…Ì∑›÷§∫≈">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="ÂßìÂêç">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="–’√˚">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Gender" HeaderText="ÊÄßÂà´">
+                                                        <asp:BoundColumn DataField="Gender" HeaderText="–‘±">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CertificateNo" HeaderText="ËØÅ‰ª∂ÁºñÁ†Å">
+                                                        <asp:BoundColumn DataField="CertificateNo" HeaderText="÷§º˛±‡¬Î">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="WelderSeal" HeaderText="ÁÑäÂ∑•Èí¢Âç∞">
+                                                        <asp:BoundColumn DataField="WelderSeal" HeaderText="∫∏π§∏÷”°">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="HolderProject" HeaderText="ÊåÅËØÅÈ°πÁõÆ">
+                                                        <asp:BoundColumn DataField="HolderProject" HeaderText="≥÷÷§œÓƒø">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ValidTime" HeaderText="ÊúâÊïàÊúü">
+                                                        <asp:BoundColumn DataField="ValidTime" HeaderText="”––ß∆⁄">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Unit" HeaderText="Âçï‰Ωç">
+                                                        <asp:BoundColumn DataField="Unit" HeaderText="µ•Œª">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Remark" HeaderText="Â§áÊ≥®">
+                                                        <asp:BoundColumn DataField="Remark" HeaderText="±∏◊¢">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
@@ -657,55 +657,55 @@
                                                 <asp:DataGrid ID="DataGrid5" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                     OnPageIndexChanged="DataGrid5_PageIndexChanged" PageSize="15" Width="100%" ShowHeader="false">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="Â∫èÂè∑">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="–Ú∫≈">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="IDCard" HeaderText="Ë∫´‰ªΩËØÅÂè∑">
+                                                        <asp:BoundColumn DataField="IDCard" HeaderText="…Ì∑›÷§∫≈">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="ÂßìÂêç">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="–’√˚">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Gender" HeaderText="ÊÄßÂà´">
+                                                        <asp:BoundColumn DataField="Gender" HeaderText="–‘±">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="BirthDay" HeaderText="Âá∫ÁîüÊó•Êúü" DataFormatString="{0:yyyy-MM-dd}">
+                                                        <asp:BoundColumn DataField="BirthDay" HeaderText="≥ˆ…˙»’∆⁄" DataFormatString="{0:yyyy-MM-dd}">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Unit" HeaderText="Âçï‰Ωç">
+                                                        <asp:BoundColumn DataField="Unit" HeaderText="µ•Œª">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="WorkType" HeaderText="Áî®Â∑•Á±ªÂà´">
+                                                        <asp:BoundColumn DataField="WorkType" HeaderText="”√π§¿‡±">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Job" HeaderText="Â≤ó‰ΩçËÅåÂä°">
+                                                        <asp:BoundColumn DataField="Job" HeaderText="∏⁄Œª÷∞ŒÒ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CertificateNo" HeaderText="ËØÅ‰π¶ÁºñÂè∑">
+                                                        <asp:BoundColumn DataField="CertificateNo" HeaderText="÷§ È±‡∫≈">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CertificateOffice" HeaderText="ÂèëËØÅÊú∫ÂÖ≥">
+                                                        <asp:BoundColumn DataField="CertificateOffice" HeaderText="∑¢÷§ª˙πÿ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CertificateTime" HeaderText="ÂèñËØÅÊó•Êúü" DataFormatString="{0:yyyy-MM-dd}">
+                                                        <asp:BoundColumn DataField="CertificateTime" HeaderText="»°÷§»’∆⁄" DataFormatString="{0:yyyy-MM-dd}">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CertificateReviewTime" HeaderText="Â§çÂÆ°Êó•Êúü" DataFormatString="{0:yyyy-MM-dd}">
+                                                        <asp:BoundColumn DataField="CertificateReviewTime" HeaderText="∏¥…Û»’∆⁄" DataFormatString="{0:yyyy-MM-dd}">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Remark" HeaderText="Â§áÊ≥®">
+                                                        <asp:BoundColumn DataField="Remark" HeaderText="±∏◊¢">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>

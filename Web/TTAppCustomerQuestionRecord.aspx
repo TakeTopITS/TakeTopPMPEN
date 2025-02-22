@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppCustomerQuestionRecord.aspx.cs" Inherits="TTAppCustomerQuestionRecord" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppCustomerQuestionRecord.aspx.cs" Inherits="TTAppCustomerQuestionRecord" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=1" />
 
@@ -73,7 +73,7 @@
                                                         </td>
                                                     </tr>
                                                 </table>
-                                                <img id="IMG_Waiting" src="Images/Processing.gif" alt="è¯·ç¨å€™ï¼Œå¤„ç†ä¸­..." style="display: none;" />
+                                                <img id="IMG_Waiting" src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖÐ..." style="display: none;" />
                                             </a>
                                         </td>
                                     </tr>
@@ -156,50 +156,53 @@
                                                 Width="100%">
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ä¿®æ”¹' /&gt;&lt;/div&gt;">
+                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ÐÞ¸Ä' /&gt;&lt;/div&gt;">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:ButtonColumn>
                                                     <asp:TemplateColumn HeaderText="Delete">
                                                         <ItemTemplate>
-                                                            <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='åˆ é™¤' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                            <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                    <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:BoundColumn>
-                                                    <%--   <asp:BoundColumn DataField="Type" HeaderText="ç±»åž‹">
+                                                    <%--   <asp:BoundColumn DataField="Type" HeaderText="ÀàÐÍ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                     </asp:BoundColumn>--%>
 
 
-                                                    <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTAPPCustomerQuestionHandleDetailForCreate.aspx?ID={0}" DataTextField="Question" HeaderText="æœåŠ¡éœ€æ±‚" Target="_blank">
+                                                    <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTAPPCustomerQuestionHandleDetailForCreate.aspx?ID={0}" DataTextField="Question" HeaderText="·þÎñÐèÇó" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="18%" />
                                                     </asp:HyperLinkColumn>
 
-                                                    <%--     <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTCustomerQuestionHandleDetail.aspx?ID={0}" DataTextField="Question" HeaderText="æœåŠ¡éœ€æ±‚" Target="_blank">
+                                                    <%--     <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTCustomerQuestionHandleDetail.aspx?ID={0}" DataTextField="Question" HeaderText="·þÎñÐèÇó" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="18%" />
                                                     </asp:HyperLinkColumn>
-                                                    <asp:BoundColumn DataField="AnswerTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="è¦æ±‚ç­”å¤æ—¶é—´">
+                                                    <asp:BoundColumn DataField="AnswerTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ÒªÇó´ð¸´Ê±¼ä">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="SummitTime" DataFormatString="{0:yyyy/MM/dd hh:mm:ss}" HeaderText="æäº¤æ—¶é—´">
+                                                    <asp:BoundColumn DataField="SummitTime" DataFormatString="{0:yyyy/MM/dd hh:mm:ss}" HeaderText="Ìá½»Ê±¼ä">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="11%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="ContactPerson" HeaderText="æå‡ºè€…">
+                                                    <asp:BoundColumn DataField="ContactPerson" HeaderText="Ìá³öÕß">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                     </asp:BoundColumn>
-                                                      <asp:BoundColumn DataField="Company" HeaderText="å…¬å¸">
+                                                      <asp:BoundColumn DataField="Company" HeaderText="¹«Ë¾">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="14%" />
                                                     </asp:BoundColumn>
                                                     
-                                                    <asp:HyperLinkColumn DataNavigateUrlField="OperatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}" DataTextField="OperatorName" HeaderText="å—ç†äºº" Target="_blank">
+                                                    <asp:HyperLinkColumn DataNavigateUrlField="OperatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}" DataTextField="OperatorName" HeaderText="ÊÜÀíÈË" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                     </asp:HyperLinkColumn>
-                                                    <asp:BoundColumn DataField="OperatorStatus" HeaderText="å—ç†çŠ¶æ€">
-                                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
-                                                    </asp:BoundColumn>
-                                                    <asp:ButtonColumn CommandName="Detail" Text="&lt;div&gt;&lt;img src=ImagesSkin/Detail.png border=0 alt='æ˜Žç»†' /&gt;&lt;/div&gt;">
+                                                    <asp:TemplateColumn HeaderText="×´Ì¬">
+    <ItemTemplate>
+        <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("OperatorStatus").ToString()) %>
+    </ItemTemplate>
+    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
+</asp:TemplateColumn>
+                                                    <asp:ButtonColumn CommandName="Detail" Text="&lt;div&gt;&lt;img src=ImagesSkin/Detail.png border=0 alt='Ã÷Ï¸' /&gt;&lt;/div&gt;">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                     </asp:ButtonColumn>
                                                     <asp:TemplateColumn>
@@ -444,7 +447,7 @@
                                 </tr>
                                 <tr>
                                     <td class="formItemBgStyle" style="text-align: left; width: 15%;">
-                                        <asp:Label ID="Label35" runat="server" Text="å®¢æˆ·å•†æœºé˜¶æ®µ"></asp:Label>
+                                        <asp:Label ID="Label35" runat="server" Text="¿Í»§ÉÌ»ú½×¶Î"></asp:Label>
                                     </td>
                                 </tr>
                                 <tr>

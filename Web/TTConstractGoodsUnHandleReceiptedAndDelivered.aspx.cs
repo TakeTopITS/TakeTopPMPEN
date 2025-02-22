@@ -1,4 +1,4 @@
-﻿using System; using System.Resources;
+using System; using System.Resources;
 using System.Data;
 using System.Configuration;
 using System.Collections;
@@ -26,7 +26,7 @@ public partial class TTConstractGoodsUnHandleReceiptedAndDelivered : System.Web.
         string strUserName = Session["UserName"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","合同收发货预警", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","��ͬ�շ���Ԥ��", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -57,7 +57,7 @@ public partial class TTConstractGoodsUnHandleReceiptedAndDelivered : System.Web.
       
         strPartBOperator = "%" + strPartBOperator + "%";
 
-        strHQL = "Select * from T_ConstractGoodsReceiptPlan as constractGoodsReceiptPlan where constractGoodsReceiptPlan.Status not in ('完成','取消') and to_char( constractGoodsReceiptPlan.ReceiptTime,'yyyymmdd') <= to_char(now()+PreDay*'1 day'::interval,'yyyymmdd') ";
+        strHQL = "Select * from T_ConstractGoodsReceiptPlan as constractGoodsReceiptPlan where constractGoodsReceiptPlan.Status not in ('Completed','Cancel') and to_char( constractGoodsReceiptPlan.ReceiptTime,'yyyymmdd') <= to_char(now()+PreDay*'1 day'::interval,'yyyymmdd') ";
         strHQL += " and constractGoodsReceiptPlan.ConstractCode in ( Select constractRelatedUser.ConstractCode from T_ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")";
        
         if (strSalesName != "%%")
@@ -65,7 +65,7 @@ public partial class TTConstractGoodsUnHandleReceiptedAndDelivered : System.Web.
             strHQL += " and constractGoodsReceiptPlan.ConstractCode in (Select constractSales.ConstractCode From T_ConstractSales as constractSales Where constractSales.SalesName Like " + "'" + strSalesName + "'" + ")";
         }
         strHQL += " and constractGoodsReceiptPlan.ConstractCode in (Select constract.ConstractCode from T_Constract as constract where constract.PartBOperator Like " + "'" + strPartBOperator + "'" + ")";
-        strHQL += " and constractGoodsReceiptPlan.ConstractCode not in (Select constract.ConstractCode from T_Constract as constract where constract.Status in ('归档','取消','删除'))";
+        strHQL += " and constractGoodsReceiptPlan.ConstractCode not in (Select constract.ConstractCode from T_Constract as constract where constract.Status in ('Archived','Cancel','Deleted'))";
 
         strHQL += " and constractGoodsReceiptPlan.ConstractCode != ''";
         strHQL += " Order by constractGoodsReceiptPlan.ID DESC";
@@ -107,7 +107,7 @@ public partial class TTConstractGoodsUnHandleReceiptedAndDelivered : System.Web.
             strHQL += " and constractGoodsDeliveryPlan.ConstractCode in (Select constractSales.ConstractCode From T_ConstractSales as constractSales Where constractSales.SalesName Like " + "'" + strSalesName + "'" + ")";
         }
         strHQL += " and constractGoodsDeliveryPlan.ConstractCode in (Select constract.ConstractCode from T_Constract as constract where constract.PartAOperator Like " + "'" + strPartAOperator + "'" + ")";
-        strHQL += " and constractGoodsDeliveryPlan.ConstractCode not in (Select constract.ConstractCode from T_Constract as constract where constract.Status  in ('归档','取消','删除'))";
+        strHQL += " and constractGoodsDeliveryPlan.ConstractCode not in (Select constract.ConstractCode from T_Constract as constract where constract.Status  in ('Archived','Cancel','Deleted'))";
         strHQL += " and constractGoodsDeliveryPlan.ConstractCode != ''";
         strHQL += " Order by constractGoodsDeliveryPlan.ID DESC";
      
@@ -135,9 +135,9 @@ public partial class TTConstractGoodsUnHandleReceiptedAndDelivered : System.Web.
         decimal deReceiptNumber = 0, deReceiptedNumber = 0,  deUNReceiveNumber = 0;
 
 
-        strHQL = "Select * from T_ConstractGoodsReceiptPlan as constractGoodsReceiptPlan where constractGoodsReceiptPlan.Status not in ('完成','取消') and constractGoodsReceiptPlan.Status not in ('完成','取消') and to_char( constractGoodsReceiptPlan.ReceiptTime,'yyyymmdd') <= to_char(now()+PreDay*'1 day'::interval,'yyyymmdd') ";
+        strHQL = "Select * from T_ConstractGoodsReceiptPlan as constractGoodsReceiptPlan where constractGoodsReceiptPlan.Status not in ('Completed','Cancel') and constractGoodsReceiptPlan.Status not in ('Completed','Cancel') and to_char( constractGoodsReceiptPlan.ReceiptTime,'yyyymmdd') <= to_char(now()+PreDay*'1 day'::interval,'yyyymmdd') ";
         strHQL += " and constractGoodsReceiptPlan.ConstractCode in ( Select constractRelatedUser.ConstractCode from T_ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")";
-        strHQL += " and constractGoodsReceiptPlan.ConstractCode not in (Select constract.ConstractCode from T_Constract as constract where constract.Status in ('归档','取消','删除'))";
+        strHQL += " and constractGoodsReceiptPlan.ConstractCode not in (Select constract.ConstractCode from T_Constract as constract where constract.Status in ('Archived','Cancel','Deleted'))";
         strHQL += " and constractGoodsReceiptPlan.ConstractCode != ''";
         strHQL += " Order by constractGoodsReceiptPlan.ID DESC";
 
@@ -164,9 +164,9 @@ public partial class TTConstractGoodsUnHandleReceiptedAndDelivered : System.Web.
 
         decimal deDeliveryNumber = 0, deDeliveredNumber = 0,  deUNDeliveredNumber = 0;
 
-        strHQL = "Select * from T_ConstractGoodsDeliveryPlan as constractGoodsDeliveryPlan where constractGoodsDeliveryPlan.Status not in ('完成','取消') and  to_char(constractGoodsDeliveryPlan.DeliveryTime,'yyyymmdd') <= to_char(now()+PreDay*'1 day'::interval,'yyyymmdd')";
+        strHQL = "Select * from T_ConstractGoodsDeliveryPlan as constractGoodsDeliveryPlan where constractGoodsDeliveryPlan.Status not in ('Completed','Cancel') and  to_char(constractGoodsDeliveryPlan.DeliveryTime,'yyyymmdd') <= to_char(now()+PreDay*'1 day'::interval,'yyyymmdd')";
         strHQL += " and constractGoodsDeliveryPlan.ConstractCode in ( Select constractRelatedUser.ConstractCode from T_ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")";
-        strHQL += " and constractGoodsDeliveryPlan.ConstractCode not in (Select constract.ConstractCode from T_Constract as constract where constract.Status  in ('归档','取消','删除'))";
+        strHQL += " and constractGoodsDeliveryPlan.ConstractCode not in (Select constract.ConstractCode from T_Constract as constract where constract.Status  in ('Archived','Cancel','Deleted'))";
         strHQL += " and constractGoodsDeliveryPlan.ConstractCode != ''";
         strHQL += " Order by constractGoodsDeliveryPlan.ID DESC";
      

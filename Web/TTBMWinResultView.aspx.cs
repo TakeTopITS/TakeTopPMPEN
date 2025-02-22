@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
@@ -87,15 +87,15 @@ public partial class TTBMWinResultView : System.Web.UI.Page
     {
         if (strBidStatus.Trim().Equals("Y"))
         {
-            return "ä¸­æ ‡";
+            return "ÖÐ±ê";
         }
         else if (strBidStatus.Trim().Equals("N"))
         {
-            return "æœªä¸­æ ‡";
+            return "Unsuccessful Bid";
         }
         else
         {
-            return "æœªå¼€æ ‡";
+            return "Î´¿ª±ê";
         }
     }
 
@@ -103,7 +103,7 @@ public partial class TTBMWinResultView : System.Web.UI.Page
     {
         string strHQL;
         IList lst;
-        //ç»‘å®šæ‹›æ ‡è®¡åˆ’
+        //°ó¶¨ÕÐ±ê¼Æ»®
         strHQL = "From BMBidPlan as bMBidPlan Where bMBidPlan.ID='" + strID + "' ";
         BMBidPlanBLL bMBidPlanBLL = new BMBidPlanBLL();
         lst = bMBidPlanBLL.GetAllBMBidPlans(strHQL);
@@ -121,7 +121,7 @@ public partial class TTBMWinResultView : System.Web.UI.Page
         string strHQL;
         IList lst;
         string result = "";
-        //ç»‘å®šæ‹›æ ‡è®¡åˆ’
+        //°ó¶¨ÕÐ±ê¼Æ»®
         strHQL = "From BMSupBidByExp as bMSupBidByExp Where bMSupBidByExp.SupplierBidID='" + strID + "' Order By bMSupBidByExp.ID ";
         BMSupBidByExpBLL bMSupBidByExpBLL = new BMSupBidByExpBLL();
         lst = bMSupBidByExpBLL.GetAllBMSupBidByExps(strHQL);
@@ -130,7 +130,7 @@ public partial class TTBMWinResultView : System.Web.UI.Page
             for (int i = 0; i < lst.Count; i++)
             {
                 BMSupBidByExp bMSupBidByExp = (BMSupBidByExp)lst[i];
-                result += "ä¸“å®¶ " + ShareClass.GetUserName(bMSupBidByExp.ExportCode.Trim()) + "ï¼š" + bMSupBidByExp.ExportResult.Trim() + "ï¼›";
+                result += "×¨¼Ò " + ShareClass.GetUserName(bMSupBidByExp.ExportCode.Trim()) + "£º" + bMSupBidByExp.ExportResult.Trim() + "£»";
             }
         }
         return result;

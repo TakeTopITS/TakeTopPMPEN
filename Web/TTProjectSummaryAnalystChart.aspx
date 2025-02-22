@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectSummaryAnalystChart.aspx.cs" Inherits="TTProjectSummaryAnalystChart" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectSummaryAnalystChart.aspx.cs" Inherits="TTProjectSummaryAnalystChart" %>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>æ¯æ—¥å·¥ä½œæ€»ç»“</title>
+    <title>Ã¿ÈÕ¹¤×÷×Ü½á</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
@@ -12,9 +12,9 @@
         $(function () {
             if (top.location != self.location) { } else { CloseWebPage(); }
 
-            //éšè—æ²¡æœ‰æ•°æ®çš„åˆ†æå›¾
+            //Òş²ØÃ»ÓĞÊı¾İµÄ·ÖÎöÍ¼
             hideIframesForNoDataAnalystChart(function () {
-                console.log('æ‰€æœ‰ iframe å¤„ç†å®Œæˆ');
+                console.log('ËùÓĞ iframe ´¦ÀíÍê³É');
             });
 
         });
@@ -106,13 +106,13 @@
                                 <table width="99%" border="0" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td align="center">
-                                            <asp:Label ID="LB_ExpenseAmount" runat="server" BackColor="#418CF0" ForeColor="white" Text="<%$ Resources:lang,FeiYongZongE%>"></asp:Label>ï¼š<asp:Label ID="LB_ConfirmProExpense" runat="server" Font-Bold="False"
+                                            <asp:Label ID="LB_ExpenseAmount" runat="server" BackColor="#418CF0" ForeColor="white" Text="<%$ Resources:lang,FeiYongZongE%>"></asp:Label>£º<asp:Label ID="LB_ConfirmProExpense" runat="server" Font-Bold="False"
                                                 Text="0"></asp:Label>
 
                                             &nbsp;&nbsp;
                                                       
                                             <asp:Label ID="LB_ProjectBudget" runat="server" BackColor="#FCB441" Text="<%$ Resources:lang,YuSuanZongE%>"></asp:Label>
-                                            ï¼š
+                                            £º
                                             <asp:Label ID="LB_ProBudget" runat="server" Font-Bold="False" Text="0"></asp:Label>
                                         </td>
                                     </tr>

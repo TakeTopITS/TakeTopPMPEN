@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -30,7 +30,7 @@ public partial class TTAssetSummaryReport : System.Web.UI.Page
         string strUserName;
         string strUserCode = Session["UserCode"].ToString();
 
-        //this.Title = "èµ„äº§æ±‡æ€»æŠ¥è¡¨";
+        //this.Title = "×Ê²ú»ã×Ü±¨±í";
 
         LB_UserCode.Text = strUserCode;
         strUserName = Session["UserName"].ToString();

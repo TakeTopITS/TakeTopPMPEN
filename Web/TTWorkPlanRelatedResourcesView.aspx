@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkPlanRelatedResourcesView.aspx.cs" Inherits="TTWorkPlanRelatedResourcesView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkPlanRelatedResourcesView.aspx.cs" Inherits="TTWorkPlanRelatedResourcesView" %>
 
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>

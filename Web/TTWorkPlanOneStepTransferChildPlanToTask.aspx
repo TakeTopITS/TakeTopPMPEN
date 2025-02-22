@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkPlanOneStepTransferChildPlanToTask.aspx.cs" Inherits="TTWorkPlanOneStepTransferChildPlanToTask" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkPlanOneStepTransferChildPlanToTask.aspx.cs" Inherits="TTWorkPlanOneStepTransferChildPlanToTask" %>
 
 <!DOCTYPE html>
 

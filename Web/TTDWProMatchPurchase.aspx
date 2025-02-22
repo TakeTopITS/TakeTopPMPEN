@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTDWProMatchPurchase.aspx.cs" Inherits="TTDWProMatchPurchase" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTDWProMatchPurchase.aspx.cs" Inherits="TTDWProMatchPurchase" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>äº§å“åŸæ–™æˆæœ¬è¡¨-é‡‡è´­éƒ¨</title>
+    <title>²úÆ·Ô­ÁÏ³É±¾±í-²É¹º²¿</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript">
@@ -16,25 +16,25 @@
 
             var $allTitle = $(".playtitle");
 
-            //ç‚¹å‡»ç¼–è¾‘æŒ‰é’®-åŸæ ‡é¢˜åŠç¼–è¾‘æŒ‰é’®éšè—ï¼ŒinputåŠä¿å­˜æŒ‰é’®æ˜¾ç¤º
+            //µã»÷±à¼­°´Å¥-Ô­±êÌâ¼°±à¼­°´Å¥Òş²Ø£¬input¼°±£´æ°´Å¥ÏÔÊ¾
             $(".playeditor").click(function () {
                 $(this).parent().find(".playtx").val($.trim($(this).parent().find(".playtitle").html()));
                 $(this).parent().find(".playtitle,.playeditor").hide();
                 $(this).parent().find(".playtx,.playsave").show();
                 $(".playtx").focus();
             });
-            //ç‚¹å‡»ä¿å­˜æŒ‰é’®-inputåŠä¿å­˜æŒ‰é’®éšè—ï¼ŒåŸæ ‡é¢˜åŠç¼–è¾‘æŒ‰é’®æ˜¾ç¤º
+            //µã»÷±£´æ°´Å¥-input¼°±£´æ°´Å¥Òş²Ø£¬Ô­±êÌâ¼°±à¼­°´Å¥ÏÔÊ¾
             $(".playsave").click(function () {
                 var p = $(this).parent().find(".playtitle");
                 var varPrice = $.trim($(this).parent().find(".playtx").val());
                 var varProMath = $(this).attr("value");
                 if (varPrice == "" || varPrice == null || varPrice == undefined) {
-                    alert("äº§å“é…æ–¹ä»·ä¸èƒ½ä¸ºç©ºï¼");
+                    alert("²úÆ·Åä·½¼Û²»ÄÜÎª¿Õ£¡");
                     return false;
                 }
                 var reg = /(^[-+]?[1-9]\d*(\.\d{1,2})?$)|(^[-+]?[0]{1}(\.\d{1,2})?$)/;
                 if (!reg.test(varPrice) || varPrice < 0) {
-                    alert("è¯·è¾“å…¥æ­£ç¡®çš„é»˜è®¤å‡ºä»·(æ­£æ•°ï¼Œæœ€å¤šä¸¤ä½å°æ•°)ï¼");
+                    alert("ÇëÊäÈëÕıÈ·µÄÄ¬ÈÏ³ö¼Û(ÕıÊı£¬×î¶àÁ½Î»Ğ¡Êı)£¡");
                     return false;
                 }
 
@@ -45,9 +45,9 @@
                  }, function (data) {
                      ;
                      if (data == "succ") {
-                         //alert("ä¿®æ”¹æˆåŠŸï¼");
+                         //alert("ĞŞ¸Ä³É¹¦£¡");
                          //p.html(varPrice);
-                         document.location.reload();//é‡æ–°åŠ è½½é¡µé¢
+                         document.location.reload();//ÖØĞÂ¼ÓÔØÒ³Ãæ
                          return true;
                      } else {
                          alert(data);
@@ -61,7 +61,7 @@
 
             });
 
-            //åŒå‡»åŸæ ‡é¢˜-åŸæ ‡é¢˜åŠç¼–è¾‘æŒ‰é’®éšè—ï¼ŒinputåŠä¿å­˜æŒ‰é’®æ˜¾ç¤º
+            //Ë«»÷Ô­±êÌâ-Ô­±êÌâ¼°±à¼­°´Å¥Òş²Ø£¬input¼°±£´æ°´Å¥ÏÔÊ¾
             $(".playtitle").dblclick(function () {
                 $(this).parent().find(".playtitle,.playeditor").hide();
                 $(this).parent().find(".playtx,.playsave").show();
@@ -69,7 +69,7 @@
                 $(this).parent().find(".playtx").val($.trim($(this).html()));
                 $(".playtx").focus();
             });
-            //ç‚¹å‡»ç©ºç™½å¤„-inputåŠä¿å­˜æŒ‰é’®éšè—ï¼ŒåŸæ ‡é¢˜çº§ç¼–è¾‘æŒ‰é’®æ˜¾ç¤º
+            //µã»÷¿Õ°×´¦-input¼°±£´æ°´Å¥Òş²Ø£¬Ô­±êÌâ¼¶±à¼­°´Å¥ÏÔÊ¾
             $(".playtx").blur(function () {
                 var tempobj = $(this);
                 setTimeout(function () {
@@ -80,8 +80,8 @@
         }
 
 
-        var pre_scrollTop = 0;//æ»šåŠ¨æ¡äº‹ä»¶ä¹‹å‰æ–‡æ¡£æ»šåŠ¨é«˜åº¦ 
-        var pre_scrollLeft = 0;//æ»šåŠ¨æ¡äº‹ä»¶ä¹‹å‰æ–‡æ¡£æ»šåŠ¨å®½åº¦ 
+        var pre_scrollTop = 0;//¹ö¶¯ÌõÊÂ¼şÖ®Ç°ÎÄµµ¹ö¶¯¸ß¶È 
+        var pre_scrollLeft = 0;//¹ö¶¯ÌõÊÂ¼şÖ®Ç°ÎÄµµ¹ö¶¯¿í¶È 
         var obj_head;
         var obj_left;
 
@@ -98,7 +98,7 @@
         };
         window.onscroll = function () {
             if (pre_scrollTop != (document.documentElement.scrollTop || document.body.scrollTop)) {
-                //æ»šåŠ¨äº†æ•°å€¼æ»šåŠ¨æ¡ 
+                //¹ö¶¯ÁËÊıÖµ¹ö¶¯Ìõ 
                 pre_scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
                 if (obj_head) {
                     var topHeight = document.documentElement.scrollTop || document.body.scrollTop;
@@ -111,7 +111,7 @@
                 }
             }
             else if (pre_scrollLeft != (document.documentElement.scrollLeft || document.body.scrollLeft)) {
-                //æ»šåŠ¨äº†æ°´å¹³æ»šåŠ¨æ¡ 
+                //¹ö¶¯ÁËË®Æ½¹ö¶¯Ìõ 
                 pre_scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
                 if (obj_left) {
                     var topLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
@@ -182,24 +182,24 @@
                                                         <table class="formBgStyle">
                                                             <tr>
                                                                 <td class="formItemBgStyle">
-                                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,YuanLaio%>"></asp:Label>ï¼š</td>
+                                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,YuanLaio%>"></asp:Label>£º</td>
                                                                 <td class="formItemBgStyle">
                                                                     <asp:TextBox ID="TXT_MatchName" runat="server"></asp:TextBox>
                                                                 </td>
                                                                 <td class="formItemBgStyle">
-                                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ChanPinLeiXing%>"></asp:Label>ï¼š</td>
+                                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ChanPinLeiXing%>"></asp:Label>£º</td>
                                                                 <td class="formItemBgStyle">
                                                                     <asp:DropDownList ID="DDL_Type" runat="server"
                                                                         DataTextField="ProductType" DataValueField="ID">
                                                                     </asp:DropDownList>
                                                                 </td>
                                                                 <td class="formItemBgStyle">
-                                                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ChanPinBianHao%>"></asp:Label>ï¼š</td>
+                                                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ChanPinBianHao%>"></asp:Label>£º</td>
                                                                 <td class="formItemBgStyle">
                                                                     <asp:TextBox ID="TXT_ProductCode" runat="server"></asp:TextBox>
                                                                 </td>
                                                                 <td class="formItemBgStyle">
-                                                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ChanPinPaiHao%>"></asp:Label>ï¼š</td>
+                                                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ChanPinPaiHao%>"></asp:Label>£º</td>
                                                                 <td class="formItemBgStyle">
                                                                     <asp:TextBox ID="TXT_ProductName" runat="server"></asp:TextBox>
                                                                 </td>

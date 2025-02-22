@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System; using System.Resources;
 using System.Collections;
@@ -34,13 +34,13 @@ public partial class TTWZCompactEdit : System.Web.UI.Page
             string strCompactCode = HF_CompactCode.Value;
             if (!string.IsNullOrEmpty(strCompactCode))
             {
-                //ä¿®æ”¹
+                //ĞŞ¸Ä
                 string strCompactHQL = "from WZCompact as wZCompact where CompactCode = '" + strCompactCode + "'";
                 IList listCompact = wZCompactBLL.GetAllWZCompacts(strCompactHQL);
                 if (listCompact != null && listCompact.Count > 0)
                 {
-                    //å…ˆå¢åŠ é™„ä»¶
-                    string InDocument = "ä¸Šä¼ çš„é™„ä»¶è·¯å¾„";
+                    //ÏÈÔö¼Ó¸½¼ş
+                    string InDocument = "ÉÏ´«µÄ¸½¼şÂ·¾¶";
 
                     WZCompact wZCompact = (WZCompact)listCompact[0];
                     wZCompact.ProjectCode = TXT_ProjectCode.Text;
@@ -62,11 +62,11 @@ public partial class TTWZCompactEdit : System.Web.UI.Page
             }
             else
             {
-                //å¢åŠ 
-                //å…ˆå¢åŠ é™„ä»¶
-                string InDocument = "ä¸Šä¼ çš„é™„ä»¶è·¯å¾„";
+                //Ôö¼Ó
+                //ÏÈÔö¼Ó¸½¼ş
+                string InDocument = "ÉÏ´«µÄ¸½¼şÂ·¾¶";
                 WZCompact wZCompact = new WZCompact();
-                wZCompact.CompactCode = "è‡ªåŠ¨ç”ŸæˆåˆåŒå·01"; //TXT_CompactCode.Text.Trim();
+                wZCompact.CompactCode = "×Ô¶¯Éú³ÉºÏÍ¬ºÅ01"; //TXT_CompactCode.Text.Trim();
                 wZCompact.ProjectCode = TXT_ProjectCode.Text;
                 wZCompact.SupplierCode = TXT_SupplierCode.Text;
                 wZCompact.CompactName = TXT_CompactName.Text;
@@ -81,15 +81,15 @@ public partial class TTWZCompactEdit : System.Web.UI.Page
                 wZCompact.BeforePayBalance = Convert.ToDecimal(TXT_BeforePayBalance.Text);
                 wZCompact.Compacter = TXT_Compacter.Text;
                 wZCompact.ControlMoney = TXT_ControlMoney.Text;
-                //wZCompact.Process = "å½•å…¥";
+                //wZCompact.Process = "Â¼Èë";
 
-                //æ—¶é—´æš‚æ—¶å…ˆèµ‹å€¼ï¼Œä¸ç„¶ä¼šæŠ¥é”™ TODO
+                //Ê±¼äÔİÊ±ÏÈ¸³Öµ£¬²»È»»á±¨´í TODO
                 //wZCompact.VerifyTime = DateTime.Now;
                 //wZCompact.ApproveTime = DateTime.Now;
                 //wZCompact.EffectTime = DateTime.Now;
                 //wZCompact.CancelTime = DateTime.Now;
 
-                //æ ¹æ®å·¥ç¨‹ç¼–ç ï¼Œæ‰¾åˆ°â€œé‡‡è´­å·¥ç¨‹å¸ˆâ€ï¼Œâ€œå§”æ‰˜ä»£ç†äººâ€
+                //¸ù¾İ¹¤³Ì±àÂë£¬ÕÒµ½¡°²É¹º¹¤³ÌÊ¦¡±£¬¡°Î¯ÍĞ´úÀíÈË¡±
                 string strProjectHQL = "select * from T_WZProject where ProjectCode = '" + wZCompact.ProjectCode + "'";
                 DataTable dtProject = ShareClass.GetDataSetFromSql(strProjectHQL, "strProjectHQL").Tables[0];
                 string strPurchaseEngineer = dtProject.Rows.Count == 1 ? dtProject.Rows[0]["PurchaseEngineer"].ToString() : "";
@@ -97,14 +97,14 @@ public partial class TTWZCompactEdit : System.Web.UI.Page
                 wZCompact.PurchaseEngineer = strPurchaseEngineer;
                 wZCompact.DelegateAgent = strDelegateAgent;
                 string strStoreRoom = dtProject.Rows.Count == 1 ? dtProject.Rows[0]["StoreRoom"].ToString() : "";
-                //æ ¹æ®å·¥ç¨‹é‡Œé¢çš„åº“åˆ«ï¼Œæ‰¾åˆ°ææ£€å‘˜ï¼Œä¿ç®¡å‘˜
+                //¸ù¾İ¹¤³ÌÀïÃæµÄ¿â±ğ£¬ÕÒµ½²Ä¼ìÔ±£¬±£¹ÜÔ±
                 string strStockHQL = "select * from T_WZStock where StockName = '" + strStoreRoom + "'";
                 DataTable dtStock = ShareClass.GetDataSetFromSql(strStockHQL, "strStockHQL").Tables[0];
                 string strChecker = dtStock.Rows.Count == 1 ? dtStock.Rows[0]["MaterialCheck"].ToString() : "";
                 string strSafekeep = dtStock.Rows.Count == 1 ? dtStock.Rows[0]["Safekeep"].ToString() : "";
                 wZCompact.Checker = strChecker;
                 wZCompact.Safekeep = strSafekeep;
-                //æ ¹æ®â€œé‡‡è´­å·¥ç¨‹å¸ˆâ€æ‰¾å‡ºéœ€æ–¹ç¼–å·ï¼Œæ³•äººä»£è¡¨
+                //¸ù¾İ¡°²É¹º¹¤³ÌÊ¦¡±ÕÒ³öĞè·½±àºÅ£¬·¨ÈË´ú±í
                 string strNeedHQL = "select * from T_WZNeedObject where PurchaseEngineer = '" + strPurchaseEngineer + "'";
                 DataTable dtNeed = ShareClass.GetDataSetFromSql(strNeedHQL, "strNeedHQL").Tables[0];
                 string strNeedCode = dtNeed.Rows.Count ==1 ? dtNeed.Rows[0]["NeedCode"].ToString() : "";
@@ -112,7 +112,7 @@ public partial class TTWZCompactEdit : System.Web.UI.Page
                 wZCompact.NeedCode = strNeedCode;
                 wZCompact.JuridicalPerson = strPersonDelegate;
                 wZCompactBLL.AddWZCompact(wZCompact);
-                //å°†éœ€æ–¹çš„ä½¿ç”¨æ ‡è®°æ”¹ä¸º-1
+                //½«Ğè·½µÄÊ¹ÓÃ±ê¼Ç¸ÄÎª-1
                 string strUpdateNeedHQL = "update T_WZNeedObject set IsMark = -1 where NeedCode = '" + strNeedCode + "'";
                 ShareClass.RunSqlCommand(strUpdateNeedHQL);
             }

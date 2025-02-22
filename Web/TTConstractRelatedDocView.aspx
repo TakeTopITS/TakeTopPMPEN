@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConstractRelatedDocView.aspx.cs" Inherits="TTConstractRelatedDocView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConstractRelatedDocView.aspx.cs" Inherits="TTConstractRelatedDocView" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -8,7 +8,7 @@
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
 
-    <!--pageoffic.jsä¸€å®šè¦å¼•ç”¨-->
+    <!--pageoffic.jsÒ»¶¨ÒªÒýÓÃ-->
    <%-- <script type="text/javascript" src="pageoffice.js"></script>--%>
 
     <script type="text/javascript" language="javascript">
@@ -117,17 +117,17 @@
                                                 Width="100%" AllowPaging="True" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                                 CellPadding="4" ForeColor="#333333" GridLines="None">
                                                 <Columns>
-                                                    <%--  <asp:BoundColumn DataField="DocID" HeaderText="åºå·">
+                                                    <%--  <asp:BoundColumn DataField="DocID" HeaderText="ÐòºÅ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                             </asp:BoundColumn>--%>
-                                                    <asp:BoundColumn DataField="RelatedType" HeaderText="å¤§ç±»">
+                                                    <asp:BoundColumn DataField="RelatedType" HeaderText="´óÀà">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="DocType" HeaderText="ç±»åž‹">
+                                                    <asp:BoundColumn DataField="DocType" HeaderText="ÀàÐÍ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                     </asp:BoundColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
-                                                        DataTextField="DocName" HeaderText="æ–‡ä»¶å" Target="_blank">
+                                                        DataTextField="DocName" HeaderText="ÎÄ¼þÃû" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                                     </asp:HyperLinkColumn>
                                                     <asp:TemplateColumn>
@@ -138,13 +138,13 @@
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="center" VerticalAlign="Middle" Width="5%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="Author" HeaderText="ä½œè€…">
+                                                    <asp:BoundColumn DataField="Author" HeaderText="×÷Õß">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="UploadManName" HeaderText="ä¸Šä¼ è€…">
+                                                    <asp:BoundColumn DataField="UploadManName" HeaderText="ÉÏ´«Õß">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="UploadTime" HeaderText="ä¸Šä¼ æ—¶é—´">
+                                                    <asp:BoundColumn DataField="UploadTime" HeaderText="ÉÏ´«Ê±¼ä">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="16%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="Address" Visible="False"></asp:BoundColumn>

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -35,7 +35,7 @@ public partial class TTDefectManage : System.Web.UI.Page
         Response.Redirect("TTDefectHandlePage.aspx");
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "缺陷管理", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ȱ�ݹ���", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -46,8 +46,8 @@ public partial class TTDefectManage : System.Web.UI.Page
         if (Page.IsPostBack != true)
         {
             strHQL = "from DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and defectAssignRecord.Status in ('计划','受理','处理中') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord) ";
-            strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('关闭','隐藏','删除','归档'))";
+            strHQL += " and defectAssignRecord.Status in ('Plan','Accepted','InProgress') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord) ";
+            strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " Order by defectAssignRecord.ID DESC";
             DefectAssignRecordBLL defectAssignRecordBLL = new DefectAssignRecordBLL();
             lst = defectAssignRecordBLL.GetAllDefectAssignRecords(strHQL);
@@ -59,8 +59,8 @@ public partial class TTDefectManage : System.Web.UI.Page
             SetDefectRecordColor(DataGrid4);
 
             strHQL = "from DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and (defectAssignRecord.Status in ('拒绝','完成','挂起','取消') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord))";
-            strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('关闭','隐藏','删除','归档'))";
+            strHQL += " and (defectAssignRecord.Status in ('�ܾ�','Completed','Suspended','Cancel') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord))";
+            strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " Order by defectAssignRecord.ID DESC";
             defectAssignRecordBLL = new DefectAssignRecordBLL();
             lst = defectAssignRecordBLL.GetAllDefectAssignRecords(strHQL);
@@ -73,7 +73,7 @@ public partial class TTDefectManage : System.Web.UI.Page
 
             strHQL = "from DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
             strHQL += " and defectAssignRecord.ID in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord) ";
-            strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('关闭','隐藏','删除','归档'))";
+            strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " Order by defectAssignRecord.ID DESC";
             defectAssignRecordBLL = new DefectAssignRecordBLL();
             lst = defectAssignRecordBLL.GetAllDefectAssignRecords(strHQL);
@@ -85,7 +85,7 @@ public partial class TTDefectManage : System.Web.UI.Page
             SetDefectRecordColor(DataGrid6);
 
             strHQL = "from DefectAssignRecord as defectAssignRecord where defectAssignRecord.AssignManCode = " + "'" + strUserCode + "'";
-            strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('关闭','隐藏','删除','归档'))";
+            strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " Order by defectAssignRecord.ID DESC";
             defectAssignRecordBLL = new DefectAssignRecordBLL();
             lst = defectAssignRecordBLL.GetAllDefectAssignRecords(strHQL);
@@ -123,8 +123,8 @@ public partial class TTDefectManage : System.Web.UI.Page
         string strUserCode = LB_UserCode.Text.Trim();
 
         strHQL = "from DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and defectAssignRecord.Status in ('计划','受理','处理中') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord) ";
-        strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('关闭','隐藏','删除','归档'))";
+        strHQL += " and defectAssignRecord.Status in ('Plan','Accepted','InProgress') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord) ";
+        strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by defectAssignRecord.ID DESC";
         DefectAssignRecordBLL defectAssignRecordBLL = new DefectAssignRecordBLL();
         lst = defectAssignRecordBLL.GetAllDefectAssignRecords(strHQL);
@@ -136,8 +136,8 @@ public partial class TTDefectManage : System.Web.UI.Page
         SetDefectRecordColor(DataGrid4);
 
         strHQL = "from DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and (defectAssignRecord.Status in ('拒绝','完成','挂起','取消') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord))";
-        strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('关闭','隐藏','删除','归档'))";
+        strHQL += " and (defectAssignRecord.Status in ('�ܾ�','Completed','Suspended','Cancel') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord))";
+        strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by defectAssignRecord.ID DESC";
         defectAssignRecordBLL = new DefectAssignRecordBLL();
         lst = defectAssignRecordBLL.GetAllDefectAssignRecords(strHQL);
@@ -149,7 +149,7 @@ public partial class TTDefectManage : System.Web.UI.Page
 
         strHQL = "from DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
         strHQL += " and defectAssignRecord.ID in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord) ";
-        strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('关闭','隐藏','删除','归档'))";
+        strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by defectAssignRecord.ID DESC";
         defectAssignRecordBLL = new DefectAssignRecordBLL();
         lst = defectAssignRecordBLL.GetAllDefectAssignRecords(strHQL);
@@ -161,8 +161,8 @@ public partial class TTDefectManage : System.Web.UI.Page
         SetDefectRecordColor(DataGrid6);
 
         strHQL = "from DefectAssignRecord as defectAssignRecord where defectAssignRecord.AssignManCode = " + "'" + strUserCode + "'";
-        //strHQL += " and (defectAssignRecord.Status = '转项' or defectAssignRecord.ID in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord))";
-        strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('关闭','隐藏','删除','归档'))";
+        //strHQL += " and (defectAssignRecord.Status = 'ToProject' or defectAssignRecord.ID in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord))";
+        strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by defectAssignRecord.ID DESC";
         defectAssignRecordBLL = new DefectAssignRecordBLL();
         lst = defectAssignRecordBLL.GetAllDefectAssignRecords(strHQL);
@@ -187,8 +187,8 @@ public partial class TTDefectManage : System.Web.UI.Page
         IList lst;
 
         strHQL = "from DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and defectAssignRecord.Status in ('计划','受理','处理中') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord) ";
-        strHQL += " and defectAssignRecord.DefectID not in (select defectment.DefectID from Defectment as defectment where defectment.DefectID not in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('关闭','隐藏','删除','归档')))";
+        strHQL += " and defectAssignRecord.Status in ('Plan','Accepted','InProgress') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord) ";
+        strHQL += " and defectAssignRecord.DefectID not in (select defectment.DefectID from Defectment as defectment where defectment.DefectID not in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived')))";
         strHQL += " and defectAssignRecord.Status = " + "'" + strStatus + "'" + " Order by defectAssignRecord.ID DESC";
         DefectAssignRecordBLL defectAssignRecordBLL = new DefectAssignRecordBLL();
         lst = defectAssignRecordBLL.GetAllDefectAssignRecords(strHQL);
@@ -200,8 +200,8 @@ public partial class TTDefectManage : System.Web.UI.Page
         SetDefectRecordColor(DataGrid4);
 
         strHQL = "from DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and (defectAssignRecord.Status in ('拒绝','完成','挂起','取消') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord))";
-        strHQL += " and defectAssignRecord.DefectID not in (select defectment.DefectID from Defectment as defectment where defectment.DefectID not in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('关闭','隐藏','删除','归档')))";
+        strHQL += " and (defectAssignRecord.Status in ('�ܾ�','Completed','Suspended','Cancel') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord))";
+        strHQL += " and defectAssignRecord.DefectID not in (select defectment.DefectID from Defectment as defectment where defectment.DefectID not in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived')))";
         strHQL += " and defectAssignRecord.Status = " + "'" + strStatus + "'" + " Order by defectAssignRecord.ID DESC";
         defectAssignRecordBLL = new DefectAssignRecordBLL();
         lst = defectAssignRecordBLL.GetAllDefectAssignRecords(strHQL);
@@ -214,7 +214,7 @@ public partial class TTDefectManage : System.Web.UI.Page
 
         strHQL = "from DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
         strHQL += " and defectAssignRecord.ID in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord) ";
-        strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('关闭','隐藏','删除','归档'))";
+        strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " and defectAssignRecord.Status = " + "'" + strStatus + "'" + " Order by defectAssignRecord.ID DESC";
         defectAssignRecordBLL = new DefectAssignRecordBLL();
         lst = defectAssignRecordBLL.GetAllDefectAssignRecords(strHQL);
@@ -226,8 +226,8 @@ public partial class TTDefectManage : System.Web.UI.Page
         SetDefectRecordColor(DataGrid6);
 
         strHQL = "from DefectAssignRecord as defectAssignRecord where defectAssignRecord.AssignManCode = " + "'" + strUserCode + "'";
-        //strHQL += " and (defectAssignRecord.Status = '转项' or defectAssignRecord.ID in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord))";
-        strHQL += " and defectAssignRecord.DefectID not in (select defectment.DefectID from Defectment as defectment where defectment.DefectID not in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('关闭','隐藏','删除','归档')))";
+        //strHQL += " and (defectAssignRecord.Status = 'ToProject' or defectAssignRecord.ID in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord))";
+        strHQL += " and defectAssignRecord.DefectID not in (select defectment.DefectID from Defectment as defectment where defectment.DefectID not in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived')))";
         strHQL += " and defectAssignRecord.Status = " + "'" + strStatus + "'" + " Order by defectAssignRecord.ID DESC";
         defectAssignRecordBLL = new DefectAssignRecordBLL();
         lst = defectAssignRecordBLL.GetAllDefectAssignRecords(strHQL);
@@ -334,7 +334,7 @@ public partial class TTDefectManage : System.Web.UI.Page
             dtNowDate = DateTime.Now;
             strStatus = dataGrid.Items[i].Cells[7].Text.Trim();
 
-            if (strStatus != "完成" & strStatus != "已完成")
+            if (strStatus != "Completed" & strStatus != "�����")
             {
                 if (dtFinishedDate < dtNowDate)
                 {

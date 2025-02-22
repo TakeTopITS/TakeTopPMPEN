@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -44,20 +44,20 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
             strRelatedID = "0";
         }
 
-        //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
         strToDoWLID = Request.QueryString["WLID"]; strToDoWLDetailID = Request.QueryString["WLStepDetailID"];
         strToDoWLDetailID = Request.QueryString["WLDetailID"];
         strWLBusinessID = Request.QueryString["BusinessID"];
 
         if (strRelatedType == "Project")
         {
-            //strRelatedType = "é¡¹ç›®";
-            //this.Title = strRelatedType + ":" + strRelatedID + " èµ„äº§é¢†ç”¨ç”³è¯·";
+            //strRelatedType = "Project";
+            //this.Title = strRelatedType + ":" + strRelatedID + " ×Ê²úÁìÓÃÉêÇë";
         }
 
         if (strRelatedType == "Other")
         {
-            //strRelatedType = "å…¶å®ƒ";
+            //strRelatedType = "Other";
         }
 
         //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
@@ -81,8 +81,8 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
             TB_ApplicantCode.Text = LB_UserCode.Text.Trim();
             LB_ApplicantName.Text = LB_UserName.Text.Trim();
 
-            //èµ„äº§é¢†ç”¨
-            ShareClass.LoadWFTemplate(strUserCode, "èµ„äº§é¢†ç”¨", DL_TemName);
+            //×Ê²úÁìÓÃ
+            ShareClass.LoadWFTemplate(strUserCode, "AssetWithdrawal", DL_TemName);
             LoadAssetApplication(strUserCode, strRelatedType, strRelatedID);
 
             string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthorityAsset(strUserCode);
@@ -101,7 +101,7 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
         {
             strAAID = e.Item.Cells[3].Text.Trim();
 
-            intWLNumber = LoadRelatedWL("èµ„äº§é¢†ç”¨", "èµ„äº§", int.Parse(strAAID));
+            intWLNumber = LoadRelatedWL("AssetWithdrawal", "Assets", int.Parse(strAAID));
             if (intWLNumber > 0)
             {
                 BT_NewMain.Visible = false;
@@ -139,7 +139,7 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
 
                 LoadAssetApplicationDetail(strAAID);
 
-                intWLNumber = LoadRelatedWL("èµ„äº§é¢†ç”¨", "èµ„äº§", int.Parse(strAAID));
+                intWLNumber = LoadRelatedWL("AssetWithdrawal", "Assets", int.Parse(strAAID));
                 if (intWLNumber > 0)
                 {
                     BT_SubmitApply.Enabled = false;
@@ -153,8 +153,8 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
                     BT_NewDetail.Visible = true;
                 }
 
-                //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("èµ„äº§é¢†ç”¨", "èµ„äº§", strAAID, "0");
+                //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AssetWithdrawal", "Assets", strAAID, "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     BT_NewMain.Visible = true;
@@ -177,7 +177,7 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
             {
                 string strUserCode = LB_UserCode.Text.Trim();
 
-                intWLNumber = LoadRelatedWL("èµ„äº§é¢†ç”¨", "èµ„äº§", int.Parse(strAAID));
+                intWLNumber = LoadRelatedWL("AssetWithdrawal", "Assets", int.Parse(strAAID));
                 if (intWLNumber > 0)
                 {
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -271,10 +271,10 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
 
 
             LoadAssetApplication(strUserCode, strRelatedType, strRelatedID);
-            LoadRelatedWL("èµ„äº§é¢†ç”¨", "èµ„äº§", int.Parse(strAAID));
+            LoadRelatedWL("AssetWithdrawal", "Assets", int.Parse(strAAID));
 
 
-            DL_Status.SelectedValue = "æ–°å»º";
+            DL_Status.SelectedValue = "New";
 
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
@@ -327,15 +327,15 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
             assetApplicationBLL.UpdateAssetApplication(assetApplication, int.Parse(strAAID));
             LoadAssetApplication(strUserCode, strRelatedType, strRelatedID);
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("èµ„äº§é¢†ç”¨", "èµ„äº§", strAAID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AssetWithdrawal", "Assets", strAAID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 string strCmdText = "select AAID as DetailAAID, * from T_AssetApplication where AAID = " + strAAID;
                 if (strToDoWLID == null)
                 {
-                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("èµ„äº§é¢†ç”¨", "èµ„äº§", strAAID);
+                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("AssetWithdrawal", "Assets", strAAID);
                 }
 
                 if (strToDoWLID != null)
@@ -503,7 +503,7 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
             string strStatus = DL_Status.SelectedValue.Trim();
             string strAAID = LB_AAID.Text.Trim();
 
-            intWLNumber = LoadRelatedWL("èµ„äº§é¢†ç”¨", "èµ„äº§", int.Parse(strAAID));
+            intWLNumber = LoadRelatedWL("AssetWithdrawal", "Assets", int.Parse(strAAID));
             if (intWLNumber > 0)
             {
                 //BT_New.Enabled = false;
@@ -542,7 +542,7 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
                 TB_Manufacturer.Text = assetApplicationDetail.Manufacturer.Trim();
                 TB_IP.Text = assetApplicationDetail.IP.Trim();
 
-                intWLNumber = LoadRelatedWL("èµ„äº§é¢†ç”¨", "èµ„äº§", int.Parse(strAAID));
+                intWLNumber = LoadRelatedWL("AssetWithdrawal", "Assets", int.Parse(strAAID));
                 if (intWLNumber > 0)
                 {
                     BT_SubmitApply.Enabled = false;
@@ -557,8 +557,8 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
                 }
 
 
-                //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("èµ„äº§é¢†ç”¨", "èµ„äº§", strAAID, "0");
+                //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AssetWithdrawal", "Assets", strAAID, "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     BT_NewMain.Visible = true;
@@ -578,7 +578,7 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
                 decimal deNumber = NB_Number.Amount;
                 string strUnit = DL_Unit.SelectedValue;
 
-                intWLNumber = LoadRelatedWL("èµ„äº§é¢†ç”¨", "èµ„äº§", int.Parse(strAAID));
+                intWLNumber = LoadRelatedWL("AssetWithdrawal", "Assets", int.Parse(strAAID));
                 if (intWLNumber > 0 & strToDoWLID == null)
                 {
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -599,9 +599,9 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
 
                     LoadAssetApplicationDetail(strAAID);
 
-                    //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                    //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-                    string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("èµ„äº§é¢†ç”¨", "èµ„äº§", strAAID, "0");
+                    //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+                    //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+                    string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AssetWithdrawal", "Assets", strAAID, "0");
                     if (strToDoWLID != null | strAllowFullEdit == "YES")
                     {
                         string strCmdText;
@@ -610,7 +610,7 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
 
                         if (strToDoWLID == null)
                         {
-                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("èµ„äº§é¢†ç”¨", "èµ„äº§", strAAID);
+                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("AssetWithdrawal", "Assets", strAAID);
                         }
 
                         if (strToDoWLID != null)
@@ -661,7 +661,7 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
         }
 
         strAAID = LB_AAID.Text.Trim();
-        int intWLNumber = LoadRelatedWL("èµ„äº§é¢†ç”¨", "èµ„äº§", int.Parse(strAAID));
+        int intWLNumber = LoadRelatedWL("AssetWithdrawal", "Assets", int.Parse(strAAID));
         if (intWLNumber > 0 & strToDoWLID == null)
         {
             BT_SubmitApply.Enabled = false;
@@ -729,9 +729,9 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
 
             LoadAssetApplicationDetail(strAAID);
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("èµ„äº§é¢†ç”¨", "èµ„äº§", strAAID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AssetWithdrawal", "Assets", strAAID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 string strCmdText;
@@ -740,7 +740,7 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
 
                 if (strToDoWLID == null)
                 {
-                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("èµ„äº§é¢†ç”¨", "èµ„äº§", strAAID);
+                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("AssetWithdrawal", "Assets", strAAID);
                 }
 
                 if (strToDoWLID != null)
@@ -808,9 +808,9 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
 
             LoadAssetApplicationDetail(strAAID);
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("èµ„äº§é¢†ç”¨", "èµ„äº§", strAAID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AssetWithdrawal", "Assets", strAAID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 string strCmdText;
@@ -818,7 +818,7 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
                 strCmdText = "select AAID as DetailAAID, * from T_AssetApplication where AAID = " + strAAID;
                 if (strToDoWLID == null)
                 {
-                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("èµ„äº§é¢†ç”¨", "èµ„äº§", strAAID);
+                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("AssetWithdrawal", "Assets", strAAID);
                 }
 
                 if (strToDoWLID != null)
@@ -878,48 +878,48 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
         lst = assetApplicationBLL.GetAllAssetApplications(strHQL);
         AssetApplication assetApplication = (AssetApplication)lst[0];
 
-        assetApplication.Status = "å¤„ç†ä¸­";
+        assetApplication.Status = "InProgress";
 
         try
         {
             assetApplicationBLL.UpdateAssetApplication(assetApplication, int.Parse(strAAID));
 
-            strXMLFileName = "èµ„äº§é¢†ç”¨" + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xml";
+            strXMLFileName = "AssetWithdrawal" + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xml";
             strXMLFile2 = "Doc\\" + "XML" + "\\" + strXMLFileName;
 
             WorkFlowBLL workFlowBLL = new WorkFlowBLL();
             WorkFlow workFlow = new WorkFlow();
 
             workFlow.WLName = strAAName;
-            workFlow.WLType = "èµ„äº§é¢†ç”¨";
-            workFlow.Status = "æ–°å»º";
+            workFlow.WLType = "AssetWithdrawal";
+            workFlow.Status = "New";
             workFlow.TemName = DL_TemName.SelectedValue.Trim();
             workFlow.CreateTime = DateTime.Now;
             workFlow.CreatorCode = strUserCode;
             workFlow.CreatorName = ShareClass.GetUserName(strUserCode);
             workFlow.Description = strApplyReason;
             workFlow.XMLFile = strXMLFile2;
-            workFlow.RelatedType = "èµ„äº§";
+            workFlow.RelatedType = "Assets";
             workFlow.RelatedID = assetApplication.AAID;
-            workFlow.DIYNextStep = "Yes"; workFlow.IsPlanMainWorkflow = "NO";
+            workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
 
 
             if (CB_SMS.Checked == true)
             {
-                workFlow.ReceiveSMS = "Yes";
+                workFlow.ReceiveSMS = "YES";
             }
             else
             {
-                workFlow.ReceiveSMS = "No";
+                workFlow.ReceiveSMS = "NO";
             }
 
             if (CB_Mail.Checked == true)
             {
-                workFlow.ReceiveEMail = "Yes";
+                workFlow.ReceiveEMail = "YES";
             }
             else
             {
-                workFlow.ReceiveEMail = "No";
+                workFlow.ReceiveEMail = "NO";
             }
 
             try
@@ -932,9 +932,9 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
                 strXMLFile2 = Server.MapPath(strXMLFile2);
                 xmlProcess.DbToXML(strCmdText, "T_AssetApplication", strXMLFile2);
 
-                LoadRelatedWL("èµ„äº§é¢†ç”¨", "èµ„äº§", int.Parse(strAAID));
+                LoadRelatedWL("AssetWithdrawal", "Assets", int.Parse(strAAID));
 
-                DL_Status.SelectedValue = "å¤„ç†ä¸­";
+                DL_Status.SelectedValue = "InProgress";
 
                 BT_SubmitApply.Enabled = false;
 
@@ -978,7 +978,7 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'èµ„äº§é¢†ç”¨'";
+        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'AssetWithdrawal'";
         strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC";
 
         WorkFlowBLL workFlowBLL = new WorkFlowBLL();
@@ -1042,7 +1042,7 @@ public partial class TTAPPAssetApplicationWF : System.Web.UI.Page
 
         strHQL = "from AssetApplication as assetApplication where assetApplication.ApplicantCode = " + "'" + strApplicantCode + "'" + " and assetApplication.RelatedType = " + "'" + strRelatedType + "'" + " and assetApplication.RelatedID = " + strRelatedID + "  Order by assetApplication.AAID DESC";
 
-        //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
         if (strToDoWLID != null & strWLBusinessID != null)
         {
             strHQL = "from AssetApplication as assetApplication where assetApplication.AAID = " + strWLBusinessID;

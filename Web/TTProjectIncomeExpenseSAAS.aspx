@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectIncomeExpenseSAAS.aspx.cs" Inherits="TTProjectIncomeExpenseSAAS" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectIncomeExpenseSAAS.aspx.cs" Inherits="TTProjectIncomeExpenseSAAS" %>
 
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -45,7 +45,7 @@
                             <tr>
                                 <td align="right">
                                     <a href="#" onclick="preview1()">
-                                        <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" />
+                                        <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" />
                                     </a>
                                 </td>
                             </tr>
@@ -64,7 +64,7 @@
                                                 <table style="width: 100%;">
                                                     <tr>
                                                         <td style="background: #f0f0f0; text-align: left; height: 25px; text-align: center; font-size: 15pt;">
-                                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>£º
                                                         <asp:Label ID="LB_ProjectIncomeExpenseTitle" runat="server" Font-Size="15pt"></asp:Label>
                                                             &nbsp;<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShouYiBiao%>"></asp:Label><br />
                                                         </td>
@@ -106,7 +106,7 @@
                                                                                             </asp:Legend>
                                                                                         </Legends>
                                                                                         <Titles>
-                                                                                            <asp:Title Name="æ ‡é¢˜" Alignment="TopCenter" IsDockedInsideChartArea="False" DockedToChartArea="ChartArea1"></asp:Title>
+                                                                                            <asp:Title Name="±êÌâ" Alignment="TopCenter" IsDockedInsideChartArea="False" DockedToChartArea="ChartArea1"></asp:Title>
                                                                                         </Titles>
                                                                                     </asp:Chart>--%>
                                                                                 </td>
@@ -115,21 +115,21 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr style ="display :none;">
-                                                                    <td class="tdTopLine" align="center">&nbsp;<asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,HeTongZongE%>"></asp:Label>ï¼š
+                                                                    <td class="tdTopLine" align="center">&nbsp;<asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,HeTongZongE%>"></asp:Label>£º
                                                                     <asp:Label ID="LB_TotalContractAmount" runat="server"></asp:Label>
-                                                                        &nbsp;<asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,YingShouZongE%>"></asp:Label>ï¼š<asp:Label ID="LB_TotalReceivablesAmount" runat="server"></asp:Label>
-                                                                        &nbsp;<asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ShiShouZongE%>"></asp:Label>ï¼š<asp:Label ID="LB_TotalContractIncome" runat="server"></asp:Label>
-                                                                        &nbsp;<asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,FeiYongZongE%>"></asp:Label>ï¼š<asp:Label ID="LB_TotalContractExpense" runat="server"></asp:Label>
+                                                                        &nbsp;<asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,YingShouZongE%>"></asp:Label>£º<asp:Label ID="LB_TotalReceivablesAmount" runat="server"></asp:Label>
+                                                                        &nbsp;<asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ShiShouZongE%>"></asp:Label>£º<asp:Label ID="LB_TotalContractIncome" runat="server"></asp:Label>
+                                                                        &nbsp;<asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,FeiYongZongE%>"></asp:Label>£º<asp:Label ID="LB_TotalContractExpense" runat="server"></asp:Label>
                                                                         &nbsp;<br />
-                                                                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,ShiShouYuFeiYongChaE%>"></asp:Label>ï¼š<asp:Label ID="LB_IncomeExpenseBalance" runat="server"></asp:Label>
-                                                                        &nbsp;<asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,HeTongYuShiShouChaE%>"></asp:Label>ï¼š<asp:Label ID="LB_ContractReceiverBalance" runat="server"></asp:Label>
-                                                                        &nbsp;<asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,YingShouYuShiShouChaE%>"></asp:Label>ï¼š<asp:Label ID="LB_ReceivableReceiverBalance" runat="server"></asp:Label>
+                                                                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,ShiShouYuFeiYongChaE%>"></asp:Label>£º<asp:Label ID="LB_IncomeExpenseBalance" runat="server"></asp:Label>
+                                                                        &nbsp;<asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,HeTongYuShiShouChaE%>"></asp:Label>£º<asp:Label ID="LB_ContractReceiverBalance" runat="server"></asp:Label>
+                                                                        &nbsp;<asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,YingShouYuShiShouChaE%>"></asp:Label>£º<asp:Label ID="LB_ReceivableReceiverBalance" runat="server"></asp:Label>
 
                                                                     </td>
                                                                 </tr>
                                                                 <tr style ="display :none;">
                                                                     <td style="background: #f0f0f0; text-align: Left;">
-                                                                        <strong>&nbsp;&nbsp;<asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,HeTongShouKuang%>"></asp:Label>ï¼š</strong>
+                                                                        <strong>&nbsp;&nbsp;<asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,HeTongShouKuang%>"></asp:Label>£º</strong>
                                                                     </td>
                                                                 </tr>
                                                                  <tr style ="display :none;">
@@ -265,33 +265,33 @@
                                                                             ForeColor="#333333" GridLines="None" Height="1px" ShowHeader="False" Width="100%">
 
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="ConstractCode" DataNavigateUrlFormatString="TTConstractView.aspx?ConstractCode={0}"
-                                                                                    DataTextField="ConstractCode" HeaderText="åˆåŒä»£ç " Target="_blank">
+                                                                                    DataTextField="ConstractCode" HeaderText="ºÏÍ¬´úÂë" Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:HyperLinkColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="RelatedID" DataNavigateUrlFormatString="TTProjectDetailView.aspx?ProjectID={0}"
-                                                                                    DataTextField="RelatedID" HeaderText="é¡¹ç›®å·" Target="_blank">
+                                                                                    DataTextField="RelatedID" HeaderText="ÏîÄ¿ºÅ" Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="BillCode" HeaderText="åŽŸå§‹å•å·">
+                                                                                <asp:BoundColumn DataField="BillCode" HeaderText="Ô­Ê¼µ¥ºÅ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="ReceivablesAccount" HeaderText="åº”æ”¶é‡‘é¢">
+                                                                                <asp:BoundColumn DataField="ReceivablesAccount" HeaderText="Ó¦ÊÕ½ð¶î">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="ReceiverAccount" HeaderText="å®žæ”¶é‡‘é¢">
+                                                                                <asp:BoundColumn DataField="ReceiverAccount" HeaderText="ÊµÊÕ½ð¶î">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="ReceiverTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="å®žæ”¶æ—¥æœŸ">
+                                                                                <asp:BoundColumn DataField="ReceiverTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ÊµÊÕÈÕÆÚ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="InvoiceAccount" HeaderText="å¼€ç¥¨é‡‘é¢">
+                                                                                <asp:BoundColumn DataField="InvoiceAccount" HeaderText="¿ªÆ±½ð¶î">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Payer" HeaderText="ä»˜æ¬¾æ–¹">
+                                                                                <asp:BoundColumn DataField="Payer" HeaderText="¸¶¿î·½">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                 </asp:BoundColumn>
 

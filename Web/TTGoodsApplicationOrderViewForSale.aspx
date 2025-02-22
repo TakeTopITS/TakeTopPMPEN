@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsApplicationOrderViewForSale.aspx.cs" Inherits="TTGoodsApplicationOrderViewForSale" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsApplicationOrderViewForSale.aspx.cs" Inherits="TTGoodsApplicationOrderViewForSale" %>
 
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -12,7 +12,7 @@
 
     <style type="text/css">
         body {
-            font-family: å¾®è½¯é›…é»‘,å®‹ä½“;
+            font-family: Î¢ÈíÑÅºÚ,ËÎÌå;
             font-size: 1em;
         }
     </style>
@@ -50,7 +50,7 @@
                     <tr>
                         <td width="" align="right">
                             <a href="#" onclick="preview1()">
-                                <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" />
+                                <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" />
                             </a>
                         </td>
 
@@ -86,12 +86,12 @@
                                         cellspacing="0">
                                         <tr>
                                             <td style="text-align: left">
-                                                <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,ShenQingShiJian%>"></asp:Label>ï¼š
+                                                <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,ShenQingShiJian%>"></asp:Label>£º
                                             <%# Convert.ToDateTime(DataBinder.Eval(Container.DataItem, "ApplyTime")).ToString("yyyy/MM/dd")%>
                                             </td>
 
                                             <td style="text-align: left">
-                                                <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,DanHao%>"></asp:Label>ï¼š
+                                                <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,DanHao%>"></asp:Label>£º
                                             <%#DataBinder.Eval(Container.DataItem, "GAAName")%>
                                             </td>
                                         </tr>
@@ -152,28 +152,28 @@
                             <asp:DataGrid runat="server" AutoGenerateColumns="False" ShowHeader="false"
                                 Height="30px" Width="100%" ID="DataGrid1">
                                 <Columns>
-                                    <asp:BoundColumn DataField="GoodsCode" HeaderText="ä»£ç ">
+                                    <asp:BoundColumn DataField="GoodsCode" HeaderText="´úÂë">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="GoodsName" HeaderText="ç‰©æ–™å">
+                                    <asp:BoundColumn DataField="GoodsName" HeaderText="ÎïÁÏÃû">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="ModelNumber" HeaderText="åž‹å·">
+                                    <asp:BoundColumn DataField="ModelNumber" HeaderText="ÐÍºÅ">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="Spec" HeaderText="è§„æ ¼">
+                                    <asp:BoundColumn DataField="Spec" HeaderText="¹æ¸ñ">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="Brand" HeaderText="å“ç‰Œ">
+                                    <asp:BoundColumn DataField="Brand" HeaderText="Æ·ÅÆ">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="Number" HeaderText="æ•°é‡">
+                                    <asp:BoundColumn DataField="Number" HeaderText="ÊýÁ¿">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="Unit" HeaderText="å•ä½">
+                                    <asp:BoundColumn DataField="Unit" HeaderText="µ¥Î»">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="CheckOutNumber" HeaderText="å·²å‡ºåº“">
+                                    <asp:BoundColumn DataField="CheckOutNumber" HeaderText="ÒÑ³ö¿â">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                     </asp:BoundColumn>
 
@@ -186,13 +186,13 @@
                             <table width="80%">
                                 <tr>
                                     <td class="formItemBgStyle" style="text-align: left;" width="150px">
-                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZhiBiao%>"></asp:Label>ï¼š</td>
+                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZhiBiao%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyle" style="text-align: left;"></td>
                                     <td class="formItemBgStyle" style="text-align: left;" width="150px">
-                                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,ZhiXing%>"></asp:Label>ï¼š</td>
+                                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,ZhiXing%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyle" style="text-align: left;"></td>
                                     <td class="formItemBgStyle" style="text-align: left;" width="150px">
-                                        <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,PiZhun%>"></asp:Label>ï¼š</td>
+                                        <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,PiZhun%>"></asp:Label>£º</td>
                                     <td class="formItemBgStyle" style="text-align: left;"></td>
                                 </tr>
                             </table>

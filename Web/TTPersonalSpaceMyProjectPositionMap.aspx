@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPersonalSpaceMyProjectPositionMap.aspx.cs" Inherits="TTPersonalSpaceMyProjectPositionMap" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPersonalSpaceMyProjectPositionMap.aspx.cs" Inherits="TTPersonalSpaceMyProjectPositionMap" %>
 
 <meta http-equiv="Content-Type" content="textml; charset=UTF-8" />
 
@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>é¡¹ç›®åœ°å›¾</title>
+    <title>ÏîÄ¿µØÍ¼</title>
 
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 
@@ -72,11 +72,11 @@
                                             <table>
                                                 <tr>
                                                     <td>
-                                                        <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,Jing%>"></asp:Label>ï¼š</td>
+                                                        <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,Jing%>"></asp:Label>£º</td>
                                                     <td>
                                                         <input type="text" id="LNG_value" runat="server"></input></td>
                                                     <td>
-                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,Wei%>"></asp:Label>çº¬ï¼š</td>
+                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,Wei%>"></asp:Label>Î³£º</td>
                                                     <td>
                                                         <input type="text" id="LAT_value" runat="server"></input>
                                                     </td>
@@ -123,7 +123,7 @@
     window.onload = function () {
         if (navigator.geolocation) {
             //document.getElementById("status").innerHTML = "HTML5 Geolocation is supported in your browser.";
-            // ç™¾åº¦åœ°å›¾APIåŠŸèƒ½
+            // °Ù¶ÈµØÍ¼API¹¦ÄÜ
             //var map = new BMap.Map("container");
             //var point = new BMap.Point(113.373456, 23.14153);
             //map.centerAndZoom(point, 12);
@@ -141,7 +141,7 @@
                         type: "post",
                         async: false,
                         url: "Handler/getMyProjectLongitudeLatitude.ashx",
-                        data: {}, //å‘é€åˆ°æœåŠ¡å™¨çš„å‚æ•°
+                        data: {}, //·¢ËÍµ½·şÎñÆ÷µÄ²ÎÊı
                         datatype: "json",
                         success: function (result) {
 
@@ -149,7 +149,7 @@
                                 eval("var transresult=" + result);
 
                                 map = new BMap.Map("container");
-                                var point = new BMap.Point(116.404, 39.915);  // ä¸­å¿ƒç‚¹åæ ‡ï¼šå¤©å®‰é—¨
+                                var point = new BMap.Point(116.404, 39.915);  // ÖĞĞÄµã×ø±ê£ºÌì°²ÃÅ
 
                                 for (var i = 0; i < transresult.length; i++) {
 
@@ -158,7 +158,7 @@
                                         mk = new BMap.Marker(point);
                                         map.addOverlay(mk);
 
-                                        // æ·»åŠ ä¿¡æ¯çª—å£
+                                        // Ìí¼ÓĞÅÏ¢´°¿Ú
                                         addInfoWindow(mk, transresult[i].projectid, transresult[i].projectname);
                                     }
                                     catch
@@ -167,7 +167,7 @@
 
                                 }
 
-                                map.centerAndZoom(point, 5);  // è®¾ç½®ä¸­å¿ƒç‚¹å’Œç¼©æ”¾æ¯”ä¾‹
+                                map.centerAndZoom(point, 5);  // ÉèÖÃÖĞĞÄµãºÍËõ·Å±ÈÀı
                             }
                         },
                         error: function (errorMsg) {
@@ -185,14 +185,14 @@
     };
 
 
-    // æ·»åŠ ä¿¡æ¯çª—å£
+    // Ìí¼ÓĞÅÏ¢´°¿Ú
     function addInfoWindow(marker, title, content) {
 
         var infoWindow = new BMap.InfoWindow(title + content);
         marker.addEventListener("mouseover", function () {
             this.openInfoWindow(infoWindow);
 
-            //å›¾ç‰‡åŠ è½½å®Œæ¯•é‡ç»˜infowindow
+            //Í¼Æ¬¼ÓÔØÍê±ÏÖØ»æinfowindow
             document.getElementById('imgDemo').onload = function () {
                 infoWindow.redraw();
             }

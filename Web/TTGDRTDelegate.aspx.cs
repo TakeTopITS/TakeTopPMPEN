@@ -1,4 +1,4 @@
-锘縰sing ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System; using System.Resources;
 using System.Collections;
@@ -96,7 +96,7 @@ public partial class TTGDRTDelegate : System.Web.UI.Page
         {
             string cmdArges = e.CommandArgument.ToString();
 
-            //鐐瑰嚮鍗曠嚎鍥惧彿
+            //点击单线图号
 
             string strGDIsomJointSQL = string.Format(@"select * from T_GDIsomJoint
                         where Isom_no = '{0}'", cmdArges);
@@ -113,7 +113,7 @@ public partial class TTGDRTDelegate : System.Web.UI.Page
         string strProjectCode = DDL_GDProject.SelectedValue;
         string strPipingClass = DDL_GDPipingClass.SelectedValue;
 
-        //鏌ヨ鍗曠嚎鍥惧彿
+        //查询单线图号
         string strGDLineWeldSQL = string.Format(@"select i.Isom_no,COUNT(i.Isom_no) as IsomCount from T_GDIsomJoint i
                 left join T_GDLineWeld l on i.Isom_no = l.Isom_no
                 left join T_GDPipingClass p on l.LineLevel = p.LineLevel

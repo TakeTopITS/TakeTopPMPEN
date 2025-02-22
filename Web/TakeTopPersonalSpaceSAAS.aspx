@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Async="true" CodeFile="TakeTopPersonalSpaceSAAS.aspx.cs" Inherits="TakeTopPersonalSpaceSAAS" %>
-<%@ page language="C#" autoeventwireup="true" async="true" inherits="TakeTopPersonalSpaceSAAS, App_Web_ntpreqpb" %>
 
 <%@ OutputCache Duration="2678400" VaryByParam="*" %>
 
@@ -431,3 +430,4 @@
 
 </script>
 </html>
+<%--***--%>

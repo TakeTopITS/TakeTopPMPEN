@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Web.UI;
 
 public partial class TTCustomerRegisterFromWebSite_TakeTopSoft : System.Web.UI.Page
@@ -20,57 +20,57 @@ public partial class TTCustomerRegisterFromWebSite_TakeTopSoft : System.Web.UI.P
         {
             if (strSystemType == "XMB")
             {
-                LB_Product.Text = "æ³°é¡¶é¡¹ç›®å®";
+                LB_Product.Text = "Ì©¶¥ÏîÄ¿±¦";
             }
 
             if (strSystemType == "ECMP")
             {
-                LB_Product.Text = "é¡¹ç›®ç»¼åˆç®¡ç†å¹³å°";
+                LB_Product.Text = "ÏîÄ¿×ÛºÏ¹ÜÀíÆ½Ì¨";
             }
 
             if (strSystemType == "GEPMP")
             {
-                LB_Product.Text = "é¡¹ç›®ç®¡ç†å¹³å°";
+                LB_Product.Text = "ÏîÄ¿¹ÜÀíÆ½Ì¨";
             }
 
             if (strSystemType == "RDPMP")
             {
-                LB_Product.Text = "ç ”å‘é¡¹ç›®ç®¡ç†å¹³å°";
+                LB_Product.Text = "ÑĞ·¢ÏîÄ¿¹ÜÀíÆ½Ì¨";
             }
 
             if (strSystemType == "GAPMP")
             {
-                LB_Product.Text = "æ”¿åŠ¡é¡¹ç›®ç®¡ç†å¹³å°";
+                LB_Product.Text = "ÕşÎñÏîÄ¿¹ÜÀíÆ½Ì¨";
             }
 
             if (strSystemType == "ENPMP")
             {
-                LB_Product.Text = "å·¥ç¨‹é¡¹ç›®ç®¡ç†å¹³å°";
+                LB_Product.Text = "¹¤³ÌÏîÄ¿¹ÜÀíÆ½Ì¨";
             }
 
             if (strSystemType == "SIMP")
             {
-                LB_Product.Text = "ç³»ç»Ÿé›†æˆé¡¹ç›®ç®¡ç†å¹³å°";
+                LB_Product.Text = "ÏµÍ³¼¯³ÉÏîÄ¿¹ÜÀíÆ½Ì¨";
             }
 
             if (strSystemType == "SOMP")
             {
-                LB_Product.Text = "è½¯ä»¶å®æ–½é¡¹ç›®ç®¡ç†å¹³å°";
+                LB_Product.Text = "Èí¼şÊµÊ©ÏîÄ¿¹ÜÀíÆ½Ì¨";
             }
 
             if (strSystemType == "ERP")
             {
-                LB_Product.Text = "é¡¹ç›®å‹ERPå¹³å°";
+                LB_Product.Text = "ÏîÄ¿ĞÍERPÆ½Ì¨";
             }
 
             if (strSystemType == "CRM")
             {
-                LB_Product.Text = "CRMå¹³å°";
+                LB_Product.Text = "CRMÆ½Ì¨";
             }
 
             if (strSystemType == "CMP")
             {
-                LB_Product.Text = "ååŒOAå¹³å°";
+                LB_Product.Text = "Ğ­Í¬OAÆ½Ì¨";
             }
         }
     }
@@ -96,7 +96,7 @@ public partial class TTCustomerRegisterFromWebSite_TakeTopSoft : System.Web.UI.P
 
         if (strCompany == "" | strContactPerson == "" | strPhoneNumber == "" | strQuestion == "")
         {
-            LB_Message.Text = "æäº¤å¤±è´¥ï¼Œå¸¦*å·é¡¹ä¸èƒ½ä¸ºç©ºï¼Œè¯·æ£€æŸ¥ï¼";
+            LB_Message.Text = "Ìá½»Ê§°Ü£¬´ø*ºÅÏî²»ÄÜÎª¿Õ£¬Çë¼ì²é£¡";
         }
         else
         {
@@ -104,15 +104,15 @@ public partial class TTCustomerRegisterFromWebSite_TakeTopSoft : System.Web.UI.P
             {
                 TB_CheckCode.Text = "";
 
-                LB_Message.Text = "æäº¤å¤±è´¥ï¼ŒéªŒè¯ç é”™è¯¯ï¼Œè¯·æ£€æŸ¥ï¼";
+                LB_Message.Text = "Ìá½»Ê§°Ü£¬ÑéÖ¤Âë´íÎó£¬Çë¼ì²é£¡";
                 return;
             }
 
-            //æ¨é€ä¿¡æ¯ç»™å®¢æœä¸»ç®¡
+            //ÍÆËÍĞÅÏ¢¸ø¿Í·şÖ÷¹Ü
             try
             {
                 string strCSOperatorCode = ShareClass.GetWebSiteCustomerServiceOperatorCode(strWebSite);
-                string strNofiInfo = "æç¤ºï¼šå…¬å¸: " + strCompany + " çš„å‘˜å·¥: " + strContactPerson + "( " + strPhoneNumber + " )" + " æäº¤äº†ï¼š" + strType + " çš„è¯•ç”¨ä¿¡æ¯ï¼Œè¯·å…³æ³¨ï¼ï¼ï¼";
+                string strNofiInfo = "ÌáÊ¾£º¹«Ë¾: " + strCompany + " µÄÔ±¹¤: " + strContactPerson + "( " + strPhoneNumber + " )" + " Ìá½»ÁË£º" + strType + " µÄÊÔÓÃĞÅÏ¢£¬Çë¹Ø×¢£¡£¡£¡";
                 Action action = new Action(delegate ()
                 {
                     try
@@ -133,7 +133,7 @@ public partial class TTCustomerRegisterFromWebSite_TakeTopSoft : System.Web.UI.P
             }
 
             strSQL = " Insert into T_CustomerQuestion(Company,UserIP,UserPosition,ContactPerson,PhoneNumber,EMail,Address,PostCode,Type,Question,SummitTime,AnswerTime,Status,RecorderCode,OperatorCode,OperatorName,OperatorStatus,FromWebSite)";
-            strSQL += " Values(" + "'" + strCompany + "'" + "," + "'" + strUserIP + "'" + "," + "'" + strUserPosition + "'" + "," + "'" + strContactPerson + "'" + "," + "'" + strPhoneNumber + "'" + "," + "'" + strEMail + "'" + "," + "'" + strAddress + "'" + "," + "'" + strPostCode + "'" + "," + "'" + strType + "'" + "," + "'" + strQuestion + "'" + "," + "now(),now()+'1 day'::interval," + "'æ–°å»º'" + ",'','','',''," + "'" + strWebSite + "'" + ")";
+            strSQL += " Values(" + "'" + strCompany + "'" + "," + "'" + strUserIP + "'" + "," + "'" + strUserPosition + "'" + "," + "'" + strContactPerson + "'" + "," + "'" + strPhoneNumber + "'" + "," + "'" + strEMail + "'" + "," + "'" + strAddress + "'" + "," + "'" + strPostCode + "'" + "," + "'" + strType + "'" + "," + "'" + strQuestion + "'" + "," + "now(),now()+'1 day'::interval," + "'New'" + ",'','','',''," + "'" + strWebSite + "'" + ")";
 
             try
             {
@@ -212,7 +212,7 @@ public partial class TTCustomerRegisterFromWebSite_TakeTopSoft : System.Web.UI.P
             }
             catch
             {
-                LB_Message.Text = "æäº¤å¤±è´¥ï¼Œè¯·æ£€æŸ¥ï¼";
+                LB_Message.Text = "Ìá½»Ê§°Ü£¬Çë¼ì²é£¡";
             }
         }
     }

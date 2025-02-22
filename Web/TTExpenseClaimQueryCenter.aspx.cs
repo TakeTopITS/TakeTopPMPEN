@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -27,7 +27,7 @@ public partial class TTExpenseClaimQueryCenter : System.Web.UI.Page
         string strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "资产登记入库", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "�ʲ��Ǽ����", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -46,19 +46,19 @@ public partial class TTExpenseClaimQueryCenter : System.Web.UI.Page
 
         if (strRelatedType == "Other")
         {
-            strRelatedType = "其它";
+            strRelatedType = "Other";
             strRelatedID = "0";
         }
 
         if (strRelatedType == "Project")
         {
-            strRelatedType = "项目";
+            strRelatedType = "Project";
             strRelatedTitle = GetProjectName(strRelatedID);
         }
 
         if (strRelatedType == "Requirement")
         {
-            strRelatedType = "需求";
+            strRelatedType = "Requirement";
             strRelatedTitle = GetRequirementName(strRelatedID);
         }
 
@@ -86,7 +86,7 @@ public partial class TTExpenseClaimQueryCenter : System.Web.UI.Page
             e.Item.ForeColor = Color.Red;
 
 
-            LoadRelatedWL("费用报销", strRelatedType, int.Parse(strID));
+            LoadRelatedWL("ExpenseReimbursement", strRelatedType, int.Parse(strID));
             LoadRelatedExpenseClaimDetail(strID);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -142,7 +142,7 @@ public partial class TTExpenseClaimQueryCenter : System.Web.UI.Page
         strHQL += " and expenseClaim.ExpenseName Like " + "'%" + strAOName + "%'";
         if (strProjectName != "")
         {
-            strHQL += " And expenseClaim.RelatedType = '项目' and expenseClaim.RelatedID in (Select project.ProjectID From Project as project Where project.ProjectName Like " + "'%" + strProjectName + "%')";
+            strHQL += " And expenseClaim.RelatedType = 'Project' and expenseClaim.RelatedID in (Select project.ProjectID From Project as project Where project.ProjectName Like " + "'%" + strProjectName + "%')";
         }
 
         strHQL += " And to_char( expenseClaim.ApplyTime,'yyyymmdd') >= " + "'" + strStartTime + "'" + " and to_char( expenseClaim.ApplyTime,'yyyymmdd') <= " + "'" + strEndTime + "'";

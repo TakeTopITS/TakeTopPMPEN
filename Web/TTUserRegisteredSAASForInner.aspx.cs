@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -29,7 +29,7 @@ public partial class TTUserRegisteredSAASForInner : System.Web.UI.Page
         string strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "æˆå‘˜æ³¨å†Œ", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "³ÉÔ±×¢²á", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -123,7 +123,7 @@ public partial class TTUserRegisteredSAASForInner : System.Web.UI.Page
             TakeTopLicense license = new TakeTopLicense();
             intWEBLicenseNumber = license.GetWEBLicenseNumber(strServerName);
 
-            //å–å¾—å·²å¢åŠ çš„WEBå’ŒAPPç”¨æˆ·æ•°
+            //È¡µÃÒÑÔö¼ÓµÄWEBºÍAPPÓÃ»§Êı
             intWEBUserNumber = GetWEBSystemUserNumber();
             if (intWEBUserNumber > intWEBLicenseNumber)
             {
@@ -220,18 +220,18 @@ public partial class TTUserRegisteredSAASForInner : System.Web.UI.Page
                 DataSet ds2 = ShareClass.GetDataSetFromSql(strHQL, "T_MemberLevel");
                 if (ds2.Tables[0].Rows.Count == 0)
                 {
-                    //è®©æ–°åŠ å…¥çš„æˆå‘˜è‡ªå·±ä½œè‡ªå·±çš„ç›´æ¥æˆå‘˜
+                    //ÈÃĞÂ¼ÓÈëµÄ³ÉÔ±×Ô¼º×÷×Ô¼ºµÄÖ±½Ó³ÉÔ±
                     strHQL = "Insert Into T_MemberLevel(UserCode  ,UnderCode ,AgencyStatus,ProjectVisible ,PlanVisible  ,KPIVisible ,WorkloadVisible ,ScheduleVisible ,WorkflowVisible,CustomerServiceVisible ,ConstractVisible,PositionVisible,SortNumber)";
                     strHQL += " values('" + strUserCode + "','" + strUserCode + "',1,'YES','YES','YES','YES','YES','YES','YES','YES','YES',1)";
                     ShareClass.RunSqlCommand(strHQL);
 
-                    //è®©è¿™ä¸ªæ–°åŠ å…¥çš„æˆå‘˜ä½œè‡ªå·±çš„ç›´æ¥æˆå‘˜
+                    //ÈÃÕâ¸öĞÂ¼ÓÈëµÄ³ÉÔ±×÷×Ô¼ºµÄÖ±½Ó³ÉÔ±
                     strHQL = "Insert Into T_MemberLevel(UserCode  ,UnderCode ,AgencyStatus,ProjectVisible ,PlanVisible  ,KPIVisible ,WorkloadVisible ,ScheduleVisible ,WorkflowVisible,CustomerServiceVisible ,ConstractVisible,PositionVisible,SortNumber)";
                     strHQL += " values('" + Session["UserCode"].ToString() + "','" + strUserCode + "',1,'YES','YES','YES','YES','YES','YES','YES','YES','YES',1)";
                     ShareClass.RunSqlCommand(strHQL);
                 }
 
-                //ç»™å‘˜å·¥å¢åŠ è€ƒå‹¤è§„åˆ™
+                //¸øÔ±¹¤Ôö¼Ó¿¼ÇÚ¹æÔò
                 try
                 {
                     strHQL = "Insert Into T_UserAttendanceRule(UserCode,UserName,CreateDate,MCheckInStart,MCheckInEnd,MCheckOutStart,MCheckOutEnd,";
@@ -239,9 +239,9 @@ public partial class TTUserRegisteredSAASForInner : System.Web.UI.Page
                     strHQL += "OCheckInStart,OCheckInEnd,OCheckOutStart,OCheckOutEnd,Status,MCheckInIsMust,MCheckOutIsMust,ACheckInIsMust,ACheckOutIsMust,NCheckInIsMust,NCheckOutIsMust,OCheckInIsMust,OCheckOutIsMust,LargestDistance,LeaderCode,LeaderName,OfficeLongitude,OfficeLatitude)";
                     strHQL += " Select A.UserCode,A.UserName,now(),B.MCheckInStart,B.MCheckInEnd,B.MCheckOutStart,B.MCheckOutEnd,";
                     strHQL += "B.ACheckInStart,B.ACheckInEnd,B.ACheckOutStart,B.ACheckOutEnd,B.NCheckInStart,B.NCheckInEnd,B.NCheckOutStart,B.NCheckOutEnd,";
-                    strHQL += "B.OCheckInStart,B.OCheckInEnd,B.OCheckOutStart,B.OCheckOutEnd,'å¤„ç†ä¸­',B.MCheckInIsMust,B.MCheckOutIsMust,B.ACheckInIsMust,B.ACheckOutIsMust,B.NCheckInIsMust,B.NCheckOutIsMust,B.OCheckInIsMust,B.OCheckOutIsMust,B.LargestDistance,'','',OfficeLongitude,OfficeLatitude";
+                    strHQL += "B.OCheckInStart,B.OCheckInEnd,B.OCheckOutStart,B.OCheckOutEnd,'InProgress',B.MCheckInIsMust,B.MCheckOutIsMust,B.ACheckInIsMust,B.ACheckOutIsMust,B.NCheckInIsMust,B.NCheckOutIsMust,B.OCheckInIsMust,B.OCheckOutIsMust,B.LargestDistance,'','',OfficeLongitude,OfficeLatitude";
                     strHQL += " From T_ProjectMember A, T_AttendanceRule B";
-                    strHQL += " Where A.UserCode = '" + strUserCode + "' and A.UserCode not in (Select UserCode From T_UserAttendanceRule) and A.Status not in ('ç¦»èŒ','ç»ˆæ­¢') ";
+                    strHQL += " Where A.UserCode = '" + strUserCode + "' and A.UserCode not in (Select UserCode From T_UserAttendanceRule) and A.Status not in ('Resign','Stop') ";
                     ShareClass.RunSqlCommand(strHQL);
                 }
                 catch (Exception err)
@@ -472,11 +472,11 @@ public partial class TTUserRegisteredSAASForInner : System.Web.UI.Page
 
             if (strFileName1 != "")
             {
-                //è·å–åˆå§‹æ–‡ä»¶å
-                i = strFileName1.LastIndexOf("."); //å–å¾—æ–‡ä»¶åä¸­æœ€åä¸€ä¸ª"."çš„ç´¢å¼•
-                string strNewExt = strFileName1.Substring(i); //è·å–æ–‡ä»¶æ‰©å±•å
+                //»ñÈ¡³õÊ¼ÎÄ¼şÃû
+                i = strFileName1.LastIndexOf("."); //È¡µÃÎÄ¼şÃûÖĞ×îºóÒ»¸ö"."µÄË÷Òı
+                string strNewExt = strFileName1.Substring(i); //»ñÈ¡ÎÄ¼şÀ©Õ¹Ãû
 
-                DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+                DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
 
                 string strFileName2 = System.IO.Path.GetFileName(strFileName1);
                 string strExtName = Path.GetExtension(strFileName2);
@@ -568,7 +568,7 @@ public partial class TTUserRegisteredSAASForInner : System.Web.UI.Page
 
     protected bool CheckUserLoginManage(string strUserCode, string strUserName)
     {
-        //æ ¹æ®ç”¨æˆ·ç™»å½•IPåˆ¤æ–­æ˜¯å¦é˜»æ­¢ç”¨æˆ·ç™»å½•ç³»ç»Ÿ
+        //¸ù¾İÓÃ»§µÇÂ¼IPÅĞ¶ÏÊÇ·ñ×èÖ¹ÓÃ»§µÇÂ¼ÏµÍ³
         string strHQL;
         string strLoginID, strIsAllMember, strIsForbidLogin, strLoginUserCode;
         string strMsg, strIP, strUserHostAddress;

@@ -122,7 +122,7 @@
                         alert(json);
                     },
                     error: function () {
-                        alert("Ê§°Ü");
+                        alert("Failed");
                     }
 
                 });

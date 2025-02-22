@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZCollectPrintPag.aspx.cs" Inherits="TTWZCollectPrintPag" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZCollectPrintPag.aspx.cs" Inherits="TTWZCollectPrintPag" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -41,7 +41,7 @@
                             <td style="padding-top: 100px;">
                                 <table width="100%">
                                     <tr>
-                                        <td style="text-align: center; font-size: 36px;">‰∏≠Áü≥Ê≤πÁ¨¨‰∫åÂª∫ËÆæÂÖ¨Âè∏Êî∂ÊñôÂçï
+                                        <td style="text-align: center; font-size: 36px;">÷– Ø”Õµ⁄∂˛Ω®…Ëπ´Àæ ’¡œµ•
                                             <br />
                                             <br />
                                             <br />
@@ -54,12 +54,12 @@
                                                     <td align="left">
                                                         <table width="100%">
                                                             <tr>
-                                                                <td style="width: 30%;">Êî∂Êñô‰ªìÂ∫ìÔºö<%# Eval("StoreRoom") %></td>
-                                                                <td style="width: 20%;">Êî∂ÊñôÊñπÂºèÔºö<%# Eval("CollectMethod") %></td>
-                                                                <td style="width: 30%;">Êî∂ÊñôÊó•ÊúüÔºö<%#  DateTime .Parse ( Eval("CollectTime").ToString ()).ToString ("yyyy-MM-dd") %></td>
-                                                                <td style="width: 20%;">Ë¥ß‰ΩçÂè∑Ôºö<%# Eval("GoodsCode") %>
+                                                                <td style="width: 30%;"> ’¡œ≤÷ø‚£∫<%# Eval("StoreRoom") %></td>
+                                                                <td style="width: 20%;"> ’¡œ∑Ω Ω£∫<%# Eval("CollectMethod") %></td>
+                                                                <td style="width: 30%;"> ’¡œ»’∆⁄£∫<%#  DateTime .Parse ( Eval("CollectTime").ToString ()).ToString ("yyyy-MM-dd") %></td>
+                                                                <td style="width: 20%;">ªıŒª∫≈£∫<%# Eval("GoodsCode") %>
                                                                     <br />
-                                                                    NoÔºö<%# Eval("CollectCode") %>
+                                                                    No£∫<%# Eval("CollectCode") %>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -69,9 +69,9 @@
                                                     <td align="left">
                                                         <table width="100%">
                                                             <tr>
-                                                                <td style="width: 30%;">ÊùêÊ£ÄÂè∑Ôºö<%# Eval("CheckCode") %></td>
-                                                                <td style="width: 20%;">ÂêàÂêåÂè∑Ôºö<%# Eval("CompactCode") %></td>
-                                                                <td style="width: 50%;">Â§áÊ≥®Ôºö<%# Eval("StoreRoom") %>Ôºö&nbsp;</td>
+                                                                <td style="width: 30%;">≤ƒºÏ∫≈£∫<%# Eval("CheckCode") %></td>
+                                                                <td style="width: 20%;">∫œÕ¨∫≈£∫<%# Eval("CompactCode") %></td>
+                                                                <td style="width: 50%;">±∏◊¢£∫<%# Eval("StoreRoom") %>£∫&nbsp;</td>
                                                             </tr>
                                                         </table>
                                                     </td>
@@ -80,10 +80,10 @@
                                                     <td align="left">
                                                         <table width="100%">
                                                             <tr>
-                                                                <td style="width: 30%;">ÊùêÊñôÂêçÁß∞Ôºö<%# Eval("ObjectName") %></td>
-                                                                <td style="width: 20%;">ËÆ°ÈáèÂçï‰ΩçÔºö<%# Eval("UnitName") %></td>
-                                                                <td style="width: 20%;">Ê†áÂáÜÔºö<%# Eval("Criterion") %></td>
-                                                                <td style="width: 30%;">Á∫ßÂà´Ôºö<%# Eval("Grade") %></td>
+                                                                <td style="width: 30%;">≤ƒ¡œ√˚≥∆£∫<%# Eval("ObjectName") %></td>
+                                                                <td style="width: 20%;">º∆¡øµ•Œª£∫<%# Eval("UnitName") %></td>
+                                                                <td style="width: 20%;">±Í◊º£∫<%# Eval("Criterion") %></td>
+                                                                <td style="width: 30%;">º∂±£∫<%# Eval("Grade") %></td>
                                                             </tr>
                                                         </table>
                                                     </td>
@@ -92,10 +92,10 @@
                                                     <td align="left">
                                                         <table width="100%">
                                                             <tr>
-                                                                <td style="width: 30%;">ËßÑÊ†ºÂûãÂè∑Ôºö<%# Eval("Model") %></td>
-                                                                <td style="width: 20%;">ÂèëÁ•®Âè∑Á†ÅÔºö<%# Eval("TicketNumber") %></td>
-                                                                <td style="width: 20%;">ËøêË¥πÔºö<%# Eval("Freight") %></td>
-                                                                <td style="width: 30%;">ÂÖ∂ÂÆÉÔºö<%# Eval("OtherObject") %></td>
+                                                                <td style="width: 30%;">πÊ∏Ò–Õ∫≈£∫<%# Eval("Model") %></td>
+                                                                <td style="width: 20%;">∑¢∆±∫≈¬Î£∫<%# Eval("TicketNumber") %></td>
+                                                                <td style="width: 20%;">‘À∑—£∫<%# Eval("Freight") %></td>
+                                                                <td style="width: 30%;">∆‰À¸£∫<%# Eval("OtherObject") %></td>
                                                             </tr>
                                                         </table>
                                                     </td>
@@ -104,7 +104,7 @@
                                                     <td align="left">
                                                         <table width="100%">
                                                             <tr>
-                                                                <td style="width: 30%;">‰æõË¥ßÂçï‰ΩçÔºö<%# Eval("SupplierName") %></td>
+                                                                <td style="width: 30%;">π©ªıµ•Œª£∫<%# Eval("SupplierName") %></td>
                                                                 <td style="width: 20%;">&nbsp;</td>
                                                                 <td style="width: 20%;">&nbsp;</td>
                                                                 <td style="width: 30%;">&nbsp;</td>
@@ -116,13 +116,13 @@
                                                     <td align="left">
                                                         <table width="100%">
                                                             <tr>
-                                                                <td style="width: 15%;">Â∫îÊî∂Êï∞ÈáèÔºö<%# Eval("CollectNumber") %></td>
-                                                                <td style="width: 15%;">ÂÆûÊî∂Êï∞ÈáèÔºö<%# Eval("ActualNumber") %></td>
-                                                                <td style="width: 15%;">ËÆ°ÂàíÂçï‰ª∑<%# Eval("ActualNumber") %>Ôºö&nbsp;</td>
-                                                                <td style="width: 15%;">ËÆ°ÂàíÈáëÈ¢ù<%# Eval("ActualNumber") %>Ôºö&nbsp;</td>
-                                                                <td style="width: 15%;">ÂÆûË¥≠Âçï‰ª∑Ôºö<%# Eval("ActualPrice") %></td>
-                                                                <td style="width: 15%;">ÂÆûË¥≠ÈáëÈ¢ùÔºö<%# Eval("ActualMoney") %></td>
-                                                                <td style="width: 10%;">Á®éÈáëÔºö<%# Eval("RatioMoney") %></td>
+                                                                <td style="width: 15%;">”¶ ’ ˝¡ø£∫<%# Eval("CollectNumber") %></td>
+                                                                <td style="width: 15%;"> µ ’ ˝¡ø£∫<%# Eval("ActualNumber") %></td>
+                                                                <td style="width: 15%;">º∆ªÆµ•º€<%# Eval("ActualNumber") %>£∫&nbsp;</td>
+                                                                <td style="width: 15%;">º∆ªÆΩ∂Ó<%# Eval("ActualNumber") %>£∫&nbsp;</td>
+                                                                <td style="width: 15%;"> µπ∫µ•º€£∫<%# Eval("ActualPrice") %></td>
+                                                                <td style="width: 15%;"> µπ∫Ω∂Ó£∫<%# Eval("ActualMoney") %></td>
+                                                                <td style="width: 10%;">À∞Ω£∫<%# Eval("RatioMoney") %></td>
                                                             </tr>
                                                         </table>
                                                     </td>
@@ -131,10 +131,10 @@
                                                     <td align="left">
                                                         <table width="100%">
                                                             <tr>
-                                                                <td style="width: 25%;">‰æõÂ∫î‰∏ªÁÆ°Ôºö<%# Eval("DelegateAgentName") %></td>
-                                                                <td style="width: 25%;">ÊùêÊ£ÄÂëòÔºö<%# Eval("CheckerName") %></td>
-                                                                <td style="width: 25%;">‰øùÁÆ°ÂëòÔºö<%# Eval("SafekeeperName") %></td>
-                                                                <td style="width: 25%;">Âà∂ÂçïÔºö<%# Eval("ContacterName") %></td>
+                                                                <td style="width: 25%;">π©”¶÷˜π‹£∫<%# Eval("DelegateAgentName") %></td>
+                                                                <td style="width: 25%;">≤ƒºÏ‘±£∫<%# Eval("CheckerName") %></td>
+                                                                <td style="width: 25%;">±£π‹‘±£∫<%# Eval("SafekeeperName") %></td>
+                                                                <td style="width: 25%;">÷∆µ•£∫<%# Eval("ContacterName") %></td>
                                                             </tr>
                                                         </table>
                                                     </td>
@@ -155,8 +155,8 @@
             <div id="divOver" style="text-align: center">
                 <br />
                 <p class="noprint">
-                    <input id="print" type="button" class="btn" value="Á°ÆËÆ§ÊâìÂç∞" onclick="printpage();" />
-                    <input id="print0" type="button" value="ÂÖ≥Èó≠" onclick="CloseLayer();" class="btn" />
+                    <input id="print" type="button" class="btn" value="»∑»œ¥Ú”°" onclick="printpage();" />
+                    <input id="print0" type="button" value="Closed" onclick="CloseLayer();" class="btn" />
                 </p>
             </div>
         </center>

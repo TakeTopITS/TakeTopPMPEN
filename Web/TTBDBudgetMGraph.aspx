@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTBDBudgetMGraph.aspx.cs" Inherits="TTBDBudgetMGraph" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTBDBudgetMGraph.aspx.cs" Inherits="TTBDBudgetMGraph" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -72,14 +72,14 @@
                                                 <table width="70%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td class="formItemBgStyle" style="text-align: right">
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,NianFen%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,NianFen%>"></asp:Label>£º</td>
                                                         <td class="formItemBgStyle" style="text-align: left">
                                                             <asp:TextBox ID="txt_Year" runat="server" ReadOnly="false" Width="100px"></asp:TextBox>
                                                             <cc1:CalendarExtender ID="DLC_MonthNum_CalendarExtender" runat="server" Format="yyyy" TargetControlID="txt_Year">
                                                             </cc1:CalendarExtender>
                                                         </td>
                                                         <td class="formItemBgStyle" style="text-align: right">
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YueFen%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YueFen%>"></asp:Label>£º</td>
                                                         <td class="formItemBgStyle" style="text-align: left">
                                                             <asp:TextBox ID="txt_Month" runat="server" ReadOnly="false" Width="100px"></asp:TextBox>
                                                             <cc1:CalendarExtender ID="CalendarExtender1" runat="server" Format="MM" TargetControlID="txt_Month">
@@ -91,16 +91,16 @@
                                                     </tr>
                                                     <tr>
                                                         <td class="formItemBgStyle" style="text-align: right">
-                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,FenXiLeiXing%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,FenXiLeiXing%>"></asp:Label>£º</td>
                                                         <td class="formItemBgStyle" style="text-align: left">
                                                             <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="True">
-                                                                <asp:ListItem Value="éƒ¨é—¨" Text="<%$ Resources:lang,BuMen%>" />
-                                                                <asp:ListItem Value="ç§‘ç›®" Text="<%$ Resources:lang,KeMu%>" />
-                                                                <asp:ListItem Value="éƒ¨é—¨+ç§‘ç›®" Text="<%$ Resources:lang,BuMenKeMu%>" />
+                                                                <asp:ListItem Value="²¿ÃÅ" Text="<%$ Resources:lang,BuMen%>" />
+                                                                <asp:ListItem Value="¿ÆÄ¿" Text="<%$ Resources:lang,KeMu%>" />
+                                                                <asp:ListItem Value="²¿ÃÅ+¿ÆÄ¿" Text="<%$ Resources:lang,BuMenKeMu%>" />
                                                             </asp:DropDownList>
                                                         </td>
                                                         <td class="formItemBgStyle" style="text-align: right">
-                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,BuMen%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,BuMen%>"></asp:Label>£º</td>
                                                         <td class="formItemBgStyle" style="text-align: left">
                                                             <asp:DropDownList ID="DropDownList2" runat="server" Visible="False">
                                                             </asp:DropDownList>
@@ -145,7 +145,7 @@
                                                         </asp:Legend>
                                                     </Legends>
                                                     <Titles>
-                                                        <asp:Title Alignment="TopCenter" DockedToChartArea="ChartArea1" IsDockedInsideChartArea="False" Name="æ ‡é¢˜">
+                                                        <asp:Title Alignment="TopCenter" DockedToChartArea="ChartArea1" IsDockedInsideChartArea="False" Name="±êÌâ">
                                                         </asp:Title>
                                                     </Titles>
                                                 </asp:Chart>--%>

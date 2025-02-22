@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPlanDetailView.aspx.cs" Inherits="TTPlanDetailView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPlanDetailView.aspx.cs" Inherits="TTPlanDetailView" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>

@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMPhysicalChemical.aspx.cs" Inherits="TTWPQMPhysicalChemical" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMPhysicalChemical.aspx.cs" Inherits="TTWPQMPhysicalChemical" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -8,7 +8,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ÁêÜÂåñÁÆ°ÁêÜ</title>
+    <title>¿ÌªØπ‹¿Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script src="js/allAHandler.js" type="text/javascript"></script>
@@ -90,11 +90,11 @@
                                         <td align="left" class="formItemBgStyle">
                                             <asp:TextBox ID="TB_ColdBendSpecimen" runat="server" CssClass="shuru" Width="120px"></asp:TextBox>
                                         </td>
-                                        <td align="right" class="formItemBgStyle">dÔºö</td>
+                                        <td align="right" class="formItemBgStyle">d£∫</td>
                                         <td align="left" class="formItemBgStyle">
                                             <asp:TextBox ID="TB_DValue" runat="server" CssClass="shuru" Width="120px"></asp:TextBox>
                                         </td>
-                                        <td align="right" class="formItemBgStyle">Œ±Ôºö</td>
+                                        <td align="right" class="formItemBgStyle">¶¡£∫</td>
                                         <td align="left" class="formItemBgStyle">
                                             <asp:TextBox ID="TB_Value_1" runat="server" CssClass="shuru" Width="120px"></asp:TextBox>
                                         </td>
@@ -251,7 +251,7 @@
                                 </table>
                                 <table cellpadding="2" cellspacing="0" class="formBgStyle" width="95%">
                                     <tr>
-                                        <td align="center" style="text-align: left" class="formItemBgStyle">&nbsp;&nbsp;&nbsp;<asp:Label ID="Label40" runat="server" Text="<%$ Resources:lang,LiHuaLieBiao%>"></asp:Label> Ôºö</td>
+                                        <td align="center" style="text-align: left" class="formItemBgStyle">&nbsp;&nbsp;&nbsp;<asp:Label ID="Label40" runat="server" Text="<%$ Resources:lang,LiHuaLieBiao%>"></asp:Label> £∫</td>
                                     </tr>
                                     <tr>
                                         <td align="center" class="formItemBgStyle">
@@ -297,7 +297,7 @@
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="ÁºñÂè∑">
+                                                    <asp:TemplateColumn HeaderText="±‡∫≈">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
@@ -305,37 +305,37 @@
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="WeldProCode" HeaderText="Â∑•Ëâ∫ËØÑÂÆöÁºñÁ†Å">
+                                                    <asp:BoundColumn DataField="WeldProCode" HeaderText="π§“’∆¿∂®±‡¬Î">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="ChemicalClient" HeaderText="ÂßîÊâò‰∫∫">
+                                                    <asp:BoundColumn DataField="ChemicalClient" HeaderText="ŒØÕ–»À">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="ClientTime" HeaderText="ÂßîÊâòÊó•Êúü" DataFormatString="{0:yyyy-MM-dd}">
+                                                    <asp:BoundColumn DataField="ClientTime" HeaderText="ŒØÕ–»’∆⁄" DataFormatString="{0:yyyy-MM-dd}">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="PhysicalCheTensileSample" HeaderText="Êãâ‰º∏ËØïÊ†∑">
+                                                    <asp:BoundColumn DataField="PhysicalCheTensileSample" HeaderText="¿≠…Ï ‘—˘">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="NormalTemShock" HeaderText="Â∏∏Ê∏©ÂÜ≤Âáª">
+                                                    <asp:BoundColumn DataField="NormalTemShock" HeaderText="≥£Œ¬≥Âª˜">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="LowTempImpact" HeaderText="‰ΩéÊ∏©ÂÜ≤Âáª">
+                                                    <asp:BoundColumn DataField="LowTempImpact" HeaderText="µÕŒ¬≥Âª˜">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Remark" HeaderText="ÁêÜÂåñÂ§áÊ≥®">
+                                                    <asp:BoundColumn DataField="Remark" HeaderText="¿ÌªØ±∏◊¢">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="25%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />

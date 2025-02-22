@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -33,14 +33,14 @@ public partial class TTGoodsMantanceReport : System.Web.UI.Page
         string strDepartString;
         strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthorityAsset(strUserCode);
 
-        //this.Title = "ç‰©æ–™é‡‡è´­æŠ¥è¡¨";
+        //this.Title = "ÎïÁÏ²É¹º±¨±í";
 
         LB_UserCode.Text = strUserCode;
         strUserName = ShareClass.GetUserName(strUserCode);
         LB_UserName.Text = strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Textbool blVisible1 = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ç‰©æ–™ç»´æŠ¤æŠ¥è¡¨", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Textbool blVisible1 = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ÎïÁÏÎ¬»¤±¨±í", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -151,9 +151,9 @@ public partial class TTGoodsMantanceReport : System.Web.UI.Page
 
         DataTable dtSaleOrder = ds.Tables[0];
 
-        Export3Excel(dtSaleOrder, "ç‰©æ–™ç»´æŠ¤æŠ¥è¡¨.xls");
+        Export3Excel(dtSaleOrder, "ÎïÁÏÎ¬»¤±¨±í.xls");
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¯¼å‡ºæˆåŠŸï¼');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µ¼³ö³É¹¦£¡');", true);
     }
 
 

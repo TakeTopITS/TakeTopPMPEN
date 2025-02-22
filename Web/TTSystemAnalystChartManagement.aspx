@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSystemAnalystChartManagement.aspx.cs" Inherits="TTSystemAnalystChartManagement" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSystemAnalystChartManagement.aspx.cs" Inherits="TTSystemAnalystChartManagement" %>
 
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -98,7 +98,7 @@
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <Columns>
-                                                        <asp:TemplateColumn HeaderText="ç¼–å·">
+                                                        <asp:TemplateColumn HeaderText="±àºÅ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                             <ItemTemplate>
                                                                 <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
@@ -106,18 +106,18 @@
                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
                                                                 HorizontalAlign="Center" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="ChartName" HeaderText="å›¾å½¢åç§°">
+                                                        <asp:BoundColumn DataField="ChartName" HeaderText="Í¼ÐÎÃû³Æ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
                                                                 HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ChartType" HeaderText="ç±»åž‹">
+                                                        <asp:BoundColumn DataField="ChartType" HeaderText="ÀàÐÍ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
                                                                 HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
 
-                                                        <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                        <asp:TemplateColumn HeaderText="×´Ì¬">
                                                             <ItemTemplate>
                                                                 <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                             </ItemTemplate>
@@ -135,7 +135,7 @@
                                                     <tr>
 
                                                         <td align="right" class="formItemBgStyle">
-                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,TuXingMingCheng%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,TuXingMingCheng%>"></asp:Label>£º
                                                         </td>
                                                         <td colspan="3" align="left" class="formItemBgStyle">
                                                             <asp:Label ID="LB_ChartID" runat="server"></asp:Label>
@@ -144,25 +144,25 @@
                                                     </tr>
                                                     <tr style="color: #000000">
                                                         <td align="right" class="formItemBgStyle">
-                                                            <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º</td>
                                                         <td align="left" class="formItemBgStyle">
                                                             <asp:DropDownList ID="DL_ChartType" Width="100px" runat="server">
                                                                 <asp:ListItem Value="Pie" Text="<%$ Resources:lang,BingTu%>" />
                                                                 <asp:ListItem Value="Doughnut" Text="<%$ Resources:lang,QuanTu%>" />
                                                                 <asp:ListItem Value="Bar" Text="<%$ Resources:lang,HengXiangZhuZhuangTu%>"  />
                                                                 <asp:ListItem Value="Column" Text="<%$ Resources:lang,ZongXiangZhuZhuangTu%>" />
-                                                                <asp:ListItem Value="Line" Text="çº¿å›¾" />
+                                                                <asp:ListItem Value="Line" Text="ÏßÍ¼" />
                                                                 <asp:ListItem Value="Funnel" Text="<%$ Resources:lang,LouDouTu%>" />
-                                                                <asp:ListItem Value="Gauge" Text="ä»ªè¡¨ç›˜" />
-                                                                <asp:ListItem Value="HRuningProjectStatus" Text="åœ¨æ‰§è¡Œé¡¹ç›®çŠ¶æ€" />
-                                                                <asp:ListItem Value="HDelayProjectStatus" Text="å»¶è¯¯é¡¹ç›®çŠ¶æ€" />
-                                                                <asp:ListItem Value="HAnnualPaymentStatus" Text="å¹´åº¦å›žæ¬¾çŠ¶æ€" />
-                                                                <asp:ListItem Value="HAnnualWorkHourStatus" Text="å¹´åº¦å·¥æ—¶çŠ¶æ€" />
-                                                                <asp:ListItem Value="HRuningTaskStatus" Text="å¹´åº¦ä»»åŠ¡çŠ¶æ€" />
+                                                                <asp:ListItem Value="Gauge" Text="ÒÇ±íÅÌ" />
+                                                                <asp:ListItem Value="HRuningProjectStatus" Text="ÔÚÖ´ÐÐÏîÄ¿×´Ì¬" />
+                                                                <asp:ListItem Value="HDelayProjectStatus" Text="ÑÓÎóÏîÄ¿×´Ì¬" />
+                                                                <asp:ListItem Value="HAnnualPaymentStatus" Text="Äê¶È»Ø¿î×´Ì¬" />
+                                                                <asp:ListItem Value="HAnnualWorkHourStatus" Text="Äê¶È¹¤Ê±×´Ì¬" />
+                                                                <asp:ListItem Value="HRuningTaskStatus" Text="Äê¶ÈÈÎÎñ×´Ì¬" />
                                                             </asp:DropDownList>
                                                         </td>
                                                         <td align="right" style="width: 150px;" class="formItemBgStyle">
-                                                            <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,QiYong%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,QiYong%>"></asp:Label>£º</td>
                                                         <td align="left" class="formItemBgStyle">
                                                             <asp:DropDownList ID="DL_IsStartup" runat="server">
                                                                 <asp:ListItem>YES</asp:ListItem>
@@ -173,7 +173,7 @@
                                                     <tr style="color: #000000">
 
                                                         <td align="right" class="formItemBgStyle">
-                                                            <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,LianJieHuaMianWWW%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,LianJieHuaMianWWW%>"></asp:Label>£º</td>
 
                                                         <td align="left" class="formItemBgStyle" colspan="3">
                                                             <asp:TextBox ID="TB_LinkAddress" runat="server" CssClass="shuru" Width="95%"></asp:TextBox>
@@ -182,7 +182,7 @@
 
                                                     <tr style="color: #000000">
                                                         <td align="right" class="formItemBgStyle" style="width: 150px; height: 30px">
-                                                            <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,SQLYuJuSelectYuJu%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,SQLYuJuSelectYuJu%>"></asp:Label>£º</td>
                                                         <td align="left" class="formItemBgStyle" colspan="3">
                                                             <asp:TextBox ID="TB_SQLCode" runat="server" CssClass="shuru" Height="150px" TextMode="MultiLine" Width="95%"></asp:TextBox>
                                                             <br />

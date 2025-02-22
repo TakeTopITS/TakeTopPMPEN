@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -32,14 +32,14 @@ public partial class TTCreateDefectDetailThirdPart : System.Web.UI.Page
 
         strIsMobileDevice = Session["IsMobileDevice"].ToString();
 
-        //CKEditoråˆå§‹åŒ–
+        //CKEditor³õÊ¼»¯
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_Operation);
 
         strDefectID = Request.QueryString["DefectID"];
 
-        //this.Title = "å»ºç«‹å’Œåˆ†æ´¾éœ€æ±‚ï¼ˆåˆä½œï¼‰";
+        //this.Title = "½¨Á¢ºÍ·ÖÅÉĞèÇó£¨ºÏ×÷£©";
 
         LB_UserCode.Text = strUserCode;
         strUserName = Session["UserName"].ToString();
@@ -115,7 +115,7 @@ public partial class TTCreateDefectDetailThirdPart : System.Web.UI.Page
         strApplicantCode = strUserCode;
         strApplicantName = ShareClass.GetUserName(strUserCode);
         dtMakeDate = DateTime.Now;
-        strStatus = "è®¡åˆ’";
+        strStatus = "Plan";
 
         if (strDefectName == "" | strDefectDetail == "" | strDefectFinishedDate == "")
         {
@@ -143,7 +143,7 @@ public partial class TTCreateDefectDetailThirdPart : System.Web.UI.Page
                 strDefectID = ShareClass.GetMyCreatedMaxDefectID(strUserCode);
                 LB_DefectID.Text = strDefectID;
 
-                //åˆ†æ´¾ç¼ºé™ç»™è‡ªå·±
+                //·ÖÅÉÈ±ÏŞ¸ø×Ô¼º
                 AssignDefect(int.Parse(strDefectID), strDefectType, strDefectName);
 
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
@@ -161,7 +161,7 @@ public partial class TTCreateDefectDetailThirdPart : System.Web.UI.Page
         }
     }
 
-    //è‡ªåŠ¨åˆ†æ´¾ç¼ºé™·ç»™åˆ›å»ºè€…
+    //×Ô¶¯·ÖÅÉÈ±Ïİ¸ø´´½¨Õß
     protected void AssignDefect(int intDefectID, string strType, string strDefectName)
     {
         int intPriorID;
@@ -202,7 +202,7 @@ public partial class TTCreateDefectDetailThirdPart : System.Web.UI.Page
         defectAssignRecord.PriorID = intPriorID;
         defectAssignRecord.RouteNumber = GetRouteNumber(intDefectID.ToString());
         defectAssignRecord.MakeDate = dtMakeDate;
-        defectAssignRecord.Status = "å¾…å¤„ç†";
+        defectAssignRecord.Status = "ToHandle";
         defectAssignRecord.MoveTime = DateTime.Now;
 
         try
@@ -210,10 +210,10 @@ public partial class TTCreateDefectDetailThirdPart : System.Web.UI.Page
             defectAssignRecordBLL.AddDefectAssignRecord(defectAssignRecord);
 
             string strAssignID = ShareClass.GetMyCreatedMaxDefectAssignRecordID(intDefectID.ToString(), strUserCode);
-            //BusinessForm,å¤„ç†å…³è”çš„ä¸šåŠ¡è¡¨å•æ•°æ®
+            //BusinessForm,´¦Àí¹ØÁªµÄÒµÎñ±íµ¥Êı¾İ
             ShareClass.InsertOrUpdateTaskAssignRecordWFXMLData("Defect", intDefectID.ToString(), "DefectRecord", strAssignID, strUserCode);
 
-            UpdateDefectStatus(intDefectID.ToString(), "å¤„ç†ä¸­");
+            UpdateDefectStatus(intDefectID.ToString(), "InProgress");
         }
         catch
         {
@@ -317,13 +317,13 @@ public partial class TTCreateDefectDetailThirdPart : System.Web.UI.Page
                 defectment.MakeDate = dtMakeDate;
                 defectment.ApplicantCode = strApplicantCode;
                 defectment.ApplicantName = ShareClass.GetUserName(strApplicantCode);
-                defectment.Status = "å…³é—­";
+                defectment.Status = "Closed";
 
                 try
                 {
                     defectmentBLL.UpdateDefectment(defectment, int.Parse(strDefectID));
 
-                    LB_Status.Text = "å…³é—­";
+                    LB_Status.Text = "Closed";
 
                     ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXGBCG + "')", true);
                 }
@@ -376,13 +376,13 @@ public partial class TTCreateDefectDetailThirdPart : System.Web.UI.Page
             defectment.MakeDate = dtMakeDate;
             defectment.ApplicantCode = strApplicantCode;
             defectment.ApplicantName = ShareClass.GetUserName(strApplicantCode);
-            defectment.Status = "å¤„ç†ä¸­";
+            defectment.Status = "InProgress";
 
             try
             {
                 defectmentBLL.UpdateDefectment(defectment, int.Parse(strDefectID));
 
-                LB_Status.Text = "å¤„ç†ä¸­";
+                LB_Status.Text = "InProgress";
 
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXJHCG + "')", true);
             }
@@ -447,12 +447,12 @@ public partial class TTCreateDefectDetailThirdPart : System.Web.UI.Page
         BT_Open.Enabled = true;
         BT_Assign.Enabled = true;
 
-        if (strStatus == "å…³é—­")
+        if (strStatus == "Closed")
         {
             BT_Open.Enabled = true;
         }
 
-        TB_Message.Text = ShareClass.GetUserName(strUserCode) + " ç»™ä½ åˆ†æ´¾äº†éœ€æ±‚ï¼š" + strDefectID + "  " + strDefectName + "ï¼Œè¯·åŠæ—¶å—ç†ï¼";
+        TB_Message.Text = ShareClass.GetUserName(strUserCode) + " ¸øÄã·ÖÅÉÁËĞèÇó£º" + strDefectID + "  " + strDefectName + "£¬Çë¼°Ê±ÊÜÀí£¡";
     }
 
     protected void DataGrid3_ItemCommand(object sender, DataGridCommandEventArgs e)
@@ -473,7 +473,7 @@ public partial class TTCreateDefectDetailThirdPart : System.Web.UI.Page
 
         if (strDefectID != "")
         {
-            strHQL = "from Approve as approve where approve.Type = 'éœ€æ±‚' and approve.RelatedID = " + strDefectID;
+            strHQL = "from Approve as approve where approve.Type = 'Requirement' and approve.RelatedID = " + strDefectID;
             ApproveBLL approveBLL = new ApproveBLL();
             lst = approveBLL.GetAllApproves(strHQL);
 
@@ -500,7 +500,7 @@ public partial class TTCreateDefectDetailThirdPart : System.Web.UI.Page
                     TB_ReceiverCode.Text = "";
                     DLC_DefectFinishedDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
                     TB_AcceptStandard.Text = "";
-                    LB_Status.Text = "è®¡åˆ’";
+                    LB_Status.Text = "Plan";
                 }
                 catch
                 {
@@ -571,15 +571,15 @@ public partial class TTCreateDefectDetailThirdPart : System.Web.UI.Page
         defectAssignRecord.PriorID = intPriorID;
         defectAssignRecord.RouteNumber = GetRouteNumber(intDefectID.ToString());
         defectAssignRecord.MakeDate = dtMakeDate;
-        defectAssignRecord.Status = "å¾…å¤„ç†";
+        defectAssignRecord.Status = "ToHandle";
         defectAssignRecord.MoveTime = DateTime.Now;
 
         try
         {
             defectAssignRecordBLL.AddDefectAssignRecord(defectAssignRecord);
-            UpdateDefectStatus(intDefectID.ToString(), "å¤„ç†ä¸­");
+            UpdateDefectStatus(intDefectID.ToString(), "InProgress");
 
-            TB_Message.Text = ShareClass.GetUserName(strUserCode) + " åˆ†æ´¾äº†éœ€æ±‚ï¼š" + intDefectID.ToString() + " " + strDefectName + " ç»™ä½ ï¼Œè¯·åŠæ—¶å—ç†ï¼";
+            TB_Message.Text = ShareClass.GetUserName(strUserCode) + " ·ÖÅÉÁËĞèÇó£º" + intDefectID.ToString() + " " + strDefectName + " ¸øÄã£¬Çë¼°Ê±ÊÜÀí£¡";
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFPCG + "')", true);
         }
@@ -602,7 +602,7 @@ public partial class TTCreateDefectDetailThirdPart : System.Web.UI.Page
 
         if (CB_SendMsg.Checked == true | CB_SendMail.Checked == true)
         {
-            strSubject = "éœ€æ±‚åˆ†æ´¾é€šçŸ¥";
+            strSubject = "ĞèÇó·ÖÅÉÍ¨Öª";
             strMsg = TB_Message.Text.Trim();
 
             if (CB_SendMsg.Checked == true)
@@ -640,7 +640,7 @@ public partial class TTCreateDefectDetailThirdPart : System.Web.UI.Page
         DefectmentBLL defectmentBLL = new DefectmentBLL();
         IList lst = defectmentBLL.GetAllDefectments(strHQL);
         Defectment defectment = (Defectment)lst[0];
-        defectment.Status = "å¤„ç†ä¸­";
+        defectment.Status = "InProgress";
 
         int intRouteNumber = defectment.RouteNumber;
         defectment.RouteNumber = intRouteNumber + 1;

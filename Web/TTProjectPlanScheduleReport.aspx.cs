@@ -1,4 +1,4 @@
-ï»¿using ExcelLibrary.BinaryFileFormat;
+using ExcelLibrary.BinaryFileFormat;
 using Microsoft.Office.Interop.InfoPath.SemiTrust;
 using System;
 using System.Collections.Generic;
@@ -21,8 +21,8 @@ using TakeTopCore;
 public partial class TTProjectPlanScheduleReport : System.Web.UI.Page
 {
     string strProjectID, strVerID;
-    int PageNo = 0; //å½“å‰é¡µ
-    int MonsPerPage = 12; //æ¯é¡µæ˜¾ç¤ºæœˆæ•°
+    int PageNo = 0; //µ±Ç°Ò³
+    int MonsPerPage = 12; //Ã¿Ò³ÏÔÊ¾ÔÂÊı
     int rowIndex = 0;
 
     protected void Page_Load(object sender, EventArgs e)
@@ -33,10 +33,10 @@ public partial class TTProjectPlanScheduleReport : System.Web.UI.Page
 
         if(strVerID == null)
         {
-            strVerID = ShareClass.GetProjectPlanVersionIDByType(strProjectID, "åœ¨ç”¨").ToString();
+            strVerID = ShareClass.GetProjectPlanVersionIDByType(strProjectID, "InUse").ToString();
             if(strVerID == "0")
             {
-                Response.Write("é”™è¯¯ï¼Œæ­¤é¡¹ç›®æ²¡æœ‰ã€åœ¨ç”¨ã€‘çš„è®¡åˆ’ç‰ˆæœ¬ï¼Œè¯·æ£€æŸ¥ï¼");
+                Response.Write("´íÎó£¬´ËÏîÄ¿Ã»ÓĞ¡¾ÔÚÓÃ¡¿µÄ¼Æ»®°æ±¾£¬Çë¼ì²é£¡");
                 return;
             }
         }
@@ -66,7 +66,7 @@ public partial class TTProjectPlanScheduleReport : System.Web.UI.Page
         }
     }
 
-    //å–å¾—è®¡åˆ’æœ€å°å¼€å§‹æ—¶é—´
+    //È¡µÃ¼Æ»®×îĞ¡¿ªÊ¼Ê±¼ä
     protected DateTime GetProjectPlanMinBeginTime(string strProjectID, string strVerID)
     {
         DateTime minbegintime = DateTime.Now;
@@ -87,7 +87,7 @@ public partial class TTProjectPlanScheduleReport : System.Web.UI.Page
         return minbegintime;
     }
 
-    //å–å¾—è®¡åˆ’æœ€å¤§ç»“æŸæ—¶é—´
+    //È¡µÃ¼Æ»®×î´ó½áÊøÊ±¼ä
     protected DateTime GetProjectPlanMaxEndTime(string strProjectID, string strVerID)
     {
         DateTime maxbegintime = DateTime.Now;
@@ -107,7 +107,7 @@ public partial class TTProjectPlanScheduleReport : System.Web.UI.Page
         return maxbegintime;
     }
 
-    //è·å–å¡«å…¥æœ€åç»“æŸæ—¶é—´
+    //»ñÈ¡ÌîÈë×îºó½áÊøÊ±¼ä
     protected DateTime GetProjectTaskMaxEndTime(string strProjectID, string strVerID)
     {
         DateTime taskmaxbegintime = DateTime.Now;
@@ -128,7 +128,7 @@ public partial class TTProjectPlanScheduleReport : System.Web.UI.Page
         return taskmaxbegintime;
     }
 
-    //åˆ›å»ºé¡¹ç›®è®¡åˆ’æ ‘(ä¾å±•å¼€ç±»å‹ï¼‰
+    //´´½¨ÏîÄ¿¼Æ»®Ê÷(ÒÀÕ¹¿ªÀàĞÍ£©
     private List<Report_Frame_Row> InitialProjectPlanTreeByExpandTypeForExport(DateTime dtBegin, DateTime dtEnd)
     {
         List<Report_Frame_Row> rows = new List<Report_Frame_Row>();
@@ -151,7 +151,7 @@ public partial class TTProjectPlanScheduleReport : System.Web.UI.Page
 
             strPlanID = workPlan.ID.ToString();
 
-            //ä¼ å…¥ strPlanID,æ„é€ ä¸€è¡Œè®°å½•
+            //´«Èë strPlanID,¹¹ÔìÒ»ĞĞ¼ÇÂ¼
             Report_Frame_Row row = getRowData(0, strPlanID, dtBegin, dtEnd);
             if (row != null)
             {
@@ -184,7 +184,7 @@ public partial class TTProjectPlanScheduleReport : System.Web.UI.Page
 
             strPlanID = workPlan.ID.ToString();
 
-            //ä¼ å…¥ strPlanID,æ„é€ ä¸€è¡Œè®°å½•
+            //´«Èë strPlanID,¹¹ÔìÒ»ĞĞ¼ÇÂ¼
             Report_Frame_Row row = getRowData(level, strPlanID, dtBegin, dtEnd);
             if (row != null)
             {
@@ -204,24 +204,24 @@ public partial class TTProjectPlanScheduleReport : System.Web.UI.Page
         rowIndex = 0;
         StringBuilder sb = new StringBuilder("<table width=\"180%\" cellspacing=\"0\" cellpadding=\"4\" rules=\"all\" border=\"1\" id=\"GridView1\" style=\"color:#333333;border-collapse:collapse;\">");
 
-        //ç¬¬ä¸€æ‰¹æ¬¡----------------------------------------------------------------------------------------------
+        //µÚÒ»Åú´Î----------------------------------------------------------------------------------------------
         int nMonth = (dtEnd.Year - dtBegin.Year) * 12 + (dtEnd.Month - dtBegin.Month);
         Report_Table rt = new Report_Table();
         rt.monthNum = nMonth;
-        //æ ‡é¢˜
-        rt.Report_Title = "é¡¹ç›®å»ºè®¾è¿›åº¦è¡¨";
-        //ç”»è¡¨å¤´
+        //±êÌâ
+        rt.Report_Title = "ÏîÄ¿½¨Éè½ø¶È±í";
+        //»­±íÍ·
         Report_Frame_Header HeaderLevel = new Report_Frame_Header();
 
-        HeaderLevel.headrow.Add(new Report_Frame_Cell("åºå·", 1, 2, 0));
-        HeaderLevel.headrow.Add(new Report_Frame_Cell("æ–½å·¥ç±»å‹", 1, 2, 500));
-        HeaderLevel.headrow.Add(new Report_Frame_Cell("åˆåŒæ•°", 1, 2, 0));
-        HeaderLevel.headrow.Add(new Report_Frame_Cell("å®Œæˆæ•°", 1, 2, 0));
-        HeaderLevel.headrow.Add(new Report_Frame_Cell("å•ä½", 1, 2, 0));
+        HeaderLevel.headrow.Add(new Report_Frame_Cell("ĞòºÅ", 1, 2, 0));
+        HeaderLevel.headrow.Add(new Report_Frame_Cell("Ê©¹¤ÀàĞÍ", 1, 2, 500));
+        HeaderLevel.headrow.Add(new Report_Frame_Cell("ºÏÍ¬Êı", 1, 2, 0));
+        HeaderLevel.headrow.Add(new Report_Frame_Cell("Íê³ÉÊı", 1, 2, 0));
+        HeaderLevel.headrow.Add(new Report_Frame_Cell("µ¥Î»", 1, 2, 0));
 
         for (DateTime dt = dtBegin; dt < dtEnd; dt = dt.AddMonths(1))
         {
-            HeaderLevel.headrow.Add(new Report_Frame_Cell(string.Format("{0}å¹´{1}æœˆ", dt.Year, dt.Month), 4, 1, 0));
+            HeaderLevel.headrow.Add(new Report_Frame_Cell(string.Format("{0}Äê{1}ÔÂ", dt.Year, dt.Month), 4, 1, 0));
         }
 
         rt.headers.Add(HeaderLevel);
@@ -231,7 +231,7 @@ public partial class TTProjectPlanScheduleReport : System.Web.UI.Page
         {
             for (int j = 1; j <= 4; j++)
             {
-                HeaderLevel2.headrow.Add(new Report_Frame_Cell(string.Format("ç¬¬{0}å‘¨", j), 1, 1, 0));
+                HeaderLevel2.headrow.Add(new Report_Frame_Cell(string.Format("µÚ{0}ÖÜ", j), 1, 1, 0));
             }
         }
         rt.headers.Add(HeaderLevel2);
@@ -281,7 +281,7 @@ public partial class TTProjectPlanScheduleReport : System.Web.UI.Page
         for (DateTime dt = nmday.AddDays(7); dt < thisday.AddMonths(1); dt = dt.AddDays(7))
         {
             mondayList.Add(dt);
-            if (mondayList.Count >= 4) //æœ€åä¸¤å‘¨ç®—ä¸€ä¸ªæœˆæœ€åä¸€å‘¨çš„
+            if (mondayList.Count >= 4) //×îºóÁ½ÖÜËãÒ»¸öÔÂ×îºóÒ»ÖÜµÄ
                 break;
         }
         mondayList.Add(thisday.AddMonths(1));
@@ -317,7 +317,7 @@ public partial class TTProjectPlanScheduleReport : System.Web.UI.Page
             row.UnitName = string.IsNullOrEmpty(ds.Tables[0].Rows[i]["UnitName"].ToString()) ? "0" : ds.Tables[0].Rows[i]["UnitName"].ToString();
             row.reqiredNumer = string.IsNullOrEmpty(ds.Tables[0].Rows[i]["RequireNumber"].ToString()) ? 0 : Convert.ToDecimal(ds.Tables[0].Rows[i]["RequireNumber"].ToString());
             row.FinishedNumber = string.IsNullOrEmpty(ds.Tables[0].Rows[i]["FinishedNumber"].ToString()) ? 0 : Convert.ToDecimal(ds.Tables[0].Rows[i]["FinishedNumber"].ToString());
-            for (int index = 0; index < nMonth * 4; index++) //æ¯ä¸ªæœˆé¢å››å‘¨
+            for (int index = 0; index < nMonth * 4; index++) //Ã¿¸öÔÂ¶îËÄÖÜ
             {
                 string mvf = "mw" + index.ToString();
                 decimal count = string.IsNullOrEmpty(ds.Tables[0].Rows[i][mvf].ToString()) ? 0 : Convert.ToDecimal(ds.Tables[0].Rows[i][mvf].ToString());
@@ -330,10 +330,10 @@ public partial class TTProjectPlanScheduleReport : System.Web.UI.Page
 
     protected void getBeginEndTime(string strProjectID, string strVerID, ref DateTime dtBegin, ref DateTime dtEnd)
     {
-        //å¼€å§‹æ—¶é—´
+        //¿ªÊ¼Ê±¼ä
         dtBegin = GetProjectPlanMinBeginTime(strProjectID, strVerID);
         dtBegin = new DateTime(dtBegin.Year, dtBegin.Month, 1);
-        //ç»“æŸæ—¶é—´ï¼Œè‹¥MakeDateåœ¨é¡¹ç›®è®¡åˆ’çš„ç»“æŸæ—¶é—´ä»¥åï¼Œåˆ™å–æœ€å¤§çš„MakeDate
+        //½áÊøÊ±¼ä£¬ÈôMakeDateÔÚÏîÄ¿¼Æ»®µÄ½áÊøÊ±¼äÒÔºó£¬ÔòÈ¡×î´óµÄMakeDate
         dtEnd = GetProjectPlanMaxEndTime(strProjectID, strVerID);
         DateTime dtTaskEnd = GetProjectTaskMaxEndTime(strProjectID, strVerID);
         if (dtEnd < dtTaskEnd)
@@ -368,11 +368,11 @@ public partial class TTProjectPlanScheduleReport : System.Web.UI.Page
     }
 }
 
-//è‡ªå®šä¹‰æŠ¥è¡¨ç±»
+//×Ô¶¨Òå±¨±íÀà
 class Report_Table
 {
     public int monthNum { set; get; }
-    //æ ‡é¢˜
+    //±êÌâ
     public string Report_Title { get; set; }
     public List<Report_Frame_Header> headers { get; set; }
 
@@ -387,13 +387,13 @@ class Report_Table
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();// "<table cellspacing=\"0\" cellpadding=\"4\" rules=\"all\" border=\"1\" id=\"GridView1\" style=\"color:#333333;border-collapse:collapse;\">");
-        //æ ‡é¢˜æ 
+        //±êÌâÀ¸
         StringBuilder sbt = new StringBuilder("<tr>");
         Report_Frame_Cell ctitle = new Report_Frame_Cell(Report_Title, monthNum * 4 + 5, 1, 0);
         sbt.Append(ctitle.ToHeaderString());
         sbt.Append("</tr>");
         sb.Append(sbt);
-        //è¡¨å¤´
+        //±íÍ·
         StringBuilder sbh = new StringBuilder("<tr>");
         foreach (Report_Frame_Header cell in headers)
         {
@@ -401,7 +401,7 @@ class Report_Table
         }
         sbh.Append("</tr>");
         sb.Append(sbh);
-        //è¡¨å†…å®¹
+        //±íÄÚÈİ
         StringBuilder sbc = new StringBuilder();
         foreach (Report_Frame_Row cell in rows)
         {
@@ -484,11 +484,11 @@ class Report_Frame_Header
 
 class Report_Frame_Row
 {
-    public int id { get; set; } //åºå·
-    public string Type { get; set; }  //æ–½å·¥ç±»å‹
-    public decimal reqiredNumer { get; set; } //åˆåŒæ•°
+    public int id { get; set; } //ĞòºÅ
+    public string Type { get; set; }  //Ê©¹¤ÀàĞÍ
+    public decimal reqiredNumer { get; set; } //ºÏÍ¬Êı
     public decimal FinishedNumber { get; set; }
-    public string UnitName { get; set; }//å•ä½
+    public string UnitName { get; set; }//µ¥Î»
 
     public List<decimal> CountPerWeek { get; set; }
 

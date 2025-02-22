@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System; using System.Resources;
 using System.Collections;
@@ -50,7 +50,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
             DDL_PurchaseMethod.SelectedValue = ShareClass.ObjectToString(drPurchase["PurchaseMethod"]);
             
 
-            //åŠ è½½ä¾›åº”å•†
+            //¼ÓÔØ¹©Ó¦ÉÌ
             WZPurchaseSupplierBLL wZPurchaseSupplierBLL = new WZPurchaseSupplierBLL();
             string strPurchaseSupplierHQL = "from WZPurchaseSupplier as wZPurchaseSupplier where PurchaseCode = '" + strPurchaseCode + "'";
             IList lstPurchaseSupplier = wZPurchaseSupplierBLL.GetAllWZPurchaseSuppliers(strPurchaseSupplierHQL);
@@ -98,7 +98,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
                 }
                 //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "CloseAutoSupplier();", true);
             }
-            //åŠ è½½ä¸“å®¶
+            //¼ÓÔØ×¨¼Ò
             WZPurchaseExpertBLL wZPurchaseExpertBLL = new WZPurchaseExpertBLL();
             string strPurchaseExpertHQL = "from WZPurchaseExpert as wZPurchaseExpert where PurchaseCode = '" + strPurchaseCode + "'";
             IList lstPurchaseExpert = wZPurchaseExpertBLL.GetAllWZPurchaseExperts(strPurchaseExpertHQL);
@@ -159,13 +159,13 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strPurchaseMethod))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ä¾›åº”æ–¹å¼ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¡¥å……ï¼');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¹©Ó¦·½Ê½²»ÄÜÎª¿Õ£¬Çë²¹³ä£¡');", true);
                 return;
             }
 
-            if (strPurchaseMethod == "è¯¢æ¯”ä»·" || strPurchaseMethod == "æ‹›æ ‡" || strPurchaseMethod == "æ¡†æ¶")
+            if (strPurchaseMethod == "Ñ¯±È¼Û" || strPurchaseMethod == "ÕĞ±ê" || strPurchaseMethod == "¿ò¼Ü")
             {
-                //å½“é‡‡è´­æ–‡ä»¶ã€ˆé‡‡è´­æ–¹å¼ã€‰ï¼è¯¢æ¯”ä»·ã€æ‹›æ ‡ã€æ¡†æ¶æ—¶ï¼Œä¾›åº”å•†ä¸ªæ•°â‰¥3
+                //µ±²É¹ºÎÄ¼ş¡´²É¹º·½Ê½¡µ£½Ñ¯±È¼Û¡¢ÕĞ±ê¡¢¿ò¼ÜÊ±£¬¹©Ó¦ÉÌ¸öÊı¡İ3
                 bool IsDaiYu = true;
                 if (!string.IsNullOrEmpty(strSupplier1) && !string.IsNullOrEmpty(strSupplier2) && !string.IsNullOrEmpty(strSupplier3))
                 {
@@ -173,7 +173,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
                 }
                 if (IsDaiYu)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å½“é‡‡è´­æ–‡ä»¶ã€ˆé‡‡è´­æ–¹å¼ã€‰ï¼è¯¢æ¯”ä»·ã€æ‹›æ ‡ã€æ¡†æ¶æ—¶ï¼Œä¾›åº”å•†ä¸ªæ•°â‰¥3ï¼');", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µ±²É¹ºÎÄ¼ş¡´²É¹º·½Ê½¡µ£½Ñ¯±È¼Û¡¢ÕĞ±ê¡¢¿ò¼ÜÊ±£¬¹©Ó¦ÉÌ¸öÊı¡İ3£¡');", true);
                     return;
                 }
             }
@@ -192,7 +192,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
                     wZPurchase = (WZPurchase)listPurchase[0];
 
 
-                    //ä¿®æ”¹
+                    //ĞŞ¸Ä
                     wZPurchase.PurchaseMethod = strPurchaseMethod;
 
                     wZPurchase.SupplierCode1 = strSupplier1;
@@ -208,8 +208,8 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
 
                     wZPurchaseBLL.UpdateWZPurchase(wZPurchase, HF_PurchaseCode.Value);
 
-                    //ä¿å­˜ä¾›åº”å•†
-                    #region ä¾›åº”å•†1-6é€ä¸€ä¿å­˜
+                    //±£´æ¹©Ó¦ÉÌ
+                    #region ¹©Ó¦ÉÌ1-6ÖğÒ»±£´æ
                     string strDeleteSupplierSQL = string.Format(@"delete T_WZPurchaseSupplier where PurchaseCode = '{0}'", HF_PurchaseCode.Value);
                     ShareClass.RunSqlCommand(strDeleteSupplierSQL);
 
@@ -231,7 +231,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
 
                             wZPurchaseSupplierBLL.AddWZPurchaseSupplier(wZPurchaseSupplier);
 
-                            //ä¿®æ”¹ä¾›åº”å•†ä½¿ç”¨æ ‡è®°
+                            //ĞŞ¸Ä¹©Ó¦ÉÌÊ¹ÓÃ±ê¼Ç
                             string strUpdateSupplierHQL = "update T_WZSupplier set IsMark = -1 where SupplierCode = '" + strSupplier1 + "'";
                             ShareClass.RunSqlCommand(strUpdateSupplierHQL);
                         }
@@ -253,7 +253,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
 
                             wZPurchaseSupplierBLL.AddWZPurchaseSupplier(wZPurchaseSupplier);
 
-                            //ä¿®æ”¹ä¾›åº”å•†ä½¿ç”¨æ ‡è®°
+                            //ĞŞ¸Ä¹©Ó¦ÉÌÊ¹ÓÃ±ê¼Ç
                             string strUpdateSupplierHQL = "update T_WZSupplier set IsMark = -1 where SupplierCode = '" + strSupplier2 + "'";
                             ShareClass.RunSqlCommand(strUpdateSupplierHQL);
                         }
@@ -275,7 +275,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
 
                             wZPurchaseSupplierBLL.AddWZPurchaseSupplier(wZPurchaseSupplier);
 
-                            //ä¿®æ”¹ä¾›åº”å•†ä½¿ç”¨æ ‡è®°
+                            //ĞŞ¸Ä¹©Ó¦ÉÌÊ¹ÓÃ±ê¼Ç
                             string strUpdateSupplierHQL = "update T_WZSupplier set IsMark = -1 where SupplierCode = '" + strSupplier3 + "'";
                             ShareClass.RunSqlCommand(strUpdateSupplierHQL);
                         }
@@ -297,7 +297,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
 
                             wZPurchaseSupplierBLL.AddWZPurchaseSupplier(wZPurchaseSupplier);
 
-                            //ä¿®æ”¹ä¾›åº”å•†ä½¿ç”¨æ ‡è®°
+                            //ĞŞ¸Ä¹©Ó¦ÉÌÊ¹ÓÃ±ê¼Ç
                             string strUpdateSupplierHQL = "update T_WZSupplier set IsMark = -1 where SupplierCode = '" + strSupplier4 + "'";
                             ShareClass.RunSqlCommand(strUpdateSupplierHQL);
                         }
@@ -319,7 +319,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
 
                             wZPurchaseSupplierBLL.AddWZPurchaseSupplier(wZPurchaseSupplier);
 
-                            //ä¿®æ”¹ä¾›åº”å•†ä½¿ç”¨æ ‡è®°
+                            //ĞŞ¸Ä¹©Ó¦ÉÌÊ¹ÓÃ±ê¼Ç
                             string strUpdateSupplierHQL = "update T_WZSupplier set IsMark = -1 where SupplierCode = '" + strSupplier5 + "'";
                             ShareClass.RunSqlCommand(strUpdateSupplierHQL);
                         }
@@ -341,15 +341,15 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
 
                             wZPurchaseSupplierBLL.AddWZPurchaseSupplier(wZPurchaseSupplier);
 
-                            //ä¿®æ”¹ä¾›åº”å•†ä½¿ç”¨æ ‡è®°
+                            //ĞŞ¸Ä¹©Ó¦ÉÌÊ¹ÓÃ±ê¼Ç
                             string strUpdateSupplierHQL = "update T_WZSupplier set IsMark = -1 where SupplierCode = '" + strSupplier6 + "'";
                             ShareClass.RunSqlCommand(strUpdateSupplierHQL);
                         }
                     }
                     #endregion
 
-                    //ä¿å­˜ä¸“å®¶
-                    #region ä¸“å®¶1-3é€ä¸€ä¿å­˜
+                    //±£´æ×¨¼Ò
+                    #region ×¨¼Ò1-3ÖğÒ»±£´æ
                     string strDeleteExpertSQL = string.Format(@"delete T_WZPurchaseExpert where PurchaseCode = '{0}'", HF_PurchaseCode.Value);
                     ShareClass.RunSqlCommand(strDeleteExpertSQL);
 
@@ -413,7 +413,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('é‡‡è´­æ–‡ä»¶ä¸å­˜åœ¨ï¼');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('²É¹ºÎÄ¼ş²»´æÔÚ£¡');", true);
                 return;
             }
 
@@ -427,7 +427,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
     protected void BT_SelectSupplier1_Click(object sender, EventArgs e)
     {
         string strPurchaseMothod = DDL_PurchaseMethod.SelectedValue;
-        //if (strPurchaseMothod == "ç‹¬å®¶" || strPurchaseMothod == "è®®ä»·" || strPurchaseMothod == "ç´§æ€¥" || strPurchaseMothod == "å°é¢")
+        //if (strPurchaseMothod == "¶À¼Ò" || strPurchaseMothod == "Òé¼Û" || strPurchaseMothod == "Emergency" || strPurchaseMothod == "Ğ¡¶î")
         //{
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "SelectSupplier('HF_Supplier1','TXT_Supplier1');", true);
         //}
@@ -436,7 +436,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
     protected void BT_SelectSupplier2_Click(object sender, EventArgs e)
     {
         string strPurchaseMothod = DDL_PurchaseMethod.SelectedValue;
-        //if (strPurchaseMothod == "ç‹¬å®¶" || strPurchaseMothod == "è®®ä»·" || strPurchaseMothod == "ç´§æ€¥" || strPurchaseMothod == "å°é¢")
+        //if (strPurchaseMothod == "¶À¼Ò" || strPurchaseMothod == "Òé¼Û" || strPurchaseMothod == "Emergency" || strPurchaseMothod == "Ğ¡¶î")
         //{
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "SelectSupplier('HF_Supplier2','TXT_Supplier2');", true);
         //}
@@ -446,7 +446,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
     protected void BT_SelectSupplier3_Click(object sender, EventArgs e)
     {
         string strPurchaseMothod = DDL_PurchaseMethod.SelectedValue;
-        //if (strPurchaseMothod == "ç‹¬å®¶" || strPurchaseMothod == "è®®ä»·" || strPurchaseMothod == "ç´§æ€¥" || strPurchaseMothod == "å°é¢")
+        //if (strPurchaseMothod == "¶À¼Ò" || strPurchaseMothod == "Òé¼Û" || strPurchaseMothod == "Emergency" || strPurchaseMothod == "Ğ¡¶î")
         //{
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "SelectSupplier('HF_Supplier3','TXT_Supplier3');", true);
         //}
@@ -457,7 +457,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
     protected void BT_SelectSupplier4_Click(object sender, EventArgs e)
     {
         string strPurchaseMothod = DDL_PurchaseMethod.SelectedValue;
-        //if (strPurchaseMothod == "ç‹¬å®¶" || strPurchaseMothod == "è®®ä»·" || strPurchaseMothod == "ç´§æ€¥" || strPurchaseMothod == "å°é¢")
+        //if (strPurchaseMothod == "¶À¼Ò" || strPurchaseMothod == "Òé¼Û" || strPurchaseMothod == "Emergency" || strPurchaseMothod == "Ğ¡¶î")
         //{
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "SelectSupplier('HF_Supplier4','TXT_Supplier4');", true);
         //}
@@ -468,7 +468,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
     protected void BT_SelectSupplier5_Click(object sender, EventArgs e)
     {
         string strPurchaseMothod = DDL_PurchaseMethod.SelectedValue;
-        //if (strPurchaseMothod == "ç‹¬å®¶" || strPurchaseMothod == "è®®ä»·" || strPurchaseMothod == "ç´§æ€¥" || strPurchaseMothod == "å°é¢")
+        //if (strPurchaseMothod == "¶À¼Ò" || strPurchaseMothod == "Òé¼Û" || strPurchaseMothod == "Emergency" || strPurchaseMothod == "Ğ¡¶î")
         //{
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "SelectSupplier('HF_Supplier5','TXT_Supplier5');", true);
         //}
@@ -478,7 +478,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
     protected void BT_SelectSupplier6_Click(object sender, EventArgs e)
     {
         string strPurchaseMothod = DDL_PurchaseMethod.SelectedValue;
-        //if (strPurchaseMothod == "ç‹¬å®¶" || strPurchaseMothod == "è®®ä»·" || strPurchaseMothod == "ç´§æ€¥" || strPurchaseMothod == "å°é¢")
+        //if (strPurchaseMothod == "¶À¼Ò" || strPurchaseMothod == "Òé¼Û" || strPurchaseMothod == "Emergency" || strPurchaseMothod == "Ğ¡¶î")
         //{
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "SelectSupplier('HF_Supplier6','TXT_Supplier6');", true);
         //}
@@ -512,9 +512,9 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
         string strSupplier3 = HF_Supplier3.Value;
 
 
-        if (strPurchaseMethod == "è¯¢æ¯”ä»·" || strPurchaseMethod == "æ‹›æ ‡" || strPurchaseMethod == "æ¡†æ¶")
+        if (strPurchaseMethod == "Ñ¯±È¼Û" || strPurchaseMethod == "ÕĞ±ê" || strPurchaseMethod == "¿ò¼Ü")
         {
-            //å½“é‡‡è´­æ–‡ä»¶ã€ˆé‡‡è´­æ–¹å¼ã€‰ï¼è¯¢æ¯”ä»·ã€æ‹›æ ‡ã€æ¡†æ¶æ—¶ï¼Œä¾›åº”å•†ä¸ªæ•°â‰¥3
+            //µ±²É¹ºÎÄ¼ş¡´²É¹º·½Ê½¡µ£½Ñ¯±È¼Û¡¢ÕĞ±ê¡¢¿ò¼ÜÊ±£¬¹©Ó¦ÉÌ¸öÊı¡İ3
             bool IsDaiYu = true;
             if (!string.IsNullOrEmpty(strSupplier1) && !string.IsNullOrEmpty(strSupplier2) && !string.IsNullOrEmpty(strSupplier3))
             {
@@ -522,7 +522,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
             }
             if (IsDaiYu)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å½“é‡‡è´­æ–‡ä»¶ã€ˆé‡‡è´­æ–¹å¼ã€‰ï¼è¯¢æ¯”ä»·ã€æ‹›æ ‡ã€æ¡†æ¶æ—¶ï¼Œä¾›åº”å•†ä¸ªæ•°â‰¥3ï¼');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µ±²É¹ºÎÄ¼ş¡´²É¹º·½Ê½¡µ£½Ñ¯±È¼Û¡¢ÕĞ±ê¡¢¿ò¼ÜÊ±£¬¹©Ó¦ÉÌ¸öÊı¡İ3£¡');", true);
 
                 HF_Supplier1.Value = strSupplier11;
                 TXT_Supplier1.Text = strSupplierName11;
@@ -563,9 +563,9 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
         string strSupplier3 = HF_Supplier3.Value;
 
 
-        if (strPurchaseMethod == "è¯¢æ¯”ä»·" || strPurchaseMethod == "æ‹›æ ‡" || strPurchaseMethod == "æ¡†æ¶")
+        if (strPurchaseMethod == "Ñ¯±È¼Û" || strPurchaseMethod == "ÕĞ±ê" || strPurchaseMethod == "¿ò¼Ü")
         {
-            //å½“é‡‡è´­æ–‡ä»¶ã€ˆé‡‡è´­æ–¹å¼ã€‰ï¼è¯¢æ¯”ä»·ã€æ‹›æ ‡ã€æ¡†æ¶æ—¶ï¼Œä¾›åº”å•†ä¸ªæ•°â‰¥3
+            //µ±²É¹ºÎÄ¼ş¡´²É¹º·½Ê½¡µ£½Ñ¯±È¼Û¡¢ÕĞ±ê¡¢¿ò¼ÜÊ±£¬¹©Ó¦ÉÌ¸öÊı¡İ3
             bool IsDaiYu = true;
             if (!string.IsNullOrEmpty(strSupplier1) && !string.IsNullOrEmpty(strSupplier2) && !string.IsNullOrEmpty(strSupplier3))
             {
@@ -573,7 +573,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
             }
             if (IsDaiYu)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å½“é‡‡è´­æ–‡ä»¶ã€ˆé‡‡è´­æ–¹å¼ã€‰ï¼è¯¢æ¯”ä»·ã€æ‹›æ ‡ã€æ¡†æ¶æ—¶ï¼Œä¾›åº”å•†ä¸ªæ•°â‰¥3ï¼');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µ±²É¹ºÎÄ¼ş¡´²É¹º·½Ê½¡µ£½Ñ¯±È¼Û¡¢ÕĞ±ê¡¢¿ò¼ÜÊ±£¬¹©Ó¦ÉÌ¸öÊı¡İ3£¡');", true);
 
                 HF_Supplier2.Value = strSupplier22;
                 TXT_Supplier2.Text = strSupplierName22;
@@ -615,9 +615,9 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
         string strSupplier3 = HF_Supplier3.Value;
 
 
-        if (strPurchaseMethod == "è¯¢æ¯”ä»·" || strPurchaseMethod == "æ‹›æ ‡" || strPurchaseMethod == "æ¡†æ¶")
+        if (strPurchaseMethod == "Ñ¯±È¼Û" || strPurchaseMethod == "ÕĞ±ê" || strPurchaseMethod == "¿ò¼Ü")
         {
-            //å½“é‡‡è´­æ–‡ä»¶ã€ˆé‡‡è´­æ–¹å¼ã€‰ï¼è¯¢æ¯”ä»·ã€æ‹›æ ‡ã€æ¡†æ¶æ—¶ï¼Œä¾›åº”å•†ä¸ªæ•°â‰¥3
+            //µ±²É¹ºÎÄ¼ş¡´²É¹º·½Ê½¡µ£½Ñ¯±È¼Û¡¢ÕĞ±ê¡¢¿ò¼ÜÊ±£¬¹©Ó¦ÉÌ¸öÊı¡İ3
             bool IsDaiYu = true;
             if (!string.IsNullOrEmpty(strSupplier1) && !string.IsNullOrEmpty(strSupplier2) && !string.IsNullOrEmpty(strSupplier3))
             {
@@ -625,7 +625,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
             }
             if (IsDaiYu)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å½“é‡‡è´­æ–‡ä»¶ã€ˆé‡‡è´­æ–¹å¼ã€‰ï¼è¯¢æ¯”ä»·ã€æ‹›æ ‡ã€æ¡†æ¶æ—¶ï¼Œä¾›åº”å•†ä¸ªæ•°â‰¥3ï¼');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µ±²É¹ºÎÄ¼ş¡´²É¹º·½Ê½¡µ£½Ñ¯±È¼Û¡¢ÕĞ±ê¡¢¿ò¼ÜÊ±£¬¹©Ó¦ÉÌ¸öÊı¡İ3£¡');", true);
 
                 HF_Supplier3.Value = strSupplier33;
                 TXT_Supplier3.Text = strSupplierName33;

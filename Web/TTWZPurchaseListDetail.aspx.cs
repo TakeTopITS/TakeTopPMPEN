@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System; using System.Resources;
 using System.Collections;
@@ -81,27 +81,27 @@ public partial class TTWZPurchaseListDetail : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strPurchaseName))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æ–‡ä»¶åç§°ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¡¥å……ï¼');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÎÄ¼şÃû³Æ²»ÄÜÎª¿Õ£¬Çë²¹³ä£¡');", true);
                 return;
             }
             if (string.IsNullOrEmpty(strProjectCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('é¡¹ç›®ç¼–ç ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¡¥å……ï¼');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÏîÄ¿±àÂë²»ÄÜÎª¿Õ£¬Çë²¹³ä£¡');", true);
                 return;
             }
             if (string.IsNullOrEmpty(strPurchaseEngineer))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('é‡‡è´­å·¥ç¨‹å¸ˆä¸èƒ½ä¸ºç©ºï¼Œè¯·è¡¥å……ï¼');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('²É¹º¹¤³ÌÊ¦²»ÄÜÎª¿Õ£¬Çë²¹³ä£¡');", true);
                 return;
             }
             if (string.IsNullOrEmpty(strDelegateAgent))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å§”æ‰˜ä»£ç†äººä¸èƒ½ä¸ºç©ºï¼Œè¯·è¡¥å……ï¼');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Î¯ÍĞ´úÀíÈË²»ÄÜÎª¿Õ£¬Çë²¹³ä£¡');", true);
                 return;
             }
             if (string.IsNullOrEmpty(strPurchaseManager))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('é‡‡è´­ç»ç†ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¡¥å……ï¼');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('²É¹º¾­Àí²»ÄÜÎª¿Õ£¬Çë²¹³ä£¡');", true);
                 return;
             }
 
@@ -121,9 +121,9 @@ public partial class TTWZPurchaseListDetail : System.Web.UI.Page
                     wZPurchase = (WZPurchase)listPurchase[0];
 
 
-                    if (wZPurchase.Progress != "å½•å…¥")
+                    if (wZPurchase.Progress != "Â¼Èë")
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('é‡‡è´­æ–‡ä»¶è¿›åº¦ä¸ä¸ºå½•å…¥ï¼Œä¸å…è®¸ä¿®æ”¹ï¼');", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('²É¹ºÎÄ¼ş½ø¶È²»ÎªÂ¼Èë£¬²»ÔÊĞíĞŞ¸Ä£¡');", true);
                         return;
                     }
 
@@ -136,27 +136,27 @@ public partial class TTWZPurchaseListDetail : System.Web.UI.Page
 
                     wZPurchase.MarkTime = DateTime.Now;
 
-                    //ä¿®æ”¹
+                    //ĞŞ¸Ä
                     wZPurchaseBLL.UpdateWZPurchase(wZPurchase, HF_PurchaseCode.Value);
 
                 }
             }
             else
             {
-                //å¢åŠ 
+                //Ôö¼Ó
                 wZPurchase.PurchaseName = strPurchaseName;
                 wZPurchase.ProjectCode = strProjectCode;
                 wZPurchase.PurchaseEngineer = strPurchaseEngineer;
                 wZPurchase.Decision = strDelegateAgent;
                 wZPurchase.PurchaseManager = strPurchaseManager;
 
-                //é‡‡è´­ç¼–å·
+                //²É¹º±àºÅ
                 string strNewPurchaseCode = CreateNewPurchaseCode();
 
                 wZPurchase.PurchaseCode = strNewPurchaseCode;
                 
                 wZPurchase.MarkTime = DateTime.Now;
-                wZPurchase.Progress = "å½•å…¥";
+                wZPurchase.Progress = "Â¼Èë";
 
                 wZPurchaseBLL.AddWZPurchase(wZPurchase);
 
@@ -171,7 +171,7 @@ public partial class TTWZPurchaseListDetail : System.Web.UI.Page
 
 
     /// <summary>
-    ///  ç”Ÿæˆé‡‡è´­å•Code
+    ///  Éú³É²É¹ºµ¥Code
     /// </summary>
     private string CreateNewPurchaseCode()
     {
@@ -195,7 +195,7 @@ public partial class TTWZPurchaseListDetail : System.Web.UI.Page
                     }
                     strNewPurchaseCode = strYearMonthString + sbPurchaseCode.ToString() + intPurchaseCodeNumber.ToString();
 
-                    //éªŒè¯æ–°çš„é‡‡è´­ç¼–å·æ˜¯å¦å­˜åœ¨
+                    //ÑéÖ¤ĞÂµÄ²É¹º±àºÅÊÇ·ñ´æÔÚ
                     string strCheckNewPurchaseCodeHQL = "select count(1) as RowNumber from T_WZPurchase where PurchaseCode = '" + strNewPurchaseCode + "'";
                     DataTable dtCheckNewPurchaseCode = ShareClass.GetDataSetFromSql(strCheckNewPurchaseCodeHQL, "CheckNewPurchaseCode").Tables[0];
                     int intCheckNewPurchaseCode = int.Parse(dtCheckNewPurchaseCode.Rows[0]["RowNumber"].ToString());

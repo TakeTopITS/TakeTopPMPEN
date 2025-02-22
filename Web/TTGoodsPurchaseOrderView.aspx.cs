@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -35,7 +35,7 @@ public partial class TTGoodsPurchaseOrderView : System.Web.UI.Page
         {
             LoadGoodsPurchaseOrder(strPOID);
 
-            string strWFID = GetRelatedWFID("鐗╂枡閲囪喘", "鐗╂枡", int.Parse(strPOID)).ToString();
+            string strWFID = GetRelatedWFID("MaterialProcurement", "物料", int.Parse(strPOID)).ToString();
             if (strWFID != "0")
             {
                 LB_WorkFlowStatus.Text = GetStatusHomeNameByWorkflowStatus(strWFID);
@@ -61,7 +61,7 @@ public partial class TTGoodsPurchaseOrderView : System.Web.UI.Page
         Img_BarCode.ImageUrl = ShareClass.GenerateQrCodeImage(ShareClass.GetBarType(), goodsPurchaseOrder.GPOName.Trim(),200, 200);
     }
 
-    //鍙栧緱閲囪喘鍗曞彿
+    //取得采购单号
     protected string getGoodsPurchaseOrderFormCode(string strPOID)
     {
         string strHQL;

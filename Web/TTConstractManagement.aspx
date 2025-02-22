@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConstractManagement.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConstractManagement.aspx.cs"
     Inherits="TTConstractManagement" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -18,9 +18,9 @@
         $(function () {
             if (top.location != self.location) { } else { CloseWebPage(); }
 
-            //ÈöêËóèÊ≤°ÊúâÊï∞ÊçÆÁöÑÂàÜÊûêÂõæ
+            //“˛≤ÿ√ª”– ˝æ›µƒ∑÷ŒˆÕº
             hideIframesForNoDataAnalystChart(function () {
-                console.log('ÊâÄÊúâ iframe Â§ÑÁêÜÂÆåÊàê');
+                console.log('À˘”– iframe ¥¶¿ÌÕÍ≥…');
             });
 
         });
@@ -77,17 +77,17 @@
                                                 <asp:DropDownList ID="DL_ConstractType" runat="server" DataTextField="Type"
                                                     DataValueField="Type" Height="25px" Width="100px">
                                                 </asp:DropDownList>
-                                                &nbsp;<asp:Label ID="Label13534" runat="server" Text="<%$ Resources:lang,HeTongDaiMa%>"></asp:Label>Ôºö
+                                                &nbsp;<asp:Label ID="Label13534" runat="server" Text="<%$ Resources:lang,HeTongDaiMa%>"></asp:Label>£∫
                                                                 <asp:TextBox ID="TB_ConstractCode" runat="server" Width="60px"></asp:TextBox>
-                                                &nbsp;<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,HeTongMingCheng%>"></asp:Label>Ôºö
+                                                &nbsp;<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,HeTongMingCheng%>"></asp:Label>£∫
                                                                 <asp:TextBox ID="TB_ConstractName" runat="server" Width="80px"></asp:TextBox>
                                                 &nbsp;
-                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YiFangFuZeRen%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YiFangFuZeRen%>"></asp:Label>£∫
                                                                         <asp:TextBox ID="TB_PartBOperator" runat="server" Width="60px"></asp:TextBox>
                                                 &nbsp;
-                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JiaFangFuZeRen%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JiaFangFuZeRen%>"></asp:Label>£∫
                                                                         <asp:TextBox ID="TB_PartAOperator" runat="server" Width="60px"></asp:TextBox>
-                                                &nbsp;<asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JiaFangDanWei%>"></asp:Label>Ôºö
+                                                &nbsp;<asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JiaFangDanWei%>"></asp:Label>£∫
                                                                 <asp:TextBox ID="TB_PartA" runat="server" Width="70px"></asp:TextBox>
                                                 &nbsp;<asp:Button ID="BT_Find" runat="server" CssClass="inpu "
                                                     OnClick="BT_Find_Click" Text="<%$ Resources:lang,ChaXun%>" />
@@ -193,9 +193,12 @@
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
 
-                                                            <asp:BoundColumn DataField="Status" HeaderText="<%$ Resources:lang,ZhuangTai%>">
-                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
-                                                            </asp:BoundColumn>
+                                                            <asp:TemplateColumn HeaderText="◊¥Ã¨">
+    <ItemTemplate>
+        <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
+    </ItemTemplate>
+    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
+</asp:TemplateColumn>
                                                             <asp:BoundColumn DataField="SignDate" HeaderText="<%$ Resources:lang,QianDingRiQi%>" DataFormatString="{0:yyyy/MM/dd}">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                             </asp:BoundColumn>
@@ -264,7 +267,7 @@
                                                                         </asp:Legend>
                                                                     </Legends>
                                                                     <Titles>
-                                                                        <asp:Title Alignment="TopCenter" DockedToChartArea="ChartArea1" IsDockedInsideChartArea="False" Name="Ê†áÈ¢ò">
+                                                                        <asp:Title Alignment="TopCenter" DockedToChartArea="ChartArea1" IsDockedInsideChartArea="False" Name="±ÍÃ‚">
                                                                         </asp:Title>
                                                                     </Titles>
                                                                 </asp:Chart>--%>
@@ -296,7 +299,7 @@
                                                                         </asp:Legend>
                                                                     </Legends>
                                                                     <Titles>
-                                                                        <asp:Title Alignment="TopCenter" DockedToChartArea="ChartArea1" IsDockedInsideChartArea="False" Name="Ê†áÈ¢ò">
+                                                                        <asp:Title Alignment="TopCenter" DockedToChartArea="ChartArea1" IsDockedInsideChartArea="False" Name="±ÍÃ‚">
                                                                         </asp:Title>
                                                                     </Titles>
                                                                 </asp:Chart>--%>
@@ -365,7 +368,7 @@
 
                                                     <ItemStyle CssClass="itemStyle" HorizontalAlign="Center" />
                                                     <Columns>
-                                                        <asp:TemplateColumn HeaderText="Áõ¥Êé•ÊàêÂëòÔºö">
+                                                        <asp:TemplateColumn HeaderText="÷±Ω”≥…‘±£∫">
                                                             <ItemTemplate>
                                                                 <asp:Button ID="BT_UserCode" runat="server" CssClass="inpu"
                                                                     Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>' />

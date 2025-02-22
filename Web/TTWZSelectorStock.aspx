@@ -1,16 +1,16 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSelectorStock.aspx.cs" Inherits="TTWZSelectorStock" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSelectorStock.aspx.cs" Inherits="TTWZSelectorStock" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Â∫ìÂà´</title>
+    <title>ø‚±</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js" type="text/javascript"></script>
     <script type="text/jscript">
 
-        //ÂçïÈÄâÊã©ÊåâÈíÆÂà§Êñ≠
+        //µ•—°‘Ò∞¥≈•≈–∂œ
         function chooseUpdate() {
             var str = "";
             $("input[name=name1]").each(function () {
@@ -20,7 +20,7 @@
             });
 
             if (str == "") {
-                alert('ËØ∑ÈÄâÊã©ËÆ∞ÂΩïÈ°πÔºÅ');
+                alert('«Î—°‘Òº«¬ºœÓ£°');
                 return false;
             }
             else {
@@ -140,10 +140,10 @@
 
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="StockCode" HeaderText="Â∫ìÂà´">
+                                                                <asp:BoundColumn DataField="StockCode" HeaderText="ø‚±">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                                 </asp:BoundColumn>
-                                                                <%--<asp:BoundColumn DataField="StockDesc" HeaderText="Â∫ìÂà´ËØ¥Êòé">
+                                                                <%--<asp:BoundColumn DataField="StockDesc" HeaderText="ø‚±Àµ√˜">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="44%" />
                                                                     </asp:BoundColumn>--%>
                                                                 <asp:TemplateColumn>
@@ -155,16 +155,16 @@
                                                                         <%# ShareClass.StringCutByRequire(Eval("StockDesc").ToString(), 30) %>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="SafekeepName" HeaderText="‰øùÁÆ°Âëò">
+                                                                <asp:BoundColumn DataField="SafekeepName" HeaderText="±£π‹‘±">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="CheckerName" HeaderText="ÊùêÊ£ÄÂëò">
+                                                                <asp:BoundColumn DataField="CheckerName" HeaderText="≤ƒºÏ‘±">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="IsMark" HeaderText="‰ΩøÁî®Ê†áËÆ∞">
+                                                                <asp:BoundColumn DataField="IsMark" HeaderText=" π”√±Íº«">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="IsCancel" HeaderText="Ê†∏ÈîÄÊ†áËÆ∞">
+                                                                <asp:BoundColumn DataField="IsCancel" HeaderText="∫Àœ˙±Íº«">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
                                                             </Columns>
@@ -182,10 +182,10 @@
                                             <tr>
                                                 <td class="formItemBgStyle">
                                                     <div style="text-align: center">
-                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="Á°ÆÂÆö" />
+                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="»∑∂®" />
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                            type="button" value="ÂÖ≥Èó≠" />
+                                                            type="button" value="Closed" />
                                                     </div>
                                                 </td>
                                             </tr>

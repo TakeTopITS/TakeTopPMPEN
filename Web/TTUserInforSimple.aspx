@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInforSimple.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInforSimple.aspx.cs"
     Inherits="TTUserInforSimple" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -78,7 +78,7 @@
                                     <asp:Label ID="TB_UserCode" runat="server" Enabled="False" />
                                 </td>
                                 <td style="text-align: left;" class="formItemBgStyle" rowspan="6">
-                                    <asp:Image ID="IM_MemberPhoto" runat="server" Height="140px" Width="154px" AlternateText="å‘˜å·¥ç…§ç‰‡"
+                                    <asp:Image ID="IM_MemberPhoto" runat="server" Height="140px" Width="154px" AlternateText="Ô±¹¤ÕÕÆ¬"
                                         ImageAlign="Left" />
                                 </td>
                             </tr>
@@ -161,7 +161,7 @@
                                 <td style="text-align: left;" class="formItemBgStyle"></td>
                             </tr>
                             <tr>
-                                <td style="text-align: right" class="formItemBgStyle">E_Mailï¼š
+                                <td style="text-align: right" class="formItemBgStyle">E_Mail£º
                                 </td>
                                 <td style="text-align: left;" class="formItemBgStyle">
                                     <asp:Label ID="TB_EMail" runat="server" Enabled="False" />

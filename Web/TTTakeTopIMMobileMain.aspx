@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTTakeTopIMMobileMain.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTTakeTopIMMobileMain.aspx.cs"
     Inherits="TTTakeTopIMMobileMain" %>
 
 

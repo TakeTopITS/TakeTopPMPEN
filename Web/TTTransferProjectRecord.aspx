@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTTransferProjectRecord.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTTransferProjectRecord.aspx.cs"
     Inherits="TTTransferProjectRecord" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -64,7 +64,7 @@
                             <tr>
                                 <td style="height: 16px; padding: 5px 5px 5px 5px;" align="right">
                                     <a href="#" onclick="preview1()">
-                                        <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" />
+                                        <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" />
                                     </a></td>
                             </tr>
                         </table>
@@ -133,24 +133,24 @@
 
                                         <ItemStyle CssClass="itemStyle" />
                                         <Columns>
-                                            <asp:BoundColumn DataField="ID" HeaderText="åºå·">
+                                            <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="ProjectID" HeaderText="é¡¹ç›®å·">
+                                            <asp:BoundColumn DataField="ProjectID" HeaderText="ÏîÄ¿ºÅ">
                                                 <ItemStyle CssClass="itemBorder" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Actor" HeaderText="è§’è‰²">
+                                            <asp:BoundColumn DataField="Actor" HeaderText="½ÇÉ«">
                                                 <ItemStyle CssClass="itemBorder" Width="15%" />
                                             </asp:BoundColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="OldPMCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                DataTextField="OldPMName" HeaderText="åŽŸé¡¹ç›®ç»ç†" Target="_blank">
+                                                DataTextField="OldPMName" HeaderText="Ô­ÏîÄ¿¾­Àí" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                             </asp:HyperLinkColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="NewPMCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                DataTextField="NewPMName" HeaderText="çŽ°é¡¹ç›®ç»ç†" Target="_blank">
+                                                DataTextField="NewPMName" HeaderText="ÏÖÏîÄ¿¾­Àí" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                             </asp:HyperLinkColumn>
-                                            <asp:BoundColumn DataField="ChangeTime" HeaderText="å˜æ›´æ—¶é—´">
+                                            <asp:BoundColumn DataField="ChangeTime" HeaderText="±ä¸üÊ±¼ä">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                             </asp:BoundColumn>
                                         </Columns>

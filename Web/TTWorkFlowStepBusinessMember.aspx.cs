@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -18,7 +18,7 @@ using ProjectMgt.BLL;
 
 public partial class TTWorkFlowStepBusinessMember : System.Web.UI.Page
 {
-    //Âä†‰∏äÂÖ≥ËÅîRelatedID,RelatedType,RelatedCode TODO:CAOJIAN(ÊõπÂÅ•)
+    //º”…œπÿ¡™RelatedID,RelatedType,RelatedCode TODO:CAOJIAN(≤‹Ω°)
     string strRelatedType, strRelatedID, strRelatedCode;
     string strUserCode, strUserName;
     string strWFIdentifyString, strWFTemName, strStepID;
@@ -66,7 +66,7 @@ public partial class TTWorkFlowStepBusinessMember : System.Web.UI.Page
                 workFlow = GetWorkFlow(strWLID);
                 strWLName = workFlow.WLName.Trim();
 
-                TB_Message.Text = Resources.lang.GongZuoLiuShenQing + "Ôºö" + strWLID + " " + strWLName + "," + Resources.lang.BuZhou + "Ôºö" + strStepID + " " + strStepName;
+                TB_Message.Text = Resources.lang.GongZuoLiuShenQing + "£∫" + strWLID + " " + strWLName + "," + Resources.lang.BuZhou + "£∫" + strStepID + " " + strStepName;
             }
             catch
             {
@@ -146,7 +146,7 @@ public partial class TTWorkFlowStepBusinessMember : System.Web.UI.Page
             strReceiverCode = ds.Tables[0].Rows[0][0].ToString();
             strMsg = TB_Message.Text.Trim();
 
-            //ÂèëÈÄÅ‰ø°ÊÅØ
+            //∑¢ÀÕ–≈œ¢
             msg.SendMSM("Message",strReceiverCode, strMsg, strUserCode);
         }
         

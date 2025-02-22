@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -31,7 +31,7 @@ public partial class TTGoodsReturnOrderView : System.Web.UI.Page
 
         strROID = Request.QueryString["ROID"];
 
-        //this.Title = "鐗╂枡閫�璐у崟";
+        //this.Title = "物料退货单";
 
         if (Page.IsPostBack != true)
         {

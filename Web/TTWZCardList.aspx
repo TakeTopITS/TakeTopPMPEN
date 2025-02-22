@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZCardList.aspx.cs" Inherits="TTWZCardList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZCardList.aspx.cs" Inherits="TTWZCardList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Ë¥¢Âä°Âá≠ËØÅ</title>
+    <title>≤∆ŒÒ∆æ÷§</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -60,12 +60,12 @@
                                                             <table class="formBgStyle" width="60%">
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,PingZhengBianHao%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,PingZhengBianHao%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:Label ID="LB_CardCode" runat="server" ></asp:Label>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,PingZhengMingCheng%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,PingZhengMingCheng%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_CardName" runat="server"></asp:TextBox>
                                                                     </td>
@@ -158,15 +158,15 @@
                                                                             </HeaderTemplate>
                                                                             <ItemTemplate>
 
-                                                                                <asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"CardCode") %>' CommandName="edit" CssClass="notTab">ÁºñËæë</asp:LinkButton>
-                                                                                <asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"CardCode") %>' CommandName="del" CssClass="notTab">Âà†Èô§</asp:LinkButton>
+                                                                                <asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"CardCode") %>' CommandName="edit" CssClass="notTab">±‡º≠</asp:LinkButton>
+                                                                                <asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"CardCode") %>' CommandName="del" CssClass="notTab">…æ≥˝</asp:LinkButton>
 
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="CardCode" HeaderText="Âá≠ËØÅÁºñÂè∑">
+                                                                        <asp:BoundColumn DataField="CardCode" HeaderText="∆æ÷§±‡∫≈">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                         </asp:BoundColumn>
-                                                                        <%--<asp:BoundColumn DataField="CardName" HeaderText="Âá≠ËØÅÂêçÁß∞">
+                                                                        <%--<asp:BoundColumn DataField="CardName" HeaderText="∆æ÷§√˚≥∆">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="13%" />
                                                                         </asp:BoundColumn>--%>
                                                                         <asp:TemplateColumn>
@@ -178,7 +178,7 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("CardName").ToString(), 190) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <%--<asp:BoundColumn DataField="CardTime" HeaderText="Âá≠ËØÅÊó•Êúü">
+                                                                        <%--<asp:BoundColumn DataField="CardTime" HeaderText="∆æ÷§»’∆⁄">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                                         </asp:BoundColumn>--%>
                                                                         <asp:TemplateColumn>
@@ -190,22 +190,22 @@
                                                                                 <%#DataBinder.Eval(Container.DataItem, "CardTime", "{0:yyyy/MM/dd}")%>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="RowNumber" HeaderText="ÊòéÁªÜÊù°Êï∞">
+                                                                        <asp:BoundColumn DataField="RowNumber" HeaderText="√˜œ∏Ãı ˝">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="8%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="DetailMoney" HeaderText="ÊòéÁªÜÈáëÈ¢ù">
+                                                                        <asp:BoundColumn DataField="DetailMoney" HeaderText="√˜œ∏Ω∂Ó">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="8%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="CardMoney" HeaderText="Âá≠ËØÅÈáëÈ¢ù">
+                                                                        <asp:BoundColumn DataField="CardMoney" HeaderText="∆æ÷§Ω∂Ó">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="8%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Progress" HeaderText="ËøõÂ∫¶">
+                                                                        <asp:BoundColumn DataField="Progress" HeaderText="Ω¯∂»">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="IsMark" HeaderText="‰ΩøÁî®Ê†áËÆ∞">
+                                                                        <asp:BoundColumn DataField="IsMark" HeaderText=" π”√±Íº«">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="CardMarkerName" HeaderText="Âá≠ËØÅÁºñÂà∂">
+                                                                        <asp:BoundColumn DataField="CardMarkerName" HeaderText="∆æ÷§±‡÷∆">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                         </asp:BoundColumn>
                                                                     </Columns>

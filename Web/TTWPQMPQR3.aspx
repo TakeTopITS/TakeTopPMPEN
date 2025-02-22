@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMPQR3.aspx.cs" Inherits="TTWPQMPQR3" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMPQR3.aspx.cs" Inherits="TTWPQMPQR3" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -8,7 +8,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>PQR-3ÁÆ°ÁêÜ</title>
+    <title>PQR-3π‹¿Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script src="js/allAHandler.js" type="text/javascript"></script>
@@ -334,7 +334,7 @@
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="ÁºñÂè∑">
+                                                    <asp:TemplateColumn HeaderText="±‡∫≈">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
@@ -342,42 +342,42 @@
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="WeldProCode" HeaderText="ÁÑäÊé•Â∑•Ëâ∫ËØÑÂÆö">
+                                                    <asp:BoundColumn DataField="WeldProCode" HeaderText="∫∏Ω”π§“’∆¿∂®">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="RTRepNumber" HeaderText="RTÊä•ÂëäÁºñÂè∑">
+                                                    <asp:BoundColumn DataField="RTRepNumber" HeaderText="RT±®∏Ê±‡∫≈">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="RTInsResult" HeaderText="RTÊ£ÄÈ™åÁªìÊûú">
+                                                    <asp:BoundColumn DataField="RTInsResult" HeaderText="RTºÏ—ÈΩ·π˚">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="MTRepNumber" HeaderText="MTÊä•ÂëäÁºñÂè∑">
+                                                    <asp:BoundColumn DataField="MTRepNumber" HeaderText="MT±®∏Ê±‡∫≈">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="MTInsResult" HeaderText="MTÊ£ÄÈ™åÁªìÊûú">
+                                                    <asp:BoundColumn DataField="MTInsResult" HeaderText="MTºÏ—ÈΩ·π˚">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="UTRepNumber" HeaderText="UTÊä•ÂëäÁºñÂè∑">
+                                                    <asp:BoundColumn DataField="UTRepNumber" HeaderText="UT±®∏Ê±‡∫≈">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="UTInsResult" HeaderText="UTÊ£ÄÈ™åÁªìÊûú">
+                                                    <asp:BoundColumn DataField="UTInsResult" HeaderText="UTºÏ—ÈΩ·π˚">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="12%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="PTRepNumber" HeaderText="PTÊ£ÄÈ™åÁºñÂè∑">
+                                                    <asp:BoundColumn DataField="PTRepNumber" HeaderText="PTºÏ—È±‡∫≈">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />

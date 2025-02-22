@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConstractMainContentEdit.aspx.cs" Inherits="TTConstractMainContentEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConstractMainContentEdit.aspx.cs" Inherits="TTConstractMainContentEdit" %>
 
 <%@ Register Assembly="Brettle.Web.NeatUpload" Namespace="Brettle.Web.NeatUpload"
     TagPrefix="Upload" %>
@@ -36,8 +36,8 @@
 
         });
 
-        function autoheight() {Â //å‡½æ•°ï¼šè·å–å°ºå¯¸
-            //è·å–æµè§ˆå™¨çª—å£é«˜åº¦
+        function autoheight() {?//º¯Êı£º»ñÈ¡³ß´ç
+            //»ñÈ¡ä¯ÀÀÆ÷´°¿Ú¸ß¶È
             var winHeight = 0;
             if (window.innerHeight)
                 winHeight = window.innerHeight;
@@ -51,9 +51,9 @@
             document.getElementById("Div6").style.height = (winHeight - 80) + "px";
         }
 
-        window.onresize = autoheight;Â //æµè§ˆå™¨çª—å£å‘ç”Ÿå˜åŒ–æ—¶åŒæ—¶å˜åŒ–DIVé«˜åº¦
+        window.onresize = autoheight;?//ä¯ÀÀÆ÷´°¿Ú·¢Éú±ä»¯Ê±Í¬Ê±±ä»¯DIV¸ß¶È
 
-        //è®¾ç½®IFRMAEçš„é«˜åº¦
+        //ÉèÖÃIFRMAEµÄ¸ß¶È
         function setBusinessFormIFrameHeight() {
 
             var winHeight = 0;
@@ -89,7 +89,7 @@
                                                 <asp:Button ID="BT_Save" Text="<%$ Resources:lang,BaoCun %>" CssClass="inpu" runat="server" OnClick="BT_Save_Click" />
                                             </td>
                                             <td class="formItemBgStyle">
-                                                <asp:Label ID="LB_Watermark" Text="æ°´å°å­—ç¬¦" runat="server"></asp:Label>
+                                                <asp:Label ID="LB_Watermark" Text="Ë®Ó¡×Ö·û" runat="server"></asp:Label>
                                             </td>
                                             <td class="formItemBgStyle" width="100px">
                                                 <asp:TextBox ID="TB_Watermark" runat="server" Width="99%"></asp:TextBox>

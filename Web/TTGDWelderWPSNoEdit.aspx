@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDWelderWPSNoEdit.aspx.cs" Inherits="TTGDWelderWPSNoEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDWelderWPSNoEdit.aspx.cs" Inherits="TTGDWelderWPSNoEdit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>WelderWPSç¼–è¾‘</title>
+    <title>WelderWPS±à¼­</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
@@ -56,12 +56,12 @@
                                             <td valign="top" style="padding-top: 5px;">
                                                 <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td style="text-align: left" class="formItemBgStyle">welder_noï¼š
+                                                        <td style="text-align: left" class="formItemBgStyle">welder_no£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_Welder_no" runat="server"></asp:TextBox>
                                                         </td>
-                                                        <td style="text-align: left" class="formItemBgStyle">WPSNoï¼š
+                                                        <td style="text-align: left" class="formItemBgStyle">WPSNo£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_WPSNo" runat="server"></asp:TextBox>
@@ -69,7 +69,7 @@
                                                         
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: left" class="formItemBgStyle">remarksï¼š
+                                                        <td style="text-align: left" class="formItemBgStyle">remarks£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="3">
                                                             <asp:TextBox ID="TXT_Remarks" runat="server" Width="400"></asp:TextBox>
@@ -78,7 +78,7 @@
                                                     <tr>
                                                         <td style="text-align: center" class="formItemBgStyle" colspan="4">
                                                             <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnOK_Click" />&nbsp;&nbsp;
-                                                            <input type="button" value="è¿”å›ž" id="BT_Return" class="inpu" onclick="window.location.href = 'TTGDWelderWPSNoList.aspx'" />
+                                                            <input type="button" value="·µ»Ø" id="BT_Return" class="inpu" onclick="window.location.href = 'TTGDWelderWPSNoList.aspx'" />
                                                         </td>
                                                     </tr>
                                                 </table>

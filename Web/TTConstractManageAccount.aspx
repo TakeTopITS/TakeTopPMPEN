@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConstractManageAccount.aspx.cs" Inherits="TTConstractManageAccount" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConstractManageAccount.aspx.cs" Inherits="TTConstractManageAccount" %>
 
 <!DOCTYPE html>
 
@@ -34,7 +34,7 @@
                                                         <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                     </td>
                                                     <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                        <asp:Label ID="Label1" runat="server" Text="åˆåŒå°å¸"></asp:Label>
+                                                        <asp:Label ID="Label1" runat="server" Text="ºÏÍ¬Ì¨ÕÊ"></asp:Label>
                                                     </td>
                                                     <td width="5">
                                                         <%--<img src="ImagesSkin/main_top_r.jpg" width="5" height="31" alt="" />--%>
@@ -54,29 +54,29 @@
                                             <table>
                                                 <tr>
                                                     <td>
-                                                        <asp:Label ID="LB_Contractid" runat="server" Text="åˆåŒç¼–å·:"> </asp:Label></td>
+                                                        <asp:Label ID="LB_Contractid" runat="server" Text="ºÏÍ¬±àºÅ:"> </asp:Label></td>
                                                         <td>
                                                             <asp:TextBox ID="TB_ConstractID" runat="server"></asp:TextBox>
                                                         </td>
                                                     <td>
-                                                        <asp:Label ID="Label2" runat="server" Text="åˆåŒåç§°:"> </asp:Label>
+                                                        <asp:Label ID="Label2" runat="server" Text="ºÏÍ¬Ãû³Æ:"> </asp:Label>
                                                     </td>
                                                     <td>
                                                         <asp:TextBox ID="TB_ConstractName" runat="server"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:Label ID="Label3" runat="server" Text="åˆåŒç±»åž‹:"> </asp:Label>
+                                                        <asp:Label ID="Label3" runat="server" Text="ºÏÍ¬ÀàÐÍ:"> </asp:Label>
                                                     </td>
                                                     <td>
                                                           <asp:DropDownList ID="DDL_Constractype" runat="server" DataTextField="type" DataValueField="type" Width="175px" AutoPostBack="true"></asp:DropDownList>
                                                     </td>
                                                     <td>
-                                                         <asp:Button ID="BTN_Query" runat="server" Text="æŸ¥è¯¢" OnClick="BTN_Query_Click" />
+                                                         <asp:Button ID="BTN_Query" runat="server" Text="²éÑ¯" OnClick="BTN_Query_Click" />
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:Label ID="Label4" runat="server" Text="é€‰æ‹©åˆåŒ:"> </asp:Label></td>
+                                                        <asp:Label ID="Label4" runat="server" Text="Ñ¡ÔñºÏÍ¬:"> </asp:Label></td>
                                                         <td>
                                                             <asp:TextBox ID="TB_ConstractCode" runat="server"></asp:TextBox>
                                                             <cc1:ModalPopupExtender ID="ModalPopupExtender1" runat="server"
@@ -85,13 +85,13 @@
                                                             </cc1:ModalPopupExtender>
                                                         </td>
                                                     <td>
-                                                        <asp:Label ID="Label6" runat="server" Text="åˆåŒçŠ¶æ€:"> </asp:Label>
+                                                        <asp:Label ID="Label6" runat="server" Text="ºÏÍ¬×´Ì¬:"> </asp:Label>
                                                     </td>
                                                     <td>
                                                           <asp:DropDownList ID="DDL_ConstractStatus" runat="server" DataTextField="status" DataValueField="status" Width="175px" AutoPostBack="true"></asp:DropDownList>
                                                     </td>
                                                     <td>
-                                                        <asp:Label ID="Label7" runat="server" Text="ç­¾ç½²æ—¥æœŸ:"> </asp:Label>
+                                                        <asp:Label ID="Label7" runat="server" Text="Ç©ÊðÈÕÆÚ:"> </asp:Label>
                                                     </td>
                                                     <td>
                                                          <%-- <asp:TextBox ID="TB_signdate" runat="server" TextMode="Date" ></asp:TextBox>--%>
@@ -113,42 +113,42 @@
                 </div>
 
                 <div>
-                    <asp:GridView ID="gvContractData" runat="server" AutoGenerateColumns="False" EmptyDataText="æš‚æ—¶æ²¡æœ‰æŸ¥è¯¢åˆ°ç›¸å…³ä¿¡æ¯" AllowPaging="True" PageSize="15" CellPadding="2">
+                    <asp:GridView ID="gvContractData" runat="server" AutoGenerateColumns="False" EmptyDataText="ÔÝÊ±Ã»ÓÐ²éÑ¯µ½Ïà¹ØÐÅÏ¢" AllowPaging="True" PageSize="15" CellPadding="2">
                         <Columns>
-                            <asp:BoundField DataField="constractid" HeaderText="åºå·" />
-                            <asp:BoundField DataField="status" HeaderText="åˆåŒçŠ¶æ€" />
-                            <asp:BoundField DataField="constractclass" HeaderText="åˆåŒå¤§ç±»" />
-                            <asp:BoundField DataField="type" HeaderText="åˆåŒç±»åž‹" />
-                            <asp:BoundField DataField="constractcode" HeaderText="å…¬å¸åˆåŒç¼–å·" />
-                            <asp:BoundField DataField="partyconstractcode" HeaderText="ç¼”çº¦æ–¹åˆåŒç¼–å·" />
-                            <asp:BoundField DataField="constractname" HeaderText="åˆåŒåç§°" />
-                            <asp:BoundField DataField="ProjectBasis" HeaderText="åˆåŒç«‹é¡¹ä¾æ®" />
-                            <asp:BoundField DataField="Amount" HeaderText="åˆåŒé‡‘é¢" />
-                            <asp:BoundField DataField="taxrate" HeaderText="ç¨ŽçŽ‡" />
-                            <asp:BoundField DataField="aftertaxtotalamount" HeaderText="åˆåŒä¸å«ç¨Žé‡‘é¢" />
-                            <asp:BoundField DataField="provisionalamount" HeaderText="æš‚åˆ—é‡‘" />
-                            <asp:BoundField DataField="part1" HeaderText="ç¼”çº¦æ–¹" />
-                            <asp:BoundField DataField="signdate" HeaderText="ç­¾ç½²æ—¥æœŸ" />
-                            <asp:BoundField DataField="signname" HeaderText="ç­¾ç½²äºº" />
-                            <asp:BoundField DataField="startdate" HeaderText="çº¦å®šå¼€å·¥æ—¶é—´" />
-                            <asp:BoundField DataField="enddate" HeaderText="çº¦å®šç«£å·¥æ—¶é—´" />
-                            <asp:BoundField DataField="astartdate" HeaderText="å®žé™…å¼€å·¥æ—¶é—´" />
-                            <asp:BoundField DataField="aenddate" HeaderText="å®žé™…ç«£å·¥æ—¶é—´" />
-                            <asp:BoundField DataField="duration" HeaderText="çº¦å®šå·¥æœŸ" />
-                            <asp:BoundField DataField="warranty" HeaderText="åˆåŒè´¨ä¿æœŸ" />
-                            <asp:BoundField DataField="prepaypercent" HeaderText="åˆåŒçº¦å®šé¢„ä»˜æ¬¾æ¯”ä¾‹" />
-                            <asp:BoundField DataField="monthpaypercent" HeaderText="åˆåŒçº¦å®šæœˆè¿›åº¦æ”¯ä»˜æ¯”ä¾‹" />
-                            <asp:BoundField DataField="finishpaypercent" HeaderText="åˆåŒçº¦å®šç«£å·¥æ”¯ä»˜æ¯”ä¾‹" />
-                            <asp:BoundField DataField="settlepaypercent" HeaderText="åˆåŒçº¦å®šç»“ç®—æ”¯ä»˜æ¯”ä¾‹" />
-                            <asp:BoundField DataField="realprogress" HeaderText="å®žæ—¶å½¢è±¡è¿›åº¦ï¼ˆ%ï¼‰" />
-                            <asp:BoundField DataField="realpvalue" HeaderText="å®žæ—¶äº§å€¼ï¼ˆå…ƒï¼‰" />
-                            <asp:BoundField DataField="sumrecieve" HeaderText="ç´¯è®¡æ”¶æ¬¾ï¼ˆå…ƒï¼‰" />
-                            <asp:BoundField DataField="sumpayment" HeaderText="ç´¯è®¡ä»˜æ¬¾ï¼ˆå…ƒï¼‰" />
-                            <asp:BoundField DataField="settleaccount" HeaderText="ç»“ç®—é‡‘é¢ï¼ˆå…ƒï¼‰" />
-                            <asp:BoundField DataField="departname" HeaderText="ä¸»ç®¡éƒ¨é—¨" />
-                            <asp:BoundField DataField="operator" HeaderText="ç»åŠžäºº" />
-                            <asp:BoundField DataField="pmname" HeaderText="é¡¹ç›®ç»ç†" />
-                            <asp:BoundField DataField="memo" HeaderText="å¤‡æ³¨" />
+                            <asp:BoundField DataField="constractid" HeaderText="ÐòºÅ" />
+                            <asp:BoundField DataField="status" HeaderText="ºÏÍ¬×´Ì¬" />
+                            <asp:BoundField DataField="constractclass" HeaderText="ºÏÍ¬´óÀà" />
+                            <asp:BoundField DataField="type" HeaderText="ºÏÍ¬ÀàÐÍ" />
+                            <asp:BoundField DataField="constractcode" HeaderText="¹«Ë¾ºÏÍ¬±àºÅ" />
+                            <asp:BoundField DataField="partyconstractcode" HeaderText="µÞÔ¼·½ºÏÍ¬±àºÅ" />
+                            <asp:BoundField DataField="constractname" HeaderText="ºÏÍ¬Ãû³Æ" />
+                            <asp:BoundField DataField="ProjectBasis" HeaderText="ºÏÍ¬Á¢ÏîÒÀ¾Ý" />
+                            <asp:BoundField DataField="Amount" HeaderText="ºÏÍ¬½ð¶î" />
+                            <asp:BoundField DataField="taxrate" HeaderText="Ë°ÂÊ" />
+                            <asp:BoundField DataField="aftertaxtotalamount" HeaderText="ºÏÍ¬²»º¬Ë°½ð¶î" />
+                            <asp:BoundField DataField="provisionalamount" HeaderText="ÔÝÁÐ½ð" />
+                            <asp:BoundField DataField="part1" HeaderText="µÞÔ¼·½" />
+                            <asp:BoundField DataField="signdate" HeaderText="Ç©ÊðÈÕÆÚ" />
+                            <asp:BoundField DataField="signname" HeaderText="Ç©ÊðÈË" />
+                            <asp:BoundField DataField="startdate" HeaderText="Ô¼¶¨¿ª¹¤Ê±¼ä" />
+                            <asp:BoundField DataField="enddate" HeaderText="Ô¼¶¨¿¢¹¤Ê±¼ä" />
+                            <asp:BoundField DataField="astartdate" HeaderText="Êµ¼Ê¿ª¹¤Ê±¼ä" />
+                            <asp:BoundField DataField="aenddate" HeaderText="Êµ¼Ê¿¢¹¤Ê±¼ä" />
+                            <asp:BoundField DataField="duration" HeaderText="Ô¼¶¨¹¤ÆÚ" />
+                            <asp:BoundField DataField="warranty" HeaderText="ºÏÍ¬ÖÊ±£ÆÚ" />
+                            <asp:BoundField DataField="prepaypercent" HeaderText="ºÏÍ¬Ô¼¶¨Ô¤¸¶¿î±ÈÀý" />
+                            <asp:BoundField DataField="monthpaypercent" HeaderText="ºÏÍ¬Ô¼¶¨ÔÂ½ø¶ÈÖ§¸¶±ÈÀý" />
+                            <asp:BoundField DataField="finishpaypercent" HeaderText="ºÏÍ¬Ô¼¶¨¿¢¹¤Ö§¸¶±ÈÀý" />
+                            <asp:BoundField DataField="settlepaypercent" HeaderText="ºÏÍ¬Ô¼¶¨½áËãÖ§¸¶±ÈÀý" />
+                            <asp:BoundField DataField="realprogress" HeaderText="ÊµÊ±ÐÎÏó½ø¶È£¨%£©" />
+                            <asp:BoundField DataField="realpvalue" HeaderText="ÊµÊ±²úÖµ£¨Ôª£©" />
+                            <asp:BoundField DataField="sumrecieve" HeaderText="ÀÛ¼ÆÊÕ¿î£¨Ôª£©" />
+                            <asp:BoundField DataField="sumpayment" HeaderText="ÀÛ¼Æ¸¶¿î£¨Ôª£©" />
+                            <asp:BoundField DataField="settleaccount" HeaderText="½áËã½ð¶î£¨Ôª£©" />
+                            <asp:BoundField DataField="departname" HeaderText="Ö÷¹Ü²¿ÃÅ" />
+                            <asp:BoundField DataField="operator" HeaderText="¾­°ìÈË" />
+                            <asp:BoundField DataField="pmname" HeaderText="ÏîÄ¿¾­Àí" />
+                            <asp:BoundField DataField="memo" HeaderText="±¸×¢" />
                         </Columns>
                     </asp:GridView>
                 </div>

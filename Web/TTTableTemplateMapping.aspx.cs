@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
@@ -37,7 +37,7 @@ public partial class TTTableTemplateMapping : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "è¡¨å•èŠ‚ç‚¹æ˜ å°„è¡¨å­—æ®µ", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "±íµ¥½ÚµãÓ³Éä±í×Ö¶Î", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -63,7 +63,7 @@ public partial class TTTableTemplateMapping : System.Web.UI.Page
     }
 
     /// <summary>
-    ///  ç±»å‹
+    ///  ÀàĞÍ
     /// </summary>
     protected void DL_WLType_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -74,7 +74,7 @@ public partial class TTTableTemplateMapping : System.Web.UI.Page
         {
             return;
         }
-        strHQL = "Select TemName,XSNFile From T_WorkFlowTemplate Where type = " + "'" + strWLType + "'" + " and Authority = 'æ‰€æœ‰'";
+        strHQL = "Select TemName,XSNFile From T_WorkFlowTemplate Where type = " + "'" + strWLType + "'" + " and Authority = 'All'";
 
         strHQL += " Order by CreateTime DESC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTemplate");
@@ -87,7 +87,7 @@ public partial class TTTableTemplateMapping : System.Web.UI.Page
 
 
     /// <summary>
-    ///  æµç¨‹æ¨¡æ¿
+    ///  Á÷³ÌÄ£°å
     /// </summary>
     protected void DL_WFTemplate_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -109,7 +109,7 @@ public partial class TTTableTemplateMapping : System.Web.UI.Page
             }
             LoadExistMappingList();
 
-            //æŠŠé€‰ä¸­çš„å»æ‰
+            //°ÑÑ¡ÖĞµÄÈ¥µô
             for (int i = 0; i < selectTableName.Items.Count; i++)
             {
                 selectTableName.Items[i].Selected = false;
@@ -119,7 +119,7 @@ public partial class TTTableTemplateMapping : System.Web.UI.Page
         {
             TV_WFTemplate.Nodes.Clear();
             TV_Table.Nodes.Clear();
-            //æŠŠé€‰ä¸­çš„å»æ‰
+            //°ÑÑ¡ÖĞµÄÈ¥µô
             for (int i = 0; i < selectTableName.Items.Count; i++)
             {
                 selectTableName.Items[i].Selected = false;
@@ -129,7 +129,7 @@ public partial class TTTableTemplateMapping : System.Web.UI.Page
     }
 
     /// <summary>
-    ///  å·²æ•°æ®äº¤äº’é…å¯¹è¡¨
+    ///  ÒÑÊı¾İ½»»¥Åä¶Ô±í
     /// </summary>
     protected void DL_Table_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -152,7 +152,7 @@ public partial class TTTableTemplateMapping : System.Web.UI.Page
                 TV_Table.ExpandAll();
             }
 
-            //æŠŠæµç¨‹æ¨¡æ¿çš„åˆ—ï¼Œè¡¨æ ¼åˆ—æ˜¾ç¤ºå‡ºæ¥
+            //°ÑÁ÷³ÌÄ£°åµÄÁĞ£¬±í¸ñÁĞÏÔÊ¾³öÀ´
             string strTableTemplateHQL = string.Empty;
             TableTemplateMappingBLL tableTemplateMappingBLL = new TableTemplateMappingBLL();
             strTableTemplateHQL = string.Format("from TableTemplateMapping as tableTemplateMapping where TableName = '{0}' and WFTemplateName = '{1}'", DL_Table.SelectedValue, DL_WFTemplate.SelectedItem.Text);
@@ -179,7 +179,7 @@ public partial class TTTableTemplateMapping : System.Web.UI.Page
     }
 
     /// <summary>
-    ///  æ•°æ®äº¤äº’é…å¯¹è¡¨
+    ///  Êı¾İ½»»¥Åä¶Ô±í
     /// </summary>
     protected void DL_TableName_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -217,7 +217,7 @@ public partial class TTTableTemplateMapping : System.Web.UI.Page
     }
 
     /// <summary>
-    ///  åŠ è½½æ•°æ®äº¤äº’é…å¯¹è¡¨
+    ///  ¼ÓÔØÊı¾İ½»»¥Åä¶Ô±í
     /// </summary>
     private void LoadTableNameMappingList()
     {
@@ -232,7 +232,7 @@ public partial class TTTableTemplateMapping : System.Web.UI.Page
     }
 
     /// <summary>
-    /// åŠ è½½å·²æ•°æ®äº¤äº’é…å¯¹è¡¨
+    /// ¼ÓÔØÒÑÊı¾İ½»»¥Åä¶Ô±í
     /// </summary>
     private void LoadExistMappingList()
     {
@@ -339,7 +339,7 @@ public partial class TTTableTemplateMapping : System.Web.UI.Page
             if (xl.NodeType == XmlNodeType.Element)
             {
                 TreeNode Node = new TreeNode();
-                #region è·å¾—xmlå…¨è·¯å¾„
+                #region »ñµÃxmlÈ«Â·¾¶
                 if (!string.IsNullOrEmpty(xl.ParentNode.Name))
                 {
                     if (xl.ParentNode.Name != "#document")
@@ -409,7 +409,7 @@ public partial class TTTableTemplateMapping : System.Web.UI.Page
     }
 
 
-    //å°†DataSetè½¬æ¢ä¸ºxmlå¯¹è±¡å­—ç¬¦ä¸²
+    //½«DataSet×ª»»Îªxml¶ÔÏó×Ö·û´®
     public static string ConvertDataSetToXML(DataSet xmlDS)
     {
         MemoryStream stream = null;
@@ -418,10 +418,10 @@ public partial class TTTableTemplateMapping : System.Web.UI.Page
         try
         {
             stream = new MemoryStream();
-            //ä»streamè£…è½½åˆ°XmlTextReader
+            //´Óstream×°ÔØµ½XmlTextReader
             writer = new XmlTextWriter(stream, Encoding.Unicode);
 
-            //ç”¨WriteXmlæ–¹æ³•å†™å…¥æ–‡ä»¶.
+            //ÓÃWriteXml·½·¨Ğ´ÈëÎÄ¼ş.
             xmlDS.WriteXml(writer);
             int count = (int)stream.Length;
             byte[] arr = new byte[count];
@@ -443,22 +443,22 @@ public partial class TTTableTemplateMapping : System.Web.UI.Page
     }
 
     /// <summary>
-    /// æŠŠXMLæ•°æ®åŒæ­¥åˆ°è¡¨æ ¼å½“ä¸­
+    /// °ÑXMLÊı¾İÍ¬²½µ½±í¸ñµ±ÖĞ
     /// </summary>
-    /// <param name="xml">XMLæ–‡ä»¶</param>
-    /// <param name="strWFTemplateName">æµç¨‹æ¨¡æ¿åç§°</param>
-    /// <param name="strTableName">è¡¨å</param>
+    /// <param name="xml">XMLÎÄ¼ş</param>
+    /// <param name="strWFTemplateName">Á÷³ÌÄ£°åÃû³Æ</param>
+    /// <param name="strTableName">±íÃû</param>
     public void XMLDataToTableData(Xml xml, string strWFTemplateName, string strTableName, DataSet ds)
     {
 
     }
 
     /// <summary>
-    /// æŠŠè¡¨æ ¼æ•°æ®åŒæ­¥åˆ°XMLå½“ä¸­
+    /// °Ñ±í¸ñÊı¾İÍ¬²½µ½XMLµ±ÖĞ
     /// </summary>
-    /// <param name="xml">XMLæ–‡ä»¶</param>
-    /// <param name="strWFTemplateName">æµç¨‹æ¨¡æ¿åç§°</param>
-    /// <param name="strTableName">è¡¨å</param>
+    /// <param name="xml">XMLÎÄ¼ş</param>
+    /// <param name="strWFTemplateName">Á÷³ÌÄ£°åÃû³Æ</param>
+    /// <param name="strTableName">±íÃû</param>
     public void TableDataToXMLData(Xml xml, string strWFTemplateName, string strTableName, DataSet ds)
     {
 

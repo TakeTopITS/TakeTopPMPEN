@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSystemAnalystChartRelatedUserSet.aspx.cs" Inherits="TTSystemAnalystChartRelatedUserSet" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSystemAnalystChartRelatedUserSet.aspx.cs" Inherits="TTSystemAnalystChartRelatedUserSet" %>
 
 <%@ register assembly="NickLee.Web.UI" namespace="NickLee.Web.UI" tagprefix="NickLee" %>
 <%@ register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
@@ -21,7 +21,7 @@
             if (top.location != self.location) { } else { CloseWebPage(); }
         });
 
-        //Âà∑Êñ∞Áà∂È°µÈù¢
+        //À¢–¬∏∏“≥√Ê
         function reloadPrentPage() {
 
             parent.reloadPage();
@@ -120,16 +120,16 @@
                                                             <td align="left" class="formItemBgStyle" style="padding-top: 0px;">
                                                                 <asp:DataGrid ID="DataGrid4" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnItemCommand="DataGrid4_ItemCommand" Width="90%">
                                                                     <Columns>
-                                                                        <asp:BoundColumn DataField="ID" HeaderText="ÁºñÂè∑">
+                                                                        <asp:BoundColumn DataField="ID" HeaderText="±‡∫≈">
                                                                             <ItemStyle Width="15%" BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
                                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Width="5%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="ChartName" HeaderText="Ê®°ÂùóÂêçÁß∞">
+                                                                        <asp:BoundColumn DataField="ChartName" HeaderText="ƒ£øÈ√˚≥∆">
                                                                             <ItemStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
                                                                             <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Width="45%" />
                                                                         </asp:BoundColumn>
 
-                                                                        <asp:TemplateColumn HeaderText="È°∫Â∫è">
+                                                                        <asp:TemplateColumn HeaderText="À≥–Ú">
                                                                             <ItemTemplate>
                                                                                 <asp:TextBox ID="TB_SortNumber" runat="server" Text="0" Width="40px"></asp:TextBox>
                                                                             </ItemTemplate>

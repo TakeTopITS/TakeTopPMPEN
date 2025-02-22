@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPnPCameraDetail.aspx.cs" Inherits="TTPnPCameraDetail" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPnPCameraDetail.aspx.cs" Inherits="TTPnPCameraDetail" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ÊëÑÂÉèÂ§¥</title>
+    <title>…„œÒÕ∑</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript">
@@ -15,16 +15,16 @@
                 versions: function () {
                     var u = navigator.userAgent, app = navigator.appVersion;
                     return {
-                        trident: u.indexOf('Trident') > -1, //IEÂÜÖÊ†∏                 
-                        presto: u.indexOf('Presto') > -1, //operaÂÜÖÊ†∏                 
-                        webKit: u.indexOf('AppleWebKit') > -1, //ËãπÊûú„ÄÅË∞∑Ê≠åÂÜÖÊ†∏                 
-                        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //ÁÅ´ÁãêÂÜÖÊ†∏                 
-                        mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //ÊòØÂê¶‰∏∫ÁßªÂä®ÁªàÁ´Ø                 
-                        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //iosÁªàÁ´Ø                 
-                        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //androidÁªàÁ´ØÊàñËÄÖucÊµèËßàÂô®                 
-                        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //ÊòØÂê¶‰∏∫iPhoneÊàñËÄÖQQHDÊµèËßàÂô®                 
-                        iPad: u.indexOf('iPad') > -1, //ÊòØÂê¶iPad                 
-                        webApp: u.indexOf('Safari') == -1 //ÊòØÂê¶webÂ∫îËØ•Á®ãÂ∫èÔºåÊ≤°ÊúâÂ§¥ÈÉ®‰∏éÂ∫ïÈÉ®             
+                        trident: u.indexOf('Trident') > -1, //IEƒ⁄∫À                 
+                        presto: u.indexOf('Presto') > -1, //operaƒ⁄∫À                 
+                        webKit: u.indexOf('AppleWebKit') > -1, //∆ªπ˚°¢π»∏Ëƒ⁄∫À                 
+                        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //ª∫¸ƒ⁄∫À                 
+                        mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), // «∑ÒŒ™“∆∂Ø÷’∂À                 
+                        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios÷’∂À                 
+                        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android÷’∂ÀªÚ’ﬂuc‰Ø¿¿∆˜                 
+                        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, // «∑ÒŒ™iPhoneªÚ’ﬂQQHD‰Ø¿¿∆˜                 
+                        iPad: u.indexOf('iPad') > -1, // «∑ÒiPad                 
+                        webApp: u.indexOf('Safari') == -1 // «∑Òweb”¶∏√≥Ã–Ú£¨√ª”–Õ∑≤ø”Îµ◊≤ø             
                     };
                 }()
             }
@@ -58,22 +58,22 @@
                 custom = "http://" + ServerIP + "/monitor2.htm";
             }
             else if (browser.versions.iPhone) {
-                //ÊòØÂê¶‰∏∫iPhone
+                // «∑ÒŒ™iPhone
                 document.getElementById("rightCamera").src = "http://" + ServerIP + "/iphone.htm";
                 custom = "http://" + ServerIP + "/iphone.htm";
             }
             else if (browser.versions.iPad) {
-                //ÊòØÂê¶iPad
+                // «∑ÒiPad
                 document.getElementById("rightCamera").src = "http://" + ServerIP + "/pda.htm";
                 custom = "http://" + ServerIP + "/pda.htm";
             }
             else if (browser.versions.android) {
-                //androidÁªàÁ´Ø
+                //android÷’∂À
                 document.getElementById("rightCamera").src = "http://" + ServerIP + "/pda.htm";
                 custom = "http://" + ServerIP + "/pda.htm";
             }
             else if (browser.versions.ios) {
-                //iosÁªàÁ´Ø
+                //ios÷’∂À
                 document.getElementById("rightCamera").src = "http://" + ServerIP + "/iphone.htm";
                 custom = "http://" + ServerIP + "/iphone.htm";
             }
@@ -92,7 +92,7 @@
                     //alert(json);
                 },
                 error: function () {
-                    //alert("Â§±Ë¥•");
+                    //alert("Failed");
                 }
 
             });
@@ -142,7 +142,7 @@
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr style="font-size: 12pt; display: none;">
                                                         <td align="right" class="formItemBgStyle" colspan="5">
-                                                            <input type="button" class="inpu" value="Êñ∞Â¢ûÊëÑÂÉèÂ§¥" onclick="window.location.href = 'TTPnPCameraAdd.aspx'" />
+                                                            <input type="button" class="inpu" value="–¬‘ˆ…„œÒÕ∑" onclick="window.location.href = 'TTPnPCameraAdd.aspx'" />
                                                         </td>
                                                     </tr>
                                                     <tr style="font-size: 12pt">
@@ -224,7 +224,7 @@
                                                                 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
-                                                                    <asp:TemplateColumn HeaderText="ÁªÑÁªáÔºö">
+                                                                    <asp:TemplateColumn HeaderText="◊È÷Ø£∫">
                                                                         <ItemTemplate>
                                                                             <input type="button" class="inpuLong" onclick='LoadCamera("<%# Eval("TypeName") %>    ", "<%# Eval("DPName")%>    ","<%# Eval("ServerIP")%>    ","<%# Eval("CameraName")%>    ",<%# Eval("ID")%>)' value='<%# Eval("CameraName") %>' />
                                                                         </ItemTemplate>

@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -23,7 +23,7 @@ public partial class TTAllProjectTreeByType : System.Web.UI.Page
         LB_UserCode.Text = strUserCode;
         //LB_UserName.Text = GetUserName(strUserCode);
 
-        //this.Title = "æŒ‰ç±»å‹æµè§ˆæ‰€æœ‰é¡¹ç›®---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
+        //this.Title = "°´ÀàĞÍä¯ÀÀËùÓĞÏîÄ¿---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
 
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
@@ -41,13 +41,13 @@ public partial class TTAllProjectTreeByType : System.Web.UI.Page
         string strHQL, strUserCode, strProjectType;
         IList lst;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>æŒ‰ç±»å‹æµè§ˆæ‰€æœ‰é¡¹ç›®</B>";
+        node1.Text = "<B>°´ÀàĞÍä¯ÀÀËùÓĞÏîÄ¿</B>";
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -91,7 +91,7 @@ public partial class TTAllProjectTreeByType : System.Web.UI.Page
         strHQL = "from Project as project where project.ProjectType = " + "'" + strProjectType + "'";
         strHQL += " and project.PMCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
      
-        strHQL += " and project.Status not in ('åˆ é™¤','å½’æ¡£')  order by project.ProjectID DESC";
+        strHQL += " and project.Status not in ('Deleted','Archived')  order by project.ProjectID DESC";
         lst1 = projectBLL.GetAllProjects(strHQL);
 
         for (int i = 0; i < lst1.Count; i++)

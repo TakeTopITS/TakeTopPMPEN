@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserLogonLog.aspx.cs" Inherits="TTUserLogonLog" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserLogonLog.aspx.cs" Inherits="TTUserLogonLog" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
@@ -248,28 +248,28 @@
                                                                             Height="25px" Width="100%"
                                                                             CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="ç”¨æˆ·ä»£ç ">
+                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="ÓÃ»§´úÂë">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserName" HeaderText="ç”¨æˆ·åç§°">
+                                                                                <asp:BoundColumn DataField="UserName" HeaderText="ÓÃ»§Ãû³Æ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="DeviceType" HeaderText="ç™»å½•ç±»åž‹">
+                                                                                <asp:BoundColumn DataField="DeviceType" HeaderText="µÇÂ¼ÀàÐÍ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserIP" HeaderText="ç”¨æˆ·IP">
+                                                                                <asp:BoundColumn DataField="UserIP" HeaderText="ÓÃ»§IP">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Position" HeaderText="ä½ç½®">
+                                                                                <asp:BoundColumn DataField="Position" HeaderText="Î»ÖÃ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="17%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="LoginTime" HeaderText="ç™»å½•æ—¶é—´">
+                                                                                <asp:BoundColumn DataField="LoginTime" HeaderText="µÇÂ¼Ê±¼ä">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="LastestTime" HeaderText="æœ€æ–°ä½¿ç”¨æ—¶é—´">
+                                                                                <asp:BoundColumn DataField="LastestTime" HeaderText="×îÐÂÊ¹ÓÃÊ±¼ä">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:TemplateColumn ItemStyle-HorizontalAlign="Center">

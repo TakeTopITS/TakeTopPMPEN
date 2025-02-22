@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -38,7 +38,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
         string strHQL;
         string strIdentifyString;
 
-        //CKEditoråˆå§‹åŒ–
+        //CKEditor³õÊ¼»¯
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(CKEditor1);
@@ -46,7 +46,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strIsMobileDevice = Session["IsMobileDevice"].ToString();
 
-        ///è·å–å‚æ•°nFolderIDçš„å€¼
+        ///»ñÈ¡²ÎÊınFolderIDµÄÖµ
         if (Request.Params["FolderID"] != null)
         {
             if (Int32.TryParse(Request.Params["FolderID"].ToString(), out nFolderID) == false)
@@ -54,7 +54,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
                 return;
             }
         }
-        ///è·å–å‚æ•°nMailIDçš„å€¼
+        ///»ñÈ¡²ÎÊınMailIDµÄÖµ
         if (Request.Params["MailID"] != null)
         {
             if (Int32.TryParse(Request.Params["MailID"].ToString(), out nMailID) == false)
@@ -78,7 +78,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
             {
                 CKEditor1.Visible = true;
             }
-            ///æ˜¾ç¤ºé‚®ä»¶å†…å®¹
+            ///ÏÔÊ¾ÓÊ¼şÄÚÈİ
             if (nMailID > -1)
             {
                 try
@@ -116,7 +116,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
         string stMailSignInfo;
 
 
-        stMailSignInfo = GetMailSignInfo(strUserCode, "å¤„ç†ä¸­");
+        stMailSignInfo = GetMailSignInfo(strUserCode, "InProgress");
 
         IMail mail = new Mail();
 
@@ -148,7 +148,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
     }
 
     protected void ReturnBtn_Click(object sender, EventArgs e)
-    {   ///è¿”å›åˆ°é‚®ä»¶åˆ—è¡¨é¡µé¢
+    {   ///·µ»Øµ½ÓÊ¼şÁĞ±íÒ³Ãæ
         Response.Redirect("~/TTMailDesktop.aspx");
         //Response.Write("<script language=javascript>history.go(-2);</script>");
     }
@@ -175,7 +175,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
         {
             mails.ReaderFlag = 1;
 
-            //æ–°é‚®ä»¶ï¼Œæ‰“å¼€ä»£è¡¨é˜…è¯»ï¼Œè‡ªåŠ¨è½¬å…¥â€œå·²é˜…é‚®ä»¶â€
+            //ĞÂÓÊ¼ş£¬´ò¿ª´ú±íÔÄ¶Á£¬×Ô¶¯×ªÈë¡°ÒÑÔÄÓÊ¼ş¡±
             if (strKeyWord == "New")
             {
                 intNewFolderID = GetMailFolderID(strUserCode, "Read");
@@ -229,11 +229,11 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
             strIdentifyString = LB_IdentifyString.Text.Trim();
 
 
-            strFileName1 = this.AttachFile.FileName;//è·å–ä¸Šä¼ æ–‡ä»¶çš„æ–‡ä»¶å,åŒ…æ‹¬åç¼€
+            strFileName1 = this.AttachFile.FileName;//»ñÈ¡ÉÏ´«ÎÄ¼şµÄÎÄ¼şÃû,°üÀ¨ºó×º
 
-            strExtendName = System.IO.Path.GetExtension(strFileName1);//è·å–æ‰©å±•å
+            strExtendName = System.IO.Path.GetExtension(strFileName1);//»ñÈ¡À©Õ¹Ãû
 
-            DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+            DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
 
             string strFileName2 = System.IO.Path.GetFileName(strFileName1);
             string strExtName = Path.GetExtension(strFileName2);
@@ -331,7 +331,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
 
         strEnableSMTPSSL = mailProfile.EnableSMTPSSL.Trim();
 
-        ///æ·»åŠ å‘ä»¶äººåœ°å€
+        ///Ìí¼Ó·¢¼şÈËµØÖ·
         from = mailProfile.Email.Trim();
 
         MailMessage mailMsg = new MailMessage();
@@ -351,11 +351,11 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
         }
 
 
-        ///æ·»åŠ é‚®ä»¶ä¸»é¢˜
+        ///Ìí¼ÓÓÊ¼şÖ÷Ìâ
         mailMsg.Subject = Title.Text.Trim();
         nContain += Title.Text.Length;
 
-        ///æ·»åŠ é‚®ä»¶å†…å®¹
+        ///Ìí¼ÓÓÊ¼şÄÚÈİ
         ///
 
         if (strIsMobileDevice == "YES")
@@ -376,7 +376,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
         }
 
 
-        //åŠ é‚®ä»¶é™„ä»¶
+        //¼ÓÓÊ¼ş¸½¼ş
         Attachment attachment;
 
         string strIdentifyString = LB_IdentifyString.Text.Trim();
@@ -406,7 +406,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
                     else
                     {
                         strAttachDocFullURL = Request.ServerVariables["HTTP_HOST"] + Request.ApplicationPath + "/" + attachments.Url.Trim();
-                        strAttachmentUrlList += "</br>é™„ä»¶ï¼š<a href=http://" + strAttachDocFullURL + " target=_blank >" + attachments.Name.Trim() + "</a>";
+                        strAttachmentUrlList += "</br>¸½¼ş£º<a href=http://" + strAttachDocFullURL + " target=_blank >" + attachments.Name.Trim() + "</a>";
                     }
 
                     nContain += int.Parse(f.Length.ToString());
@@ -436,19 +436,19 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
             SmtpClient smtpClient = new SmtpClient(mailProfile.SmtpServerIP, mailProfile.SmtpServerPort);
             if (strEnableSMTPSSL == "YES")
             {
-                //å¯ç”¨SSL
+                //ÆôÓÃSSL
                 smtpClient.EnableSsl = true;
             }
             smtpClient.UseDefaultCredentials = false;
             smtpClient.Credentials = new NetworkCredential(mailProfile.AliasName.Trim(), mailProfile.Password.Trim());
-            /*æŒ‡å®šå¦‚ä½•å¤„ç†å¾…å‘çš„é‚®ä»¶*/
+            /*Ö¸¶¨ÈçºÎ´¦Àí´ı·¢µÄÓÊ¼ş*/
             smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
 
             try
             {
                 smtpClient.Send(mailMsg);
 
-                //åˆ é™¤åŸæ¥é‚®ä»¶
+                //É¾³ıÔ­À´ÓÊ¼ş
                 strHQL = "Delete From T_Mail Where MailID = " + Request.Params["MailID"];
                 ShareClass.RunSqlCommand(strHQL);
                 strHQL = "Delete From T_Mail Where MailID = " + Request.Params["MailID"];
@@ -458,7 +458,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
                 if (mailMsg.Attachments.Count > 0)
                     intAttachmentCount = 1;
 
-                //å‘é€é‚®ä»¶
+                //·¢ËÍÓÊ¼ş
                 nMailID = mail.SaveAsMail(mailMsg.Subject, mailMsg.Body, from,
                     To.Text.Trim(), CC.Text.Trim(), 1,
                     nContain, mailMsg.Attachments.Count > 0 ? 1 : 0, 1, folder.GetFolderID("Send", strUserCode), strUserCode);
@@ -472,7 +472,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
 
             if (nMailID > 0)
             {
-                ///ä¿å­˜å‘é€é‚®ä»¶çš„é™„ä»¶
+                ///±£´æ·¢ËÍÓÊ¼şµÄ¸½¼ş
                 ///
 
                 strHQL = "From Attachments as attachments where attachments.IdentifyString = " + "'" + strIdentifyString + "'";
@@ -491,7 +491,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
                         strNewFullFileName = System.IO.Path.GetFileName(f.FullName);
 
 
-                        ///ä¿å­˜å‘é€é‚®ä»¶çš„é™„ä»¶
+                        ///±£´æ·¢ËÍÓÊ¼şµÄ¸½¼ş
                         mail.SaveAsMailAttachment(
                           strNewFullFileName,
                           attachments.Url.Trim(),
@@ -507,7 +507,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            //è·³è½¬åˆ°å¼‚å¸¸é”™è¯¯å¤„ç†é¡µé¢
+            //Ìø×ªµ½Òì³£´íÎó´¦ÀíÒ³Ãæ
             Response.Redirect("TTErrorPage.aspx?ErrorMsg=" + ex.Message.Replace("<br>", "").Replace("\n", "")
                 + "&ErrorUrl=" + Request.Url.ToString().Replace("<br>", "").Replace("\n", ""));
         }
@@ -541,7 +541,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
         lst = mailProfileBLL.GetAllMailProfiles(strHQL);
         MailProfile mailProfile = (MailProfile)lst[0];
 
-        ///æ·»åŠ å‘ä»¶äººåœ°å€
+        ///Ìí¼Ó·¢¼şÈËµØÖ·
         from = mailProfile.Email.Trim();
 
         MailMessage mailMsg = new MailMessage();
@@ -561,11 +561,11 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
         }
 
 
-        ///æ·»åŠ é‚®ä»¶ä¸»é¢˜
+        ///Ìí¼ÓÓÊ¼şÖ÷Ìâ
         mailMsg.Subject = Title.Text.Trim();
         nContain += Title.Text.Length;
 
-        ///æ·»åŠ é‚®ä»¶å†…å®¹
+        ///Ìí¼ÓÓÊ¼şÄÚÈİ
    
         if (strIsMobileDevice == "YES")
         {
@@ -585,7 +585,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
         }
 
 
-        //åŠ é‚®ä»¶é™„ä»¶
+        //¼ÓÓÊ¼ş¸½¼ş
         Attachment attachment;
 
         string strIdentifyString = LB_IdentifyString.Text.Trim();
@@ -615,7 +615,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
                     else
                     {
                         strAttachDocFullURL = Request.ServerVariables["HTTP_HOST"] + Request.ApplicationPath + "/" + attachments.Url.Trim();
-                        strAttachmentUrlList += "</br>é™„ä»¶ï¼š<a href=http://" + strAttachDocFullURL + " target=_blank >" + attachments.Name.Trim() + "</a>";
+                        strAttachmentUrlList += "</br>¸½¼ş£º<a href=http://" + strAttachDocFullURL + " target=_blank >" + attachments.Name.Trim() + "</a>";
                     }
 
                     nContain += int.Parse(f.Length.ToString());
@@ -645,12 +645,12 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
             SmtpClient smtpClient = new SmtpClient(mailProfile.SmtpServerIP, mailProfile.SmtpServerPort);
             smtpClient.UseDefaultCredentials = false;
             smtpClient.Credentials = new NetworkCredential(mailProfile.AliasName.Trim(), mailProfile.Password.Trim());
-            /*æŒ‡å®šå¦‚ä½•å¤„ç†å¾…å‘çš„é‚®ä»¶*/
+            /*Ö¸¶¨ÈçºÎ´¦Àí´ı·¢µÄÓÊ¼ş*/
             smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
 
             try
             {
-                //åˆ é™¤åŸæ¥é‚®ä»¶
+                //É¾³ıÔ­À´ÓÊ¼ş
                 strHQL = "Delete From T_Mail Where MailID = " + Request.Params["MailID"];
                 ShareClass.RunSqlCommand(strHQL);
                 strHQL = "Delete From T_Mail Where MailID = " + Request.Params["MailID"];
@@ -661,7 +661,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
                 if (mailMsg.Attachments.Count > 0)
                     intAttachmentCount = 1;
 
-                //å‘é€é‚®ä»¶
+                //·¢ËÍÓÊ¼ş
                 nMailID = mail.SaveAsMail(mailMsg.Subject, mailMsg.Body, from,
                     To.Text.Trim(), CC.Text.Trim(), 1,
                     nContain, mailMsg.Attachments.Count > 0 ? 1 : 0, 1, folder.GetFolderID("Draft", strUserCode), strUserCode);
@@ -676,7 +676,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
 
             if (nMailID > 0)
             {
-                ///ä¿å­˜å‘é€é‚®ä»¶çš„é™„ä»¶
+                ///±£´æ·¢ËÍÓÊ¼şµÄ¸½¼ş
                 ///
 
                 strHQL = "From Attachments as attachments where attachments.IdentifyString = " + "'" + strIdentifyString + "'";
@@ -695,7 +695,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
                         strNewFullFileName = System.IO.Path.GetFileName(f.FullName);
 
 
-                        ///ä¿å­˜å‘é€é‚®ä»¶çš„é™„ä»¶
+                        ///±£´æ·¢ËÍÓÊ¼şµÄ¸½¼ş
                         mail.SaveAsMailAttachment(
                           strNewFullFileName,
                           attachments.Url.Trim(),
@@ -711,7 +711,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            //è·³è½¬åˆ°å¼‚å¸¸é”™è¯¯å¤„ç†é¡µé¢
+            //Ìø×ªµ½Òì³£´íÎó´¦ÀíÒ³Ãæ
             Response.Redirect("TTErrorPage.aspx?ErrorMsg=" + ex.Message.Replace("<br>", "").Replace("\n", "")
                 + "&ErrorUrl=" + Request.Url.ToString().Replace("<br>", "").Replace("\n", ""));
         }
@@ -854,7 +854,7 @@ public partial class TTMailSenderFromDraft : System.Web.UI.Page
         string strHQL;
         string strSignInfo;
 
-        strHQL = "Select SignInfo From T_MailSignInfo Where UserCode = " + "'" + strUserCode + "'" + " And Status = 'å¤„ç†ä¸­' Order By ID DESC";
+        strHQL = "Select SignInfo From T_MailSignInfo Where UserCode = " + "'" + strUserCode + "'" + " And Status = 'InProgress' Order By ID DESC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_MailSignInfo");
 
         if (ds.Tables[0].Rows.Count > 0)

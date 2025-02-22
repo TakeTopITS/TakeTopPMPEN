@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -34,18 +34,18 @@ public partial class TTDailyUploadDoc : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
         {     
-            strHQL = "from Document as document where (((document.RelatedType = 'é¡¹ç›®' and document.RelatedID = " + strProjectID + ")";
+            strHQL = "from Document as document where (((document.RelatedType = 'Project' and document.RelatedID = " + strProjectID + ")";
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( 'éƒ¨é—¨','å…¨ä½“'))))";
-            strHQL += " or (((document.RelatedType = 'éœ€æ±‚' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
-            strHQL += " or (document.RelatedType = 'é£Žé™©' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";
-            strHQL += " or (document.RelatedType = 'ä»»åŠ¡' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
-            strHQL += " or (document.RelatedType = 'è®¡åˆ’' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
-            strHQL += " or (document.RelatedType = 'ä¼šè®®' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='é¡¹ç›®' and  meeting.RelatedID = " + strProjectID + "))";
-            strHQL += " and ((document.Visible in ('ä¼šè®®','éƒ¨é—¨') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";
-            strHQL += " or (document.Visible = 'å…¨ä½“' )))))";
+            strHQL += " or (document.Visible in ( '²¿ÃÅ','È«Ìå'))))";
+            strHQL += " or (((document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
+            strHQL += " or (document.RelatedType = '·çÏÕ' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";
+            strHQL += " or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
+            strHQL += " or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
+            strHQL += " or (document.RelatedType = '»áÒé' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Project' and  meeting.RelatedID = " + strProjectID + "))";
+            strHQL += " and ((document.Visible in ('»áÒé','²¿ÃÅ') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";
+            strHQL += " or (document.Visible = 'È«Ìå' )))))";
             strHQL += " and to_char(document.UploadTime,'yyyymmdd') = " + "'" + strWorkDate + "'";
-            strHQL += " and rtrim(ltrim(document.Status)) <> 'åˆ é™¤' Order by document.DocID DESC";
+            strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
          
             LB_Sql.Text = strHQL;        
 

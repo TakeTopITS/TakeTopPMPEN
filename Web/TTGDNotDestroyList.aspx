@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDNotDestroyList.aspx.cs" Inherits="TTGDNotDestroyList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDNotDestroyList.aspx.cs" Inherits="TTGDNotDestroyList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Êó†ÊçüÊ£ÄÊµãÊä•ÂëäÂàóË°®</title>
+    <title>ŒﬁÀºÏ≤‚±®∏Ê¡–±Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
@@ -54,9 +54,9 @@
                                     <table width="100%" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left" class="formItemBgStyle">
-                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>Ôºö<asp:DropDownList ID="DDL_GDProject" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_GDProject_SelectedIndexChanged"></asp:DropDownList>&nbsp;
-                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DanXianTuHao%>"></asp:Label>Ôºö<asp:DropDownList ID="DDL_Isom_no" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_Isom_no_SelectedIndexChanged"></asp:DropDownList>&nbsp;
-                                                <input type="button" class="inpuLong" value="Êñ∞Â¢ûÊó†ÊçüÊ£ÄÊµãÊä•Âëä" onclick="window.location.href = 'TTGDNotDestroyEdit.aspx'" />
+                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>£∫<asp:DropDownList ID="DDL_GDProject" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_GDProject_SelectedIndexChanged"></asp:DropDownList>&nbsp;
+                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DanXianTuHao%>"></asp:Label>£∫<asp:DropDownList ID="DDL_Isom_no" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_Isom_no_SelectedIndexChanged"></asp:DropDownList>&nbsp;
+                                                <input type="button" class="inpuLong" value="–¬‘ˆŒﬁÀºÏ≤‚±®∏Ê" onclick="window.location.href = 'TTGDNotDestroyEdit.aspx'" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -71,49 +71,49 @@
                                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                     <tr>
                                                                         <td width="4%" align="center">
-                                                                            <strong>ÁÑäÂ∑•Âè∑</strong>
+                                                                            <strong>∫∏π§∫≈</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>ÁÑäÂè£Áä∂ÊÄÅ</strong>
+                                                                            <strong>∫∏ø⁄◊¥Ã¨</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>Â∞∫ÂØ∏</strong>
+                                                                            <strong>≥ﬂ¥Á</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>Á±ªÂûã</strong>
+                                                                            <strong>¿‡–Õ</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
                                                                             <strong>S/F</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>‰ªãË¥®</strong>
+                                                                            <strong>ΩÈ÷ </strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>ÊâìÂ∫ïÁÑäÂ∑•1</strong>
+                                                                            <strong>¥Úµ◊∫∏π§1</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>ÊâìÂ∫ïÁÑäÂ∑•2</strong>
+                                                                            <strong>¥Úµ◊∫∏π§2</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>ÊâìÂ∫ïÊó•Êúü</strong>
+                                                                            <strong>¥Úµ◊»’∆⁄</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>ÁõñÈù¢ÁÑäÂ∑•1</strong>
+                                                                            <strong>∏«√Ê∫∏π§1</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>ÁõñÈù¢ÁÑäÂ∑•2</strong>
+                                                                            <strong>∏«√Ê∫∏π§2</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>ÁõñÈù¢Êó•Êúü</strong>
+                                                                            <strong>∏«√Ê»’∆⁄</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>ËøîÂ∑•ÁÑäÂ∑•</strong>
+                                                                            <strong>∑µπ§∫∏π§</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>ËøîÂ∑•Êó•Êúü</strong>
+                                                                            <strong>∑µπ§»’∆⁄</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>ËØïÂéãÂåÖÂè∑</strong>
+                                                                            <strong> ‘—π∞¸∫≈</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
                                                                             <strong>FRI1</strong>
@@ -128,70 +128,70 @@
                                                                             <strong>FRI4</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>ÁªÑË£ÖÊó•Êúü</strong>
+                                                                            <strong>◊È◊∞»’∆⁄</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>ÁªÑË£Ö</strong>
+                                                                            <strong>◊È◊∞</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>Â§ñËßÇÊó•Êúü</strong>
+                                                                            <strong>Õ‚π€»’∆⁄</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>Â§ñËßÇ</strong>
+                                                                            <strong>Õ‚π€</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>RTÊó•Êúü</strong>
+                                                                            <strong>RT»’∆⁄</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
                                                                             <strong>RT</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>PTÊó•Êúü</strong>
+                                                                            <strong>PT»’∆⁄</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
                                                                             <strong>PT</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>PWHTÊó•Êúü</strong>
+                                                                            <strong>PWHT»’∆⁄</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
                                                                             <strong>PWHT</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>PMIÊó•Êúü</strong>
+                                                                            <strong>PMI»’∆⁄</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
                                                                             <strong>PMI</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>MTÊó•Êúü</strong>
+                                                                            <strong>MT»’∆⁄</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
                                                                             <strong>MT</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>OrificeÊó•Êúü</strong>
+                                                                            <strong>Orifice»’∆⁄</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
                                                                             <strong>Orifice</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>Á©∫Ê∞îËØïÂéãÊó•Êúü</strong>
+                                                                            <strong>ø’∆¯ ‘—π»’∆⁄</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>Á©∫Ê∞îËØïÂéã</strong>
+                                                                            <strong>ø’∆¯ ‘—π</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>Tie-InÊó•Êúü</strong>
+                                                                            <strong>Tie-In»’∆⁄</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
                                                                             <strong>Tie-In</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>RTÁªÜËäÇ1</strong>
+                                                                            <strong>RTœ∏Ω⁄1</strong>
                                                                         </td>
                                                                         <td width="4%" align="center">
-                                                                            <strong>RTÁªÜËäÇ2</strong>
+                                                                            <strong>RTœ∏Ω⁄2</strong>
                                                                         </td>
                                                                     </tr>
                                                                 </table>
@@ -208,57 +208,60 @@
                                                             <asp:TemplateColumn>
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                 <HeaderTemplate>
-                                                                    Êìç‰Ωú
+                                                                    ≤Ÿ◊˜
                                                                 </HeaderTemplate>
                                                                 <ItemTemplate>
-                                                                    <a href='TTGDNotDestroyEdit.aspx?id=<%# DataBinder.Eval(Container.DataItem,"ID") %>'>ÁºñËæë</a>
-                                                                    <asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="Âà†Èô§" />
+                                                                    <a href='TTGDNotDestroyEdit.aspx?id=<%# DataBinder.Eval(Container.DataItem,"ID") %>'>±‡º≠</a>
+                                                                    <asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="Deleted" />
                                                                     
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="WeldCode" HeaderText="ÁÑäÂè£Âè∑">
+                                                            <asp:BoundColumn DataField="WeldCode" HeaderText="∫∏ø⁄∫≈">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="WeldStatus" HeaderText="ÁÑäÂè£Áä∂ÊÄÅ">
-                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
-                                                            </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Size" HeaderText="Â∞∫ÂØ∏">
+                                                            <asp:TemplateColumn HeaderText="◊¥Ã¨">
+    <ItemTemplate>
+        <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("WeldStatus").ToString()) %>
+    </ItemTemplate>
+    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
+</asp:TemplateColumn>
+                                                            <asp:BoundColumn DataField="Size" HeaderText="≥ﬂ¥Á">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Mold" HeaderText="Á±ªÂûã">
+                                                            <asp:BoundColumn DataField="Mold" HeaderText="¿‡–Õ">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="SF" HeaderText="S/F">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Medium" HeaderText="‰ªãË¥®">
+                                                            <asp:BoundColumn DataField="Medium" HeaderText="ΩÈ÷ ">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="RanderWelder1" HeaderText="ÊâìÂ∫ïÁÑäÂ∑•1">
+                                                            <asp:BoundColumn DataField="RanderWelder1" HeaderText="¥Úµ◊∫∏π§1">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="RanderWelder2" HeaderText="ÊâìÂ∫ïÁÑäÂ∑•2">
+                                                            <asp:BoundColumn DataField="RanderWelder2" HeaderText="¥Úµ◊∫∏π§2">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="RanderTime" HeaderText="ÊâìÂ∫ïÊó•Êúü">
+                                                            <asp:BoundColumn DataField="RanderTime" HeaderText="¥Úµ◊»’∆⁄">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="CoveringWelder1" HeaderText="ÁõñÈù¢ÁÑäÂ∑•1">
+                                                            <asp:BoundColumn DataField="CoveringWelder1" HeaderText="∏«√Ê∫∏π§1">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="CoveringWelder2" HeaderText="ÁõñÈù¢ÁÑäÂ∑•2">
+                                                            <asp:BoundColumn DataField="CoveringWelder2" HeaderText="∏«√Ê∫∏π§2">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="CoveringTime" HeaderText="ÁõñÈù¢Êó•Êúü">
+                                                            <asp:BoundColumn DataField="CoveringTime" HeaderText="∏«√Ê»’∆⁄">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ReturnWelder" HeaderText="ËøîÂ∑•ÁÑäÂ∑•">
+                                                            <asp:BoundColumn DataField="ReturnWelder" HeaderText="∑µπ§∫∏π§">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ReturnTime" HeaderText="ËøîÂ∑•Êó•Êúü">
+                                                            <asp:BoundColumn DataField="ReturnTime" HeaderText="∑µπ§»’∆⁄">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="PressurePackNo" HeaderText="ËØïÂéãÂåÖÂè∑">
+                                                            <asp:BoundColumn DataField="PressurePackNo" HeaderText=" ‘—π∞¸∫≈">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="FRI1" HeaderText="FRI1">
@@ -273,70 +276,70 @@
                                                             <asp:BoundColumn DataField="FRI4" HeaderText="FRI4">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="PackageTime" HeaderText="ÁªÑË£ÖÊó•Êúü">
+                                                            <asp:BoundColumn DataField="PackageTime" HeaderText="◊È◊∞»’∆⁄">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Package" HeaderText="ÁªÑË£Ö">
+                                                            <asp:BoundColumn DataField="Package" HeaderText="◊È◊∞">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="OutsideTime" HeaderText="Â§ñËßÇÊó•Êúü">
+                                                            <asp:BoundColumn DataField="OutsideTime" HeaderText="Õ‚π€»’∆⁄">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Outside" HeaderText="Â§ñËßÇ">
+                                                            <asp:BoundColumn DataField="Outside" HeaderText="Õ‚π€">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="RTTime" HeaderText="RTÊó•Êúü">
+                                                            <asp:BoundColumn DataField="RTTime" HeaderText="RT»’∆⁄">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="RT" HeaderText="RT">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="PTTime" HeaderText="PTÊó•Êúü">
+                                                            <asp:BoundColumn DataField="PTTime" HeaderText="PT»’∆⁄">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="PT" HeaderText="PT">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="PWHTTime" HeaderText="PWHTÊó•Êúü">
+                                                            <asp:BoundColumn DataField="PWHTTime" HeaderText="PWHT»’∆⁄">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="PWHT" HeaderText="PWHT">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="PMITime" HeaderText="PMIÊó•Êúü">
+                                                            <asp:BoundColumn DataField="PMITime" HeaderText="PMI»’∆⁄">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="PMI" HeaderText="PMI">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="MTTime" HeaderText="MTÊó•Êúü">
+                                                            <asp:BoundColumn DataField="MTTime" HeaderText="MT»’∆⁄">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="MT" HeaderText="MT">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="OrificeTime" HeaderText="OrificeÊó•Êúü">
+                                                            <asp:BoundColumn DataField="OrificeTime" HeaderText="Orifice»’∆⁄">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="Orifice" HeaderText="Orifice">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="AirPressTime" HeaderText="Á©∫Ê∞îËØïÂéãÊó•Êúü">
+                                                            <asp:BoundColumn DataField="AirPressTime" HeaderText="ø’∆¯ ‘—π»’∆⁄">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="AirPress" HeaderText="Á©∫Ê∞îËØïÂéã">
+                                                            <asp:BoundColumn DataField="AirPress" HeaderText="ø’∆¯ ‘—π">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="TieInTime" HeaderText="Tie-InÊó•Êúü">
+                                                            <asp:BoundColumn DataField="TieInTime" HeaderText="Tie-In»’∆⁄">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="TieIn" HeaderText="Tie-In">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="RTDetail1" HeaderText="RTÁªÜËäÇ1">
+                                                            <asp:BoundColumn DataField="RTDetail1" HeaderText="RTœ∏Ω⁄1">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="RTDetail2" HeaderText="RTÁªÜËäÇ2">
+                                                            <asp:BoundColumn DataField="RTDetail2" HeaderText="RTœ∏Ω⁄2">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

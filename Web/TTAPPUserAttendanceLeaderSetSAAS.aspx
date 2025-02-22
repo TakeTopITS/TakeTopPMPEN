@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPUserAttendanceLeaderSetSAAS.aspx.cs" Inherits="TTAPPUserAttendanceLeaderSetSAAS" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPUserAttendanceLeaderSetSAAS.aspx.cs" Inherits="TTAPPUserAttendanceLeaderSetSAAS" %>
 
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
@@ -69,7 +69,7 @@
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%></td>
                                                     </tr>
                                                 </table>
-                                                <img id="IMG_Waiting" src="Images/Processing.gif" alt="è¯·ç¨å€™ï¼Œå¤„ç†ä¸­..." style="display: none;" />
+                                                <img id="IMG_Waiting" src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖÐ..." style="display: none;" />
                                             </a>
                                         </td>
 
@@ -83,7 +83,7 @@
                                  <table style="width: 100%; text-align: left;">
                                     <tr>
                                         <td width="80%">
-                                            <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,ZhuGuanDaiMa%>"></asp:Label>ï¼š
+                                            <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,ZhuGuanDaiMa%>"></asp:Label>£º
                                       
                                             <asp:TextBox ID="TB_LeaderCode" Width="70%" runat="server"></asp:TextBox>
                                         </td>
@@ -136,7 +136,7 @@
                                                                   <%# DataBinder.Eval(Container.DataItem,"LeaderCode") %>
                                                             </ItemTemplate>
                                                         </asp:TemplateColumn>
-                                                    <%--<asp:BoundColumn DataField="LeaderName" HeaderText="ä¸»ç®¡">
+                                                    <%--<asp:BoundColumn DataField="LeaderName" HeaderText="Ö÷¹Ü">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                     </asp:BoundColumn>--%>
                                                       <asp:TemplateColumn HeaderText="ID">

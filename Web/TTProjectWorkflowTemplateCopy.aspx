@@ -1,11 +1,11 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectWorkflowTemplateCopy.aspx.cs" Inherits="TTProjectWorkflowTemplateCopy" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectWorkflowTemplateCopy.aspx.cs" Inherits="TTProjectWorkflowTemplateCopy" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>é¡¹ç›®å·¥ä½œè®¡åˆ’</title>
+    <title>ÏîÄ¿¹¤×÷¼Æ»®</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
@@ -98,7 +98,7 @@
                                                     </ItemTemplate>
                                                 </asp:TemplateColumn>
                                                 <asp:HyperLinkColumn DataNavigateUrlField="IdentifyString" DataNavigateUrlFormatString="TTWorkFlowTemplateView.aspx?IdentifyString={0}"
-                                                    HeaderText="æ¨¡æ¿åç§°" Target="_blank" Text="æ¨¡æ¿å†…å®¹">
+                                                    HeaderText="Ä£°åÃû³Æ" Target="_blank" Text="Ä£°åÄÚÈÝ">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="45%" />
                                                 </asp:HyperLinkColumn>
 
@@ -156,15 +156,15 @@
                                             ForeColor="#333333" ShowHeader="False"
                                             GridLines="None">
                                             <Columns>
-                                                <asp:BoundColumn DataField="ID" HeaderText="åºå·">
+                                                <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                 </asp:BoundColumn>
                                                 <asp:HyperLinkColumn DataNavigateUrlField="IdentifyString" DataNavigateUrlFormatString="TTWorkFlowTemplateView.aspx?IdentifyString={0}"
-                                                    DataTextField="WFTemplateName" HeaderText="æ¨¡æ¿åç§°" Target="_blank">
+                                                    DataTextField="WFTemplateName" HeaderText="Ä£°åÃû³Æ" Target="_blank">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="65%" />
                                                 </asp:HyperLinkColumn>
                                                 <asp:ButtonColumn CommandName="Delete"
-                                                    Text="&lt;div&gt;&lt;img src=ImagesSkin/icon_del.gif border=0 alt='åˆ é™¤' /&gt;&lt;/div&gt;">
+                                                    Text="&lt;div&gt;&lt;img src=ImagesSkin/icon_del.gif border=0 alt='Deleted' /&gt;&lt;/div&gt;">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                 </asp:ButtonColumn>
                                             </Columns>

@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using System;
 using System.Collections;
 using System.Configuration;
@@ -62,7 +62,7 @@ public partial class TTWorkPlanListView : System.Web.UI.Page
 
                 if (DateTime.Parse(strEndTime) < dtNowTime)
                 {
-                    if (strStatus != "å®Œæˆ" & strStatus != "å·²å®Œæˆ")
+                    if (strStatus != "Completed" & strStatus != "ÒÑÍê³É")
                     {
                         DataGrid1.Items[i].ForeColor = Color.Red;
                     }
@@ -80,7 +80,7 @@ public partial class TTWorkPlanListView : System.Web.UI.Page
             DataGrid2.DataBind();
 
             LB_Plan.Visible = true;
-            LB_Plan.Text = "æˆ‘å‚ä¸Žçš„è®¡åˆ’ï¼š" + strWorkID + " " + strPlanName + " çš„è¯¦ç»†å†…å®¹ï¼š";
+            LB_Plan.Text = "ÎÒ²ÎÓëµÄ¼Æ»®£º" + strWorkID + " " + strPlanName + " µÄÏêÏ¸ÄÚÈÝ£º";
         }
     }
 
@@ -94,7 +94,7 @@ public partial class TTWorkPlanListView : System.Web.UI.Page
         string strVerID;
         string strUserCode = Session["UserCode"].ToString();
 
-        strVerID = ShareClass.GetProjectPlanVersion(strProjectID, "åœ¨ç”¨").ToString();
+        strVerID = ShareClass.GetProjectPlanVersion(strProjectID, "InUse").ToString();
 
         strHQL = " select distinct PlanID,ProjectID,WorkID,PlanDetail,LeaderCode,Leader,BeginTime,EndTime,Resource,Budget,MakeDate,Status,ParentIDGantt,";
         strHQL += " PriorID,Type,VerID,DefaultSchedule,DefaultCost,COALESCE(FinishPercent,0) as FinishPercent  ";
@@ -123,7 +123,7 @@ public partial class TTWorkPlanListView : System.Web.UI.Page
 
             if (DateTime.Parse(strEndTime) < dtNowTime)
             {
-                if (strStatus != "å®Œæˆ" & strStatus != "å·²å®Œæˆ")
+                if (strStatus != "Completed" & strStatus != "ÒÑÍê³É")
                 {
                     DataGrid1.Items[i].ForeColor = Color.Red;
                 }

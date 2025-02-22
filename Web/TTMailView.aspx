@@ -1,9 +1,9 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMailView.aspx.cs" Inherits="TTMailView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMailView.aspx.cs" Inherits="TTMailView" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>æŸ¥çœ‹é‚®ä»¶</title>
+    <title>²é¿´ÓÊ¼þ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
@@ -160,20 +160,20 @@
                                         <SelectedRowStyle Font-Bold="True" ForeColor="#333333" BackColor="#D1DDF1" BorderColor="CornflowerBlue" />
                                         <RowStyle CssClass="itemStyle" />
                                         <Columns>
-                                            <asp:TemplateField HeaderText="æ–‡ä»¶åç§°">
+                                            <asp:TemplateField HeaderText="ÎÄ¼þÃû³Æ">
                                                 <ItemTemplate>
                                                     <a href='<%#DataBinder.Eval(Container.DataItem,"Url") %>' target="_blank">
                                                         <%#DataBinder.Eval(Container.DataItem,"Name") %></a>
                                                 </ItemTemplate>
                                                 <ItemStyle HorizontalAlign="Left" CssClass="itemBorder" Width="70%" />
                                             </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="æ–‡ä»¶ç±»åž‹">
+                                            <asp:TemplateField HeaderText="ÎÄ¼þÀàÐÍ">
                                                 <ItemTemplate>
                                                     <%# DataBinder.Eval(Container.DataItem,"Type") %>
                                                 </ItemTemplate>
                                                 <ItemStyle HorizontalAlign="Center" CssClass="itemBorder" Width="15%" />
                                             </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="æ–‡ä»¶å¤§å°">
+                                            <asp:TemplateField HeaderText="ÎÄ¼þ´óÐ¡">
                                                 <ItemTemplate>
                                                     <%# (int)DataBinder.Eval(Container.DataItem,"Contain")/1024 %>KB
                                                 </ItemTemplate>

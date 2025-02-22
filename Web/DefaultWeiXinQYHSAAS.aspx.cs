@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections;
 using System.Data;
 using System.Web;
@@ -13,12 +13,12 @@ using TakeTopSecurity;
 
 public partial class DefaultWeiXinQYHSAAS : System.Web.UI.Page
 {
-    //private string strToken;//ä¸å¾®ä¿¡å…¬ä¼—è´¦å·åå°çš„Tokenè®¾ç½®ä¿æŒä¸€è‡´ï¼ŒåŒºåˆ†å¤§å°å†™ã€‚
+    //private string strToken;//ÓëÎ¢ĞÅ¹«ÖÚÕËºÅºóÌ¨µÄTokenÉèÖÃ±£³ÖÒ»ÖÂ£¬Çø·Ö´óĞ¡Ğ´¡£
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //é’Ÿç¤¼æœˆä½œå“(jack.erp@gmail.com)
-        //æ³°é¡¶æ‹“é¼é›†å›¢ï¼ˆTakeTop Softwareï¼‰2006ï¼2026\
+        //ÖÓÀñÔÂ×÷Æ·(jack.erp@gmail.com)
+        //Ì©¶¥ÍØ¶¦¼¯ÍÅ£¨TakeTop Software£©2006£­2026\
 
         string strVerificationCode, strSMSVerification, strIsOEMVersion;
         string strUserHostAddress = Request.UserHostAddress;
@@ -73,7 +73,7 @@ public partial class DefaultWeiXinQYHSAAS : System.Web.UI.Page
             }
 
             strIsOEMVersion = System.Configuration.ConfigurationManager.AppSettings["IsOEMVersion"];
-            LB_Copyright.Text = "CopyrightÂ© TakeTopITS Group 2006-2026";
+            LB_Copyright.Text = "Copyright? TakeTopITS Group 2006-2026";
 
             if (strIsOEMVersion == "NO")
             {
@@ -82,7 +82,7 @@ public partial class DefaultWeiXinQYHSAAS : System.Web.UI.Page
             else
             {
                 LB_Copyright.Visible = true;
-                LB_Copyright.Text = "CopyrightÂ© 2006-2026";
+                LB_Copyright.Text = "Copyright? 2006-2026";
             }
         }
     }
@@ -114,12 +114,12 @@ public partial class DefaultWeiXinQYHSAAS : System.Web.UI.Page
         try
         {
             strPassword = EncryptPassword(strPassword, "MD5");
-            strHQL = "Select * from T_ProjectMember where UserCode = " + "'" + strUserCode + "'" + " and " + " Password = " + "'" + strPassword + "'" + " and " + " rtrim(ltrim(Status)) not in ( 'ç»ˆæ­¢','ç¦»èŒ')";
+            strHQL = "Select * from T_ProjectMember where UserCode = " + "'" + strUserCode + "'" + " and " + " Password = " + "'" + strPassword + "'" + " and " + " rtrim(ltrim(Status)) not in ( 'Stop','Resign')";
             strHQL += " And UserCode in (Select UserCode From T_SystemActiveUser Where AppUser = 'YES')";
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectMember");
             if (ds.Tables[0].Rows.Count > 0)
             {
-                //å‡çº§æ•°æ®åº“
+                //Éı¼¶Êı¾İ¿â
                 if (ShareClass.SystemDBer == "")
                 {
                     ShareClass.SystemDBer = strUserCode;
@@ -150,7 +150,7 @@ public partial class DefaultWeiXinQYHSAAS : System.Web.UI.Page
                 }
                 try
                 {
-                    //åˆå§‹åŒ–ç•Œé¢è¯­è¨€
+                    //³õÊ¼»¯½çÃæÓïÑÔ
                     try
                     {
                         Session["LangCode"] = ds.Tables[0].Rows[0]["LangCode"].ToString().Trim();
@@ -179,7 +179,7 @@ public partial class DefaultWeiXinQYHSAAS : System.Web.UI.Page
                 {
                 }
 
-                //YESæ—¶é¡µé¢å¿…é¡»åœ¨æ¡†æ¶å†…æ‰“å¼€ï¼Œå¦åˆ™å…³é—­
+                //YESÊ±Ò³Ãæ±ØĞëÔÚ¿ò¼ÜÄÚ´ò¿ª£¬·ñÔò¹Ø±Õ
                 try
                 {
                     Session["MustInFrame"] = System.Configuration.ConfigurationManager.AppSettings["MustInFrame"];
@@ -191,7 +191,7 @@ public partial class DefaultWeiXinQYHSAAS : System.Web.UI.Page
                 {
                     Session["MustInFrame"] = "YES";
                 }
-                //æ˜¯å¦è‡ªåŠ¨å·¥ä½œæµç”³è¯·è€…è‡ªé€‰æˆ–ä¸Šä¸€æ­¥å®¡æ‰¹è€…è‡ªé€‰äººå‘˜
+                //ÊÇ·ñ×Ô¶¯¹¤×÷Á÷ÉêÇëÕß×ÔÑ¡»òÉÏÒ»²½ÉóÅúÕß×ÔÑ¡ÈËÔ±
                 try
                 {
                     Session["AutoSaveWFOperator"] = System.Configuration.ConfigurationManager.AppSettings["AutoSaveWFOperator"];
@@ -204,7 +204,7 @@ public partial class DefaultWeiXinQYHSAAS : System.Web.UI.Page
                     Session["AutoSaveWFOperator"] = "YES";
                 }
 
-                //æ£€æŸ¥æ³¨å†Œç æ˜¯å¦åˆæ³•
+                //¼ì²é×¢²áÂëÊÇ·ñºÏ·¨
                 string strServerName = System.Configuration.ConfigurationManager.AppSettings["ServerName"];
                 try
                 {
@@ -229,28 +229,28 @@ public partial class DefaultWeiXinQYHSAAS : System.Web.UI.Page
                     Session["SystemVersionType"] = "SAAS";
                 }
 
-                //ç¬¬ä¸€æ¬¡åœ¨å¾®ä¿¡å…¬ä¼—å·ç™»å½•æ—¶ï¼ŒæŠŠç”¨æˆ·çš„å¾®ä¿¡OpenIDå†™å…¥äººå‘˜æ¡£æ¡ˆè¡¨
-                //æŠŠç”¨æˆ·çš„å¾®ä¿¡OpenIDå†™å…¥äººå‘˜æ¡£æ¡ˆè¡¨
+                //µÚÒ»´ÎÔÚÎ¢ĞÅ¹«ÖÚºÅµÇÂ¼Ê±£¬°ÑÓÃ»§µÄÎ¢ĞÅOpenIDĞ´ÈëÈËÔ±µµ°¸±í
+                //°ÑÓÃ»§µÄÎ¢ĞÅOpenIDĞ´ÈëÈËÔ±µµ°¸±í
                 string strWeiXinQYCode;
                 strWeiXinQYCode = Request.QueryString["code"];
 
                 if (CheckAndSetWXUserID(strWeiXinQYCode, strUserCode) == false)
                 {
                     LB_ErrorMsg.Visible = true;
-                    LB_ErrorMsg.Text = Resources.lang.ZZDLSBNDWXIDYPLYZHSY + "ï¼ˆ" + LB_ErrorMsg.Text + "ï¼‰" + Resources.lang.ZZSYQLXXTGLY;
+                    LB_ErrorMsg.Text = Resources.lang.ZZDLSBNDWXIDYPLYZHSY + "£¨" + LB_ErrorMsg.Text + "£©" + Resources.lang.ZZSYQLXXTGLY;
 
                     return;
                 }
 
                 try
                 {
-                    //åˆ›å»ºç”¨æˆ·ç›®å½•
+                    //´´½¨ÓÃ»§Ä¿Â¼
                     ShareClass.MakeUserDirectory(strUserCode);
 
-                    //æ ¹æ®æ ·æ¿ç”¨æˆ·åˆå§‹åŒ–æ¨¡ç»„
+                    //¸ù¾İÑù°åÓÃ»§³õÊ¼»¯Ä£×é
                     ShareClass.InitialUserModules("SAMPLE", strUserCode);
 
-                    //ä¿å­˜ç™»å½•æ—¥å¿—
+                    //±£´æµÇÂ¼ÈÕÖ¾
                     ShareClass.InsertUserLogonLog(strUserCode, strUserName, "APP");
                 }
                 catch
@@ -275,7 +275,7 @@ public partial class DefaultWeiXinQYHSAAS : System.Web.UI.Page
         }
     }
 
-    //æŠŠç”¨æˆ·çš„å¾®ä¿¡OpenIDå†™å…¥äººå‘˜æ¡£æ¡ˆè¡¨
+    //°ÑÓÃ»§µÄÎ¢ĞÅOpenIDĞ´ÈëÈËÔ±µµ°¸±í
     public bool CheckAndSetWXUserID(string strWeiXinQYCode, string strUserCode)
     {
         string strHQL;
@@ -352,7 +352,7 @@ public partial class DefaultWeiXinQYHSAAS : System.Web.UI.Page
         {
             strSMSCode = msg.CreateRandomCode(5);
 
-            strMsg = "çŸ­ä¿¡éªŒè¯ç ï¼š" + strSMSCode + "ï¼Œå½“å¤©æœ‰æ•ˆï¼";
+            strMsg = "¶ÌĞÅÑéÖ¤Âë£º" + strSMSCode + "£¬µ±ÌìÓĞĞ§£¡";
 
             if (msg.SendMSM("Message", strUserCode, strMsg, strUserCode))
             {

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppUserLogonLog.aspx.cs" Inherits="TTAppUserLogonLog" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppUserLogonLog.aspx.cs" Inherits="TTAppUserLogonLog" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
 
@@ -78,7 +78,7 @@
                                                         </td>
                                                     </tr>
                                                 </table>
-                                                <img id="IMG_Waiting" src="Images/Processing.gif" alt="è¯·ç¨å€™ï¼Œå¤„ç†ä¸­..." style="display: none;" />
+                                                <img id="IMG_Waiting" src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖÐ..." style="display: none;" />
                                             </a>
                                         </td>
                                     </tr>
@@ -137,8 +137,8 @@
                                                     <div class="nprig">
                                                         <h4> <%# Eval("ID").ToString() %> <%# Eval("UserName") %>    </h4>
                                                         <h5><%# Eval("Position") %>   <sub></sub></h5>
-                                                        <h6>Startï¼š<%# DataBinder.Eval(Container.DataItem,"LoginTime") %></h6>
-                                                        <h6>Endï¼š<%# DataBinder.Eval(Container.DataItem,"LastestTime") %></h6>
+                                                        <h6>Start£º<%# DataBinder.Eval(Container.DataItem,"LoginTime") %></h6>
+                                                        <h6>End£º<%# DataBinder.Eval(Container.DataItem,"LastestTime") %></h6>
                                                     </div>
 
                                                 </div>
@@ -149,16 +149,16 @@
                                         </asp:TemplateColumn>
 
 
-                                        <%--                                        <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                        <%--                                        <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="UserName" HeaderText="ç”¨æˆ·">
+                                        <asp:BoundColumn DataField="UserName" HeaderText="ÓÃ»§">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="Position" HeaderText="ä½ç½®">
+                                        <asp:BoundColumn DataField="Position" HeaderText="Î»ÖÃ">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="28%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="LoginTime" HeaderText="ç™»å½•æ—¶é—´">
+                                        <asp:BoundColumn DataField="LoginTime" HeaderText="µÇÂ¼Ê±¼ä">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                         </asp:BoundColumn>--%>
                                     </Columns>

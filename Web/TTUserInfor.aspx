@@ -294,7 +294,7 @@
                                                                     </asp:ButtonColumn>
                                                                     <asp:TemplateColumn HeaderText="Delete">
                                                                         <ItemTemplate>
-                                                                            <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='É¾³ý' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                                            <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:TemplateColumn>
@@ -478,8 +478,8 @@
                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,XingBie %>"></asp:Label></td>
                                     <td class="formItemBgStyle">
                                         <asp:DropDownList ID="DL_Gender" runat="server">
-                                            <asp:ListItem Value="ÄÐ" Text="<%$ Resources:lang,Nan %>" />
-                                            <asp:ListItem Value="Å®" Text="<%$ Resources:lang,Nv %>" />
+                                            <asp:ListItem Value="Male" Text="<%$ Resources:lang,Nan %>" />
+                                            <asp:ListItem Value="Female" Text="<%$ Resources:lang,Nv %>" />
                                         </asp:DropDownList>
                                     </td>
                                     <td style="width: 100px; text-align: right" class="formItemBgStyle">
@@ -544,9 +544,9 @@
                                         <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,ZhuangTai %>"></asp:Label></td>
                                     <td colspan="3" style="text-align: left;" class="formItemBgStyle">
                                         <asp:DropDownList ID="DL_Status" runat="server">
-                                            <asp:ListItem Value="ÔÚÖ°" Text="<%$ Resources:lang,ZaiZhi%>" />
-                                            <asp:ListItem Value="ÀëÖ°" Text="<%$ Resources:lang,LiZhi %>" />
-                                            <asp:ListItem Value="ÖÕÖ¹" Text="<%$ Resources:lang,ZhongZhi %>" />
+                                            <asp:ListItem Value="Employed" Text="<%$ Resources:lang,ZaiZhi%>" />
+                                            <asp:ListItem Value="Resign" Text="<%$ Resources:lang,LiZhi %>" />
+                                            <asp:ListItem Value="Stop" Text="<%$ Resources:lang,ZhongZhi %>" />
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -715,8 +715,8 @@
                                         <asp:Label ID="Label52" runat="server" Text="<%$ Resources:lang,HunYingZhuangTai %>"></asp:Label></td>
                                     <td style="text-align: left;" class="formItemBgStyle">
                                         <asp:DropDownList ID="DL_MaritalStatus" runat="server">
-                                            <asp:ListItem Value="Î´»é" />
-                                            <asp:ListItem Value="ÒÑ»é" />
+                                            <asp:ListItem Value="Unmarried" />
+                                            <asp:ListItem Value="Married" />
                                         </asp:DropDownList></td>
                                 </tr>
                                 <tr>
@@ -865,7 +865,7 @@
                                                 </asp:ButtonColumn>
                                                 <asp:TemplateColumn HeaderText="Delete">
                                                     <ItemTemplate>
-                                                        <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='É¾³ý' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                        <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                     </ItemTemplate>
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                 </asp:TemplateColumn>
@@ -1048,7 +1048,7 @@
                                                 </asp:ButtonColumn>
                                                 <asp:TemplateColumn HeaderText="Delete">
                                                     <ItemTemplate>
-                                                        <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='É¾³ý' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                        <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                     </ItemTemplate>
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                 </asp:TemplateColumn>
@@ -1204,7 +1204,7 @@
                                                 </asp:ButtonColumn>
                                                 <asp:TemplateColumn HeaderText="Delete">
                                                     <ItemTemplate>
-                                                        <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='É¾³ý' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                        <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                     </ItemTemplate>
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                 </asp:TemplateColumn>
@@ -1359,7 +1359,7 @@
                                                 </asp:ButtonColumn>
                                                 <asp:TemplateColumn HeaderText="Delete">
                                                     <ItemTemplate>
-                                                        <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='É¾³ý' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                        <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                     </ItemTemplate>
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                 </asp:TemplateColumn>
@@ -1407,11 +1407,11 @@
                                     <td class="formItemBgStyle">
                                         <asp:TextBox ID="TB_TransType" runat="server"></asp:TextBox><asp:DropDownList ID="DL_TransType"
                                             runat="server" AutoPostBack="True" OnSelectedIndexChanged="DL_TransType_SelectedIndexChanged">
-                                            <asp:ListItem Value="ÈëÖ°" Text="<%$ Resources:lang,RuZhi%>" />
-                                            <asp:ListItem Value="ÉýÖ°" Text="<%$ Resources:lang,ShenZhi%>" />
-                                            <asp:ListItem Value="µ÷¶¯" Text="<%$ Resources:lang,DiaoZhi%>" />
-                                            <asp:ListItem Value="ÀëÖ°" Text="<%$ Resources:lang,LiZhi%>" />
-                                            <asp:ListItem Value="ÆäËü" Text="<%$ Resources:lang,QiTa%>" />
+                                            <asp:ListItem Value="Onboarding" Text="<%$ Resources:lang,RuZhi%>" />
+                                            <asp:ListItem Value="Promotion" Text="<%$ Resources:lang,ShenZhi%>" />
+                                            <asp:ListItem Value="Transfer" Text="<%$ Resources:lang,DiaoZhi%>" />
+                                            <asp:ListItem Value="Resign" Text="<%$ Resources:lang,LiZhi%>" />
+                                            <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>" />
                                         </asp:DropDownList></td>
                                 </tr>
                                 <tr>
@@ -1501,7 +1501,7 @@
                                                 </asp:ButtonColumn>
                                                 <asp:TemplateColumn HeaderText="Delete">
                                                     <ItemTemplate>
-                                                        <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='É¾³ý' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                        <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                     </ItemTemplate>
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                 </asp:TemplateColumn>

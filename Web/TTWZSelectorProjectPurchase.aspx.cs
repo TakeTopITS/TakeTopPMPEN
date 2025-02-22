@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using System; using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
@@ -28,7 +28,7 @@ public partial class TTWZSelectorProjectPurchase : System.Web.UI.Page
         //        m.UserName as ProjectManagerName
         //        from T_WZProject p
         //        left join T_ProjectMember m on p.ProjectManager = m.UserCode
-        //        where p.Progress = 'å¼€å·¥'
+        //        where p.Progress = '¿ª¹¤'
         //        and p.PurchaseEngineer = '{0}'", strUserCode);
 
         string strProjectHQL = string.Format(@"select p.*,
@@ -51,13 +51,13 @@ public partial class TTWZSelectorProjectPurchase : System.Web.UI.Page
                     left join T_ProjectMember ps on p.Safekeep = ps.UserCode
                     left join T_ProjectMember pa on p.Marker = pa.UserCode
                     left join T_ProjectMember pu on p.SupplementEditor = pu.UserCode
-                    where p.Progress = 'å¼€å·¥'                                     
+                    where p.Progress = '¿ª¹¤'                                     
                 
                     and (p.SupplementEditor = '{0}' or p.SupplementEditor = '-')
                     and ProjectCode not in 
                     (
                     select ProjectCode from T_Project
-                    where Status in ('åˆ é™¤')
+                    where Status in ('Deleted')
                     )", strUserCode);
 
 

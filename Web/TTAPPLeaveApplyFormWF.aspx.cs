@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -31,7 +31,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
         LB_UserCode.Text = strUserCode;
         LB_UserName.Text = strUserName;
 
-        //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
         strToDoWLID = Request.QueryString["WLID"]; strToDoWLDetailID= Request.QueryString["WLStepDetailID"];
         strWLBusinessID = Request.QueryString["BusinessID"];
 
@@ -46,7 +46,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
             LoadLeaveType();
             LoadLeaveApplyForm(strUserCode);
 
-            ShareClass.LoadWFTemplate(strUserCode, "è€ƒå‹¤ç®¡ç†", DL_TemName);
+            ShareClass.LoadWFTemplate(strUserCode, "AttendanceManagement", DL_TemName);
 
             TB_Duty.Text = GetUserDuty(strUserCode);
             TB_DepartCode.Text = ShareClass.GetDepartCodeFromUserCode(strUserCode);
@@ -87,7 +87,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
         }
         else
         {
-            RB_LeaveType.Items.Add(new ListItem("-1 æ— è€ƒå‹¤æµç¨‹", ""));
+            RB_LeaveType.Items.Add(new ListItem("-1 ÎŞ¿¼ÇÚÁ÷³Ì", ""));
         }
     }
 
@@ -134,7 +134,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
     }
 
     /// <summary>
-    /// è·å–è¯·å‡æ—¶é—´æ•°
+    /// »ñÈ¡Çë¼ÙÊ±¼äÊı
     /// </summary>
     /// <param name="starttime"></param>
     /// <param name="endtime"></param>
@@ -147,7 +147,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
         double days = ts.TotalDays;
         if (days > 1)
         {
-            #region [è¶…è¿‡24å°æ—¶]
+            #region [³¬¹ı24Ğ¡Ê±]
             int num = (int)days;
             if (num == days)
             {
@@ -166,7 +166,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
                 {
                     if (dt1.ToString("yyyy-MM-dd") == endtime.ToString("yyyy-MM-dd"))
                     {
-                        #region [åŒä¸€å¤©]
+                        #region [Í¬Ò»Ìì]
                         if (endtime <= strEndTime && endtime > strRestEndTime)
                         {
                             if (dt1 > strRestEndTime && dt1 <= strEndTime)
@@ -237,7 +237,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
                     }
                     else
                     {
-                        #region [éä¸€å¤©]
+                        #region [·ÇÒ»Ìì]
                         if (endtime <= strEndTime && endtime > strRestEndTime)
                         {
                             hs += decimal.Parse(endtime.Subtract(strRestEndTime).TotalHours.ToString()) + decimal.Parse(strRestStartTime.Subtract(strStartTime).TotalHours.ToString());
@@ -286,7 +286,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
         }
         else
         {
-            #region [ä¸è¶…è¿‡24å°æ—¶]
+            #region [²»³¬¹ı24Ğ¡Ê±]
             DateTime strStartTime = starttime, strEndTime = starttime, strRestStartTime = starttime, strRestEndTime = starttime, dt1 = starttime;
             GetDayHourNumTimes(ref strStartTime, ref strEndTime, ref strRestStartTime, ref strRestEndTime, endtime);
             if (strEndTime.Subtract(strStartTime).TotalMinutes == 0 && strRestStartTime.Subtract(strStartTime).TotalMinutes == 0 && strRestEndTime.Subtract(strRestStartTime).TotalMinutes == 0)
@@ -296,7 +296,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
             {
                 if (dt1.ToString("yyyy-MM-dd") == endtime.ToString("yyyy-MM-dd"))
                 {
-                    #region [åŒä¸€å¤©]
+                    #region [Í¬Ò»Ìì]
                     if (endtime <= strEndTime && endtime > strRestEndTime)
                     {
                         if (dt1 > strRestEndTime && dt1 <= strEndTime)
@@ -367,7 +367,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
                 }
                 else
                 {
-                    #region [éä¸€å¤©]
+                    #region [·ÇÒ»Ìì]
                     if (endtime <= strEndTime && endtime > strRestEndTime)
                     {
                         hs += decimal.Parse(endtime.Subtract(strRestEndTime).TotalHours.ToString()) + decimal.Parse(strRestStartTime.Subtract(strStartTime).TotalHours.ToString());
@@ -417,7 +417,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
     }
 
     /// <summary>
-    /// è·å–æ—¶é—´ç‚¹-åŸºç¡€æ•°æ®
+    /// »ñÈ¡Ê±¼äµã-»ù´¡Êı¾İ
     /// </summary>
     /// <param name="strStartTime"></param>
     /// <param name="strEndTime"></param>
@@ -520,7 +520,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
 
             LoadLeaveApplyForm(strUserCode);
 
-            LoadRelatedWL("è€ƒå‹¤ç®¡ç†", "å…¶å®ƒ", int.Parse(LB_ID.Text.Trim()));
+            LoadRelatedWL("AttendanceManagement", "Other", int.Parse(LB_ID.Text.Trim()));
 
             string strLeaveType;
             strLeaveType = RB_LeaveType.SelectedValue.Trim();
@@ -616,15 +616,15 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
                 LB_TotalLeaveDaysForCurrentMonth.Text = ShareClass.GetTotalLeaveDayNumberInCurrentMonth(strLeaveType, strUserCode, DateTime.Now.ToString("yyyyMMdd"));
                 LB_TotalLeaveDaysForCurrentYear.Text = ShareClass.GetTotalLeaveDayNumberInCurrentYear(strLeaveType, strUserCode, DateTime.Now.ToString("yyyyMMdd"));
 
-                //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("è€ƒå‹¤ç®¡ç†", "å…¶å®ƒ", LB_ID.Text.Trim(), "0");
+                //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+                //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AttendanceManagement", "Other", LB_ID.Text.Trim(), "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     string strCmdText = "select * from T_LeaveApplyForm where ID = " + LB_ID.Text;
                     if (strToDoWLID == null)
                     {
-                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("è€ƒå‹¤ç®¡ç†", "å…¶å®ƒ", LB_ID.Text.Trim());
+                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("AttendanceManagement", "Other", LB_ID.Text.Trim());
                     }
 
                     if (strToDoWLID != null)
@@ -661,47 +661,47 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
 
         XMLProcess xmlProcess = new XMLProcess();
 
-        strHQL = "Update T_LeaveApplyForm Set Status = 'å¤„ç†ä¸­' Where ID = " + strID;
+        strHQL = "Update T_LeaveApplyForm Set Status = 'InProgress' Where ID = " + strID;
 
         try
         {
             ShareClass.RunSqlCommand(strHQL);
 
-            strXMLFileName = "è€ƒå‹¤ç®¡ç†" + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xml";
+            strXMLFileName = "AttendanceManagement" + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xml";
             strXMLFile2 = "Doc\\" + "XML" + "\\" + strXMLFileName;
 
             WorkFlowBLL workFlowBLL = new WorkFlowBLL();
             WorkFlow workFlow = new WorkFlow();
 
-            workFlow.WLName = "è€ƒå‹¤ç®¡ç†";
-            workFlow.WLType = "è€ƒå‹¤ç®¡ç†";
-            workFlow.Status = "æ–°å»º";
+            workFlow.WLName = "AttendanceManagement";
+            workFlow.WLType = "AttendanceManagement";
+            workFlow.Status = "New";
             workFlow.TemName = DL_TemName.SelectedValue.Trim();
             workFlow.CreateTime = DateTime.Now;
             workFlow.CreatorCode = strUserCode;
             workFlow.CreatorName = ShareClass.GetUserName(strUserCode);
             workFlow.Description = TB_ApplyBecause.Text.Trim();
             workFlow.XMLFile = strXMLFile2;
-            workFlow.RelatedType = "å…¶å®ƒ";
+            workFlow.RelatedType = "Other";
             workFlow.RelatedID = int.Parse(strID);
-            workFlow.DIYNextStep = "Yes"; workFlow.IsPlanMainWorkflow = "NO";
+            workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
 
             if (CB_SMS.Checked == true)
             {
-                workFlow.ReceiveSMS = "Yes";
+                workFlow.ReceiveSMS = "YES";
             }
             else
             {
-                workFlow.ReceiveSMS = "No";
+                workFlow.ReceiveSMS = "NO";
             }
 
             if (CB_Mail.Checked == true)
             {
-                workFlow.ReceiveEMail = "Yes";
+                workFlow.ReceiveEMail = "YES";
             }
             else
             {
-                workFlow.ReceiveEMail = "No";
+                workFlow.ReceiveEMail = "NO";
             }
 
             try
@@ -714,9 +714,9 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
                 strXMLFile2 = Server.MapPath(strXMLFile2);
                 xmlProcess.DbToXML(strCmdText, "T_LeaveApplyForm", strXMLFile2);
 
-                LoadRelatedWL("è€ƒå‹¤ç®¡ç†", "å…¶å®ƒ", int.Parse(strID));
+                LoadRelatedWL("AttendanceManagement", "Other", int.Parse(strID));
 
-                DL_Status.SelectedValue = "å¤„ç†ä¸­";
+                DL_Status.SelectedValue = "InProgress";
 
                 //BT_Update.Visible = false;
                 //BT_Delete.Visible = false;
@@ -767,7 +767,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
         {
             string strID = e.Item.Cells[3].Text.Trim();
 
-            int intWLNumber = GetRelatedWorkFlowNumber("è€ƒå‹¤ç®¡ç†", "å…¶å®ƒ", strID);
+            int intWLNumber = GetRelatedWorkFlowNumber("AttendanceManagement", "Other", strID);
             if (intWLNumber > 0)
             {
                 BT_New.Enabled = false;
@@ -779,8 +779,8 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
                 BT_SubmitApply.Enabled = true;
             }
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("è€ƒå‹¤ç®¡ç†", "å…¶å®ƒ", strID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AttendanceManagement", "Other", strID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_New.Enabled = true;
@@ -817,7 +817,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
                 TB_Duty.Text = leaveApplyForm.Duty.Trim();
                 LB_DepartName.Text = leaveApplyForm.DepartName.Trim();
 
-                LoadRelatedWL("è€ƒå‹¤ç®¡ç†", "å…¶å®ƒ", int.Parse(strID));
+                LoadRelatedWL("AttendanceManagement", "Other", int.Parse(strID));
 
 
 
@@ -898,7 +898,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'è€ƒå‹¤ç®¡ç†'";
+        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'AttendanceManagement'";
         strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC";
         WorkFlowBLL workFlowBLL = new WorkFlowBLL();
         lst = workFlowBLL.GetAllWorkFlows(strHQL);
@@ -939,7 +939,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
     {
         string strHQL = "From LeaveApplyForm as leaveApplyForm Where leaveApplyForm.Creator = '" + strusercode + "' Order By leaveApplyForm.ID DESC";
 
-        //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
         if (strToDoWLID != null & strWLBusinessID != null)
         {
             strHQL = "From LeaveApplyForm as leaveApplyForm Where leaveApplyForm.ID = " + strWLBusinessID;
@@ -1020,7 +1020,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
     }
 
 
-    //å–å¾—æ­¤å‘˜å·¥å½“å¹´çš„æ­¤ç±»å‹çš„è¯·å‡å¤©æ•°
+    //È¡µÃ´ËÔ±¹¤µ±ÄêµÄ´ËÀàĞÍµÄÇë¼ÙÌìÊı
     protected string GetTotalLeaveDayNumberInCurrentYear(string strLeaveType, string strApplicantCode)
     {
         string strHQL;

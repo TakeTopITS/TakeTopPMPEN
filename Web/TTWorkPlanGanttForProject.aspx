@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkPlanGanttForProject.aspx.cs" Inherits="TTWorkPlanGanttForProject" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkPlanGanttForProject.aspx.cs" Inherits="TTWorkPlanGanttForProject" %>
 
 <!DOCTYPE html>
 
@@ -146,26 +146,26 @@
     <script src="ext-gantt/TakeTopGntAllDebug.js" type="text/javascript" charset="gbk"></script>
 
     <script type='text/javascript'>
-        //ä¸ºäº†æ”¯æŒå¤šä¸ªé¡¹ç›®ï¼Œpidä¸ºæŸä¸ªé¡¹ç›®çš„é¡¹ç›®ç¼–å·
+        //ÎªÁËÖ§³Ö¶à¸öÏîÄ¿£¬pidÎªÄ³¸öÏîÄ¿µÄÏîÄ¿±àºÅ
         var pid = 1;
         pid =<%=this.pid%>;
 
         //alert(CurrentUserCode);
 
-        var g_start = new Date(<%=this.g_start%>);//è¿™é‡Œä¸€å®šè¦ç”¨æ•°å­—ç±»å‹
+        var g_start = new Date(<%=this.g_start%>);//ÕâÀïÒ»¶¨ÒªÓÃÊı×ÖÀàĞÍ
         var g_end = new Date(<%=this.g_end%>);
 
     </script>
 
-    <!--è°ƒç”¨ä¸åŒçš„è¯­è¨€åŒ… -->
+    <!--µ÷ÓÃ²»Í¬µÄÓïÑÔ°ü -->
     <script src="ext-min/locale/ext-lang-zh_CN.js" id="ExtLangID" type="text/javascript"></script>
     <script src="ext-gantt/TakeTopGntLangZhCN.js" id="GntLangID" type="text/javascript"></script>
     <script type="text/javascript" src="ext-gantt/TakeTopGanttPanel.js"></script>
 
-    <!--æ›´æ¢çš®è‚¤æ‰€éœ€è¦çš„cssæ–‡ä»¶ -->
+    <!--¸ü»»Æ¤·ôËùĞèÒªµÄcssÎÄ¼ş -->
     <link rel="stylesheet" href="css/project.css" type="text/css" />
 
-    <!--åº”ç”¨ç¨‹åºçš„ä»£ç  -->
+    <!--Ó¦ÓÃ³ÌĞòµÄ´úÂë -->
     <script type="text/javascript" src="ext-gantt/TakeTopAspNet.js"></script>
     <script type="text/javascript" src="ext-gantt/TakeTopAdvanced.js"></script>
 
@@ -174,12 +174,12 @@
     <script type="text/javascript" language="javascript">
         $(function () {
 
-            ////å…³é—­è„±ç¦»æ¡†æ¶çš„é¡µé¢
+            ////¹Ø±ÕÍÑÀë¿ò¼ÜµÄÒ³Ãæ
             //if (top.location != self.location) { } else { CloseWebPage(); }
 
         });
 
-        //é€‰æ‹©è¯­è¨€
+        //Ñ¡ÔñÓïÑÔ
         function setLanguage() {
             var varLangCode = '<%=Session["LangCode"].ToString() %>'.trim();
 
@@ -244,7 +244,7 @@
             }
         }
 
-        //å–å¾—é“¾æ¥ä¼ å…¥å‚æ•°çš„å€¼
+        //È¡µÃÁ´½Ó´«Èë²ÎÊıµÄÖµ
         function getUrlParam(name) {
             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
             var r = window.location.search.substr(1).match(reg);
@@ -254,7 +254,7 @@
             return null;
         }
 
-        //æ”¹å˜è®¡åˆ’å›¾å®½åº¦
+        //¸Ä±ä¼Æ»®Í¼¿í¶È
         function changeGanttChartProperty() {
 
             $(".x-tool-img.x-tool-collapse-left").click();
@@ -285,7 +285,7 @@
             }
         }
 
-        //æŒ‰æ—¥æœŸæ’åº
+        //°´ÈÕÆÚÅÅĞò
         function SortByDate() {
 
             $(".x-column-header-trigger").eq(3).click();;

@@ -72,7 +72,7 @@
                                                                 <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%></a>
                                                         </td>
                                                         <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                            <a href="TTSuperSystemModuleSet.aspx">
+                                                            <a href="Outer/TTSuperSystemModuleSet.aspx">
                                                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiTongMoZuSheDing%>" ForeColor="White"></asp:Label>
                                                             </a>
                                                         </td>
@@ -107,7 +107,11 @@
                                                 <asp:Button ID="BT_ReOrderUserModuleAuthorization" runat="server" CssClass="inpuLongest" Text="<%$ Resources:lang,CZSYYHDMZQXSJ%>" OnClick="BT_ReOrderUserModuleAuthorization_Click" />
                                             </td>
                                             <td align="center" style="padding-top: 5px;">
-                                                <asp:Label ID="LB_UserAuthorizationRecordNumber" runat="server"></asp:Label>
+                                                <asp:HyperLink ID="HL_DatabaseUpdate" NavigateUrl="Outer/TTDatabaseUpgrade.aspx" runat="server">
+
+                                                    <asp:Label ID="LB_UserAuthorizationRecordNumber" runat="server"></asp:Label>
+                                                </asp:HyperLink>
+
                                             </td>
                                         </tr>
                                     </table>

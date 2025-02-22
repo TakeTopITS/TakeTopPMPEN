@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections;
 using System.Data;
 using System.Drawing;
@@ -27,7 +27,7 @@ public partial class TTMakeDefect : System.Web.UI.Page
         strLangCode = Session["LangCode"].ToString();
         strUserCode = Session["UserCode"].ToString();
 
-        //CKEditoråˆå§‹åŒ–
+        //CKEditor³õÊ¼»¯
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_Operation);
@@ -76,14 +76,14 @@ public partial class TTMakeDefect : System.Web.UI.Page
 
             LoadDefectment();
 
-            //BusinessForm,åˆ—å‡ºä¸šåŠ¡è¡¨å•ç±»å‹ 
+            //BusinessForm,ÁĞ³öÒµÎñ±íµ¥ÀàĞÍ 
             ShareClass.LoadWorkflowType(DL_WLType, strLangCode);
         }
     }
 
     protected void BT_Create_Click(object sender, EventArgs e)
     {
-        //BusinessFormï¼Œéšè—ä¸šåŠ¡è¡¨å•å…ƒç´ 
+        //BusinessForm£¬Òş²ØÒµÎñ±íµ¥ÔªËØ
         Panel_RelatedBusiness.Visible = false;
 
         LB_DefectID.Text = "";
@@ -202,7 +202,7 @@ public partial class TTMakeDefect : System.Web.UI.Page
         strApplicantCode = strUserCode;
         strApplicantName = ShareClass.GetUserName(strUserCode);
         dtMakeDate = DateTime.Now;
-        strStatus = "è®¡åˆ’";
+        strStatus = "Plan";
 
         if (strDefectName == "" | strDefectDetail == "" | strDefectFinishedDate == "")
         {
@@ -232,7 +232,7 @@ public partial class TTMakeDefect : System.Web.UI.Page
                 strDefectID = ShareClass.GetMyCreatedMaxDefectID(strUserCode);
                 LB_DefectID.Text = strDefectID;
 
-                //åˆ†æ´¾ç¼ºé™ç»™è‡ªå·±
+                //·ÖÅÉÈ±ÏŞ¸ø×Ô¼º
                 AssignDefect(int.Parse(strDefectID), strDefectType, strDefectName);
 
                 HL_RelatedDoc.NavigateUrl = "TTDefectRelatedDoc.aspx?DefectID=" + strDefectID;
@@ -270,7 +270,7 @@ public partial class TTMakeDefect : System.Web.UI.Page
         }
     }
 
-    //è‡ªåŠ¨åˆ†æ´¾ç¼ºé™·ç»™åˆ›å»ºè€…
+    //×Ô¶¯·ÖÅÉÈ±Ïİ¸ø´´½¨Õß
     protected void AssignDefect(int intDefectID, string strType, string strDefectName)
     {
         int intPriorID;
@@ -311,7 +311,7 @@ public partial class TTMakeDefect : System.Web.UI.Page
         defectAssignRecord.PriorID = intPriorID;
         defectAssignRecord.RouteNumber = GetRouteNumber(intDefectID.ToString());
         defectAssignRecord.MakeDate = dtMakeDate;
-        defectAssignRecord.Status = "å¾…å¤„ç†";
+        defectAssignRecord.Status = "ToHandle";
         defectAssignRecord.MoveTime = DateTime.Now;
 
         try
@@ -319,10 +319,10 @@ public partial class TTMakeDefect : System.Web.UI.Page
             defectAssignRecordBLL.AddDefectAssignRecord(defectAssignRecord);
 
             string strAssignID = ShareClass.GetMyCreatedMaxDefectAssignRecordID(intDefectID.ToString(), strUserCode);
-            //BusinessForm,å¤„ç†å…³è”çš„ä¸šåŠ¡è¡¨å•æ•°æ®
+            //BusinessForm,´¦Àí¹ØÁªµÄÒµÎñ±íµ¥Êı¾İ
             ShareClass.InsertOrUpdateTaskAssignRecordWFXMLData("Defect", intDefectID.ToString(), "DefectRecord", strAssignID, strUserCode);
 
-            UpdateDefectStatus(intDefectID.ToString(), "å¤„ç†ä¸­");
+            UpdateDefectStatus(intDefectID.ToString(), "InProgress");
         }
         catch
         {
@@ -375,7 +375,7 @@ public partial class TTMakeDefect : System.Web.UI.Page
                 {
                     defectmentBLL.UpdateDefectment(defectment, int.Parse(strDefectID));
 
-                    //BusinessFormï¼Œå…³è”ç›¸åº”çš„ä¸šåŠ¡è¡¨å•æ¨¡æ¿
+                    //BusinessForm£¬¹ØÁªÏàÓ¦µÄÒµÎñ±íµ¥Ä£°å
                     ShareClass.SaveRelatedBusinessForm("Defect", strDefectID, DL_WFTemplate.SelectedValue, DL_AllowUpdate.SelectedValue, strUserCode);
 
                     ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
@@ -436,13 +436,13 @@ public partial class TTMakeDefect : System.Web.UI.Page
                 defectment.MakeDate = dtMakeDate;
                 defectment.ApplicantCode = strApplicantCode;
                 defectment.ApplicantName = ShareClass.GetUserName(strApplicantCode);
-                defectment.Status = "å…³é—­";
+                defectment.Status = "Closed";
 
                 try
                 {
                     defectmentBLL.UpdateDefectment(defectment, int.Parse(strDefectID));
                     LoadDefectment();
-                    LB_Status.Text = ShareClass.GetStatusHomeNameByDefectmentStatus("å…³é—­");
+                    LB_Status.Text = ShareClass.GetStatusHomeNameByDefectmentStatus("Closed");
 
                     ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXGBCG + "')", true);
                 }
@@ -497,13 +497,13 @@ public partial class TTMakeDefect : System.Web.UI.Page
             defectment.MakeDate = dtMakeDate;
             defectment.ApplicantCode = strApplicantCode;
             defectment.ApplicantName = ShareClass.GetUserName(strApplicantCode);
-            defectment.Status = "å¤„ç†ä¸­";
+            defectment.Status = "InProgress";
 
             try
             {
                 defectmentBLL.UpdateDefectment(defectment, int.Parse(strDefectID));
                 LoadDefectment();
-                LB_Status.Text = ShareClass.GetStatusHomeNameByDefectmentStatus("å¤„ç†ä¸­");
+                LB_Status.Text = ShareClass.GetStatusHomeNameByDefectmentStatus("InProgress");
 
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXJHCG + "')", true);
             }
@@ -521,9 +521,9 @@ public partial class TTMakeDefect : System.Web.UI.Page
     {
         string strCmdText, strDIYNextStep, strSMS, strEMail;
 
-        strSMS = "Yes";
-        strEMail = "Yes";
-        strDIYNextStep = "Yes";
+        strSMS = "YES";
+        strEMail = "YES";
+        strDIYNextStep = "YES";
 
         strCmdText = "Update T_WorkFlow Set Status = " + "'" + strStatus + "'" + ",DIYNextStep = " + "'" + strDIYNextStep + "'" + ",ReceiveSMS = " + "'" + strSMS + "'" + ",ReceiveEMail = " + "'" + strEMail + "'" + "  where WLID = " + strWLID;
 
@@ -602,7 +602,7 @@ public partial class TTMakeDefect : System.Web.UI.Page
                 BT_Open.Enabled = true;
                 BT_Assign.Enabled = true;
 
-                //BusinessFormï¼Œåˆ—å‡ºå…³è”è¡¨å•æ¨¡æ¿
+                //BusinessForm£¬ÁĞ³ö¹ØÁª±íµ¥Ä£°å
                 try
                 {
                     Panel_RelatedBusiness.Visible = true;
@@ -627,18 +627,18 @@ public partial class TTMakeDefect : System.Web.UI.Page
                 {
                 }
 
-                //BusinessForm,è£…è½½å…³è”ä¿¡æ¯
+                //BusinessForm,×°ÔØ¹ØÁªĞÅÏ¢
                 TabContainer1.ActiveTabIndex = 0;
                 ShareClass.LoadBusinessForm("Defect", strDefectID, DL_WFTemplate.SelectedValue.Trim(), IFrame_RelatedInformation);
 
 
-                if (strStatus == "å…³é—­")
+                if (strStatus == "Closed")
                 {
                     BT_Open.Enabled = true;
                 }
 
   
-                TB_Message.Text = ShareClass.GetUserName(strUserCode) + Resources.lang.GeiNiFenPaiLeQueXian + "ï¼š" + strDefectID + "  " + strDefectName + "ï¼Œ" + Resources.lang.QingJiShiChuLi;
+                TB_Message.Text = ShareClass.GetUserName(strUserCode) + Resources.lang.GeiNiFenPaiLeQueXian + "£º" + strDefectID + "  " + strDefectName + "£¬" + Resources.lang.QingJiShiChuLi;
 
 
                 if (e.CommandName == "Update")
@@ -672,7 +672,7 @@ public partial class TTMakeDefect : System.Web.UI.Page
 
                 if (strDefectID != "")
                 {
-                    strHQL = "from Approve as approve where approve.Type = 'ç¼ºé™·' and approve.RelatedID = " + strDefectID;
+                    strHQL = "from Approve as approve where approve.Type = 'Defect' and approve.RelatedID = " + strDefectID;
                     ApproveBLL approveBLL = new ApproveBLL();
                     lst = approveBLL.GetAllApproves(strHQL);
 
@@ -701,7 +701,7 @@ public partial class TTMakeDefect : System.Web.UI.Page
                             TB_ReceiverCode.Text = "";
                             DLC_DefectFinishedDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
                             TB_AcceptStandard.Text = "";
-                            LB_Status.Text = ShareClass.GetStatusHomeNameByDefectmentStatus("è®¡åˆ’");
+                            LB_Status.Text = ShareClass.GetStatusHomeNameByDefectmentStatus("Plan");
 
                             HL_RelatedDoc.Enabled = false;
                             HL_ApproveRecord.Enabled = false;
@@ -824,7 +824,7 @@ public partial class TTMakeDefect : System.Web.UI.Page
         defectAssignRecord.PriorID = intPriorID;
         defectAssignRecord.RouteNumber = GetRouteNumber(intDefectID.ToString());
         defectAssignRecord.MakeDate = dtMakeDate;
-        defectAssignRecord.Status = "å¾…å¤„ç†";
+        defectAssignRecord.Status = "ToHandle";
         defectAssignRecord.MoveTime = DateTime.Now;
 
         try
@@ -832,14 +832,14 @@ public partial class TTMakeDefect : System.Web.UI.Page
             defectAssignRecordBLL.AddDefectAssignRecord(defectAssignRecord);
 
             string strAssignID = ShareClass.GetMyCreatedMaxDefectAssignRecordID(intDefectID.ToString(), strUserCode);
-            //BusinessForm,å¤„ç†å…³è”çš„ä¸šåŠ¡è¡¨å•æ•°æ®
+            //BusinessForm,´¦Àí¹ØÁªµÄÒµÎñ±íµ¥Êı¾İ
             ShareClass.InsertOrUpdateTaskAssignRecordWFXMLData("Defect", intDefectID.ToString(), "DefectRecord", strAssignID, strUserCode);
 
-            UpdateDefectStatus(intDefectID.ToString(), "å¤„ç†ä¸­");
+            UpdateDefectStatus(intDefectID.ToString(), "InProgress");
 
-            ShareClass.SendInstantMessage(Resources.lang.QueXianFenPaiTongZi, ShareClass.GetUserName(strUserCode) + Resources.lang.GeiNiFenPaiLeXuQiu + " :" + intDefectID.ToString() + "  " + strDefectName + "ï¼Œ" + Resources.lang.QingJiShiChuLi, strUserCode, strOperatorCode);
+            ShareClass.SendInstantMessage(Resources.lang.QueXianFenPaiTongZi, ShareClass.GetUserName(strUserCode) + Resources.lang.GeiNiFenPaiLeXuQiu + " :" + intDefectID.ToString() + "  " + strDefectName + "£¬" + Resources.lang.QingJiShiChuLi, strUserCode, strOperatorCode);
 
-            TB_Message.Text = ShareClass.GetUserName(strUserCode) + Resources.lang.GeiNiFenPaiLeQueXian + "ï¼š" + intDefectID.ToString() + "  " + strDefectName + "ï¼Œ" + Resources.lang.QingJiShiChuLi;
+            TB_Message.Text = ShareClass.GetUserName(strUserCode) + Resources.lang.GeiNiFenPaiLeQueXian + "£º" + intDefectID.ToString() + "  " + strDefectName + "£¬" + Resources.lang.QingJiShiChuLi;
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFPCG + "')", true);
         }
@@ -865,7 +865,7 @@ public partial class TTMakeDefect : System.Web.UI.Page
 
         if (CB_SendMsg.Checked == true | CB_SendMail.Checked == true)
         {
-            strSubject = "ç¼ºé™·åˆ†æ´¾é€šçŸ¥";
+            strSubject = "È±Ïİ·ÖÅÉÍ¨Öª";
             strMsg = TB_Message.Text.Trim();
 
             if (CB_SendMsg.Checked == true)
@@ -884,7 +884,7 @@ public partial class TTMakeDefect : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
     }
 
-    //BusinessForm,å·¥ä½œæµç±»å‹æŸ¥è¯¢
+    //BusinessForm,¹¤×÷Á÷ÀàĞÍ²éÑ¯
     protected void DL_WLType_SelectedIndexChanged(object sender, EventArgs e)
     {
         string strHQL, strWLType;
@@ -894,7 +894,7 @@ public partial class TTMakeDefect : System.Web.UI.Page
         {
             return;
         }
-        strHQL = "Select TemName From T_WorkFlowTemplate Where type = " + "'" + strWLType + "'" + " and Visible = 'YES' and Authority = 'æ‰€æœ‰'";
+        strHQL = "Select TemName From T_WorkFlowTemplate Where type = " + "'" + strWLType + "'" + " and Visible = 'YES' and Authority = 'All'";
         strHQL += " Order by SortNumber ASC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTemplate");
         DL_WFTemplate.DataSource = ds;
@@ -906,7 +906,7 @@ public partial class TTMakeDefect : System.Web.UI.Page
     }
 
 
-    //BusinessForm,å¯åŠ¨å…³è”çš„ä¸šåŠ¡è¡¨å•
+    //BusinessForm,Æô¶¯¹ØÁªµÄÒµÎñ±íµ¥
     protected void BT_StartupBusinessForm_Click(object sender, EventArgs e)
     {
         string strURL;
@@ -932,7 +932,7 @@ public partial class TTMakeDefect : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
     }
 
-    //BusinessForm,åˆ é™¤å…³è”çš„ä¸šåŠ¡è¡¨å•
+    //BusinessForm,É¾³ı¹ØÁªµÄÒµÎñ±íµ¥
     protected void BT_DeleteBusinessForm_Click(object sender, EventArgs e)
     {
         string strHQL;
@@ -969,7 +969,7 @@ public partial class TTMakeDefect : System.Web.UI.Page
         DefectmentBLL defectmentBLL = new DefectmentBLL();
         lst = defectmentBLL.GetAllDefectments(strHQL);
         Defectment defectment = (Defectment)lst[0];
-        defectment.Status = "å¤„ç†ä¸­";
+        defectment.Status = "InProgress";
 
         intRouteNumber = defectment.RouteNumber;
         defectment.RouteNumber = intRouteNumber + 1;

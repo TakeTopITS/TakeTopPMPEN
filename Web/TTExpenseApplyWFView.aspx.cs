@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -37,19 +37,19 @@ public partial class TTExpenseApplyWFView : System.Web.UI.Page
 
         if (strRelatedType == "Other")
         {
-            strRelatedType = "其它";
+            strRelatedType = "Other";
             strRelatedID = "0";
         }
 
         if (strRelatedType == "Project")
         {
-            strRelatedType = "项目";
+            strRelatedType = "Project";
             strRelatedTitle = GetProjectName(strRelatedID);
         }
 
         if (strRelatedType == "Requirement")
         {
-            strRelatedType = "需求";
+            strRelatedType = "Requirement";
             strRelatedTitle = GetRequirementName(strRelatedID);
         }
 
@@ -110,7 +110,7 @@ public partial class TTExpenseApplyWFView : System.Web.UI.Page
         strHQL += " expenseApplyWL.ExpenseName Like " + "'%" + strAOName + "%'";
         if (strProjectName != "")
         {
-            strHQL += "And expenseApplyWL.RelatedType = '项目' and expenseApplyWL.RelatedID in (Select project.ProjectID From Project as project Where project.ProjectName Like " + "'%" + strProjectName + "%')";
+            strHQL += "And expenseApplyWL.RelatedType = 'Project' and expenseApplyWL.RelatedID in (Select project.ProjectID From Project as project Where project.ProjectName Like " + "'%" + strProjectName + "%')";
         }
 
         strHQL += " And to_char( expenseApplyWL.ApplyTime,'yyyymmdd') >= " + "'" + strStartTime + "'" + " and to_char( expenseApplyWL.ApplyTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
@@ -150,7 +150,7 @@ public partial class TTExpenseApplyWFView : System.Web.UI.Page
 
             e.Item.ForeColor = Color.Red;
 
-            LoadRelatedWL("费用申请", int.Parse(strID));
+            LoadRelatedWL("ExpenseRequest", int.Parse(strID));
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -25,7 +25,7 @@ public partial class TTMemberAttendanceReport : System.Web.UI.Page
         IList lst;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "æˆå‘˜è¯·å‡", strUserCode.Trim());
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "³ÉÔ±Çë¼Ù", strUserCode.Trim());
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -41,7 +41,7 @@ public partial class TTMemberAttendanceReport : System.Web.UI.Page
             LoadLeaveType();
             ShareClass.LoadMemberByUserCodeForDataGrid(strUserCode, "Position", DataGrid2);
 
-            LB_ProjectMemberOwner.Text = "ç›´æ¥æˆå‘˜è¯·å‡ä¿¡æ¯åˆ—è¡¨ï¼š";
+            LB_ProjectMemberOwner.Text = "Ö±½Ó³ÉÔ±Çë¼ÙĞÅÏ¢ÁĞ±í£º";
             
             strHQL = "from LeaveApplyForm as leaveApplyForm ";
             strHQL += " Where leaveApplyForm.Creator In (Select memberLevel.UnderCode From MemberLevel as memberLevel Where memberLevel.UserCode = '" + strUserCode + "')";
@@ -63,8 +63,8 @@ public partial class TTMemberAttendanceReport : System.Web.UI.Page
                 }
             }
 
-            LB_LeaveInfoNumber.Text = Resources.lang.GCXD + lst.Count.ToString() + " æ¡";
-            lbl_DayHourTotal.Text = "å…±è¯·å‡ï¼š" + strHourNum + " å°æ—¶ï¼›";
+            LB_LeaveInfoNumber.Text = Resources.lang.GCXD + lst.Count.ToString() + " Ìõ";
+            lbl_DayHourTotal.Text = "¹²Çë¼Ù£º" + strHourNum + " Ğ¡Ê±£»";
 
             LB_Sql.Text = strHQL;
         }
@@ -98,8 +98,8 @@ public partial class TTMemberAttendanceReport : System.Web.UI.Page
 
         LB_OperatorCode.Text = strOperatorCode;
 
-        LB_ProjectMemberOwner.Text = strOperatorCode + " " + strOperatorName  + " çš„è¯·å‡ä¿¡æ¯ï¼š";
-        LB_LeaveInfoNumber.Text = Resources.lang.GCXD + lst.Count.ToString() + " æ¡";
+        LB_ProjectMemberOwner.Text = strOperatorCode + " " + strOperatorName  + " µÄÇë¼ÙĞÅÏ¢£º";
+        LB_LeaveInfoNumber.Text = Resources.lang.GCXD + lst.Count.ToString() + " Ìõ";
 
         LB_Sql.Text = strHQL;
     }
@@ -109,7 +109,7 @@ public partial class TTMemberAttendanceReport : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        LB_ProjectMemberOwner.Text = "æ‰€æœ‰è¯·å‡ä¿¡æ¯åˆ—è¡¨ï¼š";
+        LB_ProjectMemberOwner.Text = "ËùÓĞÇë¼ÙĞÅÏ¢ÁĞ±í£º";
 
         string strStatus = "%" + DL_Status.SelectedValue + "%";
         string strCreatorCode = "%" + TB_UserCode.Text.Trim() + "%";
@@ -151,8 +151,8 @@ public partial class TTMemberAttendanceReport : System.Web.UI.Page
             }
         }
 
-        LB_LeaveInfoNumber.Text = Resources.lang.GCXD + lst.Count.ToString() + " æ¡";
-        lbl_DayHourTotal.Text = "å…±è¯·å‡ï¼š" + strHourNum + " å°æ—¶ï¼›";
+        LB_LeaveInfoNumber.Text = Resources.lang.GCXD + lst.Count.ToString() + " Ìõ";
+        lbl_DayHourTotal.Text = "¹²Çë¼Ù£º" + strHourNum + " Ğ¡Ê±£»";
 
         LB_Sql.Text = strHQL;
 
@@ -179,7 +179,7 @@ public partial class TTMemberAttendanceReport : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = "è¯·å‡ä¿¡æ¯_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = "Çë¼ÙĞÅÏ¢_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 CreateExcel(getUserList(), fileName);
             }
             catch (Exception ex)
@@ -216,10 +216,10 @@ public partial class TTMemberAttendanceReport : System.Web.UI.Page
         string strHQL;
         string strOperatorCode = LB_OperatorCode.Text.Trim();
 
-        if (strOperatorCode == "")//æ‰€æœ‰è¯·å‡ä¿¡æ¯
+        if (strOperatorCode == "")//ËùÓĞÇë¼ÙĞÅÏ¢
         {
-            strHQL = "Select ID 'ç¼–å·',UserName 'è¯·å‡äºº',DepartCode 'éƒ¨é—¨ä»£ç ',DepartName 'éƒ¨é—¨åç§°',Duty 'èŒä½',LeaveType 'è¯·å‡ç±»å‹',StartTime 'å¼€å§‹æ—¶é—´'," +
-                "EndTime 'ç»“æŸæ—¶é—´',ApplyBecause 'è¯·å‡äº‹ç”±',CreateTime 'è¯·å‡æ—¥æœŸ',Status 'çŠ¶æ€' from T_LeaveApplyForm  Where Creator In (Select UnderCode From T_MemberLevel Where UserCode = '" + strUserCode + "')";
+            strHQL = "Select ID '±àºÅ',UserName 'Çë¼ÙÈË',DepartCode '²¿ÃÅ´úÂë',DepartName '²¿ÃÅÃû³Æ',Duty 'Ö°Î»',LeaveType 'Çë¼ÙÀàĞÍ',StartTime '¿ªÊ¼Ê±¼ä'," +
+                "EndTime '½áÊøÊ±¼ä',ApplyBecause 'Çë¼ÙÊÂÓÉ',CreateTime 'Çë¼ÙÈÕÆÚ',Status '×´Ì¬' from T_LeaveApplyForm  Where Creator In (Select UnderCode From T_MemberLevel Where UserCode = '" + strUserCode + "')";
 
 
             if (!string.IsNullOrEmpty(DL_Status.SelectedValue.Trim()))
@@ -248,17 +248,17 @@ public partial class TTMemberAttendanceReport : System.Web.UI.Page
             }
             strHQL += " Order by ID DESC";
         }
-        else//æŒ‰ç»„ç»‡æ¶æ„æŸ¥è¯¢çš„
+        else//°´×éÖ¯¼Ü¹¹²éÑ¯µÄ
         {
-            strHQL = "Select ID 'ç¼–å·',UserName 'è¯·å‡äºº',DepartCode 'éƒ¨é—¨ä»£ç ',DepartName 'éƒ¨é—¨åç§°',Duty 'èŒä½',LeaveType 'è¯·å‡ç±»å‹',StartTime 'å¼€å§‹æ—¶é—´'," +
-                "EndTime 'ç»“æŸæ—¶é—´',ApplyBecause 'è¯·å‡äº‹ç”±',CreateTime 'è¯·å‡æ—¥æœŸ',Status 'çŠ¶æ€' from T_LeaveApplyForm Where Creator = '" + strOperatorCode + "' Order by ID DESC ";
+            strHQL = "Select ID '±àºÅ',UserName 'Çë¼ÙÈË',DepartCode '²¿ÃÅ´úÂë',DepartName '²¿ÃÅÃû³Æ',Duty 'Ö°Î»',LeaveType 'Çë¼ÙÀàĞÍ',StartTime '¿ªÊ¼Ê±¼ä'," +
+                "EndTime '½áÊøÊ±¼ä',ApplyBecause 'Çë¼ÙÊÂÓÉ',CreateTime 'Çë¼ÙÈÕÆÚ',Status '×´Ì¬' from T_LeaveApplyForm Where Creator = '" + strOperatorCode + "' Order by ID DESC ";
 
         }
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_LeaveApplyForm");
         return ds.Tables[0];
     }
 
-    //å–å¾—æ­¤å‘˜å·¥å½“å¹´çš„æ­¤ç±»å‹çš„è¯·å‡å¤©æ•°
+    //È¡µÃ´ËÔ±¹¤µ±ÄêµÄ´ËÀàĞÍµÄÇë¼ÙÌìÊı
     protected string GetTotalLeaveDayNumberInCurrentYear(string strLeaveType, string strApplicantCode,string strLeaveTime)
     {
         string strHQL;
@@ -278,7 +278,7 @@ public partial class TTMemberAttendanceReport : System.Web.UI.Page
         }
     }
 
-    //å–å¾—æ­¤å‘˜å·¥å½“æœˆçš„æ­¤ç±»å‹çš„è¯·å‡å¤©æ•°
+    //È¡µÃ´ËÔ±¹¤µ±ÔÂµÄ´ËÀàĞÍµÄÇë¼ÙÌìÊı
     protected string GetTotalLeaveDayNumberInCurrentMonth(string strLeaveType, string strApplicantCode, string strLeaveTime)
     {
         string strHQL;

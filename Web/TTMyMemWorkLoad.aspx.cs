@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -52,7 +52,7 @@ public partial class TTMyMemWorkLoad : System.Web.UI.Page
         int i, intYear;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "æˆå‘˜è´Ÿè·", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "³ÉÔ±¸ººÉ", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -95,7 +95,7 @@ public partial class TTMyMemWorkLoad : System.Web.UI.Page
             DayPilotScheduler1.CellGroupBy = GroupByEnum.Year; ;
         }
 
-        //è®¾ç½®æ—¥ç¨‹æ§ä»¶è¯­è¨€
+        //ÉèÖÃÈÕ³Ì¿Ø¼şÓïÑÔ
         Culture = ShareClass.GetDayPilotLanguage();
 
         if (!IsPostBack)
@@ -140,7 +140,7 @@ public partial class TTMyMemWorkLoad : System.Web.UI.Page
             LB_SQL2.Text = strHQL2;
 
             strHQL3 = "Select distinct ProjectID,ProjectName From T_Project Where ProjectID in ( Select ProjectID from T_RelatedUser where UserCode in (Select UnderCode From T_MemberLevel Where WorkloadVisible = 'YES' and UserCode = " + "'" + strUserCode + "'" + "))";
-            strHQL3 += " and Status Not in ('å½’æ¡£','åˆ é™¤','å–æ¶ˆ','æŒ‚èµ·')";
+            strHQL3 += " and Status Not in ('Archived','Deleted','Cancel','Suspended')";
             strHQL3 += " Order by ProjectID DESC";
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL3, "T_RelatedUser");
             DataGrid1.DataSource = ds;
@@ -222,19 +222,19 @@ public partial class TTMyMemWorkLoad : System.Web.UI.Page
 
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select DepartCode as ç»„åˆ«,
-                   UserName as å§“å,
-                   ProjectName as é¡¹ç›®,
-                   PlanName as è®¡åˆ’,
-                   TaskName as ä»»åŠ¡,
-                   PlanBeginTime as è®¡åˆ’é¢„è®¡å¼€å§‹æ—¶é—´,
-                   PlanEndTime as è®¡åˆ’é¢„è®¡ç»“æŸæ—¶é—´,
-                   TaskBeginDate as ä»»åŠ¡é¢„è®¡å¼€å§‹æ—¶é—´,
-                   TaskFirstOperateTime as ä»»åŠ¡å—ç†æ—¶é—´,
-                   TaskEndDate as ä»»åŠ¡é¢„è®¡ç»“æŸæ—¶é—´,
-                   TaskLastestOperateTime as ä»»åŠ¡æœ€æ–°æ“ä½œæ—¶é—´,
-                   Status as ä»»åŠ¡çŠ¶æ€,
-                   TaskLog as ä»»åŠ¡æ—¥å¿—
+        strHQL = @"Select DepartCode as ×é±ğ,
+                   UserName as ĞÕÃû,
+                   ProjectName as ÏîÄ¿,
+                   PlanName as ¼Æ»®,
+                   TaskName as ÈÎÎñ,
+                   PlanBeginTime as ¼Æ»®Ô¤¼Æ¿ªÊ¼Ê±¼ä,
+                   PlanEndTime as ¼Æ»®Ô¤¼Æ½áÊøÊ±¼ä,
+                   TaskBeginDate as ÈÎÎñÔ¤¼Æ¿ªÊ¼Ê±¼ä,
+                   TaskFirstOperateTime as ÈÎÎñÊÜÀíÊ±¼ä,
+                   TaskEndDate as ÈÎÎñÔ¤¼Æ½áÊøÊ±¼ä,
+                   TaskLastestOperateTime as ÈÎÎñ×îĞÂ²Ù×÷Ê±¼ä,
+                   Status as ÈÎÎñ×´Ì¬,
+                   TaskLog as ÈÎÎñÈÕÖ¾
                    From V_ProjectMemberTaskDetailReport";
 
         strHQL += " Where DepartCode Like " + "'" + strDepartCode + "'";
@@ -258,9 +258,9 @@ public partial class TTMyMemWorkLoad : System.Web.UI.Page
 
         DataTable dtProject = ShareClass.GetDataSetFromSql(strHQL, "project").Tables[0];
 
-        Export3Excel(dtProject, "é¡¹ç›®æˆå‘˜ä»»åŠ¡.xls");
+        Export3Excel(dtProject, "ÏîÄ¿³ÉÔ±ÈÎÎñ.xls");
 
-        //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¯¼å‡ºæˆåŠŸï¼');", true);
+        //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µ¼³ö³É¹¦£¡');", true);
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)
@@ -323,13 +323,13 @@ public partial class TTMyMemWorkLoad : System.Web.UI.Page
 
     protected void BT_FindPlanRate_Click(object sender, EventArgs e)
     {
-        LB_ReportName.Text = MonthPicker1.Year + "å¹´" + MonthPicker1.Month + "æœˆè®¡åˆ’å®Œæˆæƒ…å†µ";
+        LB_ReportName.Text = MonthPicker1.Year + "Äê" + MonthPicker1.Month + "ÔÂ¼Æ»®Íê³ÉÇé¿ö";
 
         string strProjectID = LB_ProjectID.Text.Trim();
 
         if (strProjectID != "")
         {
-            string strPlanVerID = GetProjectPlanVersionVerID(strProjectID, "åœ¨ç”¨").ToString();
+            string strPlanVerID = GetProjectPlanVersionVerID(strProjectID, "InUse").ToString();
 
 
 
@@ -351,13 +351,13 @@ public partial class TTMyMemWorkLoad : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æç¤ºï¼Œè¯·å…ˆé€‰æ‹©é¡¹ç›®ï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÌáÊ¾£¬ÇëÏÈÑ¡ÔñÏîÄ¿£¡')", true);
 
         }
     }
 
 
-    //å–å¾—ç‰ˆæœ¬å·ID
+    //È¡µÃ°æ±¾ºÅID
     public int GetProjectPlanVersionVerID(string strProjectID, string strType)
     {
         string strHQL;
@@ -475,14 +475,14 @@ public partial class TTMyMemWorkLoad : System.Web.UI.Page
             {
                 strHQL1 = "Select UserCode, UserName,Type,ProjectID ,ProjectName,BeginDate,EndDate From V_ProjectMember_WorkLoadByProjectTask";
                 strHQL1 += " Where PJID =" + strProjectID;
-                strHQL1 += " and Type <> 'é¡¹ç›®'";
+                strHQL1 += " and Type <> 'Project'";
                 strHQL1 += " and UserCode = " + "'" + strUnderlingCode + "'";
                 LB_SQL1.Text = strHQL1;
                 initData(strHQL1);
 
                 strHQL2 = "Select distinct UserName  From V_ProjectMember_WorkLoadByProjectTask";
                 strHQL2 += " Where PJID =" + strProjectID;
-                strHQL2 += " and Type <> 'é¡¹ç›®'";
+                strHQL2 += " and Type <> 'Project'";
                 strHQL2 += " and UserCode = " + "'" + strUnderlingCode + "'";
                 LB_SQL2.Text = strHQL2;
                 setDataSourceAndBind(strHQL2);
@@ -492,14 +492,14 @@ public partial class TTMyMemWorkLoad : System.Web.UI.Page
                 string strUserCode = Session["UserCode"].ToString();
                 strHQL1 = "Select UserCode, UserName,Type,ProjectID ,ProjectName,BeginDate,EndDate From V_ProjectMember_WorkLoadByProjectTask";
                 strHQL1 += " Where PJID =" + strProjectID;
-                strHQL1 += " and Type <> 'é¡¹ç›®'";
+                strHQL1 += " and Type <> 'Project'";
                 strHQL1 += " and UserCode in (Select UnderCode From T_MemberLevel Where WorkloadVisible = 'YES' and UserCode = " + "'" + strUserCode + "'" + ")";
                 LB_SQL1.Text = strHQL1;
                 initData(strHQL1);
 
                 strHQL2 = "Select distinct UserName  From V_ProjectMember_WorkLoadByProjectTask";
                 strHQL2 += " Where PJID =" + strProjectID;
-                strHQL2 += " and Type <> 'é¡¹ç›®'";
+                strHQL2 += " and Type <> 'Project'";
                 strHQL2 += " and UserCode in (Select UnderCode From T_MemberLevel Where WorkloadVisible = 'YES' and UserCode = " + "'" + strUserCode + "'" + ")";
                 LB_SQL2.Text = strHQL2;
                 setDataSourceAndBind(strHQL2);
@@ -512,10 +512,10 @@ public partial class TTMyMemWorkLoad : System.Web.UI.Page
 
 
             string strPlanVerID;
-            strPlanVerID = GetProjectPlanVersionVerID(strProjectID, "åœ¨ç”¨").ToString();
+            strPlanVerID = GetProjectPlanVersionVerID(strProjectID, "InUse").ToString();
 
             LB_ProjectName.Text = Resources.lang.XiangMu + ": " + strProjectID + " " + ShareClass.GetProjectName(strProjectID);
-            LB_ReportName.Text = MonthPicker1.Year + "å¹´" + MonthPicker1.Month + "æœˆè®¡åˆ’å®Œæˆæƒ…å†µ";
+            LB_ReportName.Text = MonthPicker1.Year + "Äê" + MonthPicker1.Month + "ÔÂ¼Æ»®Íê³ÉÇé¿ö";
             string strCmdText = "select cast(Percent_Done as CHAR(10)) as XName,count(*) as YNumber from T_ImplePlan ";
             strCmdText += " where ProjectID = " + strProjectID;
             strCmdText += " and extract(month from End_Date) = extract(month from now()) and extract(year from End_Date) = extract(year from now())";
@@ -584,7 +584,7 @@ public partial class TTMyMemWorkLoad : System.Web.UI.Page
 
             strHQL3 = "Select distinct ProjectID,ProjectName From T_Project Where ";
             strHQL3 += " ProjectID in ( Select ProjectID from T_RelatedUser where UserCode = " + "'" + strUnderlingCode + "')";
-            strHQL3 += " and Status Not in ('å½’æ¡£','åˆ é™¤','å–æ¶ˆ','æŒ‚èµ·')";
+            strHQL3 += " and Status Not in ('Archived','Deleted','Cancel','Suspended')";
             strHQL3 += " Order by ProjectID DESC";
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL3, "T_RelatedUser");
             DataGrid1.DataSource = ds;

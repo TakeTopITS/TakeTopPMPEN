@@ -1,4 +1,4 @@
-锘縰sing System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -28,7 +28,7 @@ public partial class TTWorkFlowStepConditionView : System.Web.UI.Page
         lst = workFlowTStepBLL.GetAllWorkFlowTSteps(strHQL);
         WorkFlowTStep workFlowTStep = (WorkFlowTStep)lst[0];
 
-        //this.Title = "宸ヤ綔娴佹楠わ細" + strStepID + " " + workFlowTStep.StepName.Trim() + " 姝ュ簭鏉′欢";
+        //this.Title = "工作流步骤：" + strStepID + " " + workFlowTStep.StepName.Trim() + " 步序条件";
 
         string strUserCode = Session["UserCode"].ToString();if (Page.IsPostBack == false)
         {

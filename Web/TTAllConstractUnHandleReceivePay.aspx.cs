@@ -1,4 +1,4 @@
-﻿using System; using System.Resources;
+using System; using System.Resources;
 using System.Data;
 using System.Configuration;
 using System.Collections;
@@ -27,7 +27,7 @@ public partial class TTAllConstractUnHandleReceivePay : System.Web.UI.Page
         string strUserName = Session["UserName"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "查看所有项目", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "�鿴������Ŀ", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -52,9 +52,9 @@ public partial class TTAllConstractUnHandleReceivePay : System.Web.UI.Page
 
         string strDepartString = LB_DepartString.Text.Trim();
 
-        strHQL = "Select * from T_ConstractReceivables as constractReceivables where constractReceivables.Status not in ('完成','取消') and to_char( constractReceivables.ReceivablesTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd') ";
+        strHQL = "Select * from T_ConstractReceivables as constractReceivables where constractReceivables.Status not in ('Completed','Cancel') and to_char( constractReceivables.ReceivablesTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd') ";
         strHQL += " and constractReceivables.ConstractCode in (Select constract.ConstractCode From T_Constract as constract where constract.RecorderCode in (Select projectMember.UserCode From T_ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + "))";
-        strHQL += " and constractReceivables.ConstractCode not in (Select constract.ConstractCode from T_Constract as constract where constract.Status in ('归档','取消','删除'))";
+        strHQL += " and constractReceivables.ConstractCode not in (Select constract.ConstractCode from T_Constract as constract where constract.Status in ('Archived','Cancel','Deleted'))";
         strHQL += " Order by constractReceivables.ID DESC";
 
     
@@ -70,9 +70,9 @@ public partial class TTAllConstractUnHandleReceivePay : System.Web.UI.Page
 
         string strDepartString = LB_DepartString.Text.Trim();
 
-        strHQL = "Select * from T_ConstractPayable as constractPayable where constractPayable.Status not in ('完成','取消') and to_char(constractPayable.PayableTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd')";
+        strHQL = "Select * from T_ConstractPayable as constractPayable where constractPayable.Status not in ('Completed','Cancel') and to_char(constractPayable.PayableTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd')";
         strHQL += " and constractPayable.ConstractCode in (Select constract.ConstractCode From T_Constract as constract where constract.RecorderCode in (Select projectMember.UserCode From T_ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + "))";
-        strHQL += " and constractPayable.ConstractCode not in (Select constract.ConstractCode from T_Constract as constract where constract.Status  in ('归档','取消','删除'))";
+        strHQL += " and constractPayable.ConstractCode not in (Select constract.ConstractCode from T_Constract as constract where constract.Status  in ('Archived','Cancel','Deleted'))";
         strHQL += " Order by constractPayable.ID DESC";
 
 

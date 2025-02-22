@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -27,7 +27,7 @@ public partial class TakeTopSiteContentEdit : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //CKEditoråˆå§‹åŒ–
+        //CKEditor³õÊ¼»¯
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(CKEditor1);
@@ -283,7 +283,7 @@ public partial class TakeTopSiteContentEdit : System.Web.UI.Page
 
         string strModuleID, strModuleName, strModuleType, strHomeModuleName;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         treeView.Nodes.Clear();
         TreeNode node1 = new TreeNode();
         TreeNode node2 = new TreeNode();

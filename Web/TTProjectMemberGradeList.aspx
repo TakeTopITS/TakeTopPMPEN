@@ -1,4 +1,4 @@
-Ôªølk<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectMemberGradeList.aspx.cs" Inherits="TTProjectMemberGradeList" %>
+lk<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectMemberGradeList.aspx.cs" Inherits="TTProjectMemberGradeList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -6,7 +6,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Âπ¥Á∫ß</title>
+    <title>ƒÍº∂</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -64,17 +64,17 @@
                                                             <table class="formBgStyle" width="80%">
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:TextBox ID="TXT_ID" runat="server" ReadOnly="true"></asp:TextBox><font color="red">*<asp:Label ID="Label3" runat="server" ></asp:Label>Ëá™Âä®ÁîüÊàê</font>
+                                                                        <asp:TextBox ID="TXT_ID" runat="server" ReadOnly="true"></asp:TextBox><font color="red">*<asp:Label ID="Label3" runat="server" ></asp:Label>◊‘∂Ø…˙≥…</font>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,NianJi%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,NianJi%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_GradeName" runat="server"></asp:TextBox>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,GuiShuBuMen%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,GuiShuBuMen%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_BelongDepartName" runat="server" Width="125px"></asp:TextBox>
                                                                         <cc1:ModalPopupExtender ID="TB_BelongDepartName_ModalPopupExtender" runat="server"
@@ -93,7 +93,7 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="6">
-                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,NianJiJiLu%>"></asp:Label> ÂÖ±<asp:Label ID="LB_RecordCount" runat="server" Text=""></asp:Label><asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,Tiao%>"></asp:Label>&nbsp;
+                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,NianJiJiLu%>"></asp:Label> π≤<asp:Label ID="LB_RecordCount" runat="server" Text=""></asp:Label><asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,Tiao%>"></asp:Label>&nbsp;
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -150,13 +150,13 @@
                                                                             </ItemTemplate>
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="ID" HeaderText="Â∫èÂè∑">
+                                                                        <asp:BoundColumn DataField="ID" HeaderText="–Ú∫≈">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="GradeName" HeaderText="Âπ¥Á∫ß">
+                                                                        <asp:BoundColumn DataField="GradeName" HeaderText="ƒÍº∂">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="DepartName" HeaderText="ÂΩíÂ±ûÈÉ®Èó®">
+                                                                        <asp:BoundColumn DataField="DepartName" HeaderText="πÈ Ù≤ø√≈">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                                         </asp:BoundColumn>
                                                                     </Columns>

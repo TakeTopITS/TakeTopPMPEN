@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZExpertEdit.aspx.cs" Inherits="TTWZExpertEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZExpertEdit.aspx.cs" Inherits="TTWZExpertEdit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ä¸“å®¶åº“ç¼–è¾‘</title>
+    <title>×¨¼Ò¿â±à¼­</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -17,7 +17,7 @@
         function SelectDevide() {
             var url = "TTWZSelectorDivideList.aspx";
 
-            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + id + "&ctrlName=" + name, 'é€‰æ‹©å¤§ç±»', 600, 500);	
+            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + id + "&ctrlName=" + name, 'Ñ¡Ôñ´óÀà', 600, 500);	
         }
 
     </script>
@@ -65,20 +65,20 @@
                                                             <table class="formBgStyle" width="100%">
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZhuanJiaBianHao%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZhuanJiaBianHao%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_ExpertCode" runat="server" ReadOnly="true"></asp:TextBox><font color="red">*<asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZiDongShengCheng%>"></asp:Label></font>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XingMing%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XingMing%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_Name" runat="server"></asp:TextBox>
                                                                         <asp:HiddenField ID="HF_UserCode" runat="server" />&nbsp;
-                                                                        <input type="button" id="btnName" class="inpu" runat="server" value="é€‰æ‹©" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_UserCode', 'TXT_Name')" />
+                                                                        <input type="button" id="btnName" class="inpu" runat="server" value="Ñ¡Ôñ" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_UserCode', 'TXT_Name')" />
 
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhiWu%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhiWu%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_Job" runat="server"></asp:TextBox>
                                                                     </td>
@@ -86,19 +86,19 @@
                                                                 <tr>
                                                                     
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZhiCheng%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZhiCheng%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_JobTitle" runat="server"></asp:TextBox>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhuanJiaLeiBie%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhuanJiaLeiBie%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:HiddenField ID="HF_ExpertType" runat="server" />
                                                                         <asp:TextBox ID="TXT_ExpertTypeChina" runat="server"></asp:TextBox>&nbsp;
-                                                                        <input type="button" class="inpu" value="é€‰æ‹©" id="btnSelect" onclick="SelectDevide()" />
+                                                                        <input type="button" class="inpu" value="Ñ¡Ôñ" id="btnSelect" onclick="SelectDevide()" />
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,LianXiDianHua%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,LianXiDianHua%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="5">
                                                                         <asp:TextBox ID="TXT_Phone" runat="server"></asp:TextBox>
                                                                     </td>
@@ -106,7 +106,7 @@
                                                                 <tr>
                                                                     <td style="text-align: center" class="formItemBgStyle" colspan="6">
                                                                         <asp:Button ID="btnSave" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnSave_Click" />&nbsp;&nbsp;
-                                                                        <input type="button" value="è¿”å›ž" id="BT_Return" class="inpu" onclick="window.location.href = 'TTWZExpertList.aspx'" />
+                                                                        <input type="button" value="·µ»Ø" id="BT_Return" class="inpu" onclick="window.location.href = 'TTWZExpertList.aspx'" />
                                                                     </td>
                                                                 </tr>
                                                             </table>

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -17,7 +17,7 @@ public partial class TTAPPTaskAssignRecordForAfterServiceSAAS : System.Web.UI.Pa
 
         try
         {
-            //扫码功能必须
+            //ɨ�빦�ܱ���
             signModel = TakeTopCore.WXHelper.GetWXInfo(Request.Url.ToString());
             if (signModel != null)
             {

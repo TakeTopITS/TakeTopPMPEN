@@ -1,15 +1,15 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTTableNameMapppingList.aspx.cs" Inherits="TTTableNameMapppingList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTTableNameMapppingList.aspx.cs" Inherits="TTTableNameMapppingList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>æ•°æ®äº¤äº’å­—æ®µé…å¯¹åˆ—è¡¨</title>
+    <title>Êı¾İ½»»¥×Ö¶ÎÅä¶ÔÁĞ±í</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript">
         function ConfirmTitle() {
-            if (confirm("æ‚¨ç¡®å®šåˆ é™¤æ­¤æ¡è®°å½•å—ï¼Ÿ")) {
+            if (confirm("ÄúÈ·¶¨É¾³ı´ËÌõ¼ÇÂ¼Âğ£¿")) {
                 return true;
             } else {
                 return false;
@@ -51,7 +51,7 @@
                             <table width="100%" cellpadding="0" cellspacing="0">
                                 <tr style="font-size: 12pt;">
                                     <td align="right" class="formItemBgStyle">
-                                        <input type="button" class="inpuLong" value="æ–°å¢äº¤äº’é…å¯¹è¡¨" onclick="window.location.href = 'TTAddTableNameMapping.aspx'" />
+                                        <input type="button" class="inpuLong" value="ĞÂÔö½»»¥Åä¶Ô±í" onclick="window.location.href = 'TTAddTableNameMapping.aspx'" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -60,10 +60,10 @@
                                             CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="5" ShowHeader="True"
                                             Width="100%" OnItemCommand="DG_TableNameMappingList_ItemCommand" OnItemDataBound="DG_TableNameMappingList_ItemDataBound">
                                             <Columns>
-                                                <asp:BoundColumn DataField="TableName" HeaderText="è¡¨åç§°">
+                                                <asp:BoundColumn DataField="TableName" HeaderText="±íÃû³Æ">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                 </asp:BoundColumn>
-                                                <asp:BoundColumn DataField="Description" HeaderText="æè¿°">
+                                                <asp:BoundColumn DataField="Description" HeaderText="ÃèÊö">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                 </asp:BoundColumn>
                                                 <asp:TemplateColumn>

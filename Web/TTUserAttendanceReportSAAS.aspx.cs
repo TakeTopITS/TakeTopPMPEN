@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -31,7 +31,7 @@ public partial class TTUserAttendanceReportSAAS : System.Web.UI.Page
         string strUserName;
         strUserCode = Session["UserCode"].ToString();
 
-        //this.Title = "å‘˜å·¥è€ƒå‹¤æŠ¥è¡¨";
+        //this.Title = "Ô±¹¤¿¼ÇÚ±¨±í";
 
         LB_UserCode.Text = strUserCode;
         strUserName = ShareClass.GetUserName(strUserCode);
@@ -81,7 +81,7 @@ public partial class TTUserAttendanceReportSAAS : System.Web.UI.Page
      
         strUserName = "%" + strUserName + "%";
 
-        if (strDisplayType == "æ˜¾ç¤ºå¼‚å¸¸")
+        if (strDisplayType == "DisplayAbnormal")
         {
             strHQL = "Select * From T_UserAttendanceRecord  where to_char(AttendanceDate,'yyyymmdd') >= " + "'" + strStartTime + "'";
             strHQL += " and  to_char(AttendanceDate,'yyyymmdd') <= " + "'" + strEndTime + "'";

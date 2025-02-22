@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTDWCustomValueImport.aspx.cs" Inherits="TTDWCustomValueImport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTDWCustomValueImport.aspx.cs" Inherits="TTDWCustomValueImport" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ÂÆ¢Êà∑‰ª∑ÂÄºË°®-ÂØºÂÖ•</title>
+    <title>øÕªßº€÷µ±Ì-µº»Î</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -27,22 +27,22 @@
         }
 
 
-        /*Êñá‰ª∂ÈÄâÊã©È™åËØÅ*/
+        /*Œƒº˛—°‘Ò—È÷§*/
         function checkFile(obj, postfix) {
             var postfix = postfix || "";
             var fileName = $(obj).val();
             if (fileName == "") {
-                alert('ËØ∑ÈÄâÊã©Ë¶ÅÂØºÂÖ•ÁöÑÊñá‰ª∂ÔºÅ');
+                alert('«Î—°‘Ò“™µº»ÎµƒŒƒº˛£°');
                 return false;
             }
-            // Êñá‰ª∂Á±ªÂûãÈ™åËØÅ.
+            // Œƒº˛¿‡–Õ—È÷§.
             if (postfix != "") {
                 var re = new RegExp("(." + postfix + ")$");
                 if (re.test(fileName.toLowerCase())) {
                     return true;
                 }
                 else {
-                    alert("ÂØºÂÖ•ÁöÑÊñá‰ª∂ÂøÖÈ°ª‰∏∫." + postfix + "Á±ªÂûãÁöÑÊñá‰ª∂ÔºÅ");
+                    alert("µº»ÎµƒŒƒº˛±ÿ–ÎŒ™." + postfix + "¿‡–ÕµƒŒƒº˛£°");
                     return false;
                 }
             }
@@ -96,15 +96,15 @@
                                                                         <table class="formBgStyle" width="60%">
                                                                             <tr>
                                                                                 <td style="text-align: left" class="formItemBgStyle">
-                                                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,Nian%>"></asp:Label>Ôºö<asp:DropDownList ID="DDL_Year" runat="server"></asp:DropDownList>&nbsp;
-                                                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,Yue%>"></asp:Label>Ôºö<asp:DropDownList ID="DDL_Month" runat="server"></asp:DropDownList>&nbsp;
+                                                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,Nian%>"></asp:Label>£∫<asp:DropDownList ID="DDL_Year" runat="server"></asp:DropDownList>&nbsp;
+                                                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,Yue%>"></asp:Label>£∫<asp:DropDownList ID="DDL_Month" runat="server"></asp:DropDownList>&nbsp;
                                                                                 </td>
                                                                                 <td style="text-align: left" class="formItemBgStyle">
-                                                                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XuanZeDaoRuWenJian%>"></asp:Label>Ôºö</td>
+                                                                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XuanZeDaoRuWenJian%>"></asp:Label>£∫</td>
                                                                                 <td style="text-align: left" class="formItemBgStyle">
                                                                                     <asp:FileUpload ID="fileExcel" runat="server" />
                                                                                     <asp:Button ID="btnImport" runat="server" Text="<%$ Resources:lang,DaoRu%>" OnClick="btnImport_Click" OnClientClick="importFile();" CssClass="inpu" />&nbsp;&nbsp;
-                                                                                    <input type="button" class="inpu" value="ËøîÂõû" style="display:none;" />&nbsp;&nbsp;
+                                                                                    <input type="button" class="inpu" value="∑µªÿ" style="display:none;" />&nbsp;&nbsp;
                                                                                     <asp:Button ID="BT_Save" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="BT_Save_Click" />
                                                                                 </td>
                                                                             </tr>
@@ -124,64 +124,64 @@
                                                                                  CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                                                  PageSize="5" ShowHeader="True" Width="100%" OnPageIndexChanged="DG_CustomValue_PageIndexChanged">
                                                                                 <Columns>
-                                                                                    <asp:BoundColumn DataField="CustomName" HeaderText="ÂÆ¢Êà∑ÂêçÁß∞">
+                                                                                    <asp:BoundColumn DataField="CustomName" HeaderText="øÕªß√˚≥∆">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="ProductCode" HeaderText="‰∫ßÂìÅÁºñÂè∑">
+                                                                                    <asp:BoundColumn DataField="ProductCode" HeaderText="≤˙∆∑±‡∫≈">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="ProductType" HeaderText="Á±ªÂà´">
+                                                                                    <asp:BoundColumn DataField="ProductType" HeaderText="¿‡±">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                     </asp:BoundColumn>
-                                                                                    <%--<asp:BoundColumn DataField="SaleTime" HeaderText="Êó•Êúü">
+                                                                                    <%--<asp:BoundColumn DataField="SaleTime" HeaderText="»’∆⁄">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                                                     </asp:BoundColumn>--%>
-                                                                                    <asp:TemplateColumn HeaderText="Êó•Êúü">
+                                                                                    <asp:TemplateColumn HeaderText="»’∆⁄">
                                                                                         <ItemStyle HorizontalAlign="Center" />
                                                                                         <ItemTemplate>
                                                                                             <%#DataBinder.Eval(Container.DataItem, "SaleTime", "{0:yyyy/MM/dd}")%>
                                                                                         </ItemTemplate>
                                                                                     </asp:TemplateColumn>
-                                                                                    <asp:BoundColumn DataField="SaleNumber" HeaderText="ÈîÄÂîÆÊï∞Èáè">
+                                                                                    <asp:BoundColumn DataField="SaleNumber" HeaderText="œ˙ € ˝¡ø">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="SalePrice" HeaderText="ÈîÄÂîÆÂçï‰ª∑">
+                                                                                    <asp:BoundColumn DataField="SalePrice" HeaderText="œ˙ €µ•º€">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="SaleMoney" HeaderText="ÈîÄÂîÆÈáëÈ¢ù">
+                                                                                    <asp:BoundColumn DataField="SaleMoney" HeaderText="œ˙ €Ω∂Ó">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="ProductCost" HeaderText="‰∫ßÂìÅÊàêÊú¨">
+                                                                                    <asp:BoundColumn DataField="ProductCost" HeaderText="≤˙∆∑≥…±æ">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="MakeCost" HeaderText="Âà∂ÈÄ†Ë¥πÁî®">
+                                                                                    <asp:BoundColumn DataField="MakeCost" HeaderText="÷∆‘Ï∑—”√">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="TonCost" HeaderText="Âê®ËÄó">
+                                                                                    <asp:BoundColumn DataField="TonCost" HeaderText="∂÷∫ƒ">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="PickCost" HeaderText="ÂåÖË£ÖË¥πÁî®">
+                                                                                    <asp:BoundColumn DataField="PickCost" HeaderText="∞¸◊∞∑—”√">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="QualityCost" HeaderText="Ë¥®ÈáèÊçüÂ§±">
+                                                                                    <asp:BoundColumn DataField="QualityCost" HeaderText="÷ ¡øÀ ß">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="TransportCost" HeaderText="ËøêËæìË¥πÁî®ÊúàÁªì">
+                                                                                    <asp:BoundColumn DataField="TransportCost" HeaderText="‘À ‰∑—”√‘¬Ω·">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="AccountCost" HeaderText="Ë¥¢Âä°Ë¥πÁî®ÊúàÁªì">
+                                                                                    <asp:BoundColumn DataField="AccountCost" HeaderText="≤∆ŒÒ∑—”√‘¬Ω·">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="ServeCost" HeaderText="ÊãõÂæÖË¥πÁî®">
+                                                                                    <asp:BoundColumn DataField="ServeCost" HeaderText="’–¥˝∑—”√">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="TravelCost" HeaderText="Â∑ÆÊóÖË¥π">
+                                                                                    <asp:BoundColumn DataField="TravelCost" HeaderText="≤Ó¬√∑—">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="Applyer" HeaderText="Êä•ÈîÄ‰∫∫Âëò">
+                                                                                    <asp:BoundColumn DataField="Applyer" HeaderText="±®œ˙»À‘±">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="SurplusValue" HeaderText="Ââ©‰Ωô‰ª∑ÂÄº">
+                                                                                    <asp:BoundColumn DataField="SurplusValue" HeaderText=" £”‡º€÷µ">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                     </asp:BoundColumn>
                                                                                 </Columns>
@@ -218,11 +218,11 @@
                                                                                 <td>
                                                                                     <fieldset>
                                                                                         <legend>
-                                                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhuYiShiXiang%>"></asp:Label>Ôºö</legend>
+                                                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhuYiShiXiang%>"></asp:Label>£∫</legend>
                                                                                         <font color="red">
-                                                                                        1„ÄÅ<asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,TXSJSYXSJLWBTXRQGHDWCPZLCPCDMGYKBHSLHSDJJECWFY%>"></asp:Label><br />
-                                                                                        2„ÄÅ<asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,TXSJSSYJESLLDBXWXSHZZXZFCLDBNBHFFZF%>"></asp:Label><br />
-                                                                                        3„ÄÅ<asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,BCZQQBDYDXLYSZLCBDSJXLRXT%>"></asp:Label>
+                                                                                        1°¢<asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,TXSJSYXSJLWBTXRQGHDWCPZLCPCDMGYKBHSLHSDJJECWFY%>"></asp:Label><br />
+                                                                                        2°¢<asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,TXSJSSYJESLLDBXWXSHZZXZFCLDBNBHFFZF%>"></asp:Label><br />
+                                                                                        3°¢<asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,BCZQQBDYDXLYSZLCBDSJXLRXT%>"></asp:Label>
                                                                                         </font>
                                                                                     </fieldset>
                                                                                 </td>

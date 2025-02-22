@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration.Internal;
@@ -18,7 +18,7 @@ using System.IO;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 
-///ç¬¬ä¸‰æ–¹dll
+///µÚÈı·½dll
 using ICSharpCode.SharpZipLib;
 using ICSharpCode.SharpZipLib.Checksum;
 using ICSharpCode.SharpZipLib.Zip;
@@ -35,7 +35,7 @@ public partial class TakeTopSoftRent_UpdateSiteAuto : System.Web.UI.Page
         strSiteName = Request.QueryString["SiteName"];
         strSiteAppName = Request.QueryString["SiteAppName"];
 
-        LB_Message.Text = "æ­£åœ¨å‡çº§ä½ çš„åº”ç”¨ç«™ç‚¹ï¼Œå¤§æ¦‚éœ€è¦5åˆ†é’Ÿï¼Œè¯·è€å¿ƒç­‰å€™......";
+        LB_Message.Text = "ÕıÔÚÉı¼¶ÄãµÄÓ¦ÓÃÕ¾µã£¬´ó¸ÅĞèÒª5·ÖÖÓ£¬ÇëÄÍĞÄµÈºò......";
 
         if (Page.IsPostBack == false)
         {
@@ -44,16 +44,16 @@ public partial class TakeTopSoftRent_UpdateSiteAuto : System.Web.UI.Page
                 try
                 {
                     UpdateSite();
-                    LB_Message.Text = "ç«™ç‚¹å‡çº§æˆåŠŸï¼";
+                    LB_Message.Text = "Õ¾µãÉı¼¶³É¹¦£¡";
                 }
                 catch
                 {
-                    LB_Message.Text = "ç«™ç‚¹å‡çº§å¤±è´¥ï¼Œè¯·æ£€æŸ¥ï¼";
+                    LB_Message.Text = "Õ¾µãÉı¼¶Ê§°Ü£¬Çë¼ì²é£¡";
                 }
             }
             else
             {
-                LB_Message.Text = "æç¤ºï¼Œæ­¤ç«™ç‚¹ä¸å­˜åœ¨ï¼Œè¯·æ£€æŸ¥ï¼";
+                LB_Message.Text = "ÌáÊ¾£¬´ËÕ¾µã²»´æÔÚ£¬Çë¼ì²é£¡";
             }
 
             IMB_Process.Visible = false;
@@ -61,7 +61,7 @@ public partial class TakeTopSoftRent_UpdateSiteAuto : System.Web.UI.Page
         }
     }
 
-    //å‡çº§ç«™ç‚¹
+    //Éı¼¶Õ¾µã
     protected void UpdateSite()
     {
         string strSiteID, strRentProductType, strRentProductVersionType, strRentProductVersion, strSiteName, strSiteAppName, strSiteDirectory, strSiteTemplateDirectory, strDBLoginUserID, strDBUserLoginPassword, strSiteDBName, strSiteAppSystemName, strSiteAppURL, strRentProductName, strRentUserEMail, strServerType, strIsOEM;
@@ -84,7 +84,7 @@ public partial class TakeTopSoftRent_UpdateSiteAuto : System.Web.UI.Page
 
         strRentProductType = Request.QueryString["RentProductType"];
         strRentProductVersion = Request.QueryString["RentProductVersion"];
-        if (strRentProductVersion == "é›†å›¢ç‰ˆ")
+        if (strRentProductVersion == "GroupEdition")
         {
             strRentProductVersionType = "YES";
         }
@@ -101,28 +101,28 @@ public partial class TakeTopSoftRent_UpdateSiteAuto : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentSiteBaseData");
         if (ds.Tables[0].Rows.Count == 0)
         {
-            LB_Message.Text = "åˆ›å»ºå¤±è´¥ï¼Œæ²¡æœ‰ä½ é€‰å–çš„äº§å“ç‰ˆæœ¬çš„å¯ç”¨ç«™ç‚¹åŸºç¡€å‚æ•°ï¼Œè¯·æ£€æŸ¥ï¼";
+            LB_Message.Text = "´´½¨Ê§°Ü£¬Ã»ÓĞÄãÑ¡È¡µÄ²úÆ·°æ±¾µÄ¿ÉÓÃÕ¾µã»ù´¡²ÎÊı£¬Çë¼ì²é£¡";
             return;
         }
         strRentProductType = ds.Tables[0].Rows[0]["RentProductType"].ToString().Trim();
 
-        //åˆ é™¤ç«™ç‚¹ä¸‹çš„æ‰€æœ‰æ–‡ä»¶
+        //É¾³ıÕ¾µãÏÂµÄËùÓĞÎÄ¼ş
         DeleteDirectory(strSiteDirectory);
 
-        //æŠŠæ ·æ¿ç«™ç‚¹æ–‡ä»¶å¤åˆ¶åˆ°ç«™ç‚¹
+        //°ÑÑù°åÕ¾µãÎÄ¼ş¸´ÖÆµ½Õ¾µã
         CopySiteFile(strSiteTemplateDirectory, strSiteDirectory);
 
-        //ModifyWebConfigDBConnectionString ä¿®æ”¹web.configçš„è¿æ¥æ•°æ®åº“çš„å­—ç¬¦ä¸²ã€å¹³å°åç§°å’Œæ˜¯å¦OEMç‰ˆ
+        //ModifyWebConfigDBConnectionString ĞŞ¸Äweb.configµÄÁ¬½ÓÊı¾İ¿âµÄ×Ö·û´®¡¢Æ½Ì¨Ãû³ÆºÍÊÇ·ñOEM°æ
         ShareClass.ModifyWebConfigDBConnectionStringAndSystemName(strSiteDirectory, "connection.connection_string", "SQLCONNECTIONSTRING", "extganttDataContextConnectionString",strDBLoginUserID, strDBUserLoginPassword, strSiteDBName, strSiteAppSystemName, strSiteAppURL, strRentProductType, strRentProductVersionType, strIsOEM);
 
-        //æˆäºˆè‡ªå»ºç«™ç‚¹ç”¨æˆ·æ‰€æœ‰æƒé™
+        //ÊÚÓè×Ô½¨Õ¾µãÓÃ»§ËùÓĞÈ¨ÏŞ
         ShareClass.GanttAllPrivilegesToSiteUser(strSiteDBName, strDBLoginUserID);
 
-        // æ›´æ–°ç½‘ç«™å»ºç«‹æ—¶é—´
+        // ¸üĞÂÍøÕ¾½¨Á¢Ê±¼ä
         UpdateSiteCreateTime(strSiteID);
     }
 
-    //å–å¾—è‡ªå»ºç«™ç‚¹çš„æ•°æ®åº“è¿æ¥ä¸²
+    //È¡µÃ×Ô½¨Õ¾µãµÄÊı¾İ¿âÁ¬½Ó´®
     public static string GetSiteConnectString(string strSiteDBName)
     {
         string strConnectString, strDBName;
@@ -136,7 +136,7 @@ public partial class TakeTopSoftRent_UpdateSiteAuto : System.Web.UI.Page
     }
 
 
-    //æ›´æ–°ç½‘ç«™å»ºç«‹æ—¶é—´
+    //¸üĞÂÍøÕ¾½¨Á¢Ê±¼ä
     protected void UpdateSiteCreateTime(string strSiteID)
     {
         string strHQL;
@@ -145,20 +145,20 @@ public partial class TakeTopSoftRent_UpdateSiteAuto : System.Web.UI.Page
         ShareClass.RunSqlCommand(strHQL);
     }
 
-    //ç›´æ¥åˆ é™¤æŒ‡å®šç›®å½•ä¸‹çš„æ‰€æœ‰æ–‡ä»¶åŠæ–‡ä»¶å¤¹
+    //Ö±½ÓÉ¾³ıÖ¸¶¨Ä¿Â¼ÏÂµÄËùÓĞÎÄ¼ş¼°ÎÄ¼ş¼Ğ
     public static void DeleteDirectory(string strDirectory)
     {
         try
         {
-            //å»é™¤æ–‡ä»¶å¤¹å’Œå­æ–‡ä»¶çš„åªè¯»å±æ€§
-            //å»é™¤æ–‡ä»¶å¤¹çš„åªè¯»å±æ€§
+            //È¥³ıÎÄ¼ş¼ĞºÍ×ÓÎÄ¼şµÄÖ»¶ÁÊôĞÔ
+            //È¥³ıÎÄ¼ş¼ĞµÄÖ»¶ÁÊôĞÔ
             System.IO.DirectoryInfo fileInfo = new DirectoryInfo(strDirectory);
             fileInfo.Attributes = FileAttributes.Normal & FileAttributes.Directory;
 
-            //å»é™¤æ–‡ä»¶çš„åªè¯»å±æ€§
+            //È¥³ıÎÄ¼şµÄÖ»¶ÁÊôĞÔ
             System.IO.File.SetAttributes(strDirectory, System.IO.FileAttributes.Normal);
 
-            //åˆ¤æ–­æ–‡ä»¶å¤¹æ˜¯å¦è¿˜å­˜åœ¨
+            //ÅĞ¶ÏÎÄ¼ş¼ĞÊÇ·ñ»¹´æÔÚ
             if (Directory.Exists(strDirectory))
             {
                 foreach (string f in Directory.GetFileSystemEntries(strDirectory))
@@ -167,7 +167,7 @@ public partial class TakeTopSoftRent_UpdateSiteAuto : System.Web.UI.Page
                     {
                         try
                         {
-                            //å¦‚æœæœ‰å­æ–‡ä»¶åˆ é™¤æ–‡ä»¶
+                            //Èç¹ûÓĞ×ÓÎÄ¼şÉ¾³ıÎÄ¼ş
                             File.Delete(f);
                         }
                         catch
@@ -180,7 +180,7 @@ public partial class TakeTopSoftRent_UpdateSiteAuto : System.Web.UI.Page
                         {
                             if (!f.Contains("Logo"))
                             {
-                                //å¾ªç¯é€’å½’åˆ é™¤å­æ–‡ä»¶å¤¹
+                                //Ñ­»·µİ¹éÉ¾³ı×ÓÎÄ¼ş¼Ğ
                                 DeleteDirectory(f);
                             }
                         }
@@ -190,21 +190,21 @@ public partial class TakeTopSoftRent_UpdateSiteAuto : System.Web.UI.Page
                     }
                 }
 
-                //åˆ é™¤ç©ºæ–‡ä»¶å¤¹
+                //É¾³ı¿ÕÎÄ¼ş¼Ğ
                 Directory.Delete(strDirectory);
             }
         }
-        catch (Exception ex) // å¼‚å¸¸å¤„ç†
+        catch (Exception ex) // Òì³£´¦Àí
         {
         }
     }
 
-    //-------------å¤åˆ¶ç«™ç‚¹æ–‡ä»¶------------------------------------------------------------------
+    //-------------¸´ÖÆÕ¾µãÎÄ¼ş------------------------------------------------------------------
     public static bool CopySiteFile(string strFromDirectory, string strToDirectory)
     {
         try
         {
-            //æ²¡æœ‰ç›®å½•çš„å°±åˆ›å»ºç›®å½•
+            //Ã»ÓĞÄ¿Â¼µÄ¾Í´´½¨Ä¿Â¼
             ShareClass.CreateDirectory(strToDirectory);
 
             bool blCopy = ShareClass.CopyDirectory(strFromDirectory, strToDirectory, false);
@@ -216,7 +216,7 @@ public partial class TakeTopSoftRent_UpdateSiteAuto : System.Web.UI.Page
         }
     }
 
-    //åˆ¤æ–­ç«™ç‚¹åº”ç”¨æ˜¯å¦å­˜åœ¨
+    //ÅĞ¶ÏÕ¾µãÓ¦ÓÃÊÇ·ñ´æÔÚ
     public bool VerifyWebSiteAppIsExist(string siteName, string siteAppName)
     {
         using (ServerManager mgr = new ServerManager())

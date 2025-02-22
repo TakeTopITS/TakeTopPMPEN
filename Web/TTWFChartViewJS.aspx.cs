@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -94,9 +94,9 @@ public partial class TTWFChartViewJS : System.Web.UI.Page
 
                         strGUIDStep = strWFDefinition.Substring(intStartIndex, 250);
 
-                        if (strStatus == "Â§ÑÁêÜ‰∏≠")
+                        if (strStatus == "InProgress")
                         {
-                            //strNewStepName = strStepName + "„Äê" + Resources.lang.JinXingZhong + "„Äë";
+                            //strNewStepName = strStepName + "°æ" + Resources.lang.JinXingZhong + "°ø";
 
                             strNewStepName = strStepName;
                             strNewGUIDStep = strGUIDStep.Replace(strStepName, strNewStepName);
@@ -106,9 +106,9 @@ public partial class TTWFChartViewJS : System.Web.UI.Page
                             strWFDefinition = strWFDefinition.Replace(strGUIDStep, strNewGUIDStep);
                         }
 
-                        if (strStatus == "ÈÄöËøá")
+                        if (strStatus == "Passed")
                         {
-                            //strNewStepName = strStepName + "„Äê" + Resources.lang.TongGuo + "„Äë";
+                            //strNewStepName = strStepName + "°æ" + Resources.lang.TongGuo + "°ø";
 
                             strNewStepName = strStepName;
                             strNewGUIDStep = strGUIDStep.Replace(strStepName, strNewStepName);
@@ -118,9 +118,9 @@ public partial class TTWFChartViewJS : System.Web.UI.Page
                             strWFDefinition = strWFDefinition.Replace(strGUIDStep, strNewGUIDStep);
                         }
 
-                        if (strStatus == "È©≥Âõû")
+                        if (strStatus == "Rejected")
                         {
-                            //strNewStepName = strStepName + "„Äê" + Resources.lang.TongGuo + "„Äë";
+                            //strNewStepName = strStepName + "°æ" + Resources.lang.TongGuo + "°ø";
 
                             strNewStepName = strStepName;
                             strNewGUIDStep = strGUIDStep.Replace(strStepName, strNewStepName);
@@ -139,7 +139,7 @@ public partial class TTWFChartViewJS : System.Web.UI.Page
         }
     }
 
-    //Ê£ÄÊü•Ê≠•È™§ÊòØ‰∏çÊòØÂ±û‰∫éÊ≠§GUIDÔºåÈò≤Ê≠¢Ê≠•È™§ÈáçÂëΩÂá∫Èîô
+    //ºÏ≤È≤Ω÷Ë «≤ª « Ù”⁄¥ÀGUID£¨∑¿÷π≤Ω÷Ë÷ÿ√¸≥ˆ¥Ì
     protected bool CheckStepNameIsBelongToGUID(string strGUID, string strStepName, string strWFDefinition)
     {
         string strGUIDStep;

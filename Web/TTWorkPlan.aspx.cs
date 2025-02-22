@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections;
 using System.Data;
 using System.Configuration;
@@ -82,11 +82,11 @@ public partial class TTWorkPlan : System.Web.UI.Page
             {
                 if (Session["VerIDForGantt"] == null)
                 {
-                    intPlanID = ShareClass.GetProjectPlanVersionID(strProjectID, "åœ¨ç”¨");
+                    intPlanID = ShareClass.GetProjectPlanVersionID(strProjectID, "InUse");
                     if (intPlanID > 0)
                     {
                         DL_VersionID.SelectedValue = intPlanID.ToString();
-                        DL_ChangeVersionType.SelectedValue = "åœ¨ç”¨";
+                        DL_ChangeVersionType.SelectedValue = "InUse";
                     }
                     else
                     {
@@ -146,7 +146,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
 
                 bool blIsProjectPlanOperator;
                 blIsProjectPlanOperator = ShareClass.CheckMemberIsProjectPlanOperator(strProjectID, strUserCode);
-                //å½“å‰ç”¨æˆ·æ˜¯é¡¹ç›®è®¡åˆ’å‘˜ï¼Œé¡¹ç›®ç»ç†ï¼Œç«‹é¡¹è€…
+                //µ±Ç°ÓÃ»§ÊÇÏîÄ¿¼Æ»®Ô±£¬ÏîÄ¿¾­Àí£¬Á¢ÏîÕß
                 if (blIsProjectPlanOperator == true || strUserCode == strPMCode || strUserCode == strProjectCreatorCode)
                 {
                     BtnUP.Visible = true;
@@ -156,7 +156,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
                     BtnUP.Visible = false;
                 }
 
-                //å¦‚æœé¡¹ç›®å·²ç»éªŒæ”¶\ç»“æ¡ˆ\å½’æ¡£ï¼Œé‚£ä¹ˆä¸èƒ½æ›´æ”¹è®¡åˆ’ä¿¡æ¯
+                //Èç¹ûÏîÄ¿ÒÑ¾­ÑéÊÕ\½á°¸\¹éµµ£¬ÄÇÃ´²»ÄÜ¸ü¸Ä¼Æ»®ĞÅÏ¢
                 if (ShareClass.CheckProjectIsFinish(strProjectID))
                 {
                     BT_NewVersion.Enabled = false;
@@ -180,7 +180,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
 
                 ShareClass.LoadUnitForDropDownList(DL_UnitName);
 
-                //ä¾é¡¹ç›®å±æ€§æ˜¯å¦é”å®šå·²å¯åŠ¨çš„é¡¹ç›®è®¡åˆ’åˆ¤æ–­èƒ½å¦ä¿®æ”¹è®¡åˆ’
+                //ÒÀÏîÄ¿ÊôĞÔÊÇ·ñËø¶¨ÒÑÆô¶¯µÄÏîÄ¿¼Æ»®ÅĞ¶ÏÄÜ·ñĞŞ¸Ä¼Æ»®
                 if (ShareClass.CheckProjectPlanCanBeUpdate(strProjectID) == "NO")
                 {
                     BT_NewVersion.Enabled = false;
@@ -270,7 +270,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
             strHQL = string.Format(@"Update T_Project Set ProjectPlanStartupStatus = 'YES' Where ProjectID = {0}", strProjectID);
             ShareClass.RunSqlCommand(strHQL);
 
-            //ä¾é¡¹ç›®å±æ€§æ˜¯å¦é”å®šå·²å¯åŠ¨çš„é¡¹ç›®è®¡åˆ’åˆ¤æ–­èƒ½å¦ä¿®æ”¹è®¡åˆ’
+            //ÒÀÏîÄ¿ÊôĞÔÊÇ·ñËø¶¨ÒÑÆô¶¯µÄÏîÄ¿¼Æ»®ÅĞ¶ÏÄÜ·ñĞŞ¸Ä¼Æ»®
             if (ShareClass.CheckProjectPlanCanBeUpdate(strProjectID) == "NO")
             {
                 BT_NewVersion.Enabled = false;
@@ -356,15 +356,15 @@ public partial class TTWorkPlan : System.Web.UI.Page
                 strID = DL_VersionID.SelectedValue.Trim();
                 strType = DL_ChangeVersionType.SelectedValue.Trim();
 
-                if (strType == "åœ¨ç”¨")
+                if (strType == "InUse")
                 {
-                    strHQL = "update T_ProjectPlanVersion Set Type = 'å¤‡ç”¨' where Type = 'åœ¨ç”¨' and ProjectID = " + strProjectID;
+                    strHQL = "update T_ProjectPlanVersion Set Type = 'Backup' where Type = 'InUse' and ProjectID = " + strProjectID;
                     ShareClass.RunSqlCommand(strHQL);
                 }
 
-                if (strType == "åŸºå‡†")
+                if (strType == "Baseline")
                 {
-                    strHQL = "update T_ProjectPlanVersion Set Type = 'å¤‡ç”¨' where Type = 'åœ¨ç”¨' and ProjectID = " + strProjectID;
+                    strHQL = "update T_ProjectPlanVersion Set Type = 'Backup' where Type = 'InUse' and ProjectID = " + strProjectID;
                     ShareClass.RunSqlCommand(strHQL);
                 }
 
@@ -409,7 +409,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
             strType = projectPlanVersion.Type.Trim();
             try
             {
-                if (strType == "åŸºå‡†" || strType == "åœ¨ç”¨")
+                if (strType == "Baseline" || strType == "InUse")
                 {
                     ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBBZBBZNYLXZSCJC + "')", true);
                     return;
@@ -418,7 +418,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
                 {
                     projectPlanVersionBLL.DeleteProjectPlanVersion(projectPlanVersion);
 
-                    strHQL = "Delete From T_Document Where RelatedType = 'è®¡åˆ’' and RelatedID in (Select ID From T_ImplePlan Where ProjectID = " + strProjectID + " and VerID = " + strVerID + ")";
+                    strHQL = "Delete From T_Document Where RelatedType = 'Plan' and RelatedID in (Select ID From T_ImplePlan Where ProjectID = " + strProjectID + " and VerID = " + strVerID + ")";
                     ShareClass.RunSqlCommand(strHQL);
 
                     strHQL = "delete from T_PlanMember where PlanID in (Select ID from T_ImplePlan where ProjectID = " + strProjectID + " and VerID = " + strVerID + ")";
@@ -477,7 +477,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
         }
 
         strPlanVerType = GetProjectPlanVersionTypeByVerID(strProjectID, strNewVerID);
-        if (strPlanVerType == "åŸºå‡†" || strPlanVerType == "åœ¨ç”¨")
+        if (strPlanVerType == "Baseline" || strPlanVerType == "InUse")
         {
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGBNFZBZBBDJHJC + "')", true);
             return;
@@ -492,7 +492,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
                 string strExpandType = DL_ExpandType.SelectedValue.Trim();
                 TakeTopPlan.InitialProjectPlanTreeByExpandType(TreeView1, strExpandType, strProjectID, strNewVerID, strUserCode);
 
-                //æ”¹å˜åŸºå‡†æ—¶é—´æ®µå’Œå•ä½çš„å€¼
+                //¸Ä±ä»ù×¼Ê±¼ä¶ÎºÍµ¥Î»µÄÖµ
                 string strHQL;
                 strHQL = "update T_ImplePlan Set BaseLine_Start_Date = Start_Date,BaseLine_End_Date = End_Date Where ProjectID = " + strProjectID + " and VerID = " + strNewVerID;
                 ShareClass.RunSqlCommand(strHQL);
@@ -551,7 +551,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
             }
             catch
             {
-                //DL_ChangeVersionType.SelectedValue = "å¤‡ç”¨";
+                //DL_ChangeVersionType.SelectedValue = "Backup";
             }
 
             string strExpandType = DL_ExpandType.SelectedValue.Trim();
@@ -584,9 +584,9 @@ public partial class TTWorkPlan : System.Web.UI.Page
             strProjectCreatorCode = ShareClass.GetProjectCreatorCode(strProjectID);
             string strSystemVersionType = Session["SystemVersionType"].ToString();
 
-            if (strStatusValue == "é€šè¿‡" | strSystemVersionType == "SAAS")
+            if (strStatusValue == "Passed" | strSystemVersionType == "SAAS")
             {
-                if (strVerType == "åŸºå‡†" & strUserCode != strProjectCreatorCode)
+                if (strVerType == "Baseline" & strUserCode != strProjectCreatorCode)
                 {
                     DL_ChangeVersionType.SelectedValue = strVerType;
 
@@ -594,7 +594,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
                     return;
                 }
 
-                if (strType == "åŸºå‡†" & strUserCode != strProjectCreatorCode)
+                if (strType == "Baseline" & strUserCode != strProjectCreatorCode)
                 {
                     DL_ChangeVersionType.SelectedValue = strVerType;
 
@@ -603,15 +603,15 @@ public partial class TTWorkPlan : System.Web.UI.Page
                 }
                 else
                 {
-                    if (strType == "åœ¨ç”¨")
+                    if (strType == "InUse")
                     {
-                        strHQL = "update T_ProjectPlanVersion Set Type = 'å¤‡ç”¨' where Type = 'åœ¨ç”¨' and ProjectID = " + strProjectID;
+                        strHQL = "update T_ProjectPlanVersion Set Type = 'Backup' where Type = 'InUse' and ProjectID = " + strProjectID;
                         ShareClass.RunSqlCommand(strHQL);
                     }
 
-                    if (strType == "åŸºå‡†")
+                    if (strType == "Baseline")
                     {
-                        strHQL = "update T_ProjectPlanVersion Set Type = 'å¤‡ç”¨' where Type = 'åŸºå‡†' and ProjectID = " + strProjectID;
+                        strHQL = "update T_ProjectPlanVersion Set Type = 'Backup' where Type = 'Baseline' and ProjectID = " + strProjectID;
                         ShareClass.RunSqlCommand(strHQL);
                     }
                 }
@@ -686,17 +686,17 @@ public partial class TTWorkPlan : System.Web.UI.Page
             string strCode;
             string strFileName1, strExtendName;
 
-            if (DL_ChangeVersionType.SelectedValue.Trim() == "åŸºå‡†" || DL_ChangeVersionType.SelectedValue.Trim() == "åœ¨ç”¨")
+            if (DL_ChangeVersionType.SelectedValue.Trim() == "Baseline" || DL_ChangeVersionType.SelectedValue.Trim() == "InUse")
             {
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGBZBBJHLXZNYLXZGBJC + "')", true);
                 return;
             }
 
 
-            strFileName1 = this.AttachFile.FileName;//è·å–ä¸Šä¼ æ–‡ä»¶çš„æ–‡ä»¶å,åŒ…æ‹¬åç¼€
-            strExtendName = System.IO.Path.GetExtension(strFileName1);//è·å–æ‰©å±•å
+            strFileName1 = this.AttachFile.FileName;//»ñÈ¡ÉÏ´«ÎÄ¼şµÄÎÄ¼şÃû,°üÀ¨ºó×º
+            strExtendName = System.IO.Path.GetExtension(strFileName1);//»ñÈ¡À©Õ¹Ãû
 
-            DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+            DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
 
             string strFileName2 = System.IO.Path.GetFileName(strFileName1);
             string strExtName = Path.GetExtension(strFileName2);
@@ -720,7 +720,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
                 DocumentBLL documentBLL = new DocumentBLL();
                 Document document = new Document();
 
-                document.RelatedType = "é¡¹ç›®";
+                document.RelatedType = "Project";
                 document.DocTypeID = int.Parse(strDocTypeID);
                 document.DocType = strDocType;
                 document.RelatedID = int.Parse(strProjectID);
@@ -732,7 +732,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
                 document.UploadTime = DateTime.Now;
                 document.Visible = strVisible;
                 document.DepartCode = strDepartCode; document.DepartName = ShareClass.GetDepartName(strDepartCode);
-                document.Status = "å¤„ç†ä¸­";
+                document.Status = "InProgress";
                 document.RelatedName = "";
 
                 try
@@ -747,7 +747,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
                     string strExpandType = DL_ExpandType.SelectedValue.Trim();
                     TakeTopPlan.InitialProjectPlanTreeByExpandType(TreeView1, strExpandType, strProjectID, strVerID, strUserCode);
 
-                    //æ”¹å˜åŸºå‡†æ—¶é—´æ®µå’Œå•ä½çš„å€¼
+                    //¸Ä±ä»ù×¼Ê±¼ä¶ÎºÍµ¥Î»µÄÖµ
                     string strHQL;
                     strHQL = "update T_ImplePlan Set BaseLine_Start_Date = Start_Date,BaseLine_End_Date = End_Date Where ProjectID = " + strProjectID + " and VerID = " + strVerID;
                     ShareClass.RunSqlCommand(strHQL);
@@ -956,7 +956,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
             blIsProjectPlanOperator = ShareClass.CheckMemberIsProjectPlanOperator(strProjectID, strUserCode);
 
             strHQL = string.Format(@"Select HomeModuleName, PageName || '{0}' as ModulePage  From T_ProModuleLevelForPage 
-                             Where  ParentModule = 'é¡¹ç›®è®¡åˆ’èœå•' and char_length(rtrim(HomeModuleName)) > 0 and rtrim(PageName) <> '' 
+                             Where  ParentModule = 'ProjectPlanMenu' and char_length(rtrim(HomeModuleName)) > 0 and rtrim(PageName) <> '' 
                             and char_length(COALESCE(REPLACE(substring(PageName,0,position('?' in PageName)),'.aspx',''),'')) >= 3
                             and LangCode = '{1}' and Visible ='YES' and IsDeleted = 'NO' Order By SortNumber ASC", strPlanID, strLangCode);
 
@@ -964,7 +964,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
             Repeater1.DataSource = ds;
             Repeater1.DataBind();
 
-            //å½“å‰ç”¨æˆ·æ˜¯é¡¹ç›®è®¡åˆ’å‘˜ï¼Œé¡¹ç›®ç»ç†ï¼Œç«‹é¡¹è€…
+            //µ±Ç°ÓÃ»§ÊÇÏîÄ¿¼Æ»®Ô±£¬ÏîÄ¿¾­Àí£¬Á¢ÏîÕß
             if (blIsProjectPlanOperator == true || strUserCode == strPMCode || strUserCode == strProjectCreatorCode)
             {
                 BT_New.Enabled = true;
@@ -986,11 +986,11 @@ public partial class TTWorkPlan : System.Web.UI.Page
                 Repeater1.Visible = false;
             }
 
-            //æ˜¯å¦è®¡åˆ’å‘˜
+            //ÊÇ·ñ¼Æ»®Ô±
             bool blParentPlanHaveLockStatus;
             blParentPlanHaveLockStatus = TakeTopPlan.CheckParentPlanHaveLockStatus(strPlanID);
 
-            //ä¾é¡¹ç›®å±æ€§æ˜¯å¦é”å®šå·²å¯åŠ¨çš„é¡¹ç›®è®¡åˆ’åˆ¤æ–­èƒ½å¦ä¿®æ”¹è®¡åˆ’
+            //ÒÀÏîÄ¿ÊôĞÔÊÇ·ñËø¶¨ÒÑÆô¶¯µÄÏîÄ¿¼Æ»®ÅĞ¶ÏÄÜ·ñĞŞ¸Ä¼Æ»®
             if (ShareClass.CheckProjectPlanCanBeUpdate(strProjectID) == "NO" && CheckProjectPlanStartupRelatedWorkflowTemplateIsPass(strPlanID, GetProjectPlanStartupRelatedWorkflowTemplate(strProjectID)) == false)
             {
                 BT_New.Visible = false;
@@ -1004,7 +1004,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
                 BT_Delete.Visible = true;
             }
 
-            //å½“å‰ç”¨æˆ·æ˜¯è®¡åˆ’åˆ›å»ºè€…ï¼Œä½†ä¸é¡¹ç›®è®¡åˆ’å‘˜ï¼Œé¡¹ç›®ç»ç†ï¼Œç«‹é¡¹è€…
+            //µ±Ç°ÓÃ»§ÊÇ¼Æ»®´´½¨Õß£¬µ«²»ÏîÄ¿¼Æ»®Ô±£¬ÏîÄ¿¾­Àí£¬Á¢ÏîÕß
             if (strUserCode == strPlanCreatorCode & blIsProjectPlanOperator == false & strUserCode != strPMCode & strUserCode != strProjectCreatorCode)
             {
                 if (blParentPlanHaveLockStatus == true)
@@ -1029,10 +1029,10 @@ public partial class TTWorkPlan : System.Web.UI.Page
                 }
             }
 
-            //å½“å‰ç”¨æˆ·æ˜¯è®¡åˆ’è´Ÿè´£äººï¼Œä½†ä¸æ˜¯è®¡åˆ’åˆ›å»ºäººï¼Œé¡¹ç›®è®¡åˆ’å‘˜ï¼Œé¡¹ç›®ç»ç†ï¼Œç«‹é¡¹è€…
+            //µ±Ç°ÓÃ»§ÊÇ¼Æ»®¸ºÔğÈË£¬µ«²»ÊÇ¼Æ»®´´½¨ÈË£¬ÏîÄ¿¼Æ»®Ô±£¬ÏîÄ¿¾­Àí£¬Á¢ÏîÕß
             if (strUserCode == strPlanLeaderCode.Trim() & strUserCode != strPlanCreatorCode & blIsProjectPlanOperator == false & strUserCode != strPMCode & strUserCode != strProjectCreatorCode)
             {
-                if (strLockStatus == "Yes")
+                if (strLockStatus == "YES")
                 {
                     BT_New.Enabled = false;
                     BT_Update.Enabled = false;
@@ -1069,7 +1069,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
                 DL_LockStatus.Enabled = false;
             }
 
-            if (strPlanVerType == "åŸºå‡†" & strUserCode != strProjectCreatorCode)
+            if (strPlanVerType == "Baseline" & strUserCode != strProjectCreatorCode)
             {
                 BT_New.Enabled = false;
                 BT_Update.Enabled = false;
@@ -1081,7 +1081,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
             }
 
 
-            //å¦‚æœé¡¹ç›®æŒ‚èµ·\å–æ¶ˆ\éªŒæ”¶\ç»“æ¡ˆ\å½’æ¡£ï¼Œé‚£ä¹ˆä¸èƒ½æ›´æ–°è®¡åˆ’ä¿¡æ¯
+            //Èç¹ûÏîÄ¿¹ÒÆğ\È¡Ïû\ÑéÊÕ\½á°¸\¹éµµ£¬ÄÇÃ´²»ÄÜ¸üĞÂ¼Æ»®ĞÅÏ¢
             if (ShareClass.CheckProjectIsFinish(strProjectID))
             {
                 BT_New.Enabled = false;
@@ -1094,7 +1094,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
             }
 
 
-            if (ShareClass.GetProjectClass(strProjectID) == "æ¨¡æ¿é¡¹ç›®")
+            if (ShareClass.GetProjectClass(strProjectID) == "Ä£°åÏîÄ¿")
             {
                 HL_ProPlanRelatedDocByPush.NavigateUrl = "TTProPlanRelatedDoc_YYUP.aspx?PlanID=" + strPlanID + "&ProjectID=" + strProjectID + "&VerID=" + strPlanVerID;
             }
@@ -1110,7 +1110,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
             HL_WLTem.NavigateUrl = "TTRelatedWorkFlowTemplate.aspx?RelatedType=ProjectPlan&RelatedID=" + strPlanID;
             HL_ProPlanRelatedDocByPush.Enabled = true;
 
-            TB_Message.Text = ShareClass.GetUserName(strUserCode) + " " + "æ”¹å˜äº†é¡¹ç›®ï¼š" + strProjectID + " " + strProjectName + " çš„è®¡åˆ’ï¼š " + strPlanID + " " + TB_PlanDetail.Text.Trim() + " çš„å†…å®¹æˆ–çŠ¶æ€ï¼Œç‰¹æ­¤é€šçŸ¥ï¼";
+            TB_Message.Text = ShareClass.GetUserName(strUserCode) + " " + "¸Ä±äÁËÏîÄ¿£º" + strProjectID + " " + strProjectName + " µÄ¼Æ»®£º " + strPlanID + " " + TB_PlanDetail.Text.Trim() + " µÄÄÚÈİ»ò×´Ì¬£¬ÌØ´ËÍ¨Öª£¡";
         }
         catch (Exception err)
         {
@@ -1120,7 +1120,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
         ScriptManager.RegisterOnSubmitStatement(this.Page, this.Page.GetType(), "SavePanelScroll", "SaveScroll();");
     }
 
-    //å–å¾—å…³è”çš„å·¥ä½œæµæ¨¡æ¿
+    //È¡µÃ¹ØÁªµÄ¹¤×÷Á÷Ä£°å
     public static string GetProjectPlanStartupRelatedWorkflowTemplate(string strProjectID)
     {
         string strHQL;
@@ -1138,14 +1138,14 @@ public partial class TTWorkPlan : System.Web.UI.Page
         }
     }
 
-    //æ£€æŸ¥é¡¹ç›®è®¡åˆ’å…³è”å·¥ä½œæµæ¨¡æ¿çš„å·¥ä½œæµçŠ¶æ€
+    //¼ì²éÏîÄ¿¼Æ»®¹ØÁª¹¤×÷Á÷Ä£°åµÄ¹¤×÷Á÷×´Ì¬
     public static bool CheckProjectPlanStartupRelatedWorkflowTemplateIsPass(string strPlanID, string strWorkflowTemName)
     {
         string strHQL;
 
         if (strWorkflowTemName != "")
         {
-            strHQL = string.Format(@"Select Status From T_WorkFlow Where RelatedType = 'è®¡åˆ’' and RelatedID = {0} and TemName = '{1}' and Status in ('é€šè¿‡','ç»“æ¡ˆ')", strPlanID, strWorkflowTemName);
+            strHQL = string.Format(@"Select Status From T_WorkFlow Where RelatedType = 'Plan' and RelatedID = {0} and TemName = '{1}' and Status in ('Passed','CaseClosed')", strPlanID, strWorkflowTemName);
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlow");
 
             if (ds.Tables[0].Rows.Count > 0)
@@ -1264,7 +1264,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
             workPlan.DefaultSchedule = deDefaultSchedule;
             workPlan.DefaultCost = deDefaultCost;
 
-            workPlan.LockStatus = "No";
+            workPlan.LockStatus = "NO";
             workPlan.UpdateManCode = strUserCode;
             workPlan.CreatorCode = strUserCode;
             workPlan.UpdateTime = DateTime.Now;
@@ -1272,7 +1272,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
             workPlan.PID = intPID;
             workPlan.Parent_ID = intParentID;
 
-            if (workPlan.Type.Trim() == "é‡Œç¨‹ç¢‘")
+            if (workPlan.Type.Trim() == "Milestone")
             {
                 if (workPlan.Start_Date.ToString("yyyyMMdd") != workPlan.End_Date.ToString("yyyyMMdd"))
                 {
@@ -1317,12 +1317,12 @@ public partial class TTWorkPlan : System.Web.UI.Page
                 BT_Update.Enabled = true;
                 BT_Delete.Enabled = true;
 
-                DL_LockStatus.SelectedValue = "No";
+                DL_LockStatus.SelectedValue = "NO";
 
                 HL_ProPlanRelatedDocByPush.Visible = true;
                 HL_ProPlanRelatedDocByPush.NavigateUrl = "TTProPlanRelatedDoc_YYUP.aspx?PlanID=" + strPlanID + "&ProjectID=" + strProjectID + "&VerID=" + int.Parse(strVerID);
 
-                TB_Message.Text = ShareClass.GetUserName(strUserCode) + " " + "æ”¹å˜äº†é¡¹ç›®ï¼š" + strProjectID + " " + strProjectName + " çš„è®¡åˆ’ï¼š " + strPlanID + " " + TB_PlanDetail.Text.Trim() + " çš„å†…å®¹æˆ–çŠ¶æ€ï¼Œç‰¹æ­¤é€šçŸ¥ï¼";
+                TB_Message.Text = ShareClass.GetUserName(strUserCode) + " " + "¸Ä±äÁËÏîÄ¿£º" + strProjectID + " " + strProjectName + " µÄ¼Æ»®£º " + strPlanID + " " + TB_PlanDetail.Text.Trim() + " µÄÄÚÈİ»ò×´Ì¬£¬ÌØ´ËÍ¨Öª£¡";
 
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZCG + "')", true);
             }
@@ -1399,7 +1399,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
             return;
         }
 
-        if (strPlanType == "é‡Œç¨‹ç¢‘")
+        if (strPlanType == "Milestone")
         {
             if (workPlan.Start_Date.ToString("yyyyMMdd") != workPlan.End_Date.ToString("yyyyMMdd"))
             {
@@ -1551,7 +1551,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
 
                 if (CB_SendMail.Checked == true | CB_SendMsg.Checked == true)
                 {
-                    strSubject = "é¡¹ç›®è®¡åˆ’å˜æ›´é€šçŸ¥";
+                    strSubject = "ÏîÄ¿¼Æ»®±ä¸üÍ¨Öª";
 
                     if (CB_SendMsg.Checked == true)
                     {
@@ -1607,7 +1607,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
         DL_NewVersionID.DataBind();
     }
 
-    //å–å¾—ä»»åŠ¡å…³è”è®¡åˆ’çš„è®¡åˆ’çš„è´Ÿè´£äºº
+    //È¡µÃÈÎÎñ¹ØÁª¼Æ»®µÄ¼Æ»®µÄ¸ºÔğÈË
     protected string GetProjectPlanLeaderCode(string strPlanID)
     {
         string strHQL;
@@ -1704,7 +1704,7 @@ public partial class TTWorkPlan : System.Web.UI.Page
         }
         else
         {
-            return "å¤‡ç”¨";
+            return "Backup";
         }
     }
 

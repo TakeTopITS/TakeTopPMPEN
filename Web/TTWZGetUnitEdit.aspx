@@ -1,21 +1,21 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZGetUnitEdit.aspx.cs" Inherits="TTWZGetUnitEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZGetUnitEdit.aspx.cs" Inherits="TTWZGetUnitEdit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>È¢ÜÊñôÂçï‰ΩçÁºñËæë</title>
+    <title>¡Ï¡œµ•Œª±‡º≠</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
     <script type="text/JavaScript">
 
 
-        //‰∏ÄËà¨ÈÄâÊã©ÁïåÈù¢
+        //“ª∞„—°‘ÒΩÁ√Ê
         function SelectDepartment() {
             var url = "TTWZSelectorDepartment.aspx";
 
-            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + id + "&ctrlName=" + name, 'ÈÄâÊã©ÈÉ®Èó®', 600, 500);	
+            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + id + "&ctrlName=" + name, '—°‘Ò≤ø√≈', 600, 500);	
 
         }
 
@@ -69,62 +69,62 @@
                                                             <table class="formBgStyle" width="100%">
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,DanWeiBianHao%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,DanWeiBianHao%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_UnitCode" runat="server" ReadOnly="true"></asp:TextBox><font color="red">*<asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiTongZiDongShengCheng%>"></asp:Label></font>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,DanWeiLeiXing%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,DanWeiLeiXing%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:DropDownList ID="DDL_UnitType" runat="server">
-                                                                            <asp:ListItem Text="<%$ Resources:lang,XingZhengDanWei%>" Value="Ë°åÊîøÂçï‰Ωç"/>
-                                                                            <asp:ListItem Text="<%$ Resources:lang,XiangMuBu%>" Value="È°πÁõÆÈÉ®"/>
+                                                                            <asp:ListItem Text="<%$ Resources:lang,XingZhengDanWei%>" Value="––’˛µ•Œª"/>
+                                                                            <asp:ListItem Text="<%$ Resources:lang,XiangMuBu%>" Value="œÓƒø≤ø"/>
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,LingLiaoDanWei%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,LingLiaoDanWei%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_UnitName" runat="server"></asp:TextBox>&nbsp;
-                                                                        <input type="button" id="Button1" class="inpu" value="ÈÄâÊã©" onclick="SelectDepartment()" />
+                                                                        <input type="button" id="Button1" class="inpu" value="—°‘Ò" onclick="SelectDepartment()" />
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZhuGuanLingDao%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZhuGuanLingDao%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_Leader" runat="server" ReadOnly="true"></asp:TextBox>&nbsp;
-                                                                        <input type="button" id="btnLeader" class="inpu" value="ÈÄâÊã©" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_Leader', 'TXT_Leader')" />
+                                                                        <input type="button" id="btnLeader" class="inpu" value="—°‘Ò" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_Leader', 'TXT_Leader')" />
                                                                         <asp:HiddenField ID="HF_Leader" runat="server" />
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,WeiTuoDaiLiRen%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,WeiTuoDaiLiRen%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_DelegateAgent" runat="server" ReadOnly="true"></asp:TextBox>&nbsp;
-                                                                        <input type="button" id="btnDelegateAgent" class="inpu" value="ÈÄâÊã©" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_DelegateAgent', 'TXT_DelegateAgent')" />
+                                                                        <input type="button" id="btnDelegateAgent" class="inpu" value="—°‘Ò" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_DelegateAgent', 'TXT_DelegateAgent')" />
                                                                         <asp:HiddenField ID="HF_DelegateAgent" runat="server" />
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,FeiKongZhuGuan%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,FeiKongZhuGuan%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_FeeManage" runat="server" ReadOnly="true"></asp:TextBox>&nbsp;
-                                                                        <input type="button" id="btnFeeManage" class="inpu" value="ÈÄâÊã©" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_FeeManage', 'TXT_FeeManage')" />
+                                                                        <input type="button" id="btnFeeManage" class="inpu" value="—°‘Ò" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_FeeManage', 'TXT_FeeManage')" />
                                                                         <asp:HiddenField ID="HF_FeeManage" runat="server" />
                                                                     </td>
 
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,CaiLiaoYuan%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,CaiLiaoYuan%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="5">
                                                                         <asp:TextBox ID="TXT_MaterialPerson" runat="server" ReadOnly="true"></asp:TextBox>&nbsp;
-                                                                        <input type="button" id="btnMaterialPerson" class="inpu" value="ÈÄâÊã©" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_MaterialPerson', 'TXT_MaterialPerson')" />
+                                                                        <input type="button" id="btnMaterialPerson" class="inpu" value="—°‘Ò" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_MaterialPerson', 'TXT_MaterialPerson')" />
                                                                         <asp:HiddenField ID="HF_MaterialPerson" runat="server" />
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: center" class="formItemBgStyle" colspan="6">
                                                                         <asp:Button ID="btnSave" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnSave_Click" />&nbsp;&nbsp;
-                                                                        <input type="button" value="ËøîÂõû" id="BT_Return" class="inpu" onclick="window.location.href = 'TTWZGetUnitList.aspx'" />
+                                                                        <input type="button" value="∑µªÿ" id="BT_Return" class="inpu" onclick="window.location.href = 'TTWZGetUnitList.aspx'" />
                                                                     </td>
                                                                 </tr>
                                                             </table>

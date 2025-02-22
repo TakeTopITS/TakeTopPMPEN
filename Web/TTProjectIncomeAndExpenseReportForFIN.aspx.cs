@@ -1,4 +1,4 @@
-锘縰sing System; using System.Resources;
+using System; using System.Resources;
 using System.Data;
 using System.Configuration;
 using System.Collections;
@@ -32,7 +32,7 @@ public partial class TTProjectIncomeAndExpenseReportForFIN : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strUserName = GetUserName(strUserCode);
 
-        //this.Title = Resources.lang.Project + strProjectName + " 鎴愬憳鏀跺叆鍜屾敮鍑哄垪琛紒";
+        //this.Title = Resources.lang.Project + strProjectName + " 成员收入和支出列表！";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickParentA", " aHandler();", true);
         if (Page.IsPostBack == false)

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkFlowTemplateChildTemplateList.aspx.cs" Inherits="TTWorkFlowTemplateChildTemplateList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkFlowTemplateChildTemplateList.aspx.cs" Inherits="TTWorkFlowTemplateChildTemplateList" %>
 
 <!DOCTYPE html>
 
@@ -62,16 +62,16 @@
                         <Columns>
                           
                             <asp:HyperLinkColumn DataNavigateUrlField="identifystring" DataNavigateUrlFormatString="TTWorkFlowDesignerJS.aspx?identifystring={0}"
-                                DataTextField="RelatedWFTemName" HeaderText="æ¨¡æ¿åç§°" Target="_blank">
+                                DataTextField="RelatedWFTemName" HeaderText="Ä£°åÃû³Æ" Target="_blank">
                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                             </asp:HyperLinkColumn>
-                            <asp:BoundColumn DataField="Requisite" HeaderText="æ˜¯å¦å¿…é¡»">
+                            <asp:BoundColumn DataField="Requisite" HeaderText="ÊÇ·ñ±ØÐë">
                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                             </asp:BoundColumn>
-                            <asp:BoundColumn DataField="BelongStepSortNumber" HeaderText="ç»“æŸå½’å±žæ­¥éª¤">
+                            <asp:BoundColumn DataField="BelongStepSortNumber" HeaderText="½áÊø¹éÊô²½Öè">
                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                             </asp:BoundColumn>
-                            <asp:BoundColumn DataField="BelongIsMustPassed" HeaderText="ç»“æŸè¦æ±‚é€šè¿‡">
+                            <asp:BoundColumn DataField="BelongIsMustPassed" HeaderText="½áÊøÒªÇóÍ¨¹ý">
                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                             </asp:BoundColumn>
                         </Columns>

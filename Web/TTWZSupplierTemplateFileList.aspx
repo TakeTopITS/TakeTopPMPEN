@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSupplierTemplateFileList.aspx.cs" Inherits="TTWZSupplierTemplateFileList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSupplierTemplateFileList.aspx.cs" Inherits="TTWZSupplierTemplateFileList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>‰æõÂ∫îÂïÜÊ®°Êùø</title>
+    <title>π©”¶…Ãƒ£∞Â</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -15,7 +15,7 @@
 
         });
 
-        //ÁºñËæëÁâ©ËµÑ‰ª£Á†Å
+        //±‡º≠ŒÔ◊ ¥˙¬Î
         function AlertTemplatePage(url) {
 
             popShowByURLForFixedSize(url, '', 1200, 500);
@@ -68,7 +68,7 @@
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td align="left" class="formItemBgStyle">
-                                                            <input type="button" class="inpuLong" value="Êñ∞Â¢û‰æõÂ∫îÂïÜÊ®°Êùø" onclick="AlertTemplatePage('TTWZSupplierTemplateFileEdit.aspx?id=')" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <input type="button" class="inpuLong" value="–¬‘ˆπ©”¶…Ãƒ£∞Â" onclick="AlertTemplatePage('TTWZSupplierTemplateFileEdit.aspx?id=')" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,GongYingShangMoBanJiLu%>"></asp:Label>
                                                             <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,Gong%>"></asp:Label><asp:Label ID="LB_RecordCount" runat="server" Text=""></asp:Label><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,Tiao%>"></asp:Label>
 
@@ -114,7 +114,7 @@
                                                                     CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="5" ShowHeader="false"
                                                                     Width="100%" OnItemCommand="DG_List_ItemCommand">
                                                                     <Columns>
-                                                                        <asp:BoundColumn DataField="ID" HeaderText="Â∫èÂè∑">
+                                                                        <asp:BoundColumn DataField="ID" HeaderText="–Ú∫≈">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:TemplateColumn>
@@ -128,7 +128,7 @@
 
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="‰∏ä‰º†Êó∂Èó¥">
+                                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="…œ¥´ ±º‰">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:TemplateColumn>
@@ -159,14 +159,14 @@
                                                             <table class="formBgStyle" width="80%">
                                                                 <tr style="display: none;">
                                                                     <td style="text-align: right" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_ID" runat="server" ReadOnly="true"></asp:TextBox><font color="red">*<asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,ZiDongShengCheng%>"></asp:Label></font>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: right" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left; vertical-align :top;" class="formItemBgStyle">
                                                                         <textarea id="TXT_TemplateContent" runat="server" cols="160" rows="15"></textarea>
                                                                     </td>

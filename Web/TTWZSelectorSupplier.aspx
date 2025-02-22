@@ -1,16 +1,16 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSelectorSupplier.aspx.cs" Inherits="TTWZSelectorSupplier" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSelectorSupplier.aspx.cs" Inherits="TTWZSelectorSupplier" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>‰æõÂ∫îÂïÜ</title>
+    <title>π©”¶…Ã</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
 
     <script type="text/jscript" language="javascript">
-        //Â§çÈÄâÊ°ÜÂÖ®ÈÄâ
+        //∏¥—°øÚ»´—°
         function ChooseAll(item) {
             $("input[name=dlCode]").each(function () {
                 if (item.checked == true) {
@@ -21,16 +21,16 @@
             });
         }
 
-        //Â§öÈÄâÊã©ÊåâÈíÆÂà§Êñ≠
+        //∂‡—°‘Ò∞¥≈•≈–∂œ
         function chooseUpdate() {
             var str = "";
             $("input[name=dlCode]").each(function () {
                 if ($(this).attr("checked")) {
-                    str = str + $(this).attr("id"); //+ ","; // Êï¥‰∏™‰ª•,ÈöîÂºÄ
+                    str = str + $(this).attr("id"); //+ ","; // ’˚∏ˆ“‘,∏Ùø™
                 }
             });
             if (str == "") {
-                alert('ËØ∑ÈÄâÊã©ËÆ∞ÂΩïÈ°πÔºÅ');
+                alert('«Î—°‘Òº«¬ºœÓ£°');
                 return false;
             }
             else {
@@ -231,7 +231,7 @@
                                                                             </td>
                                                                             <td width="2%" align="center">
                                                                                 <strong>
-                                                                                    <asp:Label ID="Label31" runat="server" Text="‰ΩøÁî®Ê†áËÆ∞"></asp:Label></strong>
+                                                                                    <asp:Label ID="Label31" runat="server" Text=" π”√±Íº«"></asp:Label></strong>
                                                                             </td>
                                                                         </tr>
                                                                     </table>
@@ -255,7 +255,7 @@
                                                                         <%--<input id='<%# Eval("SupplierCode")+"|"+Eval("SupplierName") %>' type="checkbox" name="dlCode" />--%>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="SupplierNumber" HeaderText="‰æõÊñπÁºñÂè∑">
+                                                                <asp:BoundColumn DataField="SupplierNumber" HeaderText="π©∑Ω±‡∫≈">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:TemplateColumn>
@@ -276,10 +276,10 @@
                                                                         <%# ShareClass.StringCutByRequire(Eval("MainSupplier").ToString(), 190) %>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="Grade" HeaderText="Á∫ßÂà´">
+                                                                <asp:BoundColumn DataField="Grade" HeaderText="º∂±">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                                 </asp:BoundColumn>
-                                                                <%--<asp:BoundColumn DataField="ApproveTime" HeaderText="ÁôªËÆ∞Êó•Êúü">
+                                                                <%--<asp:BoundColumn DataField="ApproveTime" HeaderText="µ«º«»’∆⁄">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                                         </asp:BoundColumn>--%>
                                                                 <asp:TemplateColumn>
@@ -291,7 +291,7 @@
                                                                         <%# ShareClass.StringCutByRequire(Eval("ApproveTime").ToString(), 190) %>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <%--<asp:BoundColumn DataField="ReviewDate" HeaderText="Â§çÂÆ°Êó•Êúü">
+                                                                <%--<asp:BoundColumn DataField="ReviewDate" HeaderText="∏¥…Û»’∆⁄">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                                         </asp:BoundColumn>--%>
                                                                 <asp:TemplateColumn>
@@ -303,7 +303,7 @@
                                                                         <%# ShareClass.StringCutByRequire(Eval("ReviewDate").ToString(), 190) %>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="QualityEngineerName" HeaderText="Ë¥®‰øùÂ∑•Á®ãÂ∏à">
+                                                                <asp:BoundColumn DataField="QualityEngineerName" HeaderText="÷ ±£π§≥Ã ¶">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:TemplateColumn>
@@ -324,10 +324,10 @@
                                                                         <%# ShareClass.StringCutByRequire(Eval("ReviewResult").ToString(), 7) %>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="AuditorName" HeaderText="Ë¥£‰ªªÂ∑•Á®ãÂ∏à">
+                                                                <asp:BoundColumn DataField="AuditorName" HeaderText="‘»Œπ§≥Ã ¶">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="Progress" HeaderText="ËøõÂ∫¶">
+                                                                <asp:BoundColumn DataField="Progress" HeaderText="Ω¯∂»">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:TemplateColumn>
@@ -510,7 +510,7 @@
                                                                         <%#DataBinder.Eval(Container.DataItem, "InTime", "{0:yyyy/MM/dd}")%>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="IsMark" HeaderText="‰ΩøÁî®Ê†áËÆ∞">
+                                                                <asp:BoundColumn DataField="IsMark" HeaderText=" π”√±Íº«">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                                 </asp:BoundColumn>
                                                             </Columns>
@@ -528,10 +528,10 @@
                                             <tr>
                                                 <td class="formItemBgStyle">
                                                     <div style="text-align: left">
-                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="Á°ÆÂÆö" />
+                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="»∑∂®" />
                                                         &nbsp;
                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                            type="button" value="ÂÖ≥Èó≠" />
+                                                            type="button" value="Closed" />
                                                         <asp:TextBox ID="TextBox1" runat="server" Visible="false"></asp:TextBox>
                                                     </div>
                                                 </td>

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,7 +20,7 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "åˆ†åŒ…ä»˜æ¬¾ç”³è¯·", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "·Ö°ü¸¶¿îÉêÇë", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -41,7 +41,7 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
 
             BindTreeView(TreeView1);
 
-            //å–å¾—ä¼šè®¡ç§‘ç›®åˆ—è¡¨
+            //È¡µÃ»á¼Æ¿ÆÄ¿ÁĞ±í
             ShareClass.LoadAccountForDDL(DL_Account);
             ShareClass.LoadCurrencyType(DL_CurrencyType);
 
@@ -55,7 +55,7 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
 
     protected void LoadBMSupplierInfoList()
     {
-        string strHQL = "Select * From T_BMSupplierInfo Where Status='åˆæ ¼' ";
+        string strHQL = "Select * From T_BMSupplierInfo Where Status='Qualified' ";
         strHQL += " Order By ID DESC ";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_BMSupplierInfo");
@@ -146,7 +146,7 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
         bMPurchaseApplication.ManHour = NB_ManHour.Amount;
         bMPurchaseApplication.OtherComment = TB_OtherComment.Text.Trim();
         bMPurchaseApplication.ExpectedAmount = NB_ExpectedAmount.Amount;
-        bMPurchaseApplication.Status = "è®¡åˆ’";
+        bMPurchaseApplication.Status = "Plan";
 
         bMPurchaseApplication.CurrencyType = DL_CurrencyType.SelectedValue;
 
@@ -162,7 +162,7 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
             BT_SubmitApply.Visible = true;
             BT_SubmitApply.Enabled = true;
 
-            LoadRelatedWL(DL_WFType.SelectedValue.Trim(), "é¡¹ç›®", int.Parse(TB_ID.Text.Trim()));
+            LoadRelatedWL(DL_WFType.SelectedValue.Trim(), "Project", int.Parse(TB_ID.Text.Trim()));
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZCG + "')", true);
         }
@@ -173,7 +173,7 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
     }
 
     /// <summary>
-    /// æ–°å¢æ—¶ï¼Œè·å–è¡¨T_BMPurchaseApplicationä¸­æœ€å¤§ç¼–å· è§„åˆ™YYYYMM00X(Xä»£è¡¨è‡ªå¢æ•°å­—)ã€‚
+    /// ĞÂÔöÊ±£¬»ñÈ¡±íT_BMPurchaseApplicationÖĞ×î´ó±àºÅ ¹æÔòYYYYMM00X(X´ú±í×ÔÔöÊı×Ö)¡£
     /// </summary>
     /// <param name="strBarCode"></param>
     /// <param name="strId"></param>
@@ -197,7 +197,7 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
     }
 
     /// <summary>
-    /// æ–°å¢æˆ–æ›´æ–°æ—¶ï¼Œé‡‡è´­ç”³è¯·åç§°æ˜¯å¦å­˜åœ¨ï¼Œå­˜åœ¨è¿”å›trueï¼›ä¸å­˜åœ¨è¿”å›falseã€‚
+    /// ĞÂÔö»ò¸üĞÂÊ±£¬²É¹ºÉêÇëÃû³ÆÊÇ·ñ´æÔÚ£¬´æÔÚ·µ»Øtrue£»²»´æÔÚ·µ»Øfalse¡£
     /// </summary>
     /// <param name="strBarCode"></param>
     /// <param name="strId"></param>
@@ -225,7 +225,7 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
     }
 
     /// <summary>
-    /// æ–°å¢åï¼Œè·å–è¡¨T_BMPurchaseApplicationä¸­æœ€å¤§ç¼–å·ã€‚
+    /// ĞÂÔöºó£¬»ñÈ¡±íT_BMPurchaseApplicationÖĞ×î´ó±àºÅ¡£
     /// </summary>
     /// <param name="strBarCode"></param>
     /// <param name="strId"></param>
@@ -325,7 +325,7 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
         bMPurchaseApplication.AccountName = TB_Account.Text.Trim();
         bMPurchaseApplication.CurrencyType = DL_CurrencyType.SelectedValue;
         bMPurchaseApplication.Comment = TB_Comment.Text.Trim();
-        bMPurchaseApplication.Status = "ç¡®è®¤";
+        bMPurchaseApplication.Status = "È·ÈÏ";
 
         try
         {
@@ -333,7 +333,7 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
 
             BT_Update.Visible = true;
 
-            LB_Status.Text = "ç¡®è®¤";
+            LB_Status.Text = "È·ÈÏ";
 
             LoadBMPurchaseApplicationList(LB_ProjectID.Text.Trim());
 
@@ -376,7 +376,7 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
     }
 
     /// <summary>
-    /// åˆ é™¤æ—¶ï¼Œåˆ¤æ–­é‡‡è´­ç”³è¯·å•æ˜¯å¦å·²è¢«è°ƒç”¨ï¼Œå·²è°ƒç”¨è¿”å›trueï¼›å¦åˆ™è¿”å›falseã€‚
+    /// É¾³ıÊ±£¬ÅĞ¶Ï²É¹ºÉêÇëµ¥ÊÇ·ñÒÑ±»µ÷ÓÃ£¬ÒÑµ÷ÓÃ·µ»Øtrue£»·ñÔò·µ»Øfalse¡£
     /// </summary>
     /// <param name="strBarCode"></param>
     /// <param name="strId"></param>
@@ -393,7 +393,7 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
         else
             flag = false;
 
-        strHQL = "from WorkFlow as workFlow where workFlow.WLType = '" + DL_WFType.SelectedValue.Trim() + "' and workFlow.RelatedType='é¡¹ç›®' and workFlow.RelatedID = '" + strID + "' ";
+        strHQL = "from WorkFlow as workFlow where workFlow.WLType = '" + DL_WFType.SelectedValue.Trim() + "' and workFlow.RelatedType='Project' and workFlow.RelatedID = '" + strID + "' ";
         WorkFlowBLL workFlowBLL = new WorkFlowBLL();
         IList lst = workFlowBLL.GetAllWorkFlows(strHQL);
         if (lst.Count > 0 && lst != null)
@@ -504,9 +504,9 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
 
             if (e.CommandName == "Workflow")
             {
-                LoadRelatedWL(DL_WFType.SelectedValue.Trim(), "é¡¹ç›®", int.Parse(TB_ID.Text.Trim()));
+                LoadRelatedWL(DL_WFType.SelectedValue.Trim(), "Project", int.Parse(TB_ID.Text.Trim()));
 
-                int intWLNumber = GetRelatedWorkFlowNumber(DL_WFType.SelectedValue.Trim(), "é¡¹ç›®", TB_ID.Text.Trim());
+                int intWLNumber = GetRelatedWorkFlowNumber(DL_WFType.SelectedValue.Trim(), "Project", TB_ID.Text.Trim());
 
                 if (intWLNumber > 0)
                 {
@@ -566,7 +566,7 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
 
         XMLProcess xmlProcess = new XMLProcess();
 
-        //strHQL = "Update T_CarApplyForm Set Status = 'å¤„ç†ä¸­' Where ID = " + strID;
+        //strHQL = "Update T_CarApplyForm Set Status = 'InProgress' Where ID = " + strID;
 
         try
         {
@@ -580,33 +580,33 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
 
             workFlow.WLName = DL_WFType.SelectedValue.Trim();
             workFlow.WLType = DL_WFType.SelectedValue.Trim();
-            workFlow.Status = "æ–°å»º";
+            workFlow.Status = "New";
             workFlow.TemName = DL_TemName.SelectedValue.Trim();
             workFlow.CreateTime = DateTime.Now;
             workFlow.CreatorCode = strUserCode;
             workFlow.CreatorName = ShareClass.GetUserName(strUserCode.Trim());
             workFlow.Description = TB_Name.Text.Trim();
             workFlow.XMLFile = strXMLFile2;
-            workFlow.RelatedType = "é¡¹ç›®";
+            workFlow.RelatedType = "Project";
             workFlow.RelatedID = int.Parse(strID);
-            workFlow.DIYNextStep = "Yes"; workFlow.IsPlanMainWorkflow = "NO";
+            workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
 
             if (CB_SMS.Checked == true)
             {
-                workFlow.ReceiveSMS = "Yes";
+                workFlow.ReceiveSMS = "YES";
             }
             else
             {
-                workFlow.ReceiveSMS = "No";
+                workFlow.ReceiveSMS = "NO";
             }
 
             if (CB_Mail.Checked == true)
             {
-                workFlow.ReceiveEMail = "Yes";
+                workFlow.ReceiveEMail = "YES";
             }
             else
             {
-                workFlow.ReceiveEMail = "No";
+                workFlow.ReceiveEMail = "NO";
             }
 
             try
@@ -619,9 +619,9 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
                 strXMLFile2 = Server.MapPath(strXMLFile2);
                 xmlProcess.DbToXML(strCmdText, "V_BMPurchaseApplicationPayForm", strXMLFile2);
 
-                LoadRelatedWL(DL_WFType.SelectedValue.Trim(), "é¡¹ç›®", int.Parse(strID));
+                LoadRelatedWL(DL_WFType.SelectedValue.Trim(), "Project", int.Parse(strID));
 
-                //DL_Status.SelectedValue = "å¤„ç†ä¸­";
+                //DL_Status.SelectedValue = "InProgress";
 
                 BT_Update.Visible = false;
                 BT_Delete.Visible = false;
@@ -640,7 +640,7 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
                 BT_SubmitApply.Visible = true;
                 BT_SubmitApply.Enabled = true;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ç”³è¯·ç”Ÿæˆ" + Resources.lang.ZZSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÉêÇëÉú³É" + Resources.lang.ZZSBJC + "')", true);
             }
 
             LoadBMPurchaseApplicationList(LB_ProjectID.Text.Trim());
@@ -654,7 +654,7 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
             BT_Delete.Enabled = true;
             BT_SubmitApply.Visible = true;
             BT_SubmitApply.Enabled = true;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ç”³è¯·ç”Ÿæˆ" + Resources.lang.ZZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÉêÇëÉú³É" + Resources.lang.ZZSBJC + "')", true);
         }
 
         return strWLID;
@@ -712,9 +712,9 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
             DL_TemName.Items.Insert(0, new ListItem("--Select--", ""));
         }
 
-        LoadRelatedWL(strtype, "é¡¹ç›®", int.Parse(TB_ID.Text.Trim()));
+        LoadRelatedWL(strtype, "Project", int.Parse(TB_ID.Text.Trim()));
 
-        int intWLNumber = GetRelatedWorkFlowNumber(strtype, "é¡¹ç›®", TB_ID.Text.Trim());
+        int intWLNumber = GetRelatedWorkFlowNumber(strtype, "Project", TB_ID.Text.Trim());
 
         if (intWLNumber > 0)
         {
@@ -737,12 +737,12 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
         TreeNode nd1 = new TreeNode();
         TreeNode nd2 = new TreeNode();
 
-        nd1.Text = "<B>æ‰€æœ‰é¡¹ç›®</B>";
+        nd1.Text = "<B>ËùÓĞÏîÄ¿</B>";
         nd1.Target = "0";
         nd1.Expanded = true;
         tv.Nodes.Add(nd1);
 
-        string strHQL = "From Project as project Where project.ParentID=1 and project.Status not in ('åˆ é™¤','å½’æ¡£') Order By project.ProjectID DESC ";
+        string strHQL = "From Project as project Where project.ParentID=1 and project.Status not in ('Deleted','Archived') Order By project.ProjectID DESC ";
         ProjectBLL projectBLL = new ProjectBLL();
         IList lst = projectBLL.GetAllProjects(strHQL);
         for (int i = 0; i < lst.Count; i++)
@@ -763,7 +763,7 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
 
     protected void BindAllProjectTreeShow(string strParentID, TreeNode tn)
     {
-        string strHQL = "From Project as project Where project.ParentID='" + strParentID + "' and project.Status not in ('åˆ é™¤','å½’æ¡£') Order By project.ProjectID DESC";
+        string strHQL = "From Project as project Where project.ParentID='" + strParentID + "' and project.Status not in ('Deleted','Archived') Order By project.ProjectID DESC";
         ProjectBLL projectBLL = new ProjectBLL();
         IList lst = projectBLL.GetAllProjects(strHQL);
         for (int i = 0; i < lst.Count; i++)
@@ -776,7 +776,7 @@ public partial class TTBMPurchaseApplicationConfirm : System.Web.UI.Page
 
             tn.ChildNodes.Add(tn1);
 
-            strHQL = "From Project as project Where project.ParentID = '" + project.ProjectID.ToString() + "' and project.Status not in ('åˆ é™¤','å½’æ¡£') Order by project.ProjectID DESC";
+            strHQL = "From Project as project Where project.ParentID = '" + project.ProjectID.ToString() + "' and project.Status not in ('Deleted','Archived') Order by project.ProjectID DESC";
             lst = projectBLL.GetAllProjects(strHQL);
             if (lst.Count > 0 && lst != null)
             {

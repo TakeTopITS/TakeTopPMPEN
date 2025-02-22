@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -67,7 +67,7 @@ public partial class TTWorkPlanRelatedTaskListView : System.Web.UI.Page
             dtNowDate = DateTime.Now;
             strStatus = DataGrid1.Items[i].Cells[4].Text.Trim();
 
-            if (strStatus != "完成" | strStatus != "关闭")
+            if (strStatus != "Completed" | strStatus != "Closed")
             {
                 if (dtFinishedDate < dtNowDate)
                 {

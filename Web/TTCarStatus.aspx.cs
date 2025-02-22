@@ -1,4 +1,4 @@
-﻿using System; using System.Resources;
+using System; using System.Resources;
 using System.Data;
 using System.Configuration;
 using System.Collections;
@@ -25,7 +25,7 @@ public partial class TTCarStatus : System.Web.UI.Page
         string strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","车辆状态", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","����״̬", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -41,7 +41,7 @@ public partial class TTCarStatus : System.Web.UI.Page
 
     public void BindSchedule()
     {
-        string cm = "SELECT ID,Destination,DepartTime,BackTime,CarCode From T_CarAssignForm where Status <> '取消' and to_char(DepartTime,'yyyymmdd') >=" + "'" + DateTime.Now.AddDays(-1).ToString("yyyyMMdd") + "'";
+        string cm = "SELECT ID,Destination,DepartTime,BackTime,CarCode From T_CarAssignForm where Status <> 'Cancel' and to_char(DepartTime,'yyyymmdd') >=" + "'" + DateTime.Now.AddDays(-1).ToString("yyyyMMdd") + "'";
 
         try
         {

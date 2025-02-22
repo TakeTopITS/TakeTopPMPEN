@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -52,7 +52,7 @@ public partial class TTProTaskRelatedDocSAAS : System.Web.UI.Page
         lst = projectBLL.GetAllProjects(strHQL);
         Project project = (Project)lst[0];
 
-        //this.Title = Resources.lang.Project + strProjectID + " " + project.ProjectName.Trim() + "   çš„ä»»åŠ¡ï¼š" + strTaskID + " " + projectTask .Task .Trim () + " çš„ç›¸å…³æ–‡æ¡£";
+        //this.Title = Resources.lang.Project + strProjectID + " " + project.ProjectName.Trim() + "   µÄÈÎÎñ£º" + strTaskID + " " + projectTask .Task .Trim () + " µÄÏà¹ØÎÄµµ";
 
         LB_TaskID.Text = strTaskID;
         LB_ProjectID.Text = strProjectID;
@@ -62,7 +62,7 @@ public partial class TTProTaskRelatedDocSAAS : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandlerForSpecialPopWindow();", true);
         if (Page.IsPostBack == false)
         {
-            ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "ä»»åŠ¡", strTaskID, strTaskName);
+            ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "Task", strTaskID, strTaskName);
             LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
 
             LoadRelatedDoc();
@@ -73,7 +73,7 @@ public partial class TTProTaskRelatedDocSAAS : System.Web.UI.Page
 
             TB_Author.Text = strUserName;
 
-            strHQL = "from ProjectPlanVersion as projectPlanVersion where projectPlanVersion.ProjectID = " + "'" + strProjectID + "'" + " and projectPlanVersion.Type = 'åœ¨ç”¨'";
+            strHQL = "from ProjectPlanVersion as projectPlanVersion where projectPlanVersion.ProjectID = " + "'" + strProjectID + "'" + " and projectPlanVersion.Type = 'InUse'";
             ProjectPlanVersionBLL projectPlanVersionBLL = new ProjectPlanVersionBLL();
             lst = projectPlanVersionBLL.GetAllProjectPlanVersions(strHQL);
             if (lst.Count > 0)
@@ -119,10 +119,10 @@ public partial class TTProTaskRelatedDocSAAS : System.Web.UI.Page
             LB_DocTypeID.Text = docType.ID.ToString();
             TB_DocType.Text = docType.Type.Trim();
 
-            strHQL = " from Document as document where document.RelatedType = 'ä»»åŠ¡' and document.RelatedID = " + strTaskID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'åˆ é™¤' Order by document.DocID DESC";
+            strHQL = " from Document as document where document.RelatedType = 'Task' and document.RelatedID = " + strTaskID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";
             LB_FindCondition.Text = Resources.lang.CXFWWJLX + strDocType;
 
-            //è®¾ç½®ç¼ºçœçš„æ–‡ä»¶ç±»å‹
+            //ÉèÖÃÈ±Ê¡µÄÎÄ¼şÀàĞÍ
             ShareClass.SetDefaultDocType(strDocType, LB_DocTypeID, TB_DocType);
           
         }
@@ -131,7 +131,7 @@ public partial class TTProTaskRelatedDocSAAS : System.Web.UI.Page
             LB_DocTypeID.Text = "";
             TB_DocType.Text = "";
 
-            strHQL = " from Document as document where document.RelatedType = 'ä»»åŠ¡' and document.RelatedID = " + strTaskID + " and document.Status <> 'åˆ é™¤' Order by document.DocID DESC";
+            strHQL = " from Document as document where document.RelatedType = 'Task' and document.RelatedID = " + strTaskID + " and document.Status <> 'Deleted' Order by document.DocID DESC";
             LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
         }
 
@@ -141,7 +141,7 @@ public partial class TTProTaskRelatedDocSAAS : System.Web.UI.Page
 
         LB_TotalCount.Text = Resources.lang.CXDDWJS + ": " + lst2.Count.ToString();
 
-        //æ ¹æ®æ–‡æ¡£æœ‰æ— å·¥ä½œæµæƒ…å†µéšè—åˆ é™¤æŒ‰é’®
+        //¸ù¾İÎÄµµÓĞÎŞ¹¤×÷Á÷Çé¿öÒş²ØÉ¾³ı°´Å¥
         ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);
     }
 
@@ -175,15 +175,15 @@ public partial class TTProTaskRelatedDocSAAS : System.Web.UI.Page
                     lst = documentBLL.GetAllDocuments(strHQL);
                     Document document = (Document)lst[0];
 
-                    document.Status = "åˆ é™¤";
+                    document.Status = "Deleted";
 
                     documentBLL.UpdateDocument(document, int.Parse(strDocID));
 
-                    //åˆ é™¤æ›´å¤šæ–‡æ¡£
+                    //É¾³ı¸ü¶àÎÄµµ
                     ShareClass.DeleteMoreDocByDataGrid(DataGrid1);
 
                     LoadRelatedDoc();
-                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "ä»»åŠ¡", strTaskID, strTaskName);
+                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "Task", strTaskID, strTaskName);
                 }
                 else
                 {
@@ -223,11 +223,11 @@ public partial class TTProTaskRelatedDocSAAS : System.Web.UI.Page
 
             string strFileName1, strExtendName;
 
-            strFileName1 = this.AttachFile.FileName;//è·å–ä¸Šä¼ æ–‡ä»¶çš„æ–‡ä»¶å,åŒ…æ‹¬åç¼€
+            strFileName1 = this.AttachFile.FileName;//»ñÈ¡ÉÏ´«ÎÄ¼şµÄÎÄ¼şÃû,°üÀ¨ºó×º
 
-            strExtendName = System.IO.Path.GetExtension(strFileName1);//è·å–æ‰©å±•å
+            strExtendName = System.IO.Path.GetExtension(strFileName1);//»ñÈ¡À©Õ¹Ãû
 
-            DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+            DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
 
             string strFileName2 = System.IO.Path.GetFileName(strFileName1);
             string strExtName = Path.GetExtension(strFileName2);
@@ -264,7 +264,7 @@ public partial class TTProTaskRelatedDocSAAS : System.Web.UI.Page
                 DocumentBLL documentBLL = new DocumentBLL();
                 Document document = new Document();
 
-                document.RelatedType = "ä»»åŠ¡";
+                document.RelatedType = "Task";
                 document.DocTypeID = int.Parse(strDocTypeID);
                 document.DocType = strDocType;
                 document.RelatedID = int.Parse(strTaskID);
@@ -276,7 +276,7 @@ public partial class TTProTaskRelatedDocSAAS : System.Web.UI.Page
                 document.UploadTime = DateTime.Now;
                 document.Visible = strVisible;
                 document.DepartCode = strDepartCode; document.DepartName = ShareClass.GetDepartName(strDepartCode);
-                document.Status = "å¤„ç†ä¸­";
+                document.Status = "InProgress";
                 document.RelatedName = "";
 
 
@@ -289,9 +289,9 @@ public partial class TTProTaskRelatedDocSAAS : System.Web.UI.Page
                     LB_FileName.Text = strFileName1;
 
                     LoadRelatedDoc();
-                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "ä»»åŠ¡", strTaskID, strTaskName);
+                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "Task", strTaskID, strTaskName);
 
-                    TB_Message.Text = GetUserName(strUserCode) + " ä¸Šä¼ äº†æ–‡ä»¶ï¼š" + strFileName2 + "ï¼Œè¯·åŠæ—¶æŸ¥çœ‹ï¼";
+                    TB_Message.Text = GetUserName(strUserCode) + " ÉÏ´«ÁËÎÄ¼ş£º" + strFileName2 + "£¬Çë¼°Ê±²é¿´£¡";
                 }
                 catch
                 {
@@ -329,7 +329,7 @@ public partial class TTProTaskRelatedDocSAAS : System.Web.UI.Page
             strHQL = "from RelatedUser as relatedUser where relatedUser.ProjectID = " + strProjectID;
             lst = relatedUserBLL.GetAllRelatedUsers(strHQL);
 
-            strSubject = "æ–‡ä»¶æŸ¥é˜…é€šçŸ¥";
+            strSubject = "ÎÄ¼ş²éÔÄÍ¨Öª";
 
             for (i = 0; i < lst.Count; i++)
             {
@@ -363,7 +363,7 @@ public partial class TTProTaskRelatedDocSAAS : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        //æ ¹æ®æ–‡æ¡£æœ‰æ— å·¥ä½œæµæƒ…å†µéšè—åˆ é™¤æŒ‰é’®
+        //¸ù¾İÎÄµµÓĞÎŞ¹¤×÷Á÷Çé¿öÒş²ØÉ¾³ı°´Å¥
         ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);
     }
 
@@ -382,7 +382,7 @@ public partial class TTProTaskRelatedDocSAAS : System.Web.UI.Page
         {
             strParentID = treeNode.Parent.Target;
 
-            strHQL = " from Document as document where document.RelatedType = 'è®¡åˆ’' and document.RelatedID = " + strPlanID + " and document.Status <> 'åˆ é™¤' Order by document.DocID DESC";
+            strHQL = " from Document as document where document.RelatedType = 'Plan' and document.RelatedID = " + strPlanID + " and document.Status <> 'Deleted' Order by document.DocID DESC";
             DocumentBLL documentBLL = new DocumentBLL();
             lst = documentBLL.GetAllDocuments(strHQL);
             DataGrid2.DataSource = lst;
@@ -406,11 +406,11 @@ public partial class TTProTaskRelatedDocSAAS : System.Web.UI.Page
         DocumentBLL documentBLL = new DocumentBLL();
 
         strHQL = "from Document as document where ";
-        strHQL += " (((document.RelatedType = 'ä»»åŠ¡' and document.RelatedID = " + strTaskID + " )";
-        strHQL += " or ( document.RelatedType = 'è®¡åˆ’' and document.RelatedID in ( Select projectTask.PlanID from ProjectTask as projectTask where projectTask.TaskID = " + strTaskID + ")))";
+        strHQL += " (((document.RelatedType = 'Task' and document.RelatedID = " + strTaskID + " )";
+        strHQL += " or ( document.RelatedType = 'Plan' and document.RelatedID in ( Select projectTask.PlanID from ProjectTask as projectTask where projectTask.TaskID = " + strTaskID + ")))";
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or (document.Visible in ( 'éƒ¨é—¨','å…¨ä½“'))))";
-        strHQL += " and rtrim(ltrim(document.Status)) <> 'åˆ é™¤' Order by document.DocID DESC";
+        strHQL += " or (document.Visible in ( '²¿ÃÅ','È«Ìå'))))";
+        strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
 
         documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);
@@ -421,7 +421,7 @@ public partial class TTProTaskRelatedDocSAAS : System.Web.UI.Page
 
         LB_TotalCount.Text = Resources.lang.CXDDWJS + ": " + lst.Count.ToString();
 
-        //æ ¹æ®æ–‡æ¡£æœ‰æ— å·¥ä½œæµæƒ…å†µéšè—åˆ é™¤æŒ‰é’®
+        //¸ù¾İÎÄµµÓĞÎŞ¹¤×÷Á÷Çé¿öÒş²ØÉ¾³ı°´Å¥
         ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);
     }
 
@@ -430,7 +430,7 @@ public partial class TTProTaskRelatedDocSAAS : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Document as document where document.RelatedType = 'è®¡åˆ’'";
+        strHQL = "from Document as document where document.RelatedType = 'Plan'";
         strHQL += " and document.RelatedID in (Select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + " and workPlan.VerID = " + strPlanVerID + ")";
         strHQL += " order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
@@ -447,7 +447,7 @@ public partial class TTProTaskRelatedDocSAAS : System.Web.UI.Page
         strLangCode = HttpContext.Current.Session["LangCode"].ToString();
         strUserCode = HttpContext.Current.Session["UserCode"].ToString().Trim();
 
-        strHQL = "Select distinct GroupName,HomeName from T_ActorGroup where (GroupName = 'ä¸ªäºº' or GroupName = 'å…¨ä½“') ";
+        strHQL = "Select distinct GroupName,HomeName from T_ActorGroup where (GroupName = '¸öÈË' or GroupName = 'È«Ìå') ";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ActorGroup");

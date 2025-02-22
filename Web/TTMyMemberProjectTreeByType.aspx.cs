@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -23,7 +23,7 @@ public partial class TTMyMemberProjectTreeByType : System.Web.UI.Page
         LB_UserCode.Text = strUserCode;
         //LB_UserName.Text = GetUserName(strUserCode);
 
-        //this.Title = "æˆ‘æˆå‘˜çš„é¡¹ç›®æ ‘---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
+        //this.Title = "ÎÒ³ÉÔ±µÄÏîÄ¿Ê÷---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
 
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
@@ -37,13 +37,13 @@ public partial class TTMyMemberProjectTreeByType : System.Web.UI.Page
         string strHQL, strUserCode, strProjectType;
         IList lst;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>æŒ‰ç±»å‹æµè§ˆæˆ‘æˆå‘˜çš„é¡¹ç›®</B>";
+        node1.Text = "<B>°´ÀàĞÍä¯ÀÀÎÒ³ÉÔ±µÄÏîÄ¿</B>";
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -82,7 +82,7 @@ public partial class TTMyMemberProjectTreeByType : System.Web.UI.Page
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
-        strHQL = "from Project as project where project.ProjectType = " + "'" + strProjectType + "'" + " and project.Status not in ('åˆ é™¤','å½’æ¡£') and ";
+        strHQL = "from Project as project where project.ProjectType = " + "'" + strProjectType + "'" + " and project.Status not in ('Deleted','Archived') and ";
         strHQL += " project.PMCode in (select memberLevel.UnderCode from MemberLevel as memberLevel where memberLevel.UserCode = " + "'" + strUserCode + "'" + ")";
         strHQL += " order by project.ProjectID DESC";
         lst1 = projectBLL.GetAllProjects(strHQL);

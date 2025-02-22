@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -27,7 +27,7 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
         strLangCode = Session["LangCode"].ToString();
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text = "é¡¹ç›®åº”æ”¶å®æ”¶ç»Ÿè®¡æŠ¥è¡¨";
+        LB_ReportName.Text = "ÏîÄ¿Ó¦ÊÕÊµÊÕÍ³¼Æ±¨±í";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
@@ -78,20 +78,20 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
 
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select (SUBSTRING (to_char(åº”æ”¶æ—¶é—´,'yyyymmdd'),0,7) +
-                   ç§‘ç›®) as 'ç§‘ç›®',SUM(åº”æ”¶é‡‘é¢) as 'åº”æ”¶é‡‘é¢',SUM(å®æ”¶é‡‘é¢) as 'å®æ”¶é‡‘é¢' From V_ProjectImplementMileStoneReceivePayReport Where ";
+        strHQL = @"Select (SUBSTRING (to_char(Ó¦ÊÕÊ±¼ä,'yyyymmdd'),0,7) +
+                   ¿ÆÄ¿) as '¿ÆÄ¿',SUM(Ó¦ÊÕ½ğ¶î) as 'Ó¦ÊÕ½ğ¶î',SUM(ÊµÊÕ½ğ¶î) as 'ÊµÊÕ½ğ¶î' From V_ProjectImplementMileStoneReceivePayReport Where ";
         if (strProjectID != "")
         {
-            strHQL += " é¡¹ç›®å· = " + strProjectID;
+            strHQL += " ÏîÄ¿ºÅ = " + strProjectID;
         }
         else
         {
-            strHQL += " é¡¹ç›®å Like '%" + strProjectName + "%'";
+            strHQL += " ÏîÄ¿Ãû Like '%" + strProjectName + "%'";
         }
-        strHQL += " And é¡¹ç›®ç»ç† Like '%" + strPMName + "%'";
-        strHQL += " And åº”æ”¶æ—¶é—´ >= '" + strBeginTime + "' And åº”æ”¶æ—¶é—´ <= '" + strEndTime + "'";
-        strHQL += " Group By (SUBSTRING (to_char(åº”æ”¶æ—¶é—´,'yyyymmdd'),0,7) + ç§‘ç›®) ";
-        strHQL += " Order By (SUBSTRING (to_char(åº”æ”¶æ—¶é—´,'yyyymmdd'),0,7) +  ç§‘ç›®) ASC";
+        strHQL += " And ÏîÄ¿¾­Àí Like '%" + strPMName + "%'";
+        strHQL += " And Ó¦ÊÕÊ±¼ä >= '" + strBeginTime + "' And Ó¦ÊÕÊ±¼ä <= '" + strEndTime + "'";
+        strHQL += " Group By (SUBSTRING (to_char(Ó¦ÊÕÊ±¼ä,'yyyymmdd'),0,7) + ¿ÆÄ¿) ";
+        strHQL += " Order By (SUBSTRING (to_char(Ó¦ÊÕÊ±¼ä,'yyyymmdd'),0,7) +  ¿ÆÄ¿) ASC";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectImplementMileStoneReceivePayReport");
 
@@ -120,20 +120,20 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
 
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select (SUBSTRING (to_char(åº”æ”¶æ—¶é—´,'yyyymmdd'),0,7) +
-                   ç§‘ç›®) as 'ç§‘ç›®',SUM(åº”æ”¶é‡‘é¢) as 'åº”æ”¶é‡‘é¢',SUM(å®æ”¶é‡‘é¢) as 'å®æ”¶é‡‘é¢' From V_ProjectImplementMileStoneReceivePayReport Where ";
+        strHQL = @"Select (SUBSTRING (to_char(Ó¦ÊÕÊ±¼ä,'yyyymmdd'),0,7) +
+                   ¿ÆÄ¿) as '¿ÆÄ¿',SUM(Ó¦ÊÕ½ğ¶î) as 'Ó¦ÊÕ½ğ¶î',SUM(ÊµÊÕ½ğ¶î) as 'ÊµÊÕ½ğ¶î' From V_ProjectImplementMileStoneReceivePayReport Where ";
         if (strProjectID != "")
         {
-            strHQL += " é¡¹ç›®å· = " + strProjectID;
+            strHQL += " ÏîÄ¿ºÅ = " + strProjectID;
         }
         else
         {
-            strHQL += " é¡¹ç›®å Like '%" + strProjectName + "%'";
+            strHQL += " ÏîÄ¿Ãû Like '%" + strProjectName + "%'";
         }
-        strHQL += " And é¡¹ç›®ç»ç† Like '%" + strPMName + "%'";
-        strHQL += " And åº”æ”¶æ—¶é—´ >= '" + strBeginTime + "' And åº”æ”¶æ—¶é—´ <= '" + strEndTime + "'";
-        strHQL += " Group By (SUBSTRING (to_char(åº”æ”¶æ—¶é—´,'yyyymmdd'),0,7) + ç§‘ç›®) ";
-        strHQL += " Order By (SUBSTRING (to_char(åº”æ”¶æ—¶é—´,'yyyymmdd'),0,7) +  ç§‘ç›®) ASC";
+        strHQL += " And ÏîÄ¿¾­Àí Like '%" + strPMName + "%'";
+        strHQL += " And Ó¦ÊÕÊ±¼ä >= '" + strBeginTime + "' And Ó¦ÊÕÊ±¼ä <= '" + strEndTime + "'";
+        strHQL += " Group By (SUBSTRING (to_char(Ó¦ÊÕÊ±¼ä,'yyyymmdd'),0,7) + ¿ÆÄ¿) ";
+        strHQL += " Order By (SUBSTRING (to_char(Ó¦ÊÕÊ±¼ä,'yyyymmdd'),0,7) +  ¿ÆÄ¿) ASC";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectImplementMileStoneReceivePayReport");
 
@@ -142,11 +142,11 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
 
         DataTable dtProject = ds.Tables[0];
 
-        Export3Excel(dtProject, "é¡¹ç›®åº”æ”¶åº”ä»˜ç»Ÿè®¡æŠ¥è¡¨.xls");
+        Export3Excel(dtProject, "ÏîÄ¿Ó¦ÊÕÓ¦¸¶Í³¼Æ±¨±í.xls");
 
         LB_ResultNumber.Text = GridView1.Rows.Count.ToString();
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¯¼å‡ºæˆåŠŸï¼');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µ¼³ö³É¹¦£¡');", true);
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)
@@ -171,7 +171,7 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
         Response.End();
     }
 
-    //åˆ›å»ºåˆ†æå›¾å½¢
+    //´´½¨·ÖÎöÍ¼ĞÎ
     protected void CreateProjectMalesStoneAnalystChart(string strUserCode)
     {
         string strChartTitle;
@@ -191,22 +191,22 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
         LB_ReportTime.Text = "( " + strBeginTime + "---" + strEndTime + " )";
-        strChartTitle = "åº”æ”¶å®æ”¶ç»Ÿè®¡å›¾";
+        strChartTitle = "Ó¦ÊÕÊµÊÕÍ³¼ÆÍ¼";
 
-        strHQL = @"Select (SUBSTRING (to_char(åº”æ”¶æ—¶é—´,'yyyymmdd'),0,7) +
-                   ç§‘ç›®) as XName,SUM(åº”æ”¶é‡‘é¢) as YNumber,SUM(å®æ”¶é‡‘é¢) as ZNumber From V_ProjectImplementMileStoneReceivePayReport Where ";
+        strHQL = @"Select (SUBSTRING (to_char(Ó¦ÊÕÊ±¼ä,'yyyymmdd'),0,7) +
+                   ¿ÆÄ¿) as XName,SUM(Ó¦ÊÕ½ğ¶î) as YNumber,SUM(ÊµÊÕ½ğ¶î) as ZNumber From V_ProjectImplementMileStoneReceivePayReport Where ";
         if (strProjectID != "")
         {
-            strHQL += " é¡¹ç›®å· = " + strProjectID;
+            strHQL += " ÏîÄ¿ºÅ = " + strProjectID;
         }
         else
         {
-            strHQL += " é¡¹ç›®å Like '%" + strProjectName + "%'";
+            strHQL += " ÏîÄ¿Ãû Like '%" + strProjectName + "%'";
         }
-        strHQL += " And é¡¹ç›®ç»ç† Like '%" + strPMName + "%'";
-        strHQL += " And åº”æ”¶æ—¶é—´ >= '" + strBeginTime + "' And åº”æ”¶æ—¶é—´ <= '" + strEndTime + "'";
-        strHQL += " Group By (SUBSTRING (to_char(åº”æ”¶æ—¶é—´,'yyyymmdd'),0,7) + ç§‘ç›®) ";
-        strHQL += " Order By (SUBSTRING (to_char(åº”æ”¶æ—¶é—´,'yyyymmdd'),0,7) +  ç§‘ç›®) ASC";
+        strHQL += " And ÏîÄ¿¾­Àí Like '%" + strPMName + "%'";
+        strHQL += " And Ó¦ÊÕÊ±¼ä >= '" + strBeginTime + "' And Ó¦ÊÕÊ±¼ä <= '" + strEndTime + "'";
+        strHQL += " Group By (SUBSTRING (to_char(Ó¦ÊÕÊ±¼ä,'yyyymmdd'),0,7) + ¿ÆÄ¿) ";
+        strHQL += " Order By (SUBSTRING (to_char(Ó¦ÊÕÊ±¼ä,'yyyymmdd'),0,7) +  ¿ÆÄ¿) ASC";
 
         IFrame_Chart1.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Column2&ChartType=Column&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strHQL);
         
@@ -231,17 +231,17 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyy-MM-dd");
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select COALESCE(SUM(åº”æ”¶é‡‘é¢),0)  From V_ProjectImplementMileStoneReceivePayReport Where ";
+        strHQL = @"Select COALESCE(SUM(Ó¦ÊÕ½ğ¶î),0)  From V_ProjectImplementMileStoneReceivePayReport Where ";
         if (strProjectID != "")
         {
-            strHQL += " é¡¹ç›®å· = " + strProjectID;
+            strHQL += " ÏîÄ¿ºÅ = " + strProjectID;
         }
         else
         {
-            strHQL += " é¡¹ç›®å Like '%" + strProjectName + "%'";
+            strHQL += " ÏîÄ¿Ãû Like '%" + strProjectName + "%'";
         }
-        strHQL += " And é¡¹ç›®ç»ç† Like '%" + strPMName + "%'";
-        strHQL += " And åº”æ”¶æ—¶é—´ >= '" + strBeginTime + "' And åº”æ”¶æ—¶é—´ <= '" + strEndTime + "'";
+        strHQL += " And ÏîÄ¿¾­Àí Like '%" + strPMName + "%'";
+        strHQL += " And Ó¦ÊÕÊ±¼ä >= '" + strBeginTime + "' And Ó¦ÊÕÊ±¼ä <= '" + strEndTime + "'";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectImplementMileStoneReceivePayReport");
 
@@ -264,17 +264,17 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyy-MM-dd");
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select COALESCE(SUM(å®æ”¶é‡‘é¢),0)  From V_ProjectImplementMileStoneReceivePayReport Where ";
+        strHQL = @"Select COALESCE(SUM(ÊµÊÕ½ğ¶î),0)  From V_ProjectImplementMileStoneReceivePayReport Where ";
         if (strProjectID != "")
         {
-            strHQL += " é¡¹ç›®å· = " + strProjectID;
+            strHQL += " ÏîÄ¿ºÅ = " + strProjectID;
         }
         else
         {
-            strHQL += " é¡¹ç›®å Like '%" + strProjectName + "%'";
+            strHQL += " ÏîÄ¿Ãû Like '%" + strProjectName + "%'";
         }
-        strHQL += " And é¡¹ç›®ç»ç† Like '%" + strPMName + "%'";
-        strHQL += " And å®æ”¶æ—¶é—´ >= '" + strBeginTime + "' And å®æ”¶æ—¶é—´ <= '" + strEndTime + "'";
+        strHQL += " And ÏîÄ¿¾­Àí Like '%" + strPMName + "%'";
+        strHQL += " And ÊµÊÕÊ±¼ä >= '" + strBeginTime + "' And ÊµÊÕÊ±¼ä <= '" + strEndTime + "'";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectImplementMileStoneReceivePayReport");
 
@@ -297,17 +297,17 @@ public partial class TTProjectImplementMileStoneReceivePayReport : System.Web.UI
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyy-MM-dd");
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select COALESCE(SUM(æœªæ”¶é‡‘é¢),0)  From V_ProjectImplementMileStoneReceivePayReport Where ";
+        strHQL = @"Select COALESCE(SUM(Î´ÊÕ½ğ¶î),0)  From V_ProjectImplementMileStoneReceivePayReport Where ";
         if (strProjectID != "")
         {
-            strHQL += " é¡¹ç›®å· = " + strProjectID;
+            strHQL += " ÏîÄ¿ºÅ = " + strProjectID;
         }
         else
         {
-            strHQL += " é¡¹ç›®å Like '%" + strProjectName + "%'";
+            strHQL += " ÏîÄ¿Ãû Like '%" + strProjectName + "%'";
         }
-        strHQL += " And é¡¹ç›®ç»ç† Like '%" + strPMName + "%'";
-        strHQL += " And åº”æ”¶æ—¶é—´ >= '" + strBeginTime + "' And åº”æ”¶æ—¶é—´ <= '" + strEndTime + "'";
+        strHQL += " And ÏîÄ¿¾­Àí Like '%" + strPMName + "%'";
+        strHQL += " And Ó¦ÊÕÊ±¼ä >= '" + strBeginTime + "' And Ó¦ÊÕÊ±¼ä <= '" + strEndTime + "'";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "V_ProjectImplementMileStoneReceivePayReport");
 

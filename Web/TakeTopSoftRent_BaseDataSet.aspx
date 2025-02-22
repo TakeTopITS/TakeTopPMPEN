@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSoftRent_BaseDataSet.aspx.cs" Inherits="TakeTopSoftRent_BaseDataSet" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSoftRent_BaseDataSet.aspx.cs" Inherits="TakeTopSoftRent_BaseDataSet" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -52,7 +52,7 @@
                                                                         <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                                     </td>
                                                                     <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                                        <asp:Label ID="Label1" runat="server" Text="ËΩØ‰ª∂ÁßüÁî®Âª∫Á´ôÂèÇÊï∞"></asp:Label>
+                                                                        <asp:Label ID="Label1" runat="server" Text="»Ìº˛◊‚”√Ω®’æ≤Œ ˝"></asp:Label>
                                                                     </td>
                                                                     <td width="5">
                                                                         <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -74,7 +74,7 @@
                                                                     <td align="right" width="100%" style="padding-right: 5px;">
                                                                         <table>
                                                                             <tr>
-                                                                                <td>Á´ôÁÇπÔºö
+                                                                                <td>’æµ„£∫
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="DL_HomeSiteURL" runat="server" AutoPostBack="true" DataTextField="SiteURL" DataValueField="SiteURL" OnSelectedIndexChanged="DL_HomeSiteURL_SelectedIndexChanged">
@@ -82,27 +82,27 @@
                                                                                 </td>
 
                                                                                 <td>
-                                                                                    <asp:Button ID="BT_CanUse" CssClass="inpu" runat="server" Text="ËÆæ‰∏∫Âú®Áî®" OnClick="BT_CanUse_Click" />
+                                                                                    <asp:Button ID="BT_CanUse" CssClass="inpu" runat="server" Text="…ËŒ™‘⁄”√" OnClick="BT_CanUse_Click" />
                                                                                 </td>
                                                                                 <td>
-                                                                                    <asp:Button ID="BT_Delete" CssClass="inpu" runat="server" Text="Âà†Èô§" OnClick="BT_Delete_Click" />
+                                                                                    <asp:Button ID="BT_Delete" CssClass="inpu" runat="server" Text="Deleted" OnClick="BT_Delete_Click" />
                                                                                 </td>
-                                                                                <td>ÊääÁ´ôÁÇπ</td>
+                                                                                <td>∞—’æµ„</td>
                                                                                 <td>
                                                                                     <asp:Label ID="LB_FromHomeSiteURL" runat="server"></asp:Label>
                                                                                 </td>
-                                                                                <td>ÁöÑÊï∞ÊçÆÂ§çÂà∂Âà∞</td>
+                                                                                <td>µƒ ˝æ›∏¥÷∆µΩ</td>
                                                                                 <td>
                                                                                     <asp:TextBox ID="TB_HomeSiteURL" runat="server"></asp:TextBox>
                                                                                 </td>
                                                                                 <td>
-                                                                                    <asp:Button ID="BT_Copy" CssClass="inpu" runat="server" Text="Â§çÂà∂" OnClick="BT_Copy_Click" />
+                                                                                    <asp:Button ID="BT_Copy" CssClass="inpu" runat="server" Text="∏¥÷∆" OnClick="BT_Copy_Click" />
                                                                                 </td>
                                                                                 <td width="200px"></td>
                                                                                 <td align="right">
                                                                                     <asp:Button ID="BT_Create" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_Create_Click" />
                                                                                 </td>
-                                                                                <td>ËÆæÁΩÆÊòØÂê¶Ëá™Âä®Âª∫Á´ôÔºö
+                                                                                <td>…Ë÷√ «∑Ò◊‘∂ØΩ®’æ£∫
                                                                                 </td>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="DL_IsAutoBuildSite" AutoPostBack="true" runat="server" OnSelectedIndexChanged="DL_IsAutoBuildSite_SelectedIndexChanged">
@@ -141,59 +141,59 @@
                                                                                             </td>
                                                                                             <td align="center" width="5%">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label11" runat="server" Text="‰∫ßÂìÅ"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label11" runat="server" Text="≤˙∆∑"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td align="center" width="4%">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label12" runat="server" Text="ÁâàÊú¨"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label12" runat="server" Text="∞Ê±æ"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td align="center" width="4%">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label5" runat="server" Text="Á±ªÂûã"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label5" runat="server" Text="¿‡–Õ"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td align="center" width="6%">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label7" runat="server" Text="Âª∫Á´ôÂ∫îÁî®"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label7" runat="server" Text="Ω®’æ”¶”√"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td align="center" width="8%">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label13" runat="server" Text="‰∏ªÁ´ôURL"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label13" runat="server" Text="÷˜’æURL"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td align="center" width="4%">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label6" runat="server" Text="Âú®Áî®"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label6" runat="server" Text="InUse"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td align="center" width="5%">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label14" runat="server" Text="‰∏ªÁ´ôÁ´ØÂè£"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label14" runat="server" Text="÷˜’æ∂Àø⁄"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td align="center" width="8%">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label15" runat="server" Text="Á´ôÁÇπÁõÆÂΩï"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label15" runat="server" Text="’æµ„ƒø¬º"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td align="center" width="8%">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label16" runat="server" Text="Á´ôÁÇπÊ®°ÊùøÁõÆÂΩï"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label16" runat="server" Text="’æµ„ƒ£∞Âƒø¬º"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td align="center" width="8%">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label17" runat="server" Text="Á´ôÁÇπËôöÊãüË∑ØÂæÑ"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label17" runat="server" Text="’æµ„–Èƒ‚¬∑æ∂"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td align="center" width="10%">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label18" runat="server" Text="Êï∞ÊçÆÂ∫ìÊÅ¢Â§çÊñá‰ª∂Ë∑ØÂæÑ"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label18" runat="server" Text=" ˝æ›ø‚ª÷∏¥Œƒº˛¬∑æ∂"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td align="center" width="8%">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label19" runat="server" Text="Êï∞ÊçÆÂ∫ìÂÆâË£ÖÁõÆÂΩï"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label19" runat="server" Text=" ˝æ›ø‚∞≤◊∞ƒø¬º"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td align="center" width="7%">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label20" runat="server" Text="Êï∞ÊçÆÂ∫ìÁôªÂΩïÂ∏êÂè∑"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label20" runat="server" Text=" ˝æ›ø‚µ«¬º’ ∫≈"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td align="center">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label4" runat="server" Text="ÊòØÂê¶Ëá™Âä®Âª∫Á´ô"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label4" runat="server" Text=" «∑Ò◊‘∂ØΩ®’æ"></asp:Label></strong>
                                                                                             </td>
                                                                                         </tr>
                                                                                     </table>
@@ -207,58 +207,58 @@
                                                                             ShowHeader="False" OnItemCommand="DataGrid1_ItemCommand"
                                                                             Width="100%" Height="1px" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                             <Columns>
-                                                                                <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='‰øÆÊîπ' /&gt;&lt;/div&gt;">
+                                                                                <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='–ﬁ∏ƒ' /&gt;&lt;/div&gt;">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                                 </asp:ButtonColumn>
                                                                                 <asp:TemplateColumn HeaderText="Delete">
                                                                                     <ItemTemplate>
-                                                                                        <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Âà†Èô§' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                                                        <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                                                     </ItemTemplate>
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                                 </asp:TemplateColumn>
                                                                                 <asp:BoundColumn DataField="ID" HeaderText="ID">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="RentProductName" HeaderText="‰∫ßÂìÅ">
+                                                                                <asp:BoundColumn DataField="RentProductName" HeaderText="≤˙∆∑">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="RentProductVersion" HeaderText="ÁâàÊú¨">
+                                                                                <asp:BoundColumn DataField="RentProductVersion" HeaderText="∞Ê±æ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="RentProductType" HeaderText="‰∫ßÂìÅÁ±ªÂûã">
+                                                                                <asp:BoundColumn DataField="RentProductType" HeaderText="≤˙∆∑¿‡–Õ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="SiteCreatorAppName" HeaderText="Âª∫Á´ôÂ∫îÁî®">
+                                                                                <asp:BoundColumn DataField="SiteCreatorAppName" HeaderText="Ω®’æ”¶”√">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="SiteURL" HeaderText="‰∏ªÁ´ôURL">
+                                                                                <asp:BoundColumn DataField="SiteURL" HeaderText="÷˜’æURL">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="IsCanUse" HeaderText="Âú®Áî®">
+                                                                                <asp:BoundColumn DataField="IsCanUse" HeaderText="InUse">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="SiteBindingInfo" HeaderText="‰∏ªÁ´ôÁ´ØÂè£">
+                                                                                <asp:BoundColumn DataField="SiteBindingInfo" HeaderText="÷˜’æ∂Àø⁄">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="SiteDirectory" HeaderText="Á´ôÁÇπÁõÆÂΩï">
+                                                                                <asp:BoundColumn DataField="SiteDirectory" HeaderText="’æµ„ƒø¬º">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="SiteTemplateDirectory" HeaderText="Á´ôÁÇπÊ®°ÊùøÁõÆÂΩï">
+                                                                                <asp:BoundColumn DataField="SiteTemplateDirectory" HeaderText="’æµ„ƒ£∞Âƒø¬º">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="SiteVirtualDirectoryPhysicalPath" HeaderText="Á´ôÁÇπËôöÊãüË∑ØÂæÑ">
+                                                                                <asp:BoundColumn DataField="SiteVirtualDirectoryPhysicalPath" HeaderText="’æµ„–Èƒ‚¬∑æ∂">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="SiteDBRestoreFile" HeaderText="Êï∞ÊçÆÂ∫ìÊÅ¢Â§çÊñá‰ª∂Ë∑ØÂæÑ">
+                                                                                <asp:BoundColumn DataField="SiteDBRestoreFile" HeaderText=" ˝æ›ø‚ª÷∏¥Œƒº˛¬∑æ∂">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="SiteDBSetupDirectory" HeaderText="Êï∞ÊçÆÂ∫ìÂÆâË£ÖÁõÆÂΩï">
+                                                                                <asp:BoundColumn DataField="SiteDBSetupDirectory" HeaderText=" ˝æ›ø‚∞≤◊∞ƒø¬º">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="SiteDBLoginUserID" HeaderText="Êï∞ÊçÆÂ∫ìÁôªÂΩïÂ∏êÂè∑">
+                                                                                <asp:BoundColumn DataField="SiteDBLoginUserID" HeaderText=" ˝æ›ø‚µ«¬º’ ∫≈">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="IsAutoBuildSite" HeaderText="ÊòØÂê¶Ëá™Âä®Âª∫Á´ô">
+                                                                                <asp:BoundColumn DataField="IsAutoBuildSite" HeaderText=" «∑Ò◊‘∂ØΩ®’æ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
                                                                             </Columns>
@@ -299,46 +299,46 @@
                                                 <tr>
                                                     <td style="width: 10%; text-align: right" class="formItemBgStyle">
 
-                                                        <asp:Label ID="Label3" runat="server" Text="Âª∫Á´ôÂ∫îÁî®"></asp:Label>
-                                                        Ôºö
+                                                        <asp:Label ID="Label3" runat="server" Text="Ω®’æ”¶”√"></asp:Label>
+                                                        £∫
                                                     </td>
                                                     <td style="width: 15%; text-align: left" class="formItemBgStyle">
                                                         <asp:TextBox ID="TB_SiteCreatorAppName" runat="server" Width="99%"></asp:TextBox>
                                                     </td>
                                                     <td style="width: 10%; text-align: right;" class="formItemBgStyle">
-                                                        <asp:Label ID="Label23" runat="server" Text="‰∫ßÂìÅ"></asp:Label>Ôºö
+                                                        <asp:Label ID="Label23" runat="server" Text="≤˙∆∑"></asp:Label>£∫
                                                     </td>
                                                     <td style="width: 20%; text-align: left;" class="formItemBgStyle">
                                                         <asp:DropDownList ID="DL_RentProductName" runat="server">
-                                                            <asp:ListItem>È°πÁõÆÁÆ°ÁêÜÂπ≥Âè∞</asp:ListItem>
-                                                            <asp:ListItem>Á†îÂèëÈ°πÁõÆÁÆ°ÁêÜÂπ≥Âè∞</asp:ListItem>
-                                                            <asp:ListItem>ÊîøÂä°È°πÁõÆÁÆ°ÁêÜÂπ≥Âè∞</asp:ListItem>
-                                                            <asp:ListItem>Â∑•Á®ãÈ°πÁõÆÁÆ°ÁêÜÂπ≥Âè∞</asp:ListItem>
-                                                            <asp:ListItem>Á≥ªÁªüÈõÜÊàêÈ°πÁõÆÁÆ°ÁêÜÂπ≥Âè∞</asp:ListItem>
-                                                            <asp:ListItem>ËΩØ‰ª∂ÂÆûÊñΩÈ°πÁõÆÁÆ°ÁêÜÂπ≥Âè∞</asp:ListItem>
-                                                            <asp:ListItem>È°πÁõÆÂûãERPÂπ≥Âè∞</asp:ListItem>
-                                                            <asp:ListItem>ÁªºÂêàÂπ≥Âè∞</asp:ListItem>
+                                                            <asp:ListItem>œÓƒøπ‹¿Ì∆ΩÃ®</asp:ListItem>
+                                                            <asp:ListItem>—–∑¢œÓƒøπ‹¿Ì∆ΩÃ®</asp:ListItem>
+                                                            <asp:ListItem>’˛ŒÒœÓƒøπ‹¿Ì∆ΩÃ®</asp:ListItem>
+                                                            <asp:ListItem>π§≥ÃœÓƒøπ‹¿Ì∆ΩÃ®</asp:ListItem>
+                                                            <asp:ListItem>œµÕ≥ºØ≥…œÓƒøπ‹¿Ì∆ΩÃ®</asp:ListItem>
+                                                            <asp:ListItem>»Ìº˛ µ ©œÓƒøπ‹¿Ì∆ΩÃ®</asp:ListItem>
+                                                            <asp:ListItem>œÓƒø–ÕERP∆ΩÃ®</asp:ListItem>
+                                                            <asp:ListItem>◊€∫œ∆ΩÃ®</asp:ListItem>
                                                             <asp:ListItem>------</asp:ListItem>
-                                                            <asp:ListItem>ÂçèÂêåOAÂπ≥Âè∞</asp:ListItem>
-                                                            <asp:ListItem>ÂÆ¢Êà∑ÂÖ≥Á≥ªÁÆ°ÁêÜÂπ≥Âè∞</asp:ListItem>
+                                                            <asp:ListItem>–≠Õ¨OA∆ΩÃ®</asp:ListItem>
+                                                            <asp:ListItem>øÕªßπÿœµπ‹¿Ì∆ΩÃ®</asp:ListItem>
                                                             <asp:ListItem>------</asp:ListItem>
-                                                            <asp:ListItem>È°πÁõÆÂÆù</asp:ListItem>
+                                                            <asp:ListItem>œÓƒø±¶</asp:ListItem>
                                                             <asp:ListItem>------</asp:ListItem>
-                                                            <asp:ListItem>ÊºîÁ§∫ÊµãËØïÂπ≥Âè∞</asp:ListItem>
+                                                            <asp:ListItem>—› æ≤‚ ‘∆ΩÃ®</asp:ListItem>
                                                         </asp:DropDownList>
                                                     </td>
                                                     <td style="text-align: right; width: 10%;" class="formItemBgStyle">
-                                                        <asp:Label ID="Label24" runat="server" Text="ÁâàÊú¨"></asp:Label>:
+                                                        <asp:Label ID="Label24" runat="server" Text="∞Ê±æ"></asp:Label>:
                                                     </td>
                                                     <td style="text-align: left; width: 10%;" class="formItemBgStyle">
                                                         <asp:DropDownList ID="DL_ProductVerType" runat="server">
-                                                            <asp:ListItem>Ê†áÂáÜÁâà</asp:ListItem>
-                                                            <asp:ListItem>‰ºÅ‰∏öÁâà</asp:ListItem>
-                                                            <asp:ListItem>ÈõÜÂõ¢Áâà</asp:ListItem>
+                                                            <asp:ListItem>±Í◊º∞Ê</asp:ListItem>
+                                                            <asp:ListItem>∆Û“µ∞Ê</asp:ListItem>
+                                                            <asp:ListItem>ºØÕ≈∞Ê</asp:ListItem>
                                                         </asp:DropDownList>
                                                     </td>
                                                     <td style="text-align: right; width: 10%;" class="formItemBgStyle">
-                                                        <asp:Label ID="Label8" runat="server" Text="Á±ªÂûã"></asp:Label>:
+                                                        <asp:Label ID="Label8" runat="server" Text="¿‡–Õ"></asp:Label>:
                                                     </td>
                                                     <td style="text-align: left;" class="formItemBgStyle">
                                                         <asp:DropDownList ID="DL_RentProductType" runat="server">
@@ -363,13 +363,13 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: right" class="formItemBgStyle">
-                                                        <asp:Label ID="Label25" runat="server" Text="‰∏ªÁ´ôURL"></asp:Label>Ôºö
+                                                        <asp:Label ID="Label25" runat="server" Text="÷˜’æURL"></asp:Label>£∫
                                                     </td>
                                                     <td style="width: 15%; text-align: left" class="formItemBgStyle">
                                                         <asp:TextBox ID="TB_SiteURL" runat="server" Width="99%"></asp:TextBox>
                                                     </td>
                                                     <td style="text-align: right" class="formItemBgStyle">
-                                                        <asp:Label ID="Label26" runat="server" Text="‰∏ªÁ´ôÁ´ØÂè£"></asp:Label>Ôºö
+                                                        <asp:Label ID="Label26" runat="server" Text="÷˜’æ∂Àø⁄"></asp:Label>£∫
                                                     </td>
                                                     <td colspan="5" style="text-align: left" class="formItemBgStyle">
                                                         <asp:TextBox ID="TB_SiteBindingInfo" runat="server" Width="99%"></asp:TextBox>
@@ -378,7 +378,7 @@
                                                 <tr>
                                                     <td style="text-align: right" class="formItemBgStyle">
 
-                                                        <asp:Label ID="Label27" runat="server" Text="Á´ôÁÇπÁõÆÂΩï"></asp:Label>Ôºö
+                                                        <asp:Label ID="Label27" runat="server" Text="’æµ„ƒø¬º"></asp:Label>£∫
                                                     </td>
 
                                                     <td colspan="7" style="text-align: left" class="formItemBgStyle">
@@ -391,7 +391,7 @@
                                                 <tr>
                                                     <td style="text-align: right" class="formItemBgStyle">
 
-                                                        <asp:Label ID="Label28" runat="server" Text="Á´ôÁÇπÊ®°ÊùøÁõÆÂΩï"></asp:Label>Ôºö
+                                                        <asp:Label ID="Label28" runat="server" Text="’æµ„ƒ£∞Âƒø¬º"></asp:Label>£∫
                                                     </td>
 
                                                     <td colspan="7" style="text-align: left" class="formItemBgStyle">
@@ -403,7 +403,7 @@
 
                                                 <tr>
                                                     <td style="text-align: right" class="formItemBgStyle">
-                                                        <asp:Label ID="Label29" runat="server" Text="Á´ôÁÇπËôöÊãüË∑ØÂæÑ"></asp:Label>Ôºö
+                                                        <asp:Label ID="Label29" runat="server" Text="’æµ„–Èƒ‚¬∑æ∂"></asp:Label>£∫
                                                     </td>
 
                                                     <td colspan="7" style="text-align: left" class="formItemBgStyle">
@@ -413,7 +413,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: right" class="formItemBgStyle">
-                                                        <asp:Label ID="Label30" runat="server" Text="Êï∞ÊçÆÂ∫ìÊÅ¢Â§çÊñá‰ª∂Ë∑ØÂæÑ"></asp:Label>Ôºö</td>
+                                                        <asp:Label ID="Label30" runat="server" Text=" ˝æ›ø‚ª÷∏¥Œƒº˛¬∑æ∂"></asp:Label>£∫</td>
 
                                                     <td colspan="7" style="text-align: left" class="formItemBgStyle">
                                                         <asp:TextBox ID="TB_SiteDBRestoreFile" runat="server" Width="99%"></asp:TextBox>
@@ -421,7 +421,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: right" class="formItemBgStyle">
-                                                        <asp:Label ID="Label31" runat="server" Text="Êï∞ÊçÆÂ∫ìÂÆâË£ÖÁõÆÂΩï"></asp:Label>Ôºö
+                                                        <asp:Label ID="Label31" runat="server" Text=" ˝æ›ø‚∞≤◊∞ƒø¬º"></asp:Label>£∫
                                                     </td>
 
                                                     <td colspan="7" style="text-align: left" class="formItemBgStyle">
@@ -431,13 +431,13 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: right" class="formItemBgStyle">
-                                                        <asp:Label ID="Label61" runat="server" Text="Êï∞ÊçÆÂ∫ìÁôªÂΩïÂ∏êÂè∑"></asp:Label>Ôºö</td>
+                                                        <asp:Label ID="Label61" runat="server" Text=" ˝æ›ø‚µ«¬º’ ∫≈"></asp:Label>£∫</td>
 
                                                     <td colspan="5" style="text-align: left" class="formItemBgStyle">
                                                         <asp:TextBox ID="TB_SiteDBLoginUserID" runat="server" Width="99%"></asp:TextBox>
                                                     </td>
                                                     <td style="text-align: right" class="formItemBgStyle">
-                                                        <asp:Label ID="Label9" runat="server" Text="Ëá™Âä®Âª∫Á´ô"></asp:Label>Ôºö</td>
+                                                        <asp:Label ID="Label9" runat="server" Text="◊‘∂ØΩ®’æ"></asp:Label>£∫</td>
 
                                                     <td style="text-align: left" class="formItemBgStyle">
                                                         <asp:DropDownList ID="DL_AutoBuildSite" runat="server">

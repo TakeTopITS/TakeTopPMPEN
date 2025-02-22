@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -38,7 +38,7 @@ public partial class TTGoodsCheckOutNoticeOrder : System.Web.UI.Page
         LB_UserCode.Text = strUserCode;
         LB_UserName.Text = strUserName;
 
-        //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
         strToDoWLID = Request.QueryString["WLID"]; strToDoWLDetailID = Request.QueryString["WLStepDetailID"];
         strWLBusinessID = Request.QueryString["BusinessID"];
 
@@ -73,8 +73,8 @@ public partial class TTGoodsCheckOutNoticeOrder : System.Web.UI.Page
             LoadGoodsSaleOrder(strUserCode);
             LoadGoodsProductionOrder(strUserCode);
 
-            //ç‰©æ–™é¢†ç”¨
-            ShareClass.LoadWFTemplate(strUserCode, "å‡ºè´§ç”³è¯·", DL_TemName);
+            //ÎïÁÏÁìÓÃ
+            ShareClass.LoadWFTemplate(strUserCode, "ShippingRequest", DL_TemName);
             LoadGoodsCheckOutNoticeOrder(strUserCode, "SALE");
 
             ShareClass.InitialInvolvedProjectTree(TreeView2, strUserCode);
@@ -129,7 +129,7 @@ public partial class TTGoodsCheckOutNoticeOrder : System.Web.UI.Page
         {
             strCOOID = e.Item.Cells[3].Text.Trim();
 
-            intWLNumber = LoadRelatedWL("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", int.Parse(strCOOID));
+            intWLNumber = LoadRelatedWL("MaterialWithdrawal", "ÎïÁÏ", int.Parse(strCOOID));
             if (intWLNumber > 0)
             {
                 BT_NewMain.Visible = false;
@@ -143,7 +143,7 @@ public partial class TTGoodsCheckOutNoticeOrder : System.Web.UI.Page
                 BT_SubmitApply.Enabled = true;
             }
 
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strCOOID, "0");
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialWithdrawal", "ÎïÁÏ", strCOOID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_NewMain.Visible = true;
@@ -317,10 +317,10 @@ public partial class TTGoodsCheckOutNoticeOrder : System.Web.UI.Page
 
 
             LoadGoodsCheckOutNoticeOrder(strUserCode, "SALE");
-            LoadRelatedWL("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", int.Parse(strCOOID));
+            LoadRelatedWL("MaterialWithdrawal", "ÎïÁÏ", int.Parse(strCOOID));
 
 
-            DL_Status.SelectedValue = "æ–°å»º";
+            DL_Status.SelectedValue = "New";
 
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
@@ -379,9 +379,9 @@ public partial class TTGoodsCheckOutNoticeOrder : System.Web.UI.Page
             LoadGoodsCheckOutNoticeOrder(strUserCode, "SALE");
 
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strCOOID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialWithdrawal", "ÎïÁÏ", strCOOID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 string strCmdText;
@@ -389,7 +389,7 @@ public partial class TTGoodsCheckOutNoticeOrder : System.Web.UI.Page
                 strCmdText = "select COOID as DetailCOOID, * from T_GoodsCheckOutNoticeOrder where COOID = " + strCOOID;
                 if (strToDoWLID == null)
                 {
-                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strCOOID);
+                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialWithdrawal", "ÎïÁÏ", strCOOID);
                 }
 
                 if (strToDoWLID != null)
@@ -427,7 +427,7 @@ public partial class TTGoodsCheckOutNoticeOrder : System.Web.UI.Page
             string strCOOID = LB_COOID.Text.Trim();
 
 
-            intWLNumber = GetRelatedWorkFlowNumber("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strCOOID);
+            intWLNumber = GetRelatedWorkFlowNumber("MaterialWithdrawal", "ÎïÁÏ", strCOOID);
             if (intWLNumber > 0)
             {
             }
@@ -497,7 +497,7 @@ public partial class TTGoodsCheckOutNoticeOrder : System.Web.UI.Page
                 string strHQL;
                 IList lst;
 
-                intWLNumber = GetRelatedWorkFlowNumber("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strCOOID);
+                intWLNumber = GetRelatedWorkFlowNumber("MaterialWithdrawal", "ÎïÁÏ", strCOOID);
                 if (intWLNumber > 0)
                 {
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -523,14 +523,14 @@ public partial class TTGoodsCheckOutNoticeOrder : System.Web.UI.Page
                     NB_TotalAmount.Amount = SumGoodsAppliationOrderAmount(strCOOID);
                     UpdateGoodsCheckOutNoticeOrderOrderAmount(strCOOID, NB_TotalAmount.Amount);
 
-                    //æ›´æ–°é”€å”®è®¢å•çš„å·²é€šçŸ¥å‡ºåº“é‡
+                    //¸üĞÂÏúÊÛ¶©µ¥µÄÒÑÍ¨Öª³ö¿âÁ¿
                     UpdateGoodsSOOrSANumber(strSourceType, intSourceID.ToString());
 
                     LoadGoodsCheckOutNoticeOrderDetail(strCOOID);
 
-                    //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                    //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-                    string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strCOOID, "0");
+                    //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+                    //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+                    string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialWithdrawal", "ÎïÁÏ", strCOOID, "0");
                     if (strToDoWLID != null | strAllowFullEdit == "YES")
                     {
                         string strCmdText;
@@ -538,7 +538,7 @@ public partial class TTGoodsCheckOutNoticeOrder : System.Web.UI.Page
                         strCmdText = "select COOID as DetailCOOID, * from T_GoodsCheckOutNoticeOrder where COOID = " + strCOOID;
                         if (strToDoWLID == null)
                         {
-                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strCOOID);
+                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialWithdrawal", "ÎïÁÏ", strCOOID);
                         }
 
                         if (strToDoWLID != null)
@@ -884,7 +884,7 @@ public partial class TTGoodsCheckOutNoticeOrder : System.Web.UI.Page
 
         strCOOID = LB_COOID.Text.Trim();
 
-        int intWLNumber = GetRelatedWorkFlowNumber("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strCOOID);
+        int intWLNumber = GetRelatedWorkFlowNumber("MaterialWithdrawal", "ÎïÁÏ", strCOOID);
         if (intWLNumber > 0 & strToDoWLID == null)
         {
             BT_SubmitApply.Enabled = false;
@@ -995,14 +995,14 @@ public partial class TTGoodsCheckOutNoticeOrder : System.Web.UI.Page
             NB_TotalAmount.Amount = SumGoodsAppliationOrderAmount(strCOOID);
             UpdateGoodsCheckOutNoticeOrderOrderAmount(strCOOID, NB_TotalAmount.Amount);
 
-            //æ›´æ–°é”€å”®è®¢å•çš„å·²é€šçŸ¥å‡ºåº“é‡
+            //¸üĞÂÏúÊÛ¶©µ¥µÄÒÑÍ¨Öª³ö¿âÁ¿
             UpdateGoodsSOOrSANumber(strSourceType, intSourceID.ToString());
 
             LoadGoodsCheckOutNoticeOrderDetail(strCOOID);
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strCOOID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialWithdrawal", "ÎïÁÏ", strCOOID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 string strCmdText;
@@ -1010,7 +1010,7 @@ public partial class TTGoodsCheckOutNoticeOrder : System.Web.UI.Page
                 strCmdText = "select COOID as DetailCOOID, * from T_GoodsCheckOutNoticeOrder where COOID = " + strCOOID;
                 if (strToDoWLID == null)
                 {
-                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strCOOID);
+                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialWithdrawal", "ÎïÁÏ", strCOOID);
                 }
 
                 if (strToDoWLID != null)
@@ -1113,14 +1113,14 @@ public partial class TTGoodsCheckOutNoticeOrder : System.Web.UI.Page
             NB_TotalAmount.Amount = SumGoodsAppliationOrderAmount(strCOOID);
             UpdateGoodsCheckOutNoticeOrderOrderAmount(strCOOID, NB_TotalAmount.Amount);
 
-            //æ›´æ–°é”€å”®è®¢å•çš„å·²é€šçŸ¥å‡ºåº“é‡
+            //¸üĞÂÏúÊÛ¶©µ¥µÄÒÑÍ¨Öª³ö¿âÁ¿
             UpdateGoodsSOOrSANumber(strSourceType, intSourceID.ToString());
 
             LoadGoodsCheckOutNoticeOrderDetail(strCOOID);
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strCOOID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialWithdrawal", "ÎïÁÏ", strCOOID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 string strCmdText;
@@ -1128,7 +1128,7 @@ public partial class TTGoodsCheckOutNoticeOrder : System.Web.UI.Page
                 strCmdText = "select COOID as DetailCOOID, * from T_GoodsCheckOutNoticeOrder where COOID = " + strCOOID;
                 if (strToDoWLID == null)
                 {
-                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", strCOOID);
+                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialWithdrawal", "ÎïÁÏ", strCOOID);
                 }
 
                 if (strToDoWLID != null)
@@ -1227,47 +1227,47 @@ public partial class TTGoodsCheckOutNoticeOrder : System.Web.UI.Page
         lst = goodsCheckOutNoticeOrderBLL.GetAllGoodsCheckOutNoticeOrders(strHQL);
         GoodsCheckOutNoticeOrder goodsCheckOutNoticeOrder = (GoodsCheckOutNoticeOrder)lst[0];
 
-        goodsCheckOutNoticeOrder.Status = "å¤„ç†ä¸­";
+        goodsCheckOutNoticeOrder.Status = "InProgress";
 
         try
         {
             goodsCheckOutNoticeOrderBLL.UpdateGoodsCheckOutNoticeOrder(goodsCheckOutNoticeOrder, int.Parse(strCOOID));
 
-            strXMLFileName = "ç‰©æ–™é¢†ç”¨" + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xml";
+            strXMLFileName = "MaterialWithdrawal" + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xml";
             strXMLFile2 = "Doc\\" + "XML" + "\\" + strXMLFileName;
 
             WorkFlowBLL workFlowBLL = new WorkFlowBLL();
             WorkFlow workFlow = new WorkFlow();
 
             workFlow.WLName = strCOOName;
-            workFlow.WLType = "ç‰©æ–™é¢†ç”¨";
-            workFlow.Status = "æ–°å»º";
+            workFlow.WLType = "MaterialWithdrawal";
+            workFlow.Status = "New";
             workFlow.TemName = DL_TemName.SelectedValue.Trim();
             workFlow.CreateTime = DateTime.Now;
             workFlow.CreatorCode = strUserCode;
             workFlow.CreatorName = ShareClass.GetUserName(strUserCode);
             workFlow.Description = strApplyReason;
             workFlow.XMLFile = strXMLFile2;
-            workFlow.RelatedType = "ç‰©æ–™";
+            workFlow.RelatedType = "ÎïÁÏ";
             workFlow.RelatedID = goodsCheckOutNoticeOrder.COOID;
-            workFlow.DIYNextStep = "Yes"; workFlow.IsPlanMainWorkflow = "NO";
+            workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
 
             if (CB_SMS.Checked == true)
             {
-                workFlow.ReceiveSMS = "Yes";
+                workFlow.ReceiveSMS = "YES";
             }
             else
             {
-                workFlow.ReceiveSMS = "No";
+                workFlow.ReceiveSMS = "NO";
             }
 
             if (CB_Mail.Checked == true)
             {
-                workFlow.ReceiveEMail = "Yes";
+                workFlow.ReceiveEMail = "YES";
             }
             else
             {
-                workFlow.ReceiveEMail = "No";
+                workFlow.ReceiveEMail = "NO";
             }
 
             try
@@ -1281,9 +1281,9 @@ public partial class TTGoodsCheckOutNoticeOrder : System.Web.UI.Page
                 strXMLFile2 = Server.MapPath(strXMLFile2);
                 xmlProcess.DbToXML(strCmdText, "T_GoodsCheckOutNoticeOrder", strXMLFile2);
 
-                LoadRelatedWL("ç‰©æ–™é¢†ç”¨", "ç‰©æ–™", int.Parse(strCOOID));
+                LoadRelatedWL("MaterialWithdrawal", "ÎïÁÏ", int.Parse(strCOOID));
                 
-                DL_Status.SelectedValue = "å¤„ç†ä¸­";
+                DL_Status.SelectedValue = "InProgress";
 
                 BT_SubmitApply.Enabled = false;
 
@@ -1327,7 +1327,7 @@ public partial class TTGoodsCheckOutNoticeOrder : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'ç‰©æ–™é¢†ç”¨'";
+        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'MaterialWithdrawal'";
         strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC";
         WorkFlowBLL workFlowBLL = new WorkFlowBLL();
         lst = workFlowBLL.GetAllWorkFlows(strHQL);
@@ -1380,7 +1380,7 @@ public partial class TTGoodsCheckOutNoticeOrder : System.Web.UI.Page
         DataGrid1.DataBind();
     }
 
-    //æ›´æ–°é”€å”®è®¢å•çš„å·²é€šçŸ¥å‡ºåº“é‡
+    //¸üĞÂÏúÊÛ¶©µ¥µÄÒÑÍ¨Öª³ö¿âÁ¿
     protected void UpdateGoodsSOOrSANumber(string strSourceType, string strSourceID)
     {
         string strHQL;
@@ -1421,7 +1421,7 @@ public partial class TTGoodsCheckOutNoticeOrder : System.Web.UI.Page
         strHQL += " Order by goodsCheckOutNoticeOrder.COOID DESC";
 
 
-        //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
         if (strToDoWLID != null & strWLBusinessID != null)
         {
             strHQL = "from GoodsCheckOutNoticeOrder as goodsCheckOutNoticeOrder where goodsCheckOutNoticeOrder.COOID = " + strWLBusinessID;

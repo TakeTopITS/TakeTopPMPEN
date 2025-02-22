@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopLRExInnerMDI.aspx.cs" Inherits="TakeTopLRExInnerMDI" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopLRExInnerMDI.aspx.cs" Inherits="TakeTopLRExInnerMDI" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -45,7 +45,7 @@
 
 
 <noframes>
-    <body>你的浏览器不支持框架！</body>
+    <body>����������֧�ֿ�ܣ�</body>
 </noframes>
 <script type="text/javascript" language="javascript">
 

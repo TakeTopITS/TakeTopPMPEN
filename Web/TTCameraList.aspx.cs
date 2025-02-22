@@ -1,4 +1,4 @@
-﻿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System; using System.Resources;
 using System.Collections;
@@ -39,7 +39,7 @@ public partial class TTCameraList : System.Web.UI.Page
     //    cameraLog.CreatorCode = Session["UserCode"] == null ? "" : Session["UserCode"].ToString().Trim();
     //    cameraLog.CreatorName = Session["UserName"] == null ? "" : Session["UserName"].ToString();
     //    cameraLog.CreateTime = DateTime.Now;
-    //    cameraLog.Description = "查看";
+    //    cameraLog.Description = "�鿴";
     //    CameraLogBLL cameraLogBLL = new CameraLogBLL();
     //    cameraLogBLL.AddCameraLog(cameraLog);
     //}

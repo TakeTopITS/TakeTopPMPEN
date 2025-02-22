@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTRCJProjectWorkDetailsLog.aspx.cs" Inherits="TTRCJProjectWorkDetailsLog" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTRCJProjectWorkDetailsLog.aspx.cs" Inherits="TTRCJProjectWorkDetailsLog" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ÂΩïÂÖ•ÂÆûÈôÖÂ∑•‰ΩúÊó•Âøó</title>
+    <title>¬º»Î µº π§◊˜»’÷æ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -50,7 +50,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">ÂÆûÈôÖÂ∑•‰ΩúÈáèÁôªËÆ∞Êó•Âøó
+                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi"> µº π§◊˜¡øµ«º«»’÷æ
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -62,7 +62,7 @@
                                                 <table width="180" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td>
-                                                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">ËøîÂõû</asp:LinkButton>
+                                                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">∑µªÿ</asp:LinkButton>
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -79,16 +79,16 @@
                                                 <asp:GridView ID="gvConfirmWorkLog" runat="server" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" AllowPaging="True" OnPageIndexChanging="gvConfirmWorkLog_PageIndexChanging" OnRowDataBound="gvConfirmWorkLog_RowDataBound">
                                                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                                     <Columns>
-                                                        <asp:BoundField DataField="ID" HeaderText="ËøêÁÆóÂ∫èÂè∑" />
-                                                        <asp:BoundField DataField="WorkConfirmID" HeaderText="Á°ÆËÆ§Â∫èÂè∑" />
-                                                        <asp:BoundField DataField="ItemNo" HeaderText="Â∫èÂè∑" />
-                                                        <asp:BoundField DataField="ItemName" HeaderText="ÂÆöÈ¢ùÂè∑" />
-                                                        <asp:BoundField DataField="WorkYear" HeaderText="Â∑•‰ΩúÂπ¥‰ªΩ" />
-                                                        <asp:BoundField DataField="WorkMonth" HeaderText="Â∑•‰ΩúÊúà‰ªΩ" />
-                                                        <asp:BoundField DataField="WorkNum" HeaderText="Â∑•‰ΩúÈáè" DataFormatString="{0:N3}" HtmlEncode="False" />
-                                                        <asp:BoundField DataField="ChangedByWho" HeaderText="ÁôªËÆ∞‰∫∫Âëò" />
-                                                        <asp:BoundField DataField="ChangedTime" HeaderText="ÁôªËÆ∞Êó∂Èó¥" />
-                                                        <asp:BoundField DataField="ChangedMemo" HeaderText="ËØ¥Êòé" />
+                                                        <asp:BoundField DataField="ID" HeaderText="‘ÀÀ„–Ú∫≈" />
+                                                        <asp:BoundField DataField="WorkConfirmID" HeaderText="»∑»œ–Ú∫≈" />
+                                                        <asp:BoundField DataField="ItemNo" HeaderText="–Ú∫≈" />
+                                                        <asp:BoundField DataField="ItemName" HeaderText="∂®∂Ó∫≈" />
+                                                        <asp:BoundField DataField="WorkYear" HeaderText="π§◊˜ƒÍ∑›" />
+                                                        <asp:BoundField DataField="WorkMonth" HeaderText="π§◊˜‘¬∑›" />
+                                                        <asp:BoundField DataField="WorkNum" HeaderText="π§◊˜¡ø" DataFormatString="{0:N3}" HtmlEncode="False" />
+                                                        <asp:BoundField DataField="ChangedByWho" HeaderText="µ«º«»À‘±" />
+                                                        <asp:BoundField DataField="ChangedTime" HeaderText="µ«º« ±º‰" />
+                                                        <asp:BoundField DataField="ChangedMemo" HeaderText="Àµ√˜" />
                                                     </Columns>
                                                     <EditRowStyle BackColor="#999999" />
                                                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -115,7 +115,7 @@
             <div style="position: absolute; left: 40%; top: 40%;">
                 <asp:UpdateProgress ID="TakeTopUp" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
                     <ProgressTemplate>
-                        <img src="Images/Processing.gif" alt="ËØ∑Á®çÂÄôÔºåÂ§ÑÁêÜ‰∏≠..." />
+                        <img src="Images/Processing.gif" alt="«Î…‘∫Ú£¨¥¶¿Ì÷–..." />
                     </ProgressTemplate>
                 </asp:UpdateProgress>
             </div>

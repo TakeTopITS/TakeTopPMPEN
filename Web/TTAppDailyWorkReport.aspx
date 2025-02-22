@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppDailyWorkReport.aspx.cs" Inherits="TTAppDailyWorkReport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppDailyWorkReport.aspx.cs" Inherits="TTAppDailyWorkReport" %>
 
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
@@ -85,7 +85,7 @@
                                                                     </td>
                                                                 </tr>
                                                             </table>
-                                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="è¯·ç¨å€™ï¼Œå¤„ç†ä¸­..." style="display: none;" />
+                                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖÐ..." style="display: none;" />
                                                         </a>
                                                     </td>
                                                 </tr>

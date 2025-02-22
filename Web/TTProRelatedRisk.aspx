@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProRelatedRisk.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProRelatedRisk.aspx.cs"
     Inherits="TTProRelatedRisk" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -146,28 +146,28 @@
 
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <Columns>
-                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ä¿®æ”¹' /&gt;&lt;/div&gt;">
+                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ÐÞ¸Ä' /&gt;&lt;/div&gt;">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:ButtonColumn>
                                                     <asp:TemplateColumn HeaderText="Delete">
                                                         <ItemTemplate>
-                                                            <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='åˆ é™¤' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                            <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="ID" HeaderText="åºå·">
+                                                    <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="RiskLevel" HeaderText="çº§åˆ«">
+                                                    <asp:BoundColumn DataField="RiskLevel" HeaderText="¼¶±ð">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Risk" HeaderText="é£Žé™©">
+                                                    <asp:BoundColumn DataField="Risk" HeaderText="Risk">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="25%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="EffectDate" HeaderText="é¢„è®¡å‘ç”Ÿæ—¶é—´" DataFormatString="{0:yyyy/MM/dd}">
+                                                    <asp:BoundColumn DataField="EffectDate" HeaderText="Ô¤¼Æ·¢ÉúÊ±¼ä" DataFormatString="{0:yyyy/MM/dd}">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="13%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="EffectDate" HeaderText="å‘çŽ°æ—¶é—´" DataFormatString="{0:yyyy/MM/dd}">
+                                                    <asp:BoundColumn DataField="EffectDate" HeaderText="·¢ÏÖÊ±¼ä" DataFormatString="{0:yyyy/MM/dd}">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="13%" />
                                                     </asp:BoundColumn>
                                                     <asp:TemplateColumn>
@@ -178,7 +178,7 @@
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                    <asp:TemplateColumn HeaderText="×´Ì¬">
                                                         <ItemTemplate>
                                                             <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                         </ItemTemplate>
@@ -228,9 +228,9 @@
                                         :</td>
                                     <td style="width: 20%; text-align: left;" class="formItemBgStyle">
                                         <asp:DropDownList ID="DL_RiskLevel" runat="server">
-                                            <asp:ListItem Value="ä¸­" Text="<%$ Resources:lang,Zhong%>" />
-                                            <asp:ListItem Value="é«˜" Text="<%$ Resources:lang,Gao%>" />
-                                            <asp:ListItem Value="ä½Ž" Text="<%$ Resources:lang,Di2%>" />
+                                            <asp:ListItem Value="ÖÐ" Text="<%$ Resources:lang,Zhong%>" />
+                                            <asp:ListItem Value="¸ß" Text="<%$ Resources:lang,Gao%>" />
+                                            <asp:ListItem Value="µÍ" Text="<%$ Resources:lang,Di2%>" />
                                         </asp:DropDownList>
                                     </td>
                                     <td style="text-align: right; width: 10%;" class="formItemBgStyle">
@@ -238,11 +238,11 @@
                                     </td>
                                     <td colspan ="3" class="formItemBgStyle" align="left">
                                         <asp:DropDownList ID="DL_Status" runat="server">
-                                            <asp:ListItem Value="æ½œåœ¨" Text="<%$ Resources:lang,QianZai%>" />
-                                            <asp:ListItem Value="æš´éœ²" Text="<%$ Resources:lang,BaoLu%>" />
-                                            <asp:ListItem Value="å‘ç”Ÿ" Text="<%$ Resources:lang,FaSheng%>" />
-                                            <asp:ListItem Value="è§£é™¤" Text="<%$ Resources:lang,JieChu%>" />
-                                            <asp:ListItem Value="è½¬ä»»" Text="<%$ Resources:lang,ZhuanRen%>" />
+                                            <asp:ListItem Value="Potential" Text="<%$ Resources:lang,QianZai%>" />
+                                            <asp:ListItem Value="Exposed" Text="<%$ Resources:lang,BaoLu%>" />
+                                            <asp:ListItem Value="Occurred" Text="<%$ Resources:lang,FaSheng%>" />
+                                            <asp:ListItem Value="Resolved" Text="<%$ Resources:lang,JieChu%>" />
+                                            <asp:ListItem Value="ToTask" Text="<%$ Resources:lang,ZhuanRen%>" />
                                         </asp:DropDownList> 
                                         <asp:Label ID="LB_ID" runat="server" Visible="false"></asp:Label>
                                     </td>

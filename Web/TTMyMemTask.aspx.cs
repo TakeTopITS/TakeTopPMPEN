@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -45,7 +45,7 @@ public partial class TTMyMemTask : System.Web.UI.Page
         strUserName = ShareClass.GetUserName(strUserCode);
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "直接成员的任务", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ֱ�ӳ�Ա������", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -123,9 +123,9 @@ public partial class TTMyMemTask : System.Web.UI.Page
             strHQL = "Select * from T_TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUnderCode + "'";
 
             strHQL += " and taskAssignRecord.OperatorCode in (Select projectMember.UserCode From T_ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
-            strHQL += " and taskAssignRecord.Status in ('计划','受理','待处理') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) ";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.Status <> '关闭')";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.Status not in ('新建','隐藏','删除','归档'))))";
+            strHQL += " and taskAssignRecord.Status in ('Plan','Accepted','ToHandle') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) ";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.Status not in ('New','Hided','Deleted','Archived'))))";
             strHQL += " Order by taskAssignRecord.MoveTime DESC limit 40";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_TaskAssignRecord");
             DataList_ToBeHandled.DataSource = ds;
@@ -135,9 +135,9 @@ public partial class TTMyMemTask : System.Web.UI.Page
             strHQL = "Select * from T_TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUnderCode + "'";
 
             strHQL += " and taskAssignRecord.OperatorCode in (Select projectMember.UserCode From T_ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
-            strHQL += " and taskAssignRecord.Status in ('处理中','处理中') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) ";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.Status <> '关闭')";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.Status not in ('新建','隐藏','删除','归档'))))";
+            strHQL += " and taskAssignRecord.Status in ('InProgress','InProgress') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) ";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.Status not in ('New','Hided','Deleted','Archived'))))";
             strHQL += " Order by taskAssignRecord.MoveTime DESC limit 40";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_TaskAssignRecord");
             DataList_Handling.DataSource = ds;
@@ -147,9 +147,9 @@ public partial class TTMyMemTask : System.Web.UI.Page
             strHQL = "Select * from T_TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUnderCode + "'";
 
             strHQL += " and taskAssignRecord.OperatorCode in (Select projectMember.UserCode From T_ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
-            strHQL += " and taskAssignRecord.Status in ('拒绝','挂起','取消','完成','已完成','已分派') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) ";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask  where projectTask.Status <> '关闭')";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.Status not in ('新建','隐藏','删除','归档'))))";
+            strHQL += " and taskAssignRecord.Status in ('�ܾ�','Suspended','Cancel','Completed','�����','�ѷ���') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) ";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask  where projectTask.Status <> 'Closed')";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.Status not in ('New','Hided','Deleted','Archived'))))";
             strHQL += " Order by taskAssignRecord.MoveTime DESC limit 40";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_TaskAssignRecord");
             DataList_FinishedUnAssigned.DataSource = ds;
@@ -160,8 +160,8 @@ public partial class TTMyMemTask : System.Web.UI.Page
 
             strHQL += " and taskAssignRecord.OperatorCode in (Select projectMember.UserCode From T_ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
             strHQL += " and taskAssignRecord.ID in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord)";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.Status <> '关闭')";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.Status not in ('新建','隐藏','删除','归档'))))";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.Status not in ('New','Hided','Deleted','Archived'))))";
             strHQL += " Order by taskAssignRecord.MoveTime DESC limit 40";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_TaskAssignRecord");
             DataList_Assigned.DataSource = ds;
@@ -172,9 +172,9 @@ public partial class TTMyMemTask : System.Web.UI.Page
             strHQL = "Select * from T_TaskAssignRecord as taskAssignRecord where ";
             strHQL += "  taskAssignRecord.OperatorCode in ( select memberLevel.UnderCode from T_MemberLevel as memberLevel where memberLevel.ProjectVisible = 'YES' and memberLevel.UserCode = " + "'" + strUserCode + "'" + ")";
             strHQL += " and taskAssignRecord.OperatorCode in (Select projectMember.UserCode From T_ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
-            strHQL += " and taskAssignRecord.Status in ('计划','受理','待处理') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) ";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.Status <> '关闭')";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.Status not in ('新建','隐藏','删除','归档'))))";
+            strHQL += " and taskAssignRecord.Status in ('Plan','Accepted','ToHandle') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) ";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.Status not in ('New','Hided','Deleted','Archived'))))";
             strHQL += " Order by taskAssignRecord.MoveTime DESC limit 40";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_TaskAssignRecord");
             DataList_ToBeHandled.DataSource = ds;
@@ -185,9 +185,9 @@ public partial class TTMyMemTask : System.Web.UI.Page
             strHQL = "Select * from T_TaskAssignRecord as taskAssignRecord where ";
             strHQL += "  taskAssignRecord.OperatorCode in ( select memberLevel.UnderCode from T_MemberLevel as memberLevel where memberLevel.ProjectVisible = 'YES' and memberLevel.UserCode = " + "'" + strUserCode + "'" + ")";
             strHQL += " and taskAssignRecord.OperatorCode in (Select projectMember.UserCode From T_ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
-            strHQL += " and taskAssignRecord.Status in ('处理中','处理中') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) ";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.Status <> '关闭')";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.Status not in ('新建','隐藏','删除','归档'))))";
+            strHQL += " and taskAssignRecord.Status in ('InProgress','InProgress') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) ";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.Status not in ('New','Hided','Deleted','Archived'))))";
             strHQL += " Order by taskAssignRecord.MoveTime DESC limit 40";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_TaskAssignRecord");
             DataList_Handling.DataSource = ds;
@@ -197,9 +197,9 @@ public partial class TTMyMemTask : System.Web.UI.Page
             strHQL = "Select * from T_TaskAssignRecord as taskAssignRecord where ";
             strHQL += "  taskAssignRecord.OperatorCode in ( select memberLevel.UnderCode from T_MemberLevel as memberLevel where memberLevel.ProjectVisible = 'YES' and memberLevel.UserCode = " + "'" + strUserCode + "'" + ")";
             strHQL += " and taskAssignRecord.OperatorCode in (Select projectMember.UserCode From T_ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
-            strHQL += " and taskAssignRecord.Status in ('拒绝','挂起','取消','完成','已完成','已分派') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) ";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask  where projectTask.Status <> '关闭')";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.Status not in ('新建','隐藏','删除','归档'))))";
+            strHQL += " and taskAssignRecord.Status in ('�ܾ�','Suspended','Cancel','Completed','�����','�ѷ���') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) ";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask  where projectTask.Status <> 'Closed')";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.Status not in ('New','Hided','Deleted','Archived'))))";
             strHQL += " Order by taskAssignRecord.MoveTime DESC limit 40";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_TaskAssignRecord");
             DataList_FinishedUnAssigned.DataSource = ds;
@@ -210,8 +210,8 @@ public partial class TTMyMemTask : System.Web.UI.Page
             strHQL += "  taskAssignRecord.OperatorCode in ( select memberLevel.UnderCode from T_MemberLevel as memberLevel where memberLevel.ProjectVisible = 'YES' and memberLevel.UserCode = " + "'" + strUserCode + "'" + ")";
             strHQL += " and taskAssignRecord.OperatorCode in (Select projectMember.UserCode From T_ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
             strHQL += " and taskAssignRecord.ID in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord)";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.Status <> '关闭')";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.Status not in ('新建','隐藏','删除','归档'))))";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.Status not in ('New','Hided','Deleted','Archived'))))";
             strHQL += " Order by taskAssignRecord.MoveTime DESC limit 40";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_TaskAssignRecord");
             DataList_Assigned.DataSource = ds;
@@ -233,7 +233,7 @@ public partial class TTMyMemTask : System.Web.UI.Page
 
         //    strStatus = ds.Tables[0].Rows[i]["Status"].ToString().Trim();
 
-        //    if (strStatus != "完成" & strStatus != "已完成")
+        //    if (strStatus != "Completed" & strStatus != "�����")
         //    {
         //        if (dtFinishedDate < dtNowDate)
         //        {

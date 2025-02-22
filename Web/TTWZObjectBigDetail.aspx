@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZObjectBigDetail.aspx.cs" Inherits="TTWZObjectBigDetail" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZObjectBigDetail.aspx.cs" Inherits="TTWZObjectBigDetail" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -51,19 +51,19 @@
                                                             <table class="formBgStyle" width="80%">
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,DaLeiDaiMa%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,DaLeiDaiMa%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_DLCode" runat="server"></asp:TextBox>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DaLeiMingCheng%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DaLeiMingCheng%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_DLName" runat="server"></asp:TextBox>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,DaLeiShuoMing%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,DaLeiShuoMing%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="3">
                                                                         <asp:TextBox ID="TXT_DLDesc" runat="server" TextMode="MultiLine" Height="50px" Width="555px"></asp:TextBox>
                                                                     </td>
@@ -71,7 +71,7 @@
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="4">
                                                                         <asp:Button ID="BT_Save" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="BT_Save_Click" />&nbsp;
-                                                                        <input type="button" value="è¿”å›ž" id="BT_Return" class="inpu" onclick="window.location.href = 'TTWZObjectBigList.aspx'" />
+                                                                        <input type="button" value="·µ»Ø" id="BT_Return" class="inpu" onclick="window.location.href = 'TTWZObjectBigList.aspx'" />
                                                                     </td>
                                                                 </tr>
                                                             </table>

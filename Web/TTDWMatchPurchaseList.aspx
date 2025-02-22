@@ -1,23 +1,23 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTDWMatchPurchaseList.aspx.cs" Inherits="TTDWMatchPurchaseList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTDWMatchPurchaseList.aspx.cs" Inherits="TTDWMatchPurchaseList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ÂéüÊñô-ÈááË¥≠ÈÉ®</title>
+    <title>‘≠¡œ-≤…π∫≤ø</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     
     <script language="javascript">
 
         function CalcTitle() {
-            if (confirm("ÊòØÂê¶Âà†Èô§ÊâÄÊúâÂ°´ÂÜôÁöÑÊï∞ÊçÆÔºåÂåÖÊã¨ÈááË¥≠ÈÉ®ÂéüÊñô‰ª∑Ê†ºËÆ∞ÂΩïË°®ÁöÑÊï∞ÊçÆÔºü")) {
+            if (confirm(" «∑Ò…æ≥˝À˘”–ÃÓ–¥µƒ ˝æ›£¨∞¸¿®≤…π∫≤ø‘≠¡œº€∏Òº«¬º±Ìµƒ ˝æ›£ø")) {
                 document.getElementById("BT_Clear").click();
             }
         }
 
 
         function ClearMatchPrice() {
-            if (confirm("Á°ÆÂÆöÊ∏ÖÁ©∫ÊâÄÊúâÂéüÊñô‰ª∑Ê†ºÂêóÔºü")) {
+            if (confirm("»∑∂®«Âø’À˘”–‘≠¡œº€∏Ò¬£ø")) {
                 document.getElementById("BT_ClearMatch").click();
             }
         }
@@ -79,19 +79,19 @@
                                                             <table class="formBgStyle" width="100%">
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="3">
                                                                         <asp:TextBox ID="TXT_ID" runat="server" ReadOnly="true"></asp:TextBox>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,YuanLiaoMingCheng%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,YuanLiaoMingCheng%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_MatchName" runat="server" ReadOnly="true"></asp:TextBox>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YuanLiaoLeiXing%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YuanLiaoLeiXing%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:DropDownList ID="DDL_RMatchType" runat="server" DataTextField="MatchType"
                                                                             DataValueField="ID">
@@ -100,16 +100,16 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,YuanLiaoJiaGe%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,YuanLiaoJiaGe%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
 
                                                                         <asp:TextBox ID="TXT_MaterialPrice" runat="server"></asp:TextBox><br />
 
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="2">
-                                                                        <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,Nian%>"></asp:Label>Ôºö
+                                                                        <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,Nian%>"></asp:Label>£∫
                                                                         <asp:DropDownList ID="DDL_HistoryYear" runat="server"></asp:DropDownList>
-                                                                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,Yue%>"></asp:Label>Ôºö
+                                                                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,Yue%>"></asp:Label>£∫
                                                                         <asp:DropDownList ID="DDL_HistoryMonth" runat="server"></asp:DropDownList>
                                                                         <font style="color:red;">
                                                                             <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,YuanLiaoLiShiJiaGeRiQi%>"></asp:Label></font>
@@ -119,7 +119,7 @@
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="4">
                                                                         <asp:Button ID="btnSave" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnSave_Click" />
                                                                         <asp:Button ID="btnCancel" runat="server" Text="<%$ Resources:lang,QuXiao%>" CssClass="inpu" OnClick="btnCancel_Click" Visible="false" />
-                                                                        <input type="button" value="Ê∏ÖÁ©∫ÂéüÊñô‰ª∑Ê†º" class="inpuLong" onclick="ClearMatchPrice();" />
+                                                                        <input type="button" value="«Âø’‘≠¡œº€∏Ò" class="inpuLong" onclick="ClearMatchPrice();" />
                                                                         <asp:Button ID="BT_ClearMatch" CssClass="inpu" runat="server" Text="<%$ Resources:lang,QingKongYuanLiao%>" OnClick="BT_ClearMatch_Click" style="display:none;" />
                                                                     </td>
                                                                 </tr>
@@ -153,7 +153,7 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="4">
-                                                                        <input type="button" value="Ê∏ÖÁ©∫ÂéüÊñôÂéÜÂè≤Ë°®" onclick="CalcTitle();" class="inpuLong" />
+                                                                        <input type="button" value="«Âø’‘≠¡œ¿˙ ∑±Ì" onclick="CalcTitle();" class="inpuLong" />
                                                                         <asp:Button ID="BT_Clear" runat="server" Text="<%$ Resources:lang,QingKongYuanLiaoLiShiBiao%>" CssClass="inpuLong" OnClick="BT_Clear_Click" style="display:none;" />
                                                                     </td>
                                                                 </tr>
@@ -161,7 +161,7 @@
 
                                                         </td>
                                                         <td class="formItemBgStyle" width="80%">
-                                                            <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,XuanZeYuanLiaoLeiXing%>"></asp:Label>Ôºö<asp:DropDownList ID="DDL_MatchType" runat="server" DataTextField="MatchType"
+                                                            <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,XuanZeYuanLiaoLeiXing%>"></asp:Label>£∫<asp:DropDownList ID="DDL_MatchType" runat="server" DataTextField="MatchType"
                                                             AutoPostBack="true" OnSelectedIndexChanged="DDL_MatchType_SelectedIndexChanged" DataValueField="ID">
                                                         </asp:DropDownList><br />
                                                             <asp:DataGrid ID="DG_Match" runat="server" AllowPaging="true" AutoGenerateColumns="False"
@@ -176,13 +176,13 @@
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                     </asp:TemplateColumn>
-                                                                    <asp:BoundColumn DataField="MatchName" HeaderText="ÂéüÊñôÂêçÁß∞">
+                                                                    <asp:BoundColumn DataField="MatchName" HeaderText="‘≠¡œ√˚≥∆">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="MatchTypeName" HeaderText="ÂéüÊñôÁ±ªÂûã">
+                                                                    <asp:BoundColumn DataField="MatchTypeName" HeaderText="‘≠¡œ¿‡–Õ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="MaterialPrice" HeaderText="ÂéüÊñô‰ª∑Ê†º">
+                                                                    <asp:BoundColumn DataField="MaterialPrice" HeaderText="‘≠¡œº€∏Ò">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>
                                                                 </Columns>

@@ -1,17 +1,17 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSelectorProject.aspx.cs" Inherits="TTWZSelectorProject" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSelectorProject.aspx.cs" Inherits="TTWZSelectorProject" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Âπ≥Âè∞È°πÁõÆ</title>
+    <title>∆ΩÃ®œÓƒø</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
 
     <script type="text/jscript">
 
-        //ÂçïÈÄâÊã©ÊåâÈíÆÂà§Êñ≠
+        //µ•—°‘Ò∞¥≈•≈–∂œ
         function chooseUpdate() {
             var str = "";
             $("input[name=name1]").each(function () {
@@ -21,7 +21,7 @@
             });
 
             if (str == "") {
-                alert('ËØ∑ÈÄâÊã©ËÆ∞ÂΩïÈ°πÔºÅ');
+                alert('«Î—°‘Òº«¬ºœÓ£°');
                 return false;
             }
             else {
@@ -146,7 +146,7 @@
 
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="È°πÁõÆÂè∑">
+                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="œÓƒø∫≈">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:TemplateColumn>
@@ -158,7 +158,7 @@
                                                                         <%# ShareClass.StringCutByRequire(Eval("ProjectName").ToString(), 190) %>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <%--<asp:BoundColumn DataField="BeginDate" HeaderText="ÂºÄÂßãÊó∂Èó¥">
+                                                                <%--<asp:BoundColumn DataField="BeginDate" HeaderText="ø™ º ±º‰">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>--%>
                                                                 <asp:TemplateColumn>
@@ -170,7 +170,7 @@
                                                                         <%#DataBinder.Eval(Container.DataItem, "BeginDate", "{0:yyyy/MM/dd}")%>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <%--<asp:BoundColumn DataField="EndDate" HeaderText="ÁªìÊùüÊó∂Èó¥">
+                                                                <%--<asp:BoundColumn DataField="EndDate" HeaderText="Ω· ¯ ±º‰">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>--%>
                                                                 <asp:TemplateColumn>
@@ -182,16 +182,19 @@
                                                                         <%#DataBinder.Eval(Container.DataItem, "EndDate", "{0:yyyy/MM/dd}")%>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="StatusValue" HeaderText="ËøõÂ∫¶">
+                                                                <asp:TemplateColumn HeaderText="◊¥Ã¨">
+    <ItemTemplate>
+        <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("StatusValue").ToString()) %>
+    </ItemTemplate>
+    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
+</asp:TemplateColumn>
+                                                                <asp:BoundColumn DataField="Budget" HeaderText="Budget">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="Budget" HeaderText="È¢ÑÁÆó">
+                                                                <asp:BoundColumn DataField="ProjectAmount" HeaderText="œÓƒøΩ∂Ó">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="ProjectAmount" HeaderText="È°πÁõÆÈáëÈ¢ù">
-                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-                                                                </asp:BoundColumn>
-                                                                <asp:TemplateColumn HeaderText="Áä∂ÊÄÅ">
+                                                                <asp:TemplateColumn HeaderText="◊¥Ã¨">
                                                                     <ItemTemplate>
                                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                     </ItemTemplate>
@@ -212,10 +215,10 @@
                                             <tr>
                                                 <td class="formItemBgStyle">
                                                     <div style="text-align: center">
-                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="Á°ÆÂÆö" />
+                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="»∑∂®" />
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                            type="button" value="ÂÖ≥Èó≠" />
+                                                            type="button" value="Closed" />
                                                     </div>
                                                 </td>
                                             </tr>

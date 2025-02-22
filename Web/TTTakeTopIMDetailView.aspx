@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTTakeTopIMDetailView.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTTakeTopIMDetailView.aspx.cs"
     Inherits="TTTakeTopIMDetailView" %>
 
 <%@ Register Assembly="Brettle.Web.NeatUpload" Namespace="Brettle.Web.NeatUpload"
@@ -34,7 +34,7 @@
                                         <td style="text-align: left; vertical-align: top;">
                                             <cc2:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" runat="server" ActiveTabIndex="0"
                                                 Width="100%">
-                                                <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="ä¼šè¯è®°å½•" TabIndex="0" BorderWidth="0">
+                                                <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="»á»°¼ÇÂ¼" TabIndex="0" BorderWidth="0">
                                                     <HeaderTemplate>
                                                         <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,HuiHuaJiLu%>"></asp:Label>
                                                     </HeaderTemplate>
@@ -66,7 +66,7 @@
                                                         </asp:Timer>
                                                     </ContentTemplate>
                                                 </cc2:TabPanel>
-                                                <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="ç›¸å…³æ–‡ä»¶" TabIndex="1" BorderWidth="0">
+                                                <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="Ïà¹ØÎÄ¼þ" TabIndex="1" BorderWidth="0">
                                                     <HeaderTemplate>
                                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,XiangGuanWenJian%>"></asp:Label>
                                                     </HeaderTemplate>
@@ -104,13 +104,13 @@
                                                             ForeColor="#333333" GridLines="None" Height="1px" Width="98%" ShowHeader="False">
                                                             <Columns>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
-                                                                    DataTextField="DocName" HeaderText="æ–‡ä»¶å" Target="_blank">
+                                                                    DataTextField="DocName" HeaderText="ÎÄ¼þÃû" Target="_blank">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="50%" />
                                                                 </asp:HyperLinkColumn>
-                                                                <asp:BoundColumn DataField="DocType" HeaderText="ç±»åž‹">
+                                                                <asp:BoundColumn DataField="DocType" HeaderText="ÀàÐÍ">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="UploadManName" HeaderText="ä¸Šä¼ è€…">
+                                                                <asp:BoundColumn DataField="UploadManName" HeaderText="ÉÏ´«Õß">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                 </asp:BoundColumn>
                                                             </Columns>
@@ -133,7 +133,7 @@
                                                         </table>
                                                     </ContentTemplate>
                                                 </cc2:TabPanel>
-                                                <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="å‚ä¸Žäººå‘˜" TabIndex="1" BorderWidth="0">
+                                                <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="²ÎÓëÈËÔ±" TabIndex="1" BorderWidth="0">
                                                     <HeaderTemplate>
                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,CanYuRenYuan%>"></asp:Label>
                                                     </HeaderTemplate>
@@ -155,7 +155,7 @@
                                 <table width="100%">
                                     <tr>
                                         <td align="center">
-                                            <asp:Image ID="IM_MemberPhoto" runat="server" AlternateText="å‘˜å·¥ç…§ç‰‡" Height="110px"
+                                            <asp:Image ID="IM_MemberPhoto" runat="server" AlternateText="Ô±¹¤ÕÕÆ¬" Height="110px"
                                                 Width="100px" ImageUrl="~/Images/DefaultUserPhoto.png" />
                                             <br />
                                             <asp:Label ID="LB_ChatterCode" Visible="false" runat="server"></asp:Label>

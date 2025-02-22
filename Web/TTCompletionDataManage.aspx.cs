@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -71,12 +71,12 @@ public partial class TTCompletionDataManage : System.Web.UI.Page
     }
 
     /// <summary>
-    /// æ ¹æ®æƒ…å†µæ˜¾ç¤ºå³è¾¹åˆ—è¡¨ä¿¡æ¯ï¼Œå›¾çº¸ï¼šæ”¶å›¾ç™»è®° å‘å›¾ç™»è®°,æ–‡ä»¶ï¼šæ”¶æ–‡ç™»è®° å‘æ–‡ç™»è®°
+    /// ¸ù¾İÇé¿öÏÔÊ¾ÓÒ±ßÁĞ±íĞÅÏ¢£¬Í¼Ö½£ºÊÕÍ¼µÇ¼Ç ·¢Í¼µÇ¼Ç,ÎÄ¼ş£ºÊÕÎÄµÇ¼Ç ·¢ÎÄµÇ¼Ç
     /// </summary>
     protected void BindInformation()
     {
         string strtype = DL_DocType.SelectedValue.Trim();
-        if (strtype.Equals("å›¾çº¸"))
+        if (strtype.Equals("Drawing"))
         {
             Panel_ProSendFigureRegistration.Visible = true;
             Panel_ProGraphRegistration.Visible = true;
@@ -85,7 +85,7 @@ public partial class TTCompletionDataManage : System.Web.UI.Page
             LoadProGraphRegistration();
             LoadProSendFigureRegistration();
         }
-        else if (strtype.Equals("æ–‡ä»¶"))
+        else if (strtype.Equals("Document"))
         {
             Panel_ProSendFigureRegistration.Visible = false;
             Panel_ProGraphRegistration.Visible = false;
@@ -97,7 +97,7 @@ public partial class TTCompletionDataManage : System.Web.UI.Page
     }
 
     /// <summary>
-    /// æ”¶å›¾ç™»è®°
+    /// ÊÕÍ¼µÇ¼Ç
     /// </summary>
     protected void LoadProGraphRegistration()
     {
@@ -126,12 +126,12 @@ public partial class TTCompletionDataManage : System.Web.UI.Page
         DataGrid3.DataBind();
         LB_Sql.Text = strHQL;
 
-        LB_FindCondition.Text = "å·";
-        LB_Count.Text = "æ€»æ•°ï¼š" + ds.Tables[0].Rows.Count.ToString();
+        LB_FindCondition.Text = "¾í";
+        LB_Count.Text = "×ÜÊı£º" + ds.Tables[0].Rows.Count.ToString();
     }
 
     /// <summary>
-    /// å‘å›¾ç™»è®°
+    /// ·¢Í¼µÇ¼Ç
     /// </summary>
     protected void LoadProSendFigureRegistration()
     {
@@ -161,12 +161,12 @@ public partial class TTCompletionDataManage : System.Web.UI.Page
         DataGrid5.DataBind();
         LB_Sql1.Text = strHQL;
 
-        LB_FindCondition2.Text = "å·å†…ä»¶";
-        LB_TotalCount.Text = "æ€»æ•°ï¼š" + ds.Tables[0].Rows.Count.ToString();
+        LB_FindCondition2.Text = "¾íÄÚ¼ş";
+        LB_TotalCount.Text = "×ÜÊı£º" + ds.Tables[0].Rows.Count.ToString();
     }
 
     /// <summary>
-    /// æ”¶æ–‡ç™»è®°
+    /// ÊÕÎÄµÇ¼Ç
     /// </summary>
     protected void LoadProReceiptRegistration()
     {
@@ -187,12 +187,12 @@ public partial class TTCompletionDataManage : System.Web.UI.Page
         DataGrid1.DataBind();
         LB_Sql.Text = strHQL;
 
-        LB_FindCondition.Text = "å·";
-        LB_Count.Text = "æ€»æ•°ï¼š" + ds.Tables[0].Rows.Count.ToString();
+        LB_FindCondition.Text = "¾í";
+        LB_Count.Text = "×ÜÊı£º" + ds.Tables[0].Rows.Count.ToString();
     }
 
     /// <summary>
-    /// å‘æ–‡ç™»è®°
+    /// ·¢ÎÄµÇ¼Ç
     /// </summary>
     protected void LoadProIssueRegistration()
     {
@@ -214,8 +214,8 @@ public partial class TTCompletionDataManage : System.Web.UI.Page
         DataGrid2.DataBind();
         LB_Sql1.Text = strHQL;
 
-        LB_FindCondition2.Text = "å·å†…ä»¶";
-        LB_TotalCount.Text = "æ€»æ•°ï¼š" + ds.Tables[0].Rows.Count.ToString();
+        LB_FindCondition2.Text = "¾íÄÚ¼ş";
+        LB_TotalCount.Text = "×ÜÊı£º" + ds.Tables[0].Rows.Count.ToString();
     }
 
     protected void DataGrid1_PageIndexChanged(object sender, DataGridPageChangedEventArgs e)
@@ -268,13 +268,13 @@ public partial class TTCompletionDataManage : System.Web.UI.Page
 
     protected string GetStatusValue(string obj)
     {
-        string flag = "å¦";
+        string flag = "NO";
         if (string.IsNullOrEmpty(obj) || obj.Trim() == "")
         {
-            flag = "å¦";
+            flag = "NO";
         }
         else
-            flag = "æ˜¯";
+            flag = "YES";
         return flag;
     }
 
@@ -336,19 +336,19 @@ public partial class TTCompletionDataManage : System.Web.UI.Page
     }
 
     /// <summary>
-    /// æŒ‰èµ„æ–™ç±»å‹ç»‘å®šç±»å‹
+    /// °´×ÊÁÏÀàĞÍ°ó¶¨ÀàĞÍ
     /// </summary>
     /// <param name="strDocType"></param>
     protected void BindDocGraphType(string strDocType)
     {
-        if (strDocType == "å›¾çº¸")
+        if (strDocType == "Drawing")
         {
-            DataTable dt = GetList("æ”¶å›¾ç™»è®°");
+            DataTable dt = GetList("ÊÕÍ¼µÇ¼Ç");
             if (dt != null && dt.Rows.Count > 0)
             {
                 DL_DocGraphType.Items.Clear();
                 DL_DocGraphType.Items.Insert(0, new ListItem("--Select--", ""));
-                SetInterval(DL_DocGraphType, "æ”¶å›¾ç™»è®°", " ");
+                SetInterval(DL_DocGraphType, "ÊÕÍ¼µÇ¼Ç", " ");
             }
             else
             {
@@ -358,12 +358,12 @@ public partial class TTCompletionDataManage : System.Web.UI.Page
         }
         else
         {
-            DataTable dt = GetList("æ”¶æ–‡ç™»è®°");
+            DataTable dt = GetList("ÊÕÎÄµÇ¼Ç");
             if (dt != null && dt.Rows.Count > 0)
             {
                 DL_DocGraphType.Items.Clear();
                 DL_DocGraphType.Items.Insert(0, new ListItem("--Select--", ""));
-                SetInterval(DL_DocGraphType, "æ”¶æ–‡ç™»è®°", " ");
+                SetInterval(DL_DocGraphType, "ÊÕÎÄµÇ¼Ç", " ");
             }
             else
             {
@@ -374,7 +374,7 @@ public partial class TTCompletionDataManage : System.Web.UI.Page
     }
 
     /// <summary>
-    /// è·å–é¡¹ç›®æ–‡æ§ç±»å‹
+    /// »ñÈ¡ÏîÄ¿ÎÄ¿ØÀàĞÍ
     /// </summary>
     protected DataTable GetList(string strParentName)
     {
@@ -389,14 +389,14 @@ public partial class TTCompletionDataManage : System.Web.UI.Page
     }
 
     /// <summary>
-    /// æ„å»ºç±»å‹æ ‘ç»“æ„
+    /// ¹¹½¨ÀàĞÍÊ÷½á¹¹
     /// </summary>
     /// <param name="DDL"></param>
     /// <param name="strParentName"></param>
     /// <param name="interval"></param>
     protected void SetInterval(DropDownList DDL, string strParentName, string interval)
     {
-        interval += "â”œ";
+        interval += "©À";
 
         DataTable list = GetList(strParentName);
         if (list.Rows.Count > 0 && list != null)
@@ -405,7 +405,7 @@ public partial class TTCompletionDataManage : System.Web.UI.Page
             {
                 DDL.Items.Add(new ListItem(string.Format("{0}{1}", interval, list.Rows[i]["ClassificationName"].ToString().Trim()), list.Rows[i]["ClassificationName"].ToString().Trim()));
 
-                ///é€’å½’
+                ///µİ¹é
                 SetInterval(DDL, list.Rows[i]["ClassificationName"].ToString().Trim(), interval);
             }
         }

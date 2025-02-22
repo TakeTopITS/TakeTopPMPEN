@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -24,7 +24,7 @@ public partial class TTGoodsUserRecordList : System.Web.UI.Page
 
         string strGoodsID = Request.QueryString["ID"];
 
-        //this.Title = "ç‰©æ–™ç¼–å·ï¼š" + strGoodsID + " ç”¨æˆ·è®°å½•ï¼";
+        //this.Title = "ÎïÁÏ±àºÅ£º" + strGoodsID + " ÓÃ»§¼ÇÂ¼£¡";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
         { 

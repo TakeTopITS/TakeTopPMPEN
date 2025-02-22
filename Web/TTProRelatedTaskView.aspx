@@ -197,7 +197,7 @@
                                                     <asp:BoundColumn DataField="Type" HeaderText="类型">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Task" HeaderText="任务">
+                                                    <asp:BoundColumn DataField="Task" HeaderText="Task">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="Priority" HeaderText="优先级">
@@ -221,7 +221,7 @@
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="100px" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="Budget" HeaderText="预算">
+                                                    <asp:BoundColumn DataField="Budget" HeaderText="Budget">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="ManHour" HeaderText="工时">

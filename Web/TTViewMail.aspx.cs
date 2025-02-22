@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -29,7 +29,7 @@ public partial class TTViewMail : System.Web.UI.Page
         string strDeleteOperate;
         string strUserCode = Session["UserCode"].ToString().Trim();
 
-        ///è·å–å‚æ•°nFolderIDçš„å€¼
+        ///»ñÈ¡²ÎÊınFolderIDµÄÖµ
         if (Request.Params["FolderID"] != null)
         {
             if (Int32.TryParse(Request.Params["FolderID"].ToString(), out nFolderID) == false)
@@ -60,10 +60,10 @@ public partial class TTViewMail : System.Web.UI.Page
     {
         string strUserCode = Session["UserCode"].ToString();
 
-        ///è·å–æ•°æ®
+        ///»ñÈ¡Êı¾İ
         IFolder folder = new Folder();
         NpgsqlDataReader dr = folder.GetFolders(strUserCode);
-        ///ç»‘å®šæ•°æ®
+        ///°ó¶¨Êı¾İ
         FolderList.DataSource = dr;
         FolderList.DataTextField = "Name";
         FolderList.DataValueField = "FolderID";
@@ -73,10 +73,10 @@ public partial class TTViewMail : System.Web.UI.Page
         MoveBtn.Enabled = FolderList.Items.Count > 0 ? true : false;
     }
     private void BindMailData(int nFolderID)
-    {	///è·å–æ•°æ®
+    {	///»ñÈ¡Êı¾İ
         IMail mail = new Mail();
         NpgsqlDataReader dr = mail.GetMailsByFloder(nFolderID);
-        ///ç»‘å®šæ•°æ®
+        ///°ó¶¨Êı¾İ
         MailView.DataSource = dr;
         MailView.DataBind();
 
@@ -113,55 +113,55 @@ public partial class TTViewMail : System.Web.UI.Page
 
     protected void MoveBtn_Click(object sender, EventArgs e)
     {
-        ///å®šä¹‰å¯¹è±¡
+        ///¶¨Òå¶ÔÏó
         IMail mail = new Mail();
         try
         {
             foreach (GridViewRow row in MailView.Rows)
-            {   ///è·å–æ§ä»¶
+            {   ///»ñÈ¡¿Ø¼ş
                 CheckBox checkMail = (CheckBox)row.FindControl("CheckMail");
                 if (checkMail != null)
                 {
                     if (checkMail.Checked == true)
                     {
-                        ///æ‰§è¡Œæ•°æ®åº“æ“ä½œ
+                        ///Ö´ĞĞÊı¾İ¿â²Ù×÷
                         mail.MoveMail(Int32.Parse(MailView.DataKeys[row.RowIndex].Value.ToString()),
                             Int32.Parse(FolderList.SelectedValue));
                     }
                 }
             }
-            ///é‡æ–°ç»‘å®šæ§ä»¶çš„æ•°æ®
+            ///ÖØĞÂ°ó¶¨¿Ø¼şµÄÊı¾İ
             BindMailData(nFolderID);
         }
         catch (Exception ex)
-        {   ///è·³è½¬åˆ°å¼‚å¸¸é”™è¯¯å¤„ç†é¡µé¢
+        {   ///Ìø×ªµ½Òì³£´íÎó´¦ÀíÒ³Ãæ
             Response.Redirect("TTTTErrorPage.aspx?ErrorMsg=" + ex.Message.Replace("<br>", "").Replace("\n", "")
                 + "&ErrorUrl=" + Request.Url.ToString().Replace("<br>", "").Replace("\n", ""));
         }
     }
     protected void DeleteBtn_Click(object sender, EventArgs e)
     {
-        ///å®šä¹‰å¯¹è±¡
+        ///¶¨Òå¶ÔÏó
         IMail mail = new Mail();
         try
         {
             foreach (GridViewRow row in MailView.Rows)
-            {   ///è·å–æ§ä»¶
+            {   ///»ñÈ¡¿Ø¼ş
                 CheckBox checkMail = (CheckBox)row.FindControl("CheckMail");
                 if (checkMail != null)
                 {
                     if (checkMail.Checked == true)
                     {
-                        ///æ‰§è¡Œæ•°æ®åº“æ“ä½œ
+                        ///Ö´ĞĞÊı¾İ¿â²Ù×÷
                         mail.DeleteMail(Int32.Parse(MailView.DataKeys[row.RowIndex].Value.ToString()));
                     }
                 }
             }
-            ///é‡æ–°ç»‘å®šæ§ä»¶çš„æ•°æ®
+            ///ÖØĞÂ°ó¶¨¿Ø¼şµÄÊı¾İ
             BindMailData(nFolderID);
         }
         catch (Exception ex)
-        {   ///è·³è½¬åˆ°å¼‚å¸¸é”™è¯¯å¤„ç†é¡µé¢
+        {   ///Ìø×ªµ½Òì³£´íÎó´¦ÀíÒ³Ãæ
             Response.Redirect("TTTTErrorPage.aspx?ErrorMsg=" + ex.Message.Replace("<br>", "").Replace("\n", "")
                 + "&ErrorUrl=" + Request.Url.ToString().Replace("<br>", "").Replace("\n", ""));
         }

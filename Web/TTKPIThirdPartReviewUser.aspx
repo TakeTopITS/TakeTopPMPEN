@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTKPIThirdPartReviewUser.aspx.cs" Inherits="TTKPIThirdPartReviewUser" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTKPIThirdPartReviewUser.aspx.cs" Inherits="TTKPIThirdPartReviewUser" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <%@ Register Assembly="Brettle.Web.NeatUpload" Namespace="Brettle.Web.NeatUpload"
@@ -72,7 +72,7 @@
                                         
                                         <ItemStyle CssClass="itemStyle" />
                                         <Columns>
-                                            <asp:TemplateColumn HeaderText="éƒ¨é—¨äººå‘˜ï¼š">
+                                            <asp:TemplateColumn HeaderText="²¿ÃÅÈËÔ±£º">
                                                 <ItemTemplate>
                                                     <asp:Button ID="BT_UserCode" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>'
                                                         CssClass="inpu" />

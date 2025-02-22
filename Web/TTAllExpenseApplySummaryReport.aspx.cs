@@ -1,4 +1,4 @@
-﻿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -31,7 +31,7 @@ public partial class TTAllExpenseApplySummaryReport : System.Web.UI.Page
         strUserName = Session["UserName"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","查看所有费用申请", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","�鿴���з�������", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -114,7 +114,7 @@ public partial class TTAllExpenseApplySummaryReport : System.Web.UI.Page
             LB_OperatorName.Text = "";
             LB_Status.Text = "";
 
-            LoadRelatedWL("费用申请", -1);
+            LoadRelatedWL("ExpenseRequest", -1);
         }
     }
 
@@ -150,7 +150,7 @@ public partial class TTAllExpenseApplySummaryReport : System.Web.UI.Page
         LB_QueryScope.Text = Resources.lang.ZZZhiXingZhe + strUserCode + " " + strUserName;
         LB_Sql.Text = strHQL;
 
-        LoadRelatedWL("费用申请", -1);
+        LoadRelatedWL("ExpenseRequest", -1);
     }
 
     protected void DataGrid2_ItemCommand(object sender, DataGridCommandEventArgs e)
@@ -167,7 +167,7 @@ public partial class TTAllExpenseApplySummaryReport : System.Web.UI.Page
             }
             e.Item.ForeColor = Color.Red;
 
-            LoadRelatedWL("费用申请", int.Parse(strID));
+            LoadRelatedWL("ExpenseRequest", int.Parse(strID));
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -216,7 +216,7 @@ public partial class TTAllExpenseApplySummaryReport : System.Web.UI.Page
 
         LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll;
 
-        LoadRelatedWL("费用申请", -1);
+        LoadRelatedWL("ExpenseRequest", -1);
     }
 
    

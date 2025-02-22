@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAddJSCodeToForm.aspx.cs" Inherits="TTAddJSCodeToForm" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAddJSCodeToForm.aspx.cs" Inherits="TTAddJSCodeToForm" %>
 
 
 <!DOCTYPE html>
@@ -58,7 +58,7 @@
                 var strTemName = $("#DL_WFTemplate").val();
 
                 if (strTemName == "" || strTemName == null) {
-                    alert("ËØ∑ÈÄâÊã©ÊµÅÁ®ãÊ®°ÊùøÔºÅ");
+                    alert("«Î—°‘Ò¡˜≥Ãƒ£∞Â£°");
                     return;
                 }
 
@@ -67,7 +67,7 @@
                 var strSql = editor.getValue();
 
                 if (strSql == "" || strSql == null) {
-                    alert("‰ª£Á†Å‰∏çËÉΩ‰∏∫Á©∫ÔºÅ");
+                    alert("¥˙¬Î≤ªƒ‹Œ™ø’£°");
                     return;
                 }
                 var strComment = $("#TXT_Comment").val();
@@ -86,11 +86,11 @@
 
                         $("#HF_ID").val = json;
 
-                        alert("‰øùÂ≠òÊàêÂäü!");
+                        alert("±£¥Ê≥…π¶!");
                     },
                     error: function () {
 
-                        alert("‰øùÂ≠òÂ§±Ë¥•");
+                        alert("±£¥Ê ß∞‹");
                     }
 
                 });
@@ -131,7 +131,7 @@
                                             </td>
                                             <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,LiuChengBiaoDanJSDaiMa%>"></asp:Label>
-                                                Ôºà<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Template\CodeTemplate\JS\JSCodeTemplate.pdf" Text="<%$ Resources:lang,ChaKanShiLiDaiMa%>" />Ôºâ
+                                                £®<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Template\CodeTemplate\JS\JSCodeTemplate.pdf" Text="<%$ Resources:lang,ChaKanShiLiDaiMa%>" />£©
                                             </td>
                                             <td width="5">
                                                 <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -157,11 +157,11 @@
 
                                                 <tr>
                                                     <td align="left" class="formItemBgStyle">
-                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>Ôºö
+                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£∫
                                                             <asp:DropDownList ID="DL_WLType" runat="server" DataTextField="Type" DataValueField="Type"
                                                                 Width="110px" AutoPostBack="true" OnSelectedIndexChanged="DL_WLType_SelectedIndexChanged">
                                                             </asp:DropDownList>
-                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,LiuChengMuBan%>"></asp:Label>Ôºö
+                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,LiuChengMuBan%>"></asp:Label>£∫
                                                     <asp:DropDownList ID="DL_WFTemplate" runat="server" DataTextField="TemName" DataValueField="TemName"
                                                         Width="210px" AutoPostBack="true" Height="20px" OnSelectedIndexChanged="DL_WFTemplate_SelectedIndexChanged">
                                                     </asp:DropDownList>
@@ -181,11 +181,11 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JSDaiMa%>"></asp:Label>Ôºö<br />
+                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JSDaiMa%>"></asp:Label>£∫<br />
                                                         <textarea id="TXT_JSCode" cols="150" rows="80" runat="server" onmouseout="javascript:setEditorValue();">
                                                         </textarea>
                                                         <br />
-                                                        <asp:Label ID="LBL_JSCODEDescription" runat="server" Text="ÔºàÂüüËßÑÂàôÔºöÂΩìÂâçÁî®Êà∑‰ª£Á†ÅÔºö[TAKETOPUSERCODE]ÔºåÂΩìÂâçÁî®Êà∑ÂêçÁß∞Ôºö[TAKETOPUSERNAME]ÔºåÂΩìÂâçÁî®Êà∑ÈÉ®Èó®‰ª£Á†ÅÔºö[TAKETOPDEPARTCODE],ÂΩìÂâçÁî®Êà∑ÈÉ®Èó®ÂêçÁß∞Ôºö[TAKETOPDEPARTNAME],Áî≥ËØ∑ËÄÖ‰ª£Á†ÅÔºö[TAKETOPWFCREATORCODE]ÔºåÁî≥ËØ∑ËÄÖÂêçÁß∞Ôºö[TAKETOPWFCREATORNAME]ÔºåÁî≥ËØ∑ËÄÖÈÉ®Èó®‰ª£Á†ÅÔºö[TAKETOPWFCREATORDEPARTCODE]ÔºåÁî≥ËØ∑ËÄÖÈÉ®Èó®ÂêçÁß∞Ôºö[TAKETOPWFCREATORDEPARTNAME]ÔºåÂÖ≥ËÅîÁ±ªÂûãÔºö[TAKETOPRELATEDTYPE]ÔºåÂÖ≥ËÅîID:[TAKETOPRELATEDID],ÂÖ≥ËÅî‰ª£Á†ÅÔºö[TAKETOPRELATEDCODE]Ôºâ"></asp:Label>
+                                                        <asp:Label ID="LBL_JSCODEDescription" runat="server" Text="£®”ÚπÊ‘Ú£∫µ±«∞”√ªß¥˙¬Î£∫[TAKETOPUSERCODE]£¨µ±«∞”√ªß√˚≥∆£∫[TAKETOPUSERNAME]£¨µ±«∞”√ªß≤ø√≈¥˙¬Î£∫[TAKETOPDEPARTCODE],µ±«∞”√ªß≤ø√≈√˚≥∆£∫[TAKETOPDEPARTNAME],…Í«Î’ﬂ¥˙¬Î£∫[TAKETOPWFCREATORCODE]£¨…Í«Î’ﬂ√˚≥∆£∫[TAKETOPWFCREATORNAME]£¨…Í«Î’ﬂ≤ø√≈¥˙¬Î£∫[TAKETOPWFCREATORDEPARTCODE]£¨…Í«Î’ﬂ≤ø√≈√˚≥∆£∫[TAKETOPWFCREATORDEPARTNAME]£¨πÿ¡™¿‡–Õ£∫[TAKETOPRELATEDTYPE]£¨πÿ¡™ID:[TAKETOPRELATEDID],πÿ¡™¥˙¬Î£∫[TAKETOPRELATEDCODE]£©"></asp:Label>
 
                                                     </td>
                                                 </tr>
@@ -195,7 +195,7 @@
 
                                         <tr>
                                             <td style="text-align: left" class="formItemBgStyle">
-                                                <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhuShi%>"></asp:Label>Ôºö<br />
+                                                <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhuShi%>"></asp:Label>£∫<br />
                                                 <textarea id="TXT_Comment" cols="150" rows="4" runat="server"></textarea>
                                             </td>
                                         </tr>

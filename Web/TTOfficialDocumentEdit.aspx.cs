@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -36,7 +36,7 @@ public partial class TTOfficialDocumentEdit : System.Web.UI.Page
 
         string strDepartString;
 
-        //CKEditorÂàùÂßãÂåñ
+        //CKEditor≥ı ºªØ
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(CKE_MainContent);
@@ -45,7 +45,7 @@ public partial class TTOfficialDocumentEdit : System.Web.UI.Page
         strIsMobileDevice = Session["IsMobileDevice"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ÂÖ¨ÊñáÁºñËæë", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "π´Œƒ±‡º≠", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -64,7 +64,7 @@ public partial class TTOfficialDocumentEdit : System.Web.UI.Page
                 CKE_MainContent.Visible = true;
             }
 
-            ShareClass.LoadWFTemplate(strUserCode, "ÂÖ¨ÊñáÂÆ°Êâπ", DL_TemName);
+            ShareClass.LoadWFTemplate(strUserCode, "OfficialDocumentApproval", DL_TemName);
 
 
             strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityNewsNotice(Resources.lang.ZZJGT, TreeView1, strUserCode);
@@ -109,7 +109,7 @@ public partial class TTOfficialDocumentEdit : System.Web.UI.Page
         {
             strID = e.Item.Cells[3].Text.Trim();
 
-            intWLNumber = GetRelatedWorkFlowNumber("ÂÖ¨ÊñáÂÆ°Êâπ", "ÂÖ¨Êñá", strID);
+            intWLNumber = GetRelatedWorkFlowNumber("OfficialDocumentApproval", "π´Œƒ", strID);
             if (intWLNumber > 0)
             {
                 BT_New.Enabled = false;
@@ -158,7 +158,7 @@ public partial class TTOfficialDocumentEdit : System.Web.UI.Page
 
                 TB_WLName.Text = Resources.lang.GongWenShenPi + TB_Title.Text.Trim();
 
-                LoadRelatedWL("ÂÖ¨ÊñáÂÆ°Êâπ", "ÂÖ¨Êñá", int.Parse(strID));
+                LoadRelatedWL("OfficialDocumentApproval", "π´Œƒ", int.Parse(strID));
             }
 
             if (e.CommandName == "Update")
@@ -302,20 +302,20 @@ public partial class TTOfficialDocumentEdit : System.Web.UI.Page
         officialDocument.PublishTime = DateTime.Now;
         officialDocument.PublisherCode = strUserCode;
         officialDocument.PublisherName = ShareClass.GetUserName(strUserCode);
-        officialDocument.Status = "Êñ∞Âª∫";
+        officialDocument.Status = "New";
 
 
         try
         {
             officialDocumentBLL.AddOfficialDocument(officialDocument);
 
-            DL_Status.SelectedValue = "Êñ∞Âª∫";
+            DL_Status.SelectedValue = "New";
 
             LB_ID.Text = ShareClass.GetMyCreatedMaxOfficialDocumentID(strUserCode);
 
             string strID = LB_ID.Text.Trim();
 
-            //‰øùÂ≠òÂÜÖÂÆπÊñá‰ª∂URL
+            //±£¥Êƒ⁄»›Œƒº˛URL
             SaveOfficeDocumentDocURL(strID, MSWordHandler.HTMLToWord(strID, CKE_MainContent.Text));
 
             BT_Archive.Enabled = true;
@@ -382,7 +382,7 @@ public partial class TTOfficialDocumentEdit : System.Web.UI.Page
 
             officialDocumentBLL.UpdateOfficialDocument(officialDocument, int.Parse(strID));
 
-            //‰øùÂ≠òÂÜÖÂÆπÊñá‰ª∂URL
+            //±£¥Êƒ⁄»›Œƒº˛URL
             SaveOfficeDocumentDocURL(strID, MSWordHandler.HTMLToWord(strID, CKE_MainContent.Text));
 
             LoadOfficialDocument();
@@ -455,14 +455,14 @@ public partial class TTOfficialDocumentEdit : System.Web.UI.Page
             officialDocument.PublishTime = DateTime.Now;
             officialDocument.PublisherCode = strUserCode;
             officialDocument.PublisherName = ShareClass.GetUserName(strUserCode);
-            officialDocument.Status = "ÂΩíÊ°£";
+            officialDocument.Status = "Archived";
 
             officialDocumentBLL.UpdateOfficialDocument(officialDocument, int.Parse(strID));
 
-            //‰øùÂ≠òÂÜÖÂÆπÊñá‰ª∂URL
+            //±£¥Êƒ⁄»›Œƒº˛URL
             SaveOfficeDocumentDocURL(strID, MSWordHandler.HTMLToWord(strID, CKE_MainContent.Text));
 
-            DL_Status.SelectedValue = "ÂΩíÊ°£";
+            DL_Status.SelectedValue = "Archived";
             LoadOfficialDocument();
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGDCG + "')", true);
         }
@@ -517,27 +517,27 @@ public partial class TTOfficialDocumentEdit : System.Web.UI.Page
         workFlow.CreatorCode = strCreatorCode;
         workFlow.CreatorName = strCreatorName;
         workFlow.CreateTime = DateTime.Now;
-        workFlow.RelatedType = "ÂÖ¨Êñá";
-        workFlow.Status = "Êñ∞Âª∫";
+        workFlow.RelatedType = "π´Œƒ";
+        workFlow.Status = "New";
         workFlow.RelatedID = int.Parse(strID);
-        workFlow.DIYNextStep = "Yes"; workFlow.IsPlanMainWorkflow = "NO";
+        workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
 
         if (CB_SMS.Checked == true)
         {
-            workFlow.ReceiveSMS = "Yes";
+            workFlow.ReceiveSMS = "YES";
         }
         else
         {
-            workFlow.ReceiveSMS = "No";
+            workFlow.ReceiveSMS = "NO";
         }
 
         if (CB_Mail.Checked == true)
         {
-            workFlow.ReceiveEMail = "Yes";
+            workFlow.ReceiveEMail = "YES";
         }
         else
         {
-            workFlow.ReceiveEMail = "No";
+            workFlow.ReceiveEMail = "NO";
         }
 
         try
@@ -546,10 +546,10 @@ public partial class TTOfficialDocumentEdit : System.Web.UI.Page
 
             strWLID = ShareClass.GetMyCreatedWorkFlowID(strUserCode);
 
-            LoadRelatedWL(strWLType, "ÂÖ¨Êñá", int.Parse(strID));
+            LoadRelatedWL(strWLType, "π´Œƒ", int.Parse(strID));
 
-            //UpdateGoodsPurchaseStatus(strPOID, "Â§ÑÁêÜ‰∏≠");
-            DL_Status.SelectedValue = "Â§ÑÁêÜ‰∏≠";
+            //UpdateGoodsPurchaseStatus(strPOID, "InProgress");
+            DL_Status.SelectedValue = "InProgress";
 
             strCmdText = "select * from T_OfficialDocument where ID = " + strID;
             strXMLFile2 = Server.MapPath(strXMLFile2);
@@ -591,7 +591,7 @@ public partial class TTOfficialDocumentEdit : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'ÂÖ¨ÊñáËØÑÂÆ°'";
+        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'π´Œƒ∆¿…Û'";
         strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC";
         WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
         lst = workFlowTemplateBLL.GetAllWorkFlowTemplates(strHQL);
@@ -602,7 +602,7 @@ public partial class TTOfficialDocumentEdit : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popAssignWindow','true') ", true);
     }
 
-    //‰øùÂ≠òÂÖ¨ÊñáÂÜÖÂÆπÁöÑÊñáÊ°£ÈìæÊé•
+    //±£¥Êπ´Œƒƒ⁄»›µƒŒƒµµ¡¥Ω”
     public void SaveOfficeDocumentDocURL(string strID, string strFileURL)
     {
         string strHQL;

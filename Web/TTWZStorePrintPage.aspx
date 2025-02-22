@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZStorePrintPage.aspx.cs" Inherits="TTWZStorePrintPage" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZStorePrintPage.aspx.cs" Inherits="TTWZStorePrintPage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>åº“å­˜åˆ—è¡¨</title>
+    <title>¿â´æÁÐ±í</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" language="javascript">
@@ -31,11 +31,11 @@
                             </tr>
                             <tr>
                                 <td class="formItemBgStyle">
-                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,KuBie%>"></asp:Label>ï¼š&nbsp;&nbsp;&nbsp;&nbsp;<asp:Literal ID="LT_StockCode" runat="server"></asp:Literal></td>
+                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,KuBie%>"></asp:Label>£º&nbsp;&nbsp;&nbsp;&nbsp;<asp:Literal ID="LT_StockCode" runat="server"></asp:Literal></td>
                                 <td class="formItemBgStyle">
-                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,HuiZongYueFen%>"></asp:Label>ï¼š&nbsp;&nbsp;<asp:Literal ID="LT_YearMonth" runat="server"></asp:Literal></td>
+                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,HuiZongYueFen%>"></asp:Label>£º&nbsp;&nbsp;<asp:Literal ID="LT_YearMonth" runat="server"></asp:Literal></td>
                                 <td class="formItemBgStyle">
-                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,BaoBiaoRiQi%>"></asp:Label>ï¼š&nbsp;&nbsp;<asp:Literal ID="LT_CurrentTime" runat="server"></asp:Literal></td>
+                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,BaoBiaoRiQi%>"></asp:Label>£º&nbsp;&nbsp;<asp:Literal ID="LT_CurrentTime" runat="server"></asp:Literal></td>
                             </tr>
                             <tr>
                                 <td colspan="3" class="formItemBgStyle">
@@ -79,13 +79,13 @@
 
                                     <td class="formItemBgStyle"><%# Eval("DLCode") %></td>
                                     <td class="formItemBgStyle"><%# Eval("DLName") %></td>
-                                    <td class="formItemBgStyle"><%# Eval("ä¸ŠæœŸç»“é¢") %></td>
-                                    <td class="formItemBgStyle"><%# Eval("æœ¬æœŸæ”¶é¢") %></td>
-                                    <td class="formItemBgStyle"><%# Eval("ç´¯è®¡æ”¶é¢") %></td>
-                                    <td class="formItemBgStyle"><%# Eval("æœ¬æœŸå‘é¢") %></td>
-                                    <td class="formItemBgStyle"><%# Eval("ç´¯è®¡å‘é¢") %></td>
-                                    <td class="formItemBgStyle"><%# Eval("æœ¬æœŸç»“é¢") %></td>
-                                    <td class="formItemBgStyle"><%# Eval("å¹³å‡å ç”¨") %></td>
+                                    <td class="formItemBgStyle"><%# Eval("ÉÏÆÚ½á¶î") %></td>
+                                    <td class="formItemBgStyle"><%# Eval("±¾ÆÚÊÕ¶î") %></td>
+                                    <td class="formItemBgStyle"><%# Eval("ÀÛ¼ÆÊÕ¶î") %></td>
+                                    <td class="formItemBgStyle"><%# Eval("±¾ÆÚ·¢¶î") %></td>
+                                    <td class="formItemBgStyle"><%# Eval("ÀÛ¼Æ·¢¶î") %></td>
+                                    <td class="formItemBgStyle"><%# Eval("±¾ÆÚ½á¶î") %></td>
+                                    <td class="formItemBgStyle"><%# Eval("Æ½¾ùÕ¼ÓÃ") %></td>
 
                                 </tr>
 
@@ -101,7 +101,7 @@
                         <table class="formBgStyle" style="width:100%;">
                             <tr>
                                 <td class="formItemBgStyle" style="width:15%;">
-                                    <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,HeJi%>"></asp:Label>ï¼š</td>
+                                    <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,HeJi%>"></asp:Label>£º</td>
                                 <td class="formItemBgStyle" style="width:15%;">&nbsp;</td>
                                 <td class="formItemBgStyle" style="width:10%;">
                                     <asp:Literal ID="LT_PreviousMoney" runat="server"></asp:Literal>
@@ -130,31 +130,31 @@
                             CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="5" ShowHeader="True"
                             Width="100%">
                             <Columns>
-                                <asp:BoundColumn DataField="DLCode" HeaderText="å¤§ç±»">
+                                <asp:BoundColumn DataField="DLCode" HeaderText="´óÀà">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="DLName" HeaderText="å¤§ç±»åç§°">
+                                <asp:BoundColumn DataField="DLName" HeaderText="´óÀàÃû³Æ">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="DLCode" HeaderText="ä¸ŠæœŸç»“é¢">
+                                <asp:BoundColumn DataField="DLCode" HeaderText="ÉÏÆÚ½á¶î">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="DLCode" HeaderText="æœ¬æœŸæ”¶é¢">
+                                <asp:BoundColumn DataField="DLCode" HeaderText="±¾ÆÚÊÕ¶î">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="DLCode" HeaderText="ç´¯è®¡æ”¶é¢">
+                                <asp:BoundColumn DataField="DLCode" HeaderText="ÀÛ¼ÆÊÕ¶î">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="DLCode" HeaderText="æœ¬æœŸå‘é¢">
+                                <asp:BoundColumn DataField="DLCode" HeaderText="±¾ÆÚ·¢¶î">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="DLCode" HeaderText="ç´¯è®¡å‘é¢">
+                                <asp:BoundColumn DataField="DLCode" HeaderText="ÀÛ¼Æ·¢¶î">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="DLCode" HeaderText="æœ¬æœŸç»“é¢">
+                                <asp:BoundColumn DataField="DLCode" HeaderText="±¾ÆÚ½á¶î">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="DLCode" HeaderText="å¹³å‡å ç”¨">
+                                <asp:BoundColumn DataField="DLCode" HeaderText="Æ½¾ùÕ¼ÓÃ">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                 </asp:BoundColumn>
                             </Columns>
@@ -173,8 +173,8 @@
                         <div id="divOver" style="text-align: center">
                             <br />
                             <p class="noprint">
-                                <input id="print" type="button" class="btn" value="ç¡®è®¤æ‰“å°" onclick="printpage();" />
-                                <input id="print0" type="button" value="å…³é—­" onclick="CloseLayer();" class="btn" />
+                                <input id="print" type="button" class="btn" value="È·ÈÏ´òÓ¡" onclick="printpage();" />
+                                <input id="print0" type="button" value="Closed" onclick="CloseLayer();" class="btn" />
                             </p>
                         </div>
                     </td>

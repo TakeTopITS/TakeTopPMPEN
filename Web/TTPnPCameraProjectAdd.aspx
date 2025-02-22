@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPnPCameraProjectAdd.aspx.cs" Inherits="TTPnPCameraProjectAdd" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPnPCameraProjectAdd.aspx.cs" Inherits="TTPnPCameraProjectAdd" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Ê∑ªÂä†ÊëÑÂÉèÂ§¥</title>
+    <title>ÃÌº”…„œÒÕ∑</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
 
@@ -18,7 +18,7 @@
                 var strCameraPass = $.trim($("#TXT_CameraPass").val());
 
                 if (strForegin == "" || strForegin == null) {
-                    alert("ËØ∑ÈÄâÊã©ÁªÑÁªáÊû∂ÊûÑÔºÅ");
+                    alert("«Î—°‘Ò◊È÷Øº‹ππ£°");
                     return false;
                 }
                 if (!checkIP(strServerIP)) {
@@ -26,12 +26,12 @@
                     return false;
                 }
                 if (strCameraUserName == "" || strCameraUserName == null) {
-                    alert("ÊëÑÂÉèÂ§¥Áî®Êà∑Âêç‰∏çËÉΩ‰∏∫Á©∫ÔºÅ");
+                    alert("…„œÒÕ∑”√ªß√˚≤ªƒ‹Œ™ø’£°");
                     $("#TXT_CameraUserName").focus();
                     return false;
                 }
                 if (strCameraPass == "" || strCameraPass == null) {
-                    alert("ÊëÑÂÉèÂ§¥ÂØÜÁ†Å‰∏çËÉΩ‰∏∫Á©∫ÔºÅ");
+                    alert("…„œÒÕ∑√‹¬Î≤ªƒ‹Œ™ø’£°");
                     $("#TXT_CameraPass").focus();
                     return false;
                 }
@@ -50,7 +50,7 @@
         function checkIP(str) {
             var strlength = str.length;
             if (strlength < 1) {
-                alert("ËæìÂÖ•ÁöÑÂÜÖÂÆπ‰∏çËÉΩ‰∏∫Á©∫");
+                alert(" ‰»Îµƒƒ⁄»›≤ªƒ‹Œ™ø’");
                 return false;
             } else {
                 return true;
@@ -107,13 +107,13 @@
                                                             <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,SheXiangTouMingCheng%>"></asp:Label>Ôºö
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,SheXiangTouMingCheng%>"></asp:Label>£∫
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_CameraName" runat="server"></asp:TextBox>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,SheXiangTouIP%>"></asp:Label>Ôºö
+                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,SheXiangTouIP%>"></asp:Label>£∫
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_ServerIP" runat="server"></asp:TextBox><span style="color: red"><br />
@@ -122,13 +122,13 @@
                                                                 </tr>
                                                                 <tr style="font-weight: bold; font-size: 11pt">
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,SheXiangTouYongHuMing%>"></asp:Label>Ôºö
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,SheXiangTouYongHuMing%>"></asp:Label>£∫
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_CameraUserName" runat="server"></asp:TextBox>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,SheXiangTouMiMa%>"></asp:Label>Ôºö
+                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,SheXiangTouMiMa%>"></asp:Label>£∫
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_CameraPass" runat="server"></asp:TextBox>
@@ -136,7 +136,7 @@
                                                                 </tr>
                                                                 <tr style="font-weight: bold; font-size: 11pt">
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,MiaoShu%>"></asp:Label>Ôºö
+                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,MiaoShu%>"></asp:Label>£∫
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="3">
                                                                         <textarea id="TXT_Description" cols="50" rows="4" runat="server"></textarea>
@@ -145,7 +145,7 @@
                                                                 <tr style="font-weight: bold; font-size: 11pt">
                                                                     <td style="text-align: center" class="formItemBgStyle" colspan="4">
                                                                         <asp:Button ID="BT_Save" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="BT_Save_Click" />&nbsp;&nbsp;
-                                                                        <input type="button" value="ËøîÂõû" id="BT_Return" class="inpu" />
+                                                                        <input type="button" value="∑µªÿ" id="BT_Return" class="inpu" />
                                                                     </td>
                                                                 </tr>
                                                             </table>

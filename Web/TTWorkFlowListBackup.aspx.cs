@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -62,7 +62,7 @@ public partial class TTWorkFlowListBackup : System.Web.UI.Page
 
             try
             {
-                ////æ˜¾ç¤ºæµç¨‹çº¢ç»¿ç¯
+                ////ÏÔÊ¾Á÷³ÌºìÂÌµÆ
                 //ShareClass.DisplayRelatedWFStepDump(strTemName, strWLID, strStatus, Repeater1);
 
                 string strDesignType = ShareClass.GetWLTemplateDesignType(strTemName);
@@ -142,7 +142,7 @@ public partial class TTWorkFlowListBackup : System.Web.UI.Page
                 {
                     workFlowTStep = (WorkFlowTStep)lst[i];
 
-                    if (strWFStatus == "é€šè¿‡")
+                    if (strWFStatus == "Passed")
                     {
                         ((ImageButton)Repeater1.Items[i].FindControl("IBT_WFStep")).ImageUrl = "Images/GreenDump.png";
                     }
@@ -158,7 +158,7 @@ public partial class TTWorkFlowListBackup : System.Web.UI.Page
                         {
                             if (j == intSortNumber)
                             {
-                                if (strWFStepStatus == "é€šè¿‡")
+                                if (strWFStepStatus == "Passed")
                                 {
                                     ((ImageButton)Repeater1.Items[i].FindControl("IBT_WFStep")).ImageUrl = "Images/GreenDump.png";
                                 }
@@ -225,7 +225,7 @@ public partial class TTWorkFlowListBackup : System.Web.UI.Page
         return ds.Tables[0].Rows[0]["Status"].ToString().Trim();
     }
 
-    //å–å¾—æ­¤å·¥ä½œæµç›¸å…³å­å·¥ä½œæµåˆ—è¡¨
+    //È¡µÃ´Ë¹¤×÷Á÷Ïà¹Ø×Ó¹¤×÷Á÷ÁĞ±í
     protected void LoadChildWorkflow(string strWLID)
     {
         string strHQL;
@@ -275,7 +275,7 @@ public partial class TTWorkFlowListBackup : System.Web.UI.Page
 
         try
         {
-            strHQL = "Select * from T_ApproveFlowBackup where Type = 'å·¥ä½œæµ' and RelatedID = " + strWLID + " and StepID = " + strStepID + " Order by ID DESC";
+            strHQL = "Select * from T_ApproveFlowBackup where Type = 'Workflow' and RelatedID = " + strWLID + " and StepID = " + strStepID + " Order by ID DESC";
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ApproveFlow");
 
             DataList1.DataSource = ds;

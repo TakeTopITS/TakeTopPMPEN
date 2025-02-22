@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -30,7 +30,7 @@ public partial class TTProjectRiskList : System.Web.UI.Page
         strProjectID = Request.QueryString["ProjectID"];
         LB_ProjectID.Text = strProjectID;
 
-        //this.Title = "寰呭鐞嗙殑椋庨櫓鍒楄〃";
+        //this.Title = "待处理的风险列表";
 
         LB_UserCode.Text = strUserCode;
         LB_UserName.Text = strUserName;
@@ -38,7 +38,7 @@ public partial class TTProjectRiskList : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
         {
-            strHQL = "from ProjectRisk as projectRisk where projectRisk.Status not in ('瑙ｉ櫎','鍙戠敓') and projectRisk.ProjectID in (select project.ProjectID from Project as project where PMCode = " + "'" + strUserCode + "'" + "  and project.Status not in ('鏂板缓', '闅愯棌','鍒犻櫎','褰掓。'))" + " Order by projectRisk.EffectDate DESC";
+            strHQL = "from ProjectRisk as projectRisk where projectRisk.Status not in ('Resolved','Occurred') and projectRisk.ProjectID in (select project.ProjectID from Project as project where PMCode = " + "'" + strUserCode + "'" + "  and project.Status not in ('New', 'Hided','Deleted','Archived'))" + " Order by projectRisk.EffectDate DESC";
             ProjectRiskBLL projectRiskBLL = new ProjectRiskBLL();
             lst = projectRiskBLL.GetAllProjectRisks(strHQL);
 

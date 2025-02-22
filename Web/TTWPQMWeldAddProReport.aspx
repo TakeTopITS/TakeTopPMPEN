@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMWeldAddProReport.aspx.cs" Inherits="TTWPQMWeldAddProReport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMWeldAddProReport.aspx.cs" Inherits="TTWPQMWeldAddProReport" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -8,7 +8,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>È¢ÑÁÑäÊé•ÈôÑÂä†Â∑•Ëâ∫ËØÑÂÆöÊä•Âëä</title>
+    <title>‘§∫∏Ω”∏Ωº”π§“’∆¿∂®±®∏Ê</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script src="js/allAHandler.js" type="text/javascript"></script>
@@ -136,19 +136,19 @@
                                     </tr>
                                     <tr>
                                         <td align="right" class="formItemBgStyle" style="width: 150px">
-                                            <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,JingXiangJianYanMianBianHao%>"></asp:Label><br /> <asp:Label ID="Label17" runat="server" ></asp:Label>(ÊúâÊó†Ë£ÇÁ∫π„ÄÅÊú™ÁÜîÂêà)Ôºö</td>
+                                            <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,JingXiangJianYanMianBianHao%>"></asp:Label><br /> <asp:Label ID="Label17" runat="server" ></asp:Label>(”–Œﬁ¡—Œ∆°¢Œ¥»€∫œ)£∫</td>
                                         <td align="left" class="formItemBgStyle" colspan="3">
                                             <asp:TextBox ID="TB_MetaFaceNumber_CIF" runat="server" CssClass="shuru" Height="40px" TextMode="MultiLine" Width="98%"></asp:TextBox>
                                         </td>
                                         <td align="right" class="formItemBgStyle">
-                                            <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,JingXiangJianYanMianBianHao%>"></asp:Label> <br /> <asp:Label ID="Label19" runat="server" ></asp:Label>(ËßíÁÑäÁºùÂéöÂ∫¶)Ôºö</td>
+                                            <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,JingXiangJianYanMianBianHao%>"></asp:Label> <br /> <asp:Label ID="Label19" runat="server" ></asp:Label>(Ω«∫∏∑Ï∫Ò∂»)£∫</td>
                                         <td align="left" class="formItemBgStyle" colspan="3">
                                             <asp:TextBox ID="TB_MetaFaceNumber_FWT" runat="server" CssClass="shuru" Height="40px" TextMode="MultiLine" Width="98%"></asp:TextBox>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td align="right" class="formItemBgStyle" style="width: 150px">
-                                            <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,JingXiangJianYanMianBianHao%>"></asp:Label> <br /> <asp:Label ID="Label21" runat="server" ></asp:Label>(ÊòØÂê¶ÁÑäÈÄè)Ôºö</td>
+                                            <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,JingXiangJianYanMianBianHao%>"></asp:Label> <br /> <asp:Label ID="Label21" runat="server" ></asp:Label>( «∑Ò∫∏Õ∏)£∫</td>
                                         <td align="left" class="formItemBgStyle" colspan="3">
                                             <asp:TextBox ID="TB_MetaFaceNumber_PEN" runat="server" CssClass="shuru" Height="40px" TextMode="MultiLine" Width="98%"></asp:TextBox>
                                         </td>
@@ -161,7 +161,7 @@
                                     </tr>
                                     <tr>
                                         <td align="right" class="formItemBgStyle" style="width: 150px" rowspan="2">
-                                            <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,HuanReGuanYuGuanBanHanJie%>"></asp:Label><br /> <asp:Label ID="Label25" runat="server" ></asp:Label>Êé•Â§¥ÁöÑÊ∏ÖÁêÜÊñπÊ≥ïÔºö</td>
+                                            <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,HuanReGuanYuGuanBanHanJie%>"></asp:Label><br /> <asp:Label ID="Label25" runat="server" ></asp:Label>Ω”Õ∑µƒ«Â¿Ì∑Ω∑®£∫</td>
                                         <td align="left" class="formItemBgStyle" colspan="3" rowspan="2">
                                             <asp:TextBox ID="TB_CleaningMethod" runat="server" CssClass="shuru" Height="40px" TextMode="MultiLine" Width="98%"></asp:TextBox>
                                         </td>
@@ -267,7 +267,7 @@
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="ÁºñÂè∑">
+                                                    <asp:TemplateColumn HeaderText="±‡∫≈">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
@@ -275,42 +275,42 @@
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="WeldProCode" HeaderText="ÁÑäÊé•Â∑•Ëâ∫ËØÑÂÆö">
+                                                    <asp:BoundColumn DataField="WeldProCode" HeaderText="∫∏Ω”π§“’∆¿∂®">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="SpanWidth" HeaderText="Ê°•Â≠îÂÆΩÂ∫¶">
+                                                    <asp:BoundColumn DataField="SpanWidth" HeaderText="«≈ø◊øÌ∂»">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="FilletWeldThick" HeaderText="ËßíÁÑäÁºùÂéöÂ∫¶">
+                                                    <asp:BoundColumn DataField="FilletWeldThick" HeaderText="Ω«∫∏∑Ï∫Ò∂»">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="WeldingCurrent" HeaderText="ÁÑäÊé•ÁîµÊµÅ">
+                                                    <asp:BoundColumn DataField="WeldingCurrent" HeaderText="∫∏Ω”µÁ¡˜">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="MetalLiner" HeaderText="È¢ÑÁΩÆÈáëÂ±ûË°¨Â•ó">
+                                                    <asp:BoundColumn DataField="MetalLiner" HeaderText="‘§÷√Ω Ù≥ƒÃ◊">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="AfterHot" HeaderText="ÁÑäÂêéÁÉ≠Â§ÑÁêÜÊñπÊ≥ï">
+                                                    <asp:BoundColumn DataField="AfterHot" HeaderText="Post-WeldHeatTreatmentMethod">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="WelderName" HeaderText="ÁÑäÂ∑•ÂßìÂêç">
+                                                    <asp:BoundColumn DataField="WelderName" HeaderText="∫∏π§–’√˚">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="AppInspectionResult" HeaderText="Â§ñËßÇÊ£ÄÊü•ÁªìÊûú">
+                                                    <asp:BoundColumn DataField="AppInspectionResult" HeaderText="Õ‚π€ºÏ≤ÈΩ·π˚">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />

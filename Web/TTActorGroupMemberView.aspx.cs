@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -54,7 +54,7 @@ public partial class TTActorGroupMemberView : System.Web.UI.Page
         string strHQL;
 
 
-        if (strGroupType != "è¶…çº§")
+        if (strGroupType != "³¬¼¶")
         {
             strHQL = "Select * From T_ActorGroupDetail Where GroupName  = " + "'" + strGroupName + "'";
         }

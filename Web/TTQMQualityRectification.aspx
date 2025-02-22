@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTQMQualityRectification.aspx.cs" Inherits="TTQMQualityRectification" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTQMQualityRectification.aspx.cs" Inherits="TTQMQualityRectification" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -55,11 +55,11 @@
                                     <table cellpadding="2" cellspacing="0" class="formBgStyle" width="75%">
                                         <tr>
                                               <td align="center">
-                                                <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZhengGaiXinXi%>"></asp:Label>ï¼š<asp:TextBox ID="TextBox1" runat="server" Width="120px"></asp:TextBox>
+                                                <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZhengGaiXinXi%>"></asp:Label>£º<asp:TextBox ID="TextBox1" runat="server" Width="120px"></asp:TextBox>
                                           
-                                                <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,TongZhiXinXi%>"></asp:Label>ï¼š<asp:TextBox ID="TextBox2" runat="server" Width="120px"></asp:TextBox>
+                                                <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,TongZhiXinXi%>"></asp:Label>£º<asp:TextBox ID="TextBox2" runat="server" Width="120px"></asp:TextBox>
                                             
-                                                <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,ChuangJianRiQi%>"></asp:Label>ï¼š<asp:TextBox ID="TextBox3" runat="server" Width="90px" ReadOnly="false"></asp:TextBox>
+                                                <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,ChuangJianRiQi%>"></asp:Label>£º<asp:TextBox ID="TextBox3" runat="server" Width="90px" ReadOnly="false"></asp:TextBox>
                                                 <cc1:CalendarExtender ID="CalendarExtender1" runat="server" Format="yyyy-MM-dd" TargetControlID="TextBox3">
                                                 </cc1:CalendarExtender>
                                                 <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,Zhi%>"></asp:Label><asp:TextBox ID="TextBox4" runat="server" Width="90px" ReadOnly="false"></asp:TextBox>
@@ -126,41 +126,41 @@
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <Columns>
-                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ä¿®æ”¹' /&gt;&lt;/div&gt;">
+                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ÐÞ¸Ä' /&gt;&lt;/div&gt;">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:ButtonColumn>
                                                         <asp:TemplateColumn HeaderText="Delete">
                                                             <ItemTemplate>
-                                                                <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='åˆ é™¤' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                                <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="Code" HeaderText="ç¼–å·">
+                                                        <asp:BoundColumn DataField="Code" HeaderText="±àºÅ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="RectificationNoticeName" HeaderText="æ•´æ”¹é€šçŸ¥å•">
+                                                        <asp:BoundColumn DataField="RectificationNoticeName" HeaderText="Õû¸ÄÍ¨Öªµ¥">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ResponsibilityUnit" HeaderText="è´£ä»»å•ä½">
+                                                        <asp:BoundColumn DataField="ResponsibilityUnit" HeaderText="ÔðÈÎµ¥Î»">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="HeadUnit" HeaderText="ä¸»ç®¡å•ä½">
+                                                        <asp:BoundColumn DataField="HeadUnit" HeaderText="Ö÷¹Üµ¥Î»">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="åˆ›å»ºæ—¥æœŸ" DataFormatString="{0:yyyy-MM-dd}">
+                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="´´½¨ÈÕÆÚ" DataFormatString="{0:yyyy-MM-dd}">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="RectificationRemark" HeaderText="æ•´æ”¹å†…å®¹">
+                                                        <asp:BoundColumn DataField="RectificationRemark" HeaderText="Õû¸ÄÄÚÈÝ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                                 HorizontalAlign="Center" />
@@ -191,7 +191,7 @@
                                 <tr>
                                     <td align="right" style="width: 150px" class="formItemBgStyle">
 
-                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZhengGaiTongZhiDan%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZhengGaiTongZhiDan%>"></asp:Label>£º
                                     </td>
                                     <td colspan="3" align="left" class="formItemBgStyle">
                                         <asp:Label ID="LB_Code" runat="server"></asp:Label>
@@ -201,19 +201,19 @@
                                 </tr>
                                 <tr>
                                     <td align="right" class="formItemBgStyle" style="width: 150px">
-                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZeRenDanWeiBuMen%>"></asp:Label>ï¼š</td>
+                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZeRenDanWeiBuMen%>"></asp:Label>£º</td>
                                     <td align="left" class="formItemBgStyle">
                                         <asp:TextBox ID="TB_ResponsibilityUnit" runat="server" CssClass="shuru" Width="150px"></asp:TextBox>
                                     </td>
                                     <td align="right" class="formItemBgStyle">
-                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhuGuanDanWeiBuMen%>"></asp:Label>ï¼š</td>
+                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhuGuanDanWeiBuMen%>"></asp:Label>£º</td>
                                     <td align="left" class="formItemBgStyle">
                                         <asp:TextBox ID="TB_HeadUnit" runat="server" CssClass="shuru" Width="150px"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr style="color: #000000">
                                     <td align="right" style="width: 150px; height: 30px" class="formItemBgStyle">
-                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ChuangJianRen%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ChuangJianRen%>"></asp:Label>£º
                                     </td>
                                     <td align="left" style="height: 30px" class="formItemBgStyle">
                                         <asp:TextBox ID="TB_CreatePer" runat="server" CssClass="shuru" Width="150px"></asp:TextBox>
@@ -223,7 +223,7 @@
                                 </tr>
                                 <tr style="color: #000000;">
                                     <td align="right" class="formItemBgStyle" style="width: 150px; height: 30px">
-                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhengGaiNeiRong%>"></asp:Label>ï¼š</td>
+                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhengGaiNeiRong%>"></asp:Label>£º</td>
                                     <td align="left" class="formItemBgStyle" colspan="3" style="height: 30px">
                                         <asp:TextBox ID="TB_RectificationRemark" runat="server" CssClass="shuru" Height="35px" TextMode="MultiLine" Width="90%"></asp:TextBox>
                                     </td>

@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInfor_Student.aspx.cs" Inherits="TTUserInfor_Student" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInfor_Student.aspx.cs" Inherits="TTUserInfor_Student" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -8,7 +8,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Â≠¶Á±çË°®</title>
+    <title>—ßºÆ±Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -128,7 +128,7 @@
                                                             <asp:TextBox ID="TXT_UserCode" Width="220px" runat="server"></asp:TextBox>
                                                         </td>
                                                         <td align="center" class="formItemBgStyle" colspan="2" rowspan="5">
-                                                            <asp:Image ID="IM_MemberPhoto" runat="server" Height="200px" Width="220px" AlternateText="ÂëòÂ∑•ÁÖßÁâá" />
+                                                            <asp:Image ID="IM_MemberPhoto" runat="server" Height="200px" Width="220px" AlternateText="‘±π§’’∆¨" />
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -143,8 +143,8 @@
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:DropDownList ID="DL_Gender" runat="server" AutoPostBack="True">
-                                                                <asp:ListItem Selected="True" Value="Áî∑" Text="<%$ Resources:lang,Nan%>" />
-                                                                <asp:ListItem Value="Â•≥" Text="<%$ Resources:lang,Nv%>" />
+                                                                <asp:ListItem Selected="True" Value="Male" Text="<%$ Resources:lang,Nan%>" />
+                                                                <asp:ListItem Value="Female" Text="<%$ Resources:lang,Nv%>" />
                                                             </asp:DropDownList>
                                                         </td>
                                                     </tr>
@@ -173,9 +173,9 @@
                                                         </td>
                                                         <td style="text-align: left;" class="formItemBgStyle">
                                                             <asp:DropDownList ID="DDL_StudentClass" runat="server" Width="150px">
-                                                                <%--<asp:ListItem>Â∞èA</asp:ListItem>
-                                                                <asp:ListItem>Â∞èB</asp:ListItem>
-                                                                <asp:ListItem>Â∞èC</asp:ListItem>--%>
+                                                                <%--<asp:ListItem>–°A</asp:ListItem>
+                                                                <asp:ListItem>–°B</asp:ListItem>
+                                                                <asp:ListItem>–°C</asp:ListItem>--%>
                                                             </asp:DropDownList>
                                                         </td>
                                                     </tr>
@@ -487,22 +487,22 @@
                                                                     <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>' CommandName="click" CssClass="notTab">
                                                                         <asp:Label ID="Label43" runat="server" Text="<%$ Resources:lang,CaoZuo%>"></asp:Label>
                                                                     </asp:LinkButton>
-                                                                    <%--<a href='TTUserInfor_StudentCare.aspx?StudentCode=<%# DataBinder.Eval(Container.DataItem,"UserCode") %>&StudentName=<%# DataBinder.Eval(Container.DataItem,"UserName") %>'  target="_blank">‰øùÂÅ•</a>--%>
+                                                                    <%--<a href='TTUserInfor_StudentCare.aspx?StudentCode=<%# DataBinder.Eval(Container.DataItem,"UserCode") %>&StudentName=<%# DataBinder.Eval(Container.DataItem,"UserName") %>'  target="_blank">±£Ω°</a>--%>
                                                                     <a href='TTUserInfor_StudentAtten.aspx?StudentCode=<%# DataBinder.Eval(Container.DataItem,"UserCode") %>&StudentName=<%# DataBinder.Eval(Container.DataItem,"UserName") %>'  target="_blank">
                                                                         <asp:Label ID="Label44" runat="server" Text="<%$ Resources:lang,KaoQing%>"></asp:Label></a>
-                                                                    <%--<a href='TTUserInfor_StudentCo.aspx?StudentCode=<%# DataBinder.Eval(Container.DataItem,"UserCode") %>&StudentName=<%# DataBinder.Eval(Container.DataItem,"UserName") %>'  target="_blank">Êî∂Ë¥π</a>--%>
+                                                                    <%--<a href='TTUserInfor_StudentCo.aspx?StudentCode=<%# DataBinder.Eval(Container.DataItem,"UserCode") %>&StudentName=<%# DataBinder.Eval(Container.DataItem,"UserName") %>'  target="_blank"> ’∑—</a>--%>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="UserCode" HeaderText="Â≠¶ÁîüÁºñÂè∑">
+                                                            <asp:BoundColumn DataField="UserCode" HeaderText="—ß…˙±‡∫≈">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="UserName" HeaderText="Â≠¶ÁîüÂêçÁß∞">
+                                                            <asp:BoundColumn DataField="UserName" HeaderText="—ß…˙√˚≥∆">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ClassName" HeaderText="Áè≠Á∫ß">
+                                                            <asp:BoundColumn DataField="ClassName" HeaderText="∞‡º∂">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Gender" HeaderText="ÊÄßÂà´">
+                                                            <asp:BoundColumn DataField="Gender" HeaderText="–‘±">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

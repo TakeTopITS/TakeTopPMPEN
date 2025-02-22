@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -34,7 +34,7 @@ public partial class TTUserOperateLogView : System.Web.UI.Page
 
                 strOperateTime = Request.QueryString["OperateTime"].Trim();
 
-                LB_ReportName.Text = Resources.lang.ChengYuan + "ï¼š " + strUserCode + " " + strUserName + " " + Resources.lang.CaoZuoRiZhiBaoBiao;
+                LB_ReportName.Text = Resources.lang.ChengYuan + "£º " + strUserCode + " " + strUserName + " " + Resources.lang.CaoZuoRiZhiBaoBiao;
 
                 DLC_BeginDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 DLC_EndDate.Text = DateTime.Now.ToString("yyyy-MM-dd");

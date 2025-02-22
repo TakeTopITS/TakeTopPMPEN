@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -77,7 +77,7 @@ public partial class TTAppReport : System.Web.UI.Page
                     }
 
 
-                    strHQL = "Update T_ReportRelatedUser Set Status = '宸查槄' Where ReportID = " + strReportID + " and UserCode = " + "'" + strUserCode + "'";
+                    strHQL = "Update T_ReportRelatedUser Set Status = '已阅' Where ReportID = " + strReportID + " and UserCode = " + "'" + strUserCode + "'";
                     ShareClass.RunSqlCommand(strHQL);
                 }
             }
@@ -112,7 +112,7 @@ public partial class TTAppReport : System.Web.UI.Page
                     }
 
 
-                    //strHQL = "Update T_ReportRelatedUser Set Status = '宸查槄' Where ReportID = " + strReportID + " and UserCode = " + "'" + strUserCode + "'";
+                    //strHQL = "Update T_ReportRelatedUser Set Status = '已阅' Where ReportID = " + strReportID + " and UserCode = " + "'" + strUserCode + "'";
                     //ShareClass.RunSqlCommand(strHQL);
                 }
             }
@@ -156,7 +156,7 @@ public partial class TTAppReport : System.Web.UI.Page
         IList lst;
 
         strHQL = "From Report as report  where ";
-        strHQL += " report.ID in (Select reportRelatedUser.ReportID From ReportRelatedUser as reportRelatedUser Where reportRelatedUser.Status = '鏂板缓' and reportRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")";
+        strHQL += " report.ID in (Select reportRelatedUser.ReportID From ReportRelatedUser as reportRelatedUser Where reportRelatedUser.Status = 'New' and reportRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")";
         strHQL += " Order By report.ID DESC";
         ReportBLL reportBLL = new ReportBLL();
         lst = reportBLL.GetAllReports(strHQL);
@@ -173,7 +173,7 @@ public partial class TTAppReport : System.Web.UI.Page
         IList lst;
 
         strHQL = "From Report as report  where ";
-        strHQL += " report.ID in (Select reportRelatedUser.ReportID From ReportRelatedUser as reportRelatedUser Where reportRelatedUser.Status = '宸查槄' and reportRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")";
+        strHQL += " report.ID in (Select reportRelatedUser.ReportID From ReportRelatedUser as reportRelatedUser Where reportRelatedUser.Status = '已阅' and reportRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")";
         strHQL += " Order By report.ID DESC";
         ReportBLL reportBLL = new ReportBLL();
         lst = reportBLL.GetAllReports(strHQL);

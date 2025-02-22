@@ -1,11 +1,11 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectDailyWorkReport.aspx.aspx.cs" Inherits="TTProjectDailyWorkReport_aspx" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectDailyWorkReport.aspx.aspx.cs" Inherits="TTProjectDailyWorkReport_aspx" %>
 
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>é¡¹ç›®å·¥ä½œæ—¥å¿—</title>
+    <title>ÏîÄ¿¹¤×÷ÈÕÖ¾</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript">
@@ -53,11 +53,11 @@
                                         <td>
                                             <asp:Label ID="Label40" runat="server" Text="<%$ Resources:lang,GongZuoZongJieHuiZong%>"></asp:Label>
                                         </td>
-                                        <td>ï¼ˆ<asp:Button ID="BT_AllMember" runat="server" CssClass="inpuLong" OnClick="BT_AllMember_Click"
+                                        <td>£¨<asp:Button ID="BT_AllMember" runat="server" CssClass="inpuLong" OnClick="BT_AllMember_Click"
                                             Text="<%$ Resources:lang,ChaSuoYouGongZuoHuiZong%>" />
                                         </td>
                                         <td>
-                                            <asp:Label ID="Label41" runat="server" Text="<%$ Resources:lang,KaiShiRiQi%>"></asp:Label>ï¼š
+                                            <asp:Label ID="Label41" runat="server" Text="<%$ Resources:lang,KaiShiRiQi%>"></asp:Label>£º
                                         </td>
                                         <td align="left">
                                             <asp:TextBox ID="DLC_BeginDate" ReadOnly="false" runat="server"></asp:TextBox>
@@ -65,7 +65,7 @@
                                             </ajaxToolkit:CalendarExtender>
                                         </td>
                                         <td>
-                                            <asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,JieShuRiQi%>"></asp:Label>ï¼š
+                                            <asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,JieShuRiQi%>"></asp:Label>£º
                                         </td>
                                         <td align="left">
                                             <asp:TextBox ID="DLC_EndDate" ReadOnly="false" runat="server"></asp:TextBox>
@@ -77,8 +77,8 @@
                                             <asp:Button ID="BT_DateFind" runat="server" CssClass="inpu" Font-Size="10pt" OnClick="BT_DateFind_Click"
                                                 Text="<%$ Resources:lang,ChaXun%>" />
                                             &nbsp;&nbsp;  <a href="#" onclick="preview()">
-                                                <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" />
-                                            </a>ï¼‰
+                                                <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" />
+                                            </a>£©
                                         </td>
                                     </tr>
 
@@ -87,7 +87,7 @@
                                             <table style="width: 100%;">
                                                 <tr>
                                                     <td style="text-align: left; width: 65%; height: 25px;">
-                                                        <asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,ChaXunFanWeiShi%>"></asp:Label>ï¼š<asp:Label ID="LB_QueryScope" runat="server"></asp:Label>
+                                                        <asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,ChaXunFanWeiShi%>"></asp:Label>£º<asp:Label ID="LB_QueryScope" runat="server"></asp:Label>
                                                     </td>
                                                     <td style="text-align: right; width: 35%; height: 25px;">
                                                         <asp:Label ID="LB_Operator" runat="server" Text="<%$ Resources:lang,Operator%>" />
@@ -163,14 +163,14 @@
                                                         <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,FeiYongHuiZong%>"></asp:Label>:
                                                     </td>
                                                     <td class="formItemBgStyle">
-                                                        <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,ShenBaoShouRu%>"></asp:Label>ï¼š<asp:Label ID="LB_Income" runat="server"></asp:Label>
+                                                        <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,ShenBaoShouRu%>"></asp:Label>£º<asp:Label ID="LB_Income" runat="server"></asp:Label>
                                                     </td>
                                                     <td class="formItemBgStyle">
-                                                        <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,QueRenShouRu%>"></asp:Label>ï¼š<asp:Label ID="LB_ConfirmIncome" runat="server"></asp:Label>
+                                                        <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,QueRenShouRu%>"></asp:Label>£º<asp:Label ID="LB_ConfirmIncome" runat="server"></asp:Label>
                                                     </td>
                                                     <td class="formItemBgStyle">
                                                         <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,ZhiChuFeiYong%>"></asp:Label>: &nbsp;<asp:Label ID="LB_Amount" runat="server"></asp:Label>
-                                                        (<asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,XiangMuZhiChuYuSuan%>"></asp:Label>ï¼š<asp:Label ID="LB_ProExpense" runat="server"></asp:Label>)&nbsp;
+                                                        (<asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,XiangMuZhiChuYuSuan%>"></asp:Label>£º<asp:Label ID="LB_ProExpense" runat="server"></asp:Label>)&nbsp;
                                                                   
                                                     </td>
                                                 </tr>
@@ -361,12 +361,12 @@
                                                         <table cellpadding="3" cellspacing="0" class="formBgStyle" width="100%">
                                                             <tr>
                                                                 <td class="formItemBgStyle" colspan="4" style="height: 250px; background-color: White;">
-                                                                    <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,KeFangQueRen%>"></asp:Label>ï¼š
+                                                                    <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,KeFangQueRen%>"></asp:Label>£º
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="formItemBgStyle" colspan="4" style="height: 250px; background-color: White;">
-                                                                    <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,WoFangYiJian%>"></asp:Label>ï¼š
+                                                                    <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,WoFangYiJian%>"></asp:Label>£º
                                                                 </td>
                                                             </tr>
                                                         </table>

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 
 public partial class TTWorkPlanMain : System.Web.UI.Page
 {
@@ -18,19 +18,19 @@ public partial class TTWorkPlanMain : System.Web.UI.Page
         {
             if (Session["WeekendFirstDay"] == null)
             {
-                //å–å¾—å‘¨æœ«å¼€å§‹æ—¥
+                //È¡µÃÖÜÄ©¿ªÊ¼ÈÕ
                 Session["WeekendFirstDay"] = ShareClass.GetWeekendFirstDay();
             }
 
             if (Session["WeekendSecondDay"] == null)
             {
-                //å–å¾—å‘¨æœ«ç»“æŸæ—¥
+                //È¡µÃÖÜÄ©½áÊøÈÕ
                 Session["WeekendSecondDay"] = ShareClass.GetWeekendSecondDay();
             }
 
             if (Session["WeekendsAreWorkdays"] == null)
             {
-                //å–å¾—å‘¨æœ«æ˜¯å¦å·¥ä½œæ—¥
+                //È¡µÃÖÜÄ©ÊÇ·ñ¹¤×÷ÈÕ
                 Session["WeekendsAreWorkdays"] = ShareClass.GetWeekendsAreWorkdays();
             }
         }

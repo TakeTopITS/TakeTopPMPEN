@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDWeekWorkloadReport.aspx.cs" Inherits="TTGDWeekWorkloadReport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDWeekWorkloadReport.aspx.cs" Inherits="TTGDWeekWorkloadReport" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -58,7 +58,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="left" class="formItemBgStyle">Form<asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,Cong%>"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To<asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,Dao%>"></asp:Label>ï¼š
+                                                        <td align="left" class="formItemBgStyle">Form<asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,Cong%>"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To<asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,Dao%>"></asp:Label>£º
                                                         </td>
                                                     </tr>
                                                 </table>

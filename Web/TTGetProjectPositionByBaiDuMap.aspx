@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGetProjectPositionByBaiDuMap.aspx.cs" Inherits="TTGetProjectPositionByBaiDuMap" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGetProjectPositionByBaiDuMap.aspx.cs" Inherits="TTGetProjectPositionByBaiDuMap" %>
 
 <!DOCTYPE html>
 

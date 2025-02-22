@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsCheckOutNoticeOrderDetailView.aspx.cs" Inherits="TTGoodsCheckOutNoticeOrderDetailView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsCheckOutNoticeOrderDetailView.aspx.cs" Inherits="TTGoodsCheckOutNoticeOrderDetailView" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -84,34 +84,37 @@
                                 Height="30px" Width="100%" ID="DataGrid1">
 
                                 <Columns>
-                                    <asp:BoundColumn DataField="PDName" HeaderText="åˆ¶é€ å•">
+                                    <asp:BoundColumn DataField="PDName" HeaderText="ÖÆÔìµ¥">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="CustomerModelNumber" HeaderText="å®¢æˆ·åž‹å·">
+                                    <asp:BoundColumn DataField="CustomerModelNumber" HeaderText="¿Í»§ÐÍºÅ">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="ModelNumber" HeaderText="æœ¬åŽ‚åž‹å·">
+                                    <asp:BoundColumn DataField="ModelNumber" HeaderText="±¾³§ÐÍºÅ">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="BarCode" HeaderText="æ¡ç ">
+                                    <asp:BoundColumn DataField="BarCode" HeaderText="ÌõÂë">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="Number" HeaderText="æ•°é‡">
+                                    <asp:BoundColumn DataField="Number" HeaderText="ÊýÁ¿">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="BoxNumber" HeaderText="è£…ç®±æ•°">
+                                    <asp:BoundColumn DataField="BoxNumber" HeaderText="×°ÏäÊý">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="FinishStatus" HeaderText="å®Œæˆæƒ…å†µ">
-                                        <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
-                                    </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="DeliveryAddress" HeaderText="äº¤è´§åœ°ç‚¹">
+                                    <asp:TemplateColumn HeaderText="×´Ì¬">
+    <ItemTemplate>
+        <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("FinishStatus").ToString()) %>
+    </ItemTemplate>
+    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
+</asp:TemplateColumn>
+                                    <asp:BoundColumn DataField="DeliveryAddress" HeaderText="½»»õµØµã">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="CheckOutTime" HeaderText="å‡ºè´§æ—¶é—´" DataFormatString="{0:yyyy/MM/dd}">
+                                    <asp:BoundColumn DataField="CheckOutTime" HeaderText="³ö»õÊ±¼ä" DataFormatString="{0:yyyy/MM/dd}">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="Comment" HeaderText="å¤‡æ³¨">
+                                    <asp:BoundColumn DataField="Comment" HeaderText="±¸×¢">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                     </asp:BoundColumn>
 

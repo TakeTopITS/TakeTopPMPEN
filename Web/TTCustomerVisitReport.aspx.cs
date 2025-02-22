@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -34,7 +34,7 @@ public partial class TTCustomerVisitReport : System.Web.UI.Page
 
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ç‰©æ–™é¢†ç”¨æŠ¥è¡¨", strUserCode);
+        bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ÎïÁÏÁìÓÃ±¨±í", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -127,9 +127,9 @@ public partial class TTCustomerVisitReport : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_CustomerQuestion");
         DataTable dtSaleOrder = ds.Tables[0];
 
-        Export3Excel(dtSaleOrder, "å®¢æˆ·æ‹œè®¿ç»Ÿè®¡è¡¨" + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xls");
+        Export3Excel(dtSaleOrder, "¿Í»§°İ·ÃÍ³¼Æ±í" + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xls");
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¯¼å‡ºæˆåŠŸï¼');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µ¼³ö³É¹¦£¡');", true);
     }
 
     protected void LoadIndustryType(DropDownList DL_Type)

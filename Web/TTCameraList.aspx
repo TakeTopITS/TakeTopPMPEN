@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCameraList.aspx.cs" Inherits="TTCameraList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCameraList.aspx.cs" Inherits="TTCameraList" %>
 
 <!DOCTYPE html>
 
@@ -45,7 +45,7 @@
                     //alert(json);
                 },
                 error: function () {
-                    //alert("å¤±è´¥");
+                    //alert("Failed");
                 }
 
             });
@@ -92,7 +92,7 @@
                                     <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                         <tr style="font-size: 12pt">
                                             <td align="right" class="formItemBgStyle" colspan="2">
-                                                <input type="button" class="inpu" value="æ–°å¢žæ‘„åƒå¤´" onclick="window.location.href = 'TTCameraAdd.aspx'" />
+                                                <input type="button" class="inpu" value="ÐÂÔöÉãÏñÍ·" onclick="window.location.href = 'TTCameraAdd.aspx'" />
                                             </td>
                                         </tr>
                                         <tr style="font-size: 12pt">

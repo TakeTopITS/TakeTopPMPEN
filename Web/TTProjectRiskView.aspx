@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectRiskView.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectRiskView.aspx.cs"
     Inherits="TTProjectRiskView" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -66,7 +66,7 @@
                                                     <table class="bian" style="width: 100%;" cellpadding="4" cellspacing="0">
                                                         <tr>
                                                             <td style="width: 130px; text-align: right;">
-                                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>ï¼š
+                                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>£º
                                                             </td>
                                                             <td style="width: 100px; text-align: left;">
                                                                 <%#DataBinder .Eval (Container .DataItem ,"ID") %>
@@ -78,7 +78,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td style="width: 130px; text-align: right; height: 21px;">
-                                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>ï¼š
+                                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º
                                                             </td>
                                                             <td colspan="5" style="height: 21px; text-align: left;">
                                                                 <%#DataBinder .Eval (Container .DataItem ,"Risk") %>
@@ -86,7 +86,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td style="width: 130px; text-align: right;">
-                                                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,MiaoShu%>"></asp:Label>ï¼š
+                                                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,MiaoShu%>"></asp:Label>£º
                                                             </td>
                                                             <td colspan="5" style="text-align: left">
                                                                 <%#DataBinder .Eval (Container .DataItem ,"Detail") %>
@@ -104,13 +104,13 @@
                                                                 <%#DataBinder.Eval(Container.DataItem, "EffectDate", "{0:yyyy/MM/dd}")%>
                                                             </td>
                                                             <td style="width: 83px; height: 20px; text-align: right;">
-                                                                <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,FaXianRiQi%>"></asp:Label>ï¼š<td style="height: 20px; text-align: left; width: 212px;" colspan="2">
+                                                                <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,FaXianRiQi%>"></asp:Label>£º<td style="height: 20px; text-align: left; width: 212px;" colspan="2">
                                                                     <%#DataBinder .Eval (Container .DataItem ,"FindDate","{0:yyyy/MM/dd}") %>
                                                                 </td>
                                                         </tr>
                                                         <tr>
                                                             <td style="width: 130px; text-align: right;">
-                                                                <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>ï¼š
+                                                                <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º
                                                             </td>
                                                             <td colspan="3" style="text-align: left">
                                                                 <%#DataBinder .Eval (Container .DataItem ,"Status") %>

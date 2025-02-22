@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAlluserPosition.aspx.cs" Inherits="TTAlluserPosition" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAlluserPosition.aspx.cs" Inherits="TTAlluserPosition" %>
 
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -59,16 +59,16 @@
                                                 <table>
                                                     <tr>
                                                         <td>
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>£º</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_UserCode" runat="server" Width="80px"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_UserName" runat="server" Width="120px"></asp:TextBox>
                                                         </td>
-                                                        <td>ä»Žï¼š
+                                                        <td>´Ó£º
                                                         </td>
                                                         <td style="width: 220px;" align="left">
 
@@ -77,7 +77,7 @@
                                                             </ajaxToolkit:CalendarExtender>
                                                         </td>
                                                         <td>
-                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,Dao%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,Dao%>"></asp:Label>£º
                                                         </td>
                                                         <td style="width: 220px;" align="left">
 
@@ -187,13 +187,13 @@
                                                                 ShowHeader="false" Height="1px" OnPageIndexChanged="DataGrid2_PageIndexChanged"
                                                                 PageSize="30" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="UserName" HeaderText="å§“å">
+                                                                    <asp:BoundColumn DataField="UserName" HeaderText="ÐÕÃû">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="CreateTime" HeaderText="æ—¶é—´">
+                                                                    <asp:BoundColumn DataField="CreateTime" HeaderText="Ê±¼ä">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="150px" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:TemplateColumn HeaderText="ä½ç½®ï¼š">
+                                                                    <asp:TemplateColumn HeaderText="Î»ÖÃ£º">
                                                                         <ItemTemplate>
                                                                             <a href='TTUserPositionView.aspx?lng=<%# DataBinder.Eval(Container.DataItem,"Longitude").ToString().Trim() %>&lat=<%# DataBinder.Eval(Container.DataItem,"Latitude").ToString().Trim() %>'
                                                                                 target="IFR_UserPositionMap">

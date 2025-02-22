@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -30,7 +30,7 @@ public partial class TakeTopLRTop : System.Web.UI.Page
 
         if (Page.IsPostBack != true)
         {
-            //æ¸…ç©ºé¡µé¢ç¼“å­˜ï¼Œç”¨äºæ”¹å˜çš®è‚¤
+            //Çå¿ÕÒ³Ãæ»º´æ£¬ÓÃÓÚ¸Ä±äÆ¤·ô
             SetPageNoCache();
 
             intRunNumber = 0;
@@ -39,12 +39,12 @@ public partial class TakeTopLRTop : System.Web.UI.Page
         }
     }
 
-    //æ¸…ç©ºé¡µé¢ç¼“å­˜ï¼Œç”¨äºæ”¹å˜çš®è‚¤
+    //Çå¿ÕÒ³Ãæ»º´æ£¬ÓÃÓÚ¸Ä±äÆ¤·ô
     public void SetPageNoCache()
     {
         if (Session["CssDirectoryChangeNumber"].ToString() == "1")
         {
-            //æ¸…é™¤å…¨éƒ¨ç¼“å­˜
+            //Çå³ıÈ«²¿»º´æ
             IDictionaryEnumerator allCaches = Page.Cache.GetEnumerator();
             while (allCaches.MoveNext())
             {
@@ -80,7 +80,7 @@ public partial class TakeTopLRTop : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         string licenseKey = System.Configuration.ConfigurationManager.AppSettings["CopyRight"];
-        if (licenseKey != "æ³°é¡¶-æ‹“é¼-é’Ÿç¤¼æœˆ")
+        if (licenseKey != "Ì©¶¥-ÍØ¶¦-ÖÓÀñÔÂ")
         {
             Response.Write("<script>top.window.location.href = 'TTDisplayErrors.aspx';</script>");
             return;
@@ -88,7 +88,7 @@ public partial class TakeTopLRTop : System.Web.UI.Page
 
         try
         {
-            //åˆ›å»ºç”¨æˆ·ç›®å½•
+            //´´½¨ÓÃ»§Ä¿Â¼
             ShareClass.MakeUserDirectory(strUserCode);
         }
         catch (Exception err)
@@ -111,13 +111,13 @@ public partial class TakeTopLRTop : System.Web.UI.Page
 
             if (string.Compare(strNoticeDate, strDeadline) > 0 & string.Compare(strDeadline, strCurrentDate) >= 0)
             {
-                strMessage = "è¯·æ³¨æ„ï¼Œç³»ç»Ÿæˆæƒå°†äº " + strDeadlineDate + " åˆ°æœŸï¼Œè¯·å°½å¿«ç»­è´¹å’Œå¤‡ä»½æ•°æ®ï¼";
+                strMessage = "Çë×¢Òâ£¬ÏµÍ³ÊÚÈ¨½«ÓÚ " + strDeadlineDate + " µ½ÆÚ£¬Çë¾¡¿ìĞø·ÑºÍ±¸·İÊı¾İ£¡";
             }
             else
             {
                 if (string.Compare(strCurrentDate, strDeadline) > 0)
                 {
-                    strMessage = "è¯·æ³¨æ„ï¼Œç³»ç»Ÿæˆæƒå·²äº " + strDeadline + " è¿‡æœŸï¼Œè¯·ç»­è´¹å†ä½¿ç”¨ï¼";
+                    strMessage = "Çë×¢Òâ£¬ÏµÍ³ÊÚÈ¨ÒÑÓÚ " + strDeadline + " ¹ıÆÚ£¬ÇëĞø·ÑÔÙÊ¹ÓÃ£¡";
                 }
                 else
                 {

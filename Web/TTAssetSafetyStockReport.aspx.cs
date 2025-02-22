@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -27,7 +27,7 @@ public partial class TTAssetSafetyStockReport : System.Web.UI.Page
         string strUserName;
         string strUserCode = Session["UserCode"].ToString();
 
-        //this.Title = "璧勪骇瀹夊叏搴撳瓨鎶ヨ〃";
+        //this.Title = "资产安全库存报表";
 
         LB_UserCode.Text = strUserCode;
         strUserName = Session["UserName"].ToString();

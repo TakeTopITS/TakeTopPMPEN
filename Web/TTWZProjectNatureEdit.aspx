@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZProjectNatureEdit.aspx.cs" Inherits="TTWZProjectNatureEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZProjectNatureEdit.aspx.cs" Inherits="TTWZProjectNatureEdit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -47,7 +47,7 @@
                                                 <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMuXingZhi%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMuXingZhi%>"></asp:Label>£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_NatureCode" runat="server"></asp:TextBox>
@@ -55,7 +55,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XingZhiShuoMing%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XingZhiShuoMing%>"></asp:Label>£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_NatureDesc" runat="server"></asp:TextBox>
@@ -63,7 +63,7 @@
                                                     </tr>
                                                     <tr style="display:none;">
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ShiYongBiaoJi%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ShiYongBiaoJi%>"></asp:Label>£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_IsMark" runat="server"></asp:TextBox>
@@ -72,8 +72,8 @@
                                                     <tr>
                                                         <td style="text-align: center" class="formItemBgStyle" colspan="2">
                                                             <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnOK_Click" />&nbsp;&nbsp;
-                                                            <input type="button" value="è¿”å›ž" id="BT_Return" class="inpu" onclick="window.location.href = 'TTWZProjectAttributeList.aspx'" />
-                                                            <%--<input type="button" value="è¿”å›ž" id="BT_Return" class="inpu" onclick="window.location.href = 'TTWZProjectNatureList.aspx'" />--%>
+                                                            <input type="button" value="·µ»Ø" id="BT_Return" class="inpu" onclick="window.location.href = 'TTWZProjectAttributeList.aspx'" />
+                                                            <%--<input type="button" value="·µ»Ø" id="BT_Return" class="inpu" onclick="window.location.href = 'TTWZProjectNatureList.aspx'" />--%>
                                                         </td>
                                                     </tr>
                                                 </table>

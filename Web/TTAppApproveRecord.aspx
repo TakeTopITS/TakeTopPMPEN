@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppApproveRecord.aspx.cs" Inherits="TTAppApproveRecord" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppApproveRecord.aspx.cs" Inherits="TTAppApproveRecord" %>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -58,7 +58,7 @@
                                             <table cellpadding="2" cellspacing="2" style="width: 90%" class="bian">
                                                 <tr>
                                                     <td style="width: 90px; text-align: right;">
-                                                        <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ShenPiRen%>" />ï¼š
+                                                        <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ShenPiRen%>" />£º
                                                     </td>
                                                     <td style="text-align: left;">
                                                         <a href='TTUserInforSimple.aspx?UserCode=<%# DataBinder.Eval(Container.DataItem,"UserCode") %>'
@@ -66,7 +66,7 @@
                                                             <%# DataBinder.Eval(Container.DataItem,"UserName") %></a>
                                                     </td>
                                                     <td style="text-align: right;">
-                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,Operation%>" />ï¼š
+                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,Operation%>" />£º
                                                     </td>
                                                     <td style="text-align: left;">
                                                         <%# DataBinder.Eval(Container.DataItem,"Operation") %>
@@ -74,7 +74,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: right">
-                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,Comment%>" />ï¼š
+                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,Comment%>" />£º
                                                     </td>
                                                     <td colspan="3" style="text-align: left">
                                                         <%# DataBinder.Eval(Container.DataItem,"Content") %>

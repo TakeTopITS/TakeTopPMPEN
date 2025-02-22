@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPUserInforSimple.aspx.cs" Inherits="TTAPPUserInforSimple" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPUserInforSimple.aspx.cs" Inherits="TTAPPUserInforSimple" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
 
@@ -72,7 +72,7 @@
                                     <asp:TextBox ID="TB_UserCode" runat="server" Enabled="False"></asp:TextBox>
                                 </td>
                                 <td style="text-align: left;" class="auto-style1" rowspan="6">
-                                    <asp:Image ID="IM_MemberPhoto" runat="server" Height="140px" Width="154px" AlternateText="å‘˜å·¥ç…§ç‰‡"
+                                    <asp:Image ID="IM_MemberPhoto" runat="server" Height="140px" Width="154px" AlternateText="Ô±¹¤ÕÕÆ¬"
                                         ImageAlign="Left" />
                                 </td>
                             </tr>
@@ -155,7 +155,7 @@
                                 <td style="text-align: left;" class="auto-style1"></td>
                             </tr>
                             <tr>
-                                <td style="text-align: right" class="formItemBgStyle">E_Mailï¼š
+                                <td style="text-align: right" class="formItemBgStyle">E_Mail£º
                                 </td>
                                 <td style="text-align: left;" class="formItemBgStyle">
                                     <asp:TextBox ID="TB_EMail" runat="server" Enabled="False"></asp:TextBox>

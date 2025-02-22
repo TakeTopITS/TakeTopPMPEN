@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -46,10 +46,10 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
             return;
         }
 
-        //微信jssdk配置参数
+        //΢��jssdk���ò���
         try
         {
-            //扫码功能必须
+            //ɨ�빦�ܱ���
             signModel = TakeTopCore.WXHelper.GetWXInfo(Request.Url.ToString());
             if (signModel != null)
             {
@@ -76,9 +76,9 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
                     strHQL += "OCheckInStart,OCheckInEnd,OCheckOutStart,OCheckOutEnd,Status,MCheckInIsMust,MCheckOutIsMust,ACheckInIsMust,ACheckOutIsMust,NCheckInIsMust,NCheckOutIsMust,OCheckInIsMust,OCheckOutIsMust,LargestDistance,LeaderCode,LeaderName,OfficeLongitude,OfficeLatitude,Address)";
                     strHQL += " Select A.UserCode,A.UserName,now(),B.MCheckInStart,B.MCheckInEnd,B.MCheckOutStart,B.MCheckOutEnd,";
                     strHQL += "B.ACheckInStart,B.ACheckInEnd,B.ACheckOutStart,B.ACheckOutEnd,B.NCheckInStart,B.NCheckInEnd,B.NCheckOutStart,B.NCheckOutEnd,";
-                    strHQL += "B.OCheckInStart,B.OCheckInEnd,B.OCheckOutStart,B.OCheckOutEnd,'处理中',B.MCheckInIsMust,B.MCheckOutIsMust,B.ACheckInIsMust,B.ACheckOutIsMust,B.NCheckInIsMust,B.NCheckOutIsMust,B.OCheckInIsMust,B.OCheckOutIsMust,B.LargestDistance,'','',B.OfficeLongitude,B.OfficeLatitude,B.Address";
+                    strHQL += "B.OCheckInStart,B.OCheckInEnd,B.OCheckOutStart,B.OCheckOutEnd,'InProgress',B.MCheckInIsMust,B.MCheckOutIsMust,B.ACheckInIsMust,B.ACheckOutIsMust,B.NCheckInIsMust,B.NCheckOutIsMust,B.OCheckInIsMust,B.OCheckOutIsMust,B.LargestDistance,'','',B.OfficeLongitude,B.OfficeLatitude,B.Address";
                     strHQL += " From T_ProjectMember A, T_AttendanceRule B";
-                    strHQL += " Where A.UserCode not in (Select UserCode From T_UserAttendanceRule) and A.Status not in ('离职','终止') ";
+                    strHQL += " Where A.UserCode not in (Select UserCode From T_UserAttendanceRule) and A.Status not in ('Resign','Stop') ";
                     strHQL += " And A.UserCode = '" + strUserCode + "' limit 1";
                     ShareClass.RunSqlCommand(strHQL);
                 }
@@ -90,7 +90,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
             }).Start();
 
             strHQL = "Select * From T_UserAttendanceRule Where UserCode = '" + strUserCode + "'";
-            strHQL += " and Status = '在用'";
+            strHQL += " and Status = 'InUse'";
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_UserAttendanceRule");
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -106,7 +106,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
                 }
                 if (ds.Tables[0].Rows[0]["MCheckInIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                 {
-                    RBL_ShiftType.Items.Add(new ListItem(Resources.lang.ZaoBanShangBanShiJian, "上午上班时间"));
+                    RBL_ShiftType.Items.Add(new ListItem(Resources.lang.ZaoBanShangBanShiJian, "MorningWorkStartTime"));
                     RBL_ShiftType.Items[0].Selected = true;
                 }
 
@@ -119,7 +119,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
                 }
                 if (ds.Tables[0].Rows[0]["MCheckOutIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                 {
-                    RBL_ShiftType.Items.Add(new ListItem(Resources.lang.ZaoBanXiaBanShiJian, "上午下班时间"));
+                    RBL_ShiftType.Items.Add(new ListItem(Resources.lang.ZaoBanXiaBanShiJian, "MorningWorkEndTime"));
                     RBL_ShiftType.Items[0].Selected = true;
                 }
 
@@ -133,7 +133,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
                 }
                 if (ds.Tables[0].Rows[0]["ACheckInIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                 {
-                    RBL_ShiftType.Items.Add(new ListItem(Resources.lang.ZhongBanShangBanShiJian, "下午上班时间"));
+                    RBL_ShiftType.Items.Add(new ListItem(Resources.lang.ZhongBanShangBanShiJian, "AfternoonWorkStartTime"));
                     RBL_ShiftType.Items[0].Selected = true;
                 }
 
@@ -146,7 +146,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
                 }
                 if (ds.Tables[0].Rows[0]["ACheckOutIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                 {
-                    RBL_ShiftType.Items.Add(new ListItem(Resources.lang.ZhongBanXiaBanShiJian, "下午下班时间"));
+                    RBL_ShiftType.Items.Add(new ListItem(Resources.lang.ZhongBanXiaBanShiJian, "AfternoonWorkEndTime"));
                     RBL_ShiftType.Items[0].Selected = true;
                 }
 
@@ -159,7 +159,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
                 }
                 if (ds.Tables[0].Rows[0]["NCheckInIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                 {
-                    RBL_ShiftType.Items.Add(new ListItem(Resources.lang.WanBanShangBanShiJian, "晚班上班时间"));
+                    RBL_ShiftType.Items.Add(new ListItem(Resources.lang.WanBanShangBanShiJian, "NightShiftStartTime"));
                     RBL_ShiftType.Items[0].Selected = true;
                 }
 
@@ -172,7 +172,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
                 }
                 if (ds.Tables[0].Rows[0]["NCheckOutIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                 {
-                    RBL_ShiftType.Items.Add(new ListItem(Resources.lang.WanBanXiaBanShiJian, "晚班下班时间"));
+                    RBL_ShiftType.Items.Add(new ListItem(Resources.lang.WanBanXiaBanShiJian, "NightShiftEndTime"));
                     RBL_ShiftType.Items[0].Selected = true;
                 }
 
@@ -185,7 +185,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
                 }
                 if (ds.Tables[0].Rows[0]["OCheckInIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                 {
-                    RBL_ShiftType.Items.Add(new ListItem(Resources.lang.JiaBanShangBanShiJian, "午夜上班时间"));
+                    RBL_ShiftType.Items.Add(new ListItem(Resources.lang.JiaBanShangBanShiJian, "MidnightWorkStartTime"));
                     RBL_ShiftType.Items[0].Selected = true;
                 }
 
@@ -198,7 +198,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
                 }
                 if (ds.Tables[0].Rows[0]["OCheckOutIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                 {
-                    RBL_ShiftType.Items.Add(new ListItem(Resources.lang.JiaBanXiaBanShiJian, "午夜下班时间"));
+                    RBL_ShiftType.Items.Add(new ListItem(Resources.lang.JiaBanXiaBanShiJian, "MidnightWorkEndTime"));
                     RBL_ShiftType.Items[0].Selected = true;
                 }
 
@@ -335,7 +335,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
                     {
                         new System.Threading.Thread(delegate ()
                         {
-                            //更改加班签到时间，前后不超过60分钟
+                            //���ļӰ�ǩ��ʱ�䣬ǰ�󲻳���60����
                             UpdateOvertimeCheckTime(strUserCode);
 
                         }).Start();
@@ -364,7 +364,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
         ClientScript.RegisterStartupScript(this.GetType(), "111", "<script>alert('OK');</script>");
     }
 
-    //更改加班签到时间，前后不超过60分钟
+    //���ļӰ�ǩ��ʱ�䣬ǰ�󲻳���60����
     protected void UpdateOvertimeCheckTime(string strUserCode)
     {
         string strHQL;
@@ -461,7 +461,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
         }
     }
 
-    //取得前一天晚上的加班申请 ID 号
+    //ȡ��ǰһ�����ϵļӰ����� ID ��
     protected int getPreDayOvertimeID(string strUserCode)
     {
         string strHQL1, strHQL2;
@@ -514,12 +514,12 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
 
 
 
-    //取得员工考勤规则的经度
+    //ȡ��Ա�����ڹ���ľ���
     protected string GetUserAttendanceRuleLongitude(string strUserCode)
     {
         string strHQL;
 
-        strHQL = "Select OfficeLongitude From T_UserAttendanceRule Where UserCode = '" + strUserCode + "' and Status = '在用'";
+        strHQL = "Select OfficeLongitude From T_UserAttendanceRule Where UserCode = '" + strUserCode + "' and Status = 'InUse'";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_UserAttendanceRule");
         if (ds.Tables[0].Rows.Count > 0)
         {
@@ -531,12 +531,12 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
         }
     }
 
-    //取得员工考勤规则的纬度
+    //ȡ��Ա�����ڹ����γ��
     protected string GetUserAttendanceRuleOfficeLatitude(string strUserCode)
     {
         string strHQL;
 
-        strHQL = "Select OfficeLatitude From T_UserAttendanceRule Where UserCode = '" + strUserCode + "' and Status = '在用'";
+        strHQL = "Select OfficeLatitude From T_UserAttendanceRule Where UserCode = '" + strUserCode + "' and Status = 'InUse'";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_UserAttendanceRule");
         if (ds.Tables[0].Rows.Count > 0)
         {
@@ -557,9 +557,9 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
         strHQL += "OCheckInStart,OCheckInEnd,OCheckOutStart,OCheckOutEnd,Status,MCheckInIsMust,MCheckOutIsMust,ACheckInIsMust,ACheckOutIsMust,NCheckInIsMust,NCheckOutIsMust,OCheckInIsMust,OCheckOutIsMust,LargestDistance,LeaderCode,LeaderName,OfficeLongitude,OfficeLatitude,Address)";
         strHQL += " Select A.UserCode,A.UserName,now(),B.MCheckInStart,B.MCheckInEnd,B.MCheckOutStart,B.MCheckOutEnd,";
         strHQL += "B.ACheckInStart,B.ACheckInEnd,B.ACheckOutStart,B.ACheckOutEnd,B.NCheckInStart,B.NCheckInEnd,B.NCheckOutStart,B.NCheckOutEnd,";
-        strHQL += "B.OCheckInStart,B.OCheckInEnd,B.OCheckOutStart,B.OCheckOutEnd,'处理中',B.MCheckInIsMust,B.MCheckOutIsMust,B.ACheckInIsMust,B.ACheckOutIsMust,B.NCheckInIsMust,B.NCheckOutIsMust,B.OCheckInIsMust,B.OCheckOutIsMust,B.LargestDistance,'','','" + strLongitude + "','" + strLatitude + "',B.Address";
+        strHQL += "B.OCheckInStart,B.OCheckInEnd,B.OCheckOutStart,B.OCheckOutEnd,'InProgress',B.MCheckInIsMust,B.MCheckOutIsMust,B.ACheckInIsMust,B.ACheckOutIsMust,B.NCheckInIsMust,B.NCheckOutIsMust,B.OCheckInIsMust,B.OCheckOutIsMust,B.LargestDistance,'','','" + strLongitude + "','" + strLatitude + "',B.Address";
         strHQL += " From T_ProjectMember A, T_AttendanceRule B";
-        strHQL += " Where A.UserCode not in (Select UserCode From T_UserAttendanceRule) and A.Status not in ('离职','终止') ";
+        strHQL += " Where A.UserCode not in (Select UserCode From T_UserAttendanceRule) and A.Status not in ('Resign','Stop') ";
         strHQL += " and A.UserCode = " + "'" + strUserCode + "' limit 1";
 
         try
@@ -588,9 +588,9 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
         strHQL += "('" + strAttendanceDate3 + " '|| B.ACheckInEnd || ':00.000')::timestamp,('" + strAttendanceDate3 + " ' ||B.ACheckOutEnd || ':00.000')::timestamp,('" + strAttendanceDate3 + " '|| B.NCheckInEnd || ':00.000')::timestamp,('" + strAttendanceDate3 + " '|| B.NCheckOutEnd || ':00.000')::timestamp,";
         strHQL += " ('" + strAttendanceDate3 + " '|| B.OCheckInEnd || ':00.000')::timestamp + '1 day'::interval,('" + strAttendanceDate3 + " '||B.OCheckOutEnd || ':00.000')::timestamp + '1 day'::interval,0,0,B.MCheckInIsMust,B.MCheckOutIsMust,B.ACheckInIsMust,B.ACheckOutIsMust,B.NCheckInIsMust,B.NCheckOutIsMust,B.OCheckInIsMust,B.OCheckOutIsMust,B.LargestDistance,B.LeaderCode,B.LeaderName,'" + strLongitude + "','" + strLatitude + "'";
         strHQL += " From T_ProjectMember A, T_UserAttendanceRule B";
-        strHQL += " Where A.UserCode = B.UserCode and A.UserCode not in (Select UserCode From T_UserAttendanceRecord Where to_char(AttendanceDate,'yyyymmdd') = " + "'" + strAttendanceDate3 + "'" + ") and A.Status not in ('离职','终止') ";
+        strHQL += " Where A.UserCode = B.UserCode and A.UserCode not in (Select UserCode From T_UserAttendanceRecord Where to_char(AttendanceDate,'yyyymmdd') = " + "'" + strAttendanceDate3 + "'" + ") and A.Status not in ('Resign','Stop') ";
         strHQL += " and A.UserCode = " + "'" + strUserCode + "'";
-        strHQL += " and B.Status = '在用' ";
+        strHQL += " and B.Status = 'InUse' ";
 
         try
         {
@@ -629,56 +629,56 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
         {
             strID = userAttendanceRecord.ID.ToString();
 
-            if (strShiftType == "上午上班时间")
+            if (strShiftType == "MorningWorkStartTime")
             {
                 //userAttendanceRecord.MCheckIn = DateTime.Now;
 
                 strHQL = "Update T_UserAttendanceRecord Set MCheckIn = now(),MCheckInAddress = '" + strAddress + "',MCheckInLongitude = '" + strLongitude + "',MCheckInLatitude = '" + strLatitude + "',MCheckInDistance = " + deDistance.ToString() + " Where ID = " + strID;
 
             }
-            if (strShiftType == "上午下班时间")
+            if (strShiftType == "MorningWorkEndTime")
             {
                 //userAttendanceRecord.MCheckOut = DateTime.Now;
 
                 strHQL = "Update T_UserAttendanceRecord Set MCheckOut = now(),MCheckOutAddress = '" + strAddress + "',MCheckOutLongitude = '" + strLongitude + "',MCheckOutLatitude = '" + strLatitude + "',MCheckOutDistance = " + deDistance.ToString() + " Where ID = " + strID;
 
             }
-            if (strShiftType == "下午上班时间")
+            if (strShiftType == "AfternoonWorkStartTime")
             {
                 //userAttendanceRecord.ACheckIn = DateTime.Now;
 
                 strHQL = "Update T_UserAttendanceRecord Set ACheckIn = now(),ACheckInAddress = '" + strAddress + "',ACheckInLongitude = '" + strLongitude + "',ACheckInLatitude = '" + strLatitude + "',ACheckInDistance = " + deDistance.ToString() + " Where ID = " + strID;
 
             }
-            if (strShiftType == "下午下班时间")
+            if (strShiftType == "AfternoonWorkEndTime")
             {
                 //userAttendanceRecord.ACheckOut = DateTime.Now;
 
                 strHQL = "Update T_UserAttendanceRecord Set ACheckOut = now(),ACheckOutAddress = '" + strAddress + "',ACheckOutLongitude = '" + strLongitude + "',ACheckOutLatitude = '" + strLatitude + "',ACheckOutDistance = " + deDistance.ToString() + " Where ID = " + strID;
 
             }
-            if (strShiftType == "晚班上班时间")
+            if (strShiftType == "NightShiftStartTime")
             {
                 //userAttendanceRecord.NCheckIn = DateTime.Now;
 
                 strHQL = "Update T_UserAttendanceRecord Set NCheckIn = now(),NCheckInAddress = '" + strAddress + "',NCheckInLongitude = '" + strLongitude + "',NCheckInLatitude = '" + strLatitude + "',NCheckInDistance = " + deDistance.ToString() + " Where ID = " + strID;
 
             }
-            if (strShiftType == "晚班下班时间")
+            if (strShiftType == "NightShiftEndTime")
             {
                 //userAttendanceRecord.NCheckOut = DateTime.Now;
 
                 strHQL = "Update T_UserAttendanceRecord Set NCheckOut = now(),NCheckOutAddress = '" + strAddress + "',NCheckOutLongitude = '" + strLongitude + "',NCheckOutLatitude = '" + strLatitude + "',NCheckOutDistance = " + deDistance.ToString() + " Where ID = " + strID;
 
             }
-            if (strShiftType == "午夜上班时间")
+            if (strShiftType == "MidnightWorkStartTime")
             {
                 //userAttendanceRecord.OCheckIn = DateTime.Now;
 
                 strHQL = "Update T_UserAttendanceRecord Set OCheckIn = now(),OCheckInAddress = '" + strAddress + "',OCheckInLongitude = '" + strLongitude + "',OCheckInLatitude = '" + strLatitude + "',OCheckInDistance = " + deDistance.ToString() + " Where ID = " + strID;
 
             }
-            if (strShiftType == "午夜下班时间")
+            if (strShiftType == "MidnightWorkEndTime")
             {
                 //userAttendanceRecord.OCheckIn = DateTime.Now;
 
@@ -711,7 +711,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
 
         strHQL = " select extract(epoch FROM (A.MCheckIn-(to_char(A.MCheckIn,'yyyymmdd') || ' ' || rtrim(ltrim(B.MCheckInEnd)) ||':00.000')::timestamp))/60";
         strHQL += " From T_UserAttendanceRecord A,T_userAttendanceRule B ";
-        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = '处理中'";
+        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = 'InProgress'";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_LateMinute");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -726,7 +726,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
 
         strHQL = " Select extract(epoch FROM (A.ACheckIn-(to_char(A.ACheckIn,'yyyymmdd') || ' ' || rtrim(ltrim(B.ACheckInEnd)) ||':00.000')::timestamp))/60";
         strHQL += " From T_UserAttendanceRecord A,T_userAttendanceRule B ";
-        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = '处理中'";
+        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = 'InProgress'";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_LateMinute");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -741,7 +741,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
 
         strHQL = " Select extract(epoch FROM (A.NCheckIn-(to_char(A.NCheckIn,'yyyymmdd') || ' ' || rtrim(ltrim(B.NCheckInEnd)) ||':00.000')::timestamp))/60";
         strHQL += " From T_UserAttendanceRecord A,T_userAttendanceRule B ";
-        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = '处理中'";
+        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = 'InProgress'";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_LateMinute");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -757,7 +757,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
 
         strHQL = " Select extract(epoch FROM (A.OCheckIn-(to_char(A.OCheckIn,'yyyymmdd') || ' ' || rtrim(ltrim(B.OCheckInEnd)) ||':00.000')::timestamp))/60";
         strHQL += " From T_UserAttendanceRecord A,T_userAttendanceRule B ";
-        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = '处理中'";
+        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = 'InProgress'";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_LateMinute");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -785,7 +785,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
 
         strHQL = " Select extract(epoch FROM ((to_char(A.MCheckOut,'yyyymmdd') || ' ' || rtrim(ltrim(B.MCheckOutStart)) ||':00.000')::timestamp)-A.MCheckOut)/60";
         strHQL += " From T_UserAttendanceRecord A,T_userAttendanceRule B ";
-        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = '处理中'";
+        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = 'InProgress'";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_EarlyMinute");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -800,7 +800,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
 
         strHQL = " Select extract(epoch FROM ((to_char(A.ACheckOut,'yyyymmdd') || ' ' || rtrim(ltrim(B.ACheckOutStart)) ||':00.000')::timestamp)-A.ACheckOut)/60";
         strHQL += " From T_UserAttendanceRecord A,T_userAttendanceRule B ";
-        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = '处理中'";
+        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = 'InProgress'";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_EarlyMinute");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -817,7 +817,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
 
         strHQL = " Select extract(epoch FROM ((to_char(A.NCheckOut,'yyyymmdd') || ' ' || rtrim(ltrim(B.NCheckOutStart)) ||':00.000')::timestamp)-A.NCheckOut)/60";
         strHQL += " From T_UserAttendanceRecord A,T_userAttendanceRule B ";
-        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = '处理中'";
+        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = 'InProgress'";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_EarlyMinute");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -833,7 +833,7 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
 
         strHQL = " Select extract(epoch FROM ((to_char(A.OCheckOut,'yyyymmdd') || ' ' || rtrim(ltrim(B.OCheckOutStart)) ||':00.000')::timestamp)-A.OCheckOut)/60";
         strHQL += " From T_UserAttendanceRecord A,T_userAttendanceRule B ";
-        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = '处理中'";
+        strHQL += " Where A.UserCode = B.UserCode and A.ID = " + strID + " and B.Status = 'InProgress'";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_EarlyMinute");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -903,34 +903,34 @@ public partial class TTAPPGetUserPositionForIOSAndroid : System.Web.UI.Page
     {
         try
         {
-            //webclient客户端对象 
+            //webclient�ͻ��˶��� 
             WebClient client = new WebClient();
-            string url = "http://maps.google.com/maps/api/geocode/xml?latlng=" + lng + "," + lat + "&language=zh-CN&sensor=false";//请求地址 
-            client.Encoding = Encoding.UTF8;//编码格式 
+            string url = "http://maps.google.com/maps/api/geocode/xml?latlng=" + lng + "," + lat + "&language=zh-CN&sensor=false";//�����ַ 
+            client.Encoding = Encoding.UTF8;//�����ʽ 
             string responseTest = client.DownloadString(url);
-            //下载xml响应数据 
-            string address = "";//返回的地址 
+            //����xml��Ӧ���� 
+            string address = "";//���صĵ�ַ 
             XmlDocument doc = new XmlDocument();
-            //创建XML文档对象 
+            //����XML�ĵ����� 
             if (!string.IsNullOrEmpty(responseTest))
             {
-                doc.LoadXml(responseTest);//加载xml字符串 
-                //查询状态信息 
+                doc.LoadXml(responseTest);//����xml�ַ��� 
+                //��ѯ״̬��Ϣ 
                 string xpath = @"GeocodeResponse/status";
                 XmlNode node = doc.SelectSingleNode(xpath);
                 string status = node.InnerText.ToString();
                 if (status == "OK")
                 {
-                    //查询详细地址信息 
+                    //��ѯ��ϸ��ַ��Ϣ 
                     xpath = @"GeocodeResponse/result/formatted_address";
                     node = doc.SelectSingleNode(xpath);
                     address = node.InnerText.ToString();
-                    //查询地区信息 
+                    //��ѯ������Ϣ 
                     XmlNodeList nodeListAll = doc.SelectNodes("GeocodeResponse/result");
 
                     XmlNode idt = nodeListAll[0];
                     XmlNodeList idts = idt.SelectNodes("address_component[type='sublocality']");
-                    //address_component[type='sublocality']表示筛选type='sublocality'的所有相关子节点； 
+                    //address_component[type='sublocality']��ʾɸѡtype='sublocality'����������ӽڵ㣻 
                     XmlNode idtst = idts[0];
 
                     string area = idtst.SelectSingleNode("short_name").InnerText;

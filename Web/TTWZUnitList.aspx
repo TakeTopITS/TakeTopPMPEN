@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZUnitList.aspx.cs" Inherits="TTWZUnitList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZUnitList.aspx.cs" Inherits="TTWZUnitList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ËÆ°ÈáèÂçï‰Ωç</title>
+    <title>º∆¡øµ•Œª</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -61,11 +61,11 @@
 
                                                             <table class="formBgStyle" width="80%">
                                                                 <tr>
-                                                                    <td style="text-align: left" class="formItemBgStyle"><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label>Ôºö</td>
+                                                                    <td style="text-align: left" class="formItemBgStyle"><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:Label ID="LB_ID" runat="server" ></asp:Label>
                                                                     </td>
-                                                                    <td style="text-align: left" class="formItemBgStyle"><asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JiLiangDanWei%>"></asp:Label>Ôºö</td>
+                                                                    <td style="text-align: left" class="formItemBgStyle"><asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JiLiangDanWei%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_UnitName" runat="server"></asp:TextBox>
                                                                     </td>
@@ -80,7 +80,7 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="4">
-                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,JLDWJLG%>"></asp:Label><asp:Label ID="LB_RecordCount" runat="server" Text=""></asp:Label>Êù°&nbsp;
+                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,JLDWJLG%>"></asp:Label><asp:Label ID="LB_RecordCount" runat="server" Text=""></asp:Label>Ãı&nbsp;
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -126,17 +126,17 @@
                                                                                     <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,BianJi%>"></asp:Label></asp:LinkButton>
                                                                                 <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab">
                                                                                     <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ShanChu%>"></asp:Label></asp:LinkButton>
-                                                                                <%--<asp:Button ID="BT_ID" runat="server" ForeColor="Black" Text="ÁºñËæë" CommandName='edit'
+                                                                                <%--<asp:Button ID="BT_ID" runat="server" ForeColor="Black" Text="±‡º≠" CommandName='edit'
                                                                                     CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CssClass="inpu" />--%>
-                                                                                <%--<asp:Button ID="Button1" runat="server" ForeColor="Black" Text="Âà†Èô§" CommandName='del'
+                                                                                <%--<asp:Button ID="Button1" runat="server" ForeColor="Black" Text="Deleted" CommandName='del'
                                                                                     CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CssClass="inpu" />--%>
                                                                             </ItemTemplate>
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="ID" HeaderText="Â∫èÂè∑">
+                                                                        <asp:BoundColumn DataField="ID" HeaderText="–Ú∫≈">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="UnitName" HeaderText="ËÆ°ÈáèÂçï‰Ωç">
+                                                                        <asp:BoundColumn DataField="UnitName" HeaderText="º∆¡øµ•Œª">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                                                         </asp:BoundColumn>
                                                                     </Columns>

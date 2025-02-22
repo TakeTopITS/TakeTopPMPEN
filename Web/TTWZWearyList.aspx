@@ -1,19 +1,19 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZWearyList.aspx.cs" Inherits="TTWZWearyList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZWearyList.aspx.cs" Inherits="TTWZWearyList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ÁßØÂéãÂàóË°®</title>
+    <title>ª˝—π¡–±Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
     <script src="js/dialog/lhgdialog.min.js"></script>
     <script type="text/javascript">
-        //Â§çÈÄâÊ°ÜÂÖ®ÈÄâ
+        //∏¥—°øÚ»´—°
         function ChooseAll(item) {
             var inputs = document.all.tags("INPUT");
-            for (var i = 0; i < inputs.length; i++) // ÈÅçÂéÜÈ°µÈù¢‰∏äÊâÄÊúâÁöÑ input 
+            for (var i = 0; i < inputs.length; i++) // ±È¿˙“≥√Ê…œÀ˘”–µƒ input 
             {
                 if (inputs[i].type == "checkbox") {
                     inputs[i].checked = item.checked;
@@ -30,7 +30,7 @@
         function ClickTotal(obj) {
             $.dialog({
                 lock: true,
-                content: "Âπ¥Êï∞Ôºö<input type='text' id='txt_TotalYear' />",
+                content: "ƒÍ ˝£∫<input type='text' id='txt_TotalYear' />",
                 ok: function () {
                     //alert($("#txtReason").val());
                     //alert(obj);
@@ -53,35 +53,35 @@
             $("#BT_NewDelete").removeAttr("disabled");
 
             //alert(objProgress);
-            if (objProgress == "ÁºñÂà∂") {
+            if (objProgress == "±‡÷∆") {
                 $("#BT_NewTotal").attr("class", "inpu");
-                $("#BT_NewTotal").removeAttr("disabled");                            //ÁªüËÆ°
+                $("#BT_NewTotal").removeAttr("disabled");                            //Õ≥º∆
                 $("#BT_NewSubmit").attr("class", "inpu");
-                $("#BT_NewSubmit").removeAttr("disabled");                          //Êèê‰∫§
+                $("#BT_NewSubmit").removeAttr("disabled");                          //Ã·Ωª
                 $("#BT_NewExecute").attr("disabled", "disabled");
-                $("#BT_NewExecute").removeClass("inpu");                         //ÊâßË°å
+                $("#BT_NewExecute").removeClass("inpu");                         //÷¥––
                 $("#BT_NewCalc").attr("disabled", "disabled");
-                $("#BT_NewCalc").removeClass("inpu");                         //ËÆ°ÁÆó
+                $("#BT_NewCalc").removeClass("inpu");                         //º∆À„
             }
-            else if (objProgress == "ÊâπÂáÜ") {
+            else if (objProgress == "Approved") {
                 $("#BT_NewTotal").attr("disabled", "disabled");
-                $("#BT_NewTotal").removeClass("inpu");                            //ÁªüËÆ°
+                $("#BT_NewTotal").removeClass("inpu");                            //Õ≥º∆
                 $("#BT_NewSubmit").attr("disabled", "disabled");
-                $("#BT_NewSubmit").removeClass("inpu");                          //Êèê‰∫§
+                $("#BT_NewSubmit").removeClass("inpu");                          //Ã·Ωª
                 $("#BT_NewExecute").attr("class", "inpu");
-                $("#BT_NewExecute").removeAttr("disabled");                         //ÊâßË°å
+                $("#BT_NewExecute").removeAttr("disabled");                         //÷¥––
                 $("#BT_NewCalc").attr("disabled", "disabled");
-                $("#BT_NewCalc").removeClass("inpu");                            //ËÆ°ÁÆó
+                $("#BT_NewCalc").removeClass("inpu");                            //º∆À„
             }
-            else if (objProgress == "ÁîüÊïà") {
+            else if (objProgress == "…˙–ß") {
                 $("#BT_NewTotal").attr("disabled", "disabled");
-                $("#BT_NewTotal").removeClass("inpu");                            //ÁªüËÆ°
+                $("#BT_NewTotal").removeClass("inpu");                            //Õ≥º∆
                 $("#BT_NewSubmit").attr("disabled", "disabled");
-                $("#BT_NewSubmit").removeClass("inpu");                          //Êèê‰∫§
+                $("#BT_NewSubmit").removeClass("inpu");                          //Ã·Ωª
                 $("#BT_NewExecute").attr("disabled", "disabled");
-                $("#BT_NewExecute").removeClass("inpu");                            //ÊâßË°å
+                $("#BT_NewExecute").removeClass("inpu");                            //÷¥––
                 $("#BT_NewCalc").attr("class", "inpu");
-                $("#BT_NewCalc").removeAttr("disabled");                         //ÁîüÊïà
+                $("#BT_NewCalc").removeAttr("disabled");                         //…˙–ß
             }
             else {
                 $("#BT_NewEdit").attr("disabled", "disabled");
@@ -160,7 +160,7 @@
                                                 <table style="width: 40%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiYaBianHao%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiYaBianHao%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="3">
                                                             <asp:TextBox ID="TXT_WearyCode" runat="server" ReadOnly="true"></asp:TextBox><font color="red">*<asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiTongZiDongShengCheng%>"></asp:Label></font>
@@ -168,7 +168,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,KuBie%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,KuBie%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:DropDownList ID="DDL_StoreRoom" runat="server"
@@ -176,16 +176,16 @@
                                                             </asp:DropDownList>
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhuGuanLingDao%>"></asp:Label>Ôºö</td>
+                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhuGuanLingDao%>"></asp:Label>£∫</td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:HiddenField ID="HF_MainLeader" runat="server" />
                                                             <asp:TextBox ID="TXT_MainLeader" runat="server"></asp:TextBox>&nbsp;
-                                                            <input type="button" id="btnPurchaseManager" class="inpu" runat="server" value="ÈÄâÊã©" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_MainLeader', 'TXT_MainLeader')" />
+                                                            <input type="button" id="btnPurchaseManager" class="inpu" runat="server" value="—°‘Ò" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_MainLeader', 'TXT_MainLeader')" />
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ShuoMing%>"></asp:Label>Ôºö</td>
+                                                            <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ShuoMing%>"></asp:Label>£∫</td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="3">
                                                             <asp:TextBox ID="TXT_Remark" runat="server" Width="400"></asp:TextBox>
                                                         </td>
@@ -302,23 +302,23 @@
                                                                 <ItemTemplate>
 
                                                                     <input value='<%#Eval("WearyCode") %>' name="cb_WearyCode" type="checkbox" checked="checked" />
-                                                                    <asp:LinkButton ID="LinkButton5" runat="server" CommandArgument='<%# Eval("WearyCode")+"|"+Eval("Process") %>' CommandName="click" CssClass="notTab">Êìç‰Ωú</asp:LinkButton>
-                                                                    <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"WearyCode") %>' CommandName="edit" CssClass="notTab">ÁºñËæë</asp:LinkButton>--%>
-                                                                    <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"WearyCode") %>' CommandName="del" CssClass="notTab">Âà†Èô§</asp:LinkButton>--%>
-                                                                    <%--<asp:LinkButton ID="LinkButton4" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"WearyCode") %>' CommandName="total" CssClass="notTab" Visible='<%# Eval("Process").ToString()=="ÁºñÂà∂" ? true : false %>'>ÁªüËÆ°</asp:LinkButton>--%>
-                                                                    <%--<asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"WearyCode") %>' CommandName="submit" CssClass="notTab" Visible='<%# Eval("Process").ToString()=="ÁºñÂà∂" ? true : false %>'>Êèê‰∫§</asp:LinkButton>--%>
-                                                                    <%--<asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"WearyCode") %>' CommandName="execute" CssClass="notTab" Visible='<%# Eval("Process").ToString()=="ÊâπÂáÜ" ? true : false %>'>ÊâßË°å</asp:LinkButton>--%>
-                                                                    <%--<asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"WearyCode") %>' CommandName="calc" CssClass="notTab" Visible='<%# Eval("Process").ToString()=="ÁîüÊïà" ? true : false %>'>ËÆ°ÁÆó</asp:LinkButton>--%>
+                                                                    <asp:LinkButton ID="LinkButton5" runat="server" CommandArgument='<%# Eval("WearyCode")+"|"+Eval("Process") %>' CommandName="click" CssClass="notTab">≤Ÿ◊˜</asp:LinkButton>
+                                                                    <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"WearyCode") %>' CommandName="edit" CssClass="notTab">±‡º≠</asp:LinkButton>--%>
+                                                                    <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"WearyCode") %>' CommandName="del" CssClass="notTab">…æ≥˝</asp:LinkButton>--%>
+                                                                    <%--<asp:LinkButton ID="LinkButton4" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"WearyCode") %>' CommandName="total" CssClass="notTab" Visible='<%# Eval("Process").ToString()=="±‡÷∆" ? true : false %>'>Õ≥º∆</asp:LinkButton>--%>
+                                                                    <%--<asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"WearyCode") %>' CommandName="submit" CssClass="notTab" Visible='<%# Eval("Process").ToString()=="±‡÷∆" ? true : false %>'>Ã·Ωª</asp:LinkButton>--%>
+                                                                    <%--<asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"WearyCode") %>' CommandName="execute" CssClass="notTab" Visible='<%# Eval("Process").ToString()=="Approved" ? true : false %>'>÷¥––</asp:LinkButton>--%>
+                                                                    <%--<asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"WearyCode") %>' CommandName="calc" CssClass="notTab" Visible='<%# Eval("Process").ToString()=="…˙–ß" ? true : false %>'>º∆À„</asp:LinkButton>--%>
                                                                     
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="WearyCode" HeaderText="ÁßØÂéãÁºñÂè∑">
+                                                            <asp:BoundColumn DataField="WearyCode" HeaderText="ª˝—π±‡∫≈">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="StoreRoom" HeaderText="Â∫ìÂà´">
+                                                            <asp:BoundColumn DataField="StoreRoom" HeaderText="ø‚±">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                             </asp:BoundColumn>
-                                                            <%--<asp:BoundColumn DataField="PlanTime" HeaderText="ËÆ°ÂàíÊó•Êúü">
+                                                            <%--<asp:BoundColumn DataField="PlanTime" HeaderText="º∆ªÆ»’∆⁄">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                             </asp:BoundColumn>--%>
                                                             <asp:TemplateColumn>
@@ -330,19 +330,19 @@
                                                                     <%#DataBinder.Eval(Container.DataItem, "PlanTime", "{0:yyyy/MM/dd}")%>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="WearyTotalMoney" HeaderText="ÁßØÂéãÊÄªÈ¢ù">
+                                                            <asp:BoundColumn DataField="WearyTotalMoney" HeaderText="ª˝—π◊‹∂Ó">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="8%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="RowNumber" HeaderText="ÊòéÁªÜÊù°Êï∞">
+                                                            <asp:BoundColumn DataField="RowNumber" HeaderText="√˜œ∏Ãı ˝">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="6%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="WearyBalance" HeaderText="ÁßØÂéã‰ΩôÈ¢ù">
+                                                            <asp:BoundColumn DataField="WearyBalance" HeaderText="ª˝—π”‡∂Ó">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="8%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="OverNumber" HeaderText="Ââ©‰ΩôÊù°Êï∞">
+                                                            <asp:BoundColumn DataField="OverNumber" HeaderText=" £”‡Ãı ˝">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="8%" />
                                                             </asp:BoundColumn>
-                                                            <%--<asp:BoundColumn DataField="Remark" HeaderText="ËØ¥Êòé">
+                                                            <%--<asp:BoundColumn DataField="Remark" HeaderText="Àµ√˜">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="13%" />
                                                             </asp:BoundColumn>--%>
                                                             <asp:TemplateColumn>
@@ -354,13 +354,13 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("Remark").ToString(), 190) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="Process" HeaderText="ËøõÂ∫¶">
+                                                            <asp:BoundColumn DataField="Process" HeaderText="Ω¯∂»">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="MainLeaderName" HeaderText="‰∏ªÁÆ°È¢ÜÂØº">
+                                                            <asp:BoundColumn DataField="MainLeaderName" HeaderText="÷˜π‹¡Ïµº">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="MarkerName" HeaderText="ÁºñÂà∂‰∫∫">
+                                                            <asp:BoundColumn DataField="MarkerName" HeaderText="±‡÷∆»À">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

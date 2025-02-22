@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAllMemberWorkLoad.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAllMemberWorkLoad.aspx.cs"
     Inherits="TTAllMemberWorkLoad" %>
 
 <%@ Register Assembly="DayPilot.MonthPicker" Namespace="DayPilot.Web.UI" TagPrefix="DayPilot" %>
@@ -126,7 +126,7 @@
 
                                                             <ItemStyle CssClass="itemStyle" />
                                                             <Columns>
-                                                                <asp:TemplateColumn HeaderText="éƒ¨é—¨æˆå‘˜ï¼š">
+                                                                <asp:TemplateColumn HeaderText="²¿ÃÅ³ÉÔ±£º">
                                                                     <ItemTemplate>
                                                                         <asp:Button ID="BT_UserCode" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>'
                                                                             Style="text-align: center" />
@@ -169,7 +169,7 @@
                                                             <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                             <ItemStyle CssClass="itemStyle" />
                                                             <Columns>
-                                                                <asp:TemplateColumn HeaderText="éƒ¨é—¨æˆå‘˜ï¼š">
+                                                                <asp:TemplateColumn HeaderText="²¿ÃÅ³ÉÔ±£º">
                                                                     <ItemTemplate>
                                                                         <asp:Button ID="BT_ProjectID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ProjectID") %>'
                                                                             Style="text-align: center" />
@@ -222,7 +222,7 @@
                                                 <tr style="display: none;">
                                                     <td>
                                                         <cc1:TabContainer CssClass="ajax_tab_menu" ID="TabContainer2" runat="server" ActiveTabIndex="0" Width="100%">
-                                                            <cc1:TabPanel ID="TabPanel3" runat="server" HeaderText="è´Ÿè·åˆ—è¡¨">
+                                                            <cc1:TabPanel ID="TabPanel3" runat="server" HeaderText="¸ººÉÁÐ±í">
                                                                 <HeaderTemplate>
                                                                     <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,FuHeLieBiao %>"></asp:Label>
                                                                 </HeaderTemplate>
@@ -235,7 +235,7 @@
                                                                                         <tr>
                                                                                             <td>
                                                                                                 <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZuBie %>"></asp:Label>
-                                                                                                ï¼š
+                                                                                                £º
                                                                                             </td>
                                                                                             <td>
 
@@ -251,7 +251,7 @@
 
                                                                                             <td>
                                                                                                 <asp:Label ID="Label37" runat="server" Text="<%$ Resources:lang,XiangMuMingChen %>"></asp:Label>
-                                                                                                ï¼š
+                                                                                                £º
                                                                                             </td>
                                                                                             <td align="left">
                                                                                                 <asp:Label ID="LB_ProjectID" runat="server"></asp:Label>
@@ -267,14 +267,14 @@
                                                                                             </td>
                                                                                             <td>
                                                                                                 <asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,RenWuMingCheng %>"></asp:Label>
-                                                                                                ï¼š
+                                                                                                £º
                                                                                             </td>
                                                                                             <td align="left">
                                                                                                 <asp:TextBox ID="TB_TaskName" runat="server"></asp:TextBox>
                                                                                             </td>
                                                                                             <td>
                                                                                                 <asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,ZhiXingRen %>"></asp:Label>
-                                                                                                ï¼š
+                                                                                                £º
                                                                                             </td>
                                                                                             <td align="left">
                                                                                                 <asp:TextBox ID="TB_TaskOperator" runat="server"></asp:TextBox>
@@ -284,7 +284,7 @@
                                                                                         <tr>
                                                                                             <td>
                                                                                                 <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,RenWuKaiShiShiJian %>"></asp:Label>
-                                                                                                ï¼š
+                                                                                                £º
                                                                                             </td>
                                                                                             <td align="left">
                                                                                                 <asp:TextBox ID="DLC_BeginDate" runat="server"></asp:TextBox>
@@ -293,7 +293,7 @@
                                                                                             </td>
                                                                                             <td>
                                                                                                 <asp:Label ID="Label40" runat="server" Text="<%$ Resources:lang,RenWuJieShuShiJian %>"></asp:Label>
-                                                                                                ï¼š
+                                                                                                £º
                                                                                             </td>
                                                                                             <td align="left">
                                                                                                 <asp:TextBox ID="DLC_EndDate" runat="server"></asp:TextBox>
@@ -305,7 +305,7 @@
 
                                                                                             <td>
                                                                                                 <asp:Label ID="Label41" runat="server" Text="<%$ Resources:lang,ZhuangTai %>"></asp:Label>
-                                                                                                ï¼š
+                                                                                                £º
                                                                                             </td>
                                                                                             <td align="left">
 
@@ -557,7 +557,7 @@
                                                                     </div>
                                                                 </ContentTemplate>
                                                             </cc1:TabPanel>
-                                                            <cc1:TabPanel ID="TabPanel4" runat="server" HeaderText="è®¡åˆ’å®ŒæˆçŽ‡">
+                                                            <cc1:TabPanel ID="TabPanel4" runat="server" HeaderText="¼Æ»®Íê³ÉÂÊ">
                                                                 <HeaderTemplate>
                                                                     <asp:Label ID="Label45" runat="server" Text="<%$ Resources:lang,JiHuaWanChengLu %>"></asp:Label>
                                                                 </HeaderTemplate>
@@ -619,7 +619,7 @@
                                                                                                         </asp:Legend>
                                                                                                     </Legends>
                                                                                                     <Titles>
-                                                                                                        <asp:Title Name="æ ‡é¢˜" Alignment="TopCenter" IsDockedInsideChartArea="False" DockedToChartArea="ChartArea1"></asp:Title>
+                                                                                                        <asp:Title Name="±êÌâ" Alignment="TopCenter" IsDockedInsideChartArea="False" DockedToChartArea="ChartArea1"></asp:Title>
                                                                                                     </Titles>
                                                                                                 </asp:Chart>--%>
                                                                                         </td>

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWFChartViewSL.aspx.cs" Inherits="TTWFChartViewSL" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWFChartViewSL.aspx.cs" Inherits="TTWFChartViewSL" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -42,23 +42,23 @@
                 return;
             }
 
-            var errMsg = "Silverlight åº”ç”¨ç¨‹åºä¸­æœªå¤„ç†çš„é”™è¯¯ " + appSource + "\n";
+            var errMsg = "Silverlight Ó¦ÓÃ³ÌĞòÖĞÎ´´¦ÀíµÄ´íÎó " + appSource + "\n";
 
-            errMsg += "ä»£ç : " + iErrorCode + "    \n";
-            errMsg += "ç±»åˆ«: " + errorType + "       \n";
-            errMsg += "æ¶ˆæ¯: " + args.ErrorMessage + "     \n";
+            errMsg += "´úÂë: " + iErrorCode + "    \n";
+            errMsg += "Àà±ğ: " + errorType + "       \n";
+            errMsg += "ÏûÏ¢: " + args.ErrorMessage + "     \n";
 
             if (errorType == "ParserError") {
-                errMsg += "æ–‡ä»¶: " + args.xamlFile + "     \n";
-                errMsg += "è¡Œ: " + args.lineNumber + "     \n";
-                errMsg += "ä½ç½®: " + args.charPosition + "     \n";
+                errMsg += "ÎÄ¼ş: " + args.xamlFile + "     \n";
+                errMsg += "ĞĞ: " + args.lineNumber + "     \n";
+                errMsg += "Î»ÖÃ: " + args.charPosition + "     \n";
             }
             else if (errorType == "RuntimeError") {
                 if (args.lineNumber != 0) {
-                    errMsg += "è¡Œ: " + args.lineNumber + "     \n";
-                    errMsg += "ä½ç½®: " + args.charPosition + "     \n";
+                    errMsg += "ĞĞ: " + args.lineNumber + "     \n";
+                    errMsg += "Î»ÖÃ: " + args.charPosition + "     \n";
                 }
-                errMsg += "æ–¹æ³•åç§°: " + args.methodName + "     \n";
+                errMsg += "·½·¨Ãû³Æ: " + args.methodName + "     \n";
             }
 
             throw new Error(errMsg);
@@ -86,8 +86,8 @@
 
         });
 
-        function autoheight() {Â //å‡½æ•°ï¼šè·å–å°ºå¯¸
-            //è·å–æµè§ˆå™¨çª—å£é«˜åº¦
+        function autoheight() {?//º¯Êı£º»ñÈ¡³ß´ç
+            //»ñÈ¡ä¯ÀÀÆ÷´°¿Ú¸ß¶È
             var winHeight = 0;
             if (window.innerHeight)
                 winHeight = window.innerHeight;
@@ -100,7 +100,7 @@
             document.getElementById("_WFDesignerFrame").style.height = (winHeight - 0) + "px";
         }
 
-        window.onresize = autoheight;Â //æµè§ˆå™¨çª—å£å‘ç”Ÿå˜åŒ–æ—¶åŒæ—¶å˜åŒ–DIVé«˜åº¦
+        window.onresize = autoheight;?//ä¯ÀÀÆ÷´°¿Ú·¢Éú±ä»¯Ê±Í¬Ê±±ä»¯DIV¸ß¶È
 
     </script>
 </head>

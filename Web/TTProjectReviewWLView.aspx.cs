@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -21,11 +21,11 @@ public partial class TTProjectReviewWLView : System.Web.UI.Page
        string strRelatedID = Request.QueryString["ProjectID"];
        string strProject = GetProjectName(strRelatedID);
 
-       //this.Title = Resources.lang.Project + strRelatedID + " " + strProject + " è¯„å®¡å·¥ä½œæµåˆ—è¡¨";
+       //this.Title = Resources.lang.Project + strRelatedID + " " + strProject + " ÆÀÉó¹¤×÷Á÷ÁĞ±í";
 
        string strUserCode = Session["UserCode"].ToString();if (Page.IsPostBack == false)
        {
-           LoadRelatedWL("é¡¹ç›®è¯„å®¡","é¡¹ç›®", int.Parse(strRelatedID));
+           LoadRelatedWL("ProjectReview","Project", int.Parse(strRelatedID));
        }
     }
 

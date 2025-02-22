@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -28,14 +28,14 @@ public partial class TTGoodsScrapeReport : System.Web.UI.Page
 
         string strDepartString;
 
-        //this.Title = "Êä•Â∫üÊä•Ë°®";
+        //this.Title = "±®∑œ±®±Ì";
 
         LB_UserCode.Text = strUserCode;
         strUserName = GetUserName(strUserCode);
         LB_UserName.Text = strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "Áâ©ÊñôÊä•Â∫üÊä•Ë°®", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ŒÔ¡œ±®∑œ±®±Ì", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -181,9 +181,9 @@ public partial class TTGoodsScrapeReport : System.Web.UI.Page
 
         DataTable dtSaleOrder = ds.Tables[0];
 
-        Export3Excel(dtSaleOrder, "Áâ©ÊñôÊä•Â∫üÊä•Ë°®.xls");
+        Export3Excel(dtSaleOrder, "ŒÔ¡œ±®∑œ±®±Ì.xls");
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÂØºÂá∫ÊàêÂäüÔºÅ');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µº≥ˆ≥…π¶£°');", true);
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

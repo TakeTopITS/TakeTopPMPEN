@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -19,7 +19,7 @@ public partial class TTExpenseClaimListView : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //this.Title = "椤圭洰鎶ラ攢璐圭敤鍒楄〃";
+        //this.Title = "项目报销费用列表";
 
         string strUserCode = Session["UserCode"].ToString();
         string strRelatedID = Request.QueryString["RelatedID"];

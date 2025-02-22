@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -27,17 +27,17 @@ public partial class TTProjectWorkFlowManageForAlone : System.Web.UI.Page
 
         string strUserName;
 
-        //this.Title = "项目工作流管理---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
+        //this.Title = "��Ŀ����������---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
 
         LB_UserCode.Text = strUserCode;
         strUserName = ShareClass.GetUserName(strUserCode);
         LB_UserName.Text = strUserName;
 
-        //设置是否自定义工作流模组模式
+        //�����Ƿ��Զ��幤����ģ��ģʽ
         Session["DIYWFModule"] = "NO";
 
         //ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","项目工作流管理", strUserCode);
+        //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","��Ŀ����������", strUserCode);
         //if (blVisible == false)
         //{
         //    Response.Redirect("TTDisplayErrors.aspx");
@@ -57,14 +57,14 @@ public partial class TTProjectWorkFlowManageForAlone : System.Web.UI.Page
                 strHQL = "Select A.ID,A.WorkDetail,A.StepID,A.CheckingTime,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.WLID,A.CheckingTime,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
                 strHQL += " Where A.WLID = B.WLID And A.WLID In ";
                 strHQL += " (select WLID  From T_WorkFlow Where ( ";
-                strHQL += " (RelatedType = '项目' and RelatedID = " + strProjectID + ")";
+                strHQL += " (RelatedType = 'Project' and RelatedID = " + strProjectID + ")";
                 strHQL += " or (RelatedType = 'ExpenseApply' and RelatedID in (select ID from T_ExpenseApplyWL where RelatedID = " + strProjectID + "))";
                 strHQL += " or (RelatedType = 'ExpenseClaim' and RelatedID in (select ECID from T_ExpenseClaim where RelatedID = " + strProjectID + "))";
-                strHQL += " Or (RelatedType = '任务' and RelatedID in (Select TaskID From T_ProjectTask Where ProjectID = " + strProjectID + "))";
-                strHQL += " Or (RelatedType = '风险' and RelatedID in (Select ID From T_ProjectRisk Where ProjectID = " + strProjectID + "))";
-                strHQL += " Or (RelatedType = '需求' and RelatedID in (Select ReqID From T_RelatedReq Where ProjectID = " + strProjectID + "))";
-                strHQL += " ) And Status not in ('修改中','关闭','结案'))";
-                strHQL += " And A.Status in ('处理中','审核中','会签中','复核中') ";
+                strHQL += " Or (RelatedType = 'Task' and RelatedID in (Select TaskID From T_ProjectTask Where ProjectID = " + strProjectID + "))";
+                strHQL += " Or (RelatedType = '����' and RelatedID in (Select ID From T_ProjectRisk Where ProjectID = " + strProjectID + "))";
+                strHQL += " Or (RelatedType = 'Requirement' and RelatedID in (Select ReqID From T_RelatedReq Where ProjectID = " + strProjectID + "))";
+                strHQL += " ) And Status not in ('Updating','Closed','CaseClosed'))";
+                strHQL += " And A.Status in ('InProgress','Reviewing','Signing','ReReview') ";
                 strHQL += " And A.OperatorCode = " + "'" + strUserCode + "'";
                 strHQL += " And A.IsOperator = 'YES'";
                 strHQL += " Order By A.StepID DESC";
@@ -76,14 +76,14 @@ public partial class TTProjectWorkFlowManageForAlone : System.Web.UI.Page
                 strHQL = "Select A.ID,A.WorkDetail,A.StepID,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.WLID,A.CheckingTime,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
                 strHQL += " Where A.WLID = B.WLID And A.WLID In ";
                 strHQL += " (select WLID  From T_WorkFlow Where ( ";
-                strHQL += " (RelatedType = '项目' and RelatedID = " + strProjectID + ")";
+                strHQL += " (RelatedType = 'Project' and RelatedID = " + strProjectID + ")";
                 strHQL += " or (RelatedType = 'ExpenseApply' and RelatedID in (select ID from T_ExpenseApplyWL where RelatedID = " + strProjectID + "))";
                 strHQL += " or (RelatedType = 'ExpenseClaim' and RelatedID in (select ECID from T_ExpenseClaim where RelatedID = " + strProjectID + "))";
-                strHQL += " Or (RelatedType = '任务' and RelatedID in (Select TaskID From T_ProjectTask Where ProjectID = " + strProjectID + "))";
-                strHQL += " Or (RelatedType = '风险' and RelatedID in (Select ID From T_ProjectRisk Where ProjectID = " + strProjectID + "))";
-                strHQL += " Or (RelatedType = '需求' and RelatedID in (Select ReqID From T_RelatedReq Where ProjectID = " + strProjectID + "))";
-                strHQL += " ) And Status not in ('修改中','关闭','结案'))";
-                strHQL += " And A.Status in ('批准','驳回') ";
+                strHQL += " Or (RelatedType = 'Task' and RelatedID in (Select TaskID From T_ProjectTask Where ProjectID = " + strProjectID + "))";
+                strHQL += " Or (RelatedType = '����' and RelatedID in (Select ID From T_ProjectRisk Where ProjectID = " + strProjectID + "))";
+                strHQL += " Or (RelatedType = 'Requirement' and RelatedID in (Select ReqID From T_RelatedReq Where ProjectID = " + strProjectID + "))";
+                strHQL += " ) And Status not in ('Updating','Closed','CaseClosed'))";
+                strHQL += " And A.Status in ('Approved','Rejected') ";
                 strHQL += " And A.OperatorCode = " + "'" + strUserCode + "'";
                 strHQL += " Order By A.StepID DESC";
                 ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowDetail");
@@ -95,13 +95,13 @@ public partial class TTProjectWorkFlowManageForAlone : System.Web.UI.Page
                 strHQL = "from WorkFlow as workFlow where workFlow.CreatorCode = " + "'" + strUserCode + "'";
                 strHQL += " and workFlow.WLID in ";
                 strHQL += " ( select workFlow.WLID from WorkFlow as workFlow Where  (";
-                strHQL += " ( workFlow.RelatedType = '项目' and workFlow.RelatedID = " + strProjectID + ")";
+                strHQL += " ( workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + ")";
                 strHQL += " or (workFlow.RelatedType = 'ExpenseApply' and workFlow.RelatedID in (select expenseApplyWL.ID from ExpenseApplyWL as expenseApplyWL where expenseApplyWL.RelatedID = " + strProjectID + "))";
                 strHQL += " or (workFlow.RelatedType = 'ExpenseClaim' and workFlow.RelatedID in (select expenseClaim.ECID from ExpenseClaim as expenseClaim where expenseClaim.RelatedID = " + strProjectID + "))";
-                strHQL += " or (workFlow.RelatedType = '任务' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
-                strHQL += " or (workFlow.RelatedType = '风险' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";
-                strHQL += " or (workFlow.RelatedType = '需求' and workFlow.RelatedID in (select relatedReq from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
-                strHQL += " ) and workFlow.Status not in ('修改中','关闭','结案'))";
+                strHQL += " or (workFlow.RelatedType = 'Task' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
+                strHQL += " or (workFlow.RelatedType = '����' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";
+                strHQL += " or (workFlow.RelatedType = 'Requirement' and workFlow.RelatedID in (select relatedReq from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
+                strHQL += " ) and workFlow.Status not in ('Updating','Closed','CaseClosed'))";
                 strHQL += " Order by workFlow.WLID DESC";
                 lst = workFlowBLL.GetAllWorkFlows(strHQL);
                 DataGrid3.DataSource = lst;
@@ -116,14 +116,14 @@ public partial class TTProjectWorkFlowManageForAlone : System.Web.UI.Page
                 strHQL = "Select A.ID,A.WorkDetail,A.CheckingTime,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.WLID,A.CheckingTime,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
                 strHQL += " Where A.WLID = B.WLID And A.WLID In ";
                 strHQL += " (Select WLID From T_WorkFlow Where (";
-                strHQL += " (RelatedType = '项目' and RelatedID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + "))";
+                strHQL += " (RelatedType = 'Project' and RelatedID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + "))";
                 strHQL += " or (RelatedType = 'ExpenseApply' and RelatedID in (select ID from T_ExpenseApplyWL where RelatedID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")))";
                 strHQL += " or (RelatedType = 'ExpenseClaim' and RelatedID in (select ECID from T_ExpenseClaim where RelatedID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")))";
-                strHQL += "  Or (RelatedType = '任务' and RelatedID in (Select TaskID From T_ProjectTask Where ProjectID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")))";
-                strHQL += "  Or (RelatedType = '风险' and RelatedID in (Select ID From T_ProjectRisk Where ProjectID in (Select ProjectID From T_RelatedUser  where UserCode = " + "'" + strUserCode + "'" + ")))";
-                strHQL += "  Or (RelatedType = '需求' and RelatedID in (Select ReqID From T_RelatedReq Where ProjectID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")))";
-                strHQL += " ) and Status not in ('通过','修改中','关闭','结案'))";
-                strHQL += " And A.Status in ('处理中','审核中','会签中','复核中') ";
+                strHQL += "  Or (RelatedType = 'Task' and RelatedID in (Select TaskID From T_ProjectTask Where ProjectID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")))";
+                strHQL += "  Or (RelatedType = '����' and RelatedID in (Select ID From T_ProjectRisk Where ProjectID in (Select ProjectID From T_RelatedUser  where UserCode = " + "'" + strUserCode + "'" + ")))";
+                strHQL += "  Or (RelatedType = 'Requirement' and RelatedID in (Select ReqID From T_RelatedReq Where ProjectID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")))";
+                strHQL += " ) and Status not in ('Passed','Updating','Closed','CaseClosed'))";
+                strHQL += " And A.Status in ('InProgress','Reviewing','Signing','ReReview') ";
                 strHQL += " And A.OperatorCode = " + "'" + strUserCode + "'";
                 strHQL += " Order By A.StepID DESC";
 
@@ -136,14 +136,14 @@ public partial class TTProjectWorkFlowManageForAlone : System.Web.UI.Page
                 strHQL = "Select A.ID,A.WorkDetail,A.StepID,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.WLID,A.CheckingTime,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
                 strHQL += " Where A.WLID = B.WLID And A.WLID In ";
                 strHQL += " (Select WLID From T_WorkFlow Where (";
-                strHQL += "  (RelatedType = '项目' and RelatedID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + "))";
+                strHQL += "  (RelatedType = 'Project' and RelatedID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + "))";
                 strHQL += " or (RelatedType = 'ExpenseApply' and RelatedID in (select ID from T_ExpenseApplyWL where RelatedID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")))";
                 strHQL += " or (RelatedType = 'ExpenseClaim' and RelatedID in (select ECID from T_ExpenseClaim where RelatedID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")))";
-                strHQL += "  Or (RelatedType = '任务' and RelatedID in (Select TaskID From T_ProjectTask Where ProjectID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")))";
-                strHQL += "  Or (RelatedType = '风险' and RelatedID in (Select ID From T_ProjectRisk Where ProjectID in (Select ProjectID From T_RelatedUser  where UserCode = " + "'" + strUserCode + "'" + ")))";
-                strHQL += "  Or (RelatedType = '需求' and RelatedID in (Select ReqID From T_RelatedReq Where ProjectID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")))";
-                strHQL += " ) and Status not in ('修改中','关闭','结案'))";
-                strHQL += " And A.Status in ('批准','驳回') ";
+                strHQL += "  Or (RelatedType = 'Task' and RelatedID in (Select TaskID From T_ProjectTask Where ProjectID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")))";
+                strHQL += "  Or (RelatedType = '����' and RelatedID in (Select ID From T_ProjectRisk Where ProjectID in (Select ProjectID From T_RelatedUser  where UserCode = " + "'" + strUserCode + "'" + ")))";
+                strHQL += "  Or (RelatedType = 'Requirement' and RelatedID in (Select ReqID From T_RelatedReq Where ProjectID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")))";
+                strHQL += " ) and Status not in ('Updating','Closed','CaseClosed'))";
+                strHQL += " And A.Status in ('Approved','Rejected') ";
                 strHQL += " And A.OperatorCode = " + "'" + strUserCode + "'";
                 strHQL += " Order By A.StepID DESC";
                 ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowDetail");
@@ -154,13 +154,13 @@ public partial class TTProjectWorkFlowManageForAlone : System.Web.UI.Page
                 strHQL = "from WorkFlow as workFlow where workFlow.CreatorCode = " + "'" + strUserCode + "'";
                 strHQL += " and workFlow.WLID in ";
                 strHQL += " ( select workFlow.WLID from WorkFlow as workFlow Where  (";
-                strHQL += " ( workFlow.RelatedType = '项目' and workFlow.RelatedID in (Select relatedUser.ProjectID from RelatedUser as relatedUser where relatedUser.UserCode = " + "'" + strUserCode + "'" + "))";
+                strHQL += " ( workFlow.RelatedType = 'Project' and workFlow.RelatedID in (Select relatedUser.ProjectID from RelatedUser as relatedUser where relatedUser.UserCode = " + "'" + strUserCode + "'" + "))";
                 strHQL += " or (workFlow.RelatedType = 'ExpenseApply' and workFlow.RelatedID in (select expenseApplyWL.ID from ExpenseApplyWL as expenseApplyWL where expenseApplyWL.RelatedID in  (Select relatedUser.ProjectID from RelatedUser as relatedUser where relatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";
                 strHQL += " or (workFlow.RelatedType = 'ExpenseClaim' and workFlow.RelatedID in (select expenseClaim.ECID from ExpenseClaim as expenseClaim where expenseClaim.RelatedID in  (Select relatedUser.ProjectID from RelatedUser as relatedUser where relatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";
-                strHQL += " or (workFlow.RelatedType = '任务' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (Select relatedUser.ProjectID from RelatedUser as relatedUser where relatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";
-                strHQL += " or (workFlow.RelatedType = '风险' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID in (Select relatedUser.ProjectID from RelatedUser as relatedUser where relatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";
-                strHQL += " or (workFlow.RelatedType = '需求' and workFlow.RelatedID in (select relatedReq from RelatedReq as relatedReq where relatedReq.ProjectID in (Select relatedUser.ProjectID from RelatedUser as relatedUser where relatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";
-                strHQL += " ) and workFlow.Status not in ('修改中','关闭','结案'))";
+                strHQL += " or (workFlow.RelatedType = 'Task' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (Select relatedUser.ProjectID from RelatedUser as relatedUser where relatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";
+                strHQL += " or (workFlow.RelatedType = '����' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID in (Select relatedUser.ProjectID from RelatedUser as relatedUser where relatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";
+                strHQL += " or (workFlow.RelatedType = 'Requirement' and workFlow.RelatedID in (select relatedReq from RelatedReq as relatedReq where relatedReq.ProjectID in (Select relatedUser.ProjectID from RelatedUser as relatedUser where relatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";
+                strHQL += " ) and workFlow.Status not in ('Updating','Closed','CaseClosed'))";
                 strHQL += " Order by workFlow.WLID DESC";
                 lst = workFlowBLL.GetAllWorkFlows(strHQL);
                 DataGrid3.DataSource = lst;
@@ -218,7 +218,7 @@ public partial class TTProjectWorkFlowManageForAlone : System.Web.UI.Page
         {
             strStatus = DataGrid3.Items[i].Cells[5].Text.Trim();
 
-            if (strStatus == "通过")
+            if (strStatus == "Passed")
             {
                 DataGrid3.Items[i].ForeColor = Color.Red;
 

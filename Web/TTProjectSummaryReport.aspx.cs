@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -64,7 +64,7 @@ public partial class TTProjectSummaryReport : System.Web.UI.Page
             DataGrid3.DataBind();
 
 
-            string strChartTitle = "项目费用分布图";
+            string strChartTitle = "��Ŀ���÷ֲ�ͼ";
             string strCmdText = "select Account,sum(ConfirmAmount) as AccountAmount from T_ProExpense ";
             strCmdText += " where ProjectID = " + strProjectID + " Group By Account";
             IFrame_Chart1.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Column&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);

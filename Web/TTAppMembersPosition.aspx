@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppMembersPosition.aspx.cs" Inherits="TTAppMembersPosition" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppMembersPosition.aspx.cs" Inherits="TTAppMembersPosition" %>
 
 <!DOCTYPE html>
 
@@ -44,12 +44,12 @@
         });
 
         function setMapTrClickLink(gridId) {
-            //é˜»æ­¢äº‹ä»¶å†’æ³¡
+            //×èÖ¹ÊÂ¼þÃ°ÅÝ
             jQuery("#" + gridId).find("tr:not(.notTab)").find("a").click(function () {
                 event.stopPropagation();
             });
 
-            //trç‚¹å‡»è·³è½¬
+            //trµã»÷Ìø×ª
             jQuery("#" + gridId).find("tr:not(.notTab)").find("a").closest("table").closest("tr").click(function () {
                 $("#IFR_UserPositionMap").attr("src", $(this).find("a").attr("href"));
             });
@@ -83,7 +83,7 @@
                                                         <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%></td>
                                                 </tr>
                                             </table>
-                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="è¯·ç¨å€™ï¼Œå¤„ç†ä¸­..." style="display: none;" />
+                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖÐ..." style="display: none;" />
                                         </a>
                                     </td>
                                 </tr>
@@ -160,10 +160,10 @@
                                         </asp:TemplateColumn>
 
 
-                                        <%--                                            <asp:BoundColumn DataField="UserName" HeaderText="å§“å">
+                                        <%--                                            <asp:BoundColumn DataField="UserName" HeaderText="ÐÕÃû">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                             </asp:BoundColumn>
-                                            <asp:TemplateColumn HeaderText="ä½ç½®ï¼š">
+                                            <asp:TemplateColumn HeaderText="Î»ÖÃ£º">
                                                 <ItemTemplate>
                                                     <table width="100%">
                                                         <tr>
@@ -189,7 +189,7 @@
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="60%" />
                                             </asp:TemplateColumn>
 
-                                            <asp:BoundColumn DataField="CreateTime" HeaderText="æ—¶é—´">
+                                            <asp:BoundColumn DataField="CreateTime" HeaderText="Ê±¼ä">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                             </asp:BoundColumn>--%>
                                     </Columns>

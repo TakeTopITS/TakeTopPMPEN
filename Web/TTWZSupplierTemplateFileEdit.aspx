@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSupplierTemplateFileEdit.aspx.cs" Inherits="TTWZSupplierTemplateFileEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSupplierTemplateFileEdit.aspx.cs" Inherits="TTWZSupplierTemplateFileEdit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>‰æõÂ∫îÂïÜÊ®°Êùø</title>
+    <title>π©”¶…Ãƒ£∞Â</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -79,7 +79,7 @@
                                                             <table class="formBgStyle" width="100%">
                                                                 <tr style="display:none;">
                                                                     <td style="text-align: right" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_ID" runat="server" ReadOnly="true"></asp:TextBox><font color="red">*<asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZiDongShengCheng%>"></asp:Label></font>
                                                                     </td>
@@ -88,12 +88,12 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: right" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ShangChuanMoBan%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ShangChuanMoBan%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:FileUpload ID="FUP_SupplierTemplateFile" runat="server" />
                                                                         <asp:Button ID="BT_SupplierTemplateFile" runat="server" Text="<%$ Resources:lang,ShangChuan%>" CssClass="inpu" OnClick="BT_SupplierTemplateFile_Click" />
                                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                                                type="button" value="ÂÖ≥Èó≠" />
+                                                                                type="button" value="Closed" />
                                                                         <br />
                                                                         <asp:Literal ID="LT_SupplierTemplateText" runat="server"></asp:Literal>
                                                                         <asp:HiddenField ID="HF_TemplateFileName" runat="server" />

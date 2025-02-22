@@ -96,7 +96,7 @@ public partial class TTProRelatedTaskView : System.Web.UI.Page
             dtNowDate = DateTime.Now;
             strStatus = DataGrid1.Items[i].Cells[4].Text.Trim();
 
-            if (strStatus != "Íê³É" | strStatus != "¹Ø±Õ")
+            if (strStatus != "Completed" | strStatus != "Closed")
             {
                 if (dtFinishedDate < dtNowDate)
                 {

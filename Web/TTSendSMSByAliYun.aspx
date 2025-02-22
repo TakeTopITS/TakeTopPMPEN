@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSendSMSByAliYun.aspx.cs" Inherits="TTSendSMSByAliYun" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSendSMSByAliYun.aspx.cs" Inherits="TTSendSMSByAliYun" %>
 
 <!DOCTYPE html>
 

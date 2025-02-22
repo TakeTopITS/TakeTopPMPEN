@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -173,14 +173,14 @@ public partial class TTUserInfor_StudentAttendance : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            lblMsg.Text = string.Format("<span style='color:red' >å¯¼å…¥æ—¶å‡ºç°ä»¥ä¸‹é”™è¯¯: {0}!</span>", ex.Message);
+            lblMsg.Text = string.Format("<span style='color:red' >µ¼ÈëÊ±³öÏÖÒÔÏÂ´íÎó: {0}!</span>", ex.Message);
         }
 
     }
 
 
     /// <summary>
-    /// éªŒè¯æ•°æ®åˆæ³•æ€§.
+    /// ÑéÖ¤Êı¾İºÏ·¨ĞÔ.
     /// </summary>
     /// <param name="dtExcel"></param>
     /// <param name="resultMsg"></param>
@@ -193,25 +193,25 @@ public partial class TTUserInfor_StudentAttendance : System.Web.UI.Page
             lineNumber++;
             try
             {
-                string strStudentCode = ShareClass.ObjectToString(row["å­¦ç”Ÿç¼–ç "]);
+                string strStudentCode = ShareClass.ObjectToString(row["Ñ§Éú±àÂë"]);
                 if (string.IsNullOrEmpty(strStudentCode))
                 {
-                    resultMsg += string.Format("ç¬¬{0}è¡Œï¼Œå­¦ç”Ÿç¼–ç ä¸èƒ½ä¸ºç©º<br/>", lineNumber);
+                    resultMsg += string.Format("µÚ{0}ĞĞ£¬Ñ§Éú±àÂë²»ÄÜÎª¿Õ<br/>", lineNumber);
                     continue;
                 }
-                string strStudentName = ShareClass.ObjectToString(row["å­¦ç”Ÿå§“å"]);
+                string strStudentName = ShareClass.ObjectToString(row["Ñ§ÉúĞÕÃû"]);
                 if (string.IsNullOrEmpty(strStudentName))
                 {
-                    resultMsg += string.Format("ç¬¬{0}è¡Œï¼Œå­¦ç”Ÿå§“åä¸èƒ½ä¸ºç©º<br/>", lineNumber);
+                    resultMsg += string.Format("µÚ{0}ĞĞ£¬Ñ§ÉúĞÕÃû²»ÄÜÎª¿Õ<br/>", lineNumber);
                     continue;
                 }
 
 
-                //æ—¥æœŸ
-                string strPayMoney = ShareClass.ObjectToString(row["æ—¥æœŸ"]);
+                //ÈÕÆÚ
+                string strPayMoney = ShareClass.ObjectToString(row["ÈÕÆÚ"]);
                 if (string.IsNullOrEmpty(strPayMoney))
                 {
-                    resultMsg += string.Format("ç¬¬{0}è¡Œï¼Œæ—¥æœŸä¸èƒ½ä¸ºç©º<br/>", lineNumber);
+                    resultMsg += string.Format("µÚ{0}ĞĞ£¬ÈÕÆÚ²»ÄÜÎª¿Õ<br/>", lineNumber);
                     continue;
                 }
                 
@@ -219,7 +219,7 @@ public partial class TTUserInfor_StudentAttendance : System.Web.UI.Page
             }
             catch (Exception ex)
             {
-                lblMsg.Text = string.Format("<span style='color:red' >å¯¼å…¥æ—¶å‡ºç°ä»¥ä¸‹é”™è¯¯: {0}!</span>", ex.Message);
+                lblMsg.Text = string.Format("<span style='color:red' >µ¼ÈëÊ±³öÏÖÒÔÏÂ´íÎó: {0}!</span>", ex.Message);
             }
 
         }
@@ -231,7 +231,7 @@ public partial class TTUserInfor_StudentAttendance : System.Web.UI.Page
     private bool Import(DataTable dtExcel, ref string resultMsg)
     {
         string strYearMonth = DDL_Year.SelectedValue + "/" + DDL_Month.SelectedValue;
-        //åˆ é™¤å·²ç»å¯¼å…¥çš„è€ƒå‹¤
+        //É¾³ıÒÑ¾­µ¼ÈëµÄ¿¼ÇÚ
         string strDeleteSQL = string.Format("delete T_ProjectMemberStudentAttendance where AttendanceTime like '{0}%'", strYearMonth);
         ShareClass.RunSqlCommand(strDeleteSQL);
 
@@ -252,11 +252,11 @@ public partial class TTUserInfor_StudentAttendance : System.Web.UI.Page
             
 
             lineNumber++;
-            strStudentCode = ShareClass.ObjectToString(row["å­¦ç”Ÿç¼–ç "]);
-            strStudentName = ShareClass.ObjectToString(row["å­¦ç”Ÿå§“å"]);
-            strAttendanceTime = ShareClass.ObjectToString(row["æ—¥æœŸ"]);
+            strStudentCode = ShareClass.ObjectToString(row["Ñ§Éú±àÂë"]);
+            strStudentName = ShareClass.ObjectToString(row["Ñ§ÉúĞÕÃû"]);
+            strAttendanceTime = ShareClass.ObjectToString(row["ÈÕÆÚ"]);
 
-            strIsStudy = ShareClass.ObjectToString(row["æ˜¯å¦ä¸Šå­¦"]);
+            strIsStudy = ShareClass.ObjectToString(row["ÊÇ·ñÉÏÑ§"]);
 
             ProjectMemberStudentAttendance projectMemberStudentAttendance = new ProjectMemberStudentAttendance();
             projectMemberStudentAttendance.StudentCode = strStudentCode;
@@ -274,21 +274,21 @@ public partial class TTUserInfor_StudentAttendance : System.Web.UI.Page
         {
             if (successCount == dtExcel.Rows.Count)
             {
-                resultMsg += string.Format("<br/>å·²æˆåŠŸå¯¼å…¥ {0} æ¡æ•°æ®", successCount);
+                resultMsg += string.Format("<br/>ÒÑ³É¹¦µ¼Èë {0} ÌõÊı¾İ", successCount);
             }
             else
             {
-                resultMsg += string.Format("<br/>å·²æˆåŠŸå¯¼å…¥ {0} æ¡æ•°æ®ï¼Œ å…±æœ‰ {1} æ¡æ•°æ®éªŒè¯å¤±è´¥", successCount, dtExcel.Rows.Count - successCount);
+                resultMsg += string.Format("<br/>ÒÑ³É¹¦µ¼Èë {0} ÌõÊı¾İ£¬ ¹²ÓĞ {1} ÌõÊı¾İÑéÖ¤Ê§°Ü", successCount, dtExcel.Rows.Count - successCount);
             }
 
-            //é‡æ–°åŠ è½½åˆ—è¡¨
+            //ÖØĞÂ¼ÓÔØÁĞ±í
             DataProjectMemberStudentAttendanceBinder();
 
             return true;
         }
         else
         {
-            resultMsg += string.Format("<br/>æœªå¯¼å…¥æ•°æ®ï¼Œ å…±æœ‰ {0} æ¡æ•°æ®éªŒè¯å¤±è´¥", dtExcel.Rows.Count - successCount);
+            resultMsg += string.Format("<br/>Î´µ¼ÈëÊı¾İ£¬ ¹²ÓĞ {0} ÌõÊı¾İÑéÖ¤Ê§°Ü", dtExcel.Rows.Count - successCount);
         }
 
         return false;

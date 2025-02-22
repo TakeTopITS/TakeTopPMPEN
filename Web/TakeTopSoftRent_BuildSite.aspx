@@ -1,15 +1,15 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSoftRent_BuildSite.aspx.cs" Inherits="TakeTopSoftRent_BuildSite" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSoftRent_BuildSite.aspx.cs" Inherits="TakeTopSoftRent_BuildSite" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
-<meta content="企业云、企业管理软件、在线租用" name="keywords">
-<meta content="企业云，提供企业管理软件在线租用服务。" name="description">
+<meta content="��ҵ�ơ���ҵ������������������" name="keywords">
+<meta content="��ҵ�ƣ��ṩ��ҵ���������������÷���" name="description">
 <meta charset="utf-8" />
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>在线租用---云平台</title>
+    <title>��������---��ƽ̨</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <link href="Logo/website/css/media.css" rel="stylesheet" type="text/css" />
     <link href="Logo/website/css/qudaohezuo.css" rel="stylesheet" type="text/css" />
@@ -70,7 +70,7 @@
                                         <div id="DIV_Message"  style="text-align:center;padding-top:100px;display:none;">
                                              <table>
                                                  <tr>
-                                                    <td style="color:red;">正在创建你的应用站点，大概需要5分钟，请耐心等候......
+                                                    <td style="color:red;">���ڴ������Ӧ��վ�㣬�����Ҫ5���ӣ������ĵȺ�......
 
                                                          <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
                                                     </td>
@@ -81,50 +81,50 @@
                                                      </td>
                                                  </tr>
                                                  <tr>
-                                                     <td style="text-align:center;font-size:small;">（请不要关闭此页面）</td>
+                                                     <td style="text-align:center;font-size:small;">���벻Ҫ�رմ�ҳ�棩</td>
                                                  </tr>
                                              </table>
                                         </div> 
                                             
                                         <div id="DIV_Top">
-                                            <h3>3&nbsp;站点信息</h3>
+                                            <h3>3&nbsp;վ����Ϣ</h3>
                                             <table class="ziti5" border="0" cellpadding="0" cellspacing="3" width="100%">
                                                  <tr>
                                                     <td colspan ="2" class="formItemBgStyle">
                                                         <br />
-                                                        <asp:CheckBox ID="CB_IsOEM" runat="server" Checked="true" Text="OEM版"></asp:CheckBox>
+                                                        <asp:CheckBox ID="CB_IsOEM" runat="server" Checked="true" Text="OEM��"></asp:CheckBox>
                                                         <br />
                                                         <br />
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td colspan="2" class="formItemBgStyle" style="text-align:left;" >
-                                                        平台名称  &nbsp;<font color="#FF0000">*</font>
+                                                        ƽ̨����  &nbsp;<font color="#FF0000">*</font>
                                                         <br />
                                                         <asp:TextBox ID="TB_SiteAppSystemName" runat="server" ForeColor="#000000"  Style="width: 350px; height: 30px;" ></asp:TextBox>
                                                       
                                                         <br />
-                                                        <span style="font-size :xx-small;">注：***项目管理平台，只能由字母或汉字组成！</span> 
+                                                        <span style="font-size :xx-small;">ע��***��Ŀ����ƽ̨��ֻ������ĸ������ɣ�</span> 
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                        <td colspan ="2" class="formItemBgStyle" style="text-align:left;" >
-                                                           站点名称&nbsp;<font color="#FF0000">*</font>
+                                                           վ������&nbsp;<font color="#FF0000">*</font>
                                                            <br />
                                                         <asp:TextBox ID="TB_SiteAppName" runat="server" ForeColor="#000000" Style="width: 350px; height: 30px;" ></asp:TextBox>
                                                         
                                                         <br />
-                                                        <span style="font-size :xx-small;">注：***PMP ,只能由字母组成！</span> 
+                                                        <span style="font-size :xx-small;">ע��***PMP ,ֻ������ĸ��ɣ�</span> 
                                                     </td>
                                                 </tr>
                                                
                                                 <tr >
                                                    <td class="formItemBgStyle" align="left" style="width:100px;" >
-                                                        <asp:Button ID="BT_Summit" runat="server" CssClass="inpu"  Height="30px" OnClientClick ="displayRelatedUI()"  OnClick="BT_Summit_Click"  Text="创建站点" />
+                                                        <asp:Button ID="BT_Summit" runat="server" CssClass="inpu"  Height="30px" OnClientClick ="displayRelatedUI()"  OnClick="BT_Summit_Click"  Text="����վ��" />
                                                    </td>
                                                    <td class="formItemBgStyle" align="left">
                                                         <img id="Img_Message" src="Images/Processing.gif" alt="Building,please wait..." style="display:none;"/>
-                                                        <span id="Span_Message" style="color:red;display:none;">正在创建站点，大概需要几分钟，请稍候！ </span>
+                                                        <span id="Span_Message" style="color:red;display:none;">���ڴ���վ�㣬�����Ҫ�����ӣ����Ժ� </span>
                                                         <asp:Label ID="LB_Message" runat="server" ForeColor="Red"></asp:Label>
                                                       
                                                     </td>
@@ -133,9 +133,9 @@
 
                                              <br/>
 
-                                            <li>因为要复制站点文件和初始化数据，预计要10分钟才能完成并出现登录界面，请耐心等候！</li>
-                                            <li>如有问题，请直接联系客服：<br />
-                                                <a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes"><img align="absmiddle" src="images/qq.png" />客服QQ</a>，电话：<a href="tel:02151085119" class="call">021-51085119</a><br />
+                                            <li>��ΪҪ����վ���ļ��ͳ�ʼ�����ݣ�Ԥ��Ҫ10���Ӳ�����ɲ����ֵ�¼���棬�����ĵȺ�</li>
+                                            <li>�������⣬��ֱ����ϵ�ͷ���<br />
+                                                <a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes"><img align="absmiddle" src="images/qq.png" />�ͷ�QQ</a>���绰��<a href="tel:02151085119" class="call">021-51085119</a><br />
                                             </li>
 
                                         </div>

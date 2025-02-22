@@ -1,15 +1,15 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDPressureTestList.aspx.cs" Inherits="TTGDPressureTestList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDPressureTestList.aspx.cs" Inherits="TTGDPressureTestList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ÂéãÂäõËØïÈ™å/È¢ÑËØïËΩ¶ÂàóË°®</title>
+    <title>—π¡¶ ‘—È/‘§ ‘≥µ¡–±Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
     <script type="text/javascript">
-        //ÁºñËæë
+        //±‡º≠
         function AlertAddEditPage(url) {
 
             popShowByURLForFixedSize(url, '', 1200, 500);
@@ -17,7 +17,7 @@
         }
 
         function LoadProjectList() {
-            //alert("Ë∞ÉÁî®ÊàêÂäü");
+            //alert("µ˜”√≥…π¶");
             document.getElementById("BT_RelaceLoad").click();
         }
 
@@ -68,10 +68,10 @@
                                     <table width="100%" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left" class="formItemBgStyle">
-                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShiYaBaoHao%>"></asp:Label>Ôºö<asp:DropDownList ID="DDL_Pressure" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_Pressure_SelectedIndexChanged"></asp:DropDownList>&nbsp;
+                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShiYaBaoHao%>"></asp:Label>£∫<asp:DropDownList ID="DDL_Pressure" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_Pressure_SelectedIndexChanged"></asp:DropDownList>&nbsp;
                                                 <asp:Button ID="BT_Search" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ChaXun%>" OnClick="BT_Search_Click" />&nbsp;
-                                                <input type="button" class="inpuLong" value="Êñ∞Â¢ûËØïÈ™å/È¢ÑËØï" onclick="AlertAddEditPage('TTGDPressureTestEdit.aspx?id=');" />
-                                                <%--<input type="button" class="inpuLong" value="Êñ∞Â¢ûËØïÈ™å/È¢ÑËØï" onclick="window.location.href = 'TTGDPressureTestEdit.aspx'" />--%>
+                                                <input type="button" class="inpuLong" value="–¬‘ˆ ‘—È/‘§ ‘" onclick="AlertAddEditPage('TTGDPressureTestEdit.aspx?id=');" />
+                                                <%--<input type="button" class="inpuLong" value="–¬‘ˆ ‘—È/‘§ ‘" onclick="window.location.href = 'TTGDPressureTestEdit.aspx'" />--%>
                                                 <asp:Button ID="BT_RelaceLoad" runat="server" Text="<%$ Resources:lang,ChongXinJiaZaiLieBiao%>" OnClick="BT_RelaceLoad_Click" CssClass="inpu" style="display:none;" />
                                             </td>
                                         </tr>
@@ -141,10 +141,10 @@
                                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,CaoZuo%>"></asp:Label>
                                                                 </HeaderTemplate>
                                                                 <ItemTemplate>
-                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="edit" CssClass="notTab">ÁºñËæë</asp:LinkButton>
-                                                                    <%--<a href='TTGDPressureTestEdit.aspx?id=<%# DataBinder.Eval(Container.DataItem,"ID") %>'>ÁºñËæë</a>--%>
-                                                                    <asp:LinkButton ID="LB_Del" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab">Âà†Èô§</asp:LinkButton>
-                                                                    <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="Âà†Èô§" />--%>
+                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="edit" CssClass="notTab">±‡º≠</asp:LinkButton>
+                                                                    <%--<a href='TTGDPressureTestEdit.aspx?id=<%# DataBinder.Eval(Container.DataItem,"ID") %>'>±‡º≠</a>--%>
+                                                                    <asp:LinkButton ID="LB_Del" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab">…æ≥˝</asp:LinkButton>
+                                                                    <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="Deleted" />--%>
                                                                     
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>

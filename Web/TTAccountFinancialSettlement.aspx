@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAccountFinancialSettlement.aspx.cs" Inherits="TTAccountFinancialSettlement" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAccountFinancialSettlement.aspx.cs" Inherits="TTAccountFinancialSettlement" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>è´¢åŠ¡æœŸæœ«è½¬è´¦</title>
+    <title>²ÆÎñÆÚÄ©×ªÕË</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -65,13 +65,13 @@
                                                                                     <table width="100%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                                                         <tr>
                                                                                             <td class="formItemBgStyle" style="text-align: right">
-                                                                                                <asp:Label ID="LB_CaiWuZhangTao" runat="server" Text="<%$ Resources:lang,CaiWuZhangTao%>"></asp:Label>ï¼š</td>
+                                                                                                <asp:Label ID="LB_CaiWuZhangTao" runat="server" Text="<%$ Resources:lang,CaiWuZhangTao%>"></asp:Label>£º</td>
                                                                                             <td class="formItemBgStyle" style="text-align: left">
                                                                                                 <asp:DropDownList ID="DL_Financial" runat="server" DataTextField="FinancialName" DataValueField="FinancialCode" AutoPostBack="True" OnSelectedIndexChanged="DL_Financial_SelectedIndexChanged">
                                                                                                 </asp:DropDownList>
                                                                                             </td>
                                                                                             <td align="right" class="formItemBgStyle">
-                                                                                                <asp:Label ID="LB_CaiWuQuJian" runat="server" Text="<%$ Resources:lang,CaiWuQuJian%>"></asp:Label>ï¼š</td>
+                                                                                                <asp:Label ID="LB_CaiWuQuJian" runat="server" Text="<%$ Resources:lang,CaiWuQuJian%>"></asp:Label>£º</td>
                                                                                             <td align="left" class="formItemBgStyle">
                                                                                                 <asp:DropDownList ID="DL_Interval" runat="server" DataTextField="IntervalName" DataValueField="IntervalCode">
                                                                                                 </asp:DropDownList>
@@ -117,27 +117,27 @@
                                                                                         OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="5" ShowHeader="False"
                                                                                         Width="100%">
                                                                                         <Columns>
-                                                                                            <asp:TemplateColumn HeaderText="è´¢åŠ¡å¸å¥—">
+                                                                                            <asp:TemplateColumn HeaderText="²ÆÎñÕÊÌ×">
                                                                                                 <ItemTemplate>
                                                                                                     <%# GetFinancialName(Eval("FinancialCode").ToString()) %>
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                             </asp:TemplateColumn>
-                                                                                            <asp:TemplateColumn HeaderText="è´¢åŠ¡åŒºé—´">
+                                                                                            <asp:TemplateColumn HeaderText="²ÆÎñÇø¼ä">
                                                                                                 <ItemTemplate>
                                                                                                     <%# GetIntervalName(Eval("IntervalCode").ToString()) %>
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                             </asp:TemplateColumn>
-                                                                                            <asp:BoundColumn DataField="AccountName" HeaderText="ä¼šè®¡ç§‘ç›®">
+                                                                                            <asp:BoundColumn DataField="AccountName" HeaderText="»á¼Æ¿ÆÄ¿">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="TotalAllMoney" HeaderText="é‡‘é¢">
+                                                                                            <asp:BoundColumn DataField="TotalAllMoney" HeaderText="½ð¶î">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:TemplateColumn HeaderText="å¸ç§">
+                                                                                            <asp:TemplateColumn HeaderText="±ÒÖÖ">
                                                                                                 <ItemTemplate>
                                                                                                     <%# GetFinancialCurrency(Eval("FinancialCode").ToString()) %>
                                                                                                 </ItemTemplate>
@@ -164,7 +164,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td class="formItemBgStyle" style="text-align: right">
-                                                            <asp:Label ID="LB_KuaiJiZhangTao" runat="server" Text="<%$ Resources:lang,KuaiJiZhangTao%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="LB_KuaiJiZhangTao" runat="server" Text="<%$ Resources:lang,KuaiJiZhangTao%>"></asp:Label>£º</td>
                                                         <td class="formItemBgStyle" colspan="1" style="text-align: left">
                                                             <asp:DropDownList ID="DL_FinancialID" runat="server" AutoPostBack="True" DataTextField="FinancialName" DataValueField="ID" OnSelectedIndexChanged="DL_FinancialID_SelectedIndexChanged" Visible="False">
                                                             </asp:DropDownList>
@@ -172,7 +172,7 @@
                                                             <asp:Label ID="lbl_FinancialName" runat="server"></asp:Label>
                                                         </td>
                                                         <td align="right" class="formItemBgStyle">
-                                                            <asp:Label ID="LB_KuaiJiQuJian" runat="server" Text="<%$ Resources:lang,KuaiJiQuJian%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="LB_KuaiJiQuJian" runat="server" Text="<%$ Resources:lang,KuaiJiQuJian%>"></asp:Label>£º</td>
                                                         <td align="left" class="formItemBgStyle">
                                                             <asp:DropDownList ID="DL_IntervalID" runat="server" DataTextField="IntervalName" DataValueField="ID" Visible="False">
                                                             </asp:DropDownList>
@@ -182,7 +182,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td class="formItemBgStyle" style="text-align: right">
-                                                            <asp:Label ID="LB_BenWeiBi" runat="server" Text="<%$ Resources:lang,BenWeiBi%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="LB_BenWeiBi" runat="server" Text="<%$ Resources:lang,BenWeiBi%>"></asp:Label>£º</td>
                                                         <td class="formItemBgStyle" style="text-align: left">
                                                             <asp:Label ID="lbl_CurrencyType" runat="server"></asp:Label>
                                                             <asp:Label ID="lbl_ExchangeRate" runat="server" Visible="False"></asp:Label>

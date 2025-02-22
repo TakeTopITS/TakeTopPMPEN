@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMHeatTreatReport.aspx.cs" Inherits="TTWPQMHeatTreatReport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMHeatTreatReport.aspx.cs" Inherits="TTWPQMHeatTreatReport" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -8,7 +8,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ÁÉ≠Â§ÑÁêÜÊä•Âëä</title>
+    <title>»»¥¶¿Ì±®∏Ê</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script src="js/allAHandler.js" type="text/javascript"></script>
@@ -170,7 +170,7 @@
                                 </table>
                                 <table cellpadding="2" cellspacing="0" class="formBgStyle" width="95%">
                                     <tr>
-                                        <td align="center" style="text-align: left" class="formItemBgStyle">&nbsp;&nbsp;&nbsp; <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,ReChuLiBaoGaoLieBiao%>"></asp:Label>Ôºö</td>
+                                        <td align="center" style="text-align: left" class="formItemBgStyle">&nbsp;&nbsp;&nbsp; <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,ReChuLiBaoGaoLieBiao%>"></asp:Label>£∫</td>
                                     </tr>
                                     <tr>
                                         <td align="center" class="formItemBgStyle">
@@ -222,7 +222,7 @@
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="ÁºñÂè∑">
+                                                    <asp:TemplateColumn HeaderText="±‡∫≈">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
@@ -230,45 +230,45 @@
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="WeldProCode" HeaderText="Â∑•Ëâ∫ËØÑÂÆöÁºñÁ†Å">
+                                                    <asp:BoundColumn DataField="WeldProCode" HeaderText="π§“’∆¿∂®±‡¬Î">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="HeatTreatReporter" HeaderText="ÁºñÂà∂‰∫∫">
+                                                    <asp:BoundColumn DataField="HeatTreatReporter" HeaderText="±‡÷∆»À">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="HeatTreatTime" HeaderText="ÁÉ≠Â§ÑÁêÜÊó∂Èó¥" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}">
+                                                    <asp:BoundColumn DataField="HeatTreatTime" HeaderText="»»¥¶¿Ì ±º‰" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="BoilingTemp" HeaderText="ÂÖ•ÁÇâÊ∏©Â∫¶">
+                                                    <asp:BoundColumn DataField="BoilingTemp" HeaderText="»Î¬ØŒ¬∂»">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="HeatingSpeed" HeaderText="ÂçáÊ∏©ÈÄüÂ∫¶">
+                                                    <asp:BoundColumn DataField="HeatingSpeed" HeaderText="…˝Œ¬ÀŸ∂»">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="CoolingSpeed" HeaderText="ÈôçÊ∏©ÈÄüÂ∫¶">
+                                                    <asp:BoundColumn DataField="CoolingSpeed" HeaderText="ΩµŒ¬ÀŸ∂»">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="CoolingMethod" HeaderText="ÂÜ∑Âç¥ÊñπÊ≥ï">
+                                                    <asp:BoundColumn DataField="CoolingMethod" HeaderText="CoolingMethod">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="12%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:HyperLinkColumn DataNavigateUrlField="TimeCurvePath" DataNavigateUrlFormatString="{0}" DataTextField="WeldProCode" HeaderText="ÁÉ≠Â§ÑÁêÜÊ∏©Â∫¶Êó∂Èó¥Êõ≤Á∫ø" Target="_blank">
+                                                    <asp:HyperLinkColumn DataNavigateUrlField="TimeCurvePath" DataNavigateUrlFormatString="{0}" DataTextField="WeldProCode" HeaderText="»»¥¶¿ÌŒ¬∂» ±º‰«˙œﬂ" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                     </asp:HyperLinkColumn>
-                                                    <asp:BoundColumn DataField="Remark" HeaderText="Â§áÊ≥®ËØ¥Êòé">
+                                                    <asp:BoundColumn DataField="Remark" HeaderText="±∏◊¢Àµ√˜">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />

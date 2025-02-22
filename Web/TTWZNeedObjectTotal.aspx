@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZNeedObjectTotal.aspx.cs" Inherits="TTWZNeedObjectTotal" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZNeedObjectTotal.aspx.cs" Inherits="TTWZNeedObjectTotal" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>éœ€æ–¹</title>
+    <title>Ðè·½</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -47,11 +47,11 @@
 
             if (objIsMark == "0" && objPurchaseEngineer == objUserCode) {
                 $("#BT_NewDelete").attr("class", "inpu");
-                $("#BT_NewDelete").removeAttr("disabled");                            //åˆ é™¤
+                $("#BT_NewDelete").removeAttr("disabled");                            //É¾³ý
             }
             else {
                 $("#BT_NewDelete").attr("disabled", "disabled");
-                $("#BT_NewDelete").removeClass("inpu");                            //åˆ é™¤
+                $("#BT_NewDelete").removeClass("inpu");                            //É¾³ý
             }
         }
 
@@ -110,11 +110,11 @@
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td align="left" class="formItemBgStyle">
-                                                            <%--<input type="button" class="inpuLong" value="æ–°å¢žéœ€æ–¹" onclick="AlertNeedObjectPage('TTWZNeedObjectDetail.aspx?id=')" />--%>
+                                                            <%--<input type="button" class="inpuLong" value="ÐÂÔöÐè·½" onclick="AlertNeedObjectPage('TTWZNeedObjectDetail.aspx?id=')" />--%>
                                                             <asp:Button ID="BT_NewAdd" runat="server" CssClass="inpu" Text="<%$ Resources:lang,XinZengXuFang%>" OnClick="BT_NewAdd_Click" />
                                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XuFangJiLuGong%>"></asp:Label><asp:Label ID="LB_RecordCount" runat="server" Text=""></asp:Label><asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,Tiao%>"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,JiLuCaoZuo%>"></asp:Label>ï¼š<asp:Button ID="BT_NewEdit" runat="server" CssClass="inpu" Text="<%$ Resources:lang,BianJi%>" OnClick="BT_NewEdit_Click" />&nbsp;
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,JiLuCaoZuo%>"></asp:Label>£º<asp:Button ID="BT_NewEdit" runat="server" CssClass="inpu" Text="<%$ Resources:lang,BianJi%>" OnClick="BT_NewEdit_Click" />&nbsp;
                                                             <asp:Button ID="BT_NewDelete" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ShanChu%>" OnClick="BT_NewDelete_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())"/>&nbsp;
                                                             <asp:Button ID="BT_NewBrowse" runat="server" CssClass="inpu" Text="<%$ Resources:lang,LiuLan%>" OnClick="BT_NewBrowse_Click" />&nbsp;
                                                             <asp:Button ID="BT_RelaceLoad" runat="server" Text="<%$ Resources:lang,ChongXinJiaZaiLieBiao%>" OnClick="BT_RelaceLoad_Click" CssClass="inpu" Style="display: none;" />
@@ -222,15 +222,15 @@
 
                                                                                 <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("ID")+"|"+Eval("IsMark")+"|"+Eval("PurchaseEngineer") %>' CommandName="click" CssClass="notTab">
                                                                                     <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,CaoZuo%>"></asp:Label></asp:LinkButton>
-                                                                                <%--<asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="edit" CssClass="notTab">ç¼–è¾‘</asp:LinkButton>--%>
-                                                                                <%--<asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab" Visible='<%# Eval("IsMark").ToString()=="0" ? true : false %>'>åˆ é™¤</asp:LinkButton>--%>
+                                                                                <%--<asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="edit" CssClass="notTab">±à¼­</asp:LinkButton>--%>
+                                                                                <%--<asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab" Visible='<%# Eval("IsMark").ToString()=="0" ? true : false %>'>É¾³ý</asp:LinkButton>--%>
 
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="NeedCode" HeaderText="éœ€æ–¹ç¼–å·">
+                                                                        <asp:BoundColumn DataField="NeedCode" HeaderText="Ðè·½±àºÅ">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="PurchaseEngineerName" HeaderText="é‡‡è´­å·¥ç¨‹å¸ˆ">
+                                                                        <asp:BoundColumn DataField="PurchaseEngineerName" HeaderText="²É¹º¹¤³ÌÊ¦">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:TemplateColumn>
@@ -278,10 +278,10 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("QQ").ToString(), 190) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="Vendee" HeaderText="ä¹°å—äºº">
+                                                                        <asp:BoundColumn DataField="Vendee" HeaderText="ÂòÊÜÈË">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="PersonDelegate" HeaderText="æ³•äººä»£è¡¨">
+                                                                        <asp:BoundColumn DataField="PersonDelegate" HeaderText="·¨ÈË´ú±í">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:TemplateColumn>
@@ -347,7 +347,7 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("InternetUrl").ToString(), 190) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="IsMark" HeaderText="ä½¿ç”¨æ ‡è®°">
+                                                                        <asp:BoundColumn DataField="IsMark" HeaderText="Ê¹ÓÃ±ê¼Ç">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
                                                                     </Columns>

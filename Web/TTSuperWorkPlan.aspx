@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSuperWorkPlan.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSuperWorkPlan.aspx.cs"
     Inherits="TTSuperWorkPlan" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
@@ -9,7 +9,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>È°πÁõÆÂ∑•‰ΩúËÆ°Âàí</title>
+    <title>œÓƒøπ§◊˜º∆ªÆ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 
     <style type="text/css">
@@ -153,7 +153,7 @@
                                     <tr>
                                         <td width="29" style="padding-left: 10px; padding-top: 5px; vertical-align: middle;" rowspan="2">
                                             <a href="javascript:ChangeMenu(0)">
-                                                <img src="Images/LeftRightArrow.png" width="18" height="24" border="0" alt="ÈöêËóèÂè≥ËæπÊ†è">
+                                                <img src="Images/LeftRightArrow.png" width="18" height="24" border="0" alt="“˛≤ÿ”“±ﬂ¿∏">
                                             </a>
                                             &nbsp;&nbsp;&nbsp;</td>
                                         <td style="padding-top: 5px;" width="2px" align="right">(
@@ -172,7 +172,7 @@
                                         </td>
                                         <td style="padding-top: 5px;">
                                             <asp:DropDownList ID="DL_VersionType" runat="server">
-                                                <asp:ListItem Value="Â§áÁî®" Text="<%$ Resources:lang,BeiYong%>" />
+                                                <asp:ListItem Value="Backup" Text="<%$ Resources:lang,BeiYong%>" />
                                             </asp:DropDownList>
                                         </td>
                                         <td style="padding-top: 5px;">
@@ -182,7 +182,7 @@
                                             <asp:Button ID="BT_DeleteVersion" runat="server" CssClass="inpu" OnClick="BT_DeleteVersion_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())"
                                                 Text="<%$ Resources:lang,Delete%>" />
                                         </td>
-                                        <td style="padding-top: 5px;">Ôºâ(<asp:Label ID="LB_CopyVersion" runat="server" Text="<%$ Resources:lang,CopyVersion%>" />Ôºö
+                                        <td style="padding-top: 5px;">£©(<asp:Label ID="LB_CopyVersion" runat="server" Text="<%$ Resources:lang,CopyVersion%>" />£∫
                                         </td>
                                         <td style="padding-top: 5px;">
                                             <asp:Label ID="LB_From" runat="server" Text="<%$ Resources:lang,From%>" />
@@ -199,16 +199,16 @@
                                             </asp:DropDownList>
                                         </td>
                                         <td style="padding-top: 5px;">
-                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,SynchronizingFiles%>" />Ôºö
+                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,SynchronizingFiles%>" />£∫
                                         </td>
                                         <td style="padding-top: 5px;">
                                             <asp:DropDownList ID="DL_PlanDocCopy" runat="server">
-                                                <asp:ListItem Text="<%$ Resources:lang,Shi%>" Value="ÊòØ" />
-                                                <asp:ListItem Text="<%$ Resources:lang,Fou%>" Value="Âê¶" />
+                                                <asp:ListItem Text="<%$ Resources:lang,Shi%>" Value="YES" />
+                                                <asp:ListItem Text="<%$ Resources:lang,Fou%>" Value="NO" />
                                             </asp:DropDownList>
                                         </td>
                                         <td style="padding-top: 6px;">
-                                            <asp:Button ID="BT_CopyVersion" runat="server" CssClass="inpu" OnClick="BT_CopyVersion_Click" OnClientClick="return confirm('Â§çÂà∂Êìç‰Ωú‰ºöÂÆåÂÖ®Ë¶ÜÁõñÂéüÊù•ÁöÑËÆ°ÂàíÊï∞ÊçÆÔºåÊÇ®Á°ÆÂÆöË¶ÅÂ§çÂà∂Âêó(Copy operation will delete all old plan data,Are you sure you want to copy it)Ôºü')"
+                                            <asp:Button ID="BT_CopyVersion" runat="server" CssClass="inpu" OnClick="BT_CopyVersion_Click" OnClientClick="return confirm('∏¥÷∆≤Ÿ◊˜ª·ÕÍ»´∏≤∏«‘≠¿¥µƒº∆ªÆ ˝æ›£¨ƒ˙»∑∂®“™∏¥÷∆¬(Copy operation will delete all old plan data,Are you sure you want to copy it)£ø')"
                                                 Text="<%$ Resources:lang,Copy%>" />
                                         </td>
 
@@ -254,16 +254,16 @@
                                                                     <td>
                                                                         <asp:DropDownList ID="DL_ChangeVersionType" runat="server" OnSelectedIndexChanged="DL_ChangeVersionType_SelectedIndexChanged"
                                                                             Width="50px" Height="21px" AutoPostBack="True">
-                                                                            <asp:ListItem Value="Âú®Áî®" Text="<%$ Resources:lang,ZaiYong%>"> </asp:ListItem>
-                                                                            <asp:ListItem Value="Â§áÁî®" Text="<%$ Resources:lang,BeiYong%>"> </asp:ListItem>
-                                                                            <asp:ListItem Value="Âü∫ÂáÜ" Text="<%$ Resources:lang,jiZhun%>" />
+                                                                            <asp:ListItem Value="InUse" Text="<%$ Resources:lang,ZaiYong%>"> </asp:ListItem>
+                                                                            <asp:ListItem Value="Backup" Text="<%$ Resources:lang,BeiYong%>"> </asp:ListItem>
+                                                                            <asp:ListItem Value="Baseline" Text="<%$ Resources:lang,jiZhun%>" />
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                     <td>
                                                                         <asp:DropDownList ID="DL_ExpandType" runat="server" Height="21px" AutoPostBack="True"
                                                                             OnSelectedIndexChanged="DL_ExpandType_SelectedIndexChanged">
-                                                                            <asp:ListItem Value="Â±ïÂºÄÊâÄÊúâ" Text="<%$ Resources:lang,ZhanKaiSuoYou%>" />
-                                                                            <asp:ListItem Value="Â±ïÂºÄÂèÇ‰∏é" Text="<%$ Resources:lang,ZhanKaiCanYu%>" />
+                                                                            <asp:ListItem Value="ExpandAll" Text="<%$ Resources:lang,ZhanKaiSuoYou%>" />
+                                                                            <asp:ListItem Value="ExpandJoin" Text="<%$ Resources:lang,ZhanKaiCanYu%>" />
                                                                         </asp:DropDownList>
                                                                     </td>
                                                             </tr>
@@ -271,7 +271,7 @@
                                                         <hr />
                                                         <div id="PlanTreeDivID" style="width: 300px; height: 600px; overflow: auto; vertical-align: top;">
                                                             <asp:TreeView ID="TreeView1" runat="server" NodeWrap="True" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged"
-                                                                ShowLines="True" Font-Bold="False" Font-Names="ÂÆã‰Ωì" Style="width: 300px; height: 100%;">
+                                                                ShowLines="True" Font-Bold="False" Font-Names="ÀŒÃÂ" Style="width: 300px; height: 100%;">
                                                                 <RootNodeStyle CssClass="rootNode" />
                                                                 <NodeStyle CssClass="treeNode" />
                                                                 <LeafNodeStyle CssClass="leafNode" />
@@ -279,13 +279,13 @@
                                                             </asp:TreeView>
                                                         </div>
                                                         <hr />
-                                                        <span style="font-size: x-small; text-align: center;">&nbsp;Ôºà
+                                                        <span style="font-size: x-small; text-align: center;">&nbsp;£®
                                                                         <asp:Label ID="LB_Red" runat="server" Text="<%$ Resources:lang,Red%>" />:
                                                                         <asp:Label ID="LB_Delay" runat="server" Text="<%$ Resources:lang,Delay%>" />,
                                                                         <asp:Label ID="LB_Bold" runat="server" Text="<%$ Resources:lang,Bold%>" />:
                                                                         <asp:Label ID="LB_Involved" runat="server" Text="<%$ Resources:lang,Involved%>" />,
                                                                         <asp:Label ID="LB_Black" runat="server" Text="<%$ Resources:lang,Black%>" />:
-                                                                        <asp:Label ID="LB_Normal" runat="server" Text="<%$ Resources:lang,Normal%>" />Ôºâ
+                                                                        <asp:Label ID="LB_Normal" runat="server" Text="<%$ Resources:lang,Normal%>" />£©
                                                         </span>
                                                         <hr />
                                                     </td>
@@ -300,7 +300,7 @@
                                                                                      Project<asp:Label ID="LB_PlanFile" runat="server" Text="<%$ Resources:lang,PlanFile%>" />:</strong>
                                                                     </span>
 
-                                                                    „Äê<asp:Label ID="Label7" runat="server" Text=""></asp:Label>„Äë
+                                                                    °æ<asp:Label ID="Label7" runat="server" Text=""></asp:Label>°ø
                                                                 </td>
                                                             </tr>
                                                             <tr>
@@ -368,10 +368,10 @@
                                                         </asp:Repeater>
                                                         <br />
                                                         <div style="width: 95%; text-align: right;">
-                                                            <asp:HyperLink ID="HL_DocumentForProjectPlanTemplate" runat="server" Text="-->ÂøÖ‰º†ÊñáÊ°£Ê®°Êùø" Target="_blank" Visible="false"></asp:HyperLink>
+                                                            <asp:HyperLink ID="HL_DocumentForProjectPlanTemplate" runat="server" Text="-->±ÿ¥´Œƒµµƒ£∞Â" Target="_blank" Visible="false"></asp:HyperLink>
                                                             &nbsp;
-                                                            --><asp:HyperLink ID="HL_WorkSchedule" runat="server" Text="‰∫§‰ªòËøõÂ∫¶"></asp:HyperLink>&nbsp;
-                                                            --><asp:HyperLink ID="HL_MemberWorkload" Text="Â∑•‰ΩúË¥üËç∑" runat="server" Target="_blank"></asp:HyperLink>
+                                                            --><asp:HyperLink ID="HL_WorkSchedule" runat="server" Text="Ωª∏∂Ω¯∂»"></asp:HyperLink>&nbsp;
+                                                            --><asp:HyperLink ID="HL_MemberWorkload" Text="π§◊˜∏∫∫…" runat="server" Target="_blank"></asp:HyperLink>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -385,12 +385,12 @@
                                                             <tr>
                                                                 <td style="text-align: left;">
                                                                     <asp:DropDownList ID="DL_PlanType" runat="server" CssClass="DDList">
-                                                                        <asp:ListItem Value="ËÆ°Âàí" Text="<%$ Resources:lang,JiHua%>" />
-                                                                        <asp:ListItem Value="ÈáåÁ®ãÁ¢ë" Text="<%$ Resources:lang,LiChengBei%>" />
+                                                                        <asp:ListItem Value="Plan" Text="<%$ Resources:lang,JiHua%>" />
+                                                                        <asp:ListItem Value="Milestone" Text="<%$ Resources:lang,LiChengBei%>" />
                                                                     </asp:DropDownList>
                                                                 </td>
                                                                 <td style="width: 15%; text-align: right;">
-                                                                    <asp:Label runat="server" ID="Label13" Text="<%$ Resources:lang,BuMen%>"></asp:Label>Ôºö</td>
+                                                                    <asp:Label runat="server" ID="Label13" Text="<%$ Resources:lang,BuMen%>"></asp:Label>£∫</td>
                                                                 <td style="text-align: left;">
 
                                                                     <asp:Label ID="LB_BelongDepartCode" runat="server"></asp:Label>
@@ -403,7 +403,7 @@
                                                                     </cc1:ModalPopupExtender>
                                                                 </td>
                                                                 <td style="text-align: right;">
-                                                                    <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,FuZeRen %>"></asp:Label>Ôºö</td>
+                                                                    <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,FuZeRen %>"></asp:Label>£∫</td>
                                                                 <td style="text-align: left;">
                                                                     <asp:DropDownList ID="DL_LeaderCode" runat="server" DataTextField="UserName" DataValueField="UserCode" AutoPostBack="true" OnSelectedIndexChanged="DL_LeaderCode_SelectedIndexChanged">
                                                                     </asp:DropDownList>
@@ -477,7 +477,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: right;" class="formItemBgStyle">
-                                                        <asp:Label ID="Label8" runat="server" Text="Ë¶ÅÊ±ÇÊï∞Èáè" />
+                                                        <asp:Label ID="Label8" runat="server" Text="“™«Û ˝¡ø" />
                                                     </td>
                                                     <td style="text-align: left;" class="formItemBgStyle">
 
@@ -491,14 +491,14 @@
 
                                                     </td>
                                                     <td style="text-align: right;" class="formItemBgStyle">
-                                                        <asp:Label ID="Label11" runat="server" Text="Â∑≤ÂÆåÊàêÈáè" />
+                                                        <asp:Label ID="Label11" runat="server" Text="“—ÕÍ≥…¡ø" />
                                                     </td>
                                                     <td style="text-align: left;" class="formItemBgStyle">
                                                         <NickLee:NumberBox ID="NB_FinishedNumber" runat="server" Amount="0" MaxAmount="1000000000000" MinAmount="0" Precision="2" Width="60px">
                                                                                  0 0.00
                                                         </NickLee:NumberBox>
 
-                                                        <%--  <asp:Label ID="Label12" runat="server" Text="Âçï‰Ωç" />Ôºö--%>
+                                                        <%--  <asp:Label ID="Label12" runat="server" Text="µ•Œª" />£∫--%>
                                                         <asp:DropDownList ID="DL_UnitName" runat="server" DataTextField="UnitName" DataValueField="UnitName" CssClass="DDList">
                                                         </asp:DropDownList>
 
@@ -615,7 +615,7 @@
                                                             Target="_blank" Text="<%$ Resources:lang,ShiShiWenDangTuiSong%>"></asp:HyperLink>
                                                         &nbsp;
                                                                      <asp:HyperLink ID="HL_RunProjectPlanByWF" runat="server" Enabled="False" Target="_blank" Visible="false"
-                                                                         Text="<%$ Resources:lang,hlRunProjectPlanByWF%>">Ôºâ</asp:HyperLink>
+                                                                         Text="<%$ Resources:lang,hlRunProjectPlanByWF%>">£©</asp:HyperLink>
                                                         &nbsp;
                                                                       <asp:HyperLink ID="HL_RelatedWorkFlowTemplate" runat="server" Target="_blank" Visible="false"
                                                                           Enabled="false" Text="<%$ Resources:lang,RelatedWFTemplate%>"></asp:HyperLink>

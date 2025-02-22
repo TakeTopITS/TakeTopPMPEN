@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPlanDetailDetail.aspx.cs" Inherits="TTWZPlanDetailDetail" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPlanDetailDetail.aspx.cs" Inherits="TTWZPlanDetailDetail" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>é¢†æ–™è®¡åˆ’æ˜Žç»†ç¼–è¾‘</title>
+    <title>ÁìÁÏ¼Æ»®Ã÷Ï¸±à¼­</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -59,13 +59,13 @@
                                                             <table class="formBgStyle">
                                                                 <tr style="display:none;">
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,WuZhiDaiMa%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,WuZhiDaiMa%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_ObjectCode" runat="server" ReadOnly="true"></asp:TextBox>
                                                                     </td>
                                                                     <td class="formItemBgStyle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,TiHuanDaiMa%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,TiHuanDaiMa%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_NewObjectCode" runat="server" ReadOnly="true"></asp:TextBox>
                                                                     </td>
@@ -77,9 +77,9 @@
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="6">
                                                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JiHuaMingXiJiLu%>"></asp:Label>&nbsp;
-                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>å…±<asp:Label ID="LB_ShowRecordCount" runat="server" Text="**"></asp:Label><asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>¹²<asp:Label ID="LB_ShowRecordCount" runat="server" Text="**"></asp:Label><asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                         <input id="Button1" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                                                type="button" value="å…³é—­" />
+                                                                                type="button" value="Closed" />
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -206,14 +206,14 @@
                                                                                         </HeaderTemplate>
                                                                                         <ItemTemplate>
 
-                                                                                            <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%#Eval("ID")+"|"+Eval("ObjectCode") %>' CommandName="click" CssClass="notTab">ä¿®æ”¹</asp:LinkButton>
+                                                                                            <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%#Eval("ID")+"|"+Eval("ObjectCode") %>' CommandName="click" CssClass="notTab">ÐÞ¸Ä</asp:LinkButton>
                                                                                             
                                                                                         </ItemTemplate>
                                                                                     </asp:TemplateColumn>
-                                                                                    <asp:BoundColumn DataField="PlanCode" HeaderText="è®¡åˆ’ç¼–å·">
+                                                                                    <asp:BoundColumn DataField="PlanCode" HeaderText="¼Æ»®±àºÅ">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="ObjectCode" HeaderText="ç‰©èµ„ä»£ç ">
+                                                                                    <asp:BoundColumn DataField="ObjectCode" HeaderText="Îï×Ê´úÂë">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:TemplateColumn>
@@ -252,16 +252,16 @@
                                                                                             <%# ShareClass.StringCutByRequire(Eval("Grade").ToString(), 190) %>
                                                                                         </ItemTemplate>
                                                                                     </asp:TemplateColumn>
-                                                                                    <asp:BoundColumn DataField="UnitName" HeaderText="è®¡é‡å•ä½">
+                                                                                    <asp:BoundColumn DataField="UnitName" HeaderText="¼ÆÁ¿µ¥Î»">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="3%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="PlanNumber" HeaderText="è®¡åˆ’æ•°é‡">
+                                                                                    <asp:BoundColumn DataField="PlanNumber" HeaderText="¼Æ»®ÊýÁ¿">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="3%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="ConvertNumber" HeaderText="æ¢ç®—æ•°é‡">
+                                                                                    <asp:BoundColumn DataField="ConvertNumber" HeaderText="»»ËãÊýÁ¿">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="3%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="PlanCost" HeaderText="é¢„è®¡è´¹ç”¨">
+                                                                                    <asp:BoundColumn DataField="PlanCost" HeaderText="Ô¤¼Æ·ÑÓÃ">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="3%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:TemplateColumn>
@@ -273,34 +273,34 @@
                                                                                             <%# ShareClass.StringCutByRequire(Eval("Remark").ToString(), 8) %>
                                                                                         </ItemTemplate>
                                                                                     </asp:TemplateColumn>
-                                                                                    <asp:BoundColumn DataField="ReceivedNumber" HeaderText="å·²ä¾›æ•°é‡">
+                                                                                    <asp:BoundColumn DataField="ReceivedNumber" HeaderText="ÒÑ¹©ÊýÁ¿">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="3%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="ShortNumber" HeaderText="ç¼ºå£æ•°é‡">
+                                                                                    <asp:BoundColumn DataField="ShortNumber" HeaderText="È±¿ÚÊýÁ¿">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="3%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="ShortConver" HeaderText="ç¼ºå£æ¢ç®—">
+                                                                                    <asp:BoundColumn DataField="ShortConver" HeaderText="È±¿Ú»»Ëã">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="3%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="PurchaseCode" HeaderText="é‡‡è´­ç¼–å·">
+                                                                                    <asp:BoundColumn DataField="PurchaseCode" HeaderText="²É¹º±àºÅ">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="ContractCode" HeaderText="åˆåŒç¼–å·">
+                                                                                    <asp:BoundColumn DataField="ContractCode" HeaderText="ºÏÍ¬±àºÅ">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="TurnCode" HeaderText="ç§»äº¤ç¼–å·">
+                                                                                    <asp:BoundColumn DataField="TurnCode" HeaderText="ÒÆ½»±àºÅ">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="StoreSign" HeaderText="å¹³åº“æ ‡å¿—">
+                                                                                    <asp:BoundColumn DataField="StoreSign" HeaderText="Æ½¿â±êÖ¾">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="Progress" HeaderText="è¿›åº¦">
+                                                                                    <asp:BoundColumn DataField="Progress" HeaderText="½ø¶È">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="OldCode" HeaderText="åŽŸä»£ç ">
+                                                                                    <asp:BoundColumn DataField="OldCode" HeaderText="Ô­´úÂë">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="IsMark" HeaderText="ä½¿ç”¨æ ‡è®°">
+                                                                                    <asp:BoundColumn DataField="IsMark" HeaderText="Ê¹ÓÃ±ê¼Ç">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                                     </asp:BoundColumn>
                                                                                 </Columns>
@@ -422,7 +422,7 @@
                                                                                             
                                                                                         </ItemTemplate>
                                                                                     </asp:TemplateColumn>
-                                                                                    <asp:BoundColumn DataField="ObjectCode" HeaderText="ç‰©èµ„ä»£ç ">
+                                                                                    <asp:BoundColumn DataField="ObjectCode" HeaderText="Îï×Ê´úÂë">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:TemplateColumn>
@@ -452,19 +452,19 @@
                                                                                             <%# ShareClass.StringCutByRequire(Eval("Criterion").ToString(), 8) %>
                                                                                         </ItemTemplate>
                                                                                     </asp:TemplateColumn>
-                                                                                    <asp:BoundColumn DataField="Grade" HeaderText="çº§åˆ«">
+                                                                                    <asp:BoundColumn DataField="Grade" HeaderText="¼¶±ð">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="UnitName" HeaderText="è®¡é‡å•ä½">
+                                                                                    <asp:BoundColumn DataField="UnitName" HeaderText="¼ÆÁ¿µ¥Î»">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="ConvertUnitName" HeaderText="æ¢ç®—å•ä½">
+                                                                                    <asp:BoundColumn DataField="ConvertUnitName" HeaderText="»»Ëãµ¥Î»">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="ConvertRatio" HeaderText="æ¢ç®—ç³»æ•°">
+                                                                                    <asp:BoundColumn DataField="ConvertRatio" HeaderText="»»ËãÏµÊý">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="5%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="CreaterName" HeaderText="åˆ›å»ºäºº">
+                                                                                    <asp:BoundColumn DataField="CreaterName" HeaderText="´´½¨ÈË">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:TemplateColumn>
@@ -485,13 +485,13 @@
                                                                                             <%# ShareClass.StringCutByRequire(Eval("ReferDesc").ToString(), 8) %>
                                                                                         </ItemTemplate>
                                                                                     </asp:TemplateColumn>
-                                                                                    <asp:BoundColumn DataField="Market" HeaderText="å¸‚åœºè¡Œæƒ…">
+                                                                                    <asp:BoundColumn DataField="Market" HeaderText="ÊÐ³¡ÐÐÇé">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="5%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="CollectTime" HeaderText="é‡‡é›†æ—¥æœŸ">
+                                                                                    <asp:BoundColumn DataField="CollectTime" HeaderText="²É¼¯ÈÕÆÚ">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="IsMark" HeaderText="ä½¿ç”¨æ ‡è®°">
+                                                                                    <asp:BoundColumn DataField="IsMark" HeaderText="Ê¹ÓÃ±ê¼Ç">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                     </asp:BoundColumn>
                                                                                 </Columns>

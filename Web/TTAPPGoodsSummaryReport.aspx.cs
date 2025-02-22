@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -40,7 +40,7 @@ public partial class TTAPPGoodsSummaryReport : System.Web.UI.Page
 
         try
         {
-            //扫码功能必须
+            //ɨ�빦�ܱ���
             signModel = TakeTopCore.WXHelper.GetWXInfo(Request.Url.ToString());
             if (signModel != null)
             {

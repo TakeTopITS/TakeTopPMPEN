@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -68,16 +68,16 @@ public partial class TTProjectTaskManage : System.Web.UI.Page
 
         TaskAssignRecordBLL taskAssignRecordBLL = new TaskAssignRecordBLL();
         strHQL = "from TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and taskAssignRecord.Status in ('计划','受理','处理中','待处理') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord) ";
-        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> '关闭')";
-        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.ProjectID = " + strProjectID + " and project.Status not in ('新建','隐藏','删除','归档')))";
+        strHQL += " and taskAssignRecord.Status in ('Plan','Accepted','InProgress','ToHandle') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord) ";
+        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.ProjectID = " + strProjectID + " and project.Status not in ('New','Hided','Deleted','Archived')))";
         strHQL += " and taskAssignRecord.EndDate::date-now()::date <= " + strEndDays;
         strHQL += " Order by taskAssignRecord.EndDate::date-now()::date ASC";
         lst = taskAssignRecordBLL.GetAllTaskAssignRecords(strHQL);
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
         LB_Sql1.Text = strHQL;
-        LB_TotalNumber1.Text = "记录数：" + lst.Count.ToString();
+        LB_TotalNumber1.Text = "��¼����" + lst.Count.ToString();
         SetTaskRecordColor(DataGrid1);
     }
 
@@ -93,52 +93,52 @@ public partial class TTProjectTaskManage : System.Web.UI.Page
         if (strProjectID != "0")
         {
             strHQL = "from TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and taskAssignRecord.Status in ('计划','受理','处理中','待处理') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord) ";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> '关闭')";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.ProjectID = " + strProjectID + " and project.Status not in ('新建','隐藏','删除','归档')))";
+            strHQL += " and taskAssignRecord.Status in ('Plan','Accepted','InProgress','ToHandle') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord) ";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.ProjectID = " + strProjectID + " and project.Status not in ('New','Hided','Deleted','Archived')))";
             strHQL += " Order by taskAssignRecord.ID DESC";
             lst = taskAssignRecordBLL.GetAllTaskAssignRecords(strHQL);
             DataGrid1.DataSource = lst;
             DataGrid1.DataBind();
             LB_Sql1.Text = strHQL;
-            LB_TotalNumber1.Text = "记录数：" + lst.Count.ToString();
+            LB_TotalNumber1.Text = "��¼����" + lst.Count.ToString();
             SetTaskRecordColor(DataGrid1);
 
             strHQL = "from TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and (taskAssignRecord.Status in ('拒绝','完成','挂起','取消','处理中') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord))";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> '关闭')";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.ProjectID = " + strProjectID + " and project.Status not in ('新建','隐藏','删除','归档')))";
+            strHQL += " and (taskAssignRecord.Status in ('�ܾ�','Completed','Suspended','Cancel','InProgress') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord))";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.ProjectID = " + strProjectID + " and project.Status not in ('New','Hided','Deleted','Archived')))";
             strHQL += " Order by taskAssignRecord.ID DESC";
             taskAssignRecordBLL = new TaskAssignRecordBLL();
             lst = taskAssignRecordBLL.GetAllTaskAssignRecords(strHQL);
             DataGrid2.DataSource = lst;
             DataGrid2.DataBind();
             LB_Sql2.Text = strHQL;
-            LB_TotalNumber2.Text = "记录数：" + lst.Count.ToString();
+            LB_TotalNumber2.Text = "��¼����" + lst.Count.ToString();
             SetTaskRecordColor(DataGrid2);
 
             strHQL = "from TaskAssignRecord as taskAssignRecord where taskAssignRecord.AssignManCode = " + "'" + strUserCode + "'";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> '关闭')";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.ProjectID = " + strProjectID + " and project.Status not in ('新建','隐藏','删除','归档')))";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.ProjectID = " + strProjectID + " and project.Status not in ('New','Hided','Deleted','Archived')))";
             strHQL += " Order by taskAssignRecord.ID DESC";
             taskAssignRecordBLL = new TaskAssignRecordBLL();
             lst = taskAssignRecordBLL.GetAllTaskAssignRecords(strHQL);
             DataGrid3.DataSource = lst;
             DataGrid3.DataBind();
             LB_Sql3.Text = strHQL;
-            LB_TotalNumber3.Text = "记录数：" + lst.Count.ToString();
+            LB_TotalNumber3.Text = "��¼����" + lst.Count.ToString();
             SetTaskRecordColor(DataGrid3);
 
             strHQL = "from TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
             strHQL += " and taskAssignRecord.ID in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord)";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> '关闭')";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.ProjectID = " + strProjectID + " and project.Status not in ('新建','隐藏','删除','归档')))";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.ProjectID = " + strProjectID + " and project.Status not in ('New','Hided','Deleted','Archived')))";
             strHQL += " Order by taskAssignRecord.ID DESC";
             lst = taskAssignRecordBLL.GetAllTaskAssignRecords(strHQL);
             DataGrid5.DataSource = lst;
             DataGrid5.DataBind();
             LB_Sql5.Text = strHQL;
-            LB_TotalNumber5.Text = "记录数：" + lst.Count.ToString();
+            LB_TotalNumber5.Text = "��¼����" + lst.Count.ToString();
             SetTaskRecordColor(DataGrid5);
 
             strProjectName = GetProjectName(strProjectID);
@@ -147,52 +147,52 @@ public partial class TTProjectTaskManage : System.Web.UI.Page
         else
         {
             strHQL = "from TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and taskAssignRecord.Status in ('计划','受理','处理中','待处理') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord) ";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> '关闭')";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('新建','隐藏','删除','归档')))";
+            strHQL += " and taskAssignRecord.Status in ('Plan','Accepted','InProgress','ToHandle') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord) ";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('New','Hided','Deleted','Archived')))";
             strHQL += " Order by taskAssignRecord.ID DESC";
             lst = taskAssignRecordBLL.GetAllTaskAssignRecords(strHQL);
             DataGrid1.DataSource = lst;
             DataGrid1.DataBind();
             LB_Sql1.Text = strHQL;
-            LB_TotalNumber1.Text = "记录数：" + lst.Count.ToString();
+            LB_TotalNumber1.Text = "��¼����" + lst.Count.ToString();
             SetTaskRecordColor(DataGrid1);
 
             strHQL = "from TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and (taskAssignRecord.Status in ('拒绝','完成','挂起','取消','处理中') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord))";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> '关闭')";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('新建','隐藏','删除','归档')))";
+            strHQL += " and (taskAssignRecord.Status in ('�ܾ�','Completed','Suspended','Cancel','InProgress') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord))";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('New','Hided','Deleted','Archived')))";
             strHQL += " Order by taskAssignRecord.ID DESC";
             taskAssignRecordBLL = new TaskAssignRecordBLL();
             lst = taskAssignRecordBLL.GetAllTaskAssignRecords(strHQL);
             DataGrid2.DataSource = lst;
             DataGrid2.DataBind();
             LB_Sql2.Text = strHQL;
-            LB_TotalNumber2.Text = "记录数：" + lst.Count.ToString();
+            LB_TotalNumber2.Text = "��¼����" + lst.Count.ToString();
             SetTaskRecordColor(DataGrid2);
 
             strHQL = "from TaskAssignRecord as taskAssignRecord where taskAssignRecord.AssignManCode = " + "'" + strUserCode + "'";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> '关闭')";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('新建','隐藏','删除','归档')))";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('New','Hided','Deleted','Archived')))";
             strHQL += " Order by taskAssignRecord.ID DESC";
             taskAssignRecordBLL = new TaskAssignRecordBLL();
             lst = taskAssignRecordBLL.GetAllTaskAssignRecords(strHQL);
             DataGrid3.DataSource = lst;
             DataGrid3.DataBind();
             LB_Sql3.Text = strHQL;
-            LB_TotalNumber3.Text = "记录数：" + lst.Count.ToString();
+            LB_TotalNumber3.Text = "��¼����" + lst.Count.ToString();
             SetTaskRecordColor(DataGrid3);
 
             strHQL = "from TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
             strHQL += " and taskAssignRecord.ID in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord)";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> '关闭')";
-            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('新建','隐藏','删除','归档')))";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+            strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('New','Hided','Deleted','Archived')))";
             strHQL += " Order by taskAssignRecord.ID DESC";
             lst = taskAssignRecordBLL.GetAllTaskAssignRecords(strHQL);
             DataGrid5.DataSource = lst;
             DataGrid5.DataBind();
             LB_Sql5.Text = strHQL;
-            LB_TotalNumber5.Text = "记录数：" + lst.Count.ToString();
+            LB_TotalNumber5.Text = "��¼����" + lst.Count.ToString();
             SetTaskRecordColor(DataGrid5);
 
             LB_QueryScope.Text = Resources.lang.ZZCXHWSY;
@@ -360,13 +360,13 @@ public partial class TTProjectTaskManage : System.Web.UI.Page
         {
             strHQL = "from ProjectTask as projectTask where projectTask.MakeManCode = " + "'" + strUserCode + "'";
             strHQL += " and projectTask.ProjectID = " + strProjectID;
-            strHQL += " and projectTask.ProjectID not in (select project.ProjectID from Project as project where project.Status in ('新建','隐藏','删除','归档'))";
+            strHQL += " and projectTask.ProjectID not in (select project.ProjectID from Project as project where project.Status in ('New','Hided','Deleted','Archived'))";
             strHQL += " Order by projectTask.TaskID DESC";
         }
         else
         {
             strHQL = "from ProjectTask as projectTask where projectTask.MakeManCode = " + "'" + strUserCode + "'";
-            strHQL += " and projectTask.ProjectID not in (select project.ProjectID from Project as project where project.Status in ('新建','隐藏','删除','归档'))";
+            strHQL += " and projectTask.ProjectID not in (select project.ProjectID from Project as project where project.Status in ('New','Hided','Deleted','Archived'))";
             strHQL += " Order by projectTask.TaskID DESC";
         }
         lst = projectTaskBLL.GetAllProjectTasks(strHQL);
@@ -374,20 +374,20 @@ public partial class TTProjectTaskManage : System.Web.UI.Page
         DataGrid4.DataBind();
         SetProTaskColor(DataGrid4);
         LB_Sql4.Text = strHQL;
-        LB_TotalNumber4.Text = "记录数：" + lst.Count.ToString();
+        LB_TotalNumber4.Text = "��¼����" + lst.Count.ToString();
 
         if (strProjectID != "0")
         {
             strHQL = "from ProjectTask as projectTask where projectTask.MakeManCode = " + "'" + strUserCode + "'";
             strHQL += " and projectTask.ProjectID = " + strProjectID;
-            strHQL += " and projectTask.ProjectID not in (select project.ProjectID from Project as project where project.Status in ('新建','隐藏','删除','归档'))";
+            strHQL += " and projectTask.ProjectID not in (select project.ProjectID from Project as project where project.Status in ('New','Hided','Deleted','Archived'))";
             strHQL += " and projectTask.TaskID not in (Select taskAssignRecord.TaskID From TaskAssignRecord as taskAssignRecord)";
             strHQL += " Order by projectTask.TaskID DESC";
         }
         else
         {
             strHQL = "from ProjectTask as projectTask where projectTask.MakeManCode = " + "'" + strUserCode + "'";
-            strHQL += " and projectTask.ProjectID not in (select project.ProjectID from Project as project where project.Status in ('新建','隐藏','删除','归档'))";
+            strHQL += " and projectTask.ProjectID not in (select project.ProjectID from Project as project where project.Status in ('New','Hided','Deleted','Archived'))";
             strHQL += " and projectTask.TaskID not in (Select taskAssignRecord.TaskID From TaskAssignRecord as taskAssignRecord)";
             strHQL += " Order by projectTask.TaskID DESC";
         }
@@ -396,7 +396,7 @@ public partial class TTProjectTaskManage : System.Web.UI.Page
         DataGrid6.DataBind();
         SetProTaskColor(DataGrid6);
         LB_Sql6.Text = strHQL;
-        LB_TotalNumber6.Text = "记录数：" + lst.Count.ToString();
+        LB_TotalNumber6.Text = "��¼����" + lst.Count.ToString();
     }
 
     protected void DataGrid1_PageIndexChanged(object sender, DataGridPageChangedEventArgs e)
@@ -511,9 +511,9 @@ public partial class TTProjectTaskManage : System.Web.UI.Page
         strUserCode = LB_UserCode.Text.Trim();
 
         strHQL = "from TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and taskAssignRecord.Status in ('计划','受理','处理中') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord) ";
-        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> '关闭')";
-        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('新建','隐藏','删除','归档')))";
+        strHQL += " and taskAssignRecord.Status in ('Plan','Accepted','InProgress') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord) ";
+        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('New','Hided','Deleted','Archived')))";
         strHQL += " Order by taskAssignRecord.ID DESC";
         taskAssignRecordBLL = new TaskAssignRecordBLL();
         lst = taskAssignRecordBLL.GetAllTaskAssignRecords(strHQL);
@@ -525,9 +525,9 @@ public partial class TTProjectTaskManage : System.Web.UI.Page
         SetTaskRecordColor(DataGrid1);
 
         strHQL = "from TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and (taskAssignRecord.Status in ('拒绝','完成','挂起','取消') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord))";
-        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> '关闭')";
-        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('新建','隐藏','删除','归档')))";
+        strHQL += " and (taskAssignRecord.Status in ('�ܾ�','Completed','Suspended','Cancel') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord))";
+        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('New','Hided','Deleted','Archived')))";
         strHQL += " Order by taskAssignRecord.ID DESC";
         taskAssignRecordBLL = new TaskAssignRecordBLL();
         lst = taskAssignRecordBLL.GetAllTaskAssignRecords(strHQL);
@@ -538,8 +538,8 @@ public partial class TTProjectTaskManage : System.Web.UI.Page
         SetTaskRecordColor(DataGrid2);
 
         strHQL = "from TaskAssignRecord as taskAssignRecord where taskAssignRecord.AssignManCode = " + "'" + strUserCode + "'";
-        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> '关闭')";
-        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('新建','隐藏','删除','归档')))";
+        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('New','Hided','Deleted','Archived')))";
         strHQL += " Order by taskAssignRecord.ID DESC";
         taskAssignRecordBLL = new TaskAssignRecordBLL();
         lst = taskAssignRecordBLL.GetAllTaskAssignRecords(strHQL);
@@ -552,8 +552,8 @@ public partial class TTProjectTaskManage : System.Web.UI.Page
 
         strHQL = "from TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
         strHQL += " and taskAssignRecord.ID in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord)";
-        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> '关闭')";
-        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('新建','隐藏','删除','归档')))";
+        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('New','Hided','Deleted','Archived')))";
         strHQL += " Order by taskAssignRecord.ID DESC";
         lst = taskAssignRecordBLL.GetAllTaskAssignRecords(strHQL);
         DataGrid5.DataSource = lst;
@@ -581,7 +581,7 @@ public partial class TTProjectTaskManage : System.Web.UI.Page
             dtNowDate = DateTime.Now;
             strStatus = dataGrid.Items[i].Cells[11].Text.Trim();
 
-            if (strStatus != "完成" | strStatus != "关闭")
+            if (strStatus != "Completed" | strStatus != "Closed")
             {
                 if (dtFinishedDate < dtNowDate)
                 {
@@ -603,7 +603,7 @@ public partial class TTProjectTaskManage : System.Web.UI.Page
             dtNowDate = DateTime.Now;
             strStatus = dataGrid.Items[i].Cells[6].Text.Trim();
 
-            if (strStatus != "完成" & strStatus != "已完成")
+            if (strStatus != "Completed" & strStatus != "�����")
             {
                 if (dtFinishedDate < dtNowDate)
                 {

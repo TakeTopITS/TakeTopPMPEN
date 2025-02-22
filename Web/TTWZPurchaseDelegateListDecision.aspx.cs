@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -35,14 +35,14 @@ public partial class TTWZPurchaseDelegateListDecision : System.Web.UI.Page
 
     private void DataBinder(string strPurchaseCode)
     {
-        //æŸ¥è¯¢é‡‡è´­æ–‡ä»¶ä¿¡æ¯ç»‘å®š
+        //²éÑ¯²É¹ºÎÄ¼şĞÅÏ¢°ó¶¨
         
         WZSupplierApplyCommentBLL wZSupplierApplyCommentBLL = new WZSupplierApplyCommentBLL();
         string strWZSupplierApplyCommentHQL = "from WZSupplierApplyComment as wZSupplierApplyComment where PurchaseCode = '" + strPurchaseCode + "' and ExpertCode = '" + strUserCode + "'";
         IList lstWZSupplierApplyComment = wZSupplierApplyCommentBLL.GetAllWZSupplierApplyComments(strWZSupplierApplyCommentHQL);
         if (lstWZSupplierApplyComment != null && lstWZSupplierApplyComment.Count == 1)
         {
-            //ä¿®æ”¹
+            //ĞŞ¸Ä
             WZSupplierApplyComment wZSupplierApplyComment = (WZSupplierApplyComment)lstWZSupplierApplyComment[0];
 
             //TXT_PurchaseCode.Text = wZSupplierApplyComment.PurchaseCode;
@@ -131,12 +131,12 @@ public partial class TTWZPurchaseDelegateListDecision : System.Web.UI.Page
         }
 
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ä¿å­˜æˆåŠŸï¼');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('±£´æ³É¹¦£¡');", true);
     }
 
     protected void BT_Assessment_Click(object sender, EventArgs e)
     {
-        //åˆ¤æ–­æ˜¯å¦å·²ç»æäº¤
+        //ÅĞ¶ÏÊÇ·ñÒÑ¾­Ìá½»
         string strPurchaseHQL = "from WZPurchase as wZPurchase where PurchaseCode = '" + HF_PurchaseCode.Value + "'";
         WZPurchaseBLL wZPurchaseBLL = new WZPurchaseBLL();
         IList lstPurchase = wZPurchaseBLL.GetAllWZPurchases(strPurchaseHQL);
@@ -144,9 +144,9 @@ public partial class TTWZPurchaseDelegateListDecision : System.Web.UI.Page
         {
             WZPurchase wZPurchase = (WZPurchase)lstPurchase[0];
 
-            if (wZPurchase.Progress != "è¯„æ ‡")
+            if (wZPurchase.Progress != "ÆÀ±ê")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('é‡‡è´­æ–‡ä»¶è¿›åº¦ä¸ä¸ºè¯„æ ‡ï¼Œä¸å…è®¸ä¿®æ”¹ï¼');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('²É¹ºÎÄ¼ş½ø¶È²»ÎªÆÀ±ê£¬²»ÔÊĞíĞŞ¸Ä£¡');", true);
                 return;
             }
 

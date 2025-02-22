@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserPlanList.aspx.cs" Inherits="TTUserPlanList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserPlanList.aspx.cs" Inherits="TTUserPlanList" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -218,7 +218,7 @@
                                                                             <tr>
                                                                                 <td align="left" valign="top">
                                                                                     <cc2:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" runat="server" ActiveTabIndex="0" Width="90%">
-                                                                                        <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="æ‰§è¡Œæ—¥å¿—" TabIndex="0">
+                                                                                        <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="Ö´ÐÐÈÕÖ¾" TabIndex="0">
                                                                                             
 
                                                                                             <HeaderTemplate>
@@ -390,7 +390,7 @@
                                                                                             
 
                                                                                         </cc2:TabPanel>
-                                                                                        <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="å…³é”®ç›®æ ‡" TabIndex="1">
+                                                                                        <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="¹Ø¼üÄ¿±ê" TabIndex="1">
                                                                                             
 
                                                                                             <HeaderTemplate>
@@ -499,7 +499,7 @@
                                                                                                                 <Columns>
                                                                                                                     
 
-                                                                                                                    <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                                                                                    <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                                                                                                                         
 
                                                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
@@ -508,7 +508,7 @@
                                                                                                                     </asp:BoundColumn>
                                                                                                                     
 
-                                                                                                                    <asp:BoundColumn DataField="Target" HeaderText="ç›®æ ‡">
+                                                                                                                    <asp:BoundColumn DataField="Target" HeaderText="Ä¿±ê">
                                                                                                                         
 
                                                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="70%" />
@@ -517,7 +517,7 @@
                                                                                                                     </asp:BoundColumn>
                                                                                                                     
 
-                                                                                                                    <asp:TemplateColumn HeaderText="è¿›åº¦">
+                                                                                                                    <asp:TemplateColumn HeaderText="½ø¶È">
                                                                                                                         
 
                                                                                                                         <ItemTemplate>
@@ -571,7 +571,7 @@
                                                                                             
 
                                                                                         </cc2:TabPanel>
-                                                                                        <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="é¢†å¯¼è¯„æ ¸" TabIndex="2">
+                                                                                        <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="Áìµ¼ÆÀºË" TabIndex="2">
                                                                                             
 
                                                                                             <HeaderTemplate>
@@ -789,7 +789,7 @@
                                                                                             
 
                                                                                         </cc2:TabPanel>
-                                                                                        <cc2:TabPanel ID="TabPanel4" runat="server" HeaderText="è¯„è®ºè®°å½•" TabIndex="0">
+                                                                                        <cc2:TabPanel ID="TabPanel4" runat="server" HeaderText="ÆÀÂÛ¼ÇÂ¼" TabIndex="0">
                                                                                             
 
                                                                                             <HeaderTemplate>
@@ -1124,7 +1124,7 @@
                                                                                                         </asp:ChartArea>
                                                                                                     </ChartAreas>
                                                                                                     <Titles>
-                                                                                                        <asp:Title Name="æ ‡é¢˜" Alignment="TopCenter" IsDockedInsideChartArea="false" DockedToChartArea="ChartArea1">
+                                                                                                        <asp:Title Name="±êÌâ" Alignment="TopCenter" IsDockedInsideChartArea="false" DockedToChartArea="ChartArea1">
                                                                                                         </asp:Title>
                                                                                                     </Titles>
                                                                                                 </asp:Chart>--%>

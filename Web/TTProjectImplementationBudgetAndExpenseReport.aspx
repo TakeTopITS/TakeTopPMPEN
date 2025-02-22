@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectImplementationBudgetAndExpenseReport.aspx.cs" Inherits="TTProjectImplementationBudgetAndExpenseReport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectImplementationBudgetAndExpenseReport.aspx.cs" Inherits="TTProjectImplementationBudgetAndExpenseReport" %>
 
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -8,7 +8,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>È°πÁõÆÊàêÂëò‰ªªÂä°Êä•Ë°®</title>
+    <title>œÓƒø≥…‘±»ŒŒÒ±®±Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/My97DatePicker/WdatePicker.js"></script>
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -46,7 +46,7 @@
                                 <table width="900px" border="0" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td>
-                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuMingChen%>"></asp:Label>Ôºö
+                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuMingChen%>"></asp:Label>£∫
                                         </td>
                                         <td align="left">
                                             <asp:Label ID="LB_ProjectID" runat="server"></asp:Label>
@@ -59,7 +59,7 @@
                                         </td>
 
                                         <td>
-                                            <asp:Label ID="Label37" runat="server" Text="È°πÁõÆÁªèÁêÜ"></asp:Label>Ôºö
+                                            <asp:Label ID="Label37" runat="server" Text="œÓƒøæ≠¿Ì"></asp:Label>£∫
                                         </td>
                                         <td align="left">
                                             <asp:TextBox ID="TB_PMName" runat="server"></asp:TextBox>
@@ -68,7 +68,7 @@
 
                                     <tr>
                                         <td>
-                                            <asp:Label ID="Label5" runat="server" Text="ÂºÄÂßãÊó∂Èó¥"></asp:Label>Ôºö
+                                            <asp:Label ID="Label5" runat="server" Text="ø™ º ±º‰"></asp:Label>£∫
                                         </td>
                                         <td align="left">
                                             <asp:TextBox ID="DLC_BeginDate" ReadOnly="false" runat="server"></asp:TextBox>
@@ -76,7 +76,7 @@
                                             </ajaxToolkit:CalendarExtender>
                                         </td>
                                         <td>
-                                            <asp:Label ID="Label2" runat="server" Text="ÁªìÊùüÊó•Êúü"></asp:Label>Ôºö
+                                            <asp:Label ID="Label2" runat="server" Text="Ω· ¯»’∆⁄"></asp:Label>£∫
                                         </td>
                                         <td align="left">
                                             <asp:TextBox ID="DLC_EndDate" ReadOnly="false" runat="server"></asp:TextBox>
@@ -97,14 +97,14 @@
                                         </td>
                                         <td align="center" style="padding-top: 5px;">
                                             <a href="#" onclick="preview1()">
-                                                <img src="ImagesSkin/print.gif" alt="ÊâìÂç∞" border="0" />
+                                                <img src="ImagesSkin/print.gif" alt="¥Ú”°" border="0" />
                                         </td>
                                         <td align="left" style="padding-top: 5px;"></td>
                                     </tr>
 
                                     <tr style="display: none;">
                                         <td>
-                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ZuBie%>"></asp:Label>Ôºö
+                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ZuBie%>"></asp:Label>£∫
                                         </td>
                                         <td>
                                             <asp:TextBox ID="TB_BelongDepartName" runat="server" Width="125px"></asp:TextBox>
@@ -113,7 +113,7 @@
                                             <asp:Label ID="LB_BelongDepartCode" runat="server" Visible="false"></asp:Label>
                                         </td>
                                         <td>
-                                            <asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>Ôºö
+                                            <asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£∫
                                         </td>
                                         <td align="left">
                                             <asp:DropDownList ID="DL_Status" DataTextField="HomeName" DataValueField="Status" runat="server">
@@ -142,21 +142,21 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: right; padding-right: 20px;">
-                                            <asp:Label ID="Labe7" runat="server" Text="È¢ÑÁÆóÊÄªÈ¢ù"></asp:Label>
-                                            Ôºö<asp:Label ID="LB_TotalBudgetAmount" runat="server"></asp:Label>&nbsp; 
-                                <asp:Label ID="Label9" runat="server" Text="ÂÖÉ"></asp:Label>
+                                            <asp:Label ID="Labe7" runat="server" Text="‘§À„◊‹∂Ó"></asp:Label>
+                                            £∫<asp:Label ID="LB_TotalBudgetAmount" runat="server"></asp:Label>&nbsp; 
+                                <asp:Label ID="Label9" runat="server" Text="‘™"></asp:Label>
                                             &nbsp;&nbsp;
-                                <asp:Label ID="Label10" runat="server" Text="Ë¥πÁî®ÊÄªÈ¢ù"></asp:Label>
-                                            Ôºö<asp:Label ID="LB_TotalExpenseAmount" runat="server"></asp:Label>&nbsp; 
-                                <asp:Label ID="Label12" runat="server" Text="ÂÖÉ"></asp:Label>
+                                <asp:Label ID="Label10" runat="server" Text="∑—”√◊‹∂Ó"></asp:Label>
+                                            £∫<asp:Label ID="LB_TotalExpenseAmount" runat="server"></asp:Label>&nbsp; 
+                                <asp:Label ID="Label12" runat="server" Text="‘™"></asp:Label>
                                             &nbsp;&nbsp;
-                                   <asp:Label ID="Label7" runat="server" Text="Â∑ÆÈ¢ù"></asp:Label>
-                                            Ôºö<asp:Label ID="LB_BudgetExpenseAmount" runat="server"></asp:Label>&nbsp; 
-                                <asp:Label ID="Label11" runat="server" Text="ÂÖÉ"></asp:Label>
+                                   <asp:Label ID="Label7" runat="server" Text="≤Ó∂Ó"></asp:Label>
+                                            £∫<asp:Label ID="LB_BudgetExpenseAmount" runat="server"></asp:Label>&nbsp; 
+                                <asp:Label ID="Label11" runat="server" Text="‘™"></asp:Label>
                                             &nbsp;&nbsp;
-                                   <asp:Label ID="Label4" runat="server" Text="ËÆ∞ÂΩïÊï∞"></asp:Label>
-                                            Ôºö<asp:Label ID="LB_ResultNumber" runat="server"></asp:Label>&nbsp; 
-                                <asp:Label ID="Label6" runat="server" Text="Êù°"></asp:Label>
+                                   <asp:Label ID="Label4" runat="server" Text="º«¬º ˝"></asp:Label>
+                                            £∫<asp:Label ID="LB_ResultNumber" runat="server"></asp:Label>&nbsp; 
+                                <asp:Label ID="Label6" runat="server" Text="Ãı"></asp:Label>
                                         </td>
                                     </tr>
                                     <tr>
@@ -188,7 +188,7 @@
                                                     </asp:ChartArea>
                                                 </ChartAreas>
                                                 <Titles>
-                                                    <asp:Title Alignment="TopCenter" DockedToChartArea="ChartArea1" IsDockedInsideChartArea="false" Name="Ê†áÈ¢ò">
+                                                    <asp:Title Alignment="TopCenter" DockedToChartArea="ChartArea1" IsDockedInsideChartArea="false" Name="±ÍÃ‚">
                                                     </asp:Title>
                                                 </Titles>
                                             </asp:Chart>--%>

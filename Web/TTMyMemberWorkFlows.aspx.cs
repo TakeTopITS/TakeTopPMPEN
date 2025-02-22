@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -20,8 +20,8 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
     string strLangCode;
     protected void Page_Load(object sender, EventArgs e)
     {
-        //ÈíüÁ§ºÊúà‰ΩúÂìÅÔºàjack.erp@gmail.com)
-        //Ê≥∞È°∂ËΩØ‰ª∂(TakeTop Software)
+        //÷”¿Ò‘¬◊˜∆∑£®jack.erp@gmail.com)
+        //Ã©∂•»Ìº˛(TakeTop Software)
 
         string strUserCode = Session["UserCode"].ToString();
         string strHQL;
@@ -34,14 +34,14 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
         LB_UserName.Text = strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "Êü•ÁúãÊàêÂëòÂ∑•‰ΩúÊµÅ", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "≤Èø¥≥…‘±π§◊˜¡˜", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
             return;
         }
 
-        //ËÆæÁΩÆÊó•Á®ãÊéß‰ª∂ËØ≠Ë®Ä
+        //…Ë÷√»’≥Ãøÿº˛”Ô—‘
         Culture = ShareClass.GetDayPilotLanguage();
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
@@ -63,7 +63,7 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
 
             strHQL = "from WLStatus as wlStatus ";
             strHQL += " Where wlStatus.LangCode = " + "'" + strLangCode + "'";
-            strHQL += " and wlStatus.Status <> 'Êñ∞Âª∫'";
+            strHQL += " and wlStatus.Status <> 'New'";
             strHQL += " order by wlStatus.SortNumber ASC";
             WLStatusBLL wlStatusBLL = new WLStatusBLL();
             lst = wlStatusBLL.GetAllWLStatuss(strHQL);
@@ -73,7 +73,7 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
 
             strHQL = "from WorkFlow as workFlow ";
             strHQL += " Where workFlow.CreatorCode in (Select memberLevel.UnderCode From MemberLevel as memberLevel Where memberLevel.WorkflowVisible = 'YES' and memberLevel.UserCode = " + "'" + strUserCode + "'" + ")";
-            strHQL += " and workFlow.Status <> 'Êñ∞Âª∫'";
+            strHQL += " and workFlow.Status <> 'New'";
             strHQL += " Order by workFlow.WLID DESC";
             WorkFlowBLL workFlowBLL = new WorkFlowBLL();
             lst = workFlowBLL.GetAllWorkFlows(strHQL);
@@ -98,7 +98,7 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
 
         strWFType = DL_WLType.SelectedValue.Trim();
 
-        strHQL = "Select TemName From T_WorkFlowTemplate Where Authority = 'ÊâÄÊúâ'";
+        strHQL = "Select TemName From T_WorkFlowTemplate Where Authority = 'All'";
         strHQL += " and Type = " + "'" + strWFType + "'";
         strHQL += " Order by CreateTime DESC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTemplate");
@@ -139,7 +139,7 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
 
         strHQL = "from WorkFlow as workFlow ";
         strHQL += " Where workFlow.CreatorCode in (Select memberLevel.UnderCode From MemberLevel as memberLevel Where memberLevel.WorkflowVisible = 'YES' and memberLevel.UserCode = " + "'" + strUserCode + "'" + ")";
-        strHQL += " and workFlow.Status <> 'Êñ∞Âª∫'";
+        strHQL += " and workFlow.Status <> 'New'";
         strHQL += " Order by workFlow.WLID DESC";
         WorkFlowBLL workFlowBLL = new WorkFlowBLL();
         lst = workFlowBLL.GetAllWorkFlows(strHQL);
@@ -194,7 +194,7 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
         {
             strHQL = "from WorkFlow as workFlow where workFlow.Status = " + "'" + strStatus + "'";
             strHQL += " and workFlow.CreatorCode in (Select memberLevel.UnderCode From MemberLevel as memberLevel Where memberLevel.WorkflowVisible = 'YES' and memberLevel.UserCode = " + "'" + strUserCode + "'" + ")";
-            strHQL += " and workFlow.Status <> 'Êñ∞Âª∫'";
+            strHQL += " and workFlow.Status <> 'New'";
             strHQL += " Order by workFlow.WLID DESC";
 
             LB_QueryScope.Text = Resources.lang.ZZGZLSQZSY + Resources.lang.ZhuangTai + ":" + strStatus;
@@ -205,7 +205,7 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
             strHQL = "from WorkFlow as workFlow where workFlow.CreatorCode = " + "'" + strOperatorCode + "'";
             strHQL += " and workFlow.CreatorCode in (select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + ")";
             strHQL += " and " + "workFlow.Status = " + "'" + strStatus + "'";
-            strHQL += " and workFlow.Status <> 'Êñ∞Âª∫'";
+            strHQL += " and workFlow.Status <> 'New'";
             strHQL += " order by workFlow.WLID DESC";
             LB_QueryScope.Text = Resources.lang.ZZApplicant + strOperatorCode + strOperatorName + Resources.lang.XuQiuZhuangTai + ":" + strStatus;
         }
@@ -252,7 +252,7 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
             strHQL += " and workFlow.WLName Like " + "'" + strWFName + "'";
             strHQL += " and workFlow.TemName Like " + "'" + strWFTemName + "'";
             strHQL += " and workFlow.CreatorCode in (Select memberLevel.UnderCode From MemberLevel as memberLevel Where memberLevel.WorkflowVisible = 'YES' and memberLevel.UserCode = " + "'" + strUserCode + "'" + ")";
-            strHQL += " and workFlow.Status <> 'Êñ∞Âª∫'";
+            strHQL += " and workFlow.Status <> 'New'";
             strHQL += " Order by workFlow.WLID DESC";
             LB_QueryScope.Text = Resources.lang.ZZGZLSQZSY + Resources.lang.LeiXin + ":" + strWLType;
         }
@@ -263,7 +263,7 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
                 strHQL = "from WorkFlow as workFlow where workFlow.CreatorCode = " + "'" + strOperatorCode + "'" + " and " + "workFlow.WLType Like " + "'" + strWLType + "'";
                 strHQL += " and workFlow.WLName Like " + "'" + strWFName + "'";
                 strHQL += " and workFlow.TemName Like " + "'" + strWFTemName + "'";
-                strHQL += " and workFlow.Status <> 'Êñ∞Âª∫'";
+                strHQL += " and workFlow.Status <> 'New'";
                 strHQL += " order by workFlow.WLID DESC";
                 LB_QueryScope.Text = Resources.lang.ZZApplicant + strOperatorCode + " " + strOperatorName + Resources.lang.LeiXin + ":" + strWLType;
             }
@@ -272,7 +272,7 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
                 strHQL = "from WorkFlow as workFlow where workFlow.CreatorCode = " + "'" + strOperatorCode + "'" + " and " + "workFlow.WLType Like " + "'" + strWLType + "'" + " and workFlow.Status = " + "'" + strStatus + "'";
                 strHQL += " and workFlow.WLName Like " + "'" + strWFName + "'";
                 strHQL += " and workFlow.TemName Like " + "'" + strWFTemName + "'";
-                strHQL += " and workFlow.Status <> 'Êñ∞Âª∫'";
+                strHQL += " and workFlow.Status <> 'New'";
                 strHQL += " order by workFlow.WLID DESC";
                 LB_QueryScope.Text = Resources.lang.ZZApplicant + strOperatorCode + " " + strOperatorName + Resources.lang.LeiXin + ":" + strWLType + Resources.lang.ZhuangTai + strStatus;
             }
@@ -299,7 +299,7 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
         strStartTime = DateTime.Parse(DLC_StartTime.Text).ToString("yyyyMMdd");
         strEndTime = DateTime.Parse(DLC_EndTime.Text).ToString("yyyyMMdd");
 
-        LB_QueryScope.Text = "Â∑•‰ΩúÊµÅÁºñÂè∑Ôºö" + strWFID;
+        LB_QueryScope.Text = "π§◊˜¡˜±‡∫≈£∫" + strWFID;
 
         LB_DepartCode.Text = "";
         LB_OperatorCode.Text = "";
@@ -312,7 +312,7 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
             strHQL = "from WorkFlow as workFlow where workFlow.WLID = " + strWFID;
             strHQL += " and to_char(workFlow.CreateTime,'yyyymmdd') >= " + "'" + strStartTime + "'" + " and to_char(workFlow.CreateTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
             strHQL += " and workFlow.CreatorCode in (Select memberLevel.UnderCode From MemberLevel as memberLevel Where memberLevel.WorkflowVisible = 'YES' and memberLevel.UserCode = " + "'" + strUserCode + "'" + ")";
-            strHQL += " and workFlow.Status <> 'Êñ∞Âª∫'";
+            strHQL += " and workFlow.Status <> 'New'";
             strHQL += " Order by workFlow.WLID DESC";
             WorkFlowBLL workFlowBLL = new WorkFlowBLL();
             lst = workFlowBLL.GetAllWorkFlows(strHQL);

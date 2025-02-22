@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Data;
 using System.Web;
 using System.Web.UI;
@@ -101,7 +101,7 @@ public partial class TakeTopSiteLeft : System.Web.UI.Page
                 isFirst = true;
             }
 
-            //澧炲姞鍎垮瓙妯＄粍
+            //增加儿子模组
             strHtml += "<div class=\"text\">";
             dvModule.RowFilter = "ParentModule='" + strModuleName + "'";
 
@@ -122,7 +122,7 @@ public partial class TakeTopSiteLeft : System.Web.UI.Page
                     strChildPageName = strChildPageName + "?ModuleName=" + strChildModuleName + "&HomeModuleName=" + strChildHomeModuleName + "&ModuleType=" + strChildModuleType;
                 }
 
-                //澧炲姞瀛欏瓙妯＄粍
+                //增加孙子模组
                 dvModule.RowFilter = "ParentModule='" + strChildModuleName + "'";
 
                 if (dvModule.Count > 0)
@@ -184,7 +184,7 @@ public partial class TakeTopSiteLeft : System.Web.UI.Page
 
     protected bool CheckUserLoginManage(string strUserCode, string strUserName)
     {
-        //鏍规嵁鐢ㄦ埛鐧诲綍IP鍒ゆ柇鏄惁闃绘鐢ㄦ埛鐧诲綍绯荤粺
+        //根据用户登录IP判断是否阻止用户登录系统
         string strHQL;
         string strLoginID, strIsAllMember, strIsForbidLogin, strLoginUserCode;
         string strMsg, strIP, strUserHostAddress;

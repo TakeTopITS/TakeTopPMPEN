@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserPWDFindSAAS.aspx.cs" Inherits="TTUserPWDFindSAAS" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserPWDFindSAAS.aspx.cs" Inherits="TTUserPWDFindSAAS" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
 
@@ -37,7 +37,7 @@
         $(function () {
         });
 
-        //æ£€æµ‹è®¾å¤‡æ˜¯å¦æ˜¯ç§»åŠ¨ç«¯
+        //¼ì²âÉè±¸ÊÇ·ñÊÇÒÆ¶¯¶Ë
         function detectmob() {
             if (navigator.userAgent.match(/Android/i)
                 || navigator.userAgent.match(/webOS/i)

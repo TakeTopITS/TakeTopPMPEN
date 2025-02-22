@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.ComponentModel;
@@ -24,14 +24,14 @@ public partial class TTAPPUNSubmitPlanReviewedByMe : System.Web.UI.Page
 
         strUserCode = Session["UserCode"].ToString();
 
-        //this.Title = "å¾…æˆ‘å®¡æ ¸ä½†æ²¡æäº¤çš„è®¡åˆ’";
+        //this.Title = "´ıÎÒÉóºËµ«Ã»Ìá½»µÄ¼Æ»®";
         if (Page.IsPostBack == false)
         {
             strHQL = " Select * From T_Plan Where to_char(StartTime,'yyyymmdd') <= to_char(now(),'yyyymmdd') ";
             strHQL += " and  to_char(EndTime,'yyyymmdd') >= to_char(now(),'yyyymmdd') ";
             strHQL += " and (PlanID in (Select PlanID From T_Plan_RelatedLeader Where LeaderCode =  '" + strUserCode + "') ";
             strHQL += " or UserCode in (Select UnderCode From T_MemberLevel Where UserCode ='" + strUserCode + "'))";
-            strHQL += " and  SubmitTime = '' and Status = 'æ–°å»º' ";
+            strHQL += " and  SubmitTime = '' and Status = 'New' ";
             strHQL += " Order By StartTime DESC,EndTime ASC";
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_Plan");
 

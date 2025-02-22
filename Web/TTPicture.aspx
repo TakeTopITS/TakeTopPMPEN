@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPicture.aspx.cs" Inherits="TTPicture" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPicture.aspx.cs" Inherits="TTPicture" %>
 
 <!DOCTYPE html>
 
@@ -22,8 +22,8 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <input type="button" value="åŽ»æ‹ç…§" onclick="AlertPicturePage('TTPictureFile.aspx')" /><br />
-            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,BaoCunPaiZhaoLuJing%>"></asp:Label>ï¼š<asp:TextBox ID="TXT_PictureUrl" runat="server" Width="500"></asp:TextBox>
+            <input type="button" value="È¥ÅÄÕÕ" onclick="AlertPicturePage('TTPictureFile.aspx')" /><br />
+            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,BaoCunPaiZhaoLuJing%>"></asp:Label>£º<asp:TextBox ID="TXT_PictureUrl" runat="server" Width="500"></asp:TextBox>
 
         </div>
     </form>

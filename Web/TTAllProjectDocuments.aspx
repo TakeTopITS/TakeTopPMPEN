@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAllProjectDocuments.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAllProjectDocuments.aspx.cs"
     Inherits="TTAllProjectDocuments" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -38,12 +38,12 @@
                                                     <td width="29">
                                                         <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%></td>
                                                     <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                        <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,XiangMuWenDangGuanLiZongHeChaXun%>"></asp:Label>ï¼š<span><asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,WenJianLeiXing%>"></asp:Label>ï¼š<asp:DropDownList ID="DL_DocType"
+                                                        <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,XiangMuWenDangGuanLiZongHeChaXun%>"></asp:Label>£º<span><asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,WenJianLeiXing%>"></asp:Label>£º<asp:DropDownList ID="DL_DocType"
                                                             runat="server" Width="150px" DataTextField="Type" DataValueField="Type">
                                                         </asp:DropDownList>&nbsp;
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,WenJianMing%>"></asp:Label>ï¼š<asp:TextBox ID="TB_DocName" runat="server" Width="132px"></asp:TextBox>
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,WenJianMing%>"></asp:Label>£º<asp:TextBox ID="TB_DocName" runat="server" Width="132px"></asp:TextBox>
                                                             &nbsp;
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ShangChuanZheXingMing%>"></asp:Label>ï¼š<asp:TextBox ID="TB_UploadManName" runat="server" Width="64px"></asp:TextBox>
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ShangChuanZheXingMing%>"></asp:Label>£º<asp:TextBox ID="TB_UploadManName" runat="server" Width="64px"></asp:TextBox>
                                                             &nbsp; &nbsp;<asp:Button ID="BT_Find" runat="server" OnClick="BT_Find_Click"
                                                                 CssClass="inpu" Text="<%$ Resources:lang,ChaXun%>" />)
                                                     </td>
@@ -119,35 +119,35 @@
                                                 OnPageIndexChanged="DataGrid1_PageIndexChanged" GridLines="None"
                                                 PageSize="32" Width="98%" CellPadding="4" ForeColor="#333333">
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="DocID" HeaderText="åºå·">
+                                                    <asp:BoundColumn DataField="DocID" HeaderText="ÐòºÅ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="RelatedType" HeaderText="å¤§ç±»">
+                                                    <asp:BoundColumn DataField="RelatedType" HeaderText="´óÀà">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
-                                                    <asp:TemplateColumn HeaderText="çˆ¶ç±»">
+                                                    <asp:TemplateColumn HeaderText="¸¸Àà">
                                                         <ItemTemplate>
                                                             <%# ShareClass . getDocParentTypeByID(Eval("DocTypeID").ToString()) %>
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="DocType" HeaderText="ç±»åž‹">
+                                                    <asp:BoundColumn DataField="DocType" HeaderText="ÀàÐÍ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
-                                                        DataTextField="DocName" HeaderText="æ–‡ä»¶å" Target="_blank">
+                                                        DataTextField="DocName" HeaderText="ÎÄ¼þÃû" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="32%" />
                                                     </asp:HyperLinkColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="UploadManCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                        DataTextField="UploadManName" HeaderText="ä¸Šä¼ è€…" Target="_blank">
+                                                        DataTextField="UploadManName" HeaderText="ÉÏ´«Õß" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                     </asp:HyperLinkColumn>
-                                                    <asp:BoundColumn DataField="UploadTime" HeaderText="ä¸Šä¼ æ—¶é—´">
+                                                    <asp:BoundColumn DataField="UploadTime" HeaderText="ÉÏ´«Ê±¼ä">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="Address" Visible="False"></asp:BoundColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="DocID" DataNavigateUrlFormatString="TTRelatedFormView.aspx?Type=Doc&ID={0}"
-                                                        DataTextField="RelatedID" HeaderText="ç›¸å…³" Target="_blank">
+                                                        DataTextField="RelatedID" HeaderText="Ïà¹Ø" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:HyperLinkColumn>
                                                 </Columns>

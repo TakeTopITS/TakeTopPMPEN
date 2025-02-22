@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -43,7 +43,7 @@ public partial class TTAPPGoodsCheckReport : System.Web.UI.Page
 
         try
         {
-            //扫码功能必须
+            //ɨ�빦�ܱ���
             signModel = TakeTopCore.WXHelper.GetWXInfo(Request.Url.ToString());
 			if(signModel!=null){
 				if(signModel.appId==null){
@@ -62,7 +62,7 @@ public partial class TTAPPGoodsCheckReport : System.Web.UI.Page
 
             strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthorityAsset(strUserCode);
 
-            strHQL = "from Goods as goods where goods.Status = '在用' ";
+            strHQL = "from Goods as goods where goods.Status = 'InUse' ";
             strHQL += " and goods.Number > 0";
             strHQL += " and goods.OwnerCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")"; ;
             strHQL += " Order by goods.Number DESC,goods.ID DESC";
@@ -128,7 +128,7 @@ public partial class TTAPPGoodsCheckReport : System.Web.UI.Page
         strHQL += " and goods.ModelNumber Like " + "'" + strModelNumber + "'";
         strHQL += " and goods.Spec Like " + "'" + strSpec + "'";
         strHQL += " and goods.Position like " + "'" + strPosition + "'";
-        strHQL += " and goods.Status = '在用' ";
+        strHQL += " and goods.Status = 'InUse' ";
         strHQL += " and goods.Number > 0";
 
         strHQL += " and goods.OwnerCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")"; ;

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTTakeTopAnalystChartSet.aspx.cs" Inherits="TTTakeTopAnalystChartSet" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTTakeTopAnalystChartSet.aspx.cs" Inherits="TTTakeTopAnalystChartSet" %>
 
 <!DOCTYPE html>
 
@@ -72,7 +72,7 @@
 
     <script type="text/javascript">
 
-        //å–å¾—URLå‚æ•°çš„å€¼
+        //È¡µÃURL²ÎÊıµÄÖµ
         function GetQueryValue(queryName) {
             var query = decodeURI(window.location.search.substring(1));
             var vars = query.split('&');
@@ -92,7 +92,7 @@
             var chartName = GetQueryValue("ChartName");
             var sqlCode = escape(unescape(GetQueryValue("SqlCode")));
 
-            //ä»ªè¡¨ç›˜
+            //ÒÇ±íÅÌ
             if (chartType == 'Gauge') {
                 var option1 = {
                     title: {
@@ -116,7 +116,7 @@
                         formatter: "{a} <br/>{b} : {c} ({d}%)"
                     },
                     noDataLoadingOption: {
-                        text: 'æš‚æ— æ•°æ®ï¼ˆNo Dataï¼‰',
+                        text: 'ÔİÎŞÊı¾İ£¨No Data£©',
                         effect: 'bubble',
                         effectOption: {
                             effect: {
@@ -128,12 +128,12 @@
                         {
                             name: '',
                             type: 'gauge',
-                            /* axisTick: false,//æ˜¯å¦æ˜¾ç¤ºåˆ»åº¦*/
+                            /* axisTick: false,//ÊÇ·ñÏÔÊ¾¿Ì¶È*/
                             //pointer: {
-                            //    show: false//æ˜¯å¦æ˜¾ç¤ºæŒ‡é’ˆ
+                            //    show: false//ÊÇ·ñÏÔÊ¾Ö¸Õë
                             //},
                             splitLine: {
-                                show: false,//æ˜¯å¦æ˜¾ç¤ºåˆ†éš”çº¿ã€‚
+                                show: false,//ÊÇ·ñÏÔÊ¾·Ö¸ôÏß¡£
                             },
                             axisLabel: false,
                             radius: '55%',
@@ -149,7 +149,7 @@
                     type: "post",
                     async: false,
                     url: "Handler/EchartHandler.ashx",
-                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //å‘é€åˆ°æœåŠ¡å™¨çš„å‚æ•°
+                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //·¢ËÍµ½·şÎñÆ÷µÄ²ÎÊı
                     datatype: "json",
                     success: function (result) {
 
@@ -182,7 +182,7 @@
             }
 
 
-            //é¥¼å›¾
+            //±ıÍ¼
             if (chartType == 'Pie') {
                 var option1 = {
                     title: {
@@ -232,7 +232,7 @@
                         }
                     },
                     noDataLoadingOption: {
-                        text: 'æš‚æ— æ•°æ®ï¼ˆNo Dataï¼‰',
+                        text: 'ÔİÎŞÊı¾İ£¨No Data£©',
                         effect: 'bubble',
                         effectOption: {
                             effect: {
@@ -251,22 +251,22 @@
                             data: [],
                             itemStyle: {
                                 normal: {
-                                    // color: å„å¼‚,
+                                    // color: ¸÷Òì,
                                     borderWidth: 1,
                                     label: {
-                                        show: true,//æ•°æ®æ ‡ç­¾æ˜¾ç¤º
+                                        show: true,//Êı¾İ±êÇ©ÏÔÊ¾
                                         position: 'outer',
-                                        textStyle://æ•°æ®æ ‡ç­¾çš„å­—ä½“é…ç½®ï¼Œä¸å…¶ä»–ç»„ä»¶ç›¸åŒ
+                                        textStyle://Êı¾İ±êÇ©µÄ×ÖÌåÅäÖÃ£¬ÓëÆäËû×é¼şÏàÍ¬
                                         {
-                                            fontSize: 10,//å­—å·
-                                            fontWeight: 'normal',//ç²—ç»†ã€normal\bold\bolder\lighterã€‘
-                                            fontFamily: 'Microsoft YaHei',//å­—ä½“ã€ 'serif'\'monospace'\'Arial'\'Courier New'\'Microsoft YaHei'ã€‘
-                                            color: ''//é¢œè‰²å„å¼‚
+                                            fontSize: 10,//×ÖºÅ
+                                            fontWeight: 'normal',//´ÖÏ¸¡¾normal\bold\bolder\lighter¡¿
+                                            fontFamily: 'Microsoft YaHei',//×ÖÌå¡¾ 'serif'\'monospace'\'Arial'\'Courier New'\'Microsoft YaHei'¡¿
+                                            color: ''//ÑÕÉ«¸÷Òì
                                         },
-                                        formatter: '{b}'//a:ç³»åˆ—åï¼Œå°±æ˜¯ä½ ä¸Šé¢å†™çš„nameåŠå¾„æ¨¡å‹ï¼Œbï¼šæ•°æ®åï¼Œå°±æ˜¯rose1ï¼Œcï¼šæ•°æ®å€¼ï¼Œdç™¾åˆ†æ¯”
+                                        formatter: '{b}'//a:ÏµÁĞÃû£¬¾ÍÊÇÄãÉÏÃæĞ´µÄname°ë¾¶Ä£ĞÍ£¬b£ºÊı¾İÃû£¬¾ÍÊÇrose1£¬c£ºÊı¾İÖµ£¬d°Ù·Ö±È
                                     },
                                     labelLine: {
-                                        show: true,//æ•°æ®æ ‡ç­¾å¼•å¯¼çº¿
+                                        show: true,//Êı¾İ±êÇ©Òıµ¼Ïß
                                         length: 5,
                                         lineStyle: {
                                             width: 1,
@@ -274,14 +274,14 @@
                                         }
                                     }
                                 },
-                                //emphasis: {//é€‰ä¸­çš„æ ·å¼
+                                //emphasis: {//Ñ¡ÖĞµÄÑùÊ½
                                 //    borderColor: 'rgba(0,0,0,0)',
                                 //    borderWidth: 1,
                                 //    label: {
-                                //        show: true//é€‰ä¸­æ—¶ä¸æ˜¾ç¤ºæ•°æ®æ ‡ç­¾
+                                //        show: true//Ñ¡ÖĞÊ±²»ÏÔÊ¾Êı¾İ±êÇ©
                                 //    },
                                 //    labelLine: {
-                                //        show: true,//é€‰ä¸­æ—¶ä¸æ˜¾ç¤ºæ•°æ®æ ‡ç­¾å¼•å¯¼çº¿
+                                //        show: true,//Ñ¡ÖĞÊ±²»ÏÔÊ¾Êı¾İ±êÇ©Òıµ¼Ïß
                                 //        length: 5,
                                 //        lineStyle: {
                                 //            width: 1,
@@ -299,7 +299,7 @@
                     type: "post",
                     async: false,
                     url: "Handler/EchartHandler.ashx",
-                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //å‘é€åˆ°æœåŠ¡å™¨çš„å‚æ•°
+                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //·¢ËÍµ½·şÎñÆ÷µÄ²ÎÊı
                     datatype: "json",
                     success: function (result) {
 
@@ -331,7 +331,7 @@
                 });
             }
 
-            //åœˆå›¾
+            //È¦Í¼
             if (chartType == 'Doughnut') {
 
                 var option1 = {
@@ -362,7 +362,7 @@
                     //},
 
                     noDataLoadingOption: {
-                        text: 'æš‚æ— æ•°æ®ï¼ˆNo Dataï¼‰',
+                        text: 'ÔİÎŞÊı¾İ£¨No Data£©',
                         effect: 'bubble',
                         effectOption: {
                             effect: {
@@ -399,22 +399,22 @@
                             data: [],
                             itemStyle: {
                                 normal: {
-                                    // color: å„å¼‚,
+                                    // color: ¸÷Òì,
                                     borderWidth: 1,
                                     label: {
-                                        show: true,//æ•°æ®æ ‡ç­¾æ˜¾ç¤º
+                                        show: true,//Êı¾İ±êÇ©ÏÔÊ¾
                                         position: 'outer',
-                                        textStyle://æ•°æ®æ ‡ç­¾çš„å­—ä½“é…ç½®ï¼Œä¸å…¶ä»–ç»„ä»¶ç›¸åŒ
+                                        textStyle://Êı¾İ±êÇ©µÄ×ÖÌåÅäÖÃ£¬ÓëÆäËû×é¼şÏàÍ¬
                                         {
-                                            fontSize: 10,//å­—å·
-                                            fontWeight: 'normal',//ç²—ç»†ã€normal\bold\bolder\lighterã€‘
-                                            fontFamily: 'Microsoft YaHei',//å­—ä½“ã€ 'serif'\'monospace'\'Arial'\'Courier New'\'Microsoft YaHei'ã€‘
-                                            color: ''//é¢œè‰²å„å¼‚
+                                            fontSize: 10,//×ÖºÅ
+                                            fontWeight: 'normal',//´ÖÏ¸¡¾normal\bold\bolder\lighter¡¿
+                                            fontFamily: 'Microsoft YaHei',//×ÖÌå¡¾ 'serif'\'monospace'\'Arial'\'Courier New'\'Microsoft YaHei'¡¿
+                                            color: ''//ÑÕÉ«¸÷Òì
                                         },
-                                        formatter: '{b}'//a:ç³»åˆ—åï¼Œå°±æ˜¯ä½ ä¸Šé¢å†™çš„nameåŠå¾„æ¨¡å‹ï¼Œbï¼šæ•°æ®åï¼Œå°±æ˜¯rose1ï¼Œcï¼šæ•°æ®å€¼ï¼Œdç™¾åˆ†æ¯”
+                                        formatter: '{b}'//a:ÏµÁĞÃû£¬¾ÍÊÇÄãÉÏÃæĞ´µÄname°ë¾¶Ä£ĞÍ£¬b£ºÊı¾İÃû£¬¾ÍÊÇrose1£¬c£ºÊı¾İÖµ£¬d°Ù·Ö±È
                                     },
                                     labelLine: {
-                                        show: true,//æ•°æ®æ ‡ç­¾å¼•å¯¼çº¿
+                                        show: true,//Êı¾İ±êÇ©Òıµ¼Ïß
                                         length: 5,
                                         lineStyle: {
                                             width: 1,
@@ -422,14 +422,14 @@
                                         }
                                     }
                                 },
-                                //emphasis: {//é€‰ä¸­çš„æ ·å¼
+                                //emphasis: {//Ñ¡ÖĞµÄÑùÊ½
                                 //    borderColor: 'rgba(0,0,0,0)',
                                 //    borderWidth: 1,
                                 //    label: {
-                                //        show: true//é€‰ä¸­æ—¶ä¸æ˜¾ç¤ºæ•°æ®æ ‡ç­¾
+                                //        show: true//Ñ¡ÖĞÊ±²»ÏÔÊ¾Êı¾İ±êÇ©
                                 //    },
                                 //    labelLine: {
-                                //        show: true,//é€‰ä¸­æ—¶ä¸æ˜¾ç¤ºæ•°æ®æ ‡ç­¾å¼•å¯¼çº¿
+                                //        show: true,//Ñ¡ÖĞÊ±²»ÏÔÊ¾Êı¾İ±êÇ©Òıµ¼Ïß
                                 //        length: 5,
                                 //        lineStyle: {
                                 //            width: 1,
@@ -445,7 +445,7 @@
                     type: "post",
                     async: false,
                     url: "Handler/EchartHandler.ashx",
-                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //å‘é€åˆ°æœåŠ¡å™¨çš„å‚æ•°
+                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //·¢ËÍµ½·şÎñÆ÷µÄ²ÎÊı
                     datatype: "json",
                     success: function (result) {
                         if (result) {
@@ -476,7 +476,7 @@
                 });
             }
 
-            //çºµå‘æŸ±çŠ¶å›¾
+            //×İÏòÖù×´Í¼
             if (chartType == 'Column') {
                 var option1 = {
                     title: {
@@ -496,8 +496,8 @@
                     tooltip: {
                         trigger: 'axis',
                         transitionDuration: 8,
-                        axisPointer: {            // åæ ‡è½´æŒ‡ç¤ºå™¨ï¼Œåæ ‡è½´è§¦å‘æœ‰æ•ˆ
-                            type: 'shadow'        // é»˜è®¤ä¸ºç›´çº¿ï¼Œå¯é€‰ä¸ºï¼š'line' | 'shadow'
+                        axisPointer: {            // ×ø±êÖáÖ¸Ê¾Æ÷£¬×ø±êÖá´¥·¢ÓĞĞ§
+                            type: 'shadow'        // Ä¬ÈÏÎªÖ±Ïß£¬¿ÉÑ¡Îª£º'line' | 'shadow'
                         }
                     },
                     //toolbox: {
@@ -532,7 +532,7 @@
                     ],
 
                     noDataLoadingOption: {
-                        text: 'æš‚æ— æ•°æ®ï¼ˆNo Dataï¼‰',
+                        text: 'ÔİÎŞÊı¾İ£¨No Data£©',
                         effect: 'bubble',
                         effectOption: {
                             effect: {
@@ -597,7 +597,7 @@
                     type: "post",
                     async: false,
                     url: "Handler/EchartHandler.ashx",
-                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //å‘é€åˆ°æœåŠ¡å™¨çš„å‚æ•°
+                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //·¢ËÍµ½·şÎñÆ÷µÄ²ÎÊı
                     datatype: "json",
                     success: function (result) {
                         if (result) {
@@ -649,7 +649,7 @@
                 });
             }
 
-            //æ¨ªå‘æŸ±çŠ¶å›¾
+            //ºáÏòÖù×´Í¼
             if (chartType == 'Bar') {
 
                 var option1 = {
@@ -671,8 +671,8 @@
                     tooltip: {
                         trigger: 'axis',
                         transitionDuration: 8,
-                        axisPointer: {            // åæ ‡è½´æŒ‡ç¤ºå™¨ï¼Œåæ ‡è½´è§¦å‘æœ‰æ•ˆ
-                            type: 'shadow'        // é»˜è®¤ä¸ºç›´çº¿ï¼Œå¯é€‰ä¸ºï¼š'line' | 'shadow'
+                        axisPointer: {            // ×ø±êÖáÖ¸Ê¾Æ÷£¬×ø±êÖá´¥·¢ÓĞĞ§
+                            type: 'shadow'        // Ä¬ÈÏÎªÖ±Ïß£¬¿ÉÑ¡Îª£º'line' | 'shadow'
                         }
                     },
                     //toolbox: {
@@ -716,7 +716,7 @@
                     ],
 
                     noDataLoadingOption: {
-                        text: 'æš‚æ— æ•°æ®ï¼ˆNo Dataï¼‰',
+                        text: 'ÔİÎŞÊı¾İ£¨No Data£©',
                         effect: 'bubble',
                         effectOption: {
                             effect: {
@@ -794,7 +794,7 @@
                     type: "post",
                     async: false,
                     url: "Handler/EchartHandler.ashx",
-                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //å‘é€åˆ°æœåŠ¡å™¨çš„å‚æ•°
+                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //·¢ËÍµ½·şÎñÆ÷µÄ²ÎÊı
                     datatype: "json",
                     success: function (result) {
                         if (result) {
@@ -847,7 +847,7 @@
                 });
             }
 
-            //çº¿å›¾
+            //ÏßÍ¼
             if (chartType == 'Line') {
 
                 var option1 = {
@@ -868,8 +868,8 @@
                     tooltip: {
                         trigger: 'axis',
                         transitionDuration: 8,
-                        axisPointer: {            // åæ ‡è½´æŒ‡ç¤ºå™¨ï¼Œåæ ‡è½´è§¦å‘æœ‰æ•ˆ
-                            type: 'shadow'        // é»˜è®¤ä¸ºç›´çº¿ï¼Œå¯é€‰ä¸ºï¼š'line' | 'shadow'
+                        axisPointer: {            // ×ø±êÖáÖ¸Ê¾Æ÷£¬×ø±êÖá´¥·¢ÓĞĞ§
+                            type: 'shadow'        // Ä¬ÈÏÎªÖ±Ïß£¬¿ÉÑ¡Îª£º'line' | 'shadow'
                         }
                     },
                     //toolbox: {
@@ -916,7 +916,7 @@
                             },
                             markLine: {
                                 data: [
-                                    { type: 'average', name: 'å¹³å‡å€¼' }
+                                    { type: 'average', name: 'Æ½¾ùÖµ' }
                                 ]
                             }
                         },
@@ -926,7 +926,7 @@
                     type: "post",
                     async: false,
                     url: "Handler/EchartHandler.ashx",
-                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //å‘é€åˆ°æœåŠ¡å™¨çš„å‚æ•°
+                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //·¢ËÍµ½·şÎñÆ÷µÄ²ÎÊı
                     datatype: "json",
                     success: function (result) {
                         if (result) {
@@ -948,7 +948,7 @@
             }
 
 
-            //æ¼æ–—å›¾
+            //Â©¶·Í¼
             if (chartType == 'Funnel') {
                 var option1 = {
                     title: {
@@ -982,7 +982,7 @@
                         data: []
                     },
                     noDataLoadingOption: {
-                        text: 'æš‚æ— æ•°æ®ï¼ˆNo Dataï¼‰',
+                        text: 'ÔİÎŞÊı¾İ£¨No Data£©',
                         effect: 'bubble',
                         effectOption: {
                             effect: {
@@ -1018,7 +1018,7 @@
                     type: "post",
                     async: false,
                     url: "Handler/EchartHandler.ashx",
-                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //å‘é€åˆ°æœåŠ¡å™¨çš„å‚æ•°
+                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //·¢ËÍµ½·şÎñÆ÷µÄ²ÎÊı
                     datatype: "json",
                     success: function (result) {
                         if (result) {
@@ -1051,14 +1051,14 @@
 
             if (chartType == 'HRuningProjectStatus') {
 
-                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card blue' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/Running.png' alt = 'Clock Icon'/> </td><td align='left'>  åœ¨æ‰§è¡Œé¡¹ç›®æ€»æ•° : <span id='spanXNumber'></span></h3> <p>å¹´åº¦æ–°å¢: <span id='spanYNumber'></span></p> <p>å¹´åº¦å®Œæˆ : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card blue' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/Running.png' alt = 'Clock Icon'/> </td><td align='left'>" + '<%=LanguageHandle.GetWord("ZaiZiXingXiangMuZhongShu").ToString() %>'.trim(); + ":<span id='spanXNumber'></span></h3> <p> " + '<%=LanguageHandle.GetWord("NianDuXingZeng").ToString() %>'.trim() + ": <span id='spanYNumber'></span></p> <p>" + '<%=LanguageHandle.GetWord("NianDuXingZeng").ToString() %>'.trim() + ":<span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
 
 
                 $.ajax({
                     type: "post",
                     async: false,
                     url: "Handler/EchartHandler.ashx",
-                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //å‘é€åˆ°æœåŠ¡å™¨çš„å‚æ•°
+                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //·¢ËÍµ½·şÎñÆ÷µÄ²ÎÊı
                     datatype: "json",
                     success: function (result) {
                         if (result) {
@@ -1089,14 +1089,14 @@
 
             if (chartType == 'HDelayProjectStatus') {
 
-                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card red' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/Process.png' alt = 'Clock Icon'/> </td><td align='left'>  ä¸¥é‡å»¶è¯¯é¡¹ç›®æ•° : <span id='spanXNumber'></span></h3> <p>è¿›åº¦æ­£å¸¸: <span id='spanYNumber'></span></p> <p>è½»åº¦å»¶è¯¯ : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card red' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/Process.png' alt = 'Clock Icon'/> </td><td align='left'>" + '<%=LanguageHandle.GetWord("NianDuYanWuXiangMuShu").ToString() %>'.trim(); + ":<span id='spanXNumber'></span></h3> <p>" + '<%=LanguageHandle.GetWord("JingDuZhengChang").ToString() %>'.trim(); + ": <span id='spanYNumber'></span></p> <p>" + '<%=LanguageHandle.GetWord("QingDuYanWu").ToString() %>'.trim() + ": <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
 
 
                 $.ajax({
                     type: "post",
                     async: false,
                     url: "Handler/EchartHandler.ashx",
-                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //å‘é€åˆ°æœåŠ¡å™¨çš„å‚æ•°
+                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //·¢ËÍµ½·şÎñÆ÷µÄ²ÎÊı
                     datatype: "json",
                     success: function (result) {
                         if (result) {
@@ -1127,14 +1127,14 @@
 
             if (chartType == 'HAnnualPaymentStatus') {
 
-                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card green' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/PaymentCollection.png' alt = 'Clock Icon'/> </td><td align='left'>  å¹´åº¦é¡¹ç›®å›æ¬¾ : <span id='spanXNumber'></span></h3> <p>å¹´åº¦æˆæœ¬æ ¸ç®—: <span id='spanYNumber'></span></p> <p>æˆæœ¬è¶…æ”¯é¡¹ç›®æ•° : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card green' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/PaymentCollection.png' alt = 'Clock Icon'/> </td><td align='left'>" + '<%=LanguageHandle.GetWord("NianDuYanWuXiangMuShu").ToString() %>'.trim() + ":<span id='spanXNumber'></span></h3> <p>" + '<%=LanguageHandle.GetWord("NianDuChengBenHeShuan").ToString() %>'.trim() + ": <span id='spanYNumber'></span></p> <p>" + '<%=LanguageHandle.GetWord("ChengBenChaoZiXiangMuShu").ToString() %>'.trim() + ": <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
 
 
                 $.ajax({
                     type: "post",
                     async: false,
                     url: "Handler/EchartHandler.ashx",
-                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //å‘é€åˆ°æœåŠ¡å™¨çš„å‚æ•°
+                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //·¢ËÍµ½·şÎñÆ÷µÄ²ÎÊı
                     datatype: "json",
                     success: function (result) {
                         if (result) {
@@ -1164,14 +1164,14 @@
 
             if (chartType == 'HAnnualWorkHourStatus') {
 
-                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card brown' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/WorkHour.png' alt = 'Clock Icon'/> </td><td align='left'>  å¹´åº¦é¡¹ç›®å·¥æ—¶æŠ•å…¥ : <span id='spanXNumber'></span></h3> <p>å¹´åº¦å¡«æŠ¥äººæ•°: <span id='spanYNumber'></span></p> <p>äººå·¥æˆæœ¬ : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card brown' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/WorkHour.png' alt = 'Clock Icon'/> </td><td align='left'>" + '<%=LanguageHandle.GetWord("NianDuXiangMuGongShiTouRu").ToString() %>'.trim() + ": <span id='spanXNumber'></span></h3> <p>" + '<%=LanguageHandle.GetWord("NianDuTeiBaoRenShu").ToString() %>'.trim() + ": <span id='spanYNumber'></span></p> <p>" + '<%=LanguageHandle.GetWord("RenGongChengBen").ToString() %>'.trim() + ": <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
 
 
                 $.ajax({
                     type: "post",
                     async: false,
                     url: "Handler/EchartHandler.ashx",
-                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //å‘é€åˆ°æœåŠ¡å™¨çš„å‚æ•°
+                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //·¢ËÍµ½·şÎñÆ÷µÄ²ÎÊı
                     datatype: "json",
                     success: function (result) {
                         if (result) {
@@ -1201,14 +1201,14 @@
 
             if (chartType == 'HRuningTaskStatus') {
 
-                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card lightblue' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/RunningTask.png' alt = 'Clock Icon'/> </td><td align='left'>  åœ¨æ‰§è¡Œä»»åŠ¡æ€»æ•° : <span id='spanXNumber'></span></h3> <p>å¹´åº¦æ–°å¢: <span id='spanYNumber'></span></p> <p>å¹´åº¦å®Œæˆ : <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
+                document.getElementById('m2').innerHTML = "<div class='card-container' style='padding-top:12px;'><div class='card lightblue' > <table><tr><td colpan='3' width='30%' align='center' style='padding-right:20px;'><img src = 'ImagesSkin/RunningTask.png' alt = 'Clock Icon'/> </td><td align='left'>" + '<%=LanguageHandle.GetWord("ZaiZhiXingRenWuZhongShu").ToString() %>'.trim() + ": <span id='spanXNumber'></span></h3> <p>" + '<%=LanguageHandle.GetWord("NianDuXingZeng").ToString() %>'.trim() + ": <span id='spanYNumber'></span></p> <p>" + '<%=LanguageHandle.GetWord("NianDuWanCheng").ToString() %>'.trim() + ": <span id='spanZNumber'></span></p></td></tr></table> </div> </div>";
 
 
                 $.ajax({
                     type: "post",
                     async: false,
                     url: "Handler/EchartHandler.ashx",
-                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //å‘é€åˆ°æœåŠ¡å™¨çš„å‚æ•°
+                    data: { FormType: formType, ChartName: chartName, SqlCode: sqlCode }, //·¢ËÍµ½·şÎñÆ÷µÄ²ÎÊı
                     datatype: "json",
                     success: function (result) {
                         if (result) {

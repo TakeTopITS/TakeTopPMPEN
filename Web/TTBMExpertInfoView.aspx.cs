@@ -1,4 +1,4 @@
-锘縰sing System; using System.Resources;
+using System; using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -85,7 +85,7 @@ public partial class TTBMExpertInfoView : System.Web.UI.Page
     {
         string strHQL;
         IList lst;
-        //缁戝畾鎷涙爣璁″垝鍚嶇О
+        //绑定招标计划名称
         strHQL = "From WZExpert as wZExpert Where wZExpert.ID='" + strID + "' ";
         WZExpertBLL wZExpertBLL = new WZExpertBLL();
         lst = wZExpertBLL.GetAllWZExperts(strHQL);

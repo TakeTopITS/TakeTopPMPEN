@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" ValidateRequest="false" CodeFile="TTWorkFlowDesignerSL.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" ValidateRequest="false" CodeFile="TTWorkFlowDesignerSL.aspx.cs"
     Inherits="TTWorkFlowDesignerSL" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -41,23 +41,23 @@
                 return;
             }
 
-            var errMsg = "Silverlight åº”ç”¨ç¨‹åºä¸­æœªå¤„ç†çš„é”™è¯¯ " + appSource + "\n";
+            var errMsg = "Silverlight Ó¦ÓÃ³ÌĞòÖĞÎ´´¦ÀíµÄ´íÎó " + appSource + "\n";
 
-            errMsg += "ä»£ç : " + iErrorCode + "    \n";
-            errMsg += "ç±»åˆ«: " + errorType + "       \n";
-            errMsg += "æ¶ˆæ¯: " + args.ErrorMessage + "     \n";
+            errMsg += "´úÂë: " + iErrorCode + "    \n";
+            errMsg += "Àà±ğ: " + errorType + "       \n";
+            errMsg += "ÏûÏ¢: " + args.ErrorMessage + "     \n";
 
             if (errorType == "ParserError") {
-                errMsg += "æ–‡ä»¶: " + args.xamlFile + "     \n";
-                errMsg += "è¡Œ: " + args.lineNumber + "     \n";
-                errMsg += "ä½ç½®: " + args.charPosition + "     \n";
+                errMsg += "ÎÄ¼ş: " + args.xamlFile + "     \n";
+                errMsg += "ĞĞ: " + args.lineNumber + "     \n";
+                errMsg += "Î»ÖÃ: " + args.charPosition + "     \n";
             }
             else if (errorType == "RuntimeError") {
                 if (args.lineNumber != 0) {
-                    errMsg += "è¡Œ: " + args.lineNumber + "     \n";
-                    errMsg += "ä½ç½®: " + args.charPosition + "     \n";
+                    errMsg += "ĞĞ: " + args.lineNumber + "     \n";
+                    errMsg += "Î»ÖÃ: " + args.charPosition + "     \n";
                 }
-                errMsg += "æ–¹æ³•åç§°: " + args.methodName + "     \n";
+                errMsg += "·½·¨Ãû³Æ: " + args.methodName + "     \n";
             }
 
             throw new Error(errMsg);
@@ -107,9 +107,9 @@
                     <asp:TextBox ID="TB_WFChartString3" runat="server" Style="visibility: hidden"></asp:TextBox>
                     <asp:TextBox ID="TB_WFChartString4" runat="server" Style="visibility: hidden"></asp:TextBox>
 
-                    <asp:Button ID="BT_SaveWFDefinition" runat="server" CssClass="inpuLong" Text="--&gt;ä¿å­˜å·¥ä½œæµæ¨¡æ¿å®šä¹‰" Style="visibility: hidden;" />
+                    <asp:Button ID="BT_SaveWFDefinition" runat="server" CssClass="inpuLong" Text="--&gt;±£´æ¹¤×÷Á÷Ä£°å¶¨Òå" Style="visibility: hidden;" />
 
-                    <asp:Button ID="BT_SaveWFChart" runat="server" CssClass="inpuLong" Text="--&gt;ä¿å­˜æµç¨‹å›¾" OnClick="BT_SaveWFChart_Click" Style="visibility: hidden;" />
+                    <asp:Button ID="BT_SaveWFChart" runat="server" CssClass="inpuLong" Text="--&gt;±£´æÁ÷³ÌÍ¼" OnClick="BT_SaveWFChart_Click" Style="visibility: hidden;" />
                 </td>
             </tr>
         </table>

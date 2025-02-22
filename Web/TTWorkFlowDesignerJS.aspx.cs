@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -100,7 +100,7 @@ public partial class TTWorkFlowDesignerJS : System.Web.UI.Page
         }
     }
 
-    //åˆ é™¤åœ¨æµç¨‹å›¾ä¸­ä¸å­˜åœ¨çš„æ­¥éª¤
+    //É¾³ıÔÚÁ÷³ÌÍ¼ÖĞ²»´æÔÚµÄ²½Öè
     protected void DeleteWorkflowTStepByWFDefinition(string strTemName, string strWFDefinition)
     {
         string strHQL;

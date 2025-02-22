@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -18,8 +18,8 @@ public partial class TTAlluserPosition : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //é’Ÿç¤¼æœˆä½œå“ï¼ˆjack.erp@gmail.com)
-        //Taketop Software 2006ï¼2012
+        //ÖÓÀñÔÂ×÷Æ·£¨jack.erp@gmail.com)
+        //Taketop Software 2006£­2012
 
         string strUserCode = Session["UserCode"].ToString();
         string strHQL;
@@ -28,14 +28,14 @@ public partial class TTAlluserPosition : System.Web.UI.Page
         string strUserName, strDepartCode;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","æŸ¥çœ‹æ‰€æœ‰æˆå‘˜ä½ç½®", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","²é¿´ËùÓÐ³ÉÔ±Î»ÖÃ", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
             return;
         }
 
-        //this.Title = "æŸ¥çœ‹æ‰€æœ‰æˆå‘˜ä½ç½®---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
+        //this.Title = "²é¿´ËùÓÐ³ÉÔ±Î»ÖÃ---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
 
         LB_UserCode.Text = strUserCode;
         strUserName = Session["UserName"].ToString();
@@ -179,11 +179,11 @@ public partial class TTAlluserPosition : System.Web.UI.Page
         IList lst = systemActiveUserBLL.GetAllSystemActiveUsers(strHQL);
         if (lst.Count > 0 && lst != null)
         {
-            return "å·²å¼€é€š";
+            return "ÒÑ¿ªÍ¨";
         }
         else
         {
-            return "æœªå¼€é€š";
+            return "Î´¿ªÍ¨";
         }
     }
 }

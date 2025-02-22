@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -35,7 +35,7 @@ public partial class TTProjectExpenseApplyReport : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strUserName = GetUserName(strUserCode);
 
-        //this.Title = Resources.lang.Project + strProjectID + " " + strProjectName + " 经费申请汇总！";
+        //this.Title = Resources.lang.Project + strProjectID + " " + strProjectName + " ����������ܣ�";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack == false)
         {
@@ -45,7 +45,7 @@ public partial class TTProjectExpenseApplyReport : System.Web.UI.Page
 
             ShareClass.InitialProjectMemberTree(TreeView1, strProjectID);
 
-            strHQL = "from ExpenseApplyWL as expenseApplyWL where expenseApplyWL.RelatedType = '项目'  and expenseApplyWL.RelatedID = " + strProjectID + " and expenseApplyWL.ApplicantCode = " + "'" + strUserCode + "'" + " Order by expenseApplyWL.ID DESC";
+            strHQL = "from ExpenseApplyWL as expenseApplyWL where expenseApplyWL.RelatedType = 'Project'  and expenseApplyWL.RelatedID = " + strProjectID + " and expenseApplyWL.ApplicantCode = " + "'" + strUserCode + "'" + " Order by expenseApplyWL.ID DESC";
             ExpenseApplyWLBLL expenseApplyWLBLL = new ExpenseApplyWLBLL();
             lst = expenseApplyWLBLL.GetAllExpenseApplyWLs(strHQL);
 
@@ -94,7 +94,7 @@ public partial class TTProjectExpenseApplyReport : System.Web.UI.Page
                 strUserName = proRelatedUser.UserName.Trim();
 
 
-                strHQL = "from ExpenseApplyWL as expenseApplyWL where expenseApplyWL.RelatedType = '项目'  and expenseApplyWL.RelatedID = " + strProjectID + " and expenseApplyWL.ApplicantCode = " + "'" + strUserCode + "'" + " Order by expenseApplyWL.ID DESC";
+                strHQL = "from ExpenseApplyWL as expenseApplyWL where expenseApplyWL.RelatedType = 'Project'  and expenseApplyWL.RelatedID = " + strProjectID + " and expenseApplyWL.ApplicantCode = " + "'" + strUserCode + "'" + " Order by expenseApplyWL.ID DESC";
                 ExpenseApplyWLBLL expenseApplyWLBLL = new ExpenseApplyWLBLL();
                 lst = expenseApplyWLBLL.GetAllExpenseApplyWLs(strHQL);
 
@@ -114,7 +114,7 @@ public partial class TTProjectExpenseApplyReport : System.Web.UI.Page
                 LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll + strUserCode + strUserName;
                 LB_Sql.Text = strHQL;
 
-                LoadRelatedWL("费用申请", "项目", 0);
+                LoadRelatedWL("ExpenseRequest", "Project", 0);
             }
         }
         catch
@@ -139,7 +139,7 @@ public partial class TTProjectExpenseApplyReport : System.Web.UI.Page
             e.Item.ForeColor = Color.Red;
 
 
-            LoadRelatedWL("费用申请", "项目", int.Parse(strID));
+            LoadRelatedWL("ExpenseRequest", "Project", int.Parse(strID));
         }
     }
 
@@ -163,7 +163,7 @@ public partial class TTProjectExpenseApplyReport : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from ExpenseApplyWL as expenseApplyWL where expenseApplyWL.RelatedType =  '项目'" + " and expenseApplyWL.RelatedID = " + strProjectID + "  Order by expenseApplyWL.ID DESC";
+        strHQL = "from ExpenseApplyWL as expenseApplyWL where expenseApplyWL.RelatedType =  'Project'" + " and expenseApplyWL.RelatedID = " + strProjectID + "  Order by expenseApplyWL.ID DESC";
         ExpenseApplyWLBLL expenseApplyWLBLL = new ExpenseApplyWLBLL();
         lst = expenseApplyWLBLL.GetAllExpenseApplyWLs(strHQL);
 
@@ -182,7 +182,7 @@ public partial class TTProjectExpenseApplyReport : System.Web.UI.Page
 
         LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll;
 
-        LoadRelatedWL("费用申请", "项目", 0);
+        LoadRelatedWL("ExpenseRequest", "Project", 0);
     }
 
     protected string GetProjectName(string strProjectID)

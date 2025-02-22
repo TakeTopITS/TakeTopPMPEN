@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInfor_StudentAttendance.aspx.cs" Inherits="TTUserInfor_StudentAttendance" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInfor_StudentAttendance.aspx.cs" Inherits="TTUserInfor_StudentAttendance" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>å­¦ç”Ÿè€ƒå‹¤</title>
+    <title>Ñ§Éú¿¼ÇÚ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -85,7 +85,7 @@
                                                                             <tr>
                                                                                 <td style="text-align: left" class="formItemBgStyle" colspan="4">
                                                                                     <asp:Button ID="btnImport" runat="server" Text="<%$ Resources:lang,DaoRu%>" OnClick="btnImport_Click" CssClass="inpu" />&nbsp;
-                                                                                    <asp:HyperLink ID="HyperLink1" NavigateUrl="Template/å­¦ç”Ÿè€ƒå‹¤æ•°æ®å¯¼å…¥è¡¨.xls" Text="<%$ Resources:lang,ShuJuDaoRuMuBan%>" runat="server">
+                                                                                    <asp:HyperLink ID="HyperLink1" NavigateUrl="Template/Ñ§Éú¿¼ÇÚÊý¾Ýµ¼Èë±í.xls" Text="<%$ Resources:lang,ShuJuDaoRuMuBan%>" runat="server">
                                                                                        
                                                                                     </asp:HyperLink>
                                                                                 </td>
@@ -114,13 +114,13 @@
                                                                                     </ItemTemplate>
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:TemplateColumn>
-                                                                                <asp:BoundColumn DataField="StudentName" HeaderText="å­¦ç”Ÿåç§°">
+                                                                                <asp:BoundColumn DataField="StudentName" HeaderText="Ñ§ÉúÃû³Æ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="AttendanceTime" HeaderText="æ—¥æœŸ">
+                                                                                <asp:BoundColumn DataField="AttendanceTime" HeaderText="ÈÕÆÚ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="IsStudy" HeaderText="æ˜¯å¦ä¸Šå­¦">
+                                                                                <asp:BoundColumn DataField="IsStudy" HeaderText="ÊÇ·ñÉÏÑ§">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                 </asp:BoundColumn>
                                                                             </Columns>

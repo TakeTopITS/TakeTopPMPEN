@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -27,7 +27,7 @@ public partial class TTNoticeDoc : System.Web.UI.Page
     
         string strUserName;
 
-        //this.Title = "å…¬å¸å…¬å‘Šæ–‡ä»¶ç®¡ç†";
+        //this.Title = "¹«Ë¾¹«¸æÎÄ¼ş¹ÜÀí";
 
         LB_UserCode.Text = strUserCode;
         strUserName = GetUserName(strUserCode);
@@ -35,19 +35,19 @@ public partial class TTNoticeDoc : System.Web.UI.Page
 
         if (Page.IsPostBack != true)
         {
-            strHQL = "from DocType as docType  where docType.Type in ('å…¬å‘Šæ–‡ä»¶','é€šçŸ¥æ–‡ä»¶') and ((docType.SaveType = 'å…¬å¸') ";
+            strHQL = "from DocType as docType  where docType.Type in ('AnnouncementDocument','NotificationDocument') and ((docType.SaveType = '¹«Ë¾') ";
             strHQL += " or (docType.UserCode = " + "'" + strUserCode + "'" + ")";
-            strHQL += " or (docType.SaveType = 'éƒ¨é—¨' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
-            strHQL += " or (docType.SaveType not in ('å…¬å¸','ä¸ªäºº','éƒ¨é—¨') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
+            strHQL += " or (docType.SaveType = '²¿ÃÅ' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
+            strHQL += " or (docType.SaveType not in ('¹«Ë¾','¸öÈË','²¿ÃÅ') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
             strHQL += " Order by docType.SortNumber ASC";
             DocTypeBLL docTypeBLL = new DocTypeBLL();
             lst = docTypeBLL.GetAllDocTypes(strHQL);
             DL_DocType.DataSource = lst;
             DL_DocType.DataBind();
 
-            LB_DocOwner.Text = "å…¬å¸å…¬å‘Šæ–‡ä»¶åˆ—è¡¨ï¼š";
+            LB_DocOwner.Text = "¹«Ë¾¹«¸æÎÄ¼şÁĞ±í£º";
           
-            strHQL = "from Document as document where ((document.Visible = 'å…¬å¸') or (document.DepartCode = " + "'" +strDepartCode+ "'" + ")) and document.DocType in ('å…¬å‘Šæ–‡ä»¶','é€šçŸ¥æ–‡ä»¶') and document.Status <> 'åˆ é™¤' Order by document.DocID DESC";
+            strHQL = "from Document as document where ((document.Visible = '¹«Ë¾') or (document.DepartCode = " + "'" +strDepartCode+ "'" + ")) and document.DocType in ('AnnouncementDocument','NotificationDocument') and document.Status <> 'Deleted' Order by document.DocID DESC";
 
             DocumentBLL documentBLL = new DocumentBLL();
             lst = documentBLL.GetAllDocuments(strHQL);
@@ -101,8 +101,8 @@ public partial class TTNoticeDoc : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        LB_DocOwner.Text = "ç±»å‹: " + strDocType + " çš„æ–‡æ¡£åˆ—è¡¨ï¼š";
-        strHQL = "from Document as document where  document.DocType = " + "'" + strDocType + "'" + " and ((document.DepartCode = " + "'" + strDepartCode + "'" + ") or (document.Visible = 'å…¬å¸')) and document.Status<> 'åˆ é™¤' Order by document.DocID DESC";
+        LB_DocOwner.Text = "ÀàĞÍ: " + strDocType + " µÄÎÄµµÁĞ±í£º";
+        strHQL = "from Document as document where  document.DocType = " + "'" + strDocType + "'" + " and ((document.DepartCode = " + "'" + strDepartCode + "'" + ") or (document.Visible = '¹«Ë¾')) and document.Status<> 'Deleted' Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);
         DataGrid1.DataSource = lst;
@@ -132,10 +132,10 @@ public partial class TTNoticeDoc : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        LB_DocOwner.Text = "æ–‡ä»¶ååŒ…å«: " + strDocName + " å­—ç¬¦ä¸²çš„æ–‡æ¡£åˆ—è¡¨ï¼š";
+        LB_DocOwner.Text = "ÎÄ¼şÃû°üº¬: " + strDocName + " ×Ö·û´®µÄÎÄµµÁĞ±í£º";
 
         strDocName = "%" + strDocName + "%";
-        strHQL = "from Document as document where document.DocName like " + "'" + strDocName + "'" + " and ((document.Visible = 'å…¬å¸') or (document.DepartCode = " + "'" +strDepartCode+ "'" + ")) and document.DocType in ('å…¬å‘Šæ–‡ä»¶','é€šçŸ¥æ–‡ä»¶') and document.Status <> 'åˆ é™¤'  Order by document.DocID DESC";
+        strHQL = "from Document as document where document.DocName like " + "'" + strDocName + "'" + " and ((document.Visible = '¹«Ë¾') or (document.DepartCode = " + "'" +strDepartCode+ "'" + ")) and document.DocType in ('AnnouncementDocument','NotificationDocument') and document.Status <> 'Deleted'  Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);
         DataGrid1.DataSource = lst;

@@ -327,9 +327,12 @@
                                                                                                 DataTextField="PMName" HeaderText="项目经理" Target="_blank">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                             </asp:HyperLinkColumn>
-                                                                                            <%--  <asp:BoundColumn DataField="Status" HeaderText="状态">
-                                                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
-                                                                                            </asp:BoundColumn>--%>
+                                                                                            <%--  <asp:TemplateColumn HeaderText="状态">
+    <ItemTemplate>
+        <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
+    </ItemTemplate>
+    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="7%" />
+</asp:TemplateColumn>--%>
                                                                                             <asp:TemplateColumn HeaderText="状态">
                                                                                                 <ItemTemplate>
                                                                                                     <%# ShareClass. GetStatusHomeNameByProjectStatus(Eval("Status").ToString(),Eval("ProjectType").ToString()) %>

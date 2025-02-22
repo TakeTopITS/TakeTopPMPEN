@@ -1,4 +1,4 @@
-﻿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -79,7 +79,7 @@ public partial class TTDWMatchPurchaseHistoryList : System.Web.UI.Page
         DDL_MatchType.DataSource = listDWMatchType;
         DDL_MatchType.DataBind();
 
-        DDL_MatchType.Items.Insert(0, new ListItem("全部", ""));
+        DDL_MatchType.Items.Insert(0, new ListItem("ȫ��", ""));
 
     }
 

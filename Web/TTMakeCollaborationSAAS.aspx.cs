@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -17,7 +17,7 @@ using ProjectMgt.DAL;
 using ProjectMgt.BLL;
 public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
 {
-    //åŠ ä¸Šå…³è”RelatedCode TODO:CAOJIAN(æ›¹å¥)
+    //¼ÓÉÏ¹ØÁªRelatedCode TODO:CAOJIAN(²Ü½¡)
     string strRelatedType, strRelatedID, strIdentifyString, strRelatedCode;
     string strIsMobileDevice;
 
@@ -27,11 +27,11 @@ public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
         IList lst;
 
         string strUserCode, strDepartCode;
-        string strRelatedTypeCN = "å…¶å®ƒ";
+        string strRelatedTypeCN = "Other";
 
         strIsMobileDevice = Session["IsMobileDevice"].ToString();
 
-        //CKEditoråˆå§‹åŒ–
+        //CKEditor³õÊ¼»¯
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HTEditor1);
@@ -55,7 +55,7 @@ public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
             strIdentifyString = "";
         }
 
-        //åŠ ä¸Šå…³è”RelatedCode TODO:CAOJIAN(æ›¹å¥)
+        //¼ÓÉÏ¹ØÁªRelatedCode TODO:CAOJIAN(²Ü½¡)
         strRelatedCode = Request.QueryString["RelatedCode"];
         if (strRelatedCode == null)
         {
@@ -68,42 +68,42 @@ public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
 
         if (strRelatedType == "MEETING")
         {
-            strRelatedTypeCN = "ä¼šè®®";
+            strRelatedTypeCN = "»áÒé";
         }
 
         if (strRelatedType == "WORKFLOW")
         {
-            strRelatedTypeCN = "æµç¨‹";
+            strRelatedTypeCN = "Á÷³Ì";
         }
 
         if (strRelatedType == "PROJECT")
         {
-            strRelatedTypeCN = "é¡¹ç›®";
+            strRelatedTypeCN = "Project";
         }
 
         if (strRelatedType == "ProPlan")
         {
-            strRelatedTypeCN = "é¡¹ç›®è®¡åˆ’";
+            strRelatedTypeCN = "ÏîÄ¿¼Æ»®";
         }
 
         if (strRelatedType == "REQ")
         {
-            strRelatedTypeCN = "éœ€æ±‚";
+            strRelatedTypeCN = "Requirement";
         }
 
         if (strRelatedType == "CONSTRACT")
         {
-            strRelatedTypeCN = "åˆåŒ";
+            strRelatedTypeCN = "ºÏÍ¬";
         }
 
         if (strRelatedType == "CANDIDATE")
         {
-            strRelatedTypeCN = "å€™é€‰äºº";
+            strRelatedTypeCN = "ºòÑ¡ÈË";
         }
 
         if (strRelatedType == "OTHER")
         {
-            //this.Title = "å»ºç«‹åä½œ";
+            //this.Title = "½¨Á¢Ğ­×÷";
         }
         
 
@@ -198,7 +198,7 @@ public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
                 }
             }
 
-            //åŠ ä¸Šå…³è”RelatedCode TODO:CAOJIAN(æ›¹å¥)
+            //¼ÓÉÏ¹ØÁªRelatedCode TODO:CAOJIAN(²Ü½¡)
             LoadCollaborationList(strUserCode, strRelatedType, strRelatedID, strIdentifyString, strRelatedCode);
         }
     }
@@ -257,9 +257,9 @@ public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
 
         collaboration.RelatedType = strRelatedType;
         collaboration.RelatedID = int.Parse(strRelatedID);
-        //åŠ ä¸Šå…³è”RelatedCode TODO:CAOJIAN(æ›¹å¥)
+        //¼ÓÉÏ¹ØÁªRelatedCode TODO:CAOJIAN(²Ü½¡)
         collaboration.RelatedCode = strRelatedCode;
-        collaboration.Status = "æ–°å»º";
+        collaboration.Status = "New";
 
         try
         {
@@ -268,7 +268,7 @@ public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
             strCOID = ShareClass.GetMyCreatedMaxColloaborationID(strUserCode);
             LB_CoID.Text = strCOID;
 
-            #region å¢åŠ å‚ä¸äººå‘˜ By LiuJianping 2013-09-11
+            #region Ôö¼Ó²ÎÓëÈËÔ± By LiuJianping 2013-09-11
 
             if (RP_Attendant.Items.Count > 0)
             {
@@ -291,7 +291,7 @@ public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
 
             HL_RelatedDoc.Enabled = true;
             HL_RelatedDoc.NavigateUrl = "TTCollaborationRelatedDoc.aspx?RelatedID=" + strCOID;
-            TB_Message.Text = "ä½ å·²è¢«é‚€è¯·å‚åŠ åä½œï¼š" + strCOID + " " + strCollaborationName + "ï¼Œé‚€è¯·è€…ï¼š" + ShareClass.GetUserName(strUserCode) + " " + "ï¼Œè¯·å‡†æ—¶å‚åŠ ï¼";
+            TB_Message.Text = "ÄãÒÑ±»ÑûÇë²Î¼ÓĞ­×÷£º" + strCOID + " " + strCollaborationName + "£¬ÑûÇëÕß£º" + ShareClass.GetUserName(strUserCode) + " " + "£¬Çë×¼Ê±²Î¼Ó£¡";
 
             LoadCollaborationMember(strCOID);
             LoadCollaborationList(strUserCode, strRelatedType, strRelatedID, strIdentifyString, strRelatedCode);
@@ -342,7 +342,7 @@ public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
         {
             collaborationBLL.UpdateCollaboration(collaboration, int.Parse(strCoID));
 
-            #region å¢åŠ å‚ä¸äººå‘˜ By LiuJianping 2013-09-11
+            #region Ôö¼Ó²ÎÓëÈËÔ± By LiuJianping 2013-09-11
             string strMemID = "0";
             if (RP_Attendant.Items.Count > 0)
             {
@@ -390,14 +390,14 @@ public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
 
         Collaboration collaboration = (Collaboration)lst[0];
 
-        collaboration.Status = "å…³é—­";
+        collaboration.Status = "Closed";
 
 
         try
         {
             collaborationBLL.UpdateCollaboration(collaboration, int.Parse(strCoID));
 
-            LB_Status.Text = "å…³é—­";
+            LB_Status.Text = "Closed";
 
             LoadCollaborationList(strUserCode, strRelatedType, strRelatedID, strIdentifyString, strRelatedCode);
 
@@ -428,13 +428,13 @@ public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
 
         Collaboration collaboration = (Collaboration)lst[0];
 
-        collaboration.Status = "å¤„ç†ä¸­";
+        collaboration.Status = "InProgress";
 
         try
         {
             collaborationBLL.UpdateCollaboration(collaboration, int.Parse(strCoID));
 
-            LB_Status.Text = "å¤„ç†ä¸­";
+            LB_Status.Text = "InProgress";
 
             LoadCollaborationList(strUserCode, strRelatedType, strRelatedID, strIdentifyString, strRelatedCode);
 
@@ -451,11 +451,11 @@ public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
 
     protected void DataGrid1_ItemCommand(object sender, DataGridCommandEventArgs e)
     {
-        #region æ–°å¢ By LiuJianping 2013-09-11
+        #region ĞÂÔö By LiuJianping 2013-09-11
 
         string struserCode = ((Button)e.Item.FindControl("BT_UserCode")).Text;
         string struserName = ShareClass.GetUserName(struserCode);
-        string usercodeGold = LB_UserCode.Text.Trim();//æ“ä½œè€…
+        string usercodeGold = LB_UserCode.Text.Trim();//²Ù×÷Õß
 
         if (struserCode.Trim() == usercodeGold)
         {
@@ -493,7 +493,7 @@ public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
     }
 
     /// <summary>
-    /// å¢åŠ å‚ä¸äººå‘˜ By LiuJianping  2013-09-11
+    /// Ôö¼Ó²ÎÓëÈËÔ± By LiuJianping  2013-09-11
     /// </summary>
     /// <param name="strCoID"></param>
     /// <param name="struserCode"></param>
@@ -512,7 +512,7 @@ public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
     }
 
     /// <summary>
-    /// æ›´æ–°å‚ä¸äººå‘˜ By LiuJianping  2013-09-11
+    /// ¸üĞÂ²ÎÓëÈËÔ± By LiuJianping  2013-09-11
     /// </summary>
     /// <param name="strCoID"></param>
     /// <param name="struserCode"></param>
@@ -537,10 +537,10 @@ public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
     }
 
     /// <summary>
-    /// åˆ é™¤å‚ä¸äººå‘˜ By LiuJianping  2013-09-11
+    /// É¾³ı²ÎÓëÈËÔ± By LiuJianping  2013-09-11
     /// </summary>
     /// <param name="strCoID"></param>
-    /// <param name="strMemIDList">å¦‚1,2,3,4</param>
+    /// <param name="strMemIDList">Èç1,2,3,4</param>
     protected void DeleteCollaborationMember(string strCoID, string strMemIDList)
     {
         CollaborationMemberBLL collaborationMemberBLL = new CollaborationMemberBLL();
@@ -557,7 +557,7 @@ public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
     }
 
     /// <summary>
-    /// è·å–åˆ›å»ºå‚ä¸äººå‘˜çš„å³æ—¶ID By LiuJianping  2013-09-11
+    /// »ñÈ¡´´½¨²ÎÓëÈËÔ±µÄ¼´Ê±ID By LiuJianping  2013-09-11
     /// </summary>
     /// <param name="strUserCode"></param>
     /// <returns></returns>
@@ -629,7 +629,7 @@ public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
 
 
                 HL_RelatedDoc.NavigateUrl = "TTCollaborationRelatedDoc.aspx?RelatedID=" + strID;
-                TB_Message.Text = "ä½ å·²è¢«é‚€è¯·å‚åŠ åä½œï¼š" + strID + " " + collaboration.CollaborationName.Trim() + "ï¼Œé‚€è¯·è€…ï¼š" + collaboration.CreatorName.Trim() + " " + "ï¼Œè¯·å‡†æ—¶å‚åŠ ï¼";
+                TB_Message.Text = "ÄãÒÑ±»ÑûÇë²Î¼ÓĞ­×÷£º" + strID + " " + collaboration.CollaborationName.Trim() + "£¬ÑûÇëÕß£º" + collaboration.CreatorName.Trim() + " " + "£¬Çë×¼Ê±²Î¼Ó£¡";
 
                 HL_RelatedDoc.Enabled = true;
                 BT_Close.Enabled = true;
@@ -660,7 +660,7 @@ public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
                     BT_Send.Enabled = false;
                     HL_RelatedDoc.Enabled = false;
 
-                    #region åˆ é™¤å‚ä¸äººå‘˜ By LiuJianping 2013-09-11
+                    #region É¾³ı²ÎÓëÈËÔ± By LiuJianping 2013-09-11
                     DeleteCollaborationMember(strID, "0");
                     #endregion
 
@@ -698,7 +698,7 @@ public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
         {
             string strUserName = ((Button)e.Item.FindControl("BT_UserName")).Text;
 
-            #region æ–°å¢  By LiuJianping  2013-09-11
+            #region ĞÂÔö  By LiuJianping  2013-09-11
             DataTable dt = GetCollaborationMemberModule(RP_Attendant).Tables[0];
             for (int i = 0; i < dt.Rows.Count; i++)
             {
@@ -716,7 +716,7 @@ public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
     }
 
     /// <summary>
-    /// è·å–å½“å‰å‚ä¸äººå‘˜åˆ—è¡¨ By LiuJianping  2013-09-11
+    /// »ñÈ¡µ±Ç°²ÎÓëÈËÔ±ÁĞ±í By LiuJianping  2013-09-11
     /// </summary>
     /// <param name="RP"></param>
     /// <returns></returns>
@@ -776,7 +776,7 @@ public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
 
                 if (CB_MSM.Checked == true | CB_Mail.Checked == true)
                 {
-                    strSubject = "åä½œé€šçŸ¥";
+                    strSubject = "Ğ­×÷Í¨Öª";
 
                     if (CB_MSM.Checked == true)
                     {
@@ -818,7 +818,7 @@ public partial class TTMakeCollaborationSAAS : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        //åŠ ä¸Šå…³è”RelatedCode TODO:CAOJIAN(æ›¹å¥)
+        //¼ÓÉÏ¹ØÁªRelatedCode TODO:CAOJIAN(²Ü½¡)
         if (strIdentifyString == "")
         {
             if (strRelatedCode != "")

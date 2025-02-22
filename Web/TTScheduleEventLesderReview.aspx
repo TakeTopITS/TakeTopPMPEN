@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTScheduleEventLesderReview.aspx.cs" Inherits="TTScheduleEventLesderReview" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTScheduleEventLesderReview.aspx.cs" Inherits="TTScheduleEventLesderReview" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit.HTMLEditor"
     TagPrefix="cc1" %>
@@ -84,7 +84,7 @@
                                         </td>
                                         <td>
 
-                                            <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,PingFen%>"></asp:Label>ï¼š</td>
+                                            <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,PingFen%>"></asp:Label>£º</td>
                                         <td>
                                             <NickLee:NumberBox ID="NB_Scoring" runat="server" MaxAmount="1000000000000" MinAmount="0" Width="80px">0.00</NickLee:NumberBox>
                                         </td>
@@ -112,9 +112,9 @@
                             <td align="left" style="padding: 5px 5px 5px 5px;">
                                 <br />
                                 <strong>
-                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,WoDePingHeYiJian%>"></asp:Label>:</strong>ï¼ˆ  
+                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,WoDePingHeYiJian%>"></asp:Label>:</strong>£¨  
                                 <asp:HyperLink ID="HL_ReviewReport" runat="server" Target="_blank">
-                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,SuoYouYiJian%>"></asp:Label></asp:HyperLink>ï¼‰
+                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,SuoYouYiJian%>"></asp:Label></asp:HyperLink>£©
                             </td>
                         </tr>
                         <tr>

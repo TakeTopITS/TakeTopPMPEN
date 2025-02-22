@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,7 +37,7 @@ public partial class TTWZPurchaseApplyDetailBrowse : System.Web.UI.Page
 
     private void DataPurchaseDetailBinder(string strPurchaseCode, string strSupplierCode)
     {
-        #region Ê≠£ÂºèÁâà
+        #region ’˝ Ω∞Ê
 
         string strWZPurchaseDetailHQL = string.Format(@"select o.*,s.UnitName,p.PlanCode from T_WZPurchaseOfferRecord o
                     left join T_WZSpan s on o.Unit = s.ID 

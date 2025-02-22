@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +17,7 @@ public partial class TTWebServiceList : System.Web.UI.Page
         string strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","WebServiceè®¾å®š", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","WebServiceÉè¶¨", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -52,8 +52,8 @@ public partial class TTWebServiceList : System.Web.UI.Page
             {
                 WebService webService = (WebService)listWebService[0];
                 webServiceBLL.DeleteWebService(webService);
-                Response.Write("<script>alert('åˆ é™¤æˆåŠŸï¼');</script>");
-                //é‡æ–°åŠ è½½åˆ—è¡¨
+                Response.Write("<script>alert('É¾³ı³É¹¦£¡');</script>");
+                //ÖØĞÂ¼ÓÔØÁĞ±í
                 BindWebServicesData();
             }
 
@@ -65,7 +65,7 @@ public partial class TTWebServiceList : System.Web.UI.Page
         if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
         {
             LinkButton LB = (LinkButton)e.Item.FindControl("LB_Del");
-            LB.Attributes.Add("onclick", "return confirm('ç¡®å®šè¦åˆ é™¤æ­¤é¡¹è®°å½•å—ï¼Ÿ');");
+            LB.Attributes.Add("onclick", "return confirm('È·¶¨ÒªÉ¾³ı´ËÏî¼ÇÂ¼Âğ£¿');");
         }
     }
 }

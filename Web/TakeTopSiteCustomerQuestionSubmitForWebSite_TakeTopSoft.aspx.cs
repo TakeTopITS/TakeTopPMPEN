@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -73,16 +73,16 @@ public partial class TakeTopSiteCustomerQuestionSubmitForWebSite_TakeTopSoft : S
                 return;
             }
 
-            //æ¨é€ä¿¡æ¯ç»™å®¢æœä¸»ç®¡
+            //ÍÆËÍĞÅÏ¢¸ø¿Í·şÖ÷¹Ü
             try
             {
                 string strCSOperatorCode = ShareClass.GetWebSiteCustomerServiceOperatorCode(strWebSite);
-                string strNofiInfo = "æç¤ºï¼šå…¬å¸: " + strCompany + " çš„å‘˜å·¥: " + strContactPerson + "( " + strPhoneNumber + " )" + " æäº¤äº†ï¼š" + strType + " çš„é—®é¢˜åé¦ˆï¼Œè¯·å…³æ³¨ï¼ï¼ï¼";
+                string strNofiInfo = "ÌáÊ¾£º¹«Ë¾: " + strCompany + " µÄÔ±¹¤: " + strContactPerson + "( " + strPhoneNumber + " )" + " Ìá½»ÁË£º" + strType + " µÄÎÊÌâ·´À¡£¬Çë¹Ø×¢£¡£¡£¡";
                 Action action = new Action(delegate ()
                 {
                     try
                     {
-                        ////ä¿¡æ¯æ¨é€æ¥å£
+                        ////ĞÅÏ¢ÍÆËÍ½Ó¿Ú
                         //NotificationHelper.ApplePush(strCSOperatorCode, strNofiInfo, 1);
 
                         Msg msg = new Msg();
@@ -102,7 +102,7 @@ public partial class TakeTopSiteCustomerQuestionSubmitForWebSite_TakeTopSoft : S
             }
 
             strSQL = " Insert into T_CustomerQuestion(Company,UserIP,UserPosition,ContactPerson,PhoneNumber,EMail,Address,PostCode,Type,Question,SummitTime,AnswerTime,Status,RecorderCode,OperatorCode,OperatorName,OperatorStatus,FromWebSite)";
-            strSQL += " Values(" + "'" + strCompany + "'" + "," + "'" + strUserIP + "'" + "," + "'" + strUserPosition + "'" + "," + "'" + strContactPerson + "'" + "," + "'" + strPhoneNumber + "'" + "," + "'" + strEMail + "'" + "," + "'" + strAddress + "'" + "," + "'" + strPostCode + "'" + "," + "'" + strType + "'" + "," + "'" + strQuestion + "'" + "," + "now(),now()+interval '1 day'," + "'æ–°å»º'" + ",'','','',''," + "'" + strWebSite + "'" + ")";
+            strSQL += " Values(" + "'" + strCompany + "'" + "," + "'" + strUserIP + "'" + "," + "'" + strUserPosition + "'" + "," + "'" + strContactPerson + "'" + "," + "'" + strPhoneNumber + "'" + "," + "'" + strEMail + "'" + "," + "'" + strAddress + "'" + "," + "'" + strPostCode + "'" + "," + "'" + strType + "'" + "," + "'" + strQuestion + "'" + "," + "now(),now()+interval '1 day'," + "'New'" + ",'','','',''," + "'" + strWebSite + "'" + ")";
 
 
             try

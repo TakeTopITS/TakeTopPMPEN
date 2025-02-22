@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" EnableEventValidation="false" CodeFile="TTProModuleAuthority.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" EnableEventValidation="false" CodeFile="TTProModuleAuthority.aspx.cs"
     Inherits="TTProModuleAuthority" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -196,7 +196,7 @@
                                                     <tr>
                                                         <td colspan="2">
                                                             <cc2:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" Width="100%" runat="server" ActiveTabIndex="0">
-                                                                <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="å‘˜å·¥æ¨¡ç»„æƒé™">
+                                                                <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="Ô±¹¤Ä£×éÈ¨ÏÞ">
                                                                     <HeaderTemplate>
                                                                         <asp:Label ID="Label47" runat="server" Text="<%$ Resources:lang,YuanGongMoZuQuanXian%>"></asp:Label>
                                                                     </HeaderTemplate>
@@ -239,26 +239,26 @@
                                                                                     <asp:DataGrid ID="DataGrid3" runat="server" AutoGenerateColumns="False" OnItemCommand="DataGrid3_ItemCommand" ShowHeader="False"
                                                                                         Height="1px" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                                         <Columns>
-                                                                                            <asp:TemplateColumn HeaderText="ç¼–å·">
+                                                                                            <asp:TemplateColumn HeaderText="±àºÅ">
                                                                                                 <ItemTemplate>
                                                                                                     <asp:Button ID="BT_ParentID" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>'
                                                                                                         CssClass="inpu" />
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:TemplateColumn>
-                                                                                            <asp:BoundColumn DataField="ModuleName" HeaderText="æ¨¡å—ç±»åž‹">
+                                                                                            <asp:BoundColumn DataField="ModuleName" HeaderText="Ä£¿éÀàÐÍ">
                                                                                                 <ItemStyle CssClass="itemBorder"
                                                                                                     HorizontalAlign="Center" Width="30%" />
                                                                                             </asp:BoundColumn>
 
-                                                                                            <asp:TemplateColumn HeaderText="ç”¨æˆ·">
+                                                                                            <asp:TemplateColumn HeaderText="ÓÃ»§">
                                                                                                 <ItemTemplate>
                                                                                                     <%# Eval("UserCode").ToString() %>  <%# ShareClass. GetUserName(Eval("UserCode").ToString()) %>
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                                             </asp:TemplateColumn>
 
-                                                                                            <asp:TemplateColumn HeaderText="å¯ç”¨">
+                                                                                            <asp:TemplateColumn HeaderText="¿ÉÓÃ">
                                                                                                 <ItemTemplate>
                                                                                                     <asp:CheckBox ID="CB_ParentVisible" runat="server" />
                                                                                                 </ItemTemplate>
@@ -266,11 +266,11 @@
                                                                                                     Width="10%"
                                                                                                     HorizontalAlign="Center" />
                                                                                             </asp:TemplateColumn>
-                                                                                            <asp:BoundColumn DataField="ModuleType" HeaderText="æ¨¡ç»„ç±»åž‹">
+                                                                                            <asp:BoundColumn DataField="ModuleType" HeaderText="Ä£×éÀàÐÍ">
                                                                                                 <ItemStyle CssClass="itemBorder"
                                                                                                     HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="UserType" HeaderText="ç”¨æˆ·ç±»åž‹">
+                                                                                            <asp:BoundColumn DataField="UserType" HeaderText="ÓÃ»§ÀàÐÍ">
                                                                                                 <ItemStyle CssClass="itemBorder"
                                                                                                     HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
@@ -309,7 +309,7 @@
 
                                                                                                     <tr>
                                                                                                         <td style="text-align: left; padding-left: 5px"><strong><span style="font-size: 11pt;">
-                                                                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,QuanXianFuZhi %>"></asp:Label>ï¼š</strong> </td>
+                                                                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,QuanXianFuZhi %>"></asp:Label>£º</strong> </td>
                                                                                                     </tr>
                                                                                                     <tr style="font-size: 12pt; padding-left: 5px">
                                                                                                         <td style="text-align: left">
@@ -333,7 +333,7 @@
                                                                         </table>
                                                                     </ContentTemplate>
                                                                 </cc2:TabPanel>
-                                                                <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="å‘˜å·¥å…¶å®ƒæƒé™">
+                                                                <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="Ô±¹¤ÆäËüÈ¨ÏÞ">
                                                                     <HeaderTemplate>
                                                                         <asp:Label ID="Label48" runat="server" Text="<%$ Resources:lang,YuanGongQiTaQuanXian%>"></asp:Label>
                                                                     </HeaderTemplate>
@@ -342,7 +342,7 @@
                                                                             <tr>
                                                                                 <td style="text-align: Right; width: 20%;">
                                                                                     <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YuanGong%>"></asp:Label>
-                                                                                    ï¼š </td>
+                                                                                    £º </td>
                                                                                 <td style="width: 80%">
                                                                                     <asp:Label ID="LB_UserCode" runat="server"></asp:Label>
                                                                                     <asp:Label ID="LB_UserName" runat="server"></asp:Label>
@@ -353,7 +353,7 @@
                                                                             <tr>
                                                                                 <td style="text-align: Right; width: 20%;">
                                                                                     <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,YouXiang%>"></asp:Label>
-                                                                                    ï¼š </td>
+                                                                                    £º </td>
                                                                                 <td style="width: 80%">
                                                                                     <asp:CheckBox ID="CB_PasswordSet" runat="server" Text="<%$ Resources:lang,MiMaZiShe%>" />
                                                                                     <asp:CheckBox ID="CB_DeleteOperate" runat="server" Text="<%$ Resources:lang,ShanChuCaoZuo%>" />
@@ -371,7 +371,7 @@
                                                                         </table>
                                                                     </ContentTemplate>
                                                                 </cc2:TabPanel>
-                                                                <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="éƒ¨é—¨æƒé™">
+                                                                <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="²¿ÃÅÈ¨ÏÞ">
                                                                     <HeaderTemplate>
                                                                         <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,BuMenMoZuQuanXian%>"></asp:Label>
                                                                     </HeaderTemplate>
@@ -415,17 +415,17 @@
                                                                                         ShowHeader="False" Height="1px" Width="100%" CellPadding="4" ForeColor="#333333"
                                                                                         GridLines="None">
                                                                                         <Columns>
-                                                                                            <asp:TemplateColumn HeaderText="ç¼–å·">
+                                                                                            <asp:TemplateColumn HeaderText="±àºÅ">
                                                                                                 <ItemTemplate>
                                                                                                     <asp:Button ID="BT_ParentID" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>'
                                                                                                         CssClass="inpu" />
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:TemplateColumn>
-                                                                                            <asp:BoundColumn DataField="ModuleName" HeaderText="æ¨¡å—åç§°">
+                                                                                            <asp:BoundColumn DataField="ModuleName" HeaderText="Ä£¿éÃû³Æ">
                                                                                                 <ItemStyle CssClass="itemBorder" Width="30%" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:TemplateColumn HeaderText="éƒ¨é—¨">
+                                                                                            <asp:TemplateColumn HeaderText="²¿ÃÅ">
                                                                                                 <ItemTemplate>
                                                                                                     <%# Eval("DepartCode").ToString()%>    <%# ShareClass.GetDepartName(Eval("DepartCode").ToString()) %>
                                                                                                 </ItemTemplate>
@@ -438,11 +438,11 @@
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:TemplateColumn>
-                                                                                            <asp:BoundColumn DataField="ModuleType" HeaderText="æ¨¡ç»„ç±»åž‹">
+                                                                                            <asp:BoundColumn DataField="ModuleType" HeaderText="Ä£×éÀàÐÍ">
                                                                                                 <ItemStyle CssClass="itemBorder"
                                                                                                     HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="UserType" HeaderText="ç”¨æˆ·ç±»åž‹">
+                                                                                            <asp:BoundColumn DataField="UserType" HeaderText="ÓÃ»§ÀàÐÍ">
                                                                                                 <ItemStyle CssClass="itemBorder"
                                                                                                     HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
@@ -472,7 +472,7 @@
                                                                                                     <tr>
                                                                                                         <td class="formItemBgStyle" style="text-align: left;"><strong><span style="font-size: 11pt;">
                                                                                                             <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,QuanXianFuZhi %>"></asp:Label>
-                                                                                                            ï¼š</span></strong> </td>
+                                                                                                            £º</span></strong> </td>
                                                                                                     </tr>
                                                                                                     <tr style="font-size: 12pt;">
                                                                                                         <td class="formItemBgStyle" style="text-align: left">
@@ -495,7 +495,7 @@
                                                                             <tr>
                                                                                 <td align="left" class="tdFullBorder" style="padding-left: 20px; font-weight: bold; height: 24px; color: #394f66; background-image: url('ImagesSkin/titleBG.jpg')">
                                                                                     <asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,BuMen %>"></asp:Label>
-                                                                                    ï¼š<asp:Label ID="LB_RelatedDepartCode" runat="server"></asp:Label><asp:Label ID="LB_RelatedDepartName" runat="server"></asp:Label><asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,DeLiWaiYongHu %>"></asp:Label></td>
+                                                                                    £º<asp:Label ID="LB_RelatedDepartCode" runat="server"></asp:Label><asp:Label ID="LB_RelatedDepartName" runat="server"></asp:Label><asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,DeLiWaiYongHu %>"></asp:Label></td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td>
@@ -528,13 +528,13 @@
                                                                                     <asp:DataGrid ID="DataGrid6" runat="server" AllowPaging="True" AutoGenerateColumns="False"
                                                                                         OnItemCommand="DataGrid6_ItemCommand" GridLines="None" ShowHeader="False" Width="100%">
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                                                            <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                                                                                                 <ItemStyle CssClass="itemBorder" Width="20%" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="UserCode" HeaderText="ä»£ç ">
+                                                                                            <asp:BoundColumn DataField="UserCode" HeaderText="´úÂë">
                                                                                                 <ItemStyle CssClass="itemBorder" Width="35%" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="UserName" HeaderText="åç§°">
+                                                                                            <asp:BoundColumn DataField="UserName" HeaderText="Ãû³Æ">
                                                                                                 <ItemStyle CssClass="itemBorder" Width="35%" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
                                                                                             <asp:ButtonColumn ButtonType="PushButton" CommandName="Delete" Text="<%$ Resources:lang,ShanChu %>">
@@ -583,7 +583,7 @@
                                         <asp:Label ID="LB_ParentModuleID" runat="server"></asp:Label>
                                         <asp:Label ID="LB_ParentHomeModule" runat="server" Style="font-weight: 700"></asp:Label>
                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZiMoZuLieBiao %>"></asp:Label>
-                                        ï¼š
+                                        £º
                                     <asp:Label ID="LB_ParentUserType" runat="server" Visible="False"></asp:Label>
                                         <asp:Label ID="LB_ParentModule" runat="server" Visible="False"></asp:Label>
                                     </td>
@@ -625,34 +625,34 @@
                                         <asp:DataGrid ID="DataGrid4" runat="server" AutoGenerateColumns="False" OnItemCommand="DataGrid4_ItemCommand" ShowHeader="False"
                                             Height="1px" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                             <Columns>
-                                                <asp:TemplateColumn HeaderText="ç¼–å·">
+                                                <asp:TemplateColumn HeaderText="±àºÅ">
                                                     <ItemTemplate>
                                                         <asp:Button ID="BT_ChildID" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>'
                                                             CssClass="inpu" />
                                                     </ItemTemplate>
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                 </asp:TemplateColumn>
-                                                <asp:BoundColumn DataField="ModuleName" HeaderText="æ¨¡å—åç§°">
+                                                <asp:BoundColumn DataField="ModuleName" HeaderText="Ä£¿éÃû³Æ">
                                                     <ItemStyle CssClass="itemBorder"
                                                         HorizontalAlign="Center" Width="30%" />
                                                 </asp:BoundColumn>
-                                                <asp:TemplateColumn HeaderText="ç”¨æˆ·">
+                                                <asp:TemplateColumn HeaderText="ÓÃ»§">
                                                     <ItemTemplate>
                                                         <%# Eval("UserCode").ToString() %>  <%# ShareClass. GetUserName(Eval("UserCode").ToString()) %>
                                                     </ItemTemplate>
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                 </asp:TemplateColumn>
-                                                <asp:TemplateColumn HeaderText="å¯ç”¨">
+                                                <asp:TemplateColumn HeaderText="¿ÉÓÃ">
                                                     <ItemTemplate>
                                                         <asp:CheckBox ID="CB_ChildVisible" runat="server" />
                                                     </ItemTemplate>
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                 </asp:TemplateColumn>
-                                                <asp:BoundColumn DataField="ModuleType" HeaderText="æ¨¡ç»„ç±»åž‹">
+                                                <asp:BoundColumn DataField="ModuleType" HeaderText="Ä£×éÀàÐÍ">
                                                     <ItemStyle CssClass="itemBorder"
                                                         HorizontalAlign="Center" Width="10%" />
                                                 </asp:BoundColumn>
-                                                <asp:BoundColumn DataField="UserType" HeaderText="ç”¨æˆ·ç±»åž‹">
+                                                <asp:BoundColumn DataField="UserType" HeaderText="ÓÃ»§ÀàÐÍ">
                                                     <ItemStyle CssClass="itemBorder"
                                                         HorizontalAlign="Center" Width="10%" />
                                                 </asp:BoundColumn>
@@ -691,7 +691,7 @@
                                         <asp:Label ID="LB_ChildModuleID" runat="server"></asp:Label>
                                         <asp:Label ID="LB_ChildHomeModule" runat="server" Style="font-weight: 700"></asp:Label>
                                         <asp:Label ID="Label50" runat="server" Text="<%$ Resources:lang,ZiMoZuLieBiao %>"></asp:Label>
-                                        ï¼š
+                                        £º
                                     <asp:Label ID="LB_ChildUserType" runat="server" Visible="False"></asp:Label>
                                         <asp:Label ID="LB_ChildModule" runat="server" Visible="False"></asp:Label>
                                         <asp:Label ID="LB_ChildModuleName" runat="server"></asp:Label>
@@ -734,31 +734,31 @@
                                         <asp:DataGrid ID="DataGrid7" runat="server" AutoGenerateColumns="False" ShowHeader="False" OnItemCommand="DataGrid7_ItemCommand"
                                             Height="1px" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                             <Columns>
-                                                <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                                                     <ItemStyle CssClass="itemBorder"
                                                         HorizontalAlign="Center" Width="10%" />
                                                 </asp:BoundColumn>
-                                                <asp:BoundColumn DataField="ModuleName" HeaderText="æ¨¡å—åç§°">
+                                                <asp:BoundColumn DataField="ModuleName" HeaderText="Ä£¿éÃû³Æ">
                                                     <ItemStyle CssClass="itemBorder"
                                                         HorizontalAlign="Center" Width="30%" />
                                                 </asp:BoundColumn>
-                                                <asp:TemplateColumn HeaderText="ç”¨æˆ·">
+                                                <asp:TemplateColumn HeaderText="ÓÃ»§">
                                                     <ItemTemplate>
                                                         <%# Eval("UserCode").ToString() %>  <%# ShareClass. GetUserName(Eval("UserCode").ToString()) %>
                                                     </ItemTemplate>
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                 </asp:TemplateColumn>
-                                                <asp:TemplateColumn HeaderText="å¯ç”¨">
+                                                <asp:TemplateColumn HeaderText="¿ÉÓÃ">
                                                     <ItemTemplate>
                                                         <asp:CheckBox ID="CB_ChildVisible" runat="server" />
                                                     </ItemTemplate>
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                 </asp:TemplateColumn>
-                                                <asp:BoundColumn DataField="ModuleType" HeaderText="æ¨¡ç»„ç±»åž‹">
+                                                <asp:BoundColumn DataField="ModuleType" HeaderText="Ä£×éÀàÐÍ">
                                                     <ItemStyle CssClass="itemBorder"
                                                         HorizontalAlign="Center" Width="10%" />
                                                 </asp:BoundColumn>
-                                                <asp:BoundColumn DataField="UserType" HeaderText="ç”¨æˆ·ç±»åž‹">
+                                                <asp:BoundColumn DataField="UserType" HeaderText="ÓÃ»§ÀàÐÍ">
                                                     <ItemStyle CssClass="itemBorder"
                                                         HorizontalAlign="Center" Width="10%" />
                                                 </asp:BoundColumn>
@@ -795,7 +795,7 @@
                                     <td style="text-align: left;">
                                         <asp:Label ID="LB_ParentHomeDepartModule" runat="server" Style="font-weight: 700"></asp:Label>
                                         <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,ZiMoZuLieBiao %>"></asp:Label>
-                                        ï¼š
+                                        £º
                                     <asp:Label ID="LB_DepartUserType" runat="server" Visible="False"></asp:Label>
                                         <asp:Label ID="LB_ParentDepartModule" runat="server" Visible="False"></asp:Label>
                                     </td>
@@ -838,17 +838,17 @@
                                             ShowHeader="False" Height="1px" Width="100%" CellPadding="4" ForeColor="#333333"
                                             GridLines="None">
                                             <Columns>
-                                                <asp:TemplateColumn HeaderText="ç¼–å·">
+                                                <asp:TemplateColumn HeaderText="±àºÅ">
                                                     <ItemTemplate>
                                                         <asp:Button ID="BT_ChildID" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>'
                                                             CssClass="inpu" />
                                                     </ItemTemplate>
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                 </asp:TemplateColumn>
-                                                <asp:BoundColumn DataField="ModuleName" HeaderText="æ¨¡å—åç§°">
+                                                <asp:BoundColumn DataField="ModuleName" HeaderText="Ä£¿éÃû³Æ">
                                                     <ItemStyle CssClass="itemBorder" Width="30%" HorizontalAlign="Center" />
                                                 </asp:BoundColumn>
-                                                <asp:TemplateColumn HeaderText="éƒ¨é—¨">
+                                                <asp:TemplateColumn HeaderText="²¿ÃÅ">
                                                     <ItemTemplate>
                                                         <%# Eval("DepartCode").ToString()%>    <%# ShareClass.GetDepartName(Eval("DepartCode").ToString()) %>
                                                     </ItemTemplate>
@@ -860,11 +860,11 @@
                                                     </ItemTemplate>
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                 </asp:TemplateColumn>
-                                                <asp:BoundColumn DataField="ModuleType" HeaderText="æ¨¡ç»„ç±»åž‹">
+                                                <asp:BoundColumn DataField="ModuleType" HeaderText="Ä£×éÀàÐÍ">
                                                     <ItemStyle CssClass="itemBorder"
                                                         HorizontalAlign="Center" />
                                                 </asp:BoundColumn>
-                                                <asp:BoundColumn DataField="UserType" HeaderText="ç”¨æˆ·ç±»åž‹">
+                                                <asp:BoundColumn DataField="UserType" HeaderText="ÓÃ»§ÀàÐÍ">
                                                     <ItemStyle CssClass="itemBorder"
                                                         HorizontalAlign="Center" />
                                                 </asp:BoundColumn>
@@ -902,7 +902,7 @@
                                     <td style="text-align: left;">
                                         <asp:Label ID="LB_ChildHomeDepartModule" runat="server" Style="font-weight: 700"></asp:Label>
                                         <asp:Label ID="Label51" runat="server" Text="<%$ Resources:lang,ZiMoZuLieBiao %>"></asp:Label>
-                                        ï¼š
+                                        £º
                                    <asp:Label ID="LB_ChildDepartModule" runat="server" Visible="False"></asp:Label>
                                     </td>
                                 </tr>
@@ -944,13 +944,13 @@
                                             ShowHeader="False" Height="1px" Width="100%" CellPadding="4" ForeColor="#333333"
                                             GridLines="None">
                                             <Columns>
-                                                <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                                                     <ItemStyle CssClass="itemBorder" Width="10%" HorizontalAlign="Center" />
                                                 </asp:BoundColumn>
-                                                <asp:BoundColumn DataField="ModuleName" HeaderText="æ¨¡å—åç§°">
+                                                <asp:BoundColumn DataField="ModuleName" HeaderText="Ä£¿éÃû³Æ">
                                                     <ItemStyle CssClass="itemBorder" Width="30%" HorizontalAlign="Center" />
                                                 </asp:BoundColumn>
-                                                <asp:TemplateColumn HeaderText="éƒ¨é—¨">
+                                                <asp:TemplateColumn HeaderText="²¿ÃÅ">
                                                     <ItemTemplate>
                                                         <%# Eval("DepartCode").ToString()%>    <%# ShareClass.GetDepartName(Eval("DepartCode").ToString()) %>
                                                     </ItemTemplate>
@@ -962,11 +962,11 @@
                                                     </ItemTemplate>
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                 </asp:TemplateColumn>
-                                                <asp:BoundColumn DataField="ModuleType" HeaderText="æ¨¡ç»„ç±»åž‹">
+                                                <asp:BoundColumn DataField="ModuleType" HeaderText="Ä£×éÀàÐÍ">
                                                     <ItemStyle CssClass="itemBorder"
                                                         HorizontalAlign="Center" />
                                                 </asp:BoundColumn>
-                                                <asp:BoundColumn DataField="UserType" HeaderText="ç”¨æˆ·ç±»åž‹">
+                                                <asp:BoundColumn DataField="UserType" HeaderText="ÓÃ»§ÀàÐÍ">
                                                     <ItemStyle CssClass="itemBorder"
                                                         HorizontalAlign="Center" />
                                                 </asp:BoundColumn>

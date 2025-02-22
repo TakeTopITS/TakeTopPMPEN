@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -37,10 +37,10 @@ public partial class TTDWProMatchList : System.Web.UI.Page
 
         if (listDWProductType.Count > 0)
         {
-            DDL_Type.Items.Insert(listDWProductType.Count, new ListItem("å…¨éƒ¨", "0"));
+            DDL_Type.Items.Insert(listDWProductType.Count, new ListItem("È«²¿", "0"));
         }
         else {
-            DDL_Type.Items.Insert(0, new ListItem("å…¨éƒ¨", "0"));
+            DDL_Type.Items.Insert(0, new ListItem("È«²¿", "0"));
         }
     }
 
@@ -55,10 +55,10 @@ public partial class TTDWProMatchList : System.Web.UI.Page
 
         if (listDWMatchType.Count > 0)
         {
-            DDL_MatchType.Items.Insert(listDWMatchType.Count, new ListItem("å…¨éƒ¨", "0"));
+            DDL_MatchType.Items.Insert(listDWMatchType.Count, new ListItem("È«²¿", "0"));
         }
         else {
-            DDL_MatchType.Items.Insert(0, new ListItem("å…¨éƒ¨", "0"));
+            DDL_MatchType.Items.Insert(0, new ListItem("È«²¿", "0"));
         }
     }
 
@@ -113,7 +113,7 @@ public partial class TTDWProMatchList : System.Web.UI.Page
             DataTable dtProduct = dsTotal.Tables[1];
             DataTable dtProductMatch = dsTotal.Tables[2];
 
-            #region ç”¨NHibernateæŸ¥è¯¢
+            #region ÓÃNHibernate²éÑ¯
             //DWMatchBLL dWMatchBLL = new DWMatchBLL();
             //string strDWMatchHQL = "from DWMatch as dWMatch where 1=1 ";
             //if (!string.IsNullOrEmpty(strMatchName))
@@ -153,12 +153,12 @@ public partial class TTDWProMatchList : System.Web.UI.Page
             StringBuilder sbLeft = new StringBuilder();
             StringBuilder sbLeftFooter = new StringBuilder();
             StringBuilder sbContent = new StringBuilder();
-            StringBuilder sbFooter1 = new StringBuilder();          //æ€»æ•°é‡
-            StringBuilder sbFooter2 = new StringBuilder();          //æœ¬è‰²æˆæœ¬
-            StringBuilder sbFooter3 = new StringBuilder();          //é¢œè‰²æ–™æˆæœ¬
-            StringBuilder sbFooter4 = new StringBuilder();          //é…æ–¹ä»·
-            //sbHeader.Append("<td class=\"formItemBgStyle\" width=\"150\">ä»£å·</td><td class=\"formItemBgStyle\" style=\"display:none;\">åŸæ–™ä»·æ ¼</td>");
-            //è¡¨å¤´éƒ¨åˆ†
+            StringBuilder sbFooter1 = new StringBuilder();          //×ÜÊıÁ¿
+            StringBuilder sbFooter2 = new StringBuilder();          //±¾É«³É±¾
+            StringBuilder sbFooter3 = new StringBuilder();          //ÑÕÉ«ÁÏ³É±¾
+            StringBuilder sbFooter4 = new StringBuilder();          //Åä·½¼Û
+            //sbHeader.Append("<td class=\"formItemBgStyle\" width=\"150\">´úºÅ</td><td class=\"formItemBgStyle\" style=\"display:none;\">Ô­ÁÏ¼Û¸ñ</td>");
+            //±íÍ·²¿·Ö
             if (dtProduct != null && dtProduct.Rows.Count > 0)
             {
                 foreach (DataRow drProduct in dtProduct.Rows)
@@ -173,17 +173,17 @@ public partial class TTDWProMatchList : System.Web.UI.Page
             }
             else
             {
-                sbHeader.AppendFormat("<td class=\"formItemBgStyle\" style=\"height:60px; width:180px;\">æ— äº§å“è®°å½•</td>");
-                sbHeader2.AppendFormat("<td class=\"formItemBgStyle\" style=\"height:60px; width:180px;\">æ— äº§å“è®°å½•</td>");
+                sbHeader.AppendFormat("<td class=\"formItemBgStyle\" style=\"height:60px; width:180px;\">ÎŞ²úÆ·¼ÇÂ¼</td>");
+                sbHeader2.AppendFormat("<td class=\"formItemBgStyle\" style=\"height:60px; width:180px;\">ÎŞ²úÆ·¼ÇÂ¼</td>");
             }
 
             if (dtMatch != null && dtMatch.Rows.Count > 0)
             {
-                IDictionary<string, decimal> dictionTotal = new Dictionary<string, decimal>();                  //åŸæ–™ä»·æ ¼ä¸åŸæ–™æ•°é‡ç›¸ä¹˜ä¹‹å’Œ
-                IDictionary<string, decimal> dictionProductTotal = new Dictionary<string, decimal>();           //åŸæ–™æ•°é‡ä¹‹å’Œ
-                IDictionary<string, string> dictionProductType = new Dictionary<string, string>();              //äº§å“ç±»å‹
+                IDictionary<string, decimal> dictionTotal = new Dictionary<string, decimal>();                  //Ô­ÁÏ¼Û¸ñÓëÔ­ÁÏÊıÁ¿Ïà³ËÖ®ºÍ
+                IDictionary<string, decimal> dictionProductTotal = new Dictionary<string, decimal>();           //Ô­ÁÏÊıÁ¿Ö®ºÍ
+                IDictionary<string, string> dictionProductType = new Dictionary<string, string>();              //²úÆ·ÀàĞÍ
 
-                //sbLeft.Append("<tr><td class=\"formItemBgStyle\" width=\"150\">åŸæ–™ä»£å·</td></tr>");
+                //sbLeft.Append("<tr><td class=\"formItemBgStyle\" width=\"150\">Ô­ÁÏ´úºÅ</td></tr>");
                 for (int i = 0; i < dtMatch.Rows.Count; i++)
                 {
                     DataRow drMatch = dtMatch.Rows[i];
@@ -212,22 +212,22 @@ public partial class TTDWProMatchList : System.Web.UI.Page
 
                             string strTypeID = ShareClass.ObjectToString(drProduct["TypeID"]);
 
-                            //åˆ¤æ–­æ˜¯å¦æœ‰å…³è”å€¼
+                            //ÅĞ¶ÏÊÇ·ñÓĞ¹ØÁªÖµ
                             DataView dvProductMatch = dtProductMatch.DefaultView;
                             dvProductMatch.RowFilter = "MatchID = " + strMatchID + " and ProductID = " + strProductID;
                             //dvProMatch.RowFilter = "ProductID = " + dWProduct.ID;
                             DataTable dtValue = dvProductMatch.ToTable();
                             if (dtValue != null && dtValue.Rows.Count > 0)
                             {
-                                #region åŸæ–™ä¸äº§å“æœ‰åŸæ–™æ•°é‡çš„æ—¶å€™
+                                #region Ô­ÁÏÓë²úÆ·ÓĞÔ­ÁÏÊıÁ¿µÄÊ±ºò
                                 decimal decimalProductPrice = 0;
                                 decimal.TryParse(ShareClass.ObjectToString(dtValue.Rows[0]["ProductPrice"]), out decimalProductPrice);
 
                                 sbContent.Append("<td class=\"formItemBgStyle\" style=\"height:60px; width:180px;\">");
                                 string strP = string.Format("<p class=\"playtitle\">{0}</p>", decimalProductPrice);
-                                string strEditor = "<a class=\"playeditor\" href=\"javascript:void(0)\">ç¼–è¾‘</a>";
+                                string strEditor = "<a class=\"playeditor\" href=\"javascript:void(0)\">±à¼­</a>";
                                 string strInput = "<input type=\"text\" style=\"display:none;width:70px;\" class=\"playtx\" />";
-                                string strSave = string.Format("<a class=\"playsave\" value=\"{0}|{1}\" style=\"display:none;\" href=\"javascript:void(0)\">ä¿å­˜</a>", strMatchID, strProductID);
+                                string strSave = string.Format("<a class=\"playsave\" value=\"{0}|{1}\" style=\"display:none;\" href=\"javascript:void(0)\">±£´æ</a>", strMatchID, strProductID);
                                 sbContent.Append(strP + strEditor + strInput + strSave);
                                 sbContent.Append("</td>");
 
@@ -257,12 +257,12 @@ public partial class TTDWProMatchList : System.Web.UI.Page
                             }
                             else
                             {
-                                #region  åŸæ–™ä¸äº§å“æ²¡æœ‰åŸæ–™æ•°é‡
+                                #region  Ô­ÁÏÓë²úÆ·Ã»ÓĞÔ­ÁÏÊıÁ¿
                                 sbContent.Append("<td class=\"formItemBgStyle\" style=\"height:60px; width:180px;\">");
                                 string strP = "<p class=\"playtitle\">0</p>";
-                                string strEditor = "<a class=\"playeditor\" href=\"javascript:void(0)\">ç¼–è¾‘</a>";
+                                string strEditor = "<a class=\"playeditor\" href=\"javascript:void(0)\">±à¼­</a>";
                                 string strInput = "<input type=\"text\" style=\"display:none;width:70px;\" class=\"playtx\" />";
-                                string strSave = string.Format("<a class=\"playsave\" value=\"{0}|{1}\" style=\"display:none;\" href=\"javascript:void(0)\">ä¿å­˜</a>", strMatchID, strProductID);
+                                string strSave = string.Format("<a class=\"playsave\" value=\"{0}|{1}\" style=\"display:none;\" href=\"javascript:void(0)\">±£´æ</a>", strMatchID, strProductID);
                                 sbContent.Append(strP + strEditor + strInput + strSave);
                                 sbContent.Append("</td>");
 
@@ -297,7 +297,7 @@ public partial class TTDWProMatchList : System.Web.UI.Page
                 }
 
                 
-                //#region æ€»æ•°é‡
+                //#region ×ÜÊıÁ¿
                 sbFooter1.Append("<tr>");
                 //sbFooter1.Append("<td class=\"formItemBgStyle\">&nbsp;</td><td class=\"formItemBgStyle\">&nbsp;</td>");
 
@@ -311,8 +311,8 @@ public partial class TTDWProMatchList : System.Web.UI.Page
                 sbFooter1.Append("</tr>");
                 //#endregion
 
-                #region æ³¨é‡Šåº•ä¸‹éƒ¨åˆ†
-                //#region æœ¬è‰²æˆæœ¬
+                #region ×¢ÊÍµ×ÏÂ²¿·Ö
+                //#region ±¾É«³É±¾
                 //sbFooter2.Append("<tr>");
                 ////sbFooter2.Append("<td class=\"formItemBgStyle\">&nbsp;</td><td class=\"formItemBgStyle\">&nbsp;</td>");
 
@@ -334,7 +334,7 @@ public partial class TTDWProMatchList : System.Web.UI.Page
                 //sbFooter2.Append("</tr>");
                 //#endregion
 
-                //#region é¢œè‰²æ–™æˆæœ¬
+                //#region ÑÕÉ«ÁÏ³É±¾
                 //sbFooter3.Append("<tr>");
                 ////sbFooter3.Append("<td class=\"formItemBgStyle\">&nbsp;</td><td class=\"formItemBgStyle\">&nbsp;</td>");
 
@@ -368,7 +368,7 @@ public partial class TTDWProMatchList : System.Web.UI.Page
                 //sbFooter3.Append("</tr>");
                 //#endregion
 
-                //#region é…æ–¹ä»·
+                //#region Åä·½¼Û
                 //sbFooter4.Append("<tr>");
                 ////sbFooter4.Append("<td class=\"formItemBgStyle\">&nbsp;</td><td class=\"formItemBgStyle\">&nbsp;</td>");
 
@@ -403,15 +403,15 @@ public partial class TTDWProMatchList : System.Web.UI.Page
                 //#endregion
                 #endregion
 
-                //#region å·¦è¾¹åº•éƒ¨
-                sbLeftFooter.Append("<tr><td class=\"formItemBgStyle\">æ€»æ•°é‡</td></tr>");
+                //#region ×ó±ßµ×²¿
+                sbLeftFooter.Append("<tr><td class=\"formItemBgStyle\">×ÜÊıÁ¿</td></tr>");
                 //#endregion
                 
             }
             else
             {
                 sbLeft.Append("<tr>");
-                sbLeft.Append("<td class=\"formItemBgStyle\" style=\"height:60px; width:180px;\"><p>æ— åŸæ–™è®°å½•</p>&nbsp;</td>");
+                sbLeft.Append("<td class=\"formItemBgStyle\" style=\"height:60px; width:180px;\"><p>ÎŞÔ­ÁÏ¼ÇÂ¼</p>&nbsp;</td>");
                 sbLeft.Append("<td class=\"formItemBgStyle\" style=\"display:none;height:60px; width:180px;\">0</td>");
                 sbLeft.Append("</tr>");
             }

@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMakeProject_GCP.aspx.cs" Inherits="TTMakeProject_GCP" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMakeProject_GCP.aspx.cs" Inherits="TTMakeProject_GCP" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -7,7 +7,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ÁªôÊàêÂëòÂª∫Á´ãÂíåÂàÜÊ¥æÈ°πÁõÆ</title>
+    <title>∏¯≥…‘±Ω®¡¢∫Õ∑÷≈…œÓƒø</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         /*#AboveDiv {
@@ -29,7 +29,7 @@
                 }
             });
 
-        //ËÆæÁΩÆIFRMAEÁöÑÈ´òÂ∫¶
+        //…Ë÷√IFRMAEµƒ∏ﬂ∂»
         function setBusinessFormIFrameHeight() {
 
             var winHeight = 0;
@@ -87,12 +87,12 @@
                                                             <table width="700px">
                                                                 <tr>
                                                                     <td width="20%" align="right">
-                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,XiangMuMing%>"></asp:Label>Ôºö </td>
+                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,XiangMuMing%>"></asp:Label>£∫ </td>
                                                                     <td width="25%" align="left">
                                                                         <asp:TextBox ID="TB_FindProjectName" widh="99%" runat="server"></asp:TextBox>
                                                                     </td>
                                                                     <td width="20%" align="right">
-                                                                        <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,XiangMuJingLi%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,XiangMuJingLi%>"></asp:Label>£∫</td>
                                                                     <td width="25%" align="left">
                                                                         <asp:TextBox ID="TB_FindPMName" widh="99%" runat="server"></asp:TextBox></td>
                                                                     <td align="left">
@@ -181,53 +181,53 @@
                                                     <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <Columns>
-                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='‰øÆÊîπ' /&gt;&lt;/div&gt;">
+                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='–ﬁ∏ƒ' /&gt;&lt;/div&gt;">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:ButtonColumn>
                                                         <asp:TemplateColumn HeaderText="Delete">
                                                             <ItemTemplate>
-                                                                <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Âà†Èô§' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                                <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="ProjectID" HeaderText="È°πÁõÆID">
+                                                        <asp:BoundColumn DataField="ProjectID" HeaderText="œÓƒøID">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ProjectCode" HeaderText="È°πÁõÆ‰ª£Á†Å">
+                                                        <asp:BoundColumn DataField="ProjectCode" HeaderText="œÓƒø¥˙¬Î">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTProjectDetail.aspx?ProjectID={0}"
-                                                            DataTextField="ProjectName" HeaderText="È°πÁõÆÂêçÁß∞" Target="_blank">
+                                                            DataTextField="ProjectName" HeaderText="œÓƒø√˚≥∆" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="25%" />
                                                         </asp:HyperLinkColumn>
-                                                        <asp:BoundColumn DataField="PMName" HeaderText="È°πÁõÆÁªèÁêÜ">
+                                                        <asp:BoundColumn DataField="PMName" HeaderText="œÓƒøæ≠¿Ì">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:TemplateColumn HeaderText="Áä∂ÊÄÅ">
+                                                        <asp:TemplateColumn HeaderText="◊¥Ã¨">
                                                             <ItemTemplate>
                                                                 <%# ShareClass. GetStatusHomeNameByProjectStatus(Eval("Status").ToString(),Eval("ProjectType").ToString()) %>
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                         </asp:TemplateColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTMakeProjectBudget.aspx?ProjectID={0}"
-                                                            Text="<%$ Resources:lang,ZiJin%>" HeaderText="ËµÑÈáë" Target="_blank">
+                                                            Text="<%$ Resources:lang,ZiJin%>" HeaderText="◊ Ω" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:HyperLinkColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTProjectRelatedItem.aspx?ProjectID={0}"
-                                                            Text="<%$ Resources:lang,WuZhi%>" HeaderText="Áâ©ËµÑ" Target="_blank">
+                                                            Text="<%$ Resources:lang,WuZhi%>" HeaderText="ŒÔ◊ " Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:HyperLinkColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTMakeCollaboration.aspx?RelatedType=PROJECT&RelatedID={0}"
-                                                            Text="<%$ Resources:lang,XieZuo%>" HeaderText="Âçè‰Ωú" Target="_blank">
+                                                            Text="<%$ Resources:lang,XieZuo%>" HeaderText="–≠◊˜" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:HyperLinkColumn>
 
                                                         <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTProjectRelatedDoc.aspx?ProjectID={0}"
-                                                            Text="<%$ Resources:lang,WenDang%>" HeaderText="ÊñáÊ°£" Target="_blank">
+                                                            Text="<%$ Resources:lang,WenDang%>" HeaderText="Œƒµµ" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:HyperLinkColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTRelatedDIYWorkflowForm.aspx?RelatedType=Project&RelatedID={0}"
-                                                            Text="<%$ Resources:lang,RunByWF%>" HeaderText="ÂèëËµ∑ÊµÅÁ®ã" Target="_blank">
+                                                            Text="<%$ Resources:lang,RunByWF%>" HeaderText="∑¢∆¡˜≥Ã" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:HyperLinkColumn>
                                                         <asp:TemplateColumn>
@@ -264,7 +264,7 @@
                         <div id="popwindow_content" class="layui-layer-content" style="text-align: left; overflow: auto; padding: 0px 5px 0px 5px;">
 
                             <cc1:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" Width="100%" runat="server" ActiveTabIndex="0">
-                                <cc1:TabPanel ID="TabPanel1" runat="server" HeaderText="Âü∫Êú¨‰ø°ÊÅØ" TabIndex="0">
+                                <cc1:TabPanel ID="TabPanel1" runat="server" HeaderText="ª˘±æ–≈œ¢" TabIndex="0">
                                     <HeaderTemplate>
                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,JiBenXinXi%>"></asp:Label>
                                     </HeaderTemplate>
@@ -305,7 +305,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align: right;" class="formItemBgStyle">
-                                                                <asp:Label ID="LB_TBPM" runat="server" Text="È°πÁõÆË¥üË¥£‰∫∫" />: </td>
+                                                                <asp:Label ID="LB_TBPM" runat="server" Text="œÓƒø∏∫‘»À" />: </td>
                                                             <td colspan="3" style="text-align: left;" class="formItemBgStyle">
                                                                 <asp:DropDownList ID="DL_PM" runat="server" DataTextField="UserName" DataValueField="UserCode"></asp:DropDownList>
                                                                 <asp:Button ID="BT_DirectDepartment" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ZhiShuBuMen %>" />
@@ -313,16 +313,16 @@
                                                                     Enabled="True" TargetControlID="BT_DirectDepartment" PopupControlID="Panel1"
                                                                     CancelControlID="IMBT_Close" BackgroundCssClass="modalBackground" Y="150" DynamicServicePath="">
                                                                 </cc1:ModalPopupExtender>
-                                                                ËÅåÂä°Ôºö 
-                                                                <asp:TextBox ID="TB_PMDuty" runat="server" Width="110px"></asp:TextBox>ÁîµËØùÔºö<asp:TextBox ID="TB_PMPhoneNumber" runat="server" Width="110px"></asp:TextBox>
+                                                                ÷∞ŒÒ£∫ 
+                                                                <asp:TextBox ID="TB_PMDuty" runat="server" Width="110px"></asp:TextBox>µÁª∞£∫<asp:TextBox ID="TB_PMPhoneNumber" runat="server" Width="110px"></asp:TextBox>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align: right;" class="formItemBgStyle">
-                                                                <asp:Label ID="Label11" runat="server" Text="È°πÁõÆÁªèÂäû‰∫∫" />: </td>
+                                                                <asp:Label ID="Label11" runat="server" Text="œÓƒøæ≠∞Ï»À" />: </td>
                                                             <td colspan="3" style="text-align: left;" class="formItemBgStyle">
                                                                 <asp:TextBox ID="TB_ProjectOperator" runat="server" Width="110px"></asp:TextBox>
-                                                                ÁîµËØùÔºö<asp:TextBox ID="TB_projectOperatorPhoneNumber" runat="server" Width="110px"></asp:TextBox>
+                                                                µÁª∞£∫<asp:TextBox ID="TB_projectOperatorPhoneNumber" runat="server" Width="110px"></asp:TextBox>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -354,7 +354,7 @@
                                                                 </table>
                                                             </td>
                                                             <td class="formItemBgStyle" align="right">
-                                                                <asp:Label ID="Label31" runat="server" Text="È°πÁõÆÂçï‰Ωç"></asp:Label>:</td>
+                                                                <asp:Label ID="Label31" runat="server" Text="œÓƒøµ•Œª"></asp:Label>:</td>
                                                             <td colspan="3" align="left" class="formItemBgStyle">
                                                                 <table>
                                                                     <tr>
@@ -393,7 +393,7 @@
                                                                 <asp:Label ID="LB_TBBudget" runat="server" Text="<%$ Resources:lang,Budget %>" />: </td>
                                                             <td colspan="3" style="text-align: left;" class="formItemBgStyle">
                                                                 <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_Budget" runat="server" Width="100px" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0.00</NickLee:NumberBox>
-                                                                <asp:Label ID="Label12" runat="server" Text="ÊâπÂ§çÈáëÈ¢ù" />:
+                                                                <asp:Label ID="Label12" runat="server" Text="≈˙∏¥Ω∂Ó" />:
                                                                  <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_ApprovedAmount" runat="server" Width="100px" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0.00</NickLee:NumberBox>
 
 
@@ -421,8 +421,8 @@
                                                                 </asp:DropDownList>
                                                                 <asp:DropDownList ID="DL_StatusValue" OnSelectedIndexChanged="DL_StatusValue_SelectedIndexChanged" Visible="false"
                                                                     AutoPostBack="True" runat="server">
-                                                                    <asp:ListItem Value="ÈÄöËøá" />
-                                                                    <asp:ListItem Value="ËøõË°å‰∏≠" />
+                                                                    <asp:ListItem Value="Passed" />
+                                                                    <asp:ListItem Value="InProgress" />
                                                                 </asp:DropDownList>
                                                             </td>
                                                         </tr>
@@ -566,7 +566,7 @@
                                         </table>
                                     </ContentTemplate>
                                 </cc1:TabPanel>
-                                <cc1:TabPanel ID="TabPanel2" runat="server" HeaderText="ÂÖ≥ËÅî‰ø°ÊÅØ" TabIndex="1">
+                                <cc1:TabPanel ID="TabPanel2" runat="server" HeaderText="πÿ¡™–≈œ¢" TabIndex="1">
                                     <HeaderTemplate>
                                         <asp:Label ID="Label42" runat="server" Text="<%$ Resources:lang,XiangGuanYeWuDan%>"></asp:Label>
                                     </HeaderTemplate>
@@ -581,11 +581,11 @@
                                                             AutoPostBack="true" OnSelectedIndexChanged="DL_WLType_SelectedIndexChanged">
                                                         </asp:DropDownList></td>
                                                     <td style="width: 20%; text-align: right;" class="formItemBgStyle">
-                                                        <asp:Label ID="Label7333" runat="server" Text="<%$ Resources:lang,BiaoDanGuanLianDeLiuChengMoBan%>"></asp:Label>Ôºö </td>
+                                                        <asp:Label ID="Label7333" runat="server" Text="<%$ Resources:lang,BiaoDanGuanLianDeLiuChengMoBan%>"></asp:Label>£∫ </td>
                                                     <td style="text-align: left;" class="formItemBgStyle">
                                                         <asp:DropDownList ID="DL_WFTemplate" runat="server" DataTextField="TemName" DataValueField="TemName"></asp:DropDownList></td>
                                                     <td style="width: 20%; text-align: right;" class="formItemBgStyle">
-                                                        <asp:Label ID="Label41" runat="server" Text="<%$ Resources:lang,YunXuHouXuXiuGe%>"></asp:Label>Ôºö </td>
+                                                        <asp:Label ID="Label41" runat="server" Text="<%$ Resources:lang,YunXuHouXuXiuGe%>"></asp:Label>£∫ </td>
                                                     <td style="text-align: left;" class="formItemBgStyle">
                                                         <asp:DropDownList ID="DL_AllowUpdate" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DL_AllowUpdate_SelectedIndexChanged">
                                                             <asp:ListItem Value="YES" Text="YES"></asp:ListItem>

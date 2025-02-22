@@ -1,4 +1,4 @@
-锘縰sing System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -25,7 +25,7 @@ public partial class TTSuperWorkPlanMain : System.Web.UI.Page
 
         strUserCode = Session["UserCode"].ToString();
 
-        //this.Title = Resources.lang.Project + strProjectID + " " + strProjectName + " 鐨勫疄鏂借鍒掞紙鍏ㄥ眬绠＄悊锛夛紒";
+        //this.Title = Resources.lang.Project + strProjectID + " " + strProjectName + " 的实施计划（全局管理）！";
     }
 
 

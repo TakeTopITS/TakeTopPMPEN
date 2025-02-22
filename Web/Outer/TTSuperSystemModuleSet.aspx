@@ -7,7 +7,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title></title>
-    <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
+    <link id="mainCss" href="../css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
             min-width: 1500px;
@@ -29,8 +29,8 @@
             margin-bottom: 2px;
         }
     </style>
-    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="js/allAHandler.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../js/allAHandler.js"></script>
     <script type="text/javascript" language="javascript">
         $(function () {
             if (top.location != self.location) { } else { CloseWebPage(); }
@@ -103,7 +103,9 @@
                                             <td style="width: 80px; text-align: right;">&nbsp;</td>
                                             <td align="left" style="width: 80px; padding-top: 3px;">&nbsp;</td>
 
-                                            <td align="left" style="padding-right: 5px;" width="200px">&nbsp;</td>
+                                            <td align="left" style="padding-right: 5px;" width="200px">&nbsp;
+
+                                            </td>
                                             <td style="text-align: left; padding-right: 5px; padding-top: 4px;">
                                                 <asp:Button ID="BT_DeleteUnVisibleModule" runat="server" CssClass="inpu" Width="150px" OnClick="BT_DeleteUnVisibleModule_Click" Text="隐藏所有不可视模组" />
                                             </td>
@@ -335,7 +337,7 @@
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                     <ItemTemplate>
                                                                                         <div style="background-color: grey;">
-                                                                                            <asp:Image ID="IM_ModuleIcon" runat="server" ImageUrl='<%# DataBinder.Eval(Container.DataItem,"IconURL") %>' />
+                                                                                            <asp:Image ID="IM_ModuleIcon" runat="server" ImageUrl='<%# "../" +DataBinder.Eval(Container.DataItem,"IconURL") %>' />
                                                                                         </div>
                                                                                     </ItemTemplate>
                                                                                 </asp:TemplateColumn>
@@ -387,5 +389,5 @@
         </form>
     </center>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = '../css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
 </html>

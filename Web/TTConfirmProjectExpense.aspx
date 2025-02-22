@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConfirmProjectExpense.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConfirmProjectExpense.aspx.cs"
     Inherits="TTConfirmProjectExpense" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>

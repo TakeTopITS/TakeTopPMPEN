@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTLTCandidateManage.aspx.cs" Inherits="TTLTCandidateManage" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTLTCandidateManage.aspx.cs" Inherits="TTLTCandidateManage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -55,32 +55,32 @@
                                                     <tr>
 
                                                         <td>
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XingMing%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XingMing%>"></asp:Label>£º</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_UserName" runat="server" Width="120px"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,GongSi%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,GongSi%>"></asp:Label>£º</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_Company" runat="server" Width="120px"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhiWu%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhiWu%>"></asp:Label>£º</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_CurrentDuty" runat="server" Width="120px"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,KeyWord%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,KeyWord%>"></asp:Label>£º</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_BriefKeyWord" runat="server" Width="250px"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º</td>
                                                         <td>
                                                             <asp:DropDownList ID="DL_Status" runat="server">
-                                                                <asp:ListItem Value="åœ¨èŒ" Text="<%$ Resources:lang,ZaiZhi%>" />
-                                                                <asp:ListItem Value="ç¦»èŒ" Text="<%$ Resources:lang,LiZhi%>" />
-                                                                <asp:ListItem Value="ç»ˆæ­¢" Text="<%$ Resources:lang,ZhongZhi%>" />
+                                                                <asp:ListItem Value="Employed" Text="<%$ Resources:lang,ZaiZhi%>" />
+                                                                <asp:ListItem Value="Resign" Text="<%$ Resources:lang,LiZhi%>" />
+                                                                <asp:ListItem Value="Stop" Text="<%$ Resources:lang,ZhongZhi%>" />
                                                                 <asp:ListItem />
                                                             </asp:DropDownList>
                                                         </td>
@@ -178,37 +178,37 @@
                                                                 <Columns>
 
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="UserName" DataNavigateUrlFormatString="TTLTCandidateInformationView.aspx?UserName={0}"
-                                                                        DataTextField="UserName" HeaderText="å§“å" Target="_blank">
+                                                                        DataTextField="UserName" HeaderText="ÐÕÃû" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:HyperLinkColumn>
-                                                                    <asp:BoundColumn DataField="Gender" HeaderText="æ€§åˆ«">
+                                                                    <asp:BoundColumn DataField="Gender" HeaderText="ÐÔ±ð">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Age" HeaderText="å¹´é¾„">
+                                                                    <asp:BoundColumn DataField="Age" HeaderText="ÄêÁä">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Company" HeaderText="å…¬å¸">
+                                                                    <asp:BoundColumn DataField="Company" HeaderText="¹«Ë¾">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="17%" />
                                                                     </asp:BoundColumn>
 
-                                                                    <asp:BoundColumn DataField="CurrentDuty" HeaderText="èŒè´£">
+                                                                    <asp:BoundColumn DataField="CurrentDuty" HeaderText="Ö°Ôð">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="13%" />
                                                                     </asp:BoundColumn>
 
-                                                                    <asp:BoundColumn DataField="MobilePhone" HeaderText="ç§»åŠ¨ç”µè¯">
+                                                                    <asp:BoundColumn DataField="MobilePhone" HeaderText="ÒÆ¶¯µç»°">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:BoundColumn>
 
-                                                                    <asp:BoundColumn DataField="CreateTime" HeaderText="åŠ å…¥æ—¥æœŸ" DataFormatString="{0:yyyy/MM/dd}">
+                                                                    <asp:BoundColumn DataField="CreateTime" HeaderText="¼ÓÈëÈÕÆÚ" DataFormatString="{0:yyyy/MM/dd}">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                     </asp:BoundColumn>
 
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="UserName" DataNavigateUrlFormatString="TTMakeCollaboration.aspx?RelatedType=CANDIDATE&RelatedCode={0}"
-                                                                        Text="<%$ Resources:lang,CKJFBQTRXQHFQXZ%>" HeaderText="å§“å" Target="_blank">
+                                                                        Text="<%$ Resources:lang,CKJFBQTRXQHFQXZ%>" HeaderText="ÐÕÃû" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:HyperLinkColumn>
 
-                                                                    <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                                    <asp:TemplateColumn HeaderText="×´Ì¬">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                         </ItemTemplate>

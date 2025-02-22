@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -27,7 +27,7 @@ public partial class TTExcelFormImportToDB : System.Web.UI.Page
         strUserName = Session["UserName"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "èµ„äº§ç™»è®°å…¥åº“", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "×Ê²úµÇ¼ÇÈë¿â", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -65,7 +65,7 @@ public partial class TTExcelFormImportToDB : System.Web.UI.Page
 
         if (strFormType == "")
         {
-            LB_ErrorText.Text += "è¯·è¾“å…¥è¡¨å•ç±»å‹ï¼";
+            LB_ErrorText.Text += "ÇëÊäÈë±íµ¥ÀàĞÍ£¡";
             return;
         }
 
@@ -81,8 +81,8 @@ public partial class TTExcelFormImportToDB : System.Web.UI.Page
             LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ;
             return;
         }
-        string filename = FileUpload_Training.FileName.ToString();  //è·å–Execleæ–‡ä»¶å
-        string newfilename = System.IO.Path.GetFileNameWithoutExtension(filename) + DateTime.Now.ToString("yyyyMMddHHmmssff") + IsXls;//æ–°æ–‡ä»¶åç§°ï¼Œå¸¦åç¼€
+        string filename = FileUpload_Training.FileName.ToString();  //»ñÈ¡ExecleÎÄ¼şÃû
+        string newfilename = System.IO.Path.GetFileNameWithoutExtension(filename) + DateTime.Now.ToString("yyyyMMddHHmmssff") + IsXls;//ĞÂÎÄ¼şÃû³Æ£¬´øºó×º
         string strDocSavePath = Server.MapPath("Doc") + "\\" + DateTime.Now.ToString("yyyyMM") + "\\" + strUserCode.Trim() + "\\Doc\\";
         FileInfo fi = new FileInfo(strDocSavePath + newfilename);
         if (fi.Exists)
@@ -166,9 +166,9 @@ public partial class TTExcelFormImportToDB : System.Web.UI.Page
 
 
     /// <summary>
-    /// è¯»å–Excel[.xls](è¿”å›DataTable)
+    /// ¶ÁÈ¡Excel[.xls](·µ»ØDataTable)
     /// </summary>
-    /// <param name="path">Excelè·¯å¾„</param>
+    /// <param name="path">ExcelÂ·¾¶</param>
     /// <returns></returns>
     public void ExcelFormDataToDataTable(string path)
     {
@@ -180,7 +180,7 @@ public partial class TTExcelFormImportToDB : System.Web.UI.Page
             string fileExt = System.IO.Path.GetExtension(path).ToLower();
             using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read))
             {
-                //XSSFWorkbook é€‚ç”¨XLSXæ ¼å¼ï¼ŒHSSFWorkbook é€‚ç”¨XLSæ ¼å¼
+                //XSSFWorkbook ÊÊÓÃXLSX¸ñÊ½£¬HSSFWorkbook ÊÊÓÃXLS¸ñÊ½
                 if (fileExt == ".xlsx") { workbook = new XSSFWorkbook(fs); } else if (fileExt == ".xls") { workbook = new HSSFWorkbook(fs); } else { workbook = null; }
                 if (workbook == null) { return; }
                 ISheet sheet = workbook.GetSheetAt(0);
@@ -224,7 +224,7 @@ public partial class TTExcelFormImportToDB : System.Web.UI.Page
         }
         catch (Exception err)
         {
-            LB_ErrorText.Text = "Excelæ ¼å¼é”™è¯¯æˆ–è€…Excelæ­£ç”±å¦ä¸€è¿›ç¨‹åœ¨è®¿é—®" + err.Message.ToString();
+            LB_ErrorText.Text = "Excel¸ñÊ½´íÎó»òÕßExcelÕıÓÉÁíÒ»½ø³ÌÔÚ·ÃÎÊ" + err.Message.ToString();
         }
     }
 

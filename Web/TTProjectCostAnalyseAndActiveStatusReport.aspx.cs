@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -40,8 +40,8 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
             LB_ReportTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
 
-            //ç»™åˆåŒç›¸å…³é¡¹èµ‹å€¼
-            //åˆåŒé‡‘é¢ä¸€æ¬¡â€
+            //¸øºÏÍ¬Ïà¹ØÏî¸³Öµ
+            //ºÏÍ¬½ğ¶îÒ»´Î¡±
             LB_InitialConstractAmount.Text = GetInitialConstractAmountBeforTax(strProjectID);
             LB_InitialConstractTaxRate.Text = GetInitialConstractTaxRate(strProjectID);
             LB_InitialConstractTaxAmount.Text = GetInitialConstractTaxAmount(strProjectID);
@@ -49,7 +49,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
             LB_InitialConstractMainContent.Text = GetInitialConstractMainContent(strProjectID);
             LB_InitialConstractException.Text = GetInitialConstractException(strProjectID);
 
-            //åˆåŒå¢è¡¥é¢ä¸€æ¬¡
+            //ºÏÍ¬Ôö²¹¶îÒ»´Î
             LB_SupplementConstractAmount.Text = (decimal.Parse(GetSupplementConstractAmountBeforTax(strProjectID)) + decimal.Parse(GetConstractAmountAfterChange(strProjectID))).ToString("f6");
             LB_SupplementConstractTaxAmount.Text = (decimal.Parse(GetSupplementConstractTaxAmount(strProjectID)) + decimal.Parse(GetSupplementConstractChangeTaxAmount(strProjectID))).ToString("f6");
             LB_SupplementConstractAfterTaxAmount.Text = (decimal.Parse(LB_SupplementConstractAmount.Text) + decimal.Parse(LB_SupplementConstractTaxAmount.Text)).ToString("f6");
@@ -63,13 +63,13 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
                 LB_SupplementConstractTaxRate.Text = "0";
             }
 
-            //åˆåŒé‡‘é¢äºŒæ¬¡â€
+            //ºÏÍ¬½ğ¶î¶ş´Î¡±
             LB_InitialSecondConstractAmount.Text = LB_InitialConstractAmount.Text;
             LB_InitialSecondConstractTaxRate.Text = GetInitialConstractTaxRate(strProjectID);
             LB_InitialSecondConstractTaxAmount.Text = GetInitialConstractTaxAmount(strProjectID);
             LB_InitialSecondConstractAfterTaxAmount.Text = (decimal.Parse(LB_InitialConstractAmount.Text) + decimal.Parse(LB_InitialConstractTaxAmount.Text)).ToString("f6");
 
-            //åˆåŒå¢è¡¥é¢äºŒæ¬¡
+            //ºÏÍ¬Ôö²¹¶î¶ş´Î
             LB_ConstractSecondSupplementAmount.Text = LB_SupplementConstractAmount.Text;
             LB_ConstractSecondSupplementTaxRate.Text = LB_SupplementConstractTaxRate.Text;
             LB_ConstractSecondSupplementTaxAmount.Text = LB_SupplementConstractTaxAmount.Text;
@@ -91,7 +91,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
 
             string strYearNumber = LB_YearMonth.Text.Substring(0, 4);
             string strMonthNumber = LB_YearMonth.Text.Substring(4, 2);
-            LB_ReportYearMonth.Text = strYearNumber + "å¹´" + strMonthNumber + "æœˆ";
+            LB_ReportYearMonth.Text = strYearNumber + "Äê" + strMonthNumber + "ÔÂ";
         }
     }
 
@@ -104,63 +104,63 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
     {
         try
         {
-            //"ä¸å¯é¢„è§è´¹è¡¨å•åŠå„é¡¹å¥–åŠ±"è¡¨å•ä¸­â€œå„é¡¹å¥–åŠ±â€â€œåˆè®¡â€â€œç¨å‰é‡‘é¢â€
-            LB_RGSYGeXiangJiangLi.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸å¯é¢„è§è´¹åŠå„é¡¹å¥–åŠ±", "my:gexiangjiangli-sq", "my:riqi", strYearMonth);
+            //"²»¿ÉÔ¤¼û·Ñ±íµ¥¼°¸÷Ïî½±Àø"±íµ¥ÖĞ¡°¸÷Ïî½±Àø¡±¡°ºÏ¼Æ¡±¡°Ë°Ç°½ğ¶î¡±
+            LB_RGSYGeXiangJiangLi.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²»¿ÉÔ¤¼û·Ñ¼°¸÷Ïî½±Àø", "my:gexiangjiangli-sq", "my:riqi", strYearMonth);
 
-            //"ä¸å¯é¢„è§è´¹è¡¨å•åŠå„é¡¹å¥–åŠ±"è¡¨å•ä¸­â€œå„é¡¹å¥–åŠ±â€â€œåˆè®¡â€â€œç¨ç‡â€
-            LB_gexiangjiangli_slv.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸å¯é¢„è§è´¹åŠå„é¡¹å¥–åŠ±", "my:gexiangjiangli-slv", "my:riqi", strYearMonth);
+            //"²»¿ÉÔ¤¼û·Ñ±íµ¥¼°¸÷Ïî½±Àø"±íµ¥ÖĞ¡°¸÷Ïî½±Àø¡±¡°ºÏ¼Æ¡±¡°Ë°ÂÊ¡±
+            LB_gexiangjiangli_slv.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "²»¿ÉÔ¤¼û·Ñ¼°¸÷Ïî½±Àø", "my:gexiangjiangli-slv", "my:riqi", strYearMonth);
 
-            //"ä¸å¯é¢„è§è´¹è¡¨å•åŠå„é¡¹å¥–åŠ±"è¡¨å•ä¸­â€œå„é¡¹å¥–åŠ±â€â€œåˆè®¡â€â€œç¨é‡‘â€
-            LB_gexiangjiangli_sj.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸å¯é¢„è§è´¹åŠå„é¡¹å¥–åŠ±", "my:gexiangjiangli-sj", "my:riqi", strYearMonth);
+            //"²»¿ÉÔ¤¼û·Ñ±íµ¥¼°¸÷Ïî½±Àø"±íµ¥ÖĞ¡°¸÷Ïî½±Àø¡±¡°ºÏ¼Æ¡±¡°Ë°½ğ¡±
+            LB_gexiangjiangli_sj.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²»¿ÉÔ¤¼û·Ñ¼°¸÷Ïî½±Àø", "my:gexiangjiangli-sj", "my:riqi", strYearMonth);
 
-            //"ä¸å¯é¢„è§è´¹è¡¨å•åŠå„é¡¹å¥–åŠ±"è¡¨å•ä¸­â€œå„é¡¹å¥–åŠ±â€â€œåˆè®¡â€â€œç¨åé‡‘é¢â€
-            LB_gexiangjiangli_sh.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸å¯é¢„è§è´¹åŠå„é¡¹å¥–åŠ±", "my:gexiangjiangli-sh", "my:riqi", strYearMonth);
-
-
-
-            ////â€œä¸å¯é¢„è§è´¹è¡¨å•åŠå„é¡¹å¥–åŠ±â€ä¸­â€œä¸å¯é¢„è§è´¹â€â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€å•å…ƒæ ¼çš„æ•°æ®è¯»å–
-            //LB_BuKeYuJianFei.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸å¯é¢„è§è´¹åŠå„é¡¹å¥–åŠ±", "my:bukeyujianfei-sq", "my:riqi", strYearMonth);
-
-            ////â€œä¸å¯é¢„è§è´¹è¡¨å•åŠå„é¡¹å¥–åŠ±â€ä¸­â€œä¸å¯é¢„è§è´¹â€â€œç¨ç‡â€å•å…ƒæ ¼çš„æ•°æ®è¯»å–
-            //LB_BuKeYuJianFeiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸å¯é¢„è§è´¹åŠå„é¡¹å¥–åŠ±", "my:bukeyujianfei-slv", "my:riqi", strYearMonth);
-
-            ////â€œä¸å¯é¢„è§è´¹è¡¨å•åŠå„é¡¹å¥–åŠ±â€ä¸­â€œä¸å¯é¢„è§è´¹â€â€œç¨é‡‘â€å•å…ƒæ ¼çš„æ•°æ®è¯»å–
-            //LB_BuKeYuJianFeiTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸å¯é¢„è§è´¹åŠå„é¡¹å¥–åŠ±", "my:bukeyujianfei-sj", "my:riqi", strYearMonth);
-
-            ////â€œä¸å¯é¢„è§è´¹è¡¨å•åŠå„é¡¹å¥–åŠ±â€ä¸­â€œä¸å¯é¢„è§è´¹â€â€œç¨åé‡‘é¢â€å•å…ƒæ ¼çš„æ•°æ®è¯»å–
-            //LB_BuKeYuJianFeiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸å¯é¢„è§è´¹åŠå„é¡¹å¥–åŠ±", "my:bukeyujianfei-sh", "my:riqi", strYearMonth);
+            //"²»¿ÉÔ¤¼û·Ñ±íµ¥¼°¸÷Ïî½±Àø"±íµ¥ÖĞ¡°¸÷Ïî½±Àø¡±¡°ºÏ¼Æ¡±¡°Ë°ºó½ğ¶î¡±
+            LB_gexiangjiangli_sh.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²»¿ÉÔ¤¼û·Ñ¼°¸÷Ïî½±Àø", "my:gexiangjiangli-sh", "my:riqi", strYearMonth);
 
 
 
-            //â€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œä¸å¯é¢„è§è´¹â€â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€å•å…ƒæ ¼çš„æ•°æ®è¯»å–
-            LB_BuKeYuJianFei.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:B8", "my:riqi", strYearMonth);
+            ////¡°²»¿ÉÔ¤¼û·Ñ±íµ¥¼°¸÷Ïî½±Àø¡±ÖĞ¡°²»¿ÉÔ¤¼û·Ñ¡±¡°½ğ¶î£¨²»º¬Ë°£©¡±µ¥Ôª¸ñµÄÊı¾İ¶ÁÈ¡
+            //LB_BuKeYuJianFei.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²»¿ÉÔ¤¼û·Ñ¼°¸÷Ïî½±Àø", "my:bukeyujianfei-sq", "my:riqi", strYearMonth);
 
-            //â€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œä¸å¯é¢„è§è´¹â€â€œç¨ç‡â€å•å…ƒæ ¼çš„æ•°æ®è¯»å–
-            LB_BuKeYuJianFeiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field37", "my:riqi", strYearMonth);
+            ////¡°²»¿ÉÔ¤¼û·Ñ±íµ¥¼°¸÷Ïî½±Àø¡±ÖĞ¡°²»¿ÉÔ¤¼û·Ñ¡±¡°Ë°ÂÊ¡±µ¥Ôª¸ñµÄÊı¾İ¶ÁÈ¡
+            //LB_BuKeYuJianFeiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "²»¿ÉÔ¤¼û·Ñ¼°¸÷Ïî½±Àø", "my:bukeyujianfei-slv", "my:riqi", strYearMonth);
 
-            //â€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œä¸å¯é¢„è§è´¹â€â€œç¨é‡‘â€å•å…ƒæ ¼çš„æ•°æ®è¯»å–
-            LB_BuKeYuJianFeiTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field38", "my:riqi", strYearMonth);
+            ////¡°²»¿ÉÔ¤¼û·Ñ±íµ¥¼°¸÷Ïî½±Àø¡±ÖĞ¡°²»¿ÉÔ¤¼û·Ñ¡±¡°Ë°½ğ¡±µ¥Ôª¸ñµÄÊı¾İ¶ÁÈ¡
+            //LB_BuKeYuJianFeiTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²»¿ÉÔ¤¼û·Ñ¼°¸÷Ïî½±Àø", "my:bukeyujianfei-sj", "my:riqi", strYearMonth);
 
-            //â€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œä¸å¯é¢„è§è´¹â€â€œç¨åé‡‘é¢â€å•å…ƒæ ¼çš„æ•°æ®è¯»å–
-            LB_BuKeYuJianFeiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field39", "my:riqi", strYearMonth);
-
-
-
-            //é»˜è®¤ä»è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé¢„è®¡å®¡å‡é¢â€å•å…ƒæ ¼çš„æ•°æ®ï¼Œå½“è¡¨å•è¯»ä¸åˆ°æ•°æ®ï¼Œä»â€œé¡¹ç›®ç«‹é¡¹â€æ¨¡å—è¯»å–
-            LB_FirstYiJiShenJianE.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:C", "my:riqi", strYearMonth);
-
-            //é»˜è®¤ä»è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé¢„è®¡å®¡å‡é¢â€-â€œç¨ç‡â€å•å…ƒæ ¼çš„æ•°æ®
-            LB_FirstYiJiShenJianETaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field45", "my:riqi", strYearMonth);
-
-            //é»˜è®¤ä»è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé¢„è®¡å®¡å‡é¢â€-â€œç¨é‡‘â€å•å…ƒæ ¼çš„æ•°æ®
-            LB_FirstYiJiShenJianETaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field46", "my:riqi", strYearMonth);
-
-            //é»˜è®¤ä»è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé¢„è®¡å®¡å‡é¢â€-â€œç¨åé‡‘é¢â€å•å…ƒæ ¼çš„æ•°æ®
-            LB_FirstYiJiShenJianEAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field47", "my:riqi", strYearMonth);
+            ////¡°²»¿ÉÔ¤¼û·Ñ±íµ¥¼°¸÷Ïî½±Àø¡±ÖĞ¡°²»¿ÉÔ¤¼û·Ñ¡±¡°Ë°ºó½ğ¶î¡±µ¥Ôª¸ñµÄÊı¾İ¶ÁÈ¡
+            //LB_BuKeYuJianFeiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²»¿ÉÔ¤¼û·Ñ¼°¸÷Ïî½±Àø", "my:bukeyujianfei-sh", "my:riqi", strYearMonth);
 
 
 
-            //å®¡å‡ç‡ï¼ˆå°†æ•°æ®å¡«äºæ­¤æ ¼ï¼Œå…¶å€¼=é¢„è®¡å®¡å‡é¢ï¼ˆä¸€æ¬¡ï¼‰/åˆåŒé‡‘é¢ï¼ˆç¨å‰ï¼‰å³ C11/C7ï¼‰
+            //¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°²»¿ÉÔ¤¼û·Ñ¡±¡°½ğ¶î£¨²»º¬Ë°£©¡±µ¥Ôª¸ñµÄÊı¾İ¶ÁÈ¡
+            LB_BuKeYuJianFei.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:B8", "my:riqi", strYearMonth);
+
+            //¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°²»¿ÉÔ¤¼û·Ñ¡±¡°Ë°ÂÊ¡±µ¥Ôª¸ñµÄÊı¾İ¶ÁÈ¡
+            LB_BuKeYuJianFeiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field37", "my:riqi", strYearMonth);
+
+            //¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°²»¿ÉÔ¤¼û·Ñ¡±¡°Ë°½ğ¡±µ¥Ôª¸ñµÄÊı¾İ¶ÁÈ¡
+            LB_BuKeYuJianFeiTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field38", "my:riqi", strYearMonth);
+
+            //¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°²»¿ÉÔ¤¼û·Ñ¡±¡°Ë°ºó½ğ¶î¡±µ¥Ôª¸ñµÄÊı¾İ¶ÁÈ¡
+            LB_BuKeYuJianFeiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field39", "my:riqi", strYearMonth);
+
+
+
+            //Ä¬ÈÏ´Ó±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°Ô¤¼ÆÉó¼õ¶î¡±µ¥Ôª¸ñµÄÊı¾İ£¬µ±±íµ¥¶Á²»µ½Êı¾İ£¬´Ó¡°ÏîÄ¿Á¢Ïî¡±Ä£¿é¶ÁÈ¡
+            LB_FirstYiJiShenJianE.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:C", "my:riqi", strYearMonth);
+
+            //Ä¬ÈÏ´Ó±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°Ô¤¼ÆÉó¼õ¶î¡±-¡°Ë°ÂÊ¡±µ¥Ôª¸ñµÄÊı¾İ
+            LB_FirstYiJiShenJianETaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field45", "my:riqi", strYearMonth);
+
+            //Ä¬ÈÏ´Ó±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°Ô¤¼ÆÉó¼õ¶î¡±-¡°Ë°½ğ¡±µ¥Ôª¸ñµÄÊı¾İ
+            LB_FirstYiJiShenJianETaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field46", "my:riqi", strYearMonth);
+
+            //Ä¬ÈÏ´Ó±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°Ô¤¼ÆÉó¼õ¶î¡±-¡°Ë°ºó½ğ¶î¡±µ¥Ôª¸ñµÄÊı¾İ
+            LB_FirstYiJiShenJianEAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field47", "my:riqi", strYearMonth);
+
+
+
+            //Éó¼õÂÊ£¨½«Êı¾İÌîÓÚ´Ë¸ñ£¬ÆäÖµ=Ô¤¼ÆÉó¼õ¶î£¨Ò»´Î£©/ºÏÍ¬½ğ¶î£¨Ë°Ç°£©¼´ C11/C7£©
             try
             {
                 LB_FirstYiJiShenJianRate.Text = (decimal.Parse(LB_FirstYiJiShenJianE.Text) / decimal.Parse(LB_InitialConstractAmount.Text)).ToString("f6");
@@ -169,17 +169,17 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
             {
                 LB_FirstYiJiShenJianRate.Text = "0";
             }
-            //è®¡æ€»æ”¶å…¥åˆè®¡C7+C8+C9+C10-C11ï¼ˆä»¥ä¸Š1-5é¡¹åˆè®¡è‡ªåŠ¨è®¡ç®—ç»“æœï¼‰
+            //¼Æ×ÜÊÕÈëºÏ¼ÆC7+C8+C9+C10-C11£¨ÒÔÉÏ1-5ÏîºÏ¼Æ×Ô¶¯¼ÆËã½á¹û£©
             decimal deYiJiZongShouRuHeJi = decimal.Parse(LB_InitialConstractAmount.Text) + decimal.Parse(LB_SupplementConstractAmount.Text) + decimal.Parse(LB_RGSYGeXiangJiangLi.Text) + decimal.Parse(LB_BuKeYuJianFei.Text);
             deYiJiZongShouRuHeJi -= decimal.Parse(LB_FirstYiJiShenJianE.Text);
             LB_YiJiHeTongYiShuanJiaZongShouRuHeJi.Text = deYiJiZongShouRuHeJi.ToString("f6");
 
-            //é¢„è®¡æ€»æ”¶å…¥åˆè®¡E7+E8+E9+E10-E11
+            //Ô¤¼Æ×ÜÊÕÈëºÏ¼ÆE7+E8+E9+E10-E11
             decimal deYiJiTaxAmountZongShouRuHeJi = decimal.Parse(LB_InitialConstractTaxAmount.Text) + decimal.Parse(LB_SupplementConstractTaxAmount.Text) + decimal.Parse(LB_gexiangjiangli_sj.Text) + decimal.Parse(LB_BuKeYuJianFeiTaxAmount.Text);
             deYiJiTaxAmountZongShouRuHeJi -= decimal.Parse(LB_FirstYiJiShenJianETaxAmount.Text);
             LB_YiJiTaxAmountZongShouRuHeJi.Text = deYiJiTaxAmountZongShouRuHeJi.ToString("f6");
 
-            //é¢„è®¡æ€»æ”¶å…¥åˆè®¡E12/C12
+            //Ô¤¼Æ×ÜÊÕÈëºÏ¼ÆE12/C12
             try
             {
                 LB_YiJiTaxRateZongShouRuHeJi.Text = (decimal.Parse(LB_YiJiTaxAmountZongShouRuHeJi.Text) / decimal.Parse(LB_YiJiHeTongYiShuanJiaZongShouRuHeJi.Text)).ToString("f6");
@@ -189,138 +189,138 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
                 LB_YiJiTaxRateZongShouRuHeJi.Text = "0";
             }
 
-            //é¢„è®¡æ€»æ”¶å…¥åˆè®¡F7+F8+F9+F10-F11
+            //Ô¤¼Æ×ÜÊÕÈëºÏ¼ÆF7+F8+F9+F10-F11
             decimal deYiJiHeTongYiShuanJiaAfterTaxZongShouRuHeJi = decimal.Parse(LB_InitialConstractAfterTaxAmount.Text) + decimal.Parse(LB_SupplementConstractAfterTaxAmount.Text) + decimal.Parse(LB_gexiangjiangli_sh.Text) + decimal.Parse(LB_BuKeYuJianFeiAfterTaxAmount.Text);
             deYiJiHeTongYiShuanJiaAfterTaxZongShouRuHeJi -= decimal.Parse(LB_FirstYiJiShenJianEAfterTaxAmount.Text);
             LB_YiJiHeTongYiShuanJiaAfterTaxZongShouRuHeJi.Text = deYiJiHeTongYiShuanJiaAfterTaxZongShouRuHeJi.ToString("f6");
 
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€äººå·¥è´¹
-            LB_XiangMuFirstCiFengLiBiaoRenGongFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:D1", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÈË¹¤·Ñ
+            LB_XiangMuFirstCiFengLiBiaoRenGongFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:D1", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€äººå·¥è´¹ç¨ç‡
-            LB_XiangMuFirstCiFengLiBiaoRenGongFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field52", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÈË¹¤·ÑË°ÂÊ
+            LB_XiangMuFirstCiFengLiBiaoRenGongFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field52", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€äººå·¥è´¹ç¨é‡‘
-            LB_XiangMuFirstCiFengLiBiaoRenGongFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field53", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÈË¹¤·ÑË°½ğ
+            LB_XiangMuFirstCiFengLiBiaoRenGongFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field53", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€äººå·¥è´¹ç¨åé‡‘é¢
-            LB_XiangMuFirstCiFengLiBiaoRenGongFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field54", "my:riqi", strYearMonth);
-
-
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€è®¾å¤‡è´¹
-            LB_XiangMuFirstCiFengLiBiaoSheBeiFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:D2", "my:riqi", strYearMonth);
-
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€è®¾å¤‡è´¹ç¨ç‡
-            LB_XiangMuFirstCiFengLiBiaoSheBeiFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field56", "my:riqi", strYearMonth);
-
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€è®¾å¤‡è´¹ç¨é‡‘
-            LB_XiangMuFirstCiFengLiBiaoSheBeiFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field57", "my:riqi", strYearMonth);
-
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€è®¾å¤‡è´¹ç¨åé‡‘é¢
-            LB_XiangMuFirstCiFengLiBiaoSheBeiFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field58", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÈË¹¤·ÑË°ºó½ğ¶î
+            LB_XiangMuFirstCiFengLiBiaoRenGongFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field54", "my:riqi", strYearMonth);
 
 
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€ææ–™è´¹
-            LB_XiangMuFirstCiFengLiBiaoCaiLiaoFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:D3", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±Éè±¸·Ñ
+            LB_XiangMuFirstCiFengLiBiaoSheBeiFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:D2", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€ææ–™è´¹ç¨ç‡
-            LB_XiangMuFirstCiFengLiBiaoCaiLiaoFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field60", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±Éè±¸·ÑË°ÂÊ
+            LB_XiangMuFirstCiFengLiBiaoSheBeiFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field56", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€ææ–™è´¹ç¨é‡‘
-            LB_XiangMuFirstCiFengLiBiaoCaiLiaoFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field61", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±Éè±¸·ÑË°½ğ
+            LB_XiangMuFirstCiFengLiBiaoSheBeiFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field57", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€ææ–™è´¹ç¨åé‡‘é¢
-            LB_XiangMuFirstCiFengLiBiaoCaiLiaoFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field62", "my:riqi", strYearMonth);
-
-
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€æœºæ¢°ä½¿ç”¨è´¹
-            LB_XiangMuFirstCiFengLiBiaoJiJieShiYongFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:D4", "my:riqi", strYearMonth);
-
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€æœºæ¢°ä½¿ç”¨è´¹ç¨ç‡
-            LB_XiangMuFirstCiFengLiBiaoJiJieShiYongFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field64", "my:riqi", strYearMonth);
-
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€æœºæ¢°ä½¿ç”¨è´¹ç¨é‡‘
-            LB_XiangMuFirstCiFengLiBiaoJiJieShiYongFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field65", "my:riqi", strYearMonth);
-
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€æœºæ¢°ä½¿ç”¨è´¹ç¨åé‡‘é¢
-            LB_XiangMuFirstCiFengLiBiaoJiJieShiYongFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field66", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±Éè±¸·ÑË°ºó½ğ¶î
+            LB_XiangMuFirstCiFengLiBiaoSheBeiFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field58", "my:riqi", strYearMonth);
 
 
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±²ÄÁÏ·Ñ
+            LB_XiangMuFirstCiFengLiBiaoCaiLiaoFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:D3", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ†åŒ…æˆæœ¬
-            LB_XiangMuFirstCiFengLiBiaoFenBaoChengBen.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:D5D51D52", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±²ÄÁÏ·ÑË°ÂÊ
+            LB_XiangMuFirstCiFengLiBiaoCaiLiaoFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field60", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ†åŒ…æˆæœ¬ç¨ç‡
-            LB_XiangMuFirstCiFengLiBiaoFenBaoChengBenTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field68", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±²ÄÁÏ·ÑË°½ğ
+            LB_XiangMuFirstCiFengLiBiaoCaiLiaoFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field61", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ†åŒ…æˆæœ¬ç¨é‡‘
-            LB_XiangMuFirstCiFengLiBiaoFenBaoChengBenTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field69", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±²ÄÁÏ·ÑË°ºó½ğ¶î
+            LB_XiangMuFirstCiFengLiBiaoCaiLiaoFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field62", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ†åŒ…æˆæœ¬ç¨åé‡‘é¢
-            LB_XiangMuFirstCiFengLiBiaoFenBaoChengBenAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field70", "my:riqi", strYearMonth);
+
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±»úĞµÊ¹ÓÃ·Ñ
+            LB_XiangMuFirstCiFengLiBiaoJiJieShiYongFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:D4", "my:riqi", strYearMonth);
+
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±»úĞµÊ¹ÓÃ·ÑË°ÂÊ
+            LB_XiangMuFirstCiFengLiBiaoJiJieShiYongFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field64", "my:riqi", strYearMonth);
+
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±»úĞµÊ¹ÓÃ·ÑË°½ğ
+            LB_XiangMuFirstCiFengLiBiaoJiJieShiYongFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field65", "my:riqi", strYearMonth);
+
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±»úĞµÊ¹ÓÃ·ÑË°ºó½ğ¶î
+            LB_XiangMuFirstCiFengLiBiaoJiJieShiYongFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field66", "my:riqi", strYearMonth);
 
 
 
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€å»ºç­‘å·¥ç¨‹è´¹
-            LB_XiangMuFirstCiFengLiBiaoJianZuoGongChengFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:D51", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±·Ö°ü³É±¾
+            LB_XiangMuFirstCiFengLiBiaoFenBaoChengBen.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:D5D51D52", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€å»ºç­‘å·¥ç¨‹è´¹ç¨ç‡
-            LB_XiangMuFirstCiFengLiBiaoJianZuoGongChengFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field72", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±·Ö°ü³É±¾Ë°ÂÊ
+            LB_XiangMuFirstCiFengLiBiaoFenBaoChengBenTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field68", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€å»ºç­‘å·¥ç¨‹è´¹ç¨é‡‘
-            LB_XiangMuFirstCiFengLiBiaoJianZuoGongChengFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field73", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±·Ö°ü³É±¾Ë°½ğ
+            LB_XiangMuFirstCiFengLiBiaoFenBaoChengBenTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field69", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€å»ºç­‘å·¥ç¨‹è´¹ç¨åé‡‘é¢
-            LB_XiangMuFirstCiFengLiBiaoJianZuoGongChengFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field74", "my:riqi", strYearMonth);
-
-
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€å®‰è£…å·¥ç¨‹è´¹
-            LB_XiangMuFirstCiFengLiBiaoAnZhangGongChengFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:D52", "my:riqi", strYearMonth);
-
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€å®‰è£…å·¥ç¨‹è´¹ç¨ç‡
-            LB_XiangMuFirstCiFengLiBiaoAnZhangGongChengFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field76", "my:riqi", strYearMonth);
-
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€å®‰è£…å·¥ç¨‹è´¹ç¨é‡‘
-            LB_XiangMuFirstCiFengLiBiaoAnZhangGongChengFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field77", "my:riqi", strYearMonth);
-
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€å®‰è£…å·¥ç¨‹è´¹ç¨åé‡‘é¢
-            LB_XiangMuFirstCiFengLiBiaoAnZhangGongChengFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field78", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±·Ö°ü³É±¾Ë°ºó½ğ¶î
+            LB_XiangMuFirstCiFengLiBiaoFenBaoChengBenAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field70", "my:riqi", strYearMonth);
 
 
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€å…¶å®ƒè´¹ç”¨
-            LB_XiangMuFirstCiFengLiBiaoQiTaFeiYong.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:D6", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€å…¶å®ƒè´¹ç”¨ç¨ç‡
-            LB_XiangMuFirstCiFengLiBiaoQiTaFeiYongTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field80", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±½¨Öş¹¤³Ì·Ñ
+            LB_XiangMuFirstCiFengLiBiaoJianZuoGongChengFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:D51", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€å…¶å®ƒè´¹ç”¨ç¨é‡‘
-            LB_XiangMuFirstCiFengLiBiaoQiTaFeiYongTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field81", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±½¨Öş¹¤³Ì·ÑË°ÂÊ
+            LB_XiangMuFirstCiFengLiBiaoJianZuoGongChengFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field72", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€å…¶å®ƒè´¹ç”¨ç¨åé‡‘é¢
-            LB_XiangMuFirstCiFengLiBiaoQiTaFeiYongAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field82", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±½¨Öş¹¤³Ì·ÑË°½ğ
+            LB_XiangMuFirstCiFengLiBiaoJianZuoGongChengFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field73", "my:riqi", strYearMonth);
 
-
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€å¢å€¼ç¨é™„åŠ 
-            LB_XiangMuFirstCiFengLiBiaoZengChiShuiFuJia.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:D7F12", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±½¨Öş¹¤³Ì·ÑË°ºó½ğ¶î
+            LB_XiangMuFirstCiFengLiBiaoJianZuoGongChengFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field74", "my:riqi", strYearMonth);
 
 
-            //"ä¸å¯é¢„è§è´¹è¡¨å•åŠå„é¡¹å¥–åŠ±"è¡¨å•ä¸­â€œå„é¡¹å¥–åŠ±â€â€œåˆè®¡â€â€œé‡‘é¢ï¼ˆç¨å‰ï¼‰â€
-            LB_BuKeYiJianBiaoGeXiangJiangLiHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸å¯é¢„è§è´¹åŠå„é¡¹å¥–åŠ±", "my:gexiangjiangli-sq", "my:riqi", strYearMonth); 
-            LB_BuKeYiJianBiaoGeXiangJiangLiHeJiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID ,"ä¸å¯é¢„è§è´¹åŠå„é¡¹å¥–åŠ±", "my:gexiangjiangli-slv", "my:riqi", strYearMonth);
-            LB_BuKeYiJianBiaoGeXiangJiangLiHeJiTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸å¯é¢„è§è´¹åŠå„é¡¹å¥–åŠ±", "my:gexiangjiangli-sj", "my:riqi", strYearMonth);
-            LB_BuKeYiJianBiaoGeXiangJiangLiHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸å¯é¢„è§è´¹åŠå„é¡¹å¥–åŠ±", "my:gexiangjiangli-sh", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±°²×°¹¤³Ì·Ñ
+            LB_XiangMuFirstCiFengLiBiaoAnZhangGongChengFei.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:D52", "my:riqi", strYearMonth);
 
-            //æœ€è¿‘çš„â€œé¡¹ç›®äºŒæ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œä¸å¯é¢„è§è´¹â€â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€å•å…ƒæ ¼çš„æ•°æ®è¯»å–
-            LB_XiangMuECiBiaoJiaFenLiBiaoBuKeYiJianFeiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field159", "my:riqi", strYearMonth);
-            LB_XiangMuECiBiaoJiaFenLiBiaoBuKeYiJianFeiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field166", "my:riqi", strYearMonth);
-            LB_XiangMuECiBiaoJiaFenLiBiaoBuKeYiJianFeiTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field193", "my:riqi", strYearMonth);
-            LB_XiangMuECiBiaoJiaFenLiBiaoBuKeYiJianFeiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field173", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±°²×°¹¤³Ì·ÑË°ÂÊ
+            LB_XiangMuFirstCiFengLiBiaoAnZhangGongChengFeiTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field76", "my:riqi", strYearMonth);
 
-            //é»˜è®¤ä»è¡¨å•ï¼šâ€œé¡¹ç›®äºŒæ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé¢„è®¡å®¡å‡é¢â€å•å…ƒæ ¼çš„æ•°æ®ï¼Œå½“è¡¨å•è¯»ä¸åˆ°æ•°æ®ï¼Œä»â€œé¡¹ç›®ç«‹é¡¹â€æ¨¡å—è¯»å–ã€‚
-            LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianE.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field160", "my:riqi", strYearMonth);
-            LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianETaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field167", "my:riqi", strYearMonth);
-            LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianETaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field194", "my:riqi", strYearMonth);
-            LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianEAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field174", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±°²×°¹¤³Ì·ÑË°½ğ
+            LB_XiangMuFirstCiFengLiBiaoAnZhangGongChengFeiTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field77", "my:riqi", strYearMonth);
+
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±°²×°¹¤³Ì·ÑË°ºó½ğ¶î
+            LB_XiangMuFirstCiFengLiBiaoAnZhangGongChengFeiAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field78", "my:riqi", strYearMonth);
+
+
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÆäËü·ÑÓÃ
+            LB_XiangMuFirstCiFengLiBiaoQiTaFeiYong.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:D6", "my:riqi", strYearMonth);
+
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÆäËü·ÑÓÃË°ÂÊ
+            LB_XiangMuFirstCiFengLiBiaoQiTaFeiYongTaxRate.Text = GetWorkFlowColumnTaxRateDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field80", "my:riqi", strYearMonth);
+
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÆäËü·ÑÓÃË°½ğ
+            LB_XiangMuFirstCiFengLiBiaoQiTaFeiYongTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field81", "my:riqi", strYearMonth);
+
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÆäËü·ÑÓÃË°ºó½ğ¶î
+            LB_XiangMuFirstCiFengLiBiaoQiTaFeiYongAfterTaxAmount.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field82", "my:riqi", strYearMonth);
+
+
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÔöÖµË°¸½¼Ó
+            LB_XiangMuFirstCiFengLiBiaoZengChiShuiFuJia.Text = GetWorkFlowColumnDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:D7F12", "my:riqi", strYearMonth);
+
+
+            //"²»¿ÉÔ¤¼û·Ñ±íµ¥¼°¸÷Ïî½±Àø"±íµ¥ÖĞ¡°¸÷Ïî½±Àø¡±¡°ºÏ¼Æ¡±¡°½ğ¶î£¨Ë°Ç°£©¡±
+            LB_BuKeYiJianBiaoGeXiangJiangLiHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²»¿ÉÔ¤¼û·Ñ¼°¸÷Ïî½±Àø", "my:gexiangjiangli-sq", "my:riqi", strYearMonth); 
+            LB_BuKeYiJianBiaoGeXiangJiangLiHeJiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID ,"²»¿ÉÔ¤¼û·Ñ¼°¸÷Ïî½±Àø", "my:gexiangjiangli-slv", "my:riqi", strYearMonth);
+            LB_BuKeYiJianBiaoGeXiangJiangLiHeJiTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²»¿ÉÔ¤¼û·Ñ¼°¸÷Ïî½±Àø", "my:gexiangjiangli-sj", "my:riqi", strYearMonth);
+            LB_BuKeYiJianBiaoGeXiangJiangLiHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²»¿ÉÔ¤¼û·Ñ¼°¸÷Ïî½±Àø", "my:gexiangjiangli-sh", "my:riqi", strYearMonth);
+
+            //×î½üµÄ¡°ÏîÄ¿¶ş´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°²»¿ÉÔ¤¼û·Ñ¡±¡°½ğ¶î£¨²»º¬Ë°£©¡±µ¥Ôª¸ñµÄÊı¾İ¶ÁÈ¡
+            LB_XiangMuECiBiaoJiaFenLiBiaoBuKeYiJianFeiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field159", "my:riqi", strYearMonth);
+            LB_XiangMuECiBiaoJiaFenLiBiaoBuKeYiJianFeiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field166", "my:riqi", strYearMonth);
+            LB_XiangMuECiBiaoJiaFenLiBiaoBuKeYiJianFeiTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field193", "my:riqi", strYearMonth);
+            LB_XiangMuECiBiaoJiaFenLiBiaoBuKeYiJianFeiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field173", "my:riqi", strYearMonth);
+
+            //Ä¬ÈÏ´Ó±íµ¥£º¡°ÏîÄ¿¶ş´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°Ô¤¼ÆÉó¼õ¶î¡±µ¥Ôª¸ñµÄÊı¾İ£¬µ±±íµ¥¶Á²»µ½Êı¾İ£¬´Ó¡°ÏîÄ¿Á¢Ïî¡±Ä£¿é¶ÁÈ¡¡£
+            LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianE.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field160", "my:riqi", strYearMonth);
+            LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianETaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field167", "my:riqi", strYearMonth);
+            LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianETaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field194", "my:riqi", strYearMonth);
+            LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianEAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field174", "my:riqi", strYearMonth);
             try
             {
                 LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianLu.Text = (decimal.Parse(LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianE.Text) / decimal.Parse(LB_InitialSecondConstractAmount.Text)).ToString("f6");
@@ -330,18 +330,18 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
                 LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianLu.Text = "0";
             }
 
-            //äºŒæ¬¡é¢„è®¡æ€»æ”¶å…¥åˆè®¡H7+H8+H9+H10-H11ï¼ˆä»¥ä¸Š1-5é¡¹åˆè®¡è‡ªåŠ¨è®¡ç®—ç»“æœï¼‰
+            //¶ş´ÎÔ¤¼Æ×ÜÊÕÈëºÏ¼ÆH7+H8+H9+H10-H11£¨ÒÔÉÏ1-5ÏîºÏ¼Æ×Ô¶¯¼ÆËã½á¹û£©
             decimal deSecondYiJiHeTongYiShuanJiaZongShouRuHeJi = decimal.Parse(LB_InitialSecondConstractAmount.Text) + decimal.Parse(LB_ConstractSecondSupplementAmount.Text) + decimal.Parse(LB_BuKeYiJianBiaoGeXiangJiangLiHeJiAmount.Text) + decimal.Parse(LB_XiangMuECiBiaoJiaFenLiBiaoBuKeYiJianFeiAmount.Text);
             deSecondYiJiHeTongYiShuanJiaZongShouRuHeJi -= decimal.Parse(LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianE.Text);
             LB_SecondYiJiHeTongYiShuanJiaZongShouRuHeJi.Text = deSecondYiJiHeTongYiShuanJiaZongShouRuHeJi.ToString();
 
-            //äºŒæ¬¡é¢„è®¡æ€»æ”¶å…¥åˆè®¡J7+J8+J9+J10-J11
+            //¶ş´ÎÔ¤¼Æ×ÜÊÕÈëºÏ¼ÆJ7+J8+J9+J10-J11
             decimal deSecondYiJiHeTongYiShuanJiaZongShouRuHeJiTaxAmount;
             deSecondYiJiHeTongYiShuanJiaZongShouRuHeJiTaxAmount = decimal.Parse(LB_InitialSecondConstractTaxAmount.Text) + decimal.Parse(LB_ConstractSecondSupplementTaxAmount.Text) + decimal.Parse(LB_BuKeYiJianBiaoGeXiangJiangLiHeJiTaxAmount.Text) + decimal.Parse(LB_XiangMuECiBiaoJiaFenLiBiaoBuKeYiJianFeiTaxAmount.Text);
             deSecondYiJiHeTongYiShuanJiaZongShouRuHeJiTaxAmount -= decimal.Parse(LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianETaxAmount.Text);
             LB_SecondYiJiHeTongYiShuanJiaZongShouRuHeJiTaxAmount.Text = deSecondYiJiHeTongYiShuanJiaZongShouRuHeJiTaxAmount.ToString();
 
-            //äºŒæ¬¡é¢„è®¡æ€»æ”¶å…¥åˆè®¡E12/C12
+            //¶ş´ÎÔ¤¼Æ×ÜÊÕÈëºÏ¼ÆE12/C12
             try
             {
                 LB_SecondYiJiHeTongYiShuanJiaZongShouRuHeJiTaxRate.Text = (decimal.Parse(LB_SecondYiJiHeTongYiShuanJiaZongShouRuHeJiTaxAmount.Text) / decimal.Parse(LB_SecondYiJiHeTongYiShuanJiaZongShouRuHeJi.Text)).ToString("f6");
@@ -351,243 +351,243 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
                 LB_SecondYiJiHeTongYiShuanJiaZongShouRuHeJiTaxRate.Text = "0";
             }
 
-            //äºŒæ¬¡é¢„è®¡æ€»æ”¶å…¥åˆè®¡K7+K8+K9+K10-K11
+            //¶ş´ÎÔ¤¼Æ×ÜÊÕÈëºÏ¼ÆK7+K8+K9+K10-K11
             decimal deSecondYiJiHeTongYiShuanJiaZongShouRuHeJiAfterTaxAmount;
             deSecondYiJiHeTongYiShuanJiaZongShouRuHeJiAfterTaxAmount = decimal.Parse(LB_InitialSecondConstractAfterTaxAmount.Text) + decimal.Parse(LB_ConstractSecondSupplementAfterTaxAmount.Text) + decimal.Parse(LB_BuKeYiJianBiaoGeXiangJiangLiHeJiAfterTaxAmount.Text) + decimal.Parse(LB_XiangMuECiBiaoJiaFenLiBiaoBuKeYiJianFeiAfterTaxAmount.Text);
             deSecondYiJiHeTongYiShuanJiaZongShouRuHeJiAfterTaxAmount -= decimal.Parse(LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianEAfterTaxAmount.Text);
             LB_SecondYiJiHeTongYiShuanJiaZongShouRuHeJiAfterTaxAmount.Text = deSecondYiJiHeTongYiShuanJiaZongShouRuHeJiAfterTaxAmount.ToString();
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸ç›´æ¥äººå·¥è´¹çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieRenGongFeiYongAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:rengongfei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieRenGongFeiYongTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field2", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieRenGongFeiYongTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:rengongfeishuijin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieRenGongFeiYongAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field3", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓëÖ±½ÓÈË¹¤·ÑµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieRenGongFeiYongAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:rengongfei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieRenGongFeiYongTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field2", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieRenGongFeiYongTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:rengongfeishuijin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieRenGongFeiYongAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field3", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸å·¥èµ„åŠå„é¡¹ä¿é™©å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiGeXiangBaoXianAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:gongzibaoxian", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiGeXiangBaoXianTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field6", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiGeXiangBaoXianTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field197", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiGeXiangBaoXianAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field7", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë¹¤×Ê¼°¸÷Ïî±£ÏÕµ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiGeXiangBaoXianAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:gongzibaoxian", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiGeXiangBaoXianTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field6", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiGeXiangBaoXianTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field197", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiGeXiangBaoXianAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field7", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸å¥–é‡‘å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiJiangJinAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:jiangjin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiJiangJinTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field10", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiJiangJinTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field198", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiJiangJinAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field11", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë½±½ğµ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiJiangJinAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:jiangjin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiJiangJinTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field10", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiJiangJinTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field198", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiJiangJinAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field11", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸å…¶å®ƒè¡¥åŠ©å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiQiTaBuZhouAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:qitabuzhujintie", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiQiTaBuZhouTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field14", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiQiTaBuZhouTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field199", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiQiTaBuZhouAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field15", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓëÆäËü²¹Öúµ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiQiTaBuZhouAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:qitabuzhujintie", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiQiTaBuZhouTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field14", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiQiTaBuZhouTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field199", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiQiTaBuZhouAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field15", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸å…¶å®ƒè¡¥åŠ©å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiWaiChuJinTieAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:waichubuzhu", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiWaiChuJinTieTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field18", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiWaiChuJinTieTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field200", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiWaiChuJinTieAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field19", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓëÆäËü²¹Öúµ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiWaiChuJinTieAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:waichubuzhu", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiWaiChuJinTieTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field18", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiWaiChuJinTieTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field200", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiWaiChuJinTieAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field19", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸åˆ†åŒ…å·¥ç¨‹è´¹å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenBaoGongZhengAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:fenbaogognchengfei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenBaoGongZhengTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field22", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenBaoGongZhengTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:fenbaofeishuijin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenBaoGongZhengAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field23", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë·Ö°ü¹¤³Ì·Ñµ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenBaoGongZhengAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:fenbaogognchengfei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenBaoGongZhengTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field22", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenBaoGongZhengTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:fenbaofeishuijin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenBaoGongZhengAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field23", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸åˆ†åŒ…å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBaoAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:laowufenbao", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBaoTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field26", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBaoTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field202", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBaoAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field27", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë·Ö°üµ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBaoAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:laowufenbao", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBaoTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field26", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBaoTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field202", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBaoAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field27", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸åˆ†åŒ…1å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao1Amount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:laowufenbao1", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao1TaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field30", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao1TaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field203", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao1AfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field31", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë·Ö°ü1µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao1Amount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:laowufenbao1", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao1TaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field30", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao1TaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field203", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao1AfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field31", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸åˆ†åŒ…2å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao2Amount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:laowufenbao2", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao2TaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field34", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao2TaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field204", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao2AfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field35", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë·Ö°ü2µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao2Amount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:laowufenbao2", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao2TaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field34", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao2TaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field204", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiLaoWuFenBao2AfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field35", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸ä¸“ä¸šåˆ†åŒ…å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiZhuanYeFenBaoAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:zhuanyefenbao", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiZhuanYeFenBaoTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field38", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiZhuanYeFenBaoTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field205", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiZhuanYeFenBaoAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field39", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë×¨Òµ·Ö°üµ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiZhuanYeFenBaoAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:zhuanyefenbao", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiZhuanYeFenBaoTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field38", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiZhuanYeFenBaoTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field205", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiZhuanYeFenBaoAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field39", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸åˆ†å…¬å¸è‡ªå®Œå•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenGongShiZiWanAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:fengongsiziwan", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenGongShiZiWanTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field42", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenGongShiZiWanTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field206", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenGongShiZiWanAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field43", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë·Ö¹«Ë¾×ÔÍêµ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenGongShiZiWanAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:fengongsiziwan", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenGongShiZiWanTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field42", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenGongShiZiWanTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field206", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiFenGongShiZiWanAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field43", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸åˆ†å…¬å¸ç”µä»ªå•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiDianYuAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:dianyi", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiDianYuTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field139", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiDianYuTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field207", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiDianYuAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field140", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë·Ö¹«Ë¾µçÒÇµ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiDianYuAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:dianyi", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiDianYuTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field139", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiDianYuTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field207", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieGongZhiJiDianYuAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field140", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸åˆ†å…¬å¸è°ƒè£…å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieDiaoZhuangAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:diaozhuang", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieDiaoZhuangTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field143", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieDiaoZhuangTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field208", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieDiaoZhuangAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field144", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë·Ö¹«Ë¾µ÷×°µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieDiaoZhuangAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:diaozhuang", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieDiaoZhuangTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field143", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieDiaoZhuangTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field208", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZiJieDiaoZhuangAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field144", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸åˆ†å…¬å¸ç›´æ¥æ–™è´¹å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhiJieLiaoFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:zhijiecailiaofei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhiJieLiaoFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:cailiaofeishuilv", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhiJieLiaoFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:cailiaofeishuijin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhiJieLiaoFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field47", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë·Ö¹«Ë¾Ö±½ÓÁÏ·Ñµ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhiJieLiaoFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:zhijiecailiaofei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhiJieLiaoFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:cailiaofeishuilv", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhiJieLiaoFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:cailiaofeishuijin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhiJieLiaoFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field47", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸åˆ†å…¬å¸ä¸»æå•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuCaiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:zhucai", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuCaiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field50", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuCaiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field210", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuCaiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field51", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë·Ö¹«Ë¾Ö÷²Äµ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuCaiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:zhucai", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuCaiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field50", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuCaiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field210", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuCaiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field51", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸åˆ†å…¬å¸è¾…æå•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFuCaiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:fucai", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFuCaiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field54", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFuCaiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field211", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFuCaiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field55", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë·Ö¹«Ë¾¸¨²Äµ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFuCaiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:fucai", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFuCaiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field54", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFuCaiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field211", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFuCaiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field55", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸åˆ†å…¬å¸å¹³åº“å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieCaiLiaoPingKuAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field306", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieCaiLiaoPingKuTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field307", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieCaiLiaoPingKuTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field308", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieCaiLiaoPingKuAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field309", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë·Ö¹«Ë¾Æ½¿âµ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieCaiLiaoPingKuAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field306", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieCaiLiaoPingKuTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field307", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieCaiLiaoPingKuTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field308", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieCaiLiaoPingKuAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field309", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸åˆ†å…¬å¸åº•æ¼†å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieDiQiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field310", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieDiQiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field311", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieDiQiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field312", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieDiQiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field313", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë·Ö¹«Ë¾µ×Æáµ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieDiQiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field310", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieDiQiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field311", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieDiQiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field312", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieDiQiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field313", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸åˆ†å…¬å¸æœºæ¢°è´¹å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:jixiefei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field58", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:jixiefeishuijin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field59", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë·Ö¹«Ë¾»úĞµ·Ñµ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:jixiefei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field58", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:jixiefeishuijin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field59", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸åˆ†å…¬å¸æœºæ¢°ä½¿ç”¨è´¹å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieShiYongFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:jixieshiyonfei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieShiYongFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field62", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieShiYongFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field213", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieShiYongFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field63", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë·Ö¹«Ë¾»úĞµÊ¹ÓÃ·Ñµ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieShiYongFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:jixieshiyonfei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieShiYongFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field62", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieShiYongFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field213", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJiJieShiYongFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field63", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸ã€åˆ†å…¬å¸è‡ªå®Œè´¹ã€‘å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFenGongShiZiWanAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:feigongsiziwan", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFenGongShiZiWanTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field66", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFenGongShiZiWanTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field214", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFenGongShiZiWanAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field67", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë¡¾·Ö¹«Ë¾×ÔÍê·Ñ¡¿µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFenGongShiZiWanAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:feigongsiziwan", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFenGongShiZiWanTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field66", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFenGongShiZiWanTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field214", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFenGongShiZiWanAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field67", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸ã€å…¶ä»–ã€‘å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:qita", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field70", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field215", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field71", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë¡¾ÆäËû¡¿µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:qita", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field70", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field215", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field71", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸ã€ä¸´æ—¶è®¾æ–½è´¹ã€‘å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLingShiSheSiFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:linshisheshifei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLingShiSheSiFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field74", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLingShiSheSiFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:linshefeishuijin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLingShiSheSiFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field75", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë¡¾ÁÙÊ±ÉèÊ©·Ñ¡¿µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLingShiSheSiFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:linshisheshifei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLingShiSheSiFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field74", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLingShiSheSiFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:linshefeishuijin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLingShiSheSiFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field75", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸ã€å®‰å…¨æªæ–½è´¹ã€‘å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieAnQianChuShiFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:anquancuoshifei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieAnQianChuShiFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field78", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieAnQianChuShiFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:anquanfeishuijin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieAnQianChuShiFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field79", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë¡¾°²È«´ëÊ©·Ñ¡¿µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieAnQianChuShiFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:anquancuoshifei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieAnQianChuShiFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field78", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieAnQianChuShiFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:anquanfeishuijin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieAnQianChuShiFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field79", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸ã€æ°´ç”µè´¹ã€‘å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieShuiDianFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:shuidianfei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieShuiDianFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field126", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieShuiDianFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:shuidianfeishuijin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieShuiDianFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field127", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë¡¾Ë®µç·Ñ¡¿µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieShuiDianFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:shuidianfei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieShuiDianFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field126", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieShuiDianFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:shuidianfeishuijin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieShuiDianFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field127", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸ã€å…¶å®ƒå·¥ç¨‹è´¹ã€‘å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaGongChengFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:qitagongchengfei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaGongChengFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field130", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaGongChengFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:qitagongchengfeishuijin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaGongChengFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field131", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë¡¾ÆäËü¹¤³Ì·Ñ¡¿µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaGongChengFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:qitagongchengfei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaGongChengFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field130", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaGongChengFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:qitagongchengfeishuijin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaGongChengFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field131", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸ã€å…¶å®ƒè´¹ã€‘å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:qitafei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field86", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:qitafeishuijin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field87", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë¡¾ÆäËü·Ñ¡¿µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:qitafei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field86", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:qitafeishuijin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field87", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸ã€æ£€æµ‹è´¹ã€‘å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJianCheFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:jiancefei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJianCheFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field90", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJianCheFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field221", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJianCheFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field91", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë¡¾¼ì²â·Ñ¡¿µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJianCheFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:jiancefei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJianCheFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field90", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJianCheFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field221", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieJianCheFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field91", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸ã€å¤–ååŠ å·¥è´¹ã€‘å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieWaiXieJiaGongFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:waixiejiagongfei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieWaiXieJiaGongFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field94", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieWaiXieJiaGongFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field222", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieWaiXieJiaGongFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field95", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë¡¾ÍâĞ­¼Ó¹¤·Ñ¡¿µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieWaiXieJiaGongFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:waixiejiagongfei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieWaiXieJiaGongFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field94", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieWaiXieJiaGongFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field222", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieWaiXieJiaGongFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field95", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸ã€ç§Ÿèµè´¹ã€‘å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuLingFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:zulinfei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuLingFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field98", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuLingFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field223", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuLingFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field99", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë¡¾×âÁŞ·Ñ¡¿µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuLingFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:zulinfei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuLingFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field98", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuLingFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field223", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZhuLingFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field99", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸ã€åŠ³åŠ¨ä¿æŠ¤è´¹ã€‘å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLaoDongBaoHuFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:laodongbaohufei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLaoDongBaoHuFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field102", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLaoDongBaoHuFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field224", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLaoDongBaoHuFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field103", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë¡¾ÀÍ¶¯±£»¤·Ñ¡¿µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLaoDongBaoHuFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:laodongbaohufei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLaoDongBaoHuFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field102", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLaoDongBaoHuFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field224", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieLaoDongBaoHuFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field103", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸ã€ä¿®ç†è´¹ã€‘å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieXiuLiFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:xiulifei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieXiuLiFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field106", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieXiuLiFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field225", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieXiuLiFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field107", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë¡¾ĞŞÀí·Ñ¡¿µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieXiuLiFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:xiulifei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieXiuLiFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field106", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieXiuLiFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field225", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieXiuLiFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field107", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸ã€ä¸å¯é¢„è§æˆæœ¬ã€‘å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieBuKeYiJianChenBenAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:bukeyujian", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieBuKeYiJianChenBenTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field134", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieBuKeYiJianChenBenTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field226", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieBuKeYiJianChenBenAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field135", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë¡¾²»¿ÉÔ¤¼û³É±¾¡¿µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieBuKeYiJianChenBenAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:bukeyujian", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieBuKeYiJianChenBenTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field134", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieBuKeYiJianChenBenTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field226", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieBuKeYiJianChenBenAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field135", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸ã€ç½šæ¬¾ã€‘å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFaKuanAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:fakuan", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFaKuanTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field147", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFaKuanTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field227", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFaKuanAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field148", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë¡¾·£¿î¡¿µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFaKuanAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:fakuan", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFaKuanTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field147", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFaKuanTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field227", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieFaKuanAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field148", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸ã€åŠå…¬ç”¨å“ã€‘å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJiePanGongYongPingAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:bangongyongping", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJiePanGongYongPingTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field151", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJiePanGongYongPingTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field228", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJiePanGongYongPingAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field152", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë¡¾°ì¹«ÓÃÆ·¡¿µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJiePanGongYongPingAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:bangongyongping", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJiePanGongYongPingTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field151", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJiePanGongYongPingTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field228", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJiePanGongYongPingAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field152", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸ã€å…¶å®ƒ2ã€‘å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTa2Amount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:qitafeiqita", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTa2TaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field110", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTa2TaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field229", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTa2AfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field111", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë¡¾ÆäËü2¡¿µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTa2Amount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:qitafeiqita", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTa2TaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field110", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTa2TaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field229", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTa2AfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field111", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸ã€åŠ¨è¿è´¹ã€‘å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieTongQianFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:dongqianfei", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieTongQianFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field114", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieTongQianFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:dongqianfeishuijin", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieTongQianFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field115", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë¡¾¶¯Ç¨·Ñ¡¿µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieTongQianFeiAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:dongqianfei", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieTongQianFeiTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field114", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieTongQianFeiTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:dongqianfeishuijin", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieTongQianFeiAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field115", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸ã€å…¶å®ƒè®©åˆ©é¡¹ã€‘å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaLiangLiXiangAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field302", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaLiangLiXiangTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field303", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaLiangLiXiangTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field304", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaLiangLiXiangAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field305", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë¡¾ÆäËüÈÃÀûÏî¡¿µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaLiangLiXiangAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field302", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaLiangLiXiangTaxRate.Text = GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field303", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaLiangLiXiangTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field304", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieQiTaLiangLiXiangAfterTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field305", "my:riqi", strYearMonth);
 
-            //è¡¨å•ï¼šâ€œäºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬ç»„æˆè¡¨â€é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰è¡¨çš„â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€åˆ—çš„ä¸ã€æ€»æˆæœ¬ã€‘å•å…ƒæ ¼çš„æ•°æ®,å³æœ€æ–°æœ‰æ•ˆæ•°æ®
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZongChengBenAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field176", "my:riqi", strYearMonth);
-            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZongChengBenTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:jinxiangshuijin", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾×é³É±í¡±ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©±íµÄ¡°½ğ¶î£¨²»º¬Ë°£©¡±ÁĞµÄÓë¡¾×Ü³É±¾¡¿µ¥Ôª¸ñµÄÊı¾İ,¼´×îĞÂÓĞĞ§Êı¾İ
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZongChengBenAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field176", "my:riqi", strYearMonth);
+            LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZongChengBenTaxAmount.Text = GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:jinxiangshuijin", "my:riqi", strYearMonth);
 
             try
             {
@@ -599,7 +599,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
             }
             LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZongChengBenAfterTaxAmount.Text = (decimal.Parse(LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZongChengBenTaxAmount.Text) + decimal.Parse(LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZongChengBenAmount.Text)).ToString("f6");
 
-            //é¢„è®¡åˆ©æ¶¦ï¼ˆæ€»æ”¶å…¥-æ€»æˆæœ¬ï¼‰,å³H12-I52
+            //Ô¤¼ÆÀûÈó£¨×ÜÊÕÈë-×Ü³É±¾£©,¼´H12-I52
             LB_RiRen.Text = (decimal.Parse(LB_SecondYiJiHeTongYiShuanJiaZongShouRuHeJi.Text) - decimal.Parse(LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZongChengBenAmount.Text)).ToString();
             LB_XiaoXiangShuiE.Text = LB_SecondYiJiHeTongYiShuanJiaZongShouRuHeJiTaxAmount.Text;
             LB_JinXiangShuiE.Text = LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZongChengBenTaxAmount.Text;
@@ -636,93 +636,93 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
             }
 
 
-            //******â€œåˆ¶å®šåˆåŒâ€æ¨¡å—ï¼Œâ€œåˆåŒå˜æ›´â€æ ‡ç­¾ä¸‹â€œå˜æ›´æ—¶é—´â€ä¸ºæœ¬æœˆçš„ å˜æ›´é‡‘é¢=â€œå˜æ›´åé‡‘é¢ï¼ˆç¨åï¼‰â€æ±‡æ€»-â€œåˆåŒé‡‘é¢ï¼ˆç¨åï¼‰â€
+            //******¡°ÖÆ¶¨ºÏÍ¬¡±Ä£¿é£¬¡°ºÏÍ¬±ä¸ü¡±±êÇ©ÏÂ¡°±ä¸üÊ±¼ä¡±Îª±¾ÔÂµÄ ±ä¸ü½ğ¶î=¡°±ä¸üºó½ğ¶î£¨Ë°ºó£©¡±»ã×Ü-¡°ºÏÍ¬½ğ¶î£¨Ë°ºó£©¡±
             LB_XiangMuHeTongBianGenHouAmount.Text = (decimal.Parse(GetConstractCurrentMonthAmountAfterChange(strProjectID)) - decimal.Parse(GetInitialConstractAmountAfterTax(strProjectID))).ToString("f6");
             LB_XiangMuHeTongBianGenHouTaxRate.Text = LB_InitialSecondConstractTaxRate.Text;
             LB_XiangMuHeTongBianGenHouTaxAmount.Text = (decimal.Parse(LB_XiangMuHeTongBianGenHouAmount.Text) * decimal.Parse(LB_XiangMuHeTongBianGenHouTaxRate.Text)).ToString();
 
-            //******æœ¬æœˆçš„åˆåŒæ‰€æœ‰å˜æ›´é‡‘é¢åŠæ‰€æœ‰å¢è¡¥åˆåŒé‡‘é¢ - ä¸ŠæœˆåˆåŒæ‰€æœ‰å˜æ›´é‡‘é¢åŠæ‰€
+            //******±¾ÔÂµÄºÏÍ¬ËùÓĞ±ä¸ü½ğ¶î¼°ËùÓĞÔö²¹ºÏÍ¬½ğ¶î - ÉÏÔÂºÏÍ¬ËùÓĞ±ä¸ü½ğ¶î¼°Ëù
             decimal deXiangMuHeTongBenYueBianGenJianQiShangYueHeTongAmount = decimal.Parse(GetConstractCurrentMonthAmountAfterChange(strProjectID)) + decimal.Parse(GetConstractCurrentMonthSupplementAmountAfterTax(strProjectID)) - decimal.Parse(GetConstractPirorMonthAmountAfterChange(strProjectID)) - decimal.Parse(GetConstractPriorMonthSupplementAmountAfterTax(strProjectID));
             LB_XiangMuHeTongBenYueBianGenJianQiShangYueHeTongAmount.Text = deXiangMuHeTongBenYueBianGenJianQiShangYueHeTongAmount.ToString();
             LB_XiangMuHeTongBenYueBianGenJianQiShangYueHeTongTaxRate.Text = LB_ConstractSecondSupplementTaxRate.Text;
             LB_XiangMuHeTongBenYueBianGenJianQiShangYueHeTongTaxAmount.Text = (decimal.Parse(LB_XiangMuHeTongBenYueBianGenJianQiShangYueHeTongAmount.Text) * decimal.Parse(LB_XiangMuHeTongBenYueBianGenJianQiShangYueHeTongTaxRate.Text)).ToString();
 
 
-            //æœ¬æœˆçš„H9â€œå„é¡¹å¥–åŠ±â€â€œåˆè®¡â€â€œé‡‘é¢ï¼ˆç¨å‰ï¼‰â€-ä¸Šæœˆçš„H9â€œå„é¡¹å¥–åŠ±â€â€œåˆè®¡â€â€œé‡‘é¢ï¼ˆç¨å‰ï¼‰â€
-            LB_XiangMuHeTongBenYueGeXiangJiangLiQianQiShangYueGeXiangJiangLiHeJiAmount.Text = (decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ä¸å¯é¢„è§è´¹åŠå„é¡¹å¥–åŠ±", "my:gexiangjiangli-sq")) - decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ä¸å¯é¢„è§è´¹åŠå„é¡¹å¥–åŠ±", "my:gexiangjiangli-sq"))).ToString();
+            //±¾ÔÂµÄH9¡°¸÷Ïî½±Àø¡±¡°ºÏ¼Æ¡±¡°½ğ¶î£¨Ë°Ç°£©¡±-ÉÏÔÂµÄH9¡°¸÷Ïî½±Àø¡±¡°ºÏ¼Æ¡±¡°½ğ¶î£¨Ë°Ç°£©¡±
+            LB_XiangMuHeTongBenYueGeXiangJiangLiQianQiShangYueGeXiangJiangLiHeJiAmount.Text = (decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "²»¿ÉÔ¤¼û·Ñ¼°¸÷Ïî½±Àø", "my:gexiangjiangli-sq")) - decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "²»¿ÉÔ¤¼û·Ñ¼°¸÷Ïî½±Àø", "my:gexiangjiangli-sq"))).ToString();
             LB_XiangMuHeTongBenYueGeXiangJiangLiQianQiShangYueGeXiangJiangLiHeJiTaxRate.Text = LB_BuKeYiJianBiaoGeXiangJiangLiHeJiTaxRate.Text;
             LB_XiangMuHeTongBenYueGeXiangJiangLiQianQiShangYueGeXiangJiangLiHeJiTaxAmount.Text = (decimal.Parse(LB_XiangMuHeTongBenYueGeXiangJiangLiQianQiShangYueGeXiangJiangLiHeJiAmount.Text) * decimal.Parse(LB_XiangMuHeTongBenYueGeXiangJiangLiQianQiShangYueGeXiangJiangLiHeJiTaxRate.Text)).ToString();
 
-            //å€¼=æœ¬æœˆçš„â€œä¸å¯é¢„è§è´¹â€-ä¸Šæœˆçš„â€œä¸å¯é¢„è§è´¹â€å³ æœ¬æœˆ H10-ä¸Šæœˆ H10
-            LB_XiangMuHeTongBenYueBuKeYuJianFeiQianQiShangYueBuKeYuJianFeiAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field159", "my:riqi", strYearMonth)) - decimal.Parse(GetWorkFlowColumnPriorMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field159", "my:riqi", strYearMonth))).ToString();
+            //Öµ=±¾ÔÂµÄ¡°²»¿ÉÔ¤¼û·Ñ¡±-ÉÏÔÂµÄ¡°²»¿ÉÔ¤¼û·Ñ¡±¼´ ±¾ÔÂ H10-ÉÏÔÂ H10
+            LB_XiangMuHeTongBenYueBuKeYuJianFeiQianQiShangYueBuKeYuJianFeiAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field159", "my:riqi", strYearMonth)) - decimal.Parse(GetWorkFlowColumnPriorMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field159", "my:riqi", strYearMonth))).ToString();
             LB_XiangMuHeTongBenYueBuKeYuJianFeiQianQiShangYueBuKeYuJianFeiTaxRate.Text = LB_XiangMuECiBiaoJiaFenLiBiaoBuKeYiJianFeiTaxRate.Text;
             LB_XiangMuHeTongBenYueBuKeYuJianFeiQianQiShangYueBuKeYuJianFeiTaxAmount.Text = (decimal.Parse(LB_XiangMuHeTongBenYueBuKeYuJianFeiQianQiShangYueBuKeYuJianFeiAmount.Text) * decimal.Parse(LB_XiangMuHeTongBenYueBuKeYuJianFeiQianQiShangYueBuKeYuJianFeiTaxRate.Text)).ToString();
 
-            //å€¼=æœ¬æœˆçš„â€œé¢„è®¡å®¡å‡é¢â€-ä¸Šæœˆçš„â€œé¢„è®¡å®¡å‡é¢â€
-            LB_XiangMuHeTongBenYueYiJiShengJianEQianQiShangYueYiJiShengJianEAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field160", "my:riqi", strYearMonth)) - decimal.Parse(GetWorkFlowColumnPriorMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:field160", "my:riqi", strYearMonth))).ToString();
+            //Öµ=±¾ÔÂµÄ¡°Ô¤¼ÆÉó¼õ¶î¡±-ÉÏÔÂµÄ¡°Ô¤¼ÆÉó¼õ¶î¡±
+            LB_XiangMuHeTongBenYueYiJiShengJianEQianQiShangYueYiJiShengJianEAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field160", "my:riqi", strYearMonth)) - decimal.Parse(GetWorkFlowColumnPriorMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:field160", "my:riqi", strYearMonth))).ToString();
             LB_XiangMuHeTongBenYueYiJiShengJianEQianQiShangYueYiJiShengJianETaxRate.Text = LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianETaxRate.Text;
             LB_XiangMuHeTongBenYueYiJiShengJianEQianQiShangYueYiJiShengJianETaxAmount.Text = (decimal.Parse(LB_XiangMuHeTongBenYueYiJiShengJianEQianQiShangYueYiJiShengJianEAmount.Text) * decimal.Parse(LB_XiangMuHeTongBenYueYiJiShengJianEQianQiShangYueYiJiShengJianETaxRate.Text)).ToString();
 
-            //å€¼=æœ¬æœˆçš„â€œé¢„è®¡æ€»æ”¶å…¥åˆè®¡â€-ä¸Šæœˆçš„â€œé¢„è®¡æ€»æ”¶å…¥åˆè®¡â€
-            LB_XiangMuHeTongBenYueYiJiZongShouRuQianQiShangYueZongShouRuAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:zongshouru", "my:riqi", strYearMonth)) - decimal.Parse(GetWorkFlowColumnPriorMonthDataByMaxFieldValue(strProjectID, "äºŒæ¬¡æ ‡ä»·åˆ†ç¦»ç›®æ ‡æˆæœ¬å®¡æ‰¹æµç¨‹", "my:zongshouru", "my:riqi", strYearMonth))).ToString();
+            //Öµ=±¾ÔÂµÄ¡°Ô¤¼Æ×ÜÊÕÈëºÏ¼Æ¡±-ÉÏÔÂµÄ¡°Ô¤¼Æ×ÜÊÕÈëºÏ¼Æ¡±
+            LB_XiangMuHeTongBenYueYiJiZongShouRuQianQiShangYueZongShouRuAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:zongshouru", "my:riqi", strYearMonth)) - decimal.Parse(GetWorkFlowColumnPriorMonthDataByMaxFieldValue(strProjectID, "¶ş´Î±ê¼Û·ÖÀëÄ¿±ê³É±¾ÉóÅúÁ÷³Ì", "my:zongshouru", "my:riqi", strYearMonth))).ToString();
             LB_XiangMuHeTongBenYueYiJiZongShouRuQianQiShangYueZongShouRuTaxRate.Text = LB_SecondYiJiHeTongYiShuanJiaZongShouRuHeJiTaxRate.Text;
             LB_XiangMuHeTongBenYueYiJiZongShouRuQianQiShangYueZongShouRuTaxAmount.Text = (decimal.Parse(LB_XiangMuHeTongBenYueYiJiZongShouRuQianQiShangYueZongShouRuAmount.Text) * decimal.Parse(LB_XiangMuHeTongBenYueYiJiZongShouRuQianQiShangYueZongShouRuTaxRate.Text)).ToString();
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰äººå·¥è´¹è¡¨-â€œrengongfeihejiâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenRenGongFeiHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "é¡¹ç›®äººå·¥è´¹è¡¨", "my:rengongfeiheji", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenRenGongFeiHeJiSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "é¡¹ç›®äººå·¥è´¹è¡¨", "my:rengongfeiheji");
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©ÈË¹¤·Ñ±í-¡°rengongfeiheji¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenRenGongFeiHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÏîÄ¿ÈË¹¤·Ñ±í", "my:rengongfeiheji", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenRenGongFeiHeJiSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÏîÄ¿ÈË¹¤·Ñ±í", "my:rengongfeiheji");
             LB_XiangMuCurrentMonthShiJiFaShengChengBenRenGongFeiHeJiTaxAmount.Text = "0";
             LB_XiangMuMiYueShiJiFaShengChengBenRenGongFeiHeJiSumTaxAmount.Text = "0";
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenRenGongFeiHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "é¡¹ç›®äººå·¥è´¹è¡¨", "my:rengongfeiheji", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenRenGongFeiHeJiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "é¡¹ç›®äººå·¥è´¹è¡¨", "my:rengongfeiheji");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenRenGongFeiHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÏîÄ¿ÈË¹¤·Ñ±í", "my:rengongfeiheji", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenRenGongFeiHeJiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÏîÄ¿ÈË¹¤·Ñ±í", "my:rengongfeiheji");
             LB_XiangMuMiYueShiJiFaShengChengBenRenGongFeiHeJiTaxRate.Text = "0";
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰äººå·¥è´¹è¡¨-â€œgongzibaoxianâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBengongzibaoxianHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "é¡¹ç›®äººå·¥è´¹è¡¨", "my:gongzibaoxian", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBengongzibaoxianHeJiAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "é¡¹ç›®äººå·¥è´¹è¡¨", "my:gongzibaoxian");
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©ÈË¹¤·Ñ±í-¡°gongzibaoxian¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBengongzibaoxianHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÏîÄ¿ÈË¹¤·Ñ±í", "my:gongzibaoxian", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBengongzibaoxianHeJiAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÏîÄ¿ÈË¹¤·Ñ±í", "my:gongzibaoxian");
             LB_XiangMuCurrentMonthShiJiFaShengChengBengongzibaoxianHeJiTaxAmount.Text = "0";
             LB_XiangMuMiYueShiJiFaShengChengBengongzibaoxianHeJiSumTaxAmount.Text = "0";
-            LB_XiangMuCurrentMonthShiJiFaShengChengBengongzibaoxianHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "é¡¹ç›®äººå·¥è´¹è¡¨", "my:gongzibaoxian", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBengongzibaoxianHeJiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "é¡¹ç›®äººå·¥è´¹è¡¨", "my:gongzibaoxian");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBengongzibaoxianHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÏîÄ¿ÈË¹¤·Ñ±í", "my:gongzibaoxian", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBengongzibaoxianHeJiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÏîÄ¿ÈË¹¤·Ñ±í", "my:gongzibaoxian");
             LB_XiangMuMiYueShiJiFaShengChengBengongzibaoxianHeJiTaxRate.Text = "0";
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰äººå·¥è´¹è¡¨-â€œgexiangjiangli â€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBengexiangjiangliHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "é¡¹ç›®äººå·¥è´¹è¡¨", "my:gexiangjiangli", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBengexiangjiangliHeJiAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "é¡¹ç›®äººå·¥è´¹è¡¨", "my:gexiangjiangli");
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©ÈË¹¤·Ñ±í-¡°gexiangjiangli ¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBengexiangjiangliHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÏîÄ¿ÈË¹¤·Ñ±í", "my:gexiangjiangli", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBengexiangjiangliHeJiAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÏîÄ¿ÈË¹¤·Ñ±í", "my:gexiangjiangli");
             LB_XiangMuCurrentMonthShiJiFaShengChengBengexiangjiangliHeJiTaxAmount.Text = "0";
             LB_XiangMuMiYueShiJiFaShengChengBengexiangjiangliHeJiSumTaxAmount.Text = "0";
-            LB_XiangMuCurrentMonthShiJiFaShengChengBengexiangjiangliHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "é¡¹ç›®äººå·¥è´¹è¡¨", "my:gexiangjiangli", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBengexiangjiangliHeJiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "é¡¹ç›®äººå·¥è´¹è¡¨", "my:gexiangjiangli");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBengexiangjiangliHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÏîÄ¿ÈË¹¤·Ñ±í", "my:gexiangjiangli", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBengexiangjiangliHeJiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÏîÄ¿ÈË¹¤·Ñ±í", "my:gexiangjiangli");
             LB_XiangMuMiYueShiJiFaShengChengBengexiangjiangliHeJiTaxRate.Text = "0";
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰äººå·¥è´¹è¡¨-â€œqitabuzhu â€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitabuzhuHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "é¡¹ç›®äººå·¥è´¹è¡¨", "my:qitabuzhu", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitabuzhuHeJiAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "é¡¹ç›®äººå·¥è´¹è¡¨", "my:qitabuzhu");
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©ÈË¹¤·Ñ±í-¡°qitabuzhu ¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitabuzhuHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÏîÄ¿ÈË¹¤·Ñ±í", "my:qitabuzhu", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitabuzhuHeJiAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÏîÄ¿ÈË¹¤·Ñ±í", "my:qitabuzhu");
             LB_XiangMuCurrentMonthShiJiFaShengChengBenqitabuzhuHeJiTaxAmount.Text = "0";
             LB_XiangMuMiYueShiJiFaShengChengBenqitabuzhuHeJiSumTaxAmount.Text = "0";
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitabuzhuHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "é¡¹ç›®äººå·¥è´¹è¡¨", "my:qitabuzhu", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitabuzhuHeJiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "é¡¹ç›®äººå·¥è´¹è¡¨", "my:qitabuzhu");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitabuzhuHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÏîÄ¿ÈË¹¤·Ñ±í", "my:qitabuzhu", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitabuzhuHeJiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÏîÄ¿ÈË¹¤·Ñ±í", "my:qitabuzhu");
             LB_XiangMuMiYueShiJiFaShengChengBenqitabuzhuHeJiTaxRate.Text = "0";
 
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰äººå·¥è´¹è¡¨-â€œwaichubuzhu â€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenwaichubuzhuHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "é¡¹ç›®äººå·¥è´¹è¡¨", "my:waichubuzhu", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenwaichubuzhuHeJiAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "é¡¹ç›®äººå·¥è´¹è¡¨", "my:waichubuzhu");
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©ÈË¹¤·Ñ±í-¡°waichubuzhu ¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenwaichubuzhuHeJiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÏîÄ¿ÈË¹¤·Ñ±í", "my:waichubuzhu", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenwaichubuzhuHeJiAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÏîÄ¿ÈË¹¤·Ñ±í", "my:waichubuzhu");
             LB_XiangMuCurrentMonthShiJiFaShengChengBenwaichubuzhuHeJiTaxAmount.Text = "0";
             LB_XiangMuMiYueShiJiFaShengChengBenwaichubuzhuHeJiSumTaxAmount.Text = "0";
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenwaichubuzhuHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "é¡¹ç›®äººå·¥è´¹è¡¨", "my:waichubuzhu", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenwaichubuzhuHeJiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "é¡¹ç›®äººå·¥è´¹è¡¨", "my:waichubuzhu");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenwaichubuzhuHeJiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÏîÄ¿ÈË¹¤·Ñ±í", "my:waichubuzhu", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenwaichubuzhuHeJiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÏîÄ¿ÈË¹¤·Ñ±í", "my:waichubuzhu");
             LB_XiangMuMiYueShiJiFaShengChengBenwaichubuzhuHeJiTaxRate.Text = "0";
 
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰åˆ†åŒ…ç”¨è´¹è¡¨-laowufenbao1-sq+laowufenbao2-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:laowufenbao1-sq", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:laowufenbao2-sq", "my:riqi", strYearMonth))).ToString();
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqAmount.Text = (decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:laowufenbao1-sq")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:laowufenbao2-sq"))).ToString();
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqTaxAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:laowufenbao1-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:laowufenbao2-sj", "my:riqi", strYearMonth))).ToString("f6");
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqSumTaxAmount.Text = (decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:laowufenbao1-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:laowufenbao2-sj"))).ToString("f6");
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©·Ö°üÓÃ·Ñ±í-laowufenbao1-sq+laowufenbao2-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:laowufenbao1-sq", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:laowufenbao2-sq", "my:riqi", strYearMonth))).ToString();
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqAmount.Text = (decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:laowufenbao1-sq")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:laowufenbao2-sq"))).ToString();
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqTaxAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:laowufenbao1-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:laowufenbao2-sj", "my:riqi", strYearMonth))).ToString("f6");
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqSumTaxAmount.Text = (decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:laowufenbao1-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:laowufenbao2-sj"))).ToString("f6");
 
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqAfterTaxAmount.Text = (decimal.Parse(GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:laowufenbao1-sh", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:laowufenbao2-sh", "my:riqi", strYearMonth))).ToString("f6");
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqSumAfterTaxAmount.Text = (decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:laowufenbao1-sh")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:laowufenbao2-sh"))).ToString("f6");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqAfterTaxAmount.Text = (decimal.Parse(GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:laowufenbao1-sh", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnLastestMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:laowufenbao2-sh", "my:riqi", strYearMonth))).ToString("f6");
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqSumAfterTaxAmount.Text = (decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:laowufenbao1-sh")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:laowufenbao2-sh"))).ToString("f6");
             try
             {
                 LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqTaxRate.Text = (decimal.Parse(LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqTaxAmount.Text) / decimal.Parse(LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqSumAfterTaxAmount.Text)).ToString("f6");
@@ -732,373 +732,373 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
                 LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqlaowufenbao2sqTaxRate.Text = "0";
             }
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰åˆ†åŒ…ç”¨è´¹è¡¨-fenbaofeihejiâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:fenbaofeiheji", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:fenbaofeiheji");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:fenbaoshuihouheji", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:fenbaoshuihouheji");
-            LB_XiangMuMiYueShiJiFaShengChengBenfenbaofeihejiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:fenbaofei-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©·Ö°üÓÃ·Ñ±í-fenbaofeiheji¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:fenbaofeiheji", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:fenbaofeiheji");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:fenbaoshuihouheji", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:fenbaoshuihouheji");
+            LB_XiangMuMiYueShiJiFaShengChengBenfenbaofeihejiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:fenbaofei-slv", "my:riqi", strYearMonth);
 
-            decimal deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount = decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:laowufenbao1-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:laowufenbao2-sj", "my:riqi", strYearMonth));
-            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:zhaunyefenbao-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:fengongsiziwan-sj", "my:riqi", strYearMonth));
-            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:dianyi-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:diaozhuang-sj", "my:riqi", strYearMonth));
+            decimal deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount = decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:laowufenbao1-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:laowufenbao2-sj", "my:riqi", strYearMonth));
+            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:zhaunyefenbao-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:fengongsiziwan-sj", "my:riqi", strYearMonth));
+            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:dianyi-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:diaozhuang-sj", "my:riqi", strYearMonth));
             LB_XiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount.Text = deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount.ToString("f6");
 
-            decimal deXiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumTaxAmount = decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:laowufenbao1-sj"))  + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:laowufenbao2-sj"));
-            deXiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumTaxAmount += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:zhaunyefenbao-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:fengongsiziwan-sj"));
-            deXiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumTaxAmount += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:dianyi-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:diaozhuang-sj")) ;
+            decimal deXiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumTaxAmount = decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:laowufenbao1-sj"))  + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:laowufenbao2-sj"));
+            deXiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumTaxAmount += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:zhaunyefenbao-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:fengongsiziwan-sj"));
+            deXiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumTaxAmount += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:dianyi-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:diaozhuang-sj")) ;
             LB_XiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumTaxAmount.Text = deXiangMuMiYueShiJiFaShengChengBenfenbaofeihejiSumTaxAmount.ToString("f6");
   
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰åˆ†åŒ…ç”¨è´¹è¡¨-laowufenbao1-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:laowufenbao1-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:laowufenbao1-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:laowufenbao1-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:laowufenbao1-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:laowufenbao1-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:laowufenbao1-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:laowufenbao1-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©·Ö°üÓÃ·Ñ±í-laowufenbao1-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:laowufenbao1-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:laowufenbao1-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:laowufenbao1-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:laowufenbao1-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao1sqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:laowufenbao1-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:laowufenbao1-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao1sqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:laowufenbao1-slv", "my:riqi", strYearMonth);
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰åˆ†åŒ…ç”¨è´¹è¡¨-laowufenbao2-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao2sqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:laowufenbao2-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao2sqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:laowufenbao2-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao2sqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:laowufenbao2-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao2sqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:laowufenbao2-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao2sqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:laowufenbao2-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao2sqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:laowufenbao2-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao2sqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:laowufenbao2-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©·Ö°üÓÃ·Ñ±í-laowufenbao2-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao2sqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:laowufenbao2-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao2sqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:laowufenbao2-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao2sqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:laowufenbao2-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao2sqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:laowufenbao2-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaowufenbao2sqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:laowufenbao2-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao2sqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:laowufenbao2-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenlaowufenbao2sqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:laowufenbao2-slv", "my:riqi", strYearMonth);
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰åˆ†åŒ…ç”¨è´¹è¡¨-zhuanyefenbao-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenzhuanyefenbaosqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:zhuanyefenbao-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenzhuanyefenbaosqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:zhuanyefenbao-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenzhuanyefenbaosqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:zhuanyefenbao-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenzhuanyefenbaosqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:zhuanyefenbao-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenzhuanyefenbaosqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:zhaunyefenbao-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenzhuanyefenbaosqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:zhaunyefenbao-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenzhuanyefenbaosqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:zhuanyefenbao-slv", "my:riqi", strYearMonth);
-
-
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰åˆ†åŒ…ç”¨è´¹è¡¨-fbfengongsiziwan-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenfbfengongsiziwansqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:fbfengongsiziwan-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenfbfengongsiziwansqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:fbfengongsiziwan-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenfbfengongsiziwansqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:fengongsiziwan-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenfbfengongsiziwansqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:fengongsiziwan-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenfbfengongsiziwansqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:fengongsiziwan-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenfbfengongsiziwansqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:fengongsiziwan-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenfbfengongsiziwansqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:fengongsiziwan-slv", "my:riqi", strYearMonth);
-
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰åˆ†åŒ…ç”¨è´¹è¡¨-dianyi-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBendianyisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:dianyi-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBendianyisqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:dianyi-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBendianyisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:dianyi-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBendianyisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:dianyi-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBendianyisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:dianyi-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBendianyisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:dianyi-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBendianyisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:dianyi-slv", "my:riqi", strYearMonth);
-
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰åˆ†åŒ…ç”¨è´¹è¡¨-diaozhuang-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBendiaozhuangsqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:diaozhuang-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBendiaozhuangsqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:diaozhuang-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBendiaozhuangsqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:diaozhuang-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBendiaozhuangsqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:diaozhuang-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBendiaozhuangsqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:diaozhuang-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBendiaozhuangsqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:diaozhuang-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBendiaozhuangsqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:diaozhuang-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©·Ö°üÓÃ·Ñ±í-zhuanyefenbao-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenzhuanyefenbaosqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:zhuanyefenbao-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenzhuanyefenbaosqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:zhuanyefenbao-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenzhuanyefenbaosqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:zhuanyefenbao-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenzhuanyefenbaosqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:zhuanyefenbao-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenzhuanyefenbaosqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:zhaunyefenbao-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenzhuanyefenbaosqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:zhaunyefenbao-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenzhuanyefenbaosqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:zhuanyefenbao-slv", "my:riqi", strYearMonth);
 
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰ææ–™è´¹è¡¨-cailiaofei-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:cailiaofei-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ææ–™è´¹", "my:cailiaofei-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:cailiaofei-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ææ–™è´¹", "my:cailiaofei-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:cailiaofei-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ææ–™è´¹", "my:cailiaofei-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:cailiaofei-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©·Ö°üÓÃ·Ñ±í-fbfengongsiziwan-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenfbfengongsiziwansqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:fbfengongsiziwan-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenfbfengongsiziwansqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:fbfengongsiziwan-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenfbfengongsiziwansqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:fengongsiziwan-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenfbfengongsiziwansqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:fengongsiziwan-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenfbfengongsiziwansqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:fengongsiziwan-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenfbfengongsiziwansqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:fengongsiziwan-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenfbfengongsiziwansqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:fengongsiziwan-slv", "my:riqi", strYearMonth);
+
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©·Ö°üÓÃ·Ñ±í-dianyi-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBendianyisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:dianyi-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBendianyisqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:dianyi-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBendianyisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:dianyi-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBendianyisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:dianyi-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBendianyisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:dianyi-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBendianyisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:dianyi-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBendianyisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:dianyi-slv", "my:riqi", strYearMonth);
+
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©·Ö°üÓÃ·Ñ±í-diaozhuang-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBendiaozhuangsqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:diaozhuang-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBendiaozhuangsqAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:diaozhuang-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBendiaozhuangsqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:diaozhuang-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBendiaozhuangsqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:diaozhuang-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBendiaozhuangsqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:diaozhuang-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBendiaozhuangsqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:diaozhuang-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBendiaozhuangsqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:diaozhuang-slv", "my:riqi", strYearMonth);
 
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰ææ–™è´¹è¡¨-zhucai-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeizhucaisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:zhucai-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeizhucaisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ææ–™è´¹", "my:zhucai-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeizhucaisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:zhucai-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeizhucaisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ææ–™è´¹", "my:zhucai-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeizhucaisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:zhucai-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeizhucaisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ææ–™è´¹", "my:zhucai-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeizhucaisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:zhucai-slv", "my:riqi", strYearMonth);
-
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰ææ–™è´¹è¡¨-fucai-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeifucaisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:fucai-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeifucaisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ææ–™è´¹", "my:fucai-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeifucaisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:fucai-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeifucaisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ææ–™è´¹", "my:fucai-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeifucaisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:fucai-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeifucaisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ææ–™è´¹", "my:fucai-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeifucaisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:fucai-slv", "my:riqi", strYearMonth);
-
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰ææ–™è´¹è¡¨-pingku-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeipingkusqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:pingku-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeipingkusqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ææ–™è´¹", "my:pingku-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeipingkusqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:pingku-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeipingkusqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ææ–™è´¹", "my:pingku-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeipingkusqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:pingku-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeipingkusqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ææ–™è´¹", "my:pingku-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeipingkusqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:pingku-slv", "my:riqi", strYearMonth);
-
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰ææ–™è´¹è¡¨-diqi-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeidiqisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:diqi-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeidiqisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ææ–™è´¹", "my:diqi-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeidiqisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:diqi-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeidiqisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ææ–™è´¹", "my:diqi-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeidiqisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:diqi-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeidiqisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ææ–™è´¹", "my:diqi-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeidiqisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:diqi-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©²ÄÁÏ·Ñ±í-cailiaofei-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:cailiaofei-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "²ÄÁÏ·Ñ", "my:cailiaofei-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:cailiaofei-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "²ÄÁÏ·Ñ", "my:cailiaofei-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:cailiaofei-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "²ÄÁÏ·Ñ", "my:cailiaofei-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:cailiaofei-slv", "my:riqi", strYearMonth);
 
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹è¡¨-jixieshiyongfei-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixieshiyongfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jixieshiyongfei-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjixieshiyongfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jixieshiyongfei-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixieshiyongfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jixieshiyongfei-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjixieshiyongfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jixieshiyongfei-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixieshiyongfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jixieshiyongfei-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjixieshiyongfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jixieshiyongfei-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenjixieshiyongfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jixieshiyongfei-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©²ÄÁÏ·Ñ±í-zhucai-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeizhucaisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:zhucai-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeizhucaisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "²ÄÁÏ·Ñ", "my:zhucai-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeizhucaisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:zhucai-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeizhucaisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "²ÄÁÏ·Ñ", "my:zhucai-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeizhucaisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:zhucai-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeizhucaisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "²ÄÁÏ·Ñ", "my:zhucai-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeizhucaisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:zhucai-slv", "my:riqi", strYearMonth);
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹è¡¨-jx-fengongsiziwan-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxfengongsiziwansqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jx-fengongsiziwan-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjxfengongsiziwansqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jx-fengongsiziwan-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxfengongsiziwansqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jx-fengongsiziwan-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjxfengongsiziwansqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jx-fengongsiziwan-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxfengongsiziwansqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jx-fengongsiziwan-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjxfengongsiziwansqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jx-fengongsiziwan-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenjxfengongsiziwansqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:fengongsiziwan-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©²ÄÁÏ·Ñ±í-fucai-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeifucaisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:fucai-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeifucaisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "²ÄÁÏ·Ñ", "my:fucai-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeifucaisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:fucai-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeifucaisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "²ÄÁÏ·Ñ", "my:fucai-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeifucaisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:fucai-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeifucaisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "²ÄÁÏ·Ñ", "my:fucai-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeifucaisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:fucai-slv", "my:riqi", strYearMonth);
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹è¡¨-jx-qita-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxqitasqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jx-qita-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjxqitasqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jx-qita-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxqitasqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jx-qita-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjxqitasqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jx-qita-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxqitasqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jx-qita-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjxqitasqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jx-qita-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenjxqitasqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jx-qita-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©²ÄÁÏ·Ñ±í-pingku-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeipingkusqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:pingku-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeipingkusqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "²ÄÁÏ·Ñ", "my:pingku-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeipingkusqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:pingku-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeipingkusqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "²ÄÁÏ·Ñ", "my:pingku-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeipingkusqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:pingku-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeipingkusqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "²ÄÁÏ·Ñ", "my:pingku-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeipingkusqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:pingku-slv", "my:riqi", strYearMonth);
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹è¡¨-jixiezulinshuiqianhejiâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixiezulinshuiqianhejiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jixiezulinshuiqianheji", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjixiezulinshuiqianhejiSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jixiezulinshuiqianheji");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixiezulinshuiqianhejiTaxAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jixieshiyongfei-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jx-fengongsiziwan-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jx-qita-sj", "my:riqi", strYearMonth))).ToString();
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©²ÄÁÏ·Ñ±í-diqi-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeidiqisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:diqi-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeidiqisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "²ÄÁÏ·Ñ", "my:diqi-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeidiqisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:diqi-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeidiqisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "²ÄÁÏ·Ñ", "my:diqi-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBencailiaofeidiqisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:diqi-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeidiqisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "²ÄÁÏ·Ñ", "my:diqi-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBencailiaofeidiqisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:diqi-slv", "my:riqi", strYearMonth);
+
+
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©»úĞµÉè±¸×âÁŞ·Ñ±í-jixieshiyongfei-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixieshiyongfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jixieshiyongfei-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjixieshiyongfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "»úĞµÉè±¸×âÁŞ·Ñ", "my:jixieshiyongfei-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixieshiyongfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jixieshiyongfei-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjixieshiyongfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "»úĞµÉè±¸×âÁŞ·Ñ", "my:jixieshiyongfei-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixieshiyongfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jixieshiyongfei-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjixieshiyongfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "»úĞµÉè±¸×âÁŞ·Ñ", "my:jixieshiyongfei-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenjixieshiyongfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jixieshiyongfei-slv", "my:riqi", strYearMonth);
+
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©»úĞµÉè±¸×âÁŞ·Ñ±í-jx-fengongsiziwan-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxfengongsiziwansqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jx-fengongsiziwan-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjxfengongsiziwansqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "»úĞµÉè±¸×âÁŞ·Ñ", "my:jx-fengongsiziwan-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxfengongsiziwansqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jx-fengongsiziwan-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjxfengongsiziwansqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "»úĞµÉè±¸×âÁŞ·Ñ", "my:jx-fengongsiziwan-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxfengongsiziwansqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jx-fengongsiziwan-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjxfengongsiziwansqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "»úĞµÉè±¸×âÁŞ·Ñ", "my:jx-fengongsiziwan-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenjxfengongsiziwansqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:fengongsiziwan-slv", "my:riqi", strYearMonth);
+
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©»úĞµÉè±¸×âÁŞ·Ñ±í-jx-qita-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxqitasqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jx-qita-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjxqitasqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "»úĞµÉè±¸×âÁŞ·Ñ", "my:jx-qita-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxqitasqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jx-qita-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjxqitasqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "»úĞµÉè±¸×âÁŞ·Ñ", "my:jx-qita-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjxqitasqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jx-qita-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjxqitasqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "»úĞµÉè±¸×âÁŞ·Ñ", "my:jx-qita-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenjxqitasqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jx-qita-slv", "my:riqi", strYearMonth);
+
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©»úĞµÉè±¸×âÁŞ·Ñ±í-jixiezulinshuiqianheji¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixiezulinshuiqianhejiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jixiezulinshuiqianheji", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjixiezulinshuiqianhejiSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "»úĞµÉè±¸×âÁŞ·Ñ", "my:jixiezulinshuiqianheji");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixiezulinshuiqianhejiTaxAmount.Text = (decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jixieshiyongfei-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jx-fengongsiziwan-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jx-qita-sj", "my:riqi", strYearMonth))).ToString();
             LB_XiangMuMiYueShiJiFaShengChengBenjixiezulinshuiqianhejiSumTaxAmount.Text = (decimal.Parse(LB_XiangMuMiYueShiJiFaShengChengBenjixieshiyongfeisqSumTaxAmount.Text) + decimal.Parse(LB_XiangMuMiYueShiJiFaShengChengBenjxfengongsiziwansqSumTaxAmount.Text) + decimal.Parse(LB_XiangMuMiYueShiJiFaShengChengBenjxqitasqSumTaxAmount.Text)).ToString();
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixiezulinshuiqianhejiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jixiezulinshuihouheji", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjixiezulinshuiqianhejiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jixiezulinshuihouheji");
-            LB_XiangMuMiYueShiJiFaShengChengBenjixiezulinshuiqianhejiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jixiezulin-slv", "my:riqi", strYearMonth);
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjixiezulinshuiqianhejiAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jixiezulinshuihouheji", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjixiezulinshuiqianhejiSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "»úĞµÉè±¸×âÁŞ·Ñ", "my:jixiezulinshuihouheji");
+            LB_XiangMuMiYueShiJiFaShengChengBenjixiezulinshuiqianhejiTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jixiezulin-slv", "my:riqi", strYearMonth);
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰ä¸´æ—¶è®¾æ–½è´¹è¡¨-linshisheshi-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlinshisheshisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸´æ—¶è®¾æ–½è´¹", "my:linshisheshi-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlinshisheshisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ä¸´æ—¶è®¾æ–½è´¹", "my:linshisheshi-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlinshisheshisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸´æ—¶è®¾æ–½è´¹", "my:linshisheshi-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlinshisheshisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ä¸´æ—¶è®¾æ–½è´¹", "my:linshisheshi-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlinshisheshisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸´æ—¶è®¾æ–½è´¹", "my:linshisheshi-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlinshisheshisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ä¸´æ—¶è®¾æ–½è´¹", "my:linshisheshi-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenlinshisheshisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸´æ—¶è®¾æ–½è´¹", "my:linshisheshi-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©ÁÙÊ±ÉèÊ©·Ñ±í-linshisheshi-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlinshisheshisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÁÙÊ±ÉèÊ©·Ñ", "my:linshisheshi-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlinshisheshisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÁÙÊ±ÉèÊ©·Ñ", "my:linshisheshi-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlinshisheshisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÁÙÊ±ÉèÊ©·Ñ", "my:linshisheshi-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlinshisheshisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÁÙÊ±ÉèÊ©·Ñ", "my:linshisheshi-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlinshisheshisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÁÙÊ±ÉèÊ©·Ñ", "my:linshisheshi-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlinshisheshisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÁÙÊ±ÉèÊ©·Ñ", "my:linshisheshi-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenlinshisheshisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ÁÙÊ±ÉèÊ©·Ñ", "my:linshisheshi-slv", "my:riqi", strYearMonth);
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰å®‰å…¨æªæ–½è´¹è¡¨-anquancuoshi-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenanquancuoshisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å®‰å…¨æªæ–½è´¹", "my:anquancuoshi-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenanquancuoshisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å®‰å…¨æªæ–½è´¹", "my:anquancuoshi-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenanquancuoshisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å®‰å…¨æªæ–½è´¹", "my:anquancuoshi-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenanquancuoshisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å®‰å…¨æªæ–½è´¹", "my:anquancuoshi-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenanquancuoshisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å®‰å…¨æªæ–½è´¹", "my:anquancuoshi-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenanquancuoshisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å®‰å…¨æªæ–½è´¹", "my:anquancuoshi-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenanquancuoshisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "å®‰å…¨æªæ–½è´¹", "my:anquancuoshi-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©°²È«´ëÊ©·Ñ±í-anquancuoshi-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenanquancuoshisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "°²È«´ëÊ©·Ñ", "my:anquancuoshi-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenanquancuoshisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "°²È«´ëÊ©·Ñ", "my:anquancuoshi-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenanquancuoshisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "°²È«´ëÊ©·Ñ", "my:anquancuoshi-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenanquancuoshisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "°²È«´ëÊ©·Ñ", "my:anquancuoshi-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenanquancuoshisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "°²È«´ëÊ©·Ñ", "my:anquancuoshi-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenanquancuoshisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "°²È«´ëÊ©·Ñ", "my:anquancuoshi-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenanquancuoshisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "°²È«´ëÊ©·Ñ", "my:anquancuoshi-slv", "my:riqi", strYearMonth);
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰æ°´ç”µè´¹è¡¨-shuidianfei-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenshuidianfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æ°´ç”µè´¹", "my:shuidianfei-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenshuidianfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "æ°´ç”µè´¹", "my:shuidianfei-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenshuidianfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æ°´ç”µè´¹", "my:shuidianfei-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenshuidianfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "æ°´ç”µè´¹", "my:shuidianfei-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenshuidianfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æ°´ç”µè´¹", "my:shuidianfei-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenshuidianfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "æ°´ç”µè´¹", "my:shuidianfei-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenshuidianfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "æ°´ç”µè´¹", "my:shuidianfei-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©Ë®µç·Ñ±í-shuidianfei-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenshuidianfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "Ë®µç·Ñ", "my:shuidianfei-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenshuidianfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "Ë®µç·Ñ", "my:shuidianfei-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenshuidianfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "Ë®µç·Ñ", "my:shuidianfei-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenshuidianfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "Ë®µç·Ñ", "my:shuidianfei-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenshuidianfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "Ë®µç·Ñ", "my:shuidianfei-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenshuidianfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "Ë®µç·Ñ", "my:shuidianfei-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenshuidianfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "Ë®µç·Ñ", "my:shuidianfei-slv", "my:riqi", strYearMonth);
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰å…¶ä»–å·¥ç¨‹è´¹ç”¨è¡¨-qitagongchengfei-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitagongchengfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–å·¥ç¨‹è´¹", "my:qitagongchengfei-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitagongchengfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–å·¥ç¨‹è´¹", "my:qitagongchengfei-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitagongchengfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–å·¥ç¨‹è´¹", "my:qitagongchengfei-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitagongchengfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–å·¥ç¨‹è´¹", "my:qitagongchengfei-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitagongchengfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–å·¥ç¨‹è´¹", "my:qitagognchengfei-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitagongchengfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–å·¥ç¨‹è´¹", "my:qitagognchengfei-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenqitagongchengfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–å·¥ç¨‹è´¹", "my:qitagongchengfei-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©ÆäËû¹¤³Ì·ÑÓÃ±í-qitagongchengfei-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitagongchengfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû¹¤³Ì·Ñ", "my:qitagongchengfei-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitagongchengfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû¹¤³Ì·Ñ", "my:qitagongchengfei-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitagongchengfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû¹¤³Ì·Ñ", "my:qitagongchengfei-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitagongchengfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû¹¤³Ì·Ñ", "my:qitagongchengfei-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitagongchengfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû¹¤³Ì·Ñ", "my:qitagognchengfei-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitagongchengfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû¹¤³Ì·Ñ", "my:qitagognchengfei-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenqitagongchengfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû¹¤³Ì·Ñ", "my:qitagongchengfei-slv", "my:riqi", strYearMonth);
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰å…¶ä»–è´¹è¡¨-qitafeiheji-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitafeihejisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:qitafeiheji-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitafeihejisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:qitafeiheji-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitafeihejisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:qitaqita-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitafeihejisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:qitaqita-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitafeihejisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:qitafeiheji-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitafeihejisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:qitafeiheji-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenqitafeihejisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:qitafei-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©ÆäËû·Ñ±í-qitafeiheji-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitafeihejisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:qitafeiheji-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitafeihejisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:qitafeiheji-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitafeihejisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:qitaqita-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitafeihejisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:qitaqita-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitafeihejisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:qitafeiheji-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitafeihejisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:qitafeiheji-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenqitafeihejisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:qitafei-slv", "my:riqi", strYearMonth);
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰å…¶ä»–è´¹è¡¨-jiancefei-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjiancefeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:jiancefei-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjiancefeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:jiancefei-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjiancefeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:jiancefei-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjiancefeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:jiancefei-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenjiancefeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:jiancefei-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenjiancefeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:jiancefei-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenjiancefeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:jiancefei-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©ÆäËû·Ñ±í-jiancefei-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjiancefeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:jiancefei-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjiancefeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:jiancefei-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjiancefeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:jiancefei-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjiancefeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:jiancefei-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenjiancefeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:jiancefei-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenjiancefeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:jiancefei-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenjiancefeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:jiancefei-slv", "my:riqi", strYearMonth);
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰å…¶ä»–è´¹è¡¨-waixiejiagongfei-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenwaixiejiagongfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:waixiejiagongfei-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenwaixiejiagongfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:waixiejiagongfei-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenwaixiejiagongfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:waixiejiagongfei-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenwaixiejiagongfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:waixiejiagongfei-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenwaixiejiagongfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:waixiejiagongfei-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenwaixiejiagongfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:waixiejiagongfei-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenwaixiejiagongfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:waixiejiagongfei-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©ÆäËû·Ñ±í-waixiejiagongfei-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenwaixiejiagongfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:waixiejiagongfei-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenwaixiejiagongfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:waixiejiagongfei-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenwaixiejiagongfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:waixiejiagongfei-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenwaixiejiagongfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:waixiejiagongfei-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenwaixiejiagongfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:waixiejiagongfei-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenwaixiejiagongfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:waixiejiagongfei-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenwaixiejiagongfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:waixiejiagongfei-slv", "my:riqi", strYearMonth);
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰å…¶ä»–è´¹è¡¨-zulinfei-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenzulinfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:zulinfei-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenzulinfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:zulinfei-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenzulinfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:zulinfei-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenzulinfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:zulinfei-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenzulinfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:zulinfei-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenzulinfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:zulinfei-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenzulinfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:zulinfei-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©ÆäËû·Ñ±í-zulinfei-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenzulinfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:zulinfei-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenzulinfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:zulinfei-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenzulinfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:zulinfei-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenzulinfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:zulinfei-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenzulinfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:zulinfei-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenzulinfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:zulinfei-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenzulinfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:zulinfei-slv", "my:riqi", strYearMonth);
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰å…¶ä»–è´¹è¡¨-laodongbaohufei-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaodongbaohufeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:laodongbaohufei-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlaodongbaohufeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:laodongbaohufei-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaodongbaohufeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:laodongbaohufei-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlaodongbaohufeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:laodongbaohufei-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaodongbaohufeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:laodongbaohufei-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenlaodongbaohufeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:laodongbaohufei-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenlaodongbaohufeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:laodongbaohufei-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©ÆäËû·Ñ±í-laodongbaohufei-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaodongbaohufeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:laodongbaohufei-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlaodongbaohufeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:laodongbaohufei-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaodongbaohufeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:laodongbaohufei-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlaodongbaohufeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:laodongbaohufei-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenlaodongbaohufeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:laodongbaohufei-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenlaodongbaohufeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:laodongbaohufei-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenlaodongbaohufeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:laodongbaohufei-slv", "my:riqi", strYearMonth);
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰å…¶ä»–è´¹è¡¨-xiulifei-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenxiulifeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:xiulifei-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenxiulifeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:xiulifei-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenxiulifeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:xiulifei-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenxiulifeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:xiulifei-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenxiulifeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:xiulifei-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenxiulifeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:xiulifei-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenxiulifeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:xiulifei-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©ÆäËû·Ñ±í-xiulifei-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenxiulifeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:xiulifei-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenxiulifeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:xiulifei-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenxiulifeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:xiulifei-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenxiulifeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:xiulifei-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenxiulifeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:xiulifei-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenxiulifeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:xiulifei-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenxiulifeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:xiulifei-slv", "my:riqi", strYearMonth);
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰å…¶ä»–è´¹è¡¨-bukeyujian-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenbukeyujiansqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:bukeyujian-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenbukeyujiansqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:bukeyujian-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenbukeyujiansqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:bukeyujian-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenbukeyujiansqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:bukeyujian-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenbukeyujiansqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:bukeyujian-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenbukeyujiansqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:bukeyujian-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenbukeyujiansqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:bukeyujian-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©ÆäËû·Ñ±í-bukeyujian-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenbukeyujiansqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:bukeyujian-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenbukeyujiansqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:bukeyujian-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenbukeyujiansqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:bukeyujian-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenbukeyujiansqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:bukeyujian-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenbukeyujiansqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:bukeyujian-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenbukeyujiansqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:bukeyujian-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenbukeyujiansqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:bukeyujian-slv", "my:riqi", strYearMonth);
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰å…¶ä»–è´¹è¡¨-fakuan-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenfakuansqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:fakuan-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenfakuansqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:fakuan-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenfakuansqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:fakuan-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenfakuansqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:fakuan-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenfakuansqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:fakuan-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenfakuansqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:fakuan-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenfakuansqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:fakuan-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©ÆäËû·Ñ±í-fakuan-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenfakuansqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:fakuan-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenfakuansqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:fakuan-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenfakuansqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:fakuan-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenfakuansqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:fakuan-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenfakuansqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:fakuan-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenfakuansqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:fakuan-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenfakuansqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:fakuan-slv", "my:riqi", strYearMonth);
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰å…¶ä»–è´¹è¡¨-bangongyongping-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenbangongyongpingsqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:bangongyongping-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenbangongyongpingsqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:bangongyongping-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenbangongyongpingsqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:bangongyongping-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenbangongyongpingsqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:bangongyongping-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenbangongyongpingsqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:bangongyongping-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenbangongyongpingsqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:bangongyongping-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenbangongyongpingsqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:bangongyongping-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©ÆäËû·Ñ±í-bangongyongping-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenbangongyongpingsqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:bangongyongping-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenbangongyongpingsqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:bangongyongping-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenbangongyongpingsqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:bangongyongping-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenbangongyongpingsqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:bangongyongping-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenbangongyongpingsqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:bangongyongping-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenbangongyongpingsqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:bangongyongping-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenbangongyongpingsqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:bangongyongping-slv", "my:riqi", strYearMonth);
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰å…¶ä»–è´¹è¡¨-qitaqita-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitaqitasqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:qitaqita-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitaqitasqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:qitaqita-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitaqitasqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:qitaqita-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitaqitasqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:qitaqita-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitaqitasqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:qitaqita-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenqitaqitasqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:qitaqita-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenqitaqitasqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:qitaqita-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©ÆäËû·Ñ±í-qitaqita-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitaqitasqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:qitaqita-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitaqitasqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:qitaqita-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitaqitasqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:qitaqita-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitaqitasqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:qitaqita-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenqitaqitasqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:qitaqita-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenqitaqitasqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:qitaqita-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenqitaqitasqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:qitaqita-slv", "my:riqi", strYearMonth);
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰ åŠ¨è¿è´¹è¡¨-dongqianfei-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBendongqianfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åŠ¨è¿è´¹", "my:dongqianfei-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBendongqianfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åŠ¨è¿è´¹", "my:dongqianfei-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBendongqianfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åŠ¨è¿è´¹", "my:dongqianfei-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBendongqianfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åŠ¨è¿è´¹", "my:dongqianfei-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBendongqianfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åŠ¨è¿è´¹", "my:dongqianfei-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBendongqianfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åŠ¨è¿è´¹", "my:dongqianfei-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBendongqianfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "åŠ¨è¿è´¹", "my:dongqianfei-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£© ¶¯Ç¨·Ñ±í-dongqianfei-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBendongqianfeisqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "¶¯Ç¨·Ñ", "my:dongqianfei-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBendongqianfeisqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "¶¯Ç¨·Ñ", "my:dongqianfei-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBendongqianfeisqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "¶¯Ç¨·Ñ", "my:dongqianfei-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBendongqianfeisqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "¶¯Ç¨·Ñ", "my:dongqianfei-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBendongqianfeisqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "¶¯Ç¨·Ñ", "my:dongqianfei-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBendongqianfeisqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "¶¯Ç¨·Ñ", "my:dongqianfei-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBendongqianfeisqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "¶¯Ç¨·Ñ", "my:dongqianfei-slv", "my:riqi", strYearMonth);
 
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰ è®©åˆ©æˆæœ¬é¡¹è¡¨-ranglichengben-sqâ€
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenranglichengbensqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è®©åˆ©é¡¹", "my:ranglichengben-sq", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenranglichengbensqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è®©åˆ©é¡¹", "my:ranglichengben-sq");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenranglichengbensqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è®©åˆ©é¡¹", "my:ranglichengben-sj", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenranglichengbensqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è®©åˆ©é¡¹", "my:ranglichengben-sj");
-            LB_XiangMuCurrentMonthShiJiFaShengChengBenranglichengbensqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è®©åˆ©é¡¹", "my:ranglichengben-sh", "my:riqi", strYearMonth);
-            LB_XiangMuMiYueShiJiFaShengChengBenranglichengbensqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è®©åˆ©é¡¹", "my:ranglichengben-sh");
-            LB_XiangMuMiYueShiJiFaShengChengBenranglichengbensqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è®©åˆ©é¡¹", "my:ranglichengben-slv", "my:riqi", strYearMonth);
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£© ÈÃÀû³É±¾Ïî±í-ranglichengben-sq¡±
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenranglichengbensqAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËûÈÃÀûÏî", "my:ranglichengben-sq", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenranglichengbensqSumAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËûÈÃÀûÏî", "my:ranglichengben-sq");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenranglichengbensqTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËûÈÃÀûÏî", "my:ranglichengben-sj", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenranglichengbensqSumTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËûÈÃÀûÏî", "my:ranglichengben-sj");
+            LB_XiangMuCurrentMonthShiJiFaShengChengBenranglichengbensqAfterTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËûÈÃÀûÏî", "my:ranglichengben-sh", "my:riqi", strYearMonth);
+            LB_XiangMuMiYueShiJiFaShengChengBenranglichengbensqSumAfterTaxAmount.Text = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËûÈÃÀûÏî", "my:ranglichengben-sh");
+            LB_XiangMuMiYueShiJiFaShengChengBenranglichengbensqTaxRate.Text = GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËûÈÃÀûÏî", "my:ranglichengben-slv", "my:riqi", strYearMonth);
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰M15+M16+M17+M18+M21+M22+M23+M24+M25+M26+M28+M29+M30+M31+M33+M34+M35+M36+M37+M38+M39+M41+M42+M43+M44+M45+M46+M47+M48+M49+M50+M51   æˆ–è€…  M14+M19+M27+M32+M36+M37+M38+M39+M40+M50+M51
-            decimal deSQSJCB = decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "é¡¹ç›®äººå·¥è´¹è¡¨", "my:rengongfeiheji", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:fenbaofeiheji", "my:riqi", strYearMonth));
-            deSQSJCB += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:cailiaofei-sq", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jixiezulinshuiqianheji", "my:riqi", strYearMonth));
-            deSQSJCB += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸´æ—¶è®¾æ–½è´¹", "my:linshisheshi-sq", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å®‰å…¨æªæ–½è´¹", "my:anquancuoshi-sq", "my:riqi", strYearMonth));
-            deSQSJCB += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æ°´ç”µè´¹", "my:shuidianfei-sq", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–å·¥ç¨‹è´¹", "my:qitagongchengfei-sq", "my:riqi", strYearMonth));
-            deSQSJCB += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:qitafeiheji-sq", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åŠ¨è¿è´¹", "my:dongqianfei-sq", "my:riqi", strYearMonth));
-            deSQSJCB += decimal.Parse( GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è®©åˆ©é¡¹", "my:ranglichengben-sq", "my:riqi", strYearMonth));
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©M15+M16+M17+M18+M21+M22+M23+M24+M25+M26+M28+M29+M30+M31+M33+M34+M35+M36+M37+M38+M39+M41+M42+M43+M44+M45+M46+M47+M48+M49+M50+M51   »òÕß  M14+M19+M27+M32+M36+M37+M38+M39+M40+M50+M51
+            decimal deSQSJCB = decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÏîÄ¿ÈË¹¤·Ñ±í", "my:rengongfeiheji", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:fenbaofeiheji", "my:riqi", strYearMonth));
+            deSQSJCB += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:cailiaofei-sq", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jixiezulinshuiqianheji", "my:riqi", strYearMonth));
+            deSQSJCB += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÁÙÊ±ÉèÊ©·Ñ", "my:linshisheshi-sq", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "°²È«´ëÊ©·Ñ", "my:anquancuoshi-sq", "my:riqi", strYearMonth));
+            deSQSJCB += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "Ë®µç·Ñ", "my:shuidianfei-sq", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû¹¤³Ì·Ñ", "my:qitagongchengfei-sq", "my:riqi", strYearMonth));
+            deSQSJCB += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:qitafeiheji-sq", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "¶¯Ç¨·Ñ", "my:dongqianfei-sq", "my:riqi", strYearMonth));
+            deSQSJCB += decimal.Parse( GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËûÈÃÀûÏî", "my:ranglichengben-sq", "my:riqi", strYearMonth));
             LB_XiangMuCurrentMonthShiJiFaShengChengBenShiJiChengBenAmount.Text = deSQSJCB.ToString();
 
           
-            //â€œå½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰â€å³ï¼š M52 çš„æ¯æœˆç´¯åŠ 
-            decimal deSQSJCBHJ = decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "é¡¹ç›®äººå·¥è´¹è¡¨", "my:rengongfeiheji")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:fenbaofeiheji"));
-            deSQSJCBHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ææ–™è´¹", "my:cailiaofei-sq")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jixiezulinshuiqianheji"));
-            deSQSJCBHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ä¸´æ—¶è®¾æ–½è´¹", "my:linshisheshi-sq")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å®‰å…¨æªæ–½è´¹", "my:anquancuoshi-sq"));
-            deSQSJCBHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "æ°´ç”µè´¹", "my:shuidianfei-sq")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–å·¥ç¨‹è´¹", "my:qitagongchengfei-sq"));
-            deSQSJCBHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:qitafeiheji-sq")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åŠ¨è¿è´¹", "my:dongqianfei-sq"));
-            deSQSJCBHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è®©åˆ©é¡¹", "my:ranglichengben-sq"));
+            //¡°µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©¡±¼´£º M52 µÄÃ¿ÔÂÀÛ¼Ó
+            decimal deSQSJCBHJ = decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÏîÄ¿ÈË¹¤·Ñ±í", "my:rengongfeiheji")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:fenbaofeiheji"));
+            deSQSJCBHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "²ÄÁÏ·Ñ", "my:cailiaofei-sq")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "»úĞµÉè±¸×âÁŞ·Ñ", "my:jixiezulinshuiqianheji"));
+            deSQSJCBHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÁÙÊ±ÉèÊ©·Ñ", "my:linshisheshi-sq")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "°²È«´ëÊ©·Ñ", "my:anquancuoshi-sq"));
+            deSQSJCBHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "Ë®µç·Ñ", "my:shuidianfei-sq")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû¹¤³Ì·Ñ", "my:qitagongchengfei-sq"));
+            deSQSJCBHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:qitafeiheji-sq")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "¶¯Ç¨·Ñ", "my:dongqianfei-sq"));
+            deSQSJCBHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËûÈÃÀûÏî", "my:ranglichengben-sq"));
             LB_XiangMuMiYueShiJiFaShengChengBenShiJiChengBenSumAmount.Text = deSQSJCBHJ.ToString();
 
-            //â€œå½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨é‡‘ï¼‰â€O21+O22+O23+O24+O25+O26+O28+O29+O30+O31+O33+O34+O35+O36+O37+O38+O39+O41+O42+O43+O44+O45+O46+O47+O48+O49+O50+O51   æˆ–è€…  O14+O19+O27+O32+O36+O37+O38+O39+O40+O50+O51
-            decimal deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount2 = decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:laowufenbao1-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:laowufenbao2-sj", "my:riqi", strYearMonth));
-            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount2 += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:zhaunyefenbao-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:fengongsiziwan-sj", "my:riqi", strYearMonth));
-            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount2 += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:dianyi-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:diaozhuang-sj", "my:riqi", strYearMonth));
+            //¡°µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°½ğ£©¡±O21+O22+O23+O24+O25+O26+O28+O29+O30+O31+O33+O34+O35+O36+O37+O38+O39+O41+O42+O43+O44+O45+O46+O47+O48+O49+O50+O51   »òÕß  O14+O19+O27+O32+O36+O37+O38+O39+O40+O50+O51
+            decimal deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount2 = decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:laowufenbao1-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:laowufenbao2-sj", "my:riqi", strYearMonth));
+            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount2 += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:zhaunyefenbao-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:fengongsiziwan-sj", "my:riqi", strYearMonth));
+            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount2 += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:dianyi-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:diaozhuang-sj", "my:riqi", strYearMonth));
             LB_XiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount.Text = deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount2.ToString("f2");
 
             decimal deSQSJSJ = decimal.Parse("0") + deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount2;
-            deSQSJSJ += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:cailiaofei-sj", "my:riqi", strYearMonth)) + decimal.Parse((decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jixieshiyongfei-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jx-fengongsiziwan-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jx-qita-sj", "my:riqi", strYearMonth))).ToString());
-            deSQSJSJ += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸´æ—¶è®¾æ–½è´¹", "my:linshisheshi-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å®‰å…¨æªæ–½è´¹", "my:anquancuoshi-sj", "my:riqi", strYearMonth));
-            deSQSJSJ += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æ°´ç”µè´¹", "my:shuidianfei-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–å·¥ç¨‹è´¹", "my:qitagongchengfei-sj", "my:riqi", strYearMonth));
-            deSQSJSJ += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:qitaqita-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åŠ¨è¿è´¹", "my:dongqianfei-sj", "my:riqi", strYearMonth));
-            deSQSJSJ += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è®©åˆ©é¡¹", "my:ranglichengben-sj", "my:riqi", strYearMonth));
+            deSQSJSJ += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:cailiaofei-sj", "my:riqi", strYearMonth)) + decimal.Parse((decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jixieshiyongfei-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jx-fengongsiziwan-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jx-qita-sj", "my:riqi", strYearMonth))).ToString());
+            deSQSJSJ += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÁÙÊ±ÉèÊ©·Ñ", "my:linshisheshi-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "°²È«´ëÊ©·Ñ", "my:anquancuoshi-sj", "my:riqi", strYearMonth));
+            deSQSJSJ += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "Ë®µç·Ñ", "my:shuidianfei-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû¹¤³Ì·Ñ", "my:qitagongchengfei-sj", "my:riqi", strYearMonth));
+            deSQSJSJ += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:qitaqita-sj", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "¶¯Ç¨·Ñ", "my:dongqianfei-sj", "my:riqi", strYearMonth));
+            deSQSJSJ += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËûÈÃÀûÏî", "my:ranglichengben-sj", "my:riqi", strYearMonth));
             LB_XiangMuCurrentMonthShiJiFaShengChengBenTaxAmount.Text = deSQSJSJ.ToString();
 
-            //â€œå®é™…ç¨é‡‘ï¼ˆå½“æœˆï¼‰â€å³ï¼š O52 çš„æ¯æœˆç´¯åŠ 
-            decimal deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount3 = decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:laowufenbao1-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:laowufenbao2-sj"));
-            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount3 += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:zhaunyefenbao-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:fengongsiziwan-sj"));
-            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount3 += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:dianyi-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:diaohzuang-sj"));
+            //¡°Êµ¼ÊË°½ğ£¨µ±ÔÂ£©¡±¼´£º O52 µÄÃ¿ÔÂÀÛ¼Ó
+            decimal deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount3 = decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:laowufenbao1-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:laowufenbao2-sj"));
+            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount3 += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:zhaunyefenbao-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:fengongsiziwan-sj"));
+            deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount3 += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:dianyi-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:diaohzuang-sj"));
 
             decimal deSQSJSJHJ = decimal.Parse("0") + deXiangMuCurrentMonthShiJiFaShengChengBenfenbaofeihejiTaxAmount3;
-            deSQSJSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ææ–™è´¹", "my:cailiaofei-sj")) + decimal.Parse(LB_XiangMuMiYueShiJiFaShengChengBenjixiezulinshuiqianhejiSumTaxAmount.Text);
-            deSQSJSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ä¸´æ—¶è®¾æ–½è´¹", "my:linshisheshi-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å®‰å…¨æªæ–½è´¹", "my:anquancuoshi-sj"));
-            deSQSJSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "æ°´ç”µè´¹", "my:shuidianfei-sj")) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–å·¥ç¨‹è´¹", "my:qitagognchengfei-sh", "my:riqi", strYearMonth));
-            deSQSJSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–å·¥ç¨‹è´¹", "my:qitagongchengfei-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åŠ¨è¿è´¹", "my:dongqianfei-sj"));
-            deSQSJSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è®©åˆ©é¡¹", "my:ranglichengben-sj"));
+            deSQSJSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "²ÄÁÏ·Ñ", "my:cailiaofei-sj")) + decimal.Parse(LB_XiangMuMiYueShiJiFaShengChengBenjixiezulinshuiqianhejiSumTaxAmount.Text);
+            deSQSJSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÁÙÊ±ÉèÊ©·Ñ", "my:linshisheshi-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "°²È«´ëÊ©·Ñ", "my:anquancuoshi-sj"));
+            deSQSJSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "Ë®µç·Ñ", "my:shuidianfei-sj")) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû¹¤³Ì·Ñ", "my:qitagognchengfei-sh", "my:riqi", strYearMonth));
+            deSQSJSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû¹¤³Ì·Ñ", "my:qitagongchengfei-sj")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "¶¯Ç¨·Ñ", "my:dongqianfei-sj"));
+            deSQSJSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËûÈÃÀûÏî", "my:ranglichengben-sj"));
             LB_XiangMuCurrentMonthShiJiFaShengChengBenSumTaxAmount.Text = deSQSJSJHJ.ToString();
 
-            //â€œå½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨åï¼‰â€Q15+Q16+Q17+Q18+Q21+Q22+Q23+Q24+Q25+Q26+Q28+Q29+Q30+Q31+Q33+Q34+Q35+Q36+Q37+Q38+Q39+Q41+Q42+Q43+Q44+Q45+Q46+Q47+Q48+Q49+Q50+Q51   æˆ–è€…  Q14+Q19+Q27+Q32+Q36+Q37+Q38+Q39+Q40+Q50+Q51
-            decimal deSQSJSH = decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "é¡¹ç›®äººå·¥è´¹è¡¨", "my:rengongfeiheji", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åˆ†åŒ…è´¹", "my:fenbaoshuihouheji", "my:riqi", strYearMonth));
-            deSQSJSH += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ææ–™è´¹", "my:cailiaofei-sh", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jixiezulinshuihouheji", "my:riqi", strYearMonth));
-            deSQSJSH += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸´æ—¶è®¾æ–½è´¹", "my:linshisheshi-sh", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å®‰å…¨æªæ–½è´¹", "my:anquancuoshi-sh", "my:riqi", strYearMonth));
-            deSQSJSH += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "æ°´ç”µè´¹", "my:shuidianfei-sh", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–å·¥ç¨‹è´¹", "my:qitagognchengfei-sh", "my:riqi", strYearMonth));
-            deSQSJSH += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è´¹", "my:qitafeiheji-sh", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "åŠ¨è¿è´¹", "my:dongqianfei-sh", "my:riqi", strYearMonth));
-            deSQSJSH += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "å…¶ä»–è®©åˆ©é¡¹", "my:ranglichengben-sh", "my:riqi", strYearMonth));
+            //¡°µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°ºó£©¡±Q15+Q16+Q17+Q18+Q21+Q22+Q23+Q24+Q25+Q26+Q28+Q29+Q30+Q31+Q33+Q34+Q35+Q36+Q37+Q38+Q39+Q41+Q42+Q43+Q44+Q45+Q46+Q47+Q48+Q49+Q50+Q51   »òÕß  Q14+Q19+Q27+Q32+Q36+Q37+Q38+Q39+Q40+Q50+Q51
+            decimal deSQSJSH = decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÏîÄ¿ÈË¹¤·Ñ±í", "my:rengongfeiheji", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "·Ö°ü·Ñ", "my:fenbaoshuihouheji", "my:riqi", strYearMonth));
+            deSQSJSH += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "²ÄÁÏ·Ñ", "my:cailiaofei-sh", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "»úĞµÉè±¸×âÁŞ·Ñ", "my:jixiezulinshuihouheji", "my:riqi", strYearMonth));
+            deSQSJSH += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÁÙÊ±ÉèÊ©·Ñ", "my:linshisheshi-sh", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "°²È«´ëÊ©·Ñ", "my:anquancuoshi-sh", "my:riqi", strYearMonth));
+            deSQSJSH += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "Ë®µç·Ñ", "my:shuidianfei-sh", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû¹¤³Ì·Ñ", "my:qitagognchengfei-sh", "my:riqi", strYearMonth));
+            deSQSJSH += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËû·Ñ", "my:qitafeiheji-sh", "my:riqi", strYearMonth)) + decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "¶¯Ç¨·Ñ", "my:dongqianfei-sh", "my:riqi", strYearMonth));
+            deSQSJSH += decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ÆäËûÈÃÀûÏî", "my:ranglichengben-sh", "my:riqi", strYearMonth));
             LB_XiangMuCurrentMonthShiJiFaShengChengBenShiJiChengBenAfterTaxAmount.Text = deSQSJSH.ToString();
 
-            //å½“æœˆå®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨åï¼‰å³ï¼š Q52 çš„æ¯æœˆç´¯åŠ 
-            decimal deSQCBSJHJ = decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "é¡¹ç›®äººå·¥è´¹è¡¨", "my:rengongfeiheji")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åˆ†åŒ…è´¹", "my:fenbaoshuihouheji"));
-            deSQCBSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ææ–™è´¹", "my:cailiaofei-sh")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "æœºæ¢°è®¾å¤‡ç§Ÿèµè´¹", "my:jixiezulinshuihouheji"));
-            deSQCBSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ä¸´æ—¶è®¾æ–½è´¹", "my:linshisheshi-sh")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å®‰å…¨æªæ–½è´¹", "my:anquancuoshi-sh"));
-            deSQCBSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "æ°´ç”µè´¹", "my:shuidianfei-sh")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–å·¥ç¨‹è´¹", "my:qitagognchengfei-sh"));
-            deSQCBSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è´¹", "my:qitafeiheji-sh")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "åŠ¨è¿è´¹", "my:dongqianfei-sh"));
-            deSQCBSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "å…¶ä»–è®©åˆ©é¡¹", "my:ranglichengben-sh"));
+            //µ±ÔÂÊµ¼Ê·¢Éú³É±¾£¨Ë°ºó£©¼´£º Q52 µÄÃ¿ÔÂÀÛ¼Ó
+            decimal deSQCBSJHJ = decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÏîÄ¿ÈË¹¤·Ñ±í", "my:rengongfeiheji")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "·Ö°ü·Ñ", "my:fenbaoshuihouheji"));
+            deSQCBSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "²ÄÁÏ·Ñ", "my:cailiaofei-sh")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "»úĞµÉè±¸×âÁŞ·Ñ", "my:jixiezulinshuihouheji"));
+            deSQCBSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÁÙÊ±ÉèÊ©·Ñ", "my:linshisheshi-sh")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "°²È«´ëÊ©·Ñ", "my:anquancuoshi-sh"));
+            deSQCBSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "Ë®µç·Ñ", "my:shuidianfei-sh")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû¹¤³Ì·Ñ", "my:qitagognchengfei-sh"));
+            deSQCBSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËû·Ñ", "my:qitafeiheji-sh")) + decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "¶¯Ç¨·Ñ", "my:dongqianfei-sh"));
+            deSQCBSJHJ += decimal.Parse(GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "ÆäËûÈÃÀûÏî", "my:ranglichengben-sh"));
             LB_XiangMuCurrentMonthShiJiFaShengChengBenShiJiChengBenSumAfterTaxAmount.Text = deSQCBSJHJ.ToString();
 
-            //ç¨é‡‘/ç¨å‰é‡‘é¢ å³ï¼šO52/M52
+            //Ë°½ğ/Ë°Ç°½ğ¶î ¼´£ºO52/M52
             try
             {
                 LB_XiangMuCurrentMonthShiJiFaShengChengBenShiJiChengBenTaxRate.Text = (decimal.Parse(LB_XiangMuCurrentMonthShiJiFaShengChengBenTaxAmount.Text) / decimal.Parse(LB_XiangMuCurrentMonthShiJiFaShengChengBenShiJiChengBenAmount.Text)).ToString("f2");
@@ -1108,26 +1108,26 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
                 LB_XiangMuCurrentMonthShiJiFaShengChengBenShiJiChengBenTaxRate.Text = "0";
             }
 
-            //åˆ©æ¶¦ï¼ˆæ€»æ”¶å…¥-ç´¯è®¡å®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ ï¼‰ï¼‰,å³H12-N52
+            //ÀûÈó£¨×ÜÊÕÈë-ÀÛ¼ÆÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç° £©£©,¼´H12-N52
             LB_XiangMuCurrentMonthShiJiFaShengProfitAmount.Text = (decimal.Parse(LB_SecondYiJiHeTongYiShuanJiaZongShouRuHeJi.Text) - decimal.Parse(LB_XiangMuMiYueShiJiFaShengChengBenShiJiChengBenSumAmount.Text)).ToString();
 
-            //é”€é¡¹ç¨é¢=âˆ‘å®é™…ç»“ç®—é¢*ç¨ç‡,å³ï¼šæ¥è‡ªè¡¨å•â€œ   è¿›åº¦æ¬¾æƒ…å†µè¡¨â€â€œç¨é‡‘â€â€œåˆè®¡â€çš„å®é™…æ€»ç¨é¢,å³è¡¨å•: æ§ä»¶â€œxiaoxiangshuijinhejiâ€        
-            LB_XiangMuCurrentMonthShiJiFaShengProfitXiaoXiangTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "è¿›åº¦æ”¶æ¬¾ç»“ç®—æƒ…å†µè¡¨", "my:xiaoxiangshuijinheji", "my:riqi", strYearMonth);
+            //ÏúÏîË°¶î=¡ÆÊµ¼Ê½áËã¶î*Ë°ÂÊ,¼´£ºÀ´×Ô±íµ¥¡°   ½ø¶È¿îÇé¿ö±í¡±¡°Ë°½ğ¡±¡°ºÏ¼Æ¡±µÄÊµ¼Ê×ÜË°¶î,¼´±íµ¥: ¿Ø¼ş¡°xiaoxiangshuijinheji¡±        
+            LB_XiangMuCurrentMonthShiJiFaShengProfitXiaoXiangTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "½ø¶ÈÊÕ¿î½áËãÇé¿ö±í", "my:xiaoxiangshuijinheji", "my:riqi", strYearMonth);
 
-            //è¿›é¡¹ç¨é¢ï¼šæ¥è‡ªæ‰€æœ‰æˆæœ¬é¡¹è¡¨å•å¡«å†™çš„å®é™…æ€»ç¨é¢,å³:P52
+            //½øÏîË°¶î£ºÀ´×ÔËùÓĞ³É±¾Ïî±íµ¥ÌîĞ´µÄÊµ¼Ê×ÜË°¶î,¼´:P52
             LB_XiangMuCurrentMonthShiJiFaShengProfitJingXiangTaxAmount.Text = LB_XiangMuCurrentMonthShiJiFaShengChengBenSumTaxAmount.Text;
 
-            //ç¨é‡‘é™„åŠ =ç¨é‡‘*12%   å³ï¼š M56 * 12 %
+            //Ë°½ğ¸½¼Ó=Ë°½ğ*12%   ¼´£º M56 * 12 %
             LB_XiangMuCurrentMonthShiJiFaShengProfitFuJiaTaxAmount.Text = ((decimal.Parse(LB_XiangMuCurrentMonthShiJiFaShengProfitJingXiangTaxAmount.Text) * 12) / 100).ToString();
 
-            //è¡¨å•ï¼šâ€œé¡¹ç›®ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨â€ä¸­â€œé‡‘é¢ï¼ˆä¸å«ç¨ï¼‰â€å¯¹åº”æœ¬è¡ŒåŒåè¡Œå•å…ƒæ ¼çš„æ•°æ®
-            LB_XiangMuYiCiFenLiBiaoMaoLiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:EAD", "my:riqi", strYearMonth);
+            //±íµ¥£º¡°ÏîÄ¿Ò»´Î±ê¼Û·ÖÀë±í¡±ÖĞ¡°½ğ¶î£¨²»º¬Ë°£©¡±¶ÔÓ¦±¾ĞĞÍ¬ÃûĞĞµ¥Ôª¸ñµÄÊı¾İ
+            LB_XiangMuYiCiFenLiBiaoMaoLiAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:EAD", "my:riqi", strYearMonth);
 
-            LB_XiangMuYiCiFenLiBiaoShuiJingAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:field91", "my:riqi", strYearMonth);
-            LB_XiangMuYiCiFenLiBiaoChengBenJiaShuiJingAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:GDF", "my:riqi", strYearMonth);
-            LB_XiangMuYiCiFenLiBiaoYiJiProfitAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸€æ¬¡æ ‡ä»·åˆ†ç¦»è¡¨", "my:HAG", "my:riqi", strYearMonth);
+            LB_XiangMuYiCiFenLiBiaoShuiJingAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:field91", "my:riqi", strYearMonth);
+            LB_XiangMuYiCiFenLiBiaoChengBenJiaShuiJingAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:GDF", "my:riqi", strYearMonth);
+            LB_XiangMuYiCiFenLiBiaoYiJiProfitAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "Ò»´Î±ê¼Û·ÖÀë±í", "my:HAG", "my:riqi", strYearMonth);
 
-            //â€œé¡¹ç›®ç®¡ç†â€æ¨¡å—â€œé¡¹ç›®ç«‹é¡¹â€ç•Œé¢â€â€œé¡¹ç›®æ€»é¢„ç®—ï¼š
+            //¡°ÏîÄ¿¹ÜÀí¡±Ä£¿é¡°ÏîÄ¿Á¢Ïî¡±½çÃæ¡±¡°ÏîÄ¿×ÜÔ¤Ëã£º
             LB_XiangMuTotalBudget.Text = ShareClass.GetProject(strProjectID).Budget.ToString();
 
             try
@@ -1149,13 +1149,13 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
 
             LB_XiangMuTotalAfterTaxAmount.Text = (decimal.Parse(LB_XiangMuTotalBudget.Text) - decimal.Parse(LB_XiangMuTotalTaxAmount.Text)).ToString();
 
-            //é”€é¡¹ç¨é¢=âˆ‘å®é™…ç»“ç®—é¢*ç¨ç‡,å³ï¼šæ¥è‡ªè¡¨å•â€œ è¿›åº¦æ¬¾æƒ…å†µè¡¨â€â€œç¨é‡‘â€â€œåˆè®¡â€çš„å®é™…æ€»ç¨é¢,å³è¡¨å•: æ§ä»¶â€œxiaoxiangshuijinhejiâ€
-            LB_XiangMuCurrentMonthShiJiFaShengProfitSaleTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "è¿›åº¦æ”¶æ¬¾ç»“ç®—æƒ…å†µè¡¨", "my:xiaoxiangshuijinheji", "my:riqi", strYearMonth);
+            //ÏúÏîË°¶î=¡ÆÊµ¼Ê½áËã¶î*Ë°ÂÊ,¼´£ºÀ´×Ô±íµ¥¡° ½ø¶È¿îÇé¿ö±í¡±¡°Ë°½ğ¡±¡°ºÏ¼Æ¡±µÄÊµ¼Ê×ÜË°¶î,¼´±íµ¥: ¿Ø¼ş¡°xiaoxiangshuijinheji¡±
+            LB_XiangMuCurrentMonthShiJiFaShengProfitSaleTaxAmount.Text = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "½ø¶ÈÊÕ¿î½áËãÇé¿ö±í", "my:xiaoxiangshuijinheji", "my:riqi", strYearMonth);
 
             try
             {
-                //ç»¼åˆç¨è´Ÿ=(æ”¶å…¥ç±»é”€é¡¹ç¨æ€»é¢âˆ’æ”¯å‡ºç±»è¿›é¡¹ç¨æ€»é¢)/ï¼ˆä¸å«ç¨å®é™…æ”¶å…¥ï¼‰  å³ï¼š(M54-M55)/ï¼ˆâ€œè¿›åº¦æ¬¾æƒ…å†µè¡¨â€â€œå¼€ç¥¨é‡‘é¢â€â€œåˆè®¡â€å³ï¼šæ§ä»¶â€œkpjehejiâ€çš„æ•°æ®ï¼‰
-                LB_XiangMuTotalSummaryTaxAmount.Text = ((decimal.Parse(LB_XiangMuCurrentMonthShiJiFaShengProfitSaleTaxAmount.Text) - decimal.Parse(LB_XiangMuCurrentMonthShiJiFaShengProfitXiaoXiangTaxAmount.Text)) / decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "è¿›åº¦æ”¶æ¬¾ç»“ç®—æƒ…å†µè¡¨", "my:kpjeheji", "my:riqi", strYearMonth))).ToString();
+                //×ÛºÏË°¸º=(ÊÕÈëÀàÏúÏîË°×Ü¶î?Ö§³öÀà½øÏîË°×Ü¶î)/£¨²»º¬Ë°Êµ¼ÊÊÕÈë£©  ¼´£º(M54-M55)/£¨¡°½ø¶È¿îÇé¿ö±í¡±¡°¿ªÆ±½ğ¶î¡±¡°ºÏ¼Æ¡±¼´£º¿Ø¼ş¡°kpjeheji¡±µÄÊı¾İ£©
+                LB_XiangMuTotalSummaryTaxAmount.Text = ((decimal.Parse(LB_XiangMuCurrentMonthShiJiFaShengProfitSaleTaxAmount.Text) - decimal.Parse(LB_XiangMuCurrentMonthShiJiFaShengProfitXiaoXiangTaxAmount.Text)) / decimal.Parse(GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "½ø¶ÈÊÕ¿î½áËãÇé¿ö±í", "my:kpjeheji", "my:riqi", strYearMonth))).ToString();
             }
             catch
             {
@@ -1163,27 +1163,27 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
             }
 
 
-            //----------------------------ç¬¬äºŒä»½æŠ¥è¡¨------------------------------------
+            //----------------------------µÚ¶ş·İ±¨±í------------------------------------
             LB_ProjectCode2.Text = LB_ProjectCode.Text;
             LB_ProjectName2.Text = LB_ProjectName.Text;
 
-            //â€œé¡¹ç›®æˆæœ¬åˆ†æåŠåŠ¨æ€ç®¡ç†è¡¨â€â€œé¢„è®¡æ€»æ”¶å…¥åˆè®¡â€è¡Œï¼Œâ€œåˆåŒé¢„ç®—ä»·ï¼ˆäºŒæ¬¡ï¼‰â€åˆ—çš„å•å…ƒæ ¼æ•°æ®ï¼Œå³ï¼šH12
+            //¡°ÏîÄ¿³É±¾·ÖÎö¼°¶¯Ì¬¹ÜÀí±í¡±¡°Ô¤¼Æ×ÜÊÕÈëºÏ¼Æ¡±ĞĞ£¬¡°ºÏÍ¬Ô¤Ëã¼Û£¨¶ş´Î£©¡±ÁĞµÄµ¥Ôª¸ñÊı¾İ£¬¼´£ºH12
             LB_XiangMuHeTongYuShuanJiaErCiAmount.Text = LB_SecondYiJiHeTongYiShuanJiaZongShouRuHeJi.Text;
 
 
-            //â€œé¡¹ç›®æˆæœ¬åˆ†æåŠåŠ¨æ€ç®¡ç†è¡¨â€â€œç›®æ ‡æˆæœ¬ï¼ˆäºŒæ¬¡ï¼‰â€åˆ—â€œæ€»æˆæœ¬â€è¡Œå³ï¼šI52
+            //¡°ÏîÄ¿³É±¾·ÖÎö¼°¶¯Ì¬¹ÜÀí±í¡±¡°Ä¿±ê³É±¾£¨¶ş´Î£©¡±ÁĞ¡°×Ü³É±¾¡±ĞĞ¼´£ºI52
             LB_XiangMuMuBiaoChengBenErCiAmount.Text = LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZongChengBenAmount.Text;
 
-            //â€œé¡¹ç›®æˆæœ¬åˆ†æåŠåŠ¨æ€ç®¡ç†è¡¨â€â€œç´¯è®¡å®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ ï¼‰â€åˆ—ï¼Œâ€œæ€»æˆæœ¬â€è¡Œçš„å•å…ƒæ ¼æ•°æ®ï¼Œå³ï¼šN52
+            //¡°ÏîÄ¿³É±¾·ÖÎö¼°¶¯Ì¬¹ÜÀí±í¡±¡°ÀÛ¼ÆÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç° £©¡±ÁĞ£¬¡°×Ü³É±¾¡±ĞĞµÄµ¥Ôª¸ñÊı¾İ£¬¼´£ºN52
             LB_XiangMuLieJiShiJiFaShengChengBenAmount.Text = LB_XiangMuMiYueShiJiFaShengChengBenShiJiChengBenSumAmount.Text;
 
-            //(â€œé¡¹ç›®æˆæœ¬åˆ†æåŠåŠ¨æ€ç®¡ç†è¡¨â€â€œç´¯è®¡å®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ ï¼‰â€åˆ—ï¼Œâ€œæ€»æˆæœ¬â€è¡Œçš„å•å…ƒæ ¼æ•°æ®ï¼Œå³ï¼šN52)+(â€œæ€»æ”¶å…¥â€å³æœ¬è¡¨B4-è¡¨å•"è¿›åº¦æ¬¾æƒ…å†µè¡¨"â€œç”³è¯·é‡‘é¢â€åˆ—â€œåˆè®¡â€è¡Œæ•°å€¼)*(1-å®¡å‡ç‡ï¼ˆäºŒæ¬¡ï¼‰ï¼šâ€œé¡¹ç›®æˆæœ¬åˆ†æåŠåŠ¨æ€ç®¡ç†è¡¨â€L11)
+            //(¡°ÏîÄ¿³É±¾·ÖÎö¼°¶¯Ì¬¹ÜÀí±í¡±¡°ÀÛ¼ÆÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç° £©¡±ÁĞ£¬¡°×Ü³É±¾¡±ĞĞµÄµ¥Ôª¸ñÊı¾İ£¬¼´£ºN52)+(¡°×ÜÊÕÈë¡±¼´±¾±íB4-±íµ¥"½ø¶È¿îÇé¿ö±í"¡°ÉêÇë½ğ¶î¡±ÁĞ¡°ºÏ¼Æ¡±ĞĞÊıÖµ)*(1-Éó¼õÂÊ£¨¶ş´Î£©£º¡°ÏîÄ¿³É±¾·ÖÎö¼°¶¯Ì¬¹ÜÀí±í¡±L11)
             LB_XiangMuYiJiFaShengZongChengBenAmount.Text = ((decimal.Parse(LB_XiangMuMiYueShiJiFaShengChengBenShiJiChengBenSumAmount.Text) + decimal.Parse(LB_XiangMuHeTongYuShuanJiaErCiAmount.Text)) * (1 - decimal.Parse(LB_XiangMuECiBiaoJiaFenLiBiaoBYiJiShenJianLu.Text))).ToString("f6");
 
 
             try
             {
-                //ï¼ˆâ€œè¿›åº¦â€*â€œæ€»æ”¶å…¥ï¼ˆé¢„ç®—ï¼‰â€ï¼‰å³æœ¬è¡¨ E5/B5*B4
+                //£¨¡°½ø¶È¡±*¡°×ÜÊÕÈë£¨Ô¤Ëã£©¡±£©¼´±¾±í E5/B5*B4
                 LB_XiangMuHeTongJingDuShengYuZongShouRuAmount.Text = ((decimal.Parse(LB_XiangMuLieJiShiJiFaShengChengBenAmount.Text) / decimal.Parse(LB_XiangMuMuBiaoChengBenErCiAmount.Text)) * (decimal.Parse(LB_XiangMuHeTongYuShuanJiaErCiAmount.Text))).ToString("f6");
             }
             catch
@@ -1191,7 +1191,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
                 LB_XiangMuHeTongJingDuShengYuZongShouRuAmount.Text = "0";
             }
 
-            //ä»é¡¹ç›®ç®¡ç†æ¨¡å—æœ¬é¡¹ç›®â€œé¡¹ç›®ç«‹é¡¹â€ç•Œé¡µé¢çš„â€œåŒ…å¹²æ€»é¢ï¼šâ€å–æ•°
+            //´ÓÏîÄ¿¹ÜÀíÄ£¿é±¾ÏîÄ¿¡°ÏîÄ¿Á¢Ïî¡±½çÒ³ÃæµÄ¡°°ü¸É×Ü¶î£º¡±È¡Êı
             try
             {
                 LB_XiangMuYiJiFaShengBaoGuanZongEAmount.Text = GetWZProject(strProjectID).BaoGuanZongE.ToString("f6");
@@ -1201,7 +1201,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
                 LB_XiangMuYiJiFaShengBaoGuanZongEAmount.Text = "0";
             }
 
-            //æˆæœ¬å®é™…å€¼/é¡¹ç›®æ€»æˆæœ¬ï¼ˆæ˜¾ç¤ºä¸ºç™¾åˆ†æ¯”å½¢å¼ï¼‰ï¼šï¼ˆå®é™…ï¼šæˆæœ¬ï¼‰/ï¼ˆé¢„ç®—ï¼šæˆæœ¬ï¼‰  å³æœ¬è¡¨ï¼šE5/B5*100%
+            //³É±¾Êµ¼ÊÖµ/ÏîÄ¿×Ü³É±¾£¨ÏÔÊ¾Îª°Ù·Ö±ÈĞÎÊ½£©£º£¨Êµ¼Ê£º³É±¾£©/£¨Ô¤Ëã£º³É±¾£©  ¼´±¾±í£ºE5/B5*100%
             try
             {
                 LB_XiangMuYiJiFaShengJingDuAmount.Text = ((decimal.Parse(LB_XiangMuYiJiFaShengZongChengBenAmount.Text) / decimal.Parse(LB_XiangMuMuBiaoChengBenErCiAmount.Text))).ToString("f6");
@@ -1213,7 +1213,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
 
             try
             {
-                //å½“æœˆå®é™…æ”¶å…¥-å½“æœˆå®é™…æˆæœ¬ï¼šï¼ˆï¼ˆâ€œè¿›åº¦â€*â€œæ€»æ”¶å…¥ï¼ˆé¢„ç®—ï¼‰â€ï¼‰-ï¼ˆå®é™…ï¼šæˆæœ¬ï¼‰ï¼‰ å³æœ¬è¡¨ï¼šB9*B4-E5
+                //µ±ÔÂÊµ¼ÊÊÕÈë-µ±ÔÂÊµ¼Ê³É±¾£º£¨£¨¡°½ø¶È¡±*¡°×ÜÊÕÈë£¨Ô¤Ëã£©¡±£©-£¨Êµ¼Ê£º³É±¾£©£© ¼´±¾±í£ºB9*B4-E5
                 LB_XiangMuYiJiFaShengLiRenMaoLiAmount.Text = ((decimal.Parse(LB_XiangMuYiJiFaShengJingDuAmount.Text) / decimal.Parse(LB_XiangMuMuBiaoChengBenErCiAmount.Text)) - decimal.Parse(LB_XiangMuLieJiShiJiFaShengChengBenAmount.Text)).ToString("f6");
             }
             catch
@@ -1222,10 +1222,10 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
             }
 
 
-            //å¥–é‡‘åŒ…å¹²æ€»é¢æœˆåº¦å¥–é‡‘é¢æ˜ç»†è¡¨
+            //½±½ğ°ü¸É×Ü¶îÔÂ¶È½±½ğ¶îÃ÷Ï¸±í
             SaveProjectDetailedListOfMonthlyBonusAmount(strProjectID, strYearMonth);
 
-            //é¡¹ç›®æˆæœ¬æ”¶å…¥åˆ†ææ€»å›¾
+            //ÏîÄ¿³É±¾ÊÕÈë·ÖÎö×ÜÍ¼
             SaveProjectCostIncomeAnalysisGeneralChart(strProjectID, strYearMonth);
         }
         catch (Exception err)
@@ -1235,7 +1235,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         }
     }
 
-    //å¥–é‡‘åŒ…å¹²æ€»é¢æœˆåº¦å¥–é‡‘é¢æ˜ç»†è¡¨
+    //½±½ğ°ü¸É×Ü¶îÔÂ¶È½±½ğ¶îÃ÷Ï¸±í
     protected void SaveProjectDetailedListOfMonthlyBonusAmount(string strProjectID, string strYearMonth)
     {
         string strHQL;
@@ -1249,7 +1249,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         string strProfit = LB_XiangMuYiJiFaShengLiRenMaoLiAmount.Text;
 
         string strClearing;
-        string strdinganbiaoshangchuan = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ç»“ç®—å›æ¬¾æƒ…å†µè®¤å®šè¡¨", "my:dinganbiaoshangchuan", "my:riqi", strYearMonth);
+        string strdinganbiaoshangchuan = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "½áËã»Ø¿îÇé¿öÈÏ¶¨±í", "my:dinganbiaoshangchuan", "my:riqi", strYearMonth);
         if (strdinganbiaoshangchuan.Trim() == "0")
         {
             strClearing = "10%";
@@ -1259,8 +1259,8 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
             strClearing = "0%";
         }
 
-        string strReturnMoney = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "è¿›åº¦æ”¶æ¬¾ç»“ç®—æƒ…å†µè¡¨", "my:shoukuanleijidefenzhi", "my:riqi", strYearMonth);
-        string strQHSE = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "ä¸“ä¸šç®¡ç†è€ƒæ ¸å®¡æ‰¹è¡¨", "my:jiajianfenzhi", "my:riqi", strYearMonth);
+        string strReturnMoney = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "½ø¶ÈÊÕ¿î½áËãÇé¿ö±í", "my:shoukuanleijidefenzhi", "my:riqi", strYearMonth);
+        string strQHSE = GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(strProjectID, "×¨Òµ¹ÜÀí¿¼ºËÉóÅú±í", "my:jiajianfenzhi", "my:riqi", strYearMonth);
         string strProgress = (decimal.Parse(LB_XiangMuYiJiFaShengJingDuAmount.Text) * 80 / 100).ToString();
 
         strHQL = "Insert Into T_ProjectDetailedListOfMonthlyBonusAmount(ProjectID,YearNumber,MonthNumber,Profit,Clearing,ReturnMoney,QHSE,Progress)";
@@ -1285,7 +1285,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         }
     }
 
-    //é¡¹ç›®æˆæœ¬æ”¶å…¥åˆ†ææ€»å›¾
+    //ÏîÄ¿³É±¾ÊÕÈë·ÖÎö×ÜÍ¼
     protected void SaveProjectCostIncomeAnalysisGeneralChart(string strProjectID, string strYearMonth)
     {
         string strHQL;
@@ -1299,7 +1299,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         string strCurrentMonthTotalCost = LB_XiangMuErChiBiaoJiaFenLiBiaoZhiJieZongChengBenAfterTaxAmount.Text;
         string strCumulativeActualTaxCost = LB_XiangMuMiYueShiJiFaShengChengBenShiJiChengBenSumAmount.Text;
         string strCumulativeActualAfterTaxCost = LB_XiangMuCurrentMonthShiJiFaShengChengBenShiJiChengBenSumAfterTaxAmount.Text;
-        string strKPJEHeJi = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "è¿›åº¦æ”¶æ¬¾ç»“ç®—æƒ…å†µè¡¨", "my:kpjeheji");
+        string strKPJEHeJi = GetWorkFlowColumnSumData(strProjectID, strYearMonth, "my:riqi", "½ø¶ÈÊÕ¿î½áËãÇé¿ö±í", "my:kpjeheji");
 
         strHQL = "Insert Into T_ProjectCostIncomeAnalysisGeneralChart(ProjectID,YearNumber,MonthNumber,CurrentMonthTotalCost,CumulativeActualTaxCost,CumulativeActualAfterTaxCost,AccumulationSettlement)";
         strHQL += " values(" + strProjectID + "," + strYearNumber + "," + strMonthNumber + "," + strCurrentMonthTotalCost + ",'" + strCumulativeActualTaxCost + "'," + strCumulativeActualAfterTaxCost + "," + strKPJEHeJi + ")";
@@ -1321,23 +1321,23 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         string strChartTitle = "ReportView";
         IFrame_Chart1.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Column4&ChartType=Column&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strHQL);
 
-        //ShareClass.CreateAnalystFourColumnChart(strHQL, Chart1, SeriesChartType.Column, strChartTitle, "MonthNumber", "CurrentMonthTotalCost", "CumulativeActualTaxCost", "CumulativeActualAfterTaxCost", "AccumulationSettlement", "Default", "å½“æœˆäºŒæ¬¡ç›®æ ‡æˆæœ¬ï¼ˆç¨åï¼‰", "ç´¯è®¡å®é™…å‘ç”Ÿæˆæœ¬ï¼ˆç¨å‰ï¼‰", "å½“æœˆå®é™…æˆæœ¬ï¼ˆç¨åï¼‰ç´¯è®¡", "ç´¯è®¡ç»“ç®—");
+        //ShareClass.CreateAnalystFourColumnChart(strHQL, Chart1, SeriesChartType.Column, strChartTitle, "MonthNumber", "CurrentMonthTotalCost", "CumulativeActualTaxCost", "CumulativeActualAfterTaxCost", "AccumulationSettlement", "Default", "µ±ÔÂ¶ş´ÎÄ¿±ê³É±¾£¨Ë°ºó£©", "ÀÛ¼ÆÊµ¼Ê·¢Éú³É±¾£¨Ë°Ç°£©", "µ±ÔÂÊµ¼Ê³É±¾£¨Ë°ºó£©ÀÛ¼Æ", "ÀÛ¼Æ½áËã");
         //Chart1.Visible = true;
     }
 
 
-    //å–æµç¨‹è¡¨å•ç›¸åº”æ ¼å­æœ€æ–°æ—¥æœŸçš„è´¹ç”¨
+    //È¡Á÷³Ì±íµ¥ÏàÓ¦¸ñ×Ó×îĞÂÈÕÆÚµÄ·ÑÓÃ
     private string GetWorkFlowColumnDataByMaxFieldValue(string strProjectID, string strWorkFlowTemplateName, string strFieldName, string strSortFieldName, string strYearMonth)
     {
         string strHQL;
 
         strHQL = string.Format(@"Select FieldValue From T_WorkFlowFormData Where TemplateName = '{0}' 
-                 and FieldName = '{1}' and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'é¡¹ç›®' 
+                 and FieldName = '{1}' and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'Project' 
                  and RelatedID = {2} and WLID In (Select WLID From T_WorkFlowFormData Where TemplateName = '{0}' 
-                 and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'é¡¹ç›®' and RelatedID = {2})
+                 and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'Project' and RelatedID = {2})
                  and FieldName = '{3}' and FieldValue in (Select Max(FieldValue) From T_WorkFlowFormData 
                  Where TemplateName = '{0}' and FieldName = '{3}' and cast(substring(to_char(FieldValue::timestamp,'yyyymmdd'),1,6) as int) <= cast('{4}' as int)) 
-                 and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'é¡¹ç›®' 
+                 and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'Project' 
                  and RelatedID = {2})))", strWorkFlowTemplateName, strFieldName, strProjectID, strSortFieldName, strYearMonth);
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowFormData");
@@ -1359,13 +1359,13 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
     }
 
 
-    //å–æµç¨‹è¡¨å•ç›¸åº”æ ¼å­çš„è´¹ç”¨çš„æ±‡æ€»
+    //È¡Á÷³Ì±íµ¥ÏàÓ¦¸ñ×ÓµÄ·ÑÓÃµÄ»ã×Ü
     private string GetWorkFlowColumnSumData(string strProjectID, string strYearMonth, string strSortFieldName, string strWorkFlowTemplateName, string strFieldName)
     {
         string strHQL;
 
         strHQL = string.Format(@"Select COALESCE(sum(cast(FieldValue as decimal)),0) From T_WorkFlowFormData Where TemplateName = '{0}' 
-                 and FieldName = '{1}' and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'é¡¹ç›®' 
+                 and FieldName = '{1}' and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'Project' 
                  and RelatedID = {2} and WLID In (Select WLID From T_WorkFlowFormData Where TemplateName = '{0}' 
                  and FieldName = '{3}' and cast(substring(to_char(FieldValue::timestamp,'yyyymmdd'),1,6) as int) <= cast('{4}' as int)))", strWorkFlowTemplateName, strFieldName, strProjectID, strSortFieldName, strYearMonth);
 
@@ -1388,19 +1388,19 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
     }
    
 
-    //ä¾å­—æ®µæ’åºå–é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰çš„æµç¨‹è¡¨å•ç›¸åº”æ ¼å­çš„è´¹ç”¨
+    //ÒÀ×Ö¶ÎÅÅĞòÈ¡ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©µÄÁ÷³Ì±íµ¥ÏàÓ¦¸ñ×ÓµÄ·ÑÓÃ
     private string GetWorkFlowColumnLastestMonthDataByMaxFieldValue(string strProjectID, string strWorkFlowTemplateName, string strFieldName, string strSortFieldName, string strYearMonth)
     {
         string strHQL;
 
         strHQL = string.Format(@"Select FieldValue From T_WorkFlowFormData Where TemplateName = '{0}' 
-                 and FieldName = '{1}' and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'é¡¹ç›®' 
+                 and FieldName = '{1}' and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'Project' 
                  and RelatedID = {2} and WLID In (Select WLID From T_WorkFlowFormData Where TemplateName = '{0}' 
-                 and FieldName = '{3}' and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'é¡¹ç›®' and RelatedID = {2})
+                 and FieldName = '{3}' and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'Project' and RelatedID = {2})
                  and FieldValue in (Select Max(FieldValue) From T_WorkFlowFormData 
                  Where TemplateName = '{0}' and FieldName = '{3}' 
                  and cast(substring(to_char(FieldValue::timestamp,'yyyymmdd'),1,6) as int) <= cast('{4}' as int)) 
-                 and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'é¡¹ç›®' 
+                 and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'Project' 
                  and RelatedID = {2})))", strWorkFlowTemplateName, strFieldName, strProjectID, strSortFieldName, strYearMonth);
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowFormData");
@@ -1421,13 +1421,13 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         }
     }
 
-    //å–å½“æœˆçš„æµç¨‹è¡¨å•ç›¸åº”æ ¼å­çš„è´¹ç”¨
+    //È¡µ±ÔÂµÄÁ÷³Ì±íµ¥ÏàÓ¦¸ñ×ÓµÄ·ÑÓÃ
     private string GetWorkFlowColumnCurrentMonthDataByMaxFieldValue(string strProjectID, string strWorkFlowTemplateName, string strFieldName, string strSortFieldName, string strYearMonth)
     {
         string strHQL;
 
         strHQL = string.Format(@"Select FieldValue From T_WorkFlowFormData Where TemplateName = '{0}' 
-                 and FieldName = '{1}' and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'é¡¹ç›®' 
+                 and FieldName = '{1}' and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'Project' 
                  and RelatedID = {2} and WLID In (Select WLID From T_WorkFlowFormData Where TemplateName = '{0}' 
                  and FieldName = '{3}' and substring(to_char(FieldValue::timestamp,'yyyymmdd'),1,6) = '{4}'))", strWorkFlowTemplateName, strFieldName, strProjectID, strSortFieldName, strYearMonth);
 
@@ -1452,13 +1452,13 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         }
     }
 
-    //å–ä¸Šæœˆçš„æµç¨‹è¡¨å•ç›¸åº”æ ¼å­çš„è´¹ç”¨
+    //È¡ÉÏÔÂµÄÁ÷³Ì±íµ¥ÏàÓ¦¸ñ×ÓµÄ·ÑÓÃ
     private string GetWorkFlowColumnPriorMonthDataByMaxFieldValue(string strProjectID, string strWorkFlowTemplateName, string strFieldName, string strSortFieldName, string strYearMonth)
     {
         string strHQL;
 
         strHQL = string.Format(@"Select FieldValue From T_WorkFlowFormData Where TemplateName = '{0}' 
-                 and FieldName = '{1}' and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'é¡¹ç›®' 
+                 and FieldName = '{1}' and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'Project' 
                  and RelatedID = {2} and WLID In (Select WLID From T_WorkFlowFormData Where TemplateName = '{0}' 
                  and FieldName = '{3}' and substring(to_char(FieldValue::timestamp,'yyyymmdd'),1,6) = substring(to_char('{4}'::timestamp  - '1 month'::interval,'yyyymmdd'),1,6)))", strWorkFlowTemplateName, strFieldName, strProjectID, strSortFieldName, strYearMonth + "01");
 
@@ -1480,18 +1480,18 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         }
     }
 
-    //å–æµç¨‹è¡¨å•ç›¸åº”æ ¼å­æœ€æ–°æ—¥æœŸçš„ç¨ç‡æ•°æ®
+    //È¡Á÷³Ì±íµ¥ÏàÓ¦¸ñ×Ó×îĞÂÈÕÆÚµÄË°ÂÊÊı¾İ
     private string GetWorkFlowColumnTaxRateDataByMaxFieldValue(string strProjectID, string strWorkFlowTemplateName, string strFieldName, string strSortFieldName, string strYearMonth)
     {
         string strHQL;
 
         strHQL = string.Format(@"Select FieldValue From T_WorkFlowFormData Where TemplateName = '{0}' 
-                 and FieldName = '{1}' and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'é¡¹ç›®' 
+                 and FieldName = '{1}' and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'Project' 
                  and RelatedID = {2} and WLID In (Select WLID From T_WorkFlowFormData Where TemplateName = '{0}' 
-                 and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'é¡¹ç›®' and RelatedID = {2})
+                 and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'Project' and RelatedID = {2})
                  and FieldName = '{3}' and FieldValue in (Select Max(FieldValue) From T_WorkFlowFormData 
                  Where TemplateName = '{0}' and FieldName = '{3}' and cast(substring(to_char(FieldValue::timestamp,'yyyymmdd'),1,6) as int) <= cast('{4}' as int)) 
-                 and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'é¡¹ç›®' 
+                 and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'Project' 
                  and RelatedID = {2})))", strWorkFlowTemplateName, strFieldName, strProjectID, strSortFieldName, strYearMonth);
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowFormData");
@@ -1512,19 +1512,19 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         }
     }
 
-    //ä¾å­—æ®µæ’åºå–é€æœˆå„è¡¨ä¸­æœ€æ™šæœˆï¼ˆç¦»å½“å‰æ—¥æœŸæœ€è¿‘ï¼‰çš„æµç¨‹è¡¨å•ç›¸åº”æ ¼å­çš„ç¨ç‡æ•°æ®
+    //ÒÀ×Ö¶ÎÅÅĞòÈ¡ÖğÔÂ¸÷±íÖĞ×îÍíÔÂ£¨Àëµ±Ç°ÈÕÆÚ×î½ü£©µÄÁ÷³Ì±íµ¥ÏàÓ¦¸ñ×ÓµÄË°ÂÊÊı¾İ
     private string GetWorkFlowColumnTaxRateLastestMonthDataByMaxFieldValue(string strProjectID, string strWorkFlowTemplateName, string strFieldName, string strSortFieldName, string strYearMonth)
     {
         string strHQL;
 
         strHQL = string.Format(@"Select FieldValue From T_WorkFlowFormData Where TemplateName = '{0}' 
-                 and FieldName = '{1}' and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'é¡¹ç›®' 
+                 and FieldName = '{1}' and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'Project' 
                  and RelatedID = {2} and WLID In (Select WLID From T_WorkFlowFormData Where TemplateName = '{0}' 
-                 and FieldName = '{3}' and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'é¡¹ç›®' and RelatedID = {2})
+                 and FieldName = '{3}' and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'Project' and RelatedID = {2})
                  and FieldValue in (Select Max(FieldValue) From T_WorkFlowFormData 
                  Where TemplateName = '{0}' and FieldName = '{3}' 
                  and cast(substring(to_char(FieldValue::timestamp,'yyyymmdd'),1,6) as int) <= cast('{4}' as int)) 
-                 and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'é¡¹ç›®' 
+                 and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'Project' 
                  and RelatedID = {2})))", strWorkFlowTemplateName, strFieldName, strProjectID, strSortFieldName, strYearMonth);
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowFormData");
@@ -1545,13 +1545,13 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         }
     }
 
-    //å–å½“æœˆçš„æµç¨‹è¡¨å•ç›¸åº”æ ¼å­çš„ç¨ç‡æ•°æ®
+    //È¡µ±ÔÂµÄÁ÷³Ì±íµ¥ÏàÓ¦¸ñ×ÓµÄË°ÂÊÊı¾İ
     private string GetWorkFlowColumnTaxRateCurrentMonthDataByMaxFieldValue(string strProjectID, string strWorkFlowTemplateName, string strFieldName, string strSortFieldName, string strYearMonth)
     {
         string strHQL;
 
         strHQL = string.Format(@"Select FieldValue From T_WorkFlowFormData Where TemplateName = '{0}' 
-                 and FieldName = '{1}' and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'é¡¹ç›®' 
+                 and FieldName = '{1}' and WLID In (Select WLID From T_WorkFlow Where RelatedType = 'Project' 
                  and RelatedID = {2} and WLID In (Select WLID From T_WorkFlowFormData Where TemplateName = '{0}' 
                  and FieldName = '{3}' and substring(to_char(FieldValue::timestamp,'yyyymmdd'),1,6) = '{4}'))", strWorkFlowTemplateName, strFieldName, strProjectID, strSortFieldName, strYearMonth);
 
@@ -1574,7 +1574,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
     }
 
 
-    //å–å¾—é¡¹ç›®åˆåŒä¸»è¦å†…å®¹
+    //È¡µÃÏîÄ¿ºÏÍ¬Ö÷ÒªÄÚÈİ
     private string GetInitialConstractMainContent(string strProjectID)
     {
         string strHQL;
@@ -1591,7 +1591,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         }
     }
 
-    //å–å¾—é¡¹ç›®åˆåŒå¼‚å¸¸æè¿°
+    //È¡µÃÏîÄ¿ºÏÍ¬Òì³£ÃèÊö
     private string GetInitialConstractException(string strProjectID)
     {
         string strHQL;
@@ -1608,7 +1608,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         }
     }
 
-    //å–å¾—é¡¹ç›®ç¨å‰åˆåŒé¢
+    //È¡µÃÏîÄ¿Ë°Ç°ºÏÍ¬¶î
     private string GetInitialConstractAmountBeforTax(string strProjectID)
     {
         string strHQL;
@@ -1633,7 +1633,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         }
     }
 
-    //å–å¾—é¡¹ç›®ç¨ååˆåŒé¢
+    //È¡µÃÏîÄ¿Ë°ºóºÏÍ¬¶î
     private string GetInitialConstractAmountAfterTax(string strProjectID)
     {
         string strHQL;
@@ -1658,7 +1658,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         }
     }
 
-    //å–å¾—é¡¹ç›®åˆåŒçš„ç¨ç‡
+    //È¡µÃÏîÄ¿ºÏÍ¬µÄË°ÂÊ
     private string GetInitialConstractTaxRate(string strProjectID)
     {
         string strHQL;
@@ -1683,7 +1683,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         }
     }
 
-    //å–å¾—é¡¹ç›®åˆåŒçš„ç¨é‡‘
+    //È¡µÃÏîÄ¿ºÏÍ¬µÄË°½ğ
     private string GetInitialConstractTaxAmount(string strProjectID)
     {
         string strHQL;
@@ -1708,7 +1708,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         }
     }
 
-    //å–å¾—é¡¹ç›®å¢è¡¥åˆåŒç¨å‰åˆåŒé¢
+    //È¡µÃÏîÄ¿Ôö²¹ºÏÍ¬Ë°Ç°ºÏÍ¬¶î
     private string GetSupplementConstractAmountBeforTax(string strProjectID)
     {
         string strHQL;
@@ -1733,7 +1733,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         }
     }
 
-    //å–å¾—é¡¹ç›®å¢è¡¥ç¨ååˆåŒé¢
+    //È¡µÃÏîÄ¿Ôö²¹Ë°ºóºÏÍ¬¶î
     private string GetSupplementConstractAmountAfterTax(string strProjectID)
     {
         string strHQL;
@@ -1758,7 +1758,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         }
     }
 
-    //å–å¾—é¡¹ç›®å¢è¡¥åˆåŒçš„ç¨é‡‘
+    //È¡µÃÏîÄ¿Ôö²¹ºÏÍ¬µÄË°½ğ
     private string GetSupplementConstractTaxAmount(string strProjectID)
     {
         string strHQL;
@@ -1783,7 +1783,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         }
     }
 
-    //å–å¾—é¡¹ç›®å¢è¡¥åˆåŒå˜æ›´çš„çš„ç¨é‡‘
+    //È¡µÃÏîÄ¿Ôö²¹ºÏÍ¬±ä¸üµÄµÄË°½ğ
     private string GetSupplementConstractChangeTaxAmount(string strProjectID)
     {
         string strHQL;
@@ -1807,7 +1807,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         }
     }
 
-    //å–å¾—é¡¹ç›®åˆåŒå˜æ›´è®°å½•çš„åˆåŒé¢
+    //È¡µÃÏîÄ¿ºÏÍ¬±ä¸ü¼ÇÂ¼µÄºÏÍ¬¶î
     private string GetConstractAmountAfterChange(string strProjectID)
     {
         string strHQL;
@@ -1833,7 +1833,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
     }
 
 
-    //å–å¾—é¡¹ç›®åˆåŒæœ¬æœˆå˜æ›´é‡‘é¢æ±‡æ€»
+    //È¡µÃÏîÄ¿ºÏÍ¬±¾ÔÂ±ä¸ü½ğ¶î»ã×Ü
     private string GetConstractCurrentMonthAmountAfterChange(string strProjectID)
     {
         string strHQL;
@@ -1858,7 +1858,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         }
     }
 
-    //å–å¾—é¡¹ç›®åˆåŒä¸Šæœˆå˜æ›´é‡‘é¢æ±‡æ€»
+    //È¡µÃÏîÄ¿ºÏÍ¬ÉÏÔÂ±ä¸ü½ğ¶î»ã×Ü
     private string GetConstractPirorMonthAmountAfterChange(string strProjectID)
     {
         string strHQL;
@@ -1883,7 +1883,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         }
     }
 
-    //å–å¾—é¡¹ç›®æœ¬æœˆå¢è¡¥åˆåŒé¢æ€»é¢
+    //È¡µÃÏîÄ¿±¾ÔÂÔö²¹ºÏÍ¬¶î×Ü¶î
     private string GetConstractCurrentMonthSupplementAmountAfterTax(string strProjectID)
     {
         string strHQL;
@@ -1909,7 +1909,7 @@ public partial class TTProjectCostAnalyseAndActiveStatusReport : System.Web.UI.P
         }
     }
 
-    //å–å¾—é¡¹ç›®ä¸Šæœˆå¢è¡¥åˆåŒé¢æ€»é¢
+    //È¡µÃÏîÄ¿ÉÏÔÂÔö²¹ºÏÍ¬¶î×Ü¶î
     private string GetConstractPriorMonthSupplementAmountAfterTax(string strProjectID)
     {
         string strHQL;

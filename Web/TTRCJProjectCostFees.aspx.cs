@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,9 +9,9 @@ public partial class TTRCJProjectCostFees : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //æå–ç›´æ¥è´¹ç”¨æˆæœ¬é¡¹
+        //ÌáÈ¡Ö±½Ó·ÑÓÃ³É±¾Ïî
         string strUserCode = Session["UserCode"].ToString();
 
-        //æå–é—´æ¥è´¹ç”¨æˆæœ¬é¡¹ 
+        //ÌáÈ¡¼ä½Ó·ÑÓÃ³É±¾Ïî 
     }
 }

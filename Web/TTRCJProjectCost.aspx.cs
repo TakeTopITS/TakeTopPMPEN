@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -27,18 +27,18 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
         {
             try
             {
-                //è·å¾—åŸºå‡†ä¿¡æ¯ç±»å‹åˆ—è¡¨
+                //»ñµÃ»ù×¼ĞÅÏ¢ÀàĞÍÁĞ±í
                 RCJShareClass.InitPerformanceType(DDL_PerformanceType,this.lb_ShowMessage1);
                 DDL_PerformanceType.SelectedIndex = 0;
                 DDL_SubItem.Items.Add(" ");
                 GetAllSubItemList(ProjectId, DDL_PerformanceType.Text);
-                //æ±‡æ€»ç»©æ•ˆä¿¡æ¯
+                //»ã×Ü¼¨Ğ§ĞÅÏ¢
                 CalculateSummaryPerformance();
                 CalculateTotalCostPerformance();
-                //æ˜¾ç¤ºæ±‡æ€»ä¿¡æ¯
+                //ÏÔÊ¾»ã×ÜĞÅÏ¢
                 InitSummaryPerformanceInfo();
 
-                //è·å–åŸºå‡†ä¿¡æ¯è¡¨ä¿¡æ¯
+                //»ñÈ¡»ù×¼ĞÅÏ¢±íĞÅÏ¢
                 InitPerformanceBenchmar(DDL_PerformanceType.SelectedValue);
                 if(GridView1.Rows.Count > 0)
                     GridView1.SelectedIndex = 0;
@@ -47,7 +47,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
             }
             catch (Exception exp)
             {
-                lb_ShowMessage1.Text = "é”™è¯¯æç¤ºï¼šæ“ä½œå‡ºç°å¼‚å¸¸ï¼š " + exp.Message;
+                lb_ShowMessage1.Text = "´íÎóÌáÊ¾£º²Ù×÷³öÏÖÒì³££º " + exp.Message;
             }
         }
     }
@@ -112,7 +112,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
         }
         catch (Exception exp)
         {
-            lb_ShowMessage1.Text = "é”™è¯¯æç¤ºï¼šæŸ¥è¯¢æ“ä½œå‡ºç°å¼‚å¸¸ï¼š " + exp.Message;
+            lb_ShowMessage1.Text = "´íÎóÌáÊ¾£º²éÑ¯²Ù×÷³öÏÖÒì³££º " + exp.Message;
         }
     }
 
@@ -143,7 +143,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
         }
         catch (Exception exp)
         {
-            lb_ShowMessage1.Text = "é”™è¯¯æç¤ºï¼šæ“ä½œå‡ºç°å¼‚å¸¸ï¼š " + exp.Message;
+            lb_ShowMessage1.Text = "´íÎóÌáÊ¾£º²Ù×÷³öÏÖÒì³££º " + exp.Message;
         }
     }
 
@@ -158,7 +158,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
         }
         catch (Exception exp)
         {
-            lb_ShowMessage1.Text = "é”™è¯¯æç¤ºï¼šæ“ä½œå‡ºç°å¼‚å¸¸ï¼š " + exp.Message;
+            lb_ShowMessage1.Text = "´íÎóÌáÊ¾£º²Ù×÷³öÏÖÒì³££º " + exp.Message;
         }
     }
 
@@ -171,11 +171,11 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
 
         if (res.Tables["T_RCJProjectTotalSummaryPerformance"].Rows.Count == 0)
         {
-            lb_ShowMessage1.Text = "ç»“æœæç¤ºï¼šè¿˜æ²¡æœ‰é¡¹ç›®æ”¶æ”¯ç»©æ•ˆæ±‡æ€»ä¿¡æ¯å‡ºæ¥ï¼";
+            lb_ShowMessage1.Text = "½á¹ûÌáÊ¾£º»¹Ã»ÓĞÏîÄ¿ÊÕÖ§¼¨Ğ§»ã×ÜĞÅÏ¢³öÀ´£¡";
             return;
         }
 
-        //æŸ¥è¯¢åˆ°è®°å½•ï¼Œè¿›è¡Œæ˜¾ç¤º
+        //²éÑ¯µ½¼ÇÂ¼£¬½øĞĞÏÔÊ¾
         tbProjectNo.Text = ProjectId.ToString();
         tbProjectSTCV.Text = string.IsNullOrEmpty(res.Tables[0].Rows[0]["ProjectSTCV"].ToString())?"0.00":String.Format("{0:N2}", Convert.ToDouble( res.Tables[0].Rows[0]["ProjectSTCV"].ToString()));
         tbProjectBCWS.Text = string.IsNullOrEmpty(res.Tables[0].Rows[0]["ProjectBCWS"].ToString())?"0.00":String.Format("{0:N2}", Convert.ToDouble(res.Tables[0].Rows[0]["ProjectBCWS"].ToString()));
@@ -201,7 +201,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
         tbProjectSPI.Text = string.IsNullOrEmpty(res.Tables[0].Rows[0]["ProjectSPI"].ToString()) ? "0.00%" : Convert.ToDouble(res.Tables[0].Rows[0]["ProjectSPI"]).ToString("p2");
     }
 
-    //æŸ¥çœ‹ç»©æ•ˆæ˜ç»†
+    //²é¿´¼¨Ğ§Ã÷Ï¸
     protected void btnGetAllPerformanceList_Click(object sender, EventArgs e)
     {
         StringBuilder sb = new StringBuilder("TTRCJProjectSummaryPerformance.aspx?projectid=");
@@ -209,7 +209,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
         Response.Redirect(sb.ToString());
     }
 
-    //å½•å…¥åŸºå‡†ä¿¡æ¯
+    //Â¼Èë»ù×¼ĞÅÏ¢
     protected void LinkButton1_Click(object sender, EventArgs e)
     {
         Session["UserCode"] = UserCode; 
@@ -258,40 +258,40 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage1.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage1.Text = "é”™è¯¯æç¤ºï¼šæŸ¥è¯¢è¯¥å­é¡¹çš„ä»·æ ¼è°ƒæ•´ä¿¡æ¯åˆ—è¡¨å‡ºé”™ï¼š" + exp.Message;
+            lb_ShowMessage1.Text = "´íÎóÌáÊ¾£º²éÑ¯¸Ã×ÓÏîµÄ¼Û¸ñµ÷ÕûĞÅÏ¢ÁĞ±í³ö´í£º" + exp.Message;
             return;
         }
     }
 
-    //å¯¼å‡ºæˆæœ¬ç»©æ•ˆæ•°æ®åˆ°EXCELæ–‡ä»¶
+    //µ¼³ö³É±¾¼¨Ğ§Êı¾İµ½EXCELÎÄ¼ş
     protected void Button1_Click(object sender, EventArgs e)
     {
         try
         {
-            //æ ¹æ®å¯¼å‡ºæ¨¡æ¿ç”Ÿæˆä¸´æ—¶æ–‡ä»¶
+            //¸ù¾İµ¼³öÄ£°åÉú³ÉÁÙÊ±ÎÄ¼ş
             string filePath = Server.MapPath("~/Template/" + Guid.NewGuid().ToString() + ".xls");
-            File.Copy(Server.MapPath("~/Template/ç»©æ•ˆæ±‡æ€»æ•°æ®å¯¼å‡ºæ¨¡æ¿.xls"), filePath);
+            File.Copy(Server.MapPath("~/Template/¼¨Ğ§»ã×ÜÊı¾İµ¼³öÄ£°å.xls"), filePath);
 
-            //å¯¼å‡ºç»©æ•ˆåŸºå‡†æ•°æ®
-            ExportCostRecordToExcel(filePath, "ç»©æ•ˆæ±‡æ€»æ•°æ®.xls");
+            //µ¼³ö¼¨Ğ§»ù×¼Êı¾İ
+            ExportCostRecordToExcel(filePath, "¼¨Ğ§»ã×ÜÊı¾İ.xls");
 
-            //å¯¼å‡ºå®é™…å·¥ä½œé‡æ•°æ®
-            //ExportWorkRecordToExcel(filePath, "ç»©æ•ˆæ±‡æ€»æ•°æ®.xls");
+            //µ¼³öÊµ¼Ê¹¤×÷Á¿Êı¾İ
+            //ExportWorkRecordToExcel(filePath, "¼¨Ğ§»ã×ÜÊı¾İ.xls");
 
-            //æ–‡ä»¶ä¿å­˜åˆ°æœ¬åœ°
+            //ÎÄ¼ş±£´æµ½±¾µØ
             Response.ContentType = "application/ms-excel";
-            Response.AppendHeader("Content-Disposition", "attachment;filename=ç»©æ•ˆæ±‡æ€»æ•°æ®.xls");
+            Response.AppendHeader("Content-Disposition", "attachment;filename=¼¨Ğ§»ã×ÜÊı¾İ.xls");
             Response.BinaryWrite(File.ReadAllBytes(filePath));
 
             File.Delete(filePath);
 
             lb_ShowMessage1.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage1.Text = "æ“ä½œæç¤ºï¼š ç»©æ•ˆæ±‡æ€»æ•°æ®å¯¼å…¥åˆ°Excelæ–‡ä»¶æˆåŠŸ!";
+            lb_ShowMessage1.Text = "²Ù×÷ÌáÊ¾£º ¼¨Ğ§»ã×ÜÊı¾İµ¼Èëµ½ExcelÎÄ¼ş³É¹¦!";
         }
         catch (Exception exp)
         {
             lb_ShowMessage1.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage1.Text = "é”™è¯¯æç¤ºï¼šç»©æ•ˆæ±‡æ€»æ•°æ®å¯¼å…¥åˆ°Excelæ–‡ä»¶å‡ºé”™ï¼š" + exp.Message;
+            lb_ShowMessage1.Text = "´íÎóÌáÊ¾£º¼¨Ğ§»ã×ÜÊı¾İµ¼Èëµ½ExcelÎÄ¼ş³ö´í£º" + exp.Message;
             return;
         }
     }
@@ -300,7 +300,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
     { 
         try
         {
-            //æŸ¥è¯¢è·å–è®°å½•åˆ—è¡¨
+            //²éÑ¯»ñÈ¡¼ÇÂ¼ÁĞ±í
             RCJProjectCostPerformanceBenchmarBLL cpbBLL = new RCJProjectCostPerformanceBenchmarBLL();
             StringBuilder strSql = new StringBuilder("select * From  V_RCJProjectWorkDetails where projectid=");
             strSql.Append(ProjectId.ToString());
@@ -308,7 +308,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
 
             DataSet res = ShareClass.GetDataSetFromSqlNOOperateLog(strSql.ToString(), "V_RCJProjectWorkDetails"); ;
 
-            //å†™å…¥è®°å½•åˆ°æ–‡ä»¶ä¸­
+            //Ğ´Èë¼ÇÂ¼µ½ÎÄ¼şÖĞ
             string strCon = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + strMidFile + ";Extended Properties='Excel 8.0;HDR=YES;IMEX=0'";
             OleDbConnection ExcelConn = new OleDbConnection(strCon);
             using (ExcelConn)
@@ -317,7 +317,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
 
                 for (int i = 0; i < res.Tables[0].Rows.Count; i++)
                 {
-                    StringBuilder sbcom = new StringBuilder("insert into [å®é™…å·¥ä½œåˆ—è¡¨$] values('");
+                    StringBuilder sbcom = new StringBuilder("insert into [Êµ¼Ê¹¤×÷ÁĞ±í$] values('");
 
                     sbcom.Append(res.Tables[0].Rows[i]["TypeName"].ToString());
                     sbcom.Append("',");
@@ -333,7 +333,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
                     sbcom.Append("','");
                     sbcom.Append(res.Tables[0].Rows[i]["OperTime"].ToString());
                     sbcom.Append("','");
-                    sbcom.Append(res.Tables[0].Rows[i]["WorkConfirm"].ToString() == "0" ? "å¦" : "æ˜¯");
+                    sbcom.Append(res.Tables[0].Rows[i]["WorkConfirm"].ToString() == "0" ? "NO" : "YES");
                     sbcom.Append("','");
                     sbcom.Append(res.Tables[0].Rows[i]["Confirmer"].ToString());
                     sbcom.Append("','");
@@ -351,7 +351,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage1.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage1.Text = "é”™è¯¯æç¤ºï¼š ç»©æ•ˆå®é™…å·¥ä½œæ•°æ®å¯¼å…¥åˆ°Excelæ–‡ä»¶å¤±è´¥!" + exp.Message;
+            lb_ShowMessage1.Text = "´íÎóÌáÊ¾£º ¼¨Ğ§Êµ¼Ê¹¤×÷Êı¾İµ¼Èëµ½ExcelÎÄ¼şÊ§°Ü!" + exp.Message;
         }
     }
 
@@ -364,7 +364,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
     {
         try
         {
-            //æŸ¥è¯¢è·å–è®°å½•åˆ—è¡¨
+            //²éÑ¯»ñÈ¡¼ÇÂ¼ÁĞ±í
             RCJProjectCostPerformanceBenchmarBLL cpbBLL = new RCJProjectCostPerformanceBenchmarBLL();
             StringBuilder strSql = new StringBuilder("select * From  V_RCJProjectCostPerformanceBenchmar where projectid=");
             strSql.Append(ProjectId.ToString());
@@ -372,7 +372,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
 
             DataSet res = ShareClass.GetDataSetFromSqlNOOperateLog(strSql.ToString(), "V_RCJProjectCostPerformanceBenchmar"); ;
 
-            //å†™å…¥è®°å½•åˆ°æ–‡ä»¶ä¸­
+            //Ğ´Èë¼ÇÂ¼µ½ÎÄ¼şÖĞ
             string strCon = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + strMidFile + ";Extended Properties='Excel 8.0;HDR=YES;IMEX=0'";
             OleDbConnection ExcelConn = new OleDbConnection(strCon);
             using (ExcelConn)
@@ -397,7 +397,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
                     sbCom.Append("',");
                     sbCom.Append(res.Tables[0].Rows[i]["ItemNum"].ToString() == "" ? "0" : res.Tables[0].Rows[i]["ItemNum"].ToString());
                     sbCom.Append(",");
-                    //åŸå®šå•ä»·
+                    //Ô­¶¨µ¥¼Û
                     sbCom.Append(res.Tables[0].Rows[i]["ItemPriceDevice"].ToString() == "" ? "0" : res.Tables[0].Rows[i]["ItemPriceDevice"].ToString());
                     sbCom.Append(",");
                     sbCom.Append(res.Tables[0].Rows[i]["ItemPriceMainMaterial"].ToString() == "" ? "0" : res.Tables[0].Rows[i]["ItemPriceMainMaterial"].ToString());
@@ -408,7 +408,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
                     sbCom.Append(",");
                     sbCom.Append(res.Tables[0].Rows[i]["ItemPriceMachine"].ToString() == "" ? "0" : res.Tables[0].Rows[i]["ItemPriceMachine"].ToString());
                     sbCom.Append(",");
-                    //é¢„ç®—åˆä»·
+                    //Ô¤ËãºÏ¼Û
                     sbCom.Append(res.Tables[0].Rows[i]["ItemPriceDeviceBudget"].ToString() == "" ? "0" : res.Tables[0].Rows[i]["ItemPriceDeviceBudget"].ToString());
                     sbCom.Append(",");
                     sbCom.Append(res.Tables[0].Rows[i]["ItemPriceMainMaterialBudget"].ToString() == "" ? "0" : res.Tables[0].Rows[i]["ItemPriceMainMaterialBudget"].ToString());
@@ -429,7 +429,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
                     sbCom.Append(",");
                     sbCom.Append(res.Tables[0].Rows[i]["BCWS"].ToString() == "" ? "0" : res.Tables[0].Rows[i]["BCWS"].ToString());
                     sbCom.Append(",");
-                    //è°ƒæ•´ä»·æ ¼
+                    //µ÷Õû¼Û¸ñ
                     sbCom.Append(res.Tables[0].Rows[i]["ItemPriceDeviceAdjust"].ToString() == "" ? "0" : res.Tables[0].Rows[i]["ItemPriceDeviceAdjust"].ToString());
                     sbCom.Append(",");
                     sbCom.Append(res.Tables[0].Rows[i]["ItemPriceMainMaterialAdjust"].ToString() == "" ? "0" : res.Tables[0].Rows[i]["ItemPriceMainMaterialAdjust"].ToString());
@@ -440,12 +440,12 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
                     sbCom.Append(",");
                     sbCom.Append(res.Tables[0].Rows[i]["ItemPriceMachineAdjust"].ToString() == "" ? "0" : res.Tables[0].Rows[i]["ItemPriceMachineAdjust"].ToString());
                     sbCom.Append(","); 
-                    //å·¥ä½œé‡
+                    //¹¤×÷Á¿
                     sbCom.Append(res.Tables[0].Rows[i]["TotalWork"].ToString() == "" ? "0" : res.Tables[0].Rows[i]["TotalWork"].ToString());
                     sbCom.Append(",");
                     sbCom.Append(res.Tables[0].Rows[i]["TotalConfirmWork"].ToString() == "" ? "0" : res.Tables[0].Rows[i]["TotalConfirmWork"].ToString());
                     sbCom.Append(",");
-                    //å®é™…åˆä»·
+                    //Êµ¼ÊºÏ¼Û
                     sbCom.Append(res.Tables[0].Rows[i]["ItemPriceDeviceActual"].ToString() == "" ? "0" : res.Tables[0].Rows[i]["ItemPriceDeviceActual"].ToString());
                     sbCom.Append(",");
                     sbCom.Append(res.Tables[0].Rows[i]["ItemPriceMainMaterialActual"].ToString() == "" ? "0" : res.Tables[0].Rows[i]["ItemPriceMainMaterialActual"].ToString());
@@ -462,7 +462,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
                     sbCom.Append(",");
                     sbCom.Append(res.Tables[0].Rows[i]["ItemPriceTotalActual"].ToString() == "" ? "0" : res.Tables[0].Rows[i]["ItemPriceTotalActual"].ToString());
                     sbCom.Append(",");
-                    //å„ä¸ªæŒ‡æ ‡
+                    //¸÷¸öÖ¸±ê
                     sbCom.Append(res.Tables[0].Rows[i]["ProjectPlanCompleteBalance"].ToString() == "" ? "0" : res.Tables[0].Rows[i]["ProjectPlanCompleteBalance"].ToString());
                     sbCom.Append(",");
                     sbCom.Append(res.Tables[0].Rows[i]["ProjectBCRWP"].ToString() == "" ? "0" : res.Tables[0].Rows[i]["ProjectBCRWP"].ToString());
@@ -498,7 +498,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage1.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage1.Text = "é”™è¯¯æç¤ºï¼š ç»©æ•ˆæ±‡æ€»æ•°æ®å¯¼å…¥åˆ°Excelæ–‡ä»¶å¤±è´¥!"+exp.Message;
+            lb_ShowMessage1.Text = "´íÎóÌáÊ¾£º ¼¨Ğ§»ã×ÜÊı¾İµ¼Èëµ½ExcelÎÄ¼şÊ§°Ü!"+exp.Message;
         }
     }
 
@@ -520,7 +520,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
         int idx = Convert.ToInt32(e.CommandArgument);
         if (e.CommandName == "AdjustPrice")
         {
-            //é€‰æ‹©è¡Œå¡«å…¥æœ€æ–°ä»·æ ¼
+            //Ñ¡ÔñĞĞÌîÈë×îĞÂ¼Û¸ñ
             Session["UserCode"] = UserCode;
             StringBuilder sb = new StringBuilder("TTRCJProjectAdjustPrice.aspx?projectid=");
             sb.Append(ProjectId.ToString());
@@ -538,13 +538,13 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-            //é¼ æ ‡ç»è¿‡æ—¶ï¼Œè¡ŒèƒŒæ™¯è‰²å˜ 
+            //Êó±ê¾­¹ıÊ±£¬ĞĞ±³¾°É«±ä 
             e.Row.Attributes.Add("onmouseover", "this.style.backgroundColor='#A9A9A9'");
-            //é¼ æ ‡ç§»å‡ºæ—¶ï¼Œè¡ŒèƒŒæ™¯è‰²å˜ 
+            //Êó±êÒÆ³öÊ±£¬ĞĞ±³¾°É«±ä 
             e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor='#FFFFFF'");
 
             Label lbl1 = (Label)e.Row.FindControl("Label1");
-            if ("æ˜¯" == lbl1.Text)
+            if ("YES" == lbl1.Text)
                 e.Row.ForeColor = System.Drawing.Color.Crimson;
             else
                 e.Row.ForeColor = System.Drawing.Color.Blue;
@@ -554,9 +554,9 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-            //é¼ æ ‡ç»è¿‡æ—¶ï¼Œè¡ŒèƒŒæ™¯è‰²å˜ 
+            //Êó±ê¾­¹ıÊ±£¬ĞĞ±³¾°É«±ä 
             e.Row.Attributes.Add("onmouseover", "this.style.backgroundColor='#A9A9A9'");
-            //é¼ æ ‡ç§»å‡ºæ—¶ï¼Œè¡ŒèƒŒæ™¯è‰²å˜ 
+            //Êó±êÒÆ³öÊ±£¬ĞĞ±³¾°É«±ä 
             e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor='#FFFFFF'");
 
             int cellid = 22;
@@ -573,11 +573,11 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
 
             ShareClass.RunSqlCommand(sql.ToString());
 
-            lb_ShowMessage1.Text = "æˆåŠŸæ¸…é™¤æ‰€æœ‰æµ‹è¯•æ•°æ®ï¼Œè¯·åˆ·æ–°é‡è¯•ã€‚";
+            lb_ShowMessage1.Text = "³É¹¦Çå³ıËùÓĞ²âÊÔÊı¾İ£¬ÇëË¢ĞÂÖØÊÔ¡£";
         }
         catch (Exception exp)
         {
-            lb_ShowMessage1.Text = "é”™è¯¯æç¤ºï¼šæ¸…é™¤æ‰€æœ‰æµ‹è¯•æ•°æ®æ“ä½œå‡ºç°å¼‚å¸¸ï¼š " + exp.Message;
+            lb_ShowMessage1.Text = "´íÎóÌáÊ¾£ºÇå³ıËùÓĞ²âÊÔÊı¾İ²Ù×÷³öÏÖÒì³££º " + exp.Message;
         }
     }
     protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -585,7 +585,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
         int idx = Convert.ToInt32(e.CommandArgument);
         if (e.CommandName == "ActualWorks")
         {
-            //é€‰æ‹©è¡Œå¡«å…¥å®é™…å·¥ä½œ
+            //Ñ¡ÔñĞĞÌîÈëÊµ¼Ê¹¤×÷
             Session["UserCode"] = UserCode;
             StringBuilder sb = new StringBuilder("TTRCJProjectWorkDetails.aspx?projectid=");
             sb.Append(ProjectId.ToString());
@@ -601,7 +601,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
             sb.Append(GridView2.Rows[idx].Cells[3].Text);
             sb.Append("&itemContent=");
             sb.Append(GridView1.Rows[GridView1.SelectedIndex].Cells[4].Text);
-            sb.Append("&Budget=");//é¢„ç®—åˆä»·
+            sb.Append("&Budget=");//Ô¤ËãºÏ¼Û
             sb.Append(GridView1.Rows[GridView1.SelectedIndex].Cells[16].Text);
 
             Response.Redirect(sb.ToString());
@@ -657,7 +657,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
     {
         Calendar2.Visible = false;
         Calendar1.Visible = false;
-        //å¦‚æœè¾“å…¥é”™è¯¯ï¼Œæˆ–è€…ä¸ºç©ºï¼Œåˆ™æ˜¾ç¤ºæ‰€æœ‰è®°å½•
+        //Èç¹ûÊäÈë´íÎó£¬»òÕßÎª¿Õ£¬ÔòÏÔÊ¾ËùÓĞ¼ÇÂ¼
         InitPerformanceBenchmar(DDL_PerformanceType.SelectedValue);
     }
 
@@ -680,7 +680,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
         }
         catch (Exception exp)
         {
-            lb_ShowMessage1.Text = "é”™è¯¯æç¤ºï¼šè·å–å¹´åˆ—è¡¨æ“ä½œå‡ºç°å¼‚å¸¸ï¼š " + exp.Message;
+            lb_ShowMessage1.Text = "´íÎóÌáÊ¾£º»ñÈ¡ÄêÁĞ±í²Ù×÷³öÏÖÒì³££º " + exp.Message;
         }
     }
 }

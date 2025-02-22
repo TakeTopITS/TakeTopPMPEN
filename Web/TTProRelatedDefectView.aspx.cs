@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -41,7 +41,7 @@ public partial class TTProRelatedDefectView : System.Web.UI.Page
             lst = defectmentBLL.GetAllDefectments(strHQL);
 
             Defectment defectment = (Defectment)lst[0];
-            //this.Title = "éœ€æ±‚ï¼š" + strReqID + defectment.ReqName + " è§†å›¾";
+            //this.Title = "ÐèÇó£º" + strReqID + defectment.ReqName + " ÊÓÍ¼";
 
             DataList1.DataSource = lst;
             DataList1.DataBind();

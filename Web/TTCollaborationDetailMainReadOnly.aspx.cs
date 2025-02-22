@@ -1,4 +1,4 @@
-Ôªøusing System.Configuration;
+using System.Configuration;
 using System.Collections;
 using System.Web;
 using System.Web.Security;
@@ -35,6 +35,6 @@ public partial class TTCollaborationDetailMainReadOnly : System.Web.UI.Page
 
         strCreatorCode = collaboration.CreatorCode.Trim();
 
-        //this.Title = "Âçè‰ΩúÔºö" + strCoID + " " + collaboration.CollaborationName.Trim() + " Â§ÑÁêÜ";
+        //this.Title = "–≠◊˜£∫" + strCoID + " " + collaboration.CollaborationName.Trim() + " ¥¶¿Ì";
     }
 }

@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System; using System.Resources;
 using System.Collections;
@@ -69,7 +69,7 @@ public partial class TTWZPurchaseListTender : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strTenderCompetentName))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æ‹›æ ‡ä¸»ç®¡ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¡¥å……ï¼');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÕĞ±êÖ÷¹Ü²»ÄÜÎª¿Õ£¬Çë²¹³ä£¡');", true);
                 return;
             }
 

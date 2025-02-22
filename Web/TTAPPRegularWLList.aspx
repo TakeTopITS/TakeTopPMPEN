@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPRegularWLList.aspx.cs" Inherits="TTAPPRegularWLList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPRegularWLList.aspx.cs" Inherits="TTAPPRegularWLList" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
 
@@ -45,14 +45,14 @@
 
         });
 
-        //ç‚¹å‡»DATAGRIDè¡Œå†…ä»»ä½•ä¸€ç‚¹ï¼Œéƒ½èƒ½è§¦å‘è¡Œå†…çš„é“¾æ¥
+        //µã»÷DATAGRIDĞĞÄÚÈÎºÎÒ»µã£¬¶¼ÄÜ´¥·¢ĞĞÄÚµÄÁ´½Ó
         function setTrClickLink(gridId) {
-            //é˜»æ­¢äº‹ä»¶å†’æ³¡
+            //×èÖ¹ÊÂ¼şÃ°Åİ
             jQuery("#" + gridId).find("tr:not(.notTab)").find("a").click(function () {
                 event.stopPropagation();
             });
 
-            //trç‚¹å‡»è·³è½¬
+            //trµã»÷Ìø×ª
             jQuery("#" + gridId).find("tr:not(.notTab)").find("a").closest("tr").click(function () {
                 ChangeMenu(0);
                 $("#Right", parent.document).attr("src", $(this).find("a").attr("href"));
@@ -92,7 +92,7 @@
                                                     <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,Back%>" />
                                                 </td>
                                                 <td width="5">
-                                                    <img id="IMG_Waiting" src="Images/Processing.gif" alt="è¯·ç¨å€™ï¼Œå¤„ç†ä¸­..." style="display: none;" />
+                                                    <img id="IMG_Waiting" src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖĞ..." style="display: none;" />
                                                 </td>
                                             </tr>
                                         </table>
@@ -105,7 +105,7 @@
                                 </td>
 
                                 <td style="width: 30%; text-align: left; padding-top: 5px;" onclick="javascript:ChangeMenu(0);">
-                                    <asp:Image ID="IMG_LRArrow" ImageUrl="Images/UpDnArrow.png" Width="18px" Height="24px" border="0" alt="éšè—å³è¾¹æ " runat="server" /></td>
+                                    <asp:Image ID="IMG_LRArrow" ImageUrl="Images/UpDnArrow.png" Width="18px" Height="24px" border="0" alt="Òş²ØÓÒ±ßÀ¸" runat="server" /></td>
                             </tr>
                         </table>
                     </td>

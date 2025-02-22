@@ -1,20 +1,20 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPnPCameraView.aspx.cs" Inherits="TTPnPCameraView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPnPCameraView.aspx.cs" Inherits="TTPnPCameraView" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ÊëÑÂÉèÂ§¥ÂàóË°®</title>
+    <title>…„œÒÕ∑¡–±Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript">
 
         function OnClickHandler() {
             if ($("#RD_Department").attr("checked")) {
-                //alert("ÁªÑÁªáÊûÑÊû∂Ë°®");
+                //alert("◊È÷Øππº‹±Ì");
                 window.location.href = "TTPnPCameraAdd.aspx";
             } else {
-                //alert("È°πÁõÆÈÉ®");
+                //alert("œÓƒø≤ø");
                 window.location.href = "TTPnPCameraProjectAdd.aspx";
             }
         }
@@ -59,7 +59,7 @@
                                                 <span>
                                                     <input type="radio" value="Department" id="RD_Department" name="add" checked="checked" /><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZuZhiJiaGou%>"></asp:Label></span>
                                                 <span>
-                                                    <input type="radio" value="Project" id="RD_Project" name="add" /><asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuBu%>"></asp:Label></span>&nbsp;&nbsp;<input type="button" class="inpuLong" value="Êñ∞Â¢ûÊëÑÂÉèÂ§¥" onclick="OnClickHandler();" />
+                                                    <input type="radio" value="Project" id="RD_Project" name="add" /><asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuBu%>"></asp:Label></span>&nbsp;&nbsp;<input type="button" class="inpuLong" value="–¬‘ˆ…„œÒÕ∑" onclick="OnClickHandler();" />
                                             </td>
                                         </tr>
                                         <tr style="font-size: 12pt">
@@ -68,28 +68,28 @@
                                                     CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="5" ShowHeader="True"
                                                     Width="100%">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="TypeName" HeaderText="Á±ªÂûã">
+                                                        <asp:BoundColumn DataField="TypeName" HeaderText="¿‡–Õ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DPName" HeaderText="ÁªÑÁªáÊû∂ÊûÑÊàñÈ°πÁõÆÈÉ®">
+                                                        <asp:BoundColumn DataField="DPName" HeaderText="◊È÷Øº‹ππªÚœÓƒø≤ø">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CameraName" HeaderText="ÊëÑÂÉèÂ§¥ÂêçÁß∞">
+                                                        <asp:BoundColumn DataField="CameraName" HeaderText="…„œÒÕ∑√˚≥∆">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:BoundColumn DataField="ServerIP" HeaderText="IP">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CameraUserName" HeaderText="ÊëÑÂÉèÂ§¥Áî®Êà∑Âêç">
+                                                        <asp:BoundColumn DataField="CameraUserName" HeaderText="…„œÒÕ∑”√ªß√˚">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CameraPass" HeaderText="ÊëÑÂÉèÂ§¥ÂØÜÁ†Å">
+                                                        <asp:BoundColumn DataField="CameraPass" HeaderText="…„œÒÕ∑√‹¬Î">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CreatorName" HeaderText="ÂàõÂª∫‰∫∫">
+                                                        <asp:BoundColumn DataField="CreatorName" HeaderText="¥¥Ω®»À">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="ÂàõÂª∫Êó∂Èó¥">
+                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="¥¥Ω® ±º‰">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:TemplateColumn>

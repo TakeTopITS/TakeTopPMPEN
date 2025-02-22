@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -39,7 +39,7 @@ public partial class TTReceivablesPayableHandleForPlan : System.Web.UI.Page
         LB_UserName.Text = strUserName;
 
         //ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "Â∫ìÂ≠òÁÆ°ÁêÜ", strUserCode);
+        //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ø‚¥Êπ‹¿Ì", strUserCode);
         //if (blVisible == false)
         //{
         //    Response.Redirect("TTDisplayErrors.aspx");
@@ -752,7 +752,7 @@ public partial class TTReceivablesPayableHandleForPlan : System.Web.UI.Page
         {
             if (strRelatedType == "Project")
             {
-                string strPlanVerID = ShareClass.GetProjectPlanVerID(strRelatedID, "Âú®Áî®").ToString();
+                string strPlanVerID = ShareClass.GetProjectPlanVerID(strRelatedID, "InUse").ToString();
 
                 TakeTopPlan.InitialProjectPlanTree(TreeView_ReceivablesPJPlantTree, strRelatedID, strPlanVerID);
             }
@@ -770,7 +770,7 @@ public partial class TTReceivablesPayableHandleForPlan : System.Web.UI.Page
         {
             if (strRelatedType == "Project")
             {
-                string strPlanVerID = ShareClass.GetProjectPlanVerID(strRelatedID, "Âú®Áî®").ToString();
+                string strPlanVerID = ShareClass.GetProjectPlanVerID(strRelatedID, "InUse").ToString();
 
                 TakeTopPlan.InitialProjectPlanTree(TreeView_PayablePJPlantTree, strRelatedID, strPlanVerID);
             }

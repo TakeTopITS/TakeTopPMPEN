@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -30,8 +30,8 @@ public partial class TTAllProjectsRunStatus : System.Web.UI.Page
     string strLangCode;
     protected void Page_Load(object sender, EventArgs e)
     {
-        //钟礼月作品（jack.erp@gmail.com)
-        //泰顶拓鼎集团2006－2026
+        //��������Ʒ��jack.erp@gmail.com)
+        //̩���ض�����2006��2026
 
         string strHQL;
         IList lst;
@@ -44,7 +44,7 @@ public partial class TTAllProjectsRunStatus : System.Web.UI.Page
         LB_UserName.Text = strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "所有成员项目状态", strUserCode);
+        bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "���г�Ա��Ŀ״̬", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -68,7 +68,7 @@ public partial class TTAllProjectsRunStatus : System.Web.UI.Page
 
             strHQL = "from Project as project";
             strHQL += " Where project.PMCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
-            strHQL += " and project.Status not in ('删除','取消')";
+            strHQL += " and project.Status not in ('Deleted','Cancel')";
             strHQL += " order by project.ProjectID DESC ";
             ProjectBLL projectBLL = new ProjectBLL();
             lst = projectBLL.GetAllProjects(strHQL);
@@ -105,7 +105,7 @@ public partial class TTAllProjectsRunStatus : System.Web.UI.Page
         {
             strHQL += " and project.ProjectType = '" + DL_ProjectType.SelectedValue.Trim() + "'";
         }
-        strHQL += " and project.Status not in ('删除','归档')";
+        strHQL += " and project.Status not in ('Deleted','Archived')";
         strHQL += " Order by project.ProjectID DESC";
 
         ProjectBLL projectBLL = new ProjectBLL();
@@ -154,7 +154,7 @@ public partial class TTAllProjectsRunStatus : System.Web.UI.Page
             {
                 strHQL += " and project.ProjectType = '" + DL_ProjectType.SelectedValue.Trim() + "'";
             }
-            strHQL += " and project.Status not in ('删除','归档')";
+            strHQL += " and project.Status not in ('Deleted','Archived')";
             strHQL += " Order by project.ProjectID DESC";
             ProjectBLL projectBLL = new ProjectBLL();
             lst = projectBLL.GetAllProjects(strHQL);
@@ -189,7 +189,7 @@ public partial class TTAllProjectsRunStatus : System.Web.UI.Page
         {
             strHQL += " and project.ProjectType = '" + DL_ProjectType.SelectedValue.Trim() + "'";
         }
-        strHQL += " and project.Status not in ('删除','归档')";
+        strHQL += " and project.Status not in ('Deleted','Archived')";
         strHQL += " order by project.ProjectID DESC";
 
         LB_OperatorCode.Text = strOperatorCode;
@@ -267,7 +267,7 @@ public partial class TTAllProjectsRunStatus : System.Web.UI.Page
                 LB_QueryScope.Text = Resources.lang.ZZZBuMen + strDepartName + Resources.lang.ZZXMZT + strStatus;
             }
         }
-        strHQL += " and project.Status not in ('删除','归档')";
+        strHQL += " and project.Status not in ('Deleted','Archived')";
         strHQL += " order by project.ProjectID DESC ";
 
         ProjectBLL projectBLL = new ProjectBLL();
@@ -309,7 +309,7 @@ public partial class TTAllProjectsRunStatus : System.Web.UI.Page
         {
             strHQL += " and project.ProjectType = '" + DL_ProjectType.SelectedValue.Trim() + "'";
         }
-        strHQL += " and project.Status not in ('删除','归档')";
+        strHQL += " and project.Status not in ('Deleted','Archived')";
         strHQL += " order by project.ProjectID DESC ";
         ProjectBLL projectBLL = new ProjectBLL();
 
@@ -382,7 +382,7 @@ public partial class TTAllProjectsRunStatus : System.Web.UI.Page
         //    dtNowDate = DateTime.Now;
         //    strStatus = Project.Status.Trim();
 
-        //    if (strStatus != "结案")
+        //    if (strStatus != "CaseClosed")
         //    {
         //        if (dtFinishedDate < dtNowDate)
         //        {
@@ -463,7 +463,7 @@ public partial class TTAllProjectsRunStatus : System.Web.UI.Page
         {
             strHQL += " and project.ProjectType = '" + DL_ProjectType.SelectedValue.Trim() + "'";
         }
-        strHQL += " and project.Status not in ('删除','归档')";
+        strHQL += " and project.Status not in ('Deleted','Archived')";
         strHQL += " order by project.ProjectID DESC ";
         lst = projectBLL.GetAllProjects(strHQL);
 
@@ -510,7 +510,7 @@ public partial class TTAllProjectsRunStatus : System.Web.UI.Page
         {
             strHQL += " and project.ProjectType = '" + DL_ProjectType.SelectedValue.Trim() + "'";
         }
-        strHQL += " and project.Status not in ('删除','归档')";
+        strHQL += " and project.Status not in ('Deleted','Archived')";
         strHQL += " order by project.ProjectID DESC ";
 
         lst = projectBLL.GetAllProjects(strHQL);
@@ -549,7 +549,7 @@ public partial class TTAllProjectsRunStatus : System.Web.UI.Page
         {
             strHQL += " and project.ProjectType = '" + DL_ProjectType.SelectedValue.Trim() + "'";
         }
-        strHQL += " and project.Status not in ('删除','归档')";
+        strHQL += " and project.Status not in ('Deleted','Archived')";
         strHQL += " order by project.ProjectID DESC";
         lst = projectBLL.GetAllProjects(strHQL);
 
@@ -589,7 +589,7 @@ public partial class TTAllProjectsRunStatus : System.Web.UI.Page
         {
             strHQL += " and project.ProjectType = '" + DL_ProjectType.SelectedValue.Trim() + "'";
         }
-        strHQL += " and project.Status not in ('删除','归档')";
+        strHQL += " and project.Status not in ('Deleted','Archived')";
         strHQL += " order by project.ProjectID DESC";
         ProjectBLL projectBLL = new ProjectBLL();
         lst = projectBLL.GetAllProjects(strHQL);

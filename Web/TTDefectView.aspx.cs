@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -44,7 +44,7 @@ public partial class TTDefectView : System.Web.UI.Page
             }
             else
             {
-                Response.Write("æ­¤ç¼ºé™·ä¸å­˜åœ¨ï¼Œå¯èƒ½å·²è¢«åˆ é™¤,è¯·æ£€æŸ¥!");
+                Response.Write("´ËÈ±Ïİ²»´æÔÚ£¬¿ÉÄÜÒÑ±»É¾³ı,Çë¼ì²é!");
             }
         }
     }

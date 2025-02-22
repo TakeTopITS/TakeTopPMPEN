@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +39,7 @@ public partial class TTWZPurchaseDecisionListEdit : System.Web.UI.Page
 
     private void DataBinder(string strPurchaseCode)
     {
-        //æŸ¥è¯¢é‡‡è´­æ–‡ä»¶ä¿¡æ¯ç»‘å®š
+        //²éÑ¯²É¹ºÎÄ¼şĞÅÏ¢°ó¶¨
         string strPurchaseHQL = string.Format(@"select * from T_WZPurchase
                         where PurchaseCode = '{0}'", strPurchaseCode);
         DataTable dtPurchase = ShareClass.GetDataSetFromSql(strPurchaseHQL, "Purchase").Tables[0];
@@ -51,10 +51,10 @@ public partial class TTWZPurchaseDecisionListEdit : System.Web.UI.Page
             string strPurchaseDocumentHTML = string.Empty;
             strPurchaseDocumentHTML = "<table>";
             strPurchaseDocumentHTML += "<tr>";
-            strPurchaseDocumentHTML += "<td align=\"center\" >æ‹›æ ‡æ–‡ä»¶ç›®å½•</td>";
+            strPurchaseDocumentHTML += "<td align=\"center\" >ÕĞ±êÎÄ¼şÄ¿Â¼</td>";
             strPurchaseDocumentHTML += "</tr>";
             strPurchaseDocumentHTML += "<tr>";
-            strPurchaseDocumentHTML += "<td>æ‹›æ ‡æ–‡ä»¶</td>";
+            strPurchaseDocumentHTML += "<td>ÕĞ±êÎÄ¼ş</td>";
             strPurchaseDocumentHTML += "</tr>";
             strPurchaseDocumentHTML += "<tr>";
             strPurchaseDocumentHTML += "<td align=\"center\" ><a href='" + ShareClass.ObjectToString(drPurchase["PurchaseDocumentURL"]) + "' class=\"notTab\" target=\"_blank\">" + ShareClass.ObjectToString(drPurchase["PurchaseDocument"]) + "</a></td>";
@@ -70,10 +70,10 @@ public partial class TTWZPurchaseDecisionListEdit : System.Web.UI.Page
             string strAssessmentDocumentHTML = string.Empty;
             strAssessmentDocumentHTML = "<table >";
             strAssessmentDocumentHTML += "<tr>";
-            strAssessmentDocumentHTML += "<td align=\"center\" >è¯„æ ‡æ–‡ä»¶ç›®å½•</td>";
+            strAssessmentDocumentHTML += "<td align=\"center\" >ÆÀ±êÎÄ¼şÄ¿Â¼</td>";
             strAssessmentDocumentHTML += "</tr>";
             strAssessmentDocumentHTML += "<tr>";
-            strAssessmentDocumentHTML += "<td >è¯„æ ‡æ–¹æ³•åŠæ ‡å‡†</td>";
+            strAssessmentDocumentHTML += "<td >ÆÀ±ê·½·¨¼°±ê×¼</td>";
             strAssessmentDocumentHTML += "</tr>";
             strAssessmentDocumentHTML += "<tr>";
             strAssessmentDocumentHTML += "<td ><a href='" + ShareClass.ObjectToString(drPurchase["AssessmentDocumentURL"]) + "' class=\"notTab\" target=\"_blank\">" + ShareClass.ObjectToString(drPurchase["AssessmentDocument"]) + "</a></td>";
@@ -83,7 +83,7 @@ public partial class TTWZPurchaseDecisionListEdit : System.Web.UI.Page
             LT_AssessmentDocument.Text = strAssessmentDocumentHTML;
         }
 
-        //åŠ è½½ä¾›åº”å•†
+        //¼ÓÔØ¹©Ó¦ÉÌ
         WZPurchaseSupplierBLL wZPurchaseSupplierBLL = new WZPurchaseSupplierBLL();
         string strPurchaseSupplierHQL = "from WZPurchaseSupplier as wZPurchaseSupplier where PurchaseCode = '" + strPurchaseCode + "'";
         IList lstPurchaseSupplier = wZPurchaseSupplierBLL.GetAllWZPurchaseSuppliers(strPurchaseSupplierHQL);
@@ -105,18 +105,18 @@ public partial class TTWZPurchaseDecisionListEdit : System.Web.UI.Page
                 string strSupplierCodeHTML = string.Empty;
                 strSupplierCodeHTML = "<table>";
                 strSupplierCodeHTML += "<tr>";
-                strSupplierCodeHTML += "<td align=\"center\" >ä¾›æ–¹ç¼–å·ï¼š" + wZPurchaseSupplier.SupplierCode + "</td>";
+                strSupplierCodeHTML += "<td align=\"center\" >¹©·½±àºÅ£º" + wZPurchaseSupplier.SupplierCode + "</td>";
 
                 strSupplierCodeHTML += "</tr>";
                 strSupplierCodeHTML += "<tr>";
-                strSupplierCodeHTML += "<td align=\"center\">ä¾›æ–¹<" + wZPurchaseSupplier.SupplierName + "></td>";
+                strSupplierCodeHTML += "<td align=\"center\">¹©·½<" + wZPurchaseSupplier.SupplierName + "></td>";
                 strSupplierCodeHTML += "</tr>";
                 strSupplierCodeHTML += "<tr>";
                 strSupplierCodeHTML += "<td ><a href='" + wZPurchaseSupplier.DocumentURL + "' class=\"notTab\" target=\"_blank\">" + wZPurchaseSupplier.DocumentName + "</a></td>";
                 strSupplierCodeHTML += "</tr>";
                 strSupplierCodeHTML += "<tr>";
                
-                strSupplierCodeHTML += "<td ><a href='TTWZPurchaseDecisionDetail.aspx?PurchaseCode=" + wZPurchaseSupplier.PurchaseCode + "&SupplierCode=" + wZPurchaseSupplier.SupplierCode + "' target =_blank>æŠ¥ä»·å•</a></td>";
+                strSupplierCodeHTML += "<td ><a href='TTWZPurchaseDecisionDetail.aspx?PurchaseCode=" + wZPurchaseSupplier.PurchaseCode + "&SupplierCode=" + wZPurchaseSupplier.SupplierCode + "' target =_blank>±¨¼Ûµ¥</a></td>";
 
                 strSupplierCodeHTML += "</tr>";
                 strSupplierCodeHTML += "</table>";
@@ -174,7 +174,7 @@ public partial class TTWZPurchaseDecisionListEdit : System.Web.UI.Page
             LT_Supplier6.Text = " ";
         }
 
-        //é™„åŠ ç»„å·çš„ä¾›åº”å•†
+        //¸½¼Ó×é¾íµÄ¹©Ó¦ÉÌ
         DL_Supplier1.DataSource = lstPurchaseSupplier;
         DL_Supplier1.DataBind();
 
@@ -200,7 +200,7 @@ public partial class TTWZPurchaseDecisionListEdit : System.Web.UI.Page
         DataTable dtWZSupplierApplyComment = ShareClass.GetDataSetFromSql(strWZSupplierApplyCommentHQL, "SupplierApplyComment").Tables[0];
         if (dtWZSupplierApplyComment != null && dtWZSupplierApplyComment.Rows.Count == 1)
         {
-            //ä¿®æ”¹
+            //ĞŞ¸Ä
             DataRow drSupplierApplyComment = dtWZSupplierApplyComment.Rows[0];
 
             //HF_Supplier1.Value = ShareClass.ObjectToString(drSupplierApplyComment["SupplierCode1"]);
@@ -262,7 +262,7 @@ public partial class TTWZPurchaseDecisionListEdit : System.Web.UI.Page
 
     protected void BT_Assessment_Click(object sender, EventArgs e)
     {
-        //åˆ¤æ–­æ˜¯å¦å·²ç»æäº¤
+        //ÅĞ¶ÏÊÇ·ñÒÑ¾­Ìá½»
         string strPurchaseHQL = "from WZPurchase as wZPurchase where PurchaseCode = '" + HF_PurchaseCode.Value + "'";
         WZPurchaseBLL wZPurchaseBLL = new WZPurchaseBLL();
         IList lstPurchase = wZPurchaseBLL.GetAllWZPurchases(strPurchaseHQL);
@@ -270,9 +270,9 @@ public partial class TTWZPurchaseDecisionListEdit : System.Web.UI.Page
         {
             WZPurchase wZPurchase = (WZPurchase)lstPurchase[0];
 
-            if (wZPurchase.Progress != "è¯¢ä»·")
+            if (wZPurchase.Progress != "Ñ¯¼Û")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('é‡‡è´­æ–‡ä»¶è¿›åº¦ä¸ä¸ºè¯¢ä»·ï¼Œä¸å…è®¸ä¿®æ”¹ï¼');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('²É¹ºÎÄ¼ş½ø¶È²»ÎªÑ¯¼Û£¬²»ÔÊĞíĞŞ¸Ä£¡');", true);
                 return;
             }
 
@@ -311,7 +311,7 @@ public partial class TTWZPurchaseDecisionListEdit : System.Web.UI.Page
 
                 SavePurchaseDEcisionResult();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('è¯„æ ‡æˆåŠŸï¼');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÆÀ±ê³É¹¦£¡');", true);
             }
         }
     }
@@ -359,11 +359,11 @@ public partial class TTWZPurchaseDecisionListEdit : System.Web.UI.Page
         }
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "LoadParentLit();", true);
-        //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ä¿å­˜æˆåŠŸï¼');", true);
+        //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('±£´æ³É¹¦£¡');", true);
     }
 
 
-    //ä¿å­˜è¯„æ ‡ç»“æœ
+    //±£´æÆÀ±ê½á¹û
     protected void SavePurchaseDEcisionResult()
     {
         //string strSupplierCode1 = HF_Supplier1.Value; //TXT_Supplier1.Text.Trim();

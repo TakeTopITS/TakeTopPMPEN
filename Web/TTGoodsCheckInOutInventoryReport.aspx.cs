@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -30,14 +30,14 @@ public partial class TTGoodsCheckInOutInventoryReport : System.Web.UI.Page
         string strUserName;
         string strUserCode = Session["UserCode"].ToString();
 
-        //this.Title = "ç›˜ç‚¹æŠ¥è¡¨";
+        //this.Title = "ÅÌµã±¨±í";
 
         LB_UserCode.Text = strUserCode;
         strUserName = ShareClass.GetUserName(strUserCode);
         LB_UserName.Text = strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ç‰©æ–™æ”¶å‘å­˜æŠ¥è¡¨", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ÎïÁÏÊÕ·¢´æ±¨±í", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -135,9 +135,9 @@ public partial class TTGoodsCheckInOutInventoryReport : System.Web.UI.Page
 
         DataTable dtSaleOrder = ds.Tables[0];
 
-        Export3Excel(dtSaleOrder, "ç‰©æ–™æ”¶å‘å­˜æŠ¥è¡¨.xls");
+        Export3Excel(dtSaleOrder, "ÎïÁÏÊÕ·¢´æ±¨±í.xls");
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¯¼å‡ºæˆåŠŸï¼');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µ¼³ö³É¹¦£¡');", true);
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)
@@ -162,7 +162,7 @@ public partial class TTGoodsCheckInOutInventoryReport : System.Web.UI.Page
         Response.End();
     }
 
-    //å–å¾—å½“æœˆç»“ä½™åº“å­˜é‡
+    //È¡µÃµ±ÔÂ½áÓà¿â´æÁ¿
     public decimal GetInventoryNumberByMonth(string strCheckTime, string strGoodsCode,string strModelNumber,string strSpec,string strUnitName)
     {
         string strHQL;

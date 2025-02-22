@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTNewCustomFunctionAll.aspx.cs" Inherits="TTNewCustomFunctionAll" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTNewCustomFunctionAll.aspx.cs" Inherits="TTNewCustomFunctionAll" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>å®¢æˆ·åˆ—è¡¨</title>
+    <title>¿Í»§ÁÐ±í</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv
@@ -76,7 +76,7 @@
                                                                                     <tr>
                                                                                         <td style="background: #f0f0f0; text-align: left; width: 510px; height: 25px;" colspan="2">
                                                                                             <asp:Label ID="LB_MyQueryScope" runat="server" Text="<%$ Resources:lang,MyQueryScope%>"></asp:Label>:<asp:Label
-                                                                                                ID="LB_QueryScope" runat="server"  Font-Names="Arial,å®‹ä½“" Font-Size="9pt"></asp:Label>
+                                                                                                ID="LB_QueryScope" runat="server"  Font-Names="Arial,ËÎÌå" Font-Size="9pt"></asp:Label>
                                                                                         </td>
                                                                                         <td style="background: #f0f0f0; text-align: right; width: 300px; height: 25px;" colspan="2">
                                                                                             <asp:Label ID="LB_Operator" runat="server" Text="<%$ Resources:lang,Operator%>" />:
@@ -129,17 +129,17 @@
                                                                                                 ShowHeader="false" OnPageIndexChanged="DataGrid3_PageIndexChanged" Width="100%"
                                                                                                 PageSize="25" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                                                 <Columns>
-                                                                                                    <asp:BoundColumn DataField="CustomerCode" HeaderText="å®¢æˆ·ç¼–å·">
+                                                                                                    <asp:BoundColumn DataField="CustomerCode" HeaderText="¿Í»§±àºÅ">
                                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                                                     </asp:BoundColumn>
                                                                                                     <asp:HyperLinkColumn DataNavigateUrlField="CustomerCode" DataNavigateUrlFormatString="TTNewCustomFunctionDetail.aspx?strCustomCode={0}"
-                                                                                                        DataTextField="CustomerName" HeaderText="å®¢æˆ·åç§°" Target="_blank">
+                                                                                                        DataTextField="CustomerName" HeaderText="¿Í»§Ãû³Æ" Target="_blank">
                                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                                                     </asp:HyperLinkColumn>
-                                                                                                    <asp:BoundColumn DataField="CreateDate" HeaderText="åˆ›å»ºæ—¶é—´">
+                                                                                                    <asp:BoundColumn DataField="CreateDate" HeaderText="´´½¨Ê±¼ä">
                                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                                                     </asp:BoundColumn>
-                                                                                                    <asp:BoundColumn DataField="CreatorCode" HeaderText="é”€å”®å‘˜">
+                                                                                                    <asp:BoundColumn DataField="CreatorCode" HeaderText="ÏúÊÛÔ±">
                                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                                                     </asp:BoundColumn>
                                                                                                 </Columns>
@@ -193,7 +193,7 @@
                                                                         
                                                                         <ItemStyle CssClass="itemBorder" />
                                                                         <Columns>
-                                                                            <asp:TemplateColumn HeaderText="éƒ¨é—¨æˆå‘˜ï¼š">
+                                                                            <asp:TemplateColumn HeaderText="²¿ÃÅ³ÉÔ±£º">
                                                                                 <ItemTemplate>
                                                                                     <asp:Button ID="BT_UserCode" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>'
                                                                                         Style="text-align: center" />

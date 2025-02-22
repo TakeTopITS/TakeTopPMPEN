@@ -1,4 +1,4 @@
-锘縰sing ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
 using System.Collections;
@@ -25,7 +25,7 @@ public partial class TTImplePlanView : System.Web.UI.Page
         IList lst;
         int intPlanID;
 
-        //this.Title = Resources.lang.Project + strProjectID + " " + strProjectName + " 鐨勫疄鏂借鍒掞紒";
+        //this.Title = Resources.lang.Project + strProjectID + " " + strProjectName + " 的实施计划！";
 
 
         HL_ProPlanGanttRight.NavigateUrl = "TTWorkPlanGanttForProject.aspx?pid=" + strProjectID;
@@ -49,12 +49,12 @@ public partial class TTImplePlanView : System.Web.UI.Page
 
             if (DL_VersionID.Items.Count > 0)
             {
-                intPlanID = ShareClass.GetProjectPlanVersionID(strProjectID, "鍦ㄧ敤");
+                intPlanID = ShareClass.GetProjectPlanVersionID(strProjectID, "InUse");
 
                 if (intPlanID > 0)
                 {
                     DL_VersionID.SelectedValue = intPlanID.ToString();
-                    DL_ChangeVersionType.SelectedValue = "鍦ㄧ敤";
+                    DL_ChangeVersionType.SelectedValue = "InUse";
                 }
 
                 strID = DL_VersionID.SelectedValue.Trim();

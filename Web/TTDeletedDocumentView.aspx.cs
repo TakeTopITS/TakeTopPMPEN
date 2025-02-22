@@ -45,7 +45,7 @@ public partial class TTDeletedDocumentView : System.Web.UI.Page
         strHQL = "from Document as document where ";
         strHQL += " document.UploadManName like " + "'" + strUploadManName + "'";
         strHQL += " and  document.DocName like " + "'" + strDocName + "'";
-        strHQL += " and document.Status = 'É¾³ý'";
+        strHQL += " and document.Status = 'Deleted'";
         strHQL += " Order by document.DocID DESC";
 
         DocumentBLL documentBLL = new DocumentBLL();
@@ -71,7 +71,7 @@ public partial class TTDeletedDocumentView : System.Web.UI.Page
         lst = documentBLL.GetAllDocuments(strHQL);
         Document document = (Document)lst[0];
 
-        document.Status = "´¦ÀíÖÐ";
+        document.Status = "InProgress";
 
         try
         {
@@ -93,7 +93,7 @@ public partial class TTDeletedDocumentView : System.Web.UI.Page
 
         strHQL = "from Document as document where ";
         strHQL += " document.UploadManCode = " + "'" + strUserCode + "'";
-        strHQL += " and document.Status = 'É¾³ý'";
+        strHQL += " and document.Status = 'Deleted'";
         strHQL += " Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);

@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Data;
 using System.Configuration;
 using System.Collections;
@@ -20,7 +20,7 @@ public partial class xdoc : System.Web.UI.Page
     protected override void Render(HtmlTextWriter output)
     {
         string publishUrl = this.Context.Request["xdoc_param_xsn_uri"];
-        //string publishUrl = "E:\\è¯·å‡ç”³è¯·å•.xsn";
+        //string publishUrl = "E:\\Çë¼ÙÉêÇëµ¥.xsn";
 
         if (publishUrl != null && publishUrl.Length > 0)
         {

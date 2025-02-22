@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPersonalSpaceMyMonthSchedule.aspx.cs" Inherits="TTPersonalSpaceMyMonthSchedule" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPersonalSpaceMyMonthSchedule.aspx.cs" Inherits="TTPersonalSpaceMyMonthSchedule" %>
 
 <%@ Register Assembly="DayPilot" Namespace="DayPilot.Web.Ui" TagPrefix="DayPilot" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>

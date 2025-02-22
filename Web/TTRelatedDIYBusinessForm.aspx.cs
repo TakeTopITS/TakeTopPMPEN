@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections;
 using System.Data;
 using System.Web.UI;
@@ -56,11 +56,11 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
             ClientScript.RegisterStartupScript(this.GetType(), "HHH", "<script>aHandler();</script>");
             if (Page.IsPostBack == false)
             {
-                //åˆ é™¤æ— æ•ˆè®°å½•
+                //É¾³ıÎŞĞ§¼ÇÂ¼
                 string strHQL = "Delete From T_RelatedBusinessForm Where COALESCE(TemName,'') = '' and COALESCE(XSNFile,'') = ''";
                 ShareClass.RunSqlCommand(strHQL);
 
-                //åˆ—å‡ºå…³è”çš„æµç¨‹æ¨¡æ¿
+                //ÁĞ³ö¹ØÁªµÄÁ÷³ÌÄ£°å
                 LoadBusinessFormRelatedWorkFlowTemplate(strRelatedType, strRelatedID);
 
                 strTemName = GetWorkFlowTemName(strIdentifyString);
@@ -161,14 +161,14 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
         {
             try
             {
-                //ä¿å­˜è¡¨å•æ•°æ®åˆ°æ•°æ®åº“
+                //±£´æ±íµ¥Êı¾İµ½Êı¾İ¿â
                 ClientScript.RegisterStartupScript(this.GetType(), "SaveData",  "<script>saveWFFormDataToDatabase(" + strWLID + ");</script>");
             }
             catch
             {
             }
 
-            //åˆ—å‡ºå…³è”çš„æµç¨‹æ¨¡æ¿
+            //ÁĞ³ö¹ØÁªµÄÁ÷³ÌÄ£°å
             LoadBusinessFormRelatedWorkFlowTemplate(strRelatedType, strRelatedID);
             DL_WorkflowTemplate.SelectedValue = strXSNFile;
 
@@ -192,7 +192,7 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
         {
             ShareClass.RunSqlCommand(strHQL);
 
-            //åˆ—å‡ºå…³è”çš„æµç¨‹æ¨¡æ¿
+            //ÁĞ³ö¹ØÁªµÄÁ÷³ÌÄ£°å
             LoadBusinessFormRelatedWorkFlowTemplate(strRelatedType, strRelatedID);
 
             ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSCCG + "');</script>");
@@ -291,11 +291,11 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
             return;
         }
 
-        //é™„åŠ ç”¨æˆ·è‡ªå®šä¹‰çš„JSCodeåˆ°é¡µé¢
+        //¸½¼ÓÓÃ»§×Ô¶¨ÒåµÄJSCodeµ½Ò³Ãæ
         WFShareClass.AttachUserJSCodeFromWFTemplate(strTemName, LIT_AttachUserJSCode, strUserCode, "", "0", "");
         ClientScript.RegisterStartupScript(this.GetType(), "HH77H", "<script>jqueryDocumentReady();</script>");
 
-        //é™„åŠ å·¥ä½œæµæ­¥éª¤ç”¨æˆ·è‡ªå®šä¹‰çš„JSCodeåˆ°é¡µé¢
+        //¸½¼Ó¹¤×÷Á÷²½ÖèÓÃ»§×Ô¶¨ÒåµÄJSCodeµ½Ò³Ãæ
         WFShareClass.AttachUserJSCodeFromWFTemplateStep(strTemName, "0", LIT_AttachUserWFStepJSCode, strUserCode);
 
         ClientScript.RegisterStartupScript(this.GetType(), "HH88H", "<script>setWorkflowForm();</script>");
@@ -304,7 +304,7 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
     protected void LoadRelatedExistBusinessForm(string strRelatedType, string strRelatedID, string strTemName, string strXSNFile)
     {
         int intResult;
-        //å¦‚æœæ•°æ®åº“è¡¨ä¸­å­˜åœ¨æ­¤å·¥ä½œæµçš„æ•°æ®ï¼Œé‚£ä¹ˆæŠŠè¡¨ä¸­æ•°æ®é™„åŠ åˆ°è¡¨å•ä¸­
+        //Èç¹ûÊı¾İ¿â±íÖĞ´æÔÚ´Ë¹¤×÷Á÷µÄÊı¾İ£¬ÄÇÃ´°Ñ±íÖĞÊı¾İ¸½¼Óµ½±íµ¥ÖĞ
 
 
         if (PublishUrl == null)
@@ -332,17 +332,17 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
         }
 
 
-        //é™„åŠ ç”¨æˆ·è‡ªå®šä¹‰çš„JSCodeåˆ°é¡µé¢
+        //¸½¼ÓÓÃ»§×Ô¶¨ÒåµÄJSCodeµ½Ò³Ãæ
         WFShareClass.AttachUserJSCodeFromWFTemplate(strTemName, LIT_AttachUserJSCode, strUserCode, "", "0", "");
         ClientScript.RegisterStartupScript(this.GetType(), "HH66H", "<script>jqueryDocumentReady();</script>");
 
-        ////é™„åŠ å·¥ä½œæµæ­¥éª¤ç”¨æˆ·è‡ªå®šä¹‰çš„JSCodeåˆ°é¡µé¢
+        ////¸½¼Ó¹¤×÷Á÷²½ÖèÓÃ»§×Ô¶¨ÒåµÄJSCodeµ½Ò³Ãæ
         //WFShareClass.AttachUserJSCodeFromWFTemplateStep(strTemName, "0", LIT_AttachUserWFStepJSCode, strUserCode);
-        ////è®¾ç½®è¡¨æ ¼å±æ€§
+        ////ÉèÖÃ±í¸ñÊôĞÔ
         //ClientScript.RegisterStartupScript(this.GetType(), "HH99H", "<script>setWorkflowForm();</script>");
     }
 
-    //BusinessForm,ä¾ç±»å‹å’ŒIDå–å¾—æµç¨‹æ“ä½œè€…åç§°
+    //BusinessForm,ÒÀÀàĞÍºÍIDÈ¡µÃÁ÷³Ì²Ù×÷ÕßÃû³Æ
     public static string getBusinessFormOperatorCode(string strRelatedType, string strRelatedID)
     {
         string strHQL;
@@ -361,7 +361,7 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
             return "";
         }
     }
-    //BusinessForm,ä¾ç±»å‹å’ŒIDå–å¾—æµç¨‹æ¨¡æ¿åç§°
+    //BusinessForm,ÒÀÀàĞÍºÍIDÈ¡µÃÁ÷³ÌÄ£°åÃû³Æ
     public static string getBusinessFormAllowUpdate(string strRelatedType, string strRelatedID)
     {
         string strHQL;

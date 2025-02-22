@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -26,14 +26,14 @@ public partial class TTGoodsCheckReport : System.Web.UI.Page
         string strUserName;
         string strUserCode = Session["UserCode"].ToString();
 
-        //this.Title = "ç›˜ç‚¹æŠ¥è¡¨";
+        //this.Title = "ÅÌµã±¨±í";
 
         LB_UserCode.Text = strUserCode;
         strUserName = ShareClass.GetUserName(strUserCode);
         LB_UserName.Text = strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ç‰©æ–™ç›˜ç‚¹æŠ¥è¡¨", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ÎïÁÏÅÌµã±¨±í", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -102,7 +102,7 @@ public partial class TTGoodsCheckReport : System.Web.UI.Page
         strHQL += " and goods.Spec Like " + "'" + strSpec + "'";
         strHQL += " and goods.Position like " + "'" + strPosition + "'";
         strHQL += " and goods.WHPosition  like " + "'%" + DL_WHPosition.SelectedValue.Trim()+ "%'";
-        strHQL += " and goods.Status = 'åœ¨ç”¨' ";
+        strHQL += " and goods.Status = 'InUse' ";
         strHQL += " and goods.Number > 0";
         strHQL += " and to_char(goods.BuyTime,'yyyymmdd')  >= " + "'" + strStartTime + "'" + "  and to_char(goods.BuyTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
         strHQL += " and goods.OwnerCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")"; ;
@@ -163,7 +163,7 @@ public partial class TTGoodsCheckReport : System.Web.UI.Page
         strHQL += " and ModelNumber Like " + "'" + strModelNumber + "'";
         strHQL += " and Spec Like " + "'" + strSpec + "'";
         strHQL += " and Position like " + "'" + strPosition + "'";
-        strHQL += " and Status = 'åœ¨ç”¨' ";
+        strHQL += " and Status = 'InUse' ";
         strHQL += " and Number > 0";
         strHQL += " and to_char(BuyTime,'yyyymmdd')  >= " + "'" + strStartTime + "'" + "  and to_char(BuyTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
         strHQL += " and OwnerCode in (Select UserCode From T_ProjectMember Where DepartCode in " + strDepartString + ")"; ;
@@ -173,9 +173,9 @@ public partial class TTGoodsCheckReport : System.Web.UI.Page
 
         DataTable dtSaleOrder = ds.Tables[0];
 
-        Export3Excel(dtSaleOrder, "ç‰©æ–™ç›˜ç‚¹æŠ¥è¡¨.xls");
+        Export3Excel(dtSaleOrder, "ÎïÁÏÅÌµã±¨±í.xls");
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¯¼å‡ºæˆåŠŸï¼');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µ¼³ö³É¹¦£¡');", true);
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppCreateProjectTaskDetail.aspx.cs" Inherits="TTAppCreateProjectTaskDetail" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppCreateProjectTaskDetail.aspx.cs" Inherits="TTAppCreateProjectTaskDetail" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=1" />
 
@@ -78,7 +78,7 @@
                                                                     </td>
                                                                 </tr>
                                                             </table>
-                                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="è¯·ç¨å€™ï¼Œå¤„ç†ä¸­..." style="display: none;" />
+                                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖÐ..." style="display: none;" />
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -264,7 +264,7 @@
                                                                     <tr style="display: none;">
                                                                         <td style="text-align: left;" class="formItemBgStyle">
                                                                             <strong>
-                                                                                <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,FenPaiXiangMuRenWuGeiXiangMuZuChengYuan%>"></asp:Label>ï¼š</strong>
+                                                                                <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,FenPaiXiangMuRenWuGeiXiangMuZuChengYuan%>"></asp:Label>£º</strong>
                                                                             <asp:Label ID="LB_Status" runat="server" Visible="False"></asp:Label>
                                                                             <asp:Label ID="LB_TaskID" runat="server" Visible="False"></asp:Label>
                                                                         </td>
@@ -416,7 +416,7 @@
 
                         <tr style="display: none;">
                             <td>
-                                <asp:HyperLink ID="HL_RunTaskByWF" runat="server" Enabled="False">---&gt;<asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,RenWuChuLiLiuChengMoShi%>"></asp:Label>ï¼‰</asp:HyperLink>
+                                <asp:HyperLink ID="HL_RunTaskByWF" runat="server" Enabled="False">---&gt;<asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,RenWuChuLiLiuChengMoShi%>"></asp:Label>£©</asp:HyperLink>
                                 &nbsp;
                                                                     <asp:HyperLink ID="HL_TaskReview" runat="server" Enabled="False">---&gt;<asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,RenWuPingShen%>"></asp:Label></asp:HyperLink>
                                 &nbsp;&nbsp;<asp:HyperLink ID="HL_RelatedWorkFlowTemplate" runat="server" NavigateUrl="TTProRelatedWFTemplate.aspx"

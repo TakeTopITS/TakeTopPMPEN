@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDSelectorWeldTypeList.aspx.cs" Inherits="TTGDSelectorWeldTypeList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDSelectorWeldTypeList.aspx.cs" Inherits="TTGDSelectorWeldTypeList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -11,7 +11,7 @@
 
     <script type="text/jscript">
 
-        //ÂçïÈÄâÊã©ÊåâÈíÆÂà§Êñ≠
+        //µ•—°‘Ò∞¥≈•≈–∂œ
         function chooseUpdate() {
             var str = "";
             $("input[name=name1]").each(function () {
@@ -21,7 +21,7 @@
             });
 
             if (str == "") {
-                alert('ËØ∑ÈÄâÊã©ËÆ∞ÂΩïÈ°πÔºÅ');
+                alert('«Î—°‘Òº«¬ºœÓ£°');
                 return false;
             }
             else {
@@ -124,13 +124,13 @@
                                                                         <input id='<%#Eval("Type") %>' type="radio" name="name1" />
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="Type" HeaderText="Á±ªÂûã">
+                                                                <asp:BoundColumn DataField="Type" HeaderText="¿‡–Õ">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="Description" HeaderText="ËØ¥Êòé">
+                                                                <asp:BoundColumn DataField="Description" HeaderText="Àµ√˜">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="Factor" HeaderText="Á≥ªÊï∞">
+                                                                <asp:BoundColumn DataField="Factor" HeaderText="œµ ˝">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                 </asp:BoundColumn>
                                                             </Columns>
@@ -148,10 +148,10 @@
                                             <tr>
                                                 <td class="formItemBgStyle">
                                                     <div style="text-align: center">
-                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="Á°ÆÂÆö" />
+                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="»∑∂®" />
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                            type="button" value="ÂÖ≥Èó≠" />
+                                                            type="button" value="Closed" />
                                                     </div>
                                                 </td>
                                             </tr>

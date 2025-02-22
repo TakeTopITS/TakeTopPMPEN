@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCNStringToOtherLanguage.aspx.cs" Inherits="TTCNStringToOtherLanguage" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCNStringToOtherLanguage.aspx.cs" Inherits="TTCNStringToOtherLanguage" %>
 
 <!DOCTYPE html>
 

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsSafetyStockReport.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsSafetyStockReport.aspx.cs"
     Inherits="TTGoodsSafetyStockReport" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -47,13 +47,13 @@
 
                             <tr>
                                 <td style="text-align: right;">
-                                    <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>ï¼š
+                                    <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>£º
                                 </td>
                                 <td>
                                     <asp:TextBox ID="TB_GoodsCode" runat="server" Width="190px"></asp:TextBox>
                                 </td>
                                 <td style="text-align: right;">
-                                    <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>ï¼š
+                                    <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º
                                 </td>
                                 <td>
                                     <asp:TextBox ID="TB_GoodsName" runat="server" Width="190px"></asp:TextBox>
@@ -61,7 +61,7 @@
                             </tr>
                             <tr>
                                 <td style="text-align: right;">
-                                    <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,GuiGe%>"></asp:Label>ï¼š</td>
+                                    <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,GuiGe%>"></asp:Label>£º</td>
                                 <td>
                                     <asp:TextBox ID="TB_Spec" runat="server" Width="99%"></asp:TextBox>
                                 </td>
@@ -77,7 +77,7 @@
                                 </td>
                                 <td align ="right">
                                     <a href="#" onclick="preview1()">
-                                        <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" /></a>
+                                        <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" /></a>
 
                                 </td>
                             </tr>
@@ -149,30 +149,30 @@
                                         ShowHeader="false" Height="1px"
                                         Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                         <Columns>
-                                            <asp:BoundColumn DataField="GoodsCode" HeaderText="ä»£ç ">
+                                            <asp:BoundColumn DataField="GoodsCode" HeaderText="´úÂë">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
 
                                             <asp:HyperLinkColumn DataNavigateUrlField="GoodsCode" DataNavigateUrlFormatString="TTGoodsInforView.aspx?GoodsCode={0}"
-                                                DataTextField="GoodsName" HeaderText="åç§°" Target="_blank">
+                                                DataTextField="GoodsName" HeaderText="Ãû³Æ" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                             </asp:HyperLinkColumn>
-                                            <asp:BoundColumn DataField="ModelNumber" HeaderText="åž‹å·">
+                                            <asp:BoundColumn DataField="ModelNumber" HeaderText="ÐÍºÅ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Specification" HeaderText="è§„æ ¼">
+                                            <asp:BoundColumn DataField="Specification" HeaderText="¹æ¸ñ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="SafetyStock" HeaderText="å®‰å…¨åº“å­˜">
+                                            <asp:BoundColumn DataField="SafetyStock" HeaderText="°²È«¿â´æ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="StockNumber" HeaderText="çœŸå®žåº“å­˜">
+                                            <asp:BoundColumn DataField="StockNumber" HeaderText="ÕæÊµ¿â´æ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Banlance" HeaderText="å·®é¢">
+                                            <asp:BoundColumn DataField="Banlance" HeaderText="²î¶î">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="UnitName" HeaderText="å•ä½">
+                                            <asp:BoundColumn DataField="UnitName" HeaderText="µ¥Î»">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
                                         </Columns>

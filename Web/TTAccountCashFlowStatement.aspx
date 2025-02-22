@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAccountCashFlowStatement.aspx.cs" Inherits="TTAccountCashFlowStatement" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAccountCashFlowStatement.aspx.cs" Inherits="TTAccountCashFlowStatement" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>Áé∞ÈáëÊµÅÈáèË°®</title>
+    <title>œ÷Ω¡˜¡ø±Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -66,13 +66,13 @@
                                                                                     <table width="100%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                                                         <tr>
                                                                                             <td class="formItemBgStyle" style="text-align: right">
-                                                                                                <asp:Label ID="LB_CaiWuZhangTao" runat="server" Text="<%$ Resources:lang,CaiWuZhangTao%>"></asp:Label>Ôºö</td>
+                                                                                                <asp:Label ID="LB_CaiWuZhangTao" runat="server" Text="<%$ Resources:lang,CaiWuZhangTao%>"></asp:Label>£∫</td>
                                                                                             <td class="formItemBgStyle" style="text-align: left">
                                                                                                 <asp:DropDownList ID="DL_Financial" runat="server" DataTextField="FinancialName" DataValueField="FinancialCode" AutoPostBack="True" OnSelectedIndexChanged="DL_Financial_SelectedIndexChanged">
                                                                                                 </asp:DropDownList>
                                                                                             </td>
                                                                                             <td align="right" class="formItemBgStyle">
-                                                                                                <asp:Label ID="LB_CaiWuQuJian" runat="server" Text="<%$ Resources:lang,CaiWuQuJian%>"></asp:Label>Ôºö</td>
+                                                                                                <asp:Label ID="LB_CaiWuQuJian" runat="server" Text="<%$ Resources:lang,CaiWuQuJian%>"></asp:Label>£∫</td>
                                                                                             <td align="left" class="formItemBgStyle">
                                                                                                 <asp:DropDownList ID="DL_Interval" runat="server" DataTextField="IntervalName" DataValueField="IntervalCode">
                                                                                                 </asp:DropDownList>
@@ -123,27 +123,27 @@
                                                                                         OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="5" ShowHeader="False"
                                                                                         Width="100%">
                                                                                         <Columns>
-                                                                                            <asp:BoundColumn DataField="AccountType" HeaderText="ÁßëÁõÆÁ±ªÂûã">
+                                                                                            <asp:BoundColumn DataField="AccountType" HeaderText="ø∆ƒø¿‡–Õ">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="AccountName" HeaderText="‰ºöËÆ°ÁßëÁõÆ">
+                                                                                            <asp:BoundColumn DataField="AccountName" HeaderText="ª·º∆ø∆ƒø">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="BeforeMoney" HeaderText="ÊúüÂàùÈáëÈ¢ù">
+                                                                                            <asp:BoundColumn DataField="BeforeMoney" HeaderText="∆⁄≥ıΩ∂Ó">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="HappenMoney" HeaderText="ÂèëÁîüÈáëÈ¢ù">
+                                                                                            <asp:BoundColumn DataField="HappenMoney" HeaderText="∑¢…˙Ω∂Ó">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="BackMoney" HeaderText="ÊúüÊú´ÈáëÈ¢ù">
+                                                                                            <asp:BoundColumn DataField="BackMoney" HeaderText="∆⁄ƒ©Ω∂Ó">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="CurrencyType" HeaderText="Â∏ÅÁßç">
+                                                                                            <asp:BoundColumn DataField="CurrencyType" HeaderText="±“÷÷">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                                             </asp:BoundColumn>

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration.Internal;
@@ -31,7 +31,7 @@ public partial class TakeTopSoftRent_DeleteSiteAuto : System.Web.UI.Page
         strSiteName = Request.QueryString["SiteName"];
         strSiteAppName = Request.QueryString["SiteAppName"];
 
-        LB_Message.Text = "æ­£åœ¨åˆ é™¤ä½ çš„åº”ç”¨ç«™ç‚¹ï¼Œå¤§æ¦‚éœ€è¦5åˆ†é’Ÿï¼Œè¯·è€å¿ƒç­‰å€™......";
+        LB_Message.Text = "ÕıÔÚÉ¾³ıÄãµÄÓ¦ÓÃÕ¾µã£¬´ó¸ÅĞèÒª5·ÖÖÓ£¬ÇëÄÍĞÄµÈºò......";
 
         if (Page.IsPostBack == false)
         {
@@ -39,18 +39,18 @@ public partial class TakeTopSoftRent_DeleteSiteAuto : System.Web.UI.Page
             {
                 try
                 {
-                    //åˆ é™¤ç«™ç‚¹
+                    //É¾³ıÕ¾µã
                     DeleteSite();
-                    LB_Message.Text = "ç«™ç‚¹åˆ é™¤æˆåŠŸï¼";
+                    LB_Message.Text = "Õ¾µãÉ¾³ı³É¹¦£¡";
                 }
                 catch (Exception err)
                 {
-                    LB_Message.Text = "åˆ é™¤å¤±è´¥ï¼Œè¯·æ£€æŸ¥ï¼";
+                    LB_Message.Text = "É¾³ıÊ§°Ü£¬Çë¼ì²é£¡";
                 }
             }
             else
             {
-                LB_Message.Text = "æç¤ºï¼Œæ­¤ç«™ç‚¹ä¸å­˜åœ¨ï¼Œè¯·æ£€æŸ¥ï¼";
+                LB_Message.Text = "ÌáÊ¾£¬´ËÕ¾µã²»´æÔÚ£¬Çë¼ì²é£¡";
             }
 
             IMB_Process.Visible = false;
@@ -58,7 +58,7 @@ public partial class TakeTopSoftRent_DeleteSiteAuto : System.Web.UI.Page
         }
     }
 
-    //åˆ é™¤ç«™ç‚¹
+    //É¾³ıÕ¾µã
     protected void DeleteSite()
     {
         string strSiteName, strSiteAppName, strSiteAppSystemName, strSiteDirectory, strSiteVirtualDirectoryPhysicalPath, strSiteTemplateDirectory, strDBLoginUserID, strDBUserLoginPassword, strSiteDBName, strSiteAppURL, strRentProductName, strRentUserEMail, strServerType;
@@ -79,7 +79,7 @@ public partial class TakeTopSoftRent_DeleteSiteAuto : System.Web.UI.Page
         strSiteVirtualDirectoryPhysicalPath = Request.QueryString["SiteVirtualDirectoryPhysicalPath"];
         strServerType = Request.QueryString["ServerType"];
 
-        ////é…ç½®POSTGRESQLæ•°æ®åº“çš„ç¯å¢ƒå˜é‡
+        ////ÅäÖÃPOSTGRESQLÊı¾İ¿âµÄ»·¾³±äÁ¿
         //try
         //{
         //    ShareClass.ConfigPostgreSqlPGPassFile(strSiteDBName);
@@ -94,12 +94,12 @@ public partial class TakeTopSoftRent_DeleteSiteAuto : System.Web.UI.Page
 
         DeleteSiteApplicationPool(strSiteAppName + "Pool");
 
-        //åˆ é™¤ç«™ç‚¹ä¸‹çš„æ‰€æœ‰æ–‡ä»¶
+        //É¾³ıÕ¾µãÏÂµÄËùÓĞÎÄ¼ş
         DeleteDirectory(strSiteDirectory);
 
         try
         {
-            //å¤‡ä»½æ•°æ®åº“
+            //±¸·İÊı¾İ¿â
             string strBackupPath = strSiteVirtualDirectoryPhysicalPath + "\\BackupDB";
             ShareClass.BackupOEMSiteDB(strSiteDBName, strBackupPath, "SiteCreator");
 
@@ -111,20 +111,20 @@ public partial class TakeTopSoftRent_DeleteSiteAuto : System.Web.UI.Page
         }
     }
 
-    //ç›´æ¥åˆ é™¤æŒ‡å®šç›®å½•ä¸‹çš„æ‰€æœ‰æ–‡ä»¶åŠæ–‡ä»¶å¤¹
+    //Ö±½ÓÉ¾³ıÖ¸¶¨Ä¿Â¼ÏÂµÄËùÓĞÎÄ¼ş¼°ÎÄ¼ş¼Ğ
     public static void DeleteDirectory(string strDirectory)
     {
         try
         {
-            //å»é™¤æ–‡ä»¶å¤¹å’Œå­æ–‡ä»¶çš„åªè¯»å±æ€§
-            //å»é™¤æ–‡ä»¶å¤¹çš„åªè¯»å±æ€§
+            //È¥³ıÎÄ¼ş¼ĞºÍ×ÓÎÄ¼şµÄÖ»¶ÁÊôĞÔ
+            //È¥³ıÎÄ¼ş¼ĞµÄÖ»¶ÁÊôĞÔ
             System.IO.DirectoryInfo fileInfo = new DirectoryInfo(strDirectory);
             fileInfo.Attributes = FileAttributes.Normal & FileAttributes.Directory;
 
-            //å»é™¤æ–‡ä»¶çš„åªè¯»å±æ€§
+            //È¥³ıÎÄ¼şµÄÖ»¶ÁÊôĞÔ
             System.IO.File.SetAttributes(strDirectory, System.IO.FileAttributes.Normal);
 
-            //åˆ¤æ–­æ–‡ä»¶å¤¹æ˜¯å¦è¿˜å­˜åœ¨
+            //ÅĞ¶ÏÎÄ¼ş¼ĞÊÇ·ñ»¹´æÔÚ
             if (Directory.Exists(strDirectory))
             {
                 foreach (string f in Directory.GetFileSystemEntries(strDirectory))
@@ -133,7 +133,7 @@ public partial class TakeTopSoftRent_DeleteSiteAuto : System.Web.UI.Page
                     {
                         try
                         {
-                            //å¦‚æœæœ‰å­æ–‡ä»¶åˆ é™¤æ–‡ä»¶
+                            //Èç¹ûÓĞ×ÓÎÄ¼şÉ¾³ıÎÄ¼ş
                             File.Delete(f);
                         }
                         catch
@@ -146,7 +146,7 @@ public partial class TakeTopSoftRent_DeleteSiteAuto : System.Web.UI.Page
                         {
                             if (!f.Contains("Logo"))
                             {
-                                //å¾ªç¯é€’å½’åˆ é™¤å­æ–‡ä»¶å¤¹
+                                //Ñ­»·µİ¹éÉ¾³ı×ÓÎÄ¼ş¼Ğ
                                 DeleteDirectory(f);
                             }
                         }
@@ -156,11 +156,11 @@ public partial class TakeTopSoftRent_DeleteSiteAuto : System.Web.UI.Page
                     }
                 }
 
-                //åˆ é™¤ç©ºæ–‡ä»¶å¤¹
+                //É¾³ı¿ÕÎÄ¼ş¼Ğ
                 Directory.Delete(strDirectory);
             }
         }
-        catch (Exception ex) // å¼‚å¸¸å¤„ç†
+        catch (Exception ex) // Òì³£´¦Àí
         {
         }
     }
@@ -168,7 +168,7 @@ public partial class TakeTopSoftRent_DeleteSiteAuto : System.Web.UI.Page
 
 
     /// <summary> 
-    /// åˆ é™¤ä¸€ä¸ªç½‘ç«™ä¸‹é¢çš„åº”ç”¨
+    /// É¾³ıÒ»¸öÍøÕ¾ÏÂÃæµÄÓ¦ÓÃ
     /// </summary> 
     /// <param name="siteName">Site name.</param> 
     public void DeleteSiteApp(string siteName, string siteAppName)
@@ -186,7 +186,7 @@ public partial class TakeTopSoftRent_DeleteSiteAuto : System.Web.UI.Page
         }
     }
 
-    //åˆ é™¤ä¸€ä¸ªåº”ç”¨ç¨‹åºæ± 
+    //É¾³ıÒ»¸öÓ¦ÓÃ³ÌĞò³Ø
     public void DeleteSiteApplicationPool(String poolName)
     {
         ServerManager iisManager = new ServerManager();
@@ -194,7 +194,7 @@ public partial class TakeTopSoftRent_DeleteSiteAuto : System.Web.UI.Page
         iisManager.ApplicationPools.Remove(appPool); iisManager.CommitChanges();
     }
 
-    //åˆ¤æ–­ç«™ç‚¹åº”ç”¨æ˜¯å¦å­˜åœ¨
+    //ÅĞ¶ÏÕ¾µãÓ¦ÓÃÊÇ·ñ´æÔÚ
     public bool VerifyWebSiteAppIsExist(string siteName, string siteAppName)
     {
         using (ServerManager mgr = new ServerManager())

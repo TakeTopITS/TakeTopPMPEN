@@ -1,4 +1,4 @@
-Ôªøusing ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System; using System.Resources;
 using System.Collections;
@@ -57,7 +57,7 @@ public partial class TTNewCustomAdd : System.Web.UI.Page
 
 
     /// <summary>
-    ///  Á±ªÂûã
+    ///  ¿‡–Õ
     /// </summary>
     protected void DL_WLType_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -68,7 +68,7 @@ public partial class TTNewCustomAdd : System.Web.UI.Page
         {
             return;
         }
-        strHQL = "Select TemName,IdentifyString From T_WorkFlowTemplate Where type = " + "'" + strWLType + "'" + " and Authority = 'ÊâÄÊúâ'";
+        strHQL = "Select TemName,IdentifyString From T_WorkFlowTemplate Where type = " + "'" + strWLType + "'" + " and Authority = 'All'";
 
         strHQL += " Order by CreateTime DESC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTemplate");
@@ -95,7 +95,7 @@ public partial class TTNewCustomAdd : System.Web.UI.Page
         else {
             customModuleBLL.AddCustomModule(customModule);
         }
-        //Response.Write("<script>alert('‰øùÂ≠òÊàêÂäüÔºÅ');</script>");
+        //Response.Write("<script>alert('±£¥Ê≥…π¶£°');</script>");
         Response.Redirect("TTNewCustomList.aspx");
     }
 }

@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System; using System.Resources;
 using System.Collections;
@@ -64,7 +64,7 @@ public partial class TTWZSupplierBrowse : System.Web.UI.Page
             TXT_PushUnit.Text = ShareClass.ObjectToString(drSupplier["PushUnit"]);
             TXT_PushPerson.Text = ShareClass.ObjectToString(drSupplier["PushPerson"]);
 
-            //é™„ä»¶åˆ—è¡¨
+            //¸½¼þÁÐ±í
             string strInDocument = ShareClass.ObjectToString(drSupplier["InDocument"]);
             string strInDocumentURL = ShareClass.ObjectToString(drSupplier["InDocumentURL"]);
 

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopDataCheckForQuestionHandle.aspx.cs" Inherits="TakeTopDataCheckForQuestionHandle" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopDataCheckForQuestionHandle.aspx.cs" Inherits="TakeTopDataCheckForQuestionHandle" %>
 
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -54,7 +54,7 @@
                             <table style="width: 100%;" cellpadding="3" cellspacing="0" class="formBgStyle" >
                                 <tr>
                                     <td style="text-align: right; width: 10%;" class="formItemBgStyle">
-                                        <asp:Label ID="Label2" runat="server" Text="SQLCode"></asp:Label>ï¼š
+                                        <asp:Label ID="Label2" runat="server" Text="SQLCode"></asp:Label>£º
                                     </td>
                                     <td class="formItemBgStyle" style="width: 80%;">
                                         <asp:TextBox ID="TB_SQLCode" runat="server" Width="99%" Height="300px" TextMode="MultiLine"></asp:TextBox>
@@ -79,7 +79,7 @@
                                                     <asp:Button ID="BT_ExportToExcel" runat="server" CssClass="inpu" OnClick="BT_ExportToExcel_Click" Text="<%$ Resources:lang,DaoChuDaoExcel%>" />
                                                 </td>
                                                 <td width="140px"><a href="#" onclick="preview()">
-                                                    <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" />
+                                                    <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" />
                                                 </a></td>
                                             </tr>
                                         </table>

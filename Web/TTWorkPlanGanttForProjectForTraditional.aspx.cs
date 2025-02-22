@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Linq;
 using TakeTopGantt.models;
 
@@ -17,9 +17,9 @@ public partial class TTWorkPlanGanttForProjectForTraditional : System.Web.UI.Pag
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //ToInt32ä¼šå°†ä¸èƒ½è¯†åˆ«ä¸ºintçš„æ•°æ®å˜ä¸º0
+        //ToInt32»á½«²»ÄÜÊ¶±ğÎªintµÄÊı¾İ±äÎª0
         pid = Convert.ToInt32(Request["pid"]);
-        //è·å–æœ€å°çš„å¼€å§‹æ—¶é—´å’Œæœ€å¤§çš„ç»“æŸæ—¶é—´
+        //»ñÈ¡×îĞ¡µÄ¿ªÊ¼Ê±¼äºÍ×î´óµÄ½áÊøÊ±¼ä
         //pid = Math.Max(pid, 1);
 
         strProjectStatus = ShareClass.GetProjectStatus(pid.ToString());
@@ -30,19 +30,19 @@ public partial class TTWorkPlanGanttForProjectForTraditional : System.Web.UI.Pag
         {
             if (Session["WeekendFirstDay"] == null)
             {
-                //å–å¾—å‘¨æœ«å¼€å§‹æ—¥
+                //È¡µÃÖÜÄ©¿ªÊ¼ÈÕ
                 Session["WeekendFirstDay"] = ShareClass.GetWeekendFirstDay();
             }
 
             if (Session["WeekendSecondDay"] == null)
             {
-                //å–å¾—å‘¨æœ«ç»“æŸæ—¥
+                //È¡µÃÖÜÄ©½áÊøÈÕ
                 Session["WeekendSecondDay"] = ShareClass.GetWeekendSecondDay();
             }
 
             if (Session["WeekendsAreWorkdays"] == null)
             {
-                //å–å¾—å‘¨æœ«æ˜¯å¦å·¥ä½œæ—¥
+                //È¡µÃÖÜÄ©ÊÇ·ñ¹¤×÷ÈÕ
                 Session["WeekendsAreWorkdays"] = ShareClass.GetWeekendsAreWorkdays();
             }
         }
@@ -70,7 +70,7 @@ public partial class TTWorkPlanGanttForProjectForTraditional : System.Web.UI.Pag
             }
             else
             {
-                strVerID = ShareClass.GetProjectPlanVersion(strProjectID, "åœ¨ç”¨").ToString();
+                strVerID = ShareClass.GetProjectPlanVersion(strProjectID, "InUse").ToString();
                 if (strVerID == "0")
                 {
                     strVerID = ShareClass.GetLargestProjectPlanVerID(strProjectID);
@@ -82,7 +82,7 @@ public partial class TTWorkPlanGanttForProjectForTraditional : System.Web.UI.Pag
             Session["VerIDForGantt"] = strVerID;
         }
 
-        //åˆ¤æ–­å½“å‰ç”¨æˆ·èƒ½å¦æ›´æ”¹è®¡åˆ’
+        //ÅĞ¶Ïµ±Ç°ÓÃ»§ÄÜ·ñ¸ü¸Ä¼Æ»®
         strUserIsCanUpdatePlan = LB_UserIsCanUpdatePlan.Text;
 
         LB_VerID.Text = strVerID;
@@ -96,18 +96,18 @@ public partial class TTWorkPlanGanttForProjectForTraditional : System.Web.UI.Pag
             Response.Redirect("TTWorkPlanGanttForProjectForTraditional.aspx?pid=1");
         }
 
-        //åœ¨c#ä¸­,åº”è¯¥ä½¿ç”¨DateTime.Nowè€Œä¸æ˜¯new DateTime() æ¥è·å–å½“å‰æ—¶é—´
+        //ÔÚc#ÖĞ,Ó¦¸ÃÊ¹ÓÃDateTime.Now¶ø²»ÊÇnew DateTime() À´»ñÈ¡µ±Ç°Ê±¼ä
         DateTime today = DateTime.Now;
         g_start = datetime2MS(today);
         g_end = datetime2MS(today.AddYears(1));
 
 
-        //è·å–æ•´ä¸ªé¡¹ç›®çš„æ—¶é—´èŒƒå›´
+        //»ñÈ¡Õû¸öÏîÄ¿µÄÊ±¼ä·¶Î§
         TakeTopGantt.models.extganttDataContext db = new extganttDataContext();
         var allTasks = db.task.Where(b => b.pid == pid);
         try
         {
-            //å®šä¹‰ç”˜ç‰¹å›¾çš„æ—¶é—´èŒƒå›´
+            //¶¨Òå¸ÊÌØÍ¼µÄÊ±¼ä·¶Î§
             g_start = datetime2MS(allTasks.Min(s => s.start_date).Value);
             g_end = datetime2MS(allTasks.Max(s => s.end_date).Value);
         }
@@ -121,14 +121,14 @@ public partial class TTWorkPlanGanttForProjectForTraditional : System.Web.UI.Pag
 
             try
             {
-                //ä¾åœ¨ç”¨ç‰ˆé¡¹ç›®è®¡åˆ’è¿›åº¦æ›´æ”¹å½“å‰æ—¶é—´é¡¹ç›®å®Œæˆè¿›åº¦
+                //ÒÀÔÚÓÃ°æÏîÄ¿¼Æ»®½ø¶È¸ü¸Äµ±Ç°Ê±¼äÏîÄ¿Íê³É½ø¶È
                 ShareClass.UpdateProjectScheduleByActivityPlanSchedule(strProjectID);
 
-                //æŠŠè´Ÿè´£äººä»£ç ä¸ºç©ºæ›´æ–°ä¸ºä¸ä¸ºç©º
+                //°Ñ¸ºÔğÈË´úÂëÎª¿Õ¸üĞÂÎª²»Îª¿Õ
                 ShareClass.UpdateProjectWorkPlanLeaderCodeToNotNull(strProjectID, strVerID);
 
-                //æ›´æ–°åŸºå‡†ç‰ˆæœ¬è®¡åˆ’çš„è¿›åº¦
-                if (strVerID == ShareClass.GetProjectPlanVerID(strProjectID, "åŸºå‡†").ToString())
+                //¸üĞÂ»ù×¼°æ±¾¼Æ»®µÄ½ø¶È
+                if (strVerID == ShareClass.GetProjectPlanVerID(strProjectID, "Baseline").ToString())
                 {
                     string strHQL;
 
@@ -137,7 +137,7 @@ public partial class TTWorkPlanGanttForProjectForTraditional : System.Web.UI.Pag
                     ShareClass.RunSqlCommand(strHQL);
                 }
 
-                //åˆ¤æ–­å½“å‰ç”¨æˆ·èƒ½å¦æ›´æ”¹è®¡åˆ’
+                //ÅĞ¶Ïµ±Ç°ÓÃ»§ÄÜ·ñ¸ü¸Ä¼Æ»®
                 LB_UserIsCanUpdatePlan.Text = ShareClass.CheckUserIsCanUpdatePlan(projectID.ToString(), strVerID);
                 strUserIsCanUpdatePlan = LB_UserIsCanUpdatePlan.Text;
             }

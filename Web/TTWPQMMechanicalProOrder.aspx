@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMMechanicalProOrder.aspx.cs" Inherits="TTWPQMMechanicalProOrder" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMMechanicalProOrder.aspx.cs" Inherits="TTWPQMMechanicalProOrder" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -8,7 +8,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>Êú∫Ê¢∞Âä†Â∑•ÂßîÊâòÂçï</title>
+    <title>ª˙–µº”π§ŒØÕ–µ•</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script src="js/allAHandler.js" type="text/javascript"></script>
@@ -104,7 +104,7 @@
                                     </tr>
                                     <tr>
                                         <td align="right" style="width: 150px;" class="formItemBgStyle">
-                                            <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,JiaGongShuoMing%>"></asp:Label>Ôºö</td>
+                                            <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,JiaGongShuoMing%>"></asp:Label>£∫</td>
                                         <td align="left" class="formItemBgStyle" colspan="5">
                                             <asp:TextBox ID="TB_MachanicalProInstro" runat="server" CssClass="shuru" Width="98%"></asp:TextBox>
                                         </td>
@@ -141,7 +141,7 @@
                                 </table>
                                 <table cellpadding="2" cellspacing="0" class="formBgStyle" width="95%">
                                     <tr>
-                                        <td align="center" style="text-align: left" class="formItemBgStyle">&nbsp;&nbsp;&nbsp; <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,JXJGWTDLB%>"></asp:Label>Ôºö</td>
+                                        <td align="center" style="text-align: left" class="formItemBgStyle">&nbsp;&nbsp;&nbsp; <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,JXJGWTDLB%>"></asp:Label>£∫</td>
                                     </tr>
                                     <tr>
                                         <td align="center" class="formItemBgStyle">
@@ -184,7 +184,7 @@
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="ÁºñÂè∑">
+                                                    <asp:TemplateColumn HeaderText="±‡∫≈">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
@@ -192,30 +192,30 @@
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="WeldProCode" HeaderText="Â∑•Ëâ∫ËØÑÂÆöÁºñÁ†Å">
+                                                    <asp:BoundColumn DataField="WeldProCode" HeaderText="π§“’∆¿∂®±‡¬Î">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="MachiningProject" HeaderText="ÂßîÊâòÈ°πÁõÆ">
+                                                    <asp:BoundColumn DataField="MachiningProject" HeaderText="ŒØÕ–œÓƒø">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="ProCommDate" HeaderText="ÂßîÊâòÊó•Êúü" DataFormatString="{0:yyyy-MM-dd}">
+                                                    <asp:BoundColumn DataField="ProCommDate" HeaderText="ŒØÕ–»’∆⁄" DataFormatString="{0:yyyy-MM-dd}">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="MacComSpeNumber" HeaderText="ËØï‰ª∂Êï∞Èáè">
+                                                    <asp:BoundColumn DataField="MacComSpeNumber" HeaderText=" ‘º˛ ˝¡ø">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:HyperLinkColumn DataNavigateUrlField="MachiningDrawPath" DataNavigateUrlFormatString="{0}" DataTextField="MachiningProject" HeaderText="Âä†Â∑•ÈôÑÂõæ" Target="_blank">
+                                                    <asp:HyperLinkColumn DataNavigateUrlField="MachiningDrawPath" DataNavigateUrlFormatString="{0}" DataTextField="MachiningProject" HeaderText="º”π§∏ΩÕº" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="12%" />
                                                     </asp:HyperLinkColumn>
-                                                    <asp:BoundColumn DataField="MachanicalProInstro" HeaderText="Âä†Â∑•ËØ¥Êòé">
+                                                    <asp:BoundColumn DataField="MachanicalProInstro" HeaderText="º”π§Àµ√˜">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />

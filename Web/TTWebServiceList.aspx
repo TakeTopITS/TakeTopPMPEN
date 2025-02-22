@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWebServiceList.aspx.cs" Inherits="TTWebServiceList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWebServiceList.aspx.cs" Inherits="TTWebServiceList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Web Serviceè®¾å®š</title>
+    <title>Web ServiceÉè¶¨</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -46,7 +46,7 @@
                                     <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                         <tr style="font-size: 12pt;">
                                             <td align="right" class="formItemBgStyle">
-                                                <input type="button" class="inpuLong" value="æ–°å¢žWeb Service" onclick="window.location.href = 'TTAddWebService.aspx'" />
+                                                <input type="button" class="inpuLong" value="ÐÂÔöWeb Service" onclick="window.location.href = 'TTAddWebService.aspx'" />
                                             </td>
                                         </tr>
                                         <tr style="font-size: 12pt">
@@ -55,22 +55,22 @@
                                                     CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="5" ShowHeader="True"
                                                     Width="100%" OnItemCommand="DG_WebServiceList_ItemCommand" OnItemDataBound="DG_WebServiceList_ItemDataBound">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="WebServiceName" HeaderText="Web Serviceåç§°">
+                                                        <asp:BoundColumn DataField="WebServiceName" HeaderText="Web ServiceÃû³Æ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="WebServiceURI" HeaderText="Web Serviceåœ°å€">
+                                                        <asp:BoundColumn DataField="WebServiceURI" HeaderText="Web ServiceµØÖ·">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="MethodName" HeaderText="æ–¹æ³•å">
+                                                        <asp:BoundColumn DataField="MethodName" HeaderText="·½·¨Ãû">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ArgArray" HeaderText="å‚æ•°">
+                                                        <asp:BoundColumn DataField="ArgArray" HeaderText="²ÎÊý">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CreatorName" HeaderText="åˆ›å»ºäºº">
+                                                        <asp:BoundColumn DataField="CreatorName" HeaderText="´´½¨ÈË">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="åˆ›å»ºæ—¶é—´">
+                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="´´½¨Ê±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:TemplateColumn>
@@ -78,7 +78,7 @@
                                                                 <a href='TTAddWebService.aspx?id=<%# DataBinder.Eval(Container.DataItem,"ID") %>'>
                                                                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BianJi%>"></asp:Label>
                                                                 </a>&nbsp;&nbsp;
-                                                            <asp:LinkButton ID="LB_Del" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del">åˆ é™¤</asp:LinkButton>
+                                                            <asp:LinkButton ID="LB_Del" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del">É¾³ý</asp:LinkButton>
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:TemplateColumn>

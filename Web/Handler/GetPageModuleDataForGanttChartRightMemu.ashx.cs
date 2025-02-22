@@ -12,6 +12,7 @@ namespace TakeTopGantt.handler
     /// </summary>
     public class GetPageModuleDataForGanttChartRightMemu : IHttpHandler
     {
+
         public void ProcessRequest(HttpContext context)
         {
             DataTable dt = GetNotToFormList(context.Request);
@@ -30,7 +31,8 @@ namespace TakeTopGantt.handler
                 string strLangCode = request.QueryString["LangCode"];
                 string strNotToFormHQL = string.Format(@"
                             Select trim(HomeModuleName)  HomeModuleName,trim(PageName) PageName,Replace(Replace(Replace(Replace( Replace(trim(PageName),'?',''),'.',''),':',''),'//',''),'=','') as ModuleLabel From T_ProModuleLevelForPage 
-                            Where ParentModule = '项目计划菜单' and char_length(rtrim(HomeModuleName)) > 0 and rtrim(PageName) <> '' 
+                            Where ParentModule = 'ProjectPlanMenu' and char_length(rtrim(HomeModuleName)) > 0 and rtrim(PageName) <> '' 
+                          
                             and Visible = 'YES'
                             and IsDeleted = 'NO'
                             and LangCode = '{0}'

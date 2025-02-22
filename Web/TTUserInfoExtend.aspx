@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInfoExtend.aspx.cs" Inherits="TTUserInfoExtend" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInfoExtend.aspx.cs" Inherits="TTUserInfoExtend" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
@@ -48,7 +48,7 @@
                                                         <asp:Label ID="LB_SelectUserCode" runat="server"></asp:Label>
                                                         &nbsp;&nbsp; 
                                                         <asp:Label ID="LB_SelectUserName" runat="server"></asp:Label>&nbsp;
-                                                        <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,YuanGongDanAnSeZhi%>"></asp:Label>ï¼ˆ2ï¼‰
+                                                        <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,YuanGongDanAnSeZhi%>"></asp:Label>£¨2£©
                                                     </td>
                                                     <td width="5">
                                                         <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -57,7 +57,7 @@
                                             </table>
                                         </td>
                                         <td style="text-align: center; padding-top: 5px;">
-                                            <asp:Button runat="server" ID="BT_Save" CssClass="inpuYello " Visible="true" Text="ä¿å­˜" OnClick="BT_Save_Click" />
+                                            <asp:Button runat="server" ID="BT_Save" CssClass="inpuYello " Visible="true" Text="±£´æ" OnClick="BT_Save_Click" />
                                         </td>
                                     </tr>
                                 </table>
@@ -70,7 +70,7 @@
                                     cellpadding="3" cellspacing="0">
                                     <tr>
                                         <td style="width: 15%; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label4" runat="server" Text="1çº§éƒ¨é—¨"></asp:Label></td>
+                                            <asp:Label ID="Label4" runat="server" Text="1¼¶²¿ÃÅ"></asp:Label></td>
                                         <td style="width: 35%; text-align: left;" class="formItemBgStyle">
                                             <asp:TextBox ID="TB_TopDepartCode" runat="server"></asp:TextBox>
                                             <asp:Label ID="LB_TopDepartName" runat="server"></asp:Label>
@@ -80,126 +80,126 @@
                                             </cc1:ModalPopupExtender>
                                         </td>
                                         <td style="width: 15%; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label5" runat="server" Text="å¸é¾„"></asp:Label></td>
+                                            <asp:Label ID="Label5" runat="server" Text="Ë¾Áä"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="TB_EntryTotalYearMonth" Width="100" runat="server" ReadOnly></asp:TextBox>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label10" runat="server" Text="åŠžå…¬åœ°ç‚¹"></asp:Label></td>
+                                            <asp:Label ID="Label10" runat="server" Text="°ì¹«µØµã"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_OfficeAddress" runat="server">
-                                                <asp:ListItem Value="é›†å›¢" Text="é›†å›¢" />
-                                                <asp:ListItem Value="é¾™æ¸¯" Text="é¾™æ¸¯" />
-                                                <asp:ListItem Value="ç©ºæ¸¯" Text="ç©ºæ¸¯" />
-                                                <asp:ListItem Value="å¤–å‹¤" Text="å¤–å‹¤" />
+                                                <asp:ListItem Value="¼¯ÍÅ" Text="¼¯ÍÅ" />
+                                                <asp:ListItem Value="Áú¸Û" Text="Áú¸Û" />
+                                                <asp:ListItem Value="¿Õ¸Û" Text="¿Õ¸Û" />
+                                                <asp:ListItem Value="ÍâÇÚ" Text="ÍâÇÚ" />
                                             </asp:DropDownList>
                                         </td>
                                         <td style="height: 28px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label16" runat="server" Text="å‘˜å·¥ç±»åž‹"></asp:Label></td>
+                                            <asp:Label ID="Label16" runat="server" Text="Ô±¹¤ÀàÐÍ"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_UserTypeExtend" runat="server">
-                                                <asp:ListItem Value="æ— ç±»åž‹" Text="æ— ç±»åž‹" />
-                                                <asp:ListItem Value="å…¨èŒ" Text="å…¨èŒ" />
-                                                <asp:ListItem Value="å…¼èŒ" Text="å…¼èŒ" />
-                                                <asp:ListItem Value="å®žä¹ " Text="å®žä¹ " />
-                                                <asp:ListItem Value="åŠ³åŠ¡æ´¾é£" Text="åŠ³åŠ¡æ´¾é£" />
-                                                <asp:ListItem Value="é€€ä¼‘è¿”è˜" Text="é€€ä¼‘è¿”è˜" />
-                                                <asp:ListItem Value="åŠ³åŠ¡å¤–åŒ…" Text="åŠ³åŠ¡å¤–åŒ…" />
+                                                <asp:ListItem Value="NoType" Text="NoType" />
+                                                <asp:ListItem Value="Full-time" Text="Full-time" />
+                                                <asp:ListItem Value="Part-time" Text="Part-time" />
+                                                <asp:ListItem Value="Internship" Text="Internship" />
+                                                <asp:ListItem Value="LaborDispatch" Text="LaborDispatch" />
+                                                <asp:ListItem Value="RetirementRehire" Text="RetirementRehire" />
+                                                <asp:ListItem Value="LaborOutsourcing" Text="LaborOutsourcing" />
                                             </asp:DropDownList>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label1" runat="server" Text="å‘˜å·¥çŠ¶æ€"></asp:Label></td>
+                                            <asp:Label ID="Label1" runat="server" Text="Ô±¹¤×´Ì¬"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_UserState" runat="server">
-                                                <asp:ListItem Value="è¯•ç”¨" Text="è¯•ç”¨" />
-                                                <asp:ListItem Value="æ­£å¼" Text="æ­£å¼" />
+                                                <asp:ListItem Value="ÊÔÓÃ" Text="ÊÔÓÃ" />
+                                                <asp:ListItem Value="ÕýÊ½" Text="ÕýÊ½" />
                                             </asp:DropDownList>
                                         </td>
                                         <td style="height: 28px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label2" runat="server" Text="è¯•ç”¨æœŸ"></asp:Label></td>
+                                            <asp:Label ID="Label2" runat="server" Text="ÊÔÓÃÆÚ"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_ProbationPeriod" runat="server">
-                                                <asp:ListItem Value="æ— è¯•ç”¨æœŸ" Text="æ— è¯•ç”¨æœŸ" />
-                                                <asp:ListItem Value="1ä¸ªæœˆ" Text="1ä¸ªæœˆ" />
-                                                <asp:ListItem Value="2ä¸ªæœˆ" Text="2ä¸ªæœˆ" />
-                                                <asp:ListItem Value="3ä¸ªæœˆ" Text="3ä¸ªæœˆ" />
-                                                <asp:ListItem Value="4ä¸ªæœˆ" Text="4ä¸ªæœˆ" />
-                                                <asp:ListItem Value="5ä¸ªæœˆ" Text="5ä¸ªæœˆ" />
-                                                <asp:ListItem Value="6ä¸ªæœˆ" Text="6ä¸ªæœˆ" />
-                                                <asp:ListItem Value="å…¶ä»–" Text="å…¶ä»–" />
+                                                <asp:ListItem Value="ÎÞÊÔÓÃÆÚ" Text="ÎÞÊÔÓÃÆÚ" />
+                                                <asp:ListItem Value="1¸öÔÂ" Text="1¸öÔÂ" />
+                                                <asp:ListItem Value="2¸öÔÂ" Text="2¸öÔÂ" />
+                                                <asp:ListItem Value="3¸öÔÂ" Text="3¸öÔÂ" />
+                                                <asp:ListItem Value="4¸öÔÂ" Text="4¸öÔÂ" />
+                                                <asp:ListItem Value="5¸öÔÂ" Text="5¸öÔÂ" />
+                                                <asp:ListItem Value="6¸öÔÂ" Text="6¸öÔÂ" />
+                                                <asp:ListItem Value="Other" Text="Other" />
                                             </asp:DropDownList>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label3" runat="server" Text="å®žé™…è½¬æ­£æ—¥æœŸ"></asp:Label></td>
+                                            <asp:Label ID="Label3" runat="server" Text="Êµ¼Ê×ªÕýÈÕÆÚ"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="DLC_TurnOfficialDate" runat="server" Width="100px"></asp:TextBox>
                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender2" runat="server" TargetControlID="DLC_TurnOfficialDate" Enabled="True"></ajaxToolkit:CalendarExtender>
                                         </td>
                                         <td style="height: 28px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label6" runat="server" Text="æˆ·ç±ç±»åž‹"></asp:Label></td>
+                                            <asp:Label ID="Label6" runat="server" Text="»§¼®ÀàÐÍ"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_HouseRegisterType" runat="server">
-                                                <asp:ListItem Value="æœ¬åœ°åŸŽé•‡" Text="æœ¬åœ°åŸŽé•‡" />
-                                                <asp:ListItem Value="æœ¬åœ°å†œæ‘" Text="æœ¬åœ°å†œæ‘" />
-                                                <asp:ListItem Value="å¤–åœ°åŸŽé•‡ï¼ˆçœå¤–ï¼‰" Text="å¤–åœ°åŸŽé•‡ï¼ˆçœå¤–ï¼‰" />
-                                                <asp:ListItem Value="å¤–åœ°å†œæ‘ï¼ˆçœå¤–ï¼‰" Text="å¤–åœ°å†œæ‘ï¼ˆçœå¤–ï¼‰" />
+                                                <asp:ListItem Value="LocalUrban" Text="LocalUrban" />
+                                                <asp:ListItem Value="LocalRural" Text="LocalRural" />
+                                                <asp:ListItem Value="Non-localUrban(OutofProvince)" Text="Non-localUrban(OutofProvince)" />
+                                                <asp:ListItem Value="Non-localRural(OutofProvince)" Text="Non-localRural(OutofProvince)" />
                                             </asp:DropDownList>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label7" runat="server" Text="æ”¿æ²»é¢è²Œ"></asp:Label></td>
+                                            <asp:Label ID="Label7" runat="server" Text="ÕþÖÎÃæÃ²"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_PoliticalOutlook" runat="server">
-                                                <asp:ListItem Value="å›¢å‘˜" Text="å›¢å‘˜" />
-                                                <asp:ListItem Value="å…šå‘˜" Text="å…šå‘˜" />
-                                                <asp:ListItem Value="ç¾¤ä¼—" Text="ç¾¤ä¼—" />
-                                                <asp:ListItem Value="å…¶ä»–" Text="å…¶ä»–" />
+                                                <asp:ListItem Value="ÍÅÔ±" Text="ÍÅÔ±" />
+                                                <asp:ListItem Value="µ³Ô±" Text="µ³Ô±" />
+                                                <asp:ListItem Value="ÈºÖÚ" Text="ÈºÖÚ" />
+                                                <asp:ListItem Value="Other" Text="Other" />
                                             </asp:DropDownList>
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label20" runat="server" Text="è”ç³»äººå…³ç³»"></asp:Label></td>
+                                            <asp:Label ID="Label20" runat="server" Text="ÁªÏµÈË¹ØÏµ"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_UrgencyRelation" runat="server">
-                                                <asp:ListItem Value="çˆ¶æ¯" Text="çˆ¶æ¯" />
-                                                <asp:ListItem Value="é…å¶" Text="é…å¶" />
-                                                <asp:ListItem Value="å­å¥³" Text="å­å¥³" />
-                                                <asp:ListItem Value="å…¶ä»–" Text="å…¶ä»–" />
+                                                <asp:ListItem Value="¸¸Ä¸" Text="¸¸Ä¸" />
+                                                <asp:ListItem Value="ÅäÅ¼" Text="ÅäÅ¼" />
+                                                <asp:ListItem Value="×ÓÅ®" Text="×ÓÅ®" />
+                                                <asp:ListItem Value="Other" Text="Other" />
                                             </asp:DropDownList>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label9" runat="server" Text="åˆåŒç±»åž‹"></asp:Label></td>
+                                            <asp:Label ID="Label9" runat="server" Text="ºÏÍ¬ÀàÐÍ"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_ContractType" runat="server">
-                                                <asp:ListItem Value="åŠ³åŠ¨åˆåŒ" Text="åŠ³åŠ¨åˆåŒ" />
-                                                <asp:ListItem Value="å®žä¹ åè®®" Text="å®žä¹ åè®®" />
-                                                <asp:ListItem Value="è¿”è˜åè®®" Text="è¿”è˜åè®®" />
-                                                <asp:ListItem Value="æ— åˆåŒæ— åè®®" Text="æ— åˆåŒæ— åè®®" />
+                                                <asp:ListItem Value="LaborContract" Text="LaborContract" />
+                                                <asp:ListItem Value="InternshipAgreement" Text="InternshipAgreement" />
+                                                <asp:ListItem Value="RehireAgreement" Text="RehireAgreement" />
+                                                <asp:ListItem Value="NoContractorAgreement" Text="NoContractorAgreement" />
                                             </asp:DropDownList>
                                         </td>
                                         <td style="width: 100px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label8" runat="server" Text="åˆåŒå…¬å¸"></asp:Label></td>
+                                            <asp:Label ID="Label8" runat="server" Text="ºÏÍ¬¹«Ë¾"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="TB_ContractCompany" Width="90%" runat="server"></asp:TextBox>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="width: 100px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label11" runat="server" Text="é¦–æ¬¡åˆåŒèµ·å§‹æ—¥"></asp:Label></td>
+                                            <asp:Label ID="Label11" runat="server" Text="Ê×´ÎºÏÍ¬ÆðÊ¼ÈÕ"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="DLC_FirstContractStartTime" runat="server" Width="100px"></asp:TextBox>
                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender1" runat="server" TargetControlID="DLC_FirstContractStartTime" Enabled="True"></ajaxToolkit:CalendarExtender>
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label12" runat="server" Text="é¦–æ¬¡åˆåŒåˆ°æœŸæ—¥"></asp:Label></td>
+                                            <asp:Label ID="Label12" runat="server" Text="Ê×´ÎºÏÍ¬µ½ÆÚÈÕ"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="DLC_FirstContractEndTime" runat="server" Width="100px"></asp:TextBox>
                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender4" runat="server" TargetControlID="DLC_FirstContractEndTime" Enabled="True"></ajaxToolkit:CalendarExtender>
@@ -208,17 +208,17 @@
                                     </tr>
                                     <tr>
                                         <td style="width: 100px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label26" runat="server" Text="é¦–æ¬¡åˆåŒæœŸé™"></asp:Label></td>
+                                            <asp:Label ID="Label26" runat="server" Text="Ê×´ÎºÏÍ¬ÆÚÏÞ"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_FirstContractYears" runat="server">
-                                                <asp:ListItem Value="1å¹´" Text="1å¹´" />
-                                                <asp:ListItem Value="2å¹´" Text="2å¹´" />
-                                                <asp:ListItem Value="3å¹´" Text="3å¹´" />
-                                                <asp:ListItem Value="æ— å›ºå®šæœŸ" Text="æ— å›ºå®šæœŸ" />
+                                                <asp:ListItem Value="1Äê" Text="1Äê" />
+                                                <asp:ListItem Value="2Äê" Text="2Äê" />
+                                                <asp:ListItem Value="3Äê" Text="3Äê" />
+                                                <asp:ListItem Value="ÎÞ¹Ì¶¨ÆÚ" Text="ÎÞ¹Ì¶¨ÆÚ" />
                                             </asp:DropDownList>
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label13" runat="server" Text="ç¬¬äºŒæ¬¡åˆåŒèµ·å§‹æ—¥"></asp:Label></td>
+                                            <asp:Label ID="Label13" runat="server" Text="µÚ¶þ´ÎºÏÍ¬ÆðÊ¼ÈÕ"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="DLC_SecondContractStartTime" runat="server" Width="100px"></asp:TextBox>
                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender3" runat="server" TargetControlID="DLC_SecondContractStartTime" Enabled="True"></ajaxToolkit:CalendarExtender>
@@ -227,32 +227,32 @@
                                     <tr>
 
                                         <td style="width: 100px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label14" runat="server" Text="ç¬¬äºŒæ¬¡åˆåŒåˆ°æœŸæ—¥"></asp:Label></td>
+                                            <asp:Label ID="Label14" runat="server" Text="µÚ¶þ´ÎºÏÍ¬µ½ÆÚÈÕ"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="DLC_SecondContractEndTime" runat="server" Width="100px"></asp:TextBox>
                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender5" runat="server" TargetControlID="DLC_SecondContractEndTime" Enabled="True"></ajaxToolkit:CalendarExtender>
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label27" runat="server" Text="ç¬¬äºŒæ¬¡åˆåŒæœŸé™"></asp:Label></td>
+                                            <asp:Label ID="Label27" runat="server" Text="µÚ¶þ´ÎºÏÍ¬ÆÚÏÞ"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_SecondContractYears" runat="server">
-                                                <asp:ListItem Value="1å¹´" Text="1å¹´" />
-                                                <asp:ListItem Value="2å¹´" Text="2å¹´" />
-                                                <asp:ListItem Value="3å¹´" Text="3å¹´" />
-                                                <asp:ListItem Value="æ— å›ºå®šæœŸ" Text="æ— å›ºå®šæœŸ" />
+                                                <asp:ListItem Value="1Äê" Text="1Äê" />
+                                                <asp:ListItem Value="2Äê" Text="2Äê" />
+                                                <asp:ListItem Value="3Äê" Text="3Äê" />
+                                                <asp:ListItem Value="ÎÞ¹Ì¶¨ÆÚ" Text="ÎÞ¹Ì¶¨ÆÚ" />
                                             </asp:DropDownList>
                                         </td>
 
                                     </tr>
                                     <tr>
                                         <td style="width: 100px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label15" runat="server" Text="ç¬¬ä¸‰æ¬¡åˆåŒèµ·å§‹æ—¥"></asp:Label></td>
+                                            <asp:Label ID="Label15" runat="server" Text="µÚÈý´ÎºÏÍ¬ÆðÊ¼ÈÕ"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="DLC_ThirdContractStartTime" runat="server" Width="100px"></asp:TextBox>
                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender6" runat="server" TargetControlID="DLC_ThirdContractStartTime" Enabled="True"></ajaxToolkit:CalendarExtender>
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label17" runat="server" Text="ç¬¬ä¸‰æ¬¡åˆåŒåˆ°æœŸæ—¥"></asp:Label></td>
+                                            <asp:Label ID="Label17" runat="server" Text="µÚÈý´ÎºÏÍ¬µ½ÆÚÈÕ"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="DLC_ThirdContractEndTime" runat="server" Width="100px"></asp:TextBox>
                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender7" runat="server" TargetControlID="DLC_ThirdContractEndTime" Enabled="True"></ajaxToolkit:CalendarExtender>
@@ -261,42 +261,42 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label28" runat="server" Text="ç¬¬ä¸‰æ¬¡åˆåŒæœŸé™"></asp:Label></td>
+                                            <asp:Label ID="Label28" runat="server" Text="µÚÈý´ÎºÏÍ¬ÆÚÏÞ"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_ThirdContractYears" runat="server">
-                                                <asp:ListItem Value="1å¹´" Text="1å¹´" />
-                                                <asp:ListItem Value="2å¹´" Text="2å¹´" />
-                                                <asp:ListItem Value="3å¹´" Text="3å¹´" />
-                                                <asp:ListItem Value="æ— å›ºå®šæœŸ" Text="æ— å›ºå®šæœŸ" />
+                                                <asp:ListItem Value="1Äê" Text="1Äê" />
+                                                <asp:ListItem Value="2Äê" Text="2Äê" />
+                                                <asp:ListItem Value="3Äê" Text="3Äê" />
+                                                <asp:ListItem Value="ÎÞ¹Ì¶¨ÆÚ" Text="ÎÞ¹Ì¶¨ÆÚ" />
                                             </asp:DropDownList>
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label18" runat="server" Text="å·²ç­¾æ¬¡æ•°"></asp:Label></td>
+                                            <asp:Label ID="Label18" runat="server" Text="ÒÑÇ©´ÎÊý"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="TB_SignContractCount" Width="90%" runat="server"></asp:TextBox>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="width: 100px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label19" runat="server" Text="çŽ°åˆåŒèµ·å§‹æ—¥"></asp:Label></td>
+                                            <asp:Label ID="Label19" runat="server" Text="ÏÖºÏÍ¬ÆðÊ¼ÈÕ"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:TextBox ID="DLC_ContractStartTime" runat="server" Width="100px"></asp:TextBox>
                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender8" runat="server" TargetControlID="DLC_ContractStartTime" Enabled="True"></ajaxToolkit:CalendarExtender>
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label29" runat="server" Text="çŽ°åˆåŒæœŸé™"></asp:Label></td>
+                                            <asp:Label ID="Label29" runat="server" Text="ÏÖºÏÍ¬ÆÚÏÞ"></asp:Label></td>
                                         <td class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_ContractYears" runat="server">
-                                                <asp:ListItem Value="1å¹´" Text="1å¹´" />
-                                                <asp:ListItem Value="2å¹´" Text="2å¹´" />
-                                                <asp:ListItem Value="3å¹´" Text="3å¹´" />
-                                                <asp:ListItem Value="æ— å›ºå®šæœŸ" Text="æ— å›ºå®šæœŸ" />
+                                                <asp:ListItem Value="1Äê" Text="1Äê" />
+                                                <asp:ListItem Value="2Äê" Text="2Äê" />
+                                                <asp:ListItem Value="3Äê" Text="3Äê" />
+                                                <asp:ListItem Value="ÎÞ¹Ì¶¨ÆÚ" Text="ÎÞ¹Ì¶¨ÆÚ" />
                                             </asp:DropDownList>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="width: 100px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label21" runat="server" Text="èº«ä»½è¯(äººåƒé¢)"></asp:Label>
+                                            <asp:Label ID="Label21" runat="server" Text="Éí·ÝÖ¤(ÈËÏñÃæ)"></asp:Label>
                                         </td>
                                         <td class="formItemBgStyle">
                                             <asp:UpdatePanel ID="UpdatePanel6" runat="server" UpdateMode="Conditional">
@@ -315,7 +315,7 @@
                                             </asp:UpdatePanel>
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label22" runat="server" Text="èº«ä»½è¯(å›½å¾½é¢)"></asp:Label>
+                                            <asp:Label ID="Label22" runat="server" Text="Éí·ÝÖ¤(¹ú»ÕÃæ)"></asp:Label>
                                         </td>
                                         <td class="formItemBgStyle">
                                             <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
@@ -336,7 +336,7 @@
                                     </tr>
                                     <tr>
                                         <td style="width: 100px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label23" runat="server" Text="å­¦åŽ†è¯ä¹¦"></asp:Label>
+                                            <asp:Label ID="Label23" runat="server" Text="Ñ§ÀúÖ¤Êé"></asp:Label>
                                         </td>
                                         <td class="formItemBgStyle">
                                             <asp:UpdatePanel ID="UpdatePanel3" runat="server" UpdateMode="Conditional">
@@ -353,7 +353,7 @@
                                             </asp:UpdatePanel>
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label24" runat="server" Text="å­¦ä½è¯ä¹¦"></asp:Label>
+                                            <asp:Label ID="Label24" runat="server" Text="Ñ§Î»Ö¤Êé"></asp:Label>
                                         </td>
                                         <td class="formItemBgStyle">
                                             <asp:UpdatePanel ID="UpdatePanel4" runat="server" UpdateMode="Conditional">
@@ -372,7 +372,7 @@
                                     </tr>
                                     <tr>
                                         <td style="width: 100px; text-align: left;" class="formItemBgStyle">
-                                            <asp:Label ID="Label25" runat="server" Text="å‰å…¬å¸ç¦»èŒè¯æ˜Ž"></asp:Label>
+                                            <asp:Label ID="Label25" runat="server" Text="Ç°¹«Ë¾ÀëÖ°Ö¤Ã÷"></asp:Label>
                                         </td>
                                         <td colspan="3" class="formItemBgStyle">
                                             <asp:UpdatePanel ID="UpdatePanel5" runat="server" UpdateMode="Conditional">

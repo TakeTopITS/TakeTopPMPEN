@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPersonalSpaceMyWeekSchedule.aspx.cs" Inherits="TTPersonalSpaceMyWeekSchedule" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPersonalSpaceMyWeekSchedule.aspx.cs" Inherits="TTPersonalSpaceMyWeekSchedule" %>
 
 
 <%@ Register Assembly="DayPilot" Namespace="DayPilot.Web.Ui" TagPrefix="DayPilot" %>

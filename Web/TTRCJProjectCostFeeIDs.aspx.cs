@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections;
 using System.Linq;
 using System.Web;
@@ -23,7 +23,7 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             if (Request.UrlReferrer != null)
                 ViewState["UrlReferrer"] = Request.UrlReferrer.ToString();
 
-            //å¤§ç±»æ’åºåˆå§‹åŒ–
+            //´óÀàÅÅĞò³õÊ¼»¯
             ViewState["SortOrder"] = "ID";
             ViewState["OrderDire"] = "ASC";
 
@@ -41,19 +41,19 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             catch (Exception exp)
             {
                 lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessageID.Text = "æ¶ˆæ¯æç¤ºï¼šè¯»å–æˆæœ¬è´¹é¡¹å¤§ç±»ä¿¡æ¯åˆ—è¡¨å¤±è´¥ï¼" + exp.Message;
+                lb_ShowMessageID.Text = "ÏûÏ¢ÌáÊ¾£º¶ÁÈ¡³É±¾·ÑÏî´óÀàĞÅÏ¢ÁĞ±íÊ§°Ü£¡" + exp.Message;
             }
         }
     }
 
     private void InitDataListForIDs()
     {
-        //è·å–æˆæœ¬è´¹é¡¹å¤§ç±»çš„ä¿¡æ¯åˆ—è¡¨ 
+        //»ñÈ¡³É±¾·ÑÏî´óÀàµÄĞÅÏ¢ÁĞ±í 
         StringBuilder sql = new StringBuilder(" select * from T_RCJProjectCostFeeIDs");
 
         DataSet ds = ShareClass.GetDataSetFromSql(sql.ToString(), "T_RCJProjectCostFeeIDs");
 
-        //é€šè¿‡è‡ªå®šä¹‰è§†å›¾æ¥å®ç°æ’åº  
+        //Í¨¹ı×Ô¶¨ÒåÊÓÍ¼À´ÊµÏÖÅÅĞò  
         DataView view = new DataView(ds.Tables[0]);
         string strSort = (string)ViewState["SortOrder"] + " " + (string)ViewState["OrderDire"];
         view.Sort = strSort;  
@@ -66,13 +66,13 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
     {
         if (GV_CostFeeID.SelectedIndex == -1)
             return;
-        //è·å–æˆæœ¬è´¹é¡¹å¤§ç±»çš„ä¿¡æ¯åˆ—è¡¨ 
+        //»ñÈ¡³É±¾·ÑÏî´óÀàµÄĞÅÏ¢ÁĞ±í 
         StringBuilder sql = new StringBuilder("select * From T_RCJProjectCostFeeSubIDs as rCJProjectCostFeeSubIDs where CostFeeID=");
         sql.Append(GV_CostFeeID.Rows[GV_CostFeeID.SelectedIndex].Cells[0].Text);
 
         DataSet ds = ShareClass.GetDataSetFromSql(sql.ToString(), "T_RCJProjectCostFeeSubIDs");
 
-        //é€šè¿‡è‡ªå®šä¹‰è§†å›¾æ¥å®ç°æ’åº  
+        //Í¨¹ı×Ô¶¨ÒåÊÓÍ¼À´ÊµÏÖÅÅĞò  
         DataView view = new DataView(ds.Tables[0]);
         string strSort = (string)ViewState["SortOrderSub"] + " " + (string)ViewState["OrderDireSub"];
         view.Sort = strSort;
@@ -88,12 +88,12 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
         tbID.Text = GV_CostFeeID.Rows[GV_CostFeeID.SelectedIndex].Cells[0].Text;
         tbTitle.Text = GV_CostFeeID.Rows[GV_CostFeeID.SelectedIndex].Cells[1].Text;
         Label lbl1 = (Label)GV_CostFeeID.Rows[GV_CostFeeID.SelectedIndex].FindControl("Label1");
-        if ("ç›´æ¥è´¹é¡¹é¡¹ç›®" == lbl1.Text)
+        if ("Ö±½Ó·ÑÏîÏîÄ¿" == lbl1.Text)
             DDL_FeeType.SelectedIndex = 0;
         else
             DDL_FeeType.SelectedIndex = 1;
 
-        //æ˜¾ç¤ºæ­¤å¤§ç±»ä¸‹é¢çš„å­ç±»è´¹é¡¹åˆ—è¡¨
+        //ÏÔÊ¾´Ë´óÀàÏÂÃæµÄ×ÓÀà·ÑÏîÁĞ±í
         TB_FeeType.Text = GV_CostFeeID.Rows[GV_CostFeeID.SelectedIndex].Cells[1].Text;
         InitDataListForSubIDs();
     }
@@ -103,14 +103,14 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
         if (tbTitle.Text.Trim().Length == 0 || tbTitle.Text.Trim().Length > 50)
         {
             lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageID.Text = "æ¶ˆæ¯æç¤ºï¼š[ä¸­æ–‡æ ‡é¢˜]ä¸èƒ½ä¸ºç©ºï¼Œåº”åœ¨50ä¸ªå­—ç¬¦ï¼ˆ25ä¸ªæ±‰å­—ï¼‰,è¯·é‡æ–°è¾“å…¥å†è¯•ï¼";
+            lb_ShowMessageID.Text = "ÏûÏ¢ÌáÊ¾£º[ÖĞÎÄ±êÌâ]²»ÄÜÎª¿Õ£¬Ó¦ÔÚ50¸ö×Ö·û£¨25¸öºº×Ö£©,ÇëÖØĞÂÊäÈëÔÙÊÔ£¡";
             return false;
         }
 
         return true;
     }
 
-    //å¢åŠ è´¹é¡¹å¤§ç±»æ•°æ®
+    //Ôö¼Ó·ÑÏî´óÀàÊı¾İ
     protected void btnAddNewItem_Click(object sender, EventArgs e)
     {
         lb_ShowMessageID.Text = "";
@@ -123,9 +123,9 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             if (true == IsExistSameItem(0, tbTitle.Text, true))
             {
                 lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-                StringBuilder sb = new StringBuilder("æ¶ˆæ¯æç¤ºï¼šæ–°å¢æ“ä½œå¤±è´¥ï¼Œæˆæœ¬è´¹é¡¹åã€");
+                StringBuilder sb = new StringBuilder("ÏûÏ¢ÌáÊ¾£ºĞÂÔö²Ù×÷Ê§°Ü£¬³É±¾·ÑÏîÃû¡¾");
                 sb.Append(tbTitle.Text);
-                sb.Append("ã€‘å·²ç»å­˜åœ¨ï¼Œä¸èƒ½é‡å¤æ·»åŠ ï¼");
+                sb.Append("¡¿ÒÑ¾­´æÔÚ£¬²»ÄÜÖØ¸´Ìí¼Ó£¡");
                 lb_ShowMessageID.Text = sb.ToString() ;
                 return;
             } 
@@ -138,18 +138,18 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             cfiBll.AddRCJProjectCostFeeIDs(cfi);
 
             lb_ShowMessageID.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessageID.Text = "æ¶ˆæ¯æç¤ºï¼šæ–°å¢æ“ä½œæˆåŠŸï¼";
+            lb_ShowMessageID.Text = "ÏûÏ¢ÌáÊ¾£ºĞÂÔö²Ù×÷³É¹¦£¡";
 
             InitDataListForIDs();
         }
         catch (Exception exp)
         {
             lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageID.Text = "æ¶ˆæ¯æç¤ºï¼šæ–°å¢æ“ä½œå¤±è´¥ï¼Œè¯·æ£€æŸ¥æˆæœ¬è´¹é¡¹å¤§ç±»ç¼–å·æ˜¯å¦é‡å¤ï¼š" + exp.Message;
+            lb_ShowMessageID.Text = "ÏûÏ¢ÌáÊ¾£ºĞÂÔö²Ù×÷Ê§°Ü£¬Çë¼ì²é³É±¾·ÑÏî´óÀà±àºÅÊÇ·ñÖØ¸´£º" + exp.Message;
         }
     }
 
-    //ä¿®æ”¹è´¹é¡¹å¤§ç±»æ•°æ®
+    //ĞŞ¸Ä·ÑÏî´óÀàÊı¾İ
     protected void btnEditItem_Click(object sender, EventArgs e)
     {
         lb_ShowMessageID.Text = "";
@@ -162,16 +162,16 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             if (GV_CostFeeID.SelectedIndex == -1)
             {
                 lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessageID.Text = "æ¶ˆæ¯æç¤ºï¼šè¯·é€‰æ‹©ä¸€è¡Œè¿›è¡Œä¿®æ”¹æ“ä½œï¼";
+                lb_ShowMessageID.Text = "ÏûÏ¢ÌáÊ¾£ºÇëÑ¡ÔñÒ»ĞĞ½øĞĞĞŞ¸Ä²Ù×÷£¡";
                 return;
             }
 
             if (true == IsExistSameItem(Convert.ToInt32(tbID.Text), tbTitle.Text, false))
             {
                 lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-                StringBuilder sb = new StringBuilder("æ¶ˆæ¯æç¤ºï¼šä¿®æ”¹æ“ä½œå¤±è´¥ï¼Œè¦ä¿®æ”¹çš„æˆæœ¬è´¹é¡¹åã€");
+                StringBuilder sb = new StringBuilder("ÏûÏ¢ÌáÊ¾£ºĞŞ¸Ä²Ù×÷Ê§°Ü£¬ÒªĞŞ¸ÄµÄ³É±¾·ÑÏîÃû¡¾");
                 sb.Append(tbTitle.Text);
-                sb.Append("ã€‘å·²ç»å­˜åœ¨ï¼Œä¸èƒ½é‡å¤æ·»åŠ ï¼");
+                sb.Append("¡¿ÒÑ¾­´æÔÚ£¬²»ÄÜÖØ¸´Ìí¼Ó£¡");
                 lb_ShowMessageID.Text = sb.ToString();
                 return;
             } 
@@ -185,20 +185,20 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             cfiBll.UpdateRCJProjectCostFeeIDs(cfi,cfi.ID);
 
             lb_ShowMessageID.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessageID.Text = "æ¶ˆæ¯æç¤ºï¼šä¿®æ”¹æ“ä½œæˆåŠŸï¼";
+            lb_ShowMessageID.Text = "ÏûÏ¢ÌáÊ¾£ºĞŞ¸Ä²Ù×÷³É¹¦£¡";
 
             InitDataListForIDs();
         }
         catch (Exception exp)
         {
             lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageID.Text = "æ¶ˆæ¯æç¤ºï¼šä¿®æ”¹æ“ä½œå¤±è´¥ï¼Œè¯·æ£€æŸ¥æˆæœ¬è´¹é¡¹å¤§ç±»ç¼–å·æ˜¯å¦é‡å¤ï¼š" + exp.Message;
+            lb_ShowMessageID.Text = "ÏûÏ¢ÌáÊ¾£ºĞŞ¸Ä²Ù×÷Ê§°Ü£¬Çë¼ì²é³É±¾·ÑÏî´óÀà±àºÅÊÇ·ñÖØ¸´£º" + exp.Message;
         }       
     }
 
     private bool IfExistsSubIds()
     {
-        //è·å–æˆæœ¬è´¹é¡¹å¤§ç±»çš„ä¿¡æ¯åˆ—è¡¨ 
+        //»ñÈ¡³É±¾·ÑÏî´óÀàµÄĞÅÏ¢ÁĞ±í 
         StringBuilder sql = new StringBuilder("From RCJProjectCostFeeSubIDs as rCJProjectCostFeeSubIDs where CostFeeID=");
         sql.Append(GV_CostFeeID.Rows[GV_CostFeeID.SelectedIndex].Cells[0].Text);
 
@@ -208,7 +208,7 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
 
         return list.Count > 0;
     }
-    //åˆ é™¤è´¹é¡¹å¤§ç±»æ•°æ®
+    //É¾³ı·ÑÏî´óÀàÊı¾İ
     protected void btnDeleteItem_Click(object sender, EventArgs e)
     {
         lb_ShowMessageID.Text = "";
@@ -217,19 +217,19 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             if (GV_CostFeeID.SelectedIndex == -1)
             {
                 lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessageID.Text = "æ¶ˆæ¯æç¤ºï¼šè¯·é€‰æ‹©ä¸€è¡Œè¿›è¡Œåˆ é™¤æ“ä½œï¼";
+                lb_ShowMessageID.Text = "ÏûÏ¢ÌáÊ¾£ºÇëÑ¡ÔñÒ»ĞĞ½øĞĞÉ¾³ı²Ù×÷£¡";
                 return;
             }
 
-            //å¦‚æœæœ‰å­ç±»è´¹é¡¹åˆ™ä¸å¯ä»¥åˆ é™¤
+            //Èç¹ûÓĞ×ÓÀà·ÑÏîÔò²»¿ÉÒÔÉ¾³ı
             if(IfExistsSubIds() == true)
             {
                 lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessageID.Text = "æ¶ˆæ¯æç¤ºï¼šè¯·å…ˆåˆ é™¤è¯¥æˆæœ¬è´¹é¡¹ä¸‹çš„å­ç±»é¡¹ç›®åå†è¿›è¡Œåˆ é™¤æ“ä½œï¼";
+                lb_ShowMessageID.Text = "ÏûÏ¢ÌáÊ¾£ºÇëÏÈÉ¾³ı¸Ã³É±¾·ÑÏîÏÂµÄ×ÓÀàÏîÄ¿ºóÔÙ½øĞĞÉ¾³ı²Ù×÷£¡";
                 return;
             }
 
-            //æ­£å¼åˆ é™¤æ•°æ® 
+            //ÕıÊ½É¾³ıÊı¾İ 
             RCJProjectCostFeeIDsBLL cfiBll = new RCJProjectCostFeeIDsBLL();
             RCJProjectCostFeeIDs cfi = new RCJProjectCostFeeIDs();
             cfi.ID = Convert.ToInt32(GV_CostFeeID.Rows[GV_CostFeeID.SelectedIndex].Cells[0].Text);
@@ -237,14 +237,14 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             cfiBll.DeleteRCJProjectCostFeeIDs(cfi);
 
             lb_ShowMessageID.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessageID.Text = "æ¶ˆæ¯æç¤ºï¼šåˆ é™¤æ“ä½œæˆåŠŸï¼";
+            lb_ShowMessageID.Text = "ÏûÏ¢ÌáÊ¾£ºÉ¾³ı²Ù×÷³É¹¦£¡";
 
             InitDataListForIDs();
         }
         catch (Exception exp)
         {
             lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageID.Text = "æ¶ˆæ¯æç¤ºï¼šåˆ é™¤æ“ä½œå¤±è´¥ï¼š" + exp.Message;
+            lb_ShowMessageID.Text = "ÏûÏ¢ÌáÊ¾£ºÉ¾³ı²Ù×÷Ê§°Ü£º" + exp.Message;
         }
 
     }
@@ -270,7 +270,7 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
         TB_FeeType.Text = GV_CostFeeSubID.Rows[GV_CostFeeSubID.SelectedIndex].Cells[1].Text;
         TB_SubFeeTitle.Text = GV_CostFeeSubID.Rows[GV_CostFeeSubID.SelectedIndex].Cells[2].Text;
         Label lbl1 = (Label)GV_CostFeeSubID.Rows[GV_CostFeeSubID.SelectedIndex].FindControl("Label1");
-        if ("å¦" == lbl1.Text)
+        if ("NO" == lbl1.Text)
             DDL_IsFixed.SelectedIndex = 1;
         else
             DDL_IsFixed.SelectedIndex = 0;
@@ -281,14 +281,14 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
         if (TB_SubFeeTitle.Text.Trim().Length == 0 || tbTitle.Text.Trim().Length > 50)
         {
             lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageSubID.Text = "æ¶ˆæ¯æç¤ºï¼š[ä¸­æ–‡æ ‡é¢˜]ä¸èƒ½ä¸ºç©ºï¼Œåº”åœ¨50ä¸ªå­—ç¬¦ï¼ˆ25ä¸ªæ±‰å­—ï¼‰ï¼Œè¯·é‡æ–°è¾“å…¥å†è¯•ï¼";
+            lb_ShowMessageSubID.Text = "ÏûÏ¢ÌáÊ¾£º[ÖĞÎÄ±êÌâ]²»ÄÜÎª¿Õ£¬Ó¦ÔÚ50¸ö×Ö·û£¨25¸öºº×Ö£©£¬ÇëÖØĞÂÊäÈëÔÙÊÔ£¡";
             return false;
         }
 
         return true;
     }
 
-    //å¢åŠ å­ç±»è´¹é¡¹
+    //Ôö¼Ó×ÓÀà·ÑÏî
     protected void BT_AddNewSubFee_Click(object sender, EventArgs e)
     {
         lb_ShowMessageSubID.Text = "";
@@ -299,7 +299,7 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
         if (GV_CostFeeID.SelectedIndex == -1)
         {
             lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageSubID.Text = "æ¶ˆæ¯æç¤ºï¼šè¯·é€‰æ‹©ä¸€è¡Œå¤§ç±»è´¹é¡¹å†è¿›è¡Œä¿®æ”¹æ“ä½œï¼";
+            lb_ShowMessageSubID.Text = "ÏûÏ¢ÌáÊ¾£ºÇëÑ¡ÔñÒ»ĞĞ´óÀà·ÑÏîÔÙ½øĞĞĞŞ¸Ä²Ù×÷£¡";
             return;
         }
 
@@ -308,9 +308,9 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             if (true == IsExistSameSubItem(0, TB_SubFeeTitle.Text, true))
             {
                 lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-                StringBuilder sb = new StringBuilder("æ¶ˆæ¯æç¤ºï¼šæ–°å¢æ“ä½œå¤±è´¥ï¼Œè¦æ–°å¢çš„æˆæœ¬è´¹å­é¡¹åã€");
+                StringBuilder sb = new StringBuilder("ÏûÏ¢ÌáÊ¾£ºĞÂÔö²Ù×÷Ê§°Ü£¬ÒªĞÂÔöµÄ³É±¾·Ñ×ÓÏîÃû¡¾");
                 sb.Append(TB_SubFeeTitle.Text);
-                sb.Append("ã€‘å·²ç»å­˜åœ¨ï¼Œä¸èƒ½é‡å¤æ·»åŠ ï¼");
+                sb.Append("¡¿ÒÑ¾­´æÔÚ£¬²»ÄÜÖØ¸´Ìí¼Ó£¡");
                 lb_ShowMessageSubID.Text = sb.ToString();
                 return;
             } 
@@ -324,18 +324,18 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             cfsiBll.AddRCJProjectCostFeeSubIDs(cfsi);
 
             lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessageSubID.Text = "æ¶ˆæ¯æç¤ºï¼šæ–°å¢æ“ä½œæˆåŠŸï¼";
+            lb_ShowMessageSubID.Text = "ÏûÏ¢ÌáÊ¾£ºĞÂÔö²Ù×÷³É¹¦£¡";
 
             InitDataListForSubIDs();
         }
         catch (Exception exp)
         {
             lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageSubID.Text = "æ¶ˆæ¯æç¤ºï¼šæ–°å¢æ“ä½œå¤±è´¥ï¼Œè¯·æ£€æŸ¥æˆæœ¬è´¹é¡¹å­ç±»ç¼–å·æ˜¯å¦é‡å¤ï¼š" + exp.Message;
+            lb_ShowMessageSubID.Text = "ÏûÏ¢ÌáÊ¾£ºĞÂÔö²Ù×÷Ê§°Ü£¬Çë¼ì²é³É±¾·ÑÏî×ÓÀà±àºÅÊÇ·ñÖØ¸´£º" + exp.Message;
         }
     }
 
-    //ä¿®æ”¹è´¹ç”¨å­é¡¹
+    //ĞŞ¸Ä·ÑÓÃ×ÓÏî
     protected void BT_EditSubFee_Click(object sender, EventArgs e)
     {
         lb_ShowMessageSubID.Text = "";
@@ -348,16 +348,16 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             if (GV_CostFeeSubID.SelectedIndex == -1)
             {
                 lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessageSubID.Text = "æ¶ˆæ¯æç¤ºï¼šè¯·é€‰æ‹©ä¸€è¡Œè¿›è¡Œä¿®æ”¹æ“ä½œï¼";
+                lb_ShowMessageSubID.Text = "ÏûÏ¢ÌáÊ¾£ºÇëÑ¡ÔñÒ»ĞĞ½øĞĞĞŞ¸Ä²Ù×÷£¡";
                 return;
             }
 
             if (true == IsExistSameSubItem(Convert.ToInt32(TB_SubID.Text) , TB_SubFeeTitle.Text, false))
             {
                 lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-                StringBuilder sb = new StringBuilder("æ¶ˆæ¯æç¤ºï¼šä¿®æ”¹æ“ä½œå¤±è´¥ï¼Œè¦ä¿®æ”¹çš„æˆæœ¬è´¹å­é¡¹åã€");
+                StringBuilder sb = new StringBuilder("ÏûÏ¢ÌáÊ¾£ºĞŞ¸Ä²Ù×÷Ê§°Ü£¬ÒªĞŞ¸ÄµÄ³É±¾·Ñ×ÓÏîÃû¡¾");
                 sb.Append(TB_SubFeeTitle.Text);
-                sb.Append("ã€‘å·²ç»å­˜åœ¨ï¼Œä¸èƒ½é‡å¤æ·»åŠ ï¼");
+                sb.Append("¡¿ÒÑ¾­´æÔÚ£¬²»ÄÜÖØ¸´Ìí¼Ó£¡");
                 lb_ShowMessageSubID.Text = sb.ToString();
                 return;
             }
@@ -372,18 +372,18 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             cfsiBll.UpdateRCJProjectCostFeeSubIDs(cfsi, cfsi.ID);
 
             lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessageSubID.Text = "æ¶ˆæ¯æç¤ºï¼šä¿®æ”¹æ“ä½œæˆåŠŸï¼";
+            lb_ShowMessageSubID.Text = "ÏûÏ¢ÌáÊ¾£ºĞŞ¸Ä²Ù×÷³É¹¦£¡";
 
             InitDataListForSubIDs();
         }
         catch (Exception exp)
         {
             lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageSubID.Text = "æ¶ˆæ¯æç¤ºï¼šä¿®æ”¹æ“ä½œå¤±è´¥ï¼Œè¯·æ£€æŸ¥æˆæœ¬è´¹é¡¹å¤§ç±»ç¼–å·æ˜¯å¦é‡å¤ï¼š" + exp.Message;
+            lb_ShowMessageSubID.Text = "ÏûÏ¢ÌáÊ¾£ºĞŞ¸Ä²Ù×÷Ê§°Ü£¬Çë¼ì²é³É±¾·ÑÏî´óÀà±àºÅÊÇ·ñÖØ¸´£º" + exp.Message;
         } 
     }
 
-    //åˆ é™¤è´¹ç”¨å­é¡¹
+    //É¾³ı·ÑÓÃ×ÓÏî
     protected void BT_DelSubFee_Click(object sender, EventArgs e)
     {
         lb_ShowMessageSubID.Text = "";
@@ -392,20 +392,20 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             if (GV_CostFeeSubID.SelectedIndex == -1)
             {
                 lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessageSubID.Text = "æ¶ˆæ¯æç¤ºï¼šè¯·é€‰æ‹©ä¸€è¡Œè¿›è¡Œåˆ é™¤æ“ä½œï¼";
+                lb_ShowMessageSubID.Text = "ÏûÏ¢ÌáÊ¾£ºÇëÑ¡ÔñÒ»ĞĞ½øĞĞÉ¾³ı²Ù×÷£¡";
                 return;
             }
 
-            //å¦‚æœæ˜¯å›ºå®šå­ç±»è´¹é¡¹åˆ™ä¸å¯ä»¥åˆ é™¤
+            //Èç¹ûÊÇ¹Ì¶¨×ÓÀà·ÑÏîÔò²»¿ÉÒÔÉ¾³ı
             Label lbl1 = (Label)GV_CostFeeSubID.Rows[GV_CostFeeSubID.SelectedIndex].FindControl("Label1");
-            if ("æ˜¯" == lbl1.Text)
+            if ("YES" == lbl1.Text)
             {
                 lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessageSubID.Text = "æ¶ˆæ¯æç¤ºï¼šå›ºå®šå­ç±»è´¹é¡¹ä¸å¯ä»¥è¿›è¡Œåˆ é™¤æ“ä½œï¼";
+                lb_ShowMessageSubID.Text = "ÏûÏ¢ÌáÊ¾£º¹Ì¶¨×ÓÀà·ÑÏî²»¿ÉÒÔ½øĞĞÉ¾³ı²Ù×÷£¡";
                 return;
             }
 
-            //æ­£å¼åˆ é™¤æ•°æ® 
+            //ÕıÊ½É¾³ıÊı¾İ 
             RCJProjectCostFeeSubIDsBLL cfsiBll = new RCJProjectCostFeeSubIDsBLL();
             RCJProjectCostFeeSubIDs cfsi = new RCJProjectCostFeeSubIDs();
             cfsi.ID = Convert.ToInt32(TB_SubID.Text);
@@ -413,28 +413,28 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             cfsiBll.DeleteRCJProjectCostFeeSubIDs(cfsi);
 
             lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessageSubID.Text = "æ¶ˆæ¯æç¤ºï¼šåˆ é™¤æ“ä½œæˆåŠŸï¼";
+            lb_ShowMessageSubID.Text = "ÏûÏ¢ÌáÊ¾£ºÉ¾³ı²Ù×÷³É¹¦£¡";
 
             InitDataListForSubIDs();
         }
         catch (Exception exp)
         {
             lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageSubID.Text = "æ¶ˆæ¯æç¤ºï¼šåˆ é™¤æ“ä½œå¤±è´¥ï¼š" + exp.Message;
+            lb_ShowMessageSubID.Text = "ÏûÏ¢ÌáÊ¾£ºÉ¾³ı²Ù×÷Ê§°Ü£º" + exp.Message;
         }
 
     }
 
-    //è¾“å…¥çš„è´¹é¡¹åç§°æ˜¯å¦å­˜åœ¨
+    //ÊäÈëµÄ·ÑÏîÃû³ÆÊÇ·ñ´æÔÚ
     private bool IsExistSameItem(int id, string itemName, bool bAdd)
     {
         try
         {
-            //è·å–æˆæœ¬è´¹é¡¹å¤§ç±»çš„ä¿¡æ¯åˆ—è¡¨ 
+            //»ñÈ¡³É±¾·ÑÏî´óÀàµÄĞÅÏ¢ÁĞ±í 
             StringBuilder sql = new StringBuilder("From RCJProjectCostFeeIDs as rCJProjectCostFeeIDs where title='");
             sql.Append(itemName);
             sql.Append("'");
-            if (bAdd == false) //æ˜¯ä¿®æ”¹çš„è¯ï¼Œè¿˜è¦åˆ¤æ–­æ˜¯å¦id
+            if (bAdd == false) //ÊÇĞŞ¸ÄµÄ»°£¬»¹ÒªÅĞ¶ÏÊÇ·ñid
             {
                 sql.Append(" and ID !=");
                 sql.Append(id.ToString());
@@ -450,23 +450,23 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageID.Text = "æ¶ˆæ¯æç¤ºï¼šæŸ¥è¯¢æ“ä½œå¤±è´¥ï¼š" + exp.Message;
+            lb_ShowMessageID.Text = "ÏûÏ¢ÌáÊ¾£º²éÑ¯²Ù×÷Ê§°Ü£º" + exp.Message;
 
             return true;
         }
         return false;
     }
 
-    //è¾“å…¥çš„å­è´¹é¡¹åç§°æ˜¯å¦å­˜åœ¨
+    //ÊäÈëµÄ×Ó·ÑÏîÃû³ÆÊÇ·ñ´æÔÚ
     private bool IsExistSameSubItem(int id , string itemName , bool bAdd)
     {
         try
         {
-            //è·å–æˆæœ¬è´¹é¡¹å¤§ç±»çš„ä¿¡æ¯åˆ—è¡¨ 
+            //»ñÈ¡³É±¾·ÑÏî´óÀàµÄĞÅÏ¢ÁĞ±í 
             StringBuilder sql = new StringBuilder("From RCJProjectCostFeeSubIDs as rCJProjectCostFeeSubIDs where subtitle='");
             sql.Append(itemName);
             sql.Append("'");
-            if (bAdd == false) //æ˜¯ä¿®æ”¹çš„è¯ï¼Œè¿˜è¦åˆ¤æ–­æ˜¯å¦id
+            if (bAdd == false) //ÊÇĞŞ¸ÄµÄ»°£¬»¹ÒªÅĞ¶ÏÊÇ·ñid
             {
                 sql.Append(" and ID !=");
                 sql.Append(id.ToString());
@@ -482,7 +482,7 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageSubID.Text = "æ¶ˆæ¯æç¤ºï¼šæŸ¥è¯¢æ“ä½œå¤±è´¥ï¼š" + exp.Message;
+            lb_ShowMessageSubID.Text = "ÏûÏ¢ÌáÊ¾£º²éÑ¯²Ù×÷Ê§°Ü£º" + exp.Message;
 
             return true;
         }
@@ -533,9 +533,9 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-            //é¼ æ ‡ç»è¿‡æ—¶ï¼Œè¡ŒèƒŒæ™¯è‰²å˜ 
+            //Êó±ê¾­¹ıÊ±£¬ĞĞ±³¾°É«±ä 
             e.Row.Attributes.Add("onmouseover", "this.style.backgroundColor='#A9A9A9'");
-            //é¼ æ ‡ç§»å‡ºæ—¶ï¼Œè¡ŒèƒŒæ™¯è‰²å˜ 
+            //Êó±êÒÆ³öÊ±£¬ĞĞ±³¾°É«±ä 
             e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor='#FFFFFF'");
         }
     }
@@ -543,9 +543,9 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-            //é¼ æ ‡ç»è¿‡æ—¶ï¼Œè¡ŒèƒŒæ™¯è‰²å˜ 
+            //Êó±ê¾­¹ıÊ±£¬ĞĞ±³¾°É«±ä 
             e.Row.Attributes.Add("onmouseover", "this.style.backgroundColor='#A9A9A9'");
-            //é¼ æ ‡ç§»å‡ºæ—¶ï¼Œè¡ŒèƒŒæ™¯è‰²å˜ 
+            //Êó±êÒÆ³öÊ±£¬ĞĞ±³¾°É«±ä 
             e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor='#FFFFFF'");
         }
     }

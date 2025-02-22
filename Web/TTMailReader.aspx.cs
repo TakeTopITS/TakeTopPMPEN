@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -28,7 +28,7 @@ public partial class TTMailReader : System.Web.UI.Page
     {
         strUserCode = Session["UserCode"].ToString();
 
-        ///è·å–å‚æ•°nFolderIDçš„å€¼
+        ///»ñÈ¡²ÎÊınFolderIDµÄÖµ
         if (Request.Params["FolderID"] != null)
         {
             if (Int32.TryParse(Request.Params["FolderID"].ToString(), out nFolderID) == false)
@@ -36,7 +36,7 @@ public partial class TTMailReader : System.Web.UI.Page
                 return;
             }
         }
-        ///è·å–å‚æ•°nMailIDçš„å€¼
+        ///»ñÈ¡²ÎÊınMailIDµÄÖµ
         if (Request.Params["MailID"] != null)
         {
             if (Int32.TryParse(Request.Params["MailID"].ToString(), out nMailID) == false)
@@ -45,7 +45,7 @@ public partial class TTMailReader : System.Web.UI.Page
             }
         }
         if (!Page.IsPostBack)
-        {   ///æ˜¾ç¤ºé‚®ä»¶å†…å®¹
+        {   ///ÏÔÊ¾ÓÊ¼şÄÚÈİ
             if (nMailID > -1)
             {
 
@@ -128,17 +128,17 @@ public partial class TTMailReader : System.Web.UI.Page
     }
     protected void ReturnBtn_Click(object sender, EventArgs e)
     {
-        ///è¿”å›åˆ°é‚®ä»¶åˆ—è¡¨é¡µé¢
+        ///·µ»Øµ½ÓÊ¼şÁĞ±íÒ³Ãæ
         Response.Redirect("~/TTViewMail.aspx?FolderID=" + nFolderID.ToString());
     }
     protected void RecieverBtn_Click(object sender, EventArgs e)
-    {	///å›å¤é‚®ä»¶
+    {	///»Ø¸´ÓÊ¼ş
         Response.Redirect("~/TTMailReply.aspx?MailID=" + nMailID.ToString());
     }
 
     protected void TransferBtn_Click(object sender, EventArgs e)
     {
-        ///è½¬å‘é‚®ä»¶
+        ///×ª·¢ÓÊ¼ş
 
         Response.Redirect("~/TTMailTransfer.aspx?MailID=" + nMailID.ToString());
 
@@ -163,7 +163,7 @@ public partial class TTMailReader : System.Web.UI.Page
         strKeyWord = GetMailFolderKeyWord(strUserCode, intFolderID.ToString());
 
 
-        //æ–°é‚®ä»¶ï¼Œæ‰“å¼€ä»£è¡¨é˜…è¯»ï¼Œè‡ªåŠ¨è½¬å…¥â€œå·²é˜…é‚®ä»¶â€
+        //ĞÂÓÊ¼ş£¬´ò¿ª´ú±íÔÄ¶Á£¬×Ô¶¯×ªÈë¡°ÒÑÔÄÓÊ¼ş¡±
         if (strKeyWord == "New")
         {
             intNewFolderID = GetMailFolderID(strUserCode, "Read");

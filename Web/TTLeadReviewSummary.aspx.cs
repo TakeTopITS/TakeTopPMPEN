@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -34,7 +34,7 @@ public partial class TTLeadReviewSummary : System.Web.UI.Page
         lst = projectBLL.GetAllProjects(strHQL);
         Project project = (Project)lst[0];
 
-        //this.Title = Resources.lang.Project + strProjectID + project.ProjectName + " ä¸Šçº§è¯„æ ¸æ±‡æ€»";
+        //this.Title = Resources.lang.Project + strProjectID + project.ProjectName + " ÉÏ¼¶ÆÀºË»ã×Ü";
       
      
         LB_UserCode.Text = strUserCode;

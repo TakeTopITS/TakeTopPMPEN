@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPersonalSpaceModuleSetForUser.aspx.cs" Inherits="TTPersonalSpaceModuleSetForUser" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPersonalSpaceModuleSetForUser.aspx.cs" Inherits="TTPersonalSpaceModuleSetForUser" %>
 
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -28,7 +28,7 @@
 
         });
 
-        //Âà∑Êñ∞Áà∂È°µÈù¢
+        //À¢–¬∏∏“≥√Ê
         function reloadPrentPage() {
 
             parent.reloadPage();
@@ -86,7 +86,7 @@
                                                                 <tr>
                                                                     <td style="text-align: left;">
                                                                        <asp:Label ID="LB_UserCode" runat="server" Style="font-weight: 700"></asp:Label>  <asp:Label ID="LB_UserName" runat="server" Style="font-weight: 700"></asp:Label>
-                                                                        <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,ZiMoZuLieBiao%>"></asp:Label>(<asp:Label ID="LB_ModuleNumber" runat="server"></asp:Label>)Ôºö
+                                                                        <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,ZiMoZuLieBiao%>"></asp:Label>(<asp:Label ID="LB_ModuleNumber" runat="server"></asp:Label>)£∫
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -133,24 +133,24 @@
                                                                             ShowHeader="false" Height="1px"
                                                                             Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="ÁºñÂè∑">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="±‡∫≈">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="ModuleName" HeaderText="Ê®°ÂùóÂêçÁß∞">
+                                                                                <asp:BoundColumn DataField="ModuleName" HeaderText="ƒ£øÈ√˚≥∆">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
 
-                                                                                  <asp:BoundColumn DataField="HomeModuleName" HeaderText="Ê®°ÂùóÂêçÁß∞">
+                                                                                  <asp:BoundColumn DataField="HomeModuleName" HeaderText="ƒ£øÈ√˚≥∆">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
 
-                                                                                <asp:TemplateColumn HeaderText="È°∫Â∫è">
+                                                                                <asp:TemplateColumn HeaderText="À≥–Ú">
                                                                                     <ItemTemplate>
                                                                                         <asp:TextBox ID="TB_SortNumber" runat="server" Width="40px" Text="0"></asp:TextBox>
                                                                                     </ItemTemplate>
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:TemplateColumn>
-                                                                                <asp:TemplateColumn HeaderText="ÂèØÁî®">
+                                                                                <asp:TemplateColumn HeaderText="ø…”√">
                                                                                     <ItemTemplate>
                                                                                         <asp:CheckBox ID="CB_ModuleVisible" runat="server" />
                                                                                     </ItemTemplate>

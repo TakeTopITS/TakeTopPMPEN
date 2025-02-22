@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTLeadReviewSummary.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTLeadReviewSummary.aspx.cs"
     Inherits="TTLeadReviewSummary" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -62,7 +62,7 @@
                             <tr>
                                 <td style="height: 16px; padding: 5px 5px 5px 5px;" align="right">
                                     <a href="#" onclick="preview1()">
-                                        <img src="ImagesSkin/print.gif" alt="打印" border="0" />
+                                        <img src="ImagesSkin/print.gif" alt="��ӡ" border="0" />
                                     </a></td>
                             </tr>
                         </table>

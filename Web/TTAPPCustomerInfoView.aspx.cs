@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Configuration;
@@ -44,7 +44,7 @@ public partial class TTAPPCustomerInfoView : System.Web.UI.Page
 
             Customer customer = (Customer)lst[0];
 
-            //this.Title = "å®¢æˆ·ï¼š" + strCustomerCode + " " + customer.CustomerName.Trim() + " æ¡£æ¡ˆ";
+            //this.Title = "¿Í»§£º" + strCustomerCode + " " + customer.CustomerName.Trim() + " µµ°¸";
 
             HL_RelatedContactInfor.Enabled = true;
             HL_RelatedContactInfor.NavigateUrl = "TTContactList.aspx?RelatedType=Customer&RelatedID=" + strCustomerCode;
@@ -156,7 +156,7 @@ public partial class TTAPPCustomerInfoView : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Constract as constract where constract.Status <> 'å½’æ¡£'";
+        strHQL = "from Constract as constract where constract.Status <> 'Archived'";
         strHQL += " and constract.RelatedCustomerCode = " + "'" + strCustomerCode + "'";
         strHQL += " Order by constract.SignDate DESC";
         ConstractBLL constractBLL = new ConstractBLL();

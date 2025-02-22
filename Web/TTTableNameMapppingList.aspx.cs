@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
@@ -43,8 +43,8 @@ public partial class TTTableNameMapppingList : System.Web.UI.Page
             {
                 TableNameMapping tableNameMapping = (TableNameMapping)tableNameMappingList[0];
                 tableNameMappingBLL.DeleteTableNameMapping(tableNameMapping);
-                Response.Write("<script>alert('åˆ é™¤æˆåŠŸï¼');</script>");
-                //é‡æ–°åŠ è½½åˆ—è¡¨
+                Response.Write("<script>alert('É¾³ı³É¹¦£¡');</script>");
+                //ÖØĞÂ¼ÓÔØÁĞ±í
                 BindTableNameMappingsData();
             }
 
@@ -57,7 +57,7 @@ public partial class TTTableNameMapppingList : System.Web.UI.Page
         if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
         {
             LinkButton LB = (LinkButton)e.Item.FindControl("LB_Del");
-            LB.Attributes.Add("onclick", "return confirm('ç¡®å®šè¦åˆ é™¤æ­¤é¡¹è®°å½•å—ï¼Ÿ');");
+            LB.Attributes.Add("onclick", "return confirm('È·¶¨ÒªÉ¾³ı´ËÏî¼ÇÂ¼Âğ£¿');");
         }
     }
 }

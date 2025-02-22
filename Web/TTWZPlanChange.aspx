@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPlanChange.aspx.cs" Inherits="TTWZPlanChange" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPlanChange.aspx.cs" Inherits="TTWZPlanChange" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>È¢ÜÊñôËÆ°ÂàíÂàóË°®-Âçï‰ΩçÂèòÊõ¥</title>
+    <title>¡Ï¡œº∆ªÆ¡–±Ì-µ•Œª±‰∏¸</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -109,7 +109,7 @@
                                                                             runat="server"></asp:DropDownList>
                                                                     </td>
                                                                     <td class="formItemBgStyle">
-                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,TiHuanWei%>"></asp:Label>Ôºö
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,TiHuanWei%>"></asp:Label>£∫
                                                                     </td>
                                                                     <td class="formItemBgStyle">
                                                                         <asp:DropDownList ID="DDL_NewPickingUnit" DataTextField="UnitName" DataValueField="UnitCode" 
@@ -238,11 +238,11 @@
                                                                             </HeaderTemplate>
                                                                             <ItemTemplate>
 
-                                                                                <asp:LinkButton ID="LinkButton6" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PlanCode") %>' CommandName="select" CssClass="notTab" >ÈÄâÊã©</asp:LinkButton>
-                                                                                <%--<asp:Button runat="server" CssClass="inpu" Text="ÈÄâÊã©" CommandName="select" CommandArgument='<%# Eval("PlanCode") %>' />--%>
+                                                                                <asp:LinkButton ID="LinkButton6" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PlanCode") %>' CommandName="select" CssClass="notTab" >—°‘Ò</asp:LinkButton>
+                                                                                <%--<asp:Button runat="server" CssClass="inpu" Text="—°‘Ò" CommandName="select" CommandArgument='<%# Eval("PlanCode") %>' />--%>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <%--<asp:BoundColumn DataField="SinceNumber" HeaderText="Ëá™ÁºñÂè∑">
+                                                                        <%--<asp:BoundColumn DataField="SinceNumber" HeaderText="◊‘±‡∫≈">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>--%>
                                                                         <asp:TemplateColumn>
@@ -254,7 +254,7 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("SinceNumber").ToString(), 190) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <%--<asp:BoundColumn DataField="PlanName" HeaderText="ËÆ°ÂàíÂêçÁß∞">
+                                                                        <%--<asp:BoundColumn DataField="PlanName" HeaderText="º∆ªÆ√˚≥∆">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="7%" />
                                                                         </asp:BoundColumn>--%>
                                                                         <asp:TemplateColumn>
@@ -266,13 +266,13 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("PlanName").ToString(), 190) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="ProjectCode" HeaderText="È°πÁõÆÁºñÁ†Å">
+                                                                        <asp:BoundColumn DataField="ProjectCode" HeaderText="œÓƒø±‡¬Î">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="StoreRoom" HeaderText="Â∫ìÂà´">
+                                                                        <asp:BoundColumn DataField="StoreRoom" HeaderText="ø‚±">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <%--<asp:BoundColumn DataField="PickingUnit" HeaderText="È¢ÜÊñôÂçï‰Ωç">
+                                                                        <%--<asp:BoundColumn DataField="PickingUnit" HeaderText="¡Ï¡œµ•Œª">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>--%>
                                                                         <asp:TemplateColumn>
@@ -284,22 +284,22 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("PickingUnit").ToString(), 7) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="UnitCode" HeaderText="Âçï‰ΩçÁºñÂè∑">
+                                                                        <asp:BoundColumn DataField="UnitCode" HeaderText="µ•Œª±‡∫≈">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="SupplyMethod" HeaderText="‰æõÂ∫îÊñπÂºè">
+                                                                        <asp:BoundColumn DataField="SupplyMethod" HeaderText="π©”¶∑Ω Ω">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="DetailCount" HeaderText="ÊòéÁªÜÊù°Êï∞">
+                                                                        <asp:BoundColumn DataField="DetailCount" HeaderText="√˜œ∏Ãı ˝">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="PlanCost" HeaderText="È¢ÑËÆ°Ë¥πÁî®">
+                                                                        <asp:BoundColumn DataField="PlanCost" HeaderText="‘§º∆∑—”√">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="PlanMarkerName" HeaderText="ËÆ°ÂàíÁºñÂà∂">
+                                                                        <asp:BoundColumn DataField="PlanMarkerName" HeaderText="º∆ªÆ±‡÷∆">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <%--<asp:BoundColumn DataField="MarkerTime" HeaderText="ÁºñÂà∂Êó•Êúü">
+                                                                        <%--<asp:BoundColumn DataField="MarkerTime" HeaderText="±‡÷∆»’∆⁄">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="4%" />
                                                                         </asp:BoundColumn>--%>
                                                                         <asp:TemplateColumn>
@@ -311,7 +311,7 @@
                                                                                 <%#DataBinder.Eval(Container.DataItem, "MarkerTime", "{0:yyyy/MM/dd}")%>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <%--<asp:BoundColumn DataField="CommitTime" HeaderText="Êèê‰∫§Êó•Êúü">
+                                                                        <%--<asp:BoundColumn DataField="CommitTime" HeaderText="Ã·Ωª»’∆⁄">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="4%" />
                                                                         </asp:BoundColumn>--%>
                                                                         <asp:TemplateColumn>
@@ -323,10 +323,10 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("CommitTime")==null ?"" : Eval("CommitTime").ToString(),10) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="FeeManageName" HeaderText="Ë¥πÊéß‰∏ªÁÆ°">
+                                                                        <asp:BoundColumn DataField="FeeManageName" HeaderText="∑—øÿ÷˜π‹">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <%--<asp:BoundColumn DataField="ApproveTime" HeaderText="ÂÆ°Ê†∏Êó•Êúü">
+                                                                        <%--<asp:BoundColumn DataField="ApproveTime" HeaderText="…Û∫À»’∆⁄">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="4%" />
                                                                         </asp:BoundColumn>--%>
                                                                         <asp:TemplateColumn>
@@ -338,10 +338,10 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("ApproveTime")==null ? "" :Eval("ApproveTime").ToString(),10) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="PurchaseEngineerName" HeaderText="ÈááË¥≠Â∑•Á®ãÂ∏à">
+                                                                        <asp:BoundColumn DataField="PurchaseEngineerName" HeaderText="≤…π∫π§≥Ã ¶">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <%--<asp:BoundColumn DataField="SignTime" HeaderText="Á≠æÊî∂Êó•Êúü">
+                                                                        <%--<asp:BoundColumn DataField="SignTime" HeaderText="«© ’»’∆⁄">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="4%" />
                                                                         </asp:BoundColumn>--%>
                                                                         <asp:TemplateColumn>
@@ -353,7 +353,7 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("SignTime")==null?"":Eval("SignTime").ToString(),10) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <%--<asp:BoundColumn DataField="ReturnReason" HeaderText="ÈÄÄÂõûÁêÜÁî±">
+                                                                        <%--<asp:BoundColumn DataField="ReturnReason" HeaderText="ÕÀªÿ¿Ì”…">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="4%" />
                                                                         </asp:BoundColumn>--%>
                                                                         <asp:TemplateColumn>
@@ -365,7 +365,7 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("ReturnReason")==null?"":Eval("ReturnReason").ToString(), 192) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <%--<asp:BoundColumn DataField="CancelTime" HeaderText="Ê†∏ÈîÄÊó•Êúü">
+                                                                        <%--<asp:BoundColumn DataField="CancelTime" HeaderText="∫Àœ˙»’∆⁄">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="4%" />
                                                                         </asp:BoundColumn>--%>
                                                                         <asp:TemplateColumn>
@@ -377,10 +377,10 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("CancelTime")==null ? "":Eval("CancelTime").ToString(),10) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="Progress" HeaderText="ËøõÂ∫¶">
+                                                                        <asp:BoundColumn DataField="Progress" HeaderText="Ω¯∂»">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="IsMark" HeaderText="‰ΩøÁî®Ê†áËÆ∞">
+                                                                        <asp:BoundColumn DataField="IsMark" HeaderText=" π”√±Íº«">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
                                                                     </Columns>

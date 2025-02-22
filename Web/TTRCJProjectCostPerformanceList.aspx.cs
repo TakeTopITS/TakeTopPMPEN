@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -29,11 +29,11 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             if (Request.UrlReferrer != null)
                 ViewState["UrlReferrer"] = Request.UrlReferrer.ToString();
 
-            //è·å¾—åŸºå‡†ä¿¡æ¯ç±»å‹åˆ—è¡¨
+            //»ñµÃ»ù×¼ĞÅÏ¢ÀàĞÍÁĞ±í
             RCJShareClass.InitPerformanceType(DDL_PerformanceType, this.lb_ShowMessage);
             DDL_PerformanceType.SelectedIndex = 0;
 
-            //åŠ è½½æ‰¿åŒ…å•†
+            //¼ÓÔØ³Ğ°üÉÌ
             InitProjectSupplier();
             DDL_ProjectSupplierID.SelectedIndex = 0;
 
@@ -61,7 +61,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæŸ¥è¯¢æ“ä½œå‡ºç°å¼‚å¸¸ï¼š" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º²éÑ¯²Ù×÷³öÏÖÒì³££º" + exp.Message;
         }
     }
 
@@ -81,7 +81,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "é”™è¯¯æç¤ºï¼šåŠ è½½æ‰¿åŒ…å•†åˆ—è¡¨ä¿¡æ¯å‡ºé”™ï¼š" + exp.Message;
+            lb_ShowMessage.Text = "´íÎóÌáÊ¾£º¼ÓÔØ³Ğ°üÉÌÁĞ±íĞÅÏ¢³ö´í£º" + exp.Message;
             return;
         }
     }
@@ -92,146 +92,146 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         if (TB_ItemNo.Text.Trim().Length == 0 || ShareClass.CheckIsAllNumber(TB_ItemNo.Text) == false)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€å­é¡¹åºå·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”å…¨ä¸ºæ•°å­—ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾×ÓÏîĞòºÅ¡¿ÊäÈëÓĞÎó£¬Ó¦È«ÎªÊı×Ö£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
             return false;
         }
         if (TB_ItemName.Text.Trim().Length == 0 || TB_ItemName.Text.Trim().Length > 256)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€å®šé¢å·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œä¸èƒ½è¶…è¿‡256ä¸ªæ±‰å­—ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾¶¨¶îºÅ¡¿ÊäÈëÓĞÎó£¬²»ÄÜ³¬¹ı256¸öºº×Ö£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
             return false;
         }
         if (TB_SubItem.Text.Trim().Length == 0 || TB_SubItem.Text.Trim().Length > 256)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€åˆ†éƒ¨åˆ†é¡¹ã€‘è¾“å…¥æœ‰è¯¯ï¼Œä¸èƒ½è¶…è¿‡20ä¸ªæ±‰å­—ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾·Ö²¿·ÖÏî¡¿ÊäÈëÓĞÎó£¬²»ÄÜ³¬¹ı20¸öºº×Ö£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
             return false;
         }
         if (TB_ItemUnit.Text.Trim().Length == 0 || TB_ItemUnit.Text.Trim().Length > 5)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€å•ä½ã€‘è¾“å…¥æœ‰è¯¯ï¼Œä¸èƒ½è¶…è¿‡5ä¸ªæ±‰å­—ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾µ¥Î»¡¿ÊäÈëÓĞÎó£¬²»ÄÜ³¬¹ı5¸öºº×Ö£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
             return false;
         }
         if (TB_ItemCount.Text.Trim().Length == 0 || ShareClass.CheckIsNumber(TB_ItemCount.Text) == false)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€æ•°é‡ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”å…¨ä¸ºæ•°å­—å¤§äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾ÊıÁ¿¡¿ÊäÈëÓĞÎó£¬Ó¦È«ÎªÊı×Ö´óÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
             return false;
         }
         if (TB_ItemContent.Text.Trim().Length == 0 || TB_ItemContent.Text.Trim().Length > 256)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€å®šé¢åç§°ã€‘è¾“å…¥æœ‰è¯¯ï¼Œä¸èƒ½è¶…è¿‡256ä¸ªæ±‰å­—ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾¶¨¶îÃû³Æ¡¿ÊäÈëÓĞÎó£¬²»ÄÜ³¬¹ı256¸öºº×Ö£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemPriceDevice.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€è®¾å¤‡åŸå®šå•ä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾Éè±¸Ô­¶¨µ¥¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemPriceMainMaterial.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€ä¸»æåŸå®šå•ä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾Ö÷²ÄÔ­¶¨µ¥¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemWage.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€äººå·¥åŸå®šå•ä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾ÈË¹¤Ô­¶¨µ¥¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemPriceMaterial.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€ææ–™åŸå®šå•ä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾²ÄÁÏÔ­¶¨µ¥¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemPriceMachine.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€æœºæ¢°åŸå®šå•ä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾»úĞµÔ­¶¨µ¥¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemPriceDeviceBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€é¢„ç®—è®¾å¤‡åˆä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾Ô¤ËãÉè±¸ºÏ¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemPriceMainMaterialBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€ä¸»æé¢„ç®—åˆä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾Ö÷²ÄÔ¤ËãºÏ¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
             return false;
         }
         if (false == RCJShareClass.isNumberString(this.tb_ProjectMaterialBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€ææ–™é¢„ç®—åˆä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾²ÄÁÏÔ¤ËãºÏ¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
             return false;
         }
         if (false == RCJShareClass.isNumberString(this.tb_ProjectMachineBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€æœºæ¢°é¢„ç®—åˆä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾»úĞµÔ¤ËãºÏ¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
             return false;
         } 
         if (false == RCJShareClass.isNumberString(TB_ItemPriceWageBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€äººå·¥é¢„ç®—åˆä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾ÈË¹¤Ô¤ËãºÏ¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
             return false;
         }
         if (false == RCJShareClass.isNumberString(tb_ItemPricePurchaseFee.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€ç®¡ç†è´¹åŠåˆ©æ¶¦è´¹ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾¹ÜÀí·Ñ¼°ÀûÈó·Ñ¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
             return false;
         }
         if (false == RCJShareClass.isNumberString(tb_ItemPricePurchaseFeeBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€è´¹ç‡æªæ–½è´¹ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾·ÑÂÊ´ëÊ©·Ñ¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
             return false;
         } 
         if (false == RCJShareClass.isNumberString(TB_ItemComprehensiveFeeBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€è§„è´¹ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾¹æ·Ñ¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemTaxesBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€é¢„ç®—ç¨é‡‘åˆä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾Ô¤ËãË°½ğºÏ¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemPriceTotalBudge.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€åˆè®¡é¢„ç®—åˆä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾ºÏ¼ÆÔ¤ËãºÏ¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
             return false;
         }
         if (TB_BeginTime.Text.Trim().Length <=0 )
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€å¼€å§‹æ—¶é—´ã€‘è¾“å…¥æœ‰è¯¯ï¼Œè¯·æ­£ç¡®é€‰æ‹©åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾¿ªÊ¼Ê±¼ä¡¿ÊäÈëÓĞÎó£¬ÇëÕıÈ·Ñ¡ÔñºóÔÙÊÔ£¡";
             return false;
         }
         if (TB_EndTime.Text.Trim().Length <= 0)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€ç»“æŸæ—¶é—´ã€‘è¾“å…¥æœ‰è¯¯ï¼Œè¯·æ­£ç¡®é€‰æ‹©åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾½áÊøÊ±¼ä¡¿ÊäÈëÓĞÎó£¬ÇëÕıÈ·Ñ¡ÔñºóÔÙÊÔ£¡";
             return false;
         }
 
         return true;
     }
 
-    //ä¿å­˜ç»©æ•ˆåŸºå‡†æ•°æ®
+    //±£´æ¼¨Ğ§»ù×¼Êı¾İ
     protected void btnSaveBenchmarData_Click(object sender, EventArgs e)
     {
         if (IsInputOK() == false)
@@ -243,14 +243,14 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             if (CheckHasRecord(DDL_PerformanceType.SelectedValue, TB_ItemNo.Text , ref iid) == true)
             {
                 lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šè¯¥å­é¡¹åºå·å·²ç»å­˜åœ¨ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼";
+                lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¸Ã×ÓÏîĞòºÅÒÑ¾­´æÔÚ£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡";
                 return;
             }
 
             if (SaveDataList(0) == true)
             {
                 lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-                lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæ–°å¢æ•°æ®æˆåŠŸï¼";
+                lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºĞÂÔöÊı¾İ³É¹¦£¡";
 
                 InitDataList();
             }
@@ -259,7 +259,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæ–°å¢æ“ä½œå‡ºç°å¼‚å¸¸ï¼š" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºĞÂÔö²Ù×÷³öÏÖÒì³££º" + exp.Message;
         }
     }
 
@@ -300,7 +300,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             item.AdjustID = RCJShareClass.getMinAdjustID(ProjectId, int.Parse(DDL_PerformanceType.SelectedValue), int.Parse(TB_ItemNo.Text));
             item.ItemPriceChanged = 0;
 
-            //å°†ç¬¬ä¸€æ¬¡çš„å•ä»·ä½œä¸ºç¬¬ä¸€æ¬¡è°ƒæ•´ä»·
+            //½«µÚÒ»´ÎµÄµ¥¼Û×÷ÎªµÚÒ»´Îµ÷Õû¼Û
             RCJProjectAdjustPriceList paplData = new RCJProjectAdjustPriceList();
             //RCJProjectAdjustPriceListBLL rpplBLL = new RCJProjectAdjustPriceListBLL();
             paplData.ItemNo = Convert.ToInt32(TB_ItemNo.Text);
@@ -315,7 +315,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             //paplData.ComprehensivePriceAdjust = Convert.ToDouble(TB_ItemPriceTotalBudge.Text);
             paplData.ProjectBCWS = Convert.ToDouble(TB_ItemPriceTotalBudge.Text);
             paplData.ItemNum = Convert.ToDouble(TB_ItemCount.Text);
-            paplData.Memo = "åŸå®šä»·æ ¼";
+            paplData.Memo = "Ô­¶¨¼Û¸ñ";
 
 
             runAddDataList(bAdd,item, paplData);
@@ -323,7 +323,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæ–°å¢æ“ä½œå‡ºç°å¼‚å¸¸ï¼š" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºĞÂÔö²Ù×÷³öÏÖÒì³££º" + exp.Message;
 
             return false;
         }
@@ -331,33 +331,33 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         return true;
     }
 
-    //åˆ é™¤è®°å½•
+    //É¾³ı¼ÇÂ¼
     protected void btnDelBenchmarData_Click(object sender, EventArgs e)
     {
         if (GridView1.SelectedIndex == -1)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            string strMsg = "æ¶ˆæ¯æç¤ºï¼šè¯·é€‰æ‹©ä¸€è¡Œè¦åˆ é™¤çš„åŸºå‡†æ•°æ®å†è¿›è¡Œåˆ é™¤æ“ä½œ!";
+            string strMsg = "ÏûÏ¢ÌáÊ¾£ºÇëÑ¡ÔñÒ»ĞĞÒªÉ¾³ıµÄ»ù×¼Êı¾İÔÙ½øĞĞÉ¾³ı²Ù×÷!";
             lb_ShowMessage.Text = strMsg;
             return;
         }
 
-        //æŸ¥è¯¢æ˜¯å¦æœ‰è¯¥è®°å½•,æœ‰è®°å½•åˆ™åˆ é™¤
+        //²éÑ¯ÊÇ·ñÓĞ¸Ã¼ÇÂ¼,ÓĞ¼ÇÂ¼ÔòÉ¾³ı
         try
         {
-            //åˆ é™¤æ•°æ®
+            //É¾³ıÊı¾İ
 
             SaveDataList(2);
 
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæŒ‡å®šè®°å½•åˆ é™¤æˆåŠŸï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºÖ¸¶¨¼ÇÂ¼É¾³ı³É¹¦£¡";
 
             InitDataList();
         }
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šåˆ é™¤æ“ä½œå‡ºç°å¼‚å¸¸ï¼š" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºÉ¾³ı²Ù×÷³öÏÖÒì³££º" + exp.Message;
         }
 
     }
@@ -381,31 +381,31 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
 
     protected void btn_ExcelToDataTraining_Click(object sender, EventArgs e)
     {
-        if (FileUpload_Training.HasFile == false)//HasFileç”¨æ¥æ£€æŸ¥FileUploadæ˜¯å¦æœ‰æŒ‡å®šæ–‡ä»¶
+        if (FileUpload_Training.HasFile == false)//HasFileÓÃÀ´¼ì²éFileUploadÊÇ·ñÓĞÖ¸¶¨ÎÄ¼ş
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            LB_ShowMessageImport.Text = "é”™è¯¯æç¤ºï¼š è¯·æ‚¨é€‰æ‹©Excelæ–‡ä»¶!";
-            return;//å½“æ— æ–‡ä»¶æ—¶,è¿”å›
+            LB_ShowMessageImport.Text = "´íÎóÌáÊ¾£º ÇëÄúÑ¡ÔñExcelÎÄ¼ş!";
+            return;//µ±ÎŞÎÄ¼şÊ±,·µ»Ø
         }
-        string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower() ;//System.IO.Path.GetExtensionè·å¾—æ–‡ä»¶çš„æ‰©å±•å
+        string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower() ;//System.IO.Path.GetExtension»ñµÃÎÄ¼şµÄÀ©Õ¹Ãû
         if (IsXls != ".xls" && IsXls != ".xlsx")
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            LB_ShowMessageImport.Text = "é”™è¯¯æç¤ºï¼š åªå¯ä»¥é€‰æ‹©Excelæ–‡ä»¶!";
-            return;//å½“é€‰æ‹©çš„ä¸æ˜¯Excelæ–‡ä»¶æ—¶,è¿”å›
+            LB_ShowMessageImport.Text = "´íÎóÌáÊ¾£º Ö»¿ÉÒÔÑ¡ÔñExcelÎÄ¼ş!";
+            return;//µ±Ñ¡ÔñµÄ²»ÊÇExcelÎÄ¼şÊ±,·µ»Ø
         }
-        string filename = FileUpload_Training.FileName.ToString();              //è·å–Execleæ–‡ä»¶å
-        string newfilename = System.IO.Path.GetFileNameWithoutExtension(filename) + DateTime.Now.ToString("yyyyMMddHHmmssff") + IsXls;//æ–°æ–‡ä»¶åç§°ï¼Œå¸¦åç¼€
+        string filename = FileUpload_Training.FileName.ToString();              //»ñÈ¡ExecleÎÄ¼şÃû
+        string newfilename = System.IO.Path.GetFileNameWithoutExtension(filename) + DateTime.Now.ToString("yyyyMMddHHmmssff") + IsXls;//ĞÂÎÄ¼şÃû³Æ£¬´øºó×º
         string strDocSavePath = Server.MapPath("Doc") + "\\" + DateTime.Now.ToString("yyyyMM") + "\\" + UserCode.Trim() + "\\Doc\\";
         FileInfo fi = new FileInfo(strDocSavePath + newfilename);
         if (fi.Exists)
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('Excelæ–‡ä»¶ä¸å­˜åœ¨');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('ExcelÎÄ¼ş²»´æÔÚ');</script>");
         }
         else
         {
             FileUpload_Training.MoveTo(strDocSavePath + newfilename, Brettle.Web.NeatUpload.MoveToOptions.Overwrite);
-            string strPath = strDocSavePath + newfilename;               //SaveAs å°†ä¸Šä¼ çš„æ–‡ä»¶å†…å®¹ä¿å­˜åœ¨æœåŠ¡å™¨ä¸Š
+            string strPath = strDocSavePath + newfilename;               //SaveAs ½«ÉÏ´«µÄÎÄ¼şÄÚÈİ±£´æÔÚ·şÎñÆ÷ÉÏ
 
             sbExcelImportMsg.Remove(0, sbExcelImportMsg.Length);
             TB_AnalysMsg.Text = "";
@@ -415,16 +415,16 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
                 string strTypeId = DDL_PerformanceType.Items[itype].Text;
                 int iTypeId = Convert.ToInt32(DDL_PerformanceType.Items[itype].Value);
 
-                DataSet ds = ExcelSqlConnection(strPath, filename, strTypeId);           //è°ƒç”¨è‡ªå®šä¹‰æ–¹æ³•
+                DataSet ds = ExcelSqlConnection(strPath, filename, strTypeId);           //µ÷ÓÃ×Ô¶¨Òå·½·¨
                 if (null == ds)
                     continue;
-                DataRow[] dr = ds.Tables[0].Select();            //å®šä¹‰ä¸€ä¸ªDataRowæ•°ç»„
+                DataRow[] dr = ds.Tables[0].Select();            //¶¨ÒåÒ»¸öDataRowÊı×é
                 int rowsnum = ds.Tables[0].Rows.Count;
                 if (rowsnum == 0)
                 {
-                    sbExcelImportMsg.Append("é”™è¯¯æç¤º: [");
+                    sbExcelImportMsg.Append("´íÎóÌáÊ¾: [");
                     sbExcelImportMsg.Append(strTypeId);
-                    sbExcelImportMsg.Append("]æ— æ•°æ®ï¼Œå¯¼å…¥ä¸‹ä¸€ä¸ªç±»å‹ã€‚\n");
+                    sbExcelImportMsg.Append("]ÎŞÊı¾İ£¬µ¼ÈëÏÂÒ»¸öÀàĞÍ¡£\n");
                     continue;
                 }
                 else
@@ -439,7 +439,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
                         TB_AnalysMsg.Text = sbExcelImportMsg.ToString();
                     }
 
-                    string str = string.Format("ä»Excelæ–‡ä»¶å¯¼å…¥æˆæœ¬ç»©æ•ˆåŸºå‡†æ•°æ®å…±{0:D}æ¡ï¼ŒæˆåŠŸ{1:D}æ¡,ä¸“ä¸šåˆ†ç±»ï¼š{2:s}\n", dr.Length, sucnum, strTypeId);
+                    string str = string.Format("´ÓExcelÎÄ¼şµ¼Èë³É±¾¼¨Ğ§»ù×¼Êı¾İ¹²{0:D}Ìõ£¬³É¹¦{1:D}Ìõ,×¨Òµ·ÖÀà£º{2:s}\n", dr.Length, sucnum, strTypeId);
                     sbExcelImportMsg.Append(str);
 
                     if (sucnum > 0)
@@ -482,170 +482,170 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         if (dr[itemid].ToString().Trim().Length == 0 || ShareClass.CheckIsAllNumber(dr[itemid].ToString()) == false)
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("ã€å­é¡¹åºå·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”å…¨ä¸ºæ•°å­—ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("¡¾×ÓÏîĞòºÅ¡¿ÊäÈëÓĞÎó£¬Ó¦È«ÎªÊı×Ö£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
-        sbExcelImportMsg.Append("å¼€å§‹å¯¼å…¥ã€å­é¡¹åºå·ã€‘ä¸º:");
+        sbExcelImportMsg.Append("¿ªÊ¼µ¼Èë¡¾×ÓÏîĞòºÅ¡¿Îª:");
         sbExcelImportMsg.Append(dr[0].ToString());
-        sbExcelImportMsg.Append(" çš„ç»©æ•ˆåŸºå‡†æ•°æ®-----------------\n");
+        sbExcelImportMsg.Append(" µÄ¼¨Ğ§»ù×¼Êı¾İ-----------------\n");
         if (dr[itemid].ToString().Trim().Length == 0 || dr[itemid].ToString().Trim().Length > 256)
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€å®šé¢å·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œä¸èƒ½è¶…è¿‡256ä¸ªæ±‰å­—ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾¶¨¶îºÅ¡¿ÊäÈëÓĞÎó£¬²»ÄÜ³¬¹ı256¸öºº×Ö£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
         if (dr[itemid].ToString().Trim().Length == 0 || dr[itemid].ToString().Trim().Length > 256)
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€å®šé¢åç§°ã€‘è¾“å…¥æœ‰è¯¯ï¼Œä¸èƒ½è¶…è¿‡256ä¸ªæ±‰å­—ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾¶¨¶îÃû³Æ¡¿ÊäÈëÓĞÎó£¬²»ÄÜ³¬¹ı256¸öºº×Ö£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
         if (dr[itemid].ToString().Trim().Length == 0 || dr[itemid].ToString().Trim().Length > 40)
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€åˆ†éƒ¨åˆ†é¡¹ã€‘è¾“å…¥æœ‰è¯¯ï¼Œä¸èƒ½è¶…è¿‡40ä¸ªæ±‰å­—ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾·Ö²¿·ÖÏî¡¿ÊäÈëÓĞÎó£¬²»ÄÜ³¬¹ı40¸öºº×Ö£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
         if (dr[itemid].ToString().Trim().Length == 0 || dr[itemid].ToString().Trim().Length > 5)
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€å•ä½ã€‘è¾“å…¥æœ‰è¯¯ï¼Œä¸èƒ½è¶…è¿‡5ä¸ªæ±‰å­—ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾µ¥Î»¡¿ÊäÈëÓĞÎó£¬²»ÄÜ³¬¹ı5¸öºº×Ö£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€æ•°é‡ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”å…¨ä¸ºæ•°å­—ä¸”å¤§äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾ÊıÁ¿¡¿ÊäÈëÓĞÎó£¬Ó¦È«ÎªÊı×ÖÇÒ´óÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€è®¾å¤‡åŸå®šå•ä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾Éè±¸Ô­¶¨µ¥¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€ä¸»æåŸå®šå•ä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾Ö÷²ÄÔ­¶¨µ¥¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€äººå·¥åŸå®šå•ä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾ÈË¹¤Ô­¶¨µ¥¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€ææ–™åŸå®šå•ä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾²ÄÁÏÔ­¶¨µ¥¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€æœºæ¢°åŸå®šå•ä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾»úĞµÔ­¶¨µ¥¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€é¢„ç®—è®¾å¤‡åˆä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾Ô¤ËãÉè±¸ºÏ¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€ä¸»æé¢„ç®—åˆä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾Ö÷²ÄÔ¤ËãºÏ¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€äººå·¥é¢„ç®—åˆä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾ÈË¹¤Ô¤ËãºÏ¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€ææ–™é¢„ç®—åˆä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾²ÄÁÏÔ¤ËãºÏ¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€æœºæ¢°é¢„ç®—åˆä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾»úĞµÔ¤ËãºÏ¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€ç®¡ç†è´¹åŠåˆ©æ¶¦è´¹ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾¹ÜÀí·Ñ¼°ÀûÈó·Ñ¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€è´¹ç‡æªæ–½è´¹ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾·ÑÂÊ´ëÊ©·Ñ¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€è§„è´¹ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾¹æ·Ñ¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€é¢„ç®—ç¨é‡‘åˆä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾Ô¤ËãË°½ğºÏ¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€åˆè®¡é¢„ç®—åˆä»·ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåº”ä¸ºæ•°å­—ä¸”å¤§äºç­‰äºé›¶ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾ºÏ¼ÆÔ¤ËãºÏ¼Û¡¿ÊäÈëÓĞÎó£¬Ó¦ÎªÊı×ÖÇÒ´óÓÚµÈÓÚÁã£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
         if (dr[itemid].ToString().Trim().Length != 0 && dr[itemid].ToString().Trim().Length > 50)
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€æ‰¿åŒ…å•†ã€‘è¾“å…¥æœ‰è¯¯ï¼Œä¸ä¸ºç©ºåˆ™é•¿åº¦50ä¸ªå­—ç¬¦ï¼Œ25ä¸ªæ±‰å­—ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾³Ğ°üÉÌ¡¿ÊäÈëÓĞÎó£¬²»Îª¿ÕÔò³¤¶È50¸ö×Ö·û£¬25¸öºº×Ö£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         if(DDL_ProjectSupplierID.Items.FindByValue(dr[itemid].ToString().Trim()) == null)
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€æ‰¿åŒ…å•†ã€‘ä¸å­˜åœ¨ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾³Ğ°üÉÌ¡¿²»´æÔÚ£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
         if (dr[itemid].ToString().Trim() != "0" && dr[itemid].ToString().Trim() != "1")
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€è‡ªåŠ¨è®¡ç®—æœˆè®¡åˆ’é¢ã€‘è¾“å…¥æœ‰è¯¯ï¼Œåªèƒ½ä¸º0æˆ–è€…1ï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+            sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾×Ô¶¯¼ÆËãÔÂ¼Æ»®¶î¡¿ÊäÈëÓĞÎó£¬Ö»ÄÜÎª0»òÕß1£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
             return false;
         }
         itemid++;
@@ -655,27 +655,27 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             if (dr[itemid].ToString().Trim().Length != 0 && RCJShareClass.IsDate(dr[itemid].ToString().Trim()) == false)
             {
                 LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-                sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€å¼€å§‹æ—¶é—´ã€‘è¾“å…¥æœ‰è¯¯ï¼Œæ ¼å¼ä¸ºyyyy/mm/dd,è¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+                sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾¿ªÊ¼Ê±¼ä¡¿ÊäÈëÓĞÎó£¬¸ñÊ½Îªyyyy/mm/dd,ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
                 return false;
             }
             itemid++;
             if (dr[itemid].ToString().Trim().Length != 0 && RCJShareClass.IsDate(dr[itemid].ToString().Trim()) == false)
             {
                 LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-                sbExcelImportMsg.Append("æ¶ˆæ¯æç¤ºï¼šã€ç»“æŸæ—¶é—´ã€‘è¾“å…¥æœ‰è¯¯,æ ¼å¼ä¸ºyyyy/mm/ddï¼Œè¯·æ­£ç¡®è¾“å…¥åå†è¯•ï¼\n");
+                sbExcelImportMsg.Append("ÏûÏ¢ÌáÊ¾£º¡¾½áÊøÊ±¼ä¡¿ÊäÈëÓĞÎó,¸ñÊ½Îªyyyy/mm/dd£¬ÇëÕıÈ·ÊäÈëºóÔÙÊÔ£¡\n");
                 return false;
             }
         }
         return true;
     }
 
-    //åˆ†æå¯¼å…¥çš„Excelè®°å½•
+    //·ÖÎöµ¼ÈëµÄExcel¼ÇÂ¼
     private bool AnalysisExcelRecord(DataRow dr, int iTypeId)
     {
-        //è®°å½•æ˜¯å¦åˆæ³•,å¦‚æœä¸åˆæ³•åˆ™ä¸å¯¼å…¥
+        //¼ÇÂ¼ÊÇ·ñºÏ·¨,Èç¹û²»ºÏ·¨Ôò²»µ¼Èë
         if (IsExcelRecordValid(dr) == false)
         {
-            sbExcelImportMsg.Append("å¯¼å…¥ä¸€æ¡è®°å½•å¤±è´¥ï¼ï¼ï¼\n");
+            sbExcelImportMsg.Append("µ¼ÈëÒ»Ìõ¼ÇÂ¼Ê§°Ü£¡£¡£¡\n");
             return false;
         }
 
@@ -706,7 +706,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             item.BeginTime = dr[23].ToString();
             item.EndTime = dr[24].ToString();
 
-            //å°†ç¬¬ä¸€æ¬¡çš„å•ä»·ä½œä¸ºç¬¬ä¸€æ¬¡è°ƒæ•´ä»·
+            //½«µÚÒ»´ÎµÄµ¥¼Û×÷ÎªµÚÒ»´Îµ÷Õû¼Û
             RCJProjectAdjustPriceList paplData = new RCJProjectAdjustPriceList();
             //RCJProjectAdjustPriceListBLL rpplBLL = new RCJProjectAdjustPriceListBLL();
             paplData.ItemNo = Convert.ToInt32(dr[0].ToString());
@@ -721,7 +721,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             paplData.TaxesPriceAdjust = Convert.ToDouble(dr[19].ToString());
             paplData.ProjectBCWS = Convert.ToDouble(dr[20].ToString());
             paplData.ItemNum = Convert.ToDouble(dr[5].ToString());
-            paplData.Memo = "åŸå®šä»·æ ¼";
+            paplData.Memo = "Ô­¶¨¼Û¸ñ";
 
             RCJProjectCostPerformanceList oldItem = new RCJProjectCostPerformanceList();
 
@@ -732,17 +732,17 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         }
         catch (Exception exp)
         {
-            sbExcelImportMsg.Append("ã€å­é¡¹åºå·ã€‘ä¸º:");
+            sbExcelImportMsg.Append("¡¾×ÓÏîĞòºÅ¡¿Îª:");
             sbExcelImportMsg.Append(dr[0].ToString());
-            sbExcelImportMsg.Append(" çš„ç»©æ•ˆåŸºå‡†æ•°æ®æ“ä½œå‡ºç°å¼‚å¸¸ï¼š");
+            sbExcelImportMsg.Append(" µÄ¼¨Ğ§»ù×¼Êı¾İ²Ù×÷³öÏÖÒì³££º");
             sbExcelImportMsg.Append(exp.Message);
             sbExcelImportMsg.Append("\n");
             return false;
         }
 
-        sbExcelImportMsg.Append("ã€å­é¡¹åºå·ã€‘ä¸º:");
+        sbExcelImportMsg.Append("¡¾×ÓÏîĞòºÅ¡¿Îª:");
         sbExcelImportMsg.Append(dr[0].ToString());
-        sbExcelImportMsg.Append(" çš„ç»©æ•ˆåŸºå‡†æ•°æ®å¯¼å…¥æˆåŠŸï¼\n");
+        sbExcelImportMsg.Append(" µÄ¼¨Ğ§»ù×¼Êı¾İµ¼Èë³É¹¦£¡\n");
 
         return true;
     }
@@ -816,7 +816,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         return true;
     }
 
-    //é€‰æ‹©æŒ‡å®šè®°å½•è¿›è¡Œæ“ä½œ
+    //Ñ¡ÔñÖ¸¶¨¼ÇÂ¼½øĞĞ²Ù×÷
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
     {
         try
@@ -846,27 +846,27 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             TB_ItemPriceTotalBudge.Text = GridView1.Rows[GridView1.SelectedIndex].Cells[22].Text.Replace(",", "");
             DDL_ProjectSupplierID.ClearSelection();
             DDL_ProjectSupplierID.Items.FindByText(GridView1.Rows[GridView1.SelectedIndex].Cells[23].Text).Selected = true;
-            CB_IfEveryMonth.Checked = ((Label)GridView1.Rows[GridView1.SelectedIndex].FindControl("Label2")).Text.Trim() == "æ˜¯";
+            CB_IfEveryMonth.Checked = ((Label)GridView1.Rows[GridView1.SelectedIndex].FindControl("Label2")).Text.Trim() == "YES";
             TB_BeginTime.Text = GridView1.Rows[GridView1.SelectedIndex].Cells[24].Text;
             TB_EndTime.Text = GridView1.Rows[GridView1.SelectedIndex].Cells[25].Text;
 
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæŒ‡å®šè®°å½•æŸ¥è¯¢æˆåŠŸï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºÖ¸¶¨¼ÇÂ¼²éÑ¯³É¹¦£¡";
         }
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæ“ä½œå¤±è´¥ï¼" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º²Ù×÷Ê§°Ü£¡" + exp.Message;
         }
     }
 
-    //ä¿®æ”¹å­é¡¹
+    //ĞŞ¸Ä×ÓÏî
     protected void BT_EditBenchmarData_Click(object sender, EventArgs e)
     {
         if (GridView1.SelectedIndex == -1)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            string strMsg = "æ¶ˆæ¯æç¤ºï¼šè¯·é€‰æ‹©ä¸€è¡Œè¦ä¿®æ”¹çš„åŸºå‡†æ•°æ®å†è¿›è¡Œä¿®æ”¹æ“ä½œ!";
+            string strMsg = "ÏûÏ¢ÌáÊ¾£ºÇëÑ¡ÔñÒ»ĞĞÒªĞŞ¸ÄµÄ»ù×¼Êı¾İÔÙ½øĞĞĞŞ¸Ä²Ù×÷!";
             lb_ShowMessage.Text = strMsg;
             return;
         }
@@ -874,32 +874,32 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         if (IsInputOK() == false)
             return;
 
-        //ä¿®æ”¹æ—¶ä¸èƒ½ä¿®æ”¹è‡ªåŠ¨åˆ†æœˆ
-        bool IsChecked = ((Label)GridView1.Rows[GridView1.SelectedIndex].FindControl("Label2")).Text.Trim() == "æ˜¯";
+        //ĞŞ¸ÄÊ±²»ÄÜĞŞ¸Ä×Ô¶¯·ÖÔÂ
+        bool IsChecked = ((Label)GridView1.Rows[GridView1.SelectedIndex].FindControl("Label2")).Text.Trim() == "YES";
         if (CB_IfEveryMonth.Checked != IsChecked)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            string strMsg = "æ¶ˆæ¯æç¤ºï¼šä¿®æ”¹æ“ä½œæ—¶ä¸èƒ½ä¿®æ”¹ã€è‡ªåŠ¨è®¡ç®—æœˆè®¡åˆ’é¢ã€‘!";
+            string strMsg = "ÏûÏ¢ÌáÊ¾£ºĞŞ¸Ä²Ù×÷Ê±²»ÄÜĞŞ¸Ä¡¾×Ô¶¯¼ÆËãÔÂ¼Æ»®¶î¡¿!";
             lb_ShowMessage.Text = strMsg;
-            CB_IfEveryMonth.Checked = ((Label)GridView1.Rows[GridView1.SelectedIndex].FindControl("Label2")).Text.Trim() == "æ˜¯";
+            CB_IfEveryMonth.Checked = ((Label)GridView1.Rows[GridView1.SelectedIndex].FindControl("Label2")).Text.Trim() == "YES";
             return;
         }
 
-        //ä¿®æ”¹æ—¶å¦‚æœBCWPä¸ä¸ºé›¶ï¼Œåˆ™æ•°é‡ä¸èƒ½å°äºå·²ç»å½•å…¥çš„å·¥ä½œé‡
+        //ĞŞ¸ÄÊ±Èç¹ûBCWP²»ÎªÁã£¬ÔòÊıÁ¿²»ÄÜĞ¡ÓÚÒÑ¾­Â¼ÈëµÄ¹¤×÷Á¿
         if (RCJShareClass.CheckTheItemNumber(ProjectId, Convert.ToInt32(DDL_PerformanceType.SelectedValue), Convert.ToInt32(TB_ItemNo.Text), 1, TB_ItemCount.Text) == false)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            string strMsg = "æ¶ˆæ¯æç¤ºï¼šè¯¥é¡¹BCWPä¸ä¸ºé›¶ï¼Œä¿®æ”¹æ“ä½œæ—¶ä¸èƒ½å°äºå·²ç»å½•å…¥çš„å·¥ä½œæ€»é‡ï¼Œè¯·æ­£ç¡®å¡«å†™åå†è¿›è¡Œä¿®æ”¹æ“ä½œ!";
+            string strMsg = "ÏûÏ¢ÌáÊ¾£º¸ÃÏîBCWP²»ÎªÁã£¬ĞŞ¸Ä²Ù×÷Ê±²»ÄÜĞ¡ÓÚÒÑ¾­Â¼ÈëµÄ¹¤×÷×ÜÁ¿£¬ÇëÕıÈ·ÌîĞ´ºóÔÙ½øĞĞĞŞ¸Ä²Ù×÷!";
             lb_ShowMessage.Text = strMsg;
             return;
         }
 
 
-        //ä¿®æ”¹æ“ä½œæ—¶ä¸èƒ½ä¿®æ”¹å­é¡¹åºå·
+        //ĞŞ¸Ä²Ù×÷Ê±²»ÄÜĞŞ¸Ä×ÓÏîĞòºÅ
         if (TB_ItemNo.Text != GridView1.Rows[GridView1.SelectedIndex].Cells[1].Text)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            string strMsg = "æ¶ˆæ¯æç¤ºï¼šè¿›è¡Œä¿®æ”¹æ“ä½œæ—¶ä¸èƒ½ä¿®æ”¹å­é¡¹åºå·ï¼Œè¯·æ­£ç¡®å¡«å†™åå†è¿›è¡Œä¿®æ”¹æ“ä½œ!";
+            string strMsg = "ÏûÏ¢ÌáÊ¾£º½øĞĞĞŞ¸Ä²Ù×÷Ê±²»ÄÜĞŞ¸Ä×ÓÏîĞòºÅ£¬ÇëÕıÈ·ÌîĞ´ºóÔÙ½øĞĞĞŞ¸Ä²Ù×÷!";
             lb_ShowMessage.Text = strMsg;
             return;
         }
@@ -909,14 +909,14 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             SaveDataList(1);
 
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæŒ‡å®šè®°å½•ä¿®æ”¹æˆåŠŸï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºÖ¸¶¨¼ÇÂ¼ĞŞ¸Ä³É¹¦£¡";
 
             InitDataList();
         }
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šä¿®æ”¹æ“ä½œå‡ºç°å¼‚å¸¸ï¼š" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºĞŞ¸Ä²Ù×÷³öÏÖÒì³££º" + exp.Message;
         }
     }
 
@@ -941,7 +941,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             else
             {
                 lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæŸ¥è¯¢åŸæœ‰ç»©æ•ˆåˆ—è¡¨æ•°æ®æ“ä½œæ²¡æœ‰å¯¹åº”è®°å½•ã€‚"; 
+                lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º²éÑ¯Ô­ÓĞ¼¨Ğ§ÁĞ±íÊı¾İ²Ù×÷Ã»ÓĞ¶ÔÓ¦¼ÇÂ¼¡£"; 
                 
                 return false;
             }
@@ -949,7 +949,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæŸ¥è¯¢åŸæœ‰ç»©æ•ˆåˆ—è¡¨æ•°æ®æ“ä½œå‡ºç°å¼‚å¸¸ï¼š" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º²éÑ¯Ô­ÓĞ¼¨Ğ§ÁĞ±íÊı¾İ²Ù×÷³öÏÖÒì³££º" + exp.Message;
 
             return false;
         }
@@ -980,7 +980,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             else
             {
                 lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæŸ¥è¯¢åŸæœ‰ä»·æ ¼è°ƒæ•´æ•°æ®æ“ä½œæ²¡æœ‰å¯¹åº”è®°å½•ã€‚";
+                lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º²éÑ¯Ô­ÓĞ¼Û¸ñµ÷ÕûÊı¾İ²Ù×÷Ã»ÓĞ¶ÔÓ¦¼ÇÂ¼¡£";
 
                 return false;
             }
@@ -988,7 +988,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæŸ¥è¯¢åŸæœ‰ä»·æ ¼è°ƒæ•´æ“ä½œå‡ºç°å¼‚å¸¸ï¼š" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º²éÑ¯Ô­ÓĞ¼Û¸ñµ÷Õû²Ù×÷³öÏÖÒì³££º" + exp.Message;
 
             return false;
         }
@@ -1013,17 +1013,17 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         try
         {
             sbExcelImportMsg.Remove(0, sbExcelImportMsg.Length);
-            sbExcelImportMsg.Append("æ­£åœ¨å¯¼å‡ºç»©æ•ˆåŸºå‡†åˆ—è¡¨ä¿¡æ¯æ•°æ®...\n");
+            sbExcelImportMsg.Append("ÕıÔÚµ¼³ö¼¨Ğ§»ù×¼ÁĞ±íĞÅÏ¢Êı¾İ...\n");
             TB_AnalysMsg.Text = sbExcelImportMsg.ToString();
-            //æ ¹æ®å¯¼å‡ºæ¨¡æ¿ç”Ÿæˆä¸´æ—¶æ–‡ä»¶
+            //¸ù¾İµ¼³öÄ£°åÉú³ÉÁÙÊ±ÎÄ¼ş
             string filePath = Server.MapPath("~/Template/" + Guid.NewGuid().ToString() + ".xls");
             try
             {
-                File.Copy(Server.MapPath("~/Template/ç»©æ•ˆåŸºå‡†æ•°æ®å¯¼å‡ºæ¨¡æ¿.xls"), filePath);
+                File.Copy(Server.MapPath("~/Template/¼¨Ğ§»ù×¼Êı¾İµ¼³öÄ£°å.xls"), filePath);
             }
             catch (Exception exp)
             {
-                sbExcelImportMsg.Append("æ¨¡æ¿æ“ä½œå¼‚å¸¸ï¼š");
+                sbExcelImportMsg.Append("Ä£°å²Ù×÷Òì³££º");
                 sbExcelImportMsg.Append(exp.Message);
                 sbExcelImportMsg.Append("\n");
                 TB_AnalysMsg.Text = sbExcelImportMsg.ToString();
@@ -1036,20 +1036,20 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             }
 
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Green;
-            LB_ShowMessageImport.Text = "æ“ä½œæç¤ºï¼š ç»©æ•ˆåŸºå‡†æ•°æ®å¯¼å…¥åˆ°Excelæ–‡ä»¶æˆåŠŸ!";
+            LB_ShowMessageImport.Text = "²Ù×÷ÌáÊ¾£º ¼¨Ğ§»ù×¼Êı¾İµ¼Èëµ½ExcelÎÄ¼ş³É¹¦!";
 
-            sbExcelImportMsg.Append("å¯¼å‡ºæ–‡ä»¶æˆåŠŸ\n");
+            sbExcelImportMsg.Append("µ¼³öÎÄ¼ş³É¹¦\n");
             TB_AnalysMsg.Text = sbExcelImportMsg.ToString();
-            //æ–‡ä»¶ä¿å­˜åˆ°æœ¬åœ°
+            //ÎÄ¼ş±£´æµ½±¾µØ
 
             Response.ContentType = "application/ms-excel";
-            Response.AppendHeader("Content-Disposition", "attachment;filename=ç»©æ•ˆåŸºå‡†æ•°æ®.xls");
+            Response.AppendHeader("Content-Disposition", "attachment;filename=¼¨Ğ§»ù×¼Êı¾İ.xls");
             Response.WriteFile(filePath);
 
         }
         catch (Exception exp)
         {
-            sbExcelImportMsg.Append("æ“ä½œå¼‚å¸¸ï¼šè¯·ç¡®è®¤æ¨¡æ¿æ–‡ä»¶â€˜ç»©æ•ˆåŸºå‡†æ•°æ®å¯¼å‡ºæ¨¡æ¿.xlsâ€™æ˜¯å¦æ­£åœ¨ä½¿ç”¨ä¸­ï¼Œè¯·å…³é—­åå†è¯•ï¼");
+            sbExcelImportMsg.Append("²Ù×÷Òì³££ºÇëÈ·ÈÏÄ£°åÎÄ¼ş¡®¼¨Ğ§»ù×¼Êı¾İµ¼³öÄ£°å.xls¡¯ÊÇ·ñÕıÔÚÊ¹ÓÃÖĞ£¬Çë¹Ø±ÕºóÔÙÊÔ£¡");
             sbExcelImportMsg.Append(exp.Message);
             sbExcelImportMsg.Append("\n");
             TB_AnalysMsg.Text = sbExcelImportMsg.ToString();
@@ -1061,7 +1061,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
     {
         try
         {
-            //æŸ¥è¯¢è·å–è®°å½•åˆ—è¡¨
+            //²éÑ¯»ñÈ¡¼ÇÂ¼ÁĞ±í
             RCJProjectCostPerformanceBenchmarBLL cpbBLL = new RCJProjectCostPerformanceBenchmarBLL();
             StringBuilder strSql = new StringBuilder("From  RCJProjectCostPerformanceList as rRCJProjectCostPerformanceList where projectid=");
             strSql.Append(ProjectId.ToString());
@@ -1072,7 +1072,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             IList list;
             list = cpbBLL.GetAllProjectCostPerformanceBenchmar(strSql.ToString());
 
-            //å†™å…¥è®°å½•åˆ°æ–‡ä»¶ä¸­
+            //Ğ´Èë¼ÇÂ¼µ½ÎÄ¼şÖĞ
             string strCon = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + strMidFile + ";Extended Properties='Excel 8.0;HDR=YES;IMEX=0'";
             OleDbConnection ExcelConn = new OleDbConnection(strCon);
             using (ExcelConn)
@@ -1133,11 +1133,11 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
                     int linenum = cmd.ExecuteNonQuery();
                 }
 
-                sbExcelImportMsg.Append("å¯¼å‡º[");
+                sbExcelImportMsg.Append("µ¼³ö[");
                 sbExcelImportMsg.Append(strItemTypeName);
-                sbExcelImportMsg.Append("]æˆåŠŸï¼Œå…±");
+                sbExcelImportMsg.Append("]³É¹¦£¬¹²");
                 sbExcelImportMsg.Append(list.Count.ToString());
-                sbExcelImportMsg.Append("æ¡ã€‚\n");
+                sbExcelImportMsg.Append("Ìõ¡£\n");
                 TB_AnalysMsg.Text = sbExcelImportMsg.ToString();
 
                 ExcelConn.Close();
@@ -1146,9 +1146,9 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         catch (Exception exp)
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            StringBuilder sb = new StringBuilder("é”™è¯¯æç¤ºï¼š ç»©æ•ˆåŸºå‡†æ•°æ®[");
+            StringBuilder sb = new StringBuilder("´íÎóÌáÊ¾£º ¼¨Ğ§»ù×¼Êı¾İ[");
             sb.Append(strItemTypeName);
-            sb.Append("]å¯¼å…¥åˆ°Excelæ–‡ä»¶å¤±è´¥!");
+            sb.Append("]µ¼Èëµ½ExcelÎÄ¼şÊ§°Ü!");
             sb.Append(exp.Message);
             LB_ShowMessageImport.Text = sb.ToString();
         }
@@ -1162,7 +1162,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
 
         try
         {
-            //ç»„è£…ä¿®æ”¹SQLè¯­å¥
+            //×é×°ĞŞ¸ÄSQLÓï¾ä
             StringBuilder sql = new StringBuilder("exec Pro_InsertRCJProjectSetup ");
             sql.Append(ProjectId.ToString());
             sql.Append(",");
@@ -1171,12 +1171,12 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             ShareClass.RunSqlCommand(sql.ToString());
 
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Green;
-            LB_ShowMessageImport.Text = "æ¶ˆæ¯æç¤ºï¼šä¿®æ”¹ã€é€æœˆè®¡åˆ’ã€‘æ¨¡å¼æˆåŠŸï¼";
+            LB_ShowMessageImport.Text = "ÏûÏ¢ÌáÊ¾£ºĞŞ¸Ä¡¾ÖğÔÂ¼Æ»®¡¿Ä£Ê½³É¹¦£¡";
         }
         catch (Exception exp)
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            LB_ShowMessageImport.Text = "é”™è¯¯æç¤ºï¼š ç»©æ•ˆåŸºå‡†æ•°æ®å¯¼å…¥åˆ°Excelæ–‡ä»¶å¤±è´¥!" + exp.Message;
+            LB_ShowMessageImport.Text = "´íÎóÌáÊ¾£º ¼¨Ğ§»ù×¼Êı¾İµ¼Èëµ½ExcelÎÄ¼şÊ§°Ü!" + exp.Message;
         }
     }
 
@@ -1205,7 +1205,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         tb_ItemPricePurchaseFeeBudget.Text = "";
         lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
         TB_SubItem.Text = "";
-        lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæ— ";
+        lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºÎŞ";
     }
 
     protected void DDL_PerformanceType_SelectedIndexChanged(object sender, EventArgs e)
@@ -1219,13 +1219,13 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-            //é¼ æ ‡ç»è¿‡æ—¶ï¼Œè¡ŒèƒŒæ™¯è‰²å˜ 
+            //Êó±ê¾­¹ıÊ±£¬ĞĞ±³¾°É«±ä 
             e.Row.Attributes.Add("onmouseover", "this.style.backgroundColor='#A9A9A9'");
-            //é¼ æ ‡ç§»å‡ºæ—¶ï¼Œè¡ŒèƒŒæ™¯è‰²å˜ 
+            //Êó±êÒÆ³öÊ±£¬ĞĞ±³¾°É«±ä 
             e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor='#FFFFFF'");
 
             Label lbl1 = (Label)e.Row.FindControl("Label1");
-            if ("æ˜¯" == lbl1.Text)
+            if ("YES" == lbl1.Text)
                 e.Row.ForeColor = System.Drawing.Color.Crimson;
             else
                 e.Row.ForeColor = System.Drawing.Color.Blue;
@@ -1305,7 +1305,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         }
         catch
         {
-            //å¦‚æœè¾“å…¥é”™è¯¯ï¼Œæˆ–è€…ä¸ºç©ºï¼Œåˆ™æ˜¾ç¤ºæ‰€æœ‰è®°å½•
+            //Èç¹ûÊäÈë´íÎó£¬»òÕßÎª¿Õ£¬ÔòÏÔÊ¾ËùÓĞ¼ÇÂ¼
             InitDataList();
         }
     }

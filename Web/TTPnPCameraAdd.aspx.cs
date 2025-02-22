@@ -1,4 +1,4 @@
-锘縰sing ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System; using System.Resources;
 using System.Collections;
@@ -37,7 +37,7 @@ public partial class TTPnPCameraAdd : System.Web.UI.Page
         //{
         //    TV_Department.Nodes.Clear();
         //    TreeNode Node = new TreeNode();
-        //    Node.Text = "鍏ㄩ儴";
+        //    Node.Text = "全部";
         //    Node.Value = "0";
         //    for (int i = 0; i < listDepartment.Count; i++)
         //    {
@@ -79,7 +79,7 @@ public partial class TTPnPCameraAdd : System.Web.UI.Page
             string id = HF_ID.Value;
             if (!string.IsNullOrEmpty(id))
             {
-                //淇敼
+                //修改
                 int intID = 0;
                 int.TryParse(id,out intID);
                 string strCameraInfoHQL = "from CameraInfo as cameraInfo where id = " + intID;
@@ -99,7 +99,7 @@ public partial class TTPnPCameraAdd : System.Web.UI.Page
                 }
             }
             else { 
-                //澧炲姞
+                //增加
                 CameraInfo cameraInfo = new CameraInfo();
                 cameraInfo.ForeignID = HF_ForeignID.Value;
                 cameraInfo.CameraType = 1;

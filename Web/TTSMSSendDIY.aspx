@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSMSSendDIY.aspx.cs" Inherits="TTSMSSendDIY" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSMSSendDIY.aspx.cs" Inherits="TTSMSSendDIY" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -121,25 +121,25 @@
                                         CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnItemCommand="DataGrid4_ItemCommand"
                                         OnPageIndexChanged="DataGrid4_PageIndexChanged" ShowHeader="false" Width="100%">
                                         <Columns>
-                                            <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ä¿®æ”¹' /&gt;&lt;/div&gt;">
+                                            <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ÐÞ¸Ä' /&gt;&lt;/div&gt;">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:ButtonColumn>
                                             <asp:TemplateColumn HeaderText="Delete">
                                                 <ItemTemplate>
-                                                    <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='åˆ é™¤' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                    <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                 </ItemTemplate>
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:TemplateColumn>
                                             <asp:BoundColumn DataField="ID" HeaderText="ID">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Message" HeaderText="ä¿¡æ¯å†…å®¹">
+                                            <asp:BoundColumn DataField="Message" HeaderText="ÐÅÏ¢ÄÚÈÝ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="55%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="SendTime" HeaderText="å‘é€æ—¶é—´">
+                                            <asp:BoundColumn DataField="SendTime" HeaderText="·¢ËÍÊ±¼ä">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                             </asp:BoundColumn>
-                                            <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                            <asp:TemplateColumn HeaderText="×´Ì¬">
                                                 <ItemTemplate>
                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                 </ItemTemplate>
@@ -181,7 +181,7 @@
                                             <tr>
                                                 <td align="right" class="formItemBgStyle" style="width: 15%; height: 24px">
                                                     <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>
-                                                    ï¼š
+                                                    £º
                                                 </td>
                                                 <td align="left" class="formItemBgStyle">
                                                     <asp:TextBox ID="TB_Message" runat="server" Height="96px" TextMode="MultiLine" Width="90%"></asp:TextBox>
@@ -191,7 +191,7 @@
                                                 <tr>
                                                     <td align="right" class="formItemBgStyle" style="width: 15%; height: 24px">
                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JieShouRenYuan%>"></asp:Label>
-                                                        ï¼š
+                                                        £º
                                                     </td>
                                                     <td align="left" class="formItemBgStyle">
                                                         <asp:Repeater ID="RP_Attendant" runat="server" OnItemCommand="Repeater1_ItemCommand">
@@ -205,7 +205,7 @@
                                                 <tr>
                                                     <td align="right" class="formItemBgStyle" style="width: 15%; height: 24px">
                                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>
-                                                        ï¼š
+                                                        £º
                                                     </td>
                                                     <td align="left" class="formItemBgStyle" style="height: 21px;">
                                                         <asp:Label ID="LB_Status" runat="server" Text="<%$ Resources:lang,XinJian%>"></asp:Label>

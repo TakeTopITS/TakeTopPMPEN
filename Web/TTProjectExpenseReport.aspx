@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectExpenseReport.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectExpenseReport.aspx.cs"
     Inherits="TTProjectExpenseReport" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -88,7 +88,7 @@
                                                         <td style="background: #f0f0f0; text-align: right; width: 35%; height: 25px;">
 
                                                             <a href="#" onclick="preview1()">
-                                                                <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" />
+                                                                <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" />
                                                             </a>
 
                                                             <asp:Label ID="LB_UserCode" runat="server" Visible="false"></asp:Label>
@@ -132,7 +132,7 @@
                                                                     </asp:ChartArea>
                                                                 </ChartAreas>
                                                                 <Titles>
-                                                                    <asp:Title Alignment="TopCenter" DockedToChartArea="ChartArea1" IsDockedInsideChartArea="false" Name="æ ‡é¢˜">
+                                                                    <asp:Title Alignment="TopCenter" DockedToChartArea="ChartArea1" IsDockedInsideChartArea="false" Name="±êÌâ">
                                                                     </asp:Title>
                                                                 </Titles>
                                                             </asp:Chart>--%>

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -31,7 +31,7 @@ public partial class TTPersonalSpaceMovementChart : System.Web.UI.Page
     {
         if (Page.IsPostBack == false)
         {
-            ////æ¸…ç©ºé¡µé¢ç¼“å­˜ï¼Œç”¨äºæ”¹å˜çš®è‚¤
+            ////Çå¿ÕÒ³Ãæ»º´æ£¬ÓÃÓÚ¸Ä±äÆ¤·ô
             //SetPageNoCache();
 
         }

@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System; using System.Resources;
 using System.Collections;
@@ -14,7 +14,7 @@ public partial class TTAddWebService : System.Web.UI.Page
     {
        string strUserCode = Session["UserCode"].ToString();
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle("TTWebServiceList.aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility("TTWebServiceList.aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "æŸ¥çœ‹æ‰€æœ‰é¡¹ç›®", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle("TTWebServiceList.aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility("TTWebServiceList.aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "²é¿´ËùÓÐÏîÄ¿", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");

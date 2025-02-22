@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTDIYChildWorkFlowForm.aspx.cs" Inherits="TTDIYChildWorkFlowForm" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTDIYChildWorkFlowForm.aspx.cs" Inherits="TTDIYChildWorkFlowForm" %>
 
 <%@ Register Assembly="TakeTopForm.JS" Namespace="TakeTopInfoPathSoft.JS" TagPrefix="cc1" %>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>è‡ªå®šä¹‰è¡¨å•å·¥ä½œæµ</title>
+    <title>×Ô¶¨Òå±íµ¥¹¤×÷Á÷</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/calendar.js"></script>
     <script type="text/javascript" src="js/calendar-en.js"></script>
@@ -39,7 +39,7 @@
         }
 
 
-        /*-----------------------------çŸ­æŒ‰é’®----------------------------*/
+        /*-----------------------------¶Ì°´Å¥----------------------------*/
         .inpu {
             border-style: none;
             background-image: url('ImagesSkin/butbj.jpg');
@@ -52,7 +52,7 @@
             height: 25px;
             border-radius: 2px;
             color: #ffffff;
-            background: #2e8ded; /*çš®è‚¤*/
+            background: #2e8ded; /*Æ¤·ô*/
         }
 
             .inpu:disabled {
@@ -167,10 +167,10 @@
             }
         };
 
-        //æ‹–æ”¾ç¨‹åº
+        //ÍÏ·Å³ÌĞò
         var SimpleDrag = Class.create();
         SimpleDrag.prototype = {
-            //æ‹–æ”¾å¯¹è±¡,è§¦å‘å¯¹è±¡
+            //ÍÏ·Å¶ÔÏó,´¥·¢¶ÔÏó
             initialize: function (drag) {
                 this.Drag = $(drag);
                 this._x = this._y = 0;
@@ -179,19 +179,19 @@
                 this.Drag.style.position = "absolute";
                 addEventHandler(this.Drag, "mousedown", BindAsEventListener(this, this.Start));
             },
-            //å‡†å¤‡æ‹–åŠ¨
+            //×¼±¸ÍÏ¶¯
             Start: function (oEvent) {
                 this._x = oEvent.clientX - this.Drag.offsetLeft;
                 this._y = oEvent.clientY - this.Drag.offsetTop;
                 addEventHandler(document, "mousemove", this._fM);
                 addEventHandler(document, "mouseup", this._fS);
             },
-            //æ‹–åŠ¨
+            //ÍÏ¶¯
             Move: function (oEvent) {
                 this.Drag.style.left = oEvent.clientX - this._x + "px";
                 this.Drag.style.top = oEvent.clientY - this._y + "px";
             },
-            //åœæ­¢æ‹–åŠ¨
+            //Í£Ö¹ÍÏ¶¯
             Stop: function () {
                 removeEventHandler(document, "mousemove", this._fM);
                 removeEventHandler(document, "mouseup", this._fS);
@@ -229,15 +229,15 @@
                                 jQuery("#tbName tr:gt(1):even").attr("class", "treven");
                             } else {
                                 jQuery("#idDrag").hide();
-                                alert("æš‚æ²¡æœ‰æœªå¤„ç†çš„è®°å½•ï¼");
+                                alert("ÔİÃ»ÓĞÎ´´¦ÀíµÄ¼ÇÂ¼£¡");
                             }
                         },
                         error: function () {
-                            alert("åŠ è½½å¤±è´¥");
+                            alert("¼ÓÔØÊ§°Ü");
                         }
                     });
                 } else {
-                    alert("è¯·å…ˆé€‰æ‹©å·¥ä½œæµæ¨¡æ¿ï¼");
+                    alert("ÇëÏÈÑ¡Ôñ¹¤×÷Á÷Ä£°å£¡");
                 }
             });
         });
@@ -249,13 +249,13 @@
 
 
 
-        //äº§ç”ŸXMLï¼Œé™„åŠ åˆ°è¡¨å•
+        //²úÉúXML£¬¸½¼Óµ½±íµ¥
         function ClickCreateXMLToForm(objID) {
             document.getElementById("HF_TriggerID").value = objID;
             document.getElementById("BT_AppendXML").click();
         }
 
-        //è®¾ç½®æ—¥æœŸé€‰æ‹©æ¡†çš„å®½åº¦ï¼Œä½¿ä¹‹ä¸æŠ˜å 
+        //ÉèÖÃÈÕÆÚÑ¡Ôñ¿òµÄ¿í¶È£¬Ê¹Ö®²»ÕÛµş
         function changeDateBoxWidth() {
             var cNodes = document.getElementsByClassName("xdDTText xdBehavior_FormattingNoBUI");
 
@@ -287,7 +287,7 @@
 
         });
 
-        //éšè—æˆ–æ˜¾ç¤ºå·¥ä½œæµæ ‡é¢˜æ 
+        //Òş²Ø»òÏÔÊ¾¹¤×÷Á÷±êÌâÀ¸
         function hideOrDisplayWFMain() {
 
             if (document.getElementById('td_WFMain').style.display == 'none') {
@@ -298,7 +298,7 @@
             }
         }
 
-        //éšè—å·¥ä½œæµæ ‡é¢˜æ 
+        //Òş²Ø¹¤×÷Á÷±êÌâÀ¸
         function hideWFMain() {
 
             /* document.getElementById('td_WFMain').style.display = 'none';*/
@@ -315,7 +315,7 @@
             var aHref = document.getElementById("HL_WFChartView").href;
             if (aHref == "") {
 
-                alert("è¯·å…ˆé€‰æ‹©å·¥ä½œæµæ¨¡æ¿æˆ–å·¥ä½œæµ(Please select workflow template or workflow)!")
+                alert("ÇëÏÈÑ¡Ôñ¹¤×÷Á÷Ä£°å»ò¹¤×÷Á÷(Please select workflow template or workflow)!")
                 return;
             }
 
@@ -405,7 +405,7 @@
                                 <table>
                                     <tr>
                                         <td class="tdLeft" align="right" width="50">
-                                            <span style="font-size: 10pt; font-family: å®‹ä½“">
+                                            <span style="font-size: 10pt; font-family: ËÎÌå">
                                                 <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>:</span>
                                         </td>
                                         <td colspan="2" class="tdRight" align="left" style="width: 320px;">
@@ -413,7 +413,7 @@
                                         </td>
 
                                         <td class="tdLeft" align="right" width="50">
-                                            <span style="font-size: 10pt; font-family: å®‹ä½“">
+                                            <span style="font-size: 10pt; font-family: ËÎÌå">
                                                 <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,MiaoShu%>"></asp:Label>: </span>
                                         </td>
                                         <td colspan="2" class="tdRight" style="width: 320px;" align="left">
@@ -544,7 +544,7 @@
                                         <tr style="display: none;">
                                             <td colspan="3" class="tdRight" style="text-align: center; padding: 2px 0px 2px 5px; border-bottom: solid 1px  #D8D8D8; width: 370px;">
                                                 <asp:HyperLink ID="HL_WFXSNFile" runat="server"
-                                                    Target="_blank" Font-Names="å®‹ä½“" Font-Size="10pt">
+                                                    Target="_blank" Font-Names="ËÎÌå" Font-Size="10pt">
                                                     <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,XGGZLBGMBXZ%>"></asp:Label>
                                                 </asp:HyperLink>
                                                 &nbsp;<input id="btPrintPreview" type="button" class="inpuPrint" name="print" onclick="preview()" />
@@ -552,13 +552,13 @@
                                                     Style="display: none;" />
 
                                                 <asp:HyperLink ID="HL_OldWFXMLFile" runat="server"
-                                                    Target="_blank" Font-Names="å®‹ä½“" Font-Size="10pt" Text="<%$ Resources:lang,ShuJuWenJian%>"></asp:HyperLink>
+                                                    Target="_blank" Font-Names="ËÎÌå" Font-Size="10pt" Text="<%$ Resources:lang,ShuJuWenJian%>"></asp:HyperLink>
 
-                                                <asp:HyperLink ID="HL_WLTem" runat="server" NavigateUrl="~/TTWorkFlowTemplate.aspx" Text="<%$ Resources:lang,MuBanWeiHu%>" Target="_blank" Font-Names="å®‹ä½“" Font-Size="10pt" />
+                                                <asp:HyperLink ID="HL_WLTem" runat="server" NavigateUrl="~/TTWorkFlowTemplate.aspx" Text="<%$ Resources:lang,MuBanWeiHu%>" Target="_blank" Font-Names="ËÎÌå" Font-Size="10pt" />
                                                 <td class="tdLeft" align="right" width="50"></td>
                                                 <td colspan="2" class="tdRight" align="left">
-                                                    <span style="font-size: 10pt; font-family: å®‹ä½“">
-                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ShenPiJinDuFanKui%>"></asp:Label>ï¼š</span><asp:CheckBox
+                                                    <span style="font-size: 10pt; font-family: ËÎÌå">
+                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ShenPiJinDuFanKui%>"></asp:Label>£º</span><asp:CheckBox
                                                             ID="CB_SMS" runat="server" Font-Size="10pt" Text="<%$ Resources:lang,DuanXin%>" Checked="true" /><asp:CheckBox ID="CB_Mail"
                                                                 runat="server" Font-Size="10pt" Text="<%$ Resources:lang,YouJian%>" Checked="true" />
                                                 </td>

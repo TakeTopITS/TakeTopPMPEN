@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -23,7 +23,7 @@ public partial class TTAPPUpdateUserInfor : System.Web.UI.Page
         IList lst;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "æˆ‘çš„æ¡£æ¡ˆ", strUserCode);
+        //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ÎÒµÄµµ°¸", strUserCode);
         //if (blVisible == false)
         //{
         //    Response.Redirect("TTDisplayErrors.aspx");
@@ -125,7 +125,7 @@ public partial class TTAPPUpdateUserInfor : System.Web.UI.Page
                 return;
             }
 
-            #region åˆ¤æ–­è¾“å…¥çš„å¯†ç æ˜¯å¦æ˜¯å­—æ¯ä¸æ•°å­—çš„ç»“åˆï¼Œä¸”é•¿åº¦è¦å¤§äºæˆ–ç­‰äº8ä½ 2013-09-03 By LiuJianping
+            #region ÅĞ¶ÏÊäÈëµÄÃÜÂëÊÇ·ñÊÇ×ÖÄ¸ÓëÊı×ÖµÄ½áºÏ£¬ÇÒ³¤¶ÈÒª´óÓÚ»òµÈÓÚ8Î» 2013-09-03 By LiuJianping
             if (!IsPassword(strPassword))
             {
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGGSBMMCDBXDYHDY8WBXBHSZJZMJC + "')", true);
@@ -152,7 +152,7 @@ public partial class TTAPPUpdateUserInfor : System.Web.UI.Page
 
             Session["CssDirectory"] = DL_CssDirectory.SelectedValue.Trim();
 
-            //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—
+            //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾
             ChangePageCache();
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
@@ -163,14 +163,14 @@ public partial class TTAPPUpdateUserInfor : System.Web.UI.Page
         }
     }
 
-    //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—ï¼Œå¹¶åˆ·æ–°é¡µé¢ç¼“å­˜
+    //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾£¬²¢Ë¢ĞÂÒ³Ãæ»º´æ
     protected void ChangePageCache()
     {
-        //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—
+        //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾
         ShareClass.SetPageCacheMark("1");
         Session["CssDirectoryChangeNumber"] = "1";
 
-        ////ç»™ç›¸å…³é¡µé¢æ–‡ä»¶æ·»åŠ ç©ºè¡Œä»¥åˆ·æ–°é¡µé¢ç¼“å­˜
+        ////¸øÏà¹ØÒ³ÃæÎÄ¼şÌí¼Ó¿ÕĞĞÒÔË¢ĞÂÒ³Ãæ»º´æ
         //ShareClass.AddSpaceLineToFileForRefreshCache();
 
     }
@@ -200,13 +200,13 @@ public partial class TTAPPUpdateUserInfor : System.Web.UI.Page
     }
 
     /// <summary>
-    /// åˆ¤æ–­è¾“å…¥çš„å¯†ç æ˜¯å¦æ˜¯å­—æ¯ä¸æ•°å­—çš„ç»“åˆ By LiuJianping 2013-09-03
+    /// ÅĞ¶ÏÊäÈëµÄÃÜÂëÊÇ·ñÊÇ×ÖÄ¸ÓëÊı×ÖµÄ½áºÏ By LiuJianping 2013-09-03
     /// </summary>
     /// <param name="str"></param>
     /// <returns></returns>
     private bool IsPassword(string str)
     {
-        //å­—æ¯ï¼Œæ•°å­—ï¼Œéå­—æ¯å­—ç¬¦(ä¾‹å¦‚ !ã€$ã€#ã€%) ^(?:(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])|(?=.*[A-Z])(?=.*[a-z])(?=.*[^A-Za-z0-9])|(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])|(?=.*[a-z])(?=.*[0-9])(?=.*[^A-Za-z0-9])).{8,}
+        //×ÖÄ¸£¬Êı×Ö£¬·Ç×ÖÄ¸×Ö·û(ÀıÈç !¡¢$¡¢#¡¢%) ^(?:(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])|(?=.*[A-Z])(?=.*[a-z])(?=.*[^A-Za-z0-9])|(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])|(?=.*[a-z])(?=.*[0-9])(?=.*[^A-Za-z0-9])).{8,}
         System.Text.RegularExpressions.Regex reg
             = new System.Text.RegularExpressions.Regex("^(?:(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])|(?=.*[A-Z])(?=.*[0-9])|(?=.*[a-z])(?=.*[0-9])).{8,}");
         return reg.IsMatch(str);
@@ -230,13 +230,13 @@ public partial class TTAPPUpdateUserInfor : System.Web.UI.Page
 
 
     /// <summary>
-    ///  æ•£åˆ—åŠ å¯†
+    ///  É¢ÁĞ¼ÓÃÜ
     /// </summary>
     protected string EncryptPasswordShal(string strPlaintext)
     {
         byte[] srcBuffer = System.Text.Encoding.UTF8.GetBytes(strPlaintext);
 
-        System.Security.Cryptography.HashAlgorithm hash = System.Security.Cryptography.HashAlgorithm.Create("SHA1"); //å°†å‚æ•°æ¢æˆâ€œMD5â€ï¼Œåˆ™æ‰§è¡Œ MD5 åŠ å¯†ã€‚ä¸åŒºåˆ†å¤§å°å†™ã€‚
+        System.Security.Cryptography.HashAlgorithm hash = System.Security.Cryptography.HashAlgorithm.Create("SHA1"); //½«²ÎÊı»»³É¡°MD5¡±£¬ÔòÖ´ĞĞ MD5 ¼ÓÃÜ¡£²»Çø·Ö´óĞ¡Ğ´¡£
         byte[] destBuffer = hash.ComputeHash(srcBuffer);
 
         string strHashedText = BitConverter.ToString(destBuffer).Replace("-", "");

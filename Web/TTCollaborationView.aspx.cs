@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Data;
 using System.Configuration;
 using System.Collections;
@@ -37,11 +37,11 @@ public partial class TTCollaborationView : System.Web.UI.Page
         if (lst.Count > 0)
         {
             Collaboration collaboration = (Collaboration)lst[0];
-            //this.Title = "åä½œï¼š " + strCoID + " " + collaboration.CollaborationName.Trim() + " è¯¦ç»†å†…å®¹!";
+            //this.Title = "Ğ­×÷£º " + strCoID + " " + collaboration.CollaborationName.Trim() + " ÏêÏ¸ÄÚÈİ!";
         }
         else
         {
-            Response.Write("æ­¤åä½œä¸å­˜åœ¨ï¼Œå¯èƒ½å·²è¢«åˆ é™¤,è¯·æ£€æŸ¥!");
+            Response.Write("´ËĞ­×÷²»´æÔÚ£¬¿ÉÄÜÒÑ±»É¾³ı,Çë¼ì²é!");
         }
     }
 }

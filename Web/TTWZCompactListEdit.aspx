@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZCompactListEdit.aspx.cs" Inherits="TTWZCompactListEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZCompactListEdit.aspx.cs" Inherits="TTWZCompactListEdit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ÂêàÂêåÂàóË°®</title>
+    <title>∫œÕ¨¡–±Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -79,12 +79,12 @@
                                                             <table class="formBgStyle" width="1000px">
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,HeTongBianHao%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,HeTongBianHao%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:Label ID="LB_CompactCode" runat="server"></asp:Label>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuBianMa%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuBianMa%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:DropDownList ID="DDL_Project" runat="server" DataTextField="ProjectCode" DataValueField="ProjectCode"
                                                                             OnSelectedIndexChanged="DDL_Project_SelectedIndexChanged" AutoPostBack="true">
@@ -95,12 +95,12 @@
                                                                 <tr>
 
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,HeTongMingCheng%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,HeTongMingCheng%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_CompactName" runat="server"></asp:TextBox>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,GongFangBianHao%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,GongFangBianHao%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:DropDownList ID="DDL_Supplier" runat="server" DataTextField="SupplierName" DataValueField="SupplierCode"></asp:DropDownList>
                                                                     </td>
@@ -108,7 +108,7 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,HeTongWenBen%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,HeTongWenBen%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:FileUpload ID="FUP_CompactText" runat="server" />
                                                                         <asp:Button ID="BT_CompactText" runat="server" Text="<%$ Resources:lang,ShangChuan%>" CssClass="inpu" OnClick="BT_CompactText_Click" /><br />
@@ -117,17 +117,17 @@
                                                                         <asp:HiddenField ID="HF_CompactTextURL" runat="server" />
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,JiaGeJianShen%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,JiaGeJianShen%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:HiddenField ID="HF_ControlMoney" runat="server" />
                                                                         <asp:TextBox ID="TXT_ControlMoney" runat="server"></asp:TextBox>&nbsp;
-                                                                        <input type="button" value="ÈÄâÊã©" id="BT_SelectPrice" class="inpu" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_ControlMoney', 'TXT_ControlMoney')" />
+                                                                        <input type="button" value="—°‘Ò" id="BT_SelectPrice" class="inpu" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_ControlMoney', 'TXT_ControlMoney')" />
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: center" class="formItemBgStyle" colspan="6">
                                                                         <asp:Button ID="btnSave" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnSave_Click" />&nbsp;
-                                                                        <input type="button" value="ÂÖ≥Èó≠" id="BT_Return" class="inpu" onclick="window.close();" />
+                                                                        <input type="button" value="Closed" id="BT_Return" class="inpu" onclick="window.close();" />
                                                                     </td>
                                                                 </tr>
                                                             </table>

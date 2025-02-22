@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsSaleQuotationOrderDetailView.aspx.cs" Inherits="TTGoodsSaleQuotationOrderDetailView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsSaleQuotationOrderDetailView.aspx.cs" Inherits="TTGoodsSaleQuotationOrderDetailView" %>
 
 <!DOCTYPE html>
 
@@ -91,31 +91,31 @@
                 Width="100%">
                 
                 <Columns>
-                    <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                    <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                     </asp:BoundColumn>
-                    <asp:BoundColumn DataField="GoodsCode" HeaderText="ä»£ç ">
+                    <asp:BoundColumn DataField="GoodsCode" HeaderText="´úÂë">
                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                     </asp:BoundColumn>
-                    <asp:BoundColumn DataField="GoodsName" HeaderText="åç§°">
+                    <asp:BoundColumn DataField="GoodsName" HeaderText="Ãû³Æ">
                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                     </asp:BoundColumn>
-                    <asp:BoundColumn DataField="ModelNumber" HeaderText="åž‹å·">
+                    <asp:BoundColumn DataField="ModelNumber" HeaderText="ÐÍºÅ">
                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                     </asp:BoundColumn>
-                    <asp:BoundColumn DataField="Spec" HeaderText="è§„æ ¼">
+                    <asp:BoundColumn DataField="Spec" HeaderText="¹æ¸ñ">
                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                     </asp:BoundColumn>
-                    <asp:BoundColumn DataField="Brand" HeaderText="å“ç‰Œ">
+                    <asp:BoundColumn DataField="Brand" HeaderText="Æ·ÅÆ">
                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                     </asp:BoundColumn>
-                    <asp:BoundColumn DataField="Number" HeaderText="æ•°é‡">
+                    <asp:BoundColumn DataField="Number" HeaderText="ÊýÁ¿">
                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                     </asp:BoundColumn>
-                    <asp:BoundColumn DataField="Unit" HeaderText="å•ä½">
+                    <asp:BoundColumn DataField="Unit" HeaderText="µ¥Î»">
                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                     </asp:BoundColumn>
-                    <asp:BoundColumn DataField="Price" HeaderText="å•ä»·">
+                    <asp:BoundColumn DataField="Price" HeaderText="µ¥¼Û">
                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                     </asp:BoundColumn>
                 </Columns>

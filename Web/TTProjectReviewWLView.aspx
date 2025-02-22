@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectReviewWLView.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectReviewWLView.aspx.cs"
     Inherits="TTProjectReviewWLView" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -52,16 +52,16 @@
                 <ItemStyle CssClass="itemStyle" />
 
                 <Columns>
-                    <asp:BoundColumn DataField="WLID" HeaderText="ç¼–å·">
+                    <asp:BoundColumn DataField="WLID" HeaderText="±àºÅ">
                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                     </asp:BoundColumn>
-                    <asp:BoundColumn DataField="WLName" HeaderText="å·¥ä½œæµ">
+                    <asp:BoundColumn DataField="WLName" HeaderText="Workflow">
                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                     </asp:BoundColumn>
-                    <asp:BoundColumn DataField="CreateTime" HeaderText="ç”³è¯·æ—¶é—´">
+                    <asp:BoundColumn DataField="CreateTime" HeaderText="ÉêÇëÊ±¼ä">
                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                     </asp:BoundColumn>
-                    <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                    <asp:TemplateColumn HeaderText="×´Ì¬">
                         <ItemTemplate>
                             <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                         </ItemTemplate>
@@ -69,7 +69,7 @@
                     </asp:TemplateColumn>
                     <asp:TemplateColumn>
                         <ItemTemplate>
-                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# DataBinder.Eval(Container, "DataItem.WLID", "TTWLRelatedDoc.aspx?DocType=å®¡æ ¸&WLID={0}") %>'
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# DataBinder.Eval(Container, "DataItem.WLID", "TTWLRelatedDoc.aspx?DocType=ÉóºË&WLID={0}") %>'
                                 Target="_blank"><img src="ImagesSkin/Doc.gif" class="noBorder"/></asp:HyperLink>
                         </ItemTemplate>
                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />

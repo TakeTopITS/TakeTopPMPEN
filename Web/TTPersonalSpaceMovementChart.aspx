@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPersonalSpaceMovementChart.aspx.cs" Inherits="TTPersonalSpaceMovementChart" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPersonalSpaceMovementChart.aspx.cs" Inherits="TTPersonalSpaceMovementChart" %>
 
 <!DOCTYPE html>
 
@@ -28,7 +28,7 @@
 
         option = {
             title: {
-                text: 'è¶‹åŠ¿å›¾'
+                text: 'Ç÷ÊÆÍ¼'
             },
             tooltip: {
                 trigger: 'axis',
@@ -40,7 +40,7 @@
                 }
             },
             legend: {
-                data: ['åˆåŒ', 'é¡¹ç›®', 'ç‰©èµ„','äººå‘˜', 'æ”¶å…¥']
+                data: ['ºÏÍ¬', 'Project', 'Îï×Ê','ÈËÔ±', 'ÊÕÈë']
             },
             toolbox: {
                 feature: {
@@ -67,7 +67,7 @@
             ],
             series: [
                 {
-                    name: 'åˆåŒ',
+                    name: 'ºÏÍ¬',
                     type: 'line',
                     stack: 'Total',
                     areaStyle: {},
@@ -77,7 +77,7 @@
                     data: [120, 132, 101, 134, 90, 230, 210]
                 },
                 {
-                    name: 'é¡¹ç›®',
+                    name: 'Project',
                     type: 'line',
                     stack: 'Total',
                     areaStyle: {},
@@ -87,7 +87,7 @@
                     data: [220, 182, 191, 234, 290, 330, 310]
                 },
                 {
-                    name: 'ç‰©èµ„',
+                    name: 'Îï×Ê',
                     type: 'line',
                     stack: 'Total',
                     areaStyle: {},
@@ -97,7 +97,7 @@
                     data: [150, 232, 201, 154, 190, 330, 410]
                 },
                 {
-                    name: 'äººå‘˜',
+                    name: 'ÈËÔ±',
                     type: 'line',
                     stack: 'Total',
                     areaStyle: {},
@@ -107,7 +107,7 @@
                     data: [320, 332, 301, 334, 390, 330, 320]
                 },
                 {
-                    name: 'æ”¶å…¥',
+                    name: 'ÊÕÈë',
                     type: 'line',
                     stack: 'Total',
                     label: {

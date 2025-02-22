@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProRelatedDefectSummary.aspx.cs" Inherits="TTProRelatedDefectSummary" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProRelatedDefectSummary.aspx.cs" Inherits="TTProRelatedDefectSummary" %>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -67,7 +67,7 @@
                             <tr>
                                 <td style="height: 16px; padding: 5px 5px 5px 5px;" align="right">
                                     <a href="#" onclick="preview1()">
-                                        <img src="ImagesSkin/print.gif" alt="ÊâìÂç∞" border="0" />
+                                        <img src="ImagesSkin/print.gif" alt="¥Ú”°" border="0" />
                                     </a></td>
                             </tr>
                             <tr>
@@ -110,7 +110,7 @@
                                                         </asp:Legend>
                                                     </Legends>
                                                     <Titles>
-                                                        <asp:Title Name="Ê†áÈ¢ò" Alignment="TopCenter" IsDockedInsideChartArea="False" DockedToChartArea="ChartArea1"></asp:Title>
+                                                        <asp:Title Name="±ÍÃ‚" Alignment="TopCenter" IsDockedInsideChartArea="False" DockedToChartArea="ChartArea1"></asp:Title>
                                                     </Titles>
                                                 </asp:Chart>--%>
 
@@ -169,27 +169,27 @@
                                                     AutoGenerateColumns="False" Height="1px" PageSize="30" Width="980px" CellPadding="4"
                                                     ShowHeader="false" ForeColor="#333333" GridLines="None">
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="DefectID" HeaderText="ÁºñÂè∑">
+                                                        <asp:BoundColumn DataField="DefectID" HeaderText="±‡∫≈">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DefectType" HeaderText="Á±ªÂûã">
+                                                        <asp:BoundColumn DataField="DefectType" HeaderText="¿‡–Õ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="DefectID" DataNavigateUrlFormatString="TTProRelatedDefectView.aspx?DefectID={0}"
-                                                            DataTextField="DefectName" HeaderText="ÈúÄÊ±ÇÂêçÁß∞" Target="_blank">
+                                                            DataTextField="DefectName" HeaderText="–Ë«Û√˚≥∆" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="36%" />
                                                         </asp:HyperLinkColumn>
-                                                        <asp:BoundColumn DataField="DefectFinishedDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ÈúÄÊ±ÇÊó•Êúü">
+                                                        <asp:BoundColumn DataField="DefectFinishedDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="–Ë«Û»’∆⁄">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="MakeDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="Á´ãÈ°πÊó•Êúü">
+                                                        <asp:BoundColumn DataField="MakeDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="¡¢œÓ»’∆⁄">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="ApplicantCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                            DataTextField="ApplicantName" HeaderText="Áî≥ËØ∑‰∫∫" Target="_blank" Text="<%$ Resources:lang,ShenQingRen%>">
+                                                            DataTextField="ApplicantName" HeaderText="…Í«Î»À" Target="_blank" Text="<%$ Resources:lang,ShenQingRen%>">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                         </asp:HyperLinkColumn>
-                                                        <asp:TemplateColumn HeaderText="Áä∂ÊÄÅ">
+                                                        <asp:TemplateColumn HeaderText="◊¥Ã¨">
                                                             <ItemTemplate>
                                                                 <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                             </ItemTemplate>

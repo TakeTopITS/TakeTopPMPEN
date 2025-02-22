@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -26,14 +26,14 @@ public partial class TTConstractUnHandleReceivePay : System.Web.UI.Page
         string strUserName = Session["UserName"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "合同收付款预警", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "��ͬ�ո���Ԥ��", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
             return;
         }
 
-        //this.Title = "合同收付款预警";
+        //this.Title = "��ͬ�ո���Ԥ��";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
@@ -69,7 +69,7 @@ public partial class TTConstractUnHandleReceivePay : System.Web.UI.Page
         strPayer = "%" + strPayer + "%";
         strPartBOperator = "%" + strPartBOperator + "%";
 
-        strHQL = "Select * from T_ConstractReceivables as constractReceivables where constractReceivables.Status not in ('完成','取消') and to_char( constractReceivables.ReceivablesTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd') ";
+        strHQL = "Select * from T_ConstractReceivables as constractReceivables where constractReceivables.Status not in ('Completed','Cancel') and to_char( constractReceivables.ReceivablesTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd') ";
         strHQL += " and constractReceivables.ConstractCode in ( Select constractRelatedUser.ConstractCode from T_ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")";
         strHQL += " and constractReceivables.Payer Like " + "'" + strPayer + "'";
         strHQL += " and constractReceivables.ConstractCode Like " + "'" + strConstractCode + "'";
@@ -78,7 +78,7 @@ public partial class TTConstractUnHandleReceivePay : System.Web.UI.Page
             strHQL += " and constractReceivables.ConstractCode in (Select constractSales.ConstractCode From T_ConstractSales as constractSales Where constractSales.SalesName Like " + "'" + strSalesName + "'" + ")";
         }
         strHQL += " and constractReceivables.ConstractCode in (Select constract.ConstractCode from T_Constract as constract where constract.PartBOperator Like " + "'" + strPartBOperator + "'" + ")";
-        strHQL += " and constractReceivables.ConstractCode not in (Select constract.ConstractCode from T_Constract as constract where constract.Status in ('归档','取消','删除'))";
+        strHQL += " and constractReceivables.ConstractCode not in (Select constract.ConstractCode from T_Constract as constract where constract.Status in ('Archived','Cancel','Deleted'))";
 
         strHQL += " and constractReceivables.ConstractCode != ''";
         strHQL += " and constractReceivables.UNReceiveAmount > 0";
@@ -117,7 +117,7 @@ public partial class TTConstractUnHandleReceivePay : System.Web.UI.Page
         strReceiver = "%" + TB_Receiver.Text.Trim() + "%";
         strPartAOperator = "%" + TB_PartAOperator.Text.Trim() + "%";
 
-        strHQL = "Select * from T_ConstractPayable as constractPayable where constractPayable.Status not in ('完成','取消') and to_char(constractPayable.PayableTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd')";
+        strHQL = "Select * from T_ConstractPayable as constractPayable where constractPayable.Status not in ('Completed','Cancel') and to_char(constractPayable.PayableTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd')";
         strHQL += " and constractPayable.ConstractCode in ( Select constractRelatedUser.ConstractCode from T_ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")";
         strHQL += " and constractPayable.Receiver Like " + "'" + strReceiver + "'";
         strHQL += " and constractPayable.ConstractCode Like " + "'" + strConstractCode + "'";
@@ -127,7 +127,7 @@ public partial class TTConstractUnHandleReceivePay : System.Web.UI.Page
             strHQL += " and constractPayable.ConstractCode in (Select constractSales.ConstractCode From T_ConstractSales as constractSales Where constractSales.SalesName Like " + "'" + strSalesName + "'" + ")";
         }
         strHQL += " and constractPayable.ConstractCode in (Select constract.ConstractCode from T_Constract as constract where constract.PartAOperator Like " + "'" + strPartAOperator + "'" + ")";
-        strHQL += " and constractPayable.ConstractCode not in (Select constract.ConstractCode from T_Constract as constract where constract.Status  in ('归档','取消','删除'))";
+        strHQL += " and constractPayable.ConstractCode not in (Select constract.ConstractCode from T_Constract as constract where constract.Status  in ('Archived','Cancel','Deleted'))";
         strHQL += " and constractPayable.ConstractCode != ''";
         strHQL += " and constractPayable.UNPayAmount > 0";
         strHQL += " Order by constractPayable.ID DESC";
@@ -157,9 +157,9 @@ public partial class TTConstractUnHandleReceivePay : System.Web.UI.Page
         decimal deReceivablesAccount = 0, deReceiverAccount = 0, deReceiverInvoiceAccount = 0, deUNReceiveAmount = 0;
 
 
-        strHQL = "Select * from T_ConstractReceivables as constractReceivables where constractReceivables.Status not in ('完成','取消') and to_char( constractReceivables.ReceivablesTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd') ";
+        strHQL = "Select * from T_ConstractReceivables as constractReceivables where constractReceivables.Status not in ('Completed','Cancel') and to_char( constractReceivables.ReceivablesTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd') ";
         strHQL += " and constractReceivables.ConstractCode in ( Select constractRelatedUser.ConstractCode from T_ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")";
-        strHQL += " and constractReceivables.ConstractCode not in (Select constract.ConstractCode from T_Constract as constract where constract.Status in ('归档','取消','删除'))";
+        strHQL += " and constractReceivables.ConstractCode not in (Select constract.ConstractCode from T_Constract as constract where constract.Status in ('Archived','Cancel','Deleted'))";
         strHQL += " and constractReceivables.ConstractCode != ''";
         strHQL += " and constractReceivables.UNReceiveAmount > 0";
         strHQL += " Order by constractReceivables.ID DESC";
@@ -190,9 +190,9 @@ public partial class TTConstractUnHandleReceivePay : System.Web.UI.Page
 
         decimal dePayableAccount = 0, deOutOfPocketAccount = 0, dePayerInvoiceAccount = 0, deUNPayAmount = 0;
 
-        strHQL = "Select * from T_ConstractPayable as constractPayable where constractPayable.Status not in ('完成','取消') and to_char(constractPayable.PayableTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd')";
+        strHQL = "Select * from T_ConstractPayable as constractPayable where constractPayable.Status not in ('Completed','Cancel') and to_char(constractPayable.PayableTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd')";
         strHQL += " and constractPayable.ConstractCode in ( Select constractRelatedUser.ConstractCode from T_ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")";
-        strHQL += " and constractPayable.ConstractCode not in (Select constract.ConstractCode from T_Constract as constract where constract.Status  in ('归档','取消','删除'))";
+        strHQL += " and constractPayable.ConstractCode not in (Select constract.ConstractCode from T_Constract as constract where constract.Status  in ('Archived','Cancel','Deleted'))";
         strHQL += " and constractPayable.ConstractCode != ''";
         strHQL += " and constractPayable.UNPayAmount > 0";
         strHQL += " Order by constractPayable.ID DESC";

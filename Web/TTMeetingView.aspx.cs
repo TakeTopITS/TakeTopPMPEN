@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Data;
 using System.Configuration;
 using System.Collections;
@@ -43,11 +43,11 @@ public partial class TTMeetingView : System.Web.UI.Page
             if (lst.Count > 0)
             {
                 Meeting meeting = (Meeting)lst[0];
-                //this.Title = "ä¼šè®®ï¼š" + strMeetingID + " " + meeting.Name.Trim() + " è¯¦ç»†èµ„æ–™";
+                //this.Title = "»áÒé£º" + strMeetingID + " " + meeting.Name.Trim() + " ÏêÏ¸×ÊÁÏ";
             }
             else
             {
-                Response.Write("æ­¤ä¼šè®®èµ„æ–™ä¸å­˜åœ¨ï¼Œå¯èƒ½å·²è¢«åˆ é™¤ï¼Œè¯·æ£€æŸ¥ï¼");
+                Response.Write("´Ë»áÒé×ÊÁÏ²»´æÔÚ£¬¿ÉÄÜÒÑ±»É¾³ı£¬Çë¼ì²é£¡");
             }
         }
     }  

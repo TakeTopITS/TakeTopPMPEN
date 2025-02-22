@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration.Internal;
@@ -90,7 +90,7 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
             string strIsOEM = Request.QueryString["IsOEM"];
 
             string strRentProductVersionType;
-            if (strRentProductVersion == "é›†å›¢ç‰ˆ")
+            if (strRentProductVersion == "GroupEdition")
             {
                 strRentProductVersionType = "YES";
             }
@@ -102,19 +102,19 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
 
             if (VerifyWebSiteAppIsExist(strSiteName, strSiteAppName))
             {
-                LB_Message.Text = "åˆ›å»ºå¤±è´¥ï¼Œå­˜åœ¨ç›¸åŒåç§°çš„ç«™ç‚¹ï¼Œè¯·æ£€æŸ¥ï¼";
+                LB_Message.Text = "´´½¨Ê§°Ü£¬´æÔÚÏàÍ¬Ãû³ÆµÄÕ¾µã£¬Çë¼ì²é£¡";
                 return;
             }
 
-            //åˆ›å»ºç«™ç‚¹åº”ç”¨
+            //´´½¨Õ¾µãÓ¦ÓÃ
             CreateSiteAPP(strRentProductType, strRentProductVersionType, strSiteAppSystemName, strSiteAppName, strSiteAppURL, strSiteName, strSiteBindingInfo, strSiteDirectory, strSiteTemplateDirectory, strSiteVirtualDirectoryName, strSiteVirtualDirectoryPhysicalPath, strSiteDBName, strSiteDBRestoreFile, strSiteDBSetupDirectory, strSiteDBLoginUserID, strSiteDBUserLoginPassword, strIsOEM);
 
 
-            ////è·³è½¬é¡µé¢
+            ////Ìø×ªÒ³Ãæ
             //string strScript = "<script>openMDIFrom('" + strSiteAppURL + "');</script>";
             //ClientScript.RegisterStartupScript(GetType(), "", strScript);
 
-            LB_Message.Text = "ç«™ç‚¹åˆ›å»ºæˆåŠŸï¼Œä½ å¯ä»¥ç‚¹å‡»ä¸‹é¢é“¾æ¥æ‰“å¼€å’Œæ”¶è—æ­¤ç«™ç‚¹ï¼Œæ³¨æ„ç¬¬ä¸€æ¬¡æ‰“å¼€ç™»å½•é¡µé¢æ—¶å› è¦åˆå§‹åŒ–ç³»ç»Ÿï¼Œè€—æ—¶ä¼šè¾ƒé•¿ï¼Œæ­¤åä¸ä¼šè¶…è¿‡5ç§’é’Ÿï¼Œ <br/><br/> <a href='" + strSiteAppURL + "' target='_blank'>" + strSiteAppURL + "</a><br/><br/>ç™»å½•å¸å·ï¼šADMIN    å¯†ç ï¼š 12345678";
+            LB_Message.Text = "Õ¾µã´´½¨³É¹¦£¬Äã¿ÉÒÔµã»÷ÏÂÃæÁ´½Ó´ò¿ªºÍÊÕ²Ø´ËÕ¾µã£¬×¢ÒâµÚÒ»´Î´ò¿ªµÇÂ¼Ò³ÃæÊ±ÒòÒª³õÊ¼»¯ÏµÍ³£¬ºÄÊ±»á½Ï³¤£¬´Ëºó²»»á³¬¹ı5ÃëÖÓ£¬ <br/><br/> <a href='" + strSiteAppURL + "' target='_blank'>" + strSiteAppURL + "</a><br/><br/>µÇÂ¼ÕÊºÅ£ºADMIN    ÃÜÂë£º 12345678";
             LB_CloseMessage.Visible = false;
         }
         catch (Exception err)
@@ -125,55 +125,55 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
         }
     }
 
-    //-------------åˆ›å»ºç«™ç‚¹åº”ç”¨------------------------------------------------------------------
+    //-------------´´½¨Õ¾µãÓ¦ÓÃ------------------------------------------------------------------
     /// <summary> 
-    /// åˆ›å»ºä¸€ä¸ªç«™ç‚¹åº”ç”¨
+    /// ´´½¨Ò»¸öÕ¾µãÓ¦ÓÃ
     /// </summary> 
     /// <param name="siteName"></param> 
     /// <param name="bindingInfo">"*:&lt;port&gt;:&lt;hostname&gt;" <example>"*:80:myhost.com"</example></param> 
     /// <param name="physicalPath"></param> 
     public void CreateSiteAPP(string strRentProductType, string strRentProductVersionType, string strSysteName, string strSiteAppName, string strSiteAppURL, string strSiteName, string strBindingInfo, string strSiteDirectory, string strSiteTemplateDirectory, string strSiteVirtualDirectoryName, string strSiteVirtualDirectoryPhysicalPath, string strSiteDBName, string strDBRestoreFile, string strDBSetupDirectory, string strDBLoginUserID, string strDBUserLoginPassword, string strIsOEM)
     {
-        //æŠŠæ ·æ¿ç«™ç‚¹æ–‡ä»¶å¤åˆ¶åˆ°ç«™ç‚¹
+        //°ÑÑù°åÕ¾µãÎÄ¼ş¸´ÖÆµ½Õ¾µã
         CopySiteFile(strSiteTemplateDirectory, strSiteDirectory);
 
         if (strIsOEM == "YES")
         {
-            //ç›´æ¥åˆ é™¤ç«™ç‚¹Logoç›®å½•ä¸‹çš„æ‰€æœ‰æ–‡ä»¶
+            //Ö±½ÓÉ¾³ıÕ¾µãLogoÄ¿Â¼ÏÂµÄËùÓĞÎÄ¼ş
             ShareClass.DeleteFileUnderDirectory(strSiteDirectory + @"\Logo");
 
             //LogClass.WriteLogFile(strSiteDirectory + @"\Logo");
 
-            //å¦‚æœæ˜¯OEMç‰ˆï¼Œåˆ™æŠŠOEMçš„LOGOæ–‡ä»¶å¤åˆ¶åˆ°ç«™ç‚¹çš„LOGOæ–‡ä»¶
+            //Èç¹ûÊÇOEM°æ£¬Ôò°ÑOEMµÄLOGOÎÄ¼ş¸´ÖÆµ½Õ¾µãµÄLOGOÎÄ¼ş
             CopySiteFile(strSiteTemplateDirectory + @"\LogoOEM", strSiteDirectory + @"\Logo");
 
             //LogClass.WriteLogFile(strSiteTemplateDirectory + @"\LogoOEM");
         }
 
-        //æ·»åŠ æ•°æ®åº“ç™»å½•ç”¨æˆ·
+        //Ìí¼ÓÊı¾İ¿âµÇÂ¼ÓÃ»§
         ShareClass.CreateDBUserAccount(strDBLoginUserID, strDBUserLoginPassword, "YES");
 
-        //ä»æ¨¡æ¿æ•°æ®åº“æ¢å¤æ•°æ®åº“
+        //´ÓÄ£°åÊı¾İ¿â»Ö¸´Êı¾İ¿â
         if (!ShareClass.RestoreDatabaseFromTemplateDB(strSiteDBName, strDBRestoreFile))
         {
-            LogClass.WriteLogFile("æ¢å¤æ•°æ®åº“å¤±è´¥ï¼");
+            LogClass.WriteLogFile("»Ö¸´Êı¾İ¿âÊ§°Ü£¡");
         }
 
-        //æˆäºˆç”¨æˆ·æ•°æ®åº“æƒé™ï¼Œåªé’ˆå¯¹è¿™ä¸ªæ•°æ®åº“
+        //ÊÚÓèÓÃ»§Êı¾İ¿âÈ¨ÏŞ£¬Ö»Õë¶ÔÕâ¸öÊı¾İ¿â
         ShareClass.AuthorizationDBToUser(strDBLoginUserID, strDBUserLoginPassword, strSiteDBName, "YES");
 
-        //ModifyWebConfigDBConnectionString ä¿®æ”¹web.configçš„è¿æ¥æ•°æ®åº“çš„å­—ç¬¦ä¸²ã€å¹³å°åç§°å’Œæ˜¯å¦OEMç‰ˆ
+        //ModifyWebConfigDBConnectionString ĞŞ¸Äweb.configµÄÁ¬½ÓÊı¾İ¿âµÄ×Ö·û´®¡¢Æ½Ì¨Ãû³ÆºÍÊÇ·ñOEM°æ
         ShareClass.ModifyWebConfigDBConnectionStringAndSystemName(strSiteDirectory, "connection.connection_string", "SQLCONNECTIONSTRING", "extganttDataContextConnectionString", strDBLoginUserID, strDBUserLoginPassword, strSiteDBName, strSysteName, strSiteAppURL, strRentProductType, strRentProductVersionType, strIsOEM);
 
-        //C:\Windows\System32\inetsrv\config è¿™ä¸ªç›®å½•è¦èµ‹äºIIS_USERç”¨æˆ·å…¨éƒ¨æƒé™ï¼Œå¦åˆ™ä¼šå‡ºç°é”™è¯¯
+        //C:\Windows\System32\inetsrv\config Õâ¸öÄ¿Â¼Òª¸³ÓÚIIS_USERÓÃ»§È«²¿È¨ÏŞ£¬·ñÔò»á³öÏÖ´íÎó
         createSiteAPP(strSiteAppName, strSiteName, "http", strBindingInfo, strSiteDirectory, true, strSiteAppName + "Pool", ProcessModelIdentityType.NetworkService, null, null, ManagedPipelineMode.Integrated, null);
 
-        //åˆ›å»ºç½‘ç«™åº”ç”¨çš„è™šæ‹Ÿç›®å½•
+        //´´½¨ÍøÕ¾Ó¦ÓÃµÄĞéÄâÄ¿Â¼
         CreateSiteAppVDir(strSiteName, strSiteAppName, strSiteVirtualDirectoryName, strSiteVirtualDirectoryPhysicalPath);
     }
 
 
-    //åˆ›å»ºä¸€ä¸ªç½‘ç«™çš„åº”ç”¨
+    //´´½¨Ò»¸öÍøÕ¾µÄÓ¦ÓÃ
     private void createSiteAPP(string strSiteAppName, string strSiteName, string protocol, string bindingInformation, string physicalPath,
            bool createAppPool, string appPoolName, ProcessModelIdentityType identityType,
            string appPoolUserName, string appPoolPassword, ManagedPipelineMode appPoolPipelineMode, string managedRuntimeVersion)
@@ -204,13 +204,13 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
                     pool.ProcessModel.Password = appPoolPassword;
                 }
 
-                //è®¾ä¸ºç»å…¸æ¨¡å¼
+                //ÉèÎª¾­µäÄ£Ê½
                 pool.ManagedPipelineMode = ManagedPipelineMode.Classic;
 
-                //è®¾ç½®webåº”ç”¨ç¨‹åºæ± çš„Frameworkç‰ˆæœ¬
+                //ÉèÖÃwebÓ¦ÓÃ³ÌĞò³ØµÄFramework°æ±¾
                 pool.ManagedRuntimeVersion = "v4.0";
 
-                //è®¾ç½®æ˜¯å¦å¯ç”¨32ä½åº”ç”¨ç¨‹åº
+                //ÉèÖÃÊÇ·ñÆôÓÃ32Î»Ó¦ÓÃ³ÌĞò
                 pool.SetAttributeValue("enable32BitAppOnWin64", true);
                 pool.ProcessModel.IdentityType = ProcessModelIdentityType.ApplicationPoolIdentity;
 
@@ -222,7 +222,7 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
     }
 
 
-    //åˆ›å»ºä¸€ä¸ªç½‘ç«™åº”ç”¨çš„è™šæ‹Ÿç›®å½•
+    //´´½¨Ò»¸öÍøÕ¾Ó¦ÓÃµÄĞéÄâÄ¿Â¼
     public void CreateSiteAppVDir(string siteName, string siteAppName, string vDirName, string physicalPath)
     {
         using (ServerManager mgr = new ServerManager())
@@ -241,7 +241,7 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
 
             try
             {
-                //æ²¡æœ‰ç›®å½•çš„å°±åˆ›å»ºç›®å½•
+                //Ã»ÓĞÄ¿Â¼µÄ¾Í´´½¨Ä¿Â¼
                 ShareClass.CreateDirectory(physicalPath);
 
                 app.VirtualDirectories.Add(vDirName, physicalPath);
@@ -253,7 +253,7 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
         }
     }
 
-    //åˆ¤æ–­ç«™ç‚¹åº”ç”¨æ˜¯å¦å­˜åœ¨
+    //ÅĞ¶ÏÕ¾µãÓ¦ÓÃÊÇ·ñ´æÔÚ
     public bool VerifyWebSiteAppIsExist(string siteName, string siteAppName)
     {
         using (ServerManager mgr = new ServerManager())
@@ -273,7 +273,7 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
         }
     }
 
-    //å¤åˆ¶æ–‡ä»¶å¤¹
+    //¸´ÖÆÎÄ¼ş¼Ğ
     public static bool CopyDirectory(string SourcePath, string DestinationPath, bool overwriteexisting)
     {
         bool ret = false;
@@ -309,12 +309,12 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
     }
 
 
-    //-------------å¤åˆ¶ç«™ç‚¹æ–‡ä»¶------------------------------------------------------------------
+    //-------------¸´ÖÆÕ¾µãÎÄ¼ş------------------------------------------------------------------
     public static bool CopySiteFile(string strFromDirectory, string strToDirectory)
     {
         try
         {
-            //æ²¡æœ‰ç›®å½•çš„å°±åˆ›å»ºç›®å½•
+            //Ã»ÓĞÄ¿Â¼µÄ¾Í´´½¨Ä¿Â¼
             ShareClass.CreateDirectory(strToDirectory);
 
             bool blCopy = ShareClass.CopyDirectory(strFromDirectory, strToDirectory, false);
@@ -328,18 +328,18 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
 
     //----------------------------------------------------------------------------------------------
     /// <summary> 
-    /// åˆ›å»ºä¸€ä¸ªç«™ç‚¹
+    /// ´´½¨Ò»¸öÕ¾µã
     /// </summary> 
     /// <param name="siteName"></param> 
     /// <param name="bindingInfo">"*:&lt;port&gt;:&lt;hostname&gt;" <example>"*:80:myhost.com"</example></param> 
     /// <param name="physicalPath"></param> 
     public void CreateSite(string siteName, string bindingInfo, string physicalPath)
     {
-        //C:\Windows\System32\inetsrv\config è¿™ä¸ªç›®å½•è¦èµ‹äºIIS_USERç”¨æˆ·å…¨éƒ¨æƒé™ï¼Œå¦åˆ™ä¼šå‡ºç°é”™è¯¯
+        //C:\Windows\System32\inetsrv\config Õâ¸öÄ¿Â¼Òª¸³ÓÚIIS_USERÓÃ»§È«²¿È¨ÏŞ£¬·ñÔò»á³öÏÖ´íÎó
         createSite(siteName, "http", bindingInfo, physicalPath, true, siteName + "Pool", ProcessModelIdentityType.NetworkService, null, null, ManagedPipelineMode.Integrated, null);
     }
 
-    //åˆ›å»ºä¸€ä¸ªç«™ç‚¹
+    //´´½¨Ò»¸öÕ¾µã
     private void createSite(string siteName, string protocol, string bindingInformation, string physicalPath,
             bool createAppPool, string appPoolName, ProcessModelIdentityType identityType,
             string appPoolUserName, string appPoolPassword, ManagedPipelineMode appPoolPipelineMode, string managedRuntimeVersion)
@@ -349,7 +349,7 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
             Site site;
             try
             {
-                //åˆ›å»ºç«™ç‚¹æ—¶ç”¨è¿™ä¸ª
+                //´´½¨Õ¾µãÊ±ÓÃÕâ¸ö
                 site = mgr.Sites.Add(siteName, protocol, bindingInformation, physicalPath);
             }
             catch (Exception err)
@@ -372,20 +372,20 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
                 }
                 //if (appPoolPipelineMode != pool.ManagedPipelineMode)
                 //{
-                //    //è®¾ä¸ºé›†æˆæ¨¡å¼
+                //    //ÉèÎª¼¯³ÉÄ£Ê½
                 //    pool.ManagedPipelineMode = appPoolPipelineMode;
                 //}
 
-                //è®¾ä¸ºç»å…¸æ¨¡å¼
+                //ÉèÎª¾­µäÄ£Ê½
                 pool.ManagedPipelineMode = ManagedPipelineMode.Classic;
 
-                //è®¾ç½®webåº”ç”¨ç¨‹åºæ± çš„Frameworkç‰ˆæœ¬
+                //ÉèÖÃwebÓ¦ÓÃ³ÌĞò³ØµÄFramework°æ±¾
                 pool.ManagedRuntimeVersion = "v4.0";
 
-                //è®¾ç½®æ˜¯å¦å¯ç”¨32ä½åº”ç”¨ç¨‹åº
+                //ÉèÖÃÊÇ·ñÆôÓÃ32Î»Ó¦ÓÃ³ÌĞò
                 pool.SetAttributeValue("enable32BitAppOnWin64", true);
 
-                //åˆ›å»ºç«™ç‚¹æ—¶ç”¨è¿™ä¸ª
+                //´´½¨Õ¾µãÊ±ÓÃÕâ¸ö
                 site.Applications["/"].ApplicationPoolName = pool.Name;
             }
 
@@ -394,7 +394,7 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
     }
 
     /// <summary> 
-    /// åˆ é™¤ä¸€ä¸ªç½‘ç«™
+    /// É¾³ıÒ»¸öÍøÕ¾
     /// </summary> 
     /// <param name="siteName">Site name.</param> 
     public void DeleteSite(string siteName)
@@ -410,7 +410,7 @@ public partial class TakeTopSoftRent_BuildSiteAuto : System.Web.UI.Page
         }
     }
 
-    //åˆ›å»ºä¸€ä¸ªè™šæ‹Ÿç›®å½•
+    //´´½¨Ò»¸öĞéÄâÄ¿Â¼
     public void CreateVDir(string siteName, string vDirName, string physicalPath)
     {
         using (ServerManager mgr = new ServerManager())

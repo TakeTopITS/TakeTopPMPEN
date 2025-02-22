@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDTestMediumList.aspx.cs" Inherits="TTGDTestMediumList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDTestMediumList.aspx.cs" Inherits="TTGDTestMediumList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>åŽ‹åŠ›è¯•éªŒä»‹è´¨åˆ—è¡¨</title>
+    <title>Ñ¹Á¦ÊÔÑé½éÖÊÁÐ±í</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
@@ -54,7 +54,7 @@
                                     <table width="100%" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left" class="formItemBgStyle">
-                                                <input type="button" class="inpuLong" value="æ–°å¢žåŽ‹åŠ›è¯•éªŒä»‹è´¨" onclick="window.location.href = 'TTGDTestMediumEdit.aspx'" />
+                                                <input type="button" class="inpuLong" value="ÐÂÔöÑ¹Á¦ÊÔÑé½éÖÊ" onclick="window.location.href = 'TTGDTestMediumEdit.aspx'" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -102,14 +102,14 @@
                                                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,BianJi%>"></asp:Label></a>
                                                                     <asp:LinkButton ID="LB_Del" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab">
                                                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ShanChu%>"></asp:Label></asp:LinkButton>
-                                                                    <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="åˆ é™¤" />--%>
+                                                                    <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="Deleted" />--%>
                                                                     
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="ID" HeaderText="ä»£å·">
+                                                            <asp:BoundColumn DataField="ID" HeaderText="´úºÅ">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="TestMedium" HeaderText="è¯•éªŒä»‹è´¨">
+                                                            <asp:BoundColumn DataField="TestMedium" HeaderText="ÊÔÑé½éÖÊ">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="74%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

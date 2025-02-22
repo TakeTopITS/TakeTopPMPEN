@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -35,11 +35,11 @@ public partial class TTWLManage : System.Web.UI.Page
         strUserName = ShareClass.GetUserName(strUserCode);
         LB_UserName.Text = strUserName;
 
-        //设置是否自定义工作流模组模式
+        //�����Ƿ��Զ��幤����ģ��ģʽ
         Session["DIYWFModule"] = "NO";
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx");  bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "流程管理", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx");  bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "���̹���", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -66,7 +66,7 @@ public partial class TTWLManage : System.Web.UI.Page
             DataSet ds = new DataSet();
 
             strHQL = "Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-            strHQL += " Where A.WLID = B.WLID And A.Status In ('处理中','审核中','会签中','复核中') And B.Status Not In ('修改中','关闭','通过','结案')";
+            strHQL += " Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed')";
             strHQL += " And trim(A.OperatorCode) = " + "'" + strUserCode + "'";
             strHQL += " And A.IsOperator = 'YES'";
             strHQL += " Order By A.StepID DESC";
@@ -80,7 +80,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
 
             strHQL = "Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-            strHQL += " Where A.WLID = B.WLID And A.Status In ('处理中','审核中','会签中','复核中') And B.Status Not In ('修改中','关闭','通过','结案')";
+            strHQL += " Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed')";
             strHQL += " And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = " + "'" + strUserCode + "'" + " and AgencyStatus = 1)";
             strHQL += " And A.IsOperator = 'YES'";
             strHQL += " Order By A.StepID DESC";
@@ -93,7 +93,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
 
             strHQL = "Select A.ID,A.StepID,A.WorkDetail,A.CheckingTime,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-            strHQL += " Where A.WLID = B.WLID And A.Status In ('批准','驳回') And trim(A.OperatorCode) = " + "'" + strUserCode + "'";
+            strHQL += " Where A.WLID = B.WLID And A.Status In ('Approved','Rejected') And trim(A.OperatorCode) = " + "'" + strUserCode + "'";
             strHQL += " Order By A.StepID DESC";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowDetail");
 
@@ -104,7 +104,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
 
             strHQL = "Select A.ID,A.StepID,A.WorkDetail,A.CheckingTime,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-            strHQL += " Where A.WLID = B.WLID And A.Status In ('批准','驳回') ";
+            strHQL += " Where A.WLID = B.WLID And A.Status In ('Approved','Rejected') ";
             strHQL += " And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = " + "'" + strUserCode + "'" + " and AgencyStatus = 1)";
             strHQL += " Order By A.StepID DESC";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowDetail");
@@ -153,7 +153,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
         strWFType = DL_WLType.SelectedValue.Trim();
 
-        strHQL = "Select TemName From T_WorkFlowTemplate Where Authority = '所有'";
+        strHQL = "Select TemName From T_WorkFlowTemplate Where Authority = 'All'";
         strHQL += " and Type = " + "'" + strWFType + "'";
         strHQL += " Order by CreateTime DESC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTemplate");
@@ -199,7 +199,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
         DataSet ds = new DataSet();
         strHQL = "Select A.ID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,A.StepID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('处理中','审核中','会签中','复核中') And B.Status Not In ('通过','修改中','关闭','结案')";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Passed','Updating','Closed','CaseClosed')";
         strHQL += " And trim(A.OperatorCode) = " + "'" + strUserCode + "'";
         strHQL += " And A.IsOperator = 'YES'";
         strHQL += " And A.WLID = " + strWFID;
@@ -213,7 +213,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
 
         strHQL = "Select A.ID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,A.StepID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('处理中','审核中','会签中','复核中') And B.Status Not In ('修改中','关闭','结案')";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','CaseClosed')";
         strHQL += " And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and trim(UnderCode) = " + "'" + strUserCode + "'" + " and AgencyStatus = 1)";
         strHQL += " And A.IsOperator = 'YES'";
         strHQL += " And A.WLID = " + strWFID;
@@ -227,7 +227,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
 
         strHQL = "Select A.ID,A.WorkDetail,A.CheckingTime,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,A.StepID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('批准','驳回') And trim(A.OperatorCode) = " + "'" + strUserCode + "'";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('Approved','Rejected') And trim(A.OperatorCode) = " + "'" + strUserCode + "'";
         strHQL += " And A.WLID = " + strWFID;
         strHQL += " Order By A.StepID DESC";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowDetail");
@@ -239,7 +239,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
 
         strHQL = "Select A.ID,A.WorkDetail,A.CheckingTime,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,A.StepID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('批准','驳回') ";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('Approved','Rejected') ";
         strHQL += " And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and trim(UnderCode) = " + "'" + strUserCode + "'" + " and AgencyStatus = 1)";
         strHQL += " And A.WLID = " + strWFID;
         strHQL += " Order By A.StepID DESC";
@@ -288,7 +288,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
         DataSet ds = new DataSet();
         strHQL = "Select A.ID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('处理中','审核中','会签中','复核中') And B.Status Not In ('通过','修改中','关闭','结案')";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Passed','Updating','Closed','CaseClosed')";
         strHQL += " And trim(A.OperatorCode) = " + "'" + strUserCode + "'";
         strHQL += " And A.IsOperator = 'YES'";
         strHQL += " And to_char(A.CheckingTime,'yyyymmdd') >= " + "'" + strStartTime + "'" + " and to_char(A.CheckingTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
@@ -302,7 +302,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
 
         strHQL = "Select A.ID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('处理中','审核中','会签中','复核中') And B.Status Not In ('修改中','关闭','结案')";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','CaseClosed')";
         strHQL += " And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and trim(UnderCode) = " + "'" + strUserCode + "'" + " and AgencyStatus = 1)";
         strHQL += " And A.IsOperator = 'YES'";
         strHQL += " And to_char(A.CheckingTime,'yyyymmdd') >= " + "'" + strStartTime + "'" + " and to_char(A.CheckingTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
@@ -316,7 +316,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
 
         strHQL = "Select A.ID,A.WorkDetail,A.CheckingTime,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('批准','驳回') And A.OperatorCode = " + "'" + strUserCode + "'";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('Approved','Rejected') And A.OperatorCode = " + "'" + strUserCode + "'";
         strHQL += " And to_char(A.CheckingTime,'yyyymmdd') >= " + "'" + strStartTime + "'" + " and to_char(A.CheckingTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
         strHQL += " Order By A.StepID DESC";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowDetail");
@@ -328,7 +328,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
 
         strHQL = "Select A.ID,A.WorkDetail,A.CheckingTime,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('批准','驳回') ";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('Approved','Rejected') ";
         strHQL += " And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and trim(UnderCode) = " + "'" + strUserCode + "'" + " and AgencyStatus = 1)";
         strHQL += " And to_char(A.CheckingTime,'yyyymmdd') >= " + "'" + strStartTime + "'" + " and to_char(A.CheckingTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
         strHQL += " Order By A.StepID DESC";
@@ -383,7 +383,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
         DataSet ds = new DataSet();
         strHQL = "Select A.ID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,A.StepID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('处理中','审核中','会签中','复核中') And B.Status Not In ('通过','修改中','关闭','结案')";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Passed','Updating','Closed','CaseClosed')";
         strHQL += " And to_char(A.CheckingTime,'yyyymmdd') >= " + "'" + strStartTime + "'" + " and to_char(A.CheckingTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
         strHQL += " And trim(A.OperatorCode) = " + "'" + strUserCode + "'";
         strHQL += " And A.IsOperator = 'YES'";
@@ -400,7 +400,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
 
         strHQL = "Select A.ID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,A.StepID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('处理中','审核中','会签中','复核中') And B.Status Not In ('修改中','关闭','结案')";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','CaseClosed')";
         strHQL += " And to_char(A.CheckingTime,'yyyymmdd') >= " + "'" + strStartTime + "'" + " and to_char(A.CheckingTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
         strHQL += " And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and trim(UnderCode) = " + "'" + strUserCode + "'" + " and AgencyStatus = 1)";
         strHQL += " And A.IsOperator = 'YES'";
@@ -418,7 +418,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
 
         strHQL = "Select A.ID,A.WorkDetail,A.CheckingTime,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,A.StepID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('批准','驳回') And trim(A.OperatorCode) = " + "'" + strUserCode + "'";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('Approved','Rejected') And trim(A.OperatorCode) = " + "'" + strUserCode + "'";
         strHQL += " And to_char(A.CheckingTime,'yyyymmdd') >= " + "'" + strStartTime + "'" + " and to_char(A.CheckingTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
         strHQL += " And B.WLType Like " + "'" + strWLType + "'";
         strHQL += " and B.WLName Like " + "'" + strWFName + "'";
@@ -433,7 +433,7 @@ public partial class TTWLManage : System.Web.UI.Page
         LB_Sql1.Text = strHQL;
 
         strHQL = "Select A.ID,A.WorkDetail,A.CheckingTime,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,A.StepID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('批准','驳回') ";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('Approved','Rejected') ";
         strHQL += " And to_char(A.CheckingTime,'yyyymmdd') >= " + "'" + strStartTime + "'" + " and to_char(A.CheckingTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
         strHQL += " And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and trim(UnderCode) = " + "'" + strUserCode + "'" + " and AgencyStatus = 1)";
         strHQL += " And B.WLType Like " + "'" + strWLType + "'";
@@ -549,7 +549,7 @@ public partial class TTWLManage : System.Web.UI.Page
         DataSet ds = new DataSet();
 
         strHQL = "Select A.ID,A.WorkDetail,A.CheckingTime,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('处理中','审核中','会签中','复核中') And B.Status Not In ('通过','修改中','关闭','结案')";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Passed','Updating','Closed','CaseClosed')";
         strHQL += " And trim(A.OperatorCode) = " + "'" + strUserCode + "'";
         strHQL += " And A.IsOperator = 'YES'";
         strHQL += " Order By A.StepID DESC";
@@ -562,7 +562,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
 
         strHQL = "Select A.ID,A.WorkDetail,A.CheckingTime,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('处理中','审核中','会签中','复核中') And B.Status Not In ('修改中','关闭','结案')";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','CaseClosed')";
         strHQL += " And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and trim(UnderCode) = " + "'" + strUserCode + "'" + " and AgencyStatus = 1)";
         strHQL += " And A.IsOperator = 'YES'";
         strHQL += " Order By A.StepID DESC";
@@ -575,7 +575,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
 
         strHQL = "Select A.ID,A.WorkDetail,A.CheckingTime,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('批准','驳回') And trim(A.OperatorCode) = " + "'" + strUserCode + "'";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('Approved','Rejected') And trim(A.OperatorCode) = " + "'" + strUserCode + "'";
         strHQL += " Order By A.StepID DESC";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowDetail");
 
@@ -586,7 +586,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
 
         strHQL = "Select A.ID,A.WorkDetail,A.CheckingTime,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('批准','驳回') ";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('Approved','Rejected') ";
         strHQL += " And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and trim(UnderCode) = " + "'" + strUserCode + "'" + " and AgencyStatus = 1)";
         strHQL += " Order By A.StepID DESC";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowDetail");
@@ -620,7 +620,7 @@ public partial class TTWLManage : System.Web.UI.Page
         DataSet ds = new DataSet();
 
         strHQL = "Select A.ID,A.StepID,A.WorkDetail,A.CheckingTime,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('处理中','审核中','会签中','复核中') And B.Status Not In ('通过','修改中','关闭','结案')";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Passed','Updating','Closed','CaseClosed')";
         strHQL += " And trim(A.OperatorCode) = " + "'" + strUserCode + "'";
         strHQL += " And A.IsOperator = 'YES'";
         strHQL += " And B.Status = " + "'" + strStatus + "'";
@@ -634,7 +634,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
 
         strHQL = "Select A.ID,A.StepID,A.WorkDetail,A.CheckingTime,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('处理中','审核中','会签中','复核中') And B.Status Not In ('修改中','关闭','结案')";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','CaseClosed')";
         strHQL += " And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and trim(UnderCode) = " + "'" + strUserCode + "'" + " and AgencyStatus = 1)";
         strHQL += " And A.IsOperator = 'YES'";
         strHQL += " And B.Status = " + "'" + strStatus + "'";
@@ -648,7 +648,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
 
         strHQL = "Select A.ID,A.StepID,A.WorkDetail,A.CheckingTime,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('批准','驳回') And trim(A.OperatorCode) = " + "'" + strUserCode + "'";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('Approved','Rejected') And trim(A.OperatorCode) = " + "'" + strUserCode + "'";
         strHQL += " And B.Status = " + "'" + strStatus + "'";
         strHQL += " Order By A.StepID DESC";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowDetail");
@@ -660,7 +660,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
 
         strHQL = "Select A.ID,A.StepID,A.WorkDetail,A.CheckingTime,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('批准','驳回') ";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('Approved','Rejected') ";
         strHQL += " And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and trim(UnderCode) = " + "'" + strUserCode + "'" + " and AgencyStatus = 1)";
         strHQL += " And B.Status = " + "'" + strStatus + "'";
         strHQL += " Order By A.StepID DESC";
@@ -767,17 +767,17 @@ public partial class TTWLManage : System.Web.UI.Page
             strWFID = DataGrid3.Items[i].Cells[1].Text.Trim();
             strStatus = GetWorkflowStatus(strWFID);
 
-            if (strStatus == "通过")
+            if (strStatus == "Passed")
             {
                 ((ImageButton)DataGrid3.Items[i].FindControl("IMB_Lamp")).ImageUrl = "~/Images/lamp_green.png";
             }
 
-            if (strStatus == "结案")
+            if (strStatus == "CaseClosed")
             {
                 ((ImageButton)DataGrid3.Items[i].FindControl("IMB_Lamp")).ImageUrl = "~/Images/lamp_ok.png";
             }
 
-            if (strStatus == "驳回")
+            if (strStatus == "Rejected")
             {
                 ((ImageButton)DataGrid3.Items[i].FindControl("IMB_Lamp")).ImageUrl = "~/Images/lamp_refuse.png";
             }

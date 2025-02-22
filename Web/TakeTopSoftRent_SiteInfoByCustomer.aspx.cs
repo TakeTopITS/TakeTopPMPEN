@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration.Internal;
@@ -30,7 +30,7 @@ using System.Web.Services.Description;
 
 using System.Threading.Tasks;
 
-///ç¬¬ä¸‰æ–¹dll
+///µÚÈı·½dll
 using ICSharpCode.SharpZipLib;
 using ICSharpCode.SharpZipLib.Checksum;
 using ICSharpCode.SharpZipLib.Zip;
@@ -54,7 +54,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
         strUserName = ShareClass.GetUserName(strUserCode);
         LB_UserName.Text = strUserName;
 
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "è½¯ä»¶ç§Ÿç”¨å»ºç«™ç»´æŠ¤", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "Èí¼ş×âÓÃ½¨Õ¾Î¬»¤", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -108,7 +108,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
 
     protected void BT_Create_Click(object sender, EventArgs e)
     {
-        string strPopURL = "popShowByURLForFixedSize('TakeTopSoftRent_TakeTopSoftCloudForInner.aspx', 'å»ºç«™ä¿¡æ¯', 590, 650)";
+        string strPopURL = "popShowByURLForFixedSize('TakeTopSoftRent_TakeTopSoftCloudForInner.aspx', '½¨Õ¾ĞÅÏ¢', 590, 650)";
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", strPopURL, true);
     }
 
@@ -144,7 +144,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                 }
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å·²æ›´æ–°ç°æœ‰å®¹é‡ï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÒÑ¸üĞÂÏÖÓĞÈİÁ¿£¡')", true);
         }
         catch (Exception ex)
         {
@@ -225,21 +225,21 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
             {
                 try
                 {
-                    LB_SiteMsg.Text = "æ­£åœ¨å‡çº§è¿™ä¸ªç«™ç‚¹ï¼Œå¤§æ¦‚éœ€è¦5åˆ†é’Ÿï¼Œè¯·è€å¿ƒç­‰å€™......";
+                    LB_SiteMsg.Text = "ÕıÔÚÉı¼¶Õâ¸öÕ¾µã£¬´ó¸ÅĞèÒª5·ÖÖÓ£¬ÇëÄÍĞÄµÈºò......";
                     IFrame_Site.Src = strSiteURL + @"/" + strSiteCreatorAppName + @"/TakeTopSoftRent_UpdateSiteAuto.aspx?SiteName=" + strSiteName + "&SiteAppName=" + strSiteAppName + "&SiteDirectory=" + strSiteDirectory + "&SiteTemplateDirectory=" + strSiteTemplateDirectory + "&DBLoginUserID=" + strDBLoginUserID + "&DBUserLoginPassword=" + strDBUserLoginPassword + "&SiteDBName=" + strSiteDBName + "&SiteAppSystemName=" + strSiteAppSystemName + "&SiteAppURL=" + strSiteAppURL + "&RentProductName=" + strRentProductName + "&RentUserEMail=" + strRentUserEMail + "&ServerType=" + strServerType + "&RentProductVersion=" + strRentProductVersion + "&SiteVirtualDirectoryPhysicalPath=" + strSiteVirtualDirectoryPhysicalPath + "&IsOEM=" + strIsOEM + "&SiteID=" + strID;
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindowSite','true') ", true);
 
-                    //å‘é€é‚®ä»¶ç»™ç”¨æˆ·
+                    //·¢ËÍÓÊ¼ş¸øÓÃ»§
                     try
                     {
                         Action action = new Action(delegate ()
                         {
                             Msg msg = new Msg();
-                            string strEMailMsg = "ä½ å¥½ï¼Œä½ " + strServerType + "çš„ï¼š" + strSiteAppSystemName + " ç«™ç‚¹ï¼š" + strSiteAppURL + " å·²è¢«å‡çº§åˆ°æœ€æ–°ç‰ˆï¼Œå‡çº§åç¬¬ä¸€æ¬¡æ‰“å¼€ä¼šè¾ƒæ…¢ï¼Œå¤§çº¦è¦5åˆ°10åˆ†é’Ÿæ‰ä¼šå‡ºç°ç™»å½•é¡µé¢ï¼Œå¦‚æœ‰é—®é¢˜ï¼Œè¯·è”ç³»æ³°é¡¶æ‹“é¼å®¢æœï¼ˆ021-51085119ï¼‰ï¼Œè°¢è°¢ï¼Œæ­¤é‚®ä»¶æ¥è‡ªæ³°é¡¶æ‹“é¼é›†å›¢ï¼";
+                            string strEMailMsg = "ÄãºÃ£¬Äã" + strServerType + "µÄ£º" + strSiteAppSystemName + " Õ¾µã£º" + strSiteAppURL + " ÒÑ±»Éı¼¶µ½×îĞÂ°æ£¬Éı¼¶ºóµÚÒ»´Î´ò¿ª»á½ÏÂı£¬´óÔ¼Òª5µ½10·ÖÖÓ²Å»á³öÏÖµÇÂ¼Ò³Ãæ£¬ÈçÓĞÎÊÌâ£¬ÇëÁªÏµÌ©¶¥ÍØ¶¦¿Í·ş£¨021-51085119£©£¬Ğ»Ğ»£¬´ËÓÊ¼şÀ´×ÔÌ©¶¥ÍØ¶¦¼¯ÍÅ£¡";
 
                             try
                             {
-                                msg.SendMailByEmail(strRentUserEMail, "ç«™ç‚¹å‡çº§é€šçŸ¥", strEMailMsg, "ADMIN");
+                                msg.SendMailByEmail(strRentUserEMail, "Õ¾µãÉı¼¶Í¨Öª", strEMailMsg, "ADMIN");
                             }
                             catch (Exception ex)
                             {
@@ -254,7 +254,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                 catch (Exception err)
                 {
                     LB_ErrorMsg.Text = err.Message.ToString();
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ç«™ç‚¹å‡çº§å¤±è´¥ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Õ¾µãÉı¼¶Ê§°Ü£¬Çë¼ì²é£¡')", true);
                 }
             }
 
@@ -262,25 +262,25 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
             {
                 try
                 {
-                    //å‹ç¼©å¹¶ç”Ÿæˆå¤‡ä»½æ–‡ä»¶
+                    //Ñ¹Ëõ²¢Éú³É±¸·İÎÄ¼ş
                     string strZipDocName = strSiteAppName + "Doc" + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".zip";
                     string strDownloadDocURL = strSiteAppURL + @"/BackupDoc/" + strZipDocName;
 
-                    LB_SiteMsg.Text = "æ­£åœ¨å‘é€è¿™ä¸ªç«™ç‚¹å¤‡ä»½æ–‡ä»¶ï¼Œå¤§æ¦‚éœ€è¦5åˆ†é’Ÿï¼Œè¯·è€å¿ƒç­‰å€™......";
+                    LB_SiteMsg.Text = "ÕıÔÚ·¢ËÍÕâ¸öÕ¾µã±¸·İÎÄ¼ş£¬´ó¸ÅĞèÒª5·ÖÖÓ£¬ÇëÄÍĞÄµÈºò......";
                     IFrame_Site.Src = strSiteURL + @"/" + strSiteCreatorAppName + @"/TakeTopSoftRent_SendSiteBackupDocAuto.aspx?SiteName=" + strSiteName + "&SiteAppName=" + strSiteAppName + "&SiteDirectory=" + strSiteDirectory + "&SiteVirtualDirectoryPhysicalPath=" + strSiteVirtualDirectoryPhysicalPath + "&SiteTemplateDirectory=" + strSiteTemplateDirectory + "&DBLoginUserID=" + strDBLoginUserID + "&DBUserLoginPassword=" + strDBUserLoginPassword + "&SiteDBName=" + strSiteDBName + "&SiteAppSystemName=" + strSiteAppSystemName + "&SiteAppURL=" + strSiteAppURL + "&RentProductName=" + strRentProductName + "&RentUserEMail=" + strRentUserEMail + "&ZipDocName=" + strZipDocName + "&ServerType=" + strServerType;
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindowSite','true') ", true);
 
-                    //å‘é€é‚®ä»¶ç»™ç”¨æˆ·
+                    //·¢ËÍÓÊ¼ş¸øÓÃ»§
                     try
                     {
                         Action action = new Action(delegate ()
                         {
                             Msg msg = new Msg();
-                            string strEMailMsg = "ä½ å¥½ï¼Œä½ " + strServerType + "çš„ï¼š " + strSiteAppSystemName + " ç«™ç‚¹ï¼š" + strSiteAppURL + " çš„æ•°æ®å¤‡ä»½æ–‡ä»¶ä¸‹è½½åœ°å€æ˜¯: " + strDownloadDocURL + "ï¼Œè¯·åŠæ—¶ä¸‹è½½ï¼Œå¦‚æœ‰é—®é¢˜è¯·è”ç³»å®¢æœï¼ˆ021-51085119ï¼‰ï¼Œè°¢è°¢ï¼Œæ­¤é‚®ä»¶æ¥è‡ªæ³°é¡¶æ‹“é¼é›†å›¢ï¼";
+                            string strEMailMsg = "ÄãºÃ£¬Äã" + strServerType + "µÄ£º " + strSiteAppSystemName + " Õ¾µã£º" + strSiteAppURL + " µÄÊı¾İ±¸·İÎÄ¼şÏÂÔØµØÖ·ÊÇ: " + strDownloadDocURL + "£¬Çë¼°Ê±ÏÂÔØ£¬ÈçÓĞÎÊÌâÇëÁªÏµ¿Í·ş£¨021-51085119£©£¬Ğ»Ğ»£¬´ËÓÊ¼şÀ´×ÔÌ©¶¥ÍØ¶¦¼¯ÍÅ£¡";
 
                             try
                             {
-                                msg.SendMailByEmail(strRentUserEMail, "å¤‡ä»½æ–‡ä»¶ä¸‹è½½é€šçŸ¥", strEMailMsg, "ADMIN");
+                                msg.SendMailByEmail(strRentUserEMail, "±¸·İÎÄ¼şÏÂÔØÍ¨Öª", strEMailMsg, "ADMIN");
                             }
                             catch (Exception ex)
                             {
@@ -295,7 +295,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                 catch (Exception err)
                 {
                     LB_ErrorMsg.Text = err.Message.ToString();
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æç¤ºï¼Œå‘é€å¤±è´¥ï¼Œè¯·æ£€æŸ¥')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÌáÊ¾£¬·¢ËÍÊ§°Ü£¬Çë¼ì²é')", true);
                 }
             }
 
@@ -303,7 +303,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
             {
                 try
                 {
-                    LB_SiteMsg.Text = "æ­£åœ¨åˆ é™¤è¿™ä¸ªç«™ç‚¹ï¼Œå¤§æ¦‚éœ€è¦5åˆ†é’Ÿï¼Œè¯·è€å¿ƒç­‰å€™......";
+                    LB_SiteMsg.Text = "ÕıÔÚÉ¾³ıÕâ¸öÕ¾µã£¬´ó¸ÅĞèÒª5·ÖÖÓ£¬ÇëÄÍĞÄµÈºò......";
 
                     IFrame_Site.Src = strSiteURL + @"/" + strSiteCreatorAppName + @"/TakeTopSoftRent_DeleteSiteAuto.aspx?SiteName=" + strSiteName + "&SiteAppName=" + strSiteAppName + "&SiteDirectory=" + strSiteDirectory + "&SiteVirtualDirectoryPhysicalPath=" + strSiteVirtualDirectoryPhysicalPath + "&SiteTemplateDirectory=" + strSiteTemplateDirectory + "&DBLoginUserID=" + strDBLoginUserID + "&DBUserLoginPassword=" + strDBUserLoginPassword + "&SiteDBName=" + strSiteDBName + "&SiteAppSystemName=" + strSiteAppSystemName + "&SiteAppURL=" + strSiteAppURL + "&RentProductName=" + strRentProductName + "&RentUserEMail=" + strRentUserEMail + "&ServerType=" + strServerType;
 
@@ -313,17 +313,17 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
 
                     LoadRentSiteInfoByCustomer();
 
-                    //å‘é€é‚®ä»¶ç»™ç”¨æˆ·
+                    //·¢ËÍÓÊ¼ş¸øÓÃ»§
                     try
                     {
                         Action action = new Action(delegate ()
                         {
                             Msg msg = new Msg();
-                            string strEMailMsg = "ä½ å¥½ï¼Œä½ " + strServerType + "çš„ï¼š" + strSiteAppSystemName + " ç«™ç‚¹ï¼š" + strSiteAppURL + " å·²è¢«åˆ é™¤ï¼Œå¦‚æœ‰é—®é¢˜ï¼Œè¯·è”ç³»å®¢æœï¼ˆ021-51085119ï¼‰ï¼Œè°¢è°¢ï¼Œæ­¤é‚®ä»¶æ¥è‡ªæ³°é¡¶æ‹“é¼é›†å›¢ï¼";
+                            string strEMailMsg = "ÄãºÃ£¬Äã" + strServerType + "µÄ£º" + strSiteAppSystemName + " Õ¾µã£º" + strSiteAppURL + " ÒÑ±»É¾³ı£¬ÈçÓĞÎÊÌâ£¬ÇëÁªÏµ¿Í·ş£¨021-51085119£©£¬Ğ»Ğ»£¬´ËÓÊ¼şÀ´×ÔÌ©¶¥ÍØ¶¦¼¯ÍÅ£¡";
 
                             try
                             {
-                                msg.SendMailByEmail(strRentUserEMail, "ç«™ç‚¹åˆ é™¤é€šçŸ¥", strEMailMsg, "ADMIN");
+                                msg.SendMailByEmail(strRentUserEMail, "Õ¾µãÉ¾³ıÍ¨Öª", strEMailMsg, "ADMIN");
                             }
                             catch (Exception ex)
                             {
@@ -374,7 +374,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
 
                         ((TextBox)e.Item.FindControl("TB_CurrentCapacity")).Text = strFolderSize;
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å·²æ›´æ–°ç°æœ‰å®¹é‡ï¼')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÒÑ¸üĞÂÏÖÓĞÈİÁ¿£¡')", true);
 
                     }
                     catch (Exception ex)
@@ -384,7 +384,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æç¤ºï¼Œæ­¤ç«™ç‚¹ä¸å­˜åœ¨ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÌáÊ¾£¬´ËÕ¾µã²»´æÔÚ£¬Çë¼ì²é£¡')", true);
                 }
             }
 
@@ -398,7 +398,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                         strHQL = "Update T_RentSiteInfoByCustomer Set BuyCapacity = " + strCurrentCapacity + " Where ID = " + strID;
                         ShareClass.RunSqlCommand(strHQL);
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ä¿å­˜æˆåŠŸ')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('±£´æ³É¹¦')", true);
                     }
                     catch (Exception ex)
                     {
@@ -407,7 +407,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æç¤ºï¼Œæ­¤ç«™ç‚¹ä¸å­˜åœ¨ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÌáÊ¾£¬´ËÕ¾µã²»´æÔÚ£¬Çë¼ì²é£¡')", true);
                 }
             }
 
@@ -415,7 +415,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
             {
                 if (UrlIsExist(strSiteAppURL))
                 {
-                    LB_SiteMsg.Text = "æ­£åœ¨ä¿å­˜è¿™ä¸ªç«™ç‚¹çš„è™šæ‹Ÿç›®å½•çš„ç»å¯¹è·¯å¾„ï¼Œå¤§æ¦‚éœ€è¦1åˆ†é’Ÿï¼Œè¯·è€å¿ƒç­‰å€™......";
+                    LB_SiteMsg.Text = "ÕıÔÚ±£´æÕâ¸öÕ¾µãµÄĞéÄâÄ¿Â¼µÄ¾ø¶ÔÂ·¾¶£¬´ó¸ÅĞèÒª1·ÖÖÓ£¬ÇëÄÍĞÄµÈºò......";
                     strSiteVirtualDirectoryPhysicalPath = ((TextBox)e.Item.FindControl("TB_SiteVirtualDirectoryPhysicalPath")).Text.Trim();
 
                     strHQL = "Update T_RentSiteInfoByCustomer Set SiteVirtualDirectoryPhysicalPath = '" + strSiteVirtualDirectoryPhysicalPath + "' Where ID = " + strID;
@@ -428,7 +428,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æç¤ºï¼Œæ­¤ç«™ç‚¹ä¸å­˜åœ¨ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÌáÊ¾£¬´ËÕ¾µã²»´æÔÚ£¬Çë¼ì²é£¡')", true);
                 }
             }
 
@@ -450,13 +450,13 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æç¤ºï¼Œæ­¤ç«™ç‚¹è¿˜å­˜åœ¨ï¼Œè®°å½•ä¸èƒ½åˆ é™¤ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÌáÊ¾£¬´ËÕ¾µã»¹´æÔÚ£¬¼ÇÂ¼²»ÄÜÉ¾³ı£¬Çë¼ì²é£¡')", true);
                 }
             }
         }
     }
 
-    //å–å¾—åˆ›å»ºç«™ç‚¹çš„ç«™ç‚¹åº”ç”¨å
+    //È¡µÃ´´½¨Õ¾µãµÄÕ¾µãÓ¦ÓÃÃû
     protected string GetSiteCreatorAppName(string strRentProductName, string strRentProductVersion)
     {
         string strHQL;
@@ -472,20 +472,20 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
         }
     }
 
-    //ç›´æ¥åˆ é™¤æŒ‡å®šç›®å½•ä¸‹çš„æ‰€æœ‰æ–‡ä»¶åŠæ–‡ä»¶å¤¹
+    //Ö±½ÓÉ¾³ıÖ¸¶¨Ä¿Â¼ÏÂµÄËùÓĞÎÄ¼ş¼°ÎÄ¼ş¼Ğ
     public static void DeleteDirectory(string strDirectory)
     {
         try
         {
-            //å»é™¤æ–‡ä»¶å¤¹å’Œå­æ–‡ä»¶çš„åªè¯»å±æ€§
-            //å»é™¤æ–‡ä»¶å¤¹çš„åªè¯»å±æ€§
+            //È¥³ıÎÄ¼ş¼ĞºÍ×ÓÎÄ¼şµÄÖ»¶ÁÊôĞÔ
+            //È¥³ıÎÄ¼ş¼ĞµÄÖ»¶ÁÊôĞÔ
             System.IO.DirectoryInfo fileInfo = new DirectoryInfo(strDirectory);
             fileInfo.Attributes = FileAttributes.Normal & FileAttributes.Directory;
 
-            //å»é™¤æ–‡ä»¶çš„åªè¯»å±æ€§
+            //È¥³ıÎÄ¼şµÄÖ»¶ÁÊôĞÔ
             System.IO.File.SetAttributes(strDirectory, System.IO.FileAttributes.Normal);
 
-            //åˆ¤æ–­æ–‡ä»¶å¤¹æ˜¯å¦è¿˜å­˜åœ¨
+            //ÅĞ¶ÏÎÄ¼ş¼ĞÊÇ·ñ»¹´æÔÚ
             if (Directory.Exists(strDirectory))
             {
                 foreach (string f in Directory.GetFileSystemEntries(strDirectory))
@@ -494,7 +494,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                     {
                         try
                         {
-                            //å¦‚æœæœ‰å­æ–‡ä»¶åˆ é™¤æ–‡ä»¶
+                            //Èç¹ûÓĞ×ÓÎÄ¼şÉ¾³ıÎÄ¼ş
                             File.Delete(f);
                         }
                         catch
@@ -507,7 +507,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                         {
                             if (!f.Contains("Logo"))
                             {
-                                //å¾ªç¯é€’å½’åˆ é™¤å­æ–‡ä»¶å¤¹
+                                //Ñ­»·µİ¹éÉ¾³ı×ÓÎÄ¼ş¼Ğ
                                 DeleteDirectory(f);
                             }
                         }
@@ -517,11 +517,11 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                     }
                 }
 
-                //åˆ é™¤ç©ºæ–‡ä»¶å¤¹
+                //É¾³ı¿ÕÎÄ¼ş¼Ğ
                 Directory.Delete(strDirectory);
             }
         }
-        catch (Exception ex) // å¼‚å¸¸å¤„ç†
+        catch (Exception ex) // Òì³£´¦Àí
         {
         }
     }
@@ -558,9 +558,9 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
                 zip(file, s, staticFile);
             }
 
-            else // å¦åˆ™ç›´æ¥å‹ç¼©æ–‡ä»¶
+            else // ·ñÔòÖ±½ÓÑ¹ËõÎÄ¼ş
             {
-                //æ‰“å¼€å‹ç¼©æ–‡ä»¶
+                //´ò¿ªÑ¹ËõÎÄ¼ş
                 FileStream fs = File.OpenRead(file);
 
                 byte[] buffer = new byte[fs.Length];
@@ -581,7 +581,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomer : System.Web.UI.Page
         }
     }
 
-    //åˆ¤æ–­ç«™ç‚¹åº”ç”¨æ˜¯å¦å­˜åœ¨
+    //ÅĞ¶ÏÕ¾µãÓ¦ÓÃÊÇ·ñ´æÔÚ
     private bool UrlIsExist(String url)
     {
         System.Uri u = null;

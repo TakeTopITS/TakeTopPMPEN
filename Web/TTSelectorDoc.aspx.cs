@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -32,12 +32,12 @@ public partial class TTSelectorDoc : System.Web.UI.Page
         DataSet dsProject = ShareClass.GetDataSetFromSql(strProjectHQL, "Project");
         if (dsProject != null)
         {
-            string strProductLine = string.Empty;                               //äº§å“çº¿
-            string strSubordinateIndustry = string.Empty;                       //è¡Œä¸š
-            decimal decimalProjectAmount = 0;                             //é¡¹ç›®é¢
-            decimal decimalManHour = 0;                                   //å·¥æ—¶
+            string strProductLine = string.Empty;                               //²úÆ·Ïß
+            string strSubordinateIndustry = string.Empty;                       //ĞĞÒµ
+            decimal decimalProjectAmount = 0;                             //ÏîÄ¿¶î
+            decimal decimalManHour = 0;                                   //¹¤Ê±
             string strModuleIDs = string.Empty;
-            string strModuleNames = string.Empty;                               //æ¨¡å—
+            string strModuleNames = string.Empty;                               //Ä£¿é
 
             if (dsProject.Tables[0] != null && dsProject.Tables[0].Rows.Count > 0)
             {
@@ -71,19 +71,19 @@ public partial class TTSelectorDoc : System.Web.UI.Page
                         where r.ProductLine = '{0}'
                         and r.SubordinateIndustry = '{1}'", strProductLine, strSubordinateIndustry);
 
-            //åŠ æ¡ä»¶ç±»å‹ç­‰äºå®æ–½å¯¼èˆª   where DocType= 'å®æ–½å¯¼èˆª'
+            //¼ÓÌõ¼şÀàĞÍµÈÓÚÊµÊ©µ¼º½   where DocType= 'ÊµÊ©µ¼º½'
 
             DataTable dtDoc = ShareClass.GetDataSetFromSql(strDocHQL, "Doc").Tables[0];
 
 
-            DataTable dtNew = dtDoc.Copy();  //å¤åˆ¶dtè¡¨æ•°æ®ç»“æ„
-            dtNew.Clear();  //æ¸…æ¥šæ•°æ®
+            DataTable dtNew = dtDoc.Copy();  //¸´ÖÆdt±íÊı¾İ½á¹¹
+            dtNew.Clear();  //Çå³şÊı¾İ
 
             if (dtDoc != null && dtDoc.Rows.Count > 0)
             {
                 foreach (DataRow drDoc in dtDoc.Rows)
                 {
-                    //åˆ¤æ–­é‡‘é¢å’Œå·¥æ—¶
+                    //ÅĞ¶Ï½ğ¶îºÍ¹¤Ê±
                     decimal decimalRelatedStartAmount = 0;
                     decimal.TryParse(ShareClass.ObjectToString(drDoc["StartAmount"]), out decimalRelatedStartAmount);
                     decimal decimalRelatedEndAmount = 0;
@@ -127,7 +127,7 @@ public partial class TTSelectorDoc : System.Web.UI.Page
                         }
                     }
                     if (IsYou) {
-                        dtNew.ImportRow(drDoc);  //æ·»åŠ æ•°æ®è¡Œ
+                        dtNew.ImportRow(drDoc);  //Ìí¼ÓÊı¾İĞĞ
                     }
                 }
             }
@@ -142,7 +142,7 @@ public partial class TTSelectorDoc : System.Web.UI.Page
     protected void BT_All_Click(object sender, EventArgs e)
     {
         string strDocHQL = @"select * from T_Document ";
-        //åŠ æ¡ä»¶ç±»å‹ç­‰äºå®æ–½å¯¼èˆª   where DocType= 'å®æ–½å¯¼èˆª'
+        //¼ÓÌõ¼şÀàĞÍµÈÓÚÊµÊ©µ¼º½   where DocType= 'ÊµÊ©µ¼º½'
         DataTable dtDoc = ShareClass.GetDataSetFromSql(strDocHQL, "Doc").Tables[0];
 
         DG_List.DataSource = dtDoc;

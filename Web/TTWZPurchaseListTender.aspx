@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPurchaseListTender.aspx.cs" Inherits="TTWZPurchaseListTender" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPurchaseListTender.aspx.cs" Inherits="TTWZPurchaseListTender" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ÊãõÊ†á‰∏ªÁÆ°</title>
+    <title>’–±Í÷˜π‹</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -18,11 +18,11 @@
         });
 
 
-        //‰∏ÄËà¨ÈÄâÊã©ÁïåÈù¢
+        //“ª∞„—°‘ÒΩÁ√Ê
         function SelectProject() {
             var url = "TTWZSelectorMember.aspx";
 
-            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + "HF_TenderCompetent" + "&ctrlName=" + "TXT_TenderCompetent", 'ÈÄâÊã©ÊàêÂëò', 800, 500);	
+            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + "HF_TenderCompetent" + "&ctrlName=" + "TXT_TenderCompetent", '—°‘Ò≥…‘±', 800, 500);	
 
         }
 
@@ -56,7 +56,7 @@
             CloseLayer();
         }
 
-        //ÂçïÈÄâÊã©ÊåâÈíÆÂà§Êñ≠
+        //µ•—°‘Ò∞¥≈•≈–∂œ
         function chooseUpdate() {
             var str = "";
             $("input[name=name1]").each(function () {
@@ -66,7 +66,7 @@
             });
 
             if (str == "") {
-                alert('ËØ∑ÈÄâÊã©ËÆ∞ÂΩïÈ°πÔºÅ');
+                alert('«Î—°‘Òº«¬ºœÓ£°');
                 return false;
             }
             else {
@@ -129,19 +129,19 @@
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZhaoBiaoZhuGuan%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZhaoBiaoZhuGuan%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:HiddenField ID="HF_TenderCompetent" runat="server" />
                                                             <asp:TextBox ID="TXT_TenderCompetent" runat="server"></asp:TextBox>&nbsp;
-                                                            <input type="button" id="btnTenderCompetent" class="inpu" runat="server" value="ÈÄâÊã©" onclick="SelectProject();" />
+                                                            <input type="button" id="btnTenderCompetent" class="inpu" runat="server" value="—°‘Ò" onclick="SelectProject();" />
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="formItemBgStyle" colspan="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                             <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnOK_Click" />&nbsp;
                                                             <input id="btnClose()" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                                type="button" value="ÂÖ≥Èó≠" />
+                                                                type="button" value="Closed" />
 
                                                         </td>
                                                     </tr>

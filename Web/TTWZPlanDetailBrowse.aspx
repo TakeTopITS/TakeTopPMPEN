@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPlanDetailBrowse.aspx.cs" Inherits="TTWZPlanDetailBrowse" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPlanDetailBrowse.aspx.cs" Inherits="TTWZPlanDetailBrowse" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -74,7 +74,7 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="2">
-                                                                        <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,JiHuaBianHao%>"></asp:Label>ï¼š
+                                                                        <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,JiHuaBianHao%>"></asp:Label>£º
                                                                         <asp:Label ID="LB_PlanCode" runat="server" Text="**"></asp:Label>
                                                                     </td>
                                                                     <td style="text-align: right" class="formItemBgStyle">
@@ -137,7 +137,7 @@
                                                                                 CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="20" ShowHeader="false"
                                                                                 Width="100%" OnPageIndexChanged="DG_PickPlanDetailList_PageIndexChanged">
                                                                                 <Columns>
-                                                                                    <%--   <asp:BoundColumn DataField="ID" HeaderText="åºå·">
+                                                                                    <%--   <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                     </asp:BoundColumn>--%>
                                                                                     <asp:TemplateColumn>
@@ -191,7 +191,7 @@
                                                                                             <%# ShareClass.StringCutByRequire(Eval("UnitName").ToString(), 190) %>
                                                                                         </ItemTemplate>
                                                                                     </asp:TemplateColumn>
-                                                                                    <asp:BoundColumn DataField="PlanNumber" HeaderText="è®¡åˆ’æ•°é‡">
+                                                                                    <asp:BoundColumn DataField="PlanNumber" HeaderText="¼Æ»®ÊýÁ¿">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="9%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:TemplateColumn>
@@ -218,12 +218,12 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: center" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,FeiKongZhuGuan%>"></asp:Label>ï¼š<asp:Label ID="LB_FeeManageName" runat="server" Text="**"></asp:Label>
+                                                                        <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,FeiKongZhuGuan%>"></asp:Label>£º<asp:Label ID="LB_FeeManageName" runat="server" Text="**"></asp:Label>
                                                                     </td>
-                                                                    <td style="text-align: center" class="formItemBgStyle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,JiHuaBianZhi%>"></asp:Label>ï¼š<asp:Label ID="LB_PlanMarkerName" runat="server" Text="**"></asp:Label>
+                                                                    <td style="text-align: center" class="formItemBgStyle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,JiHuaBianZhi%>"></asp:Label>£º<asp:Label ID="LB_PlanMarkerName" runat="server" Text="**"></asp:Label>
                                                                     </td>
                                                                     <td style="text-align: center" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,BianZhiRiQi%>"></asp:Label>ï¼š
+                                                                        <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,BianZhiRiQi%>"></asp:Label>£º
                                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                                         <asp:Label ID="LB_Year" runat="server" Text="yyyy"></asp:Label><asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,Nian%>"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;
                                                                         <asp:Label ID="LB_Month" runat="server" Text="MM"></asp:Label><asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,Yue%>"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -234,8 +234,8 @@
                                                                     <td style="text-align: center" class="formItemBgStyle" colspan="3">
                                                                         <p class="noprint">
                                                                             <input id="print" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                                                type="button" value="å…³é—­" />
-                                                                            <input id="print0" class="inpu" onclick="printpage();" type="button" value="æ‰“å°" />
+                                                                                type="button" value="Closed" />
+                                                                            <input id="print0" class="inpu" onclick="printpage();" type="button" value="´òÓ¡" />
                                                                         </p>
                                                                     </td>
                                                                 </tr>

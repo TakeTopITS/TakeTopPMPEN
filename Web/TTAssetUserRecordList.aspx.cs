@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -24,7 +24,7 @@ public partial class TTAssetUserRecordList : System.Web.UI.Page
 
         string strAssetID = Request.QueryString["ID"];
 
-        //this.Title = "èµ„äº§ç¼–å·ï¼š" + strAssetID + " ç”¨æˆ·è®°å½•ï¼";
+        //this.Title = "×Ê²ú±àºÅ£º" + strAssetID + " ÓÃ»§¼ÇÂ¼£¡";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)

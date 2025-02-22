@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsPurchaseOrderDetailViewByPurchasePlan.aspx.cs" Inherits="TTGoodsPurchaseOrderDetailViewByPurchasePlan" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsPurchaseOrderDetailViewByPurchasePlan.aspx.cs" Inherits="TTGoodsPurchaseOrderDetailViewByPurchasePlan" %>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -91,46 +91,46 @@
                             <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" GridLines="None"
                                 ShowHeader="false" Width="100%">
                                 <Columns>
-                                    <asp:TemplateColumn HeaderText="é‡‡è´­å•">
+                                    <asp:TemplateColumn HeaderText="PurchaseOrder">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                         <ItemTemplate>
                                             <a href='TTGoodsPurchaseOrderView.aspx?POID=<%# DataBinder.Eval(Container.DataItem,"POID") %>' target="_blank">
                                                 <%# DataBinder.Eval(Container.DataItem,"GPOName") %></a>
                                         </ItemTemplate>
                                     </asp:TemplateColumn>
-                                    <asp:BoundColumn DataField="GoodsCode" HeaderText="ä»£ç ">
+                                    <asp:BoundColumn DataField="GoodsCode" HeaderText="´úÂë">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="GoodsName" HeaderText="åç§°">
+                                    <asp:BoundColumn DataField="GoodsName" HeaderText="Ãû³Æ">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="ModelNumber" HeaderText="åž‹å·">
+                                    <asp:BoundColumn DataField="ModelNumber" HeaderText="ÐÍºÅ">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="Spec" HeaderText="è§„æ ¼">
+                                    <asp:BoundColumn DataField="Spec" HeaderText="¹æ¸ñ">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="16%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="Brand" HeaderText="å“ç‰Œ">
+                                    <asp:BoundColumn DataField="Brand" HeaderText="Æ·ÅÆ">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="8%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="Number" HeaderText="æ•°é‡">
+                                    <asp:BoundColumn DataField="Number" HeaderText="ÊýÁ¿">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="Unit" HeaderText="å•ä½">
+                                    <asp:BoundColumn DataField="Unit" HeaderText="µ¥Î»">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="Price" HeaderText="å•ä»·">
+                                    <asp:BoundColumn DataField="Price" HeaderText="µ¥¼Û">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                     </asp:BoundColumn>
                                     <asp:HyperLinkColumn DataNavigateUrlField="ApplicantCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                        DataTextField="ApplicantName" Target="_blank" HeaderText="ç”³è¯·äºº">
+                                        DataTextField="ApplicantName" Target="_blank" HeaderText="ÉêÇëÈË">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                     </asp:HyperLinkColumn>
                                    <%-- <asp:HyperLinkColumn DataNavigateUrlField="PurReason" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                        DataTextField="PurReason" Target="_blank" HeaderText="è´­ä¹°ç†ç”±">
+                                        DataTextField="PurReason" Target="_blank" HeaderText="¹ºÂòÀíÓÉ">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="16%" />
                                     </asp:HyperLinkColumn>--%>
-                                    <asp:BoundColumn DataField="CheckInNumber" HeaderText="å·²å…¥åº“">
+                                    <asp:BoundColumn DataField="CheckInNumber" HeaderText="ÒÑÈë¿â">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="14%" />
                                     </asp:BoundColumn>
                                 </Columns>

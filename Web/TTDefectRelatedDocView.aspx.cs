@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -38,17 +38,17 @@ public partial class TTDefectRelatedDocView : System.Web.UI.Page
             lst = defectmentBLL.GetAllDefectments(strHQL);
 
             Defectment defectment = (Defectment)lst[0];
-            //this.Title = "ç¼ºé™·ï¼š" + strDefectID + " " + defectment.DefectName + " æ–‡æ¡£åˆ—è¡¨";
+            //this.Title = "È±ÏÝ£º" + strDefectID + " " + defectment.DefectName + " ÎÄµµÁÐ±í";
 
             strHQL = "from Document as document where ";
-            strHQL += " (document.RelatedType = 'ç¼ºé™·' and document.RelatedID = " + strDefectID;
+            strHQL += " (document.RelatedType = 'Defect' and document.RelatedID = " + strDefectID;
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible = 'éƒ¨é—¨' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";
-            strHQL += " or ( document.Visible = 'å…¨ä½“'))) ";
-            strHQL += " or ((document.RelatedType = 'ä¼šè®®' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='ç¼ºé™·' and meeting.RelatedID = " + strDefectID + "))";
+            strHQL += " or (document.Visible = '²¿ÃÅ' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";
+            strHQL += " or ( document.Visible = 'È«Ìå'))) ";
+            strHQL += " or ((document.RelatedType = '»áÒé' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Defect' and meeting.RelatedID = " + strDefectID + "))";
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or ( document.Visible = 'ä¼šè®®')))";
-            strHQL += " and document.Status <> 'åˆ é™¤' ";
+            strHQL += " or ( document.Visible = '»áÒé')))";
+            strHQL += " and document.Status <> 'Deleted' ";
             strHQL += " order by document.DocID DESC";
 
             DocumentBLL documentBLL = new DocumentBLL();

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -37,7 +37,7 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
         LB_UserCode.Text = strUserCode;
         LB_UserName.Text = strUserName;
 
-        //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
         strToDoWLID = Request.QueryString["WLID"]; strToDoWLDetailID= Request.QueryString["WLStepDetailID"];
         strWLBusinessID = Request.QueryString["BusinessID"];
 
@@ -63,7 +63,7 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
             DL_Type.DataBind();
             DL_Type.Items.Insert(0, new ListItem("--Select--", ""));
 
-            ShareClass.LoadWFTemplate(strUserCode, "ç‰©æ–™é‡‡è´­", DL_TemName);
+            ShareClass.LoadWFTemplate(strUserCode, "MaterialProcurement", DL_TemName);
 
             ShareClass.LoadCurrencyType(DL_CurrencyType);
             ShareClass.LoadVendorList(DL_VendorList, strUserCode);
@@ -331,7 +331,7 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
 
             strPOID = e.Item.Cells[3].Text.Trim();
 
-            intWLNumber = GetRelatedWorkFlowNumber("ç‰©æ–™é‡‡è´­", "ç‰©æ–™", strPOID);
+            intWLNumber = GetRelatedWorkFlowNumber("MaterialProcurement", "ÎïÁÏ", strPOID);
             if (intWLNumber > 0)
             {
                 BT_NewMain.Visible = false;
@@ -347,8 +347,8 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
                 BT_SubmitApply.Enabled = true;
             }
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™é‡‡è´­", "ç‰©æ–™", strPOID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialProcurement", "ÎïÁÏ", strPOID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_NewMain.Visible = true;
@@ -414,7 +414,7 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
 
                 TB_WLName.Text = Resources.lang.GouMai  + goodsPurchaseOrder.GPOName.Trim() + Resources.lang.ShenQing;
 
-                LoadRelatedWL("ç‰©æ–™é‡‡è´­", "ç‰©æ–™", goodsPurchaseOrder.POID);
+                LoadRelatedWL("MaterialProcurement", "ÎïÁÏ", goodsPurchaseOrder.POID);
 
                 if (DL_RelatedType.SelectedValue == "Project")
                 {
@@ -555,7 +555,7 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
         goodsPurchaseOrder.ClearingForm = strClearingForm;
 
         goodsPurchaseOrder.Comment = strComment;
-        goodsPurchaseOrder.Status = "æ–°å»º";
+        goodsPurchaseOrder.Status = "New";
 
         goodsPurchaseOrder.RelatedType = DL_RelatedType.SelectedValue.Trim();
         goodsPurchaseOrder.RelatedID = int.Parse(NB_RelatedID.Amount.ToString());
@@ -667,15 +667,15 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
             goodsPurchaseOrderBLL.UpdateGoodsPurchaseOrder(goodsPurchaseOrder, int.Parse(strPOID));
             LoadGoodsPurchaseOrder(strUserCode);
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™é‡‡è´­", "ç‰©æ–™", strPOID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialProcurement", "ÎïÁÏ", strPOID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 string strCmdText = "select POID as DetailPOID, * from T_GoodsPurchaseOrder where POID = " + strPOID;
                 if (strToDoWLID == null)
                 {
-                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ç‰©æ–™é‡‡è´­", "ç‰©æ–™", strPOID);
+                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialProcurement", "ÎïÁÏ", strPOID);
                 }
 
                 if (strToDoWLID != null)
@@ -1215,7 +1215,7 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
 
             strPOID = LB_POID.Text.Trim();
 
-            int intWLNumber = GetRelatedWorkFlowNumber("ç‰©æ–™é‡‡è´­", "ç‰©æ–™", strPOID);
+            int intWLNumber = GetRelatedWorkFlowNumber("MaterialProcurement", "ÎïÁÏ", strPOID);
             if (intWLNumber > 0)
             {
                 BT_NewMain.Visible = false;
@@ -1229,8 +1229,8 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
                 BT_SubmitApply.Enabled = true;
             }
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™é‡‡è´­", "ç‰©æ–™", strPOID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialProcurement", "ÎïÁÏ", strPOID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_NewMain.Visible = true;
@@ -1290,7 +1290,7 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
 
             if (e.CommandName == "Delete")
             {
-                intWLNumber = GetRelatedWorkFlowNumber("ç‰©æ–™é‡‡è´­", "ç‰©æ–™", strPOID);
+                intWLNumber = GetRelatedWorkFlowNumber("MaterialProcurement", "ÎïÁÏ", strPOID);
                 if (intWLNumber > 0 & strToDoWLID == null)
                 {
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -1326,7 +1326,7 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
                         RefreshPurchasePlanNumber();
                     }
 
-                    //æ›´æ”¹é¡¹ç›®å…³è”ç‰©èµ„ä¸‹å•é‡
+                    //¸ü¸ÄÏîÄ¿¹ØÁªÎï×ÊÏÂµ¥Á¿
                     if (strSourceType == "GoodsPJRecord")
                     {
                         UpdatProjectRelatedItemNumber(strSourceType, intSourceID.ToString());
@@ -1337,9 +1337,9 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
                         }
                     }
 
-                    //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                    //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-                    strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™é‡‡è´­", "ç‰©æ–™", strPOID, "0");
+                    //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+                    //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+                    strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialProcurement", "ÎïÁÏ", strPOID, "0");
                     if (strToDoWLID != null | strAllowFullEdit == "YES")
                     {
                         string strCmdText;
@@ -1347,7 +1347,7 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
                         strCmdText = "select POID as DetailPOID, * from T_GoodsPurchaseOrder where POID = " + strPOID;
                         if (strToDoWLID == null)
                         {
-                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ç‰©æ–™é‡‡è´­", "ç‰©æ–™", strPOID);
+                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialProcurement", "ÎïÁÏ", strPOID);
                         }
 
                         if (strToDoWLID != null)
@@ -1398,7 +1398,7 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
         }
 
         strPOID = LB_POID.Text.Trim();
-        int intWLNumber = GetRelatedWorkFlowNumber("ç‰©æ–™é‡‡è´­", "ç‰©æ–™", strPOID);
+        int intWLNumber = GetRelatedWorkFlowNumber("MaterialProcurement", "ÎïÁÏ", strPOID);
         if (intWLNumber > 0 & strToDoWLID == null)
         {
             BT_SubmitApply.Enabled = false;
@@ -1533,7 +1533,7 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
                 NB_Amount.Amount = SumGoodsPurchaseOrderAmount(strPOID);
                 UpdateGoodsPurchaseOrderAmount(strPOID, NB_Amount.Amount);
 
-                //æ›´æ”¹é‡‡è´­è®¡åˆ’ä¸‹å•é‡
+                //¸ü¸Ä²É¹º¼Æ»®ÏÂµ¥Á¿
                 if (strSourceType == "PurchasePlan")
                 {
                     UpdatPurchasePlanNumber(strSourceType, intSourceID.ToString());
@@ -1541,7 +1541,7 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
                     RefreshPurchasePlanNumber();
                 }
 
-                //æ›´æ”¹é¡¹ç›®å…³è”ç‰©èµ„ä¸‹å•é‡
+                //¸ü¸ÄÏîÄ¿¹ØÁªÎï×ÊÏÂµ¥Á¿
                 if (strSourceType == "GoodsPJRecord")
                 {
                     UpdatProjectRelatedItemNumber(strSourceType, intSourceID.ToString());
@@ -1553,9 +1553,9 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
 
                 }
 
-                //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™é‡‡è´­", "ç‰©æ–™", strPOID, "0");
+                //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+                //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialProcurement", "ÎïÁÏ", strPOID, "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     string strCmdText;
@@ -1563,7 +1563,7 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
                     strCmdText = "select POID as DetailPOID, * from T_GoodsPurchaseOrder where POID = " + strPOID;
                     if (strToDoWLID == null)
                     {
-                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ç‰©æ–™é‡‡è´­", "ç‰©æ–™", strPOID);
+                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialProcurement", "ÎïÁÏ", strPOID);
                     }
 
                     if (strToDoWLID != null)
@@ -1711,7 +1711,7 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
                     RefreshPurchasePlanNumber();
                 }
 
-                //æ›´æ”¹é¡¹ç›®å…³è”ç‰©èµ„ä¸‹å•é‡
+                //¸ü¸ÄÏîÄ¿¹ØÁªÎï×ÊÏÂµ¥Á¿
                 if (strSourceType == "GoodsPJRecord")
                 {
                     UpdatProjectRelatedItemNumber(strSourceType, intSourceID.ToString());
@@ -1723,9 +1723,9 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
 
                 }
 
-                //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ç‰©æ–™é‡‡è´­", "ç‰©æ–™", strPOID, "0");
+                //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+                //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialProcurement", "ÎïÁÏ", strPOID, "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     string strCmdText;
@@ -1733,7 +1733,7 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
                     strCmdText = "select POID as DetailPOID, * from T_GoodsPurchaseOrder where POID = " + strPOID;
                     if (strToDoWLID == null)
                     {
-                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ç‰©æ–™é‡‡è´­", "ç‰©æ–™", strPOID);
+                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialProcurement", "ÎïÁÏ", strPOID);
                     }
 
                     if (strToDoWLID != null)
@@ -1820,27 +1820,27 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
         workFlow.CreatorCode = strCreatorCode;
         workFlow.CreatorName = strCreatorName;
         workFlow.CreateTime = DateTime.Now;
-        workFlow.RelatedType = "ç‰©æ–™";
-        workFlow.Status = "æ–°å»º";
+        workFlow.RelatedType = "ÎïÁÏ";
+        workFlow.Status = "New";
         workFlow.RelatedID = int.Parse(strPOID);
-        workFlow.DIYNextStep = "Yes"; workFlow.IsPlanMainWorkflow = "NO";
+        workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
 
         if (CB_SMS.Checked == true)
         {
-            workFlow.ReceiveSMS = "Yes";
+            workFlow.ReceiveSMS = "YES";
         }
         else
         {
-            workFlow.ReceiveSMS = "No";
+            workFlow.ReceiveSMS = "NO";
         }
 
         if (CB_Mail.Checked == true)
         {
-            workFlow.ReceiveEMail = "Yes";
+            workFlow.ReceiveEMail = "YES";
         }
         else
         {
-            workFlow.ReceiveEMail = "No";
+            workFlow.ReceiveEMail = "NO";
         }
 
         try
@@ -1849,10 +1849,10 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
 
             strWLID = ShareClass.GetMyCreatedWorkFlowID(strUserCode);
 
-            LoadRelatedWL(strWLType, "ç‰©æ–™", int.Parse(strPOID));
+            LoadRelatedWL(strWLType, "ÎïÁÏ", int.Parse(strPOID));
 
-            UpdateGoodsPurchaseStatus(strPOID, "å¤„ç†ä¸­");
-            DL_POStatus.SelectedValue = "å¤„ç†ä¸­";
+            UpdateGoodsPurchaseStatus(strPOID, "InProgress");
+            DL_POStatus.SelectedValue = "InProgress";
 
             strCmdText = "select * from T_GoodsPurchaseOrder where POID = " + strPOID;
             strXMLFile2 = Server.MapPath(strXMLFile2);
@@ -1894,7 +1894,7 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'ç‰©æ–™é‡‡è´­'";
+        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'MaterialProcurement'";
         strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC";
         WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
         lst = workFlowTemplateBLL.GetAllWorkFlowTemplates(strHQL);
@@ -2363,7 +2363,7 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
         strHQL += " Order by goodsPurchaseOrder.POID DESC";
 
 
-        //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
         if (strToDoWLID != null & strWLBusinessID != null)
         {
             strHQL = "from GoodsPurchaseOrder as goodsPurchaseOrder where goodsPurchaseOrder.POID = " + strWLBusinessID;
@@ -2557,7 +2557,7 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Constract as constract where constract.Status <> 'å½’æ¡£'";
+        strHQL = "from Constract as constract where constract.Status <> 'Archived'";
         strHQL += " and constract.ConstractCode in (select constractRelatedGoodsPurchaseOrder.ConstractCode from ConstractRelatedGoodsPurchaseOrder as constractRelatedGoodsPurchaseOrder where constractRelatedGoodsPurchaseOrder.POID = " + strPOID + ")";
         strHQL += " Order by constract.SignDate DESC";
         ConstractBLL constractBLL = new ConstractBLL();
@@ -2586,7 +2586,7 @@ public partial class TTAPPGoodsPurchaseWF : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Constract as constract where  constract.Status not in ('å½’æ¡£','åˆ é™¤') ";
+        strHQL = "from Constract as constract where  constract.Status not in ('Archived','Deleted') ";
         strHQL += " and (constract.RecorderCode = " + "'" + strUserCode + "'" + " Or constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + "))";
         strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
 

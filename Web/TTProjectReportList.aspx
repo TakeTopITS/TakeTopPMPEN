@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectReportList.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectReportList.aspx.cs"
     Inherits="TTProjectReportList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -26,7 +26,7 @@
                                 <tr>
                                     <td align="center">
                                         <strong>
-                                            <asp:Label ID="LB_FindByStatus" runat="server" Text="æŠ¥è¡¨åˆ—è¡¨"></asp:Label></strong>
+                                            <asp:Label ID="LB_FindByStatus" runat="server" Text="±¨±íÁÐ±í"></asp:Label></strong>
                                     </td>
                                 </tr>
                             </table>
@@ -45,7 +45,7 @@
                     <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                     <ItemStyle CssClass="itemStyle" />
                     <Columns>
-                        <asp:TemplateColumn HeaderText="æŠ¥è¡¨åˆ—è¡¨">
+                        <asp:TemplateColumn HeaderText="±¨±íÁÐ±í">
                             <ItemTemplate>
                                 <table>
                                     <tr>

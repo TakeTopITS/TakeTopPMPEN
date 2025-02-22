@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -34,7 +34,7 @@ public partial class TTGoodsTransferOrderView : System.Web.UI.Page
 
         strShipmentNO = Request.QueryString["ShipmentNO"];
 
-        //this.Title = "ç‰©æ–™å‡ºåº“å•";
+        //this.Title = "ÎïÁÏ³ö¿âµ¥";
 
 
          if (Page.IsPostBack != true)

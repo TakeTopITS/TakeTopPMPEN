@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DefaultWeiXinQYHSAAS.aspx.cs" Inherits="DefaultWeiXinQYHSAAS" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DefaultWeiXinQYHSAAS.aspx.cs" Inherits="DefaultWeiXinQYHSAAS" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
 <%@ Import Namespace="System.Globalization" %>
@@ -38,7 +38,7 @@
 
 
     <style type="text/css">
-        /*--------------------------------çŸ­æŒ‰é’®---------------------------*/
+        /*--------------------------------¶Ì°´Å¥---------------------------*/
         .inpuLogon {
             /* background-image: url(ImagesSkin/Logon.jpg);*/
             margin: 0px;
@@ -129,7 +129,7 @@
     <script type="text/javascript">
         window.onload = function () {
 
-            //è‡ªåŠ¨å¡«å……å¸å·å’Œå¯†ç 
+            //×Ô¶¯Ìî³äÕÊºÅºÍÃÜÂë
             var userName = getCookie("loginUserName");
             var password = getCookie("loginPassword");
 
@@ -184,7 +184,7 @@
                         <table width="100%" border="0" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td align="center">
-                                    <asp:TextBox ID="TB_UserCode" runat="server" Text="è¯·è¾“å…¥ä½ çš„ç™»å½•å¸å·(UserCode)" onFocus="javascript:this.value='';document.getElementById('LB_ErrorMsg').style.display = 'none';" ForeColor="#000000" class="dengl" Width="103%"></asp:TextBox>
+                                    <asp:TextBox ID="TB_UserCode" runat="server" Text="ÇëÊäÈëÄãµÄµÇÂ¼ÕÊºÅ(UserCode)" onFocus="javascript:this.value='';document.getElementById('LB_ErrorMsg').style.display = 'none';" ForeColor="#000000" class="dengl" Width="103%"></asp:TextBox>
 
                                 </td>
                             </tr>
@@ -244,7 +244,7 @@
                                     <table width="100%">
                                         <tr>
                                             <td align="center">
-                                                <asp:Label ID="LB_Copyright" runat="server" Text="CopyrightÂ© TakeTop Software 2006-2026 "></asp:Label>
+                                                <asp:Label ID="LB_Copyright" runat="server" Text="Copyright? TakeTop Software 2006-2026 "></asp:Label>
                                             </td>
                                         </tr>
                                         <tr>

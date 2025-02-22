@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Configuration;
@@ -33,7 +33,7 @@ public partial class TTAllCustomers : System.Web.UI.Page
         string strDepartString;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "查看所有客户", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "�鿴���пͻ�", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -93,7 +93,7 @@ public partial class TTAllCustomers : System.Web.UI.Page
         strHQL += " and customer.AreaAddress Like " + "'" + strAreaAddress + "'";
         strHQL += " and ((customer.CreatorCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + "))";
         strHQL += " or (customer.CustomerCode in (Select customerRelatedUser.CustomerCode from CustomerRelatedUser as customerRelatedUser where customerRelatedUser.UserCode = " + "'" + strUserCode + "'" + "))";
-        strHQL += " or (customer.CustomerCode in (Select contactInfor.RelatedID From ContactInfor as contactInfor Where contactInfor.RelatedType = '客户' and contactInfor.FirstName Like " + "'" + strContactPerson + "'" + ")))";
+        strHQL += " or (customer.CustomerCode in (Select contactInfor.RelatedID From ContactInfor as contactInfor Where contactInfor.RelatedType = 'Customer' and contactInfor.FirstName Like " + "'" + strContactPerson + "'" + ")))";
         strHQL += " Order by customer.CustomerCode DESC";
 
         CustomerBLL customerBLL = new CustomerBLL();
@@ -194,7 +194,7 @@ public partial class TTAllCustomers : System.Web.UI.Page
     }
 
 
-    //取得客户ID
+    //ȡ�ÿͻ�ID
     protected string getCustomerID(string strCustomerCode)
     {
         string strHQL;

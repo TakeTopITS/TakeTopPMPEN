@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWLTStepCondition.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWLTStepCondition.aspx.cs"
     Inherits="TTWLTStepConditon" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -129,12 +129,12 @@
                                     GridLines="None">
                                     <Columns>
 
-                                        <asp:ButtonColumn CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ä¿®æ”¹' /&gt;&lt;/div&gt;">
+                                        <asp:ButtonColumn CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ÐÞ¸Ä' /&gt;&lt;/div&gt;">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                         </asp:ButtonColumn>
                                         <asp:TemplateColumn HeaderText="Delete">
                                             <ItemTemplate>
-                                                <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='åˆ é™¤' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                             </ItemTemplate>
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                         </asp:TemplateColumn>
@@ -146,13 +146,13 @@
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign ="Center" Width="5%" />
                                         </asp:BoundColumn>
 
-                                        <asp:BoundColumn DataField="StepID" HeaderText="æ­¥åº">
+                                        <asp:BoundColumn DataField="StepID" HeaderText="²½Ðò">
                                             <ItemStyle CssClass="itemBorder" Width="10%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="ConDetail" HeaderText="æ¡ä»¶æè¿°">
+                                        <asp:BoundColumn DataField="ConDetail" HeaderText="Ìõ¼þÃèÊö">
                                             <ItemStyle CssClass="itemBorder" Width="50%" HorizontalAlign="Left" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="NextSortNumber" HeaderText="ä¸‹ä¸€æ­¥">
+                                        <asp:BoundColumn DataField="NextSortNumber" HeaderText="ÏÂÒ»²½">
                                             <ItemStyle CssClass="itemBorder" Width="10%" />
                                         </asp:BoundColumn>
 
@@ -279,12 +279,12 @@
                                             Width="100%">
                                             <Columns>
 
-                                                <asp:ButtonColumn CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ä¿®æ”¹' /&gt;&lt;/div&gt;">
+                                                <asp:ButtonColumn CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ÐÞ¸Ä' /&gt;&lt;/div&gt;">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                 </asp:ButtonColumn>
                                                 <asp:TemplateColumn HeaderText="Delete">
                                                     <ItemTemplate>
-                                                        <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='åˆ é™¤' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                        <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                     </ItemTemplate>
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                 </asp:TemplateColumn>
@@ -293,10 +293,10 @@
                                                     <ItemStyle CssClass="itemBorder" Width="10%" />
                                                 </asp:BoundColumn>
 
-                                                <asp:BoundColumn DataField="Expression" HeaderText="è¡¨è¾¾å¼">
+                                                <asp:BoundColumn DataField="Expression" HeaderText="±í´ïÊ½">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="60%" />
                                                 </asp:BoundColumn>
-                                                <asp:BoundColumn DataField="LogicalOperator" HeaderText="é€»è¾‘">
+                                                <asp:BoundColumn DataField="LogicalOperator" HeaderText="Âß¼­">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                 </asp:BoundColumn>
                                             </Columns>
@@ -329,13 +329,13 @@
                             <table width="90%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                 <tr>
                                     <td style="width: 10%; height: 24px; text-align: right" class="formItemBgStyle">
-                                        <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>ï¼š 
+                                        <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>£º 
                                     </td>
                                     <td style="height: 24px;" class="formItemBgStyle">
                                         <asp:Label ID="LB_ID" runat="server"></asp:Label>
                                     </td>
                                     <td style="font-size: 10pt; width: 20%; height: 24px; text-align: right" class="formItemBgStyle">
-                                        <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,BiaoDaShi%>"></asp:Label>ï¼š 
+                                        <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,BiaoDaShi%>"></asp:Label>£º 
                                     </td>
                                     <td style="width: 70%; height: 24px; text-align: left;" class="formItemBgStyle">
                                         <asp:TextBox ID="TB_Expression" runat="server" Width="500px"></asp:TextBox>

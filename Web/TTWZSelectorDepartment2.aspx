@@ -1,11 +1,11 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSelectorDepartment2.aspx.cs" Inherits="TTWZSelectorDepartment2" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSelectorDepartment2.aspx.cs" Inherits="TTWZSelectorDepartment2" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>éƒ¨é—¨è®¾ç½®</title>
+    <title>²¿ÃÅÉèÖÃ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -23,7 +23,7 @@
         });
 
 
-        //å•é€‰æ‹©æŒ‰é’®åˆ¤æ–­
+        //µ¥Ñ¡Ôñ°´Å¥ÅĞ¶Ï
         function chooseUpdate() {
             var str = "";
             $("input[name=name1]").each(function () {
@@ -33,7 +33,7 @@
             });
 
             if (str == "") {
-                alert('è¯·é€‰æ‹©è®°å½•é¡¹ï¼');
+                alert('ÇëÑ¡Ôñ¼ÇÂ¼Ïî£¡');
                 return false;
             }
             else {

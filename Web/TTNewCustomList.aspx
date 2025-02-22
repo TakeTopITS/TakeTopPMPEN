@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTNewCustomList.aspx.cs" Inherits="TTNewCustomList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTNewCustomList.aspx.cs" Inherits="TTNewCustomList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Êñ∞ÂÆ¢Êà∑ÂºÄÂèëÊ®°ÁªÑÂàóË°®</title>
+    <title>–¬øÕªßø™∑¢ƒ£◊È¡–±Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script><script type="text/javascript" src="js/allAHandler.js"></script><script type="text/javascript" language="javascript">$(function () {if (top.location != self.location) { } else { CloseWebPage(); }});</script></head>
 <body>
@@ -41,7 +41,7 @@
                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                     <tr style="font-size: 12pt;">
                                         <td align="right" class="formItemBgStyle">
-                                            <input type="button" class="inpuLong" value="Êñ∞Â¢ûÂÆ¢Êà∑Ê®°Âùó" onclick="window.location.href = 'TTNewCustomAdd.aspx'" />
+                                            <input type="button" class="inpuLong" value="–¬‘ˆøÕªßƒ£øÈ" onclick="window.location.href = 'TTNewCustomAdd.aspx'" />
                                         </td>
                                     </tr>
                                     <tr style="font-size: 12pt">
@@ -50,13 +50,13 @@
                                                 CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="5" ShowHeader="True"
                                                 Width="100%" OnItemCommand="DG_CustomerModuleList_ItemCommand" OnItemDataBound="DG_CustomerModuleList_ItemDataBound">
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="CustomModuleName" HeaderText="ÂÆ¢Êà∑Ê®°ÁªÑ">
+                                                    <asp:BoundColumn DataField="CustomModuleName" HeaderText="øÕªßƒ£◊È">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Type" HeaderText="Á±ªÂûã">
+                                                    <asp:BoundColumn DataField="Type" HeaderText="¿‡–Õ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="TemName" HeaderText="ÊµÅÁ®ãÂêçÁß∞">
+                                                    <asp:BoundColumn DataField="TemName" HeaderText="¡˜≥Ã√˚≥∆">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
                                                     <asp:TemplateColumn>

@@ -1,4 +1,4 @@
-锘縰sing System; using System.Resources;
+using System; using System.Resources;
 using System.Collections;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +16,7 @@ using ProjectMgt.BLL;
 public partial class TTPlanManagementRelatedOther : System.Web.UI.Page
 {
     string strUserCode;
-    //鍔犱笂鍏宠仈RelatedID,RelatedType,RelatedCode TODO:CAOJIAN(鏇瑰仴)2013-5-18
+    //加上关联RelatedID,RelatedType,RelatedCode TODO:CAOJIAN(曹健)2013-5-18
     string strRelatedType, strRelatedID, strRelatedCode;
 
     protected void Page_Load(object sender, EventArgs e)
@@ -27,16 +27,16 @@ public partial class TTPlanManagementRelatedOther : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         //ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","鎴戠殑璁″垝", strUserCode);
+        //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","我的计划", strUserCode);
         //if (blVisible == false)
         //{
         //    Response.Redirect("TTDisplayErrors.aspx");
         //    return;
         //}
 
-        //this.Title = "鎴戠殑璁″垝";
+        //this.Title = "我的计划";
 
-        //鍔犱笂鍏宠仈RelatedID,RelatedType,RelatedCode TODO:CAOJIAN(鏇瑰仴)2013-5-18
+        //加上关联RelatedID,RelatedType,RelatedCode TODO:CAOJIAN(曹健)2013-5-18
         strRelatedType = Request.QueryString["RelatedType"];
         if (strRelatedType == null)
         {
@@ -60,8 +60,8 @@ public partial class TTPlanManagementRelatedOther : System.Web.UI.Page
             PlanBLL planBLL = new PlanBLL();
 
             strHQL = "from Plan as plan where plan.PlanID in ";
-            strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status = '鏂板缓')";
-            strHQL += " and plan.Status not in ('鏂板缓','鍒犻櫎','褰掓。') ";
+            strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status = 'New')";
+            strHQL += " and plan.Status not in ('New','Deleted','Archived') ";
             if (!string.IsNullOrEmpty(strRelatedCode))
             {
                 strHQL += " and plan.RelatedCode = '" + strRelatedCode + "'";
@@ -74,8 +74,8 @@ public partial class TTPlanManagementRelatedOther : System.Web.UI.Page
             LB_Sql4.Text = strHQL;
 
             strHQL = "from Plan as plan where plan.PlanID in ";
-            strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status ='鎵瑰噯')";
-            strHQL += " and plan.Status not in ('鏂板缓','鍒犻櫎','褰掓。') ";
+            strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status ='Approved')";
+            strHQL += " and plan.Status not in ('New','Deleted','Archived') ";
             if (!string.IsNullOrEmpty(strRelatedCode))
             {
                 strHQL += " and plan.RelatedCode = '" + strRelatedCode + "'";
@@ -88,8 +88,8 @@ public partial class TTPlanManagementRelatedOther : System.Web.UI.Page
             LB_Sql1.Text = strHQL;
 
             strHQL = "from Plan as plan where plan.PlanID in ";
-            strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status = '瀹屾垚')";
-            strHQL += " and plan.Status not in ('鏂板缓','鍒犻櫎','褰掓。') ";
+            strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status = 'Completed')";
+            strHQL += " and plan.Status not in ('New','Deleted','Archived') ";
             if (!string.IsNullOrEmpty(strRelatedCode))
             {
                 strHQL += " and plan.RelatedCode = '" + strRelatedCode + "'";
@@ -103,7 +103,7 @@ public partial class TTPlanManagementRelatedOther : System.Web.UI.Page
 
 
             strHQL = "from Plan as plan where plan.UserCode = " + "'" + strUserCode + "'";
-            strHQL += " and plan.Status not in ('鍒犻櫎','褰掓。') ";
+            strHQL += " and plan.Status not in ('Deleted','Archived') ";
             if (!string.IsNullOrEmpty(strRelatedCode))
             {
                 strHQL += " and plan.RelatedCode = '" + strRelatedCode + "'";
@@ -186,7 +186,7 @@ public partial class TTPlanManagementRelatedOther : System.Web.UI.Page
         PlanBLL planBLL = new PlanBLL();
 
         strHQL = "from Plan as plan where plan.PlanID in ";
-        strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status = '鏂板缓')";
+        strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status = 'New')";
         if (!string.IsNullOrEmpty(strRelatedCode))
         {
             strHQL += " and plan.RelatedCode = '" + strRelatedCode + "'";
@@ -199,7 +199,7 @@ public partial class TTPlanManagementRelatedOther : System.Web.UI.Page
         LB_Sql4.Text = strHQL;
 
         strHQL = "from Plan as plan where plan.PlanID in ";
-        strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status ='鎵瑰噯')";
+        strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status ='Approved')";
         if (!string.IsNullOrEmpty(strRelatedCode))
         {
             strHQL += " and plan.RelatedCode = '" + strRelatedCode + "'";
@@ -212,7 +212,7 @@ public partial class TTPlanManagementRelatedOther : System.Web.UI.Page
         LB_Sql1.Text = strHQL;
 
         strHQL = "from Plan as plan where plan.PlanID in ";
-        strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status = '瀹屾垚')";
+        strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status = 'Completed')";
         if (!string.IsNullOrEmpty(strRelatedCode))
         {
             strHQL += " and plan.RelatedCode = '" + strRelatedCode + "'";

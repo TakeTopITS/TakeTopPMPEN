@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPMyUNSubmitPlanList.aspx.cs" Inherits="TTAPPMyUNSubmitPlanList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPMyUNSubmitPlanList.aspx.cs" Inherits="TTAPPMyUNSubmitPlanList" %>
 
 <!DOCTYPE html>
 
@@ -65,7 +65,7 @@
                                                                 <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%></td>
                                                         </tr>
                                                     </table>
-                                                     <img id="IMG_Waiting" src="Images/Processing.gif" alt="è¯·ç¨å€™ï¼Œå¤„ç†ä¸­..." style="display: none;" />
+                                                     <img id="IMG_Waiting" src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖÐ..." style="display: none;" />
                                                 </a>
                                             </td>
                                         </tr>
@@ -132,29 +132,29 @@
                                                                 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="PlanID" HeaderText="ç¼–å·">
+                                                                    <asp:BoundColumn DataField="PlanID" HeaderText="±àºÅ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
                                                                   
-                                                                    <asp:BoundColumn DataField="PlanName" HeaderText="è®¡åˆ’å">
+                                                                    <asp:BoundColumn DataField="PlanName" HeaderText="¼Æ»®Ãû">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="25%" />
                                                                     </asp:BoundColumn>
                                                                 
                                                                      <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTAPPUserInforSimple.aspx?UserCode={0}"
-                                                                        DataTextField="CreatorName" HeaderText="åˆ¶å®šè€…" >
+                                                                        DataTextField="CreatorName" HeaderText="ÖÆ¶¨Õß" >
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                     </asp:HyperLinkColumn>
-                                                                      <asp:BoundColumn DataField="PlanType" HeaderText="ç±»åž‹">
+                                                                      <asp:BoundColumn DataField="PlanType" HeaderText="ÀàÐÍ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                     </asp:BoundColumn>
-                                                                   <%-- <asp:BoundColumn DataField="StartTime" HeaderText="å¼€å§‹æ—¶é—´" DataFormatString="{0:yyyy/MM/dd}">
+                                                                   <%-- <asp:BoundColumn DataField="StartTime" HeaderText="¿ªÊ¼Ê±¼ä" DataFormatString="{0:yyyy/MM/dd}">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="EndTime" HeaderText="ç»“æŸæ—¶é—´" DataFormatString="{0:yyyy/MM/dd}">
+                                                                    <asp:BoundColumn DataField="EndTime" HeaderText="½áÊøÊ±¼ä" DataFormatString="{0:yyyy/MM/dd}">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                     </asp:BoundColumn>--%>
 
-                                                                      <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                                      <asp:TemplateColumn HeaderText="×´Ì¬">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                         </ItemTemplate>

@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +13,6 @@ public partial class TTXMLFileView : System.Web.UI.Page
 
         Response.Redirect(strXMLFileName);
 
-        //this.Title = "XMLæ–‡ä»¶ï¼š" + strXMLFileName + " å†…å®¹æ˜¾ç¤ºï¼";
+        //this.Title = "XMLÎÄ¼ş£º" + strXMLFileName + " ÄÚÈİÏÔÊ¾£¡";
     }
 }

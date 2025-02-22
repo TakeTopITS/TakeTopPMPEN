@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System;
 using System.Resources;
@@ -34,7 +34,7 @@ public partial class TTGoodsSupplyOrderView : System.Web.UI.Page
 
         strSUID = Request.QueryString["SUID"];
 
-        //this.Title = "‰æõË¥ßÂçï";
+        //this.Title = "π©ªıµ•";
 
 
         if (Page.IsPostBack != true)

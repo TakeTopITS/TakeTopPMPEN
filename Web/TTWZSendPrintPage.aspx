@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSendPrintPage.aspx.cs" Inherits="TTWZSendPrintPage" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSendPrintPage.aspx.cs" Inherits="TTWZSendPrintPage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -37,9 +37,9 @@
                                         <td>
                                             <table width="100%">
                                                 <tr>
-                                                    <td style="width:30%;"><%--åº“åˆ«--%><%# Eval("StoreRoom") %></td>
-                                                    <td style="width:40%;"><%--å‘æ–™æ–¹å¼--%><%# Eval("SendMethod") %></td>
-                                                    <td style="width:30%;"><%--è´§ä½å·--%><%# Eval("GoodsCode") %></td>
+                                                    <td style="width:30%;"><%--¿â±ð--%><%# Eval("StoreRoom") %></td>
+                                                    <td style="width:40%;"><%--·¢ÁÏ·½Ê½--%><%# Eval("SendMethod") %></td>
+                                                    <td style="width:30%;"><%--»õÎ»ºÅ--%><%# Eval("GoodsCode") %></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -48,8 +48,8 @@
                                         <td>
                                             <table width="100%">
                                                 <tr>
-                                                    <td style="width:30%;"><%--é¢†æ–™å•ä½--%><%# Eval("PickingUnit") %></td>
-                                                    <td style="width:40%;"><%--å‘æ–™æ—¥æœŸ--%><%# Eval("SendTime") %></td>
+                                                    <td style="width:30%;"><%--ÁìÁÏµ¥Î»--%><%# Eval("PickingUnit") %></td>
+                                                    <td style="width:40%;"><%--·¢ÁÏÈÕÆÚ--%><%# Eval("SendTime") %></td>
                                                     <td style="width:30%;"><%--No<%# Eval("StoreRoom") %>--%>&nbsp;</td>
                                                 </tr>
                                             </table>
@@ -64,10 +64,10 @@
                                         <td>
                                             <table width="100%">
                                                 <tr>
-                                                    <td style="width:40%;"><%--ææ–™åç§°--%><%# Eval("ObjectName") %></td>
-                                                    <td style="width:40%;"><%--è§„æ ¼åž‹å·--%><%# Eval("Model") %></td>
-                                                    <td style="width:10%;"><%--æ ‡å‡†--%><%# Eval("Criterion") %></td>
-                                                    <td style="width:10%;"><%--çº§åˆ«--%><%# Eval("Grade") %></td>
+                                                    <td style="width:40%;"><%--²ÄÁÏÃû³Æ--%><%# Eval("ObjectName") %></td>
+                                                    <td style="width:40%;"><%--¹æ¸ñÐÍºÅ--%><%# Eval("Model") %></td>
+                                                    <td style="width:10%;"><%--±ê×¼--%><%# Eval("Criterion") %></td>
+                                                    <td style="width:10%;"><%--¼¶±ð--%><%# Eval("Grade") %></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -81,16 +81,16 @@
                                         <td>
                                             <table width="100%">
                                                 <tr>
-                                                    <td style="width:10%;"><%--åº”å‘æ•°é‡--%><%# Eval("PlanNumber") %></td>
-                                                    <td style="width:10%;"><%--å®žå‘æ•°é‡--%><%# Eval("ActualNumber") %></td>
-                                                    <td style="width:10%;"><%--å•ä½--%><%# Eval("UnitName") %></td>
-                                                    <td style="width:10%;"><%--è®¡åˆ’å•ä»·--%><%# Eval("PlanPrice") %></td>
-                                                    <td style="width:10%;"><%--è®¡åˆ’é‡‘é¢--%><%# Eval("PlanMoney") %></td>
-                                                    <td style="width:10%;"><%--é”€å”®å•ä»·--%><%# Eval("SalePrice") %></td>
-                                                    <td style="width:10%;"><%--é”€å”®é‡‘é¢--%><%# Eval("SaleMoney") %></td>
-                                                    <td style="width:10%;"><%--ç®¡ç†è´¹çŽ‡--%><%# Eval("ManageRate") %></td>
-                                                    <td style="width:10%;"><%--ç®¡ç†è´¹--%><%# Eval("ManageMoney") %></td>
-                                                    <td style="width:10%;"><%--åˆè®¡é‡‘é¢--%><%# Eval("TotalMoney") %></td>
+                                                    <td style="width:10%;"><%--Ó¦·¢ÊýÁ¿--%><%# Eval("PlanNumber") %></td>
+                                                    <td style="width:10%;"><%--Êµ·¢ÊýÁ¿--%><%# Eval("ActualNumber") %></td>
+                                                    <td style="width:10%;"><%--µ¥Î»--%><%# Eval("UnitName") %></td>
+                                                    <td style="width:10%;"><%--¼Æ»®µ¥¼Û--%><%# Eval("PlanPrice") %></td>
+                                                    <td style="width:10%;"><%--¼Æ»®½ð¶î--%><%# Eval("PlanMoney") %></td>
+                                                    <td style="width:10%;"><%--ÏúÊÛµ¥¼Û--%><%# Eval("SalePrice") %></td>
+                                                    <td style="width:10%;"><%--ÏúÊÛ½ð¶î--%><%# Eval("SaleMoney") %></td>
+                                                    <td style="width:10%;"><%--¹ÜÀí·ÑÂÊ--%><%# Eval("ManageRate") %></td>
+                                                    <td style="width:10%;"><%--¹ÜÀí·Ñ--%><%# Eval("ManageMoney") %></td>
+                                                    <td style="width:10%;"><%--ºÏ¼Æ½ð¶î--%><%# Eval("TotalMoney") %></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -99,8 +99,8 @@
                                         <td>
                                             <table width="100%">
                                                 <tr>
-                                                    <td  style="width:40%;"><%--å·¥ç¨‹ç¼–ç --%><%# Eval("ProjectCode") %></td>
-                                                    <td  style="width:58%;"><%--ææ£€å·--%><%# Eval("CheckCode") %></td>
+                                                    <td  style="width:40%;"><%--¹¤³Ì±àÂë--%><%# Eval("ProjectCode") %></td>
+                                                    <td  style="width:58%;"><%--²Ä¼ìºÅ--%><%# Eval("CheckCode") %></td>
                                                     <td  style="width:1%;">&nbsp;</td>
                                                     <td  style="width:1%;">&nbsp;</td>
                                                 </tr>
@@ -111,9 +111,9 @@
                                         <td>
                                             <table width="100%">
                                                 <tr>
-                                                    <td  style="width:80%;"><%--ç”¨é€”<%# Eval("SupplierCode") %>--%>&nbsp;</td>
-                                                    <td  style="width:10%;"><%--è·Œä»·æ¯”ä¾‹<%# Eval("SupplierCode") %>--%>&nbsp;</td>
-                                                    <td  style="width:20%;"><%--è·Œä»·é‡‘é¢<%# Eval("SupplierCode") %>--%>&nbsp;</td>
+                                                    <td  style="width:80%;"><%--ÓÃÍ¾<%# Eval("SupplierCode") %>--%>&nbsp;</td>
+                                                    <td  style="width:10%;"><%--µø¼Û±ÈÀý<%# Eval("SupplierCode") %>--%>&nbsp;</td>
+                                                    <td  style="width:20%;"><%--µø¼Û½ð¶î<%# Eval("SupplierCode") %>--%>&nbsp;</td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -122,11 +122,11 @@
                                         <td>
                                             <table width="100%">
                                                 <tr>
-                                                    <td style="width:20%;"><%--é¢†æ–™ä¸»ç®¡--%><%# Eval("UpLeaderName") %></td>
-                                                    <td style="width:20%;"><%--ææ£€å‘˜--%><%# Eval("CheckerName") %></td>
-                                                    <td style="width:20%;"><%--é¢†æ–™äºº--%><%# Eval("SafekeeperName") %></td>
-                                                    <td style="width:20%;"><%--å‘æ–™--%><%# Eval("PurchaseEngineerName") %></td>
-                                                    <td style="width:20%;"><%--åˆ¶å•--%><asp:Literal ID="LT_Marker" runat="server"></asp:Literal></td>
+                                                    <td style="width:20%;"><%--ÁìÁÏÖ÷¹Ü--%><%# Eval("UpLeaderName") %></td>
+                                                    <td style="width:20%;"><%--²Ä¼ìÔ±--%><%# Eval("CheckerName") %></td>
+                                                    <td style="width:20%;"><%--ÁìÁÏÈË--%><%# Eval("SafekeeperName") %></td>
+                                                    <td style="width:20%;"><%--·¢ÁÏ--%><%# Eval("PurchaseEngineerName") %></td>
+                                                    <td style="width:20%;"><%--ÖÆµ¥--%><asp:Literal ID="LT_Marker" runat="server"></asp:Literal></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -143,8 +143,8 @@
             <div id="divOver" style="text-align: center">
                 <br />
                 <p class="noprint">
-                    <input id="print" type="button" class="btn" value="ç¡®è®¤æ‰“å°" onclick="printpage();" />
-                    <input id="print0" type="button" value="å…³é—­" onclick="CloseLayer();" class="btn" />
+                    <input id="print" type="button" class="btn" value="È·ÈÏ´òÓ¡" onclick="printpage();" />
+                    <input id="print0" type="button" value="Closed" onclick="CloseLayer();" class="btn" />
                 </p>
             </div>
         </center>

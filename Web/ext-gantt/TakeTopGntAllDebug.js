@@ -13749,9 +13749,9 @@ Ext.define("Gnt.plugin.TaskContextMenu", {
     lastHighlightedItem: null,
     createMenuItems: function () {
 
-   /*     alert(varUserIsCanUpdatePlan);*/
+   /*    JackZhongCode;*/
 
-        if (varUserIsCanUpdatePlan === "False" || varProjectStatus === "挂起" || varProjectStatus === "取消" || varProjectStatus === "验收" || varProjectStatus === "结案" || varProjectStatus === "归档" || varBusinessType === "COMPARE") {
+        if (varUserIsCanUpdatePlan === "False" || varProjectStatus === "Suspended" || varProjectStatus === "Cancel" || varProjectStatus === "Acceptance" || varProjectStatus === "CaseClosed" || varProjectStatus === "Archived" || varBusinessType === "COMPARE") {
 
             return [
 

@@ -1,9 +1,9 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTDisplayCustomErrorMessage.aspx.cs" Inherits="TTDisplayCustomErrorMessage" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTDisplayCustomErrorMessage.aspx.cs" Inherits="TTDisplayCustomErrorMessage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>é”™è¯¯æ¶ˆæ¯</title>
+    <title>´íÎóÏûÏ¢</title>
     <style type="text/css">
         <!--
         body {
@@ -32,7 +32,7 @@
         <table width="800" height="520" border="0" align="center" cellpadding="0" cellspacing="0" >
             <tr>
                 <td valign="top" class ="huizi" style="padding-top :60px;">
-                   Â·<asp:Label ID="LB_ErrorText" runat="server"></asp:Label>
+                   ¡¤<asp:Label ID="LB_ErrorText" runat="server"></asp:Label>
                 </td>
             </tr>
         </table>

@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDWelderReport.aspx.cs" Inherits="TTGDWelderReport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDWelderReport.aspx.cs" Inherits="TTGDWelderReport" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ç„Šå·¥ç™»è®°è¡¨</title>
+    <title>º¸¹¤µÇ¼Ç±í</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
@@ -92,7 +92,7 @@
                                                             </th>
                                                         </tr>
                                                         <tr>
-                                                            <th style="text-align: left" class="formItemBgStyle" colspan="9">ï¼ˆCNPC-SCCï¼‰   Totalï¼š<asp:Literal ID="LT_Count" runat="server"></asp:Literal></th>
+                                                            <th style="text-align: left" class="formItemBgStyle" colspan="9">£¨CNPC-SCC£©   Total£º<asp:Literal ID="LT_Count" runat="server"></asp:Literal></th>
                                                         </tr>
                                                         <asp:Repeater ID="rptList" runat="server">
                                                             <ItemTemplate>
@@ -136,7 +136,7 @@
                                                                         <td class="formItemBgStyle" style="text-align: right">Report Name:WelderNoReport</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td class="formItemBgStyle">ProjectNoï¼šMDI TRAIN LOT:04</td>
+                                                                        <td class="formItemBgStyle">ProjectNo£ºMDI TRAIN LOT:04</td>
                                                                         <td class="formItemBgStyle" style="text-align: right">Page 1 of 2</td>
                                                                     </tr>
                                                                     <tr>

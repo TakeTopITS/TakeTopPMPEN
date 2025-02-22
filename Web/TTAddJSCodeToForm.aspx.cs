@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 
 using System;
@@ -17,7 +17,7 @@ public partial class TTAddJSCodeToForm : System.Web.UI.Page
         string strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "æµç¨‹è¡¨å•JSä»£ç ", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "Á÷³Ì±íµ¥JS´úÂë", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -42,7 +42,7 @@ public partial class TTAddJSCodeToForm : System.Web.UI.Page
         {
             return;
         }
-        strHQL = "Select TemName From T_WorkFlowTemplate Where type = " + "'" + strWLType + "'" + " and Visible = 'YES' and Authority = 'æ‰€æœ‰'";
+        strHQL = "Select TemName From T_WorkFlowTemplate Where type = " + "'" + strWLType + "'" + " and Visible = 'YES' and Authority = 'All'";
         strHQL += " Order by SortNumber ASC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTemplate");
         DL_WFTemplate.DataSource = ds;
@@ -63,7 +63,7 @@ public partial class TTAddJSCodeToForm : System.Web.UI.Page
         strJSCode1 += @"
 jQuery.noConflict();
 
-//å–å¾—URLå‚æ•°çš„å€¼
+//È¡µÃURL²ÎÊıµÄÖµ
 function GetQueryValue(queryName) {
     var query = decodeURI(window.location.search.substring(1));
     var vars = query.split('&');
@@ -75,19 +75,19 @@ function GetQueryValue(queryName) {
         return null;
     }
 
-//ä¾›Jquery(document).readyè°ƒç”¨çš„å‡½æ•°ï¼Œå‘èµ·å·¥ä½œæµçš„é¡µé¢ä¼šå•ç‹¬è°ƒç”¨æ‰§è¡Œ
+//¹©Jquery(document).readyµ÷ÓÃµÄº¯Êı£¬·¢Æğ¹¤×÷Á÷µÄÒ³Ãæ»áµ¥¶Àµ÷ÓÃÖ´ĞĞ
 var jqueryDocumentReady = function() {
 
-    ////å–å¾—é¡µé¢ä¼ å…¥çš„å‚æ•°å€¼
+    ////È¡µÃÒ³Ãæ´«ÈëµÄ²ÎÊıÖµ
     //var strRelatedID = GetQueryValue('RelatedID');
-    //this.document.getElementById('å…ƒç´ ID').value = 111;
-    ////é€šè¿‡ä»£ç æ”¹å˜çš„æ§ä»¶å†…å®¹ï¼Œå¿…é¡»è°ƒç”¨æ­¤æ–¹æ³•æ‰èƒ½ä¿å­˜
-    // TakeTopInfoPath_OnControlChange(null, document.getElementById('å…ƒç´ ID'));
+    //this.document.getElementById('ÔªËØID').value = 111;
+    ////Í¨¹ı´úÂë¸Ä±äµÄ¿Ø¼şÄÚÈİ£¬±ØĞëµ÷ÓÃ´Ë·½·¨²ÅÄÜ±£´æ
+    // TakeTopInfoPath_OnControlChange(null, document.getElementById('ÔªËØID'));
 
 
     };
 
-//åˆå§‹åŒ–é¡µé¢ï¼Œå†™æ³•å¯ä»¥å‚è€ƒæœ¬é¡µé¡¶éƒ¨çš„ç¤ºä¾‹ï¼ˆç‚¹å‡»å¯æ‰“å¼€ç¤ºä¾‹é¡µé¢ï¼‰
+//³õÊ¼»¯Ò³Ãæ£¬Ğ´·¨¿ÉÒÔ²Î¿¼±¾Ò³¶¥²¿µÄÊ¾Àı£¨µã»÷¿É´ò¿ªÊ¾ÀıÒ³Ãæ£©
 jQuery(document).ready(jqueryDocumentReady);
 
 
@@ -96,7 +96,7 @@ jQuery(document).ready(jqueryDocumentReady);
         strJSCode2 += @"
 
 
-//è°ƒç”¨ä¸€èˆ¬å¤„ç†ç¨‹åºï¼Œä¿å­˜è¡¨å•æ•°æ®åˆ°åå°æ•°æ®åº“
+//µ÷ÓÃÒ»°ã´¦Àí³ÌĞò£¬±£´æ±íµ¥Êı¾İµ½ºóÌ¨Êı¾İ¿â
 function saveWFFormDataToDatabase(intWLID)
 {
 
@@ -147,7 +147,7 @@ function saveWFFormDataToDatabase(intWLID)
             HF_ID.Value = "0";
         }
 
-        //åˆ—å‡ºæµç¨‹æ¨¡æ¿JSä»£ç 
+        //ÁĞ³öÁ÷³ÌÄ£°åJS´úÂë
         LoadWFTemJSCodeID(strTemName);
     }
 
@@ -202,7 +202,7 @@ function saveWFFormDataToDatabase(intWLID)
                 strHQL = "Delete From T_WFTemplateRelatedJSCode Where ID = " + HF_ID.Value;
                 ShareClass.RunSqlCommand(strHQL);
 
-                //åˆ—å‡ºæµç¨‹æ¨¡æ¿JSä»£ç 
+                //ÁĞ³öÁ÷³ÌÄ£°åJS´úÂë
                 LoadWFTemJSCodeID(DL_WFTemplate.SelectedValue.Trim());
 
                 HF_ID.Value = "";
@@ -211,7 +211,7 @@ function saveWFFormDataToDatabase(intWLID)
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æç¤ºï¼Œè¯·å…ˆé€‰æ‹©è¦åˆ é™¤çš„JSCodeçš„IDå·ï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÌáÊ¾£¬ÇëÏÈÑ¡ÔñÒªÉ¾³ıµÄJSCodeµÄIDºÅ£¡')", true);
             }
         }
     }
@@ -309,7 +309,7 @@ function saveWFFormDataToDatabase(intWLID)
         }
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§å·¥ä½œæµæ¨¡æ¿ä»£ç IDå·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´ó¹¤×÷Á÷Ä£°å´úÂëIDºÅ
     public static string GetMyCreatedMaxWFTemplateRelatedJSCode(string strTemName)
     {
         string strHQL;

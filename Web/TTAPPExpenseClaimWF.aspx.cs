@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -33,7 +33,7 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
         LB_UserCode.Text = strUserCode;
         LB_UserName.Text = strUserName;
 
-        //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
         strToDoWLID = Request.QueryString["WLID"]; strToDoWLDetailID= Request.QueryString["WLStepDetailID"];
         strWLBusinessID = Request.QueryString["BusinessID"];
 
@@ -42,12 +42,12 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
         {
             DLC_RegisterDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            //å–å¾—ä¼šè®¡ç§‘ç›®åˆ—è¡¨
+            //È¡µÃ»á¼Æ¿ÆÄ¿ÁĞ±í
             ShareClass.LoadAccountForDDL(DL_Account);
             ShareClass.LoadCurrencyType(DL_CurrencyType);
 
-            //è´¹ç”¨æŠ¥é”€
-            ShareClass.LoadWFTemplate(strUserCode, "è´¹ç”¨æŠ¥é”€", DL_TemName);
+            //·ÑÓÃ±¨Ïú
+            ShareClass.LoadWFTemplate(strUserCode, "ExpenseReimbursement", DL_TemName);
 
             LoadExpenseClaimSheed(strUserCode);
         }
@@ -63,7 +63,7 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
         {
             strECID = e.Item.Cells[3].Text.Trim();
 
-            intWLNumber = LoadRelatedWL("è´¹ç”¨æŠ¥é”€", "å…¶å®ƒ", int.Parse(strECID));
+            intWLNumber = LoadRelatedWL("ExpenseReimbursement", "Other", int.Parse(strECID));
             if (intWLNumber > 0)
             {
                 BT_NewClaim.Visible = false;
@@ -79,8 +79,8 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
                 BT_SubmitApply.Enabled = true;
             }
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("è´¹ç”¨æŠ¥é”€", "å…¶å®ƒ", strECID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ExpenseReimbursement", "Other", strECID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_NewClaim.Visible = true;
@@ -136,7 +136,7 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
                 {
                     ShareClass.RunSqlCommand(strHQL);
                     LoadExpenseClaimSheed(strUserCode);
-                    LoadRelatedWL("è´¹ç”¨æŠ¥é”€", "å…¶å®ƒ", int.Parse(strECID));
+                    LoadRelatedWL("ExpenseReimbursement", "Other", int.Parse(strECID));
 
                     LoadExpenseClaimDetail(strECID);
 
@@ -187,7 +187,7 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
         ExpenseClaimBLL expenseClaimBLL = new ExpenseClaimBLL();
         ExpenseClaim expenseClaim = new ExpenseClaim();
 
-        expenseClaim.RelatedType = "å…¶å®ƒ";
+        expenseClaim.RelatedType = "Other";
         expenseClaim.RelatedID = 0;
         expenseClaim.ExpenseName = strExpenseName;
         expenseClaim.Purpose = strPurpose;
@@ -196,7 +196,7 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
         expenseClaim.ApplyTime = DateTime.Now;
         expenseClaim.ApplicantCode = strUserCode;
         expenseClaim.ApplicantName = LB_UserName.Text.Trim();
-        expenseClaim.Status = "æ–°å»º";
+        expenseClaim.Status = "New";
 
         try
         {
@@ -206,9 +206,9 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
 
             LoadExpenseClaimSheed(strUserCode);
             LoadExpenseClaimDetail(strExpenseID);
-            LoadRelatedWL("è´¹ç”¨æŠ¥é”€", "å…¶å®ƒ", int.Parse(strExpenseID));
+            LoadRelatedWL("ExpenseReimbursement", "Other", int.Parse(strExpenseID));
 
-            LB_Status.Text = "æ–°å»º";
+            LB_Status.Text = "New";
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
         }
@@ -254,15 +254,15 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
             expenseClaimBLL.UpdateExpenseClaim(expenseClaim, int.Parse(strECID));
             LoadExpenseClaimSheed(strUserCode);
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("è´¹ç”¨æŠ¥é”€", "å…¶å®ƒ", strECID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ExpenseReimbursement", "Other", strECID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 string strCmdText = "select ECID as DetailECID, * from T_ExpenseClaim where ECID = " + strECID;
                 if (strToDoWLID == null)
                 {
-                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("è´¹ç”¨æŠ¥é”€", "å…¶å®ƒ", strECID);
+                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ExpenseReimbursement", "Other", strECID);
                 }
 
                 if (strToDoWLID != null)
@@ -318,47 +318,47 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
         expenseClaim.ExpenseName = strExpenseName;
         expenseClaim.Purpose = strPurpose;
         expenseClaim.Amount = deAmount;
-        expenseClaim.Status = "å¤„ç†ä¸­";
+        expenseClaim.Status = "InProgress";
 
         try
         {
             expenseClaimBLL.UpdateExpenseClaim(expenseClaim, int.Parse(strECID));
 
-            strXMLFileName = "è´¹ç”¨æŠ¥é”€" + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xml";
+            strXMLFileName = "ExpenseReimbursement" + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xml";
             strXMLFile2 = "Doc\\" + "XML" + "\\" + strXMLFileName;
 
             WorkFlowBLL workFlowBLL = new WorkFlowBLL();
             WorkFlow workFlow = new WorkFlow();
 
             workFlow.WLName = strExpenseName;
-            workFlow.WLType = "è´¹ç”¨æŠ¥é”€";
-            workFlow.Status = "æ–°å»º";
+            workFlow.WLType = "ExpenseReimbursement";
+            workFlow.Status = "New";
             workFlow.TemName = DL_TemName.SelectedValue.Trim();
             workFlow.CreateTime = DateTime.Now;
             workFlow.CreatorCode = strUserCode;
             workFlow.CreatorName = ShareClass.GetUserName(strUserCode);
             workFlow.Description = expenseClaim.Purpose;
             workFlow.XMLFile = strXMLFile2;
-            workFlow.RelatedType = "å…¶å®ƒ";
+            workFlow.RelatedType = "Other";
             workFlow.RelatedID = expenseClaim.ECID;
-            workFlow.DIYNextStep = "Yes"; workFlow.IsPlanMainWorkflow = "NO";
+            workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
 
             if (CB_SMS.Checked == true)
             {
-                workFlow.ReceiveSMS = "Yes";
+                workFlow.ReceiveSMS = "YES";
             }
             else
             {
-                workFlow.ReceiveSMS = "No";
+                workFlow.ReceiveSMS = "NO";
             }
 
             if (CB_Mail.Checked == true)
             {
-                workFlow.ReceiveEMail = "Yes";
+                workFlow.ReceiveEMail = "YES";
             }
             else
             {
-                workFlow.ReceiveEMail = "No";
+                workFlow.ReceiveEMail = "NO";
             }
 
             try
@@ -372,9 +372,9 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
                 strXMLFile2 = Server.MapPath(strXMLFile2);
                 xmlProcess.DbToXML(strCmdText, "T_ExpenseClaim", strXMLFile2);
 
-                LoadRelatedWL("è´¹ç”¨æŠ¥é”€", "å…¶å®ƒ", int.Parse(strECID));
+                LoadRelatedWL("ExpenseReimbursement", "Other", int.Parse(strECID));
 
-                LB_Status.Text = "å¤„ç†ä¸­";
+                LB_Status.Text = "InProgress";
 
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFYBXGZLSCCG + "')", true);
             }
@@ -418,7 +418,7 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
             string strStatus = LB_Status.Text;
             string strECID = LB_ECID.Text.Trim();
 
-            intWLNumber = LoadRelatedWL("è´¹ç”¨æŠ¥é”€", "å…¶å®ƒ", int.Parse(strECID));
+            intWLNumber = LoadRelatedWL("ExpenseReimbursement", "Other", int.Parse(strECID));
             if (intWLNumber > 0)
             {
                 BT_New.Visible = false;
@@ -430,8 +430,8 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
                 BT_SubmitApply.Enabled = true;
             }
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("è´¹ç”¨æŠ¥é”€", "å…¶å®ƒ", strECID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ExpenseReimbursement", "Other", strECID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_NewClaim.Visible = true;
@@ -490,9 +490,9 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
                     NB_ClaimAmount.Amount = deAmount;
                     UPdateExpenseClaimAmount(strECID, deAmount);
 
-                    //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-                    //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-                    strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("è´¹ç”¨æŠ¥é”€", "å…¶å®ƒ", strECID, "0");
+                    //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+                    //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+                    strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ExpenseReimbursement", "Other", strECID, "0");
                     if (strToDoWLID != null | strAllowFullEdit == "YES")
                     {
                         string strCmdText;
@@ -500,7 +500,7 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
                         strCmdText = "select ECID as DetailECID, * from T_ExpenseClaim where ECID = " + strECID;
                         if (strToDoWLID == null)
                         {
-                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("è´¹ç”¨æŠ¥é”€", "å…¶å®ƒ", strECID);
+                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ExpenseReimbursement", "Other", strECID);
                         }
 
                         if (strToDoWLID != null)
@@ -547,7 +547,7 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
         }
 
         strECID = LB_ECID.Text.Trim();
-        int intWLNumber = LoadRelatedWL("è´¹ç”¨æŠ¥é”€", "å…¶å®ƒ", int.Parse(strECID));
+        int intWLNumber = LoadRelatedWL("ExpenseReimbursement", "Other", int.Parse(strECID));
         if (intWLNumber > 0)
         {
             BT_SubmitApply.Enabled = false;
@@ -585,8 +585,8 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
         string strAccountName = TB_Account.Text.Trim();
         deAmount = NB_Amount.Amount;
 
-        //å­˜åœ¨éƒ¨é—¨é¢„ç®—çš„è¯ï¼Œåˆ¤æ–­é¢„ç®—æ˜¯å¦è¶³å¤Ÿ
-        deBalanceAmount = ShareClass.GetBMBaseDataMoneyNum(strDepartCode, strAccountName, DateTime.Now.Year, DateTime.Now.Month, "åŸºç¡€") - deAmount;
+        //´æÔÚ²¿ÃÅÔ¤ËãµÄ»°£¬ÅĞ¶ÏÔ¤ËãÊÇ·ñ×ã¹»
+        deBalanceAmount = ShareClass.GetBMBaseDataMoneyNum(strDepartCode, strAccountName, DateTime.Now.Year, DateTime.Now.Month, "Base") - deAmount;
         if (ShareClass.IsBMBaseDataExits("", strDepartCode, strAccountName, DateTime.Now.Year, DateTime.Now.Month, strUserCode))
         {
             if (deBalanceAmount < 0)
@@ -607,7 +607,7 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
         expenseClaimDetail.AccountCode = string.IsNullOrEmpty(lbl_AccountCode.Text) ? "" : lbl_AccountCode.Text.Trim();
         expenseClaimDetail.Account = TB_Account.Text.Trim();
         expenseClaimDetail.Description = TB_Description.Text.Trim();
-        expenseClaimDetail.RelatedType = "å…¶å®ƒ";
+        expenseClaimDetail.RelatedType = "Other";
         expenseClaimDetail.RelatedID = int.Parse(strECID);
         expenseClaimDetail.Amount = NB_Amount.Amount;
         expenseClaimDetail.UserCode = LB_UserCode.Text.Trim();
@@ -626,9 +626,9 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
 
             LB_DetailID.Text = strExpenseID;
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("è´¹ç”¨æŠ¥é”€", "å…¶å®ƒ", strECID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ExpenseReimbursement", "Other", strECID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 string strCmdText;
@@ -636,7 +636,7 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
                 strCmdText = "select ECID as DetailECID, * from T_ExpenseClaim where ECID = " + strECID;
                 if (strToDoWLID == null)
                 {
-                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("è´¹ç”¨æŠ¥é”€", "å…¶å®ƒ", strECID);
+                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ExpenseReimbursement", "Other", strECID);
                 }
 
                 if (strToDoWLID != null)
@@ -669,8 +669,8 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
         string strAccountName = TB_Account.Text.Trim();
         deAmount = NB_Amount.Amount;
 
-        //å­˜åœ¨éƒ¨é—¨é¢„ç®—çš„è¯ï¼Œåˆ¤æ–­é¢„ç®—æ˜¯å¦è¶³å¤Ÿ
-        deBalanceAmount = ShareClass.GetBMBaseDataMoneyNum(strDepartCode, strAccountName, DateTime.Now.Year, DateTime.Now.Month, "åŸºç¡€") - deAmount;
+        //´æÔÚ²¿ÃÅÔ¤ËãµÄ»°£¬ÅĞ¶ÏÔ¤ËãÊÇ·ñ×ã¹»
+        deBalanceAmount = ShareClass.GetBMBaseDataMoneyNum(strDepartCode, strAccountName, DateTime.Now.Year, DateTime.Now.Month, "Base") - deAmount;
         if (ShareClass.IsBMBaseDataExits("", strDepartCode, strAccountName, DateTime.Now.Year, DateTime.Now.Month, strUserCode))
         {
             if (deBalanceAmount < 0)
@@ -703,9 +703,9 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
             NB_ClaimAmount.Amount = deTotalAmount;
             UPdateExpenseClaimAmount(strECID, deTotalAmount);
 
-            //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
-            //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("è´¹ç”¨æŠ¥é”€", "å…¶å®ƒ", strECID, "0");
+            //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
+            //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ExpenseReimbursement", "Other", strECID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 string strCmdText;
@@ -713,7 +713,7 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
                 strCmdText = "select ECID as DetailECID, * from T_ExpenseClaim where ECID = " + strECID;
                 if (strToDoWLID == null)
                 {
-                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("è´¹ç”¨æŠ¥é”€", "å…¶å®ƒ", strECID);
+                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ExpenseReimbursement", "Other", strECID);
                 }
 
                 if (strToDoWLID != null)
@@ -744,7 +744,7 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'è´¹ç”¨æŠ¥é”€'";
+        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'ExpenseReimbursement'";
         strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC";
         WorkFlowBLL workFlowBLL = new WorkFlowBLL();
         lst = workFlowBLL.GetAllWorkFlows(strHQL);
@@ -783,9 +783,9 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from ExpenseClaim as expenseClaim where expenseClaim.RelatedType='å…¶å®ƒ'  and expenseClaim.ApplicantCode=" + "'" + strApplicantCode + "'" + " Order by expenseClaim.ECID DESC";
+        strHQL = "from ExpenseClaim as expenseClaim where expenseClaim.RelatedType='Other'  and expenseClaim.ApplicantCode=" + "'" + strApplicantCode + "'" + " Order by expenseClaim.ECID DESC";
 
-        //ä»æµç¨‹ä¸­æ‰“å¼€çš„ä¸šåŠ¡å•
+        //´ÓÁ÷³ÌÖĞ´ò¿ªµÄÒµÎñµ¥
         if (strToDoWLID != null & strWLBusinessID != null)
         {
             strHQL = "from ExpenseClaim as expenseClaim where expenseClaim.ECID = " + strWLBusinessID;
@@ -819,7 +819,7 @@ public partial class TTAPPExpenseClaimWF : System.Web.UI.Page
 
     protected int GetExpenseClaimRecordCount(string strExpenseID)
     {
-        string strHQL = "from ExpenseClaimDetail as expenseClaimDetail where expenseClaimDetail.RelatedType='é¡¹ç›®' and expenseClaimDetail.RelatedExpenseID = " + strExpenseID;
+        string strHQL = "from ExpenseClaimDetail as expenseClaimDetail where expenseClaimDetail.RelatedType='Project' and expenseClaimDetail.RelatedExpenseID = " + strExpenseID;
         ExpenseClaimDetailBLL expenseClaimDetailBLL = new ExpenseClaimDetailBLL();
         IList lst = expenseClaimDetailBLL.GetAllExpenseClaimDetails(strHQL);
 

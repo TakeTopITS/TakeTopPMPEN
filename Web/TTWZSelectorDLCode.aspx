@@ -1,16 +1,16 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSelectorDLCode.aspx.cs" Inherits="TTWZSelectorDLCode" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSelectorDLCode.aspx.cs" Inherits="TTWZSelectorDLCode" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Â§ßÁ±ªÂàóË°®</title>
+    <title>¥Û¿‡¡–±Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js" type="text/javascript"></script>
 
     <script type="text/jscript" language="javascript">
-        //Â§çÈÄâÊ°ÜÂÖ®ÈÄâ
+        //∏¥—°øÚ»´—°
         function ChooseAll(item) {
 
             $("input[name=dlCode]").each(function () {
@@ -22,17 +22,17 @@
             });
         }
 
-        //ÂçïÈÄâÊã©ÊåâÈíÆÂà§Êñ≠
+        //µ•—°‘Ò∞¥≈•≈–∂œ
         function chooseUpdate() {
             var str = "";
                 $("input[name=dlCode]").each(function () {
                 if ($(this).attr("checked")) {
-                    str = str + $(this).attr("id") + ","; // Êï¥‰∏™‰ª•,ÈöîÂºÄ
+                    str = str + $(this).attr("id") + ","; // ’˚∏ˆ“‘,∏Ùø™
                 }
             });
 
             if (str == "") {
-                alert('ËØ∑ÈÄâÊã©ËÆ∞ÂΩïÈ°πÔºÅ');
+                alert('«Î—°‘Òº«¬ºœÓ£°');
                 return false;
             }
             else {
@@ -55,17 +55,17 @@
 
         }
 
-        ////Â§öÈÄâÊã©ÊåâÈíÆÂà§Êñ≠
+        ////∂‡—°‘Ò∞¥≈•≈–∂œ
         //function chooseUpdate() {
         //    var str = "";
 
         //    $("input[name=dlCode]").each(function () {
         //        if ($(this).attr("checked")) {
-        //            str = str + $(this).attr("id") + ","; // Êï¥‰∏™‰ª•,ÈöîÂºÄ
+        //            str = str + $(this).attr("id") + ","; // ’˚∏ˆ“‘,∏Ùø™
         //        }
         //    });
         //    if (str == "") {
-        //        alert('ËØ∑ÈÄâÊã©ËÆ∞ÂΩïÈ°πÔºÅ');
+        //        alert('«Î—°‘Òº«¬ºœÓ£°');
         //        return false;
         //    }
         //    else {
@@ -159,10 +159,10 @@
                                                                         <input id='<%#Eval("DLCode") %>' type="checkbox" name="dlCode" />
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="DLCode" HeaderText="Â§ßÁ±ª‰ª£Á†Å">
+                                                                <asp:BoundColumn DataField="DLCode" HeaderText="¥Û¿‡¥˙¬Î">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
-                                                                <%--<asp:BoundColumn DataField="DLName" HeaderText="Â§ßÁ±ªÂêçÁß∞">
+                                                                <%--<asp:BoundColumn DataField="DLName" HeaderText="¥Û¿‡√˚≥∆">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                                 </asp:BoundColumn>--%>
                                                                 <asp:TemplateColumn>
@@ -174,7 +174,7 @@
                                                                         <%# ShareClass.StringCutByRequire(Eval("DLName").ToString(), 30) %>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <%--<asp:BoundColumn DataField="DLDesc" HeaderText="Â§ßÁ±ªËØ¥Êòé">
+                                                                <%--<asp:BoundColumn DataField="DLDesc" HeaderText="¥Û¿‡Àµ√˜">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="56%" />
                                                                 </asp:BoundColumn>--%>
                                                                 <asp:TemplateColumn>
@@ -198,10 +198,10 @@
                                                                             CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="10" ShowHeader="false"
                                                                             Width="100%">
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ZLCode" HeaderText="‰∏≠Á±ª‰ª£Á†Å">
+                                                                                <asp:BoundColumn DataField="ZLCode" HeaderText="÷–¿‡¥˙¬Î">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <%--<asp:BoundColumn DataField="ZLName" HeaderText="‰∏≠Á±ªÂêçÁß∞">
+                                                                                <%--<asp:BoundColumn DataField="ZLName" HeaderText="÷–¿‡√˚≥∆">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>--%>
                                                                                 <asp:TemplateColumn>
@@ -213,7 +213,7 @@
                                                                                         <%# ShareClass.StringCutByRequire(Eval("ZLName").ToString(), 30) %>
                                                                                     </ItemTemplate>
                                                                                 </asp:TemplateColumn>
-                                                                                <%--<asp:BoundColumn DataField="ZLDesc" HeaderText="‰∏≠Á±ªËØ¥Êòé">
+                                                                                <%--<asp:BoundColumn DataField="ZLDesc" HeaderText="÷–¿‡Àµ√˜">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>--%>
                                                                                 <asp:TemplateColumn>
@@ -251,10 +251,10 @@
                                             <tr>
                                                 <td class="formItemBgStyle">
                                                     <div style="text-align: center">
-                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="Á°ÆÂÆö" />
+                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="»∑∂®" />
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                            type="button" value="ÂÖ≥Èó≠" />
+                                                            type="button" value="Closed" />
                                                     </div>
                                                 </td>
                                             </tr>

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -34,10 +34,10 @@ public partial class MailDesktop : System.Web.UI.Page
     {
         string strUserCode = Session["UserCode"].ToString();
 
-        ///è·å–æ•°æ®
+        ///»ñÈ¡Êı¾İ
 		IFolder folder = new Folder();
         NpgsqlDataReader dr = folder.GetFolders(strUserCode);
-        ///ç»‘å®šæ•°æ®
+        ///°ó¶¨Êı¾İ
         FolderView.DataSource = dr;
         FolderView.DataBind();
         dr.Close();
@@ -53,16 +53,16 @@ public partial class MailDesktop : System.Web.UI.Page
         if (e.CommandName == "delete")
         {
             try
-            {   ///åˆ é™¤æ•°æ®
+            {   ///É¾³ıÊı¾İ
 				IFolder folder = new Folder();
                 folder.DeleteFolder(Int32.Parse(e.CommandArgument.ToString()));
 
-                ///é‡æ–°ç»‘å®šæ§ä»¶çš„æ•°æ®				
+                ///ÖØĞÂ°ó¶¨¿Ø¼şµÄÊı¾İ				
                 BindFolderData();
-                Response.Write("<script>alert('" + "åˆ é™¤æ•°æ®æˆåŠŸï¼Œè¯·å¦¥å–„ä¿ç®¡å¥½ä½ çš„æ•°æ®ï¼" + "');</script>");
+                Response.Write("<script>alert('" + "É¾³ıÊı¾İ³É¹¦£¬ÇëÍ×ÉÆ±£¹ÜºÃÄãµÄÊı¾İ£¡" + "');</script>");
             }
             catch (Exception ex)
-            {   ///è·³è½¬åˆ°å¼‚å¸¸é”™è¯¯å¤„ç†é¡µé¢
+            {   ///Ìø×ªµ½Òì³£´íÎó´¦ÀíÒ³Ãæ
 				Response.Redirect("TTErrorPage.aspx?ErrorMsg=" + ex.Message.Replace("<br>", "").Replace("\n", "")
                     + "&ErrorUrl=" + Request.Url.ToString().Replace("<br>", "").Replace("\n", ""));
             }
@@ -77,7 +77,7 @@ public partial class MailDesktop : System.Web.UI.Page
         ImageButton deleteBtn = (ImageButton)e.Row.FindControl("DeleteBtn");
         if (deleteBtn != null)
         {
-            deleteBtn.Attributes.Add("onclick", "return confirm('ä½ ç¡®å®šè¦åˆ é™¤æ‰€é€‰æ‹©çš„æ•°æ®é¡¹å—ï¼Ÿ');");
+            deleteBtn.Attributes.Add("onclick", "return confirm('ÄãÈ·¶¨ÒªÉ¾³ıËùÑ¡ÔñµÄÊı¾İÏîÂğ£¿');");
         }
     }
 }

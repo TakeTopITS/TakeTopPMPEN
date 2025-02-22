@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections;
 using System.Linq;
 using System.Web;
@@ -31,7 +31,7 @@ public partial class TTRCJProjectSummaryPerformance : System.Web.UI.Page
             }
             catch (Exception exp)
             {
-                lb_showMessage.Text = "é”™è¯¯æç¤ºï¼šæ“ä½œå‡ºç°å¼‚å¸¸ï¼š " + exp.Message;
+                lb_showMessage.Text = "´íÎóÌáÊ¾£º²Ù×÷³öÏÖÒì³££º " + exp.Message;
             }
         }
     }
@@ -60,7 +60,7 @@ public partial class TTRCJProjectSummaryPerformance : System.Web.UI.Page
         }
         catch (Exception exp)
         {
-            lb_showMessage.Text = "é”™è¯¯æç¤ºï¼šæ“ä½œå‡ºç°å¼‚å¸¸ï¼š " + exp.Message;
+            lb_showMessage.Text = "´íÎóÌáÊ¾£º²Ù×÷³öÏÖÒì³££º " + exp.Message;
         }
     }
 
@@ -72,9 +72,9 @@ public partial class TTRCJProjectSummaryPerformance : System.Web.UI.Page
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-            //é¼ æ ‡ç»è¿‡æ—¶ï¼Œè¡ŒèƒŒæ™¯è‰²å˜ 
+            //Êó±ê¾­¹ıÊ±£¬ĞĞ±³¾°É«±ä 
             e.Row.Attributes.Add("onmouseover", "this.style.backgroundColor='#A9A9A9'");
-            //é¼ æ ‡ç§»å‡ºæ—¶ï¼Œè¡ŒèƒŒæ™¯è‰²å˜ 
+            //Êó±êÒÆ³öÊ±£¬ĞĞ±³¾°É«±ä 
             e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor='#FFFFFF'");
         }
     }
@@ -86,7 +86,7 @@ public partial class TTRCJProjectSummaryPerformance : System.Web.UI.Page
         {
             try
             {
-                //é€‰æ‹©è¡Œè¿›è¡Œåˆ·æ–°
+                //Ñ¡ÔñĞĞ½øĞĞË¢ĞÂ
                 StringBuilder sb = new StringBuilder("exec Pro_TotalCostPerformance ");
                 sb.Append(ProjectId.ToString());
                 sb.Append(",");
@@ -103,7 +103,7 @@ public partial class TTRCJProjectSummaryPerformance : System.Web.UI.Page
             catch (Exception exp)
             {
                 lb_showMessage.ForeColor = System.Drawing.Color.Red;
-                lb_showMessage.Text = "æ¶ˆæ¯æç¤ºï¼š" + exp.Message;
+                lb_showMessage.Text = "ÏûÏ¢ÌáÊ¾£º" + exp.Message;
             }
         }
     }

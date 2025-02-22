@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserAttendanceReport.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserAttendanceReport.aspx.cs"
     Inherits="TTUserAttendanceReport" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -73,8 +73,8 @@
                                             </td>
                                             <td align="left">
                                                 <asp:DropDownList ID="DL_DisplayType" runat="server">
-                                                    <asp:ListItem Value="æ˜¾ç¤ºå¼‚å¸¸" Text="<%$ Resources:lang,XianShiYiChang%>" />
-                                                    <asp:ListItem Value="æ˜¾ç¤ºå…¨éƒ¨" Text="<%$ Resources:lang,XianShiQuanBu%>" />
+                                                    <asp:ListItem Value="DisplayAbnormal" Text="<%$ Resources:lang,XianShiYiChang%>" />
+                                                    <asp:ListItem Value="DisplayAll" Text="<%$ Resources:lang,XianShiQuanBu%>" />
                                                 </asp:DropDownList>
                                             </td>
                                             <td>
@@ -92,7 +92,7 @@
                                                     backgroundcssclass="modalBackground" y="150">
                                                 </cc1:modalpopupextender>
                                                 <asp:Label ID="LB_DepartName" runat="server"></asp:Label>
-                                                <asp:CheckBox ID="CB_IncludeChildDepartment" Text="åŒ…å«å­éƒ¨é—¨" runat="server" Checked="true" />
+                                                <asp:CheckBox ID="CB_IncludeChildDepartment" Text="°üº¬×Ó²¿ÃÅ" runat="server" Checked="true" />
                                             </td>
                                             <td style="text-align: right;">
                                                 <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,YuanGongMingChen%>"></asp:Label>
@@ -108,7 +108,7 @@
                                                     <tr>
                                                         <td align="left" style="padding-top: 4px;">
                                                             <a href="#" onclick="preview1()">
-                                                                <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" /></a></td>
+                                                                <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" /></a></td>
                                                         <td>
                                                             <asp:Button ID="BT_ExportToExcel" runat="server" CssClass="inpuLong" OnClick="BT_ExportToExcel_Click" Text="<%$ Resources:lang,DaoChuDaoExcel%>" />
                                                         </td>
@@ -116,7 +116,7 @@
                                                 </table>
                                             </td>
                                             <td align="left" style="padding-top: 4px; display: none;">
-                                                <asp:Button ID="BT_NewReport" CssClass="inpu" runat="server" Text="æ–°ç‰ˆ" OnClick="BT_NewReport_Click" />
+                                                <asp:Button ID="BT_NewReport" CssClass="inpu" runat="server" Text="ÐÂ°æ" OnClick="BT_NewReport_Click" />
                                             </td>
                                         </tr>
                                     </table>
@@ -225,18 +225,18 @@
 
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="UserCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                            DataTextField="UserName" HeaderText="å§“å" Target="_blank">
+                                                            DataTextField="UserName" HeaderText="ÐÕÃû" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:HyperLinkColumn>
-                                                        <asp:BoundColumn DataField="AttendanceDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="è€ƒå‹¤æ—¥æœŸ">
+                                                        <asp:BoundColumn DataField="AttendanceDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="¿¼ÇÚÈÕÆÚ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                         </asp:BoundColumn>
 
-                                                        <asp:TemplateColumn HeaderText="ä¸Šåˆä¸Šç­æ—¶é—´">
+                                                        <asp:TemplateColumn HeaderText="MorningWorkStartTime">
                                                             <ItemTemplate>
                                                                 <%# Eval("MCheckIn").ToString().Trim () %>
                                                                 <br />
@@ -251,7 +251,7 @@
                                                         </asp:TemplateColumn>
 
 
-                                                        <asp:TemplateColumn HeaderText="ä¸Šåˆä¸‹ç­æ—¶é—´">
+                                                        <asp:TemplateColumn HeaderText="MorningWorkEndTime">
                                                             <ItemTemplate>
                                                                 <%# Eval("MCheckOut").ToString().Trim () %>
                                                                 <br />
@@ -267,7 +267,7 @@
                                                         </asp:TemplateColumn>
 
 
-                                                        <asp:TemplateColumn HeaderText="ä¸‹åˆä¸Šç­æ—¶é—´">
+                                                        <asp:TemplateColumn HeaderText="AfternoonWorkStartTime">
                                                             <ItemTemplate>
                                                                 <%# Eval("ACheckIn").ToString().Trim () %>
                                                                 <br />
@@ -281,7 +281,7 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:TemplateColumn>
 
-                                                        <asp:TemplateColumn HeaderText="ä¸‹åˆä¸‹ç­æ—¶é—´">
+                                                        <asp:TemplateColumn HeaderText="AfternoonWorkEndTime">
                                                             <ItemTemplate>
                                                                 <%# Eval("ACheckOut").ToString().Trim () %>
                                                                 <br />
@@ -295,7 +295,7 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:TemplateColumn>
 
-                                                        <asp:TemplateColumn HeaderText="æ™šä¸Šä¸Šç­æ—¶é—´">
+                                                        <asp:TemplateColumn HeaderText="ÍíÉÏÉÏ°àÊ±¼ä">
                                                             <ItemTemplate>
                                                                 <%# Eval("NCheckIn").ToString().Trim () %>
                                                                 <br />
@@ -309,7 +309,7 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:TemplateColumn>
 
-                                                        <asp:TemplateColumn HeaderText="æ™šä¸Šä¸‹ç­æ—¶é—´">
+                                                        <asp:TemplateColumn HeaderText="ÍíÉÏÏÂ°àÊ±¼ä">
                                                             <ItemTemplate>
                                                                 <%# Eval("NCheckOut").ToString().Trim () %>
                                                                 <br />
@@ -323,7 +323,7 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:TemplateColumn>
 
-                                                        <asp:TemplateColumn HeaderText="åˆå¤œä¸Šç­æ—¶é—´">
+                                                        <asp:TemplateColumn HeaderText="MidnightWorkStartTime">
                                                             <ItemTemplate>
                                                                 <%# Eval("OCheckIn").ToString().Trim () %>
                                                                 <br />
@@ -337,7 +337,7 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:TemplateColumn>
 
-                                                        <asp:TemplateColumn HeaderText="åˆå¤œä¸Šç­æ—¶é—´">
+                                                        <asp:TemplateColumn HeaderText="MidnightWorkStartTime">
                                                             <ItemTemplate>
                                                                 <%# Eval("OCheckOut").ToString().Trim () %>
                                                                 <br />
@@ -351,13 +351,13 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:TemplateColumn>
 
-                                                        <asp:BoundColumn DataField="LargestDistance" HeaderText="å…è®¸æœ€å¤§è·ç¦»">
+                                                        <asp:BoundColumn DataField="LargestDistance" HeaderText="ÔÊÐí×î´ó¾àÀë">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="LateMinute" HeaderText="è¿Ÿåˆ°åˆ†é’Ÿ">
+                                                        <asp:BoundColumn DataField="LateMinute" HeaderText="³Ùµ½·ÖÖÓ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="EarlyMinute" HeaderText="æ—©é€€åˆ†é’Ÿ">
+                                                        <asp:BoundColumn DataField="EarlyMinute" HeaderText="ÔçÍË·ÖÖÓ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
                                                         <asp:TemplateColumn>
@@ -375,7 +375,7 @@
                                         </tr>
                                         <tr>
                                             <td style="width: 100%; text-align: Center;">
-                                                <%--  <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,Di%>"></asp:Label>ï¼š<asp:Label ID="LB_PageIndex" runat="server"></asp:Label>
+                                                <%--  <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,Di%>"></asp:Label>£º<asp:Label ID="LB_PageIndex" runat="server"></asp:Label>
                                                 &nbsp;<asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,YeGong%>"></asp:Label>
                                                 <asp:Label ID="LB_TotalPageNumber" runat="server"></asp:Label>
                                                 &nbsp;<asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,Ye%>"></asp:Label>--%>

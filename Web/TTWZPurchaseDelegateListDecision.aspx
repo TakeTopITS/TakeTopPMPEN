@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPurchaseDelegateListDecision.aspx.cs" Inherits="TTWZPurchaseDelegateListDecision" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPurchaseDelegateListDecision.aspx.cs" Inherits="TTWZPurchaseDelegateListDecision" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>é‡‡è´­æ–‡ä»¶-é‡‡è´­å†³ç­–</title>
+    <title>²É¹ºÎÄ¼þ-²É¹º¾ö²ß</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -62,29 +62,29 @@
                                         </tr>
                                         <tr>
                                             <td class="formItemBgStyle">
-                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,BiaoDuanXuanZe%>"></asp:Label>ï¼š
-                                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,BiaoDuanYi%>"></asp:Label>ï¼š<asp:TextBox ID="TXT_SupplierCode1" runat="server" Width="50"></asp:TextBox><asp:Button ID="Button2" runat="server" Text="<%$ Resources:lang,XuanZe%>" CssClass="inpu" />&nbsp;
-                                                <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,BiaoDuanEr%>"></asp:Label>ï¼š<asp:TextBox ID="TXT_SupplierCode2" runat="server" Width="50"></asp:TextBox><asp:Button ID="Button3" runat="server" Text="<%$ Resources:lang,XuanZe%>" CssClass="inpu" />&nbsp;
-                                                <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,BiaoDuanSan%>"></asp:Label>ï¼š<asp:TextBox ID="TXT_SupplierCode3" runat="server" Width="50"></asp:TextBox><asp:Button ID="Button4" runat="server" Text="<%$ Resources:lang,XuanZe%>" CssClass="inpu" />&nbsp;
+                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,BiaoDuanXuanZe%>"></asp:Label>£º
+                                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,BiaoDuanYi%>"></asp:Label>£º<asp:TextBox ID="TXT_SupplierCode1" runat="server" Width="50"></asp:TextBox><asp:Button ID="Button2" runat="server" Text="<%$ Resources:lang,XuanZe%>" CssClass="inpu" />&nbsp;
+                                                <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,BiaoDuanEr%>"></asp:Label>£º<asp:TextBox ID="TXT_SupplierCode2" runat="server" Width="50"></asp:TextBox><asp:Button ID="Button3" runat="server" Text="<%$ Resources:lang,XuanZe%>" CssClass="inpu" />&nbsp;
+                                                <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,BiaoDuanSan%>"></asp:Label>£º<asp:TextBox ID="TXT_SupplierCode3" runat="server" Width="50"></asp:TextBox><asp:Button ID="Button4" runat="server" Text="<%$ Resources:lang,XuanZe%>" CssClass="inpu" />&nbsp;
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 <asp:Button ID="BT_Decision" runat="server" Text="<%$ Resources:lang,JueCe%>" CssClass="inpu" Enabled="true"  />
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="formItemBgStyle">
-                                                <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,JueCeYiJian%>"></asp:Label>ï¼š<asp:TextBox ID="TXT_Suggest" runat="server" TextMode="MultiLine" Width="600px" Height="50px"></asp:TextBox>
+                                                <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,JueCeYiJian%>"></asp:Label>£º<asp:TextBox ID="TXT_Suggest" runat="server" TextMode="MultiLine" Width="600px" Height="50px"></asp:TextBox>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="formItemBgStyle">
                                                 
-                                                <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,JueCeRen%>"></asp:Label>ï¼š<asp:TextBox ID="TXT_ExpertCode" runat="server" Width="50"></asp:TextBox>
+                                                <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,JueCeRen%>"></asp:Label>£º<asp:TextBox ID="TXT_ExpertCode" runat="server" Width="50"></asp:TextBox>
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,JueCeRiQi%>"></asp:Label>ï¼š<asp:TextBox ID="TextBox1" runat="server" Width="50"></asp:TextBox>
+                                                <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,JueCeRiQi%>"></asp:Label>£º<asp:TextBox ID="TextBox1" runat="server" Width="50"></asp:TextBox>
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 <asp:Button ID="BT_Save" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="BT_Save_Click" />&nbsp;
                                                 <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                                type="button" value="å…³é—­" />
+                                                                type="button" value="Closed" />
                                             </td>
                                         </tr>
                                     </table>

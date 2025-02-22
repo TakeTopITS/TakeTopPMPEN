@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDProjectList.aspx.cs" Inherits="TTGDProjectList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDProjectList.aspx.cs" Inherits="TTGDProjectList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -54,7 +54,7 @@
                                     <table width="100%" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left" class="formItemBgStyle">
-                                                <input type="button" class="inpuLong" value="æ–°å¢žç®¡é“é¡¹ç›®" onclick="window.location.href = 'TTGDProjectEdit.aspx'" />
+                                                <input type="button" class="inpuLong" value="ÐÂÔö¹ÜµÀÏîÄ¿" onclick="window.location.href = 'TTGDProjectEdit.aspx'" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -107,17 +107,17 @@
                                                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,BianJi%>"></asp:Label></a>
                                                                     <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab" Visible='<%# Eval("IsMark").ToString()=="0" ? true : false %>'>
                                                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ShanChu%>"></asp:Label></asp:LinkButton>
-                                                                    <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="åˆ é™¤" />--%>
+                                                                    <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="Deleted" />--%>
                                                                     
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="ProjectCode" HeaderText="é¡¹ç›®å·">
+                                                            <asp:BoundColumn DataField="ProjectCode" HeaderText="ÏîÄ¿ºÅ">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ProjectName" HeaderText="é¡¹ç›®åç§°">
+                                                            <asp:BoundColumn DataField="ProjectName" HeaderText="ÏîÄ¿Ãû³Æ">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="39%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ProjectAddress" HeaderText="åœ°ç‚¹">
+                                                            <asp:BoundColumn DataField="ProjectAddress" HeaderText="µØµã">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

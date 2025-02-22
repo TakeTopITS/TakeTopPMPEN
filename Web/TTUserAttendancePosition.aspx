@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserAttendancePosition.aspx.cs" Inherits="TTUserAttendancePosition" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserAttendancePosition.aspx.cs" Inherits="TTUserAttendancePosition" %>
 
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -101,7 +101,7 @@
                                                                     </td>
                                                                     <td width="100px" align="center">
                                                                         <strong>
-                                                                            <asp:Label ID="Label2" runat="server" Text="è·ç¦»"></asp:Label>
+                                                                            <asp:Label ID="Label2" runat="server" Text="¾àÀë"></asp:Label>
                                                                         </strong>
                                                                         (<asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,Mi%>"></asp:Label>)
                                                                     </td>
@@ -129,13 +129,13 @@
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="100px" />
                                                         </asp:BoundColumn>
                                                         <asp:HyperLinkColumn DataNavigateUrlField="UserCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                            DataTextField="UserName" HeaderText="å§“å" Target="_blank">
+                                                            DataTextField="UserName" HeaderText="ÐÕÃû" Target="_blank">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         </asp:HyperLinkColumn>
-                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="æ—¶é—´">
+                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="Ê±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="150px" />
                                                         </asp:BoundColumn>
-                                                        <asp:TemplateColumn HeaderText="ä½ç½®ï¼š">
+                                                        <asp:TemplateColumn HeaderText="Î»ÖÃ£º">
                                                             <ItemTemplate>
                                                                 <a href='TTUserPositionView.aspx?lng=<%# DataBinder.Eval(Container.DataItem,"Longitude").ToString().Trim() %>&lat=<%# DataBinder.Eval(Container.DataItem,"Latitude").ToString().Trim() %>'
                                                                     target="IFR_UserPositionMap">

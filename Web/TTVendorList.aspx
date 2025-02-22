@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTVendorList.aspx.cs" Inherits="TTVendorList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTVendorList.aspx.cs" Inherits="TTVendorList" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -69,7 +69,7 @@
                                                 </td>
                                                 <td style="text-align: right;">
 
-                                                    <asp:Label ID="Label84" runat="server" Text="è®¾å¤‡åç§°"></asp:Label>ï¼š
+                                                    <asp:Label ID="Label84" runat="server" Text="Éè±¸Ãû³Æ"></asp:Label>£º
                                                 </td>
 
                                                 <td style="text-align: left;">
@@ -151,7 +151,7 @@
 
                                                             <td width="15%" align="center">
                                                                 <strong>
-                                                                    <asp:Label ID="Label85" runat="server" Text="è®¾å¤‡åç§°"></asp:Label></strong>
+                                                                    <asp:Label ID="Label85" runat="server" Text="Éè±¸Ãû³Æ"></asp:Label></strong>
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -165,33 +165,33 @@
                                             ShowHeader="false" Width="100%" PageSize="5" GridLines="None" CellPadding="4"
                                             ForeColor="#333333">
                                             <Columns>
-                                                <asp:BoundColumn DataField="VendorCode" HeaderText="ä»£ç ">
+                                                <asp:BoundColumn DataField="VendorCode" HeaderText="´úÂë">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
                                                 </asp:BoundColumn>
                                                 <asp:HyperLinkColumn DataNavigateUrlField="VendorCode" DataNavigateUrlFormatString="TTVendorInfoView.aspx?VendorCode={0}"
-                                                    DataTextField="VendorName" HeaderText="ä¾›åº”å•†åç§°" Target="_blank">
+                                                    DataTextField="VendorName" HeaderText="¹©Ó¦ÉÌÃû³Æ" Target="_blank">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                 </asp:HyperLinkColumn>
-                                                <asp:BoundColumn DataField="ContactName" HeaderText="è”ç³»äºº">
+                                                <asp:BoundColumn DataField="ContactName" HeaderText="ÁªÏµÈË">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                 </asp:BoundColumn>
-                                                <asp:BoundColumn DataField="Tel1" HeaderText="ç”µè¯">
+                                                <asp:BoundColumn DataField="Tel1" HeaderText="µç»°">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                 </asp:BoundColumn>
                                                 <asp:BoundColumn DataField="EmailAddress" HeaderText="EMail">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                 </asp:BoundColumn>
-                                                <asp:BoundColumn DataField="AreaAddress" HeaderText="åŒºåŸŸ">
+                                                <asp:BoundColumn DataField="AreaAddress" HeaderText="ÇøÓò">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                 </asp:BoundColumn>
-                                                <asp:BoundColumn DataField="RegistrationAddressCN" HeaderText="åœ°å€">
+                                                <asp:BoundColumn DataField="RegistrationAddressCN" HeaderText="µØÖ·">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                 </asp:BoundColumn>
-                                                <%--   <asp:BoundColumn DataField="CreateDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="å»ºç«‹æ—¥æœŸ">
+                                                <%--   <asp:BoundColumn DataField="CreateDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="½¨Á¢ÈÕÆÚ">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                 </asp:BoundColumn>--%>
 
-                                                <asp:BoundColumn DataField="DeviceName" HeaderText="è®¾å¤‡åç§°">
+                                                <asp:BoundColumn DataField="DeviceName" HeaderText="Éè±¸Ãû³Æ">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                 </asp:BoundColumn>
 

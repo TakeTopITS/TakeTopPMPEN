@@ -1,4 +1,4 @@
-﻿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -26,7 +26,7 @@ public partial class TTTenderUNHandleList : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "投标预警", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "Ͷ��Ԥ��", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -51,7 +51,7 @@ public partial class TTTenderUNHandleList : System.Web.UI.Page
         DataSet ds;
 
 
-        //if (strWarningType == "标书购买")
+        //if (strWarningType == "BidDocumentPurchase")
         strHQL = "Select *  From T_Tender_HYYQ Where  IsTender <> 0 and rtrim(TenderBuyTime) <= to_char(now()+(TenderBuyDay+1)*'1 day'::interval,'yyyymmdd') "; 
         strHQL += " and (CreatorCode = " + "'" + strUserCode + "'";
         strHQL += " or ID in (Select TenderID from T_TenderRelatedUser where UserCode = " + "'" + strUserCode + "'" + "))";
@@ -65,7 +65,7 @@ public partial class TTTenderUNHandleList : System.Web.UI.Page
         LB_Sql1.Text = strHQL;
 
 
-        //if (strWarningType == "交保证金")
+        //if (strWarningType == "PayDeposit")
         strHQL = "Select *  From T_Tender_HYYQ Where  IsMargin <> 0 and rtrim(MarginTime) <= to_char(now()+(MarginDay+1)*'1 day'::interval,'yyyymmdd') "; 
         strHQL += " and (CreatorCode = " + "'" + strUserCode + "'";
         strHQL += " or ID in (Select TenderID from T_TenderRelatedUser where UserCode = " + "'" + strUserCode + "'" + "))";
@@ -79,7 +79,7 @@ public partial class TTTenderUNHandleList : System.Web.UI.Page
         LB_Sql2.Text = strHQL;
 
 
-        //if (strWarningType == "退保证金")
+        //if (strWarningType == "�˱�֤��")
         strHQL = "Select *  From T_Tender_HYYQ Where  IsReceiveMargin <> 0 and rtrim(ReceiveMarginTime) <= to_char(now()+ReceiveMarginDay*'1 day'::interval,'yyyymmdd') "; 
         strHQL += " and (CreatorCode = " + "'" + strUserCode + "'";
         strHQL += " or ID in (Select TenderID from T_TenderRelatedUser where UserCode = " + "'" + strUserCode + "'" + "))";
@@ -93,7 +93,7 @@ public partial class TTTenderUNHandleList : System.Web.UI.Page
         LB_Sql3.Text = strHQL;
 
 
-        //if (strWarningType == "开标")
+        //if (strWarningType == "BidOpening")
         strHQL = "Select *  From T_Tender_HYYQ Where  IsBidOpening <> 0 and rtrim(BidOpeningDate) <= to_char(now()+(BidOpeningDay+1)*'1 day'::interval,'yyyymmdd') "; 
         strHQL += " and (CreatorCode = " + "'" + strUserCode + "'";
         strHQL += " or ID in (Select TenderID from T_TenderRelatedUser where UserCode = " + "'" + strUserCode + "'" + "))";
@@ -107,7 +107,7 @@ public partial class TTTenderUNHandleList : System.Web.UI.Page
         LB_Sql4.Text = strHQL;
 
 
-        //if (strWarningType == "交中标费")
+        //if (strWarningType == "PayWinningBidFee")
         strHQL = "Select *  From T_Tender_HYYQ Where  IsWinningFee <> 0 and rtrim(WinningFeeDate) <= to_char(now()+(WinningFeeDay+1)*'1 day'::interval,'yyyymmdd') "; 
         strHQL += " and (CreatorCode = " + "'" + strUserCode + "'";
         strHQL += " or ID in (Select TenderID from T_TenderRelatedUser where UserCode = " + "'" + strUserCode + "'" + "))";

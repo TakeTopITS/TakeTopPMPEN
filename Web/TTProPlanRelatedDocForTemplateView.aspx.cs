@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections;
 using System.Drawing;
 using System.IO;
@@ -72,7 +72,7 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandlerForSpecialPopWindow();", true);
         if (Page.IsPostBack == false)
         {
-            ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "è®¡åˆ’", strPlanID, strPlanName);
+            ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "Plan", strPlanID, strPlanName);
             LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
 
             LoadRelatedDoc(strPlanID, strProjectID);
@@ -80,16 +80,16 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
             ShareClass.InitialUserDocTypeTree(TreeView3, strUserCode);
             ShareClass.LoadProjectActorGroupForDropDownList(DL_Visible, strProjectID);
 
-            string strTopTreeDocTypeName = "è®¡åˆ’" + "ï¼š" + strPlanID + " " + strPlanName + " " + Resources.lang.WenDangLieBiao;
-            strHQL = "Select TemName From T_WorkFlowTemplate Where TemName In ((Select TemName from T_WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'æ–‡ä»¶è¯„å®¡'";
+            string strTopTreeDocTypeName = "Plan" + "£º" + strPlanID + " " + strPlanName + " " + Resources.lang.WenDangLieBiao;
+            strHQL = "Select TemName From T_WorkFlowTemplate Where TemName In ((Select TemName from T_WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'DocumentReview'";
             strHQL += " and ((workFlowTemplate.TemName in (Select relatedWorkFlowTemplate.WFTemplateName from T_RelatedWorkFlowTemplate as relatedWorkFlowTemplate where relatedWorkFlowTemplate.RelatedType = 'Project' and relatedWorkFlowTemplate.RelatedID = " + strProjectID + "))";
-            strHQL += " or ( workFlowTemplate.Authority = 'æ‰€æœ‰' ))";
+            strHQL += " or ( workFlowTemplate.Authority = 'All' ))";
             strHQL += " and (position(trim(workFlowTemplate.TemName) in '" + strTopTreeDocTypeName + "') > 0)";
             strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC)";
             strHQL += " UNION ";
-            strHQL += "(Select TemName from T_WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'æ–‡ä»¶è¯„å®¡'";
+            strHQL += "(Select TemName from T_WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'DocumentReview'";
             strHQL += " and ((workFlowTemplate.TemName in (Select relatedWorkFlowTemplate.WFTemplateName from T_RelatedWorkFlowTemplate as relatedWorkFlowTemplate where relatedWorkFlowTemplate.RelatedType = 'Project' and relatedWorkFlowTemplate.RelatedID = " + strProjectID + "))";
-            strHQL += " or ( workFlowTemplate.Authority = 'æ‰€æœ‰' ))";
+            strHQL += " or ( workFlowTemplate.Authority = 'All' ))";
             strHQL += " and (position(trim(workFlowTemplate.TemName) in '" + strTopTreeDocTypeName + "') = 0)";
             strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC)) Order By SortNumber ASC";
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTemplate");
@@ -99,7 +99,7 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
 
             TB_Author.Text = strUserName;
 
-            strHQL = "from ProjectPlanVersion as projectPlanVersion where projectPlanVersion.ProjectID = " + "'" + strProjectID + "'" + " and projectPlanVersion.Type = 'åœ¨ç”¨'";
+            strHQL = "from ProjectPlanVersion as projectPlanVersion where projectPlanVersion.ProjectID = " + "'" + strProjectID + "'" + " and projectPlanVersion.Type = 'InUse'";
             ProjectPlanVersionBLL projectPlanVersionBLL = new ProjectPlanVersionBLL();
             lst = projectPlanVersionBLL.GetAllProjectPlanVersions(strHQL);
             if (lst.Count > 0)
@@ -149,12 +149,12 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
             LB_DocTypeID.Text = docType.ID.ToString();
             TB_DocType.Text = docType.Type.Trim();
 
-            strHQL = " from DocumentForProjectPlanTemplate as documentForProjectPlanTemplate where documentForProjectPlanTemplate.RelatedType = 'è®¡åˆ’' and documentForProjectPlanTemplate.RelatedID = " + strPlanID + " and  documentForProjectPlanTemplate.DocType = " + "'" + strDocType + "'" + " and documentForProjectPlanTemplate.Status <> 'åˆ é™¤' Order by documentForProjectPlanTemplate.DocID DESC";
+            strHQL = " from DocumentForProjectPlanTemplate as documentForProjectPlanTemplate where documentForProjectPlanTemplate.RelatedType = 'Plan' and documentForProjectPlanTemplate.RelatedID = " + strPlanID + " and  documentForProjectPlanTemplate.DocType = " + "'" + strDocType + "'" + " and documentForProjectPlanTemplate.Status <> 'Deleted' Order by documentForProjectPlanTemplate.DocID DESC";
             LB_FindCondition.Text = Resources.lang.CXFWWJLX + strDocType;
 
-            //è®¾ç½®ç¼ºçœçš„æ–‡ä»¶ç±»å‹
+            //ÉèÖÃÈ±Ê¡µÄÎÄ¼şÀàĞÍ
             ShareClass.SetDefaultDocType(strDocType, LB_DocTypeID, TB_DocType);
-            ////æŒ‰æ–‡ä»¶ç±»å‹è®¾ç½®ç¼ºçœçš„å·¥ä½œæµæ¨¡æ¿æ ‘
+            ////°´ÎÄ¼şÀàĞÍÉèÖÃÈ±Ê¡µÄ¹¤×÷Á÷Ä£°åÊ÷
             //ShareClass.SetDefaultWorkflowTemplate(strDocType, DL_TemName);
         }
         else
@@ -162,7 +162,7 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
             LB_DocTypeID.Text = "";
             TB_DocType.Text = "";
 
-            strHQL = " from DocumentForProjectPlanTemplate as documentForProjectPlanTemplate where documentForProjectPlanTemplate.RelatedType = 'è®¡åˆ’' and documentForProjectPlanTemplate.RelatedID = " + strPlanID + " and documentForProjectPlanTemplate.Status <> 'åˆ é™¤' Order by documentForProjectPlanTemplate.DocID DESC";
+            strHQL = " from DocumentForProjectPlanTemplate as documentForProjectPlanTemplate where documentForProjectPlanTemplate.RelatedType = 'Plan' and documentForProjectPlanTemplate.RelatedID = " + strPlanID + " and documentForProjectPlanTemplate.Status <> 'Deleted' Order by documentForProjectPlanTemplate.DocID DESC";
             LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
         }
 
@@ -172,7 +172,7 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
 
         LB_TotalCount.Text = Resources.lang.CXDDWJS + ": " + lst2.Count.ToString();
 
-        //æ ¹æ®æ–‡æ¡£æœ‰æ— å·¥ä½œæµæƒ…å†µéšè—åˆ é™¤æŒ‰é’®
+        //¸ù¾İÎÄµµÓĞÎŞ¹¤×÷Á÷Çé¿öÒş²ØÉ¾³ı°´Å¥
         ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);
     }
 
@@ -196,7 +196,7 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
         {
             strParentID = treeNode.Parent.Target;
 
-            strHQL = " from DocumentForProjectPlanTemplate as documentForProjectPlanTemplate where documentForProjectPlanTemplate.RelatedType = 'è®¡åˆ’' and documentForProjectPlanTemplate.RelatedID = " + strPlanID + " and documentForProjectPlanTemplate.Status <> 'åˆ é™¤' Order by documentForProjectPlanTemplate.DocID DESC";
+            strHQL = " from DocumentForProjectPlanTemplate as documentForProjectPlanTemplate where documentForProjectPlanTemplate.RelatedType = 'Plan' and documentForProjectPlanTemplate.RelatedID = " + strPlanID + " and documentForProjectPlanTemplate.Status <> 'Deleted' Order by documentForProjectPlanTemplate.DocID DESC";
             DocumentForProjectPlanTemplateBLL documentForProjectPlanTemplateBLL = new DocumentForProjectPlanTemplateBLL();
             lst = documentForProjectPlanTemplateBLL.GetAllDocumentForProjectPlanTemplates(strHQL);
             DataGrid2.DataSource = lst;
@@ -237,15 +237,15 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
 
                 if (strUserCode == strUploadManCode)
                 {
-                    documentForProjectPlanTemplate.Status = "åˆ é™¤";
+                    documentForProjectPlanTemplate.Status = "Deleted";
 
                     documentForProjectPlanTemplateBLL.UpdateDocumentForProjectPlanTemplate(documentForProjectPlanTemplate, int.Parse(strDocID));
 
-                    //åˆ é™¤æ›´å¤šæ–‡æ¡£
+                    //É¾³ı¸ü¶àÎÄµµ
                     ShareClass.DeleteMoreDocByDataGrid(DataGrid1);
 
                     LoadRelatedDoc(strPlanID, strProjectID);
-                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "è®¡åˆ’", strPlanID, strPlanName);
+                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "Plan", strPlanID, strPlanName);
                 }
                 else
                 {
@@ -270,7 +270,7 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
 
                 BT_SubmitApply.Enabled = true;
 
-                LoadRelatedWL("æ–‡ä»¶è¯„å®¡", "æ–‡ä»¶", int.Parse(strDocID));
+                LoadRelatedWL("DocumentReview", "Document", int.Parse(strDocID));
             }
         }
     }
@@ -304,11 +304,11 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
 
             string strFileName1, strExtendName;
 
-            strFileName1 = this.AttachFile.FileName;//è·å–ä¸Šä¼ æ–‡ä»¶çš„æ–‡ä»¶å,åŒ…æ‹¬åç¼€
+            strFileName1 = this.AttachFile.FileName;//»ñÈ¡ÉÏ´«ÎÄ¼şµÄÎÄ¼şÃû,°üÀ¨ºó×º
 
-            strExtendName = System.IO.Path.GetExtension(strFileName1);//è·å–æ‰©å±•å
+            strExtendName = System.IO.Path.GetExtension(strFileName1);//»ñÈ¡À©Õ¹Ãû
 
-            DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+            DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
 
             string strFileName2 = System.IO.Path.GetFileName(strFileName1);
             string strExtName = Path.GetExtension(strFileName2);
@@ -339,7 +339,7 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
                 DocumentForProjectPlanTemplateBLL documentForProjectPlanTemplateBLL = new DocumentForProjectPlanTemplateBLL();
                 DocumentForProjectPlanTemplate documentForProjectPlanTemplate = new DocumentForProjectPlanTemplate();
 
-                documentForProjectPlanTemplate.RelatedType = "è®¡åˆ’";
+                documentForProjectPlanTemplate.RelatedType = "Plan";
                 documentForProjectPlanTemplate.DocTypeID = int.Parse(strDocTypeID);
                 documentForProjectPlanTemplate.DocType = strDocType;
                 documentForProjectPlanTemplate.RelatedID = int.Parse(strPlanID);
@@ -352,7 +352,7 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
                 documentForProjectPlanTemplate.Visible = strVisible;
                 documentForProjectPlanTemplate.DepartCode = strDepartCode;
                 documentForProjectPlanTemplate.DepartName = ShareClass.GetDepartName(strDepartCode);
-                documentForProjectPlanTemplate.Status = "å¤„ç†ä¸­";
+                documentForProjectPlanTemplate.Status = "InProgress";
                 documentForProjectPlanTemplate.RelatedName = "";
 
 
@@ -363,7 +363,7 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
                     AttachFile.MoveTo(strDocSavePath + strFileName3, Brettle.Web.NeatUpload.MoveToOptions.Overwrite);
 
                     LoadRelatedDoc(strPlanID, strProjectID);
-                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "è®¡åˆ’", strPlanID, strPlanName);
+                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "Plan", strPlanID, strPlanName);
                 }
                 catch (Exception err)
                 {
@@ -390,7 +390,7 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        //æ ¹æ®æ–‡æ¡£æœ‰æ— å·¥ä½œæµæƒ…å†µéšè—åˆ é™¤æŒ‰é’®
+        //¸ù¾İÎÄµµÓĞÎŞ¹¤×÷Á÷Çé¿öÒş²ØÉ¾³ı°´Å¥
         ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);
     }
 
@@ -442,27 +442,27 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
         workFlow.CreatorCode = strCreatorCode;
         workFlow.CreatorName = strCreatorName;
         workFlow.CreateTime = dtCreateTime;
-        workFlow.Status = "æ–°å»º";
-        workFlow.RelatedType = "æ–‡ä»¶";
+        workFlow.Status = "New";
+        workFlow.RelatedType = "Document";
         workFlow.RelatedID = int.Parse(strDocID);
-        workFlow.DIYNextStep = "Yes"; workFlow.IsPlanMainWorkflow = "NO";
+        workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
 
         if (CB_RequiredSMS.Checked == true)
         {
-            workFlow.ReceiveSMS = "Yes";
+            workFlow.ReceiveSMS = "YES";
         }
         else
         {
-            workFlow.ReceiveSMS = "No";
+            workFlow.ReceiveSMS = "NO";
         }
 
         if (CB_RequiredMail.Checked == true)
         {
-            workFlow.ReceiveEMail = "Yes";
+            workFlow.ReceiveEMail = "YES";
         }
         else
         {
-            workFlow.ReceiveEMail = "No";
+            workFlow.ReceiveEMail = "NO";
         }
 
         try
@@ -477,14 +477,14 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
 
             xmlProcess.DbToXML(strCmdText, "T_DocumentForProjectPlanTemplate", strXMLFile2);
 
-            ////è‡ªåŠ¨é™„åŠ è¦è¯„å®¡çš„å·¥ä½œæµæ–‡ä»¶
+            ////×Ô¶¯¸½¼ÓÒªÆÀÉóµÄ¹¤×÷Á÷ÎÄ¼ş
             //ShareClass.AddWLDocumentForProjectPlanTemplateForUploadDocPage(strDocID, int.Parse(strWFID));
-            ////è‡ªåŠ¨é™„åŠ å…¶å®ƒå·²é€‰æ‹©çš„è¦è¯„å®¡çš„å·¥ä½œæµæ–‡ä»¶
+            ////×Ô¶¯¸½¼ÓÆäËüÒÑÑ¡ÔñµÄÒªÆÀÉóµÄ¹¤×÷Á÷ÎÄ¼ş
             //ShareClass.AddMoreWLSelectedDocumentForProjectPlanTemplateForUploadDocPage(DataGrid1, int.Parse(strWFID), strDocID);
 
-            LoadRelatedWL("æ–‡ä»¶è¯„å®¡", "æ–‡ä»¶", int.Parse(strDocID));
+            LoadRelatedWL("DocumentReview", "Document", int.Parse(strDocID));
 
-            //å·¥ä½œæµæ¨¡æ¿æ˜¯å¦æ˜¯è‡ªåŠ¨æ¿€æ´»çŠ¶æ€
+            //¹¤×÷Á÷Ä£°åÊÇ·ñÊÇ×Ô¶¯¼¤»î×´Ì¬
             if (ShareClass.GetWorkflowTemplateIsAutoActiveStatus(strTemName) == "NO")
             {
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZWJPSSSCDGZLGLYMJHCGZLS + "')", true);
@@ -516,7 +516,7 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
 
         DocumentForProjectPlanTemplate documentForProjectPlanTemplate = (DocumentForProjectPlanTemplate)lst[0];
 
-        documentForProjectPlanTemplate.RelatedType = "å·¥ä½œæµ";
+        documentForProjectPlanTemplate.RelatedType = "Workflow";
         documentForProjectPlanTemplate.RelatedID = intRelatedID;
         documentForProjectPlanTemplate.RelatedName = "";
 
@@ -595,14 +595,14 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
         if (strPlanID != null)
         {
             strHQL = "from DocumentForProjectPlanTemplate as documentForProjectPlanTemplate where ";
-            strHQL += " (documentForProjectPlanTemplate.RelatedType = 'è®¡åˆ’' and documentForProjectPlanTemplate.RelatedID = " + strPlanID + ")";
-            strHQL += "and rtrim(ltrim(documentForProjectPlanTemplate.Status)) <> 'åˆ é™¤' Order by documentForProjectPlanTemplate.DocID DESC";
+            strHQL += " (documentForProjectPlanTemplate.RelatedType = 'Plan' and documentForProjectPlanTemplate.RelatedID = " + strPlanID + ")";
+            strHQL += "and rtrim(ltrim(documentForProjectPlanTemplate.Status)) <> 'Deleted' Order by documentForProjectPlanTemplate.DocID DESC";
         }
         else
         {
             strHQL = "from DocumentForProjectPlanTemplate as documentForProjectPlanTemplate where ";
-            strHQL += " (documentForProjectPlanTemplate.RelatedType = 'è®¡åˆ’' and documentForProjectPlanTemplate.RelatedID in (Select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + " and workPlan.VerID = " + strPlanVerID + "))";
-            strHQL += " and rtrim(ltrim(documentForProjectPlanTemplate.Status)) <> 'åˆ é™¤' Order by documentForProjectPlanTemplate.DocID DESC";
+            strHQL += " (documentForProjectPlanTemplate.RelatedType = 'Plan' and documentForProjectPlanTemplate.RelatedID in (Select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + " and workPlan.VerID = " + strPlanVerID + "))";
+            strHQL += " and rtrim(ltrim(documentForProjectPlanTemplate.Status)) <> 'Deleted' Order by documentForProjectPlanTemplate.DocID DESC";
         }
 
         documentForProjectPlanTemplateBLL = new DocumentForProjectPlanTemplateBLL();
@@ -614,7 +614,7 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
 
         LB_TotalCount.Text = Resources.lang.CXDDWJS + ": " + lst.Count.ToString();
 
-        ////æ ¹æ®æ–‡æ¡£æœ‰æ— å·¥ä½œæµæƒ…å†µéšè—åˆ é™¤æŒ‰é’®
+        ////¸ù¾İÎÄµµÓĞÎŞ¹¤×÷Á÷Çé¿öÒş²ØÉ¾³ı°´Å¥
         //ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);
     }
 
@@ -643,12 +643,12 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
             DocType docType = (DocType)lst1[0];
             strDocType = docType.Type.Trim();
 
-            strHQL = " from DocumentForProjectPlanTemplate as documentForProjectPlanTemplate where documentForProjectPlanTemplate.RelatedType = 'ProjectType' and documentForProjectPlanTemplate.RelatedName = " + "'" + strProjectType + "'" + " and  documentForProjectPlanTemplate.DocType = " + "'" + strDocType + "'" + " and documentForProjectPlanTemplate.Status <> 'åˆ é™¤' Order by documentForProjectPlanTemplate.DocID DESC";
+            strHQL = " from DocumentForProjectPlanTemplate as documentForProjectPlanTemplate where documentForProjectPlanTemplate.RelatedType = 'ProjectType' and documentForProjectPlanTemplate.RelatedName = " + "'" + strProjectType + "'" + " and  documentForProjectPlanTemplate.DocType = " + "'" + strDocType + "'" + " and documentForProjectPlanTemplate.Status <> 'Deleted' Order by documentForProjectPlanTemplate.DocID DESC";
             LB_FindCondition.Text = Resources.lang.CXFWWJLX + strDocType;
         }
         else
         {
-            strHQL = " from DocumentForProjectPlanTemplate as documentForProjectPlanTemplate where documentForProjectPlanTemplate.RelatedType =  'ProjectType' and documentForProjectPlanTemplate.RelatedName = " + "'" + strProjectType + "'" + " and documentForProjectPlanTemplate.Status <> 'åˆ é™¤' Order by documentForProjectPlanTemplate.DocID DESC";
+            strHQL = " from DocumentForProjectPlanTemplate as documentForProjectPlanTemplate where documentForProjectPlanTemplate.RelatedType =  'ProjectType' and documentForProjectPlanTemplate.RelatedName = " + "'" + strProjectType + "'" + " and documentForProjectPlanTemplate.Status <> 'Deleted' Order by documentForProjectPlanTemplate.DocID DESC";
             LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
         }
 
@@ -664,7 +664,7 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = " from DocumentForProjectPlanTemplate as documentForProjectPlanTemplate where documentForProjectPlanTemplate.RelatedType = 'ProjectType' and documentForProjectPlanTemplate.RelatedName = " + "'" + strRelatedName + "'" + " and documentForProjectPlanTemplate.Status <> 'åˆ é™¤' Order by documentForProjectPlanTemplate.DocID DESC";
+        strHQL = " from DocumentForProjectPlanTemplate as documentForProjectPlanTemplate where documentForProjectPlanTemplate.RelatedType = 'ProjectType' and documentForProjectPlanTemplate.RelatedName = " + "'" + strRelatedName + "'" + " and documentForProjectPlanTemplate.Status <> 'Deleted' Order by documentForProjectPlanTemplate.DocID DESC";
         DocumentForProjectPlanTemplateBLL documentForProjectPlanTemplateBLL = new DocumentForProjectPlanTemplateBLL();
         lst = documentForProjectPlanTemplateBLL.GetAllDocumentForProjectPlanTemplates(strHQL);
         DataGrid3.DataSource = lst;
@@ -676,7 +676,7 @@ public partial class TTProPlanRelatedDocForTemplateView : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from DocumentForProjectPlanTemplate as documentForProjectPlanTemplate where documentForProjectPlanTemplate.RelatedType = 'è®¡åˆ’'";
+        strHQL = "from DocumentForProjectPlanTemplate as documentForProjectPlanTemplate where documentForProjectPlanTemplate.RelatedType = 'Plan'";
         strHQL += " and documentForProjectPlanTemplate.RelatedID in (Select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + " and workPlan.VerID = " + strPlanVerID + ")";
         strHQL += " order by documentForProjectPlanTemplate.DocID DESC";
         DocumentForProjectPlanTemplateBLL documentForProjectPlanTemplateBLL = new DocumentForProjectPlanTemplateBLL();

@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System; using System.Resources;
 using System.Collections;
@@ -45,13 +45,13 @@ public partial class TTWZWearyEdit : System.Web.UI.Page
 
             if (!string.IsNullOrEmpty(HF_WearyCode.Value))
             {
-                //ä¿®æ”¹
+                //ÐÞ¸Ä
                 string strWearyCode = HF_WearyCode.Value;
                 wZWearyBLL.UpdateWZWeary(wZWeary, strWearyCode);
             }
             else
             {
-                //å¢žåŠ 
+                //Ôö¼Ó
                 wZWearyBLL.AddWZWeary(wZWeary);
             }
 

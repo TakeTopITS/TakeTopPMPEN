@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -84,7 +84,7 @@ public partial class TTWorkFlowDetailDataBackup : System.Web.UI.Page
             }
             catch
             {
-                Response.Write("------閿欒锛屾宸ヤ綔娴佹暟鎹枃浠朵笉瀛樺湪锛屼笉鑳藉鎵癸紝璇锋鏌ワ紒");
+                Response.Write("------错误，此工作流数据文件不存在，不能审批，请检查！");
                 return;
             }
 

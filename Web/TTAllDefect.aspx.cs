@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -20,8 +20,8 @@ public partial class TTAllDefect : System.Web.UI.Page
     string strLangCode;
     protected void Page_Load(object sender, EventArgs e)
     {
-        //é’Ÿç¤¼æœˆä½œå“ï¼ˆjack.erp@gmail.com)
-        //æ³°é¡¶è½¯ä»¶2006ï¼2012
+        //ÖÓÀñÔÂ×÷Æ·£¨jack.erp@gmail.com)
+        //Ì©¶¥Èí¼ş2006£­2012
 
         string strUserCode = Session["UserCode"].ToString();
         string strHQL;
@@ -33,13 +33,13 @@ public partial class TTAllDefect : System.Web.UI.Page
         string strUserName = Session["UserName"].ToString();
 
 
-        //this.Title = "æ‰€æœ‰éœ€æ±‚çŠ¶æ€";
+        //this.Title = "ËùÓĞĞèÇó×´Ì¬";
 
         LB_UserCode.Text = strUserCode;
         LB_UserName.Text = strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "æŸ¥çœ‹æ‰€æœ‰ç¼ºé™·", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "²é¿´ËùÓĞÈ±Ïİ", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -189,7 +189,7 @@ public partial class TTAllDefect : System.Web.UI.Page
                 strHQL = "from Defectment as defectment where defectment.ApplicantCode in (select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + ") and " + "defectment.Status = " + "'" + strStatus + "'";
                 strHQL += " and defectment.ApplicantCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
                 strHQL += " order by defectment.DefectID DESC";
-                LB_QueryScope.Text = Resources.lang.ZZZBuMen + strDepartName + " &nbsp;&nbsp;éœ€æ±‚çŠ¶æ€ï¼š" + strStatus;
+                LB_QueryScope.Text = Resources.lang.ZZZBuMen + strDepartName + " &nbsp;&nbsp;ĞèÇó×´Ì¬£º" + strStatus;
 
             }
         }

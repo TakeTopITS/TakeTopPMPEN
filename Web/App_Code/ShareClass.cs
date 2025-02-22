@@ -59,7 +59,7 @@ public static class ShareClass
         //
     }
 
-    public static string SystemVersionID = "V2025.2.15";
+    public static string SystemVersionID = "V2025.2.20";
 
     public static string SystemLatestLoginUser = "";
     public static string SystemDBer = "";
@@ -86,7 +86,7 @@ public static class ShareClass
 
 
     //更新左边栏展开状态
-   public static void UpdateLeftBarExtendStatus(string strUserCode, string strLeftBarExtend)
+    public static void UpdateLeftBarExtendStatus(string strUserCode, string strLeftBarExtend)
     {
         string strHQL;
 
@@ -139,11 +139,15 @@ public static class ShareClass
                 //System.Threading.Thread.Sleep(5000);
                 //string strUrl = System.Configuration.ConfigurationManager.AppSettings["CurrentSite"] + "/TakeTopTimer.aspx";
 
-                string strUrl = ShareClass.GetCurrentSiteRootPath() + "TakeTopTimer.aspx";
+                //string strUrl = ShareClass.GetCurrentSiteRootPath() + "TakeTopTimer.aspx";
 
-                System.Net.HttpWebRequest _HttpWebRequest = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(strUrl);
-                System.Net.HttpWebResponse _HttpWebResponse = (System.Net.HttpWebResponse)_HttpWebRequest.GetResponse();
-                System.IO.Stream _Stream = _HttpWebResponse.GetResponseStream();//得到回写的字节流 
+                //System.Net.HttpWebRequest _HttpWebRequest = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(strUrl);
+                //System.Net.HttpWebResponse _HttpWebResponse = (System.Net.HttpWebResponse)_HttpWebRequest.GetResponse();
+                //System.IO.Stream _Stream = _HttpWebResponse.GetResponseStream();//得到回写的字节流 
+
+                // 执行 AnotherPage.aspx，并将其输出包含在当前页面中
+                string strUrl = "TakeTopTimer.aspx";
+                //HttpContext.Current.Server.Execute(strUrl);
             }
             catch (Exception err)
             {
@@ -155,7 +159,7 @@ public static class ShareClass
         }
     }
 
-   
+
 
     //初始化用户模组
     public static void InitialUserModules(string strSampleUserCode, string strCurrentUserCode)
@@ -483,7 +487,7 @@ public static class ShareClass
         strHQL = "Select ID, IsAllMember,IsForbidLogin,Message,UserCode,IP From T_UserLoginManage Where ";
         strHQL += " ((UserCode Like " + "'" + strUserCode + "'" + ")";
         strHQL += " Or (IsAllMember = 'YES'))";
-        strHQL += " And Status = '在用'";
+        strHQL += " And Status = 'InUse'";
         strHQL += " Order By ID DESC";
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_UserLoginManage");
 
@@ -502,7 +506,7 @@ public static class ShareClass
         strUserHostAddress = "%" + strUserHostAddress + "%";
 
         strHQL = "Select Message From T_UserLoginManage Where UserCode Like " + "'" + strUserCode + "'" + " and IP Like " + "'" + strUserHostAddress + "'";
-        strHQL += " and Status = '在用'";
+        strHQL += " and Status = 'InUse'";
         strHQL += " Order By ID DESC";
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_UserLoginManage");
 
@@ -839,7 +843,7 @@ public static class ShareClass
         string strDepartString = "";
 
         strHQL = "Select DepartCode,DepartName From T_Department Where ParentCode = " + "'" + strParentCode + "'";
-        strHQL += " and ((Authority = '所有')";
+        strHQL += " and ((Authority = 'All')";
         strHQL += " or ((Authority = '部分') ";
         strHQL += " and (DepartCode in (select DepartCode from T_DepartmentUser where UserCode =" + "'" + strUserCode + "'" + "))))";
         strHQL += " Order By DepartCode ASC";
@@ -1124,7 +1128,7 @@ public static class ShareClass
 
         strStatus = userKPICheck.Status.Trim();
 
-        if (strStatus == "关闭")
+        if (strStatus == "Closed")
         {
             return userKPICheck.TotalSqlPoint;
         }
@@ -1290,7 +1294,7 @@ public static class ShareClass
             goods.Manufacturer = strManufacturer;
             goods.Memo = strMemo;
             goods.WarrantyPeriod = intWarrantyPeriod;
-            goods.Status = "在用";
+            goods.Status = "InUse";
 
             goods.PhotoURL = strPhotoURL;
 
@@ -1366,7 +1370,7 @@ public static class ShareClass
                     goods.Manufacturer = strManufacturer;
                     goods.Memo = strMemo;
                     goods.WarrantyPeriod = intWarrantyPeriod;
-                    goods.Status = "在用";
+                    goods.Status = "InUse";
 
                     goods.PhotoURL = strPhotoURL;
 
@@ -1824,12 +1828,12 @@ public static class ShareClass
         if (string.IsNullOrEmpty(strID))
         {
             strHQL = "From BDBaseData as bDBaseData where bDBaseData.DepartCode = '" + strDepartCode + "' and bDBaseData.AccountName='" + strAccountName + "' and " +
-                "bDBaseData.YearNum='" + strYearNum.ToString() + "' and bDBaseData.MonthNum = '" + strMonthNum.ToString() + "' and bDBaseData.EnterCode='" + strusercode + "' and bDBaseData.Type='基础' ";
+                "bDBaseData.YearNum='" + strYearNum.ToString() + "' and bDBaseData.MonthNum = '" + strMonthNum.ToString() + "' and bDBaseData.EnterCode='" + strusercode + "' and bDBaseData.Type='Base' ";
         }
         else
         {
             strHQL = "From BDBaseData as bDBaseData where bDBaseData.DepartCode = '" + strDepartCode + "' and bDBaseData.AccountName='" + strAccountName + "' and " +
-                "bDBaseData.YearNum='" + strYearNum.ToString() + "' and bDBaseData.MonthNum = '" + strMonthNum.ToString() + "' and bDBaseData.EnterCode='" + strusercode + "' and bDBaseData.Type='基础' and bDBaseData.ID<>'" + strID + "' ";
+                "bDBaseData.YearNum='" + strYearNum.ToString() + "' and bDBaseData.MonthNum = '" + strMonthNum.ToString() + "' and bDBaseData.EnterCode='" + strusercode + "' and bDBaseData.Type='Base' and bDBaseData.ID<>'" + strID + "' ";
         }
         BDBaseDataBLL bdBaseDataRecordBLL = new BDBaseDataBLL();
         IList lst = bdBaseDataRecordBLL.GetAllBDBaseDatas(strHQL);
@@ -1870,7 +1874,7 @@ public static class ShareClass
 
         BDBaseDataRecordBLL bdBaseDataRecordBLL = new BDBaseDataRecordBLL();
         strHQL = "From BDBaseDataRecord as bdBaseDataRecord where bdBaseDataRecord.DepartCode = '" + strDepartCode + "' and bdBaseDataRecord.AccountName='" + strAccountName + "' and " +
-                "bdBaseDataRecord.YearNum='" + strYearNum.ToString() + "' and bdBaseDataRecord.MonthNum = '" + strMonthNum.ToString() + "' and bdBaseDataRecord.Type='操作' ";
+                "bdBaseDataRecord.YearNum='" + strYearNum.ToString() + "' and bdBaseDataRecord.MonthNum = '" + strMonthNum.ToString() + "' and bdBaseDataRecord.Type='Operation' ";
         lst = bdBaseDataRecordBLL.GetAllBDBaseDataRecords(strHQL);
         if (lst.Count > 0 && lst != null)
         {
@@ -1914,7 +1918,7 @@ public static class ShareClass
         strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
         strDepartName = ShareClass.GetDepartName(strDepartCode);
 
-        intBMBaseDataID = ShareClass.GetBMBaseDataID(strDepartCode, strAccountCode, strAccountName, intYear, intMonth, "基础");
+        intBMBaseDataID = ShareClass.GetBMBaseDataID(strDepartCode, strAccountCode, strAccountName, intYear, intMonth, "Base");
         if (intBMBaseDataID <= 0)
         {
             return;
@@ -1932,7 +1936,7 @@ public static class ShareClass
         bdBaseDataRecord.MoneyNum = deAmount;
         bdBaseDataRecord.YearNum = intYear;
         bdBaseDataRecord.MonthNum = intMonth;
-        bdBaseDataRecord.Type = "操作";
+        bdBaseDataRecord.Type = "Operation";
 
         try
         {
@@ -2404,7 +2408,7 @@ public static class ShareClass
                 constractReceivables.OperatorName = GetUserName(strOperatorCode);
                 constractReceivables.OperateTime = DateTime.Now;
                 constractReceivables.PreDays = 5;
-                constractReceivables.Status = "计划";
+                constractReceivables.Status = "Plan";
                 constractReceivables.Comment = "";
 
                 constractReceivables.RelatedType = strRelatedType;
@@ -2458,7 +2462,7 @@ public static class ShareClass
                     constractPayable.OperatorName = GetUserName(strOperatorCode);
                     constractPayable.OperateTime = DateTime.Now;
                     constractPayable.PreDays = 5;
-                    constractPayable.Status = "计划";
+                    constractPayable.Status = "Plan";
                     constractPayable.Comment = "";
 
                     constractPayable.RelatedType = strRelatedType;
@@ -2661,7 +2665,7 @@ public static class ShareClass
             constractReceivables.OperatorName = GetUserName(strOperatorCode);
             constractReceivables.OperateTime = DateTime.Now;
             constractReceivables.PreDays = 5;
-            constractReceivables.Status = "完成";
+            constractReceivables.Status = "Completed";
             constractReceivables.Comment = "";
 
             constractReceivables.RelatedType = strRelatedType;
@@ -2712,7 +2716,7 @@ public static class ShareClass
                 constractPayable.OperatorName = GetUserName(strOperatorCode);
                 constractPayable.OperateTime = DateTime.Now;
                 constractPayable.PreDays = 5;
-                constractPayable.Status = "完成";
+                constractPayable.Status = "Completed";
                 constractPayable.Comment = "";
 
                 constractPayable.RelatedType = strRelatedType;
@@ -2846,7 +2850,7 @@ public static class ShareClass
         string strUserParentDepartmentString = TakeTopCore.CoreShareClass.InitialParentDepartmentStringByAuthority(strUserCode);
         string strUserUnderDepartmentString = TakeTopCore.CoreShareClass.InitialUnderDepartmentStringByAuthority(strUserCode);
 
-        strHQL = "Select TemName From T_WorkFlowTemplate Where Visible = 'YES' and Authority = '所有'";
+        strHQL = "Select TemName From T_WorkFlowTemplate Where Visible = 'YES' and Authority = 'All'";
         strHQL += " and (BelongDepartCode in " + strUserParentDepartmentString;
         strHQL += " Or BelongDepartCode in " + strUserUnderDepartmentString + ")";
         strHQL += " Order by SortNumber ASC";
@@ -2884,7 +2888,7 @@ public static class ShareClass
             DataSet ds0 = GetDataSetFromSql(strHQL, "T_ProjectPlanVersion");
             strPlanVerType = ds0.Tables[0].Rows[0][0].ToString().Trim();
 
-            if (strPlanVerType != "基准")
+            if (strPlanVerType != "Baseline")
             {
                 strHQL = "Select * From T_Project Where ProjectID = " + strProjectID;
                 strHQL += " and (PMCode = " + "'" + strCurrentUserCode + "'";
@@ -3009,7 +3013,7 @@ public static class ShareClass
     {
         string strHQL;
 
-        strHQL = "Select * From T_ProjectRisk Where EffectDate < now() and Status <> '解除' and ProjectID = " + strProjectID;
+        strHQL = "Select * From T_ProjectRisk Where EffectDate < now() and Status <> 'Resolved' and ProjectID = " + strProjectID;
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectRisk");
 
         return ds.Tables[0].Rows.Count;
@@ -3037,7 +3041,7 @@ public static class ShareClass
     {
         string strHQL;
 
-        strHQL = "Select * From T_Defectment Where DefectFinishedDate < now() and  Status <> '关闭' and DefectID Not In (Select DefectId From T_RelatedDefect Where ProjectID = " + strProjectID + ") ";
+        strHQL = "Select * From T_Defectment Where DefectFinishedDate < now() and  Status <> 'Closed' and DefectID Not In (Select DefectId From T_RelatedDefect Where ProjectID = " + strProjectID + ") ";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectRisk");
 
         return ds.Tables[0].Rows.Count;
@@ -3064,7 +3068,7 @@ public static class ShareClass
 
         strCmdText = "select count(*) from T_ProjectRisk ";
         strCmdText += " where ProjectID = " + strProjectID;
-        strCmdText += " and Status <> '解除'";
+        strCmdText += " and Status <> 'Resolved'";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strCmdText, "T_ProjectRisk");
 
@@ -3097,7 +3101,7 @@ public static class ShareClass
 
         strCmdText = "select count(*) from T_Defectment ";
         strCmdText += " where DefectID in (Select DefectID From T_RelatedDefect Where ProjectID = " + strProjectID + ")";
-        strCmdText += " and Status <> '关闭'";
+        strCmdText += " and Status <> 'Closed'";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strCmdText, "T_Defectment");
 
@@ -3131,16 +3135,16 @@ public static class ShareClass
         string strUserCode = HttpContext.Current.Session["UserCode"].ToString();
         string strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
-        strHQL = string.Format(@"Select  DocName  from T_Document as document where ((document.RelatedType = '项目' and document.RelatedID = {0})
-                   or (((document.RelatedType = '需求' and document.RelatedID in (select relatedReq.ReqID from T_RelatedReq as relatedReq where relatedReq.ProjectID = {0}))
-                   or (document.RelatedType = '工作流' and document.RelatedID in (Select workFlow.WLID From T_WorkFlow as workFlow Where workFlow.RelatedType = '项目' and workFlow.RelatedID = {0}))
+        strHQL = string.Format(@"Select  DocName  from T_Document as document where ((document.RelatedType = 'Project' and document.RelatedID = {0})
+                   or (((document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from T_RelatedReq as relatedReq where relatedReq.ProjectID = {0}))
+                   or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From T_WorkFlow as workFlow Where workFlow.RelatedType = 'Project' and workFlow.RelatedID = {0}))
                    or (document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from T_ProjectRisk as projectRisk where projectRisk.ProjectID = {0}))
-                   or (document.RelatedType = '任务' and document.RelatedID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.ProjectID = {0}))
-                   or (document.RelatedType = '计划' and document.RelatedID in (select workPlan.ID From T_ImplePlan as workPlan where workPlan.ProjectID = {0}))
-                   or (document.RelatedType = '工作流' and document.RelatedID in (Select workFlow.WLID From T_WorkFlow as workFlow Where workFlow.RelatedType = '计划' and workFlow.RelatedID in (select workPlan.ID From T_ImplePlan as workPlan where workPlan.ProjectID = {0})))
+                   or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.ProjectID = {0}))
+                   or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID From T_ImplePlan as workPlan where workPlan.ProjectID = {0}))
+                   or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From T_WorkFlow as workFlow Where workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID From T_ImplePlan as workPlan where workPlan.ProjectID = {0})))
                    or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from T_Meeting as meeting where meeting.RelatedID = {0}))
                    )))
-                   and rtrim(ltrim(document.Status)) <> '删除'", strProjectID, strUserCode, strDepartCode);
+                   and rtrim(ltrim(document.Status)) <> 'Deleted'", strProjectID, strUserCode, strDepartCode);
 
         //LogClass.WriteLogFile(strHQL);
 
@@ -3155,14 +3159,14 @@ public static class ShareClass
         string strHQL1, strHQL2;
 
         strHQL1 = string.Format(@"select t1.DocName,t2.MustUploadDoc FROM  t_documentForProjectPlanTemplate t1,T_Document t2
-            where t1.RelatedType='计划' and t1.Status<> '删除' and t1.RelatedID in (Select ID From T_ImplePlan Where ProjectID = {0})
-			and t2.RelatedType='计划' and t2.Status<> '删除' and t2.RelatedID in (Select ID From T_ImplePlan Where ProjectID = {0})
+            where t1.RelatedType='Plan' and t1.Status<> 'Deleted' and t1.RelatedID in (Select ID From T_ImplePlan Where ProjectID = {0})
+			and t2.RelatedType='Plan' and t2.Status<> 'Deleted' and t2.RelatedID in (Select ID From T_ImplePlan Where ProjectID = {0})
 			and trim(t1.DocName) = trim(t2.MustUploadDoc)", strProjectID);
         DataSet ds1 = ShareClass.GetDataSetFromSql(strHQL1, "T_Document");
 
         strHQL2 = string.Format(@"select * FROM   
             t_documentForProjectPlanTemplate
-            where RelatedType='计划' and Status <> '删除' and RelatedID in (Select ID From T_ImplePlan Where ProjectID = {0})", strProjectID);
+            where RelatedType='Plan' and Status <> 'Deleted' and RelatedID in (Select ID From T_ImplePlan Where ProjectID = {0})", strProjectID);
         DataSet ds2 = ShareClass.GetDataSetFromSql(strHQL2, "T_Document");
 
         return ds1.Tables[0].Rows.Count.ToString() + "/" + ds2.Tables[0].Rows.Count.ToString();
@@ -3239,7 +3243,7 @@ public static class ShareClass
             {
                 strHQL = "from ProjectStatus as projectStatus";
                 strHQL += " Where projectStatus.ProjectType = " + "'" + strProjectType + "'";
-                strHQL += " and projectStatus.Status not in ('新建','评审','计划','受理')";
+                strHQL += " and projectStatus.Status not in ('New','Review','Plan','Accepted')";
             }
             else
             {
@@ -3264,7 +3268,7 @@ public static class ShareClass
         strHQL = string.Format(@"select distinct A.Status, rtrim(A.HomeName) as HomeName,A.SortNumber from T_ProjectStatus A 
                 Where A.LangCode ='{0}' 
                 and A.SortNumber in (Select min(B.SortNumber) From T_ProjectStatus B Where B.LangCode = '{0}' and A.Status = B.Status)
-                and Status not in ( '删除', '归档')
+                and Status not in ( 'Deleted', 'Archived')
                 Order By A.SortNumber ASC", strLangCode);
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectStatus");
@@ -3279,7 +3283,7 @@ public static class ShareClass
         strHQL = string.Format(@"select distinct A.Status, rtrim(A.HomeName) as HomeName,A.SortNumber from T_ProjectStatus A 
                 Where A.LangCode ='{0}' 
                 and A.SortNumber in (Select min(B.SortNumber) From T_ProjectStatus B Where B.LangCode = '{0}' and A.Status = B.Status)
-                and Status not in ('新建','评审', '隐藏','删除','归档','暂停','终止')
+                and Status not in ('New','Review', 'Hided','Deleted','Archived','Pause','Stop')
                 Order By A.SortNumber ASC", strLangCode);
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectStatus");
@@ -3295,7 +3299,7 @@ public static class ShareClass
         strHQL = string.Format(@"select distinct A.Status, rtrim(A.HomeName) as HomeName,A.SortNumber from T_ProjectStatus A 
                 Where A.LangCode ='{0}' 
                 and A.SortNumber in (Select min(B.SortNumber) From T_ProjectStatus B Where B.LangCode = '{0}' and A.Status = B.Status)
-                and Status not in ( '删除', '归档')
+                and Status not in ( 'Deleted', 'Archived')
                 Order By A.SortNumber ASC", strLangCode);
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectStatus");
         DL_Status.DataSource = ds;
@@ -3470,7 +3474,7 @@ public static class ShareClass
     {
         string strHQL;
 
-        strHQL = "Select * From T_Project Where Status in ('挂起','取消','验收','结案','归档') and ProjectId = " + strProjectID;
+        strHQL = "Select * From T_Project Where Status in ('Suspended','Cancel','Acceptance','CaseClosed','Archived') and ProjectId = " + strProjectID;
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_Project");
         if (ds.Tables[0].Rows.Count > 0)
         {
@@ -3517,7 +3521,7 @@ public static class ShareClass
             strHQL = "Update T_WorkFlow Set ManHour = " + deTotalManHour.ToString() + " Where WLID = " + strWLID;
             ShareClass.RunSqlCommand(strHQL);
 
-            if (strRelatedType == "计划")
+            if (strRelatedType == "Plan")
             {
                 strHQL = "update T_ImplePlan Set ActualHour = " + ShareClass.GetTotalRealManHourByPlan(strRelatedID);
                 strHQL += " Where PID = " + strRelatedID;
@@ -3564,7 +3568,7 @@ public static class ShareClass
             strHQL = "Update T_WorkFlow Set Expense = " + deTotalExpense.ToString() + " Where WLID = " + strWLID;
             ShareClass.RunSqlCommand(strHQL);
 
-            if (strRelatedType == "计划")
+            if (strRelatedType == "Plan")
             {
                 strHQL = "update T_ImplePlan Set Expense = " + ShareClass.GetTotalRealExpenseByPlan(strRelatedID);
                 strHQL += " Where ID = " + strRelatedID;
@@ -3692,7 +3696,7 @@ public static class ShareClass
             DataSet ds0 = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectPlanVersion");
             strPlanVerType = ds0.Tables[0].Rows[0][0].ToString().Trim();
 
-            if (strPlanVerType != "基准")
+            if (strPlanVerType != "Baseline")
             {
                 strHQL = "Select * From T_Project Where ProjectID = " + strProjectID;
                 strHQL += " and (PMCode = " + "'" + strCurrentUserCode + "'";
@@ -3757,7 +3761,7 @@ public static class ShareClass
             DataSet ds0 = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectPlanVersion");
             strPlanVerType = ds0.Tables[0].Rows[0][0].ToString().Trim();
 
-            if (strPlanVerType != "基准")
+            if (strPlanVerType != "Baseline")
             {
                 strHQL = "Select * From T_Project Where ProjectID = " + strProjectID;
                 strHQL += " and (PMCode = " + "'" + strCurrentUserCode + "'";
@@ -3830,7 +3834,7 @@ public static class ShareClass
             DataSet ds0 = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectPlanVersion");
             strPlanVerType = ds0.Tables[0].Rows[0][0].ToString().Trim();
 
-            if (strPlanVerType != "基准")
+            if (strPlanVerType != "Baseline")
             {
                 strHQL = "Select * From T_Project Where ProjectID = " + strProjectID;
                 strHQL += " and (PMCode = " + "'" + strCurrentUserCode + "'";
@@ -4125,7 +4129,7 @@ public static class ShareClass
     {
         try
         {
-            if (strRelatedType == "计划")
+            if (strRelatedType == "Plan")
             {
                 UpdateTaskOrWorkflowPlanProgressAndExpenseWorkHour(strRelatedID);
             }
@@ -4229,7 +4233,7 @@ public static class ShareClass
     {
         try
         {
-            if (strRelatedType == "计划")
+            if (strRelatedType == "Plan")
             {
                 UpdateTaskPlanFinishedNumber(strRelatedID);
             }
@@ -4271,17 +4275,17 @@ public static class ShareClass
     //如果流程是由项目或项目计划发起的，那么增加项目日志到项目中
     public static void UpdateProjectDaiyWorkByWorkflow(string strRelatedType, string strRelatedID, string strWLID, string strContent, string strUserCode)
     {
-        if (strRelatedType == "项目" || strRelatedType == "计划")
+        if (strRelatedType == "Project" || strRelatedType == "Plan")
         {
             string strProjectID;
 
             try
             {
-                if (strRelatedType == "项目")
+                if (strRelatedType == "Project")
                 {
                     ShareClass.UpdateDailyWork(strUserCode, strRelatedID, "Workflow", strWLID, strContent);
                 }
-                if (strRelatedType == "计划")
+                if (strRelatedType == "Plan")
                 {
                     strProjectID = ShareClass.getProjectIDByPlanID(strRelatedID);
                     if (strProjectID != "")
@@ -4356,14 +4360,14 @@ public static class ShareClass
 
         try
         {
-            strHQL = "Select WLID From T_WorkFlowStep Where WLID In ( Select WLID From T_WorkFlow Where RelatedType = '计划' and RelatedID = " + strPlanID + ")";
+            strHQL = "Select WLID From T_WorkFlowStep Where WLID In ( Select WLID From T_WorkFlow Where RelatedType = 'Plan' and RelatedID = " + strPlanID + ")";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowStep");
 
             for (i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 strWLID = ds.Tables[0].Rows[i][0].ToString();
 
-                strHQL1 = "Select max(StepID) From T_WorkFlowStep Where Status = '通过' and WLID = " + strWLID;
+                strHQL1 = "Select max(StepID) From T_WorkFlowStep Where Status = 'Passed' and WLID = " + strWLID;
                 ds1 = ShareClass.GetDataSetFromSql(strHQL1, "T_WorkflowStep");
                 if (ds1.Tables[0].Rows.Count > 0)
                 {
@@ -4447,8 +4451,8 @@ public static class ShareClass
         ds1 = ShareClass.GetDataSetFromSql(strHQL, "T_TaskAssignRecord");
 
         strHQL = "Select COALESCE(Sum(ManHour),0) From T_WorkFlowStepDetail Where WLID In ";
-        strHQL += " (Select WLID From T_WorkFlow Where ((RelatedType = '项目' and RelatedID = " + strProjectID + ")";
-        strHQL += " Or (RelatedType = '计划' and RelatedID In (Select ID From T_ImplePlan Where ProjectID = " + strProjectID + "))))";
+        strHQL += " (Select WLID From T_WorkFlow Where ((RelatedType = 'Project' and RelatedID = " + strProjectID + ")";
+        strHQL += " Or (RelatedType = 'Plan' and RelatedID In (Select ID From T_ImplePlan Where ProjectID = " + strProjectID + "))))";
         strHQL += " and OperatorCode = " + "'" + strUserCode + "'";
         strHQL += " and to_char(CheckingTime,'yyyymmdd') = " + "'" + strWorkDate + "'";
 
@@ -4475,8 +4479,8 @@ public static class ShareClass
         ds1 = ShareClass.GetDataSetFromSql(strHQL, "T_TaskAssignRecord");
 
         strHQL = "Select COALESCE(Sum(Expense),0) From T_WorkFlowStepDetail Where WLID In ";
-        strHQL += " (Select WLID From T_WorkFlow Where ((RelatedType = '项目' and RelatedID = " + strProjectID + ")";
-        strHQL += " Or (RelatedType = '计划' and RelatedID In (Select ID From T_ImplePlan Where ProjectID = " + strProjectID + "))))";
+        strHQL += " (Select WLID From T_WorkFlow Where ((RelatedType = 'Project' and RelatedID = " + strProjectID + ")";
+        strHQL += " Or (RelatedType = 'Plan' and RelatedID In (Select ID From T_ImplePlan Where ProjectID = " + strProjectID + "))))";
         strHQL += " and OperatorCode = " + "'" + strUserCode + "'";
         strHQL += " and to_char(CheckingTime,'yyyymmdd') = " + "'" + strWorkDate + "'";
 
@@ -4549,15 +4553,15 @@ public static class ShareClass
         try
         {
             strHQL = "Select WLID From T_WorkFlowStep Where WLID In ";
-            strHQL += " ((Select WLID From T_WorkFlow Where RelatedType = '计划' and RelatedID In (Select ID From T_ImplePlan Where ProjectID = " + strProjectID + "))";
-            strHQL += " or (Select WLID From T_WorkFlow Where RelatedType = '项目' and RelatedID = " + strProjectID + "))";
+            strHQL += " ((Select WLID From T_WorkFlow Where RelatedType = 'Plan' and RelatedID In (Select ID From T_ImplePlan Where ProjectID = " + strProjectID + "))";
+            strHQL += " or (Select WLID From T_WorkFlow Where RelatedType = 'Project' and RelatedID = " + strProjectID + "))";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowStep");
 
             for (i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 strWLID = ds.Tables[0].Rows[i][0].ToString();
 
-                strHQL1 = "Select max(StepID) From T_WorkFlowStep Where Status = '通过' and WLID = " + strWLID;
+                strHQL1 = "Select max(StepID) From T_WorkFlowStep Where Status = 'Passed' and WLID = " + strWLID;
                 ds1 = ShareClass.GetDataSetFromSql(strHQL1, "T_WorkflowStep");
                 if (ds1.Tables[0].Rows.Count > 0)
                 {
@@ -4597,8 +4601,8 @@ public static class ShareClass
         try
         {
             strHQL = "Select WLID From T_WorkFlowStep Where WLID In ";
-            strHQL += " ((Select WLID From T_WorkFlow Where RelatedType = '计划' and RelatedID In (Select ID From T_ImplePlan Where ProjectID = " + strProjectID + "))";
-            strHQL += " or (Select WLID From T_WorkFlow Where RelatedType = '项目' and RelatedID = " + strProjectID + "))";
+            strHQL += " ((Select WLID From T_WorkFlow Where RelatedType = 'Plan' and RelatedID In (Select ID From T_ImplePlan Where ProjectID = " + strProjectID + "))";
+            strHQL += " or (Select WLID From T_WorkFlow Where RelatedType = 'Project' and RelatedID = " + strProjectID + "))";
             strHQL += " and StepID in (Select StepID From T_WorkflowStepDetail Where OperatorCode = '" + strUserCode + "')";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowStep");
 
@@ -4606,7 +4610,7 @@ public static class ShareClass
             {
                 strWLID = ds.Tables[0].Rows[i][0].ToString();
 
-                strHQL1 = "Select max(StepID) From T_WorkFlowStep Where Status = '通过' and WLID = " + strWLID;
+                strHQL1 = "Select max(StepID) From T_WorkFlowStep Where Status = 'Passed' and WLID = " + strWLID;
                 ds1 = ShareClass.GetDataSetFromSql(strHQL1, "T_WorkflowStep");
                 if (ds1.Tables[0].Rows.Count > 0)
                 {
@@ -4876,7 +4880,7 @@ public static class ShareClass
 
         strLangCode = HttpContext.Current.Session["LangCode"].ToString();
 
-        strHQL = "Select HomeName From T_OtherStatus Where Status = " + "'" + strStatus + "'";
+        strHQL = "Select HomeName From T_OtherStatus Where Status = " + "'" + strStatus.Trim() + "'";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_OtherStatus");
@@ -4899,7 +4903,7 @@ public static class ShareClass
 
         strLangCode = HttpContext.Current.Session["LangCode"].ToString();
 
-        strHQL = "Select HomeName From T_PlanStatus Where Status = " + "'" + strStatus + "'";
+        strHQL = "Select HomeName From T_PlanStatus Where Status = " + "'" + strStatus.Trim() + "'";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_PlanStatus");
@@ -4922,7 +4926,7 @@ public static class ShareClass
 
         strLangCode = HttpContext.Current.Session["LangCode"].ToString();
 
-        strHQL = "Select HomeName From T_ReqStatus Where Status = " + "'" + strStatus + "'";
+        strHQL = "Select HomeName From T_ReqStatus Where Status = " + "'" + strStatus.Trim() + "'";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RequireStatus");
@@ -4945,7 +4949,7 @@ public static class ShareClass
 
         strLangCode = HttpContext.Current.Session["LangCode"].ToString();
 
-        strHQL = "Select HomeName From T_DefectStatus Where Status = " + "'" + strStatus + "'";
+        strHQL = "Select HomeName From T_DefectStatus Where Status = " + "'" + strStatus.Trim() + "'";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_DefectStatus");
@@ -4968,7 +4972,7 @@ public static class ShareClass
 
         strLangCode = HttpContext.Current.Session["LangCode"].ToString();
 
-        strHQL = "Select HomeName From T_TaskStatus Where Status = " + "'" + strStatus + "'";
+        strHQL = "Select HomeName From T_TaskStatus Where Status = " + "'" + strStatus.Trim() + "'";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_TaskStatus");
@@ -4991,7 +4995,7 @@ public static class ShareClass
 
         strLangCode = HttpContext.Current.Session["LangCode"].ToString();
 
-        strHQL = "Select HomeName From T_WLStatus Where Status = " + "'" + strStatus + "'";
+        strHQL = "Select HomeName From T_WLStatus Where Status = " + "'" + strStatus.Trim() + "'";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkflowStatus");
@@ -5030,7 +5034,7 @@ public static class ShareClass
     {
         string strHQL;
 
-        strHQL = "Select * From T_ApproveFlow Where Type = '工作流' and RelatedID = " + strWLID + " and UserName = 'Timer'";
+        strHQL = "Select * From T_ApproveFlow Where Type = 'Workflow' and RelatedID = " + strWLID + " and UserName = 'Timer'";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ApproveFlow");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -5051,9 +5055,7 @@ public static class ShareClass
 
         strLangCode = HttpContext.Current.Session["LangCode"].ToString();
 
-        strHQL = "Select HomeName From T_ProjectStatus Where Status = " + "'" + strStatus + "'";
-        strHQL += " and LangCode = " + "'" + strLangCode + "'";
-        strHQL += " and ProjectType = " + "'" + strProjectType + "'";
+        strHQL = string.Format(@"Select HomeName From T_ProjectStatus Where Status = '{0}' and LangCode = '{1}' and ProjectType = '{2}'", strStatus.Trim(), strLangCode, strProjectType.Trim());
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectStatus");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -5269,7 +5271,7 @@ public static class ShareClass
         string strWidth;
         int intDefaultSchedule = 0, intRealSchedule = 0;
 
-        intVerID = GetProjectPlanVersionVerID(strProjectID, "基准");
+        intVerID = GetProjectPlanVersionVerID(strProjectID, "Baseline");
 
         if (intVerID > 0)
         {
@@ -5298,7 +5300,7 @@ public static class ShareClass
             }
 
             strHQL = string.Format(@"Select Percent_Done From T_ImplePlan Where Parent_ID = 0 and ProjectID = {0}
-                       and VerID In(Select VerID From T_ProjectPlanVersion Where ProjectID = {0} and Type = '基准')", strProjectID);
+                       and VerID In(Select VerID From T_ProjectPlanVersion Where ProjectID = {0} and Type = 'Baseline')", strProjectID);
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_ImplePlan");
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -5340,7 +5342,7 @@ public static class ShareClass
         int intVerID;
         string strCost;
 
-        intVerID = GetProjectPlanVersionVerID(strProjectID, "基准");
+        intVerID = GetProjectPlanVersionVerID(strProjectID, "Baseline");
 
         if (intVerID > 0)
         {
@@ -5443,7 +5445,7 @@ public static class ShareClass
         strHQL = "Select COALESCE(Sum(RealManHour),0) From T_ProjectTask Where PlanID = " + strPlanID;
         ds1 = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectTask");
 
-        strHQL = "Select COALESCE(Sum(ManHour),0) From T_WorkFlow Where RelatedType = '计划' and RelatedID = " + strPlanID;
+        strHQL = "Select COALESCE(Sum(ManHour),0) From T_WorkFlow Where RelatedType = 'Plan' and RelatedID = " + strPlanID;
         ds2 = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlow");
 
         return (decimal.Parse(ds1.Tables[0].Rows[0][0].ToString()) + decimal.Parse(ds2.Tables[0].Rows[0][0].ToString())).ToString();
@@ -5459,7 +5461,7 @@ public static class ShareClass
         strHQL = "Select COALESCE(Sum(Expense),0) From T_ProjectTask Where PlanID = " + strPlanID;
         ds1 = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectTask");
 
-        strHQL = "Select COALESCE(Sum(Expense),0) From T_WorkFlow Where RelatedType = '计划' and RelatedID = " + strPlanID;
+        strHQL = "Select COALESCE(Sum(Expense),0) From T_WorkFlow Where RelatedType = 'Plan' and RelatedID = " + strPlanID;
         ds2 = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlow");
 
         return (decimal.Parse(ds1.Tables[0].Rows[0][0].ToString()) + decimal.Parse(ds2.Tables[0].Rows[0][0].ToString())).ToString();
@@ -5559,7 +5561,7 @@ public static class ShareClass
 
                 try
                 {
-                    strHQL = "Update T_Document Set Status = '删除' Where DocID = " + strDocID;
+                    strHQL = "Update T_Document Set Status = 'Deleted' Where DocID = " + strDocID;
                     ShareClass.RunSqlCommand(strHQL);
                 }
                 catch
@@ -5711,7 +5713,7 @@ public static class ShareClass
         string strProjectType, strImpact, strSchedule;
         DataSet ds1, ds2;
 
-        intVerID = GetProjectPlanVersionVerID(strProjectID, "在用");
+        intVerID = GetProjectPlanVersionVerID(strProjectID, "InUse");
 
         if (intVerID > 0)
         {
@@ -5927,7 +5929,7 @@ public static class ShareClass
 
             if (intDays > 0)
             {
-                if (strProjectStatus == "结案" | strProjectStatus == "取消")
+                if (strProjectStatus == "CaseClosed" | strProjectStatus == "Cancel")
                 {
                     ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_MoreTime")).Text = Resources.lang.ChaoQi;
                     ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_DelayDays")).Text = "0";
@@ -5948,7 +5950,7 @@ public static class ShareClass
             }
             else
             {
-                if (strProjectStatus == "结案" | strProjectStatus == "取消")
+                if (strProjectStatus == "CaseClosed" | strProjectStatus == "Cancel")
                 {
                     ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_MoreTime")).Text = Resources.lang.ShengYu;
                     ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_DelayDays")).Text = "0";
@@ -6026,18 +6028,18 @@ public static class ShareClass
         string strCurrentDate = DateTime.Now.ToString("yyyyMMdd");
         string strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
-        strHQL = "from Document as document where (((document.RelatedType = '项目' and document.RelatedID = " + strProjectID + ")";
+        strHQL = "from Document as document where (((document.RelatedType = 'Project' and document.RelatedID = " + strProjectID + ")";
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
         strHQL += " or (document.Visible in ( '部门','全体'))))";
-        strHQL += " or (((document.RelatedType = '需求' and document.RelatedID in (select relatedDefect.DefectID from RelatedDefect as relatedDefect where relatedDefect.ProjectID = " + strProjectID + "))";
+        strHQL += " or (((document.RelatedType = 'Requirement' and document.RelatedID in (select relatedDefect.DefectID from RelatedDefect as relatedDefect where relatedDefect.ProjectID = " + strProjectID + "))";
         strHQL += " or (document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";
-        strHQL += " or (document.RelatedType = '任务' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
-        strHQL += " or (document.RelatedType = '计划' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
-        strHQL += " or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='项目' and  meeting.RelatedID = " + strProjectID + "))";
+        strHQL += " or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
+        strHQL += " or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
+        strHQL += " or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Project' and  meeting.RelatedID = " + strProjectID + "))";
         strHQL += " and ((document.Visible in ('会议','部门') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";
         strHQL += " or (document.Visible = '全体' )))))";
         strHQL += " and to_char(document.UploadTime,'yyyymmdd') = " + "'" + strCurrentDate + "'";
-        strHQL += " and rtrim(ltrim(document.Status)) <> '删除' Order by document.DocID DESC";
+        strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
 
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);
@@ -6208,7 +6210,7 @@ public static class ShareClass
 
         DocTypeBLL docTypeBLL = new DocTypeBLL();
         strHQL = string.Format(@"select * from T_WorkFlowTemplate  where (TemName in (Select wftemplatename From T_RelatedWorkflowTemplate Where RelatedType = '{0}' and RelatedID = {1})
-                                 Or (Type = '文件评审' and Authority = '所有' )) and Visible = 'YES' Order By SortNumber
+                                 Or (Type = 'DocumentReview' and Authority = 'All' )) and Visible = 'YES' Order By SortNumber
                                 ", strRelatedType, strRelatedID);
         DataSet ds1 = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTemplate");
 
@@ -6216,7 +6218,7 @@ public static class ShareClass
         DL_WorkFlowTemName.DataBind();
 
         strHQL = string.Format(@"select * from T_WorkFlowTemplate  where (TemName in (Select wftemplatename From T_RelatedWorkflowTemplate Where RelatedType = '{0}' and RelatedID = {1}  and '{2}' like '%'|| wftemplatename ||'%' )
-                              Or (Type = '文件评审' and Authority = '所有' ))
+                              Or (Type = 'DocumentReview' and Authority = 'All' ))
                               and Visible = 'YES'", strRelatedType, strRelatedID, strRelateName);
         DataSet ds2 = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTemplate");
 
@@ -6245,7 +6247,7 @@ public static class ShareClass
                 document = ShareClass.GetDocumentByDocID(strDocID);
                 strDocName = document.DocName.Trim();
 
-                strHQL = string.Format(@"Select * From T_Document Where RelatedType ='工作流' and DocName ='{0}'", strDocName);
+                strHQL = string.Format(@"Select * From T_Document Where RelatedType ='Workflow' and DocName ='{0}'", strDocName);
                 DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_Document");
 
                 if (ds.Tables[0].Rows.Count > 0)
@@ -6347,7 +6349,7 @@ public static class ShareClass
         lst = documentBLL.GetAllDocuments(strHQL);
         Document document = (Document)lst[0];
 
-        document.RelatedType = "工作流";
+        document.RelatedType = "Workflow";
         document.RelatedID = intRelatedID;
         document.RelatedName = strFromDocID;
         document.UploadTime = DateTime.Now;
@@ -6411,7 +6413,7 @@ public static class ShareClass
     {
         string strHQL;
 
-        strHQL = string.Format(@"Select * From T_Document Where RelatedType ='工作流' and DocName ='{0}' and DocID ={1}", strDocName, strDocID1);
+        strHQL = string.Format(@"Select * From T_Document Where RelatedType ='Workflow' and DocName ='{0}' and DocID ={1}", strDocName, strDocID1);
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_Document");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -7108,9 +7110,9 @@ public static class ShareClass
         {
             strWFStatus = ShareClass.GetWorkFlowStatus(strRelatedWorkflowID);
             strStepStatus = ShareClass.GetWorkFlowStepStatus(strRelatedWorkflowStepID);
-            if ((strStepStatus == "处理中" | strStepStatus == "新建") & (strWFStatus != "通过" & strWFStatus != "结案"))
+            if ((strStepStatus == "InProgress" | strStepStatus == "New") & (strWFStatus != "Passed" & strWFStatus != "CaseClosed"))
             {
-                if (strWFStatus == "处理中" & strRelatedWorkflowStepID == "0")
+                if (strWFStatus == "InProgress" & strRelatedWorkflowStepID == "0")
                 {
                     BT_NewMain.Visible = false;
                 }
@@ -7137,7 +7139,7 @@ public static class ShareClass
         {
             strWFStatus = ShareClass.GetWorkFlowStatus(strRelatedWorkflowID);
             strStepStatus = ShareClass.GetWorkFlowStepStatus(strRelatedWorkflowStepID);
-            if (!((strStepStatus == "处理中" | strStepStatus == "新建") & (strWFStatus != "通过" & strWFStatus != "结案")))
+            if (!((strStepStatus == "InProgress" | strStepStatus == "New") & (strWFStatus != "Passed" & strWFStatus != "CaseClosed")))
             {
                 return false;
             }
@@ -7175,9 +7177,9 @@ public static class ShareClass
         {
             strWFStatus = ShareClass.GetWorkFlowStatus(strRelatedWorkflowID);
             strStepStatus = ShareClass.GetWorkFlowStepStatus(strRelatedWorkflowStepID);
-            if ((strStepStatus == "处理中" | strStepStatus == "新建") & (strWFStatus != "通过" & strWFStatus != "结案"))
+            if ((strStepStatus == "InProgress" | strStepStatus == "New") & (strWFStatus != "Passed" & strWFStatus != "CaseClosed"))
             {
-                if (strWFStatus == "处理中" & strRelatedWorkflowStepID == "0")
+                if (strWFStatus == "InProgress" & strRelatedWorkflowStepID == "0")
                 {
                     BT_NewDetail.Visible = false;
                 }
@@ -7210,7 +7212,7 @@ public static class ShareClass
         {
             strWFStatus = ShareClass.GetWorkFlowStatus(strRelatedWorkflowID);
             strStepStatus = ShareClass.GetWorkFlowStepStatus(strRelatedWorkflowStepID);
-            if (!((strStepStatus == "处理中" | strStepStatus == "新建") & (strWFStatus != "通过" & strWFStatus != "结案")))
+            if (!((strStepStatus == "InProgress" | strStepStatus == "New") & (strWFStatus != "Passed" & strWFStatus != "CaseClosed")))
             {
                 return false;
             }
@@ -7317,7 +7319,7 @@ public static class ShareClass
         }
         else
         {
-            return "新建";
+            return "New";
         }
     }
 
@@ -7340,7 +7342,7 @@ public static class ShareClass
         }
         else
         {
-            return "新建";
+            return "New";
         }
     }
 
@@ -7603,7 +7605,7 @@ public static class ShareClass
         string strParentDepartString = TakeTopCore.CoreShareClass.InitialParentDepartmentStringByAuthority(strUserCode);
         string strUnderDepartString = TakeTopCore.CoreShareClass.InitialUnderDepartmentStringByAuthority(strUserCode);
 
-        strHQL = "Select TemName From T_WorkFlowTemplate Where Type = " + "'" + strWFType + "'" + " and Authority = '所有'";
+        strHQL = "Select TemName From T_WorkFlowTemplate Where Type = " + "'" + strWFType + "'" + " and Authority = 'All'";
         //strHQL += " and (BelongDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))";
         strHQL += " and (BelongDepartCode in " + strParentDepartString;
         strHQL += " Or BelongDepartCode in " + strUnderDepartString;
@@ -7624,7 +7626,7 @@ public static class ShareClass
         string strWFStepStatus, strStepName;
         DataSet ds;
 
-        strHQL = "Select A.SortNumber,COALESCE(c.Status,'处理中') as Status,A.StepName From T_WorkFlowTStep A";
+        strHQL = "Select A.SortNumber,COALESCE(c.Status,'InProgress') as Status,A.StepName From T_WorkFlowTStep A";
         strHQL += " Left Join T_WorkFlow B On A.TemName = B.TemName ";
         strHQL += " Left Join T_WorkFlowStep C On  A.SortNumber = C.SortNumber and B.WLID = C.WLID  ";
         strHQL += " Where A.TemName = '" + strTemName + "' and B.WLID = " + strWLID;
@@ -7633,7 +7635,7 @@ public static class ShareClass
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTStep");
         if (ds.Tables[0].Rows.Count == 0)
         {
-            strHQL = "Select A.SortNumber,COALESCE(c.Status,'处理中') as Status,A.StepName From T_WorkFlowTStep A";
+            strHQL = "Select A.SortNumber,COALESCE(c.Status,'InProgress') as Status,A.StepName From T_WorkFlowTStep A";
             strHQL += " Left Join T_WorkFlowBackup B On A.TemName = B.TemName ";
             strHQL += " Left Join T_WorkFlowStepBackup C On  A.SortNumber = C.SortNumber and B.WLID = C.WLID  ";
             strHQL += " Where A.TemName = '" + strTemName + "' and B.WLID = " + strWLID;
@@ -7655,7 +7657,7 @@ public static class ShareClass
                     strWFStepStatus = ds.Tables[0].Rows[i][1].ToString().Trim();
                     strStepName = ds.Tables[0].Rows[i][2].ToString().Trim();
 
-                    if (strWFStepStatus == "通过")
+                    if (strWFStepStatus == "Passed")
                     {
                         ((ImageButton)Repeater1.Items[i].FindControl("IBT_WFStep")).ImageUrl = "Images/GreenDump.png";
                     }
@@ -7737,30 +7739,30 @@ public static class ShareClass
         {
             if (strOperation == "Agree")
             {
-                if (strWFType == "客服评审")
+                if (strWFType == "CustomerServiceReview")
                 {
-                    strHQL = "Update T_CustomerQuestion Set Status = '完成' Where ID = " + strRelatedID;
+                    strHQL = "Update T_CustomerQuestion Set Status = 'Completed' Where ID = " + strRelatedID;
                     ShareClass.RunSqlCommand(strHQL);
                 }
 
-                if (strWFType == "车辆申请")
+                if (strWFType == "VehicleRequest")
                 {
-                    strHQL = "Update T_CarApplyForm Set Status = '通过' Where ID  = " + strRelatedID;
+                    strHQL = "Update T_CarApplyForm Set Status = 'Passed' Where ID  = " + strRelatedID;
                     ShareClass.RunSqlCommand(strHQL);
                 }
             }
 
             if (strOperation == "Cancel")
             {
-                if (strWFType == "客服评审")
+                if (strWFType == "CustomerServiceReview")
                 {
-                    strHQL = "Update T_CustomerQuestion Set Status = '处理中' Where ID = " + strRelatedID;
+                    strHQL = "Update T_CustomerQuestion Set Status = 'InProgress' Where ID = " + strRelatedID;
                     ShareClass.RunSqlCommand(strHQL);
                 }
 
-                if (strWFType == "车辆申请")
+                if (strWFType == "VehicleRequest")
                 {
-                    strHQL = "Update T_CarApplyForm Set Status = '处理中' Where ID  = " + strRelatedID;
+                    strHQL = "Update T_CarApplyForm Set Status = 'InProgress' Where ID  = " + strRelatedID;
                     ShareClass.RunSqlCommand(strHQL);
                 }
             }
@@ -7890,7 +7892,7 @@ public static class ShareClass
 
         strHQL = "from Constract as constract where ";
         strHQL += " constract.ParentCode = ''";
-        strHQL += " and constract.Status not in ('归档','删除') ";
+        strHQL += " and constract.Status not in ('Archived','Deleted') ";
         strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
 
         ConstractBLL constractBLL = new ConstractBLL();
@@ -7929,7 +7931,7 @@ public static class ShareClass
 
         strHQL = "from Constract as constract where ";
         strHQL += " constract.ParentCode = " + "'" + strParentCode + "'";
-        strHQL += " and constract.Status not in ('归档','删除') ";
+        strHQL += " and constract.Status not in ('Archived','Deleted') ";
         strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
 
         lst1 = constractBLL.GetAllConstracts(strHQL);
@@ -7951,7 +7953,7 @@ public static class ShareClass
 
             strHQL = "from Constract as constract where ";
             strHQL += " constract.ParentCode = " + "'" + strConstractCode + "'";
-            strHQL += " and constract.Status not in ('归档','删除') ";
+            strHQL += " and constract.Status not in ('Archived','Deleted') ";
             strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
             lst2 = constractBLL.GetAllConstracts(strHQL);
 
@@ -8105,10 +8107,10 @@ public static class ShareClass
 
         strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
-        strHQL = "from DocType as docType  where ((docType.SaveType = '公司') or (docType.SaveType = '集团') or (docType.SaveType = '所有') ";
+        strHQL = "from DocType as docType  where ((docType.SaveType = '公司') or (docType.SaveType = '集团') or (docType.SaveType = 'All') ";
         strHQL += " or (docType.UserCode = " + "'" + strUserCode + "'" + ")";
         strHQL += " or (docType.SaveType = '部门' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
-        strHQL += " or (docType.SaveType not in ('所有','集团','公司','个人','部门') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
+        strHQL += " or (docType.SaveType not in ('All','集团','公司','个人','部门') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
         strHQL += " and docType.ParentID not in (select docType.ID from DocType as docType)";
         strHQL += " order by docType.SortNumber ASC";
 
@@ -8146,10 +8148,10 @@ public static class ShareClass
         DocTypeBLL docTypeBLL = new DocTypeBLL();
         DocType docType = new DocType();
 
-        strHQL = "from DocType as docType  where ((docType.SaveType = '公司') or (docType.SaveType = '集团')  or (docType.SaveType = '所有') ";
+        strHQL = "from DocType as docType  where ((docType.SaveType = '公司') or (docType.SaveType = '集团')  or (docType.SaveType = 'All') ";
         strHQL += " or (docType.UserCode = " + "'" + strUserCode + "'" + ")";
         strHQL += " or (docType.SaveType = '部门' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
-        strHQL += " or (docType.SaveType not in ('所有','集团','公司','个人','部门') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
+        strHQL += " or (docType.SaveType not in ('All','集团','公司','个人','部门') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
         strHQL += " and docType.ParentID = " + strParentID;
         strHQL += " order by docType.SortNumber ASC";
 
@@ -8197,19 +8199,19 @@ public static class ShareClass
 
         if (strUserCode == "ADMIN")
         {
-            strHQL = "from DocType as docType  where ((docType.SaveType = '公司') or (docType.SaveType = '集团')  or (docType.SaveType = '所有')";
+            strHQL = "from DocType as docType  where ((docType.SaveType = '公司') or (docType.SaveType = '集团')  or (docType.SaveType = 'All')";
             strHQL += " or (docType.UserCode = " + "'" + strUserCode + "'" + ")";
             strHQL += " or (docType.SaveType = '部门' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
-            strHQL += " or (docType.SaveType not in ('所有','集团','公司','个人','部门') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
+            strHQL += " or (docType.SaveType not in ('All','集团','公司','个人','部门') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
             strHQL += " and docType.ParentID not in (select docType.ID from DocType as docType)";
             strHQL += " order by docType.SortNumber ASC";
         }
         else
         {
-            strHQL = "from DocType as docType  where ((docType.SaveType = '公司') or (docType.SaveType = '集团')  or (docType.SaveType = '所有') ";
+            strHQL = "from DocType as docType  where ((docType.SaveType = '公司') or (docType.SaveType = '集团')  or (docType.SaveType = 'All') ";
             strHQL += " or (docType.UserCode = " + "'" + strUserCode + "'" + ")";
             strHQL += " or (docType.SaveType = '部门' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
-            strHQL += " or (docType.SaveType not in ('所有','集团','公司','个人','部门') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
+            strHQL += " or (docType.SaveType not in ('All','集团','公司','个人','部门') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
             strHQL += " and docType.ParentID not in (select docType.ID from DocType as docType)";
             strHQL += " and docType.Type not in ('任务库','知识库')";
             strHQL += " order by docType.SortNumber ASC";
@@ -8251,19 +8253,19 @@ public static class ShareClass
 
         if (strUserCode == "ADMIN")
         {
-            strHQL = "from DocType as docType  where ((docType.SaveType = '公司') or (docType.SaveType = '集团')  or (docType.SaveType = '所有')";
+            strHQL = "from DocType as docType  where ((docType.SaveType = '公司') or (docType.SaveType = '集团')  or (docType.SaveType = 'All')";
             strHQL += " or (docType.UserCode = " + "'" + strUserCode + "'" + ")";
             strHQL += " or (docType.SaveType = '部门' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
-            strHQL += " or (docType.SaveType not in ('所有','集团','公司','个人','部门') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
+            strHQL += " or (docType.SaveType not in ('All','集团','公司','个人','部门') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
             strHQL += " and docType.ParentID = " + strParentID;
             strHQL += " order by docType.SortNumber ASC";
         }
         else
         {
-            strHQL = "from DocType as docType  where ((docType.SaveType = '公司') or (docType.SaveType = '集团')  or (docType.SaveType = '所有') ";
+            strHQL = "from DocType as docType  where ((docType.SaveType = '公司') or (docType.SaveType = '集团')  or (docType.SaveType = 'All') ";
             strHQL += " or (docType.UserCode = " + "'" + strUserCode + "'" + ")";
             strHQL += " or (docType.SaveType = '部门' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
-            strHQL += " or (docType.SaveType not in ('所有','集团','公司','个人','部门') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
+            strHQL += " or (docType.SaveType not in ('All','集团','公司','个人','部门') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
             strHQL += " and docType.ParentID = " + strParentID;
             strHQL += " and docType.Type not in ('任务库','知识库')";
             strHQL += " order by docType.SortNumber ASC";
@@ -8324,34 +8326,34 @@ public static class ShareClass
 
         strHQL = "from DocTypeFilter as docTypeFilter where docTypeFilter.RelatedType = " + "'" + strRelatedType + "'" + " and docTypeFilter.RelatedID = " + strRelatedID;
 
-        if (strRelatedType == "项目")
+        if (strRelatedType == "Project")
         {
             strHQL = "from DocTypeFilter as docTypeFilter where docTypeFilter.DocType in (";
-            strHQL += "Select distinct document.DocType from Document as document where (((document.RelatedType = '项目' and document.RelatedID = " + strRelatedID + ")";
+            strHQL += "Select distinct document.DocType from Document as document where (((document.RelatedType = 'Project' and document.RelatedID = " + strRelatedID + ")";
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
             strHQL += " or (document.Visible in ( '部门','全体'))))";
-            strHQL += " or (((document.RelatedType = '需求' and document.RelatedID in (select relatedDefect.DefectID from RelatedDefect as relatedDefect where relatedDefect.ProjectID = " + strRelatedID + "))";
+            strHQL += " or (((document.RelatedType = 'Requirement' and document.RelatedID in (select relatedDefect.DefectID from RelatedDefect as relatedDefect where relatedDefect.ProjectID = " + strRelatedID + "))";
             strHQL += " or (document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strRelatedID + "))";
-            strHQL += " or (document.RelatedType = '任务' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strRelatedID + "))";
-            strHQL += " or (document.RelatedType = '计划' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strRelatedID + "))";
-            strHQL += " or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='项目' and  meeting.RelatedID = " + strRelatedID + "))";
+            strHQL += " or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strRelatedID + "))";
+            strHQL += " or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strRelatedID + "))";
+            strHQL += " or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Project' and  meeting.RelatedID = " + strRelatedID + "))";
             strHQL += " and ((document.Visible in ('会议','部门') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";
             strHQL += " or (document.Visible = '全体' )))))";
-            strHQL += " and rtrim(ltrim(document.Status)) <> '删除' )";
+            strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' )";
         }
 
         if (strRelatedType == "ProjectType")
         {
             strHQL = "from DocTypeFilter as docTypeFilter where docTypeFilter.DocType in (";
             strHQL += "Select distinct document.DocType from Document as document where document.RelatedName = " + "'" + strRelatedName + "'";
-            strHQL += " and document.Status <> '删除' )";
+            strHQL += " and document.Status <> 'Deleted' )";
         }
 
         if (strRelatedType == "知识管理")
         {
             strHQL = "from DocTypeFilter as docTypeFilter where docTypeFilter.DocType in (";
             strHQL += "Select distinct document.DocType from Document as document where document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'";
-            strHQL += " and document.Status <> '删除' )";
+            strHQL += " and document.Status <> 'Deleted' )";
         }
 
         DocTypeFilterBLL docTypeFilterBLL = new DocTypeFilterBLL();
@@ -8396,19 +8398,19 @@ public static class ShareClass
 
         if (strUserCode == "ADMIN")
         {
-            strHQL = "from DocType as docType  where ((docType.SaveType = '公司') or (docType.SaveType = '集团') or (docType.SaveType = '所有')";
+            strHQL = "from DocType as docType  where ((docType.SaveType = '公司') or (docType.SaveType = '集团') or (docType.SaveType = 'All')";
             strHQL += " or (docType.UserCode = " + "'" + strUserCode + "'" + ")";
             strHQL += " or (docType.SaveType = '部门' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
-            strHQL += " or (docType.SaveType not in ('所有','集团','公司','个人','部门') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
+            strHQL += " or (docType.SaveType not in ('All','集团','公司','个人','部门') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
             strHQL += " and docType.ParentID not in (select docType.ID from DocType as docType)";
             strHQL += " order by docType.SortNumber ASC";
         }
         else
         {
-            strHQL = "from DocType as docType  where ((docType.SaveType = '公司') or (docType.SaveType = '集团')  or (docType.SaveType = '所有')";
+            strHQL = "from DocType as docType  where ((docType.SaveType = '公司') or (docType.SaveType = '集团')  or (docType.SaveType = 'All')";
             strHQL += " or (docType.UserCode = " + "'" + strUserCode + "'" + ")";
             strHQL += " or (docType.SaveType = '部门' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
-            strHQL += " or (docType.SaveType not in ('所有','集团','公司','个人','部门') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
+            strHQL += " or (docType.SaveType not in ('All','集团','公司','个人','部门') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
             strHQL += " and docType.ParentID not in (select docType.ID from DocType as docType)";
             strHQL += " and docType.Type not in ('任务库','知识库')";
             strHQL += " order by docType.SortNumber ASC";
@@ -8558,7 +8560,7 @@ public static class ShareClass
 
             node2 = new TreeNode();
 
-            if (project.Status.Trim() == "删除")
+            if (project.Status.Trim() == "Deleted")
             {
                 node2.Text = "<strike><font size='2'  color='#FF0000'>" + strProjectID + "." + strProject + "</font></strike>";
             }
@@ -8602,7 +8604,7 @@ public static class ShareClass
             TreeNode node = new TreeNode();
             node.Target = strProjectID;
 
-            if (project.Status.Trim() == "删除")
+            if (project.Status.Trim() == "Deleted")
             {
                 node.Text = "<strike><font size='2'  color='#FF0000'>" + strProjectID + "." + strProject + "</font></strike>";
             }
@@ -8647,7 +8649,7 @@ public static class ShareClass
         strHQL = "from Project as project where ";
         strHQL += " project.ParentID = 1";
         strHQL += " and project.PMCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
-        strHQL += " and project.Status not in ('删除','归档') order by project.ProjectID DESC";
+        strHQL += " and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
@@ -8682,7 +8684,7 @@ public static class ShareClass
 
         strHQL = "from Project as project where project.ParentID = " + strParentID;
         strHQL += " and project.PMCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
-        strHQL += " and project.Status not in ('删除','归档') order by project.ProjectID DESC";
+        strHQL += " and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         lst1 = projectBLL.GetAllProjects(strHQL);
 
         for (int i = 0; i < lst1.Count; i++)
@@ -8741,7 +8743,7 @@ public static class ShareClass
             strHQL += " (Select departSuperUserRelatedProductLine.ProductLineName From DepartSuperUserRelatedProductLine as departSuperUserRelatedProductLine Where departSuperUserRelatedProductLine.UserCode = " + "'" + strUserCode + "'" + "))";
         }
 
-        strHQL += "  and project.Status not in ('删除','归档') order by project.ProjectID DESC";
+        strHQL += "  and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
@@ -8776,7 +8778,7 @@ public static class ShareClass
 
         strHQL = "from Project as project where project.ParentID = " + strParentID;
         strHQL += " and project.PMCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
-        strHQL += " and project.Status not in ('删除','归档') order by project.ProjectID DESC";
+        strHQL += " and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         lst1 = projectBLL.GetAllProjects(strHQL);
 
         for (int i = 0; i < lst1.Count; i++)
@@ -8826,7 +8828,7 @@ public static class ShareClass
         TreeView1.Nodes.Add(node1);
 
         strHQL = "from Project as project where project.UserCode = " + "'" + strUserCode + "'" + " and project.PMCode in (select memberLevel.UnderCode from MemberLevel as memberLevel where memberLevel.ProjectVisible = 'YES' and memberLevel.UserCode = " + "'" + strUserCode + "'" + ") ";
-        strHQL += " and project.Status not in ('删除','归档') ";
+        strHQL += " and project.Status not in ('Deleted','Archived') ";
         strHQL += " order by project.ProjectID DESC";
 
         ProjectBLL projectBLL = new ProjectBLL();
@@ -8861,7 +8863,7 @@ public static class ShareClass
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
-        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('删除','归档') order by project.ProjectID DESC";
+        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         lst1 = projectBLL.GetAllProjects(strHQL);
 
         for (int i = 0; i < lst1.Count; i++)
@@ -8916,7 +8918,7 @@ public static class ShareClass
             strHQL += " (Select departRelatedProductLine.ProductLineName From DepartRelatedProductLine as departRelatedProductLine Where departRelatedProductLine.DepartCode = " + "'" + strOperatorDepartCode + "'" + "))";
         }
 
-        strHQL += " and project.Status not in ('删除','归档') ";
+        strHQL += " and project.Status not in ('Deleted','Archived') ";
         strHQL += " order by project.ProjectID DESC";
 
         ProjectBLL projectBLL = new ProjectBLL();
@@ -8951,7 +8953,7 @@ public static class ShareClass
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
-        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('删除','归档') order by project.ProjectID DESC";
+        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         lst1 = projectBLL.GetAllProjects(strHQL);
 
         for (int i = 0; i < lst1.Count; i++)
@@ -8995,7 +8997,7 @@ public static class ShareClass
 
         strHQL = "from Project as project where project.PMCode = " + "'" + strUserCode + "'";
         strHQL += " and project.ParentID not in (select project.ProjectID from Project as project where project.PMCode = " + "'" + strUserCode + "'" + ")";
-        strHQL += "  and project.Status not in ('删除','归档') order by project.ProjectID DESC";
+        strHQL += "  and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
@@ -9028,7 +9030,7 @@ public static class ShareClass
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
-        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('删除','归档') order by project.ProjectID DESC";
+        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         lst1 = projectBLL.GetAllProjects(strHQL);
 
         for (int i = 0; i < lst1.Count; i++)
@@ -9078,7 +9080,7 @@ public static class ShareClass
         {
             strHQL = "Select ProjectID,ProjectName From T_Project Where PMCode in (Select UserCode From T_ProjectMember Where  DepartCode in " + strDepartString + ")";
 
-            strHQL += " And Status Not in ('删除','归档')";
+            strHQL += " And Status Not in ('Deleted','Archived')";
             strHQL += " Order By ProjectID DESC limit " + strQueryCount;
         }
         else
@@ -9088,7 +9090,7 @@ public static class ShareClass
                 strHQL = "Select ProjectID,ProjectName From T_Project Where PMCode in (Select UserCode From T_ProjectMember Where  DepartCode in " + strDepartString + ")";
 
                 strHQL += " And ProjectID > " + strMaxProjectID;
-                strHQL += " And Status Not in ('删除','归档')";
+                strHQL += " And Status Not in ('Deleted','Archived')";
                 strHQL += " Order By ProjectID ASC limit " + strQueryCount;
             }
             else
@@ -9096,7 +9098,7 @@ public static class ShareClass
                 strHQL = "Select ProjectID,ProjectName From T_Project Where PMCode in (Select UserCode From T_ProjectMember Where  DepartCode in " + strDepartString + ")";
                 strHQL += " And ProjectID < " + strMinProjectID;
 
-                strHQL += " And Status Not in ('删除','归档')";
+                strHQL += " And Status Not in ('Deleted','Archived')";
                 strHQL += " Order By ProjectID DESC limit " + strQueryCount;
             }
         }
@@ -9156,7 +9158,7 @@ public static class ShareClass
         string strHQL;
 
         strHQL = "Select * From T_Project Where ParentID = " + strParentProjectID;
-        strHQL += " and Status not in ('删除','归档')";
+        strHQL += " and Status not in ('Deleted','Archived')";
         strHQL += " and PMCode in (Select UserCode From T_ProjectMember Where DepartCode in " + strDepartString + ")";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_Project");
 
@@ -9183,7 +9185,7 @@ public static class ShareClass
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
-        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('删除','归档')";
+        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('Deleted','Archived')";
         strHQL += " and project.PMCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
 
         strHQL += " order by project.ProjectID DESC";
@@ -9238,7 +9240,7 @@ public static class ShareClass
         {
             strHQL = "Select ProjectID,ProjectName From T_Project Where PMCode in (Select UserCode From T_ProjectMember Where  DepartCode in " + strDepartString + ")";
 
-            strHQL += " And Status Not in ('删除','归档')";
+            strHQL += " And Status Not in ('Deleted','Archived')";
             strHQL += " Order By ProjectID DESC limit " + strQueryCount;
         }
         else
@@ -9248,7 +9250,7 @@ public static class ShareClass
                 strHQL = "Select ProjectID,ProjectName From T_Project Where PMCode in (Select UserCode From T_ProjectMember Where  DepartCode in " + strDepartString + ")";
 
                 strHQL += " And ProjectID > " + strMaxProjectID;
-                strHQL += " And Status Not in ('删除','归档')";
+                strHQL += " And Status Not in ('Deleted','Archived')";
                 strHQL += " Order By ProjectID ASC limit " + strQueryCount;
             }
             else
@@ -9256,7 +9258,7 @@ public static class ShareClass
                 strHQL = "Select ProjectID,ProjectName From T_Project Where PMCode in (Select UserCode From T_ProjectMember Where  DepartCode in " + strDepartString + ")";
                 strHQL += " And ProjectID < " + strMinProjectID;
 
-                strHQL += " And Status Not in ('删除','归档')";
+                strHQL += " And Status Not in ('Deleted','Archived')";
                 strHQL += " Order By ProjectID DESC limit " + strQueryCount;
             }
         }
@@ -9314,7 +9316,7 @@ public static class ShareClass
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
-        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('删除','归档')";
+        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('Deleted','Archived')";
         strHQL += " and project.PMCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
 
         strHQL += " order by project.ProjectID DESC";
@@ -9371,7 +9373,7 @@ public static class ShareClass
                 strHQL += " (Select ProductLineName From T_DepartSuperUserRelatedProductLine Where UserCode = " + "'" + strUserCode + "'" + "))";
             }
 
-            strHQL += " And Status Not in ('删除','归档')";
+            strHQL += " And Status Not in ('Deleted','Archived')";
             strHQL += " Order By ProjectID DESC limit " + strQueryCount;
         }
         else
@@ -9387,7 +9389,7 @@ public static class ShareClass
                 }
 
                 strHQL += " And ProjectID > " + strMaxProjectID;
-                strHQL += " And Status Not in ('删除','归档')";
+                strHQL += " And Status Not in ('Deleted','Archived')";
                 strHQL += " Order By ProjectID ASC limit " + strQueryCount;
             }
             else
@@ -9401,7 +9403,7 @@ public static class ShareClass
                     strHQL += " (Select ProductLineName From T_DepartSuperUserRelatedProductLine Where UserCode = " + "'" + strUserCode + "'" + "))";
                 }
 
-                strHQL += " And Status Not in ('删除','归档')";
+                strHQL += " And Status Not in ('Deleted','Archived')";
                 strHQL += " Order By ProjectID DESC limit " + strQueryCount;
             }
         }
@@ -9456,7 +9458,7 @@ public static class ShareClass
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
-        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('删除','归档')";
+        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('Deleted','Archived')";
         strHQL += " and project.PMCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
 
         strHQL += " order by project.ProjectID DESC";
@@ -9510,7 +9512,7 @@ public static class ShareClass
                 strHQL += " (Select departSuperUserRelatedProductLine.ProductLineName From DepartSuperUserRelatedProductLine as departSuperUserRelatedProductLine Where departSuperUserRelatedProductLine.UserCode = " + "'" + strUserCode + "'" + "))";
             }
 
-            strHQL += " And Status Not in ('删除','归档')";
+            strHQL += " And Status Not in ('Deleted','Archived')";
             strHQL += " Order By ProjectID DESC limit " + strQueryCount;
         }
         else
@@ -9526,7 +9528,7 @@ public static class ShareClass
                 }
 
                 strHQL += " And ProjectID > " + strMaxProjectID;
-                strHQL += " And Status Not in ('删除','归档')";
+                strHQL += " And Status Not in ('Deleted','Archived')";
                 strHQL += " Order By ProjectID ASC limit " + strQueryCount;
             }
             else
@@ -9540,7 +9542,7 @@ public static class ShareClass
                     strHQL += " (Select departSuperUserRelatedProductLine.ProductLineName From DepartSuperUserRelatedProductLine as departSuperUserRelatedProductLine Where departSuperUserRelatedProductLine.UserCode = " + "'" + strUserCode + "'" + "))";
                 }
 
-                strHQL += " And Status Not in ('删除','归档')";
+                strHQL += " And Status Not in ('Deleted','Archived')";
                 strHQL += " Order By ProjectID DESC limit " + strQueryCount;
             }
         }
@@ -9607,7 +9609,7 @@ public static class ShareClass
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
-        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('删除','归档')";
+        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('Deleted','Archived')";
         strHQL += " and project.PMCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
 
         strHQL += " order by project.ProjectID DESC";
@@ -9653,7 +9655,7 @@ public static class ShareClass
         treeNode1.Target = "ProjectPlan" + "_" + "0";
         treeNode1.Expanded = false;
         treeNode.ChildNodes.Add(treeNode1);
-        TakeTopPlan.InitialProjectPlanTreeOnTreeNode(treeNode1, strProjectID, GetProjectPlanVersion(strProjectID, "在用").ToString());
+        TakeTopPlan.InitialProjectPlanTreeOnTreeNode(treeNode1, strProjectID, GetProjectPlanVersion(strProjectID, "InUse").ToString());
 
         treeNode1 = new TreeNode();
         treeNode1.Text = "<A href=TTAllProjectDocuments.aspx?TargetID=ProjectTask_0&ProjectID=" + strProjectID + " Target=Right>任务</a>";
@@ -9661,7 +9663,7 @@ public static class ShareClass
         treeNode1.Expanded = false;
         treeNode.ChildNodes.Add(treeNode1);
         strHQL = "from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID;
-        strHQL += " and projectTask.TaskID in (Select document.RelatedID from Document as document where document.RelatedType = '任务' and document.Status <> '删除')";
+        strHQL += " and projectTask.TaskID in (Select document.RelatedID from Document as document where document.RelatedType = 'Task' and document.Status <> 'Deleted')";
         strHQL += " Order by projectTask.TaskID DESC";
         ProjectTaskBLL projectTaskBLL = new ProjectTaskBLL();
         lst = projectTaskBLL.GetAllProjectTasks(strHQL);
@@ -9685,7 +9687,7 @@ public static class ShareClass
         treeNode1.Expanded = false;
         treeNode.ChildNodes.Add(treeNode1);
         strHQL = "from Defectment as defectment where defectment.DefectID in (select relatedDefect.DefectID from RelatedDefect as relatedDefect where relatedDefect.ProjectID = " + strProjectID + ")";
-        strHQL += " and defectment.DefectID in (Select document.RelatedID from Document as document where document.RelatedType = '需求' and document.Status <> '删除')";
+        strHQL += " and defectment.DefectID in (Select document.RelatedID from Document as document where document.RelatedType = 'Requirement' and document.Status <> 'Deleted')";
         strHQL += " Order by defectment.DefectID DESC";
         DefectmentBLL defectmentBLL = new DefectmentBLL();
         lst = defectmentBLL.GetAllDefectments(strHQL);
@@ -9709,11 +9711,11 @@ public static class ShareClass
         treeNode.ChildNodes.Add(treeNode1);
 
         strHQL = "from WorkFlow as workFlow where";
-        strHQL += " ((workFlow.RelatedType = '项目' and workFlow.RelatedID = " + strProjectID + ")";
-        strHQL += " or (workFlow.RelatedType = '任务' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
+        strHQL += " ((workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + ")";
+        strHQL += " or (workFlow.RelatedType = 'Task' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
         strHQL += " or (workFlow.RelatedType = '风险' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";
-        strHQL += " or (workFlow.RelatedType = '需求' and workFlow.RelatedID in (select relatedDefect from RelatedDefect as relatedDefect where relatedDefect.ProjectID = " + strProjectID + ")))";
-        strHQL += " and workFlow.WLID in (Select document.RelatedID from Document as document where document.RelatedType = '工作流' and document.Status <> '删除')";
+        strHQL += " or (workFlow.RelatedType = 'Requirement' and workFlow.RelatedID in (select relatedDefect from RelatedDefect as relatedDefect where relatedDefect.ProjectID = " + strProjectID + ")))";
+        strHQL += " and workFlow.WLID in (Select document.RelatedID from Document as document where document.RelatedType = 'Workflow' and document.Status <> 'Deleted')";
         strHQL += " Order by workFlow.WLID DESC";
         WorkFlowBLL workFlowBLL = new WorkFlowBLL();
         lst = workFlowBLL.GetAllWorkFlows(strHQL);
@@ -9737,7 +9739,7 @@ public static class ShareClass
         treeNode1.Expanded = false;
         treeNode.ChildNodes.Add(treeNode1);
         strHQL = "From ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID;
-        strHQL += " and projectRisk.ID in (Select document.RelatedID from Document as document where document.RelatedType = '风险' and document.Status <> '删除')";
+        strHQL += " and projectRisk.ID in (Select document.RelatedID from Document as document where document.RelatedType = '风险' and document.Status <> 'Deleted')";
         strHQL += " Order by projectRisk.ID DESC";
         ProjectRiskBLL projectRiskBLL = new ProjectRiskBLL();
         lst = projectRiskBLL.GetAllProjectRisks(strHQL);
@@ -9841,7 +9843,7 @@ public static class ShareClass
         {
             strHQL = "Select ProjectID,ProjectName From T_Project Where PMCode in (Select UserCode From T_ProjectMember Where DepartCode In " + strDepartString + ")";
 
-            strHQL += " And Status not in ('删除','归档') ";
+            strHQL += " And Status not in ('Deleted','Archived') ";
             strHQL += " Order By ProjectID DESC limit " + strQueryCount;
         }
         else
@@ -9851,7 +9853,7 @@ public static class ShareClass
                 strHQL = "Select ProjectID,ProjectName From T_Project Where PMCode in (Select UserCode From T_ProjectMember Where DepartCode In " + strDepartString + ")";
                 strHQL += " And ProjectID > " + strMaxProjectID;
 
-                strHQL += " And Status Not in ('删除','归档')";
+                strHQL += " And Status Not in ('Deleted','Archived')";
                 strHQL += " Order By ProjectID ASC limit " + strQueryCount;
             }
             else
@@ -9859,7 +9861,7 @@ public static class ShareClass
                 strHQL = "Select ProjectID,ProjectName From T_Project Where PMCode in (Select UserCode From T_ProjectMember Where DepartCode In " + strDepartString + ")";
                 strHQL += " And ProjectID < " + strMinProjectID;
 
-                strHQL += " And Status Not in ('删除','归档')";
+                strHQL += " And Status Not in ('Deleted','Archived')";
                 strHQL += " Order By ProjectID DESC limit " + strQueryCount + "";
             }
         }
@@ -9976,7 +9978,7 @@ public static class ShareClass
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
-        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('删除','归档') ";
+        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('Deleted','Archived') ";
         strHQL += " and project.PMCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
         strHQL += " order by project.ProjectID DESC";
         lst1 = projectBLL.GetAllProjects(strHQL);
@@ -10149,7 +10151,7 @@ public static class ShareClass
                 strHQL += " (Select departSuperUserRelatedProductLine.ProductLineName From DepartSuperUserRelatedProductLine as departSuperUserRelatedProductLine Where departSuperUserRelatedProductLine.UserCode = " + "'" + strUserCode + "'" + "))";
             }
 
-            strHQL += " And Status not in ('删除','归档') ";
+            strHQL += " And Status not in ('Deleted','Archived') ";
             strHQL += " Order By ProjectID DESC limit " + strQueryCount;
         }
         else
@@ -10165,7 +10167,7 @@ public static class ShareClass
                     strHQL += " (Select departSuperUserRelatedProductLine.ProductLineName From DepartSuperUserRelatedProductLine as departSuperUserRelatedProductLine Where departSuperUserRelatedProductLine.UserCode = " + "'" + strUserCode + "'" + "))";
                 }
 
-                strHQL += " And Status Not in ('删除','归档')";
+                strHQL += " And Status Not in ('Deleted','Archived')";
                 strHQL += " Order By ProjectID ASC limit " + strQueryCount;
             }
             else
@@ -10179,7 +10181,7 @@ public static class ShareClass
                     strHQL += " (Select departSuperUserRelatedProductLine.ProductLineName From DepartSuperUserRelatedProductLine as departSuperUserRelatedProductLine Where departSuperUserRelatedProductLine.UserCode = " + "'" + strUserCode + "'" + "))";
                 }
 
-                strHQL += " And Status Not in ('删除','归档')";
+                strHQL += " And Status Not in ('Deleted','Archived')";
                 strHQL += " Order By ProjectID DESC limit " + strQueryCount;
             }
         }
@@ -10276,7 +10278,7 @@ public static class ShareClass
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
-        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('删除','归档') ";
+        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('Deleted','Archived') ";
         strHQL += " and project.PMCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
         strHQL += " order by project.ProjectID DESC";
         lst1 = projectBLL.GetAllProjects(strHQL);
@@ -10352,7 +10354,7 @@ public static class ShareClass
 
         strHQL = "Select Max(ProjectID) From T_Project Where PMCode in (Select UserCode From T_ProjectMember Where DepartCode In " + strDepartString + ")";
         strHQL += " And ProjectID <= " + intProjectID.ToString();
-        strHQL += " And Status not in ('删除','归档') ";
+        strHQL += " And Status not in ('Deleted','Archived') ";
         strHQL += " Order By ProjectID DESC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_Project");
 
@@ -10372,7 +10374,7 @@ public static class ShareClass
         string strHQL;
 
         strHQL = "Select Min(ProjectID) From T_Project Where PMCode in (Select UserCode From T_ProjectMember Where DepartCode In " + strDepartString + ")";
-        strHQL += " And Status not in ('删除','归档') Order By ProjectID DESC";
+        strHQL += " And Status not in ('Deleted','Archived') Order By ProjectID DESC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_Project");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -10451,7 +10453,7 @@ public static class ShareClass
         treeNode1.Target = "ProjectPlan" + "_" + "0";
         treeNode1.Expanded = false;
         treeNode.ChildNodes.Add(treeNode1);
-        TakeTopPlan.InitialProjectPlanTreeOnTreeNode(treeNode1, strProjectID, GetProjectPlanVersion(strProjectID, "在用").ToString());
+        TakeTopPlan.InitialProjectPlanTreeOnTreeNode(treeNode1, strProjectID, GetProjectPlanVersion(strProjectID, "InUse").ToString());
 
         //生成任务节点
         treeNode1 = new TreeNode();
@@ -10460,7 +10462,7 @@ public static class ShareClass
         treeNode1.Expanded = false;
         treeNode.ChildNodes.Add(treeNode1);
         strHQL = "from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + " and projectTask.PlanID = 0 ";
-        strHQL += " and projectTask.TaskID in (Select document.RelatedID from Document as document where document.RelatedType = '任务' and document.Status <> '删除')";
+        strHQL += " and projectTask.TaskID in (Select document.RelatedID from Document as document where document.RelatedType = 'Task' and document.Status <> 'Deleted')";
         strHQL += " Order by projectTask.TaskID DESC";
         ProjectTaskBLL projectTaskBLL = new ProjectTaskBLL();
         lst = projectTaskBLL.GetAllProjectTasks(strHQL);
@@ -10485,7 +10487,7 @@ public static class ShareClass
         treeNode1.Expanded = false;
         treeNode.ChildNodes.Add(treeNode1);
         strHQL = "from Requirement as requirement where requirement.ReqID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + ")";
-        strHQL += " and requirement.ReqID in (Select document.RelatedID from Document as document where document.RelatedType = '需求' and document.Status <> '删除')";
+        strHQL += " and requirement.ReqID in (Select document.RelatedID from Document as document where document.RelatedType = 'Requirement' and document.Status <> 'Deleted')";
         strHQL += " Order by requirement.ReqID DESC";
         RequirementBLL requirementBLL = new RequirementBLL();
         lst = requirementBLL.GetAllRequirements(strHQL);
@@ -10510,7 +10512,7 @@ public static class ShareClass
         treeNode1.Expanded = false;
         treeNode.ChildNodes.Add(treeNode1);
         strHQL = "from Defectment as defectment where defectment.DefectID in (select relatedDefect.DefectID from RelatedDefect as relatedDefect where relatedDefect.ProjectID = " + strProjectID + ")";
-        strHQL += " and defectment.DefectID in (Select document.RelatedID from Document as document where document.RelatedType = '缺陷' and document.Status <> '删除')";
+        strHQL += " and defectment.DefectID in (Select document.RelatedID from Document as document where document.RelatedType = 'Defect' and document.Status <> 'Deleted')";
         strHQL += " Order by defectment.DefectID DESC";
         DefectmentBLL defectmentBLL = new DefectmentBLL();
         lst = defectmentBLL.GetAllDefectments(strHQL);
@@ -10530,11 +10532,11 @@ public static class ShareClass
 
         //生成工作流节点
         strHQL = "from WorkFlow as workFlow where";
-        strHQL += " ((workFlow.RelatedType = '项目' and workFlow.RelatedID = " + strProjectID + ")";
-        strHQL += " or (workFlow.RelatedType = '任务' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
+        strHQL += " ((workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + ")";
+        strHQL += " or (workFlow.RelatedType = 'Task' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
         strHQL += " or (workFlow.RelatedType = '风险' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";
-        strHQL += " or (workFlow.RelatedType = '需求' and workFlow.RelatedID in (select relatedDefect from RelatedDefect as relatedDefect where relatedDefect.ProjectID = " + strProjectID + ")))";
-        strHQL += " and workFlow.WLID in (Select document.RelatedID from Document as document where document.RelatedType = '工作流' and document.Status <> '删除')";
+        strHQL += " or (workFlow.RelatedType = 'Requirement' and workFlow.RelatedID in (select relatedDefect from RelatedDefect as relatedDefect where relatedDefect.ProjectID = " + strProjectID + ")))";
+        strHQL += " and workFlow.WLID in (Select document.RelatedID from Document as document where document.RelatedType = 'Workflow' and document.Status <> 'Deleted')";
         strHQL += " Order by workFlow.WLID DESC";
         WorkFlowBLL workFlowBLL = new WorkFlowBLL();
         lst = workFlowBLL.GetAllWorkFlows(strHQL);
@@ -10559,7 +10561,7 @@ public static class ShareClass
         treeNode1.Expanded = false;
         treeNode.ChildNodes.Add(treeNode1);
         strHQL = "From ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID; ;
-        strHQL += " and projectRisk.ID in (Select document.RelatedID from Document as document where document.RelatedType = '风险' and document.Status <> '删除')";
+        strHQL += " and projectRisk.ID in (Select document.RelatedID from Document as document where document.RelatedType = '风险' and document.Status <> 'Deleted')";
         strHQL += " Order by projectRisk.ID DESC";
         ProjectRiskBLL projectRiskBLL = new ProjectRiskBLL();
         lst = projectRiskBLL.GetAllProjectRisks(strHQL);
@@ -10977,7 +10979,7 @@ public static class ShareClass
 
         strHQL = string.Format(@"Select * from T_Project as project where project.ParentID  = 1 
           and (project.PMCode = '{1}' Or project.UserCode ='{1}' or ProjectID in (Select ProjectID From T_RelatedUser Where UserCode = '{1}'))
-          and project.Status not in ('删除','归档') order by project.ProjectID DESC", strUserCode, strUserCode);
+          and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC", strUserCode, strUserCode);
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_Project");
 
         for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
@@ -11003,7 +11005,7 @@ public static class ShareClass
 
         strHQL = string.Format(@"Select * from T_Project as project where project.ParentID ={0} 
                   and (project.PMCode = '{1}' Or project.UserCode ='{1}' or ProjectID in (Select ProjectID From T_RelatedUser Where UserCode = '{1}'))
-                  and project.Status not in ('删除','归档') order by project.ProjectID DESC", strParentID, strUserCode);
+                  and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC", strParentID, strUserCode);
         DataSet ds1 = ShareClass.GetDataSetFromSql(strHQL, "T_Project");
         for (int i = 0; i < ds1.Tables[0].Rows.Count; i++)
         {
@@ -11019,7 +11021,7 @@ public static class ShareClass
 
             strHQL = string.Format(@"Select * from T_Project as project where project.ParentID ={0} 
                     and (project.PMCode = '{1}' Or project.UserCode ='{1}' or ProjectID in (Select ProjectID From T_RelatedUser Where UserCode = '{1}'))
-                    and project.Status not in ('删除','归档') order by project.ProjectID DESC", strProjectID, strUserCode);
+                    and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC", strProjectID, strUserCode);
             DataSet ds2 = ShareClass.GetDataSetFromSql(strHQL, "T_Project");
             if (ds2.Tables[0].Rows.Count > 0)
             {
@@ -11047,7 +11049,7 @@ public static class ShareClass
 
         strHQL = "from Project as project where project.UserCode = " + "'" + strUserCode + "'";
         strHQL += " and project.ParentID not in (select project.ProjectID from Project as project where project.UserCode = " + "'" + strUserCode + "'" + ")";
-        strHQL += "  and project.Status not in ('删除','归档') order by project.ProjectID DESC";
+        strHQL += "  and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
@@ -11080,7 +11082,7 @@ public static class ShareClass
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
-        strHQL = "from Project as project where project.UserCode = " + "'" + strUserCode + "'" + " and project.ParentID = " + strParentID + " and project.Status not in ('删除','归档') order by project.ProjectID DESC";
+        strHQL = "from Project as project where project.UserCode = " + "'" + strUserCode + "'" + " and project.ParentID = " + strParentID + " and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         lst1 = projectBLL.GetAllProjects(strHQL);
 
         for (int i = 0; i < lst1.Count; i++)
@@ -11127,7 +11129,7 @@ public static class ShareClass
         strHQL += " and project.ParentID not in (select project.ProjectID from Project as project where project.PMCode = " + "'" + strUserCode + "'";
         strHQL += " and project.ProjectID in (select projectRisk.ProjectID from ProjectRisk as projectRisk))";
         strHQL += " and project.ProjectID in (select projectRisk.ProjectID from ProjectRisk as projectRisk) ";
-        strHQL += " and project.Status not in ('删除','归档') order by project.ProjectID DESC";
+        strHQL += " and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
@@ -11172,7 +11174,7 @@ public static class ShareClass
         strHQL = "from Project as project where project.ParentID = " + strParentID;
         strHQL += "  and project.PMCode = " + "'" + strPMCode + "'";
         strHQL += " and project.ProjectID in (select projectRisk.ProjectID from ProjectRisk as projectRisk) ";
-        strHQL += " and project.Status not in ('删除','归档') order by project.ProjectID DESC";
+        strHQL += " and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         lst1 = projectBLL.GetAllProjects(strHQL);
 
         for (int i = 0; i < lst1.Count; i++)
@@ -11228,7 +11230,7 @@ public static class ShareClass
         strHQL += " and project.ParentID not in (select project.ProjectID from Project as project where project.PMCode = " + "'" + strUserCode + "'";
         strHQL += " and project.ProjectID in (select projectRisk.ProjectID from ProjectRisk as projectRisk))";
         strHQL += " and project.ProjectID in (select projectRisk.ProjectID from ProjectRisk as projectRisk) ";
-        strHQL += " and project.Status not in ('删除','归档') order by project.ProjectID DESC";
+        strHQL += " and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
@@ -11806,7 +11808,7 @@ public static class ShareClass
         strHQL = "from Project as project where (project.PMCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
         strHQL += " Or project.UserCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + "))";
         strHQL += " and project.ParentID  = 1";
-        strHQL += " and project.Status not in ('删除','归档') order by project.ProjectID DESC";
+        strHQL += " and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
@@ -11839,7 +11841,7 @@ public static class ShareClass
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
-        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('删除','归档') order by project.ProjectID DESC";
+        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         lst1 = projectBLL.GetAllProjects(strHQL);
 
         for (int i = 0; i < lst1.Count; i++)
@@ -11889,7 +11891,7 @@ public static class ShareClass
 
         strHQL = "from Plan as plan where  plan.UserCode = " + "'" + strUserCode + "'";
         strHQL += " and plan.ParentID not in (Select plan.BackupPlanID From Plan as plan Where plan.UserCode = " + "'" + strUserCode + "'" + ")";
-        strHQL += " and plan.Status not in ('删除','归档') ";
+        strHQL += " and plan.Status not in ('Deleted','Archived') ";
         if (strRelatedType != "OTHER")
         {
             strHQL += " and plan.RelatedType = " + "'" + strRelatedType + "'";
@@ -11953,7 +11955,7 @@ public static class ShareClass
         strHQL += " and ((plan.ParentID not in (Select plan1.BackupPlanID From Plan as plan1 Where plan1.UserCode = " + "'" + strUserCode + "'" + "))";
         strHQL += " or (plan.ParentID = 0))";
         //strHQL += " and plan.ParentID = 0";
-        strHQL += " and plan.Status not in ('删除','归档') ";
+        strHQL += " and plan.Status not in ('Deleted','Archived') ";
 
         if (strRelatedType != "OTHER")
         {
@@ -15337,7 +15339,7 @@ public static class ShareClass
         strDepartString = TakeTopCore.CoreShareClass.InitialUnderDepartmentStringByAuthority(strUserCode);
         strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
-        strHQL = "Select rtrim(GroupName) as GroupName ,rtrim(HomeName) as HomeName from T_ActorGroup where GroupName <> '全体' and Type = '所有' ";
+        strHQL = "Select rtrim(GroupName) as GroupName ,rtrim(HomeName) as HomeName from T_ActorGroup where GroupName <> '全体' and Type = 'All' ";
         strHQL += " and (BelongDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))";
         strHQL += " Or BelongDepartCode in " + strDepartString + ")";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
@@ -15359,7 +15361,7 @@ public static class ShareClass
         strDepartString = TakeTopCore.CoreShareClass.InitialUnderDepartmentStringByAuthority(strUserCode);
         strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
-        strHQL = "Select rtrim(GroupName) as GroupName ,rtrim(HomeName) as HomeName from T_ActorGroup where Type = '所有' ";
+        strHQL = "Select rtrim(GroupName) as GroupName ,rtrim(HomeName) as HomeName from T_ActorGroup where Type = 'All' ";
         strHQL += " and (BelongDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))";
         strHQL += " Or BelongDepartCode in " + strDepartString + ")";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
@@ -15674,7 +15676,7 @@ public static class ShareClass
         {
             strHQL = "Select UserCode,UserName From T_ProjectMember Where (UserCode in (Select UnderCode From T_MemberLevel Where Usercode = " + "'" + strUserCode + "'" + ")";
             strHQL += " Or UserCode in (Select UserCode From T_ProjectMember Where DepartCode in " + strDepartString + "))";
-            strHQL += "  And Status = '在职'";
+            strHQL += "  And Status = 'Employed'";
         }
         else
         {
@@ -17515,9 +17517,22 @@ public static class ShareClass
     /// <summary>
     public static string GetCurrentSiteRootPath()
     {
+        string secure = "off";
         // 是否为SSL认证站点
-        string secure = HttpContext.Current.Request.ServerVariables["HTTPS"];
+
+        try
+        {
+            secure = HttpContext.Current.Request.ServerVariables["HTTPS"];
+        }
+        catch
+        {
+            secure = "off";
+        }
+
         string httpProtocol = (secure == "on" ? "https://" : "http://");
+
+
+        httpProtocol = "http://";
         // 服务器名称
         string serverName = HttpContext.Current.Request.ServerVariables["Server_Name"];
         string port = HttpContext.Current.Request.ServerVariables["SERVER_PORT"];
@@ -17534,8 +17549,8 @@ public static class ShareClass
         }
     }
 
-    //得到当前网站的根地址,不包含站点名,
-    public static string GetCurrentSiteRootPathNoSiteName()
+//得到当前网站的根地址,不包含站点名,
+public static string GetCurrentSiteRootPathNoSiteName()
     {
         // 是否为SSL认证站点
         string secure = HttpContext.Current.Request.ServerVariables["HTTPS"];

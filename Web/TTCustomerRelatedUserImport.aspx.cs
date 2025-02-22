@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.IO;
 using System.Drawing;
@@ -32,7 +32,7 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
         strDepartName = ShareClass.GetDepartName(ShareClass.GetDepartCodeFromUserCode(strUserCode));
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "å®¢æˆ·å¯è§†ç”¨æˆ·å¯¼å…¥", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "¿Í»§¿ÉÊÓÓÃ»§µ¼Èë", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -60,8 +60,8 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
             LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ;
             return;
         }
-        string filename = FileUpload_Training.FileName.ToString();  //è·å–Execleæ–‡ä»¶å
-        string newfilename = System.IO.Path.GetFileNameWithoutExtension(filename) + DateTime.Now.ToString("yyyyMMddHHmmssff") + IsXls;//æ–°æ–‡ä»¶åç§°ï¼Œå¸¦åç¼€
+        string filename = FileUpload_Training.FileName.ToString();  //»ñÈ¡ExecleÎÄ¼şÃû
+        string newfilename = System.IO.Path.GetFileNameWithoutExtension(filename) + DateTime.Now.ToString("yyyyMMddHHmmssff") + IsXls;//ĞÂÎÄ¼şÃû³Æ£¬´øºó×º
         string strDocSavePath = Server.MapPath("Doc") + "\\" + DateTime.Now.ToString("yyyyMM") + "\\" + strUserCode.Trim() + "\\Doc\\";
         FileInfo fi = new FileInfo(strDocSavePath + newfilename);
         if (fi.Exists)
@@ -75,11 +75,11 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
 
             //DataSet ds = ExcelToDataSet(strpath, filename);
             //DataRow[] dr = ds.Tables[0].Select();
-            //DataRow[] dr = ds.Tables[0].Select();//å®šä¹‰ä¸€ä¸ªDataRowæ•°ç»„
+            //DataRow[] dr = ds.Tables[0].Select();//¶¨ÒåÒ»¸öDataRowÊı×é
             //int rowsnum = ds.Tables[0].Rows.Count;
 
             DataTable dt = MSExcelHandler.ReadExcelToDataTable(strpath, filename);
-            DataRow[] dr = dt.Select();                        //å®šä¹‰ä¸€ä¸ªDataRowæ•°ç»„
+            DataRow[] dr = dt.Select();                        //¶¨ÒåÒ»¸öDataRowÊı×é
             int rowsnum = dt.Rows.Count;
             if (rowsnum == 0)
             {
@@ -92,10 +92,10 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
 
                 for (int i = 0; i < dr.Length; i++)
                 {
-                    if (dr[i]["å®¢æˆ·ä»£ç "].ToString().Trim() != "")
+                    if (dr[i]["¿Í»§´úÂë"].ToString().Trim() != "")
                     {
-                        string strCustomerCode = dr[i]["å®¢æˆ·ä»£ç "].ToString().Trim();
-                        string strRelatedUserNameList = dr[i]["å¯è§†äººå‘˜"].ToString().Trim();
+                        string strCustomerCode = dr[i]["¿Í»§´úÂë"].ToString().Trim();
+                        string strRelatedUserNameList = dr[i]["¿ÉÊÓÈËÔ±"].ToString().Trim();
                         string[] strRelatedUserArray = strRelatedUserNameList.Split(',');
 
                         if (CheckCustomerIsExisted(strCustomerCode) > 0)
@@ -104,7 +104,7 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
                             {
                                 if (CB_IsClearAll.Checked == true)
                                 {
-                                    //åˆ é™¤å®¢æˆ·çš„å¯è§†ç”¨æˆ·
+                                    //É¾³ı¿Í»§µÄ¿ÉÊÓÓÃ»§
                                     DeleteAllRelatedCustomerUser(strCustomerCode);
                                 }
 
@@ -127,7 +127,7 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
                             {
                                 LB_ErrorText.Text += Resources.lang.ZZJGDRSBJC + " : " + Resources.lang.HangHao + ": " + (i + 2).ToString() + " , " + Resources.lang.DaiMa + ": " + strCustomerCode + " : " + err.Message.ToString() + "<br/>";
 
-                                LogClass.WriteLogFile(this.GetType().BaseType.Name + "ï¼š" + Resources.lang.ZZJGDRSBJC + " : " + Resources.lang.HangHao + ": " + (i + 2).ToString() + " , " + Resources.lang.DaiMa + ": " + strCustomerCode + " : " + err.Message.ToString());
+                                LogClass.WriteLogFile(this.GetType().BaseType.Name + "£º" + Resources.lang.ZZJGDRSBJC + " : " + Resources.lang.HangHao + ": " + (i + 2).ToString() + " , " + Resources.lang.DaiMa + ": " + strCustomerCode + " : " + err.Message.ToString());
                             }
                         }
                     }
@@ -141,7 +141,7 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
         }
     }
 
-    //åˆ é™¤å®¢æˆ·çš„å¯è§†ç”¨æˆ·
+    //É¾³ı¿Í»§µÄ¿ÉÊÓÓÃ»§
     protected void DeleteAllRelatedCustomerUser(string strCustomerCode)
     {
         string strHQL;
@@ -150,7 +150,7 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
         ShareClass.RunSqlCommand(strHQL);
     }
 
-    //å–å¾—å®¢æˆ·ç›¸å…³å¯è§†äººå‘˜çš„æ•°é‡
+    //È¡µÃ¿Í»§Ïà¹Ø¿ÉÊÓÈËÔ±µÄÊıÁ¿
     protected int CheckCustomerRelatedUserIsExisted(string strCustomerCode, string strUserCode)
     {
         string strHQL;
@@ -160,7 +160,7 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
         return ds.Tables[0].Rows.Count;
     }
 
-    //å–å¾—å®¢æˆ·çš„æ•°é‡
+    //È¡µÃ¿Í»§µÄÊıÁ¿
     protected int CheckCustomerIsExisted(string strCustomerCode)
     {
         string strHQL;
@@ -193,8 +193,8 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
                 LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ;
                 j = -1;
             }
-            string filename = FileUpload_Training.FileName.ToString();  //è·å–Execleæ–‡ä»¶å
-            string newfilename = System.IO.Path.GetFileNameWithoutExtension(filename) + DateTime.Now.ToString("yyyyMMddHHmmssff") + IsXls;//æ–°æ–‡ä»¶åç§°ï¼Œå¸¦åç¼€
+            string filename = FileUpload_Training.FileName.ToString();  //»ñÈ¡ExecleÎÄ¼şÃû
+            string newfilename = System.IO.Path.GetFileNameWithoutExtension(filename) + DateTime.Now.ToString("yyyyMMddHHmmssff") + IsXls;//ĞÂÎÄ¼şÃû³Æ£¬´øºó×º
             string strDocSavePath = Server.MapPath("Doc") + "\\" + DateTime.Now.ToString("yyyyMM") + "\\" + strUserCode.Trim() + "\\Doc\\";
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
@@ -209,11 +209,11 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
 
                 //DataSet ds = ExcelToDataSet(strpath, filename);
                 //DataRow[] dr = ds.Tables[0].Select();
-                //DataRow[] dr = ds.Tables[0].Select();//å®šä¹‰ä¸€ä¸ªDataRowæ•°ç»„
+                //DataRow[] dr = ds.Tables[0].Select();//¶¨ÒåÒ»¸öDataRowÊı×é
                 //int rowsnum = ds.Tables[0].Rows.Count;
 
                 DataTable dt = MSExcelHandler.ReadExcelToDataTable(strpath, filename);
-                DataRow[] dr = dt.Select();                        //å®šä¹‰ä¸€ä¸ªDataRowæ•°ç»„
+                DataRow[] dr = dt.Select();                        //¶¨ÒåÒ»¸öDataRowÊı×é
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
@@ -227,21 +227,21 @@ public partial class TTCustomerRelatedUserImport : System.Web.UI.Page
 
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        strCustomerCode = dr[i]["ä»£ç "].ToString().Trim();
+                        strCustomerCode = dr[i]["´úÂë"].ToString().Trim();
 
                         if (strCustomerCode != "")
                         {
                             strHQL = "From Customer as customer Where customer.CustomerCode = " + "'" + strCustomerCode + "'";
                             lst = customerBLL.GetAllCustomers(strHQL);
-                            if (lst != null && lst.Count > 0)//å­˜åœ¨ï¼Œåˆ™ä¸æ“ä½œ
+                            if (lst != null && lst.Count > 0)//´æÔÚ£¬Ôò²»²Ù×÷
                             {
-                                LB_ErrorText.Text += dr[i]["åç§°"].ToString().Trim() + Resources.lang.ZZYCZDRSBQJC;
+                                LB_ErrorText.Text += dr[i]["Ãû³Æ"].ToString().Trim() + Resources.lang.ZZYCZDRSBQJC;
                                 j = -1;
                             }
-                            else//æ–°å¢
+                            else//ĞÂÔö
                             {
-                                customer.CustomerCode = dr[i]["ä»£ç "].ToString().Trim();
-                                customer.CustomerName = dr[i]["åç§°"].ToString().Trim();
+                                customer.CustomerCode = dr[i]["´úÂë"].ToString().Trim();
+                                customer.CustomerName = dr[i]["Ãû³Æ"].ToString().Trim();
                             }
 
                             continue;

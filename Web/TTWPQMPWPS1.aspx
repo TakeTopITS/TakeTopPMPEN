@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMPWPS1.aspx.cs" Inherits="TTWPQMPWPS1" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMPWPS1.aspx.cs" Inherits="TTWPQMPWPS1" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -8,7 +8,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>PWPS-1ÁÆ°ÁêÜ</title>
+    <title>PWPS-1π‹¿Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script src="js/allAHandler.js" type="text/javascript"></script>
@@ -298,7 +298,7 @@
                                 </table>
                                 <table cellpadding="2" cellspacing="0" class="formBgStyle" width="95%">
                                     <tr>
-                                        <td align="center" style="text-align: left" class="formItemBgStyle">&nbsp;&nbsp;&nbsp; <asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,PWPSGuanLiLieBiao%>"></asp:Label>Ôºö</td>
+                                        <td align="center" style="text-align: left" class="formItemBgStyle">&nbsp;&nbsp;&nbsp; <asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,PWPSGuanLiLieBiao%>"></asp:Label>£∫</td>
                                     </tr>
                                     <tr>
                                         <td align="center" class="formItemBgStyle">
@@ -346,7 +346,7 @@
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="ÁºñÂè∑">
+                                                    <asp:TemplateColumn HeaderText="±‡∫≈">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
@@ -354,40 +354,40 @@
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="WeldProCode" HeaderText="ÁÑäÊé•Â∑•Ëâ∫ËØÑÂÆö">
+                                                    <asp:BoundColumn DataField="WeldProCode" HeaderText="∫∏Ω”π§“’∆¿∂®">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="EntityName" HeaderText="Âçï‰ΩçÂêçÁß∞">
+                                                    <asp:BoundColumn DataField="EntityName" HeaderText="µ•Œª√˚≥∆">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="PWPS1DateTime" HeaderText="Êó•Êúü" DataFormatString="{0:yyyy-MM-dd}">
+                                                    <asp:BoundColumn DataField="PWPS1DateTime" HeaderText="»’∆⁄" DataFormatString="{0:yyyy-MM-dd}">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="PWPSAndCategory" HeaderText="‰∏éÁ±ªÂà´Âè∑">
+                                                    <asp:BoundColumn DataField="PWPSAndCategory" HeaderText="”Î¿‡±∫≈">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="PWPSAndStandardNo" HeaderText="‰∏éÊ†áÂáÜÂè∑">
+                                                    <asp:BoundColumn DataField="PWPSAndStandardNo" HeaderText="”Î±Í◊º∫≈">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="PWPSMetalOther" HeaderText="ÊØçÊùêÂÖ∂‰ªñ">
+                                                    <asp:BoundColumn DataField="PWPSMetalOther" HeaderText="ƒ∏≤ƒ∆‰À˚">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="14%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:HyperLinkColumn DataNavigateUrlField="WeldedJointDiagram" DataNavigateUrlFormatString="{0}" DataTextField="WeldProCode" HeaderText="ÁÑäÊé•Êé•Â§¥ÁÆÄÂõæ" Target="_blank">
+                                                    <asp:HyperLinkColumn DataNavigateUrlField="WeldedJointDiagram" DataNavigateUrlFormatString="{0}" DataTextField="WeldProCode" HeaderText="∫∏Ω”Ω”Õ∑ºÚÕº" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                     </asp:HyperLinkColumn>
-                                                    <asp:BoundColumn DataField="PWPSDescr" HeaderText="Â§áÊ≥®ËØ¥Êòé">
+                                                    <asp:BoundColumn DataField="PWPSDescr" HeaderText="±∏◊¢Àµ√˜">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="16%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />

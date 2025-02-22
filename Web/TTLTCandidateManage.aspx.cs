@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -21,8 +21,8 @@ public partial class TTLTCandidateManage : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //é’Ÿç¤¼æœˆä½œå“ï¼ˆjack.erp@gmail.com)
-        //Taketop Software 2006ï¼2012
+        //ÖÓÀñÔÂ×÷Æ·£¨jack.erp@gmail.com)
+        //Taketop Software 2006£­2012
 
         string strHQL;
 
@@ -33,7 +33,7 @@ public partial class TTLTCandidateManage : System.Web.UI.Page
         strCurrentUserType = ShareClass.GetUserType(strUserCode);
 
         //LTCandidateInformationBLL ltCandidateInformationBLL = new LTCandidateInformationBLL();
-        //bool blVisible = ltCandidateInformationBLL.GetAuthobility("äººäº‹ç®¡ç†", strUserCode);
+        //bool blVisible = ltCandidateInformationBLL.GetAuthobility("HumanResourcesManagement", strUserCode);
         //if (blVisible == false)
         //{
         //    Response.Redirect("TTDisplayErrors.aspx");
@@ -86,7 +86,7 @@ public partial class TTLTCandidateManage : System.Web.UI.Page
 
             intCount = ds1.Tables[0].Rows.Count;
 
-            LB_LTCandidateInformationOwner.Text = strDepartName + " ï¼š";
+            LB_LTCandidateInformationOwner.Text = strDepartName + " £º";
             LB_UserNumber.Text = Resources.lang.GCXD + " : " + intCount.ToString();
 
             LB_DepartCode.Text = strDepartCode;
@@ -146,7 +146,7 @@ public partial class TTLTCandidateManage : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = "å€™é€‰äººä¿¡æ¯_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = "ºòÑ¡ÈËĞÅÏ¢_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 string strDepartCode = LB_DepartCode.Text.Trim();
 
                 CreateExcel(strDepartCode, fileName);
@@ -163,7 +163,7 @@ public partial class TTLTCandidateManage : System.Web.UI.Page
         string strHQL;
    
 
-        if (strDepartCode == "")//æ‰€æœ‰æˆå‘˜çš„æƒ…å†µ
+        if (strDepartCode == "")//ËùÓĞ³ÉÔ±µÄÇé¿ö
         {
             string strUserName = "%" + TB_UserName.Text.Trim() + "%";
             string strDepartString = LB_DepartString.Text.Trim();
@@ -173,8 +173,8 @@ public partial class TTLTCandidateManage : System.Web.UI.Page
             string strBriefKeyWord = "%" + TB_BriefKeyWord.Text.Trim() + "%";
 
 
-            strHQL = string.Format(@"Select UserName å§“å,Gender æ€§åˆ«,Age å¹´é¾„,Company å…¬å¸,Department éƒ¨é—¨,
-                CurrentDuty èŒè´£, MobilePhone ç§»åŠ¨ç”µè¯,CreateTime åˆ›å»ºæ—¥æœŸ, Status çŠ¶æ€,BelongDepartCode å½’å±éƒ¨é—¨ä»£ç , BelongDepartName å½’å±éƒ¨é—¨åç§°
+            strHQL = string.Format(@"Select UserName ĞÕÃû,Gender ĞÔ±ğ,Age ÄêÁä,Company ¹«Ë¾,Department ²¿ÃÅ,
+                CurrentDuty Ö°Ôğ, MobilePhone ÒÆ¶¯µç»°,CreateTime ´´½¨ÈÕÆÚ, Status ×´Ì¬,BelongDepartCode ¹éÊô²¿ÃÅ´úÂë, BelongDepartName ¹éÊô²¿ÃÅÃû³Æ
                     From T_LTCandidateInformation Where BelongDepartCode in ") + strDepartString + " ";
             strHQL += " and UserName Like " + "'" + strUserName + "'";
             strHQL += " and Status Like " + "'" + strStatus + "'";
@@ -183,10 +183,10 @@ public partial class TTLTCandidateManage : System.Web.UI.Page
             strHQL += " and Brief Like " + "'" + strBriefKeyWord + "'";
             strHQL += " Order by CreateTime ASC";
         }
-        else//æŒ‰ç»„ç»‡æ¶æ„æŸ¥è¯¢çš„
+        else//°´×éÖ¯¼Ü¹¹²éÑ¯µÄ
         {
-            strHQL = string.Format(@"Select UserName å§“å,Gender æ€§åˆ«,Age å¹´é¾„,Company å…¬å¸,Department éƒ¨é—¨,
-                CurrentDuty èŒè´£, MobilePhone ç§»åŠ¨ç”µè¯,CreateTime åˆ›å»ºæ—¥æœŸ, Status çŠ¶æ€,BelongDepartCode å½’å±éƒ¨é—¨ä»£ç , BelongDepartName å½’å±éƒ¨é—¨åç§°
+            strHQL = string.Format(@"Select UserName ĞÕÃû,Gender ĞÔ±ğ,Age ÄêÁä,Company ¹«Ë¾,Department ²¿ÃÅ,
+                CurrentDuty Ö°Ôğ, MobilePhone ÒÆ¶¯µç»°,CreateTime ´´½¨ÈÕÆÚ, Status ×´Ì¬,BelongDepartCode ¹éÊô²¿ÃÅ´úÂë, BelongDepartName ¹éÊô²¿ÃÅÃû³Æ
                     From T_LTCandidateInformation Where DepartCode = ") + "'" + strDepartCode + "'";
             strHQL += " Order by CreateTime ASC";
         }

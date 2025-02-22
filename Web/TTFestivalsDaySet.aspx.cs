@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -17,7 +17,7 @@ public partial class TTFestivalsDaySet : System.Web.UI.Page
         string strUserCode;
         strUserCode = Session["UserCode"].ToString();
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "å»ºç«‹ä¸åˆ†æ´¾é¡¹ç›®", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "½¨Á¢Óë·ÖÅÉÏîÄ¿", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -205,16 +205,16 @@ public partial class TTFestivalsDaySet : System.Web.UI.Page
         {
             CopyFestivalsDayToYear(this.ddl_year.SelectedValue, this.ddl_copy.SelectedValue);
             CopyExchangeDayToYear(this.ddl_year.SelectedValue, this.ddl_copy.SelectedValue);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "Script2", "alert('æç¤ºï¼Œå¤åˆ¶æˆåŠŸï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "Script2", "alert('ÌáÊ¾£¬¸´ÖÆ³É¹¦£¡')", true);
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "Script1", "alert('è­¦å‘Šï¼Œå¤åˆ¶åˆ°çš„å¹´ä»½ä¸èƒ½ç­‰äºæˆ–å°äºè¢«å¤åˆ¶çš„å¹´ä»½ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "Script1", "alert('¾¯¸æ£¬¸´ÖÆµ½µÄÄê·İ²»ÄÜµÈÓÚ»òĞ¡ÓÚ±»¸´ÖÆµÄÄê·İ£¬Çë¼ì²é£¡')", true);
         }
 
     }
 
-    #region èŠ‚å‡æ—¥æ“ä½œç±»
+    #region ½Ú¼ÙÈÕ²Ù×÷Àà
 
     public static void LoadFestivalsTypeByYear(ListBox DL_Visible)
     {
@@ -265,7 +265,7 @@ public partial class TTFestivalsDaySet : System.Web.UI.Page
 
     #endregion
 
-    #region è°ƒä¼‘æ—¥æ“ä½œç±»
+    #region µ÷ĞİÈÕ²Ù×÷Àà
 
     public static Dictionary<string, List<DateTime>> LoadExchangeDayByYear(string year)
     {

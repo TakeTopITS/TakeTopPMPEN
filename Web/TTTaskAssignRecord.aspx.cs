@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -35,7 +35,7 @@ public partial class TTTaskAssignRecord : System.Web.UI.Page
             DataList2.DataBind();
 
             strTask = ShareClass.GetProjectTaskName(strTaskID);
-            LB_Title.Text = "ä»»åŠ¡ï¼š" + strTaskID + "  " + strTask + " çš„æ‰€æœ‰åˆ†æ´¾è®°å½•ï¼";
+            LB_Title.Text = "ÈÎÎñ£º" + strTaskID + "  " + strTask + " µÄËùÓĞ·ÖÅÉ¼ÇÂ¼£¡";
 
             LoadGoodsApplicationDetail("AfterSale", strTaskID);
 

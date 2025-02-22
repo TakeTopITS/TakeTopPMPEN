@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DefaultMobile.aspx.cs" Inherits="DefaultMobile" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DefaultMobile.aspx.cs" Inherits="DefaultMobile" %>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes, target-densitydpi=device-dpi" />
 <%@ Import Namespace="System.Globalization" %>
@@ -25,7 +25,7 @@
             line-height: 2em;
         }
 
-        /*--------------------------------çŸ­æŒ‰é’®---------------------------*/
+        /*--------------------------------¶Ì°´Å¥---------------------------*/
         .inpuLogon {
             /*background-image: url(ImagesSkin/Logon.jpg);*/
             margin: 0px;
@@ -111,7 +111,7 @@
         window.onload = function () {
 
 
-            //è‡ªåŠ¨å¡«å……å¸å·å’Œå¯†ç 
+            //×Ô¶¯Ìî³äÕÊºÅºÍÃÜÂë
             var userName = getCookie("loginUserName");
             var password = getCookie("loginPassword");
 
@@ -177,10 +177,10 @@
                     <tr>
                         <td colspan="2" align="center">
 
-                            <%--  <asp:TextBox ID="TB_UserCode" runat="server" Text="è¯·è¾“å…¥ä½ çš„ç™»å½•å¸å·(UserCode)" OnFocus="javascript:if(this.value=='è¯·è¾“å…¥ä½ çš„ç™»å½•å¸å·(UserCode)') {this.value='';this.style.color='blue'}"
-OnBlur="javascript:if(this.value==''){this.value='è¯·è¾“å…¥ä½ çš„ç™»å½•å¸å·(UserCode)';this.style.color='gray'}" ForeColor="#000000" class="dengl" Width="103%"></asp:TextBox>--%>
+                            <%--  <asp:TextBox ID="TB_UserCode" runat="server" Text="ÇëÊäÈëÄãµÄµÇÂ¼ÕÊºÅ(UserCode)" OnFocus="javascript:if(this.value=='ÇëÊäÈëÄãµÄµÇÂ¼ÕÊºÅ(UserCode)') {this.value='';this.style.color='blue'}"
+OnBlur="javascript:if(this.value==''){this.value='ÇëÊäÈëÄãµÄµÇÂ¼ÕÊºÅ(UserCode)';this.style.color='gray'}" ForeColor="#000000" class="dengl" Width="103%"></asp:TextBox>--%>
 
-                            <asp:TextBox ID="TB_UserCode" runat="server" Text="è¯·è¾“å…¥ä½ çš„ç™»å½•å¸å·(UserCode)" onFocus="javascript:this.value='';document.getElementById('LB_ErrorMsg').style.display = 'none';" ForeColor="#000000" class="dengl" Width="103%"></asp:TextBox>
+                            <asp:TextBox ID="TB_UserCode" runat="server" Text="ÇëÊäÈëÄãµÄµÇÂ¼ÕÊºÅ(UserCode)" onFocus="javascript:this.value='';document.getElementById('LB_ErrorMsg').style.display = 'none';" ForeColor="#000000" class="dengl" Width="103%"></asp:TextBox>
 
                         </td>
                     </tr>
@@ -199,8 +199,8 @@ OnBlur="javascript:if(this.value==''){this.value='è¯·è¾“å…¥ä½ çš„ç™»å½•å¸å·(Us
                     <tr>
                         <td colspan="2" align="center">
 
-                            <%--   <asp:TextBox ID="TB_Password" runat="server" Text="è¯·è¾“å…¥å¯†ç (Password)" OnFocus="javascript:if(this.value=='è¯·è¾“å…¥å¯†ç (Password)') {this.value='';this.style.color='blue'}"
-OnBlur="javascript:if(this.value==''){this.value='è¯·è¾“å…¥å¯†ç (Password)';this.style.color='gray'}"  ForeColor="#000000" class="dengl" Width="103%"></asp:TextBox>--%>
+                            <%--   <asp:TextBox ID="TB_Password" runat="server" Text="ÇëÊäÈëÃÜÂë(Password)" OnFocus="javascript:if(this.value=='ÇëÊäÈëÃÜÂë(Password)') {this.value='';this.style.color='blue'}"
+OnBlur="javascript:if(this.value==''){this.value='ÇëÊäÈëÃÜÂë(Password)';this.style.color='gray'}"  ForeColor="#000000" class="dengl" Width="103%"></asp:TextBox>--%>
 
                             <asp:TextBox ID="TB_Password" runat="server" Text="******" TextMode="Password" onFocus="javascript:this.value='';document.getElementById('LB_ErrorMsg').style.display = 'none';" ForeColor="#000000" class="dengl" Width="103%"></asp:TextBox>
                             <asp:Label ID="LB_ErrorMsg" runat="server" Visible="false" ForeColor="Red"></asp:Label>
@@ -246,7 +246,7 @@ OnBlur="javascript:if(this.value==''){this.value='è¯·è¾“å…¥å¯†ç (Password)';thi
                             <table width="100%">
                                 <tr>
                                     <td align="center">
-                                        <asp:Label ID="LB_Copyright" runat="server" Text="CopyrightÂ© TakeTop Software 2006-2026 "></asp:Label>
+                                        <asp:Label ID="LB_Copyright" runat="server" Text="Copyright? TakeTop Software 2006-2026 "></asp:Label>
                                     </td>
                                 </tr>
                                 <tr>

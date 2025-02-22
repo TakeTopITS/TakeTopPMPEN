@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -41,7 +41,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
         //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickParentA", "aHandlerForSpecialPopWindow();", true);
         if (Page.IsPostBack == false)
         {
-            //è®¾ç½®AIæ¥å£URL
+            //ÉèÖÃAI½Ó¿ÚURL
             SetAIURL();
 
             if (Session["SystemVersionType"].ToString() == "SAAS")
@@ -51,14 +51,14 @@ public partial class TakeTopMainTop : System.Web.UI.Page
         
             strUserName = ShareClass.GetUserName(strUserCode);
             LB_UserName.Text = strUserName;
-            LB_SystemMsg.Text = Resources.lang.NiHao + "ï¼Œ" + Resources.lang.HuanYingNiShiYong + " " + System.Configuration.ConfigurationManager.AppSettings["SystemName"];       
+            LB_SystemMsg.Text = Resources.lang.NiHao + "£¬" + Resources.lang.HuanYingNiShiYong + " " + System.Configuration.ConfigurationManager.AppSettings["SystemName"];       
 
-            //æ¸…ç©ºé¡µé¢ç¼“å­˜ï¼Œç”¨äºæ”¹å˜çš®è‚¤
+            //Çå¿ÕÒ³Ãæ»º´æ£¬ÓÃÓÚ¸Ä±äÆ¤·ô
             SetPageNoCache();
 
             intRunNumber = 0;
 
-            //è®¾ç½®å¾…å¤„ç†äº‹é¡¹
+            //ÉèÖÃ´ı´¦ÀíÊÂÏî
             LB_SuperDepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthoritySuperUser(strUserCode);
             LB_UnHandledCase.Text = GetUNHandledWorkCount(strUserCode, strLangCode).ToString() + " " + Resources.lang.ToDoList;
 
@@ -66,7 +66,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
         }
     }
 
-    //è®¾ç½®AIæ¥å£URL
+    //ÉèÖÃAI½Ó¿ÚURL
     public void SetAIURL()
     {
         string strAIType, strAIURL;
@@ -116,7 +116,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
         try
         {
-            //æ›´æ–°å·¦è¾¹æ å±•å¼€çŠ¶æ€
+            //¸üĞÂ×ó±ßÀ¸Õ¹¿ª×´Ì¬
             ShareClass.UpdateLeftBarExtendStatus(strUserCode, strLeftBarExtend);
 
             Session["LeftBarExtend"] = strLeftBarExtend;
@@ -133,12 +133,12 @@ public partial class TakeTopMainTop : System.Web.UI.Page
     }
 
 
-    //æ¸…ç©ºé¡µé¢ç¼“å­˜ï¼Œç”¨äºæ”¹å˜çš®è‚¤
+    //Çå¿ÕÒ³Ãæ»º´æ£¬ÓÃÓÚ¸Ä±äÆ¤·ô
     public void SetPageNoCache()
     {
         if (Session["CssDirectoryChangeNumber"].ToString() == "1")
         {
-            //æ¸…é™¤å…¨éƒ¨ç¼“å­˜
+            //Çå³ıÈ«²¿»º´æ
             IDictionaryEnumerator allCaches = Page.Cache.GetEnumerator();
             while (allCaches.MoveNext())
             {
@@ -195,11 +195,11 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
         if (strLangCode == "zh-CN")
         {
-            LB_Copyright.Text = "Copyright Â© 2006-2026 " + " <a href=https://www.taketopits.com  target=_blank style='text-decoration:none;'>&nbsp;æ³°é¡¶æ‹“é¼</a>";
+            LB_Copyright.Text = "Copyright ? 2006-2026 " + " <a href=https://www.taketopits.com  target=_blank style='text-decoration:none;'>&nbsp;Ì©¶¥ÍØ¶¦</a>";
         }
         else
         {
-            LB_Copyright.Text = "Copyright Â© 2006-2026 " + " <a href=https://www.taketopits.com  target=_blank style='text-decoration:none;'>&nbsp;TakeTopITS</a>";
+            LB_Copyright.Text = "Copyright ? 2006-2026 " + " <a href=https://www.taketopits.com  target=_blank style='text-decoration:none;'>&nbsp;TakeTopITS</a>";
         }
 
         strIsOEMVersion = System.Configuration.ConfigurationManager.AppSettings["IsOEMVersion"];
@@ -210,7 +210,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
         else
         {
             LB_Copyright.Visible = true;
-            LB_Copyright.Text = "CopyrightÂ© 2006-2026";
+            LB_Copyright.Text = "Copyright? 2006-2026";
         }
 
         LB_CurrentUserCode.Text = strUserCode;
@@ -225,10 +225,10 @@ public partial class TakeTopMainTop : System.Web.UI.Page
         LB_AutoSaveWFOperator.Text = strAutoSaveWFOperator;
 
 
-        //æ‰§è¡Œå®šæ—¶å™¨é¡µ
+        //Ö´ĞĞ¶¨Ê±Æ÷Ò³
         ShareClass.ExecuteTakeTopTimer();
 
-        //æ¨é€ç”¨æˆ·çš„ç³»ç»Ÿæ¶ˆæ¯
+        //ÍÆËÍÓÃ»§µÄÏµÍ³ÏûÏ¢
         SetUserSystemMsg();
     }
 
@@ -246,7 +246,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
             strUserName = LB_CurrentUserName.Text.Trim();
             strIsMobileDevice = LB_IsMobileDevice.Text.Trim();
 
-            //åº”ç”¨ä¼šè¯å¯¹è±¡ï¼Œä»¥ä¿æŒåœ¨çº¿è¿æ¥
+            //Ó¦ÓÃ»á»°¶ÔÏó£¬ÒÔ±£³ÖÔÚÏßÁ¬½Ó
             Session["UserCode"] = LB_CurrentUserCode.Text.Trim();
             Session["UserName"] = LB_CurrentUserName.Text.Trim();
             Session["UserType"] = LB_CurrentUserType.Text.Trim();
@@ -258,7 +258,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
             Session["MustInFrame"] = LB_MustInFrame.Text.Trim();
             Session["AutoSaveWFOperator"] = LB_AutoSaveWFOperator.Text.Trim();
 
-            //æ›´æ–°ç”¨æˆ·åœ¨çº¿æ—¶é—´å’Œå–å¾—æœ€æ–°ç”¨æˆ·æ•°
+            //¸üĞÂÓÃ»§ÔÚÏßÊ±¼äºÍÈ¡µÃ×îĞÂÓÃ»§Êı
             intIntervalTime = int.Parse(System.Configuration.ConfigurationManager.AppSettings["TimerInterval"]);
             SetLastestUseTime(intIntervalTime);
 
@@ -270,21 +270,21 @@ public partial class TakeTopMainTop : System.Web.UI.Page
             HL_ActiveUserCount.Text = intActiveUserNumber.ToString();
             HL_ActiveUserCount.NavigateUrl = "TTTakeTopIM.aspx";
 
-            //å–å¾—ç³»ç»Ÿç™»å½•æ¬¡æ•°
+            //È¡µÃÏµÍ³µÇÂ¼´ÎÊı
             lbl_LogonNumber.Text = GetLogonNumber().ToString();
 
-            ////å³æ—¶é€šé¢„è­¦
+            ////¼´Ê±Í¨Ô¤¾¯
             //OpenIMMessage();
 
             try
             {
-                //å¼¹å‡ºç»„ç»‡çº§ä¿¡æ¯
+                //µ¯³ö×éÖ¯¼¶ĞÅÏ¢
                 PushDeartmentMsg(strUserCode);
 
-                //å¼¹å‡ºä¿¡æ¯æ¡†
+                //µ¯³öĞÅÏ¢¿ò
                 OpenMessageWindow(strUserCode);
 
-                //å³æ—¶é€šé¢„è­¦
+                //¼´Ê±Í¨Ô¤¾¯
                 OpenIMMessage();
             }
             catch
@@ -314,15 +314,15 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
         strVerType = LB_VerType.Text.Trim();
 
-        #region è¿½åŠ ä¿¡æ¯æç¤ºæ¡†ä¿¡æ¯  By LiuJianping 2014-02-12
-        if (lbl_FunInfoDialBoxNum.Text.Trim() != "æ— è¿½åŠ çš„ä¿¡æ¯æç¤ºæ¡†")
+        #region ×·¼ÓĞÅÏ¢ÌáÊ¾¿òĞÅÏ¢  By LiuJianping 2014-02-12
+        if (lbl_FunInfoDialBoxNum.Text.Trim() != "ÎŞ×·¼ÓµÄĞÅÏ¢ÌáÊ¾¿ò")
         {
             string[] tempOldNumList = lbl_FunInfoDialBoxNum.Text.Trim().Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-            StringBuilder NewNumList = new StringBuilder();//æ•°é‡
-            StringBuilder NewInforNameList = new StringBuilder();//æç¤ºé¢„è­¦åç§°
-            StringBuilder NewIsSendMsgList = new StringBuilder();//æ˜¯å¦çŸ­ä¿¡é€šçŸ¥
-            StringBuilder NewIsSendEmailList = new StringBuilder();//æ˜¯å¦é‚®ä»¶é€šçŸ¥
-            StringBuilder NewPageNameList = new StringBuilder();//å…³è”é¡µé¢
+            StringBuilder NewNumList = new StringBuilder();//ÊıÁ¿
+            StringBuilder NewInforNameList = new StringBuilder();//ÌáÊ¾Ô¤¾¯Ãû³Æ
+            StringBuilder NewIsSendMsgList = new StringBuilder();//ÊÇ·ñ¶ÌĞÅÍ¨Öª
+            StringBuilder NewIsSendEmailList = new StringBuilder();//ÊÇ·ñÓÊ¼şÍ¨Öª
+            StringBuilder NewPageNameList = new StringBuilder();//¹ØÁªÒ³Ãæ
 
             FunInforDialBoxBLL funInforDialBoxBLL = new FunInforDialBoxBLL();
             string strHQL_Fun = lbl_sql.Text.Trim();
@@ -349,7 +349,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
                         NewIsSendEmailList.AppendFormat("{0},", funInforDialBox.IsSendEmail.ToString().Trim());
                         NewPageNameList.AppendFormat("{0},", funInforDialBox.LinkAddress.ToString().Trim());
 
-                        //å¼ºåˆ¶é€šçŸ¥ BY JackZhong 20140917
+                        //Ç¿ÖÆÍ¨Öª BY JackZhong 20140917
                         strIsForceInfor = funInforDialBox.IsForceInfor.Trim();
                         if (strIsForceInfor == "YES")
                         {
@@ -363,7 +363,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
                                 }
 
                                 strMessageType = random.Next(1, 100).ToString();
-                                strMessage = "å¼ºåˆ¶é€šçŸ¥ï¼š" + funInforDialBox.InforName.Trim() + ": " + ds.Tables[0].Rows.Count.ToString();
+                                strMessage = "Ç¿ÖÆÍ¨Öª£º" + funInforDialBox.InforName.Trim() + ": " + ds.Tables[0].Rows.Count.ToString();
 
                                 strURL = funInforDialBox.LinkAddress.Trim() + "&URLType=POP";
                                 strJavaScriptFuntion = "opAdvert('" + strMessageType + "'," + "'TTDisplayPOPMessage.aspx?URL=" + strURL + "&Msg=" + strMessage + "');";
@@ -401,20 +401,20 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
                         if (int.Parse(tempNewNumList[m]) > int.Parse(tempOldNumList[m]))
                         {
-                            strMessage += tempNewInforNameList[m] + "ï¼š" + (int.Parse(tempNewNumList[m]) - int.Parse(tempOldNumList[m])).ToString() + " æ¡è¦å¤„ç†ï¼";
+                            strMessage += tempNewInforNameList[m] + "£º" + (int.Parse(tempNewNumList[m]) - int.Parse(tempOldNumList[m])).ToString() + " ÌõÒª´¦Àí£¡";
 
                             strMessageType = tempNewInforNameList[m] + random.Next(1, 100).ToString();
 
                             if (tempNewIsSendMsgList[m].ToString().Trim() == "YES")
                             {
                                 Msg msg = new Msg();
-                                msg.SendMSM("Message", strUserCode, tempNewInforNameList[m] + "ï¼š" + (int.Parse(tempNewNumList[m]) - int.Parse(tempOldNumList[m])).ToString() + " æ¡è¦å¤„ç†ï¼", strUserCode);
+                                msg.SendMSM("Message", strUserCode, tempNewInforNameList[m] + "£º" + (int.Parse(tempNewNumList[m]) - int.Parse(tempOldNumList[m])).ToString() + " ÌõÒª´¦Àí£¡", strUserCode);
                             }
 
                             if (tempNewIsSendEmailList[m].ToString().Trim() == "YES")
                             {
                                 Msg msg = new Msg();
-                                msg.SendMail(strUserCode, tempNewInforNameList[m], tempNewInforNameList[m] + "ï¼š" + (int.Parse(tempNewNumList[m]) - int.Parse(tempOldNumList[m])).ToString() + " æ¡è¦å¤„ç†ï¼", strUserCode);
+                                msg.SendMail(strUserCode, tempNewInforNameList[m], tempNewInforNameList[m] + "£º" + (int.Parse(tempNewNumList[m]) - int.Parse(tempOldNumList[m])).ToString() + " ÌõÒª´¦Àí£¡", strUserCode);
                             }
 
                             ////Updated 20160123
@@ -448,7 +448,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
     protected int GetUNHandledWorkCount(string strUserCode, string strlangCode)
     {
-        #region è¿½åŠ ä¿¡æ¯æç¤ºæ¡†ä¿¡æ¯  By LiuJianping 2014-02-12
+        #region ×·¼ÓĞÅÏ¢ÌáÊ¾¿òĞÅÏ¢  By LiuJianping 2014-02-12
 
         int i = 0;
 
@@ -459,7 +459,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
         StringBuilder OldNumList = new StringBuilder();
         FunInforDialBoxBLL funInforDialBoxBLL = new FunInforDialBoxBLL();
-        string strHQL_Fun = "From FunInforDialBox as funInforDialBoxBySystem Where funInforDialBoxBySystem.Status='å¯ç”¨'";
+        string strHQL_Fun = "From FunInforDialBox as funInforDialBoxBySystem Where funInforDialBoxBySystem.Status='Enabled'";
         strHQL_Fun += " and funInforDialBoxBySystem.LangCode = " + "'" + strLangCode + "'";
         strHQL_Fun += "Order By funInforDialBoxBySystem.ID Desc ";
 
@@ -502,12 +502,12 @@ public partial class TakeTopMainTop : System.Web.UI.Page
             }
             else
             {
-                lbl_FunInfoDialBoxNum.Text = "æ²¡æœ‰æ–°çš„ä¿¡æ¯";
+                lbl_FunInfoDialBoxNum.Text = "Ã»ÓĞĞÂµÄĞÅÏ¢";
             }
         }
         else
         {
-            lbl_FunInfoDialBoxNum.Text = "æ²¡æœ‰æ–°çš„ä¿¡æ¯";
+            lbl_FunInfoDialBoxNum.Text = "Ã»ÓĞĞÂµÄĞÅÏ¢";
         }
 
         return i;
@@ -529,12 +529,12 @@ public partial class TakeTopMainTop : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         strHQL = "Select CoID,UserCode,UserName From T_CollaborationLog Where CoID in (";
-        strHQL += "  select CoID from T_Collaboration where rtrim(ltrim(status)) not in ('æ–°å»º','å…³é—­') and  CoID in ( ";
+        strHQL += "  select CoID from T_Collaboration where rtrim(ltrim(status)) not in ('New','Closed') and  CoID in ( ";
         strHQL += " select A.CoID from T_CollaborationMember A,T_CollaborationLog B ";
         strHQL += " where A.CoID = B.CoID and A.UserCode = " + "'" + strUserCode + "'";
         strHQL += " and A.UserCode not in (select C.UserCode from T_CollaborationLog C where C.CoID = B.CoID)) ";
         strHQL += " UNION ";
-        strHQL += " select CoID from T_Collaboration where rtrim(ltrim(status)) not in ('æ–°å»º','å…³é—­') and  CoID in ( ";
+        strHQL += " select CoID from T_Collaboration where rtrim(ltrim(status)) not in ('New','Closed') and  CoID in ( ";
         strHQL += " select A.CoID from T_CollaborationLog A ,T_CollaborationLog B ";
         strHQL += " where A.CoID = B.CoID and  A.CreateTime > B.CreateTime and A.UserCode <> B.UserCode ";
         strHQL += " and A.UserCode <> " + "'" + strUserCode + "'";
@@ -585,12 +585,12 @@ public partial class TakeTopMainTop : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         strHQL = "Select CoID,UserCode,UserName From T_CollaborationLog Where CoID in (";
-        strHQL += "  select CoID from T_Collaboration where rtrim(ltrim(status)) not in ('æ–°å»º','å…³é—­') and  CoID in ( ";
+        strHQL += "  select CoID from T_Collaboration where rtrim(ltrim(status)) not in ('New','Closed') and  CoID in ( ";
         strHQL += " select A.CoID from T_CollaborationMember A,T_CollaborationLog B ";
         strHQL += " where A.CoID = B.CoID and A.UserCode = " + "'" + strUserCode + "'";
         strHQL += " and A.UserCode not in (select C.UserCode from T_CollaborationLog C where C.CoID = B.CoID)) ";
         strHQL += " UNION ";
-        strHQL += " select CoID from T_Collaboration where rtrim(ltrim(status)) not in ('æ–°å»º','å…³é—­') and  CoID in ( ";
+        strHQL += " select CoID from T_Collaboration where rtrim(ltrim(status)) not in ('New','Closed') and  CoID in ( ";
         strHQL += " select A.CoID from T_CollaborationLog A ,T_CollaborationLog B ";
         strHQL += " where A.CoID = B.CoID and  A.CreateTime > B.CreateTime and A.UserCode <> B.UserCode ";
         strHQL += " and A.UserCode <> " + "'" + strUserCode + "'";
@@ -636,7 +636,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
         strHQL = string.Format(@"Select MsgId, Message From T_DepartmentMsgPush Where Position('{0}' in DepartString)> 0
                  And MsgID not in (Select MsgID From T_DepartmentMsgRelatedUser Where UserCode = '{1}')
-                 And Status = 'å¯ç”¨'
+                 And Status = 'Enabled'
                  Order By MsgID DESC", strDepartCode, strUserCode);
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_DepartmentMsgPush");
@@ -671,12 +671,12 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
         strUserCode = Session["UserCode"].ToString();
 
-        strHQL = "select * from T_Collaboration ABySystem where rtrim(ltrim(ABySystem.status)) not in ('æ–°å»º','å…³é—­') and ABySystem.CoID in ( ";
+        strHQL = "select * from T_Collaboration ABySystem where rtrim(ltrim(ABySystem.status)) not in ('New','Closed') and ABySystem.CoID in ( ";
         strHQL += " select A.CoID from T_CollaborationMember A,T_CollaborationLog B ";
         strHQL += " where A.CoID = B.CoID and A.UserCode = " + "'" + strUserCode + "'";
         strHQL += " and A.UserCode not in (select C.UserCode from T_CollaborationLog C where C.CoID = B.CoID)) ";
         strHQL += " UNION ";
-        strHQL += " select * from T_Collaboration where rtrim(ltrim(status)) not in ('æ–°å»º','å…³é—­') and  CoID in ( ";
+        strHQL += " select * from T_Collaboration where rtrim(ltrim(status)) not in ('New','Closed') and  CoID in ( ";
         strHQL += " select A.CoID from T_CollaborationLog A ,T_CollaborationLog B ";
         strHQL += " where A.CoID = B.CoID and  A.CreateTime > B.CreateTime and A.UserCode <> B.UserCode ";
         strHQL += " and A.UserCode <> " + "'" + strUserCode + "'";
@@ -700,19 +700,19 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
                     TB_OldToBeHandledNumber.Text = intNewCount.ToString();
 
-                    BT_OpenIMByPC.ToolTip = ds.Tables[0].Rows.Count + " æ¡æ¶ˆæ¯";
-                    BT_OpenIMByMobile.ToolTip = ds.Tables[0].Rows.Count + " æ¡æ¶ˆæ¯";
+                    BT_OpenIMByPC.ToolTip = ds.Tables[0].Rows.Count + " ÌõÏûÏ¢";
+                    BT_OpenIMByMobile.ToolTip = ds.Tables[0].Rows.Count + " ÌõÏûÏ¢";
 
                     BT_OpenIMByPC.Visible = true;
 
                     BT_CloseIMByPC.Visible = false;
                     BT_OpenIMByMobile.Visible = false;
 
-                    strMsg = "æœ‰" + ds.Tables[0].Rows.Count + "æ¡åä½œè¦å¤„ç†ï¼";
+                    strMsg = "ÓĞ" + ds.Tables[0].Rows.Count + "ÌõĞ­×÷Òª´¦Àí£¡";
 
                     try
                     {
-                        //å‘å…³æ¶ˆæ¯ç»™RTX
+                        //·¢¹ØÏûÏ¢¸øRTX
                         Msg msg = new Msg();
                         msg.SendRTXMsg(strUserCode, strMsg);
                     }
@@ -723,7 +723,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
                 else
                 {
                     BT_CloseIMByPC.Visible = true;
-                    BT_CloseIMByPC.ToolTip = ds.Tables[0].Rows.Count + " æ¡æ¶ˆæ¯";
+                    BT_CloseIMByPC.ToolTip = ds.Tables[0].Rows.Count + " ÌõÏûÏ¢";
 
                     BT_OpenIMByPC.Visible = false;
                     BT_OpenIMByMobile.Visible = false;
@@ -748,7 +748,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
 
 
-    //å–å¾—ç³»ç»Ÿç™»å½•æ¬¡æ•°
+    //È¡µÃÏµÍ³µÇÂ¼´ÎÊı
     protected int GetLogonNumber()
     {
         string strHQL;

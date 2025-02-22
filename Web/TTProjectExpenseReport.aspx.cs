@@ -1,4 +1,4 @@
-锘縰sing ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
 using System.Collections;
@@ -29,7 +29,7 @@ public partial class TTProjectExpenseReport : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strUserName = ShareClass.GetUserName(strUserCode);
 
-        //this.Title = Resources.lang.Project + strProjectName + " 鏀嚭璐圭敤姹囨�伙紒";
+        //this.Title = Resources.lang.Project + strProjectName + " 支出费用汇总！";
 
         if (Page.IsPostBack == false)
         {

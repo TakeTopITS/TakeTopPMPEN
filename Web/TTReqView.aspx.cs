@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -43,7 +43,7 @@ public partial class TTReqView : System.Web.UI.Page
             }
             else
             {
-                Response.Write("æ­¤éœ€æ±‚ä¸å­˜åœ¨ï¼Œå¯èƒ½å·²è¢«åˆ é™¤,è¯·æ£€æŸ¥!");
+                Response.Write("´ËĞèÇó²»´æÔÚ£¬¿ÉÄÜÒÑ±»É¾³ı,Çë¼ì²é!");
             }
         }
     }

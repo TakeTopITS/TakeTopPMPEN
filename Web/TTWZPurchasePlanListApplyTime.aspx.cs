@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System; using System.Resources;
 using System.Collections;
@@ -90,13 +90,13 @@ public partial class TTWZPurchasePlanListApplyTime : System.Web.UI.Page
 
                     wZPurchaseBLL.UpdateWZPurchase(wZPurchase, HF_PurchaseCode.Value);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ä¿å­˜æˆåŠŸï¼');", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('±£´æ³É¹¦£¡');", true);
                     return;
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('é‡‡è´­æ–‡ä»¶ä¸å­˜åœ¨ï¼');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('²É¹ºÎÄ¼ş²»´æÔÚ£¡');", true);
                 return;
             }
         }

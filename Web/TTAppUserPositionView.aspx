@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppUserPositionView.aspx.cs" Inherits="TTAppUserPositionView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppUserPositionView.aspx.cs" Inherits="TTAppUserPositionView" %>
 
 <%--<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />--%>
 <meta http-equiv="Content-Type" content="textml; charset=UTF-8" />
@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head id="Head1" runat="server">
-    <title>è°ƒç”¨ç™¾åº¦åœ°å›¾APIåœ°ç†å®šä½</title>
+    <title>µ÷ÓÃ°Ù¶ÈµØÍ¼APIµØÀí¶¨Î»</title>
 
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 
@@ -72,11 +72,11 @@
                                 <table>
                                     <tr>
                                         <td>
-                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,Jing%>"></asp:Label>ï¼š</td>
+                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,Jing%>"></asp:Label>£º</td>
                                         <td>
                                             <input type="text" id="LNG_value" runat="server"></input></td>
                                         <td>
-                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,Wei%>"></asp:Label>ï¼š</td>
+                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,Wei%>"></asp:Label>£º</td>
                                         <td>
                                             <input type="text" id="LAT_value" runat="server"></input>
                                         </td>
@@ -107,7 +107,7 @@
     window.onload = function () {
         if (navigator.geolocation) {
             //document.getElementById("status").innerHTML = "HTML5 Geolocation is supported in your browser.";
-            // ç™¾åº¦åœ°å›¾APIåŠŸèƒ½
+            // °Ù¶ÈµØÍ¼API¹¦ÄÜ
             //var map = new BMap.Map("container");
             //var point = new BMap.Point(113.373456, 23.14153);
             //map.centerAndZoom(point, 12);

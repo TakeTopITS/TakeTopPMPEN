@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -24,7 +24,7 @@ public partial class TTPersonalSpaceNewsList : System.Web.UI.Page
 
         if (Page.IsPostBack == false)
         {
-            //æ¸…ç©ºé¡µé¢ç¼“å­˜ï¼Œç”¨äºæ”¹å˜çš®è‚¤
+            //Çå¿ÕÒ³Ãæ»º´æ£¬ÓÃÓÚ¸Ä±äÆ¤·ô
             SetPageNoCache();
 
             intRunNumber = 0;
@@ -33,12 +33,12 @@ public partial class TTPersonalSpaceNewsList : System.Web.UI.Page
         }
     }
 
-    //æ¸…ç©ºé¡µé¢ç¼“å­˜ï¼Œç”¨äºæ”¹å˜çš®è‚¤
+    //Çå¿ÕÒ³Ãæ»º´æ£¬ÓÃÓÚ¸Ä±äÆ¤·ô
     public void SetPageNoCache()
     {
         if (Session["CssDirectoryChangeNumber"].ToString() == "1")
         {
-            //æ¸…é™¤å…¨éƒ¨ç¼“å­˜
+            //Çå³ıÈ«²¿»º´æ
             IDictionaryEnumerator allCaches = Page.Cache.GetEnumerator();
             while (allCaches.MoveNext())
             {
@@ -113,13 +113,13 @@ public partial class TTPersonalSpaceNewsList : System.Web.UI.Page
         strHQL += " and NewsType = " + "'" + strNewsType + "'";
         if (strUserType == "INNER")
         {
-            strHQL += " And Type = 'å†…éƒ¨'";
+            strHQL += " And Type = 'Internal'";
         }
         else
         {
-            strHQL += " And Type = 'å¤–éƒ¨'";
+            strHQL += " And Type = 'External'";
         }
-        strHQL += " and Status = 'å‘å¸ƒ' Order By ID DESC";
+        strHQL += " and Status = '·¢²¼' Order By ID DESC";
 
 
 

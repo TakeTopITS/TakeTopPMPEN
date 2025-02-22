@@ -1,4 +1,4 @@
-锘縰sing System; using System.Resources;
+using System; using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -56,7 +56,7 @@ public partial class TTBMManagement : System.Web.UI.Page
         string strHQL;
         IList lst;
         string result = "";
-        //缁戝畾鎷涙爣璁″垝
+        //绑定招标计划
         strHQL = "From BMSupplierBid as bMSupplierBid Where bMSupplierBid.AnnInvitationID='" + strID + "' and bMSupplierBid.BidStatus='Y' ";
         BMSupplierBidBLL bMSupplierBidBLL = new BMSupplierBidBLL();
         lst = bMSupplierBidBLL.GetAllBMSupplierBids(strHQL);

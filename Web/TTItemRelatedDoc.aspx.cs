@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -50,7 +50,7 @@ public partial class TTItemRelatedDoc : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandlerForSpecialPopWindow();", true);
         if (Page.IsPostBack == false)
         {
-            ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "ç‰©æ–™", strItemBomID, strItemName);
+            ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "ÎïÁÏ", strItemBomID, strItemName);
             LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
 
             LoadRelatedDoc(strItemBomID);
@@ -60,7 +60,7 @@ public partial class TTItemRelatedDoc : System.Web.UI.Page
 
             TB_Author.Text = strUserName;
 
-            //è®¾ç½®å¯¹è±¡ç›¸å…³ç¼ºçœçš„å·¥ä½œæµæ¨¡æ¿
+            //ÉèÖÃ¶ÔÏóÏà¹ØÈ±Ê¡µÄ¹¤×÷Á÷Ä£°å
             ShareClass.SetDefaultWorkflowTemplateByRelateName("ItemBom", strItemBomID, strItemName, DL_TemName);
 
         }
@@ -93,12 +93,12 @@ public partial class TTItemRelatedDoc : System.Web.UI.Page
             LB_DocTypeID.Text = docType.ID.ToString();
             TB_DocType.Text = docType.Type.Trim();
 
-            strHQL = " from Document as document where document.RelatedType = 'ç‰©æ–™' and document.RelatedID = " + strItemBomID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'åˆ é™¤' Order by document.DocID DESC";
+            strHQL = " from Document as document where document.RelatedType = 'ÎïÁÏ' and document.RelatedID = " + strItemBomID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";
             LB_FindCondition.Text = Resources.lang.CXFWWJLX + strDocType;
 
-            //è®¾ç½®ç¼ºçœçš„æ–‡ä»¶ç±»å‹
+            //ÉèÖÃÈ±Ê¡µÄÎÄ¼şÀàĞÍ
             ShareClass.SetDefaultDocType(strDocType, LB_DocTypeID, TB_DocType);
-            ////æŒ‰æ–‡ä»¶ç±»å‹è®¾ç½®ç¼ºçœçš„å·¥ä½œæµæ¨¡æ¿æ ‘
+            ////°´ÎÄ¼şÀàĞÍÉèÖÃÈ±Ê¡µÄ¹¤×÷Á÷Ä£°åÊ÷
             //ShareClass.SetDefaultWorkflowTemplate(strDocType, DL_TemName);
         }
         else
@@ -106,7 +106,7 @@ public partial class TTItemRelatedDoc : System.Web.UI.Page
             LB_DocTypeID.Text = "";
             TB_DocType.Text = "";
 
-            strHQL = " from Document as document where document.RelatedType = 'ç‰©æ–™' and document.RelatedID = " + strItemBomID + " and document.Status <> 'åˆ é™¤' Order by document.DocID DESC";
+            strHQL = " from Document as document where document.RelatedType = 'ÎïÁÏ' and document.RelatedID = " + strItemBomID + " and document.Status <> 'Deleted' Order by document.DocID DESC";
             LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
         }
 
@@ -116,7 +116,7 @@ public partial class TTItemRelatedDoc : System.Web.UI.Page
 
         LB_TotalCount.Text = Resources.lang.CXDDWJS + ": " + lst2.Count.ToString();
 
-        //æ ¹æ®æ–‡æ¡£æœ‰æ— å·¥ä½œæµæƒ…å†µéšè—åˆ é™¤æŒ‰é’®
+        //¸ù¾İÎÄµµÓĞÎŞ¹¤×÷Á÷Çé¿öÒş²ØÉ¾³ı°´Å¥
         ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);
     }
 
@@ -151,15 +151,15 @@ public partial class TTItemRelatedDoc : System.Web.UI.Page
 
                 if (strUserCode == strUploadManCode)
                 {
-                    document.Status = "åˆ é™¤";
+                    document.Status = "Deleted";
 
                     documentBLL.UpdateDocument(document, int.Parse(strDocID));
 
-                    //åˆ é™¤æ›´å¤šæ–‡æ¡£
+                    //É¾³ı¸ü¶àÎÄµµ
                     ShareClass.DeleteMoreDocByDataGrid(DataGrid1);
 
                     LoadRelatedDoc(strItemBomID);
-                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "ç‰©æ–™", strItemBomID, strItemName);
+                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "ÎïÁÏ", strItemBomID, strItemName);
                 }
                 else
                 {
@@ -184,7 +184,7 @@ public partial class TTItemRelatedDoc : System.Web.UI.Page
 
                 BT_SubmitApply.Enabled = true;
 
-                LoadRelatedWL("æ–‡ä»¶è¯„å®¡", "æ–‡ä»¶", int.Parse(strDocID));
+                LoadRelatedWL("DocumentReview", "Document", int.Parse(strDocID));
             }
         }
     }
@@ -218,11 +218,11 @@ public partial class TTItemRelatedDoc : System.Web.UI.Page
 
             string strFileName1, strExtendName;
 
-            strFileName1 = this.AttachFile.FileName;//è·å–ä¸Šä¼ æ–‡ä»¶çš„æ–‡ä»¶å,åŒ…æ‹¬åç¼€
+            strFileName1 = this.AttachFile.FileName;//»ñÈ¡ÉÏ´«ÎÄ¼şµÄÎÄ¼şÃû,°üÀ¨ºó×º
 
-            strExtendName = System.IO.Path.GetExtension(strFileName1);//è·å–æ‰©å±•å
+            strExtendName = System.IO.Path.GetExtension(strFileName1);//»ñÈ¡À©Õ¹Ãû
 
-            DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+            DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
 
             string strFileName2 = System.IO.Path.GetFileName(strFileName1);
             string strExtName = Path.GetExtension(strFileName2);
@@ -252,7 +252,7 @@ public partial class TTItemRelatedDoc : System.Web.UI.Page
                 DocumentBLL documentBLL = new DocumentBLL();
                 Document document = new Document();
 
-                document.RelatedType = "ç‰©æ–™";
+                document.RelatedType = "ÎïÁÏ";
                 document.DocType = strDocType;
                 document.DocTypeID = int.Parse(strDocTypeID);
                 document.RelatedID = int.Parse(strItemBomID);
@@ -264,7 +264,7 @@ public partial class TTItemRelatedDoc : System.Web.UI.Page
                 document.UploadTime = DateTime.Now;
                 document.Visible = strVisible;
                 document.DepartCode = strDepartCode; document.DepartName = ShareClass.GetDepartName(strDepartCode);
-                document.Status = "å¤„ç†ä¸­";
+                document.Status = "InProgress";
                 document.RelatedName = "";
 
 
@@ -275,7 +275,7 @@ public partial class TTItemRelatedDoc : System.Web.UI.Page
                     AttachFile.MoveTo(strDocSavePath + strFileName3, Brettle.Web.NeatUpload.MoveToOptions.Overwrite);
 
                     LoadRelatedDoc(strItemBomID);
-                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "ç‰©æ–™", strItemBomID, strItemName);
+                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "ÎïÁÏ", strItemBomID, strItemName);
                 }
                 catch
                 {
@@ -301,7 +301,7 @@ public partial class TTItemRelatedDoc : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        //æ ¹æ®æ–‡æ¡£æœ‰æ— å·¥ä½œæµæƒ…å†µéšè—åˆ é™¤æŒ‰é’®
+        //¸ù¾İÎÄµµÓĞÎŞ¹¤×÷Á÷Çé¿öÒş²ØÉ¾³ı°´Å¥
         ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);
     }
 
@@ -353,27 +353,27 @@ public partial class TTItemRelatedDoc : System.Web.UI.Page
         workFlow.CreatorCode = strCreatorCode;
         workFlow.CreatorName = strCreatorName;
         workFlow.CreateTime = dtCreateTime;
-        workFlow.Status = "æ–°å»º";
-        workFlow.RelatedType = "æ–‡ä»¶";
+        workFlow.Status = "New";
+        workFlow.RelatedType = "Document";
         workFlow.RelatedID = int.Parse(strDocID);
-        workFlow.DIYNextStep = "Yes"; workFlow.IsPlanMainWorkflow = "NO";
+        workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
 
         if (CB_RequiredSMS.Checked == true)
         {
-            workFlow.ReceiveSMS = "Yes";
+            workFlow.ReceiveSMS = "YES";
         }
         else
         {
-            workFlow.ReceiveSMS = "No";
+            workFlow.ReceiveSMS = "NO";
         }
 
         if (CB_RequiredMail.Checked == true)
         {
-            workFlow.ReceiveEMail = "Yes";
+            workFlow.ReceiveEMail = "YES";
         }
         else
         {
-            workFlow.ReceiveEMail = "No";
+            workFlow.ReceiveEMail = "NO";
         }
 
         try
@@ -388,14 +388,14 @@ public partial class TTItemRelatedDoc : System.Web.UI.Page
 
             xmlProcess.DbToXML(strCmdText, "T_Document", strXMLFile2);
 
-            //è‡ªåŠ¨é™„åŠ è¦è¯„å®¡çš„å·¥ä½œæµæ–‡ä»¶
+            //×Ô¶¯¸½¼ÓÒªÆÀÉóµÄ¹¤×÷Á÷ÎÄ¼ş
             ShareClass.AddWLDocumentForUploadDocPage(strDocID, int.Parse(strWFID));
-            //è‡ªåŠ¨é™„åŠ å…¶å®ƒå·²é€‰æ‹©çš„è¦è¯„å®¡çš„å·¥ä½œæµæ–‡ä»¶
+            //×Ô¶¯¸½¼ÓÆäËüÒÑÑ¡ÔñµÄÒªÆÀÉóµÄ¹¤×÷Á÷ÎÄ¼ş
             ShareClass.AddMoreWLSelectedDocumentForUploadDocPage(DataGrid1, int.Parse(strWFID), strDocID);
 
-            LoadRelatedWL("æ–‡ä»¶è¯„å®¡", "æ–‡ä»¶", int.Parse(strDocID));
+            LoadRelatedWL("DocumentReview", "Document", int.Parse(strDocID));
 
-            //å·¥ä½œæµæ¨¡æ¿æ˜¯å¦æ˜¯è‡ªåŠ¨æ¿€æ´»çŠ¶æ€
+            //¹¤×÷Á÷Ä£°åÊÇ·ñÊÇ×Ô¶¯¼¤»î×´Ì¬
             if (ShareClass.GetWorkflowTemplateIsAutoActiveStatus(strTemName) == "NO")
             {
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZWJPSSSCDGZLGLYMJHCGZLS + "')", true);
@@ -413,7 +413,7 @@ public partial class TTItemRelatedDoc : System.Web.UI.Page
 
     protected void BT_Refrash_Click(object sender, EventArgs e)
     {
-        //è®¾ç½®å¯¹è±¡ç›¸å…³ç¼ºçœçš„å·¥ä½œæµæ¨¡æ¿
+        //ÉèÖÃ¶ÔÏóÏà¹ØÈ±Ê¡µÄ¹¤×÷Á÷Ä£°å
         ShareClass.SetDefaultWorkflowTemplateByRelateName("ItemBom", strItemBomID, strItemName, DL_TemName);
     }
 
@@ -428,7 +428,7 @@ public partial class TTItemRelatedDoc : System.Web.UI.Page
 
         Document document = (Document)lst[0];
 
-        document.RelatedType = "å·¥ä½œæµ";
+        document.RelatedType = "Workflow";
         document.RelatedID = intRelatedID;
         document.RelatedName = "";
 
@@ -508,14 +508,14 @@ public partial class TTItemRelatedDoc : System.Web.UI.Page
         strDepartCode = GetDepartCode(strUserCode);
 
         strHQL = "from Document as document where ";
-        strHQL += " ((document.RelatedType = 'ç‰©æ–™' and document.RelatedID = " + strItemBomID;
+        strHQL += " ((document.RelatedType = 'ÎïÁÏ' and document.RelatedID = " + strItemBomID;
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or (document.Visible = 'éƒ¨é—¨' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";
-        strHQL += " or ( document.Visible = 'å…¨ä½“'))) ";
-        strHQL += " or ((document.RelatedType = 'ä¼šè®®' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='ç‰©æ–™' and meeting.RelatedID = " + strItemBomID + "))";
+        strHQL += " or (document.Visible = '²¿ÃÅ' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";
+        strHQL += " or ( document.Visible = 'È«Ìå'))) ";
+        strHQL += " or ((document.RelatedType = '»áÒé' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='ÎïÁÏ' and meeting.RelatedID = " + strItemBomID + "))";
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or ( document.Visible = 'ä¼šè®®'))))";
-        strHQL += " and rtrim(ltrim(document.Status)) <> 'åˆ é™¤' order by document.DocID DESC";
+        strHQL += " or ( document.Visible = '»áÒé'))))";
+        strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' order by document.DocID DESC";
 
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);
@@ -526,7 +526,7 @@ public partial class TTItemRelatedDoc : System.Web.UI.Page
 
         LB_TotalCount.Text = Resources.lang.CXDDWJS + ": " + lst.Count.ToString();
 
-        //æ ¹æ®æ–‡æ¡£æœ‰æ— å·¥ä½œæµæƒ…å†µéšè—åˆ é™¤æŒ‰é’®
+        //¸ù¾İÎÄµµÓĞÎŞ¹¤×÷Á÷Çé¿öÒş²ØÉ¾³ı°´Å¥
         ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);
     }
 

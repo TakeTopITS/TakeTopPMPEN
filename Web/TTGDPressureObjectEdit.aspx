@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDPressureObjectEdit.aspx.cs" Inherits="TTGDPressureObjectEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDPressureObjectEdit.aspx.cs" Inherits="TTGDPressureObjectEdit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -57,7 +57,7 @@
                                                 <table style="width: 40%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShiYaJieZhi%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShiYaJieZhi%>"></asp:Label>£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_PressureObject" runat="server"></asp:TextBox>
@@ -66,7 +66,7 @@
                                                     <tr>
                                                         <td style="text-align: center" class="formItemBgStyle" colspan="2">
                                                             <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnOK_Click" />&nbsp;&nbsp;
-                                                        <input type="button" value="è¿”å›ž" id="BT_Return" class="inpu" onclick="window.location.href = 'TTGDPressureObjectList.aspx'" />
+                                                        <input type="button" value="·µ»Ø" id="BT_Return" class="inpu" onclick="window.location.href = 'TTGDPressureObjectList.aspx'" />
                                                         </td>
                                                     </tr>
                                                 </table>

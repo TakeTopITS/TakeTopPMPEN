@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPGoodsInforForAfterSaleService.aspx.cs" Inherits="TTAPPGoodsInforForAfterSaleService" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPGoodsInforForAfterSaleService.aspx.cs" Inherits="TTAPPGoodsInforForAfterSaleService" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=1" />
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -32,8 +32,8 @@
 
         });
 
-        var loadingIndex; //提示层index
-        var isWxConfigReady = false; //config是否验证通过
+        var loadingIndex; //��ʾ��index
+        var isWxConfigReady = false; //config�Ƿ���֤ͨ��
         $(function () {
 
             try {
@@ -62,11 +62,11 @@
                  , content: 'ImagesSkin/Processing.gif'
             });
             wx.config({
-                debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-                appId: '<%=signModel.appId %>', // 必填，公众号的唯一标识
-                timestamp: '<%=signModel.time %>', // 必填，生成签名的时间戳(随便填写)
-                nonceStr: '<%=signModel.randstr %>', // 必填，生成签名的随机串(随便填写)
-                signature: '<%=signModel.signstr %>', // 必填，签名，见附录1
+                debug: false, // ��������ģʽ,���õ�����api�ķ���ֵ���ڿͻ���alert��������Ҫ�鿴����Ĳ�����������pc�˴򿪣�������Ϣ��ͨ��log���������pc��ʱ�Ż��ӡ��
+                appId: '<%=signModel.appId %>', // ������ںŵ�Ψһ��ʶ
+                timestamp: '<%=signModel.time %>', // �������ǩ����ʱ���(�����д)
+                nonceStr: '<%=signModel.randstr %>', // �������ǩ���������(�����д)
+                signature: '<%=signModel.signstr %>', // ���ǩ��������¼1
 
                 jsApiList: [
                     'checkJsApi',
@@ -114,35 +114,35 @@
                     //'translateVoice',
 
 
-                ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                ] // �����Ҫʹ�õ�JS�ӿ��б�������JS�ӿ��б�����¼2
             });
 
 
             wx.ready(function () {
                 layer.close(loadingIndex);
-                // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+                // config��Ϣ��֤���ִ��ready���������нӿڵ��ö�������config�ӿڻ�ý��֮��config��һ���ͻ��˵��첽���������������Ҫ��ҳ�����ʱ�͵�����ؽӿڣ��������ؽӿڷ���ready�����е�����ȷ����ȷִ�С������û�����ʱ�ŵ��õĽӿڣ������ֱ�ӵ��ã�����Ҫ����ready�����С�
                 isWxConfigReady = true;
             });
             wx.error(function (res) {
                 layer.close(loadingIndex);
                 alert(JSON.stringify(res));
-                // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+                // config��Ϣ��֤ʧ�ܻ�ִ��error��������ǩ�����ڵ�����֤ʧ�ܣ����������Ϣ���Դ�config��debugģʽ�鿴��Ҳ�����ڷ��ص�res�����в鿴������SPA�������������ǩ����
             });
         }
 
         function qrcode() {
             wx.scanQRCode({
-                needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
-                scanType: ["qrCode", "barCode"], // 可以指定扫二维码还是一维码，默认二者都有
+                needResult: 1, // Ĭ��Ϊ0��ɨ������΢�Ŵ�����1��ֱ�ӷ���ɨ������
+                scanType: ["qrCode", "barCode"], // ����ָ��ɨ��ά�뻹��һά�룬Ĭ�϶��߶���
                 success: function (res) {
-                    var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
+                    var result = res.resultStr; // ��needResult Ϊ 1 ʱ��ɨ�뷵�صĽ��
                     if (typeof (result) != "undefined") {
 
                         result = result.substring(result.indexOf(',') + 1, result.length);
 
-                        //文本框赋值	
+                        //�ı���ֵ	
                         $(txtGoodsSN).val(result);
-                        //点击查询按钮
+                        //�����ѯ��ť
                         $(btnFind).click();
                     }
                 }
@@ -182,7 +182,7 @@
                                                         </td>
                                                     </tr>
                                                 </table>
-                                                <img id="IMG_Waiting" src="Images/Processing.gif" alt="请稍候，处理中..." style="display: none;" />
+                                                <img id="IMG_Waiting" src="Images/Processing.gif" alt="���Ժ򣬴�����..." style="display: none;" />
                                             </a>
                                         </td>
                                         <td></td>
@@ -279,7 +279,7 @@
                                                 ShowHeader="false" Height="1px" OnItemCommand="DataGrid1_ItemCommand" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                                 Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" PageSize="25">
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="编号">
+                                                    <asp:TemplateColumn HeaderText="���">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_GoodsSN" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"SN") %>'
                                                                 class="inpuLongest" />
@@ -289,23 +289,23 @@
                                                     <asp:BoundColumn DataField="GoodsCode" HeaderText="DaiMa">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="GoodsName" HeaderText="物料名称">
+                                                    <asp:BoundColumn DataField="GoodsName" HeaderText="��������">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="ModelNumber" HeaderText="型号">
+                                                    <asp:BoundColumn DataField="ModelNumber" HeaderText="�ͺ�">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Spec" HeaderText="规格">
+                                                    <asp:BoundColumn DataField="Spec" HeaderText="���">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="17%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Number" HeaderText="数量">
+                                                    <asp:BoundColumn DataField="Number" HeaderText="����">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                     </asp:BoundColumn>
 
-                                                    <asp:BoundColumn DataField="WarrantyPeriod" HeaderText="保修期">
+                                                    <asp:BoundColumn DataField="WarrantyPeriod" HeaderText="������">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="6%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="WarrantyEndTime" HeaderText="保修结束时间" DataFormatString="{0:yyyy/MM/dd}">
+                                                    <asp:BoundColumn DataField="WarrantyEndTime" HeaderText="���޽���ʱ��" DataFormatString="{0:yyyy/MM/dd}">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
 
@@ -321,7 +321,7 @@
                                     </tr>
                                     <tr>
                                         <td style="width: 1200px; text-align: Center;">
-                                            <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,Di%>"></asp:Label>：<asp:Label ID="LB_PageIndex" runat="server"></asp:Label>
+                                            <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,Di%>"></asp:Label>��<asp:Label ID="LB_PageIndex" runat="server"></asp:Label>
                                             &nbsp;<asp:Label ID="Label36" runat="server" Text="<%$ Resources:lang,YeGong%>"></asp:Label>
                                             <asp:Label ID="LB_TotalPageNumber" runat="server"></asp:Label>
                                             &nbsp;<asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,Ye%>"></asp:Label>
@@ -414,44 +414,44 @@
                                         ShowHeader="False" OnItemCommand="DataGrid2_ItemCommand"
                                         Width="100%" Height="1px" CellPadding="4" ForeColor="#333333" GridLines="None">
                                         <Columns>
-                                            <asp:TemplateColumn HeaderText="编号">
+                                            <asp:TemplateColumn HeaderText="���">
                                                 <ItemTemplate>
                                                     <asp:Button ID="BT_TaskID" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"TaskID") %>'
                                                         CssClass="inpu" />
                                                 </ItemTemplate>
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                             </asp:TemplateColumn>
-                                            <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                            <asp:BoundColumn DataField="Type" HeaderText="����">
                                                 <ItemStyle CssClass="itemBorder" Width="8%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Task" HeaderText="任务">
+                                            <asp:BoundColumn DataField="Task" HeaderText="Task">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="12%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Priority" HeaderText="优先级">
+                                            <asp:BoundColumn DataField="Priority" HeaderText="���ȼ�">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
-                                            <asp:TemplateColumn HeaderText="状态">
+                                            <asp:TemplateColumn HeaderText="״̬">
                                                 <ItemTemplate>
                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                 </ItemTemplate>
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                             </asp:TemplateColumn>
-                                            <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="开始时间">
+                                            <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="��ʼʱ��">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="结束时间">
+                                            <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="����ʱ��">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Budget" HeaderText="预算">
+                                            <asp:BoundColumn DataField="Budget" HeaderText="Budget">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="FinishPercent" HeaderText="完成程度">
+                                            <asp:BoundColumn DataField="FinishPercent" HeaderText="��ɳ̶�">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Expense" HeaderText="费用">
+                                            <asp:BoundColumn DataField="Expense" HeaderText="����">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                             </asp:BoundColumn>
-                                            <asp:TemplateColumn HeaderText="状态">
+                                            <asp:TemplateColumn HeaderText="״̬">
                                                 <ItemTemplate>
                                                     <%# ShareClass.GetStatusHomeNameByRequirementStatus(Eval("Status").ToString()) %>
                                                 </ItemTemplate>
@@ -525,28 +525,28 @@
                                         Height="30px" Width="100%" ID="DataGrid3">
 
                                         <Columns>
-                                            <asp:BoundColumn DataField="ID" HeaderText="编号">
+                                            <asp:BoundColumn DataField="ID" HeaderText="���">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="GoodsName" HeaderText="物料名">
+                                            <asp:BoundColumn DataField="GoodsName" HeaderText="������">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="ModelNumber" HeaderText="型号">
+                                            <asp:BoundColumn DataField="ModelNumber" HeaderText="�ͺ�">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Spec" HeaderText="规格">
+                                            <asp:BoundColumn DataField="Spec" HeaderText="���">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Number" HeaderText="数量">
+                                            <asp:BoundColumn DataField="Number" HeaderText="����">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Unit" HeaderText="单位">
+                                            <asp:BoundColumn DataField="Unit" HeaderText="��λ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="CheckOutNumber" HeaderText="已出库">
+                                            <asp:BoundColumn DataField="CheckOutNumber" HeaderText="�ѳ���">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Manufacturer" HeaderText="厂家">
+                                            <asp:BoundColumn DataField="Manufacturer" HeaderText="����">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                             </asp:BoundColumn>
                                         </Columns>

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -24,7 +24,7 @@ public partial class TTCustomerQuestionHandleRecord : System.Web.UI.Page
 
         string strQuestionID = Request.QueryString["QuestionID"];
 
-        //this.Title = "å®¢æˆ·é—®é¢˜ï¼š" + strQuestionID  + " å¤„ç†è®°å½•";
+        //this.Title = "¿Í»§ÎÊÌâ£º" + strQuestionID  + " ´¦Àí¼ÇÂ¼";
 
         string strUserCode = Session["UserCode"].ToString();
         if (Page.IsPostBack == false)

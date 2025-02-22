@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppWorkFlow.aspx.cs" Inherits="TTAppWorkFlow" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppWorkFlow.aspx.cs" Inherits="TTAppWorkFlow" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc2" %>
@@ -160,7 +160,7 @@
 
         });
 
-        //ÁÇπÂáªDATAGRIDË°åÂÜÖ‰ªª‰Ωï‰∏ÄÁÇπÔºåÈÉΩËÉΩËß¶ÂèëË°åÂÜÖÁöÑÈìæÊé•
+        //µ„ª˜DATAGRID––ƒ⁄»Œ∫Œ“ªµ„£¨∂ºƒ‹¥•∑¢––ƒ⁄µƒ¡¥Ω”
         function SetDataGridTrClickLink() {
 
             setTrClickLinkSpec("TabContainer2_TabPanel3_DataGrid1");
@@ -200,7 +200,7 @@
                                                             <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,Back%>" />
                                                         </td>
                                                         <td width="5">
-                                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="ËØ∑Á®çÂÄôÔºåÂ§ÑÁêÜ‰∏≠..." style="display: none;" />
+                                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="«Î…‘∫Ú£¨¥¶¿Ì÷–..." style="display: none;" />
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -232,10 +232,10 @@
                                                                             OnPageIndexChanged="DataGrid4_PageIndexChanged" PageSize="5" Width="100%">
 
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="ÁºñÂè∑" Visible="False">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="±‡∫≈" Visible="False">
                                                                                     <ItemStyle CssClass="" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:TemplateColumn HeaderText="Ë¶ÅÂÆ°Ê†∏ÁöÑÂ∑•‰Ωú">
+                                                                                <asp:TemplateColumn HeaderText="“™…Û∫Àµƒπ§◊˜">
                                                                                     <ItemTemplate>
 
                                                                                         <div class="npb">
@@ -247,7 +247,7 @@
                                                                                                     <h4><%# DataBinder.Eval(Container.DataItem,"WorkDetail") %></h4>
                                                                                                     <h5><%# DataBinder.Eval(Container.DataItem,"WLName") %></h5>
                                                                                                     <h6><%# DataBinder.Eval(Container.DataItem,"CreatorName") %></h6>
-                                                                                                    <sub class="yesno">ÂøÖÈúÄ:<%# DataBinder.Eval(Container.DataItem,"Requisite") %></sub><label><%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %></label></a></div>
+                                                                                                    <sub class="yesno">±ÿ–Ë:<%# DataBinder.Eval(Container.DataItem,"Requisite") %></sub><label><%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %></label></a></div>
                                                                                         </div>
 
 
@@ -286,10 +286,10 @@
                                                                             PageSize="5" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
 
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="ÁºñÂè∑" Visible="False">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="±‡∫≈" Visible="False">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:TemplateColumn HeaderText="Ë¶ÅÂÆ°Ê†∏ÁöÑÂ∑•‰Ωú">
+                                                                                <asp:TemplateColumn HeaderText="“™…Û∫Àµƒπ§◊˜">
                                                                                     <ItemTemplate>
 
 
@@ -303,7 +303,7 @@
                                                                                                     <h4><%# DataBinder.Eval(Container.DataItem,"WorkDetail") %></h4>
                                                                                                     <h5><%# DataBinder.Eval(Container.DataItem,"WLName") %></h5>
                                                                                                     <h6><%# DataBinder.Eval(Container.DataItem,"CreatorName") %></h6>
-                                                                                                    <sub class="yesno">ÂøÖÈúÄ:<%# DataBinder.Eval(Container.DataItem,"Requisite") %></sub><label><%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %></label></a></div>
+                                                                                                    <sub class="yesno">±ÿ–Ë:<%# DataBinder.Eval(Container.DataItem,"Requisite") %></sub><label><%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %></label></a></div>
                                                                                         </div>
 
 
@@ -329,9 +329,9 @@
                                                                             <HeaderStyle HorizontalAlign="Center" />
                                                                             <Columns>
                                                                                 <asp:TemplateColumn></asp:TemplateColumn>
-                                                                                <asp:BoundColumn DataField="WLID" HeaderText="ÁºñÂè∑" Visible="false"></asp:BoundColumn>
+                                                                                <asp:BoundColumn DataField="WLID" HeaderText="±‡∫≈" Visible="false"></asp:BoundColumn>
 
-                                                                                <asp:TemplateColumn HeaderText="Ë¶ÅÂÆ°Ê†∏ÁöÑÂ∑•‰Ωú">
+                                                                                <asp:TemplateColumn HeaderText="“™…Û∫Àµƒπ§◊˜">
                                                                                     <ItemTemplate>
 
                                                                                         <div class="npb">
@@ -350,10 +350,10 @@
                                                                                 </asp:TemplateColumn>
 
                                                                                 <%--  <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTAppMyWorkDetailMain.aspx?WLID={0}"
-                                                                                DataTextField="WLName" HeaderText="Â∑•‰ΩúÊµÅ" Target="rightFrame">
+                                                                                DataTextField="WLName" HeaderText="Workflow" Target="rightFrame">
                                                                                 
                                                                             </asp:HyperLinkColumn>--%>
-                                                                                <asp:TemplateColumn HeaderText="Áä∂ÊÄÅ">
+                                                                                <asp:TemplateColumn HeaderText="◊¥Ã¨">
                                                                                     <ItemTemplate>
                                                                                     </ItemTemplate>
 

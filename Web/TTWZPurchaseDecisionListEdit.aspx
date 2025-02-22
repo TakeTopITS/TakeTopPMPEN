@@ -1,11 +1,11 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPurchaseDecisionListEdit.aspx.cs" Inherits="TTWZPurchaseDecisionListEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPurchaseDecisionListEdit.aspx.cs" Inherits="TTWZPurchaseDecisionListEdit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>é‡‡è´­è¯„æ ‡</title>
+    <title>²É¹ºÆÀ±ê</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <%--    <script src="js/allAHandler.js"></script>--%>
@@ -17,11 +17,11 @@
 
         });
 
-        // é€‰æ‹©ä¾›åº”å•†
+        // Ñ¡Ôñ¹©Ó¦ÉÌ
         function OpenPurchaseDecisionDetail(tag) {
             var url = "TTWZPurchaseDecisionDetail.aspx";
 
-            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + id + "&ctrlName=" + name, 'é€‰æ‹©å†³ç­–', 900, 500);	
+            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + id + "&ctrlName=" + name, 'Ñ¡Ôñ¾ö²ß', 900, 500);	
 
         }
  
@@ -138,34 +138,34 @@
                                         </tr>
                                         <tr>
                                             <td class="formItemBgStyle">
-                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,CaiGouBianHao%>"></asp:Label>ï¼š<asp:TextBox ID="TXT_PurchaseCode" runat="server" ReadOnly="true"></asp:TextBox>
+                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,CaiGouBianHao%>"></asp:Label>£º<asp:TextBox ID="TXT_PurchaseCode" runat="server" ReadOnly="true"></asp:TextBox>
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 <asp:Button ID="BT_Assessment" runat="server" Text="<%$ Resources:lang,PingBiao%>" CssClass="inpu" Enabled="true" OnClick="BT_Assessment_Click" />
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="formItemBgStyle">
-                                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,PingBiaoYiJian%>"></asp:Label>ï¼š<asp:TextBox ID="TXT_Suggest" runat="server" TextMode="MultiLine" Width="600px" Height="50px"></asp:TextBox>
+                                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,PingBiaoYiJian%>"></asp:Label>£º<asp:TextBox ID="TXT_Suggest" runat="server" TextMode="MultiLine" Width="600px" Height="50px"></asp:TextBox>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="formItemBgStyle">
-                                                <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,BiaoDuanXuanZe%>"></asp:Label>ï¼š
-                                                <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,BiaoDuanYi%>"></asp:Label>ï¼š
+                                                <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,BiaoDuanXuanZe%>"></asp:Label>£º
+                                                <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,BiaoDuanYi%>"></asp:Label>£º
                                                 <asp:DropDownList ID="DL_Supplier1" runat="server" DataTextField="SupplierName" DataValueField="SupplierCode" >
                                                 </asp:DropDownList>
-                                                <%-- <asp:TextBox ID="TXT_Supplier1" runat="server" Width="80"></asp:TextBox><asp:Button ID="Button2" runat="server" Text="â–¼" CssClass="inpu" OnClick="BT_SelectSupplier1_Click" />&nbsp;--%>
-                                                <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,BiaoDuanEr%>"></asp:Label>ï¼š
+                                                <%-- <asp:TextBox ID="TXT_Supplier1" runat="server" Width="80"></asp:TextBox><asp:Button ID="Button2" runat="server" Text="¨‹" CssClass="inpu" OnClick="BT_SelectSupplier1_Click" />&nbsp;--%>
+                                                <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,BiaoDuanEr%>"></asp:Label>£º
                                                  <asp:DropDownList ID="DL_Supplier2" runat="server" DataTextField="SupplierName" DataValueField="SupplierCode">
                                                  </asp:DropDownList>
                                                 <%--  <asp:TextBox ID="TXT_Supplier2" runat="server" Width="80"></asp:TextBox>--%>
-                                                <%--    <asp:Button ID="Button3" runat="server" Text="â–¼" CssClass="inpu" OnClick="BT_SelectSupplier2_Click" />&nbsp;--%>
-                                                <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,BiaoDuanSan%>"></asp:Label>ï¼š
+                                                <%--    <asp:Button ID="Button3" runat="server" Text="¨‹" CssClass="inpu" OnClick="BT_SelectSupplier2_Click" />&nbsp;--%>
+                                                <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,BiaoDuanSan%>"></asp:Label>£º
                                                   <asp:DropDownList ID="DL_Supplier3" runat="server" DataTextField="SupplierName" DataValueField="SupplierCode">
                                                   </asp:DropDownList>
-                                                <%-- <asp:TextBox ID="TXT_Supplier3" runat="server" Width="80"></asp:TextBox><asp:Button ID="Button4" runat="server" Text="â–¼" CssClass="inpu" OnClick="BT_SelectSupplier3_Click" />&nbsp;--%>
+                                                <%-- <asp:TextBox ID="TXT_Supplier3" runat="server" Width="80"></asp:TextBox><asp:Button ID="Button4" runat="server" Text="¨‹" CssClass="inpu" OnClick="BT_SelectSupplier3_Click" />&nbsp;--%>
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,PingBiaoRen%>"></asp:Label>ï¼š<asp:TextBox ID="TXT_ExpertCode" runat="server" Width="80"></asp:TextBox>
+                                                <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,PingBiaoRen%>"></asp:Label>£º<asp:TextBox ID="TXT_ExpertCode" runat="server" Width="80"></asp:TextBox>
 
                                              <%--   <asp:HiddenField ID="HF_Supplier1" runat="server" />
                                                 <asp:HiddenField ID="HF_Supplier2" runat="server" />
@@ -176,7 +176,7 @@
                                             <td align="center" class="formItemBgStyle">
                                                 <asp:Button ID="BT_Save" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="BT_Save_Click" />&nbsp;
                                                 <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                    type="button" value="å…³é—­" />
+                                                    type="button" value="Closed" />
                                             </td>
                                         </tr>
                                     </table>

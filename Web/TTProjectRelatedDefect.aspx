@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectRelatedDefect.aspx.cs" Inherits="TTProjectRelatedDefect" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectRelatedDefect.aspx.cs" Inherits="TTProjectRelatedDefect" %>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -61,7 +61,7 @@
                                                         <td style="padding-top: 3px;">(
                                                         </td>
                                                         <td style="padding-top: 5px;">
-                                                            <asp:Label ID="LB_tiDefectType" runat="server" Text="<%$ Resources:lang,Type%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="LB_tiDefectType" runat="server" Text="<%$ Resources:lang,Type%>"></asp:Label>£º
                                                         </td>
                                                         <td style="padding-top: 5px;">
                                                             <asp:DropDownList ID="DL_DefectType" runat="server" DataTextField="DefectType" DataValueField="DefectType">
@@ -150,24 +150,24 @@
                                                                 ShowHeader="False" OnItemCommand="DataGrid2_ItemCommand" Width="100%" CellPadding="4"
                                                                 ForeColor="#333333" GridLines="None">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="DefectID" HeaderText="ç¼–å·">
+                                                                    <asp:BoundColumn DataField="DefectID" HeaderText="±àºÅ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="DefectID" DataNavigateUrlFormatString="TTProRelatedDefectView.aspx?DefectID={0}"
-                                                                        DataTextField="DefectName" HeaderText="åç§°" Target="_blank">
+                                                                        DataTextField="DefectName" HeaderText="Ãû³Æ" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                                                     </asp:HyperLinkColumn>
-                                                                    <asp:BoundColumn DataField="DefectFinishedDate" HeaderText="ç¼ºé™·æ—¥æœŸ" DataFormatString="{0:yyyy/MM/dd}">
+                                                                    <asp:BoundColumn DataField="DefectFinishedDate" HeaderText="È±ÏÝÈÕÆÚ" DataFormatString="{0:yyyy/MM/dd}">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="MakeDate" HeaderText="ç«‹é¡¹æ—¥æœŸ" DataFormatString="{0:yyyy/MM/dd}">
+                                                                    <asp:BoundColumn DataField="MakeDate" HeaderText="Á¢ÏîÈÕÆÚ" DataFormatString="{0:yyyy/MM/dd}">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="ApplicantCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                        DataTextField="ApplicantName" HeaderText="ç”³è¯·äºº" Target="_blank">
+                                                                        DataTextField="ApplicantName" HeaderText="ÉêÇëÈË" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:HyperLinkColumn>
-                                                                    <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                                    <asp:TemplateColumn HeaderText="×´Ì¬">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                         </ItemTemplate>
@@ -195,7 +195,7 @@
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                     </asp:TemplateColumn>
 
-                                                                    <%--        <asp:ButtonColumn CommandName="Delete" Text="&lt;div&gt;&lt;img src=ImagesSkin/icon_del.gif border=0 alt='åˆ é™¤' /&gt;&lt;/div&gt;">
+                                                                    <%--        <asp:ButtonColumn CommandName="Delete" Text="&lt;div&gt;&lt;img src=ImagesSkin/icon_del.gif border=0 alt='Deleted' /&gt;&lt;/div&gt;">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:ButtonColumn>--%>
                                                                 </Columns>

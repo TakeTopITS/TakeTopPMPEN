@@ -45,11 +45,11 @@ public class addWebServiceHandler : IHttpHandler, IReadOnlySessionState
             else {
                 webServiceBLL.UpdateWebService(webService, ID);
             }
-            result = "保存成功！";
+            result = "Save successful！";
         }
         catch (Exception ex)
         {
-            result = "保存失败，请检查！" + ex.Message.ToString();
+            result = "Save failed, reason:" + ex.Message.ToString();
         }
         context.Response.ContentType = "text/plain";
         context.Response.Write(result);

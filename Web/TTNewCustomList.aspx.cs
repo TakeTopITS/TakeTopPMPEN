@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System; using System.Resources;
 using System.Collections;
@@ -41,8 +41,8 @@ public partial class TTNewCustomList : System.Web.UI.Page
             {
                 CustomModule customModule = (CustomModule)customModuleList[0];
                 customModuleBLL.DeleteCustomerModule(customModule);
-                Response.Write("<script>alert('åˆ é™¤æˆåŠŸï¼');</script>");
-                //é‡æ–°åŠ è½½åˆ—è¡¨
+                Response.Write("<script>alert('É¾³ı³É¹¦£¡');</script>");
+                //ÖØĞÂ¼ÓÔØÁĞ±í
                 BindCustomModuleData();
             }
 
@@ -54,7 +54,7 @@ public partial class TTNewCustomList : System.Web.UI.Page
         if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
         {
             LinkButton LB = (LinkButton)e.Item.FindControl("LB_Del");
-            LB.Attributes.Add("onclick", "return confirm('ç¡®å®šè¦åˆ é™¤æ­¤é¡¹è®°å½•å—ï¼Ÿ');");
+            LB.Attributes.Add("onclick", "return confirm('È·¶¨ÒªÉ¾³ı´ËÏî¼ÇÂ¼Âğ£¿');");
         }
     }
 }

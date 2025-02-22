@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -22,7 +22,7 @@ public partial class TTPersonalSpaceNoticeList : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickParentA", "aHandlerForSpecialPopWindow();", true);
         if (Page.IsPostBack == false)
         {
-            //æ¸…ç©ºé¡µé¢ç¼“å­˜ï¼Œç”¨äºæ”¹å˜çš®è‚¤
+            //Çå¿ÕÒ³Ãæ»º´æ£¬ÓÃÓÚ¸Ä±äÆ¤·ô
             SetPageNoCache();
 
             intRunNumber = 0;
@@ -31,12 +31,12 @@ public partial class TTPersonalSpaceNoticeList : System.Web.UI.Page
         }
     }
 
-    //æ¸…ç©ºé¡µé¢ç¼“å­˜ï¼Œç”¨äºæ”¹å˜çš®è‚¤
+    //Çå¿ÕÒ³Ãæ»º´æ£¬ÓÃÓÚ¸Ä±äÆ¤·ô
     public void SetPageNoCache()
     {
         if (Session["CssDirectoryChangeNumber"].ToString() == "1")
         {
-            //æ¸…é™¤å…¨éƒ¨ç¼“å­˜
+            //Çå³ıÈ«²¿»º´æ
             IDictionaryEnumerator allCaches = Page.Cache.GetEnumerator();
             while (allCaches.MoveNext())
             {
@@ -120,13 +120,13 @@ public partial class TTPersonalSpaceNoticeList : System.Web.UI.Page
         strHQL += " Where (RelatedDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))  or RelatedDepartCode = '" + strDepartCode + "')";
         if (strUserType == "INNER")
         {
-            strHQL += " And Scope = 'å†…éƒ¨'";
+            strHQL += " And Scope = 'Internal'";
         }
         else
         {
-            strHQL += " And Scope = 'å¤–éƒ¨'";
+            strHQL += " And Scope = 'External'";
         }
-        strHQL += " And Status = 'å‘å¸ƒ' Order By DocID DESC";
+        strHQL += " And Status = '·¢²¼' Order By DocID DESC";
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_PublicNotice");
         DataGrid7.DataSource = ds;
         DataGrid7.DataBind();

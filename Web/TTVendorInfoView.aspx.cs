@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Configuration;
@@ -86,7 +86,7 @@ public partial class TTVendorInfoView : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Constract as constract where constract.Status <> '归档'";
+        strHQL = "from Constract as constract where constract.Status <> 'Archived'";
         strHQL += " and constract.RelatedVendorCode = " + "'" + strVendorCode + "'";
         strHQL += " Order by constract.SignDate DESC";
         ConstractBLL constractBLL = new ConstractBLL();

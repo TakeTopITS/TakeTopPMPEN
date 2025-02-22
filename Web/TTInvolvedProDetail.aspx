@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTInvolvedProDetail.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTInvolvedProDetail.aspx.cs"
     Inherits="TTInvolvedProDetail" %>
 
 
@@ -290,7 +290,7 @@
                                                                                                 <asp:HyperLink ID="HL_CurrentDailyWorkTask" runat="server" Text="&lt;div&gt;&lt;img src=ImagesSkin/renwu.png border=0 width=20 height=20 alt='DailyTask' /&gt;&lt;/div&gt;"></asp:HyperLink>
                                                                                             </td>
                                                                                             <td>
-                                                                                                <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DiDian%>"></asp:Label>ï¼š</td>
+                                                                                                <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DiDian%>"></asp:Label>£º</td>
                                                                                             <td>
                                                                                                 <asp:TextBox ID="TB_WorkAddress" runat="server" Width="250px"></asp:TextBox></td>
                                                                                             <td>
@@ -311,7 +311,7 @@
                                                                                     <table width="80%">
                                                                                         <tr>
                                                                                             <td width="40px">
-                                                                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,RiZhi%>"></asp:Label>ï¼š</td>
+                                                                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,RiZhi%>"></asp:Label>£º</td>
                                                                                             <td>
                                                                                                 <CKEditor:CKEditorControl ID="HE_TodaySummary" runat="server" Width="100%" Height="150" Visible="false" />
                                                                                                 <CKEditor:CKEditorControl runat="server" ID="HT_TodaySummary" Width="100%" Height="150px" Visible="false" />
@@ -325,7 +325,7 @@
                                                                                         </tr>
                                                                                         <tr>
                                                                                             <td width="40px">
-                                                                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ChengGuo%>"></asp:Label>ï¼š</td>
+                                                                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ChengGuo%>"></asp:Label>£º</td>
                                                                                             <td align="left" style="padding-left: 2px;">
                                                                                                 <asp:TextBox ID="TB_Achievement" runat="server" Height="50px" TextMode="MultiLine" Width="95%"></asp:TextBox>
                                                                                             </td>

@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Collections;
 using System.Data;
 using System.Configuration;
@@ -90,7 +90,7 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
         }
     }
 
-    //ÂèñÂæóÁâàÊú¨Âè∑ID
+    //»°µ√∞Ê±æ∫≈ID
     public static string GetProjectPlanVersionIDByVerID(string strProjectID, string strVerID)
     {
         string strHQL;
@@ -190,7 +190,7 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
             strType = projectPlanVersion.Type.Trim();
             try
             {
-                if (strType == "Âü∫ÂáÜ" || strType == "Âú®Áî®")
+                if (strType == "Baseline" || strType == "InUse")
                 {
                     ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBBZBBZNYLXZSCJC + "')", true);
                     return;
@@ -199,7 +199,7 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
                 {
                     projectPlanVersionBLL.DeleteProjectPlanVersion(projectPlanVersion);
 
-                    strHQL = "Delete From T_Document Where RelatedType = 'ËÆ°Âàí' and RelatedID in (Select ID From T_ImplePlan Where ProjectID = " + strProjectID + " and VerID = " + strVerID + ")";
+                    strHQL = "Delete From T_Document Where RelatedType = 'Plan' and RelatedID in (Select ID From T_ImplePlan Where ProjectID = " + strProjectID + " and VerID = " + strVerID + ")";
                     ShareClass.RunSqlCommand(strHQL);
 
                     strHQL = "delete from T_PlanMember where PlanID in (Select ID From T_ImplePlan where ProjectID = " + strProjectID + " and VerID = " + strVerID + ")";
@@ -253,7 +253,7 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÊèêÁ§∫ÔºåËØ∑ÂÖàÈÄâÊã©È°πÁõÆÔºÅ')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Ã· æ£¨«Îœ»—°‘ÒœÓƒø£°')", true);
                 return false;
             }
         }
@@ -269,14 +269,14 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
             strType = projectPlanVersion.Type.Trim();
             try
             {
-                if (strType == "Âü∫ÂáÜ" || strType == "Âú®Áî®")
+                if (strType == "Baseline" || strType == "InUse")
                 {
                     ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBBZBBZNYLXZSCJC + "')", true);
                     return false;
                 }
                 else
                 {
-                    strHQL = "Delete From T_Document Where RelatedType = 'ËÆ°Âàí' and RelatedID in (Select ID From T_ImplePlan Where ProjectID = " + strProjectID + " and VerID = " + strPlanVerID + ")";
+                    strHQL = "Delete From T_Document Where RelatedType = 'Plan' and RelatedID in (Select ID From T_ImplePlan Where ProjectID = " + strProjectID + " and VerID = " + strPlanVerID + ")";
                     ShareClass.RunSqlCommand(strHQL);
 
                     strHQL = "delete from T_PlanMember where PlanID in (Select ID From T_ImplePlan where ProjectID = " + strProjectID + " and VerID = " + strPlanVerID + ")";
@@ -358,7 +358,7 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Â§±Ë¥•ÔºåËØ∑ÂÖàÈÄâÊã©È°πÁõÆÂíåËÆ°ÂàíÁâàÊú¨ÔºÅ')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert(' ß∞‹£¨«Îœ»—°‘ÒœÓƒø∫Õº∆ªÆ∞Ê±æ£°')", true);
         }
     }
 
@@ -401,7 +401,7 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
 
     }
 
-    //ÊãºÊé•ËÆ°Âàí
+    //∆¥Ω”º∆ªÆ
     public void AddProjectPlanFromNode(string strMRPPlanType, string strProjectID, string strPlanVerID)
     {
         string strHQL;
@@ -413,14 +413,14 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
 
         Project project = ShareClass.GetProject(strProjectID);
 
-        //ÊèíÂÖ•ËÆ°ÂàíËäÇÁÇπ
+        //≤Â»Îº∆ªÆΩ⁄µ„
         WorkPlanBLL workPlanBLL = new WorkPlanBLL();
         WorkPlan workPlan = new WorkPlan();
         WorkPlan workPlanNew = new WorkPlan();
 
 
         workPlanNew.WorkID = 0;
-        workPlanNew.Type = "ËÆ°Âàí";
+        workPlanNew.Type = "Plan";
         workPlanNew.ProjectID = int.Parse(strProjectID);
         workPlanNew.VerID = int.Parse(strPlanVerID);
         workPlanNew.FromProjectID = int.Parse(strProjectID);
@@ -449,12 +449,12 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
         workPlanNew.MakeDate = DateTime.Now;
 
         workPlanNew.PriorID = 0;
-        workPlanNew.Status = "ËÆ°Âàí";
+        workPlanNew.Status = "Plan";
         workPlanNew.DefaultSchedule = 0;
         workPlanNew.DefaultCost = 0;
 
 
-        workPlanNew.LockStatus = "No";
+        workPlanNew.LockStatus = "NO";
         workPlanNew.SortNumber = 1;
 
         workPlanNew.UpdateManCode = strUserCode;
@@ -479,7 +479,7 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
         strHQL = "Update T_ImplePlan Set FromPlanID = " + workPlan.ID.ToString() + "  Where ID = " + strNewPlanID;
         ShareClass.RunSqlCommand(strHQL);
 
-        //ÊîπÂèòÂü∫ÂáÜÊó∂Èó¥ÊÆµÂíåÂçï‰ΩçÁöÑÂÄº
+        //∏ƒ±‰ª˘◊º ±º‰∂Œ∫Õµ•Œªµƒ÷µ
         strHQL = "update T_ImplePlan Set BaseLine_Start_Date = Start_Date,BaseLine_End_Date = End_Date Where ID = " + strNewPlanID;
         ShareClass.RunSqlCommand(strHQL);
         strHQL = "update T_ImplePlan Set Duration = F_WorkDay(Start_Date,End_Date), Duration_Unit = 'd' Where ID = " + strNewPlanID;
@@ -500,7 +500,7 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
         }
     }
 
-    //ÊãºÊé•ËÆ°Âàí
+    //∆¥Ω”º∆ªÆ
     public string TranferProjectPlanFromItemMRPPlan(string strMRPPlanType, string strProjectID, string strPlanVerID, string strParentPlanID, string strMainPlanVerID, string strMRPPlanVerID)
     {
         string strHQL, strNewPlanID;
@@ -516,12 +516,12 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
         if (strMRPPlanType == "PD")
         {
             strHQL = "Select * From T_ItemMainPlanRelatedItemProductPlan Where PlanVerID = " + strMainPlanVerID + " and PlanMRPVerID = " + strMRPPlanVerID;
-            strHQL += " and ItemCode in (Select ItemCode From T_Item Where Type = 'Ëá™Âà∂‰ª∂')";
+            strHQL += " and ItemCode in (Select ItemCode From T_Item Where Type = 'MadeParts')";
         }
         if (strMRPPlanType == "OT")
         {
             strHQL = "Select * From T_ItemMainPlanRelatedItemProductPlan Where PlanVerID = " + strMainPlanVerID + " and PlanMRPVerID = " + strMRPPlanVerID;
-            strHQL += " and ItemCode in (Select ItemCode From T_Item Where Type = 'Â§ñÂçè‰ª∂')";
+            strHQL += " and ItemCode in (Select ItemCode From T_Item Where Type = 'OutParts')";
         }
         DataSet ds1 = ShareClass.GetDataSetFromSql(strHQL, "T_ItemMainPlanRelatedItemPurchasePlan");
 
@@ -529,16 +529,16 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
 
         for (int i = 0; i < ds1.Tables[0].Rows.Count; i++)
         {
-            //ÊèíÂÖ•ËÆ°ÂàíËäÇÁÇπ
+            //≤Â»Îº∆ªÆΩ⁄µ„
             WorkPlan workPlan = new WorkPlan();
 
             workPlan.WorkID = 0;
-            workPlan.Type = "ËÆ°Âàí";
+            workPlan.Type = "Plan";
             workPlan.ProjectID = int.Parse(strProjectID);
             workPlan.VerID = int.Parse(strPlanVerID);
             workPlan.FromProjectID = int.Parse(strProjectID);
             workPlan.FromProjectPlanVerID = int.Parse(strPlanVerID);
-            workPlan.Name = ds1.Tables[0].Rows[i]["ItemCode"].ToString().Trim() + ds1.Tables[0].Rows[i]["ItemName"].ToString().Trim() + "(ËßÑÊ†ºÔºö" + ds1.Tables[0].Rows[i]["specification"].ToString().Trim() + "Ôºâ";
+            workPlan.Name = ds1.Tables[0].Rows[i]["ItemCode"].ToString().Trim() + ds1.Tables[0].Rows[i]["ItemName"].ToString().Trim() + "(πÊ∏Ò£∫" + ds1.Tables[0].Rows[i]["specification"].ToString().Trim() + "£©";
 
             workPlan.Budget = 0;
             workPlan.WorkHour = 0;
@@ -550,12 +550,12 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
             workPlan.MakeDate = DateTime.Now;
 
             workPlan.PriorID = 0;
-            workPlan.Status = "ËÆ°Âàí";
+            workPlan.Status = "Plan";
             workPlan.DefaultSchedule = 0;
             workPlan.DefaultCost = 0;
             workPlan.Percent_Done = 0;
 
-            workPlan.LockStatus = "No";
+            workPlan.LockStatus = "NO";
             workPlan.SortNumber = 1;
 
             workPlan.UpdateManCode = strUserCode;
@@ -583,23 +583,23 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
             ShareClass.RunSqlCommand(strHQL);
 
 
-            //ÊîπÂèòÂü∫ÂáÜÊó∂Èó¥ÊÆµÂíåÂçï‰ΩçÁöÑÂÄº
+            //∏ƒ±‰ª˘◊º ±º‰∂Œ∫Õµ•Œªµƒ÷µ
             strHQL = "update T_ImplePlan Set BaseLine_Start_Date = Start_Date,BaseLine_End_Date = End_Date Where ID = " + strNewPlanID;
             ShareClass.RunSqlCommand(strHQL);
             strHQL = "update T_ImplePlan Set Duration = F_WorkDay(Start_Date,End_Date), Duration_Unit = 'd' Where ID = " + strNewPlanID;
             ShareClass.RunSqlCommand(strHQL);
 
-            //COPYÊ®°ÊùøÈ°πÁõÆËÆ°ÂàíÂÖ≥ËÅîÊ®°ÊùøÊñáÊ°£Âà∞Êñ∞ÁöÑÈ°πÁõÆ
+            //COPYƒ£∞ÂœÓƒøº∆ªÆπÿ¡™ƒ£∞ÂŒƒµµµΩ–¬µƒœÓƒø
             strHQL = "insert into T_Document(RelatedType,DocTypeID,DocType,RelatedID,DocName,Description,Address,Author,UploadManCode,UploadManName,UploadTime,DepartCode,Visible,Status)";
             strHQL += " select A.RelatedType,A.DocTypeID,A.DocType,C.ID,A.DocName,A.Description,A.Address,A.Author,A.UploadManCode,A.UploadManName,A.UploadTime,A.DepartCode,A.Visible,A.Status ";
             strHQL += " from T_Document A,T_ImplePlan B ,T_ImplePlan C ";
-            strHQL += " where A.RelatedType = 'ËÆ°Âàí' and A.RelatedID = B.ID and B.ID = C.FromPlanID ";
+            strHQL += " where A.RelatedType = 'Plan' and A.RelatedID = B.ID and B.ID = C.FromPlanID ";
             strHQL += " and B.ID = " + strParentPlanID;
             strHQL += " and C.ID = " + strNewPlanID;
             ShareClass.RunSqlCommand(strHQL);
 
 
-            //COPYÊ®°ÊùøÈ°πÁõÆËÆ°ÂàíÂÖ≥ËÅîÊµÅÁ®ãÊ®°ÊùøÂà∞Êñ∞ÁöÑÈ°πÁõÆÁöÑÈ°πÁõÆËÆ°Âàí
+            //COPYƒ£∞ÂœÓƒøº∆ªÆπÿ¡™¡˜≥Ãƒ£∞ÂµΩ–¬µƒœÓƒøµƒœÓƒøº∆ªÆ
             strHQL = "insert into t_relatedworkflowtemplate(relatedtype, relatedid, wftemplatename, identifystring, relatedname)";
             strHQL += " select A.relatedtype, C.id, wftemplatename, identifystring, relatedname";
             strHQL += " from t_relatedworkflowtemplate A,t_impleplan B,t_impleplan C";
@@ -743,7 +743,7 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
         }
     }
 
-    //ÂèñÂæóGANTTÂõæÊéß‰ª∂Áî®ÁöÑÈ°πÁõÆÂíåËÆ°ÂàíÁâàÊú¨Âè∑
+    //»°µ√GANTTÕºøÿº˛”√µƒœÓƒø∫Õº∆ªÆ∞Ê±æ∫≈
     public static int GetPIDForGantt(int intProjectID, int intVerID)
     {
         string strVerID, strPID;
@@ -762,7 +762,7 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
         return int.Parse(strPID);
     }
 
-    //ÂèñÂæóGANTTÂõæÊéß‰ª∂Áî®ÁöÑÁà∂ËÆ°ÂàíÂè∑
+    //»°µ√GANTTÕºøÿº˛”√µƒ∏∏º∆ªÆ∫≈
     public static int GetParentIDGantt(string strProjectID, string strVerID, string strParentIDGantt)
     {
         string strHQL;
@@ -782,13 +782,13 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
 
 
 
-    //ÂàõÂª∫Ê®°ÊùøÈ°πÁõÆÊ†ëÔºàÁî®‰∫éËÆ°ÂàíÂ§çÂà∂Ôºâ
+    //¥¥Ω®ƒ£∞ÂœÓƒø ˜£®”√”⁄º∆ªÆ∏¥÷∆£©
     public static void InitialTemplatePrjectTreeForPlan(TreeView TemplateProjectTreeView, string strUserCode, string strTemProjectID, string strTotalProject, string strPushImplementationMethod, string strTemplateProject, string strCommonProject)
     {
         string strHQL, strProjectID2, strProject;
         IList lst;
 
-        //Ê∑ªÂä†Ê†πËäÇÁÇπ
+        //ÃÌº”∏˘Ω⁄µ„
         TemplateProjectTreeView.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
@@ -843,8 +843,8 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
             }
         }
 
-        strHQL = "from Project as project where project.ProjectClass = 'Ê®°ÊùøÈ°πÁõÆ' ";
-        strHQL += " and project.Status not in ('Âà†Èô§','ÂΩíÊ°£') order by project.ProjectID DESC";
+        strHQL = "from Project as project where project.ProjectClass = 'ƒ£∞ÂœÓƒø' ";
+        strHQL += " and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         lst = projectBLL.GetAllProjects(strHQL);
 
         for (int i = 0; i < lst.Count; i++)
@@ -874,9 +874,9 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
             TemplateProjectTreeView.DataBind();
         }
 
-        strHQL = "from Project as project where project.ProjectClass = 'Â∏∏ËßÑÈ°πÁõÆ' and  project.PMCode = " + "'" + strUserCode + "'";
+        strHQL = "from Project as project where project.ProjectClass = '≥£πÊœÓƒø' and  project.PMCode = " + "'" + strUserCode + "'";
         strHQL += " and project.ParentID not in (select project.ProjectID from Project as project where project.PMCode = " + "'" + strUserCode + "'" + ")";
-        strHQL += "  and project.Status not in ('Âà†Èô§','ÂΩíÊ°£') order by project.ProjectID DESC";
+        strHQL += "  and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
 
         lst = projectBLL.GetAllProjects(strHQL);
 
@@ -914,8 +914,8 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
-        strHQL = "from Project as project where project.ProjectClass = 'Â∏∏ËßÑÈ°πÁõÆ' and project.ParentID = " + strParentID;
-        strHQL += " and project.Status not in ('Âà†Èô§','ÂΩíÊ°£') ";
+        strHQL = "from Project as project where project.ProjectClass = '≥£πÊœÓƒø' and project.ParentID = " + strParentID;
+        strHQL += " and project.Status not in ('Deleted','Archived') ";
         strHQL += " order by project.ProjectID DESC";
         lst1 = projectBLL.GetAllProjects(strHQL);
 
@@ -953,7 +953,7 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
         }
     }
 
-    //Êõ¥Êñ∞ÂÆûÊñΩËÆ°ÂàíË°®Áî®‰∫éGANTTÁöÑParentID
+    //∏¸–¬ µ ©º∆ªÆ±Ì”√”⁄GANTTµƒParentID
     public static void UpdateParentIDGanttForImplePlan(string strProjectID, string strVerID)
     {
         string strHQL1, strHQL2, strHQL3, strHQL4;
@@ -1005,22 +1005,22 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
     }
 
 
-    //COPYÈ°πÁõÆËÆ°ÂàíÁöÑ‰æùËµñÂÖ≥Á≥ª
+    //COPYœÓƒøº∆ªÆµƒ“¿¿µπÿœµ
     public static int CopyImplePlanDependencyAndResources(int intPID, int intNewPID)
     {
         NpgsqlConnection myConnection = new NpgsqlConnection(
         ConfigurationManager.ConnectionStrings["SQLCONNECTIONSTRING"].ConnectionString);
 
-        ///ÂàõÂª∫Command
+        ///¥¥Ω®Command
         NpgsqlCommand myCommand = new NpgsqlCommand("Pr_CopyImplePlanDependencyAndResources", myConnection);
 
-        ///ÊâìÂºÄÈìæÊé•
+        ///¥Úø™¡¥Ω”
         myConnection.Open();
 
         myCommand.CommandType = CommandType.StoredProcedure;
         myCommand.CommandTimeout = 0;
 
-        ///Ê∑ªÂä†Â≠òÂÇ®ËøáÁ®ãÁöÑÂèÇÊï∞
+        ///ÃÌº”¥Ê¥¢π˝≥Ãµƒ≤Œ ˝
         SqlParameter pPID = new SqlParameter("@intPID", SqlDbType.Int);
         pPID.Value = intPID;
         myCommand.Parameters.Add(pPID);
@@ -1028,28 +1028,28 @@ public partial class TTProjectMRPPlanToProjectPlan : System.Web.UI.Page
         pNewPID.Value = @intNewPID;
         myCommand.Parameters.Add(pNewPID);
 
-        ///ÂÆö‰πâËøîÂõûÂÄº
+        ///∂®“Â∑µªÿ÷µ
         int nResult = -1;
 
         try
         {
-            ///ÊâìÂºÄÈìæÊé•
+            ///¥Úø™¡¥Ω”
             myConnection.Open();
-            ///ÊâßË°åSQLËØ≠Âè•
+            ///÷¥––SQL”Ôæ‰
             nResult = myCommand.ExecuteNonQuery();
         }
         catch (SqlException ex)
         {
-            ///ÊäõÂá∫ÂºÇÂ∏∏
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÂàùÂßãÂåñÊ®°ÁªÑÊï∞ÊçÆÂ§±Ë¥•ÔºÅ')", true);
+            ///≈◊≥ˆ“Ï≥£
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('≥ı ºªØƒ£◊È ˝æ› ß∞‹£°')", true);
             throw new Exception(ex.Message, ex);
         }
         finally
-        {   ///ÂÖ≥Èó≠ÈìæÊé•
+        {   ///πÿ±’¡¥Ω”
             myConnection.Close();
         }
 
-        ///ËøîÂõûnResult
+        ///∑µªÿnResult
         return nResult;
     }
 

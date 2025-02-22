@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDNotQualifiedList.aspx.cs" Inherits="TTGDNotQualifiedList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDNotQualifiedList.aspx.cs" Inherits="TTGDNotQualifiedList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>RT‰∏çÂêàÊ†º‰ª£Á†Å</title>
+    <title>RT≤ª∫œ∏Ò¥˙¬Î</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 
     <script src="js/jquery-1.7.2.min.js"></script>
@@ -56,7 +56,7 @@
                                     <table width="100%" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left" class="formItemBgStyle">
-                                                <input type="button" class="inpuLong" value="Êñ∞Â¢ûRT‰∏çÂêàÊ†º‰ª£Á†Å" onclick="window.location.href = 'TTGDNotQualifiedEdit.aspx'" />
+                                                <input type="button" class="inpuLong" value="–¬‘ˆRT≤ª∫œ∏Ò¥˙¬Î" onclick="window.location.href = 'TTGDNotQualifiedEdit.aspx'" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -108,17 +108,17 @@
                                                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,BianJi%>"></asp:Label></a>
                                                                     <asp:LinkButton ID="LB_Del" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab">
                                                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ShanChu%>"></asp:Label></asp:LinkButton>
-                                                                    <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="Âà†Èô§" />--%>
+                                                                    <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="Deleted" />--%>
                                                                     
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="NotQualified" HeaderText="‰∏çÂêàÊ†º‰ª£Âè∑">
+                                                            <asp:BoundColumn DataField="NotQualified" HeaderText="≤ª∫œ∏Ò¥˙∫≈">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Description" HeaderText="ËØ¥Êòé">
+                                                            <asp:BoundColumn DataField="Description" HeaderText="Àµ√˜">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="45%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="WeldPosition" HeaderText="ÁÑäÊé•‰ΩçÁΩÆ">
+                                                            <asp:BoundColumn DataField="WeldPosition" HeaderText="∫∏Ω”Œª÷√">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="34%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

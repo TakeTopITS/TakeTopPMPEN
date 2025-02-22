@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -36,7 +36,7 @@ public partial class TTPersonalSpaceTask : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickParentA", "aHandlerForSpecialPopWindow();", true);
         if (Page.IsPostBack == false)
         {
-            //清空页面缓存，用于改变皮肤
+            //���ҳ�滺�棬���ڸı�Ƥ��
             SetPageNoCache();
 
             intRunNumber = 0;
@@ -45,12 +45,12 @@ public partial class TTPersonalSpaceTask : System.Web.UI.Page
         }
     }
 
-    //清空页面缓存，用于改变皮肤
+    //���ҳ�滺�棬���ڸı�Ƥ��
     public void SetPageNoCache()
     {
         if (Session["CssDirectoryChangeNumber"].ToString() == "1")
         {
-            //清除全部缓存
+            //���ȫ������
             IDictionaryEnumerator allCaches = Page.Cache.GetEnumerator();
             while (allCaches.MoveNext())
             {
@@ -113,18 +113,18 @@ public partial class TTPersonalSpaceTask : System.Web.UI.Page
         TaskAssignRecordBLL taskAssignRecordBLL = new TaskAssignRecordBLL();
 
         strHQL = "from TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and taskAssignRecord.Status in ('计划','受理','处理中','待处理','处理中') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord) ";
-        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> '关闭')";
-        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('新建','隐藏','删除','归档'))))";
+        strHQL += " and taskAssignRecord.Status in ('Plan','Accepted','InProgress','ToHandle','InProgress') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord) ";
+        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('New','Hided','Deleted','Archived'))))";
         strHQL += " Order by taskAssignRecord.MoveTime DESC";
         lst = taskAssignRecordBLL.GetAllTaskAssignRecords(strHQL);
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
         strHQL = "from TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and taskAssignRecord.Status in ('拒绝','挂起','取消','完成','已完成','已分派') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord) ";
-        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask  where projectTask.Status <> '关闭')";
-        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('新建','隐藏','删除','归档'))))";
+        strHQL += " and taskAssignRecord.Status in ('�ܾ�','Suspended','Cancel','Completed','�����','�ѷ���') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord) ";
+        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask  where projectTask.Status <> 'Closed')";
+        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('New','Hided','Deleted','Archived'))))";
         strHQL += " Order by taskAssignRecord.MoveTime DESC";
         taskAssignRecordBLL = new TaskAssignRecordBLL();
         lst = taskAssignRecordBLL.GetAllTaskAssignRecords(strHQL);
@@ -154,9 +154,9 @@ public partial class TTPersonalSpaceTask : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         strHQL = "from TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and taskAssignRecord.Status in ('计划','受理','处理中') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord) ";
-        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> '关闭')";
-        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('新建','隐藏','删除','归档'))))";
+        strHQL += " and taskAssignRecord.Status in ('Plan','Accepted','InProgress') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord) ";
+        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('New','Hided','Deleted','Archived'))))";
         strHQL += " Order by taskAssignRecord.ID DESC";
 
         TaskAssignRecordBLL taskAssignRecordBLL = new TaskAssignRecordBLL();
@@ -178,9 +178,9 @@ public partial class TTPersonalSpaceTask : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         strHQL = "from TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and (taskAssignRecord.Status in ('拒绝','完成','挂起','取消') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord))";
-        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> '关闭')";
-        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('新建','隐藏','删除','归档'))))";
+        strHQL += " and (taskAssignRecord.Status in ('�ܾ�','Completed','Suspended','Cancel') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord))";
+        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> 'Closed')";
+        strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('New','Hided','Deleted','Archived'))))";
         strHQL += " Order by taskAssignRecord.ID DESC";
 
         TaskAssignRecordBLL taskAssignRecordBLL = new TaskAssignRecordBLL();

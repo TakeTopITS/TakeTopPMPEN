@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTRCJProjectCostPerformanceList.aspx.cs" Inherits="TTRCJProjectCostPerformanceBenchmar" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTRCJProjectCostPerformanceList.aspx.cs" Inherits="TTRCJProjectCostPerformanceBenchmar" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -10,7 +10,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ÊàêÊú¨Áª©ÊïàÂü∫ÂáÜ‰ø°ÊÅØÁÆ°ÁêÜ</title>
+    <title>≥…±æº®–ßª˘◊º–≈œ¢π‹¿Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <link href="css/inputitemsheet.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
@@ -55,7 +55,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">ÊàêÊú¨Áª©ÊïàÂü∫ÂáÜ‰ø°ÊÅØÂàóË°®
+                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">≥…±æº®–ßª˘◊º–≈œ¢¡–±Ì
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -66,7 +66,7 @@
                                             <td align="left">
                                                 <table width="340" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
-                                                        <td class="titleIditem">‰∏ì‰∏öÂàÜÁ±ªÔºö</td>
+                                                        <td class="titleIditem">◊®“µ∑÷¿‡£∫</td>
                                                         <td align="left" width="220">
                                                             <asp:DropDownList ID="DDL_PerformanceType" runat="server" Style="margin-left: 0px" AutoPostBack="True" OnSelectedIndexChanged="DDL_PerformanceType_SelectedIndexChanged"></asp:DropDownList>
                                                         </td>
@@ -77,7 +77,7 @@
                                                 <table width="180" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td>
-                                                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">ËøîÂõû</asp:LinkButton>
+                                                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">∑µªÿ</asp:LinkButton>
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -94,7 +94,7 @@
                                                 <table width="280" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td align="right">
-                                                            <asp:Label ID="Label3" runat="server" Text="ËØ∑ËæìÂÖ•Â∫èÂè∑Ôºö" Width="80"></asp:Label>
+                                                            <asp:Label ID="Label3" runat="server" Text="«Î ‰»Î–Ú∫≈£∫" Width="80"></asp:Label>
                                                         </td>
                                                         <td>
                                                             <asp:TextBox ID="tb_QueryID" runat="server"></asp:TextBox>
@@ -114,50 +114,50 @@
                                                         <asp:CommandField ShowSelectButton="True">
                                                             <ItemStyle Wrap="False" />
                                                         </asp:CommandField>
-                                                        <asp:BoundField DataField="ItemNo" HeaderText="Â∫èÂè∑" />
-                                                        <asp:BoundField DataField="ItemName" HeaderText="ÂÆöÈ¢ùÂè∑">
+                                                        <asp:BoundField DataField="ItemNo" HeaderText="–Ú∫≈" />
+                                                        <asp:BoundField DataField="ItemName" HeaderText="∂®∂Ó∫≈">
                                                             <ItemStyle Wrap="False" />
                                                         </asp:BoundField>
-                                                        <asp:BoundField DataField="TypeName" HeaderText="‰∏ì‰∏öÂàÜÁ±ª">
+                                                        <asp:BoundField DataField="TypeName" HeaderText="◊®“µ∑÷¿‡">
                                                             <ItemStyle Wrap="False" />
                                                         </asp:BoundField>
-                                                        <asp:BoundField DataField="ItemUnit" HeaderText="Âçï‰Ωç" />
-                                                        <asp:BoundField DataField="ItemNum" HeaderText="Êï∞Èáè" DataFormatString="{0:N3}" HtmlEncode="False" />
-                                                        <asp:BoundField DataField="ItemContent" HeaderText="ÂÆöÈ¢ùÂêçÁß∞">
+                                                        <asp:BoundField DataField="ItemUnit" HeaderText="µ•Œª" />
+                                                        <asp:BoundField DataField="ItemNum" HeaderText=" ˝¡ø" DataFormatString="{0:N3}" HtmlEncode="False" />
+                                                        <asp:BoundField DataField="ItemContent" HeaderText="∂®∂Ó√˚≥∆">
                                                             <ItemStyle Wrap="False" />
                                                         </asp:BoundField>
-                                                        <asp:BoundField DataField="SubItem" HeaderText="ÂàÜÈÉ®ÂàÜÈ°π">
+                                                        <asp:BoundField DataField="SubItem" HeaderText="∑÷≤ø∑÷œÓ">
                                                             <HeaderStyle Wrap="False" />
                                                             <ItemStyle Wrap="False" />
                                                         </asp:BoundField>
-                                                        <asp:BoundField DataField="ItemPriceDeviceAdjust" HeaderText="ËÆæÂ§áÂéüÂÆöÂçï‰ª∑" DataFormatString="{0:N2}" HtmlEncode="False" />
-                                                        <asp:BoundField DataField="ItemPriceMainMaterialAdjust" HeaderText="‰∏ªÊùêÂéüÂÆöÂçï‰ª∑" DataFormatString="{0:N2}" HtmlEncode="False" />
-                                                        <asp:BoundField DataField="ItemPriceWageAdjust" HeaderText="‰∫∫Â∑•ÂéüÂÆöÂçï‰ª∑" DataFormatString="{0:N2}" HtmlEncode="False" />
-                                                        <asp:BoundField DataField="ItemPriceMaterialAdjust" HeaderText="ÊùêÊñôÂéüÂÆöÂçï‰ª∑" DataFormatString="{0:N2}" HtmlEncode="False" />
-                                                        <asp:BoundField DataField="ItemPriceMachineAdjust" HeaderText="Êú∫Ê¢∞ÂéüÂÆöÂçï‰ª∑" DataFormatString="{0:N2}" HtmlEncode="False" />
-                                                        <asp:BoundField DataField="ItemPriceDeviceBudget" HeaderText="È¢ÑÁÆóËÆæÂ§áÂêà‰ª∑" DataFormatString="{0:N2}" HtmlEncode="False" />
-                                                        <asp:BoundField DataField="ItemPriceMainMaterialBudget" HeaderText="È¢ÑÁÆó‰∏ªÊùêÂêà‰ª∑" DataFormatString="{0:N2}" HtmlEncode="False" />
-                                                        <asp:BoundField DataField="ItemPriceWageBudget" HeaderText="È¢ÑÁÆó‰∫∫Â∑•Âêà‰ª∑" DataFormatString="{0:N2}" HtmlEncode="False" />
-                                                        <asp:BoundField DataField="ItemPriceMaterialBudget" HeaderText="È¢ÑÁÆóÊùêÊñôÂêà‰ª∑" DataFormatString="{0:N2}" HtmlEncode="False" />
-                                                        <asp:BoundField DataField="ItemPriceMachineBudget" HeaderText="È¢ÑÁÆóÊú∫Ê¢∞Âêà‰ª∑" DataFormatString="{0:N2}" HtmlEncode="False" />
-                                                        <asp:BoundField DataField="ItemPricePurchaseFee" HeaderText="ÁÆ°ÁêÜË¥πÂèäÂà©Ê∂¶Ë¥π" DataFormatString="{0:N2}" HtmlEncode="False" />
-                                                        <asp:BoundField DataField="ItemPricePurchaseFeeBudget" HeaderText="Ë¥πÁéáÊé™ÊñΩË¥π" DataFormatString="{0:N2}" HtmlEncode="False" />
-                                                        <asp:BoundField DataField="ItemComprehensiveFeeBudget" HeaderText="ËßÑË¥π" DataFormatString="{0:N2}" HtmlEncode="False" />
-                                                        <asp:BoundField DataField="ItemTaxesBudget" HeaderText="È¢ÑÁÆóÁ®éÈáëÂêà‰ª∑" DataFormatString="{0:N2}" HtmlEncode="False" />
-                                                        <asp:BoundField DataField="ProjectBCWS" HeaderText="È¢ÑÁÆóÂêàËÆ°Âêà‰ª∑" DataFormatString="{0:N2}" HtmlEncode="False" />
-                                                        <asp:BoundField DataField="Name" HeaderText="ÊâøÂåÖÂïÜ">
+                                                        <asp:BoundField DataField="ItemPriceDeviceAdjust" HeaderText="…Ë±∏‘≠∂®µ•º€" DataFormatString="{0:N2}" HtmlEncode="False" />
+                                                        <asp:BoundField DataField="ItemPriceMainMaterialAdjust" HeaderText="÷˜≤ƒ‘≠∂®µ•º€" DataFormatString="{0:N2}" HtmlEncode="False" />
+                                                        <asp:BoundField DataField="ItemPriceWageAdjust" HeaderText="»Àπ§‘≠∂®µ•º€" DataFormatString="{0:N2}" HtmlEncode="False" />
+                                                        <asp:BoundField DataField="ItemPriceMaterialAdjust" HeaderText="≤ƒ¡œ‘≠∂®µ•º€" DataFormatString="{0:N2}" HtmlEncode="False" />
+                                                        <asp:BoundField DataField="ItemPriceMachineAdjust" HeaderText="ª˙–µ‘≠∂®µ•º€" DataFormatString="{0:N2}" HtmlEncode="False" />
+                                                        <asp:BoundField DataField="ItemPriceDeviceBudget" HeaderText="‘§À„…Ë±∏∫œº€" DataFormatString="{0:N2}" HtmlEncode="False" />
+                                                        <asp:BoundField DataField="ItemPriceMainMaterialBudget" HeaderText="‘§À„÷˜≤ƒ∫œº€" DataFormatString="{0:N2}" HtmlEncode="False" />
+                                                        <asp:BoundField DataField="ItemPriceWageBudget" HeaderText="‘§À„»Àπ§∫œº€" DataFormatString="{0:N2}" HtmlEncode="False" />
+                                                        <asp:BoundField DataField="ItemPriceMaterialBudget" HeaderText="‘§À„≤ƒ¡œ∫œº€" DataFormatString="{0:N2}" HtmlEncode="False" />
+                                                        <asp:BoundField DataField="ItemPriceMachineBudget" HeaderText="‘§À„ª˙–µ∫œº€" DataFormatString="{0:N2}" HtmlEncode="False" />
+                                                        <asp:BoundField DataField="ItemPricePurchaseFee" HeaderText="π‹¿Ì∑—º∞¿˚»Û∑—" DataFormatString="{0:N2}" HtmlEncode="False" />
+                                                        <asp:BoundField DataField="ItemPricePurchaseFeeBudget" HeaderText="∑—¬ ¥Î ©∑—" DataFormatString="{0:N2}" HtmlEncode="False" />
+                                                        <asp:BoundField DataField="ItemComprehensiveFeeBudget" HeaderText="πÊ∑—" DataFormatString="{0:N2}" HtmlEncode="False" />
+                                                        <asp:BoundField DataField="ItemTaxesBudget" HeaderText="‘§À„À∞Ω∫œº€" DataFormatString="{0:N2}" HtmlEncode="False" />
+                                                        <asp:BoundField DataField="ProjectBCWS" HeaderText="‘§À„∫œº∆∫œº€" DataFormatString="{0:N2}" HtmlEncode="False" />
+                                                        <asp:BoundField DataField="Name" HeaderText="≥–∞¸…Ã">
                                                             <ItemStyle Wrap="False" />
                                                         </asp:BoundField>
-                                                        <asp:BoundField DataField="BeginTime" HeaderText="ÂºÄÂßãÊó∂Èó¥" DataFormatString="{0:yyyy/MM/dd}" />
-                                                        <asp:BoundField DataField="EndTime" HeaderText="ÁªìÊùüÊó∂Èó¥" DataFormatString="{0:yyyy/MM/dd}" />
-                                                        <asp:TemplateField HeaderText="Ëá™Âä®ÂàÜÊúà">
+                                                        <asp:BoundField DataField="BeginTime" HeaderText="ø™ º ±º‰" DataFormatString="{0:yyyy/MM/dd}" />
+                                                        <asp:BoundField DataField="EndTime" HeaderText="Ω· ¯ ±º‰" DataFormatString="{0:yyyy/MM/dd}" />
+                                                        <asp:TemplateField HeaderText="◊‘∂Ø∑÷‘¬">
                                                             <ItemTemplate>
-                                                                <asp:Label ID="Label2" runat="server" Text='<%# Eval("IfSplit").ToString() == "1" ? "ÊòØ":"Âê¶" %>'></asp:Label>
+                                                                <asp:Label ID="Label2" runat="server" Text='<%# Eval("IfSplit").ToString() == "1" ? "YES":"NO" %>'></asp:Label>
                                                             </ItemTemplate>
                                                         </asp:TemplateField>
-                                                        <asp:TemplateField HeaderText="‰ª∑Ê†ºÂ∑≤Ë∞ÉÊï¥">
+                                                        <asp:TemplateField HeaderText="º€∏Ò“—µ˜’˚">
                                                             <ItemTemplate>
-                                                                <asp:Label ID="Label1" runat="server" Text='<%# Eval("ItemPriceChanged").ToString() == "1" ? "ÊòØ":"Âê¶" %>'></asp:Label>
+                                                                <asp:Label ID="Label1" runat="server" Text='<%# Eval("ItemPriceChanged").ToString() == "1" ? "YES":"NO" %>'></asp:Label>
                                                             </ItemTemplate>
                                                         </asp:TemplateField>
                                                     </Columns>
@@ -191,7 +191,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">ÊâãÂ∑•ÂΩïÂÖ•ÊàêÊú¨Áª©ÊïàÂü∫ÂáÜÊï∞ÊçÆ
+                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi"> ÷π§¬º»Î≥…±æº®–ßª˘◊º ˝æ›
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -210,7 +210,7 @@
                                             <td align="left">
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">Â∫èÂè∑Ôºö</td>
+                                                        <td class="titleIditem">–Ú∫≈£∫</td>
                                                         <td align="left" width="120">
                                                             <asp:TextBox ID="TB_ItemNo" Class="inputitem" runat="server"></asp:TextBox>
                                                         </td>
@@ -220,7 +220,7 @@
                                             <td>
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">ÂÆöÈ¢ùÂè∑Ôºö</td>
+                                                        <td class="titleIditem">∂®∂Ó∫≈£∫</td>
                                                         <td align="left" width="220">
                                                             <asp:TextBox ID="TB_ItemName" Class="inputitem" runat="server"></asp:TextBox>
                                                         </td>
@@ -230,7 +230,7 @@
                                             <td>
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">Âçï‰ΩçÔºö</td>
+                                                        <td class="titleIditem">µ•Œª£∫</td>
                                                         <td align="left" width="120">
                                                             <asp:TextBox ID="TB_ItemUnit" Class="inputitem" runat="server"></asp:TextBox>
                                                         </td>
@@ -242,7 +242,7 @@
                                             <td>
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">Êï∞ÈáèÔºö</td>
+                                                        <td class="titleIditem"> ˝¡ø£∫</td>
                                                         <td align="left" width="120">
                                                             <asp:TextBox ID="TB_ItemCount" Class="inputitem" runat="server"></asp:TextBox>
                                                         </td>
@@ -252,7 +252,7 @@
                                             <td>
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">ÂÆöÈ¢ùÂêçÁß∞Ôºö</td>
+                                                        <td class="titleIditem">∂®∂Ó√˚≥∆£∫</td>
                                                         <td align="left" width="120">
                                                             <asp:TextBox ID="TB_ItemContent" class="inputitem" runat="server"></asp:TextBox>
                                                         </td>
@@ -262,7 +262,7 @@
                                             <td>
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">ÂàÜÈÉ®ÂàÜÈ°πÔºö</td>
+                                                        <td class="titleIditem">∑÷≤ø∑÷œÓ£∫</td>
                                                         <td align="left" width="120">
                                                             <asp:TextBox ID="TB_SubItem" Class="inputitem" runat="server"></asp:TextBox>
                                                         </td>
@@ -274,7 +274,7 @@
                                             <td>
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">ËÆæÂ§áÂéüÂÆöÂçï‰ª∑Ôºö</td>
+                                                        <td class="titleIditem">…Ë±∏‘≠∂®µ•º€£∫</td>
                                                         <td align="left" width="120">
                                                             <asp:TextBox ID="TB_ItemPriceDevice" Class="inputitem" runat="server"></asp:TextBox>
                                                         </td>
@@ -284,7 +284,7 @@
                                             <td>
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">‰∏ªÊùêÂéüÂÆöÂçï‰ª∑Ôºö</td>
+                                                        <td class="titleIditem">÷˜≤ƒ‘≠∂®µ•º€£∫</td>
                                                         <td align="left" width="120">
                                                             <asp:TextBox ID="TB_ItemPriceMainMaterial" Class="inputitem" runat="server"></asp:TextBox>
                                                         </td>
@@ -294,7 +294,7 @@
                                             <td>
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">‰∫∫Â∑•ÂéüÂÆöÂçï‰ª∑Ôºö</td>
+                                                        <td class="titleIditem">»Àπ§‘≠∂®µ•º€£∫</td>
                                                         <td align="left" width="120">
                                                             <asp:TextBox ID="TB_ItemWage" Class="inputitem" runat="server"></asp:TextBox>
                                                         </td>
@@ -306,7 +306,7 @@
                                             <td align="left">
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">ÊùêÊñôÂéüÂÆöÂçï‰ª∑Ôºö</td>
+                                                        <td class="titleIditem">≤ƒ¡œ‘≠∂®µ•º€£∫</td>
                                                         <td align="left" width="120">
                                                             <asp:TextBox ID="TB_ItemPriceMaterial" Class="inputitem" runat="server"></asp:TextBox>
                                                         </td>
@@ -316,7 +316,7 @@
                                             <td>
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">Êú∫Ê¢∞ÂéüÂÆöÂçï‰ª∑Ôºö</td>
+                                                        <td class="titleIditem">ª˙–µ‘≠∂®µ•º€£∫</td>
                                                         <td align="left" width="120">
                                                             <asp:TextBox ID="TB_ItemPriceMachine" Class="inputitem" runat="server"></asp:TextBox>
                                                         </td>
@@ -325,7 +325,7 @@
                                             </td>
                                             <td align="right" class="titlezi" colspan="2">
                                                 <table border="0" align="left" cellpadding="0" cellspacing="0">
-                                                    <asp:CheckBox ID="CB_IfEveryMonth" runat="server" Text="Ëá™Âä®ËÆ°ÁÆóÊúàËÆ°ÂàíÈ¢ù" Width="263px" AutoPostBack="True" OnCheckedChanged="CB_IfEveryMonth_CheckedChanged" />
+                                                    <asp:CheckBox ID="CB_IfEveryMonth" runat="server" Text="◊‘∂Øº∆À„‘¬º∆ªÆ∂Ó" Width="263px" AutoPostBack="True" OnCheckedChanged="CB_IfEveryMonth_CheckedChanged" />
                                                 </table>
                                             </td>
                                         </tr>
@@ -333,7 +333,7 @@
                                             <td>
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">È¢ÑÁÆóËÆæÂ§áÂêà‰ª∑Ôºö</td>
+                                                        <td class="titleIditem">‘§À„…Ë±∏∫œº€£∫</td>
                                                         <td align="left" width="120">
                                                             <asp:TextBox ID="TB_ItemPriceDeviceBudget" Class="inputitem" runat="server"></asp:TextBox>
                                                         </td>
@@ -343,7 +343,7 @@
                                             <td>
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">È¢ÑÁÆó‰∏ªÊùêÂêà‰ª∑Ôºö</td>
+                                                        <td class="titleIditem">‘§À„÷˜≤ƒ∫œº€£∫</td>
                                                         <td align="left" width="120">
                                                             <asp:TextBox ID="TB_ItemPriceMainMaterialBudget" Class="inputitem" runat="server"></asp:TextBox>
                                                         </td>
@@ -353,7 +353,7 @@
                                             <td align="left">
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">È¢ÑÁÆó‰∫∫Â∑•Âêà‰ª∑Ôºö</td>
+                                                        <td class="titleIditem">‘§À„»Àπ§∫œº€£∫</td>
                                                         <td align="left" width="120">
                                                             <asp:TextBox ID="TB_ItemPriceWageBudget" Class="inputitem" runat="server"></asp:TextBox>
                                                         </td>
@@ -365,7 +365,7 @@
                                             <td align="left">
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">È¢ÑÁÆóÊùêÊñôÂêà‰ª∑Ôºö</td>
+                                                        <td class="titleIditem">‘§À„≤ƒ¡œ∫œº€£∫</td>
                                                         <td align="left" width="120">
                                                             <asp:TextBox ID="tb_ProjectMaterialBudget" Class="inputitem" runat="server"></asp:TextBox>
                                                         </td>
@@ -375,7 +375,7 @@
                                             <td align="left">
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">È¢ÑÁÆóÊú∫Ê¢∞Âêà‰ª∑Ôºö</td>
+                                                        <td class="titleIditem">‘§À„ª˙–µ∫œº€£∫</td>
                                                         <td align="left" width="120">
                                                             <asp:TextBox ID="tb_ProjectMachineBudget" Class="inputitem" runat="server"></asp:TextBox>
                                                         </td>
@@ -387,7 +387,7 @@
                                             <td>
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">ÁÆ°ÁêÜË¥πÂèäÂà©Ê∂¶Ë¥πÔºö</td>
+                                                        <td class="titleIditem">π‹¿Ì∑—º∞¿˚»Û∑—£∫</td>
                                                         <td align="left" width="120">
                                                             <asp:TextBox ID="tb_ItemPricePurchaseFee" Class="inputitem" runat="server"></asp:TextBox>
                                                         </td>
@@ -397,7 +397,7 @@
                                             <td align="left">
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">Ë¥πÁéáÊé™ÊñΩË¥πÔºö</td>
+                                                        <td class="titleIditem">∑—¬ ¥Î ©∑—£∫</td>
                                                         <td align="left" width="120">
                                                             <asp:TextBox ID="tb_ItemPricePurchaseFeeBudget" Class="inputitem" runat="server"></asp:TextBox>
                                                         </td>
@@ -407,7 +407,7 @@
                                             <td>
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">ËßÑË¥πÔºö</td>
+                                                        <td class="titleIditem">πÊ∑—£∫</td>
                                                         <td align="left" width="120">
                                                             <asp:TextBox ID="TB_ItemComprehensiveFeeBudget" Class="inputitem" runat="server"></asp:TextBox>
                                                         </td>
@@ -419,7 +419,7 @@
                                             <td>
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">È¢ÑÁÆóÁ®éÈáëÂêà‰ª∑Ôºö</td>
+                                                        <td class="titleIditem">‘§À„À∞Ω∫œº€£∫</td>
                                                         <td align="left" width="120">
                                                             <asp:TextBox ID="TB_ItemTaxesBudget" Class="inputitem" runat="server"></asp:TextBox>
                                                         </td>
@@ -429,7 +429,7 @@
                                             <td align="left">
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">ÂêàËÆ°È¢ÑÁÆóÂêà‰ª∑Ôºö</td>
+                                                        <td class="titleIditem">∫œº∆‘§À„∫œº€£∫</td>
                                                         <td align="left" width="120">
                                                             <asp:TextBox ID="TB_ItemPriceTotalBudge" Class="inputitem" runat="server"></asp:TextBox>
                                                         </td>
@@ -439,7 +439,7 @@
                                             <td align="left">
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">ÊâøÂåÖÂïÜÔºö</td>
+                                                        <td class="titleIditem">≥–∞¸…Ã£∫</td>
                                                         <td align="left" width="120">
                                                             <asp:DropDownList ID="DDL_ProjectSupplierID" class="inputitem" runat="server" AutoPostBack="True"></asp:DropDownList>
                                                         </td>
@@ -451,7 +451,7 @@
                                             <td>
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">ÂºÄÂßãÊó∂Èó¥Ôºö</td>
+                                                        <td class="titleIditem">ø™ º ±º‰£∫</td>
                                                         <td align="left">
                                                             <asp:TextBox ID="TB_BeginTime" Class="calendaritem" runat="server"></asp:TextBox>
                                                             <asp:Calendar ID="Calendar1" runat="server" Visible="False" OnSelectionChanged="Calendar1_SelectionChanged"></asp:Calendar>
@@ -465,7 +465,7 @@
                                             <td align="left" colspan="2">
                                                 <table class="tableitem">
                                                     <tr>
-                                                        <td class="titleIditem">ÁªìÊùüÊó∂Èó¥Ôºö</td>
+                                                        <td class="titleIditem">Ω· ¯ ±º‰£∫</td>
                                                         <td align="left">
                                                             <asp:TextBox ID="TB_EndTime" Class="calendaritem" runat="server"></asp:TextBox>
                                                             <asp:Calendar ID="Calendar2" runat="server" Visible="False" OnSelectionChanged="Calendar2_SelectionChanged"></asp:Calendar>
@@ -479,23 +479,23 @@
                                         </tr>
                                         <tr>
                                             <td colspan="4">
-                                                <asp:Label ID="lb_ShowMessage" runat="server" Text="Ê∂àÊÅØÊèêÁ§∫ÔºöÊó†" Font-Size="Small" ForeColor="Red"></asp:Label>
+                                                <asp:Label ID="lb_ShowMessage" runat="server" Text="œ˚œ¢Ã· æ£∫Œﬁ" Font-Size="Small" ForeColor="Red"></asp:Label>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td align="left">
                                                 <table width="240" border="0" align="center" cellpadding="0" cellspacing="0">
-                                                    <asp:Button ID="btnSaveBenchmarData" runat="server" Text="Êñ∞Â¢ûÁª©ÊïàÂü∫ÂáÜÊï∞ÊçÆ" Width="146px" OnClick="btnSaveBenchmarData_Click" />
+                                                    <asp:Button ID="btnSaveBenchmarData" runat="server" Text="–¬‘ˆº®–ßª˘◊º ˝æ›" Width="146px" OnClick="btnSaveBenchmarData_Click" />
                                                 </table>
                                             </td>
                                             <td>
                                                 <table width="240" border="0" align="left" cellpadding="0" cellspacing="0">
-                                                    <asp:Button ID="BT_EditBenchmarData" runat="server" Text="‰øÆÊîπÁª©ÊïàÂü∫ÂáÜÊï∞ÊçÆ" Width="127px" OnClick="BT_EditBenchmarData_Click" />
+                                                    <asp:Button ID="BT_EditBenchmarData" runat="server" Text="–ﬁ∏ƒº®–ßª˘◊º ˝æ›" Width="127px" OnClick="BT_EditBenchmarData_Click" />
                                                 </table>
                                             </td>
                                             <td>
                                                 <table width="240" border="0" align="left" cellpadding="0" cellspacing="0">
-                                                    <asp:Button ID="btnDelBenchmarData" runat="server" OnClick="btnDelBenchmarData_Click" OnClientClick="return confirm('ÊÇ®Á°ÆËÆ§Âà†Èô§ËØ•ËÆ∞ÂΩïÂêó?')" Text="Âà†Èô§Áª©ÊïàÂü∫ÂáÜÊï∞ÊçÆ" Width="127px" />
+                                                    <asp:Button ID="btnDelBenchmarData" runat="server" OnClick="btnDelBenchmarData_Click" OnClientClick="return confirm('ƒ˙»∑»œ…æ≥˝∏√º«¬º¬?')" Text="…æ≥˝º®–ßª˘◊º ˝æ›" Width="127px" />
                                                 </table>
                                             </td>
                                         </tr>
@@ -514,7 +514,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">ÂØºÂÖ•ÊàêÊú¨Áª©ÊïàÂü∫ÂáÜÊï∞ÊçÆ
+                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">µº»Î≥…±æº®–ßª˘◊º ˝æ›
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -535,7 +535,7 @@
                                                     <ContentTemplate>
                                                         <div>
                                                             <upload:inputfile id="FileUpload_Training" runat="server" width="400px" />
-                                                            &nbsp;<asp:Button ID="btn_ExcelToDataTraining" runat="server" CssClass="inpu" OnClick="btn_ExcelToDataTraining_Click" Text="ÂØºÂÖ•Êï∞ÊçÆ" />
+                                                            &nbsp;<asp:Button ID="btn_ExcelToDataTraining" runat="server" CssClass="inpu" OnClick="btn_ExcelToDataTraining_Click" Text="µº»Î ˝æ›" />
                                                             <br />
 
 
@@ -554,7 +554,7 @@
                                         <tr>
                                             <td align="right" colspan="3">
 
-                                                <asp:Button ID="BT_ExportToExcel" runat="server" OnClick="BT_ExportToExcel_Click" Text="ÂØºÂá∫Âà∞ExcelÊñá‰ª∂" />
+                                                <asp:Button ID="BT_ExportToExcel" runat="server" OnClick="BT_ExportToExcel_Click" Text="µº≥ˆµΩExcelŒƒº˛" />
                                             </td>
 
                                         </tr>
@@ -588,7 +588,7 @@
             <div style="position: absolute; left: 40%; top: 40%;">
                 <asp:UpdateProgress ID="TakeTopUp" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
                     <ProgressTemplate>
-                        <img src="Images/Processing.gif" alt="ËØ∑Á®çÂÄôÔºåÂ§ÑÁêÜ‰∏≠..." />
+                        <img src="Images/Processing.gif" alt="«Î…‘∫Ú£¨¥¶¿Ì÷–..." />
                     </ProgressTemplate>
                 </asp:UpdateProgress>
             </div>

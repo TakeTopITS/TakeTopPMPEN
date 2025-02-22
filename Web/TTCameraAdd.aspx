@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCameraAdd.aspx.cs" Inherits="TTCameraAdd" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCameraAdd.aspx.cs" Inherits="TTCameraAdd" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Ê∑ªÂä†ÊëÑÂÉèÂ§¥</title>
+    <title>ÃÌº”…„œÒÕ∑</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript">
@@ -30,12 +30,12 @@
                     data: da,
                     success: function (json) {
                         //alert(json);
-                        if (json == "‰øùÂ≠òÊàêÂäüÔºÅ") {
+                        if (json == "±£¥Ê≥…π¶£°") {
                             window.location.href = 'TTCameraList.aspx';
                         }
                     },
                     error: function () {
-                        alert("Â§±Ë¥•");
+                        alert("Failed");
                     }
 
                 });
@@ -92,19 +92,19 @@
                                         <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                             <tr style="font-weight: bold; font-size: 11pt">
                                                 <td style="text-align: left" class="formItemBgStyle">
-                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,QuYu%>"></asp:Label>Ôºö
+                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,QuYu%>"></asp:Label>£∫
                                                 </td>
                                                 <td style="text-align: left" class="formItemBgStyle">
                                                     <input type="text" id="TXT_Area" />
                                                 </td>
                                                 <td style="text-align: left" class="formItemBgStyle">
-                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,SheXiangTouIP%>"></asp:Label>Ôºö
+                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,SheXiangTouIP%>"></asp:Label>£∫
                                                 </td>
                                                 <td style="text-align: left" class="formItemBgStyle">
                                                     <input type="text" id="TXT_ServerIP" />
                                                 </td>
                                                 <td style="text-align: left" class="formItemBgStyle">
-                                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,DuanKou%>"></asp:Label>Ôºö
+                                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,DuanKou%>"></asp:Label>£∫
                                                 </td>
                                                 <td style="text-align: left" class="formItemBgStyle">
                                                     <input type="text" id="TXT_ServerPort" />
@@ -112,19 +112,19 @@
                                             </tr>
                                             <tr style="font-weight: bold; font-size: 11pt">
                                                 <td style="text-align: left" class="formItemBgStyle">
-                                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,XiangMuBu%>"></asp:Label>Ôºö
+                                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,XiangMuBu%>"></asp:Label>£∫
                                                 </td>
                                                 <td style="text-align: left" class="formItemBgStyle">
                                                     <input type="text" id="TXT_ProDepart" />
                                                 </td>
                                                 <td style="text-align: left" class="formItemBgStyle">
-                                                    <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,TongDaoHao%>"></asp:Label>Ôºö
+                                                    <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,TongDaoHao%>"></asp:Label>£∫
                                                 </td>
                                                 <td style="text-align: left" class="formItemBgStyle">
                                                     <input type="text" id="TXT_ServerChannel" />
                                                 </td>
                                                 <td style="text-align: left" class="formItemBgStyle">
-                                                    <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,SheXiangTouMingCheng%>"></asp:Label>Ôºö
+                                                    <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,SheXiangTouMingCheng%>"></asp:Label>£∫
                                                 </td>
                                                 <td style="text-align: left" class="formItemBgStyle">
                                                     <input type="text" id="TXT_CameraName" />
@@ -132,19 +132,19 @@
                                             </tr>
                                             <tr style="font-weight: bold; font-size: 11pt">
                                                 <td style="text-align: left" class="formItemBgStyle">
-                                                    <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,SheXiangTouYongHuMing%>"></asp:Label>Ôºö
+                                                    <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,SheXiangTouYongHuMing%>"></asp:Label>£∫
                                                 </td>
                                                 <td style="text-align: left" class="formItemBgStyle">
                                                     <input type="text" id="TXT_CameraUserName" />
                                                 </td>
                                                 <td style="text-align: left" class="formItemBgStyle">
-                                                    <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,SheXiangTouMiMa%>"></asp:Label>Ôºö
+                                                    <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,SheXiangTouMiMa%>"></asp:Label>£∫
                                                 </td>
                                                 <td style="text-align: left" class="formItemBgStyle">
                                                     <input type="text" id="TXT_CameraPass" />
                                                 </td>
                                                 <td style="text-align: left" class="formItemBgStyle">
-                                                    <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,MiaoShu%>"></asp:Label>Ôºö
+                                                    <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,MiaoShu%>"></asp:Label>£∫
                                                 </td>
                                                 <td style="text-align: left" class="formItemBgStyle">
                                                     <textarea id="TXT_Description" cols="50" rows="4" runat="server"></textarea>
@@ -152,7 +152,7 @@
                                             </tr>
                                             <tr style="font-weight: bold; font-size: 11pt">
                                                 <td style="text-align: left" class="formItemBgStyle" colspan="6">
-                                                    <input type="button" value="‰øùÂ≠ò" id="BT_Save" class="inpu" />
+                                                    <input type="button" value="±£¥Ê" id="BT_Save" class="inpu" />
                                                 </td>
                                             </tr>
                                         </table>

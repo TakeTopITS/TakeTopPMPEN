@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTDocumentTypeSet.aspx.cs" Inherits="TTDocumentTypeSet" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTDocumentTypeSet.aspx.cs" Inherits="TTDocumentTypeSet" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 
@@ -69,7 +69,7 @@
                                                     <tr>
                                                         <td style="width: 220px; text-align: left;">
                                                             <asp:TreeView ID="TreeView1" runat="server" NodeWrap="True" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged"
-                                                                Width="220px" ShowLines="True" Font-Size="10pt" Font-Bold="False" Font-Names="å®‹ä½“">
+                                                                Width="220px" ShowLines="True" Font-Size="10pt" Font-Bold="False" Font-Names="ËÎÌå">
                                                                 <RootNodeStyle CssClass="rootNode" /><NodeStyle CssClass="treeNode" /><LeafNodeStyle CssClass="leafNode" /><SelectedNodeStyle CssClass="selectNode" ForeColor ="Red" />
                                                             </asp:TreeView>
                                                            
@@ -86,16 +86,16 @@
                                                             <table style="width: 99%; height: 12px;">
                                                                 <tr>
                                                                     <td width="120px" style="text-align: left;">
-                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JieHaoDian%>"></asp:Label>ï¼š<asp:Label ID="LB_DocTypeID" runat="server">0</asp:Label>
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JieHaoDian%>"></asp:Label>£º<asp:Label ID="LB_DocTypeID" runat="server">0</asp:Label>
                                                                     </td>
                                                                     <td width="80px" align="right">
-                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>ï¼š
+                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º
                                                                     </td>
                                                                     <td width="200px" align="left">
                                                                         <asp:TextBox ID="TB_DocType" runat="server" Width="200px"></asp:TextBox>
                                                                     </td>
                                                                     <td width="80px" align="right"><span style="font-size: 10pt">
-                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,QuanXian%>"></asp:Label>ï¼š</span></td>
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,QuanXian%>"></asp:Label>£º</span></td>
                                                                     <td width="120px">
                                                                         <span style="font-size: 10pt">
                                                                             <asp:DropDownList ID="DL_Authority" runat="server" AutoPostBack="True" CssClass="DDList" DataTextField="HomeName" DataValueField="GroupName" >
@@ -103,7 +103,7 @@
                                                                         </span></td>
 
                                                                     <td width="120px" align="right">
-                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ShunXu%>"></asp:Label>ï¼š 
+                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ShunXu%>"></asp:Label>£º 
                                                                     </td>
                                                                     <td width="120px" align="left">
                                                                         <NickLee:NumberBox ID="NB_DocTypeSoft" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" Precision="0" Width="40px">00</NickLee:NumberBox>

@@ -1,11 +1,11 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUpdateUserInforSAAS.aspx.cs" Inherits="TTUpdateUserInforSAAS" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUpdateUserInforSAAS.aspx.cs" Inherits="TTUpdateUserInforSAAS" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>æ›´æ”¹æˆ‘çš„èµ„æ–™</title>
+    <title>¸ü¸ÄÎÒµÄ×ÊÁÏ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
@@ -162,8 +162,8 @@
                                             </td>
                                             <td style="text-align: left" class="formItemBgStyle">
                                                 <asp:DropDownList ID="DL_Gender" runat="server" Enabled="False">
-                                                    <asp:ListItem Value="ç”·" Text="<%$ Resources:lang,Nan%>" />
-                                                    <asp:ListItem Value="å¥³" Text="<%$ Resources:lang,Nv%>" />
+                                                    <asp:ListItem Value="Male" Text="<%$ Resources:lang,Nan%>" />
+                                                    <asp:ListItem Value="Female" Text="<%$ Resources:lang,Nv%>" />
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
@@ -184,7 +184,7 @@
                                                 <asp:TextBox ID="TB_Duty" runat="server" ReadOnly="True" Enabled="False"></asp:TextBox>
                                             </td>
                                             <td class="formItemBgStyle">
-                                                <asp:Image ID="IM_MemberPhoto" runat="server" AlternateText="å‘˜å·¥ç…§ç‰‡" Height="140px" ImageAlign="Left" Width="154px" />
+                                                <asp:Image ID="IM_MemberPhoto" runat="server" AlternateText="Ô±¹¤ÕÕÆ¬" Height="140px" ImageAlign="Left" Width="154px" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -234,7 +234,7 @@
                                             <td class="formItemBgStyle"></td>
                                         </tr>
                                         <tr>
-                                            <td style="text-align: right;" class="formItemBgStyle">E_Mailï¼š
+                                            <td style="text-align: right;" class="formItemBgStyle">E_Mail£º
                                             </td>
                                             <td style="text-align: left;" class="formItemBgStyle">
                                                 <asp:TextBox ID="TB_EMail" runat="server"></asp:TextBox>
@@ -276,8 +276,8 @@
                                             </td>
                                             <td colspan="2" style="text-align: left;" class="formItemBgStyle">
                                                 <asp:DropDownList ID="DL_Status" runat="server" Enabled="false">
-                                                    <asp:ListItem Value="åœ¨èŒ" Text="<%$ Resources:lang,ZaiZhi%>" />
-                                                    <asp:ListItem Value="ç¦»èŒ" Text="<%$ Resources:lang,LiZhi%>" />
+                                                    <asp:ListItem Value="Employed" Text="<%$ Resources:lang,ZaiZhi%>" />
+                                                    <asp:ListItem Value="Resign" Text="<%$ Resources:lang,LiZhi%>" />
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>

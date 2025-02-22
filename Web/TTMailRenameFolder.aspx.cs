@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Data;
 using System.Configuration;
 using System.Collections;
@@ -18,7 +18,7 @@ public partial class MailRenameFolder : System.Web.UI.Page
 	{
         string strUserCode = Session["UserCode"].ToString();
 
-        ///è·å–å‚æ•°nFolderIDçš„å€¼
+        ///»ñÈ¡²ÎÊınFolderIDµÄÖµ
         if (Request.Params["FolderID"] != null)
 		{
 			if(Int32.TryParse(Request.Params["FolderID"].ToString(),out nFolderID) == false)
@@ -27,7 +27,7 @@ public partial class MailRenameFolder : System.Web.UI.Page
 			}
 		}
 		if(!Page.IsPostBack)
-		{   ///æ˜¾ç¤ºæ–‡ä»¶å¤¹çš„åç§°
+		{   ///ÏÔÊ¾ÎÄ¼ş¼ĞµÄÃû³Æ
 			if(nFolderID > -1)
 			{
 				BindFolderData(nFolderID);
@@ -49,20 +49,20 @@ public partial class MailRenameFolder : System.Web.UI.Page
 	protected void NewBtn_Click(object sender,EventArgs e)
 	{
 		try
-		{   ///å®šä¹‰å¯¹è±¡
+		{   ///¶¨Òå¶ÔÏó
 			IFolder folder = new Folder();
-			///æ‰§è¡Œæ•°æ®åº“æ“ä½œ
+			///Ö´ĞĞÊı¾İ¿â²Ù×÷
 			folder.RenameFolder(nFolderID,Name.Text.Trim());
-			Response.Write("<script>alert('" + "ä¿®æ”¹æ•°æ®æˆåŠŸï¼Œè¯·å¦¥å–„ä¿ç®¡å¥½ä½ çš„æ•°æ®ï¼" + "');</script>");
+			Response.Write("<script>alert('" + "ĞŞ¸ÄÊı¾İ³É¹¦£¬ÇëÍ×ÉÆ±£¹ÜºÃÄãµÄÊı¾İ£¡" + "');</script>");
 		}
 		catch(Exception ex)
-		{   ///è·³è½¬åˆ°å¼‚å¸¸é”™è¯¯å¤„ç†é¡µé¢
+		{   ///Ìø×ªµ½Òì³£´íÎó´¦ÀíÒ³Ãæ
 			Response.Redirect("TTErrorPage.aspx?ErrorMsg=" + ex.Message.Replace("<br>","").Replace("\n","")
 				+ "&ErrorUrl=" + Request.Url.ToString().Replace("<br>","").Replace("\n",""));
 		}
 	}
 	protected void ReturnBtn_Click(object sender,EventArgs e)
-	{   ///è¿”å›åˆ°é‚®ä»¶åˆ—è¡¨é¡µé¢
+	{   ///·µ»Øµ½ÓÊ¼şÁĞ±íÒ³Ãæ
 		Response.Redirect("~/TTMailDesktop.aspx");
 	}	
 }

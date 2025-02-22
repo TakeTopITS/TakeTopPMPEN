@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectReview.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectReview.aspx.cs"
     Inherits="TTProjectReview" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -53,22 +53,22 @@
         <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" Width="99%"
             ShowHeader="false">
             <Columns>
-                <asp:BoundColumn DataField="WorkID" HeaderText="åºå·">
+                <asp:BoundColumn DataField="WorkID" HeaderText="ÐòºÅ">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                 </asp:BoundColumn>
-                <asp:BoundColumn DataField="PlanDetail" HeaderText="è®¡åˆ’å†…å®¹">
+                <asp:BoundColumn DataField="PlanDetail" HeaderText="¼Æ»®ÄÚÈÝ">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                 </asp:BoundColumn>
-                <asp:BoundColumn DataField="BeginTime" HeaderText="å¼€å§‹æ—¶é—´">
+                <asp:BoundColumn DataField="BeginTime" HeaderText="¿ªÊ¼Ê±¼ä">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                 </asp:BoundColumn>
-                <asp:BoundColumn DataField="EndTime" HeaderText="ç»“æŸæ—¶é—´">
+                <asp:BoundColumn DataField="EndTime" HeaderText="½áÊøÊ±¼ä">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                 </asp:BoundColumn>
-                <asp:BoundColumn DataField="Resource" HeaderText="èµ„æº">
+                <asp:BoundColumn DataField="Resource" HeaderText="×ÊÔ´">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                 </asp:BoundColumn>
-                <asp:BoundColumn DataField="Cost" HeaderText="æˆæœ¬">
+                <asp:BoundColumn DataField="Cost" HeaderText="Cost">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                 </asp:BoundColumn>
             </Columns>

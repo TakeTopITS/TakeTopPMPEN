@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTKPICheckForUser.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTKPICheckForUser.aspx.cs"
     Inherits="TTKPICheckForUser" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -7,7 +7,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>éƒ¨é—¨è®¾ç½®</title>
+    <title>²¿ÃÅÉèÖÃ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -115,7 +115,7 @@
                                                                 <tr>
                                                                     <td>
                                                                         <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>
-                                                                        ï¼š </td>
+                                                                        £º </td>
                                                                     <td>
                                                                         <asp:Label ID="LB_KPICheckID" runat="server"></asp:Label>
                                                                         <asp:TextBox ID="TB_KPICheckName" runat="server" Width="300px"></asp:TextBox>
@@ -123,7 +123,7 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,KaiShiShiJian%>"></asp:Label>ï¼š
+                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,KaiShiShiJian%>"></asp:Label>£º
                                                                     </td>
                                                                     <td>
 
@@ -133,7 +133,7 @@
 
                                                                     </td>
                                                                     <td>
-                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label>ï¼š
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label>£º
                                                                     </td>
                                                                     <td>
 
@@ -144,14 +144,14 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZiPingZongFen%>"></asp:Label>ï¼š
+                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZiPingZongFen%>"></asp:Label>£º
                                                                     </td>
                                                                     <td>
                                                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_TotalSelfPoint" runat="server" Width="53px" Enabled="false">0.00</NickLee:NumberBox>
                                                                         <asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,Fen%>"></asp:Label>
                                                                     </td>
                                                                     <td>
-                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,LingDaoPingZongFen%>"></asp:Label>ï¼š
+                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,LingDaoPingZongFen%>"></asp:Label>£º
                                                                     </td>
                                                                     <td>
                                                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_TotalLeaderPoint" runat="server" Enabled="False" Width="53px">0.00</NickLee:NumberBox>
@@ -160,14 +160,14 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,DiSanFangPingZongFen%>"></asp:Label>ï¼š
+                                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,DiSanFangPingZongFen%>"></asp:Label>£º
                                                                     </td>
                                                                     <td>
                                                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_TotalThirdPartPoint" runat="server" Enabled="False" Width="53px">0.00</NickLee:NumberBox>
                                                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,Fen%>"></asp:Label>
                                                                     </td>
                                                                     <td>
-                                                                        <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,XiTongZongPingFen%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,XiTongZongPingFen%>"></asp:Label>£º</td>
                                                                     <td>
                                                                         <NickLee:NumberBox ID="NB_TotalSqlPoint" runat="server" Enabled="False" MaxAmount="1000000000000" MinAmount="-1000000000000" Width="53px">0.00</NickLee:NumberBox>
                                                                         <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,Fen%>"></asp:Label></td>
@@ -179,19 +179,19 @@
                                                                         <NickLee:NumberBox ID="NB_TotalHRPoint" runat="server" Enabled="False" MaxAmount="1000000000000" MinAmount="-1000000000000" Width="53px">0.00</NickLee:NumberBox>
                                                                         <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,Fen%>"></asp:Label></td>
                                                                     <td>
-                                                                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,ZongFen%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,ZongFen%>"></asp:Label>£º</td>
                                                                     <td>
                                                                         <NickLee:NumberBox ID="NB_TotalPoint" runat="server" Enabled="False" MaxAmount="1000000000000" MinAmount="-1000000000000" Width="53px">0.00</NickLee:NumberBox>
                                                                         <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,Fen%>"></asp:Label></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>ï¼š
+                                                                        <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º
                                                                     </td>
                                                                     <td>
                                                                         <asp:DropDownList ID="DL_Status" runat="server">
-                                                                            <asp:ListItem Value="å¤„ç†ä¸­" Text="<%$ Resources:lang,HuoDong%>" />
-                                                                            <asp:ListItem Value="å…³é—­" Text="<%$ Resources:lang,GuanBi%>" />
+                                                                            <asp:ListItem Value="InProgress" Text="<%$ Resources:lang,HuoDong%>" />
+                                                                            <asp:ListItem Value="Closed" Text="<%$ Resources:lang,GuanBi%>" />
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                     <td>&nbsp;
@@ -219,14 +219,14 @@
                                                     <tr>
                                                         <td class="formItemBgStyle" style="height: 26px;">
                                                             <b>
-                                                                <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,BuMen%>"></asp:Label>ï¼š<asp:Label ID="LB_DepartCode" runat="server"></asp:Label>
-                                                                &nbsp;<asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,ZhiCheng%>"></asp:Label>ï¼š<asp:Label ID="LB_Position" runat="server"></asp:Label>
-                                                                &nbsp;<asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,YuanGong%>"></asp:Label>ï¼š<asp:Label ID="LB_UserCode" runat="server"></asp:Label>
+                                                                <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,BuMen%>"></asp:Label>£º<asp:Label ID="LB_DepartCode" runat="server"></asp:Label>
+                                                                &nbsp;<asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,ZhiCheng%>"></asp:Label>£º<asp:Label ID="LB_Position" runat="server"></asp:Label>
+                                                                &nbsp;<asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,YuanGong%>"></asp:Label>£º<asp:Label ID="LB_UserCode" runat="server"></asp:Label>
                                                                 &nbsp;<asp:Label ID="LB_UserName" runat="server"></asp:Label>
-                                                                &nbsp;<asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,KPILieBiao%>"></asp:Label>ï¼š</b>&nbsp;
+                                                                &nbsp;<asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,KPILieBiao%>"></asp:Label>£º</b>&nbsp;
                                                         </td>
-                                                        <td class="formItemBgStyle" style="height: 26px;">ï¼ˆ<asp:Label ID="Label66" runat="server" Text="<%$ Resources:lang,quanzhong%>"></asp:Label>ï¼š<b>
-                                                            <asp:Label ID="LB_Weight" runat="server" Text="0"></asp:Label></b>ï¼‰
+                                                        <td class="formItemBgStyle" style="height: 26px;">£¨<asp:Label ID="Label66" runat="server" Text="<%$ Resources:lang,quanzhong%>"></asp:Label>£º<b>
+                                                            <asp:Label ID="LB_Weight" runat="server" Text="0"></asp:Label></b>£©
                                                         </td>
                                                         <td align="right" style="width: 30%; padding-bottom: 5px;" class="formItemBgStyle">
                                                             <asp:Button ID="BT_Create" runat="server" Text="<%$ Resources:lang,New%>" CssClass="inpuYello" OnClick="BT_Create_Click" />
@@ -286,7 +286,7 @@
                                                                                 </td>
                                                                                 <td width="5%" align="center">
                                                                                     <strong>
-                                                                                        <asp:Label ID="Label27" runat="server" Text="æ€»è¯„åˆ†"></asp:Label></strong>
+                                                                                        <asp:Label ID="Label27" runat="server" Text="×ÜÆÀ·Ö"></asp:Label></strong>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
@@ -307,12 +307,12 @@
 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
-                                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ä¿®æ”¹' /&gt;&lt;/div&gt;">
+                                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ÐÞ¸Ä' /&gt;&lt;/div&gt;">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:ButtonColumn>
                                                                     <asp:TemplateColumn HeaderText="Delete">
                                                                         <ItemTemplate>
-                                                                            <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='åˆ é™¤' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                                            <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:TemplateColumn>
@@ -322,26 +322,26 @@
                                                                     <asp:BoundColumn DataField="KPI" HeaderText="KPI">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Weight" HeaderText="æƒé‡">
+                                                                    <asp:BoundColumn DataField="Weight" HeaderText="È¨ÖØ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
 
-                                                                    <asp:BoundColumn DataField="SelfPoint" HeaderText="è‡ªè¯„åˆ†">
+                                                                    <asp:BoundColumn DataField="SelfPoint" HeaderText="×ÔÆÀ·Ö">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="LeaderPoint" HeaderText="é¢†å¯¼è¯„åˆ†">
+                                                                    <asp:BoundColumn DataField="LeaderPoint" HeaderText="Áìµ¼ÆÀ·Ö">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="ThirdPartPoint" HeaderText="ç¬¬ä¸‰æ–¹è¯„åˆ†">
+                                                                    <asp:BoundColumn DataField="ThirdPartPoint" HeaderText="µÚÈý·½ÆÀ·Ö">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="SqlPoint" HeaderText="ç³»ç»Ÿè¯„åˆ†">
+                                                                    <asp:BoundColumn DataField="SqlPoint" HeaderText="ÏµÍ³ÆÀ·Ö">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="HRPoint" HeaderText="äººäº‹è¯„åˆ†">
+                                                                    <asp:BoundColumn DataField="HRPoint" HeaderText="ÈËÊÂÆÀ·Ö">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Point" HeaderText="æ€»è¯„åˆ†">
+                                                                    <asp:BoundColumn DataField="Point" HeaderText="×ÜÆÀ·Ö">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
                                                                 </Columns>
@@ -354,7 +354,7 @@
                                                 rowspan="2">
 
                                                 <cc1:TabContainer CssClass="ajax_tab_menu" ID="TabContainer2" runat="server" ActiveTabIndex="0" Width="100%">
-                                                    <cc1:TabPanel ID="TabPanel3" runat="server" HeaderText="èŒç§°æ¨¡æ¿">
+                                                    <cc1:TabPanel ID="TabPanel3" runat="server" HeaderText="Ö°³ÆÄ£°å">
                                                         <HeaderTemplate>
                                                             <asp:Label ID="Label43" runat="server" Text="<%$ Resources:lang,ZhiChengMuBan%>"></asp:Label>
                                                         </HeaderTemplate>
@@ -368,7 +368,7 @@
                                                             </asp:TreeView>
                                                         </ContentTemplate>
                                                     </cc1:TabPanel>
-                                                    <cc1:TabPanel ID="TabPanel4" runat="server" HeaderText="å…¨éƒ¨æ¨¡æ¿">
+                                                    <cc1:TabPanel ID="TabPanel4" runat="server" HeaderText="È«²¿Ä£°å">
                                                         <HeaderTemplate>
                                                             <asp:Label ID="Label45" runat="server" Text="<%$ Resources:lang,QuanBuMuBan%>"></asp:Label>
                                                         </HeaderTemplate>
@@ -407,7 +407,7 @@
                                             cellspacing="0">
                                             <tr>
                                                 <td class="formItemBgStyle" style="width: 10%; text-align: right">
-                                                    <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>ï¼š
+                                                    <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º
                                                 </td>
                                                 <td class="formItemBgStyle">
                                                     <asp:Label ID="LB_KPIID" runat="server"></asp:Label>
@@ -417,19 +417,19 @@
                                             </tr>
                                             <tr>
                                                 <td class="formItemBgStyle" style="text-align: right;">
-                                                    <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>ï¼š
+                                                    <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º
                                                 </td>
                                                 <td class="formItemBgStyle">
                                                     <asp:DropDownList ID="DL_KPIType" runat="server" DataTextField="Type" DataValueField="Type"
                                                         Width="150px">
                                                     </asp:DropDownList>
-                                                    *&nbsp; &nbsp;<asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,QuanZhong%>"></asp:Label>ï¼š<NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_Weight" runat="server" Width="53px">0.00</NickLee:NumberBox>
+                                                    *&nbsp; &nbsp;<asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,QuanZhong%>"></asp:Label>£º<NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_Weight" runat="server" Width="53px">0.00</NickLee:NumberBox>
                                                     &nbsp; &nbsp;
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="formItemBgStyle" style="text-align: right;">
-                                                    <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,GongShi%>"></asp:Label>ï¼š
+                                                    <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,GongShi%>"></asp:Label>£º
                                                 </td>
                                                 <td class="formItemBgStyle">
                                                     <asp:TextBox ID="TB_Formula" runat="server" Height="50px" TextMode="MultiLine" Width="90%"></asp:TextBox>
@@ -438,7 +438,7 @@
 
                                             <tr>
                                                 <td class="formItemBgStyle" style="text-align: right;">
-                                                    <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,SQLDaiMa%>"></asp:Label>ï¼š
+                                                    <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,SQLDaiMa%>"></asp:Label>£º
                                                 </td>
                                                 <td class="formItemBgStyle">
                                                     <asp:TextBox ID="TB_SqlCode" runat="server" Height="80px" TextMode="MultiLine" Width="90%"></asp:TextBox>
@@ -446,23 +446,23 @@
                                                     <table>
                                                         <tr>
                                                             <td>
-                                                                <asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,DanWeiFenZhi%>"></asp:Label>ï¼š</td>
+                                                                <asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,DanWeiFenZhi%>"></asp:Label>£º</td>
                                                             <td>
                                                                 <NickLee:NumberBox ID="NB_UnitSqlPoint" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" Width="53px" Amount="1">1.00</NickLee:NumberBox>
                                                             </td>
                                                         </tr>
                                                     </table>
                                                     <br />
-                                                    ï¼ˆ<asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,YGZKPIKSSJKPIJSSJBKPIZDM%>"></asp:Label><br />
-                                                    <asp:Label ID="Label42" runat="server" Text="<%$ Resources:lang,DaiMaShiLi%>"></asp:Label>ï¼šSelect Count(*) * 5 From T_Project Where Status = &#39;<asp:Label ID="Label40" runat="server" Text="<%$ Resources:lang,JieAn%>"></asp:Label>&#39; and PMCode = &#39;[TAKETOPKPIUSERCODE]&#39; and to_char(BeginDate,'yyyymmdd') &gt;= &#39;[TAKETOPKPISTARTTIME]&#39; and to_char(EndDate,'yyyymmdd') &lt;= &#39;[TAKETOPKPIENDTIME]&#39;
+                                                    £¨<asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,YGZKPIKSSJKPIJSSJBKPIZDM%>"></asp:Label><br />
+                                                    <asp:Label ID="Label42" runat="server" Text="<%$ Resources:lang,DaiMaShiLi%>"></asp:Label>£ºSelect Count(*) * 5 From T_Project Where Status = &#39;<asp:Label ID="Label40" runat="server" Text="<%$ Resources:lang,JieAn%>"></asp:Label>&#39; and PMCode = &#39;[TAKETOPKPIUSERCODE]&#39; and to_char(BeginDate,'yyyymmdd') &gt;= &#39;[TAKETOPKPISTARTTIME]&#39; and to_char(EndDate,'yyyymmdd') &lt;= &#39;[TAKETOPKPIENDTIME]&#39;
                                                                         <br />
-                                                    <asp:Label ID="Label41" runat="server" Text="<%$ Resources:lang,ZWDBDWFZKYSJYQTSZQD%>"></asp:Label>ï¼‰</td>
+                                                    <asp:Label ID="Label41" runat="server" Text="<%$ Resources:lang,ZWDBDWFZKYSJYQTSZQD%>"></asp:Label>£©</td>
                                             </tr>
 
 
                                             <tr>
                                                 <td class="formItemBgStyle" style="text-align: right;">
-                                                    <asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,LaiYuan%>"></asp:Label>ï¼š
+                                                    <asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,LaiYuan%>"></asp:Label>£º
                                                 </td>
                                                 <td class="formItemBgStyle">
                                                     <asp:TextBox ID="TB_Source" runat="server" Height="40px" TextMode="MultiLine" Width="90%"></asp:TextBox>
@@ -470,7 +470,7 @@
                                             </tr>
                                             <tr>
                                                 <td class="formItemBgStyle" style="text-align: right;">
-                                                    <asp:Label ID="Label35" runat="server" Text="<%$ Resources:lang,MuBiao%>"></asp:Label>ï¼š
+                                                    <asp:Label ID="Label35" runat="server" Text="<%$ Resources:lang,MuBiao%>"></asp:Label>£º
                                                 </td>
                                                 <td class="formItemBgStyle">
                                                     <asp:TextBox ID="TB_Target" runat="server" Height="40px" TextMode="MultiLine" Width="90%"></asp:TextBox>
@@ -478,7 +478,7 @@
                                             </tr>
                                             <tr>
                                                 <td class="formItemBgStyle" style="text-align: right;">
-                                                    <asp:Label ID="Label36" runat="server" Text="<%$ Resources:lang,ShunXuHao%>"></asp:Label>ï¼š
+                                                    <asp:Label ID="Label36" runat="server" Text="<%$ Resources:lang,ShunXuHao%>"></asp:Label>£º
                                                 </td>
                                                 <td class="formItemBgStyle">
                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_SortNubmer" runat="server" Precision="0" Width="53px">0</NickLee:NumberBox>
@@ -520,7 +520,7 @@
                             <table style="width: 100%;">
                                 <tr>
                                     <td>
-                                        <asp:Label ID="Label47" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label47" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º
                                     </td>
                                     <td>
                                         <asp:Label ID="Label48" runat="server"></asp:Label>
@@ -529,7 +529,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:Label ID="Label49" runat="server" Text="<%$ Resources:lang,KaiShiShiJian%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label49" runat="server" Text="<%$ Resources:lang,KaiShiShiJian%>"></asp:Label>£º
                                     </td>
                                     <td>
 
@@ -539,7 +539,7 @@
 
                                     </td>
                                     <td>
-                                        <asp:Label ID="Label50" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label50" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label>£º
                                     </td>
                                     <td>
 
@@ -550,14 +550,14 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:Label ID="Label51" runat="server" Text="<%$ Resources:lang,ZiPingZongFen%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label51" runat="server" Text="<%$ Resources:lang,ZiPingZongFen%>"></asp:Label>£º
                                     </td>
                                     <td>
                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_TotalSelfPointNew" runat="server" Width="53px" Enabled="false">0.00</NickLee:NumberBox>
                                         <asp:Label ID="Label52" runat="server" Text="<%$ Resources:lang,Fen%>"></asp:Label>
                                     </td>
                                     <td>
-                                        <asp:Label ID="Label53" runat="server" Text="<%$ Resources:lang,LingDaoPingZongFen%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label53" runat="server" Text="<%$ Resources:lang,LingDaoPingZongFen%>"></asp:Label>£º
                                     </td>
                                     <td>
                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_TotalLeaderPointNew" runat="server" Enabled="False" Width="53px">0.00</NickLee:NumberBox>
@@ -566,14 +566,14 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:Label ID="Label55" runat="server" Text="<%$ Resources:lang,DiSanFangPingZongFen%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label55" runat="server" Text="<%$ Resources:lang,DiSanFangPingZongFen%>"></asp:Label>£º
                                     </td>
                                     <td>
                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_TotalThirdPartPointNew" runat="server" Enabled="False" Width="53px">0.00</NickLee:NumberBox>
                                         <asp:Label ID="Label56" runat="server" Text="<%$ Resources:lang,Fen%>"></asp:Label>
                                     </td>
                                     <td>
-                                        <asp:Label ID="Label57" runat="server" Text="<%$ Resources:lang,XiTongZongPingFen%>"></asp:Label>ï¼š</td>
+                                        <asp:Label ID="Label57" runat="server" Text="<%$ Resources:lang,XiTongZongPingFen%>"></asp:Label>£º</td>
                                     <td>
                                         <NickLee:NumberBox ID="NB_TotalSqlPointNew" runat="server" Enabled="False" MaxAmount="1000000000000" MinAmount="-1000000000000" Width="53px">0.00</NickLee:NumberBox>
                                         <asp:Label ID="Label58" runat="server" Text="<%$ Resources:lang,Fen%>"></asp:Label></td>
@@ -585,19 +585,19 @@
                                         <NickLee:NumberBox ID="NB_TotalHRPointNew" runat="server" Enabled="False" MaxAmount="1000000000000" MinAmount="-1000000000000" Width="53px">0.00</NickLee:NumberBox>
                                         <asp:Label ID="Label60" runat="server" Text="<%$ Resources:lang,Fen%>"></asp:Label></td>
                                     <td>
-                                        <asp:Label ID="Label61" runat="server" Text="<%$ Resources:lang,ZongFen%>"></asp:Label>ï¼š</td>
+                                        <asp:Label ID="Label61" runat="server" Text="<%$ Resources:lang,ZongFen%>"></asp:Label>£º</td>
                                     <td>
                                         <NickLee:NumberBox ID="NB_TotalPointNew" runat="server" Enabled="False" MaxAmount="1000000000000" MinAmount="-1000000000000" Width="53px">0.00</NickLee:NumberBox>
                                         <asp:Label ID="Label62" runat="server" Text="<%$ Resources:lang,Fen%>"></asp:Label></td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:Label ID="Label63" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label63" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º
                                     </td>
                                     <td>
                                         <asp:DropDownList ID="DL_StatusNew" runat="server">
-                                            <asp:ListItem Value="å¤„ç†ä¸­" Text="<%$ Resources:lang,HuoDong%>" />
-                                            <asp:ListItem Value="å…³é—­" Text="<%$ Resources:lang,GuanBi%>" />
+                                            <asp:ListItem Value="InProgress" Text="<%$ Resources:lang,HuoDong%>" />
+                                            <asp:ListItem Value="Closed" Text="<%$ Resources:lang,GuanBi%>" />
                                         </asp:DropDownList>
                                     </td>
                                     <td>&nbsp;

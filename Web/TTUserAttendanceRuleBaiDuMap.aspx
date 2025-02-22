@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserAttendanceRuleBaiDuMap.aspx.cs" Inherits="TTUserAttendanceRuleBaiDuMap" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserAttendanceRuleBaiDuMap.aspx.cs" Inherits="TTUserAttendanceRuleBaiDuMap" %>
 
 <meta http-equiv="Content-Type" content="textml; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>é¡¹ç›®åœ°å›¾</title>
+    <title>ÏîÄ¿µØÍ¼</title>
 
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 
@@ -116,9 +116,9 @@
         map.addOverlay(marker);
 
         var geolocation = new BMap.Geolocation({
-            enableHighAccuracy: true, // æ˜¯å¦ä½¿ç”¨é«˜ç²¾åº¦å®šä½ï¼Œé»˜è®¤:true
-            timeout: 10000, // è¶…è¿‡10ç§’ååœæ­¢å®šä½ï¼Œé»˜è®¤ï¼šæ— ç©·å¤§
-            maximumAge: 0 //å®šä½ç»“æœç¼“å­˜0æ¯«ç§’ï¼Œæ¯æ¬¡è°ƒç”¨å‡é‡æ–°è·å–
+            enableHighAccuracy: true, // ÊÇ·ñÊ¹ÓÃ¸ß¾«¶È¶¨Î»£¬Ä¬ÈÏ:true
+            timeout: 10000, // ³¬¹ı10ÃëºóÍ£Ö¹¶¨Î»£¬Ä¬ÈÏ£ºÎŞÇî´ó
+            maximumAge: 0 //¶¨Î»½á¹û»º´æ0ºÁÃë£¬Ã¿´Îµ÷ÓÃ¾ùÖØĞÂ»ñÈ¡
         });
         geolocation.getCurrentPosition(function (r) {
             if (this.getStatus() == BMAP_STATUS_SUCCESS) {
@@ -164,7 +164,7 @@
 
 
 
-    //è®¾ç½®çˆ¶é¡µé¢çš„ç»çº¬åº¦
+    //ÉèÖÃ¸¸Ò³ÃæµÄ¾­Î³¶È
     function setLngLat() {
 
         var lng = document.getElementById("longitude").value;
@@ -175,7 +175,7 @@
         window.parent.document.getElementById("TB_Latitude").value = lat;
         window.parent.document.getElementById("TB_Address").value = address;
 
-        //å…³é—­åœ°å›¾çª—å£
+        //¹Ø±ÕµØÍ¼´°¿Ú
         CloseLayer();
 
     }

@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Data;
 using System.Configuration;
 using System.Collections;
@@ -36,11 +36,11 @@ public partial class TTProjectPlanView : System.Web.UI.Page
         if (lst.Count > 0)
         {
             WorkPlan workPlan = (WorkPlan)lst[0];
-            //this.Title = Resources.lang.JiHua + ": " + strPlanID + " " + workPlan.Name.Trim() + " è¯¦ç»†å†…å®¹!";
+            //this.Title = Resources.lang.JiHua + ": " + strPlanID + " " + workPlan.Name.Trim() + " ÏêÏ¸ÄÚÈİ!";
         }
         else
         {
-            Response.Write("æ­¤è®¡åˆ’ä¸å­˜åœ¨ï¼Œå¯èƒ½å·²è¢«åˆ é™¤,è¯·æ£€æŸ¥!");
+            Response.Write("´Ë¼Æ»®²»´æÔÚ£¬¿ÉÄÜÒÑ±»É¾³ı,Çë¼ì²é!");
         }
     }
 }

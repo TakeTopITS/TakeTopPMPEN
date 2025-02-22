@@ -280,13 +280,13 @@
                                                             <span style="font-size: 10pt">
                                                                 <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>：</span>
                                                             <asp:DropDownList ID="DL_ContactType" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DL_ContactType_SelectedIndexChanged">
-                                                                <asp:ListItem Value="客户" Text="<%$ Resources:lang,KeHu%>" />
-                                                                <asp:ListItem Value="供应商" Text="<%$ Resources:lang,GongYingShang%>" />
-                                                                <asp:ListItem Value="同事" Text="<%$ Resources:lang,TongShi%>" />
-                                                                <asp:ListItem Value="朋友" Text="<%$ Resources:lang,PengYou%>" />
-                                                                <asp:ListItem Value="同学" Text="<%$ Resources:lang,TongXue%>" />
-                                                                <asp:ListItem Value="亲属" Text="<%$ Resources:lang,QinShu%>" />
-                                                                <asp:ListItem Value="其它" Text="<%$ Resources:lang,QiTa%>" />
+                                                                <asp:ListItem Value="Customer" Text="<%$ Resources:lang,KeHu%>" />
+                                                                <asp:ListItem Value="Supplier" Text="<%$ Resources:lang,GongYingShang%>" />
+                                                                <asp:ListItem Value="Colleague" Text="<%$ Resources:lang,TongShi%>" />
+                                                                <asp:ListItem Value="Friend" Text="<%$ Resources:lang,PengYou%>" />
+                                                                <asp:ListItem Value="Classmate" Text="<%$ Resources:lang,TongXue%>" />
+                                                                <asp:ListItem Value="Relative" Text="<%$ Resources:lang,QinShu%>" />
+                                                                <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>" />
                                                             </asp:DropDownList>
                                                             <span style="font-size: 10pt">
                                                                 <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>：</span><asp:TextBox ID="TB_HazyName" runat="server"

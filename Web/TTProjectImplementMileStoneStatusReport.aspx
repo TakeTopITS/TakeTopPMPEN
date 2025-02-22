@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectImplementMileStoneStatusReport.aspx.cs" Inherits="TTProjectImplementMileStoneStatusReport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectImplementMileStoneStatusReport.aspx.cs" Inherits="TTProjectImplementMileStoneStatusReport" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
@@ -7,7 +7,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>È°πÁõÆÊàêÂëò‰ªªÂä°Êä•Ë°®</title>
+    <title>œÓƒø≥…‘±»ŒŒÒ±®±Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/My97DatePicker/WdatePicker.js"></script>
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -45,7 +45,7 @@
                                 <table width="900px" border="0" cellpadding="0" cellspacing="0" style="padding: 5px 5px 5px 5px;">
                                     <tr>
                                         <td>
-                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuMingChen%>"></asp:Label>Ôºö
+                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuMingChen%>"></asp:Label>£∫
                                         </td>
                                         <td align="left">
                                             <asp:Label ID="LB_ProjectID" runat="server"></asp:Label>
@@ -58,7 +58,7 @@
                                         </td>
 
                                         <td>
-                                            <asp:Label ID="Label37" runat="server" Text="È°πÁõÆÁªèÁêÜ"></asp:Label>Ôºö
+                                            <asp:Label ID="Label37" runat="server" Text="œÓƒøæ≠¿Ì"></asp:Label>£∫
                                         </td>
                                         <td align="left">
                                             <asp:TextBox ID="TB_PMName" runat="server"></asp:TextBox>
@@ -67,7 +67,7 @@
 
                                     <tr>
                                         <td>
-                                            <asp:Label ID="Label5" runat="server" Text="ÂºÄÂßãÊó∂Èó¥"></asp:Label>Ôºö
+                                            <asp:Label ID="Label5" runat="server" Text="ø™ º ±º‰"></asp:Label>£∫
                                         </td>
                                         <td align="left">
                                             <asp:TextBox ID="DLC_BeginDate" ReadOnly="false" runat="server"></asp:TextBox>
@@ -75,7 +75,7 @@
                                             </ajaxToolkit:CalendarExtender>
                                         </td>
                                         <td>
-                                            <asp:Label ID="Label2" runat="server" Text="ÁªìÊùüÊó•Êúü"></asp:Label>Ôºö
+                                            <asp:Label ID="Label2" runat="server" Text="Ω· ¯»’∆⁄"></asp:Label>£∫
                                         </td>
                                         <td align="left">
                                             <asp:TextBox ID="DLC_EndDate" ReadOnly="false" runat="server"></asp:TextBox>
@@ -94,7 +94,7 @@
                                         </td>
                                         <td align="center" style="padding-top: 5px;">
                                             <a href="#" onclick="preview1()">
-                                                <img src="ImagesSkin/print.gif" alt="ÊâìÂç∞" border="0" />
+                                                <img src="ImagesSkin/print.gif" alt="¥Ú”°" border="0" />
                                             </a>
                                         </td>
                                         <td align="left" style="padding-top: 5px;"></td>
@@ -102,7 +102,7 @@
 
                                     <tr style="display: none;">
                                         <td>
-                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ZuBie%>"></asp:Label>Ôºö
+                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ZuBie%>"></asp:Label>£∫
                                         </td>
                                         <td>
                                             <asp:TextBox ID="TB_BelongDepartName" runat="server" Width="125px"></asp:TextBox>
@@ -111,7 +111,7 @@
                                             <asp:Label ID="LB_BelongDepartCode" runat="server" Visible="false"></asp:Label>
                                         </td>
                                         <td>
-                                            <asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>Ôºö
+                                            <asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£∫
                                         </td>
                                         <td align="left">
                                             <asp:DropDownList ID="DL_Status" DataTextField="HomeName" DataValueField="Status" runat="server">
@@ -134,9 +134,9 @@
                         </tr>
                         <tr>
                             <td style="text-align: right; padding-right: 20px;">
-                                <asp:Label ID="Label4" runat="server" Text="ËÆ∞ÂΩïÊï∞"></asp:Label>
-                                Ôºö<asp:Label ID="LB_ResultNumber" runat="server"></asp:Label>&nbsp; 
-                                <asp:Label ID="Label6" runat="server" Text="Êù°"></asp:Label>
+                                <asp:Label ID="Label4" runat="server" Text="º«¬º ˝"></asp:Label>
+                                £∫<asp:Label ID="LB_ResultNumber" runat="server"></asp:Label>&nbsp; 
+                                <asp:Label ID="Label6" runat="server" Text="Ãı"></asp:Label>
                             </td>
                         </tr>
                         <tr>
@@ -185,17 +185,17 @@
                                     Width="100%"
                                     ShowHeader="false" CellPadding="4" ForeColor="#333333" GridLines="None">
                                     <Columns>
-                                        <asp:BoundColumn DataField="ProjectID" HeaderText="ÁºñÂè∑">
+                                        <asp:BoundColumn DataField="ProjectID" HeaderText="±‡∫≈">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                         </asp:BoundColumn>
-                                        <asp:BoundColumn DataField="ProjectCode" HeaderText="‰ª£Á†Å">
+                                        <asp:BoundColumn DataField="ProjectCode" HeaderText="¥˙¬Î">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                         </asp:BoundColumn>
                                         <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTProjectDetail.aspx?ProjectID={0}"
-                                            DataTextField="ProjectName" HeaderText="È°πÁõÆÂêçÁß∞" Target="_blank">
+                                            DataTextField="ProjectName" HeaderText="œÓƒø√˚≥∆" Target="_blank">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="22%" />
                                         </asp:HyperLinkColumn>
-                                        <asp:TemplateColumn HeaderText="Áä∂ÊÄÅ">
+                                        <asp:TemplateColumn HeaderText="◊¥Ã¨">
                                             <ItemTemplate>
                                                 <%# ShareClass. GetStatusHomeNameByProjectStatus(Eval("Status").ToString(),Eval("ProjectType").ToString()) %>
                                             </ItemTemplate>

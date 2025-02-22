@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZObjectCodeListAuto.aspx.cs" Inherits="TTWZObjectCodeListAuto" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZObjectCodeListAuto.aspx.cs" Inherits="TTWZObjectCodeListAuto" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>物资代码重做使用标记</title>
+    <title>���ʴ�������ʹ�ñ��</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>

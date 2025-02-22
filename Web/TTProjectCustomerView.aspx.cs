@@ -1,4 +1,4 @@
-锘縰sing System; using System.Resources;
+using System; using System.Resources;
 using System.Collections;
 using System.Configuration;
 using System.Data;
@@ -36,7 +36,7 @@ public partial class TTProjectCustomerView : System.Web.UI.Page
         lst = projectBLL.GetAllProjects(strHQL);
         Project project = (Project)lst[0];
 
-        //this.Title = Resources.lang.Project + strProjectID + " " + project.ProjectName + "瀹㈡埛璧勬枡";
+        //this.Title = Resources.lang.Project + strProjectID + " " + project.ProjectName + "客户资料";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack == false)
         {

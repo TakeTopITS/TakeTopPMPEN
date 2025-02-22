@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInfor_StudentCostListNot.aspx.cs" Inherits="TTUserInfor_StudentCostListNot" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInfor_StudentCostListNot.aspx.cs" Inherits="TTUserInfor_StudentCostListNot" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -7,7 +7,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Â≠¶Á±çË°®</title>
+    <title>—ßºÆ±Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -127,7 +127,7 @@
                                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                     <tr>
                                                                         <%--<td width="10%" align="center">
-                                                                            <strong>Êìç‰Ωú</strong>
+                                                                            <strong>≤Ÿ◊˜</strong>
                                                                         </td>--%>
                                                                         <td width="10%" align="center">
                                                                             <strong>
@@ -160,24 +160,24 @@
                                                             <%--<asp:TemplateColumn>
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 <HeaderTemplate>
-                                                                    Êìç‰Ωú
+                                                                    ≤Ÿ◊˜
                                                                 </HeaderTemplate>
                                                                 <ItemTemplate>
 
-                                                                    <a href='TTUserInfor_StudentCo.aspx?StudentCode=<%# DataBinder.Eval(Container.DataItem,"UserCode") %>&StudentName=<%# DataBinder.Eval(Container.DataItem,"UserName") %>'  target="_blank">Êî∂Ë¥π</a>
+                                                                    <a href='TTUserInfor_StudentCo.aspx?StudentCode=<%# DataBinder.Eval(Container.DataItem,"UserCode") %>&StudentName=<%# DataBinder.Eval(Container.DataItem,"UserName") %>'  target="_blank"> ’∑—</a>
 
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>--%>
-                                                            <asp:BoundColumn DataField="UserCode" HeaderText="Â≠¶ÁîüÁºñÂè∑">
+                                                            <asp:BoundColumn DataField="UserCode" HeaderText="—ß…˙±‡∫≈">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="UserName" HeaderText="Â≠¶ÁîüÂêçÁß∞">
+                                                            <asp:BoundColumn DataField="UserName" HeaderText="—ß…˙√˚≥∆">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ClassName" HeaderText="Áè≠Á∫ß">
+                                                            <asp:BoundColumn DataField="ClassName" HeaderText="∞‡º∂">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Gender" HeaderText="ÊÄßÂà´">
+                                                            <asp:BoundColumn DataField="Gender" HeaderText="–‘±">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

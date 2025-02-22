@@ -1,4 +1,4 @@
-锘縰sing System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -23,7 +23,7 @@ public partial class TTMyCreatedProjectTree : System.Web.UI.Page
         LB_UserCode.Text = strUserCode;
         //LB_UserName.Text = GetUserName(strUserCode);
 
-        //this.Title = "鎴戝缓绔嬬殑椤圭洰---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
+        //this.Title = "我建立的项目---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
 
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)

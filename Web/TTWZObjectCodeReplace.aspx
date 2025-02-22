@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZObjectCodeReplace.aspx.cs" Inherits="TTWZObjectCodeReplace" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZObjectCodeReplace.aspx.cs" Inherits="TTWZObjectCodeReplace" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Áâ©ËµÑÊõøÊç¢‰ª£Á†ÅÂØºÂÖ•</title>
+    <title>ŒÔ◊ ÃÊªª¥˙¬Îµº»Î</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -24,22 +24,22 @@
            
         });
 
-        /*Êñá‰ª∂ÈÄâÊã©È™åËØÅ*/
+        /*Œƒº˛—°‘Ò—È÷§*/
         function checkFile(obj, postfix) {
             var postfix = postfix || "";
             var fileName = $(obj).val();
             if (fileName == "") {
-                alert('ËØ∑ÈÄâÊã©Ë¶ÅÂØºÂÖ•ÁöÑÊñá‰ª∂ÔºÅ');
+                alert('«Î—°‘Ò“™µº»ÎµƒŒƒº˛£°');
                 return false;
             }
-            // Êñá‰ª∂Á±ªÂûãÈ™åËØÅ.
+            // Œƒº˛¿‡–Õ—È÷§.
             if (postfix != "") {
                 var re = new RegExp("(." + postfix + ")$");
                 if (re.test(fileName.toLowerCase())) {
                     return true;
                 }
                 else {
-                    alert("ÂØºÂÖ•ÁöÑÊñá‰ª∂ÂøÖÈ°ª‰∏∫." + postfix + "Á±ªÂûãÁöÑÊñá‰ª∂ÔºÅ");
+                    alert("µº»ÎµƒŒƒº˛±ÿ–ÎŒ™." + postfix + "¿‡–ÕµƒŒƒº˛£°");
                     return false;
                 }
             }
@@ -90,14 +90,14 @@
                                                             <table class="formBgStyle" width="100%">
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XuanZeDaoRuWenJian%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XuanZeDaoRuWenJian%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:FileUpload ID="fileExcel" runat="server" />
                                                                         <asp:Button ID="btnImport" runat="server" Text="<%$ Resources:lang,DaoRu%>" OnClick="btnImport_Click" CssClass="inpu" />&nbsp;
                                                                         <asp:Button ID="BT_Pass" runat="server" Text="<%$ Resources:lang,TiHuan%>" OnClick="BT_Pass_Click" CssClass="inpuLong" />&nbsp;
                                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                                                    type="button" value="ÂÖ≥Èó≠" />
-                                                                        <%--<input type="button" value="ËøîÂõû" onclick="window.location.href = 'TTWZObjectCodeList.aspx'" class="inpu" />--%>
+                                                                                    type="button" value="Closed" />
+                                                                        <%--<input type="button" value="∑µªÿ" onclick="window.location.href = 'TTWZObjectCodeList.aspx'" class="inpu" />--%>
                                                                         <div id="divLoading" style="display: none; color: Red; position: absolute;">
                                                                             <img src="resources/Images/Loading.gif" /><asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZhengZaiDaoRuZhongQingShaoHou%>"></asp:Label>
                                                                         </div>
@@ -121,9 +121,9 @@
                                                                     <td>
                                                                         <fieldset>
                                                                             <legend>
-                                                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZhuYiShiXiang%>"></asp:Label>Ôºö</legend>
-                                                                            <font color="red">1„ÄÅ<asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,TXSJSYXSJLWBTXYWZDMXWZDM%>"></asp:Label>Ôºõ<br />
-                                                                                2„ÄÅ<asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DRSHBYQDSJQK%>"></asp:Label>Ôºõ<br />
+                                                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZhuYiShiXiang%>"></asp:Label>£∫</legend>
+                                                                            <font color="red">1°¢<asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,TXSJSYXSJLWBTXYWZDMXWZDM%>"></asp:Label>£ª<br />
+                                                                                2°¢<asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DRSHBYQDSJQK%>"></asp:Label>£ª<br />
                                                                             </font>
                                                                         </fieldset>
                                                                     </td>
@@ -161,10 +161,10 @@
                                                                 CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="5" ShowHeader="false"
                                                                 Width="100%">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="OldObjectCode" HeaderText="ÂéüÁâ©ËµÑ‰ª£Á†Å">
+                                                                    <asp:BoundColumn DataField="OldObjectCode" HeaderText="‘≠ŒÔ◊ ¥˙¬Î">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="50%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="NewObjectCode" HeaderText="Êñ∞Áâ©ËµÑ‰ª£Á†Å">
+                                                                    <asp:BoundColumn DataField="NewObjectCode" HeaderText="–¬ŒÔ◊ ¥˙¬Î">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="50%" />
                                                                     </asp:BoundColumn>
                                                                 </Columns>

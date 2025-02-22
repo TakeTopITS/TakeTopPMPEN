@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -21,8 +21,8 @@ public partial class TTConstractManagement : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //é’Ÿç¤¼æœˆä½œå“ï¼ˆjack.erp@gmail.com)
-        //Taketop Software 2006ï¼2012
+        //ÖÓÀñÔÂ×÷Æ·£¨jack.erp@gmail.com)
+        //Taketop Software 2006£­2012
 
         string strUserCode = Session["UserCode"].ToString();
         string strHQL;
@@ -31,7 +31,7 @@ public partial class TTConstractManagement : System.Web.UI.Page
         string strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "åˆåŒç®¡ç†", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ºÏÍ¬¹ÜÀí", strUserCode);
 
         if (blVisible == false)
         {
@@ -66,9 +66,9 @@ public partial class TTConstractManagement : System.Web.UI.Page
             DataGrid3.DataSource = lst;
             DataGrid3.DataBind();
 
-            LB_ConstractOwner.Text = "æˆ‘çš„æ‰€æœ‰åˆåŒåˆ—è¡¨ï¼š";
+            LB_ConstractOwner.Text = "ÎÒµÄËùÓĞºÏÍ¬ÁĞ±í£º";
 
-            strHQL = "from Constract as constract where  constract.Status not in ('å½’æ¡£','åˆ é™¤') ";
+            strHQL = "from Constract as constract where  constract.Status not in ('Archived','Deleted') ";
             strHQL += " and (constract.RecorderCode = " + "'" + strUserCode + "'" + " Or constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + "))";
             strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
             ConstractBLL constractBLL = new ConstractBLL();
@@ -78,12 +78,12 @@ public partial class TTConstractManagement : System.Web.UI.Page
 
             LB_Sql.Text = strHQL;
 
-            //åˆ›å»ºåˆ†æå›¾å½¢
+            //´´½¨·ÖÎöÍ¼ĞÎ
             CreateConstractAnalystChart(strUserCode);
         }
     }
 
-    //åˆ›å»ºåˆ†æå›¾å½¢
+    //´´½¨·ÖÎöÍ¼ĞÎ
     protected void CreateConstractAnalystChart(string strUserCode)
     {
         string strChartTitle, strCmdText;
@@ -122,9 +122,9 @@ public partial class TTConstractManagement : System.Web.UI.Page
         string strUserCode = ((Button)e.Item.FindControl("BT_UserCode")).Text.Trim();
         string strUserName = ((Button)e.Item.FindControl("BT_UserName")).Text.Trim();
 
-        LB_ConstractOwner.Text = strUserName + " ç­¾è®¢çš„åˆåŒåˆ—è¡¨ï¼š";
+        LB_ConstractOwner.Text = strUserName + " Ç©¶©µÄºÏÍ¬ÁĞ±í£º";
 
-        string strHQL = "from Constract as constract where constract.RecorderCode = " + "'" + strUserCode + "'" + "  and constract.Status not in ('å½’æ¡£','åˆ é™¤')  ";
+        string strHQL = "from Constract as constract where constract.RecorderCode = " + "'" + strUserCode + "'" + "  and constract.Status not in ('Archived','Deleted')  ";
         strHQL += " and constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")";
         strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
 
@@ -174,7 +174,7 @@ public partial class TTConstractManagement : System.Web.UI.Page
         strUserCode = LB_UserCode.Text.Trim();
         strConstractClass = RBL_ConstractClass.SelectedItem.Text.Trim();
 
-        strHQL = "from Constract as constract where constract.ConstractClass = " + "'" + strConstractClass + "'" + " and constract.Status not in ('å½’æ¡£','åˆ é™¤') ";
+        strHQL = "from Constract as constract where constract.ConstractClass = " + "'" + strConstractClass + "'" + " and constract.Status not in ('Archived','Deleted') ";
         strHQL += " and (constract.RecorderCode = " + "'" + strUserCode + "'" + " Or constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + "))";
         strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
 
@@ -185,19 +185,19 @@ public partial class TTConstractManagement : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_ConstractOwner.Text = "å¤§ç±»: " + strConstractClass + " çš„åˆåŒï¼š";
+        LB_ConstractOwner.Text = "´óÀà: " + strConstractClass + " µÄºÏÍ¬£º";
 
         string strChartTitle, strCmdText;
 
         strChartTitle = Resources.lang.HTZTBLT;
-        strCmdText = @"Select Status as XName, Count(*) as YNumber From T_Constract  Where ConstractClass = " + "'" + strConstractClass + "'" + " and Status not in ('å–æ¶ˆ','åˆ é™¤') ";
+        strCmdText = @"Select Status as XName, Count(*) as YNumber From T_Constract  Where ConstractClass = " + "'" + strConstractClass + "'" + " and Status not in ('Cancel','Deleted') ";
         strCmdText += " and (RecorderCode = " + "'" + strUserCode + "'" + " Or ConstractCode in (select ConstractCode from T_ConstractRelatedUser where UserCode = " + "'" + strUserCode + "'" + "))";
         strCmdText += " Group By Status";
         IFrame_Chart_ConstractStatus.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
         strChartTitle = Resources.lang.HTZCQST;
         strCmdText = @"Select SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,7) as XName,COALESCE(Sum(A.Amount * B.ExchangeRate),0) as YNumber
-            From T_Constract A,T_CurrencyType B Where A.Currency = B.Type and CAST(SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,5) as int) > extract(year from now()) - 4  and A.ConstractClass = " + "'" + strConstractClass + "'" + " and A.Status not in ('å–æ¶ˆ','åˆ é™¤') ";
+            From T_Constract A,T_CurrencyType B Where A.Currency = B.Type and CAST(SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,5) as int) > extract(year from now()) - 4  and A.ConstractClass = " + "'" + strConstractClass + "'" + " and A.Status not in ('Cancel','Deleted') ";
         strCmdText += " And (A.RecorderCode = " + "'" + strUserCode + "'" + " Or A.ConstractCode in (select ConstractCode from T_ConstractRelatedUser where UserCode = " + "'" + strUserCode + "'" + "))";
         strCmdText += " Group By SUBSTRING (to_char(A.SignDate,'yyyymmdd'),0,7)";
         IFrame_Chart_ConstractAmountTendency.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Line&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
@@ -215,9 +215,9 @@ public partial class TTConstractManagement : System.Web.UI.Page
         string strPartAOperator = "%" + TB_PartAOperator.Text.Trim() + "%";
 
 
-        LB_ConstractOwner.Text = "æ‰€æœ‰åˆåŒåˆ—è¡¨ï¼š";
+        LB_ConstractOwner.Text = "ËùÓĞºÏÍ¬ÁĞ±í£º";
 
-        string strHQL = "from Constract as constract where  constract.Status not in ('å½’æ¡£','åˆ é™¤') ";
+        string strHQL = "from Constract as constract where  constract.Status not in ('Archived','Deleted') ";
         strHQL += " and constract.Type Like " + "'" + strType + "'";
         strHQL += " and constract.ConstractCode Like " + "'" + strConstractCode + "'";
         strHQL += " and constract.ConstractName Like " + "'" + strConstractName + "'";
@@ -237,7 +237,7 @@ public partial class TTConstractManagement : System.Web.UI.Page
         string strChartTitle, strCmdText;
 
         strChartTitle = Resources.lang.HTZTBLT;
-        strCmdText = @"Select Status as XName, Count(*) as YNumber From T_Constract  Where Type Like " + "'" + strType + "'" + " and Status not in ('å–æ¶ˆ','åˆ é™¤') ";
+        strCmdText = @"Select Status as XName, Count(*) as YNumber From T_Constract  Where Type Like " + "'" + strType + "'" + " and Status not in ('Cancel','Deleted') ";
         strCmdText += " and ConstractCode Like " + "'" + strConstractCode + "'";
         strCmdText += " and ConstractName Like " + "'" + strConstractName + "'";
         strCmdText += " and PartA Like " + "'" + strPartA + "'";
@@ -249,7 +249,7 @@ public partial class TTConstractManagement : System.Web.UI.Page
 
         strChartTitle = Resources.lang.HTZCQST;
         strCmdText = @"Select SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,7) as XName,COALESCE(Sum(A.Amount * B.ExchangeRate),0) as YNumber
-            From T_Constract A,T_CurrencyType B Where A.Currency = B.Type and CAST(SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,5) as int) > extract(year from now()) - 4   and A.Status not in ('å–æ¶ˆ','åˆ é™¤') ";
+            From T_Constract A,T_CurrencyType B Where A.Currency = B.Type and CAST(SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,5) as int) > extract(year from now()) - 4   and A.Status not in ('Cancel','Deleted') ";
         strCmdText += " And  (A.RecorderCode = " + "'" + strUserCode + "'" + " Or A.ConstractCode in (select ConstractCode from T_ConstractRelatedUser where UserCode = " + "'" + strUserCode + "'" + "))";
         strCmdText += " Group By SUBSTRING (to_char(A.SignDate,'yyyymmdd'),0,7)";
         IFrame_Chart_ConstractAmountTendency.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Line&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
@@ -267,7 +267,7 @@ public partial class TTConstractManagement : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        //åˆ›å»ºåˆ†æå›¾å½¢
+        //´´½¨·ÖÎöÍ¼ĞÎ
         CreateConstractAnalystChart(LB_UserCode.Text.Trim());
     }
 }

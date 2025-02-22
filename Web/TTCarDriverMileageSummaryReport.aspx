@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCarDriverMileageSummaryReport.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCarDriverMileageSummaryReport.aspx.cs"
     Inherits="TTCarDriverMileageSummaryReport" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -49,7 +49,7 @@
                                             <table style="width: 90%;">
                                                 <tr>
                                                     <td style="text-align: right;">
-                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,CXTJKSSJ%>"></asp:Label>ï¼š
+                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,CXTJKSSJ%>"></asp:Label>£º
                                                     </td>
                                                     <td>
 
@@ -58,7 +58,7 @@
                                                         </ajaxToolkit:CalendarExtender>
                                                     </td>
                                                     <td style="text-align: right;">
-                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label>ï¼š
+                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label>£º
                                                     </td>
                                                     <td>
 
@@ -71,7 +71,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: right;">
-                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,SiJi%>"></asp:Label>ï¼š</td>
+                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,SiJi%>"></asp:Label>£º</td>
                                                     <td>
                                                         <asp:TextBox ID="TB_DriverName" runat="server"></asp:TextBox>
                                                     </td>
@@ -80,7 +80,7 @@
                                                         <asp:Button ID="BT_Find" runat="server" CssClass="inpu" OnClick="BT_Find_Click" Text="<%$ Resources:lang,ChaXun%>" />
                                                     </td>
                                                     <td><a href="javascript:window.print()">
-                                                        <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" />
+                                                        <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" />
                                                     </a></td>
                                                 </tr>
                                                 <tr>
@@ -130,13 +130,13 @@
                                                 ShowHeader="false" Height="1px" 
                                                 Width="100%"  CellPadding="4" ForeColor="#333333" GridLines="None">
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="DriverName" HeaderText="é©¾é©¶å‘˜">
+                                                    <asp:BoundColumn DataField="DriverName" HeaderText="¼ÝÊ»Ô±">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="DepartDay" HeaderText="å‡ºè½¦æ—¥æœŸ">
+                                                    <asp:BoundColumn DataField="DepartDay" HeaderText="³ö³µÈÕÆÚ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="50%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="TotalMileage" HeaderText="é‡Œç¨‹ï¼ˆå…¬é‡Œï¼‰">
+                                                    <asp:BoundColumn DataField="TotalMileage" HeaderText="Àï³Ì£¨¹«Àï£©">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="25%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -151,7 +151,7 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: left;">&nbsp;&nbsp;&nbsp;
-                                <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZongLiCheng%>"></asp:Label>ï¼š<asp:Label ID="LB_TotalMileage" runat="server"></asp:Label>
+                                <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZongLiCheng%>"></asp:Label>£º<asp:Label ID="LB_TotalMileage" runat="server"></asp:Label>
                                         </td>
                                     </tr>
                                    

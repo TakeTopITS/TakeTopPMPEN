@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -28,7 +28,7 @@ public partial class TTMeetingRoomStatus : System.Web.UI.Page
         string strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "Â∫ìÂ≠òÁÆ°ÁêÜ", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ø‚¥Êπ‹¿Ì", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -44,8 +44,8 @@ public partial class TTMeetingRoomStatus : System.Web.UI.Page
 
     public void BindSchedule()
     {
-        ///ÂÆö‰πâSQLËØ≠Âè•
-        string cm = "SELECT ID,BeginTime,Endtime,Address,Name From T_Meeting where Address in (Select RoomName From T_MeetingRoom) and Rtrim(Ltrim(Status)) <> 'ÂèñÊ∂à' and to_char(BeginTime,'yyyymmdd') >=" + "'" + DateTime.Now.AddDays(-1).ToString("yyyyMMdd") + "'";
+        ///∂®“ÂSQL”Ôæ‰
+        string cm = "SELECT ID,BeginTime,Endtime,Address,Name From T_Meeting where Address in (Select RoomName From T_MeetingRoom) and Rtrim(Ltrim(Status)) <> 'Cancel' and to_char(BeginTime,'yyyymmdd') >=" + "'" + DateTime.Now.AddDays(-1).ToString("yyyyMMdd") + "'";
 
         try
         {

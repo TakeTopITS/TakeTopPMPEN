@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTTaskHandlePage.aspx.cs" Inherits="TTTaskHandlePage" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTTaskHandlePage.aspx.cs" Inherits="TTTaskHandlePage" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -7,7 +7,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>Âà∂ÂÆöËÆ°Âàí</title>
+    <title>÷∆∂®º∆ªÆ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -20,10 +20,10 @@
     <script type="text/javascript" src="js/allAHandler.js"></script>
     <script type="text/javascript" language="javascript">
 
-        //È°µÈù¢Âä†ËΩΩÂÆåÊàê,ajaxÂõûÂèëÂä†ËΩΩÂÆåÊàêÂêéÊâßË°åÁöÑÊìç‰ΩúÔºå‰º†ÂÖ•‰∏Ä‰∏™funtion
-        //$loadË∞ÉÁî®Á§∫‰æã
+        //“≥√Êº”‘ÿÕÍ≥…,ajaxªÿ∑¢º”‘ÿÕÍ≥…∫Û÷¥––µƒ≤Ÿ◊˜£¨¥´»Î“ª∏ˆfuntion
+        //$loadµ˜”√ æ¿˝
         //$load(function () {
-        //    //ÈúÄË¶ÅÈ°µÈù¢Âä†ËΩΩÂÆåÊàêÊâßË°åÁöÑ‰ª£Á†Å
+        //    //–Ë“™“≥√Êº”‘ÿÕÍ≥…÷¥––µƒ¥˙¬Î
         //});
         var $load = function (loadFunc) {
             $(function () {
@@ -92,7 +92,7 @@
 
         }
 
-        //Ëé∑ÂèñurlÂêéÂèÇÊï∞ÂÄº
+        //ªÒ»°url∫Û≤Œ ˝÷µ
         function getQueryString(name, url) {
             if (!url) {
                 url = window.location.search.substr(1);
@@ -145,7 +145,7 @@
                             <tr>
                                 <td valign="top" style="padding: 0px 5px 5px 5px;">
                                     <cc2:TabContainer CssClass="ajax_tab_menu" ID="TabContainer2" runat="server" ActiveTabIndex="0" Width="100%">
-                                        <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="Ê≠£Â§ÑÁêÜÁöÑ‰ªªÂä°Ôºö">
+                                        <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="’˝¥¶¿Ìµƒ»ŒŒÒ£∫">
                                             <HeaderTemplate>
                                                 <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZhenChuLiDeRenWu%>"></asp:Label>
                                             </HeaderTemplate>
@@ -179,7 +179,7 @@
                                                                             </tr>
                                                                             <tr style="display: none;">
                                                                                 <td align="center" width="100%">
-                                                                                    <asp:Label ID="LB_TaskRecordStatus_ToBeHandled" runat="server" CssClass="StatusCss" Text="ÂæÖÂ§ÑÁêÜ"></asp:Label>
+                                                                                    <asp:Label ID="LB_TaskRecordStatus_ToBeHandled" runat="server" CssClass="StatusCss" Text="ToHandle"></asp:Label>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
@@ -197,7 +197,7 @@
                                                                             <a href='TTTaskDetail.aspx?ID=<%#DataBinder.Eval(Container.DataItem, "ID")%>' target="_blank">
                                                                                 <span style="color: red;">#<%#DataBinder.Eval(Container.DataItem, "ID")%></span>&nbsp;&nbsp; <%#DataBinder.Eval(Container.DataItem, "Operation")%><br />
                                                                                 <span style="font-size: smaller">
-                                                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FenPaiRen%>"></asp:Label>Ôºö<%#DataBinder.Eval(Container.DataItem, "AssignManName")%> </span>
+                                                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FenPaiRen%>"></asp:Label>£∫<%#DataBinder.Eval(Container.DataItem, "AssignManName")%> </span>
 
                                                                             </a>
                                                                         </div>
@@ -226,7 +226,7 @@
                                                                             </tr>
                                                                             <tr style="display: none;">
                                                                                 <td align="center" width="100%">
-                                                                                    <asp:Label ID="LB_TaskRecordStatus_Handling" CssClass="StatusCss" runat="server" Text="Â§ÑÁêÜ‰∏≠"></asp:Label>
+                                                                                    <asp:Label ID="LB_TaskRecordStatus_Handling" CssClass="StatusCss" runat="server" Text="InProgress"></asp:Label>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
@@ -243,7 +243,7 @@
                                                                             <a href='TTTaskDetail.aspx?ID=<%#DataBinder.Eval(Container.DataItem, "ID")%>' target="_blank">
                                                                                 <span style="color: red;">#<%#DataBinder.Eval(Container.DataItem, "ID")%></span>&nbsp;&nbsp; <%#DataBinder.Eval(Container.DataItem, "Operation")%><br />
                                                                                 <span style="font-size: smaller">
-                                                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FenPaiRen%>"></asp:Label>Ôºö<%#DataBinder.Eval(Container.DataItem, "AssignManName")%> </span>
+                                                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FenPaiRen%>"></asp:Label>£∫<%#DataBinder.Eval(Container.DataItem, "AssignManName")%> </span>
 
                                                                             </a>
                                                                         </div>
@@ -272,7 +272,7 @@
                                                                             </tr>
                                                                             <tr style="display: none;">
                                                                                 <td align="center" width="100%">
-                                                                                    <asp:Label ID="LB_TaskRecordStatus_Finished" CssClass="StatusCss" runat="server" Text="Â∑≤ÂÆåÊàê"></asp:Label>
+                                                                                    <asp:Label ID="LB_TaskRecordStatus_Finished" CssClass="StatusCss" runat="server" Text="“—ÕÍ≥…"></asp:Label>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
@@ -289,7 +289,7 @@
                                                                             <a href='TTTaskDetail.aspx?ID=<%#DataBinder.Eval(Container.DataItem, "ID")%>' target="_blank">
                                                                                 <span style="color: red;">#<%#DataBinder.Eval(Container.DataItem, "ID")%></span>&nbsp;&nbsp; <%#DataBinder.Eval(Container.DataItem, "Operation")%><br />
                                                                                 <span style="font-size: smaller">
-                                                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FenPaiRen%>"></asp:Label>Ôºö<%#DataBinder.Eval(Container.DataItem, "AssignManName")%> 
+                                                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FenPaiRen%>"></asp:Label>£∫<%#DataBinder.Eval(Container.DataItem, "AssignManName")%> 
                                                                                 </span>
 
                                                                             </a>
@@ -319,7 +319,7 @@
                                                                             </tr>
                                                                             <tr style="display: none;">
                                                                                 <td align="center" width="100%">
-                                                                                    <asp:Label ID="LB_TaskRecordStatus_Assigned" CssClass="StatusCss" runat="server" Text="Â∑≤ÂàÜÊ¥æ"></asp:Label>
+                                                                                    <asp:Label ID="LB_TaskRecordStatus_Assigned" CssClass="StatusCss" runat="server" Text="“—∑÷≈…"></asp:Label>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
@@ -335,7 +335,7 @@
                                                                             <a href='TTTaskDetail.aspx?ID=<%#DataBinder.Eval(Container.DataItem, "ID")%>' target="_blank">
                                                                                 <span style="color: red;">#<%#DataBinder.Eval(Container.DataItem, "ID")%></span>&nbsp;&nbsp; <%#DataBinder.Eval(Container.DataItem, "Operation")%><br />
                                                                                 <span style="font-size: smaller">
-                                                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FenPaiRen%>"></asp:Label>Ôºö<%#DataBinder.Eval(Container.DataItem, "AssignManName")%> </span>
+                                                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FenPaiRen%>"></asp:Label>£∫<%#DataBinder.Eval(Container.DataItem, "AssignManName")%> </span>
 
                                                                             </a>
                                                                         </div>
@@ -352,7 +352,7 @@
 
                                             </ContentTemplate>
                                         </cc2:TabPanel>
-                                        <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="ÊàëÂª∫Á´ãÁöÑ‰ªªÂä°Ôºö">
+                                        <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="Œ“Ω®¡¢µƒ»ŒŒÒ£∫">
                                             <HeaderTemplate>
                                                 <asp:Label ID="Label42" runat="server" Text="<%$ Resources:lang,WoJianLiDeRenWu%>"></asp:Label>
                                             </HeaderTemplate>
@@ -407,23 +407,23 @@
                                                                 OnPageIndexChanged="DataGrid4_PageIndexChanged" ShowHeader="False" Width="100%" PageSize="25"
                                                                 Height="1px" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="TaskID" HeaderText="ÁºñÂè∑">
+                                                                    <asp:BoundColumn DataField="TaskID" HeaderText="±‡∫≈">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Type" HeaderText="Á±ªÂûã">
+                                                                    <asp:BoundColumn DataField="Type" HeaderText="¿‡–Õ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="TaskID" DataNavigateUrlFormatString="TTCreateProjectTaskDetail.aspx?TaskID={0}"
-                                                                        DataTextField="Task" HeaderText="‰ªªÂä°ÂÜÖÂÆπ" Target="_blank">
+                                                                        DataTextField="Task" HeaderText="»ŒŒÒƒ⁄»›" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="18%" />
                                                                     </asp:HyperLinkColumn>
-                                                                    <asp:BoundColumn DataField="Priority" HeaderText="‰ºòÂÖàÁ∫ß">
+                                                                    <asp:BoundColumn DataField="Priority" HeaderText="”≈œ»º∂">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ÂºÄÂßãÊó∂Èó¥">
+                                                                    <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ø™ º ±º‰">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ÁªìÊùüÊó∂Èó¥">
+                                                                    <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="Ω· ¯ ±º‰">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:TemplateColumn>
@@ -433,31 +433,31 @@
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="100px" />
                                                                     </asp:TemplateColumn>
-                                                                    <asp:BoundColumn DataField="Budget" HeaderText="Ë¥πÁî®È¢ÑÁÆó">
+                                                                    <asp:BoundColumn DataField="Budget" HeaderText="∑—”√‘§À„">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="ManHour" HeaderText="Â∑•Êó∂È¢ÑÁÆó">
+                                                                    <asp:BoundColumn DataField="ManHour" HeaderText="π§ ±‘§À„">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:TemplateColumn>
                                                                         <ItemTemplate><a href='TTProExpenseView.aspx?TaskID=<%#DataBinder .Eval (Container .DataItem ,"TaskID") %>'><%#DataBinder .Eval (Container .DataItem ,"Expense") %></a></ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:TemplateColumn>
-                                                                    <asp:BoundColumn DataField="RealManHour" HeaderText="Â∑•Êó∂">
+                                                                    <asp:BoundColumn DataField="RealManHour" HeaderText="π§ ±">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:TemplateColumn HeaderText="Áä∂ÊÄÅ">
+                                                                    <asp:TemplateColumn HeaderText="◊¥Ã¨">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass.GetStatusHomeNameByTaskStatus(Eval("Status").ToString()) %>
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                                     </asp:TemplateColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="TaskID" DataNavigateUrlFormatString="TTMakeTaskTestCase.aspx?TaskID={0}"
-                                                                        Text="&lt;div&gt;&lt;img src=ImagesSkin/TestCase.jpg border=0 alt='Áî®‰æã' /&gt;&lt;/div&gt;" HeaderText="ÊµãËØïÁî®‰æã" Target="_blank">
+                                                                        Text="&lt;div&gt;&lt;img src=ImagesSkin/TestCase.jpg border=0 alt='”√¿˝' /&gt;&lt;/div&gt;" HeaderText="≤‚ ‘”√¿˝" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                     </asp:HyperLinkColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="TaskID" DataNavigateUrlFormatString="TTTaskAssignRecord.aspx?TaskID={0}"
-                                                                        Text="&lt;div&gt;&lt;img src=ImagesSkin/JiLu.png border=0 alt='ÂàÜÊ¥æËÆ∞ÂΩï' width=24 height=24 /&gt;&lt;/div&gt;" HeaderText="ÂàÜÊ¥æËÆ∞ÂΩï" Target="_blank">
+                                                                        Text="&lt;div&gt;&lt;img src=ImagesSkin/JiLu.png border=0 alt='∑÷≈…º«¬º' width=24 height=24 /&gt;&lt;/div&gt;" HeaderText="∑÷≈…º«¬º" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                     </asp:HyperLinkColumn>
                                                                     <asp:TemplateColumn>
@@ -480,7 +480,7 @@
                                                 <br />
                                             </ContentTemplate>
                                         </cc2:TabPanel>
-                                        <cc2:TabPanel ID="TabPanel4" runat="server" HeaderText="Âª∫Á´ã‰ΩÜÊ≤°ÂàÜÊ¥æÁöÑ‰ªªÂä°Ôºö">
+                                        <cc2:TabPanel ID="TabPanel4" runat="server" HeaderText="Ω®¡¢µ´√ª∑÷≈…µƒ»ŒŒÒ£∫">
                                             <HeaderTemplate>
                                                 <asp:Label ID="Label55" runat="server" Text="<%$ Resources:lang,JLDWFPDRW%>"></asp:Label>
                                             </HeaderTemplate>
@@ -535,23 +535,23 @@
                                                                 OnPageIndexChanged="DataGrid6_PageIndexChanged" ShowHeader="False" Width="100%" PageSize="25"
                                                                 Height="1px" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="TaskID" HeaderText="ÁºñÂè∑">
+                                                                    <asp:BoundColumn DataField="TaskID" HeaderText="±‡∫≈">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Type" HeaderText="Á±ªÂûã">
+                                                                    <asp:BoundColumn DataField="Type" HeaderText="¿‡–Õ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="TaskID" DataNavigateUrlFormatString="TTCreateProjectTaskDetail.aspx?TaskID={0}"
-                                                                        DataTextField="Task" HeaderText="‰ªªÂä°ÂÜÖÂÆπ" Target="_blank">
+                                                                        DataTextField="Task" HeaderText="»ŒŒÒƒ⁄»›" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="18%" />
                                                                     </asp:HyperLinkColumn>
-                                                                    <asp:BoundColumn DataField="Priority" HeaderText="‰ºòÂÖàÁ∫ß">
+                                                                    <asp:BoundColumn DataField="Priority" HeaderText="”≈œ»º∂">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ÂºÄÂßãÊó∂Èó¥">
+                                                                    <asp:BoundColumn DataField="BeginDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ø™ º ±º‰">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ÁªìÊùüÊó∂Èó¥">
+                                                                    <asp:BoundColumn DataField="EndDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="Ω· ¯ ±º‰">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:TemplateColumn>
@@ -561,31 +561,31 @@
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="100px" />
                                                                     </asp:TemplateColumn>
-                                                                    <asp:BoundColumn DataField="Budget" HeaderText="Ë¥πÁî®È¢ÑÁÆó">
+                                                                    <asp:BoundColumn DataField="Budget" HeaderText="∑—”√‘§À„">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="ManHour" HeaderText="Â∑•Êó∂È¢ÑÁÆó">
+                                                                    <asp:BoundColumn DataField="ManHour" HeaderText="π§ ±‘§À„">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:TemplateColumn>
                                                                         <ItemTemplate><a href='TTProExpenseView.aspx?TaskID=<%#DataBinder .Eval (Container .DataItem ,"TaskID") %>'><%#DataBinder .Eval (Container .DataItem ,"Expense") %></a></ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:TemplateColumn>
-                                                                    <asp:BoundColumn DataField="RealManHour" HeaderText="Â∑•Êó∂">
+                                                                    <asp:BoundColumn DataField="RealManHour" HeaderText="π§ ±">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:TemplateColumn HeaderText="Áä∂ÊÄÅ">
+                                                                    <asp:TemplateColumn HeaderText="◊¥Ã¨">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass.GetStatusHomeNameByTaskStatus(Eval("Status").ToString()) %>
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                                     </asp:TemplateColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="TaskID" DataNavigateUrlFormatString="TTMakeTaskTestCase.aspx?TaskID={0}"
-                                                                        Text="&lt;div&gt;&lt;img src=ImagesSkin/TestCase.jpg border=0 alt='Áî®‰æã' /&gt;&lt;/div&gt;" HeaderText="ÊµãËØïÁî®‰æã" Target="_blank">
+                                                                        Text="&lt;div&gt;&lt;img src=ImagesSkin/TestCase.jpg border=0 alt='”√¿˝' /&gt;&lt;/div&gt;" HeaderText="≤‚ ‘”√¿˝" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                     </asp:HyperLinkColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="TaskID" DataNavigateUrlFormatString="TTTaskAssignRecord.aspx?TaskID={0}"
-                                                                        Text="&lt;div&gt;&lt;img src=ImagesSkin/JiLu.png border=0 alt='ÂàÜÊ¥æËÆ∞ÂΩï' width=24 height=24 /&gt;&lt;/div&gt;" HeaderText="ÂàÜÊ¥æËÆ∞ÂΩï" Target="_blank">
+                                                                        Text="&lt;div&gt;&lt;img src=ImagesSkin/JiLu.png border=0 alt='∑÷≈…º«¬º' width=24 height=24 /&gt;&lt;/div&gt;" HeaderText="∑÷≈…º«¬º" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                     </asp:HyperLinkColumn>
                                                                     <asp:TemplateColumn>

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMemberLevelSet.aspx.cs" Inherits="TTMemberLevelSet" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMemberLevelSet.aspx.cs" Inherits="TTMemberLevelSet" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -118,13 +118,13 @@
                                                     <tr>
                                                         <td colspan="2" style="padding: 5px 0px 0px 5px" class="formItemBgStyle" valign="top"
                                                             align="left">
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ChengYuanCengCiWeiHu%>"></asp:Label>ï¼š<asp:Label ID="LB_ID" runat="server" Visible="False"></asp:Label><asp:Label
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ChengYuanCengCiWeiHu%>"></asp:Label>£º<asp:Label ID="LB_ID" runat="server" Visible="False"></asp:Label><asp:Label
                                                                 ID="LB_ChildCount" runat="server" Visible="False"></asp:Label>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: right" class="formItemBgStyle">
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TB_UnderCode" runat="server" Enabled="false"></asp:TextBox>
@@ -132,7 +132,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: right" class="formItemBgStyle">
-                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TB_UnderName" runat="server" Enabled="false"></asp:TextBox>
@@ -140,7 +140,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td style="height: 26px; text-align: right" class="formItemBgStyle">
-                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ShangJiDaiMa%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ShangJiDaiMa%>"></asp:Label>£º
                                                         </td>
                                                         <td style="height: 26px; text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TB_UserCode" runat="server" Enabled="false"></asp:TextBox>
@@ -148,12 +148,12 @@
                                                     </tr>
                                                     <tr>
                                                         <td class="formItemBgStyle" colspan="2" style="height: 25px; text-align: left;">
-                                                            <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,YongYouDuiCiChengYuanQuanXian%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,YongYouDuiCiChengYuanQuanXian%>"></asp:Label>£º
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="formItemBgStyle" style="height: 25px; text-align: right;">
-                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,XiangMuKeShi%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,XiangMuKeShi%>"></asp:Label>£º
                                                         </td>
                                                         <td class="formItemBgStyle" style="height: 25px; text-align: left">
                                                             <asp:DropDownList ID="DL_ProjectVisible" runat="server">
@@ -164,7 +164,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td class="formItemBgStyle" style="height: 25px; text-align: right;">
-                                                            <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,JiHuaKeShi%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,JiHuaKeShi%>"></asp:Label>£º
                                                         </td>
                                                         <td class="formItemBgStyle" style="height: 25px; text-align: left">
                                                             <asp:DropDownList ID="DL_PlanVisible" runat="server">
@@ -175,7 +175,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td class="formItemBgStyle" style="height: 25px; text-align: right;">
-                                                            <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,JiXiaoKeShi%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,JiXiaoKeShi%>"></asp:Label>£º
                                                         </td>
                                                         <td class="formItemBgStyle" style="height: 25px; text-align: left">
                                                             <asp:DropDownList ID="DL_KPIVisible" runat="server">
@@ -186,7 +186,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td class="formItemBgStyle" style="height: 25px; text-align: right;">
-                                                            <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,FuHeKeShi%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,FuHeKeShi%>"></asp:Label>£º
                                                         </td>
                                                         <td class="formItemBgStyle" style="height: 25px; text-align: left">
                                                             <asp:DropDownList ID="DL_WorkloadVisible" runat="server">
@@ -197,7 +197,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td class="formItemBgStyle" style="height: 25px; text-align: right;">
-                                                            <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,RiChengKeShi%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,RiChengKeShi%>"></asp:Label>£º</td>
                                                         <td class="formItemBgStyle" style="height: 25px; text-align: left">
                                                             <asp:DropDownList ID="DL_ScheduleVisible" runat="server">
                                                                 <asp:ListItem>YES</asp:ListItem>
@@ -207,7 +207,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td class="formItemBgStyle" style="height: 25px; text-align: right;">
-                                                            <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,LiuChengKeShi%>"></asp:Label>ï¼š 
+                                                            <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,LiuChengKeShi%>"></asp:Label>£º 
                                                         </td>
                                                         <td class="formItemBgStyle" style="height: 25px; text-align: left">
                                                             <asp:DropDownList ID="DL_WorkflowVisible" runat="server">
@@ -218,7 +218,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td class="formItemBgStyle" style="height: 25px; text-align: right;">
-                                                            <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,KeHuKeFuKeShi%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,KeHuKeFuKeShi%>"></asp:Label>£º</td>
                                                         <td class="formItemBgStyle" style="height: 25px; text-align: left">
                                                             <asp:DropDownList ID="DL_CustomerServiceVisible" runat="server">
                                                                 <asp:ListItem>YES</asp:ListItem>
@@ -228,7 +228,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td class="formItemBgStyle" style="height: 25px; text-align: right;">
-                                                            <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,HeTongKeShi%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,HeTongKeShi%>"></asp:Label>£º</td>
                                                         <td class="formItemBgStyle" style="height: 25px; text-align: left">
                                                             <asp:DropDownList ID="DL_ConstractVisible" runat="server">
                                                                 <asp:ListItem>YES</asp:ListItem>
@@ -238,7 +238,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td class="formItemBgStyle" style="height: 25px; text-align: right;">
-                                                            <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,WeiZhiKeShi%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,WeiZhiKeShi%>"></asp:Label>£º</td>
                                                         <td class="formItemBgStyle" style="height: 25px; text-align: left">
                                                             <asp:DropDownList ID="DL_PositionVisible" runat="server">
                                                                 <asp:ListItem>YES</asp:ListItem>
@@ -281,7 +281,7 @@
                                                     Width="100%" Height="1px" CellPadding="4" ForeColor="#333333" GridLines="None"
                                                     ShowHeader="false">
                                                     <Columns>
-                                                        <asp:TemplateColumn HeaderText="éƒ¨é—¨äººå‘˜">
+                                                        <asp:TemplateColumn HeaderText="²¿ÃÅÈËÔ±">
                                                             <ItemTemplate>
                                                                 <asp:Button ID="BT_UserCode" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>' />
                                                                 <asp:Button ID="BT_UserName" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UserName") %>' />

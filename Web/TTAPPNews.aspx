@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPNews.aspx.cs" Inherits="TTAPPNews" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPNews.aspx.cs" Inherits="TTAPPNews" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
 
@@ -40,7 +40,7 @@
 
         });
 
-        //ç‚¹å‡»DATAGRIDè¡Œå†…ä»»ä½•ä¸€ç‚¹ï¼Œéƒ½èƒ½è§¦å‘è¡Œå†…çš„é“¾æŽ¥
+        //µã»÷DATAGRIDÐÐÄÚÈÎºÎÒ»µã£¬¶¼ÄÜ´¥·¢ÐÐÄÚµÄÁ´½Ó
         function SetDataGridTrClickLink() {
 
             setTrClickLink("DataGrid1");
@@ -76,7 +76,7 @@
                                                     </td>
                                                 </tr>
                                             </table>
-                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="è¯·ç¨å€™ï¼Œå¤„ç†ä¸­..." style="display: none;" />
+                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖÐ..." style="display: none;" />
                                         </a>
                                     </td>
                                 </tr>
@@ -128,7 +128,7 @@
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                     </asp:BoundColumn>--%>
                                     <%--  <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTAPPNewsView.aspx?ID={0}"
-                                        DataTextField="Title" HeaderText="æ–°é—»" Target="_self">
+                                        DataTextField="Title" HeaderText="ÐÂÎÅ" Target="_self">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="left" />
                                     </asp:HyperLinkColumn>--%>
                                 </Columns>

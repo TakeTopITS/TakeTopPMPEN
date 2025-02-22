@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConstractPayableVisaDetailView.aspx.cs" Inherits="TTConstractPayableVisaDetailView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConstractPayableVisaDetailView.aspx.cs" Inherits="TTConstractPayableVisaDetailView" %>
 
 <!DOCTYPE html>
 
@@ -53,19 +53,19 @@
                                 <asp:BoundColumn DataField="ID" HeaderText="ID">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="VisaDetailName" HeaderText="åç§°">
+                                <asp:BoundColumn DataField="VisaDetailName" HeaderText="Ãû³Æ">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="12%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="VisaNumber" HeaderText="æ•°é‡">
+                                <asp:BoundColumn DataField="VisaNumber" HeaderText="ÊýÁ¿">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="UnitName" HeaderText="å•ä½">
+                                <asp:BoundColumn DataField="UnitName" HeaderText="µ¥Î»">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="VisaPrice" HeaderText="å•ä»·">
+                                <asp:BoundColumn DataField="VisaPrice" HeaderText="µ¥¼Û">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="VisaAmount" HeaderText="é‡‘é¢">
+                                <asp:BoundColumn DataField="VisaAmount" HeaderText="½ð¶î">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                 </asp:BoundColumn>
                             </Columns>

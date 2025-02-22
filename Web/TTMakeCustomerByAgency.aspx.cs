@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Configuration;
@@ -54,8 +54,8 @@ public partial class TTMakeCustomerByAgency : System.Web.UI.Page
             string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(Resources.lang.ZZJGT, TreeView2, strUserCode);
             LB_DepartString.Text = strDepartString;
 
-            strHQL = "Select GroupName From T_ActorGroup Where Type <>'éƒ¨åˆ†' and GroupName not in ('ä¸ªäºº','éƒ¨é—¨','å…¬å¸','é›†å›¢','æ‰€æœ‰')";
-            strHQL += " and (BelongDepartCode in " + strDepartString + " Or Type = 'è¶…çº§'";
+            strHQL = "Select GroupName From T_ActorGroup Where Type <>'²¿·Ö' and GroupName not in ('¸öÈË','²¿ÃÅ','¹«Ë¾','¼¯ÍÅ','All')";
+            strHQL += " and (BelongDepartCode in " + strDepartString + " Or Type = '³¬¼¶'";
             strHQL += " Or MakeUserCode = " + "'" + strUserCode + "'" + ")";
             strHQL += " and LangCode = " + "'" + strLangCode + "'";
             strHQL += " Order by SortNumber ASC";
@@ -93,7 +93,7 @@ public partial class TTMakeCustomerByAgency : System.Web.UI.Page
             }
 
 
-            //å¦‚æœè‡ªåŠ¨äº§ç”Ÿå®¢æˆ·ç¼–ç ï¼Œç¦ç”¨å®¢æˆ·ä»£ç è¾“å…¥æ¡† 
+            //Èç¹û×Ô¶¯²úÉú¿Í»§±àÂë£¬½ûÓÃ¿Í»§´úÂëÊäÈë¿ò 
             if (ShareClass.GetCodeRuleStatusByType("CustomerCode") == "YES")
             {
                 TB_CustomerCode.Enabled = false;
@@ -226,7 +226,7 @@ public partial class TTMakeCustomerByAgency : System.Web.UI.Page
 
                         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTJBACG + "')", true);
 
-                        //æ¨é€ä¿¡æ¯ç»™å®¢æœä¸»ç®¡
+                        //ÍÆËÍĞÅÏ¢¸ø¿Í·şÖ÷¹Ü
                         try
                         {
                             string strLeaderCode = GetMemberLeaderUserCode(strUserCode);
@@ -234,7 +234,7 @@ public partial class TTMakeCustomerByAgency : System.Web.UI.Page
                             {
                                 return;
                             }
-                            string strNofiInfo = "ä½ æœ‰ä¸€ä¸ªä»£ç†å•†æäº¤çš„å®¢æˆ·å¤‡æ¡ˆè¦å®¡æ‰¹ï¼Œè¯·å…³æ³¨ï¼";
+                            string strNofiInfo = "ÄãÓĞÒ»¸ö´úÀíÉÌÌá½»µÄ¿Í»§±¸°¸ÒªÉóÅú£¬Çë¹Ø×¢£¡";
                             Action action = new Action(delegate ()
                             {
                                 try
@@ -421,7 +421,7 @@ public partial class TTMakeCustomerByAgency : System.Web.UI.Page
 
         if (strCustomerCode == "")
         {
-            //å¦‚æœè‡ªåŠ¨äº§ç”Ÿå®¢æˆ·ç¼–ç ï¼Œç¦ç”¨å®¢æˆ·ä»£ç è¾“å…¥æ¡† 
+            //Èç¹û×Ô¶¯²úÉú¿Í»§±àÂë£¬½ûÓÃ¿Í»§´úÂëÊäÈë¿ò 
             if (ShareClass.GetCodeRuleStatusByType("CustomerCode") == "YES")
             {
                 TB_CustomerCode.Enabled = false;
@@ -757,7 +757,7 @@ public partial class TTMakeCustomerByAgency : System.Web.UI.Page
 
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTJBACG + "')", true);
 
-                //æ¨é€ä¿¡æ¯ç»™å®¢æœä¸»ç®¡
+                //ÍÆËÍĞÅÏ¢¸ø¿Í·şÖ÷¹Ü
                 try
                 {
                     string strLeaderCode = GetMemberLeaderUserCode(strUserCode);
@@ -765,7 +765,7 @@ public partial class TTMakeCustomerByAgency : System.Web.UI.Page
                     {
                         return;
                     }
-                    string strNofiInfo = "ä½ æœ‰ä¸€ä¸ªä»£ç†å•†æäº¤çš„å®¢æˆ·å¤‡æ¡ˆè¦å®¡æ‰¹ï¼Œè¯·å…³æ³¨ï¼";
+                    string strNofiInfo = "ÄãÓĞÒ»¸ö´úÀíÉÌÌá½»µÄ¿Í»§±¸°¸ÒªÉóÅú£¬Çë¹Ø×¢£¡";
                     Action action = new Action(delegate ()
                     {
                         try
@@ -797,7 +797,7 @@ public partial class TTMakeCustomerByAgency : System.Web.UI.Page
 
     }
 
-    //å–å¾—æ­¤æˆå‘˜ç›´æ¥ä¸Šçº§ä»£ç 
+    //È¡µÃ´Ë³ÉÔ±Ö±½ÓÉÏ¼¶´úÂë
     protected string GetMemberLeaderUserCode(string strUserCode)
     {
         string strHQL;
@@ -822,7 +822,7 @@ public partial class TTMakeCustomerByAgency : System.Web.UI.Page
         strProjectID = TB_ProjectID.Text.Trim();
         strCustomerCode = TB_CustomerCode.Text.Trim();
 
-        //åˆ¤æ–­é¡¹ç›®æ˜¯ä¸æ˜¯å­˜åœ¨å…¶ç®¡ç†èŒƒå›´
+        //ÅĞ¶ÏÏîÄ¿ÊÇ²»ÊÇ´æÔÚÆä¹ÜÀí·¶Î§
         if (checkProjectIsValid(strProjectID, LB_DepartString.Text))
         {
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSJBCZJC + "')", true);
@@ -848,7 +848,7 @@ public partial class TTMakeCustomerByAgency : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
     }
 
-    //åˆ¤æ–­é¡¹ç›®æ˜¯ä¸æ˜¯å­˜åœ¨å…¶ç®¡ç†èŒƒå›´
+    //ÅĞ¶ÏÏîÄ¿ÊÇ²»ÊÇ´æÔÚÆä¹ÜÀí·¶Î§
     protected bool checkProjectIsValid(string strProjectID, string strDepartString)
     {
         string strHQL;
@@ -960,7 +960,7 @@ public partial class TTMakeCustomerByAgency : System.Web.UI.Page
         string strGroupName = TB_ActorGroupName.Text.Trim();
         strGroupName = "%" + strGroupName + "%";
 
-        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('ä¸ªäºº','éƒ¨é—¨','å…¬å¸','é›†å›¢','æ‰€æœ‰')";
+        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('¸öÈË','²¿ÃÅ','¹«Ë¾','¼¯ÍÅ','All')";
         strHQL += " and GroupName Like " + "'" + strGroupName + "'";
         ActorGroupBLL actorGroupBLL = new ActorGroupBLL();
         lst = actorGroupBLL.GetAllActorGroups(strHQL);
@@ -1265,7 +1265,7 @@ public partial class TTMakeCustomerByAgency : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Constract as constract where constract.Status <> 'å½’æ¡£'";
+        strHQL = "from Constract as constract where constract.Status <> 'Archived'";
         strHQL += " and constract.RelatedCustomerCode = " + "'" + strCustomerCode + "'";
         strHQL += " Order by constract.SignDate DESC";
         ConstractBLL constractBLL = new ConstractBLL();
@@ -1289,7 +1289,7 @@ public partial class TTMakeCustomerByAgency : System.Web.UI.Page
     }
 
 
-    //åˆ¤æ–­å®¢æˆ·åç§°å’Œç®€ç§°æ˜¯å¦å­˜åœ¨
+    //ÅĞ¶Ï¿Í»§Ãû³ÆºÍ¼ò³ÆÊÇ·ñ´æÔÚ
     protected bool CheckCustomerNameIsExist(string strCustomerCode, string strCustomerName, string strCustomerSimpleName)
     {
         string strHQL;
@@ -1308,7 +1308,7 @@ public partial class TTMakeCustomerByAgency : System.Web.UI.Page
 
     }
 
-    //å–å¾—å®¢æˆ·ID
+    //È¡µÃ¿Í»§ID
     protected string getCustomerID(string strCustomerCode)
     {
         string strHQL;

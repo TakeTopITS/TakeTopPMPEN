@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectItemBomToPlan.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectItemBomToPlan.aspx.cs"
     Inherits="TTProjectItemBomToPlan" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -9,7 +9,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>‰∫ßÂìÅËµÑÊñôËÆæÁΩÆ</title>
+    <title>≤˙∆∑◊ ¡œ…Ë÷√</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -32,8 +32,8 @@
             this.document.getElementById(img).style.display = 'block';
         }
 
-        function autoheight() {¬†//ÂáΩÊï∞ÔºöËé∑ÂèñÂ∞∫ÂØ∏
-            //Ëé∑ÂèñÊµèËßàÂô®Á™óÂè£È´òÂ∫¶
+        function autoheight() {?//∫Ø ˝£∫ªÒ»°≥ﬂ¥Á
+            //ªÒ»°‰Ø¿¿∆˜¥∞ø⁄∏ﬂ∂»
             var winHeight = 0;
             if (window.innerHeight)
                 winHeight = window.innerHeight;
@@ -46,7 +46,7 @@
             document.getElementById("LB_ItemCode").style.height = (winHeight - 120) + "px";
         }
 
-        window.onresize = autoheight;¬†//ÊµèËßàÂô®Á™óÂè£ÂèëÁîüÂèòÂåñÊó∂ÂêåÊó∂ÂèòÂåñDIVÈ´òÂ∫¶
+        window.onresize = autoheight;?//‰Ø¿¿∆˜¥∞ø⁄∑¢…˙±‰ªØ ±Õ¨ ±±‰ªØDIV∏ﬂ∂»
 
 
 
@@ -86,7 +86,7 @@
                                                         </table>
                                                         <table style="display: none;">
                                                             <tr>
-                                                                <td>ÔºàBOM:
+                                                                <td>£®BOM:
                                                                 </td>
                                                                 <td>
                                                                     <asp:Label ID="LB_tiAddVersion" runat="server" Text="<%$ Resources:lang,AddVersion%>"></asp:Label>:
@@ -103,7 +103,7 @@
                                                                 <asp:Button ID="BT_DeleteVersion" runat="server" CssClass="inpu" OnClick="BT_DeleteVersion_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())"
                                                                     Text="<%$ Resources:lang,Delete%>" />
                                                                 </td>
-                                                                <td>Ôºâ
+                                                                <td>£©
                                                                 </td>
                                                                 <td>(<asp:Label ID="LB_tiBomCopyVersion" runat="server" Text="<%$ Resources:lang,CopyVersion%>"></asp:Label>:
                                                                 <asp:Label ID="LB_tiFromVersion" runat="server" Text="<%$ Resources:lang,From%>"></asp:Label>
@@ -124,7 +124,7 @@
                                                                 <td>&nbsp;<asp:Button ID="BT_CopyVersion" runat="server" CssClass="inpu" OnClick="BT_CopyVersion_Click" 
                                                                     Text="<%$ Resources:lang,Copy%>" />
                                                                 </td>
-                                                                <td>Ôºâ
+                                                                <td>£©
                                                                 <asp:HyperLink ID="HL_CopyFromOtherProjectItemBom" runat="server" Target="_blank"
                                                                     Text="<%$ Resources:lang,CMBXMFZJGWBSGH%>"></asp:HyperLink>
                                                                 </td>
@@ -162,26 +162,26 @@
                                                                     <asp:DropDownList ID="DL_ChangeProjectItemBomVersionType" runat="server" AutoPostBack="True"
                                                                         Height="21px" OnSelectedIndexChanged="DL_ChangeProjectItemBomVersionType_SelectedIndexChanged"
                                                                         Width="50px">
-                                                                        <asp:ListItem Value="Âú®Áî®" Text="<%$ Resources:lang,ZaiYong%>" />
-                                                                        <asp:ListItem Value="Â§áÁî®" Text="<%$ Resources:lang,BeiYong%>" />
-                                                                        <asp:ListItem Value="Âü∫ÂáÜ" Text="<%$ Resources:lang,JiZhun%>" />
+                                                                        <asp:ListItem Value="InUse" Text="<%$ Resources:lang,ZaiYong%>" />
+                                                                        <asp:ListItem Value="Backup" Text="<%$ Resources:lang,BeiYong%>" />
+                                                                        <asp:ListItem Value="Baseline" Text="<%$ Resources:lang,JiZhun%>" />
                                                                     </asp:DropDownList>
                                                                 </td>
                                                                 <td>
                                                                     <asp:DropDownList ID="DL_TransferPlanType" runat="server">
-                                                                        <asp:ListItem Value="È°∫Êéí" Text="<%$ Resources:lang,ShunPai%>" />
-                                                                        <asp:ListItem Value="ÂÄíÊéí" Text="<%$ Resources:lang,DaoPai%>" />
+                                                                        <asp:ListItem Value="ForwardScheduling" Text="<%$ Resources:lang,ShunPai%>" />
+                                                                        <asp:ListItem Value="BackwardScheduling" Text="<%$ Resources:lang,DaoPai%>" />
                                                                     </asp:DropDownList>
                                                                 </td>
                                                                 <td>
                                                                     <asp:Button ID="BT_TransferToPlan" runat="server" Text="<%$ Resources:lang,ToPlan%>"
-                                                                        OnClick="BT_TransferToPlan_Click" OnClientClick="displayWaitingImg('img_processing');return confirm('Êìç‰Ωú‰ºöË¶ÜÁõñÂéüÊù•ÁöÑËÆ°ÂàíÁªìÊûÑÔºåÊÇ®Á°ÆÂÆöË¶ÅË¶ÜÁõñÂêó(transfer operation will cover old plan data,Are you sure you want to cover it)Ôºü');"/>
+                                                                        OnClick="BT_TransferToPlan_Click" OnClientClick="displayWaitingImg('img_processing');return confirm('≤Ÿ◊˜ª·∏≤∏«‘≠¿¥µƒº∆ªÆΩ·ππ£¨ƒ˙»∑∂®“™∏≤∏«¬(transfer operation will cover old plan data,Are you sure you want to cover it)£ø');"/>
                                                                     <img id="img_processing" src="img/Processing.gif" alt="Loading,please wait..." style="display: none;" />
                                                                 </td>
                                                             </tr>
                                                         </table>
                                                         <hr />
-                                                        <asp:TreeView ID="TreeView2" runat="server" Font-Bold="False" Font-Names="ÂÆã‰Ωì" Font-Size="10pt"
+                                                        <asp:TreeView ID="TreeView2" runat="server" Font-Bold="False" Font-Names="ÀŒÃÂ" Font-Size="10pt"
                                                             NodeWrap="True" ShowLines="True" Style="width: 300px; height: 100%;">
                                                             <RootNodeStyle CssClass="rootNode" />
                                                             <NodeStyle CssClass="treeNode" />
@@ -226,9 +226,9 @@
                                                                 </td>
                                                                 <td>
                                                                     <asp:DropDownList ID="DL_ChangePlanVersionType" runat="server" AutoPostBack="True">
-                                                                        <asp:ListItem Value="Âú®Áî®" Text="<%$ Resources:lang,ZaiYong%>" />
-                                                                        <asp:ListItem Value="Â§áÁî®" Text="<%$ Resources:lang,BeiYong%>" />
-                                                                        <asp:ListItem Value="Âü∫ÂáÜ" Text="<%$ Resources:lang,JiZhun%>" />
+                                                                        <asp:ListItem Value="InUse" Text="<%$ Resources:lang,ZaiYong%>" />
+                                                                        <asp:ListItem Value="Backup" Text="<%$ Resources:lang,BeiYong%>" />
+                                                                        <asp:ListItem Value="Baseline" Text="<%$ Resources:lang,JiZhun%>" />
                                                                     </asp:DropDownList>
                                                                     <asp:Label ID="LB_TreeDepth" runat="server" Text="-1" Visible="false"></asp:Label>
                                                                 </td>
@@ -239,7 +239,7 @@
                                                         </table>
                                                         <hr />
                                                         <asp:TreeView ID="TreeView1" runat="server" NodeWrap="True" ShowLines="True" Font-Size="10pt"
-                                                            Font-Bold="False" Font-Names="ÂÆã‰Ωì" Style="width: 300px; height: 100%;">
+                                                            Font-Bold="False" Font-Names="ÀŒÃÂ" Style="width: 300px; height: 100%;">
                                                             <RootNodeStyle CssClass="rootNode" />
                                                             <NodeStyle CssClass="treeNode" />
                                                             <LeafNodeStyle CssClass="leafNode" />

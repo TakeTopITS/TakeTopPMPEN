@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZProjectAttributeEdit.aspx.cs" Inherits="TTWZProjectAttributeEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZProjectAttributeEdit.aspx.cs" Inherits="TTWZProjectAttributeEdit" %>
 
 
 
@@ -50,7 +50,7 @@
                                                             <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMuShuXing%>"></asp:Label>ï¼š
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMuShuXing%>"></asp:Label>£º
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_AttributeCode" runat="server"></asp:TextBox>
@@ -58,7 +58,7 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ShuXingShuoMing%>"></asp:Label>ï¼š
+                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ShuXingShuoMing%>"></asp:Label>£º
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_AttributeDesc" runat="server" Width="300"></asp:TextBox>
@@ -66,7 +66,7 @@
                                                                 </tr>
                                                                 <tr style="display: none;">
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ShiYongBiaoJi%>"></asp:Label>ï¼š
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ShiYongBiaoJi%>"></asp:Label>£º
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_IsMark" runat="server"></asp:TextBox>
@@ -75,7 +75,7 @@
                                                                 <tr>
                                                                     <td style="text-align: center" class="formItemBgStyle" colspan="2">
                                                                         <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnOK_Click" />&nbsp;&nbsp;
-                                                                                    <input type="button" value="è¿”å›ž" id="BT_Return" class="inpu" onclick="window.location.href = 'TTWZProjectAttributeList.aspx'" />
+                                                                                    <input type="button" value="·µ»Ø" id="BT_Return" class="inpu" onclick="window.location.href = 'TTWZProjectAttributeList.aspx'" />
                                                                     </td>
                                                                 </tr>
                                                             </table>

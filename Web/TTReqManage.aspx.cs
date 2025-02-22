@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -34,7 +34,7 @@ public partial class TTReqManage : System.Web.UI.Page
         Response.Redirect("TTReqHandlePage.aspx");
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "需求管理", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "�������", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -45,8 +45,8 @@ public partial class TTReqManage : System.Web.UI.Page
         if (Page.IsPostBack != true)
         {
             strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and reqAssignRecord.Status in ('计划','受理','处理中') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord) ";
-            strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('关闭','隐藏','删除','归档'))";
+            strHQL += " and reqAssignRecord.Status in ('Plan','Accepted','InProgress') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord) ";
+            strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " Order by reqAssignRecord.MoveTime DESC";
             ReqAssignRecordBLL reqAssignRecordBLL = new ReqAssignRecordBLL();
             lst = reqAssignRecordBLL.GetAllReqAssignRecords(strHQL);
@@ -58,8 +58,8 @@ public partial class TTReqManage : System.Web.UI.Page
             SetReqRecordColor(DataGrid4);
 
             strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and (reqAssignRecord.Status in ('拒绝','完成','挂起','取消') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))";
-            strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('关闭','隐藏','删除','归档'))";
+            strHQL += " and (reqAssignRecord.Status in ('�ܾ�','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))";
+            strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " Order by reqAssignRecord.ID DESC";
             reqAssignRecordBLL = new ReqAssignRecordBLL();
             lst = reqAssignRecordBLL.GetAllReqAssignRecords(strHQL);
@@ -72,7 +72,7 @@ public partial class TTReqManage : System.Web.UI.Page
 
             strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
             strHQL += " and reqAssignRecord.ID in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord) ";
-            strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('关闭','隐藏','删除','归档'))";
+            strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " Order by reqAssignRecord.ID DESC";
             reqAssignRecordBLL = new ReqAssignRecordBLL();
             lst = reqAssignRecordBLL.GetAllReqAssignRecords(strHQL);
@@ -84,7 +84,7 @@ public partial class TTReqManage : System.Web.UI.Page
             SetReqRecordColor(DataGrid6);
 
             strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.AssignManCode = " + "'" + strUserCode + "'";
-            strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('关闭','隐藏','删除','归档'))";
+            strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " Order by reqAssignRecord.ID DESC";
             reqAssignRecordBLL = new ReqAssignRecordBLL();
             lst = reqAssignRecordBLL.GetAllReqAssignRecords(strHQL);
@@ -122,8 +122,8 @@ public partial class TTReqManage : System.Web.UI.Page
         string strUserCode = LB_UserCode.Text.Trim();
 
         strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and reqAssignRecord.Status in ('计划','受理','处理中') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord) ";
-        strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('关闭','隐藏','删除','归档'))";
+        strHQL += " and reqAssignRecord.Status in ('Plan','Accepted','InProgress') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord) ";
+        strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by reqAssignRecord.ID DESC";
         ReqAssignRecordBLL reqAssignRecordBLL = new ReqAssignRecordBLL();
         lst = reqAssignRecordBLL.GetAllReqAssignRecords(strHQL);
@@ -135,8 +135,8 @@ public partial class TTReqManage : System.Web.UI.Page
         SetReqRecordColor(DataGrid4);
 
         strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and (reqAssignRecord.Status in ('拒绝','完成','挂起','取消') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))";
-        strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('关闭','隐藏','删除','归档'))";
+        strHQL += " and (reqAssignRecord.Status in ('�ܾ�','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))";
+        strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by reqAssignRecord.ID DESC";
         reqAssignRecordBLL = new ReqAssignRecordBLL();
         lst = reqAssignRecordBLL.GetAllReqAssignRecords(strHQL);
@@ -148,7 +148,7 @@ public partial class TTReqManage : System.Web.UI.Page
 
         strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
         strHQL += " and reqAssignRecord.ID in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord) ";
-        strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('关闭','隐藏','删除','归档'))";
+        strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by reqAssignRecord.ID DESC";
         reqAssignRecordBLL = new ReqAssignRecordBLL();
         lst = reqAssignRecordBLL.GetAllReqAssignRecords(strHQL);
@@ -160,8 +160,8 @@ public partial class TTReqManage : System.Web.UI.Page
         SetReqRecordColor(DataGrid6);
 
         strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.AssignManCode = " + "'" + strUserCode + "'";
-        //strHQL += " and (reqAssignRecord.Status = '转项' or reqAssignRecord.ID in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))";
-        strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('关闭','隐藏','删除','归档'))";
+        //strHQL += " and (reqAssignRecord.Status = 'ToProject' or reqAssignRecord.ID in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))";
+        strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by reqAssignRecord.ID DESC";
         reqAssignRecordBLL = new ReqAssignRecordBLL();
         lst = reqAssignRecordBLL.GetAllReqAssignRecords(strHQL);
@@ -186,8 +186,8 @@ public partial class TTReqManage : System.Web.UI.Page
         IList lst;
 
         strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and reqAssignRecord.Status in ('计划','受理','处理中') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord) ";
-        strHQL += " and reqAssignRecord.ReqID not in (select requirement.ReqID from Requirement as requirement where requirement.ReqID not in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('关闭','隐藏','删除','归档')))";
+        strHQL += " and reqAssignRecord.Status in ('Plan','Accepted','InProgress') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord) ";
+        strHQL += " and reqAssignRecord.ReqID not in (select requirement.ReqID from Requirement as requirement where requirement.ReqID not in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived')))";
         strHQL += " and reqAssignRecord.Status = " + "'" + strStatus + "'" + " Order by reqAssignRecord.ID DESC";
         ReqAssignRecordBLL reqAssignRecordBLL = new ReqAssignRecordBLL();
         lst = reqAssignRecordBLL.GetAllReqAssignRecords(strHQL);
@@ -199,8 +199,8 @@ public partial class TTReqManage : System.Web.UI.Page
         SetReqRecordColor(DataGrid4);
 
         strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and (reqAssignRecord.Status in ('拒绝','完成','挂起','取消') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))";
-        strHQL += " and reqAssignRecord.ReqID not in (select requirement.ReqID from Requirement as requirement where requirement.ReqID not in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('关闭','隐藏','删除','归档')))";
+        strHQL += " and (reqAssignRecord.Status in ('�ܾ�','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))";
+        strHQL += " and reqAssignRecord.ReqID not in (select requirement.ReqID from Requirement as requirement where requirement.ReqID not in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived')))";
         strHQL += " and reqAssignRecord.Status = " + "'" + strStatus + "'" + " Order by reqAssignRecord.ID DESC";
         reqAssignRecordBLL = new ReqAssignRecordBLL();
         lst = reqAssignRecordBLL.GetAllReqAssignRecords(strHQL);
@@ -213,7 +213,7 @@ public partial class TTReqManage : System.Web.UI.Page
 
         strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
         strHQL += " and reqAssignRecord.ID in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord) ";
-        strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('关闭','隐藏','删除','归档'))";
+        strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " and reqAssignRecord.Status = " + "'" + strStatus + "'" + " Order by reqAssignRecord.ID DESC";
         reqAssignRecordBLL = new ReqAssignRecordBLL();
         lst = reqAssignRecordBLL.GetAllReqAssignRecords(strHQL);
@@ -225,8 +225,8 @@ public partial class TTReqManage : System.Web.UI.Page
         SetReqRecordColor(DataGrid6);
 
         strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.AssignManCode = " + "'" + strUserCode + "'";
-        //strHQL += " and (reqAssignRecord.Status = '转项' or reqAssignRecord.ID in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))";
-        strHQL += " and reqAssignRecord.ReqID not in (select requirement.ReqID from Requirement as requirement where requirement.ReqID not in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('关闭','隐藏','删除','归档')))";
+        //strHQL += " and (reqAssignRecord.Status = 'ToProject' or reqAssignRecord.ID in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))";
+        strHQL += " and reqAssignRecord.ReqID not in (select requirement.ReqID from Requirement as requirement where requirement.ReqID not in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived')))";
         strHQL += " and reqAssignRecord.Status = " + "'" + strStatus + "'" + " Order by reqAssignRecord.ID DESC";
         reqAssignRecordBLL = new ReqAssignRecordBLL();
         lst = reqAssignRecordBLL.GetAllReqAssignRecords(strHQL);
@@ -333,7 +333,7 @@ public partial class TTReqManage : System.Web.UI.Page
             dtNowDate = DateTime.Now;
             strStatus = dataGrid.Items[i].Cells[7].Text.Trim();
 
-            if (strStatus != "完成" & strStatus != "已完成")
+            if (strStatus != "Completed" & strStatus != "�����")
             {
                 if (dtFinishedDate < dtNowDate)
                 {

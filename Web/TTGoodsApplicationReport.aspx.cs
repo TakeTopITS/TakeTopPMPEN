@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -43,7 +43,7 @@ public partial class TTGoodsApplicationReport : System.Web.UI.Page
         }
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "Áâ©ÊñôÈ¢ÜÁî®Êä•Ë°®", strUserCode);
+        bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ŒÔ¡œ¡Ï”√±®±Ì", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -195,9 +195,9 @@ public partial class TTGoodsApplicationReport : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_GoodsApplicationReport");
         DataTable dtSaleOrder = ds.Tables[0];
 
-        Export3Excel(dtSaleOrder, "Áâ©ÊñôÈ¢ÜÁî®Êä•Ë°®.xls");
+        Export3Excel(dtSaleOrder, "ŒÔ¡œ¡Ï”√±®±Ì.xls");
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÂØºÂá∫ÊàêÂäüÔºÅ');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µº≥ˆ≥…π¶£°');", true);
     }
 
 

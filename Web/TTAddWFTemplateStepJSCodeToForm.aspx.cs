@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,7 +20,7 @@ public partial class TTAddWFTemplateStepJSCodeToForm : System.Web.UI.Page
         string strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "æµç¨‹æ­¥éª¤JSä»£ç ", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "Á÷³Ì²½ÖèJS´úÂë", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -34,7 +34,7 @@ public partial class TTAddWFTemplateStepJSCodeToForm : System.Web.UI.Page
 
             DL_WLType_SelectedIndexChanged(null, null);
 
-            //LBL_JSCODEDescription.Text = "ç¼–ç è¯´æ˜ï¼šåŸŸè§„åˆ™ï¼š+ï¼šTAKETOP[PLUS]ï¼Œ-ï¼šTAKETOP[MINUS]";
+            //LBL_JSCODEDescription.Text = "±àÂëËµÃ÷£ºÓò¹æÔò£º+£ºTAKETOP[PLUS]£¬-£ºTAKETOP[MINUS]";
 
             BindWebServicesData();
         }
@@ -49,7 +49,7 @@ public partial class TTAddWFTemplateStepJSCodeToForm : System.Web.UI.Page
         {
             return;
         }
-        strHQL = "Select TemName From T_WorkFlowTemplate Where type = " + "'" + strWLType + "'" + " and Visible = 'YES' and Authority = 'æ‰€æœ‰'";
+        strHQL = "Select TemName From T_WorkFlowTemplate Where type = " + "'" + strWLType + "'" + " and Visible = 'YES' and Authority = 'All'";
         strHQL += " Order by SortNumber ASC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTemplate");
         DL_WFTemplate.DataSource = ds;
@@ -137,9 +137,9 @@ public partial class TTAddWFTemplateStepJSCodeToForm : System.Web.UI.Page
 
 function setFormCommentControlValue(commentValue) 
 {
-    ////åŒæ­¥å®¡æ‰¹æ„è§åˆ°è¡¨å•çš„æŸæ„è§æ 
+    ////Í¬²½ÉóÅúÒâ¼ûµ½±íµ¥µÄÄ³Òâ¼ûÀ¸
   
-    ////ç»™å·¥ä½œæµè¡¨å•é¡µé¢æŸæ§ä»¶èµ‹å€¼,controlIDæ˜¯æ¥å—æ„è§çš„å…ƒç´ ID
+    ////¸ø¹¤×÷Á÷±íµ¥Ò³ÃæÄ³¿Ø¼ş¸³Öµ,controlIDÊÇ½ÓÊÜÒâ¼ûµÄÔªËØID
      //parent.frames['right'].setControlValue(controlID,commentValue);
 
 
@@ -157,10 +157,10 @@ function setFormCommentControlValue(commentValue)
 
 function setControlValue(controlID,controlValue)
 {
-  ////ç»™æ­¥éª¤æ–¹æ³•è°ƒç”¨ï¼Œç»™è¡¨å•ä¸ŠæŸæ§ä»¶èµ‹å€¼
+  ////¸ø²½Öè·½·¨µ÷ÓÃ£¬¸ø±íµ¥ÉÏÄ³¿Ø¼ş¸³Öµ
    //this.document.getElementById(controlID).value = controlValue;
 
- ////é€šè¿‡ä»£ç æ”¹å˜çš„æ§ä»¶å†…å®¹ï¼Œå¿…é¡»è°ƒç”¨æ­¤æ–¹æ³•æ‰èƒ½ä¿å­˜
+ ////Í¨¹ı´úÂë¸Ä±äµÄ¿Ø¼şÄÚÈİ£¬±ØĞëµ÷ÓÃ´Ë·½·¨²ÅÄÜ±£´æ
   // TakeTopInfoPath_OnControlChange(null, document.getElementById(controlID));
 
 
@@ -179,7 +179,7 @@ function setControlValue(controlID,controlValue)
             HF_ID.Value = wFTemplateStepRelatedJSCode.ID.ToString();
             LBL_Description.Text = strTemName + "-" + strStepName + "-JSCode";
 
-            //Web Serviceæ–¹æ³•
+            //Web Service·½·¨
             string strWebServiceSql = string.Empty;
             WFTemplateStepRelatedWebServiceBLL wFTemplateStepRelatedWebServiceBLL = new WFTemplateStepRelatedWebServiceBLL();
             //strWebServiceSql = string.Format("from WFTemplateStepRelatedWebService as wFTemplateStepRelatedWebService where TemName = '{0}' and StepSortNumber = {1} and StepName = '{2}'", strTemName, intSortNumber, strStepName);
@@ -201,12 +201,12 @@ function setControlValue(controlID,controlValue)
             TXT_JSCode.Value = @"
 function BeforeAgree()
 {
-    //æ‰¹å‡†ä¹‹å‰æ‰§è¡Œï¼Œè¿”å›å€¼ä¸ºtrue,åˆ™æ‰§è¡Œæ‰¹å‡†åŠ¨ä½œ
-    //æ‰“å¼€ç›¸å…³æ¨¡å—é¡µé¢ç¤ºä¾‹: 
-    //å¼¹å‡ºå±‚æ–¹å¼: top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTMakeConstract.aspx', 'å»ºç«‹åˆåŒ', 800, 600,window.location);
-    //TABé¡µæ–¹å¼: top.frames[0].frames[2].parent.frames['rightTabFrame'].addTab('å»ºç«‹åˆåŒ', 'TTMakeConstract.aspx', 'old');
+    //Åú×¼Ö®Ç°Ö´ĞĞ£¬·µ»ØÖµÎªtrue,ÔòÖ´ĞĞÅú×¼¶¯×÷
+    //´ò¿ªÏà¹ØÄ£¿éÒ³ÃæÊ¾Àı: 
+    //µ¯³ö²ã·½Ê½: top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTMakeConstract.aspx', '½¨Á¢ºÏÍ¬', 800, 600,window.location);
+    //TABÒ³·½Ê½: top.frames[0].frames[2].parent.frames['rightTabFrame'].addTab('½¨Á¢ºÏÍ¬', 'TTMakeConstract.aspx', 'old');
 
-    ////ç»™å·¥ä½œæµè¡¨å•é¡µé¢æŸæ§ä»¶èµ‹å€¼ 
+    ////¸ø¹¤×÷Á÷±íµ¥Ò³ÃæÄ³¿Ø¼ş¸³Öµ 
     //parent.frames['right'].setControlValue(controlID,controlValue);
  
 
@@ -214,12 +214,12 @@ function BeforeAgree()
 }
 function BeforeRefuseAgree()
 {
-    //é©³å›ç»ˆæ­¢ä¹‹å‰æ‰§è¡Œï¼Œè¿”å›å€¼ä¸ºtrue,åˆ™æ‰§è¡Œé©³å›ç»ˆæ­¢åŠ¨ä½œ
-    //æ‰“å¼€ç›¸å…³æ¨¡å—é¡µé¢ç¤ºä¾‹:
-    //å¼¹å‡ºå±‚æ–¹å¼: top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTMakeConstract.aspx', 'å»ºç«‹åˆåŒ', 800, 600,window.location);
-    //TABé¡µæ–¹å¼: top.frames[0].frames[2].parent.frames['rightTabFrame'].addTab('å»ºç«‹åˆåŒ', 'TTMakeConstract.aspx', 'old');
+    //²µ»ØÖÕÖ¹Ö®Ç°Ö´ĞĞ£¬·µ»ØÖµÎªtrue,ÔòÖ´ĞĞ²µ»ØÖÕÖ¹¶¯×÷
+    //´ò¿ªÏà¹ØÄ£¿éÒ³ÃæÊ¾Àı:
+    //µ¯³ö²ã·½Ê½: top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTMakeConstract.aspx', '½¨Á¢ºÏÍ¬', 800, 600,window.location);
+    //TABÒ³·½Ê½: top.frames[0].frames[2].parent.frames['rightTabFrame'].addTab('½¨Á¢ºÏÍ¬', 'TTMakeConstract.aspx', 'old');
 
-    ////ç»™å·¥ä½œæµè¡¨å•é¡µé¢æŸæ§ä»¶èµ‹å€¼ 
+    ////¸ø¹¤×÷Á÷±íµ¥Ò³ÃæÄ³¿Ø¼ş¸³Öµ 
     //parent.frames['right'].setControlValue(controlID,controlValue);
 
 
@@ -227,12 +227,12 @@ function BeforeRefuseAgree()
 }
 function BeforeCancelAgree()
 {
-    //æ’¤æ¶ˆæ‰¹å‡†ä¹‹å‰æ‰§è¡Œï¼Œè¿”å›å€¼ä¸ºtrue,åˆ™æ‰§è¡Œå–æ¶ˆæ‰¹å‡†åŠ¨ä½œ
-    //æ‰“å¼€ç›¸å…³æ¨¡å—é¡µé¢ç¤ºä¾‹:
-    //å¼¹å‡ºå±‚æ–¹å¼: top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTMakeConstract.aspx', 'å»ºç«‹åˆåŒ', 800, 600,window.location);
-    //TABé¡µæ–¹å¼: top.frames[0].frames[2].parent.frames['rightTabFrame'].addTab('å»ºç«‹åˆåŒ', 'TTMakeConstract.aspx', 'old');
+    //³·ÏûÅú×¼Ö®Ç°Ö´ĞĞ£¬·µ»ØÖµÎªtrue,ÔòÖ´ĞĞÈ¡ÏûÅú×¼¶¯×÷
+    //´ò¿ªÏà¹ØÄ£¿éÒ³ÃæÊ¾Àı:
+    //µ¯³ö²ã·½Ê½: top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTMakeConstract.aspx', '½¨Á¢ºÏÍ¬', 800, 600,window.location);
+    //TABÒ³·½Ê½: top.frames[0].frames[2].parent.frames['rightTabFrame'].addTab('½¨Á¢ºÏÍ¬', 'TTMakeConstract.aspx', 'old');
 
-    ////ç»™å·¥ä½œæµè¡¨å•é¡µé¢æŸæ§ä»¶èµ‹å€¼ 
+    ////¸ø¹¤×÷Á÷±íµ¥Ò³ÃæÄ³¿Ø¼ş¸³Öµ 
     //parent.frames['right'].setControlValue(controlID,controlValue);
 
 
@@ -240,12 +240,12 @@ function BeforeCancelAgree()
 }
 function BeforeBackPirorStep()
 {
-    //è¿”å›å‰é¢æ­¥éª¤ä¹‹å‰æ‰§è¡Œï¼Œè¿”å›å€¼ä¸ºtrue,åˆ™æ‰§è¡Œè¿”å›å‰æ­¥åŠ¨ä½œ
-    //æ‰“å¼€ç›¸å…³æ¨¡å—é¡µé¢ç¤ºä¾‹:
-    //å¼¹å‡ºå±‚æ–¹å¼: top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTMakeConstract.aspx', 'å»ºç«‹åˆåŒ', 800, 600,window.location);
-    //TABé¡µæ–¹å¼: top.frames[0].frames[2].parent.frames['rightTabFrame'].addTab('å»ºç«‹åˆåŒ', 'TTMakeConstract.aspx', 'old');
+    //·µ»ØÇ°Ãæ²½ÖèÖ®Ç°Ö´ĞĞ£¬·µ»ØÖµÎªtrue,ÔòÖ´ĞĞ·µ»ØÇ°²½¶¯×÷
+    //´ò¿ªÏà¹ØÄ£¿éÒ³ÃæÊ¾Àı:
+    //µ¯³ö²ã·½Ê½: top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTMakeConstract.aspx', '½¨Á¢ºÏÍ¬', 800, 600,window.location);
+    //TABÒ³·½Ê½: top.frames[0].frames[2].parent.frames['rightTabFrame'].addTab('½¨Á¢ºÏÍ¬', 'TTMakeConstract.aspx', 'old');
 
-    ////ç»™å·¥ä½œæµè¡¨å•é¡µé¢æŸæ§ä»¶èµ‹å€¼ 
+    ////¸ø¹¤×÷Á÷±íµ¥Ò³ÃæÄ³¿Ø¼ş¸³Öµ 
     //parent.frames['right'].setControlValue(controlID,controlValue);
 
 
@@ -255,39 +255,39 @@ function BeforeBackPirorStep()
 
 function AfterAgree()
 {
-    //æ‰¹å‡†é€šè¿‡æˆåŠŸä¹‹åæ‰§è¡Œ 
-    //æ‰“å¼€ç›¸å…³æ¨¡å—é¡µé¢ç¤ºä¾‹: 
-    //å¼¹å‡ºå±‚æ–¹å¼: top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTMakeConstract.aspx', 'å»ºç«‹åˆåŒ', 800, 600,window.location);
-    //TABé¡µæ–¹å¼: top.frames[0].frames[2].parent.frames['rightTabFrame'].addTab('å»ºç«‹åˆåŒ', 'TTMakeConstract.aspx', 'old');
+    //Åú×¼Í¨¹ı³É¹¦Ö®ºóÖ´ĞĞ 
+    //´ò¿ªÏà¹ØÄ£¿éÒ³ÃæÊ¾Àı: 
+    //µ¯³ö²ã·½Ê½: top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTMakeConstract.aspx', '½¨Á¢ºÏÍ¬', 800, 600,window.location);
+    //TABÒ³·½Ê½: top.frames[0].frames[2].parent.frames['rightTabFrame'].addTab('½¨Á¢ºÏÍ¬', 'TTMakeConstract.aspx', 'old');
 
     return true;
 }
 function AfterRefuseAgree()
 {
-    //é©³å›ç»ˆæ­¢æˆåŠŸä¹‹åæ‰§è¡Œ
-    //æ‰“å¼€ç›¸å…³æ¨¡å—é¡µé¢ç¤ºä¾‹:
-    //å¼¹å‡ºå±‚æ–¹å¼: top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTMakeConstract.aspx', 'å»ºç«‹åˆåŒ', 800, 600,window.location);
-    //TABé¡µæ–¹å¼: top.frames[0].frames[2].parent.frames['rightTabFrame'].addTab('å»ºç«‹åˆåŒ', 'TTMakeConstract.aspx', 'old');
+    //²µ»ØÖÕÖ¹³É¹¦Ö®ºóÖ´ĞĞ
+    //´ò¿ªÏà¹ØÄ£¿éÒ³ÃæÊ¾Àı:
+    //µ¯³ö²ã·½Ê½: top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTMakeConstract.aspx', '½¨Á¢ºÏÍ¬', 800, 600,window.location);
+    //TABÒ³·½Ê½: top.frames[0].frames[2].parent.frames['rightTabFrame'].addTab('½¨Á¢ºÏÍ¬', 'TTMakeConstract.aspx', 'old');
 
 
      return true;
 }
 function AfterCancelAgree()
 {
-    //æ’¤æ¶ˆæ‰¹å‡†æˆåŠŸä¹‹åæ‰§è¡Œ
-    //æ‰“å¼€ç›¸å…³æ¨¡å—é¡µé¢ç¤ºä¾‹:
-    //å¼¹å‡ºå±‚æ–¹å¼: top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTMakeConstract.aspx', 'å»ºç«‹åˆåŒ', 800, 600,window.location);
-    //TABé¡µæ–¹å¼: top.frames[0].frames[2].parent.frames['rightTabFrame'].addTab('å»ºç«‹åˆåŒ', 'TTMakeConstract.aspx', 'old');
+    //³·ÏûÅú×¼³É¹¦Ö®ºóÖ´ĞĞ
+    //´ò¿ªÏà¹ØÄ£¿éÒ³ÃæÊ¾Àı:
+    //µ¯³ö²ã·½Ê½: top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTMakeConstract.aspx', '½¨Á¢ºÏÍ¬', 800, 600,window.location);
+    //TABÒ³·½Ê½: top.frames[0].frames[2].parent.frames['rightTabFrame'].addTab('½¨Á¢ºÏÍ¬', 'TTMakeConstract.aspx', 'old');
 
 
      return true;
 }
 function AfterBackPirorStep()
 {
-    //æ‰¹å‡†è¿”å›æ­¥éª¤æˆåŠŸä¹‹åæ‰§è¡Œ
-    //æ‰“å¼€ç›¸å…³æ¨¡å—é¡µé¢ç¤ºä¾‹:
-    //å¼¹å‡ºå±‚æ–¹å¼: top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTMakeConstract.aspx', 'å»ºç«‹åˆåŒ', 800, 600,window.location);
-    //TABé¡µæ–¹å¼: top.frames[0].frames[2].parent.frames['rightTabFrame'].addTab('å»ºç«‹åˆåŒ', 'TTMakeConstract.aspx', 'old');
+    //Åú×¼·µ»Ø²½Öè³É¹¦Ö®ºóÖ´ĞĞ
+    //´ò¿ªÏà¹ØÄ£¿éÒ³ÃæÊ¾Àı:
+    //µ¯³ö²ã·½Ê½: top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTMakeConstract.aspx', '½¨Á¢ºÏÍ¬', 800, 600,window.location);
+    //TABÒ³·½Ê½: top.frames[0].frames[2].parent.frames['rightTabFrame'].addTab('½¨Á¢ºÏÍ¬', 'TTMakeConstract.aspx', 'old');
 
 
      return true;
@@ -295,10 +295,10 @@ function AfterBackPirorStep()
 
 function getRelatedData()
 {
-    //å–å¾—ç›¸å…³æ•°æ®ä½œå®¡æ‰¹å‚è€ƒ
-    //æ‰“å¼€ç›¸å…³æ¨¡å—é¡µé¢ç¤ºä¾‹:
-    //å¼¹å‡ºå±‚æ–¹å¼: top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTMakeConstract.aspx', 'å»ºç«‹åˆåŒ', 800, 600,window.location);
-    //TABé¡µæ–¹å¼: top.frames[0].frames[2].parent.frames['rightTabFrame'].addTab('å»ºç«‹åˆåŒ', 'TTMakeConstract.aspx', 'old');
+    //È¡µÃÏà¹ØÊı¾İ×÷ÉóÅú²Î¿¼
+    //´ò¿ªÏà¹ØÄ£¿éÒ³ÃæÊ¾Àı:
+    //µ¯³ö²ã·½Ê½: top.frames[0].frames[2].parent.frames['rightTabFrame'].popShowByURL('TTMakeConstract.aspx', '½¨Á¢ºÏÍ¬', 800, 600,window.location);
+    //TABÒ³·½Ê½: top.frames[0].frames[2].parent.frames['rightTabFrame'].addTab('½¨Á¢ºÏÍ¬', 'TTMakeConstract.aspx', 'old');
 
 
      return true;
@@ -307,9 +307,9 @@ function getRelatedData()
 
 function setFormCommentControlValue(commentValue) 
 {
-    ////åŒæ­¥å®¡æ‰¹æ„è§åˆ°è¡¨å•çš„æŸæ„è§æ 
+    ////Í¬²½ÉóÅúÒâ¼ûµ½±íµ¥µÄÄ³Òâ¼ûÀ¸
   
-    ////ç»™å·¥ä½œæµè¡¨å•é¡µé¢æŸæ§ä»¶èµ‹å€¼ 
+    ////¸ø¹¤×÷Á÷±íµ¥Ò³ÃæÄ³¿Ø¼ş¸³Öµ 
     //parent.frames['right'].setControlValue(controlID,commentValue);
 
 }
@@ -317,10 +317,10 @@ function setFormCommentControlValue(commentValue)
 
 function setControlValue(controlID,controlValue)
 {
-   ////ç»™æ­¥éª¤æ–¹æ³•è°ƒç”¨ï¼Œç»™è¡¨å•ä¸ŠæŸæ§ä»¶èµ‹å€¼
+   ////¸ø²½Öè·½·¨µ÷ÓÃ£¬¸ø±íµ¥ÉÏÄ³¿Ø¼ş¸³Öµ
    //this.document.getElementById(controlID).value = controlValue;
 
-  ////é€šè¿‡ä»£ç æ”¹å˜çš„æ§ä»¶å†…å®¹ï¼Œå¿…é¡»è°ƒç”¨æ­¤æ–¹æ³•æ‰èƒ½ä¿å­˜
+  ////Í¨¹ı´úÂë¸Ä±äµÄ¿Ø¼şÄÚÈİ£¬±ØĞëµ÷ÓÃ´Ë·½·¨²ÅÄÜ±£´æ
    // TakeTopInfoPath_OnControlChange(null, document.getElementById(controlID));
 
     return;
@@ -329,24 +329,24 @@ function setControlValue(controlID,controlValue)
 
 function setWorkflowForm()
 {
-    //è®¾ç½®æµç¨‹è¡¨å•å„ç§å±æ€§ï¼Œå¦‚è¦åœ¨æµç¨‹å‘èµ·é˜¶æ®µæ‰§è¡Œä»£ç ï¼Œå¿…é¡»æ·»åŠ æ­¥åºä¸º0çš„æ­¥éª¤ï¼Œä»£ç å†™åœ¨æ­¤æ­¥ä¸Š
-    //éšè—å…ƒç´ ç¤ºä¾‹ä»£ç ï¼ˆå…ƒç´ IDå¯åœ¨ç½‘é¡µä¸Šæ­¤å…ƒç´ ä¸ŠæŒ‰å³é”®æŸ¥çœ‹å–å¾—ï¼‰
-    //this.document.getElementById('å…ƒç´ ID').style.display = 'none';
+    //ÉèÖÃÁ÷³Ì±íµ¥¸÷ÖÖÊôĞÔ£¬ÈçÒªÔÚÁ÷³Ì·¢Æğ½×¶ÎÖ´ĞĞ´úÂë£¬±ØĞëÌí¼Ó²½ĞòÎª0µÄ²½Öè£¬´úÂëĞ´ÔÚ´Ë²½ÉÏ
+    //Òş²ØÔªËØÊ¾Àı´úÂë£¨ÔªËØID¿ÉÔÚÍøÒ³ÉÏ´ËÔªËØÉÏ°´ÓÒ¼ü²é¿´È¡µÃ£©
+    //this.document.getElementById('ÔªËØID').style.display = 'none';
 
     //var strRelatedID = GetQueryString('RelatedID');
-    //this.document.getElementById('å…ƒç´ ID').value = 111;
-    ////é€šè¿‡ä»£ç æ”¹å˜çš„æ§ä»¶å†…ç©ºï¼Œå¿…é¡»è°ƒç”¨æ­¤æ–¹æ³•æ‰èƒ½ä¿å­˜
-    // TakeTopInfoPath_OnControlChange(null, document.getElementById('å…ƒç´ ID'));
+    //this.document.getElementById('ÔªËØID').value = 111;
+    ////Í¨¹ı´úÂë¸Ä±äµÄ¿Ø¼şÄÚ¿Õ£¬±ØĞëµ÷ÓÃ´Ë·½·¨²ÅÄÜ±£´æ
+    // TakeTopInfoPath_OnControlChange(null, document.getElementById('ÔªËØID'));
 
     try
     {
-      //åœ¨è¿™é‡Œè¿è¡Œä»£ç 
+      //ÔÚÕâÀïÔËĞĞ´úÂë
 
 
     }
     catch (err)
     {
-      //åœ¨è¿™é‡Œå¤„ç†é”™è¯¯
+      //ÔÚÕâÀï´¦Àí´íÎó
 
 
     }

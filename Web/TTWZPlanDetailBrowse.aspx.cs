@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,7 +58,7 @@ public partial class TTWZPlanDetailBrowse : System.Web.UI.Page
             LB_Day.Text = DateTime.Now.ToString("dd");
 
             string strProgress = ShareClass.ObjectToString(drPlan["Progress"]);
-            if (strProgress != "签收")
+            if (strProgress != "ǩ��")
             {
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "notPrintFunction();", true);
             }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppReportViewFrame.aspx.cs" Inherits="TTAppReportViewFrame" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppReportViewFrame.aspx.cs" Inherits="TTAppReportViewFrame" %>
 
 <!DOCTYPE html>
 

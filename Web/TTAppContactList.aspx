@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppContactList.aspx.cs" Inherits="TTAppContactList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppContactList.aspx.cs" Inherits="TTAppContactList" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
 
@@ -67,7 +67,7 @@
                                                                 <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%></td>
                                                         </tr>
                                                     </table>
-                                                     <img id="IMG_Waiting" src="Images/Processing.gif" alt="è¯·ç¨å€™ï¼Œå¤„ç†ä¸­..." style="display: none;" />
+                                                     <img id="IMG_Waiting" src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖÐ..." style="display: none;" />
                                                 </a>
                                             </td>
                                         </tr>
@@ -80,7 +80,7 @@
                                         <tr>
                                             <td width="100%" align="left">
                                                 <cc1:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" runat="server" ActiveTabIndex="0" Width="98%">
-                                                    <cc1:TabPanel ID="TabPanel1" runat="server" HeaderText="è”ç³»äººåˆ—è¡¨">
+                                                    <cc1:TabPanel ID="TabPanel1" runat="server" HeaderText="ÁªÏµÈËÁÐ±í">
                                                         <ContentTemplate>
                                                               <table width="99%" border="0" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                                 <tr>
@@ -108,10 +108,10 @@
                                                                 ShowHeader="False" OnItemCommand="DataGrid1_ItemCommand" Width="99%"
                                                                 CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="ID" HeaderText="åºå·" Visible="False">
+                                                                    <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ" Visible="False">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:TemplateColumn HeaderText="å§“å">
+                                                                    <asp:TemplateColumn HeaderText="ÐÕÃû">
                                                                         <ItemTemplate>
                                                                             <asp:Button CssClass="inpuLongest" ID="BT_FirstName" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"FirstName") %>' />
                                                                         </ItemTemplate>
@@ -128,7 +128,7 @@
                                                             <br />
                                                         </ContentTemplate>
                                                     </cc1:TabPanel>
-                                                    <cc1:TabPanel ID="TabPanel2" runat="server" HeaderText="è”ç³»äººèµ„æ–™">
+                                                    <cc1:TabPanel ID="TabPanel2" runat="server" HeaderText="ÁªÏµÈË×ÊÁÏ">
                                                         <ContentTemplate>
                                                             <table style="width: 99%" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                                 <tr>
@@ -144,13 +144,13 @@
                                                                     </td>
                                                                     <td  align="left" class="formItemBgStyle">
                                                                         <asp:DropDownList ID="DL_Type" runat="server">
-                                                                            <asp:ListItem Value="å®¢æˆ·" Text="<%$ Resources:lang,KeHu%>"/>
-                                                                            <asp:ListItem Value="ä¾›åº”å•†" Text="<%$ Resources:lang,GongYingShang%>"/>
-                                                                            <asp:ListItem Value="åŒäº‹" Text="<%$ Resources:lang,TongShi%>"/>
-                                                                            <asp:ListItem Value="æœ‹å‹" Text="<%$ Resources:lang,PengYou%>"/>
-                                                                            <asp:ListItem Value="åŒå­¦" Text="<%$ Resources:lang,TongXue%>"/>
-                                                                            <asp:ListItem Value="äº²å±ž" Text="<%$ Resources:lang,QinShu%>"/>
-                                                                            <asp:ListItem Value="å…¶å®ƒ" Text="<%$ Resources:lang,QiTa%>"/>
+                                                                            <asp:ListItem Value="Customer" Text="<%$ Resources:lang,KeHu%>"/>
+                                                                            <asp:ListItem Value="Supplier" Text="<%$ Resources:lang,GongYingShang%>"/>
+                                                                            <asp:ListItem Value="Colleague" Text="<%$ Resources:lang,TongShi%>"/>
+                                                                            <asp:ListItem Value="Friend" Text="<%$ Resources:lang,PengYou%>"/>
+                                                                            <asp:ListItem Value="Classmate" Text="<%$ Resources:lang,TongXue%>"/>
+                                                                            <asp:ListItem Value="Relative" Text="<%$ Resources:lang,QinShu%>"/>
+                                                                            <asp:ListItem Value="Other" Text="<%$ Resources:lang,QiTa%>"/>
                                                                         </asp:DropDownList>
                                                                         
                                                                     </td>
@@ -159,8 +159,8 @@
                                                                     <td class="formItemBgStyle" style="width: 90px; text-align: right; height: 3px;"><asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,XingBie%>"></asp:Label></td>
                                                                     <td align="left" class="formItemBgStyle" >
                                                                         <asp:DropDownList ID="DL_Gender" runat="server">
-                                                                            <asp:ListItem Value="ç”·" Text="<%$ Resources:lang,Nan%>"/>
-                                                                            <asp:ListItem Value="å¥³" Text="<%$ Resources:lang,Nv%>"/>
+                                                                            <asp:ListItem Value="Male" Text="<%$ Resources:lang,Nan%>"/>
+                                                                            <asp:ListItem Value="Female" Text="<%$ Resources:lang,Nv%>"/>
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                 </tr>

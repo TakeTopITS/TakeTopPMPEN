@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -21,8 +21,8 @@ public partial class TTAssetManage : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //é’Ÿç¤¼æœˆä½œå“ï¼ˆjack.erp@gmail.com)
-        //Taketop Software 2006ï¼2012
+        //ÖÓÀñÔÂ×÷Æ·£¨jack.erp@gmail.com)
+        //Taketop Software 2006£­2012
 
         string strUserCode = Session["UserCode"].ToString();
         string strHQL;
@@ -31,7 +31,7 @@ public partial class TTAssetManage : System.Web.UI.Page
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
 
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "èµ„äº§ç®¡ç†", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "×Ê²ú¹ÜÀí", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -65,7 +65,7 @@ public partial class TTAssetManage : System.Web.UI.Page
             strHQL = "from Asset as asset where ";
             strHQL += " asset.OwnerCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
             strHQL += " and asset.Number > 0";
-            strHQL += " and asset.Status = 'åœ¨ç”¨' Order by asset.ID DESC";
+            strHQL += " and asset.Status = 'InUse' Order by asset.ID DESC";
             AssetBLL assetBLL = new AssetBLL();
             lst = assetBLL.GetAllAssets(strHQL);
             DataGrid1.DataSource = lst;
@@ -91,7 +91,7 @@ public partial class TTAssetManage : System.Web.UI.Page
             LB_AssetOwner.Text = strDepartName + Resources.lang.DZCLB;
             strHQL = "from Asset as asset where asset.OwnerCode in (select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + ") ";
             strHQL += " and asset.Number > 0";
-            strHQL += " and asset.Status = 'åœ¨ç”¨' Order by asset.ID DESC";
+            strHQL += " and asset.Status = 'InUse' Order by asset.ID DESC";
             AssetBLL assetBLL = new AssetBLL();
             lst = assetBLL.GetAllAssets(strHQL);
             DataGrid1.DataSource = lst;
@@ -121,7 +121,7 @@ public partial class TTAssetManage : System.Web.UI.Page
         strHQL += " and asset.AssetName Like " + "'" + strAssetName + "'";
         strHQL += " and asset.OwnerCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
         strHQL += " and asset.Number > 0";
-        strHQL += " and asset.Status = 'åœ¨ç”¨' Order by asset.ID DESC";
+        strHQL += " and asset.Status = 'InUse' Order by asset.ID DESC";
         AssetBLL assetBLL = new AssetBLL();
         lst = assetBLL.GetAllAssets(strHQL);
         DataGrid1.DataSource = lst;
@@ -142,7 +142,7 @@ public partial class TTAssetManage : System.Web.UI.Page
 
         strHQL = "from Asset as asset where asset.OwnerCode = " + "'" + strUserCode + "'";
         strHQL += " and asset.Number > 0";
-        strHQL += " and asset.Status = 'åœ¨ç”¨' Order by asset.ID DESC";
+        strHQL += " and asset.Status = 'InUse' Order by asset.ID DESC";
         AssetBLL assetBLL = new AssetBLL();
         lst = assetBLL.GetAllAssets(strHQL);
         DataGrid1.DataSource = lst;

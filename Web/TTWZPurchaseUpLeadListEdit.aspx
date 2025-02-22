@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPurchaseUpLeadListEdit.aspx.cs" Inherits="TTWZPurchaseUpLeadListEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPurchaseUpLeadListEdit.aspx.cs" Inherits="TTWZPurchaseUpLeadListEdit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>é‡‡è´­æ–‡ä»¶</title>
+    <title>²É¹ºÎÄ¼þ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -17,11 +17,11 @@
 
 
 
-        //é€‰æ‹©ä¸“å®¶
+        //Ñ¡Ôñ×¨¼Ò
         function SelectExpert(objHFValue, objTXTValue) {
             var url = "TTWZSelectorExpert.aspx";
 
-            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + objHFValue + "&ctrlName=" + objTXTValue, 'é€‰æ‹©ä¸“å®¶', 900, 500);	
+            popShowByURLForFixedSize(url + (url.indexOf("?") == -1 ? "?" : "&") + "ctrlId=" + objHFValue + "&ctrlName=" + objTXTValue, 'Ñ¡Ôñ×¨¼Ò', 900, 500);	
 
         }
 
@@ -90,7 +90,7 @@
 
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,GongYingShang%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,GongYingShang%>"></asp:Label>£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="5">
 
@@ -103,59 +103,59 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: right" class="formItemBgStyle">1ï¼š
+                                                        <td style="text-align: right" class="formItemBgStyle">1£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="5">
                                                             <asp:TextBox ID="TXT_Supplier1" runat="server" Width="90px"></asp:TextBox>
-                                                            <asp:Button ID="BT_SelectSupplier1" runat="server" Text="â–¼" CssClass="inpu" OnClick="BT_SelectSupplier1_Click" Height="21px" />
+                                                            <asp:Button ID="BT_SelectSupplier1" runat="server" Text="¨‹" CssClass="inpu" OnClick="BT_SelectSupplier1_Click" Height="21px" />
                                                             &nbsp;<asp:Button ID="BT_DeleteSupplier1" runat="server" CssClass="inpu" Height="21px" Text="X" OnClick="BT_DeleteSupplier1_Click" />
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: right" class="formItemBgStyle">2ï¼š
+                                                        <td style="text-align: right" class="formItemBgStyle">2£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="5">
                                                             <asp:TextBox ID="TXT_Supplier2" runat="server" Width="90px"></asp:TextBox>
-                                                            <asp:Button ID="BT_SelectSupplier2" runat="server" Text="â–¼" CssClass="inpu" OnClick="BT_SelectSupplier2_Click" />
+                                                            <asp:Button ID="BT_SelectSupplier2" runat="server" Text="¨‹" CssClass="inpu" OnClick="BT_SelectSupplier2_Click" />
                                                             &nbsp;<asp:Button ID="BT_DeleteSupplier2" runat="server" CssClass="inpu" Height="21px" Text="X" OnClick="BT_DeleteSupplier2_Click" />
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: right" class="formItemBgStyle">3ï¼š
+                                                        <td style="text-align: right" class="formItemBgStyle">3£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="5">
                                                             <asp:TextBox ID="TXT_Supplier3" runat="server" Width="90px"></asp:TextBox>
-                                                            <asp:Button ID="BT_SelectSupplier3" runat="server" Text="â–¼" CssClass="inpu" OnClick="BT_SelectSupplier3_Click" />
+                                                            <asp:Button ID="BT_SelectSupplier3" runat="server" Text="¨‹" CssClass="inpu" OnClick="BT_SelectSupplier3_Click" />
                                                             &nbsp;<asp:Button ID="BT_DeleteSupplier3" runat="server" CssClass="inpu" Height="21px" Text="X" OnClick="BT_DeleteSupplier3_Click" />
 
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: right" class="formItemBgStyle">4ï¼š
+                                                        <td style="text-align: right" class="formItemBgStyle">4£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="5">
                                                             <asp:TextBox ID="TXT_Supplier4" runat="server" Width="90px"></asp:TextBox>
-                                                            <asp:Button ID="BT_SelectSupplier4" runat="server" Text="â–¼" CssClass="inpu" OnClick="BT_SelectSupplier4_Click" />
+                                                            <asp:Button ID="BT_SelectSupplier4" runat="server" Text="¨‹" CssClass="inpu" OnClick="BT_SelectSupplier4_Click" />
                                                             &nbsp;<asp:Button ID="BT_DeleteSupplier4" runat="server" CssClass="inpu" Height="21px" Text="X" OnClick="BT_DeleteSupplier4_Click" />
 
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: right" class="formItemBgStyle">5ï¼š
+                                                        <td style="text-align: right" class="formItemBgStyle">5£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="5">
                                                             <asp:TextBox ID="TXT_Supplier5" runat="server" Width="90px"></asp:TextBox>
-                                                            <asp:Button ID="BT_SelectSupplier5" runat="server" Text="â–¼" CssClass="inpu" OnClick="BT_SelectSupplier5_Click" />
+                                                            <asp:Button ID="BT_SelectSupplier5" runat="server" Text="¨‹" CssClass="inpu" OnClick="BT_SelectSupplier5_Click" />
                                                             &nbsp;<asp:Button ID="BT_DeleteSupplier5" runat="server" CssClass="inpu" Height="21px" Text="X" OnClick="BT_DeleteSupplier5_Click" />
 
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: right" class="formItemBgStyle">6ï¼š
+                                                        <td style="text-align: right" class="formItemBgStyle">6£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="5">
                                                             <asp:TextBox ID="TXT_Supplier6" runat="server" Width="90px"></asp:TextBox>
-                                                            <asp:Button ID="BT_SelectSupplier6" runat="server" Text="â–¼" CssClass="inpu" OnClick="BT_SelectSupplier6_Click" />
+                                                            <asp:Button ID="BT_SelectSupplier6" runat="server" Text="¨‹" CssClass="inpu" OnClick="BT_SelectSupplier6_Click" />
                                                             &nbsp;
                                                             <asp:Button ID="BT_DeleteSupplier6" runat="server" CssClass="inpu" Height="21px" Text="X" OnClick="BT_DeleteSupplier6_Click" />
 
@@ -163,7 +163,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZhuanJiaZu%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZhuanJiaZu%>"></asp:Label>£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="5">
 
@@ -173,43 +173,43 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: right" class="formItemBgStyle">1ï¼š
+                                                        <td style="text-align: right" class="formItemBgStyle">1£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="5">
                                                             <asp:TextBox ID="TXT_Expert1" runat="server" Width="90px"></asp:TextBox>
-                                                            <asp:Button ID="BT_SelectExpert1" runat="server" Text="â–¼" CssClass="inpu" OnClick="BT_SelectExpert1_Click" />
+                                                            <asp:Button ID="BT_SelectExpert1" runat="server" Text="¨‹" CssClass="inpu" OnClick="BT_SelectExpert1_Click" />
 
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: right" class="formItemBgStyle">2ï¼š
+                                                        <td style="text-align: right" class="formItemBgStyle">2£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="5">
                                                             <asp:TextBox ID="TXT_Expert2" runat="server" Width="90px"></asp:TextBox>
-                                                            <asp:Button ID="BT_SelectExpert2" runat="server" Text="â–¼" CssClass="inpu" OnClick="BT_SelectExpert2_Click" />
+                                                            <asp:Button ID="BT_SelectExpert2" runat="server" Text="¨‹" CssClass="inpu" OnClick="BT_SelectExpert2_Click" />
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: right" class="formItemBgStyle">3ï¼š
+                                                        <td style="text-align: right" class="formItemBgStyle">3£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="5">
                                                             <asp:TextBox ID="TXT_Expert3" runat="server" Width="90px"></asp:TextBox>
-                                                            <asp:Button ID="BT_SelectExpert3" runat="server" Text="â–¼" CssClass="inpu" OnClick="BT_SelectExpert3_Click" />
+                                                            <asp:Button ID="BT_SelectExpert3" runat="server" Text="¨‹" CssClass="inpu" OnClick="BT_SelectExpert3_Click" />
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,CaiGouFangShi%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,CaiGouFangShi%>"></asp:Label>£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="5">
                                                             <asp:DropDownList ID="DDL_PurchaseMethod" runat="server">
-                                                                <asp:ListItem Text="<%$ Resources:lang,XunBiJia%>" Value="è¯¢æ¯”ä»·" />
-                                                                <asp:ListItem Text="<%$ Resources:lang,ZhaoBiao%>" Value="æ‹›æ ‡" />
-                                                                <asp:ListItem Text="<%$ Resources:lang,KuangJia%>" Value="æ¡†æž¶" />
-                                                                <asp:ListItem Text="<%$ Resources:lang,DuJia%>" Value="ç‹¬å®¶" />
-                                                                <asp:ListItem Text="<%$ Resources:lang,YiJia%>" Value="è®®ä»·" />
-                                                                <asp:ListItem Text="<%$ Resources:lang,JinJi%>" Value="ç´§æ€¥" />
-                                                                <asp:ListItem Text="<%$ Resources:lang,XiaoE%>" Value="å°é¢" />
+                                                                <asp:ListItem Text="<%$ Resources:lang,XunBiJia%>" Value="Ñ¯±È¼Û" />
+                                                                <asp:ListItem Text="<%$ Resources:lang,ZhaoBiao%>" Value="ÕÐ±ê" />
+                                                                <asp:ListItem Text="<%$ Resources:lang,KuangJia%>" Value="¿ò¼Ü" />
+                                                                <asp:ListItem Text="<%$ Resources:lang,DuJia%>" Value="¶À¼Ò" />
+                                                                <asp:ListItem Text="<%$ Resources:lang,YiJia%>" Value="Òé¼Û" />
+                                                                <asp:ListItem Text="<%$ Resources:lang,JinJi%>" Value="Emergency" />
+                                                                <asp:ListItem Text="<%$ Resources:lang,XiaoE%>" Value="Ð¡¶î" />
                                                             </asp:DropDownList>
                                                         </td>
                                                     </tr>
@@ -217,7 +217,7 @@
                                                         <td style="text-align: center" class="formItemBgStyle" colspan="6">
                                                             <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnOK_Click" />&nbsp;
                                                             <input id="btnClose()" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                                type="button" value="å…³é—­" />
+                                                                type="button" value="Closed" />
                                                         </td>
                                                     </tr>
                                                 </table>

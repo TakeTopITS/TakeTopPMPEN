@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -34,7 +34,7 @@ public partial class TTAllNotice : System.Web.UI.Page
         LB_UserName.Text = strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","æŸ¥çœ‹æ‰€æœ‰å…¬å‘Š", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","²é¿´ËùÓÐ¹«¸æ", strUserCode);
 
         if (blVisible == false)
         {
@@ -42,7 +42,7 @@ public partial class TTAllNotice : System.Web.UI.Page
             return;
         }
 
-        //this.Title = "æŸ¥çœ‹æ‰€æœ‰å…¬å‘Š";
+        //this.Title = "²é¿´ËùÓÐ¹«¸æ";
 
         if (Page.IsPostBack == false)
         {

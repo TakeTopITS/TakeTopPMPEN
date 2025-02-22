@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectCostOperationView.aspx.cs" Inherits="TTProjectCostOperationView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectCostOperationView.aspx.cs" Inherits="TTProjectCostOperationView" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -121,57 +121,57 @@
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                    <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Code" HeaderText="ç¼–ç ">
+                                                    <asp:BoundColumn DataField="Code" HeaderText="±àÂë">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Name" HeaderText="å®šé¢é¡¹ç›®">
+                                                    <asp:BoundColumn DataField="Name" HeaderText="¶¨¶îÏîÄ¿">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="12%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Quantities" HeaderText="å·¥ç¨‹é‡(é¢„ç®—)">
+                                                    <asp:BoundColumn DataField="Quantities" HeaderText="¹¤³ÌÁ¿(Ô¤Ëã)">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="QuantitiesRea" HeaderText="å·¥ç¨‹é‡(å®žé™…)">
+                                                    <asp:BoundColumn DataField="QuantitiesRea" HeaderText="¹¤³ÌÁ¿(Êµ¼Ê)">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Unit" HeaderText="å•ä½">
+                                                    <asp:BoundColumn DataField="Unit" HeaderText="µ¥Î»">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Price" HeaderText="å•ä»·(é¢„ç®—)">
+                                                    <asp:BoundColumn DataField="Price" HeaderText="µ¥¼Û(Ô¤Ëã)">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="PriceRea" HeaderText="å•ä»·(å®žé™…)">
+                                                    <asp:BoundColumn DataField="PriceRea" HeaderText="µ¥¼Û(Êµ¼Ê)">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Total" HeaderText="æ€»ä»·(é¢„ç®—)">
+                                                    <asp:BoundColumn DataField="Total" HeaderText="×Ü¼Û(Ô¤Ëã)">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="TotalRea" HeaderText="æ€»ä»·(å®žé™…)">
+                                                    <asp:BoundColumn DataField="TotalRea" HeaderText="×Ü¼Û(Êµ¼Ê)">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="9%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="TotalBL" HeaderText="æ€»ä»·æ¯”(å®žé™…/é¢„ç®—)">
+                                                    <asp:BoundColumn DataField="TotalBL" HeaderText="×Ü¼Û±È(Êµ¼Ê/Ô¤Ëã)">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />

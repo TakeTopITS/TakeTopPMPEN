@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -139,18 +139,18 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
             HL_WFChartView.NavigateUrl = "TTWFChartViewJS.aspx?WLID=0&IdentifyString=" + ShareClass.GetWLTemplateIdentifyString(strTemName);
         }
 
-        //åˆ—å‡ºå¾…å¤„ç†çš„ä¸šåŠ¡å•æ®
+        //ÁĞ³ö´ı´¦ÀíµÄÒµÎñµ¥¾İ
         LoadToBeHandledBusinessForm(strUserCode, strTemName);
 
-        //é™„åŠ ç”¨æˆ·è‡ªå®šä¹‰çš„JSCodeåˆ°é¡µé¢
+        //¸½¼ÓÓÃ»§×Ô¶¨ÒåµÄJSCodeµ½Ò³Ãæ
         WFShareClass.AttachUserJSCodeFromWFTemplate(strTemName, LIT_AttachUserJSCode, strUserCode, "", "0", "");
         ClientScript.RegisterStartupScript(this.GetType(), "HH77H", "<script>jqueryDocumentReady();</script>");
 
-        //é™„åŠ å·¥ä½œæµæ­¥éª¤ç”¨æˆ·è‡ªå®šä¹‰çš„JSCodeåˆ°é¡µé¢
+        //¸½¼Ó¹¤×÷Á÷²½ÖèÓÃ»§×Ô¶¨ÒåµÄJSCodeµ½Ò³Ãæ
         WFShareClass.AttachUserJSCodeFromWFTemplateStep(strTemName, "0", LIT_AttachUserWFStepJSCode, strUserCode);
         ClientScript.RegisterStartupScript(this.GetType(), "HH88H", "<script>setWorkflowForm();</script>");
 
-        //åˆ—è¡¨é¡¹å¢åŠ æç¤º
+        //ÁĞ±íÏîÔö¼ÓÌáÊ¾
         //PreREnderListBox();
 
     }
@@ -169,7 +169,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
             return;
         }
 
-        //å¦‚æœæ•°æ®åº“è¡¨ä¸­å­˜åœ¨æ­¤å·¥ä½œæµçš„æ•°æ®ï¼Œé‚£ä¹ˆæŠŠè¡¨ä¸­æ•°æ®é™„åŠ åˆ°è¡¨å•ä¸­
+        //Èç¹ûÊı¾İ¿â±íÖĞ´æÔÚ´Ë¹¤×÷Á÷µÄÊı¾İ£¬ÄÇÃ´°Ñ±íÖĞÊı¾İ¸½¼Óµ½±íµ¥ÖĞ
         int intMainTableID;
         string strWFXMLFile;
         strTemName = DL_WorkFlowTemplate.SelectedValue.Trim();
@@ -214,16 +214,16 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
             HL_WFChartView.NavigateUrl = "TTWFChartViewJS.aspx?WLID=" + LB_WLID.Text + "&IdentifyString=" + ShareClass.GetWLTemplateIdentifyString(strTemName);
         }
 
-        //é™„åŠ ç”¨æˆ·è‡ªå®šä¹‰çš„JSCodeåˆ°é¡µé¢
+        //¸½¼ÓÓÃ»§×Ô¶¨ÒåµÄJSCodeµ½Ò³Ãæ
         WFShareClass.AttachUserJSCodeFromWFTemplate(strTemName, LIT_AttachUserJSCode, strUserCode, "", "0", "");
         ClientScript.RegisterStartupScript(this.GetType(), "HH66H", "<script>jqueryDocumentReady();</script>");
 
-        ////é™„åŠ å·¥ä½œæµæ­¥éª¤ç”¨æˆ·è‡ªå®šä¹‰çš„JSCodeåˆ°é¡µé¢
+        ////¸½¼Ó¹¤×÷Á÷²½ÖèÓÃ»§×Ô¶¨ÒåµÄJSCodeµ½Ò³Ãæ
         //WFShareClass.AttachUserJSCodeFromWFTemplateStep(strTemName, "0", LIT_AttachUserWFStepJSCode, strUserCode);
-        ////è®¾ç½®è¡¨æ ¼å±æ€§
+        ////ÉèÖÃ±í¸ñÊôĞÔ
         //ClientScript.RegisterStartupScript(this.GetType(), "HH99H", "<script>setWorkflowForm();</script>");
 
-        //åˆ—è¡¨é¡¹å¢åŠ æç¤º
+        //ÁĞ±íÏîÔö¼ÓÌáÊ¾
         //PreREnderListBox();
 
 
@@ -241,7 +241,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
 
         string strWFName = strWLID + DL_WorkFlow.SelectedItem.Text;
 
-        //å¦‚æœæ•°æ®åº“è¡¨ä¸­å­˜åœ¨æ­¤å·¥ä½œæµçš„æ•°æ®ï¼Œé‚£ä¹ˆæŠŠè¡¨ä¸­æ•°æ®é™„åŠ åˆ°è¡¨å•ä¸­
+        //Èç¹ûÊı¾İ¿â±íÖĞ´æÔÚ´Ë¹¤×÷Á÷µÄÊı¾İ£¬ÄÇÃ´°Ñ±íÖĞÊı¾İ¸½¼Óµ½±íµ¥ÖĞ
         int intMainTableID;
         string strWFXMLFile;
         strTemName = DL_WorkFlowTemplate.SelectedValue.Trim();
@@ -285,7 +285,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
 
         LB_WLID.Text = strWLID;
 
-        //å¦‚æœæ•°æ®åº“è¡¨ä¸­å­˜åœ¨æ­¤å·¥ä½œæµçš„æ•°æ®ï¼Œé‚£ä¹ˆæŠŠè¡¨ä¸­æ•°æ®é™„åŠ åˆ°è¡¨å•ä¸­
+        //Èç¹ûÊı¾İ¿â±íÖĞ´æÔÚ´Ë¹¤×÷Á÷µÄÊı¾İ£¬ÄÇÃ´°Ñ±íÖĞÊı¾İ¸½¼Óµ½±íµ¥ÖĞ
         int intMainTableID;
         string strWFXMLFile;
 
@@ -348,7 +348,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
             }
 
             WFSubmitHandle wfSubmitHandle = new WFSubmitHandle();
-            intWLID = wfSubmitHandle.SubmitApplyForDIYForm(strWLType, strWLTemName, strXSNFile, strWLID, strWorkFlowName, strDescription, "å…¶å®ƒ", 0, strUserCode, "NO",
+            intWLID = wfSubmitHandle.SubmitApplyForDIYForm(strWLType, strWLTemName, strXSNFile, strWLID, strWorkFlowName, strDescription, "Other", 0, strUserCode, "NO",
                  CB_SMS, CB_Mail, LB_WLID, HL_RelatedDoc, HL_RedirectToMyWFDetail, BT_SaveXMLFile, DL_WorkFlow, PublishUrl, this.uri, this.Context, xdoc);
 
             strWLID = intWLID.ToString();
@@ -394,14 +394,14 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
 
                 if (intWLID == -5)
                 {
-                    //æ£€æŸ¥å¿…å¡«é¡¹ä¸ä¸ºç©º
+                    //¼ì²é±ØÌîÏî²»Îª¿Õ
                     string strCanNotNullFieldList = WFShareClass.GetCanNotNullFieldListFromWFTemplate(strWLTemName);
                     ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBBTXSTRCANNOTNULLFIELDLISTBNWKJC + "');</script>");
                 }
             }
             else
             {
-                //èµ‹å…¨å±€å˜é‡ç»™å·¥ä½œæµXMLæ–‡ä»¶
+                //¸³È«¾Ö±äÁ¿¸ø¹¤×÷Á÷XMLÎÄ¼ş
                 try
                 {
                     wfSubmitHandle.AddGlobalVariable(strWLTemName, strWLID, "", "0", "");
@@ -412,7 +412,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
 
                 try
                 {
-                    //ä¿å­˜è¡¨å•æ•°æ®åˆ°æ•°æ®åº“ï¼Œç”¨äºå¼€å‘å¹³å°ä¸€èˆ¬å¤„ç†ç¨‹åºæ–¹å¼
+                    //±£´æ±íµ¥Êı¾İµ½Êı¾İ¿â£¬ÓÃÓÚ¿ª·¢Æ½Ì¨Ò»°ã´¦Àí³ÌĞò·½Ê½
                     ClientScript.RegisterStartupScript(this.GetType(), "SaveData", "<script>saveWFFormDataToDatabase(" + intWLID.ToString() + ");</script>");
                 }
                 catch
@@ -421,18 +421,18 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
 
                 try
                 {
-                    //åŒæ­¥è¡¨å•æ•°æ®åˆ°ç›¸åº”çš„æ•°æ®åº“è¡¨
+                    //Í¬²½±íµ¥Êı¾İµ½ÏàÓ¦µÄÊı¾İ¿â±í
                     int intMainID = GetMainID(DL_ToBeHandledBusinessForm.SelectedValue);
                     TakeTopXML.FormConvertToTable(int.Parse(strWLID), intMainID);
 
-                    //æäº¤åæŠŠå¾…å¤„ç†ä¸šåŠ¡å•çŠ¶æ€æ”¹ä¸ºå·²å¤„ç†
+                    //Ìá½»ºó°Ñ´ı´¦ÀíÒµÎñµ¥×´Ì¬¸ÄÎªÒÑ´¦Àí
                     string strHQL;
                     strHQL = "Update T_TriggerTableToFrom Set Status = 1 Where ID = " + DL_ToBeHandledBusinessForm.SelectedValue;
                     ShareClass.RunSqlCommand(strHQL);
 
                     LoadToBeHandledBusinessForm(strUserCode, strTemName);
 
-                    //ä¿å­˜è¡¨å•æ•°æ®åˆ°æ•°æ®åº“
+                    //±£´æ±íµ¥Êı¾İµ½Êı¾İ¿â
                     ClientScript.RegisterStartupScript(this.GetType(), "SaveData", "<script>saveWFFormDataToDatabase(" + intWLID.ToString() + ");</script>");
                 }
                 catch
@@ -443,7 +443,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
                 {
                     try
                     {
-                        //ä¿å­˜è‡ªå®šä¹‰è¡¨å•æ•°æ®åˆ°ç»Ÿä¸€æµç¨‹æ•°æ®è¡¨ï¼Œç”¨äºæ•°æ®åˆ†æç”¨
+                        //±£´æ×Ô¶¨Òå±íµ¥Êı¾İµ½Í³Ò»Á÷³ÌÊı¾İ±í£¬ÓÃÓÚÊı¾İ·ÖÎöÓÃ
                         string strWFXMLFile = ShareClass.GetWorkflowXMLFile(strWLID);
                         XmlDbWorker.AddFormFromXml(Server.MapPath(strWFXMLFile), int.Parse(strWLID), strWLTemName);
                     }
@@ -492,7 +492,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
             }
 
             WFSubmitHandle wfSubmitHandle = new WFSubmitHandle();
-            intWLID = wfSubmitHandle.SubmitApplyForDIYForm(strWLType, strWLTemName, strXSNFile, strWLID, strWorkFlowName, strDescription, "å…¶å®ƒ", 0, strUserCode, "NO",
+            intWLID = wfSubmitHandle.SubmitApplyForDIYForm(strWLType, strWLTemName, strXSNFile, strWLID, strWorkFlowName, strDescription, "Other", 0, strUserCode, "NO",
                 CB_SMS, CB_Mail, LB_WLID, HL_RelatedDoc, HL_RedirectToMyWFDetail, BT_SaveXMLFile, DL_WorkFlow, PublishUrl, this.uri, Context, xdoc);
 
             strWLID = intWLID.ToString();
@@ -535,7 +535,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
 
                 if (intWLID == -5)
                 {
-                    //æ£€æŸ¥å¿…å¡«é¡¹ä¸ä¸ºç©º
+                    //¼ì²é±ØÌîÏî²»Îª¿Õ
                     string strCanNotNullFieldList = WFShareClass.GetCanNotNullFieldListFromWFTemplate(strWLTemName);
                     ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBBTXSTRCANNOTNULLFIELDLISTBNWKJC + "');</script>");
                 }
@@ -544,7 +544,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
             {
                 LB_WLID.Text = strWLID;
 
-                //èµ‹å…¨å±€å˜é‡ç»™å·¥ä½œæµXMLæ–‡ä»¶
+                //¸³È«¾Ö±äÁ¿¸ø¹¤×÷Á÷XMLÎÄ¼ş
                 try
                 {
                     wfSubmitHandle.AddGlobalVariable(strWLTemName, strWLID, "", "0", "");
@@ -555,7 +555,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
 
                 try
                 {
-                    //ä¿å­˜è¡¨å•æ•°æ®åˆ°æ•°æ®åº“ï¼Œç”¨äºå¼€å‘å¹³å°ä¸€èˆ¬å¤„ç†ç¨‹åºæ–¹å¼
+                    //±£´æ±íµ¥Êı¾İµ½Êı¾İ¿â£¬ÓÃÓÚ¿ª·¢Æ½Ì¨Ò»°ã´¦Àí³ÌĞò·½Ê½
                     ClientScript.RegisterStartupScript(this.GetType(), "SaveData", "<script>saveWFFormDataToDatabase(" + intWLID.ToString() + ");</script>");
                 }
                 catch
@@ -564,18 +564,18 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
 
                 try
                 {
-                    //åŒæ­¥è¡¨å•æ•°æ®åˆ°ç›¸åº”çš„æ•°æ®åº“è¡¨
+                    //Í¬²½±íµ¥Êı¾İµ½ÏàÓ¦µÄÊı¾İ¿â±í
                     int intMainID = GetMainID(DL_ToBeHandledBusinessForm.SelectedValue);
                     TakeTopXML.FormConvertToTable(int.Parse(strWLID), intMainID);
 
-                    //æäº¤åæŠŠå¾…å¤„ç†ä¸šåŠ¡å•çŠ¶æ€æ”¹ä¸ºå·²å¤„ç†
+                    //Ìá½»ºó°Ñ´ı´¦ÀíÒµÎñµ¥×´Ì¬¸ÄÎªÒÑ´¦Àí
                     string strHQL;
                     strHQL = "Update T_TriggerTableToFrom Set Status = 1 Where ID = " + DL_ToBeHandledBusinessForm.SelectedValue;
                     ShareClass.RunSqlCommand(strHQL);
 
                     LoadToBeHandledBusinessForm(strUserCode, strTemName);
 
-                    //ä¿å­˜è¡¨å•æ•°æ®åˆ°æ•°æ®åº“
+                    //±£´æ±íµ¥Êı¾İµ½Êı¾İ¿â
                     ClientScript.RegisterStartupScript(this.GetType(), "SaveData", "<script>saveWFFormDataToDatabase(" + intWLID.ToString() + ");</script>");
                 }
                 catch
@@ -586,7 +586,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
                 {
                     try
                     {
-                        //ä¿å­˜è‡ªå®šä¹‰è¡¨å•æ•°æ®åˆ°ç»Ÿä¸€æµç¨‹æ•°æ®è¡¨ï¼Œç”¨äºæ•°æ®åˆ†æç”¨
+                        //±£´æ×Ô¶¨Òå±íµ¥Êı¾İµ½Í³Ò»Á÷³ÌÊı¾İ±í£¬ÓÃÓÚÊı¾İ·ÖÎöÓÃ
                         string strWFXMLFile = ShareClass.GetWorkflowXMLFile(strWLID);
                         XmlDbWorker.AddFormFromXml(Server.MapPath(strWFXMLFile), int.Parse(strWLID), strWLTemName);
                     }
@@ -635,7 +635,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
         }
         else
         {
-            //èµ‹å…¨å±€å˜é‡ç»™å·¥ä½œæµXMLæ–‡ä»¶
+            //¸³È«¾Ö±äÁ¿¸ø¹¤×÷Á÷XMLÎÄ¼ş
             try
             {
                 string strWLTemName = DL_WorkFlowTemplate.SelectedValue.Trim();
@@ -648,11 +648,11 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
 
             try
             {
-                //åŒæ­¥è¡¨å•æ•°æ®åˆ°ç›¸åº”çš„æ•°æ®åº“è¡¨
+                //Í¬²½±íµ¥Êı¾İµ½ÏàÓ¦µÄÊı¾İ¿â±í
                 int intMainID = GetMainID(DL_ToBeHandledBusinessForm.SelectedValue);
                 TakeTopXML.FormConvertToTable(int.Parse(strWLID), intMainID);
 
-                //ä¿å­˜è¡¨å•æ•°æ®åˆ°æ•°æ®åº“
+                //±£´æ±íµ¥Êı¾İµ½Êı¾İ¿â
                 ClientScript.RegisterStartupScript(this.GetType(), "SaveData", "<script>saveWFFormDataToDatabase(" + strWLID + ");</script>");
             }
             catch
@@ -663,7 +663,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
             {
                 try
                 {
-                    //ä¿å­˜è‡ªå®šä¹‰è¡¨å•æ•°æ®åˆ°ç»Ÿä¸€æµç¨‹æ•°æ®è¡¨ï¼Œç”¨äºæ•°æ®åˆ†æç”¨
+                    //±£´æ×Ô¶¨Òå±íµ¥Êı¾İµ½Í³Ò»Á÷³ÌÊı¾İ±í£¬ÓÃÓÚÊı¾İ·ÖÎöÓÃ
                     string strWFXMLFile = ShareClass.GetWorkflowXMLFile(strWLID);
                     string strWLTemName = DL_WorkFlowTemplate.SelectedValue.Trim();
                     XmlDbWorker.AddFormFromXml(Server.MapPath(strWFXMLFile), int.Parse(strWLID), strWLTemName);
@@ -709,7 +709,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
         }
         else
         {
-            //èµ‹å…¨å±€å˜é‡ç»™å·¥ä½œæµXMLæ–‡ä»¶
+            //¸³È«¾Ö±äÁ¿¸ø¹¤×÷Á÷XMLÎÄ¼ş
             try
             {
                 string strWLTemName = DL_WorkFlowTemplate.SelectedValue.Trim();
@@ -722,11 +722,11 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
 
             try
             {
-                //åŒæ­¥è¡¨å•æ•°æ®åˆ°ç›¸åº”çš„æ•°æ®åº“è¡¨
+                //Í¬²½±íµ¥Êı¾İµ½ÏàÓ¦µÄÊı¾İ¿â±í
                 int intMainID = GetMainID(DL_ToBeHandledBusinessForm.SelectedValue);
                 TakeTopXML.FormConvertToTable(int.Parse(strWLID), intMainID);
 
-                //ä¿å­˜è¡¨å•æ•°æ®åˆ°æ•°æ®åº“
+                //±£´æ±íµ¥Êı¾İµ½Êı¾İ¿â
                 ClientScript.RegisterStartupScript(this.GetType(), "SaveData", "<script>saveWFFormDataToDatabase(" + strWLID + ");</script>");
             }
             catch
@@ -737,7 +737,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
             {
                 try
                 {
-                    //ä¿å­˜è‡ªå®šä¹‰è¡¨å•æ•°æ®åˆ°ç»Ÿä¸€æµç¨‹æ•°æ®è¡¨ï¼Œç”¨äºæ•°æ®åˆ†æç”¨
+                    //±£´æ×Ô¶¨Òå±íµ¥Êı¾İµ½Í³Ò»Á÷³ÌÊı¾İ±í£¬ÓÃÓÚÊı¾İ·ÖÎöÓÃ
                     string strWFXMLFile = ShareClass.GetWorkflowXMLFile(strWLID);
                     string strWLTemName = DL_WorkFlowTemplate.SelectedValue.Trim();
                     XmlDbWorker.AddFormFromXml(Server.MapPath(strWFXMLFile), int.Parse(strWLID), strWLTemName);
@@ -767,7 +767,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
             string strTriggerID = DL_ToBeHandledBusinessForm.SelectedValue;
             int intTriggerID = 0;
             int.TryParse(strTriggerID, out intTriggerID);
-            //å†™å…¥XMLæ–‡ä»¶
+            //Ğ´ÈëXMLÎÄ¼ş
             string strFolder = "Doc\\XML\\";
             if (!System.IO.Directory.Exists(Server.MapPath(strFolder)))
             {
@@ -777,7 +777,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
             string strNewWFXMLFile = strFolder + strTemNameR + DateTime.Now.ToString("yyyyMMddHHmmssff") + ".xml";
             strNewWFXMLFile = Server.MapPath(strNewWFXMLFile);
 
-            //è¡¨å•æ•°æ®
+            //±íµ¥Êı¾İ
             string strXMLHQL = string.Empty;
             strXMLHQL = "select * from	T_WorkFlow WHERE TemName = '" + strTemNameR + "' order by CreateTime desc";
             DataSet dsTest = ShareClass.GetDataSetFromSql(strXMLHQL, "XMLTest");
@@ -805,7 +805,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
                         }
                         else
                         {
-                            xdoc.Text = "è¯·å…ˆæ³¨å†Œè¡¨å•æ¨¡æ¿.";
+                            xdoc.Text = "ÇëÏÈ×¢²á±íµ¥Ä£°å.";
                         }
                     }
                     catch (Exception ex) { }
@@ -815,7 +815,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
         }
         else
         {
-            xdoc.Text = "è¯·å…ˆæ³¨å†Œè¡¨å•æ¨¡æ¿.";
+            xdoc.Text = "ÇëÏÈ×¢²á±íµ¥Ä£°å.";
         }
     }
 
@@ -837,7 +837,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
             string strTriggerID = this.HF_TriggerID.Value;
             int intTriggerID = 0;
             int.TryParse(strTriggerID, out intTriggerID);
-            //å†™å…¥XMLæ–‡ä»¶
+            //Ğ´ÈëXMLÎÄ¼ş
             string strFolder = "Doc\\XML\\";
             if (!System.IO.Directory.Exists(Server.MapPath(strFolder)))
             {
@@ -847,7 +847,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
             string strFileName = strFolder + strTemNameR + DateTime.Now.ToString("yyyyMMddHHmmssff") + ".xml";
             strFileName = Server.MapPath(strFileName);
 
-            //è¡¨å•æ•°æ®
+            //±íµ¥Êı¾İ
             string strXMLHQL = string.Empty;
             strXMLHQL = "select * from	T_WorkFlow WHERE TemName = '" + strTemNameR + "' order by CreateTime desc";
             DataSet dsTest = ShareClass.GetDataSetFromSql(strXMLHQL, "XMLTest");
@@ -881,7 +881,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
                         }
                         else
                         {
-                            xdoc.Text = "è¯·å…ˆæ³¨å†Œè¡¨å•æ¨¡æ¿.";
+                            xdoc.Text = "ÇëÏÈ×¢²á±íµ¥Ä£°å.";
                         }
                     }
                     catch (Exception ex) { }
@@ -891,7 +891,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
         }
         else
         {
-            xdoc.Text = "è¯·å…ˆæ³¨å†Œè¡¨å•æ¨¡æ¿.";
+            xdoc.Text = "ÇëÏÈ×¢²á±íµ¥Ä£°å.";
         }
     }
 
@@ -1014,7 +1014,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
         strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
 
-        strHQL = "Select TemName From T_WorkFlowTemplate Where Visible ='YES' and Type = " + "'" + strWFType + "'" + " and Authority = 'æ‰€æœ‰'" + " and char_length(ltrim(rtrim(XSNFile))) > 0";
+        strHQL = "Select TemName From T_WorkFlowTemplate Where Visible ='YES' and Type = " + "'" + strWFType + "'" + " and Authority = 'All'" + " and char_length(ltrim(rtrim(XSNFile))) > 0";
         //strHQL += " and (BelongDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))";
 
         strHQL += " and (BelongDepartCode in " + strParentDepartString;
@@ -1029,7 +1029,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
 
         DL_WorkFlowTemplate.Items.Insert(0, new ListItem("--Select--", ""));
 
-        //åˆ—è¡¨é¡¹å¢åŠ æç¤º
+        //ÁĞ±íÏîÔö¼ÓÌáÊ¾
         //PreREnderListBox();
     }
 
@@ -1045,20 +1045,20 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
 
         DL_WorkFlow.Items.Insert(0, new ListItem("--Select--", ""));
 
-        //åˆ—è¡¨é¡¹å¢åŠ æç¤º
+        //ÁĞ±íÏîÔö¼ÓÌáÊ¾
         //PreREnderListBox();
     }
 
-    //åˆ—è¡¨é¡¹å¢åŠ æç¤º
+    //ÁĞ±íÏîÔö¼ÓÌáÊ¾
     protected void PreREnderListBox()
     {
-        //åˆ—è¡¨é¡¹å¢åŠ æç¤º
+        //ÁĞ±íÏîÔö¼ÓÌáÊ¾
         DL_WorkFlowTemplate.PreRender += LLB_WorkFlowTemplate_PreRender;
 
         //LLB_WokFlow.PreRender += LLB_WokFlow_PreRender;
     }
 
-    //åˆ—è¡¨é¡¹å¢åŠ æç¤º
+    //ÁĞ±íÏîÔö¼ÓÌáÊ¾
     private void LLB_WorkFlowTemplate_PreRender(object sender, System.EventArgs e)
     {
         foreach (ListItem item in DL_WorkFlowTemplate.Items)
@@ -1067,7 +1067,7 @@ public partial class TTAPPDIYWorkFlowForm : System.Web.UI.Page
         }
     }
 
-    //åˆ—è¡¨é¡¹å¢åŠ æç¤º
+    //ÁĞ±íÏîÔö¼ÓÌáÊ¾
     private void LLB_WokFlow_PreRender(object sender, System.EventArgs e)
     {
         foreach (ListItem item in DL_WorkFlow.Items)

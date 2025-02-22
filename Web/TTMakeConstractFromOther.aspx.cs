@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -45,7 +45,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
         }
 
 
-        //CKEditoråˆå§‹åŒ–      
+        //CKEditor³õÊ¼»¯      
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(TB_MainContent);
@@ -78,7 +78,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
             DLC_DeleveryTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
 
-            //ç”ŸæˆåˆåŒæ ‘
+            //Éú³ÉºÏÍ¬Ê÷
             InitialConstractTreeByAuthority(TreeView4, strUserCode);
             InitialConstractTreeByAuthority(TreeView5, strUserCode);
 
@@ -108,7 +108,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
             DL_GoodsType.DataBind();
             DL_GoodsType.Items.Insert(0, new ListItem("--Select--", ""));
 
-            strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('ä¸ªäºº','éƒ¨é—¨','å…¬å¸','é›†å›¢','æ‰€æœ‰')";
+            strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('¸öÈË','²¿ÃÅ','¹«Ë¾','¼¯ÍÅ','All')";
             ActorGroupBLL actorGroupBLL = new ActorGroupBLL();
             lst = actorGroupBLL.GetAllActorGroups(strHQL);
             Repeater1.DataSource = lst;
@@ -186,7 +186,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
 
                     try
                     {
-                        DL_ConstractClass.SelectedValue = "é‡‡è´­ç±»";
+                        DL_ConstractClass.SelectedValue = "²É¹ºÀà";
                     }
                     catch
                     {
@@ -196,7 +196,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
                     try
                     {
 
-                        DL_Type.SelectedValue = "ç‰©èµ„é‡‡è´­";
+                        DL_Type.SelectedValue = "Îï×Ê²É¹º";
                     }
                     catch
                     {
@@ -224,7 +224,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
 
                     try
                     {
-                        DL_Currency.SelectedValue = "äººæ°‘å¸";
+                        DL_Currency.SelectedValue = "ÈËÃñ±Ò";
                     }
                     catch
                     {
@@ -233,7 +233,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
 
                     try
                     {
-                        DL_ReAndPayType.SelectedValue = "è½¬è´¦";
+                        DL_ReAndPayType.SelectedValue = "×ªÕË";
                     }
                     catch
                     {
@@ -258,7 +258,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
 
                     }
 
-                    TB_PartA.Text = "ä¸­çŸ³æ²¹ç¬¬äºŒå»ºè®¾å…¬å¸";
+                    TB_PartA.Text = "ÖĞÊ¯ÓÍµÚ¶ş½¨Éè¹«Ë¾";
 
                     try
                     {
@@ -317,14 +317,14 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
 
             }
 
-            //å¦‚æœè‡ªåŠ¨äº§ç”Ÿå®¢æˆ·ç¼–ç ï¼Œç¦ç”¨å®¢æˆ·ä»£ç è¾“å…¥æ¡† 
+            //Èç¹û×Ô¶¯²úÉú¿Í»§±àÂë£¬½ûÓÃ¿Í»§´úÂëÊäÈë¿ò 
             if (ShareClass.GetCodeRuleStatusByType("ConstractCode") == "YES")
             {
                 TB_ConstractCode.Enabled = false;
                 TB_ConstractCode.Text = DateTime.Now.ToString("yyyyMMddHHMMss");
             }
 
-            //BusinessForm,åˆ—å‡ºä¸šåŠ¡è¡¨å•ç±»å‹ 
+            //BusinessForm,ÁĞ³öÒµÎñ±íµ¥ÀàĞÍ 
             ShareClass.LoadWorkflowType(DL_WLType, strLangCode);
         }
     }
@@ -455,7 +455,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
     }
 
 
-    //å®šä¹‰åˆåŒæ ‘ï¼ˆæ ¹æ®æƒé™ï¼‰
+    //¶¨ÒåºÏÍ¬Ê÷£¨¸ù¾İÈ¨ÏŞ£©
     public void InitialConstractTreeByAuthority(TreeView ConstractTreeView, string strUserCode)
     {
         string strHQL;
@@ -463,7 +463,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
 
         String strConstractCode, strConstractName;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         ConstractTreeView.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
@@ -478,7 +478,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
 
         strHQL = "from Constract as constract where constract.RecorderCode = " + "'" + strUserCode + "'";
         strHQL += " and constract.ParentCode = ''";
-        strHQL += " and constract.Status not in ('å½’æ¡£','åˆ é™¤') ";
+        strHQL += " and constract.Status not in ('Archived','Deleted') ";
         strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
 
         ConstractBLL constractBLL = new ConstractBLL();
@@ -517,7 +517,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
 
         strHQL = "from Constract as constract where ";
         strHQL += " constract.ParentCode = " + "'" + strParentCode + "'";
-        strHQL += " and constract.Status not in ('å½’æ¡£','åˆ é™¤') ";
+        strHQL += " and constract.Status not in ('Archived','Deleted') ";
         strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
 
         lst1 = constractBLL.GetAllConstracts(strHQL);
@@ -538,7 +538,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
 
             strHQL = "from Constract as constract where ";
             strHQL += " constract.ParentCode = " + "'" + strConstractCode + "'";
-            strHQL += " and constract.Status not in ('å½’æ¡£','åˆ é™¤') ";
+            strHQL += " and constract.Status not in ('Archived','Deleted') ";
             strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
             lst2 = constractBLL.GetAllConstracts(strHQL);
 
@@ -563,7 +563,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
 
         LoadUsingConstract(strUserCode, strRelatedType, strRelatedID, strRelatedCode);
 
-        strHQL = "from Constract as constract where constract.RecorderCode = " + "'" + strUserCode + "'" + " and constract.Status not in ('å½’æ¡£','åˆ é™¤')";
+        strHQL = "from Constract as constract where constract.RecorderCode = " + "'" + strUserCode + "'" + " and constract.Status not in ('Archived','Deleted')";
         strHQL += " and constract.ConstractCode Like " + "'" + strConstractCode + "'";
         strHQL += " and constract.PartA like " + "'" + strFindPartA + "'";
         strHQL += " and constract.PartB like " + "'" + strFindPartB + "'";
@@ -578,7 +578,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
         LB_Sql1.Text = strHQL;
     }
 
-    //BusinessFormï¼Œå®šä¹‰åæœŸæ˜¯å¦å¯ç¼–è¾‘æ­¤è¡¨å•
+    //BusinessForm£¬¶¨ÒåºóÆÚÊÇ·ñ¿É±à¼­´Ë±íµ¥
     protected void DL_AllowUpdate_SelectedIndexChanged(object sender, EventArgs e)
     {
         string strHQL;
@@ -605,7 +605,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
 
     protected void BT_Create_Click(object sender, EventArgs e)
     {
-        //BusinessFormï¼Œéšè—ä¸šåŠ¡è¡¨å•å…ƒç´ 
+        //BusinessForm£¬Òş²ØÒµÎñ±íµ¥ÔªËØ
         Panel_RelatedBusiness.Visible = false;
 
         LB_ConstractID.Text = "";
@@ -614,9 +614,9 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
     }
 
-    //  By LiuJianping 2013-10-10 å…³è”æ‹›æ ‡ç®¡ç†ä¸­çš„åˆåŒé€šçŸ¥
+    //  By LiuJianping 2013-10-10 ¹ØÁªÕĞ±ê¹ÜÀíÖĞµÄºÏÍ¬Í¨Öª
     /// <summary>
-    /// ç»‘å®šæ‹›æ ‡ç®¡ç†ä¸­çš„åˆåŒé€šçŸ¥åç§°
+    /// °ó¶¨ÕĞ±ê¹ÜÀíÖĞµÄºÏÍ¬Í¨ÖªÃû³Æ
     /// </summary>
     protected void BindBMContractDiscussData()
     {
@@ -641,9 +641,9 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
     }
 
     /// <summary>
-    /// åˆ¤æ–­æ­¤æ‹›æŠ•æ ‡åˆåŒé€šçŸ¥æ˜¯å¦å·²åˆ¶å®šåˆåŒï¼Œå·²åˆ¶å®šåˆåŒ(æ­¤åˆåŒçŠ¶æ€ä¸ç­‰äºå–æ¶ˆæˆ–åˆ é™¤æˆ–å½’æ¡£)ï¼Œåˆ™è¿”å›trueï¼Œå¦åˆ™è¿”å›false
+    /// ÅĞ¶Ï´ËÕĞÍ¶±êºÏÍ¬Í¨ÖªÊÇ·ñÒÑÖÆ¶¨ºÏÍ¬£¬ÒÑÖÆ¶¨ºÏÍ¬(´ËºÏÍ¬×´Ì¬²»µÈÓÚÈ¡Ïû»òÉ¾³ı»ò¹éµµ)£¬Ôò·µ»Øtrue£¬·ñÔò·µ»Øfalse
     /// </summary>
-    /// <param name="strBMContractDiscussID">åˆåŒé€šçŸ¥å·</param>
+    /// <param name="strBMContractDiscussID">ºÏÍ¬Í¨ÖªºÅ</param>
     /// <returns></returns>
     protected bool IsMakeBMContract(string strBMContractDiscussID)
     {
@@ -658,7 +658,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
                 flag = false;
             else
             {
-                strHQL = "from Constract as constract where constract.Status != 'å½’æ¡£' and constract.Status != 'å–æ¶ˆ' and constract.Status != 'åˆ é™¤' and constract.ConstractID='" + bMContractDiscuss.ConstractID.ToString() + "' ";
+                strHQL = "from Constract as constract where constract.Status != 'Archived' and constract.Status != 'Cancel' and constract.Status != 'Deleted' and constract.ConstractID='" + bMContractDiscuss.ConstractID.ToString() + "' ";
                 ConstractBLL constractBLL = new ConstractBLL();
                 lst = constractBLL.GetAllConstracts(strHQL);
                 if (lst.Count > 0 && lst != null)
@@ -674,10 +674,10 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
     }
 
     /// <summary>
-    /// æ‹›æŠ•æ ‡åˆåŒé€šçŸ¥åˆ¶å®šåˆåŒæ—¶ï¼ŒæŠŠåˆåŒå·å†™å…¥åˆåŒé€šçŸ¥ä¸­
+    /// ÕĞÍ¶±êºÏÍ¬Í¨ÖªÖÆ¶¨ºÏÍ¬Ê±£¬°ÑºÏÍ¬ºÅĞ´ÈëºÏÍ¬Í¨ÖªÖĞ
     /// </summary>
-    /// <param name="strID">åˆåŒå·</param>
-    /// <param name="strBMContractDiscussID">åˆåŒé€šçŸ¥å·</param>
+    /// <param name="strID">ºÏÍ¬ºÅ</param>
+    /// <param name="strBMContractDiscussID">ºÏÍ¬Í¨ÖªºÅ</param>
     protected void UpdateBMContractDiscussConstractID(string strID, string strBMContractDiscussID)
     {
         string strHQL = "from BMContractDiscuss as bMContractDiscuss Where bMContractDiscuss.ID ='" + strBMContractDiscussID + "' ";
@@ -692,11 +692,11 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
     }
 
     /// <summary>
-    /// æ›´æ–°æ—¶ï¼Œå…ˆæŠŠæ—§çš„åˆåŒé€šçŸ¥ä¸­çš„åˆåŒå·è°ƒä¸º0ï¼Œç„¶åå†æŠŠåˆåŒå·å†™å…¥æ–°çš„åˆåŒé€šçŸ¥ä¸­
+    /// ¸üĞÂÊ±£¬ÏÈ°Ñ¾ÉµÄºÏÍ¬Í¨ÖªÖĞµÄºÏÍ¬ºÅµ÷Îª0£¬È»ºóÔÙ°ÑºÏÍ¬ºÅĞ´ÈëĞÂµÄºÏÍ¬Í¨ÖªÖĞ
     /// </summary>
-    /// <param name="strID">åˆåŒå·</param>
-    /// <param name="strBMContractDiscussIDNew">å½“å‰æ‰€é€‰æ‹©çš„åˆåŒé€šçŸ¥</param>
-    /// <param name="strBMContractDiscussIDOld">åŸæ¥çš„åˆåŒé€šçŸ¥</param>
+    /// <param name="strID">ºÏÍ¬ºÅ</param>
+    /// <param name="strBMContractDiscussIDNew">µ±Ç°ËùÑ¡ÔñµÄºÏÍ¬Í¨Öª</param>
+    /// <param name="strBMContractDiscussIDOld">Ô­À´µÄºÏÍ¬Í¨Öª</param>
     protected void UpdateBMContractDiscussConstractID(string strID, string strBMContractDiscussIDNew, string strBMContractDiscussIDOld)
     {
         string strHQL = "from BMContractDiscuss as bMContractDiscuss Where bMContractDiscuss.ID ='" + strBMContractDiscussIDOld + "' ";
@@ -720,9 +720,9 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
     }
 
     /// <summary>
-    /// æ ¹æ®åˆåŒå·è·å–åˆåŒé€šçŸ¥ID
+    /// ¸ù¾İºÏÍ¬ºÅ»ñÈ¡ºÏÍ¬Í¨ÖªID
     /// </summary>
-    /// <param name="strID">åˆåŒå·</param>
+    /// <param name="strID">ºÏÍ¬ºÅ</param>
     /// <returns></returns>
     protected string GetBMContractDiscussIDByConstractID(string strID)
     {
@@ -1166,7 +1166,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
 
         if (strConstractID == "")
         {
-            //å¦‚æœè‡ªåŠ¨äº§ç”Ÿå®¢æˆ·ç¼–ç ï¼Œç¦ç”¨å®¢æˆ·ä»£ç è¾“å…¥æ¡† 
+            //Èç¹û×Ô¶¯²úÉú¿Í»§±àÂë£¬½ûÓÃ¿Í»§´úÂëÊäÈë¿ò 
             if (ShareClass.GetCodeRuleStatusByType("ConstractCode") == "YES")
             {
                 TB_ConstractCode.Enabled = false;
@@ -1183,7 +1183,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
 
     protected void AddConstract()
     {
-        //åˆ¤æ–­æ‹›æŠ•æ ‡åˆåŒé€šçŸ¥æ˜¯å¦å·²åˆ¶å®šåˆåŒ By LiuJianping 2013-10-10
+        //ÅĞ¶ÏÕĞÍ¶±êºÏÍ¬Í¨ÖªÊÇ·ñÒÑÖÆ¶¨ºÏÍ¬ By LiuJianping 2013-10-10
         if (IsMakeBMContract(DL_ConstractNotice.SelectedValue.Trim()))
         {
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTSCHTTZYZDHTJC + "')", true);
@@ -1296,18 +1296,18 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
             {
                 constractBLL.AddConstract(constract);
 
-                //ç”ŸæˆåˆåŒæ ‘
+                //Éú³ÉºÏÍ¬Ê÷
                 InitialConstractTreeByAuthority(TreeView4, strUserCode);
                 InitialConstractTreeByAuthority(TreeView5, strUserCode);
 
                 strConstractID = ShareClass.GetMyCreatedMaxConstractID(strUserCode);
                 LB_ConstractID.Text = strConstractID;
 
-                //ä¾é¡¹ç›®ç±»å‹æ·»åŠ å…³è”çš„å·¥ä½œæµæ¨¡æ¿
+                //ÒÀÏîÄ¿ÀàĞÍÌí¼Ó¹ØÁªµÄ¹¤×÷Á÷Ä£°å
                 ShareClass.AddRelatedWorkFlowTemplateByProjectType(strConstractType, strConstractID, "Constract", "Constract", "ConstractType");
 
 
-                //æ·»åŠ ç›¸å…³å¯¹è±¡åˆ°åˆåŒ
+                //Ìí¼ÓÏà¹Ø¶ÔÏóµ½ºÏÍ¬
                 AddRelatedObjectToConstract(strConstractCode, strRelatedType, strRelatedID);
                 if (strRelatedType == "PROEJCT")
                 {
@@ -1334,11 +1334,11 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
 
                             constractSales.ConstractCode = wzCompact.CompactCode;
                             constractSales.SalesName = ShareClass.GetUserName(wzCompact.Compacter.Trim());
-                            constractSales.Duty = "åˆåŒå‘˜";
+                            constractSales.Duty = "ºÏÍ¬Ô±";
                             constractSales.Comment = "";
                             constractSales.Commission = 0;
                             constractSales.GiveTime = DateTime.Now;
-                            constractSales.CommissionStatus = "æœªå‘";
+                            constractSales.CommissionStatus = "Unsent";
 
                             constractSalesBLL.AddConstractSales(constractSales);
 
@@ -1419,7 +1419,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
                             DocumentBLL documentBLL = new DocumentBLL();
                             Document document = new Document();
 
-                            document.RelatedType = "åˆåŒ";
+                            document.RelatedType = "ºÏÍ¬";
 
                             document.DocTypeID = int.Parse("1");
                             strDocType = GetDocTypeName("1");
@@ -1432,9 +1432,9 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
                             document.UploadManCode = strUserCode;
                             document.UploadManName = ShareClass.GetUserName(strUserCode);
                             document.UploadTime = DateTime.Now;
-                            document.Visible = "å…¨ä½“";
+                            document.Visible = "È«Ìå";
                             document.DepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
-                            document.Status = "å¤„ç†ä¸­";
+                            document.Status = "InProgress";
                             document.RelatedName = "";
 
 
@@ -1633,7 +1633,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
 
             strOldParentCode = constract.ParentCode.Trim();
 
-            //åˆ¤æ–­æ‹›æŠ•æ ‡åˆåŒé€šçŸ¥æ˜¯å¦å·²åˆ¶å®šåˆåŒ By LiuJianping 2013-10-10
+            //ÅĞ¶ÏÕĞÍ¶±êºÏÍ¬Í¨ÖªÊÇ·ñÒÑÖÆ¶¨ºÏÍ¬ By LiuJianping 2013-10-10
             string paraID = GetBMContractDiscussIDByConstractID(intConstractID.ToString());
             if (paraID.Trim() == DL_ConstractNotice.SelectedValue.Trim())
             {
@@ -1670,13 +1670,13 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
                 strHQL = "Update T_Constract Set ParentCode = " + "'" + LB_ParentCode.Text.Trim() + "'" + " Where ConstractCode = " + "'" + strConstractCode + "'";
                 ShareClass.RunSqlCommand(strHQL);
 
-                //ä¾é¡¹ç›®ç±»å‹æ·»åŠ å…³è”çš„å·¥ä½œæµæ¨¡æ¿
+                //ÒÀÏîÄ¿ÀàĞÍÌí¼Ó¹ØÁªµÄ¹¤×÷Á÷Ä£°å
                 ShareClass.AddRelatedWorkFlowTemplateByProjectType(strConstractType, intConstractID.ToString(), "Constract", "Constract", "ConstractType");
 
-                //BusinessFormï¼Œå…³è”ç›¸åº”çš„ä¸šåŠ¡è¡¨å•æ¨¡æ¿
+                //BusinessForm£¬¹ØÁªÏàÓ¦µÄÒµÎñ±íµ¥Ä£°å
                 ShareClass.SaveRelatedBusinessForm("Constract", intConstractID.ToString(), DL_WFTemplate.SelectedValue, DL_AllowUpdate.SelectedValue, strUserCode);
 
-                //ç”ŸæˆåˆåŒæ ‘
+                //Éú³ÉºÏÍ¬Ê÷
                 InitialConstractTreeByAuthority(TreeView4, strUserCode);
                 InitialConstractTreeByAuthority(TreeView5, strUserCode);
 
@@ -1815,7 +1815,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
                 LB_ConstractID.Text = strConstractID;
 
 
-                //BusinessFormï¼Œåˆ—å‡ºå…³è”è¡¨å•æ¨¡æ¿
+                //BusinessForm£¬ÁĞ³ö¹ØÁª±íµ¥Ä£°å
                 try
                 {
                     Panel_RelatedBusiness.Visible = true;
@@ -1841,7 +1841,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
                 {
                 }
 
-                //BusinessForm,è£…è½½å…³è”ä¿¡æ¯
+                //BusinessForm,×°ÔØ¹ØÁªĞÅÏ¢
                 TabContainer4.ActiveTabIndex = 0;
                 ShareClass.LoadBusinessForm("Constract", strConstractID, DL_WFTemplate.SelectedValue.Trim(), IFrame_RelatedInformation);
 
@@ -1885,7 +1885,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
                 Constract constract = (Constract)lst[0];
 
                 intConstractID = constract.ConstractID;
-                constract.Status = "åˆ é™¤";
+                constract.Status = "Deleted";
 
                 try
                 {
@@ -1894,7 +1894,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
                     LoadUsingConstract(strUserCode, strRelatedType, strRelatedID, strRelatedCode);
                     LoadDeletedConstract(strUserCode, strRelatedType, strRelatedID, strRelatedCode);
 
-                    DL_Status.SelectedValue = "åˆ é™¤";
+                    DL_Status.SelectedValue = "Deleted";
 
                     HL_RelatedDoc.Enabled = false;
                     HL_ConstractReview.Enabled = false;
@@ -1921,7 +1921,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
         }
     }
 
-    //BusinessForm,å·¥ä½œæµç±»å‹æŸ¥è¯¢
+    //BusinessForm,¹¤×÷Á÷ÀàĞÍ²éÑ¯
     protected void DL_WLType_SelectedIndexChanged(object sender, EventArgs e)
     {
         string strHQL, strWLType;
@@ -1931,7 +1931,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
         {
             return;
         }
-        strHQL = "Select TemName From T_WorkFlowTemplate Where type = " + "'" + strWLType + "'" + " and Visible = 'YES' and Authority = 'æ‰€æœ‰'";
+        strHQL = "Select TemName From T_WorkFlowTemplate Where type = " + "'" + strWLType + "'" + " and Visible = 'YES' and Authority = 'All'";
         strHQL += " Order by SortNumber ASC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTemplate");
         DL_WFTemplate.DataSource = ds;
@@ -1943,7 +1943,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
     }
 
 
-    //BusinessForm,å¯åŠ¨å…³è”çš„ä¸šåŠ¡è¡¨å•
+    //BusinessForm,Æô¶¯¹ØÁªµÄÒµÎñ±íµ¥
     protected void BT_StartupBusinessForm_Click(object sender, EventArgs e)
     {
         string strURL;
@@ -1969,7 +1969,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
     }
 
-    //BusinessForm,åˆ é™¤å…³è”çš„ä¸šåŠ¡è¡¨å•
+    //BusinessForm,É¾³ı¹ØÁªµÄÒµÎñ±íµ¥
     protected void BT_DeleteBusinessForm_Click(object sender, EventArgs e)
     {
         string strHQL;
@@ -2485,7 +2485,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
         string strGroupName = TB_ActorGroupName.Text.Trim();
         strGroupName = "%" + strGroupName + "%";
 
-        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('ä¸ªäºº','éƒ¨é—¨','å…¬å¸','é›†å›¢','æ‰€æœ‰')";
+        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('¸öÈË','²¿ÃÅ','¹«Ë¾','¼¯ÍÅ','All')";
         strHQL += " and GroupName Like " + "'" + strGroupName + "'";
         ActorGroupBLL actorGroupBLL = new ActorGroupBLL();
         lst = actorGroupBLL.GetAllActorGroups(strHQL);
@@ -3035,7 +3035,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popDetailWindow','true') ", true);
     }
 
-    //æ·»åŠ ç›¸å…³å¯¹è±¡åˆ°åˆåŒ
+    //Ìí¼ÓÏà¹Ø¶ÔÏóµ½ºÏÍ¬
     protected void AddRelatedObjectToConstract(string strConstractCode, string strRelatedType, string strRelatedID)
     {
         string strHQL;
@@ -3143,7 +3143,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
         {
             strHQL = "from Constract as constract where constract.RecorderCode = " + "'" + strUserCode + "'";
             strHQL += " and constract.ConstractCode in (Select constractRelatedProject.ConstractCode From ConstractRelatedProject as constractRelatedProject Where constractRelatedProject.ProjectID = " + strRelatedID + ")";
-            strHQL += " and constract.Status not in ('å½’æ¡£','åˆ é™¤') ";
+            strHQL += " and constract.Status not in ('Archived','Deleted') ";
             strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
             lst = constractBLL.GetAllConstracts(strHQL);
 
@@ -3157,7 +3157,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
         {
             strHQL = "from Constract as constract where constract.RecorderCode = " + "'" + strUserCode + "'";
             strHQL += " and constract.ConstractCode in (Select wzCompact.RelatedConstractCode From WZCompact as wzCompact Where wzCompact.RelatedConstractCode = " + "'" + strRelatedCode + "'" + ")";
-            strHQL += " and constract.Status not in ('å½’æ¡£','åˆ é™¤') ";
+            strHQL += " and constract.Status not in ('Archived','Deleted') ";
             strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
             lst = constractBLL.GetAllConstracts(strHQL);
 
@@ -3179,7 +3179,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
         {
             strHQL = "from Constract as constract where constract.RecorderCode = " + "'" + strUserCode + "'";
             strHQL += " and constract.ConstractCode in (Select constractRelatedProject.ConstractCode From ConstractRelatedProject as constractRelatedProject Where constractRelatedProject.ProjectID = " + strRelatedID + ")";
-            strHQL += " and constract.Status = 'åˆ é™¤'";
+            strHQL += " and constract.Status = 'Deleted'";
             strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
             lst = constractBLL.GetAllConstracts(strHQL);
 
@@ -3193,7 +3193,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
         {
             strHQL = "from Constract as constract where constract.RecorderCode = " + "'" + strUserCode + "'";
             strHQL += " and constract.ConstractCode in (Select wzCompact.RelatedConstractCode From WZCompact as wzCompact Where wzCompact.RelatedConstractCode = " + "'" + strRelatedCode + "'" + ")";
-            strHQL += " and constract.Status = 'åˆ é™¤'";
+            strHQL += " and constract.Status = 'Deleted'";
             strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
             lst = constractBLL.GetAllConstracts(strHQL);
 
@@ -3209,7 +3209,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Constract as constract where  constract.Status not in ('å½’æ¡£','åˆ é™¤') ";
+        strHQL = "from Constract as constract where  constract.Status not in ('Archived','Deleted') ";
         strHQL += " and constract.ConstractCode not in (Select constractRelatedConstract.RelatedConstractCode From ConstractRelatedConstract as constractRelatedConstract Where constractRelatedConstract.ConstractCode = " + "'" + strConstractCode + "'" + ")";
         strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
 
@@ -3227,7 +3227,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Constract as constract where constract.Status not in ('å½’æ¡£','åˆ é™¤') ";
+        strHQL = "from Constract as constract where constract.Status not in ('Archived','Deleted') ";
         strHQL += " and constract.ConstractCode in (Select constractRelatedConstract.RelatedConstractCode From ConstractRelatedConstract as constractRelatedConstract Where constractRelatedConstract.ConstractCode = " + "'" + strConstractCode + "'" + ")";
         strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
 
@@ -3438,7 +3438,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
         DL_CustomerList.DataSource = lst;
         DL_CustomerList.DataBind();
 
-        DL_CustomerList.Items.Insert(0, new ListItem("--è¯·é€‰æ‹©å®¢æˆ·--", ""));
+        DL_CustomerList.Items.Insert(0, new ListItem("--ÇëÑ¡Ôñ¿Í»§--", ""));
     }
 
     public string GetConstractName(string strConstractCode)

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -74,7 +74,7 @@ public partial class TTPersonalSpaceModuleSetForUser : System.Web.UI.Page
             }
 
            
-            //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—ï¼Œå¹¶åˆ·æ–°é¡µé¢ç¼“å­˜
+            //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾£¬²¢Ë¢ĞÂÒ³Ãæ»º´æ
             ChangePageCache();
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click111", "alert('" + Resources.lang.ZZBCCG + "')", true);
@@ -98,20 +98,20 @@ public partial class TTPersonalSpaceModuleSetForUser : System.Web.UI.Page
             {
                 strHQL = string.Format(@"select distinct A.ID,A.ModuleName,B.homemodulename,A.SortNumber,A.Visible from T_ProModuleLevelForPageUser A,T_ProModuleLevelForPage B 
                        where A.ModuleName = B.ModuleName and B.Visible = 'YES' and B.IsDeleted = 'NO' and A.UserCode = '{0}' and A.UserType = '{1}' and B.LangCode = '{2}' 
-                       and B.ParentModule = 'ä¸ªäººç©ºé—´' Order By SortNumber ASC", strUserCode, strUserType, strLangCode);
+                       and B.ParentModule = 'PersonalSpace' Order By SortNumber ASC", strUserCode, strUserType, strLangCode);
             }
             else
             {
                 strHQL = string.Format(@"select distinct A.ID,A.ModuleName,B.homemodulename,A.SortNumber,A.Visible from T_ProModuleLevelForPageUser A,T_ProModuleLevelForPage B 
                        where A.ModuleName = B.ModuleName and B.Visible = 'YES' and B.IsDeleted = 'NO' and A.UserCode = '{0}' and A.UserType = '{1}' and B.LangCode = '{2}' 
-                       and B.ParentModule = 'ä¸ªäººç©ºé—´å¤–éƒ¨' Order By SortNumber ASC", strUserCode, strUserType, strLangCode);
+                       and B.ParentModule = 'ExternalPersonalSpace' Order By SortNumber ASC", strUserCode, strUserType, strLangCode);
             }
         }
         else
         {
             strHQL = string.Format(@"select distinct A.ID,A.ModuleName,B.homemodulename,A.SortNumber,A.Visible from T_ProModuleLevelForPageUser A,T_ProModuleLevelForPage B 
                        where A.ModuleName = B.ModuleName and B.Visible = 'YES' and B.IsDeleted = 'NO' and A.UserCode = '{0}' and A.UserType = '{1}' and B.LangCode = '{2}' 
-                       and B.ParentModule = 'ä¸ªäººç©ºé—´SAAS' Order By SortNumber ASC", strUserCode, strUserType, strLangCode);
+                       and B.ParentModule = 'PersonalSpaceSaaS' Order By SortNumber ASC", strUserCode, strUserType, strLangCode);
         }
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProModuleLevelForPage");
@@ -144,14 +144,14 @@ public partial class TTPersonalSpaceModuleSetForUser : System.Web.UI.Page
 
  
 
-    //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—ï¼Œå¹¶åˆ·æ–°é¡µé¢ç¼“å­˜
+    //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾£¬²¢Ë¢ĞÂÒ³Ãæ»º´æ
     protected void ChangePageCache()
     {
-        //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—
+        //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾
         ShareClass.SetPageCacheMark("1");
         Session["CssDirectoryChangeNumber"] = "1";
 
-        //ç»™ä¸»ç•Œé¢ä¸ªäººç©ºé—´æ·»åŠ ç©ºè¡Œä»¥åˆ·æ–°é¡µé¢ç¼“å­˜
+        //¸øÖ÷½çÃæ¸öÈË¿Õ¼äÌí¼Ó¿ÕĞĞÒÔË¢ĞÂÒ³Ãæ»º´æ
         ShareClass.AddSpaceLineToPersonalSpaceForRefreshCache();
     }
 

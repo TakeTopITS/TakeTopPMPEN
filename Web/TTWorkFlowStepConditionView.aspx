@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkFlowStepConditionView.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkFlowStepConditionView.aspx.cs"
     Inherits="TTWorkFlowStepConditionView" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -68,13 +68,13 @@
                             Width="100%" ShowHeader="false">
 
                             <Columns>
-                                <asp:BoundColumn DataField="StepID" HeaderText="æ­¥åº">
+                                <asp:BoundColumn DataField="StepID" HeaderText="²½Ðò">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="ConDetail" HeaderText="æ¡ä»¶æè¿°">
+                                <asp:BoundColumn DataField="ConDetail" HeaderText="Ìõ¼þÃèÊö">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="70%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="NextSortNumber" HeaderText="ä¸‹ä¸€æ­¥">
+                                <asp:BoundColumn DataField="NextSortNumber" HeaderText="ÏÂÒ»²½">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                 </asp:BoundColumn>
                             </Columns>

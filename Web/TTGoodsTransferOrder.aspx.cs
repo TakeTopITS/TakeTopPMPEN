@@ -1,4 +1,4 @@
-ï»¿
+
 
 using ProjectMgt.BLL;
 using ProjectMgt.Model;
@@ -28,7 +28,7 @@ public partial class TTGoodsTransferOrder : System.Web.UI.Page
         LB_UserName.Text = strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "èµ„äº§ç™»è®°å…¥åº“", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "×Ê²úµÇ¼ÇÈë¿â", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -282,7 +282,7 @@ public partial class TTGoodsTransferOrder : System.Web.UI.Page
                 LoadGoodsShipmentDetail(strShipmentNO);
 
                 strRelatedType = goodsShipmentOrder.RelatedType.Trim();
-                if (strRelatedType == "é¡¹ç›®")
+                if (strRelatedType == "Project")
                 {
                     BT_RelatedProject.Visible = true;
                 }
@@ -953,7 +953,7 @@ public partial class TTGoodsTransferOrder : System.Web.UI.Page
 
                 BT_NewDetail.Visible = false;
 
-                int intCount = GetRelatedWL("ç‰©æ–™å‡ºè´§", "ç‰©æ–™", goodsShipmentDetail.ShipmentNO);
+                int intCount = GetRelatedWL("ÎïÁÏ³ö»õ", "ÎïÁÏ", goodsShipmentDetail.ShipmentNO);
                 if (intCount > 0)
                 {
                     //BT_New.Enabled = false;
@@ -999,7 +999,7 @@ public partial class TTGoodsTransferOrder : System.Web.UI.Page
                 {
                     goodsShipmentDetailBLL.DeleteGoodsShipmentDetail(goodsShipmentDetail);
 
-                    //æ›´æ”¹ç‰©æ–™åº“å­˜åŸä½ç½®æ•°é‡
+                    //¸ü¸ÄÎïÁÏ¿â´æÔ­Î»ÖÃÊıÁ¿
                     ShareClass.UpdateGoodsNumberForDelete(strFromGoodsID, deOldNumber);
 
                     LoadGoodsShipmentDetail(strShipmentNO);
@@ -1191,7 +1191,7 @@ public partial class TTGoodsTransferOrder : System.Web.UI.Page
                 LB_ID.Text = ShareClass.GetMyCreatedMaxGoodsShipmentDetailID().ToString();
 
 
-                //æ›´æ–°å¯¹åº”ç‰©æ–™è®°å½•æ•°é‡
+                //¸üĞÂ¶ÔÓ¦ÎïÁÏ¼ÇÂ¼ÊıÁ¿
                 ShareClass.UpdateGoodsNumberForAdd(strFromGoodsID, deNumber);
 
                 string strCountMethod = ShareClass.GetGoodsStockCountMethod(strToPosition);
@@ -1206,7 +1206,7 @@ public partial class TTGoodsTransferOrder : System.Web.UI.Page
                 strProductionEquipmentNumber = ds.Tables[0].Rows[0]["ProductionEquipmentNumber"].ToString();
                 strMaterialFormNumber = ds.Tables[0].Rows[0]["MaterialFormNumber"].ToString();
 
-                //æ·»åŠ ç›¸åŒè®°å½•åˆ°ç‰©æ–™è¡¨
+                //Ìí¼ÓÏàÍ¬¼ÇÂ¼µ½ÎïÁÏ±í
                 ShareClass.addOrUpdateGoods(strCountMethod, "0", strShipmentNO, strGoodsCode, strGoodsName, strSN, deNumber, strUnitName,
                     strUserCode, strType, strSpec, strModelNumber, strToPosition, DL_WHPosition.SelectedValue.Trim(), dePrice, "YES", DL_CurrencyType.SelectedValue.Trim(), DateTime.Now, intWarrantyPeriod,
                     strManufacturer, "", LB_ID.Text, "", 0, 0,
@@ -1342,15 +1342,15 @@ public partial class TTGoodsTransferOrder : System.Web.UI.Page
             {
                 goodsShipmentDetailBLL.UpdateGoodsShipmentDetail(goodsShipmentDetail, intID);
 
-                //æ›´æ”¹ç‰©æ–™åŸä½ç½®åº“å­˜æ•°é‡
+                //¸ü¸ÄÎïÁÏÔ­Î»ÖÃ¿â´æÊıÁ¿
                 ShareClass.UpdateGoodsNumberForUpdate(strFromGoodsID, deNumber, deOldNumber);
 
-                //æ·»åŠ ç›¸åŒè®°å½•åˆ°ç‰©æ–™æ˜ç»†è¡¨
+                //Ìí¼ÓÏàÍ¬¼ÇÂ¼µ½ÎïÁÏÃ÷Ï¸±í
                 string strGoodsID = goodsShipmentDetail.FromGoodsID.ToString();
                 string strCountMethod = ShareClass.GetGoodsStockCountMethod(strToPosition);
                 string strPhotoURL = "";
 
-                //å–å¾—åŸæ¥çš„æ•°é‡å’Œä»·æ ¼
+                //È¡µÃÔ­À´µÄÊıÁ¿ºÍ¼Û¸ñ
                 decimal deOldCheckInNumber = goodsShipmentDetail.Number;
                 decimal deOldCheckInPrice = goodsShipmentDetail.Price;
 

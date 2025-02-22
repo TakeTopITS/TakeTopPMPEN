@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -31,7 +31,7 @@ public partial class TTProjectMaterialPaymentApplicantView : System.Web.UI.Page
 
         strAOID = Request.QueryString["AOID"];
 
-        //this.Title = "Áâ©ÊñôÂÖ•Â∫ìÂçï";
+        //this.Title = "ŒÔ¡œ»Îø‚µ•";
 
 
         if (Page.IsPostBack != true)

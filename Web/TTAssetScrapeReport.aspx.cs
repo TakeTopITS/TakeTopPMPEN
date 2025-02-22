@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -33,7 +33,7 @@ public partial class TTAssetScrapeReport : System.Web.UI.Page
 
         string strDepartString;
 
-        //this.Title = "璧勪骇鎶ュ簾鎶ヨ〃";
+        //this.Title = "资产报废报表";
 
         LB_UserCode.Text = strUserCode;
         strUserName = Session["UserName"].ToString();

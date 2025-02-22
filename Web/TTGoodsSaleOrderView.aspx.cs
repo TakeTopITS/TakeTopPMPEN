@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -31,7 +31,7 @@ public partial class TTGoodsSaleOrderView : System.Web.UI.Page
         string strUserCode = Session["UserCode"].ToString();
 
 
-        //this.Title = "鐗╂枡閿�鍞崟";
+        //this.Title = "物料销售单";
 
         strSOID = Request.QueryString["SOID"];
 

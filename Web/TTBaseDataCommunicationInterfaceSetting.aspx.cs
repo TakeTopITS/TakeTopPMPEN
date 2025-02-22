@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -24,7 +24,7 @@ public partial class TTBaseDataCommunicationInterfaceSetting : System.Web.UI.Pag
         strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "åŸºç¡€æ•°æ®(å¤–ç½®)", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "»ù´¡Êý¾Ý(ÍâÖÃ)", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -34,9 +34,9 @@ public partial class TTBaseDataCommunicationInterfaceSetting : System.Web.UI.Pag
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
         {
-            LoadWeiXinStand();//å¾®ä¿¡å…¬ä¼—å¸å·
+            LoadWeiXinStand();//Î¢ÐÅ¹«ÖÚÕÊºÅ
 
-            LoadWeChatQYAccount();//å¾®ä¿¡ä¼ä¸šå·
+            LoadWeChatQYAccount();//Î¢ÐÅÆóÒµºÅ
 
             LoadSMSInterface();
 
@@ -303,7 +303,7 @@ public partial class TTBaseDataCommunicationInterfaceSetting : System.Web.UI.Pag
     }
 
 
-    //åˆ¤æ–­è¾“å…¥çš„å­—ç¬¦æ˜¯å¦æ˜¯æ•°å­—
+    //ÅÐ¶ÏÊäÈëµÄ×Ö·ûÊÇ·ñÊÇÊý×Ö
     private bool IsNumeric(string str)
     {
         System.Text.RegularExpressions.Regex reg1
@@ -317,7 +317,7 @@ public partial class TTBaseDataCommunicationInterfaceSetting : System.Web.UI.Pag
 
         if (TB_WeiXinNo.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å…¬ä¼—å·AppIDä¸èƒ½ä¸ºç©ºï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¹«ÖÚºÅAppID²»ÄÜÎª¿Õ£¡')", true);
             TB_WeiXinNo.Focus();
 
             return;
@@ -364,7 +364,7 @@ public partial class TTBaseDataCommunicationInterfaceSetting : System.Web.UI.Pag
     {
         if (TB_WeChatQYCorpID.Text.Trim() == "" || TB_WeChatQYApplicationID.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ä¼ä¸šå·CordIDå’Œåº”ç”¨IDä¸èƒ½ä¸ºç©ºï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÆóÒµºÅCordIDºÍÓ¦ÓÃID²»ÄÜÎª¿Õ£¡')", true);
             TB_WeChatQYCorpID.Focus();
             TB_WeChatQYApplicationID.Focus();
             return;
@@ -412,13 +412,13 @@ public partial class TTBaseDataCommunicationInterfaceSetting : System.Web.UI.Pag
                 DataTable dtMeetingSystem = ShareClass.GetDataSetFromSql(strMeetingSystemHQL, "strMeetingSystemHQL").Tables[0];
                 if (dtMeetingSystem != null && dtMeetingSystem.Rows.Count > 0)
                 {
-                    //ä¿®æ”¹
+                    //ÐÞ¸Ä
                     string strUpdateMeetingSystemHQL = string.Format("update T_MeetingSystemURL set MeetingSystemURL = '{0}',MeetingURL='{1}',MeetingCount={2}", strMeetingSystemURL, strMeetingURL, intMeetingCount);
                     ShareClass.RunSqlCommand(strUpdateMeetingSystemHQL);
                 }
                 else
                 {
-                    //å¢žåŠ 
+                    //Ôö¼Ó
                     string strAddMeetingSystemHQL = string.Format("insert into T_MeetingSystemURL values('{0}','{1}',{2})", strMeetingSystemURL, strMeetingURL, intMeetingCount);
                     ShareClass.RunSqlCommand(strAddMeetingSystemHQL);
                 }

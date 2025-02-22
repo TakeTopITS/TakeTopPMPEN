@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.ComponentModel;
@@ -27,7 +27,7 @@ public partial class TTAppCustomerService : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","商机需求处理", strUserCode);
+        bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","�̻�������", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -44,7 +44,7 @@ public partial class TTAppCustomerService : System.Web.UI.Page
 
             strHQL = "from CustomerQuestion as customerQuestion ";
             strHQL += " where customerQuestion.OperatorCode = " + "'" + strUserCode + "'" + "";
-            strHQL += " and customerQuestion.Status = '新建' ";
+            strHQL += " and customerQuestion.Status = 'New' ";
             strHQL += " order by customerQuestion.ID DESC";
             customerQuestionBLL = new CustomerQuestionBLL();
             lst = customerQuestionBLL.GetAllCustomerQuestions(strHQL);
@@ -53,14 +53,14 @@ public partial class TTAppCustomerService : System.Web.UI.Page
             DataGrid1.DataBind();
             LB_Sql1.Text = strHQL;
 
-            strHQL = "from CustomerQuestion as customerQuestion where customerQuestion.OperatorCode = " + "'" + strUserCode + "'" + " and customerQuestion.OperatorStatus = '受理' and customerQuestion.IsImportant = 'YES' order by customerQuestion.ID DESC";
+            strHQL = "from CustomerQuestion as customerQuestion where customerQuestion.OperatorCode = " + "'" + strUserCode + "'" + " and customerQuestion.OperatorStatus = 'Accepted' and customerQuestion.IsImportant = 'YES' order by customerQuestion.ID DESC";
             lst = customerQuestionBLL.GetAllCustomerQuestions(strHQL);
 
             DataGrid5.DataSource = lst;
             DataGrid5.DataBind();
             LB_Sql5.Text = strHQL;
 
-            strHQL = "from CustomerQuestion as customerQuestion where customerQuestion.OperatorCode = " + "'" + strUserCode + "'" + " and customerQuestion.OperatorStatus = '受理' order by customerQuestion.ID DESC";
+            strHQL = "from CustomerQuestion as customerQuestion where customerQuestion.OperatorCode = " + "'" + strUserCode + "'" + " and customerQuestion.OperatorStatus = 'Accepted' order by customerQuestion.ID DESC";
             lst = customerQuestionBLL.GetAllCustomerQuestions(strHQL);
 
             DataGrid4.DataSource = lst;
@@ -175,7 +175,7 @@ public partial class TTAppCustomerService : System.Web.UI.Page
 
         strHQL = "from CustomerQuestion as customerQuestion ";
         strHQL += " where customerQuestion.OperatorCode = " + "'" + strUserCode + "'" + "";
-        strHQL += " and customerQuestion.Status = '新建' ";
+        strHQL += " and customerQuestion.Status = 'New' ";
         strHQL += " order by customerQuestion.ID DESC";
         customerQuestionBLL = new CustomerQuestionBLL();
         lst = customerQuestionBLL.GetAllCustomerQuestions(strHQL);
@@ -184,7 +184,7 @@ public partial class TTAppCustomerService : System.Web.UI.Page
         DataGrid1.DataBind();
         LB_Sql1.Text = strHQL;
 
-        strHQL = "from CustomerQuestion as customerQuestion where customerQuestion.OperatorCode = " + "'" + strUserCode + "'" + " and customerQuestion.OperatorStatus = '受理' order by customerQuestion.ID DESC";
+        strHQL = "from CustomerQuestion as customerQuestion where customerQuestion.OperatorCode = " + "'" + strUserCode + "'" + " and customerQuestion.OperatorStatus = 'Accepted' order by customerQuestion.ID DESC";
         lst = customerQuestionBLL.GetAllCustomerQuestions(strHQL);
 
         DataGrid4.DataSource = lst;

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAllSMSSendReport.aspx.cs" Inherits="TTAllSMSSendReport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAllSMSSendReport.aspx.cs" Inherits="TTAllSMSSendReport" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -41,13 +41,13 @@
 
                                         <tr>
                                             <td style="text-align: right;">
-                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShouJiHao%>"></asp:Label>ï¼š
+                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShouJiHao%>"></asp:Label>£º
                                             </td>
                                             <td>
                                                 <asp:TextBox ID="TB_MobileCode" runat="server" Width="190px"></asp:TextBox>
                                             </td>
                                             <td style="text-align: right;">
-                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,RTXHao%>"></asp:Label>ï¼š
+                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,RTXHao%>"></asp:Label>£º
                                             </td>
                                             <td>
                                                 <asp:TextBox ID="TB_RTXCode" runat="server" Width="190px"></asp:TextBox>
@@ -57,7 +57,7 @@
 
                                         <tr>
                                             <td style="text-align: right;" width="10%">
-                                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,FaSongKaiShiShiJian%>"></asp:Label>ï¼š
+                                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,FaSongKaiShiShiJian%>"></asp:Label>£º
                                             </td>
                                             <td width="30%">
 
@@ -67,7 +67,7 @@
                                                 </ajaxToolkit:CalendarExtender>
                                             </td>
                                             <td style="text-align: right;" width="15%">
-                                                <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,FaSongJieShuShiJian%>"></asp:Label>ï¼š
+                                                <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,FaSongJieShuShiJian%>"></asp:Label>£º
                                             </td>
                                             <td width="20%">
 
@@ -94,7 +94,7 @@
                                             </td>
                                             <td>
                                                 <a href="javascript:window.print()">
-                                                    <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" /></a>
+                                                    <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" /></a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -161,29 +161,29 @@
                                         ShowHeader="false" Height="1px" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                         Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" PageSize="25">
                                         <Columns>
-                                            <asp:BoundColumn DataField="ID" HeaderText="åºå·">
+                                            <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                             </asp:BoundColumn>
 
-                                            <asp:BoundColumn DataField="Mobile" HeaderText="æ‰‹æœºå·">
+                                            <asp:BoundColumn DataField="Mobile" HeaderText="ÊÖ»úºÅ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Msg" HeaderText="å†…å®¹">
+                                            <asp:BoundColumn DataField="Msg" HeaderText="ÄÚÈÝ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="33%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="State" HeaderText="çŠ¶æ€">
+                                            <asp:BoundColumn DataField="State" HeaderText="×´Ì¬">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="SendYorn" HeaderText="æˆåŠŸ">
+                                            <asp:BoundColumn DataField="SendYorn" HeaderText="Success">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="SendTime" HeaderText="å‘é€æ—¶é—´">
+                                            <asp:BoundColumn DataField="SendTime" HeaderText="·¢ËÍÊ±¼ä">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                             </asp:BoundColumn>
                                             <asp:BoundColumn DataField="UserRTXCode" HeaderText="RTXCode">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="RTXState" HeaderText="çŠ¶æ€">
+                                            <asp:BoundColumn DataField="RTXState" HeaderText="×´Ì¬">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
 
@@ -199,7 +199,7 @@
                             </tr>
                             <tr>
                                 <td style="width: 1200px; text-align: center;">
-                                    <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,Di%>"></asp:Label>ï¼š<asp:Label ID="LB_PageIndex" runat="server"></asp:Label>
+                                    <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,Di%>"></asp:Label>£º<asp:Label ID="LB_PageIndex" runat="server"></asp:Label>
                                     &nbsp;<asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,YeGong%>"></asp:Label>
                                     <asp:Label ID="LB_TotalPageNumber" runat="server"></asp:Label>
                                     &nbsp;<asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,Ye%>"></asp:Label>

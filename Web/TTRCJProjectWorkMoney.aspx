@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTRCJProjectWorkMoney.aspx.cs" Inherits="TTRCJProjectWorkMoney" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTRCJProjectWorkMoney.aspx.cs" Inherits="TTRCJProjectWorkMoney" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ç¡®è®¤æ”¶æ¬¾è®°å½•</title>
+    <title>È·ÈÏÊÕ¿î¼ÇÂ¼</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -50,7 +50,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">æ”¶æ¬¾å·¥ä½œç™»è®°æ—¥å¿—
+                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">ÊÕ¿î¹¤×÷µÇ¼ÇÈÕÖ¾
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -62,7 +62,7 @@
                                                 <table width="180" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td>
-                                                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">è¿”å›ž</asp:LinkButton>
+                                                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">·µ»Ø</asp:LinkButton>
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -79,15 +79,15 @@
                                                 <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" AllowPaging="True" OnPageIndexChanging="GridView2_PageIndexChanging">
                                                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                                     <Columns>
-                                                        <asp:BoundField DataField="ID" HeaderText="è¿ç®—åºå·" />
-                                                        <asp:BoundField DataField="ItemNo" HeaderText="åºå·" />
-                                                        <asp:BoundField DataField="ItemName" HeaderText="å®šé¢å·" />
-                                                        <asp:BoundField DataField="WorkYear" HeaderText="å·¥ä½œå¹´ä»½" />
-                                                        <asp:BoundField DataField="WorkMonth" HeaderText="å·¥ä½œæœˆä»½" />
-                                                        <asp:BoundField DataField="MoneyNum" HeaderText="æ”¶æ¬¾é¢" DataFormatString="{0:N2}" HtmlEncode="False" />
-                                                        <asp:BoundField DataField="ChangedByWho" HeaderText="ç™»è®°äººå‘˜" />
-                                                        <asp:BoundField DataField="ChangedTime" HeaderText="ç™»è®°æ—¶é—´" />
-                                                        <asp:BoundField DataField="ChangedMemo" HeaderText="è¯´æ˜Ž" />
+                                                        <asp:BoundField DataField="ID" HeaderText="ÔËËãÐòºÅ" />
+                                                        <asp:BoundField DataField="ItemNo" HeaderText="ÐòºÅ" />
+                                                        <asp:BoundField DataField="ItemName" HeaderText="¶¨¶îºÅ" />
+                                                        <asp:BoundField DataField="WorkYear" HeaderText="¹¤×÷Äê·Ý" />
+                                                        <asp:BoundField DataField="WorkMonth" HeaderText="¹¤×÷ÔÂ·Ý" />
+                                                        <asp:BoundField DataField="MoneyNum" HeaderText="ÊÕ¿î¶î" DataFormatString="{0:N2}" HtmlEncode="False" />
+                                                        <asp:BoundField DataField="ChangedByWho" HeaderText="µÇ¼ÇÈËÔ±" />
+                                                        <asp:BoundField DataField="ChangedTime" HeaderText="µÇ¼ÇÊ±¼ä" />
+                                                        <asp:BoundField DataField="ChangedMemo" HeaderText="ËµÃ÷" />
                                                     </Columns>
                                                     <EditRowStyle BackColor="#999999" />
                                                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -114,7 +114,7 @@
             <div style="position: absolute; left: 40%; top: 40%;">
                 <asp:UpdateProgress ID="TakeTopUp" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
                     <ProgressTemplate>
-                        <img src="Images/Processing.gif" alt="è¯·ç¨å€™ï¼Œå¤„ç†ä¸­..." />
+                        <img src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖÐ..." />
                     </ProgressTemplate>
                 </asp:UpdateProgress>
             </div>

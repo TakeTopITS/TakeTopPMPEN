@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSystemExchangeOrder.aspx.cs" Inherits="TTSystemExchangeOrder" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSystemExchangeOrder.aspx.cs" Inherits="TTSystemExchangeOrder" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>Êï∞ÊçÆ‰∫§Êç¢Êé•Âè£ÂëΩ‰ª§ÂÆö‰πâ</title>
+    <title> ˝æ›ΩªªªΩ”ø⁄√¸¡Ó∂®“Â</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         /*#AboveDiv {
@@ -83,7 +83,7 @@
                                                                                     <asp:Label ID="LB_ID" runat="server"></asp:Label>
                                                                                     <asp:DropDownList ID="DL_DBServerName" runat="server" AutoPostBack="true" CssClass="DDList" DataTextField="DBServerName" DataValueField="DBServerName"  OnSelectedIndexChanged="DL_Database_SelectedIndexChanged">
                                                                                     </asp:DropDownList>
-                                                                                    &nbsp;<asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangGuanShuJuKu%>"></asp:Label>Ôºö<asp:Label ID="LB_DBName" runat="server"></asp:Label>
+                                                                                    &nbsp;<asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangGuanShuJuKu%>"></asp:Label>£∫<asp:Label ID="LB_DBName" runat="server"></asp:Label>
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
@@ -93,7 +93,7 @@
                                                                                     <asp:TextBox ID="TB_SqlOrderString" TextMode="MultiLine" runat="server" Style="width: 99%; height: 150px;"></asp:TextBox>
                                                                                     <br />
                                                                                     <span class="auto-style3">
-                                                                                        <asp:Label ID="Label4" runat="server"></asp:Label><asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,SLCYAQKLBNSY%>"></asp:Label>Delete,Update,Drop,Insert,Alter<asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,FuWuQi%>"></asp:Label><asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,YuJu%>"></asp:Label>ÔºâÔºö<br />
+                                                                                        <asp:Label ID="Label4" runat="server"></asp:Label><asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,SLCYAQKLBNSY%>"></asp:Label>Delete,Update,Drop,Insert,Alter<asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,FuWuQi%>"></asp:Label><asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,YuJu%>"></asp:Label>£©£∫<br />
                                                                                         --<asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,ChaRuXinZengDeShuJu%>"></asp:Label>
                                                                                         insert srv2.<asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,KuMing%>"></asp:Label>.dbo.author(id,name,telphone) select id,name,telphone from author i where not exists( select * from srv2.<asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,KuMing%>"></asp:Label>.dbo.author where id=i.id)
                                                                                     <br />
@@ -108,8 +108,8 @@
                                                                                 </td>
                                                                                 <td style="text-align: left;" class="formItemBgStyle">
                                                                                     <asp:DropDownList ID="DL_Status" runat="server" AutoPostBack="true" CssClass="DDList">
-                                                                                        <asp:ListItem Value="Âú®Áî®" Text="<%$ Resources:lang,ZaiYong%>" />
-                                                                                        <asp:ListItem Value="ÂÅúÁî®" Text="<%$ Resources:lang,TingYong%>" />
+                                                                                        <asp:ListItem Value="InUse" Text="<%$ Resources:lang,ZaiYong%>" />
+                                                                                        <asp:ListItem Value="Deactivated" Text="<%$ Resources:lang,TingYong%>" />
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                                 <td style="text-align: right;" class="formItemBgStyle">&nbsp;</td>
@@ -141,7 +141,7 @@
                                                                         <table style="width: 100%; text-align: left;">
                                                                             <tr>
                                                                                 <td width="60%" align="left">
-                                                                                    <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,SJJHMLLB%>"></asp:Label>Ôºö
+                                                                                    <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,SJJHMLLB%>"></asp:Label>£∫
                                                                                 </td>
                                                                                 <td align="right">&nbsp;</td>
                                                                             </tr>
@@ -197,20 +197,20 @@
 
                                                                                         <ItemStyle CssClass="itemStyle" />
                                                                                         <Columns>
-                                                                                            <asp:TemplateColumn HeaderText="ÁºñÂè∑">
+                                                                                            <asp:TemplateColumn HeaderText="±‡∫≈">
                                                                                                 <ItemTemplate>
                                                                                                     <asp:Button ID="BT_ID" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>'
                                                                                                         CssClass="inpu" />
                                                                                                 </ItemTemplate>
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                             </asp:TemplateColumn>
-                                                                                            <asp:BoundColumn DataField="DBServerName" HeaderText="ÊúçÂä°Âô®">
+                                                                                            <asp:BoundColumn DataField="DBServerName" HeaderText="∑˛ŒÒ∆˜">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:BoundColumn DataField="SqlOrderString" HeaderText="ÊâßË°åËØ≠Âè•">
+                                                                                            <asp:BoundColumn DataField="SqlOrderString" HeaderText="÷¥––”Ôæ‰">
                                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="75%" />
                                                                                             </asp:BoundColumn>
-                                                                                            <asp:TemplateColumn HeaderText="Áä∂ÊÄÅ">
+                                                                                            <asp:TemplateColumn HeaderText="◊¥Ã¨">
                                                                                                 <ItemTemplate>
                                                                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                                 </ItemTemplate>

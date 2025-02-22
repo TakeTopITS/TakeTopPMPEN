@@ -1,4 +1,4 @@
-Ôªøusing ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
 using System.Collections;
@@ -22,13 +22,13 @@ public partial class TTAppApproveRecord : System.Web.UI.Page
 
         if (strType == "WorkFlow")
         {
-            //this.Title = "Â∑•‰ΩúÊµÅÔºö" + strRelatedID + " " + strWLName + "  ÂÆ°Ê†∏ËÆ∞ÂΩïÔºÅ";
-            LB_WorkFlow.Text = "Â∑•‰ΩúÊµÅÔºö" + strRelatedID + " " + strWLName + "  ÂÆ°Ê†∏ËÆ∞ÂΩï";
+            //this.Title = "π§◊˜¡˜£∫" + strRelatedID + " " + strWLName + "  …Û∫Àº«¬º£°";
+            LB_WorkFlow.Text = "π§◊˜¡˜£∫" + strRelatedID + " " + strWLName + "  …Û∫Àº«¬º";
         }
         else
         {
-            //this.Title = "Â∑•‰ΩúÊµÅÔºö" + strRelatedID + " " + strWLName + " Ê≠•È™§Ôºö" + strStepID + "  ÂÆ°Ê†∏ËÆ∞ÂΩïÔºÅ";
-            LB_WorkFlow.Text = "Â∑•‰ΩúÊµÅÔºö" + strRelatedID + " " + strWLName + " Ê≠•È™§Ôºö" + strStepID + "  ÂÆ°Ê†∏ËÆ∞ÂΩï";
+            //this.Title = "π§◊˜¡˜£∫" + strRelatedID + " " + strWLName + " ≤Ω÷Ë£∫" + strStepID + "  …Û∫Àº«¬º£°";
+            LB_WorkFlow.Text = "π§◊˜¡˜£∫" + strRelatedID + " " + strWLName + " ≤Ω÷Ë£∫" + strStepID + "  …Û∫Àº«¬º";
         }
 
         if (Page.IsPostBack != true)
@@ -41,11 +41,11 @@ public partial class TTAppApproveRecord : System.Web.UI.Page
             {
                 if (strType == "WorkFlow")
                 {
-                    strHQL = "from Approve as approve where approve.Type = 'Â∑•‰ΩúÊµÅ' and approve.RelatedID = " + strRelatedID + " Order by approve.ID DESC";
+                    strHQL = "from Approve as approve where approve.Type = 'Workflow' and approve.RelatedID = " + strRelatedID + " Order by approve.ID DESC";
                 }
                 else
                 {
-                    strHQL = "from Approve as approve where approve.Type = 'Â∑•‰ΩúÊµÅ' and approve.RelatedID = " + strRelatedID + " and approve.StepID = " + strStepID + " Order by approve.ID DESC";
+                    strHQL = "from Approve as approve where approve.Type = 'Workflow' and approve.RelatedID = " + strRelatedID + " and approve.StepID = " + strStepID + " Order by approve.ID DESC";
                 }
 
                 ApproveBLL approveBLL = new ApproveBLL();

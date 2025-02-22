@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSystemExchangeRunning.aspx.cs" Inherits="TTSystemExchangeRunning" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSystemExchangeRunning.aspx.cs" Inherits="TTSystemExchangeRunning" %>
 
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -42,10 +42,10 @@
                                                         </table>
                                                     </td>
                                                     <td></td>
-                                                    <td align="right">é—´éš”æ—¶é—´ï¼š</td>
+                                                    <td align="right">¼ä¸ôÊ±¼ä£º</td>
                                                     <td align="left">
                                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000"  ID="NB_IntervalTime" runat="server" Precision="0" Width="60px" Amount="5">0</NickLee:NumberBox>
-                                                        ç§’</td>
+                                                        Ãë</td>
                                                 </tr>
                                             </table>
                                         </td>

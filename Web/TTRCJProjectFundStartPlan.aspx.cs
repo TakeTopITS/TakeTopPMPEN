@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -25,20 +25,20 @@ public partial class TTRCJProjectFundStartPlan : System.Web.UI.Page
             if (Request.UrlReferrer != null)
                 ViewState["UrlReferrer"] = Request.UrlReferrer.ToString();
             
-            //æ˜¾ç¤ºå·²æœ‰èµ„é‡‘è®¡åˆ’ä¿¡æ¯
+            //ÏÔÊ¾ÒÑÓĞ×Ê½ğ¼Æ»®ĞÅÏ¢
             InitDataList();
-            //åŠ è½½ç§‘ç›®
+            //¼ÓÔØ¿ÆÄ¿
             InitAmountList();
-            //åŠ è½½å¤§ç±»è´¹é¡¹
+            //¼ÓÔØ´óÀà·ÑÏî
             InitFeetype();
-            //åŠ è½½å°ç±»è´¹é¡¹
+            //¼ÓÔØĞ¡Àà·ÑÏî
             DDL_CostFee.SelectedIndex = 0;
             InitFeeSubType(DDL_CostFee.SelectedValue);
 
-            //åˆå§‹åŒ–å¹´è·Ÿæœˆ
+            //³õÊ¼»¯Äê¸úÔÂ
             ShareClass.InitYearMonthList(DDL_YearList, DDL_MonthList);
             
-            //è·å¾—ç”³è¯·æ ‡å‡†å’Œé‡‘é¢åˆè®¡
+            //»ñµÃÉêÇë±ê×¼ºÍ½ğ¶îºÏ¼Æ
             getTotalMoney();
         }
     }
@@ -59,14 +59,14 @@ public partial class TTRCJProjectFundStartPlan : System.Web.UI.Page
                 return;
             }
 
-            //æŸ¥è¯¢åˆ°è®°å½•ï¼Œè¿›è¡Œæ˜¾ç¤º 
+            //²éÑ¯µ½¼ÇÂ¼£¬½øĞĞÏÔÊ¾ 
             TB_TotalApplyMoney.Text = string.IsNullOrEmpty(ds.Tables[0].Rows[0]["totalPlan"].ToString()) ? "0.00" : String.Format("{0:N2}", Convert.ToDouble(ds.Tables[0].Rows[0]["totalPlan"].ToString()));
             TB_TotalPlanMoney.Text = string.IsNullOrEmpty(ds.Tables[0].Rows[0]["totalApplay"].ToString()) ? "0.00" : String.Format("{0:N2}", Convert.ToDouble(ds.Tables[0].Rows[0]["totalApplay"].ToString()));
         }
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæŸ¥è¯¢ç”³è¯·é‡‘é¢å’Œæ ‡å‡†æ±‡æ€»ä¿¡æ¯æ“ä½œå¤±è´¥ï¼" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º²éÑ¯ÉêÇë½ğ¶îºÍ±ê×¼»ã×ÜĞÅÏ¢²Ù×÷Ê§°Ü£¡" + exp.Message;
         }
     }
 
@@ -95,7 +95,7 @@ public partial class TTRCJProjectFundStartPlan : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæ“ä½œå¤±è´¥ï¼" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º²Ù×÷Ê§°Ü£¡" + exp.Message;
         }
     }
 
@@ -104,28 +104,28 @@ public partial class TTRCJProjectFundStartPlan : System.Web.UI.Page
         if (DDL_CostSubFee.SelectedIndex == -1)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼š[æˆæœ¬è´¹é¡¹å­ç±»]æ²¡æœ‰é€‰æ‹©é¡¹ï¼Œè¯·å…ˆè¾“å…¥è¯¥å¤§ç±»çš„å­é¡¹åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º[³É±¾·ÑÏî×ÓÀà]Ã»ÓĞÑ¡ÔñÏî£¬ÇëÏÈÊäÈë¸Ã´óÀàµÄ×ÓÏîºóÔÙÊÔ£¡";
             return false;
         } 
         
         if (TB_Amount.Text.Trim().Length == 0 || false == ShareClass.CheckIsNumber(TB_Amount.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€ç”³è¯·é‡‘é¢ã€‘è¾“å…¥æœ‰è¯¯ï¼Œè¯·è¾“å…¥æ•°å­—å†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾ÉêÇë½ğ¶î¡¿ÊäÈëÓĞÎó£¬ÇëÊäÈëÊı×ÖÔÙÊÔ£¡";
             return false;
         }
 
         if (TB_AmountLevel.Text.Trim().Length == 0 || false == ShareClass.CheckIsNumber(TB_AmountLevel.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€é‡‘é¢æ ‡å‡†ã€‘è¾“å…¥æœ‰è¯¯ï¼Œè¯·è¾“å…¥æ•°å­—å†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾½ğ¶î±ê×¼¡¿ÊäÈëÓĞÎó£¬ÇëÊäÈëÊı×ÖÔÙÊÔ£¡";
             return false;
         }
 
         if (TB_Purpose.Text.Trim().Length == 0 || TB_Purpose.Text.Trim().Length > 500)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šã€ç”¨é€”è¯´æ˜ã€‘è¾“å…¥æœ‰è¯¯ï¼Œè¾“å…¥å†…å®¹é•¿åº¦é™å®š250ä¸ªæ±‰å­—æˆ–500ä¸ªè‹±æ–‡å­—ç¬¦ï¼Œè¯·è¾“å…¥æ•°å­—å†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¡¾ÓÃÍ¾ËµÃ÷¡¿ÊäÈëÓĞÎó£¬ÊäÈëÄÚÈİ³¤¶ÈÏŞ¶¨250¸öºº×Ö»ò500¸öÓ¢ÎÄ×Ö·û£¬ÇëÊäÈëÊı×ÖÔÙÊÔ£¡";
             return false;
         }
         return true;
@@ -154,19 +154,19 @@ public partial class TTRCJProjectFundStartPlan : System.Web.UI.Page
             fspBll.AddRCJProjectFundStartPlan(fspData);
 
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šå¢åŠ é¡¹ç›®èµ„é‡‘å®æ–½è®°å½•æˆåŠŸï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºÔö¼ÓÏîÄ¿×Ê½ğÊµÊ©¼ÇÂ¼³É¹¦£¡";
 
             InitDataList();
-            //è·å¾—ç”³è¯·æ ‡å‡†å’Œé‡‘é¢åˆè®¡
+            //»ñµÃÉêÇë±ê×¼ºÍ½ğ¶îºÏ¼Æ
             getTotalMoney();
         }
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šå¢åŠ é¡¹ç›®èµ„é‡‘å®æ–½è®°å½•å¤±è´¥ï¼" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºÔö¼ÓÏîÄ¿×Ê½ğÊµÊ©¼ÇÂ¼Ê§°Ü£¡" + exp.Message;
         }
     }
-    //æ˜¾ç¤ºå·²æœ‰èµ„é‡‘è®¡åˆ’ä¿¡æ¯
+    //ÏÔÊ¾ÒÑÓĞ×Ê½ğ¼Æ»®ĞÅÏ¢
     private void InitDataList()
     {
         StringBuilder sql = new StringBuilder(" select * from V_RCJProjectFundStartPlan where ProjectID =");
@@ -177,7 +177,7 @@ public partial class TTRCJProjectFundStartPlan : System.Web.UI.Page
         GridView1.DataSource = ds;
         GridView1.DataBind();
     }
-    //åŠ è½½ç§‘ç›®
+    //¼ÓÔØ¿ÆÄ¿
     private void InitAmountList()
     {
         StringBuilder sql = new StringBuilder(" select AccountCode , AccountName from T_Account");
@@ -191,7 +191,7 @@ public partial class TTRCJProjectFundStartPlan : System.Web.UI.Page
         DDL_AmountClass.DataBind(); 
 
     }
-    //åŠ è½½å¤§ç±»è´¹é¡¹
+    //¼ÓÔØ´óÀà·ÑÏî
     private void InitFeetype()
     {
         StringBuilder sql = new StringBuilder(" select ID , Title from T_RCJProjectCostFeeIDs");
@@ -204,7 +204,7 @@ public partial class TTRCJProjectFundStartPlan : System.Web.UI.Page
         DDL_CostFee.DataValueField = "ID";
         DDL_CostFee.DataBind();  
     }
-    //åŠ è½½å°ç±»è´¹é¡¹
+    //¼ÓÔØĞ¡Àà·ÑÏî
     private void InitFeeSubType(string costFeeID)
     {
         try
@@ -228,7 +228,7 @@ public partial class TTRCJProjectFundStartPlan : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šè¯»å–æˆæœ¬å­é¡¹åˆ—è¡¨ä¿¡æ¯å¤±è´¥ï¼" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¶ÁÈ¡³É±¾×ÓÏîÁĞ±íĞÅÏ¢Ê§°Ü£¡" + exp.Message;
         }
     }
 
@@ -261,19 +261,19 @@ public partial class TTRCJProjectFundStartPlan : System.Web.UI.Page
             if (ds.Tables[0].Rows.Count > 0)
             {
                 lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-                lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæŸ¥è¯¢åˆ°å¯¹åº”çš„è®°å½•ï¼";
+                lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º²éÑ¯µ½¶ÔÓ¦µÄ¼ÇÂ¼£¡";
             }
             else
             {
                 lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæ²¡æœ‰æŸ¥è¯¢åˆ°å¯¹åº”çš„è®°å½•ï¼";
+                lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºÃ»ÓĞ²éÑ¯µ½¶ÔÓ¦µÄ¼ÇÂ¼£¡";
 
             }
         }
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæŸ¥è¯¢æ“ä½œå¤±è´¥ï¼š" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º²éÑ¯²Ù×÷Ê§°Ü£º" + exp.Message;
         }
     }
     protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
@@ -291,7 +291,7 @@ public partial class TTRCJProjectFundStartPlan : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šè¯»å–æˆæœ¬å­é¡¹åˆ—è¡¨ä¿¡æ¯å¤±è´¥ï¼" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¶ÁÈ¡³É±¾×ÓÏîÁĞ±íĞÅÏ¢Ê§°Ü£¡" + exp.Message;
         }
     }
     protected void btnEditItem_Click(object sender, EventArgs e)
@@ -299,7 +299,7 @@ public partial class TTRCJProjectFundStartPlan : System.Web.UI.Page
         if (GridView1.SelectedIndex == -1)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šè¯·é€‰æ‹©ä¸€è¡Œåå†è¿›è¡Œä¿®æ”¹æ“ä½œï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºÇëÑ¡ÔñÒ»ĞĞºóÔÙ½øĞĞĞŞ¸Ä²Ù×÷£¡";
             return;
         }
 
@@ -324,16 +324,16 @@ public partial class TTRCJProjectFundStartPlan : System.Web.UI.Page
             fspBll.UpdateRCJProjectFundStartPlan(fspData , fspData.ID);
 
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šä¿®æ”¹é¡¹ç›®èµ„é‡‘å®æ–½è®°å½•æˆåŠŸï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºĞŞ¸ÄÏîÄ¿×Ê½ğÊµÊ©¼ÇÂ¼³É¹¦£¡";
 
             InitDataList();
-            //è·å¾—ç”³è¯·æ ‡å‡†å’Œé‡‘é¢åˆè®¡
+            //»ñµÃÉêÇë±ê×¼ºÍ½ğ¶îºÏ¼Æ
             getTotalMoney();
         }
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šä¿®æ”¹é¡¹ç›®èµ„é‡‘å®æ–½è®°å½•å¤±è´¥ï¼" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºĞŞ¸ÄÏîÄ¿×Ê½ğÊµÊ©¼ÇÂ¼Ê§°Ü£¡" + exp.Message;
         }
     }
 
@@ -342,7 +342,7 @@ public partial class TTRCJProjectFundStartPlan : System.Web.UI.Page
         if (GridView1.SelectedIndex == -1)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šè¯·é€‰æ‹©ä¸€è¡Œåå†è¿›è¡Œåˆ é™¤æ“ä½œï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºÇëÑ¡ÔñÒ»ĞĞºóÔÙ½øĞĞÉ¾³ı²Ù×÷£¡";
             return;
         }
 
@@ -356,16 +356,16 @@ public partial class TTRCJProjectFundStartPlan : System.Web.UI.Page
             fspBll.DeleteRCJProjectFundStartPlan(fspData);
 
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šåˆ é™¤é¡¹ç›®èµ„é‡‘å®æ–½è®°å½•æˆåŠŸï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºÉ¾³ıÏîÄ¿×Ê½ğÊµÊ©¼ÇÂ¼³É¹¦£¡";
 
             InitDataList();
-            //è·å¾—ç”³è¯·æ ‡å‡†å’Œé‡‘é¢åˆè®¡
+            //»ñµÃÉêÇë±ê×¼ºÍ½ğ¶îºÏ¼Æ
             getTotalMoney();
         }
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šåˆ é™¤é¡¹ç›®èµ„é‡‘å®æ–½è®°å½•å¤±è´¥ï¼" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºÉ¾³ıÏîÄ¿×Ê½ğÊµÊ©¼ÇÂ¼Ê§°Ü£¡" + exp.Message;
         }
     }
 
@@ -381,9 +381,9 @@ public partial class TTRCJProjectFundStartPlan : System.Web.UI.Page
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-            //é¼ æ ‡ç»è¿‡æ—¶ï¼Œè¡ŒèƒŒæ™¯è‰²å˜ 
+            //Êó±ê¾­¹ıÊ±£¬ĞĞ±³¾°É«±ä 
             e.Row.Attributes.Add("onmouseover", "this.style.backgroundColor='#A9A9A9'");
-            //é¼ æ ‡ç§»å‡ºæ—¶ï¼Œè¡ŒèƒŒæ™¯è‰²å˜ 
+            //Êó±êÒÆ³öÊ±£¬ĞĞ±³¾°É«±ä 
             e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor='#FFFFFF'");
         }
     }

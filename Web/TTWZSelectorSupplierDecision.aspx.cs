@@ -1,4 +1,4 @@
-锘縰sing ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using System; using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
@@ -32,7 +32,7 @@ public partial class TTWZSelectorSupplierDecision : System.Web.UI.Page
     {
 
 
-//        string strPurchaseHQL = string.Format(@"select p.*,a.SupplierCode,a.SumApplyMoney,COALESCE(c.ExpertCode, '娌℃湁') as IsSelect,c.Suggest from
+//        string strPurchaseHQL = string.Format(@"select p.*,a.SupplierCode,a.SumApplyMoney,COALESCE(c.ExpertCode, '没有') as IsSelect,c.Suggest from
 //                                                (
 //                                                select t.SupplierCode,t.PurchaseCode,Sum(t.ApplyMoney) as SumApplyMoney from
 //                            (
@@ -66,7 +66,7 @@ public partial class TTWZSelectorSupplierDecision : System.Web.UI.Page
 //                            where c.PurchaseCode ='{0}'", strPurchaseCode);
 
 
-//        string strPurchaseHQL = string.Format(@"select p.*,a.SupplierCode,a.SumApplyMoney,COALESCE(c.ExpertCode, '娌℃湁') as IsSelect,c.Suggest from
+//        string strPurchaseHQL = string.Format(@"select p.*,a.SupplierCode,a.SumApplyMoney,COALESCE(c.ExpertCode, '没有') as IsSelect,c.Suggest from
 //                            (
 //                            select t.SupplierCode,t.PurchaseCode,Sum(t.ApplyMoney) as SumApplyMoney from
 //                            (

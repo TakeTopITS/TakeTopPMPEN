@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -32,7 +32,7 @@ public partial class TTConstractReceivablesReportForMe : System.Web.UI.Page
 
         strLikeUserCode = "%" + strUserCode + "%";
 
-        //this.Title = "åˆåŒæ”¶æ¬¾æƒ…å†µè¡¨";
+        //this.Title = "ºÏÍ¬ÊÕ¿îÇé¿ö±í";
 
         LB_UserCode.Text = strUserCode;
         strUserName = Session["UserName"].ToString();

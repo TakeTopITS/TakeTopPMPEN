@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppInvolvedProjectDetail.aspx.cs" Inherits="TTAppInvolvedProjectDetail" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppInvolvedProjectDetail.aspx.cs" Inherits="TTAppInvolvedProjectDetail" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;  user-scalable=1" />
 
@@ -41,7 +41,7 @@
 
 
 
-            //ÈÄâÊã©ÂõæÁâáÂêéÂéãÁº©ÂõæÁâá
+            //—°‘ÒÕº∆¨∫Û—πÀıÕº∆¨
             $("#AttachFile").change(function () {
 
                 //alert("KKK");
@@ -49,10 +49,10 @@
                 //console.log(this.files[0]);
                 var _ua = window.navigator.userAgent;
                 var _simpleFile = this.files[0];
-                //Âà§Êñ≠ÊòØÂê¶‰∏∫ÂõæÁâá
+                //≈–∂œ «∑ÒŒ™Õº∆¨
                 if (!/\/(?:jpeg|png|gif|png|bmp)/i.test(_simpleFile.type)) return;
 
-                //Êèí‰ª∂exif.jsËé∑ÂèñiosÂõæÁâáÁöÑÊñπÂêë‰ø°ÊÅØ
+                //≤Âº˛exif.jsªÒ»°iosÕº∆¨µƒ∑ΩœÚ–≈œ¢
                 var _orientation;
                 //if (_ua.indexOf('iphone') > 0) {
                 EXIF.getData(_simpleFile, function () {
@@ -62,7 +62,7 @@
 
 
 
-                //1.ËØªÂèñÊñá‰ª∂ÔºåÈÄöËøáFileReaderÔºåÂ∞ÜÂõæÁâáÊñá‰ª∂ËΩ¨Âåñ‰∏∫DataURLÔºåÂç≥data:img/png;base64ÔºåÂºÄÂ§¥ÁöÑurlÔºåÂèØ‰ª•Áõ¥Êé•ÊîæÂú®image.src‰∏≠;
+                //1.∂¡»°Œƒº˛£¨Õ®π˝FileReader£¨Ω´Õº∆¨Œƒº˛◊™ªØŒ™DataURL£¨º¥data:img/png;base64£¨ø™Õ∑µƒurl£¨ø…“‘÷±Ω”∑≈‘⁄image.src÷–;
                 var _reader = new FileReader(),
                     _img = new Image(),
                     _url;
@@ -83,24 +83,24 @@
 
 
         /**
-         * ËÆ°ÁÆóÂõæÁâáÁöÑÂ∞∫ÂØ∏ÔºåÊ†πÊçÆÂ∞∫ÂØ∏ÂéãÁº©
-         * 1. iphoneÊâãÊú∫html5‰∏ä‰º†ÂõæÁâáÊñπÂêëÈóÆÈ¢òÔºåÂÄüÂä©exif.js
-         * 2. ÂÆâÂçìUCÊµèËßàÂô®‰∏çÊîØÊåÅ new Blob()Ôºå‰ΩøÁî®BlobBuilder
-         * @param {Object} _img     ÂõæÁâá
-         * @param {Number} _orientation ÁÖßÁâá‰ø°ÊÅØ
-         * @return {String}       ÂéãÁº©Âêébase64Ê†ºÂºèÁöÑÂõæÁâá
+         * º∆À„Õº∆¨µƒ≥ﬂ¥Á£¨∏˘æ›≥ﬂ¥Á—πÀı
+         * 1. iphone ÷ª˙html5…œ¥´Õº∆¨∑ΩœÚŒ Ã‚£¨ΩË÷˙exif.js
+         * 2. ∞≤◊øUC‰Ø¿¿∆˜≤ª÷ß≥÷ new Blob()£¨ π”√BlobBuilder
+         * @param {Object} _img     Õº∆¨
+         * @param {Number} _orientation ’’∆¨–≈œ¢
+         * @return {String}       —πÀı∫Ûbase64∏Ò ΩµƒÕº∆¨
          */
         function compress(_img, _orientation) {
-            //2.ËÆ°ÁÆóÁ¨¶ÂêàÁõÆÊ†áÂ∞∫ÂØ∏ÂÆΩÈ´òÂÄºÔºåËã•‰∏ä‰º†ÂõæÁâáÁöÑÂÆΩÈ´òÈÉΩÂ§ß‰∫éÁõÆÊ†áÂõæÔºåÂØπÁõÆÊ†áÂõæÁ≠âÊØîÂéãÁº©ÔºõÂ¶ÇÊûúÊúâ‰∏ÄËæπÂ∞è‰∫éÔºåÂØπ‰∏ä‰º†ÂõæÁâáÁ≠âÊØîÊîæÂ§ß„ÄÇ
-            var _goalWidth = 640,         //ÁõÆÊ†áÂÆΩÂ∫¶
-                _goalHeight = 480,         //ÁõÆÊ†áÈ´òÂ∫¶
-                _imgWidth = _img.naturalWidth,   //ÂõæÁâáÂÆΩÂ∫¶
-                _imgHeight = _img.naturalHeight,  //ÂõæÁâáÈ´òÂ∫¶
-                _tempWidth = _imgWidth,      //ÊîæÂ§ßÊàñÁº©Â∞èÂêéÁöÑ‰∏¥Êó∂ÂÆΩÂ∫¶
-                _tempHeight = _imgHeight,     //ÊîæÂ§ßÊàñÁº©Â∞èÂêéÁöÑ‰∏¥Êó∂ÂÆΩÂ∫¶
-                _r = 0;              //ÂéãÁº©ÊØî
+            //2.º∆À„∑˚∫œƒø±Í≥ﬂ¥ÁøÌ∏ﬂ÷µ£¨»Ù…œ¥´Õº∆¨µƒøÌ∏ﬂ∂º¥Û”⁄ƒø±ÍÕº£¨∂‘ƒø±ÍÕºµ»±»—πÀı£ª»Áπ˚”–“ª±ﬂ–°”⁄£¨∂‘…œ¥´Õº∆¨µ»±»∑≈¥Û°£
+            var _goalWidth = 640,         //ƒø±ÍøÌ∂»
+                _goalHeight = 480,         //ƒø±Í∏ﬂ∂»
+                _imgWidth = _img.naturalWidth,   //Õº∆¨øÌ∂»
+                _imgHeight = _img.naturalHeight,  //Õº∆¨∏ﬂ∂»
+                _tempWidth = _imgWidth,      //∑≈¥ÛªÚÀı–°∫Ûµƒ¡Ÿ ±øÌ∂»
+                _tempHeight = _imgHeight,     //∑≈¥ÛªÚÀı–°∫Ûµƒ¡Ÿ ±øÌ∂»
+                _r = 0;              //—πÀı±»
 
-            if (_imgWidth > _goalWidth || _imgHeight > _goalHeight) {//ÂÆΩÊàñÈ´òÂ§ß‰∫éÁõÆÊ†áÂõæÔºåÈúÄÁ≠âÊØîÂéãÁº©
+            if (_imgWidth > _goalWidth || _imgHeight > _goalHeight) {//øÌªÚ∏ﬂ¥Û”⁄ƒø±ÍÕº£¨–Ëµ»±»—πÀı
                 _r = _imgWidth / _goalWidth;
                 if (_imgHeight / _goalHeight < _r) {
                     _r = _imgHeight / _goalHeight;
@@ -109,7 +109,7 @@
                 _tempHeight = Math.ceil(_imgHeight / _r);
             }
 
-            //3.Âà©Áî®canvasÂØπÂõæÁâáËøõË°åË£ÅÂâ™ÔºåÁ≠âÊØîÊîæÂ§ßÊàñÁº©Â∞èÂêéËøõË°åÂ±Ö‰∏≠Ë£ÅÂâ™
+            //3.¿˚”√canvas∂‘Õº∆¨Ω¯––≤√ºÙ£¨µ»±»∑≈¥ÛªÚÀı–°∫ÛΩ¯––æ”÷–≤√ºÙ
             var _canvas = $("#myCanvas")[0];
 
             var _context = _canvas.getContext('2d');
@@ -117,15 +117,15 @@
             _canvas.height = _tempHeight;
             var _degree;
 
-            //ios bugÔºåiphoneÊâãÊú∫‰∏äÂèØËÉΩ‰ºöÈÅáÂà∞ÂõæÁâáÊñπÂêëÈîôËØØÈóÆÈ¢ò
+            //ios bug£¨iphone ÷ª˙…œø…ƒ‹ª·”ˆµΩÕº∆¨∑ΩœÚ¥ÌŒÛŒ Ã‚
             switch (_orientation) {
-                //iphoneÊ®™Â±èÊãçÊëÑÔºåÊ≠§Êó∂homeÈîÆÂú®Â∑¶‰æß
+                //iphone∫·∆¡≈ƒ…„£¨¥À ±homeº¸‘⁄◊Û≤‡
                 case 3:
                     _degree = 180;
                     _tempWidth = -_imgWidth;
                     _tempHeight = -_imgHeight;
                     break;
-                //iphoneÁ´ñÂ±èÊãçÊëÑÔºåÊ≠§Êó∂homeÈîÆÂú®‰∏ãÊñπ(Ê≠£Â∏∏ÊãøÊâãÊú∫ÁöÑÊñπÂêë)
+                //iphone ˙∆¡≈ƒ…„£¨¥À ±homeº¸‘⁄œ¬∑Ω(’˝≥£ƒ√ ÷ª˙µƒ∑ΩœÚ)
                 case 6:
                     _canvas.width = _imgHeight;
                     _canvas.height = _imgWidth;
@@ -133,7 +133,7 @@
                     _tempWidth = _imgWidth;
                     _tempHeight = -_imgHeight;
                     break;
-                //iphoneÁ´ñÂ±èÊãçÊëÑÔºåÊ≠§Êó∂homeÈîÆÂú®‰∏äÊñπ
+                //iphone ˙∆¡≈ƒ…„£¨¥À ±homeº¸‘⁄…œ∑Ω
                 case 8:
                     _canvas.width = _imgHeight;
                     _canvas.height = _imgWidth;
@@ -149,28 +149,28 @@
             } else {
                 _context.drawImage(_img, 0, 0, _tempWidth, _tempHeight);
             }
-            //toDataURLÊñπÊ≥ïÔºåÂèØ‰ª•Ëé∑ÂèñÊ†ºÂºè‰∏∫"data:image/png;base64,***"ÁöÑbase64ÂõæÁâá‰ø°ÊÅØÔºõ
+            //toDataURL∑Ω∑®£¨ø…“‘ªÒ»°∏Ò ΩŒ™"data:image/png;base64,***"µƒbase64Õº∆¨–≈œ¢£ª
             var _data = _canvas.toDataURL('image/jpeg');
             return _data;
         }
 
         function upload() {
             $.ajax({
-                //Êèê‰∫§Êï∞ÊçÆÁöÑÁ±ªÂûã POST GET
+                //Ã·Ωª ˝æ›µƒ¿‡–Õ POST GET
                 type: "POST",
-                //Êèê‰∫§ÁöÑÁΩëÂùÄ
+                //Ã·ΩªµƒÕ¯÷∑
                 url: "Handler/UploadPhotoToServerSite.ashx",
-                //Êèê‰∫§ÁöÑÊï∞ÊçÆ
+                //Ã·Ωªµƒ ˝æ›
                 data: { FileData: $("#imgData").val(), FileName: $("#AttachFile").val() },
-                //ËøîÂõûÊï∞ÊçÆÁöÑÊ†ºÂºè
-                //Âú®ËØ∑Ê±Ç‰πãÂâçË∞ÉÁî®ÁöÑÂáΩÊï∞
+                //∑µªÿ ˝æ›µƒ∏Ò Ω
+                //‘⁄«Î«Û÷Æ«∞µ˜”√µƒ∫Ø ˝
                 beforeSend: function () {
                     $("#IMG_Waiting").show();
                 },
                 error: function (XMLHttpRequest, textStatus, errorThrown) {
                     console.log(XMLHttpRequest);
                 },
-                //ÊàêÂäüËøîÂõû‰πãÂêéË∞ÉÁî®ÁöÑÂáΩÊï∞             
+                //≥…π¶∑µªÿ÷Æ∫Ûµ˜”√µƒ∫Ø ˝             
                 success: function (data) {
                     if (data.indexOf("img") > 0) {
 
@@ -180,7 +180,7 @@
                         alert(data);
                     }
                 },
-                //Ë∞ÉÁî®ÊâßË°åÂêéË∞ÉÁî®ÁöÑÂáΩÊï∞
+                //µ˜”√÷¥––∫Ûµ˜”√µƒ∫Ø ˝
                 complete: function (XMLHttpRequest, textStatus) {
                     $("#IMG_Waiting").hide();
                 }
@@ -219,7 +219,7 @@
                                                         </td>
                                                     </tr>
                                                 </table>
-                                                <img id="IMG_Waiting" src="Images/Processing.gif" alt="ËØ∑Á®çÂÄôÔºåÂ§ÑÁêÜ‰∏≠..." style="display: none;" />
+                                                <img id="IMG_Waiting" src="Images/Processing.gif" alt="«Î…‘∫Ú£¨¥¶¿Ì÷–..." style="display: none;" />
                                             </a>
                                         </td>
                                         <td align="left" style="padding-top: 3px;">
@@ -266,7 +266,7 @@
                                                         <upload:inputfile id="AttachFile" runat="server" name="photo" accept="image/*;capture=camera" width="180px" />
                                                         <input type="hidden" val="" id="imgData" runat="server" />
                                                         &nbsp;<input type="button" id="BtnUP" onclick="upload()" value="Upload" />
-                                                        <img id="IMG_Uploading" src="Images/Processing.gif" alt="ËØ∑Á®çÂÄôÔºåÂ§ÑÁêÜ‰∏≠..." style="display: none;" />
+                                                        <img id="IMG_Uploading" src="Images/Processing.gif" alt="«Î…‘∫Ú£¨¥¶¿Ì÷–..." style="display: none;" />
 
 
                                                         <br />
@@ -337,7 +337,7 @@
                                                                     <table width="80%">
                                                                         <tr>
                                                                             <td width="40px">
-                                                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ChengGuo%>"></asp:Label>Ôºö</td>
+                                                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ChengGuo%>"></asp:Label>£∫</td>
                                                                             <td style="padding-left: 10px;">
                                                                                 <asp:TextBox ID="TB_Achievement" runat="server" Height="40px" TextMode="MultiLine" Width="99%"></asp:TextBox>
                                                                             </td>

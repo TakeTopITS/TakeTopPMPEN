@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
 using System.Collections;
@@ -12,8 +12,8 @@ public partial class DefaultInterface : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //é’Ÿç¤¼æœˆä½œå“(jack.erp@gmail.com)
-        //æ³°é¡¶æ‹“é¼é›†å›¢ï¼ˆTakeTop Softwareï¼‰2006ï¼2026\
+        //ÖÓÀñÔÂ×÷Æ·(jack.erp@gmail.com)
+        //Ì©¶¥ÍØ¶¦¼¯ÍÅ£¨TakeTop Software£©2006£­2026\
 
         string strVerificationCode, strSMSVerification, strIsOEMVersion;
         string strUserHostAddress = Request.UserHostAddress;
@@ -100,7 +100,7 @@ public partial class DefaultInterface : System.Web.UI.Page
         {
             LB_ThirdPartLoginID.Text = strThirdPartLoginID;
 
-            //å¦‚æœæ­¤ç”¨æˆ·æ¡£æ¡ˆæœ‰æ­¤OPENIDï¼Œé‚£ä¹ˆç›´æ¥ç™»å½•
+            //Èç¹û´ËÓÃ»§µµ°¸ÓĞ´ËOPENID£¬ÄÇÃ´Ö±½ÓµÇÂ¼
             if (CheckUserThirdPartLoginID(strThirdPartLoginID) > 0)
             {
                 LoginByThirdPartLoginID(strThirdPartLoginID);
@@ -110,7 +110,7 @@ public partial class DefaultInterface : System.Web.UI.Page
         else
         {
             strIsOEMVersion = System.Configuration.ConfigurationManager.AppSettings["IsOEMVersion"];
-            LB_Copyright.Text = "<a href=TTVersionRegister.aspx>CopyrightÂ© TakeTop Software</a> 2006-2026 " + "<a href=https://www.taketopits.com>www.taketopits.com</a>";
+            LB_Copyright.Text = "<a href=TTVersionRegister.aspx>Copyright? TakeTop Software</a> 2006-2026 " + "<a href=https://www.taketopits.com>www.taketopits.com</a>";
 
             //LB_Copyright.Text = HttpContext.Current.Request.ApplicationPath;
 
@@ -196,12 +196,12 @@ public partial class DefaultInterface : System.Web.UI.Page
         try
         {
             strPassword = EncryptPassword(strPassword, "MD5");
-            strHQL = "Select * from T_ProjectMember where UserCode = " + "'" + strUserCode + "'" + " and Password = " + "'" + strPassword + "'" + " and " + " rtrim(ltrim(Status)) not in ( 'ç»ˆæ­¢','ç¦»èŒ')";
+            strHQL = "Select * from T_ProjectMember where UserCode = " + "'" + strUserCode + "'" + " and Password = " + "'" + strPassword + "'" + " and " + " rtrim(ltrim(Status)) not in ( 'Stop','Resign')";
             strHQL += " And UserCode in (Select UserCode From T_SystemActiveUser Where WebUser = 'YES')";
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectMember");
             if (ds.Tables[0].Rows.Count > 0)
             {
-                //å‡çº§æ•°æ®åº“
+                //Éı¼¶Êı¾İ¿â
                 if (ShareClass.SystemDBer == "")
                 {
                     ShareClass.SystemDBer = strUserCode;
@@ -250,7 +250,7 @@ public partial class DefaultInterface : System.Web.UI.Page
                 //        string strHQL1 = "Update T_ProjectMember Set CssDirectory = 'CssGreen' where UserCode = " + "'" + strUserCode + "'";
                 //        ShareClass.RunSqlCommand(strHQL1);
 
-                //        //ç»™ç›¸å…³é¡µé¢æ–‡ä»¶æ·»åŠ ç©ºè¡Œä»¥åˆ·æ–°é¡µé¢ç¼“å­˜
+                //        //¸øÏà¹ØÒ³ÃæÎÄ¼şÌí¼Ó¿ÕĞĞÒÔË¢ĞÂÒ³Ãæ»º´æ
                 //        ShareClass.AddSpaceLineToFileForRefreshCache();
                 //    }
                 //}
@@ -258,7 +258,7 @@ public partial class DefaultInterface : System.Web.UI.Page
                 Session["SkinFlag"] = ds.Tables[0].Rows[0]["CssDirectory"].ToString().Trim() + ds.Tables[0].Rows[0]["LangCode"].ToString().Trim();
                 try
                 {
-                    //åˆå§‹åŒ–ç•Œé¢è¯­è¨€
+                    //³õÊ¼»¯½çÃæÓïÑÔ
                     try
                     {
                         Session["LangCode"] = ds.Tables[0].Rows[0]["LangCode"].ToString().Trim();
@@ -287,7 +287,7 @@ public partial class DefaultInterface : System.Web.UI.Page
                 {
                 }
 
-                //YESæ—¶é¡µé¢å¿…é¡»åœ¨æ¡†æ¶å†…æ‰“å¼€ï¼Œå¦åˆ™å…³é—­
+                //YESÊ±Ò³Ãæ±ØĞëÔÚ¿ò¼ÜÄÚ´ò¿ª£¬·ñÔò¹Ø±Õ
                 try
                 {
                     Session["MustInFrame"] = System.Configuration.ConfigurationManager.AppSettings["MustInFrame"];
@@ -300,7 +300,7 @@ public partial class DefaultInterface : System.Web.UI.Page
                     Session["MustInFrame"] = "YES";
                 }
 
-                //æ˜¯å¦è‡ªåŠ¨å·¥ä½œæµç”³è¯·è€…è‡ªé€‰æˆ–ä¸Šä¸€æ­¥å®¡æ‰¹è€…è‡ªé€‰äººå‘˜
+                //ÊÇ·ñ×Ô¶¯¹¤×÷Á÷ÉêÇëÕß×ÔÑ¡»òÉÏÒ»²½ÉóÅúÕß×ÔÑ¡ÈËÔ±
                 try
                 {
                     Session["AutoSaveWFOperator"] = System.Configuration.ConfigurationManager.AppSettings["AutoSaveWFOperator"];
@@ -313,7 +313,7 @@ public partial class DefaultInterface : System.Web.UI.Page
                     Session["AutoSaveWFOperator"] = "YES";
                 }
 
-                //æ£€æŸ¥æ³¨å†Œç æ˜¯å¦åˆæ³•
+                //¼ì²é×¢²áÂëÊÇ·ñºÏ·¨
                 string strServerName = System.Configuration.ConfigurationManager.AppSettings["ServerName"];
                 TakeTopLicense license = new TakeTopLicense();
                 if (!license.CheckAPPLicense(strServerName))
@@ -328,7 +328,7 @@ public partial class DefaultInterface : System.Web.UI.Page
                 }
                 Session["ForbitModule"] = license.GetForbitModuleString(strServerName);
 
-                //---åˆ¤æ–­ç”¨æˆ·èƒ½ç”¨æ¥ç™»å½•çš„è®¾å¤‡ç±»å‹----------------------
+                //---ÅĞ¶ÏÓÃ»§ÄÜÓÃÀ´µÇÂ¼µÄÉè±¸ÀàĞÍ----------------------
                 if (strAllowDevice != "ALL")
                 {
                     if (ShareClass.IsMobileDeviceCheckAgent())
@@ -349,7 +349,7 @@ public partial class DefaultInterface : System.Web.UI.Page
                     }
                 }
 
-                //ç¬¬ä¸€æ¬¡ç™»å½•æ—¶ï¼ŒæŠŠç”¨æˆ·çš„ç¬¬ä¸‰æ–¹LOGINIDå†™å…¥äººå‘˜æ¡£æ¡ˆè¡¨
+                //µÚÒ»´ÎµÇÂ¼Ê±£¬°ÑÓÃ»§µÄµÚÈı·½LOGINIDĞ´ÈëÈËÔ±µµ°¸±í
                 string strThirdPartLoginID = LB_ThirdPartLoginID.Text.Trim();
                 if (strThirdPartLoginID != "")
                 {
@@ -361,11 +361,11 @@ public partial class DefaultInterface : System.Web.UI.Page
                 {
                     if (Session["CssDirectoryChangeNumber"].ToString() != "2" & Session["CssDirectoryChangeNumber"].ToString() != "0")
                     {
-                        //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—
+                        //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾
                         ShareClass.SetPageCacheMark("2");
                     }
 
-                    //æ’å…¥ç™»å½•æ—¥å¿—
+                    //²åÈëµÇÂ¼ÈÕÖ¾
                     ShareClass.InsertUserLogonLog(strUserCode, strUserName, "WEB");
                 }
                 catch
@@ -428,14 +428,14 @@ public partial class DefaultInterface : System.Web.UI.Page
                 Session["SystemType"] = "WEB";
                 Session["CssDirectory"] = ds.Tables[0].Rows[0]["CssDirectory"].ToString();
 
-                //å‡çº§æ•°æ®åº“
+                //Éı¼¶Êı¾İ¿â
                 if (ShareClass.SystemDBer == "")
                 {
                     ShareClass.SystemDBer = strUserCode;
                     TakeTopCore.CoreShareClass.UpgradeDataBase();
                 }
 
-                //åˆå§‹åŒ–ç•Œé¢è¯­è¨€
+                //³õÊ¼»¯½çÃæÓïÑÔ
                 try
                 {
                     strLangCode = ds.Tables[0].Rows[0]["LangCode"].ToString().Trim();
@@ -464,7 +464,7 @@ public partial class DefaultInterface : System.Web.UI.Page
                     strThirdPartMobilePageName = "TakeTopCSMDI.html";
                 }
 
-                //YESæ—¶é¡µé¢å¿…é¡»åœ¨æ¡†æ¶å†…æ‰“å¼€ï¼Œå¦åˆ™å…³é—­
+                //YESÊ±Ò³Ãæ±ØĞëÔÚ¿ò¼ÜÄÚ´ò¿ª£¬·ñÔò¹Ø±Õ
                 try
                 {
                     Session["MustInFrame"] = System.Configuration.ConfigurationManager.AppSettings["MustInFrame"];
@@ -477,7 +477,7 @@ public partial class DefaultInterface : System.Web.UI.Page
                     Session["MustInFrame"] = "YES";
                 }
 
-                //æ˜¯å¦è‡ªåŠ¨å·¥ä½œæµç”³è¯·è€…è‡ªé€‰æˆ–ä¸Šä¸€æ­¥å®¡æ‰¹è€…è‡ªé€‰äººå‘˜
+                //ÊÇ·ñ×Ô¶¯¹¤×÷Á÷ÉêÇëÕß×ÔÑ¡»òÉÏÒ»²½ÉóÅúÕß×ÔÑ¡ÈËÔ±
                 try
                 {
                     Session["AutoSaveWFOperator"] = System.Configuration.ConfigurationManager.AppSettings["AutoSaveWFOperator"];
@@ -490,7 +490,7 @@ public partial class DefaultInterface : System.Web.UI.Page
                     Session["AutoSaveWFOperator"] = "YES";
                 }
 
-                //---åˆ¤æ–­ç”¨æˆ·èƒ½ç”¨æ¥ç™»å½•çš„è®¾å¤‡ç±»å‹----------------------
+                //---ÅĞ¶ÏÓÃ»§ÄÜÓÃÀ´µÇÂ¼µÄÉè±¸ÀàĞÍ----------------------
                 if (strAllowDevice != "ALL")
                 {
                     if (ShareClass.IsMobileDeviceCheckAgent())
@@ -511,7 +511,7 @@ public partial class DefaultInterface : System.Web.UI.Page
                     }
                 }
 
-                //æ£€æŸ¥æ³¨å†Œç æ˜¯å¦åˆæ³•
+                //¼ì²é×¢²áÂëÊÇ·ñºÏ·¨
                 string strServerName = System.Configuration.ConfigurationManager.AppSettings["ServerName"];
                 try
                 {
@@ -538,7 +538,7 @@ public partial class DefaultInterface : System.Web.UI.Page
 
                 try
                 {
-                    //æ’å…¥ç™»å½•æ—¥å¿—
+                    //²åÈëµÇÂ¼ÈÕÖ¾
                     ShareClass.InsertUserLogonLog(strUserCode, strUserName, "WEB");
                 }
                 catch
@@ -612,7 +612,7 @@ public partial class DefaultInterface : System.Web.UI.Page
         {
             strSMSCode = msg.CreateRandomCode(5);
 
-            strMsg = "çŸ­ä¿¡éªŒè¯ç ï¼š" + strSMSCode + "ï¼Œå½“å¤©æœ‰æ•ˆï¼";
+            strMsg = "¶ÌĞÅÑéÖ¤Âë£º" + strSMSCode + "£¬µ±ÌìÓĞĞ§£¡";
 
             if (msg.SendMSM("Message", strUserCode, strMsg, strUserCode))
             {

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopMainTab.aspx.cs" Inherits="TakeTopMainTab" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopMainTab.aspx.cs" Inherits="TakeTopMainTab" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -53,7 +53,7 @@
             var tabs = $('#tt').tabs("tabs");
             if (tabs.length == 0) {
 
-                //ä¾ç‰ˆæœ¬ç±»å‹å’Œç”¨æˆ·ç±»å‹æ‰“å¼€ç›¸åº”çš„ä¸ªäººç©ºé—´é¡µé¢
+                //ÒÀ°æ±¾ÀàĞÍºÍÓÃ»§ÀàĞÍ´ò¿ªÏàÓ¦µÄ¸öÈË¿Õ¼äÒ³Ãæ
                 var varSystemVerType = '<%=Session["SystemVersionType"].ToString() %>'.trim();
                 if (varSystemVerType == "SAAS") {
 
@@ -79,7 +79,7 @@
 
                     intSelectTabIndex = currentTabIndex - 1;
 
-                    //å¾—åˆ°ç„¦ç‚¹æ—¶ï¼Œåˆ·æ–°æ­¤é¡µé¢
+                    //µÃµ½½¹µãÊ±£¬Ë¢ĞÂ´ËÒ³Ãæ
                     if (tabs.length > 0) {
                         var iframe = $(currentTab).find("iframe").get(0);
 
@@ -108,17 +108,17 @@
             changeIFrameDivWidth();
         });
 
-        //æ·»åŠ TABæ 
+        //Ìí¼ÓTABÀ¸
         function addTab(title, url, type) {
 
             if (type == "new") {
                 intTabIndex = 1;
             }
 
-            ////å¼¹å‡ºæ–°é¡µé¢
+            ////µ¯³öĞÂÒ³Ãæ
             //if (url.indexOf('TakeTopPersonalSpace') == -1) {
 
-            //    //å…³é—­æ‰€æœ‰å­å±‚
+            //    //¹Ø±ÕËùÓĞ×Ó²ã
             //    CloseChildLayer();
 
             //    popShowByURL(url, 800, 600,window.location);
@@ -139,10 +139,10 @@
 
             if (type == "new") {
 
-                //å…³é—­æ‰€æœ‰å±‚
+                //¹Ø±ÕËùÓĞ²ã
                 layer.closeAll();
 
-                //å…ˆåˆ é™¤å…¶å®ƒtab
+                //ÏÈÉ¾³ıÆäËütab
                 $('.tabs-inner span').each(function (i, n) {
                     var t = $(n).text();
                     if (t != 'Home') {
@@ -150,7 +150,7 @@
                     }
                 });
 
-                //å†åˆ›å»º
+                //ÔÙ´´½¨
                 if ($('#tt').tabs('exists', title)) {
                     $('#tt').tabs('select', title);
                 } else {
@@ -179,15 +179,15 @@
             changeIFrameDivWidth();
         }
 
-        //å…³è”æ‰€æœ‰å­å±‚
+        //¹ØÁªËùÓĞ×Ó²ã
         function CloseChildLayer() {
             layer.closeAll('iframe');
         }
 
-        //åˆ é™¤å½“å‰TAB
+        //É¾³ıµ±Ç°TAB
         function CloseCurrentTabPage() {
 
-            //åˆ é™¤æŒ‡å®štab
+            //É¾³ıÖ¸¶¨tab
             $('.tabs-inner span').each(function (i, n) {
 
                 var t = $(n).text();
@@ -200,10 +200,10 @@
             });
         }
 
-        //åˆ é™¤å½“å‰TAB
+        //É¾³ıµ±Ç°TAB
         function CloseCurrentTabPageAndOpenSpecialPage() {
 
-            //åˆ é™¤æŒ‡å®štab
+            //É¾³ıÖ¸¶¨tab
             $('.tabs-inner span').each(function (i, n) {
 
                 var t = $(n).text();
@@ -217,7 +217,7 @@
 
             $('.tabs-selected').remove();
 
-            //ä¾ç‰ˆæœ¬ç±»å‹å’Œç”¨æˆ·ç±»å‹æ‰“å¼€ç›¸åº”çš„ä¸ªäººç©ºé—´é¡µé¢
+            //ÒÀ°æ±¾ÀàĞÍºÍÓÃ»§ÀàĞÍ´ò¿ªÏàÓ¦µÄ¸öÈË¿Õ¼äÒ³Ãæ
             var varSystemVerType = '<%=Session["SystemVersionType"].ToString() %>'.trim();
             if (varSystemVerType == "SAAS") {
                 addTab('PersonalSpace', 'TakeTopPersonalSpaceSAAS.aspx', 'new');
@@ -237,24 +237,24 @@
 
         function test_confirm() {
             $.confirm({
-                title: 'æç¤ºï¼',
-                content: 'å°†ç¡®è®¤å’Œå–æ¶ˆæŒ‰é’®è®¾ç½®ä¸ºä¸­æ–‡æ˜¾ç¤ºï¼',
+                title: 'ÌáÊ¾£¡',
+                content: '½«È·ÈÏºÍÈ¡Ïû°´Å¥ÉèÖÃÎªÖĞÎÄÏÔÊ¾£¡',
                 buttons: {
                     ok: {
-                        text: "ç¡®å®š",
+                        text: "È·¶¨",
                         btnClass: 'btn-primary',
                         keys: ['enter'],
                         action: function () {
-                            alert("ä½ ç‚¹å‡»äº†ç¡®è®¤æŒ‰é’®ï¼")
+                            alert("Äãµã»÷ÁËÈ·ÈÏ°´Å¥£¡")
 
                         }
                     },
                     cancel: {
-                        text: "å–æ¶ˆ",
+                        text: "Cancel",
                         btnClass: 'btn-primary',
                         keys: ['esc'],
                         action: function () {
-                            alert("ä½ ç‚¹å‡»äº†å–æ¶ˆæŒ‰é’®ï¼")
+                            alert("Äãµã»÷ÁËÈ¡Ïû°´Å¥£¡")
                         }
 
                     }
@@ -263,7 +263,7 @@
         }
 
 
-        //åˆ·æ–°é¡µé¢
+        //Ë¢ĞÂÒ³Ãæ
         function reloadPage() {
 
             location.reload();
@@ -277,7 +277,7 @@
 
 
 
-        //è®¾ç½®Tabå†…å®¹çš„å®½åº¦ï¼Œä½¿ä¹‹è‡ªé€‚åº”æ¡†æ¶çš„å®½åº¦
+        //ÉèÖÃTabÄÚÈİµÄ¿í¶È£¬Ê¹Ö®×ÔÊÊÓ¦¿ò¼ÜµÄ¿í¶È
         function changeIFrameDivWidth() {
 
             var cNodes = document.getElementsByClassName("panel-body panel-body-noheader panel-body-noborder");

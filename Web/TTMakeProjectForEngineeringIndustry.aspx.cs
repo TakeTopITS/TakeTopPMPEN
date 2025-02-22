@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections;
 using System.Data;
 using System.Drawing;
@@ -23,7 +23,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
         strLangCode = Session["LangCode"].ToString();
         strIsMobileDevice = Session["IsMobileDevice"].ToString();
 
-        //CKEditoråˆå§‹åŒ–
+        //CKEditor³õÊ¼»¯
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_AcceptStandard);
@@ -37,7 +37,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
         LB_UserName.Text = strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "å·¥ç¨‹é¡¹ç›®ç«‹é¡¹", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "¹¤³ÌÏîÄ¿Á¢Ïî", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -86,10 +86,10 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
             BindProjectAttribute();
             BindProjectNature();
 
-            //BusinessForm,åˆ—å‡ºä¸šåŠ¡è¡¨å•ç±»å‹ 
+            //BusinessForm,ÁĞ³öÒµÎñ±íµ¥ÀàĞÍ 
             ShareClass.LoadWorkflowType(DL_WLType, strLangCode);
 
-            //åˆ—å‡ºå¯ç”¨çš„å·¥ä½œæµæ¨¡æ¿
+            //ÁĞ³ö¿ÉÓÃµÄ¹¤×÷Á÷Ä£°å
             ShareClass.LoadProjectPlanStartupRelatedWorkflowTemplate(strUserCode, DL_PlanStartupRelatedWorkflowTemplate);
         }
     }
@@ -197,7 +197,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
         DataGrid2.DataBind();
     }
 
-    //BusinessFormï¼Œåˆ¤æ–­åç»­æ˜¯å¦å¯ä»¥æ”¹è¡¨å•å†…å®¹
+    //BusinessForm£¬ÅĞ¶ÏºóĞøÊÇ·ñ¿ÉÒÔ¸Ä±íµ¥ÄÚÈİ
     protected void DL_AllowUpdate_SelectedIndexChanged(object sender, EventArgs e)
     {
         string strHQL;
@@ -223,7 +223,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
 
     protected void BT_Create_Click(object sender, EventArgs e)
     {
-        //BusinessFormï¼Œéšè—ä¸šåŠ¡è¡¨å•å…ƒç´ 
+        //BusinessForm£¬Òş²ØÒµÎñ±íµ¥ÔªËØ
         Panel_RelatedBusiness.Visible = false;
 
         LB_ProjectID.Text = "";
@@ -314,7 +314,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
             string strRelatedCode = TB_ProjectCode.Text.Trim();
 
 
-            //ä¸»ç®¡é¢†å¯¼ï¼Œè´¹æ§ä¸»ç®¡ï¼Œææ–™å‘˜ï¼Œä½¿ç”¨æ ‡è®°
+            //Ö÷¹ÜÁìµ¼£¬·Ñ¿ØÖ÷¹Ü£¬²ÄÁÏÔ±£¬Ê¹ÓÃ±ê¼Ç
             string strLeader = HF_Leader.Value;
             string strFeeManage = HF_FeeManage.Value;
             string strMaterialPerson = HF_MaterialPerson.Value;
@@ -505,7 +505,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
             project.CustomerPMName = strCustomerPMName;
             project.ProjectName = strProject;
             project.ProjectType = strProjectType;
-            project.ProjectClass = "å¸¸è§„é¡¹ç›®";
+            project.ProjectClass = "³£¹æÏîÄ¿";
             project.ProjectAmount = NB_ProjectAmount.Amount;
             project.Budget = decimal.Parse(strBudget);
             project.ManHour = deManHour;
@@ -517,7 +517,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
             project.EndDate = DateTime.Parse(strEndDate);
             project.MakeDate = DateTime.Now;
             project.Status = strStatus;
-            project.StatusValue = "è¿›è¡Œä¸­";
+            project.StatusValue = "InProgress";
             project.ParentID = int.Parse(strParentID);
 
             project.Priority = DL_Priority.SelectedValue.Trim();
@@ -532,13 +532,13 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
                 strProjectID = ShareClass.GetMyCreatedMaxProjectID(strUserCode);
                 LB_ProjectID.Text = strProjectID;
 
-                //ä¿å­˜é¡¹ç›®çš„ç»çº¬åº¦
+                //±£´æÏîÄ¿µÄ¾­Î³¶È
                 UpdateProjectLongitudeLatitude(strProjectID);
 
-                //ä¿å­˜é¡¹ç›®çš„å…¶å®ƒå±æ€§
+                //±£´æÏîÄ¿µÄÆäËüÊôĞÔ
                 UpdateProjectOtherFieldValue(strProjectID);
 
-                // æ›´æ–°å®¢æˆ·é¡¹ç›®å±æ€§å€¼
+                // ¸üĞÂ¿Í»§ÏîÄ¿ÊôĞÔÖµ
                 UpdateProjectOtherFieldForCustomer(strProjectID);
 
                 string strNewProjectCode = ShareClass.GetCodeByRule("ProjectCode", strProjectType, strProjectID);
@@ -549,7 +549,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
                     ShareClass.RunSqlCommand(strHQL);
                 }
 
-                //ä¿å­˜åˆ°ç‰©èµ„è¡¨ä¸­
+                //±£´æµ½Îï×Ê±íÖĞ
                 if (!string.IsNullOrEmpty(DDL_ProjectAttribute.SelectedValue) && !string.IsNullOrEmpty(DDL_ProjectNature.SelectedValue))
                 {
                     ProjectWZDetailData(strProjectID, "1");
@@ -565,13 +565,13 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
                 HL_CustomerInfo.NavigateUrl = "TTProjectCustomerInfo.aspx?ProjectID=" + strProjectID;
 
 
-                TB_Message.Text = strUserName + " ç»™ä½ å»ºç«‹äº†é¡¹ç›® ï¼š" + strProjectID + " " + strProject + "ï¼Œè¯·åŠæ—¶æ”¶ç†ï¼";
+                TB_Message.Text = strUserName + " ¸øÄã½¨Á¢ÁËÏîÄ¿ £º" + strProjectID + " " + strProject + "£¬Çë¼°Ê±ÊÕÀí£¡";
 
                 LoadProject(strUserCode);
 
-                //ä¾é¡¹ç›®ç±»å‹æ·»åŠ å…³è”çš„å·¥ä½œæµæ¨¡æ¿å’Œæ–‡æ¡£æ¨¡æ¿
+                //ÒÀÏîÄ¿ÀàĞÍÌí¼Ó¹ØÁªµÄ¹¤×÷Á÷Ä£°åºÍÎÄµµÄ£°å
                 ShareClass.AddRelatedWorkFlowTemplateByProjectType(strProjectType, strProjectID, "Project", "Project", "ProjectType");
-                //ShareClass.AddRelatedDocumentTemplateByProjectType(strProjectType, strProjectID, "é¡¹ç›®", "ProjectType");
+                //ShareClass.AddRelatedDocumentTemplateByProjectType(strProjectType, strProjectID, "Project", "ProjectType");
 
 
                 ShareClass.InitialPrjectTreeByAuthority(TreeView1, strUserCode);
@@ -716,17 +716,17 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
                     projectBLL.UpdateProject(project, int.Parse(strProjectID));
 
 
-                    //ä¿å­˜é¡¹ç›®çš„å…¶å®ƒå±æ€§
+                    //±£´æÏîÄ¿µÄÆäËüÊôĞÔ
                     UpdateProjectOtherFieldValue(strProjectID);
 
-                    // æ›´æ–°å®¢æˆ·é¡¹ç›®å±æ€§å€¼
+                    // ¸üĞÂ¿Í»§ÏîÄ¿ÊôĞÔÖµ
                     UpdateProjectOtherFieldForCustomer(strProjectID);
 
-                    //ä¿å­˜é¡¹ç›®çš„ç»çº¬åº¦
+                    //±£´æÏîÄ¿µÄ¾­Î³¶È
                     UpdateProjectLongitudeLatitude(strProjectID);
 
 
-                    //BusinessFormï¼Œå…³è”ç›¸åº”çš„ä¸šåŠ¡è¡¨å•æ¨¡æ¿
+                    //BusinessForm£¬¹ØÁªÏàÓ¦µÄÒµÎñ±íµ¥Ä£°å
                     ShareClass.SaveRelatedBusinessForm("Project", strProjectID, DL_WFTemplate.SelectedValue, DL_AllowUpdate.SelectedValue, strUserCode);
 
                     if (!string.IsNullOrEmpty(DDL_ProjectAttribute.SelectedValue) && !string.IsNullOrEmpty(DDL_ProjectNature.SelectedValue))
@@ -739,14 +739,14 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
 
                     LoadProject(strUserCode);
 
-                    //ä¾é¡¹ç›®ç±»å‹æ·»åŠ å…³è”çš„å·¥ä½œæµæ¨¡æ¿å’Œæ–‡æ¡£æ¨¡æ¿
+                    //ÒÀÏîÄ¿ÀàĞÍÌí¼Ó¹ØÁªµÄ¹¤×÷Á÷Ä£°åºÍÎÄµµÄ£°å
                     ShareClass.AddRelatedWorkFlowTemplateByProjectType(strProjectType, strProjectID, "Project", "Project", "ProjectType");
-                    //ShareClass.AddRelatedDocumentTemplateByProjectType(strProjectType, strProjectID, "é¡¹ç›®", "ProjectType");
+                    //ShareClass.AddRelatedDocumentTemplateByProjectType(strProjectType, strProjectID, "Project", "ProjectType");
 
 
                     ShareClass.InitialPrjectTreeByAuthority(TreeView1, strUserCode);
 
-                    TB_Message.Text = strUserName + " æ›´æ–°äº†é¡¹ç›®ï¼š " + strProjectID + " " + strProject + "çš„å†…å®¹,è¯·å…³æ³¨ï¼Œç‰¹æ­¤é€šçŸ¥ï¼";
+                    TB_Message.Text = strUserName + " ¸üĞÂÁËÏîÄ¿£º " + strProjectID + " " + strProject + "µÄÄÚÈİ,Çë¹Ø×¢£¬ÌØ´ËÍ¨Öª£¡";
 
                     LB_Sql.Text = strHQL;
 
@@ -762,7 +762,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
         }
     }
 
-    //ä¿å­˜é¡¹ç›®çš„ç»çº¬åº¦
+    //±£´æÏîÄ¿µÄ¾­Î³¶È
     protected void UpdateProjectLongitudeLatitude(string strProjectID)
     {
         string strHQL;
@@ -777,7 +777,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
         ShareClass.RunSqlCommand(strHQL);
     }
 
-    //æ›´æ–°å®¢æˆ·é¡¹ç›®å±æ€§å€¼ 
+    //¸üĞÂ¿Í»§ÏîÄ¿ÊôĞÔÖµ 
     protected void UpdateProjectOtherFieldForCustomer(string strProjectID)
     {
         string strAttachFile, strProjectDirection, strBudgetAccount, strProjectLocation, strFundingSource;
@@ -807,10 +807,10 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
     }
 
     /// <summary>
-    /// ç‰©èµ„é¡¹ç›®æ“ä½œ
+    /// Îï×ÊÏîÄ¿²Ù×÷
     /// </summary>
-    /// <param name="strProjectID">é¡¹ç›®ID</param>
-    /// <param name="strGold">1 å¢åŠ ï¼›2 æ›´æ–°ï¼›3 åˆ é™¤</param>
+    /// <param name="strProjectID">ÏîÄ¿ID</param>
+    /// <param name="strGold">1 Ôö¼Ó£»2 ¸üĞÂ£»3 É¾³ı</param>
     protected void ProjectWZDetailData(string strProjectID, string strGold)
     {
         WZProjectBLL wZProjectBLL = new WZProjectBLL();
@@ -833,7 +833,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
         string strRelatedCode = TB_ProjectCode.Text.Trim();
 
 
-        //ä¸»ç®¡é¢†å¯¼ï¼Œè´¹æ§ä¸»ç®¡ï¼Œææ–™å‘˜ï¼Œä½¿ç”¨æ ‡è®°
+        //Ö÷¹ÜÁìµ¼£¬·Ñ¿ØÖ÷¹Ü£¬²ÄÁÏÔ±£¬Ê¹ÓÃ±ê¼Ç
         //string strLeader = DDL_Leader.SelectedValue;
         //string strFeeManage = DDL_FeeManage.SelectedValue;
         //string strMaterialPerson = DDL_MaterialPerson.SelectedValue;
@@ -993,9 +993,9 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
             decimal.TryParse(strSelfCost, out decimalSelfCost);
         }
 
-        if (strGold == "1")//å¢åŠ 
+        if (strGold == "1")//Ôö¼Ó
         {
-            //åˆ¤æ–­é¡¹ç›®åç§°æ˜¯å¦é‡å¤
+            //ÅĞ¶ÏÏîÄ¿Ãû³ÆÊÇ·ñÖØ¸´
             string strCheckProjectNameSQL = string.Format(@"select * from T_WZProject
                             where ProjectName = '{0}'", strProjectName);
             DataTable dtCheckProjectName = ShareClass.GetDataSetFromSql(strCheckProjectNameSQL, "CheckProjectName").Tables[0];
@@ -1022,16 +1022,16 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
             wZProject.MarkTime = DateTime.Now; //DateTime.Parse(strMarkTime);
             wZProject.Marker = strMarker;
 
-            wZProject.Progress = "ç«‹é¡¹";
+            wZProject.Progress = "Á¢Ïî";
             wZProject.IsMark = 0;
 
             wZProject.SupplementEditor = "-";
 
             wZProject.RelatedCode = strRelatedCode;
-            wZProject.IsStatus = "æ­£å¸¸";
+            wZProject.IsStatus = "Normal";
 
 
-            //è¿æ¥å¹³å°å­—æ®µ
+            //Á¬½ÓÆ½Ì¨×Ö¶Î
             wZProject.Leader = strLeader;
             wZProject.FeeManage = strFeeManage;
             wZProject.Checker = strMaterialPerson;
@@ -1042,13 +1042,13 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
             wZProject.ProjectAttribute = strProjectAttribute;
             wZProject.ProjectNature = strProjectNature;
 
-            //å¢åŠ 
+            //Ôö¼Ó
             wZProject.ProjectCode = TB_ProjectCode.Text.Trim();
             wZProject.RelatedProjectID = int.Parse(strProjectID);
 
             wZProjectBLL.AddWZProject(wZProject);
         }
-        else if (strGold == "2")//æ›´æ–°
+        else if (strGold == "2")//¸üĞÂ
         {
             string strWZProjectSql = "from WZProject as wZProject where ProjectCode = '" + TB_ProjectCode.Text.Trim() + "'";
             IList projectList = wZProjectBLL.GetAllWZProjects(strWZProjectSql);
@@ -1067,7 +1067,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
                 wZProject.SupervisorUnit = strSupervisorUnit;
                 wZProject.ProjectDesc = strProjectDesc;
 
-                //è¿æ¥å¹³å°å­—æ®µ
+                //Á¬½ÓÆ½Ì¨×Ö¶Î
                 wZProject.Leader = strLeader;
                 wZProject.FeeManage = strFeeManage;
                 wZProject.Checker = strMaterialPerson;
@@ -1092,7 +1092,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
 
                 wZProjectBLL.UpdateWZProject(wZProject, wZProject.ProjectCode);
             }
-            else//æ–°å¢
+            else//ĞÂÔö
             {
                 WZProject wZProject = new WZProject();
                 wZProject.ProjectName = strProjectName;
@@ -1109,16 +1109,16 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
                 wZProject.MarkTime = DateTime.Now; //DateTime.Parse(strMarkTime);
                 wZProject.Marker = strMarker;
 
-                wZProject.Progress = "ç«‹é¡¹";
+                wZProject.Progress = "Á¢Ïî";
                 wZProject.IsMark = 0;
 
                 wZProject.SupplementEditor = "-";
 
                 wZProject.RelatedCode = strRelatedCode;
-                wZProject.IsStatus = "æ­£å¸¸";
+                wZProject.IsStatus = "Normal";
 
 
-                //è¿æ¥å¹³å°å­—æ®µ
+                //Á¬½ÓÆ½Ì¨×Ö¶Î
                 wZProject.Leader = strLeader;
                 wZProject.FeeManage = strFeeManage;
                 wZProject.Checker = strMaterialPerson;
@@ -1129,14 +1129,14 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
                 wZProject.ProjectAttribute = strProjectAttribute;
                 wZProject.ProjectNature = strProjectNature;
 
-                //å¢åŠ 
+                //Ôö¼Ó
                 wZProject.ProjectCode = TB_ProjectCode.Text.Trim();
                 wZProject.RelatedProjectID = int.Parse(strProjectID);
 
                 wZProjectBLL.AddWZProject(wZProject);
             }
         }
-        else if (strGold == "3")//åˆ é™¤
+        else if (strGold == "3")//É¾³ı
         {
 
         }
@@ -1162,7 +1162,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
 
         strMsg = TB_Message.Text.Trim();
 
-        strSubject = "é¡¹ç›®é€šçŸ¥";
+        strSubject = "ÏîÄ¿Í¨Öª";
 
         Msg msg = new Msg();
 
@@ -1313,10 +1313,10 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
                     LB_BelongDepartCode.Text = project.BelongDepartCode.Trim();
                     LB_BelongDepartName.Text = project.BelongDepartName.Trim();
 
-                    //å–å¾—é¡¹ç›®ç»çº¬åº¦
+                    //È¡µÃÏîÄ¿¾­Î³¶È
                     LoadProjectLongitudeLatitude(strProjectID);
 
-                    //å–å¾—é¡¹ç›®çš„å…¶å®ƒå±æ€§
+                    //È¡µÃÏîÄ¿µÄÆäËüÊôĞÔ
                     LoadProjectOtherAttribute(strProjectID);
                     SetProjectOtherFieldValue(strProjectID);
 
@@ -1342,7 +1342,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
                         TB_ConstructionUnit.Text = ShareClass.ObjectToString(drProject["BuildUnit"]);           //wZProject.BuildUnit;
                         TB_SupervisionUnit.Text = ShareClass.ObjectToString(drProject["SupervisorUnit"]);       //wZProject.SupervisorUnit;
 
-                        //ä¸»ç®¡é¢†å¯¼ï¼Œè´¹æ§ä¸»ç®¡ï¼Œææ–™å‘˜ï¼Œä½¿ç”¨æ ‡è®°
+                        //Ö÷¹ÜÁìµ¼£¬·Ñ¿ØÖ÷¹Ü£¬²ÄÁÏÔ±£¬Ê¹ÓÃ±ê¼Ç
                         HF_Leader.Value = ShareClass.ObjectToString(drProject["Leader"]); //wZProject.Leader;
                         TXT_Leader.Text = ShareClass.ObjectToString(drProject["LeaderName"]); //wZProject.Leader;
                         HF_FeeManage.Value = ShareClass.ObjectToString(drProject["FeeManage"]); //wZProject.FeeManage;
@@ -1387,7 +1387,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
                     HL_CustomerInfo.Enabled = true;
                     HL_CustomerInfo.NavigateUrl = "TTProjectCustomerInfo.aspx?ProjectID=" + strProjectID;
 
-                    //ä¼šå‡ºé”™ï¼Œè¿™ä¸ªé”™è¯¯æ˜¯é˜²æ­¢ä¿®æ”¹æ€»é¡¹ç›®
+                    //»á³ö´í£¬Õâ¸ö´íÎóÊÇ·ÀÖ¹ĞŞ¸Ä×ÜÏîÄ¿
                     LB_ParentProjectID.Text = project.ParentID.ToString();
                     TB_ParentProject.Text = ShareClass.GetProjectName(project.ParentID.ToString());
 
@@ -1395,9 +1395,9 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
                     CB_Mail.Enabled = true;
                     BT_Send.Enabled = true;
 
-                    TB_Message.Text = strUserName + " ç»™ä½ å»ºç«‹äº†é¡¹ç›® ï¼š" + strProjectID + " " + strProjectName + "ï¼Œè¯·åŠæ—¶æ”¶ç†ï¼";
+                    TB_Message.Text = strUserName + " ¸øÄã½¨Á¢ÁËÏîÄ¿ £º" + strProjectID + " " + strProjectName + "£¬Çë¼°Ê±ÊÕÀí£¡";
 
-                    //BusinessFormï¼Œåˆ—å‡ºå…³è”è¡¨å•æ¨¡æ¿
+                    //BusinessForm£¬ÁĞ³ö¹ØÁª±íµ¥Ä£°å
                     try
                     {
                         Panel_RelatedBusiness.Visible = true;
@@ -1422,7 +1422,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
                     {
                     }
 
-                    //BusinessForm,è£…è½½å…³è”ä¿¡æ¯
+                    //BusinessForm,×°ÔØ¹ØÁªĞÅÏ¢
                     TabContainer1.ActiveTabIndex = 0;
                     strProjectID = LB_ProjectID.Text.Trim();
                     ShareClass.LoadBusinessForm("Project", strProjectID, DL_WFTemplate.SelectedValue.Trim(), IFrame_RelatedInformation);
@@ -1452,13 +1452,13 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
                 strHQL = "from Project as project where project.ProjectID = " + strProjectID;
                 lst = projectBLL.GetAllProjects(strHQL);
                 Project project = (Project)lst[0];
-                project.Status = "åˆ é™¤";
+                project.Status = "Deleted";
 
                 strProjectName = project.ProjectName.Trim();
 
                 try
                 {
-                    //ä¼šå‡ºé”™ï¼Œè¿™ä¸ªé”™è¯¯æ˜¯é˜²æ­¢ä¿®æ”¹æ€»é¡¹ç›®
+                    //»á³ö´í£¬Õâ¸ö´íÎóÊÇ·ÀÖ¹ĞŞ¸Ä×ÜÏîÄ¿
                     LB_ParentProjectID.Text = project.ParentID.ToString();
                     TB_ParentProject.Text = ShareClass.GetProjectName(project.ParentID.ToString());
 
@@ -1469,7 +1469,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
                     ShareClass.InitialPrjectTreeByAuthority(TreeView1, strUserCode);
 
 
-                    TB_Message.Text = strUserName + " åˆ é™¤äº†é¡¹ç›®ï¼š " + strProjectID + " " + strProjectName + "çš„å†…å®¹,è¯·å…³æ³¨ï¼Œç‰¹æ­¤é€šçŸ¥ï¼";
+                    TB_Message.Text = strUserName + " É¾³ıÁËÏîÄ¿£º " + strProjectID + " " + strProjectName + "µÄÄÚÈİ,Çë¹Ø×¢£¬ÌØ´ËÍ¨Öª£¡";
 
                     ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
                 }
@@ -1481,7 +1481,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
         }
     }
 
-    //å–å¾—é¡¹ç›®ç»çº¬åº¦
+    //È¡µÃÏîÄ¿¾­Î³¶È
     protected void LoadProjectLongitudeLatitude(string strProjectID)
     {
         string strHQL;
@@ -1495,7 +1495,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
         }
     }
 
-    //å–å¾—é¡¹ç›®çš„å…¶å®ƒå±æ€§
+    //È¡µÃÏîÄ¿µÄÆäËüÊôĞÔ
     protected void LoadProjectOtherAttribute(string strProjectID)
     {
         string strHQL;
@@ -1526,7 +1526,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
         }
     }
 
-    //BusinessForm,å·¥ä½œæµç±»å‹æŸ¥è¯¢
+    //BusinessForm,¹¤×÷Á÷ÀàĞÍ²éÑ¯
     protected void DL_WLType_SelectedIndexChanged(object sender, EventArgs e)
     {
         string strHQL, strWLType;
@@ -1536,7 +1536,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
         {
             return;
         }
-        strHQL = "Select TemName From T_WorkFlowTemplate Where type = " + "'" + strWLType + "'" + " and Visible = 'YES' and Authority = 'æ‰€æœ‰'";
+        strHQL = "Select TemName From T_WorkFlowTemplate Where type = " + "'" + strWLType + "'" + " and Visible = 'YES' and Authority = 'All'";
         strHQL += " Order by SortNumber ASC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTemplate");
         DL_WFTemplate.DataSource = ds;
@@ -1547,7 +1547,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
     }
 
-    //BusinessForm,å¯åŠ¨å…³è”çš„ä¸šåŠ¡è¡¨å•
+    //BusinessForm,Æô¶¯¹ØÁªµÄÒµÎñ±íµ¥
     protected void BT_StartupBusinessForm_Click(object sender, EventArgs e)
     {
         string strURL;
@@ -1573,7 +1573,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
     }
 
 
-    //BusinessForm,åˆ é™¤å…³è”çš„ä¸šåŠ¡è¡¨å•
+    //BusinessForm,É¾³ı¹ØÁªµÄÒµÎñ±íµ¥
     protected void BT_DeleteBusinessForm_Click(object sender, EventArgs e)
     {
         string strHQL;
@@ -1673,11 +1673,11 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
         {
             strReviewControl = GetProjectStatusReviewControl(strProjectType, strStatus);
 
-            if (strReviewControl == "æ˜¯")
+            if (strReviewControl == "YES")
             {
-                if (strStatusValues == "é€šè¿‡")
+                if (strStatusValues == "Passed")
                 {
-                    strHQL = "from StatusRelatedWF as statusRelatedWF where statusRelatedWF.Status = " + "'" + strStatus + "'" + " and  statusRelatedWF.RelatedType = 'é¡¹ç›®' and statusRelatedWF.RelatedID = " + strProjectID + " Order by statusRelatedWF.ID DESC";
+                    strHQL = "from StatusRelatedWF as statusRelatedWF where statusRelatedWF.Status = " + "'" + strStatus + "'" + " and  statusRelatedWF.RelatedType = 'Project' and statusRelatedWF.RelatedID = " + strProjectID + " Order by statusRelatedWF.ID DESC";
                     StatusRelatedWFBLL statusRelatedWFBLL = new StatusRelatedWFBLL();
                     lst = statusRelatedWFBLL.GetAllStatusRelatedWFs(strHQL);
                     if (lst.Count > 0)
@@ -1685,19 +1685,19 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
                         StatusRelatedWF statusRelatedWF = (StatusRelatedWF)lst[0];
                         strWLID = statusRelatedWF.WLID.ToString();
 
-                        strHQL = "from WorkFlow as workFlow where workFlow.Status in ('é€šè¿‡','ç»“æ¡ˆ') and workFlow.WLID = " + strWLID;
+                        strHQL = "from WorkFlow as workFlow where workFlow.Status in ('Passed','CaseClosed') and workFlow.WLID = " + strWLID;
                         WorkFlowBLL workFlowBLL = new WorkFlowBLL();
                         lst = workFlowBLL.GetAllWorkFlows(strHQL);
 
                         if (lst.Count == 0)
                         {
-                            DL_StatusValue.SelectedValue = "è¿›è¡Œä¸­";
+                            DL_StatusValue.SelectedValue = "InProgress";
                             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGCZTMYTJPSHPSMTGZTZBNGWTG + "')", true);
                         }
                     }
                     else
                     {
-                        DL_StatusValue.SelectedValue = "è¿›è¡Œä¸­";
+                        DL_StatusValue.SelectedValue = "InProgress";
                         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGCZTMYTJPSHPSMTGZTZBNGWTG + "')", true);
                     }
                 }
@@ -1705,7 +1705,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
         }
         else
         {
-            DL_StatusValue.SelectedValue = "è¿›è¡Œä¸­";
+            DL_StatusValue.SelectedValue = "InProgress";
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGCWKJLBNGBZTZXZXM + "')", true);
         }
 
@@ -1743,7 +1743,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
         }
     }
 
-    //æ›´æ”¹é¡¹ç›®å…¶å®ƒå­—æ®µå€¼ 
+    //¸ü¸ÄÏîÄ¿ÆäËü×Ö¶ÎÖµ 
     public void UpdateProjectOtherFieldValue(string strProjectID)
     {
         string strHQL;
@@ -1790,7 +1790,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
 
     }
 
-    //è®¾ç½®é¡¹ç›®å…¶å®ƒå±æ€§çš„å€¼ 
+    //ÉèÖÃÏîÄ¿ÆäËüÊôĞÔµÄÖµ 
     public void SetProjectOtherFieldValue(string strProjectID)
     {
         string strHQL;
@@ -1822,7 +1822,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
         strHQL = "from Project as project where project.UserCode = " + "'" + strUserCode + "'";
         strHQL += " and (( project.PMCode in (select memberLevel.UnderCode from MemberLevel as memberLevel where memberLevel.UserCode = " + "'" + strUserCode + "'" + "))";
         strHQL += " or  ( project.PMCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")))";
-        strHQL += " and project.Status <> 'å½’æ¡£' order by project.ProjectID DESC";
+        strHQL += " and project.Status <> 'Archived' order by project.ProjectID DESC";
 
         ProjectBLL projectBLL = new ProjectBLL();
 
@@ -1840,7 +1840,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Project as project where  project.UserCode = " + "'" + strUserCode + "'" + " and project.Status <> 'å½’æ¡£' order by project.ProjectID DESC";
+        strHQL = "from Project as project where  project.UserCode = " + "'" + strUserCode + "'" + " and project.Status <> 'Archived' order by project.ProjectID DESC";
         ProjectBLL projectBLL = new ProjectBLL();
         lst = projectBLL.GetAllProjects(strHQL);
         DataGrid2.DataSource = lst;
@@ -1894,7 +1894,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
         }
         else
         {
-            return "è¿›è¡Œä¸­";
+            return "InProgress";
         }
     }
 
@@ -1944,7 +1944,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
 
     private string CreateNewProjectCode()
     {
-        //ç”Ÿæˆé¡¹ç›®ç¼–å· ã€ˆé¡¹ç›®ç¼–ç ã€‰ï¼â€œG2013J0001â€ æ€»å…±é•¿åº¦ä¸º10ä½
+        //Éú³ÉÏîÄ¿±àºÅ ¡´ÏîÄ¿±àÂë¡µ£½¡°G2013J0001¡± ×Ü¹²³¤¶ÈÎª10Î»
         string strNewProjectCode = string.Empty;
         try
         {
@@ -1966,7 +1966,7 @@ public partial class TTMakeProjectForEngineeringIndustry : System.Web.UI.Page
                     string strProjectNature = DDL_ProjectNature.SelectedValue;
                     strNewProjectCode = strProjectAttribute + DateTime.Now.Year + strProjectNature + sbProjectCode.ToString() + intProjectCodeNumber.ToString();
 
-                    //éªŒè¯æ–°çš„é¡¹ç›®ç¼–å·æ˜¯æ»å­˜åœ¨
+                    //ÑéÖ¤ĞÂµÄÏîÄ¿±àºÅÊÇÖÍ´æÔÚ
                     string strCheckNewProjectCodeHQL = "select count(1) as RowNumber from T_WZProject where ProjectCode = '" + strNewProjectCode + "'";
                     DataTable dtCheckNewProjectCode = ShareClass.GetDataSetFromSql(strCheckNewProjectCodeHQL, "strCheckNewProjectCodeHQL").Tables[0];
                     int intCheckNewProjectCode = int.Parse(dtCheckNewProjectCode.Rows[0]["RowNumber"].ToString());

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -25,7 +25,7 @@ public partial class TTLTCandidateInformationView : System.Web.UI.Page
         IList lst;
 
 
-        //this.Title = "ç”¨æˆ·ï¼š" + strUserCode +" " + strUserName + "  çš„èµ„æ–™";
+        //this.Title = "ÓÃ»§£º" + strUserCode +" " + strUserName + "  µÄ×ÊÁÏ";
 
         string strUserCode = Session["UserCode"].ToString();if (Page.IsPostBack == false)
         {

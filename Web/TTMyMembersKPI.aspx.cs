@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -23,8 +23,8 @@ public partial class TTMyMembersKPI : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //é’Ÿç¤¼æœˆä½œå“ï¼ˆjack.erp@gmail.com)
-        //æ³°é¡¶è½¯ä»¶2006ï¼2012
+        //ÖÓÀñÔÂ×÷Æ·£¨jack.erp@gmail.com)
+        //Ì©¶¥Èí¼ş2006£­2012
 
         strUserCode = Session["UserCode"].ToString();
         strUserName = GetUserName(strUserCode);
@@ -75,7 +75,7 @@ public partial class TTMyMembersKPI : System.Web.UI.Page
             LB_KPICheckID.Text = strKPICheckID;
             LB_KPICheckName.Text = strKPICheckName;
 
-            //è®¡ç®—KPIçš„ç³»ç»Ÿè¯„åˆ†
+            //¼ÆËãKPIµÄÏµÍ³ÆÀ·Ö
             LB_TotalSqlPoint.Text = ShareClass.CalculateSystemPoint(strKPICheckID).ToString();
 
             UserKPICheck userKPICheck = GetUserKPICheck(strKPICheckID);
@@ -88,7 +88,7 @@ public partial class TTMyMembersKPI : System.Web.UI.Page
             LB_TotalPoint.Text = userKPICheck.TotalPoint.ToString();
             LB_Status.Text = userKPICheck.Status.Trim();
 
-            //ç”ŸæˆåŒéƒ¨é—¨åŒèŒç§°å‘˜å·¥ç»©æ•ˆè¯„åˆ†å¯¹æ¯”æŸ±çŠ¶å›¾
+            //Éú³ÉÍ¬²¿ÃÅÍ¬Ö°³ÆÔ±¹¤¼¨Ğ§ÆÀ·Ö¶Ô±ÈÖù×´Í¼
             CreateSameDepartmentJobTitleKPIScoringChart(strUserCode, userKPICheck);
         }
     }
@@ -107,7 +107,7 @@ public partial class TTMyMembersKPI : System.Web.UI.Page
         dtStartTime = userKPICheck.StartTime;
         dtEndTime = userKPICheck.EndTime;
 
-        strChartTitle = "æˆ‘çš„ç›´æ¥æˆå‘˜ç»©æ•ˆæ€»è¯„åˆ†å¯¹æ¯”å›¾";
+        strChartTitle = "ÎÒµÄÖ±½Ó³ÉÔ±¼¨Ğ§×ÜÆÀ·Ö¶Ô±ÈÍ¼";
 
         strHQL = "Select UserName as XName,TotalPoint as YNumber From T_UserKPICheck ";
         strHQL += " Where UserCode in (Select UnderCode From T_MemberLevel Where Usercode = " + "'" + strUserCode + "')";

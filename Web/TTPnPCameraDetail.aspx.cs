@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,7 +19,7 @@ public partial class TTPnPCameraDetail : System.Web.UI.Page
         string strUserName = ShareClass.GetUserName(strUserCode);
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "Â∫ìÂ≠òÁÆ°ÁêÜ", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ø‚¥Êπ‹¿Ì", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -35,8 +35,8 @@ public partial class TTPnPCameraDetail : System.Web.UI.Page
 
     private void DataBindCameraInfo(string strForeignID, string strType)
     {
-        string strCameraInfoHQL = string.Format(@"select TypeName = (case when i.CameraType = 1 then 'ÁªÑÁªáÊû∂ÊûÑÈÉ®'
-			                    when i.CameraType = 2 then 'È°πÁõÆÈÉ®'
+        string strCameraInfoHQL = string.Format(@"select TypeName = (case when i.CameraType = 1 then '◊È÷Øº‹ππ≤ø'
+			                    when i.CameraType = 2 then 'œÓƒø≤ø'
 			                    end )
                                 ,DPName = (case when i.CameraType = 1 then d.DepartName
 			                                when i.CameraType = 2 then p.ProjectName

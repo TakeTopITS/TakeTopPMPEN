@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -23,7 +23,7 @@ public partial class TTPersonalSpaceToDoList : System.Web.UI.Page
         {
             //LB_SuperDepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthoritySuperUser(Session["UserCode"].ToString());
 
-            //æ¸…ç©ºé¡µé¢ç¼“å­˜ï¼Œç”¨äºæ”¹å˜çš®è‚¤
+            //Çå¿ÕÒ³Ãæ»º´æ£¬ÓÃÓÚ¸Ä±äÆ¤·ô
             SetPageNoCache();
 
             intRunNumber = 0;
@@ -32,12 +32,12 @@ public partial class TTPersonalSpaceToDoList : System.Web.UI.Page
         }
     }
 
-    //æ¸…ç©ºé¡µé¢ç¼“å­˜ï¼Œç”¨äºæ”¹å˜çš®è‚¤
+    //Çå¿ÕÒ³Ãæ»º´æ£¬ÓÃÓÚ¸Ä±äÆ¤·ô
     public void SetPageNoCache()
     {
         if (Session["CssDirectoryChangeNumber"].ToString() == "1")
         {
-            //æ¸…é™¤å…¨éƒ¨ç¼“å­˜
+            //Çå³ıÈ«²¿»º´æ
             IDictionaryEnumerator allCaches = Page.Cache.GetEnumerator();
             while (allCaches.MoveNext())
             {
@@ -95,7 +95,7 @@ public partial class TTPersonalSpaceToDoList : System.Web.UI.Page
     {
         string strHQL;
 
-        strHQL = String.Format(@"Select * From T_FunInforDialBox Where Status = 'å¯ç”¨' 
+        strHQL = String.Format(@"Select * From T_FunInforDialBox Where Status = 'Enabled' 
            and LangCode = '{0}'
            and LinkAddress In (Select PageName From T_ProModuleLevel Where LangCode = '{0}' and ModuleName In ( Select ModuleName From T_ProModule Where Visible = 'YES' And UserCode = '{1}'))
            and LinkAddress In (Select PageName From T_ProModuleLevel Where LangCode = '{0}' and (ParentModule In ( Select ModuleName From T_ProModule Where Visible = 'YES' And UserCode = '{1}') Or ParentModule =''))

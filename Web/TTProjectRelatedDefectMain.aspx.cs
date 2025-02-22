@@ -1,4 +1,4 @@
-Ôªøusing ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
 using System.Collections;
@@ -29,7 +29,7 @@ public partial class TTProjectRelatedDefectMain : System.Web.UI.Page
         lst = projectBLL.GetAllProjects(strHQL);
         Project project = (Project)lst[0];
 
-        //this.Title = Resources.lang.Project + strProjectID + project.ProjectName + "ÁöÑÁõ∏ÂÖ≥Áº∫Èô∑";
+        //this.Title = Resources.lang.Project + strProjectID + project.ProjectName + "µƒœ‡πÿ»±œ›";
 
         LB_UserCode.Text = strUserCode;
         LB_UserName.Text = strUserName;
@@ -94,7 +94,7 @@ public partial class TTProjectRelatedDefectMain : System.Web.UI.Page
 
         if (e.CommandName != "Page")
         {
-            if (strStatus == "ÁªìÊ°à" || strStatus == "ÊåÇËµ∑" || strStatus == "ÂèñÊ∂à")
+            if (strStatus == "CaseClosed" || strStatus == "Suspended" || strStatus == "Cancel")
             {
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBCXMYBJAGHX + "')", true);
             }

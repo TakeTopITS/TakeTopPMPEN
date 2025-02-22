@@ -1,16 +1,16 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSelectorGetUnit.aspx.cs" Inherits="TTWZSelectorGetUnit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSelectorGetUnit.aspx.cs" Inherits="TTWZSelectorGetUnit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>È¢ÜÊñôÂçï‰Ωç</title>
+    <title>¡Ï¡œµ•Œª</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js" type="text/javascript"></script>
     <script type="text/jscript">
 
-        //ÂçïÈÄâÊã©ÊåâÈíÆÂà§Êñ≠
+        //µ•—°‘Ò∞¥≈•≈–∂œ
         function chooseUpdate() {
             var str = "";
             $("input[name=name1]").each(function () {
@@ -20,7 +20,7 @@
             });
 
             if (str == "") {
-                alert('ËØ∑ÈÄâÊã©ËÆ∞ÂΩïÈ°πÔºÅ');
+                alert('«Î—°‘Òº«¬ºœÓ£°');
                 return false;
             }
             else {
@@ -153,10 +153,10 @@
                                                                         <input id='<%#Eval("UnitCode") %>|<%#Eval("UnitName") %>|<%#Eval("DelegateAgent") %>,<%#Eval("DelegateAgentName") %>|<%#Eval("FeeManage") %>,<%#Eval("FeeManageName") %>' type="radio" name="name1" />
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="UnitCode" HeaderText="Âçï‰ΩçÁºñÂè∑">
+                                                                <asp:BoundColumn DataField="UnitCode" HeaderText="µ•Œª±‡∫≈">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                 </asp:BoundColumn>
-                                                                <%--<asp:BoundColumn DataField="UnitName" HeaderText="È¢ÜÊñôÂçï‰Ωç">
+                                                                <%--<asp:BoundColumn DataField="UnitName" HeaderText="¡Ï¡œµ•Œª">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                                 </asp:BoundColumn>--%>
                                                                 <asp:TemplateColumn>
@@ -168,16 +168,16 @@
                                                                         <%# ShareClass.StringCutByRequire(Eval("UnitName").ToString(), 190) %>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="LeaderName" HeaderText="‰∏ªÁÆ°È¢ÜÂØº">
+                                                                <asp:BoundColumn DataField="LeaderName" HeaderText="÷˜π‹¡Ïµº">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="DelegateAgentName" HeaderText="ÂßîÊâò‰ª£ÁêÜ‰∫∫">
+                                                                <asp:BoundColumn DataField="DelegateAgentName" HeaderText="ŒØÕ–¥˙¿Ì»À">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="FeeManageName" HeaderText="Ë¥πÊéß‰∏ªÁÆ°">
+                                                                <asp:BoundColumn DataField="FeeManageName" HeaderText="∑—øÿ÷˜π‹">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="MaterialPersonName" HeaderText="ÊùêÊñôÂëò">
+                                                                <asp:BoundColumn DataField="MaterialPersonName" HeaderText="≤ƒ¡œ‘±">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="21%" />
                                                                 </asp:BoundColumn>
                                                             </Columns>
@@ -195,10 +195,10 @@
                                             <tr>
                                                 <td class="formItemBgStyle">
                                                     <div style="text-align: center">
-                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="Á°ÆÂÆö" />
+                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="»∑∂®" />
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                            type="button" value="ÂÖ≥Èó≠" />
+                                                            type="button" value="Closed" />
                                                     </div>
                                                 </td>
                                             </tr>

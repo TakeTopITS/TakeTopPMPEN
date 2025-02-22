@@ -28372,4 +28372,40 @@
   <data name="SheJi" xml:space="preserve">
     <value>设计</value>
   </data>
+  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
+    <value>在执行项目总数</value>
+  </data>
+  <data name="NianDuXingZeng" xml:space="preserve">
+    <value>年度新增</value>
+  </data>
+  <data name="NianDuWanCheng" xml:space="preserve">
+    <value>年度完成</value>
+  </data>
+  <data name="NianDuYanWuXiangMuShu" xml:space="preserve">
+    <value>严重延误项目数 </value>
+  </data>
+  <data name="JingDuZhengChang" xml:space="preserve">
+    <value>进度正常</value>
+  </data>
+  <data name="QIngDuYanWu" xml:space="preserve">
+    <value>进度延误</value>
+  </data>
+  <data name="NianDuXiangMuHuiKan" xml:space="preserve">
+    <value>年度项目回款</value>
+  </data>
+  <data name="NianDuChengBenHeShuan" xml:space="preserve">
+    <value>年度成本核算</value>
+  </data>
+  <data name="ChengBenChaoZiXiangMuShu" xml:space="preserve">
+    <value>成本超支项目数</value>
+  </data>
+  <data name="NianDuXiangMuGongShiTouRu" xml:space="preserve">
+    <value>年度项目工时投入</value>
+  </data>
+  <data name="NianDuTeiBaoRenShu" xml:space="preserve">
+    <value>年度填报人数</value>
+  </data>
+  <data name="ZaiZhiXingRenWuZhongShu" xml:space="preserve">
+    <value>在执行项目总数</value>
+  </data>
 </root>

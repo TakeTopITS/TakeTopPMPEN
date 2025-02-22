@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSoftTry_TakeTopSoftCloud.aspx.cs" Inherits="TakeTopSoftTry_TakeTopSoftCloud" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSoftTry_TakeTopSoftCloud.aspx.cs" Inherits="TakeTopSoftTry_TakeTopSoftCloud" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -35,21 +35,21 @@
     <form id="form1" runat="server">
         <div class="fw_list">
             <p class="fw_zlxz">
-                我们拓鼎所有管理软件平台产品【企业版】提供免费在线试用，试用中如遇到问题，请即时联系客服， <a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes">
-                    <img align="absmiddle" src="images/qq.png" />客服QQ</a>。
+                �����ض����й�������ƽ̨��Ʒ����ҵ�桿�ṩ����������ã����������������⣬�뼴ʱ��ϵ�ͷ��� <a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes">
+                    <img align="absmiddle" src="images/qq.png" />�ͷ�QQ</a>��
             </p>
 
             <div class="wenzi">
                 <ul class="clearfix">
 
-                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/TTCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=SIMP" target="_blank">在线试用</a>系统集成项目管理平台</li>
-                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/TTCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=RDPMP" target="_blank">在线试用</a>研发项目管理平台</li>
-                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/TTCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=SIMP" target="_blank">在线试用</a>软件实施项目管理平台</li>
-                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/TTCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=ENPMP" target="_blank">在线试用</a>工程项目管理平台</li>
-                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopMIS/TTCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=ERP" target="_blank">在线试用</a>项目型ERP平台</li>
-                    <%--  <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/TTCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=CRM" target="_blank">在线试用</a>CRM平台</li>
-                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/TTCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=CMP" target="_blank">在线试用</a>协同OA平台</li>
-                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/TTCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=ECMP" target="_blank">在线试用</a>企业综合管理平台</li>--%>
+                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/TTCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=SIMP" target="_blank">��������</a>ϵͳ������Ŀ����ƽ̨</li>
+                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/TTCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=RDPMP" target="_blank">��������</a>�з���Ŀ����ƽ̨</li>
+                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/TTCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=SIMP" target="_blank">��������</a>����ʵʩ��Ŀ����ƽ̨</li>
+                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/TTCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=ENPMP" target="_blank">��������</a>������Ŀ����ƽ̨</li>
+                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopMIS/TTCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=ERP" target="_blank">��������</a>��Ŀ��ERPƽ̨</li>
+                    <%--  <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/TTCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=CRM" target="_blank">��������</a>CRMƽ̨</li>
+                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/TTCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=CMP" target="_blank">��������</a>ЭͬOAƽ̨</li>
+                    <li style="font-size: larger;"><a href="https://www.taketopits.com/taketopmis/TTCustomerRegisterFromWebSite_TakeTopSoft.aspx?WebSite=WWW.TAKETOPSOFT.COM&amp;SystemType=ECMP" target="_blank">��������</a>��ҵ�ۺϹ���ƽ̨</li>--%>
                 </ul>
             </div>
         </div>

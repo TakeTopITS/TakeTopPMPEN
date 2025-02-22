@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSetMemberAgency.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSetMemberAgency.aspx.cs"
     Inherits="TTSetMemberAgency" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ç›´æŽ¥ä¸‹å±žè®¾ç½®</title>
+    <title>Ö±½ÓÏÂÊôÉèÖÃ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
@@ -84,16 +84,16 @@
                                             
                                             <ItemStyle CssClass="itemStyle" />
                                             <Columns>
-                                                <asp:TemplateColumn HeaderText="é€‰æ‹©">
+                                                <asp:TemplateColumn HeaderText="Ñ¡Ôñ">
                                                     <ItemStyle  CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     <ItemTemplate>
                                                         <asp:CheckBox ID="CB_AgencyStatus" runat="server" />
                                                     </ItemTemplate>
                                                 </asp:TemplateColumn>
-                                                <asp:BoundColumn DataField="AgencyCode" HeaderText="ä»£ç†äººä»£ç ">
+                                                <asp:BoundColumn DataField="AgencyCode" HeaderText="´úÀíÈË´úÂë">
                                                      <ItemStyle  CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                 </asp:BoundColumn>
-                                                <asp:BoundColumn DataField="AgencyName" HeaderText="ä»£ç†äººåç§°">
+                                                <asp:BoundColumn DataField="AgencyName" HeaderText="´úÀíÈËÃû³Æ">
                                                      <ItemStyle  CssClass="itemBorder" HorizontalAlign="Center" Width="50%" />
                                                 </asp:BoundColumn>
                                             </Columns>
@@ -105,7 +105,7 @@
                                                 <td style="width: 50%;padding: 5px 0px 0px 5px;"
                                                     valign="top" align="left">
                                                     <strong>
-                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DLSPLXLB%>"></asp:Label>ï¼š</strong>
+                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DLSPLXLB%>"></asp:Label>£º</strong>
                                                 </td>
                                             </tr>
                                             <tr>

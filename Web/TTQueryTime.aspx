@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTQueryTime.aspx.cs" Inherits="TTQueryTime" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTQueryTime.aspx.cs" Inherits="TTQueryTime" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -7,7 +7,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>æŸ¥è¯¢ç”¨æ—¶æ£€æµ‹</title>
+    <title>²éÑ¯ÓÃÊ±¼ì²â</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script src="js/allAHandler.js" type="text/javascript"></script>
@@ -59,7 +59,7 @@
                                     <table cellpadding="2" cellspacing="0" class="formBgStyle" width="900px">
                                         <tr style="color: #000000">
                                             <td align="right" class="formItemBgStyle" style="width: 150px; height: 30px">
-                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,SQLYuJuSelectYuJu%>"></asp:Label>ï¼š</td>
+                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,SQLYuJuSelectYuJu%>"></asp:Label>£º</td>
                                             <td align="left" class="formItemBgStyle" style="height: 30px" colspan="3">
                                                 <asp:TextBox ID="TB_SQLCode" runat="server" CssClass="shuru" Height="150px" TextMode="MultiLine" Width="95%"></asp:TextBox>
                                                 <br />
@@ -67,7 +67,7 @@
                                         </tr>
                                         <tr style="color: #000000">
                                             <td align="right" class="formItemBgStyle" style="width: 150px; height: 30px">
-                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YongShi%>"></asp:Label>ï¼š</td>
+                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YongShi%>"></asp:Label>£º</td>
                                             <td align="left" class="formItemBgStyle" colspan="3" style="height: 30px">
                                                 <asp:Label ID="lbl_Time" runat="server"></asp:Label>
                                             </td>

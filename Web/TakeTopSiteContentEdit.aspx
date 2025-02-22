@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteContentEdit.aspx.cs" Inherits="TakeTopSiteContentEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteContentEdit.aspx.cs" Inherits="TakeTopSiteContentEdit" %>
 
 <!DOCTYPE html>
 
@@ -49,7 +49,7 @@
                                                 </table>
                                             </td>
                                             <td style="text-align: right; width: 100px;">
-                                                <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YuYan%>"></asp:Label>ï¼š</td>
+                                                <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YuYan%>"></asp:Label>£º</td>
                                             <td align="left" style="width: 80px; padding-top: 5px;">
                                                 <asp:DropDownList ID="ddlLangSwitcher" runat="server" DataValueField="LangCode" DataTextField="Language" AutoPostBack="true" OnSelectedIndexChanged="ddlLangSwitcher_SelectedIndexChanged">
                                                 </asp:DropDownList>
@@ -66,7 +66,7 @@
                                     <table width="100%" cellpadding="5" cellspacing="0">
                                         <tr>
                                             <td width="200" style="padding: 5px 5px 0px 5px; border-right: solid 1px #6d92ad">
-                                                <asp:TreeView ID="TreeView1" runat="server" Font-Bold="False" Font-Names="å®‹ä½“" NodeWrap="True" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged" ShowLines="True" Style="width: 200px; height: 100%;">
+                                                <asp:TreeView ID="TreeView1" runat="server" Font-Bold="False" Font-Names="ËÎÌå" NodeWrap="True" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged" ShowLines="True" Style="width: 200px; height: 100%;">
                                                     <RootNodeStyle CssClass="rootNode" />
                                                     <NodeStyle CssClass="treeNode" />
                                                     <LeafNodeStyle CssClass="leafNode" />
@@ -112,7 +112,7 @@
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="Title" HeaderText="ä¸»é¢˜">
+                                                        <asp:BoundColumn DataField="Title" HeaderText="Ö÷Ìâ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="90%" />
                                                         </asp:BoundColumn>
                                                     </Columns>
@@ -123,7 +123,7 @@
                                                 <table width="100%" class="formBgStyle">
                                                     <tr>
                                                         <td align="right" width="80px" class="formItemBgStyle">
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>£º
                                                         </td>
                                                         <td align="left" class="formItemBgStyle">
                                                             <asp:Label ID="LB_ContentID" runat="server"></asp:Label>
@@ -132,7 +132,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td align="right" class="formItemBgStyle">
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZhuTi%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZhuTi%>"></asp:Label>£º
                                                         </td>
                                                         <td align="left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TB_Title" runat="server" Width="95%"></asp:TextBox>
@@ -140,7 +140,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td align="right" valign="top" class="formItemBgStyle">
-                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>£º
                                                         </td>
                                                         <td align="left" class="formItemBgStyle">
                                                             <CKEditor:CKEditorControl ID="CKEditor1" Width="98%" Height="550px" runat="server" Visible="False">

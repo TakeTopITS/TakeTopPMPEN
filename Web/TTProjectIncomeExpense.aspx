@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectIncomeExpense.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectIncomeExpense.aspx.cs"
     Inherits="TTProjectIncomeExpense" %>
 
 
@@ -47,7 +47,7 @@
                                 <tr>
                                     <td align="right">
                                         <a href="#" onclick="preview1()">
-                                            <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" />
+                                            <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" />
                                         </a>
                                     </td>
                                 </tr>
@@ -66,7 +66,7 @@
                                                     <table style="width: 100%;">
                                                         <tr>
                                                             <td style="height: 80px; font-size: x-large; text-align: center; line-height: 110%;">
-                                                                <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>ï¼š
+                                                                <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>£º
                                                         <asp:Label ID="LB_ProjectIncomeExpenseTitle" runat="server"></asp:Label>
                                                                 &nbsp;<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShouYiBiao%>"></asp:Label><br />
                                                             </td>
@@ -74,7 +74,7 @@
                                                         <tr>
                                                             <td style="text-align: Right; height: 25px;">
                                                                 <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,BiBie%>">
-                                                                </asp:Label>ï¼š
+                                                                </asp:Label>£º
                                                             <asp:Label ID="LB_CurrencyType" runat="server"></asp:Label></td>
                                                         </tr>
                                                     </table>
@@ -160,15 +160,15 @@
                                                                 </asp:DataList>
                                                                 <table cellpadding="5" cellspacing="0" border="0" width="100%">
                                                                     <tr>
-                                                                        <td class="tdTopLine" align="center">&nbsp;<asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,HeTongZongE%>"></asp:Label>ï¼š
+                                                                        <td class="tdTopLine" align="center">&nbsp;<asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,HeTongZongE%>"></asp:Label>£º
                                                                     <asp:Label ID="LB_TotalContractAmount" runat="server"></asp:Label>
-                                                                            &nbsp;<asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,YingShouZongE%>"></asp:Label>ï¼š<asp:Label ID="LB_TotalReceivablesAmount" runat="server"></asp:Label>
-                                                                            &nbsp;<asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ShiShouZongE%>"></asp:Label>ï¼š<asp:Label ID="LB_TotalContractIncome" runat="server"></asp:Label>
-                                                                            &nbsp;<asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,FeiYongZongE%>"></asp:Label>ï¼š<asp:Label ID="LB_TotalContractExpense" runat="server"></asp:Label>
+                                                                            &nbsp;<asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,YingShouZongE%>"></asp:Label>£º<asp:Label ID="LB_TotalReceivablesAmount" runat="server"></asp:Label>
+                                                                            &nbsp;<asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ShiShouZongE%>"></asp:Label>£º<asp:Label ID="LB_TotalContractIncome" runat="server"></asp:Label>
+                                                                            &nbsp;<asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,FeiYongZongE%>"></asp:Label>£º<asp:Label ID="LB_TotalContractExpense" runat="server"></asp:Label>
                                                                             &nbsp;<br />
-                                                                            <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,ShiShouYuFeiYongChaE%>"></asp:Label>ï¼š<asp:Label ID="LB_IncomeExpenseBalance" runat="server"></asp:Label>
-                                                                            &nbsp;<asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,HeTongYuShiShouChaE%>"></asp:Label>ï¼š<asp:Label ID="LB_ContractReceiverBalance" runat="server"></asp:Label>
-                                                                            &nbsp;<asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,YingShouYuShiShouChaE%>"></asp:Label>ï¼š<asp:Label ID="LB_ReceivableReceiverBalance" runat="server"></asp:Label>
+                                                                            <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,ShiShouYuFeiYongChaE%>"></asp:Label>£º<asp:Label ID="LB_IncomeExpenseBalance" runat="server"></asp:Label>
+                                                                            &nbsp;<asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,HeTongYuShiShouChaE%>"></asp:Label>£º<asp:Label ID="LB_ContractReceiverBalance" runat="server"></asp:Label>
+                                                                            &nbsp;<asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,YingShouYuShiShouChaE%>"></asp:Label>£º<asp:Label ID="LB_ReceivableReceiverBalance" runat="server"></asp:Label>
 
                                                                         </td>
                                                                     </tr>
@@ -201,7 +201,7 @@
                                                                                                 </asp:Legend>
                                                                                             </Legends>
                                                                                             <Titles>
-                                                                                                <asp:Title Name="æ ‡é¢˜" Alignment="TopCenter" IsDockedInsideChartArea="False" DockedToChartArea="ChartArea1"></asp:Title>
+                                                                                                <asp:Title Name="±êÌâ" Alignment="TopCenter" IsDockedInsideChartArea="False" DockedToChartArea="ChartArea1"></asp:Title>
                                                                                             </Titles>
                                                                                         </asp:Chart>--%>
                                                                                     </td>

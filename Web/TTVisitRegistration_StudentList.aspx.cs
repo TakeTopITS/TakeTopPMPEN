@@ -1,4 +1,4 @@
-锘縰sing System; using System.Resources;
+using System; using System.Resources;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -90,7 +90,7 @@ public partial class TTVisitRegistration_StudentList : System.Web.UI.Page
         string cmdName = e.CommandName;
         if (cmdName == "edit")
         {
-            //鏄庣粏
+            //明细
             string cmdArges = e.CommandArgument.ToString();
             Response.Redirect("TTVisitRegistration_StudentEdit.aspx?ID=" + cmdArges);
         }
@@ -114,7 +114,7 @@ public partial class TTVisitRegistration_StudentList : System.Web.UI.Page
 
 
     /// <summary>
-    ///  閲嶆柊鍔犺浇鍒楄〃
+    ///  重新加载列表
     /// </summary>
     protected void BT_RelaceLoad_Click(object sender, EventArgs e)
     {
@@ -135,7 +135,7 @@ public partial class TTVisitRegistration_StudentList : System.Web.UI.Page
         if (dtVisitRegistration != null && dtVisitRegistration.Rows.Count > 0)
         {
 
-            //鎷滆璁板綍
+            //拜访记录
 
             Export3Excel(dtVisitRegistration, "document");
 
@@ -143,7 +143,7 @@ public partial class TTVisitRegistration_StudentList : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('娌℃湁鎵惧埌鐩稿簲鐨勬嫓璁胯褰曪紒');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('没有找到相应的拜访记录！');", true);
             return;
         }
     }

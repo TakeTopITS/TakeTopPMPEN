@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections;
 using System.Data;
 using System.IO;
@@ -26,7 +26,7 @@ public partial class TTConstractMainContentEdit : System.Web.UI.Page
         strIsMobileDevice = Session["IsMobileDevice"].ToString();
 
 
-        //CKEditoråˆå§‹åŒ–      
+        //CKEditor³õÊ¼»¯      
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         //_FileBrowser.SetupCKEditor(TB_MainContent);
@@ -61,10 +61,10 @@ public partial class TTConstractMainContentEdit : System.Web.UI.Page
     {
         try
         {
-            //ä¿å­˜åˆåŒå†…å®¹
+            //±£´æºÏÍ¬ÄÚÈİ
             SaveConstractContent(strConstractID);
 
-            //ä¿å­˜åˆåŒå†…å®¹æ–‡ä»¶URL
+            //±£´æºÏÍ¬ÄÚÈİÎÄ¼şURL
             SaveConstractURL(strConstractID, MSWordHandler.HTMLToWord(strConstractID, TB_ConstractMainContent.Text));
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
@@ -82,10 +82,10 @@ public partial class TTConstractMainContentEdit : System.Web.UI.Page
 
         try
         {
-            //ä¿å­˜åˆåŒå†…å®¹
+            //±£´æºÏÍ¬ÄÚÈİ
             SaveConstractContent(strConstractID);
 
-            //ä¿å­˜åˆåŒå†…å®¹æ–‡ä»¶URL
+            //±£´æºÏÍ¬ÄÚÈİÎÄ¼şURL
             SaveConstractURL(strConstractID, MSWordHandler.HTMLToWord(strConstractID, TB_ConstractMainContent.Text));
         }
         catch (Exception err)
@@ -159,7 +159,7 @@ public partial class TTConstractMainContentEdit : System.Web.UI.Page
         }
     }
 
-    //ä¿å­˜åˆåŒå†…å®¹
+    //±£´æºÏÍ¬ÄÚÈİ
     protected void SaveConstractContent(string strConstractID)
     {
         string strHQL;
@@ -179,7 +179,7 @@ public partial class TTConstractMainContentEdit : System.Web.UI.Page
         constractBLL.UpdateConstract(constract, int.Parse(strConstractID));
     }
 
-    //ä¿å­˜åˆåŒå†…å®¹çš„æ–‡æ¡£é“¾æ¥
+    //±£´æºÏÍ¬ÄÚÈİµÄÎÄµµÁ´½Ó
     public void SaveConstractURL(string strConstractID, string strConstractFileURL)
     {
         string strHQL;

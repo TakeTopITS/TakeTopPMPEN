@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -97,34 +97,34 @@ public partial class TTPersonalSpaceMyProjectPositionMap : System.Web.UI.Page
     {
         try
         {
-            //webclientå®¢æˆ·ç«¯å¯¹è±¡ 
+            //webclient¿Í»§¶Ë¶ÔÏó 
             WebClient client = new WebClient();
-            string url = "http://maps.google.com/maps/api/geocode/xml?latlng=" + lng + "," + lat + "&language=zh-CN&sensor=false";//è¯·æ±‚åœ°å€ 
-            client.Encoding = Encoding.UTF8;//ç¼–ç æ ¼å¼ 
+            string url = "http://maps.google.com/maps/api/geocode/xml?latlng=" + lng + "," + lat + "&language=zh-CN&sensor=false";//ÇëÇóµØÖ· 
+            client.Encoding = Encoding.UTF8;//±àÂë¸ñÊ½ 
             string responseTest = client.DownloadString(url);
-            //ä¸‹è½½xmlå“åº”æ•°æ® 
-            string address = "";//è¿”å›çš„åœ°å€ 
+            //ÏÂÔØxmlÏìÓ¦Êı¾İ 
+            string address = "";//·µ»ØµÄµØÖ· 
             XmlDocument doc = new XmlDocument();
-            //åˆ›å»ºXMLæ–‡æ¡£å¯¹è±¡ 
+            //´´½¨XMLÎÄµµ¶ÔÏó 
             if (!string.IsNullOrEmpty(responseTest))
             {
-                doc.LoadXml(responseTest);//åŠ è½½xmlå­—ç¬¦ä¸² 
-                //æŸ¥è¯¢çŠ¶æ€ä¿¡æ¯ 
+                doc.LoadXml(responseTest);//¼ÓÔØxml×Ö·û´® 
+                //²éÑ¯×´Ì¬ĞÅÏ¢ 
                 string xpath = @"GeocodeResponse/status";
                 XmlNode node = doc.SelectSingleNode(xpath);
                 string status = node.InnerText.ToString();
                 if (status == "OK")
                 {
-                    //æŸ¥è¯¢è¯¦ç»†åœ°å€ä¿¡æ¯ 
+                    //²éÑ¯ÏêÏ¸µØÖ·ĞÅÏ¢ 
                     xpath = @"GeocodeResponse/result/formatted_address";
                     node = doc.SelectSingleNode(xpath);
                     address = node.InnerText.ToString();
-                    //æŸ¥è¯¢åœ°åŒºä¿¡æ¯ 
+                    //²éÑ¯µØÇøĞÅÏ¢ 
                     XmlNodeList nodeListAll = doc.SelectNodes("GeocodeResponse/result");
 
                     XmlNode idt = nodeListAll[0];
                     XmlNodeList idts = idt.SelectNodes("address_component[type='sublocality']");
-                    //address_component[type='sublocality']è¡¨ç¤ºç­›é€‰type='sublocality'çš„æ‰€æœ‰ç›¸å…³å­èŠ‚ç‚¹ï¼› 
+                    //address_component[type='sublocality']±íÊ¾É¸Ñ¡type='sublocality'µÄËùÓĞÏà¹Ø×Ó½Úµã£» 
                     XmlNode idtst = idts[0];
 
                     string area = idtst.SelectSingleNode("short_name").InnerText;

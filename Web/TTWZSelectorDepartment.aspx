@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSelectorDepartment.aspx.cs" Inherits="TTWZSelectorDepartment" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSelectorDepartment.aspx.cs" Inherits="TTWZSelectorDepartment" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -10,7 +10,7 @@
     <script src="js/allAHandler.js" type="text/javascript"></script>
     <script type="text/jscript">
 
-        //å•é€‰æ‹©æŒ‰é’®åˆ¤æ–­
+        //µ¥Ñ¡Ôñ°´Å¥ÅĞ¶Ï
         function chooseUpdate() {
             var str = "";
             $("input[name=name1]").each(function () {
@@ -20,7 +20,7 @@
             });
 
             if (str == "") {
-                alert('è¯·é€‰æ‹©è®°å½•é¡¹ï¼');
+                alert('ÇëÑ¡Ôñ¼ÇÂ¼Ïî£¡');
                 return false;
             }
             else {

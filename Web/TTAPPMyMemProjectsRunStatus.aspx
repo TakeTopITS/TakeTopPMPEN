@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPMyMemProjectsRunStatus.aspx.cs" Inherits="TTAPPMyMemProjectsRunStatus" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPMyMemProjectsRunStatus.aspx.cs" Inherits="TTAPPMyMemProjectsRunStatus" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
 
@@ -55,11 +55,11 @@
             location.reload();
         }
 
-        //‰º†ÂÖ•URL‰Ωú‰∏∫ÂèÇÊï∞
+        //¥´»ÎURL◊˜Œ™≤Œ ˝
         function popShowByURL(url, title, width, height, parentWindow) {
             var w = 'auto', h = 'auto', t = url.replace('.aspx', '').replace("TT", '');
 
-            ////Â¶ÇÊûúurlÂåÖÂê´Êñá‰ª∂ÂêçÔºåÂàô‰∏çÂºπÁ™ó
+            ////»Áπ˚url∞¸∫¨Œƒº˛√˚£¨‘Ú≤ªµØ¥∞
             //if (urlLastSixCharsContainDot(url)) {
             //    return;
             //}
@@ -87,9 +87,9 @@
                 content: url,
                 area: ["99%", "99%"]
                 ,
-                zIndex: layer.zIndex, //ÈáçÁÇπ1
+                zIndex: layer.zIndex, //÷ÿµ„1
                 success: function (layero) {
-                    layer.setTop(layero); //ÈáçÁÇπ2
+                    layer.setTop(layero); //÷ÿµ„2
                 },
                 end: function () {
 
@@ -131,7 +131,7 @@
                                                                 <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%></td>
                                                         </tr>
                                                     </table>
-                                                    <img id="IMG_Waiting" src="Images/Processing.gif" alt="ËØ∑Á®çÂÄôÔºåÂ§ÑÁêÜ‰∏≠..." style="display: none;" />
+                                                    <img id="IMG_Waiting" src="Images/Processing.gif" alt="«Î…‘∫Ú£¨¥¶¿Ì÷–..." style="display: none;" />
                                                 </a>
                                             </td>
                                         </tr>
@@ -146,7 +146,7 @@
                                                 <img src="ImagesSkin/Find.png" width="24" height="24" style="border: none;" />
                                             </td>--%>
                                             <td align="left" style="padding-left: 10px; display: none;">
-                                                <asp:Label ID="LB_MyQueryScope" runat="server" Text="<%$ Resources:lang,ChaXunFanWei%>"></asp:Label>Ôºö<asp:Label
+                                                <asp:Label ID="LB_MyQueryScope" runat="server" Text="<%$ Resources:lang,ChaXunFanWei%>"></asp:Label>£∫<asp:Label
                                                     ID="LB_QueryScope" runat="server"></asp:Label>
                                             </td>
                                             <td align="left" style="padding-left: 10px;" onclick="openNewWindow();">
@@ -175,14 +175,14 @@
                                                             <div class="napbox">
                                                                 <div class="npb">
                                                                     <div class="cline"></div>
-                                                                    <h3>È°πÁõÆÁä∂ÊÄÅ</h3>
+                                                                    <h3>œÓƒø◊¥Ã¨</h3>
                                                                 </div>
 
                                                                 <asp:DataGrid ID="DataGrid3" runat="server" AutoGenerateColumns="False" Width="100%" PageSize="30"
                                                                     ShowHeader="false" AllowPaging="True" OnPageIndexChanged="DataGrid3_PageIndexChanged"
                                                                     CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                     <Columns>
-                                                                        <asp:BoundColumn DataField="ProjectID" HeaderText="È°πÁõÆID" Visible="false">
+                                                                        <asp:BoundColumn DataField="ProjectID" HeaderText="œÓƒøID" Visible="false">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                         </asp:BoundColumn>
 
@@ -249,7 +249,7 @@
                                                     <tr>
                                                         <td style="width: 100%; height: 12px; text-align: center;" valign="top">
                                                             <cc2:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" Width="100%" runat="server" ActiveTabIndex="0">
-                                                                <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="È°πÁõÆÁä∂ÊÄÅ">
+                                                                <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="œÓƒø◊¥Ã¨">
                                                                     <HeaderTemplate>
                                                                         <asp:Label ID="LB_ProjectStatusChart" runat="server" Text="<%$ Resources:lang,ProjectStatusChart%>"></asp:Label>
                                                                     </HeaderTemplate>
@@ -280,7 +280,7 @@
                                                                         </table>
                                                                     </ContentTemplate>
                                                                 </cc2:TabPanel>
-                                                                <cc2:TabPanel ID="TabPanel4" runat="server" HeaderText="ÁªºÂêàÊü•ËØ¢">
+                                                                <cc2:TabPanel ID="TabPanel4" runat="server" HeaderText="◊€∫œ≤È—Ø">
                                                                     <HeaderTemplate>
                                                                         <asp:Label ID="LB_IntegratedQuery" runat="server" Text="<%$ Resources:lang,IntegratedQuery%>"></asp:Label>
                                                                     </HeaderTemplate>
@@ -332,7 +332,7 @@
                                                                                                                             CellPadding="4" ForeColor="#333333" GridLines="None" OnItemCommand="DataGrid1_ItemCommand"
                                                                                                                             ShowHeader="false" Width="100%">
                                                                                                                             <Columns>
-                                                                                                                                <asp:TemplateColumn HeaderText="Áõ¥Êé•ÊàêÂëòÔºö">
+                                                                                                                                <asp:TemplateColumn HeaderText="÷±Ω”≥…‘±£∫">
                                                                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                                                                     <ItemTemplate>
                                                                                                                                         <asp:Button ID="BT_UnderlingCode" runat="server" CssClass="inpu"
@@ -384,7 +384,7 @@
                                                                                                                             ForeColor="#333333" GridLines="None" OnItemCommand="DataGrid2_ItemCommand" ShowHeader="false"
                                                                                                                             Visible="False" Width="100%">
                                                                                                                             <Columns>
-                                                                                                                                <asp:TemplateColumn HeaderText="È°πÁõÆÁä∂ÊÄÅÔºö">
+                                                                                                                                <asp:TemplateColumn HeaderText="œÓƒø◊¥Ã¨£∫">
                                                                                                                                     <ItemTemplate>
                                                                                                                                         <asp:Button ID="BT_Status" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"Status") %>'
                                                                                                                                             CssClass="inpu" Visible="false" />

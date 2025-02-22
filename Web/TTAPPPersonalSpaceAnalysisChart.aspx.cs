@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -31,7 +31,7 @@ public partial class TTAPPPersonalSpaceAnalysisChart : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickParentA", "aHandlerForSpecialPopWindow();", true);
         if (Page.IsPostBack == false)
         {
-            ////æ¸…ç©ºé¡µé¢ç¼“å­˜ï¼Œç”¨äºæ”¹å˜çš®è‚¤
+            ////Çå¿ÕÒ³Ãæ»º´æ£¬ÓÃÓÚ¸Ä±äÆ¤·ô
             //SetPageNoCache();
 
             intRunNumber = 0;
@@ -40,12 +40,12 @@ public partial class TTAPPPersonalSpaceAnalysisChart : System.Web.UI.Page
         }
     }
 
-    //æ¸…ç©ºé¡µé¢ç¼“å­˜ï¼Œç”¨äºæ”¹å˜çš®è‚¤
+    //Çå¿ÕÒ³Ãæ»º´æ£¬ÓÃÓÚ¸Ä±äÆ¤·ô
     public void SetPageNoCache()
     {
         if (Session["CssDirectoryChangeNumber"].ToString() == "1")
         {
-            //æ¸…é™¤å…¨éƒ¨ç¼“å­˜
+            //Çå³ıÈ«²¿»º´æ
             IDictionaryEnumerator allCaches = Page.Cache.GetEnumerator();
             while (allCaches.MoveNext())
             {
@@ -85,7 +85,7 @@ public partial class TTAPPPersonalSpaceAnalysisChart : System.Web.UI.Page
 
         new System.Threading.Thread(delegate ()
         {
-            //å¢åŠ åˆ†æå›¾ç»™ç”¨æˆ·
+            //Ôö¼Ó·ÖÎöÍ¼¸øÓÃ»§
             AddChartToUser(strUserCode);
 
         }).Start();
@@ -138,7 +138,7 @@ public partial class TTAPPPersonalSpaceAnalysisChart : System.Web.UI.Page
 
 
 
-    //å¢åŠ åˆ†æå›¾ç»™ç”¨æˆ·
+    //Ôö¼Ó·ÖÎöÍ¼¸øÓÃ»§
     private void AddChartToUser(string strUserCode)
     {
         string strHQL;
@@ -153,7 +153,7 @@ public partial class TTAPPPersonalSpaceAnalysisChart : System.Web.UI.Page
         }
     }
 
-    //å–å¾—ç”¨æˆ·åˆ†æå›¾æ•°é‡
+    //È¡µÃÓÃ»§·ÖÎöÍ¼ÊıÁ¿
     private int GetUserChartNumber(string strUserCode)
     {
         string strHQL;

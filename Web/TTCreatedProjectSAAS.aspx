@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCreatedProjectSAAS.aspx.cs" Inherits="TTCreatedProjectSAAS" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCreatedProjectSAAS.aspx.cs" Inherits="TTCreatedProjectSAAS" %>
 
 <%@ Register Assembly="ZedGraph.Web" Namespace="ZedGraph.Web" TagPrefix="cc1" %>
 <%@ Register Assembly="ZedGraph" Namespace="ZedGraph" TagPrefix="cc1" %>
@@ -7,7 +7,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ÊàëÁöÑÈ°πÁõÆÁÆ°ÁêÜ</title>
+    <title>Œ“µƒœÓƒøπ‹¿Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 
     <style type="text/css">
@@ -123,14 +123,14 @@
                                                                 ShowHeader="false" OnPageIndexChanged="DataGrid1_PageIndexChanged" Width="100%"
                                                                 AllowPaging="True" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="ProjectID" HeaderText="ÁºñÂè∑">
+                                                                    <asp:BoundColumn DataField="ProjectID" HeaderText="±‡∫≈">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="ProjectCode" HeaderText="‰ª£Á†Å">
+                                                                    <asp:BoundColumn DataField="ProjectCode" HeaderText="¥˙¬Î">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTCreatedProjectDetailSAAS.aspx?ProjectID={0}"
-                                                                        DataTextField="ProjectName" HeaderText="È°πÁõÆÂêçÁß∞" Target="_blank">
+                                                                        DataTextField="ProjectName" HeaderText="œÓƒø√˚≥∆" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="23%" />
                                                                     </asp:HyperLinkColumn>
                                                                     <asp:TemplateColumn>
@@ -210,7 +210,7 @@
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="75px" />
                                                                     </asp:TemplateColumn>
-                                                                    <asp:TemplateColumn HeaderText="Áä∂ÊÄÅ">
+                                                                    <asp:TemplateColumn HeaderText="◊¥Ã¨">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass. GetStatusHomeNameByProjectStatus(Eval("Status").ToString(),Eval("ProjectType").ToString()) %>
                                                                         </ItemTemplate>
@@ -237,7 +237,7 @@
                                                         <td style="width: 100%; height: 12px; text-align: left;" valign="top">
                                                             <cc2:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" Width="100%" runat="server"
                                                                 ActiveTabIndex="0">
-                                                                <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="È°πÁõÆÁä∂ÊÄÅ">
+                                                                <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="œÓƒø◊¥Ã¨">
                                                                     <HeaderTemplate>
                                                                         <asp:Label ID="LB_ProjectStatusChart" runat="server" Text="<%$ Resources:lang,ProjectStatusChart%>"></asp:Label>
                                                                     </HeaderTemplate>
@@ -269,7 +269,7 @@
                                                                     </ContentTemplate>
                                                                 </cc2:TabPanel>
 
-                                                                <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="È°πÁõÆË¥πÁî®">
+                                                                <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="œÓƒø∑—”√">
 
                                                                     <HeaderTemplate>
 
@@ -607,7 +607,7 @@
                                                                     </ContentTemplate>
                                                                 </cc2:TabPanel>
 
-                                                                <cc2:TabPanel ID="TabPanel4" runat="server" HeaderText="ÁªºÂêàÊü•ËØ¢">
+                                                                <cc2:TabPanel ID="TabPanel4" runat="server" HeaderText="◊€∫œ≤È—Ø">
 
                                                                     <HeaderTemplate>
 
@@ -772,7 +772,7 @@
 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
-                                                                    <asp:TemplateColumn HeaderText="ÊåâÈ°πÁõÆÁä∂ÊÄÅÂàÜÁ±ªÔºö">
+                                                                    <asp:TemplateColumn HeaderText="∞¥œÓƒø◊¥Ã¨∑÷¿‡£∫">
                                                                         <ItemTemplate>
                                                                             <asp:Button ID="BT_Status" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"Status") %>'
                                                                                 CssClass="inpu" Visible="false" />

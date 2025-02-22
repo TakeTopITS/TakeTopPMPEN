@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Data;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -17,7 +17,7 @@ public partial class TTConstractReceivablesReport : System.Web.UI.Page
 
         strLikeUserCode = "%" + strUserCode + "%";
 
-        //this.Title = "åˆåŒæ”¶æ¬¾æƒ…å†µè¡¨";
+        //this.Title = "ºÏÍ¬ÊÕ¿îÇé¿ö±í";
 
         LB_UserCode.Text = strUserCode;
         strUserName = Session["UserName"].ToString();
@@ -161,7 +161,7 @@ public partial class TTConstractReceivablesReport : System.Web.UI.Page
         strReceivablesStartTime = DateTime.Parse(DLC_ReceivablesStartTime.Text).ToString("yyyyMMdd");
         strReceivablesEndTime = DateTime.Parse(DLC_ReceivablesEndTime.Text).ToString("yyyyMMdd");
 
-        strHQL = "Select BillCode åŸå§‹å•å·,ConstractCode åˆåŒä»£ç ,ConstractName åˆåŒåç§°,ReceivablesAccount åº”æ”¶é‡‘é¢,to_char(ReceivablesTime,'yyyy/mm/dd') åº”æ”¶æ—¶é—´,ReceiverAccount å®æ”¶é‡‘é¢,UNReceiveAmount æœªæ”¶é‡‘é¢,Payer ä»˜æ¬¾æ–¹,PartA ç”²æ–¹å•ä½,PartAOperator è´Ÿè´£äºº,CurrencyType å¸åˆ« from  V_ConstractReceivablesReportSummary where 1=1 ";
+        strHQL = "Select BillCode Ô­Ê¼µ¥ºÅ,ConstractCode ºÏÍ¬´úÂë,ConstractName ºÏÍ¬Ãû³Æ,ReceivablesAccount Ó¦ÊÕ½ğ¶î,to_char(ReceivablesTime,'yyyy/mm/dd') Ó¦ÊÕÊ±¼ä,ReceiverAccount ÊµÊÕ½ğ¶î,UNReceiveAmount Î´ÊÕ½ğ¶î,Payer ¸¶¿î·½,PartA ¼×·½µ¥Î»,PartAOperator ¸ºÔğÈË,CurrencyType ±Ò±ğ from  V_ConstractReceivablesReportSummary where 1=1 ";
         strHQL += " and PartA like  " + "'" + strPartA + "'";
         if (strOperatorName != "%%")
         {

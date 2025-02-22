@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMyMemProjectsRunStatus.aspx.cs" Inherits="TTMyMemProjectsRunStatus" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMyMemProjectsRunStatus.aspx.cs" Inherits="TTMyMemProjectsRunStatus" %>
 
 <%@ Register Assembly="ZedGraph.Web" Namespace="ZedGraph.Web" TagPrefix="cc1" %>
 <%@ Register Assembly="ZedGraph" Namespace="ZedGraph" TagPrefix="cc1" %>
@@ -8,7 +8,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ÊàêÂëòÈ°πÁõÆËøêË°åÁä∂ÊÄÅ</title>
+    <title>≥…‘±œÓƒø‘À––◊¥Ã¨</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -80,7 +80,7 @@
                                     <table>
                                         <tr>
                                             <td align="left" style="padding-left: 10px; display: none;">
-                                                <asp:Label ID="LB_MyQueryScope" runat="server" Text="<%$ Resources:lang,ChaXunFanWei%>"></asp:Label>Ôºö<asp:Label
+                                                <asp:Label ID="LB_MyQueryScope" runat="server" Text="<%$ Resources:lang,ChaXunFanWei%>"></asp:Label>£∫<asp:Label
                                                     ID="LB_QueryScope" runat="server"></asp:Label>
                                             </td>
                                             <td align="left" style="padding-left: 10px;" onclick="openNewWindow();">
@@ -180,14 +180,14 @@
                                                                 ShowHeader="false" AllowPaging="True" OnPageIndexChanged="DataGrid3_PageIndexChanged"
                                                                 CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="ProjectType" HeaderText="È°πÁõÆÁ±ªÂûã">
+                                                                    <asp:BoundColumn DataField="ProjectType" HeaderText="œÓƒø¿‡–Õ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="ProjectID" HeaderText="ÁºñÂè∑">
+                                                                    <asp:BoundColumn DataField="ProjectID" HeaderText="±‡∫≈">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTProjectReportMain.aspx?ProjectID={0}"
-                                                                        DataTextField="ProjectName" HeaderText="È°πÁõÆÂêçÁß∞" Target="_blank">
+                                                                        DataTextField="ProjectName" HeaderText="œÓƒø√˚≥∆" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="18%" />
                                                                     </asp:HyperLinkColumn>
                                                                     <asp:TemplateColumn>
@@ -286,10 +286,10 @@
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" VerticalAlign="Middle" Width="50px" />
                                                                     </asp:TemplateColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="PMCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                        DataTextField="PMName" HeaderText="È°πÁõÆÁªèÁêÜ" Target="_blank">
+                                                                        DataTextField="PMName" HeaderText="œÓƒøæ≠¿Ì" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:HyperLinkColumn>
-                                                                    <asp:TemplateColumn HeaderText="Áä∂ÊÄÅ">
+                                                                    <asp:TemplateColumn HeaderText="◊¥Ã¨">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass. GetStatusHomeNameByProjectStatus(Eval("Status").ToString(),Eval("ProjectType").ToString()) %>
                                                                         </ItemTemplate>
@@ -297,7 +297,7 @@
                                                                     </asp:TemplateColumn>
                                                                     <asp:TemplateColumn>
                                                                         <ItemTemplate>
-                                                                            <div onclick="popShowByURLForFixedSize('TTProLeaderReview.aspx?ProjectID=<%#DataBinder.Eval (Container .DataItem ,"ProjectID") %>','‰ø°ÊÅØ',800,600)">
+                                                                            <div onclick="popShowByURLForFixedSize('TTProLeaderReview.aspx?ProjectID=<%#DataBinder.Eval (Container .DataItem ,"ProjectID") %>','–≈œ¢',800,600)">
                                                                                 <img src="ImagesSkin/AMPLeader.png" alt="ProjectPlan" width="32px" height="32px" style="border: none;" />
                                                                             </div>
                                                                         </ItemTemplate>
@@ -325,7 +325,7 @@
                                                     <tr>
                                                         <td style="width: 100%; height: 12px; text-align: center;" valign="top">
                                                             <cc2:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" Width="100%" runat="server" ActiveTabIndex="0">
-                                                                <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="È°πÁõÆÁä∂ÊÄÅ">
+                                                                <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="œÓƒø◊¥Ã¨">
                                                                     <HeaderTemplate>
                                                                         <asp:Label ID="LB_ProjectStatusChart" runat="server" Text="<%$ Resources:lang,ProjectStatusChart%>"></asp:Label>
                                                                     </HeaderTemplate>
@@ -356,7 +356,7 @@
                                                                         </table>
                                                                     </ContentTemplate>
                                                                 </cc2:TabPanel>
-                                                                <cc2:TabPanel ID="TabPanel4" runat="server" HeaderText="ÁªºÂêàÊü•ËØ¢">
+                                                                <cc2:TabPanel ID="TabPanel4" runat="server" HeaderText="◊€∫œ≤È—Ø">
                                                                     <HeaderTemplate>
                                                                         <asp:Label ID="LB_IntegratedQuery" runat="server" Text="<%$ Resources:lang,IntegratedQuery%>"></asp:Label>
                                                                     </HeaderTemplate>
@@ -423,7 +423,7 @@
                                                                                                                             CellPadding="4" ForeColor="#333333" GridLines="None" OnItemCommand="DataGrid1_ItemCommand"
                                                                                                                             ShowHeader="False" Width="100%">
                                                                                                                             <Columns>
-                                                                                                                                <asp:TemplateColumn HeaderText="Áõ¥Êé•ÊàêÂëòÔºö">
+                                                                                                                                <asp:TemplateColumn HeaderText="÷±Ω”≥…‘±£∫">
                                                                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                                                                                     <ItemTemplate>
                                                                                                                                         <asp:Button ID="BT_UnderlingCode" runat="server" CssClass="inpu"
@@ -475,7 +475,7 @@
                                                                                                                             ForeColor="#333333" GridLines="None" OnItemCommand="DataGrid2_ItemCommand" ShowHeader="False"
                                                                                                                             Visible="False" Width="100%">
                                                                                                                             <Columns>
-                                                                                                                                <asp:TemplateColumn HeaderText="È°πÁõÆÁä∂ÊÄÅÔºö">
+                                                                                                                                <asp:TemplateColumn HeaderText="œÓƒø◊¥Ã¨£∫">
                                                                                                                                     <ItemTemplate>
                                                                                                                                         <asp:Button ID="BT_Status" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"Status") %>'
                                                                                                                                             CssClass="inpu" Visible="false" />

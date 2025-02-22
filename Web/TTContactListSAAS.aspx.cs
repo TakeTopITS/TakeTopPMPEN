@@ -1,4 +1,4 @@
-Ôªøusing ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
 using System.Collections;
@@ -21,7 +21,7 @@ public partial class TTContactListSAAS : System.Web.UI.Page
 
         if (strRelatedType == "Project")
         {
-            strRelatedType = "È°πÁõÆ";
+            strRelatedType = "Project";
             string strHQL = "Select ProjectCode,ProjectName From T_Project Where ProjectID = " + strRelatedID;
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_Project");
             if (ds.Tables[0].Rows.Count > 0)
@@ -32,29 +32,29 @@ public partial class TTContactListSAAS : System.Web.UI.Page
                 string strURL = Context.Request.Url.AbsoluteUri;
                 strURL = strURL.Substring(0, strURL.LastIndexOf("/"));
 
-                TB_Message.Text = Resources.lang.NiHao + "Ôºå" + strUserName + Resources.lang.YaoQingNiCanYuXiangMu + "Ôºö " + strProjectName + ", " + Resources.lang.QYDNDLZD + ": " + strURL + " ," +  Resources.lang.QYDNDLZCDLJRPTZZBLDJXMGLMG + " " + strProjectCode + " " + Resources.lang.JiaRu;
+                TB_Message.Text = Resources.lang.NiHao + "£¨" + strUserName + Resources.lang.YaoQingNiCanYuXiangMu + "£∫ " + strProjectName + ", " + Resources.lang.QYDNDLZD + ": " + strURL + " ," +  Resources.lang.QYDNDLZCDLJRPTZZBLDJXMGLMG + " " + strProjectCode + " " + Resources.lang.JiaRu;
             }
         }
 
         if (strRelatedType == "Attendance")
         {
             strRelatedType = Resources.lang.KaoQing;
-            TB_Message.Text = Resources.lang.NiHao + "Ôºå" + strUserName + Resources.lang.YQNCYQDKQQGZWXGZHTDGLB + strUserCode + Resources.lang.JiaRu;
+            TB_Message.Text = Resources.lang.NiHao + "£¨" + strUserName + Resources.lang.YQNCYQDKQQGZWXGZHTDGLB + strUserCode + Resources.lang.JiaRu;
         }
 
         if (strRelatedType == "Customer")
         {
-            strRelatedType = "ÂÆ¢Êà∑";
+            strRelatedType = "Customer";
         }
 
         if (strRelatedType == "Vendor")
         {
-            strRelatedType = "‰æõÂ∫îÂïÜ";
+            strRelatedType = "Supplier";
         }
 
         if (strRelatedType == "Other")
         {
-            strRelatedType = "ÂÖ∂ÂÆÉ";
+            strRelatedType = "Other";
         }
 
         if (strRelatedType == null)
@@ -380,7 +380,7 @@ public partial class TTContactListSAAS : System.Web.UI.Page
 
         strType = DL_ContactType.SelectedValue.Trim();
 
-        if (strRelatedType == "ÂÖ∂ÂÆÉ" | strRelatedType == null)
+        if (strRelatedType == "Other" | strRelatedType == null)
         {
             strHQL = "from ContactInfor as contactInfor where contactInfor.UserCode= " + "'" + strUserCode + "'" + " and contactInfor.Type = " + "'" + strType + "'" + " order by contactInfor.ID DESC";
         }
@@ -412,7 +412,7 @@ public partial class TTContactListSAAS : System.Web.UI.Page
         ContactInforBLL contactInforBLL = new ContactInforBLL();
 
 
-        if (strRelatedType == "ÂÖ∂ÂÆÉ" | strRelatedType == null)
+        if (strRelatedType == "Other" | strRelatedType == null)
         {
             strHQL = "from ContactInfor as contactInfor where contactInfor.UserCode = " + "'" + strUserCode + "'";
             strHQL += " and contactInfor.FirstName Like " + "'" + strContactName + "'";
@@ -475,7 +475,7 @@ public partial class TTContactListSAAS : System.Web.UI.Page
                     {
                         try
                         {
-                            msg.SendMailByEmail(strEMail, "ÊãìÈºéÈ°πÁõÆÂÆù", strMsg, "ADMIN");
+                            msg.SendMailByEmail(strEMail, "Õÿ∂¶œÓƒø±¶", strMsg, "ADMIN");
                         }
                         catch
                         {
@@ -483,7 +483,7 @@ public partial class TTContactListSAAS : System.Web.UI.Page
 
                         try
                         {
-                            //ÂèëÈÄÅ‰ø°ÊÅØ
+                            //∑¢ÀÕ–≈œ¢
                             msg.SendMSM("Message",strMobilePhone, strMsg, strSendUserCode);
                         }
                         catch
@@ -492,7 +492,7 @@ public partial class TTContactListSAAS : System.Web.UI.Page
 
                         try
                         {
-                            //ÊúâÁü≠‰ø°Êé•Âè£ÁöÑËØùÔºåÁõ¥Êé•Êé®ÈÄÅÁü≠‰ø°
+                            //”–∂Ã–≈Ω”ø⁄µƒª∞£¨÷±Ω”Õ∆ÀÕ∂Ã–≈
                             msg.SendPhoneMSMBySP(strMobilePhone, strMsg, strSendUserCode);
                         }
                         catch
@@ -506,7 +506,7 @@ public partial class TTContactListSAAS : System.Web.UI.Page
                     smsSendDIY.UserCode = strSendUserCode;
                     smsSendDIY.UserName = ShareClass.GetUserName(strSendUserCode);
                     smsSendDIY.SendTime = DateTime.Now;
-                    smsSendDIY.Status = "Â∑≤Âèë";
+                    smsSendDIY.Status = "Sent";
 
                     try
                     {
@@ -591,7 +591,7 @@ public partial class TTContactListSAAS : System.Web.UI.Page
         IList lst;
 
 
-        //if (strRelatedType == "ÂÖ∂ÂÆÉ" | strRelatedType == null)
+        //if (strRelatedType == "Other" | strRelatedType == null)
         //{
         strHQL = "from ContactInfor as contactInfor where contactInfor.UserCode = " + "'" + strUserCode + "'" + " order by contactInfor.FirstName ASC";
         //}

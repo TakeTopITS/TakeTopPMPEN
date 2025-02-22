@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppCollaboration.aspx.cs" Inherits="TTAppCollaboration" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppCollaboration.aspx.cs" Inherits="TTAppCollaboration" %>
 
 
 
@@ -39,7 +39,7 @@
 
         });
 
-        //点击DATAGRID行内任何一点，都能触发行内的链接
+        //���DATAGRID�����κ�һ�㣬���ܴ������ڵ�����
         function SetDataGridTrClickLink() {
 
             setTrClickLink("DataGrid2");
@@ -78,7 +78,7 @@
                                                         </td>
                                                     </tr>
                                                 </table>
-                                                <img id="IMG_Waiting" src="Images/Processing.gif" alt="请稍候，处理中..." style="display: none;" />
+                                                <img id="IMG_Waiting" src="Images/Processing.gif" alt="���Ժ򣬴�����..." style="display: none;" />
                                             </a>
                                         </td>
                                         <td align="right" style="padding-top: 5px;">

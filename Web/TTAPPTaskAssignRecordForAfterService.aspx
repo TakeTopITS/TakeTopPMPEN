@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPTaskAssignRecordForAfterService.aspx.cs" Inherits="TTAPPTaskAssignRecordForAfterService" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPTaskAssignRecordForAfterService.aspx.cs" Inherits="TTAPPTaskAssignRecordForAfterService" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=1" />
 
@@ -53,7 +53,7 @@
                 var click = $(this).attr("onclick");
 
 
-                //åˆ¤æ–­æ˜¯å¦æ˜¯treeï¼Œæˆ–è€…åˆ†é¡µ
+                //ÅĞ¶ÏÊÇ·ñÊÇtree£¬»òÕß·ÖÒ³
                 if (click != "" && click != null && click != undefined) {
                     if (click.toLowerCase().indexOf("treeview") == -1 && url.toLowerCase().indexOf("lbt_delete") == -1) {
                         $(this).click(function () {
@@ -112,8 +112,8 @@
         var btnFind = '#<%=BT_Find.ClientID%>';
 
 
-        var loadingIndex; //æç¤ºå±‚index
-        var isWxConfigReady = false; //configæ˜¯å¦éªŒè¯é€šè¿‡
+        var loadingIndex; //ÌáÊ¾²ãindex
+        var isWxConfigReady = false; //configÊÇ·ñÑéÖ¤Í¨¹ı
         $(function () {
             try {
 
@@ -130,7 +130,7 @@
                 });
                 wxApi();
 
-                //åˆ é™¤æ„å¤–å¼¹å‡ºå±‚
+                //É¾³ıÒâÍâµ¯³ö²ã
                 if (isWxConfigReady == false) {
                     var m = document.getElementById("layui-layer1");
                     m.parentNode.removeChild(m);
@@ -152,11 +152,11 @@
                 // , content: 'ImagesSkin/Processing.gif'
             });
             wx.config({
-                debug: false, // å¼€å¯è°ƒè¯•æ¨¡å¼,è°ƒç”¨çš„æ‰€æœ‰apiçš„è¿”å›å€¼ä¼šåœ¨å®¢æˆ·ç«¯alertå‡ºæ¥ï¼Œè‹¥è¦æŸ¥çœ‹ä¼ å…¥çš„å‚æ•°ï¼Œå¯ä»¥åœ¨pcç«¯æ‰“å¼€ï¼Œå‚æ•°ä¿¡æ¯ä¼šé€šè¿‡logæ‰“å‡ºï¼Œä»…åœ¨pcç«¯æ—¶æ‰ä¼šæ‰“å°ã€‚
-                appId: '<%=signModel.appId %>', // å¿…å¡«ï¼Œå…¬ä¼—å·çš„å”¯ä¸€æ ‡è¯†
-                timestamp: '<%=signModel.time %>', // å¿…å¡«ï¼Œç”Ÿæˆç­¾åçš„æ—¶é—´æˆ³(éšä¾¿å¡«å†™)
-                nonceStr: '<%=signModel.randstr %>', // å¿…å¡«ï¼Œç”Ÿæˆç­¾åçš„éšæœºä¸²(éšä¾¿å¡«å†™)
-                signature: '<%=signModel.signstr %>', // å¿…å¡«ï¼Œç­¾åï¼Œè§é™„å½•1
+                debug: false, // ¿ªÆôµ÷ÊÔÄ£Ê½,µ÷ÓÃµÄËùÓĞapiµÄ·µ»ØÖµ»áÔÚ¿Í»§¶Ëalert³öÀ´£¬ÈôÒª²é¿´´«ÈëµÄ²ÎÊı£¬¿ÉÒÔÔÚpc¶Ë´ò¿ª£¬²ÎÊıĞÅÏ¢»áÍ¨¹ılog´ò³ö£¬½öÔÚpc¶ËÊ±²Å»á´òÓ¡¡£
+                appId: '<%=signModel.appId %>', // ±ØÌî£¬¹«ÖÚºÅµÄÎ¨Ò»±êÊ¶
+                timestamp: '<%=signModel.time %>', // ±ØÌî£¬Éú³ÉÇ©ÃûµÄÊ±¼ä´Á(Ëæ±ãÌîĞ´)
+                nonceStr: '<%=signModel.randstr %>', // ±ØÌî£¬Éú³ÉÇ©ÃûµÄËæ»ú´®(Ëæ±ãÌîĞ´)
+                signature: '<%=signModel.signstr %>', // ±ØÌî£¬Ç©Ãû£¬¼û¸½Â¼1
 
                 jsApiList: [
                     'checkJsApi',
@@ -204,35 +204,35 @@
                     //'translateVoice',
 
 
-                ] // å¿…å¡«ï¼Œéœ€è¦ä½¿ç”¨çš„JSæ¥å£åˆ—è¡¨ï¼Œæ‰€æœ‰JSæ¥å£åˆ—è¡¨è§é™„å½•2
+                ] // ±ØÌî£¬ĞèÒªÊ¹ÓÃµÄJS½Ó¿ÚÁĞ±í£¬ËùÓĞJS½Ó¿ÚÁĞ±í¼û¸½Â¼2
             });
 
 
             wx.ready(function () {
                 layer.close(loadingIndex);
-                // configä¿¡æ¯éªŒè¯åä¼šæ‰§è¡Œreadyæ–¹æ³•ï¼Œæ‰€æœ‰æ¥å£è°ƒç”¨éƒ½å¿…é¡»åœ¨configæ¥å£è·å¾—ç»“æœä¹‹åï¼Œconfigæ˜¯ä¸€ä¸ªå®¢æˆ·ç«¯çš„å¼‚æ­¥æ“ä½œï¼Œæ‰€ä»¥å¦‚æœéœ€è¦åœ¨é¡µé¢åŠ è½½æ—¶å°±è°ƒç”¨ç›¸å…³æ¥å£ï¼Œåˆ™é¡»æŠŠç›¸å…³æ¥å£æ”¾åœ¨readyå‡½æ•°ä¸­è°ƒç”¨æ¥ç¡®ä¿æ­£ç¡®æ‰§è¡Œã€‚å¯¹äºç”¨æˆ·è§¦å‘æ—¶æ‰è°ƒç”¨çš„æ¥å£ï¼Œåˆ™å¯ä»¥ç›´æ¥è°ƒç”¨ï¼Œä¸éœ€è¦æ”¾åœ¨readyå‡½æ•°ä¸­ã€‚
+                // configĞÅÏ¢ÑéÖ¤ºó»áÖ´ĞĞready·½·¨£¬ËùÓĞ½Ó¿Úµ÷ÓÃ¶¼±ØĞëÔÚconfig½Ó¿Ú»ñµÃ½á¹ûÖ®ºó£¬configÊÇÒ»¸ö¿Í»§¶ËµÄÒì²½²Ù×÷£¬ËùÒÔÈç¹ûĞèÒªÔÚÒ³Ãæ¼ÓÔØÊ±¾Íµ÷ÓÃÏà¹Ø½Ó¿Ú£¬ÔòĞë°ÑÏà¹Ø½Ó¿Ú·ÅÔÚreadyº¯ÊıÖĞµ÷ÓÃÀ´È·±£ÕıÈ·Ö´ĞĞ¡£¶ÔÓÚÓÃ»§´¥·¢Ê±²Åµ÷ÓÃµÄ½Ó¿Ú£¬Ôò¿ÉÒÔÖ±½Óµ÷ÓÃ£¬²»ĞèÒª·ÅÔÚreadyº¯ÊıÖĞ¡£
                 isWxConfigReady = true;
             });
             wx.error(function (res) {
                 layer.close(loadingIndex);
                 alert(JSON.stringify(res));
-                // configä¿¡æ¯éªŒè¯å¤±è´¥ä¼šæ‰§è¡Œerrorå‡½æ•°ï¼Œå¦‚ç­¾åè¿‡æœŸå¯¼è‡´éªŒè¯å¤±è´¥ï¼Œå…·ä½“é”™è¯¯ä¿¡æ¯å¯ä»¥æ‰“å¼€configçš„debugæ¨¡å¼æŸ¥çœ‹ï¼Œä¹Ÿå¯ä»¥åœ¨è¿”å›çš„reså‚æ•°ä¸­æŸ¥çœ‹ï¼Œå¯¹äºSPAå¯ä»¥åœ¨è¿™é‡Œæ›´æ–°ç­¾åã€‚
+                // configĞÅÏ¢ÑéÖ¤Ê§°Ü»áÖ´ĞĞerrorº¯Êı£¬ÈçÇ©Ãû¹ıÆÚµ¼ÖÂÑéÖ¤Ê§°Ü£¬¾ßÌå´íÎóĞÅÏ¢¿ÉÒÔ´ò¿ªconfigµÄdebugÄ£Ê½²é¿´£¬Ò²¿ÉÒÔÔÚ·µ»ØµÄres²ÎÊıÖĞ²é¿´£¬¶ÔÓÚSPA¿ÉÒÔÔÚÕâÀï¸üĞÂÇ©Ãû¡£
             });
         }
 
         function qrcode() {
             wx.scanQRCode({
-                needResult: 1, // é»˜è®¤ä¸º0ï¼Œæ‰«æç»“æœç”±å¾®ä¿¡å¤„ç†ï¼Œ1åˆ™ç›´æ¥è¿”å›æ‰«æç»“æœï¼Œ
-                scanType: ["qrCode", "barCode"], // å¯ä»¥æŒ‡å®šæ‰«äºŒç»´ç è¿˜æ˜¯ä¸€ç»´ç ï¼Œé»˜è®¤äºŒè€…éƒ½æœ‰
+                needResult: 1, // Ä¬ÈÏÎª0£¬É¨Ãè½á¹ûÓÉÎ¢ĞÅ´¦Àí£¬1ÔòÖ±½Ó·µ»ØÉ¨Ãè½á¹û£¬
+                scanType: ["qrCode", "barCode"], // ¿ÉÒÔÖ¸¶¨É¨¶şÎ¬Âë»¹ÊÇÒ»Î¬Âë£¬Ä¬ÈÏ¶şÕß¶¼ÓĞ
                 success: function (res) {
-                    var result = res.resultStr; // å½“needResult ä¸º 1 æ—¶ï¼Œæ‰«ç è¿”å›çš„ç»“æœ
+                    var result = res.resultStr; // µ±needResult Îª 1 Ê±£¬É¨Âë·µ»ØµÄ½á¹û
                     if (typeof (result) != "undefined") {
 
                         result = result.substring(result.indexOf(',') + 1, result.length);
 
-                        //æ–‡æœ¬æ¡†èµ‹å€¼	
+                        //ÎÄ±¾¿ò¸³Öµ	
                         $(txtQrCode).val(result);
-                        //ç‚¹å‡»æŸ¥è¯¢æŒ‰é’®
+                        //µã»÷²éÑ¯°´Å¥
                         $(btnFind).click();
                     }
                 }
@@ -268,7 +268,7 @@
                                                     </td>
                                                 </tr>
                                             </table>
-                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="è¯·ç¨å€™ï¼Œå¤„ç†ä¸­..." style="display: none;" />
+                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖĞ..." style="display: none;" />
                                         </a>
                                     </td>
 
@@ -281,7 +281,7 @@
                             <table cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td align="right" class="formItemBgStyle">
-                                        <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,fenpaiRen%>" />ï¼š
+                                        <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,fenpaiRen%>" />£º
                                     </td>
                                     <td align="left" class="formItemBgStyle">
                                         <asp:TextBox ID="TB_AssignManName" runat="server" Width="90px"></asp:TextBox>
@@ -321,7 +321,7 @@
                                                     <table width="100%" cellpadding="4" cellspacing="0" class="bian">
                                                         <tr>
                                                             <td style="width: 30%; text-align: right;">
-                                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiLuBianHao%>"></asp:Label>ï¼š
+                                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiLuBianHao%>"></asp:Label>£º
                                                             </td>
                                                             <td style="text-align: left; color: red;">
                                                                 <strong><%# DataBinder.Eval(Container.DataItem,"ID") %> </strong>
@@ -330,7 +330,7 @@
 
                                                         <tr>
                                                             <td style="text-align: right;">
-                                                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>ï¼š
+                                                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º
                                                             </td>
                                                             <td style="font-size: 10pt; text-align: left;">
                                                                 <%# DataBinder.Eval(Container.DataItem,"Status") %>
@@ -338,7 +338,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align: right;">
-                                                                <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,GongZuoYaoQiu%>"></asp:Label>ï¼š
+                                                                <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,GongZuoYaoQiu%>"></asp:Label>£º
                                                             </td>
                                                             <td style="text-align: left">
                                                                 <b>
@@ -359,7 +359,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align: right;">
-                                                                <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,KaiShiShiJian%>"></asp:Label>ï¼š
+                                                                <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,KaiShiShiJian%>"></asp:Label>£º
                                                             </td>
                                                             <td style="text-align: left;">
                                                                 <%# DataBinder.Eval(Container.DataItem,"BeginDate","{0:yyyy/MM/dd}") %>
@@ -367,7 +367,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align: right;">
-                                                                <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label>ï¼š
+                                                                <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label>£º
                                                             </td>
                                                             <td style="text-align: left;">
                                                                 <%# DataBinder.Eval(Container.DataItem, "EndDate", "{0:yyyy/MM/dd}")%>
@@ -375,7 +375,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align: right;">
-                                                                <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,FenPaiRen%>"></asp:Label>ï¼š
+                                                                <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,FenPaiRen%>"></asp:Label>£º
                                                             </td>
                                                             <td style="text-align: left; font-size: 10pt">
                                                                 <%# DataBinder.Eval(Container.DataItem,"AssignManName") %>
@@ -383,7 +383,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align: right;">
-                                                                <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,ShouLiRen%>"></asp:Label>ï¼š
+                                                                <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,ShouLiRen%>"></asp:Label>£º
                                                             </td>
                                                             <td style="text-align: left;">
                                                                 <%# DataBinder.Eval(Container.DataItem,"OperatorCode") %>
@@ -392,7 +392,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align: right;">
-                                                                <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,ShouLiRenShiJian%>"></asp:Label>ï¼š
+                                                                <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,ShouLiRenShiJian%>"></asp:Label>£º
                                                             </td>
                                                             <td style="text-align: left;">
                                                                 <%# DataBinder.Eval(Container.DataItem,"OperationTime","{0:yyyy/MM/dd}") %>
@@ -400,7 +400,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align: right;">
-                                                                <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,QianJiLu%>"></asp:Label>ï¼š
+                                                                <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,QianJiLu%>"></asp:Label>£º
                                                             </td>
                                                             <td style="text-align: left; font-size: 10pt">
                                                                 <%# DataBinder.Eval(Container.DataItem,"PriorID") %>
@@ -408,12 +408,12 @@
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align: right;">
-                                                                <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,FeiYong%>"></asp:Label>ï¼š</td>
+                                                                <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,FeiYong%>"></asp:Label>£º</td>
                                                             <td style="text-align: left;"><%# DataBinder.Eval(Container.DataItem,"Expense") %></td>
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align: right;">
-                                                                <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,WanChengChengDu%>"></asp:Label>ï¼š</td>
+                                                                <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,WanChengChengDu%>"></asp:Label>£º</td>
                                                             <td style="text-align: left;"><%# DataBinder.Eval(Container.DataItem,"finishPercent") %>%</td>
                                                         </tr>
                                                         <tr>
@@ -422,7 +422,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align: right">
-                                                                <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,GongZuoRiZhi%>"></asp:Label>ï¼š
+                                                                <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,GongZuoRiZhi%>"></asp:Label>£º
                                                             </td>
                                                             <td style="text-align: left">
                                                                 <b><%# DataBinder.Eval(Container.DataItem,"OperatorContent") %> </b>

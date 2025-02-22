@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections;
 using System.Linq;
 using System.Web;
@@ -30,19 +30,19 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
             try
             {
                 InitDataList();
-                //åŠ è½½æˆæœ¬è´¹é¡¹å¤§ç±»
+                //¼ÓÔØ³É±¾·ÑÏî´óÀà
                 InitCostFeeList();
-                //åŠ è½½æˆæœ¬è´¹é¡¹å­ç±»
+                //¼ÓÔØ³É±¾·ÑÏî×ÓÀà
                 DDL_CostFee.SelectedIndex = 0;
                 InitCostSubFeeList(DDL_CostFee.SelectedValue);
 
-                //åˆå§‹åŒ–å¹´è·Ÿæœˆ
+                //³õÊ¼»¯Äê¸úÔÂ
                 ShareClass.InitYearMonthList(DDL_YearList, DDL_MonthList);
             }
             catch (Exception exp)
             {
                 lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šè¯»å–æˆæœ¬è´¹å®é™…å‘ç”Ÿä¿¡æ¯åˆ—è¡¨å¤±è´¥ï¼" + exp.Message;
+                lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¶ÁÈ¡³É±¾·ÑÊµ¼Ê·¢ÉúĞÅÏ¢ÁĞ±íÊ§°Ü£¡" + exp.Message;
             }
         }
     }
@@ -94,7 +94,7 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šè¯»å–æˆæœ¬å­é¡¹åˆ—è¡¨ä¿¡æ¯å¤±è´¥ï¼" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¶ÁÈ¡³É±¾×ÓÏîÁĞ±íĞÅÏ¢Ê§°Ü£¡" + exp.Message;
         }
     }
 
@@ -117,7 +117,7 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæ“ä½œå¤±è´¥ï¼" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º²Ù×÷Ê§°Ü£¡" + exp.Message;
         }
     }
 
@@ -131,7 +131,7 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šè¯»å–æˆæœ¬å­é¡¹åˆ—è¡¨ä¿¡æ¯å¤±è´¥ï¼" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¶ÁÈ¡³É±¾×ÓÏîÁĞ±íĞÅÏ¢Ê§°Ü£¡" + exp.Message;
         }
     }
     protected void btnDeleteItem_Click(object sender, EventArgs e)
@@ -139,7 +139,7 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
         if (GridView1.SelectedIndex == -1)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šè¯·é€‰æ‹©ä¸€è¡Œè¿›è¡Œåˆ é™¤æ“ä½œï¼" ;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºÇëÑ¡ÔñÒ»ĞĞ½øĞĞÉ¾³ı²Ù×÷£¡" ;
             return;
         }
 
@@ -153,14 +153,14 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
             mcfBll.DeleteRCJProjectMonthCostFee(mcfData);
 
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šåˆ é™¤å®é™…å‘ç”Ÿæˆæœ¬æˆåŠŸï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºÉ¾³ıÊµ¼Ê·¢Éú³É±¾³É¹¦£¡";
 
             InitDataList();
         }
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šåˆ é™¤å®é™…å‘ç”Ÿæˆæœ¬å¤±è´¥ï¼" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºÉ¾³ıÊµ¼Ê·¢Éú³É±¾Ê§°Ü£¡" + exp.Message;
         }
     }
 
@@ -169,14 +169,14 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
         if (DDL_CostSubFee.SelectedIndex == -1)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼š[æˆæœ¬è´¹é¡¹å­ç±»]æ²¡æœ‰é€‰æ‹©é¡¹ï¼Œè¯·å…ˆè¾“å…¥è¯¥å¤§ç±»çš„å­é¡¹åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º[³É±¾·ÑÏî×ÓÀà]Ã»ÓĞÑ¡ÔñÏî£¬ÇëÏÈÊäÈë¸Ã´óÀàµÄ×ÓÏîºóÔÙÊÔ£¡";
             return;
         }
 
         if (TB_CostFee.Text.Trim().Length == 0 || false == ShareClass.CheckIsNumber(TB_CostFee.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼š[æˆæœ¬è´¹ç”¨]è¾“å…¥æœ‰è¯¯ï¼Œè¯·è¾“å…¥æ•°å­—å†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º[³É±¾·ÑÓÃ]ÊäÈëÓĞÎó£¬ÇëÊäÈëÊı×ÖÔÙÊÔ£¡";
             return ;
         }
 
@@ -184,7 +184,7 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
         //if(true == IfExistsMonthWork(0, Convert.ToInt32( DDL_CostFee.SelectedValue), Convert.ToInt32(DDL_CostSubFee.SelectedValue),  month, true))
         //{
         //    lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-        //    lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šè¯¥æˆæœ¬è´¹é¡¹æœˆä»½å·²ç»è¾“å…¥å®é™…å‘ç”Ÿå€¼ï¼Œè¯·ç›´æ¥ä¿®æ”¹ï¼";
+        //    lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¸Ã³É±¾·ÑÏîÔÂ·İÒÑ¾­ÊäÈëÊµ¼Ê·¢ÉúÖµ£¬ÇëÖ±½ÓĞŞ¸Ä£¡";
         //    return;
         //}
 
@@ -207,14 +207,14 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
             mcfBll.AddRCJProjectMonthCostFee(mcfData);
 
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šå¢åŠ å®é™…å‘ç”Ÿæˆæœ¬æˆåŠŸï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºÔö¼ÓÊµ¼Ê·¢Éú³É±¾³É¹¦£¡";
 
             InitDataList();
         }
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šå¢åŠ å®é™…å‘ç”Ÿæˆæœ¬å¤±è´¥ï¼" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºÔö¼ÓÊµ¼Ê·¢Éú³É±¾Ê§°Ü£¡" + exp.Message;
         }
     }
     protected void btnEditItem_Click(object sender, EventArgs e)
@@ -222,14 +222,14 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
         if (DDL_CostSubFee.SelectedIndex == -1)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼š[æˆæœ¬è´¹é¡¹å­ç±»]æ²¡æœ‰é€‰æ‹©é¡¹ï¼Œè¯·å…ˆè¾“å…¥è¯¥å¤§ç±»çš„å­é¡¹åå†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º[³É±¾·ÑÏî×ÓÀà]Ã»ÓĞÑ¡ÔñÏî£¬ÇëÏÈÊäÈë¸Ã´óÀàµÄ×ÓÏîºóÔÙÊÔ£¡";
             return;
         } 
         
         if (TB_CostFee.Text.Trim().Length == 0 || false == ShareClass.CheckIsNumber(TB_CostFee.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼š[æˆæœ¬è´¹ç”¨]è¾“å…¥æœ‰è¯¯ï¼Œè¯·è¾“å…¥æ•°å­—å†è¯•ï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º[³É±¾·ÑÓÃ]ÊäÈëÓĞÎó£¬ÇëÊäÈëÊı×ÖÔÙÊÔ£¡";
             return;
         }
 
@@ -237,7 +237,7 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
         //if (true == IfExistsMonthWork(Convert.ToInt32(tbID.Text), Convert.ToInt32(DDL_CostFee.SelectedValue), Convert.ToInt32(DDL_CostSubFee.SelectedValue), month, false))
         //{
         //    lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-        //    lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šè¯¥æˆæœ¬è´¹é¡¹å¯¹åº”çš„æœˆä»½å·²ç»å­˜åœ¨å‘ç”Ÿå€¼ï¼Œè¯·ä»”ç»†ç¡®è®¤åå†è¿›è¡Œä¿®æ”¹ï¼";
+        //    lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º¸Ã³É±¾·ÑÏî¶ÔÓ¦µÄÔÂ·İÒÑ¾­´æÔÚ·¢ÉúÖµ£¬Çë×ĞÏ¸È·ÈÏºóÔÙ½øĞĞĞŞ¸Ä£¡";
         //    return;
         //} 
         
@@ -260,14 +260,14 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
             mcfBll.UpdateRCJProjectMonthCostFee(mcfData , mcfData.ID);
 
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šä¿®æ”¹å®é™…å‘ç”Ÿæˆæœ¬æˆåŠŸï¼";
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºĞŞ¸ÄÊµ¼Ê·¢Éú³É±¾³É¹¦£¡";
 
             InitDataList();
         }
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šä¿®æ”¹å®é™…å‘ç”Ÿæˆæœ¬å¤±è´¥ï¼" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºĞŞ¸ÄÊµ¼Ê·¢Éú³É±¾Ê§°Ü£¡" + exp.Message;
         }
     }
 
@@ -275,7 +275,7 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
     {
         try
         {
-            //è·å–æˆæœ¬è´¹é¡¹å¤§ç±»çš„ä¿¡æ¯åˆ—è¡¨ 
+            //»ñÈ¡³É±¾·ÑÏî´óÀàµÄĞÅÏ¢ÁĞ±í 
             StringBuilder sql = new StringBuilder("From RCJProjectMonthCostFee as rCJProjectMonthCostFee where projectid=");
             sql.Append(ProjectId.ToString());
             sql.Append(" and WorkMonth='");
@@ -285,7 +285,7 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
             sql.Append(" and CostFeeSubID=");
             sql.Append(costFeeSubid.ToString());
 
-            if (bAdd == false) //æ˜¯ä¿®æ”¹çš„è¯ï¼Œè¿˜è¦åˆ¤æ–­æ˜¯å¦id
+            if (bAdd == false) //ÊÇĞŞ¸ÄµÄ»°£¬»¹ÒªÅĞ¶ÏÊÇ·ñid
             {
                 sql.Append(" and ID !=");
                 sql.Append(id.ToString());
@@ -301,7 +301,7 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæŸ¥è¯¢æ“ä½œå¤±è´¥ï¼š" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º²éÑ¯²Ù×÷Ê§°Ü£º" + exp.Message;
 
             return true;
         }
@@ -339,19 +339,19 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
             if (ds.Tables[0].Rows.Count > 0)
             {
                 lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-                lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæŸ¥è¯¢åˆ°å¯¹åº”çš„è®°å½•ï¼";
+                lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º²éÑ¯µ½¶ÔÓ¦µÄ¼ÇÂ¼£¡";
             }
             else
             {
                 lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæ²¡æœ‰æŸ¥è¯¢åˆ°å¯¹åº”çš„è®°å½•ï¼";
+                lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£ºÃ»ÓĞ²éÑ¯µ½¶ÔÓ¦µÄ¼ÇÂ¼£¡";
 
             }
         }
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = "æ¶ˆæ¯æç¤ºï¼šæŸ¥è¯¢æ“ä½œå¤±è´¥ï¼š" + exp.Message;
+            lb_ShowMessage.Text = "ÏûÏ¢ÌáÊ¾£º²éÑ¯²Ù×÷Ê§°Ü£º" + exp.Message;
         }
     }
 
@@ -370,9 +370,9 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-            //é¼ æ ‡ç»è¿‡æ—¶ï¼Œè¡ŒèƒŒæ™¯è‰²å˜ 
+            //Êó±ê¾­¹ıÊ±£¬ĞĞ±³¾°É«±ä 
             e.Row.Attributes.Add("onmouseover", "this.style.backgroundColor='#A9A9A9'");
-            //é¼ æ ‡ç§»å‡ºæ—¶ï¼Œè¡ŒèƒŒæ™¯è‰²å˜ 
+            //Êó±êÒÆ³öÊ±£¬ĞĞ±³¾°É«±ä 
             e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor='#FFFFFF'");
         }
     }

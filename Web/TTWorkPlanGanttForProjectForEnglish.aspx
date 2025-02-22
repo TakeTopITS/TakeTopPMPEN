@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkPlanGanttForProjectForEnglish.aspx.cs" Inherits="TTWorkPlanGanttForProjectForEnglish" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkPlanGanttForProjectForEnglish.aspx.cs" Inherits="TTWorkPlanGanttForProjectForEnglish" %>
 
 <!DOCTYPE html>
 
@@ -144,13 +144,13 @@
     <script src="ext-gantt/TakeTopGntAllDebug.js" type="text/javascript" charset="gbk"></script>
 
     <script type='text/javascript'>
-        //ä¸ºäº†æ”¯æŒå¤šä¸ªé¡¹ç›®ï¼Œpidä¸ºæŸä¸ªé¡¹ç›®çš„é¡¹ç›®ç¼–å·
+        //ÎªÁËÖ§³Ö¶à¸öÏîÄ¿£¬pidÎªÄ³¸öÏîÄ¿µÄÏîÄ¿±àºÅ
         var pid = 1;
         pid =<%=this.pid%>;
 
         //alert(CurrentUserCode);
 
-        var g_start = new Date(<%=this.g_start%>);//è¿™é‡Œä¸€å®šè¦ç”¨æ•°å­—ç±»å‹
+        var g_start = new Date(<%=this.g_start%>);//ÕâÀïÒ»¶¨ÒªÓÃÊı×ÖÀàĞÍ
         var g_end = new Date(<%=this.g_end%>);
 
     </script>
@@ -159,10 +159,10 @@
     <script src="ext-gantt/TakeTopGntLangEN.js" id="GntLangID" type="text/javascript"></script>
     <script type="text/javascript" src="ext-gantt/TakeTopGanttPanelForEnglish.js"></script>
 
-    <!--æ›´æ¢çš®è‚¤æ‰€éœ€è¦çš„cssæ–‡ä»¶ -->
+    <!--¸ü»»Æ¤·ôËùĞèÒªµÄcssÎÄ¼ş -->
     <link rel="stylesheet" href="css/project.css" type="text/css" />
 
-    <!--åº”ç”¨ç¨‹åºçš„ä»£ç  -->
+    <!--Ó¦ÓÃ³ÌĞòµÄ´úÂë -->
     <script type="text/javascript" src="ext-gantt/TakeTopAspNet.js"></script>
     <script type="text/javascript" src="ext-gantt/TakeTopAdvancedForEnglish.js"></script>
 
@@ -172,11 +172,11 @@
 
         $(function () {
 
-            //å…³é—­è„±ç¦»æ¡†æ¶çš„é¡µé¢
+            //¹Ø±ÕÍÑÀë¿ò¼ÜµÄÒ³Ãæ
             if (top.location != self.location) { } else { CloseWebPage(); }
 
         });
-        //å–å¾—é“¾æ¥ä¼ å…¥å‚æ•°çš„å€¼
+        //È¡µÃÁ´½Ó´«Èë²ÎÊıµÄÖµ
         function getUrlParam(name) {
             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
             var r = window.location.search.substr(1).match(reg);
@@ -186,7 +186,7 @@
             return null;
         }
 
-        //æ”¹å˜è®¡åˆ’å›¾å®½åº¦
+        //¸Ä±ä¼Æ»®Í¼¿í¶È
         function changeGanttChartProperty() {
 
             $(".x-tool-img.x-tool-collapse-left").click();
@@ -217,7 +217,7 @@
 
         }
 
-        //æŒ‰æ—¥æœŸæ’åº
+        //°´ÈÕÆÚÅÅĞò
         function SortByDate() {
 
             $(".x-column-header-trigger").eq(3).click();;
@@ -241,7 +241,7 @@
 
     <div id="AboveDiv" align="left">
         <a href="javascript:ChangeMenu(0)">
-            <%--<img src="Images/LeftRightArrow.png" width="18" height="24" border="0" alt="éšè—å³è¾¹æ ">--%>
+            <%--<img src="Images/LeftRightArrow.png" width="18" height="24" border="0" alt="Òş²ØÓÒ±ßÀ¸">--%>
         </a>
         <span style="font-size: x-small;">
             <asp:Label ID="LB_VersionID" runat="server" Text="<%$ Resources:lang,VersionID%>"></asp:Label>:

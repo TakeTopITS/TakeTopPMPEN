@@ -1,16 +1,16 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSelectorDivideList.aspx.cs" Inherits="TTWZSelectorDivideList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSelectorDivideList.aspx.cs" Inherits="TTWZSelectorDivideList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>‰∏ì‰∏öÂàíÂàÜ</title>
+    <title>◊®“µªÆ∑÷</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
         <script src="js/allAHandler.js"></script>
 
     <script type="text/jscript" language="javascript">
-        //Â§çÈÄâÊ°ÜÂÖ®ÈÄâ
+        //∏¥—°øÚ»´—°
         function ChooseAll(item) {
 
             $("input[name=dlCode]").each(function () {
@@ -23,17 +23,17 @@
         }
 
 
-        //Â§öÈÄâÊã©ÊåâÈíÆÂà§Êñ≠
+        //∂‡—°‘Ò∞¥≈•≈–∂œ
         function chooseUpdate() {
             var str = "";
             $("input[name=dlCode]").each(function () {
                 if ($(this).attr("checked")) {
-                    str = str + $(this).attr("id") + ","; // Êï¥‰∏™‰ª•,ÈöîÂºÄ
+                    str = str + $(this).attr("id") + ","; // ’˚∏ˆ“‘,∏Ùø™
                 }
             });
 
             if (str == "") {
-                alert('ËØ∑ÈÄâÊã©ËÆ∞ÂΩïÈ°πÔºÅ');
+                alert('«Î—°‘Òº«¬ºœÓ£°');
                 return false;
             }
             else {
@@ -138,10 +138,10 @@
                                                                         <input id='<%#Eval("DivideCode") %>' type="checkbox" name="dlCode" />
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="DivideCode" HeaderText="‰∏ì‰∏öÁºñÂè∑">
+                                                                <asp:BoundColumn DataField="DivideCode" HeaderText="◊®“µ±‡∫≈">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                                                 </asp:BoundColumn>
-                                                                <%--<asp:BoundColumn DataField="DivideType" HeaderText="‰∏ì‰∏öÁ±ªÂà´">
+                                                                <%--<asp:BoundColumn DataField="DivideType" HeaderText="◊®“µ¿‡±">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="25%" />
                                                                 </asp:BoundColumn>--%>
                                                                 <asp:TemplateColumn>
@@ -153,7 +153,7 @@
                                                                         <%# ShareClass.StringCutByRequire(Eval("DivideType").ToString(), 20) %>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <%--<asp:BoundColumn DataField="DLCode" HeaderText="Ê∂âÂèäÂ§ßÁ±ª">
+                                                                <%--<asp:BoundColumn DataField="DLCode" HeaderText="…Êº∞¥Û¿‡">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="46%" />
                                                                 </asp:BoundColumn>--%>
                                                                 <asp:TemplateColumn>
@@ -180,10 +180,10 @@
                                             <tr>
                                                 <td class="formItemBgStyle">
                                                     <div style="text-align: center">
-                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="Á°ÆÂÆö" />
+                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="»∑∂®" />
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <input id="btnClose" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                            type="button" value="ÂÖ≥Èó≠" />
+                                                            type="button" value="Closed" />
                                                     </div>
                                                 </td>
                                             </tr>

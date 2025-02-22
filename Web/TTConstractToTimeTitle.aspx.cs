@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Data;
 using System.Configuration;
 using System.Collections;
@@ -25,14 +25,14 @@ public partial class TTConstractToTimeTitle : System.Web.UI.Page
         string strUserName = Session["UserName"].ToString();
 
         //ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","åˆåŒåˆ°æœŸææé†’", strUserCode);
+        //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","ºÏÍ¬µ½ÆÚÌáÌáĞÑ", strUserCode);
         //if (blVisible == false)
         //{
         //    Response.Redirect("TTDisplayErrors.aspx");
         //    return;
         //}
 
-        //this.Title = "åˆåŒåˆ°æœŸææé†’";
+        //this.Title = "ºÏÍ¬µ½ÆÚÌáÌáĞÑ";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
         {
@@ -58,7 +58,7 @@ public partial class TTConstractToTimeTitle : System.Web.UI.Page
         strPayer = "%" + strPayer + "%";
         strPartBOperator = "%" + strPartBOperator + "%";
 
-        strHQL = "from ConstractReceivables as constractReceivables where constractReceivables.Status not in ('å®Œæˆ','å–æ¶ˆ') and to_char( constractReceivables.ReceivablesTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd') ";
+        strHQL = "from ConstractReceivables as constractReceivables where constractReceivables.Status not in ('Completed','Cancel') and to_char( constractReceivables.ReceivablesTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd') ";
         strHQL += " and constractReceivables.ConstractCode in ( Select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")";
         strHQL += " and constractReceivables.Payer Like " + "'" + strPayer + "'";
         if (strSalesName != "%%")
@@ -66,7 +66,7 @@ public partial class TTConstractToTimeTitle : System.Web.UI.Page
             strHQL += " and constractReceivables.ConstractCode in (Select constractSales.ConstractCode From ConstractSales as constractSales Where constractSales.SalesName Like " + "'" + strSalesName + "'" + ")";
         }
         strHQL += " and constractReceivables.ConstractCode in (Select constract.ConstractCode from Constract as constract where constract.PartBOperator Like " + "'" + strPartBOperator + "'" + ")";
-        strHQL += " and constractReceivables.ConstractCode not in (Select constract.ConstractCode from Constract as constract where constract.Status in ('å½’æ¡£','å–æ¶ˆ','åˆ é™¤'))";
+        strHQL += " and constractReceivables.ConstractCode not in (Select constract.ConstractCode from Constract as constract where constract.Status in ('Archived','Cancel','Deleted'))";
 
         strHQL += " and constractReceivables.ConstractCode != ''";
         strHQL += " Order by constractReceivables.ID DESC";
@@ -97,9 +97,9 @@ public partial class TTConstractToTimeTitle : System.Web.UI.Page
         decimal deReceivablesAccount = 0, deReceiverAccount = 0, deReceiverInvoiceAccount = 0, deUNReceiveAmount = 0;
 
 
-        strHQL = "from ConstractReceivables as constractReceivables where constractReceivables.Status not in ('å®Œæˆ','å–æ¶ˆ') and to_char( constractReceivables.ReceivablesTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd') ";
+        strHQL = "from ConstractReceivables as constractReceivables where constractReceivables.Status not in ('Completed','Cancel') and to_char( constractReceivables.ReceivablesTime,'yyyymmdd') <= to_char(now()+PreDays*'1 day'::interval,'yyyymmdd') ";
         strHQL += " and constractReceivables.ConstractCode in ( Select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")";
-        strHQL += " and constractReceivables.ConstractCode not in (Select constract.ConstractCode from Constract as constract where constract.Status in ('å½’æ¡£','å–æ¶ˆ','åˆ é™¤'))";
+        strHQL += " and constractReceivables.ConstractCode not in (Select constract.ConstractCode from Constract as constract where constract.Status in ('Archived','Cancel','Deleted'))";
         strHQL += " and constractReceivables.ConstractCode != ''";
         strHQL += " Order by constractReceivables.ID DESC";
         ConstractReceivablesBLL constractReceivablesBLL = new ConstractReceivablesBLL();

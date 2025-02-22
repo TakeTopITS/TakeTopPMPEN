@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTVisitRegistration_StudentList.aspx.cs" Inherits="TTVisitRegistration_StudentList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTVisitRegistration_StudentList.aspx.cs" Inherits="TTVisitRegistration_StudentList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ÊãúËÆø</title>
+    <title>∞›∑√</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -24,7 +24,7 @@
 
 
         function LoadProjectList() {
-            alert("Ë∞ÉÁî®ÊàêÂäü");
+            alert("µ˜”√≥…π¶");
             document.getElementById("BT_RelaceLoad").click();
         }
 
@@ -72,15 +72,15 @@
                                             <td valign="top" style="padding-top: 5px;">
                                                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td class="formItemBgStyle" width="100%"><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LieBiaoCaoZuo%>"></asp:Label>Ôºö&nbsp;
-                                                            <%--<asp:Button ID="BT_NewAdd" runat="server" CssClass="inpu" Enabled="false" Text="Êñ∞Â¢ûÊãúËÆø" OnClick="BT_NewAdd_Click" />&nbsp;--%>
-                                                            <input type="button" value="Êñ∞Â¢ûÊãúËÆø" class="inpuLong" onclick="window.location.href='TTVisitRegistration_StudentEdit.aspx'" />
+                                                        <td class="formItemBgStyle" width="100%"><asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LieBiaoCaoZuo%>"></asp:Label>£∫&nbsp;
+                                                            <%--<asp:Button ID="BT_NewAdd" runat="server" CssClass="inpu" Enabled="false" Text="–¬‘ˆ∞›∑√" OnClick="BT_NewAdd_Click" />&nbsp;--%>
+                                                            <input type="button" value="–¬‘ˆ∞›∑√" class="inpuLong" onclick="window.location.href='TTVisitRegistration_StudentEdit.aspx'" />
                                                             
                                                             <asp:Button ID="BT_RelaceLoad" runat="server" Text="<%$ Resources:lang,ChongXinJiaZaiLieBiao%>" OnClick="BT_RelaceLoad_Click" CssClass="inpu" style="display:none;" />
 
                                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DaoChuNian%>"></asp:Label>Ôºö<asp:DropDownList ID="DDL_Year" runat="server"></asp:DropDownList>&nbsp;
-                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,Yue%>"></asp:Label>Ôºö<asp:DropDownList ID="DDL_Month" runat="server"></asp:DropDownList>&nbsp;
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DaoChuNian%>"></asp:Label>£∫<asp:DropDownList ID="DDL_Year" runat="server"></asp:DropDownList>&nbsp;
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,Yue%>"></asp:Label>£∫<asp:DropDownList ID="DDL_Month" runat="server"></asp:DropDownList>&nbsp;
 
                                                             <asp:Button ID="BT_Export" runat="server" Text="<%$ Resources:lang,DaoChu%>" CssClass="inpu" OnClick="BT_Export_Click" />
                                                         </td>
@@ -144,7 +144,7 @@
                                                                                 
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="VisitStartTime" HeaderText="Êù•Âõ≠Êó∂Èó¥">
+                                                                        <asp:BoundColumn DataField="VisitStartTime" HeaderText="¿¥‘∞ ±º‰">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                         </asp:BoundColumn>
                                                                         
@@ -157,7 +157,7 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("VisitName").ToString(), 190) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="VisitSex" HeaderText="ÊÄßÂà´">
+                                                                        <asp:BoundColumn DataField="VisitSex" HeaderText="–‘±">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:TemplateColumn>

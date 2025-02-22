@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAllCollaboration.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAllCollaboration.aspx.cs"
     Inherits="TTAllCollaboration" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -129,21 +129,21 @@
                                                                             PageSize="40" Width="100%" ShowHeader="false" CellPadding="4" ForeColor="#333333"
                                                                             GridLines="None">
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="CoID" HeaderText="ç¼–å·">
+                                                                                <asp:BoundColumn DataField="CoID" HeaderText="±àºÅ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="CoID" DataNavigateUrlFormatString="TTCollaborationDetailView.aspx?CoID={0}"
-                                                                                    DataTextField="CollaborationName" HeaderText="åä½œ" Target="_blank">
+                                                                                    DataTextField="CollaborationName" HeaderText="Ð­×÷" Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="45%" />
                                                                                 </asp:HyperLinkColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                                    DataTextField="CreatorName" HeaderText="åˆ›å»ºè€…" Target="_blank">
+                                                                                    DataTextField="CreatorName" HeaderText="´´½¨Õß" Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="CreateTime" HeaderText="åˆ›å»ºæ—¶é—´">
+                                                                                <asp:BoundColumn DataField="CreateTime" HeaderText="´´½¨Ê±¼ä">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                                                <asp:TemplateColumn HeaderText="×´Ì¬">
                                                                                     <ItemTemplate>
                                                                                         <%# ShareClass.GetStatusHomeNameByRequirementStatus(Eval("Status").ToString()) %>
                                                                                     </ItemTemplate>

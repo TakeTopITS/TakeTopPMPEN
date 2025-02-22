@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
@@ -24,7 +24,7 @@ public partial class TTBMSupplierResult : System.Web.UI.Page
 
     protected void GetBMSupplierInfo(string strSupplierCode)
     {
-        lbl_CodePerson.Text = "ä¸ªäººå¸å·ï¼š" + strSupplierCode.Trim();
+        lbl_CodePerson.Text = "¸öÈËÕÊºÅ£º" + strSupplierCode.Trim();
         if (strSupplierCode.Trim().Contains("-"))
         {
             strSupplierCode = strSupplierCode.Trim().Substring(0, strSupplierCode.Trim().IndexOf("-"));
@@ -131,15 +131,15 @@ public partial class TTBMSupplierResult : System.Web.UI.Page
     {
         if (strBidStatus.Trim().Equals("Y"))
         {
-            return "ä¸­æ ‡";
+            return "ÖĞ±ê";
         }
         else if (strBidStatus.Trim().Equals("N"))
         {
-            return "æœªä¸­æ ‡";
+            return "Unsuccessful Bid";
         }
         else
         {
-            return "æœªå¼€æ ‡";
+            return "Î´¿ª±ê";
         }
     }
 
@@ -164,20 +164,20 @@ public partial class TTBMSupplierResult : System.Web.UI.Page
         IList lst = bMContractPreparationBLL.GetAllBMContractPreparations(strHQL);
         if (lst.Count > 0 && lst != null)
         {
-            return "åˆåŒå·²ç­¾è®¢";
+            return "ºÏÍ¬ÒÑÇ©¶©";
         }
         else
         {
-            if (strStatus.Trim().Equals("æ–°å»º"))
+            if (strStatus.Trim().Equals("New"))
             {
-                return "åˆåŒæ´½è°ˆæ–°å»º";
+                return "ºÏÍ¬Ç¢Ì¸ĞÂ½¨";
             }
-            else if (strStatus.Trim().Equals("ä¸åˆæ ¼"))
+            else if (strStatus.Trim().Equals("Unqualified"))
             {
-                return "åˆåŒæ´½è°ˆå®¡æ ¸ä¸åˆæ ¼";
+                return "ºÏÍ¬Ç¢Ì¸ÉóºË²»ºÏ¸ñ";
             }
             else
-                return "åˆåŒæ´½è°ˆä¸­";
+                return "ºÏÍ¬Ç¢Ì¸ÖĞ";
         }
     }
 

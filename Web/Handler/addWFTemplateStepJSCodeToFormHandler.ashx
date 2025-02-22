@@ -66,7 +66,7 @@ public class addWFTemplateStepJSCodeToFormHandler : IHttpHandler, IReadOnlySessi
                 }
                 catch (Exception ex)
                 {
-                    result = "保存失败，原因：" + ex.Message.ToString();
+                    result = "Save failed, reason:" + ex.Message.ToString();
                 }
 
 
@@ -126,7 +126,7 @@ public class addWFTemplateStepJSCodeToFormHandler : IHttpHandler, IReadOnlySessi
                 }
                 catch (Exception ex)
                 {
-                    result = "保存失败，原因：" + ex.Message.ToString();
+                    result = "Save failed, reason:" + ex.Message.ToString();
                 }
 
                 //要改为先全部删除，然后再添加新的，不然，修改的时候，有些已经去掉了，不会删除
@@ -159,7 +159,7 @@ public class addWFTemplateStepJSCodeToFormHandler : IHttpHandler, IReadOnlySessi
         }
         catch (Exception ex)
         {
-            result = "保存失败，原因：" + ex.Message.ToString();
+            result = "Save failed, reason:" + ex.Message.ToString();
         }
 
         context.Response.ContentType = "text/plain";

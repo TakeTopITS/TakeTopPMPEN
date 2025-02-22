@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Data;
 using System.Configuration;
 using System.Collections;
@@ -34,7 +34,7 @@ public partial class TTCustomerQuestionView : System.Web.UI.Page
 
         CustomerQuestion customerQuestion = (CustomerQuestion)lst[0];
     
-        //this.Title = "å®¢æˆ·é—®é¢˜ï¼š" + strQuestionID + " " + customerQuestion.Question.Trim() + " å†…å®¹";
+        //this.Title = "¿Í»§ÎÊÌâ£º" + strQuestionID + " " + customerQuestion.Question.Trim() + " ÄÚÈÝ";
 
          if (Page.IsPostBack == false)
         {

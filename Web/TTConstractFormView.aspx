@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConstractFormView.aspx.cs" Inherits="TTConstractFormView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConstractFormView.aspx.cs" Inherits="TTConstractFormView" %>
 
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -12,7 +12,7 @@
 
     <style type="text/css">
         body {
-            font-family: å¾®è½¯é›…é»‘,å®‹ä½“;
+            font-family: Î¢ÈíÑÅºÚ,ËÎÌå;
             font-size: 1em;
         }
     </style>
@@ -49,7 +49,7 @@
                     <tr>
                         <td width="" align="right">
                             <a href="#" onclick="preview1()">
-                                <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" />
+                                <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" />
                             </a>
                         </td>
                     </tr>
@@ -87,7 +87,7 @@
 
                                         <tr>
                                             <td style="text-align: left;">
-                                                <asp:Label ID="Label1" runat="server" Text="åˆåŒç¼–å·"></asp:Label>ï¼š
+                                                <asp:Label ID="Label1" runat="server" Text="ºÏÍ¬±àºÅ"></asp:Label>£º
                                                 <%#DataBinder.Eval(Container.DataItem, "ConstractCode")%>
                                             </td>
 
@@ -98,24 +98,24 @@
 
                                         <tr>
                                             <td style="text-align: left;">
-                                                <asp:Label ID="Label6" runat="server" Text="ä¾›æ–¹"></asp:Label>ï¼š
+                                                <asp:Label ID="Label6" runat="server" Text="¹©·½"></asp:Label>£º
                                                 <%#DataBinder.Eval(Container.DataItem, "PartA")%>
                                             </td>
 
                                             <td style="text-align: left" colspan="2">
-                                                <asp:Label ID="Label9" runat="server" Text="ç­¾è®¢åœ°ç‚¹"></asp:Label>ï¼š
+                                                <asp:Label ID="Label9" runat="server" Text="Ç©¶©µØµã"></asp:Label>£º
                                                   <%#DataBinder.Eval(Container.DataItem, "Exception")%>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td style="text-align: left;">
-                                                <asp:Label ID="Label10" runat="server" Text="éœ€æ–¹"></asp:Label>ï¼š
+                                                <asp:Label ID="Label10" runat="server" Text="Ðè·½"></asp:Label>£º
                                                 <%#DataBinder.Eval(Container.DataItem, "PartB")%>
                                             </td>
 
                                             <td style="text-align: left" colspan="2">
-                                                <asp:Label ID="Label11" runat="server" Text="ç­¾è®¢æ—¶é—´"></asp:Label>ï¼š
+                                                <asp:Label ID="Label11" runat="server" Text="Ç©¶©Ê±¼ä"></asp:Label>£º
                                                <%#DataBinder.Eval(Container.DataItem, "SignDate", "{0:yyyy/MM/dd}")%>
                                             </td>
                                         </tr>

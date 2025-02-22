@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections;
 using System.Data;
 using System.Web;
@@ -18,12 +18,12 @@ using System.Text;
 
 public partial class DefaultWeiXinSAAS : System.Web.UI.Page
 {
-    //private string strToken;//ä¸å¾®ä¿¡å…¬ä¼—è´¦å·åå°çš„Tokenè®¾ç½®ä¿æŒä¸€è‡´ï¼ŒåŒºåˆ†å¤§å°å†™ã€‚
+    //private string strToken;//ÓëÎ¢ĞÅ¹«ÖÚÕËºÅºóÌ¨µÄTokenÉèÖÃ±£³ÖÒ»ÖÂ£¬Çø·Ö´óĞ¡Ğ´¡£
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //é’Ÿç¤¼æœˆä½œå“(jack.erp@gmail.com)
-        //æ³°é¡¶æ‹“é¼é›†å›¢ï¼ˆTakeTop Softwareï¼‰2006ï¼2026\
+        //ÖÓÀñÔÂ×÷Æ·(jack.erp@gmail.com)
+        //Ì©¶¥ÍØ¶¦¼¯ÍÅ£¨TakeTop Software£©2006£­2026\
         string strVerificationCode, strSMSVerification, strIsOEMVersion;
         string strUserHostAddress = Request.UserHostAddress;
 
@@ -77,7 +77,7 @@ public partial class DefaultWeiXinSAAS : System.Web.UI.Page
             }
 
             strIsOEMVersion = System.Configuration.ConfigurationManager.AppSettings["IsOEMVersion"];
-            LB_Copyright.Text = "CopyrightÂ© TakeTopITS Group 2006-2026";
+            LB_Copyright.Text = "Copyright? TakeTopITS Group 2006-2026";
 
             if (strIsOEMVersion == "NO")
             {
@@ -86,7 +86,7 @@ public partial class DefaultWeiXinSAAS : System.Web.UI.Page
             else
             {
                 LB_Copyright.Visible = true;
-                LB_Copyright.Text = "CopyrightÂ© 2006-2026";
+                LB_Copyright.Text = "Copyright? 2006-2026";
             }
         }
     }
@@ -177,7 +177,7 @@ public partial class DefaultWeiXinSAAS : System.Web.UI.Page
         {
             strSMSCode = msg.CreateRandomCode(5);
 
-            strMsg = "çŸ­ä¿¡éªŒè¯ç ï¼š" + strSMSCode + "ï¼Œå½“å¤©æœ‰æ•ˆï¼";
+            strMsg = "¶ÌĞÅÑéÖ¤Âë£º" + strSMSCode + "£¬µ±ÌìÓĞĞ§£¡";
 
             if (msg.SendMSM("Message", strUserCode, strMsg, strUserCode))
             {
@@ -320,7 +320,7 @@ public partial class DefaultWeiXinSAAS : System.Web.UI.Page
         return lst.Count;
     }
 
-    //å–å¾—ç«™ç‚¹åŠå…¬ç½‘å€
+    //È¡µÃÕ¾µã°ì¹«ÍøÖ·
     protected string GetCustomerWorkSiteURL(string strSimpleName)
     {
         string strHQL;
@@ -344,16 +344,16 @@ public partial class DefaultWeiXinSAAS : System.Web.UI.Page
     }
 
 
-    //æ ¹æ®ç«™ç‚¹åï¼Œå–å¾—ç«™ç‚¹url
+    //¸ù¾İÕ¾µãÃû£¬È¡µÃÕ¾µãurl
     public static string GetCustomerFullSiteURL(string strSiteURL)
     {
-        // æ˜¯å¦ä¸ºSSLè®¤è¯ç«™ç‚¹
+        // ÊÇ·ñÎªSSLÈÏÖ¤Õ¾µã
         string secure = HttpContext.Current.Request.ServerVariables["HTTPS"];
         string httpProtocol = (secure == "on" ? "https://" : "http://");
-        // æœåŠ¡å™¨åç§°
+        // ·şÎñÆ÷Ãû³Æ
         string serverName = HttpContext.Current.Request.ServerVariables["Server_Name"];
         string port = HttpContext.Current.Request.ServerVariables["SERVER_PORT"];
-        // åº”ç”¨æœåŠ¡åç§°
+        // Ó¦ÓÃ·şÎñÃû³Æ
         string applicationName = HttpContext.Current.Request.ApplicationPath;
 
         if (strSiteURL.Substring(strSiteURL.Length - 1, 1) != "/")

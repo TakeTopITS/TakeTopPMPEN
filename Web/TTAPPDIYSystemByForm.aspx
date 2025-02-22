@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPDIYSystemByForm.aspx.cs" Inherits="TTAPPDIYSystemByForm" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPDIYSystemByForm.aspx.cs" Inherits="TTAPPDIYSystemByForm" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
 <!DOCTYPE html>
@@ -41,7 +41,7 @@
         }
 
 
-        /*-----------------------------çŸ­æŒ‰é’®----------------------------*/
+        /*-----------------------------¶Ì°´Å¥----------------------------*/
         .inpu {
             border-style: none;
             background-image: url('ImagesSkin/butbj.jpg');
@@ -54,7 +54,7 @@
             height: 25px;
             border-radius: 2px;
             color: #ffffff;
-            background: #2e8ded; /*çš®è‚¤*/
+            background: #2e8ded; /*Æ¤·ô*/
         }
 
             .inpu:disabled {
@@ -165,10 +165,10 @@
             }
         };
 
-        //æ‹–æ”¾ç¨‹åº
+        //ÍÏ·Å³ÌĞò
         var SimpleDrag = Class.create();
         SimpleDrag.prototype = {
-            //æ‹–æ”¾å¯¹è±¡,è§¦å‘å¯¹è±¡
+            //ÍÏ·Å¶ÔÏó,´¥·¢¶ÔÏó
             initialize: function (drag) {
                 this.Drag = $(drag);
                 this._x = this._y = 0;
@@ -177,19 +177,19 @@
                 this.Drag.style.position = "absolute";
                 addEventHandler(this.Drag, "mousedown", BindAsEventListener(this, this.Start));
             },
-            //å‡†å¤‡æ‹–åŠ¨
+            //×¼±¸ÍÏ¶¯
             Start: function (oEvent) {
                 this._x = oEvent.clientX - this.Drag.offsetLeft;
                 this._y = oEvent.clientY - this.Drag.offsetTop;
                 addEventHandler(document, "mousemove", this._fM);
                 addEventHandler(document, "mouseup", this._fS);
             },
-            //æ‹–åŠ¨
+            //ÍÏ¶¯
             Move: function (oEvent) {
                 this.Drag.style.left = oEvent.clientX - this._x + "px";
                 this.Drag.style.top = oEvent.clientY - this._y + "px";
             },
-            //åœæ­¢æ‹–åŠ¨
+            //Í£Ö¹ÍÏ¶¯
             Stop: function () {
                 removeEventHandler(document, "mousemove", this._fM);
                 removeEventHandler(document, "mouseup", this._fS);
@@ -227,15 +227,15 @@
                                 jQuery("#tbName tr:gt(1):even").attr("class", "treven");
                             } else {
                                 jQuery("#idDrag").hide();
-                                alert("æš‚æ²¡æœ‰æœªå¤„ç†çš„è®°å½•ï¼");
+                                alert("ÔİÃ»ÓĞÎ´´¦ÀíµÄ¼ÇÂ¼£¡");
                             }
                         },
                         error: function () {
-                            alert("åŠ è½½å¤±è´¥");
+                            alert("¼ÓÔØÊ§°Ü");
                         }
                     });
                 } else {
-                    alert("è¯·å…ˆé€‰æ‹©å·¥ä½œæµæ¨¡æ¿ï¼");
+                    alert("ÇëÏÈÑ¡Ôñ¹¤×÷Á÷Ä£°å£¡");
                 }
             });
         });
@@ -245,13 +245,13 @@
             jQuery("#idDrag").hide();
         }
 
-        //äº§ç”ŸXMLï¼Œé™„åŠ åˆ°è¡¨å•
+        //²úÉúXML£¬¸½¼Óµ½±íµ¥
         function ClickCreateXMLToForm(objID) {
             document.getElementById("HF_TriggerID").value = objID;
             document.getElementById("BT_AppendXML").click();
         }
 
-        //è®¾ç½®æ—¥æœŸé€‰æ‹©æ¡†çš„å®½åº¦ï¼Œä½¿ä¹‹ä¸æŠ˜å 
+        //ÉèÖÃÈÕÆÚÑ¡Ôñ¿òµÄ¿í¶È£¬Ê¹Ö®²»ÕÛµş
         function changeDateBoxWidth() {
             var cNodes = document.getElementsByClassName("xdDTText xdBehavior_FormattingNoBUI");
 
@@ -294,7 +294,7 @@
             this.document.getElementById("tableMain").style.width = "100%";
         }
 
-        //éšè—æˆ–æ˜¾ç¤ºå·¥ä½œæµæ ‡é¢˜æ 
+        //Òş²Ø»òÏÔÊ¾¹¤×÷Á÷±êÌâÀ¸
         function hideOrDisplayWFMain() {
 
             if (document.getElementById('td_WFMain').style.display == 'none') {
@@ -305,7 +305,7 @@
             }
         }
 
-        //éšè—å·¥ä½œæµæ ‡é¢˜æ 
+        //Òş²Ø¹¤×÷Á÷±êÌâÀ¸
         function hideWFMain() {
 
             /* document.getElementById('td_WFMain').style.display = 'none';*/
@@ -362,7 +362,7 @@
                                     <td width="20px" style="padding-left: 15px; padding-top: 5px; vertical-align: middle;">
 
                                         <%--   <a href="javascript:ChangeMenu(0)">
-                                            <img src="Images/LeftRightArrow.png" width="18" height="24" border="0" alt="éšè—å³è¾¹æ ">
+                                            <img src="Images/LeftRightArrow.png" width="18" height="24" border="0" alt="Òş²ØÓÒ±ßÀ¸">
                                         </a>--%>
 
                                     </td>
@@ -546,7 +546,7 @@
                                                 <td class="tdLeft" align="right"></td>
                                                 <td colspan="2" class="tdRight" align="left">
                                                     <span style="font-size: 10pt;">
-                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ChuLiJinDuFanKui%>"></asp:Label>ï¼š</span><asp:CheckBox
+                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ChuLiJinDuFanKui%>"></asp:Label>£º</span><asp:CheckBox
                                                             ID="CB_SMS" runat="server" Font-Size="10pt" Text="<%$ Resources:lang,DuanXin%>" Checked="true" /><asp:CheckBox ID="CB_Mail"
                                                                 runat="server" Font-Size="10pt" Text="<%$ Resources:lang,YouJian%>" Checked="true" />
                                                 </td>
@@ -563,7 +563,7 @@
                                             <tr style="display: none;">
                                                 <td colspan="3" class="tdRight" style="text-align: center; padding: 2px 0px 2px 5px; border-bottom: solid 1px  #D8D8D8;">
                                                     <asp:HyperLink ID="HL_WFXSNFile" runat="server"
-                                                        Target="_blank" Font-Names="å®‹ä½“" Font-Size="10pt">
+                                                        Target="_blank" Font-Names="ËÎÌå" Font-Size="10pt">
                                                         <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,XGYWBGMBXZ%>"></asp:Label>
                                                     </asp:HyperLink>
                                                     &nbsp;<input id="btPrintPreview" type="button" class="inpuPrint" name="print" onclick="preview()" />
@@ -573,7 +573,7 @@
                                                         Style="display: none;" />
 
                                                     <asp:HyperLink ID="HL_WLTem" runat="server" NavigateUrl="~/TTWorkFlowTemplate.aspx"
-                                                        Target="_blank" Font-Names="å®‹ä½“" Font-Size="10pt">
+                                                        Target="_blank" Font-Names="ËÎÌå" Font-Size="10pt">
                                                         <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MuBanWeiHu%>"></asp:Label>
                                                     </asp:HyperLink>
                                                     <asp:HyperLink ID="HL_RedirectToMyWFDetail" runat="server" Target="_blank" Text="<%$ Resources:lang,ZhiXingJinDu%>" Visible="false"></asp:HyperLink>

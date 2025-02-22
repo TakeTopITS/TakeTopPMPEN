@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System; using System.Resources;
 using System.Collections;
@@ -95,7 +95,7 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
                 string strProgress = HF_Progress.Value;
                 string strIsMark = HF_IsMark.Value;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('è¯·é€‰æ‹©å·¥ç¨‹é¡¹ç›®ï¼');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÇëÑ¡Ôñ¹¤³ÌÏîÄ¿£¡');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
                 return;
             }
             if (string.IsNullOrEmpty(strSupplierCode))
@@ -103,7 +103,7 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
                 string strProgress = HF_Progress.Value;
                 string strIsMark = HF_IsMark.Value;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('è¯·é€‰æ‹©ä¾›åº”å•†ï¼');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÇëÑ¡Ôñ¹©Ó¦ÉÌ£¡');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
                 return;
             }
             if (string.IsNullOrEmpty(strCompactName))
@@ -111,7 +111,7 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
                 string strProgress = HF_Progress.Value;
                 string strIsMark = HF_IsMark.Value;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('åˆåŒåç§°ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¡¥å……ï¼');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ºÏÍ¬Ãû³Æ²»ÄÜÎª¿Õ£¬Çë²¹³ä£¡');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
                 return;
             }
             if (string.IsNullOrEmpty(strControlMoney))
@@ -119,7 +119,7 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
                 string strProgress = HF_Progress.Value;
                 string strIsMark = HF_IsMark.Value;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ä»·æ ¼ç›‘å®¡ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¡¥å……ï¼');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¼Û¸ñ¼àÉó²»ÄÜÎª¿Õ£¬Çë²¹³ä£¡');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
                 return;
             }
 
@@ -131,7 +131,7 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
             string strCompactCode = HF_CompactCode.Value;
             if (!string.IsNullOrEmpty(strCompactCode))
             {
-                //ä¿®æ”¹
+                //ĞŞ¸Ä
                 string strCompactHQL = "from WZCompact as wZCompact where CompactCode = '" + strCompactCode + "'";
                 IList listCompact = wZCompactBLL.GetAllWZCompacts(strCompactHQL);
                 if (listCompact != null && listCompact.Count > 0)
@@ -157,9 +157,9 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
             }
             else
             {
-                //å¢åŠ 
+                //Ôö¼Ó
                 WZCompact wZCompact = new WZCompact();
-                //åˆåŒç¼–å·
+                //ºÏÍ¬±àºÅ
                 string strNewCompactCode = CreateNewCompactCode();
 
                 wZCompact.CompactCode = strNewCompactCode;
@@ -182,9 +182,9 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
                 wZCompact.MarkTime = DateTime.Now;
                 wZCompact.SingTime = "";
                 wZCompact.ControlMoney = strControlMoney;
-                wZCompact.Progress = "å½•å…¥";
+                wZCompact.Progress = "Â¼Èë";
 
-                //æ—¶é—´æš‚æ—¶å…ˆèµ‹å€¼ï¼Œä¸ç„¶ä¼šæŠ¥é”™ TODO
+                //Ê±¼äÔİÊ±ÏÈ¸³Öµ£¬²»È»»á±¨´í TODO
                 wZCompact.VerifyTime = "";
                 wZCompact.ApproveTime = "";
                 wZCompact.EffectTime = "";
@@ -192,7 +192,7 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
                 wZCompact.ReceiveTime = "";
 
 
-                //æ ¹æ®â€œé‡‡è´­å·¥ç¨‹å¸ˆâ€æ‰¾å‡ºéœ€æ–¹ç¼–å·ï¼Œæ³•äººä»£è¡¨
+                //¸ù¾İ¡°²É¹º¹¤³ÌÊ¦¡±ÕÒ³öĞè·½±àºÅ£¬·¨ÈË´ú±í
                 string strNeedHQL = "from WZNeedObject as wZNeedObject where PurchaseEngineer = '" + strUserCode + "'";
                 WZNeedObjectBLL wZNeedObjectBLL = new WZNeedObjectBLL();
                 IList lstNeedObject = wZNeedObjectBLL.GetAllWZNeedObjects(strNeedHQL);
@@ -204,10 +204,10 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
                     wZCompact.JuridicalPerson = wZNeedObject.PersonDelegate;
                     wZCompact.RelatedConstractCode = "";
 
-                    //æ·»åŠ åˆåŒ
+                    //Ìí¼ÓºÏÍ¬
                     wZCompactBLL.AddWZCompact(wZCompact);
 
-                    //å°†éœ€æ–¹çš„ä½¿ç”¨æ ‡è®°æ”¹ä¸º-1
+                    //½«Ğè·½µÄÊ¹ÓÃ±ê¼Ç¸ÄÎª-1
                     wZNeedObject.IsMark = -1;
                     wZNeedObjectBLL.UpdateWZNeedObject(wZNeedObject, wZNeedObject.ID);
                 }
@@ -216,17 +216,17 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
                     string strProgress = HF_Progress.Value;
                     string strIsMark = HF_IsMark.Value;
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æœªæ‰¾åˆ°é‡‡è´­å·¥ç¨‹å¸ˆå¯¹åº”çš„éœ€æ–¹è®°å½•ï¼');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Î´ÕÒµ½²É¹º¹¤³ÌÊ¦¶ÔÓ¦µÄĞè·½¼ÇÂ¼£¡');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
                     return;
                 }
             }
 
-            //é‡æ–°åŠ è½½åˆ—è¡¨
+            //ÖØĞÂ¼ÓÔØÁĞ±í
             //DataBinder();
 
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "LoadParentLit();", true);
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ä¿å­˜æˆåŠŸï¼');ControlStatus();ControlStatusCloseChange();", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('±£´æ³É¹¦£¡');ControlStatus();ControlStatusCloseChange();", true);
         }
         catch (Exception ex)
         { }
@@ -300,12 +300,12 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
         {
             try
             {
-                string strCompactText = FUP_CompactText.PostedFile.FileName;   //è·å–ä¸Šä¼ æ–‡ä»¶çš„æ–‡ä»¶å,åŒ…æ‹¬åç¼€
+                string strCompactText = FUP_CompactText.PostedFile.FileName;   //»ñÈ¡ÉÏ´«ÎÄ¼şµÄÎÄ¼şÃû,°üÀ¨ºó×º
                 if (!string.IsNullOrEmpty(strCompactText))
                 {
-                    string strExtendName = System.IO.Path.GetExtension(strCompactText);//è·å–æ‰©å±•å
+                    string strExtendName = System.IO.Path.GetExtension(strCompactText);//»ñÈ¡À©Õ¹Ãû
 
-                    DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+                    DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
                     string strFileName2 = System.IO.Path.GetFileName(strCompactText);
                     string strExtName = Path.GetExtension(strFileName2);
 
@@ -318,13 +318,13 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
 
                     if (fi.Exists)
                     {
-                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('å­˜åœ¨åŒåæ–‡ä»¶ï¼Œä¸Šä¼ å¤±è´¥ï¼Œè¯·æ”¹ååå†ä¸Šä¼ ï¼');ControlStatusChange('" + strProgress + "','" + strIsMark + "');</script>");
+                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('´æÔÚÍ¬ÃûÎÄ¼ş£¬ÉÏ´«Ê§°Ü£¬Çë¸ÄÃûºóÔÙÉÏ´«£¡');ControlStatusChange('" + strProgress + "','" + strIsMark + "');</script>");
                         return;
                     }
 
                     if (Directory.Exists(strDocSavePath) == false)
                     {
-                        //å¦‚æœä¸å­˜åœ¨å°±åˆ›å»ºfileæ–‡ä»¶å¤¹{
+                        //Èç¹û²»´æÔÚ¾Í´´½¨fileÎÄ¼ş¼Ğ{
                         Directory.CreateDirectory(strDocSavePath);
                     }
 
@@ -346,12 +346,12 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
                         wZCompactBLL.UpdateWZCompact(wZCompact, wZCompact.CompactCode);
                     }
 
-                    //é‡æ–°åŠ è½½æŠ¥ä»·æ–‡ä»¶åˆ—è¡¨
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ä¸Šä¼ åˆåŒæ–‡æœ¬æˆåŠŸï¼');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
+                    //ÖØĞÂ¼ÓÔØ±¨¼ÛÎÄ¼şÁĞ±í
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÉÏ´«ºÏÍ¬ÎÄ±¾³É¹¦£¡');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('è¯·é€‰æ‹©è¦ä¸Šä¼ çš„æ–‡ä»¶ï¼');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÇëÑ¡ÔñÒªÉÏ´«µÄÎÄ¼ş£¡');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
                     return;
                 }
             }
@@ -361,12 +361,12 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
         {
             try
             {
-                string strCompactText = FUP_CompactText.PostedFile.FileName;   //è·å–ä¸Šä¼ æ–‡ä»¶çš„æ–‡ä»¶å,åŒ…æ‹¬åç¼€
+                string strCompactText = FUP_CompactText.PostedFile.FileName;   //»ñÈ¡ÉÏ´«ÎÄ¼şµÄÎÄ¼şÃû,°üÀ¨ºó×º
                 if (!string.IsNullOrEmpty(strCompactText))
                 {
-                    string strExtendName = System.IO.Path.GetExtension(strCompactText);//è·å–æ‰©å±•å
+                    string strExtendName = System.IO.Path.GetExtension(strCompactText);//»ñÈ¡À©Õ¹Ãû
 
-                    DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+                    DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
                     string strFileName2 = System.IO.Path.GetFileName(strCompactText);
                     string strExtName = Path.GetExtension(strFileName2);
 
@@ -379,12 +379,12 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
 
                     if (fi.Exists)
                     {
-                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('å­˜åœ¨åŒåæ–‡ä»¶ï¼Œä¸Šä¼ å¤±è´¥ï¼Œè¯·æ”¹ååå†ä¸Šä¼ ï¼');ControlStatusChange('" + strProgress + "','" + strIsMark + "');</script>");
+                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('´æÔÚÍ¬ÃûÎÄ¼ş£¬ÉÏ´«Ê§°Ü£¬Çë¸ÄÃûºóÔÙÉÏ´«£¡');ControlStatusChange('" + strProgress + "','" + strIsMark + "');</script>");
                     }
 
                     if (Directory.Exists(strDocSavePath) == false)
                     {
-                        //å¦‚æœä¸å­˜åœ¨å°±åˆ›å»ºfileæ–‡ä»¶å¤¹{
+                        //Èç¹û²»´æÔÚ¾Í´´½¨fileÎÄ¼ş¼Ğ{
                         Directory.CreateDirectory(strDocSavePath);
                     }
 
@@ -395,12 +395,12 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
                     HF_CompactText.Value = Path.GetFileNameWithoutExtension(strFileName2);
                     HF_CompactTextURL.Value = "Doc\\" + DateTime.Now.ToString("yyyyMM") + "\\" + strUserCode + "\\Doc\\" + strFileName3;
 
-                    //é‡æ–°åŠ è½½æŠ¥ä»·æ–‡ä»¶åˆ—è¡¨
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ä¸Šä¼ åˆåŒæ–‡æœ¬æˆåŠŸï¼');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
+                    //ÖØĞÂ¼ÓÔØ±¨¼ÛÎÄ¼şÁĞ±í
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÉÏ´«ºÏÍ¬ÎÄ±¾³É¹¦£¡');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('è¯·é€‰æ‹©è¦ä¸Šä¼ çš„æ–‡ä»¶ï¼');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÇëÑ¡ÔñÒªÉÏ´«µÄÎÄ¼ş£¡');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
                     return;
                 }
             }
@@ -410,7 +410,7 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
 
 
     /// <summary>
-    ///  ç”ŸæˆåˆåŒCode
+    ///  Éú³ÉºÏÍ¬Code
     /// </summary>
     private string CreateNewCompactCode()
     {
@@ -440,7 +440,7 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
                     }
                     strNewCompactCode = strYear + strMonth + sbCompactCode.ToString() + intCompactCodeNumber.ToString();
 
-                    //éªŒè¯æ–°çš„åˆåŒç¼–å·æ˜¯å¦å­˜åœ¨
+                    //ÑéÖ¤ĞÂµÄºÏÍ¬±àºÅÊÇ·ñ´æÔÚ
                     string strCheckNewCompactCodeHQL = "select count(1) as RowNumber from T_WZCompact where CompactCode = '" + strNewCompactCode + "'";
                     DataTable dtCheckNewCompactCode = ShareClass.GetDataSetFromSql(strCheckNewCompactCodeHQL, "CheckNewCompactCode").Tables[0];
                     int intCheckNewCompactCode = int.Parse(dtCheckNewCompactCode.Rows[0]["RowNumber"].ToString());

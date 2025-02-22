@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPQRCodeForLocalSAAS.aspx.cs" Inherits="TTAPPQRCodeForLocalSAAS" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPQRCodeForLocalSAAS.aspx.cs" Inherits="TTAPPQRCodeForLocalSAAS" %>
 
 <!DOCTYPE html>
 
@@ -34,20 +34,20 @@
                 <tr id="TD_SAAS" runat="server">
                     <td align="center" style="padding-top: 10px;">
 
-                        <p style="font-size: larger; font-weight: 400;"><b>泰顶拓鼎软件SAAS版本微信端APP使用方法 </b></p>
+                        <p style="font-size: larger; font-weight: 400;"><b>̩���ض�����SAAS�汾΢�Ŷ�APPʹ�÷��� </b></p>
 
                         <br />
-                        1、	如果你是在泰顶拓鼎网站上租用的泰顶拓鼎软件，那么可以用你的微信扫描下面的二维码关注：泰顶拓鼎  微信公众号
+                        1��	���������̩���ض���վ�����õ�̩���ض���������ô���������΢��ɨ������Ķ�ά���ע��̩���ض�  ΢�Ź��ں�
                          <br />
                         <br />
                         <img src="ImagesSkin/TakeTopWXGZHQRCode.png" style="width: 150px; height: 150px;" />
                         <br />
                         <br />
-                        2、	点击公众号上的：管理平台，打开你的APP登录界面
+                        2��	������ں��ϵģ�����ƽ̨�������APP��¼����
                         <br />
                         <br />
 
-                        3、	在登录界面第一行输入你的公司简称（问系统管理员），第二行输入你的登录帐号，第三行输入密码，如下图：
+                        3��	�ڵ�¼�����һ��������Ĺ�˾��ƣ���ϵͳ����Ա�����ڶ���������ĵ�¼�ʺţ��������������룬����ͼ��
                         <br />
                        
                         <br />
@@ -55,11 +55,11 @@
                         <br />
 
 
-                        注：上面信息会保存在缓存里，第二次登录时会自动填充，不用重复输入！
+                        ע��������Ϣ�ᱣ���ڻ�����ڶ��ε�¼ʱ���Զ���䣬�����ظ����룡
                         <br />
                         <br />
 
-                        4、	点击  登录 按钮，系统会自动登录你的APP，并且以后在平台推送给你的信息都会显示在这个公众号里！
+                        4��	���  ��¼ ��ť��ϵͳ���Զ���¼���APP�������Ժ���ƽ̨���͸������Ϣ������ʾ��������ں��
                         <br />
                         <br />
                         <img src="ImagesSkin/TakeTopWXGZHForSAAS.jpg" />

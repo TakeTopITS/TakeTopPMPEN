@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -32,19 +32,19 @@ public partial class TTNewCustomFunctionDetail : System.Web.UI.Page
     {
         TV_Customers.Nodes.Clear();
 
-        //ç›®æ ‡å®¢æˆ·æ¨¡å—
+        //Ä¿±ê¿Í»§Ä£¿é
         TreeNode NodeTarget = new TreeNode();
-        NodeTarget.Text = "å®¢æˆ·å¼€å‘";
+        NodeTarget.Text = "¿Í»§¿ª·¢";
         NodeTarget.Value = "target|" + strCustomCode;
         TV_Customers.Nodes.Add(NodeTarget);
-        //å¼€å‘è®¡åˆ’æ¨¡å—
+        //¿ª·¢¼Æ»®Ä£¿é
         TreeNode NodePlan = new TreeNode();
-        NodePlan.Text = "å¼€å‘è®¡åˆ’";
+        NodePlan.Text = "¿ª·¢¼Æ»®";
         NodePlan.Value = "plan|" + strCustomCode;
         TV_Customers.Nodes.Add(NodePlan);
-        //äº§å“æŠ¥ä»·æ¨¡å—
+        //²úÆ·±¨¼ÛÄ£¿é
         TreeNode NodeProduct = new TreeNode();
-        NodeProduct.Text = "äº§å“æŠ¥ä»·";
+        NodeProduct.Text = "²úÆ·±¨¼Û";
         NodeProduct.Value = "product|" + strCustomCode;
 
         CustomModuleBLL customModuleBLL = new CustomModuleBLL();
@@ -67,14 +67,14 @@ public partial class TTNewCustomFunctionDetail : System.Web.UI.Page
             }
         }
         TV_Customers.Nodes.Add(NodeProduct);
-        //ä¸“é¢˜è®¨è®ºæ¨¡å—
+        //×¨ÌâÌÖÂÛÄ£¿é
         TreeNode NodeProject = new TreeNode();
-        NodeProject.Text = "ä¸“é¢˜è®¨è®º";
+        NodeProject.Text = "×¨ÌâÌÖÂÛ";
         NodeProject.Value = "project|" + strCustomCode;
         TV_Customers.Nodes.Add(NodeProject);
-        //é”€å”®è·Ÿè¸ªæ¨¡å—
+        //ÏúÊÛ¸ú×ÙÄ£¿é
         TreeNode NodeSale = new TreeNode();
-        NodeSale.Text = "é”€å”®è·Ÿè¸ª";
+        NodeSale.Text = "ÏúÊÛ¸ú×Ù";
         NodeSale.Value = "sale|" + strCustomCode;
         TV_Customers.Nodes.Add(NodeSale);
 
@@ -241,12 +241,12 @@ public partial class TTNewCustomFunctionDetail : System.Web.UI.Page
             }
             catch
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('æ–°å¢å‡ºé”™ï¼Œè¯·æ£€æŸ¥ï¼');ShowDiv();</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('ĞÂÔö³ö´í£¬Çë¼ì²é£¡');ShowDiv();</script>");
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('å®¢æˆ·ä»£ç å’Œåç§°ä¸èƒ½ä¸ºç©ºï¼Œè¯·æ£€æŸ¥ï¼');ShowDiv();</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('¿Í»§´úÂëºÍÃû³Æ²»ÄÜÎª¿Õ£¬Çë¼ì²é£¡');ShowDiv();</script>");
         }
     }
 
@@ -333,21 +333,21 @@ public partial class TTNewCustomFunctionDetail : System.Web.UI.Page
 
                     LoadCustomTree(strCustomerCode);
 
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('ä¿å­˜æˆåŠŸï¼');ShowDiv();</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('±£´æ³É¹¦£¡');ShowDiv();</script>");
                 }
                 catch
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('ä¿®æ”¹å‡ºé”™ï¼Œè¯·æ£€æŸ¥ï¼');ShowDiv();</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('ĞŞ¸Ä³ö´í£¬Çë¼ì²é£¡');ShowDiv();</script>");
                 }
             }
             else
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('ä¸èƒ½ä¿®æ”¹å®¢æˆ·ä»£ç ï¼Œåªå¯ä»¥ä¿®æ”¹å…¶å®ƒä¿¡æ¯ï¼');ShowDiv();</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('²»ÄÜĞŞ¸Ä¿Í»§´úÂë£¬Ö»¿ÉÒÔĞŞ¸ÄÆäËüĞÅÏ¢£¡');ShowDiv();</script>");
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('ä¾›åº”å•†ä»£ç å’Œåç§°ä¸èƒ½ä¸ºç©ºï¼Œè¯·æ£€æŸ¥ï¼');ShowDiv();</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('¹©Ó¦ÉÌ´úÂëºÍÃû³Æ²»ÄÜÎª¿Õ£¬Çë¼ì²é£¡');ShowDiv();</script>");
         }
     }
 
@@ -400,7 +400,7 @@ public partial class TTNewCustomFunctionDetail : System.Web.UI.Page
                 else
                 {
                     mainFrame.Attributes.Add("src", "");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('æœªè®¾å®šå®¢æˆ·å¼€å‘çš„æ¨¡ç»„ï¼è¯·å…ˆè®¾å®šæ¨¡ç»„');ShowDiv();</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('Î´Éè¶¨¿Í»§¿ª·¢µÄÄ£×é£¡ÇëÏÈÉè¶¨Ä£×é');ShowDiv();</script>");
                 }
             }
             else if (arrSelectNodeValue[0] == "plan")
@@ -438,7 +438,7 @@ public partial class TTNewCustomFunctionDetail : System.Web.UI.Page
                 else
                 {
                     mainFrame.Attributes.Add("src", "");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('æœªè®¾å®šå®¢æˆ·å¼€å‘çš„æ¨¡ç»„ï¼è¯·å…ˆè®¾å®šæ¨¡ç»„');ShowDiv();</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('Î´Éè¶¨¿Í»§¿ª·¢µÄÄ£×é£¡ÇëÏÈÉè¶¨Ä£×é');ShowDiv();</script>");
                 }
             }
             else if (arrSelectNodeValue[0] == "project")
@@ -476,7 +476,7 @@ public partial class TTNewCustomFunctionDetail : System.Web.UI.Page
                 else
                 {
                     mainFrame.Attributes.Add("src", "");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('æœªè®¾å®šå®¢æˆ·å¼€å‘çš„æ¨¡ç»„ï¼è¯·å…ˆè®¾å®šæ¨¡ç»„');ShowDiv();</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('Î´Éè¶¨¿Í»§¿ª·¢µÄÄ£×é£¡ÇëÏÈÉè¶¨Ä£×é');ShowDiv();</script>");
                 }
             }
             else if (arrSelectNodeValue[0] == "child")

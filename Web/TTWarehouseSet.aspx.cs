@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -24,7 +24,7 @@ public partial class TTWarehouseSet : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ä»“åº“è®¾ç½®", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "²Ö¿âÉèÖÃ", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -275,7 +275,7 @@ public partial class TTWarehouseSet : System.Web.UI.Page
 
         if (strWHPositionName == "" & strWHName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('è­¦å‘Šï¼Œä»“ä½åç§°å’Œå½’å±ä»“åº“éƒ½ä¸èƒ½ä¸ºç©ºï¼Œè¯·æ£€æŸ¥ï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¾¯¸æ£¬²ÖÎ»Ãû³ÆºÍ¹éÊô²Ö¿â¶¼²»ÄÜÎª¿Õ£¬Çë¼ì²é£¡')", true);
             return;
         }
 
@@ -309,7 +309,7 @@ public partial class TTWarehouseSet : System.Web.UI.Page
 
         if (strWHPositionName == "" & strWHName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('è­¦å‘Šï¼Œä»“ä½åç§°å’Œå½’å±ä»“åº“éƒ½ä¸èƒ½ä¸ºç©ºï¼Œè¯·æ£€æŸ¥ï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¾¯¸æ£¬²ÖÎ»Ãû³ÆºÍ¹éÊô²Ö¿â¶¼²»ÄÜÎª¿Õ£¬Çë¼ì²é£¡')", true);
             return;
         }
 
@@ -341,7 +341,7 @@ public partial class TTWarehouseSet : System.Web.UI.Page
 
         if (strWHPositionName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('è­¦å‘Šï¼Œä»“ä½åç§°ä¸èƒ½ä¸ºç©ºï¼Œè¯·æ£€æŸ¥ï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¾¯¸æ£¬²ÖÎ»Ãû³Æ²»ÄÜÎª¿Õ£¬Çë¼ì²é£¡')", true);
             return;
         }
 
@@ -383,7 +383,7 @@ public partial class TTWarehouseSet : System.Web.UI.Page
     }
 
     /// <summary>
-    /// åˆ¤æ–­è¯»è€…ç±»å‹æ˜¯å¦å­˜åœ¨  å­˜åœ¨è¿”å›trueï¼›ä¸å­˜åœ¨åˆ™è¿”å›false
+    /// ÅĞ¶Ï¶ÁÕßÀàĞÍÊÇ·ñ´æÔÚ  ´æÔÚ·µ»Øtrue£»²»´æÔÚÔò·µ»Øfalse
     /// </summary>
     protected bool IsBookReaderType(string strtypename)
     {
@@ -400,7 +400,7 @@ public partial class TTWarehouseSet : System.Web.UI.Page
         return flag;
     }
 
-    //åˆ¤æ–­è¾“å…¥çš„å­—ç¬¦æ˜¯å¦æ˜¯æ•°å­—
+    //ÅĞ¶ÏÊäÈëµÄ×Ö·ûÊÇ·ñÊÇÊı×Ö
     private bool IsNumeric(string str)
     {
         System.Text.RegularExpressions.Regex reg1

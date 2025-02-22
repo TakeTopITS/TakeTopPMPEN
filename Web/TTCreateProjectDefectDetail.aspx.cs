@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
 using System.Collections;
@@ -26,7 +26,7 @@ public partial class TTCreateProjectDefectDetail : System.Web.UI.Page
         strUserName = Session["UserName"].ToString();
         LB_UserName.Text = strUserName;
 
-        //this.Title = "å»ºç«‹å’Œåˆ†æ´¾é¡¹ç›®éœ€æ±‚";
+        //this.Title = "½¨Á¢ºÍ·ÖÅÉÏîÄ¿ĞèÇó";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
@@ -153,13 +153,13 @@ public partial class TTCreateProjectDefectDetail : System.Web.UI.Page
                 defectment.MakeDate = dtMakeDate;
                 defectment.ApplicantCode = strApplicantCode;
                 defectment.ApplicantName = ShareClass.GetUserName(strApplicantCode);
-                defectment.Status = "å…³é—­";
+                defectment.Status = "Closed";
 
                 try
                 {
                     defectmentBLL.UpdateDefectment(defectment, int.Parse(strDefectID));
 
-                    LB_Status.Text = "å…³é—­";
+                    LB_Status.Text = "Closed";
 
                     ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXGBCG + "')", true);
                 }
@@ -212,13 +212,13 @@ public partial class TTCreateProjectDefectDetail : System.Web.UI.Page
             defectment.MakeDate = dtMakeDate;
             defectment.ApplicantCode = strApplicantCode;
             defectment.ApplicantName = ShareClass.GetUserName(strApplicantCode);
-            defectment.Status = "å¤„ç†ä¸­";
+            defectment.Status = "InProgress";
 
             try
             {
                 defectmentBLL.UpdateDefectment(defectment, int.Parse(strDefectID));
 
-                LB_Status.Text = "å¤„ç†ä¸­";
+                LB_Status.Text = "InProgress";
 
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXJHCG + "')", true);
             }
@@ -281,12 +281,12 @@ public partial class TTCreateProjectDefectDetail : System.Web.UI.Page
         BT_Open.Enabled = true;
         BT_Assign.Enabled = true;
 
-        if (strStatus == "å…³é—­")
+        if (strStatus == "Closed")
         {
             BT_Open.Enabled = true;
         }
 
-        TB_Message.Text = ShareClass.GetUserName(strUserCode) + " ç»™ä½ åˆ†æ´¾äº†éœ€æ±‚ï¼š" + strDefectID + "  " + strDefectName + "ï¼Œè¯·åŠæ—¶å—ç†ï¼";
+        TB_Message.Text = ShareClass.GetUserName(strUserCode) + " ¸øÄã·ÖÅÉÁËĞèÇó£º" + strDefectID + "  " + strDefectName + "£¬Çë¼°Ê±ÊÜÀí£¡";
     }
 
     protected void TreeView1_SelectedNodeChanged(object sender, EventArgs e)
@@ -336,7 +336,7 @@ public partial class TTCreateProjectDefectDetail : System.Web.UI.Page
 
         if (strDefectID != "")
         {
-            strHQL = "from Approve as approve where approve.Type = 'éœ€æ±‚' and approve.RelatedID = " + strDefectID;
+            strHQL = "from Approve as approve where approve.Type = 'Requirement' and approve.RelatedID = " + strDefectID;
             ApproveBLL approveBLL = new ApproveBLL();
             lst = approveBLL.GetAllApproves(strHQL);
 
@@ -364,7 +364,7 @@ public partial class TTCreateProjectDefectDetail : System.Web.UI.Page
                     TB_ReceiverCode.Text = "";
                     DLC_DefectFinishedDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
                     TB_AcceptStandard.Text = "";
-                    LB_Status.Text = "è®¡åˆ’";
+                    LB_Status.Text = "Plan";
                 }
                 catch
                 {
@@ -434,15 +434,15 @@ public partial class TTCreateProjectDefectDetail : System.Web.UI.Page
         defectAssignRecord.PriorID = intPriorID;
         defectAssignRecord.RouteNumber = GetRouteNumber(intDefectID.ToString());
         defectAssignRecord.MakeDate = dtMakeDate;
-        defectAssignRecord.Status = "å¾…å¤„ç†";
+        defectAssignRecord.Status = "ToHandle";
         defectAssignRecord.MoveTime = DateTime.Now;
 
         try
         {
             defectAssignRecordBLL.AddDefectAssignRecord(defectAssignRecord);
-            UpdateDefectStatus(intDefectID.ToString(), "å¤„ç†ä¸­");
+            UpdateDefectStatus(intDefectID.ToString(), "InProgress");
 
-            TB_Message.Text = ShareClass.GetUserName(strUserCode) + " åˆ†æ´¾äº†éœ€æ±‚ï¼š" + intDefectID.ToString() + " " + strDefectName + " ç»™ä½ ï¼Œè¯·åŠæ—¶å—ç†ï¼";
+            TB_Message.Text = ShareClass.GetUserName(strUserCode) + " ·ÖÅÉÁËĞèÇó£º" + intDefectID.ToString() + " " + strDefectName + " ¸øÄã£¬Çë¼°Ê±ÊÜÀí£¡";
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFPCG + "')", true);
         }
@@ -465,7 +465,7 @@ public partial class TTCreateProjectDefectDetail : System.Web.UI.Page
 
         if (CB_SendMsg.Checked == true | CB_SendMail.Checked == true)
         {
-            strSubject = "éœ€æ±‚åˆ†æ´¾é€šçŸ¥";
+            strSubject = "ĞèÇó·ÖÅÉÍ¨Öª";
             strMsg = TB_Message.Text.Trim();
 
             if (CB_SendMsg.Checked == true)
@@ -490,7 +490,7 @@ public partial class TTCreateProjectDefectDetail : System.Web.UI.Page
 
         string strStatus = ShareClass.GetProjectStatus(strProjectID);
 
-        if (strStatus == "ç»“æ¡ˆ" || strStatus == "æŒ‚èµ·" || strStatus == "å–æ¶ˆ")
+        if (strStatus == "CaseClosed" || strStatus == "Suspended" || strStatus == "Cancel")
         {
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFJSBCXMYBJAGHX + "')", true);
         }
@@ -536,7 +536,7 @@ public partial class TTCreateProjectDefectDetail : System.Web.UI.Page
         DefectmentBLL defectmentBLL = new DefectmentBLL();
         IList lst = defectmentBLL.GetAllDefectments(strHQL);
         Defectment defectment = (Defectment)lst[0];
-        defectment.Status = "å¤„ç†ä¸­";
+        defectment.Status = "InProgress";
 
         int intRouteNumber = defectment.RouteNumber;
         defectment.RouteNumber = intRouteNumber + 1;

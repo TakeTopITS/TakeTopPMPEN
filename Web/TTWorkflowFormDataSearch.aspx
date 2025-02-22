@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkflowFormDataSearch.aspx.cs" Inherits="TTWorkflowFormDataSearch" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkflowFormDataSearch.aspx.cs" Inherits="TTWorkflowFormDataSearch" %>
 
 <!DOCTYPE html>
 
@@ -55,44 +55,44 @@
                                                 <table>
                                                     <tr>
                                                         <td>
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,GongZuoLiuBianHao%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,GongZuoLiuBianHao%>"></asp:Label>£º</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_WFID" runat="server" Width="80px"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,GongZuoLiuMingCheng%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,GongZuoLiuMingCheng%>"></asp:Label>£º</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_WLName" runat="server" Width="80px"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MoBanMingChen%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MoBanMingChen%>"></asp:Label>£º</td>
                                                         <td>
                                                             <asp:DropDownList ID="DL_TempName" Width="120px" runat="server">
                                                                 
                                                             </asp:DropDownList>
                                                         </td>
                                                         <td>
-                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JieDianMingCheng%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,JieDianMingCheng%>"></asp:Label>£º</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_FieldName" runat="server" Width="120px"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JieDianLuJing%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JieDianLuJing%>"></asp:Label>£º</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_FieldXPath" runat="server" Width="120px"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,FuJieDianLuJing%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,FuJieDianLuJing%>"></asp:Label>£º</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_ParentXPath" runat="server" Width="120px"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,JieDianZhi%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,JieDianZhi%>"></asp:Label>£º</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_FieldValue" runat="server" Width="120px"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,JieDianShuXing%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,JieDianShuXing%>"></asp:Label>£º</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_FieldAttributes" runat="server" Width="120px"></asp:TextBox>
                                                         </td>
@@ -112,7 +112,7 @@
                                 <table style="width: 100%" cellpadding="0" cellspacing="0" align="center">
                                     <tr>
                                         <td style="width: 100%; padding: 5px 5px 5px 10px; text-align: left;" valign="top">
-                                            <b><asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,ChaXunJeGuo%>"></asp:Label>ï¼š</b>
+                                            <b><asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,ChaXunJeGuo%>"></asp:Label>£º</b>
                                             <asp:Label ID="LB_ResultCount" runat="server"></asp:Label>
                                                         
                                         </td>

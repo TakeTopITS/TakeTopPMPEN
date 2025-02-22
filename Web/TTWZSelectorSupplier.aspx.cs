@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
@@ -76,8 +76,8 @@ public partial class TTWZSelectorSupplier : System.Web.UI.Page
                         left join T_ProjectMember c on s.ContractWhose = c.UserCode
                         left join T_ProjectMember l on s.CompetentLeadership = l.UserCode
                         where 
-                        s.Grade <> 'Á¶ÅÁî®'
-                        and s.Progress in ('ÁôªËÆ∞','ÊâπÂáÜ', 'Â§çÂÆ°')
+                        s.Grade <> 'Disabled'
+                        and s.Progress in ('µ«º«','Approved', '∏¥…Û')
                         and s.ReviewDate::timestamp  > now()";
 
         //if (strSupplierCode != null & strSupplierCode != "")
@@ -97,6 +97,6 @@ public partial class TTWZSelectorSupplier : System.Web.UI.Page
         DG_List.DataSource = dtSupplier;
         DG_List.DataBind();
 
-        LB_TotalNumber.Text = "ÂÖ±Ôºö" + dtSupplier.Rows.Count.ToString() + " Êù°";
+        LB_TotalNumber.Text = "π≤£∫" + dtSupplier.Rows.Count.ToString() + " Ãı";
     }
 }

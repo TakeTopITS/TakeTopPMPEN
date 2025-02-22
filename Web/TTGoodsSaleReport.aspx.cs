@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -28,14 +28,14 @@ public partial class TTGoodsSaleReport : System.Web.UI.Page
         string strUserName;
         string strUserCode = Session["UserCode"].ToString();
 
-        //this.Title = "ç‰©æ–™é”€å”®æŠ¥è¡¨";
+        //this.Title = "ÎïÁÏÏúÊÛ±¨±í";
 
         LB_UserCode.Text = strUserCode;
         strUserName = ShareClass.GetUserName(strUserCode);
         LB_UserName.Text = strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ç‰©æ–™é”€å”®æŠ¥è¡¨", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ÎïÁÏÏúÊÛ±¨±í", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -123,7 +123,7 @@ public partial class TTGoodsSaleReport : System.Web.UI.Page
         LB_Sql.Text = strHQL;
     }
 
-    //å–å¾—åŒä¸€é”€å”®æ˜Žç»†çš„é€€è´§é‡
+    //È¡µÃÍ¬Ò»ÏúÊÛÃ÷Ï¸µÄÍË»õÁ¿
     protected decimal getSaleOrderReturnNumber(string strSORecordID)
     {
         string strHQL;
@@ -148,7 +148,7 @@ public partial class TTGoodsSaleReport : System.Web.UI.Page
         }
     }
 
-    //å–å¾—åŒä¸€é”€å”®æ˜Žç»†çš„é€€è´§é‡
+    //È¡µÃÍ¬Ò»ÏúÊÛÃ÷Ï¸µÄÍË»õÁ¿
     protected decimal getSaleOrderRealReceiveNumber(string strSORecordID)
     {
         string strHQL;
@@ -204,32 +204,32 @@ public partial class TTGoodsSaleReport : System.Web.UI.Page
 
         strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthorityAsset(strUserCode);
 
-        //,A.NoticeOutNumber 'é€šçŸ¥å‡ºè´§é‡'
-        //,A.CheckOutNumber 'å‡ºåº“é‡'
-        //,A.DeliveryNumber 'é€åŒ–é‡'
-        //,A.RealReceiveNumber 'æ”¶è´§é‡'
+        //,A.NoticeOutNumber 'Í¨Öª³ö»õÁ¿'
+        //,A.CheckOutNumber '³ö¿âÁ¿'
+        //,A.DeliveryNumber 'ËÍ»¯Á¿'
+        //,A.RealReceiveNumber 'ÊÕ»õÁ¿'
 
-        strHQL = @"Select  B.SOName 'åç§°' 
-            ,B.SalesName 'ä¸šåŠ¡å‘˜'
-            ,B.CustomerName 'å®¢æˆ·'
-            ,B.SaleTime 'æ—¶é—´'
-            ,A.ID 'ç¼–å·'
-            ,A.GoodsCode 'ä»£ç '
-            ,A.GoodsName 'å•†å“åç§°'
-            ,A.Number 'æ•°é‡'
-            ,(Select COALESCE(Sum(RealReceiveNumber),0) From T_GoodsDeliveryOrderDetail Where SourceType = 'GoodsSORecord' and SourceID = A.ID) å®žæ”¶é‡
-            ,A.ModelNumber 'åž‹å·'
-            ,A.Spec 'è§„æ ¼'
-            ,A.Unit 'å•ä½'
-            ,A.PackNumber 'ä»¶æ•°'
-            ,A.Price 'å•ä»·'
-            ,A.Amount 'é‡‘é¢'
-            ,B.CurrencyType 'å¸åˆ«'
-            ,B.CarCode 'è½¦å·'
-            ,B.Driver 'å¸æœº'
-            ,B.OpenInvoiceTime 'å¼€ç¥¨æ—¶é—´'
-            ,B.InvoiceCode 'ç¥¨å·'
-            ,A.SaleReason 'å¤‡æ³¨'
+        strHQL = @"Select  B.SOName 'Ãû³Æ' 
+            ,B.SalesName 'ÒµÎñÔ±'
+            ,B.CustomerName 'Customer'
+            ,B.SaleTime 'Ê±¼ä'
+            ,A.ID '±àºÅ'
+            ,A.GoodsCode '´úÂë'
+            ,A.GoodsName 'ÉÌÆ·Ãû³Æ'
+            ,A.Number 'ÊýÁ¿'
+            ,(Select COALESCE(Sum(RealReceiveNumber),0) From T_GoodsDeliveryOrderDetail Where SourceType = 'GoodsSORecord' and SourceID = A.ID) ÊµÊÕÁ¿
+            ,A.ModelNumber 'ÐÍºÅ'
+            ,A.Spec '¹æ¸ñ'
+            ,A.Unit 'µ¥Î»'
+            ,A.PackNumber '¼þÊý'
+            ,A.Price 'µ¥¼Û'
+            ,A.Amount '½ð¶î'
+            ,B.CurrencyType '±Ò±ð'
+            ,B.CarCode '³µºÅ'
+            ,B.Driver 'Ë¾»ú'
+            ,B.OpenInvoiceTime '¿ªÆ±Ê±¼ä'
+            ,B.InvoiceCode 'Æ±ºÅ'
+            ,A.SaleReason '±¸×¢'
             from T_GoodsSaleRecord A,T_GoodsSaleOrder B where A.SOID = B.SOID";
 
         strHQL += " and to_char(B.SaleTime,'yyyymmdd')  >= " + "'" + strStartTime + "'" + "  and to_char(B.SaleTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
@@ -245,9 +245,9 @@ public partial class TTGoodsSaleReport : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_GoodsSaleRecord");
         DataTable dtSaleOrder = ds.Tables[0];
 
-        Export3Excel(dtSaleOrder, "ç‰©æ–™é”€å”®æŠ¥è¡¨.xls");
+        Export3Excel(dtSaleOrder, "ÎïÁÏÏúÊÛ±¨±í.xls");
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¯¼å‡ºæˆåŠŸï¼');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µ¼³ö³É¹¦£¡');", true);
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

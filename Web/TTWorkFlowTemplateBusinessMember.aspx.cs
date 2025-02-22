@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -18,7 +18,7 @@ using ProjectMgt.BLL;
 
 public partial class TTWorkFlowTemplateBusinessMember : System.Web.UI.Page
 {
-    //鍔犱笂鍏宠仈RelatedID,RelatedType,RelatedCode TODO:CAOJIAN(鏇瑰仴)
+    //加上关联RelatedID,RelatedType,RelatedCode TODO:CAOJIAN(曹健)
     string strRelatedType, strRelatedID, strRelatedCode;
     string strUserCode, strUserName;
     string strWFIdentifyString, strWFTemName;

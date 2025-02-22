@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,7 +15,7 @@ public partial class TTWZSelectorDepartment : System.Web.UI.Page
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (!IsPostBack)
         {
-            //è¿™ä¸ªæ˜¯æ‰€æœ‰éƒ¨é—¨
+            //Õâ¸öÊÇËùÓÐ²¿ÃÅ
             TakeTopCore.CoreShareClass.InitialAllDepartmentTree( Resources.lang.ZZJGT,TreeView2);
 
         }

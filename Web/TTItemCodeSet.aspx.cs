@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
@@ -21,7 +21,7 @@ public partial class TTItemCodeSet : System.Web.UI.Page
 
         //ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
 
-        //bool blVisible2 = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ç‰©æ–™å®šä¹‰", strUserCode);
+        //bool blVisible2 = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ÎïÁÏ¶¨Òå", strUserCode);
 
         //if ( blVisible2 == false )
         //{
@@ -300,12 +300,12 @@ public partial class TTItemCodeSet : System.Web.UI.Page
 
 
     /// <summary>
-    /// ç»‘å®šä¼šè®¡ç§‘ç›®æ ‘å½¢ç»“æž„
+    /// °ó¶¨»á¼Æ¿ÆÄ¿Ê÷ÐÎ½á¹¹
     /// </summary>
-    /// <param name="tv">æ ‘å½¢æŽ§ä»¶</param>
+    /// <param name="tv">Ê÷ÐÎ¿Ø¼þ</param>
     protected void GoodsTypeTree(TreeView tv)
     {
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         tv.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
@@ -338,10 +338,10 @@ public partial class TTItemCodeSet : System.Web.UI.Page
     }
 
     /// <summary>
-    /// ç±»åž‹æ ‘å½¢ç»“æž„å¾ªçŽ¯
+    /// ÀàÐÍÊ÷ÐÎ½á¹¹Ñ­»·
     /// </summary>
-    /// <param name="strParentType">ä¸Šçº§ç±»åž‹</param>
-    /// <param name="node">æ ‘å½¢èŠ‚ç‚¹</param>
+    /// <param name="strParentType">ÉÏ¼¶ÀàÐÍ</param>
+    /// <param name="node">Ê÷ÐÎ½Úµã</param>
     protected void GetGoodsTypeTreeView(string strParentType, TreeNode node)
     {
         string strHQL = "From GoodsType as goodsType Where goodsType.ParentType='" + strParentType + "' Order By goodsType.SortNumber ";

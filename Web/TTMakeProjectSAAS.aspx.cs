@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Collections;
 using System.Data;
 using System.Drawing;
@@ -22,7 +22,7 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
         strLangCode = Session["LangCode"].ToString();
         strIsMobileDevice = Session["IsMobileDevice"].ToString();
 
-        //CKEditorÂàùÂßãÂåñ
+        //CKEditor≥ı ºªØ
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_AcceptStandard);
@@ -63,7 +63,7 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
             LB_PMCode.Text = strUserCode;
             LB_PMName.Text = strUserName;
 
-            //Â¶ÇÊûúËá™Âä®‰∫ßÁîüÂÆ¢Êà∑ÁºñÁ†ÅÔºåÁ¶ÅÁî®ÂÆ¢Êà∑‰ª£Á†ÅËæìÂÖ•Ê°Ü 
+            //»Áπ˚◊‘∂Ø≤˙…˙øÕªß±‡¬Î£¨Ω˚”√øÕªß¥˙¬Î ‰»ÎøÚ 
             if (ShareClass.GetCodeRuleStatusByType("ProjectCode") == "YES")
             {
                 TB_ProjectCode.Enabled = false;
@@ -141,7 +141,7 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
         if (strProjectID == "")
         {
 
-            //Â¶ÇÊûúËá™Âä®‰∫ßÁîüÂÆ¢Êà∑ÁºñÁ†ÅÔºåÁ¶ÅÁî®ÂÆ¢Êà∑‰ª£Á†ÅËæìÂÖ•Ê°Ü 
+            //»Áπ˚◊‘∂Ø≤˙…˙øÕªß±‡¬Î£¨Ω˚”√øÕªß¥˙¬Î ‰»ÎøÚ 
             if (ShareClass.GetCodeRuleStatusByType("ProjectCode") == "YES")
             {
                 TB_ProjectCode.Enabled = false;
@@ -223,7 +223,7 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
             project.CustomerPMName = strCustomerPMName;
             project.ProjectName = strProject;
             project.ProjectType = strProjectType;
-            project.ProjectClass = "Â∏∏ËßÑÈ°πÁõÆ";
+            project.ProjectClass = "≥£πÊœÓƒø";
             project.ProjectAmount = NB_ProjectAmount.Amount;
             project.Budget = decimal.Parse(strBudget);
             project.ManHour = deManHour;
@@ -235,7 +235,7 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
             project.EndDate = DateTime.Parse(strEndDate);
             project.MakeDate = DateTime.Now;
             project.Status = strStatus;
-            project.StatusValue = "ËøõË°å‰∏≠";
+            project.StatusValue = "InProgress";
             project.ParentID = int.Parse(strParentID);
             project.Priority = strPriority;
 
@@ -249,7 +249,7 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
                 strProjectID = ShareClass.GetMyCreatedMaxProjectID(strUserCode);
                 LB_ProjectID.Text = strProjectID;
 
-                //Êõ¥ÊîπÈ°πÁõÆÂÖ∂ÂÆÉÂ≠óÊÆµÂÄº 
+                //∏¸∏ƒœÓƒø∆‰À¸◊÷∂Œ÷µ 
                 UpdateProjectOtherFieldValue(strProjectID);
              
                 string strNewProjectCode = ShareClass.GetCodeByRule("ProjectCode", strProjectType, strProjectID);
@@ -272,13 +272,13 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
                 HL_ProjectCostManageEdit.Enabled = true;
                 HL_ProjectCostManageEdit.NavigateUrl = "TTProjectCostManageEdit.aspx?ProjectID=" + strProjectID;
 
-                TB_Message.Text = strUserName + " Áªô‰Ω†Âª∫Á´ã‰∫ÜÈ°πÁõÆ Ôºö" + strProjectID + " " + strProject + "ÔºåËØ∑ÂèäÊó∂Êî∂ÁêÜÔºÅ";
+                TB_Message.Text = strUserName + " ∏¯ƒ„Ω®¡¢¡ÀœÓƒø £∫" + strProjectID + " " + strProject + "£¨«Îº∞ ± ’¿Ì£°";
 
                 LoadProject(strUserCode);
 
-                //‰æùÈ°πÁõÆÁ±ªÂûãÊ∑ªÂä†ÂÖ≥ËÅîÁöÑÂ∑•‰ΩúÊµÅÊ®°ÊùøÂíåÊñáÊ°£Ê®°Êùø
+                //“¿œÓƒø¿‡–ÕÃÌº”πÿ¡™µƒπ§◊˜¡˜ƒ£∞Â∫ÕŒƒµµƒ£∞Â
                 ShareClass.AddRelatedWorkFlowTemplateByProjectType(strProjectType, strProjectID, "Project", "Project", "ProjectType");
-                //ShareClass.AddRelatedDocumentTemplateByProjectType(strProjectType, strProjectID, "È°πÁõÆ", "ProjectType");
+                //ShareClass.AddRelatedDocumentTemplateByProjectType(strProjectType, strProjectID, "Project", "ProjectType");
 
                 ShareClass.InitialPrjectTreeByAuthority(TreeView1, strUserCode);
 
@@ -421,7 +421,7 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
                 {
                     projectBLL.UpdateProject(project, int.Parse(strProjectID));
 
-                    //Êõ¥ÊîπÈ°πÁõÆÂÖ∂ÂÆÉÂ≠óÊÆµÂÄº 
+                    //∏¸∏ƒœÓƒø∆‰À¸◊÷∂Œ÷µ 
                     UpdateProjectOtherFieldValue(strProjectID);
 
                     AddStatusChangeRecord(strProjectID, strOldStatus, strNewStatus, strOldStatusValue, strNewStatusValue, strUserCode);
@@ -429,13 +429,13 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
 
                     LoadProject(strUserCode);
 
-                    //‰æùÈ°πÁõÆÁ±ªÂûãÊ∑ªÂä†ÂÖ≥ËÅîÁöÑÂ∑•‰ΩúÊµÅÊ®°ÊùøÂíåÊñáÊ°£Ê®°Êùø
+                    //“¿œÓƒø¿‡–ÕÃÌº”πÿ¡™µƒπ§◊˜¡˜ƒ£∞Â∫ÕŒƒµµƒ£∞Â
                     ShareClass.AddRelatedWorkFlowTemplateByProjectType(strProjectType, strProjectID, "Project", "Project", "ProjectType");
-                    //ShareClass.AddRelatedDocumentTemplateByProjectType(strProjectType, strProjectID, "È°πÁõÆ", "ProjectType");
+                    //ShareClass.AddRelatedDocumentTemplateByProjectType(strProjectType, strProjectID, "Project", "ProjectType");
 
                     ShareClass.InitialPrjectTreeByAuthority(TreeView1, strUserCode);
 
-                    TB_Message.Text = strUserName + " Êõ¥Êñ∞‰∫ÜÈ°πÁõÆÔºö " + strProjectID + " " + strProject + "ÁöÑÂÜÖÂÆπ,ËØ∑ÂÖ≥Ê≥®ÔºåÁâπÊ≠§ÈÄöÁü•ÔºÅ";
+                    TB_Message.Text = strUserName + " ∏¸–¬¡ÀœÓƒø£∫ " + strProjectID + " " + strProject + "µƒƒ⁄»›,«Îπÿ◊¢£¨Ãÿ¥ÀÕ®÷™£°";
 
                     LB_Sql.Text = strHQL;
 
@@ -451,7 +451,7 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
         }
     }
 
-    //Êõ¥ÊîπÈ°πÁõÆÂÖ∂ÂÆÉÂ≠óÊÆµÂÄº 
+    //∏¸∏ƒœÓƒø∆‰À¸◊÷∂Œ÷µ 
     public void UpdateProjectOtherFieldValue(string strProjectID)
     {
         string strHQL;
@@ -497,7 +497,7 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
         ShareClass.RunSqlCommand(strHQL);
     }
 
-    //ËÆæÁΩÆÈ°πÁõÆÂÖ∂ÂÆÉÂ±ûÊÄßÁöÑÂÄº 
+    //…Ë÷√œÓƒø∆‰À¸ Ù–‘µƒ÷µ 
     public void SetProjectOtherFieldValue(string strProjectID)
     {
         string strHQL;
@@ -550,7 +550,7 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
 
         strMsg = TB_Message.Text.Trim();
 
-        strSubject = "È°πÁõÆÈÄöÁü•";
+        strSubject = "œÓƒøÕ®÷™";
 
         Msg msg = new Msg();
 
@@ -695,7 +695,7 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
                     HL_ProjectTask.Enabled = true;
                     HL_ProjectTask.NavigateUrl = "TTProjectPrimaveraTask.aspx?ProjectID=" + strProjectID;//end
 
-                    //È°πÁõÆÊàêÊú¨ÊéßÂà∂-È¢ÑÁÆóÔºå‰ªÖ‰ªÖÂàõÂª∫‰∫∫ÂèØ‰ª•ÂØπÈ¢ÑÁÆóËøõË°åÁÆ°ÁêÜ
+                    //œÓƒø≥…±æøÿ÷∆-‘§À„£¨ΩˆΩˆ¥¥Ω®»Àø…“‘∂‘‘§À„Ω¯––π‹¿Ì
                     if (project.UserCode.Trim() == strProjectUserCode.Trim())
                     {
                         HL_ProjectCostManageEdit.Enabled = true;
@@ -706,11 +706,11 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
                         HL_ProjectCostManageEdit.Enabled = false;
                     }
 
-                    //‰ºöÂá∫ÈîôÔºåËøô‰∏™ÈîôËØØÊòØÈò≤Ê≠¢‰øÆÊîπÊÄªÈ°πÁõÆ
+                    //ª·≥ˆ¥Ì£¨’‚∏ˆ¥ÌŒÛ «∑¿÷π–ﬁ∏ƒ◊‹œÓƒø
                     LB_ParentProjectID.Text = project.ParentID.ToString();
                     TB_ParentProject.Text = ShareClass.GetProjectName(project.ParentID.ToString());
 
-                    //ËÆæÁΩÆÈ°πÁõÆÂÖ∂ÂÆÉÂ±ûÊÄßÁöÑÂÄº 
+                    //…Ë÷√œÓƒø∆‰À¸ Ù–‘µƒ÷µ 
                     SetProjectOtherFieldValue(strProjectID);
 
 
@@ -718,7 +718,7 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
                     CB_Mail.Enabled = true;
                     BT_Send.Enabled = true;
 
-                    TB_Message.Text = strUserName + " Áªô‰Ω†Âª∫Á´ã‰∫ÜÈ°πÁõÆ Ôºö" + strProjectID + " " + strProjectName + "ÔºåËØ∑ÂèäÊó∂Êî∂ÁêÜÔºÅ";
+                    TB_Message.Text = strUserName + " ∏¯ƒ„Ω®¡¢¡ÀœÓƒø £∫" + strProjectID + " " + strProjectName + "£¨«Îº∞ ± ’¿Ì£°";
 
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
                 }
@@ -744,13 +744,13 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
                 strHQL = "from Project as project where project.ProjectID = " + strProjectID;
                 lst = projectBLL.GetAllProjects(strHQL);
                 Project project = (Project)lst[0];
-                project.Status = "Âà†Èô§";
+                project.Status = "Deleted";
 
                 strProjectName = project.ProjectName.Trim();
 
                 try
                 {
-                    //‰ºöÂá∫ÈîôÔºåËøô‰∏™ÈîôËØØÊòØÈò≤Ê≠¢‰øÆÊîπÊÄªÈ°πÁõÆ
+                    //ª·≥ˆ¥Ì£¨’‚∏ˆ¥ÌŒÛ «∑¿÷π–ﬁ∏ƒ◊‹œÓƒø
                     LB_ParentProjectID.Text = project.ParentID.ToString();
                     TB_ParentProject.Text = ShareClass.GetProjectName(project.ParentID.ToString());
 
@@ -763,7 +763,7 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
                     HL_ProjectTask.Enabled = false;
                     HL_ProjectCostManageEdit.Enabled = false;
 
-                    TB_Message.Text = strUserName + " Âà†Èô§‰∫ÜÈ°πÁõÆÔºö " + strProjectID + " " + strProjectName + "ÁöÑÂÜÖÂÆπ,ËØ∑ÂÖ≥Ê≥®ÔºåÁâπÊ≠§ÈÄöÁü•ÔºÅ";
+                    TB_Message.Text = strUserName + " …æ≥˝¡ÀœÓƒø£∫ " + strProjectID + " " + strProjectName + "µƒƒ⁄»›,«Îπÿ◊¢£¨Ãÿ¥ÀÕ®÷™£°";
 
                     ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
                 }
@@ -844,11 +844,11 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
         {
             strReviewControl = GetProjectStatusReviewControl(strProjectType, strStatus);
 
-            if (strReviewControl == "ÊòØ")
+            if (strReviewControl == "YES")
             {
-                if (strStatusValues == "ÈÄöËøá")
+                if (strStatusValues == "Passed")
                 {
-                    strHQL = "from StatusRelatedWF as statusRelatedWF where statusRelatedWF.Status = " + "'" + strStatus + "'" + " and  statusRelatedWF.RelatedType = 'È°πÁõÆ' and statusRelatedWF.RelatedID = " + strProjectID + " Order by statusRelatedWF.ID DESC";
+                    strHQL = "from StatusRelatedWF as statusRelatedWF where statusRelatedWF.Status = " + "'" + strStatus + "'" + " and  statusRelatedWF.RelatedType = 'Project' and statusRelatedWF.RelatedID = " + strProjectID + " Order by statusRelatedWF.ID DESC";
                     StatusRelatedWFBLL statusRelatedWFBLL = new StatusRelatedWFBLL();
                     lst = statusRelatedWFBLL.GetAllStatusRelatedWFs(strHQL);
                     if (lst.Count > 0)
@@ -856,19 +856,19 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
                         StatusRelatedWF statusRelatedWF = (StatusRelatedWF)lst[0];
                         strWLID = statusRelatedWF.WLID.ToString();
 
-                        strHQL = "from WorkFlow as workFlow where workFlow.Status in ('ÈÄöËøá','ÁªìÊ°à') and workFlow.WLID = " + strWLID;
+                        strHQL = "from WorkFlow as workFlow where workFlow.Status in ('Passed','CaseClosed') and workFlow.WLID = " + strWLID;
                         WorkFlowBLL workFlowBLL = new WorkFlowBLL();
                         lst = workFlowBLL.GetAllWorkFlows(strHQL);
 
                         if (lst.Count == 0)
                         {
-                            DL_StatusValue.SelectedValue = "ËøõË°å‰∏≠";
+                            DL_StatusValue.SelectedValue = "InProgress";
                             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGCZTMYTJPSHPSMTGZTZBNGWTG + "')", true);
                         }
                     }
                     else
                     {
-                        DL_StatusValue.SelectedValue = "ËøõË°å‰∏≠";
+                        DL_StatusValue.SelectedValue = "InProgress";
                         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGCZTMYTJPSHPSMTGZTZBNGWTG + "')", true);
                     }
                 }
@@ -876,7 +876,7 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
         }
         else
         {
-            DL_StatusValue.SelectedValue = "ËøõË°å‰∏≠";
+            DL_StatusValue.SelectedValue = "InProgress";
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGCWKJLBNGBZTZXZXM + "')", true);
         }
 
@@ -914,13 +914,13 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
         }
     }
 
-    //Âü∫‰∫éÁõ¥Êé•ÊàêÂëòÂàóË°®Âà∞DropDownList
+    //ª˘”⁄÷±Ω”≥…‘±¡–±ÌµΩDropDownList
     public static void LoadPMByUserCodeForDropDownList(string strUserCode, DropDownList dropDownList)
     {
         string strHQL;
 
         strHQL = "Select UserCode,UserName From T_ProjectMember Where UserCode in (Select UnderCode From T_MemberLevel Where Usercode = " + "'" + strUserCode + "'" + ")";
-        strHQL += " And Status = 'Âú®ËÅå'";
+        strHQL += " And Status = 'Employed'";
         strHQL += " Order By SortNumber ASC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_MemberLevel");
 
@@ -934,7 +934,7 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
         IList lst;
  
         strHQL = "from Project as project where project.UserCode = " + "'" + strUserCode + "'";
-        strHQL += " and project.Status <> 'ÂΩíÊ°£' order by project.ProjectID DESC";
+        strHQL += " and project.Status <> 'Archived' order by project.ProjectID DESC";
 
         ProjectBLL projectBLL = new ProjectBLL();
 
@@ -952,7 +952,7 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Project as project where  project.UserCode = " + "'" + strUserCode + "'" + " and project.Status <> 'ÂΩíÊ°£' order by project.ProjectID DESC";
+        strHQL = "from Project as project where  project.UserCode = " + "'" + strUserCode + "'" + " and project.Status <> 'Archived' order by project.ProjectID DESC";
         ProjectBLL projectBLL = new ProjectBLL();
         lst = projectBLL.GetAllProjects(strHQL);
         DataGrid2.DataSource = lst;
@@ -993,7 +993,7 @@ public partial class TTMakeProjectSAAS : System.Web.UI.Page
         }
         else
         {
-            return "ËøõË°å‰∏≠";
+            return "InProgress";
         }
     }
 

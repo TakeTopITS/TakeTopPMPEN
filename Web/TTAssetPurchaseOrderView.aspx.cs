@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -29,7 +29,7 @@ public partial class TTAssetPurchaseOrderView : System.Web.UI.Page
         string strUserCode = Session["UserCode"].ToString();
         string strPOID = Request.QueryString["POID"].Trim();
 
-        //this.Title = "èµ„äº§é‡‡è´­å•";
+        //this.Title = "×Ê²ú²É¹ºµ¥";
 
 
         if (Page.IsPostBack != true)

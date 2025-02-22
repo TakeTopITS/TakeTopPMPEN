@@ -1,11 +1,11 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectPlanJoint.aspx.cs" Inherits="TTProjectPlanJoint" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectPlanJoint.aspx.cs" Inherits="TTProjectPlanJoint" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>é¡¹ç›®é¡¹ç›®å·¥ä½œè®¡åˆ’</title>
+    <title>ÏîÄ¿ÏîÄ¿¹¤×÷¼Æ»®</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
@@ -37,7 +37,7 @@
                                                     <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                 </td>
                                                 <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                    <asp:Label ID="Label1" runat="server" Text="è®¡åˆ’æ‹¼æŽ¥"></asp:Label>
+                                                    <asp:Label ID="Label1" runat="server" Text="¼Æ»®Æ´½Ó"></asp:Label>
                                                 </td>
                                                 <td width="5">
                                                     <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -79,13 +79,13 @@
                                                 </tr>
                                                 <tr>
                                                     <td colspan="2">
-                                                        <asp:Label ID="Label2" runat="server" Text="è¯·é€‰æ‹©è¦æ‹¼æŽ¥çš„èŠ‚ç‚¹"></asp:Label>
+                                                        <asp:Label ID="Label2" runat="server" Text="ÇëÑ¡ÔñÒªÆ´½ÓµÄ½Úµã"></asp:Label>
                                                     </td>
 
                                                 </tr>
                                             </table>
                                         </div>
-                                        <asp:TreeView ID="TreeView3" runat="server" Font-Bold="False" Font-Names="å®‹ä½“" Font-Size="10pt"
+                                        <asp:TreeView ID="TreeView3" runat="server" Font-Bold="False" Font-Names="ËÎÌå" Font-Size="10pt"
                                             NodeWrap="True" ShowLines="True" Width="400px">
                                             <RootNodeStyle CssClass="rootNode" />
                                             <NodeStyle CssClass="treeNode" />
@@ -100,7 +100,7 @@
                                                     <asp:Label ID="LB_ProjectID" runat="server"></asp:Label>
                                                     <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,DeJiHuaBanBen%>"></asp:Label>
 
-                                                    <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,XuanZeBanBen%>"></asp:Label>ï¼š
+                                                    <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,XuanZeBanBen%>"></asp:Label>£º
                                               
                                                     <asp:DropDownList ID="DL_VersionID" runat="server" AutoPostBack="True" DataTextField="VerID"
                                                         DataValueField="ID" Height="21px" OnSelectedIndexChanged="DL_Version_SelectedIndexChanged">
@@ -113,7 +113,7 @@
                                             </tr>
                                             <tr>
                                                 <td colspan="5" align="left">
-                                                    <asp:TreeView ID="TreeView1" runat="server" Font-Bold="False" Font-Names="å®‹ä½“" Font-Size="10pt"
+                                                    <asp:TreeView ID="TreeView1" runat="server" Font-Bold="False" Font-Names="ËÎÌå" Font-Size="10pt"
                                                         NodeWrap="True" ShowLines="True" Width="360px">
                                                         <RootNodeStyle CssClass="rootNode" />
                                                         <NodeStyle CssClass="treeNode" />

@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -32,7 +32,7 @@ public partial class TTAllExpenseClaimSummaryReport : System.Web.UI.Page
         strUserName = Session["UserName"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "鏌ョ湅鎵�鏈夎垂鐢ㄦ姤閿�", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "查看所有费用报销", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -117,7 +117,7 @@ public partial class TTAllExpenseClaimSummaryReport : System.Web.UI.Page
             LB_OperatorName.Text = "";
             LB_Status.Text = "";
 
-            LoadRelatedWL("璐圭敤鎶ラ攢", -1);
+            LoadRelatedWL("ExpenseReimbursement", -1);
             LoadRelatedExpenseClaimDetail("-1");
         }
 
@@ -156,7 +156,7 @@ public partial class TTAllExpenseClaimSummaryReport : System.Web.UI.Page
         LB_QueryScope.Text = Resources.lang.ZZZhiXingZhe + strUserCode + " " + strUserName;
         LB_Sql.Text = strHQL;
 
-        LoadRelatedWL("璐圭敤鎶ラ攢", -1);
+        LoadRelatedWL("ExpenseReimbursement", -1);
         LoadRelatedExpenseClaimDetail("-1");
     }
 
@@ -177,7 +177,7 @@ public partial class TTAllExpenseClaimSummaryReport : System.Web.UI.Page
             e.Item.ForeColor = Color.Red;
 
 
-            LoadRelatedWL("璐圭敤鎶ラ攢", int.Parse(strID));
+            LoadRelatedWL("ExpenseReimbursement", int.Parse(strID));
             LoadRelatedExpenseClaimDetail(strID);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -230,7 +230,7 @@ public partial class TTAllExpenseClaimSummaryReport : System.Web.UI.Page
 
         LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll;
 
-        LoadRelatedWL("璐圭敤鎶ラ攢", -1);
+        LoadRelatedWL("ExpenseReimbursement", -1);
         LoadRelatedExpenseClaimDetail("-1");
     }
 

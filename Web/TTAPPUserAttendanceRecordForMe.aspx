@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPUserAttendanceRecordForMe.aspx.cs" Inherits="TTAPPUserAttendanceRecordForMe" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPUserAttendanceRecordForMe.aspx.cs" Inherits="TTAPPUserAttendanceRecordForMe" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;  user-scalable=1" />
 
@@ -67,7 +67,7 @@
                                                         </td>
                                                     </tr>
                                                 </table>
-                                                   <img id="IMG_Waiting" src="Images/Processing.gif" alt="è¯·ç¨å€™ï¼Œå¤„ç†ä¸­..." style ="display :none;" />
+                                                   <img id="IMG_Waiting" src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖÐ..." style ="display :none;" />
                                             </a>
                                         </td>
                                         <td   align="left">
@@ -201,82 +201,82 @@
                                                         <asp:BoundColumn DataField="ID" HeaderText="ID">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CreateDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="å»ºç«‹æ—¶é—´">
+                                                        <asp:BoundColumn DataField="CreateDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="½¨Á¢Ê±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="MCheckInStart" HeaderText="æ—©ç­ä¸Šç­å¼€å§‹æ—¶é—´">
+                                                        <asp:BoundColumn DataField="MCheckInStart" HeaderText="Ôç°àÉÏ°à¿ªÊ¼Ê±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="MCheckInEnd" HeaderText="æ—©ç­ä¸Šç­ç»“æŸæ—¶é—´">
+                                                        <asp:BoundColumn DataField="MCheckInEnd" HeaderText="Ôç°àÉÏ°à½áÊøÊ±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="MCheckInIsMust" HeaderText="æ—©ç­ä¸Šç­å¿…é¡»">
+                                                        <asp:BoundColumn DataField="MCheckInIsMust" HeaderText="Ôç°àÉÏ°à±ØÐë">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="MCheckOutStart" HeaderText="æ—©ç­ä¸‹ç­å¼€å§‹æ—¶é—´">
+                                                        <asp:BoundColumn DataField="MCheckOutStart" HeaderText="Ôç°àÏÂ°à¿ªÊ¼Ê±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="MCheckOutEnd" HeaderText="æ—©ç­ä¸‹ç­ç»“æŸæ—¶é—´">
+                                                        <asp:BoundColumn DataField="MCheckOutEnd" HeaderText="Ôç°àÏÂ°à½áÊøÊ±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="MCheckOutIsMust" HeaderText="æ—©ç­ä¸‹ç­å¿…é¡»">
+                                                        <asp:BoundColumn DataField="MCheckOutIsMust" HeaderText="Ôç°àÏÂ°à±ØÐë">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ACheckInStart" HeaderText="ä¸­ç­ä¸Šç­å¼€å§‹æ—¶é—´">
+                                                        <asp:BoundColumn DataField="ACheckInStart" HeaderText="ÖÐ°àÉÏ°à¿ªÊ¼Ê±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ACheckInEnd" HeaderText="ä¸­ç­ä¸Šç­ç»“æŸæ—¶é—´">
+                                                        <asp:BoundColumn DataField="ACheckInEnd" HeaderText="ÖÐ°àÉÏ°à½áÊøÊ±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ACheckInIsMust" HeaderText="ä¸­ä¸Šåˆä¸Šç­å¿…é¡»">
+                                                        <asp:BoundColumn DataField="ACheckInIsMust" HeaderText="ÖÐÉÏÎçÉÏ°à±ØÐë">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ACheckOutStart" HeaderText="ä¸­ç­ä¸‹ç­å¼€å§‹æ—¶é—´">
+                                                        <asp:BoundColumn DataField="ACheckOutStart" HeaderText="ÖÐ°àÏÂ°à¿ªÊ¼Ê±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ACheckOutEnd" HeaderText="ä¸­ç­ä¸‹ç­ç»“æŸæ—¶é—´">
+                                                        <asp:BoundColumn DataField="ACheckOutEnd" HeaderText="ÖÐ°àÏÂ°à½áÊøÊ±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ACheckOutIsMust" HeaderText="ä¸­åˆä¸‹ç­å¿…é¡»">
+                                                        <asp:BoundColumn DataField="ACheckOutIsMust" HeaderText="ÖÐÎçÏÂ°à±ØÐë">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="NCheckInStart" HeaderText="æ™šç­ä¸Šç­å¼€å§‹æ—¶é—´">
+                                                        <asp:BoundColumn DataField="NCheckInStart" HeaderText="Íí°àÉÏ°à¿ªÊ¼Ê±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="NCheckInEnd" HeaderText="æ™šç­ä¸Šç­ç»“æŸæ—¶é—´">
+                                                        <asp:BoundColumn DataField="NCheckInEnd" HeaderText="Íí°àÉÏ°à½áÊøÊ±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="NCheckInIsMust" HeaderText="æ™šç­ä¸Šç­å¿…é¡»">
+                                                        <asp:BoundColumn DataField="NCheckInIsMust" HeaderText="Íí°àÉÏ°à±ØÐë">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="NCheckOutStart" HeaderText="æ™šç­ä¸‹ç­å¼€å§‹æ—¶é—´">
+                                                        <asp:BoundColumn DataField="NCheckOutStart" HeaderText="Íí°àÏÂ°à¿ªÊ¼Ê±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="NCheckOutEnd" HeaderText="æ™šç­ä¸‹ç­ç»“æŸæ—¶é—´">
+                                                        <asp:BoundColumn DataField="NCheckOutEnd" HeaderText="Íí°àÏÂ°à½áÊøÊ±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="NCheckOutIsMust" HeaderText="æ™šç­ä¸‹ç­å¿…é¡»">
+                                                        <asp:BoundColumn DataField="NCheckOutIsMust" HeaderText="Íí°àÏÂ°à±ØÐë">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="OCheckInStart" HeaderText="åŠ ç­ä¸Šç­å¼€å§‹æ—¶é—´">
+                                                        <asp:BoundColumn DataField="OCheckInStart" HeaderText="¼Ó°àÉÏ°à¿ªÊ¼Ê±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="OCheckInEnd" HeaderText="åŠ ç­ä¸Šç­ç»“æŸæ—¶é—´">
+                                                        <asp:BoundColumn DataField="OCheckInEnd" HeaderText="¼Ó°àÉÏ°à½áÊøÊ±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="OCheckInIsMust" HeaderText="åŠ ç­ä¸Šç­å¿…é¡»">
+                                                        <asp:BoundColumn DataField="OCheckInIsMust" HeaderText="¼Ó°àÉÏ°à±ØÐë">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="OCheckOutStart" HeaderText="åŠ ç­ä¸‹ç­å¼€å§‹æ—¶é—´">
+                                                        <asp:BoundColumn DataField="OCheckOutStart" HeaderText="¼Ó°àÏÂ°à¿ªÊ¼Ê±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="OCheckOutEnd" HeaderText="åŠ ç­ä¸‹ç­ç»“æŸæ—¶é—´">
+                                                        <asp:BoundColumn DataField="OCheckOutEnd" HeaderText="¼Ó°àÏÂ°à½áÊøÊ±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="OCheckOutIsMust" HeaderText="åŠ ç­ä¸‹ç­å¿…é¡»">
+                                                        <asp:BoundColumn DataField="OCheckOutIsMust" HeaderText="¼Ó°àÏÂ°à±ØÐë">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="LargestDistance" HeaderText="å…è®¸æœ€å¤§è·ç¦»">
+                                                        <asp:BoundColumn DataField="LargestDistance" HeaderText="ÔÊÐí×î´ó¾àÀë">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
                                                     </Columns>
@@ -288,10 +288,10 @@
                                         <tr>
                                             <td align="left" class="formItemBgStyle">
                                                
-                                                <asp:Label ID="Label2120" runat="server" Text="æˆ‘çš„è€ƒå‹¤è®°å½•"></asp:Label>
+                                                <asp:Label ID="Label2120" runat="server" Text="ÎÒµÄ¿¼ÇÚ¼ÇÂ¼"></asp:Label>
                                                 <asp:DropDownList ID="DL_DisplayType" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DL_DisplayType_SelectedIndexChanged">
-                                                    <asp:ListItem Value="æ˜¾ç¤ºå¼‚å¸¸" Text="<%$ Resources:lang,XianShiYiChang%>" />
-                                                    <asp:ListItem Value="æ˜¾ç¤ºå…¨éƒ¨" Text="<%$ Resources:lang,XianShiQuanBu%>" />
+                                                    <asp:ListItem Value="DisplayAbnormal" Text="<%$ Resources:lang,XianShiYiChang%>" />
+                                                    <asp:ListItem Value="DisplayAll" Text="<%$ Resources:lang,XianShiQuanBu%>" />
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
@@ -389,25 +389,25 @@
 
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                        <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="å§“å">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="ÐÕÃû">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="LeaderName" HeaderText="ä¸»ç®¡">
+                                                        <asp:BoundColumn DataField="LeaderName" HeaderText="Ö÷¹Ü">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="AttendanceDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="è€ƒå‹¤æ—¥æœŸ">
+                                                        <asp:BoundColumn DataField="AttendanceDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="¿¼ÇÚÈÕÆÚ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="LateMinute" HeaderText="è¿Ÿåˆ°åˆ†é’Ÿ">
+                                                        <asp:BoundColumn DataField="LateMinute" HeaderText="³Ùµ½·ÖÖÓ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="EarlyMinute" HeaderText="æ—©é€€åˆ†é’Ÿ">
+                                                        <asp:BoundColumn DataField="EarlyMinute" HeaderText="ÔçÍË·ÖÖÓ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                         </asp:BoundColumn>
-                                                         <asp:BoundColumn DataField="LargestDistance" HeaderText="å…è®¸æœ€å¤§è·ç¦»">
+                                                         <asp:BoundColumn DataField="LargestDistance" HeaderText="ÔÊÐí×î´ó¾àÀë">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                         </asp:BoundColumn>
                                                         <asp:TemplateColumn>
@@ -531,7 +531,7 @@
                                         </tr>
                                         <tr style="display :none;">
                                             <td style="width: 100%; text-align: left;" class="formItemBgStyle">
-                                                    &nbsp; &nbsp;<asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,Di%>"></asp:Label>ï¼š<asp:Label ID="LB_PageIndex" runat="server"></asp:Label>
+                                                    &nbsp; &nbsp;<asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,Di%>"></asp:Label>£º<asp:Label ID="LB_PageIndex" runat="server"></asp:Label>
                                                 &nbsp;<asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,YeGong%>"></asp:Label>
                                                 <asp:Label ID="LB_TotalPageNumber" runat="server"></asp:Label>
                                                 &nbsp;<asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,Ye%>"></asp:Label><asp:Label ID="LB_Sql" runat="server" Visible="False"></asp:Label>

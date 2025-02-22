@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteNewsView.aspx.cs" Inherits="TakeTopSiteNewsView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteNewsView.aspx.cs" Inherits="TakeTopSiteNewsView" %>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes, target-densitydpi=device-dpi" />
 
@@ -116,7 +116,7 @@
             }
         }
 
-        //ä¼ å…¥URLä½œä¸ºå‚æ•°
+        //´«ÈëURL×÷Îª²ÎÊı
         function popShowByURL(url, title, width, height) {
             var w = 'auto', h = 'auto', t =  url.replace('.aspx', '').replace("TT",'');
             if (title) {
@@ -142,9 +142,9 @@
                 content: url,
                 area: ["99%", "99%"]
                 ,
-                zIndex: layer..zIndex, //é‡ç‚¹1
+                zIndex: layer..zIndex, //ÖØµã1
                 success: function (layero) {
-                    layer.setTop(layero); //é‡ç‚¹2
+                    layer.setTop(layero); //ÖØµã2
                 },
                 end: function () {
 

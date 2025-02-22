@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -42,7 +42,7 @@ public partial class TTConstractRelatedDocView : System.Web.UI.Page
 
         if (lst.Count > 0)
         {
-            //this.Title = "ÂêàÂêåÔºö" + strConstractCode + " " + strConstractName + " ÁöÑÁõ∏ÂÖ≥ÊñáÊ°£";
+            //this.Title = "∫œÕ¨£∫" + strConstractCode + " " + strConstractName + " µƒœ‡πÿŒƒµµ";
         }
 
 
@@ -104,10 +104,10 @@ public partial class TTConstractRelatedDocView : System.Web.UI.Page
         strUserCode = LB_UserCode.Text.Trim();
 
         strHQL = "from Document as document where ";
-        strHQL += " (document.RelatedType = 'ÂêàÂêå' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + ")";
-        strHQL += " or document.RelatedType = 'Â∑•‰ΩúÊµÅ' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'ÂêàÂêå' and workFlow.RelatedID in ( select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + "))";
-        strHQL += " or document.RelatedType = 'Âçè‰Ωú' and document.RelatedID in (Select collaboration.CoID From Collaboration as collaboration Where collaboration.RelatedType = 'CONSTRACT' and collaboration.RelatedCode =" + "'" + strConstractCode + "'" + "))";
-        strHQL += " and rtrim(ltrim(document.Status)) <> 'Âà†Èô§' Order by document.DocID DESC";
+        strHQL += " (document.RelatedType = '∫œÕ¨' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + ")";
+        strHQL += " or document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = '∫œÕ¨' and workFlow.RelatedID in ( select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + "))";
+        strHQL += " or document.RelatedType = '–≠◊˜' and document.RelatedID in (Select collaboration.CoID From Collaboration as collaboration Where collaboration.RelatedType = 'CONSTRACT' and collaboration.RelatedCode =" + "'" + strConstractCode + "'" + "))";
+        strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
 
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);

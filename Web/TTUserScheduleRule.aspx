@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserScheduleRule.aspx.cs" Inherits="TTUserScheduleRule" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserScheduleRule.aspx.cs" Inherits="TTUserScheduleRule" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>È°πÁõÆÊàêÂëòËµÑÊñô</title>
+    <title>œÓƒø≥…‘±◊ ¡œ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -150,13 +150,13 @@
 
                                                                                 <td width="40%" align="center">
                                                                                     <strong>
-                                                                                        <asp:Label ID="Label3" runat="server" Text="Êó•Êúü"></asp:Label></strong>
+                                                                                        <asp:Label ID="Label3" runat="server" Text="»’∆⁄"></asp:Label></strong>
                                                                                 </td>
 
 
                                                                                 <td width="40%" align="center">
                                                                                     <strong>
-                                                                                        <asp:Label ID="Label20" runat="server" Text="Áè≠Ê¨°"></asp:Label></strong>
+                                                                                        <asp:Label ID="Label20" runat="server" Text="∞‡¥Œ"></asp:Label></strong>
                                                                                 </td>
 
 
@@ -183,11 +183,11 @@
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                     </asp:TemplateColumn>
-                                                                    <asp:BoundColumn DataField="CreateDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="Êó•Êúü">
+                                                                    <asp:BoundColumn DataField="CreateDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="»’∆⁄">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                                     </asp:BoundColumn>
 
-                                                                    <asp:BoundColumn DataField="ScheduleName" HeaderText="Áè≠Ê¨°">
+                                                                    <asp:BoundColumn DataField="ScheduleName" HeaderText="∞‡¥Œ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                                     </asp:BoundColumn>
                                                                 </Columns>
@@ -201,17 +201,17 @@
                                                             <table>
                                                                 <tr>
                                                                     <td>
-                                                                        <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>£∫</td>
                                                                     <td>
                                                                         <asp:Label ID="LB_ID" runat="server"></asp:Label>
                                                                     </td>
                                                                     <td>
-                                                                        <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,YuangongDaiMa%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,YuangongDaiMa%>"></asp:Label>£∫</td>
                                                                     <td>
                                                                         <asp:Label ID="LB_UserCode" runat="server"></asp:Label>
                                                                     </td>
                                                                     <td>
-                                                                        <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,YuanGongMingChen%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,YuanGongMingChen%>"></asp:Label>£∫</td>
                                                                     <td>
                                                                         <asp:Label ID="LB_UserName" runat="server"></asp:Label>
                                                                     </td>
@@ -220,10 +220,10 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="left" colspan="3" class="formItemBgStyle">Êó•ÊúüÔºö<asp:TextBox ID="tb_Date" ReadOnly="false" runat="server"></asp:TextBox>
+                                                        <td align="left" colspan="3" class="formItemBgStyle">»’∆⁄£∫<asp:TextBox ID="tb_Date" ReadOnly="false" runat="server"></asp:TextBox>
                                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender2" runat="server" TargetControlID="tb_Date">
                                                             </ajaxToolkit:CalendarExtender>
-                                                            &nbsp; Áè≠Ê¨°Ôºö
+                                                            &nbsp; ∞‡¥Œ£∫
                                                             <asp:DropDownList ID="tb_Schedule" runat="server"></asp:DropDownList>
                                                         </td>
                                                         <tr>
@@ -234,7 +234,7 @@
                                                                     Enabled="False" OnClick="BT_UpdateUserAttendanceRule_Click" Text="<%$ Resources:lang,BaoCun%>" />
                                                                 &nbsp;<asp:Button ID="BT_DeleteUserAttendanceRule" runat="server" CssClass="inpu"
                                                                     Enabled="False" OnClick="BT_DeleteUserAttendanceRule_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="<%$ Resources:lang,ShanChu%>" />
-                                                                &nbsp;<asp:Button ID="BT_PaiBanRule" runat="server" CssClass="inpu" OnClick="BT_PaiBanRule_Click" Text="ËÆæÁΩÆÁè≠Ê¨°" />
+                                                                &nbsp;<asp:Button ID="BT_PaiBanRule" runat="server" CssClass="inpu" OnClick="BT_PaiBanRule_Click" Text="…Ë÷√∞‡¥Œ" />
                                                             </td>
                                                             <td style="text-align: Right;" width="130px" class="formItemBgStyle"></td>
                                                             <td style="text-align: left;" width="130px" class="formItemBgStyle"></td>

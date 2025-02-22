@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPrintBarCode.aspx.cs" Inherits="TTPrintBarCode" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPrintBarCode.aspx.cs" Inherits="TTPrintBarCode" %>
 
 
 <!DOCTYPE html>
@@ -55,8 +55,8 @@
         <div id="divOver" style="text-align: center">
             <br />
             <p class="noprint">
-                <input id="print" type="button" class="btn" value="确认打印" onclick="printpage11();" />
-                <input id="print0" type="button" value="关闭" onclick="CloseLayer();" class="btn" />
+                <input id="print" type="button" class="btn" value="ȷ�ϴ�ӡ" onclick="printpage11();" />
+                <input id="print0" type="button" value="Closed" onclick="CloseLayer();" class="btn" />
             </p>
         </div>
 

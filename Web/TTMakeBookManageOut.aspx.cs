@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,7 +20,7 @@ public partial class TTMakeBookManageOut : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "Ê†áÂáÜ‰∏éÂõæ‰π¶ÁÆ°ÁêÜ", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "±Í◊º”ÎÕº Èπ‹¿Ì", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -58,7 +58,7 @@ public partial class TTMakeBookManageOut : System.Web.UI.Page
 
     protected void LoadBookList(string strBarCode, string strBookName, string strReferenceNo, string strAuthor, string strBookClassificationId, string strBookPublishersId, string strBelongDepartCode)
     {
-        string strHQL = " Select *,(Case when BookType='Ê†áÂáÜ' then BookImage else '' end) BookImageNew From T_BookInformation Where 1=1 ";
+        string strHQL = " Select *,(Case when BookType='±Í◊º' then BookImage else '' end) BookImageNew From T_BookInformation Where 1=1 ";
         if (!string.IsNullOrEmpty(strBarCode.Trim()))
         {
             strHQL += " and BarCode like '%" + strBarCode.Trim() + "%' ";
@@ -91,13 +91,13 @@ public partial class TTMakeBookManageOut : System.Web.UI.Page
         {
             strHQL += " Order By ID ASC ";
         }
-        else if (DropDownList1.SelectedValue.Trim().Equals("1"))//Âõæ‰π¶
+        else if (DropDownList1.SelectedValue.Trim().Equals("1"))//Õº È
         {
-            strHQL += " and BookType='Âõæ‰π¶' Order By ReferenceNo ASC ";
+            strHQL += " and BookType='Õº È' Order By ReferenceNo ASC ";
         }
-        else//Ê†áÂáÜ
+        else//±Í◊º
         {
-            strHQL += " and BookType='Ê†áÂáÜ' Order By BarCode ASC ";
+            strHQL += " and BookType='±Í◊º' Order By BarCode ASC ";
         }
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_BookInformation");
 
@@ -109,7 +109,7 @@ public partial class TTMakeBookManageOut : System.Web.UI.Page
 
     protected void LoadBookBorrowRecord()
     {
-        string strHQL = "Select A.*,(Case when B.BookType='Ê†áÂáÜ' then B.BookImage else '' end) BookImageNew  From T_BookBorrowRecord As A,T_BookInformation As B Where A.BorrowCode='" + strUserCode.Trim() + "' and A.BookInfoId=B.ID Order By A.BarCode ASC ";
+        string strHQL = "Select A.*,(Case when B.BookType='±Í◊º' then B.BookImage else '' end) BookImageNew  From T_BookBorrowRecord As A,T_BookInformation As B Where A.BorrowCode='" + strUserCode.Trim() + "' and A.BookInfoId=B.ID Order By A.BarCode ASC ";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_BookBorrowRecord");
 
         DataGrid2.CurrentPageIndex = 0;

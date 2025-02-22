@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -27,7 +27,7 @@ public partial class TTDepartment_ThirtPart : System.Web.UI.Page
 
         strUserCode = Session["UserCode"].ToString();
 
-        //this.Title = "ç¬¬ä¸‰æ–¹éƒ¨é—¨è®¾ç½®"; 
+        //this.Title = "µÚÈı·½²¿ÃÅÉèÖÃ"; 
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "ajustHeight", "AdjustDivHeight();", true);
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
@@ -109,7 +109,7 @@ public partial class TTDepartment_ThirtPart : System.Web.UI.Page
             {
                 departmentBLL.AddDepartment(department);
 
-                //æ›´æ–°éƒ¨é—¨å…¶å®ƒä¿¡æ¯
+                //¸üĞÂ²¿ÃÅÆäËüĞÅÏ¢
                 UpdateNewDepartmentOtherInformation(strDepartCode);
 
                 TB_DepartCode.Text = TB_DepartCodeNew.Text;
@@ -198,7 +198,7 @@ public partial class TTDepartment_ThirtPart : System.Web.UI.Page
                 {
                     departmentBLL.UpdateDepartment(department, strOldDepartCode);
 
-                    //æ›´æ–°éƒ¨é—¨å…¶å®ƒä¿¡æ¯
+                    //¸üĞÂ²¿ÃÅÆäËüĞÅÏ¢
                     UpdateDepartmentOtherInformation(strDepartCode);
 
                     TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(Resources.lang.ZZJGT, TreeView1, strUserCode);
@@ -336,7 +336,7 @@ public partial class TTDepartment_ThirtPart : System.Web.UI.Page
             {
                 departmentBLL.UpdateDepartment(department, strDepartCode);
 
-                //æ›´æ–°éƒ¨é—¨å…¶å®ƒä¿¡æ¯
+                //¸üĞÂ²¿ÃÅÆäËüĞÅÏ¢
                 UpdateDepartmentOtherInformation(strDepartCode);
 
                 TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(Resources.lang.ZZJGT, TreeView1, strUserCode);
@@ -394,7 +394,7 @@ public partial class TTDepartment_ThirtPart : System.Web.UI.Page
             strCreatorCode = department.CreatorCode.Trim();
             LB_CreatorCode.Text = strCreatorCode;
 
-            //å–å¾—éƒ¨é—¨å…¶å®ƒä¿¡æ¯
+            //È¡µÃ²¿ÃÅÆäËüĞÅÏ¢
             GetDepartmentOtherInformation(strDepartCode);
 
             if (strCreatorCode == strUserCode)

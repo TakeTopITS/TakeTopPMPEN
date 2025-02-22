@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Data;
 using System.Web.UI;
@@ -49,10 +49,10 @@ public partial class TTWorkPlanView : System.Web.UI.Page
 
             if (Session["VerIDForGantt"] == null)
             {
-                strVerID = ShareClass.GetProjectPlanVersionID(strProjectID, "在用").ToString();
+                strVerID = ShareClass.GetProjectPlanVersionID(strProjectID, "InUse").ToString();
                 if (strVerID != "0")
                 {
-                    strVerID = ShareClass.GetProjectPlanVersion(strProjectID, "在用").ToString();
+                    strVerID = ShareClass.GetProjectPlanVersion(strProjectID, "InUse").ToString();
                 }
                 else
                 {

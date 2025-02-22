@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DefaultWeiXinSAAS.aspx.cs" Inherits="DefaultWeiXinSAAS" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DefaultWeiXinSAAS.aspx.cs" Inherits="DefaultWeiXinSAAS" %>
 
 
 <%@ Import Namespace="System.Globalization" %>
@@ -50,7 +50,7 @@
 
 
     <style type="text/css">
-        /*--------------------------------Áü≠ÊåâÈíÆ---------------------------*/
+        /*--------------------------------∂Ã∞¥≈•---------------------------*/
         .inpuLogon {
             /* background-image: url(ImagesSkin/Logon.jpg);*/
             margin: 0px;
@@ -116,7 +116,7 @@
     <script type="text/javascript">
         window.onload = function () {
 
-            //Ëá™Âä®Â°´ÂÖÖÂ∏êÂè∑ÂíåÂØÜÁ†Å
+            //◊‘∂ØÃÓ≥‰’ ∫≈∫Õ√‹¬Î
             var companyName = getCookie("companyName");
             var userName = getCookie("loginUserName");
             var password = getCookie("loginPassword");
@@ -180,7 +180,7 @@
                         <table width="100%" border="0" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td align="center">
-                                    <asp:TextBox ID="TB_CompanyName" runat="server" Text="ËØ∑ËæìÂÖ•‰Ω†ÁöÑÂÖ¨Âè∏ÂêçÁß∞(CompanyName)" onFocus="javascript:if(this.value =='ËØ∑ËæìÂÖ•‰Ω†ÁöÑÂÖ¨Âè∏ÂêçÁß∞(CompanyName)'){ this.value='';};document.getElementById('LB_ErrorMsg').style.display = 'none';" ForeColor="#000000" class="dengl" Width="103%"></asp:TextBox>
+                                    <asp:TextBox ID="TB_CompanyName" runat="server" Text="«Î ‰»Îƒ„µƒπ´Àæ√˚≥∆(CompanyName)" onFocus="javascript:if(this.value =='«Î ‰»Îƒ„µƒπ´Àæ√˚≥∆(CompanyName)'){ this.value='';};document.getElementById('LB_ErrorMsg').style.display = 'none';" ForeColor="#000000" class="dengl" Width="103%"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
@@ -193,7 +193,7 @@
                             </tr>
                             <tr>
                                 <td align="center">
-                                    <asp:TextBox ID="TB_UserCode" runat="server" Text="ËØ∑ËæìÂÖ•‰Ω†ÁöÑÁôªÂΩïÂ∏êÂè∑(UserCode)" onFocus="javascript:if(this.value =='ËØ∑ËæìÂÖ•‰Ω†ÁöÑÁôªÂΩïÂ∏êÂè∑(UserCode)'){ this.value='';};document.getElementById('LB_ErrorMsg').style.display = 'none';" ForeColor="#000000" class="dengl" Width="103%"></asp:TextBox>
+                                    <asp:TextBox ID="TB_UserCode" runat="server" Text="«Î ‰»Îƒ„µƒµ«¬º’ ∫≈(UserCode)" onFocus="javascript:if(this.value =='«Î ‰»Îƒ„µƒµ«¬º’ ∫≈(UserCode)'){ this.value='';};document.getElementById('LB_ErrorMsg').style.display = 'none';" ForeColor="#000000" class="dengl" Width="103%"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
@@ -233,7 +233,7 @@
                             <tr>
                                 <td colspan="2" align="center">
                                     <img id="IMG_Waiting" src="Images/Processing.gif" alt="Loading,please wait..." style="text-align: center; display: none;" />
-                                    <asp:Button ID="BT_Login" runat="server" CssClass="inpuLogon" Text="ÁôªÂΩï(Login)" OnClientClick="RemmberUserNameAndPassord()"
+                                    <asp:Button ID="BT_Login" runat="server" CssClass="inpuLogon" Text="µ«¬º(Login)" OnClientClick="RemmberUserNameAndPassord()"
                                         OnClick="LB_Login_Click" />
 
                                     <asp:ImageButton ID="IB_GetSMS" runat="server" ImageUrl="~/Images/SMS.jpg" Width="22px"
@@ -253,7 +253,7 @@
                                     <table width="100%">
                                         <tr>
                                             <td align="center">
-                                                <asp:Label ID="LB_Copyright" runat="server" Text="Copyright¬© TakeTop Software 2006-2026 "></asp:Label>
+                                                <asp:Label ID="LB_Copyright" runat="server" Text="Copyright? TakeTop Software 2006-2026 "></asp:Label>
                                             </td>
                                         </tr>
                                         <tr style="display: none;">

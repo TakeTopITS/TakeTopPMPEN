@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -26,7 +26,7 @@ public partial class TTProStatusChangeRecord : System.Web.UI.Page
 
         string strProjectName = GetProjectName(strProjectID);
 
-        //this.Title = Resources.lang.Project + strProjectID + "  " + strProjectName + " çŠ¶æ€çš„å˜æ›´è®°å½•ï¼";
+        //this.Title = Resources.lang.Project + strProjectID + "  " + strProjectName + " ×´Ì¬µÄ±ä¸ü¼ÇÂ¼£¡";
         ClientScript.RegisterStartupScript(this.GetType(), "", "<script>aHandler();</script>");
         if (Page.IsPostBack == false)
         {

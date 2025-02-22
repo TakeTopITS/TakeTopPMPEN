@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectHumanResourcesMonthlyReports.aspx.cs" Inherits="TTProjectHumanResourcesMonthlyReports" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectHumanResourcesMonthlyReports.aspx.cs" Inherits="TTProjectHumanResourcesMonthlyReports" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>È°πÁõÆ‰∫∫ÂäõËµÑÊ∫êÊúàÊä•</title>
+    <title>œÓƒø»À¡¶◊ ‘¥‘¬±®</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -62,13 +62,13 @@
                                                 <table width="70%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td class="formItemBgStyle" style="text-align: right">
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>Ôºö</td>
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>£∫</td>
                                                         <td class="formItemBgStyle" style="text-align: left">
                                                             <asp:DropDownList ID="ddl_ProjectID" runat="server" DataTextField="ProjectName" DataValueField="ProjectID">
                                                             </asp:DropDownList>
                                                         </td>
                                                         <td class="formItemBgStyle" style="text-align: right">
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,NianYue%>"></asp:Label>Ôºö</td>
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,NianYue%>"></asp:Label>£∫</td>
                                                         <td class="formItemBgStyle" style="text-align: left">
                                                             <asp:TextBox ID="DLC_YearMonth" runat="server" CssClass="shuru" ReadOnly="false" Width="120px"></asp:TextBox>
                                                             <cc1:CalendarExtender ID="CalendarExtender2" runat="server" Format="yyyy-MM" TargetControlID="DLC_YearMonth">
@@ -116,7 +116,7 @@
                                                     <asp:DataGrid ID="DataGrid1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                         OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="5" Width="100%" ShowHeader="false">
                                                         <Columns>
-                                                            <asp:BoundColumn DataField="WorkType" HeaderText="ËÅåÁß∞/Â∑•Áßç">
+                                                            <asp:BoundColumn DataField="WorkType" HeaderText="÷∞≥∆/π§÷÷">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                             </asp:BoundColumn>
@@ -179,7 +179,7 @@
                                                                 </table>
                                                                 <asp:DataGrid ID="DataGrid2" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnPageIndexChanged="DataGrid2_PageIndexChanged" PageSize="5" ShowHeader="False" Width="100%">
                                                                     <Columns>
-                                                                        <asp:BoundColumn DataField="WorkType" HeaderText="ËÅåÁß∞/Â∑•Áßç">
+                                                                        <asp:BoundColumn DataField="WorkType" HeaderText="÷∞≥∆/π§÷÷">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="25%" />
                                                                             <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                         </asp:BoundColumn>

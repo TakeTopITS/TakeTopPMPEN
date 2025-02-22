@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWFChartChildViewList.aspx.cs" Inherits="TTWFChartChildViewList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWFChartChildViewList.aspx.cs" Inherits="TTWFChartChildViewList" %>
 
 <!DOCTYPE html>
 
@@ -65,7 +65,7 @@
                         ShowHeader="False"
                         PageSize="5" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                         <Columns>
-                            <asp:BoundColumn DataField="WLID" HeaderText="ç¼–å·">
+                            <asp:BoundColumn DataField="WLID" HeaderText="±àºÅ">
                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                             </asp:BoundColumn>
                             <asp:TemplateColumn>
@@ -82,10 +82,10 @@
                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                             </asp:TemplateColumn>
                             <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                DataTextField="CreatorName" HeaderText="ç”³è¯·äºº" Target="_blank">
+                                DataTextField="CreatorName" HeaderText="ÉêÇëÈË" Target="_blank">
                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                             </asp:HyperLinkColumn>
-                            <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                            <asp:TemplateColumn HeaderText="×´Ì¬">
                                 <ItemTemplate>
                                     <%# ShareClass.GetStatusHomeNameByWorkflowStatus(Eval("Status").ToString()) %>
                                 </ItemTemplate>

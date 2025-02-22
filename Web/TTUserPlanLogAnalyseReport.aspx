@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserPlanLogAnalyseReport.aspx.cs" Inherits="TTUserPlanLogAnalyseReport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserPlanLogAnalyseReport.aspx.cs" Inherits="TTUserPlanLogAnalyseReport" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -219,48 +219,48 @@
                                                                             ShowHeader="false" Height="1px" OnPageIndexChanged="DataGrid1_PageIndexChanged"
                                                                             PageSize="30" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="ä»£ç ">
+                                                                                <asp:BoundColumn DataField="UserCode" HeaderText="´úÂë">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="UserCode" DataNavigateUrlFormatString="TTUserInforView.aspx?UserCode={0}"
-                                                                                    DataTextField="UserName" HeaderText="å§“å" Target="_blank">
+                                                                                    DataTextField="UserName" HeaderText="ÐÕÃû" Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="Gender" HeaderText="æ€§åˆ«">
+                                                                                <asp:BoundColumn DataField="Gender" HeaderText="ÐÔ±ð">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="UserCode" DataNavigateUrlFormatString="TTUserPlanList.aspx?UserCode={0}"
-                                                                                    Text="è®¡åˆ’" HeaderText="è®¡åˆ’" Target="_blank">
+                                                                                    Text="Plan" HeaderText="Plan" Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="Age" HeaderText="å¹´é¾„">
+                                                                                <asp:BoundColumn DataField="Age" HeaderText="ÄêÁä">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="DepartCode" HeaderText="éƒ¨é—¨ä»£ç ">
+                                                                                <asp:BoundColumn DataField="DepartCode" HeaderText="²¿ÃÅ´úÂë">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="DepartName" HeaderText="éƒ¨é—¨åç§°">
+                                                                                <asp:BoundColumn DataField="DepartName" HeaderText="²¿ÃÅÃû³Æ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Duty" HeaderText="èŒè´£">
+                                                                                <asp:BoundColumn DataField="Duty" HeaderText="Ö°Ôð">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="OfficePhone" HeaderText="åŠžå…¬ç”µè¯">
+                                                                                <asp:BoundColumn DataField="OfficePhone" HeaderText="°ì¹«µç»°">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="MobilePhone" HeaderText="ç§»åŠ¨ç”µè¯">
+                                                                                <asp:BoundColumn DataField="MobilePhone" HeaderText="ÒÆ¶¯µç»°">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="EMail" HeaderText="EMail">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="12%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="WorkScope" HeaderText="å·¥ä½œèŒƒå›´">
+                                                                                <asp:BoundColumn DataField="WorkScope" HeaderText="¹¤×÷·¶Î§">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="JoinDate" HeaderText="åŠ å…¥æ—¥æœŸ" DataFormatString="{0:yyyy/MM/dd}">
+                                                                                <asp:BoundColumn DataField="JoinDate" HeaderText="¼ÓÈëÈÕÆÚ" DataFormatString="{0:yyyy/MM/dd}">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                                                <asp:TemplateColumn HeaderText="×´Ì¬">
                                                                                     <ItemTemplate>
                                                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                     </ItemTemplate>

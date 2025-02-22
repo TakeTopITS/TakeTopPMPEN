@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -33,7 +33,7 @@ public partial class TTCreateOtherTaskSAAS : System.Web.UI.Page
         strLangCode = Session["LangCode"].ToString();
         strIsMobileDevice = Session["IsMobileDevice"].ToString();
 
-        //CKEditorÂàùÂßãÂåñ
+        //CKEditor≥ı ºªØ
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_Operation);
@@ -146,7 +146,7 @@ public partial class TTCreateOtherTaskSAAS : System.Web.UI.Page
                 LB_Status.Text = strTaskStatus;
 
                 LB_TaskName.Visible = true;
-                LB_TaskName.Text = "‰ªªÂä°Ôºö" + projectTask.TaskID.ToString().Trim() + "  " + projectTask.Task.Trim() + " ÁöÑÂàÜÊ¥æËÆ∞ÂΩïÔºö";
+                LB_TaskName.Text = "»ŒŒÒ£∫" + projectTask.TaskID.ToString().Trim() + "  " + projectTask.Task.Trim() + " µƒ∑÷≈…º«¬º£∫";
 
 
                 HL_TestCase.Enabled = true;
@@ -169,7 +169,7 @@ public partial class TTCreateOtherTaskSAAS : System.Web.UI.Page
                 LoadAssignRecord(strTaskID);
 
                 
-                if (strTaskStatus == "ÂÖ≥Èó≠")
+                if (strTaskStatus == "Closed")
                 {
                     BT_Assign.Enabled = false;
                 }
@@ -280,7 +280,7 @@ public partial class TTCreateOtherTaskSAAS : System.Web.UI.Page
 
             strTaskStatus = LB_Status.Text.Trim();
 
-            if (strTaskStatus == "ÂÖ≥Èó≠")
+            if (strTaskStatus == "Closed")
             {
                 BT_UpdateAssign.Enabled = false;
                 BT_DeleteAssign.Enabled = false;
@@ -388,11 +388,11 @@ public partial class TTCreateOtherTaskSAAS : System.Web.UI.Page
                 LB_TaskNO.Text = strTaskID;
 
                 LB_TaskName.Visible = true;
-                LB_TaskName.Text = "‰ªªÂä°Ôºö" + strTaskID + "  " + strTask + " ÁöÑÂàÜÊ¥æËÆ∞ÂΩïÔºö";
+                LB_TaskName.Text = "»ŒŒÒ£∫" + strTaskID + "  " + strTask + " µƒ∑÷≈…º«¬º£∫";
 
-                //Ëá™Âä®ÂàÜÊ¥æ‰ªªÂä°ÁªôÂàõÂª∫ËÄÖ
+                //◊‘∂Ø∑÷≈…»ŒŒÒ∏¯¥¥Ω®’ﬂ
                 string strHQL3 = "Insert Into T_TaskAssignRecord(TaskID,Task,Type,OperatorCode,OperatorName,OperatorContent,OperationTime,BeginDate,EndDate,AssignManCode,AssignManName,Content,Operation,PriorID,RouteNumber,MakeDate,Status,FinishedNumber,UnitName,MoveTime)";
-                strHQL3 += " Select A.TaskID,A.Task,'Task',A.MakeManCode,A.MakeManName,'',now(),A.BeginDate,A.EndDate,A.MakeManCode,A.MakeManName,'',A.Task,0,A.TaskID,now(),'ÂæÖÂ§ÑÁêÜ',0,UnitName,now()";
+                strHQL3 += " Select A.TaskID,A.Task,'Task',A.MakeManCode,A.MakeManName,'',now(),A.BeginDate,A.EndDate,A.MakeManCode,A.MakeManName,'',A.Task,0,A.TaskID,now(),'ToHandle',0,UnitName,now()";
                 strHQL3 += " From T_ProjectTask A Where A.TaskID = " + strTaskID;
                 strHQL3 += " and A.TaskID Not In (Select TaskID From T_TaskAssignRecord)";
                 ShareClass.RunSqlCommand(strHQL3);
@@ -524,7 +524,7 @@ public partial class TTCreateOtherTaskSAAS : System.Web.UI.Page
         IList lst = projectTaskBLL.GetAllProjectTasks(strHQL);
         projectTask = (ProjectTask)lst[0];
 
-        projectTask.Status = "ÂÖ≥Èó≠";
+        projectTask.Status = "Closed";
 
         try
         {
@@ -537,7 +537,7 @@ public partial class TTCreateOtherTaskSAAS : System.Web.UI.Page
             BT_UpdateAssign.Enabled = false;
             BT_Assign.Enabled = false;
 
-            LB_Status.Text = "ÂÖ≥Èó≠";
+            LB_Status.Text = "Closed";
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGBCG + "')", true);
         }
@@ -560,7 +560,7 @@ public partial class TTCreateOtherTaskSAAS : System.Web.UI.Page
         IList lst = projectTaskBLL.GetAllProjectTasks(strHQL);
         projectTask = (ProjectTask)lst[0];
 
-        projectTask.Status = "Â§ÑÁêÜ‰∏≠";
+        projectTask.Status = "InProgress";
 
         try
         {
@@ -571,7 +571,7 @@ public partial class TTCreateOtherTaskSAAS : System.Web.UI.Page
             BT_Assign.Enabled = true;
 
 
-            LB_Status.Text = "Â§ÑÁêÜ‰∏≠";
+            LB_Status.Text = "InProgress";
         }
         catch
         {
@@ -672,7 +672,7 @@ public partial class TTCreateOtherTaskSAAS : System.Web.UI.Page
         strHQL1 += " and ((to_char(BeginDate,'yyyymmdd') >= to_char(cast('" + DLC_BeginDate.Text + "' as timestamp) ,'yyyymmdd') and to_char(BeginDate,'yyyymmdd') <= to_char( cast('" + DLC_EndDate.Text + "' as timestamp),'yyyymmdd'))";
         strHQL1 += " or (to_char(EndDate,'yyyymmdd') >= to_char(cast('" + DLC_BeginDate.Text + "' as timestamp),'yyyymmdd') and to_char(EndDate,'yyyymmdd') <= to_char(cast('" + DLC_EndDate.Text + "' as timestamp),'yyyymmdd'))";
         strHQL1 += " or (to_char(BeginDate,'yyyymmdd') <= to_char(cast('" + DLC_BeginDate.Text + "' as timestamp),'yyyymmdd') and to_char(EndDate,'yyyymmdd') >= to_char(cast('" + DLC_EndDate.Text + "' as timestamp),'yyyymmdd')))";
-        strHQL1 += " and Type ='‰ªªÂä°'";
+        strHQL1 += " and Type ='Task'";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL1, "V_ProjectMember_WorkLoadSchedule");
 
@@ -700,7 +700,7 @@ public partial class TTCreateOtherTaskSAAS : System.Web.UI.Page
         strHQL1 += " and ((to_char(BeginDate,'yyyymmdd') >= to_char(cast('" + DLC_BeginDate.Text + "' as timestamp) ,'yyyymmdd') and to_char(BeginDate,'yyyymmdd') <= to_char( cast('" + DLC_EndDate.Text + "' as timestamp),'yyyymmdd'))";
         strHQL1 += " or (to_char(EndDate,'yyyymmdd') >= to_char(cast('" + DLC_BeginDate.Text + "' as timestamp),'yyyymmdd') and to_char(EndDate,'yyyymmdd') <= to_char(cast('" + DLC_EndDate.Text + "' as timestamp),'yyyymmdd'))";
         strHQL1 += " or (to_char(BeginDate,'yyyymmdd') <= to_char(cast('" + DLC_BeginDate.Text + "' as timestamp),'yyyymmdd') and to_char(EndDate,'yyyymmdd') >= to_char(cast('" + DLC_EndDate.Text + "' as timestamp),'yyyymmdd')))";
-        strHQL1 += " and Type ='‰ªªÂä°'";
+        strHQL1 += " and Type ='Task'";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL1, "V_ProjectMember_WorkLoadSchedule");
 
@@ -770,7 +770,7 @@ public partial class TTCreateOtherTaskSAAS : System.Web.UI.Page
         taskAssignRecord.PriorID = intPriorID;
         taskAssignRecord.RouteNumber = GetRouteNumber(intTaskID.ToString());
         taskAssignRecord.MakeDate = dtMakeDate;
-        taskAssignRecord.Status = "ÂæÖÂ§ÑÁêÜ";
+        taskAssignRecord.Status = "ToHandle";
 
         taskAssignRecord.FinishedNumber = 0;
         taskAssignRecord.UnitName = ""; 
@@ -783,7 +783,7 @@ public partial class TTCreateOtherTaskSAAS : System.Web.UI.Page
             strAssignID = ShareClass.GetMyCreatedMaxTaskAssignRecordID(intTaskID.ToString(), strUserCode);
             LB_ID.Text = strAssignID;
 
-            //BusinessForm,Â§ÑÁêÜÂÖ≥ËÅîÁöÑ‰∏öÂä°Ë°®ÂçïÊï∞ÊçÆ
+            //BusinessForm,¥¶¿Ìπÿ¡™µƒ“µŒÒ±Ìµ• ˝æ›
             ShareClass.InsertOrUpdateTaskAssignRecordWFXMLData("Task", intTaskID.ToString(), "TaskRecord", strAssignID, strUserCode);
 
             BT_UpdateAssign.Enabled = true;
@@ -791,11 +791,11 @@ public partial class TTCreateOtherTaskSAAS : System.Web.UI.Page
             BT_Assign.Enabled = true;
 
             LoadAssignRecord(LB_TaskNO.Text.Trim());
-            UpdateTaskStatus(intTaskID.ToString(), "Â§ÑÁêÜ‰∏≠");
+            UpdateTaskStatus(intTaskID.ToString(), "InProgress");
 
-            ShareClass.SendInstantMessage(Resources.lang.RenWuFenPaiTongZhi, ShareClass.GetUserName(strUserCode) + Resources.lang.GeiNiFenPaiLeRenWu + " :" + intTaskID.ToString() + "  " + strTask + "Ôºå" + Resources.lang.QingJiShiChuLi, strUserCode, strOperatorCode);
+            ShareClass.SendInstantMessage(Resources.lang.RenWuFenPaiTongZhi, ShareClass.GetUserName(strUserCode) + Resources.lang.GeiNiFenPaiLeRenWu + " :" + intTaskID.ToString() + "  " + strTask + "£¨" + Resources.lang.QingJiShiChuLi, strUserCode, strOperatorCode);
 
-            TB_Message.Text = ShareClass.GetUserName(strUserCode) + Resources.lang.GeiNiFenPaiLeRenWu + " :" + intTaskID.ToString() + "  " + "Ôºå" + Resources.lang.QingJiShiChuLi;
+            TB_Message.Text = ShareClass.GetUserName(strUserCode) + Resources.lang.GeiNiFenPaiLeRenWu + " :" + intTaskID.ToString() + "  " + "£¨" + Resources.lang.QingJiShiChuLi;
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFPCG + "')", true);
 
@@ -896,7 +896,7 @@ public partial class TTCreateOtherTaskSAAS : System.Web.UI.Page
             dtNowDate = DateTime.Now;
             strStatus = DataGrid1.Items[i].Cells[12].Text.Trim();
 
-            if (strStatus != "ÂÆåÊàê" | strStatus != "ÂÖ≥Èó≠")
+            if (strStatus != "Completed" | strStatus != "Closed")
             {
                 if (dtFinishedDate < dtNowDate)
                 {
@@ -918,7 +918,7 @@ public partial class TTCreateOtherTaskSAAS : System.Web.UI.Page
             dtNowDate = DateTime.Now;
             strStatus = DataGrid2.Items[i].Cells[10].Text.Trim();
 
-            if (strStatus != "ÂÆåÊàê" & strStatus != "Â∑≤ÂÆåÊàê")
+            if (strStatus != "Completed" & strStatus != "“—ÕÍ≥…")
             {
                 if (dtFinishedDate < dtNowDate)
                 {
@@ -985,7 +985,7 @@ public partial class TTCreateOtherTaskSAAS : System.Web.UI.Page
         lst = reqAssignRecordBLL.GetAllReqAssignRecords(strHQL);
         ReqAssignRecord reqAssignRecord = (ReqAssignRecord)lst[0];
 
-        reqAssignRecord.Status = "ËΩ¨‰ªª";
+        reqAssignRecord.Status = "ToTask";
 
         try
         {

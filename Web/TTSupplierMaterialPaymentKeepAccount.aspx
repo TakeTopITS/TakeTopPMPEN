@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSupplierMaterialPaymentKeepAccount.aspx.cs" Inherits="TTSupplierMaterialPaymentKeepAccount" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSupplierMaterialPaymentKeepAccount.aspx.cs" Inherits="TTSupplierMaterialPaymentKeepAccount" %>
 
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -128,7 +128,7 @@
                                         OnPageIndexChanged="DataGrid5_PageIndexChanged" PageSize="25" ShowHeader="false"
                                         Width="100%">
                                         <Columns>
-                                            <asp:TemplateColumn HeaderText="æ˜Žç»†">
+                                            <asp:TemplateColumn HeaderText="Ã÷Ï¸">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                 <ItemTemplate>
                                                     <a href='TTSupplierMaterialPaymentApplicantView.aspx?AOID=<%# DataBinder.Eval(Container.DataItem,"AOID") %>' target="_blank">
@@ -142,26 +142,26 @@
                                             <asp:BoundColumn DataField="AOID" HeaderText="AOID">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="AOName" HeaderText="åç§°">
+                                            <asp:BoundColumn DataField="AOName" HeaderText="Ãû³Æ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="PartA" HeaderText="ä¾›åº”å•†">
+                                            <asp:BoundColumn DataField="PartA" HeaderText="Supplier">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="CurrentTotalPaymentAmount" HeaderText="æ€»é‡‘é¢">
+                                            <asp:BoundColumn DataField="CurrentTotalPaymentAmount" HeaderText="×Ü½ð¶î">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="CurrencyType" HeaderText="å¸åˆ«">
+                                            <asp:BoundColumn DataField="CurrencyType" HeaderText="±Ò±ð">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="UserCode" DataNavigateUrlFormatString="TTUserInforView.aspx?UserCode={0}"
-                                                DataTextField="UserName" HeaderText="å§“å" Target="_blank">
+                                                DataTextField="UserName" HeaderText="ÐÕÃû" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:HyperLinkColumn>
-                                            <asp:BoundColumn DataField="CreateTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="åˆ›å»ºæ—¶é—´">
+                                            <asp:BoundColumn DataField="CreateTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="´´½¨Ê±¼ä">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                            <asp:TemplateColumn HeaderText="×´Ì¬">
                                                 <ItemTemplate>
                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                 </ItemTemplate>

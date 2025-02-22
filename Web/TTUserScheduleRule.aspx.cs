@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -29,7 +29,7 @@ public partial class TTUserScheduleRule : System.Web.UI.Page
         strUserName = ShareClass.GetUserName(strUserCode);
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "Â∫ìÂ≠òÁÆ°ÁêÜ", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ø‚¥Êπ‹¿Ì", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -55,7 +55,7 @@ public partial class TTUserScheduleRule : System.Web.UI.Page
                 ListItem li = new ListItem() { Text = dr["ScheduleName"].ToString(), Value = dr["ID"].ToString() };
                 tb_Schedule.Items.Add(li);
             }
-            tb_Schedule.Items.Insert(0, new ListItem() { Text = "ËØ∑ÈÄâÊã©", Value = "0" });
+            tb_Schedule.Items.Insert(0, new ListItem() { Text = "PleaseSelect", Value = "0" });
         }
     }
    

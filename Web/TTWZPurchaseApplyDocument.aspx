@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPurchaseApplyDocument.aspx.cs" Inherits="TTWZPurchaseApplyDocument" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPurchaseApplyDocument.aspx.cs" Inherits="TTWZPurchaseApplyDocument" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>æŠ•æ ‡æ–‡ä»¶</title>
+    <title>Í¶±êÎÄ¼þ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script language="javascript">
@@ -79,7 +79,7 @@
                                                     
                                                     <tr>
                                                         <td style="text-align: left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,TouBiaoWenJian%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,TouBiaoWenJian%>"></asp:Label>£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="3">
                                                             <asp:FileUpload ID="FUP_PurchaseDocument" runat="server" />
@@ -92,7 +92,7 @@
                                                     <tr>
                                                         <td style="text-align: center" class="formItemBgStyle" colspan="2">
                                                             <input id="btnClose()" class="inpu" onclick="LoadParentLit()"
-                                                                type="button" value="å…³é—­" />
+                                                                type="button" value="Closed" />
                                                         </td>
                                                     </tr>
                                                 </table>

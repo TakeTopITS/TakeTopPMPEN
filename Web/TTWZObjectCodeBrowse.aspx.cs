@@ -1,4 +1,4 @@
-锘縰sing ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System; using System.Resources;
 using System.Collections;
@@ -23,7 +23,7 @@ public partial class TTWZObjectCodeBrowse : System.Web.UI.Page
     {
         string strUserCode = Session["UserCode"].ToString(); ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (!IsPostBack)
         {
-            //鍔犺浇鍗曚綅鍒楄〃
+            //加载单位列表
             BindUnitData();
 
             if (!string.IsNullOrEmpty(Request.QueryString["ObjectCode"]))
@@ -36,7 +36,7 @@ public partial class TTWZObjectCodeBrowse : System.Web.UI.Page
 
             }
 
-            //鍔犺浇鎺т欢
+            //加载控件
             SetControlState();
 
         }
@@ -83,32 +83,32 @@ public partial class TTWZObjectCodeBrowse : System.Web.UI.Page
         DDL_ConvertUnit.DataSource = lstWZSpan;
         DDL_ConvertUnit.DataBind();
 
-        DDL_ConvertUnit.Items.Insert(0, new ListItem("閫夋嫨", "0"));
+        DDL_ConvertUnit.Items.Insert(0, new ListItem("选择", "0"));
     }
 
 
     private void SetControlState()
     {
-        TXT_ObjectName.ReadOnly = true;            //鐗╄祫鍚嶇О
+        TXT_ObjectName.ReadOnly = true;            //物资名称
         TXT_ObjectName.BackColor = Color.White;
-        TXT_Level.ReadOnly = true;                 //绾у埆
+        TXT_Level.ReadOnly = true;                 //级别
         TXT_Level.BackColor = Color.White;
-        TXT_Model.ReadOnly = true;                 //瑙勬牸鍨嬪彿
+        TXT_Model.ReadOnly = true;                 //规格型号
         TXT_Model.BackColor = Color.White;
-        DDL_Unit.Enabled = false;                     //璁￠噺鍗曚綅
+        DDL_Unit.Enabled = false;                     //计量单位
         DDL_Unit.BackColor = Color.White;
-        DDL_ConvertUnit.Enabled = false;             //鎹㈢畻鍗曚綅
+        DDL_ConvertUnit.Enabled = false;             //换算单位
         DDL_ConvertUnit.BackColor = Color.White;
 
-        TXT_Market.ReadOnly = true;                //甯傚満琛屾儏
+        TXT_Market.ReadOnly = true;                //市场行情
         TXT_Market.BackColor = Color.White;
-        TXT_ConvertRatio.ReadOnly = true;          //鎹㈢畻绯绘暟
+        TXT_ConvertRatio.ReadOnly = true;          //换算系数
         TXT_ConvertRatio.BackColor = Color.White;
-        TXT_Standard.ReadOnly = true;              //鏍囧噯
+        TXT_Standard.ReadOnly = true;              //标准
         TXT_Standard.BackColor = Color.White;
-        TXT_ReferStandard.ReadOnly = true;         //瀵圭収鏍囧噯
+        TXT_ReferStandard.ReadOnly = true;         //对照标准
         TXT_ReferStandard.BackColor = Color.White;
-        TXT_ReferDesc.ReadOnly = true;             //瀵圭収鎻忚堪
+        TXT_ReferDesc.ReadOnly = true;             //对照描述
         TXT_ReferDesc.BackColor = Color.White;
 
     }

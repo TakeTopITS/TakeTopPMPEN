@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
 using System.Collections;
@@ -23,7 +23,7 @@ public partial class TakeTopSoftRent_BaseDataSet : System.Web.UI.Page
         strUserName = ShareClass.GetUserName(strUserCode);
         LB_UserName.Text = strUserName;
 
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "è½¯ä»¶ç§Ÿç”¨å»ºç«™å‚æ•°", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "Èí¼ş×âÓÃ½¨Õ¾²ÎÊı", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -330,7 +330,7 @@ public partial class TakeTopSoftRent_BaseDataSet : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¤±è´¥ï¼Œè¦å¤åˆ¶çš„ç«™ç‚¹ä¸èƒ½ä¸ºç©ºï¼Œè¯·æ£€æŸ¥ï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Ê§°Ü£¬Òª¸´ÖÆµÄÕ¾µã²»ÄÜÎª¿Õ£¬Çë¼ì²é£¡')", true);
         }
     }
     protected void BT_CanUse_Click(object sender, EventArgs e)
@@ -367,12 +367,12 @@ public partial class TakeTopSoftRent_BaseDataSet : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æç¤ºï¼Œæ­¤ç«™ç‚¹çš„æ•°æ®å·²åº”ç”¨ï¼Œä¸èƒ½åˆ é™¤ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÌáÊ¾£¬´ËÕ¾µãµÄÊı¾İÒÑÓ¦ÓÃ£¬²»ÄÜÉ¾³ı£¬Çë¼ì²é£¡')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¤±è´¥ï¼Œè¦åˆ é™¤çš„ç«™ç‚¹ä¸èƒ½ä¸ºç©ºï¼Œè¯·æ£€æŸ¥ï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Ê§°Ü£¬ÒªÉ¾³ıµÄÕ¾µã²»ÄÜÎª¿Õ£¬Çë¼ì²é£¡')", true);
 
         }
     }
@@ -386,7 +386,7 @@ public partial class TakeTopSoftRent_BaseDataSet : System.Web.UI.Page
 
         LoadRentSiteBaseData();
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å…¨éƒ¨æ›´æ–°æˆåŠŸï¼')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('È«²¿¸üĞÂ³É¹¦£¡')", true);
     }
 
     protected void LoadRentSiteBaseData()

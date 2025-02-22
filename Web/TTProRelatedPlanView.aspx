@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProRelatedPlanView.aspx.cs" Inherits="TTProRelatedPlanView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProRelatedPlanView.aspx.cs" Inherits="TTProRelatedPlanView" %>
 
 <%@ Register Assembly="DayPilot.MonthPicker" Namespace="DayPilot.Web.UI" TagPrefix="DayPilot" %>
 
@@ -64,7 +64,7 @@
                                         </td>
                                         <td align="right">
                                             <a href="#" onclick="preview1()">
-                                                <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" />
+                                                <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" />
                                             </a>
                                         </td>
                                     </tr>
@@ -131,7 +131,7 @@
                                                     </asp:Legend>
                                                 </Legends>
                                                 <Titles>
-                                                    <asp:Title Name="æ ‡é¢˜" Alignment="TopCenter" IsDockedInsideChartArea="False" DockedToChartArea="ChartArea1"></asp:Title>
+                                                    <asp:Title Name="±êÌâ" Alignment="TopCenter" IsDockedInsideChartArea="False" DockedToChartArea="ChartArea1"></asp:Title>
                                                 </Titles>
                                             </asp:Chart>--%>
                                         </td>

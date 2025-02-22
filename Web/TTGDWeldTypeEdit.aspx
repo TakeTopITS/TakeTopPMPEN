@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDWeldTypeEdit.aspx.cs" Inherits="TTGDWeldTypeEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDWeldTypeEdit.aspx.cs" Inherits="TTGDWeldTypeEdit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ç„ŠæŽ¥ç±»åž‹ç¼–è¾‘</title>
+    <title>º¸½ÓÀàÐÍ±à¼­</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
@@ -57,13 +57,13 @@
                                                 <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td style="text-align: right" class="formItemBgStyle">
-                                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_Type" runat="server"></asp:TextBox>
                                                         </td>
                                                         <td style="text-align: right" class="formItemBgStyle">
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ShuoMing%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ShuoMing%>"></asp:Label>£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="3">
                                                             <asp:TextBox ID="TXT_Description" runat="server" Width="400px"></asp:TextBox>
@@ -71,16 +71,16 @@
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: right" class="formItemBgStyle">
-                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XiShu%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XiShu%>"></asp:Label>£º</td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_Factor" runat="server"></asp:TextBox>
                                                         </td>
                                                         <td style="text-align: right" class="formItemBgStyle">
-                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DaiHao%>"></asp:Label>ï¼š</td>
+                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,DaiHao%>"></asp:Label>£º</td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_Code" runat="server"></asp:TextBox>
                                                         </td>
-                                                        <td style="text-align: right" class="formItemBgStyle">keyï¼š</td>
+                                                        <td style="text-align: right" class="formItemBgStyle">key£º</td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_KeyCode" runat="server"></asp:TextBox>
                                                         </td>
@@ -88,7 +88,7 @@
                                                     <tr>
                                                         <td style="text-align: center" class="formItemBgStyle" colspan="6">
                                                             <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnOK_Click" />&nbsp;&nbsp;
-                                                    <input type="button" value="è¿”å›ž" id="BT_Return" class="inpu" onclick="window.location.href = 'TTGDWeldTypeList.aspx'" />
+                                                    <input type="button" value="·µ»Ø" id="BT_Return" class="inpu" onclick="window.location.href = 'TTGDWeldTypeList.aspx'" />
                                                         </td>
                                                     </tr>
                                                 </table>

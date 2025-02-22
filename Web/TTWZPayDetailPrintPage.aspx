@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPayDetailPrintPage.aspx.cs" Inherits="TTWZPayDetailPrintPage" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPayDetailPrintPage.aspx.cs" Inherits="TTWZPayDetailPrintPage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -84,8 +84,8 @@
             <div id="divOver" style="text-align: center">
                 <br />
                 <p class="noprint">
-                    <input id="print" type="button" class="btn" value="确认打印" onclick="printpage();" />
-                    <input id="print0" type="button" value="关闭" onclick="CloseLayer();" class="btn" />
+                    <input id="print" type="button" class="btn" value="ȷ�ϴ�ӡ" onclick="printpage();" />
+                    <input id="print0" type="button" value="Closed" onclick="CloseLayer();" class="btn" />
                 </p>
             </div>
         </center>

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -15,23 +15,23 @@ public partial class TTOfficeDocumentUploadDocForParentWindow : System.Web.UI.Pa
 
     protected void BtnUP_Click(object sender, EventArgs e)
     {
-        //ä¸Šä¼ é™„ä»¶
+        //ÉÏ´«¸½¼ş
         if (AttachFile.HasFile)
         {
             string strFileName1, strExtendName, strAttachName;
             string strUserCode = Session["UserCode"].ToString();
 
-            strFileName1 = this.AttachFile.FileName;//è·å–ä¸Šä¼ æ–‡ä»¶çš„æ–‡ä»¶å,åŒ…æ‹¬åç¼€
-            strExtendName = System.IO.Path.GetExtension(strFileName1);//è·å–æ‰©å±•å
+            strFileName1 = this.AttachFile.FileName;//»ñÈ¡ÉÏ´«ÎÄ¼şµÄÎÄ¼şÃû,°üÀ¨ºó×º
+            strExtendName = System.IO.Path.GetExtension(strFileName1);//»ñÈ¡À©Õ¹Ãû
 
-            DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+            DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
 
             string strFileName2 = System.IO.Path.GetFileName(strFileName1);
             string strExtName = Path.GetExtension(strFileName2);
 
             if (strExtName.ToLower().IndexOf("doc") < 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¤±è´¥ï¼Œåªèƒ½ä¸Šä¼ wordæ–‡æ¡£ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Ê§°Ü£¬Ö»ÄÜÉÏ´«wordÎÄµµ£¬Çë¼ì²é£¡')", true);
                 return;
             }
 

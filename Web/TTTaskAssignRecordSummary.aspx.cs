@@ -248,7 +248,7 @@ public partial class TTTaskAssignRecordSummary : System.Web.UI.Page
             dtNowDate = DateTime.Now;
             strStatus = DataGrid3.Items[i].Cells[11].Text.Trim();
 
-            if (strStatus != "完成" & strStatus != "已完成")
+            if (strStatus != "Completed" & strStatus != "已完成")
             {
                 if (dtFinishedDate < dtNowDate)
                 {

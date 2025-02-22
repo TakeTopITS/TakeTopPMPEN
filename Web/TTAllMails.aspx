@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAllMails.aspx.cs" Inherits="TTAllMails" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAllMails.aspx.cs" Inherits="TTAllMails" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -102,7 +102,7 @@
                                                                             
                                                                             <ItemStyle CssClass="itemBorder" />
                                                                             <Columns>
-                                                                                <asp:TemplateColumn HeaderText="éƒ¨é—¨æˆå‘˜ï¼š">
+                                                                                <asp:TemplateColumn HeaderText="²¿ÃÅ³ÉÔ±£º">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_UserCode" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>'
                                                                                             Style="text-align: center" />
@@ -246,7 +246,7 @@
                                                                                                             </ItemTemplate>
                                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                                         </asp:TemplateField>
-                                                                                                        <asp:TemplateField HeaderText="ä¸»é¢˜">
+                                                                                                        <asp:TemplateField HeaderText="Ö÷Ìâ">
                                                                                                             <ItemTemplate>
                                                                                                                 <a href='TTMailView.aspx?MailID=<%# DataBinder.Eval(Container.DataItem,"MailID") %>&FolderID=<%# DataBinder.Eval(Container.DataItem,"FolderID") %> '
                                                                                                                     target="_blank">
@@ -254,7 +254,7 @@
                                                                                                             </ItemTemplate>
                                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
                                                                                                         </asp:TemplateField>
-                                                                                                        <asp:TemplateField HeaderText="å‘ä»¶äºº">
+                                                                                                        <asp:TemplateField HeaderText="·¢¼þÈË">
                                                                                                             <ItemTemplate>
                                                                                                                 <a href='TTMailView.aspx?MailID=<%# DataBinder.Eval(Container.DataItem,"MailID") %>&FolderID=<%# DataBinder.Eval(Container.DataItem,"FolderID") %>'
                                                                                                                     target="_blank">
@@ -263,13 +263,13 @@
                                                                                                             </ItemTemplate>
                                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                                                                         </asp:TemplateField>
-                                                                                                        <asp:TemplateField HeaderText="åˆ›å»ºæ—¶é—´">
+                                                                                                        <asp:TemplateField HeaderText="´´½¨Ê±¼ä">
                                                                                                             <ItemTemplate>
                                                                                                                 <%# DataBinder.Eval(Container.DataItem,"SenderDate")%>
                                                                                                             </ItemTemplate>
                                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                                         </asp:TemplateField>
-                                                                                                        <asp:TemplateField HeaderText="é‚®ä»¶å¤§å°">
+                                                                                                        <asp:TemplateField HeaderText="ÓÊ¼þ´óÐ¡">
                                                                                                             <ItemTemplate>
                                                                                                                 <%# DataBinder.Eval(Container.DataItem,"Contain") %>B&nbsp;<asp:Image runat="server"
                                                                                                                     ID="AttachmentFlag" ImageUrl="Images/attach.gif" Visible='<%# (bool)DataBinder.Eval(Container.DataItem,"AttachmentFlag") %>' />

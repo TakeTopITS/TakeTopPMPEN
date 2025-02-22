@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -29,7 +29,7 @@ public partial class TTUserPWDFindSAAS : System.Web.UI.Page
 
         if (Page.IsPostBack == false)
         {
-            //æ£€æŸ¥æ³¨æ˜¯å¦ä¸ºSAASç‰ˆæœ¬
+            //¼ì²é×¢ÊÇ·ñÎªSAAS°æ±¾
             string strServerName = System.Configuration.ConfigurationManager.AppSettings["ServerName"];
             TakeTopLicense license = new TakeTopLicense();
             string strSystemVersionType = license.GetVerType(strServerName); ;
@@ -67,7 +67,7 @@ public partial class TTUserPWDFindSAAS : System.Web.UI.Page
                 {
                     try
                     {
-                        msg.SendPhoneMSMBySP(strMobilePhone, "é¡¹ç›®å®éªŒè¯ç : " + TB_Password.Text.Trim(), "ADMIN");
+                        msg.SendPhoneMSMBySP(strMobilePhone, "ÏîÄ¿±¦ÑéÖ¤Âë: " + TB_Password.Text.Trim(), "ADMIN");
                     }
                     catch
                     {
@@ -75,7 +75,7 @@ public partial class TTUserPWDFindSAAS : System.Web.UI.Page
 
                     try
                     {
-                        msg.SendMail(strSendUserCode, "é¡¹ç›®å®éªŒè¯ç ", strCheckCode, "ADMIN");
+                        msg.SendMail(strSendUserCode, "ÏîÄ¿±¦ÑéÖ¤Âë", strCheckCode, "ADMIN");
                     }
                     catch
                     {
@@ -83,11 +83,11 @@ public partial class TTUserPWDFindSAAS : System.Web.UI.Page
 
                     try
                     {
-                        //å‘é€æ¶ˆæ¯åˆ°å¾®ä¿¡ç”¨æˆ·ï¼Œç”¨äºå…¬ä¼—å·
+                        //·¢ËÍÏûÏ¢µ½Î¢ĞÅÓÃ»§£¬ÓÃÓÚ¹«ÖÚºÅ
                         string strOpenID = TakeTopCore.WXHelper.GetUserWeXinOpenIDByUserCode(strSendUserCode);
                         if (strOpenID != "")
                         {
-                            msg.SendWeChatGZMsg(strOpenID, "é¡¹ç›®å®éªŒè¯ç : " + strCheckCode);
+                            msg.SendWeChatGZMsg(strOpenID, "ÏîÄ¿±¦ÑéÖ¤Âë: " + strCheckCode);
                         }
                     }
                     catch
@@ -187,14 +187,14 @@ public partial class TTUserPWDFindSAAS : System.Web.UI.Page
     protected string GetCheckCode()
     {
         string chkCode = string.Empty;
-        //é¢œè‰²åˆ—è¡¨ï¼Œç”¨äºéªŒè¯ç ã€å™ªçº¿ã€å™ªç‚¹ 
+        //ÑÕÉ«ÁĞ±í£¬ÓÃÓÚÑéÖ¤Âë¡¢ÔëÏß¡¢Ôëµã 
         Color[] color = { Color.Black, Color.Red, Color.Blue, Color.Green, Color.Orange, Color.Brown, Color.Brown, Color.DarkBlue };
-        //å­—ä½“åˆ—è¡¨ï¼Œç”¨äºéªŒè¯ç  
+        //×ÖÌåÁĞ±í£¬ÓÃÓÚÑéÖ¤Âë 
         string[] font = { "Times New Roman", "MS Mincho", "Book Antiqua", "Gungsuh", "PMingLiU", "Impact" };
-        //éªŒè¯ç çš„å­—ç¬¦é›†ï¼Œå»æ‰äº†ä¸€äº›å®¹æ˜“æ··æ·†çš„å­—ç¬¦ 
+        //ÑéÖ¤ÂëµÄ×Ö·û¼¯£¬È¥µôÁËÒ»Ğ©ÈİÒ×»ìÏıµÄ×Ö·û 
         char[] character = { '2', '3', '4', '5', '6', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'R', 'S', 'T', 'W', 'X', 'Y' };
         Random rnd = new Random();
-        //ç”ŸæˆéªŒè¯ç å­—ç¬¦ä¸² 
+        //Éú³ÉÑéÖ¤Âë×Ö·û´® 
         for (int i = 0; i < 6; i++)
         {
             chkCode += character[rnd.Next(character.Length)];

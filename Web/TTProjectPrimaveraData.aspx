@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectPrimaveraData.aspx.cs" Inherits="TTProjectPrimaveraData" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectPrimaveraData.aspx.cs" Inherits="TTProjectPrimaveraData" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -64,7 +64,7 @@
                                                     <tr>
                                                         <td class="formItemBgStyle" style="text-align: right">
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XMDCJKBM%>"></asp:Label>
-                                                            ï¼š</td>
+                                                            £º</td>
                                                         <td class="formItemBgStyle" style="text-align: left">
                                                             <asp:DropDownList ID="ddl_Code" runat="server" DataTextField="Code" DataValueField="Code">
                                                             </asp:DropDownList>
@@ -79,7 +79,7 @@
                                                     <tr>
                                                         <td class="formItemBgStyle" style="text-align: right">
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XMDRJKBM%>"></asp:Label>
-                                                            ï¼š</td>
+                                                            £º</td>
                                                         <td class="formItemBgStyle" style="text-align: left">
                                                             <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZYEJXMGLPT%>"></asp:Label>
                                                         </td>
@@ -93,7 +93,7 @@
                                                     <tr>
                                                         <td class="formItemBgStyle" style="text-align: center" colspan="2">
                                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,QAZDRXMWBS%>"></asp:Label>
-                                                            â€”&gt;<asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,DaoRuZuoYeShuJu%>"></asp:Label>â€”&gt;<asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,DRXMFYBZYCJXQWDLSXFZWFDRSJ%>"></asp:Label></td>
+                                                            ¡ª&gt;<asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,DaoRuZuoYeShuJu%>"></asp:Label>¡ª&gt;<asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,DRXMFYBZYCJXQWDLSXFZWFDRSJ%>"></asp:Label></td>
                                                         <td class="formItemBgStyle" style="text-align: center">
                                                             <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="<%$ Resources:lang,DaoChuXiangMuFeiYong%>" Width="120px" />
                                                         </td>

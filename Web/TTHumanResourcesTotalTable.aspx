@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTHumanResourcesTotalTable.aspx.cs" Inherits="TTHumanResourcesTotalTable" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTHumanResourcesTotalTable.aspx.cs" Inherits="TTHumanResourcesTotalTable" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>È°πÁõÆ‰∫∫ÂäõËµÑÊ∫êË°®</title>
+    <title>œÓƒø»À¡¶◊ ‘¥±Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -62,17 +62,17 @@
                                                 <table width="70%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td class="formItemBgStyle" style="text-align: right">
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>Ôºö</td>
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>£∫</td>
                                                         <td class="formItemBgStyle" style="text-align: left">
                                                             <asp:DropDownList ID="ddl_ProjectID" runat="server" DataTextField="ProjectName" DataValueField="ProjectID">
                                                             </asp:DropDownList>
                                                         </td>
                                                         <td class="formItemBgStyle" style="text-align: right">
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>Ôºö</td>
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£∫</td>
                                                         <td class="formItemBgStyle" style="text-align: left">
                                                             <asp:DropDownList ID="DropDownList1" runat="server">
-                                                                <asp:ListItem Value="ÊåâÂ∑•Áßç" Text="<%$ Resources:lang,AnGongZhong%>" />
-                                                                <asp:ListItem Value="ÊåâÂ≠êÁªÑ" Text="<%$ Resources:lang,AnZiZu%>" />
+                                                                <asp:ListItem Value="∞¥π§÷÷" Text="<%$ Resources:lang,AnGongZhong%>" />
+                                                                <asp:ListItem Value="∞¥◊”◊È" Text="<%$ Resources:lang,AnZiZu%>" />
                                                             </asp:DropDownList>
                                                         </td>
                                                         <td class="formItemBgStyle" style="text-align: center">
@@ -111,15 +111,15 @@
                                                     <asp:DataGrid ID="DataGrid1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                         OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="5" Width="100%" ShowHeader="false">
                                                         <Columns>
-                                                            <asp:BoundColumn DataField="WorkType" HeaderText="ËÅåÁß∞/Â∑•Áßç">
+                                                            <asp:BoundColumn DataField="WorkType" HeaderText="÷∞≥∆/π§÷÷">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="NumberUsedTotal" HeaderText="ËÆ°ÂàíÂ∑•Êó∂">
+                                                            <asp:BoundColumn DataField="NumberUsedTotal" HeaderText="º∆ªÆπ§ ±">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="NumberAllTotal" HeaderText="ÂÇ®Â§áÂ∑•Êó∂">
+                                                            <asp:BoundColumn DataField="NumberAllTotal" HeaderText="¥¢±∏π§ ±">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                                 <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                             </asp:BoundColumn>
@@ -154,13 +154,13 @@
                                                                 </table>
                                                                 <asp:DataGrid ID="DataGrid2" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" OnPageIndexChanged="DataGrid2_PageIndexChanged" PageSize="5" ShowHeader="False" Width="100%">
                                                                     <Columns>
-                                                                        <asp:BoundColumn DataField="HumanSubgroups" HeaderText="‰∫∫ÂäõÂ≠êÁªÑ">
+                                                                        <asp:BoundColumn DataField="HumanSubgroups" HeaderText="»À¡¶◊”◊È">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="40%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="NumberUsedTotal" HeaderText="ËÆ°ÂàíÂ∑•Êó∂">
+                                                                        <asp:BoundColumn DataField="NumberUsedTotal" HeaderText="º∆ªÆπ§ ±">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="30%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="NumberAllTotal" HeaderText="ÂÇ®Â§áÂ∑•Êó∂">
+                                                                        <asp:BoundColumn DataField="NumberAllTotal" HeaderText="¥¢±∏π§ ±">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                         </asp:BoundColumn>
                                                                     </Columns>

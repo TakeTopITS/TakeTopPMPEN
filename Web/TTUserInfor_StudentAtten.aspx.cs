@@ -1,4 +1,4 @@
-﻿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -89,7 +89,7 @@ public partial class TTUserInfor_StudentAtten : System.Web.UI.Page
 
 
 //    select StudentCode,StudentName,SUBSTRING(to_char( AttendanceTime, 'yyyy-mm-dd'),0,7) as AttendanceTime,COUNT(1) as MonthNumber from T_ProjectMemberStudentAttendance
-//where IsStudy = '是'
+//where IsStudy = 'YES'
 //group by StudentCode,StudentName,SUBSTRING(to_char( AttendanceTime, 'yyyy-mm-dd'),0,7)
 
 }

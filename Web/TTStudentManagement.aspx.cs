@@ -1,4 +1,4 @@
-锘縰sing System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -88,7 +88,7 @@ public partial class TTStudentManagement : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_StudentNumber.Text = "瀛︾敓鏁帮細" + dtStudent.Rows.Count.ToString() ;
+        LB_StudentNumber.Text = "学生数：" + dtStudent.Rows.Count.ToString() ;
     }
 
     protected void BT_Find_Click(object sender, EventArgs e)
@@ -116,7 +116,7 @@ public partial class TTStudentManagement : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_StudentNumber.Text = "瀛︾敓鏁帮細" + dtStudent.Rows.Count.ToString() ;
+        LB_StudentNumber.Text = "学生数：" + dtStudent.Rows.Count.ToString() ;
     }
 
 

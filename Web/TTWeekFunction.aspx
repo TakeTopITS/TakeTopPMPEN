@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWeekFunction.aspx.cs" Inherits="TTWeekFunction" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWeekFunction.aspx.cs" Inherits="TTWeekFunction" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>å‘¨æ£€</title>
+    <title>ÖÜ¼ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript">
@@ -14,12 +14,12 @@
             if (sObj.style.display != "none") {
                 sObj.style.display = "none";
                 obj1.className = "c";
-                obj1.title = "å±•å¼€";
+                obj1.title = "Õ¹¿ª";
                 $("#HF_DivState").val("close");
             } else {
                 sObj.style.display = "block";
                 obj1.className = "";
-                obj1.title = "æ”¶ç¼©";
+                obj1.title = "ÊÕËõ";
                 $("#HF_DivState").val("open");
             }
             obj1.blur();

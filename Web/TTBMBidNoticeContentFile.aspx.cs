@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
@@ -51,15 +51,15 @@ public partial class TTBMBidNoticeContentFile : System.Web.UI.Page
 
     protected string UploadAttach()
     {
-        //ä¸Šä¼ é™„ä»¶
+        //ÉÏ´«¸½¼ş
         if (AttachFile.HasFile)
         {
             string strFileName1, strExtendName;
 
-            strFileName1 = this.AttachFile.FileName;//è·å–ä¸Šä¼ æ–‡ä»¶çš„æ–‡ä»¶å,åŒ…æ‹¬åç¼€
-            strExtendName = System.IO.Path.GetExtension(strFileName1);//è·å–æ‰©å±•å
+            strFileName1 = this.AttachFile.FileName;//»ñÈ¡ÉÏ´«ÎÄ¼şµÄÎÄ¼şÃû,°üÀ¨ºó×º
+            strExtendName = System.IO.Path.GetExtension(strFileName1);//»ñÈ¡À©Õ¹Ãû
 
-            DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+            DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
 
             string strFileName2 = System.IO.Path.GetFileName(strFileName1);
             string strExtName = Path.GetExtension(strFileName2);
@@ -175,7 +175,7 @@ public partial class TTBMBidNoticeContentFile : System.Web.UI.Page
     }
 
     /// <summary>
-    /// æ–°å¢æˆ–æ›´æ–°æ—¶ï¼Œæ‹›æ ‡æ–‡ä»¶åç§°æ˜¯å¦å­˜åœ¨ï¼Œå­˜åœ¨è¿”å›trueï¼›ä¸å­˜åœ¨è¿”å›falseã€‚
+    /// ĞÂÔö»ò¸üĞÂÊ±£¬ÕĞ±êÎÄ¼şÃû³ÆÊÇ·ñ´æÔÚ£¬´æÔÚ·µ»Øtrue£»²»´æÔÚ·µ»Øfalse¡£
     /// </summary>
     /// <param name="strBarCode"></param>
     /// <param name="strId"></param>
@@ -206,7 +206,7 @@ public partial class TTBMBidNoticeContentFile : System.Web.UI.Page
     {
         string strHQL;
         IList lst;
-        //ç»‘å®šæ‹›æ ‡è®¡åˆ’åç§°
+        //°ó¶¨ÕĞ±ê¼Æ»®Ãû³Æ
         strHQL = "From BMBidPlan as bMBidPlan Where bMBidPlan.ID='" + strID + "' ";
         BMBidPlanBLL bMBidPlanBLL = new BMBidPlanBLL();
         lst = bMBidPlanBLL.GetAllBMBidPlans(strHQL);
@@ -220,7 +220,7 @@ public partial class TTBMBidNoticeContentFile : System.Web.UI.Page
     }
 
     /// <summary>
-    /// æ–°å¢æ—¶ï¼Œè·å–è¡¨T_BMBidNoticeContentFileä¸­æœ€å¤§ç¼–å·ã€‚
+    /// ĞÂÔöÊ±£¬»ñÈ¡±íT_BMBidNoticeContentFileÖĞ×î´ó±àºÅ¡£
     /// </summary>
     /// <param name="strBarCode"></param>
     /// <param name="strId"></param>

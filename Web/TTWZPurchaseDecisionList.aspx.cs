@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +21,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
         strUserCode = Session["UserCode"] != null ? Session["UserCode"].ToString() : "";
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "鏈熷垵鏁版嵁瀵煎叆", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "期初数据导入", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -74,7 +74,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
                     left join T_WZSupplier s6 on p.SupplierCode6 = s6.SupplierCode
                     where 
                   
-                    p.Progress in ('璇勬爣') 
+                    p.Progress in ('评标') 
                     and 
                     (p.PurchaseEngineer = '{0}'
                     or p.TenderCompetent = '{0}'
@@ -99,7 +99,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
             dtPurchaseEndTime = DateTime.Parse(dtPurchase.Rows[i]["PurchaseEndTime"].ToString());
             strProgress = dtPurchase.Rows[i]["Progress"].ToString();
 
-            if((strProgress == "璇环" | strProgress == "璇勬爣") & dtPurchaseEndTime <= DateTime .Now )
+            if((strProgress == "询价" | strProgress == "评标") & dtPurchaseEndTime <= DateTime .Now )
             {
                 ((LinkButton)(DG_List.Items[i].FindControl("LIB_Tender"))).Visible = true;
             }
@@ -177,7 +177,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
                     left join T_WZSupplier s6 on p.SupplierCode6 = s6.SupplierCode
                     where 
                  
-                    p.Progress in ('璇勬爣')
+                    p.Progress in ('评标')
                     and 
                     (p.PurchaseEngineer = '{0}'
                     or p.TenderCompetent = '{0}'
@@ -217,7 +217,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
             dtPurchaseEndTime = DateTime.Parse(dtPurchase.Rows[i]["PurchaseEndTime"].ToString());
             strProgress = dtPurchase.Rows[i]["Progress"].ToString();
 
-            if ((strProgress == "璇环" | strProgress == "璇勬爣") & dtPurchaseEndTime <= DateTime.Now)
+            if ((strProgress == "询价" | strProgress == "评标") & dtPurchaseEndTime <= DateTime.Now)
             {
                 ((LinkButton)(DG_List.Items[i].FindControl("LIB_Tender"))).Visible = true;
             }
@@ -272,7 +272,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
                     left join T_WZSupplier s6 on p.SupplierCode6 = s6.SupplierCode
                     where 
                   
-                    p.Progress in ('璇勬爣')
+                    p.Progress in ('评标')
                     and 
                     (p.PurchaseEngineer = '{0}'
                     or p.TenderCompetent = '{0}'
@@ -313,7 +313,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
             dtPurchaseEndTime = DateTime.Parse(dtPurchase.Rows[i]["PurchaseEndTime"].ToString());
             strProgress = dtPurchase.Rows[i]["Progress"].ToString();
 
-            if ((strProgress == "璇环" | strProgress == "璇勬爣") & dtPurchaseEndTime <= DateTime.Now)
+            if ((strProgress == "询价" | strProgress == "评标") & dtPurchaseEndTime <= DateTime.Now)
             {
                 ((LinkButton)(DG_List.Items[i].FindControl("LIB_Tender"))).Visible = true;
             }
@@ -368,7 +368,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
                     left join T_WZSupplier s6 on p.SupplierCode6 = s6.SupplierCode
                     where 
                   
-                    p.Progress in ('璇勬爣')
+                    p.Progress in ('评标')
                     and 
                     (p.PurchaseEngineer = '{0}'
                     or p.TenderCompetent = '{0}'
@@ -409,7 +409,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
             dtPurchaseEndTime = DateTime.Parse(dtPurchase.Rows[i]["PurchaseEndTime"].ToString());
             strProgress = dtPurchase.Rows[i]["Progress"].ToString();
 
-            if ((strProgress == "璇环" | strProgress == "璇勬爣") & dtPurchaseEndTime <= DateTime.Now)
+            if ((strProgress == "询价" | strProgress == "评标") & dtPurchaseEndTime <= DateTime.Now)
             {
                 ((LinkButton)(DG_List.Items[i].FindControl("LIB_Tender"))).Visible = true;
             }
@@ -424,7 +424,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
     
 
     /// <summary>
-    ///  閲嶆柊鍔犺浇鍒楄〃
+    ///  重新加载列表
     /// </summary>
     protected void BT_RelaceLoad_Click(object sender, EventArgs e)
     {

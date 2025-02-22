@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
 using System.Collections;
@@ -27,7 +27,7 @@ public partial class TTDefectAssignRecord : System.Web.UI.Page
         strDefectID = defectment.DefectID.ToString();
         strDefectName = defectment.DefectName.Trim();
 
-        //this.Title = "ç¼ºé™·ï¼š" + strDefectID + "  " + strDefectName + " çš„æ‰€æœ‰åˆ†æ´¾è®°å½•ï¼";
+        //this.Title = "È±Ïİ£º" + strDefectID + "  " + strDefectName + " µÄËùÓĞ·ÖÅÉ¼ÇÂ¼£¡";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
@@ -38,7 +38,7 @@ public partial class TTDefectAssignRecord : System.Web.UI.Page
             DataList2.DataSource = lst;
             DataList2.DataBind();
 
-            LB_Title.Text = "ç¼ºé™·ï¼š" + strDefectID + "  " + strDefectName + " çš„æ‰€æœ‰åˆ†æ´¾è®°å½•ï¼";
+            LB_Title.Text = "È±Ïİ£º" + strDefectID + "  " + strDefectName + " µÄËùÓĞ·ÖÅÉ¼ÇÂ¼£¡";
 
             HL_BusinessForm.NavigateUrl = "TTRelatedDIYBusinessForm.aspx?RelatedType=Defect&RelatedID=" + strDefectID + "&IdentifyString=" + ShareClass.GetWLTemplateIdentifyString(ShareClass.getBusinessFormTemName("Defect", strDefectID));
         }

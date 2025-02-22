@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPlanPurchaseListProject.aspx.cs" Inherits="TTWZPlanPurchaseListProject" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZPlanPurchaseListProject.aspx.cs" Inherits="TTWZPlanPurchaseListProject" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>计划明细编辑</title>
+    <title>�ƻ���ϸ�༭</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -73,14 +73,14 @@
                                                                         <asp:TextBox ID="TXT_PickingUnit" runat="server" Width="300" ReadOnly="true"></asp:TextBox>
                                                                     </td>
                                                                     <td style="text-align: center" class="formItemBgStyle">
-                                                                        &nbsp;<input type="button" value="选择" class="inpu" />
+                                                                        &nbsp;<input type="button" value="ѡ��" class="inpu" />
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: center" class="formItemBgStyle" colspan="3">
                                                                         <asp:Button ID="btnSave" runat="server" Text="<%$ Resources:lang,BianGeng%>" CssClass="inpu" OnClick="btnSave_Click" />&nbsp;
                                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                                                type="button" value="关闭" />
+                                                                                type="button" value="Closed" />
                                                                     </td>
                                                                 </tr>
                                                             </table>

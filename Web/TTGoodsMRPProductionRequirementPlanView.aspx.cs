@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -110,7 +110,7 @@ public partial class TTGoodsMRPProductionRequirementPlanView : System.Web.UI.Pag
         string strHQL;
 
         strHQL = "Select * From T_ItemMainPlanRelatedItemProductPlan Where PlanVerID = " + strPlanVerID + " and PlanMRPVerID = " + strPlanMRPVerID;
-        strHQL += " and ItemCode in (Select ItemCode From T_Item Where Type = '自制件')";
+        strHQL += " and ItemCode in (Select ItemCode From T_Item Where Type = 'MadeParts')";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ItemMainPlanRelatedItemProductPlan");
 
         DataGrid3.DataSource = ds;

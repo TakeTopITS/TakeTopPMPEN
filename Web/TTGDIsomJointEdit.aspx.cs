@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System; using System.Resources;
 using System.Collections;
@@ -92,7 +92,7 @@ public partial class TTGDIsomJointEdit : System.Web.UI.Page
 
             if (!string.IsNullOrEmpty(HF_ID.Value))
             {
-                //ä¿®æ”¹
+                //ÐÞ¸Ä
                 int intID = 0;
                 int.TryParse(HF_ID.Value, out intID);
 
@@ -153,7 +153,7 @@ public partial class TTGDIsomJointEdit : System.Web.UI.Page
             }
             else
             {
-                //å¢žåŠ 
+                //Ôö¼Ó
                 GDIsomJoint gDIsomJoint = new GDIsomJoint();
                 gDIsomJoint.JointNo = strJointNo;
                 gDIsomJoint.Rev = strRev;

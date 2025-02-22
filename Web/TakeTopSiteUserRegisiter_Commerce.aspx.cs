@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -212,7 +212,7 @@ public partial class TakeTopSiteUserRegisiter_Commerce : System.Web.UI.Page
                 {
                     try
                     {
-                        msg.SendPhoneMSMBySP(strUserCode, "å°Šæ•¬çš„ " + strUserName + " åŒä¹¡ï¼Œæ¬¢è¿ä½ åŠ å…¥å•†ä¼šï¼Œè°¢è°¢ï¼" , "ADMIN");
+                        msg.SendPhoneMSMBySP(strUserCode, "×ğ¾´µÄ " + strUserName + " Í¬Ïç£¬»¶Ó­Äã¼ÓÈëÉÌ»á£¬Ğ»Ğ»£¡" , "ADMIN");
                     }
                     catch
                     {
@@ -220,7 +220,7 @@ public partial class TakeTopSiteUserRegisiter_Commerce : System.Web.UI.Page
 
                     try
                     {
-                        msg.SendMail(strUserCode, "å•†ä¼šä¿¡æ¯", "å°Šæ•¬çš„ " + strUserName + " åŒä¹¡ï¼Œæ¬¢è¿ä½ åŠ å…¥å•†ä¼šï¼Œè°¢è°¢ï¼", "ADMIN");
+                        msg.SendMail(strUserCode, "ÉÌ»áĞÅÏ¢", "×ğ¾´µÄ " + strUserName + " Í¬Ïç£¬»¶Ó­Äã¼ÓÈëÉÌ»á£¬Ğ»Ğ»£¡", "ADMIN");
                     }
                     catch
                     {
@@ -228,11 +228,11 @@ public partial class TakeTopSiteUserRegisiter_Commerce : System.Web.UI.Page
 
                 }).Start();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click2", "alert('æ³¨å†ŒæˆåŠŸï¼Œæ¬¢è¿ä½ åŠ å…¥å•†ä¼šï¼Œè°¢è°¢ï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click2", "alert('×¢²á³É¹¦£¬»¶Ó­Äã¼ÓÈëÉÌ»á£¬Ğ»Ğ»£¡')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click3", "alert('æ³¨å†Œå¤±è´¥ï¼Œè¯·è”ç³»å•†ä¼šç®¡ç†å‘˜ï¼ˆå¾®ä¿¡ï¼š623077337ï¼‰ï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click3", "alert('×¢²áÊ§°Ü£¬ÇëÁªÏµÉÌ»á¹ÜÀíÔ±£¨Î¢ĞÅ£º623077337£©£¡')", true);
             }
         }
         else
@@ -404,11 +404,11 @@ public partial class TakeTopSiteUserRegisiter_Commerce : System.Web.UI.Page
 
             if (strFileName1 != "")
             {
-                //è·å–åˆå§‹æ–‡ä»¶å
-                i = strFileName1.LastIndexOf("."); //å–å¾—æ–‡ä»¶åä¸­æœ€åä¸€ä¸ª"."çš„ç´¢å¼•
-                string strNewExt = strFileName1.Substring(i); //è·å–æ–‡ä»¶æ‰©å±•å
+                //»ñÈ¡³õÊ¼ÎÄ¼şÃû
+                i = strFileName1.LastIndexOf("."); //È¡µÃÎÄ¼şÃûÖĞ×îºóÒ»¸ö"."µÄË÷Òı
+                string strNewExt = strFileName1.Substring(i); //»ñÈ¡ÎÄ¼şÀ©Õ¹Ãû
 
-                DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+                DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
 
                 string strFileName2 = System.IO.Path.GetFileName(strFileName1);
                 string strExtName = Path.GetExtension(strFileName2);
@@ -500,7 +500,7 @@ public partial class TakeTopSiteUserRegisiter_Commerce : System.Web.UI.Page
 
     protected bool CheckUserLoginManage(string strUserCode, string strUserName)
     {
-        //æ ¹æ®ç”¨æˆ·ç™»å½•IPåˆ¤æ–­æ˜¯å¦é˜»æ­¢ç”¨æˆ·ç™»å½•ç³»ç»Ÿ
+        //¸ù¾İÓÃ»§µÇÂ¼IPÅĞ¶ÏÊÇ·ñ×èÖ¹ÓÃ»§µÇÂ¼ÏµÍ³
         string strHQL;
         string strLoginID, strIsAllMember, strIsForbidLogin, strLoginUserCode;
         string strMsg, strIP, strUserHostAddress;

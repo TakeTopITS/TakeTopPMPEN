@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -37,7 +37,7 @@ public partial class TTModuleFlowTemplateView : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert(淇濆瓨澶辫触锛屼綘涓嶆槸姝ゆ祦绋嬫ā鏉跨殑鍒涘缓鑰咃紝涓嶈兘淇濆瓨浜涙祦绋嬪浘鐗囷紒')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert(保存失败，你不是此流程模板的创建者，不能保存些流程图片！')", true);
         }
     }
 

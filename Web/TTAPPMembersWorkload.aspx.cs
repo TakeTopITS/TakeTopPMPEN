@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -52,7 +52,7 @@ public partial class TTAPPMembersWorkload : System.Web.UI.Page
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
 
-        bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "鎴愬憳璐熻嵎", strUserCode);
+        bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "成员负荷", strUserCode);
 
         if (blVisible == false)
         {
@@ -91,7 +91,7 @@ public partial class TTAPPMembersWorkload : System.Web.UI.Page
             DayPilotScheduler1.CellGroupBy = GroupByEnum.Year; ;
         }
 
-        ///璁剧疆鏃ョ▼鎺т欢璇█
+        ///设置日程控件语言
         Culture = ShareClass.GetDayPilotLanguage();
 
         if (!IsPostBack)

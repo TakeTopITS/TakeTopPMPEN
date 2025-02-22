@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -42,10 +42,10 @@ public partial class TTBMBidPlanRelatedWorkflowList : System.Web.UI.Page
             DataSet ds = new DataSet();
 
             strHQL = "Select A.ID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-            strHQL += " Where A.WLID = B.WLID And A.Status In ('处理中','审核中','会签中','复核中') And B.Status Not In ('修改中','关闭','结案')";
+            strHQL += " Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','CaseClosed')";
             strHQL += " And A.OperatorCode = " + "'" + strUserCode + "'";
             strHQL += " And A.IsOperator = 'YES'";
-            strHQL += " And B.RelatedType = '招标计划' and B.RelatedID = " + strRelatedID;
+            strHQL += " And B.RelatedType = 'TenderPlan' and B.RelatedID = " + strRelatedID;
             strHQL += " Order By A.StepID DESC";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowDetail");
 
@@ -56,10 +56,10 @@ public partial class TTBMBidPlanRelatedWorkflowList : System.Web.UI.Page
 
 
             strHQL = "Select A.ID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-            strHQL += " Where A.WLID = B.WLID And A.Status In ('处理中','审核中','会签中','复核中') And B.Status Not In ('修改中','关闭','结案')";
+            strHQL += " Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','CaseClosed')";
             strHQL += " And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = " + "'" + strUserCode + "'" + " and AgencyStatus = 1)";
             strHQL += " And A.IsOperator = 'YES'";
-            strHQL += " And B.RelatedType = '招标计划' and B.RelatedID = " + strRelatedID;
+            strHQL += " And B.RelatedType = 'TenderPlan' and B.RelatedID = " + strRelatedID;
             strHQL += " Order By A.StepID DESC";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowDetail");
 
@@ -70,8 +70,8 @@ public partial class TTBMBidPlanRelatedWorkflowList : System.Web.UI.Page
 
 
             strHQL = "Select A.ID,A.WorkDetail,A.CheckingTime,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-            strHQL += " Where A.WLID = B.WLID And A.Status In ('批准','驳回') And A.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " And B.RelatedType = '招标计划' and B.RelatedID = " + strRelatedID;
+            strHQL += " Where A.WLID = B.WLID And A.Status In ('Approved','Rejected') And A.OperatorCode = " + "'" + strUserCode + "'";
+            strHQL += " And B.RelatedType = 'TenderPlan' and B.RelatedID = " + strRelatedID;
             strHQL += " Order By A.StepID DESC";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowDetail");
 
@@ -82,9 +82,9 @@ public partial class TTBMBidPlanRelatedWorkflowList : System.Web.UI.Page
 
 
             strHQL = "Select A.ID,A.WorkDetail,A.CheckingTime,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-            strHQL += " Where A.WLID = B.WLID And A.Status In ('批准','驳回') ";
+            strHQL += " Where A.WLID = B.WLID And A.Status In ('Approved','Rejected') ";
             strHQL += " And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = " + "'" + strUserCode + "'" + " and AgencyStatus = 1)";
-            strHQL += " And B.RelatedType = '招标计划' and B.RelatedID = " + strRelatedID;
+            strHQL += " And B.RelatedType = 'TenderPlan' and B.RelatedID = " + strRelatedID;
             strHQL += " Order By A.StepID DESC";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowDetail");
 
@@ -94,7 +94,7 @@ public partial class TTBMBidPlanRelatedWorkflowList : System.Web.UI.Page
             LB_Sql6.Text = strHQL;
 
             strHQL = "from WorkFlow as workFlow where workFlow.CreatorCode = " + "'" + strUserCode + "'";
-            strHQL += " And workFlow.RelatedType = '招标计划' and workFlow.RelatedID = " + strRelatedID;
+            strHQL += " And workFlow.RelatedType = 'TenderPlan' and workFlow.RelatedID = " + strRelatedID;
             strHQL += " Order by workFlow.WLID DESC";
             WorkFlowBLL workFlowBLL = new WorkFlowBLL();
             lst = workFlowBLL.GetAllWorkFlows(strHQL);
@@ -178,17 +178,17 @@ public partial class TTBMBidPlanRelatedWorkflowList : System.Web.UI.Page
             strWFID = DataGrid3.Items[i].Cells[1].Text.Trim();
             strStatus = GetWorkflowStatus(strWFID);
 
-            if (strStatus == "通过")
+            if (strStatus == "Passed")
             {
                 ((ImageButton)DataGrid3.Items[i].FindControl("IMB_Lamp")).ImageUrl = "~/Images/lamp_green.png";
             }
 
-            if (strStatus == "结案")
+            if (strStatus == "CaseClosed")
             {
                 ((ImageButton)DataGrid3.Items[i].FindControl("IMB_Lamp")).ImageUrl = "~/Images/lamp_ok.png";
             }
 
-            if (strStatus == "驳回")
+            if (strStatus == "Rejected")
             {
                 ((ImageButton)DataGrid3.Items[i].FindControl("IMB_Lamp")).ImageUrl = "~/Images/lamp_refuse.png";
             }

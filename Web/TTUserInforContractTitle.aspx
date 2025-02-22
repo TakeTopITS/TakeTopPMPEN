@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInforContractTitle.aspx.cs" Inherits="TTUserInforContractTitle" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInforContractTitle.aspx.cs" Inherits="TTUserInforContractTitle" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -155,22 +155,22 @@
                                                     CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" Width="100%">
 
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="UserCode" HeaderText="ä»£å·">
+                                                        <asp:BoundColumn DataField="UserCode" HeaderText="´úºÅ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="åç§°">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="Ãû³Æ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="11%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Gender" HeaderText="æ€§åˆ«">
+                                                        <asp:BoundColumn DataField="Gender" HeaderText="ÐÔ±ð">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="11%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Age" HeaderText="å¹´é¾„">
+                                                        <asp:BoundColumn DataField="Age" HeaderText="ÄêÁä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="EMail" HeaderText="é‚®ä»¶">
+                                                        <asp:BoundColumn DataField="EMail" HeaderText="ÓÊ¼þ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="JoinDate" HeaderText="åŠ å…¥æ—¥æœŸ">
+                                                        <asp:BoundColumn DataField="JoinDate" HeaderText="¼ÓÈëÈÕÆÚ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                         </asp:BoundColumn>
 

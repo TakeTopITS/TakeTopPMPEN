@@ -68,7 +68,7 @@ public partial class TTMyMemProject : System.Web.UI.Page
 
             strHQL = "from Project as project where  ";
             strHQL += " project.PMCode in ( select memberLevel.UnderCode from MemberLevel as memberLevel where memberLevel.ProjectVisible = 'YES' and memberLevel.UserCode = " + "'" + strUserCode + "'" + ") ";
-            strHQL += " and project.Status not in ('É¾³ý','¹éµµ') ";
+            strHQL += " and project.Status not in ('Deleted','Archived') ";
             strHQL += " Order by project.ProjectID DESC";
             ProjectBLL projectBLL = new ProjectBLL();
             lst = projectBLL.GetAllProjects(strHQL);
@@ -112,7 +112,7 @@ public partial class TTMyMemProject : System.Web.UI.Page
         {
             strHQL += " and project.ProjectType = '" + DL_ProjectType.SelectedValue.Trim() + "'";
         }
-        strHQL += " and project.Status not in ('É¾³ý','¹éµµ')";
+        strHQL += " and project.Status not in ('Deleted','Archived')";
         strHQL += " Order by project.ProjectID DESC";
 
         ProjectBLL projectBLL = new ProjectBLL();
@@ -161,7 +161,7 @@ public partial class TTMyMemProject : System.Web.UI.Page
             {
                 strHQL += " and project.ProjectType = '" + DL_ProjectType.SelectedValue.Trim() + "'";
             }
-            strHQL += " and project.Status not in ('É¾³ý','¹éµµ')";
+            strHQL += " and project.Status not in ('Deleted','Archived')";
             strHQL += " Order by project.ProjectID DESC";
             ProjectBLL projectBLL = new ProjectBLL();
             lst = projectBLL.GetAllProjects(strHQL);
@@ -204,7 +204,7 @@ public partial class TTMyMemProject : System.Web.UI.Page
         {
             strHQL += " and project.ProjectType = '" + DL_ProjectType.SelectedValue.Trim() + "'";
         }
-        strHQL += " and project.Status not in ('É¾³ý','¹éµµ')";
+        strHQL += " and project.Status not in ('Deleted','Archived')";
         strHQL += " Order by project.ProjectID DESC";
 
         LB_Underling.Text = strUnderlingCode;
@@ -249,7 +249,7 @@ public partial class TTMyMemProject : System.Web.UI.Page
                 strHQL += " and project.ProjectType = '" + DL_ProjectType.SelectedValue.Trim() + "'";
             }
             strHQL += " and project.Status = " + "'" + strStatus + "'" ;
-            strHQL += " and project.Status not in ('É¾³ý','¹éµµ')";
+            strHQL += " and project.Status not in ('Deleted','Archived')";
             strHQL += " Order by project.ProjectID DESC";
 
             LB_QueryScope.Text = Resources.lang.ZZLeader + strUserCode + strUserName + Resources.lang.ZZXMZT + strStatus;
@@ -264,7 +264,7 @@ public partial class TTMyMemProject : System.Web.UI.Page
                 strHQL += " and project.ProjectType = '" + DL_ProjectType.SelectedValue.Trim() + "'";
             }
             strHQL += " and project.Status = " + "'" + strStatus + "'" ;
-            strHQL += " and project.Status not in ('É¾³ý','¹éµµ')";
+            strHQL += " and project.Status not in ('Deleted','Archived')";
             strHQL += " Order by project.ProjectID DESC";
 
             LB_QueryScope.Text = Resources.lang.ZZLeader + strUserCode + strUserName + Resources.lang.ZZXiaShu + strUnderling + strUnderLingName + Resources.lang.ZZXMZT + strStatus;
@@ -308,7 +308,7 @@ public partial class TTMyMemProject : System.Web.UI.Page
         {
             strHQL += " and project.ProjectType = '" + DL_ProjectType.SelectedValue.Trim() + "'";
         }
-        strHQL += " and project.Status not in ('É¾³ý','¹éµµ')";
+        strHQL += " and project.Status not in ('Deleted','Archived')";
         strHQL += " Order by project.ProjectID DESC";
 
         ProjectBLL projectBLL = new ProjectBLL();
@@ -382,7 +382,7 @@ public partial class TTMyMemProject : System.Web.UI.Page
         //    strNowDate = DateTime.Now;
         //    strStatus = DataGrid3.Items[i].Cells[11].Text.Trim();
 
-        //    if (strStatus != "½á°¸")
+        //    if (strStatus != "CaseClosed")
         //    {
         //        if (strFinishedDate < strNowDate)
         //        {
@@ -933,7 +933,7 @@ public partial class TTMyMemProject : System.Web.UI.Page
         {
             strHQL += " and project.ProjectType = '" + DL_ProjectType.SelectedValue.Trim() + "'";
         }
-        strHQL += " and project.Status not in ('É¾³ý','¹éµµ')";
+        strHQL += " and project.Status not in ('Deleted','Archived')";
         strHQL += " Order by project.ProjectID DESC";
         lst = projectBLL.GetAllProjects(strHQL);
 
@@ -973,7 +973,7 @@ public partial class TTMyMemProject : System.Web.UI.Page
             {
                 strHQL += " and project.ProjectType = '" + DL_ProjectType.SelectedValue.Trim() + "'";
             }
-            strHQL += " and project.Status not in ('É¾³ý','¹éµµ')";
+            strHQL += " and project.Status not in ('Deleted','Archived')";
             strHQL += " Order by project.ProjectID DESC";
         }
         else
@@ -983,7 +983,7 @@ public partial class TTMyMemProject : System.Web.UI.Page
             {
                 strHQL += " and project.ProjectType = '" + DL_ProjectType.SelectedValue.Trim() + "'";
             }
-            strHQL += " and project.Status not in ('É¾³ý','¹éµµ')";
+            strHQL += " and project.Status not in ('Deleted','Archived')";
             strHQL += " Order by project.ProjectID DESC";
         }
 
@@ -1022,7 +1022,7 @@ public partial class TTMyMemProject : System.Web.UI.Page
         {
             strHQL += " and project.ProjectType = '" + DL_ProjectType.SelectedValue.Trim() + "'";
         }
-        strHQL += " and project.Status not in ('É¾³ý','¹éµµ')";
+        strHQL += " and project.Status not in ('Deleted','Archived')";
         strHQL += " Order by project.ProjectID DESC";
         lst = projectBLL.GetAllProjects(strHQL);
 
@@ -1060,7 +1060,7 @@ public partial class TTMyMemProject : System.Web.UI.Page
         {
             strHQL += " and project.ProjectType = '" + DL_ProjectType.SelectedValue.Trim() + "'";
         }
-        strHQL += " and project.Status not in ('É¾³ý','¹éµµ')";
+        strHQL += " and project.Status not in ('Deleted','Archived')";
         strHQL += " Order by project.ProjectID DESC";
         ProjectBLL projectBLL = new ProjectBLL();
         lst = projectBLL.GetAllProjects(strHQL);

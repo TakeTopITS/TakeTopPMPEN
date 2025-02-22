@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppReportViewTopFrame.aspx.cs" Inherits="TTAppReportViewTopFrame" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppReportViewTopFrame.aspx.cs" Inherits="TTAppReportViewTopFrame" %>
 
 <!DOCTYPE html>
 
@@ -30,7 +30,7 @@
                                                 </td>
                                             </tr>
                                         </table>
-                                          <img id="IMG_Waiting" src="Images/Processing.gif" alt="è¯·ç¨å€™ï¼Œå¤„ç†ä¸­..." style="display: none;" />
+                                          <img id="IMG_Waiting" src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖÐ..." style="display: none;" />
                                     </a>
                                 </td>
                             </tr>

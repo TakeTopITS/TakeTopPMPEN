@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAssetReportDetail.aspx.cs" Inherits="TTAssetReportDetail" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAssetReportDetail.aspx.cs" Inherits="TTAssetReportDetail" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 

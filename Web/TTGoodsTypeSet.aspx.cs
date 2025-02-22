@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,7 +20,7 @@ public partial class TTGoodsTypeSet : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ç‰©æ–™ç±»åž‹è®¾ç½®", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ÎïÁÏÀàÐÍÉèÖÃ", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -154,12 +154,12 @@ public partial class TTGoodsTypeSet : System.Web.UI.Page
     }
 
     /// <summary>
-    /// ç»‘å®šä¼šè®¡ç§‘ç›®æ ‘å½¢ç»“æž„
+    /// °ó¶¨»á¼Æ¿ÆÄ¿Ê÷ÐÎ½á¹¹
     /// </summary>
-    /// <param name="tv">æ ‘å½¢æŽ§ä»¶</param>
+    /// <param name="tv">Ê÷ÐÎ¿Ø¼þ</param>
     protected void GoodsTypeTree(TreeView tv)
     {
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         tv.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
@@ -192,10 +192,10 @@ public partial class TTGoodsTypeSet : System.Web.UI.Page
     }
 
     /// <summary>
-    /// ä¼šè®¡ç§‘ç›®æ ‘å½¢ç»“æž„å¾ªçŽ¯
+    /// »á¼Æ¿ÆÄ¿Ê÷ÐÎ½á¹¹Ñ­»·
     /// </summary>
-    /// <param name="strParentID">ä¸Šçº§ç§‘ç›®ID</param>
-    /// <param name="node">æ ‘å½¢èŠ‚ç‚¹</param>
+    /// <param name="strParentID">ÉÏ¼¶¿ÆÄ¿ID</param>
+    /// <param name="node">Ê÷ÐÎ½Úµã</param>
     protected void GetGoodsTypeTreeView(string strParentType, TreeNode node)
     {
         string strHQL = "From GoodsType as goodsType Where goodsType.ParentType='" + strParentType + "' Order By goodsType.SortNumber ";

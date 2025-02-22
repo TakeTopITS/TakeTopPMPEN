@@ -1,4 +1,4 @@
-Ôªøusing System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -27,7 +27,7 @@ public partial class TTProjectChildTree : System.Web.UI.Page
         LB_ProjectName.Text = strProjectName;
 
 
-        //this.Title = Resources.lang.Project + strProjectID + " " + strProjectName + " ÁöÑÂ≠êÈ°πÁõÆÊ†ë";
+        //this.Title = Resources.lang.Project + strProjectID + " " + strProjectName + " µƒ◊”œÓƒø ˜";
 
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
@@ -44,7 +44,7 @@ public partial class TTProjectChildTree : System.Web.UI.Page
         strProjectID = LB_ProjectID.Text.Trim();
         strProject = LB_ProjectName.Text.Trim();
 
-        //Ê∑ªÂä†Ê†πËäÇÁÇπ
+        //ÃÌº”∏˘Ω⁄µ„
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
@@ -57,7 +57,7 @@ public partial class TTProjectChildTree : System.Web.UI.Page
 
         strUserCode = LB_UserCode.Text.Trim();
         strHQL = "from Project as project where project.ParentID = " + strProjectID;       
-        strHQL += "  and project.Status not in ('Âà†Èô§','ÂΩíÊ°£') order by project.ProjectID DESC";
+        strHQL += "  and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
@@ -90,7 +90,7 @@ public partial class TTProjectChildTree : System.Web.UI.Page
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
-        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('Âà†Èô§','ÂΩíÊ°£') order by project.ProjectID DESC";
+        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         lst1 = projectBLL.GetAllProjects(strHQL);
 
         for (int i = 0; i < lst1.Count; i++)

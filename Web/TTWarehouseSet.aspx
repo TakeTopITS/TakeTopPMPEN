@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWarehouseSet.aspx.cs" Inherits="TTWarehouseSet" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWarehouseSet.aspx.cs" Inherits="TTWarehouseSet" %>
 
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -85,7 +85,7 @@
                                                                         <asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>
                                                                     </strong></td>
                                                                     <td align="center" width="15%"><strong>
-                                                                        <asp:Label ID="Label32228" runat="server" Text="èµ„é‡‘ç®—æ³•"></asp:Label>
+                                                                        <asp:Label ID="Label32228" runat="server" Text="×Ê½ðËã·¨"></asp:Label>
                                                                     </strong></td>
                                                                     <td align="center" width="20%"><strong>
                                                                         <asp:Label ID="Label381" runat="server" Text="<%$ Resources:lang,FuChuangKu%>"></asp:Label>
@@ -114,22 +114,22 @@
                                                     <PagerStyle CssClass="notTab" HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" />
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="WHName" HeaderText="ä»“åº“">
+                                                        <asp:BoundColumn DataField="WHName" HeaderText="²Ö¿â">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CapitalMethod" HeaderText="èµ„é‡‘ç®—æ³•">
+                                                        <asp:BoundColumn DataField="CapitalMethod" HeaderText="×Ê½ðËã·¨">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="ParentWH" HeaderText="çˆ¶ä»“åº“">
+                                                        <asp:BoundColumn DataField="ParentWH" HeaderText="¸¸²Ö¿â">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="BelongDepartCode" HeaderText="éƒ¨é—¨ä»£ç ">
+                                                        <asp:BoundColumn DataField="BelongDepartCode" HeaderText="²¿ÃÅ´úÂë">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="BelongDepartName" HeaderText="éƒ¨é—¨åç§°">
+                                                        <asp:BoundColumn DataField="BelongDepartName" HeaderText="²¿ÃÅÃû³Æ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="SortNumber" HeaderText="é¡ºåº">
+                                                        <asp:BoundColumn DataField="SortNumber" HeaderText="Ë³Ðò">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
                                                     </Columns>
@@ -159,7 +159,7 @@
                                                             <asp:TextBox ID="TB_WHName" runat="server" Width="150"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:Label ID="Label383335" runat="server" Text="åº“å­˜èµ„é‡‘ç®—æ³•"></asp:Label>
+                                                            <asp:Label ID="Label383335" runat="server" Text="¿â´æ×Ê½ðËã·¨"></asp:Label>
                                                         </td>
                                                         <td>
                                                             <asp:DropDownList ID="DL_CapitalMethod" runat="server">
@@ -199,7 +199,7 @@
                                                 <table style="width: 100%; text-align: center;">
                                                     <tr>
                                                         <td><b>
-                                                            <asp:Label ID="Label234232" runat="server" Text="ä»“ä½"></asp:Label>
+                                                            <asp:Label ID="Label234232" runat="server" Text="²ÖÎ»"></asp:Label>
                                                         </b></td>
                                                     </tr>
                                                     <tr>
@@ -216,11 +216,11 @@
                                                                                     <asp:Label ID="Label234233" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>
                                                                                 </strong></td>
                                                                                 <td align="center" width="20%"><strong>
-                                                                                    <asp:Label ID="Label234234" runat="server" Text="å½’å±žä»“åº“"></asp:Label>
+                                                                                    <asp:Label ID="Label234234" runat="server" Text="¹éÊô²Ö¿â"></asp:Label>
                                                                                 </strong></td>
 
                                                                                 <td align="center"><strong>
-                                                                                    <asp:Label ID="Label234237" runat="server" Text="å¤‡æ³¨"></asp:Label>
+                                                                                    <asp:Label ID="Label234237" runat="server" Text="±¸×¢"></asp:Label>
                                                                                 </strong></td>
                                                                             </tr>
                                                                         </table>
@@ -238,7 +238,7 @@
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
 
-                                                                    <asp:TemplateColumn HeaderText="ä»“ä½">
+                                                                    <asp:TemplateColumn HeaderText="²ÖÎ»">
 
                                                                         <ItemTemplate>
                                                                             <asp:Button ID="BT_WHPositionName" runat="server" CssClass="inpuLongest" Text='<%# DataBinder.Eval(Container.DataItem,"PositionName") %>' />
@@ -246,11 +246,11 @@
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                     </asp:TemplateColumn>
 
-                                                                    <asp:BoundColumn DataField="WHName" HeaderText="å½’å±žä»“åº“">
+                                                                    <asp:BoundColumn DataField="WHName" HeaderText="¹éÊô²Ö¿â">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                     </asp:BoundColumn>
 
-                                                                    <asp:BoundColumn DataField="Comment" HeaderText="éƒ¨é—¨åç§°">
+                                                                    <asp:BoundColumn DataField="Comment" HeaderText="²¿ÃÅÃû³Æ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                                     </asp:BoundColumn>
 
@@ -273,7 +273,7 @@
                                                                         <asp:TextBox ID="TB_WHPositionName" runat="server" Width="250"></asp:TextBox>
                                                                     </td>
                                                                     <td>
-                                                                        <asp:Label ID="Label234238" runat="server" Text="å½’å±žä»“åº“"></asp:Label>ï¼š
+                                                                        <asp:Label ID="Label234238" runat="server" Text="¹éÊô²Ö¿â"></asp:Label>£º
                                                                     </td>
                                                                     <td>
                                                                         <asp:Label ID="LB_BelongWHName" runat="server"></asp:Label>

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.ComponentModel;
@@ -26,14 +26,14 @@ public partial class TTPlanManagement : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","我的计划", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","�ҵļƻ�", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
             return;
         }
 
-        //this.Title = "我的计划";
+        //this.Title = "�ҵļƻ�";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
@@ -41,8 +41,8 @@ public partial class TTPlanManagement : System.Web.UI.Page
             PlanBLL planBLL = new PlanBLL();
 
             strHQL = "from Plan as plan where plan.PlanID in ";
-            strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status = '新建')";
-            strHQL += " and plan.Status not in ('新建','删除','归档') ";
+            strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status = 'New')";
+            strHQL += " and plan.Status not in ('New','Deleted','Archived') ";
             strHQL += " Order By plan.StartTime DESC,plan.EndTime ASC";
             lst = planBLL.GetAllPlans(strHQL);
 
@@ -51,8 +51,8 @@ public partial class TTPlanManagement : System.Web.UI.Page
             LB_Sql4.Text = strHQL;
 
             strHQL = "from Plan as plan where plan.PlanID in ";
-            strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status ='批准')";
-            strHQL += " and plan.Status not in ('新建','删除','归档') ";
+            strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status ='Approved')";
+            strHQL += " and plan.Status not in ('New','Deleted','Archived') ";
             strHQL += " Order By plan.StartTime DESC,plan.EndTime ASC";
             lst = planBLL.GetAllPlans(strHQL);
 
@@ -61,8 +61,8 @@ public partial class TTPlanManagement : System.Web.UI.Page
             LB_Sql1.Text = strHQL;
 
             strHQL = "from Plan as plan where plan.PlanID in ";
-            strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status = '完成')";
-            strHQL += " and plan.Status not in ('新建','删除','归档') ";
+            strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status = 'Completed')";
+            strHQL += " and plan.Status not in ('New','Deleted','Archived') ";
             strHQL += " Order By plan.StartTime DESC,plan.EndTime ASC";
             lst = planBLL.GetAllPlans(strHQL);
 
@@ -72,7 +72,7 @@ public partial class TTPlanManagement : System.Web.UI.Page
 
 
             strHQL = "from Plan as plan where plan.UserCode = " + "'" + strUserCode + "'";
-            strHQL += " and plan.Status not in ('删除','归档') ";
+            strHQL += " and plan.Status not in ('Deleted','Archived') ";
             strHQL += " Order By plan.StartTime DESC,plan.EndTime ASC";
             lst = planBLL.GetAllPlans(strHQL);
 
@@ -151,7 +151,7 @@ public partial class TTPlanManagement : System.Web.UI.Page
         PlanBLL planBLL = new PlanBLL();
 
         strHQL = "from Plan as plan where plan.PlanID in ";
-        strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status = '新建')";
+        strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status = 'New')";
         strHQL += " Order By plan.PlanID DESC";
         lst = planBLL.GetAllPlans(strHQL);
 
@@ -160,7 +160,7 @@ public partial class TTPlanManagement : System.Web.UI.Page
         LB_Sql4.Text = strHQL;
 
         strHQL = "from Plan as plan where plan.PlanID in ";
-        strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status ='批准')";
+        strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status ='Approved')";
         strHQL += " Order By plan.PlanID DESC";
         lst = planBLL.GetAllPlans(strHQL);
 
@@ -169,7 +169,7 @@ public partial class TTPlanManagement : System.Web.UI.Page
         LB_Sql1.Text = strHQL;
 
         strHQL = "from Plan as plan where plan.PlanID in ";
-        strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status = '完成')";
+        strHQL += " (Select planRelatedLeader.PlanID From PlanRelatedLeader as planRelatedLeader Where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + " and planRelatedLeader.Status = 'Completed')";
         strHQL += " Order By plan.PlanID DESC";
         lst = planBLL.GetAllPlans(strHQL);
 

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -29,7 +29,7 @@ public partial class TTPersonalSpaceToDoNewsForOuter : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickParentA", "aHandlerForSpecialPopWindow();", true);
         if (Page.IsPostBack == false)
         {
-            //æ¸…ç©ºé¡µé¢ç¼“å­˜ï¼Œç”¨äºæ”¹å˜çš®è‚¤
+            //Çå¿ÕÒ³Ãæ»º´æ£¬ÓÃÓÚ¸Ä±äÆ¤·ô
             SetPageNoCache();
 
             intRunNumber = 0;
@@ -38,12 +38,12 @@ public partial class TTPersonalSpaceToDoNewsForOuter : System.Web.UI.Page
         }
     }
 
-    //æ¸…ç©ºé¡µé¢ç¼“å­˜ï¼Œç”¨äºæ”¹å˜çš®è‚¤
+    //Çå¿ÕÒ³Ãæ»º´æ£¬ÓÃÓÚ¸Ä±äÆ¤·ô
     public void SetPageNoCache()
     {
         if (Session["CssDirectoryChangeNumber"].ToString() == "1")
         {
-            //æ¸…é™¤å…¨éƒ¨ç¼“å­˜
+            //Çå³ıÈ«²¿»º´æ
             IDictionaryEnumerator allCaches = Page.Cache.GetEnumerator();
             while (allCaches.MoveNext())
             {
@@ -102,7 +102,7 @@ public partial class TTPersonalSpaceToDoNewsForOuter : System.Web.UI.Page
     protected void LoadFunInforDialBoxList(string strUserType, string strLangCode)
     {
         string strHQL;
-        strHQL = "Select * From T_FunInforDialBox Where Status='å¯ç”¨'";
+        strHQL = "Select * From T_FunInforDialBox Where Status='Enabled'";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
         strHQL += " and (UserType = " + "'" + strUserType + "'" + " Or UserType = 'ALL')";
         strHQL += " Order By SortNumber ASC ";
@@ -124,7 +124,7 @@ public partial class TTPersonalSpaceToDoNewsForOuter : System.Web.UI.Page
         strHQL = "Select ID,Title,Content,RelatedDepartName,PublisherCode,PublisherName,PublishTime From T_HeadLine ";
         strHQL += " Where (RelatedDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))  or RelatedDepartCode = '" + strDepartCode + "')";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
-        strHQL += " And Type = 'å¤–éƒ¨' and Status = 'å‘å¸ƒ' Order By ID DESC";
+        strHQL += " And Type = 'External' and Status = '·¢²¼' Order By ID DESC";
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");
 
         DataGrid9.DataSource = ds;
@@ -139,7 +139,7 @@ public partial class TTPersonalSpaceToDoNewsForOuter : System.Web.UI.Page
             strHQL = "Select Count(*) From T_HeadLine Where ID =" + strID;
             strHQL += " And ID not in (Select NewsID From T_NewsRelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")";
             strHQL += " And (RelatedDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))  or RelatedDepartCode = '" + strDepartCode + "')";
-            strHQL += " And Type = 'å¤–éƒ¨' and Status = 'å‘å¸ƒ' ";
+            strHQL += " And Type = 'External' and Status = '·¢²¼' ";
             strHQL += " and LangCode = " + "'" + strLangCode + "'";
             ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");
             intNumber = int.Parse(ds.Tables[0].Rows[0][0].ToString());

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMyMemTask.aspx.cs" Inherits="TTMyMemTask" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMyMemTask.aspx.cs" Inherits="TTMyMemTask" %>
 
 <%@ Register Assembly="ZedGraph.Web" Namespace="ZedGraph.Web" TagPrefix="cc1" %>
 <%@ Register Assembly="ZedGraph" Namespace="ZedGraph" TagPrefix="cc1" %>
@@ -7,7 +7,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ä¸‹å±žé¡¹ç›®åˆ—è¡¨</title>
+    <title>ÏÂÊôÏîÄ¿ÁÐ±í</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <link id="layCss" href="js/layer-v3.0.1/layer/skin/default/layer.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
@@ -122,7 +122,7 @@
                                                                 CellPadding="4" ForeColor="#333333" GridLines="None" OnItemCommand="DataGrid1_ItemCommand"
                                                                 ShowHeader="false" Width="100%">
                                                                 <Columns>
-                                                                    <asp:TemplateColumn HeaderText="ç›´æŽ¥æˆå‘˜ï¼š">
+                                                                    <asp:TemplateColumn HeaderText="Ö±½Ó³ÉÔ±£º">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                         <ItemTemplate>
                                                                             <asp:Button ID="BT_UnderlingCode" runat="server" CssClass="inpu" 
@@ -180,7 +180,7 @@
                                                                                         </tr>
                                                                                         <tr style="display: none;">
                                                                                             <td align="center" width="100%">
-                                                                                                <asp:Label ID="LB_TaskRecordStatus_ToBeHandled" runat="server" CssClass="StatusCss" Text="å¾…å¤„ç†"></asp:Label>
+                                                                                                <asp:Label ID="LB_TaskRecordStatus_ToBeHandled" runat="server" CssClass="StatusCss" Text="ToHandle"></asp:Label>
                                                                                         </tr>
                                                                                     </table>
                                                                                 </td>
@@ -194,8 +194,8 @@
                                                                         <div id="div_task" class="bian" style="border-collapse: collapse; width: 97%; border: dotted; border-radius: 3px 4px; border-color: lightblue;">
 
                                                                             <a href='TTTaskDetail.aspx?ID=<%#DataBinder.Eval(Container.DataItem, "ID")%>' target="_blank">
-                                                                                <span style="color:lightgreen;">#<%#DataBinder.Eval(Container.DataItem, "ID")%></span>&nbsp;&nbsp;<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>ï¼š <%#DataBinder.Eval(Container.DataItem, "Operation")%><br />
-                                                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FenPaiRen%>"></asp:Label>ï¼š<%#DataBinder.Eval(Container.DataItem, "AssignManName")%>
+                                                                                <span style="color:lightgreen;">#<%#DataBinder.Eval(Container.DataItem, "ID")%></span>&nbsp;&nbsp;<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º <%#DataBinder.Eval(Container.DataItem, "Operation")%><br />
+                                                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FenPaiRen%>"></asp:Label>£º<%#DataBinder.Eval(Container.DataItem, "AssignManName")%>
 
                                                                             </a>
                                                                         </div>
@@ -222,7 +222,7 @@
                                                                             </tr>
                                                                             <tr style="display: none;">
                                                                                 <td align="center" width="100%">
-                                                                                    <asp:Label ID="LB_TaskRecordStatus_Handling" CssClass="StatusCss" runat="server" Text="å¤„ç†ä¸­"></asp:Label>
+                                                                                    <asp:Label ID="LB_TaskRecordStatus_Handling" CssClass="StatusCss" runat="server" Text="InProgress"></asp:Label>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
@@ -236,8 +236,8 @@
                                                                     <ItemTemplate>
                                                                         <div id="div_task" class="bian" style="border-collapse: collapse; width: 97%; border: dotted; border-radius: 3px 4px; border-color: lightcoral;">
                                                                             <a href='TTTaskDetail.aspx?ID=<%#DataBinder.Eval(Container.DataItem, "ID")%>' target="_blank">
-                                                                                <span style="color: lightgreen;">#<%#DataBinder.Eval(Container.DataItem, "ID")%> </span>&nbsp;&nbsp;<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>ï¼š <%#DataBinder.Eval(Container.DataItem, "Operation")%><br />
-                                                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FenPaiRen%>"></asp:Label>ï¼š<%#DataBinder.Eval(Container.DataItem, "AssignManName")%>
+                                                                                <span style="color: lightgreen;">#<%#DataBinder.Eval(Container.DataItem, "ID")%> </span>&nbsp;&nbsp;<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º <%#DataBinder.Eval(Container.DataItem, "Operation")%><br />
+                                                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FenPaiRen%>"></asp:Label>£º<%#DataBinder.Eval(Container.DataItem, "AssignManName")%>
                                                                             </a>
                                                                         </div>
                                                                         <div style="background-color: white; height: 5px;">
@@ -263,7 +263,7 @@
                                                                             </tr>
                                                                             <tr style="display: none;">
                                                                                 <td align="center" width="100%">
-                                                                                    <asp:Label ID="LB_TaskRecordStatus_Finished" CssClass="StatusCss" runat="server" Text="å·²å®Œæˆ"></asp:Label>
+                                                                                    <asp:Label ID="LB_TaskRecordStatus_Finished" CssClass="StatusCss" runat="server" Text="ÒÑÍê³É"></asp:Label>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
@@ -277,8 +277,8 @@
                                                                     <ItemTemplate>
                                                                         <div id="div_task" class="bian" style="border-collapse: collapse; width: 97%; border: dotted; border-radius: 3px 4px; border-color: orange;">
                                                                             <a href='TTTaskDetail.aspx?ID=<%#DataBinder.Eval(Container.DataItem, "ID")%>' target="_blank">
-                                                                                <span style="color: lightgreen;">#<%#DataBinder.Eval(Container.DataItem, "ID")%></span>&nbsp;&nbsp;<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>ï¼š <%#DataBinder.Eval(Container.DataItem, "Operation")%><br />
-                                                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FenPaiRen%>"></asp:Label>ï¼š<%#DataBinder.Eval(Container.DataItem, "AssignManName")%>
+                                                                                <span style="color: lightgreen;">#<%#DataBinder.Eval(Container.DataItem, "ID")%></span>&nbsp;&nbsp;<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º <%#DataBinder.Eval(Container.DataItem, "Operation")%><br />
+                                                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FenPaiRen%>"></asp:Label>£º<%#DataBinder.Eval(Container.DataItem, "AssignManName")%>
                                                                             </a>
                                                                         </div>
                                                                         <div style="background-color: white; height: 5px;">
@@ -304,7 +304,7 @@
                                                                             </tr>
                                                                             <tr style="display: none;">
                                                                                 <td align="center" width="100%">
-                                                                                    <asp:Label ID="LB_TaskRecordStatus_Assigned" CssClass="StatusCss" runat="server" Text="å·²åˆ†æ´¾"></asp:Label>
+                                                                                    <asp:Label ID="LB_TaskRecordStatus_Assigned" CssClass="StatusCss" runat="server" Text="ÒÑ·ÖÅÉ"></asp:Label>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
@@ -318,8 +318,8 @@
                                                                     <ItemTemplate>
                                                                         <div id="div_task" class="bian" style="border-collapse: collapse; width: 97%; border: dotted; border-radius: 3px 4px; border-color: lightgreen;">
                                                                             <a href='TTTaskDetail.aspx?ID=<%#DataBinder.Eval(Container.DataItem, "ID")%>' target="_blank">
-                                                                                <span style="color: lightgreen;">#<%#DataBinder.Eval(Container.DataItem, "ID")%></span>&nbsp;&nbsp;<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>ï¼š <%#DataBinder.Eval(Container.DataItem, "Operation")%><br />
-                                                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FenPaiRen%>"></asp:Label>ï¼š<%#DataBinder.Eval(Container.DataItem, "AssignManName")%>
+                                                                                <span style="color: lightgreen;">#<%#DataBinder.Eval(Container.DataItem, "ID")%></span>&nbsp;&nbsp;<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º <%#DataBinder.Eval(Container.DataItem, "Operation")%><br />
+                                                                                <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FenPaiRen%>"></asp:Label>£º<%#DataBinder.Eval(Container.DataItem, "AssignManName")%>
                                                                             </a>
                                                                         </div>
                                                                         <div style="background-color: white; height: 5px;">

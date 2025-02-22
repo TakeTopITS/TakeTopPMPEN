@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Data;
 using System.Configuration;
 using System.Collections;
@@ -25,7 +25,7 @@ public partial class TTMailView : System.Web.UI.Page
     {
         strUserCode = Session["UserCode"].ToString();
 
-        ///èŽ·å–å‚æ•°nFolderIDçš„å€¼
+        ///»ñÈ¡²ÎÊýnFolderIDµÄÖµ
         if (Request.Params["FolderID"] != null)
         {
             if (Int32.TryParse(Request.Params["FolderID"].ToString(), out nFolderID) == false)
@@ -33,7 +33,7 @@ public partial class TTMailView : System.Web.UI.Page
                 return;
             }
         }
-        ///èŽ·å–å‚æ•°nMailIDçš„å€¼
+        ///»ñÈ¡²ÎÊýnMailIDµÄÖµ
         if (Request.Params["MailID"] != null)
         {
             if (Int32.TryParse(Request.Params["MailID"].ToString(), out nMailID) == false)
@@ -42,7 +42,7 @@ public partial class TTMailView : System.Web.UI.Page
             }
         }
         if (!Page.IsPostBack)
-        {   ///æ˜¾ç¤ºé‚®ä»¶å†…å®¹
+        {   ///ÏÔÊ¾ÓÊ¼þÄÚÈÝ
             if (nMailID > -1)
             {
                 try

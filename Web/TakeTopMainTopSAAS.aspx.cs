@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections;
 using System.Data;
 using System.Text;
@@ -26,7 +26,7 @@ public partial class TakeTopMainTopSAAS : System.Web.UI.Page
             {
                 strUserName = ShareClass.GetUserName(strUserCode);
                 LB_UserName.Text = strUserName;
-                LB_SystemMsg.Text = Resources.lang.NiHao + "ï¼Œ" + Resources.lang.HuanYingNiShiYong + " " + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
+                LB_SystemMsg.Text = Resources.lang.NiHao + "£¬" + Resources.lang.HuanYingNiShiYong + " " + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
 
                 intRunNumber = 0;
 
@@ -57,7 +57,7 @@ public partial class TakeTopMainTopSAAS : System.Web.UI.Page
 
         try
         {
-            //æ›´æ–°å·¦è¾¹æ å±•å¼€çŠ¶æ€
+            //¸üĞÂ×ó±ßÀ¸Õ¹¿ª×´Ì¬
             ShareClass.UpdateLeftBarExtendStatus(strUserCode, strLeftBarExtend);
 
             Session["LeftBarExtend"] = strLeftBarExtend;
@@ -111,11 +111,11 @@ public partial class TakeTopMainTopSAAS : System.Web.UI.Page
 
         if (strLangCode == "zh-CN")
         {
-            LB_Copyright.Text = "Copyright Â© 2006-2026 " + " <a href=https://www.taketopits.com  target=_blank style='text-decoration:none;'>&nbsp;æ³°é¡¶æ‹“é¼</a>";
+            LB_Copyright.Text = "Copyright ? 2006-2026 " + " <a href=https://www.taketopits.com  target=_blank style='text-decoration:none;'>&nbsp;Ì©¶¥ÍØ¶¦</a>";
         }
         else
         {
-            LB_Copyright.Text = "Copyright Â© 2006-2026 " + " <a href=https://www.taketopits.com  target=_blank style='text-decoration:none;'>&nbsp;TakeTopITS</a>";
+            LB_Copyright.Text = "Copyright ? 2006-2026 " + " <a href=https://www.taketopits.com  target=_blank style='text-decoration:none;'>&nbsp;TakeTopITS</a>";
         }
 
         strIsOEMVersion = System.Configuration.ConfigurationManager.AppSettings["IsOEMVersion"];
@@ -126,7 +126,7 @@ public partial class TakeTopMainTopSAAS : System.Web.UI.Page
         else
         {
             LB_Copyright.Visible = true;
-            LB_Copyright.Text = "CopyrightÂ© 2006-2026";
+            LB_Copyright.Text = "Copyright? 2006-2026";
         }
 
         LB_CurrentUserCode.Text = strUserCode;
@@ -140,10 +140,10 @@ public partial class TakeTopMainTopSAAS : System.Web.UI.Page
         LB_MustInFrame.Text = strMustInFrame;
         LB_AutoSaveWFOperator.Text = strAutoSaveWFOperator;
 
-        //æ‰§è¡Œå®šæ—¶å™¨é¡µ
+        //Ö´ĞĞ¶¨Ê±Æ÷Ò³
         ShareClass.ExecuteTakeTopTimer();
 
-        //æ¨é€ç”¨æˆ·çš„ç³»ç»Ÿæ¶ˆæ¯
+        //ÍÆËÍÓÃ»§µÄÏµÍ³ÏûÏ¢
         SetUserSystemMsg();
     }
 
@@ -157,7 +157,7 @@ public partial class TakeTopMainTopSAAS : System.Web.UI.Page
             strUserCode = LB_CurrentUserCode.Text.Trim();
             strUserName = LB_CurrentUserName.Text.Trim();
 
-            //åº”ç”¨ä¼šè¯å¯¹è±¡ï¼Œä»¥ä¿æŒåœ¨çº¿è¿æ¥
+            //Ó¦ÓÃ»á»°¶ÔÏó£¬ÒÔ±£³ÖÔÚÏßÁ¬½Ó
             Session["UserCode"] = LB_CurrentUserCode.Text.Trim();
             Session["UserName"] = LB_CurrentUserName.Text.Trim();
             Session["UserType"] = LB_CurrentUserType.Text.Trim();
@@ -169,10 +169,10 @@ public partial class TakeTopMainTopSAAS : System.Web.UI.Page
             Session["MustInFrame"] = LB_MustInFrame.Text.Trim();
             Session["AutoSaveWFOperator"] = LB_AutoSaveWFOperator.Text.Trim();
 
-            //å–å¾—ç³»ç»Ÿç™»å½•æ¬¡æ•°
+            //È¡µÃÏµÍ³µÇÂ¼´ÎÊı
             lbl_LogonNumber.Text = GetLogonNumber().ToString();
 
-            //æ›´æ–°ç”¨æˆ·åœ¨çº¿æ—¶é—´
+            //¸üĞÂÓÃ»§ÔÚÏßÊ±¼ä
             intIntervalTime = int.Parse(System.Configuration.ConfigurationManager.AppSettings["TimerInterval"]);
             SetLastestUseTime(intIntervalTime);
         }
@@ -182,7 +182,7 @@ public partial class TakeTopMainTopSAAS : System.Web.UI.Page
         }
     }
 
-    //å–å¾—ç³»ç»Ÿç™»å½•æ¬¡æ•°
+    //È¡µÃÏµÍ³µÇÂ¼´ÎÊı
     protected int GetLogonNumber()
     {
         string strHQL;

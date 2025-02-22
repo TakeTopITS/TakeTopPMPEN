@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -34,7 +34,7 @@ public partial class TTSupplierMaterialPaymentKeepAccount : System.Web.UI.Page
         string strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ç‰©æ–™é‡‡è´­ä»˜æ¬¾è®°è´¦", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ÎïÁÏ²É¹º¸¶¿î¼ÇÕË", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -78,7 +78,7 @@ public partial class TTSupplierMaterialPaymentKeepAccount : System.Web.UI.Page
 
                 ProjectMaterialPaymentApplicant projectMaterialPaymentApplicant = GetProjectMaterialPaymentApplicant(strAOID);
 
-                //æ’å…¥åº”æ”¶åº”ä»˜æ•°æ®åˆ°åº”æ”¶åº”ä»˜è¡¨
+                //²åÈëÓ¦ÊÕÓ¦¸¶Êý¾Ýµ½Ó¦ÊÕÓ¦¸¶±í
                 //decimal deAmount = projectMaterialPaymentApplicant.CurrentTotalPaymentAmount;
                 string strCurrencyType = projectMaterialPaymentApplicant.CurrencyType;
                 string strReAndPayer = projectMaterialPaymentApplicant.PartA.Trim();
@@ -90,7 +90,7 @@ public partial class TTSupplierMaterialPaymentKeepAccount : System.Web.UI.Page
 
                 decimal deDetailAmount;
 
-                if (strStatus != "å·²è®°è´¦")
+                if (strStatus != "Recorded")
                 {
                     strHQL = "From ProjectMaterialPaymentApplicantDetail as projectMaterialPaymentApplicantDetail Where projectMaterialPaymentApplicantDetail.AOID = " + strAOID;
                     ProjectMaterialPaymentApplicantDetailBLL projectMaterialPaymentApplicantDetailBLL = new ProjectMaterialPaymentApplicantDetailBLL();
@@ -110,14 +110,14 @@ public partial class TTSupplierMaterialPaymentKeepAccount : System.Web.UI.Page
                         strHQL = "Update T_ConstractPayable Set OutOfPocketAccount = " + deDetailAmount.ToString() + ",UNPayAmount = 0 Where ID = " + intReAndPayalbeID.ToString();
                         ShareClass.RunSqlCommand(strHQL);
 
-                        //æŠŠç”³æŠ¥è´¹ç”¨åˆ—å…¥é¡¹ç›®è´¹ç”¨
+                        //°ÑÉê±¨·ÑÓÃÁÐÈëÏîÄ¿·ÑÓÃ
                         if (intProjectID > 1)
                         {
-                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, "ç‰©èµ„é‡‡è´­è´¹ç”¨", deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
+                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, "Îï×Ê²É¹º·ÑÓÃ", deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
                         }
                     }
 
-                    strHQL = "Update T_ProjectMaterialPaymentApplicant Set Status = 'å·²è®°è´¦' Where AOID = " + strAOID;
+                    strHQL = "Update T_ProjectMaterialPaymentApplicant Set Status = 'Recorded' Where AOID = " + strAOID;
                     ShareClass.RunSqlCommand(strHQL);
 
 

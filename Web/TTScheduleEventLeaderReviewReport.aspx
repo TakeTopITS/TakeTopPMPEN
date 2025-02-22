@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTScheduleEventLeaderReviewReport.aspx.cs" Inherits="TTScheduleEventLeaderReviewReport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTScheduleEventLeaderReviewReport.aspx.cs" Inherits="TTScheduleEventLeaderReviewReport" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit.HTMLEditor"
     TagPrefix="cc1" %>
@@ -43,7 +43,7 @@
                         <tr>
                             <td width="" align="right">
                                 <a href="#" onclick="preview1()">
-                                    <img src="ImagesSkin/print.gif" alt="打印" border="0" />
+                                    <img src="ImagesSkin/print.gif" alt="��ӡ" border="0" />
                                 </a>
                             </td>
                         </tr>

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWFChartViewJS.aspx.cs" Inherits="TTWFChartViewJS" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWFChartViewJS.aspx.cs" Inherits="TTWFChartViewJS" %>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -73,8 +73,8 @@
                         <asp:TextBox ID="TB_WFChartString4" runat="server" Style="visibility: hidden"></asp:TextBox>
 
                         <%-- <asp:Label ID="LB_Sql1" runat="server"></asp:Label>--%>
-                        <%-- <asp:Button ID="BT_SaveWFDefinition" runat="server" CssClass="inpuLong" Text="--&gt;ä¿å­˜å·¥ä½œæµæ¨¡æ¿å®šä¹‰" OnClick="BT_SaveWFDefinition_Click"  Style="visibility: hidden"/>--%>
-                        <%--<asp:Button ID="BT_SaveWFChart" runat="server" CssClass="inpuLong" Text="--&gt;ä¿å­˜æµç¨‹å›¾" OnClick="BT_SaveWFChart_Click" Style="visibility: hidden;" />--%>
+                        <%-- <asp:Button ID="BT_SaveWFDefinition" runat="server" CssClass="inpuLong" Text="--&gt;±£´æ¹¤×÷Á÷Ä£°å¶¨Òå" OnClick="BT_SaveWFDefinition_Click"  Style="visibility: hidden"/>--%>
+                        <%--<asp:Button ID="BT_SaveWFChart" runat="server" CssClass="inpuLong" Text="--&gt;±£´æÁ÷³ÌÍ¼" OnClick="BT_SaveWFChart_Click" Style="visibility: hidden;" />--%>
                     </td>
                 </tr>
             </table>

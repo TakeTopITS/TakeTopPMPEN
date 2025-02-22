@@ -1,4 +1,4 @@
-Ôªøusing ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
 using System.Collections;
@@ -16,8 +16,8 @@ public partial class TTWorkPlanRelatedWorkflowListView : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //ÈíüÁ§ºÊúà‰ΩúÂìÅÔºàjack.erp@gmail.com)
-        //Ê≥∞È°∂ËΩØ‰ª∂(TakeTop Software)       
+        //÷”¿Ò‘¬◊˜∆∑£®jack.erp@gmail.com)
+        //Ã©∂•»Ìº˛(TakeTop Software)       
         string strHQL;
         IList lst;
 
@@ -39,8 +39,8 @@ public partial class TTWorkPlanRelatedWorkflowListView : System.Web.UI.Page
         if (Page.IsPostBack == false)
         {
             strHQL = "from WorkFlow as workFlow ";
-            strHQL += " Where workFlow.RelatedType = 'ËÆ°Âàí' And workFlow.RelatedID = " + strPlanID;
-            strHQL += " and workFlow.Status <> 'Êñ∞Âª∫'";
+            strHQL += " Where workFlow.RelatedType = 'Plan' And workFlow.RelatedID = " + strPlanID;
+            strHQL += " and workFlow.Status <> 'New'";
             strHQL += " Order by workFlow.WLID DESC";
             WorkFlowBLL workFlowBLL = new WorkFlowBLL();
             lst = workFlowBLL.GetAllWorkFlows(strHQL);

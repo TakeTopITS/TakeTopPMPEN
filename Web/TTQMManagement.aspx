@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTQMManagement.aspx.cs" Inherits="TTQMManagement" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTQMManagement.aspx.cs" Inherits="TTQMManagement" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -87,7 +87,7 @@
                                                                 <tr>
                                                                     <td align="left" style="font-size: x-large">
                                                                         <b><span class="auto-style1">
-                                                                            <asp:Label ID="Label2" runat="server" Text="é¡¹ç›®åˆåŒéªŒæ”¶å•"></asp:Label></span></b></td>
+                                                                            <asp:Label ID="Label2" runat="server" Text="ÏîÄ¿ºÏÍ¬ÑéÊÕµ¥"></asp:Label></span></b></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td align="center">
@@ -117,28 +117,28 @@
                                                                         </table>
                                                                         <asp:DataGrid ID="DataGrid2" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="30px" ShowHeader="False" Width="100%">
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="Code" HeaderText="ç¼–å·">
+                                                                                <asp:BoundColumn DataField="Code" HeaderText="±àºÅ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Name" HeaderText="å§“å">
+                                                                                <asp:BoundColumn DataField="Name" HeaderText="ÐÕÃû">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="PurchasingContractName" HeaderText="é‡‡è´­åˆåŒ">
+                                                                                <asp:BoundColumn DataField="PurchasingContractName" HeaderText="²É¹ººÏÍ¬">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Supplier" HeaderText="ä¾›åº”å•†">
+                                                                                <asp:BoundColumn DataField="Supplier" HeaderText="Supplier">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                                                <asp:TemplateColumn HeaderText="×´Ì¬">
                                                                                     <ItemTemplate>
                                                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                     </ItemTemplate>
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                 </asp:TemplateColumn>
-                                                                                <asp:BoundColumn DataField="InspectionResults" HeaderText="éªŒæ”¶ç»“æžœ">
+                                                                                <asp:BoundColumn DataField="InspectionResults" HeaderText="ÑéÊÕ½á¹û">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="25%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="InspectionDate" HeaderText="éªŒæ”¶æ—¥æœŸ" DataFormatString="{0:yyyy-MM-dd}">
+                                                                                <asp:BoundColumn DataField="InspectionDate" HeaderText="ÑéÊÕÈÕÆÚ" DataFormatString="{0:yyyy-MM-dd}">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
                                                                             </Columns>
@@ -185,25 +185,25 @@
                                                                         </table>
                                                                         <asp:DataGrid ID="DataGrid3" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="30px" ShowHeader="False" Width="100%">
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="Code" HeaderText="ç¼–å·">
+                                                                                <asp:BoundColumn DataField="Code" HeaderText="±àºÅ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Name" HeaderText="åç§°">
+                                                                                <asp:BoundColumn DataField="Name" HeaderText="Ãû³Æ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="PurchasingContractName" HeaderText="é‡‡è´­åˆåŒ">
+                                                                                <asp:BoundColumn DataField="PurchasingContractName" HeaderText="²É¹ººÏÍ¬">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                                                <asp:TemplateColumn HeaderText="×´Ì¬">
                                                                                     <ItemTemplate>
                                                                                         <%# ShareClass.GetStatusHomeNameByRequirementStatus(Eval("Status").ToString()) %>
                                                                                     </ItemTemplate>
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                                 </asp:TemplateColumn>
-                                                                                <asp:BoundColumn DataField="InspectionDate" HeaderText="æ£€æŸ¥æ—¥æœŸ" DataFormatString="{0:yyyy-MM-dd}">
+                                                                                <asp:BoundColumn DataField="InspectionDate" HeaderText="¼ì²éÈÕÆÚ" DataFormatString="{0:yyyy-MM-dd}">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="ExaminationContent" HeaderText="æ£€æŸ¥å†…å®¹">
+                                                                                <asp:BoundColumn DataField="ExaminationContent" HeaderText="¼ì²éÄÚÈÝ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="37%" />
                                                                                 </asp:BoundColumn>
                                                                             </Columns>
@@ -250,22 +250,22 @@
                                                                         </table>
                                                                         <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="30px" ShowHeader="False" Width="100%">
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="Code" HeaderText="ç¼–å·">
+                                                                                <asp:BoundColumn DataField="Code" HeaderText="±àºÅ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="PurchasingContractName" HeaderText="é‡‡è´­åˆåŒ">
+                                                                                <asp:BoundColumn DataField="PurchasingContractName" HeaderText="²É¹ººÏÍ¬">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Supplier" HeaderText="ä¾›åº”å•†">
+                                                                                <asp:BoundColumn DataField="Supplier" HeaderText="Supplier">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="SatisfactionDegree" HeaderText="æ»¡æ„ç¨‹åº¦">
+                                                                                <asp:BoundColumn DataField="SatisfactionDegree" HeaderText="ÂúÒâ³Ì¶È">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Remark" HeaderText="è°ƒæŸ¥å†…å®¹">
+                                                                                <asp:BoundColumn DataField="Remark" HeaderText="µ÷²éÄÚÈÝ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="EvaluationDate" HeaderText="è°ƒæŸ¥æ—¥æœŸ" DataFormatString="{0:yyyy-MM-dd}">
+                                                                                <asp:BoundColumn DataField="EvaluationDate" HeaderText="µ÷²éÈÕÆÚ" DataFormatString="{0:yyyy-MM-dd}">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
                                                                             </Columns>

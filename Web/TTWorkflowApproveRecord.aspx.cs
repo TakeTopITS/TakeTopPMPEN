@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
 using System.Collections;
@@ -24,11 +24,11 @@ public partial class TTWorkflowApproveRecord : System.Web.UI.Page
         strWLName = ShareClass.GetWorkFlowName(strRelatedID);
         if (strType == "WorkFlow")
         {
-            LB_WorkFlow.Text = "å·¥ä½œæµï¼š" + strRelatedID + " " + strWLName + "  å®¡æ ¸è®°å½•";
+            LB_WorkFlow.Text = "¹¤×÷Á÷£º" + strRelatedID + " " + strWLName + "  ÉóºË¼ÇÂ¼";
         }
         else
         {
-            LB_WorkFlow.Text = "å·¥ä½œæµï¼š" + strRelatedID + " " + strWLName + " æ­¥éª¤ï¼š" + strStepID + "  å®¡æ ¸è®°å½•";
+            LB_WorkFlow.Text = "¹¤×÷Á÷£º" + strRelatedID + " " + strWLName + " ²½Öè£º" + strStepID + "  ÉóºË¼ÇÂ¼";
         }
 
         if (Page.IsPostBack != true)

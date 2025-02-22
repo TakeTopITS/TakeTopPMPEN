@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopContainer.aspx.cs" Inherits="TakeTopContainer" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopContainer.aspx.cs" Inherits="TakeTopContainer" %>
 
 <!DOCTYPE html>
 

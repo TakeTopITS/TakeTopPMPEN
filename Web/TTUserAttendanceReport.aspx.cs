@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -78,7 +78,7 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
 
         if(strDepartCode == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('è­¦å‘Šï¼Œè¯·å…ˆé€‰æ‹©éƒ¨é—¨å†æŸ¥è¯¢ï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¾¯¸æ£¬ÇëÏÈÑ¡Ôñ²¿ÃÅÔÙ²éÑ¯£¡')", true);
             return;
         }
 
@@ -94,7 +94,7 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
 
         if (CB_IncludeChildDepartment.Checked == true)
         {
-            if (strDisplayType == "æ˜¾ç¤ºå¼‚å¸¸")
+            if (strDisplayType == "DisplayAbnormal")
             {
                 strHQL = "Select * From T_UserAttendanceRecord  where to_char(AttendanceDate,'yyyymmdd') >= " + "'" + strStartTime + "'";
                 strHQL += " and  to_char(AttendanceDate,'yyyymmdd') <= " + "'" + strEndTime + "'";
@@ -114,7 +114,7 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
         }
         else
         {
-            if (strDisplayType == "æ˜¾ç¤ºå¼‚å¸¸")
+            if (strDisplayType == "DisplayAbnormal")
             {
                 strHQL = "Select * From T_UserAttendanceRecord  where to_char(AttendanceDate,'yyyymmdd') >= " + "'" + strStartTime + "'";
                 strHQL += " and  to_char(AttendanceDate,'yyyymmdd') <= " + "'" + strEndTime + "'";
@@ -153,7 +153,7 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
 
         if (strDepartCode == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('è­¦å‘Šï¼Œè¯·å…ˆé€‰æ‹©éƒ¨é—¨å†å¯¼å‡ºï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¾¯¸æ£¬ÇëÏÈÑ¡Ôñ²¿ÃÅÔÙµ¼³ö£¡')", true);
             return;
         }
 
@@ -169,7 +169,7 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
 
         if (CB_IncludeChildDepartment.Checked == true)
         {
-            if (strDisplayType == "æ˜¾ç¤ºå¼‚å¸¸")
+            if (strDisplayType == "DisplayAbnormal")
             {
                 strHQL = "Select * From T_UserAttendanceRecord  where to_char(AttendanceDate,'yyyymmdd') >= " + "'" + strStartTime + "'";
                 strHQL += " and  to_char(AttendanceDate,'yyyymmdd') <= " + "'" + strEndTime + "'";
@@ -189,7 +189,7 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
         }
         else
         {
-            if (strDisplayType == "æ˜¾ç¤ºå¼‚å¸¸")
+            if (strDisplayType == "DisplayAbnormal")
             {
                 strHQL = "Select * From T_UserAttendanceRecord  where to_char(AttendanceDate,'yyyymmdd') >= " + "'" + strStartTime + "'";
                 strHQL += " and  to_char(AttendanceDate,'yyyymmdd') <= " + "'" + strEndTime + "'";
@@ -211,7 +211,7 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_UserAttendanceRecord");
 
         Random a = new Random();
-        string fileName = "å‘˜å·¥è€ƒå‹¤æŠ¥è¡¨_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+        string fileName = "Ô±¹¤¿¼ÇÚ±¨±í_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
 
         string strTableTitle = @"<table cellspacing='0' cellpadding='4' id='DataGrid3' style='color:#333333;width:100%;border-collapse:collapse;'>
                 <tr class='itemStyle'>
@@ -228,7 +228,7 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
                        
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                       å‘˜å·¥è€ƒå‹¤æŠ¥è¡¨
+                       Ô±¹¤¿¼ÇÚ±¨±í
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
                       
@@ -249,36 +249,36 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
                 </tr>
                 <tr class='itemStyle'>
                     <td class='itemBorder' align='center' style='width:4%;'> ID</td>
-                    <td class='itemBorder' align='center' style='width:8%;'>å§“å</td>
-                    <td class='itemBorder' align='center' style='width:6%;'>å‡ºå‹¤æ—¥æœŸ</td>
+                    <td class='itemBorder' align='center' style='width:8%;'>ĞÕÃû</td>
+                    <td class='itemBorder' align='center' style='width:6%;'>³öÇÚÈÕÆÚ</td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        ä¸Šåˆä¸Šç­æ—¶é—´
+                        ÉÏÎçÉÏ°àÊ±¼ä
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        ä¸Šåˆä¸‹ç­æ—¶é—´
+                        ÉÏÎçÏÂ°àÊ±¼ä
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        ä¸‹åˆä¸Šç­æ—¶é—´
+                        ÏÂÎçÉÏ°àÊ±¼ä
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        ä¸‹åˆä¸‹ç­æ—¶é—´
+                        ÏÂÎçÏÂ°àÊ±¼ä
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        æ™šç­ä¸Šç­æ—¶é—´
+                        Íí°àÉÏ°àÊ±¼ä
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        æ™šç­ä¸‹ç­æ—¶é—´
+                        Íí°àÏÂ°àÊ±¼ä
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        åˆå¤œä¸Šç­æ—¶é—´
+                        ÎçÒ¹ÉÏ°àÊ±¼ä
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        åˆå¤œä¸‹ç­æ—¶é—´
+                        ÎçÒ¹ÏÂ°àÊ±¼ä
                     </td>
-                    <td class='itemBorder' align='center' style='width:6%;'>å…è®¸æœ€å¤§è·ç¦» (ç±³)</td>
-                    <td class='itemBorder' align='center' style='width:4%;'>è¿Ÿåˆ° (åˆ†)</td>
-                    <td class='itemBorder' align='center' style='width:4%;'>æ—©é€€ (åˆ†)</td>
-                    <td class='itemBorder' align='center'>ä½ç½®</td>
+                    <td class='itemBorder' align='center' style='width:6%;'>ÔÊĞí×î´ó¾àÀë (Ã×)</td>
+                    <td class='itemBorder' align='center' style='width:4%;'>³Ùµ½ (·Ö)</td>
+                    <td class='itemBorder' align='center' style='width:4%;'>ÔçÍË (·Ö)</td>
+                    <td class='itemBorder' align='center'>Î»ÖÃ</td>
                 </tr>
             </table>";
         try

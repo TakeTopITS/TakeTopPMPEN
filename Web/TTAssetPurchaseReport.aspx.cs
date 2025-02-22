@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -26,7 +26,7 @@ public partial class TTAssetPurchaseReport : System.Web.UI.Page
         string strUserName;
         string strUserCode = Session["UserCode"].ToString();
 
-        //this.Title = "璧勪骇閲囪喘鎶ヨ〃";
+        //this.Title = "资产采购报表";
 
         LB_UserCode.Text = strUserCode;
         strUserName = Session["UserName"].ToString();

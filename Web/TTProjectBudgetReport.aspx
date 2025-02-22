@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectBudgetReport.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectBudgetReport.aspx.cs"
     Inherits="TTProjectBudgetReport" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -44,7 +44,7 @@
                                         </td>
                                         <td align="center" valign="bottom">
                                             <a href="javascript:window.print()">
-                                                <img src="ImagesSkin/print.gif" alt="ÊâìÂç∞" border="0" /></a>
+                                                <img src="ImagesSkin/print.gif" alt="¥Ú”°" border="0" /></a>
                                         </td>
                                     </tr>
                                 </table>
@@ -54,18 +54,18 @@
                             <td style="text-align: center;">
                                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
                                     <tr>
-                                        <td width="95%" align="center">„Äê
-                                            <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,XiangMUYuSuan%>"></asp:Label>Ôºö
+                                        <td width="95%" align="center">°æ
+                                            <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,XiangMUYuSuan%>"></asp:Label>£∫
                                             <asp:Label ID="LB_ProjectBudget" runat="server" Font-Bold="False" Text="0"></asp:Label>
                                             &nbsp;&nbsp;
-                                            <asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,ShiZhuoYuSuan%>"></asp:Label>Ôºö
+                                            <asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,ShiZhuoYuSuan%>"></asp:Label>£∫
                                            <asp:Label ID="LB_RealBudget" runat="server" Font-Bold="False" Text="0"></asp:Label>
                                             &nbsp;&nbsp;
-                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ShiJiFaShengFeiYongZongE%>"></asp:Label>Ôºö
+                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ShiJiFaShengFeiYongZongE%>"></asp:Label>£∫
                                             <asp:Label ID="LB_ProExpense" runat="server" Font-Bold="False"
                                                 Text="0"></asp:Label>
 
-                                            „Äë
+                                            °ø
                                            <td align="center">&nbsp;
                                            </td>
                                     </tr>
@@ -115,10 +115,10 @@
                                             <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" Width="100%"
                                                 OnItemCommand="DataGrid1_ItemCommand" ShowHeader="false" CellPadding="4" GridLines="None">
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="Account" HeaderText="ÁßëÁõÆ">
+                                                    <asp:BoundColumn DataField="Account" HeaderText="ø∆ƒø">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Amount" HeaderText="ÈáëÈ¢ù">
+                                                    <asp:BoundColumn DataField="Amount" HeaderText="Ω∂Ó">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:BoundColumn>
                                                     <asp:TemplateColumn>
@@ -131,7 +131,7 @@
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="205px" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="Description" HeaderText="ÊèèËø∞">
+                                                    <asp:BoundColumn DataField="Description" HeaderText="√Ë ˆ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="45%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="ID" HeaderText="" Visible="false">
@@ -139,7 +139,7 @@
                                                     </asp:BoundColumn>
                                                     <asp:TemplateColumn>
                                                         <ItemTemplate>
-                                                            <asp:LinkButton ID="LBT_Select" CommandName="Select" runat="server" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='‰øÆÊîπ' /&gt;&lt;/div&gt;" ></asp:LinkButton>
+                                                            <asp:LinkButton ID="LBT_Select" CommandName="Select" runat="server" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='–ﬁ∏ƒ' /&gt;&lt;/div&gt;" ></asp:LinkButton>
 
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
@@ -170,14 +170,14 @@
                             <table style="width: 100%;" cellpadding="0" cellspacing="0" class="formBgStyle">
                                 <tr>
                                     <td align="right" style="font-weight: bold; color: #394f66; background-image: url('ImagesSkin/titleBG.jpg')">
-                                        <strong>&nbsp;&nbsp;<asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ChengYuan%>"></asp:Label>Ôºö<asp:Label ID="LB_OperatorCode" runat="server" Text="<%$ Resources:lang,SuoYou%>"></asp:Label>
+                                        <strong>&nbsp;&nbsp;<asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ChengYuan%>"></asp:Label>£∫<asp:Label ID="LB_OperatorCode" runat="server" Text="<%$ Resources:lang,SuoYou%>"></asp:Label>
                                             &nbsp;<asp:Label ID="LB_OperatorName" runat="server"></asp:Label>
-                                            &nbsp;<asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,KeMu%>"></asp:Label>Ôºö
+                                            &nbsp;<asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,KeMu%>"></asp:Label>£∫
                                             <asp:Label ID="LB_Account" runat="server" Text="<%$ Resources:lang,SuoYou%>"></asp:Label>
-                                            &nbsp;<asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,FeiYongMingXi%>"></asp:Label>Ôºö</strong> Ôºà<asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,JinE%>"></asp:Label>Ôºö
+                                            &nbsp;<asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,FeiYongMingXi%>"></asp:Label>£∫</strong> £®<asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,JinE%>"></asp:Label>£∫
                                         <asp:Label ID="LB_Amount" runat="server"></asp:Label>&nbsp
-                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,QueRenJinE%>"></asp:Label>Ôºö
-                                        <asp:Label ID="LB_ConfirmAmount" runat="server"></asp:Label>Ôºâ&nbsp;
+                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,QueRenJinE%>"></asp:Label>£∫
+                                        <asp:Label ID="LB_ConfirmAmount" runat="server"></asp:Label>£©&nbsp;
                                     </td>
                                 </tr>
 

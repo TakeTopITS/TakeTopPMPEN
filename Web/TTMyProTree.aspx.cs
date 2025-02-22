@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -23,7 +23,7 @@ public partial class TTMyProTree : System.Web.UI.Page
         LB_UserCode.Text = strUserCode;
         //LB_UserName.Text = GetUserName(strUserCode);
 
-        //this.Title = "æˆ‘çš„é¡¹ç›®æ ‘---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
+        //this.Title = "ÎÒµÄÏîÄ¿Ê÷---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
         {

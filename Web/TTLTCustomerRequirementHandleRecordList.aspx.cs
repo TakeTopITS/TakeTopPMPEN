@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -43,7 +43,7 @@ public partial class TTLTCustomerRequirementHandleRecordList : System.Web.UI.Pag
         strOperatorStatus = customerQuestion.OperatorStatus.Trim();
         strStatus = customerQuestion.Status.Trim();
 
-        //this.Title = "å®¢æˆ·é—®é¢˜ï¼š" + strQuestionID + " å¤„ç†è®°å½•";
+        //this.Title = "¿Í»§ÎÊÌâ£º" + strQuestionID + " ´¦Àí¼ÇÂ¼";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
@@ -54,7 +54,7 @@ public partial class TTLTCustomerRequirementHandleRecordList : System.Web.UI.Pag
             LoadCustomerQuestionHandleRecord(strQuestionID);
             LoadRelatedDoc(strQuestionID);
 
-            if (strStatus == "åˆ é™¤")
+            if (strStatus == "Deleted")
             {
                 BT_CancelDelete.Visible = true;
             }
@@ -62,7 +62,7 @@ public partial class TTLTCustomerRequirementHandleRecordList : System.Web.UI.Pag
 
             HL_QuestionToCustomer.NavigateUrl = "TTQuestionToCustomer.aspx?QuestionID=" + strQuestionID;
 
-            //åˆ—å‡ºç›´æ¥æˆå‘˜
+            //ÁĞ³öÖ±½Ó³ÉÔ±
             ShareClass.LoadMemberByUserCodeForDropDownList(strUserCode, DL_Operator);
 
             LoadCustomerQuestionRelatedCandidate(strQuestionID);
@@ -82,16 +82,16 @@ public partial class TTLTCustomerRequirementHandleRecordList : System.Web.UI.Pag
 
         CustomerQuestion customerQuestion = (CustomerQuestion)lst[0];
 
-        customerQuestion.Status = "å¤„ç†ä¸­";
+        customerQuestion.Status = "InProgress";
         customerQuestion.OperatorCode = strOperatorCode;
         customerQuestion.OperatorName = ShareClass.GetUserName(strOperatorCode);
-        customerQuestion.OperatorStatus = "å—ç†";
+        customerQuestion.OperatorStatus = "Accepted";
 
         try
         {
             customerQuestionBLL.UpdateCustomerQuestion(customerQuestion, int.Parse(strQuestionID));
 
-            //æ¨é€æ¶ˆæ¯ç»™å—ç†äºº
+            //ÍÆËÍÏûÏ¢¸øÊÜÀíÈË
             Msg msg = new Msg();
             string strMsg = Resources.lang.FuWuXuQiu + ":" + customerQuestion.Question.Trim() + "," + Resources.lang.ZZYaoNiChuLi;
             msg.SendMSM("Message", strOperatorCode, strMsg, strUserCode);
@@ -117,7 +117,7 @@ public partial class TTLTCustomerRequirementHandleRecordList : System.Web.UI.Pag
 
         CustomerQuestion customerQuestion = (CustomerQuestion)lst[0];
 
-        customerQuestion.Status = "æ–°å»º";
+        customerQuestion.Status = "New";
         customerQuestion.OperatorCode = "";
         customerQuestion.OperatorName = "";
         customerQuestion.OperatorStatus = "";
@@ -129,7 +129,7 @@ public partial class TTLTCustomerRequirementHandleRecordList : System.Web.UI.Pag
 
             BT_CancelDelete.Visible = false;
 
-            //æ¨é€æ¶ˆæ¯ç»™å—ç†äºº
+            //ÍÆËÍÏûÏ¢¸øÊÜÀíÈË
            
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXSCCG + "')", true);
         }
@@ -152,8 +152,8 @@ public partial class TTLTCustomerRequirementHandleRecordList : System.Web.UI.Pag
 
         customerQuestion.OperatorCode = strUserCode;
         customerQuestion.OperatorName = strUserName;
-        customerQuestion.OperatorStatus = "åˆ é™¤";
-        customerQuestion.Status = "åˆ é™¤";
+        customerQuestion.OperatorStatus = "Deleted";
+        customerQuestion.Status = "Deleted";
 
         try
         {
@@ -238,8 +238,8 @@ public partial class TTLTCustomerRequirementHandleRecordList : System.Web.UI.Pag
         string strHQL;
         IList lst;
 
-        strHQL = "from Document as document where document.RelatedType = 'å®¢æœ' and document.RelatedID = " + strQuestionID;
-        strHQL += " and rtrim(ltrim(document.Status)) <> 'åˆ é™¤' Order by document.DocID DESC";
+        strHQL = "from Document as document where document.RelatedType = '¿Í·ş' and document.RelatedID = " + strQuestionID;
+        strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);
 

@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -34,13 +34,13 @@ public partial class TTCSNews : System.Web.UI.Page
         {
             strHQL = "Select ID,Title,Content From T_HeadLine Where ";
             strHQL += " (RelatedDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))  or RelatedDepartCode = '" + strDepartCode + "')";
-            strHQL += " and Type = 'å¤–éƒ¨'and Status = 'å‘å¸ƒ' Order By ID DESC limit 1";
+            strHQL += " and Type = 'External'and Status = '·¢²¼' Order By ID DESC limit 1";
             DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");
 
             if (ds.Tables[0].Rows.Count > 0)
             {
                 strID = ds.Tables[0].Rows[0][0].ToString().Trim();
-                //this.Title = "æ–°é—»ï¼š" + strID + " " + ds.Tables[0].Rows[0][1].ToString().Trim();
+                //this.Title = "ÐÂÎÅ£º" + strID + " " + ds.Tables[0].Rows[0][1].ToString().Trim();
 
                 DataList1.DataSource = ds;
                 DataList1.DataBind();

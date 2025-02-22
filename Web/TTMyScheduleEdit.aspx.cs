@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Web.UI;
 public partial class TTMyScheduleEdit : System.Web.UI.Page

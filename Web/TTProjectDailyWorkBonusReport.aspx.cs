@@ -1,4 +1,4 @@
-锘縰sing System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -31,7 +31,7 @@ public partial class TTProjectDailyWorkBonusReport : System.Web.UI.Page
         string strUserCode = Session["UserCode"].ToString();
         string strProjectID = Request.QueryString["ProjectID"];
 
-        //this.Title = Resources.lang.Project + strProjectID + " " + GetProjectName(strProjectID) + " 宸ヤ綔濂栭噾鎶ヨ〃";
+        //this.Title = Resources.lang.Project + strProjectID + " " + GetProjectName(strProjectID) + " 工作奖金报表";
         LB_Project.Text = strProjectID + " " + GetProjectName(strProjectID);
 
         LB_UserCode.Text = strUserCode;

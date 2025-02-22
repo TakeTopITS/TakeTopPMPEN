@@ -1,9 +1,9 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTRTXTest.aspx.cs" Inherits="TTRTXTest" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTRTXTest.aspx.cs" Inherits="TTRTXTest" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ÂèëÈÄÅÊ∂àÊÅØÊèêÁ§∫</title>
+    <title>∑¢ÀÕœ˚œ¢Ã· æ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script><script type="text/javascript" src="js/allAHandler.js"></script><script type="text/javascript" language="javascript">$(function () {if (top.location != self.location) { } else { CloseWebPage(); }});</script></head>
 <body>
@@ -38,13 +38,13 @@
                 <table style="position: relative">
                     <tr>
                         <td style="width: 100px; height: 39px;">
-                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,FuWuQiDiZhi%>"></asp:Label>Ôºö
+                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,FuWuQiDiZhi%>"></asp:Label>£∫
                         </td>
                         <td style="width: 100px; height: 39px;">
                             <asp:TextBox ID="txtSvrIP" runat="server" Style="position: relative">127.0.0.1</asp:TextBox>
                         </td>
                         <td style="width: 128px; height: 39px;">
-                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,AppServerDuanKou%>"></asp:Label>Ôºö
+                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,AppServerDuanKou%>"></asp:Label>£∫
                         </td>
                         <td style="width: 100px; height: 39px;">
                             <asp:TextBox ID="txtSvrPort" runat="server" Style="position: relative">8006</asp:TextBox>
@@ -55,7 +55,7 @@
                     <table style="width: 502px; position: relative">
                         <tr>
                             <td style="width: 133px">
-                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XiaoXiTiXingJieShouZhe%>"></asp:Label>Ôºö
+                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XiaoXiTiXingJieShouZhe%>"></asp:Label>£∫
                             </td>
                             <td style="width: 250px">
                                 <asp:TextBox ID="txtReceivers" runat="server" Style="position: relative"></asp:TextBox>
@@ -63,7 +63,7 @@
                         </tr>
                         <tr>
                             <td style="width: 133px">
-                                <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,XiTiXingBiaoTi%>"></asp:Label>Ôºö
+                                <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,XiTiXingBiaoTi%>"></asp:Label>£∫
                             </td>
                             <td style="width: 250px">
                                 <asp:TextBox ID="txtMsgTitle" runat="server" Style="position: relative"></asp:TextBox>
@@ -71,7 +71,7 @@
                         </tr>
                         <tr>
                             <td style="width: 133px">
-                                <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,XiTiXingTingLiuShiJian%>"></asp:Label>Ôºö
+                                <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,XiTiXingTingLiuShiJian%>"></asp:Label>£∫
                             </td>
                             <td style="width: 250px">
                                 <asp:TextBox ID="txtTime" runat="server" Style="position: relative"></asp:TextBox>
@@ -79,7 +79,7 @@
                         </tr>
                         <tr>
                             <td style="width: 133px">
-                                <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,XiaoXiNeiRong%>"></asp:Label>Ôºö
+                                <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,XiaoXiNeiRong%>"></asp:Label>£∫
                             </td>
                             <td style="width: 250px">
                                 <asp:TextBox ID="txtMsgContent" runat="server" Style="position: relative" TextMode="MultiLine"></asp:TextBox>
@@ -99,7 +99,7 @@
                     <table style="width: 445px; position: relative">
                         <tr>
                             <td colspan="3">
-                                <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,YongHuMing%>"></asp:Label>Ôºö
+                                <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,YongHuMing%>"></asp:Label>£∫
                                 <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
                                 &nbsp;
                             </td>

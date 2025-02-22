@@ -34,13 +34,13 @@ namespace TakeTopGantt.handler
             }
             else
             {
-                context.Response.Write("项目号为空，请检查！");
+                context.Response.Write("The project number is empty, please check!");
                 return;
             }
 
             if (GanttShareClass.CheckUserCanUpdatePlan(strPID) == false || GanttShareClass.CheckIsCanUpdatePlanByProjectStatus(strPID) == false)
             {
-                context.Response.Write("没有权限更改计划，请检查！");
+                context.Response.Write("You don't have the permission to change the plan. Please check!");
                 return;
             }
 

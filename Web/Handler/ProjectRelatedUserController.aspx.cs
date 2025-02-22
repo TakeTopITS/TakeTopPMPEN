@@ -75,8 +75,6 @@ namespace TakeTopGantt.handler
             int pid = Convert.ToInt32(Request["pid"]);
           
             return _db.t_relateduser.Where(b => b.projectid == pid);
-
-            
         }
 
         //public Object Create(projects[] jsonData)

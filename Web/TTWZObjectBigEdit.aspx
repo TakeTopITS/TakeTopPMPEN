@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZObjectBigEdit.aspx.cs" Inherits="TTWZObjectBigEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZObjectBigEdit.aspx.cs" Inherits="TTWZObjectBigEdit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Â§ßÁ±ªÂØºÂÖ•</title>
+    <title>¥Û¿‡µº»Î</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -37,22 +37,22 @@
            
         });
        
-        /*Êñá‰ª∂ÈÄâÊã©È™åËØÅ*/
+        /*Œƒº˛—°‘Ò—È÷§*/
         function checkFile(obj, postfix) {
             var postfix = postfix || "";
             var fileName = $(obj).val();
             if (fileName == "") {
-                alert('ËØ∑ÈÄâÊã©Ë¶ÅÂØºÂÖ•ÁöÑÊñá‰ª∂ÔºÅ');
+                alert('«Î—°‘Ò“™µº»ÎµƒŒƒº˛£°');
                 return false;
             }
-            // Êñá‰ª∂Á±ªÂûãÈ™åËØÅ.
+            // Œƒº˛¿‡–Õ—È÷§.
             if (postfix != "") {
                 var re = new RegExp("(." + postfix + ")$");
                 if (re.test(fileName.toLowerCase())) {
                     return true;
                 }
                 else {
-                    alert("ÂØºÂÖ•ÁöÑÊñá‰ª∂ÂøÖÈ°ª‰∏∫." + postfix + "Á±ªÂûãÁöÑÊñá‰ª∂ÔºÅ");
+                    alert("µº»ÎµƒŒƒº˛±ÿ–ÎŒ™." + postfix + "¿‡–ÕµƒŒƒº˛£°");
                     return false;
                 }
             }
@@ -103,11 +103,11 @@
                                                     <table class="formBgStyle" width="100%">
                                                         <tr>
                                                             <td style="text-align: left" class="formItemBgStyle">
-                                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XuanZeDaoRuWenJian%>"></asp:Label>Ôºö</td>
+                                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XuanZeDaoRuWenJian%>"></asp:Label>£∫</td>
                                                             <td style="text-align: left" class="formItemBgStyle">
                                                                 <asp:FileUpload ID="fileExcel" runat="server" />
                                                                 <asp:Button ID="btnImport" runat="server" Text="<%$ Resources:lang,DaoRu%>" OnClick="btnImport_Click" CssClass="inpu" />&nbsp;&nbsp;
-                                                                <input type="button" value="ËøîÂõû" onclick="window.location.href = 'TTWZObjectBigList.aspx'" class="inpu" />
+                                                                <input type="button" value="∑µªÿ" onclick="window.location.href = 'TTWZObjectBigList.aspx'" class="inpu" />
                                                                 <div id="divLoading" style="display: none; color: Red; position: absolute;">
                                                                     <img src="resources/Images/Loading.gif" /><asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZhengZaiDaoRuZhongQingShaoHou%>"></asp:Label>
                                                                 </div>
@@ -123,7 +123,7 @@
                                                             <td>
                                                                 <b>
                                                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiaZaiMuBan%>"></asp:Label>:</b>
-                                                                <%--<asp:LinkButton ID="lbTemplate" runat="server" OnClick="lbTemplate_Click" Text="Â§ßÁ±ªÂØºÂÖ•Ê®°Êùø(ÁÇπÂáª‰∏ãËΩΩ)"></asp:LinkButton>--%>
+                                                                <%--<asp:LinkButton ID="lbTemplate" runat="server" OnClick="lbTemplate_Click" Text="¥Û¿‡µº»Îƒ£∞Â(µ„ª˜œ¬‘ÿ)"></asp:LinkButton>--%>
                                                                 <asp:Literal ID="LT_Template" runat="server"></asp:Literal>
                                                                 <br />
                                                                 <asp:FileUpload ID="FUP_Template" runat="server" />
@@ -142,9 +142,9 @@
                                                             <td>
                                                                 <fieldset>
                                                                     <legend>
-                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhuYiShiXiang%>"></asp:Label>Ôºö</legend>
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhuYiShiXiang%>"></asp:Label>£∫</legend>
                                                                     <font color="red">
-                                                                    1„ÄÅ<asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,TXSJSYXSJLWBTXDLDMDLMCDLSM%>"></asp:Label>Ôºõ<a href="Template/Áâ©ËµÑÂ§ßÁ±ª‰ª£Á†Å.xls"><asp:Label ID="Label57" runat="server" Text="<%$ Resources:lang,ShuJuDaoRuMuBan%>"></asp:Label></a><br />
+                                                                    1°¢<asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,TXSJSYXSJLWBTXDLDMDLMCDLSM%>"></asp:Label>£ª<a href="Template/ŒÔ◊ ¥Û¿‡¥˙¬Î.xls"><asp:Label ID="Label57" runat="server" Text="<%$ Resources:lang,ShuJuDaoRuMuBan%>"></asp:Label></a><br />
                                                                     </font>
                                                                 </fieldset>
                                                             </td>

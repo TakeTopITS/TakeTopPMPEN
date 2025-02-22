@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTLTCustomerRequirementHandleRecordList.aspx.cs" Inherits="TTLTCustomerRequirementHandleRecordList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTLTCustomerRequirementHandleRecordList.aspx.cs" Inherits="TTLTCustomerRequirementHandleRecordList" %>
 
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -131,7 +131,7 @@
                                             <table cellpadding="5" cellspacing="0" border="0" width="100%">
                                                 <tr>
                                                     <td class="tdTopLine" align="left" width="300px">
-                                                        <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,ZhiJieChengYuan%>"></asp:Label>ï¼š<asp:DropDownList ID="DL_Operator" DataTextField="UserName" DataValueField="UserCode" runat="server">
+                                                        <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,ZhiJieChengYuan%>"></asp:Label>£º<asp:DropDownList ID="DL_Operator" DataTextField="UserName" DataValueField="UserCode" runat="server">
                                                         </asp:DropDownList>
 
                                                         <asp:Button ID="BT_TransferOperator" runat="server" CssClass="inpuLong" Text="<%$ Resources:lang,ZhiDingWeiShouLiRen%>" OnClick="BT_TransferOperator_Click" />
@@ -149,7 +149,7 @@
                                     <tr>
                                         <td align="left">
                                             <cc2:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" runat="server" ActiveTabIndex="0" Width="100%">
-                                                <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="åä½œæ—¥å¿—" TabIndex="0">
+                                                <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="Ð­×÷ÈÕÖ¾" TabIndex="0">
                                                     <HeaderTemplate>
                                                         <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,KeHuYiJian%>"></asp:Label>
                                                     </HeaderTemplate>
@@ -310,7 +310,7 @@
                                                                                     ShowHeader="False">
                                                                                     
                                                                                     <Columns>
-                                                                                        <asp:TemplateColumn HeaderText="éƒ¨é—¨äººå‘˜ï¼š">
+                                                                                        <asp:TemplateColumn HeaderText="²¿ÃÅÈËÔ±£º">
                                                                                             <ItemTemplate>
                                                                                                 <asp:Button ID="BT_ID" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>'
                                                                                                     CssClass="inpu" /><asp:Button ID="BT_UserName" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"UserName") %>'
@@ -372,7 +372,7 @@
                                                     </ContentTemplate>
                                                 </cc2:TabPanel>
 
-                                                <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="ç›¸å…³æ–‡ä»¶" TabIndex="1">
+                                                <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="Ïà¹ØÎÄ¼þ" TabIndex="1">
                                                     <ContentTemplate>
                                                         <table width="100%" cellpadding="0" cellspacing="0" background="ImagesSkin/main_n_bj.jpg">
                                                             <tr>
@@ -405,23 +405,23 @@
                                                             CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px"
                                                             Width="100%">
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="DocID" HeaderText="åºå·">
+                                                                <asp:BoundColumn DataField="DocID" HeaderText="ÐòºÅ">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="DocType" HeaderText="ç±»åž‹">
+                                                                <asp:BoundColumn DataField="DocType" HeaderText="ÀàÐÍ">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
-                                                                    DataTextField="DocName" HeaderText="æ–‡ä»¶å" Target="_blank">
+                                                                    DataTextField="DocName" HeaderText="ÎÄ¼þÃû" Target="_blank">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="25%" />
                                                                 </asp:HyperLinkColumn>
-                                                                <asp:BoundColumn DataField="Author" HeaderText="ä½œè€…">
+                                                                <asp:BoundColumn DataField="Author" HeaderText="×÷Õß">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="UploadManName" HeaderText="ä¸Šä¼ è€…">
+                                                                <asp:BoundColumn DataField="UploadManName" HeaderText="ÉÏ´«Õß">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="UploadTime" HeaderText="ä¸Šä¼ æ—¶é—´">
+                                                                <asp:BoundColumn DataField="UploadTime" HeaderText="ÉÏ´«Ê±¼ä">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:BoundColumn DataField="Address" Visible="False"></asp:BoundColumn>

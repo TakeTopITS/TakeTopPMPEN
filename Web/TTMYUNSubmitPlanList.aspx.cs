@@ -1,4 +1,4 @@
-﻿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections;
 using System.ComponentModel;
 using System.Data;
@@ -24,14 +24,14 @@ public partial class TTMYUNSubmitPlanList : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
 
-        //this.Title = "我到期没提交审核的计划";
+        //this.Title = "�ҵ���û�ύ��˵ļƻ�";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack == false)
         {
             PlanBLL planBLL = new PlanBLL();
 
             strHQL = " Select * From T_Plan Where to_char(StartTime,'yyyymmdd') <= to_char(now(),'yyyymmdd') ";
-            strHQL += " and  to_char(EndTime,'yyyymmdd') >= to_char(now(),'yyyymmdd')  and  SubmitTime = '' and Status = '新建'  ";
+            strHQL += " and  to_char(EndTime,'yyyymmdd') >= to_char(now(),'yyyymmdd')  and  SubmitTime = '' and Status = 'New'  ";
             strHQL += " and CreatorCode =  " + "'" + strUserCode + "'";
             strHQL += " Order By StartTime DESC,EndTime ASC";
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_Plan");

@@ -65,7 +65,7 @@ public class addJSCodeToFormHandler : IHttpHandler, IReadOnlySessionState
                 catch (Exception ex)
                 {
                     LogClass.WriteLogFile(ex.Message.ToString());
-                    result = "保存失败，原因是：" + ex.Message.ToString();
+                    result = "\"Save failed, reason:" + ex.Message.ToString();
                 }
             }
             else
@@ -95,13 +95,13 @@ public class addJSCodeToFormHandler : IHttpHandler, IReadOnlySessionState
                 }
                 catch (Exception ex)
                 {
-                    result = "保存失败，原因是：" + ex.Message.ToString();
+                    result = "\"Save failed, reason:" + ex.Message.ToString();
                 }
             }
         }
         catch (Exception ex)
         {
-            result = "保存失败，原因是：" + ex.Message.ToString();
+            result = "\"Save failed, reason:" + ex.Message.ToString();
         }
 
         context.Response.ContentType = "text/plain";

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCustomerRelatedUserImport.aspx.cs" Inherits="TTCustomerRelatedUserImport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCustomerRelatedUserImport.aspx.cs" Inherits="TTCustomerRelatedUserImport" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -52,7 +52,7 @@
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
                                                         <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                            <asp:Label ID="Label1" runat="server" Text="å®¢æˆ·å¯è§†äººå‘˜å¯¼å…¥"></asp:Label>
+                                                            <asp:Label ID="Label1" runat="server" Text="¿Í»§¿ÉÊÓÈËÔ±µ¼Èë"></asp:Label>
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -77,7 +77,7 @@
                                                                                     </div>
                                                                                 </td>
                                                                                 <td>
-                                                                                    <asp:CheckBox ID="CB_IsClearAll" runat="server" Checked="false" Text="å¯¼å…¥æ—¶åˆ é™¤åŽŸæ¥çš„" />
+                                                                                    <asp:CheckBox ID="CB_IsClearAll" runat="server" Checked="false" Text="µ¼ÈëÊ±É¾³ýÔ­À´µÄ" />
                                                                                 </td>
                                                                                 <td style="padding-left: 10px;">
                                                                                     <asp:Button ID="btn_ExcelToDataTraining" runat="server" CssClass="inpu" OnClick="btn_ExcelToDataTraining_Click" OnClientClick="displayWaitingImage('block');" Text="<%$ Resources:lang,DaoRuShuJu%>" />
@@ -86,8 +86,8 @@
                                                                             </tr>
                                                                         </table>
 
-                                                                        <asp:Label ID="Label28" runat="server" Text="å®¢æˆ·å¯è§†äººå‘˜å¯¼å…¥æ¨¡æ¿"></asp:Label>
-                                                                        ï¼š<a href="Template/å®¢æˆ·å¯è§†äººå‘˜å¯¼å…¥æ¨¡æ¿.xls"><asp:Label ID="Label29" runat="server" Text="å®¢æˆ·å¯è§†äººå‘˜å¯¼å…¥æ¨¡æ¿"></asp:Label>
+                                                                        <asp:Label ID="Label28" runat="server" Text="¿Í»§¿ÉÊÓÈËÔ±µ¼ÈëÄ£°å"></asp:Label>
+                                                                        £º<a href="Template/¿Í»§¿ÉÊÓÈËÔ±µ¼ÈëÄ£°å.xls"><asp:Label ID="Label29" runat="server" Text="¿Í»§¿ÉÊÓÈËÔ±µ¼ÈëÄ£°å"></asp:Label>
                                                                         </a>
                                                                         <div id="ProgressBar">
                                                                             <Upload:ProgressBar ID="ProgressBar1" runat="server" Height="100px" Width="500px">

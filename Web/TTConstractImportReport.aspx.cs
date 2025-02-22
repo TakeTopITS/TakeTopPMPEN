@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -33,7 +33,7 @@ public partial class TTConstractImportReport : System.Web.UI.Page
         strLikeUserCode = "%" + strUserCode + "%";
 
 
-        //this.Title = "杩涘彛涓�瑙堣〃";
+        //this.Title = "进口一览表";
 
         LB_UserCode.Text = strUserCode;
         strUserName = Session["UserName"].ToString();
@@ -160,7 +160,7 @@ public partial class TTConstractImportReport : System.Web.UI.Page
         strConstractClass = "%" + DDL_ConstractClass.SelectedValue + "%";
         strCurrencyType = "%" + DL_CurrencyType.SelectedValue.Trim() + "%";
 
-        strHQL = "Select ConstractCode 鍚堝悓浠ｇ爜,TotalAmount 鐢虫姤閲戦,ImportDate 杩涘彛鏃ユ湡,Customs 杩涘彛鍙ｅ哺,ReportDate 鐢虫姤鏃ユ湡,EntryCode 鎶ュ叧鍗曞彿,EntryCode 鎶ュ叧鍗曞彿,PreEntryCode 棰勫綍鍗曞彿,Currency 甯佸埆,ExchangeRate 姹囩巼,TotalEntryTax 鍏崇◣,TotalAddedValueTax 澧炲�肩◣ from  V_ConstractImportReport Where";
+        strHQL = "Select ConstractCode 合同代码,TotalAmount 申报金额,ImportDate 进口日期,Customs 进口口岸,ReportDate 申报日期,EntryCode 报关单号,EntryCode 报关单号,PreEntryCode 预录单号,Currency 币别,ExchangeRate 汇率,TotalEntryTax 关税,TotalAddedValueTax 增值税 from  V_ConstractImportReport Where";
         strHQL += " (ConstractCode in (Select ConstractCode From T_Constract Where  DepartCode in " + strDepartString + ")";
         strHQL += " Or (ConstractCode in (Select ConstractCode From T_ConstractRelatedUser Where UserCode like  " + "'" + strLikeUserCode + "'" + ")))";
         strHQL += " and ConstractCode Like " + "'" + strConstractCode + "'";

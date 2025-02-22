@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserAttendanceRecord.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserAttendanceRecord.aspx.cs"
     Inherits="TTUserAttendanceRecord" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -7,7 +7,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>È°πÁõÆÊàêÂëòËµÑÊñô</title>
+    <title>œÓƒø≥…‘±◊ ¡œ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -65,7 +65,7 @@
                                                         </td>
                                                         <td>
                                                             <asp:Button ID="BT_CreateAttendanceRecord" runat="server" Text="<%$ Resources:lang,ShengChengKaoQinShuJu%>"
-                                                                OnClick="BT_CreateAttendanceRecord_Click" />Ôºâ
+                                                                OnClick="BT_CreateAttendanceRecord_Click" />£©
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -235,7 +235,7 @@
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                     </asp:TemplateColumn>
 
-                                                                    <asp:BoundColumn DataField="AttendanceDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ËÄÉÂã§Êó•Êúü">
+                                                                    <asp:BoundColumn DataField="AttendanceDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="øº«⁄»’∆⁄">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:BoundColumn>
 
@@ -352,14 +352,14 @@
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:TemplateColumn>
 
-                                                                    <asp:BoundColumn DataField="LargestDistance" HeaderText="ÂÖÅËÆ∏ÊúÄÂ§ßË∑ùÁ¶ª">
+                                                                    <asp:BoundColumn DataField="LargestDistance" HeaderText="‘ –Ì◊Ó¥Ûæ‡¿Î">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="LateMinute" HeaderText="ËøüÂà∞ÂàÜÈíü">
+                                                                    <asp:BoundColumn DataField="LateMinute" HeaderText="≥ŸµΩ∑÷÷”">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
 
-                                                                    <asp:BoundColumn DataField="EarlyMinute" HeaderText="Êó©ÈÄÄÂàÜÈíü">
+                                                                    <asp:BoundColumn DataField="EarlyMinute" HeaderText="‘ÁÕÀ∑÷÷”">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
 
@@ -430,14 +430,14 @@
                                                     <asp:DropDownList ID="DL_ShiftType" runat="server" AutoPostBack="true"
                                                         OnSelectedIndexChanged="DL_ShiftType_SelectedIndexChanged"
                                                         Style="font-weight: normal; color: black">
-                                                        <asp:ListItem Value="‰∏äÂçà‰∏äÁè≠Êó∂Èó¥" Text="<%$ Resources:lang,ZaoBanShangBanShiJian%>" />
-                                                        <asp:ListItem Value="‰∏äÂçà‰∏ãÁè≠Êó∂Èó¥" Text="<%$ Resources:lang,ZaoBanXiaBanShiJian%>" />
-                                                        <asp:ListItem Value="‰∏ãÂçà‰∏äÁè≠Êó∂Èó¥" Text="<%$ Resources:lang,ZhongBanshangBanShiJian%>" />
-                                                        <asp:ListItem Value="‰∏ãÂçà‰∏ãÁè≠Êó∂Èó¥" Text="<%$ Resources:lang,ZhongBanXiaBanShiJian%>" />
-                                                        <asp:ListItem Value="ÊôöÁè≠‰∏äÁè≠Êó∂Èó¥" Text="<%$ Resources:lang,WanBanShangBanShiJian%>" />
-                                                        <asp:ListItem Value="ÊôöÁè≠‰∏ãÁè≠Êó∂Èó¥" Text="<%$ Resources:lang,WanBanXiaBanShiJian%>" />
-                                                        <asp:ListItem Value="ÂçàÂ§ú‰∏äÁè≠Êó∂Èó¥" Text="<%$ Resources:lang,JiaBanShangBanShiJian%>" />
-                                                        <asp:ListItem Value="ÂçàÂ§ú‰∏ãÁè≠Êó∂Èó¥" Text="<%$ Resources:lang,JiaBanXiaBanShiJian%>" />
+                                                        <asp:ListItem Value="MorningWorkStartTime" Text="<%$ Resources:lang,ZaoBanShangBanShiJian%>" />
+                                                        <asp:ListItem Value="MorningWorkEndTime" Text="<%$ Resources:lang,ZaoBanXiaBanShiJian%>" />
+                                                        <asp:ListItem Value="AfternoonWorkStartTime" Text="<%$ Resources:lang,ZhongBanshangBanShiJian%>" />
+                                                        <asp:ListItem Value="AfternoonWorkEndTime" Text="<%$ Resources:lang,ZhongBanXiaBanShiJian%>" />
+                                                        <asp:ListItem Value="NightShiftStartTime" Text="<%$ Resources:lang,WanBanShangBanShiJian%>" />
+                                                        <asp:ListItem Value="NightShiftEndTime" Text="<%$ Resources:lang,WanBanXiaBanShiJian%>" />
+                                                        <asp:ListItem Value="MidnightWorkStartTime" Text="<%$ Resources:lang,JiaBanShangBanShiJian%>" />
+                                                        <asp:ListItem Value="MidnightWorkEndTime" Text="<%$ Resources:lang,JiaBanXiaBanShiJian%>" />
                                                     </asp:DropDownList>
                                                 </td>
                                                 <td>

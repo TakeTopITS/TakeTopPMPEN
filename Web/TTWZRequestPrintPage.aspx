@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZRequestPrintPage.aspx.cs" Inherits="TTWZRequestPrintPage" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZRequestPrintPage.aspx.cs" Inherits="TTWZRequestPrintPage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -53,9 +53,9 @@
                                             <table width="100%">
                                                 <tr>
                                                     <td style="width:30%;"><b>
-                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,QingKuanDanHao%>"></asp:Label>ï¼š</b><%# Eval("RequestCode") %></td>
+                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,QingKuanDanHao%>"></asp:Label>£º</b><%# Eval("RequestCode") %></td>
                                                     <td style="width:70%;"><b>
-                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,QingKuanRiQi%>"></asp:Label>ï¼š</b><%# Eval("RequestTime") %></td>
+                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,QingKuanRiQi%>"></asp:Label>£º</b><%# Eval("RequestTime") %></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -65,57 +65,57 @@
                                             <table width="100%" style="border:solid;" cellpadding="1" cellspacing="0">
                                                 <tr>
                                                     <td style="width:15%;text-align:right;"><b>
-                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,GongHuoDanWei%>"></asp:Label>ï¼š</b></td>
+                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,GongHuoDanWei%>"></asp:Label>£º</b></td>
                                                     <td style="width:65%;text-align:left;" colspan="3"><%# Eval("SupplierName") %></td>
                                                     <td style="width:10%;text-align:right;"><b>
-                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JiHuaJinE%>"></asp:Label>ï¼š</b></td>
+                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JiHuaJinE%>"></asp:Label>£º</b></td>
                                                     <td style="width:10%;"><%# Eval("ActualMoney") %></td>
                                                 </tr>
                                                 <tr>
                                                     <td style="width:15%;text-align:right;"><b>
-                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,HeTongHao%>"></asp:Label>ï¼š</b></td>
+                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,HeTongHao%>"></asp:Label>£º</b></td>
                                                     <td style="width:65%;text-align:left;" colspan="3"><%# Eval("CompactCode") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                         <b>
-                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,YongTu%>"></asp:Label>ï¼š</b><%# Eval("UseWay") %>
+                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,YongTu%>"></asp:Label>£º</b><%# Eval("UseWay") %>
                                                     </td>
                                                     <td style="width:10%;text-align:right;"><b>
-                                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ShiGouJinE%>"></asp:Label>ï¼š</b></td>
+                                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ShiGouJinE%>"></asp:Label>£º</b></td>
                                                     <td style="width:10%;"><%# Eval("ActualMoney") %></td>
                                                 </tr>
                                                 <tr>
                                                     <td style="width:10%;text-align:right;"><b>
-                                                        <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,KaiHuHang%>"></asp:Label>ï¼š</b></td>
+                                                        <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,KaiHuHang%>"></asp:Label>£º</b></td>
                                                     <td style="width:70%;text-align:left;" colspan="3"><%# Eval("OpeningBank") %></td>
                                                     <td style="width:10%;text-align:right;"><b>
-                                                        <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,ShuiJin%>"></asp:Label>ï¼š</b></td>
+                                                        <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,ShuiJin%>"></asp:Label>£º</b></td>
                                                     <td style="width:10%;"><%# Eval("RatioMoney") %></td>
                                                 </tr>
                                                 <tr>
                                                     <td style="width:10%;text-align:right;"><b>
-                                                        <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ZhangHao%>"></asp:Label>ï¼š</b></td>
+                                                        <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ZhangHao%>"></asp:Label>£º</b></td>
                                                     <td style="width:70%;text-align:left;" colspan="3"><%# Eval("AccountNumber") %></td>
                                                     <td style="width:10%;text-align:right;"><b>
-                                                        <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,YunFei%>"></asp:Label>ï¼š</b></td>
+                                                        <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,YunFei%>"></asp:Label>£º</b></td>
                                                     <td style="width:10%;"><%# Eval("Freight") %></td>
                                                 </tr>
                                                 <tr>
                                                     <td style="width:10%;text-align:right;"><b>
-                                                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,BeiZhu%>"></asp:Label>ï¼š</b></td>
+                                                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,BeiZhu%>"></asp:Label>£º</b></td>
                                                     <td style="width:15%;text-align:left;"><%# Eval("RowNumber") %></td>
                                                     <td style="width:25%;"><b>
-                                                        <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,ShouLiaoDanZhangShu%>"></asp:Label>ï¼š</b><%# Eval("RowNumber") %></td>
+                                                        <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,ShouLiaoDanZhangShu%>"></asp:Label>£º</b><%# Eval("RowNumber") %></td>
                                                     <td style="width:20%;"><b>
-                                                        <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>ï¼š</b><%# Eval("Progress") %></td>
+                                                        <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>£º</b><%# Eval("Progress") %></td>
                                                     <td style="width:20%;text-align:right;"><b>
-                                                        <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,QiTa%>"></asp:Label>ï¼š</b></td>
+                                                        <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,QiTa%>"></asp:Label>£º</b></td>
                                                     <td style="width:10%;"><%# Eval("OtherObject") %></td>
                                                 </tr>
                                                 <tr>
                                                     <td style="width:10%;text-align:right;"><b>
-                                                        <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,RenMinBiDaXie%>"></asp:Label>ï¼š</b></td>
+                                                        <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,RenMinBiDaXie%>"></asp:Label>£º</b></td>
                                                     <td style="width:70%;text-align:left;" colspan="3"><%# Eval("BorrowMoney") %></td>
                                                     <td style="width:10%;text-align:right;"><b>
-                                                        <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,JieKuanJinE%>"></asp:Label>ï¼š</b></td>
+                                                        <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,JieKuanJinE%>"></asp:Label>£º</b></td>
                                                     <td style="width:10%;"><%# Eval("BorrowMoney") %></td>
                                                 </tr>
                                             </table>
@@ -126,15 +126,15 @@
                                             <table width="100%">
                                                 <tr>
                                                     <td style="width:21%;"><b>
-                                                        <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,CaiWuZhuGuan%>"></asp:Label>ï¼š</b><%# Eval("Approver") %></td>
+                                                        <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,CaiWuZhuGuan%>"></asp:Label>£º</b><%# Eval("Approver") %></td>
                                                     <td style="width:17%;"><b>
-                                                        <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,KuaiJi%>"></asp:Label>ï¼š</b><%--<%# Eval("Approver") %>--%></td>
+                                                        <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,KuaiJi%>"></asp:Label>£º</b><%--<%# Eval("Approver") %>--%></td>
                                                     <td style="width:17%;"><b>
-                                                        <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,JiHe%>"></asp:Label>ï¼š</b><%--<%# Eval("Approver") %>--%></td>
+                                                        <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,JiHe%>"></asp:Label>£º</b><%--<%# Eval("Approver") %>--%></td>
                                                     <td style="width:25%;"><b>
-                                                        <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,JieKuanDanWeiZhuGuan%>"></asp:Label>ï¼š</b><%--<%# Eval("Approver") %>--%></td>
+                                                        <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,JieKuanDanWeiZhuGuan%>"></asp:Label>£º</b><%--<%# Eval("Approver") %>--%></td>
                                                     <td style="width:20%;"><b>
-                                                        <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,JieKuanRen%>"></asp:Label>ï¼š</b><%# Eval("Borrower") %></td>
+                                                        <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,JieKuanRen%>"></asp:Label>£º</b><%# Eval("Borrower") %></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -151,8 +151,8 @@
             <div id="divOver" style="text-align: center">
                 <br />
                 <p class="noprint">
-                    <input id="print" type="button" class="btn" value="ç¡®è®¤æ‰“å°" onclick="printpage();" />
-                    <input id="print0" type="button" value="å…³é—­" onclick="CloseLayer();" class="btn" />
+                    <input id="print" type="button" class="btn" value="È·ÈÏ´òÓ¡" onclick="printpage();" />
+                    <input id="print0" type="button" value="Closed" onclick="CloseLayer();" class="btn" />
                 </p>
             </div>
         </center>

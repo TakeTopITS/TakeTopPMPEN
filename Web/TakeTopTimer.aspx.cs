@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Data;
 using System.Web;
 using System.Web.UI;
@@ -20,7 +20,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
 
             try
             {
-                //åˆå§‹åŒ–å®ä½“ç±»ï¼Œä»¥åŠ å¿«åç»­çš„æ“ä½œé€Ÿåº¦
+                //³õÊ¼»¯ÊµÌåÀà£¬ÒÔ¼Ó¿ìºóĞøµÄ²Ù×÷ËÙ¶È
                 ShareClass.InitialNhibernateEntryClass();
             }
             catch (Exception err)
@@ -30,7 +30,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
 
             try
             {
-                //å¤„ç†è¶…æ—¶æ—¶ï¼Œè‡ªåŠ¨æ‰¹å‡†å·¥ä½œæµ
+                //´¦Àí³¬Ê±Ê±£¬×Ô¶¯Åú×¼¹¤×÷Á÷
                 AutoAgreeWorkflow();
             }
             catch (Exception err)
@@ -42,7 +42,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
             {
                 try
                 {
-                    ////æ¨é€ç³»ç»Ÿä¿¡æ¯
+                    ////ÍÆËÍÏµÍ³ĞÅÏ¢
                     SendUNSendMessage();
                 }
                 catch (Exception err)
@@ -53,7 +53,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
 
             try
             {
-                //æ’å…¥æ—¥å¿—
+                //²åÈëÈÕÖ¾
                 string strHQL = "Insert Into T_MsgPushLog(PushTime,UserCode,UserName) Values(now(),'Timer','Timer')";
                 ShareClass.RunSqlCommand(strHQL);
             }
@@ -64,7 +64,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
 
             try
             {
-                //å¤‡ä»½ç³»ç»Ÿæ•°æ®
+                //±¸·İÏµÍ³Êı¾İ
                 BackupSystemData();
             }
             catch (Exception err)
@@ -79,7 +79,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
         }
     }
 
-    //è‡ªåŠ¨æ‰¹å‡†å·¥ä½œæµ
+    //×Ô¶¯Åú×¼¹¤×÷Á÷
     private void AutoAgreeWorkflow()
     {
         string strHQL;
@@ -92,7 +92,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
         WFDetailHandle wFDetailHandle = new WFDetailHandle();
 
         strHQL = @"Select A.ID,A.StepID,B.StepName,A.WorkDetail,C.CreatorCode,C.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || C.WLName as WLName,C.Status,D.StepID TStepID, D.SortNumber,C.CreatorCode,A.OperatorCode,A.OperatorName From T_WorkFlowStepDetail A,T_WorkflowStep B,T_WorkFlow C,T_WorkflowTStep D,T_WorkFlowTemplate E
-             Where A.WLID = B.WLID and B.WLID = C.WLID and B.SortNumber = D.SortNumber and C.TemName = D.TemName and D.TemName = E.TemName And A.Status In ('å¤„ç†ä¸­','å®¡æ ¸ä¸­','ä¼šç­¾ä¸­','å¤æ ¸ä¸­') And C.Status Not In ('ä¿®æ”¹ä¸­','å…³é—­','é€šè¿‡','ç»“æ¡ˆ')
+             Where A.WLID = B.WLID and B.WLID = C.WLID and B.SortNumber = D.SortNumber and C.TemName = D.TemName and D.TemName = E.TemName And A.Status In ('InProgress','Reviewing','Signing','ReReview') And C.Status Not In ('Updating','Closed','Passed','CaseClosed')
              and ((E.OverTimeAutoAgree = 'YES'
              and (round(date_part('epoch', now() - A.checkingtime))::NUMERIC / 3600) > E.OverTimeHourNumber)
              Or (D.OverTimeAutoAgree = 'YES'
@@ -109,7 +109,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
             strWLType = ShareClass.GetWorkFlowType(strWLID);
             strWFName = ShareClass.GetWorkFlowName(strWLID);
             strStatus = ds.Tables[0].Rows[i]["Status"].ToString().Trim();
-            strContent = "åŒæ„å®Œæˆé€šè¿‡";
+            strContent = "Í¬ÒâÍê³ÉÍ¨¹ı";
             strStepID = ds.Tables[0].Rows[i]["StepID"].ToString();
             strStepName = ds.Tables[0].Rows[i]["StepName"].ToString();
             strID = ds.Tables[0].Rows[i]["ID"].ToString();
@@ -133,13 +133,13 @@ public partial class TakeTopTimer : System.Web.UI.Page
 
                 if (intResult >= 0)
                 {
-                    //æ·»åŠ ç­¾ååŸŸ
+                    //Ìí¼ÓÇ©ÃûÓò
                     WFDataHandle wfDataHandle = new WFDataHandle();
                     wfDataHandle.AddUserSignPictureField(strWLID, strID, strSignDate,strOperatorCode);
 
                     if (intResult == 11)
                     {
-                        //æ›´æ”¹ç›¸å…³ä¸šåŠ¡å¯¹è±¡çš„çŠ¶æ€å€¼
+                        //¸ü¸ÄÏà¹ØÒµÎñ¶ÔÏóµÄ×´Ì¬Öµ
                         UpdateRelatedBusinessStatus(strWLType, strRelatedID, "Agree");
                     }
 
@@ -149,7 +149,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
                         {
                             try
                             {
-                                //å‘é€ä¿¡æ¯é€šçŸ¥ç”³è¯·è€…
+                                //·¢ËÍĞÅÏ¢Í¨ÖªÉêÇëÕß
                                 Msg msg = new Msg();
                                 msg.SendMSM("Message", strCreatorCode, strOperatorCode + strOperatorName + Resources.lang.YiJing + Resources.lang.CaoShi + Resources.lang.ZiDong + Resources.lang.PiZhun + Resources.lang.GongZuoLiuShenQing + " : " + strWLID + strWFName + "," + Resources.lang.BuZhou + ": " + strStepID + strStepName, strOperatorCode);
                             }
@@ -164,7 +164,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
 
                     try
                     {
-                        //å‘é€æ¶ˆæ¯ç»™é¢å¤–çš„äººå‘˜
+                        //·¢ËÍÏûÏ¢¸ø¶îÍâµÄÈËÔ±
                         new System.Threading.Thread(delegate ()
                         {
                             try
@@ -185,20 +185,20 @@ public partial class TakeTopTimer : System.Web.UI.Page
 
                     try
                     {
-                        //å¦‚æµç¨‹æ˜¯é¡¹ç›®è®¡åˆ’å‘èµ·çš„ï¼Œæ›´æ–°å…³è”é¡¹ç›®è®¡åˆ’å®Œæˆç¨‹åº¦
-                        if (strRelatedType == "è®¡åˆ’" & strRelatedID != "0")
+                        //ÈçÁ÷³ÌÊÇÏîÄ¿¼Æ»®·¢ÆğµÄ£¬¸üĞÂ¹ØÁªÏîÄ¿¼Æ»®Íê³É³Ì¶È
+                        if (strRelatedType == "Plan" & strRelatedID != "0")
                         {
-                            //æ›´æ”¹å…³è”çš„è®¡åˆ’è¿›åº¦
+                            //¸ü¸Ä¹ØÁªµÄ¼Æ»®½ø¶È
                             if (ShareClass.GetPlanProgressNeedPlanerConfirmByProject(ShareClass.GetProjectIDByPlanID(strRelatedID)) == "NO")
                             {
                                 ShareClass.UpdateProjectPlanSchedule(strRelatedType, strRelatedID);
                             }
                         }
 
-                        //å¦‚æœæµç¨‹æ˜¯ç”±é¡¹ç›®æˆ–é¡¹ç›®è®¡åˆ’å‘èµ·çš„ï¼Œé‚£ä¹ˆå¢åŠ é¡¹ç›®æ—¥å¿—åˆ°é¡¹ç›®ä¸­
+                        //Èç¹ûÁ÷³ÌÊÇÓÉÏîÄ¿»òÏîÄ¿¼Æ»®·¢ÆğµÄ£¬ÄÇÃ´Ôö¼ÓÏîÄ¿ÈÕÖ¾µ½ÏîÄ¿ÖĞ
                         if (strContent == "")
                         {
-                            strContent = "Approve workflowï¼š" + strWLID + strWFName;
+                            strContent = "Approve workflow£º" + strWLID + strWFName;
                         }
                         ShareClass.UpdateProjectDaiyWorkByWorkflow(strRelatedType, strRelatedID, strWLID, strContent, strOperatorCode);
                     }
@@ -213,9 +213,9 @@ public partial class TakeTopTimer : System.Web.UI.Page
 
                 try
                 {
-                    //æ›´æ–°å¤„ç†æµç¨‹èŠ±è´¹çš„å·¥æ—¶
+                    //¸üĞÂ´¦ÀíÁ÷³Ì»¨·ÑµÄ¹¤Ê±
                     ShareClass.UpdateWorkFlowManHour(strRelatedType, strRelatedID, strWLID, strID, 0);
-                    //æ›´æ–°å¤„ç†æµç¨‹èŠ±è´¹çš„è´¹ç”¨
+                    //¸üĞÂ´¦ÀíÁ÷³Ì»¨·ÑµÄ·ÑÓÃ
                     ShareClass.UpdateWorkFlowExpense(strRelatedType, strRelatedID, strWLID, strID);
                 }
                 catch (Exception err)
@@ -231,7 +231,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
         }
     }
 
-    //æ›´æ”¹æµç¨‹ç›¸å…³å¯¹è±¡çŠ¶æ€
+    //¸ü¸ÄÁ÷³ÌÏà¹Ø¶ÔÏó×´Ì¬
     public bool UpdateRelatedBusinessStatus(string strWFType, string strRelatedID, string strOperation)
     {
         string strHQL;
@@ -240,66 +240,66 @@ public partial class TakeTopTimer : System.Web.UI.Page
         {
             if (strOperation == "Agree")
             {
-                if (strWFType == "å®¢æœè¯„å®¡")
+                if (strWFType == "CustomerServiceReview")
                 {
-                    strHQL = "Update T_CustomerQuestion Set Status = 'å®Œæˆ' Where ID = " + strRelatedID;
+                    strHQL = "Update T_CustomerQuestion Set Status = 'Completed' Where ID = " + strRelatedID;
                     WFShareClass.RunSqlCommand(strHQL);
                 }
 
-                if (strWFType == "è½¦è¾†ç”³è¯·")
+                if (strWFType == "VehicleRequest")
                 {
-                    strHQL = "Update T_CarApplyForm Set Status = 'é€šè¿‡' Where ID  = " + strRelatedID;
+                    strHQL = "Update T_CarApplyForm Set Status = 'Passed' Where ID  = " + strRelatedID;
                     WFShareClass.RunSqlCommand(strHQL);
                 }
 
-                if (strWFType == "ä¼šè®®ç”³è¯·")
+                if (strWFType == "MeetingRequest")
                 {
-                    strHQL = "Update T_Meeting Set Status = 'é€šè¿‡' Where ID = " + strRelatedID;
+                    strHQL = "Update T_Meeting Set Status = 'Passed' Where ID = " + strRelatedID;
                     WFShareClass.RunSqlCommand(strHQL);
                 }
 
-                if (strWFType == "è´¹ç”¨ç”³è¯·")
+                if (strWFType == "ExpenseRequest")
                 {
-                    strHQL = "Update T_ExpenseApplyWL Set Status = 'é€šè¿‡' Where ID = " + strRelatedID;
+                    strHQL = "Update T_ExpenseApplyWL Set Status = 'Passed' Where ID = " + strRelatedID;
                     WFShareClass.RunSqlCommand(strHQL);
                 }
 
-                if (strWFType == "è´¹ç”¨æŠ¥é”€")
+                if (strWFType == "ExpenseReimbursement")
                 {
-                    strHQL = "Update T_ExpenseClaim Set Status = 'é€šè¿‡' Where ID = " + strRelatedID;
+                    strHQL = "Update T_ExpenseClaim Set Status = 'Passed' Where ID = " + strRelatedID;
                     WFShareClass.RunSqlCommand(strHQL);
                 }
             }
 
             if (strOperation == "Cancel")
             {
-                if (strWFType == "å®¢æœè¯„å®¡")
+                if (strWFType == "CustomerServiceReview")
                 {
-                    strHQL = "Update T_CustomerQuestion Set Status = 'å¤„ç†ä¸­' Where ID = " + strRelatedID;
+                    strHQL = "Update T_CustomerQuestion Set Status = 'InProgress' Where ID = " + strRelatedID;
                     WFShareClass.RunSqlCommand(strHQL);
                 }
 
-                if (strWFType == "è½¦è¾†ç”³è¯·")
+                if (strWFType == "VehicleRequest")
                 {
-                    strHQL = "Update T_CarApplyForm Set Status = 'å¤„ç†ä¸­' Where ID  = " + strRelatedID;
+                    strHQL = "Update T_CarApplyForm Set Status = 'InProgress' Where ID  = " + strRelatedID;
                     WFShareClass.RunSqlCommand(strHQL);
                 }
 
-                if (strWFType == "ä¼šè®®ç”³è¯·")
+                if (strWFType == "MeetingRequest")
                 {
-                    strHQL = "Update T_Meeting Set Status = 'å¤„ç†ä¸­' Where ID = " + strRelatedID;
+                    strHQL = "Update T_Meeting Set Status = 'InProgress' Where ID = " + strRelatedID;
                     WFShareClass.RunSqlCommand(strHQL);
                 }
 
-                if (strWFType == "è´¹ç”¨ç”³è¯·")
+                if (strWFType == "ExpenseRequest")
                 {
-                    strHQL = "Update T_ExpenseApplyWL Set Status = 'å¤„ç†ä¸­' Where ID = " + strRelatedID;
+                    strHQL = "Update T_ExpenseApplyWL Set Status = 'InProgress' Where ID = " + strRelatedID;
                     WFShareClass.RunSqlCommand(strHQL);
                 }
 
-                if (strWFType == "è´¹ç”¨æŠ¥é”€")
+                if (strWFType == "ExpenseReimbursement")
                 {
-                    strHQL = "Update T_ExpenseClaim Set Status = 'å¤„ç†ä¸­' Where ID = " + strRelatedID;
+                    strHQL = "Update T_ExpenseClaim Set Status = 'InProgress' Where ID = " + strRelatedID;
                     WFShareClass.RunSqlCommand(strHQL);
                 }
             }
@@ -314,7 +314,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
 
     private void BackupSystemData()
     {
-        //éœ€è¦çš„æ“ä½œå†™åœ¨è¿™ä¸ªæ–¹æ³•ä¸­
+        //ĞèÒªµÄ²Ù×÷Ğ´ÔÚÕâ¸ö·½·¨ÖĞ
         try
         {
             string strCurrentTime, strDBBackupDataTime, strDocBackupDataTime;
@@ -324,14 +324,14 @@ public partial class TakeTopTimer : System.Web.UI.Page
             strDBBackupDataTime = GetDBBackupDataTime();
             if (strDBBackupDataTime == DateTime.Now.ToString("yyyyMMdd") & strCurrentTime == "2")
             {
-                //è‡ªåŠ¨å¤‡ä»½ç³»ç»Ÿæ•°æ®åº“æ•°æ®
+                //×Ô¶¯±¸·İÏµÍ³Êı¾İ¿âÊı¾İ
                 AutoBackupDBDataBySystem();
             }
 
             strDocBackupDataTime = GetDocBackupDataTime();
             if (strDocBackupDataTime == DateTime.Now.ToString("yyyyMMdd") & strCurrentTime == "2")
             {
-                //è‡ªåŠ¨å¤‡ä»½ç³»ç»Ÿæ–‡æ¡£æ•°æ®
+                //×Ô¶¯±¸·İÏµÍ³ÎÄµµÊı¾İ
                 AutoBackupDocDataBySystem();
             }
 
@@ -342,7 +342,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
         }
     }
 
-    //å–å¾—æ•°æ®åº“åˆç†å¤‡ä»½æ—¥æœŸ
+    //È¡µÃÊı¾İ¿âºÏÀí±¸·İÈÕÆÚ
     protected string GetDBBackupDataTime()
     {
         string strHQL1, strBackDBHQL;
@@ -378,7 +378,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
         }
     }
 
-    //å–å¾—æ–‡æ¡£åˆç†å¤‡ä»½æ—¥æœŸ
+    //È¡µÃÎÄµµºÏÀí±¸·İÈÕÆÚ
     protected string GetDocBackupDataTime()
     {
         string strHQL1, strBackDocHQL;
@@ -414,7 +414,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
         }
     }
 
-    //è‡ªåŠ¨å¤‡ä»½ç³»ç»Ÿæ•°æ®åº“æ•°æ®
+    //×Ô¶¯±¸·İÏµÍ³Êı¾İ¿âÊı¾İ
     public static void AutoBackupDBDataBySystem()
     {
         string strHQL1;
@@ -424,7 +424,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
         {
             try
             {
-                //å¤‡ä»½æ•°æ®åº“
+                //±¸·İÊı¾İ¿â
                 ShareClass.BackupCurrentSiteDB(ShareClass.GetSystemDBName(), ShareClass.GetSystemDBBackupSaveDir(), "Timer", "SELF");
             }
             catch (Exception err)
@@ -435,7 +435,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
 
     }
 
-    //è‡ªåŠ¨å¤‡ä»½ç³»ç»Ÿæ–‡æ¡£æ•°æ®
+    //×Ô¶¯±¸·İÏµÍ³ÎÄµµÊı¾İ
     public static void AutoBackupDocDataBySystem()
     {
         string strHQL2;
@@ -446,7 +446,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
         {
             try
             {
-                //å¤‡ä»½æ–‡æ¡£
+                //±¸·İÎÄµµ
                 ShareClass.BackupCurrentSiteDoc("Timer");
             }
             catch (Exception err)
@@ -460,7 +460,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
     {
         try
         {
-            //æ¨é€æœ«æ¨é€çš„æ¶ˆæ¯
+            //ÍÆËÍÄ©ÍÆËÍµÄÏûÏ¢
             if (ShareClass.SystemLatestLoginUser == "")
             {
                 ShareClass.SystemLatestLoginUser = "Timer";

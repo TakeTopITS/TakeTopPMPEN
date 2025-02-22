@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -52,7 +52,7 @@ public partial class TTUnHandledCaseList : System.Web.UI.Page
     protected void LoadFunInforDialBoxList(string strUserType, string strLangCode)
     {
         string strHQL;
-        strHQL = "Select * From T_FunInforDialBox Where Status='启用'";
+        strHQL = "Select * From T_FunInforDialBox Where Status='Enabled'";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
         strHQL += " and (UserType = " + "'" + strUserType + "'" + " Or UserType = 'ALL')";
         strHQL += " Order By SortNumber ASC ";

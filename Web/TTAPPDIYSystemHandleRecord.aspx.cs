@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -58,7 +58,7 @@ public partial class TTAPPDIYSystemHandleRecord : System.Web.UI.Page
             DataSet ds = new DataSet();
 
             strHQL = "Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-            strHQL += " Where A.WLID = B.WLID And A.Status In ('处理中','审核中','会签中','复核中') And B.Status Not In ('修改中','关闭','结案')";
+            strHQL += " Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','CaseClosed')";
             strHQL += " And A.OperatorCode = " + "'" + strUserCode + "'";
             strHQL += " And A.IsOperator = 'YES'";
             strHQL += " And B.TemName in (Select TemName From T_WorkFlowTemplate Where IdentifyString = " + "'" + strTemIdentifyString + "'" + ")";
@@ -71,7 +71,7 @@ public partial class TTAPPDIYSystemHandleRecord : System.Web.UI.Page
             LB_Sql4.Text = strHQL;
 
             strHQL = "Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.CheckingTime,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-            strHQL += " Where A.WLID = B.WLID And A.Status In ('批准','驳回') And A.OperatorCode = " + "'" + strUserCode + "'";
+            strHQL += " Where A.WLID = B.WLID And A.Status In ('Approved','Rejected') And A.OperatorCode = " + "'" + strUserCode + "'";
             strHQL += " And B.TemName in (Select TemName From T_WorkFlowTemplate Where IdentifyString = " + "'" + strTemIdentifyString + "'" + ")";
             strHQL += " Order By A.StepID DESC";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowDetail");
@@ -106,7 +106,7 @@ public partial class TTAPPDIYSystemHandleRecord : System.Web.UI.Page
         DataSet ds = new DataSet();
 
         strHQL = "Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('处理中','审核中','会签中','复核中') And B.Status Not In ('修改中','关闭','结案')";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','CaseClosed')";
         strHQL += " And A.OperatorCode = " + "'" + strUserCode + "'";
         strHQL += " And A.IsOperator = 'YES'";
         strHQL += " And B.TemName in (Select TemName From T_WorkFlowTemplate Where IdentifyString = " + "'" + strTemIdentifyString + "'" + ")";
@@ -119,7 +119,7 @@ public partial class TTAPPDIYSystemHandleRecord : System.Web.UI.Page
         LB_Sql4.Text = strHQL;
 
         strHQL = "Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.CheckingTime,A.Requisite,A.CheckingTime,A.Operation,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('批准','驳回') And A.OperatorCode = " + "'" + strUserCode + "'";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('Approved','Rejected') And A.OperatorCode = " + "'" + strUserCode + "'";
         strHQL += " And B.TemName in (Select TemName From T_WorkFlowTemplate Where IdentifyString = " + "'" + strTemIdentifyString + "'" + ")";
         strHQL += " Order By A.StepID DESC";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowDetail");
@@ -154,7 +154,7 @@ public partial class TTAPPDIYSystemHandleRecord : System.Web.UI.Page
         DataSet ds = new DataSet();
 
         strHQL = "Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('处理中','审核中','会签中','复核中') And B.Status Not In ('修改中','关闭','结案')";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','CaseClosed')";
         strHQL += " And A.OperatorCode = " + "'" + strUserCode + "'";
         strHQL += " And A.IsOperator = 'YES'";
         strHQL += " And B.Status = " + "'" + strStatus + "'";
@@ -168,7 +168,7 @@ public partial class TTAPPDIYSystemHandleRecord : System.Web.UI.Page
         LB_Sql4.Text = strHQL;
 
         strHQL = "Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.CheckingTime,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B";
-        strHQL += " Where A.WLID = B.WLID And A.Status In ('批准','驳回') And A.OperatorCode = " + "'" + strUserCode + "'";
+        strHQL += " Where A.WLID = B.WLID And A.Status In ('Approved','Rejected') And A.OperatorCode = " + "'" + strUserCode + "'";
         strHQL += " And B.Status = " + "'" + strStatus + "'";
         strHQL += " And B.TemName in (Select TemName From T_WorkFlowTemplate Where IdentifyString = " + "'" + strTemIdentifyString + "'" + ")";
         strHQL += " Order By A.StepID DESC";
@@ -241,7 +241,7 @@ public partial class TTAPPDIYSystemHandleRecord : System.Web.UI.Page
             strWFID = DataGrid3.Items[i].Cells[1].Text.Trim();
             strStatus = DataGrid3.Items[i].Cells[3].Text.Trim();
 
-            if (strStatus == "通过")
+            if (strStatus == "Passed")
             {
                 ((ImageButton)DataGrid3.Items[i].FindControl("IMB_Lamp")).ImageUrl = "~/Images/lamp_green.png";
 
@@ -249,13 +249,13 @@ public partial class TTAPPDIYSystemHandleRecord : System.Web.UI.Page
             }
             else
             {
-                if (strStatus == "结案")
+                if (strStatus == "CaseClosed")
                 {
                     ((ImageButton)DataGrid3.Items[i].FindControl("IMB_Lamp")).ImageUrl = "~/Images/lamp_ok.png";
                 }
                 else
                 {
-                    if (CheckWorkflowStepDetailStatus(strWFID, "驳回"))
+                    if (CheckWorkflowStepDetailStatus(strWFID, "Rejected"))
                     {
                         ((ImageButton)DataGrid3.Items[i].FindControl("IMB_Lamp")).ImageUrl = "~/Images/lamp_refuse.png";
                     }

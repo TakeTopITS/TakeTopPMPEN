@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -36,17 +36,17 @@ public partial class TTDefectReviewWL : System.Web.UI.Page
         DataList1.DataBind();
 
         Defectment defectment = (Defectment)lst[0];
-        //this.Title = "缺陷：" + strDefectID + " " + defectment.DefectName + Resources.lang.PingShen;
+        //this.Title = "ȱ�ݣ�" + strDefectID + " " + defectment.DefectName + Resources.lang.PingShen;
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
         {
-            strReviewType = "缺陷";
+            strReviewType = "Defect";
             strReviewType = "%" + strReviewType + "%";
 
             strHQL = "from WorkFlowTemplate as workFlowTemplate where (workFlowTemplate.TemName in (Select relatedWorkFlowTemplate.WFTemplateName from RelatedWorkFlowTemplate as relatedWorkFlowTemplate where relatedWorkFlowTemplate.RelatedType = 'Defect' and relatedWorkFlowTemplate.RelatedID = " + strDefectID + ")";
             strHQL += " and workFlowTemplate.Type like " + "'" + strReviewType + "'" + ")";
-            strHQL += " Or  (workFlowTemplate.Type like " + "'" + strReviewType + "'" + " and workFlowTemplate.Authority = '所有')";
+            strHQL += " Or  (workFlowTemplate.Type like " + "'" + strReviewType + "'" + " and workFlowTemplate.Authority = 'All')";
             strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC";
           
             WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
@@ -54,7 +54,7 @@ public partial class TTDefectReviewWL : System.Web.UI.Page
             DL_TemName.DataSource = lst;
             DL_TemName.DataBind();
 
-            LoadRelatedWL("缺陷评审", "缺陷", int.Parse(strDefectID));
+            LoadRelatedWL("DefectReview", "Defect", int.Parse(strDefectID));
 
 
             TB_WLName.Text = Resources.lang.QueXian  + strDefectID + defectment.DefectName + Resources.lang.PingShen;
@@ -109,27 +109,27 @@ public partial class TTDefectReviewWL : System.Web.UI.Page
         workFlow.CreatorCode = strCreatorCode;
         workFlow.CreatorName = strCreatorName;
         workFlow.CreateTime = dtCreateTime;
-        workFlow.Status = "新建";
-        workFlow.RelatedType = "缺陷";
+        workFlow.Status = "New";
+        workFlow.RelatedType = "Defect";
         workFlow.RelatedID = int.Parse(strDefectID);
-        workFlow.DIYNextStep = "Yes"; workFlow.IsPlanMainWorkflow = "NO";
+        workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
 
         if (CB_SMS.Checked == true)
         {
-            workFlow.ReceiveSMS = "Yes";
+            workFlow.ReceiveSMS = "YES";
         }
         else
         {
-            workFlow.ReceiveSMS = "No";
+            workFlow.ReceiveSMS = "NO";
         }
 
         if (CB_Mail.Checked == true)
         {
-            workFlow.ReceiveEMail = "Yes";
+            workFlow.ReceiveEMail = "YES";
         }
         else
         {
-            workFlow.ReceiveEMail = "No";
+            workFlow.ReceiveEMail = "NO";
         }
 
         try
@@ -142,7 +142,7 @@ public partial class TTDefectReviewWL : System.Web.UI.Page
 
             xmlProcess.DbToXML(strCmdText, "T_Defectment", strXMLFile2);
 
-            LoadRelatedWL("缺陷评审", "缺陷", int.Parse(strDefectID));
+            LoadRelatedWL("DefectReview", "Defect", int.Parse(strDefectID));
 
             //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXPSSGZLSCDGZLGLYMJHCGZLS+"')", true);
         }

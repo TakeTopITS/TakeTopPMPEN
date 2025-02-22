@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -47,13 +47,13 @@ public partial class TTAIHandlerByDeepSeek : System.Web.UI.Page
 
                 if (strAIType == "Local")
                 {
-                    // DeepSeek æˆ– Ollama çš„æœ¬åœ° API åœ°å€
-                    localApiUrl = strAIURL + "/api/generate"; // Ollama çš„é»˜è®¤ API åœ°å€
+                    // DeepSeek »ò Ollama µÄ±¾µØ API µØÖ·
+                    localApiUrl = strAIURL + "/api/generate"; // Ollama µÄÄ¬ÈÏ API µØÖ·
 
                     result = await CallLocalApi(localApiUrl);
 
-                    // æ˜¾ç¤ºç»“æœ
-                    lblGeneratedText.Text = result; // å‡è®¾é¡µé¢ä¸Šæœ‰ä¸€ä¸ª Label æ§ä»¶
+                    // ÏÔÊ¾½á¹û
+                    lblGeneratedText.Text = result; // ¼ÙÉèÒ³ÃæÉÏÓĞÒ»¸ö Label ¿Ø¼ş
                 }
                 else
                 {
@@ -111,12 +111,12 @@ public partial class TTAIHandlerByDeepSeek : System.Web.UI.Page
 
                 using (HttpClient client = new HttpClient())
                 {
-                    // ç¤ºä¾‹è¯·æ±‚ä½“
+                    // Ê¾ÀıÇëÇóÌå
                     var requestBody = new
                     {
-                        //model = "deepseek-r1:1.5b", // æ›¿æ¢ä¸ºå®é™…æ¨¡å‹åç§°
+                        //model = "deepseek-r1:1.5b", // Ìæ»»ÎªÊµ¼ÊÄ£ĞÍÃû³Æ
 
-                        model = strAIModel, // æ›¿æ¢ä¸ºå®é™…æ¨¡å‹åç§°
+                        model = strAIModel, // Ìæ»»ÎªÊµ¼ÊÄ£ĞÍÃû³Æ
                         prompt = txtPrompt.Text
                     };
 
@@ -136,32 +136,32 @@ public partial class TTAIHandlerByDeepSeek : System.Web.UI.Page
                         jsonString = jsonString.Replace("##", "");
                         jsonString = jsonString.Replace("\\n", "<br>");
 
-                        // æå–æ‰€æœ‰ "response": åé¢çš„å­—ç¬¦ä¸²
+                        // ÌáÈ¡ËùÓĞ "response": ºóÃæµÄ×Ö·û´®
                         List<string> responses = new List<string>();
                         int index = 0;
 
                         while (true)
                         {
-                            // æŸ¥æ‰¾ "response":" çš„ä½ç½®
+                            // ²éÕÒ "response":" µÄÎ»ÖÃ
                             int startIndex = jsonString.IndexOf(@"""response"":""", index);
-                            if (startIndex == -1) break; // å¦‚æœæ²¡æœ‰æ‰¾åˆ°ï¼Œé€€å‡ºå¾ªç¯
+                            if (startIndex == -1) break; // Èç¹ûÃ»ÓĞÕÒµ½£¬ÍË³öÑ­»·
 
-                            // è·³è¿‡ "response":" çš„é•¿åº¦
+                            // Ìø¹ı "response":" µÄ³¤¶È
                             startIndex += @"""response"":""".Length;
 
-                            // æŸ¥æ‰¾ä¸‹ä¸€ä¸ªåŒå¼•å·çš„ä½ç½®
+                            // ²éÕÒÏÂÒ»¸öË«ÒıºÅµÄÎ»ÖÃ
                             int endIndex = jsonString.IndexOf(@"""", startIndex);
-                            if (endIndex == -1) break; // å¦‚æœæ²¡æœ‰æ‰¾åˆ°ï¼Œé€€å‡ºå¾ªç¯
+                            if (endIndex == -1) break; // Èç¹ûÃ»ÓĞÕÒµ½£¬ÍË³öÑ­»·
 
-                            // æå– response çš„å€¼
+                            // ÌáÈ¡ response µÄÖµ
                             string responseItem = jsonString.Substring(startIndex, endIndex - startIndex);
                             responses.Add(responseItem);
 
-                            // æ›´æ–°æœç´¢èµ·å§‹ä½ç½®
+                            // ¸üĞÂËÑË÷ÆğÊ¼Î»ÖÃ
                             index = endIndex + 1;
                         }
 
-                        // ç”¨ç©ºæ ¼è¿æ¥æ‰€æœ‰ response å€¼
+                        // ÓÃ¿Õ¸ñÁ¬½ÓËùÓĞ response Öµ
                         string combinedResponse = string.Join("", responses);
 
                         return combinedResponse;
@@ -203,12 +203,12 @@ public partial class TTAIHandlerByDeepSeek : System.Web.UI.Page
 
                 using (HttpClient client = new HttpClient())
                 {
-                    // ç¤ºä¾‹è¯·æ±‚ä½“
+                    // Ê¾ÀıÇëÇóÌå
                     var requestBody = new
                     {
-                        //model = "deepseek-r1:1.5b", // æ›¿æ¢ä¸ºå®é™…æ¨¡å‹åç§°
+                        //model = "deepseek-r1:1.5b", // Ìæ»»ÎªÊµ¼ÊÄ£ĞÍÃû³Æ
 
-                        model = strAIModel, // æ›¿æ¢ä¸ºå®é™…æ¨¡å‹åç§°
+                        model = strAIModel, // Ìæ»»ÎªÊµ¼ÊÄ£ĞÍÃû³Æ
                         prompt = txtPrompt.Text
                     };
 
@@ -228,32 +228,32 @@ public partial class TTAIHandlerByDeepSeek : System.Web.UI.Page
                         jsonString = jsonString.Replace("##", "");
                         jsonString = jsonString.Replace("\\n", "<br>");
 
-                        // æå–æ‰€æœ‰ "response": åé¢çš„å­—ç¬¦ä¸²
+                        // ÌáÈ¡ËùÓĞ "response": ºóÃæµÄ×Ö·û´®
                         List<string> responses = new List<string>();
                         int index = 0;
 
                         while (true)
                         {
-                            // æŸ¥æ‰¾ "response":" çš„ä½ç½®
+                            // ²éÕÒ "response":" µÄÎ»ÖÃ
                             int startIndex = jsonString.IndexOf(@"""response"":""", index);
-                            if (startIndex == -1) break; // å¦‚æœæ²¡æœ‰æ‰¾åˆ°ï¼Œé€€å‡ºå¾ªç¯
+                            if (startIndex == -1) break; // Èç¹ûÃ»ÓĞÕÒµ½£¬ÍË³öÑ­»·
 
-                            // è·³è¿‡ "response":" çš„é•¿åº¦
+                            // Ìø¹ı "response":" µÄ³¤¶È
                             startIndex += @"""response"":""".Length;
 
-                            // æŸ¥æ‰¾ä¸‹ä¸€ä¸ªåŒå¼•å·çš„ä½ç½®
+                            // ²éÕÒÏÂÒ»¸öË«ÒıºÅµÄÎ»ÖÃ
                             int endIndex = jsonString.IndexOf(@"""", startIndex);
-                            if (endIndex == -1) break; // å¦‚æœæ²¡æœ‰æ‰¾åˆ°ï¼Œé€€å‡ºå¾ªç¯
+                            if (endIndex == -1) break; // Èç¹ûÃ»ÓĞÕÒµ½£¬ÍË³öÑ­»·
 
-                            // æå– response çš„å€¼
+                            // ÌáÈ¡ response µÄÖµ
                             string responseItem = jsonString.Substring(startIndex, endIndex - startIndex);
                             responses.Add(responseItem);
 
-                            // æ›´æ–°æœç´¢èµ·å§‹ä½ç½®
+                            // ¸üĞÂËÑË÷ÆğÊ¼Î»ÖÃ
                             index = endIndex + 1;
                         }
 
-                        // ç”¨ç©ºæ ¼è¿æ¥æ‰€æœ‰ response å€¼
+                        // ÓÃ¿Õ¸ñÁ¬½ÓËùÓĞ response Öµ
                         string combinedResponse = string.Join("", responses);
 
                         return combinedResponse;

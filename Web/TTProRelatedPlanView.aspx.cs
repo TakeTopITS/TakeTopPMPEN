@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -33,7 +33,7 @@ public partial class TTProRelatedPlanView : System.Web.UI.Page
 
         strUserCode = Session["UserCode"].ToString();
 
-        strPlanVerID = GetProjectPlanVersionVerID(strProjectID, "åœ¨ç”¨").ToString();
+        strPlanVerID = GetProjectPlanVersionVerID(strProjectID, "InUse").ToString();
 
         LB_UserCode.Text = strUserCode;
 
@@ -42,7 +42,7 @@ public partial class TTProRelatedPlanView : System.Web.UI.Page
         {
             MonthPicker1.StartDate = DateTime.Now;
             LB_ProjectName.Text = Resources.lang.XiangMu + ": " + strProjectID + " " + strProjectName;
-            LB_ReportName.Text = MonthPicker1.Year + "å¹´" + MonthPicker1.Month + "æœˆè®¡åˆ’å®Œæˆæƒ…å†µ";
+            LB_ReportName.Text = MonthPicker1.Year + "Äê" + MonthPicker1.Month + "ÔÂ¼Æ»®Íê³ÉÇé¿ö";
             string strCmdText = "select cast(Percent_Done as CHAR(10)) as XName,count(*) as YNumber from T_ImplePlan ";
             strCmdText += " where ProjectID = " + strProjectID;
             strCmdText += " and extract(month from End_Date) = extract(month from now()) and extract(year from End_Date) = extract(year from now())";
@@ -66,7 +66,7 @@ public partial class TTProRelatedPlanView : System.Web.UI.Page
 
     protected void BT_Find_Click(object sender, EventArgs e)
     {
-        LB_ReportName.Text = MonthPicker1.Year + "å¹´" + MonthPicker1.Month + "æœˆè®¡åˆ’å®Œæˆæƒ…å†µ";
+        LB_ReportName.Text = MonthPicker1.Year + "Äê" + MonthPicker1.Month + "ÔÂ¼Æ»®Íê³ÉÇé¿ö";
 
         string strCmdText = "select Percent_Done  as XName,count(*) as YNumber from T_ImplePlan ";
         strCmdText += " where ProjectID = " + strProjectID;
@@ -86,7 +86,7 @@ public partial class TTProRelatedPlanView : System.Web.UI.Page
         //Chart1.Visible = true;
     }
 
-    //å–å¾—ç‰ˆæœ¬å·ID
+    //È¡µÃ°æ±¾ºÅID
     public static int GetProjectPlanVersionVerID(string strProjectID, string strType)
     {
         string strHQL;

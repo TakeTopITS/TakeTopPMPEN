@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZProjectNatureList.aspx.cs" Inherits="TTWZProjectNatureList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZProjectNatureList.aspx.cs" Inherits="TTWZProjectNatureList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -44,7 +44,7 @@
                                     <table width="100%" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left" class="formItemBgStyle">
-                                                <input type="button" class="inpuLong" value="æ–°å¢žé¡¹ç›®æ€§è´¨" onclick="window.location.href = 'TTWZProjectNatureEdit.aspx'" />
+                                                <input type="button" class="inpuLong" value="ÐÂÔöÏîÄ¿ÐÔÖÊ" onclick="window.location.href = 'TTWZProjectNatureEdit.aspx'" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -90,12 +90,12 @@
                                                                 <ItemTemplate>
                                                                     <a href='TTWZProjectNatureEdit.aspx?id=<%# DataBinder.Eval(Container.DataItem,"ID") %>' class="notTab">
                                                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,BianJi%>"></asp:Label></a>
-                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab" Visible='<%# Eval("IsMark").ToString()=="0" ? true : false %>'>åˆ é™¤</asp:LinkButton>
-                                                                    <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="åˆ é™¤" />--%>
+                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab" Visible='<%# Eval("IsMark").ToString()=="0" ? true : false %>'>É¾³ý</asp:LinkButton>
+                                                                    <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="Deleted" />--%>
                                                                     
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <%--<asp:BoundColumn DataField="NatureCode" HeaderText="é¡¹ç›®æ€§è´¨">
+                                                            <%--<asp:BoundColumn DataField="NatureCode" HeaderText="ÏîÄ¿ÐÔÖÊ">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="14%" />
                                                             </asp:BoundColumn>--%>
                                                             <asp:TemplateColumn>
@@ -107,7 +107,7 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("NatureCode").ToString(), 192) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <%--<asp:BoundColumn DataField="NatureDesc" HeaderText="æ€§è´¨è¯´æ˜Ž">
+                                                            <%--<asp:BoundColumn DataField="NatureDesc" HeaderText="ÐÔÖÊËµÃ÷">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="82%" />
                                                             </asp:BoundColumn>--%>
                                                             <asp:TemplateColumn>

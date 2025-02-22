@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -24,7 +24,7 @@ public partial class TTMyInvolvedProjectTreeByType : System.Web.UI.Page
         LB_UserCode.Text = strUserCode;
         //LB_UserName.Text = GetUserName(strUserCode);
 
-        //this.Title = "æˆ‘å‚ä¸çš„é¡¹ç›®çš„é¡¹ç›®æ ‘---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
+        //this.Title = "ÎÒ²ÎÓëµÄÏîÄ¿µÄÏîÄ¿Ê÷---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
 
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
@@ -38,20 +38,20 @@ public partial class TTMyInvolvedProjectTreeByType : System.Web.UI.Page
         string strHQL, strUserCode, strProjectType;
         IList lst;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>æŒ‰ç±»å‹æµè§ˆæˆ‘å‚ä¸çš„é¡¹ç›®</B>";
+        node1.Text = "<B>°´ÀàĞÍä¯ÀÀÎÒ²ÎÓëµÄÏîÄ¿</B>";
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
 
         strUserCode = LB_UserCode.Text.Trim();
         strHQL = "from ProjectType as projectType Where ";
-        strHQL += " projectType.Type in (Select proRelatedUser.ProjectType from ProRelatedUser as proRelatedUser where  proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.ProStatus not in ('æ–°å»º','éšè—','åˆ é™¤','å½’æ¡£'))";
+        strHQL += " projectType.Type in (Select proRelatedUser.ProjectType from ProRelatedUser as proRelatedUser where  proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.ProStatus not in ('New','Hided','Deleted','Archived'))";
         strHQL += " Order By projectType.SortNumber ASC";
         ProjectTypeBLL projectTypeBLL = new ProjectTypeBLL();
         lst = projectTypeBLL.GetAllProjectTypes(strHQL);
@@ -82,7 +82,7 @@ public partial class TTMyInvolvedProjectTreeByType : System.Web.UI.Page
 
         strUserCode = LB_UserCode.Text.Trim();
 
-        strHQL = "from ProRelatedUser as proRelatedUser where  proRelatedUser.UserCode = " + "'" + strUserCode + "'" + "  and proRelatedUser.ProjectType = " + "'" +strProjectType+ "'" + " and proRelatedUser.ProStatus not in ('æ–°å»º','éšè—','åˆ é™¤','å½’æ¡£') Order by proRelatedUser.ProjectID DESC";
+        strHQL = "from ProRelatedUser as proRelatedUser where  proRelatedUser.UserCode = " + "'" + strUserCode + "'" + "  and proRelatedUser.ProjectType = " + "'" +strProjectType+ "'" + " and proRelatedUser.ProStatus not in ('New','Hided','Deleted','Archived') Order by proRelatedUser.ProjectID DESC";
         ProRelatedUserBLL proRelatedUserBLL = new ProRelatedUserBLL();
         lst1 = proRelatedUserBLL.GetAllProRelatedUsers(strHQL);
 

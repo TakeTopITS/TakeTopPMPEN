@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTReportView.aspx.cs" Inherits="TTReportView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTReportView.aspx.cs" Inherits="TTReportView" %>
 
 <%@ Register Namespace="Stimulsoft.Report.Web" TagPrefix="cc1" Assembly="Stimulsoft.Report.Web" %>
 

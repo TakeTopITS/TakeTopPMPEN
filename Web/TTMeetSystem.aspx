@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMeetSystem.aspx.cs" Inherits="TTMeetSystem" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMeetSystem.aspx.cs" Inherits="TTMeetSystem" %>
 
 <!DOCTYPE html>
 

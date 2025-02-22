@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -32,13 +32,13 @@ public partial class TTAppWorkFlowDetailMain : System.Web.UI.Page
         }
     }
 
-    /// æ ¹æ® Agent åˆ¤æ–­æ˜¯å¦æ˜¯IOSè®¾å¤‡
+    /// ¸ù¾İ Agent ÅĞ¶ÏÊÇ·ñÊÇIOSÉè±¸
     public bool CheckAgentIsIOSDevice()
     {
         bool flag = false;
         string agent = HttpContext.Current.Request.UserAgent;
         string[] keywords = { "iPhone", "iPod", "iPad" };
-        //æ’é™¤Window æ¡Œé¢ç³»ç»Ÿ å’Œ è‹¹æœæ¡Œé¢ç³»ç»Ÿ
+        //ÅÅ³ıWindow ×ÀÃæÏµÍ³ ºÍ Æ»¹û×ÀÃæÏµÍ³
         if (!agent.Contains("Windows NT") && !agent.Contains("Macintosh"))
         {
             foreach (string item in keywords)

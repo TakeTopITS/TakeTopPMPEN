@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Configuration;
@@ -63,8 +63,8 @@ public partial class TTAPPMakeCustomer : System.Web.UI.Page
 
             LoadCustomerList(strRelatedType, strRelatedID);
 
-            strHQL = "Select GroupName From T_ActorGroup Where Type <>'éƒ¨åˆ†' and GroupName not in ('ä¸ªäºº','éƒ¨é—¨','å…¬å¸','é›†å›¢','æ‰€æœ‰')";
-            strHQL += " and (BelongDepartCode in " + strDepartString + " Or Type = 'è¶…çº§'";
+            strHQL = "Select GroupName From T_ActorGroup Where Type <>'²¿·Ö' and GroupName not in ('¸öÈË','²¿ÃÅ','¹«Ë¾','¼¯ÍÅ','All')";
+            strHQL += " and (BelongDepartCode in " + strDepartString + " Or Type = '³¬¼¶'";
             strHQL += " Or MakeUserCode = " + "'" + strUserCode + "'" + ")";
             strHQL += " and LangCode = " + "'" + strLangCode + "'";
             strHQL += " Order by SortNumber ASC";
@@ -92,19 +92,19 @@ public partial class TTAPPMakeCustomer : System.Web.UI.Page
             {
             }
 
-            //å¦‚æœè‡ªåŠ¨äº§ç”Ÿå®¢æˆ·ç¼–ç ï¼Œç¦ç”¨å®¢æˆ·ä»£ç è¾“å…¥æ¡† 
+            //Èç¹û×Ô¶¯²úÉú¿Í»§±àÂë£¬½ûÓÃ¿Í»§´úÂëÊäÈë¿ò 
             if(ShareClass. GetCodeRuleStatusByType("CustomerCode") == "YES")
             {
                 TB_CustomerCode.Enabled = false;
                 TB_CustomerCode.Text = DateTime.Now.ToString("yyyyMMddHHMMss");
             }
 
-            //BusinessForm,åˆ—å‡ºä¸šåŠ¡è¡¨å•ç±»å‹ 
+            //BusinessForm,ÁĞ³öÒµÎñ±íµ¥ÀàĞÍ 
             ShareClass.LoadWorkflowType(DL_WLType, strLangCode);
         }
     }
 
-    //BusinessFormï¼Œå®šä¹‰åæœŸæ˜¯å¦å¯ç¼–è¾‘æ­¤è¡¨å•
+    //BusinessForm£¬¶¨ÒåºóÆÚÊÇ·ñ¿É±à¼­´Ë±íµ¥
     protected void DL_AllowUpdate_SelectedIndexChanged(object sender, EventArgs e)
     {
         string strHQL;
@@ -130,7 +130,7 @@ public partial class TTAPPMakeCustomer : System.Web.UI.Page
 
     protected void BT_Create_Click(object sender, EventArgs e)
     {
-        //BusinessFormï¼Œéšè—ä¸šåŠ¡è¡¨å•å…ƒç´ 
+        //BusinessForm£¬Òş²ØÒµÎñ±íµ¥ÔªËØ
         Panel_RelatedBusiness.Visible = false;
 
         LB_CustomerID.Text = "";
@@ -267,7 +267,7 @@ public partial class TTAPPMakeCustomer : System.Web.UI.Page
 
                 strCustomerID = getCustomerID(strCustomerCode);
 
-                //BusinessFormï¼Œåˆ—å‡ºå…³è”è¡¨å•æ¨¡æ¿
+                //BusinessForm£¬ÁĞ³ö¹ØÁª±íµ¥Ä£°å
                 try
                 {
                     Panel_RelatedBusiness.Visible = true;
@@ -293,7 +293,7 @@ public partial class TTAPPMakeCustomer : System.Web.UI.Page
                 {
                 }
 
-                //BusinessForm,è£…è½½å…³è”ä¿¡æ¯
+                //BusinessForm,×°ÔØ¹ØÁªĞÅÏ¢
                 //TabContainer4.ActiveTabIndex = 0;
                 ShareClass.LoadBusinessForm("Customer", strCustomerID, DL_WFTemplate.SelectedValue.Trim(), IFrame_RelatedInformation);
 
@@ -406,7 +406,7 @@ public partial class TTAPPMakeCustomer : System.Web.UI.Page
 
         if (strCustomerCode == "")
         {
-            //å¦‚æœè‡ªåŠ¨äº§ç”Ÿå®¢æˆ·ç¼–ç ï¼Œç¦ç”¨å®¢æˆ·ä»£ç è¾“å…¥æ¡† 
+            //Èç¹û×Ô¶¯²úÉú¿Í»§±àÂë£¬½ûÓÃ¿Í»§´úÂëÊäÈë¿ò 
             if (ShareClass.GetCodeRuleStatusByType("CustomerCode") == "YES")
             {
                 TB_CustomerCode.Enabled = false;
@@ -665,7 +665,7 @@ public partial class TTAPPMakeCustomer : System.Web.UI.Page
                 customerBLL.UpdateCustomer(customer, strCustomerCode);
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
 
-                //BusinessFormï¼Œå…³è”ç›¸åº”çš„ä¸šåŠ¡è¡¨å•æ¨¡æ¿
+                //BusinessForm£¬¹ØÁªÏàÓ¦µÄÒµÎñ±íµ¥Ä£°å
                 ShareClass.SaveRelatedBusinessForm("Customer", strCustomerID, DL_WFTemplate.SelectedValue, DL_AllowUpdate.SelectedValue, strUserCode);
 
                 LoadCustomerList(strRelatedType, strRelatedID);
@@ -683,7 +683,7 @@ public partial class TTAPPMakeCustomer : System.Web.UI.Page
         }
     }
 
-    //BusinessForm,å·¥ä½œæµç±»å‹æŸ¥è¯¢
+    //BusinessForm,¹¤×÷Á÷ÀàĞÍ²éÑ¯
     protected void DL_WLType_SelectedIndexChanged(object sender, EventArgs e)
     {
         string strHQL, strWLType;
@@ -693,7 +693,7 @@ public partial class TTAPPMakeCustomer : System.Web.UI.Page
         {
             return;
         }
-        strHQL = "Select TemName From T_WorkFlowTemplate Where type = " + "'" + strWLType + "'" + " and Visible = 'YES' and Authority = 'æ‰€æœ‰'";
+        strHQL = "Select TemName From T_WorkFlowTemplate Where type = " + "'" + strWLType + "'" + " and Visible = 'YES' and Authority = 'All'";
         strHQL += " Order by SortNumber ASC";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTemplate");
         DL_WFTemplate.DataSource = ds;
@@ -705,7 +705,7 @@ public partial class TTAPPMakeCustomer : System.Web.UI.Page
     }
 
 
-    //BusinessForm,å¯åŠ¨å…³è”çš„ä¸šåŠ¡è¡¨å•
+    //BusinessForm,Æô¶¯¹ØÁªµÄÒµÎñ±íµ¥
     protected void BT_StartupBusinessForm_Click(object sender, EventArgs e)
     {
         string strURL;
@@ -731,7 +731,7 @@ public partial class TTAPPMakeCustomer : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
     }
 
-    //BusinessForm,åˆ é™¤å…³è”çš„ä¸šåŠ¡è¡¨å•
+    //BusinessForm,É¾³ı¹ØÁªµÄÒµÎñ±íµ¥
     protected void BT_DeleteBusinessForm_Click(object sender, EventArgs e)
     {
         string strHQL;
@@ -767,7 +767,7 @@ public partial class TTAPPMakeCustomer : System.Web.UI.Page
         strProjectID = TB_ProjectID.Text.Trim();
         strCustomerCode = TB_CustomerCode.Text.Trim();
 
-        //åˆ¤æ–­é¡¹ç›®æ˜¯ä¸æ˜¯å­˜åœ¨å…¶ç®¡ç†èŒƒå›´
+        //ÅĞ¶ÏÏîÄ¿ÊÇ²»ÊÇ´æÔÚÆä¹ÜÀí·¶Î§
         if (checkProjectIsValid(strProjectID, LB_DepartString.Text))
         {
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSJBCZJC + "')", true);
@@ -793,7 +793,7 @@ public partial class TTAPPMakeCustomer : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
     }
 
-    //åˆ¤æ–­é¡¹ç›®æ˜¯ä¸æ˜¯å­˜åœ¨å…¶ç®¡ç†èŒƒå›´
+    //ÅĞ¶ÏÏîÄ¿ÊÇ²»ÊÇ´æÔÚÆä¹ÜÀí·¶Î§
     protected bool checkProjectIsValid(string strProjectID, string strDepartString)
     {
         string strHQL;
@@ -904,7 +904,7 @@ public partial class TTAPPMakeCustomer : System.Web.UI.Page
         string strGroupName = TB_ActorGroupName.Text.Trim();
         strGroupName = "%" + strGroupName + "%";
 
-        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('ä¸ªäºº','éƒ¨é—¨','å…¬å¸','é›†å›¢','æ‰€æœ‰')";
+        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('¸öÈË','²¿ÃÅ','¹«Ë¾','¼¯ÍÅ','All')";
         strHQL += " and GroupName Like " + "'" + strGroupName + "'";
         ActorGroupBLL actorGroupBLL = new ActorGroupBLL();
         lst = actorGroupBLL.GetAllActorGroups(strHQL);
@@ -1677,7 +1677,7 @@ public partial class TTAPPMakeCustomer : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Constract as constract where constract.Status <> 'å½’æ¡£'";
+        strHQL = "from Constract as constract where constract.Status <> 'Archived'";
         strHQL += " and constract.RelatedCustomerCode = " + "'" + strCustomerCode + "'";
         strHQL += " Order by constract.SignDate DESC";
         ConstractBLL constractBLL = new ConstractBLL();
@@ -1700,7 +1700,7 @@ public partial class TTAPPMakeCustomer : System.Web.UI.Page
         DataGrid9.DataBind();
     }
 
-    //å–å¾—å®¢æˆ·ID
+    //È¡µÃ¿Í»§ID
     protected string getCustomerID(string strCustomerCode)
     {
         string strHQL;

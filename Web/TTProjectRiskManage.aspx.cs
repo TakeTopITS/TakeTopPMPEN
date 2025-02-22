@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -31,7 +31,7 @@ public partial class TTProjectRiskManage : System.Web.UI.Page
 
         LB_ProjectID.Text = strProjectID;
 
-        //this.Title = "寰呭鐞嗙殑椋庨櫓鍒楄〃";
+        //this.Title = "待处理的风险列表";
 
         LB_UserCode.Text = strUserCode;
         LB_UserName.Text = strUserName;
@@ -41,7 +41,7 @@ public partial class TTProjectRiskManage : System.Web.UI.Page
         {
             if (strProjectID == "0" | strProjectID == null)
             {
-                strHQL = "from ProjectRisk as projectRisk where projectRisk.ProjectID in (select project.ProjectID from Project as project where project.PMCode = " + "'" + strUserCode + "'" + "  and project.Status not in ('鏂板缓', '闅愯棌','鍒犻櫎','褰掓。'))" + " Order by projectRisk.EffectDate DESC";
+                strHQL = "from ProjectRisk as projectRisk where projectRisk.ProjectID in (select project.ProjectID from Project as project where project.PMCode = " + "'" + strUserCode + "'" + "  and project.Status not in ('New', 'Hided','Deleted','Archived'))" + " Order by projectRisk.EffectDate DESC";
             }
             else
             {

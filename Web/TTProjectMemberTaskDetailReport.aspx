@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectMemberTaskDetailReport.aspx.cs" Inherits="TTProjectMemberTaskDetailReport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectMemberTaskDetailReport.aspx.cs" Inherits="TTProjectMemberTaskDetailReport" %>
 
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -8,7 +8,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>È°πÁõÆÊàêÂëò‰ªªÂä°Êä•Ë°®</title>
+    <title>œÓƒø≥…‘±»ŒŒÒ±®±Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/My97DatePicker/WdatePicker.js"></script>
     
@@ -48,7 +48,7 @@
                                 <table width="70%" border="0"  cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td>
-                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ZuBie%>"></asp:Label>Ôºö
+                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ZuBie%>"></asp:Label>£∫
                                         </td>
                                         <td>
 
@@ -61,7 +61,7 @@
                                         </td>
 
                                         <td>
-                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuMingChen%>"></asp:Label>Ôºö
+                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuMingChen%>"></asp:Label>£∫
                                         </td>
                                         <td align="left">
                                             <asp:Label ID="LB_ProjectID" runat="server"></asp:Label>
@@ -73,13 +73,13 @@
                                             </cc1:ModalPopupExtender>
                                         </td>
                                         <td>
-                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,RenWuMingCheng%>"></asp:Label>Ôºö
+                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,RenWuMingCheng%>"></asp:Label>£∫
                                         </td>
                                         <td align="left">
                                             <asp:TextBox ID="TB_TaskName" runat="server"></asp:TextBox>
                                         </td>
                                         <td>
-                                            <asp:Label ID="Label37" runat="server" Text="<%$ Resources:lang,ZhiXingRen%>"></asp:Label>Ôºö
+                                            <asp:Label ID="Label37" runat="server" Text="<%$ Resources:lang,ZhiXingRen%>"></asp:Label>£∫
                                         </td>
                                         <td align="left">
                                             <asp:TextBox ID="TB_TaskOperator" runat="server"></asp:TextBox>
@@ -89,7 +89,7 @@
 
                                     <tr>
                                         <td>
-                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,RenWuKaiShiShiJian%>"></asp:Label>Ôºö
+                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,RenWuKaiShiShiJian%>"></asp:Label>£∫
                                         </td>
                                         <td align="left">
                                             <asp:TextBox ID="DLC_BeginDate" ReadOnly="false" runat="server"></asp:TextBox>
@@ -98,7 +98,7 @@
 
                                         </td>
                                         <td>
-                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,RenWuJieShuShiJian%>"></asp:Label>Ôºö
+                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,RenWuJieShuShiJian%>"></asp:Label>£∫
                                         </td>
                                         <td align="left">
                                             <asp:TextBox ID="DLC_EndDate" ReadOnly="false" runat="server"></asp:TextBox>
@@ -109,7 +109,7 @@
                                         </td>
 
                                         <td>
-                                            <asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>Ôºö
+                                            <asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£∫
                                         </td>
                                         <td align="left">
 
@@ -130,9 +130,9 @@
                                                 Text="<%$ Resources:lang,DaoChu%>" />
 
                                             &nbsp;&nbsp;   <a href="#" onclick="preview1()">
-                                                <img src="ImagesSkin/print.gif" alt="ÊâìÂç∞" border="0" />
+                                                <img src="ImagesSkin/print.gif" alt="¥Ú”°" border="0" />
                                             </a>
-                                            Ôºâ
+                                            £©
 
                                         </td>
                                         <td align="left">

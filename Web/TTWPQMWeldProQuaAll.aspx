@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMWeldProQuaAll.aspx.cs" Inherits="TTWPQMWeldProQuaAll" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMWeldProQuaAll.aspx.cs" Inherits="TTWPQMWeldProQuaAll" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -8,7 +8,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>完善工艺信息</title>
+    <title>���ƹ�����Ϣ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script src="js/allAHandler.js" type="text/javascript"></script>
@@ -93,13 +93,13 @@
                                             <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,BaiDongLeiXing%>"></asp:Label></td>
                                         <td align="left" class="auto-style3">
                                                <asp:DropDownList ID="DL_SwingType" runat="server">
-                                                <asp:ListItem Value="请选择" Text="<%$ Resources:lang,QingXuanZe%>"/>
-                                                <asp:ListItem Value="摆动焊" Text="<%$ Resources:lang,BaiDongHan%>"/>
-                                                <asp:ListItem Value="不摆动焊" Text="<%$ Resources:lang,BuBaiDongHan%>"/>
+                                                <asp:ListItem Value="PleaseSelect" Text="<%$ Resources:lang,QingXuanZe%>"/>
+                                                <asp:ListItem Value="OscillationWelding" Text="<%$ Resources:lang,BaiDongHan%>"/>
+                                                <asp:ListItem Value="Non-oscillationWelding" Text="<%$ Resources:lang,BuBaiDongHan%>"/>
                                             </asp:DropDownList>
                                         </td>
                                         <td align="right" class="auto-style5">
-                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,BaiDongCanShu%>"></asp:Label> ：</td>
+                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,BaiDongCanShu%>"></asp:Label> ��</td>
                                         <td align="left" class="auto-style3">
                                             <asp:TextBox ID="TB_OscillationParameters" runat="server" CssClass="shuru"></asp:TextBox>
                                         </td>
@@ -150,33 +150,33 @@
                                         <td align="left" class="auto-style3">
                                             <asp:TextBox ID="TB_PWPSStandardNo" runat="server" CssClass="shuru"></asp:TextBox>
                                         </td>
-                                        <td align="right" class="auto-style5">α：</td>
+                                        <td align="right" class="auto-style5">����</td>
                                         <td align="left" class="auto-style3">
                                             <asp:TextBox ID="TB_Value_1" runat="server" CssClass="shuru"></asp:TextBox>
                                         </td>
-                                        <td align="right" class="formItemBgStyle">δ：</td>
+                                        <td align="right" class="formItemBgStyle">�ģ�</td>
                                         <td align="left" class="formItemBgStyle">
                                             <asp:TextBox ID="TB_Value_2" runat="server" CssClass="shuru"></asp:TextBox>
                                         </td>
-                                        <td align="right" class="formItemBgStyle">b：</td>
+                                        <td align="right" class="formItemBgStyle">b��</td>
                                         <td align="left" class="formItemBgStyle">
                                             <asp:TextBox ID="TB_Value_3" runat="server" CssClass="shuru"></asp:TextBox>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td align="right" class="formItemBgStyle" style="width: 150px">p：</td>
+                                        <td align="right" class="formItemBgStyle" style="width: 150px">p��</td>
                                         <td align="left" class="auto-style3">
                                             <asp:TextBox ID="TB_Value_4" runat="server" CssClass="shuru"></asp:TextBox>
                                         </td>
-                                        <td align="right" class="auto-style5">H：</td>
+                                        <td align="right" class="auto-style5">H��</td>
                                         <td align="left" class="auto-style3">
                                             <asp:TextBox ID="TB_Value_5" runat="server" CssClass="shuru"></asp:TextBox>
                                         </td>
-                                        <td align="right" class="formItemBgStyle">β：</td>
+                                        <td align="right" class="formItemBgStyle">�£�</td>
                                         <td align="left" class="formItemBgStyle">
                                             <asp:TextBox ID="TB_Value_6" runat="server" CssClass="shuru"></asp:TextBox>
                                         </td>
-                                        <td align="right" class="formItemBgStyle">R：</td>
+                                        <td align="right" class="formItemBgStyle">R��</td>
                                         <td align="left" class="formItemBgStyle">
                                             <asp:TextBox ID="TB_Value_7" runat="server" CssClass="shuru"></asp:TextBox>
                                         </td>
@@ -250,13 +250,13 @@
                                             <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,DaoHanLeiXing%>"></asp:Label> </td>
                                         <td align="left" class="auto-style3">
                                            <asp:DropDownList ID="DL_PassWeldingType" runat="server">
-                                                <asp:ListItem Value="请选择" Text="<%$ Resources:lang,QingXuanZe%>"/>
-                                                <asp:ListItem Value="单道焊" Text="<%$ Resources:lang,DanDaoHan%>"/>
-                                                <asp:ListItem Value="多道焊" Text="<%$ Resources:lang,DuoDaoHan%>"/>
+                                                <asp:ListItem Value="PleaseSelect" Text="<%$ Resources:lang,QingXuanZe%>"/>
+                                                <asp:ListItem Value="Single-passWelding" Text="<%$ Resources:lang,DanDaoHan%>"/>
+                                                <asp:ListItem Value="Multi-passWelding" Text="<%$ Resources:lang,DuoDaoHan%>"/>
                                             </asp:DropDownList>
                                         </td>
                                         <td align="right" class="formItemBgStyle">
-                                            <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,DianLiuZhongLei%>"></asp:Label> ：</td>
+                                            <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,DianLiuZhongLei%>"></asp:Label> ��</td>
                                         <td align="left" class="formItemBgStyle">
                                             <asp:TextBox ID="TB_CurrentType" runat="server" CssClass="shuru"></asp:TextBox>
                                         </td>
@@ -276,9 +276,9 @@
                                             <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,SiHanLeiXing%>"></asp:Label> </td>
                                         <td align="left" class="auto-style3">
                                              <asp:DropDownList ID="DL_WireWeldingType" runat="server">
-                                                <asp:ListItem Value="请选择" Text="<%$ Resources:lang,QingXuanZe%>"/>
-                                                <asp:ListItem Value="单丝焊" Text="<%$ Resources:lang,DanSiHan%>"/>
-                                                <asp:ListItem Value="多丝焊" Text="<%$ Resources:lang,DuoSiHan%>"/>
+                                                <asp:ListItem Value="PleaseSelect" Text="<%$ Resources:lang,QingXuanZe%>"/>
+                                                <asp:ListItem Value="Single-wireWelding" Text="<%$ Resources:lang,DanSiHan%>"/>
+                                                <asp:ListItem Value="Multi-wireWelding" Text="<%$ Resources:lang,DuoSiHan%>"/>
                                             </asp:DropDownList>
                                         </td>
                                         <td align="right" class="formItemBgStyle">
@@ -312,9 +312,9 @@
                                             <asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,HanJieDianHuZhongLei%>"></asp:Label></td>
                                         <td align="left" class="formItemBgStyle">
                                              <asp:DropDownList ID="DL_WeldingArcType" runat="server">
-                                                <asp:ListItem Value="请选择" Text="<%$ Resources:lang,QingXuanZe%>"/>
-                                                <asp:ListItem Value="喷射弧" Text="<%$ Resources:lang,PengSheHu%>"/>
-                                                <asp:ListItem Value="短路弧" Text="<%$ Resources:lang,DuanLuHu%>"/>
+                                                <asp:ListItem Value="PleaseSelect" Text="<%$ Resources:lang,QingXuanZe%>"/>
+                                                <asp:ListItem Value="SprayArc" Text="<%$ Resources:lang,PengSheHu%>"/>
+                                                <asp:ListItem Value="ShortCircuitArc" Text="<%$ Resources:lang,DuanLuHu%>"/>
                                             </asp:DropDownList>
                                         </td>
                                     </tr>

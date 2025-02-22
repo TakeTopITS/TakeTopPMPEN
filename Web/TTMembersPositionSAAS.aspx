@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMembersPositionSAAS.aspx.cs" Inherits="TTMembersPositionSAAS" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMembersPositionSAAS.aspx.cs" Inherits="TTMembersPositionSAAS" %>
 
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -99,7 +99,7 @@
                                                                             
                                                                             <ItemStyle CssClass="itemBorder" />
                                                                             <Columns>
-                                                                                <asp:TemplateColumn HeaderText="éƒ¨é—¨æˆå‘˜ï¼š">
+                                                                                <asp:TemplateColumn HeaderText="²¿ÃÅ³ÉÔ±£º">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_UserCode" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>'
                                                                                             Style="text-align: center" />
@@ -178,7 +178,7 @@
                                                                 ShowHeader="false" Height="1px" OnPageIndexChanged="DataGrid2_PageIndexChanged"
                                                                 PageSize="30" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                 <Columns>
-                                                                    <asp:TemplateColumn HeaderText="ä½ç½®ï¼š">
+                                                                    <asp:TemplateColumn HeaderText="Î»ÖÃ£º">
                                                                         <ItemTemplate>
                                                                             <a href='TTUserPositionView.aspx?lng=<%# DataBinder.Eval(Container.DataItem,"Longitude").ToString().Trim() %>&lat=<%# DataBinder.Eval(Container.DataItem,"Latitude").ToString().Trim() %>'
                                                                                 target="IFR_UserPositionMap">
@@ -186,10 +186,10 @@
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="240px" />
                                                                     </asp:TemplateColumn>
-                                                                    <asp:BoundColumn DataField="CreateTime" HeaderText="æ—¶é—´">
+                                                                    <asp:BoundColumn DataField="CreateTime" HeaderText="Ê±¼ä">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="150px" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="UserName" HeaderText="å§“å">
+                                                                    <asp:BoundColumn DataField="UserName" HeaderText="ÐÕÃû">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="100px" />
                                                                     </asp:BoundColumn>
                                                                      <asp:BoundColumn DataField="MacAddress" HeaderText="MacAddress">

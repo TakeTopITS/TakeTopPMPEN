@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSupplierInfo.aspx.cs" Inherits="TTWZSupplierInfo" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSupplierInfo.aspx.cs" Inherits="TTWZSupplierInfo" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -89,7 +89,7 @@
                                 <table cellpadding="2" cellspacing="0" class="formBgStyle" width="100%">
                                     <tr>
                                         <td align="right" class="formItemBgStyle">
-                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,DengLuDaiMa%>"></asp:Label>ï¼š
+                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,DengLuDaiMa%>"></asp:Label>£º
                                         </td>
                                         <td align="left" class="formItemBgStyle">
                                             <asp:Label ID="LB_SupplierCode" runat="server"></asp:Label>
@@ -98,7 +98,7 @@
                                     </tr>
                                     <tr>
                                         <td align="right" class="formItemBgStyle">
-                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,DengLuMiMa%>"></asp:Label>ï¼š
+                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,DengLuMiMa%>"></asp:Label>£º
                                         </td>
                                         <td align="left" class="formItemBgStyle">
                                             <asp:TextBox ID="TXT_SupplierPass" runat="server" CssClass="shuru"></asp:TextBox>
@@ -106,7 +106,7 @@
                                     </tr>
                                     <tr>
                                         <td align="right" class="formItemBgStyle">
-                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,YongHuMing%>"></asp:Label>ï¼š</td>
+                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,YongHuMing%>"></asp:Label>£º</td>
                                         <td align="left" class="formItemBgStyle">
                                             <asp:TextBox ID="TXT_SupplierName" runat="server" CssClass="shuru"></asp:TextBox>
                                         </td>
@@ -129,7 +129,7 @@
                                 </table>
                                 <br />
                                 <cc1:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" runat="server" ActiveTabIndex="0" Width="100%">
-                                    <cc1:TabPanel ID="TabPanel1" runat="server" HeaderText="æ‹›æ ‡æ–¹æ¡ˆåˆ—è¡¨">
+                                    <cc1:TabPanel ID="TabPanel1" runat="server" HeaderText="ÕÐ±ê·½°¸ÁÐ±í">
                                         <HeaderTemplate>
                                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,GongYingShangLieBiao%>"></asp:Label>
                                         </HeaderTemplate>
@@ -140,7 +140,7 @@
                                                     <td align="left">
                                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,YongHuMing %>"></asp:Label>
 
-                                                        ï¼š<asp:TextBox ID="TXT_SSupplierName" runat="server" Width="120px"></asp:TextBox>
+                                                        £º<asp:TextBox ID="TXT_SSupplierName" runat="server" Width="120px"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                         <asp:Button ID="BT_Query" runat="server" CssClass="inpu" OnClick="BT_Query_Click" Text="<%$ Resources:lang,ChaXun %>" />
@@ -185,7 +185,7 @@
                                                             GridLines="None" ShowHeader="False" AllowPaging="True" OnPageIndexChanged="DataGrid2_PageIndexChanged">
 
                                                             <Columns>
-                                                                <asp:TemplateColumn HeaderText="æ“ä½œ">
+                                                                <asp:TemplateColumn HeaderText="Operation">
                                                                     <ItemTemplate>
                                                                         <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                                     </ItemTemplate>
@@ -195,19 +195,19 @@
 
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="SupplierCode" HeaderText="ç”¨æˆ·ä»£ç ">
+                                                                <asp:BoundColumn DataField="SupplierCode" HeaderText="ÓÃ»§´úÂë">
                                                                     <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
                                                                         HorizontalAlign="Center" />
 
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="14%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="SupplierPass" HeaderText="ç”¨æˆ·å¯†ç ">
+                                                                <asp:BoundColumn DataField="SupplierPass" HeaderText="ÓÃ»§ÃÜÂë">
                                                                     <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
                                                                         HorizontalAlign="Center" />
 
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="14%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="SupplierName" HeaderText="ç”¨æˆ·å">
+                                                                <asp:BoundColumn DataField="SupplierName" HeaderText="ÓÃ»§Ãû">
                                                                     <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
                                                                         HorizontalAlign="Center" />
 
@@ -241,15 +241,15 @@
                                             <table width="98%" cellpadding="4" cellspacing="0">
                                                 <tr>
                                                     <td align="right" style="width: 100px; height: 27px">
-                                                        <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,LiuChengMuBan %>"></asp:Label>ï¼š
+                                                        <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,LiuChengMuBan %>"></asp:Label>£º
                                                     </td>
                                                     <td align="left" style="width: 650px; height: 27px">
                                                         <asp:DropDownList ID="DL_TemName" runat="server" DataTextField="TemName" DataValueField="TemName"
                                                             Width="228px">
                                                         </asp:DropDownList>
-                                                        <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,LeiXing %>"></asp:Label>ï¼š
+                                                        <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,LeiXing %>"></asp:Label>£º
                                                         <asp:DropDownList ID="DL_WFType" runat="server">
-                                                            <asp:ListItem Value="ä¾›åº”å•†ç®¡ç†" />
+                                                            <asp:ListItem Value="SupplierManagement" />
                                                         </asp:DropDownList><asp:HyperLink
                                                             ID="HL_WLTem" runat="server" NavigateUrl="~/TTWorkFlowTemplate.aspx" Target="_blank">
                                                             <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,MuBanWeiHu %>"></asp:Label>
@@ -262,7 +262,7 @@
                                                     <td align="left" style="width: 650px; height: 27px">
                                                         <span style="font-size: 10pt"></span>
                                                         <asp:CheckBox ID="CB_SMS" runat="server" Text="<%$ Resources:lang,DuanXin %>" /><asp:CheckBox
-                                                            ID="CB_Mail" runat="server" Font-Size="10pt" Text="<%$ Resources:lang,YouJian %>" /><span style="font-size: 10pt">ï¼ˆ<asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,YaoQiuShouDaoXinXi %>"></asp:Label>ï¼š)
+                                                            ID="CB_Mail" runat="server" Font-Size="10pt" Text="<%$ Resources:lang,YouJian %>" /><span style="font-size: 10pt">£¨<asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,YaoQiuShouDaoXinXi %>"></asp:Label>£º)
                                                             </span>
                                                         <asp:Button ID="BT_SubmitApply" runat="server" Enabled="False" Text="<%$ Resources:lang,TiJiaoShenQing %>" CssClass="inpu" />
                                                         <cc1:ModalPopupExtender ID="BT_SubmitApply_ModalPopupExtender" runat="server" Enabled="True"
@@ -273,7 +273,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td align="center" colspan="2" style="height: 22px; text-align: left;">
-                                                        <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,DuiYingGongZuoLiuLieBiao %>"></asp:Label>ï¼š
+                                                        <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,DuiYingGongZuoLiuLieBiao %>"></asp:Label>£º
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -317,17 +317,17 @@
 
                                                             <ItemStyle CssClass="itemStyle" />
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="WLID" HeaderText="ç¼–å·">
+                                                                <asp:BoundColumn DataField="WLID" HeaderText="±àºÅ">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTMyWorkDetailMain.aspx?WLID={0}"
-                                                                    DataTextField="WLName" HeaderText="å·¥ä½œæµ" Target="_blank">
+                                                                    DataTextField="WLName" HeaderText="Workflow" Target="_blank">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="50%" />
                                                                 </asp:HyperLinkColumn>
-                                                                <asp:BoundColumn DataField="CreateTime" HeaderText="ç”³è¯·æ—¶é—´">
+                                                                <asp:BoundColumn DataField="CreateTime" HeaderText="ÉêÇëÊ±¼ä">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                                <asp:TemplateColumn HeaderText="×´Ì¬">
                                                                     <ItemTemplate>
                                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                     </ItemTemplate>

@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
 using System.Collections;
@@ -34,7 +34,7 @@ public partial class TTMakeProjectBudgetForAll : System.Web.UI.Page
             ShareClass.LoadUnitForDropDownList(DL_Unit);
             LoadProjectBudget(strProjectID);
 
-            //å–å¾—ä¼šè®¡ç§‘ç›®åˆ—è¡¨
+            //È¡µÃ»á¼Æ¿ÆÄ¿ÁĞ±í
             ShareClass.LoadAccountForDDL(DL_Account);
 
             ShareClass.InitialProjectMemberTree(TreeView1, strProjectID);
@@ -43,14 +43,14 @@ public partial class TTMakeProjectBudgetForAll : System.Web.UI.Page
             LB_UserCode.Text = strUserCode;
             LB_UserName.Text = strUserName;
 
-            if (strProjectStatus == "ç»“æ¡ˆ" || strProjectStatus == "æŒ‚èµ·" || strProjectStatus == "å–æ¶ˆ")
+            if (strProjectStatus == "CaseClosed" || strProjectStatus == "Suspended" || strProjectStatus == "Cancel")
             {
                 //BT_New.Enabled = false;
                 //BT_Update.Enabled = false;
                 //BT_Delete.Enabled = false;
             }
 
-            LoadProjectExpenseByAccount(strProjectID, "æ‰€æœ‰");
+            LoadProjectExpenseByAccount(strProjectID, "All");
         }
     }
 
@@ -107,7 +107,7 @@ public partial class TTMakeProjectBudgetForAll : System.Web.UI.Page
 
                 LoadProjectExpenseByAccount(strProjectID, LB_Account.Text);
 
-                if (strProjectStatus == "ç»“æ¡ˆ" || strProjectStatus == "æŒ‚èµ·" || strProjectStatus == "å–æ¶ˆ")
+                if (strProjectStatus == "CaseClosed" || strProjectStatus == "Suspended" || strProjectStatus == "Cancel")
                 {
                     //BT_New.Enabled = false;
                     //BT_Update.Enabled = false;
@@ -201,7 +201,7 @@ public partial class TTMakeProjectBudgetForAll : System.Web.UI.Page
 
         if (deYuSuanZongLiang == 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ä¿å­˜å¤±è´¥ï¼Œé¢„ç®—æ€»é‡ä¸èƒ½ä¸º0ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('±£´æÊ§°Ü£¬Ô¤Ëã×ÜÁ¿²»ÄÜÎª0£¬Çë¼ì²é£¡')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             return;
         }
@@ -254,7 +254,7 @@ public partial class TTMakeProjectBudgetForAll : System.Web.UI.Page
 
         if (deYuSuanZongLiang == 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ä¿å­˜å¤±è´¥ï¼Œé¢„ç®—æ€»é‡ä¸èƒ½ä¸º0ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('±£´æÊ§°Ü£¬Ô¤Ëã×ÜÁ¿²»ÄÜÎª0£¬Çë¼ì²é£¡')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             return;
         }
@@ -342,12 +342,12 @@ public partial class TTMakeProjectBudgetForAll : System.Web.UI.Page
 
     protected void BT_AllMember_Click(object sender, EventArgs e)
     {
-        LB_OperatorCode.Text = "æ‰€æœ‰";
+        LB_OperatorCode.Text = "All";
         LB_OperatorName.Text = "";
 
-        LB_Account.Text = "æ‰€æœ‰";
+        LB_Account.Text = "All";
 
-        LoadProjectExpenseByAccount(strProjectID, "æ‰€æœ‰");
+        LoadProjectExpenseByAccount(strProjectID, "All");
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popDetailWindow','true') ", true);
     }
@@ -380,7 +380,7 @@ public partial class TTMakeProjectBudgetForAll : System.Web.UI.Page
                 strUserCode = proRelatedUser.UserCode.Trim();
                 strUserName = proRelatedUser.UserName.Trim();
 
-                if (strAccount == "æ‰€æœ‰")
+                if (strAccount == "All")
                 {
                     strHQL = "from ProExpense as proExpense where proExpense.ProjectID = " + strProjectID + " and proExpense.UserCode = " + "'" + strUserCode + "'";
                     strHQL += " Order by proExpense.ID DESC";
@@ -453,7 +453,7 @@ public partial class TTMakeProjectBudgetForAll : System.Web.UI.Page
 
         decimal deExpense = 0, deConfirmExpense = 0;
 
-        if (strAccount == "æ‰€æœ‰")
+        if (strAccount == "All")
         {
             strHQL = "from ProExpense as proExpense where proExpense.ProjectID = " + strProjectID;
             strHQL += " Order by proExpense.ID DESC";
@@ -481,7 +481,7 @@ public partial class TTMakeProjectBudgetForAll : System.Web.UI.Page
         LB_Amount.Text = deExpense.ToString();
         LB_ConfirmAmount.Text = deConfirmExpense.ToString();
 
-        LB_OperatorCode.Text = "æ‰€æœ‰";
+        LB_OperatorCode.Text = "All";
         LB_OperatorName.Text = "";
     }
 
@@ -564,8 +564,8 @@ public partial class TTMakeProjectBudgetForAll : System.Web.UI.Page
                 LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ ;
                 return;
             }
-            string filename = FileUpload_Training.FileName.ToString();  //è·å–Execleæ–‡ä»¶å
-            string newfilename = System.IO.Path.GetFileNameWithoutExtension(filename) + DateTime.Now.ToString("yyyyMMddHHmmssff") + IsXls;//æ–°æ–‡ä»¶åç§°ï¼Œå¸¦åç¼€
+            string filename = FileUpload_Training.FileName.ToString();  //»ñÈ¡ExecleÎÄ¼şÃû
+            string newfilename = System.IO.Path.GetFileNameWithoutExtension(filename) + DateTime.Now.ToString("yyyyMMddHHmmssff") + IsXls;//ĞÂÎÄ¼şÃû³Æ£¬´øºó×º
             string strDocSavePath = Server.MapPath("Doc") + "\\" + DateTime.Now.ToString("yyyyMM") + "\\" + strUserCode.Trim() + "\\Doc\\";
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
@@ -579,11 +579,11 @@ public partial class TTMakeProjectBudgetForAll : System.Web.UI.Page
 
                 //DataSet ds = ExcelToDataSet(strpath, filename);
                 //DataRow[] dr = ds.Tables[0].Select();
-                //DataRow[] dr = ds.Tables[0].Select();//å®šä¹‰ä¸€ä¸ªDataRowæ•°ç»„
+                //DataRow[] dr = ds.Tables[0].Select();//¶¨ÒåÒ»¸öDataRowÊı×é
                 //int rowsnum = ds.Tables[0].Rows.Count;
 
                 DataTable dt = MSExcelHandler.ReadExcelToDataTable(strpath, filename);
-                DataRow[] dr = dt.Select();                        //å®šä¹‰ä¸€ä¸ªDataRowæ•°ç»„
+                DataRow[] dr = dt.Select();                        //¶¨ÒåÒ»¸öDataRowÊı×é
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
@@ -593,9 +593,9 @@ public partial class TTMakeProjectBudgetForAll : System.Web.UI.Page
                 {
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        if (dr[i]["åºå·"].ToString().Trim() != "")
+                        if (dr[i]["ĞòºÅ"].ToString().Trim() != "")
                         {
-                            string strXuHao = dr[i]["åºå·"].ToString().Trim();
+                            string strXuHao = dr[i]["ĞòºÅ"].ToString().Trim();
 
                             try
                             {
@@ -603,18 +603,18 @@ public partial class TTMakeProjectBudgetForAll : System.Web.UI.Page
                                 strUserCode = LB_UserCode.Text.Trim();
                                 strUserName = LB_UserName.Text.Trim();
 
-                                string strXiangMuFenBu = dr[i]["é¡¹ç›®åˆ†éƒ¨"].ToString().Trim();
-                                string strXiangMuFenXiang = dr[i]["é¡¹ç›®åˆ†é¡¹"].ToString().Trim();
-                                string strXiangMuFenLei = dr[i]["é¡¹ç›®åˆ†ç±»"].ToString().Trim();
-                                string strMingChengGuiGe = dr[i]["é¡¹ç›®åç§°æˆ–è§„æ ¼"].ToString().Trim();
-                                string strAccountName = dr[i]["ä¼šè®¡ç§‘ç›®"].ToString().Trim();
-                                string strDanWei = dr[i]["è®¡é‡å•ä½"].ToString().Trim();
+                                string strXiangMuFenBu = dr[i]["ÏîÄ¿·Ö²¿"].ToString().Trim();
+                                string strXiangMuFenXiang = dr[i]["ÏîÄ¿·ÖÏî"].ToString().Trim();
+                                string strXiangMuFenLei = dr[i]["ÏîÄ¿·ÖÀà"].ToString().Trim();
+                                string strMingChengGuiGe = dr[i]["ÏîÄ¿Ãû³Æ»ò¹æ¸ñ"].ToString().Trim();
+                                string strAccountName = dr[i]["»á¼Æ¿ÆÄ¿"].ToString().Trim();
+                                string strDanWei = dr[i]["¼ÆÁ¿µ¥Î»"].ToString().Trim();
 
-                                decimal deYuSuanDanJia = decimal.Parse(dr[i]["é¢„ç®—å•ä»·"].ToString().Trim());
-                                decimal deYuSuanZongLiang = decimal.Parse(dr[i]["é¢„ç®—æ€»é‡"].ToString().Trim());
-                                decimal deYuSuanZongE = decimal.Parse(dr[i]["é¢„ç®—æ€»é¢"].ToString().Trim());
+                                decimal deYuSuanDanJia = decimal.Parse(dr[i]["Ô¤Ëãµ¥¼Û"].ToString().Trim());
+                                decimal deYuSuanZongLiang = decimal.Parse(dr[i]["Ô¤Ëã×ÜÁ¿"].ToString().Trim());
+                                decimal deYuSuanZongE = decimal.Parse(dr[i]["Ô¤Ëã×Ü¶î"].ToString().Trim());
 
-                                string strBeiZhu = dr[i]["å¤‡æ³¨"].ToString().Trim();
+                                string strBeiZhu = dr[i]["±¸×¢"].ToString().Trim();
 
                                 string strAccountCode = ShareClass.GetAccountCode(strMingChengGuiGe);
 
@@ -659,8 +659,8 @@ public partial class TTMakeProjectBudgetForAll : System.Web.UI.Page
                 LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ ;
                 j = -1;
             }
-            string filename = FileUpload_Training.FileName.ToString();  //è·å–Execleæ–‡ä»¶å
-            string newfilename = System.IO.Path.GetFileNameWithoutExtension(filename) + DateTime.Now.ToString("yyyyMMddHHmmssff") + IsXls;//æ–°æ–‡ä»¶åç§°ï¼Œå¸¦åç¼€
+            string filename = FileUpload_Training.FileName.ToString();  //»ñÈ¡ExecleÎÄ¼şÃû
+            string newfilename = System.IO.Path.GetFileNameWithoutExtension(filename) + DateTime.Now.ToString("yyyyMMddHHmmssff") + IsXls;//ĞÂÎÄ¼şÃû³Æ£¬´øºó×º
             string strDocSavePath = Server.MapPath("Doc") + "\\" + DateTime.Now.ToString("yyyyMM") + "\\" + strUserCode.Trim() + "\\Doc\\";
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
@@ -675,11 +675,11 @@ public partial class TTMakeProjectBudgetForAll : System.Web.UI.Page
 
                 //DataSet ds = ExcelToDataSet(strpath, filename);
                 //DataRow[] dr = ds.Tables[0].Select();
-                //DataRow[] dr = ds.Tables[0].Select();//å®šä¹‰ä¸€ä¸ªDataRowæ•°ç»„
+                //DataRow[] dr = ds.Tables[0].Select();//¶¨ÒåÒ»¸öDataRowÊı×é
                 //int rowsnum = ds.Tables[0].Rows.Count;
 
                 DataTable dt = MSExcelHandler.ReadExcelToDataTable(strpath, filename);
-                DataRow[] dr = dt.Select();                        //å®šä¹‰ä¸€ä¸ªDataRowæ•°ç»„
+                DataRow[] dr = dt.Select();                        //¶¨ÒåÒ»¸öDataRowÊı×é
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
@@ -690,7 +690,7 @@ public partial class TTMakeProjectBudgetForAll : System.Web.UI.Page
                 {
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        string strXuHao = dr[i]["åºå·"].ToString().Trim();
+                        string strXuHao = dr[i]["ĞòºÅ"].ToString().Trim();
                         if (strXuHao == "")
                         {
                             LB_ErrorText.Text += Resources.lang.ZZZXHBNWK ;
@@ -699,7 +699,7 @@ public partial class TTMakeProjectBudgetForAll : System.Web.UI.Page
                             continue;
                         }
 
-                        string strDanWei = dr[i]["è®¡é‡å•ä½"].ToString().Trim();
+                        string strDanWei = dr[i]["¼ÆÁ¿µ¥Î»"].ToString().Trim();
 
                         if (strDanWei != "")
                         {
@@ -715,9 +715,9 @@ public partial class TTMakeProjectBudgetForAll : System.Web.UI.Page
 
                         try
                         {
-                            decimal deYuSuanDanJia = decimal.Parse(dr[i]["é¢„ç®—å•ä»·"].ToString().Trim());
-                            decimal deYuSuanZongLiang = decimal.Parse(dr[i]["é¢„ç®—æ€»é‡"].ToString().Trim());
-                            decimal deYuSuanZongE = decimal.Parse(dr[i]["é¢„ç®—æ€»é¢"].ToString().Trim());
+                            decimal deYuSuanDanJia = decimal.Parse(dr[i]["Ô¤Ëãµ¥¼Û"].ToString().Trim());
+                            decimal deYuSuanZongLiang = decimal.Parse(dr[i]["Ô¤Ëã×ÜÁ¿"].ToString().Trim());
+                            decimal deYuSuanZongE = decimal.Parse(dr[i]["Ô¤Ëã×Ü¶î"].ToString().Trim());
                         }
                         catch
                         {

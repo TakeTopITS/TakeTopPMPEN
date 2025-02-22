@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTInvolvedProjectRelatedReqList.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTInvolvedProjectRelatedReqList.aspx.cs"
     Inherits="TTInvolvedProjectRelatedReqList" %>
 
 

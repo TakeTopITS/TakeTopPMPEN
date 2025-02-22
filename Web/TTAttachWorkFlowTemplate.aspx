@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAttachWorkFlowTemplate.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAttachWorkFlowTemplate.aspx.cs"
     Inherits="TTAttachWorkFlowTemplate" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -91,7 +91,7 @@
 
                                                             <ItemStyle CssClass="itemStyle" />
                                                             <Columns>
-                                                                <asp:TemplateColumn HeaderText="æ¨¡æ¿ç±»åž‹">
+                                                                <asp:TemplateColumn HeaderText="Ä£°åÀàÐÍ">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                     <ItemTemplate>
                                                                         <asp:Button ID="BT_WFType" runat="server" Width="150px" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"Type") %>' />
@@ -139,15 +139,15 @@
                                                             ForeColor="#333333" ShowHeader="False"
                                                             GridLines="None">
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="ID" HeaderText="åºå·">
+                                                                <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="IdentifyString" DataNavigateUrlFormatString="TTWorkFlowTemplateView.aspx?IdentifyString={0}"
-                                                                    DataTextField="WFTemplateName" HeaderText="æ¨¡æ¿åç§°" Target="_blank">
+                                                                    DataTextField="WFTemplateName" HeaderText="Ä£°åÃû³Æ" Target="_blank">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="80%" />
                                                                 </asp:HyperLinkColumn>
                                                                 <asp:ButtonColumn CommandName="Delete"
-                                                                    Text="&lt;div&gt;&lt;img src=ImagesSkin/icon_del.gif border=0 alt='åˆ é™¤' /&gt;&lt;/div&gt;">
+                                                                    Text="&lt;div&gt;&lt;img src=ImagesSkin/icon_del.gif border=0 alt='Deleted' /&gt;&lt;/div&gt;">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:ButtonColumn>
                                                             </Columns>
@@ -169,7 +169,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: left;">
-                                                        <asp:Label ID="LB_WFType" runat="server"></asp:Label>&nbsp;<asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,GongZuoLiuMuBanLieBiao%>"></asp:Label>ï¼š
+                                                        <asp:Label ID="LB_WFType" runat="server"></asp:Label>&nbsp;<asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,GongZuoLiuMuBanLieBiao%>"></asp:Label>£º
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -215,14 +215,14 @@
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="IdentifyString" DataNavigateUrlFormatString="TTWorkFlowTemplateView.aspx?IdentifyString={0}"
-                                                                    HeaderText="æ¨¡æ¿åç§°" Target="_blank" Text="æ¨¡æ¿å†…å®¹">
+                                                                    HeaderText="Ä£°åÃû³Æ" Target="_blank" Text="Ä£°åÄÚÈÝ">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="45%" />
                                                                 </asp:HyperLinkColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                    DataTextField="CreatorName" HeaderText="åˆ›å»ºäºº" Target="_blank">
+                                                                    DataTextField="CreatorName" HeaderText="´´½¨ÈË" Target="_blank">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                 </asp:HyperLinkColumn>
-                                                                <asp:BoundColumn DataField="CreateTime" HeaderText="åˆ›é”®æ—¥æœŸ" DataFormatString="{0:yyyy/MM/dd}">
+                                                                <asp:BoundColumn DataField="CreateTime" HeaderText="´´¼üÈÕÆÚ" DataFormatString="{0:yyyy/MM/dd}">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                 </asp:BoundColumn>
                                                             </Columns>

@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.ComponentModel;
@@ -26,7 +26,7 @@ public partial class TTCustomerQuestionManage : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","瀹㈡埛鏈嶅姟", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","客户服务", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -46,7 +46,7 @@ public partial class TTCustomerQuestionManage : System.Web.UI.Page
 
             strHQL = "from CustomerQuestion as customerQuestion ";
             strHQL += " where customerQuestion.OperatorCode = " + "'" + strUserCode + "'" + "";
-            strHQL += " and customerQuestion.Status = '鏂板缓' ";
+            strHQL += " and customerQuestion.Status = 'New' ";
             strHQL += " order by customerQuestion.ID DESC";
             customerQuestionBLL = new CustomerQuestionBLL();
             lst = customerQuestionBLL.GetAllCustomerQuestions(strHQL);
@@ -54,13 +54,13 @@ public partial class TTCustomerQuestionManage : System.Web.UI.Page
             DataGrid1.DataBind();
             LB_Sql1.Text = strHQL;
 
-            strHQL = "from CustomerQuestion as customerQuestion where customerQuestion.OperatorCode = " + "'" + strUserCode + "'" + " and customerQuestion.OperatorStatus = '鍙楃悊' and customerQuestion.IsImportant = 'YES' order by customerQuestion.ID DESC";
+            strHQL = "from CustomerQuestion as customerQuestion where customerQuestion.OperatorCode = " + "'" + strUserCode + "'" + " and customerQuestion.OperatorStatus = 'Accepted' and customerQuestion.IsImportant = 'YES' order by customerQuestion.ID DESC";
             lst = customerQuestionBLL.GetAllCustomerQuestions(strHQL);
             DataGrid5.DataSource = lst;
             DataGrid5.DataBind();
             LB_Sql5.Text = strHQL;
 
-            strHQL = "from CustomerQuestion as customerQuestion where customerQuestion.OperatorCode = " + "'" + strUserCode + "'" + " and customerQuestion.OperatorStatus = '鍙楃悊' order by customerQuestion.ID DESC";
+            strHQL = "from CustomerQuestion as customerQuestion where customerQuestion.OperatorCode = " + "'" + strUserCode + "'" + " and customerQuestion.OperatorStatus = 'Accepted' order by customerQuestion.ID DESC";
             lst = customerQuestionBLL.GetAllCustomerQuestions(strHQL);
             DataGrid4.DataSource = lst;
             DataGrid4.DataBind();
@@ -165,7 +165,7 @@ public partial class TTCustomerQuestionManage : System.Web.UI.Page
 
         strHQL = "from CustomerQuestion as customerQuestion ";
         strHQL += " where customerQuestion.OperatorCode = " + "'" + strUserCode + "'" + "";
-        strHQL += " and customerQuestion.Status = '鏂板缓' ";
+        strHQL += " and customerQuestion.Status = 'New' ";
         strHQL += " order by customerQuestion.ID DESC";
         customerQuestionBLL = new CustomerQuestionBLL();
         lst = customerQuestionBLL.GetAllCustomerQuestions(strHQL);
@@ -174,14 +174,14 @@ public partial class TTCustomerQuestionManage : System.Web.UI.Page
         DataGrid1.DataBind();
         LB_Sql1.Text = strHQL;
 
-        strHQL = "from CustomerQuestion as customerQuestion where customerQuestion.OperatorCode = " + "'" + strUserCode + "'" + " and customerQuestion.OperatorStatus = '鍙楃悊' order by customerQuestion.ID DESC";
+        strHQL = "from CustomerQuestion as customerQuestion where customerQuestion.OperatorCode = " + "'" + strUserCode + "'" + " and customerQuestion.OperatorStatus = 'Accepted' order by customerQuestion.ID DESC";
         lst = customerQuestionBLL.GetAllCustomerQuestions(strHQL);
 
         DataGrid4.DataSource = lst;
         DataGrid4.DataBind();
         LB_Sql4.Text = strHQL;
 
-        strHQL = "from CustomerQuestion as customerQuestion where customerQuestion.OperatorCode = " + "'" + strUserCode + "'" + " and customerQuestion.OperatorStatus = '鍙楃悊' and customerQuestion.IsImportant = 'YES' order by customerQuestion.ID DESC";
+        strHQL = "from CustomerQuestion as customerQuestion where customerQuestion.OperatorCode = " + "'" + strUserCode + "'" + " and customerQuestion.OperatorStatus = 'Accepted' and customerQuestion.IsImportant = 'YES' order by customerQuestion.ID DESC";
         lst = customerQuestionBLL.GetAllCustomerQuestions(strHQL);
 
         DataGrid5.DataSource = lst;

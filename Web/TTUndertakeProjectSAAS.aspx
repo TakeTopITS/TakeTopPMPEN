@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUndertakeProjectSAAS.aspx.cs" Inherits="TTUndertakeProjectSAAS" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUndertakeProjectSAAS.aspx.cs" Inherits="TTUndertakeProjectSAAS" %>
 
 <%@ Register Assembly="ZedGraph.Web" Namespace="ZedGraph.Web" TagPrefix="cc1" %>
 <%@ Register Assembly="ZedGraph" Namespace="ZedGraph" TagPrefix="cc1" %>
@@ -8,7 +8,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ÊàëÁöÑÈ°πÁõÆÁÆ°ÁêÜ</title>
+    <title>Œ“µƒœÓƒøπ‹¿Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 
     <style type="text/css">
@@ -54,7 +54,7 @@
                                                             <table style="width: 100%" cellpadding="0" cellspacing="0">
                                                                 <tr>
                                                                     <td style="width: 50%; padding-left: 5px; height: 25px;" colspan="2">
-                                                                        <asp:Label ID="LB_MyQueryScope" runat="server" Text="<%$ Resources:lang,MyQueryScope%>"></asp:Label>Ôºö<asp:Label
+                                                                        <asp:Label ID="LB_MyQueryScope" runat="server" Text="<%$ Resources:lang,MyQueryScope%>"></asp:Label>£∫<asp:Label
                                                                             ID="LB_QueryScope" runat="server"></asp:Label>
                                                                     </td>
                                                                     <td style="padding-right: 5px; text-align: right; height: 24px;" colspan="2">
@@ -133,14 +133,14 @@
                                                                 OnPageIndexChanged="DataGrid1_PageIndexChanged" Width="100%" AllowPaging="True"
                                                                 ShowHeader="false" CellPadding="4" ForeColor="#333333" GridLines="None" ItemDataBound="DataGrid1_ItemDataBound">
                                                                 <Columns>
-                                                                    <asp:BoundColumn DataField="ProjectID" HeaderText="ÁºñÂè∑">
+                                                                    <asp:BoundColumn DataField="ProjectID" HeaderText="±‡∫≈">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="ProjectCode" HeaderText="‰ª£Á†Å">
+                                                                    <asp:BoundColumn DataField="ProjectCode" HeaderText="¥˙¬Î">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTProjectDetailSAAS.aspx?ProjectID={0}"
-                                                                        DataTextField="ProjectName" HeaderText="È°πÁõÆÂêçÁß∞" Target="_blank">
+                                                                        DataTextField="ProjectName" HeaderText="œÓƒø√˚≥∆" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="22%" />
                                                                     </asp:HyperLinkColumn>
                                                                     <asp:TemplateColumn>
@@ -202,7 +202,7 @@
                                                                     </asp:TemplateColumn>
                                                                     <%-- 2013-11-28 LiuJianping--%>
                                                                     <asp:BoundColumn DataField="FinishPercent" Visible="False"></asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Priority" HeaderText="‰ºòÂÖàÁ∫ß" Visible="false">
+                                                                    <asp:BoundColumn DataField="Priority" HeaderText="”≈œ»º∂" Visible="false">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:TemplateColumn>
@@ -225,7 +225,7 @@
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="75px" />
                                                                     </asp:TemplateColumn>
-                                                                    <asp:TemplateColumn HeaderText="Áä∂ÊÄÅ">
+                                                                    <asp:TemplateColumn HeaderText="◊¥Ã¨">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass. GetStatusHomeNameByProjectStatus(Eval("Status").ToString(),Eval("ProjectType").ToString()) %>
                                                                         </ItemTemplate>
@@ -252,7 +252,7 @@
                                                     <tr>
                                                         <td style="width: 100%; height: 12px; text-align: left;" valign="top">
                                                             <cc2:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" Width="100%" runat="server" ActiveTabIndex="0">
-                                                                <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="È°πÁõÆÁä∂ÊÄÅ">
+                                                                <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="œÓƒø◊¥Ã¨">
                                                                     <HeaderTemplate>
                                                                         <asp:Label ID="LB_ProjectStatusChart" runat="server" Text="<%$ Resources:lang,ProjectStatusChart%>"></asp:Label>
                                                                     </HeaderTemplate>
@@ -283,7 +283,7 @@
                                                                         </table>
                                                                     </ContentTemplate>
                                                                 </cc2:TabPanel>
-                                                                <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="È°πÁõÆË¥πÁî®">
+                                                                <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="œÓƒø∑—”√">
                                                                     <HeaderTemplate>
                                                                         <asp:Label ID="LB_ProjectExpense" runat="server" Text="<%$ Resources:lang,ProjectExpense%>"></asp:Label>
                                                                     </HeaderTemplate>
@@ -515,7 +515,7 @@
                                                                         </table>
                                                                     </ContentTemplate>
                                                                 </cc2:TabPanel>
-                                                                <cc2:TabPanel ID="TabPanel4" runat="server" HeaderText="ÁªºÂêàÊü•ËØ¢">
+                                                                <cc2:TabPanel ID="TabPanel4" runat="server" HeaderText="◊€∫œ≤È—Ø">
                                                                     <HeaderTemplate>
                                                                         <asp:Label ID="LB_IntegratedQuery" runat="server" Text="<%$ Resources:lang,IntegratedQuery%>"></asp:Label>
                                                                     </HeaderTemplate>
@@ -634,7 +634,7 @@
 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
-                                                                    <asp:TemplateColumn HeaderText="ÊåâÈ°πÁõÆÁä∂ÊÄÅÂàÜÁ±ªÔºö">
+                                                                    <asp:TemplateColumn HeaderText="∞¥œÓƒø◊¥Ã¨∑÷¿‡£∫">
                                                                         <ItemTemplate>
                                                                             <asp:Button ID="BT_Status" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"Status") %>'
                                                                                 CssClass="inpu" Visible="false" />
@@ -650,7 +650,7 @@
                                                     </tr>
                                                     <tr style="display: none;">
                                                         <td style="height: 20px; text-align: left">
-                                                            <asp:Label ID="LB_Operator" runat="server" Text="<%$ Resources:lang,Operator%>" />Ôºö
+                                                            <asp:Label ID="LB_Operator" runat="server" Text="<%$ Resources:lang,Operator%>" />£∫
                                                                         <asp:Label ID="LB_UserCode" runat="server"></asp:Label>
                                                             <asp:Label ID="LB_UserName" runat="server"></asp:Label>
                                                             <asp:Label ID="LB_Sql1" runat="server" Visible="False"></asp:Label>

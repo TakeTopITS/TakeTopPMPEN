@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTExpenseClaimListView.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTExpenseClaimListView.aspx.cs"
     Inherits="TTExpenseClaimListView" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -54,22 +54,22 @@
             ShowHeader="false" Height="30px" Width="850">
             
             <Columns>
-                <asp:BoundColumn DataField="ID" HeaderText="åºå·">
+                <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                 </asp:BoundColumn>
-                <asp:BoundColumn DataField="RelatedExpenseID" HeaderText="è´¹ç”¨ID">
+                <asp:BoundColumn DataField="RelatedExpenseID" HeaderText="·ÑÓÃID">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                 </asp:BoundColumn>
-                <asp:BoundColumn DataField="Account" HeaderText="ç§‘ç›®">
+                <asp:BoundColumn DataField="Account" HeaderText="¿ÆÄ¿">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                 </asp:BoundColumn>
-                <asp:BoundColumn DataField="Description" HeaderText="æè¿°">
+                <asp:BoundColumn DataField="Description" HeaderText="ÃèÊö">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                 </asp:BoundColumn>
-                <asp:BoundColumn DataField="Amount" HeaderText="é‡‘é¢">
+                <asp:BoundColumn DataField="Amount" HeaderText="½ð¶î">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                 </asp:BoundColumn>
-                <asp:BoundColumn DataField="RegisterDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ç™»è®°æ—¶é—´">
+                <asp:BoundColumn DataField="RegisterDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="µÇ¼ÇÊ±¼ä">
                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                 </asp:BoundColumn>
             </Columns>

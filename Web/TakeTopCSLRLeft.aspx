@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopCSLRLeft.aspx.cs" Inherits="TakeTopCSLRLeft" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopCSLRLeft.aspx.cs" Inherits="TakeTopCSLRLeft" %>
 
 <%@ OutputCache Duration="2678400" VaryByParam="*" %>
 
@@ -18,7 +18,7 @@
 
         var varLeftBarExtend = '<%=Session["LeftBarExtend"].ToString() %>'.trim();
 
-        // æ”¶ç¼©å±•å¼€æ•ˆæœ
+        // ÊÕËõÕ¹¿ªĞ§¹û
         jQuery(document).ready(function () {
 
             jQuery("span.minusSpan").show();
@@ -106,7 +106,7 @@
 
         }
 
-        //è®¾ç½®å·¦è¾¹æ å…ƒç´ çš„å€¼
+        //ÉèÖÃ×ó±ßÀ¸ÔªËØµÄÖµ
         function setExtendValue(extendStatus) {
 
             this.document.getElementById("HF_IsExtend").value = extendStatus;
@@ -268,7 +268,7 @@
 
         function opdg(id, htmlText) {
 
-            var dg = new J.dialog({ id: id, title: 'ä¿¡æ¯æç¤º', width: 250, height: 300, cancelBtn: false, html: htmlText, autoPos: false, fixed: false, left: 'right', top: 'bottom' });
+            var dg = new J.dialog({ id: id, title: 'ĞÅÏ¢ÌáÊ¾', width: 250, height: 300, cancelBtn: false, html: htmlText, autoPos: false, fixed: false, left: 'right', top: 'bottom' });
 
             dg.ShowDialog();
         }
@@ -336,7 +336,7 @@
                                     <table width="100%" border="0" cellspacing="0" cellpadding="0" align="left">
                                         <tr style="height: 37px;">
                                             <td align="center" width="20">
-                                                <a href="javascript:ChangeMenu(1)">â—
+                                                <a href="javascript:ChangeMenu(1)">¡ñ
                                                 </a>
                                             </td>
                                             <td class="title12" style="padding-left: 10px;">
@@ -357,9 +357,9 @@
 
                     <div id="box">
                         <%--<img src="Images/color.gif" id="square_one" style="cursor: pointer" />--%>
-                        <!-- æ”¶ç¼©å±•å¼€æ•ˆæœstart -->
+                        <!-- ÊÕËõÕ¹¿ªĞ§¹ûstart -->
                         <asp:Literal ID="LT_Result" runat="server"></asp:Literal>
-                        <!-- æ”¶ç¼©å±•å¼€æ•ˆæœend -->
+                        <!-- ÊÕËõÕ¹¿ªĞ§¹ûend -->
                     </div>
                     <script type="text/javascript" src="js/jquery.js"></script>
                     <script type="text/javascript" src="js/jquery.colorpicker.js"></script>

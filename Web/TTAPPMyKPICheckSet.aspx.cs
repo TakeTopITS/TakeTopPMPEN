@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -27,7 +27,7 @@ public partial class TTAPPMyKPICheckSet : System.Web.UI.Page
         string strUserCode;
         string strKPICheckID, strStatus;
 
-        //CKEditoråˆå§‹åŒ–
+        //CKEditor³õÊ¼»¯
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_SelfSummary);
@@ -40,7 +40,7 @@ public partial class TTAPPMyKPICheckSet : System.Web.UI.Page
 
         UserKPICheck userKPICheck = GetUserKPICheck(strKPICheckID);
 
-        //ç”ŸæˆåŒéƒ¨é—¨åŒèŒç§°å‘˜å·¥ç»©æ•ˆè¯„åˆ†å¯¹æ¯”æŸ±çŠ¶å›¾
+        //Éú³ÉÍ¬²¿ÃÅÍ¬Ö°³ÆÔ±¹¤¼¨Ğ§ÆÀ·Ö¶Ô±ÈÖù×´Í¼
         CreateSameDepartmentJobTitleKPIScoringChart(strUserCode, userKPICheck);
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack == false)
@@ -54,7 +54,7 @@ public partial class TTAPPMyKPICheckSet : System.Web.UI.Page
                 HE_SelfSummary.Visible = true;
             }
 
-            //è®¡ç®—KPIçš„ç³»ç»Ÿè¯„åˆ†
+            //¼ÆËãKPIµÄÏµÍ³ÆÀ·Ö
             LB_TotalSqlPoint.Text = ShareClass.CalculateSystemPoint(strKPICheckID).ToString();
 
             LoadKPI(strKPICheckID);
@@ -63,7 +63,7 @@ public partial class TTAPPMyKPICheckSet : System.Web.UI.Page
             LB_KPICheckName.Text = userKPICheck.KPICheckName.Trim();
 
             strStatus = userKPICheck.Status.Trim();
-            if (strStatus == "å…³é—­")
+            if (strStatus == "Closed")
             {
                 BT_NewMain.Enabled = false;
             }
@@ -91,7 +91,7 @@ public partial class TTAPPMyKPICheckSet : System.Web.UI.Page
         dtStartTime = userKPICheck.StartTime;
         dtEndTime = userKPICheck.EndTime;
 
-        strChartTitle = userKPICheck.KPICheckName + " éƒ¨é—¨ï¼š" + strDepartName + " èŒç§°ï¼š" + strJobTitle + " æˆå‘˜ç»©æ•ˆæ€»è¯„åˆ†å¯¹æ¯”å›¾";
+        strChartTitle = userKPICheck.KPICheckName + " ²¿ÃÅ£º" + strDepartName + " Ö°³Æ£º" + strJobTitle + " ³ÉÔ±¼¨Ğ§×ÜÆÀ·Ö¶Ô±ÈÍ¼";
 
         strHQL = "Select UserName as XName,TotalPoint as YNumber From T_UserKPICheck ";
         strHQL += " Where UserCode in (Select UserCode From T_ProjectMember Where DepartCode = " + "'" + strDepartCode + "'" + " and JobTitle = " + "'" + strJobTitle + "'" + ")";
@@ -139,12 +139,12 @@ public partial class TTAPPMyKPICheckSet : System.Web.UI.Page
                 HE_SelfSummary.Text = userKPICheckDetail.SelfComment.Trim();
             }
 
-            //åˆ—å‡ºKPIè¯„è®ºåˆ—è¡¨
+            //ÁĞ³öKPIÆÀÂÛÁĞ±í
             LoadKPIReviewList(strID);
 
             strStatus = LB_Status.Text.Trim();
 
-            if (strStatus == "å…³é—­")
+            if (strStatus == "Closed")
             {
                 BT_NewMain.Visible = false;
             }
@@ -211,10 +211,10 @@ public partial class TTAPPMyKPICheckSet : System.Web.UI.Page
 
             userKPICheckDetailBLL.UpdateUserKPICheckDetail(userKPICheckDetail, int.Parse(strKPIID));
 
-            //æ›´æ”¹å‘˜å·¥è‡ªè¯„æ€»åˆ†
+            //¸ü¸ÄÔ±¹¤×ÔÆÀ×Ü·Ö
             UpdateUserKPICheckSelfPoint(strKPICheckID);
 
-            //æ›´æ”¹KPIæ˜ç»†æ€»åˆ†
+            //¸ü¸ÄKPIÃ÷Ï¸×Ü·Ö
             LB_TotalPoint.Text = ShareClass.UpdateKPICheckDetailTotalPoint(strKPICheckID).ToString();
 
             LoadKPI(strKPICheckID);

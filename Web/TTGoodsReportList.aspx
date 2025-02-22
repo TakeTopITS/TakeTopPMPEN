@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsReportList.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsReportList.aspx.cs"
     Inherits="TTGoodsReportList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -46,7 +46,7 @@
                         </td>
                         <td style="height: 30px;">
                             <a href="TTGoodsReturnReportForSale.aspx" class="link" target="Right">
-                                <asp:Label ID="Label13" runat="server" Text="é”€å”®é€€è´§æŠ¥è¡¨"></asp:Label></a>
+                                <asp:Label ID="Label13" runat="server" Text="ÏúÊÛÍË»õ±¨±í"></asp:Label></a>
                         </td>
                     </tr>
                     <tr>
@@ -64,7 +64,7 @@
                         </td>
                         <td style="height: 30px;">
                             <a href="TTGoodsReturnReportForPurchase.aspx" class="link" target="Right">
-                                <asp:Label ID="Label14" runat="server" Text="é‡‡è´­é€€è´§æŠ¥è¡¨"></asp:Label></a>
+                                <asp:Label ID="Label14" runat="server" Text="²É¹ºÍË»õ±¨±í"></asp:Label></a>
                         </td>
                     </tr>
                     <tr>

@@ -1,11 +1,11 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkPlanView.aspx.cs" Inherits="TTWorkPlanView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkPlanView.aspx.cs" Inherits="TTWorkPlanView" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>È°πÁõÆÂ∑•‰ΩúËÆ°Âàí</title>
+    <title>œÓƒøπ§◊˜º∆ªÆ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -128,8 +128,8 @@
 
 
 
-        function autoheight() {¬†//ÂáΩÊï∞ÔºöËé∑ÂèñÂ∞∫ÂØ∏
-            //Ëé∑ÂèñÊµèËßàÂô®Á™óÂè£È´òÂ∫¶
+        function autoheight() {?//∫Ø ˝£∫ªÒ»°≥ﬂ¥Á
+            //ªÒ»°‰Ø¿¿∆˜¥∞ø⁄∏ﬂ∂»
             var winHeight = 0;
             if (window.innerHeight)
                 winHeight = window.innerHeight;
@@ -142,7 +142,7 @@
             document.getElementById("PlanTreeDivID").style.height = (winHeight - 80) + "px";
         }
 
-        window.onresize = autoheight;¬†//ÊµèËßàÂô®Á™óÂè£ÂèëÁîüÂèòÂåñÊó∂ÂêåÊó∂ÂèòÂåñDIVÈ´òÂ∫¶
+        window.onresize = autoheight;?//‰Ø¿¿∆˜¥∞ø⁄∑¢…˙±‰ªØ ±Õ¨ ±±‰ªØDIV∏ﬂ∂»
 
     </script>
 
@@ -166,7 +166,7 @@
                                                 <tr>
                                                     <td width="30px;" style="padding-left: 5px; padding-top: 5px;">
                                                         <a href="javascript:ChangeMenu(0)">
-                                                            <img src="Images/LeftRightArrow.png" width="18" height="24" border="0" alt="ÈöêËóèÂè≥ËæπÊ†è">
+                                                            <img src="Images/LeftRightArrow.png" width="18" height="24" border="0" alt="“˛≤ÿ”“±ﬂ¿∏">
                                                         </a>
                                                       </td>
                                                     <td align="left" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
@@ -222,8 +222,8 @@
                                                         </td>
                                                         <td style="width: 35%; text-align: left;" class="formItemBgStyle">
                                                             <asp:DropDownList ID="DL_PlanType" runat="server" CssClass="DDList" >
-                                                                <asp:ListItem Value="ËÆ°Âàí" Text="<%$ Resources:lang,JiHua%>" />
-                                                                <asp:ListItem Value="ÈáåÁ®ãÁ¢ë" Text="<%$ Resources:lang,LiChengBei%>" />
+                                                                <asp:ListItem Value="Plan" Text="<%$ Resources:lang,JiHua%>" />
+                                                                <asp:ListItem Value="Milestone" Text="<%$ Resources:lang,LiChengBei%>" />
                                                             </asp:DropDownList>
                                                         </td>
                                                         <td style="width: 15%; text-align: right;" class="formItemBgStyle">
@@ -275,7 +275,7 @@
                                                             </NickLee:NumberBox>
                                                         </td>
                                                         <td style="text-align: right;" class="formItemBgStyle">
-                                                            <asp:Label ID="LB_tbBudget0" runat="server" Text="<%$ Resources:lang,ShunXuHao%>" />Ôºö
+                                                            <asp:Label ID="LB_tbBudget0" runat="server" Text="<%$ Resources:lang,ShunXuHao%>" />£∫
                                                         </td>
                                                         <td style="text-align: left;" class="formItemBgStyle">
                                                             <NickLee:NumberBox ID="NB_SortNumber" runat="server" MaxAmount="1000000000000" MinAmount="0" Precision="0" Width="79px" Amount="1">
@@ -425,22 +425,22 @@
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:BoundColumn DataField="ID" HeaderText="Â∫èÂè∑">
+                                                                                <asp:BoundColumn DataField="ID" HeaderText="–Ú∫≈">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UserName" HeaderText="ÂßìÂêç">
+                                                                                <asp:BoundColumn DataField="UserName" HeaderText="–’√˚">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="MainWork" HeaderText="‰∏ªË¶ÅÂ∑•‰Ωú">
+                                                                                <asp:BoundColumn DataField="MainWork" HeaderText="÷˜“™π§◊˜">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="StartWorkDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ÂºÄÂßãÂ∑•‰ΩúÊó∂Èó¥">
+                                                                                <asp:BoundColumn DataField="StartWorkDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ø™ ºπ§◊˜ ±º‰">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="EndWorkDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ÁªìÊùüÂ∑•‰ΩúÊó∂Èó¥">
+                                                                                <asp:BoundColumn DataField="EndWorkDate" DataFormatString="{0:yyyy/MM/dd}" HeaderText="Ω· ¯π§◊˜ ±º‰">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Budget" HeaderText="È¢ÑÁÆó">
+                                                                                <asp:BoundColumn DataField="Budget" HeaderText="Budget">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
                                                                             </Columns>

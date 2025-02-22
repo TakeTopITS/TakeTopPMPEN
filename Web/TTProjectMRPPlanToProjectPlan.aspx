@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectMRPPlanToProjectPlan.aspx.cs" Inherits="TTProjectMRPPlanToProjectPlan" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectMRPPlanToProjectPlan.aspx.cs" Inherits="TTProjectMRPPlanToProjectPlan" %>
 
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>é¡¹ç›®å·¥ä½œè®¡åˆ’</title>
+    <title>ÏîÄ¿¹¤×÷¼Æ»®</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
@@ -42,10 +42,10 @@
                                     <td align="left" background="ImagesSkin/main_top_bj.jpg">
                                         <table>
                                             <tr>
-                                                <td>ï¼ˆ
+                                                <td>£¨
                                                 </td>
                                                 <td>
-                                                    <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ZhiDingJiHuaBanBenHao%>"></asp:Label>ï¼š
+                                                    <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,ZhiDingJiHuaBanBenHao%>"></asp:Label>£º
                                                 </td>
                                                 <td>
                                                     <NickLee:NumberBox ID="NB_NewVerID" runat="server"
@@ -53,11 +53,11 @@
                                                                  1</NickLee:NumberBox>
                                                 </td>
                                                 <td>
-                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiHuaLeiXing%>"></asp:Label>ï¼š
+                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiHuaLeiXing%>"></asp:Label>£º
                                                 </td>
                                                 <td>
                                                     <asp:DropDownList ID="DL_VersionType" runat="server">
-                                                        <asp:ListItem Value="å¤‡ç”¨" Text="<%$ Resources:lang,BeiYong%>" />
+                                                        <asp:ListItem Value="Backup" Text="<%$ Resources:lang,BeiYong%>" />
                                                     </asp:DropDownList></td>
                                                 <td>
                                                     <asp:Button ID="BT_NewVersion" runat="server" CssClass="inpu"
@@ -67,7 +67,7 @@
                                                     <asp:Button ID="BT_DeleteVersion" runat="server" CssClass="inpu"
                                                         OnClick="BT_DeleteVersion_Click" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="<%$ Resources:lang,ShanChu%>" />
                                                 </td>
-                                                <td>ï¼‰</td>
+                                                <td>£©</td>
                                                 <td></td>
                                                 <td>(
                                                 </td>
@@ -81,7 +81,7 @@
                                                         DataValueField="ID" OnSelectedIndexChanged="DL_OldVersionID_SelectedIndexChanged"
                                                         AutoPostBack="True">
                                                     </asp:DropDownList></td>
-                                               <td>ï¼‰
+                                               <td>£©
                                                 </td>
                                             </tr>
                                         </table>
@@ -110,7 +110,7 @@
                                                 <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,GanTeTu%>"></asp:Label>
                                             </asp:HyperLink>
                                         </div>
-                                        <asp:TreeView ID="TreeView3" runat="server" Font-Bold="False" Font-Names="å®‹ä½“" Font-Size="10pt"
+                                        <asp:TreeView ID="TreeView3" runat="server" Font-Bold="False" Font-Names="ËÎÌå" Font-Size="10pt"
                                             NodeWrap="True" ShowLines="True" Width="400px">
                                             <RootNodeStyle CssClass="rootNode" />
                                             <NodeStyle CssClass="treeNode" />
@@ -120,7 +120,7 @@
                                     </td>
                                  <td rowspan="4" valign="top" style="text-align: left; border-right: solid 1px #D8D8D8;padding-top:5px;"
                                         width="360px">
-                                     <asp:Button ID="BT_TransferPlan" runat="server" CssClass="inpu" Text="è½¬è®¡åˆ’" OnClick="BT_TransferPlan_Click" OnClientClick="displayWaitingImg('img_processing');return confirm('æ“ä½œä¼šè¦†ç›–åŽŸæ¥çš„è®¡åˆ’ç»“æž„ï¼Œæ‚¨ç¡®å®šè¦è¦†ç›–å—(transfer operation will cover old plan data,Are you sure you want to cover it)ï¼Ÿ');"/>
+                                     <asp:Button ID="BT_TransferPlan" runat="server" CssClass="inpu" Text="×ª¼Æ»®" OnClick="BT_TransferPlan_Click" OnClientClick="displayWaitingImg('img_processing');return confirm('²Ù×÷»á¸²¸ÇÔ­À´µÄ¼Æ»®½á¹¹£¬ÄúÈ·¶¨Òª¸²¸ÇÂð(transfer operation will cover old plan data,Are you sure you want to cover it)£¿');"/>
                                      <img id="img_processing" src="img/Processing.gif" alt="Loading,please wait..." style="display: none;" />
                                  </td>
                                 </tr>

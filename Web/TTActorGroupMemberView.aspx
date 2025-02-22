@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTActorGroupMemberView.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTActorGroupMemberView.aspx.cs"
     Inherits="TTActorGroupMemberView" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -84,16 +84,16 @@
                         <asp:DataGrid ID="DataGrid2" runat="server" Width="90%" AutoGenerateColumns="False"
                             ShowHeader="false" Height="1px" CellPadding="4" ForeColor="#333333" GridLines="None">
                             <Columns>
-                                <asp:BoundColumn DataField="UserCode" HeaderText="ä»£ç ">
+                                <asp:BoundColumn DataField="UserCode" HeaderText="´úÂë">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="UserName" HeaderText="åç§°">
+                                <asp:BoundColumn DataField="UserName" HeaderText="Ãû³Æ">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="DepartName" HeaderText="éƒ¨é—¨">
+                                <asp:BoundColumn DataField="DepartName" HeaderText="²¿ÃÅ">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                 </asp:BoundColumn>
-                                <asp:BoundColumn DataField="Actor" HeaderText="è§’è‰²">
+                                <asp:BoundColumn DataField="Actor" HeaderText="½ÇÉ«">
                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="60%" />
                                 </asp:BoundColumn>
                             </Columns>

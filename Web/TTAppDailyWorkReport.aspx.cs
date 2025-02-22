@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -33,7 +33,7 @@ public partial class TTAppDailyWorkReport : System.Web.UI.Page
         Project project = GetProject(strProjectID);
         strProjectName = project.ProjectName.Trim();
 
-        //æ£€æŸ¥ç”¨æˆ·æ˜¯å¦é¡¹ç›®æˆå‘˜
+        //¼ì²éÓÃ»§ÊÇ·ñÏîÄ¿³ÉÔ±
         if (ShareClass.CheckUserIsProjectMember(strProjectID, strUserCode) == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");

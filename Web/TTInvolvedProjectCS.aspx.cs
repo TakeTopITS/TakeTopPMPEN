@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -50,7 +50,7 @@ public partial class TTInvolvedProjectCS : System.Web.UI.Page
             DLC_BeginDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
             DLC_EndDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('Êñ∞Âª∫','ËØÑÂÆ°','ÈöêËóè','Âà†Èô§','ÂΩíÊ°£','ÊöÇÂÅú','ÁªàÊ≠¢') Order by proRelatedUser.ProjectID DESC";
+            strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('New','Review','Hided','Deleted','Archived','Pause','Stop') Order by proRelatedUser.ProjectID DESC";
             ProRelatedUserBLL proRelatedUserBLL = new ProRelatedUserBLL();
             lst = proRelatedUserBLL.GetAllProRelatedUsers(strHQL);
 
@@ -100,7 +100,7 @@ public partial class TTInvolvedProjectCS : System.Web.UI.Page
     {
         string strUserCode = LB_UserCode.Text.Trim();
 
-        string strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + " and proRelatedUser.ProStatus not in ('Êñ∞Âª∫','ËØÑÂÆ°','ÈöêËóè','Âà†Èô§','ÂΩíÊ°£','ÊöÇÂÅú','ÁªàÊ≠¢')  Order by proRelatedUser.ProjectID DESC";
+        string strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + " and proRelatedUser.ProStatus not in ('New','Review','Hided','Deleted','Archived','Pause','Stop')  Order by proRelatedUser.ProjectID DESC";
 
         ProRelatedUserBLL proRelatedUserBLL = new ProRelatedUserBLL();
         IList lst = proRelatedUserBLL.GetAllProRelatedUsers(strHQL);
@@ -131,7 +131,7 @@ public partial class TTInvolvedProjectCS : System.Web.UI.Page
             dtNowDate = DateTime.Now;
             strStatus = DataGrid1.Items[i].Cells[4].Text.Trim();
 
-            if (strStatus != "ËØÑÂÆ°" & strStatus != "ÁªìÊ°à" & strStatus != "ÂΩíÊ°£" & strStatus != "ÈöêËóè")
+            if (strStatus != "Review" & strStatus != "CaseClosed" & strStatus != "Archived" & strStatus != "Hided")
             {
                 if (dtFinishedDate < dtNowDate)
                 {
@@ -247,7 +247,7 @@ public partial class TTInvolvedProjectCS : System.Web.UI.Page
 
             deBudget = project.Budget;
 
-            //ÂÆûÈôÖË¥πÁî®ÂíåÈ¢ÑÁÆóÂØπÊØî
+            // µº ∑—”√∫Õ‘§À„∂‘±»
             strHQL = "from ProRealCharge as proRealCharge where proRealCharge.ProjectID = " + strProjectID;
             lst = proRealChargeBLL.GetAllProRealCharges(strHQL);
             if (lst.Count == 0)
@@ -287,7 +287,7 @@ public partial class TTInvolvedProjectCS : System.Web.UI.Page
                 }
             }
 
-            //Ê†áÂáÜÊàêÊú¨ÂíåÈ¢ÑÁÆóÂØπÊØî
+            //±Í◊º≥…±æ∫Õ‘§À„∂‘±»
             deDefaultBudget = ShareClass.GetProjectDefaultFinishCost(strProjectID);
             if (deBudget == 0)
             {
@@ -329,8 +329,8 @@ public partial class TTInvolvedProjectCS : System.Web.UI.Page
 
                 LB_ProBdg1.Text = strBudgetProjectID;
 
-                IMB_ProCost1.ToolTip = "Â∑≤ÂèëÁîüË¥πÁî®Ôºö" + deRealCharge.ToString() + " , ÊÄªÈ¢ÑÁÆóÔºö" + deBudget.ToString();
-                IMB_ProBdg1.ToolTip = "ÂΩìÂâçÊó•ÊúüÈ¢ÑÁÆóÔºö" + deDefaultBudget.ToString() + " , ÊÄªÈ¢ÑÁÆóÔºö" + deBudget.ToString();
+                IMB_ProCost1.ToolTip = "“—∑¢…˙∑—”√£∫" + deRealCharge.ToString() + " , ◊‹‘§À„£∫" + deBudget.ToString();
+                IMB_ProBdg1.ToolTip = "µ±«∞»’∆⁄‘§À„£∫" + deDefaultBudget.ToString() + " , ◊‹‘§À„£∫" + deBudget.ToString();
             }
 
             if (i == 1)
@@ -351,8 +351,8 @@ public partial class TTInvolvedProjectCS : System.Web.UI.Page
 
                 LB_ProBdg2.Text = strBudgetProjectID;
 
-                IMB_ProCost2.ToolTip = "Â∑≤ÂèëÁîüË¥πÁî®Ôºö" + deRealCharge.ToString() + " , ÊÄªÈ¢ÑÁÆóÔºö" + deBudget.ToString();
-                IMB_ProBdg2.ToolTip = "ÂΩìÂâçÊó•ÊúüÈ¢ÑÁÆóÔºö" + deDefaultBudget.ToString() + " , ÊÄªÈ¢ÑÁÆóÔºö" + deBudget.ToString();
+                IMB_ProCost2.ToolTip = "“—∑¢…˙∑—”√£∫" + deRealCharge.ToString() + " , ◊‹‘§À„£∫" + deBudget.ToString();
+                IMB_ProBdg2.ToolTip = "µ±«∞»’∆⁄‘§À„£∫" + deDefaultBudget.ToString() + " , ◊‹‘§À„£∫" + deBudget.ToString();
             }
 
             if (i == 2)
@@ -373,8 +373,8 @@ public partial class TTInvolvedProjectCS : System.Web.UI.Page
 
                 LB_ProBdg3.Text = strBudgetProjectID;
 
-                IMB_ProCost3.ToolTip = "Â∑≤ÂèëÁîüË¥πÁî®Ôºö" + deRealCharge.ToString() + " , ÊÄªÈ¢ÑÁÆóÔºö" + deBudget.ToString();
-                IMB_ProBdg3.ToolTip = "ÂΩìÂâçÊó•ÊúüÈ¢ÑÁÆóÔºö" + deDefaultBudget.ToString() + " , ÊÄªÈ¢ÑÁÆóÔºö" + deBudget.ToString();
+                IMB_ProCost3.ToolTip = "“—∑¢…˙∑—”√£∫" + deRealCharge.ToString() + " , ◊‹‘§À„£∫" + deBudget.ToString();
+                IMB_ProBdg3.ToolTip = "µ±«∞»’∆⁄‘§À„£∫" + deDefaultBudget.ToString() + " , ◊‹‘§À„£∫" + deBudget.ToString();
             }
 
             if (i == 3)
@@ -396,8 +396,8 @@ public partial class TTInvolvedProjectCS : System.Web.UI.Page
 
                 LB_ProBdg4.Text = strBudgetProjectID;
 
-                IMB_ProCost4.ToolTip = "Â∑≤ÂèëÁîüË¥πÁî®Ôºö" + deRealCharge.ToString() + " , ÊÄªÈ¢ÑÁÆóÔºö" + deBudget.ToString();
-                IMB_ProBdg4.ToolTip = "ÂΩìÂâçÊó•ÊúüÈ¢ÑÁÆóÔºö" + deDefaultBudget.ToString() + " , ÊÄªÈ¢ÑÁÆóÔºö" + deBudget.ToString();
+                IMB_ProCost4.ToolTip = "“—∑¢…˙∑—”√£∫" + deRealCharge.ToString() + " , ◊‹‘§À„£∫" + deBudget.ToString();
+                IMB_ProBdg4.ToolTip = "µ±«∞»’∆⁄‘§À„£∫" + deDefaultBudget.ToString() + " , ◊‹‘§À„£∫" + deBudget.ToString();
             }
 
             if (i == 4)
@@ -418,8 +418,8 @@ public partial class TTInvolvedProjectCS : System.Web.UI.Page
 
                 LB_ProBdg5.Text = strBudgetProjectID;
 
-                IMB_ProCost5.ToolTip = "Â∑≤ÂèëÁîüË¥πÁî®Ôºö" + deRealCharge.ToString() + " , ÊÄªÈ¢ÑÁÆóÔºö" + deBudget.ToString();
-                IMB_ProBdg5.ToolTip = "ÂΩìÂâçÊó•ÊúüÈ¢ÑÁÆóÔºö" + deDefaultBudget.ToString() + " , ÊÄªÈ¢ÑÁÆóÔºö" + deBudget.ToString();
+                IMB_ProCost5.ToolTip = "“—∑¢…˙∑—”√£∫" + deRealCharge.ToString() + " , ◊‹‘§À„£∫" + deBudget.ToString();
+                IMB_ProBdg5.ToolTip = "µ±«∞»’∆⁄‘§À„£∫" + deDefaultBudget.ToString() + " , ◊‹‘§À„£∫" + deBudget.ToString();
             }
 
             if (i == 5)
@@ -440,8 +440,8 @@ public partial class TTInvolvedProjectCS : System.Web.UI.Page
 
                 LB_ProBdg6.Text = strBudgetProjectID;
 
-                IMB_ProCost6.ToolTip = "Â∑≤ÂèëÁîüË¥πÁî®Ôºö" + deRealCharge.ToString() + " , ÊÄªÈ¢ÑÁÆóÔºö" + deBudget.ToString();
-                IMB_ProBdg6.ToolTip = "ÂΩìÂâçÊó•ÊúüÈ¢ÑÁÆóÔºö" + deDefaultBudget.ToString() + " , ÊÄªÈ¢ÑÁÆóÔºö" + deBudget.ToString();
+                IMB_ProCost6.ToolTip = "“—∑¢…˙∑—”√£∫" + deRealCharge.ToString() + " , ◊‹‘§À„£∫" + deBudget.ToString();
+                IMB_ProBdg6.ToolTip = "µ±«∞»’∆⁄‘§À„£∫" + deDefaultBudget.ToString() + " , ◊‹‘§À„£∫" + deBudget.ToString();
             }
 
             if (i == 6)
@@ -462,8 +462,8 @@ public partial class TTInvolvedProjectCS : System.Web.UI.Page
 
                 LB_ProBdg7.Text = strBudgetProjectID;
 
-                IMB_ProCost7.ToolTip = "Â∑≤ÂèëÁîüË¥πÁî®Ôºö" + deRealCharge.ToString() + " , ÊÄªÈ¢ÑÁÆóÔºö" + deBudget.ToString();
-                IMB_ProBdg7.ToolTip = "ÂΩìÂâçÊó•ÊúüÈ¢ÑÁÆóÔºö" + deDefaultBudget.ToString() + " , ÊÄªÈ¢ÑÁÆóÔºö" + deBudget.ToString();
+                IMB_ProCost7.ToolTip = "“—∑¢…˙∑—”√£∫" + deRealCharge.ToString() + " , ◊‹‘§À„£∫" + deBudget.ToString();
+                IMB_ProBdg7.ToolTip = "µ±«∞»’∆⁄‘§À„£∫" + deDefaultBudget.ToString() + " , ◊‹‘§À„£∫" + deBudget.ToString();
             }
 
             if (i == 7)
@@ -484,8 +484,8 @@ public partial class TTInvolvedProjectCS : System.Web.UI.Page
 
                 LB_ProBdg8.Text = strBudgetProjectID;
 
-                IMB_ProBdg8.ToolTip = "Â∑≤ÂèëÁîüË¥πÁî®Ôºö" + deRealCharge.ToString() + " , ÊÄªÈ¢ÑÁÆóÔºö" + deBudget.ToString();
-                IMB_ProBdg8.ToolTip = "ÂΩìÂâçÊó•ÊúüÈ¢ÑÁÆóÔºö" + deDefaultBudget.ToString() + " , ÊÄªÈ¢ÑÁÆóÔºö" + deBudget.ToString();
+                IMB_ProBdg8.ToolTip = "“—∑¢…˙∑—”√£∫" + deRealCharge.ToString() + " , ◊‹‘§À„£∫" + deBudget.ToString();
+                IMB_ProBdg8.ToolTip = "µ±«∞»’∆⁄‘§À„£∫" + deDefaultBudget.ToString() + " , ◊‹‘§À„£∫" + deBudget.ToString();
             }
 
             if (i == 8)
@@ -506,8 +506,8 @@ public partial class TTInvolvedProjectCS : System.Web.UI.Page
 
                 LB_ProBdg9.Text = strBudgetProjectID;
 
-                IMB_ProCost9.ToolTip = "Â∑≤ÂèëÁîüË¥πÁî®Ôºö" + deRealCharge.ToString() + " , ÊÄªÈ¢ÑÁÆóÔºö" + deBudget.ToString();
-                IMB_ProBdg9.ToolTip = "ÂΩìÂâçÊó•ÊúüÈ¢ÑÁÆóÔºö" + deDefaultBudget.ToString() + " , ÊÄªÈ¢ÑÁÆóÔºö" + deBudget.ToString();
+                IMB_ProCost9.ToolTip = "“—∑¢…˙∑—”√£∫" + deRealCharge.ToString() + " , ◊‹‘§À„£∫" + deBudget.ToString();
+                IMB_ProBdg9.ToolTip = "µ±«∞»’∆⁄‘§À„£∫" + deDefaultBudget.ToString() + " , ◊‹‘§À„£∫" + deBudget.ToString();
             }
 
             if (i == 9)
@@ -528,8 +528,8 @@ public partial class TTInvolvedProjectCS : System.Web.UI.Page
 
                 LB_ProBdg10.Text = strBudgetProjectID;
 
-                IMB_ProCost10.ToolTip = "Â∑≤ÂèëÁîüË¥πÁî®Ôºö" + deRealCharge.ToString() + " , ÊÄªÈ¢ÑÁÆóÔºö" + deBudget.ToString();
-                IMB_ProBdg10.ToolTip = "ÂΩìÂâçÊó•ÊúüÈ¢ÑÁÆóÔºö" + deDefaultBudget.ToString() + " , ÊÄªÈ¢ÑÁÆóÔºö" + deBudget.ToString();
+                IMB_ProCost10.ToolTip = "“—∑¢…˙∑—”√£∫" + deRealCharge.ToString() + " , ◊‹‘§À„£∫" + deBudget.ToString();
+                IMB_ProBdg10.ToolTip = "µ±«∞»’∆⁄‘§À„£∫" + deDefaultBudget.ToString() + " , ◊‹‘§À„£∫" + deBudget.ToString();
             }
         }
     }
@@ -543,7 +543,7 @@ public partial class TTInvolvedProjectCS : System.Web.UI.Page
         strUserCode = LB_UserCode.Text.Trim();
         strFindCondition = "%" + TB_ProjectName.Text.Trim() + "%";
 
-        strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.ProjectName like " + "'" + strFindCondition + "'" + " and proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('Êñ∞Âª∫','ÈöêËóè','Âà†Èô§','ÂΩíÊ°£','ÊöÇÂÅú','ÁªàÊ≠¢')  Order by proRelatedUser.ProjectID DESC";
+        strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.ProjectName like " + "'" + strFindCondition + "'" + " and proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('New','Hided','Deleted','Archived','Pause','Stop')  Order by proRelatedUser.ProjectID DESC";
         ProRelatedUserBLL proRelatedUserBLL = new ProRelatedUserBLL();
         lst = proRelatedUserBLL.GetAllProRelatedUsers(strHQL);
 
@@ -574,11 +574,11 @@ public partial class TTInvolvedProjectCS : System.Web.UI.Page
 
         if (strFindCondition == "")
         {
-            strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('Êñ∞Âª∫','ÈöêËóè','Âà†Èô§','ÂΩíÊ°£','ÊöÇÂÅú','ÁªàÊ≠¢')  Order by proRelatedUser.ProjectID DESC";
+            strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('New','Hided','Deleted','Archived','Pause','Stop')  Order by proRelatedUser.ProjectID DESC";
         }
         else
         {
-            strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.ProjectID = " + strFindCondition + " and  proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('Êñ∞Âª∫','ÈöêËóè','Âà†Èô§','ÂΩíÊ°£','ÊöÇÂÅú','ÁªàÊ≠¢')  Order by proRelatedUser.ProjectID DESC";
+            strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.ProjectID = " + strFindCondition + " and  proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('New','Hided','Deleted','Archived','Pause','Stop')  Order by proRelatedUser.ProjectID DESC";
         }
 
         ProRelatedUserBLL proRelatedUserBLL = new ProRelatedUserBLL();
@@ -609,7 +609,7 @@ public partial class TTInvolvedProjectCS : System.Web.UI.Page
         strUserCode = LB_UserCode.Text.Trim();
         strFindCondition = "%" + TB_MakeUser.Text.Trim() + "%";
 
-        strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.MakeManName like " + "'" + strFindCondition + "'" + " and proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('Êñ∞Âª∫','ÈöêËóè','Âà†Èô§','ÂΩíÊ°£','ÊöÇÂÅú','ÁªàÊ≠¢')  Order by proRelatedUser.ProjectID DESC";
+        strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.MakeManName like " + "'" + strFindCondition + "'" + " and proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('New','Hided','Deleted','Archived','Pause','Stop')  Order by proRelatedUser.ProjectID DESC";
         ProRelatedUserBLL proRelatedUserBLL = new ProRelatedUserBLL();
         lst = proRelatedUserBLL.GetAllProRelatedUsers(strHQL);
 
@@ -640,7 +640,7 @@ public partial class TTInvolvedProjectCS : System.Web.UI.Page
 
         strUserCode = LB_UserCode.Text.Trim();
 
-        strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('Êñ∞Âª∫','ÈöêËóè','Âà†Èô§','ÂΩíÊ°£','ÊöÇÂÅú','ÁªàÊ≠¢') and " + "  to_char(proRelatedUser.BeginDate,'yyyymmdd') >= " + "'" + strStartDate + "'" + " and to_char(proRelatedUser.EndDate,'yyyymmdd') <= " + "'" + strEndDate + "'" + " Order by project.ProjectID DESC";
+        strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('New','Hided','Deleted','Archived','Pause','Stop') and " + "  to_char(proRelatedUser.BeginDate,'yyyymmdd') >= " + "'" + strStartDate + "'" + " and to_char(proRelatedUser.EndDate,'yyyymmdd') <= " + "'" + strEndDate + "'" + " Order by project.ProjectID DESC";
         ProjectBLL projectBLL = new ProjectBLL();
         lst = projectBLL.GetAllProjects(strHQL);
 
@@ -649,7 +649,7 @@ public partial class TTInvolvedProjectCS : System.Web.UI.Page
     }
 
 
-    //ÂèñÂæóÈ°πÁõÆÊàêÂëòÊÄªÁ°ÆËÆ§Â∑•Êó∂
+    //»°µ√œÓƒø≥…‘±◊‹»∑»œπ§ ±
     public string GetProjectMemberTotalConfirmWorkHour(string strProjectID)
     {
         string strHQL;

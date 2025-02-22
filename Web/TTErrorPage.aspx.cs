@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 public partial class TTErrorPage : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)

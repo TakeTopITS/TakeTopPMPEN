@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -21,8 +21,8 @@ public partial class TTBMBidPlanRelatedWorkflowListView : System.Web.UI.Page
     string strRelatedID, strCreatorCode, strBMBidPlanID;
     protected void Page_Load(object sender, EventArgs e)
     {
-        //ÈíüÁ§ºÊúà‰ΩúÂìÅÔºàjack.erp@gmail.com)
-        //Ê≥∞È°∂ËΩØ‰ª∂(TakeTop Software)       
+        //÷”¿Ò‘¬◊˜∆∑£®jack.erp@gmail.com)
+        //Ã©∂•»Ìº˛(TakeTop Software)       
         string strHQL;
         IList lst;
 
@@ -42,9 +42,9 @@ public partial class TTBMBidPlanRelatedWorkflowListView : System.Web.UI.Page
         if (Page.IsPostBack == false)
         {
             strHQL = "from WorkFlow as workFlow ";
-            strHQL += " Where workFlow.RelatedType = 'ÊãõÊ†áËÆ°Âàí' and workFlow.RelatedID = " + strBMBidPlanID;
+            strHQL += " Where workFlow.RelatedType = 'TenderPlan' and workFlow.RelatedID = " + strBMBidPlanID;
             strHQL += " and workFlow.CreatorCode = '" + strCreatorCode + "'";
-            strHQL += " and workFlow.Status <> 'Êñ∞Âª∫'";
+            strHQL += " and workFlow.Status <> 'New'";
             strHQL += " Order by workFlow.WLID DESC";
             WorkFlowBLL workFlowBLL = new WorkFlowBLL();
             lst = workFlowBLL.GetAllWorkFlows(strHQL);

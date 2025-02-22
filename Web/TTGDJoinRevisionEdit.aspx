@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDJoinRevisionEdit.aspx.cs" Inherits="TTGDJoinRevisionEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDJoinRevisionEdit.aspx.cs" Inherits="TTGDJoinRevisionEdit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ÁÑäÂè£Êõ¥Êñ∞‰ª£Á†ÅËØ¥ÊòéÁºñËæë</title>
+    <title>∫∏ø⁄∏¸–¬¥˙¬ÎÀµ√˜±‡º≠</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
@@ -57,13 +57,13 @@
                                                 <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td style="text-align: right" class="formItemBgStyle">
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_Code" runat="server"></asp:TextBox>
                                                         </td>
                                                         <td style="text-align: right" class="formItemBgStyle">
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ShuoMing%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ShuoMing%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_Description" runat="server" Width="400px"></asp:TextBox>
@@ -72,7 +72,7 @@
                                                     <tr>
                                                         <td style="text-align: center" class="formItemBgStyle" colspan="4">
                                                             <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnOK_Click" />&nbsp;&nbsp;
-                                                    <input type="button" value="ËøîÂõû" id="BT_Return" class="inpu" onclick="window.location.href = 'TTGDJoinRevisionList.aspx'" />
+                                                    <input type="button" value="∑µªÿ" id="BT_Return" class="inpu" onclick="window.location.href = 'TTGDJoinRevisionList.aspx'" />
                                                         </td>
                                                     </tr>
                                                 </table>

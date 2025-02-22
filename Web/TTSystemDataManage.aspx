@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSystemDataManage.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSystemDataManage.aspx.cs"
     Inherits="TTSystemDataManage" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -74,8 +74,8 @@
                                                     <tr>
                                                         <td style="padding: 5px 0px 0px 5px" class="formItemBgStyle" valign="top" align="left">
                                                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,BeiFenShuJuKu%>"></asp:Label>
-                                                            ï¼Œ<asp:Label ID="Label36" runat="server" Text="å‰æ¬¡å¤‡ä»½æ—¶é—´"></asp:Label>ï¼š<asp:Label ID="LB_LastestBackupDBTime" runat="server"></asp:Label>ï¼š
-                                                            ï¼ˆ<asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,XTYHZMZESLDWSLDZZDBF%>"></asp:Label>ï¼‰                                                        
+                                                            £¬<asp:Label ID="Label36" runat="server" Text="Ç°´Î±¸·ÝÊ±¼ä"></asp:Label>£º<asp:Label ID="LB_LastestBackupDBTime" runat="server"></asp:Label>£º
+                                                            £¨<asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,XTYHZMZESLDWSLDZZDBF%>"></asp:Label>£©                                                        
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -83,18 +83,18 @@
                                                             <table>
                                                                 <tr>
                                                                     <td>
-                                                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,BFSJKQLJ%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,BFSJKQLJ%>"></asp:Label>£º</td>
                                                                     <td>
                                                                         <asp:TextBox ID="TXT_BackDBUrl" runat="server" Width="400"></asp:TextBox>&nbsp;
                                                                     </td>
                                                                     <td>
-                                                                        <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,LiRu%>"></asp:Label>ï¼šD:\BackupDBï¼Œ
+                                                                        <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,LiRu%>"></asp:Label>£ºD:\BackupDB£¬
                                                                         <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,ZWJJYSYUSERYHSYQXDSXXAQSZ%>"></asp:Label>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,BFSJKQJGSJ%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,BFSJKQJGSJ%>"></asp:Label>£º</td>
                                                                     <td>
                                                                         <table>
                                                                             <tr>
@@ -110,7 +110,7 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ShuJuKu%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ShuJuKu%>"></asp:Label>£º</td>
                                                                     <td>
                                                                         <asp:TextBox ID="TXT_DataName" runat="server" Width="250"></asp:TextBox>&nbsp;<asp:Button ID="BT_SaveDBPath" runat="server" CssClass="inpu" OnClick="BT_SaveDBPath_Click" Text="<%$ Resources:lang,BaoCun%>" />&nbsp;<asp:Button ID="BT_CopyData" runat="server" CssClass="inpuLong" OnClick="BT_CopyData_Click" Text="<%$ Resources:lang,KaiShiBeiFen%>" />
                                                                     </td>
@@ -132,11 +132,11 @@
                                                         <td style="padding: 5px 0px 0px 5px" class="formItemBgStyle" valign="top" align="left">
                                                             <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,BeiFenWenJian%>"></asp:Label>(Doc,WorkflowTemplate,XML,UserPhoto,Bar,RTXAccount,Log)
                                                          
-                                                            ï¼Œ<asp:Label ID="Label35" runat="server" Text="<%$ Resources:lang,QianCiBeiFengShiJIan%>"></asp:Label>ï¼š<asp:Label ID="LB_LastestBackupDocTime" runat="server"></asp:Label>ï¼Œ
-                                                           ï¼ˆ
-                                                            <asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,XTYHZMZESLDWSLDZZDBF%>"></asp:Label>ï¼‰
+                                                            £¬<asp:Label ID="Label35" runat="server" Text="<%$ Resources:lang,QianCiBeiFengShiJIan%>"></asp:Label>£º<asp:Label ID="LB_LastestBackupDocTime" runat="server"></asp:Label>£¬
+                                                           £¨
+                                                            <asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,XTYHZMZESLDWSLDZZDBF%>"></asp:Label>£©
                                                             <br />
-                                                            <asp:Label ID="Label37" runat="server" Text="<%$ Resources:lang,DYDYCBFHTSBSYWDSJBF%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label37" runat="server" Text="<%$ Resources:lang,DYDYCBFHTSBSYWDSJBF%>"></asp:Label>£º
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -144,18 +144,18 @@
                                                             <table>
                                                                 <tr>
                                                                     <td>
-                                                                        <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,BeiFenWenJianLuJing%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,BeiFenWenJianLuJing%>"></asp:Label>£º</td>
                                                                     <td>
                                                                         <asp:TextBox ID="TXT_BackDocUrl" runat="server" Width="400"></asp:TextBox>&nbsp;
                                                                     </td>
                                                                     <td>
-                                                                        <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,LiRu%>"></asp:Label>ï¼šD:\BackupDocï¼Œ                            
+                                                                        <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,LiRu%>"></asp:Label>£ºD:\BackupDoc£¬                            
                                                                         <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,ZWJJYSYUSERYHSYQXDSXXAQSZ%>"></asp:Label>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,BeiFenWenJianJianGeShiJian%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,BeiFenWenJianJianGeShiJian%>"></asp:Label>£º</td>
                                                                     <td>
                                                                         <table>
                                                                             <tr>
@@ -186,7 +186,7 @@
                                                 <table style="width: 98%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td colspan="2" style="padding: 5px 0px 0px 5px" class="formItemBgStyle" valign="top" align="left">
-                                                            <asp:Label ID="Label40" runat="server" Text="åªè¯»æ•°æ®åº“ç”¨æˆ·ID"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label40" runat="server" Text="Ö»¶ÁÊý¾Ý¿âÓÃ»§ID"></asp:Label>£º
                                                          
                                                             <asp:Label ID="LB_DBUserID" runat="server"></asp:Label>
                                                         </td>
@@ -194,7 +194,7 @@
                                                     <tr>
                                                         <td style="text-align: left; height: 25px;" class="formItemBgStyle">
                                                             <asp:Label ID="Label42" runat="server" Text="<%$ Resources:lang,MiMa%>"></asp:Label>
-                                                            ï¼š
+                                                            £º
                                                             <asp:TextBox ID="TB_ReadOnlyUserPassword" runat="server"></asp:TextBox>
                                                             <br />
                                                             <span style="font-size: x-small; color: red;">(<asp:Label ID="Label41" runat="server" Text="<%$ Resources:lang,MiMaYBHDSZMBDHKJSZ%>"></asp:Label>)</span>
@@ -221,14 +221,14 @@
                                                 <table style="width: 98%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td colspan="2" style="padding: 5px 0px 0px 5px" class="formItemBgStyle" valign="top" align="left">
-                                                            <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,LiuChengShuJiZhuanYu%>"></asp:Label>ï¼ˆ<span style="color: red;">
-                                                                <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,QZKXSJJXYXCZ%>"></asp:Label></span> ï¼‰ï¼š
+                                                            <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,LiuChengShuJiZhuanYu%>"></asp:Label>£¨<span style="color: red;">
+                                                                <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,QZKXSJJXYXCZ%>"></asp:Label></span> £©£º
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: left; height: 25px;" class="formItemBgStyle">
                                                             <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,QueZiShiJian%>"></asp:Label>
-                                                            ï¼š
+                                                            £º
                                                             <asp:TextBox ID="DLC_WorkflowStart" ReadOnly="false" runat="server"></asp:TextBox>
                                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender3" runat="server" TargetControlID="DLC_WorkflowStart">
                                                             </ajaxToolkit:CalendarExtender>
@@ -257,14 +257,14 @@
                                                 <table style="width: 98%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td colspan="4" style="padding: 5px 0px 0px 5px" class="formItemBgStyle" valign="top" align="left">
-                                                            <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,RiChengShuJiZhuanYu%>"></asp:Label>ï¼ˆ<span style="color: red;">
-                                                                <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,QZKXSJJXYXCZ%>"></asp:Label></span> ï¼‰ï¼š
+                                                            <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,RiChengShuJiZhuanYu%>"></asp:Label>£¨<span style="color: red;">
+                                                                <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,QZKXSJJXYXCZ%>"></asp:Label></span> £©£º
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: left; height: 25px;" class="formItemBgStyle">
                                                             <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,QueZiShiJian%>"></asp:Label>
-                                                            ï¼š<asp:TextBox ID="DLC_EventStart" ReadOnly="false" runat="server"></asp:TextBox>
+                                                            £º<asp:TextBox ID="DLC_EventStart" ReadOnly="false" runat="server"></asp:TextBox>
                                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender2" runat="server" TargetControlID="DLC_EventStart">
                                                             </ajaxToolkit:CalendarExtender>
                                                         </td>
@@ -282,14 +282,14 @@
                                                 <table style="width: 98%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td colspan="4" style="padding: 5px 0px 0px 5px" class="formItemBgStyle" valign="top" align="left">
-                                                            <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,JiHuaShuJiZhuanYu%>"></asp:Label>ï¼ˆ<span style="color: red;">
-                                                                <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,QZKXSJJXYXCZ%>"></asp:Label></span> ï¼‰ï¼š
+                                                            <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,JiHuaShuJiZhuanYu%>"></asp:Label>£¨<span style="color: red;">
+                                                                <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,QZKXSJJXYXCZ%>"></asp:Label></span> £©£º
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: left; height: 25px;" class="formItemBgStyle">
                                                             <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,QueZiShiJian%>"></asp:Label>
-                                                            ï¼š
+                                                            £º
                                                             <asp:TextBox ID="DLC_PlanStart" ReadOnly="false" runat="server"></asp:TextBox>
                                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender1" runat="server" TargetControlID="DLC_PlanStart">
                                                             </ajaxToolkit:CalendarExtender>
@@ -309,14 +309,14 @@
                                                 <table style="width: 98%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td colspan="4" style="padding: 5px 0px 0px 5px" class="formItemBgStyle" valign="top" align="left">
-                                                            <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,XieZuoShuJiZhuanYu%>"></asp:Label>ï¼ˆ<span style="color: red;">
-                                                                <asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,QZKXSJJXYXCZ%>"></asp:Label></span> ï¼‰ï¼š
+                                                            <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,XieZuoShuJiZhuanYu%>"></asp:Label>£¨<span style="color: red;">
+                                                                <asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,QZKXSJJXYXCZ%>"></asp:Label></span> £©£º
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: left; height: 25px;" class="formItemBgStyle">
                                                             <asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,QueZiShiJian%>"></asp:Label>
-                                                            ï¼š
+                                                            £º
                                                             <asp:TextBox ID="DLC_CollaborationStart" ReadOnly="false" runat="server"></asp:TextBox>
                                                             <ajaxToolkit:CalendarExtender Format="yyyy-MM-dd" ID="CalendarExtender4" runat="server" TargetControlID="DLC_PlanStart">
                                                             </ajaxToolkit:CalendarExtender>
@@ -339,7 +339,7 @@
                                                             <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,CuoWuRuZhi%>"></asp:Label>
                                                             <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,XiaZai%>"></asp:Label>
 
-                                                            ï¼š
+                                                            £º
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -358,8 +358,8 @@
                                                 <table style="width: 98%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td colspan="4" style="padding: 5px 0px 0px 5px" class="formItemBgStyle" valign="top" align="left">
-                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ShuJuQingKong%>"></asp:Label>ï¼ˆ<span style="color: red;">
-                                                                <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,QZKXSJJXYXCZ%>"></asp:Label></span> ï¼‰ï¼š
+                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ShuJuQingKong%>"></asp:Label>£¨<span style="color: red;">
+                                                                <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,QZKXSJJXYXCZ%>"></asp:Label></span> £©£º
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -382,8 +382,8 @@
                                                 <table style="width: 98%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td colspan="4" style="padding: 5px 0px 0px 5px" class="formItemBgStyle" valign="top" align="left">
-                                                            <asp:Label ID="Label44" runat="server" Text="<%$ Resources:lang,QingChuXiTongHanCheng%>"></asp:Label>ï¼ˆ<span style="color: red;">
-                                                                <asp:Label ID="Label45" runat="server" Text="<%$ Resources:lang,QZKXSJJXYXCZ%>"></asp:Label></span> ï¼‰ï¼š
+                                                            <asp:Label ID="Label44" runat="server" Text="<%$ Resources:lang,QingChuXiTongHanCheng%>"></asp:Label>£¨<span style="color: red;">
+                                                                <asp:Label ID="Label45" runat="server" Text="<%$ Resources:lang,QZKXSJJXYXCZ%>"></asp:Label></span> £©£º
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -405,7 +405,7 @@
                                                 <table style="width: 98%;" cellpadding="3" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td style="padding: 5px 0px 0px 5px" class="formItemBgStyle" valign="top" align="left">
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShengChengRTXZhangHuWenJian%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShengChengRTXZhangHuWenJian%>"></asp:Label>£º
                                                         </td>
                                                     </tr>
                                                     <tr>

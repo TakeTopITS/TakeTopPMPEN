@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -42,9 +42,9 @@ public partial class TTSelectorProductModuleNew : System.Web.UI.Page
                     string strModuleType = ShareClass.ObjectToString(drModuleType["ModuleType"]);
                     strShowHtml += "<tr><td><input id='" + strModuleType + "' type=\"checkbox\" onclick=\"ChooseTagAll('" + strModuleType + "',this)\" />" + strModuleType + "</td>";
 
-                    //ç­›é€‰å‡ºç›¸åº”çš„æ¨¡å—åç§°
+                    //É¸Ñ¡³öÏàÓ¦µÄÄ£¿éÃû³Æ
 
-                    DataRow[] drModuleName = dsModule.Tables[1].Select("ModuleType='" + strModuleType + "'");//æŸ¥è¯¢
+                    DataRow[] drModuleName = dsModule.Tables[1].Select("ModuleType='" + strModuleType + "'");//²éÑ¯
 
                     string strModuleNameHtml = string.Empty;
                     if (drModuleName != null && drModuleName.Length > 0)
@@ -69,16 +69,16 @@ public partial class TTSelectorProductModuleNew : System.Web.UI.Page
                         strShowHtml += "<tr><td>" + strModuleNameHtml + "</td></tr>";
                     }
                     else {
-                        strShowHtml += "<tr><td>æ— æ¨¡å—åç§°æ•°æ®</td></tr>";
+                        strShowHtml += "<tr><td>ÎŞÄ£¿éÃû³ÆÊı¾İ</td></tr>";
                     }
                 }
             }
             else {
-                strShowHtml = "<tr><td>æ— ç±»å‹æ•°æ®</td></tr>";
+                strShowHtml = "<tr><td>ÎŞÀàĞÍÊı¾İ</td></tr>";
             }
         }
         else {
-            strShowHtml = "<tr><td>æ— æ•°æ®</td></tr>";
+            strShowHtml = "<tr><td>ÎŞÊı¾İ</td></tr>";
         }
 
         LT_ShowHtml.Text = strShowHtml;

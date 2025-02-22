@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -34,16 +34,16 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
 
         if (strRelatedType == "Project")
         {
-            strRelatedType = "È°πÁõÆ";
+            strRelatedType = "Project";
             strRelatedName = ShareClass.GetProjectName(strRelatedID);
 
-            //ÂàóÂá∫Ê®°ÊùøË¶ÅÊ±ÇÂÆåÊàêÊ≤°ËßÅÂÆåÊàêÁöÑÊñáÊ°£
+            //¡–≥ˆƒ£∞Â“™«ÛÕÍ≥…√ªº˚ÕÍ≥…µƒŒƒµµ
             LoadNotFinishedProjectDocument(ShareClass.GetProject(strProjectID).ProjectType.Trim());
         }
 
         if (strRelatedType == "ProjectPlan")
         {
-            strRelatedType = "ËÆ°Âàí";
+            strRelatedType = "Plan";
             strRelatedName = GetProjectPlanName(strRelatedID);
 
             if (ShareClass.CheckUserCanViewProjectPlan(strRelatedID, strUserCode) == false)
@@ -54,61 +54,61 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
 
         if (strRelatedType == "ProjectTask")
         {
-            strRelatedType = "‰ªªÂä°";
+            strRelatedType = "Task";
             strRelatedName = GetProjectTaskName(strRelatedID);
         }
 
         if (strRelatedType == "Risk")
         {
-            strRelatedType = "È£éÈô©";
+            strRelatedType = "Risk";
             strRelatedName = GetRiskName(strRelatedID);
         }
 
         if (strRelatedType == "Req")
         {
-            strRelatedType = "ÈúÄÊ±Ç";
+            strRelatedType = "Requirement";
             strRelatedName = GetReqName(strRelatedID);
         }
 
         if (strRelatedType == "Defect")
         {
-            strRelatedType = "Áº∫Èô∑";
+            strRelatedType = "Defect";
             strRelatedName = GetDefectName(strRelatedID);
         }
 
         if (strRelatedType == "WorkFlow")
         {
-            strRelatedType = "Â∑•‰ΩúÊµÅ";
+            strRelatedType = "Workflow";
             strRelatedName = ShareClass.GetWorkFlowName(strRelatedID);
         }
 
         if (strRelatedType == "Collaboration")
         {
-            strRelatedType = "Âçè‰Ωú";
+            strRelatedType = "–≠◊˜";
             strRelatedName = GetCollaborationName(strRelatedID);
         }
 
         if (strRelatedType == "Meeting")
         {
-            strRelatedType = "‰ºöËÆÆ";
+            strRelatedType = "ª·“È";
             strRelatedName = GetMeetingName(strRelatedID);
         }
 
         if (strRelatedType == "CustomerQuestion")
         {
-            strRelatedType = "ÂÆ¢Êúç";
+            strRelatedType = "øÕ∑˛";
             strRelatedName = GetCustomerQuestionName(strRelatedID);
         }
 
         if (strRelatedType == "LargePlan")
         {
-            strRelatedType = "Â§ßËÆ°Âàí";
+            strRelatedType = "¥Ûº∆ªÆ";
             strRelatedName = GetPlanName(strRelatedID);
         }
 
         if (strRelatedType == "BOM")
         {
-            strRelatedType = "Áâ©Êñô";
+            strRelatedType = "ŒÔ¡œ";
             string strRelatedItemCode = Request.QueryString["RelatedItemCode"].Trim();
             strRelatedID = GetItemBomVersionBomID(strRelatedItemCode, strRelatedID);
         }
@@ -116,151 +116,151 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandlerForSpecialPopWindow();", true);
         if (Page.IsPostBack != true)
         {
-            if (strRelatedType == "È°πÁõÆ")
+            if (strRelatedType == "Project")
             {
                 string strPMCode = ShareClass.GetProject(strProjectID).PMCode.Trim();
                 string strCreatorCode = ShareClass.GetProject(strProjectID).UserCode.Trim();
 
                 if (strUserCode == strPMCode | strUserCode == strCreatorCode)
                 {
-                    strHQL = string.Format(@"from Document as document where ((document.RelatedType = 'È°πÁõÆ' and document.RelatedID = {0} ))
-                   or (((document.RelatedType = 'ÈúÄÊ±Ç' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = {0}))
-                   or (document.RelatedType = 'Â∑•‰ΩúÊµÅ' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'È°πÁõÆ' and workFlow.RelatedID = {0}))
-                   or (document.RelatedType = 'È£éÈô©' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = {0}))
-                   or (document.RelatedType = '‰ªªÂä°' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = {0}))
-                   or (document.RelatedType = 'ËÆ°Âàí' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = {0}))
-                   or (document.RelatedType = 'Â∑•‰ΩúÊµÅ' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'ËÆ°Âàí' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = {0})))
-                   or (document.RelatedType = '‰ºöËÆÆ' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID = {0}))
+                    strHQL = string.Format(@"from Document as document where ((document.RelatedType = 'Project' and document.RelatedID = {0} ))
+                   or (((document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = {0}))
+                   or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'Project' and workFlow.RelatedID = {0}))
+                   or (document.RelatedType = '∑Áœ’' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = {0}))
+                   or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = {0}))
+                   or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = {0}))
+                   or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = {0})))
+                   or (document.RelatedType = 'ª·“È' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID = {0}))
                    ))
-                   and rtrim(ltrim(document.Status)) <> 'Âà†Èô§'", strProjectID, strUserCode, strDepartCode);
+                   and rtrim(ltrim(document.Status)) <> 'Deleted'", strProjectID, strUserCode, strDepartCode);
                 }
                 else
                 {
-                    strHQL = "from Document as document where (((document.RelatedType = 'È°πÁõÆ' and document.RelatedID = " + strProjectID + ")";
+                    strHQL = "from Document as document where (((document.RelatedType = 'Project' and document.RelatedID = " + strProjectID + ")";
                     strHQL += " and (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                    strHQL += " or (document.Visible in ( 'ÈÉ®Èó®','ÂÖ®‰Ωì')))";
+                    strHQL += " or (document.Visible in ( '≤ø√≈','»´ÃÂ')))";
                     strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))))";
 
-                    strHQL += " or (document.RelatedType = 'ÈúÄÊ±Ç' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
+                    strHQL += " or (document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
 
-                    strHQL += " or (document.RelatedType = 'Â∑•‰ΩúÊµÅ' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'È°πÁõÆ' and workFlow.RelatedID = " + strProjectID + "))";
-                    strHQL += " or (document.RelatedType = 'Â∑•‰ΩúÊµÅ' and document.RelatedID in (Select workFlowBackup.WLID From WorkFlowBackup as workFlowBackup Where workFlowBackup.RelatedType = 'È°πÁõÆ' and workFlowBackup.RelatedID = " + strProjectID + "))";
+                    strHQL += " or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + "))";
+                    strHQL += " or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlowBackup.WLID From WorkFlowBackup as workFlowBackup Where workFlowBackup.RelatedType = 'Project' and workFlowBackup.RelatedID = " + strProjectID + "))";
 
-                    strHQL += " or (document.RelatedType = 'È£éÈô©' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";
-                    strHQL += " or (document.RelatedType = '‰ªªÂä°' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
+                    strHQL += " or (document.RelatedType = '∑Áœ’' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";
+                    strHQL += " or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
 
-                    strHQL += " or (document.RelatedType = 'ËÆ°Âàí' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
-                    strHQL += " or (document.RelatedType = 'Â∑•‰ΩúÊµÅ' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'ËÆ°Âàí' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + ")))";
-                    strHQL += " or (document.RelatedType = 'Â∑•‰ΩúÊµÅ' and document.RelatedID in (Select workFlowBackup.WLID From WorkFlowBackup as workFlowBackup Where workFlowBackup.RelatedType = 'ËÆ°Âàí' and workFlowBackup.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + ")))";
+                    strHQL += " or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
+                    strHQL += " or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + ")))";
+                    strHQL += " or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlowBackup.WLID From WorkFlowBackup as workFlowBackup Where workFlowBackup.RelatedType = 'Plan' and workFlowBackup.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + ")))";
 
-                    strHQL += " or (document.RelatedType = '‰ºöËÆÆ' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID = " + strProjectID + "))";
-                    strHQL += " and ((document.Visible in ('‰ºöËÆÆ','ÈÉ®Èó®') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";
-                    strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' )))";
+                    strHQL += " or (document.RelatedType = 'ª·“È' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID = " + strProjectID + "))";
+                    strHQL += " and ((document.Visible in ('ª·“È','≤ø√≈') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";
+                    strHQL += " or (document.Visible = '»´ÃÂ' )))";
                 }
             }
 
-            if (strRelatedType == "ËÆ°Âàí")
+            if (strRelatedType == "Plan")
             {
                 strHQL = "from Document as document where ";
-                strHQL += " (document.RelatedType = 'ËÆ°Âàí' and document.RelatedID = " + strRelatedID;
+                strHQL += " (document.RelatedType = 'Plan' and document.RelatedID = " + strRelatedID;
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
                 strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))";
-                strHQL += " or (document.Visible in ( 'ÈÉ®Èó®','ÂÖ®‰Ωì'))))";
+                strHQL += " or (document.Visible in ( '≤ø√≈','»´ÃÂ'))))";
             }
 
-            if (strRelatedType == "‰ªªÂä°")
+            if (strRelatedType == "Task")
             {
                 strHQL = "from Document as document where ";
-                strHQL += " (((document.RelatedType = '‰ªªÂä°' and document.RelatedID = " + strRelatedID + " )";
-                strHQL += " or ( document.RelatedType = 'ËÆ°Âàí' and document.RelatedID in ( Select projectTask.PlanID from ProjectTask as projectTask where projectTask.TaskID = " + strRelatedID + ")))";
+                strHQL += " (((document.RelatedType = 'Task' and document.RelatedID = " + strRelatedID + " )";
+                strHQL += " or ( document.RelatedType = 'Plan' and document.RelatedID in ( Select projectTask.PlanID from ProjectTask as projectTask where projectTask.TaskID = " + strRelatedID + ")))";
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
                 strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))";
-                strHQL += " or (document.Visible in ( 'ÈÉ®Èó®','ÂÖ®‰Ωì'))))";
+                strHQL += " or (document.Visible in ( '≤ø√≈','»´ÃÂ'))))";
             }
 
-            if (strRelatedType == "È£éÈô©")
+            if (strRelatedType == "Risk")
             {
                 strHQL = "from Document as document where ";
-                strHQL += " ((document.RelatedType = 'È£éÈô©' and document.RelatedID = " + strRelatedID;
+                strHQL += " ((document.RelatedType = '∑Áœ’' and document.RelatedID = " + strRelatedID;
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or (document.Visible = 'ÈÉ®Èó®' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";
-                strHQL += " or ( document.Visible = 'ÂÖ®‰Ωì'))) ";
-                strHQL += " or ((document.RelatedType = '‰ºöËÆÆ' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='È£éÈô©' and meeting.RelatedID = " + strRelatedID + "))";
+                strHQL += " or (document.Visible = '≤ø√≈' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";
+                strHQL += " or ( document.Visible = '»´ÃÂ'))) ";
+                strHQL += " or ((document.RelatedType = 'ª·“È' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='∑Áœ’' and meeting.RelatedID = " + strRelatedID + "))";
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or ( document.Visible = '‰ºöËÆÆ'))))";
+                strHQL += " or ( document.Visible = 'ª·“È'))))";
             }
 
-            if (strRelatedType == "ÈúÄÊ±Ç")
+            if (strRelatedType == "Requirement")
             {
                 strHQL = "from Document as document where ";
-                strHQL += " ((document.RelatedType = 'ÈúÄÊ±Ç' and document.RelatedID = " + strRelatedID;
+                strHQL += " ((document.RelatedType = 'Requirement' and document.RelatedID = " + strRelatedID;
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or (document.Visible = 'ÈÉ®Èó®' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";
-                strHQL += " or ( document.Visible = 'ÂÖ®‰Ωì'))) ";
-                strHQL += " or ((document.RelatedType = '‰ºöËÆÆ' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='ÈúÄÊ±Ç' and meeting.RelatedID = " + strRelatedID + "))";
+                strHQL += " or (document.Visible = '≤ø√≈' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";
+                strHQL += " or ( document.Visible = '»´ÃÂ'))) ";
+                strHQL += " or ((document.RelatedType = 'ª·“È' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Requirement' and meeting.RelatedID = " + strRelatedID + "))";
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or ( document.Visible = '‰ºöËÆÆ'))))";
+                strHQL += " or ( document.Visible = 'ª·“È'))))";
             }
 
-            if (strRelatedType == "Áº∫Èô∑")
+            if (strRelatedType == "Defect")
             {
                 strHQL = "from Document as document where ";
-                strHQL += " ((document.RelatedType = 'Áº∫Èô∑' and document.RelatedID = " + strRelatedID;
+                strHQL += " ((document.RelatedType = 'Defect' and document.RelatedID = " + strRelatedID;
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or (document.Visible = 'ÈÉ®Èó®' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";
-                strHQL += " or ( document.Visible = 'ÂÖ®‰Ωì'))) ";
-                strHQL += " or ((document.RelatedType = '‰ºöËÆÆ' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='ÈúÄÊ±Ç' and meeting.RelatedID = " + strRelatedID + "))";
+                strHQL += " or (document.Visible = '≤ø√≈' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";
+                strHQL += " or ( document.Visible = '»´ÃÂ'))) ";
+                strHQL += " or ((document.RelatedType = 'ª·“È' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Requirement' and meeting.RelatedID = " + strRelatedID + "))";
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or ( document.Visible = '‰ºöËÆÆ'))))";
+                strHQL += " or ( document.Visible = 'ª·“È'))))";
             }
 
-            if (strRelatedType == "Â∑•‰ΩúÊµÅ")
+            if (strRelatedType == "Workflow")
             {
-                strHQL = "from Document as document where document.Status <> 'Âà†Èô§' ";
-                strHQL += " and (document.RelatedType = 'Â∑•‰ΩúÊµÅ' and document.RelatedID = " + strRelatedID;
+                strHQL = "from Document as document where document.Status <> 'Deleted' ";
+                strHQL += " and (document.RelatedType = 'Workflow' and document.RelatedID = " + strRelatedID;
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or (document.Visible = 'ÈÉ®Èó®' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";
-                strHQL += " or ( document.Visible = 'ÂÖ®‰Ωì'))) ";
-                strHQL += " or ((document.RelatedType = '‰ºöËÆÆ' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Â∑•‰ΩúÊµÅ' and meeting.RelatedID = " + strRelatedID + "))";
+                strHQL += " or (document.Visible = '≤ø√≈' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";
+                strHQL += " or ( document.Visible = '»´ÃÂ'))) ";
+                strHQL += " or ((document.RelatedType = 'ª·“È' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Workflow' and meeting.RelatedID = " + strRelatedID + "))";
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or ( document.Visible = '‰ºöËÆÆ')))";
+                strHQL += " or ( document.Visible = 'ª·“È')))";
             }
 
-            if (strRelatedType == "Âçè‰Ωú")
+            if (strRelatedType == "–≠◊˜")
             {
-                strHQL = " from Document as document where document.RelatedType = 'Âçè‰Ωú' and document.RelatedID = " + strRelatedID;
+                strHQL = " from Document as document where document.RelatedType = '–≠◊˜' and document.RelatedID = " + strRelatedID;
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " )))";
+                strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " )))";
             }
 
-            if (strRelatedType == "‰ºöËÆÆ")
+            if (strRelatedType == "ª·“È")
             {
-                strHQL = " from Document as document where document.RelatedType = '‰ºöËÆÆ' and document.RelatedID = " + strRelatedID;
+                strHQL = " from Document as document where document.RelatedType = 'ª·“È' and document.RelatedID = " + strRelatedID;
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or (document.Visible = '‰ºöËÆÆ' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " )))";
+                strHQL += " or (document.Visible = 'ª·“È' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " )))";
             }
 
-            if (strRelatedType == "ÂÆ¢Êúç")
+            if (strRelatedType == "øÕ∑˛")
             {
-                strHQL = " from Document as document where document.RelatedType = 'ÂÆ¢Êúç' and document.RelatedID = " + strRelatedID;
+                strHQL = " from Document as document where document.RelatedType = 'øÕ∑˛' and document.RelatedID = " + strRelatedID;
                 strHQL += " and (document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
 
             }
 
-            if (strRelatedType == "Â§ßËÆ°Âàí")
+            if (strRelatedType == "¥Ûº∆ªÆ")
             {
-                strHQL = " from Document as document where document.RelatedType = 'Â§ßËÆ°Âàí' and document.RelatedID = " + strRelatedID;
+                strHQL = " from Document as document where document.RelatedType = '¥Ûº∆ªÆ' and document.RelatedID = " + strRelatedID;
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' and document.RelatedID in (select planRelatedLeader.PlanID from PlanRelatedLeader as planRelatedLeader where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + ")))";
+                strHQL += " or (document.Visible = '»´ÃÂ' and document.RelatedID in (select planRelatedLeader.PlanID from PlanRelatedLeader as planRelatedLeader where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + ")))";
             }
 
-            if (strRelatedType == "Áâ©Êñô")
+            if (strRelatedType == "ŒÔ¡œ")
             {
-                strHQL = " from Document as document where document.RelatedType = 'Áâ©Êñô' and document.RelatedID = " + strRelatedID;
+                strHQL = " from Document as document where document.RelatedType = 'ŒÔ¡œ' and document.RelatedID = " + strRelatedID;
                 strHQL += " and (document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
 
             }
-            strHQL += " and rtrim(ltrim(document.Status)) <> 'Âà†Èô§' ";
+            strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' ";
 
             LB_Sql.Text = strHQL;
 
@@ -279,7 +279,7 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
         }
     }
 
-    //ÂàóÂá∫Ê≤°ÊúâÂÆåÊàêÁöÑÈ°πÁõÆÊñáÊ°£Ê®°Êùø
+    //¡–≥ˆ√ª”–ÕÍ≥…µƒœÓƒøŒƒµµƒ£∞Â
     protected void LoadNotFinishedProjectDocument(string strProjectType)
     {
         string strHQL;
@@ -289,17 +289,17 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
         //strUserCode = HttpContext.Current.Session["UserCode"].ToString();
         //strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
-        //strHQL = string.Format(@"Select * From T_Document Where RelatedType = 'ProjectType' and RelatedName = '{3}' and rtrim(ltrim(Status)) <> 'Âà†Èô§' 
-        //            and DocName NOT IN (Select D.DocName From (select distinct B.DocID, B.DocName From  (Select DocID,  DocName  from T_Document as document where ((document.RelatedType = 'È°πÁõÆ' and document.RelatedID = {0}))
-        //                or (((document.RelatedType = 'ÈúÄÊ±Ç' and document.RelatedID in (select relatedReq.ReqID from T_RelatedReq as relatedReq where relatedReq.ProjectID = {0}))
-        //                or (document.RelatedType = 'Â∑•‰ΩúÊµÅ' and document.RelatedID in (Select workFlow.WLID From T_WorkFlow as workFlow Where workFlow.RelatedType = 'È°πÁõÆ' and workFlow.RelatedID = {0}))
-        //                or (document.RelatedType = 'È£éÈô©' and document.RelatedID in (select projectRisk.ID from T_ProjectRisk as projectRisk where projectRisk.ProjectID = {0}))
-        //                or (document.RelatedType = '‰ªªÂä°' and document.RelatedID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.ProjectID = {0}))
-        //                or (document.RelatedType = 'ËÆ°Âàí' and document.RelatedID in (select workPlan.ID From T_ImplePlan as workPlan where workPlan.ProjectID = {0}))
-        //                or (document.RelatedType = 'Â∑•‰ΩúÊµÅ' and document.RelatedID in (Select workFlow.WLID From T_WorkFlow as workFlow Where workFlow.RelatedType = 'ËÆ°Âàí' and workFlow.RelatedID in (select workPlan.ID From T_ImplePlan as workPlan where workPlan.ProjectID = {0})))
-        //                or (document.RelatedType = '‰ºöËÆÆ' and document.RelatedID in (select meeting.ID from T_Meeting as meeting where meeting.RelatedID = {0}))
+        //strHQL = string.Format(@"Select * From T_Document Where RelatedType = 'ProjectType' and RelatedName = '{3}' and rtrim(ltrim(Status)) <> 'Deleted' 
+        //            and DocName NOT IN (Select D.DocName From (select distinct B.DocID, B.DocName From  (Select DocID,  DocName  from T_Document as document where ((document.RelatedType = 'Project' and document.RelatedID = {0}))
+        //                or (((document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from T_RelatedReq as relatedReq where relatedReq.ProjectID = {0}))
+        //                or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From T_WorkFlow as workFlow Where workFlow.RelatedType = 'Project' and workFlow.RelatedID = {0}))
+        //                or (document.RelatedType = '∑Áœ’' and document.RelatedID in (select projectRisk.ID from T_ProjectRisk as projectRisk where projectRisk.ProjectID = {0}))
+        //                or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.ProjectID = {0}))
+        //                or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID From T_ImplePlan as workPlan where workPlan.ProjectID = {0}))
+        //                or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From T_WorkFlow as workFlow Where workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID From T_ImplePlan as workPlan where workPlan.ProjectID = {0})))
+        //                or (document.RelatedType = 'ª·“È' and document.RelatedID in (select meeting.ID from T_Meeting as meeting where meeting.RelatedID = {0}))
         //                ))
-        //                and rtrim(ltrim(document.Status)) <> 'Âà†Èô§') A, (Select DocID, DocName From T_Document Where RelatedType = 'ProjectType' and RelatedName = '{3}' and rtrim(ltrim(Status)) <> 'Âà†Èô§') B
+        //                and rtrim(ltrim(document.Status)) <> 'Deleted') A, (Select DocID, DocName From T_Document Where RelatedType = 'ProjectType' and RelatedName = '{3}' and rtrim(ltrim(Status)) <> 'Deleted') B
         //             Where A.DocName  Like '%' || B.DocName || '%') D)", strProjectID, strUserCode, strDepartCode, strProjectType);
 
    
@@ -316,8 +316,8 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
                 EXISTS (  
                     SELECT 1  
                     FROM T_Document t1  
-                    WHERE  RelatedType='ËÆ°Âàí' and RelatedID = {0} and Status<>  'Âà†Èô§' and find_longest_common_substring(t2.DocName, t1.DocName) IS NOT NULL  
-                ) and RelatedType='ËÆ°Âàí' and Status<> 'Âà†Èô§' and RelatedID in (Select ID From T_ImplePlan Where ProjectID = {0}))", strProjectID);
+                    WHERE  RelatedType='Plan' and RelatedID = {0} and Status<>  'Deleted' and find_longest_common_substring(t2.DocName, t1.DocName) IS NOT NULL  
+                ) and RelatedType='Plan' and Status<> 'Deleted' and RelatedID in (Select ID From T_ImplePlan Where ProjectID = {0}))", strProjectID);
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_Document");
 
 
@@ -330,13 +330,13 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
         string strHQL, strUserCode, strDocTypeID, strTotalDocType = "", strDocType, strDepartCode;
         IList lst;
 
-        //Ê∑ªÂä†Ê†πËäÇÁÇπ
+        //ÃÌº”∏˘Ω⁄µ„
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>" + strRelatedType + "Ôºö" + strRelatedID + " " + strRelatedName + " ÊñáÊ°£ÂàóË°®</B>";
+        node1.Text = "<B>" + strRelatedType + "£∫" + strRelatedID + " " + strRelatedName + " Œƒµµ¡–±Ì</B>";
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -344,28 +344,28 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
         strUserCode = LB_UserCode.Text.Trim();
         strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
-        if (strRelatedType == "È°πÁõÆ")
+        if (strRelatedType == "Project")
         {
-            strHQL = "from DocTypeFilter as docTypeFilter where docTypeFilter.DocTypeID In (Select document.DocTypeID from Document as document where (((document.RelatedType = 'È°πÁõÆ' and document.RelatedID = " + strProjectID + ")";
+            strHQL = "from DocTypeFilter as docTypeFilter where docTypeFilter.DocTypeID In (Select document.DocTypeID from Document as document where (((document.RelatedType = 'Project' and document.RelatedID = " + strProjectID + ")";
             strHQL += " and (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( 'ÈÉ®Èó®','ÂÖ®‰Ωì')))";
+            strHQL += " or (document.Visible in ( '≤ø√≈','»´ÃÂ')))";
             strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))))";
 
-            strHQL += " or (document.RelatedType = 'ÈúÄÊ±Ç' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
+            strHQL += " or (document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
 
-            strHQL += " or (document.RelatedType = 'Â∑•‰ΩúÊµÅ' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'È°πÁõÆ' and workFlow.RelatedID = " + strProjectID + "))";
-            strHQL += " or (document.RelatedType = 'Â∑•‰ΩúÊµÅ' and document.RelatedID in (Select workFlowBackup.WLID From WorkFlowBackup as workFlowBackup Where workFlowBackup.RelatedType = 'È°πÁõÆ' and workFlowBackup.RelatedID = " + strProjectID + "))";
+            strHQL += " or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + "))";
+            strHQL += " or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlowBackup.WLID From WorkFlowBackup as workFlowBackup Where workFlowBackup.RelatedType = 'Project' and workFlowBackup.RelatedID = " + strProjectID + "))";
 
-            strHQL += " or (document.RelatedType = 'È£éÈô©' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";
-            strHQL += " or (document.RelatedType = '‰ªªÂä°' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
+            strHQL += " or (document.RelatedType = '∑Áœ’' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";
+            strHQL += " or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
 
-            strHQL += " or (document.RelatedType = 'ËÆ°Âàí' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
-            strHQL += " or (document.RelatedType = 'Â∑•‰ΩúÊµÅ' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'ËÆ°Âàí' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + ")))";
-            strHQL += " or (document.RelatedType = 'Â∑•‰ΩúÊµÅ' and document.RelatedID in (Select workFlowBackup.WLID From WorkFlowBackup as workFlowBackup Where workFlowBackup.RelatedType = 'ËÆ°Âàí' and workFlowBackup.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + ")))";
+            strHQL += " or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
+            strHQL += " or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + ")))";
+            strHQL += " or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlowBackup.WLID From WorkFlowBackup as workFlowBackup Where workFlowBackup.RelatedType = 'Plan' and workFlowBackup.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + ")))";
 
-            strHQL += " or (document.RelatedType = '‰ºöËÆÆ' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID = " + strProjectID + "))";
-            strHQL += " and ((document.Visible in ('‰ºöËÆÆ','ÈÉ®Èó®') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";
-            strHQL += " or (document.Visible = 'ÂÖ®‰Ωì' ))))";
+            strHQL += " or (document.RelatedType = 'ª·“È' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID = " + strProjectID + "))";
+            strHQL += " and ((document.Visible in ('ª·“È','≤ø√≈') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";
+            strHQL += " or (document.Visible = '»´ÃÂ' ))))";
         }
         else
         {
@@ -427,7 +427,7 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
                 DocType docType = (DocType)lst1[0];
                 strDocType = docType.Type.Trim();
 
-                strHQL += " and document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Âà†Èô§' Order by document.DocID DESC";
+                strHQL += " and document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";
 
 
                 lst2 = documentBLL.GetAllDocuments(strHQL);
@@ -438,15 +438,15 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
 
                 LB_Count.Text = Resources.lang.CXDDWJS + ": " + lst2.Count.ToString();
 
-                ////ËÆæÁΩÆÁº∫ÁúÅÁöÑÊñá‰ª∂Á±ªÂûã
+                ////…Ë÷√»± °µƒŒƒº˛¿‡–Õ
                 //ShareClass.SetDefaultDocType(strDocType, LB_DocTypeID, TB_DocType);
-                ////ÊåâÊñá‰ª∂Á±ªÂûãËÆæÁΩÆÁº∫ÁúÅÁöÑÂ∑•‰ΩúÊµÅÊ®°ÊùøÊ†ë
+                ////∞¥Œƒº˛¿‡–Õ…Ë÷√»± °µƒπ§◊˜¡˜ƒ£∞Â ˜
                 //ShareClass.SetDefaultWorkflowTemplate(strDocType, DL_TemName);
             }
         }
         else
         {
-            strHQL += "  and document.Status <> 'Âà†Èô§' Order by document.DocID DESC";
+            strHQL += "  and document.Status <> 'Deleted' Order by document.DocID DESC";
 
             lst2 = documentBLL.GetAllDocuments(strHQL);
             DataGrid1.DataSource = lst2;
@@ -489,13 +489,13 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
                 EXISTS (  
                     SELECT 1  
                     FROM T_Document t1  
-                    WHERE  RelatedType='ËÆ°Âàí' and RelatedID = {0} and find_longest_common_substring(t2.DocName, t1.DocName) IS NOT NULL  
-                ) and RelatedType='ËÆ°Âàí' and RelatedID = {0})", strPlanID);
+                    WHERE  RelatedType='Plan' and RelatedID = {0} and find_longest_common_substring(t2.DocName, t1.DocName) IS NOT NULL  
+                ) and RelatedType='Plan' and RelatedID = {0})", strPlanID);
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_Document");
 
         for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
         {
-            strDocNameListString += ds.Tables[0].Rows[0]["DocName"].ToString() + "Ôºå ";
+            strDocNameListString += ds.Tables[0].Rows[0]["DocName"].ToString() + "£¨ ";
         }
 
         return strDocNameListString;

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTVersionRegister.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTVersionRegister.aspx.cs"
     Inherits="TTVersionRegister" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -112,7 +112,7 @@
                                                             <td>
                                                                 <asp:ImageButton ID="IMB_Copyright" runat="server" Width="24" Height="24" ImageUrl="~/ImagesSkin/copyright.png"/></td>
                                                             <td>
-                                                                <asp:Label ID="LB_Copyright" runat="server" Text="CopyrightÂ© æ³°é¡¶æ‹“é¼Žï¼ˆTakeTop Softwareï¼‰ 2006-2026 <a href=https://www.taketopits.com>www.taketopits.com</a>"></asp:Label></td>
+                                                                <asp:Label ID="LB_Copyright" runat="server" Text="Copyright? Ì©¶¥ÍØ¶¦£¨TakeTop Software£© 2006-2026 <a href=https://www.taketopits.com>www.taketopits.com</a>"></asp:Label></td>
                                                         </tr>
                                                     </table>
 

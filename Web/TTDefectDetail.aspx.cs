@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
 using System.Collections;
@@ -19,7 +19,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
         IList lst;
         string strCreatorCode, strDepartCode;
 
-        //CKEditoråˆå§‹åŒ–
+        //CKEditor³õÊ¼»¯
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(HE_Operation);
@@ -87,7 +87,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
                 BT_ActiveDefect.Enabled = true;
             }
 
-            if (strStatus == "å…³é—­" || defectAssignRecord.Status.Trim() == "è½¬é¡¹")
+            if (strStatus == "Closed" || defectAssignRecord.Status.Trim() == "ToProject")
             {
                 BT_Refuse.Enabled = false;
                 BT_Approve.Enabled = false;
@@ -109,7 +109,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
 
             LoadChildRecord(strID);
 
-            //BusinessFormï¼Œå¦‚æœä¸å«ä¸šåŠ¡è¡¨å•ï¼Œå°±éšè—â€œç›¸å…³è¡¨å•æŒ‰é’®â€
+            //BusinessForm£¬Èç¹û²»º¬ÒµÎñ±íµ¥£¬¾ÍÒş²Ø¡°Ïà¹Ø±íµ¥°´Å¥¡±
             if (ShareClass.getRelatedBusinessFormTemName("DefectRecord", strID) == "")
             {
                 BT_StartupBusinessForm.Visible = false;
@@ -159,7 +159,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
         IList lst = defectAssignRecordBLL.GetAllDefectAssignRecords(strHQL);
         DefectAssignRecord defectAssignRecord = (DefectAssignRecord)lst[0];
         defectAssignRecord.OperatorContent = TB_Content.Text.Trim();
-        defectAssignRecord.Status = "å—ç†";
+        defectAssignRecord.Status = "Accepted";
 
         try
         {
@@ -167,7 +167,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
             LoadAssignRecord(strID);
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ChengGong + "')", true);
-            TB_Message.Text = strUserName + " å—ç†äº†ä½ çš„ç¼ºé™·: " + strDefectID + " " + strDefectName;
+            TB_Message.Text = strUserName + " ÊÜÀíÁËÄãµÄÈ±Ïİ: " + strDefectID + " " + strDefectName;
         }
         catch
         {
@@ -192,7 +192,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
         IList lst = defectAssignRecordBLL.GetAllDefectAssignRecords(strHQL);
         DefectAssignRecord defectAssignRecord = (DefectAssignRecord)lst[0];
         defectAssignRecord.OperatorContent = TB_Content.Text.Trim();
-        defectAssignRecord.Status = "æ‹’ç»";
+        defectAssignRecord.Status = "Rejected";
 
         try
         {
@@ -200,7 +200,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
             LoadAssignRecord(strID);
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ChengGong + "')", true);
-            TB_Message.Text = strUserName + " æ‹’ç»äº†ä½ çš„ç¼ºé™·: " + strDefectID + " " + strDefectName;
+            TB_Message.Text = strUserName + " ¾Ü¾øÁËÄãµÄÈ±Ïİ: " + strDefectID + " " + strDefectName;
         }
         catch
         {
@@ -277,7 +277,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
         defectAssignRecord.PriorID = intPriorID;
         defectAssignRecord.RouteNumber = int.Parse(strRouteNumber);
         defectAssignRecord.MakeDate = dtMakeDate;
-        defectAssignRecord.Status = "å¾…å¤„ç†";
+        defectAssignRecord.Status = "ToHandle";
         defectAssignRecord.MoveTime = DateTime.Now;
         defectAssignRecord.MoveTime = DateTime.Now;
 
@@ -285,19 +285,19 @@ public partial class TTDefectDetail : System.Web.UI.Page
         {
             defectAssignRecordBLL.AddDefectAssignRecord(defectAssignRecord);
 
-            //æ›´æ”¹å‰ç¼ºé™·åˆ†æ´¾è®°å½•çŠ¶æ€
-            updateDefectAssignRecordStatus(intPriorID, "å·²åˆ†æ´¾");
+            //¸ü¸ÄÇ°È±Ïİ·ÖÅÉ¼ÇÂ¼×´Ì¬
+            updateDefectAssignRecordStatus(intPriorID, "ÒÑ·ÖÅÉ");
 
             LoadAssignRecord(strID);
             LoadChildRecord(strID);
 
             string strAssignID = ShareClass.GetMyCreatedMaxDefectAssignRecordID(strDefectID, strUserCode);
-            //BusinessForm,å¤„ç†å…³è”çš„ä¸šåŠ¡è¡¨å•æ•°æ®
+            //BusinessForm,´¦Àí¹ØÁªµÄÒµÎñ±íµ¥Êı¾İ
             ShareClass.InsertOrUpdateTaskAssignRecordWFXMLData("DefectRecord", intPriorID.ToString(), "DefectRecord", strAssignID, strUserCode);
 
-            ShareClass.SendInstantMessage(Resources.lang.QueXianFenPaiTongZi, strUserName + Resources.lang.GeiNiFenPaiLeXuQiu + " :" + strDefectID + "  " + strDefectName + "ï¼Œ" + Resources.lang.QingJiShiChuLi, strUserCode, strOperatorCode);
+            ShareClass.SendInstantMessage(Resources.lang.QueXianFenPaiTongZi, strUserName + Resources.lang.GeiNiFenPaiLeXuQiu + " :" + strDefectID + "  " + strDefectName + "£¬" + Resources.lang.QingJiShiChuLi, strUserCode, strOperatorCode);
 
-            TB_AssignMessage.Text = strUserName + Resources.lang.GeiNiFenPaiLeQueXian + "ï¼š" + strDefectID + "  " + strDefectName + "ï¼Œ" + Resources.lang.QingJiShiChuLi;
+            TB_AssignMessage.Text = strUserName + Resources.lang.GeiNiFenPaiLeQueXian + "£º" + strDefectID + "  " + strDefectName + "£¬" + Resources.lang.QingJiShiChuLi;
 
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFPCG + "')", true);
@@ -308,7 +308,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
         }
     }
 
-    //æ›´æ”¹ç¼ºé™·åˆ†æ´¾è®°å½•çŠ¶æ€
+    //¸ü¸ÄÈ±Ïİ·ÖÅÉ¼ÇÂ¼×´Ì¬
     protected void updateDefectAssignRecordStatus(int intAssignID,string strStatus)
     {
         string strHQL;
@@ -318,7 +318,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
     }
 
 
-    //BusinessForm,å¯åŠ¨å…³è”çš„ä¸šåŠ¡è¡¨å•
+    //BusinessForm,Æô¶¯¹ØÁªµÄÒµÎñ±íµ¥
     protected void BT_StartupBusinessForm_Click(object sender, EventArgs e)
     {
         string strURL;
@@ -406,21 +406,21 @@ public partial class TTDefectDetail : System.Web.UI.Page
                 project.PMName = ShareClass.GetUserName(strOperatorCode);
                 project.CustomerPMName = "";
                 project.ProjectType = "OtherProject";
-                project.ProjectClass = "å¸¸è§„é¡¹ç›®";
+                project.ProjectClass = "³£¹æÏîÄ¿";
                 project.ProjectName = strProjectName;
                 project.ProjectDetail = strProjectDetail;
-                project.AcceptStandard = strAcceptStandard + "<br/><br/><b>æˆ‘çš„æ„è§ï¼š</b><br/>" + strContent;
+                project.AcceptStandard = strAcceptStandard + "<br/><br/><b>ÎÒµÄÒâ¼û£º</b><br/>" + strContent;
                 project.BeginDate = dtBeginDate;
                 project.EndDate = dtEndDate;
                 project.MakeDate = dtMakeDate;
                 project.ProjectAmount = 0;
                 project.ManHour = 0;
                 project.ManNumber = 0;
-                project.Status = "æ–°å»º";
-                project.StatusValue = "è¿›è¡Œä¸­";
+                project.Status = "New";
+                project.StatusValue = "InProgress";
                 project.ParentID = intParentID;
 
-                project.CurrencyType = "äººæ°‘å¸";
+                project.CurrencyType = "ÈËÃñ±Ò";
                 project.Priority = "COMMON";
 
                 try
@@ -435,7 +435,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
                     project = (Project)lst[0];
                     intProjectID = project.ProjectID;
 
-                    //è‡ªåŠ¨ç”Ÿæˆé¡¹ç›®ä»£ç 
+                    //×Ô¶¯Éú³ÉÏîÄ¿´úÂë
                     string strNewProjectCode = ShareClass.GetCodeByRule("ProjectCode", "OtherProject", intProjectID.ToString());
                     if (strNewProjectCode != "")
                     {
@@ -452,7 +452,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
 
 
                     DefectmentBLL defectmentBLL = new DefectmentBLL();
-                    defectment.Status = "è½¬é¡¹";
+                    defectment.Status = "ToProject";
                     defectmentBLL.UpdateDefectment(defectment, intDefectID);
 
                     DefectAssignRecordBLL defectAssignRecordBLL = new DefectAssignRecordBLL();
@@ -460,7 +460,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
                     strHQL = "from DefectAssignRecord as defectAssignRecord where defectAssignRecord.ID = " + intPriorID.ToString();
                     lst = defectAssignRecordBLL.GetAllDefectAssignRecords(strHQL);
                     DefectAssignRecord defectAssignRecord = (DefectAssignRecord)lst[0];
-                    defectAssignRecord.Status = "è½¬é¡¹";
+                    defectAssignRecord.Status = "ToProject";
 
                     try
                     {
@@ -484,11 +484,11 @@ public partial class TTDefectDetail : System.Web.UI.Page
                     defectAssignRecord.AssignManCode = strUserCode;
                     defectAssignRecord.AssignManName = ShareClass.GetUserName(strUserCode);
                     defectAssignRecord.Content = strContent;
-                    defectAssignRecord.Operation = "è½¬é¡¹";
+                    defectAssignRecord.Operation = "ToProject";
                     defectAssignRecord.PriorID = intPriorID;
                     defectAssignRecord.RouteNumber = intRouteNumber;
                     defectAssignRecord.MakeDate = DateTime.Now;
-                    defectAssignRecord.Status = "è½¬é¡¹";
+                    defectAssignRecord.Status = "ToProject";
                     defectAssignRecord.MoveTime = DateTime.Now;
 
                     try
@@ -504,7 +504,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
 
 
 
-                    TB_TransferProjectMsg.Text = strUserName + " æŠŠç¼ºé™·ï¼š" + strDefectID + " " + strDefectName + " è½¬æˆäº†é¡¹ç›®ç»™ä½ ï¼Œè¯·åŠæ—¶å—ç†ï¼";
+                    TB_TransferProjectMsg.Text = strUserName + " °ÑÈ±Ïİ£º" + strDefectID + " " + strDefectName + " ×ª³ÉÁËÏîÄ¿¸øÄã£¬Çë¼°Ê±ÊÜÀí£¡";
 
                     BT_Approve.Enabled = false;
                     BT_Refuse.Enabled = false;
@@ -534,9 +534,9 @@ public partial class TTDefectDetail : System.Web.UI.Page
                             relatedUser.DepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
                             relatedUser.DepartName = ShareClass.GetDepartName(relatedUser.DepartCode);
                             relatedUser.JoinDate = dtAssignTime;
-                            relatedUser.Actor = "ç¼ºé™·è¯„å®¡";
-                            relatedUser.Status = "è®¡åˆ’";
-                            relatedUser.WorkDetail = "ç¼ºé™·è¯„å®¡";
+                            relatedUser.Actor = "DefectReview";
+                            relatedUser.Status = "Plan";
+                            relatedUser.WorkDetail = "DefectReview";
                             relatedUser.UnitHourSalary = 0;
 
                             try
@@ -610,7 +610,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
             DLC_BeginDate.Text = defectAssignRecord.BeginDate.ToString("yyyy-MM-dd");
             DLC_EndDate.Text = defectAssignRecord.EndDate.ToString("yyyy-MM-dd");
 
-            if (strStatus == "å…³é—­" || defectAssignRecord.Status.Trim() == "è½¬é¡¹")
+            if (strStatus == "Closed" || defectAssignRecord.Status.Trim() == "ToProject")
             {
                 BT_UpdateAssign.Enabled = false;
                 BT_DeleteAssign.Enabled = false;
@@ -666,7 +666,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
         IList lst = defectAssignRecordBLL.GetAllDefectAssignRecords(strHQL);
         DefectAssignRecord defectAssignRecord = (DefectAssignRecord)lst[0];
         defectAssignRecord.OperatorContent = TB_Content.Text.Trim();
-        defectAssignRecord.Status = "å¤„ç†ä¸­";
+        defectAssignRecord.Status = "InProgress";
 
         try
         {
@@ -674,7 +674,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
             LoadAssignRecord(strID);
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ChengGong + "')", true);
-            TB_Message.Text = strUserName + " æ­£åœ¨å¤„ç†ä½ çš„ç¼ºé™·: " + strDefectID + " " + strDefectName;
+            TB_Message.Text = strUserName + " ÕıÔÚ´¦ÀíÄãµÄÈ±Ïİ: " + strDefectID + " " + strDefectName;
         }
         catch
         {
@@ -698,7 +698,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
         IList lst = defectAssignRecordBLL.GetAllDefectAssignRecords(strHQL);
         DefectAssignRecord defectAssignRecord = (DefectAssignRecord)lst[0];
         defectAssignRecord.OperatorContent = TB_Content.Text.Trim();
-        defectAssignRecord.Status = "å®Œæˆ";
+        defectAssignRecord.Status = "Completed";
 
         try
         {
@@ -706,7 +706,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
             LoadAssignRecord(strID);
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ChengGong + "')", true);
-            TB_Message.Text = strUserName + " å®Œæˆäº†ä½ çš„ç¼ºé™·: " + strDefectID + " " + strDefectName;
+            TB_Message.Text = strUserName + " Íê³ÉÁËÄãµÄÈ±Ïİ: " + strDefectID + " " + strDefectName;
 
         }
         catch
@@ -766,7 +766,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
         IList lst = defectAssignRecordBLL.GetAllDefectAssignRecords(strHQL);
         DefectAssignRecord defectAssignRecord = (DefectAssignRecord)lst[0];
         defectAssignRecord.OperatorContent = TB_Content.Text.Trim();
-        defectAssignRecord.Status = "æŒ‚èµ·";
+        defectAssignRecord.Status = "Suspended";
 
         try
         {
@@ -774,7 +774,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
             LoadAssignRecord(strID);
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ChengGong + "')", true);
-            TB_Message.Text = strUserName + " æŒ‚èµ·äº†ä½ çš„ç¼ºé™·: " + strDefectID + " " + strDefectName;
+            TB_Message.Text = strUserName + " ¹ÒÆğÁËÄãµÄÈ±Ïİ: " + strDefectID + " " + strDefectName;
         }
         catch
         {
@@ -793,7 +793,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
 
         Defectment defectment = (Defectment)lst[0];
 
-        defectment.Status = "å…³é—­";
+        defectment.Status = "Closed";
 
         try
         {
@@ -825,7 +825,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
 
         Defectment defectment = (Defectment)lst[0];
 
-        defectment.Status = "å¤„ç†ä¸­";
+        defectment.Status = "InProgress";
 
         try
         {
@@ -851,9 +851,9 @@ public partial class TTDefectDetail : System.Web.UI.Page
     {
         string strCmdText, strDIYNextStep, strSMS, strEMail;
 
-        strSMS = "Yes";
-        strEMail = "Yes";
-        strDIYNextStep = "Yes";
+        strSMS = "YES";
+        strEMail = "YES";
+        strDIYNextStep = "YES";
 
         strCmdText = "Update T_WorkFlow Set Status = " + "'" + strStatus + "'" + ",DIYNextStep = " + "'" + strDIYNextStep + "'" + ",ReceiveSMS = " + "'" + strSMS + "'" + ",ReceiveEMail = " + "'" + strEMail + "'" + "  where WLID = " + strWLID;
 
@@ -886,7 +886,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
         {
             Msg msg = new Msg();
 
-            strSubject = "ç¼ºé™·å¤„ç†æƒ…å†µåé¦ˆ";
+            strSubject = "È±Ïİ´¦ÀíÇé¿ö·´À¡";
             strMsg = TB_Message.Text.Trim();
 
             if (CB_ReturnMsg.Checked == true)
@@ -914,7 +914,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
         {
             Msg msg = new Msg();
 
-            strSubject = "ç¼ºé™·åˆ†æ´¾é€šçŸ¥";
+            strSubject = "È±Ïİ·ÖÅÉÍ¨Öª";
 
             strMsg = TB_AssignMessage.Text.Trim();
 
@@ -938,13 +938,13 @@ public partial class TTDefectDetail : System.Web.UI.Page
         string strHQL, strUserCode, strProjectID, strProject;
         IList lst;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>æ€»é¡¹ç›®</B>";
+        node1.Text = "<B>×ÜÏîÄ¿</B>";
         node1.Target = "1";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -952,7 +952,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
         strUserCode = LB_UserCode.Text.Trim();
         strHQL = "from Project as project where  project.PMCode = " + "'" + strUserCode + "'";
         strHQL += " and project.ParentID not in (select project.ProjectID from Project as project where project.PMCode = " + "'" + strUserCode + "'" + ")";
-        strHQL += "  and project.Status not in ('åˆ é™¤','å½’æ¡£') order by project.ProjectID DESC";
+        strHQL += "  and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
@@ -985,7 +985,7 @@ public partial class TTDefectDetail : System.Web.UI.Page
         ProjectBLL projectBLL = new ProjectBLL();
         Project project = new Project();
 
-        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('åˆ é™¤','å½’æ¡£') order by project.ProjectID DESC";
+        strHQL = "from Project as project where project.ParentID = " + strParentID + " and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         lst1 = projectBLL.GetAllProjects(strHQL);
 
         for (int i = 0; i < lst1.Count; i++)
@@ -1043,8 +1043,8 @@ public partial class TTDefectDetail : System.Web.UI.Page
         {
             Msg msg = new Msg();
 
-            strSubject = "ç¼ºé™·è½¬é¡¹é€šçŸ¥";
-            strMsg = ShareClass.GetUserName(strUserCode).Trim() + " æŠŠç¼ºé™·ï¼š" + strDefectID + " " + strDefectName + "è½¬æˆé¡¹ç›®ç»™ä½ ï¼Œè¯·åŠæ—¶å—ç†ï¼";
+            strSubject = "È±Ïİ×ªÏîÍ¨Öª";
+            strMsg = ShareClass.GetUserName(strUserCode).Trim() + " °ÑÈ±Ïİ£º" + strDefectID + " " + strDefectName + "×ª³ÉÏîÄ¿¸øÄã£¬Çë¼°Ê±ÊÜÀí£¡";
 
             if (CB_SMS.Checked == true)
             {

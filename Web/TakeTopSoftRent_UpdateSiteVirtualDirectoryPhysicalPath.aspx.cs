@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration.Internal;
@@ -30,19 +30,19 @@ public partial class TakeTopSoftRent_UpdateSiteVirtualDirectoryPhysicalPath : Sy
         strSiteName = Request.QueryString["SiteName"];
         strSiteAppName = Request.QueryString["SiteAppName"];
 
-        LB_Message.Text = "æ­£åœ¨ä¿å­˜åº”ç”¨ç«™ç‚¹çš„è™šæ‹Ÿç›®å½•çš„ç»å¯¹è·¯å¾„ï¼Œå¤§æ¦‚éœ€è¦1åˆ†é’Ÿï¼Œè¯·è€å¿ƒç­‰å€™......";
+        LB_Message.Text = "ÕıÔÚ±£´æÓ¦ÓÃÕ¾µãµÄĞéÄâÄ¿Â¼µÄ¾ø¶ÔÂ·¾¶£¬´ó¸ÅĞèÒª1·ÖÖÓ£¬ÇëÄÍĞÄµÈºò......";
 
         if (Page.IsPostBack == false)
         {
             try
             {
-                //æ›´æ–°ç«™ç‚¹è™šæ‹Ÿç›®å½•
+                //¸üĞÂÕ¾µãĞéÄâÄ¿Â¼
                 UpdateVirtualDirectoryPhysicalPath();
-                LB_Message.Text = "è™šæ‹Ÿç›®å½•çš„ç»å¯¹è·¯å¾„ä¿å­˜æˆåŠŸï¼";
+                LB_Message.Text = "ĞéÄâÄ¿Â¼µÄ¾ø¶ÔÂ·¾¶±£´æ³É¹¦£¡";
             }
             catch
             {
-                LB_Message.Text = "ä¿å­˜å¤±è´¥ï¼Œè¯·æ£€æŸ¥ï¼";
+                LB_Message.Text = "±£´æÊ§°Ü£¬Çë¼ì²é£¡";
             }
 
             IMB_Process.Visible = false;
@@ -50,7 +50,7 @@ public partial class TakeTopSoftRent_UpdateSiteVirtualDirectoryPhysicalPath : Sy
         }
     }
 
-    //åˆ é™¤ç«™ç‚¹
+    //É¾³ıÕ¾µã
     protected void UpdateVirtualDirectoryPhysicalPath()
     {
         string strSiteID, strSiteName, strSiteAppName, strSiteAppSystemName, strSiteDirectory, strSiteVirtualDirectoryPhysicalPath, strSiteTemplateDirectory, strDBLoginUserID, strDBUserLoginPassword, strSiteDBName, strSiteAppURL, strRentProductName, strRentUserEMail, strServerType;
@@ -81,16 +81,16 @@ public partial class TakeTopSoftRent_UpdateSiteVirtualDirectoryPhysicalPath : Sy
             }
             else
             {
-                LB_Message.Text = "æç¤ºï¼Œæ­¤ç«™ç‚¹ä¸å­˜åœ¨ï¼Œè¯·æ£€æŸ¥ï¼";
+                LB_Message.Text = "ÌáÊ¾£¬´ËÕ¾µã²»´æÔÚ£¬Çë¼ì²é£¡";
             }
         }
         catch (Exception ex)
         {
-            LB_Message.Text = "æ›´æ–°å¤±è´¥ï¼Œè¯·æ£€æŸ¥ï¼";
+            LB_Message.Text = "¸üĞÂÊ§°Ü£¬Çë¼ì²é£¡";
         }
     }
 
-    //åˆ é™¤ä¸€ä¸ªç½‘ç«™åº”ç”¨çš„è™šæ‹Ÿç›®å½•
+    //É¾³ıÒ»¸öÍøÕ¾Ó¦ÓÃµÄĞéÄâÄ¿Â¼
     public void DeleteSiteAPPVDir(string siteName, string siteAppName, string vDirName)
     {
         using (ServerManager mgr = new ServerManager())
@@ -120,7 +120,7 @@ public partial class TakeTopSoftRent_UpdateSiteVirtualDirectoryPhysicalPath : Sy
         }
     }
 
-    //åˆ›å»ºä¸€ä¸ªç½‘ç«™åº”ç”¨çš„è™šæ‹Ÿç›®å½•
+    //´´½¨Ò»¸öÍøÕ¾Ó¦ÓÃµÄĞéÄâÄ¿Â¼
     public void CreateSiteAppVDir(string siteName, string siteAppName, string vDirName, string physicalPath)
     {
         using (ServerManager mgr = new ServerManager())
@@ -139,7 +139,7 @@ public partial class TakeTopSoftRent_UpdateSiteVirtualDirectoryPhysicalPath : Sy
 
             try
             {
-                //æ²¡æœ‰ç›®å½•çš„å°±åˆ›å»ºç›®å½•
+                //Ã»ÓĞÄ¿Â¼µÄ¾Í´´½¨Ä¿Â¼
                 ShareClass.CreateDirectory(physicalPath);
                 app.VirtualDirectories.Add(vDirName, physicalPath);
                 mgr.CommitChanges();
@@ -150,7 +150,7 @@ public partial class TakeTopSoftRent_UpdateSiteVirtualDirectoryPhysicalPath : Sy
         }
     }
 
-    //æ›´æ–°ä¸€ä¸ªç½‘ç«™åº”ç”¨çš„è™šæ‹Ÿç›®å½•
+    //¸üĞÂÒ»¸öÍøÕ¾Ó¦ÓÃµÄĞéÄâÄ¿Â¼
     public void UpdateSiteAppVDir(string siteName, string siteAppName, string vDirName, string physicalPath)
     {
         using (ServerManager mgr = new ServerManager())
@@ -180,7 +180,7 @@ public partial class TakeTopSoftRent_UpdateSiteVirtualDirectoryPhysicalPath : Sy
         }
     }
 
-    //åˆ¤æ–­ç«™ç‚¹åº”ç”¨æ˜¯å¦å­˜åœ¨
+    //ÅĞ¶ÏÕ¾µãÓ¦ÓÃÊÇ·ñ´æÔÚ
     public bool VerifyWebSiteAppIsExist(string siteName, string siteAppName)
     {
         using (ServerManager mgr = new ServerManager())

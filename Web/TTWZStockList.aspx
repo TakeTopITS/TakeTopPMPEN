@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZStockList.aspx.cs" Inherits="TTWZStockList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZStockList.aspx.cs" Inherits="TTWZStockList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>åº“åˆ«åˆ—è¡¨</title>
+    <title>¿â±ðÁÐ±í</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -69,7 +69,7 @@
                                                             <table class="formBgStyle" width="80%">
                                                                 <tr>
                                                                     <td style="text-align: left; display: none;" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left; display: none;" class="formItemBgStyle" colspan="5">
                                                                         <asp:TextBox ID="TXT_ID" runat="server" ReadOnly="true"></asp:TextBox>
                                                                     </td>
@@ -77,29 +77,29 @@
                                                                 <tr>
                                                                     
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,KuBie%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,KuBie%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:Label ID="LB_StockCode" runat="server" ></asp:Label>
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,BaoGuanYuan%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,BaoGuanYuan%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:HiddenField ID="HF_Safekeep" runat="server" />
                                                                         <asp:TextBox ID="TXT_Safekeep" runat="server"></asp:TextBox>&nbsp;
-                                                                        <input type="button" id="BT_Safekeep" class="inpu" runat="server" value="é€‰æ‹©" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_Safekeep', 'TXT_Safekeep')" />
+                                                                        <input type="button" id="BT_Safekeep" class="inpu" runat="server" value="Ñ¡Ôñ" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_Safekeep', 'TXT_Safekeep')" />
                                                                     </td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,CaiJianYuan%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,CaiJianYuan%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="3">
                                                                         <asp:HiddenField ID="HF_Checker" runat="server" />
                                                                         <asp:TextBox ID="TXT_Checker" runat="server"></asp:TextBox>&nbsp;
-                                                                        <input type="button" id="BT_Checker" class="inpu" runat="server" value="é€‰æ‹©" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_Checker', 'TXT_Checker')" />
+                                                                        <input type="button" id="BT_Checker" class="inpu" runat="server" value="Ñ¡Ôñ" onclick="SelectEmployee('TTWZSelectorMember.aspx', 'HF_Checker', 'TXT_Checker')" />
                                                                     </td>
                                                                     
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: left" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,KuBieShuoMing%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,KuBieShuoMing%>"></asp:Label>£º</td>
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="5">
                                                                         <asp:TextBox ID="TXT_StockDesc" runat="server" Width="660"></asp:TextBox>
                                                                     </td>
@@ -193,15 +193,15 @@
                                                                                 <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,BianJi%>"></asp:Label></asp:LinkButton>
                                                                             <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab" Visible='<%# Eval("IsMark").ToString()=="-1" ? false : true %>'>
                                                                                 <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,ShanChu%>"></asp:Label></asp:LinkButton>
-                                                                            <%--<asp:Button runat="server" Text="ç¼–è¾‘" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="edit" CssClass="inpu" />--%>
-                                                                            <%--<asp:Button runat="server" Text="åˆ é™¤" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="inpu" Visible='<%# Eval("IsMark").ToString()=="-1" ? false : true %>' />--%>
+                                                                            <%--<asp:Button runat="server" Text="±à¼­" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="edit" CssClass="inpu" />--%>
+                                                                            <%--<asp:Button runat="server" Text="Deleted" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="inpu" Visible='<%# Eval("IsMark").ToString()=="-1" ? false : true %>' />--%>
 
                                                                         </ItemTemplate>
                                                                     </asp:TemplateColumn>
-                                                                    <asp:BoundColumn DataField="StockCode" HeaderText="åº“åˆ«">
+                                                                    <asp:BoundColumn DataField="StockCode" HeaderText="¿â±ð">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:BoundColumn>
-                                                                    <%--<asp:BoundColumn DataField="StockDesc" HeaderText="åº“åˆ«è¯´æ˜Ž">
+                                                                    <%--<asp:BoundColumn DataField="StockDesc" HeaderText="¿â±ðËµÃ÷">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="44%" />
                                                                     </asp:BoundColumn>--%>
                                                                     <asp:TemplateColumn>
@@ -213,16 +213,16 @@
                                                                             <%# ShareClass.StringCutByRequire(Eval("StockDesc").ToString(), 40) %>
                                                                         </ItemTemplate>
                                                                     </asp:TemplateColumn>
-                                                                    <asp:BoundColumn DataField="SafekeepName" HeaderText="ä¿ç®¡å‘˜">
+                                                                    <asp:BoundColumn DataField="SafekeepName" HeaderText="±£¹ÜÔ±">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="CheckerName" HeaderText="ææ£€å‘˜">
+                                                                    <asp:BoundColumn DataField="CheckerName" HeaderText="²Ä¼ìÔ±">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="IsMark" HeaderText="ä½¿ç”¨æ ‡è®°">
+                                                                    <asp:BoundColumn DataField="IsMark" HeaderText="Ê¹ÓÃ±ê¼Ç">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="IsCancel" HeaderText="æ ¸é”€æ ‡è®°">
+                                                                    <asp:BoundColumn DataField="IsCancel" HeaderText="ºËÏú±ê¼Ç">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
                                                                 </Columns>

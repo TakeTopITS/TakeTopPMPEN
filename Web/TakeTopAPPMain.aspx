@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopAPPMain.aspx.cs" Inherits="TakeTopAPPMain" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopAPPMain.aspx.cs" Inherits="TakeTopAPPMain" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.5;  user-scalable=1" />
 <%@ Import Namespace="System.Globalization" %>
@@ -12,7 +12,7 @@
     <script type="text/javascript" src="lhgdialog/lhgcore.min.js"></script>
     <script type="text/javascript" src="lhgdialog/lhgdialog.min.js"> </script>
     <style type="text/css">
-        /* æ”¶ç¼©å±•å¼€æ•ˆæžœ */
+        /* ÊÕËõÕ¹¿ªÐ§¹û */
         html, body {
             margin: 0;
             background-color:#EFF2F7;
@@ -199,7 +199,7 @@
             height: 85px;
         }
 
-        /*å¯¼èˆª*/
+        /*µ¼º½*/
         #nav1 {
             /* position: absolute;*/
             margin-bottom: 20px;
@@ -268,9 +268,9 @@
 
                     <div id="Div1" style="width: 100%; height: 800px; overflow: auto;">
 
-                        <!-- æ”¶ç¼©å±•å¼€æ•ˆæžœstart -->
+                        <!-- ÊÕËõÕ¹¿ªÐ§¹ûstart -->
                         <asp:Literal ID="LT_Result" runat="server"></asp:Literal>
-                        <!-- æ”¶ç¼©å±•å¼€æ•ˆæžœend -->
+                        <!-- ÊÕËõÕ¹¿ªÐ§¹ûend -->
 
                     </div>
                 </div>
@@ -291,7 +291,7 @@
                                             </td>
                                              
                                             <td align="center" width="50%">
-                                                <a href="#" class="titleSpan" onclick="if (confirm('ç¡®å®šè¦é€€å‡ºç®¡ç†å¹³å°å—?')){;href='DefaultAPP.html';target='_top';}">
+                                                <a href="#" class="titleSpan" onclick="if (confirm('È·¶¨ÒªÍË³ö¹ÜÀíÆ½Ì¨Âð?')){;href='DefaultAPP.html';target='_top';}">
                                                     <img id="IMG_ExitSystem" src="ImagesSkin/ExitAPP.png" width="20" height="20" />
                                                 </a>
                                             </td>

@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDPressureTestEdit.aspx.cs" Inherits="TTGDPressureTestEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDPressureTestEdit.aspx.cs" Inherits="TTGDPressureTestEdit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>åŽ‹åŠ›è¯•éªŒ/é¢„è¯•è½¦ç¼–è¾‘</title>
+    <title>Ñ¹Á¦ÊÔÑé/Ô¤ÊÔ³µ±à¼­</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/My97DatePicker/WdatePicker.js"></script>
     <script src="js/jquery-1.7.2.min.js"></script>
@@ -85,64 +85,64 @@
                                             <td valign="top" style="padding-top: 5px;">
                                                 <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
-                                                        <td style="text-align: right" class="formItemBgStyle">Test Loop Noï¼š
+                                                        <td style="text-align: right" class="formItemBgStyle">Test Loop No£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:DropDownList ID="DDL_TestLoopNo" runat="server"></asp:DropDownList>
                                                             <%--<asp:TextBox ID="TXT_TestLoopNo" runat="server"></asp:TextBox>--%>
                                                         </td>
-                                                        <td style="text-align: right" class="formItemBgStyle">Press Test Recï¼š
+                                                        <td style="text-align: right" class="formItemBgStyle">Press Test Rec£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_PressTestRec" runat="server"></asp:TextBox>
                                                         </td>
-                                                        <td style="text-align: right" class="formItemBgStyle">Dateï¼š
+                                                        <td style="text-align: right" class="formItemBgStyle">Date£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_PressDate" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: right" class="formItemBgStyle">Reinst Recï¼š
+                                                        <td style="text-align: right" class="formItemBgStyle">Reinst Rec£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_ReinstRec" runat="server"></asp:TextBox>
                                                         </td>
-                                                        <td style="text-align: right" class="formItemBgStyle">Dateï¼š
+                                                        <td style="text-align: right" class="formItemBgStyle">Date£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_ReinstDate" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox>
                                                         </td>
-                                                        <td style="text-align: right" class="formItemBgStyle">Flushing Blockï¼š
+                                                        <td style="text-align: right" class="formItemBgStyle">Flushing Block£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_FlushingBlock" runat="server"></asp:TextBox>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: right" class="formItemBgStyle">Flushing Recï¼š
+                                                        <td style="text-align: right" class="formItemBgStyle">Flushing Rec£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_FlushingRec" runat="server"></asp:TextBox>
                                                         </td>
-                                                        <td style="text-align: right" class="formItemBgStyle">Dateï¼š
+                                                        <td style="text-align: right" class="formItemBgStyle">Date£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_FlushingDate" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox>
                                                         </td>
-                                                        <td style="text-align: right" class="formItemBgStyle">Leak Test Recï¼š
+                                                        <td style="text-align: right" class="formItemBgStyle">Leak Test Rec£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_LeakTestRec" runat="server"></asp:TextBox>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: right" class="formItemBgStyle">Dateï¼š
+                                                        <td style="text-align: right" class="formItemBgStyle">Date£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_LeakDate" runat="server" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})"></asp:TextBox>
                                                         </td>
-                                                        <td style="text-align: right" class="formItemBgStyle">Remarksï¼š
+                                                        <td style="text-align: right" class="formItemBgStyle">Remarks£º
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="3">
                                                             <asp:TextBox ID="TXT_Remarks" runat="server" Width="400"></asp:TextBox>
@@ -152,8 +152,8 @@
                                                         <td style="text-align: center" class="formItemBgStyle" colspan="6">
                                                             <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnOK_Click" />&nbsp;&nbsp;
                                                             <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                                type="button" value="å…³é—­" />
-                                                            <%--<input type="button" value="è¿”å›ž" id="BT_Return" class="inpu" onclick="window.location.href = 'TTGDPressureTestList.aspx'" />--%>
+                                                                type="button" value="Closed" />
+                                                            <%--<input type="button" value="·µ»Ø" id="BT_Return" class="inpu" onclick="window.location.href = 'TTGDPressureTestList.aspx'" />--%>
                                                         </td>
                                                     </tr>
                                                 </table>

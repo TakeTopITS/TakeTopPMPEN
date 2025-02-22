@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTBMContractNotice.aspx.cs" Inherits="TTBMContractNotice" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTBMContractNotice.aspx.cs" Inherits="TTBMContractNotice" %>
 
 <!DOCTYPE html>
 

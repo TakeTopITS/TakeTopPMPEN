@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMAllData.aspx.cs" Inherits="TTWPQMAllData" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMAllData.aspx.cs" Inherits="TTWPQMAllData" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -8,7 +8,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>工艺基础数据</title>
+    <title>���ջ�������</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script src="js/allAHandler.js" type="text/javascript"></script>
@@ -63,29 +63,29 @@
                                         </td>
                                         <td align="left" class="formItemBgStyle">
                                              <asp:DropDownList ID="DL_Type" runat="server">
-                                                <asp:ListItem Value="请选择" Text="<%$ Resources:lang,QingXuanZe%>"/>
-                                                <asp:ListItem Value="适用类别" Text="<%$ Resources:lang,ShiYongLeiBie%>"/>
-                                                <asp:ListItem Value="焊接方法" Text="<%$ Resources:lang,HanJieFangFa%>"/>
-                                                <asp:ListItem Value="焊后热处理方法" Text="<%$ Resources:lang,HanHouReChuLiFangFa%>"/>
-                                                <asp:ListItem Value="焊后热处理类别" Text="<%$ Resources:lang,HanHouReChuLiLeibie%>"/>
-                                                <asp:ListItem Value="母材钢号" Text="<%$ Resources:lang,MuCaiGangHao%>"/>
-                                                <asp:ListItem Value="母材规格" Text="<%$ Resources:lang,MuCaiGuiGe%>"/>
-                                                <asp:ListItem Value="母材类别" Text="<%$ Resources:lang,MuCaiLeiBie%>"/>
-                                                <asp:ListItem Value="焊材类别" Text="<%$ Resources:lang,HanCaiLeiBie%>"/>
-                                                <asp:ListItem Value="焊丝型号" Text="<%$ Resources:lang,HanSiXingHao%>"/>
-                                                <asp:ListItem Value="焊条型号" Text="<%$ Resources:lang,hanTiaoXingHao%>"/>
-                                                <asp:ListItem Value="焊剂型号" Text="<%$ Resources:lang,hanJiXingHao%>"/>
-                                                <asp:ListItem Value="焊丝牌号" Text="<%$ Resources:lang,HanSiPaiHao%>"/>
-                                                <asp:ListItem Value="焊条牌号" Text="<%$ Resources:lang,HanTiaoPaiHao%>"/>
-                                                <asp:ListItem Value="焊剂牌号" Text="<%$ Resources:lang,HanJiPaiHao%>"/>
-                                                <asp:ListItem Value="焊丝规格" Text="<%$ Resources:lang,HanSiGuiGe%>"/>
-                                                <asp:ListItem Value="焊条规格" Text="<%$ Resources:lang,HanTiaoGuiGe%>"/>
-                                                <asp:ListItem Value="焊剂规格" Text="<%$ Resources:lang,HanJiGuiGe%>"/>
-                                                <asp:ListItem Value="焊接方向" Text="<%$ Resources:lang,HanJieFangXiang%>"/>
-                                                <asp:ListItem Value="冷却方法" Text="<%$ Resources:lang,LengQueFangFa%>"/>
-                                                <asp:ListItem Value="类别组号" Text="<%$ Resources:lang,LeiBieZhuHao%>"/>
-                                                <asp:ListItem Value="加热方式" Text="<%$ Resources:lang,JiaReFangShi%>"/>
-                                                <asp:ListItem Value="焊材标准" Text="<%$ Resources:lang,HanCaiBiaoZhun%>"/>
+                                                <asp:ListItem Value="PleaseSelect" Text="<%$ Resources:lang,QingXuanZe%>"/>
+                                                <asp:ListItem Value="ApplicableCategory" Text="<%$ Resources:lang,ShiYongLeiBie%>"/>
+                                                <asp:ListItem Value="WeldingMethod" Text="<%$ Resources:lang,HanJieFangFa%>"/>
+                                                <asp:ListItem Value="Post-WeldHeatTreatmentMethod" Text="<%$ Resources:lang,HanHouReChuLiFangFa%>"/>
+                                                <asp:ListItem Value="Post-WeldHeatTreatmentCategory" Text="<%$ Resources:lang,HanHouReChuLiLeibie%>"/>
+                                                <asp:ListItem Value="BaseMaterialSteelGrade" Text="<%$ Resources:lang,MuCaiGangHao%>"/>
+                                                <asp:ListItem Value="BaseMaterialSpecification" Text="<%$ Resources:lang,MuCaiGuiGe%>"/>
+                                                <asp:ListItem Value="BaseMaterialCategory" Text="<%$ Resources:lang,MuCaiLeiBie%>"/>
+                                                <asp:ListItem Value="WeldingMaterialCategory" Text="<%$ Resources:lang,HanCaiLeiBie%>"/>
+                                                <asp:ListItem Value="WeldingWireModel" Text="<%$ Resources:lang,HanSiXingHao%>"/>
+                                                <asp:ListItem Value="WeldingRodModel" Text="<%$ Resources:lang,hanTiaoXingHao%>"/>
+                                                <asp:ListItem Value="FluxModel" Text="<%$ Resources:lang,hanJiXingHao%>"/>
+                                                <asp:ListItem Value="WeldingWireBrand" Text="<%$ Resources:lang,HanSiPaiHao%>"/>
+                                                <asp:ListItem Value="WeldingRodBrand" Text="<%$ Resources:lang,HanTiaoPaiHao%>"/>
+                                                <asp:ListItem Value="FluxBrand" Text="<%$ Resources:lang,HanJiPaiHao%>"/>
+                                                <asp:ListItem Value="WeldingWireSpecification" Text="<%$ Resources:lang,HanSiGuiGe%>"/>
+                                                <asp:ListItem Value="WeldingRodSpecification" Text="<%$ Resources:lang,HanTiaoGuiGe%>"/>
+                                                <asp:ListItem Value="FluxSpecification" Text="<%$ Resources:lang,HanJiGuiGe%>"/>
+                                                <asp:ListItem Value="WeldingDirection" Text="<%$ Resources:lang,HanJieFangXiang%>"/>
+                                                <asp:ListItem Value="CoolingMethod" Text="<%$ Resources:lang,LengQueFangFa%>"/>
+                                                <asp:ListItem Value="CategoryGroupNumber" Text="<%$ Resources:lang,LeiBieZhuHao%>"/>
+                                                <asp:ListItem Value="HeatingMethod" Text="<%$ Resources:lang,JiaReFangShi%>"/>
+                                                <asp:ListItem Value="WeldingMaterialStandard" Text="<%$ Resources:lang,HanCaiBiaoZhun%>"/>
                                             </asp:DropDownList>
                                         </td>
                                     </tr>
@@ -127,7 +127,7 @@
                                 </table>
                                 <table cellpadding="2" cellspacing="0" class="formBgStyle" width="1000px">
                                     <tr>
-                                        <td align="center" style="text-align: left" class="formItemBgStyle">&nbsp;&nbsp;&nbsp; <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,JiChuShuJuLieBiao%>"></asp:Label>：</td>
+                                        <td align="center" style="text-align: left" class="formItemBgStyle">&nbsp;&nbsp;&nbsp; <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,JiChuShuJuLieBiao%>"></asp:Label>��</td>
                                     </tr>
                                     <tr>
                                         <td align="center" class="formItemBgStyle">
@@ -162,7 +162,7 @@
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="编号">
+                                                    <asp:TemplateColumn HeaderText="���">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
@@ -170,17 +170,17 @@
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="Code" HeaderText="编码">
+                                                    <asp:BoundColumn DataField="Code" HeaderText="����">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Type" HeaderText="类型">
+                                                    <asp:BoundColumn DataField="Type" HeaderText="����">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="Description" HeaderText="数据描述">
+                                                    <asp:BoundColumn DataField="Description" HeaderText="��������">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="50%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />

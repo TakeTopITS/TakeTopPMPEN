@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -185,7 +185,7 @@ public partial class TTConstractPayableReport : System.Web.UI.Page
         strCurrencyType = "%" + DL_CurrencyType.SelectedValue.Trim() + "%";
 
 
-        strHQL = "select  BillCode åŸå§‹å•å·,ConstractCode åˆåŒä»£ç ,ConstractName åˆåŒåç§°,PayableAccount åº”ä»˜é‡‘é¢,to_char(PayableTime,'yyyy/mm/dd') åº”ä»˜æ—¶é—´,OutOfPocketAccount å®ä»˜é‡‘é¢,HandlingCharge æ‰‹ç»­è´¹,UNPayAmount æœªä»˜é‡‘é¢,Receiver æ”¶æ¬¾æ–¹,PartA ç”²æ–¹å•ä½,PartAOperator è´Ÿè´£äºº,CurrencyType å¸åˆ« from V_ConstractPayableReportSummary where 1=1 ";
+        strHQL = "select  BillCode Ô­Ê¼µ¥ºÅ,ConstractCode ºÏÍ¬´úÂë,ConstractName ºÏÍ¬Ãû³Æ,PayableAccount Ó¦¸¶½ğ¶î,to_char(PayableTime,'yyyy/mm/dd') Ó¦¸¶Ê±¼ä,OutOfPocketAccount Êµ¸¶½ğ¶î,HandlingCharge ÊÖĞø·Ñ,UNPayAmount Î´¸¶½ğ¶î,Receiver ÊÕ¿î·½,PartA ¼×·½µ¥Î»,PartAOperator ¸ºÔğÈË,CurrencyType ±Ò±ğ from V_ConstractPayableReportSummary where 1=1 ";
 
         if (!string.IsNullOrEmpty(strPartA))
         {

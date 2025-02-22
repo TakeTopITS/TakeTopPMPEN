@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkFlowTemplateStepBusinessMember.aspx.cs" Inherits="TTWorkFlowTemplateStepBusinessMember" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkFlowTemplateStepBusinessMember.aspx.cs" Inherits="TTWorkFlowTemplateStepBusinessMember" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -7,7 +7,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>åˆ¶å®šè®¡åˆ’</title>
+    <title>ÖÆ¶¨¼Æ»®</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -125,10 +125,10 @@
                                                                         <asp:Button ID="BT_UserCode" runat="server" CssClass="inpuRepeat" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>' Visible="false" />
                                                                     </td>
                                                                     <td align="center">
-                                                                        <asp:LinkButton ID="LBT_SaveMember" runat="server" CommandName="Save" Text="&lt;div&gt;&lt;img src=ImagesSkin/Save.gif border=0 alt='ä¿å­˜' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                                        <asp:LinkButton ID="LBT_SaveMember" runat="server" CommandName="Save" Text="&lt;div&gt;&lt;img src=ImagesSkin/Save.gif border=0 alt='±£´æ' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                                     </td>
                                                                     <td width="60px" align="center">
-                                                                        <asp:LinkButton ID="LBT_DeleteMember" runat="server" CommandName="Delete" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='åˆ é™¤' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                                        <asp:LinkButton ID="LBT_DeleteMember" runat="server" CommandName="Delete" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                                     </td>
                                                                     <td align="right">
                                                                         <asp:Label ID="Label46" runat="server" Text="<%$ Resources:lang,WanChengTongGuo %>"></asp:Label>

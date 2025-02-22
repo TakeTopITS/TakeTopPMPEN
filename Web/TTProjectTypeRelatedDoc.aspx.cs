@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -50,9 +50,9 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
 
             TB_Author.Text = strUserName;
 
-            strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'æ–‡ä»¶è¯„å®¡'";
+            strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'DocumentReview'";
             strHQL += " and ((workFlowTemplate.TemName in (Select relatedWorkFlowTemplate.WFTemplateName from RelatedWorkFlowTemplate as relatedWorkFlowTemplate where relatedWorkFlowTemplate.RelatedType = 'ProjectType' and relatedWorkFlowTemplate.RelatedName = " + "'" + strRelatedName + "'" + "))";
-            strHQL += " or ( workFlowTemplate.Authority = 'æ‰€æœ‰' ))";
+            strHQL += " or ( workFlowTemplate.Authority = 'All' ))";
             strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC";
             WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
             lst = workFlowTemplateBLL.GetAllWorkFlowTemplates(strHQL);
@@ -85,15 +85,15 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
             DocType docType = (DocType)lst1[0];
             strDocType = docType.Type.Trim();
 
-            strHQL = " from Document as document where document.RelatedType = 'ProjectType' and document.RelatedName = " + "'" + strRelatedName + "'" + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'åˆ é™¤' Order by document.DocID DESC";
+            strHQL = " from Document as document where document.RelatedType = 'ProjectType' and document.RelatedName = " + "'" + strRelatedName + "'" + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";
             LB_FindCondition.Text = Resources.lang.CXFWWJLX + strDocType;
 
-            //è®¾ç½®ç¼ºçœçš„æ–‡ä»¶ç±»å‹
+            //ÉèÖÃÈ±Ê¡µÄÎÄ¼şÀàĞÍ
             ShareClass.SetDefaultDocType(strDocType, LB_DocTypeID, TB_DocType);
         }
         else
         {
-            strHQL = " from Document as document where document.RelatedType =  'ProjectType' and document.RelatedName = " + "'" + strRelatedName + "'" + " and document.Status <> 'åˆ é™¤' Order by document.DocID DESC";
+            strHQL = " from Document as document where document.RelatedType =  'ProjectType' and document.RelatedName = " + "'" + strRelatedName + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";
             LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
         }
 
@@ -103,7 +103,7 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
 
         LB_TotalCount.Text = Resources.lang.CXDDWJS + ": " + lst2.Count.ToString();
 
-        //æ ¹æ®æ–‡æ¡£æœ‰æ— å·¥ä½œæµæƒ…å†µéšè—åˆ é™¤æŒ‰é’®
+        //¸ù¾İÎÄµµÓĞÎŞ¹¤×÷Á÷Çé¿öÒş²ØÉ¾³ı°´Å¥
         ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);
     }
 
@@ -135,7 +135,7 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
 
                 if (strUserCode == strUploadManCode)
                 {
-                    document.Status = "åˆ é™¤";
+                    document.Status = "Deleted";
 
                     documentBLL.UpdateDocument(document, int.Parse(strDocID));
 
@@ -166,7 +166,7 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
 
                 BT_SubmitApply.Enabled = true;
 
-                LoadRelatedWL("æ–‡ä»¶è¯„å®¡", "æ–‡ä»¶", int.Parse(strDocID));
+                LoadRelatedWL("DocumentReview", "Document", int.Parse(strDocID));
             }
         }
     }
@@ -200,11 +200,11 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
 
             string strFileName1, strExtendName;
 
-            strFileName1 = this.AttachFile.FileName;//è·å–ä¸Šä¼ æ–‡ä»¶çš„æ–‡ä»¶å,åŒ…æ‹¬åç¼€
+            strFileName1 = this.AttachFile.FileName;//»ñÈ¡ÉÏ´«ÎÄ¼şµÄÎÄ¼şÃû,°üÀ¨ºó×º
 
-            strExtendName = System.IO.Path.GetExtension(strFileName1);//è·å–æ‰©å±•å
+            strExtendName = System.IO.Path.GetExtension(strFileName1);//»ñÈ¡À©Õ¹Ãû
 
-            DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+            DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
 
             string strFileName2 = System.IO.Path.GetFileName(strFileName1);
             string strExtName = Path.GetExtension(strFileName2);
@@ -238,7 +238,7 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
                 document.UploadManName = ShareClass.GetUserName(strUserCode);
                 document.UploadTime = DateTime.Now;
                 document.Visible = strVisible;
-                document.Status = "å¤„ç†ä¸­";
+                document.Status = "InProgress";
 
                 try
                 {
@@ -281,9 +281,9 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'æ–‡ä»¶è¯„å®¡'";
+        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'DocumentReview'";
         strHQL += " and ((workFlowTemplate.TemName in (Select relatedWorkFlowTemplate.WFTemplateName from RelatedWorkFlowTemplate as relatedWorkFlowTemplate where relatedWorkFlowTemplate.RelatedType = 'ProjectType' and relatedWorkFlowTemplate.RelatedName = " + "'" + strRelatedName + "'" + "))";
-        strHQL += " or ( workFlowTemplate.Authority = 'æ‰€æœ‰' ))";
+        strHQL += " or ( workFlowTemplate.Authority = 'All' ))";
         strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC";
         WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
         lst = workFlowTemplateBLL.GetAllWorkFlowTemplates(strHQL);
@@ -324,27 +324,27 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
         workFlow.CreatorCode = strCreatorCode;
         workFlow.CreatorName = strCreatorName;
         workFlow.CreateTime = dtCreateTime;
-        workFlow.Status = "æ–°å»º";
-        workFlow.RelatedType = "æ–‡ä»¶";
+        workFlow.Status = "New";
+        workFlow.RelatedType = "Document";
         workFlow.RelatedID = int.Parse(strDocID);
-        workFlow.DIYNextStep = "Yes"; workFlow.IsPlanMainWorkflow = "NO";
+        workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
 
         if (CB_RequiredSMS.Checked == true)
         {
-            workFlow.ReceiveSMS = "Yes";
+            workFlow.ReceiveSMS = "YES";
         }
         else
         {
-            workFlow.ReceiveSMS = "No";
+            workFlow.ReceiveSMS = "NO";
         }
 
         if (CB_RequiredMail.Checked == true)
         {
-            workFlow.ReceiveEMail = "Yes";
+            workFlow.ReceiveEMail = "YES";
         }
         else
         {
-            workFlow.ReceiveEMail = "No";
+            workFlow.ReceiveEMail = "NO";
         }
 
         try
@@ -359,9 +359,9 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
 
             xmlProcess.DbToXML(strCmdText, "T_Document", strXMLFile2);
 
-            LoadRelatedWL("æ–‡ä»¶è¯„å®¡", "æ–‡ä»¶", int.Parse(strDocID));
+            LoadRelatedWL("DocumentReview", "Document", int.Parse(strDocID));
 
-            //è‡ªåŠ¨é™„åŠ è¦è¯„å®¡çš„å·¥ä½œæµæ–‡ä»¶
+            //×Ô¶¯¸½¼ÓÒªÆÀÉóµÄ¹¤×÷Á÷ÎÄ¼ş
             AddWLDocument(strDocID, int.Parse(strWFID));
 
             ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZWJPSSSCDGZLGLYMJHCGZLS + "');</script>");
@@ -384,7 +384,7 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        //æ ¹æ®æ–‡æ¡£æœ‰æ— å·¥ä½œæµæƒ…å†µéšè—åˆ é™¤æŒ‰é’®
+        //¸ù¾İÎÄµµÓĞÎŞ¹¤×÷Á÷Çé¿öÒş²ØÉ¾³ı°´Å¥
         ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);
     }
 
@@ -412,7 +412,7 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
 
         Document document = (Document)lst[0];
 
-        document.RelatedType = "å·¥ä½œæµ";
+        document.RelatedType = "Workflow";
         document.RelatedID = intRelatedID;
         document.RelatedName = "";
 
@@ -454,7 +454,7 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = " from Document as document where document.RelatedType = 'ProjectType' and document.RelatedName = " + "'" + strRelatedName + "'" + " and document.Status <> 'åˆ é™¤' Order by document.DocID DESC";
+        strHQL = " from Document as document where document.RelatedType = 'ProjectType' and document.RelatedName = " + "'" + strRelatedName + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);
         DataGrid1.DataSource = lst;
@@ -464,7 +464,7 @@ public partial class TTProjectTypeRelatedDoc : System.Web.UI.Page
 
         LB_TotalCount.Text = Resources.lang.CXDDWJS + ": " + lst.Count.ToString();
 
-        //æ ¹æ®æ–‡æ¡£æœ‰æ— å·¥ä½œæµæƒ…å†µéšè—åˆ é™¤æŒ‰é’®
+        //¸ù¾İÎÄµµÓĞÎŞ¹¤×÷Á÷Çé¿öÒş²ØÉ¾³ı°´Å¥
         ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);
     }
 

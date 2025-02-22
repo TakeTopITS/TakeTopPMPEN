@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTFestivalsDaySet.aspx.cs" Inherits="TTFestivalsDaySet" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTFestivalsDaySet.aspx.cs" Inherits="TTFestivalsDaySet" %>
 
 <!DOCTYPE html>
 
@@ -88,22 +88,22 @@
                                                         <table class="formBgStyle" cellpadding="3" cellspacing="0" style="width: 100%;">
                                                             <tr>
                                                                 <td style="width: 80px; text-align: right" class="formItemBgStyle">
-                                                                    <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,FESTIVALSDAYYEAR%>"></asp:Label>ï¼š
+                                                                    <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,FESTIVALSDAYYEAR%>"></asp:Label>£º
                                                                 </td>
                                                                 <td style="text-align: left;" class="formItemBgStyle">
                                                                     <asp:DropDownList ID="ddl_year" runat="server" AutoPostBack="True" CssClass="DDList" OnSelectedIndexChanged="ddl_year_SelectedIndexChanged"></asp:DropDownList>
                                                                 </td>
                                                                 <td style="text-align: left;" class="formItemBgStyle">
-                                                                    <asp:Label ID="Label5" runat="server" Text="å¤åˆ¶åˆ°"></asp:Label></td>
+                                                                    <asp:Label ID="Label5" runat="server" Text="¸´ÖÆµ½"></asp:Label></td>
                                                                 <td style="text-align: left;" class="formItemBgStyle">
                                                                     <asp:DropDownList ID="ddl_copy" runat="server" AutoPostBack="True" CssClass="DDList"></asp:DropDownList></td>
                                                                 <td style="text-align: center;" class="formItemBgStyle">
-                                                                    <asp:Button ID="btn_copy" runat="server" Text="å¤åˆ¶" OnClick="btn_copy_Click" />
+                                                                    <asp:Button ID="btn_copy" runat="server" Text="¸´ÖÆ" OnClick="btn_copy_Click" />
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="formItemBgStyle" style="text-align: right">
-                                                                    <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,FESTIVALSDAY%>"></asp:Label>ï¼š
+                                                                    <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,FESTIVALSDAY%>"></asp:Label>£º
                                                                 </td>
                                                                 <td class="formItemBgStyle festivals" style="text-align: left;" colspan="4">
                                                                     <asp:ListBox ID="lb_festivals" runat="server" DataTextField="Type" DataValueField="SortNumber" AutoPostBack="True" OnSelectedIndexChanged="lb_festivals_SelectedIndexChanged"></asp:ListBox>
@@ -117,35 +117,35 @@
                                                             <table class="formBgStyle" cellpadding="3" cellspacing="0" style="width: 100%;">
                                                                 <tr>
                                                                     <td style="width: 80px; text-align: right" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FESTIVALSDAYMONTH%>"></asp:Label>ï¼š
+                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FESTIVALSDAYMONTH%>"></asp:Label>£º
                                                                     </td>
                                                                     <td style="text-align: left;" class="formItemBgStyle">
                                                                         <asp:DropDownList ID="ddl_moths" runat="server" CssClass="DDList" AutoPostBack="True" OnSelectedIndexChanged="ddl_moths_SelectedIndexChanged">
-                                                                            <asp:ListItem Value="1" Text="ä¸€æœˆ"></asp:ListItem>
-                                                                            <asp:ListItem Value="2" Text="äºŒæœˆ"></asp:ListItem>
-                                                                            <asp:ListItem Value="3" Text="ä¸‰æœˆ"></asp:ListItem>
-                                                                            <asp:ListItem Value="4" Text="å››æœˆ"></asp:ListItem>
-                                                                            <asp:ListItem Value="5" Text="äº”æœˆ"></asp:ListItem>
-                                                                            <asp:ListItem Value="6" Text="å…­æœˆ"></asp:ListItem>
-                                                                            <asp:ListItem Value="7" Text="ä¸ƒæœˆ"></asp:ListItem>
-                                                                            <asp:ListItem Value="8" Text="å…«æœˆ"></asp:ListItem>
-                                                                            <asp:ListItem Value="9" Text="ä¹æœˆ"></asp:ListItem>
-                                                                            <asp:ListItem Value="10" Text="åæœˆ"></asp:ListItem>
-                                                                            <asp:ListItem Value="11" Text="åä¸€æœˆ"></asp:ListItem>
-                                                                            <asp:ListItem Value="12" Text="åäºŒæœˆ"></asp:ListItem>
+                                                                            <asp:ListItem Value="1" Text="Ò»ÔÂ"></asp:ListItem>
+                                                                            <asp:ListItem Value="2" Text="¶þÔÂ"></asp:ListItem>
+                                                                            <asp:ListItem Value="3" Text="ÈýÔÂ"></asp:ListItem>
+                                                                            <asp:ListItem Value="4" Text="ËÄÔÂ"></asp:ListItem>
+                                                                            <asp:ListItem Value="5" Text="ÎåÔÂ"></asp:ListItem>
+                                                                            <asp:ListItem Value="6" Text="ÁùÔÂ"></asp:ListItem>
+                                                                            <asp:ListItem Value="7" Text="ÆßÔÂ"></asp:ListItem>
+                                                                            <asp:ListItem Value="8" Text="°ËÔÂ"></asp:ListItem>
+                                                                            <asp:ListItem Value="9" Text="¾ÅÔÂ"></asp:ListItem>
+                                                                            <asp:ListItem Value="10" Text="Ê®ÔÂ"></asp:ListItem>
+                                                                            <asp:ListItem Value="11" Text="Ê®Ò»ÔÂ"></asp:ListItem>
+                                                                            <asp:ListItem Value="12" Text="Ê®¶þÔÂ"></asp:ListItem>
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="formItemBgStyle" style="text-align: right">
-                                                                        <asp:Label ID="Label2" runat="server" Text="èŠ‚æ—¥"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label2" runat="server" Text="½ÚÈÕ"></asp:Label>£º</td>
                                                                     <td class="formItemBgStyle" style="text-align: left;">
                                                                         <asp:Calendar ID="cal_days" runat="server" ShowNextPrevMonth="False" ShowTitle="False" Height="300px" Width="100%" OnSelectionChanged="Calendar1_SelectionChanged" OnDayRender="Calendar1_DayRender"></asp:Calendar>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="formItemBgStyle" style="text-align: right">
-                                                                        <asp:Label ID="Label4" runat="server" Text="è°ƒä¼‘"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label4" runat="server" Text="µ÷ÐÝ"></asp:Label>£º</td>
                                                                     <td class="formItemBgStyle" style="text-align: left;">
                                                                         <asp:Calendar ID="cal_exchange" runat="server" ShowNextPrevMonth="False" ShowTitle="False" Height="300px" Width="100%" OnSelectionChanged="cal_exchange_SelectionChanged" OnDayRender="cal_exchange_DayRender"></asp:Calendar>
                                                                     </td>

@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDOrderCodeEdit.aspx.cs" Inherits="TTGDOrderCodeEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDOrderCodeEdit.aspx.cs" Inherits="TTGDOrderCodeEdit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Ê¨°Â∫è‰ª£Á†Å(Â∞∫ÂØ∏)ÁºñËæë</title>
+    <title>¥Œ–Ú¥˙¬Î(≥ﬂ¥Á)±‡º≠</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -58,13 +58,13 @@
                                                 <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                                     <tr>
                                                         <td style="text-align: right" class="formItemBgStyle">
-                                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,DaiHao%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,DaiHao%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_Code" runat="server"></asp:TextBox>
                                                         </td>
                                                         <td style="text-align: right" class="formItemBgStyle">
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShuoMing%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShuoMing%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle">
                                                             <asp:TextBox ID="TXT_Description" runat="server" Width="400"></asp:TextBox>
@@ -73,7 +73,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: right" class="formItemBgStyle">
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,BeiZhu%>"></asp:Label>Ôºö
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,BeiZhu%>"></asp:Label>£∫
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="3">
                                                             <asp:TextBox ID="TXT_Remark" runat="server" Width="400"></asp:TextBox>
@@ -82,7 +82,7 @@
                                                     <tr>
                                                         <td style="text-align: center" class="formItemBgStyle" colspan="4">
                                                             <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnOK_Click" />&nbsp;&nbsp;
-                                                    <input type="button" value="ËøîÂõû" id="BT_Return" class="inpu" onclick="window.location.href = 'TTGDOrderCodeList.aspx'" />
+                                                    <input type="button" value="∑µªÿ" id="BT_Return" class="inpu" onclick="window.location.href = 'TTGDOrderCodeList.aspx'" />
                                                         </td>
                                                     </tr>
                                                 </table>

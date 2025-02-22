@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -33,7 +33,7 @@ public partial class TTWorkFlowDetailMain : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        //è®¾ç½®æ˜¯å¦è‡ªå®šä¹‰å·¥ä½œæµæ¨¡ç»„æ¨¡å¼
+        //ÉèÖÃÊÇ·ñ×Ô¶¨Òå¹¤×÷Á÷Ä£×éÄ£Ê½
         Session["DIYWFModule"] = "NO";
 
         string strUserCode;
@@ -64,14 +64,14 @@ public partial class TTWorkFlowDetailMain : System.Web.UI.Page
         //strCurrentStepSortNumber = ShareClass.GetWorkFlowCurrentStepSortNumber(strStepID).ToString();
         //string strWFStepJSCode;
         //string strFileName;
-        ////é™„åŠ å·¥ä½œæµæ­¥éª¤ç”¨æˆ·è‡ªå®šä¹‰çš„JSCodeåˆ°é¡µé¢
+        ////¸½¼Ó¹¤×÷Á÷²½ÖèÓÃ»§×Ô¶¨ÒåµÄJSCodeµ½Ò³Ãæ
         //strWFStepJSCode = AttachUserJSCodeFromWFTemplateStep(strTemName, strCurrentStepSortNumber, strCreatorCode);
         //strFileName = "WFStepJS" + strID + ".js";
         //WriteFile(strFileName, strWFStepJSCode);
     }
 
 
-    //ä»å·¥ä½œæµæ¨¡æ¿æ­¥éª¤ä¸Šå–JSä»£ç é™„åŠ åˆ°é¡µé¢ä¸Š
+    //´Ó¹¤×÷Á÷Ä£°å²½ÖèÉÏÈ¡JS´úÂë¸½¼Óµ½Ò³ÃæÉÏ
     public string AttachUserJSCodeFromWFTemplateStep(string strWFTemName, string strStepSortNumber, string strWFCreatorCode)
     {
         string strHQL;
@@ -125,9 +125,9 @@ public partial class TTWorkFlowDetailMain : System.Web.UI.Page
             fi.Delete();
         }
 
-        // åœ¨å½“å‰ç›®å½•åˆ›å»ºä¸€ä¸ªæ–‡ä»¶myfile.txtï¼Œå¯¹è¯¥æ–‡ä»¶å…·æœ‰è¯»å†™æƒé™
+        // ÔÚµ±Ç°Ä¿Â¼´´½¨Ò»¸öÎÄ¼şmyfile.txt£¬¶Ô¸ÃÎÄ¼ş¾ßÓĞ¶ÁĞ´È¨ÏŞ
         FileStream fsMyfile = new FileStream(strFile, FileMode.Create, FileAccess.ReadWrite);
-        //å†™å…¥
+        //Ğ´Èë
         StreamWriter swMyfile = new StreamWriter(fsMyfile);
 
         swMyfile.WriteLine(strContent);

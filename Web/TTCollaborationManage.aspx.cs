@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -33,7 +33,7 @@ public partial class TTCollaborationManage : System.Web.UI.Page
         LB_UserName.Text = strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","我的协作", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","�ҵ�Э��", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -47,12 +47,12 @@ public partial class TTCollaborationManage : System.Web.UI.Page
 
             CollaborationBLL collaborationBLL = new CollaborationBLL();
 
-            strHQL = "select * from T_Collaboration where rtrim(ltrim(status)) <> '关闭' and  CoID in ( ";
+            strHQL = "select * from T_Collaboration where rtrim(ltrim(status)) <> 'Closed' and  CoID in ( ";
             strHQL += " select A.CoID from T_CollaborationMember A,T_CollaborationLog B ";
             strHQL += " where A.CoID = B.CoID and A.UserCode = " + "'" + strUserCode + "'";
             strHQL += " and A.UserCode not in (select C.UserCode from T_CollaborationLog C where C.CoID = B.CoID)) ";
             strHQL += " UNION ";
-            strHQL += " select * from T_Collaboration where rtrim(ltrim(status)) <> '关闭' and  CoID in ( ";
+            strHQL += " select * from T_Collaboration where rtrim(ltrim(status)) <> 'Closed' and  CoID in ( ";
             strHQL += " select A.CoID from T_CollaborationLog A ,T_CollaborationLog B ";
             strHQL += " where A.CoID = B.CoID and  A.CreateTime > B.CreateTime and A.UserCode <> B.UserCode ";
             strHQL += " and A.UserCode <> " + "'" + strUserCode + "'";
@@ -64,7 +64,7 @@ public partial class TTCollaborationManage : System.Web.UI.Page
 
             LB_Sql4.Text = strHQL;
 
-            strHQL = "from Collaboration as collaboration where ltrim(rtrim(collaboration.Status)) <> '关闭' and  collaboration.CoID in ";
+            strHQL = "from Collaboration as collaboration where ltrim(rtrim(collaboration.Status)) <> 'Closed' and  collaboration.CoID in ";
             strHQL += "(Select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + ")";
             strHQL += " Order by collaboration.CoID DESC";
             lst = collaborationBLL.GetAllCollaborations(strHQL);
@@ -99,12 +99,12 @@ public partial class TTCollaborationManage : System.Web.UI.Page
         strUserName = LB_UserName.Text.Trim();
 
         CollaborationBLL collaborationBLL = new CollaborationBLL();
-        strHQL = "select * from T_Collaboration where rtrim(ltrim(status)) <> '关闭' and  CoID in ( ";
+        strHQL = "select * from T_Collaboration where rtrim(ltrim(status)) <> 'Closed' and  CoID in ( ";
         strHQL += " select A.CoID from T_CollaborationMember A,T_CollaborationLog B ";
         strHQL += " where A.CoID = B.CoID and A.UserCode = " + "'" + strUserCode + "'";
         strHQL += " and A.UserCode not in (select C.UserCode from T_CollaborationLog C where C.CoID = B.CoID)) ";
         strHQL += " UNION ";
-        strHQL += " select * from T_Collaboration where rtrim(ltrim(status)) <> '关闭' and  CoID in ( ";
+        strHQL += " select * from T_Collaboration where rtrim(ltrim(status)) <> 'Closed' and  CoID in ( ";
         strHQL += " select A.CoID from T_CollaborationLog A ,T_CollaborationLog B ";
         strHQL += " where A.CoID = B.CoID and  A.CreateTime > B.CreateTime and A.UserCode <> B.UserCode ";
         strHQL += " and A.UserCode <> " + "'" + strUserCode + "'";
@@ -118,7 +118,7 @@ public partial class TTCollaborationManage : System.Web.UI.Page
         LB_Sql4.Text = strHQL;
 
 
-        strHQL = "from Collaboration as collaboration where ltrim(rtrim(collaboration.Status)) <> '关闭' and collaboration.CoID in ";
+        strHQL = "from Collaboration as collaboration where ltrim(rtrim(collaboration.Status)) <> 'Closed' and collaboration.CoID in ";
         strHQL += "(Select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + ")";
         strHQL += " Order by collaboration.CoID DESC";
         lst = collaborationBLL.GetAllCollaborations(strHQL);

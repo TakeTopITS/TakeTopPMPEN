@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDPtMtPmiAtList.aspx.cs" Inherits="TTGDPtMtPmiAtList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDPtMtPmiAtList.aspx.cs" Inherits="TTGDPtMtPmiAtList" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 

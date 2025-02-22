@@ -1,4 +1,4 @@
-Ôªøusing System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -32,7 +32,7 @@ public partial class TTPlanView : System.Web.UI.Page
         Plan plan = (Plan)lst[0];
         strPlanName = plan.PlanName.Trim();
 
-        //this.Title = Resources.lang.JiHua + ": " + strPlanID + " " + strPlanName + " Â§ÑÁêÜ";
+        //this.Title = Resources.lang.JiHua + ": " + strPlanID + " " + strPlanName + " ¥¶¿Ì";
 
          string strUserCode = Session["UserCode"].ToString();if (Page.IsPostBack == false)
         {

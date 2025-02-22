@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration.Internal;
@@ -41,7 +41,7 @@ public partial class TakeTopSoftDownload_TakeTopSoftCloud : System.Web.UI.Page
     {
         string strServerType = DL_ServerType.SelectedValue.Trim();
 
-        if (strServerType == "ç§Ÿç”¨")
+        if (strServerType == "×âÓÃ")
         {
             TB_StorageCapacity.Enabled = true;
         }
@@ -67,7 +67,7 @@ public partial class TakeTopSoftDownload_TakeTopSoftCloud : System.Web.UI.Page
         strAddress = TB_Address.Text.Trim();
         strPostCode = "";
         strType = DL_Type.SelectedValue.Trim();
-        strQuestion = "æºç ä¸‹è½½";
+        strQuestion = "Ô´ÂëÏÂÔØ";
         dtAnswerTime = DateTime.Now.AddHours(24);
 
 
@@ -75,7 +75,7 @@ public partial class TakeTopSoftDownload_TakeTopSoftCloud : System.Web.UI.Page
         {
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDHXBNWKJC + "')", true);
 
-            LB_Message.Text = "æäº¤å¤±è´¥ï¼Œè¯·æ£€æŸ¥ï¼";
+            LB_Message.Text = "Ìá½»Ê§°Ü£¬Çë¼ì²é£¡";
         }
         else
         {
@@ -84,15 +84,15 @@ public partial class TakeTopSoftDownload_TakeTopSoftCloud : System.Web.UI.Page
                 //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYZMCWSRZDYZM + "')", true);
                 TB_CheckCode.Text = "";
 
-                LB_Message.Text = "éªŒè¯ç é”™è¯¯ï¼Œè¯·æ£€æŸ¥ï¼";
+                LB_Message.Text = "ÑéÖ¤Âë´íÎó£¬Çë¼ì²é£¡";
                 return;
             }
 
-            //æ¨é€ä¿¡æ¯ç»™å®¢æœä¸»ç®¡
+            //ÍÆËÍĞÅÏ¢¸ø¿Í·şÖ÷¹Ü
             try
             {
                 string strCSOperatorCode = ShareClass.GetWebSiteCustomerServiceOperatorCode(strWebSite);
-                string strNofiInfo = "æç¤ºï¼šå…¬å¸: " + strCompany + " çš„å‘˜å·¥: " + strContactPerson + "( " + strPhoneNumber + " )" + " æäº¤äº†ï¼š" + strQuestion + " çš„ç”³è¯·ï¼Œè¯·åŠæ—¶å¤„ç†ï¼ï¼ï¼";
+                string strNofiInfo = "ÌáÊ¾£º¹«Ë¾: " + strCompany + " µÄÔ±¹¤: " + strContactPerson + "( " + strPhoneNumber + " )" + " Ìá½»ÁË£º" + strQuestion + " µÄÉêÇë£¬Çë¼°Ê±´¦Àí£¡£¡£¡";
                 Action action = new Action(delegate ()
                 {
                     try
@@ -114,30 +114,30 @@ public partial class TakeTopSoftDownload_TakeTopSoftCloud : System.Web.UI.Page
             }
 
             strSQL = " Insert into T_CustomerQuestion(Company,UserIP,UserPosition,ContactPerson,PhoneNumber,EMail,Address,PostCode,Type,Question,SummitTime,AnswerTime,Status,RecorderCode,OperatorCode,OperatorName,OperatorStatus,FromWebSite)";
-            strSQL += " Values(" + "'" + strCompany + "'" + "," + "'" + strUserIP + "'" + "," + "'" + strUserPosition + "'" + "," + "'" + strContactPerson + "'" + "," + "'" + strPhoneNumber + "'" + "," + "'" + strEMail + "'" + "," + "'" + strAddress + "'" + "," + "'" + strPostCode + "'" + "," + "'" + strType + "'" + "," + "'" + strQuestion + "'" + "," + "now(),now()+interval '1 day'," + "'æ–°å»º'" + ",'','','','','" + strWebSite + "')";
+            strSQL += " Values(" + "'" + strCompany + "'" + "," + "'" + strUserIP + "'" + "," + "'" + strUserPosition + "'" + "," + "'" + strContactPerson + "'" + "," + "'" + strPhoneNumber + "'" + "," + "'" + strEMail + "'" + "," + "'" + strAddress + "'" + "," + "'" + strPostCode + "'" + "," + "'" + strType + "'" + "," + "'" + strQuestion + "'" + "," + "now(),now()+interval '1 day'," + "'New'" + ",'','','','','" + strWebSite + "')";
 
             try
             {
                 ShareClass.RunSqlCommandForNOOperateLog(strSQL);
 
-                LB_Message.Text = "æäº¤æˆåŠŸï¼Œä¸‹è½½é“¾æ¥åœ¨ä¸‹é¢ï¼Œç‚¹å‡»å¯ä¸‹è½½ï¼";
+                LB_Message.Text = "Ìá½»³É¹¦£¬ÏÂÔØÁ´½ÓÔÚÏÂÃæ£¬µã»÷¿ÉÏÂÔØ£¡";
 
                 HL_SourceCodeDownload.Visible = true;
                 HL_SourceCodeDownload.NavigateUrl = "https://www.taketopits.com/Download/Setup/Develop/TakeTopPCMPDPSetup.zip";
 
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('---æäº¤æˆåŠŸ')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('---Ìá½»³É¹¦')", true);
             }
             catch
             {
 
-                LB_Message.Text = "æäº¤å¤±è´¥ï¼Œè¯·æ£€æŸ¥ï¼";
+                LB_Message.Text = "Ìá½»Ê§°Ü£¬Çë¼ì²é£¡";
 
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('-----æäº¤å¤±è´¥ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('-----Ìá½»Ê§°Ü£¬Çë¼ì²é£¡')", true);
 
             }
         }
 
-        //CreateSite("TestSite", "*:80:localhost", @"C:\å…¬å¸æ–‡æ¡£\TestSite");
+        //CreateSite("TestSite", "*:80:localhost", @"C:\¹«Ë¾ÎÄµµ\TestSite");
     }
 
 

@@ -1,4 +1,4 @@
-锘縰sing System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -37,10 +37,10 @@ public partial class TTProjectAssetPurchaseReport : System.Web.UI.Page
 
         if (strRelatedType == "Project")
         {
-            //strRelatedType = "椤圭洰";
+            //strRelatedType = "Project";
         }
 
-        //this.Title = strRelatedType + " " + strRelatedID + " 鐗╂枡閲囪喘鎶ヨ〃";
+        //this.Title = strRelatedType + " " + strRelatedID + " 物料采购报表";
         LB_ReportName.Text =  Resources.lang.ZiChanCaiGouBaoBiao;
 
         LB_UserCode.Text = strUserCode;

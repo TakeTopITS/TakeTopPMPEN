@@ -1,14 +1,14 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSoftBuy_TakeTopSoftCloud.aspx.cs" Inherits="TakeTopSoftBuy_TakeTopSoftCloud" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSoftBuy_TakeTopSoftCloud.aspx.cs" Inherits="TakeTopSoftBuy_TakeTopSoftCloud" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
 
-<meta content="企业云、企业管理软件、在线租用" name="keywords">
-<meta content="企业云，提供企业管理软件在线租用服务。" name="description">
+<meta content="��ҵ�ơ���ҵ������������������" name="keywords">
+<meta content="��ҵ�ƣ��ṩ��ҵ���������������÷���" name="description">
 <meta charset="utf-8" />
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>在线购买---泰顶拓鼎</title>
+    <title>���߹���---̩���ض�</title>
     <link href="Logo/website/css/zuyong.css" rel="stylesheet" type="text/css" />
     <link href="Logo/website/css/website.css" rel="stylesheet" type="text/css" />
     <link href="Logo/website/css/goumai.css" rel="stylesheet" type="text/css" />
@@ -57,16 +57,16 @@
                         &nbsp;
                     </p>
                     <div class="title">
-                        企业级8款可扩展软件
+                        ��ҵ��8�����չ����
                     </div>
                     <div class="title1">
-                        积木化结构，可按需选配，自由组合
+                        ��ľ���ṹ���ɰ���ѡ�䣬�������
                     </div>
                     <div class="main">
                         <p style="text-align: center; padding-bottom: 30px; font-size: 28px;">
                             <br />
                             <span style="text-align: center; font-size: small;"><a href="TakeTopSoftModuleChart_TakeTopSoftCloud.html"
-                                target="_blank">功能模块与价格</a> </span>
+                                target="_blank">����ģ����۸�</a> </span>
                         </p>
                     </div>
                     <div class="box">
@@ -78,17 +78,17 @@
                                             <img src="Logo/website/Images/201312231521547781.png" /></a>
                                     </div>
                                     <h3>
-                                        <a href="#">项目宝</a></h3>
+                                        <a href="#">��Ŀ��</a></h3>
                                     <h3>
                                         <br />
-                                        3000元，50用户
+                                        3000Ԫ��50�û�
                                     </h3>
                                     <p>
                                         &nbsp;
                                     </p>
                                     <div class="pointer">
                                         <p class="pointer_one">
-                                            <a href="#">提供项目计划、进度、任务、费用、文档管理功能，简单易用，10分钟学会</a>
+                                            <a href="#">�ṩ��Ŀ�ƻ������ȡ����񡢷��á��ĵ��������ܣ������ã�10����ѧ��</a>
                                         </p>
                                     </div>
                                 </li>
@@ -98,17 +98,17 @@
                                             <img src="Logo/website/Images/201411328407512.png" /></a>
                                     </div>
                                     <h3>
-                                        <a href="#">系统集成项目管理平台</a></h3>
+                                        <a href="#">ϵͳ������Ŀ����ƽ̨</a></h3>
                                     <h3>
                                         <br />
-                                        10000元起
+                                        10000Ԫ��
                                     </h3>
                                     <p>
                                         &nbsp;
                                     </p>
                                     <div class="pointer">
                                         <p class="pointer_one">
-                                            <a href="#">系统集成项目管理平台</a>
+                                            <a href="#">ϵͳ������Ŀ����ƽ̨</a>
                                         </p>
                                     </div>
                                 </li>
@@ -118,17 +118,17 @@
                                             <img src="Logo/website/Images/2013122395112630.png" /></a>
                                     </div>
                                     <h3>
-                                        <a href="#">研发项目管理平台</a></h3>
+                                        <a href="#">�з���Ŀ����ƽ̨</a></h3>
                                     <h3>
                                         <br />
-                                        10000元起
+                                        10000Ԫ��
                                     </h3>
                                     <p>
                                         &nbsp;
                                     </p>
                                     <div class="pointer">
                                         <p class="pointer_one">
-                                            <a href="#">产品与技术研发管理</a>
+                                            <a href="#">��Ʒ�뼼���з�����</a>
                                         </p>
                                     </div>
                                 </li>
@@ -138,17 +138,17 @@
                                             <img src="Logo/website/Images/201312181423536202.png" /></a>
                                     </div>
                                     <h3>
-                                        <a href="#">工程项目管理平台</a></h3>
+                                        <a href="#">������Ŀ����ƽ̨</a></h3>
                                     <h3>
                                         <br />
-                                        10000元起
+                                        10000Ԫ��
                                     </h3>
                                     <p>
                                         &nbsp;
                                     </p>
                                     <div class="pointer">
                                         <p class="pointer_one">
-                                            <a href="#">工程设计&施工项目管理</a>
+                                            <a href="#">�������&ʩ����Ŀ����</a>
                                         </p>
                                     </div>
                                 </li>
@@ -159,17 +159,17 @@
                                     </div>
 
                                     <h3>
-                                        <a href="#">软件实施项目管理平台</a></h3>
+                                        <a href="#">����ʵʩ��Ŀ����ƽ̨</a></h3>
                                     <h3>
                                         <br />
-                                        10000元起
+                                        10000Ԫ��
                                     </h3>
                                     <p>
                                         &nbsp;
                                     </p>
                                     <div class="pointer">
                                         <p class="pointer_one">
-                                            <a href="#">软件系统实施项目管理</a>
+                                            <a href="#">����ϵͳʵʩ��Ŀ����</a>
                                         </p>
                                     </div>
                                 </li>
@@ -179,17 +179,17 @@
                                             <img src="Logo/website/Images/201312231521462477.png" /></a>
                                     </div>
                                     <h3>
-                                        <a href="#">项目型ERP平台</a></h3>
+                                        <a href="#">��Ŀ��ERPƽ̨</a></h3>
                                     <h3>
                                         <br />
-                                        10000元起
+                                        10000Ԫ��
                                     </h3>
                                     <p>
                                         &nbsp;
                                     </p>
                                     <div class="pointer">
                                         <p class="pointer_one">
-                                            <a href="#">项目型制造管理</a>
+                                            <a href="#">��Ŀ���������</a>
                                         </p>
                                     </div>
                                 </li>
@@ -200,17 +200,17 @@
                                     </div>
 
                                     <h3>
-                                        <a href="#">政务项目管理平台</a></h3>
+                                        <a href="#">������Ŀ����ƽ̨</a></h3>
                                     <h3>
                                         <br />
-                                        10000元起
+                                        10000Ԫ��
                                     </h3>
                                     <p>
                                         &nbsp;
                                     </p>
                                     <div class="pointer">
                                         <p class="pointer_one">
-                                            <a href="#">政务项目管理</a>
+                                            <a href="#">������Ŀ����</a>
                                         </p>
                                     </div>
                                 </li>
@@ -222,35 +222,35 @@
 
 
                                     <h3>
-                                        <a href="#">项目管理咨询</a></h3>
+                                        <a href="#">��Ŀ������ѯ</a></h3>
                                     <h3>
                                         <br />
-                                        30000元起
+                                        30000Ԫ��
                                     </h3>
                                     <p>
                                         &nbsp;
                                     </p>
                                     <div class="pointer">
                                         <p class="pointer_one">
-                                            <a href="#">项目管理咨询、培训、认证</a>
+                                            <a href="#">��Ŀ������ѯ����ѵ����֤</a>
                                         </p>
                                     </div>
                                 </li>
                                 <%--  <li class="bigbox">
                                     <div class="img"><a href="#"><img src="Logo/website/Images/201312181423378443.png" /></a></div>
 
-                                    <h3><a href="#">CRM、OA</a></h3>
+                                    <h3><a href="#">CRM��OA</a></h3>
 
                                     <h3>
                                         <br />
-                                        15000元起
+                                        15000Ԫ��
                                     </h3>
 
                                     <p>&nbsp;</p>
 
                                     <div class="pointer">
-                                        <p class="pointer_one"><a href="#">CRM:客户&middot;售前售后服务&middot;进销存等</a></p>
-                                        <p class="pointer_one"><a href="#">OA:流程&middot;资产&middot;知识&middot;车辆等</a></p>
+                                        <p class="pointer_one"><a href="#">CRM:�ͻ�&middot;��ǰ�ۺ����&middot;�������</a></p>
+                                        <p class="pointer_one"><a href="#">OA:����&middot;�ʲ�&middot;֪ʶ&middot;������</a></p>
                                     </div>
                                 </li>
                                
@@ -258,17 +258,17 @@
                                  <li class="bigbox">
                                     <div class="img"><a href="#"><img src="Logo/website/Images/20131218142463453.png" /></a></div>
 
-                                    <h3><a href="#">综合管理平台</a></h3>
+                                    <h3><a href="#">�ۺϹ���ƽ̨</a></h3>
 
                                     <h3>
                                         <br />
-                                        100000元起
+                                        100000Ԫ��
                                     </h3>
 
                                     <p>&nbsp;</p>
 
                                     <div class="pointer">
-                                        <p class="pointer_one"><a href="#">常规行业&middot;工程行业&middot;石化行业</a></p>
+                                        <p class="pointer_one"><a href="#">������ҵ&middot;������ҵ&middot;ʯ����ҵ</a></p>
                                     </div>
                                 </li>--%>
                             </ul>
@@ -283,53 +283,53 @@
                                                 <tr>
                                                     <td width="50%">
                                                         <p class="zuyong">
-                                                            &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<strong>购买泰顶拓鼎管理软件</strong>（使用时间不限，软件安装在用户自备的服务器上）请在下面填写购买申请，我们将会提供现场实施指导和定制开发服务！
+                                                            &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<strong>����̩���ض���������</strong>��ʹ��ʱ�䲻�ޣ�������װ���û��Ա��ķ������ϣ�����������д�������룬���ǽ����ṩ�ֳ�ʵʩָ���Ͷ��ƿ�������
                                                         </p>
                                                         <div id="id5">
                                                             <table class="ziti5" border="0" cellpadding="0" cellspacing="3" width="100%">
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" width="100px">产品
+                                                                    <td class="formItemBgStyle" width="100px">��Ʒ
                                                                     </td>
                                                                     <td class="formItemBgStyle">
                                                                         <asp:DropDownList ID="DL_Type" runat="server" Style="height: 50px;">
-                                                                            <asp:ListItem>项目宝</asp:ListItem>
-                                                                            <asp:ListItem>系统集成项目管理平台</asp:ListItem>
-                                                                            <asp:ListItem>研发项目管理平台</asp:ListItem>
-                                                                            <asp:ListItem>工程项目管理平台</asp:ListItem>
-                                                                            <asp:ListItem>政务项目管理平台</asp:ListItem>
-                                                                            <asp:ListItem>软件实施项目管理平台</asp:ListItem>
-                                                                            <asp:ListItem>项目型ERP平台</asp:ListItem>
-                                                                            <asp:ListItem>项目综合管理平台</asp:ListItem>
+                                                                            <asp:ListItem>��Ŀ��</asp:ListItem>
+                                                                            <asp:ListItem>ϵͳ������Ŀ����ƽ̨</asp:ListItem>
+                                                                            <asp:ListItem>�з���Ŀ����ƽ̨</asp:ListItem>
+                                                                            <asp:ListItem>������Ŀ����ƽ̨</asp:ListItem>
+                                                                            <asp:ListItem>������Ŀ����ƽ̨</asp:ListItem>
+                                                                            <asp:ListItem>����ʵʩ��Ŀ����ƽ̨</asp:ListItem>
+                                                                            <asp:ListItem>��Ŀ��ERPƽ̨</asp:ListItem>
+                                                                            <asp:ListItem>��Ŀ�ۺϹ���ƽ̨</asp:ListItem>
                                                                             <asp:ListItem>--------------</asp:ListItem>
-                                                                            <asp:ListItem>协同OA平台</asp:ListItem>
-                                                                            <asp:ListItem>客户关系管理平台</asp:ListItem>
+                                                                            <asp:ListItem>ЭͬOAƽ̨</asp:ListItem>
+                                                                            <asp:ListItem>�ͻ���ϵ����ƽ̨</asp:ListItem>
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle">版本
+                                                                    <td class="formItemBgStyle">�汾
                                                                     </td>
                                                                     <td class="formItemBgStyle">
                                                                         <table>
                                                                             <tr>
                                                                                 <td>
                                                                                     <asp:DropDownList ID="DL_Version" runat="server" Style="height: 50px;">
-                                                                                        <asp:ListItem>标准版</asp:ListItem>
-                                                                                        <asp:ListItem>企业版</asp:ListItem>
-                                                                                        <asp:ListItem>集团版</asp:ListItem>
+                                                                                        <asp:ListItem>��׼��</asp:ListItem>
+                                                                                        <asp:ListItem>��ҵ��</asp:ListItem>
+                                                                                        <asp:ListItem>���Ű�</asp:ListItem>
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                                 <td>&nbsp;
                                                                                 </td>
                                                                                 <td style="vertical-align: middle;">
-                                                                                    <a href="TakeTopSoftModuleChart_TakeTopSoftCloud.html" target="_blank">模块与价格</a>
+                                                                                    <a href="TakeTopSoftModuleChart_TakeTopSoftCloud.html" target="_blank">ģ����۸�</a>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle">公司
+                                                                    <td class="formItemBgStyle">��˾
                                                                     </td>
                                                                     <td class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_Company" runat="server" ForeColor="#000000" Style="width: 350px; height: 30px;"></asp:TextBox>
@@ -337,7 +337,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle">联系人
+                                                                    <td class="formItemBgStyle">��ϵ��
                                                                     </td>
                                                                     <td class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_ContactPerson" runat="server" ForeColor="#000000" Style="width: 350px; height: 30px;"></asp:TextBox>
@@ -345,13 +345,13 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle" style="padding-bottom: 25px;">手机
+                                                                    <td class="formItemBgStyle" style="padding-bottom: 25px;">�ֻ�
                                                                     </td>
                                                                     <td class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_PhoneNumber" runat="server" ForeColor="#000000" Style="width: 350px; height: 30px;"></asp:TextBox>
                                                                         &nbsp;<font color="#FF0000">*</font>
                                                                         <br />
-                                                                        <span style="font-size: xx-small;">注：要接收重要信息，请正确填写！</span>
+                                                                        <span style="font-size: xx-small;">ע��Ҫ������Ҫ��Ϣ������ȷ��д��</span>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -361,19 +361,19 @@
                                                                         <asp:TextBox ID="TB_EMail" runat="server" Style="width: 350px; height: 30px;" onclick="checkEmailFormat('TB_EMail')"></asp:TextBox>
                                                                         &nbsp;<font color="#FF0000">*</font>
                                                                         <br />
-                                                                        <span style="font-size: xx-small;">注：要接收重要信息，请正确填写！</span>
+                                                                        <span style="font-size: xx-small;">ע��Ҫ������Ҫ��Ϣ������ȷ��д��</span>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="formItemBgStyle">用户数
+                                                                    <td class="formItemBgStyle">�û���
                                                                     </td>
                                                                     <td class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_UserNumber" runat="server" ForeColor="#000000" Style="width: 150px; height: 30px;"></asp:TextBox>
-                                                                        <strong>人</strong> <font color="#FF0000">*</font>
+                                                                        <strong>��</strong> <font color="#FF0000">*</font>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td align="left" class="formItemBgStyle">验证码
+                                                                    <td align="left" class="formItemBgStyle">��֤��
                                                                     </td>
                                                                     <td align="left" class="formItemBgStyle">
                                                                         <table>
@@ -393,13 +393,13 @@
                                                                     </td>
                                                                     <td class="formItemBgStyle">
                                                                         <asp:Button ID="BT_Summit" runat="server" OnClick="BT_Summit_Click" Style="width: 130px; height: 30px;"
-                                                                            Text="提 交" />
+                                                                            Text="�� ��" />
                                                                         <asp:Label ID="LB_Message" runat="server" ForeColor="Red"></asp:Label>
                                                                         <br />
                                                                     </td>
                                                                 </tr>
                                                                 <tr style="display: none;">
-                                                                    <td class="formItemBgStyle">联系地址
+                                                                    <td class="formItemBgStyle">��ϵ��ַ
                                                                     </td>
                                                                     <td class="formItemBgStyle">
                                                                         <asp:TextBox ID="TB_Address" runat="server" Style="width: 350px; height: 30px;"></asp:TextBox>
@@ -407,11 +407,11 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr style="display: none;">
-                                                                    <td class="formItemBgStyle">存储容量
+                                                                    <td class="formItemBgStyle">�洢����
                                                                     </td>
                                                                     <td class="formItemBgStyle">
                                                                         <asp:DropDownList ID="DL_ServerType" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DL_ServerType_SelectedIndexChanged">
-                                                                            <asp:ListItem>购买</asp:ListItem>
+                                                                            <asp:ListItem>����</asp:ListItem>
                                                                         </asp:DropDownList>
                                                                         <asp:TextBox ID="TB_StorageCapacity" runat="server" Style="width: 50px;" Text="10"></asp:TextBox><strong
                                                                             style="font-size: medium;">GB</strong> <font color="#FF0000">*</font>
@@ -419,9 +419,9 @@
                                                                 </tr>
                                                             </table>
                                                             <br />
-                                                            <li>提交成功后，客服将会立刻联系你，你也可以直接联系主管：<br />
+                                                            <li>�ύ�ɹ��󣬿ͷ�����������ϵ�㣬��Ҳ����ֱ����ϵ���ܣ�<br />
                                                                 &nbsp;&nbsp;<a href="tencent://message/?uin=3166455252&amp;Site=&amp;Menu=yes"><img
-                                                                    align="absmiddle" src="images/qq.png" />客服QQ</a>，电话：<a href="tel:02151085119"
+                                                                    align="absmiddle" src="images/qq.png" />�ͷ�QQ</a>���绰��<a href="tel:02151085119"
                                                                         class="call">021-51085119</a></li>
                                                         </div>
                                                     </td>

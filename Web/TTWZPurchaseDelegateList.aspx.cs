@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +23,7 @@ public partial class TTWZPurchaseDelegateList : System.Web.UI.Page
         strUserNeme = ShareClass.GetUserName(strUserCode);
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "æœŸåˆæ•°æ®å¯¼å…¥", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ÆÚ³õÊı¾İµ¼Èë", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -114,10 +114,10 @@ public partial class TTWZPurchaseDelegateList : System.Web.UI.Page
 
                 HF_PurchaseCode.Value = cmdArges;
 
-                //åŠ è½½ä¸“å®¶åˆ—è¡¨
+                //¼ÓÔØ×¨¼ÒÁĞ±í
                 DataWZPurchaseExpertBinder(cmdArges);
 
-                //åŠ è½½å†³ç­–è®°å½•
+                //¼ÓÔØ¾ö²ß¼ÇÂ¼
                 DataPurchaseDecisionBinder(cmdArges);
 
 
@@ -135,7 +135,7 @@ public partial class TTWZPurchaseDelegateList : System.Web.UI.Page
                     strProgress = wZPurchase.Progress.Trim();
                     dePlanMoney = wZPurchase.PlanMoney;
 
-                    if (strDecision == strUserCode & strProgress == "æŠ¥æ‰¹" & dePlanMoney < 300000)
+                    if (strDecision == strUserCode & strProgress == "±¨Åú" & dePlanMoney < 300000)
                     {
                         BT_Decision.Enabled = true;
                     }
@@ -161,7 +161,7 @@ public partial class TTWZPurchaseDelegateList : System.Web.UI.Page
 
     private void DataPurchaseSupplierBinder(string strPurchaseCode)
     {
-        //åŠ è½½ä¾›åº”å•†
+        //¼ÓÔØ¹©Ó¦ÉÌ
         string strPurchaseSupplierHQL = string.Format(@"select s.*,ps.PurchaseCode,p.UserName as PushPersonName from T_WZSupplier s
                     left join T_WZPurchaseSupplier ps on s.SupplierCode = ps.SupplierCode
                     left join T_ProjectMember p on s.PushPerson = p.UserCode
@@ -192,7 +192,7 @@ public partial class TTWZPurchaseDelegateList : System.Web.UI.Page
 
     private void DataWZPurchaseExpertBinder(string strPurchaseCode)
     {
-        //åŠ è½½ä¸“å®¶
+        //¼ÓÔØ×¨¼Ò
         string strPurchaseExpertHQL = string.Format(@"select * from T_WZPurchaseExpert
                     where PurchaseCode = '{0}'", strPurchaseCode);
         DataTable dtPurchaseExpert = ShareClass.GetDataSetFromSql(strPurchaseExpertHQL, "PurchaseExpert").Tables[0];
@@ -209,7 +209,7 @@ public partial class TTWZPurchaseDelegateList : System.Web.UI.Page
 
     private void DataSupplierApplyBinder(string strPurchaseCode, string strExpertCode)
     {
-        //æŸ¥è¯¢é‡‡è´­æ–‡ä»¶ä¿¡æ¯ç»‘å®š
+        //²éÑ¯²É¹ºÎÄ¼şĞÅÏ¢°ó¶¨
         string strWZSupplierApplyCommentHQL = string.Format(@"select a.*,
                         s1.SupplierName as SupplierCode1Name,
                         s2.SupplierName as SupplierCode2Name,
@@ -223,7 +223,7 @@ public partial class TTWZPurchaseDelegateList : System.Web.UI.Page
         DataTable dtWZSupplierApplyComment = ShareClass.GetDataSetFromSql(strWZSupplierApplyCommentHQL, "WZSupplierApplyComment").Tables[0];
         if (dtWZSupplierApplyComment != null && dtWZSupplierApplyComment.Rows.Count == 1)
         {
-            //ä¿®æ”¹
+            //ĞŞ¸Ä
             DataRow drSupplierApplyComment = dtWZSupplierApplyComment.Rows[0];
 
             TXT_Suggest.Text = ShareClass.ObjectToString(drSupplierApplyComment["Suggest"]);
@@ -240,7 +240,7 @@ public partial class TTWZPurchaseDelegateList : System.Web.UI.Page
 
     private void DataPurchaseDecisionBinder(string strPurchaseCode)
     {
-        //åŠ è½½å†³ç­–
+        //¼ÓÔØ¾ö²ß
         string strPurchaseDecisionHQL = string.Format(@"select a.*,
                     s1.SupplierName as SupplierName1,
                     s2.SupplierName as SupplierName2,
@@ -275,7 +275,7 @@ public partial class TTWZPurchaseDelegateList : System.Web.UI.Page
         }
 
 
-        //åŠ è½½ä¾›åº”å•†
+        //¼ÓÔØ¹©Ó¦ÉÌ
         WZPurchaseSupplierBLL wZPurchaseSupplierBLL = new WZPurchaseSupplierBLL();
         string strPurchaseSupplierHQL = "from WZPurchaseSupplier as wZPurchaseSupplier where PurchaseCode = '" + strPurchaseCode + "'";
         IList lstPurchaseSupplier = wZPurchaseSupplierBLL.GetAllWZPurchaseSuppliers(strPurchaseSupplierHQL);
@@ -306,7 +306,7 @@ public partial class TTWZPurchaseDelegateList : System.Web.UI.Page
         DataTable dtWZSupplierApplyComment = ShareClass.GetDataSetFromSql(strWZSupplierApplyCommentHQL, "SupplierApplyComment").Tables[0];
         if (dtWZSupplierApplyComment != null )
         {
-            //ä¿®æ”¹
+            //ĞŞ¸Ä
             DataRow drSupplierApplyComment = dtWZSupplierApplyComment.Rows[0];
 
             DL_DecisionSupplier1.SelectedValue = ShareClass.ObjectToString(drSupplierApplyComment["SupplierCode1"]);
@@ -368,15 +368,15 @@ public partial class TTWZPurchaseDelegateList : System.Web.UI.Page
             }
 
             string strHQL;
-            //é‡‡è´­æ–‡ä»¶
-            strHQL = "Update T_WZPurchase Set Progress = 'å†³ç­–' Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'";
+            //²É¹ºÎÄ¼ş
+            strHQL = "Update T_WZPurchase Set Progress = '¾ö²ß' Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'";
             ShareClass.RunSqlCommand(strHQL);
 
-            //æŠ¥ä»·å•
-            strHQL = "Update T_WZPurchaseOfferRecord Set Progress = 'å†³ç­–'  Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'";
+            //±¨¼Ûµ¥
+            strHQL = "Update T_WZPurchaseOfferRecord Set Progress = '¾ö²ß'  Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'";
             ShareClass.RunSqlCommand(strHQL);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ä¿å­˜æˆåŠŸï¼');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('±£´æ³É¹¦£¡');", true);
         }
         catch (Exception ex)
         {
@@ -412,16 +412,16 @@ public partial class TTWZPurchaseDelegateList : System.Web.UI.Page
                 wZPurchaseDecisionBLL.DeleteWZPurchaseDecision(wZPurchaseDecision);
 
                 string strHQL;
-                //é‡‡è´­æ–‡ä»¶
-                strHQL = "Update T_WZPurchase Set Progress = 'æŠ¥æ‰¹' Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'";
+                //²É¹ºÎÄ¼ş
+                strHQL = "Update T_WZPurchase Set Progress = '±¨Åú' Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'";
                 ShareClass.RunSqlCommand(strHQL);
 
-                //æŠ¥ä»·å•
-                strHQL = "Update T_WZPurchaseOfferRecord Set Progress = 'æŠ¥æ‰¹'  Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'";
+                //±¨¼Ûµ¥
+                strHQL = "Update T_WZPurchaseOfferRecord Set Progress = '±¨Åú'  Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'";
                 ShareClass.RunSqlCommand(strHQL);
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å–æ¶ˆæˆåŠŸï¼');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('È¡Ïû³É¹¦£¡');", true);
         }
         catch (Exception ex)
         {

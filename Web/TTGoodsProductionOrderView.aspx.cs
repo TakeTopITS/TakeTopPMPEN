@@ -1,4 +1,4 @@
-ï»¿
+
 using System;
 using System.Collections;
 using System.Data;
@@ -17,7 +17,7 @@ public partial class TTGoodsProductionOrderView : System.Web.UI.Page
 
         strPDID = Request.QueryString["PDID"];
 
-        //this.Title = "ç‰©æ–™ç”Ÿäº§å•";
+        //this.Title = "ÎïÁÏÉú²úµ¥";
 
 
         if (Page.IsPostBack != true)

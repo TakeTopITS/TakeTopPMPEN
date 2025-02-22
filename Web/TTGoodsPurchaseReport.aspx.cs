@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -28,14 +28,14 @@ public partial class TTGoodsPurchaseReport : System.Web.UI.Page
         string strUserName;
         string strUserCode = Session["UserCode"].ToString();
 
-        //this.Title = "ç‰©æ–™é‡‡è´­æŠ¥è¡¨";
+        //this.Title = "ÎïÁÏ²É¹º±¨±í";
 
         LB_UserCode.Text = strUserCode;
         strUserName = ShareClass.GetUserName(strUserCode);
         LB_UserName.Text = strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ç‰©æ–™é‡‡è´­æŠ¥è¡¨", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ÎïÁÏ²É¹º±¨±í", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -185,23 +185,23 @@ public partial class TTGoodsPurchaseReport : System.Web.UI.Page
 
         strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthorityAsset(strUserCode);
 
-        strHQL = @"Select  B.GPOName 'åç§°' 
-            ,B.PurManName 'ä¸šåŠ¡å‘˜'
-            ,B.Supplier 'ä¾›åº”å•†'
+        strHQL = @"Select  B.GPOName 'Ãû³Æ' 
+            ,B.PurManName 'ÒµÎñÔ±'
+            ,B.Supplier 'Supplier'
 
-            ,A.ID 'ç¼–å·'
-            ,A.GoodsCode 'ä»£ç '
-            ,A.GoodsName 'å•†å“åç§°'
-            ,A.ModelNumber 'åž‹å·'
-            ,A.Spec 'è§„æ ¼'
-            ,A.Number 'æ•°é‡'
-            ,A.Unit 'å•ä½'
-            ,A.Price 'å•ä»·'
-            ,A.SupplyNumber 'ä¾›è´§é‡'
-            ,A.ReturnNumber 'é€€è´§é‡'
-            ,A.Amount 'é‡‘é¢'
-            ,B.CurrencyType 'å¸åˆ«'
-            ,B.PurTime 'æ—¶é—´'
+            ,A.ID '±àºÅ'
+            ,A.GoodsCode '´úÂë'
+            ,A.GoodsName 'ÉÌÆ·Ãû³Æ'
+            ,A.ModelNumber 'ÐÍºÅ'
+            ,A.Spec '¹æ¸ñ'
+            ,A.Number 'ÊýÁ¿'
+            ,A.Unit 'µ¥Î»'
+            ,A.Price 'µ¥¼Û'
+            ,A.SupplyNumber '¹©»õÁ¿'
+            ,A.ReturnNumber 'ÍË»õÁ¿'
+            ,A.Amount '½ð¶î'
+            ,B.CurrencyType '±Ò±ð'
+            ,B.PurTime 'Ê±¼ä'
             from T_GoodsPurRecord A,T_GoodsPurchaseOrder B where A.POID = B.POID";
 
         strHQL += " and to_char(A.PurTime,'yyyymmdd')  >= " + "'" + strStartTime + "'" + "  and to_char(A.PurTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
@@ -220,9 +220,9 @@ public partial class TTGoodsPurchaseReport : System.Web.UI.Page
 
         DataTable dtSaleOrder = ds.Tables[0];
 
-        Export3Excel(dtSaleOrder, "é‡‡è´­è®¢å•æŠ¥è¡¨.xls");
+        Export3Excel(dtSaleOrder, "²É¹º¶©µ¥±¨±í.xls");
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¯¼å‡ºæˆåŠŸï¼');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µ¼³ö³É¹¦£¡');", true);
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

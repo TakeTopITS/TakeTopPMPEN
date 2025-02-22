@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections;
 using System.Data;
 using System.Web.UI;
@@ -44,7 +44,7 @@ public partial class TTWorkFlowCommonDataViewForBrowse : System.Web.UI.Page
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickParentA", "aHandlerForWorkflowCommonFormDataPopWindow();", true);
             if (Page.IsPostBack == false)
             {
-                //å–æœ€æ–°æµç¨‹è¡¨å•æ•°æ®æ–‡ä»¶ï¼Œå¹¶åœ¨æ›¿æ¢ä¸å¯è§†åŸŸ
+                //È¡×îÐÂÁ÷³Ì±íµ¥Êý¾ÝÎÄ¼þ£¬²¢ÔÚÌæ»»²»¿ÉÊÓÓò
                 WFDataHandle wfDataHandle = new WFDataHandle();
                 strUnVisibleFieldXMLFile = wfDataHandle.GetXMLFileAfterReplaceWFXmlUNVisibleFieldNode(strWLID, strID, strXMLFileURL);
                 LB_UnVisibleFieldXMLFile.Text = strUnVisibleFieldXMLFile;
@@ -561,7 +561,7 @@ public partial class TTWorkFlowCommonDataViewForBrowse : System.Web.UI.Page
 
     }
 
-    //å–å¾—æ­¤æ­¥çš„ä¸»è¡¨æ•°æ®æ–‡ä»¶
+    //È¡µÃ´Ë²½µÄÖ÷±íÊý¾ÝÎÄ¼þ
     protected string GetWorkflowStepDetailXMLFile(string strID)
     {
         string strHQL;
@@ -577,7 +577,7 @@ public partial class TTWorkFlowCommonDataViewForBrowse : System.Web.UI.Page
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—æ­¤æ­¥çš„æ˜Žç»†è¡¨æ•°æ®æ–‡ä»¶
+    //È¡µÃ´Ë²½µÄÃ÷Ï¸±íÊý¾ÝÎÄ¼þ
     protected string GetWorkflowStepDetailDetailXMLFile(string strID)
     {
         string strHQL;
@@ -593,7 +593,7 @@ public partial class TTWorkFlowCommonDataViewForBrowse : System.Web.UI.Page
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—æ˜¯å¦å…è®¸å…¨è¡¨ç¼–è¾‘
+    //È¡µÃÊÇ·ñÔÊÐíÈ«±í±à¼­
     protected string GetWorkflowStepDetailAllowFullEdit(string strStepDetailID)
     {
         string strHQL;
@@ -651,7 +651,7 @@ public partial class TTWorkFlowCommonDataViewForBrowse : System.Web.UI.Page
     }
 
 
-    //å–å¾—ç‰©èµ„ä¾›åº”å•†çš„ç´¯è®¡é‡‘é¢
+    //È¡µÃÎï×Ê¹©Ó¦ÉÌµÄÀÛ¼Æ½ð¶î
     public decimal GetTotalProjectMaterialPaymentApplicantAmount(string strSupplier, string strProjectID)
     {
         string strHQL;
@@ -673,7 +673,7 @@ public partial class TTWorkFlowCommonDataViewForBrowse : System.Web.UI.Page
         }
     }
 
-    //å–å¾—ç‰©èµ„å·²ä»˜ä¾›åº”å•†çš„ç´¯è®¡é‡‘é¢
+    //È¡µÃÎï×ÊÒÑ¸¶¹©Ó¦ÉÌµÄÀÛ¼Æ½ð¶î
     public decimal GetProjectTotalAleadyMaterialPaymentApplicantAmount(string strSupplier, string strProjectID)
     {
         string strHQL;
@@ -683,7 +683,7 @@ public partial class TTWorkFlowCommonDataViewForBrowse : System.Web.UI.Page
         {
             strHQL += " and ProjectID = " + strProjectID;
         }
-        strHQL += " and Status = 'å·²è®°è´¦'";
+        strHQL += " and Status = 'Recorded'";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectMaterialPaymentApplicant");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -696,7 +696,7 @@ public partial class TTWorkFlowCommonDataViewForBrowse : System.Web.UI.Page
         }
     }
 
-    //å–å¾—èµ„äº§ä¾›åº”å•†çš„ç´¯è®¡é‡‘é¢
+    //È¡µÃ×Ê²ú¹©Ó¦ÉÌµÄÀÛ¼Æ½ð¶î
     public decimal GetTotalSupplierAssetPaymentApplicantAmount(string strSupplier, string strProjectID)
     {
         string strHQL;
@@ -718,7 +718,7 @@ public partial class TTWorkFlowCommonDataViewForBrowse : System.Web.UI.Page
         }
     }
 
-    //å–å¾—èµ„äº§å·²ä»˜ä¾›åº”å•†çš„ç´¯è®¡é‡‘é¢
+    //È¡µÃ×Ê²úÒÑ¸¶¹©Ó¦ÉÌµÄÀÛ¼Æ½ð¶î
     public decimal GetSupplierAssetAleadyMaterialPaymentApplicantAmount(string strSupplier, string strProjectID)
     {
         string strHQL;
@@ -728,7 +728,7 @@ public partial class TTWorkFlowCommonDataViewForBrowse : System.Web.UI.Page
         {
             strHQL += " and ProjectID = " + strProjectID;
         }
-        strHQL += " and Status = 'å·²è®°è´¦'";
+        strHQL += " and Status = 'Recorded'";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_SupplierAssetPaymentApplicant");
 
         if (ds.Tables[0].Rows.Count > 0)
@@ -742,7 +742,7 @@ public partial class TTWorkFlowCommonDataViewForBrowse : System.Web.UI.Page
     }
 
 
-    //å–å¾—åˆ†åŒ…ä¾›åº”å•†çš„ä»˜æ¬¾æ€»é¢
+    //È¡µÃ·Ö°ü¹©Ó¦ÉÌµÄ¸¶¿î×Ü¶î
     public decimal GetTotalBMPurchaseApplicationAmount(string strSupplierName, string strProjectID)
     {
         string strHQL;
@@ -764,7 +764,7 @@ public partial class TTWorkFlowCommonDataViewForBrowse : System.Web.UI.Page
         }
     }
 
-    //å–å¾—åˆ†åŒ…ä¾›åº”å•†çš„å·²ä»˜æ¬¾æ€»é¢
+    //È¡µÃ·Ö°ü¹©Ó¦ÉÌµÄÒÑ¸¶¿î×Ü¶î
     public decimal GetTotalAleadyBMPurchaseApplicationAmount(string strSupplierName, string strProjectID)
     {
         string strHQL;
@@ -774,7 +774,7 @@ public partial class TTWorkFlowCommonDataViewForBrowse : System.Web.UI.Page
         {
             strHQL += " and ProjectID = " + strProjectID;
         }
-        strHQL += " and Status = 'å·²è®°è´¦'";
+        strHQL += " and Status = 'Recorded'";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_BMPurchaseApplication");
 
         if (ds.Tables[0].Rows.Count > 0)

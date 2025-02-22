@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DefaultSiteLeftRight.aspx.cs" Inherits="DefaultSiteLeftRight" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DefaultSiteLeftRight.aspx.cs" Inherits="DefaultSiteLeftRight" %>
 
 <!DOCTYPE html>
 

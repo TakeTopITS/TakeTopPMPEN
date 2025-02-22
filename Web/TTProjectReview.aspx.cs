@@ -1,4 +1,4 @@
-Ôªøusing System; using System.Resources;
+using System; using System.Resources;
 using System.Data;
 using System.Configuration;
 using System.Collections;
@@ -35,7 +35,7 @@ public partial class TTProjectReview : System.Web.UI.Page
 
             strProjectName = GetProjectName(strProjectID);
 
-            //this.Title = Resources.lang.Project + strProjectID„ÄÄ+" " + strProjectName + " ÂÆûÊñΩËÆ°ÂàíÔºÅ";
+            //this.Title = Resources.lang.Project + strProjectID°°+" " + strProjectName + "  µ ©º∆ªÆ£°";
 
             strHQL = "from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID;
 

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -48,7 +48,7 @@ public partial class TTConstractReceivablesRecordView : System.Web.UI.Page
         strReceivablesCurrency = constractReceivables.CurrencyType.Trim();
         deReceivablesExchangeRate = ShareClass.GetExchangeRateByCurrencyType(strReceivablesCurrency);
 
-        //this.Title = "æ”¶æ¬¾è®¡åˆ’ï¼š" + strReceivablesID + " æ‰§è¡Œæƒ…å†µ";
+        //this.Title = "ÊÕ¿î¼Æ»®£º" + strReceivablesID + " Ö´ÐÐÇé¿ö";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)

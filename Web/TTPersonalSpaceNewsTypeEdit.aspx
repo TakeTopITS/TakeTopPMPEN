@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPersonalSpaceNewsTypeEdit.aspx.cs" Inherits="TTPersonalSpaceNewsTypeEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPersonalSpaceNewsTypeEdit.aspx.cs" Inherits="TTPersonalSpaceNewsTypeEdit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -51,7 +51,7 @@
                                                                     <td>(
                                                                     </td>
                                                                     <td>
-                                                                        <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,YuYan%>"></asp:Label>ï¼š
+                                                                        <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,YuYan%>"></asp:Label>£º
                                                                     </td>
                                                                     <td>
                                                                         <asp:DropDownList ID="ddlLangSwitcher" runat="server" AutoPostBack="true" DataTextField="Language" DataValueField="LangCode" OnSelectedIndexChanged="ddlLangSwitcher_SelectedIndexChanged">
@@ -141,12 +141,12 @@
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <Columns>
 
-                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ä¿®æ”¹' /&gt;&lt;/div&gt;">
+                                                        <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ÐÞ¸Ä' /&gt;&lt;/div&gt;">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:ButtonColumn>
                                                         <asp:TemplateColumn HeaderText="Delete">
                                                             <ItemTemplate>
-                                                                <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='åˆ é™¤' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                                <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:TemplateColumn>
@@ -160,13 +160,13 @@
                                                         <asp:BoundColumn DataField="HomeName" HeaderText="Type">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="LangCode" HeaderText="è¯­è¨€">
+                                                        <asp:BoundColumn DataField="LangCode" HeaderText="ÓïÑÔ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="PageName" HeaderText="é¡µé¢">
+                                                        <asp:BoundColumn DataField="PageName" HeaderText="Ò³Ãæ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="25%" />
                                                         </asp:BoundColumn>
-                                                        <asp:TemplateColumn HeaderText="èŒƒå›´">
+                                                        <asp:TemplateColumn HeaderText="·¶Î§">
                                                             <ItemTemplate>
                                                                 <asp:DropDownList ID="DL_NewsScope" runat="server">
                                                                     <asp:ListItem Value="ALL" Text="<%$ Resources:lang,QuanBu%>"></asp:ListItem>
@@ -176,14 +176,14 @@
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                         </asp:TemplateColumn>
-                                                        <asp:TemplateColumn HeaderText="å¯ç”¨">
+                                                        <asp:TemplateColumn HeaderText="¿ÉÓÃ">
                                                             <ItemTemplate>
                                                                 <asp:CheckBox ID="CB_Visible" runat="server" />
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                         </asp:TemplateColumn>
 
-                                                        <asp:TemplateColumn HeaderText="é¡ºåº">
+                                                        <asp:TemplateColumn HeaderText="Ë³Ðò">
                                                             <ItemTemplate>
                                                                 <asp:TextBox ID="TB_SortNumber" runat="server" Width="25px" Text='<%# DataBinder.Eval(Container.DataItem,"SortNumber") %>'></asp:TextBox>
                                                             </ItemTemplate>

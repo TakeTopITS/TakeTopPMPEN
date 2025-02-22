@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppCustomerQuestionHandleDetailForMembers.aspx.cs" Inherits="TTAppCustomerQuestionHandleDetailForMembers" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppCustomerQuestionHandleDetailForMembers.aspx.cs" Inherits="TTAppCustomerQuestionHandleDetailForMembers" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
 
@@ -91,7 +91,7 @@
                                                                         </td>
                                                                     </tr>
                                                                 </table>
-                                                                  <img id="IMG_Waiting" src="Images/Processing.gif" alt="è¯·ç¨å€™ï¼Œå¤„ç†ä¸­..." style ="display :none;" />
+                                                                  <img id="IMG_Waiting" src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖÐ..." style ="display :none;" />
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -103,17 +103,17 @@
                                                 <table width="99%">
                                                     <tr>
                                                         <td colspan ="2" style="text-align: left; padding-left: 5px;">
-                                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XuQiuMingCheng%>"></asp:Label>ï¼š<asp:Label ID="LB_ServiceID" runat="server"></asp:Label>
+                                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XuQiuMingCheng%>"></asp:Label>£º<asp:Label ID="LB_ServiceID" runat="server"></asp:Label>
                                                             &nbsp;
                                                             <asp:Label ID="LB_ServiceName" runat="server"></asp:Label>
                                                             <br />
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,KeHuMingCheng%>"></asp:Label>ï¼š<asp:Label ID="LB_CompanyName" runat="server"></asp:Label>
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,KeHuMingCheng%>"></asp:Label>£º<asp:Label ID="LB_CompanyName" runat="server"></asp:Label>
                                                              <br />
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>ï¼š<asp:Label ID="LB_Type" runat="server"></asp:Label>
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º<asp:Label ID="LB_Type" runat="server"></asp:Label>
 
                                                                   <br />
                                                             <asp:Label ID="Label42" runat="server" Text="<%$ Resources:lang,LianXiRen%>"></asp:Label>
-                                                            ï¼š<asp:Label ID="LB_ContactPerson" runat="server"></asp:Label>
+                                                            £º<asp:Label ID="LB_ContactPerson" runat="server"></asp:Label>
                                                             &nbsp;
                                                             <asp:HyperLink ID="HL_PhoneNumber" runat="server" Text =""></asp:HyperLink>
                                                         </td>
@@ -155,7 +155,7 @@
                                                                 <table>
                                                                     <tr>
                                                                         <td style ="padding-top :3px;">
-                                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhiJieChengYuan%>"></asp:Label>ï¼š
+                                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhiJieChengYuan%>"></asp:Label>£º
                                                                         </td>
                                                                         <td style ="padding-top :5px;">
                                                                             <asp:DropDownList ID="DL_Operator" DataTextField="UserName" DataValueField="UserCode" runat="server">
@@ -174,7 +174,7 @@
                                                     <tr>
                                                         <td colspan="2" align="left">
 
-                                                            <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,KeFuJiLu%>"></asp:Label>ï¼š<br />
+                                                            <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,KeFuJiLu%>"></asp:Label>£º<br />
                                                             <asp:DataList ID="DataList3" runat="server" CellPadding="0" ForeColor="#333333"
                                                                 Height="1px" Width="100%">
 
@@ -483,12 +483,12 @@
                                         <asp:TextBox ID="TB_HandleWay" runat="server" Width="60%"></asp:TextBox>
                                         <asp:DropDownList ID="DL_HandleWay" runat="server"  AutoPostBack="true" OnSelectedIndexChanged="DL_ContactWay_SelectedIndexChanged">
                                             <asp:ListItem Value="" Text="<%$ Resources:lang,QingXuanZe%>" />
-                                            <asp:ListItem Value="ç”µè¯" Text="<%$ Resources:lang,DianHua%>" />
-                                            <asp:ListItem Value="å³æ—¶é€šè®¯" Text="<%$ Resources:lang,IM%>" />
-                                            <asp:ListItem Value="è¿œç¨‹æŽ§åˆ¶" Text="<%$ Resources:lang,YuanChengKongZhi%>" />
+                                            <asp:ListItem Value="µç»°" Text="<%$ Resources:lang,DianHua%>" />
+                                            <asp:ListItem Value="¼´Ê±Í¨Ñ¶" Text="<%$ Resources:lang,IM%>" />
+                                            <asp:ListItem Value="Ô¶³Ì¿ØÖÆ" Text="<%$ Resources:lang,YuanChengKongZhi%>" />
                                             <asp:ListItem Value="EMail" Text="<%$ Resources:lang,EMail%>" />
-                                            <asp:ListItem Value="ä¸Šé—¨æ‹œè®¿" Text="<%$ Resources:lang,ShangMenBaiFang%>" />
-                                            <asp:ListItem Value="å…¶å®ƒæ–¹å¼" Text="<%$ Resources:lang,QiTaFangShi%>" />
+                                            <asp:ListItem Value="ÉÏÃÅ°Ý·Ã" Text="<%$ Resources:lang,ShangMenBaiFang%>" />
+                                            <asp:ListItem Value="ÆäËü·½Ê½" Text="<%$ Resources:lang,QiTaFangShi%>" />
                                         </asp:DropDownList>
                                             <asp:Label ID="LB_ID" runat="server" Visible ="false" ></asp:Label>
                                     </td>
@@ -499,11 +499,11 @@
                                 <tr>   
                                     <td class="formItemBgStyle" style="text-align: left;">
                                         <asp:DropDownList ID="DL_HandleStatus" runat="server" Width="99%" >
-                                            <asp:ListItem Value="å¤„ç†ä¸­" Text="<%$ Resources:lang,ChuLiZhong%>" />
-                                            <asp:ListItem Value="è¯„å®¡ä¸­" Text="<%$ Resources:lang,PingShenZhong%>" />
-                                            <asp:ListItem Value="æŒ‚èµ·" Text="<%$ Resources:lang,GuaQi%>" />
-                                            <asp:ListItem Value="å®Œæˆ" Text="<%$ Resources:lang,WanCheng%>" />
-                                            <asp:ListItem Value="å–æ¶ˆ" Text="<%$ Resources:lang,QuXiao%>" />
+                                            <asp:ListItem Value="InProgress" Text="<%$ Resources:lang,ChuLiZhong%>" />
+                                            <asp:ListItem Value="Reviewing" Text="<%$ Resources:lang,PingShenZhong%>" />
+                                            <asp:ListItem Value="Suspended" Text="<%$ Resources:lang,GuaQi%>" />
+                                            <asp:ListItem Value="Completed" Text="<%$ Resources:lang,WanCheng%>" />
+                                            <asp:ListItem Value="Cancel" Text="<%$ Resources:lang,QuXiao%>" />
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -514,9 +514,9 @@
                                     <td class="formItemBgStyle" style="text-align: left;">
                                         <NickLee:NumberBox ID="NB_UsedTime" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" Width="60%" Amount="1">1.00</NickLee:NumberBox>
                                         <asp:DropDownList ID="DL_TimeUnit" runat="server"  >
-                                            <asp:ListItem Value="åˆ†é’Ÿ" Text="<%$ Resources:lang,FenZhong%>" />
-                                            <asp:ListItem Value="å°æ—¶" Text="<%$ Resources:lang,XiaoShi%>" />
-                                            <asp:ListItem Value="å¤©" Text="<%$ Resources:lang,Tian%>" />
+                                            <asp:ListItem Value="·ÖÖÓ" Text="<%$ Resources:lang,FenZhong%>" />
+                                            <asp:ListItem Value="Ð¡Ê±" Text="<%$ Resources:lang,XiaoShi%>" />
+                                            <asp:ListItem Value="Ìì" Text="<%$ Resources:lang,Tian%>" />
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -552,7 +552,7 @@
                                                     <Upload:InputFile ID="AttachFile" runat="server" Width="180px" />
 
                                                     &nbsp;<asp:Button ID="BtnUP" runat="server" OnClick="BtnUP_Click" OnClientClick="javascript:document.getElementById('IMG_Uploading').style.display = 'block';" Text="<%$ Resources:lang,ShiYong%>" />
-                                                    <img id="IMG_Uploading" src="Images/Processing.gif" alt="è¯·ç¨å€™ï¼Œå¤„ç†ä¸­..." style="display: none;" />
+                                                    <img id="IMG_Uploading" src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖÐ..." style="display: none;" />
 
                                                     <br />
 

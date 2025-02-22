@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -50,9 +50,9 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
             DLC_EndDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
             strHQL = "select C.*,COALESCE(D.TotalBL,0) PercentRea from V_ProRelatedUser C left join (select A.ProjectID,COALESCE(B.TotalRea,0)/CASE WHEN A.Total = 0 Then 1 END as TotalBL from (select " +
-                "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='基础' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
-                "T_ProjectCostManage where Type='操作' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
-                "C.ProStatus not in ('新建','评审','隐藏','删除','归档','暂停','终止') and C.PMCode <> '" + strUserCode + "' Order by C.ProjectID DESC";
+                "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='Base' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
+                "T_ProjectCostManage where Type='Operation' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
+                "C.ProStatus not in ('New','Review','Hided','Deleted','Archived','Pause','Stop') and C.PMCode <> '" + strUserCode + "' Order by C.ProjectID DESC";
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectCost");
             DataGrid1.DataSource = ds;
             DataGrid1.DataBind();
@@ -140,10 +140,10 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
             relatedUser.Actor = "ProjectMember";
             relatedUser.JoinDate = DateTime.Now;
             relatedUser.LeaveDate = DateTime.Parse("2099-12-31");
-            relatedUser.Status = "计划";
+            relatedUser.Status = "Plan";
             relatedUser.WorkDetail = "";
             relatedUser.SMSCount = 0;
-            relatedUser.SalaryMethod = "工时";
+            relatedUser.SalaryMethod = "��ʱ";
             relatedUser.PromissionScale = 0;
             relatedUser.UnitHourSalary = 0;
             relatedUser.CanUpdatePlan = "NO";
@@ -158,13 +158,13 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
     {
         string strStatus = ((Button)e.Item.FindControl("BT_Status")).Text.Trim();
 
-        LB_QueryScope.Text = Resources.lang.Status + "：" + strStatus;
+        LB_QueryScope.Text = Resources.lang.Status + "��" + strStatus;
 
         string strUserCode = LB_UserCode.Text;
 
         string strHQL = "select C.*,COALESCE(D.TotalBL,0) PercentRea from V_ProRelatedUser C left join (select A.ProjectID,COALESCE(B.TotalRea,0)/CASE WHEN A.Total = 0 Then 1 END as TotalBL from (select " +
-            "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='基础' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
-            "T_ProjectCostManage where Type='操作' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
+            "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='Base' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
+            "T_ProjectCostManage where Type='Operation' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
             "C.ProjectID in (select ProjectID from T_Project where Status = '" + strStatus + "') and C.PMCode <> '" + strUserCode + "' Order by C.ProjectID DESC";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectCost");
@@ -184,9 +184,9 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
         string strUserCode = LB_UserCode.Text.Trim();
 
         string strHQL = "select C.*,COALESCE(D.TotalBL,0) PercentRea from V_ProRelatedUser C left join (select A.ProjectID,COALESCE(B.TotalRea,0)/CASE WHEN A.Total = 0 Then 1 END as TotalBL from (select " +
-            "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='基础' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
-            "T_ProjectCostManage where Type='操作' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
-            "C.ProStatus not in ('新建','评审','隐藏','删除','归档','暂停','终止') and C.PMCode <> '" + strUserCode + "' Order by C.ProjectID DESC";
+            "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='Base' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
+            "T_ProjectCostManage where Type='Operation' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
+            "C.ProStatus not in ('New','Review','Hided','Deleted','Archived','Pause','Stop') and C.PMCode <> '" + strUserCode + "' Order by C.ProjectID DESC";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectCost");
         DataGrid1.DataSource = ds;
@@ -213,8 +213,8 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
     //    strProjectID = treeNode.Target.Trim();
 
     //    strHQL = "select C.*,COALESCE(D.TotalBL,0) PercentRea from V_ProRelatedUser C left join (select A.ProjectID,COALESCE(B.TotalRea,0)/CASE WHEN A.Total = 0 Then 1 END as TotalBL from (select " +
-    //           "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='基础' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
-    //           "T_ProjectCostManage where Type='操作' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
+    //           "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='Base' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
+    //           "T_ProjectCostManage where Type='Operation' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
     //           "C.ProjectID in (select ProjectID from T_Project where ProjectID = " + strProjectID + ") and C.PMCode <> '" + strUserCode + "' Order by C.ProjectID DESC";
 
     //    DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectCost");
@@ -242,7 +242,7 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
             dtNowDate = DateTime.Now;
             strStatus = DataGrid1.Items[i].Cells[7].Text.Trim();
 
-            if (strStatus != "新建" & strStatus != "评审" & strStatus != "结案" & strStatus != "归档" & strStatus != "隐藏")
+            if (strStatus != "New" & strStatus != "Review" & strStatus != "CaseClosed" & strStatus != "Archived" & strStatus != "Hided")
             {
                 if (dtFinishedDate < dtNowDate)
                 {
@@ -361,7 +361,7 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
 
             deBudget = project.Budget;
 
-            //实际费用和预算对比
+            //ʵ�ʷ��ú�Ԥ��Ա�
             strHQL = "from ProRealCharge as proRealCharge where proRealCharge.ProjectID = " + strProjectID;
             lst = proRealChargeBLL.GetAllProRealCharges(strHQL);
             if (lst.Count == 0)
@@ -401,7 +401,7 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
                 }
             }
 
-            //标准成本和预算对比
+            //��׼�ɱ���Ԥ��Ա�
             deDefaultBudget = ShareClass.GetProjectDefaultFinishCost(strProjectID);
             if (deBudget == 0)
             {
@@ -443,8 +443,8 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
 
                 LB_ProBdg1.Text = strBudgetProjectID;
 
-                IMB_ProCost1.ToolTip = "已发生费用：" + deRealCharge.ToString() + " , 总预算：" + deBudget.ToString();
-                IMB_ProBdg1.ToolTip = "当前日期预算：" + deDefaultBudget.ToString() + " , 总预算：" + deBudget.ToString();
+                IMB_ProCost1.ToolTip = "�ѷ������ã�" + deRealCharge.ToString() + " , ��Ԥ�㣺" + deBudget.ToString();
+                IMB_ProBdg1.ToolTip = "��ǰ����Ԥ�㣺" + deDefaultBudget.ToString() + " , ��Ԥ�㣺" + deBudget.ToString();
             }
 
             if (i == 1)
@@ -465,8 +465,8 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
 
                 LB_ProBdg2.Text = strBudgetProjectID;
 
-                IMB_ProCost2.ToolTip = "已发生费用：" + deRealCharge.ToString() + " , 总预算：" + deBudget.ToString();
-                IMB_ProBdg2.ToolTip = "当前日期预算：" + deDefaultBudget.ToString() + " , 总预算：" + deBudget.ToString();
+                IMB_ProCost2.ToolTip = "�ѷ������ã�" + deRealCharge.ToString() + " , ��Ԥ�㣺" + deBudget.ToString();
+                IMB_ProBdg2.ToolTip = "��ǰ����Ԥ�㣺" + deDefaultBudget.ToString() + " , ��Ԥ�㣺" + deBudget.ToString();
             }
 
             if (i == 2)
@@ -487,8 +487,8 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
 
                 LB_ProBdg3.Text = strBudgetProjectID;
 
-                IMB_ProCost3.ToolTip = "已发生费用：" + deRealCharge.ToString() + " , 总预算：" + deBudget.ToString();
-                IMB_ProBdg3.ToolTip = "当前日期预算：" + deDefaultBudget.ToString() + " , 总预算：" + deBudget.ToString();
+                IMB_ProCost3.ToolTip = "�ѷ������ã�" + deRealCharge.ToString() + " , ��Ԥ�㣺" + deBudget.ToString();
+                IMB_ProBdg3.ToolTip = "��ǰ����Ԥ�㣺" + deDefaultBudget.ToString() + " , ��Ԥ�㣺" + deBudget.ToString();
             }
 
             if (i == 3)
@@ -510,8 +510,8 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
 
                 LB_ProBdg4.Text = strBudgetProjectID;
 
-                IMB_ProCost4.ToolTip = "已发生费用：" + deRealCharge.ToString() + " , 总预算：" + deBudget.ToString();
-                IMB_ProBdg4.ToolTip = "当前日期预算：" + deDefaultBudget.ToString() + " , 总预算：" + deBudget.ToString();
+                IMB_ProCost4.ToolTip = "�ѷ������ã�" + deRealCharge.ToString() + " , ��Ԥ�㣺" + deBudget.ToString();
+                IMB_ProBdg4.ToolTip = "��ǰ����Ԥ�㣺" + deDefaultBudget.ToString() + " , ��Ԥ�㣺" + deBudget.ToString();
             }
 
             if (i == 4)
@@ -532,8 +532,8 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
 
                 LB_ProBdg5.Text = strBudgetProjectID;
 
-                IMB_ProCost5.ToolTip = "已发生费用：" + deRealCharge.ToString() + " , 总预算：" + deBudget.ToString();
-                IMB_ProBdg5.ToolTip = "当前日期预算：" + deDefaultBudget.ToString() + " , 总预算：" + deBudget.ToString();
+                IMB_ProCost5.ToolTip = "�ѷ������ã�" + deRealCharge.ToString() + " , ��Ԥ�㣺" + deBudget.ToString();
+                IMB_ProBdg5.ToolTip = "��ǰ����Ԥ�㣺" + deDefaultBudget.ToString() + " , ��Ԥ�㣺" + deBudget.ToString();
             }
 
             if (i == 5)
@@ -554,8 +554,8 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
 
                 LB_ProBdg6.Text = strBudgetProjectID;
 
-                IMB_ProCost6.ToolTip = "已发生费用：" + deRealCharge.ToString() + " , 总预算：" + deBudget.ToString();
-                IMB_ProBdg6.ToolTip = "当前日期预算：" + deDefaultBudget.ToString() + " , 总预算：" + deBudget.ToString();
+                IMB_ProCost6.ToolTip = "�ѷ������ã�" + deRealCharge.ToString() + " , ��Ԥ�㣺" + deBudget.ToString();
+                IMB_ProBdg6.ToolTip = "��ǰ����Ԥ�㣺" + deDefaultBudget.ToString() + " , ��Ԥ�㣺" + deBudget.ToString();
             }
 
             if (i == 6)
@@ -576,8 +576,8 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
 
                 LB_ProBdg7.Text = strBudgetProjectID;
 
-                IMB_ProCost7.ToolTip = "已发生费用：" + deRealCharge.ToString() + " , 总预算：" + deBudget.ToString();
-                IMB_ProBdg7.ToolTip = "当前日期预算：" + deDefaultBudget.ToString() + " , 总预算：" + deBudget.ToString();
+                IMB_ProCost7.ToolTip = "�ѷ������ã�" + deRealCharge.ToString() + " , ��Ԥ�㣺" + deBudget.ToString();
+                IMB_ProBdg7.ToolTip = "��ǰ����Ԥ�㣺" + deDefaultBudget.ToString() + " , ��Ԥ�㣺" + deBudget.ToString();
             }
 
             if (i == 7)
@@ -598,8 +598,8 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
 
                 LB_ProBdg8.Text = strBudgetProjectID;
 
-                IMB_ProBdg8.ToolTip = "已发生费用：" + deRealCharge.ToString() + " , 总预算：" + deBudget.ToString();
-                IMB_ProBdg8.ToolTip = "当前日期预算：" + deDefaultBudget.ToString() + " , 总预算：" + deBudget.ToString();
+                IMB_ProBdg8.ToolTip = "�ѷ������ã�" + deRealCharge.ToString() + " , ��Ԥ�㣺" + deBudget.ToString();
+                IMB_ProBdg8.ToolTip = "��ǰ����Ԥ�㣺" + deDefaultBudget.ToString() + " , ��Ԥ�㣺" + deBudget.ToString();
             }
 
             if (i == 8)
@@ -620,8 +620,8 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
 
                 LB_ProBdg9.Text = strBudgetProjectID;
 
-                IMB_ProCost9.ToolTip = "已发生费用：" + deRealCharge.ToString() + " , 总预算：" + deBudget.ToString();
-                IMB_ProBdg9.ToolTip = "当前日期预算：" + deDefaultBudget.ToString() + " , 总预算：" + deBudget.ToString();
+                IMB_ProCost9.ToolTip = "�ѷ������ã�" + deRealCharge.ToString() + " , ��Ԥ�㣺" + deBudget.ToString();
+                IMB_ProBdg9.ToolTip = "��ǰ����Ԥ�㣺" + deDefaultBudget.ToString() + " , ��Ԥ�㣺" + deBudget.ToString();
             }
 
             if (i == 9)
@@ -642,8 +642,8 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
 
                 LB_ProBdg10.Text = strBudgetProjectID;
 
-                IMB_ProCost10.ToolTip = "已发生费用：" + deRealCharge.ToString() + " , 总预算：" + deBudget.ToString();
-                IMB_ProBdg10.ToolTip = "当前日期预算：" + deDefaultBudget.ToString() + " , 总预算：" + deBudget.ToString();
+                IMB_ProCost10.ToolTip = "�ѷ������ã�" + deRealCharge.ToString() + " , ��Ԥ�㣺" + deBudget.ToString();
+                IMB_ProBdg10.ToolTip = "��ǰ����Ԥ�㣺" + deDefaultBudget.ToString() + " , ��Ԥ�㣺" + deBudget.ToString();
             }
         }
     }
@@ -659,9 +659,9 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
         strFindCondition = "%" + TB_ProjectName.Text.Trim() + "%";
 
         strHQL = "select C.*,COALESCE(D.TotalBL,0) PercentRea from V_ProRelatedUser C left join (select A.ProjectID,COALESCE(B.TotalRea,0)/CASE WHEN A.Total = 0 Then 1 END as TotalBL from (select " +
-            "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='基础' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
-            "T_ProjectCostManage where Type='操作' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
-            "C.ProStatus not in ('新建','隐藏','删除','归档','暂停','终止') and C.PMCode <> '" + strUserCode + "' and C.ProjectName like '" + strFindCondition + "' Order by C.ProjectID DESC";
+            "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='Base' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
+            "T_ProjectCostManage where Type='Operation' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
+            "C.ProStatus not in ('New','Hided','Deleted','Archived','Pause','Stop') and C.PMCode <> '" + strUserCode + "' and C.ProjectName like '" + strFindCondition + "' Order by C.ProjectID DESC";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectCost");
         DataGrid1.DataSource = ds;
@@ -690,19 +690,19 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
 
         if (strFindCondition == "")
         {
-            //strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('新建','隐藏','删除','归档','暂停','终止')  Order by proRelatedUser.ProjectID DESC";
+            //strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('New','Hided','Deleted','Archived','Pause','Stop')  Order by proRelatedUser.ProjectID DESC";
             strHQL = "select C.*,COALESCE(D.TotalBL,0) PercentRea from V_ProRelatedUser C left join (select A.ProjectID,COALESCE(B.TotalRea,0)/CASE WHEN A.Total = 0 Then 1 END as TotalBL from (select " +
-                "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='基础' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
-                "T_ProjectCostManage where Type='操作' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
-                "C.ProStatus not in ('新建','隐藏','删除','归档','暂停','终止') and C.PMCode <> '" + strUserCode + "' Order by C.ProjectID DESC";
+                "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='Base' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
+                "T_ProjectCostManage where Type='Operation' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
+                "C.ProStatus not in ('New','Hided','Deleted','Archived','Pause','Stop') and C.PMCode <> '" + strUserCode + "' Order by C.ProjectID DESC";
         }
         else
         {
-            //strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.ProjectID = " + strFindCondition + " and  proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('新建','隐藏','删除','归档','暂停','终止')  Order by proRelatedUser.ProjectID DESC";
+            //strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.ProjectID = " + strFindCondition + " and  proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('New','Hided','Deleted','Archived','Pause','Stop')  Order by proRelatedUser.ProjectID DESC";
             strHQL = "select C.*,COALESCE(D.TotalBL,0) PercentRea from V_ProRelatedUser C left join (select A.ProjectID,COALESCE(B.TotalRea,0)/CASE WHEN A.Total = 0 Then 1 END as TotalBL from (select " +
-                "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='基础' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
-                "T_ProjectCostManage where Type='操作' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
-                "C.ProStatus not in ('新建','隐藏','删除','归档','暂停','终止') and C.PMCode <> '" + strUserCode + "' and C.ProjectID = " + strFindCondition + " Order by C.ProjectID DESC";
+                "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='Base' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
+                "T_ProjectCostManage where Type='Operation' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
+                "C.ProStatus not in ('New','Hided','Deleted','Archived','Pause','Stop') and C.PMCode <> '" + strUserCode + "' and C.ProjectID = " + strFindCondition + " Order by C.ProjectID DESC";
         }
 
 
@@ -732,9 +732,9 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
         strFindCondition = "%" + TB_MakeUser.Text.Trim() + "%";
 
         strHQL = "select C.*,COALESCE(D.TotalBL,0) PercentRea from V_ProRelatedUser C left join (select A.ProjectID,COALESCE(B.TotalRea,0)/CASE WHEN A.Total = 0 Then 1 END as TotalBL from (select " +
-            "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='基础' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
-            "T_ProjectCostManage where Type='操作' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
-            "C.ProStatus not in ('新建','隐藏','删除','归档','暂停','终止') and C.PMCode <> '" + strUserCode + "' and C.MakeManName like '" + strFindCondition + "' Order by C.ProjectID DESC";
+            "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='Base' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
+            "T_ProjectCostManage where Type='Operation' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
+            "C.ProStatus not in ('New','Hided','Deleted','Archived','Pause','Stop') and C.PMCode <> '" + strUserCode + "' and C.MakeManName like '" + strFindCondition + "' Order by C.ProjectID DESC";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectCost");
         DataGrid1.DataSource = ds;
@@ -763,7 +763,7 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
 
         strUserCode = LB_UserCode.Text.Trim();
 
-        //strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('新建','隐藏','删除','归档','暂停','终止') and " + "  to_char(proRelatedUser.BeginDate,'yyyymmdd') >= " + "'" + strStartDate + "'" + " and to_char(proRelatedUser.EndDate,'yyyymmdd') <= " + "'" + strEndDate + "'" + " Order by project.ProjectID DESC";
+        //strHQL = "from ProRelatedUser as proRelatedUser where proRelatedUser.UserCode = " + "'" + strUserCode + "'" + " and proRelatedUser.PMCode <> " + "'" + strUserCode + "'" + "  and proRelatedUser.ProStatus not in ('New','Hided','Deleted','Archived','Pause','Stop') and " + "  to_char(proRelatedUser.BeginDate,'yyyymmdd') >= " + "'" + strStartDate + "'" + " and to_char(proRelatedUser.EndDate,'yyyymmdd') <= " + "'" + strEndDate + "'" + " Order by project.ProjectID DESC";
         //ProjectBLL projectBLL = new ProjectBLL();
         //lst = projectBLL.GetAllProjects(strHQL);
 
@@ -771,9 +771,9 @@ public partial class TTInvolvedProjectSAAS : System.Web.UI.Page
         //DataGrid1.DataBind();
 
         strHQL = "select C.*,COALESCE(D.TotalBL,0) PercentRea from V_ProRelatedUser C left join (select A.ProjectID,COALESCE(B.TotalRea,0)/CASE WHEN A.Total = 0 Then 1 END as TotalBL from (select " +
-            "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='基础' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
-            "T_ProjectCostManage where Type='操作' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
-            "C.ProStatus not in ('新建','隐藏','删除','归档','暂停','终止') and C.PMCode <> '" + strUserCode + "' and to_char(C.BeginDate,'yyyymmdd') >= '" + strStartDate + "' " +
+            "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='Base' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
+            "T_ProjectCostManage where Type='Operation' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
+            "C.ProStatus not in ('New','Hided','Deleted','Archived','Pause','Stop') and C.PMCode <> '" + strUserCode + "' and to_char(C.BeginDate,'yyyymmdd') >= '" + strStartDate + "' " +
             "and to_char(C.EndDate,'yyyymmdd') <= '" + strEndDate + "' Order by C.ProjectID DESC";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectCost");

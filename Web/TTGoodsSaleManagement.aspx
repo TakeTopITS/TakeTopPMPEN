@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsSaleManagement.aspx.cs" Inherits="TTGoodsSaleManagement" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsSaleManagement.aspx.cs" Inherits="TTGoodsSaleManagement" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -18,9 +18,9 @@
         $(function () {
             if (top.location != self.location) { } else { CloseWebPage(); }
 
-            //ÈöêËóèÊ≤°ÊúâÊï∞ÊçÆÁöÑÂàÜÊûêÂõæ
+            //“˛≤ÿ√ª”– ˝æ›µƒ∑÷ŒˆÕº
             hideIframesForNoDataAnalystChart(function () {
-                console.log('ÊâÄÊúâ iframe Â§ÑÁêÜÂÆåÊàê');
+                console.log('À˘”– iframe ¥¶¿ÌÕÍ≥…');
             });
 
         });
@@ -57,27 +57,27 @@
                                                         <td>
                                                             <table>
                                                                 <tr>
-                                                                    <td align="left">Ôºà<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>Ôºö
+                                                                    <td align="left">£®<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>£∫
                                                                     </td>
                                                                     <td>
                                                                         <asp:TextBox ID="TB_SOID" runat="server" Width="60px"></asp:TextBox>
                                                                     </td>
                                                                     <td>&nbsp;</td>
                                                                     <td align="left">
-                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DanHao%>"></asp:Label>Ôºö
+                                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DanHao%>"></asp:Label>£∫
                                                                     </td>
                                                                     <td>
                                                                         <asp:TextBox ID="TB_SOName" runat="server" Width="120px"></asp:TextBox>
                                                                     </td>
                                                                     <td>&nbsp;</td>
                                                                     <td align="left">
-                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,KeHu%>"></asp:Label>Ôºö
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,KeHu%>"></asp:Label>£∫
                                                                     </td>
                                                                     <td>
                                                                         <asp:TextBox ID="TB_CustomerName" runat="server" Width="120px"></asp:TextBox>
                                                                     </td>
                                                                     <td>
-                                                                        <asp:Button ID="BT_Find" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ChaXun%>" OnClick="BT_Find_Click" />Ôºâ
+                                                                        <asp:Button ID="BT_Find" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ChaXun%>" OnClick="BT_Find_Click" />£©
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -145,36 +145,36 @@
                                         ShowHeader="false"
                                         Width="100%">
                                         <Columns>
-                                            <asp:BoundColumn DataField="SOID" HeaderText="ÁºñÂè∑">
+                                            <asp:BoundColumn DataField="SOID" HeaderText="±‡∫≈">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                             </asp:BoundColumn>
 
                                             <asp:HyperLinkColumn DataNavigateUrlField="SOID" DataNavigateUrlFormatString="TTGoodsSaleOrderView.aspx?SOID={0}"
-                                                DataTextField="SOName" HeaderText="ÂêçÁß∞" Target="_blank">
+                                                DataTextField="SOName" HeaderText="√˚≥∆" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="31%" />
                                             </asp:HyperLinkColumn>
 
-                                            <asp:BoundColumn DataField="Amount" HeaderText="ÊÄªÈáëÈ¢ù">
+                                            <asp:BoundColumn DataField="Amount" HeaderText="◊‹Ω∂Ó">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                             </asp:BoundColumn>
                                             <asp:HyperLinkColumn DataNavigateUrlField="CustomerCode" DataNavigateUrlFormatString="TTCustomerInfoView.aspx?CustomerCode={0}"
-                                                DataTextField="CustomerName" HeaderText="ÂêçÁß∞" Target="_blank">
+                                                DataTextField="CustomerName" HeaderText="√˚≥∆" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                             </asp:HyperLinkColumn>
-                                            <asp:BoundColumn DataField="SaleTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ÈîÄÂîÆÊó∂Èó¥">
+                                            <asp:BoundColumn DataField="SaleTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="œ˙ € ±º‰">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
 
                                             <asp:HyperLinkColumn DataNavigateUrlField="SalesCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                DataTextField="SalesName" HeaderText="‰∏öÂä°Âëò" Target="_blank">
+                                                DataTextField="SalesName" HeaderText="“µŒÒ‘±" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:HyperLinkColumn>
 
                                             <asp:HyperLinkColumn DataNavigateUrlField="SOID" DataNavigateUrlFormatString="TTMakeCollaboration.aspx?RelatedType=GoodsSO&RelatedID={0}"
-                                                HeaderText="Âçè‰Ωú" Text="<%$ Resources:lang,XieZuo%>" Target="_blank">
+                                                HeaderText="–≠◊˜" Text="<%$ Resources:lang,XieZuo%>" Target="_blank">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:HyperLinkColumn>
-                                            <asp:TemplateColumn HeaderText="Áä∂ÊÄÅ">
+                                            <asp:TemplateColumn HeaderText="◊¥Ã¨">
                                                 <ItemTemplate>
                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                 </ItemTemplate>

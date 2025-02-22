@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -43,7 +43,7 @@ public partial class TTAPPCarApplyForm : System.Web.UI.Page
 
             LoadCarApplyForm(strUserCode);
 
-            ShareClass.LoadWFTemplate(strUserCode, "车辆申请", DL_TemName);
+            ShareClass.LoadWFTemplate(strUserCode, "VehicleRequest", DL_TemName);
 
             BT_SubmitApply.Enabled = false;
 
@@ -154,7 +154,7 @@ public partial class TTAPPCarApplyForm : System.Web.UI.Page
 
             LoadCarApplyForm(strUserCode);
 
-            LoadRelatedWL("车辆申请", "其它", int.Parse(strID));
+            LoadRelatedWL("VehicleRequest", "Other", int.Parse(strID));
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
         }
@@ -249,48 +249,48 @@ public partial class TTAPPCarApplyForm : System.Web.UI.Page
 
         XMLProcess xmlProcess = new XMLProcess();
 
-        strHQL = "Update T_CarApplyForm Set Status = '处理中' Where ID = " + strID;
+        strHQL = "Update T_CarApplyForm Set Status = 'InProgress' Where ID = " + strID;
 
 
         try
         {
             ShareClass.RunSqlCommand(strHQL);
 
-            strXMLFileName = "车辆申请" + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xml";
+            strXMLFileName = "VehicleRequest" + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xml";
             strXMLFile2 = "Doc\\" + "XML" + "\\" + strXMLFileName;
 
             WorkFlowBLL workFlowBLL = new WorkFlowBLL();
             WorkFlow workFlow = new WorkFlow();
 
-            workFlow.WLName = "车辆申请";
-            workFlow.WLType = "车辆申请";
-            workFlow.Status = "新建";
+            workFlow.WLName = "VehicleRequest";
+            workFlow.WLType = "VehicleRequest";
+            workFlow.Status = "New";
             workFlow.TemName = DL_TemName.SelectedValue.Trim();
             workFlow.CreateTime = DateTime.Now;
             workFlow.CreatorCode = strUserCode;
             workFlow.CreatorName = ShareClass.GetUserName(strUserCode);
             workFlow.Description = TB_ApplyReason.Text.Trim();
             workFlow.XMLFile = strXMLFile2;
-            workFlow.RelatedType = "其它";
+            workFlow.RelatedType = "Other";
             workFlow.RelatedID = int.Parse(strID);
-            workFlow.DIYNextStep = "Yes"; workFlow.IsPlanMainWorkflow = "NO";
+            workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
 
             if (CB_SMS.Checked == true)
             {
-                workFlow.ReceiveSMS = "Yes";
+                workFlow.ReceiveSMS = "YES";
             }
             else
             {
-                workFlow.ReceiveSMS = "No";
+                workFlow.ReceiveSMS = "NO";
             }
 
             if (CB_Mail.Checked == true)
             {
-                workFlow.ReceiveEMail = "Yes";
+                workFlow.ReceiveEMail = "YES";
             }
             else
             {
-                workFlow.ReceiveEMail = "No";
+                workFlow.ReceiveEMail = "NO";
             }
 
             try
@@ -303,9 +303,9 @@ public partial class TTAPPCarApplyForm : System.Web.UI.Page
                 strXMLFile2 = Server.MapPath(strXMLFile2);
                 xmlProcess.DbToXML(strCmdText, "T_CarApplyForm", strXMLFile2);
 
-                LoadRelatedWL("车辆申请", "其它", int.Parse(strID));
+                LoadRelatedWL("VehicleRequest", "Other", int.Parse(strID));
 
-                DL_Status.SelectedValue = "处理中";
+                DL_Status.SelectedValue = "InProgress";
 
                 BT_SubmitApply.Enabled = false;
 
@@ -392,9 +392,9 @@ public partial class TTAPPCarApplyForm : System.Web.UI.Page
 
                 BT_SubmitApply.Enabled = true;
 
-                LoadRelatedWL("车辆申请", "其它", int.Parse(strID));
+                LoadRelatedWL("VehicleRequest", "Other", int.Parse(strID));
 
-                intWLNumber = GetRelatedWorkFlowNumber("车辆申请", "其它", strID);
+                intWLNumber = GetRelatedWorkFlowNumber("VehicleRequest", "Other", strID);
                 if (intWLNumber > 0)
                 {
                     BT_SubmitApply.Enabled = false;
@@ -458,7 +458,7 @@ public partial class TTAPPCarApplyForm : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = '车辆申请'";
+        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'VehicleRequest'";
         strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC";
         WorkFlowBLL workFlowBLL = new WorkFlowBLL();
         lst = workFlowBLL.GetAllWorkFlows(strHQL);

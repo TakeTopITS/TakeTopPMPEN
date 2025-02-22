@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTOpenDIYBusinessForm.aspx.cs" Inherits="TTOpenDIYBusinessForm" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTOpenDIYBusinessForm.aspx.cs" Inherits="TTOpenDIYBusinessForm" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>

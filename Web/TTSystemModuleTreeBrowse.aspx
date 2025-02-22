@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSystemModuleTreeBrowse.aspx.cs" Inherits="TTSystemModuleTreeBrowse" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSystemModuleTreeBrowse.aspx.cs" Inherits="TTSystemModuleTreeBrowse" %>
 
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -83,7 +83,7 @@
                                                                 <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%></a>
                                                         </td>
                                                         <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                            <asp:Label ID="Label1" runat="server" Text="ç³»ç»Ÿæ¨¡ç»„æµè§ˆ"></asp:Label>
+                                                            <asp:Label ID="Label1" runat="server" Text="ÏµÍ³Ä£×éä¯ÀÀ"></asp:Label>
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -95,13 +95,13 @@
                                             </td>
                                             <td width="50" align="right" style="padding-top: 7px;">
                                                 <a href="#" onclick="preview1()">
-                                                    <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" />
+                                                    <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" />
                                                 </a>
                                             </td>
                                             <td>&nbsp;</td>
 
                                             <td style="width: 50px; text-align: right; padding-top: 7px;">
-                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,YuYan%>"></asp:Label>ï¼š</td>
+                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,YuYan%>"></asp:Label>£º</td>
 
                                             <td align="left" style="width: 80px; padding-top: 5px;">
                                                 <asp:DropDownList ID="ddlLangSwitcher" runat="server" DataValueField="LangCode" DataTextField="Language" AutoPostBack="true" OnSelectedIndexChanged="ddlLangSwitcher_SelectedIndexChanged" Style="height: 22px;">
@@ -119,14 +119,14 @@
                                         <tr>
                                             <td align="center">
                                                 <span style="font-size: 24px;">
-                                                    <asp:Label ID="Label3" runat="server" Text="æ³°é¡¶ç»¼åˆç®¡ç†å¹³å°å®Œæ•´æ¨¡å—æ ‘"></asp:Label>
+                                                    <asp:Label ID="Label3" runat="server" Text="Ì©¶¥×ÛºÏ¹ÜÀíÆ½Ì¨ÍêÕûÄ£¿éÊ÷"></asp:Label>
 
                                                 </span>
                                                 <br />
                                                 <br />
                                                 <b>
                                                     <span style="font-size: 16px;">
-                                                        ï¼ˆå…±ï¼š<asp:Label ID="LB_ModuleNumber" runat="server"></asp:Label> ä¸ªï¼‰
+                                                        £¨¹²£º<asp:Label ID="LB_ModuleNumber" runat="server"></asp:Label> ¸ö£©
                                                     </span>
                                                 </b>
                                             </td>

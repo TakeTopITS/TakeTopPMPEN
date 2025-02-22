@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -25,7 +25,7 @@ public partial class TTInvolvedProjectRelatedDefectMain : System.Web.UI.Page
         string strProjectID = Request.QueryString["ProjectID"];
 
         string strProject = GetProjectName(strProjectID);
-        //this.Title = Resources.lang.Project + strProjectID + " " + strProject + " ç›¸å…³éœ€æ±‚";
+        //this.Title = Resources.lang.Project + strProjectID + " " + strProject + " Ïà¹ØÐèÇó";
     }
 
     protected string GetProjectName(string strProjectID)

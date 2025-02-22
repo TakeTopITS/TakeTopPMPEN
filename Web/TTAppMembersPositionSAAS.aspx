@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppMembersPositionSAAS.aspx.cs" Inherits="TTAppMembersPositionSAAS" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppMembersPositionSAAS.aspx.cs" Inherits="TTAppMembersPositionSAAS" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
 
@@ -44,12 +44,12 @@
         });
 
         function setMapTrClickLink(gridId) {
-            //é˜»æ­¢äº‹ä»¶å†’æ³¡
+            //×èÖ¹ÊÂ¼þÃ°ÅÝ
             jQuery("#" + gridId).find("tr:not(.notTab)").find("a").click(function () {
                 event.stopPropagation();
             });
 
-            //trç‚¹å‡»è·³è½¬
+            //trµã»÷Ìø×ª
             jQuery("#" + gridId).find("tr:not(.notTab)").find("a").closest("table").closest("tr").click(function () {
                 $("#IFR_UserPositionMap").attr("src", $(this).find("a").attr("href"));
             });
@@ -82,7 +82,7 @@
                                                         <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%></td>
                                                 </tr>
                                             </table>
-                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="è¯·ç¨å€™ï¼Œå¤„ç†ä¸­..." style="display: none;" />
+                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖÐ..." style="display: none;" />
                                         </a>
                                     </td>
                                 </tr>

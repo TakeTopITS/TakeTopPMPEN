@@ -118,7 +118,7 @@ public partial class TTModuleTreeSelectPage : System.Web.UI.Page
 
             node2 = new TreeNode();
 
-            node2.Text = (i + 1).ToString() + "." + strModuleName;
+            node2.Text = (i + 1).ToString() + "." + strHomeModuleName;
             node2.ToolTip = strPageName;
             node2.Target = strModuleID;
             node2.Expanded = false;
@@ -159,7 +159,7 @@ public partial class TTModuleTreeSelectPage : System.Web.UI.Page
             strPageName = ds1.Tables[0].Rows[i]["PageName"].ToString().Trim();
 
             node1 = new TreeNode();
-            node1.Text = (i + 1).ToString() + "." + strModuleName;
+            node1.Text = (i + 1).ToString() + "." + strHomeModuleName;
             node1.ToolTip = strPageName;
             node1.Target = strModuleID;
 
@@ -174,7 +174,7 @@ public partial class TTModuleTreeSelectPage : System.Web.UI.Page
 
     protected string GetModuleName(string strModuleID)
     {
-        string strHQL = "Select ModuleName From T_ProModuleLevel Where ID = " + strModuleID;
+        string strHQL = "Select HomeModuleName From T_ProModuleLevel Where ID = " + strModuleID;
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProModuleLevel");
 
         if (ds.Tables[0].Rows.Count > 0)

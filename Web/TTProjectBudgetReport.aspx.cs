@@ -1,4 +1,4 @@
-﻿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
 using System.Collections;
@@ -35,7 +35,7 @@ public partial class TTProjectBudgetReport : System.Web.UI.Page
 
             LB_ReportName.Text = Resources.lang.Project + strProjectID + " " + ShareClass.GetProjectName(strProjectID);
 
-            LoadProjectExpenseByAccount(strProjectID, "所有");
+            LoadProjectExpenseByAccount(strProjectID, "All");
         }
     }
 
@@ -64,12 +64,12 @@ public partial class TTProjectBudgetReport : System.Web.UI.Page
 
     protected void BT_AllMember_Click(object sender, EventArgs e)
     {
-        LB_OperatorCode.Text = "所有";
+        LB_OperatorCode.Text = "All";
         LB_OperatorName.Text = "";
 
-        LB_Account.Text = "所有";
+        LB_Account.Text = "All";
 
-        LoadProjectExpenseByAccount(strProjectID, "所有");
+        LoadProjectExpenseByAccount(strProjectID, "All");
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popDetailWindow','true') ", true);
 
@@ -103,7 +103,7 @@ public partial class TTProjectBudgetReport : System.Web.UI.Page
                 strUserCode = proRelatedUser.UserCode.Trim();
                 strUserName = proRelatedUser.UserName.Trim();
 
-                if (strAccount == "所有")
+                if (strAccount == "All")
                 {
                     strHQL = "from ProExpense as proExpense where proExpense.ProjectID = " + strProjectID + " and proExpense.UserCode = " + "'" + strUserCode + "'";
                     strHQL += " Order by proExpense.ID DESC";
@@ -182,7 +182,7 @@ public partial class TTProjectBudgetReport : System.Web.UI.Page
 
         decimal deExpense = 0, deConfirmExpense = 0;
 
-        if (strAccount == "所有")
+        if (strAccount == "All")
         {
             strHQL = "from ProExpense as proExpense where proExpense.ProjectID = " + strProjectID;
             strHQL += " Order by proExpense.ID DESC";
@@ -210,7 +210,7 @@ public partial class TTProjectBudgetReport : System.Web.UI.Page
         LB_Amount.Text = deExpense.ToString();
         LB_ConfirmAmount.Text = deConfirmExpense.ToString();
 
-        LB_OperatorCode.Text = "所有";
+        LB_OperatorCode.Text = "All";
         LB_OperatorName.Text = "";
     }
 

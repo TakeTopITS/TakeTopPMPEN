@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMPWPS2.aspx.cs" Inherits="TTWPQMPWPS2" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWPQMPWPS2.aspx.cs" Inherits="TTWPQMPWPS2" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -8,7 +8,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>PWPS-2ÁÆ°ÁêÜ</title>
+    <title>PWPS-2π‹¿Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script src="js/allAHandler.js" type="text/javascript"></script>
@@ -125,9 +125,9 @@
                                             <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,BaiDongLeiXing%>"></asp:Label></td>
                                         <td align="left" class="formItemBgStyle">
                                                <asp:DropDownList ID="DL_SwingType" runat="server">
-                                                <asp:ListItem Value="ËØ∑ÈÄâÊã©" Text="<%$ Resources:lang,QingXuanZe%>"/>
-                                                <asp:ListItem Value="ÊëÜÂä®ÁÑä" Text="<%$ Resources:lang,BaiDongHan%>"/>
-                                                <asp:ListItem Value="‰∏çÊëÜÂä®ÁÑä" Text="<%$ Resources:lang,BuBaiDongHan%>"/>
+                                                <asp:ListItem Value="PleaseSelect" Text="<%$ Resources:lang,QingXuanZe%>"/>
+                                                <asp:ListItem Value="OscillationWelding" Text="<%$ Resources:lang,BaiDongHan%>"/>
+                                                <asp:ListItem Value="Non-oscillationWelding" Text="<%$ Resources:lang,BuBaiDongHan%>"/>
                                             </asp:DropDownList>
                                         </td>
                                         <td align="right" class="formItemBgStyle">
@@ -141,18 +141,18 @@
                                             <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,DaoHanLeiXing%>"></asp:Label></td>
                                         <td align="left" class="formItemBgStyle">
                                          <asp:DropDownList ID="DL_PassWeldingType" runat="server">
-                                                <asp:ListItem Value="ËØ∑ÈÄâÊã©" Text="<%$ Resources:lang,QingXuanZe%>"/>
-                                                <asp:ListItem Value="ÂçïÈÅìÁÑä" Text="<%$ Resources:lang,DanDaoHan%>"/>
-                                                <asp:ListItem Value="Â§öÈÅìÁÑä" Text="<%$ Resources:lang,DuoDaoHan%>"/>
+                                                <asp:ListItem Value="PleaseSelect" Text="<%$ Resources:lang,QingXuanZe%>"/>
+                                                <asp:ListItem Value="Single-passWelding" Text="<%$ Resources:lang,DanDaoHan%>"/>
+                                                <asp:ListItem Value="Multi-passWelding" Text="<%$ Resources:lang,DuoDaoHan%>"/>
                                             </asp:DropDownList>
                                         </td>
                                         <td align="right" class="formItemBgStyle">
                                             <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,SiHanLeiXing%>"></asp:Label></td>
                                         <td align="left" class="formItemBgStyle">
                                              <asp:DropDownList ID="DL_WireWeldingType" runat="server">
-                                                <asp:ListItem Value="ËØ∑ÈÄâÊã©" Text="<%$ Resources:lang,QingXuanZe%>"/>
-                                                <asp:ListItem Value="Âçï‰∏ùÁÑä" Text="<%$ Resources:lang,DanSiHan%>"/>
-                                                <asp:ListItem Value="Â§ö‰∏ùÁÑä" Text="<%$ Resources:lang,DuoSiHan%>"/>
+                                                <asp:ListItem Value="PleaseSelect" Text="<%$ Resources:lang,QingXuanZe%>"/>
+                                                <asp:ListItem Value="Single-wireWelding" Text="<%$ Resources:lang,DanSiHan%>"/>
+                                                <asp:ListItem Value="Multi-wireWelding" Text="<%$ Resources:lang,DuoSiHan%>"/>
                                             </asp:DropDownList>
                                         </td>
                                         <td align="right" class="formItemBgStyle">
@@ -194,7 +194,7 @@
                                 </table>
                                 <table cellpadding="2" cellspacing="0" class="formBgStyle" width="95%">
                                     <tr>
-                                        <td align="center" style="text-align: left" class="formItemBgStyle">&nbsp;&nbsp;&nbsp; <asp:Label ID="Label21" runat="server" ></asp:Label>PWPS-2ÁÆ°ÁêÜÂàóË°®Ôºö</td>
+                                        <td align="center" style="text-align: left" class="formItemBgStyle">&nbsp;&nbsp;&nbsp; <asp:Label ID="Label21" runat="server" ></asp:Label>PWPS-2π‹¿Ì¡–±Ì£∫</td>
                                     </tr>
                                     <tr>
                                         <td align="center" class="formItemBgStyle">
@@ -242,7 +242,7 @@
                                                 <ItemStyle CssClass="itemStyle" />
                                                 <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <Columns>
-                                                    <asp:TemplateColumn HeaderText="ÁºñÂè∑">
+                                                    <asp:TemplateColumn HeaderText="±‡∫≈">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
@@ -250,42 +250,42 @@
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="WeldProCode" HeaderText="ÁÑäÊé•Â∑•Ëâ∫ËØÑÂÆö">
+                                                    <asp:BoundColumn DataField="WeldProCode" HeaderText="∫∏Ω”π§“’∆¿∂®">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="FilletWeldPosition" HeaderText="ËßíÁÑäÁºù‰ΩçÁΩÆ">
+                                                    <asp:BoundColumn DataField="FilletWeldPosition" HeaderText="Ω«∫∏∑ÏŒª÷√">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="VerticalWeldingDirection" HeaderText="Á´ãÁÑäÁÑäÊé•ÊñπÂêë">
+                                                    <asp:BoundColumn DataField="VerticalWeldingDirection" HeaderText="¡¢∫∏∫∏Ω”∑ΩœÚ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="CurrentTypeChara" HeaderText="ÁîµÊµÅÁßçÁ±ª‰∏éÁâπÊÄß">
+                                                    <asp:BoundColumn DataField="CurrentTypeChara" HeaderText="µÁ¡˜÷÷¿‡”ÎÃÿ–‘">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="WeldingCurrent" HeaderText="ÁÑäÊé•ÁîµÊµÅ">
+                                                    <asp:BoundColumn DataField="WeldingCurrent" HeaderText="∫∏Ω”µÁ¡˜">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="ArcVoltage" HeaderText="ÁîµÂºßÁîµÂéã">
+                                                    <asp:BoundColumn DataField="ArcVoltage" HeaderText="µÁª°µÁ—π">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="WeldingSpeed" HeaderText="ÁÑäÊé•ÈÄüÂ∫¶">
+                                                    <asp:BoundColumn DataField="WeldingSpeed" HeaderText="∫∏Ω”ÀŸ∂»">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="LineEnergy" HeaderText="Á∫øËÉΩÈáè">
+                                                    <asp:BoundColumn DataField="LineEnergy" HeaderText="œﬂƒ‹¡ø">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true"
                                                             HorizontalAlign="Center" />

@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -36,12 +36,12 @@ public partial class TTSelectorPlan : System.Web.UI.Page
         DataSet dsProject = ShareClass.GetDataSetFromSql(strProjectHQL, "Project");
         if (dsProject != null)
         {
-            string strProductLine = string.Empty;                               //äº§å“çº¿
-            string strSubordinateIndustry = string.Empty;                       //è¡Œä¸š
-            decimal decimalProjectAmount = 0;                                   //é¡¹ç›®é¢
-            decimal decimalManHour = 0;                                         //å·¥æ—¶
+            string strProductLine = string.Empty;                               //²úÆ·Ïß
+            string strSubordinateIndustry = string.Empty;                       //ĞĞÒµ
+            decimal decimalProjectAmount = 0;                                   //ÏîÄ¿¶î
+            decimal decimalManHour = 0;                                         //¹¤Ê±
             string strModuleIDs = string.Empty;
-            string strModuleNames = string.Empty;                               //æ¨¡å—
+            string strModuleNames = string.Empty;                               //Ä£¿é
 
             if (dsProject.Tables[0] != null && dsProject.Tables[0].Rows.Count > 0)
             {
@@ -69,14 +69,14 @@ public partial class TTSelectorPlan : System.Web.UI.Page
 
             DataTable dtPlan = ShareClass.GetDataSetFromSql(strPlanHQL, "Plan").Tables[0];
 
-            DataTable dtNew = dtPlan.Copy();  //å¤åˆ¶dtè¡¨æ•°æ®ç»“æ„
-            dtNew.Clear();  //æ¸…æ¥šæ•°æ®
+            DataTable dtNew = dtPlan.Copy();  //¸´ÖÆdt±íÊı¾İ½á¹¹
+            dtNew.Clear();  //Çå³şÊı¾İ
 
             if (dtPlan != null && dtPlan.Rows.Count > 0)
             {
                 foreach (DataRow drPlan in dtPlan.Rows)
                 {
-                    //åˆ¤æ–­é‡‘é¢å’Œå·¥æ—¶
+                    //ÅĞ¶Ï½ğ¶îºÍ¹¤Ê±
                     decimal decimalRelatedStartAmount = 0;
                     decimal.TryParse(ShareClass.ObjectToString(drPlan["StartAmount"]), out decimalRelatedStartAmount);
                     decimal decimalRelatedEndAmount = 0;
@@ -127,7 +127,7 @@ public partial class TTSelectorPlan : System.Web.UI.Page
                     }
                     if (IsYou)
                     {
-                        dtNew.ImportRow(drPlan);  //æ·»åŠ æ•°æ®è¡Œ
+                        dtNew.ImportRow(drPlan);  //Ìí¼ÓÊı¾İĞĞ
                     }
 
                 }
@@ -162,8 +162,8 @@ public partial class TTSelectorPlan : System.Web.UI.Page
             {
                 
 
-                //è°ƒç”¨æ¨é€é¡¹ç›®è®¡åˆ’æ–¹æ³•
-                //åˆ°T_ProjectPlanRelated_YYUPè¡¨æ‰¾åˆ°ProjectIDï¼Œç„¶åæ ¹æ®T_Projectè¡¨å»å¤åˆ¶ç›¸åº”çš„è®¡åˆ’                     TTProjectPlanCopy.aspx?ProjectID=é¡¹ç›®å·&TemProjectID=æ¨¡æ¿é¡¹ç›®å·
+                //µ÷ÓÃÍÆËÍÏîÄ¿¼Æ»®·½·¨
+                //µ½T_ProjectPlanRelated_YYUP±íÕÒµ½ProjectID£¬È»ºó¸ù¾İT_Project±íÈ¥¸´ÖÆÏàÓ¦µÄ¼Æ»®                     TTProjectPlanCopy.aspx?ProjectID=ÏîÄ¿ºÅ&TemProjectID=Ä£°åÏîÄ¿ºÅ
                 //public string SendProjectPlanToNewProject(string strOldProjectID,string strNewProjectID){}
 
                 try
@@ -179,7 +179,7 @@ public partial class TTSelectorPlan : System.Web.UI.Page
 
 
 
-                        //æ·»åŠ åˆ°è®°å½•ä¸­
+                        //Ìí¼Óµ½¼ÇÂ¼ÖĞ
                         string strUpdateSQL = string.Format("update T_Project_YYUP set PlanID = {0},TemProjectID={2} where ProjectID = {1}", cmdArges, HF_ProjectID.Value, strTemplateProjectID);
                         ShareClass.RunSqlCommand(strUpdateSQL);
 
@@ -193,9 +193,9 @@ public partial class TTSelectorPlan : System.Web.UI.Page
 
                 }
 
-                //æ˜¾ç¤ºé€‰æ‹©çš„å®æ–½å·¥å…·ä¾›ä¸‹è½½
+                //ÏÔÊ¾Ñ¡ÔñµÄÊµÊ©¹¤¾ß¹©ÏÂÔØ
 
-                //Response.Redirect("TTDownloadPlanTools_YYUP.aspx?ProjectID=" + HF_ProjectID.Value);           //è¿™ä¸ªæ˜¯æ­£å¸¸ä½¿ç”¨çš„
+                //Response.Redirect("TTDownloadPlanTools_YYUP.aspx?ProjectID=" + HF_ProjectID.Value);           //Õâ¸öÊÇÕı³£Ê¹ÓÃµÄ
 
             }
 
@@ -205,7 +205,7 @@ public partial class TTSelectorPlan : System.Web.UI.Page
 
 
     /// <summary>  
-    /// åˆ›å»ºGETæ–¹å¼çš„HTTPè¯·æ±‚  
+    /// ´´½¨GET·½Ê½µÄHTTPÇëÇó  
     /// </summary>  
     public static string CreateGetHttpResponse(string url)
     {

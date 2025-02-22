@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Web.UI;
 
 public partial class TTOpenDIYBusinessForm : System.Web.UI.Page
@@ -24,7 +24,7 @@ public partial class TTOpenDIYBusinessForm : System.Web.UI.Page
             // HL_StartupBusinessForm.NavigateUrl = "TTRelatedDIYBusinessForm.aspx?RelatedType=TaskRecord&RelatedID=" + strTaskRecordID + "&TemName=" + strTemName + "";
             HL_StartupBusinessForm.Target = "_top";
 
-            //BusinessFormï¼Œå¦‚æœä¸å«ä¸šåŠ¡è¡¨å•ï¼Œå°±éšè—â€œç›¸å…³è¡¨å•æŒ‰é’®â€
+            //BusinessForm£¬Èç¹û²»º¬ÒµÎñ±íµ¥£¬¾ÍÒş²Ø¡°Ïà¹Ø±íµ¥°´Å¥¡±
             if (ShareClass.getRelatedBusinessFormTemName("TaskRecord", strTaskRecordID) == "")
             {
                 HL_StartupBusinessForm.Visible = false;

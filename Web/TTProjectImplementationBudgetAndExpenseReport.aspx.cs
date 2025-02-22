@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -27,7 +27,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
         strLangCode = Session["LangCode"].ToString();
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text = "é¡¹ç›®é¢„ç®—ä¸Žè´¹ç”¨æŠ¥è¡¨";
+        LB_ReportName.Text = "ÏîÄ¿Ô¤ËãÓë·ÑÓÃ±¨±í";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
@@ -81,18 +81,18 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
 
         if (strProjectID != "")
         {
-            strHQL = string.Format(@"Select ç§‘ç›®, sum(COALESCE(é¢„ç®—,0)) as é¢„ç®—, sum(COALESCE(è´¹ç”¨,0)) as è´¹ç”¨ From(
-   Select * From(Select A.ProjectID, A.Account as ç§‘ç›®, COALESCE(sum(A.Amount), 0) as é¢„ç®— From T_ProjectBudget A Where A.ProjectID = {0}  Group By A.Account, A.ProjectID) as AA
-   LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as ç§‘ç›®A, SUM(A.ConfirmAmount) as è´¹ç”¨ From T_ProExpense A Where A.ProjectID = {0} And A.EffectDate >= '{2}' And A.EffectDate <= '{3}'  Group By A.Account, A.ProjectID) as BB ON BB.ç§‘ç›®A = AA.ç§‘ç›®
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {0} AND CC.PMName LIKE '{1}') AS KK Group By ç§‘ç›®", strProjectID, strPMName,strBeginTime,strEndTime);
+            strHQL = string.Format(@"Select ¿ÆÄ¿, sum(COALESCE(Ô¤Ëã,0)) as Ô¤Ëã, sum(COALESCE(·ÑÓÃ,0)) as ·ÑÓÃ From(
+   Select * From(Select A.ProjectID, A.Account as ¿ÆÄ¿, COALESCE(sum(A.Amount), 0) as Ô¤Ëã From T_ProjectBudget A Where A.ProjectID = {0}  Group By A.Account, A.ProjectID) as AA
+   LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as ¿ÆÄ¿A, SUM(A.ConfirmAmount) as ·ÑÓÃ From T_ProExpense A Where A.ProjectID = {0} And A.EffectDate >= '{2}' And A.EffectDate <= '{3}'  Group By A.Account, A.ProjectID) as BB ON BB.¿ÆÄ¿A = AA.¿ÆÄ¿
+   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {0} AND CC.PMName LIKE '{1}') AS KK Group By ¿ÆÄ¿", strProjectID, strPMName,strBeginTime,strEndTime);
 
         }
         else
         {
-            strHQL = string.Format(@"Select ç§‘ç›®, sum(COALESCE(é¢„ç®—,0)) as é¢„ç®—, sum(COALESCE(è´¹ç”¨,0)) as è´¹ç”¨ From(
-   Select * From(Select A.ProjectID, A.Account as ç§‘ç›®, COALESCE(sum(A.Amount), 0) as é¢„ç®— From T_ProjectBudget A Where  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as AA
-   LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as ç§‘ç›®A, SUM(A.ConfirmAmount) as è´¹ç”¨ From T_ProExpense A Where  A.EffectDate >= '{2}' And A.EffectDate <= '{3}' and  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as BB ON BB.ç§‘ç›®A = AA.ç§‘ç›®
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}') AND CC.PMName LIKE '{1}') AS KK Group By ç§‘ç›®", strProjectName, strPMName, strBeginTime, strEndTime);
+            strHQL = string.Format(@"Select ¿ÆÄ¿, sum(COALESCE(Ô¤Ëã,0)) as Ô¤Ëã, sum(COALESCE(·ÑÓÃ,0)) as ·ÑÓÃ From(
+   Select * From(Select A.ProjectID, A.Account as ¿ÆÄ¿, COALESCE(sum(A.Amount), 0) as Ô¤Ëã From T_ProjectBudget A Where  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as AA
+   LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as ¿ÆÄ¿A, SUM(A.ConfirmAmount) as ·ÑÓÃ From T_ProExpense A Where  A.EffectDate >= '{2}' And A.EffectDate <= '{3}' and  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as BB ON BB.¿ÆÄ¿A = AA.¿ÆÄ¿
+   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}') AND CC.PMName LIKE '{1}') AS KK Group By ¿ÆÄ¿", strProjectName, strPMName, strBeginTime, strEndTime);
 
         }
 
@@ -126,18 +126,18 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
 
         if (strProjectID != "")
         {
-            strHQL = string.Format(@"Select ç§‘ç›®, sum(COALESCE(é¢„ç®—,0)) as é¢„ç®—, sum(COALESCE(è´¹ç”¨,0)) as è´¹ç”¨ From(
-   Select * From(Select A.ProjectID, A.Account as ç§‘ç›®, COALESCE(sum(A.Amount), 0) as é¢„ç®— From T_ProjectBudget A Where A.ProjectID = {0}  Group By A.Account, A.ProjectID) as AA
-   LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as ç§‘ç›®A, SUM(A.ConfirmAmount) as è´¹ç”¨ From T_ProExpense A Where A.ProjectID = {0} And A.EffectDate >= '{2}' And A.EffectDate <= '{3}'  Group By A.Account, A.ProjectID) as BB ON BB.ç§‘ç›®A = AA.ç§‘ç›®
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {0} AND CC.PMName LIKE '{1}') AS KK Group By ç§‘ç›®", strProjectID, strPMName, strBeginTime, strEndTime);
+            strHQL = string.Format(@"Select ¿ÆÄ¿, sum(COALESCE(Ô¤Ëã,0)) as Ô¤Ëã, sum(COALESCE(·ÑÓÃ,0)) as ·ÑÓÃ From(
+   Select * From(Select A.ProjectID, A.Account as ¿ÆÄ¿, COALESCE(sum(A.Amount), 0) as Ô¤Ëã From T_ProjectBudget A Where A.ProjectID = {0}  Group By A.Account, A.ProjectID) as AA
+   LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as ¿ÆÄ¿A, SUM(A.ConfirmAmount) as ·ÑÓÃ From T_ProExpense A Where A.ProjectID = {0} And A.EffectDate >= '{2}' And A.EffectDate <= '{3}'  Group By A.Account, A.ProjectID) as BB ON BB.¿ÆÄ¿A = AA.¿ÆÄ¿
+   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {0} AND CC.PMName LIKE '{1}') AS KK Group By ¿ÆÄ¿", strProjectID, strPMName, strBeginTime, strEndTime);
 
         }
         else
         {
-            strHQL = string.Format(@"Select ç§‘ç›®, sum(COALESCE(é¢„ç®—,0)) as é¢„ç®—, sum(COALESCE(è´¹ç”¨,0)) as è´¹ç”¨ From(
-   Select * From(Select A.ProjectID, A.Account as ç§‘ç›®, COALESCE(sum(A.Amount), 0) as é¢„ç®— From T_ProjectBudget A Where  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as AA
-   LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as ç§‘ç›®A, SUM(A.ConfirmAmount) as è´¹ç”¨ From T_ProExpense A Where  A.EffectDate >= '{2}' And A.EffectDate <= '{3}' and  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as BB ON BB.ç§‘ç›®A = AA.ç§‘ç›®
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}') AND CC.PMName LIKE '{1}') AS KK Group By ç§‘ç›®", strProjectName, strPMName, strBeginTime, strEndTime);
+            strHQL = string.Format(@"Select ¿ÆÄ¿, sum(COALESCE(Ô¤Ëã,0)) as Ô¤Ëã, sum(COALESCE(·ÑÓÃ,0)) as ·ÑÓÃ From(
+   Select * From(Select A.ProjectID, A.Account as ¿ÆÄ¿, COALESCE(sum(A.Amount), 0) as Ô¤Ëã From T_ProjectBudget A Where  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as AA
+   LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as ¿ÆÄ¿A, SUM(A.ConfirmAmount) as ·ÑÓÃ From T_ProExpense A Where  A.EffectDate >= '{2}' And A.EffectDate <= '{3}' and  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as BB ON BB.¿ÆÄ¿A = AA.¿ÆÄ¿
+   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}') AND CC.PMName LIKE '{1}') AS KK Group By ¿ÆÄ¿", strProjectName, strPMName, strBeginTime, strEndTime);
 
         }
 
@@ -147,11 +147,11 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
 
         DataTable dtProject = ds.Tables[0];
 
-        Export3Excel(dtProject, "é¡¹ç›®é¢„ç®—ä¸Žè´¹ç”¨ç»Ÿè®¡æŠ¥è¡¨.xls");
+        Export3Excel(dtProject, "ÏîÄ¿Ô¤ËãÓë·ÑÓÃÍ³¼Æ±¨±í.xls");
 
         LB_ResultNumber.Text = GridView1.Rows.Count.ToString();
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¯¼å‡ºæˆåŠŸï¼');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µ¼³ö³É¹¦£¡');", true);
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)
@@ -176,7 +176,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
         Response.End();
     }
 
-    //åˆ›å»ºåˆ†æžå›¾å½¢
+    //´´½¨·ÖÎöÍ¼ÐÎ
     protected void CreateProjectMalesStoneAnalystChart(string strUserCode)
     {
         string strChartTitle;
@@ -195,22 +195,22 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
 
         LB_ReportName.Text = Resources.lang.XiangMu + Resources.lang.YSYFYBB;
         LB_ReportTime.Text = "( " + strBeginTime + "---" + strEndTime + " )";
-        strChartTitle = "é¢„ç®—è´¹ç”¨åˆ†å¸ƒå›¾";
+        strChartTitle = "Ô¤Ëã·ÑÓÃ·Ö²¼Í¼";
 
         if (strProjectID != "")
         {
-            strHQL = string.Format(@"Select ç§‘ç›® as XName, sum(COALESCE(é¢„ç®—,0)) as YNumber, sum(COALESCE(è´¹ç”¨,0)) as ZNumber From(
-   Select * From(Select A.ProjectID, A.Account as ç§‘ç›®, COALESCE(sum(A.Amount), 0) as é¢„ç®— From T_ProjectBudget A Where A.ProjectID = {0}  Group By A.Account, A.ProjectID) as AA
-   LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as ç§‘ç›®A, SUM(A.ConfirmAmount) as è´¹ç”¨ From T_ProExpense A Where A.ProjectID = {0} And A.EffectDate >= '{2}' And A.EffectDate <= '{3}'  Group By A.Account, A.ProjectID) as BB ON BB.ç§‘ç›®A = AA.ç§‘ç›®
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {0} AND CC.PMName LIKE '{1}') AS KK Group By ç§‘ç›®", strProjectID, strPMName, strBeginTime, strEndTime);
+            strHQL = string.Format(@"Select ¿ÆÄ¿ as XName, sum(COALESCE(Ô¤Ëã,0)) as YNumber, sum(COALESCE(·ÑÓÃ,0)) as ZNumber From(
+   Select * From(Select A.ProjectID, A.Account as ¿ÆÄ¿, COALESCE(sum(A.Amount), 0) as Ô¤Ëã From T_ProjectBudget A Where A.ProjectID = {0}  Group By A.Account, A.ProjectID) as AA
+   LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as ¿ÆÄ¿A, SUM(A.ConfirmAmount) as ·ÑÓÃ From T_ProExpense A Where A.ProjectID = {0} And A.EffectDate >= '{2}' And A.EffectDate <= '{3}'  Group By A.Account, A.ProjectID) as BB ON BB.¿ÆÄ¿A = AA.¿ÆÄ¿
+   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {0} AND CC.PMName LIKE '{1}') AS KK Group By ¿ÆÄ¿", strProjectID, strPMName, strBeginTime, strEndTime);
 
         }
         else
         {
-            strHQL = string.Format(@"Select ç§‘ç›® as XName, sum(COALESCE(é¢„ç®—,0)) as YNumber, sum(COALESCE(è´¹ç”¨,0)) as ZNumber From(
-   Select * From(Select A.ProjectID, A.Account as ç§‘ç›®, COALESCE(sum(A.Amount), 0) as é¢„ç®— From T_ProjectBudget A Where  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as AA
-   LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as ç§‘ç›®A, SUM(A.ConfirmAmount) as è´¹ç”¨ From T_ProExpense A Where  A.EffectDate >= '{2}' And A.EffectDate <= '{3}' and  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as BB ON BB.ç§‘ç›®A = AA.ç§‘ç›®
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}') AND CC.PMName LIKE '{1}') AS KK Group By ç§‘ç›®", strProjectName, strPMName, strBeginTime, strEndTime);
+            strHQL = string.Format(@"Select ¿ÆÄ¿ as XName, sum(COALESCE(Ô¤Ëã,0)) as YNumber, sum(COALESCE(·ÑÓÃ,0)) as ZNumber From(
+   Select * From(Select A.ProjectID, A.Account as ¿ÆÄ¿, COALESCE(sum(A.Amount), 0) as Ô¤Ëã From T_ProjectBudget A Where  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as AA
+   LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as ¿ÆÄ¿A, SUM(A.ConfirmAmount) as ·ÑÓÃ From T_ProExpense A Where  A.EffectDate >= '{2}' And A.EffectDate <= '{3}' and  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as BB ON BB.¿ÆÄ¿A = AA.¿ÆÄ¿
+   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}') AND CC.PMName LIKE '{1}') AS KK Group By ¿ÆÄ¿", strProjectName, strPMName, strBeginTime, strEndTime);
 
         }
 

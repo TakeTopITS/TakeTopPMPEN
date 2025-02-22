@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteCustomerQuestionSubmitForWebSite_TakeTopSoft.aspx.cs" Inherits="TakeTopSiteCustomerQuestionSubmitForWebSite_TakeTopSoft" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteCustomerQuestionSubmitForWebSite_TakeTopSoft.aspx.cs" Inherits="TakeTopSiteCustomerQuestionSubmitForWebSite_TakeTopSoft" %>
 
 <!DOCTYPE html>
 
@@ -42,14 +42,14 @@
                             <tr>
                                 <td align="right" class="formItemBgStyle" width="30%">
                                     <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,DanWei%>"></asp:Label>
-                                    ï¼š </td>
+                                    £º </td>
                                 <td align="left" class="formItemBgStyle" width="70%">
                                     <asp:TextBox ID="TB_Company" runat="server" Style="width: 250px; height: 30px;"></asp:TextBox>
                                     &nbsp;<font color="#FF0000">*</font> </td>
                             </tr>
                             <tr>
                                 <td align="right" class="formItemBgStyle">
-                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LianXiRen%>"></asp:Label>ï¼š
+                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LianXiRen%>"></asp:Label>£º
                                 </td>
                                 <td width="82%" class="formItemBgStyle" align="left">
                                     <asp:TextBox ID="TB_ContactPerson" runat="server" Style="width: 250px; height: 30px;"></asp:TextBox>
@@ -57,7 +57,7 @@
                             </tr>
                             <tr>
                                 <td align="right" class="formItemBgStyle">
-                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,LianXiDianHua%>"></asp:Label>ï¼š
+                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,LianXiDianHua%>"></asp:Label>£º
                                 </td>
                                 <td class="formItemBgStyle" align="left">
                                     <asp:TextBox ID="TB_PhoneNumber" runat="server" Style="width: 250px; height: 30px;"></asp:TextBox>
@@ -65,7 +65,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td align="right" class="formItemBgStyle">Emailï¼š
+                                <td align="right" class="formItemBgStyle">Email£º
                                 </td>
                                 <td class="formItemBgStyle" align="left">
                                     <asp:TextBox ID="TB_EMail" runat="server" Style="width: 250px; height: 30px;"></asp:TextBox>
@@ -76,7 +76,7 @@
 
                             <tr>
                                 <td align="right" class="formItemBgStyle">
-                                    <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,WenTiLeiBie%>"></asp:Label>ï¼š
+                                    <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,WenTiLeiBie%>"></asp:Label>£º
                                 </td>
                                 <td class="formItemBgStyle" align="left">
                                     <asp:DropDownList ID="DL_CustomerQuestionType" runat="server" Height="35px" DataTextField="Type"
@@ -86,7 +86,7 @@
                             </tr>
                             <tr>
                                 <td align="right" valign="top" class="formItemBgStyle">
-                                    <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,WenTiMiaoShu%>"></asp:Label>ï¼š
+                                    <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,WenTiMiaoShu%>"></asp:Label>£º
                                 </td>
                                 <td class="formItemBgStyle" align="left">
                                     <asp:TextBox ID="TB_Question" runat="server" Rows="5" Style="width: 250px;" TextMode="MultiLine"></asp:TextBox>
@@ -95,7 +95,7 @@
                             </tr>
                             <tr>
                                 <td align="right"  class="formItemBgStyle">
-                                    <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label>ï¼š</td>
+                                    <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YanZhengMa%>"></asp:Label>£º</td>
                                 <td align="left" class="formItemBgStyle">
                                     <table>
                                         <tr>
@@ -123,7 +123,7 @@
 
                             <tr style="display: none;">
                                 <td align="right" class="formItemBgStyle">
-                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,LianXiDiZhi%>"></asp:Label>ï¼š
+                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,LianXiDiZhi%>"></asp:Label>£º
                                 </td>
                                 <td class="formItemBgStyle" align="left">
                                     <asp:TextBox ID="TB_Address" runat="server" Style="width: 250px;"></asp:TextBox>
@@ -132,7 +132,7 @@
                             </tr>
                             <tr style="display: none;">
                                 <td align="right" class="formItemBgStyle">
-                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,YouZhengBianMa%>"></asp:Label>ï¼š
+                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,YouZhengBianMa%>"></asp:Label>£º
                                 </td>
                                 <td class="formItemBgStyle" align="left">
                                     <asp:TextBox ID="TB_PostCode" runat="server" Style="width: 100px;"></asp:TextBox>

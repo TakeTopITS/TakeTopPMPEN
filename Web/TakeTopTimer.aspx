@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopTimer.aspx.cs" Inherits="TakeTopTimer" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopTimer.aspx.cs" Inherits="TakeTopTimer" %>
 
 <!DOCTYPE html>
 
@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div style="color: red; padding-top: 50px; text-align: center;">
-            æ­£åœ¨è¿è¡Œï¼ˆRUNING)
+            ÕýÔÚÔËÐÐ£¨RUNING)
             <br />
             <asp:Label ID="LB_RefresTime" runat="server"></asp:Label>
             <br />

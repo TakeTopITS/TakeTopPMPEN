@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAllMemberPlans.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAllMemberPlans.aspx.cs"
     Inherits="TTAllMemberPlans" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -122,7 +122,7 @@
 
                                                                             <ItemStyle CssClass="itemBorder" />
                                                                             <Columns>
-                                                                                <asp:TemplateColumn HeaderText="éƒ¨é—¨æˆå‘˜ï¼š">
+                                                                                <asp:TemplateColumn HeaderText="²¿ÃÅ³ÉÔ±£º">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_UserCode" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>'
                                                                                             Style="text-align: center" />
@@ -311,7 +311,7 @@
                                                                             <tr>
                                                                                 <td align="left" valign="top">
                                                                                     <cc2:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" runat="server" ActiveTabIndex="0" Width="90%">
-                                                                                        <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="æ‰§è¡Œæ—¥å¿—" TabIndex="0">
+                                                                                        <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="Ö´ÐÐÈÕÖ¾" TabIndex="0">
 
                                                                                             <HeaderTemplate>
 
@@ -413,7 +413,7 @@
                                                                                                 </asp:DataList>
                                                                                             </ContentTemplate>
                                                                                         </cc2:TabPanel>
-                                                                                        <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="å…³é”®ç›®æ ‡" TabIndex="1">
+                                                                                        <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="¹Ø¼üÄ¿±ê" TabIndex="1">
 
                                                                                             <HeaderTemplate>
 
@@ -480,17 +480,17 @@
 
                                                                                                                 <Columns>
 
-                                                                                                                    <asp:BoundColumn DataField="ID" HeaderText="ç¼–å·">
+                                                                                                                    <asp:BoundColumn DataField="ID" HeaderText="±àºÅ">
 
                                                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="center" Width="10%" />
                                                                                                                     </asp:BoundColumn>
 
-                                                                                                                    <asp:BoundColumn DataField="Target" HeaderText="ç›®æ ‡">
+                                                                                                                    <asp:BoundColumn DataField="Target" HeaderText="Ä¿±ê">
 
                                                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="70%" />
                                                                                                                     </asp:BoundColumn>
 
-                                                                                                                    <asp:TemplateColumn HeaderText="è¿›åº¦">
+                                                                                                                    <asp:TemplateColumn HeaderText="½ø¶È">
 
                                                                                                                         <ItemTemplate>
 
@@ -518,7 +518,7 @@
                                                                                                 </table>
                                                                                             </ContentTemplate>
                                                                                         </cc2:TabPanel>
-                                                                                        <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="é¢†å¯¼è¯„æ ¸" TabIndex="2">
+                                                                                        <cc2:TabPanel ID="TabPanel3" runat="server" HeaderText="Áìµ¼ÆÀºË" TabIndex="2">
 
                                                                                             <HeaderTemplate>
 
@@ -645,7 +645,7 @@
                                                                                                 </table>
                                                                                             </ContentTemplate>
                                                                                         </cc2:TabPanel>
-                                                                                        <cc2:TabPanel ID="TabPanel4" runat="server" HeaderText="è¯„è®ºè®°å½•" TabIndex="0">
+                                                                                        <cc2:TabPanel ID="TabPanel4" runat="server" HeaderText="ÆÀÂÛ¼ÇÂ¼" TabIndex="0">
 
                                                                                             <HeaderTemplate>
                                                                                                 <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,WoDeYiJian%>"></asp:Label>
@@ -804,7 +804,7 @@
                                                                                                         </asp:ChartArea>
                                                                                                     </ChartAreas>
                                                                                                     <Titles>
-                                                                                                        <asp:Title Name="æ ‡é¢˜" Alignment="TopCenter" IsDockedInsideChartArea="false" DockedToChartArea="ChartArea1">
+                                                                                                        <asp:Title Name="±êÌâ" Alignment="TopCenter" IsDockedInsideChartArea="false" DockedToChartArea="ChartArea1">
                                                                                                         </asp:Title>
                                                                                                     </Titles>
                                                                                                 </asp:Chart>--%>
@@ -841,7 +841,7 @@
 
                                 <tr>
                                     <td style="width: 90px; text-align: right;" class="formItemBgStyle">
-                                        <asp:Label ID="LB_ID" runat="server"></asp:Label><asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,ShenHeYiJian%>"></asp:Label>ï¼š
+                                        <asp:Label ID="LB_ID" runat="server"></asp:Label><asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,ShenHeYiJian%>"></asp:Label>£º
                                     </td>
 
                                     <td style="text-align: left;" class="formItemBgStyle">
@@ -856,7 +856,7 @@
                                 <tr>
 
                                     <td style="width: 90px; text-align: right;" class="formItemBgStyle">
-                                        <asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,PingFen%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,PingFen%>"></asp:Label>£º
                                     </td>
 
                                     <td style="text-align: left;" class="formItemBgStyle">

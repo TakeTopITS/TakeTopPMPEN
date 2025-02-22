@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteNewsList.aspx.cs" Inherits="TakeTopSiteNewsList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteNewsList.aspx.cs" Inherits="TakeTopSiteNewsList" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -84,7 +84,7 @@
                         <tr>
                             <td width="100px" align="left">
                                 <a href="javascript:ChangeMenu(1)">
-                                    <asp:Image ID="IM_RightToLeft" ImageUrl="Logo/website/Images/tupian.png" Width="50" Height="169" border="0" alt="ÈöêËóèÂ∑¶ËæπÊ†è" runat="server" /></a>
+                                    <asp:Image ID="IM_RightToLeft" ImageUrl="Logo/website/Images/tupian.png" Width="50" Height="169" border="0" alt="“˛≤ÿ◊Û±ﬂ¿∏" runat="server" /></a>
 
                             </td>
                         </tr>
@@ -104,12 +104,12 @@
                                         <asp:TemplateColumn HeaderText="NewsTitle">
                                             <ItemTemplate>
                                                 <a onclick="javascript:popShowByURL('TakeTopSiteNewsView.aspx?ID=<%# Eval("ID").ToString() %>','<%# Eval("Title").ToString() %>',800, 600,window.location);" target="_blank">
-                                                  <%#this.DataGrid1.CurrentPageIndex * this.DataGrid1.PageSize + Container.ItemIndex +1%> „ÄÅ <%# Eval("Title").ToString() %>
+                                                  <%#this.DataGrid1.CurrentPageIndex * this.DataGrid1.PageSize + Container.ItemIndex +1%> °¢ <%# Eval("Title").ToString() %>
                                                 </a>
                                             </ItemTemplate>
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="80%" />
                                         </asp:TemplateColumn>
-                                        <asp:BoundColumn DataField="PublishTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="ÂèëÂ∏ÉÊó∂Èó¥">
+                                        <asp:BoundColumn DataField="PublishTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="∑¢≤º ±º‰">
                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                         </asp:BoundColumn>
                                     </Columns>

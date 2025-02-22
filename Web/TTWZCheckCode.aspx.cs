@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Data;
 using System.Configuration;
 using System.Collections;
@@ -54,13 +54,13 @@ public partial class TTWZCheckCode : System.Web.UI.Page
 
        try
        {
-        //ç”Ÿæˆéšæœºç”Ÿæˆå™¨
+        //Éú³ÉËæ»úÉú³ÉÆ÷
         Random random = new Random();
 
-        //æ¸…ç©ºå›¾ç‰‡èƒŒæ™¯è‰²
+        //Çå¿ÕÍ¼Æ¬±³¾°É«
         g.Clear(Color.White);
 
-        //ç”»å›¾ç‰‡çš„èƒŒæ™¯å™ªéŸ³çº¿
+        //»­Í¼Æ¬µÄ±³¾°ÔëÒôÏß
         for(int i=0; i<25; i++)
         {
          int x1 = random.Next(image.Width);
@@ -75,7 +75,7 @@ public partial class TTWZCheckCode : System.Web.UI.Page
         System.Drawing.Drawing2D.LinearGradientBrush brush = new System.Drawing.Drawing2D.LinearGradientBrush(new Rectangle(0, 0, image.Width, image.Height), Color.Blue, Color.DarkRed, 1.2f, true);
         g.DrawString(checkCode, font, brush, 2, 2);
 
-        //ç”»å›¾ç‰‡çš„å‰æ™¯å™ªéŸ³ç‚¹
+        //»­Í¼Æ¬µÄÇ°¾°ÔëÒôµã
         for(int i=0; i<100; i++)
         {
          int x = random.Next(image.Width);
@@ -84,7 +84,7 @@ public partial class TTWZCheckCode : System.Web.UI.Page
          image.SetPixel(x, y, Color.FromArgb(random.Next()));
         }
 
-        //ç”»å›¾ç‰‡çš„è¾¹æ¡†çº¿
+        //»­Í¼Æ¬µÄ±ß¿òÏß
         g.DrawRectangle(new Pen(Color.Silver), 0, 0, image.Width - 1, image.Height - 1);
 
         System.IO.MemoryStream ms = new System.IO.MemoryStream();

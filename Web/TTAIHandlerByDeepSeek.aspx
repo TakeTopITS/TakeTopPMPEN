@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" Async="true" CodeFile="TTAIHandlerByDeepSeek.aspx.cs" Inherits="TTAIHandlerByDeepSeek" %>
+<%@ Page Language="C#" AutoEventWireup="true" Async="true" CodeFile="TTAIHandlerByDeepSeek.aspx.cs" Inherits="TTAIHandlerByDeepSeek" %>
 
 <%@ Import Namespace="System.Globalization" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -16,12 +16,12 @@
         }
 
 
-        //æ–‡æœ¬æ¡†åŠ å›è½¦é”®åŠŸèƒ½
+        //ÎÄ±¾¿ò¼Ó»Ø³µ¼ü¹¦ÄÜ
         document.addEventListener('keydown', function (event) {
             if (event.key === 'Enter') {
-                // æ£€æŸ¥ç„¦ç‚¹æ˜¯å¦åœ¨è¾“å…¥æ¡†å†…
+                // ¼ì²é½¹µãÊÇ·ñÔÚÊäÈë¿òÄÚ
                 if (document.activeElement === document.getElementById('txtPrompt')) {
-                    // æ¨¡æ‹Ÿç‚¹å‡»æŒ‰é’®
+                    // Ä£Äâµã»÷°´Å¥
                     document.getElementById('btnGenerateText').click();
                 }
             }
@@ -44,13 +44,13 @@
                                     <asp:TextBox ID="txtPrompt" runat="server" Width="500px" Height="60px" TextMode="MultiLine"></asp:TextBox>
                                 </td>
                                 <td>
-                                    <asp:ImageButton ID="btnGenerateText" ImageUrl="ImagesSkin/AIGenerate.png" runat="server" Text="ç”Ÿæˆ" OnClick="btnGenerateText_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';" />
+                                    <asp:ImageButton ID="btnGenerateText" ImageUrl="ImagesSkin/AIGenerate.png" runat="server" Text="Éú³É" OnClick="btnGenerateText_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';" />
                                 </td>
                                 <td>
                                     <img id="IMG_Waiting" src="Images/Processing.gif" alt="Loading,please wait..." style="text-align: center; display: none;" />
                                 </td>
                                 <td>
-                                    <asp:ImageButton ID="btnStopSeek" ImageUrl="ImagesSkin/AIStop.png" runat="server" Text="åœæ­¢" OnClick="btnStopAI_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'none';" />
+                                    <asp:ImageButton ID="btnStopSeek" ImageUrl="ImagesSkin/AIStop.png" runat="server" Text="Í£Ö¹" OnClick="btnStopAI_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'none';" />
                                 </td>
                             </tr>
                         </table>

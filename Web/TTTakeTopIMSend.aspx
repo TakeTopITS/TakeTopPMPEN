@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTTakeTopIMSend.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTTakeTopIMSend.aspx.cs"
     EnableEventValidation="false" Inherits="TTTakeTopIMSend" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc2" %>
@@ -41,7 +41,7 @@
                         <td style="padding-top: 2px;">
                             <cc2:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" runat="server" ActiveTabIndex="0"
                                 Width="100%">
-                                <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="å‘é€ä¿¡æ¯" TabIndex="0" BorderWidth="0">
+                                <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="·¢ËÍÐÅÏ¢" TabIndex="0" BorderWidth="0">
                                     <HeaderTemplate>
                                         <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,FaSongXinXi%>"></asp:Label>
                                     </HeaderTemplate>
@@ -50,7 +50,7 @@
                                             <table width="100%">
                                                 <tr>
                                                     <td width="38px">
-                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZhuTi%>"></asp:Label>ï¼š
+                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ZhuTi%>"></asp:Label>£º
                                                     </td>
                                                     <td align="right">
                                                         <asp:TextBox ID="TB_CollaborationName" runat="server" Style="width: 99%;"></asp:TextBox>
@@ -69,7 +69,7 @@
                                         </asp:Panel>
                                     </ContentTemplate>
                                 </cc2:TabPanel>
-                                <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="ä¸Šä¼ æ–‡ä»¶" TabIndex="1" BorderWidth="0">
+                                <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="ÉÏ´«ÎÄ¼þ" TabIndex="1" BorderWidth="0">
                                     <HeaderTemplate>
                                         <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ShangChuanWenJian%>"></asp:Label>
                                     </HeaderTemplate>
@@ -79,23 +79,23 @@
                                             <tr>
                                                 <td class="formItemBgStyle" style="width: 100%; text-align: left;">
                                                     <span><strong>
-                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,WenJianShangChuan%>"></asp:Label>ï¼š</strong>
+                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,WenJianShangChuan%>"></asp:Label>£º</strong>
                                                     </span>
                                                     <asp:Label ID="LB_Sql" runat="server" Visible="False"></asp:Label>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="formItemBgStyle" style="width: 100%; height: 25px; text-align: left;">
-                                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>ï¼š<asp:DropDownList ID="DL_DocType" runat="server" DataTextField="Type" DataValueField="ID"
+                                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º<asp:DropDownList ID="DL_DocType" runat="server" DataTextField="Type" DataValueField="ID"
                                                         Width="166px">
                                                     </asp:DropDownList>
                                                     &#160;
-                                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,QuanXian%>"></asp:Label>ï¼š<asp:DropDownList ID="DL_Visible" runat="server" CssClass="DDList" Width="64px">
-                                                        <asp:ListItem Value="å…¨ä½“" Text="<%$ Resources:lang,QuanTi%>" />
-                                                        <asp:ListItem Value="ä¸ªäºº" Text="<%$ Resources:lang,GeRen%>" />
+                                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,QuanXian%>"></asp:Label>£º<asp:DropDownList ID="DL_Visible" runat="server" CssClass="DDList" Width="64px">
+                                                        <asp:ListItem Value="È«Ìå" Text="<%$ Resources:lang,QuanTi%>" />
+                                                        <asp:ListItem Value="¸öÈË" Text="<%$ Resources:lang,GeRen%>" />
                                                     </asp:DropDownList>
                                                     &#160;
-                                                    <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZuoZhe%>"></asp:Label>ï¼š<asp:TextBox ID="TB_Author" runat="server" Width="74px"></asp:TextBox>
+                                                    <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZuoZhe%>"></asp:Label>£º<asp:TextBox ID="TB_Author" runat="server" Width="74px"></asp:TextBox>
                                                 </td>
                                             </tr>
                                             <tr>

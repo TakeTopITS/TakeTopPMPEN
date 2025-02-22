@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections;
 using System.Data;
 using System.Drawing;
@@ -15,8 +15,8 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //é’Ÿç¤¼æœˆä½œå“ï¼ˆjack.erp@gmail.com)
-        //æ³°é¡¶è½¯ä»¶2006ï¼2012
+        //ÖÓÀñÔÂ×÷Æ·£¨jack.erp@gmail.com)
+        //Ì©¶¥Èí¼ş2006£­2012
 
         strLangCode = Session["LangCode"].ToString();
         strUserCode = Session["UserCode"].ToString();
@@ -28,7 +28,7 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
         LB_UserName.Text = strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "é¡¹ç›®å¯åŠ¨ç®¡ç†", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ÏîÄ¿Æô¶¯¹ÜÀí", strUserCode);
 
         if (blVisible == false)
         {
@@ -334,7 +334,7 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
             dtNowDate = DateTime.Now;
             strStatus = DataGrid3.Items[i].Cells[8].Text.Trim();
 
-            if (strStatus != "ç»“æ¡ˆ" & strStatus != "å½’æ¡£")
+            if (strStatus != "CaseClosed" & strStatus != "Archived")
             {
                 if (dtFinishedDate < dtNowDate)
                 {
@@ -432,7 +432,7 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
 
             deBudget = project.Budget;
 
-            //å®é™…è´¹ç”¨å’Œé¢„ç®—å¯¹æ¯”
+            //Êµ¼Ê·ÑÓÃºÍÔ¤Ëã¶Ô±È
             strHQL = "from ProRealCharge as proRealCharge where proRealCharge.ProjectID = " + strProjectID;
             lst = proRealChargeBLL.GetAllProRealCharges(strHQL);
             if (lst.Count == 0)
@@ -472,7 +472,7 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 }
             }
 
-            //æ ‡å‡†æˆæœ¬å’Œé¢„ç®—å¯¹æ¯”
+            //±ê×¼³É±¾ºÍÔ¤Ëã¶Ô±È
             deDefaultBudget = ShareClass.GetProjectDefaultFinishCost(strProjectID);
             if (deBudget == 0)
             {
@@ -495,7 +495,7 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
             if (deBudgetHeight > 150)
                 deBudgetHeight = 150;
 
-            string strConstractAmontToolTip = "åˆåŒæ€»é¢ï¼š" + GetProjectRelatedConstractTotalReceivablesAmount(strProjectID) + ",åˆåŒåº”æ”¶æ€»é¢ï¼š" + GetProjectRelatedConstractTotalReceivablesAmount(strProjectID) + ",åˆåŒå®æ”¶æ€»é¢ï¼š" + GetProjectRelatedConstractTotalReceiverAmount(strProjectID);
+            string strConstractAmontToolTip = "ºÏÍ¬×Ü¶î£º" + GetProjectRelatedConstractTotalReceivablesAmount(strProjectID) + ",ºÏÍ¬Ó¦ÊÕ×Ü¶î£º" + GetProjectRelatedConstractTotalReceivablesAmount(strProjectID) + ",ºÏÍ¬ÊµÊÕ×Ü¶î£º" + GetProjectRelatedConstractTotalReceiverAmount(strProjectID);
 
             if (i == 0)
             {
@@ -516,8 +516,8 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 LB_ProBdg1.Text = strBudgetProjectID;
                 LB_ProBdg1.ToolTip = strConstractAmontToolTip;
 
-                IMB_ProCost1.ToolTip = "å·²å‘ç”Ÿè´¹ç”¨ï¼š" + deRealCharge.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
-                IMB_ProBdg1.ToolTip = "å½“å‰æ—¥æœŸé¢„ç®—ï¼š" + deDefaultBudget.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProCost1.ToolTip = "ÒÑ·¢Éú·ÑÓÃ£º" + deRealCharge.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg1.ToolTip = "µ±Ç°ÈÕÆÚÔ¤Ëã£º" + deDefaultBudget.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
             }
 
             if (i == 1)
@@ -539,8 +539,8 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 LB_ProBdg2.Text = strBudgetProjectID;
                 LB_ProBdg2.ToolTip = strConstractAmontToolTip;
 
-                IMB_ProCost2.ToolTip = "å·²å‘ç”Ÿè´¹ç”¨ï¼š" + deRealCharge.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
-                IMB_ProBdg2.ToolTip = "å½“å‰æ—¥æœŸé¢„ç®—ï¼š" + deDefaultBudget.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProCost2.ToolTip = "ÒÑ·¢Éú·ÑÓÃ£º" + deRealCharge.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg2.ToolTip = "µ±Ç°ÈÕÆÚÔ¤Ëã£º" + deDefaultBudget.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
             }
 
             if (i == 2)
@@ -562,8 +562,8 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 LB_ProBdg3.Text = strBudgetProjectID;
                 LB_ProBdg3.ToolTip = strConstractAmontToolTip;
 
-                IMB_ProCost3.ToolTip = "å·²å‘ç”Ÿè´¹ç”¨ï¼š" + deRealCharge.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
-                IMB_ProBdg3.ToolTip = "å½“å‰æ—¥æœŸé¢„ç®—ï¼š" + deDefaultBudget.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProCost3.ToolTip = "ÒÑ·¢Éú·ÑÓÃ£º" + deRealCharge.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg3.ToolTip = "µ±Ç°ÈÕÆÚÔ¤Ëã£º" + deDefaultBudget.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
             }
 
             if (i == 3)
@@ -586,8 +586,8 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 LB_ProBdg4.Text = strBudgetProjectID;
                 LB_ProBdg4.ToolTip = strConstractAmontToolTip;
 
-                IMB_ProCost4.ToolTip = "å·²å‘ç”Ÿè´¹ç”¨ï¼š" + deRealCharge.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
-                IMB_ProBdg4.ToolTip = "å½“å‰æ—¥æœŸé¢„ç®—ï¼š" + deDefaultBudget.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProCost4.ToolTip = "ÒÑ·¢Éú·ÑÓÃ£º" + deRealCharge.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg4.ToolTip = "µ±Ç°ÈÕÆÚÔ¤Ëã£º" + deDefaultBudget.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
             }
 
             if (i == 4)
@@ -609,8 +609,8 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 LB_ProBdg5.Text = strBudgetProjectID;
                 LB_ProBdg5.ToolTip = strConstractAmontToolTip;
 
-                IMB_ProCost5.ToolTip = "å·²å‘ç”Ÿè´¹ç”¨ï¼š" + deRealCharge.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
-                IMB_ProBdg5.ToolTip = "å½“å‰æ—¥æœŸé¢„ç®—ï¼š" + deDefaultBudget.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProCost5.ToolTip = "ÒÑ·¢Éú·ÑÓÃ£º" + deRealCharge.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg5.ToolTip = "µ±Ç°ÈÕÆÚÔ¤Ëã£º" + deDefaultBudget.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
             }
 
             if (i == 5)
@@ -632,8 +632,8 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 LB_ProBdg6.Text = strBudgetProjectID;
                 LB_ProBdg6.ToolTip = strConstractAmontToolTip;
 
-                IMB_ProCost6.ToolTip = "å·²å‘ç”Ÿè´¹ç”¨ï¼š" + deRealCharge.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
-                IMB_ProBdg6.ToolTip = "å½“å‰æ—¥æœŸé¢„ç®—ï¼š" + deDefaultBudget.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProCost6.ToolTip = "ÒÑ·¢Éú·ÑÓÃ£º" + deRealCharge.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg6.ToolTip = "µ±Ç°ÈÕÆÚÔ¤Ëã£º" + deDefaultBudget.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
             }
 
             if (i == 6)
@@ -655,8 +655,8 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 LB_ProBdg7.Text = strBudgetProjectID;
                 LB_ProBdg7.ToolTip = strConstractAmontToolTip;
 
-                IMB_ProCost7.ToolTip = "å·²å‘ç”Ÿè´¹ç”¨ï¼š" + deRealCharge.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
-                IMB_ProBdg7.ToolTip = "å½“å‰æ—¥æœŸé¢„ç®—ï¼š" + deDefaultBudget.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProCost7.ToolTip = "ÒÑ·¢Éú·ÑÓÃ£º" + deRealCharge.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg7.ToolTip = "µ±Ç°ÈÕÆÚÔ¤Ëã£º" + deDefaultBudget.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
             }
 
             if (i == 7)
@@ -678,8 +678,8 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 LB_ProBdg8.Text = strBudgetProjectID;
                 LB_ProBdg8.ToolTip = strConstractAmontToolTip;
 
-                IMB_ProBdg8.ToolTip = "å·²å‘ç”Ÿè´¹ç”¨ï¼š" + deRealCharge.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
-                IMB_ProBdg8.ToolTip = "å½“å‰æ—¥æœŸé¢„ç®—ï¼š" + deDefaultBudget.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg8.ToolTip = "ÒÑ·¢Éú·ÑÓÃ£º" + deRealCharge.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg8.ToolTip = "µ±Ç°ÈÕÆÚÔ¤Ëã£º" + deDefaultBudget.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
             }
 
             if (i == 8)
@@ -701,8 +701,8 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 LB_ProBdg9.Text = strBudgetProjectID;
                 LB_ProBdg9.ToolTip = strConstractAmontToolTip;
 
-                IMB_ProCost9.ToolTip = "å·²å‘ç”Ÿè´¹ç”¨ï¼š" + deRealCharge.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
-                IMB_ProBdg9.ToolTip = "å½“å‰æ—¥æœŸé¢„ç®—ï¼š" + deDefaultBudget.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProCost9.ToolTip = "ÒÑ·¢Éú·ÑÓÃ£º" + deRealCharge.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg9.ToolTip = "µ±Ç°ÈÕÆÚÔ¤Ëã£º" + deDefaultBudget.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
             }
 
             if (i == 9)
@@ -724,8 +724,8 @@ public partial class TTProjectStartupConfirmBySupper : System.Web.UI.Page
                 LB_ProBdg10.Text = strBudgetProjectID;
                 LB_ProBdg10.ToolTip = strConstractAmontToolTip;
 
-                IMB_ProCost10.ToolTip = "å·²å‘ç”Ÿè´¹ç”¨ï¼š" + deRealCharge.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
-                IMB_ProBdg10.ToolTip = "å½“å‰æ—¥æœŸé¢„ç®—ï¼š" + deDefaultBudget.ToString() + " , æ€»é¢„ç®—ï¼š" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProCost10.ToolTip = "ÒÑ·¢Éú·ÑÓÃ£º" + deRealCharge.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
+                IMB_ProBdg10.ToolTip = "µ±Ç°ÈÕÆÚÔ¤Ëã£º" + deDefaultBudget.ToString() + " , ×ÜÔ¤Ëã£º" + deBudget.ToString() + "," + strConstractAmontToolTip;
             }
         }
     }

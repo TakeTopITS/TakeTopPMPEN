@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSupplierTemplateDetail.aspx.cs" Inherits="TTWZSupplierTemplateDetail" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSupplierTemplateDetail.aspx.cs" Inherits="TTWZSupplierTemplateDetail" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>‰æõÂ∫îÂïÜÂÖ•ÁΩëÊµÅÁ®ã</title>
+    <title>π©”¶…Ã»ÎÕ¯¡˜≥Ã</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -50,14 +50,14 @@
                                                             <table class="formBgStyle" width="100%">
                                                                 <tr style="display:none;">
                                                                     <td style="text-align: right" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XuHao%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:TextBox ID="TXT_ID" runat="server" ReadOnly="true"></asp:TextBox><font color="red">*<asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ZiDongShengCheng%>"></asp:Label></font>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td style="text-align: right" class="formItemBgStyle">
-                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>Ôºö</td>
+                                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>£∫</td>
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <%--<asp:TextBox ID="TXT_TemplateContent" runat="server" Height="116px" Width="489px" Text=""></asp:TextBox>--%>
                                                                         <textarea id="TXT_TemplateContent" runat="server" cols="150" rows="15"></textarea>

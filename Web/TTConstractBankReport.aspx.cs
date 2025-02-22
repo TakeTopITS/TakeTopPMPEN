@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -20,7 +20,7 @@ public partial class TTConstractBankReport : System.Web.UI.Page
 
         strLikeUserCode = "%" + strUserCode + "%";
 
-        //this.Title = "é“¶è¡ŒæŠ¥è¡¨";
+        //this.Title = "ÒøĞĞ±¨±í";
 
         LB_UserCode.Text = strUserCode;
         strUserName = Session["UserName"].ToString();
@@ -160,7 +160,7 @@ public partial class TTConstractBankReport : System.Web.UI.Page
         strBank = "%" + strBank + "%";
 
         strUnitName = TXT_UnitName.Text.Trim();
-        strHQL = "Select to_char(OperateTime, 'yyyy/mm/dd') æ—¶é—´,Bank é“¶è¡Œ,BillCode åŸå§‹å•å·,ConstractCode åˆåŒä»£ç ,Currency å¸åˆ«, sum(ReciverAmount) æ”¶å…¥ ,sum(PayableAmount) æ”¯å‡º,UnitName å•ä½,sum(HandlingCharge) æ‰‹ç»­è´¹,sum(Balance) æ¯æ—¥ç°é‡‘ä½™é¢  from V_ConstractBankReport Where";
+        strHQL = "Select to_char(OperateTime, 'yyyy/mm/dd') Ê±¼ä,Bank ÒøĞĞ,BillCode Ô­Ê¼µ¥ºÅ,ConstractCode ºÏÍ¬´úÂë,Currency ±Ò±ğ, sum(ReciverAmount) ÊÕÈë ,sum(PayableAmount) Ö§³ö,UnitName µ¥Î»,sum(HandlingCharge) ÊÖĞø·Ñ,sum(Balance) Ã¿ÈÕÏÖ½ğÓà¶î  from V_ConstractBankReport Where";
         strHQL += " ((ConstractCode in (Select ConstractCode From T_Constract Where DepartCode in " + strDepartString + "))";
         strHQL += " Or (ConstractCode in (Select ConstractCode From T_ConstractRelatedUser Where UserCode like  " + "'" + strLikeUserCode + "'" + ")))";
         strHQL += " and ConstractCode Like " + "'" + strConstractCode + "'";

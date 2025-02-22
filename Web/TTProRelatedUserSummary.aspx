@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProRelatedUserSummary.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProRelatedUserSummary.aspx.cs"
     Inherits="TTProRelatedUserSummary" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -75,7 +75,7 @@
                                         <tr>
                                             <td style="height: 16px; padding: 5px 5px 5px 5px;" align="right">
                                                 <a href="#" onclick="preview1()">
-                                                    <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" />
+                                                    <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" />
                                                 </a></td>
                                         </tr>
                                     </table>
@@ -143,26 +143,26 @@
                                                     ForeColor="#333333" GridLines="None">
                                                     <HeaderStyle HorizontalAlign="Center" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                     <Columns>
-                                                        <asp:BoundColumn DataField="UserCode" HeaderText="ä»£ç ">
+                                                        <asp:BoundColumn DataField="UserCode" HeaderText="´úÂë">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="åç§°">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="Ãû³Æ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="DepartName" HeaderText="éƒ¨é—¨">
+                                                        <asp:BoundColumn DataField="DepartName" HeaderText="²¿ÃÅ">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="Actor" HeaderText="è§’è‰²">
+                                                        <asp:BoundColumn DataField="Actor" HeaderText="½ÇÉ«">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="CanUpdatePlan" HeaderText="å¯æ”¹è®¡åˆ’">
+                                                        <asp:BoundColumn DataField="CanUpdatePlan" HeaderText="¿É¸Ä¼Æ»®">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
-                                                        <asp:BoundColumn DataField="UnitHourSalary" HeaderText="æ—¶è–ª">
+                                                        <asp:BoundColumn DataField="UnitHourSalary" HeaderText="Ê±Ð½">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                         </asp:BoundColumn>
 
-                                                        <asp:BoundColumn DataField="JoinDate" HeaderText="åŠ å…¥æ—¶é—´">
+                                                        <asp:BoundColumn DataField="JoinDate" HeaderText="¼ÓÈëÊ±¼ä">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                         </asp:BoundColumn>
                                                     </Columns>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPGoodsSummaryReport.aspx.cs" Inherits="TTAPPGoodsSummaryReport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPGoodsSummaryReport.aspx.cs" Inherits="TTAPPGoodsSummaryReport" %>
 
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
@@ -58,8 +58,8 @@
 
         });
 
-        var loadingIndex; //提示层index
-        var isWxConfigReady = false; //config是否验证通过
+        var loadingIndex; //��ʾ��index
+        var isWxConfigReady = false; //config�Ƿ���֤ͨ��
         $(function () {
             try {
                 if ('<%=signModel.appId %>' == '') {
@@ -87,11 +87,11 @@
                 , content: 'ImagesSkin/Processing.gif'
             });
             wx.config({
-                debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-                appId: '<%=signModel.appId %>', // 必填，公众号的唯一标识
-                timestamp: '<%=signModel.time %>', // 必填，生成签名的时间戳(随便填写)
-                nonceStr: '<%=signModel.randstr %>', // 必填，生成签名的随机串(随便填写)
-                signature: '<%=signModel.signstr %>', // 必填，签名，见附录1
+                debug: false, // ��������ģʽ,���õ�����api�ķ���ֵ���ڿͻ���alert��������Ҫ�鿴����Ĳ�����������pc�˴򿪣�������Ϣ��ͨ��log���������pc��ʱ�Ż��ӡ��
+                appId: '<%=signModel.appId %>', // ������ںŵ�Ψһ��ʶ
+                timestamp: '<%=signModel.time %>', // �������ǩ����ʱ���(�����д)
+                nonceStr: '<%=signModel.randstr %>', // �������ǩ���������(�����д)
+                signature: '<%=signModel.signstr %>', // ���ǩ��������¼1
 
                 jsApiList: [
                     'checkJsApi',
@@ -139,35 +139,35 @@
                     //'translateVoice',
 
 
-                ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                ] // �����Ҫʹ�õ�JS�ӿ��б�������JS�ӿ��б�����¼2
             });
 
 
             wx.ready(function () {
                 layer.close(loadingIndex);
-                // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+                // config��Ϣ��֤���ִ��ready���������нӿڵ��ö�������config�ӿڻ�ý��֮��config��һ���ͻ��˵��첽���������������Ҫ��ҳ�����ʱ�͵�����ؽӿڣ��������ؽӿڷ���ready�����е�����ȷ����ȷִ�С������û�����ʱ�ŵ��õĽӿڣ������ֱ�ӵ��ã�����Ҫ����ready�����С�
                 isWxConfigReady = true;
             });
             wx.error(function (res) {
                 layer.close(loadingIndex);
                 alert(JSON.stringify(res));
-                // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+                // config��Ϣ��֤ʧ�ܻ�ִ��error��������ǩ�����ڵ�����֤ʧ�ܣ����������Ϣ���Դ�config��debugģʽ�鿴��Ҳ�����ڷ��ص�res�����в鿴������SPA�������������ǩ����
             });
         }
 
         function qrcode() {
             wx.scanQRCode({
-                needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
-                scanType: ["qrCode", "barCode"], // 可以指定扫二维码还是一维码，默认二者都有
+                needResult: 1, // Ĭ��Ϊ0��ɨ������΢�Ŵ�����1��ֱ�ӷ���ɨ������
+                scanType: ["qrCode", "barCode"], // ����ָ��ɨ��ά�뻹��һά�룬Ĭ�϶��߶���
                 success: function (res) {
-                    var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
+                    var result = res.resultStr; // ��needResult Ϊ 1 ʱ��ɨ�뷵�صĽ��
                     if (typeof (result) != "undefined") {
 
                         result = result.substring(result.indexOf(',') + 1, result.length);
 
-                        //文本框赋值	
+                        //�ı���ֵ	
                         $(txtGoodsSN).val(result);
-                        //点击查询按钮
+                        //�����ѯ��ť
                         $(btnFind).click();
                     }
                 }
@@ -185,7 +185,7 @@
             SetDataGridTrClickLink();
         });
 
-        //点击DATAGRID行内任何一点，都能触发行内的链接
+        //���DATAGRID�����κ�һ�㣬���ܴ������ڵ�����
         function SetDataGridTrClickLink() {
 
 
@@ -223,7 +223,7 @@
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%></td>
                                                     </tr>
                                                 </table>
-                                                <img id="IMG_Waiting" src="Images/Processing.gif" alt="请稍候，处理中..." style="display: none;" />
+                                                <img id="IMG_Waiting" src="Images/Processing.gif" alt="���Ժ򣬴�����..." style="display: none;" />
                                             </a>
                                         </td>
                                     </tr>
@@ -302,20 +302,20 @@
 
 
 
-                                                    <%--                                                    <asp:BoundColumn DataField="GoodsCode" HeaderText="代码">
+                                                    <%--                                                    <asp:BoundColumn DataField="GoodsCode" HeaderText="����">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                     </asp:BoundColumn>
 
                                                     <asp:HyperLinkColumn DataNavigateUrlField="GoodsCode" DataNavigateUrlFormatString="TTAPPGoodsInforView.aspx?GoodsCode={0}"
-                                                        DataTextField="GoodsName" HeaderText="名称">
+                                                        DataTextField="GoodsName" HeaderText="����">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="17%" />
                                                     </asp:HyperLinkColumn>
 
-                                                    <asp:BoundColumn DataField="TotalNumber" HeaderText="数量">
+                                                    <asp:BoundColumn DataField="TotalNumber" HeaderText="����">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                     </asp:BoundColumn>
 
-                                                    <asp:BoundColumn DataField="UnitName" HeaderText="单位">
+                                                    <asp:BoundColumn DataField="UnitName" HeaderText="��λ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                     </asp:BoundColumn>--%>
                                                 </Columns>
@@ -330,7 +330,7 @@
                                     </tr>
                                     <%--  <tr>
                                         <td style="text-align: center;">
-                                            <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,Di%>"></asp:Label>：<asp:Label ID="LB_PageIndex" runat="server"></asp:Label>
+                                            <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,Di%>"></asp:Label>��<asp:Label ID="LB_PageIndex" runat="server"></asp:Label>
                                             &nbsp;<asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,YeGong%>"></asp:Label>
                                             <asp:Label ID="LB_TotalPageNumber" runat="server"></asp:Label>
                                             &nbsp;<asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,Ye%>"></asp:Label>
@@ -362,7 +362,7 @@
                             </tr>
                             <tr>
                                 <td style="width: 20%; text-align: right;">
-                                    <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>：
+                                    <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>��
                                 </td>
                                 <td width="60%" align="left">
                                     <asp:TextBox ID="TB_GoodsSN" Width="99%" runat="server"></asp:TextBox>
@@ -373,28 +373,28 @@
                             </tr>
                             <tr>
                                 <td style="text-align: right;">
-                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>：</td>
+                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>��</td>
                                 <td align="left" colspan="2">
                                     <asp:TextBox ID="TB_GoodsName" runat="server" Width="99%"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
                                 <td style="text-align: right;">
-                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XingHao%>"></asp:Label>：</td>
+                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XingHao%>"></asp:Label>��</td>
                                 <td align="left" colspan="2">
                                     <asp:TextBox ID="TB_ModelNumber" runat="server" Width="99%"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
                                 <td style="text-align: right;">
-                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,GuiGe%>"></asp:Label>：</td>
+                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,GuiGe%>"></asp:Label>��</td>
                                 <td align="left" colspan="2">
                                     <asp:TextBox ID="TB_Spec" runat="server" Width="99%"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
                                 <td style="text-align: right;">
-                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>：
+                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>��
                                 </td>
                                 <td align="left" colspan="2">
                                     <asp:DropDownList ID="DL_Type" runat="server" DataTextField="Type" DataValueField="Type"
@@ -404,7 +404,7 @@
                             </tr>
                             <tr>
                                 <td style="text-align: right;"><a href="javascript:window.print()">
-                                    <img src="ImagesSkin/print.gif" alt="打印" border="0" />
+                                    <img src="ImagesSkin/print.gif" alt="��ӡ" border="0" />
                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                 </a></td>
                                 <td align="left" colspan="2">

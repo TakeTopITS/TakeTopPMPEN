@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCreatedProjectDetailSAAS.aspx.cs" Inherits="TTCreatedProjectDetailSAAS" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCreatedProjectDetailSAAS.aspx.cs" Inherits="TTCreatedProjectDetailSAAS" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -7,7 +7,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ÁªôÊàêÂëòÂª∫Á´ãÂíåÂàÜÊ¥æÈ°πÁõÆ</title>
+    <title>∏¯≥…‘±Ω®¡¢∫Õ∑÷≈…œÓƒø</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -190,7 +190,7 @@
                                                     <td style="text-align: left" class="formItemBgStyle">
                                                         <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
                                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_ManNubmer" runat="server" Width="53px">0.00</NickLee:NumberBox><span
-                                                            style="font-size: 10pt">‰∫∫</span>
+                                                            style="font-size: 10pt">»À</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -213,8 +213,8 @@
                                                               
                                                         <asp:DropDownList ID="DL_StatusValue" OnSelectedIndexChanged=" DL_StatusValue_SelectedIndexChanged"
                                                             AutoPostBack="true" runat="server" Visible="false">
-                                                            <asp:ListItem Value="ËøõË°å‰∏≠" Text="<%$ Resources:lang,JinXingZhong%>" />
-                                                            <asp:ListItem Value="ÈÄöËøá" Text="<%$ Resources:lang,TongGuo%>" />
+                                                            <asp:ListItem Value="InProgress" Text="<%$ Resources:lang,JinXingZhong%>" />
+                                                            <asp:ListItem Value="Passed" Text="<%$ Resources:lang,TongGuo%>" />
                                                         </asp:DropDownList>
                                                         <asp:Label ID="LB_Status" runat="server" Visible="False"></asp:Label>
                                                     </td>

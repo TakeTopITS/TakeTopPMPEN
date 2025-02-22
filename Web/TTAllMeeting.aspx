@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAllMeeting.aspx.cs" Inherits="TTAllMeeting" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAllMeeting.aspx.cs" Inherits="TTAllMeeting" %>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -66,7 +66,7 @@
                                                 <table style="width: 100%;">
                                                     <tr>
                                                         <td style="text-align: left;">
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiangZhaoKaiDeHuiYi%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JiangZhaoKaiDeHuiYi%>"></asp:Label>£º
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -146,7 +146,7 @@
                                                                     <asp:BoundColumn DataField="Address">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                                    <asp:TemplateColumn HeaderText="×´Ì¬">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass.GetStatusHomeNameByRequirementStatus(Eval("Status").ToString()) %>
                                                                         </ItemTemplate>
@@ -163,7 +163,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td style="text-align: left;">
-                                                            <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,YiZhaoKaiDeHuiYi%>"></asp:Label>ï¼š
+                                                            <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,YiZhaoKaiDeHuiYi%>"></asp:Label>£º
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -243,7 +243,7 @@
                                                                     <asp:BoundColumn DataField="Address">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                                    <asp:TemplateColumn HeaderText="×´Ì¬">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass.GetStatusHomeNameByRequirementStatus(Eval("Status").ToString()) %>
                                                                         </ItemTemplate>
@@ -300,7 +300,7 @@
 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
-                                                                    <asp:TemplateColumn HeaderText="ä¼šè®®å®¤åˆ—è¡¨ï¼š">
+                                                                    <asp:TemplateColumn HeaderText="»áÒéÊÒÁÐ±í£º">
                                                                         <ItemTemplate>
                                                                             <asp:Button ID="BT_RoomName" runat="server" ForeColor="Black" Style="text-align: center"
                                                                                 Text='<%# DataBinder.Eval(Container.DataItem,"RoomName") %>' CssClass="inpuLong" />

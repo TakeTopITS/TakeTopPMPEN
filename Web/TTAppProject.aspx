@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppProject.aspx.cs" Inherits="TTAppProject" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppProject.aspx.cs" Inherits="TTAppProject" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
 
@@ -39,7 +39,7 @@
 
         });
 
-        //ÁÇπÂáªDATAGRIDË°åÂÜÖ‰ªª‰Ωï‰∏ÄÁÇπÔºåÈÉΩËÉΩËß¶ÂèëË°åÂÜÖÁöÑÈìæÊé•
+        //µ„ª˜DATAGRID––ƒ⁄»Œ∫Œ“ªµ„£¨∂ºƒ‹¥•∑¢––ƒ⁄µƒ¡¥Ω”
         function SetDataGridTrClickLink() {
 
             setTrClickLink("DataGrid1");
@@ -83,7 +83,7 @@
                                                     </td>
                                                 </tr>
                                             </table>
-                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="ËØ∑Á®çÂÄôÔºåÂ§ÑÁêÜ‰∏≠..." style="display: none;" />
+                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="«Î…‘∫Ú£¨¥¶¿Ì÷–..." style="display: none;" />
                                         </a>
                                     </td>
                                 </tr>
@@ -104,11 +104,11 @@
                                         <table id="TBL_ProjectCode" runat="server" width="100%">
                                             <tr>
                                                 <td width="80%" align="right">
-                                                    <asp:Label ID="Label9" runat="server" Text="È°πÁõÆÁ†Å"></asp:Label>Ôºö
+                                                    <asp:Label ID="Label9" runat="server" Text="œÓƒø¬Î"></asp:Label>£∫
                                                         <asp:TextBox ID="TB_ProjectCode" runat="server" Width="70%"></asp:TextBox>
                                                 </td>
                                                 <td>
-                                                    <asp:Button ID="BT_AddProject" CssClass="inpu" runat="server" Text="Âä†ÂÖ•" OnClick="BT_AddProject_Click" />
+                                                    <asp:Button ID="BT_AddProject" CssClass="inpu" runat="server" Text="º”»Î" OnClick="BT_AddProject_Click" />
                                                 </td>
                                             </tr>
                                         </table>
@@ -296,7 +296,7 @@
                                 <tr style="display: none;">
                                     <td style="width: 100%; height: 12px; text-align: left;" valign="top">
                                         <asp:Label ID="LB_Operator" runat="server" Text="<%$ Resources:lang,Operator%>" />
-                                        Ôºö<asp:Label ID="LB_UserCode" runat="server" Visible="false"></asp:Label>
+                                        £∫<asp:Label ID="LB_UserCode" runat="server" Visible="false"></asp:Label>
                                         <asp:Label ID="LB_UserName" runat="server" Visible="false"></asp:Label>
                                     </td>
                                 </tr>

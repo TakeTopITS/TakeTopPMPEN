@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -23,7 +23,7 @@ public partial class TTBaseDataOuterSAAS : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "åŸºç¡€æ•°æ®(å¤–ç½®)", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "»ù´¡Êı¾İ(ÍâÖÃ)", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -47,7 +47,7 @@ public partial class TTBaseDataOuterSAAS : System.Web.UI.Page
 
             LoadCurrencyType();
 
-            LoadDayHourNum();//ä¸€å¤©å·¥ä½œæ—¶é—´è®¾ç½®
+            LoadDayHourNum();//Ò»Ìì¹¤×÷Ê±¼äÉèÖÃ
 
             LoadReceivePayWay();
 
@@ -584,7 +584,7 @@ public partial class TTBaseDataOuterSAAS : System.Web.UI.Page
 
         if (intWeekendFirstDay < 0 | intWeekendFirstDay > 6 | intWeekendSecondDay < 0 | intWeekendSecondDay > 6)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ä¿å­˜å¤±è´¥ï¼Œå‘¨æœ«å¼€å§‹æ—¥æœŸï¼Œæˆ–ç»“æŸæ—¥æœŸä¸èƒ½å¤§äº6æˆ–å°äº0ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('±£´æÊ§°Ü£¬ÖÜÄ©¿ªÊ¼ÈÕÆÚ£¬»ò½áÊøÈÕÆÚ²»ÄÜ´óÓÚ6»òĞ¡ÓÚ0£¬Çë¼ì²é£¡')", true);
             return;
         }
 
@@ -857,7 +857,7 @@ public partial class TTBaseDataOuterSAAS : System.Web.UI.Page
     }
 
     /// <summary>
-    /// åˆ¤æ–­è¯»è€…ç±»å‹æ˜¯å¦å­˜åœ¨  å­˜åœ¨è¿”å›trueï¼›ä¸å­˜åœ¨åˆ™è¿”å›false
+    /// ÅĞ¶Ï¶ÁÕßÀàĞÍÊÇ·ñ´æÔÚ  ´æÔÚ·µ»Øtrue£»²»´æÔÚÔò·µ»Øfalse
     /// </summary>
     protected bool IsBookReaderType(string strtypename)
     {
@@ -876,7 +876,7 @@ public partial class TTBaseDataOuterSAAS : System.Web.UI.Page
 
 
 
-    //åˆ¤æ–­è¾“å…¥çš„å­—ç¬¦æ˜¯å¦æ˜¯æ•°å­—
+    //ÅĞ¶ÏÊäÈëµÄ×Ö·ûÊÇ·ñÊÇÊı×Ö
     private bool IsNumeric(string str)
     {
         System.Text.RegularExpressions.Regex reg1
@@ -970,7 +970,7 @@ public partial class TTBaseDataOuterSAAS : System.Web.UI.Page
         DayHourNumBLL dayHourNumBLL = new DayHourNumBLL();
         try
         {
-            if (lbl_DayHourNumID.Text.Trim() == "")//å¢åŠ 
+            if (lbl_DayHourNumID.Text.Trim() == "")//Ôö¼Ó
             {
                 DayHourNum dayHourNum = new DayHourNum();
 
@@ -1013,7 +1013,7 @@ public partial class TTBaseDataOuterSAAS : System.Web.UI.Page
                 dayHourNumBLL.AddDayHourNum(dayHourNum);
                 lbl_DayHourNumID.Text = GetDayHourNumID();
             }
-            else//æ›´æ–°
+            else//¸üĞÂ
             {
                 string strHQL = "From DayHourNum as dayHourNum Where dayHourNum.ID='" + lbl_DayHourNumID.Text.Trim() + "' ";
                 IList lst = dayHourNumBLL.GetAllDayHourNums(strHQL);
@@ -1089,7 +1089,7 @@ public partial class TTBaseDataOuterSAAS : System.Web.UI.Page
 
         if (TB_WeiXinNo.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å…¬ä¼—å·AppIDä¸èƒ½ä¸ºç©ºï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¹«ÖÚºÅAppID²»ÄÜÎª¿Õ£¡')", true);
             TB_WeiXinNo.Focus();
 
             return;
@@ -1136,7 +1136,7 @@ public partial class TTBaseDataOuterSAAS : System.Web.UI.Page
     {
         if (TB_WeChatQYCorpID.Text.Trim() == "" || TB_WeChatQYApplicationID.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ä¼ä¸šå·CordIDå’Œåº”ç”¨IDä¸èƒ½ä¸ºç©ºï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ÆóÒµºÅCordIDºÍÓ¦ÓÃID²»ÄÜÎª¿Õ£¡')", true);
             TB_WeChatQYCorpID.Focus();
             TB_WeChatQYApplicationID.Focus();
             return;

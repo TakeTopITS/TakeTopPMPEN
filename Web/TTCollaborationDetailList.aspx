@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCollaborationDetailList.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCollaborationDetailList.aspx.cs"
     Inherits="TTCollaborationDetailList" %>
 
 <%@ Register Assembly="Brettle.Web.NeatUpload" Namespace="Brettle.Web.NeatUpload"
@@ -59,7 +59,7 @@
                                 <tr>
                                     <td style="width: 100%; padding-top: 5px; text-align: left; vertical-align: top;">
                                         <cc2:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" runat="server" ActiveTabIndex="0" Width="100%">
-                                            <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="ä¼šè¯è®°å½•" TabIndex="0" BorderWidth="0">
+                                            <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="»á»°¼ÇÂ¼" TabIndex="0" BorderWidth="0">
                                                 <HeaderTemplate>
                                                     <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,HuiHuaJiLu%>"></asp:Label></HeaderTemplate>
                                                 <ContentTemplate>
@@ -93,7 +93,7 @@
                                                     </asp:Timer>
                                                 </ContentTemplate>
                                             </cc2:TabPanel>
-                                            <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="ç›¸å…³æ–‡ä»¶" TabIndex="1" BorderWidth="0">
+                                            <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="Ïà¹ØÎÄ¼þ" TabIndex="1" BorderWidth="0">
                                                  <HeaderTemplate>
                                                     <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,XiangGuanWenJian%>"></asp:Label></HeaderTemplate>
                                                 <ContentTemplate>
@@ -141,23 +141,23 @@
                                                     <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" CellPadding="4"
                                                         ForeColor="#333333" GridLines="None" Height="1px" Width="98%" ShowHeader="False">
                                                         <Columns>
-                                                            <asp:BoundColumn DataField="DocID" HeaderText="åºå·">
+                                                            <asp:BoundColumn DataField="DocID" HeaderText="ÐòºÅ">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="DocType" HeaderText="ç±»åž‹">
+                                                            <asp:BoundColumn DataField="DocType" HeaderText="ÀàÐÍ">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                             </asp:BoundColumn>
                                                             <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
-                                                                DataTextField="DocName" HeaderText="æ–‡ä»¶å" Target="_blank">
+                                                                DataTextField="DocName" HeaderText="ÎÄ¼þÃû" Target="_blank">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="29%" />
                                                             </asp:HyperLinkColumn>
-                                                            <asp:BoundColumn DataField="Author" HeaderText="ä½œè€…">
+                                                            <asp:BoundColumn DataField="Author" HeaderText="×÷Õß">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="13%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="UploadManName" HeaderText="ä¸Šä¼ è€…">
+                                                            <asp:BoundColumn DataField="UploadManName" HeaderText="ÉÏ´«Õß">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="13%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="UploadTime" HeaderText="ä¸Šä¼ æ—¶é—´">
+                                                            <asp:BoundColumn DataField="UploadTime" HeaderText="ÉÏ´«Ê±¼ä">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="18%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="Address" Visible="False"></asp:BoundColumn>

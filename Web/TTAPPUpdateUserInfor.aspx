@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPUpdateUserInfor.aspx.cs" Inherits="TTAPPUpdateUserInfor" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAPPUpdateUserInfor.aspx.cs" Inherits="TTAPPUpdateUserInfor" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
 <!DOCTYPE html>
@@ -163,8 +163,8 @@
                                         </td>
                                         <td style="text-align: left" class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_Gender" runat="server" Enabled="False">
-                                                <asp:ListItem Value="男" Text="<%$ Resources:lang,Nan%>" />
-                                                <asp:ListItem Value="女" Text="<%$ Resources:lang,Nv%>" />
+                                                <asp:ListItem Value="Male" Text="<%$ Resources:lang,Nan%>" />
+                                                <asp:ListItem Value="Female" Text="<%$ Resources:lang,Nv%>" />
                                             </asp:DropDownList>
                                         </td>
                                     </tr>
@@ -185,7 +185,7 @@
                                             <asp:TextBox ID="TB_Duty" runat="server" ReadOnly="True" Enabled="False"></asp:TextBox>
                                         </td>
                                         <td class="formItemBgStyle">
-                                            <asp:Image ID="IM_MemberPhoto" runat="server" AlternateText="员工照片" Height="140px" ImageAlign="Left" Width="154px" />
+                                            <asp:Image ID="IM_MemberPhoto" runat="server" AlternateText="Ա����Ƭ" Height="140px" ImageAlign="Left" Width="154px" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -235,7 +235,7 @@
                                         <td class="formItemBgStyle"></td>
                                     </tr>
                                     <tr>
-                                        <td style="text-align: right;" class="formItemBgStyle">E_Mail：
+                                        <td style="text-align: right;" class="formItemBgStyle">E_Mail��
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
                                             <asp:TextBox ID="TB_EMail" runat="server"></asp:TextBox>
@@ -277,8 +277,8 @@
                                         </td>
                                         <td colspan="2" style="text-align: left;" class="formItemBgStyle">
                                             <asp:DropDownList ID="DL_Status" runat="server" Enabled="false">
-                                                <asp:ListItem Value="在职" Text="<%$ Resources:lang,ZaiZhi%>" />
-                                                <asp:ListItem Value="离职" Text="<%$ Resources:lang,LiZhi%>" />
+                                                <asp:ListItem Value="Employed" Text="<%$ Resources:lang,ZaiZhi%>" />
+                                                <asp:ListItem Value="Resign" Text="<%$ Resources:lang,LiZhi%>" />
                                             </asp:DropDownList>
                                         </td>
                                     </tr>

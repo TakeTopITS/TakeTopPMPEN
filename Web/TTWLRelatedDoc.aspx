@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" EnableEventValidation="false" CodeFile="TTWLRelatedDoc.aspx.cs" Inherits="TTWLRelatedDoc" %>
+<%@ Page Language="C#" AutoEventWireup="true" EnableEventValidation="false" CodeFile="TTWLRelatedDoc.aspx.cs" Inherits="TTWLRelatedDoc" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
@@ -8,7 +8,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>Â∑•‰ΩúÊµÅÁõ∏ÂÖ≥Êñá‰ª∂</title>
+    <title>π§◊˜¡˜œ‡πÿŒƒº˛</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 
     <style type="text/css">
@@ -29,7 +29,7 @@
         var i = 0;
         var j = 0;
 
-        // Êñá‰ª∂‰∏ä‰º†
+        // Œƒº˛…œ¥´
         jQuery(function () {
             var $ = jQuery,
                 $list = $('#thelist'),
@@ -39,33 +39,33 @@
 
             uploader = WebUploader.create({
 
-                // ‰∏çÂéãÁº©image
+                // ≤ª—πÀıimage
                 resize: false,
 
-                // swfÊñá‰ª∂Ë∑ØÂæÑ
+                // swfŒƒº˛¬∑æ∂
                 swf: 'WebUploader/Uploader.swf',
 
-                // Êñá‰ª∂Êé•Êî∂ÊúçÂä°Á´Ø„ÄÇ
+                // Œƒº˛Ω” ’∑˛ŒÒ∂À°£
                 server: 'Handler/UploadHandler.ashx',
 
-                // ÈÄâÊã©Êñá‰ª∂ÁöÑÊåâÈíÆ„ÄÇÂèØÈÄâ„ÄÇ
-                // ÂÜÖÈÉ®Ê†πÊçÆÂΩìÂâçËøêË°åÊòØÂàõÂª∫ÔºåÂèØËÉΩÊòØinputÂÖÉÁ¥†Ôºå‰πüÂèØËÉΩÊòØflash.
+                // —°‘ÒŒƒº˛µƒ∞¥≈•°£ø…—°°£
+                // ƒ⁄≤ø∏˘æ›µ±«∞‘À–– «¥¥Ω®£¨ø…ƒ‹ «input‘™Àÿ£¨“≤ø…ƒ‹ «flash.
                 pick: '#picker'
             });
 
-            //‰∏ä‰º†ÂâçÈôÑ‰ª∂ÂèÇÊï∞
+            //…œ¥´«∞∏Ωº˛≤Œ ˝
             uploader.on('uploadBeforeSend', function (obj, data) {
 
-                //Âà§Êñ≠ÊñáÊ°£Á±ªÂûãÊòØÂê¶‰∏∫Á©∫
+                //≈–∂œŒƒµµ¿‡–Õ «∑ÒŒ™ø’
                 if (document.getElementById("TB_DocType").value == "") {
-                    alert("Ë≠¶ÂëäÔºåËØ∑ÈÄâÊã©Êñá‰ª∂Á±ªÂûãÔºàWarning,Doc type can not be nullÔºâÔºÅ")
+                    alert("æØ∏Ê£¨«Î—°‘ÒŒƒº˛¿‡–Õ£®Warning,Doc type can not be null£©£°")
                     return;
                 }
 
-                //‰º†ÂÖ•Ë°®ÂçïÂèÇÊï∞
+                //¥´»Î±Ìµ•≤Œ ˝
                 data = $.extend(data, {
 
-                    relatedType: "Â∑•‰ΩúÊµÅ",
+                    relatedType: "Workflow",
                     relatedID: $("#LB_WLID").text(),
                     docTypeID: $("#LB_DocTypeID").text(),
                     docType: $("#TB_DocType").val(),
@@ -77,22 +77,22 @@
 
             });
 
-            // ÂΩìÊúâÊñá‰ª∂Ê∑ªÂä†ËøõÊù•ÁöÑÊó∂ÂÄô
+            // µ±”–Œƒº˛ÃÌº”Ω¯¿¥µƒ ±∫Ú
             uploader.on('fileQueued', function (file) {
                 $list.append('<div id="' + file.id + '" class="item">' +
                     '<h4 class="info">' + file.name + '</h4>' +
-                    '<p class="state">Á≠âÂæÖ‰∏ä‰º†...</p>' +
+                    '<p class="state">µ»¥˝…œ¥´...</p>' +
                     '</div>');
 
                 i = i + 1;
             });
 
-            // Êñá‰ª∂‰∏ä‰º†ËøáÁ®ã‰∏≠ÂàõÂª∫ËøõÂ∫¶Êù°ÂÆûÊó∂ÊòæÁ§∫„ÄÇ
+            // Œƒº˛…œ¥´π˝≥Ã÷–¥¥Ω®Ω¯∂»Ãı µ ±œ‘ æ°£
             uploader.on('uploadProgress', function (file, percentage) {
                 var $li = $('#' + file.id),
                     $percent = $li.find('.progress .progress-bar');
 
-                // ÈÅøÂÖçÈáçÂ§çÂàõÂª∫
+                // ±‹√‚÷ÿ∏¥¥¥Ω®
                 if (!$percent.length) {
                     $percent = $('<div class="progress progress-striped active">' +
                         '<div class="progress-bar" role="progressbar" style="width: 0%">' +
@@ -100,17 +100,17 @@
                         '</div>').appendTo($li).find('.progress-bar');
                 }
 
-                $li.find('p.state').text('‰∏ä‰º†‰∏≠');
+                $li.find('p.state').text('…œ¥´÷–');
 
                 $percent.css('width', percentage * 100 + '%');
             });
 
             uploader.on('uploadSuccess', function (file) {
-                $('#' + file.id).find('p.state').text('Â∑≤‰∏ä‰º†');
+                $('#' + file.id).find('p.state').text('“—…œ¥´');
             });
 
             uploader.on('uploadError', function (file) {
-                $('#' + file.id).find('p.state').text('‰∏ä‰º†Âá∫Èîô');
+                $('#' + file.id).find('p.state').text('…œ¥´≥ˆ¥Ì');
             });
 
             uploader.on('uploadComplete', function (file) {
@@ -135,9 +135,9 @@
                 }
 
                 if (state === 'uploading') {
-                    $btn.text('ÊöÇÂÅú‰∏ä‰º†');
+                    $btn.text('‘›Õ£…œ¥´');
                 } else {
-                    $btn.text('ÂºÄÂßã‰∏ä‰º†');
+                    $btn.text('ø™ º…œ¥´');
                 }
             });
 
@@ -210,7 +210,7 @@
                                                 rowspan="5">
                                                 <asp:UpdatePanel ID="UpdatePanel3" runat="server" UpdateMode="Conditional">
                                                     <ContentTemplate>
-                                                        <asp:TreeView ID="TreeView1" runat="server" Font-Bold="False" Font-Names="ÂÆã‰Ωì" Font-Size="10pt"
+                                                        <asp:TreeView ID="TreeView1" runat="server" Font-Bold="False" Font-Names="ÀŒÃÂ" Font-Size="10pt"
                                                             NodeWrap="True" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged" ShowLines="True"
                                                             Width="100%">
                                                             <LeafNodeStyle CssClass="leafNode" />
@@ -321,10 +321,10 @@
                                                             ID="DataGrid1" OnItemCommand="DataGrid1_ItemCommand" OnPageIndexChanged="DataGrid1_PageIndexChanged">
                                                             <AlternatingItemStyle BackColor="White"></AlternatingItemStyle>
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="DocID" HeaderText="Â∫èÂè∑">
+                                                                <asp:BoundColumn DataField="DocID" HeaderText="–Ú∫≈">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                 </asp:BoundColumn>
-                                                                <%-- <asp:BoundColumn DataField="RelatedType" HeaderText="Á±ªÂûã">
+                                                                <%-- <asp:BoundColumn DataField="RelatedType" HeaderText="¿‡–Õ">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                 </asp:BoundColumn>--%>
                                                                 <asp:TemplateColumn>
@@ -333,10 +333,10 @@
                                                                     </ItemTemplate>
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="DocType" HeaderText="Á±ªÂûã">
+                                                                <asp:BoundColumn DataField="DocType" HeaderText="¿‡–Õ">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="DocName" HeaderText="Êñá‰ª∂Âêç" Visible="false">
+                                                                <asp:BoundColumn DataField="DocName" HeaderText="Œƒº˛√˚" Visible="false">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                 </asp:BoundColumn>
                                                                 <asp:TemplateColumn>
@@ -347,16 +347,16 @@
                                                                     </ItemTemplate>
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="Author" HeaderText="‰ΩúËÄÖ">
+                                                                <asp:BoundColumn DataField="Author" HeaderText="◊˜’ﬂ">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="UploadManName" HeaderText="‰∏ä‰º†ËÄÖ">
+                                                                <asp:BoundColumn DataField="UploadManName" HeaderText="…œ¥´’ﬂ">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="UploadTime" HeaderText="‰∏ä‰º†Êó∂Èó¥">
+                                                                <asp:BoundColumn DataField="UploadTime" HeaderText="…œ¥´ ±º‰">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="Visible" HeaderText="ÊùÉÈôê">
+                                                                <asp:BoundColumn DataField="Visible" HeaderText="»®œﬁ">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:TemplateColumn>
@@ -369,12 +369,12 @@
                                                                 </asp:TemplateColumn>
                                                                 <asp:TemplateColumn HeaderText="Delete">
                                                                     <ItemTemplate>
-                                                                        <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Âà†Èô§' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                                        <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                                     </ItemTemplate>
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                 </asp:TemplateColumn>
                                                                 <asp:BoundColumn DataField="Address" Visible="False"></asp:BoundColumn>
-                                                                <asp:TemplateColumn HeaderText="ËØÑÂÆ°Áä∂ÊÄÅ">
+                                                                <asp:TemplateColumn HeaderText="∆¿…Û◊¥Ã¨">
                                                                     <ItemTemplate>
                                                                             <%# DataBinder.Eval(Container.DataItem, "Status").ToString() %>
                                                                     </ItemTemplate>
@@ -461,7 +461,7 @@
                                                             <tr>
                                                                 <td style="width: 100%; text-align: left;">
                                                                     <div>
-                                                                        <asp:Label ID="Label9" Text="<%$ Resources:lang,WenJianShangChuan%>" runat="server"></asp:Label>Ôºö
+                                                                        <asp:Label ID="Label9" Text="<%$ Resources:lang,WenJianShangChuan%>" runat="server"></asp:Label>£∫
        <br />
                                                                         <asp:UpdatePanel ID="UpdatePanel12" runat="server" UpdateMode="Conditional">
                                                                             <ContentTemplate>
@@ -485,7 +485,7 @@
 
                                                                     <div id="uploader" class="wu-example">
                                                                         <div id="thelist" class="uploader-list">
-                                                                            <asp:Label ID="Label29" Text="<%$ Resources:lang,DuWenJianShangZhuan%>" runat="server"></asp:Label>Ôºö
+                                                                            <asp:Label ID="Label29" Text="<%$ Resources:lang,DuWenJianShangZhuan%>" runat="server"></asp:Label>£∫
                                                                         </div>
                                                                         <div id="btns" class="btns">
                                                                             <table>
@@ -512,7 +512,7 @@
                                                         <table style="width: 100%">
                                                             <tr>
                                                                 <td style="background-color: ButtonFace; width: 100%; text-align: left; height: 11px;">
-                                                                    <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,WenJianPingShenShenQing%>"></asp:Label>Ôºö<asp:Label ID="LB_DocID" runat="server"></asp:Label>
+                                                                    <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,WenJianPingShenShenQing%>"></asp:Label>£∫<asp:Label ID="LB_DocID" runat="server"></asp:Label>
                                                                 </td>
                                                             </tr>
                                                             <tr>
@@ -524,7 +524,7 @@
                                                                                 <asp:TextBox ID="TB_WLName" runat="server" Width="309px"></asp:TextBox>&nbsp;
                                                                                 <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>
                                                                                 <asp:DropDownList ID="DL_WFType" runat="server">
-                                                                                    <asp:ListItem Value="Êñá‰ª∂ËØÑÂÆ°" Text="<%$ Resources:lang,WenJianPingSheng%>" />
+                                                                                    <asp:ListItem Value="DocumentReview" Text="<%$ Resources:lang,WenJianPingSheng%>" />
                                                                                 </asp:DropDownList>
                                                                                 &nbsp;&nbsp;<asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,GongZuoLiuMoBan%>"></asp:Label>
                                                                                 <asp:DropDownList ID="DL_TemName" runat="server" DataTextField="TemName"
@@ -558,7 +558,7 @@
                                                                                     <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,YaoQiuShouDaoXinXi%>"></asp:Label>
                                                                                     <asp:CheckBox ID="CB_RequiredMail" runat="server"
                                                                                         Font-Size="10pt" Text="<%$ Resources:lang,YouJian%>" />
-                                                                                    <asp:CheckBox ID="CB_RequiredSMS" runat="server" Font-Size="10pt" Text="<%$ Resources:lang,DuanXin%>" />Ôºâ
+                                                                                    <asp:CheckBox ID="CB_RequiredSMS" runat="server" Font-Size="10pt" Text="<%$ Resources:lang,DuanXin%>" />£©
                                                                                 </span>
                                                                                 <asp:UpdatePanel ID="UpdatePanel7" runat="server" UpdateMode="Conditional">
                                                                                     <ContentTemplate>
@@ -635,17 +635,17 @@
 
                                                                                     <ItemStyle CssClass="itemStyle" />
                                                                                     <Columns>
-                                                                                        <asp:BoundColumn DataField="WLID" HeaderText="ÁºñÂè∑">
+                                                                                        <asp:BoundColumn DataField="WLID" HeaderText="±‡∫≈">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                         </asp:BoundColumn>
                                                                                         <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTMyWorkDetailMain.aspx?WLID={0}"
-                                                                                            DataTextField="WLName" HeaderText="Â∑•‰ΩúÊµÅ" Target="_blank">
+                                                                                            DataTextField="WLName" HeaderText="Workflow" Target="_blank">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                                                                         </asp:HyperLinkColumn>
-                                                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="Áî≥ËØ∑Êó∂Èó¥">
+                                                                                        <asp:BoundColumn DataField="CreateTime" HeaderText="…Í«Î ±º‰">
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                                         </asp:BoundColumn>
-                                                                                        <asp:TemplateColumn HeaderText="Áä∂ÊÄÅ">
+                                                                                        <asp:TemplateColumn HeaderText="◊¥Ã¨">
                                                                                             <ItemTemplate>
                                                                                                 <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                             </ItemTemplate>
@@ -653,7 +653,7 @@
                                                                                         </asp:TemplateColumn>
                                                                                         <asp:TemplateColumn>
                                                                                             <ItemTemplate>
-                                                                                                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# DataBinder.Eval(Container, "DataItem.WLID", "TTWLRelatedDoc.aspx?DocType=ÂÆ°Ê†∏&WLID={0}") %>'
+                                                                                                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# DataBinder.Eval(Container, "DataItem.WLID", "TTWLRelatedDoc.aspx?DocType=…Û∫À&WLID={0}") %>'
                                                                                                     Target="_blank"><img src="ImagesSkin/Doc.gif" class="noBorder"/></asp:HyperLink>
                                                                                             </ItemTemplate>
                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
@@ -682,7 +682,7 @@
                                     <td style="width: 220px; padding: 5px 5px 5px 5px;" valign="top" align="left">
                                         <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
                                             <ContentTemplate>
-                                                <asp:TreeView ID="TreeView3" runat="server" Font-Bold="False" Font-Names="ÂÆã‰Ωì" Font-Size="10pt"
+                                                <asp:TreeView ID="TreeView3" runat="server" Font-Bold="False" Font-Names="ÀŒÃÂ" Font-Size="10pt"
                                                     NodeWrap="True" OnSelectedNodeChanged="TreeView3_SelectedNodeChanged" ShowLines="True"
                                                     Width="100%">
                                                     <LeafNodeStyle CssClass="leafNode" />

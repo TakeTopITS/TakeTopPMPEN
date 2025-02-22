@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,10 +14,10 @@ public partial class TTWZSelectorMember : System.Web.UI.Page
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (!IsPostBack)
         {
-            //è¿™ä¸ªæ˜¯éƒ¨é—¨æ ‘
+            //Õâ¸öÊÇ²¿ÃÅÊ÷
             //TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(Resources.lang.ZZJGT,TreeView2, strUserCode);
 
-            //è¿™ä¸ªæ˜¯æ‰€æœ‰éƒ¨é—¨
+            //Õâ¸öÊÇËùÓÐ²¿ÃÅ
             TakeTopCore.CoreShareClass.InitialAllDepartmentTree( Resources.lang.ZZJGT,TreeView2);
 
             string strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);

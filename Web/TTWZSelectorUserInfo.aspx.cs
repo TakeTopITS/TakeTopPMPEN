@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System; using System.Resources;
 using System.Collections;
@@ -18,7 +18,7 @@ public partial class TTWZSelectorUserInfo : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
 
-        //this.Title = "ç»„ç»‡æž¶æž„è®¾ç½®---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
+        //this.Title = "×éÖ¯¼Ü¹¹ÉèÖÃ---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack == false)
         {

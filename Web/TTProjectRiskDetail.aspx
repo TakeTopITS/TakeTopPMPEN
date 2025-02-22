@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectRiskDetail.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectRiskDetail.aspx.cs"
     Inherits="TTProjectRiskDetail" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -99,7 +99,7 @@
 
                                                                             <tr>
                                                                                 <td style="width: 10%; text-align: right; height: 24px;" class="formItemBgStyle">
-                                                                                    <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>ï¼š
+                                                                                    <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,BianHao%>"></asp:Label>£º
                                                                                 </td>
                                                                                 <td colspan="3" style="height: 24px; text-align: left;" class="formItemBgStyle">
                                                                                     <asp:Label ID="LB_ID" runat="server"></asp:Label>
@@ -108,25 +108,25 @@
                                                                             </tr>
                                                                             <tr>
                                                                                 <td style="text-align: right" class="formItemBgStyle">
-                                                                                    <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,FengXianMingCheng%>"></asp:Label>ï¼š
+                                                                                    <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,FengXianMingCheng%>"></asp:Label>£º
                                                                                 </td>
                                                                                 <td align="left" class="formItemBgStyle">
                                                                                     <asp:TextBox ID="TB_RiskName" runat="server" Width="98%"></asp:TextBox>
                                                                                 </td>
                                                                                 <td style="text-align: right" class="formItemBgStyle">
-                                                                                    <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,JiBie%>"></asp:Label>ï¼š
+                                                                                    <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,JiBie%>"></asp:Label>£º
                                                                                 </td>
                                                                                 <td style="font-size: 12pt; width: 20%; text-align: left;" class="formItemBgStyle">
                                                                                     <asp:DropDownList ID="DL_RiskLevel" runat="server">
-                                                                                        <asp:ListItem Value="ä¸­" Text="<%$ Resources:lang,Zhong%>" />
-                                                                                        <asp:ListItem Value="é«˜" Text="<%$ Resources:lang,Gao%>" />
-                                                                                        <asp:ListItem Value="ä½Ž" Text="<%$ Resources:lang,Di2%>" />
+                                                                                        <asp:ListItem Value="ÖÐ" Text="<%$ Resources:lang,Zhong%>" />
+                                                                                        <asp:ListItem Value="¸ß" Text="<%$ Resources:lang,Gao%>" />
+                                                                                        <asp:ListItem Value="µÍ" Text="<%$ Resources:lang,Di2%>" />
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td style="text-align: right" class="formItemBgStyle">
-                                                                                    <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,XiangXiMiaoShu%>"></asp:Label>ï¼š
+                                                                                    <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,XiangXiMiaoShu%>"></asp:Label>£º
                                                                                 </td>
                                                                                 <td colspan="3" style="text-align: left;" class="formItemBgStyle">
                                                                                     <asp:TextBox ID="TB_RiskDetail" runat="server" Height="60px" TextMode="MultiLine"
@@ -135,7 +135,7 @@
                                                                             </tr>
                                                                             <tr>
                                                                                 <td style="text-align: right" class="formItemBgStyle">
-                                                                                    <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,YuJiFaShengShiJian%>"></asp:Label>ï¼š&nbsp;
+                                                                                    <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,YuJiFaShengShiJian%>"></asp:Label>£º&nbsp;
                                                                                 </td>
                                                                                 <td style="width: 200px; text-align: left;" class="formItemBgStyle">
 
@@ -144,7 +144,7 @@
                                                                                     </ajaxToolkit:CalendarExtender>
                                                                                 </td>
                                                                                 <td style="text-align: right" class="formItemBgStyle">
-                                                                                    <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,FaXianShiJian%>"></asp:Label>ï¼š&nbsp;
+                                                                                    <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,FaXianShiJian%>"></asp:Label>£º&nbsp;
                                                                                 </td>
                                                                                 <td style="width: 200px; text-align: left;" class="formItemBgStyle">
 
@@ -157,14 +157,14 @@
                                                                             </tr>
                                                                             <tr>
                                                                                 <td style="text-align: right" class="formItemBgStyle">
-                                                                                    <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>ï¼š
+                                                                                    <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º
                                                                                 </td>
                                                                                 <td colspan="3" style="text-align: left;" class="formItemBgStyle">
                                                                                     <asp:DropDownList ID="DL_Status" runat="server">
-                                                                                        <asp:ListItem Value="æ½œåœ¨" Text="<%$ Resources:lang,QianZai%>" />
-                                                                                        <asp:ListItem Value="æš´éœ²" Text="<%$ Resources:lang,BaoLu%>" />
-                                                                                        <asp:ListItem Value="å‘ç”Ÿ" Text="<%$ Resources:lang,FaSheng%>" />
-                                                                                        <asp:ListItem Value="è§£é™¤" Text="<%$ Resources:lang,JieChu%>" />
+                                                                                        <asp:ListItem Value="Potential" Text="<%$ Resources:lang,QianZai%>" />
+                                                                                        <asp:ListItem Value="Exposed" Text="<%$ Resources:lang,BaoLu%>" />
+                                                                                        <asp:ListItem Value="Occurred" Text="<%$ Resources:lang,FaSheng%>" />
+                                                                                        <asp:ListItem Value="Resolved" Text="<%$ Resources:lang,JieChu%>" />
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                             </tr>

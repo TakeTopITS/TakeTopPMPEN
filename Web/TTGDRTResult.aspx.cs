@@ -1,4 +1,4 @@
-锘縰sing ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System; using System.Resources;
 using System.Collections;
@@ -92,7 +92,7 @@ public partial class TTGDRTResult : System.Web.UI.Page
                 GDPressureTest gDPressureTest = (GDPressureTest)listGDPressureTest[0];
                 gDPressureTestBLL.DeleteGDPressureTest(gDPressureTest);
 
-                //閲嶆柊鍔犺浇鍒楄〃
+                //重新加载列表
                 DataBinder();
 
 

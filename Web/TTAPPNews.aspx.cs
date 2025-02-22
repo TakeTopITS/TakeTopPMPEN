@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -87,18 +87,18 @@ public partial class TTAPPNews : System.Web.UI.Page
         string strUserType = ShareClass.GetUserType(strUserCode);
         if (strUserType == "OUTER")
         {
-            strUserType = "Â§ñÈÉ®";
+            strUserType = "External";
         }
         else
         {
-            strUserType = "ÂÜÖÈÉ®";
+            strUserType = "Internal";
         }
 
         strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
         strHQL = "Select ID,Title,Content,RelatedDepartName,PublisherCode,PublisherName,PublishTime,'*' as Mark From T_HeadLine ";
         strHQL += " Where (RelatedDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))  or RelatedDepartCode = '" + strDepartCode + "')";
-        strHQL += " And Type = " + "'" + strUserType + "'" + " and Status = 'ÂèëÂ∏É' Order By ID DESC";
+        strHQL += " And Type = " + "'" + strUserType + "'" + " and Status = '∑¢≤º' Order By ID DESC";
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");
 
         DataGrid1.DataSource = ds;

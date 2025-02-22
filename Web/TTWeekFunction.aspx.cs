@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -32,7 +32,7 @@ public partial class TTWeekFunction : System.Web.UI.Page
         IList listCarCheckWeek = carCheckWeekBLL.GetAllCarCheckWeeks(strCarCheckWeekHQL);
         TV_Weeks.Nodes.Clear();
         TreeNode Node = new TreeNode();
-        Node.Text = "å…¨éƒ¨";
+        Node.Text = "È«²¿";
         Node.Value = "all|all";
         if (listCarCheckWeek != null && listCarCheckWeek.Count > 0)
         {
@@ -44,9 +44,9 @@ public partial class TTWeekFunction : System.Web.UI.Page
                 NodeChild.Text = carCheckWeek.WeekName;
                 string strWeekCode = carCheckWeek.WeekCode;
                 NodeChild.Value = "carCheckWeekName|" + strWeekCode;
-                //å‘¨æ£€è®¡åˆ’è¡¨
+                //ÖÜ¼ì¼Æ»®±í
                 TreeNode NodeWeekPlan = new TreeNode();
-                NodeWeekPlan.Text = "å‘¨æ£€è®¡åˆ’è¡¨";
+                NodeWeekPlan.Text = "ÖÜ¼ì¼Æ»®±í";
                 NodeWeekPlan.Value = "carCheckWeekPlan|" + strWeekCode;
 
                 CustomModuleBLL customModuleBLL1 = new CustomModuleBLL();
@@ -69,9 +69,9 @@ public partial class TTWeekFunction : System.Web.UI.Page
                     }
                 }
                 NodeChild.ChildNodes.Add(NodeWeekPlan);
-                //å‘¨æ£€é—®é¢˜è¡¨
+                //ÖÜ¼ìÎÊÌâ±í
                 TreeNode NodeWeekProblem = new TreeNode();
-                NodeWeekProblem.Text = "å‘¨æ£€é—®é¢˜è¡¨";
+                NodeWeekProblem.Text = "ÖÜ¼ìÎÊÌâ±í";
                 NodeWeekProblem.Value = "carCheckWeekProblem|" + strWeekCode;
 
                 CustomModuleBLL customModuleBLL2 = new CustomModuleBLL();
@@ -94,9 +94,9 @@ public partial class TTWeekFunction : System.Web.UI.Page
                     }
                 }
                 NodeChild.ChildNodes.Add(NodeWeekProblem);
-                //ä¼šè®®è®²è¯„è®°å½•
+                //»áÒé½²ÆÀ¼ÇÂ¼
                 TreeNode NodeWeekRecord = new TreeNode();
-                NodeWeekRecord.Text = "ä¼šè®®è®²è¯„è®°å½•";
+                NodeWeekRecord.Text = "»áÒé½²ÆÀ¼ÇÂ¼";
                 NodeWeekRecord.Value = "carCheckWeekRecord|" + strWeekCode;
 
                 CustomModuleBLL customModuleBLL3 = new CustomModuleBLL();
@@ -119,9 +119,9 @@ public partial class TTWeekFunction : System.Web.UI.Page
                     }
                 }
                 NodeChild.ChildNodes.Add(NodeWeekRecord);
-                //é—®é¢˜æ•´æ”¹é€šçŸ¥å•
+                //ÎÊÌâÕû¸ÄÍ¨Öªµ¥
                 TreeNode NodeWeekNotice = new TreeNode();
-                NodeWeekNotice.Text = "é—®é¢˜æ•´æ”¹é€šçŸ¥å•";
+                NodeWeekNotice.Text = "ÎÊÌâÕû¸ÄÍ¨Öªµ¥";
                 NodeWeekNotice.Value = "carCheckWeekNotice|" + strWeekCode;
 
                 CustomModuleBLL customModuleBLL4 = new CustomModuleBLL();
@@ -144,9 +144,9 @@ public partial class TTWeekFunction : System.Web.UI.Page
                     }
                 }
                 NodeChild.ChildNodes.Add(NodeWeekNotice);
-                //é—®é¢˜æ±‡æ€»
+                //ÎÊÌâ»ã×Ü
                 TreeNode NodeWeekTotal = new TreeNode();
-                NodeWeekTotal.Text = "é—®é¢˜æ±‡æ€»";
+                NodeWeekTotal.Text = "ÎÊÌâ»ã×Ü";
                 NodeWeekTotal.Value = "carCheckWeekTotal|" + strWeekCode;
 
                 CustomModuleBLL customModuleBLL5 = new CustomModuleBLL();
@@ -257,12 +257,12 @@ public partial class TTWeekFunction : System.Web.UI.Page
             }
             catch
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('æ–°å¢å‡ºé”™ï¼Œè¯·æ£€æŸ¥ï¼');ShowDiv();</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('ĞÂÔö³ö´í£¬Çë¼ì²é£¡');ShowDiv();</script>");
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('å®¢æˆ·ä»£ç å’Œåç§°ä¸èƒ½ä¸ºç©ºï¼Œè¯·æ£€æŸ¥ï¼');ShowDiv();</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('¿Í»§´úÂëºÍÃû³Æ²»ÄÜÎª¿Õ£¬Çë¼ì²é£¡');ShowDiv();</script>");
         }
     }
 
@@ -306,21 +306,21 @@ public partial class TTWeekFunction : System.Web.UI.Page
                     carCheckWeekBLL.UpdateCarCheckWeek(carCheckWeek, strWeekCode);
 
                     LoadWeekTree();
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('ä¿å­˜æˆåŠŸï¼');ShowDiv();</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('±£´æ³É¹¦£¡');ShowDiv();</script>");
                 }
                 catch
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('ä¿®æ”¹å‡ºé”™ï¼Œè¯·æ£€æŸ¥ï¼');ShowDiv();</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('ĞŞ¸Ä³ö´í£¬Çë¼ì²é£¡');ShowDiv();</script>");
                 }
             }
             else
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('ä¸èƒ½ä¿®æ”¹å®¢æˆ·ä»£ç ï¼Œåªå¯ä»¥ä¿®æ”¹å…¶å®ƒä¿¡æ¯ï¼');ShowDiv();</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('²»ÄÜĞŞ¸Ä¿Í»§´úÂë£¬Ö»¿ÉÒÔĞŞ¸ÄÆäËüĞÅÏ¢£¡');ShowDiv();</script>");
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('ä¾›åº”å•†ä»£ç å’Œåç§°ä¸èƒ½ä¸ºç©ºï¼Œè¯·æ£€æŸ¥ï¼');ShowDiv();</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('¹©Ó¦ÉÌ´úÂëºÍÃû³Æ²»ÄÜÎª¿Õ£¬Çë¼ì²é£¡');ShowDiv();</script>");
         }
     }
 
@@ -373,7 +373,7 @@ public partial class TTWeekFunction : System.Web.UI.Page
                 else
                 {
                     mainFrame.Attributes.Add("src", "");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('æœªè®¾å®šå®¢æˆ·å¼€å‘çš„æ¨¡ç»„ï¼è¯·å…ˆè®¾å®šæ¨¡ç»„');ShowDiv();</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('Î´Éè¶¨¿Í»§¿ª·¢µÄÄ£×é£¡ÇëÏÈÉè¶¨Ä£×é');ShowDiv();</script>");
                 }
             }
             else if (arrSelectNodeValue[0] == "carCheckWeekProblem")
@@ -402,7 +402,7 @@ public partial class TTWeekFunction : System.Web.UI.Page
                 else
                 {
                     mainFrame.Attributes.Add("src", "");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('æœªè®¾å®šå®¢æˆ·å¼€å‘çš„æ¨¡ç»„ï¼è¯·å…ˆè®¾å®šæ¨¡ç»„');ShowDiv();</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('Î´Éè¶¨¿Í»§¿ª·¢µÄÄ£×é£¡ÇëÏÈÉè¶¨Ä£×é');ShowDiv();</script>");
                 }
             }
             else if (arrSelectNodeValue[0] == "carCheckWeekRecord")
@@ -431,7 +431,7 @@ public partial class TTWeekFunction : System.Web.UI.Page
                 else
                 {
                     mainFrame.Attributes.Add("src", "");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('æœªè®¾å®šå®¢æˆ·å¼€å‘çš„æ¨¡ç»„ï¼è¯·å…ˆè®¾å®šæ¨¡ç»„');ShowDiv();</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('Î´Éè¶¨¿Í»§¿ª·¢µÄÄ£×é£¡ÇëÏÈÉè¶¨Ä£×é');ShowDiv();</script>");
                 }
             }
             else if (arrSelectNodeValue[0] == "carCheckWeekNotice")
@@ -460,7 +460,7 @@ public partial class TTWeekFunction : System.Web.UI.Page
                 else
                 {
                     mainFrame.Attributes.Add("src", "");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('æœªè®¾å®šå®¢æˆ·å¼€å‘çš„æ¨¡ç»„ï¼è¯·å…ˆè®¾å®šæ¨¡ç»„');ShowDiv();</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('Î´Éè¶¨¿Í»§¿ª·¢µÄÄ£×é£¡ÇëÏÈÉè¶¨Ä£×é');ShowDiv();</script>");
                 }
             }
             else if (arrSelectNodeValue[0] == "carCheckWeekTotal")
@@ -489,7 +489,7 @@ public partial class TTWeekFunction : System.Web.UI.Page
                 else
                 {
                     mainFrame.Attributes.Add("src", "");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('æœªè®¾å®šå®¢æˆ·å¼€å‘çš„æ¨¡ç»„ï¼è¯·å…ˆè®¾å®šæ¨¡ç»„');ShowDiv();</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('Î´Éè¶¨¿Í»§¿ª·¢µÄÄ£×é£¡ÇëÏÈÉè¶¨Ä£×é');ShowDiv();</script>");
                 }
             }
             else if (arrSelectNodeValue[0] == "child")

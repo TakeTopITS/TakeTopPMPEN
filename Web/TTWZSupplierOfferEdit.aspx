@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSupplierOfferEdit.aspx.cs" Inherits="TTWZSupplierOfferEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSupplierOfferEdit.aspx.cs" Inherits="TTWZSupplierOfferEdit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ä¾›åº”å•†æŠ¥ä»·</title>
+    <title>¹©Ó¦ÉÌ±¨¼Û</title>
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
     <script language="javascript">

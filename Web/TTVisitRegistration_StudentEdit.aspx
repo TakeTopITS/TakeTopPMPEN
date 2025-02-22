@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTVisitRegistration_StudentEdit.aspx.cs" Inherits="TTVisitRegistration_StudentEdit" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTVisitRegistration_StudentEdit.aspx.cs" Inherits="TTVisitRegistration_StudentEdit" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ÊãúËÆø</title>
+    <title>∞›∑√</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -56,11 +56,11 @@
             var cardsn;
             try {
                 var ax = new ActiveXObject("IDRCONTROL.IdrControlCtrl.1");
-                //    alert("Â∑≤ÂÆâË£Ö");  
+                //    alert("“—∞≤◊∞");  
             } catch (e) {
-                alert("Êéß‰ª∂Êú™ÂÆâË£Ö");
+                alert("øÿº˛Œ¥∞≤◊∞");
             }
-            //Ê≥®ÊÑèÔºöÁ¨¨‰∏Ä‰∏™ÂèÇÊï∞‰∏∫ÂØπÂ∫îÁöÑËÆæÂ§áÁ´ØÂè£ÔºåUSBÂûã‰∏∫1001Ôºå‰∏≤Âè£Âûã‰∏∫1Ëá≥16
+            //◊¢“‚£∫µ⁄“ª∏ˆ≤Œ ˝Œ™∂‘”¶µƒ…Ë±∏∂Àø⁄£¨USB–ÕŒ™1001£¨¥Æø⁄–ÕŒ™1÷¡16
             result = IdrControl1.ReadCard("1001", "d:\\test\\test.jpg");
             //	result=IdrControl1.ReadCard("1001","");
             if (result == 1) {
@@ -75,7 +75,7 @@
 
                 $("#DDL_VisitSex").val(IdrControl1.GetSex());
 
-                $("#LB_Birth").text(IdrControl1.GetBirthYear() + "Âπ¥" + IdrControl1.GetBirthMonth() + "Êúà" + IdrControl1.GetBirthDay() + "Êó•");
+                $("#LB_Birth").text(IdrControl1.GetBirthYear() + "ƒÍ" + IdrControl1.GetBirthMonth() + "‘¬" + IdrControl1.GetBirthDay() + "»’");
                 cardsn = IdrControl1.GetCode();
                 $("#TXT_VisitCardName").val(cardsn);
 
@@ -104,29 +104,29 @@
 
             } else {
                 if (result == -1)
-                    alert("Á´ØÂè£ÂàùÂßãÂåñÂ§±Ë¥•ÔºÅ");
+                    alert("∂Àø⁄≥ı ºªØ ß∞‹£°");
                 if (result == -2)
-                    alert("ËØ∑ÈáçÊñ∞Â∞ÜÂç°ÁâáÊîæÂà∞ËØªÂç°Âô®‰∏äÔºÅ");
+                    alert("«Î÷ÿ–¬Ω´ø®∆¨∑≈µΩ∂¡ø®∆˜…œ£°");
                 if (result == -3)
-                    alert("ËØªÂèñÊï∞ÊçÆÂ§±Ë¥•ÔºÅ");
+                    alert("∂¡»° ˝æ› ß∞‹£°");
                 if (result == -4)
-                    alert("ÁîüÊàêÁÖßÁâáÊñá‰ª∂Â§±Ë¥•ÔºåËØ∑Ê£ÄÊü•ËÆæÂÆöË∑ØÂæÑÂíåÁ£ÅÁõòÁ©∫Èó¥ÔºÅ");
+                    alert("…˙≥…’’∆¨Œƒº˛ ß∞‹£¨«ÎºÏ≤È…Ë∂®¬∑æ∂∫Õ¥≈≈Ãø’º‰£°");
 
             }
         }
         function ICcard() {
             var result;
 
-            //Ê≥®ÊÑèÔºöÂèÇÊï∞‰∏∫ÂØπÂ∫îÁöÑËÆæÂ§áÁ´ØÂè£ÔºåiDR210‰∏∫8159ÔºåiDR200 USBÂûã‰∏∫1001ÔºåiDR200‰∏≤Âè£Âûã‰∏∫1Ëá≥16
+            //◊¢“‚£∫≤Œ ˝Œ™∂‘”¶µƒ…Ë±∏∂Àø⁄£¨iDR210Œ™8159£¨iDR200 USB–ÕŒ™1001£¨iDR200¥Æø⁄–ÕŒ™1÷¡16
             result = IdrControl1.ReadICCard("8159");
             if (result == 1) {
                 document.all.oTable.rows(13).cells(1).innerText = IdrControl1.GetICCardSN();
             }
             else {
                 if (result == -1)
-                    alert("Á´ØÂè£ÂàùÂßãÂåñÂ§±Ë¥•ÔºÅ");
+                    alert("∂Àø⁄≥ı ºªØ ß∞‹£°");
                 if (result == -2)
-                    alert("ËØªICÂç°Â§±Ë¥•");
+                    alert("∂¡ICø® ß∞‹");
             }
         }
 
@@ -142,24 +142,24 @@
             if (PortOpened != 1) {
 
                 IdrControl1.CloseComm();
-                alert("Á´ØÂè£ÂàùÂßãÂåñÂ§±Ë¥•ÔºÅ");
+                alert("∂Àø⁄≥ı ºªØ ß∞‹£°");
                 PortOpened = 0;
                 return;
             }
 
 
             CpuCardFound = IdrControl1.FindICCard();
-            document.all.oTable.rows(14).cells(1).innerText = "ÊâæÂà∞Âç°Á±ªÂûãÔºö" + CpuCardFound;
+            document.all.oTable.rows(14).cells(1).innerText = "’“µΩø®¿‡–Õ£∫" + CpuCardFound;
 
             if (CpuCardFound0 == 0) {
                 IdrControl1.CloseComm();
-                alert("Êú™ÊâæÂà∞Âç°ÔºÅ");
+                alert("Œ¥’“µΩø®£°");
                 CpuCardFound = 0;
                 return;
             }
             if (CpuCardFound0 > 3) {
                 IdrControl1.CloseComm();
-                alert("ÊâæÂç°Â§±Ë¥•ÔºÅ");
+                alert("’“ø® ß∞‹£°");
                 CpuCardFound = 0;
                 return;
             }
@@ -227,8 +227,8 @@
                                                                         <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XingBie%>"></asp:Label></td>
                                                                     <td class="formItemBgStyle">
                                                                         <asp:DropDownList ID="DDL_VisitSex" runat="server">
-                                                                            <asp:ListItem Text="<%$ Resources:lang,Nan%>" Value="Áî∑"/>
-                                                                            <asp:ListItem Text="<%$ Resources:lang,Nv%>" Value="Â•≥"/>
+                                                                            <asp:ListItem Text="<%$ Resources:lang,Nan%>" Value="Male"/>
+                                                                            <asp:ListItem Text="<%$ Resources:lang,Nv%>" Value="Female"/>
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                     <td class="formItemBgStyle">
@@ -244,9 +244,9 @@
                                                                     <td class="formItemBgStyle">
                                                                         <%--<asp:TextBox ID="TXT_VisitReason" runat="server" Width="413px"></asp:TextBox>--%>
                                                                         <asp:DropDownList ID="DDL_VisitReason" runat="server">
-                                                                            <asp:ListItem Text="<%$ Resources:lang,CanGuan%>" Value="ÂèÇËßÇ"/>
-                                                                            <asp:ListItem Text="<%$ Resources:lang,QiaTan%>" Value="Ê¥ΩË∞à"/>
-                                                                            <asp:ListItem Text="<%$ Resources:lang,QiTa%>" Value="ÂÖ∂‰ªñ"/>
+                                                                            <asp:ListItem Text="<%$ Resources:lang,CanGuan%>" Value="≤Œπ€"/>
+                                                                            <asp:ListItem Text="<%$ Resources:lang,QiaTan%>" Value="«¢Ã∏"/>
+                                                                            <asp:ListItem Text="<%$ Resources:lang,QiTa%>" Value="Other"/>
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                     <td class="formItemBgStyle">
@@ -254,9 +254,9 @@
                                                                     <td class="formItemBgStyle">
                                                                         <%--<asp:TextBox ID="TXT_ReceiverName" runat="server"></asp:TextBox>--%>
                                                                         <asp:DropDownList ID="DDL_ReceiverName" runat="server">
-                                                                            <asp:ListItem Text="<%$ Resources:lang,HouQin%>" Value="ÂêéÂã§"/>
-                                                                            <asp:ListItem Text="<%$ Resources:lang,JiaoXue%>" Value="ÊïôÂ≠¶"/>
-                                                                            <asp:ListItem Text="<%$ Resources:lang,YuanZhang%>" Value="Âõ≠Èïø"/>
+                                                                            <asp:ListItem Text="<%$ Resources:lang,HouQin%>" Value="∫Û«⁄"/>
+                                                                            <asp:ListItem Text="<%$ Resources:lang,JiaoXue%>" Value="ΩÃ—ß"/>
+                                                                            <asp:ListItem Text="<%$ Resources:lang,YuanZhang%>" Value="‘∞≥§"/>
                                                                         </asp:DropDownList>
                                                                     </td>
 
@@ -272,8 +272,8 @@
                                                                     <td class="formItemBgStyle" colspan="6" style="text-align: center;">
                                                                         <asp:Button ID="BT_Save" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="BT_Save_Click" />&nbsp;
                                                                         <%--<input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                                            type="button" value="ÂÖ≥Èó≠" />--%>
-                                                                        <input type="button" value="ËøîÂõûÂàóË°®" class="inpuLong" onclick="window.location.href = 'TTVisitRegistration_StudentList.aspx'" />
+                                                                            type="button" value="Closed" />--%>
+                                                                        <input type="button" value="∑µªÿ¡–±Ì" class="inpuLong" onclick="window.location.href = 'TTVisitRegistration_StudentList.aspx'" />
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -284,7 +284,7 @@
                                                             <table id="oTable" width="800" border="1" cellspacing="0" cellpadding="0">
                                                                 <tr>
                                                                     <td colspan="3">
-                                                                        <input type="button" value="ËØªË∫´‰ªΩËØÅ" onclick="Idcard();"></td>
+                                                                        <input type="button" value="∂¡…Ì∑›÷§" onclick="Idcard();"></td>
                                                                 </tr>
                                                                 <tr style="display:none;">
                                                                     <td width="200">

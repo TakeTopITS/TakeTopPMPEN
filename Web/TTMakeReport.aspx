@@ -1,11 +1,11 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMakeReport.aspx.cs" Inherits="TTMakeReport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTMakeReport.aspx.cs" Inherits="TTMakeReport" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>æ³°é¡¶æŠ¥è¡¨è®¾è®¡ä¸­å¿ƒ</title>
+    <title>Ì©¶¥±¨±íÉè¼ÆÖÐÐÄ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
@@ -119,7 +119,7 @@
                                                                         <asp:ListItem>HTML5</asp:ListItem>
                                                                     </asp:DropDownList>
                                                                     <asp:HyperLink ID="HL_ReportDesigner" runat="server" NavigateUrl="~/TTReportDesigner.aspx"
-                                                                        Target="_blank" Font-Names="å®‹ä½“" Font-Size="10pt" Enabled="False">
+                                                                        Target="_blank" Font-Names="ËÎÌå" Font-Size="10pt" Enabled="False">
                                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,MoXingSheJi%>"></asp:Label>
                                                                     </asp:HyperLink>
                                                                 </td>
@@ -236,33 +236,33 @@
                                                     <asp:BoundColumn DataField="ID" HeaderText="ID">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                     </asp:BoundColumn>
-                                                    <asp:TemplateColumn HeaderText="æŠ¥è¡¨æ–‡ä»¶">
+                                                    <asp:TemplateColumn HeaderText="±¨±íÎÄ¼þ">
                                                         <ItemTemplate>
                                                             <asp:Button ID="BT_ReportName" CommandName="Open" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ReportName") %>'
                                                                 CssClass="inpuLongest" Width="99%" />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                     </asp:TemplateColumn>
-                                                    <asp:BoundColumn DataField="TemName" HeaderText="æ¨¡æ¿">
+                                                    <asp:BoundColumn DataField="TemName" HeaderText="Ä£°å">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                        DataTextField="CreatorName" HeaderText="ä¸Šä¼ è€…" Target="_blank">
+                                                        DataTextField="CreatorName" HeaderText="ÉÏ´«Õß" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:HyperLinkColumn>
-                                                    <asp:BoundColumn DataField="CreateTime" HeaderText="åˆ›å»ºæ—¶é—´">
+                                                    <asp:BoundColumn DataField="CreateTime" HeaderText="´´½¨Ê±¼ä">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:BoundColumn>
-                                                    <asp:TemplateColumn HeaderText="å¯è§†äººå‘˜">
+                                                    <asp:TemplateColumn HeaderText="¿ÉÊÓÈËÔ±">
                                                         <ItemTemplate>
-                                                            <asp:Button ID="BT_VisualMember" CommandName="Select" runat="server" Text='å¯è§†äººå‘˜'
+                                                            <asp:Button ID="BT_VisualMember" CommandName="Select" runat="server" Text='¿ÉÊÓÈËÔ±'
                                                                 CssClass="inpuLong" />
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                     </asp:TemplateColumn>
                                                     <asp:TemplateColumn HeaderText="Delete">
                                                         <ItemTemplate>
-                                                            <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='åˆ é™¤' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                            <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                     </asp:TemplateColumn>
@@ -335,7 +335,7 @@
 
                                                     <ItemStyle CssClass="itemStyle" />
                                                     <Columns>
-                                                        <asp:TemplateColumn HeaderText="éƒ¨é—¨äººå‘˜ï¼š">
+                                                        <asp:TemplateColumn HeaderText="²¿ÃÅÈËÔ±£º">
                                                             <ItemTemplate>
                                                                 <asp:Button ID="BT_UserCode" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>'
                                                                     CssClass="inpu" />
@@ -376,7 +376,7 @@
                             <table>
                                 <tr>
                                     <td>
-                                        <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,BaoBiao%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,BaoBiao%>"></asp:Label>£º
                                     </td>
                                     <td>
                                         <asp:Label ID="LB_ReportID" runat="server"> </asp:Label>
@@ -388,7 +388,7 @@
                                         <asp:Button ID="BT_UpdateReportName" CssClass="inpu" runat="server" Text="<%$ Resources:lang,GengMing%>" OnClick="BT_UpdateReportName_Click" />
                                     </td>
                                     <td>
-                                        <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,DeKeShiRenYuanSheZhi%>"></asp:Label>ï¼š
+                                        <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,DeKeShiRenYuanSheZhi%>"></asp:Label>£º
                                     </td>
                                 </tr>
                             </table>

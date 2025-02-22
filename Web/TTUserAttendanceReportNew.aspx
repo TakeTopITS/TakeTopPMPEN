@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserAttendanceReportNew.aspx.cs" Inherits="TTUserAttendanceReportNew" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserAttendanceReportNew.aspx.cs" Inherits="TTUserAttendanceReportNew" %>
 
 <%@ Import Namespace="System.Data" %>
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -151,7 +151,7 @@
                                     BackgroundCssClass="modalBackground" Y="150">
                                 </cc1:ModalPopupExtender>
                                 <asp:Label ID="LB_DepartName" runat="server"></asp:Label>
-                                <asp:CheckBox ID="CB_IncludeChildDepartment" Text="åŒ…å«å­éƒ¨é—¨" runat="server" Checked="true" />
+                                <asp:CheckBox ID="CB_IncludeChildDepartment" Text="°üº¬×Ó²¿ÃÅ" runat="server" Checked="true" />
                             </td>
                             <td style="text-align: right;">
                                 <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,YuanGongMingChen%>"></asp:Label>
@@ -164,7 +164,7 @@
                             </td>
                             <td align="center">
                                 <a href="#" onclick="preview1()">
-                                    <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" /></a>
+                                    <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" /></a>
                             </td>
                             <td>&nbsp;</td>
                         </tr>
@@ -209,64 +209,64 @@
 
                                                     <td align="center" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label9" runat="server" Text="éƒ¨é—¨"></asp:Label></strong>
+                                                            <asp:Label ID="Label9" runat="server" Text="²¿ÃÅ"></asp:Label></strong>
                                                     </td>
 
                                                     <td align="center" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label10" runat="server" Text="å·¥å·"></asp:Label></strong>
+                                                            <asp:Label ID="Label10" runat="server" Text="¹¤ºÅ"></asp:Label></strong>
                                                     </td>
                                                     <td align="center" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label11" runat="server" Text="èŒä½"></asp:Label></strong>
+                                                            <asp:Label ID="Label11" runat="server" Text="Ö°Î»"></asp:Label></strong>
                                                     </td>
                                                     <td align="center" runat="server" id="leaveTd">
                                                         <strong>
-                                                            <asp:Label ID="Label12" runat="server" Text="è¯·å‡(å°æ—¶)"></asp:Label></strong>
+                                                            <asp:Label ID="Label12" runat="server" Text="Çë¼Ù(Ð¡Ê±)"></asp:Label></strong>
                                                     </td>
                                                     <td align="center" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label19" runat="server" Text="å‡ºå‹¤å¤©æ•°"></asp:Label></strong>
+                                                            <asp:Label ID="Label19" runat="server" Text="³öÇÚÌìÊý"></asp:Label></strong>
                                                     </td>
                                                     <td align="center" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label20" runat="server" Text="åº”å‡ºå‹¤å¤©æ•°"></asp:Label></strong>
+                                                            <asp:Label ID="Label20" runat="server" Text="Ó¦³öÇÚÌìÊý"></asp:Label></strong>
                                                     </td>
                                                     <td align="center" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label21" runat="server" Text="è¿Ÿåˆ°æ¬¡æ•°"></asp:Label></strong>
+                                                            <asp:Label ID="Label21" runat="server" Text="³Ùµ½´ÎÊý"></asp:Label></strong>
                                                     </td>
                                                     <td align="center" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label27" runat="server" Text="è¿Ÿåˆ°æ—¶é•¿(åˆ†é’Ÿ)"></asp:Label></strong>
+                                                            <asp:Label ID="Label27" runat="server" Text="³Ùµ½Ê±³¤(·ÖÖÓ)"></asp:Label></strong>
                                                     </td>
                                                     <td align="center" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label28" runat="server" Text="æ—·å·¥è¿Ÿåˆ°æ¬¡æ•°"></asp:Label></strong>
+                                                            <asp:Label ID="Label28" runat="server" Text="¿õ¹¤³Ùµ½´ÎÊý"></asp:Label></strong>
                                                     </td>
                                                     <td align="center" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label29" runat="server" Text="æ—©é€€æ¬¡æ•°"></asp:Label></strong>
+                                                            <asp:Label ID="Label29" runat="server" Text="ÔçÍË´ÎÊý"></asp:Label></strong>
                                                     </td>
                                                     <td align="center" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label30" runat="server" Text="æ—©é€€æ—¶é•¿(åˆ†é’Ÿ)"></asp:Label></strong>
+                                                            <asp:Label ID="Label30" runat="server" Text="ÔçÍËÊ±³¤(·ÖÖÓ)"></asp:Label></strong>
                                                     </td>
                                                     <td align="center" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label31" runat="server" Text="æ—·å·¥å¤©æ•°"></asp:Label></strong>
+                                                            <asp:Label ID="Label31" runat="server" Text="¿õ¹¤ÌìÊý"></asp:Label></strong>
                                                     </td>
                                                     <td align="center" rowspan="2">
                                                         <strong>
-                                                            <asp:Label ID="Label32" runat="server" Text="å¤œç­å¤©æ•°"></asp:Label></strong>
+                                                            <asp:Label ID="Label32" runat="server" Text="Ò¹°àÌìÊý"></asp:Label></strong>
                                                     </td>
                                                     <td align="center" runat="server" id="overtimeTd">
                                                         <strong>
-                                                            <asp:Label ID="Label33" runat="server" Text="åŠ ç­æ—¶é•¿(å°æ—¶)"></asp:Label></strong>
+                                                            <asp:Label ID="Label33" runat="server" Text="¼Ó°àÊ±³¤(Ð¡Ê±)"></asp:Label></strong>
                                                     </td>
                                                     <td align="center" runat="server" id="kqjgTd">
                                                         <strong>
-                                                            <asp:Label ID="Label34" runat="server" Text="è€ƒå‹¤ç»“æžœ"></asp:Label></strong>
+                                                            <asp:Label ID="Label34" runat="server" Text="¿¼ÇÚ½á¹û"></asp:Label></strong>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -299,25 +299,25 @@
                                                 <asp:Repeater runat="server" ID="rpReport" OnItemDataBound="rpReport_ItemDataBound">
                                                     <ItemTemplate>
                                                         <tr class="reportTr">
-                                                            <td align="center"><%#Eval("å§“å") %></td>
+                                                            <td align="center"><%#Eval("ÐÕÃû") %></td>
 
-                                                            <td align="center"><%#Eval("éƒ¨é—¨") %></td>
-                                                            <td align="center"><%#Eval("å·¥å·") %></td>
-                                                            <td align="center"><%#Eval("èŒä½") %></td>
+                                                            <td align="center"><%#Eval("²¿ÃÅ") %></td>
+                                                            <td align="center"><%#Eval("¹¤ºÅ") %></td>
+                                                            <td align="center"><%#Eval("Ö°Î»") %></td>
                                                             <asp:Repeater runat="server" ID="rpReportLeave">
                                                                 <ItemTemplate>
                                                                     <td align="center"><%#DataBinder.Eval((Container.Parent.Parent as RepeaterItem).DataItem,(GetDataItem() as DataRowView).Row["Type"].ToString()) %></td>
                                                                 </ItemTemplate>
                                                             </asp:Repeater>
-                                                            <td align="center"><%#Eval("å‡ºå‹¤å¤©æ•°") %></td>
-                                                            <td align="center"><%#Eval("åº”å‡ºå‹¤å¤©æ•°") %></td>
-                                                            <td align="center"><%#Eval("è¿Ÿåˆ°æ¬¡æ•°") %></td>
-                                                            <td align="center"><%#Eval("è¿Ÿåˆ°æ—¶é•¿") %></td>
-                                                            <td align="center"><%#Eval("æ—·å·¥è¿Ÿåˆ°æ¬¡æ•°") %></td>
-                                                            <td align="center"><%#Eval("æ—©é€€æ¬¡æ•°") %></td>
-                                                            <td align="center"><%#Eval("æ—©é€€æ—¶é•¿") %></td>
-                                                            <td align="center"><%#Eval("æ—·å·¥å¤©æ•°") %></td>
-                                                            <td align="center"><%#Eval("å¤œç­å¤©æ•°") %></td>
+                                                            <td align="center"><%#Eval("³öÇÚÌìÊý") %></td>
+                                                            <td align="center"><%#Eval("Ó¦³öÇÚÌìÊý") %></td>
+                                                            <td align="center"><%#Eval("³Ùµ½´ÎÊý") %></td>
+                                                            <td align="center"><%#Eval("³Ùµ½Ê±³¤") %></td>
+                                                            <td align="center"><%#Eval("¿õ¹¤³Ùµ½´ÎÊý") %></td>
+                                                            <td align="center"><%#Eval("ÔçÍË´ÎÊý") %></td>
+                                                            <td align="center"><%#Eval("ÔçÍËÊ±³¤") %></td>
+                                                            <td align="center"><%#Eval("¿õ¹¤ÌìÊý") %></td>
+                                                            <td align="center"><%#Eval("Ò¹°àÌìÊý") %></td>
                                                             <asp:Repeater runat="server" ID="rpReportOvertime">
                                                                 <ItemTemplate>
                                                                     <td align="center"><%#DataBinder.Eval((Container.Parent.Parent as RepeaterItem).DataItem,(GetDataItem() as DataRowView).Row["Type"].ToString()) %></td>

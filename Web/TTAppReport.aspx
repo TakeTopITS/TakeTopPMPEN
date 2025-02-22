@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppReport.aspx.cs" Inherits="TTAppReport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppReport.aspx.cs" Inherits="TTAppReport" %>
 
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
@@ -68,7 +68,7 @@
                                                     </td>
                                                 </tr>
                                             </table>
-                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="è¯·ç¨å€™ï¼Œå¤„ç†ä¸­..." style="display: none;" />
+                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖÐ..." style="display: none;" />
                                         </a>
                                     </td>
                                 </tr>
@@ -88,10 +88,10 @@
                                             Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False"
                                             CellPadding="4" ForeColor="#333333" GridLines="None">
                                             <Columns>
-                                                <asp:BoundColumn DataField="ID" HeaderText="åºå·" Visible="false">
+                                                <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ" Visible="false">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                 </asp:BoundColumn>
-                                                <asp:TemplateColumn HeaderText="æŠ¥è¡¨æ–‡ä»¶">
+                                                <asp:TemplateColumn HeaderText="±¨±íÎÄ¼þ">
                                                     <ItemTemplate>
                                                         <asp:Button ID="BT_ReportName" CommandName="Open" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ReportName") %>'
                                                             CssClass="inpuLongest" Width="99%" />
@@ -99,17 +99,17 @@
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="35%" />
                                                 </asp:TemplateColumn>
                                                 <%--<asp:HyperLinkColumn DataNavigateUrlField="ReportURL" DataNavigateUrlFormatString="{0}"
-                                                     DataTextField="ReportName" HeaderText="æŠ¥è¡¨æ–‡ä»¶" Target="_blank">
+                                                     DataTextField="ReportName" HeaderText="±¨±íÎÄ¼þ" Target="_blank">
                                                      <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
                                                  </asp:HyperLinkColumn>--%>
-                                                <%--<asp:BoundColumn DataField="TemName" HeaderText="æ¨¡æ¿">
+                                                <%--<asp:BoundColumn DataField="TemName" HeaderText="Ä£°å">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                 </asp:BoundColumn>
                                                 <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                    DataTextField="CreatorName" HeaderText="ä¸Šä¼ è€…" Target="_blank">
+                                                    DataTextField="CreatorName" HeaderText="ÉÏ´«Õß" Target="_blank">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                 </asp:HyperLinkColumn>
-                                                <asp:BoundColumn DataField="CreateTime" HeaderText="åˆ›å»ºæ—¶é—´">
+                                                <asp:BoundColumn DataField="CreateTime" HeaderText="´´½¨Ê±¼ä">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="18%" />
                                                 </asp:BoundColumn>--%>
                                             </Columns>
@@ -125,7 +125,7 @@
                             </table>
 
                             <br />
-                            <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,YiYueBaoBiao%>"></asp:Label>ï¼š
+                            <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,YiYueBaoBiao%>"></asp:Label>£º
                             <br />
 
                             <table border="0" style="width: 100%; padding-top: 3px;">
@@ -137,10 +137,10 @@
                                             Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False"
                                             CellPadding="4" ForeColor="#333333" GridLines="None">
                                             <Columns>
-                                                <asp:BoundColumn DataField="ID" HeaderText="åºå·" Visible="false">
+                                                <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ" Visible="false">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                 </asp:BoundColumn>
-                                                <asp:TemplateColumn HeaderText="æŠ¥è¡¨æ–‡ä»¶">
+                                                <asp:TemplateColumn HeaderText="±¨±íÎÄ¼þ">
                                                     <ItemTemplate>
                                                         <asp:Button ID="BT_ReportName" CommandName="Open" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ReportName") %>'
                                                             CssClass="inpuLongest" Width="99%" />
@@ -148,17 +148,17 @@
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="35%" />
                                                 </asp:TemplateColumn>
                                                 <%--<asp:HyperLinkColumn DataNavigateUrlField="ReportURL" DataNavigateUrlFormatString="{0}"
-                               DataTextField="ReportName" HeaderText="æŠ¥è¡¨æ–‡ä»¶" Target="_blank">
+                               DataTextField="ReportName" HeaderText="±¨±íÎÄ¼þ" Target="_blank">
                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
                            </asp:HyperLinkColumn>--%>
-                                                <%--<asp:BoundColumn DataField="TemName" HeaderText="æ¨¡æ¿">
+                                                <%--<asp:BoundColumn DataField="TemName" HeaderText="Ä£°å">
                               <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                           </asp:BoundColumn>
                           <asp:HyperLinkColumn DataNavigateUrlField="CreatorCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                              DataTextField="CreatorName" HeaderText="ä¸Šä¼ è€…" Target="_blank">
+                              DataTextField="CreatorName" HeaderText="ÉÏ´«Õß" Target="_blank">
                               <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                           </asp:HyperLinkColumn>
-                          <asp:BoundColumn DataField="CreateTime" HeaderText="åˆ›å»ºæ—¶é—´">
+                          <asp:BoundColumn DataField="CreateTime" HeaderText="´´½¨Ê±¼ä">
                               <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="18%" />
                           </asp:BoundColumn>--%>
                                             </Columns>

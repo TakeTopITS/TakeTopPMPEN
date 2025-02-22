@@ -1,4 +1,4 @@
-﻿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -72,42 +72,42 @@ public partial class TTWZStorePrintPage : System.Web.UI.Page
         string strHQL = string.Format(@"select 
                         y.DLCode,
                         l.DLName,
-                        上期结额 = y.上期结额,
-                        本期收额 = y.本期收额,
-                        累计收额 = y.累计收额,
-                        本期发额 = y.本期发额,
-                        累计发额 = y.累计发额,
-                        本期结额 = y.本期结额,
-                        平均占用 = (y.上期结额 + y.本期结额) / 2
+                        ���ڽ�� = y.���ڽ��,
+                        �����ն� = y.�����ն�,
+                        �ۼ��ն� = y.�ۼ��ն�,
+                        ���ڷ��� = y.���ڷ���,
+                        �ۼƷ��� = y.�ۼƷ���,
+                        ���ڽ�� = y.���ڽ��,
+                        ƽ��ռ�� = (y.���ڽ�� + y.���ڽ��) / 2
                         from
                         (
                         select 
                         DLCode,
-                        上期结额 = x.上期结额,
-                        本期收额 = x.本期收额,
-                        累计收额 = x.累计收额,
-                        本期发额 = x.本期发额,
-                        累计发额 = x.累计发额,
-                        本期结额 = x.上期结额 + x.本期收额 - x.本期发额
+                        ���ڽ�� = x.���ڽ��,
+                        �����ն� = x.�����ն�,
+                        �ۼ��ն� = x.�ۼ��ն�,
+                        ���ڷ��� = x.���ڷ���,
+                        �ۼƷ��� = x.�ۼƷ���,
+                        ���ڽ�� = x.���ڽ�� + x.�����ն� - x.���ڷ���
                         from
                         (
                         select 
                         DLCode,
-                        上期结额 = t.初始金额+t.上月末之前有效收料单的实购金额总和-t.上月末之前有效发料单的计划金额总和,
-                        本期收额 = t.本月有效收料单的实购金额总和,
-                        累计收额 = t.本年度有效收料单的实购金额总和,
-                        本期发额 = t.本月有效发料单的计划金额总和,
-                        累计发额 = t.本年度有效发料单的计划金额总和
+                        ���ڽ�� = t.��ʼ���+t.����ĩ֮ǰ��Ч���ϵ���ʵ������ܺ�-t.����ĩ֮ǰ��Ч���ϵ��ļƻ�����ܺ�,
+                        �����ն� = t.������Ч���ϵ���ʵ������ܺ�,
+                        �ۼ��ն� = t.�������Ч���ϵ���ʵ������ܺ�,
+                        ���ڷ��� = t.������Ч���ϵ��ļƻ�����ܺ�,
+                        �ۼƷ��� = t.�������Ч���ϵ��ļƻ�����ܺ�
                         from
                         (
                         select a.DLCode,
-                        COALESCE(SumYearMoney,0) as 初始金额, 
-                        COALESCE(b.ActualMoney,0) as 上月末之前有效收料单的实购金额总和,
-                        COALESCE(c.PlanMoney,0) as 上月末之前有效发料单的计划金额总和,
-                        COALESCE(d.ActualMoney,0) as 本月有效收料单的实购金额总和,
-                        COALESCE(e.ActualMoney,0) as 本年度有效收料单的实购金额总和,
-                        COALESCE(f.PlanMoney,0) as 本月有效发料单的计划金额总和,
-                        COALESCE(g.PlanMoney,0) as 本年度有效发料单的计划金额总和
+                        COALESCE(SumYearMoney,0) as ��ʼ���, 
+                        COALESCE(b.ActualMoney,0) as ����ĩ֮ǰ��Ч���ϵ���ʵ������ܺ�,
+                        COALESCE(c.PlanMoney,0) as ����ĩ֮ǰ��Ч���ϵ��ļƻ�����ܺ�,
+                        COALESCE(d.ActualMoney,0) as ������Ч���ϵ���ʵ������ܺ�,
+                        COALESCE(e.ActualMoney,0) as �������Ч���ϵ���ʵ������ܺ�,
+                        COALESCE(f.PlanMoney,0) as ������Ч���ϵ��ļƻ�����ܺ�,
+                        COALESCE(g.PlanMoney,0) as �������Ч���ϵ��ļƻ�����ܺ�
                         from
                         (
                         select SUBSTRING(ObjectCode, 0, 3) as DLCode,
@@ -185,38 +185,38 @@ public partial class TTWZStorePrintPage : System.Web.UI.Page
 
         DataTable dtStore = ShareClass.GetDataSetFromSql(strHQL, "Store").Tables[0];
 
-        decimal decimalPreviousMoney = 0;               //上期结额
-        decimal decimalCurrentCollectMoney = 0;         //本期收额
-        decimal decimalTotalCollectMoney = 0;           //累计收额
-        decimal decimalCurrentSendMoney = 0;            //本期发额
-        decimal decimalTotalSendMoney = 0;              //累计发额
-        decimal decimalCurrentMoney = 0;                //本期结额
-        decimal decimalAvgMoney = 0;                         //平均占用
+        decimal decimalPreviousMoney = 0;               //���ڽ��
+        decimal decimalCurrentCollectMoney = 0;         //�����ն�
+        decimal decimalTotalCollectMoney = 0;           //�ۼ��ն�
+        decimal decimalCurrentSendMoney = 0;            //���ڷ���
+        decimal decimalTotalSendMoney = 0;              //�ۼƷ���
+        decimal decimalCurrentMoney = 0;                //���ڽ��
+        decimal decimalAvgMoney = 0;                         //ƽ��ռ��
 
         foreach (DataRow drStore in dtStore.Rows)
         {
             decimal decimalStorePreviousMoney = 0;
-            decimal.TryParse(ShareClass.ObjectToString(drStore["上期结额"]), out decimalStorePreviousMoney);
+            decimal.TryParse(ShareClass.ObjectToString(drStore["���ڽ��"]), out decimalStorePreviousMoney);
             decimalPreviousMoney += decimalStorePreviousMoney;
 
             decimal decimalStoreCurrentCollectMoney = 0;
-            decimal.TryParse(ShareClass.ObjectToString(drStore["本期收额"]), out decimalStoreCurrentCollectMoney);
+            decimal.TryParse(ShareClass.ObjectToString(drStore["�����ն�"]), out decimalStoreCurrentCollectMoney);
             decimalCurrentCollectMoney += decimalStoreCurrentCollectMoney;
 
             decimal decimalStoreTotalCollectMoney = 0;
-            decimal.TryParse(ShareClass.ObjectToString(drStore["累计收额"]), out decimalStoreTotalCollectMoney);
+            decimal.TryParse(ShareClass.ObjectToString(drStore["�ۼ��ն�"]), out decimalStoreTotalCollectMoney);
             decimalTotalCollectMoney += decimalStoreTotalCollectMoney;
 
             decimal decimalStoreCurrentSendMoney = 0;
-            decimal.TryParse(ShareClass.ObjectToString(drStore["本期发额"]), out decimalStoreCurrentSendMoney);
+            decimal.TryParse(ShareClass.ObjectToString(drStore["���ڷ���"]), out decimalStoreCurrentSendMoney);
             decimalCurrentSendMoney += decimalStoreCurrentSendMoney;
 
             decimal decimalStoreTotalSendMoney = 0;
-            decimal.TryParse(ShareClass.ObjectToString(drStore["累计发额"]), out decimalStoreTotalSendMoney);
+            decimal.TryParse(ShareClass.ObjectToString(drStore["�ۼƷ���"]), out decimalStoreTotalSendMoney);
             decimalTotalSendMoney += decimalStoreTotalSendMoney;
 
             decimal decimalStoreCurrentMoney = 0;
-            decimal.TryParse(ShareClass.ObjectToString(drStore["本期结额"]), out decimalStoreCurrentMoney);
+            decimal.TryParse(ShareClass.ObjectToString(drStore["���ڽ��"]), out decimalStoreCurrentMoney);
             decimalCurrentMoney += decimalStoreCurrentMoney;
         }
 

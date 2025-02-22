@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
@@ -98,7 +98,7 @@ public partial class TTBMSupplierInfoView : System.Web.UI.Page
 
     protected void LoadSupplierInfoAttach(string strId)
     {
-        //ç»‘å®šé™„ä»¶åˆ—è¡¨
+        //°ó¶¨¸½¼şÁĞ±í
         string strHQL = "from BMSupplierInfo as bMSupplierInfo where bMSupplierInfo.ID = '" + strId + "' ";
         BMSupplierInfoBLL bMSupplierInfoBLL = new BMSupplierInfoBLL();
         IList lst = bMSupplierInfoBLL.GetAllBMSupplierInfos(strHQL);
@@ -149,15 +149,15 @@ public partial class TTBMSupplierInfoView : System.Web.UI.Page
     {
         if (strBidStatus.Trim().Equals("Y"))
         {
-            return "ä¸­æ ‡";
+            return "ÖĞ±ê";
         }
         else if (strBidStatus.Trim().Equals("N"))
         {
-            return "æœªä¸­æ ‡";
+            return "Unsuccessful Bid";
         }
         else
         {
-            return "æœªå¼€æ ‡";
+            return "Î´¿ª±ê";
         }
     }
 
@@ -182,20 +182,20 @@ public partial class TTBMSupplierInfoView : System.Web.UI.Page
         IList lst = bMContractPreparationBLL.GetAllBMContractPreparations(strHQL);
         if (lst.Count > 0 && lst != null)
         {
-            return "åˆåŒå·²ç­¾è®¢";
+            return "ºÏÍ¬ÒÑÇ©¶©";
         }
         else
         {
-            if (strStatus.Trim().Equals("æ–°å»º"))
+            if (strStatus.Trim().Equals("New"))
             {
-                return "åˆåŒæ´½è°ˆæ–°å»º";
+                return "ºÏÍ¬Ç¢Ì¸ĞÂ½¨";
             }
-            else if (strStatus.Trim().Equals("ä¸åˆæ ¼"))
+            else if (strStatus.Trim().Equals("Unqualified"))
             {
-                return "åˆåŒæ´½è°ˆå®¡æ ¸ä¸åˆæ ¼";
+                return "ºÏÍ¬Ç¢Ì¸ÉóºË²»ºÏ¸ñ";
             }
             else
-                return "åˆåŒæ´½è°ˆä¸­";
+                return "ºÏÍ¬Ç¢Ì¸ÖĞ";
         }
     }
 
@@ -262,7 +262,7 @@ public partial class TTBMSupplierInfoView : System.Web.UI.Page
         string strHQL;
         IList lst;
         string result = "";
-        //ç»‘å®šæ‹›æ ‡è®¡åˆ’
+        //°ó¶¨ÕĞ±ê¼Æ»®
         strHQL = "From BMSupBidByExp as bMSupBidByExp Where bMSupBidByExp.SupplierBidID='" + strID + "' Order By bMSupBidByExp.ID ";
         BMSupBidByExpBLL bMSupBidByExpBLL = new BMSupBidByExpBLL();
         lst = bMSupBidByExpBLL.GetAllBMSupBidByExps(strHQL);
@@ -271,7 +271,7 @@ public partial class TTBMSupplierInfoView : System.Web.UI.Page
             for (int i = 0; i < lst.Count; i++)
             {
                 BMSupBidByExp bMSupBidByExp = (BMSupBidByExp)lst[i];
-                result += "ä¸“å®¶ " + ShareClass.GetUserName(bMSupBidByExp.ExportCode.Trim()) + "ï¼š" + bMSupBidByExp.ExportResult.Trim() + "ï¼›";
+                result += "×¨¼Ò " + ShareClass.GetUserName(bMSupBidByExp.ExportCode.Trim()) + "£º" + bMSupBidByExp.ExportResult.Trim() + "£»";
             }
         }
         return result;

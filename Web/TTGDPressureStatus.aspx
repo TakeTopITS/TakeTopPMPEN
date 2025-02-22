@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDPressureStatus.aspx.cs" Inherits="TTGDPressureStatus" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDPressureStatus.aspx.cs" Inherits="TTGDPressureStatus" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -55,9 +55,9 @@
                                         <tr>
                                             <td align="left" class="formItemBgStyle">
                                                 <div style="display:none;">
-                                                    <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>ï¼š<asp:DropDownList ID="DDL_GDProject" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_GDProject_SelectedIndexChanged"></asp:DropDownList>&nbsp;
+                                                    <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>£º<asp:DropDownList ID="DDL_GDProject" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_GDProject_SelectedIndexChanged"></asp:DropDownList>&nbsp;
                                                 </div>
-                                                <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,ShiYaBaoHao%>"></asp:Label>ï¼š<asp:DropDownList ID="DDL_Pressure" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_Pressure_SelectedIndexChanged"></asp:DropDownList>&nbsp;
+                                                <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,ShiYaBaoHao%>"></asp:Label>£º<asp:DropDownList ID="DDL_Pressure" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_Pressure_SelectedIndexChanged"></asp:DropDownList>&nbsp;
                                                 <asp:Button ID="BT_Search" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ChaXun%>" OnClick="BT_Search_Click" />&nbsp;
                                                 
                                             </td>
@@ -127,7 +127,7 @@
                                                         </ItemTemplate>
                                                         <FooterTemplate>
                                                             <tr align="center">
-                                                                <td>Totalï¼š<asp:Label ID="Label1" runat="server" Text="0"></asp:Label></td>
+                                                                <td>Total£º<asp:Label ID="Label1" runat="server" Text="0"></asp:Label></td>
                                                                 <td><asp:Label ID="Label2" runat="server" Text="0"></asp:Label></td>
                                                                 <td><asp:Label ID="Label3" runat="server" Text="0"></asp:Label></td>
                                                                 <td><asp:Label ID="Label4" runat="server" Text="0"></asp:Label></td>
@@ -146,7 +146,7 @@
                                                                 <td><asp:Label ID="Label17" runat="server" Text="0"></asp:Label></td>
                                                             </tr>
                                                             <tr align="center">
-                                                                <td>Precent Progressï¼š</td>
+                                                                <td>Precent Progress£º</td>
                                                                 <td>&nbsp;</td>
                                                                 <td><asp:Label ID="Label18" runat="server" Text="0"></asp:Label></td>
                                                                 <td>&nbsp;</td>

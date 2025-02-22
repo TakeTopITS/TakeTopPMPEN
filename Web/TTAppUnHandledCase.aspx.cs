@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -44,7 +44,7 @@ public partial class TTAppUnHandledCase : System.Web.UI.Page
         if (Page.IsPostBack == false)
         {
             strUserName = ShareClass.GetUserName(strUserCode);
-            strUserInfo = "ç”¨æˆ·ï¼š" + strUserCode + "  " + strUserName;
+            strUserInfo = "ÓÃ»§£º" + strUserCode + "  " + strUserName;
             //LB_SuperDepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthoritySuperUser(strUserCode);
 
             LoadFunInforDialBoxList();
@@ -54,7 +54,7 @@ public partial class TTAppUnHandledCase : System.Web.UI.Page
     protected void LoadFunInforDialBoxList()
     {
         string strHQL;
-        strHQL = "Select * From T_FunInforDialBox Where Status='å¯ç”¨' and char_length(Ltrim(Rtrim(MobileLinkAddress))) > 0 ";
+        strHQL = "Select * From T_FunInforDialBox Where Status='Enabled' and char_length(Ltrim(Rtrim(MobileLinkAddress))) > 0 ";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
         strHQL += " and trim(MobileLinkAddress) <> ''";
         strHQL += " Order By SortNumber Asc ";

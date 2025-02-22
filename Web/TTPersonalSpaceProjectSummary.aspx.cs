@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -18,8 +18,8 @@ public partial class TTPersonalSpaceProjectSummary : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //钟礼月作品（jack.erp@gmail.com)
-        //泰顶软件（TakeTop Software)2006－2012
+        //��������Ʒ��jack.erp@gmail.com)
+        //̩��������TakeTop Software)2006��2012
 
         string strHQL;
         string strUserCode = Session["UserCode"].ToString();
@@ -40,9 +40,9 @@ public partial class TTPersonalSpaceProjectSummary : System.Web.UI.Page
             LB_UserName.Text = strUserName;
 
             strHQL = "select C.*,COALESCE(D.TotalBL,0) PercentRea from T_Project C left join (select A.ProjectID,COALESCE(B.TotalRea,0)/CASE WHEN A.Total = 0 Then 1 END as TotalBL from (select " +
-                "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='基础' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
-                "T_ProjectCostManage where Type='操作' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.PMCode='" + strUserCode + "' and " +
-                "C.Status not in ('新建','隐藏','删除','归档') Order by C.ProjectID DESC";
+                "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='Base' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
+                "T_ProjectCostManage where Type='Operation' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.PMCode='" + strUserCode + "' and " +
+                "C.Status not in ('New','Hided','Deleted','Archived') Order by C.ProjectID DESC";
 
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectCost");
             DataGrid1.DataSource = ds;
@@ -51,9 +51,9 @@ public partial class TTPersonalSpaceProjectSummary : System.Web.UI.Page
 
 
             strHQL = "select C.*,COALESCE(D.TotalBL,0) PercentRea from V_ProRelatedUser C left join (select A.ProjectID,COALESCE(B.TotalRea,0)/CASE WHEN A.Total = 0 Then 1 END as TotalBL from (select " +
-               "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='基础' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
-               "T_ProjectCostManage where Type='操作' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
-               "C.ProStatus not in ('新建','评审','隐藏','删除','归档','暂停','终止') and C.PMCode <> '" + strUserCode + "' Order by C.ProjectID DESC";
+               "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='Base' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
+               "T_ProjectCostManage where Type='Operation' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
+               "C.ProStatus not in ('New','Review','Hided','Deleted','Archived','Pause','Stop') and C.PMCode <> '" + strUserCode + "' Order by C.ProjectID DESC";
 
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectCost");
             DataGrid2.DataSource = ds;
@@ -62,9 +62,9 @@ public partial class TTPersonalSpaceProjectSummary : System.Web.UI.Page
 
 
             strHQL = "select C.*,COALESCE(D.TotalBL,0) PercentRea from T_Project C left join (select A.ProjectID,COALESCE(B.TotalRea,0)/CASE WHEN A.Total = 0 Then 1 END as TotalBL from (select " +
-                "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='基础' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
-                "T_ProjectCostManage where Type='操作' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
-                "C.Status not in ('新建','隐藏','删除','归档') Order by C.ProjectID DESC";
+                "ProjectID,SUM(Total) Total from T_ProjectCostManage Where Type='Base' group by ProjectID) A left join (select ProjectID,SUM(Total) TotalRea from " +
+                "T_ProjectCostManage where Type='Operation' group by ProjectID) B on A.ProjectID=B.ProjectID) D on C.ProjectID=D.ProjectID where C.UserCode='" + strUserCode + "' and " +
+                "C.Status not in ('New','Hided','Deleted','Archived') Order by C.ProjectID DESC";
 
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectCost");
             DataGrid3.DataSource = ds;
@@ -135,10 +135,10 @@ public partial class TTPersonalSpaceProjectSummary : System.Web.UI.Page
             relatedUser.Actor = "ProjectMember";
             relatedUser.JoinDate = DateTime.Now;
             relatedUser.LeaveDate = DateTime.Parse("2099-12-31");
-            relatedUser.Status = "计划";
+            relatedUser.Status = "Plan";
             relatedUser.WorkDetail = "";
             relatedUser.SMSCount = 0;
-            relatedUser.SalaryMethod = "工时";
+            relatedUser.SalaryMethod = "��ʱ";
             relatedUser.PromissionScale = 0;
             relatedUser.UnitHourSalary = 0;
             relatedUser.CanUpdatePlan = "NO";

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZRequestDetailPrintPage.aspx.cs" Inherits="TTWZRequestDetailPrintPage" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZRequestDetailPrintPage.aspx.cs" Inherits="TTWZRequestDetailPrintPage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -51,13 +51,13 @@
                                         <table width="100%">
                                             <tr>
                                                 <td style="width: 7%; text-align:right;"><b>
-                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,GongHuoDanWei%>"></asp:Label>ï¼š</b></td>
+                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,GongHuoDanWei%>"></asp:Label>£º</b></td>
                                                 <td style="width: 18%;"><asp:Literal ID="LT_SupplierName" runat="server"></asp:Literal></td>
                                                 <td style="width: 10%; text-align:right;"><b>
-                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,KaiHuHang%>"></asp:Label>ï¼š</b></td>
+                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,KaiHuHang%>"></asp:Label>£º</b></td>
                                                 <td style="width: 20%;"><asp:Literal ID="LT_OpeningBank" runat="server"></asp:Literal></td>
                                                 <td style="width: 10%; text-align:right;"><b>
-                                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,QingKuanRiQi%>"></asp:Label>ï¼š</b></td>
+                                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,QingKuanRiQi%>"></asp:Label>£º</b></td>
                                                 <td style="width: 15%;"><asp:Literal ID="LT_RequestTime" runat="server"></asp:Literal></td>
                                             </tr>
                                         </table>
@@ -68,13 +68,13 @@
                                         <table width="100%">
                                             <tr>
                                                 <td style="width: 7%; text-align:right;"><b>
-                                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,HeTongHao%>"></asp:Label>ï¼š</b></td>
+                                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,HeTongHao%>"></asp:Label>£º</b></td>
                                                 <td style="width: 18%;"><asp:Literal ID="LT_CompactCode" runat="server"></asp:Literal></td>
                                                 <td style="width: 10%; text-align:right;"><b>
-                                                    <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZhangHao%>"></asp:Label>ï¼š</b></td>
+                                                    <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,ZhangHao%>"></asp:Label>£º</b></td>
                                                 <td style="width: 20%;"><asp:Literal ID="LT_AccountNumber" runat="server"></asp:Literal></td>
                                                 <td style="width: 10%; text-align:right;"><b>
-                                                    <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,BaoBiaoRiQi%>"></asp:Label>ï¼š</b></td>
+                                                    <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,BaoBiaoRiQi%>"></asp:Label>£º</b></td>
                                                 <td style="width: 15%;"><asp:Literal ID="LT_CurrentTime" runat="server"></asp:Literal></td>
                                             </tr>
                                         </table>
@@ -152,13 +152,13 @@
                                         <table width="100%">
                                             <tr>
                                                 <td style="width: 8%;"><b>
-                                                    <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>ï¼š</b><asp:Literal ID="LT_Progress" runat="server"></asp:Literal></td>
+                                                    <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>£º</b><asp:Literal ID="LT_Progress" runat="server"></asp:Literal></td>
                                                 <td style="width: 15%;"><b>
-                                                    <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,JieKuanRen%>"></asp:Label>ï¼š</b><asp:Literal ID="LT_Borrower" runat="server"></asp:Literal></td>
+                                                    <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,JieKuanRen%>"></asp:Label>£º</b><asp:Literal ID="LT_Borrower" runat="server"></asp:Literal></td>
                                                 <td style="width: 15%;"><b>
-                                                    <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,JiHe%>"></asp:Label>ï¼š</b><asp:Literal ID="LT_Approver" runat="server"></asp:Literal></td>
+                                                    <asp:Label ID="Label23" runat="server" Text="<%$ Resources:lang,JiHe%>"></asp:Label>£º</b><asp:Literal ID="LT_Approver" runat="server"></asp:Literal></td>
                                                 <td style="width: 17%;"><b>
-                                                    <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,JieKuanJinEHeJi%>"></asp:Label>ï¼š</b></td>
+                                                    <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,JieKuanJinEHeJi%>"></asp:Label>£º</b></td>
                                                 <td style="width: 8%;"><asp:Literal ID="LT_TotalActualNumber" runat="server"></asp:Literal></td>
                                                 <td style="width: 8%;"><asp:Literal ID="LT_TotalActualMoney" runat="server"></asp:Literal></td>
                                                 <td style="width: 5%;"><asp:Literal ID="LT_TotalRatioMoney" runat="server"></asp:Literal></td>
@@ -177,8 +177,8 @@
             <div id="divOver" style="text-align: center">
                 <br />
                 <p class="noprint">
-                    <input id="print" type="button" class="btn" value="ç¡®è®¤æ‰“å°" onclick="printpage();" />
-                    <input id="print0" type="button" value="å…³é—­" onclick="CloseLayer();" class="btn" />
+                    <input id="print" type="button" class="btn" value="È·ÈÏ´òÓ¡" onclick="printpage();" />
+                    <input id="print0" type="button" value="Closed" onclick="CloseLayer();" class="btn" />
                 </p>
             </div>
         </center>

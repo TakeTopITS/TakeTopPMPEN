@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserOperateLogView.aspx.cs" Inherits="TTUserOperateLogView" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserOperateLogView.aspx.cs" Inherits="TTUserOperateLogView" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>é¡¹ç›®å·¥ä½œæ—¥å¿—</title>
+    <title>ÏîÄ¿¹¤×÷ÈÕÖ¾</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -41,7 +41,7 @@
                             <td>
                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,CaoZuoRiZhi%>"></asp:Label>
                             </td>
-                            <td>ï¼ˆ</td>
+                            <td>£¨</td>
                             <td align="right">
                                 <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,KaiShiRiQi%>"></asp:Label>
                             </td>
@@ -66,8 +66,8 @@
                             <td>&nbsp;&nbsp;</td>
                             <td>
                                 <a href="#" onclick="preview1()">
-                                    <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" />
-                                </a>ï¼‰
+                                    <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" />
+                                </a>£©
                             </td>
                         </tr>
                     </table>

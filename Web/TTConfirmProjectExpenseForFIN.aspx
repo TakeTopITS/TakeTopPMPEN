@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConfirmProjectExpenseForFIN.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTConfirmProjectExpenseForFIN.aspx.cs"
     Inherits="TTConfirmProjectExpenseForFIN" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -51,7 +51,7 @@
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
                                                         <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>ï¼š<asp:Label ID="LB_ProjectID" runat="server"></asp:Label>
+                                                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,XiangMu%>"></asp:Label>£º<asp:Label ID="LB_ProjectID" runat="server"></asp:Label>
                                                             &nbsp;<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,QueRenFeiYong%>"></asp:Label>
                                                             <asp:Label ID="LB_QueryScope" runat="server" Font-Size="9pt" Font-Underline="True"
                                                                 Visible="FALSE"></asp:Label>
@@ -109,7 +109,7 @@
                                                                         )
                                                                     </td>
                                                                     <td>
-                                                                        <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,BiBie%>"></asp:Label>ï¼š</td>
+                                                                        <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,BiBie%>"></asp:Label>£º</td>
                                                                     <td>
                                                                         <asp:Label ID="LB_CurrencyType" runat="server" Font-Bold="True"></asp:Label></td>
                                                                 </tr>

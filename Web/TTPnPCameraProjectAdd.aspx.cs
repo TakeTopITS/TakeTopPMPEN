@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -59,7 +59,7 @@ public partial class TTPnPCameraProjectAdd : System.Web.UI.Page
             string id = HF_ID.Value;
             if (!string.IsNullOrEmpty(id))
             {
-                //ä¿®æ”¹
+                //ÐÞ¸Ä
                 int intID = 0;
                 int.TryParse(id, out intID);
                 string strCameraInfoHQL = "from CameraInfo as cameraInfo where id = " + intID;
@@ -80,7 +80,7 @@ public partial class TTPnPCameraProjectAdd : System.Web.UI.Page
             }
             else
             {
-                //å¢žåŠ 
+                //Ôö¼Ó
                 CameraInfo cameraInfo = new CameraInfo();
                 cameraInfo.ForeignID = HF_ForeignID.Value;
                 cameraInfo.CameraType = 2;

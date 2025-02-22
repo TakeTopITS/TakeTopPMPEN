@@ -1,14 +1,14 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSelectorPlan.aspx.cs" Inherits="TTSelectorPlan" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSelectorPlan.aspx.cs" Inherits="TTSelectorPlan" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>å®æ–½è·¯çº¿</title>
+    <title>ÊµÊ©Â·Ïß</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/jscript" language="javascript">
-        //å¤é€‰æ¡†å…¨é€‰
+        //¸´Ñ¡¿òÈ«Ñ¡
         function ChooseAll(item) {
             $("input[name=dlCode]").each(function () {
                 if (item.checked == true) {
@@ -21,22 +21,22 @@
         }
 
 
-        //å¤šé€‰æ‹©æŒ‰é’®åˆ¤æ–­
+        //¶àÑ¡Ôñ°´Å¥ÅĞ¶Ï
         function chooseUpdate() {
             var str = "";
             $("input[name=dlCode]").each(function () {
                 if ($(this).attr("checked")) {
-                    str = str + $(this).attr("id") + ","; // æ•´ä¸ªä»¥,éš”å¼€
+                    str = str + $(this).attr("id") + ","; // Õû¸öÒÔ,¸ô¿ª
                 }
             });
             if (str == "") {
-                alert('è¯·é€‰æ‹©è®°å½•é¡¹ï¼');
+                alert('ÇëÑ¡Ôñ¼ÇÂ¼Ïî£¡');
                 return false;
             }
             else {
                 window.returnValue = str;
 
-                alert("æ¨é€æˆåŠŸ");
+                alert("ÍÆËÍ³É¹¦");
             }
 
 
@@ -147,11 +147,11 @@
                                             <tr style="display:none;">
                                                 <td class="formItemBgStyle">
                                                     <div style="text-align: center">
-                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="ç¡®å®š" />
+                                                        <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="È·¶¨" />
                                                         &nbsp;&nbsp;
                                                       
                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                            type="button" value="å…³é—­" />
+                                                            type="button" value="Closed" />
                                                     </div>
                                                 </td>
                                             </tr>

@@ -39,7 +39,7 @@ public partial class TTModuleFlowChartViewJS : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         string strHQL;
-        string strTemName, strWFDefinition, strHomeModuleName, strSysteModuleID;
+        string strTemName, strWFDefinition, strHomeModuleName, strSysteModuleID, strPageName;
         string strID;
 
         strUserCode = Session["UserCode"].ToString();
@@ -53,9 +53,7 @@ public partial class TTModuleFlowChartViewJS : System.Web.UI.Page
             strHQL = string.Format(@"Select Distinct B.ID,A.ID as SystemModuleID,A.ModuleName,A.HomeModuleName,A.ParentModule,A.PageName,A.ModuleType,B.ModuleDefinition as UserModuleDefinition,A.ModuleDefinition as SystemModuleDefinition,
                 A.UserType,A.IconURL,A.SortNumber,A.DIYFlow From T_ProModuleLevel A, T_ProModule B Where rtrim(A.ModuleName)
                 ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType) and (CHAR_LENGTH(B.ModuleDefinition) > 0 Or CHAR_LENGTH(A.ModuleDefinition) > 0) and B.ID = {0}", strID, Session["LangCode"].ToString());
-
-            //LogClass.WriteLogFile(strHQL);
+                ||rtrim(B.UserType) and (CHAR_LENGTH(B.ModuleDefinition) > 0 Or CHAR_LENGTH(A.ModuleDefinition) > 0) and B.ID = {0}", strID);
 
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProModuleLevel");
             if (ds.Tables[0].Rows.Count > 0)
@@ -63,6 +61,7 @@ public partial class TTModuleFlowChartViewJS : System.Web.UI.Page
                 strHomeModuleName = ds.Tables[0].Rows[0]["HomeModuleName"].ToString().Trim();
                 strTemName = ds.Tables[0].Rows[0]["ModuleName"].ToString().Trim();
                 strWFDefinition = ds.Tables[0].Rows[0]["UserModuleDefinition"].ToString().Trim();
+                strPageName = ds.Tables[0].Rows[0]["PageName"].ToString().Trim();
 
                 if (strType == "UserModule" && strWFDefinition == "")
                 {
@@ -245,7 +244,7 @@ public partial class TTModuleFlowChartViewJS : System.Web.UI.Page
             A.IsDeleted = 'NO' AND B.Visible = 'YES' and
             A.ModuleType NOT IN ('APP', 'DIYAPP', 'SITE') AND
             A.UserType = '{1}' AND
-            A.ModuleName = '{2}' AND
+           
             A.PageName = '{3}' AND
             A.LangCode = '{4}' AND
         	(A.ParentModule = ''
@@ -312,12 +311,16 @@ public partial class TTModuleFlowChartViewJS : System.Web.UI.Page
     {
         string strHQL;
 
-        strHQL = string.Format(@"Select A.HomeModuleName  From T_ProModuleLevel A, T_ProModule B  Where rtrim(A.ModuleName)
-                ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
-                ||rtrim(B.UserType)  and A.Visible = 'YES' and A.IsDeleted = 'NO' 
-                and A.ModuleType Not In ('APP','DIYAPP','SITE') and A.UserType = '{4}' and B.UserType = '{4}' 
-                and B.UserCode = '{0}' and B.Visible = 'YES' and B.ModuleType Not In ('APP','DIYAPP','SITE') and A.ModuleName = '{1}' and A.PageName = '{2}' 
-                and A.LangCode = '{3}' Order By A.SortNumber ASC", strUserCode, strFromModuleName, strModuleURL, strLangCode, strUserType);
+        //strHQL = string.Format(@"Select A.HomeModuleName  From T_ProModuleLevel A, T_ProModule B  Where rtrim(A.ModuleName)
+        //        ||rtrim(A.ModuleType)||rtrim(A.UserType) = rtrim(B.ModuleName) ||rtrim(B.ModuleType) 
+        //        ||rtrim(B.UserType)  and A.Visible = 'YES' and A.IsDeleted = 'NO' 
+        //        and A.ModuleType Not In ('APP','DIYAPP','SITE') and A.UserType = '{4}' and B.UserType = '{4}' 
+        //        and B.UserCode = '{0}' and B.Visible = 'YES' and B.ModuleType Not In ('APP','DIYAPP','SITE') and A.ModuleName = '{1}' and A.PageName = '{2}' 
+        //        and A.LangCode = '{3}' Order By A.SortNumber ASC", strUserCode, strFromModuleName, strModuleURL, strLangCode, strUserType);
+
+        strHQL = string.Format(@"Select HomeModuleName From T_ProModuleLevel Where ModuleName in 
+(Select ModuleName From T_ProModuleLevel Where HomeModuleName = '{0}' and PageName = '{1}' and UserType = '{2}') 
+ and PageName = '{1}' and UserType = '{2}' and LangCode = '{3}';", strFromModuleName, strModuleURL, strUserType, strLangCode);
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProModuleLevel");
         if (ds.Tables[0].Rows.Count > 0)

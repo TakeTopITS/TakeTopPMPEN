@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTNewCustomAdd.aspx.cs" Inherits="TTNewCustomAdd" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTNewCustomAdd.aspx.cs" Inherits="TTNewCustomAdd" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Êñ∞ÂÆ¢Êà∑ÂºÄÂèëÊ®°ÁªÑËÆæÂÆö</title>
+    <title>–¬øÕªßø™∑¢ƒ£◊È…Ë∂®</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script><script type="text/javascript" src="js/allAHandler.js"></script><script type="text/javascript" language="javascript">$(function () {if (top.location != self.location) { } else { CloseWebPage(); }});</script></head>
@@ -45,7 +45,7 @@
                                             <tr style="font-weight: bold; font-size: 11pt">
                                                 <td style="text-align: left" class="formItemBgStyle">
                                                     <span style="font-size: 11pt">
-                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,KeHuMoZu%>"></asp:Label>Ôºö</span>
+                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,KeHuMoZu%>"></asp:Label>£∫</span>
                                                     <asp:DropDownList ID="DL_CustomerModule" runat="server"
                                                         Width="110px" AutoPostBack="true" Height="20px">
                                                         <asp:ListItem Text="<%$ Resources:lang,MuBiaoKeHuMoKuai%>" Value="target"/>
@@ -60,11 +60,11 @@
                                                 </td>
                                                 <td style="text-align: left" class="formItemBgStyle">
                                                     <span style="font-size: 11pt">
-                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>Ôºö</span>
+                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£∫</span>
                                                     <asp:DropDownList ID="DL_WLType" runat="server" DataTextField="Type" DataValueField="Type"
                                                         Width="110px" AutoPostBack="true" OnSelectedIndexChanged="DL_WLType_SelectedIndexChanged">
                                                     </asp:DropDownList>
-                                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,LiuChengMuBan%>"></asp:Label>Ôºö
+                                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,LiuChengMuBan%>"></asp:Label>£∫
                             <asp:DropDownList ID="DL_WFTemplate" runat="server" DataTextField="TemName" DataValueField="IdentifyString"
                                 Width="210px" AutoPostBack="true" Height="20px">
                             </asp:DropDownList>
@@ -72,7 +72,7 @@
                                             </tr>
                                             <tr style="font-weight: bold; font-size: 11pt">
                                                 <td style="text-align: center" class="formItemBgStyle" colspan="2">
-                                                    <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnOK_Click" />&nbsp;&nbsp;<input type="button" value="ËøîÂõû" id="BT_Return" onclick="javascript:history.go(-1)" class="inpu" />
+                                                    <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnOK_Click" />&nbsp;&nbsp;<input type="button" value="∑µªÿ" id="BT_Return" onclick="javascript:history.go(-1)" class="inpu" />
                                                 </td>
                                             </tr>
                                         </table>

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections;
 using System.Data;
 using System.Drawing;
@@ -27,7 +27,7 @@ public partial class TTGoodsShipmentOrderByQrCode : System.Web.UI.Page
         LB_UserName.Text = strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "å‡ºåº“å•", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "³ö¿âµ¥", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -224,7 +224,7 @@ public partial class TTGoodsShipmentOrderByQrCode : System.Web.UI.Page
             {
                 if (ts.Days > 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('åˆ é™¤å¤±è´¥ï¼Œåªèƒ½åˆ é™¤å½“å¤©çš„è®°å½•ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('É¾³ıÊ§°Ü£¬Ö»ÄÜÉ¾³ıµ±ÌìµÄ¼ÇÂ¼£¬Çë¼ì²é£¡')", true);
                     return;
                 }
 
@@ -1127,10 +1127,10 @@ public partial class TTGoodsShipmentOrderByQrCode : System.Web.UI.Page
                 LB_SourceRelatedID.Text = goodsShipmentDetail.RelatedID.ToString();
                 NB_RecordSourceID.Amount = goodsShipmentDetail.SourceID;
 
-                //å–å¾—å‡ºåº“å•æ˜ç»†çš„å…¶å®ƒå±æ€§
+                //È¡µÃ³ö¿âµ¥Ã÷Ï¸µÄÆäËüÊôĞÔ
                 LoadGoodsCheckOutDetailOtherColumn(strID);
 
-                int intCount = GetRelatedWL("ç‰©æ–™å‡ºè´§", "ç‰©æ–™", goodsShipmentDetail.ShipmentNO);
+                int intCount = GetRelatedWL("ÎïÁÏ³ö»õ", "ÎïÁÏ", goodsShipmentDetail.ShipmentNO);
                 if (intCount > 0)
                 {
                     BT_NewMain.Visible = true;
@@ -1171,7 +1171,7 @@ public partial class TTGoodsShipmentOrderByQrCode : System.Web.UI.Page
                 {
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('åˆ é™¤å¤±è´¥ï¼Œåªèƒ½åˆ é™¤å½“å¤©çš„è®°å½•ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('É¾³ıÊ§°Ü£¬Ö»ÄÜÉ¾³ıµ±ÌìµÄ¼ÇÂ¼£¬Çë¼ì²é£¡')", true);
                     return;
                 }
 
@@ -1195,13 +1195,13 @@ public partial class TTGoodsShipmentOrderByQrCode : System.Web.UI.Page
                     goodsShipmentDetailBLL.DeleteGoodsShipmentDetail(goodsShipmentDetail);
                     LB_ID.Text = "";
 
-                    //æ›´æ”¹ç‰©æ–™åº“å­˜åŸä½ç½®æ•°é‡
+                    //¸ü¸ÄÎïÁÏ¿â´æÔ­Î»ÖÃÊıÁ¿
                     ShareClass.UpdateGoodsNumberForDelete(strFromGoodsID, deOldNumber);
 
-                    //æ›´æ”¹å‡ºåº“å•å…³è”ä¸šåŠ¡æ•°æ®çš„æ•°é‡
+                    //¸ü¸Ä³ö¿âµ¥¹ØÁªÒµÎñÊı¾İµÄÊıÁ¿
                     UpdateGoodsRelatedBusinessNumber(strSourceType, strSourceID);
 
-                    //ä¾å•æ®ä¸»ä½“å…³è”ç±»å‹æ›´æ–°é¡¹ç›®ç‰©èµ„é¢„ç®—çš„ç‰©æ–™ä»£ç çš„é¢„ç®—ä½¿ç”¨é‡
+                    //ÒÀµ¥¾İÖ÷Ìå¹ØÁªÀàĞÍ¸üĞÂÏîÄ¿Îï×ÊÔ¤ËãµÄÎïÁÏ´úÂëµÄÔ¤ËãÊ¹ÓÃÁ¿
                     string strRelatedType = DL_RelatedType.SelectedValue.Trim();
                     string strRelatedID = NB_RelatedID.Amount.ToString();
                     if (DL_RelatedType.SelectedValue.Trim() == "Project")
@@ -1231,7 +1231,7 @@ public partial class TTGoodsShipmentOrderByQrCode : System.Web.UI.Page
                             LoadConstractRelatedGoodsList(strConstractCode);
                         }
                     }
-                    //æ›´æ”¹é¡¹ç›®å…³è”ç‰©èµ„ä¸‹å•é‡
+                    //¸ü¸ÄÏîÄ¿¹ØÁªÎï×ÊÏÂµ¥Á¿
                     if (strSourceType == "GoodsPJRecord")
                     {
                         if (DL_RelatedType.SelectedValue.Trim() == "Project")
@@ -1257,7 +1257,7 @@ public partial class TTGoodsShipmentOrderByQrCode : System.Web.UI.Page
     }
 
 
-    //å–å¾—å‡ºåº“å•æ˜ç»†çš„å…¶å®ƒå±æ€§
+    //È¡µÃ³ö¿âµ¥Ã÷Ï¸µÄÆäËüÊôĞÔ
     protected void LoadGoodsCheckOutDetailOtherColumn(string strCIODetailID)
     {
         string strHQL;
@@ -1644,16 +1644,16 @@ public partial class TTGoodsShipmentOrderByQrCode : System.Web.UI.Page
                 goodsShipmentDetailBLL.AddGoodsShipmentDetail(goodsShipmentDetail);
                 LB_ID.Text = ShareClass.GetMyCreatedMaxGoodsShipmentDetailID().ToString();
 
-                //æ›´æ–°å‡ºåº“å•æ˜ç»†çš„å…¶å®ƒå±æ€§
+                //¸üĞÂ³ö¿âµ¥Ã÷Ï¸µÄÆäËüÊôĞÔ
                 UpdateGoodsCheckOutDetailForOtherColumn(LB_ID.Text);
 
-                //æ›´æ–°å¯¹åº”ç‰©æ–™è®°å½•æ•°é‡
+                //¸üĞÂ¶ÔÓ¦ÎïÁÏ¼ÇÂ¼ÊıÁ¿
                 ShareClass.UpdateGoodsNumberForAdd(strFromGoodsID, deNumber);
 
-                //æ›´æ”¹å‡ºåº“å•å…³è”ä¸šåŠ¡çš„æ•°é‡
+                //¸ü¸Ä³ö¿âµ¥¹ØÁªÒµÎñµÄÊıÁ¿
                 UpdateGoodsRelatedBusinessNumber(strSourceType, strSourceID);
 
-                //ä¾å•æ®ä¸»ä½“å…³è”ç±»å‹æ›´æ–°é¡¹ç›®ç‰©èµ„é¢„ç®—çš„ç‰©æ–™ä»£ç çš„é¢„ç®—ä½¿ç”¨é‡
+                //ÒÀµ¥¾İÖ÷Ìå¹ØÁªÀàĞÍ¸üĞÂÏîÄ¿Îï×ÊÔ¤ËãµÄÎïÁÏ´úÂëµÄÔ¤ËãÊ¹ÓÃÁ¿
                 string strRelatedType = DL_RelatedType.SelectedValue.Trim();
                 string strRelatedID = NB_RelatedID.Amount.ToString();
                 if (DL_RelatedType.SelectedValue.Trim() == "Project")
@@ -1816,16 +1816,16 @@ public partial class TTGoodsShipmentOrderByQrCode : System.Web.UI.Page
             {
                 goodsShipmentDetailBLL.UpdateGoodsShipmentDetail(goodsShipmentDetail, intID);
 
-                //æ›´æ–°å‡ºåº“å•æ˜ç»†çš„å…¶å®ƒå±æ€§
+                //¸üĞÂ³ö¿âµ¥Ã÷Ï¸µÄÆäËüÊôĞÔ
                 UpdateGoodsCheckOutDetailForOtherColumn(intID.ToString());
 
-                //æ›´æ”¹ç‰©æ–™åŸä½ç½®åº“å­˜æ•°é‡
+                //¸ü¸ÄÎïÁÏÔ­Î»ÖÃ¿â´æÊıÁ¿
                 ShareClass.UpdateGoodsNumberForUpdate(strFromGoodsID, deNumber, deOldNumber);
 
-                //æ›´æ”¹å‡ºåº“å•å…³è”ä¸šåŠ¡æ•°æ®çš„æ•°é‡
+                //¸ü¸Ä³ö¿âµ¥¹ØÁªÒµÎñÊı¾İµÄÊıÁ¿
                 UpdateGoodsRelatedBusinessNumber(strSourceType, strSourceID);
 
-                //ä¾å•æ®ä¸»ä½“å…³è”ç±»å‹æ›´æ–°é¡¹ç›®ç‰©èµ„é¢„ç®—çš„ç‰©æ–™ä»£ç çš„é¢„ç®—ä½¿ç”¨é‡
+                //ÒÀµ¥¾İÖ÷Ìå¹ØÁªÀàĞÍ¸üĞÂÏîÄ¿Îï×ÊÔ¤ËãµÄÎïÁÏ´úÂëµÄÔ¤ËãÊ¹ÓÃÁ¿
                 string strRelatedType = DL_RelatedType.SelectedValue.Trim();
                 string strRelatedID = NB_RelatedID.Amount.ToString();
                 if (DL_RelatedType.SelectedValue.Trim() == "Project")
@@ -1871,7 +1871,7 @@ public partial class TTGoodsShipmentOrderByQrCode : System.Web.UI.Page
         }
     }
 
-    //æ›´æ–°å‡ºåº“å•æ˜ç»†çš„å…¶å®ƒå±æ€§
+    //¸üĞÂ³ö¿âµ¥Ã÷Ï¸µÄÆäËüÊôĞÔ
     protected void UpdateGoodsCheckOutDetailForOtherColumn(string strCOODetailID)
     {
         string strHQL;
@@ -2880,7 +2880,7 @@ public partial class TTGoodsShipmentOrderByQrCode : System.Web.UI.Page
                                     ShareClass.RunSqlCommand(strHQL4);
 
 
-                                    ////æ’å…¥åº”æ”¶åº”ä»˜æ•°æ®åˆ°åº”æ”¶åº”ä»˜è¡¨
+                                    ////²åÈëÓ¦ÊÕÓ¦¸¶Êı¾İµ½Ó¦ÊÕÓ¦¸¶±í
                                     //ShareClass.InsertReceivablesOrPayable("GoodsSHO", "GoodsAO", strSAID, strID, deAANumber * deGoodsSalePrice, strCurrencyType, "", strUserCode);
 
                                     strHQL4 = "Update T_Goods Set Number = " + (deEveryGoodsNumber - deAANumber).ToString() + " From T_Goods  ";
@@ -2904,7 +2904,7 @@ public partial class TTGoodsShipmentOrderByQrCode : System.Web.UI.Page
                                     ShareClass.RunSqlCommand(strHQL4);
 
 
-                                    ////æ’å…¥åº”æ”¶åº”ä»˜æ•°æ®åˆ°åº”æ”¶åº”ä»˜è¡¨
+                                    ////²åÈëÓ¦ÊÕÓ¦¸¶Êı¾İµ½Ó¦ÊÕÓ¦¸¶±í
                                     //ShareClass.InsertReceivablesOrPayable("GoodsSHO", "GoodsAO", strSAID, strID, deEveryGoodsNumber * deGoodsSalePrice, strCurrencyType, "", strUserCode);
 
                                     strHQL4 = "Update T_Goods Set Number = 0 " + " From T_Goods  ";
@@ -3037,7 +3037,7 @@ public partial class TTGoodsShipmentOrderByQrCode : System.Web.UI.Page
                                     ShareClass.RunSqlCommand(strHQL4);
 
 
-                                    ////æ’å…¥åº”æ”¶åº”ä»˜æ•°æ®åˆ°åº”æ”¶åº”ä»˜è¡¨
+                                    ////²åÈëÓ¦ÊÕÓ¦¸¶Êı¾İµ½Ó¦ÊÕÓ¦¸¶±í
                                     //ShareClass.InsertReceivablesOrPayable("GoodsSHO", "GoodsSO", strSOID, strID, deSaleNumber * deGoodsSalePrice, strCurrencyType, "", strUserCode);
 
                                     strHQL4 = "Update T_Goods Set Number = " + (deEveryGoodsNumber - deSaleNumber).ToString() + " From T_Goods  ";
@@ -3061,7 +3061,7 @@ public partial class TTGoodsShipmentOrderByQrCode : System.Web.UI.Page
                                     ShareClass.RunSqlCommand(strHQL4);
 
 
-                                    ////æ’å…¥åº”æ”¶åº”ä»˜æ•°æ®åˆ°åº”æ”¶åº”ä»˜è¡¨
+                                    ////²åÈëÓ¦ÊÕÓ¦¸¶Êı¾İµ½Ó¦ÊÕÓ¦¸¶±í
                                     //ShareClass.InsertReceivablesOrPayable("GoodsSHO", "GoodsSO", strSOID, strID, deEveryGoodsNumber * deGoodsSalePrice, strCurrencyType, "", strUserCode);
 
                                     strHQL4 = "Update T_Goods Set Number = 0 " + " From T_Goods  ";
@@ -3195,7 +3195,7 @@ public partial class TTGoodsShipmentOrderByQrCode : System.Web.UI.Page
                                     strHQL4 = "Update T_GoodsApplicationDetail Set CheckOutNumber = CheckOutNumber + " + deAANumber.ToString() + " Where ID = " + strID;
                                     ShareClass.RunSqlCommand(strHQL4);
 
-                                    ////æ’å…¥åº”æ”¶åº”ä»˜æ•°æ®åˆ°åº”æ”¶åº”ä»˜è¡¨
+                                    ////²åÈëÓ¦ÊÕÓ¦¸¶Êı¾İµ½Ó¦ÊÕÓ¦¸¶±í
                                     //ShareClass.InsertReceivablesOrPayable("GoodsSHO", "GoodsAO", strPAID, strID, deAANumber * deGoodsSalePrice, strCurrencyType, "", strUserCode);
 
                                     strHQL4 = "Update T_Goods Set Number = " + (deEveryGoodsNumber - deAANumber).ToString() + " From T_Goods  ";
@@ -3219,7 +3219,7 @@ public partial class TTGoodsShipmentOrderByQrCode : System.Web.UI.Page
                                     ShareClass.RunSqlCommand(strHQL4);
 
 
-                                    ////æ’å…¥åº”æ”¶åº”ä»˜æ•°æ®åˆ°åº”æ”¶åº”ä»˜è¡¨
+                                    ////²åÈëÓ¦ÊÕÓ¦¸¶Êı¾İµ½Ó¦ÊÕÓ¦¸¶±í
                                     //ShareClass.InsertReceivablesOrPayable("GoodsSHO", "GoodsAO", strPAID, strID, deEveryGoodsNumber * deGoodsSalePrice, strCurrencyType, "", strUserCode);
 
                                     strHQL4 = "Update T_Goods Set Number = 0 " + " From T_Goods  ";
@@ -3258,7 +3258,7 @@ public partial class TTGoodsShipmentOrderByQrCode : System.Web.UI.Page
     }
 
 
-    //æ›´æ”¹å‡ºåº“å•å…³è”ä¸šåŠ¡æ•°æ®çš„æ•°é‡
+    //¸ü¸Ä³ö¿âµ¥¹ØÁªÒµÎñÊı¾İµÄÊıÁ¿
     protected void UpdateGoodsRelatedBusinessNumber(string strSourceType, string strSourceID)
     {
         string strHQL;
@@ -3388,7 +3388,7 @@ public partial class TTGoodsShipmentOrderByQrCode : System.Web.UI.Page
             ShareClass.RunSqlCommand(strHQL);
         }
 
-        //æ›´æ”¹é¡¹ç›®å…³è”ç‰©èµ„ä¸‹å•é‡
+        //¸ü¸ÄÏîÄ¿¹ØÁªÎï×ÊÏÂµ¥Á¿
         if (strSourceType == "GoodsPJRecord")
         {
             strHQL = "Select COALESCE(Sum(Number),0) From T_GoodsShipmentDetail Where SourceType = 'GoodsPJRecord' And SourceID=" + strSourceID;
@@ -3808,7 +3808,7 @@ public partial class TTGoodsShipmentOrderByQrCode : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Constract as constract where  constract.Status not in ('å½’æ¡£','åˆ é™¤') ";
+        strHQL = "from Constract as constract where  constract.Status not in ('Archived','Deleted') ";
         strHQL += " and (constract.RecorderCode = " + "'" + strUserCode + "'" + " Or constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + "))";
         strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
 

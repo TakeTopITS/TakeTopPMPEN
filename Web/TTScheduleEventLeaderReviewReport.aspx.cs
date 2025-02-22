@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -39,7 +39,7 @@ public partial class TTScheduleEventLeaderReviewReport : System.Web.UI.Page
                 LB_ScheduleID.Text = strScheduleID;
                 LB_ScheduleName.Text = strScheduleName;
 
-                //this.Title = "æ—¥ç¨‹ï¼š" + strScheduleID + " " + strScheduleName + " çš„è¯„å®¡æ„è§";
+                //this.Title = "ÈÕ³Ì£º" + strScheduleID + " " + strScheduleName + " µÄÆÀÉóÒâ¼û";
 
                 LoadReviewList(strScheduleID);
             }

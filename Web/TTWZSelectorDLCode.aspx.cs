@@ -1,4 +1,4 @@
-锘縰sing ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using System; using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
@@ -50,10 +50,10 @@ public partial class TTWZSelectorDLCode : System.Web.UI.Page
 
                     Button btShowCollect = (Button)e.Item.FindControl("BT_ShowCollect");
                     string strShowText = btShowCollect.Text;
-                    if (strShowText == "灞曞紑")
+                    if (strShowText == "展开")
                     {
                         DG_List.Visible = true;
-                        //缁戝畾涓被
+                        //绑定中类
                         string strZLSQL = string.Format(@"select * from T_WZMaterialZL
                                     where DLCode = '{0}'", cmdArges);
 
@@ -64,14 +64,14 @@ public partial class TTWZSelectorDLCode : System.Web.UI.Page
                         dgZL.DataSource = dtZL;
                         dgZL.DataBind();
 
-                        //鏀瑰彉鎸夐挳鏂囨湰
-                        btShowCollect.Text = "鏀剁缉";
+                        //改变按钮文本
+                        btShowCollect.Text = "收缩";
                     }
                     else {
                         DG_List.Visible = false;
 
-                        //鏀瑰彉鎸夐挳鏂囨湰
-                        btShowCollect.Text = "灞曞紑";
+                        //改变按钮文本
+                        btShowCollect.Text = "展开";
                     }
                     
                 }

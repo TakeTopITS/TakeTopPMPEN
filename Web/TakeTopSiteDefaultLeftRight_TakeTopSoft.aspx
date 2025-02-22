@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteDefaultLeftRight_TakeTopSoft.aspx.cs" Inherits="TakeTopSiteDefaultLeftRight_TakeTopSoft" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteDefaultLeftRight_TakeTopSoft.aspx.cs" Inherits="TakeTopSiteDefaultLeftRight_TakeTopSoft" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>é¡¹ç›®ç®¡ç†è½¯ä»¶ä¸å’¨è¯¢æœåŠ¡æä¾›å•†-æ³°é¡¶æ‹“é¼</title>
+    <title>ÏîÄ¿¹ÜÀíÈí¼şÓë×ÉÑ¯·şÎñÌá¹©ÉÌ-Ì©¶¥ÍØ¶¦</title>
 
      <script src="js/jquery.min.js" type="text/javascript"></script>
     <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
@@ -20,7 +20,7 @@
         })();
 
 
-        //å–å¾—é“¾æ¥ä¼ å…¥å‚æ•°çš„å€¼
+        //È¡µÃÁ´½Ó´«Èë²ÎÊıµÄÖµ
         function getUrlParam(name) {
             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
             var r = window.location.search.substr(1).match(reg);
@@ -47,12 +47,12 @@
         }
 
 
-        //è®¾ç½®ä¸»é¡µçš„SRC
+        //ÉèÖÃÖ÷Ò³µÄSRC
         function setHomePageSrc() {
 
             var pageUrl = window.location.href;
 
-            //ä¸æ˜¯åœ¨ç½‘ç«™åº”ç”¨å¯åŠ¨çš„ç½‘ç«™ï¼Œè·³è½¬åˆ°ç½‘ç«™é¡µé¢
+            //²»ÊÇÔÚÍøÕ¾Ó¦ÓÃÆô¶¯µÄÍøÕ¾£¬Ìø×ªµ½ÍøÕ¾Ò³Ãæ
             if (pageUrl.indexOf("TDSite") < 0 && (pageUrl.toLowerCase().indexOf("taketopits.com") >= 0 || pageUrl.toLowerCase().indexOf("taketopsoft.com") >= 0)) {
 
                 redirectHomePage();
@@ -69,21 +69,21 @@
             else if (TargetProduct === "ERP") {
 
                 this.document.getElementById("TakeTopSiteTop").src = "TakeTopSiteTop.aspx?TargetProduct=ERP";
-                this.document.getElementById("SiteLeftFrameID").src = "https://www.taketopits.com/TDSite/TakeTopSiteLeft.aspx?ModuleName=ERPå¹³å°&HomeModuleName=é¡¹ç›®å‹ERP";
-                this.document.getElementById("SiteRightContainerFrameID").src = "https://www.taketopits.com/TDSite/TakeTopSiteContainer.aspx?ModuleName=ERPå¹³å°&HomeModuleName=é¡¹ç›®å‹ERP";
+                this.document.getElementById("SiteLeftFrameID").src = "https://www.taketopits.com/TDSite/TakeTopSiteLeft.aspx?ModuleName=ERPÆ½Ì¨&HomeModuleName=ÏîÄ¿ĞÍERP";
+                this.document.getElementById("SiteRightContainerFrameID").src = "https://www.taketopits.com/TDSite/TakeTopSiteContainer.aspx?ModuleName=ERPÆ½Ì¨&HomeModuleName=ÏîÄ¿ĞÍERP";
 
             }
             else if (TargetProduct === "PMP") {
 
                 this.document.getElementById("TakeTopSiteTop").src = "TakeTopSiteTop.aspx?TargetProduct=PMP";
-                this.document.getElementById("SiteLeftFrameID").src = "https://www.taketopits.com/TDSite/TakeTopSiteLeft.aspx?ModuleName=é¡¹ç›®å¹³å°PMP&HomeModuleName=é¡¹ç›®ç®¡ç†å¹³å°";
-                this.document.getElementById("SiteRightContainerFrameID").src = "https://www.taketopits.com/TDSite/TakeTopSiteContainer.aspx?ModuleName=é¡¹ç›®å¹³å°PMP&HomeModuleName=é¡¹ç›®ç®¡ç†å¹³å°";
+                this.document.getElementById("SiteLeftFrameID").src = "https://www.taketopits.com/TDSite/TakeTopSiteLeft.aspx?ModuleName=ÏîÄ¿Æ½Ì¨PMP&HomeModuleName=ÏîÄ¿¹ÜÀíÆ½Ì¨";
+                this.document.getElementById("SiteRightContainerFrameID").src = "https://www.taketopits.com/TDSite/TakeTopSiteContainer.aspx?ModuleName=ÏîÄ¿Æ½Ì¨PMP&HomeModuleName=ÏîÄ¿¹ÜÀíÆ½Ì¨";
 
             }
             else {
 
                 this.document.getElementById("TakeTopSiteTop").src = "TakeTopSiteTop.aspx";
-                this.document.getElementById("SiteRightContainerFrameID").src = "Logo/WebSite/indexHomePage.html?ModuleName=ä¸»é¡µ&HomeModuleName=ä¸»é¡µ";
+                this.document.getElementById("SiteRightContainerFrameID").src = "Logo/WebSite/indexHomePage.html?ModuleName=Ö÷Ò³&HomeModuleName=Ö÷Ò³";
             }
         }
 
@@ -101,7 +101,7 @@
 </frameset>
 
 <noframes>
-    <body>ä½ çš„æµè§ˆå™¨ä¸æ”¯æŒæ¡†æ¶ï¼</body>
+    <body>ÄãµÄä¯ÀÀÆ÷²»Ö§³Ö¿ò¼Ü£¡</body>
 </noframes>
 <script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
 </html>

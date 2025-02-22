@@ -1,4 +1,4 @@
-Ôªøusing System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -37,7 +37,7 @@ public partial class TTCollaborationDetailList : System.Web.UI.Page
 
         strCreatorCode = collaboration.CreatorCode.Trim();
 
-        //this.Title = "Âçè‰ΩúÔºö" + strCoID + " " + collaboration.CollaborationName.Trim() + " Â§ÑÁêÜ";
+        //this.Title = "–≠◊˜£∫" + strCoID + " " + collaboration.CollaborationName.Trim() + " ¥¶¿Ì";
 
         Timer1.Interval = 3000;
 
@@ -79,8 +79,8 @@ public partial class TTCollaborationDetailList : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Document as document where document.RelatedType = 'Âçè‰Ωú' and document.RelatedID = " + strCoID;
-        strHQL += " and rtrim(ltrim(document.Status)) <> 'Âà†Èô§' Order by document.DocID DESC";
+        strHQL = "from Document as document where document.RelatedType = '–≠◊˜' and document.RelatedID = " + strCoID;
+        strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);
 

@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopLRExLeft.aspx.cs" Inherits="TakeTopLRExLeft" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopLRExLeft.aspx.cs" Inherits="TakeTopLRExLeft" %>
 
 <%@ OutputCache Duration="2678400" VaryByParam="*" %>
 
@@ -18,7 +18,7 @@
 
         var varLeftBarExtend = '<%=Session["LeftBarExtend"].ToString() %>'.trim();
 
-        // Êî∂Áº©Â±ïÂºÄÊïàÊûú
+        //  ’Àı’πø™–ßπ˚
         jQuery(document).ready(function () {
 
             jQuery("span.minusSpan").show();
@@ -106,7 +106,7 @@
 
         }
 
-        //ËÆæÁΩÆÂ∑¶ËæπÊ†èÂÖÉÁ¥†ÁöÑÂÄº
+        //…Ë÷√◊Û±ﬂ¿∏‘™Àÿµƒ÷µ
         function setExtendValue(extendStatus) {
 
             this.document.getElementById("HF_IsExtend").value = extendStatus;
@@ -270,7 +270,7 @@
 
         function opdg(id, htmlText) {
 
-            var dg = new J.dialog({ id: id, title: '‰ø°ÊÅØÊèêÁ§∫', width: 250, height: 300, cancelBtn: false, html: htmlText, autoPos: false, fixed: false, left: 'right', top: 'bottom' });
+            var dg = new J.dialog({ id: id, title: '–≈œ¢Ã· æ', width: 250, height: 300, cancelBtn: false, html: htmlText, autoPos: false, fixed: false, left: 'right', top: 'bottom' });
 
             dg.ShowDialog();
         }
@@ -337,7 +337,7 @@
                                     <table width="100%" border="0" cellspacing="0" cellpadding="0" align="left">
                                         <tr style="height: 37px;">
                                             <td align="center" width="20">
-                                                <a href="javascript:ChangeMenu(1)">‚óè
+                                                <a href="javascript:ChangeMenu(1)">°Ò
                                                 </a>
                                             </td>
                                             <td class="title12" style="padding-left: 10px;">
@@ -358,9 +358,9 @@
 
                     <div id="box">
                         <%--<img src="Images/color.gif" id="square_one" style="cursor: pointer" />--%>
-                        <!-- Êî∂Áº©Â±ïÂºÄÊïàÊûústart -->
+                        <!--  ’Àı’πø™–ßπ˚start -->
                         <asp:Literal ID="LT_Result" runat="server"></asp:Literal>
-                        <!-- Êî∂Áº©Â±ïÂºÄÊïàÊûúend -->
+                        <!--  ’Àı’πø™–ßπ˚end -->
                     </div>
                     <script type="text/javascript" src="js/jquery.js"></script>
                     <script type="text/javascript" src="js/jquery.colorpicker.js"></script>
@@ -405,7 +405,7 @@
                                                         <a class="titleSpan" href="javascript:CreateTabModule('TakeTopIM','TTTakeTopIM.aspx',this)">
                                                             <img src="ImagesSkin/IM.png" width="20" height="20"></a>
                                                         <%--
-                                                        <asp:LinkButton ID="BT_MakeIM" runat="server" ToolTip='Âç≥Êó∂ÈÄö' OnClick="BT_MakeIM_Click"> <img src="Images/im.png" width="20" height="20"></asp:LinkButton>--%>
+                                                        <asp:LinkButton ID="BT_MakeIM" runat="server" ToolTip='º¥ ±Õ®' OnClick="BT_MakeIM_Click"> <img src="Images/im.png" width="20" height="20"></asp:LinkButton>--%>
                                                     </td>
 
                                                     <td id="ID_SMSSend" runat="server" height="45">

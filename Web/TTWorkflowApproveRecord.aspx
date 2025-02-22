@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkflowApproveRecord.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWorkflowApproveRecord.aspx.cs"
     Inherits="TTWorkflowApproveRecord" %>
 
 <!DOCTYPE html>
@@ -70,7 +70,7 @@
                             <tr>
                                 <td width="" align="right">
                                     <a href="#" onclick="preview1()">
-                                        <img src="ImagesSkin/print.gif" alt="ÊâìÂç∞" border="0" />
+                                        <img src="ImagesSkin/print.gif" alt="¥Ú”°" border="0" />
                                     </a>
                                 </td>
                             </tr>
@@ -115,7 +115,7 @@
                                                     </td>
                                                 </tr>
                                              <%--   <tr>
-                                                    <td colspan="4" style="text-overflow: ellipsis; word-break: keep-all; overflow: hidden;"><a href='<%# DataBinder.Eval(Container.DataItem,"XMLFile") %> '>‰∏ªË°®Êï∞ÊçÆ</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href='<%# DataBinder.Eval(Container.DataItem,"DetailXMLFile") %> '>ÊòéÁªÜË°®Êï∞ÊçÆ</a>
+                                                    <td colspan="4" style="text-overflow: ellipsis; word-break: keep-all; overflow: hidden;"><a href='<%# DataBinder.Eval(Container.DataItem,"XMLFile") %> '>÷˜±Ì ˝æ›</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href='<%# DataBinder.Eval(Container.DataItem,"DetailXMLFile") %> '>√˜œ∏±Ì ˝æ›</a>
                                                     </td>
                                                 </tr>--%>
                                             </table>

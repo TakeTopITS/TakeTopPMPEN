@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration.Internal;
@@ -18,7 +18,7 @@ using System.IO;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 
-///ç¬¬ä¸‰æ–¹dll
+///µÚÈı·½dll
 using ICSharpCode.SharpZipLib;
 using ICSharpCode.SharpZipLib.Checksum;
 using ICSharpCode.SharpZipLib.Zip;
@@ -34,7 +34,7 @@ public partial class TakeTopSoftRent_SendSiteBackupDocAuto : System.Web.UI.Page
         strSiteName = Request.QueryString["SiteName"];
         strSiteAppName = Request.QueryString["SiteAppName"];
 
-        LB_Message.Text = "æ­£åœ¨å¤‡ä»½ä½ çš„ç«™ç‚¹æ–‡ä»¶ï¼Œå¤§æ¦‚éœ€è¦5åˆ†é’Ÿï¼Œè¯·è€å¿ƒç­‰å€™......";
+        LB_Message.Text = "ÕıÔÚ±¸·İÄãµÄÕ¾µãÎÄ¼ş£¬´ó¸ÅĞèÒª5·ÖÖÓ£¬ÇëÄÍĞÄµÈºò......";
 
         if (Page.IsPostBack == false)
         {
@@ -42,18 +42,18 @@ public partial class TakeTopSoftRent_SendSiteBackupDocAuto : System.Web.UI.Page
             {
                 try
                 {
-                    //å‘é€ç«™ç‚¹å¤‡ä»½æ–‡ä»¶
+                    //·¢ËÍÕ¾µã±¸·İÎÄ¼ş
                     SendSiteBackupDoc();
-                    LB_Message.Text = "ç«™ç‚¹å¤‡ä»½æ–‡ä»¶å‘é€æˆåŠŸï¼";
+                    LB_Message.Text = "Õ¾µã±¸·İÎÄ¼ş·¢ËÍ³É¹¦£¡";
                 }
                 catch
                 {
-                    LB_Message.Text = "æç¤ºï¼Œå‘é€å¤±è´¥ï¼Œè¯·æ£€æŸ¥ï¼";
+                    LB_Message.Text = "ÌáÊ¾£¬·¢ËÍÊ§°Ü£¬Çë¼ì²é£¡";
                 }
             }
             else
             {
-                LB_Message.Text = "æç¤ºï¼Œæ­¤ç«™ç‚¹ä¸å­˜åœ¨ï¼Œè¯·æ£€æŸ¥ï¼";
+                LB_Message.Text = "ÌáÊ¾£¬´ËÕ¾µã²»´æÔÚ£¬Çë¼ì²é£¡";
             }
         }
 
@@ -61,7 +61,7 @@ public partial class TakeTopSoftRent_SendSiteBackupDocAuto : System.Web.UI.Page
         ClientScript.RegisterStartupScript(this.GetType(), "", "<script>displayRelatedUI();</script>");
     }
 
-    //å‘é€ç«™ç‚¹å¤‡ä»½æ–‡ä»¶
+    //·¢ËÍÕ¾µã±¸·İÎÄ¼ş
     protected void SendSiteBackupDoc()
     {
         string strSiteName, strSiteAppName, strSiteDirectory, strSiteVirtualDirectoryPhysicalPath, strSiteTemplateDirectory, strDBLoginUserID, strDBUserLoginPassword, strSiteDBName, strSiteAppSystemName, strSiteAppURL, strRentProductName, strRentUserEMail, strServerType;
@@ -85,7 +85,7 @@ public partial class TakeTopSoftRent_SendSiteBackupDocAuto : System.Web.UI.Page
         strSiteDBName = strSiteDBName.ToLower();
 
 
-        ////é…ç½®POSTGRESQLæ•°æ®åº“çš„ç¯å¢ƒå˜é‡
+        ////ÅäÖÃPOSTGRESQLÊı¾İ¿âµÄ»·¾³±äÁ¿
         //try
         //{
         //    ShareClass.ConfigPostgreSqlPGPassFile(strSiteDBName);
@@ -95,10 +95,10 @@ public partial class TakeTopSoftRent_SendSiteBackupDocAuto : System.Web.UI.Page
         //    LogClass.WriteLogFile("Error page: " + err.Message.ToString() + "\n" + err.StackTrace);
         //}
 
-        //å¤‡ä»½æ•°æ®åº“
+        //±¸·İÊı¾İ¿â
         ShareClass.BackupOEMSiteDB(strSiteDBName, strSiteVirtualDirectoryPhysicalPath + "\\BackupDB","SiteCreator");
 
-        //å‹ç¼©å¹¶ç”Ÿæˆå¤‡ä»½æ–‡ä»¶
+        //Ñ¹Ëõ²¢Éú³É±¸·İÎÄ¼ş
         string strZipDocName = Request.QueryString["ZipDocName"];
         string strDocBackupPath = strSiteDirectory + @"\BackupDoc";
         string strZipDocPath = strDocBackupPath + @"\" + strZipDocName;
@@ -107,7 +107,7 @@ public partial class TakeTopSoftRent_SendSiteBackupDocAuto : System.Web.UI.Page
         ZipFile(strSiteVirtualDirectoryPhysicalPath, strZipDocPath);
     }
 
-    //ç›´æ¥åˆ é™¤æŒ‡å®šç›®å½•ä¸‹çš„æ‰€æœ‰æ–‡ä»¶åŠæ–‡ä»¶å¤¹
+    //Ö±½ÓÉ¾³ıÖ¸¶¨Ä¿Â¼ÏÂµÄËùÓĞÎÄ¼ş¼°ÎÄ¼ş¼Ğ
     public void DeleteDirectory(string strDirectory)
     {
         try
@@ -116,17 +116,17 @@ public partial class TakeTopSoftRent_SendSiteBackupDocAuto : System.Web.UI.Page
             strSiteDBName = Request.QueryString["SiteDBName"];
             strSiteVirtualDirectoryPhysicalPath = Request.QueryString["SiteVirtualDirectoryPhysicalPath"];
 
-            ////å¤‡ä»½æ•°æ®åº“
+            ////±¸·İÊı¾İ¿â
             //ShareClass.BackupOEMSiteDB(strSiteDBName, strSiteVirtualDirectoryPhysicalPath + "\\BackupDB");
 
-            //å»é™¤æ–‡ä»¶å¤¹å’Œå­æ–‡ä»¶çš„åªè¯»å±æ€§
+            //È¥³ıÎÄ¼ş¼ĞºÍ×ÓÎÄ¼şµÄÖ»¶ÁÊôĞÔ
             System.IO.DirectoryInfo fileInfo = new DirectoryInfo(strDirectory);
             fileInfo.Attributes = FileAttributes.Normal & FileAttributes.Directory;
 
-            //å»é™¤æ–‡ä»¶çš„åªè¯»å±æ€§
+            //È¥³ıÎÄ¼şµÄÖ»¶ÁÊôĞÔ
             System.IO.File.SetAttributes(strDirectory, System.IO.FileAttributes.Normal);
 
-            //åˆ¤æ–­æ–‡ä»¶å¤¹æ˜¯å¦è¿˜å­˜åœ¨
+            //ÅĞ¶ÏÎÄ¼ş¼ĞÊÇ·ñ»¹´æÔÚ
             if (Directory.Exists(strDirectory))
             {
                 foreach (string f in Directory.GetFileSystemEntries(strDirectory))
@@ -135,7 +135,7 @@ public partial class TakeTopSoftRent_SendSiteBackupDocAuto : System.Web.UI.Page
                     {
                         try
                         {
-                            //å¦‚æœæœ‰å­æ–‡ä»¶åˆ é™¤æ–‡ä»¶
+                            //Èç¹ûÓĞ×ÓÎÄ¼şÉ¾³ıÎÄ¼ş
                             File.Delete(f);
                         }
                         catch
@@ -148,7 +148,7 @@ public partial class TakeTopSoftRent_SendSiteBackupDocAuto : System.Web.UI.Page
                         {
                             if (!f.Contains("Logo"))
                             {
-                                //å¾ªç¯é€’å½’åˆ é™¤å­æ–‡ä»¶å¤¹
+                                //Ñ­»·µİ¹éÉ¾³ı×ÓÎÄ¼ş¼Ğ
                                 DeleteDirectory(f);
                             }
                         }
@@ -158,11 +158,11 @@ public partial class TakeTopSoftRent_SendSiteBackupDocAuto : System.Web.UI.Page
                     }
                 }
 
-                //åˆ é™¤ç©ºæ–‡ä»¶å¤¹
+                //É¾³ı¿ÕÎÄ¼ş¼Ğ
                 Directory.Delete(strDirectory);
             }
         }
-        catch (Exception ex) // å¼‚å¸¸å¤„ç†
+        catch (Exception ex) // Òì³£´¦Àí
         {
         }
     }
@@ -171,7 +171,7 @@ public partial class TakeTopSoftRent_SendSiteBackupDocAuto : System.Web.UI.Page
     protected static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
     /// <summary>
-    /// åŠ å¯†å‹ç¼©åŒ…çš„æ–¹æ³•
+    /// ¼ÓÃÜÑ¹Ëõ°üµÄ·½·¨
     /// </summary>
     /// <param name="strFile"></param>
     /// <param name="strZip"></param>
@@ -183,7 +183,7 @@ public partial class TakeTopSoftRent_SendSiteBackupDocAuto : System.Web.UI.Page
         ZipOutputStream s = new ZipOutputStream(File.Create(strZip));
         if (sPassWord != "")
         {
-            s.Password = sPassWord; //Zipå‹ç¼©æ–‡ä»¶å¯†ç 
+            s.Password = sPassWord; //ZipÑ¹ËõÎÄ¼şÃÜÂë
         }
         s.SetLevel(6);
         zip(strFile, s, strFile);
@@ -191,7 +191,7 @@ public partial class TakeTopSoftRent_SendSiteBackupDocAuto : System.Web.UI.Page
         s.Close();
     }
     /// <summary>
-    /// å‹ç¼©æ–‡ä»¶å¤¹
+    /// Ñ¹ËõÎÄ¼ş¼Ğ
     /// </summary>
     /// <param name="strFile"></param>
     /// <param name="strZip"></param>
@@ -219,9 +219,9 @@ public partial class TakeTopSoftRent_SendSiteBackupDocAuto : System.Web.UI.Page
                 zip(file, s, staticFile);
             }
 
-            else // å¦åˆ™ç›´æ¥å‹ç¼©æ–‡ä»¶
+            else // ·ñÔòÖ±½ÓÑ¹ËõÎÄ¼ş
             {
-                //æ‰“å¼€å‹ç¼©æ–‡ä»¶
+                //´ò¿ªÑ¹ËõÎÄ¼ş
                 FileStream fs = File.OpenRead(file);
 
                 byte[] buffer = new byte[fs.Length];
@@ -242,7 +242,7 @@ public partial class TakeTopSoftRent_SendSiteBackupDocAuto : System.Web.UI.Page
         }
     }
 
-    //åˆ¤æ–­ç«™ç‚¹åº”ç”¨æ˜¯å¦å­˜åœ¨
+    //ÅĞ¶ÏÕ¾µãÓ¦ÓÃÊÇ·ñ´æÔÚ
     public bool VerifyWebSiteAppIsExist(string siteName, string siteAppName)
     {
         using (ServerManager mgr = new ServerManager())

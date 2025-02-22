@@ -1,11 +1,11 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsTypeSet.aspx.cs" Inherits="TTGoodsTypeSet" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGoodsTypeSet.aspx.cs" Inherits="TTGoodsTypeSet" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ä¼šè®¡ç§‘ç›®è®¾ç½®</title>
+    <title>»á¼Æ¿ÆÄ¿ÉèÖÃ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         .style1 {
@@ -56,7 +56,7 @@
                                 <table style="width: 98%; margin-top:5px">
                                     <tr>
                                         <td valign="top" align="left" style="width: 25%; text-align: left; padding: 5px 5px 0px 5px; border-right: solid 1px #D8D8D8; vertical-align: top;">
-                                            <asp:TreeView ID="TreeView1" runat="server" Font-Bold="False" Font-Names="å®‹ä½“" Font-Size="10pt" NodeWrap="True" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged" ShowLines="True" Width="100%">
+                                            <asp:TreeView ID="TreeView1" runat="server" Font-Bold="False" Font-Names="ËÎÌå" Font-Size="10pt" NodeWrap="True" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged" ShowLines="True" Width="100%">
                                                 <RootNodeStyle CssClass="rootNode" /><NodeStyle CssClass="treeNode" /><LeafNodeStyle CssClass="leafNode" /><SelectedNodeStyle CssClass="selectNode" ForeColor ="Red" />
                                             </asp:TreeView>
                                         </td>
@@ -64,22 +64,22 @@
                                             <table style="width:99%">
                                                 <tr>
                                                     <td align="left">
-                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FuLei%>"></asp:Label>ï¼š<asp:TextBox ID="TB_GoodsParentType" runat="server" CssClass="shuru" Width="200px"></asp:TextBox>
+                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,FuLei%>"></asp:Label>£º<asp:TextBox ID="TB_GoodsParentType" runat="server" CssClass="shuru" Width="200px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td align="left">
-                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>ï¼š<asp:TextBox ID="TB_GoodsTypeName" runat="server" Width="200px" CssClass="shuru"></asp:TextBox>
+                                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,LeiXing%>"></asp:Label>£º<asp:TextBox ID="TB_GoodsTypeName" runat="server" Width="200px" CssClass="shuru"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td align="left">
-                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,TeZhengMa%>"></asp:Label>ï¼š<asp:TextBox ID="TB_GoodsTypeChar" runat="server" Width="200px" CssClass="shuru"></asp:TextBox>
+                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,TeZhengMa%>"></asp:Label>£º<asp:TextBox ID="TB_GoodsTypeChar" runat="server" Width="200px" CssClass="shuru"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td align="left">
-                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,PaiXu%>"></asp:Label>ï¼š<asp:TextBox ID="TB_SortNumber" runat="server" Width="200px" CssClass="shuru"></asp:TextBox>
+                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,PaiXu%>"></asp:Label>£º<asp:TextBox ID="TB_SortNumber" runat="server" Width="200px" CssClass="shuru"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                                 <tr>

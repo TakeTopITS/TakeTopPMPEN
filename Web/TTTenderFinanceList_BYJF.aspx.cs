@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -30,7 +30,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
         strUserName = ShareClass.GetUserName(strUserCode);
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "æŠ•æ ‡ç¡®è®¤", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "Í¶±êÈ·ÈÏ", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -149,7 +149,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
 
                 BT_UpdateAA.Enabled = true;
 
-                if (tender_HYYQ.Progress == "å®Œæˆ")
+                if (tender_HYYQ.Progress == "Completed")
                 {
                     BT_CreateExense.Visible = false;
                     BT_Createinvoice.Visible = false;
@@ -177,10 +177,10 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
                     BT_Complete.Enabled = true;
                 }
 
-                //åŠ è½½å‘ç¥¨åˆ—è¡¨
+                //¼ÓÔØ·¢Æ±ÁĞ±í
                 LoadTenderInvoiceInfo(tender_HYYQ.id.ToString());
 
-                //åŠ è½½è´¹ç”¨åˆ—è¡¨
+                //¼ÓÔØ·ÑÓÃÁĞ±í
                 loadTenderExpense(tender_HYYQ.id.ToString());
 
                 if (e.CommandName == "Update")
@@ -190,7 +190,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
 
                 if (e.CommandName == "Assign")
                 {
-                    LoadRelatedWL("æŠ•æ ‡ç®¡ç†", "æŠ•æ ‡", int.Parse(strID));
+                    LoadRelatedWL("BidManagement", "Í¶±ê", int.Parse(strID));
 
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popAssignWindow','true') ", true);
                 }
@@ -257,7 +257,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('è­¦å‘Šï¼Œå·¥æœ¬è´¹å’Œä»£ç†è´¹å¿…é¡»ä¸ºæ•°å­—ç±»å‹ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¾¯¸æ£¬¹¤±¾·ÑºÍ´úÀí·Ñ±ØĞëÎªÊı×ÖÀàĞÍ£¬Çë¼ì²é£¡')", true);
                 return;
             }
             tender_HYYQ.TenderStatus = DL_TenderStatus.SelectedValue.Trim();
@@ -336,7 +336,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
 
             tender_HYYQBLL.UpdateTender_HYYQ(tender_HYYQ, intID);
 
-            //é‡æ–°åŠ è½½åˆ—è¡¨
+            //ÖØĞÂ¼ÓÔØÁĞ±í
             LoadTenderInfo("");
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
@@ -375,16 +375,16 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('è­¦å‘Šï¼Œå·¥æœ¬è´¹å’Œä»£ç†è´¹å¿…é¡»ä¸ºæ•°å­—ç±»å‹ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¾¯¸æ£¬¹¤±¾·ÑºÍ´úÀí·Ñ±ØĞëÎªÊı×ÖÀàĞÍ£¬Çë¼ì²é£¡')", true);
                 return;
             }
             tender_HYYQ.TenderStatus = DL_TenderStatus.SelectedValue.Trim();
 
-            tender_HYYQ.Progress = "å®Œæˆ";
+            tender_HYYQ.Progress = "Completed";
 
             tender_HYYQBLL.UpdateTender_HYYQ(tender_HYYQ, tender_HYYQ.id);
 
-            //é‡æ–°åŠ è½½åˆ—è¡¨
+            //ÖØĞÂ¼ÓÔØÁĞ±í
             LoadTenderInfo("");
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZRWCCG + "')", true);
@@ -396,7 +396,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
         }
     }
 
-    //å–å¾—æŠ•æ ‡çŠ¶æ€
+    //È¡µÃÍ¶±ê×´Ì¬
     protected string GetTenderStatus(string strTenderID)
     {
         Tender_HYYQBLL tender_HYYQBLL = new Tender_HYYQBLL();
@@ -410,7 +410,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
         }
         else
         {
-            return "æ–°å»º";
+            return "New";
         }
     }
 
@@ -455,7 +455,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
             {
                 strExpenseID = LB_ExpenseID.Text;
 
-                if (GetTenderStatus(HF_ID.Value) == "å®Œæˆ")
+                if (GetTenderStatus(HF_ID.Value) == "Completed")
                 {
                     return;
                 }
@@ -597,7 +597,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
 
                 strInvoiceID = LB_InvoiceID.Text;
 
-                if (GetTenderStatus(HF_ID.Value) == "å®Œæˆ")
+                if (GetTenderStatus(HF_ID.Value) == "Completed")
                 {
                     return;
                 }
@@ -608,7 +608,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
                 strHQL = "Delete From T_tenderInvoice_HYYQ Where ID = " + strInvoiceID;
                 ShareClass.RunSqlCommand(strHQL);
 
-                //åŠ è½½å‘ç¥¨åˆ—è¡¨
+                //¼ÓÔØ·¢Æ±ÁĞ±í
                 LoadTenderInvoiceInfo(intTenderID.ToString());
 
                 LB_InvoiceID.Text = "";
@@ -669,7 +669,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
         {
             tenderInvoice_HYYQBLL.AddTenderInvoice_HYYQ(tenderInvoice_HYYQ);
 
-            //åŠ è½½å‘ç¥¨åˆ—è¡¨
+            //¼ÓÔØ·¢Æ±ÁĞ±í
             LoadTenderInvoiceInfo(intTenderID.ToString());
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFPXZCG + "')", true);
@@ -727,7 +727,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
             {
                 tenderInvoice_HYYQBLL.UpdateTenderInvoice_HYYQ(tenderInvoice_HYYQ, intInvoiceID);
 
-                //åŠ è½½å‘ç¥¨åˆ—è¡¨
+                //¼ÓÔØ·¢Æ±ÁĞ±í
                 LoadTenderInvoiceInfo(intTenderID.ToString());
 
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFPXGCG + "')", true);
@@ -770,7 +770,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
         }
         else
         {
-            if (strWarningType == "æ ‡ä¹¦è´­ä¹°")
+            if (strWarningType == "BidDocumentPurchase")
             {
                 strHQL = "Select *  From T_Tender_HYYQ Where  IsTender <> 0 and to_char( cast(TenderBuyTime as date),'yyyymmdd') <= to_char(now()+TenderBuyDay*'1 day'::interval,'yyyymmdd') ";
                 strHQL += " and CreatorCode = " + "'" + strUserCode + "'";
@@ -779,7 +779,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
 
             }
 
-            if (strWarningType == "äº¤ä¿è¯é‡‘")
+            if (strWarningType == "PayDeposit")
             {
                 strHQL = "Select *  From T_Tender_HYYQ Where  IsMargin <> 0 and to_char( cast( MarginTime as date),'yyyymmdd') <= to_char(now()+MarginDay*'1 day'::interval,'yyyymmdd') ";
                 strHQL += " and CreatorCode = " + "'" + strUserCode + "'";
@@ -788,7 +788,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
 
             }
 
-            if (strWarningType == "é€€ä¿è¯é‡‘")
+            if (strWarningType == "ÍË±£Ö¤½ğ")
             {
                 strHQL = "Select *  From T_Tender_HYYQ Where  IsReceiveMargin <> 0 and to_char(cast( ReceiveMarginTime as date),'yyyymmdd') <= to_char(now()+ReceiveMarginDay*'1 day'::interval,'yyyymmdd') ";
                 strHQL += " and CreatorCode = " + "'" + strUserCode + "'";
@@ -797,7 +797,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
 
             }
 
-            if (strWarningType == "å¼€æ ‡")
+            if (strWarningType == "BidOpening")
             {
                 strHQL = "Select *  From T_Tender_HYYQ Where  IsBidOpening <> 0 and to_char( cast(BidOpeningDate as date),'yyyymmdd') <= to_char(now()+BidOpeningDay*'1 day'::interval,'yyyymmdd') ";
                 strHQL += " and CreatorCode = " + "'" + strUserCode + "'";
@@ -806,7 +806,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
 
             }
 
-            if (strWarningType == "äº¤ä¸­æ ‡è´¹")
+            if (strWarningType == "PayWinningBidFee")
             {
                 strHQL = "Select *  From T_Tender_HYYQ Where  IsWinningFee <> 0 and to_char( cast(WinningFeeDate as date),'yyyymmdd') <= to_char(now()+WinningFeeDay*'1 day'::interval,'yyyymmdd') ";
                 strHQL += " and CreatorCode = " + "'" + strUserCode + "'";

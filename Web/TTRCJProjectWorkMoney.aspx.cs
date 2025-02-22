@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -22,7 +22,7 @@ public partial class TTRCJProjectWorkMoney : System.Web.UI.Page
     private int confirmID = 0;
     private string ItemName = string.Empty;
     private string ItemContent = string.Empty;
-    private double workNum = 0; //å·²ç¡®è®¤çš„å·¥ä½œé‡
+    private double workNum = 0; //ÒÑÈ·ÈÏµÄ¹¤×÷Á¿
     private int AdjustId = 0;
     
     protected void Page_Load(object sender, EventArgs e)

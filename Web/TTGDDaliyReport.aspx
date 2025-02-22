@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDDaliyReport.aspx.cs" Inherits="TTGDDaliyReport" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDDaliyReport.aspx.cs" Inherits="TTGDDaliyReport" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>æ—¥æŠ¥</title>
+    <title>ÈÕ±¨</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -50,11 +50,11 @@
                                                             <h2>
                                                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,HanJieJiLuBaoGao%>"></asp:Label></h2>
                                                         </td>
-                                                        <td align="right" class="formItemBgStyle" colspan="2">Report Nameï¼šcheck_daily_report
+                                                        <td align="right" class="formItemBgStyle" colspan="2">Report Name£ºcheck_daily_report
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="left" class="formItemBgStyle">.<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JianShiYanJiHuaBianHao%>"></asp:Label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ï¼š
+                                                        <td align="left" class="formItemBgStyle">.<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JianShiYanJiHuaBianHao%>"></asp:Label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;£º
                                                         </td>
                                                         <td align="left" class="formItemBgStyle">
                                                             <font style="color: black;">1003</font>
@@ -62,7 +62,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td align="left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,JianChaJiBie%>"></asp:Label>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ï¼š
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,JianChaJiBie%>"></asp:Label>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;£º
                                                         </td>
                                                         <td align="left" class="formItemBgStyle">
                                                             <font style="color: black;">B</font>
@@ -70,13 +70,13 @@
                                                     </tr>
                                                     <tr>
                                                         <td align="left" class="formItemBgStyle">
-                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,BaoGaoHao%>"></asp:Label>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ï¼š
+                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,BaoGaoHao%>"></asp:Label>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;£º
                                                         </td>
-                                                        <td align="left" class="formItemBgStyle">ï¼ˆ1 / 1ï¼‰
+                                                        <td align="left" class="formItemBgStyle">£¨1 / 1£©
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="left" class="formItemBgStyle">DATE.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ï¼š
+                                                        <td align="left" class="formItemBgStyle">DATE.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;£º
                                                         </td>
                                                         <td align="left" class="formItemBgStyle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                         </td>
@@ -94,31 +94,31 @@
                                                                 INSPECTION(WELDING)
                                                             </h2>
                                                         </td>
-                                                        <td align="right" class="formItemBgStyle" colspan="2">WORK No.ï¼š
+                                                        <td align="right" class="formItemBgStyle" colspan="2">WORK No.£º
                                                         </td>
                                                         <td align="right" class="formItemBgStyle">MDI Train Lot 04
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="right" class="formItemBgStyle">ITEM Noï¼š
+                                                        <td align="right" class="formItemBgStyle">ITEM No£º
                                                         </td>
                                                         <td align="right" class="formItemBgStyle">Above Ground Piping
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="right" class="formItemBgStyle">LOCATIONï¼š
+                                                        <td align="right" class="formItemBgStyle">LOCATION£º
                                                         </td>
                                                         <td align="right" class="formItemBgStyle">&nbsp;
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="right" class="formItemBgStyle" colspan="2">WORK No.ï¼š
+                                                        <td align="right" class="formItemBgStyle" colspan="2">WORK No.£º
                                                         </td>
                                                         <td align="right" class="formItemBgStyle">MDI Train Lot 04
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="left" class="formItemBgStyle">DATE.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ï¼š
+                                                        <td align="left" class="formItemBgStyle">DATE.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;£º
                                                         </td>
                                                         <td align="left" class="formItemBgStyle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                         </td>

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -27,7 +27,7 @@ public partial class TTProjectImplementTotalFinanceReport : System.Web.UI.Page
         strLangCode = Session["LangCode"].ToString();
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text = "é¡¹ç›®é‡Œç¨‹ç¢‘æ•°æ®æŠ¥è¡¨";
+        LB_ReportName.Text = "ÏîÄ¿Àï³Ì±®Êı¾İ±¨±í";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
@@ -45,12 +45,12 @@ public partial class TTProjectImplementTotalFinanceReport : System.Web.UI.Page
         }
     }
 
-    //åˆ›å»ºåˆ†æå›¾å½¢
+    //´´½¨·ÖÎöÍ¼ĞÎ
     protected void CreateProjectMalesStoneAnalystChart(string strUserCode)
     {
         string strChartTitle, strCmdText;
 
-        strChartTitle = DateTime.Now.Year.ToString() + "å¹´åº¦å®æ–½é¡¹ç›®äº§å€¼";
+        strChartTitle = DateTime.Now.Year.ToString() + "Äê¶ÈÊµÊ©ÏîÄ¿²úÖµ";
          strCmdText = @"Select SUBSTRING(to_char(A.ReceiverTime,'yyyymmdd'),0,7) as XName,COALESCE(Sum(A.ReceiverAccount),0) as YNumber
                      From T_ConstractReceivables A
                      Left Join T_Project B On A.RelatedProjectID = B.ProjectID 
@@ -59,7 +59,7 @@ public partial class TTProjectImplementTotalFinanceReport : System.Web.UI.Page
         IFrame_Chart_ProjectAnnualOutput.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Line&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
 
-        strChartTitle = DateTime.Now.Year.ToString() + "å¹´åº¦å®æ–½é¡¹ç›®è´¢åŠ¡çŠ¶æ€ç»Ÿè®¡";
+        strChartTitle = DateTime.Now.Year.ToString() + "Äê¶ÈÊµÊ©ÏîÄ¿²ÆÎñ×´Ì¬Í³¼Æ";
         strCmdText = @"Select B.Status as XName,COALESCE(Sum(A.ReceiverAccount),0) as YNumber
                      From T_ConstractReceivables A,T_Project B
                      Where A.RelatedProjectID = B.ProjectID
@@ -68,7 +68,7 @@ public partial class TTProjectImplementTotalFinanceReport : System.Web.UI.Page
         IFrame_Chart_ConstractStatus.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
        
-        strChartTitle = DateTime.Now.Year.ToString() + "å¹´åº¦å®æ–½é¡¹ç›®çŠ¶æ€ä¸€è§ˆè¡¨";
+        strChartTitle = DateTime.Now.Year.ToString() + "Äê¶ÈÊµÊ©ÏîÄ¿×´Ì¬Ò»ÀÀ±í";
         strCmdText = @"Select Status as XName, Count(*) as YNumber
             From T_Project Where SUBSTRING (to_char(BeginDate,'yyyymmdd'),0,5) = SUBSTRING (to_char(now(),'yyyymmdd'),0,5) 
             Group By Status ";
@@ -123,11 +123,11 @@ public partial class TTProjectImplementTotalFinanceReport : System.Web.UI.Page
         }
         else
         {
-            dv.RowFilter = "é¡¹ç›® Like '%" + strProjectName + "%'";
+            dv.RowFilter = "ÏîÄ¿ Like '%" + strProjectName + "%'";
         }
 
-        dv.RowFilter += " And é¡¹ç›®ç»ç† Like '%" + strPMName + "%'";
-        dv.RowFilter += " And å¼€å§‹æ—¶é—´ >= '" + strBeginTime + "' And ç»“æŸæ—¶é—´ <= '" + strEndTime + "'";
+        dv.RowFilter += " And ÏîÄ¿¾­Àí Like '%" + strPMName + "%'";
+        dv.RowFilter += " And ¿ªÊ¼Ê±¼ä >= '" + strBeginTime + "' And ½áÊøÊ±¼ä <= '" + strEndTime + "'";
         dv.Sort += " ProjectID2 DESC";
 
         GridView1.DataSource = dv;
@@ -166,10 +166,10 @@ public partial class TTProjectImplementTotalFinanceReport : System.Web.UI.Page
         }
         else
         {
-            dv.RowFilter = "é¡¹ç›® Like '%" + strProjectName + "%'";
+            dv.RowFilter = "ÏîÄ¿ Like '%" + strProjectName + "%'";
         }
-        dv.RowFilter += " And é¡¹ç›®ç»ç† Like '%" + strPMName + "%'";
-        dv.RowFilter += " And å¼€å§‹æ—¶é—´ >= '" + strBeginTime + "' And ç»“æŸæ—¶é—´ <= '" + strEndTime + "'";
+        dv.RowFilter += " And ÏîÄ¿¾­Àí Like '%" + strPMName + "%'";
+        dv.RowFilter += " And ¿ªÊ¼Ê±¼ä >= '" + strBeginTime + "' And ½áÊøÊ±¼ä <= '" + strEndTime + "'";
         dv.Sort += " ProjectID2 DESC";
 
         GridView1.DataSource = dv;
@@ -177,11 +177,11 @@ public partial class TTProjectImplementTotalFinanceReport : System.Web.UI.Page
 
         DataTable dtProject = dv.ToTable();
 
-        Export3Excel(dtProject, "é¡¹ç›®é‡Œç¨‹ç¢‘æ•°æ®æŠ¥è¡¨.xls");
+        Export3Excel(dtProject, "ÏîÄ¿Àï³Ì±®Êı¾İ±¨±í.xls");
 
         LB_ResultNumber.Text = GridView1.Rows.Count.ToString();
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¯¼å‡ºæˆåŠŸï¼');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µ¼³ö³É¹¦£¡');", true);
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

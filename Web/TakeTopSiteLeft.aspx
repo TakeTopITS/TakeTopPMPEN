@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteLeft.aspx.cs" Inherits="TakeTopSiteLeft" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSiteLeft.aspx.cs" Inherits="TakeTopSiteLeft" %>
 
 <%@ Import Namespace="System.Globalization" %>
 <!DOCTYPE html>
@@ -216,7 +216,7 @@
             if (clickStyle == "none") {
 
 
-                //alert("æ”¶èµ·æ¥");
+                //alert("ÊÕÆğÀ´");
                 //jQuery("div.text").hide();
 
                 //jQuery("img.minus").show();
@@ -237,7 +237,7 @@
 
 
             } else {
-                //alert("å±•å¼€");
+                //alert("Õ¹¿ª");
                 //alert(jQuery("#UpdatePanel1")[0].scrollTop);
                 //alert(jQuery(obj).parent().parent().scrollTop());
                 //jQuery("div.text").hide();
@@ -259,7 +259,7 @@
             //alert(clickStyle);
             if (clickStyle == "none") {
 
-                //alert("å±•å¼€");
+                //alert("Õ¹¿ª");
                 //jQuery(obj).parent().find(".minus").hide();
                 //jQuery(obj).parent().find(".plus").show();
                 jQuery(obj).parent().find(".minusSpan").show();
@@ -267,7 +267,7 @@
                 jQuery(obj).parent().next(".text").slideToggle("slow");
 
             } else {
-                //alert("æ”¶èµ·æ¥");
+                //alert("ÊÕÆğÀ´");
                 //jQuery(obj).parent().find(".minus").hide();
                 //jQuery(obj).parent().find(".plus").show();
                 jQuery(obj).parent().find(".minusSpan").show();
@@ -317,7 +317,7 @@
             //alert(clickStyle);
             if (clickStyle == "none") {
 
-                //alert("æ”¶èµ·æ¥");
+                //alert("ÊÕÆğÀ´");
                 //jQuery(obj).parent().find(".minus").hide();
                 //jQuery(obj).parent().find(".plus").show();
                 jQuery(obj).parent().find(".minusSpan").show();
@@ -326,7 +326,7 @@
 
 
             } else {
-                //alert("å±•å¼€");
+                //alert("Õ¹¿ª");
                 //jQuery(obj).parent().find(".minus").show();
                 //jQuery(obj).parent().find(".plus").hide();
                 jQuery(obj).parent().find(".minusSpan").show();
@@ -386,7 +386,7 @@
         }
 
 
-        // æ”¶ç¼©å±•å¼€æ•ˆæœ
+        // ÊÕËõÕ¹¿ªĞ§¹û
         jQuery(document).ready(function () {
             //jQuery("img.minus").show();
             //jQuery("img.plus").show();
@@ -401,7 +401,7 @@
 
             //jQuery(jQuery("img.minus")[0]).show();
             //jQuery(jQuery("img.plus")[0]).hide();
-            //jQuery(jQuery("div.text")[0]).show();//é»˜è®¤éšè—divï¼Œæˆ–è€…åœ¨æ ·å¼è¡¨ä¸­æ·»åŠ .text{display:none}ï¼Œæ¨èä½¿ç”¨åè€…
+            //jQuery(jQuery("div.text")[0]).show();//Ä¬ÈÏÒş²Ødiv£¬»òÕßÔÚÑùÊ½±íÖĞÌí¼Ó.text{display:none}£¬ÍÆ¼öÊ¹ÓÃºóÕß
             //jQuery(".box span").click(function () {
             //jQuery("div.text").hide();
 
@@ -466,7 +466,7 @@
 
 
     <style type="text/css">
-        /* æ”¶ç¼©å±•å¼€æ•ˆæœ */
+        /* ÊÕËõÕ¹¿ªĞ§¹û */
         .text {
             line-height: 37px;
             padding: 0 1px;
@@ -585,7 +585,7 @@
         }
 
 
-        /*----------è§¦æ§åŠŸèƒ½------*/
+        /*----------´¥¿Ø¹¦ÄÜ------*/
     </style>
 
 </head>
@@ -598,7 +598,7 @@
             <ContentTemplate>
                 <%--<div class="ToolBarLeftRight">
                     <a href="javascript:ChangeMenu(0)">
-                        <asp:Image ID="IM_LeftToRight" ImageUrl="Logo/website/Images/tupian-left.png" Style="width: 50px; height: 169px; border: 0;" alt="éšè—å·¦è¾¹æ " runat="server" />
+                        <asp:Image ID="IM_LeftToRight" ImageUrl="Logo/website/Images/tupian-left.png" Style="width: 50px; height: 169px; border: 0;" alt="Òş²Ø×ó±ßÀ¸" runat="server" />
                     </a>
                 </div>--%>
 
@@ -627,9 +627,9 @@
                         </div>
                     </a>
 
-                    <!-- æ”¶ç¼©å±•å¼€æ•ˆæœstart -->
+                    <!-- ÊÕËõÕ¹¿ªĞ§¹ûstart -->
                     <asp:Literal ID="LT_Result" runat="server"></asp:Literal>
-                    <!-- æ”¶ç¼©å±•å¼€æ•ˆæœend -->
+                    <!-- ÊÕËõÕ¹¿ªĞ§¹ûend -->
 
 
                 </div>

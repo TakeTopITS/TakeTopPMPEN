@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPersonalSpaceAnalysisChart.aspx.cs" Inherits="TTPersonalSpaceAnalysisChart" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTPersonalSpaceAnalysisChart.aspx.cs" Inherits="TTPersonalSpaceAnalysisChart" %>
 
 <%@ OutputCache Duration="2678400" VaryByParam="*" %>
 

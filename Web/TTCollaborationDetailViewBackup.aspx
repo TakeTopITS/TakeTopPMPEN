@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCollaborationDetailViewBackup.aspx.cs" Inherits="TTCollaborationDetailViewBackup" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCollaborationDetailViewBackup.aspx.cs" Inherits="TTCollaborationDetailViewBackup" %>
 
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc2" %>
@@ -55,7 +55,7 @@
                                 <table width="98%" cellpadding="3" cellspacing="0" class="formBgStyle">
                                     <tr>
                                         <td width="20%" style="text-align: Right;" class="formItemBgStyle">
-                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>ï¼š
+                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£º
                                         </td>
                                         <td style="text-align: left; overflow-y: auto;" class="formItemBgStyle">
                                             <asp:Label ID="LB_CollaborationName" runat="server"></asp:Label>
@@ -80,7 +80,7 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: Right;" class="formItemBgStyle">
-                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,CanYuRenYuan%>"></asp:Label>ï¼š
+                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,CanYuRenYuan%>"></asp:Label>£º
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
                                             <asp:Repeater ID="RP_Attendant" runat="server">
@@ -93,7 +93,7 @@
                                     </tr>
                                     <tr>
                                         <td style="text-align: Right;" class="formItemBgStyle">
-                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ChuangJianZhe%>"></asp:Label>ï¼š
+                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ChuangJianZhe%>"></asp:Label>£º
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
                                             <asp:Label ID="LB_Creator" runat="server"></asp:Label>&nbsp;&nbsp;
@@ -103,7 +103,7 @@
 
                                     <tr>
                                         <td style="text-align: Right;" class="formItemBgStyle">
-                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>ï¼š
+                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º
                                         </td>
                                         <td style="text-align: left;" class="formItemBgStyle">
                                             <asp:Label ID="LB_Status" runat="server"></asp:Label>
@@ -114,7 +114,7 @@
                             </td>
                             <td valign="top" style="width: 55%; padding-top: 5px; padding-left: 10px; text-align: left;">
                                 <cc2:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" runat="server" ActiveTabIndex="0" Width="100%">
-                                    <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="ä¼šè¯è®°å½•" TabIndex="0" BorderWidth="0">
+                                    <cc2:TabPanel ID="TabPanel1" runat="server" HeaderText="»á»°¼ÇÂ¼" TabIndex="0" BorderWidth="0">
                                         <HeaderTemplate>
                                             <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,HuiHuaJiLu%>"></asp:Label>
                                         </HeaderTemplate>
@@ -149,7 +149,7 @@
 
                                         </ContentTemplate>
                                     </cc2:TabPanel>
-                                    <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="ç›¸å…³æ–‡ä»¶" TabIndex="1" BorderWidth="0">
+                                    <cc2:TabPanel ID="TabPanel2" runat="server" HeaderText="Ïà¹ØÎÄ¼þ" TabIndex="1" BorderWidth="0">
                                         <HeaderTemplate>
                                             <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang, ShangChuanWenJian%>"></asp:Label>
                                         </HeaderTemplate>
@@ -198,23 +198,23 @@
                                             <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" CellPadding="4"
                                                 ForeColor="#333333" GridLines="None" Height="1px" Width="98%" ShowHeader="False">
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="DocID" HeaderText="åºå·">
+                                                    <asp:BoundColumn DataField="DocID" HeaderText="ÐòºÅ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="DocType" HeaderText="ç±»åž‹">
+                                                    <asp:BoundColumn DataField="DocType" HeaderText="ÀàÐÍ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="12%" />
                                                     </asp:BoundColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
-                                                        DataTextField="DocName" HeaderText="æ–‡ä»¶å" Target="_blank">
+                                                        DataTextField="DocName" HeaderText="ÎÄ¼þÃû" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="29%" />
                                                     </asp:HyperLinkColumn>
-                                                    <asp:BoundColumn DataField="Author" HeaderText="ä½œè€…">
+                                                    <asp:BoundColumn DataField="Author" HeaderText="×÷Õß">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="13%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="UploadManName" HeaderText="ä¸Šä¼ è€…">
+                                                    <asp:BoundColumn DataField="UploadManName" HeaderText="ÉÏ´«Õß">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="13%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="UploadTime" HeaderText="ä¸Šä¼ æ—¶é—´">
+                                                    <asp:BoundColumn DataField="UploadTime" HeaderText="ÉÏ´«Ê±¼ä">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="18%" />
                                                     </asp:BoundColumn>
                                                     <asp:BoundColumn DataField="Address" Visible="False"></asp:BoundColumn>

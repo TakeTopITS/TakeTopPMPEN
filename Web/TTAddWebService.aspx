@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAddWebService.aspx.cs" Inherits="TTAddWebService" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAddWebService.aspx.cs" Inherits="TTAddWebService" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Ê∑ªÂä†Web Service</title>
+    <title>ÃÌº”Web Service</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript">
@@ -13,17 +13,17 @@
             $("#BT_Save").click(function () {
                 var strWebServiceName = $("#TXT_WebServiceName").val();
                 if (strWebServiceName == "" || strWebServiceName == null) {
-                    alert("ËØ∑Â°´ÂÜôWeb ServiceÂêçÁß∞ÔºÅ");
+                    alert("«ÎÃÓ–¥Web Service√˚≥∆£°");
                     return;
                 }
                 var strWebServiceURL = $("#TXT_WebServiceURL").val();
                 if (strWebServiceURL == "" || strWebServiceURL == null) {
-                    alert("ËØ∑Â°´ÂÜôWeb Service URL Âú∞ÂùÄÔºÅ");
+                    alert("«ÎÃÓ–¥Web Service URL µÿ÷∑£°");
                     return;
                 }
                 var strMethodName = $("#TXT_MethodName").val();
                 if (strMethodName == "" || strMethodName == null) {
-                    alert("ËØ∑Â°´ÂÜôWeb Service ÊñπÊ≥ïÂêçÁß∞ÔºÅ");
+                    alert("«ÎÃÓ–¥Web Service ∑Ω∑®√˚≥∆£°");
                     return;
                 }
                 var strArgArray = $("#TXT_ArgArray").val();
@@ -37,12 +37,12 @@
                     data: da,
                     success: function (json) {
                         alert(json);
-                        if (json == "‰øùÂ≠òÊàêÂäüÔºÅ") {
+                        if (json == "±£¥Ê≥…π¶£°") {
                             window.location.href = "TTWebServiceList.aspx";
                         }
                     },
                     error: function () {
-                        alert("Â§±Ë¥•");
+                        alert("Failed");
                     }
 
                 });
@@ -87,13 +87,13 @@
                                     <tr>
                                         <td align="left" class="formItemBgStyle" style="width: 10%">
                                             <span style="font-size: 11pt">
-                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,WebServiceMingCheng%>"></asp:Label>Ôºö</span>
+                                                <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,WebServiceMingCheng%>"></asp:Label>£∫</span>
                                         </td>
                                         <td align="left" class="formItemBgStyle" style="width: 15%">
                                             <asp:TextBox ID="TXT_WebServiceName" runat="server" Width="320"></asp:TextBox>
                                         </td>
                                         <td align="left" class="formItemBgStyle"><span style="font-size: 11pt">
-                                            <asp:Label ID="Label3" runat="server" ></asp:Label>WebServiceURLÔºö</span></td>
+                                            <asp:Label ID="Label3" runat="server" ></asp:Label>WebServiceURL£∫</span></td>
                                         <td align="left" class="formItemBgStyle">
                                             <asp:TextBox ID="TXT_WebServiceURL" runat="server" Width="500"></asp:TextBox>
                                         </td>
@@ -101,13 +101,13 @@
                                     <tr>
                                         <td align="left" class="formItemBgStyle">
                                             <span style="font-size: 11pt">
-                                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,FangFaMing%>"></asp:Label>Ôºö</span>
+                                                <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,FangFaMing%>"></asp:Label>£∫</span>
                                         </td>
                                         <td align="left" class="formItemBgStyle">
                                             <asp:TextBox ID="TXT_MethodName" runat="server" Width="320"></asp:TextBox>
                                         </td>
                                         <td align="left" class="formItemBgStyle"><span style="font-size: 11pt">
-                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,CanShuShuZu%>"></asp:Label>Ôºö</span></td>
+                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,CanShuShuZu%>"></asp:Label>£∫</span></td>
                                         <td align="left" class="formItemBgStyle">
                                             <asp:TextBox ID="TXT_ArgArray" runat="server" Width="500"></asp:TextBox><font color="red"><asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,DuoGeYiFenKaiBanJiao%>"></asp:Label></font>
                                         </td>
@@ -115,13 +115,13 @@
                                     <tr>
                                         <td style="text-align: left" class="formItemBgStyle" colspan="4">
                                             <span style="font-size: 11pt">
-                                                <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhuShi%>"></asp:Label>Ôºö</span><br />
+                                                <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,ZhuShi%>"></asp:Label>£∫</span><br />
                                             <textarea id="TXT_Comment" cols="150" rows="4" runat="server"></textarea>
                                         </td>
                                     </tr>
                                     <tr style="font-weight: bold; font-size: 11pt">
                                         <td style="text-align: left" class="formItemBgStyle" colspan="4">
-                                            <input type="button" value="‰øùÂ≠ò" id="BT_Save" class="inpu" />
+                                            <input type="button" value="±£¥Ê" id="BT_Save" class="inpu" />
                                         </td>
                                     </tr>
                                 </table>

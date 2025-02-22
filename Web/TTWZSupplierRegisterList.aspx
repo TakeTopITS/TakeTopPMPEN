@@ -1,10 +1,10 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSupplierRegisterList.aspx.cs" Inherits="TTWZSupplierRegisterList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSupplierRegisterList.aspx.cs" Inherits="TTWZSupplierRegisterList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ä¾›æ–¹åˆ—è¡¨</title>
+    <title>¹©·½ÁÐ±í</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/allAHandler.js"></script>
@@ -158,9 +158,9 @@
                                                                                 </HeaderTemplate>
                                                                                 <ItemTemplate>
 
-                                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="submit" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="å½•å…¥" ? true : false %>'>
+                                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="submit" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Â¼Èë" ? true : false %>'>
                                                                                         <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,TiJiao%>"></asp:Label></asp:LinkButton>
-                                                                                    <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="submitReturn" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="æäº¤" ? true : false %>'>
+                                                                                    <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="submitReturn" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Ìá½»" ? true : false %>'>
                                                                                         <asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,TiJiaoTuiHui%>"></asp:Label></asp:LinkButton>
 
                                                                                 </ItemTemplate>

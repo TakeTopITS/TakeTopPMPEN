@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections;
 using System.Data;
 using System.Web;
@@ -46,16 +46,16 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
         if (strRelatedType == "Project")
         {
-            strCNRelatedType = "é¡¹ç›®";
+            strCNRelatedType = "Project";
             strRelatedName = ShareClass.GetProjectName(strRelatedID);
 
-            strOriginRelatedType = "é¡¹ç›®";
+            strOriginRelatedType = "Project";
             strOriginRelateID = strRelatedID;
 
             strProjectRelatedType = strRelatedType;
             strProjectRelatedID = strRelatedID;
 
-            //è£…è½½ç›¸åº”çš„ä¸šåŠ¡æ•°æ®
+            //×°ÔØÏàÓ¦µÄÒµÎñÊı¾İ
             try
             {
                 LoadRelatedBusinessData(strRelatedType, strRelatedID);
@@ -67,16 +67,16 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
         if (strRelatedType == "ProjectPlan")
         {
-            strCNRelatedType = "è®¡åˆ’";
+            strCNRelatedType = "Plan";
 
             strProjectRelatedType = strRelatedType;
-            strProjectRelatedTypeCN = "è®¡åˆ’";
+            strProjectRelatedTypeCN = "Plan";
             strProjectRelatedID = strRelatedID;
 
-            strOriginRelatedType = "è®¡åˆ’";
+            strOriginRelatedType = "Plan";
             strOriginRelateID = strRelatedID;
 
-            //è£…è½½ç›¸åº”çš„ä¸šåŠ¡æ•°æ®
+            //×°ÔØÏàÓ¦µÄÒµÎñÊı¾İ
             try
             {
                 LoadRelatedBusinessData(strRelatedType, strRelatedID);
@@ -92,20 +92,20 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
             strProjectID = ds.Tables[0].Rows[0]["ProjectID"].ToString().Trim();
 
             strRelatedType = "Project";
-            strCNRelatedType = "é¡¹ç›®";
+            strCNRelatedType = "Project";
             strRelatedID = strProjectID;
             strRelatedName = ds.Tables[0].Rows[0]["Name"].ToString().Trim();
         }
 
         if (strRelatedType == "ProjectTask")
         {
-            strCNRelatedType = "ä»»åŠ¡";
+            strCNRelatedType = "Task";
 
             strProjectRelatedType = strRelatedType;
-            strProjectRelatedTypeCN = "ä»»åŠ¡";
+            strProjectRelatedTypeCN = "Task";
             strProjectRelatedID = strRelatedID;
 
-            strOriginRelatedType = "ä»»åŠ¡";
+            strOriginRelatedType = "Task";
             strOriginRelateID = strRelatedID;
 
             string strHQL;
@@ -115,20 +115,20 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
             strProjectID = ds.Tables[0].Rows[0]["ProjectID"].ToString().Trim();
 
             strRelatedType = "Project";
-            strCNRelatedType = "é¡¹ç›®";
+            strCNRelatedType = "Project";
             strRelatedID = strProjectID;
             strRelatedName = ds.Tables[0].Rows[0]["Task"].ToString().Trim();
         }
 
         if (strRelatedType == "ProjectRisk")
         {
-            strCNRelatedType = "é£é™©";
+            strCNRelatedType = "Risk";
 
             strProjectRelatedType = strRelatedType;
-            strProjectRelatedTypeCN = "é£é™©";
+            strProjectRelatedTypeCN = "Risk";
             strProjectRelatedID = strRelatedID;
 
-            strOriginRelatedType = "é£é™©";
+            strOriginRelatedType = "Risk";
             strOriginRelateID = strRelatedID;
 
             string strHQL;
@@ -138,29 +138,29 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
             strProjectID = ds.Tables[0].Rows[0]["ProjectID"].ToString().Trim();
 
             strRelatedType = "Project";
-            strCNRelatedType = "é¡¹ç›®";
+            strCNRelatedType = "Project";
             strRelatedID = strProjectID;
             strRelatedName = ds.Tables[0].Rows[0]["Risk"].ToString().Trim();
         }
 
         if (strRelatedType == "Req")
         {
-            strCNRelatedType = "éœ€æ±‚";
+            strCNRelatedType = "Requirement";
             strRelatedName = ShareClass.GetRequirement(strRelatedID).ReqName.Trim();
 
-            strOriginRelatedType = "éœ€æ±‚";
+            strOriginRelatedType = "Requirement";
             strOriginRelateID = strRelatedID;
         }
 
         if (strRelatedType == "Constract")
         {
-            strCNRelatedType = "åˆåŒ";
+            strCNRelatedType = "ºÏÍ¬";
             strRelatedName = GetConstractName(strRelatedID);
 
-            strOriginRelatedType = "åˆåŒ";
+            strOriginRelatedType = "ºÏÍ¬";
             strOriginRelateID = strRelatedID;
 
-            //è£…è½½ç›¸åº”çš„ä¸šåŠ¡æ•°æ®
+            //×°ÔØÏàÓ¦µÄÒµÎñÊı¾İ
             try
             {
                 LoadRelatedBusinessData(strRelatedType, strRelatedID);
@@ -172,13 +172,13 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
         if (strRelatedType == "Tender")
         {
-            strCNRelatedType = "æŠ•æ ‡";
+            strCNRelatedType = "Í¶±ê";
             strRelatedName = GetTenderName(strRelatedID);
 
-            strOriginRelatedType = "æŠ•æ ‡";
+            strOriginRelatedType = "Í¶±ê";
             strOriginRelateID = strRelatedID;
 
-            //è£…è½½ç›¸åº”çš„ä¸šåŠ¡æ•°æ®
+            //×°ÔØÏàÓ¦µÄÒµÎñÊı¾İ
             try
             {
                 LoadRelatedBusinessData(strRelatedType, strRelatedID);
@@ -190,18 +190,18 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
         if (strRelatedType == "CustomerService")
         {
-            strCNRelatedType = "å®¢æœè¯„å®¡";
-            strRelatedName = "å®¢æœè¯„å®¡";
+            strCNRelatedType = "CustomerServiceReview";
+            strRelatedName = "CustomerServiceReview";
 
-            strOriginRelatedType = "å®¢æœè¯„å®¡";
+            strOriginRelatedType = "CustomerServiceReview";
             strOriginRelateID = strRelatedID;
         }
 
         if (strRelatedType == "Supplier")
         {
-            strCNRelatedType = "ä¾›åº”å•†";
+            strCNRelatedType = "Supplier";
 
-            strOriginRelatedType = "ä¾›åº”å•†";
+            strOriginRelatedType = "Supplier";
             strOriginRelateID = strRelatedID;
         }
 
@@ -224,9 +224,9 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
             }
 
             strRelatedType = "BMBidType";
-            strCNRelatedType = "æ‹›æ ‡è®¡åˆ’";
+            strCNRelatedType = "TenderPlan";
 
-            strOriginRelatedType = "æ‹›æ ‡è®¡åˆ’";
+            strOriginRelatedType = "TenderPlan";
             strOriginRelateID = strRelatedID;
         }
 
@@ -234,7 +234,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
         {
             try
             {
-                //åˆ—å‡ºæ­¤è®¡åˆ’å…³è”çš„æµç¨‹æ¨¡æ¿
+                //ÁĞ³ö´Ë¼Æ»®¹ØÁªµÄÁ÷³ÌÄ£°å
                 if (strProjectRelatedType != null & strProjectRelatedID != null)
                 {
                     LoadWorkFlowTemplate(strProjectRelatedType, strProjectRelatedID);
@@ -260,7 +260,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
 
 
-            //åˆ—å‡ºå…³è”çš„æ‰€æœ‰å­˜åœ¨çš„å·¥ä½œæµ
+            //ÁĞ³ö¹ØÁªµÄËùÓĞ´æÔÚµÄ¹¤×÷Á÷
             LoadWorkFlow();
         }
     }
@@ -286,7 +286,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
         TB_WLDescription.Text = "";
         HL_RelatedDoc.Enabled = false;
 
-        //åˆ—è¡¨é¡¹å¢åŠ æç¤º
+        //ÁĞ±íÏîÔö¼ÓÌáÊ¾
         //PreREnderListBox();
     }
 
@@ -308,7 +308,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
             //DL_WLType.SelectedValue =
             strWLType = GetWorkflowTemplateType(strTemName);
 
-            //åˆ—å‡ºå…³è”çš„æ­¤ç±»å‹å’Œæ¨¡æ¿æ‰€æœ‰å·¥ä½œæµ
+            //ÁĞ³ö¹ØÁªµÄ´ËÀàĞÍºÍÄ£°åËùÓĞ¹¤×÷Á÷
             LoadWorkFlow(strWLType, strTemName);
         }
         catch
@@ -318,7 +318,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
         Session["AutoActiveWorkflow"] = GetWorkflowTemplateAutoActive(strTemName);
 
-        //å¦‚æœæ˜¯å¸¸è§„æµç¨‹ï¼Œé‚£ä¹ˆæ‰“å¼€æ–°é¡µé¢
+        //Èç¹ûÊÇ³£¹æÁ÷³Ì£¬ÄÇÃ´´ò¿ªĞÂÒ³Ãæ
         if (PopRegularWorkflowTemplateRelatedPage(strTemName) > 0)
         {
             return;
@@ -362,7 +362,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
             if (strRelatedType == "Constract")
             {
-                strCNRelatedType = "åˆåŒ";
+                strCNRelatedType = "ºÏÍ¬";
                 TB_WorkFlowName.Text = strCNRelatedType + GetConstractCode(strRelatedID) + strRelatedName + strTemName;
             }
 
@@ -387,21 +387,21 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
             {
                 HL_WFChartView.NavigateUrl = "TTWFChartViewJS.aspx?WLID=0&IdentifyString=" + ShareClass.GetWLTemplateIdentifyString(strTemName);
             }
-            //é™„åŠ ç”¨æˆ·è‡ªå®šä¹‰çš„JSCodeåˆ°é¡µé¢
+            //¸½¼ÓÓÃ»§×Ô¶¨ÒåµÄJSCodeµ½Ò³Ãæ
             WFShareClass.AttachUserJSCodeFromWFTemplate(strTemName, LIT_AttachUserJSCode, strUserCode, strRelatedType, strRelatedID, "");
             ClientScript.RegisterStartupScript(this.GetType(), "HH77H", "<script>jqueryDocumentReady();</script>");
 
-            //é™„åŠ å·¥ä½œæµæ­¥éª¤ç”¨æˆ·è‡ªå®šä¹‰çš„JSCodeåˆ°é¡µé¢
+            //¸½¼Ó¹¤×÷Á÷²½ÖèÓÃ»§×Ô¶¨ÒåµÄJSCodeµ½Ò³Ãæ
             WFShareClass.AttachUserJSCodeFromWFTemplateStep(strTemName, "0", LIT_AttachUserWFStepJSCode, strUserCode);
             ClientScript.RegisterStartupScript(this.GetType(), "HH88H", "<script>setWorkflowForm();</script>");
 
-            //åˆ—è¡¨é¡¹å¢åŠ æç¤º
+            //ÁĞ±íÏîÔö¼ÓÌáÊ¾
             //PreREnderListBox();
 
         }
         catch (Exception err)
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "HH99H", "<script>alert('è­¦å‘Šï¼Œæ­¤æµç¨‹æ¨¡æ¿æ²¡æœ‰å…³è”è‡ªå®šä¹‰è¡¨å•æˆ–æ¨¡å—é¡µé¢ï¼Œè¯·æ£€æŸ¥ï¼');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "HH99H", "<script>alert('¾¯¸æ£¬´ËÁ÷³ÌÄ£°åÃ»ÓĞ¹ØÁª×Ô¶¨Òå±íµ¥»òÄ£¿éÒ³Ãæ£¬Çë¼ì²é£¡');</script>");
             LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
         }
     }
@@ -413,13 +413,13 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
         strWLID = DL_WorkFlow.SelectedValue.Trim();
         LB_WLID.Text = strWLID;
 
-        //å¦‚æœæ˜¯å¸¸è§„æµç¨‹ï¼Œé‚£ä¹ˆæ‰“å¼€æ–°é¡µé¢
+        //Èç¹ûÊÇ³£¹æÁ÷³Ì£¬ÄÇÃ´´ò¿ªĞÂÒ³Ãæ
         if (PopRegularWorkflow(strWLID) > 0)
         {
             return;
         }
 
-        //å¦‚æœæ•°æ®åº“è¡¨ä¸­å­˜åœ¨æ­¤å·¥ä½œæµçš„æ•°æ®ï¼Œé‚£ä¹ˆæŠŠè¡¨ä¸­æ•°æ®é™„åŠ åˆ°è¡¨å•ä¸­
+        //Èç¹ûÊı¾İ¿â±íÖĞ´æÔÚ´Ë¹¤×÷Á÷µÄÊı¾İ£¬ÄÇÃ´°Ñ±íÖĞÊı¾İ¸½¼Óµ½±íµ¥ÖĞ
         int intMainTableID;
         string strWFXMLFile;
 
@@ -467,7 +467,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
             xdoc.Text = Resources.lang.SBZGZLMBHSJWJBCZKNYBSCQJC;
         }
 
-        //åˆ—è¡¨é¡¹å¢åŠ æç¤º
+        //ÁĞ±íÏîÔö¼ÓÌáÊ¾
         //PreREnderListBox();
 
 
@@ -481,16 +481,16 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
             HL_WFChartView.NavigateUrl = "TTWFChartViewJS.aspx?WLID=" + LB_WLID.Text + "&IdentifyString=" + ShareClass.GetWLTemplateIdentifyString(strTemName);
         }
 
-        //é™„åŠ ç”¨æˆ·è‡ªå®šä¹‰çš„JSCodeåˆ°é¡µé¢
+        //¸½¼ÓÓÃ»§×Ô¶¨ÒåµÄJSCodeµ½Ò³Ãæ
         WFShareClass.AttachUserJSCodeFromWFTemplate(strTemName, LIT_AttachUserJSCode, strUserCode, strRelatedType, strRelatedID, "");
         ClientScript.RegisterStartupScript(this.GetType(), "HH77H", "<script>jqueryDocumentReady();</script>");
 
-        //é™„åŠ å·¥ä½œæµæ­¥éª¤ç”¨æˆ·è‡ªå®šä¹‰çš„JSCodeåˆ°é¡µé¢
+        //¸½¼Ó¹¤×÷Á÷²½ÖèÓÃ»§×Ô¶¨ÒåµÄJSCodeµ½Ò³Ãæ
         WFShareClass.AttachUserJSCodeFromWFTemplateStep(strTemName, "0", LIT_AttachUserWFStepJSCode, strUserCode);
         ClientScript.RegisterStartupScript(this.GetType(), "HH88H", "<script>setWorkflowForm();</script>");
     }
 
-    //è£…è½½ç›¸åº”çš„ä¸šåŠ¡æ•°æ®
+    //×°ÔØÏàÓ¦µÄÒµÎñÊı¾İ
     protected void LoadRelatedBusinessData(string strRelateType, string strRelatedID)
     {
         string strHQL;
@@ -534,7 +534,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
         }
     }
 
-    //å–å¾—æ˜¯å¦è‡ªåŠ¨æ¿€æ´»å·¥ä½œæµ
+    //È¡µÃÊÇ·ñ×Ô¶¯¼¤»î¹¤×÷Á÷
     public static string GetWorkflowTemplateAutoActive(string strTemName)
     {
         string strHQL;
@@ -545,7 +545,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
         return ds.Tables[0].Rows[0][0].ToString().Trim();
     }
 
-    //æ‰“å¼€å¸¸è§„æµç¨‹ç›¸å…³æ¨¡æ¿
+    //´ò¿ª³£¹æÁ÷³ÌÏà¹ØÄ£°å
     protected int PopRegularWorkflowTemplateRelatedPage(string strWFTemName)
     {
         string strHQL;
@@ -567,7 +567,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
         }
     }
 
-    //æ‰“å¼€æµç¨‹ç›¸å…³é¡µé¢
+    //´ò¿ªÁ÷³ÌÏà¹ØÒ³Ãæ
     protected int PopRegularWorkflow(string strWFID)
     {
         string strHQL;
@@ -599,7 +599,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
         string strWFName = strWLID + DL_WorkFlow.SelectedItem.Text;
 
-        //å¦‚æœæ•°æ®åº“è¡¨ä¸­å­˜åœ¨æ­¤å·¥ä½œæµçš„æ•°æ®ï¼Œé‚£ä¹ˆæŠŠè¡¨ä¸­æ•°æ®é™„åŠ åˆ°è¡¨å•ä¸­
+        //Èç¹ûÊı¾İ¿â±íÖĞ´æÔÚ´Ë¹¤×÷Á÷µÄÊı¾İ£¬ÄÇÃ´°Ñ±íÖĞÊı¾İ¸½¼Óµ½±íµ¥ÖĞ
         int intMainTableID;
         string strWFXMLFile;
         strTemName = DL_WorkFlowTemplate.SelectedValue.Trim();
@@ -643,7 +643,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
         LB_WLID.Text = strWLID;
 
-        //å¦‚æœæ•°æ®åº“è¡¨ä¸­å­˜åœ¨æ­¤å·¥ä½œæµçš„æ•°æ®ï¼Œé‚£ä¹ˆæŠŠè¡¨ä¸­æ•°æ®é™„åŠ åˆ°è¡¨å•ä¸­
+        //Èç¹ûÊı¾İ¿â±íÖĞ´æÔÚ´Ë¹¤×÷Á÷µÄÊı¾İ£¬ÄÇÃ´°Ñ±íÖĞÊı¾İ¸½¼Óµ½±íµ¥ÖĞ
         int intMainTableID;
         string strWFXMLFile;
 
@@ -766,7 +766,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
             }
             else
             {
-                //èµ‹å…¨å±€å˜é‡ç»™å·¥ä½œæµXMLæ–‡ä»¶
+                //¸³È«¾Ö±äÁ¿¸ø¹¤×÷Á÷XMLÎÄ¼ş
                 try
                 {
                     wfSubmitHandle.AddGlobalVariable(strWLTemName, strWLID, strRelatedType, strRelatedID, "");
@@ -778,10 +778,10 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
                 try
                 {
-                    //åŒæ­¥è¡¨å•æ•°æ®åˆ°ç›¸åº”çš„æ•°æ®åº“è¡¨
+                    //Í¬²½±íµ¥Êı¾İµ½ÏàÓ¦µÄÊı¾İ¿â±í
                     TakeTopXML.FormConvertToTable(int.Parse(strWLID), 0);
 
-                    //ä¿å­˜è¡¨å•æ•°æ®åˆ°æ•°æ®åº“
+                    //±£´æ±íµ¥Êı¾İµ½Êı¾İ¿â
                     ClientScript.RegisterStartupScript(this.GetType(), "SaveData", "<script>saveWFFormDataToDatabase(" + intWLID.ToString() + ");</script>");
                 }
                 catch
@@ -792,7 +792,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
                 {
                     try
                     {
-                        //ä¿å­˜è‡ªå®šä¹‰è¡¨å•æ•°æ®åˆ°ç»Ÿä¸€æµç¨‹æ•°æ®è¡¨ï¼Œç”¨äºæ•°æ®åˆ†æç”¨
+                        //±£´æ×Ô¶¨Òå±íµ¥Êı¾İµ½Í³Ò»Á÷³ÌÊı¾İ±í£¬ÓÃÓÚÊı¾İ·ÖÎöÓÃ
                         string strWFXMLFile = ShareClass.GetWorkflowXMLFile(strWLID);
                         XmlDbWorker.AddFormFromXml(Server.MapPath(strWFXMLFile), int.Parse(strWLID), strWLTemName);
                     }
@@ -905,7 +905,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
             {
                 LB_WLID.Text = strWLID;
 
-                //èµ‹å…¨å±€å˜é‡ç»™å·¥ä½œæµXMLæ–‡ä»¶
+                //¸³È«¾Ö±äÁ¿¸ø¹¤×÷Á÷XMLÎÄ¼ş
                 try
                 {
                     wfSubmitHandle.AddGlobalVariable(strWLTemName, strWLID, strRelatedType, strRelatedID, "");
@@ -914,16 +914,16 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
                 {
                 }
 
-                //ä¿å­˜è¡¨å•æ•°æ®åˆ°æ•°æ®åº“
+                //±£´æ±íµ¥Êı¾İµ½Êı¾İ¿â
                 ClientScript.RegisterStartupScript(this.GetType(), "", "<script>saveWFFormDataToDB();</script>");
 
 
                 try
                 {
-                    //åŒæ­¥è¡¨å•æ•°æ®åˆ°ç›¸åº”çš„æ•°æ®åº“è¡¨
+                    //Í¬²½±íµ¥Êı¾İµ½ÏàÓ¦µÄÊı¾İ¿â±í
                     TakeTopXML.FormConvertToTable(int.Parse(strWLID), 0);
 
-                    //ä¿å­˜è¡¨å•æ•°æ®åˆ°æ•°æ®åº“
+                    //±£´æ±íµ¥Êı¾İµ½Êı¾İ¿â
                     ClientScript.RegisterStartupScript(this.GetType(), "SaveData", "<script>saveWFFormDataToDatabase(" + intWLID.ToString() + ");</script>");
                 }
                 catch
@@ -934,7 +934,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
                 {
                     try
                     {
-                        //ä¿å­˜è‡ªå®šä¹‰è¡¨å•æ•°æ®åˆ°ç»Ÿä¸€æµç¨‹æ•°æ®è¡¨ï¼Œç”¨äºæ•°æ®åˆ†æç”¨
+                        //±£´æ×Ô¶¨Òå±íµ¥Êı¾İµ½Í³Ò»Á÷³ÌÊı¾İ±í£¬ÓÃÓÚÊı¾İ·ÖÎöÓÃ
                         string strWFXMLFile = ShareClass.GetWorkflowXMLFile(strWLID);
                         XmlDbWorker.AddFormFromXml(Server.MapPath(strWFXMLFile), int.Parse(strWLID), strWLTemName);
                     }
@@ -944,7 +944,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
                 }).Start();
 
-                //å®šä¹‰æ­¤å·¥ä½œæµæ˜¯å¦æ˜¯è®¡åˆ’è½¬çš„æµç¨‹
+                //¶¨Òå´Ë¹¤×÷Á÷ÊÇ·ñÊÇ¼Æ»®×ªµÄÁ÷³Ì
                 try
                 {
                     string strHQL;
@@ -994,7 +994,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
         }
         else
         {
-            //èµ‹å…¨å±€å˜é‡ç»™å·¥ä½œæµXMLæ–‡ä»¶
+            //¸³È«¾Ö±äÁ¿¸ø¹¤×÷Á÷XMLÎÄ¼ş
             try
             {
                 wfSubmitHandle.AddGlobalVariable(strTemName, strWLID, strRelatedType, strRelatedID, "");
@@ -1006,10 +1006,10 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
             try
             {
-                //åŒæ­¥è¡¨å•æ•°æ®åˆ°ç›¸åº”çš„æ•°æ®åº“è¡¨
+                //Í¬²½±íµ¥Êı¾İµ½ÏàÓ¦µÄÊı¾İ¿â±í
                 TakeTopXML.FormConvertToTable(int.Parse(strWLID), 0);
 
-                //ä¿å­˜è¡¨å•æ•°æ®åˆ°æ•°æ®åº“
+                //±£´æ±íµ¥Êı¾İµ½Êı¾İ¿â
                 ClientScript.RegisterStartupScript(this.GetType(), "SaveData", "<script>saveWFFormDataToDatabase(" + strWLID + ");</script>");
             }
             catch
@@ -1020,7 +1020,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
             {
                 try
                 {
-                    //ä¿å­˜è‡ªå®šä¹‰è¡¨å•æ•°æ®åˆ°ç»Ÿä¸€æµç¨‹æ•°æ®è¡¨ï¼Œç”¨äºæ•°æ®åˆ†æç”¨
+                    //±£´æ×Ô¶¨Òå±íµ¥Êı¾İµ½Í³Ò»Á÷³ÌÊı¾İ±í£¬ÓÃÓÚÊı¾İ·ÖÎöÓÃ
                     string strWFXMLFile = ShareClass.GetWorkflowXMLFile(strWLID);
                     XmlDbWorker.AddFormFromXml(Server.MapPath(strWFXMLFile), int.Parse(strWLID), strTemName);
                 }
@@ -1061,7 +1061,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
         }
         else
         {
-            //èµ‹å…¨å±€å˜é‡ç»™å·¥ä½œæµXMLæ–‡ä»¶
+            //¸³È«¾Ö±äÁ¿¸ø¹¤×÷Á÷XMLÎÄ¼ş
             try
             {
                 wfSubmitHandle.AddGlobalVariable(strTemName, strWLID, strRelatedType, strRelatedID, "");
@@ -1073,10 +1073,10 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
             try
             {
-                //åŒæ­¥è¡¨å•æ•°æ®åˆ°ç›¸åº”çš„æ•°æ®åº“è¡¨
+                //Í¬²½±íµ¥Êı¾İµ½ÏàÓ¦µÄÊı¾İ¿â±í
                 TakeTopXML.FormConvertToTable(int.Parse(strWLID), 0);
 
-                //ä¿å­˜è¡¨å•æ•°æ®åˆ°æ•°æ®åº“
+                //±£´æ±íµ¥Êı¾İµ½Êı¾İ¿â
                 ClientScript.RegisterStartupScript(this.GetType(), "SaveData", "<script>saveWFFormDataToDatabase(" + strWLID + ");</script>");
             }
             catch
@@ -1087,7 +1087,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
             {
                 try
                 {
-                    //ä¿å­˜è‡ªå®šä¹‰è¡¨å•æ•°æ®åˆ°ç»Ÿä¸€æµç¨‹æ•°æ®è¡¨ï¼Œç”¨äºæ•°æ®åˆ†æç”¨
+                    //±£´æ×Ô¶¨Òå±íµ¥Êı¾İµ½Í³Ò»Á÷³ÌÊı¾İ±í£¬ÓÃÓÚÊı¾İ·ÖÎöÓÃ
                     string strWFXMLFile = ShareClass.GetWorkflowXMLFile(strWLID);
                     XmlDbWorker.AddFormFromXml(Server.MapPath(strWFXMLFile), int.Parse(strWLID), strTemName);
                 }
@@ -1211,7 +1211,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
             string strTriggerID = this.HF_TriggerID.Value;
             int intTriggerID = 0;
             int.TryParse(strTriggerID, out intTriggerID);
-            //å†™å…¥XMLæ–‡ä»¶
+            //Ğ´ÈëXMLÎÄ¼ş
             string strFolder = "Doc\\XML\\";
             if (!System.IO.Directory.Exists(Server.MapPath(strFolder)))
             {
@@ -1221,7 +1221,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
             string strFileName = strFolder + strTemNameR + DateTime.Now.ToString("yyyyMMddHHmmssff") + ".xml";
             strFileName = Server.MapPath(strFileName);
 
-            //è¡¨å•æ•°æ®
+            //±íµ¥Êı¾İ
             string strXMLHQL = string.Empty;
             strXMLHQL = "select * from T_WorkFlow WHERE TemName = '" + strTemNameR + "' order by CreateTime desc";
             DataSet dsTest = ShareClass.GetDataSetFromSql(strXMLHQL, "XMLTest");
@@ -1244,7 +1244,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
         }
         else
         {
-            xdoc.Text = "è¯·å…ˆæ³¨å†Œè¡¨å•æ¨¡æ¿.";
+            xdoc.Text = "ÇëÏÈ×¢²á±íµ¥Ä£°å.";
         }
     }
 
@@ -1270,7 +1270,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
         DL_WLType.Items.Insert(0, new ListItem("--Select--", ""));
 
-        //åˆ—è¡¨é¡¹å¢åŠ æç¤º
+        //ÁĞ±íÏîÔö¼ÓÌáÊ¾
         //PreREnderListBox();
     }
 
@@ -1307,12 +1307,12 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
         DL_WorkFlowTemplate.Items.Insert(0, new ListItem("--Select--", ""));
 
-        //åˆ—è¡¨é¡¹å¢åŠ æç¤º
+        //ÁĞ±íÏîÔö¼ÓÌáÊ¾
         //PreREnderListBox();
     }
 
 
-    //å–å¾—å·¥ä½œæµæ¨¡æ¿è®¾è®¡ç±»å‹
+    //È¡µÃ¹¤×÷Á÷Ä£°åÉè¼ÆÀàĞÍ
     public static string GetWorkflowTemplateType(string strTemName)
     {
         string strHQL;
@@ -1409,7 +1409,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
         DL_WorkFlow.Items.Insert(0, new ListItem("--Select--", ""));
 
-        //åˆ—è¡¨é¡¹å¢åŠ æç¤º
+        //ÁĞ±íÏîÔö¼ÓÌáÊ¾
         //PreREnderListBox();
     }
 
@@ -1450,14 +1450,14 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
         DL_WorkFlow.Items.Insert(0, new ListItem("--Select--", ""));
 
-        //åˆ—è¡¨é¡¹å¢åŠ æç¤º
+        //ÁĞ±íÏîÔö¼ÓÌáÊ¾
         //PreREnderListBox();
     }
 
-    //åˆ—è¡¨é¡¹å¢åŠ æç¤º
+    //ÁĞ±íÏîÔö¼ÓÌáÊ¾
     protected void PreREnderListBox()
     {
-        //åˆ—è¡¨é¡¹å¢åŠ æç¤º
+        //ÁĞ±íÏîÔö¼ÓÌáÊ¾
         DL_WLType.PreRender += DL_WLType_PreRender;
 
         DL_WorkFlowTemplate.PreRender += DL_WorkFlowTemplate_PreRender;
@@ -1465,7 +1465,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
         //DL_WorkFlow.PreRender += DL_WorkFlow_PreRender;
     }
 
-    //åˆ—è¡¨é¡¹å¢åŠ æç¤º
+    //ÁĞ±íÏîÔö¼ÓÌáÊ¾
     private void DL_WorkFlowTemplate_PreRender(object sender, System.EventArgs e)
     {
         foreach (ListItem item in DL_WorkFlowTemplate.Items)
@@ -1474,7 +1474,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
         }
     }
 
-    //åˆ—è¡¨é¡¹å¢åŠ æç¤º
+    //ÁĞ±íÏîÔö¼ÓÌáÊ¾
     private void DL_WLType_PreRender(object sender, System.EventArgs e)
     {
         foreach (ListItem item in DL_WLType.Items)
@@ -1483,7 +1483,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
         }
     }
 
-    //åˆ—è¡¨é¡¹å¢åŠ æç¤º
+    //ÁĞ±íÏîÔö¼ÓÌáÊ¾
     private void DL_WorkFlow_PreRender(object sender, System.EventArgs e)
     {
         foreach (ListItem item in DL_WorkFlow.Items)
@@ -1608,7 +1608,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
     protected bool GetWorkFlowStatus(string strWLID)
     {
-        string strHQL = "from WorkFlowStepDetail as workFlowStepDetail where workFlowStepDetail.WLID = " + strWLID + " and workFlowStepDetail.Status = 'æ‰¹å‡†'";
+        string strHQL = "from WorkFlowStepDetail as workFlowStepDetail where workFlowStepDetail.WLID = " + strWLID + " and workFlowStepDetail.Status = 'Approved'";
         WorkFlowStepDetailBLL workFlowStepDetailBLL = new WorkFlowStepDetailBLL();
 
         IList lst = workFlowStepDetailBLL.GetAllWorkFlowStepDetails(strHQL);

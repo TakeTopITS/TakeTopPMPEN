@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -29,7 +29,7 @@ public partial class TTGoodsReturnReportForSale : System.Web.UI.Page
         string strUserName;
         string strUserCode = Session["UserCode"].ToString();
 
-        //this.Title = "ç‰©æ–™é”€å”®æŠ¥è¡¨";
+        //this.Title = "ÎïÁÏÏúÊÛ±¨±í";
 
         LB_UserCode.Text = strUserCode;
         strUserName = ShareClass.GetUserName(strUserCode);
@@ -114,7 +114,7 @@ public partial class TTGoodsReturnReportForSale : System.Web.UI.Page
         LB_Sql.Text = strHQL;
     }
 
-    //å–å¾—åŒä¸€é”€å”®æ˜Žç»†çš„é€€è´§é‡
+    //È¡µÃÍ¬Ò»ÏúÊÛÃ÷Ï¸µÄÍË»õÁ¿
     protected decimal getSaleOrderReturnNumber(string strSORecordID)
     {
         string strHQL;
@@ -139,7 +139,7 @@ public partial class TTGoodsReturnReportForSale : System.Web.UI.Page
         }
     }
 
-    //å–å¾—åŒä¸€é”€å”®æ˜Žç»†çš„é€€è´§é‡
+    //È¡µÃÍ¬Ò»ÏúÊÛÃ÷Ï¸µÄÍË»õÁ¿
     protected decimal getSaleOrderRealReceiveNumber(string strSORecordID)
     {
         string strHQL;
@@ -198,23 +198,23 @@ public partial class TTGoodsReturnReportForSale : System.Web.UI.Page
 
         strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthorityAsset(strUserCode);
 
-        strHQL = @"Select  B.ReturnName 'åç§°' 
-            ,B.OperatorName 'ä¸šåŠ¡å‘˜'
-            ,B.CustomerName 'å®¢æˆ·'
-            ,B.ReturnTime 'æ—¶é—´'
-            ,A.ID 'ç¼–å·'
-            ,A.GoodsCode 'ä»£ç '
-            ,A.GoodsName 'å•†å“åç§°'
-            ,A.Number 'æ•°é‡'
-            ,A.ModelNumber 'åž‹å·'
-            ,A.Spec 'è§„æ ¼'
-            ,A.UnitName 'å•ä½'
-            ,A.Price 'å•ä»·'
-            ,A.Amount 'é‡‘é¢'
-            ,B.CurrencyType 'å¸åˆ«'
-            ,B.CarCode 'è½¦å·'
-            ,B.Driver 'å¸æœº'
-            ,A.ReturnReason 'å¤‡æ³¨'
+        strHQL = @"Select  B.ReturnName 'Ãû³Æ' 
+            ,B.OperatorName 'ÒµÎñÔ±'
+            ,B.CustomerName 'Customer'
+            ,B.ReturnTime 'Ê±¼ä'
+            ,A.ID '±àºÅ'
+            ,A.GoodsCode '´úÂë'
+            ,A.GoodsName 'ÉÌÆ·Ãû³Æ'
+            ,A.Number 'ÊýÁ¿'
+            ,A.ModelNumber 'ÐÍºÅ'
+            ,A.Spec '¹æ¸ñ'
+            ,A.UnitName 'µ¥Î»'
+            ,A.Price 'µ¥¼Û'
+            ,A.Amount '½ð¶î'
+            ,B.CurrencyType '±Ò±ð'
+            ,B.CarCode '³µºÅ'
+            ,B.Driver 'Ë¾»ú'
+            ,A.ReturnReason '±¸×¢'
             from T_GoodsReturnDetail A,T_GoodsReturnOrder B where A.ROID = B.ROID And B.Type = 'SALE'";
 
         strHQL += " and to_char(B.ReturnTime,'yyyymmdd')  >= " + "'" + strStartTime + "'" + "  and to_char(B.ReturnTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
@@ -232,9 +232,9 @@ public partial class TTGoodsReturnReportForSale : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_GoodsSaleRecord");
         DataTable dtSaleOrder = ds.Tables[0];
 
-        Export3Excel(dtSaleOrder, "é”€å”®é€€è´§æŠ¥è¡¨.xls");
+        Export3Excel(dtSaleOrder, "ÏúÊÛÍË»õ±¨±í.xls");
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¯¼å‡ºæˆåŠŸï¼');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('µ¼³ö³É¹¦£¡');", true);
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -30,7 +30,7 @@ public partial class TTProjectReportList : System.Web.UI.Page
         {
             string strHQL;
 
-            strHQL = "Select HomeModuleName, PageName || " + "'" + strProjectID + "' as ModulePage  From T_ProModuleLevelForPage Where ParentModule = '项目报表列表' and LangCode = '" + strLangCode + "' and Visible ='YES' Order By SortNumber ASC";
+            strHQL = "Select HomeModuleName, PageName || " + "'" + strProjectID + "' as ModulePage  From T_ProModuleLevelForPage Where ParentModule = 'ProjectReportList' and LangCode = '" + strLangCode + "' and Visible ='YES' Order By SortNumber ASC";
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProModuleLevelForPage");
             DataGrid1.DataSource = ds;
             DataGrid1.DataBind();

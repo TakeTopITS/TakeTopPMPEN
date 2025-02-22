@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectRiskManage.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectRiskManage.aspx.cs"
     Inherits="TTProjectRiskManage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -105,24 +105,24 @@
                                                 GridLines="None" OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="8"
                                                 Width="100%" ShowHeader="false">
                                                 <Columns>
-                                                    <asp:BoundColumn DataField="ID" HeaderText="åºå·">
+                                                    <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                     </asp:BoundColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="ProjectID" DataNavigateUrlFormatString="TTProjectDetailView.aspx?ProjectID={0}"
-                                                        DataTextField="ProjectID" HeaderText="é¡¹ç›®å·" Target="_blank">
+                                                        DataTextField="ProjectID" HeaderText="ÏîÄ¿ºÅ" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                     </asp:HyperLinkColumn>
-                                                    <asp:BoundColumn DataField="RiskLevel" HeaderText="çº§åˆ«">
+                                                    <asp:BoundColumn DataField="RiskLevel" HeaderText="¼¶±ð">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                     </asp:BoundColumn>
                                                     <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTProjectRiskDetail.aspx?ID={0}"
-                                                        DataTextField="Risk" HeaderText="é£Žé™©åç§°" Target="_blank">
+                                                        DataTextField="Risk" HeaderText="·çÏÕÃû³Æ" Target="_blank">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="45%" />
                                                     </asp:HyperLinkColumn>
-                                                    <asp:BoundColumn DataField="EffectDate" HeaderText="é¢„è®¡å‘ç”Ÿæ—¶é—´" DataFormatString="{0:yyyy/MM/dd}">
+                                                    <asp:BoundColumn DataField="EffectDate" HeaderText="Ô¤¼Æ·¢ÉúÊ±¼ä" DataFormatString="{0:yyyy/MM/dd}">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:BoundColumn>
-                                                    <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                    <asp:TemplateColumn HeaderText="×´Ì¬">
                                                         <ItemTemplate>
                                                             <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                         </ItemTemplate>

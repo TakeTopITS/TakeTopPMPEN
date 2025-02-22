@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInfor_ThirtPart.aspx.cs" Inherits="TTUserInfor_ThirtPart" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTUserInfor_ThirtPart.aspx.cs" Inherits="TTUserInfor_ThirtPart" %>
 
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -7,7 +7,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>È°πÁõÆÊàêÂëòËµÑÊñô</title>
+    <title>œÓƒø≥…‘±◊ ¡œ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -218,47 +218,47 @@
                                                                         Width="100%" Height="1px" CellPadding="4" ForeColor="#333333" GridLines="None" PageSize="25"
                                                                         ShowHeader="false">
                                                                         <Columns>
-                                                                            <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='‰øÆÊîπ' /&gt;&lt;/div&gt;">
+                                                                            <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='–ﬁ∏ƒ' /&gt;&lt;/div&gt;">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                             </asp:ButtonColumn>
                                                                             <asp:TemplateColumn HeaderText="Delete">
                                                                                 <ItemTemplate>
-                                                                                    <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Âà†Èô§' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                                                    <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                                                 </ItemTemplate>
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                             </asp:TemplateColumn>
-                                                                            <asp:BoundColumn DataField="UserCode" HeaderText="‰ª£Á†Å">
+                                                                            <asp:BoundColumn DataField="UserCode" HeaderText="¥˙¬Î">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                             </asp:BoundColumn>
                                                                             <asp:HyperLinkColumn DataNavigateUrlField="UserCode" DataNavigateUrlFormatString="TTUserInforView.aspx?UserCode={0}"
-                                                                                DataTextField="UserName" HeaderText="ÂßìÂêç" Target="_blank">
+                                                                                DataTextField="UserName" HeaderText="–’√˚" Target="_blank">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                             </asp:HyperLinkColumn>
-                                                                            <asp:BoundColumn DataField="Gender" HeaderText="ÊÄßÂà´">
+                                                                            <asp:BoundColumn DataField="Gender" HeaderText="–‘±">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                             </asp:BoundColumn>
-                                                                            <%--<asp:BoundColumn DataField="Age" HeaderText="Âπ¥ÈæÑ">
+                                                                            <%--<asp:BoundColumn DataField="Age" HeaderText="ƒÍ¡‰">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                     </asp:BoundColumn>--%>
-                                                                            <asp:BoundColumn DataField="DepartCode" HeaderText="ÈÉ®Èó®‰ª£Á†Å">
+                                                                            <asp:BoundColumn DataField="DepartCode" HeaderText="≤ø√≈¥˙¬Î">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:BoundColumn DataField="DepartName" HeaderText="ÈÉ®Èó®ÂêçÁß∞">
+                                                                            <asp:BoundColumn DataField="DepartName" HeaderText="≤ø√≈√˚≥∆">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:BoundColumn DataField="Duty" HeaderText="ËÅåË¥£">
+                                                                            <asp:BoundColumn DataField="Duty" HeaderText="÷∞‘">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:BoundColumn DataField="OfficePhone" HeaderText="ÂäûÂÖ¨ÁîµËØù">
+                                                                            <asp:BoundColumn DataField="OfficePhone" HeaderText="∞Ïπ´µÁª∞">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:BoundColumn DataField="MobilePhone" HeaderText="ÁßªÂä®ÁîµËØù">
+                                                                            <asp:BoundColumn DataField="MobilePhone" HeaderText="“∆∂ØµÁª∞">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:BoundColumn DataField="JoinDate" HeaderText="Âä†ÂÖ•Êó•Êúü" DataFormatString="{0:yyyy/MM/dd}">
+                                                                            <asp:BoundColumn DataField="JoinDate" HeaderText="º”»Î»’∆⁄" DataFormatString="{0:yyyy/MM/dd}">
                                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                             </asp:BoundColumn>
-                                                                            <asp:TemplateColumn HeaderText="Áä∂ÊÄÅ">
+                                                                            <asp:TemplateColumn HeaderText="◊¥Ã¨">
                                                                                 <ItemTemplate>
                                                                                     <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                 </ItemTemplate>
@@ -301,7 +301,7 @@
                                 cellspacing="0">
                                 <tr>
                                     <td style="width: 15%; text-align: right" class="formItemBgStyle">
-                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>Ôºö
+                                        <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>£∫
                                     </td>
                                     <td class="formItemBgStyle">
                                         <asp:TextBox ID="TB_UserCode" Width="220px" runat="server"></asp:TextBox>
@@ -315,7 +315,7 @@
                                 </tr>
                                 <tr>
                                     <td style="text-align: right" class="formItemBgStyle">
-                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YongHuMing%>"></asp:Label>Ôºö
+                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,YongHuMing%>"></asp:Label>£∫
                                     </td>
                                     <td class="formItemBgStyle">
                                         <asp:TextBox ID="TB_UserName" Width="220px" runat="server"></asp:TextBox>
@@ -327,19 +327,19 @@
                                 </tr>
                                 <tr>
                                     <td style="text-align: right" class="formItemBgStyle">
-                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,XingBie%>"></asp:Label>Ôºö
+                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,XingBie%>"></asp:Label>£∫
                                     </td>
                                     <td style="text-align: left" class="formItemBgStyle">
                                         <asp:DropDownList ID="DL_Gender" runat="server" AutoPostBack="True">
-                                            <asp:ListItem Selected="True" Value="Áî∑" Text="<%$ Resources:lang,Nan%>" />
-                                            <asp:ListItem Value="Â•≥" Text="<%$ Resources:lang,Nv%>" />
+                                            <asp:ListItem Selected="True" Value="Male" Text="<%$ Resources:lang,Nan%>" />
+                                            <asp:ListItem Value="Female" Text="<%$ Resources:lang,Nv%>" />
                                         </asp:DropDownList>
                                     </td>
                                     <td class="formItemBgStyle"></td>
                                 </tr>
                                 <tr>
                                     <td style="text-align: right" class="formItemBgStyle">
-                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,NianLing%>"></asp:Label>Ôºö
+                                        <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,NianLing%>"></asp:Label>£∫
                                     </td>
                                     <td style="text-align: left" class="formItemBgStyle">
                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="TB_Age" runat="server" Precision="0" Width="50px" OnBlur=""
@@ -349,7 +349,7 @@
                                 </tr>
                                 <tr>
                                     <td style="text-align: right" class="formItemBgStyle">
-                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,MiMa%>"></asp:Label>Ôºö
+                                        <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,MiMa%>"></asp:Label>£∫
                                     </td>
                                     <td class="formItemBgStyle">
                                         <asp:TextBox ID="TB_Password" runat="server" Width="220px"></asp:TextBox>
@@ -361,7 +361,7 @@
                                 </tr>
                                 <tr>
                                     <td style="text-align: right" class="formItemBgStyle">
-                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZhiWu%>"></asp:Label>Ôºö
+                                        <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZhiWu%>"></asp:Label>£∫
                                     </td>
                                     <td class="formItemBgStyle">
                                         <asp:TextBox ID="TB_Duty" runat="server" Width="220px"></asp:TextBox>
@@ -385,7 +385,7 @@
                                 </tr>
                                 <tr>
                                     <td style="text-align: right" class="formItemBgStyle">
-                                        <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,ZiBuMen%>"></asp:Label>Ôºö
+                                        <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,ZiBuMen%>"></asp:Label>£∫
                                     </td>
                                     <td class="formItemBgStyle">
                                         <asp:TextBox ID="TB_ChildDepartment" runat="server" Width="220px"></asp:TextBox>
@@ -395,7 +395,7 @@
                                 </tr>
                                 <tr>
                                     <td style="text-align: right" class="formItemBgStyle">
-                                        <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,BanGongDianHua%>"></asp:Label>Ôºö
+                                        <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,BanGongDianHua%>"></asp:Label>£∫
                                     </td>
                                     <td class="formItemBgStyle">
                                         <asp:TextBox ID="TB_OfficePhone" runat="server" Width="220px"></asp:TextBox>
@@ -405,7 +405,7 @@
                                 </tr>
                                 <tr>
                                     <td style="height: 28px; text-align: right" class="formItemBgStyle">
-                                        <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,ShouJi%>"></asp:Label>Ôºö
+                                        <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,ShouJi%>"></asp:Label>£∫
                                     </td>
                                     <td class="formItemBgStyle">
                                         <asp:TextBox ID="TB_MobilePhone" runat="server" Width="220px"></asp:TextBox>
@@ -416,7 +416,7 @@
                                     <td style="height: 28px; text-align: left;" class="formItemBgStyle"></td>
                                 </tr>
                                 <tr>
-                                    <td style="text-align: right" class="formItemBgStyle">E_MailÔºö
+                                    <td style="text-align: right" class="formItemBgStyle">E_Mail£∫
                                     </td>
                                     <td class="formItemBgStyle">
                                         <asp:TextBox ID="TB_EMail" runat="server" Width="220px"></asp:TextBox>
@@ -428,7 +428,7 @@
                                 </tr>
                                 <tr>
                                     <td style="height: 23px; text-align: right" class="formItemBgStyle">
-                                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,GongZuoFanWei%>"></asp:Label>Ôºö
+                                        <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,GongZuoFanWei%>"></asp:Label>£∫
                                     </td>
                                     <td colspan="3" class="auto-style1">
                                         <asp:TextBox ID="TB_WorkScope" runat="server" Width="99%"></asp:TextBox>
@@ -437,20 +437,20 @@
                                 <tr>
                                     <td class="formItemBgStyle" style="width: 15%; text-align: right">
                                         <asp:Label ID="Label134" runat="server" Text="<%$ Resources:lang,UnitSalary%>"></asp:Label>
-                                        Ôºö</td>
+                                        £∫</td>
                                     <td class="formItemBgStyle">
                                         <NickLee:NumberBox ID="NB_HourlySalary" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Width="80px">0.00</NickLee:NumberBox>
                                     </td>
                                     <td class="formItemBgStyle" style="text-align: Right;" width="15%">
                                         <asp:Label ID="Label135" runat="server" Text="<%$ Resources:lang,YueXin %>"></asp:Label>
-                                        Ôºö</td>
+                                        £∫</td>
                                     <td class="formItemBgStyle" style="text-align: left;">
                                         <NickLee:NumberBox ID="NB_MonthlySalary" runat="server" MaxAmount="1000000000000" MinAmount="-1000000000000" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="" Width="80px">0.00</NickLee:NumberBox>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td style="text-align: right" class="formItemBgStyle">
-                                        <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,YongGongLeiXing%>"></asp:Label>Ôºö</td>
+                                        <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,YongGongLeiXing%>"></asp:Label>£∫</td>
                                     <td colspan="2" style="text-align: left" class="formItemBgStyle">
                                         <asp:DropDownList ID="DL_WorkType" runat="server" DataTextField="TypeName" DataValueField="TypeName">
                                         </asp:DropDownList>
@@ -460,7 +460,7 @@
 
                                 <tr>
                                     <td style="height: 12px; text-align: right;" class="formItemBgStyle">
-                                        <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,JiaRuRiQi%>"></asp:Label>Ôºö
+                                        <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,JiaRuRiQi%>"></asp:Label>£∫
                                     </td>
                                     <td colspan="2" style="height: 12px; text-align: left;" class="formItemBgStyle">
 
@@ -474,7 +474,7 @@
                                 <tr>
                                     <td class="formItemBgStyle" style="text-align: right;">
                                         <asp:Label ID="Label46" runat="server" Text="<%$ Resources:lang,JieMianYuYan %>"></asp:Label>
-                                        Ôºö</td>
+                                        £∫</td>
                                     <td class="formItemBgStyle" colspan="2" style="text-align: left;">
                                         <asp:DropDownList ID="ddlLangSwitcher" runat="server" DataValueField="LangCode" DataTextField="Language" AutoPostBack="True"></asp:DropDownList>
 
@@ -483,13 +483,13 @@
                                 </tr>
                                 <tr>
                                     <td style="text-align: right" class="formItemBgStyle">
-                                        <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>Ôºö
+                                        <asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£∫
                                     </td>
                                     <td colspan="2" style="text-align: left;" class="formItemBgStyle">
                                         <asp:DropDownList ID="DL_Status" runat="server">
-                                            <asp:ListItem Value="Âú®ËÅå" Text="<%$ Resources:lang,ZaiZhi%>" />
-                                            <asp:ListItem Value="Á¶ªËÅå" Text="<%$ Resources:lang,LiZhi%>" />
-                                            <asp:ListItem Value="ÁªàÊ≠¢" Text="<%$ Resources:lang,ZhongZhi%>" />
+                                            <asp:ListItem Value="Employed" Text="<%$ Resources:lang,ZaiZhi%>" />
+                                            <asp:ListItem Value="Resign" Text="<%$ Resources:lang,LiZhi%>" />
+                                            <asp:ListItem Value="Stop" Text="<%$ Resources:lang,ZhongZhi%>" />
                                         </asp:DropDownList>
                                     </td>
                                     <td style="text-align: left;" class="formItemBgStyle"></td>
@@ -507,7 +507,7 @@
                                 </tr>
                                 <tr>
                                     <td style="text-align: right" class="formItemBgStyle">
-                                        <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,ZhaoPianShangChuan%>"></asp:Label>Ôºö
+                                        <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,ZhaoPianShangChuan%>"></asp:Label>£∫
                                     </td>
                                     <td colspan="3" style="text-align: left" class="formItemBgStyle">
                                         <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
@@ -527,7 +527,7 @@
 
                                 <tr style="display: none;">
                                     <td class="formItemBgStyle" style="height: 12px; text-align: right;">
-                                        <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,XingZhi%>"></asp:Label>Ôºö
+                                        <asp:Label ID="Label17" runat="server" Text="<%$ Resources:lang,XingZhi%>"></asp:Label>£∫
                                     </td>
                                     <td class="formItemBgStyle" colspan="2" style="height: 12px; text-align: left;">
                                         <asp:DropDownList ID="DL_UserType" Enabled="false" runat="server">
@@ -540,7 +540,7 @@
                                 </tr>
                                 <tr style="display: none;">
                                     <td class="formItemBgStyle" style="height: 12px; text-align: right;">
-                                        <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,ZhuJieMianFengGe%>"></asp:Label>Ôºö</td>
+                                        <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,ZhuJieMianFengGe%>"></asp:Label>£∫</td>
                                     <td class="formItemBgStyle" colspan="2" style="height: 12px; text-align: left;">
 
                                         <asp:DropDownList ID="DL_SystemMDIStyle" runat="server" DataTextField="MDIStyle" DataValueField="MDIStyle">
@@ -550,7 +550,7 @@
                                 </tr>
                                 <tr style="display: none;">
                                     <td class="formItemBgStyle" style="height: 12px; text-align: right;">
-                                        <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,KeDengLuSheBei%>"></asp:Label>Ôºö</td>
+                                        <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,KeDengLuSheBei%>"></asp:Label>£∫</td>
                                     <td class="formItemBgStyle" colspan="2" style="height: 12px; text-align: left;">
                                         <asp:DropDownList ID="DL_AllowDevice" runat="server" Enabled="false">
                                             <asp:ListItem Value="ALL" Text="<%$ Resources:lang,QuanBu%>" />
@@ -563,7 +563,7 @@
 
                                 <tr style="display: none;">
                                     <td class="formItemBgStyle" style="height: 12px; text-align: right;">
-                                        <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,CanKaoGongHao%>"></asp:Label>Ôºö
+                                        <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,CanKaoGongHao%>"></asp:Label>£∫
                                     </td>
                                     <td class="formItemBgStyle" colspan="2" style="height: 12px; text-align: left;">
                                         <asp:TextBox ID="TB_RefUserCode" runat="server" Width="220px"></asp:TextBox>
@@ -572,7 +572,7 @@
                                 </tr>
                                 <tr style="display: none;">
                                     <td class="formItemBgStyle" style="height: 12px; text-align: right;">
-                                        <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,RTXZhangHu%>"></asp:Label>Ôºö</td>
+                                        <asp:Label ID="Label21" runat="server" Text="<%$ Resources:lang,RTXZhangHu%>"></asp:Label>£∫</td>
                                     <td class="formItemBgStyle" colspan="2" style="height: 12px; text-align: left;">
                                         <asp:TextBox ID="TB_UserRTXCode" runat="server" Width="220px"></asp:TextBox>
                                     </td>
@@ -580,7 +580,7 @@
                                 </tr>
                                 <tr style="display: none;">
                                     <td class="formItemBgStyle" style="height: 12px; text-align: right;">
-                                        <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,ShunXuHao%>"></asp:Label>Ôºö
+                                        <asp:Label ID="Label22" runat="server" Text="<%$ Resources:lang,ShunXuHao%>"></asp:Label>£∫
                                     </td>
                                     <td class="formItemBgStyle" colspan="2" style="height: 12px; text-align: left;">
                                         <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="-1000000000000" ID="NB_SortNumber" runat="server" OnBlur="" OnFocus="" OnKeyPress=""
@@ -627,13 +627,13 @@
                             class="formBgStyle" cellpadding="3" cellspacing="0">
                             <tr>
                                 <td style="width: 15%; text-align: right" class="formItemBgStyle">
-                                    <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,YingWenMing%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,YingWenMing%>"></asp:Label>£∫
                                 </td>
                                 <td class="formItemBgStyle">
                                     <asp:TextBox ID="TB_EnglishName" Width="220px" runat="server"></asp:TextBox>
                                 </td>
                                 <td style="text-align: Right;" width="15%" class="formItemBgStyle">
-                                    <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,MinZu%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,MinZu%>"></asp:Label>£∫
                                 </td>
                                 <td style="text-align: left;" class="formItemBgStyle">
                                     <asp:TextBox ID="TB_Nationality" Width="220px" runat="server"></asp:TextBox>
@@ -641,13 +641,13 @@
                             </tr>
                             <tr>
                                 <td style="width: 100px; text-align: right" class="formItemBgStyle">
-                                    <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,ChuShengDi%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,ChuShengDi%>"></asp:Label>£∫
                                 </td>
                                 <td class="formItemBgStyle">
                                     <asp:TextBox ID="TB_NativePlace" Width="220px" runat="server"></asp:TextBox>
                                 </td>
                                 <td style="text-align: Right;" width="130px" class="formItemBgStyle">
-                                    <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,HuKouSuoZaiDi%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label28" runat="server" Text="<%$ Resources:lang,HuKouSuoZaiDi%>"></asp:Label>£∫
                                 </td>
                                 <td style="text-align: left;" width="130px" class="formItemBgStyle">
                                     <asp:TextBox ID="TB_HuKou" Width="220px" runat="server"></asp:TextBox>
@@ -655,7 +655,7 @@
                             </tr>
                             <tr>
                                 <td style="width: 100px; text-align: right" class="formItemBgStyle">
-                                    <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,JuZhuDi%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,JuZhuDi%>"></asp:Label>£∫
                                 </td>
                                 <td class="formItemBgStyle">
                                     <asp:TextBox ID="TB_Residency" Width="220px" runat="server"></asp:TextBox>
@@ -665,7 +665,7 @@
                             </tr>
                             <tr>
                                 <td style="width: 100px; text-align: right" class="formItemBgStyle">
-                                    <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,DiZhi%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,DiZhi%>"></asp:Label>£∫
                                 </td>
                                 <td colspan="3" class="formItemBgStyle">
                                     <asp:TextBox ID="TB_Address" runat="server" Width="492px"></asp:TextBox>
@@ -673,7 +673,7 @@
                             </tr>
                             <tr>
                                 <td style="width: 100px; text-align: right" class="formItemBgStyle">
-                                    <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,ShengRi%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,ShengRi%>"></asp:Label>£∫
                                 </td>
                                 <td class="formItemBgStyle">
 
@@ -684,24 +684,24 @@
 
                                 </td>
                                 <td style="text-align: Right;" width="130px" class="formItemBgStyle">
-                                    <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,HunYinZhuangTai%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,HunYinZhuangTai%>"></asp:Label>£∫
                                 </td>
                                 <td style="text-align: left;" width="130px" class="formItemBgStyle">
                                     <asp:DropDownList ID="DL_MaritalStatus" runat="server">
-                                        <asp:ListItem Value="Êú™Â©ö" Text="<%$ Resources:lang,WeiHun%>" />
-                                        <asp:ListItem Value="Â∑≤Â©ö" Text="<%$ Resources:lang,YiHun%>" />
+                                        <asp:ListItem Value="Unmarried" Text="<%$ Resources:lang,WeiHun%>" />
+                                        <asp:ListItem Value="Married" Text="<%$ Resources:lang,YiHun%>" />
                                     </asp:DropDownList>
                                 </td>
                             </tr>
                             <tr>
                                 <td style="width: 100px; text-align: right" class="formItemBgStyle">
-                                    <asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,XueLi%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,XueLi%>"></asp:Label>£∫
                                 </td>
                                 <td class="formItemBgStyle">
                                     <asp:TextBox ID="TB_Degree" Width="220px" runat="server"></asp:TextBox>
                                 </td>
                                 <td style="text-align: Right;" width="130px" class="formItemBgStyle">
-                                    <asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,ZhuanYe%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,ZhuanYe%>"></asp:Label>£∫
                                 </td>
                                 <td style="text-align: left;" width="130px" class="formItemBgStyle">
                                     <asp:TextBox ID="TB_Major" Width="220px" runat="server"></asp:TextBox>
@@ -709,7 +709,7 @@
                             </tr>
                             <tr>
                                 <td style="width: 100px; text-align: right" class="formItemBgStyle">
-                                    <asp:Label ID="Label35" runat="server" Text="<%$ Resources:lang,BiYeXueXiao%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label35" runat="server" Text="<%$ Resources:lang,BiYeXueXiao%>"></asp:Label>£∫
                                 </td>
                                 <td colspan="3" class="formItemBgStyle">
                                     <asp:TextBox ID="TB_GraduateSchool" runat="server" Width="492px"></asp:TextBox>
@@ -717,13 +717,13 @@
                             </tr>
                             <tr>
                                 <td style="width: 100px; text-align: right" class="formItemBgStyle">
-                                    <asp:Label ID="Label36" runat="server" Text="<%$ Resources:lang,ShenFenZhengHao%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label36" runat="server" Text="<%$ Resources:lang,ShenFenZhengHao%>"></asp:Label>£∫
                                 </td>
                                 <td class="formItemBgStyle">
                                     <asp:TextBox ID="TB_IDCard" Width="220px" runat="server"></asp:TextBox>
                                 </td>
                                 <td style="text-align: Right;" width="130px" class="formItemBgStyle">
-                                    <asp:Label ID="Label37" runat="server" Text="<%$ Resources:lang,XueXing%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label37" runat="server" Text="<%$ Resources:lang,XueXing%>"></asp:Label>£∫
                                 </td>
                                 <td style="text-align: left;" width="130px" class="formItemBgStyle">
                                     <asp:TextBox ID="TB_BloodType" Width="220px" runat="server"></asp:TextBox>
@@ -731,26 +731,26 @@
                             </tr>
                             <tr>
                                 <td style="width: 100px; text-align: right" class="formItemBgStyle">
-                                    <asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,ShenGao%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,ShenGao%>"></asp:Label>£∫
                                 </td>
                                 <td class="formItemBgStyle">
                                     <NickLee:NumberBox ID="NB_Height" runat="server" Width="40px" OnBlur="" OnFocus=""
                                         OnKeyPress="" PositiveColor="" MinAmount="0" Precision="0">0</NickLee:NumberBox>
                                 </td>
                                 <td style="text-align: Right;" width="130px" class="formItemBgStyle">
-                                    <asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,YuYan%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,YuYan%>"></asp:Label>£∫
                                 </td>
                                 <td style="text-align: left;" width="130px" class="formItemBgStyle"></td>
                             </tr>
                             <tr>
                                 <td style="width: 100px; text-align: right" class="formItemBgStyle">
-                                    <asp:Label ID="Label40" runat="server" Text="<%$ Resources:lang,JinJiLianXiRen%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label40" runat="server" Text="<%$ Resources:lang,JinJiLianXiRen%>"></asp:Label>£∫
                                 </td>
                                 <td class="formItemBgStyle">
                                     <asp:TextBox ID="TB_UrgencyPerson" Width="220px" runat="server"></asp:TextBox>
                                 </td>
                                 <td style="text-align: Right;" width="130px" class="formItemBgStyle">
-                                    <asp:Label ID="Label41" runat="server" Text="<%$ Resources:lang,LianXiDianHua%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label41" runat="server" Text="<%$ Resources:lang,LianXiDianHua%>"></asp:Label>£∫
                                 </td>
                                 <td style="text-align: left;" width="130px" class="formItemBgStyle">
                                     <asp:TextBox ID="TB_UrgencyCall" Width="220px" runat="server"></asp:TextBox>
@@ -758,13 +758,13 @@
                             </tr>
                             <tr>
                                 <td style="width: 100px; text-align: right" class="formItemBgStyle">
-                                    <asp:Label ID="Label42" runat="server" Text="<%$ Resources:lang,JieShaoRen%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label42" runat="server" Text="<%$ Resources:lang,JieShaoRen%>"></asp:Label>£∫
                                 </td>
                                 <td class="formItemBgStyle">
                                     <asp:TextBox ID="TB_Introducer" Width="220px" runat="server"></asp:TextBox>
                                 </td>
                                 <td style="text-align: Right;" width="130px" class="formItemBgStyle">
-                                    <asp:Label ID="Label43" runat="server" Text="<%$ Resources:lang,JieShaoRenBuMen%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label43" runat="server" Text="<%$ Resources:lang,JieShaoRenBuMen%>"></asp:Label>£∫
                                 </td>
                                 <td style="text-align: left;" width="130px" class="formItemBgStyle">
                                     <asp:TextBox ID="TB_IntroducerDepartment" Width="220px" runat="server"></asp:TextBox>
@@ -772,7 +772,7 @@
                             </tr>
                             <tr>
                                 <td style="width: 100px; text-align: right" class="formItemBgStyle">
-                                    <asp:Label ID="Label44" runat="server" Text="<%$ Resources:lang,YuJieShaoRenGuanXi%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label44" runat="server" Text="<%$ Resources:lang,YuJieShaoRenGuanXi%>"></asp:Label>£∫
                                 </td>
                                 <td class="formItemBgStyle">
                                     <asp:TextBox ID="TB_IntroducerRelation" Width="220px" runat="server"></asp:TextBox>
@@ -782,7 +782,7 @@
                             </tr>
                             <tr>
                                 <td style="width: 100px; text-align: right" class="formItemBgStyle">
-                                    <asp:Label ID="Label45" runat="server" Text="<%$ Resources:lang,BeiZhu%>"></asp:Label>Ôºö
+                                    <asp:Label ID="Label45" runat="server" Text="<%$ Resources:lang,BeiZhu%>"></asp:Label>£∫
                                 </td>
                                 <td colspan="3" class="formItemBgStyle">
                                     <asp:TextBox ID="TB_Comment" runat="server" Height="100px" TextMode="MultiLine" Width="500px"></asp:TextBox>

@@ -122,7 +122,7 @@
                                                 </ItemTemplate>
                                                 <ItemStyle HorizontalAlign="Center" CssClass="itemBorder" Width="10%" />
                                             </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="²Ù×÷">
+                                            <asp:TemplateField HeaderText="Operation">
                                                 <ItemTemplate>
                                                     <asp:HyperLink ID="EditBtn" Text="<%$ Resources:lang,ChongMingMing%>" Target="Desktop" runat="server" Visible='<%# (bool)DataBinder.Eval(Container.DataItem,"Flag") %>'
                                                         NavigateUrl='<%# "TTMailRenameFolder.aspx?FolderID=" + DataBinder.Eval(Container.DataItem,"FolderID")%>'></asp:HyperLink>&nbsp;&nbsp;&nbsp;

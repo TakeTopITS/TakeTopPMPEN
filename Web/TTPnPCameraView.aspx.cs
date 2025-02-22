@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +17,7 @@ public partial class TTPnPCameraView : System.Web.UI.Page
         string strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "Â∫ìÂ≠òÁÆ°ÁêÜ", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ø‚¥Êπ‹¿Ì", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -33,8 +33,8 @@ public partial class TTPnPCameraView : System.Web.UI.Page
     private void BindPnPCameraData()
     {
 
-        string strCameraInfoHQL = string.Format(@"select (case when i.CameraType = 1 then 'ÁªÑÁªáÊû∂ÊûÑÈÉ®'
-			when i.CameraType = 2 then 'È°πÁõÆÈÉ®'
+        string strCameraInfoHQL = string.Format(@"select (case when i.CameraType = 1 then '◊È÷Øº‹ππ≤ø'
+			when i.CameraType = 2 then 'œÓƒø≤ø'
 			end ) TypeName
             ,(case when i.CameraType = 1 then d.DepartName
 			            when i.CameraType = 2 then p.ProjectName

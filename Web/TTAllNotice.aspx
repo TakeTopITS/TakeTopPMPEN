@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAllNotice.aspx.cs" Inherits="TTAllNotice" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAllNotice.aspx.cs" Inherits="TTAllNotice" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -96,7 +96,7 @@
                                             Height="1px" OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="32" Width="100%"
                                             ShowHeader="false" CellPadding="4" ForeColor="#333333" GridLines="None">
                                             <Columns>
-                                                <asp:TemplateColumn HeaderText="ç¼–å·">
+                                                <asp:TemplateColumn HeaderText="±àºÅ">
                                                     <ItemTemplate>
                                                         <asp:Button ID="BT_DocID" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"DocID") %>'
                                                             CssClass="inpu" />
@@ -104,21 +104,21 @@
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                 </asp:TemplateColumn>
 
-                                                <asp:BoundColumn DataField="DocType" HeaderText="ç±»åž‹">
+                                                <asp:BoundColumn DataField="DocType" HeaderText="ÀàÐÍ">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                 </asp:BoundColumn>
                                                 <asp:HyperLinkColumn DataNavigateUrlField="Address" DataNavigateUrlFormatString="{0}"
-                                                    DataTextField="DocName" HeaderText="æ–‡ä»¶å" Target="_blank">
+                                                    DataTextField="DocName" HeaderText="ÎÄ¼þÃû" Target="_blank">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="35%" />
                                                 </asp:HyperLinkColumn>
-                                                <asp:BoundColumn DataField="RelatedDepartName" HeaderText="å½’å±žéƒ¨é—¨">
+                                                <asp:BoundColumn DataField="RelatedDepartName" HeaderText="¹éÊô²¿ÃÅ">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                 </asp:BoundColumn>
                                                 <asp:HyperLinkColumn DataNavigateUrlField="UploadManCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                    DataTextField="UploadManName" HeaderText="å‘å¸ƒè€…" Target="_blank">
+                                                    DataTextField="UploadManName" HeaderText="·¢²¼Õß" Target="_blank">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                 </asp:HyperLinkColumn>
-                                                <asp:BoundColumn DataField="UploadTime" HeaderText="å‘å¸ƒæ—¶é—´">
+                                                <asp:BoundColumn DataField="UploadTime" HeaderText="·¢²¼Ê±¼ä">
                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                 </asp:BoundColumn>
                                                 <asp:BoundColumn DataField="Address" Visible="False"></asp:BoundColumn>
@@ -132,7 +132,7 @@
                                             <PagerStyle HorizontalAlign="Center" Mode="NumericPages" NextPageText="" PrevPageText="" CssClass="notTab" />
                                         </asp:DataGrid>
                                     </td>
-                                    <td align="left" style="padding-leftï¼š10px;">
+                                    <td align="left" style="padding-left£º10px;">
                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,YueDuGuoDeRen%>"></asp:Label>:
                                     <br />
                                         <asp:Repeater ID="Repeater1" runat="server">

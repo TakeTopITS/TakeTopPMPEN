@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 using System;
 using System.Collections;
@@ -72,7 +72,7 @@ public partial class TTWorkPlanOneStepTransferChildPlanToTask : System.Web.UI.Pa
 
         if (strLeaderName != "")
         {
-            //æŠŠè®¡åˆ’è½¬æˆä»»åŠ¡
+            //°Ñ¼Æ»®×ª³ÉÈÎÎñ
             CreatePlanTask(strPlanID, strProjectID, strPlanVerID);
         }
         else
@@ -104,7 +104,7 @@ public partial class TTWorkPlanOneStepTransferChildPlanToTask : System.Web.UI.Pa
             strLeaderName = ShareClass.getProjectPlanLeaderName(strPlanID);
             if (strLeaderName != "" & CheckPlanIsNotParentPlan(strPlanID) == true)
             {
-                //æŠŠè®¡åˆ’è½¬æˆä»»åŠ¡
+                //°Ñ¼Æ»®×ª³ÉÈÎÎñ
                 CreatePlanTask(strPlanID, strProjectID, strPlanVerID);
             }
             else
@@ -142,13 +142,13 @@ public partial class TTWorkPlanOneStepTransferChildPlanToTask : System.Web.UI.Pa
         try
         {
             strHQL2 = "Insert Into T_ProjectTask(PlanID,ProjectID,Type,Task,Budget,Expense,ManHour,RealManHour,BeginDate,EndDate,MakeManCode,MakeManName,MakeDate,Status,FinishPercent,Priority,IsPlanMainTask,RequireNumber,FinishedNumber,UnitName,Price)";
-            strHQL2 += " SELECT ID ,ProjectID ,'Plan',Name,Budget,0,WorkHour,0 ,start_date,end_date,'" + strCurrentUserCode + "','" + strCurrentUserName + "',now(),'å¤„ç†ä¸­',0,'Normal','NO'," + deRequireNumber.ToString() + ",0,'" + strUnitName + "'," + dePrice.ToString();
+            strHQL2 += " SELECT ID ,ProjectID ,'Plan',Name,Budget,0,WorkHour,0 ,start_date,end_date,'" + strCurrentUserCode + "','" + strCurrentUserName + "',now(),'InProgress',0,'Normal','NO'," + deRequireNumber.ToString() + ",0,'" + strUnitName + "'," + dePrice.ToString();
             strHQL2 += " From  T_ImplePlan Where ProjectID = " + strProjectID + " and VerID = " + strPlanVerID + " and ID = " + strPlanID;
             strHQL2 += " and ID Not In (Select PlanID From T_ProjectTask)";
             ShareClass.RunSqlCommand(strHQL2);
 
             strHQL3 = "Insert Into T_TaskAssignRecord(TaskID,Task,Type,OperatorCode,OperatorName,OperatorContent,OperationTime,BeginDate,EndDate,AssignManCode,AssignManName,Content,Operation,PriorID,RouteNumber,MakeDate,Status,FinishedNumber,UnitName,MoveTime)";
-            strHQL3 += " Select A.TaskID,A.Task,'Plan',B.LeaderCode,B.Leader,'',now(),A.BeginDate,A.EndDate,A.MakeManCode,A.MakeManName,'',A.Task,0,A.TaskID,now(),'è®¡åˆ’',0,'" + strUnitName + "',now()";
+            strHQL3 += " Select A.TaskID,A.Task,'Plan',B.LeaderCode,B.Leader,'',now(),A.BeginDate,A.EndDate,A.MakeManCode,A.MakeManName,'',A.Task,0,A.TaskID,now(),'Plan',0,'" + strUnitName + "',now()";
             strHQL3 += " From T_ProjectTask A,T_ImplePlan B Where A.PlanID = B.ID and A.PlanID = " + strPlanID;
             strHQL3 += " and A.TaskID Not In (Select TaskID From T_TaskAssignRecord)";
             ShareClass.RunSqlCommand(strHQL3);
@@ -159,7 +159,7 @@ public partial class TTWorkPlanOneStepTransferChildPlanToTask : System.Web.UI.Pa
         }
     }
 
-    //æ£€æŸ¥è®¡åˆ’æ˜¯ä¸æ˜¯çˆ¶è®¡åˆ’
+    //¼ì²é¼Æ»®ÊÇ²»ÊÇ¸¸¼Æ»®
     protected bool CheckPlanIsNotParentPlan(string strPlanID)
     {
         string strHQL;

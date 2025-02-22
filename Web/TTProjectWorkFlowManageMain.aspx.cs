@@ -1,4 +1,4 @@
-ï»¿using System; using System.Resources;
+using System; using System.Resources;
 using System.Drawing;
 using System.Data;
 using System.Configuration;
@@ -20,17 +20,17 @@ public partial class TTProjectWorkFlowManageMain : System.Web.UI.Page
     {
         string strUserCode = Session["UserCode"].ToString();
 
-        //è®¾ç½®æ˜¯å¦è‡ªå®šä¹‰å·¥ä½œæµæ¨¡ç»„æ¨¡å¼
+        //ÉèÖÃÊÇ·ñ×Ô¶¨Òå¹¤×÷Á÷Ä£×éÄ£Ê½
         Session["DIYWFModule"] = "NO";
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","é¡¹ç›®å·¥ä½œæµç®¡ç†", strUserCode);
+        bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","ÏîÄ¿¹¤×÷Á÷¹ÜÀí", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
             return;
         }
 
-        //this.Title = "é¡¹ç›®å·¥ä½œæµç®¡ç†---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
+        //this.Title = "ÏîÄ¿¹¤×÷Á÷¹ÜÀí---" + System.Configuration.ConfigurationManager.AppSettings["SystemName"];
     }
 }

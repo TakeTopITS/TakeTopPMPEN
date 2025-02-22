@@ -30,13 +30,11 @@ namespace TakeTopGantt.handler
             }
             else
             {
-                context.Response.Write(Resources.lang.ZZSBXMIDWKQJC);
                 return;
             }
 
             if (GanttShareClass.CheckUserCanUpdatePlan(strPID) == false || GanttShareClass.CheckIsCanUpdatePlanByProjectStatus(strPID) == false)
             {
-                context.Response.Write(Resources.lang.ZZSBZYXMJLJHYHLXZZXMZTBUQJC);
                 return;
             }
 
@@ -46,7 +44,6 @@ namespace TakeTopGantt.handler
 
             if (GanttShareClass.GetNoLeaderPlanNumber(strProjectID, strPlanVerID) > 0)
             {
-                context.Response.Write(Resources.lang.ZZSBYRWMYZDHZRQJC);
                 return;
             }
 
@@ -57,19 +54,16 @@ namespace TakeTopGantt.handler
                 GanttShareClass.RunSqlCommand(strHQL1);
 
                 strHQL2 = "Insert Into T_ProjectTask(PlanID,ProjectID,Type,Task,Budget,Expense,ManHour,RealManHour,BeginDate,EndDate,MakeManCode,MakeManName,MakeDate,Status,FinishPercent,Priority,IsPlanMainTask)";
-                strHQL2 += " SELECT ID ,ProjectID ,'Plan',Name,Budget,0,WorkHour,0 ,Start_Date,End_Date,'" + strCurrentUserCode + "','" + GanttShareClass.GetUserNameByUserCode(strCurrentUserCode) + "',now(),'新建',0,'Normal','NO'";
+                strHQL2 += " SELECT ID ,ProjectID ,'Plan',Name,Budget,0,WorkHour,0 ,Start_Date,End_Date,'" + strCurrentUserCode + "','" + GanttShareClass.GetUserNameByUserCode(strCurrentUserCode) + "',getdate(),'New',0,'Normal','NO'";
                 strHQL2 += " From  T_ImplePlan Where ProjectID = " + strProjectID + " and VerID = " + strPlanVerID;
                 strHQL2 += " and ID Not In (Select PlanID From T_ProjectTask)";
                 GanttShareClass.RunSqlCommand(strHQL2);
 
                 strHQL3 = "Insert Into T_TaskAssignRecord(TaskID,Task,Type,OperatorCode,OperatorName,OperatorContent,OperationTime,BeginDate,EndDate,AssignManCode,AssignManName,Content,Operation,PriorID,RouteNumber,MakeDate,Status)";
-                strHQL3 += " Select A.TaskID,A.Task,'Plan',B.LeaderCode,B.Leader,'',now(),A.BeginDate,A.EndDate,A.MakeManCode,A.MakeManName,'',A.Task,0,A.TaskID,getdate(),'计划'";
+                strHQL3 += " Select A.TaskID,A.Task,'Plan',B.LeaderCode,B.Leader,'',getdate(),A.BeginDate,A.EndDate,A.MakeManCode,A.MakeManName,'',A.Task,0,A.TaskID,getdate(),'Plan'";
                 strHQL3 += " From T_ProjectTask A,T_ImplePlan B Where A.PlanID = B.ID and A.PlanID In (Select ID From T_ImplePlan Where ProjectID = " + strProjectID + " and VerID = " + strPlanVerID + ")";
                 strHQL3 += " and A.TaskID Not In (Select TaskID From T_TaskAssignRecord)";
                 GanttShareClass.RunSqlCommand(strHQL3);
-
-                context.Response.Write(Resources.lang.ZZCGZRWQBWC);
-
             }
             catch (Exception err)
             {

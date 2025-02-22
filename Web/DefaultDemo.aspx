@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DefaultDemo.aspx.cs" Inherits="DefaultDemo" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DefaultDemo.aspx.cs" Inherits="DefaultDemo" %>
 
 <%@ Import Namespace="System.Globalization" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -94,7 +94,7 @@
                     </div>-->
                     <div class="loginleft">
                         <div class="lfbox">
-                            <!-- <p class="lflogo">泰鼎拓顶</p> -->
+                            <!-- <p class="lflogo">̩���ض�</p> -->
                             <p><asp:Label ID="LB_SystemName" runat="server"></asp:Label></p>
                     </div>
                 </div>
@@ -138,7 +138,7 @@
                                 &nbsp;&nbsp;<asp:HyperLink ID="HL_UserManual" NavigateUrl="UserManual/TakeTopGLBGuide.zip"
                                     Text="<%$ Resources:lang,YongHuShouCe%>" runat="server"></asp:HyperLink>
                             </em><em class="copy">
-                                <asp:Label ID="LB_Copyright" runat="server" Text="<a href=TTVersionRegister.aspx>Copyright© TakeTop Software</a> 2006-2026 <a href=https://www.taketopits.com>http://www.taketopits.com</a>"></asp:Label>
+                                <asp:Label ID="LB_Copyright" runat="server" Text="<a href=TTVersionRegister.aspx>Copyright? TakeTop Software</a> 2006-2026 <a href=https://www.taketopits.com>http://www.taketopits.com</a>"></asp:Label>
                             </em>
                         </center>
                     </div>

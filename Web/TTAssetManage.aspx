@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAssetManage.aspx.cs" Inherits="TTAssetManage" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAssetManage.aspx.cs" Inherits="TTAssetManage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -22,7 +22,7 @@
 
         });
 
-        //Â§çÈÄâÊ°ÜÂÖ®ÈÄâ
+        //∏¥—°øÚ»´—°
         function ChooseAll(item) {
             $("input[name=dlCode]").each(function () {
                 if (item.checked == true) {
@@ -33,7 +33,7 @@
             });
         }
 
-        //Â§öÈÄâÊã©ÊåâÈíÆÂà§Êñ≠
+        //∂‡—°‘Ò∞¥≈•≈–∂œ
         function ClickBarPrintMore() {
             var str = "";
             var businessType = "AssetManage";
@@ -42,18 +42,18 @@
 
             $("input[name=dlCode]").each(function () {
                 if ($(this).attr("checked")) {
-                    str = str + $(this).attr("id") + ","; // Êï¥‰∏™‰ª•,ÈöîÂºÄ
+                    str = str + $(this).attr("id") + ","; // ’˚∏ˆ“‘,∏Ùø™
                     intCount++;
                 }
             });
 
             if (intCount > 15) {
-                alert('ÊØèÊ¨°ÈÄâÊã©‰∏çË¶ÅË∂ÖËøá15‰∏™ËµÑ‰∫ß‰ª£Á†ÅËøõË°åÊâìÂç∞ÔºåA4Á∫∏‰∏ÄÁâàÊòæÁ§∫‰∏çÂÆåÔºÅ');
+                alert('√ø¥Œ—°‘Ò≤ª“™≥¨π˝15∏ˆ◊ ≤˙¥˙¬ÎΩ¯––¥Ú”°£¨A4÷Ω“ª∞Êœ‘ æ≤ªÕÍ£°');
                 return false;
             }
 
             if (str == "") {
-                alert('ËØ∑ÈÄâÊã©ËÆ∞ÂΩïÈ°πÔºÅ');
+                alert('«Î—°‘Òº«¬ºœÓ£°');
                 return false;
             }
             else {
@@ -118,20 +118,20 @@
                                                             <asp:DropDownList ID="DL_AssetType" runat="server" DataTextField="Type" DataValueField="Type"
                                                                 Width="100px" CssClass="DDList">
                                                             </asp:DropDownList></td>
-                                                        <td>&nbsp;<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,YongHuMing%>"></asp:Label>Ôºö</td>
+                                                        <td>&nbsp;<asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,YongHuMing%>"></asp:Label>£∫</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_OwnerName" runat="server" Width="80px"></asp:TextBox></td>
-                                                        <td>&nbsp;<asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>Ôºö</td>
+                                                        <td>&nbsp;<asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,DaiMa%>"></asp:Label>£∫</td>
                                                         <td>
                                                             <asp:TextBox ID="TB_AssetCode" runat="server" Width="100px"></asp:TextBox></td>
 
-                                                        <td>&nbsp;<asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>Ôºö</td>
+                                                        <td>&nbsp;<asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,MingCheng%>"></asp:Label>£∫</td>
 
                                                         <td>
                                                             <asp:TextBox ID="TB_AssetName" runat="server" Width="150px"></asp:TextBox></td>
                                                         <td>
                                                             <asp:Button ID="BT_Find" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ChaXun%>" OnClick="BT_Find_Click" />
-                                                            <input type="button" class="inpuLong" onclick="ClickBarPrintMore();" value="ÊâìÂç∞Êù°ÂΩ¢Á†Å" />
+                                                            <input type="button" class="inpuLong" onclick="ClickBarPrintMore();" value="¥Ú”°Ãı–Œ¬Î" />
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -227,44 +227,44 @@
                                                                             PageSize="30" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                             <Columns>
 
-                                                                                <asp:TemplateColumn HeaderText="ÁºñÂè∑">
+                                                                                <asp:TemplateColumn HeaderText="±‡∫≈">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                     <ItemTemplate>
                                                                                         <input value='<%#Eval("ID") %>' id='<%#Eval("ID") %>' type="checkbox" name="dlCode" />
                                                                                         <asp:Label ID="Label1" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>'></asp:Label>
                                                                                     </ItemTemplate>
                                                                                 </asp:TemplateColumn>
-                                                                                <asp:BoundColumn DataField="AssetCode" HeaderText="‰ª£Á†Å">
+                                                                                <asp:BoundColumn DataField="AssetCode" HeaderText="¥˙¬Î">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Type" HeaderText="Á±ªÂûã">
+                                                                                <asp:BoundColumn DataField="Type" HeaderText="¿‡–Õ">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTAssetInforView.aspx?AssetID={0}"
-                                                                                    DataTextField="AssetName" HeaderText="ÂêçÁß∞" Target="_blank">
+                                                                                    DataTextField="AssetName" HeaderText="√˚≥∆" Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="Number" HeaderText="Êï∞Èáè">
+                                                                                <asp:BoundColumn DataField="Number" HeaderText=" ˝¡ø">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="Price" HeaderText="Âçï‰ª∑">
+                                                                                <asp:BoundColumn DataField="Price" HeaderText="µ•º€">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="UnitName" HeaderText="Âçï‰Ωç">
+                                                                                <asp:BoundColumn DataField="UnitName" HeaderText="µ•Œª">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="OwnerCode" DataNavigateUrlFormatString="TTUserInforSimple.aspx?UserCode={0}"
-                                                                                    DataTextField="OwnerName" HeaderText="Áî®Êà∑" Target="_blank">
+                                                                                    DataTextField="OwnerName" HeaderText="”√ªß" Target="_blank">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                 </asp:HyperLinkColumn>
-                                                                                <asp:BoundColumn DataField="Position" HeaderText="Âú∞ÂùÄ">
+                                                                                <asp:BoundColumn DataField="Position" HeaderText="µÿ÷∑">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="11%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="BuyTime" HeaderText="Ë¥≠‰π∞Êó∂Èó¥" DataFormatString="{0:yyyy/MM/dd}">
+                                                                                <asp:BoundColumn DataField="BuyTime" HeaderText="π∫¬Ú ±º‰" DataFormatString="{0:yyyy/MM/dd}">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                 </asp:BoundColumn>
 
-                                                                                <asp:TemplateColumn HeaderText="Ë∞ÉÊã®">
+                                                                                <asp:TemplateColumn HeaderText="µ˜≤¶">
                                                                                     <ItemTemplate>
                                                                                         <a href='TTAssetUserRecord.aspx?ID=<%# Eval("ID").ToString() %>' target="_blank">
                                                                                             <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,DiaoBo%>"></asp:Label>
@@ -273,7 +273,7 @@
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                                 </asp:TemplateColumn>
 
-                                                                                <asp:TemplateColumn HeaderText="Áª¥Êä§">
+                                                                                <asp:TemplateColumn HeaderText="Œ¨ª§">
                                                                                     <ItemTemplate>
                                                                                         <a href='TTAssetMTRecord.aspx?ID=<%# Eval("ID").ToString() %>' target="_blank">
                                                                                             <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,WeiHu%>"></asp:Label>
@@ -330,7 +330,7 @@
 
                                                                             <ItemStyle CssClass="itemStyle" />
                                                                             <Columns>
-                                                                                <asp:TemplateColumn HeaderText="ÈÉ®Èó®‰∫∫ÂëòÔºö">
+                                                                                <asp:TemplateColumn HeaderText="≤ø√≈»À‘±£∫">
                                                                                     <ItemTemplate>
                                                                                         <asp:Button ID="BT_UserCode" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UserCode") %>' />
                                                                                         <asp:Button ID="BT_UserName" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"UserName") %>' />

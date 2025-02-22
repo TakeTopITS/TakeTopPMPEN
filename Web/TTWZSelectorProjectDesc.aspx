@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSelectorProjectDesc.aspx.cs" Inherits="TTWZSelectorProjectDesc" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTWZSelectorProjectDesc.aspx.cs" Inherits="TTWZSelectorProjectDesc" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>È°πÁõÆÊèèËø∞</title>
+    <title>œÓƒø√Ë ˆ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -43,13 +43,13 @@
                                         <table style="width: 80%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                                             <tr>
                                                 <td class="formItemBgStyle">
-                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMuBianMa%>"></asp:Label>Ôºö
+                                                    <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,XiangMuBianMa%>"></asp:Label>£∫
                                                 </td>
                                                 <td class="formItemBgStyle">
                                                     <asp:TextBox ID="TXT_ProjectCode" runat="server" ReadOnly="true"></asp:TextBox>
                                                 </td>
                                                 <td class="formItemBgStyle">
-                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuMingCheng%>"></asp:Label>Ôºö
+                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuMingCheng%>"></asp:Label>£∫
                                                 </td>
                                                 <td class="formItemBgStyle">
                                                     <asp:TextBox ID="TXT_ProjectName" runat="server" ReadOnly="true"></asp:TextBox>
@@ -57,7 +57,7 @@
                                             </tr>
                                             <tr>
                                                 <td class="formItemBgStyle">
-                                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XiangMuMiaoShu%>"></asp:Label>Ôºö
+                                                    <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,XiangMuMiaoShu%>"></asp:Label>£∫
                                                 </td>
                                                 <td class="formItemBgStyle" colspan="3">
                                                     <textarea cols="50" rows="4" runat="server" id="TXT_ProjectDesc" readonly="readonly"></textarea>
@@ -67,7 +67,7 @@
                                                 <td class="formItemBgStyle" colspan="4">
                                                     <div style="text-align: center">
                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                            type="button" value="ÂÖ≥Èó≠" />
+                                                            type="button" value="Closed" />
                                                     </div>
                                                 </td>
                                             </tr>

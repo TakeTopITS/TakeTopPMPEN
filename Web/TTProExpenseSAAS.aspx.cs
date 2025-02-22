@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -78,11 +78,11 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
 
             DLC_EffectDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            strReviewType = "è´¹ç”¨æŠ¥é”€";
+            strReviewType = "ExpenseReimbursement";
             strReviewType = "%" + strReviewType + "%";
           
 
-            //å–å¾—ä¼šè®¡ç§‘ç›®åˆ—è¡¨
+            //È¡µÃ»á¼Æ¿ÆÄ¿ÁĞ±í
             ShareClass.LoadAccountForDDL(DL_Account);
 
             if (strTaskID != "0")
@@ -137,19 +137,19 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
             LB_UserCode.Text = strUserCode;
             LB_UserName.Text = strUserName;
 
-            //æŠŠå·²åœ¨æŠ¥é”€æ¸…å•çš„è®°å½•è¡¨ç°ä¸ºè“è‰²
+            //°ÑÒÑÔÚ±¨ÏúÇåµ¥µÄ¼ÇÂ¼±íÏÖÎªÀ¶É«
             ColorClaimedExpenseRecord(-1);
 
             if (strTaskID != "0" & strTaskID != null)
             {
                 strTaskStatus = GetProjectTaskStatus(strTaskID);
-                if (strTaskStatus == "å…³é—­")
+                if (strTaskStatus == "Closed")
                 {
                     BT_New.Enabled = false;
                 }
             }
 
-            if (strProjectStatus == "ç»“æ¡ˆ" || strProjectStatus == "æŒ‚èµ·" || strProjectStatus == "å–æ¶ˆ")
+            if (strProjectStatus == "CaseClosed" || strProjectStatus == "Suspended" || strProjectStatus == "Cancel")
             {
                 BT_New.Enabled = false;
             }
@@ -191,7 +191,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
                 LB_CurrencyType.Text = proExpense.CurrencyType.Trim();
                 strFinancialStaffCode = proExpense.FinancialStaffCode.Trim();
 
-                //åˆ¤æ–­æ˜¯å¦ä¸ºä»»åŠ¡è´¹ç”¨     
+                //ÅĞ¶ÏÊÇ·ñÎªÈÎÎñ·ÑÓÃ     
                 if (strTaskID != "0")
                 {
                     strProjectTaskID = e.Item.Cells[8].Text.Trim();
@@ -199,7 +199,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
                     try
                     {
                         strTaskStatus = GetProjectTaskStatus(strProjectTaskID);
-                        if (strTaskStatus == "å…³é—­")
+                        if (strTaskStatus == "Closed")
                         {
                             //BT_New.Enabled = false;
                             //BT_Update.Enabled = false;
@@ -217,7 +217,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
                     if (strProjectTaskID != "0")
                     {
                         strTaskStatus = GetProjectTaskStatus(strProjectTaskID);
-                        if (strTaskStatus == "å…³é—­")
+                        if (strTaskStatus == "Closed")
                         {
                             BT_New.Enabled = false;
 
@@ -227,7 +227,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
                     }
                 }
 
-                if (strProjectStatus == "ç»“æ¡ˆ" || strProjectStatus == "æŒ‚èµ·" || strProjectStatus == "å–æ¶ˆ")
+                if (strProjectStatus == "CaseClosed" || strProjectStatus == "Suspended" || strProjectStatus == "Cancel")
                 {
                     BT_New.Enabled = false;
                     //BT_Update.Enabled = false;
@@ -266,7 +266,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
                 }
 
 
-                //æŠŠå·²åœ¨æŠ¥é”€æ¸…å•çš„è®°å½•è¡¨ç°ä¸ºè“è‰²
+                //°ÑÒÑÔÚ±¨ÏúÇåµ¥µÄ¼ÇÂ¼±íÏÖÎªÀ¶É«
                 ColorClaimedExpenseRecord(e.Item.ItemIndex);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -382,7 +382,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
         }
         else
         {
-            //æ£€æŸ¥ç›¸åº”ç§‘ç›®é¡¹ç›®é¢„ç®—æœ‰æ²¡æœ‰è¶…æ”¯ //æ£€æŸ¥ç›¸åº”ç§‘ç›®é¡¹ç›®é¢„ç®—æœ‰æ²¡æœ‰è¶…æ”¯
+            //¼ì²éÏàÓ¦¿ÆÄ¿ÏîÄ¿Ô¤ËãÓĞÃ»ÓĞ³¬Ö§ //¼ì²éÏàÓ¦¿ÆÄ¿ÏîÄ¿Ô¤ËãÓĞÃ»ÓĞ³¬Ö§
             if (ShareClass.CheckProjectExpenseBudget(strProjectID, strAccount, deAmount) == false)
             {
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBZFYCGKMYSHXMZYSJC + "')", true);
@@ -465,7 +465,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
         }
         else
         {
-            //æ£€æŸ¥ç›¸åº”ç§‘ç›®é¡¹ç›®é¢„ç®—æœ‰æ²¡æœ‰è¶…æ”¯ //æ£€æŸ¥ç›¸åº”ç§‘ç›®é¡¹ç›®é¢„ç®—æœ‰æ²¡æœ‰è¶…æ”¯
+            //¼ì²éÏàÓ¦¿ÆÄ¿ÏîÄ¿Ô¤ËãÓĞÃ»ÓĞ³¬Ö§ //¼ì²éÏàÓ¦¿ÆÄ¿ÏîÄ¿Ô¤ËãÓĞÃ»ÓĞ³¬Ö§
             if (ShareClass.CheckProjectExpenseBudget(strProjectID, strAccount, deAmount) == false)
             {
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBZFYCGKMYSHXMZYSJC + "')", true);
@@ -532,7 +532,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        //æŠŠå·²åœ¨æŠ¥é”€æ¸…å•çš„è®°å½•è¡¨ç°ä¸ºè“è‰²
+        //°ÑÒÑÔÚ±¨ÏúÇåµ¥µÄ¼ÇÂ¼±íÏÖÎªÀ¶É«
         ColorClaimedExpenseRecord(-1);
     }
 
@@ -618,7 +618,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
             ShareClass.RunSqlCommand(strHQL);
         }
 
-        //æŠŠå·²åœ¨æŠ¥é”€æ¸…å•çš„è®°å½•è¡¨ç°ä¸ºè“è‰²
+        //°ÑÒÑÔÚ±¨ÏúÇåµ¥µÄ¼ÇÂ¼±íÏÖÎªÀ¶É«
         ColorClaimedExpenseRecord(-1);
     }
 
@@ -637,11 +637,11 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
         {
             if (strUserCode == ShareClass.GetProjectPMCode(strProjectID))
             {
-                dailyWork.Type = "ä¸»å¯¼";
+                dailyWork.Type = "Ö÷µ¼";
             }
             else
             {
-                dailyWork.Type = "å‚ä¸";
+                dailyWork.Type = "²ÎÓë";
             }
             dailyWork.UserCode = strUserCode;
             dailyWork.UserName = ShareClass.GetUserName(strUserCode);
@@ -650,7 +650,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
             dailyWork.Address = "";
             dailyWork.ProjectID = int.Parse(strProjectID);
             dailyWork.ProjectName = ShareClass.GetProjectName(strProjectID);
-            dailyWork.DailySummary = "è¾“å…¥é¡¹ç›®ç›¸å…³è´¹ç”¨";
+            dailyWork.DailySummary = "ÊäÈëÏîÄ¿Ïà¹Ø·ÑÓÃ";
             dailyWork.Achievement = "";
             dailyWork.Charge = DeCurrentDayAmount;
             dailyWork.ConfirmCharge = DeCurrentDayConfirmAmount;
@@ -849,14 +849,14 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
             UpdatedTaskAssignRecordCharge(strRecordID, deTaskAssignRecordExpense);
         }
 
-        //æŠŠå·²åœ¨æŠ¥é”€æ¸…å•çš„è®°å½•è¡¨ç°ä¸ºè“è‰²
+        //°ÑÒÑÔÚ±¨ÏúÇåµ¥µÄ¼ÇÂ¼±íÏÖÎªÀ¶É«
         ColorClaimedExpenseRecord(-1);
     }
 
 
     protected int GetExpenseClaimRecordCount(string strExpenseID)
     {
-        string strHQL = "from ExpenseClaimDetail as expenseClaimDetail where expenseClaimDetail.RelatedType='é¡¹ç›®' and expenseClaimDetail.RelatedExpenseID = " + strExpenseID;
+        string strHQL = "from ExpenseClaimDetail as expenseClaimDetail where expenseClaimDetail.RelatedType='Project' and expenseClaimDetail.RelatedExpenseID = " + strExpenseID;
         ExpenseClaimDetailBLL expenseClaimDetailBLL = new ExpenseClaimDetailBLL();
         IList lst = expenseClaimDetailBLL.GetAllExpenseClaimDetails(strHQL);
 

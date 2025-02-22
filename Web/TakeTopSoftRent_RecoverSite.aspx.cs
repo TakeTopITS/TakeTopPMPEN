@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration.Internal;
@@ -52,7 +52,7 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
 
         if (strSiteAppSystemName == "" | strSiteAppName == "")
         {
-            LB_Message.Text = "æç¤ºï¼Œå¸¦*å·çš„éƒ½ä¸èƒ½ç©ºï¼Œè¯·æ£€æŸ¥ï¼";
+            LB_Message.Text = "ÌáÊ¾£¬´ø*ºÅµÄ¶¼²»ÄÜ¿Õ£¬Çë¼ì²é£¡";
         }
         else
         {
@@ -79,7 +79,7 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
                 DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentSiteBaseData");
                 if (ds.Tables[0].Rows.Count == 0)
                 {
-                    LB_Message.Text = "æ¢å¤å¤±è´¥ï¼Œæ²¡æœ‰ä½ é€‰å–çš„äº§å“ç‰ˆæœ¬çš„å¯ç”¨ç«™ç‚¹åŸºç¡€å‚æ•°ï¼Œè¯·æ£€æŸ¥ï¼";
+                    LB_Message.Text = "»Ö¸´Ê§°Ü£¬Ã»ÓĞÄãÑ¡È¡µÄ²úÆ·°æ±¾µÄ¿ÉÓÃÕ¾µã»ù´¡²ÎÊı£¬Çë¼ì²é£¡";
                     return;
                 }
 
@@ -110,7 +110,7 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
 
                 if (UrlIsExist(strSiteAppURL))
                 {
-                    LB_Message.Text = "å¤±è´¥ï¼Œå­˜åœ¨ç›¸åŒåç§°çš„ç«™ç‚¹ï¼Œè¯·æ£€æŸ¥ï¼";
+                    LB_Message.Text = "Ê§°Ü£¬´æÔÚÏàÍ¬Ãû³ÆµÄÕ¾µã£¬Çë¼ì²é£¡";
                     return;
                 }
 
@@ -123,7 +123,7 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
                 strSiteDBLoginUserID = strSiteDBLoginUserID.ToLower();
                 strSiteDBName = strSiteDBName.ToLower();
 
-                //å­˜å‚¨ç«™ç‚¹ä¿¡æ¯
+                //´æ´¢Õ¾µãĞÅÏ¢
                 strHQL = string.Format(@"Update T_RentSiteInfoByCustomer Set
                                 RentUserPhoneNumber ='{0}'
                                ,RentUserEMail = '{1}'
@@ -163,11 +163,11 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
 
 
 
-                //æ¨é€ä¿¡æ¯ç»™å®¢æœä¸»ç®¡
+                //ÍÆËÍĞÅÏ¢¸ø¿Í·şÖ÷¹Ü
                 try
                 {
                     string strCSOperatorCode = ShareClass.GetWebSiteCustomerServiceOperatorCode(strWebSite);
-                    string strMSMMsg = strRentUserName + "(ç”µè¯ï¼š" + strRentUserPhoneNumber + "ï¼‰å·²æ¢å¤:" + strRentProductName + "(" + strRentProductVersion + ") ç§Ÿç”¨ç«™ç‚¹ï¼š" + strSiteAppURL;
+                    string strMSMMsg = strRentUserName + "(µç»°£º" + strRentUserPhoneNumber + "£©ÒÑ»Ö¸´:" + strRentProductName + "(" + strRentProductVersion + ") ×âÓÃÕ¾µã£º" + strSiteAppURL;
                     Action action = new Action(delegate ()
                     {
                         Msg msg = new Msg();
@@ -180,11 +180,11 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
                         {
                         }
 
-                        string strEMailMsg = "ä½ å¥½ï¼Œä½ " + strServerType + "çš„ï¼šæ³°é¡¶æ‹“é¼" + strRentProductName + " å·²æ¢å¤ç«™ç‚¹ï¼Œåœ°å€æ˜¯ï¼š" + strSiteAppURL + " ,ç™»å½•å¸å·ï¼šADMIN å¯†ç ï¼š12345678 ï¼Œè¯·æ”¾å¿ƒä½¿ç”¨ï¼Œæœ‰é—®é¢˜è¯·éšæ—¶è”ç³»å®¢æœï¼ˆ021-51085119ï¼‰ï¼Œè°¢è°¢ï¼Œæ­¤é‚®ä»¶å‘è‡ªæ³°é¡¶æ‹“é¼é›†å›¢ï¼";
+                        string strEMailMsg = "ÄãºÃ£¬Äã" + strServerType + "µÄ£ºÌ©¶¥ÍØ¶¦" + strRentProductName + " ÒÑ»Ö¸´Õ¾µã£¬µØÖ·ÊÇ£º" + strSiteAppURL + " ,µÇÂ¼ÕÊºÅ£ºADMIN ÃÜÂë£º12345678 £¬Çë·ÅĞÄÊ¹ÓÃ£¬ÓĞÎÊÌâÇëËæÊ±ÁªÏµ¿Í·ş£¨021-51085119£©£¬Ğ»Ğ»£¬´ËÓÊ¼ş·¢×ÔÌ©¶¥ÍØ¶¦¼¯ÍÅ£¡";
 
                         try
                         {
-                            msg.SendMailByEmail(strRentUserEMail, "ç«™ç‚¹æ¢å¤é€šçŸ¥", strEMailMsg, "ADMIN");
+                            msg.SendMailByEmail(strRentUserEMail, "Õ¾µã»Ö¸´Í¨Öª", strEMailMsg, "ADMIN");
                         }
                         catch
                         {
@@ -199,7 +199,7 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
 
                 ClientScript.RegisterStartupScript(GetType(), "dd", "<script>displayRelatedUI();</script>");
 
-                //è·³è½¬é¡µé¢strSiteURL + @"/" + strSiteCreatorAppName + @"/
+                //Ìø×ªÒ³ÃæstrSiteURL + @"/" + strSiteCreatorAppName + @"/
                 if (string.IsNullOrEmpty(strWebSite))
                 {
                     strWebSite = "WWW.TAKETOPITS.COM";
@@ -210,10 +210,10 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
                 strCreateSiteURL += "&SiteVirtualDirectoryName=" + strSiteVirtualDirectoryName + "&SiteVirtualDirectoryPhysicalPath=" + strSiteVirtualDirectoryPhysicalPath;
                 strCreateSiteURL += "&SiteDBName=" + strSiteDBName + "&SiteDBRestoreFile=" + strSiteDBRestoreFile + "&SiteDBSetupDirectory=" + strSiteDBSetupDirectory + "&SiteDBLoginUserID=" + strSiteDBLoginUserID + "&SiteDBUserLoginPassword=" + strSiteDBUserLoginPassword + "&ServerType=" + strServerType + "&RentProductType=" + strRentProductType + "&IsOEM=" + strIsOEM;
 
-                ////æ·»åŠ æ•°æ®åº“ç™»å½•ç”¨æˆ·
+                ////Ìí¼ÓÊı¾İ¿âµÇÂ¼ÓÃ»§
                 //ShareClass.CreateDBUserAccount(strSiteDBLoginUserID, strSiteDBUserLoginPassword, "YES");
 
-                ////ä»ç”¨æˆ·å¤‡ä»½æ•°æ®åº“æ¢å¤æ•°æ®åº“
+                ////´ÓÓÃ»§±¸·İÊı¾İ¿â»Ö¸´Êı¾İ¿â
                 //ShareClass.RestoreDatabaseFromOEMUserDB(strSiteDBName, strSiteDBRestoreFile, strSiteDBSetupDirectory);
 
                 Response.Redirect(strCreateSiteURL);
@@ -225,7 +225,7 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
         }
     }
 
-    //åˆ¤æ–­ç«™ç‚¹åº”ç”¨æ˜¯å¦å­˜åœ¨
+    //ÅĞ¶ÏÕ¾µãÓ¦ÓÃÊÇ·ñ´æÔÚ
     private bool UrlIsExist(String url)
     {
         System.Uri u = null;
@@ -257,7 +257,7 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
     }
 
 
-    //å¯†ç ç”Ÿæˆå™¨
+    //ÃÜÂëÉú³ÉÆ÷
     public static string genernalPassword()
     {
         string chars = "0123456789ABCDEFGHIJKLMNOPQSTUVWXYZabcdefghijklmnpqrstuvwxyz!@#*";
@@ -269,9 +269,9 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
             str = "";
             for (int i = 0; i < 8; i++)
             {
-                str += chars[randrom.Next(chars.Length)];//randrom.Next(int i)è¿”å›ä¸€ä¸ªå°äºæ‰€æŒ‡å®šæœ€å¤§å€¼çš„éè´Ÿéšæœºæ•°
+                str += chars[randrom.Next(chars.Length)];//randrom.Next(int i)·µ»ØÒ»¸öĞ¡ÓÚËùÖ¸¶¨×î´óÖµµÄ·Ç¸ºËæ»úÊı
             }
-            //ä¸ç¬¦åˆæ­£åˆ™ï¼Œé‡æ–°ç”Ÿæˆ
+            //²»·ûºÏÕıÔò£¬ÖØĞÂÉú³É
             if (!Regex.IsMatch(str, @"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$"))
             {
                 continue;
@@ -294,7 +294,7 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
     }
 
 
-    //è·å–æ–‡ä»¶å¤¹ä¸‹æœ€æ–°ç”Ÿæˆçš„æ–‡ä»¶
+    //»ñÈ¡ÎÄ¼ş¼ĞÏÂ×îĞÂÉú³ÉµÄÎÄ¼ş
     public string GetLatestTimefile(string filePath)
     {
         DirectoryInfo info = new DirectoryInfo(filePath);

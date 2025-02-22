@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectWorkload.aspx.cs" Inherits="TTProjectWorkload" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectWorkload.aspx.cs" Inherits="TTProjectWorkload" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -7,7 +7,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ÁªôÊàêÂëòÂª∫Á´ãÂíåÂàÜÊ¥æÈ°πÁõÆ</title>
+    <title>∏¯≥…‘±Ω®¡¢∫Õ∑÷≈…œÓƒø</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         /*#AboveDiv {
@@ -140,28 +140,28 @@
                                         <ItemStyle CssClass="itemStyle" />
                                         <Columns>
 
-                                            <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='‰øÆÊîπ' /&gt;&lt;/div&gt;">
+                                            <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='–ﬁ∏ƒ' /&gt;&lt;/div&gt;">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:ButtonColumn>
                                             <asp:TemplateColumn HeaderText="Delete">
                                                 <ItemTemplate>
-                                                    <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Âà†Èô§' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                    <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                 </ItemTemplate>
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                             </asp:TemplateColumn>
                                             <asp:BoundColumn DataField="ID" HeaderText="ID">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="ProjectID" HeaderText="È°πÁõÆID">
+                                            <asp:BoundColumn DataField="ProjectID" HeaderText="œÓƒøID">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="WorkType" HeaderText="Â∑•‰ΩúÁ±ªÂûã">
+                                            <asp:BoundColumn DataField="WorkType" HeaderText="π§◊˜¿‡–Õ">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="GongZuoLiang" HeaderText="Â∑•‰ΩúÈáè">
+                                            <asp:BoundColumn DataField="GongZuoLiang" HeaderText="π§◊˜¡ø">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="DanJia" HeaderText="Âçï‰ª∑">
+                                            <asp:BoundColumn DataField="DanJia" HeaderText="µ•º€">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                             </asp:BoundColumn>
 
@@ -176,7 +176,7 @@
                             </tr>
                             <tr>
                                 <td style="padding: 5px 5px 5px 5px;" align="center">
-                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZongJia%>" />Ôºö
+                                    <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZongJia%>" />£∫
                                     <asp:Label ID="LB_TotalAmount" runat="server" Font-Bold="True"></asp:Label>
                                 </td>
                             </tr>
@@ -209,12 +209,12 @@
                                                         DataValueField="WorkType" CssClass="DDList">
                                                     </asp:DropDownList>
                                                 </td>
-                                                <td style="width: 15%; text-align: right" class="formItemBgStyle"><asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,GongZuoLiang%>" />Ôºö</td>
+                                                <td style="width: 15%; text-align: right" class="formItemBgStyle"><asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,GongZuoLiang%>" />£∫</td>
                                                 <td style="text-align: left" class="formItemBgStyle">
                                                     <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="0" ID="NB_GongZuoLiang" runat="server" Width="80px">0.00</NickLee:NumberBox>
                                                 </td>
-                                                <td style="width: 15%; text-align: right" class="formItemBgStyle"><asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,DanJia%>" />Ôºö</td>
+                                                <td style="width: 15%; text-align: right" class="formItemBgStyle"><asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,DanJia%>" />£∫</td>
                                                 <td style="text-align: left" class="formItemBgStyle">
                                                     <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
                                                     <NickLee:NumberBox MaxAmount="1000000000000" MinAmount="0" ID="NB_DanJia" runat="server" Width="80px">0.00</NickLee:NumberBox>

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSupplierAssetPaymentApplicantQueryCenter.aspx.cs" Inherits="TTSupplierAssetPaymentApplicantQueryCenter" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSupplierAssetPaymentApplicantQueryCenter.aspx.cs" Inherits="TTSupplierAssetPaymentApplicantQueryCenter" %>
 
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -47,7 +47,7 @@
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
                                                         <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
-                                                            <asp:Label ID="Label2" runat="server" Text="èµ„äº§é‡‡è´­ä»˜æ¬¾æŸ¥è¯¢"></asp:Label>
+                                                            <asp:Label ID="Label2" runat="server" Text="×Ê²ú²É¹º¸¶¿î²éÑ¯"></asp:Label>
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -114,9 +114,9 @@
                                                         <td>
                                                             <asp:DropDownList ID="DL_Status" runat="server">
                                                                 <asp:ListItem Value="" Text="<%$ Resources:lang,SuoYou%>"></asp:ListItem>
-                                                                <asp:ListItem Value="å·²è®°è´¦" Text="<%$ Resources:lang,YiJiZhang%>" />
-                                                                <asp:ListItem Value="æ–°å»º" Text="<%$ Resources:lang,XinJian%>" />
-                                                                <asp:ListItem Value="å¤„ç†ä¸­" Text="<%$ Resources:lang,ShenPiZhong%>" />
+                                                                <asp:ListItem Value="Recorded" Text="<%$ Resources:lang,YiJiZhang%>" />
+                                                                <asp:ListItem Value="New" Text="<%$ Resources:lang,XinJian%>" />
+                                                                <asp:ListItem Value="InProgress" Text="<%$ Resources:lang,ShenPiZhong%>" />
                                                             </asp:DropDownList>
 
                                                         </td>
@@ -137,7 +137,7 @@
                                                             <table>
                                                                 <tr>
                                                                     <td>
-                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZongJinE%>"></asp:Label>ï¼š
+                                                                        <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZongJinE%>"></asp:Label>£º
 
                                                                     </td>
                                                                     <td>
@@ -215,36 +215,36 @@
                                                                     <asp:BoundColumn DataField="AOID" HeaderText="AOID">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="AOName" HeaderText="åç§°">
+                                                                    <asp:BoundColumn DataField="AOName" HeaderText="Ãû³Æ">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="PartA" HeaderText="ä¾›åº”å•†">
+                                                                    <asp:BoundColumn DataField="PartA" HeaderText="Supplier">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="20%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="CurrentTotalPaymentAmount" HeaderText="æ€»é‡‘é¢">
+                                                                    <asp:BoundColumn DataField="CurrentTotalPaymentAmount" HeaderText="×Ü½ð¶î">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="CurrencyType" HeaderText="å¸åˆ«">
+                                                                    <asp:BoundColumn DataField="CurrencyType" HeaderText="±Ò±ð">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
                                                                     <asp:HyperLinkColumn DataNavigateUrlField="UserCode" DataNavigateUrlFormatString="TTUserInforView.aspx?UserCode={0}"
-                                                                        DataTextField="UserName" HeaderText="å§“å" Target="_blank">
+                                                                        DataTextField="UserName" HeaderText="ÐÕÃû" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:HyperLinkColumn>
-                                                                    <asp:BoundColumn DataField="CreateTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="åˆ›å»ºæ—¶é—´">
+                                                                    <asp:BoundColumn DataField="CreateTime" DataFormatString="{0:yyyy/MM/dd}" HeaderText="´´½¨Ê±¼ä">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:TemplateColumn HeaderText="çŠ¶æ€">
+                                                                    <asp:TemplateColumn HeaderText="×´Ì¬">
                                                                         <ItemTemplate>
                                                                             <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                                     </asp:TemplateColumn>
-                                                                    <asp:TemplateColumn HeaderText="æ‰“å°">
+                                                                    <asp:TemplateColumn HeaderText="´òÓ¡">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                                         <ItemTemplate>
                                                                             <a href='TTSupplierAssetPaymentApplicantView.aspx?AOID=<%# DataBinder.Eval(Container.DataItem,"AOID") %>' target="_blank">
-                                                                                <img src="ImagesSkin/print.gif" alt="æ‰“å°" border="0" /></a>
+                                                                                <img src="ImagesSkin/print.gif" alt="´òÓ¡" border="0" /></a>
                                                                         </ItemTemplate>
                                                                     </asp:TemplateColumn>
                                                                 </Columns>

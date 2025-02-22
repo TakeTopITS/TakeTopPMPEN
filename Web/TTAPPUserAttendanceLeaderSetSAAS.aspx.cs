@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -67,7 +67,7 @@ public partial class TTAPPUserAttendanceLeaderSetSAAS : System.Web.UI.Page
         strHQL += "OCheckInStart,OCheckInEnd,OCheckOutStart,OCheckOutEnd,Status,MCheckInIsMust,MCheckOutIsMust,ACheckInIsMust,ACheckOutIsMust,NCheckInIsMust,NCheckOutIsMust,OCheckInIsMust,OCheckOutIsMust,LargestDistance,LeaderCode,LeaderName,OfficeLongitude,OfficeLatitude)";
         strHQL += " Select '" + strUserCode + "','" + strUserName + "',now(),B.MCheckInStart,B.MCheckInEnd,B.MCheckOutStart,B.MCheckOutEnd,";
         strHQL += "B.ACheckInStart,B.ACheckInEnd,B.ACheckOutStart,B.ACheckOutEnd,B.NCheckInStart,B.NCheckInEnd,B.NCheckOutStart,B.NCheckOutEnd,";
-        strHQL += "B.OCheckInStart,B.OCheckInEnd,B.OCheckOutStart,B.OCheckOutEnd,'处理中',B.MCheckInIsMust,B.MCheckOutIsMust,B.ACheckInIsMust,B.ACheckOutIsMust,B.NCheckInIsMust,B.NCheckOutIsMust,B.OCheckInIsMust,B.OCheckOutIsMust,B.LargestDistance,'" + strLeaderCode + "','" + ShareClass.GetUserName(strLeaderCode) + "',B.OfficeLongitude,B.OfficeLatitude";
+        strHQL += "B.OCheckInStart,B.OCheckInEnd,B.OCheckOutStart,B.OCheckOutEnd,'InProgress',B.MCheckInIsMust,B.MCheckOutIsMust,B.ACheckInIsMust,B.ACheckOutIsMust,B.NCheckInIsMust,B.NCheckOutIsMust,B.OCheckInIsMust,B.OCheckOutIsMust,B.LargestDistance,'" + strLeaderCode + "','" + ShareClass.GetUserName(strLeaderCode) + "',B.OfficeLongitude,B.OfficeLatitude";
         strHQL += " From T_UserAttendanceRule B";
         strHQL += " Where B.LeaderCode = " + "'" + strLeaderCode + "'";
         strHQL += " And B.LeaderCode not in (Select LeaderCode From T_UserAttendanceRule Where UserCode = '" + strUserCode + "')";

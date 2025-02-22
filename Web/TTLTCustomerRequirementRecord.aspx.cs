@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Data;
 using System.Configuration;
@@ -28,7 +28,7 @@ public partial class TTLTCustomerRequirementRecord : System.Web.UI.Page
         strIsMobileDevice = Session["IsMobileDevice"].ToString();
         strRelatedCustomerCode = Request.QueryString["CustomerCode"];
 
-        //CKEditoråˆå§‹åŒ–      
+        //CKEditor³õÊ¼»¯      
         CKFinder.FileBrowser _FileBrowser = new CKFinder.FileBrowser();
         _FileBrowser.BasePath = "ckfinder/";
         _FileBrowser.SetupCKEditor(TB_Question);
@@ -38,7 +38,7 @@ public partial class TTLTCustomerRequirementRecord : System.Web.UI.Page
         LB_UserName.Text = strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "è®°å½•æ‹›è˜éœ€æ±‚", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "¼ÇÂ¼ÕĞÆ¸ĞèÇó", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -78,7 +78,7 @@ public partial class TTLTCustomerRequirementRecord : System.Web.UI.Page
 
         DataSet ds2, ds3, ds4;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
@@ -86,8 +86,8 @@ public partial class TTLTCustomerRequirementRecord : System.Web.UI.Page
         TreeNode node3 = new TreeNode();
         TreeNode node4 = new TreeNode();
 
-        node1.Text = "<B>å®¢æˆ·æœåŠ¡éœ€æ±‚åˆ—è¡¨</B>";
-        node1.Target = "å®¢æˆ·æœåŠ¡éœ€æ±‚åˆ—è¡¨";
+        node1.Text = "<B>¿Í»§·şÎñĞèÇóÁĞ±í</B>";
+        node1.Target = "¿Í»§·şÎñĞèÇóÁĞ±í";
         node1.Expanded = false;
         TreeView1.Nodes.Add(node1);
 
@@ -378,7 +378,7 @@ public partial class TTLTCustomerRequirementRecord : System.Web.UI.Page
 
                 strStatus = customerQuestion.Status.Trim();
 
-                if (strNow == strHandleTime & strStatus == "æ–°å»º")
+                if (strNow == strHandleTime & strStatus == "New")
                 {
                     customerQuestionBLL.DeleteCustomerQuestion(customerQuestion);
 
@@ -508,14 +508,14 @@ public partial class TTLTCustomerRequirementRecord : System.Web.UI.Page
             customerQuestion.AnswerTime = dtAnswerTime;
             customerQuestion.RecorderCode = strUserCode;
             customerQuestion.SummitTime = DateTime.Now;
-            customerQuestion.Status = "æ–°å»º";
+            customerQuestion.Status = "New";
 
             customerQuestion.OperatorCode = "";
             customerQuestion.OperatorName = "";
             customerQuestion.OperatorStatus = "";
             customerQuestion.FromWebSite = "";
 
-            //å•†æœºä¿¡æ¯
+            //ÉÌ»úĞÅÏ¢
             TB_CustomerName.Text = strCompany;
             TB_CustomerManager.Text = strContactPerson;
             TB_BusinessName.Text = strQuestion;
@@ -634,7 +634,7 @@ public partial class TTLTCustomerRequirementRecord : System.Web.UI.Page
 
                 strStatus = customerQuestion.Status.Trim();
 
-                if (strNow == strHandleTime & strStatus == "æ–°å»º")
+                if (strNow == strHandleTime & strStatus == "New")
                 {
                     customerQuestionBLL.UpdateCustomerQuestion(customerQuestion, int.Parse(strID));
 
@@ -698,7 +698,7 @@ public partial class TTLTCustomerRequirementRecord : System.Web.UI.Page
 
         CustomerQuestion customerQuestion = (CustomerQuestion)lst[0];
 
-        customerQuestion.Status = "å®Œæˆ";
+        customerQuestion.Status = "Completed";
 
         try
         {

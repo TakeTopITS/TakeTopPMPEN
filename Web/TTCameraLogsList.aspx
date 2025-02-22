@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCameraLogsList.aspx.cs" Inherits="TTCameraLogsList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTCameraLogsList.aspx.cs" Inherits="TTCameraLogsList" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ÊëÑÂÉèÂ§¥Êó•Âøó</title>
+    <title>…„œÒÕ∑»’÷æ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -43,19 +43,19 @@
                                         CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="5" ShowHeader="True"
                                         Width="100%">
                                         <Columns>
-                                            <asp:BoundColumn DataField="Area" HeaderText="Âå∫Âüü">
+                                            <asp:BoundColumn DataField="Area" HeaderText="«¯”Ú">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="ProjectDepartment" HeaderText="È°πÁõÆÈÉ®">
+                                            <asp:BoundColumn DataField="ProjectDepartment" HeaderText="œÓƒø≤ø">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="ServerIP" HeaderText="ÊëÑÂÉèÂ§¥IP">
+                                            <asp:BoundColumn DataField="ServerIP" HeaderText="…„œÒÕ∑IP">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="CreatorName" HeaderText="Êü•Áúã‰∫∫">
+                                            <asp:BoundColumn DataField="CreatorName" HeaderText="≤Èø¥»À">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="CreateTime" HeaderText="Êü•ÁúãÊó∂Èó¥">
+                                            <asp:BoundColumn DataField="CreateTime" HeaderText="≤Èø¥ ±º‰">
                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                             </asp:BoundColumn>
                                         </Columns>

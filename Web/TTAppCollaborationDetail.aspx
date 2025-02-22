@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppCollaborationDetail.aspx.cs" Inherits="TTAppCollaborationDetail" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppCollaborationDetail.aspx.cs" Inherits="TTAppCollaborationDetail" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=1" />
 
@@ -87,7 +87,7 @@
                                                     </td>
                                                 </tr>
                                             </table>
-                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="è¯·ç¨å€™ï¼Œå¤„ç†ä¸­..." style="display: none;" />
+                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="ÇëÉÔºò£¬´¦ÀíÖÐ..." style="display: none;" />
                                         </a>
                                     </td>
                                 </tr>
@@ -146,7 +146,7 @@
                 <table style="width: 100%;" cellpadding="2" cellspacing="0" class="formBgStyle">
                     <tr style="display: none;">
                         <td style="text-align: Right; vertical-align: middle;" class="formItemBgStyle">
-                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>ï¼š </td>
+                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,NeiRong%>"></asp:Label>£º </td>
                         <td class="formItemBgStyle" align="left">
                             <div id="mess_box" style="width: 100%; height: 150px; overflow: auto;">
                                 <asp:DataList ID="DataList1" runat="server" CellPadding="4" ForeColor="#333333" Width="100%">
@@ -167,10 +167,10 @@
                     </tr>
                     <tr style="display: none;">
                         <td style="text-align: Right;" class="formItemBgStyle">
-                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ChuangJianZhe%>"></asp:Label>ï¼š </td>
+                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,ChuangJianZhe%>"></asp:Label>£º </td>
                         <td style="text-align: left;" class="formItemBgStyle">
-                            <asp:Label ID="LB_Creator" runat="server" Text="<%$ Resources:lang,ChuangJianShiJian%>"></asp:Label>ï¼š
-                                                    <asp:Label ID="LB_CreateTime" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>ï¼š
+                            <asp:Label ID="LB_Creator" runat="server" Text="<%$ Resources:lang,ChuangJianShiJian%>"></asp:Label>£º
+                                                    <asp:Label ID="LB_CreateTime" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>£º
                                                     <asp:Label ID="LB_Status" runat="server"></asp:Label>
                             <asp:HyperLink ID="HL_CollaborationToTask" runat="server" Enabled="False" NavigateUrl="~/CollaborationToTask">--&gt;<asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,ZhuanChengRenWu%>"></asp:Label></asp:HyperLink>
                         </td>

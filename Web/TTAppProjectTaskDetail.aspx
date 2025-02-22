@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppProjectTaskDetail.aspx.cs" Inherits="TTAppProjectTaskDetail" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAppProjectTaskDetail.aspx.cs" Inherits="TTAppProjectTaskDetail" %>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=1" />
 
@@ -48,7 +48,7 @@
     <script type="text/javascript" language="javascript">
         $(function () {
 
-            //选择图片后压缩图片
+            //ѡ��ͼƬ��ѹ��ͼƬ
             $("#TabContainer1_TabPanel2_AttachFile").change(function () {
 
                 //alert("KKK");
@@ -56,10 +56,10 @@
                 //console.log(this.files[0]);
                 var _ua = window.navigator.userAgent;
                 var _simpleFile = this.files[0];
-                //判断是否为图片
+                //�ж��Ƿ�ΪͼƬ
                 if (!/\/(?:jpeg|png|gif|png|bmp)/i.test(_simpleFile.type)) return;
 
-                //插件exif.js获取ios图片的方向信息
+                //���exif.js��ȡiosͼƬ�ķ�����Ϣ
                 var _orientation;
                 //if (_ua.indexOf('iphone') > 0) {
                 EXIF.getData(_simpleFile, function () {
@@ -67,7 +67,7 @@
                 });
                 //}
 
-                //1.读取文件，通过FileReader，将图片文件转化为DataURL，即data:img/png;base64，开头的url，可以直接放在image.src中;
+                //1.��ȡ�ļ���ͨ��FileReader����ͼƬ�ļ�ת��ΪDataURL����data:img/png;base64����ͷ��url������ֱ�ӷ���image.src��;
                 var _reader = new FileReader(),
                     _img = new Image(),
                     _url;
@@ -97,7 +97,7 @@
                 var click = $(this).attr("onclick");
 
 
-                //判断是否是tree，或者分页
+                //�ж��Ƿ���tree�����߷�ҳ
                 if (click != "" && click != null && click != undefined) {
                     if (click.toLowerCase().indexOf("treeview") == -1 && url.toLowerCase().indexOf("lbt_delete") == -1) {
                         $(this).click(function () {
@@ -137,24 +137,24 @@
 
 
         /**
-         * 计算图片的尺寸，根据尺寸压缩
-         * 1. iphone手机html5上传图片方向问题，借助exif.js
-         * 2. 安卓UC浏览器不支持 new Blob()，使用BlobBuilder
-         * @param {Object} _img     图片
-         * @param {Number} _orientation 照片信息
-         * @return {String}       压缩后base64格式的图片
+         * ����ͼƬ�ĳߴ磬���ݳߴ�ѹ��
+         * 1. iphone�ֻ�html5�ϴ�ͼƬ�������⣬����exif.js
+         * 2. ��׿UC�������֧�� new Blob()��ʹ��BlobBuilder
+         * @param {Object} _img     ͼƬ
+         * @param {Number} _orientation ��Ƭ��Ϣ
+         * @return {String}       ѹ����base64��ʽ��ͼƬ
          */
         function compress(_img, _orientation) {
-            //2.计算符合目标尺寸宽高值，若上传图片的宽高都大于目标图，对目标图等比压缩；如果有一边小于，对上传图片等比放大。
-            var _goalWidth = 640,         //目标宽度
-                _goalHeight = 480,         //目标高度
-                _imgWidth = _img.naturalWidth,   //图片宽度
-                _imgHeight = _img.naturalHeight,  //图片高度
-                _tempWidth = _imgWidth,      //放大或缩小后的临时宽度
-                _tempHeight = _imgHeight,     //放大或缩小后的临时宽度
-                _r = 0;              //压缩比
+            //2.�������Ŀ��ߴ����ֵ�����ϴ�ͼƬ�Ŀ��߶�����Ŀ��ͼ����Ŀ��ͼ�ȱ�ѹ���������һ��С�ڣ����ϴ�ͼƬ�ȱȷŴ�
+            var _goalWidth = 640,         //Ŀ�����
+                _goalHeight = 480,         //Ŀ��߶�
+                _imgWidth = _img.naturalWidth,   //ͼƬ����
+                _imgHeight = _img.naturalHeight,  //ͼƬ�߶�
+                _tempWidth = _imgWidth,      //�Ŵ����С�����ʱ����
+                _tempHeight = _imgHeight,     //�Ŵ����С�����ʱ����
+                _r = 0;              //ѹ����
 
-            if (_imgWidth > _goalWidth || _imgHeight > _goalHeight) {//宽或高大于目标图，需等比压缩
+            if (_imgWidth > _goalWidth || _imgHeight > _goalHeight) {//����ߴ���Ŀ��ͼ����ȱ�ѹ��
                 _r = _imgWidth / _goalWidth;
                 if (_imgHeight / _goalHeight < _r) {
                     _r = _imgHeight / _goalHeight;
@@ -163,7 +163,7 @@
                 _tempHeight = Math.ceil(_imgHeight / _r);
             }
 
-            //3.利用canvas对图片进行裁剪，等比放大或缩小后进行居中裁剪
+            //3.����canvas��ͼƬ���вü����ȱȷŴ����С����о��вü�
             var _canvas = $("#myCanvas")[0];
 
             var _context = _canvas.getContext('2d');
@@ -171,15 +171,15 @@
             _canvas.height = _tempHeight;
             var _degree;
 
-            //ios bug，iphone手机上可能会遇到图片方向错误问题
+            //ios bug��iphone�ֻ��Ͽ��ܻ�����ͼƬ�����������
             switch (_orientation) {
-                //iphone横屏拍摄，此时home键在左侧
+                //iphone�������㣬��ʱhome�������
                 case 3:
                     _degree = 180;
                     _tempWidth = -_imgWidth;
                     _tempHeight = -_imgHeight;
                     break;
-                //iphone竖屏拍摄，此时home键在下方(正常拿手机的方向)
+                //iphone�������㣬��ʱhome�����·�(�������ֻ��ķ���)
                 case 6:
                     _canvas.width = _imgHeight;
                     _canvas.height = _imgWidth;
@@ -187,7 +187,7 @@
                     _tempWidth = _imgWidth;
                     _tempHeight = -_imgHeight;
                     break;
-                //iphone竖屏拍摄，此时home键在上方
+                //iphone�������㣬��ʱhome�����Ϸ�
                 case 8:
                     _canvas.width = _imgHeight;
                     _canvas.height = _imgWidth;
@@ -202,28 +202,28 @@
             } else {
                 _context.drawImage(_img, 0, 0, _tempWidth, _tempHeight);
             }
-            //toDataURL方法，可以获取格式为"data:image/png;base64,***"的base64图片信息；
+            //toDataURL���������Ի�ȡ��ʽΪ"data:image/png;base64,***"��base64ͼƬ��Ϣ��
             var _data = _canvas.toDataURL('image/jpeg');
             return _data;
         }
 
         function upload() {
             $.ajax({
-                //提交数据的类型 POST GET
+                //�ύ���ݵ����� POST GET
                 type: "POST",
-                //提交的网址
+                //�ύ����ַ
                 url: "Handler/UploadPhotoToServerSite.ashx",
-                //提交的数据
+                //�ύ������
                 data: { FileData: $("#TabContainer1_TabPanel2_imgData").val(), FileName: $("#TabContainer1_TabPanel2_AttachFile").val() },
-                //返回数据的格式
-                //在请求之前调用的函数
+                //�������ݵĸ�ʽ
+                //������֮ǰ���õĺ���
                 beforeSend: function () {
                     $("#IMG_Waiting").show();
                 },
                 error: function (XMLHttpRequest, textStatus, errorThrown) {
                     console.log(XMLHttpRequest);
                 },
-                //成功返回之后调用的函数
+                //�ɹ�����֮����õĺ���
                 success: function (data) {
                     if (data.indexOf("img") > 0) {
 
@@ -233,7 +233,7 @@
                         alert(data);
                     }
                 },
-                //调用执行后调用的函数
+                //����ִ�к���õĺ���
                 complete: function (XMLHttpRequest, textStatus) {
                     $("#IMG_Waiting").hide();
                 }
@@ -248,8 +248,8 @@
         var txtQrCode = '#<%=TB_QrCode.ClientID%>';
         var btnSaveQrCode = '#<%=BT_SaveQrCode.ClientID%>';
 
-        var loadingIndex; //提示层index
-        var isWxConfigReady = false; //config是否验证通过
+        var loadingIndex; //��ʾ��index
+        var isWxConfigReady = false; //config�Ƿ���֤ͨ��
         $(function () {
 
             try {
@@ -266,7 +266,7 @@
                  });
                  wxApi();
 
-                 //删除意外弹出层
+                 //ɾ�����ⵯ����
                  if (isWxConfigReady == false) {
                      var m = document.getElementById("layui-layer1");
                      m.parentNode.removeChild(m);
@@ -287,11 +287,11 @@
                 // , content: 'ImagesSkin/Processing.gif'
             });
             wx.config({
-                debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-                appId: '<%=signModel.appId %>', // 必填，公众号的唯一标识
-                 timestamp: '<%=signModel.time %>', // 必填，生成签名的时间戳(随便填写)
-                 nonceStr: '<%=signModel.randstr %>', // 必填，生成签名的随机串(随便填写)
-                 signature: '<%=signModel.signstr %>', // 必填，签名，见附录1
+                debug: false, // ��������ģʽ,���õ�����api�ķ���ֵ���ڿͻ���alert��������Ҫ�鿴����Ĳ�����������pc�˴򿪣�������Ϣ��ͨ��log���������pc��ʱ�Ż��ӡ��
+                appId: '<%=signModel.appId %>', // ������ںŵ�Ψһ��ʶ
+                 timestamp: '<%=signModel.time %>', // �������ǩ����ʱ���(�����д)
+                 nonceStr: '<%=signModel.randstr %>', // �������ǩ���������(�����д)
+                 signature: '<%=signModel.signstr %>', // ���ǩ��������¼1
 
                  jsApiList: [
                      'checkJsApi',
@@ -337,34 +337,34 @@
                      //'onVoicePlayEnd',
                      //'translateVoice',
 
-                 ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                 ] // �����Ҫʹ�õ�JS�ӿ��б�������JS�ӿ��б�����¼2
              });
 
             wx.ready(function () {
                 layer.close(loadingIndex);
-                // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+                // config��Ϣ��֤���ִ��ready���������нӿڵ��ö�������config�ӿڻ�ý��֮��config��һ���ͻ��˵��첽���������������Ҫ��ҳ�����ʱ�͵�����ؽӿڣ��������ؽӿڷ���ready�����е�����ȷ����ȷִ�С������û�����ʱ�ŵ��õĽӿڣ������ֱ�ӵ��ã�����Ҫ����ready�����С�
                 isWxConfigReady = true;
             });
             wx.error(function (res) {
                 layer.close(loadingIndex);
                 alert(JSON.stringify(res));
-                // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+                // config��Ϣ��֤ʧ�ܻ�ִ��error��������ǩ�����ڵ�����֤ʧ�ܣ����������Ϣ���Դ�config��debugģʽ�鿴��Ҳ�����ڷ��ص�res�����в鿴������SPA�������������ǩ����
             });
         }
 
         function qrcode() {
             wx.scanQRCode({
-                needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
-                scanType: ["qrCode", "barCode"], // 可以指定扫二维码还是一维码，默认二者都有
+                needResult: 1, // Ĭ��Ϊ0��ɨ������΢�Ŵ�����1��ֱ�ӷ���ɨ������
+                scanType: ["qrCode", "barCode"], // ����ָ��ɨ��ά�뻹��һά�룬Ĭ�϶��߶���
                 success: function (res) {
-                    var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
+                    var result = res.resultStr; // ��needResult Ϊ 1 ʱ��ɨ�뷵�صĽ��
                     if (typeof (result) != "undefined") {
 
                         result = result.substring(result.indexOf(',') + 1, result.length);
 
-                        //文本框赋值
+                        //�ı���ֵ
                         $(txtQrCode).val(result);
-                        //点击查询按钮
+                        //�����ѯ��ť
                         $(btnSaveQrCode).click();
                     }
                 }
@@ -404,7 +404,7 @@
                                                                     </td>
                                                                 </tr>
                                                             </table>
-                                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="请稍候，处理中..." style="display: none;" />
+                                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="���Ժ򣬴�����..." style="display: none;" />
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -417,7 +417,7 @@
                                                 <tr>
                                                     <td colspan="2" style="text-align: left; padding-left: 5px;">
                                                         <span class="style1">
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,RenWu%>"></asp:Label>：<asp:Label ID="LB_TaskID" runat="server"></asp:Label>
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,RenWu%>"></asp:Label>��<asp:Label ID="LB_TaskID" runat="server"></asp:Label>
                                                             <asp:Label ID="LB_Task" runat="server"></asp:Label>
                                                         </span>
                                                     </td>
@@ -425,7 +425,7 @@
                                                 <tr>
                                                     <td colspan="2" align="left">
                                                         <cc1:TabContainer CssClass="ajax_tab_menu" ID="TabContainer1" runat="server" ActiveTabIndex="0" Width="99%">
-                                                            <cc1:TabPanel ID="TabPanel2" runat="server" HeaderText="任务处理">
+                                                            <cc1:TabPanel ID="TabPanel2" runat="server" HeaderText="TaskHandling">
                                                                 <HeaderTemplate>
                                                                     <asp:Label ID="Label9" runat="server" Text="<%$ Resources:lang,RenWuChuLi%>"></asp:Label>
                                                                 </HeaderTemplate>
@@ -466,7 +466,7 @@
                                                                                             </div>
                                                                                             <div class="mline">
                                                                                                 <h4>
-                                                                                                    <asp:Label ID="Label41" runat="server" Text="已完成量" /></h4>
+                                                                                                    <asp:Label ID="Label41" runat="server" Text="�������" /></h4>
                                                                                                 <NickLee:NumberBox ID="NB_FinishedNumber" runat="server" MaxAmount="1000000000000" MinAmount="0" Width="80%" OnBlur="" OnFocus="" OnKeyPress="" PositiveColor="">0.00</NickLee:NumberBox>
                                                                                             </div>
                                                                                             <div class="mline">
@@ -493,7 +493,7 @@
                                                                                                         <Upload:InputFile ID="AttachFile" runat="server" name="photo" Accept="image/*;capture=camera" Width="180px" />
                                                                                                         <input type="hidden" val="" id="imgData" runat="server" />
                                                                                                         &nbsp;<input type="button" id="BtnUP" onclick="upload()" value="Upload" />
-                                                                                                        <img id="IMG_Uploading" src="Images/Processing.gif" alt="请稍候，处理中..." style="display: none;" />
+                                                                                                        <img id="IMG_Uploading" src="Images/Processing.gif" alt="���Ժ򣬴�����..." style="display: none;" />
 
                                                                                                         <br />
 
@@ -543,7 +543,7 @@
                                                                     </table>
                                                                 </ContentTemplate>
                                                             </cc1:TabPanel>
-                                                            <cc1:TabPanel ID="TabPanel1" runat="server" HeaderText="继续分派">
+                                                            <cc1:TabPanel ID="TabPanel1" runat="server" HeaderText="��������">
                                                                 <HeaderTemplate>
                                                                     <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,JiXuFenPai%>"></asp:Label>
                                                                 </HeaderTemplate>
@@ -652,7 +652,7 @@
                                                                                             <div class="npbxs">
                                                                                                 <h3>
                                                                                                     <strong>
-                                                                                                        <asp:Label ID="Label49" runat="server" Text="<%$ Resources:lang,CiRenWuFenPaiJiLuZiJiLu %>"></asp:Label>（<span style="font-size: 9pt"><asp:Label ID="Label50" runat="server" Text="<%$ Resources:lang,XuanZeKeZaiShangMianXiuGai %>"></asp:Label>）：</span></strong>
+                                                                                                        <asp:Label ID="Label49" runat="server" Text="<%$ Resources:lang,CiRenWuFenPaiJiLuZiJiLu %>"></asp:Label>��<span style="font-size: 9pt"><asp:Label ID="Label50" runat="server" Text="<%$ Resources:lang,XuanZeKeZaiShangMianXiuGai %>"></asp:Label>����</span></strong>
 
                                                                                                 </h3>
 
@@ -735,11 +735,11 @@
                                     <asp:Label ID="Label26" runat="server" Text="<%$ Resources:lang,DangTianXiangMuRiZhi%>"></asp:Label>
                                 </asp:HyperLink>
 
-                                （<asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,GuanLianXiangMu%>"></asp:Label>：<asp:HyperLink ID="HL_RelatedProjectID"
+                                ��<asp:Label ID="Label27" runat="server" Text="<%$ Resources:lang,GuanLianXiangMu%>"></asp:Label>��<asp:HyperLink ID="HL_RelatedProjectID"
                                     runat="server">[HL_RelatedProjectID]</asp:HyperLink>
 
                                 <asp:HyperLink ID="HL_RelatedProjectName" runat="server">[HL_RelatedProjectID]</asp:HyperLink>
-                                ）<asp:Label ID="LB_ProjectID" runat="server" Visible="False"></asp:Label>
+                                ��<asp:Label ID="LB_ProjectID" runat="server" Visible="False"></asp:Label>
                                 <asp:Label ID="LB_UserName" runat="server" Visible="False"></asp:Label>
                                 <asp:Label ID="LB_UserCode" runat="server" Visible="False"></asp:Label>
                                 <asp:Label ID="LB_PlanID" runat="server" Visible="False"></asp:Label>
@@ -757,19 +757,19 @@
                                         <table style="width: 100%;" cellpadding="4" cellspacing="0">
                                             <tr>
                                                 <td style="width: 15%; text-align: right;">
-                                                    <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,JiLuBianHao%>"></asp:Label>：
+                                                    <asp:Label ID="Label29" runat="server" Text="<%$ Resources:lang,JiLuBianHao%>"></asp:Label>��
                                                 </td>
                                                 <td style="width: 20%" align="left">
                                                     <%# DataBinder.Eval(Container.DataItem,"ID") %>
                                                 </td>
                                                 <td style="width: 10%; text-align: right;">
-                                                    <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,LuXianBianHao%>"></asp:Label>：
+                                                    <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,LuXianBianHao%>"></asp:Label>��
                                                 </td>
                                                 <td style="width: 15%" align="left">
                                                     <%# DataBinder.Eval(Container.DataItem,"RouteNumber") %>
                                                 </td>
                                                 <td style="width: 20%; text-align: right;">
-                                                    <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,RenWu%>"></asp:Label>：
+                                                    <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,RenWu%>"></asp:Label>��
                                                 </td>
                                                 <td style="width: 20%; font-size: 10pt" align="left">
                                                     <a href='TTProjectTaskView.aspx?TaskID=<%# DataBinder.Eval(Container.DataItem,"TaskID") %>'
@@ -779,7 +779,7 @@
                                             </tr>
                                             <tr>
                                                 <td style="text-align: right;">
-                                                    <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,WoDeGongZuo%>"></asp:Label>：
+                                                    <asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,WoDeGongZuo%>"></asp:Label>��
                                                 </td>
                                                 <td colspan="5" style="text-align: left">
                                                     <b>
@@ -789,19 +789,19 @@
                                             </tr>
                                             <tr>
                                                 <td style="text-align: right;">
-                                                    <asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,KaiShiShiJian%>"></asp:Label>：
+                                                    <asp:Label ID="Label33" runat="server" Text="<%$ Resources:lang,KaiShiShiJian%>"></asp:Label>��
                                                 </td>
                                                 <td align="left">
                                                     <%# DataBinder.Eval(Container.DataItem,"BeginDate","{0:yyyy/MM/dd}") %>
                                                 </td>
                                                 <td style="text-align: right;">
-                                                    <asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label>：
+                                                    <asp:Label ID="Label34" runat="server" Text="<%$ Resources:lang,JieShuShiJian%>"></asp:Label>��
                                                 </td>
                                                 <td align="left">
                                                     <%# DataBinder.Eval(Container.DataItem, "EndDate", "{0:yyyy/MM/dd}")%>
                                                 </td>
                                                 <td style="text-align: right;">
-                                                    <asp:Label ID="Label35" runat="server" Text="<%$ Resources:lang,FenPaiRen%>"></asp:Label>：
+                                                    <asp:Label ID="Label35" runat="server" Text="<%$ Resources:lang,FenPaiRen%>"></asp:Label>��
                                                 </td>
                                                 <td style="text-align: left;">
                                                     <%# DataBinder.Eval(Container.DataItem,"AssignManName") %>
@@ -809,7 +809,7 @@
                                             </tr>
                                             <tr>
                                                 <td style="text-align: right">
-                                                    <asp:Label ID="Label36" runat="server" Text="<%$ Resources:lang,WoDeFanKui%>"></asp:Label>：
+                                                    <asp:Label ID="Label36" runat="server" Text="<%$ Resources:lang,WoDeFanKui%>"></asp:Label>��
                                                 </td>
                                                 <td colspan="3" style="text-align: left">
                                                     <%# DataBinder.Eval(Container.DataItem,"OperatorContent") %>
@@ -819,19 +819,19 @@
                                             </tr>
                                             <tr>
                                                 <td style="text-align: right">
-                                                    <asp:Label ID="Label37" runat="server" Text="<%$ Resources:lang,GongShi%>"></asp:Label>：
+                                                    <asp:Label ID="Label37" runat="server" Text="<%$ Resources:lang,GongShi%>"></asp:Label>��
                                                 </td>
                                                 <td align="left">
                                                     <%# DataBinder.Eval(Container.DataItem,"ManHour") %>
                                                 </td>
                                                 <td style="text-align: right">
-                                                    <asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,FeiYong%>"></asp:Label>：
+                                                    <asp:Label ID="Label38" runat="server" Text="<%$ Resources:lang,FeiYong%>"></asp:Label>��
                                                 </td>
                                                 <td align="left">
                                                     <%# DataBinder.Eval(Container.DataItem,"Expense") %>
                                                 </td>
                                                 <td style="text-align: right">
-                                                    <asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>：
+                                                    <asp:Label ID="Label39" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>��
                                                 </td>
                                                 <td style="text-align: left">
                                                     <%# DataBinder.Eval(Container.DataItem,"Status") %>
@@ -852,7 +852,7 @@
                                         <table cellpadding="4" cellspacing="0" style="width: 100%;">
                                             <tr>
                                                 <td style="text-align: left">
-                                                    <asp:Label ID="Label40" runat="server" Text="<%$ Resources:lang,RenWuNeiRong%>"></asp:Label>：
+                                                    <asp:Label ID="Label40" runat="server" Text="<%$ Resources:lang,RenWuNeiRong%>"></asp:Label>��
                                                 </td>
                                             </tr>
                                             <tr>

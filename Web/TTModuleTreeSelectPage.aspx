@@ -32,7 +32,7 @@
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
     <script type="text/javascript" language="javascript">
-        //选择节点
+        //ѡ��ڵ�
         function selectNode(nodeName,pageName) {
 
             parent.selectNode(nodeName,pageName);

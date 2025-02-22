@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDPressureObjectList.aspx.cs" Inherits="TTGDPressureObjectList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTGDPressureObjectList.aspx.cs" Inherits="TTGDPressureObjectList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -54,7 +54,7 @@
                                     <table width="100%" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td align="left" class="formItemBgStyle">
-                                                <input type="button" class="inpuLong" value="æ–°å¢žè¯•åŽ‹ä»‹è´¨" onclick="window.location.href = 'TTGDPressureObjectEdit.aspx'" />
+                                                <input type="button" class="inpuLong" value="ÐÂÔöÊÔÑ¹½éÖÊ" onclick="window.location.href = 'TTGDPressureObjectEdit.aspx'" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -98,11 +98,11 @@
                                                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,BianJi%>"></asp:Label></a>
                                                                     <asp:LinkButton ID="LB_Del" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab">
                                                                         <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ShanChu%>"></asp:Label></asp:LinkButton>
-                                                                    <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="åˆ é™¤" />--%>
+                                                                    <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="Deleted" />--%>
                                                                     
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="PressureObject" HeaderText="è¯•åŽ‹ä»‹è´¨">
+                                                            <asp:BoundColumn DataField="PressureObject" HeaderText="ÊÔÑ¹½éÖÊ">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="94%" />
                                                             </asp:BoundColumn>
                                                         </Columns>

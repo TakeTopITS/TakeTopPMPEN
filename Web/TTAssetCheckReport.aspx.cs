@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -26,7 +26,7 @@ public partial class TTAssetCheckReport : System.Web.UI.Page
         string strUserName;
         string strUserCode = Session["UserCode"].ToString();
 
-        //this.Title = "璧勪骇鐩樼偣鎶ヨ〃";
+        //this.Title = "资产盘点报表";
 
         LB_UserCode.Text = strUserCode;
         strUserName = Session["UserName"].ToString();
@@ -82,7 +82,7 @@ public partial class TTAssetCheckReport : System.Web.UI.Page
         strHQL += " and asset.ModelNumber Like " + "'" + strModelNumber + "'";
         strHQL += " and asset.Spec Like " + "'" + strSpec + "'";
         strHQL += " and asset.Position like " + "'" + strPosition + "'";
-        strHQL += " and asset.Status = '鍦ㄧ敤' ";
+        strHQL += " and asset.Status = 'InUse' ";
         strHQL += " and asset.Number > 0";
         strHQL += " and to_char(asset.BuyTime,'yyyymmdd')  >= " + "'" + strStartTime + "'" + "  and to_char(asset.BuyTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
         strHQL += " and asset.OwnerCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")"; ;

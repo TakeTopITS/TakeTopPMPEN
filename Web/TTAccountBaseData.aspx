@@ -1,11 +1,11 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAccountBaseData.aspx.cs" Inherits="TTAccountBaseData" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAccountBaseData.aspx.cs" Inherits="TTAccountBaseData" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ä¼šè®¡ç§‘ç›®è®¾ç½®</title>
+    <title>»á¼Æ¿ÆÄ¿ÉèÖÃ</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         .style1 {
@@ -58,7 +58,7 @@
                                     <table style="width: 98%; margin-top: 5px">
                                         <tr>
                                             <td valign="top" align="left" style="width: 25%; text-align: left; padding: 5px 5px 0px 5px; border-right: solid 1px #D8D8D8; vertical-align: top;">
-                                                <asp:TreeView ID="TreeView1" runat="server" Font-Bold="False" Font-Names="å®‹ä½“" Font-Size="10pt" NodeWrap="True" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged" ShowLines="True" Width="100%">
+                                                <asp:TreeView ID="TreeView1" runat="server" Font-Bold="False" Font-Names="ËÎÌå" Font-Size="10pt" NodeWrap="True" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged" ShowLines="True" Width="100%">
                                                     <RootNodeStyle CssClass="rootNode" />
                                                     <NodeStyle CssClass="treeNode" />
                                                     <LeafNodeStyle CssClass="leafNode" />
@@ -69,50 +69,50 @@
                                                 <table style="width: 99%">
                                                     <tr>
                                                         <td align="left">
-                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShangJiKeMu%>"></asp:Label>ï¼š<asp:DropDownList ID="DL_ParentID" runat="server" DataTextField="AccountName" DataValueField="ID" AutoPostBack="True" OnSelectedIndexChanged="DL_ParentID_SelectedIndexChanged">
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,ShangJiKeMu%>"></asp:Label>£º<asp:DropDownList ID="DL_ParentID" runat="server" DataTextField="AccountName" DataValueField="ID" AutoPostBack="True" OnSelectedIndexChanged="DL_ParentID_SelectedIndexChanged">
                                                             </asp:DropDownList>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td align="left">
-                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,KeMuDaiMa%>"></asp:Label>ï¼š<asp:TextBox ID="TB_AccountCode" runat="server" CssClass="shuru" Width="140px"></asp:TextBox>
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,KeMuDaiMa%>"></asp:Label>£º<asp:TextBox ID="TB_AccountCode" runat="server" CssClass="shuru" Width="140px"></asp:TextBox>
                                                             <asp:Label ID="lbl_OldCode" runat="server" Visible="False"></asp:Label>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td align="left">
-                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,KeMuMingCheng%>"></asp:Label>ï¼š<asp:TextBox ID="TB_AccountName" runat="server" Width="140px" CssClass="shuru"></asp:TextBox>
+                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,KeMuMingCheng%>"></asp:Label>£º<asp:TextBox ID="TB_AccountName" runat="server" Width="140px" CssClass="shuru"></asp:TextBox>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td align="left">
-                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,KeMuPaiXu%>"></asp:Label>ï¼š<asp:TextBox ID="TB_SortNumber" runat="server" Width="140px" CssClass="shuru"></asp:TextBox>
+                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,KeMuPaiXu%>"></asp:Label>£º<asp:TextBox ID="TB_SortNumber" runat="server" Width="140px" CssClass="shuru"></asp:TextBox>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td align="left">
-                                                            <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,KeMuLeiXing%>"></asp:Label>ï¼š<asp:TextBox ID="TB_AccountType" runat="server" CssClass="shuru" Width="140px">èµ„äº§</asp:TextBox>
+                                                            <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,KeMuLeiXing%>"></asp:Label>£º<asp:TextBox ID="TB_AccountType" runat="server" CssClass="shuru" Width="140px">×Ê²ú</asp:TextBox>
                                                             &nbsp;<asp:DropDownList ID="DL_Type" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DL_Type_SelectedIndexChanged">
-                                                                <asp:ListItem Value="èµ„äº§" Text="<%$ Resources:lang,ZiChan%>" />
-                                                                <asp:ListItem Value="è´Ÿå€º" Text="<%$ Resources:lang,FuZhai%>" />
-                                                                <asp:ListItem Value="æˆæœ¬" Text="<%$ Resources:lang,ChengBen%>" />
-                                                                <asp:ListItem Value="æƒç›Š" Text="<%$ Resources:lang,QuanYi%>" />
-                                                                <asp:ListItem Value="æŸç›Š" Text="<%$ Resources:lang,SunYi%>" />
+                                                                <asp:ListItem Value="Assets" Text="<%$ Resources:lang,ZiChan%>" />
+                                                                <asp:ListItem Value="Liabilities" Text="<%$ Resources:lang,FuZhai%>" />
+                                                                <asp:ListItem Value="Cost" Text="<%$ Resources:lang,ChengBen%>" />
+                                                                <asp:ListItem Value="Equity" Text="<%$ Resources:lang,QuanYi%>" />
+                                                                <asp:ListItem Value="ProfitandLoss" Text="<%$ Resources:lang,SunYi%>" />
                                                             </asp:DropDownList>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td align="left">
-                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,LeiXingQuYu%>"></asp:Label>ï¼š<asp:TextBox ID="TB_TypeArea" runat="server" CssClass="shuru" Width="140px">ä¸­å›½å¤§é™†</asp:TextBox>
+                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,LeiXingQuYu%>"></asp:Label>£º<asp:TextBox ID="TB_TypeArea" runat="server" CssClass="shuru" Width="140px">ÖÐ¹ú´óÂ½</asp:TextBox>
                                                             &nbsp;<asp:DropDownList ID="DL_Area" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DL_Area_SelectedIndexChanged">
-                                                                <asp:ListItem Value="ä¸­å›½å¤§é™†" Text="<%$ Resources:lang,ZhongGuoDaLu%>" />
-                                                                <asp:ListItem Value="ä¸­å›½é¦™æ¸¯" Text="<%$ Resources:lang,ZhongGuoXiangGang%>" />
-                                                                <asp:ListItem Value="ä¸­å›½æ¾³é—¨" Text="<%$ Resources:lang,ZhongGuoAoMen%>" />
-                                                                <asp:ListItem Value="ç¾Žå›½" Text="<%$ Resources:lang,MeiGuo%>" />
-                                                                <asp:ListItem Value="æ—¥æœ¬" Text="<%$ Resources:lang,RiBen%>" />
-                                                                <asp:ListItem Value="è‹±å›½" Text="<%$ Resources:lang,YingGuo%>" />
-                                                                <asp:ListItem Value="éŸ©å›½" Text="<%$ Resources:lang,HanGuo%>" />
-                                                                <asp:ListItem Value="æœé²œ" Text="<%$ Resources:lang,ChaoXian%>" />
+                                                                <asp:ListItem Value="ÖÐ¹ú´óÂ½" Text="<%$ Resources:lang,ZhongGuoDaLu%>" />
+                                                                <asp:ListItem Value="ÖÐ¹úÏã¸Û" Text="<%$ Resources:lang,ZhongGuoXiangGang%>" />
+                                                                <asp:ListItem Value="ÖÐ¹ú°ÄÃÅ" Text="<%$ Resources:lang,ZhongGuoAoMen%>" />
+                                                                <asp:ListItem Value="ÃÀ¹ú" Text="<%$ Resources:lang,MeiGuo%>" />
+                                                                <asp:ListItem Value="ÈÕ±¾" Text="<%$ Resources:lang,RiBen%>" />
+                                                                <asp:ListItem Value="Ó¢¹ú" Text="<%$ Resources:lang,YingGuo%>" />
+                                                                <asp:ListItem Value="º«¹ú" Text="<%$ Resources:lang,HanGuo%>" />
+                                                                <asp:ListItem Value="³¯ÏÊ" Text="<%$ Resources:lang,ChaoXian%>" />
                                                             </asp:DropDownList>
                                                         </td>
                                                     </tr>

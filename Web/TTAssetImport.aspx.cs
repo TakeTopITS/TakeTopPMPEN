@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.IO;
 using System.Drawing;
@@ -33,7 +33,7 @@ public partial class TTAssetImport : System.Web.UI.Page
         LB_UserName.Text = strUserName;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "èµ„äº§æœŸåˆæ•°æ®å¯¼å…¥", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "×Ê²úÆÚ³õÊı¾İµ¼Èë", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -115,8 +115,8 @@ public partial class TTAssetImport : System.Web.UI.Page
                 LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ;
                 return;
             }
-            string filename = FileUpload_Training.FileName.ToString();  //è·å–Execleæ–‡ä»¶å
-            string newfilename = System.IO.Path.GetFileNameWithoutExtension(filename) + DateTime.Now.ToString("yyyyMMddHHmmssff") + IsXls;//æ–°æ–‡ä»¶åç§°ï¼Œå¸¦åç¼€
+            string filename = FileUpload_Training.FileName.ToString();  //»ñÈ¡ExecleÎÄ¼şÃû
+            string newfilename = System.IO.Path.GetFileNameWithoutExtension(filename) + DateTime.Now.ToString("yyyyMMddHHmmssff") + IsXls;//ĞÂÎÄ¼şÃû³Æ£¬´øºó×º
             string strDocSavePath = Server.MapPath("Doc") + "\\" + DateTime.Now.ToString("yyyyMM") + "\\" + strUserCode.Trim() + "\\Doc\\";
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
@@ -130,11 +130,11 @@ public partial class TTAssetImport : System.Web.UI.Page
 
                 //DataSet ds = ExcelToDataSet(strpath, filename);
                 //DataRow[] dr = ds.Tables[0].Select();
-                //DataRow[] dr = ds.Tables[0].Select();//å®šä¹‰ä¸€ä¸ªDataRowæ•°ç»„
+                //DataRow[] dr = ds.Tables[0].Select();//¶¨ÒåÒ»¸öDataRowÊı×é
                 //int rowsnum = ds.Tables[0].Rows.Count;
 
                 DataTable dt = MSExcelHandler.ReadExcelToDataTable(strpath, filename);
-                DataRow[] dr = dt.Select();                        //å®šä¹‰ä¸€ä¸ªDataRowæ•°ç»„
+                DataRow[] dr = dt.Select();                        //¶¨ÒåÒ»¸öDataRowÊı×é
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
@@ -147,29 +147,29 @@ public partial class TTAssetImport : System.Web.UI.Page
 
                     for (i = 0; i < dr.Length; i++)
                     {
-                        strAssetCode = dr[i]["ä»£ç "].ToString().Trim();
+                        strAssetCode = dr[i]["´úÂë"].ToString().Trim();
 
                         if (strAssetCode != "")
                         {
                             try
                             {
-                                asset.AssetCode = dr[i]["ä»£ç "].ToString().Trim();
-                                asset.AssetName = dr[i]["åç§°"].ToString().Trim();
-                                asset.Type = dr[i]["ç±»å‹"].ToString().Trim();
-                                asset.Spec = dr[i]["è§„æ ¼"].ToString().Trim();
-                                asset.ModelNumber = dr[i]["å‹å·"].ToString().Trim();
-                                asset.Number = decimal.Parse(dr[i]["æ•°é‡"].ToString().Trim());
-                                asset.Price = decimal.Parse(dr[i]["å•ä»·"].ToString().Trim());
-                                asset.CurrencyType = dr[i]["å¸åˆ«"].ToString().Trim();
-                                asset.UnitName = dr[i]["å•ä½"].ToString().Trim();
-                                asset.Position = dr[i]["å­˜æ”¾ä»“åº“"].ToString().Trim();
-                                asset.Manufacturer = dr[i]["ä¾›åº”å•†"].ToString().Trim();
+                                asset.AssetCode = dr[i]["´úÂë"].ToString().Trim();
+                                asset.AssetName = dr[i]["Ãû³Æ"].ToString().Trim();
+                                asset.Type = dr[i]["ÀàĞÍ"].ToString().Trim();
+                                asset.Spec = dr[i]["¹æ¸ñ"].ToString().Trim();
+                                asset.ModelNumber = dr[i]["ĞÍºÅ"].ToString().Trim();
+                                asset.Number = decimal.Parse(dr[i]["ÊıÁ¿"].ToString().Trim());
+                                asset.Price = decimal.Parse(dr[i]["µ¥¼Û"].ToString().Trim());
+                                asset.CurrencyType = dr[i]["±Ò±ğ"].ToString().Trim();
+                                asset.UnitName = dr[i]["µ¥Î»"].ToString().Trim();
+                                asset.Position = dr[i]["´æ·Å²Ö¿â"].ToString().Trim();
+                                asset.Manufacturer = dr[i]["Supplier"].ToString().Trim();
                                 asset.OwnerCode = strUserCode;
                                 asset.OwnerName = ShareClass.GetUserName(strUserCode);
                                 asset.BuyTime = DateTime.Now;
                                 asset.PhotoURL = "";
                                 asset.Memo = "";
-                                asset.Status = "åœ¨ç”¨";
+                                asset.Status = "InUse";
 
                                 assetBLL.AddAsset(asset);
                             }
@@ -177,7 +177,7 @@ public partial class TTAssetImport : System.Web.UI.Page
                             {
                                 LB_ErrorText.Text += Resources.lang.ZZJGDRSBJC + " : " + Resources.lang.HangHao + ": " + (i + 2).ToString() + " , " + Resources.lang.DaiMa + ": " + strAssetCode + " : " + err.Message.ToString() + "<br/>"; ;
 
-                                LogClass.WriteLogFile(this.GetType().BaseType.Name + "ï¼š" + Resources.lang.ZZJGDRSBJC + " : " + Resources.lang.HangHao + ": " + (i + 2).ToString() + " , " + Resources.lang.DaiMa + ": " + strAssetCode + " : " + err.Message.ToString());
+                                LogClass.WriteLogFile(this.GetType().BaseType.Name + "£º" + Resources.lang.ZZJGDRSBJC + " : " + Resources.lang.HangHao + ": " + (i + 2).ToString() + " , " + Resources.lang.DaiMa + ": " + strAssetCode + " : " + err.Message.ToString());
                             }
 
                         }
@@ -223,8 +223,8 @@ public partial class TTAssetImport : System.Web.UI.Page
                 LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ;
                 j = -1;
             }
-            string filename = FileUpload_Training.FileName.ToString();  //è·å–Execleæ–‡ä»¶å
-            string newfilename = System.IO.Path.GetFileNameWithoutExtension(filename) + DateTime.Now.ToString("yyyyMMddHHmmssff") + IsXls;//æ–°æ–‡ä»¶åç§°ï¼Œå¸¦åç¼€
+            string filename = FileUpload_Training.FileName.ToString();  //»ñÈ¡ExecleÎÄ¼şÃû
+            string newfilename = System.IO.Path.GetFileNameWithoutExtension(filename) + DateTime.Now.ToString("yyyyMMddHHmmssff") + IsXls;//ĞÂÎÄ¼şÃû³Æ£¬´øºó×º
             string strDocSavePath = Server.MapPath("Doc") + "\\" + DateTime.Now.ToString("yyyyMM") + "\\" + strUserCode.Trim() + "\\Doc\\";
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
@@ -240,11 +240,11 @@ public partial class TTAssetImport : System.Web.UI.Page
 
                 //DataSet ds = ExcelToDataSet(strpath, filename);
                 //DataRow[] dr = ds.Tables[0].Select();
-                //DataRow[] dr = ds.Tables[0].Select();//å®šä¹‰ä¸€ä¸ªDataRowæ•°ç»„
+                //DataRow[] dr = ds.Tables[0].Select();//¶¨ÒåÒ»¸öDataRowÊı×é
                 //int rowsnum = ds.Tables[0].Rows.Count;
 
                 DataTable dt = MSExcelHandler.ReadExcelToDataTable(strpath, filename);
-                DataRow[] dr = dt.Select();                        //å®šä¹‰ä¸€ä¸ªDataRowæ•°ç»„
+                DataRow[] dr = dt.Select();                        //¶¨ÒåÒ»¸öDataRowÊı×é
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
@@ -258,7 +258,7 @@ public partial class TTAssetImport : System.Web.UI.Page
 
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        strAssetCode = dr[i]["ä»£ç "].ToString().Trim();
+                        strAssetCode = dr[i]["´úÂë"].ToString().Trim();
 
                         if (strAssetCode.Length > 20)
                         {
@@ -268,35 +268,35 @@ public partial class TTAssetImport : System.Web.UI.Page
                             continue;
                         }
 
-                        if (dr[i]["ä»£ç "].ToString().Trim() != "")
+                        if (dr[i]["´úÂë"].ToString().Trim() != "")
                         {
                             strHQL = "From Asset as asset Where asset.AssetCode = " + "'" + strAssetCode + "'";
                             lst = assetBLL.GetAllAssets(strHQL);
-                            if (lst != null && lst.Count > 0)//å­˜åœ¨ï¼Œåˆ™ä¸æ“ä½œ
+                            if (lst != null && lst.Count > 0)//´æÔÚ£¬Ôò²»²Ù×÷
                             {
 
                             }
-                            else//æ–°å¢
+                            else//ĞÂÔö
                             {
-                                asset.AssetCode = dr[i]["ä»£ç "].ToString().Trim();
-                                asset.AssetName = dr[i]["åç§°"].ToString().Trim();
+                                asset.AssetCode = dr[i]["´úÂë"].ToString().Trim();
+                                asset.AssetName = dr[i]["Ãû³Æ"].ToString().Trim();
 
-                                if (CheckAssetType(dr[i]["ç±»å‹"].ToString().Trim()) > 0)
+                                if (CheckAssetType(dr[i]["ÀàĞÍ"].ToString().Trim()) > 0)
                                 {
-                                    asset.Type = dr[i]["ç±»å‹"].ToString().Trim();
+                                    asset.Type = dr[i]["ÀàĞÍ"].ToString().Trim();
                                 }
                                 else
                                 {
-                                    LB_ErrorText.Text += Resources.lang.ZZJGJCSJLBCZCLPLXDRILXTOSTRINGTRIMJC + " " + dr[i]["ç±»å‹"].ToString().Trim();
+                                    LB_ErrorText.Text += Resources.lang.ZZJGJCSJLBCZCLPLXDRILXTOSTRINGTRIMJC + " " + dr[i]["ÀàĞÍ"].ToString().Trim();
                                     j = -1;
                                 }
-                                asset.Spec = dr[i]["è§„æ ¼"].ToString().Trim();
-                                asset.ModelNumber = dr[i]["å‹å·"].ToString().Trim();
+                                asset.Spec = dr[i]["¹æ¸ñ"].ToString().Trim();
+                                asset.ModelNumber = dr[i]["ĞÍºÅ"].ToString().Trim();
 
                                 try
                                 {
-                                    asset.Number = decimal.Parse(dr[i]["æ•°é‡"].ToString().Trim());
-                                    asset.Price = decimal.Parse(dr[i]["å•ä»·"].ToString().Trim());
+                                    asset.Number = decimal.Parse(dr[i]["ÊıÁ¿"].ToString().Trim());
+                                    asset.Price = decimal.Parse(dr[i]["µ¥¼Û"].ToString().Trim());
                                 }
                                 catch
                                 {
@@ -304,38 +304,38 @@ public partial class TTAssetImport : System.Web.UI.Page
                                     j = -1;
                                 }
 
-                                if (CheckUnit(dr[i]["å•ä½"].ToString().Trim()) > 0)
+                                if (CheckUnit(dr[i]["µ¥Î»"].ToString().Trim()) > 0)
                                 {
-                                    asset.UnitName = dr[i]["å•ä½"].ToString().Trim();
+                                    asset.UnitName = dr[i]["µ¥Î»"].ToString().Trim();
                                 }
                                 else
                                 {
-                                    LB_ErrorText.Text += Resources.lang.ZZJGJCSJLBCZCDWDRIDWTOSTRINGTRIMJC + " " + dr[i]["å•ä½"].ToString().Trim();
+                                    LB_ErrorText.Text += Resources.lang.ZZJGJCSJLBCZCDWDRIDWTOSTRINGTRIMJC + " " + dr[i]["µ¥Î»"].ToString().Trim();
                                     j = -1;
                                 }
 
-                                if (CheckCurrency(dr[i]["å¸åˆ«"].ToString().Trim()) > 0)
+                                if (CheckCurrency(dr[i]["±Ò±ğ"].ToString().Trim()) > 0)
                                 {
-                                    asset.CurrencyType = dr[i]["å¸åˆ«"].ToString().Trim();
+                                    asset.CurrencyType = dr[i]["±Ò±ğ"].ToString().Trim();
                                 }
                                 else
                                 {
-                                    LB_ErrorText.Text += Resources.lang.ZZJGJCSJLBCZCBBDRIBBTOSTRINGTRIMJC + " " + dr[i]["å¸åˆ«"].ToString().Trim();
+                                    LB_ErrorText.Text += Resources.lang.ZZJGJCSJLBCZCBBDRIBBTOSTRINGTRIMJC + " " + dr[i]["±Ò±ğ"].ToString().Trim();
                                     j = -1;
                                 }
 
-                                if (CheckWareHouse(dr[i]["å­˜æ”¾ä»“åº“"].ToString().Trim()) > 0)
+                                if (CheckWareHouse(dr[i]["´æ·Å²Ö¿â"].ToString().Trim()) > 0)
                                 {
 
-                                    asset.Position = dr[i]["å­˜æ”¾ä»“åº“"].ToString().Trim();
+                                    asset.Position = dr[i]["´æ·Å²Ö¿â"].ToString().Trim();
                                 }
                                 else
                                 {
-                                    LB_ErrorText.Text += Resources.lang.ZZJGJCSJLBCZCCKDRICFCKTOSTRINGTRIMJC + " " + dr[i]["å­˜æ”¾ä»“åº“"].ToString().Trim();
+                                    LB_ErrorText.Text += Resources.lang.ZZJGJCSJLBCZCCKDRICFCKTOSTRINGTRIMJC + " " + dr[i]["´æ·Å²Ö¿â"].ToString().Trim();
                                     j = -1;
                                 }
 
-                                asset.Manufacturer = dr[i]["ä¾›åº”å•†"].ToString().Trim();
+                                asset.Manufacturer = dr[i]["Supplier"].ToString().Trim();
 
                                 asset.OwnerCode = strUserCode;
                                 asset.OwnerName = ShareClass.GetUserName(strUserCode);
@@ -343,7 +343,7 @@ public partial class TTAssetImport : System.Web.UI.Page
                                 asset.BuyTime = DateTime.Now;
 
                                 asset.Memo = "";
-                                asset.Status = "åœ¨ç”¨";
+                                asset.Status = "InUse";
 
                             }
 
@@ -432,7 +432,7 @@ public partial class TTAssetImport : System.Web.UI.Page
 
         strHQL = "From Asset as asset Where asset.Type = '" + strAssetType + "' ";//and asset.Position='" + strWareHouse + "' ";
         strHQL += " and asset.OwnerCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
-        strHQL += " and asset.Number > 0 and asset.Status = 'åœ¨ç”¨' ";
+        strHQL += " and asset.Number > 0 and asset.Status = 'InUse' ";
 
         if (!string.IsNullOrEmpty(strAssetCode))
         {
@@ -521,9 +521,9 @@ public partial class TTAssetImport : System.Web.UI.Page
 
     protected bool IsAssetData(string strassetcode)
     {
-        //æ˜¯ç‰©æ–™çš„è¯ï¼Œè¿”å›true;å¦åˆ™è¿”å›false
+        //ÊÇÎïÁÏµÄ»°£¬·µ»Øtrue;·ñÔò·µ»Øfalse
         bool flag = true;
-        string strHQL = "Select AssetCode From T_Asset Where AssetCode='" + strassetcode + "' and Number > 0 and Status = 'åœ¨ç”¨' ";
+        string strHQL = "Select AssetCode From T_Asset Where AssetCode='" + strassetcode + "' and Number > 0 and Status = 'InUse' ";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_Asset");
         if (ds.Tables[0].Rows.Count > 0 && ds != null)
         {

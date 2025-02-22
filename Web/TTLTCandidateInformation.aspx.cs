@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
@@ -41,7 +41,7 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
         strCurrentUserType = ShareClass.GetUserType(strUserCode);
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "å€™é€‰äººä¿¡æ¯", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "ºòÑ¡ÈËĞÅÏ¢", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -166,7 +166,7 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
 
             try
             {
-                strHQL = "Update T_LTCandidateInformation Set Status = 'åˆ é™¤' Where ID = " + strID;
+                strHQL = "Update T_LTCandidateInformation Set Status = 'Deleted' Where ID = " + strID;
                 ShareClass.RunSqlCommand(strHQL);
 
                 strBelongDepartCode = DL_BelongDepartment.SelectedValue.Trim();
@@ -195,11 +195,11 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
 
             if (strFileName1 != "")
             {
-                //è·å–åˆå§‹æ–‡ä»¶å
-                i = strFileName1.LastIndexOf("."); //å–å¾—æ–‡ä»¶åä¸­æœ€åä¸€ä¸ª"."çš„ç´¢å¼•
-                string strNewExt = strFileName1.Substring(i); //è·å–æ–‡ä»¶æ‰©å±•å
+                //»ñÈ¡³õÊ¼ÎÄ¼şÃû
+                i = strFileName1.LastIndexOf("."); //È¡µÃÎÄ¼şÃûÖĞ×îºóÒ»¸ö"."µÄË÷Òı
+                string strNewExt = strFileName1.Substring(i); //»ñÈ¡ÎÄ¼şÀ©Õ¹Ãû
 
-                DateTime dtUploadNow = DateTime.Now; //è·å–ç³»ç»Ÿæ—¶é—´
+                DateTime dtUploadNow = DateTime.Now; //»ñÈ¡ÏµÍ³Ê±¼ä
 
                 string strFileName2 = System.IO.Path.GetFileName(strFileName1);
                 string strExtName = Path.GetExtension(strFileName2);
@@ -483,8 +483,8 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
                 LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ ;
                 return;
             }
-            string filename = FileUpload_Training.FileName.ToString();  //è·å–Execleæ–‡ä»¶å
-            string newfilename = System.IO.Path.GetFileNameWithoutExtension(filename) + DateTime.Now.ToString("yyyyMMddHHmmssff") + IsXls;//æ–°æ–‡ä»¶åç§°ï¼Œå¸¦åç¼€
+            string filename = FileUpload_Training.FileName.ToString();  //»ñÈ¡ExecleÎÄ¼şÃû
+            string newfilename = System.IO.Path.GetFileNameWithoutExtension(filename) + DateTime.Now.ToString("yyyyMMddHHmmssff") + IsXls;//ĞÂÎÄ¼şÃû³Æ£¬´øºó×º
             string strDocSavePath = Server.MapPath("Doc") + "\\" + DateTime.Now.ToString("yyyyMM") + "\\" + strUserCode.Trim() + "\\Doc\\";
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
@@ -498,11 +498,11 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
 
                 //DataSet ds = ExcelToDataSet(strpath, filename);
                 //DataRow[] dr = ds.Tables[0].Select();
-                //DataRow[] dr = ds.Tables[0].Select();//å®šä¹‰ä¸€ä¸ªDataRowæ•°ç»„
+                //DataRow[] dr = ds.Tables[0].Select();//¶¨ÒåÒ»¸öDataRowÊı×é
                 //int rowsnum = ds.Tables[0].Rows.Count;
 
                 DataTable dt = MSExcelHandler.ReadExcelToDataTable(strpath, filename);
-                DataRow[] dr = dt.Select();                        //å®šä¹‰ä¸€ä¸ªDataRowæ•°ç»„
+                DataRow[] dr = dt.Select();                        //¶¨ÒåÒ»¸öDataRowÊı×é
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
@@ -512,35 +512,35 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
                 {
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        strNewUserName = dr[i]["å§“å"].ToString().Trim();
+                        strNewUserName = dr[i]["ĞÕÃû"].ToString().Trim();
                         LTCandidateInformationBLL ltCandidateInformationBLL = new LTCandidateInformationBLL();
                         string strHQL = "from LTCandidateInformation as ltCandidateInformation where ltCandidateInformation.UserName = '" + strNewUserName + "' ";
                         IList lst = ltCandidateInformationBLL.GetAllLTCandidateInformations(strHQL);
-                        if (lst != null && lst.Count > 0)//å­˜åœ¨ï¼Œåˆ™ä¸æ“ä½œ
+                        if (lst != null && lst.Count > 0)//´æÔÚ£¬Ôò²»²Ù×÷
                         {
                         }
-                        else//æ–°å¢
+                        else//ĞÂÔö
                         {
                             LTCandidateInformation ltCandidateInformation = new LTCandidateInformation();
 
                             try
                             {
-                                ltCandidateInformation.UserName = dr[i]["å§“å"].ToString().Trim();
-                                ltCandidateInformation.Gender = dr[i]["æ€§åˆ«"].ToString().Trim() == "" ? "ç”·" : dr[i]["æ€§åˆ«"].ToString().Trim();
-                                ltCandidateInformation.Age = int.Parse(dr[i]["å¹´é¾„"].ToString().Trim() == "" ? "0" : dr[i]["å¹´é¾„"].ToString().Trim());
+                                ltCandidateInformation.UserName = dr[i]["ĞÕÃû"].ToString().Trim();
+                                ltCandidateInformation.Gender = dr[i]["ĞÔ±ğ"].ToString().Trim() == "" ? "Male" : dr[i]["ĞÔ±ğ"].ToString().Trim();
+                                ltCandidateInformation.Age = int.Parse(dr[i]["ÄêÁä"].ToString().Trim() == "" ? "0" : dr[i]["ÄêÁä"].ToString().Trim());
 
                                 ltCandidateInformation.BelongDepartCode = DL_BelongDepartment.SelectedValue;
                                 ltCandidateInformation.BelongDepartName = DL_BelongDepartment.SelectedItem.Text;
 
-                                ltCandidateInformation.Department = dr[i]["å…¬å¸"].ToString().Trim();
-                                ltCandidateInformation.Department = dr[i]["éƒ¨é—¨"].ToString().Trim();
-                                ltCandidateInformation.CurrentDuty = dr[i]["å½“å‰èŒåŠ¡"].ToString().Trim();
+                                ltCandidateInformation.Department = dr[i]["¹«Ë¾"].ToString().Trim();
+                                ltCandidateInformation.Department = dr[i]["²¿ÃÅ"].ToString().Trim();
+                                ltCandidateInformation.CurrentDuty = dr[i]["µ±Ç°Ö°Îñ"].ToString().Trim();
 
-                                ltCandidateInformation.MobilePhone = dr[i]["æ‰‹æœº"].ToString().Trim();
+                                ltCandidateInformation.MobilePhone = dr[i]["ÊÖ»ú"].ToString().Trim();
 
                                 ltCandidateInformation.CreateTime = DateTime.Now;
 
-                                ltCandidateInformation.Status = dr[i]["çŠ¶æ€"].ToString().Trim() == "" ? "åœ¨èŒ" : dr[i]["çŠ¶æ€"].ToString().Trim();
+                                ltCandidateInformation.Status = dr[i]["×´Ì¬"].ToString().Trim() == "" ? "Employed" : dr[i]["×´Ì¬"].ToString().Trim();
                                 ltCandidateInformation.PhotoURL = "";
 
                                 ltCandidateInformationBLL.AddLTCandidateInformation(ltCandidateInformation);
@@ -551,7 +551,7 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
 
                                 LB_ErrorText.Text += Resources.lang.ZZJGDRSBJC + " : " + Resources.lang.HangHao + ": " + (i + 2).ToString() + " , " + Resources.lang.DaiMa + ": " + strNewUserName + " : " + err.Message.ToString() + "<br/>"; ;
 
-                                LogClass.WriteLogFile(this.GetType().BaseType.Name + "ï¼š" + Resources.lang.ZZJGDRSBJC + " : " + Resources.lang.HangHao + ": " + (i + 2).ToString() + " , " + Resources.lang.DaiMa + ": " + strNewUserName + " : " + err.Message.ToString());
+                                LogClass.WriteLogFile(this.GetType().BaseType.Name + "£º" + Resources.lang.ZZJGDRSBJC + " : " + Resources.lang.HangHao + ": " + (i + 2).ToString() + " , " + Resources.lang.DaiMa + ": " + strNewUserName + " : " + err.Message.ToString());
                             }
 
                         }
@@ -608,8 +608,8 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
                 LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ ;
                 j = -1;
             }
-            string filename = FileUpload_Training.FileName.ToString();  //è·å–Execleæ–‡ä»¶å
-            string newfilename = System.IO.Path.GetFileNameWithoutExtension(filename) + DateTime.Now.ToString("yyyyMMddHHmmssff") + IsXls;//æ–°æ–‡ä»¶åç§°ï¼Œå¸¦åç¼€
+            string filename = FileUpload_Training.FileName.ToString();  //»ñÈ¡ExecleÎÄ¼şÃû
+            string newfilename = System.IO.Path.GetFileNameWithoutExtension(filename) + DateTime.Now.ToString("yyyyMMddHHmmssff") + IsXls;//ĞÂÎÄ¼şÃû³Æ£¬´øºó×º
             string strDocSavePath = Server.MapPath("Doc") + "\\" + DateTime.Now.ToString("yyyyMM") + "\\" + strUserCode.Trim() + "\\Doc\\";
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
@@ -624,11 +624,11 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
 
                 //DataSet ds = ExcelToDataSet(strpath, filename);
                 //DataRow[] dr = ds.Tables[0].Select();
-                //DataRow[] dr = ds.Tables[0].Select();//å®šä¹‰ä¸€ä¸ªDataRowæ•°ç»„
+                //DataRow[] dr = ds.Tables[0].Select();//¶¨ÒåÒ»¸öDataRowÊı×é
                 //int rowsnum = ds.Tables[0].Rows.Count;
 
                 DataTable dt = MSExcelHandler.ReadExcelToDataTable(strpath, filename);
-                DataRow[] dr = dt.Select();                        //å®šä¹‰ä¸€ä¸ªDataRowæ•°ç»„
+                DataRow[] dr = dt.Select();                        //¶¨ÒåÒ»¸öDataRowÊı×é
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
@@ -639,16 +639,16 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
                 {
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        string strUserName = dr[i]["å§“å"].ToString().Trim();
+                        string strUserName = dr[i]["ĞÕÃû"].ToString().Trim();
                         LTCandidateInformationBLL ltCandidateInformationBLL = new LTCandidateInformationBLL();
                         string strHQL = "from LTCandidateInformation as ltCandidateInformation where ltCandidateInformation.UserName = '" + strUserName + "' ";
                         IList lst = ltCandidateInformationBLL.GetAllLTCandidateInformations(strHQL);
-                        if (lst != null && lst.Count > 0)//å­˜åœ¨ï¼Œåˆ™ä¸æ“ä½œ
+                        if (lst != null && lst.Count > 0)//´æÔÚ£¬Ôò²»²Ù×÷
                         {
                             LB_ErrorText.Text += Resources.lang.ZZJGCZXTZHDYGDRICYDMTOSTRINGTRIMDRICYXMTOSTRINGTRIMJC;
                             j = -1;
                         }
-                        else//æ–°å¢
+                        else//ĞÂÔö
                         {
                             LTCandidateInformation ltCandidateInformation = new LTCandidateInformation();
                         }
@@ -674,7 +674,7 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
         IList lst;
 
         strHQL = "from LTCandidateInformation as ltCandidateInformation Where ltCandidateInformation.BelongDepartCode = " + "'" + strDepartCode + "'";
-        strHQL += " and ltCandidateInformation.Status <> 'åˆ é™¤'";
+        strHQL += " and ltCandidateInformation.Status <> 'Deleted'";
         LTCandidateInformationBLL ltCandidateInformationBLL = new LTCandidateInformationBLL();
         lst = ltCandidateInformationBLL.GetAllLTCandidateInformations(strHQL);
 
@@ -724,13 +724,13 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
 
 
     /// <summary>
-    ///  æ•£åˆ—åŠ å¯†
+    ///  É¢ÁĞ¼ÓÃÜ
     /// </summary>
     protected string EncryptPasswordShal(string strPlaintext)
     {
         byte[] srcBuffer = System.Text.Encoding.UTF8.GetBytes(strPlaintext);
 
-        System.Security.Cryptography.HashAlgorithm hash = System.Security.Cryptography.HashAlgorithm.Create("SHA1"); //å°†å‚æ•°æ¢æˆâ€œMD5â€ï¼Œåˆ™æ‰§è¡Œ MD5 åŠ å¯†ã€‚ä¸åŒºåˆ†å¤§å°å†™ã€‚
+        System.Security.Cryptography.HashAlgorithm hash = System.Security.Cryptography.HashAlgorithm.Create("SHA1"); //½«²ÎÊı»»³É¡°MD5¡±£¬ÔòÖ´ĞĞ MD5 ¼ÓÃÜ¡£²»Çø·Ö´óĞ¡Ğ´¡£
         byte[] destBuffer = hash.ComputeHash(srcBuffer);
 
         string strHashedText = BitConverter.ToString(destBuffer).Replace("-", "");

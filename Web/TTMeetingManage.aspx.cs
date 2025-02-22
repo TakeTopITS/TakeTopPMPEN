@@ -1,4 +1,4 @@
-锘縰sing ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using System;
 using System.Collections;
 using System.Web.UI;
@@ -17,7 +17,7 @@ public partial class TTMeetingManage : System.Web.UI.Page
         LB_UserCode.Text = strUserCode;
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "璧勪骇鐧昏鍏ュ簱", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "资产登记入库", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -27,7 +27,7 @@ public partial class TTMeetingManage : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
         {
-            strHQL = "from Meeting as meeting where Rtrim(Ltrim(meeting.Status)) <> '鍙栨秷'and  meeting.ID in ( select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + ") and meeting.EndTime > now() order by meeting.ID DESC ";
+            strHQL = "from Meeting as meeting where Rtrim(Ltrim(meeting.Status)) <> 'Cancel'and  meeting.ID in ( select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + ") and meeting.EndTime > now() order by meeting.ID DESC ";
             MeetingBLL meetingBLL = new MeetingBLL();
             lst = meetingBLL.GetAllMeetings(strHQL);
 
@@ -52,7 +52,7 @@ public partial class TTMeetingManage : System.Web.UI.Page
 
         string strUserCode = LB_UserCode.Text.Trim();
 
-        strHQL = "from Meeting as meeting where Rtrim(Ltrim(meeting.Status)) <> '鍙栨秷'and  meeting.ID in ( select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + ") and meeting.EndTime > now() order by meeting.ID DESC ";
+        strHQL = "from Meeting as meeting where Rtrim(Ltrim(meeting.Status)) <> 'Cancel'and  meeting.ID in ( select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + ") and meeting.EndTime > now() order by meeting.ID DESC ";
         MeetingBLL meetingBLL = new MeetingBLL();
         lst = meetingBLL.GetAllMeetings(strHQL);
         DataGrid1.DataSource = lst;

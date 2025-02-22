@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTRCJProjectTotalCostFee.aspx.cs" Inherits="TTRCJProjectTargetCostFee" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTRCJProjectTotalCostFee.aspx.cs" Inherits="TTRCJProjectTargetCostFee" %>
 
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
@@ -7,7 +7,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>ÊàêÊú¨Ë¥πÈ°πÁõÆÊ†áÁÆ°ÁêÜ</title>
+    <title>≥…±æ∑—œÓƒø±Íπ‹¿Ì</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
@@ -51,7 +51,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">È°πÁõÆÊàêÊú¨Ë¥πÁî®ÁÆ°ÁêÜ
+                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">œÓƒø≥…±æ∑—”√π‹¿Ì
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -63,20 +63,20 @@
                                                 <table border="0" align="right" cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td align="left" width="120">
-                                                            <asp:RadioButton ID="RB_ALL" runat="server" Text="ÂÖ®ÈÉ®ÊòæÁ§∫" AutoPostBack="True" GroupName="TypeForQuery" Checked="true" />
+                                                            <asp:RadioButton ID="RB_ALL" runat="server" Text="»´≤øœ‘ æ" AutoPostBack="True" GroupName="TypeForQuery" Checked="true" />
                                                         </td>
                                                         <td align="left" width="120">
-                                                            <asp:RadioButton ID="RB_MainType" runat="server" Text="ÊåâÂ§ßÁ±ª" AutoPostBack="True" GroupName="TypeForQuery" />
+                                                            <asp:RadioButton ID="RB_MainType" runat="server" Text="∞¥¥Û¿‡" AutoPostBack="True" GroupName="TypeForQuery" />
                                                         </td>
                                                         <td align="left" width="120">
-                                                            <asp:RadioButton ID="RB_SubType" runat="server" Text="ÊåâÂ∞èÁ±ª" AutoPostBack="True" GroupName="TypeForQuery" />
+                                                            <asp:RadioButton ID="RB_SubType" runat="server" Text="∞¥–°¿‡" AutoPostBack="True" GroupName="TypeForQuery" />
                                                         </td>
                                                         <td align="left" width="120">
 
                                                             <table width="320" border="0" align="left" cellpadding="0" cellspacing="0">
                                                                 <tr>
                                                                     <td align="right" width="200">
-                                                                        <asp:RadioButton ID="RB_Time" runat="server" Text="ÊåâÊó∂Èó¥Êü•ËØ¢" AutoPostBack="True" GroupName="TypeForQuery" />
+                                                                        <asp:RadioButton ID="RB_Time" runat="server" Text="∞¥ ±º‰≤È—Ø" AutoPostBack="True" GroupName="TypeForQuery" />
                                                                     </td>
                                                                     <td align="left" width="120">
                                                                         <asp:DropDownList ID="DDL_YearList" runat="server" AutoPostBack="True"></asp:DropDownList>
@@ -103,10 +103,10 @@
                                                 <table width="320" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td align="left" width="120">
-                                                            <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">È°πÁõÆËµÑÈáëËÆ°ÂàíÂ°´ÂÜô</asp:LinkButton>
+                                                            <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">œÓƒø◊ Ωº∆ªÆÃÓ–¥</asp:LinkButton>
                                                         </td>
                                                         <%--<td align="left" width="120">
-                                                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" >È°πÁõÆËµÑÈáëËÆ°ÂàíÂÆ°Ê†∏</asp:LinkButton>
+                                                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" >œÓƒø◊ Ωº∆ªÆ…Û∫À</asp:LinkButton>
                                                         </td>--%>
                                                     </tr>
                                                 </table>
@@ -129,12 +129,12 @@
                                                                         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" ShowHeaderWhenEmpty="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowDataBound="GridView1_RowDataBound">
                                                                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                                                             <Columns>
-                                                                                <asp:BoundField DataField="ID" HeaderText="Â∫èÂè∑" />
-                                                                                <asp:BoundField DataField="CostFeeID" HeaderText="Â§ßÁ±ªÁºñÂè∑" />
-                                                                                <asp:BoundField DataField="Title" HeaderText="ÊàêÊú¨Ë¥πÈ°πÂ§ßÁ±ªÊ†áÈ¢ò" />
-                                                                                <asp:BoundField DataField="CostFeeSubID" HeaderText="Â≠êÁ±ªÁºñÂè∑" />
-                                                                                <asp:BoundField DataField="SubTitle" HeaderText="ÊàêÊú¨Ë¥πÈ°πÂ≠êÁ±ªÊ†áÈ¢ò" />
-                                                                                <asp:TemplateField HeaderText="ÊàêÊú¨Á±ªÂûã">
+                                                                                <asp:BoundField DataField="ID" HeaderText="–Ú∫≈" />
+                                                                                <asp:BoundField DataField="CostFeeID" HeaderText="¥Û¿‡±‡∫≈" />
+                                                                                <asp:BoundField DataField="Title" HeaderText="≥…±æ∑—œÓ¥Û¿‡±ÍÃ‚" />
+                                                                                <asp:BoundField DataField="CostFeeSubID" HeaderText="◊”¿‡±‡∫≈" />
+                                                                                <asp:BoundField DataField="SubTitle" HeaderText="≥…±æ∑—œÓ◊”¿‡±ÍÃ‚" />
+                                                                                <asp:TemplateField HeaderText="≥…±æ¿‡–Õ">
                                                                                     <EditItemTemplate>
                                                                                         <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("CostType") %>'></asp:TextBox>
                                                                                     </EditItemTemplate>
@@ -142,11 +142,11 @@
                                                                                         <asp:Label ID="Label1" runat="server" Text='<%# GetCostString(Eval("CostType").ToString()) %>'></asp:Label>
                                                                                     </ItemTemplate>
                                                                                 </asp:TemplateField>
-                                                                                <asp:BoundField DataField="OriginalCost" HeaderText="ÂèØÊéßÊàêÊú¨" />
-                                                                                <asp:BoundField DataField="ActualCost" HeaderText="ÂÆûÈôÖÊàêÊú¨" />
-                                                                                <asp:BoundField DataField="TargetCost" HeaderText="ÁõÆÊ†áÊàêÊú¨" />
-                                                                                <asp:BoundField DataField="LastTime" HeaderText="ÊúÄÂêé‰øÆÊîπÊó∂Èó¥" />
-                                                                                <asp:CommandField ShowSelectButton="True" HeaderText="Êìç‰Ωú" ButtonType="Button" />
+                                                                                <asp:BoundField DataField="OriginalCost" HeaderText="ø…øÿ≥…±æ" />
+                                                                                <asp:BoundField DataField="ActualCost" HeaderText=" µº ≥…±æ" />
+                                                                                <asp:BoundField DataField="TargetCost" HeaderText="ƒø±Í≥…±æ" />
+                                                                                <asp:BoundField DataField="LastTime" HeaderText="◊Ó∫Û–ﬁ∏ƒ ±º‰" />
+                                                                                <asp:CommandField ShowSelectButton="True" HeaderText="Operation" ButtonType="Button" />
                                                                             </Columns>
                                                                             <EditRowStyle BackColor="#999999" />
                                                                             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -184,7 +184,7 @@
                                                                     <td align="left" colspan="4">
                                                                         <table width="320" border="0" align="left" cellpadding="0" cellspacing="0">
                                                                             <tr>
-                                                                                <td align="right" width="220">Â∫èÂè∑:</td>
+                                                                                <td align="right" width="220">–Ú∫≈:</td>
                                                                                 <td align="left" width="120">
                                                                                     <asp:TextBox ID="tbID" runat="server" ReadOnly="True"></asp:TextBox>
                                                                                 </td>
@@ -196,7 +196,7 @@
                                                                     <td align="left">
                                                                         <table width="320" border="0" align="left" cellpadding="0" cellspacing="0">
                                                                             <tr>
-                                                                                <td align="right" width="200">ÊàêÊú¨Ë¥πÈ°πÂ§ßÁ±ª:</td>
+                                                                                <td align="right" width="200">≥…±æ∑—œÓ¥Û¿‡:</td>
                                                                                 <td align="left" width="120">
                                                                                     <asp:DropDownList ID="DDL_CostFee" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DDL_CostFee_SelectedIndexChanged">
                                                                                     </asp:DropDownList>
@@ -207,7 +207,7 @@
                                                                     <td>
                                                                         <table width="420" border="0" align="left" cellpadding="0" cellspacing="0">
                                                                             <tr>
-                                                                                <td align="right" width="120">ÊàêÊú¨Ë¥πÈ°πÂ≠êÁ±ªÔºö</td>
+                                                                                <td align="right" width="120">≥…±æ∑—œÓ◊”¿‡£∫</td>
                                                                                 <td align="left" width="120">
                                                                                     <asp:DropDownList ID="DDL_CostSubFee" runat="server" AutoPostBack="True">
                                                                                     </asp:DropDownList>
@@ -222,11 +222,11 @@
                                                                     <td align="left">
                                                                         <table width="320" border="0" align="left" cellpadding="0" cellspacing="0">
                                                                             <tr>
-                                                                                <td align="right" width="220">ÊàêÊú¨Á±ªÂûã:</td>
+                                                                                <td align="right" width="220">≥…±æ¿‡–Õ:</td>
                                                                                 <td align="left" width="120">
                                                                                     <asp:DropDownList ID="DDL_CostType" runat="server" AutoPostBack="True">
-                                                                                        <asp:ListItem Value="1">Â≠êÁ±ªÈ¢ÑÁÆó</asp:ListItem>
-                                                                                        <asp:ListItem Value="2">ÂÆûÈôÖÁõÆÊ†áÊàêÊú¨</asp:ListItem>
+                                                                                        <asp:ListItem Value="1">◊”¿‡‘§À„</asp:ListItem>
+                                                                                        <asp:ListItem Value="2"> µº ƒø±Í≥…±æ</asp:ListItem>
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                             </tr>
@@ -235,7 +235,7 @@
                                                                     <td>
                                                                         <table width="320" border="0" align="left" cellpadding="0" cellspacing="0">
                                                                             <tr>
-                                                                                <td align="right" width="200">ÂèØÊéßÊàêÊú¨Ôºö</td>
+                                                                                <td align="right" width="200">ø…øÿ≥…±æ£∫</td>
                                                                                 <td align="left" width="120">
                                                                                     <asp:TextBox ID="TB_OriginalCost" runat="server" ReadOnly="True">0</asp:TextBox>
                                                                                 </td>
@@ -245,7 +245,7 @@
                                                                     <td colspan="2">
                                                                         <table width="320" border="0" align="left" cellpadding="0" cellspacing="0">
                                                                             <tr>
-                                                                                <td align="right" width="200">ÁõÆÊ†áÊàêÊú¨Ôºö</td>
+                                                                                <td align="right" width="200">ƒø±Í≥…±æ£∫</td>
                                                                                 <td align="left" width="120">
                                                                                     <asp:TextBox ID="TB_Costtarget" runat="server"></asp:TextBox>
                                                                                 </td>
@@ -265,22 +265,22 @@
                                                                 <tr>
                                                                     <td>
                                                                         <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                                            <asp:Button ID="btnAddNewItem" runat="server" Text="Êñ∞Â¢ûÊï∞ÊçÆ" Width="146px" OnClick="btnAddNewItem_Click" />
+                                                                            <asp:Button ID="btnAddNewItem" runat="server" Text="–¬‘ˆ ˝æ›" Width="146px" OnClick="btnAddNewItem_Click" />
                                                                         </table>
                                                                     </td>
                                                                     <td>
                                                                         <table align="left" border="0" cellpadding="0" cellspacing="0" width="240">
-                                                                            <asp:Button ID="btnEditItem" runat="server" Text="‰øÆÊîπÊï∞ÊçÆ" Width="146px" OnClick="btnEditItem_Click" />
+                                                                            <asp:Button ID="btnEditItem" runat="server" Text="–ﬁ∏ƒ ˝æ›" Width="146px" OnClick="btnEditItem_Click" />
                                                                         </table>
                                                                     </td>
                                                                     <td align="left">
                                                                         <table align="left" border="0" cellpadding="0" cellspacing="0" style="width: 2px">
-                                                                            <asp:Button ID="btnDeleteItem" runat="server" Text="Âà†Èô§Êï∞ÊçÆ" Width="146px" OnClientClick="return confirm('ÊÇ®Á°ÆËÆ§Âà†Èô§ËØ•ËÆ∞ÂΩïÂêó?')" OnClick="btnDeleteItem_Click" />
+                                                                            <asp:Button ID="btnDeleteItem" runat="server" Text="…æ≥˝ ˝æ›" Width="146px" OnClientClick="return confirm('ƒ˙»∑»œ…æ≥˝∏√º«¬º¬?')" OnClick="btnDeleteItem_Click" />
                                                                         </table>
                                                                     </td>
                                                                     <td align="left">
                                                                         <table align="left" border="0" cellpadding="0" cellspacing="0" style="width: 2px">
-                                                                            <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" Width="189px">ÂÆûÈôÖÊàêÊú¨Êï∞ÊçÆÁÆ°ÁêÜ</asp:LinkButton>
+                                                                            <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" Width="189px"> µº ≥…±æ ˝æ›π‹¿Ì</asp:LinkButton>
                                                                         </table>
                                                                     </td>
                                                                 </tr>
@@ -305,7 +305,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">ÊåâË¥πÈ°πÁßçÁ±ªÂêàËÆ°Êü•ËØ¢
+                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">∞¥∑—œÓ÷÷¿‡∫œº∆≤È—Ø
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -317,10 +317,10 @@
                                                 <table width="280" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td>
-                                                            <asp:RadioButton ID="RB_FeeType" runat="server" Text="ÊåâÂ§ßÁ±ª" Checked="True" GroupName="GN_TotalType" AutoPostBack="True" OnCheckedChanged="RB_FeeType_CheckedChanged" />
+                                                            <asp:RadioButton ID="RB_FeeType" runat="server" Text="∞¥¥Û¿‡" Checked="True" GroupName="GN_TotalType" AutoPostBack="True" OnCheckedChanged="RB_FeeType_CheckedChanged" />
                                                         </td>
                                                         <td>
-                                                            <asp:RadioButton ID="RB_FeeSubType" runat="server" Text="ÊåâÂ≠êÁ±ª" GroupName="GN_TotalType" AutoPostBack="True" OnCheckedChanged="RB_FeeSubType_CheckedChanged" />
+                                                            <asp:RadioButton ID="RB_FeeSubType" runat="server" Text="∞¥◊”¿‡" GroupName="GN_TotalType" AutoPostBack="True" OnCheckedChanged="RB_FeeSubType_CheckedChanged" />
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -329,7 +329,7 @@
                                                 <table width="580" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td>
-                                                            <asp:Label ID="LB_ShowMessageTotalByType" runat="server" Text="Ê∂àÊÅØÊèêÁ§∫:"></asp:Label>
+                                                            <asp:Label ID="LB_ShowMessageTotalByType" runat="server" Text="œ˚œ¢Ã· æ:"></asp:Label>
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -352,13 +352,13 @@
                                                                         <asp:GridView ID="GV_TotalByType" runat="server" AutoGenerateColumns="False" PageSize="12" ShowHeaderWhenEmpty="True" OnRowDataBound="GV_TotalByType_RowDataBound" OnPageIndexChanging="GV_TotalByType_PageIndexChanging">
                                                                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                                                             <Columns>
-                                                                                <asp:BoundField DataField="CostFeeID" HeaderText="Â§ßÁ±ªÁºñÂè∑" />
-                                                                                <asp:BoundField DataField="Title" HeaderText="Ë¥πÈ°πÂ§ßÁ±ªÊ†áÈ¢ò" />
-                                                                                <asp:BoundField DataField="CostFeeSubId" HeaderText="Â≠êÁ±ªÁºñÂè∑" />
-                                                                                <asp:BoundField DataField="SubTitle" HeaderText="Ë¥πÈ°πÂ≠êÁ±ªÊ†áÈ¢ò" />
-                                                                                <asp:BoundField DataField="originalcost" HeaderText="ÂèØÊéßÊàêÊú¨" />
-                                                                                <asp:BoundField DataField="ActualCost" HeaderText="ÂÆûÈôÖÊàêÊú¨" />
-                                                                                <asp:BoundField DataField="TargetCost" HeaderText="ÁõÆÊ†áÊàêÊú¨" />
+                                                                                <asp:BoundField DataField="CostFeeID" HeaderText="¥Û¿‡±‡∫≈" />
+                                                                                <asp:BoundField DataField="Title" HeaderText="∑—œÓ¥Û¿‡±ÍÃ‚" />
+                                                                                <asp:BoundField DataField="CostFeeSubId" HeaderText="◊”¿‡±‡∫≈" />
+                                                                                <asp:BoundField DataField="SubTitle" HeaderText="∑—œÓ◊”¿‡±ÍÃ‚" />
+                                                                                <asp:BoundField DataField="originalcost" HeaderText="ø…øÿ≥…±æ" />
+                                                                                <asp:BoundField DataField="ActualCost" HeaderText=" µº ≥…±æ" />
+                                                                                <asp:BoundField DataField="TargetCost" HeaderText="ƒø±Í≥…±æ" />
                                                                             </Columns>
                                                                             <EditRowStyle BackColor="#999999" />
                                                                             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -395,7 +395,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">ÊåâÊúà‰ªΩÂêàËÆ°ÂÆûÈôÖÊàêÊú¨
+                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">∞¥‘¬∑›∫œº∆ µº ≥…±æ
                                                         </td>
                                                         <td width="5">
                                                             <%-- <img src="ImagesSkin/main_top_r.jpg" width="5" height="31" />--%>
@@ -407,7 +407,7 @@
                                                 <table width="1080" border="0" align="left" cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td>
-                                                            <asp:Label ID="LB_ShowMessageTotalByMonth" runat="server" Text="Ê∂àÊÅØÊèêÁ§∫:"></asp:Label>
+                                                            <asp:Label ID="LB_ShowMessageTotalByMonth" runat="server" Text="œ˚œ¢Ã· æ:"></asp:Label>
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -430,9 +430,9 @@
                                                                         <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" PageSize="12" ShowHeaderWhenEmpty="True" OnPageIndexChanging="GridView2_PageIndexChanging" OnRowDataBound="GridView2_RowDataBound">
                                                                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                                                             <Columns>
-                                                                                <asp:BoundField DataField="WorkYear" HeaderText="Ê±áÊÄªÂπ¥‰ªΩ" />
-                                                                                <asp:BoundField DataField="WorkMonth" HeaderText="Ê±áÊÄªÊúà‰ªΩ" />
-                                                                                <asp:BoundField DataField="tsum" HeaderText="ÂÆûÈôÖÊàêÊú¨ÂêàËÆ°" />
+                                                                                <asp:BoundField DataField="WorkYear" HeaderText="ª„◊‹ƒÍ∑›" />
+                                                                                <asp:BoundField DataField="WorkMonth" HeaderText="ª„◊‹‘¬∑›" />
+                                                                                <asp:BoundField DataField="tsum" HeaderText=" µº ≥…±æ∫œº∆" />
                                                                             </Columns>
                                                                             <EditRowStyle BackColor="#999999" />
                                                                             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -464,7 +464,7 @@
             <div style="position: absolute; left: 40%; top: 40%;">
                 <asp:UpdateProgress ID="TakeTopUp" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
                     <ProgressTemplate>
-                        <img src="Images/Processing.gif" alt="ËØ∑Á®çÂÄôÔºåÂ§ÑÁêÜ‰∏≠..." />
+                        <img src="Images/Processing.gif" alt="«Î…‘∫Ú£¨¥¶¿Ì÷–..." />
                     </ProgressTemplate>
                 </asp:UpdateProgress>
             </div>

@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
@@ -18,7 +18,7 @@ public partial class TTHSEManagement : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","ÂÆâÁéØÂÅ•ÁÆ°ÁêÜ", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx","∞≤ª∑Ω°π‹¿Ì", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -46,7 +46,7 @@ public partial class TTHSEManagement : System.Web.UI.Page
         DataGrid2.DataBind();
 
         strHQL = "select *,extract(year from TrainingStart)||'-'||EXTRACT(MONTH FROM TrainingStart)||'-'||EXTRACT(DAY FROM TrainingStart)||' '||EXTRACT(HOUR FROM TrainingStart)" +
-            "||':'||EXTRACT(MINUTE FROM TrainingStart)||':'||EXTRACT(SECOND FROM TrainingStart)||'Ëá≥'||extract(year from TrainingEnd)||'-'||EXTRACT(MONTH FROM TrainingEnd)" +
+            "||':'||EXTRACT(MINUTE FROM TrainingStart)||':'||EXTRACT(SECOND FROM TrainingStart)||'÷¡'||extract(year from TrainingEnd)||'-'||EXTRACT(MONTH FROM TrainingEnd)" +
             "||'-'||EXTRACT(DAY FROM TrainingEnd)||' '||EXTRACT(HOUR FROM TrainingEnd)||':'||EXTRACT(MINUTE FROM TrainingEnd)||':'||EXTRACT(SECOND FROM TrainingEnd) TrainingStartEnd from " +
             "T_HSETraining Order By Code Desc ";
         DataTable dt = ShareClass.GetDataSetFromSql(strHQL, "T_HSETraining").Tables[0];
@@ -54,7 +54,7 @@ public partial class TTHSEManagement : System.Web.UI.Page
         DataGrid3.DataBind();
 
         strHQL = "select *,extract(year from StartTime)||'-'||EXTRACT(MONTH FROM StartTime)||'-'||EXTRACT(DAY FROM StartTime)||' '||EXTRACT(HOUR FROM StartTime)||':'||EXTRACT(MINUTE FROM StartTime)" +
-            "||':'||EXTRACT(SECOND FROM StartTime)||'Ëá≥'||extract(year from EndTime)||'-'||EXTRACT(MONTH FROM EndTime)||'-'||EXTRACT(DAY FROM EndTime)||' '||EXTRACT(HOUR FROM EndTime)" +
+            "||':'||EXTRACT(SECOND FROM StartTime)||'÷¡'||extract(year from EndTime)||'-'||EXTRACT(MONTH FROM EndTime)||'-'||EXTRACT(DAY FROM EndTime)||' '||EXTRACT(HOUR FROM EndTime)" +
             "||':'||EXTRACT(MINUTE FROM EndTime)||':'||EXTRACT(SECOND FROM EndTime) StartEndTime from T_HSEMeeting Order By Code Desc ";
         dt = ShareClass.GetDataSetFromSql(strHQL, "T_HSEMeeting").Tables[0];
         DataGrid4.DataSource = dt;

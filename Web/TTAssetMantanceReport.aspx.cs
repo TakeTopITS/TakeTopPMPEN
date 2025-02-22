@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -29,7 +29,7 @@ public partial class TTAssetMantanceReport : System.Web.UI.Page
         string strDepartString;
         strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthorityAsset(strUserCode);
 
-        //this.Title = "璧勪骇閲囪喘鎶ヨ〃";
+        //this.Title = "资产采购报表";
 
         LB_UserCode.Text = strUserCode;
         strUserName = Session["UserName"].ToString();

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -31,11 +31,11 @@ public partial class TTAPPExpenseApplyWF : System.Web.UI.Page
 
         if (strRelatedType == null)
         {
-            strRelatedType = "其它";
+            strRelatedType = "Other";
             strRelatedID = "0";
         }
 
-        //从流程中打开的业务单
+        //�������д򿪵�ҵ��
         strToDoWLID = Request.QueryString["WLID"]; strToDoWLDetailID = Request.QueryString["WLStepDetailID"];
         strWLBusinessID = Request.QueryString["BusinessID"];
 
@@ -44,13 +44,13 @@ public partial class TTAPPExpenseApplyWF : System.Web.UI.Page
         {
             DLC_PayBackTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            //取得会计科目列表
+            //ȡ�û�ƿ�Ŀ�б�
             ShareClass.LoadAccountForDDL(DL_Account);
             ShareClass.LoadCurrencyType(DL_CurrencyType);
 
             LoadExpenseApply(strUserCode, strRelatedType, strRelatedID);
 
-            ShareClass.LoadWFTemplate(strUserCode, "费用申请", DL_TemName);
+            ShareClass.LoadWFTemplate(strUserCode, "ExpenseRequest", DL_TemName);
 
             LB_RelatedType.Text = strRelatedType;
             LB_RelatedID.Text = strRelatedID;
@@ -108,10 +108,10 @@ public partial class TTAPPExpenseApplyWF : System.Web.UI.Page
         string strAccountName = TB_Account.Text.Trim();
         deAmount = NB_Amount.Amount;
 
-        //存在部门预算的话，判断预算是否足够
+        //���ڲ���Ԥ��Ļ����ж�Ԥ���Ƿ��㹻
         if (ShareClass.IsBMBaseDataExits("", strDepartCode, strAccountName, DateTime.Now.Year, DateTime.Now.Month, strUserCode))
         {
-            deBalanceAmount = ShareClass.GetBMBaseDataMoneyNum(strDepartCode, strAccountName, DateTime.Now.Year, DateTime.Now.Month, "基础") - deAmount;
+            deBalanceAmount = ShareClass.GetBMBaseDataMoneyNum(strDepartCode, strAccountName, DateTime.Now.Year, DateTime.Now.Month, "Base") - deAmount;
             if (deBalanceAmount < 0)
             {
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGBMGNFYFYSBZQJC + "')", true);
@@ -138,7 +138,7 @@ public partial class TTAPPExpenseApplyWF : System.Web.UI.Page
         expenseApplyWL.PayBackTime = dtPayBackTime;
         expenseApplyWL.ApplicantCode = strUserCode;
         expenseApplyWL.ApplicantName = ShareClass.GetUserName(strUserCode);
-        expenseApplyWL.Status = "新建";
+        expenseApplyWL.Status = "New";
 
         try
         {
@@ -148,7 +148,7 @@ public partial class TTAPPExpenseApplyWF : System.Web.UI.Page
             LB_ID.Text = strExpenseID;
 
             LoadExpenseApply(strUserCode, strRelatedType, strRelatedID);
-            LoadRelatedWL("费用申请", "其它", int.Parse(strExpenseID));
+            LoadRelatedWL("ExpenseRequest", "Other", int.Parse(strExpenseID));
         }
         catch
         {
@@ -178,10 +178,10 @@ public partial class TTAPPExpenseApplyWF : System.Web.UI.Page
         string strAccountName = TB_Account.Text.Trim();
         deAmount = NB_Amount.Amount;
 
-        //存在部门预算的话，判断预算是否足够
+        //���ڲ���Ԥ��Ļ����ж�Ԥ���Ƿ��㹻
         if (ShareClass.IsBMBaseDataExits("", strDepartCode, strAccountName, DateTime.Now.Year, DateTime.Now.Month, strUserCode))
         {
-            deBalanceAmount = ShareClass.GetBMBaseDataMoneyNum(strDepartCode, strAccountName, DateTime.Now.Year, DateTime.Now.Month, "基础") - deAmount;
+            deBalanceAmount = ShareClass.GetBMBaseDataMoneyNum(strDepartCode, strAccountName, DateTime.Now.Year, DateTime.Now.Month, "Base") - deAmount;
             if (deBalanceAmount < 0)
             {
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGBMGNFYFYSBZQJC + "')", true);
@@ -212,15 +212,15 @@ public partial class TTAPPExpenseApplyWF : System.Web.UI.Page
             expenseApplyWLBLL.UpdateExpenseApplyWL(expenseApplyWL, int.Parse(strID));
             LoadExpenseApply(strUserCode, strRelatedType, strRelatedID);
 
-            //从流程中打开的业务单
-            //更改工作流关联的数据文件
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("费用申请", "其它", strID, "0");
+            //�������д򿪵�ҵ��
+            //���Ĺ����������������ļ�
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ExpenseRequest", "Other", strID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 string strCmdText = "select * from T_ExpenseApplyWL where ID = " + strID;
                 if (strToDoWLID == null)
                 {
-                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("费用申请", "其它", strID);
+                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("ExpenseRequest", "Other", strID);
                 }
 
                 if (strToDoWLID != null)
@@ -275,47 +275,47 @@ public partial class TTAPPExpenseApplyWF : System.Web.UI.Page
         expenseApplyWL.Purpose = strPurpose;
         expenseApplyWL.Amount = deAmount;
         expenseApplyWL.PayBackTime = dtPayBackTime;
-        expenseApplyWL.Status = "处理中";
+        expenseApplyWL.Status = "InProgress";
 
         try
         {
             expenseApplyWLBLL.UpdateExpenseApplyWL(expenseApplyWL, int.Parse(strID));
 
-            strXMLFileName = "费用申请" + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xml";
+            strXMLFileName = "ExpenseRequest" + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".xml";
             strXMLFile2 = "Doc\\" + "XML" + "\\" + strXMLFileName;
 
             WorkFlowBLL workFlowBLL = new WorkFlowBLL();
             WorkFlow workFlow = new WorkFlow();
 
             workFlow.WLName = strExpenseName;
-            workFlow.WLType = "费用申请";
-            workFlow.Status = "新建";
+            workFlow.WLType = "ExpenseRequest";
+            workFlow.Status = "New";
             workFlow.TemName = DL_TemName.SelectedValue.Trim();
             workFlow.CreateTime = DateTime.Now;
             workFlow.CreatorCode = strUserCode;
             workFlow.CreatorName = ShareClass.GetUserName(strUserCode);
             workFlow.Description = expenseApplyWL.Purpose;
             workFlow.XMLFile = strXMLFile2;
-            workFlow.RelatedType = "其它";
+            workFlow.RelatedType = "Other";
             workFlow.RelatedID = int.Parse(strID);
-            workFlow.DIYNextStep = "Yes"; workFlow.IsPlanMainWorkflow = "NO";
+            workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
 
             if (CB_SMS.Checked == true)
             {
-                workFlow.ReceiveSMS = "Yes";
+                workFlow.ReceiveSMS = "YES";
             }
             else
             {
-                workFlow.ReceiveSMS = "No";
+                workFlow.ReceiveSMS = "NO";
             }
 
             if (CB_Mail.Checked == true)
             {
-                workFlow.ReceiveEMail = "Yes";
+                workFlow.ReceiveEMail = "YES";
             }
             else
             {
-                workFlow.ReceiveEMail = "No";
+                workFlow.ReceiveEMail = "NO";
             }
 
             try
@@ -329,9 +329,9 @@ public partial class TTAPPExpenseApplyWF : System.Web.UI.Page
                 strXMLFile2 = Server.MapPath(strXMLFile2);
                 xmlProcess.DbToXML(strCmdText, "T_ExpenseApplyWL", strXMLFile2);
 
-                LoadRelatedWL("费用申请", "其它", int.Parse(strID));
+                LoadRelatedWL("ExpenseRequest", "Other", int.Parse(strID));
 
-                LB_Status.Text = "处理中";
+                LB_Status.Text = "InProgress";
 
                 BT_SubmitApply.Enabled = false;
 
@@ -378,7 +378,7 @@ public partial class TTAPPExpenseApplyWF : System.Web.UI.Page
         {
             string strID = e.Item.Cells[3].Text.Trim();
 
-            int intWLNumber = GetRelatedWorkFlowNumber("费用申请", strRelatedType, strID);
+            int intWLNumber = GetRelatedWorkFlowNumber("ExpenseRequest", strRelatedType, strID);
             if (intWLNumber > 0)
             {
                 BT_New.Visible = false;
@@ -390,8 +390,8 @@ public partial class TTAPPExpenseApplyWF : System.Web.UI.Page
                 BT_SubmitApply.Enabled = true;
             }
 
-            //从流程中打开的业务单
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("费用申请", strRelatedType, strID, "0");
+            //�������д򿪵�ҵ��
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("ExpenseRequest", strRelatedType, strID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_New.Visible = true;
@@ -429,7 +429,7 @@ public partial class TTAPPExpenseApplyWF : System.Web.UI.Page
 
                 if (e.CommandName == "Assign")
                 {
-                    intWLNumber = GetRelatedWorkFlowNumber("费用申请", "其它", strID);
+                    intWLNumber = GetRelatedWorkFlowNumber("ExpenseRequest", "Other", strID);
                     if (intWLNumber > 0)
                     {
                         BT_SubmitApply.Enabled = false;
@@ -447,7 +447,7 @@ public partial class TTAPPExpenseApplyWF : System.Web.UI.Page
             if (e.CommandName == "Delete")
             {
 
-                intWLNumber = GetRelatedWorkFlowNumber("费用申请", "其它", strID);
+                intWLNumber = GetRelatedWorkFlowNumber("ExpenseRequest", "Other", strID);
                 if (intWLNumber > 0)
                 {
                     ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBCZGLDGZLJLBNSCJC + "')", true);
@@ -465,7 +465,7 @@ public partial class TTAPPExpenseApplyWF : System.Web.UI.Page
                     expenseApplyWLBLL.DeleteExpenseApplyWL(expenseApplyWL);
 
                     LoadExpenseApply(strUserCode, strRelatedType, strRelatedID);
-                    LoadRelatedWL("费用申请", "其它", int.Parse(strID));
+                    LoadRelatedWL("ExpenseRequest", "Other", int.Parse(strID));
                 }
                 catch
                 {
@@ -493,7 +493,7 @@ public partial class TTAPPExpenseApplyWF : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = '费用申请'";
+        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'ExpenseRequest'";
         strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC";
         WorkFlowBLL workFlowBLL = new WorkFlowBLL();
         lst = workFlowBLL.GetAllWorkFlows(strHQL);
@@ -544,7 +544,7 @@ public partial class TTAPPExpenseApplyWF : System.Web.UI.Page
 
         strHQL = "from ExpenseApplyWL as expenseApplyWL where expenseApplyWL.RelatedType = " + "'" + strRelatedType + "'" + " and expenseApplyWL.RelatedID = " + strRelatedID + " and expenseApplyWL.ApplicantCode = " + "'" + strApplicantCode + "'" + " Order by expenseApplyWL.ID DESC";
 
-        //从流程中打开的业务单
+        //�������д򿪵�ҵ��
         if (strToDoWLID != null & strWLBusinessID != null)
         {
             strHQL = "from ExpenseApplyWL as expenseApplyWL where expenseApplyWL.ID = " + strWLBusinessID;

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -37,7 +37,7 @@ public partial class TTReqularWLList : System.Web.UI.Page
         }
     }
 
-    //ç”Ÿæˆå¸¸ç”¨å·¥ä½œæµç”³è¯·æ ‘
+    //Éú³É³£ÓÃ¹¤×÷Á÷ÉêÇëÊ÷
     public void InitialWorkFlowTree(TreeView TreeView, String strUserCode)
     {
         string strHQL;
@@ -53,7 +53,7 @@ public partial class TTReqularWLList : System.Web.UI.Page
 
         strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView.Nodes.Clear();
 
         TreeNode node0 = new TreeNode();

@@ -1,15 +1,15 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSoftRent_SendSiteBackupDocAuto.aspx.cs" Inherits="TakeTopSoftRent_SendSiteBackupDocAuto" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TakeTopSoftRent_SendSiteBackupDocAuto.aspx.cs" Inherits="TakeTopSoftRent_SendSiteBackupDocAuto" %>
 
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=0.1; user-scalable=1" />
-<meta content="‰ºÅ‰∏ö‰∫ë„ÄÅ‰ºÅ‰∏öÁÆ°ÁêÜËΩØ‰ª∂„ÄÅÂú®Á∫øÁßüÁî®" name="keywords">
-<meta content="‰ºÅ‰∏ö‰∫ëÔºåÊèê‰æõ‰ºÅ‰∏öÁÆ°ÁêÜËΩØ‰ª∂Âú®Á∫øÁßüÁî®ÊúçÂä°„ÄÇ" name="description">
+<meta content="∆Û“µ‘∆°¢∆Û“µπ‹¿Ì»Ìº˛°¢‘⁄œﬂ◊‚”√" name="keywords">
+<meta content="∆Û“µ‘∆£¨Ã·π©∆Û“µπ‹¿Ì»Ìº˛‘⁄œﬂ◊‚”√∑˛ŒÒ°£" name="description">
 <meta charset="utf-8" />
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>Âú®Á∫øÁßüÁî®---‰∫ëÂπ≥Âè∞</title>
+    <title>‘⁄œﬂ◊‚”√---‘∆∆ΩÃ®</title>
     <link href="Logo/website/css/media.css" rel="stylesheet" type="text/css" />
     <link href="Logo/website/css/qudaohezuo.css" rel="stylesheet" type="text/css" />
     <link href="Logo/website/css/zuyong.css" rel="stylesheet" type="text/css" />
@@ -66,7 +66,7 @@
                                                     <asp:Image ID="IMB_Process" ImageUrl="Images/Processing.gif" runat="server"></asp:Image>
                                                 </td>
                                                 <td style="color:red;">
-                                                    <asp:Label ID="LB_Message" runat="server"  Text ="Ê≠£Âú®ÂçáÁ∫ß‰Ω†ÁöÑÂ∫îÁî®Á´ôÁÇπÔºåÂ§ßÊ¶ÇÈúÄË¶Å10ÂàÜÈíüÔºåËØ∑ËÄêÂøÉÁ≠âÂÄô......"></asp:Label>  
+                                                    <asp:Label ID="LB_Message" runat="server"  Text ="’˝‘⁄…˝º∂ƒ„µƒ”¶”√’æµ„£¨¥Û∏≈–Ë“™10∑÷÷”£¨«ÎƒÕ–ƒµ»∫Ú......"></asp:Label>  
                                                 </td>
                                             </tr>
                                         </table>

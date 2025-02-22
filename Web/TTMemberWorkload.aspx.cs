@@ -1,4 +1,4 @@
-锘縰sing DayPilot.Utils;
+using DayPilot.Utils;
 using DayPilot.Web.Ui;
 using DayPilot.Web.Ui.Enums;
 using System;
@@ -66,7 +66,7 @@ public partial class TTMemberWorkload : System.Web.UI.Page
             DayPilotScheduler1.CellGroupBy = GroupByEnum.Year; ;
         }
 
-        //璁剧疆鏃ョ▼鎺т欢璇█
+        //设置日程控件语言
         Culture = ShareClass.GetDayPilotLanguage();
 
         if (!IsPostBack)

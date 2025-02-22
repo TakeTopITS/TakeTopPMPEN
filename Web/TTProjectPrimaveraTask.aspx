@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectPrimaveraTask.aspx.cs" Inherits="TTProjectPrimaveraTask" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTProjectPrimaveraTask.aspx.cs" Inherits="TTProjectPrimaveraTask" %>
 
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
@@ -101,28 +101,28 @@
                                             <asp:DataGrid ID="DataGrid1" runat="server" AutoGenerateColumns="False" Width="100%" PageSize="20"
                                                 OnItemCommand="DataGrid1_ItemCommand" ShowHeader="false" CellPadding="4" GridLines="None">
                                                 <Columns>
-                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ä¿®æ”¹' /&gt;&lt;/div&gt;">
+                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='ÐÞ¸Ä' /&gt;&lt;/div&gt;">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:ButtonColumn>
                                                     <asp:TemplateColumn HeaderText="Delete">
                                                         <ItemTemplate>
-                                                            <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='åˆ é™¤' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                            <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                         </ItemTemplate>
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                     </asp:TemplateColumn>
                                                     <asp:BoundColumn DataField="ID" HeaderText="ID">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="TaskCode" HeaderText="ä½œä¸šç¼–ç ">
+                                                    <asp:BoundColumn DataField="TaskCode" HeaderText="×÷Òµ±àÂë">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="TaskName" HeaderText="ä½œä¸šåç§°">
+                                                    <asp:BoundColumn DataField="TaskName" HeaderText="×÷ÒµÃû³Æ">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="40%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="BeginDate" HeaderText="å¼€å§‹æ—¥æœŸ" DataFormatString="{0:yyyy-MM-dd}">
+                                                    <asp:BoundColumn DataField="BeginDate" HeaderText="¿ªÊ¼ÈÕÆÚ" DataFormatString="{0:yyyy-MM-dd}">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:BoundColumn>
-                                                    <asp:BoundColumn DataField="EndDate" HeaderText="ç»“æŸæ—¥æœŸ" DataFormatString="{0:yyyy-MM-dd}">
+                                                    <asp:BoundColumn DataField="EndDate" HeaderText="½áÊøÈÕÆÚ" DataFormatString="{0:yyyy-MM-dd}">
                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                     </asp:BoundColumn>
                                                 </Columns>
@@ -179,7 +179,7 @@
                                         <asp:TextBox ID="DLC_BeginDate" runat="server" ReadOnly="false"></asp:TextBox>
                                         <ajaxtoolkit:calendarextender format="yyyy-MM-dd" id="CalendarExtender2" runat="server" targetcontrolid="DLC_BeginDate">
                                         </ajaxtoolkit:calendarextender>
-                                        è‡³<asp:TextBox ID="DLC_EndDate" runat="server" ReadOnly="false"></asp:TextBox>
+                                        ÖÁ<asp:TextBox ID="DLC_EndDate" runat="server" ReadOnly="false"></asp:TextBox>
                                         <ajaxtoolkit:calendarextender format="yyyy-MM-dd" id="CalendarExtender1" runat="server" targetcontrolid="DLC_EndDate">
                                         </ajaxtoolkit:calendarextender>
                                     </td>

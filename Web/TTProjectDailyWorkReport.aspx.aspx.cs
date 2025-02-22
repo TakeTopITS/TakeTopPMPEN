@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -34,8 +34,8 @@ public partial class TTProjectDailyWorkReport_aspx : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strUserName = ShareClass.GetUserName(strUserCode);
 
-        LB_ReportName.Text = "é¡¹ç›®å·¥ä½œæ—¥å¿—";
-        //this.Title = "é¡¹ç›®ï¼š " + strProjectID + " " + strProjectName + " å·¥ä½œæ—¥å¿—æŠ¥è¡¨ï¼";
+        LB_ReportName.Text = "ÏîÄ¿¹¤×÷ÈÕÖ¾";
+        //this.Title = "ÏîÄ¿£º " + strProjectID + " " + strProjectName + " ¹¤×÷ÈÕÖ¾±¨±í£¡";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack == false)
         {

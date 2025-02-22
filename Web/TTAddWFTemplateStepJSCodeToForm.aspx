@@ -1,10 +1,10 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAddWFTemplateStepJSCodeToForm.aspx.cs" Inherits="TTAddWFTemplateStepJSCodeToForm" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTAddWFTemplateStepJSCodeToForm.aspx.cs" Inherits="TTAddWFTemplateStepJSCodeToForm" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ÊµÅÁ®ãÊ≠•È™§JS‰ª£Á†Å</title>
+    <title>¡˜≥Ã≤Ω÷ËJS¥˙¬Î</title>
     <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8" />
 
@@ -60,12 +60,12 @@
 
                 var strTemName = $("#DL_WFTemplate").val();
                 if (strTemName == "" || strTemName == null) {
-                    alert("ËØ∑ÈÄâÊã©ÊµÅÁ®ãÊ®°ÊùøÔºÅ");
+                    alert("«Î—°‘Ò¡˜≥Ãƒ£∞Â£°");
                     return;
                 }
                 var strSortName = $("#LIB_WFStep").find("option:selected").text();
                 if (strSortName == "" || strSortName == null) {
-                    alert("ËØ∑ÈÄâÊã©ÊµÅÁ®ãÊ≠•È™§ÔºÅ");
+                    alert("«Î—°‘Ò¡˜≥Ã≤Ω÷Ë£°");
                     return;
                 }
 
@@ -76,7 +76,7 @@
 
 
                 if (strSql == "" || strSql == null) {
-                    alert("‰ª£Á†Å‰∏çËÉΩ‰∏∫Á©∫ÔºÅ");
+                    alert("¥˙¬Î≤ªƒ‹Œ™ø’£°");
                     return;
                 }
                 var strComment = $("#TXT_Comment").val();
@@ -98,11 +98,11 @@
 
                         $("#HF_ID").val(json);
 
-                        alert("‰øùÂ≠òÊàêÂäüÔºÅ");
+                        alert("±£¥Ê≥…π¶£°");
                     },
                     error: function () {
 
-                        alert("‰øùÂ≠òÂ§±Ë¥•");
+                        alert("±£¥Ê ß∞‹");
                     }
 
                 });
@@ -122,7 +122,7 @@
                     }
                 });
                 if (isExit) {
-                    alert("Ë≠¶ÂëäÔºå" + strWebServiceName + "Â∑≤ÈÄâÂèñÔºÅ");
+                    alert("æØ∏Ê£¨" + strWebServiceName + "“——°»°£°");
                     return false;
                 } else {
                     $("select[name=DL_WebService]").append("<option value='" + strWebServiceName + "'>" + strWebServiceName + "</option");
@@ -131,7 +131,7 @@
 
             $("#DL_WebService").dblclick(function () {
                 var strWebService = $("#DL_WebService").find("option:selected").text();
-                if (confirm("‰Ω†Á°ÆÂÆöË¶ÅÁßªÈô§ÂΩìÂâçÁöÑWeb ServiceÂêóÔºü")) {
+                if (confirm("ƒ„»∑∂®“™“∆≥˝µ±«∞µƒWeb Service¬£ø")) {
                     $("select[name=DL_WebService] option:selected").each(function (i) {
                         if ($(this).text() == strWebService) {
                             $(this).remove();
@@ -145,7 +145,7 @@
 
         function AddWebServiceItem(objAll, obj) {
             if (jsSelectIsExitItem($("select[name=DL_WebService] option"), obj)) {
-                alert("Ë≠¶ÂëäÔºåÂ∑≤ÁªèÈÄâÂèñ" + obj + "Ôºå‰∏çËÉΩÈáçÂ§çÈÄâÂèñÔºÅ");
+                alert("æØ∏Ê£¨“—æ≠—°»°" + obj + "£¨≤ªƒ‹÷ÿ∏¥—°»°£°");
             } else {
                 $("select[name=DL_WebService]").append("<option value='" + objAll + "'>" + obj + "</option");
             }
@@ -199,7 +199,7 @@
                                             </td>
                                             <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                 <asp:Label ID="Label1" runat="server" Text="<%$ Resources:lang,LiuChengBuZhouJSDaiMa%>"></asp:Label>
-                                                Ôºà<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Template\CodeTemplate\JS\JSCodeTemplate.pdf" Text="<%$ Resources:lang,ChaKanShiLiDaiMa%>" />Ôºâ
+                                                £®<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Template\CodeTemplate\JS\JSCodeTemplate.pdf" Text="<%$ Resources:lang,ChaKanShiLiDaiMa%>" />£©
 
                                             </td>
                                             <td width="5">
@@ -225,17 +225,17 @@
                                             <ContentTemplate>
                                                 <tr>
                                                     <td align="left" class="formItemBgStyle" rowspan="5">
-                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LiuChengLeiXing%>"></asp:Label>Ôºö
+                                                        <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,LiuChengLeiXing%>"></asp:Label>£∫
                                                             <asp:DropDownList ID="DL_WLType" runat="server" DataTextField="Type" DataValueField="Type"
                                                                 Width="150px" AutoPostBack="true" OnSelectedIndexChanged="DL_WLType_SelectedIndexChanged">
                                                             </asp:DropDownList><br />
-                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,LiuChengMuBan%>"></asp:Label>Ôºö
+                                                        <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,LiuChengMuBan%>"></asp:Label>£∫
                                                     <asp:DropDownList ID="DL_WFTemplate" runat="server" DataTextField="TemName" DataValueField="TemName"
                                                         Width="210px" AutoPostBack="true" Height="20px" OnSelectedIndexChanged="DL_WFTemplate_SelectedIndexChanged">
                                                     </asp:DropDownList>
                                                         <br />
                                                         <span style="font-size: 11pt">
-                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,BuZhou%>"></asp:Label>Ôºö</span><br />
+                                                            <asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,BuZhou%>"></asp:Label>£∫</span><br />
                                                         <asp:ListBox ID="LIB_WFStep" runat="server"
                                                             Width="220px" Height="500px" OnSelectedIndexChanged="LIB_WFStep_SelectedIndexChanged" AutoPostBack="true"></asp:ListBox>
                                                     </td>
@@ -251,22 +251,22 @@
                                                         <textarea id="TXT_JSCode" cols="120" rows="30" runat="server">
                                                       
                                                     </textarea><br />
-                                                        <asp:Label ID="LBL_JSCODEDescription" runat="server" Text="ÔºàÂüüËßÑÂàôÔºöÂΩìÂâçÁî®Êà∑‰ª£Á†ÅÔºö[TAKETOPUSERCODE]ÔºåÂΩìÂâçÁî®Êà∑ÂêçÁß∞Ôºö[TAKETOPUSERNAME]ÔºåÂΩìÂâçÁî®Êà∑ÈÉ®Èó®‰ª£Á†ÅÔºö[TAKETOPDEPARTCODE],ÂΩìÂâçÁî®Êà∑ÈÉ®Èó®ÂêçÁß∞Ôºö[TAKETOPDEPARTNAME],Áî≥ËØ∑ËÄÖ‰ª£Á†ÅÔºö[TAKETOPWFCREATORCODE]ÔºåÁî≥ËØ∑ËÄÖÂêçÁß∞Ôºö[TAKETOPWFCREATORNAME]ÔºåÁî≥ËØ∑ËÄÖÈÉ®Èó®‰ª£Á†ÅÔºö[TAKETOPWFCREATORDEPARTCODE]ÔºåÁî≥ËØ∑ËÄÖÈÉ®Èó®ÂêçÁß∞Ôºö[TAKETOPWFCREATORDEPARTNAME]Ôºâ"></asp:Label>
+                                                        <asp:Label ID="LBL_JSCODEDescription" runat="server" Text="£®”ÚπÊ‘Ú£∫µ±«∞”√ªß¥˙¬Î£∫[TAKETOPUSERCODE]£¨µ±«∞”√ªß√˚≥∆£∫[TAKETOPUSERNAME]£¨µ±«∞”√ªß≤ø√≈¥˙¬Î£∫[TAKETOPDEPARTCODE],µ±«∞”√ªß≤ø√≈√˚≥∆£∫[TAKETOPDEPARTNAME],…Í«Î’ﬂ¥˙¬Î£∫[TAKETOPWFCREATORCODE]£¨…Í«Î’ﬂ√˚≥∆£∫[TAKETOPWFCREATORNAME]£¨…Í«Î’ﬂ≤ø√≈¥˙¬Î£∫[TAKETOPWFCREATORDEPARTCODE]£¨…Í«Î’ﬂ≤ø√≈√˚≥∆£∫[TAKETOPWFCREATORDEPARTNAME]£©"></asp:Label>
 
                                                         <br />
                                                         <span style="font-size: 11pt">
-                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhuShi%>"></asp:Label>Ôºö</span><br />
+                                                            <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ZhuShi%>"></asp:Label>£∫</span><br />
                                                         <textarea id="TXT_Comment" cols="70" rows="4" runat="server"></textarea>
                                                     </td>
                                                     <td style="text-align: left" class="formItemBgStyle">
                                                         <span style="font-size: 11pt">
-                                                            <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,GuanLianWebService%>"></asp:Label>Ôºö</span><br />
+                                                            <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,GuanLianWebService%>"></asp:Label>£∫</span><br />
                                                         <select name="DL_WebService" id="DL_WebService" size="5" multiple style="height: 500px!important; width: 150px;" runat="server">
                                                         </select>
                                                     </td>
                                                     <td style="text-align: left" class="formItemBgStyle">
                                                         <span style="font-size: 11pt">
-                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,SuoYouWebService%>"></asp:Label>Ôºö</span><br />
+                                                            <asp:Label ID="Label7" runat="server" Text="<%$ Resources:lang,SuoYouWebService%>"></asp:Label>£∫</span><br />
                                                         <asp:ListBox ID="LIB_WebService" name="LIB_WebService" runat="server" DataTextField="WebServiceName" DataValueField="WebServiceName"
                                                             Width="220px" Height="500px"></asp:ListBox><br />
                                                         <span style="font-size: 11pt">

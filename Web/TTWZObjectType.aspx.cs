@@ -1,4 +1,4 @@
-Ôªøusing System; using System.Resources;
+using System; using System.Resources;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -20,7 +20,7 @@ public partial class TTWZObjectType : System.Web.UI.Page
     {
         TV_Type.Nodes.Clear();
         TreeNode Node = new TreeNode();
-        Node.Text = "ÊâÄÊúâ";
+        Node.Text = "All";
         Node.Value = "all|0|0|0";
         string strDLSQL = "select * from T_WZMaterialDL";
         DataTable dtDL = ShareClass.GetDataSetFromSql(strDLSQL, "DL").Tables[0];
@@ -70,27 +70,27 @@ public partial class TTWZObjectType : System.Web.UI.Page
         string[] arrSelectedValue = strSelectedValue.Split('|');
         if (arrSelectedValue[3] == "0")
         {
-            //Ê∑ªÂä†Â§ßÁ±ª
+            //ÃÌº”¥Û¿‡
             string strDLSQL = string.Format(@"insert into T_WZMaterialDL(DLCode,DLName,DLDesc,IsMark)
                 values('{0}','{1}','{2}',0)", txtCode.Text.Trim(), txtName.Text.Trim(), txtDesc.Value.Trim());
             ShareClass.RunSqlCommand(strDLSQL);
         }
         else if (arrSelectedValue[3] == "1")
         { 
-            //Ê∑ªÂä†‰∏≠Á±ª
+            //ÃÌº”÷–¿‡
             string strZLSQL = string.Format(@"insert into T_WZMaterialZL(DLCode,ZLCode,ZLName,ZLDesc,IsMark)
                 values('{0}','{1}','{2}','{3}',0)", arrSelectedValue[0], txtCode.Text.Trim(), txtName.Text.Trim(), txtDesc.Value.Trim());
             ShareClass.RunSqlCommand(strZLSQL);
         }
         else if (arrSelectedValue[3] == "2")
         {
-            //Ê∑ªÂä†Â∞èÁ±ª
+            //ÃÌº”–°¿‡
             string strXLSQL = string.Format(@"insert into T_WZMaterialXL(DLCode,ZLCode,XLCode,XLName,XLDesc,IsMark)
                 values('{0}','{1}','{2}','{3}','{4}',0)", arrSelectedValue[0], arrSelectedValue[1], txtCode.Text.Trim(), txtName.Text.Trim(), txtDesc.Value.Trim());
             ShareClass.RunSqlCommand(strXLSQL);
         }
         else {
-            Response.Write("<script>alert('Â∞èÁ±ª‰∏çËÉΩÂÜçÊ∑ªÂä†Â≠êÁ∫ß‰∫ÜÔºÅ');</script>");
+            Response.Write("<script>alert('–°¿‡≤ªƒ‹‘ŸÃÌº”◊”º∂¡À£°');</script>");
         }
         LoadTree();
     }
