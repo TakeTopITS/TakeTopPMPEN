@@ -27511,6 +27511,9 @@ The progress of the task affects the schedule to be confirmed</value>
   <data name="YINGXXMJLGXMZT" xml:space="preserve">
     <value>Allows the project manager to change the status of the project</value>
   </data>
+  <data name="ZZQDHJHRRBNGGQDYQDM" xml:space="preserve">
+    <value>After launching, the content of the plan cannot be changed, are you sure you want to start?</value>
+  </data>
   <data name="ZZQDYSCM" xml:space="preserve">
     <value>Are you sure you want to delete it？</value>
   </data>

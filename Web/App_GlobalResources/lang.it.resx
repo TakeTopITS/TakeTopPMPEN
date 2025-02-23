@@ -27594,6 +27594,9 @@
   <data name="String" xml:space="preserve">
     <value>Alimentazione</value>
   </data>
+  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
+    <value>Dopo il lancio, il contenuto del piano non può essere modificato, sei sicuro di voler iniziare?</value>
+  </data>
   <data name="String13" xml:space="preserve">
     <value>Candidato</value>
   </data>

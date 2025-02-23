@@ -27594,6 +27594,9 @@
   <data name="GuanLianHeTong1" xml:space="preserve">
     <value>contrat de l'Association</value>
   </data>
+  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
+    <value>Après le lancement, le contenu du plan ne peut pas être modifié, êtes-vous sûr de vouloir commencer ?</value>
+  </data>
   <data name="UpdateingDatabase" xml:space="preserve">
     <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
   </data>

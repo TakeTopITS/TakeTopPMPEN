@@ -23245,4 +23245,13 @@ POSITION: 17297
                                 '男', '女'); error:22001: 对于可变字符类型来说，值太长了(5)
 
 ------------------------------------
+
+Log Entry : 20:50:33 2025年2月23日 
+Error page: http://10.211.55.22:5000/Source/Web/TTWorkPlan.aspx?ProjectID=153
+“DL_Status”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 TTWorkPlan.TreeView1_SelectedNodeChanged(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTWorkPlan.aspx.cs:行号 831
+
+------------------------------------
 

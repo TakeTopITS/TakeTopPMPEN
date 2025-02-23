@@ -27780,6 +27780,9 @@
   <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
     <value>Antragsformular für Arbeitsanträge</value>
   </data>
+  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
+    <value>Nach dem Start kann der Inhalt des Plans nicht mehr geändert werden, sind Sie sicher, dass Sie beginnen möchten?</value>
+  </data>
   <data name="UpdateingDatabase" xml:space="preserve">
     <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
   </data>

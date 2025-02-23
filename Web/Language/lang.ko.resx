@@ -27591,6 +27591,9 @@
   <data name="GuanLianHeTong1" xml:space="preserve">
     <value>협회 계약</value>
   </data>
+  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
+    <value>시작 후 계획의 내용을 변경할 수 없습니다.</value>
+  </data>
   <data name="UpdateingDatabase" xml:space="preserve">
     <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
   </data>

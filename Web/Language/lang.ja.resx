@@ -27597,6 +27597,9 @@
   <data name="String" xml:space="preserve">
     <value>部門の統計による物流コスト</value>
   </data>
+  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
+    <value>起動後、プランの内容は変更できませんが、開始してもよろしいですか?</value>
+  </data>
   <data name="String13" xml:space="preserve">
     <value>アカウントの統計情報により流通コスト</value>
   </data>

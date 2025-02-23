@@ -27490,6 +27490,9 @@
   <data name="ZZJGWEBYHYJZGSQWEBYHSQJC" xml:space="preserve">
     <value>警告，WEB用户数已经超过授权的WEB用户数，请检查！</value>
   </data>
+  <data name="ZZQDHJHRRBNGGQDYQDM" xml:space="preserve">
+    <value>启动后，计划内容不能更改，确定要启动吗？</value>
+  </data>
   <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
     <value>在执行项目总数</value>
   </data>
@@ -27525,6 +27528,9 @@
   </data>
   <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
     <value>项目年度回款</value>
+  </data>
+  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
+    <value>启动后，计划内容不能更改，确定要启动吗？</value>
   </data>
   <data name="UpdateingDatabase" xml:space="preserve">
     <value>因数据库有更新，系统正在升级，要花几分钟，不要关闭此窗口，请耐心等待！  </value>

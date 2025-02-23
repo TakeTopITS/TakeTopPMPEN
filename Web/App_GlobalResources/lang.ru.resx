@@ -27594,6 +27594,9 @@
   <data name="String" xml:space="preserve">
     <value>Расходы на реализацию по статистике отдела</value>
   </data>
+  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
+    <value>После запуска содержимое плана изменить нельзя, вы уверены, что хотите начать?</value>
+  </data>
   <data name="String13" xml:space="preserve">
     <value>Расходы на реализацию по статистике счета</value>
   </data>

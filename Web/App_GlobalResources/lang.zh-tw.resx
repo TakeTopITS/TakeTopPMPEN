@@ -27591,6 +27591,9 @@
   <data name="GuanLianHeTong1" xml:space="preserve">
     <value>關聯合同</value>
   </data>
+  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
+    <value>启动后，计划内容不能更改，确定要启动吗？</value>
+  </data>
   <data name="HSE生產總結" xml:space="preserve">
     <value>HSE生產總結</value>
   </data>
