@@ -8,6 +8,7 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="Logo/css/login.css" />
+
     <style>
         html, body {
             width: 100%;
