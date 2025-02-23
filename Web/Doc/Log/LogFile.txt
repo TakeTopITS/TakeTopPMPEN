@@ -23269,4 +23269,9 @@ POSITION: 17297
 Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
 
 ------------------------------------
+
+Log Entry : 23:14:03 2025年2月23日 
+Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
+
+------------------------------------
 

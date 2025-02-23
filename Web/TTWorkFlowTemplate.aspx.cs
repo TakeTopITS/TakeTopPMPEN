@@ -34,7 +34,8 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         strUserName = Session["UserName"].ToString();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "流程模板设置", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx");
+        bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -50,9 +51,9 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         {
             Session["SuperWFAdmin"] = "NO";
 
-            strHQL = "from WLType as wlType ";
-            strHQL += " Where wlType.LangCode =" + "'" + strLangCode + "'";
-            strHQL += " order by wlType.SortNumber ASC";
+            strHQL = string.Format(@"from WLType as wlType 
+                                     Where wlType.LangCode = '{0}' 
+                                     order by wlType.SortNumber ASC", strLangCode);
             WLTypeBLL wlTypeBLL = new WLTypeBLL();
             lst = wlTypeBLL.GetAllWLTypes(strHQL);
             DL_WLType.DataSource = lst;
@@ -63,7 +64,6 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
             DL_NewWLType.DataBind();
             DL_NewWLType.Items.Insert(0, new ListItem("--Select--", "0"));
 
-
             LoadCommonWorkflowRelatedPage();
 
             TakeTopCore.CoreShareClass.InitialUnderDepartmentTreeByAuthority(Resources.lang.ZZJGT, TreeView1, strUserCode);
@@ -71,7 +71,6 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
             InitialWorkFlowTree(TreeView2, strUserCode);
         }
     }
-
 
     protected void TreeView2_SelectedNodeChanged(object sender, EventArgs e)
     {
@@ -130,7 +129,6 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
             return;
         }
 
-
         if (strWorkFlowTemName != "")
         {
             WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
@@ -162,7 +160,6 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
 
             workFlowTemplate.WFDefinition = "{states:{rect2:{type:'start',text:{text:'开始'}, attr:{ x:209, y:72, width:50, height:50}, props:{guid:{value:'4af6bc4b-7ed9-0b0b-e3a0-91c9d8fd92d1'},text:{value:'开始'}}}},paths:{},props:{props:{name:{value:'新建流程'},key:{value:''},desc:{value:''}}}}";
 
-
             try
             {
                 workFlowTemplateBLL.AddWorkFlowTemplate(workFlowTemplate);
@@ -170,7 +167,7 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
                 SelectWorkflowTemplateByTemName(strWorkFlowTemName);
 
                 InitialWorkFlowTree(TreeView2, strUserCode);
-             
+
                 LB_DesignWorkflowTemplate.Text = strWorkFlowTemName + " " + Resources.lang.LiuChengMuBan + Resources.lang.SheJi;
 
                 BT_DeleteWFTemplate.Enabled = true;
@@ -188,7 +185,6 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         }
     }
 
-
     protected void BT_DeleteWFTemplate_Click(object sender, EventArgs e)
     {
         string strHQL;
@@ -196,12 +192,13 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
 
         strTemName = LB_WFTemplate.Text.Trim();
         strWFType = DL_WLType.SelectedValue.Trim();
-      
-        if (getWorkflowCountByTemNameAndCreatorCode(strTemName,strUserCode) == 0)
+
+        if (getWorkflowCountByTemNameAndCreatorCode(strTemName, strUserCode) == 0)
         {
             try
             {
-                strHQL = "Delete From T_WorkFlowTemplate Where TemName = " + "'" + strTemName + "'";
+                strHQL = string.Format(@"Delete From T_WorkFlowTemplate 
+                                         Where TemName = '{0}'", strTemName);
                 ShareClass.RunSqlCommand(strHQL);
 
                 InitialWorkFlowTree(TreeView2, strUserCode);
@@ -227,24 +224,20 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         else
         {
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGSCSBJC + "')", true);
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('删除失败，此模板已用于工作流或不是你建立的，请检查')", true);
         }
     }
 
-    //取得已用此模板的工作流数量
-    protected int getWorkflowCountByTemNameAndCreatorCode(string strTemName,string strUserCode)
+    protected int getWorkflowCountByTemNameAndCreatorCode(string strTemName, string strUserCode)
     {
-        string strHQL;
-
-        strHQL = string.Format(@"Select * From T_WorkFlow Where TemName = '{0}' and CreatorCode = '{1}'", strTemName,strUserCode);
+        string strHQL = string.Format(@"Select * From T_WorkFlow 
+                                       Where TemName = '{0}' 
+                                       and CreatorCode = '{1}'", strTemName, strUserCode);
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlow");
 
         return ds.Tables[0].Rows.Count;
     }
 
-
-    //生成下属部门树（根据权限）
     public static void InitialUnderDepartmentTreeByAuthority(string strTreeName, TreeView TreeView, string strUserCode)
     {
         string strHQL;
@@ -254,13 +247,10 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
 
         string strParentDepartCode, strDepartCode, strDepartName;
 
-        //添加根节点
         TreeView.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node2 = new TreeNode();
-
-        //node1.Text = "<B>" + Resources.lang.ZZJGT + "</B>";
 
         node1.Text = "<B>" + strTreeName + "</B>";
         node1.Target = "0";
@@ -272,12 +262,9 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
 
         strParentDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
-        strHQL = "from Department as department ";
-        strHQL += " where department.DepartCode = " + "'" + strParentDepartCode + "'";
-        //strHQL += " and ((department.Authority = 'All')";
-        //strHQL += " or ((department.Authority = '部分') ";
-        //strHQL += " and (department.DepartCode in (select departmentUser.DepartCode from DepartmentUser as departmentUser where departmentUser.UserCode =" + "'" + strUserCode + "'" + "))))";
-        strHQL += " Order By department.DepartCode ASC";
+        strHQL = string.Format(@"from Department as department 
+                                 where department.DepartCode = '{0}' 
+                                 Order By department.DepartCode ASC", strParentDepartCode);
         lst2 = departmentBLL.GetAllDepartments(strHQL);
 
         for (i = 0; i < lst2.Count; i++)
@@ -285,7 +272,6 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
             department = (Department)lst2[i];
             strDepartCode = department.DepartCode.Trim();
             strDepartName = department.DepartName.Trim();
-
 
             node2 = new TreeNode();
 
@@ -297,7 +283,6 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
             UnderDepartmentTreeShowByAuthority(strDepartCode, node2, strUserCode);
             TreeView.DataBind();
         }
-
     }
 
     public static void UnderDepartmentTreeShowByAuthority(string strParentCode, TreeNode treeNode, string strUserCode)
@@ -307,11 +292,9 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
 
         string strDepartCode, strDepartName;
 
-        strHQL = "from Department as department where department.ParentCode = " + "'" + strParentCode + "'";
-        //strHQL += " and ((department.Authority = 'All')";
-        //strHQL += " or ((department.Authority = '部分') ";
-        //strHQL += " and (department.DepartCode in (select departmentUser.DepartCode from DepartmentUser as departmentUser where departmentUser.UserCode =" + "'" + strUserCode + "'" + "))))";
-        strHQL += " Order By department.DepartCode ASC";
+        strHQL = string.Format(@"from Department as department 
+                                 where department.ParentCode = '{0}' 
+                                 Order By department.DepartCode ASC", strParentCode);
         DepartmentBLL departmentBLL = new DepartmentBLL();
         Department department = new Department();
         lst1 = departmentBLL.GetAllDepartments(strHQL);
@@ -329,24 +312,22 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
             treeNode.ChildNodes.Add(node);
             node.Expanded = false;
 
-            strHQL = "from Department as department where department.ParentCode = " + "'" + strDepartCode + "'";
+            strHQL = string.Format(@"from Department as department 
+                                     where department.ParentCode = '{0}'", strDepartCode);
             lst2 = departmentBLL.GetAllDepartments(strHQL);
 
             if (lst2.Count > 0)
             {
                 UnderDepartmentTreeShowByAuthority(strDepartCode, node, strUserCode);
             }
-
         }
     }
 
-    //生成角色组树
     public static void InitialActorGroupTree(TreeView TreeView, String strUserCode)
     {
         string strHQL, strActorGroupName;
         IList lst;
 
-        //添加根节点
         TreeView.Nodes.Clear();
 
         TreeNode node0 = new TreeNode();
@@ -360,8 +341,9 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         node0.Expanded = true;
         TreeView.Nodes.Add(node0);
 
-        strHQL = "from ActorGroup as actorGroup where actorGroup.Type = 'All' ";
-        strHQL += " Order by actorGroup.IdentifyString DESC";
+        strHQL = string.Format(@"from ActorGroup as actorGroup 
+                                 where actorGroup.Type = 'All' 
+                                 Order by actorGroup.IdentifyString DESC");
         ActorGroupBLL actorGroupBLL = new ActorGroupBLL();
         lst = actorGroupBLL.GetAllActorGroups(strHQL);
 
@@ -388,8 +370,9 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         node2.Expanded = false;
         node0.ChildNodes.Add(node2);
 
-        strHQL = "from ActorGroup as actorGroup where actorGroup.Type = '部分' ";
-        strHQL += " Order by actorGroup.IdentifyString DESC";
+        strHQL = string.Format(@"from ActorGroup as actorGroup 
+                                 where actorGroup.Type = '部分' 
+                                 Order by actorGroup.IdentifyString DESC");
         lst = actorGroupBLL.GetAllActorGroups(strHQL);
 
         for (int i = 0; i < lst.Count; i++)
@@ -410,7 +393,6 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         TreeView.DataBind();
     }
 
-
     protected void BT_SaveBelongDepartment_Click(object sender, EventArgs e)
     {
         string strHQL;
@@ -420,7 +402,6 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
 
         strWFType = DL_WLType.SelectedValue.Trim();
         strTemName = LB_WFTemplate.Text.Trim();
-
 
         intSortNumber = int.Parse(NB_SortNumber.Amount.ToString());
         strDepartCode = LB_BelongDepartCode.Text.Trim();
@@ -437,29 +418,40 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
 
         try
         {
-            strHQL = "Update T_WorkFlowTemplate Set BelongDepartCode = " + "'" + strDepartCode + "'" + " Where TemName = " + "'" + strTemName + "'";
+            strHQL = string.Format(@"Update T_WorkFlowTemplate 
+                                     Set BelongDepartCode = '{0}' 
+                                     Where TemName = '{1}'", strDepartCode, strTemName);
             ShareClass.RunSqlCommand(strHQL);
 
-            strHQL = "Update T_WorkFlowTemplate Set BelongDepartName = " + "'" + strDepartName + "'" + " Where TemName = " + "'" + strTemName + "'";
+            strHQL = string.Format(@"Update T_WorkFlowTemplate 
+                                     Set BelongDepartName = '{0}' 
+                                     Where TemName = '{1}'", strDepartName, strTemName);
             ShareClass.RunSqlCommand(strHQL);
 
-            strHQL = "Update T_WorkFlowTemplate Set SortNumber = " + intSortNumber.ToString() + " Where TemName = " + "'" + strTemName + "'";
+            strHQL = string.Format(@"Update T_WorkFlowTemplate 
+                                     Set SortNumber = {0} 
+                                     Where TemName = '{1}'", intSortNumber.ToString(), strTemName);
             ShareClass.RunSqlCommand(strHQL);
 
-            strHQL = "Update T_WorkFlowTemplate Set Visible = " + "'" + strVisible + "'" + " Where TemName = " + "'" + strTemName + "'";
+            strHQL = string.Format(@"Update T_WorkFlowTemplate 
+                                     Set Visible = '{0}' 
+                                     Where TemName = '{1}'", strVisible, strTemName);
             ShareClass.RunSqlCommand(strHQL);
 
-            strHQL = "Update T_WorkFlowTemplate Set AutoActive = " + "'" + strAutoActive + "'" + " Where TemName = " + "'" + strTemName + "'";
+            strHQL = string.Format(@"Update T_WorkFlowTemplate 
+                                     Set AutoActive = '{0}' 
+                                     Where TemName = '{1}'", strAutoActive, strTemName);
             ShareClass.RunSqlCommand(strHQL);
 
-
-            strHQL = "Update T_WorkFlowTemplate Set OverTimeAutoAgree = " + "'" + DL_OverTimeAutoAgree.SelectedValue + "'" + " Where TemName = " + "'" + strTemName + "'";
+            strHQL = string.Format(@"Update T_WorkFlowTemplate 
+                                     Set OverTimeAutoAgree = '{0}' 
+                                     Where TemName = '{1}'", DL_OverTimeAutoAgree.SelectedValue, strTemName);
             ShareClass.RunSqlCommand(strHQL);
 
-            strHQL = "Update T_WorkFlowTemplate Set OverTimeHourNumber = " + NB_OverTimeHourNumber.Amount.ToString() + " Where TemName = " + "'" + strTemName + "'";
+            strHQL = string.Format(@"Update T_WorkFlowTemplate 
+                                     Set OverTimeHourNumber = {0} 
+                                     Where TemName = '{1}'", NB_OverTimeHourNumber.Amount.ToString(), strTemName);
             ShareClass.RunSqlCommand(strHQL);
-
-
 
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
         }
@@ -501,14 +493,14 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         }
     }
 
-
     public static string GetWFDefinition(string strTemName)
     {
         IList lst;
         string strHQL, strWFDefinition;
 
         WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.TemName =" + "'" + strTemName + "'";
+        strHQL = string.Format(@"from WorkFlowTemplate as workFlowTemplate 
+                                 where workFlowTemplate.TemName = '{0}'", strTemName);
         lst = workFlowTemplateBLL.GetAllWorkFlowTemplates(strHQL);
 
         WorkFlowTemplate workFlowTemplate = (WorkFlowTemplate)lst[0];
@@ -536,16 +528,21 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
 
         strTemName = LB_WFTemplate.Text.Trim();
 
-
         try
         {
-            strHQL = "Update T_WorkFlowTemplate Set Type = '" + strNewWLType + "' Where TemName = '" + strTemName + "'";
+            strHQL = string.Format(@"Update T_WorkFlowTemplate 
+                                     Set Type = '{0}' 
+                                     Where TemName = '{1}'", strNewWLType, strTemName);
             ShareClass.RunSqlCommand(strHQL);
 
-            strHQL = "Update T_WorkFlow Set WLType = '" + strNewWLType + "' Where TemName = '" + strTemName + "'";
+            strHQL = string.Format(@"Update T_WorkFlow 
+                                     Set WLType = '{0}' 
+                                     Where TemName = '{1}'", strNewWLType, strTemName);
             ShareClass.RunSqlCommand(strHQL);
 
-            strHQL = "Update T_WorkFlowBackup Set WLType = '" + strNewWLType + "' Where TemName = '" + strTemName + "'";
+            strHQL = string.Format(@"Update T_WorkFlowBackup 
+                                     Set WLType = '{0}' 
+                                     Where TemName = '{1}'", strNewWLType, strTemName);
             ShareClass.RunSqlCommand(strHQL);
 
             LB_WFType.Text = strNewWLType;
@@ -561,8 +558,6 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         }
     }
 
-
-
     protected void BT_UploadXSNFile_Click(object sender, EventArgs e)
     {
         if (this.FUP_File.PostedFile != null)
@@ -570,17 +565,15 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
             string strFileName1 = FUP_File.PostedFile.FileName.Trim();
             string strTemName = LB_WFTemplate.Text.Trim();
 
-
             int i;
             string strHQL;
 
             if (strFileName1 != "")
             {
-                //获取初始文件名
-                i = strFileName1.LastIndexOf("."); //取得文件名中最后一个"."的索引
-                string strNewExt = strFileName1.Substring(i); //获取文件扩展名
+                i = strFileName1.LastIndexOf(".");
+                string strNewExt = strFileName1.Substring(i);
 
-                DateTime dtUploadNow = DateTime.Now; //获取系统时间
+                DateTime dtUploadNow = DateTime.Now;
 
                 string strFileName2 = System.IO.Path.GetFileName(strFileName1);
                 string strExtName = Path.GetExtension(strFileName2);
@@ -590,7 +583,6 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
                 string strFileName3 = "Doc\\" + "WorkFlowTemplate\\" + strFileName2;
                 string strFileName4 = strDocSavePath + strFileName2;
 
-                //上传加了版本号的自定义表单文件到服务器WorkFlowTemplate目录给工作流模块引用
                 FileInfo fi = new FileInfo(strFileName4);
                 if (fi.Exists)
                 {
@@ -601,7 +593,9 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
                 {
                     FUP_File.PostedFile.SaveAs(strFileName4);
 
-                    strHQL = "Update T_WorkFlowTemplate Set XSNFile = " + "'" + strFileName3 + "'" + " Where TemName = " + "'" + strTemName + "'";
+                    strHQL = string.Format(@"Update T_WorkFlowTemplate 
+                                             Set XSNFile = '{0}' 
+                                             Where TemName = '{1}'", strFileName3, strTemName);
                     ShareClass.RunSqlCommand(strHQL);
 
                     HL_XSNFile.Text = System.IO.Path.GetFileName(Server.MapPath(strFileName3));
@@ -632,7 +626,9 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
 
         string strTemName = LB_WFTemplate.Text.Trim();
 
-        strHQL = "Update T_WorkFlowTemplate Set XSNFile = '' Where TemName =  " + "'" + strTemName + "'";
+        strHQL = string.Format(@"Update T_WorkFlowTemplate 
+                                 Set XSNFile = '' 
+                                 Where TemName = '{0}'", strTemName);
 
         try
         {
@@ -663,7 +659,8 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
             return;
         }
 
-        strHQL = "From WorkFlowTemplate as workFlowTemplate Where workFlowTemplate.TemName = " + "'" + strTemName + "'";
+        strHQL = string.Format(@"From WorkFlowTemplate as workFlowTemplate 
+                                 Where workFlowTemplate.TemName = '{0}'", strTemName);
         WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
         lst = workFlowTemplateBLL.GetAllWorkFlowTemplates(strHQL);
 
@@ -708,13 +705,14 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
     {
         string strHQL;
 
-
         string strTemName, strEnableEdit;
 
         strTemName = LB_WFTemplate.Text.Trim();
         strEnableEdit = DL_EnableEdit.SelectedValue.Trim();
 
-        strHQL = "Update T_WorkFlowTemplate Set EnableEdit = " + "'" + strEnableEdit + "'" + " Where TemName = " + "'" + strTemName + "'";
+        strHQL = string.Format(@"Update T_WorkFlowTemplate 
+                                 Set EnableEdit = '{0}' 
+                                 Where TemName = '{1}'", strEnableEdit, strTemName);
 
         try
         {
@@ -742,7 +740,8 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
             e.Item.ForeColor = Color.Red;
 
             strID = ((Button)e.Item.FindControl("BT_ID")).Text.Trim();
-            strHQL = "from WorkFlowTStepOperator as workFlowTStepOperator where workFlowTStepOperator.ID = " + strID;
+            strHQL = string.Format(@"from WorkFlowTStepOperator as workFlowTStepOperator 
+                                     where workFlowTStepOperator.ID = {0}", strID);
             WorkFlowTStepOperatorBLL workFlowTStepOperatorBLL = new WorkFlowTStepOperatorBLL();
             lst = workFlowTStepOperatorBLL.GetAllWorkFlowTStepOperators(strHQL);
             WorkFlowTStepOperator workFlowTStepOperator = (WorkFlowTStepOperator)lst[0];
@@ -781,7 +780,8 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
             string strTemName = LB_WFTemplate.Text.Trim();
 
             WorkFlowTStepBLL workFlowTStepBLL = new WorkFlowTStepBLL();
-            string strHQL = "from WorkFlowTStep as workFlowTStep where workFlowTStep.StepID =" + strStepID;
+            string strHQL = string.Format(@"from WorkFlowTStep as workFlowTStep 
+                                            where workFlowTStep.StepID = {0}", strStepID);
             IList lst = workFlowTStepBLL.GetAllWorkFlowTSteps(strHQL);
 
             WorkFlowTStep workFlowTStep = (WorkFlowTStep)lst[0];
@@ -806,7 +806,6 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
             LBL_AllowSelfPass.Text = workFlowTStep.AllowSelfPass.Trim();
             LBL_AllowPriorOperatorPass.Text = workFlowTStep.AllowPriorOperatorPass.Trim();
 
-
             strSendSMS = workFlowTStep.SendSMS.Trim();
             strSendEMail = workFlowTStep.SendEMail.Trim();
 
@@ -828,7 +827,6 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
                 LBL_SendEMail.Text = "false";
             }
 
-
             LB_StepID.Text = workFlowTStep.StepID.ToString().Trim();
             LB_StepName.Text = workFlowTStep.StepName.Trim();
 
@@ -840,8 +838,6 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
     }
-
-
 
     protected void TreeView1_SelectedNodeChanged(object sender, EventArgs e)
     {
@@ -862,14 +858,14 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         }
     }
 
-
     protected void UpdateWFDefinition(string strTemName, string strWFDefinition)
     {
         string strHQL;
         IList lst;
 
         WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.TemName = " + "'" + strTemName + "'";
+        strHQL = string.Format(@"from WorkFlowTemplate as workFlowTemplate 
+                                 where workFlowTemplate.TemName = '{0}'", strTemName);
         lst = workFlowTemplateBLL.GetAllWorkFlowTemplates(strHQL);
         WorkFlowTemplate workFlowTemplate = (WorkFlowTemplate)lst[0];
 
@@ -885,13 +881,12 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         }
     }
 
-    //生成常用工作流申请树
     public void InitialWorkFlowTree(TreeView TreeView, String strUserCode)
     {
-        string strHQL, strHQL2,strHQL3;
+        string strHQL, strHQL2, strHQL3;
         DataSet ds, ds2, ds3;
 
-        string strWFID, strWFType,strWFTypeHomeName, strTemName, strIdentifyString, strChildTemName, strChildIdentifyString;
+        string strWFID, strWFType, strWFTypeHomeName, strTemName, strIdentifyString, strChildTemName, strChildIdentifyString;
         string strDepartCode, strUnderDepartString, strParentDepartString;
 
         strParentDepartString = TakeTopCore.CoreShareClass.InitialParentDepartmentStringByAuthority(strUserCode);
@@ -899,7 +894,6 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
 
         strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
-        //添加根节点
         TreeView.Nodes.Clear();
 
         TreeNode node0 = new TreeNode();
@@ -908,25 +902,29 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         TreeNode node3 = new TreeNode();
         TreeNode node4 = new TreeNode();
 
-
-        WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
-        WorkFlowTemplate workFlowTemplate = new WorkFlowTemplate();
-
-
         node1 = new TreeNode();
         node1.Text = "<B>" + Resources.lang.GongZuoLiuLeiXing + "&" + Resources.lang.MoBan + "</B>";
         node1.Target = "1";
         node1.Expanded = true;
         TreeView.Nodes.Add(node1);
 
-        strHQL = "Select ID,Type,HomeName From T_WLType Where LangCode = " + "'" + strLangCode + "'";
-        strHQL += " and Type In (Select Type From T_WorkFlowTemplate as workFlowTemplate Where 1=1 ";
-        strHQL += " and (BelongDepartCode in " + strParentDepartString;
-        strHQL += " Or BelongDepartCode in " + strUnderDepartString;
-        strHQL += " Or TemName in (Select TemName From T_WorkFlowTemplateBusinessMember Where UserCode = '" + strUserCode + "')";
-        strHQL += " Or TemName in (Select TemName From T_WorkFlowTemplateBusinessDepartment Where DepartCode in " + strParentDepartString + ")))";
-        strHQL += " Order by SortNumber ASC";
+        strHQL = string.Format(@"Select ID, Type, HomeName 
+                                 From T_WLType 
+                                 Where LangCode = '{0}' 
+                                 and Type In (Select Type 
+                                              From T_WorkFlowTemplate as workFlowTemplate 
+                                              Where 1=1 
+                                              and (BelongDepartCode in {1} 
+                                              Or BelongDepartCode in {2} 
+                                              Or TemName in (Select TemName 
+                                                             From T_WorkFlowTemplateBusinessMember 
+                                                             Where UserCode = '{3}') 
+                                              Or TemName in (Select TemName 
+                                                             From T_WorkFlowTemplateBusinessDepartment 
+                                                             Where DepartCode in {1}))) 
+                                 Order by SortNumber ASC", strLangCode, strParentDepartString, strUnderDepartString, strUserCode);
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowTemplate");
+
         for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
         {
             strWFID = ds.Tables[0].Rows[i]["ID"].ToString().Trim();
@@ -939,12 +937,17 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
             node2.Expanded = false;
             node1.ChildNodes.Add(node2);
 
-            strHQL2 = "Select TemName,IdentifyString From T_WorkFlowTemplate Where Visible = 'YES' and Authority = 'All'";
-            strHQL2 += " and Type = " + "'" + strWFType + "'";
-            strHQL2 += " and (BelongDepartCode in " + strParentDepartString;
-            strHQL2 += " Or BelongDepartCode in " + strUnderDepartString + ")";
-            strHQL2 += " Order by SortNumber ASC";
+            strHQL2 = string.Format(@"Select TemName, IdentifyString 
+                                      From T_WorkFlowTemplate 
+                                      Where Visible = 'YES' 
+                                      and Authority = 'All' 
+                                      and Type = '{0}' 
+                                      and (BelongDepartCode in {1} 
+                                      Or BelongDepartCode in {2}) 
+                                      Order by SortNumber ASC", strWFType, strParentDepartString, strUnderDepartString);
+
             ds2 = ShareClass.GetDataSetFromSql(strHQL2, "T_WorkFlowTemplate");
+
             for (int j = 0; j < ds2.Tables[0].Rows.Count; j++)
             {
                 strTemName = ds2.Tables[0].Rows[j]["TemName"].ToString().Trim();
@@ -956,8 +959,14 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
                 node3.Expanded = false;
                 node2.ChildNodes.Add(node3);
 
-                strHQL3 = string.Format(@"Select distinct RelatedWFTemName From T_WFTStepRelatedTem Where RelatedStepID In (Select StepID From T_WorkFlowTStep Where TemName = '{0}')", strTemName);
+                strHQL3 = string.Format(@"Select distinct RelatedWFTemName 
+                                          From T_WFTStepRelatedTem 
+                                          Where RelatedStepID In (Select StepID 
+                                                                  From T_WorkFlowTStep 
+                                                                  Where TemName = '{0}')", strTemName);
+
                 ds3 = ShareClass.GetDataSetFromSql(strHQL3, "T_WFTSteppRelatedTem");
+
                 for (int k = 0; k < ds3.Tables[0].Rows.Count; k++)
                 {
                     strChildTemName = ds3.Tables[0].Rows[k]["RelatedWFTemName"].ToString().Trim();
@@ -968,7 +977,6 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
                     node4.Expanded = false;
                     node3.ChildNodes.Add(node4);
                 }
-
             }
         }
 
@@ -986,10 +994,10 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         strUserCode = LB_UserCode.Text.Trim();
         strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
-        //DataGrid2.CurrentPageIndex = 0;
-
         WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.TemName =" + "'" + strTemName + "'";
+        strHQL = string.Format(@"from WorkFlowTemplate as workFlowTemplate 
+                                 where workFlowTemplate.TemName = '{0}'", strTemName);
+
         lst = workFlowTemplateBLL.GetAllWorkFlowTemplates(strHQL);
         WorkFlowTemplate workFlowTemplate = (WorkFlowTemplate)lst[0];
 
@@ -1062,7 +1070,6 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
             HL_WorkFlowDesigner.ForeColor = Color.Red;
         }
 
-
         strRelatedUserCode = LB_RelatedUserCode.Text.Trim();
         strUserCode = LB_UserCode.Text.Trim();
         LB_MakeUserCode.Text = strMakeUserCode;
@@ -1081,8 +1088,10 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
 
         string strUserParentDepartmentString = TakeTopCore.CoreShareClass.InitialParentDepartmentStringByAuthority(strUserCode);
 
-        //strHQL = "SELECT ParentDepartCode FROM F_GetParentDepartCodeNoMe(" + "'" + strDepartCode + "'" + ") where ParentDepartCode = " + "'" + strBelongDepartCode + "'";
-        strHQL = "SELECT ParentCode FROM T_Department where DepartCode in " + strUserParentDepartmentString + " and ParentCode = " + "'" + strBelongDepartCode + "'";
+        strHQL = string.Format(@"SELECT ParentCode 
+                                 FROM T_Department 
+                                 where DepartCode in {0} 
+                                 and ParentCode = '{1}'", strUserParentDepartmentString, strBelongDepartCode);
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ParentDepartCode");
         if (ds.Tables[0].Rows.Count > 0)
         {
@@ -1114,10 +1123,10 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         }
     }
 
-
     protected string GetDepartName(string strDepartCode)
     {
-        string strHQL = "from Department as department where department.DepartCode = " + "'" + strDepartCode + "'";
+        string strHQL = string.Format(@"from Department as department 
+                                       where department.DepartCode = '{0}'", strDepartCode);
         DepartmentBLL departmentBLL = new DepartmentBLL();
         IList lst = departmentBLL.GetAllDepartments(strHQL);
 
@@ -1132,7 +1141,8 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         string strHQL, strMakeUserCode;
 
         WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.TemName =" + "'" + strTemName + "'";
+        strHQL = string.Format(@"from WorkFlowTemplate as workFlowTemplate 
+                                 where workFlowTemplate.TemName = '{0}'", strTemName);
         lst = workFlowTemplateBLL.GetAllWorkFlowTemplates(strHQL);
 
         WorkFlowTemplate workFlowTemplate = (WorkFlowTemplate)lst[0];
@@ -1147,7 +1157,8 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         string strHQL;
 
         WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.TemName =" + "'" + strTemName + "'";
+        strHQL = string.Format(@"from WorkFlowTemplate as workFlowTemplate 
+                                 where workFlowTemplate.TemName = '{0}'", strTemName);
         lst = workFlowTemplateBLL.GetAllWorkFlowTemplates(strHQL);
 
         WorkFlowTemplate workFlowTemplate = (WorkFlowTemplate)lst[0];
@@ -1161,7 +1172,8 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         string strHQL, strIdentifyString;
 
         WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.TemName =" + "'" + strTemName + "'";
+        strHQL = string.Format(@"from WorkFlowTemplate as workFlowTemplate 
+                                 where workFlowTemplate.TemName = '{0}'", strTemName);
         lst = workFlowTemplateBLL.GetAllWorkFlowTemplates(strHQL);
 
         WorkFlowTemplate workFlowTemplate = (WorkFlowTemplate)lst[0];
@@ -1176,7 +1188,8 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         string strHQL, strXSNFile;
 
         WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.TemName =" + "'" + strTemName + "'";
+        strHQL = string.Format(@"from WorkFlowTemplate as workFlowTemplate 
+                                 where workFlowTemplate.TemName = '{0}'", strTemName);
         lst = workFlowTemplateBLL.GetAllWorkFlowTemplates(strHQL);
 
         WorkFlowTemplate workFlowTemplate = (WorkFlowTemplate)lst[0];
@@ -1187,7 +1200,7 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         }
         catch
         {
-            strXSNFile = "";
+            strXSNFile = @"";
         }
 
         return strXSNFile;
@@ -1195,7 +1208,8 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
 
     protected string GetProjectName(string strProjectID)
     {
-        string strHQL = "from Project as project where project.ProjectID = " + strProjectID;
+        string strHQL = string.Format(@"from Project as project 
+                                       where project.ProjectID = '{0}'", strProjectID);
         ProjectBLL projectBLL = new ProjectBLL();
         IList lst = projectBLL.GetAllProjects(strHQL);
         Project project = (Project)lst[0];
@@ -1207,7 +1221,9 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
     {
         WorkFlowTStepBLL workFlowTStepBLL = new WorkFlowTStepBLL();
 
-        string strHQL = "from WorkFlowTStep as workFlowTStep where workFlowTStep.TemName =" + "'" + strTemName + "'" + " order by workFlowTStep.SortNumber ASC";
+        string strHQL = string.Format(@"from WorkFlowTStep as workFlowTStep 
+                                       where workFlowTStep.TemName = '{0}' 
+                                       order by workFlowTStep.SortNumber ASC", strTemName);
         IList lst = workFlowTStepBLL.GetAllWorkFlowTSteps(strHQL);
 
         DataGrid2.DataSource = lst;
@@ -1219,7 +1235,8 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from WorkFlowTStepOperator as workFlowTStepOperator where workFlowTStepOperator.StepID = " + strStepID;
+        strHQL = string.Format(@"from WorkFlowTStepOperator as workFlowTStepOperator 
+                                 where workFlowTStepOperator.StepID = {0}", strStepID);
         WorkFlowTStepOperatorBLL workFlowTStepOperatorBLL = new WorkFlowTStepOperatorBLL();
 
         lst = workFlowTStepOperatorBLL.GetAllWorkFlowTStepOperators(strHQL);
@@ -1231,7 +1248,10 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
     {
         string strHQL;
 
-        strHQL = "Select * From T_CommonWorkflowRelatedPage Where LangCode = '" + strLangCode + "' Order By ID ASC";
+        strHQL = string.Format(@"Select * 
+                                 From T_CommonWorkflowRelatedPage 
+                                 Where LangCode = '{0}' 
+                                 Order By ID ASC", strLangCode);
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_CommonWorkflowRelatedPage");
 
         DL_WFRelatedPage.DataSource = ds;
@@ -1242,7 +1262,8 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
 
     protected string GetActorGroupMakeUserCode(string strActorGroup)
     {
-        string strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName = " + "'" + strActorGroup + "'";
+        string strHQL = string.Format(@"from ActorGroup as actorGroup 
+                                       where actorGroup.GroupName = '{0}'", strActorGroup);
         ActorGroupBLL actorGroupBLL = new ActorGroupBLL();
         IList lst = actorGroupBLL.GetAllActorGroups(strHQL);
 
@@ -1253,7 +1274,8 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
 
     protected string GetActorGroupIdentityString(string strActorGroup)
     {
-        string strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName = " + "'" + strActorGroup + "'";
+        string strHQL = string.Format(@"from ActorGroup as actorGroup 
+                                       where actorGroup.GroupName = '{0}'", strActorGroup);
         ActorGroupBLL actorGroupBLL = new ActorGroupBLL();
         IList lst = actorGroupBLL.GetAllActorGroups(strHQL);
 
@@ -1261,6 +1283,4 @@ public partial class TTWorkFlowTemplate : System.Web.UI.Page
 
         return actorGroup.IdentifyString.Trim();
     }
-
-
 }
