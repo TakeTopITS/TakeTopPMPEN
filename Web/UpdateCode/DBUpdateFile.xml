@@ -7839,4 +7839,353 @@ Where ChartName in (Select ChartName From public.t_systemanalystchartmanagement 
 Update public.t_systemanalystchartrelateduser Set SortNumber = 13 
 Where ChartName in (Select ChartName From public.t_systemanalystchartmanagement Where ChartType Not Like 'H%' );</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3638</ID>
+    <SQLText>ALTER TABLE t_othercoderunmark
+RENAME COLUMN runmark TO NormalCodeRunmark;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3639</ID>
+    <SQLText>ALTER TABLE t_othercoderunmark
+ADD COLUMN  ImportantCodeRunMark int default 0;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3640</ID>
+    <SQLText>Update t_othercoderunmark Set ImportantCodeRunMark = 0</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3641</ID>
+    <SQLText>ALTER TABLE t_othercoderunmark
+RENAME COLUMN ImportantCodeRunMark TO UpdateColumnValueCodeRunmark;
+
+ALTER TABLE t_othercoderunmark
+ADD COLUMN  UpdateModuleNameCodeRunMark int default 0;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3642</ID>
+    <SQLText>Update t_othercoderunmark Set UpdateColumnValueCodeRunmark = 0;
+Update t_othercoderunmark Set UpdateModuleNameCodeRunMark = 0</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3643</ID>
+    <SQLText>DO $$
+DECLARE
+table_name TEXT;
+column_name TEXT;
+BEGIN
+FOR table_name, column_name IN
+SELECT c.table_name, c.column_name
+FROM information_schema.columns c
+JOIN information_schema.tables t
+ON c.table_schema = t.table_schema
+AND c.table_name = t.table_name
+WHERE c.column_name LIKE '%status%'
+AND c.table_schema = 'public'
+AND t.table_type = 'BASE TABLE'
+AND c.table_name NOT IN ('pbcatvld', 'pbcatedt','t_memberlevel','t_triggertabletofrom','t_sendtask','t_sentrecord') AND C.column_name not like '%id%'
+LOOP
+BEGIN
+-- 尝试修改字段类型
+EXECUTE format('ALTER TABLE %I ALTER COLUMN %I TYPE VARCHAR(200);', table_name, column_name);
+--RAISE NOTICE 'Changed column % in table % to VARCHAR(200)', column_name, table_name;
+EXCEPTION
+WHEN others THEN
+-- 捕获异常并跳过被视图依赖的字段
+RAISE NOTICE 'Skipped column % in table % due to dependency on a view or rule', column_name, table_name;
+END;
+END LOOP;
+END $$;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3644</ID>
+    <SQLText>ALTER TABLE t_memberlevel ALTER COLUMN agencystatus SET data TYPE char(100) USING agencystatus::int;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3645</ID>
+    <SQLText>-- 先更新数据，移除非数字字符
+UPDATE t_memberlevel
+SET agencystatus = regexp_replace(agencystatus, '[^0-9]', '', 'g')
+WHERE agencystatus ~ '[^0-9]';
+
+-- 然后更改列类型
+ALTER TABLE t_memberlevel
+ALTER COLUMN agencystatus TYPE int USING agencystatus::int;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3646</ID>
+    <SQLText>DROP VIEW public.v_projectmember_workloadschedule;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3647</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_projectmember_workload
+ AS
+ SELECT '项目'::text AS type,
+    t_project.pmcode AS usercode,
+    t_project.pmname AS username,
+    t_project.projectid::character varying(30) AS projectid,
+    t_project.projectname,
+    t_project.begindate,
+    t_project.enddate,
+    t_project.status
+   FROM t_project
+  WHERE t_project.status &lt;&gt; ALL (ARRAY['关闭'::bpchar, '完成'::bpchar, '结案'::bpchar, '取消'::bpchar, '删除'::bpchar, '归档'::bpchar, '拒绝'::bpchar, '挂起'::bpchar])
+UNION
+ SELECT '项目'::text AS type,
+    a.usercode,
+    a.username,
+    a.projectid::character varying(30) AS projectid,
+    a.projectname,
+    b.begindate,
+    b.enddate,
+    b.status
+   FROM t_relateduser a,
+    t_project b
+  WHERE a.projectid = b.projectid AND (a.projectid IN ( SELECT t_project.projectid
+           FROM t_project
+          WHERE t_project.status &lt;&gt; ALL (ARRAY['关闭'::bpchar, '完成'::bpchar, '结案'::bpchar, '取消'::bpchar, '删除'::bpchar, '归档'::bpchar, '拒绝'::bpchar, '挂起'::bpchar]))) AND (a.projectname::bpchar IN ( SELECT t_project.projectname
+           FROM t_project
+          WHERE t_project.status &lt;&gt; ALL (ARRAY['关闭'::bpchar, '完成'::bpchar, '结案'::bpchar, '取消'::bpchar, '删除'::bpchar, '归档'::bpchar, '拒绝'::bpchar, '挂起'::bpchar])))
+UNION
+ SELECT '计划'::text AS type,
+    a.usercode,
+    a.username,
+    (('Project:'::text || b.projectid::character varying(30)::text) || ' Plan:'::text) || b.id::character varying(30)::text AS projectid,
+    b.name AS projectname,
+    b.start_date AS begindate,
+    b.end_date AS enddate,
+    b.status
+   FROM t_planmember a,
+    t_impleplan b
+  WHERE a.planid = b.id AND b.type = '在用'::bpchar
+
+UNION
+ SELECT '任务'::text AS type,
+    a.operatorcode AS usercode,
+    a.operatorname AS username,
+    (('Project:'::text || b.projectid::character varying(30)::text) || ' Task:'::text) || a.taskid::character varying(30)::text AS projectid,
+    a.task AS projectname,
+    a.begindate,
+    a.enddate,
+    b.status
+   FROM t_taskassignrecord a,
+    t_projecttask b
+  WHERE a.taskid = b.taskid
+UNION
+ SELECT '需求'::text AS type,
+    t_reqassignrecord.operatorcode AS usercode,
+    t_reqassignrecord.operatorname AS username,
+    t_reqassignrecord.reqid::character varying(30) AS projectid,
+    t_reqassignrecord.reqname AS projectname,
+    t_reqassignrecord.begindate,
+    t_reqassignrecord.enddate,
+    t_reqassignrecord.status
+   FROM t_reqassignrecord
+UNION
+ SELECT '会议'::text AS type,
+    a.usercode,
+    a.username,
+    a.meetingid::character varying(30) AS projectid,
+    b.name AS projectname,
+    b.begintime AS begindate,
+    b.endtime AS enddate,
+    b.status
+   FROM t_meetingattendant a,
+    t_meeting b
+  WHERE a.meetingid = b.id;
+
+ALTER TABLE public.v_projectmember_workload
+    OWNER TO postgres;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3648</ID>
+    <SQLText>ALTER TABLE t_plan ALTER COLUMN status SET data TYPE char(100) USING status::char(100);</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3649</ID>
+    <SQLText>ALTER TABLE t_plan ALTER COLUMN status SET data TYPE bpchar(100) USING status::bpchar(100)</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3650</ID>
+    <SQLText>-- View: public.v_projectmember_workload
+
+-- DROP VIEW public.v_projectmember_workload;
+
+CREATE OR REPLACE VIEW public.v_projectmember_workload
+ AS
+ SELECT '项目'::text AS type,
+    t_project.pmcode AS usercode,
+    t_project.pmname AS username,
+    t_project.projectid::character varying(30) AS projectid,
+    t_project.projectname,
+    t_project.begindate,
+    t_project.enddate,
+    t_project.status
+   FROM t_project
+  WHERE t_project.status &lt;&gt; ALL (ARRAY['关闭'::bpchar, '完成'::bpchar, '结案'::bpchar, '取消'::bpchar, '删除'::bpchar, '归档'::bpchar, '拒绝'::bpchar, '挂起'::bpchar])
+UNION
+ SELECT '项目'::text AS type,
+    a.usercode,
+    a.username,
+    a.projectid::character varying(30) AS projectid,
+    a.projectname,
+    b.begindate,
+    b.enddate,
+    b.status
+   FROM t_relateduser a,
+    t_project b
+  WHERE a.projectid = b.projectid AND (a.projectid IN ( SELECT t_project.projectid
+           FROM t_project
+          WHERE t_project.status &lt;&gt; ALL (ARRAY['关闭'::bpchar, '完成'::bpchar, '结案'::bpchar, '取消'::bpchar, '删除'::bpchar, '归档'::bpchar, '拒绝'::bpchar, '挂起'::bpchar]))) AND (a.projectname::bpchar IN ( SELECT t_project.projectname
+           FROM t_project
+          WHERE t_project.status &lt;&gt; ALL (ARRAY['关闭'::bpchar, '完成'::bpchar, '结案'::bpchar, '取消'::bpchar, '删除'::bpchar, '归档'::bpchar, '拒绝'::bpchar, '挂起'::bpchar])))
+UNION
+ SELECT '计划'::text AS type,
+    a.usercode,
+    a.username,
+    (('Project:'::text || b.projectid::character varying(30)::text) || ' Plan:'::text) || b.id::character varying(30)::text AS projectid,
+    b.name AS projectname,
+    b.start_date AS begindate,
+    b.end_date AS enddate,
+    b.status
+   FROM t_planmember a,
+    t_impleplan b
+  WHERE a.planid = b.id AND b.type = '在用'::bpchar
+-- UNION
+--  SELECT '计划'::text AS type,
+--     t_plan.usercode,
+--     t_plan.username,
+--     t_plan.planid::character varying(30) AS projectid,
+--     t_plan.planname AS projectname,
+--     t_plan.starttime AS begindate,
+--     t_plan.endtime AS enddate,
+--     t_plan.status
+--    FROM t_plan
+UNION
+ SELECT '任务'::text AS type,
+    a.operatorcode AS usercode,
+    a.operatorname AS username,
+    (('Project:'::text || b.projectid::character varying(30)::text) || ' Task:'::text) || a.taskid::character varying(30)::text AS projectid,
+    a.task AS projectname,
+    a.begindate,
+    a.enddate,
+    b.status
+   FROM t_taskassignrecord a,
+    t_projecttask b
+  WHERE a.taskid = b.taskid
+UNION
+ SELECT '需求'::text AS type,
+    t_reqassignrecord.operatorcode AS usercode,
+    t_reqassignrecord.operatorname AS username,
+    t_reqassignrecord.reqid::character varying(30) AS projectid,
+    t_reqassignrecord.reqname AS projectname,
+    t_reqassignrecord.begindate,
+    t_reqassignrecord.enddate,
+    t_reqassignrecord.status
+   FROM t_reqassignrecord
+UNION
+ SELECT '会议'::text AS type,
+    a.usercode,
+    a.username,
+    a.meetingid::character varying(30) AS projectid,
+    b.name AS projectname,
+    b.begintime AS begindate,
+    b.endtime AS enddate,
+    b.status
+   FROM t_meetingattendant a,
+    t_meeting b
+  WHERE a.meetingid = b.id;
+
+ALTER TABLE public.v_projectmember_workload
+    OWNER TO postgres;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3651</ID>
+    <SQLText>CREATE OR REPLACE VIEW public.v_projectmember_workloadschedule
+ AS
+ SELECT '项目'::text AS type,
+    t_project.pmcode AS usercode,
+    t_project.pmname AS username,
+    t_project.projectid::character varying(30) AS projectid,
+    t_project.projectname,
+    t_project.begindate,
+    t_project.enddate,
+    t_project.status
+   FROM t_project
+  WHERE t_project.status &lt;&gt; ALL (ARRAY['关闭'::bpchar, '完成'::bpchar, '结案'::bpchar, '取消'::bpchar, '删除'::bpchar, '归档'::bpchar, '拒绝'::bpchar, '挂起'::bpchar])
+UNION
+ SELECT '项目'::text AS type,
+    a.usercode,
+    a.username,
+    a.projectid::character varying(30) AS projectid,
+    a.projectname,
+    b.begindate,
+    b.enddate,
+    b.status
+   FROM t_relateduser a,
+    t_project b
+  WHERE a.projectid = b.projectid AND (a.projectid IN ( SELECT t_project.projectid
+           FROM t_project
+          WHERE t_project.status &lt;&gt; ALL (ARRAY['关闭'::bpchar, '完成'::bpchar, '结案'::bpchar, '取消'::bpchar, '删除'::bpchar, '归档'::bpchar, '拒绝'::bpchar, '挂起'::bpchar]))) AND (a.projectname::bpchar IN ( SELECT t_project.projectname
+           FROM t_project
+          WHERE t_project.status &lt;&gt; ALL (ARRAY['关闭'::bpchar, '完成'::bpchar, '结案'::bpchar, '取消'::bpchar, '删除'::bpchar, '归档'::bpchar, '拒绝'::bpchar, '挂起'::bpchar])))
+UNION
+ SELECT '计划'::text AS type,
+    a.usercode,
+    a.username,
+    b.id::character varying(30) AS projectid,
+    b.name AS projectname,
+    b.start_date AS begindate,
+    b.end_date AS enddate,
+    b.status
+   FROM t_planmember a,
+    t_impleplan b
+  WHERE a.planid = b.id AND b.type = '在用'::bpchar
+UNION
+ SELECT '计划'::text AS type,
+    t_plan.usercode,
+    t_plan.username,
+    t_plan.planid::character varying(30) AS projectid,
+    t_plan.planname AS projectname,
+    t_plan.starttime AS begindate,
+    t_plan.endtime AS enddate,
+    t_plan.status
+   FROM t_plan
+UNION
+ SELECT '任务'::text AS type,
+    a.operatorcode AS usercode,
+    a.operatorname AS username,
+    a.taskid::character varying(30) AS projectid,
+    a.task AS projectname,
+    a.begindate,
+    a.enddate,
+    b.status
+   FROM t_taskassignrecord a,
+    t_projecttask b
+  WHERE a.taskid = b.taskid
+UNION
+ SELECT '需求'::text AS type,
+    t_reqassignrecord.operatorcode AS usercode,
+    t_reqassignrecord.operatorname AS username,
+    t_reqassignrecord.reqid::character varying(30) AS projectid,
+    t_reqassignrecord.reqname AS projectname,
+    t_reqassignrecord.begindate,
+    t_reqassignrecord.enddate,
+    t_reqassignrecord.status
+   FROM t_reqassignrecord
+UNION
+ SELECT '会议'::text AS type,
+    a.usercode,
+    a.username,
+    a.meetingid::character varying(30) AS projectid,
+    b.name AS projectname,
+    b.begintime AS begindate,
+    b.endtime AS enddate,
+    b.status
+   FROM t_meetingattendant a,
+    t_meeting b
+  WHERE a.meetingid = b.id;
+
+ALTER TABLE public.v_projectmember_workloadschedule
+    OWNER TO postgres;</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
