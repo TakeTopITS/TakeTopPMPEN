@@ -499,7 +499,7 @@ public partial class TTBaseDataInner : System.Web.UI.Page
         }
     }
 
-    protected void TB_ProejctTypeNew_Click(object sender, EventArgs e)
+    protected void BT_ProejctTypeNew_Click(object sender, EventArgs e)
     {
         string strHQL;
         string strType, strKeyWord, strAllowPMChangeStatus, strAutoRunWFAfterMakeProject, strProgressByDetailImpact, strPlanProgressNeedPlanerConfirm, strSortNumber;

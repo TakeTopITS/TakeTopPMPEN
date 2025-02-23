@@ -18,10 +18,12 @@ public partial class TTSystemDataManageForImplementationBeginner : System.Web.UI
         strUserCode = Session["UserCode"].ToString();
         strUserName = ShareClass.GetUserName(strUserCode);
 
+        LogClass.WriteLogFile("test");
+
         //判断 初始阶段数据清除  模组是否存在
         if (checkModuleIsExisted("实施阶段数据管理") == false)
         {
-            Response.Redirect("TTDisplayErrors.aspx");
+            Response.Redirect("../TTDisplayErrors.aspx");
             return;
         }
 
@@ -34,6 +36,8 @@ public partial class TTSystemDataManageForImplementationBeginner : System.Web.UI
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL1, "T_SystemDataManageForBeginer");
             if (ds.Tables[0].Rows.Count > 0)
             {
+                BT_BackupDB.Visible = false;
+
                 BT_ClearAssetData.Visible = false;
                 BT_ClearDepartmentData.Visible = false;
                 BT_ClearItemData.Visible = false;

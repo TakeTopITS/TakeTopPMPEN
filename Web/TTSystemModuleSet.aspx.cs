@@ -19,13 +19,14 @@ using ProjectMgt.DAL;
 using ProjectMgt.BLL;
 
 using TakeTopSecurity;
+using System.Runtime.CompilerServices;
 
 public partial class TTSystemModuleSet : System.Web.UI.Page
 {
     string strLangCode, strUserCode;
     string strForbitModule;
 
-    protected void Page_Load(object sender, EventArgs e)
+    protected  void Page_Load(object sender, EventArgs e)
     {
         strUserCode = Session["UserCode"].ToString();
         strLangCode = Session["LangCode"].ToString();
@@ -1307,10 +1308,10 @@ public partial class TTSystemModuleSet : System.Web.UI.Page
     {
         string strHQL;
 
-        strHQL = "Select * From T_ProModule";
+        strHQL = "Select count(*) From T_ProModule";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProModule");
 
-        return ds.Tables[0].Rows.Count;
+        return int.Parse(ds.Tables[0].Rows[0][0].ToString().Trim());
     }
 
 

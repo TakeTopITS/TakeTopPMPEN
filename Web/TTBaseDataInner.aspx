@@ -281,12 +281,9 @@
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                     </asp:TemplateColumn>
-                                                                    <asp:TemplateColumn HeaderText="×´Ì¬">
-    <ItemTemplate>
-        <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
-    </ItemTemplate>
-    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="15%" />
-</asp:TemplateColumn>
+                                                                     <asp:BoundColumn DataField="Status" HeaderText="×´Ì¬">
+                                                                          <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
+                                                                    </asp:BoundColumn>
                                                                     <asp:TemplateColumn HeaderText="Ä£¿éÃû³Æ£¨±¾Óï£©">
                                                                         <ItemTemplate>
                                                                             <asp:TextBox ID="TB_HomeName" runat="server" Width="100px" Text='<%# DataBinder.Eval(Container.DataItem,"HomeName") %>'></asp:TextBox>
@@ -383,7 +380,7 @@
                                                                             </tr>
                                                                             <tr>
                                                                                 <td colspan="8" style="text-align: center;" class="formItemBgStyle">
-                                                                                    <asp:Button ID="TB_ProjectTypeNew" runat="server" CssClass="inpu" OnClick="TB_ProejctTypeNew_Click"
+                                                                                    <asp:Button ID="BT_ProjectTypeNew" runat="server" CssClass="inpu" OnClick="BT_ProejctTypeNew_Click"
                                                                                         Text="<%$ Resources:lang,XinZeng%>" />
                                                                                     &nbsp;
                                                                                 <asp:Button ID="BT_ProjectTypeUpdate" runat="server" Enabled="false" CssClass="inpu" OnClick="BT_ProjectTypeUpdate_Click"

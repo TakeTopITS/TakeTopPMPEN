@@ -1,6 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSystemDataManageForImplementationBeginner.aspx.cs" Inherits="TTSystemDataManageForImplementationBeginner" %>
 
-
 <%@ Register Assembly="NickLee.Web.UI" Namespace="NickLee.Web.UI" TagPrefix="NickLee" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
@@ -9,7 +8,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title></title>
-    <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
+    <link id="mainCss" href="../css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
             min-width: 1100px;
@@ -49,7 +48,7 @@
                                                         <td width="29">
                                                             <%--<img src="Logo/main_top_l.jpg" alt="" width="29" height="31" />--%>
                                                         </td>
-                                                        <td align="center" background="ImagesSkin/main_top_bj.jpg" class="titlezi">
+                                                        <td align="center" background="../ImagesSkin/main_top_bj.jpg" class="titlezi">
                                                             <asp:Label ID="Label1" runat="server" Text="系统数据实施开始阶段管理"></asp:Label>
                                                         </td>
                                                         <td width="5">
@@ -84,11 +83,6 @@
 
                                                                         <table>
                                                                             <tr>
-                                                                                <%--  <td style="text-align: right;">
-                                                                                    <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,MiMa%>"></asp:Label>：</td>
-                                                                                <td style="width: 300px; text-align: left; padding-top: 3px;">
-                                                                                    <asp:TextBox ID="TB_Password" runat="server" Width="99%" TextMode="Password"></asp:TextBox>
-                                                                                </td>--%>
                                                                                 <td align="center" style="width: 300px">
                                                                                     <asp:Button ID="BT_BackupDB" runat="server" CssClass="inpuLong" Text="备份数据库" OnClick="BT_BackupDB_Click" />
                                                                                 </td>
@@ -140,12 +134,12 @@
             <div style="position: absolute; left: 50%; top: 50%;">
                 <asp:UpdateProgress ID="TakeTopUp" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
                     <ProgressTemplate>
-                        <img src="Images/Processing.gif" alt="Loading,please wait..." />
+                        <img src="../Images/Processing.gif" alt="Loading,please wait..." />
                     </ProgressTemplate>
                 </asp:UpdateProgress>
             </div>
         </form>
     </center>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = '../css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
 </html>

@@ -1,20 +1,30 @@
 
-Log Entry : 10:05:12 PM Saturday, February 22, 2025 
-URL: http://10.211.55.22:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssGreenen
-Message Object reference not set to an instance of an object.
-   at TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) in E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:line 31
-   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
-   at System.Web.UI.Control.OnLoad(EventArgs e)
-   at System.Web.UI.Control.LoadRecursive()
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-------------------------------------
-
-Log Entry : 22:36:12 2025年2月22日 
-URL: http://10.211.55.22:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssGreenzh-CN
-Message 未将对象引用设置到对象的实例。
-   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:行号 31
+Log Entry : 12:01:28 2025年2月23日 
+URL: http://10.211.55.22:5000/Source/Web/TTSystemModuleSet.aspx?ModuleName=SystemModuleSetting&ModuleType=SYSTEM
+Message Unknown message code: 10
+   在 Npgsql.Util.PGUtil.ValidateBackendMessageCode(BackendMessageCode code)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.<<ReadMessage>g__ReadMessageSequential|43_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.<Read>d__42.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.Read()
+   在 System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   在 System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   在 System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\App_Code\ShareClass.cs:行号 16573
+   在 TTSystemModuleSet.GetUserAuthorizationRecordNumber() 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTSystemModuleSet.aspx.cs:行号 1311
+   在 TTSystemModuleSet.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTSystemModuleSet.aspx.cs:行号 59
    在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
    在 System.Web.UI.Control.OnLoad(EventArgs e)
    在 System.Web.UI.Control.LoadRecursive()
@@ -23,262 +33,147 @@ Message 未将对象引用设置到对象的实例。
 
 ------------------------------------
 
-Log Entry : 10:53:11 PM Saturday, February 22, 2025 
-URL: http://10.211.55.22:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssGreenen
-Message Object reference not set to an instance of an object.
-   at TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) in E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:line 31
-   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
-   at System.Web.UI.Control.OnLoad(EventArgs e)
-   at System.Web.UI.Control.LoadRecursive()
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
+Log Entry : 12:04:00 2025年2月23日 
+Error page: 
+引发类型为“System.OutOfMemoryException”的异常。
+   在 System.Buffers.DefaultArrayPool`1.Rent(Int32 minimumLength)
+   在 Npgsql.Internal.NpgsqlReadBuffer..ctor(NpgsqlConnector connector, Stream stream, Socket socket, Int32 size, Encoding textEncoding, Encoding relaxedTextEncoding)
+   在 Npgsql.Internal.NpgsqlReadBuffer.AllocateOversize(Int32 count)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\App_Code\ShareClass.cs:行号 16573
+   在 ShareClass.GetPageTitle(String strPageName) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\App_Code\ShareClass.cs:行号 220
 
 ------------------------------------
 
-Log Entry : 23:25:04 2025年2月22日 
-URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HRuningTaskStatus&ChartName=在执行任务状态
-Message 未将对象引用设置到对象的实例。
-   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
-   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
-   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
-   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
-   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+Log Entry : 12:04:00 2025年2月23日 
+URL: http://10.211.55.22:5000/Source/Web/TTSystemModuleSet.aspx?ModuleName=SystemModuleSetting&ModuleType=SYSTEM
+Message Unknown message code: 77
+   在 Npgsql.Util.PGUtil.ValidateBackendMessageCode(BackendMessageCode code)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 TakeTopSecurity.TakeTopLicense.GetDataSetFromSqlNOOperateLog(String strHQL, String strTableName)
+   在 TakeTopSecurity.TakeTopLicense.GetAuthobility(String strPageName, String strUserCode)
+   在 TTSystemModuleSet.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTSystemModuleSet.aspx.cs:行号 37
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
    在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
 
 
 ------------------------------------
 
-Log Entry : 23:25:04 2025年2月22日 
-URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=Gauge&ChartName=我主导的项目状态
-Message 未将对象引用设置到对象的实例。
-   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
-   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
-   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
-   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
-   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+Log Entry : 12:21:02 2025年2月23日 
+Error page: 
+Exception while reading from stream
+   在 Npgsql.Internal.NpgsqlReadBuffer.<<Ensure>g__EnsureLong|40_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlConnector.<<ReadMessage>g__ReadMessageLong|202_0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Threading.Tasks.ValueTask`1.get_Result()
+   在 Npgsql.NpgsqlDataReader.<NextResult>d__46.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlDataReader.NextResult()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Npgsql.NpgsqlCommand.<ExecuteReader>d__107.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 ShareClass.GetDataSetFromSql(String strHQL, String strTableName) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\App_Code\ShareClass.cs:行号 16573
+   在 ShareClass.LoadLanguageForDropList(DropDownList DL_Language) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\App_Code\ShareClass.cs:行号 586
+   在 _default.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\default.aspx.cs:行号 125
+
+------------------------------------
+
+Log Entry : 12:30:05 2025年2月23日 
+URL: http://10.211.55.22:5000/Source/Web/TTSystemModuleSet.aspx?ModuleName=SystemModuleSetting&ModuleType=SYSTEM
+Message 现在无法开始异步操作。异步操作只能在异步处理程序或模块中开始，或在页生存期中的特定事件过程中开始。如果此异常在执行 Page 时发生，请确保 Page 标记为 <%@ Page Async="true" %>。此异常也可能表明试图调用“异步无效”方法，在 ASP.NET 请求处理内一般不支持这种方法。相反，该异步方法应该返回一个任务，而调用方应该等待该任务。
+   在 System.Web.AspNetSynchronizationContext.OperationStarted()
+   在 System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Create()
+   在 TTSystemModuleSet.Page_Load(Object sender, EventArgs e)
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
    在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
 
 
 ------------------------------------
 
-Log Entry : 23:25:04 2025年2月22日 
-URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=Pie&ChartName=我参与的项目状态
-Message 未将对象引用设置到对象的实例。
-   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
-   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
-   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
-   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
-   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-------------------------------------
-
-Log Entry : 23:25:04 2025年2月22日 
-URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=Pie&ChartName=所有成员的项目状态
-Message 未将对象引用设置到对象的实例。
-   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
-   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
-   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
-   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
-   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-------------------------------------
-
-Log Entry : 23:25:08 2025年2月22日 
-URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HAnnualPaymentStatus&ChartName=项目年度回款状态
-Message 未将对象引用设置到对象的实例。
-   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
-   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
-   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
-   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
-   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-------------------------------------
-
-Log Entry : 23:25:08 2025年2月22日 
-URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HDelayProjectStatus&ChartName=延误项目状态
-Message 未将对象引用设置到对象的实例。
-   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
-   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
-   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
-   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
-   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-------------------------------------
-
-Log Entry : 23:25:08 2025年2月22日 
-URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HAnnualWorkHourStatus&ChartName=年度项目工时状态
-Message 未将对象引用设置到对象的实例。
-   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
-   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
-   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
-   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
-   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-------------------------------------
-
-Log Entry : 23:25:08 2025年2月22日 
-URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HRuningProjectStatus&ChartName=在执行项目状态
-Message 未将对象引用设置到对象的实例。
-   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
-   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
-   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
-   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
-   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-------------------------------------
-
-Log Entry : 23:26:00 2025年2月22日 
-URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=Gauge&ChartName=我主导的项目状态
-Message 未将对象引用设置到对象的实例。
-   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
-   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
-   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
-   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
-   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-------------------------------------
-
-Log Entry : 23:26:00 2025年2月22日 
-URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=Pie&ChartName=我参与的项目状态
-Message 未将对象引用设置到对象的实例。
-   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
-   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
-   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
-   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
-   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-------------------------------------
-
-Log Entry : 23:26:00 2025年2月22日 
-URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=Pie&ChartName=所有成员的项目状态
-Message 未将对象引用设置到对象的实例。
-   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
-   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
-   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
-   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
-   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-------------------------------------
-
-Log Entry : 23:26:02 2025年2月22日 
-URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HDelayProjectStatus&ChartName=延误项目状态
-Message 未将对象引用设置到对象的实例。
-   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
-   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
-   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
-   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
-   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-------------------------------------
-
-Log Entry : 23:26:12 2025年2月22日 
-URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HAnnualWorkHourStatus&ChartName=年度项目工时状态
-Message 未将对象引用设置到对象的实例。
-   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
-   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
-   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
-   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
-   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-------------------------------------
-
-Log Entry : 23:26:13 2025年2月22日 
-URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HAnnualPaymentStatus&ChartName=项目年度回款状态
-Message 未将对象引用设置到对象的实例。
-   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
-   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
-   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
-   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
-   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-------------------------------------
-
-Log Entry : 23:26:13 2025年2月22日 
-URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HRuningTaskStatus&ChartName=在执行任务状态
-Message 未将对象引用设置到对象的实例。
-   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
-   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
-   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
-   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
-   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-------------------------------------
-
-Log Entry : 23:26:14 2025年2月22日 
-URL: http://10.211.55.22:5000/Source/Web/TTTakeTopAnalystChartSet.aspx?FormType=PersonalSpacePage&ChartType=HRuningProjectStatus&ChartName=在执行项目状态
-Message 未将对象引用设置到对象的实例。
-   在 ASP.tttaketopanalystchartset_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTTakeTopAnalystChartSet.aspx:行号 1054
-   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
-   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
-   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
-   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
-   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-------------------------------------
-
-Log Entry : 23:37:47 2025年2月22日 
-URL: http://10.211.55.22:5000/Source/Web/TTPersonalSpaceWorkflow.aspx?UserCode=C7094&Flag=CssGreenzh-CN
-Message 未将对象引用设置到对象的实例。
-   在 TTPersonalSpaceWorkflow.Page_Load(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTPersonalSpaceWorkflow.aspx.cs:行号 31
+Log Entry : 12:30:26 2025年2月23日 
+URL: http://10.211.55.22:5000/Source/Web/TTSystemModuleSet.aspx?ModuleName=SystemModuleSetting&ModuleType=SYSTEM
+Message 现在无法开始异步操作。异步操作只能在异步处理程序或模块中开始，或在页生存期中的特定事件过程中开始。如果此异常在执行 Page 时发生，请确保 Page 标记为 <%@ Page Async="true" %>。此异常也可能表明试图调用“异步无效”方法，在 ASP.NET 请求处理内一般不支持这种方法。相反，该异步方法应该返回一个任务，而调用方应该等待该任务。
+   在 System.Web.AspNetSynchronizationContext.OperationStarted()
+   在 System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Create()
+   在 TTSystemModuleSet.Page_Load(Object sender, EventArgs e)
    在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
    在 System.Web.UI.Control.OnLoad(EventArgs e)
    在 System.Web.UI.Control.LoadRecursive()

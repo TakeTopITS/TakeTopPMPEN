@@ -110,7 +110,7 @@
                                                     <table>
                                                         <tr>
                                                             <td>
-                                                                <asp:ImageButton ID="IMB_Copyright" runat="server" Width="24" Height="24" ImageUrl="~/ImagesSkin/copyright.png"/></td>
+                                                                <asp:ImageButton ID="IMB_Copyright" runat="server" Width="24" Height="24" ImageUrl="~/ImagesSkin/copyright.png" OnClick="IMB_Copyright_Click" /></td>
                                                             <td>
                                                                 <asp:Label ID="LB_Copyright" runat="server" Text="Copyright? Ì©¶¥ÍØ¶¦£¨TakeTop Software£© 2006-2026 <a href=https://www.taketopits.com>www.taketopits.com</a>"></asp:Label></td>
                                                         </tr>

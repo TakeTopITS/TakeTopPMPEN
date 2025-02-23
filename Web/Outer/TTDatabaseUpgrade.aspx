@@ -79,7 +79,7 @@
                                                         </td>
                                                         <td>
                                                             <asp:Button ID="BT_CompareByHomeLanguage" runat="server" CssClass="inpuLong" Text="<%$ Resources:lang,YiBenYuDuiBi%>" OnClick="BT_CompareByHomeLanguage_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';" />
-                                                            <img id="IMG_Waiting" src="Images/Processing.gif" alt="Loading,please wait..." style="text-align: center; display: none;" />
+                                                            <img id="IMG_Waiting" src="../Images/Processing.gif" alt="Loading,please wait..." style="text-align: center; display: none;" />
                                                         </td>
                                                         <td>
                                                             <asp:Button ID="BT_GetLanguageResource" runat="server" CssClass="inpuLong" OnClick="BT_GetLanguageResource_Click" Text="<%$ Resources:lang,QDXTTSYYZY%>" />

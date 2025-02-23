@@ -7,7 +7,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title></title>
-    <link id="mainCss" href="../css/bluelightmain.css" rel="stylesheet" type="text/css" />
+    <link id="mainCss" href="css/bluelightmain.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #AboveDiv {
             min-width: 1500px;
@@ -111,10 +111,9 @@
                                             </td>
 
                                             <td align="center" style="padding-right: 5px; padding-top: 4px;">
-                                                <asp:Button ID="BT_UpdateEarlyWarningOrder" runat="server" CssClass="inpu" Width="150px" Text="更新预警命令" OnClick="BT_UpdateEarlyWarningOrder_Click" />
+                                                <asp:Button ID="BT_ClearSystemBeginnerData" runat="server" CssClass="inpu" Width="150px" Text="实施初始数据清除" OnClick="BT_ClearSystemBeginnerData_Click" />
                                             </td>
                                             <td align="center" style="padding-right: 5px; padding-top: 4px;">
-                                                <asp:Button ID="BT_ClearSystemBeginnerData" runat="server" CssClass="inpu" Width="150px" Text="实施初始数据清除" OnClick="BT_ClearSystemBeginnerData_Click" />
                                             </td>
                                             <td align="center" style="padding-right: 5px; padding-top: 4px;">&nbsp;</td>
                                         </tr>
@@ -389,5 +388,5 @@
         </form>
     </center>
 </body>
-<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = '../css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
+<script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
 </html>
