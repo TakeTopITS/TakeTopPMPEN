@@ -23254,4 +23254,19 @@ POSITION: 17297
    在 TTWorkPlan.TreeView1_SelectedNodeChanged(Object sender, EventArgs e) 位置 E:\TakeTopDECMPWinSolution(ENCore)\Source\Web\TTWorkPlan.aspx.cs:行号 831
 
 ------------------------------------
+
+Log Entry : 11:07:28 PM Sunday, February 23, 2025 
+Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
+
+------------------------------------
+
+Log Entry : 11:07:52 PM Sunday, February 23, 2025 
+Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
+
+------------------------------------
+
+Log Entry : 11:07:57 PM Sunday, February 23, 2025 
+Select A.ID,A.StepID,A.WorkDetail,B.CreatorCode,B.CreatorName,A.Requisite,A.Operation,A.CheckingTime,A.WLID,Rtrim(cast(A.WLID as char(20))) || '. ' || B.WLName as WLName,B.Status From T_WorkFlowStepDetail A,T_WorkFlow B Where A.WLID = B.WLID And A.Status In ('InProgress','Reviewing','Signing','ReReview') And B.Status Not In ('Updating','Closed','Passed','CaseClosed') And A.OperatorCode in (Select UserCode From T_MemberLevel Where UnderCode <> UserCode and UnderCode = 'C7094' and AgencyStatus = 1) And A.IsOperator = 'YES' Order By A.StepID DESC
+
+------------------------------------
 
