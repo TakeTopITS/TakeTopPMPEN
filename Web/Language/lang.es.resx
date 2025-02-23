@@ -27543,21 +27543,6 @@
   <data name="JiaoFuJingDu" xml:space="preserve">
     <value>Progreso de la entrega</value>
   </data>
-  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
-    <value>Reglas de Dominio: Código del empleado: [TAKETOPUSERCODE], cadena de departamento: [TAKETOPDEPARTMENT], por razones de seguridad, no puede ser utilizado incluyendo eliminar, actualizar, Gota, Insertar, declaración Alter)</value>
-  </data>
-  <data name="You2" xml:space="preserve">
-    <value>Tener</value>
-  </data>
-  <data name="HSE生产总结1" xml:space="preserve">
-    <value>Resumen HSE Producción</value>
-  </data>
-  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
-    <value>Formulario de solicitud de subcontrato de trabajo</value>
-  </data>
-  <data name="GuanLianHeTong1" xml:space="preserve">
-    <value>contrato de Asociación</value>
-  </data>
   <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
     <value>Total number of projects executed</value>
   </data>
@@ -27593,5 +27578,23 @@
   </data>
   <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
     <value>Annual payment of the project</value>
+  </data>
+  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
+    <value>Reglas de Dominio: Código del empleado: [TAKETOPUSERCODE], cadena de departamento: [TAKETOPDEPARTMENT], por razones de seguridad, no puede ser utilizado incluyendo eliminar, actualizar, Gota, Insertar, declaración Alter)</value>
+  </data>
+  <data name="You2" xml:space="preserve">
+    <value>Tener</value>
+  </data>
+  <data name="HSE生产总结1" xml:space="preserve">
+    <value>Resumen HSE Producción</value>
+  </data>
+  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
+    <value>Formulario de solicitud de subcontrato de trabajo</value>
+  </data>
+  <data name="GuanLianHeTong1" xml:space="preserve">
+    <value>contrato de Asociación</value>
+  </data>
+  <data name="UpdateingDatabase" xml:space="preserve">
+    <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
   </data>
 </root>

@@ -257,14 +257,13 @@
         <div class="layui-layer-title" style="background: #e7e7e8;" id="popwindow_title1">
             <asp:Label ID="Label27" runat="server" Text="UpdateDatabase"></asp:Label>
         </div>
-        <div id="popwindow_content1" class="layui-layer-content" style="overflow:hidden padding: 0px 5px 0px 5px;">
+        <div id="popwindow_content1" class="layui-layer-content" style="overflow: hidden padding: 0px 5px 0px 5px;">
             <div class="container">
-
                 <p>
                     <img src="Images/Processing.gif" alt="Loading,please wait..." />
                 </p>
                 <p>
-                            系统正在升级数据库，要花几分钟，请稍候！  
+                    <%=LanguageHandle.GetWord("UpdateingDatabase").ToString() %>
                 </p>
             </div>
             <iframe src="TakeTopSystemImportantOtherCodeRunPage.aspx" style="border: none;"></iframe>
@@ -286,8 +285,7 @@
         </div>
         <!--<div id="popwindow_footer" class="layui-layer-btn" style="border-top: 1px solid #ccc;">
     </div>-->
-        <span class="layui-layer-setwin"><a onclick="return popCloseNoPromt();" class="layui-layer-ico layui-layer-close layui-layer-close1 notTab"
-            href="javascript:;"></a></span>
+        <span class="layui-layer-setwin"></span>
     </div>
     <div class="layui-layer-shade" id="popwindow_shade" style="z-index: 9998; background-color: #000; opacity: 0.3; filter: alpha(opacity=30); display: none;">
     </div>

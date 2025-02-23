@@ -27540,6 +27540,42 @@
   <data name="JiaoFuJingDu" xml:space="preserve">
     <value>Ход доставки</value>
   </data>
+  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
+    <value>Total number of projects executed</value>
+  </data>
+  <data name="NianDuXingZeng" xml:space="preserve">
+    <value>New additions for the year</value>
+  </data>
+  <data name="NianDuWanCheng" xml:space="preserve">
+    <value>Annual completion</value>
+  </data>
+  <data name="NianDuYanWuXiangMuShu" xml:space="preserve">
+    <value>Number of severely delayed projects</value>
+  </data>
+  <data name="JingDuZhengChang" xml:space="preserve">
+    <value>On schedule</value>
+  </data>
+  <data name="QingDuYanWu" xml:space="preserve">
+    <value>Slight delay</value>
+  </data>
+  <data name="NianDuChengBenHeShuan" xml:space="preserve">
+    <value>Annual costing</value>
+  </data>
+  <data name="ChengBenChaoZiXiangMuShu" xml:space="preserve">
+    <value>Number of projects over budget</value>
+  </data>
+  <data name="NianDuXiangMuGongShiTouRu" xml:space="preserve">
+    <value>Annual project man-hour investment</value>
+  </data>
+  <data name="NianDuTeiBaoRenShu" xml:space="preserve">
+    <value>Annual number of registrants</value>
+  </data>
+  <data name="ZaiZhiXingRenWuZhongShu" xml:space="preserve">
+    <value>Total number of tasks in execution</value>
+  </data>
+  <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
+    <value>Annual payment of the project</value>
+  </data>
   <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
     <value>Правила домена: Код сотрудника: [TAKETOPUSERCODE], строка отдел: [TAKETOPDEPARTMENT], по соображениям безопасности, не могут быть использованы в том числе удаление, обновление, падения, Вставить, Альтер заявление)</value>
   </data>
@@ -27597,40 +27633,7 @@
   <data name="String25" xml:space="preserve">
     <value>Чжоу</value>
   </data>
-  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
-    <value>Total number of projects executed</value>
-  </data>
-  <data name="NianDuXingZeng" xml:space="preserve">
-    <value>New additions for the year</value>
-  </data>
-  <data name="NianDuWanCheng" xml:space="preserve">
-    <value>Annual completion</value>
-  </data>
-  <data name="NianDuYanWuXiangMuShu" xml:space="preserve">
-    <value>Number of severely delayed projects</value>
-  </data>
-  <data name="JingDuZhengChang" xml:space="preserve">
-    <value>On schedule</value>
-  </data>
-  <data name="QingDuYanWu" xml:space="preserve">
-    <value>Slight delay</value>
-  </data>
-  <data name="NianDuChengBenHeShuan" xml:space="preserve">
-    <value>Annual costing</value>
-  </data>
-  <data name="ChengBenChaoZiXiangMuShu" xml:space="preserve">
-    <value>Number of projects over budget</value>
-  </data>
-  <data name="NianDuXiangMuGongShiTouRu" xml:space="preserve">
-    <value>Annual project man-hour investment</value>
-  </data>
-  <data name="NianDuTeiBaoRenShu" xml:space="preserve">
-    <value>Annual number of registrants</value>
-  </data>
-  <data name="ZaiZhiXingRenWuZhongShu" xml:space="preserve">
-    <value>Total number of tasks in execution</value>
-  </data>
-  <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
-    <value>Annual payment of the project</value>
+  <data name="UpdateingDatabase" xml:space="preserve">
+    <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
   </data>
 </root>

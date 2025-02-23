@@ -147,20 +147,7 @@ public partial class _default : System.Web.UI.Page
             }
         }
     }
-
-    ////弹出窗口以升级数据库
-    //public void PopWindowToRunImportantOtherCode()
-    //{
-    //    int intUpdateColumnMark = GetUpdateColumnValueCodeRunmark();
-    //    int intUpdateModuleMark = GetUpdateModuleNameCodeRunMark();
-
-    //    if (intUpdateColumnMark == 0 || intUpdateModuleMark == 0)
-    //    {
-    //        // ClientScript.RegisterStartupScript(this.GetType(), "pop", "<script>popShow('popwindow','true');</script>");
-
-    //        Response.Redirect("TakeTopSystemImportantOtherCodeRunPage.aspx");
-    //    }
-    //}
+    
 
     protected void LB_Login_Click(object sender, EventArgs e)
     {

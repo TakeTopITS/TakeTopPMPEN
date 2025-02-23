@@ -27543,21 +27543,6 @@
   <data name="JiaoFuJingDu" xml:space="preserve">
     <value>Progression de la livraison</value>
   </data>
-  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
-    <value>Règles de domaine: code de l'employé: [TAKETOPUSERCODE], chaîne de service: [TAKETOPDEPARTMENT], pour des raisons de sécurité, ne peuvent pas être utilisés, y compris Supprimer, mise à jour, Drop, Insertion, ALTER)</value>
-  </data>
-  <data name="You2" xml:space="preserve">
-    <value>Avoir</value>
-  </data>
-  <data name="HSE生产总结1" xml:space="preserve">
-    <value>Résumé HSE production</value>
-  </data>
-  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
-    <value>Formulaire de demande de contrat de sous-traitance</value>
-  </data>
-  <data name="GuanLianHeTong1" xml:space="preserve">
-    <value>contrat de l'Association</value>
-  </data>
   <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
     <value>Total number of projects executed</value>
   </data>
@@ -27593,5 +27578,23 @@
   </data>
   <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
     <value>Annual payment of the project</value>
+  </data>
+  <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
+    <value>Règles de domaine: code de l'employé: [TAKETOPUSERCODE], chaîne de service: [TAKETOPDEPARTMENT], pour des raisons de sécurité, ne peuvent pas être utilisés, y compris Supprimer, mise à jour, Drop, Insertion, ALTER)</value>
+  </data>
+  <data name="You2" xml:space="preserve">
+    <value>Avoir</value>
+  </data>
+  <data name="HSE生产总结1" xml:space="preserve">
+    <value>Résumé HSE production</value>
+  </data>
+  <data name="LaoWuFenBaoShengQingBiao1" xml:space="preserve">
+    <value>Formulaire de demande de contrat de sous-traitance</value>
+  </data>
+  <data name="GuanLianHeTong1" xml:space="preserve">
+    <value>contrat de l'Association</value>
+  </data>
+  <data name="UpdateingDatabase" xml:space="preserve">
+    <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
   </data>
 </root>
