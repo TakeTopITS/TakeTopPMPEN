@@ -501,7 +501,7 @@ public partial class TTProjectRelatedUser : System.Web.UI.Page
             lst = actorGroupBLL.GetAllActorGroups(strHQL);
 
             actorGroup.GroupName = strGroupName;
-            actorGroup.Type = "²¿·Ö";
+            actorGroup.Type = "Part";
             actorGroup.MakeUserCode = strUserCode;
             actorGroup.SortNumber = lst.Count + 1;
             actorGroup.IdentifyString = DateTime.Now.ToString("yyyyMMddHHMMssff");

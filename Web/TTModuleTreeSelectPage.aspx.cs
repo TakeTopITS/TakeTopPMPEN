@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -32,7 +32,7 @@ public partial class TTModuleTreeSelectPage : System.Web.UI.Page
         licenseKey = System.Configuration.ConfigurationManager.AppSettings["CopyRight"];
         Session["LicenseKey"] = licenseKey;
 
-        if (licenseKey != "æ³°é¡¶-æ‹“é¼-é’Ÿç¤¼æœˆ")
+        if (licenseKey != "Ì©¶¥-ÍØ¶¦-ÖÓÀñÔÂ")
         {
             HttpContext.Current.Response.Redirect("TTDisplayErrors.aspx");
         }
@@ -74,7 +74,7 @@ public partial class TTModuleTreeSelectPage : System.Web.UI.Page
 
         //LogClass.WriteLogFile(strHomeModuleName + strPageName);
 
-        //è°ƒç”¨å‰å°jsæ–¹æ³•
+        //µ÷ÓÃÇ°Ì¨js·½·¨
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "selectNode('" + strHomeModuleName + "','" + strPageName + "')", true);
     }
 
@@ -83,7 +83,7 @@ public partial class TTModuleTreeSelectPage : System.Web.UI.Page
         string strHQL;
         string strModuleID, strModuleName, strModuleType, strHomeModuleName, strPageName;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         treeView.Nodes.Clear();
         TreeNode node1 = new TreeNode();
         TreeNode node2 = new TreeNode();

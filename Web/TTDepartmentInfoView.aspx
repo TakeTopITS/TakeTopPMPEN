@@ -67,7 +67,7 @@
                             <td style="width: 70%; height: 26px; text-align: left" class="formItemBgStyle">
                                 <asp:DropDownList ID="DL_Authority" runat="server" AutoPostBack="True" Enabled="False">
                                     <asp:ListItem Value="All" Text="<%$ Resources:lang,SuoYou%>"/>
-                                    <asp:ListItem Value="²¿·Ö" Text="<%$ Resources:lang,BuFen%>"/>
+                                    <asp:ListItem Value="Part" Text="<%$ Resources:lang,BuFen%>"/>
                                 </asp:DropDownList>
                             </td>
                         </tr>

@@ -8188,4 +8188,148 @@ UNION
 ALTER TABLE public.v_projectmember_workloadschedule
     OWNER TO postgres;</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3652</ID>
+    <SQLText>ALTER TABLE public.t_bmsupplierlink ALTER COLUMN gender SET data TYPE char(100) USING gender::char(10)</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3653</ID>
+    <SQLText>DO $$
+DECLARE
+    tbl_name TEXT;
+    col_name TEXT;
+    v_name TEXT;  -- 修改循环变量名
+    v_def TEXT;   -- 修改循环变量名
+BEGIN
+    -- 创建临时表存储视图信息
+    CREATE TEMP TABLE IF NOT EXISTS dropped_views (
+        view_name TEXT PRIMARY KEY,
+        view_definition TEXT  -- 修改列名
+    ) ON COMMIT DROP;
+
+    -- 遍历需要修改的列
+    FOR tbl_name, col_name IN
+        SELECT c.table_name, c.column_name
+        FROM information_schema.columns c
+        JOIN information_schema.tables t 
+          ON c.table_schema = t.table_schema AND c.table_name = t.table_name
+        WHERE c.column_name LIKE '%status%'
+          AND c.table_schema = 'public'
+          AND t.table_type = 'BASE TABLE'
+          AND c.table_name NOT IN ('pbcatvld', 'pbcatedt','t_memberlevel','t_triggertabletofrom','t_sendtask','t_sentrecord')
+          AND c.column_name NOT LIKE '%id%'
+    LOOP
+        -- 收集并删除依赖视图
+        FOR v_name, v_def IN
+            SELECT dep_view.relname, pg_get_viewdef(dep_view.oid)
+            FROM pg_depend
+            JOIN pg_rewrite ON pg_depend.objid = pg_rewrite.oid
+            JOIN pg_class dep_view ON pg_rewrite.ev_class = dep_view.oid
+            JOIN pg_class src_table ON pg_depend.refobjid = src_table.oid
+            JOIN pg_attribute ON pg_depend.refobjid = pg_attribute.attrelid
+                AND pg_depend.refobjsubid = pg_attribute.attnum
+            WHERE src_table.relname = tbl_name
+              AND pg_attribute.attname = col_name
+              AND dep_view.relnamespace = 'public'::regnamespace
+              AND dep_view.relkind = 'v'
+        LOOP
+            INSERT INTO dropped_views (view_name, view_definition)  -- 使用修改后的列名
+            VALUES (v_name, v_def)
+            ON CONFLICT (view_name) DO NOTHING;
+
+            EXECUTE format('DROP VIEW IF EXISTS %I CASCADE', v_name);
+        END LOOP;
+
+        -- 修改字段类型
+        BEGIN
+            EXECUTE format('ALTER TABLE %I ALTER COLUMN %I TYPE VARCHAR(200)', tbl_name, col_name);
+        EXCEPTION
+            WHEN others THEN
+                RAISE NOTICE '修改列 %.% 失败: %', tbl_name, col_name, SQLERRM;
+        END;
+    END LOOP;
+
+    -- 重新创建所有视图
+    FOR v_name, v_def IN
+        SELECT view_name, view_definition FROM dropped_views  -- 使用修改后的列名
+    LOOP
+        BEGIN
+            EXECUTE format('CREATE VIEW %I AS %s', v_name, v_def);
+        EXCEPTION
+            WHEN others THEN
+                RAISE NOTICE '重建视图 % 失败: %', v_name, SQLERRM;
+        END;
+    END LOOP;
+END $$;</SQLText>
+  </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3654</ID>
+    <SQLText>DO $$
+DECLARE
+    tbl_name TEXT;
+    col_name TEXT;
+    v_name TEXT;  -- 修改循环变量名
+    v_def TEXT;   -- 修改循环变量名
+BEGIN
+    -- 创建临时表存储视图信息
+    CREATE TEMP TABLE IF NOT EXISTS dropped_views (
+        view_name TEXT PRIMARY KEY,
+        view_definition TEXT  -- 修改列名
+    ) ON COMMIT DROP;
+
+    -- 遍历需要修改的列
+    FOR tbl_name, col_name IN
+        SELECT c.table_name, c.column_name
+        FROM information_schema.columns c
+        JOIN information_schema.tables t 
+          ON c.table_schema = t.table_schema AND c.table_name = t.table_name
+        WHERE c.column_name LIKE '%type%'
+          AND c.table_schema = 'public'
+          AND t.table_type = 'BASE TABLE'
+        AND c.table_name NOT IN ('pbcatvld', 'pbcatedt')
+AND c.table_name NOT Like '%rcj%' AND C.column_name not like '%id%' and C.column_name &lt;&gt; 'warrantyperiod'
+    LOOP
+        -- 收集并删除依赖视图
+        FOR v_name, v_def IN
+            SELECT dep_view.relname, pg_get_viewdef(dep_view.oid)
+            FROM pg_depend
+            JOIN pg_rewrite ON pg_depend.objid = pg_rewrite.oid
+            JOIN pg_class dep_view ON pg_rewrite.ev_class = dep_view.oid
+            JOIN pg_class src_table ON pg_depend.refobjid = src_table.oid
+            JOIN pg_attribute ON pg_depend.refobjid = pg_attribute.attrelid
+                AND pg_depend.refobjsubid = pg_attribute.attnum
+            WHERE src_table.relname = tbl_name
+              AND pg_attribute.attname = col_name
+              AND dep_view.relnamespace = 'public'::regnamespace
+              AND dep_view.relkind = 'v'
+        LOOP
+            INSERT INTO dropped_views (view_name, view_definition)  -- 使用修改后的列名
+            VALUES (v_name, v_def)
+            ON CONFLICT (view_name) DO NOTHING;
+
+            EXECUTE format('DROP VIEW IF EXISTS %I CASCADE', v_name);
+        END LOOP;
+
+        -- 修改字段类型
+        BEGIN
+            EXECUTE format('ALTER TABLE %I ALTER COLUMN %I TYPE VARCHAR(200)', tbl_name, col_name);
+        EXCEPTION
+            WHEN others THEN
+                RAISE NOTICE '修改列 %.% 失败: %', tbl_name, col_name, SQLERRM;
+        END;
+    END LOOP;
+
+    -- 重新创建所有视图
+    FOR v_name, v_def IN
+        SELECT view_name, view_definition FROM dropped_views  -- 使用修改后的列名
+    LOOP
+        BEGIN
+            EXECUTE format('CREATE VIEW %I AS %s', v_name, v_def);
+        EXCEPTION
+            WHEN others THEN
+                RAISE NOTICE '重建视图 % 失败: %', v_name, SQLERRM;
+        END;
+    END LOOP;
+END $$;</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>

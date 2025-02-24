@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" Async="true" CodeFile="TakeTopPersonalSpaceSAAS.aspx.cs" Inherits="TakeTopPersonalSpaceSAAS" %>
+<%@ Page Language="C#" AutoEventWireup="true" Async="true" CodeFile="TakeTopPersonalSpaceSAAS.aspx.cs" Inherits="TakeTopPersonalSpaceSAAS" %>
 
 <%@ OutputCache Duration="2678400" VaryByParam="*" %>
 
@@ -142,7 +142,7 @@
 
         #div_username {
             /*  display: flex;*/
-            align-items: center; /* å‚ç›´å±…ä¸­ */
+            align-items: center; /* ´¹Ö±¾ÓÖĞ */
             color: white;
             font-size: 12px;
         }
@@ -151,7 +151,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%); /* è®©å›¾æ ‡ç›¸å¯¹äºå…¶è‡ªèº«ä¸­å¿ƒç‚¹å®šä½ */
+            transform: translate(-50%, -50%); /* ÈÃÍ¼±êÏà¶ÔÓÚÆä×ÔÉíÖĞĞÄµã¶¨Î» */
         }
     </style>
     <script type="text/javascript" src="css/tab.js"></script>
@@ -210,21 +210,21 @@
 
         }
 
-        //è®¾ç½®å·¦è¾¹æ å…ƒç´ çš„å€¼
+        //ÉèÖÃ×ó±ßÀ¸ÔªËØµÄÖµ
         function setExtendValue(isFalse) {
 
             top.frames[0].frames[2].parent.frames["leftMiddleFrame"].setExtendValue(isFalse);
 
         }
 
-        //å¼¹å‡ºæ¶ˆæ¯æ¡†
+        //µ¯³öÏûÏ¢¿ò
         function clickPopMsgWindow() {
 
             top.frames[0].frames[2].parent.frames["rightTopFrame"].clickPopMsgWindow();
         }
 
 
-        //è®¾ç½®å±å¹•çŠ¶æ€
+        //ÉèÖÃÆÁÄ»×´Ì¬
         var varScreenFull = false;
         function setScreenStatus() {
 
@@ -241,7 +241,7 @@
 
         }
 
-        //å…¨å±
+        //È«ÆÁ
         function fullScreen() {
 
             var el = top.document.documentElement;
@@ -252,7 +252,7 @@
                 rfs.call(el);
             }
             else if (typeof window.ActiveXObject !== "undefined") {
-                //for IEï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½Ë°ï¿½ï¿½Â¼ï¿½ï¿½Ìµï¿½F11ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½
+                //for IE?????????????????????????F11???????????
                 var wscript = new ActiveXObject("WScript.Shell");
                 if (wscript != null) {
                     wscript.SendKeys("{F11}");
@@ -263,7 +263,7 @@
 
         }
 
-        //é€€å‡ºå…¨å±
+        //ÍË³öÈ«ÆÁ
         function exitScreen() {
 
             var el = document;
@@ -274,7 +274,7 @@
                 cfs.call(el);
             }
             else if (typeof window.ActiveXObject !== "undefined") {
-                //for IEï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½fullScreenï¿½ï¿½Í¬ï¿½ï¿½Ä£ï¿½â°´ï¿½ï¿½F11ï¿½ï¿½ï¿½Ë³ï¿½È«ï¿½ï¿½
+                //for IE???????fullScreen??????????F11????????
                 var wscript = new ActiveXObject("WScript.Shell");
                 if (wscript != null) {
                     wscript.SendKeys("{F11}");
@@ -388,10 +388,10 @@
 
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tr>
-                                <td align="left" style="padding-top: 40px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;è¯·ç”¨å¾®ä¿¡æ‰«æä¸‹é¢äºŒç»´ç å…³æ³¨ï¼šé¡¹ç›®å® å…¬ä¼—å·ï¼Œå¹¶åœ¨å…¬ä¼—å·ä¸­ç‚¹å‡»ï¼š ç™»å½•ä½¿ç”¨  èœå•ï¼Œç™»å½•ã€é¡¹ç›®å®ã€‘çš„å¾®ä¿¡ç«¯APPï¼Œç™»å½•åå¯ä»¥åœ¨æ‰‹æœºä¸­ä½¿ç”¨æ­¤APPå’Œæ¥å—å¹³å°å„ç§æ¶ˆæ¯ï¼
+                                <td align="left" style="padding-top: 40px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ÇëÓÃÎ¢ĞÅÉ¨ÃèÏÂÃæ¶şÎ¬Âë¹Ø×¢£ºÏîÄ¿±¦ ¹«ÖÚºÅ£¬²¢ÔÚ¹«ÖÚºÅÖĞµã»÷£º µÇÂ¼Ê¹ÓÃ  ²Ëµ¥£¬µÇÂ¼¡¾ÏîÄ¿±¦¡¿µÄÎ¢ĞÅ¶ËAPP£¬µÇÂ¼ºó¿ÉÒÔÔÚÊÖ»úÖĞÊ¹ÓÃ´ËAPPºÍ½ÓÊÜÆ½Ì¨¸÷ÖÖÏûÏ¢£¡
                                     <br />
                                     <br />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ç™»å½•APPåï¼Œæ­¤æç¤ºä¿¡æ¯å°†ä¸ä¼šå†æ˜¾ç¤ºï¼
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;µÇÂ¼APPºó£¬´ËÌáÊ¾ĞÅÏ¢½«²»»áÔÙÏÔÊ¾£¡
                                 </td>
                             </tr>
                             <tr>

@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" Async="true" CodeFile="TakeTopPersonalSpaceForOuterUser.aspx.cs" Inherits="TakeTopPersonalSpaceForOuterUser" %>
+<%@ Page Language="C#" AutoEventWireup="true" Async="true" CodeFile="TakeTopPersonalSpaceForOuterUser.aspx.cs" Inherits="TakeTopPersonalSpaceForOuterUser" %>
 
 <%@ OutputCache Duration="2678400" VaryByParam="*" %>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
@@ -137,7 +137,7 @@
 
         #div_username {
             /*  display: flex;*/
-            align-items: center; /* å‚ç›´å±…ä¸­ */
+            align-items: center; /* ´¹Ö±¾ÓÖĞ */
             color: white;
             font-size: 12px;
         }
@@ -146,7 +146,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%); /* è®©å›¾æ ‡ç›¸å¯¹äºå…¶è‡ªèº«ä¸­å¿ƒç‚¹å®šä½ */
+            transform: translate(-50%, -50%); /* ÈÃÍ¼±êÏà¶ÔÓÚÆä×ÔÉíÖĞĞÄµã¶¨Î» */
         }
 
         .TextColor {
@@ -211,21 +211,21 @@
 
         }
 
-        //è®¾ç½®å·¦è¾¹æ å…ƒç´ çš„å€¼
+        //ÉèÖÃ×ó±ßÀ¸ÔªËØµÄÖµ
         function setExtendValue(isFalse) {
 
             top.frames[0].frames[2].parent.frames["leftMiddleFrame"].setExtendValue(isFalse);
 
         }
 
-        //å¼¹å‡ºæ¶ˆæ¯æ¡†
+        //µ¯³öÏûÏ¢¿ò
         function clickPopMsgWindow() {
 
             top.frames[0].frames[2].parent.frames["rightTopFrame"].clickPopMsgWindow();
         }
 
 
-        //è®¾ç½®å±å¹•çŠ¶æ€
+        //ÉèÖÃÆÁÄ»×´Ì¬
         var varScreenFull = false;
         function setScreenStatus() {
 
@@ -242,7 +242,7 @@
 
         }
 
-        //å…¨å±
+        //È«ÆÁ
         function fullScreen() {
 
             var el = top.document.documentElement;
@@ -253,7 +253,7 @@
                 rfs.call(el);
             }
             else if (typeof window.ActiveXObject !== "undefined") {
-                //for IEï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½Ë°ï¿½ï¿½Â¼ï¿½ï¿½Ìµï¿½F11ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½
+                //for IE?????????????????????????F11???????????
                 var wscript = new ActiveXObject("WScript.Shell");
                 if (wscript != null) {
                     wscript.SendKeys("{F11}");
@@ -264,7 +264,7 @@
 
         }
 
-        //é€€å‡ºå…¨å±
+        //ÍË³öÈ«ÆÁ
         function exitScreen() {
 
             var el = document;
@@ -275,7 +275,7 @@
                 cfs.call(el);
             }
             else if (typeof window.ActiveXObject !== "undefined") {
-                //for IEï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½fullScreenï¿½ï¿½Í¬ï¿½ï¿½Ä£ï¿½â°´ï¿½ï¿½F11ï¿½ï¿½ï¿½Ë³ï¿½È«ï¿½ï¿½
+                //for IE???????fullScreen??????????F11????????
                 var wscript = new ActiveXObject("WScript.Shell");
                 if (wscript != null) {
                     wscript.SendKeys("{F11}");

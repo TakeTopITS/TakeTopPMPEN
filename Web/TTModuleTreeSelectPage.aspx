@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTModuleTreeSelectPage.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTModuleTreeSelectPage.aspx.cs"
     Inherits="TTModuleTreeSelectPage" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/allAHandler.js"></script>
     <script type="text/javascript" language="javascript">
-        //ѡ��ڵ�
+        //?????
         function selectNode(nodeName,pageName) {
 
             parent.selectNode(nodeName,pageName);

@@ -959,7 +959,7 @@ public partial class TTSuperWorkFlowTemplate : System.Web.UI.Page
         node2.Expanded = false;
         node0.ChildNodes.Add(node2);
 
-        strHQL = "from ActorGroup as actorGroup where actorGroup.Type = '²¿·Ö' ";
+        strHQL = "from ActorGroup as actorGroup where actorGroup.Type = 'Part' ";
         strHQL += " Order by actorGroup.IdentifyString DESC";
         lst = actorGroupBLL.GetAllActorGroups(strHQL);
 

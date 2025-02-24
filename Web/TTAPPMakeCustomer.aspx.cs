@@ -63,8 +63,8 @@ public partial class TTAPPMakeCustomer : System.Web.UI.Page
 
             LoadCustomerList(strRelatedType, strRelatedID);
 
-            strHQL = "Select GroupName From T_ActorGroup Where Type <>'部分' and GroupName not in ('个人','部门','公司','集团','All')";
-            strHQL += " and (BelongDepartCode in " + strDepartString + " Or Type = '超级'";
+            strHQL = "Select GroupName From T_ActorGroup Where Type <>'Part' and GroupName not in ('个人','部门','公司','集团','All')";
+            strHQL += " and (BelongDepartCode in " + strDepartString + " Or Type = 'Super'";
             strHQL += " Or MakeUserCode = " + "'" + strUserCode + "'" + ")";
             strHQL += " and LangCode = " + "'" + strLangCode + "'";
             strHQL += " Order by SortNumber ASC";

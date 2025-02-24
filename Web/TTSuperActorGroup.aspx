@@ -129,9 +129,9 @@
                                                             £º </td>
                                                         <td>
                                                             <asp:DropDownList ID="DL_Type" runat="server">
-                                                                <asp:ListItem Text="<%$ Resources:lang,ChaoJi%>" Value="³¬¼¶" />
+                                                                <asp:ListItem Text="<%$ Resources:lang,ChaoJi%>" Value="Super" />
                                                                 <asp:ListItem Text="<%$ Resources:lang,SuoYou%>" Value="All" />
-                                                                <asp:ListItem Text="<%$ Resources:lang,BuFen%>" Value="²¿·Ö" />
+                                                                <asp:ListItem Text="<%$ Resources:lang,BuFen%>" Value="Part" />
                                                             </asp:DropDownList>
                                                         </td>
                                                         <td>

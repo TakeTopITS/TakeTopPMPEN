@@ -154,7 +154,7 @@
                                                         <td style="width: 70%; height: 26px; text-align: left" class="formItemBgStyle">
                                                             <asp:DropDownList ID="DL_Authority" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DL_Authority_SelectedIndexChanged">
                                                                 <asp:ListItem Value="All" Text="<%$ Resources:lang,SuoYou%>" />
-                                                                <asp:ListItem Value="部分" Text="<%$ Resources:lang,BuFen%>" />
+                                                                <asp:ListItem Value="Part" Text="<%$ Resources:lang,BuFen%>" />
                                                             </asp:DropDownList>
                                                             <span style="font-size: x-small; color: Red;">（<asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,XuanZeKeGengGaiQuanXian%>"></asp:Label>）</span>
                                                         </td>
@@ -1070,7 +1070,7 @@
                                     <td style="width: 70%; height: 26px; text-align: left" class="formItemBgStyle">
                                         <asp:DropDownList ID="DL_AuthorityNew" runat="server">
                                             <asp:ListItem Value="All" Text="<%$ Resources:lang,SuoYou%>" />
-                                            <asp:ListItem Value="部分" Text="<%$ Resources:lang,BuFen%>" />
+                                            <asp:ListItem Value="Part" Text="<%$ Resources:lang,BuFen%>" />
                                         </asp:DropDownList>
                                     </td>
                                 </tr>

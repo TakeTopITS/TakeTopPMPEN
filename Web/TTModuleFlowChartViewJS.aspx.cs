@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Resources;
 using System.Drawing;
 using System.Data;
@@ -77,7 +77,7 @@ public partial class TTModuleFlowChartViewJS : System.Web.UI.Page
 
                 if (strWFDefinition != "")
                 {
-                    //å˜æ›´ä¸ºå½“å‰ç¯å¢ƒè¯­è¨€å’Œå½“å‰ç”¨æˆ·ä¸å¯ç”¨çš„æ¨¡ç»„çš„é¢œè‰²
+                    //±ä¸üÎªµ±Ç°»·¾³ÓïÑÔºÍµ±Ç°ÓÃ»§²»¿ÉÓÃµÄÄ£×éµÄÑÕÉ«
                     string strjObjectNodePropsAttr = "";
                     JObject _jObject = JObject.Parse(strWFDefinition);
                     foreach (JProperty item in _jObject.Children())
@@ -188,7 +188,7 @@ public partial class TTModuleFlowChartViewJS : System.Web.UI.Page
         }
     }
 
-    //å–å¾—å½“å‰æ¨¡ç»„åç§°
+    //È¡µÃµ±Ç°Ä£×éÃû³Æ
     protected string getSystemModuleDefinition(string strSystemModuleID)
     {
         string strHQL;
@@ -205,7 +205,7 @@ public partial class TTModuleFlowChartViewJS : System.Web.UI.Page
         }
     }
 
-    //å–å¾—å½“å‰æ¨¡ç»„åç§°
+    //È¡µÃµ±Ç°Ä£×éÃû³Æ
     protected string getTrueModuleNameByURL(string strFromHomeModuleName, string strModuleURL, string strLangCode)
     {
         string strHQL;
@@ -222,7 +222,7 @@ public partial class TTModuleFlowChartViewJS : System.Web.UI.Page
         }
     }
 
-    //å–å¾—å½“å‰æ¨¡å—å¯¹å½“å‰ç”¨æˆ·æ˜¯å¦å¯ç”¨
+    //È¡µÃµ±Ç°Ä£¿é¶Ôµ±Ç°ÓÃ»§ÊÇ·ñ¿ÉÓÃ
     protected string getModuleUserVisibleByURL(string strUserCode, string strFromModuleName, string strModuleURL, string strLangCode)
     {
         string strHQL;
@@ -306,7 +306,7 @@ public partial class TTModuleFlowChartViewJS : System.Web.UI.Page
         }
     }
 
-    //å–å¾—å½“å‰è¯­è¨€æ¨¡ç»„åç§°
+    //È¡µÃµ±Ç°ÓïÑÔÄ£×éÃû³Æ
     protected string getHomeModuleNameByURL(string strFromModuleName, string strModuleURL, string strLangCode, string strUserType)
     {
         string strHQL;

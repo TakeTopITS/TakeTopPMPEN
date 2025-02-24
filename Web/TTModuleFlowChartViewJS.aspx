@@ -1,4 +1,4 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTModuleFlowChartViewJS.aspx.cs" Inherits="TTModuleFlowChartViewJS" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTModuleFlowChartViewJS.aspx.cs" Inherits="TTModuleFlowChartViewJS" %>
 
 <%--<%@ OutputCache Duration="2678400" VaryByParam="*" %>--%>
 
@@ -160,7 +160,7 @@
 
         #div_username {
             /*  display: flex;*/
-            align-items: center; /* å‚ç›´å±…ä¸­ */
+            align-items: center; /* ´¹Ö±¾ÓÖĞ */
             color: white;
             font-size: 12px;
         }
@@ -169,7 +169,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%); /* è®©å›¾æ ‡ç›¸å¯¹äºå…¶è‡ªèº«ä¸­å¿ƒç‚¹å®šä½ */
+            transform: translate(-50%, -50%); /* ÈÃÍ¼±êÏà¶ÔÓÚÆä×ÔÉíÖĞĞÄµã¶¨Î» */
         }
 
         /*#OboveForm {
@@ -192,7 +192,7 @@
 
         });
 
-        //å¼¹å‡ºæ¶ˆæ¯æ¡†
+        //µ¯³öÏûÏ¢¿ò
         function clickPopMsgWindow() {
 
             top.frames[0].frames[2].parent.frames["rightTopFrame"].clickPopMsgWindow();
@@ -227,10 +227,10 @@
         function resizeSvg(varSvgStatus) {
 
             var iframe = document.getElementById('_WFDesignerFrame');
-            // è·å–iframeçš„documentå¯¹è±¡
+            // »ñÈ¡iframeµÄdocument¶ÔÏó
             var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
 
-            // ä»iframeä¸­è·å–å…ƒç´ 
+            // ´ÓiframeÖĞ»ñÈ¡ÔªËØ
             var svgs = iframeDoc.getElementsByTagName("svg");
             for (i = 0; i < svgs.length; i++) {
 
@@ -239,22 +239,22 @@
 
                 var maxX = findMaxXOfChildRects(svgs[i]);
 
-                //// å¦‚æœä½ æƒ³è·å–æ‰€æœ‰rectå­å…ƒç´ ä¸­çš„ç¬¬ä¸€ä¸ª
+                //// Èç¹ûÄãÏë»ñÈ¡ËùÓĞrect×ÓÔªËØÖĞµÄµÚÒ»¸ö
                 //var allRects = svgs[i].getElementsByTagName('rect');
                 //var firstRect = allRects[0];
                 //var minX = allRects[0].getAttribute('x');
                
                 svgs[i].style.width = (maxX + 216) + "px";
 
-                // å‡è®¾ä½ çš„iframeæœ‰ä¸€ä¸ªidä¸º"myIframe"
+                // ¼ÙÉèÄãµÄiframeÓĞÒ»¸öidÎª"myIframe"
            
             }
         }
 
-        //å–å¾—rectçš„æœ€å¤§xå€¼
+        //È¡µÃrectµÄ×î´óxÖµ
         function findMaxXOfChildRects(parentElement) {
             let maxX = 0;
-            const childElements = parentElement.querySelectorAll('*'); // é€‰æ‹©æ‰€æœ‰å­å…ƒç´ 
+            const childElements = parentElement.querySelectorAll('*'); // Ñ¡ÔñËùÓĞ×ÓÔªËØ
             childElements.forEach(child => {
                 const rect = child.getBoundingClientRect();
                 if (rect.x > maxX) {
@@ -268,15 +268,15 @@
             var doc = iframe.contentDocument || iframe.contentWindow.document;
             var body = doc.body;
 
-            // ç­‰å¾…iframeåŠ è½½å®Œæˆ
+            // µÈ´ıiframe¼ÓÔØÍê³É
             if (body.scrollHeight > 0) {
                 var centerHeight = body.scrollHeight / 2;
                 var centerWidth = body.scrollWidth / 2;
 
-                // è®¾ç½®å‚ç›´æ»šåŠ¨æ¡
+                // ÉèÖÃ´¹Ö±¹ö¶¯Ìõ
                 iframe.scrollTop = centerHeight - iframe.offsetHeight / 2;
 
-                // è®¾ç½®æ°´å¹³æ»šåŠ¨æ¡
+                // ÉèÖÃË®Æ½¹ö¶¯Ìõ
                 iframe.scrollLeft = centerWidth - iframe.offsetWidth / 2;
             }
            
@@ -310,8 +310,8 @@
                             <asp:TextBox ID="TB_WFChartString3" runat="server" Style="visibility: hidden"></asp:TextBox>
                             <asp:TextBox ID="TB_WFChartString4" runat="server" Style="visibility: hidden"></asp:TextBox>
 
-                            <%-- <asp:Button ID="BT_SaveWFDefinition" runat="server" CssClass="inpuLong" Text="--&gt;ä¿å­˜å·¥ä½œæµæ¨¡æ¿å®šä¹‰" OnClick="BT_SaveWFDefinition_Click"  Style="visibility: hidden"/>--%>
-                            <%--<asp:Button ID="BT_SaveWFChart" runat="server" CssClass="inpuLong" Text="--&gt;ä¿å­˜æµç¨‹å›¾" OnClick="BT_SaveWFChart_Click" Style="visibility: hidden;" />--%>
+                            <%-- <asp:Button ID="BT_SaveWFDefinition" runat="server" CssClass="inpuLong" Text="--&gt;±£´æ¹¤×÷Á÷Ä£°å¶¨Òå" OnClick="BT_SaveWFDefinition_Click"  Style="visibility: hidden"/>--%>
+                            <%--<asp:Button ID="BT_SaveWFChart" runat="server" CssClass="inpuLong" Text="--&gt;±£´æÁ÷³ÌÍ¼" OnClick="BT_SaveWFChart_Click" Style="visibility: hidden;" />--%>
                         </td>
                     </tr>
                 </table>
@@ -323,6 +323,8 @@
 <script type="text/javascript" language="javascript">var cssDirectory = '<%=Session["CssDirectory"] %>'; var oLink = document.getElementById('mainCss'); oLink.href = 'css/' + cssDirectory + '/' + 'bluelightmain.css';</script>
 </html>
 
+<%--***--%>
+<%--***--%>
 <%--***--%>
 <%--***--%>
 <%--***--%>

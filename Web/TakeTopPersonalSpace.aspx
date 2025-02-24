@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" Async="true" CodeFile="TakeTopPersonalSpace.aspx.cs" Inherits="TakeTopPersonalSpace" %>
+<%@ Page Language="C#" AutoEventWireup="true" Async="true" CodeFile="TakeTopPersonalSpace.aspx.cs" Inherits="TakeTopPersonalSpace" %>
 
 <%@ OutputCache Duration="2678400" VaryByParam="*" %>
 
@@ -142,7 +142,7 @@
 
         #div_username {
             /*  display: flex;*/
-            align-items: center; /* ��ֱ���� */
+            align-items: center; /* ??????? */
             color: white;
             font-size: 12px;
         }
@@ -151,7 +151,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%); /* ��ͼ����������������ĵ㶨λ */
+            transform: translate(-50%, -50%); /* ?????????????????????�� */
         }
 
         .TextColor {
@@ -215,21 +215,21 @@
 
         }
 
-        //���������Ԫ�ص�ֵ
+        //??????????????
         function setExtendValue(isFalse) {
 
             top.frames[0].frames[2].parent.frames["leftMiddleFrame"].setExtendValue(isFalse);
 
         }
 
-        //������Ϣ��
+        //?????????
         function clickPopMsgWindow() {
 
             top.frames[0].frames[2].parent.frames["rightTopFrame"].clickPopMsgWindow();
         }
 
 
-        //������Ļ״̬
+        //?????????
         var varScreenFull = false;
         function setScreenStatus() {
 
@@ -245,7 +245,7 @@
             }
         }
 
-        //ȫ��
+        //???
         function fullScreen() {
 
             var el = top.document.documentElement;
@@ -267,7 +267,7 @@
 
         }
 
-        //�˳�ȫ��
+        //??????
         function exitScreen() {
 
             var el = document;

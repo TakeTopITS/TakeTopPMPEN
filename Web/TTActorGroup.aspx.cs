@@ -611,8 +611,8 @@ public partial class TTActorGroup : System.Web.UI.Page
         strDepartString = LB_DepartString.Text.Trim();
 
         ActorGroupBLL actorGroupBLL = new ActorGroupBLL();
-        strHQL = "Select GroupName From T_ActorGroup Where Type <>'部分'";
-        strHQL += " and (BelongDepartCode in " + strDepartString + " Or Type = '超级'";
+        strHQL = "Select GroupName From T_ActorGroup Where Type <>'Part'";
+        strHQL += " and (BelongDepartCode in " + strDepartString + " Or Type = 'Super'";
         strHQL += " Or MakeUserCode = " + "'" + strUserCode + "'" + ")";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
         strHQL += " Order by SortNumber ASC";
@@ -625,7 +625,7 @@ public partial class TTActorGroup : System.Web.UI.Page
     {
         string strHQL;
 
-        if (strGroupType != "超级")
+        if (strGroupType != "Super")
         {
             strHQL = "Select * From T_ActorGroupDetail Where GroupName  = " + "'" + strGroupName + "'";
         }

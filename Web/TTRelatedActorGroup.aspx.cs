@@ -171,7 +171,7 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
         strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
         strDepartName = ShareClass.GetDepartName(strDepartCode);
 
-        strType = "²¿·Ö";
+        strType = "Part";
         strRelatedID = LB_RelatedID.Text.Trim();
 
         if (strGroupName != "")

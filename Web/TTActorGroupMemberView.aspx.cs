@@ -54,7 +54,7 @@ public partial class TTActorGroupMemberView : System.Web.UI.Page
         string strHQL;
 
 
-        if (strGroupType != "³¬¼¶")
+        if (strGroupType != "Super")
         {
             strHQL = "Select * From T_ActorGroupDetail Where GroupName  = " + "'" + strGroupName + "'";
         }

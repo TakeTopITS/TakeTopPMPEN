@@ -141,13 +141,14 @@ public partial class _default : System.Web.UI.Page
                     LogClass.WriteLogFile("Error page: " + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
                 }
 
-
-                LB_UpdateColumnMark.Text = GetUpdateColumnValueCodeRunmark().ToString();
-                LB_UpdateModuleMark.Text = GetUpdateModuleNameCodeRunMark().ToString();
+                //运行更新字段值代码
+                DatabaseUpdateHandle.RunUpdateColumnValueCode();
             }
         }
     }
-    
+
+
+
 
     protected void LB_Login_Click(object sender, EventArgs e)
     {
@@ -155,7 +156,6 @@ public partial class _default : System.Web.UI.Page
         string strUserType, strMDIStyle, strMDIPageName, strMDIMobilePageName, strThirdPartPageNme, strThirdPartMobilePageName;
         string strVerificationCode, strSMSVerification;
         string strUserHostAddress, strAllowDevice;
-       
 
         string strHQL;
 
@@ -173,6 +173,9 @@ public partial class _default : System.Web.UI.Page
             ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZZHHYFFZHDLSB + "');</script>");
             return;
         }
+
+        //运行模组名称英文化代码
+        DatabaseUpdateHandle.RunUpdateModuleNameCode();
 
         strSMSVerification = System.Configuration.ConfigurationManager.AppSettings["SMSVerification"].Trim().ToUpper();
         strVerificationCode = System.Configuration.ConfigurationManager.AppSettings["VerificationCode"].Trim().ToUpper();
@@ -290,7 +293,7 @@ public partial class _default : System.Web.UI.Page
                 //    }
                 //}
 
-              
+
 
                 try
                 {
@@ -395,7 +398,7 @@ public partial class _default : System.Web.UI.Page
                     Session["SystemVersionType"] = "SAAS";
                 }
 
-               
+
 
                 try
                 {
@@ -649,45 +652,4 @@ public partial class _default : System.Web.UI.Page
             return 0;
         }
     }
-
-   
-
-    //取更新字段值额外代码运行标记
-    public static int GetUpdateColumnValueCodeRunmark()
-    {
-        string strHQL;
-        int intMark = 0;
-        strHQL = "Select UpdateColumnValueCodeRunmark From T_OtherCodeRunMark";
-        DataSet dataSet = ShareClass.GetDataSetFromSql(strHQL, "T_OtherCodeRunMark");
-        if (dataSet.Tables[0].Rows.Count > 0)
-        {
-            intMark = Convert.ToInt32(dataSet.Tables[0].Rows[0]["updatecolumnvaluecoderunmark"].ToString());
-        }
-        else
-        {
-            intMark = 0;
-        }
-
-        return intMark;
-    }
-
-    //取更新模组栏值额外代码运行标记
-    public static int GetUpdateModuleNameCodeRunMark()
-    {
-        string strHQL;
-        int intMark = 0;
-        strHQL = "Select UpdateModuleNameCodeRunMark From T_OtherCodeRunMark";
-        DataSet dataSet = ShareClass.GetDataSetFromSql(strHQL, "T_OtherCodeRunMark");
-        if (dataSet.Tables[0].Rows.Count > 0)
-        {
-            intMark = Convert.ToInt32(dataSet.Tables[0].Rows[0]["UpdateModuleNameCodeRunMark"].ToString());
-        }
-        else
-        {
-            intMark = 0;
-        }
-
-        return intMark;
-    }
-
 }

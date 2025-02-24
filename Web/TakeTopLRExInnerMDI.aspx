@@ -33,7 +33,7 @@
     <frameset rows="45,*" name="leftFrame" id="leftFrame" frameborder="no" border="0" framespacing="0">
         <frame src='TakeTopLRTop.aspx?UserCode=<%=strUserCode%>&Flag=<%=Session["SkinFlag"].ToString()%>' id="leftTopFrameID" name="lefTopFrame" scrolling="no" noresize />
         <frame src='TakeTopLRExLeft.aspx?UserCode=<%=strUserCode%>&Flag=<%=Session["SkinFlag"].ToString()%>' id="leftMiddleFrameID" name="leftMiddleFrame" scrolling="no" noresize />
-        <frame src='TakeTopSystemOtherCodeRunPage.aspx?UserCode=<%=strUserCode%>&Flag=<%=Session["SkinFlag"].ToString()%>' id="leftUpdateFrameID" name="leftUpdateFrame" scrolling="no" noresize />
+        <frame src='Outer/TakeTopSystemOtherCodeRunPage.aspx?UserCode=<%=strUserCode%>&Flag=<%=Session["SkinFlag"].ToString()%>' id="leftUpdateFrameID" name="leftUpdateFrame" scrolling="no" noresize />
     </frameset>
 
     <frameset rows="0,*" name="rightFrame" id="rightFrame" frameborder="no" border="0" framespacing="0">

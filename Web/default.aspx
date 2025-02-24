@@ -99,10 +99,10 @@
         }
 
         .container {
-            height: 150px; /* 容器高度为视口高度 */
+            height: 150px; 
             display: flex;
-            align-items: center; /* 垂直居中 */
-            justify-content: center; /* 水平居中 */
+            align-items: center; 
+            justify-content: center; 
             color: red;
         }
     </style>
@@ -127,7 +127,6 @@
             this.document.getElementById["logoImg"].src = "ImagesSkin/TakeTopXMB.jpg"
         }
 
-        //显示弹窗 id div的id rememberScroll true 记住滚动条位置  false 不记住滚动条位置 childId 子div的id
         function popShow(id, rememberScroll, childId) {
             nowId = id;
             $("#" + id).show();
@@ -162,7 +161,6 @@
         }
 
 
-        //打开数据库升级窗口
         function popUpdateWindow() {
 
             var intUpdateColumnMark = parseInt('<%=LB_UpdateColumnMark.Text %>');
@@ -191,7 +189,7 @@
                     </div>-->
                     <div class="loginleft">
                         <div class="lfbox">
-                            <!-- <p class="lflogo">̩���ض�</p> -->
+                            <!-- <p class="lflogo">??????</p> -->
                             <p>
                                 <asp:Label ID="LB_SystemName" runat="server"></asp:Label>
                             </p>
@@ -227,7 +225,7 @@
                             </p>
                             <p>
                                 <asp:Button ID="BT_Login" runat="server" CssClass="btn" Text="<%$ Resources:lang,Login%>"
-                                    OnClick="LB_Login_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';popUpdateWindow();" />
+                                    OnClick="LB_Login_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';" />
                             </p>
                             <center>
 
@@ -267,7 +265,7 @@
                     <%=LanguageHandle.GetWord("UpdateingDatabase").ToString() %>
                 </p>
             </div>
-            <iframe src="TakeTopSystemImportantOtherCodeRunPage.aspx" style="border: none;"></iframe>
+            <iframe src="Outer/TakeTopSystemImportantOtherCodeRunPage.aspx" style="border: none;"></iframe>
 
             <%--<iframe src="TTUserPWDFindSAAS.aspx" style="width: 430px; height: 530px; border: none;"></iframe>--%>
         </div>

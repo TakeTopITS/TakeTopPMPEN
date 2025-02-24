@@ -141,8 +141,8 @@ public partial class TTWFTStepSet : System.Web.UI.Page
         node0.Expanded = true;
         TreeView.Nodes.Add(node0);
 
-        strHQL = "Select GroupName From T_ActorGroup Where Type <>'部分'";
-        strHQL += " and (BelongDepartCode in " + strDepartString + " Or Type = '超级'";
+        strHQL = "Select GroupName From T_ActorGroup Where Type <>'Part'";
+        strHQL += " and (BelongDepartCode in " + strDepartString + " Or Type = 'Super'";
         strHQL += " Or MakeUserCode = " + "'" + strUserCode + "'" + ")";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
         strHQL += " Order by SortNumber ASC";
@@ -167,8 +167,8 @@ public partial class TTWFTStepSet : System.Web.UI.Page
         node2.Expanded = false;
         node0.ChildNodes.Add(node2);
 
-        strHQL = "Select GroupName From T_ActorGroup Where Type = '部分'";
-        strHQL += " and (BelongDepartCode in " + strDepartString + " Or Type = '超级'";
+        strHQL = "Select GroupName From T_ActorGroup Where Type = 'Part'";
+        strHQL += " and (BelongDepartCode in " + strDepartString + " Or Type = 'Super'";
         strHQL += " Or MakeUserCode = " + "'" + strUserCode + "'" + ")";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_ActorGroup");
@@ -214,7 +214,7 @@ public partial class TTWFTStepSet : System.Web.UI.Page
             HL_ActorGroup.Text = strActorGroupName;
             LB_ActorGroupType.Text = strGroupType;
 
-            if ((strGroupType == "超级" & strDepartString.IndexOf(strBelongDepartCode) > -1) | strMakeUserCode == strUserCode)
+            if ((strGroupType == "Super" & strDepartString.IndexOf(strBelongDepartCode) > -1) | strMakeUserCode == strUserCode)
             {
                 HL_ActorGroup.NavigateUrl = "TTActorGroupDetail.aspx?IdentifyString=" + strIdentifyString;
             }

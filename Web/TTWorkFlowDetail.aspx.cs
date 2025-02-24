@@ -1342,7 +1342,7 @@ public partial class TTWorkFlowDetail : System.Web.UI.Page
         strHQL = "Select DepartCode,DepartName From T_Department Where 1=1 ";
         strHQL += " and ParentCode not in (Select DepartCode From T_Department)";
         strHQL += " and ((Authority = 'All')";
-        strHQL += " or ((Authority = '部分') ";
+        strHQL += " or ((Authority = 'Part') ";
         strHQL += " and (DepartCode in (select DepartCode from T_DepartmentUser where UserCode =" + "'" + strUserCode + "'" + "))))";
         strHQL += " and (DepartCode in " + strParentDepartString + " or DepartCode in " + strUnderDepartString + ")";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_Department");
@@ -1392,7 +1392,7 @@ public partial class TTWorkFlowDetail : System.Web.UI.Page
 
         strHQL = "Select DepartCode,DepartName From T_Department Where ParentCode = " + "'" + strParentCode + "'";
         strHQL += " and ((Authority = 'All')";
-        strHQL += " or ((Authority = '部分') ";
+        strHQL += " or ((Authority = 'Part') ";
         strHQL += " and (DepartCode in (select DepartCode from T_DepartmentUser where UserCode =" + "'" + strUserCode + "'" + "))))";
         strHQL += " and (DepartCode in " + strParentDepartString + " or DepartCode in " + strUnderDepartString + ")";
 

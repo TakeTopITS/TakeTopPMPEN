@@ -184,7 +184,7 @@ public partial class TTRelatedWorkFlowTemplate : System.Web.UI.Page
             workFlowTemplate.CreatorCode = strUserCode;
             workFlowTemplate.CreatorName = ShareClass.GetUserName(strUserCode);
             workFlowTemplate.Status = "InUse";
-            workFlowTemplate.Authority = "部分";
+            workFlowTemplate.Authority = "Part";
             workFlowTemplate.IdentifyString = strIdentifyString;
 
             workFlowTemplate.EnableEdit = "NO";
@@ -481,7 +481,7 @@ public partial class TTRelatedWorkFlowTemplate : System.Web.UI.Page
         {
             if (getWorkflowCountByTemNameAndCreatorCode(strTemName, strUserCode) == 0)
             {
-                strHQL = "Delete From T_WorkFlowTemplate Where TemName = " + "'" + strTemName + "'" + " and Authority = '部分'";
+                strHQL = "Delete From T_WorkFlowTemplate Where TemName = " + "'" + strTemName + "'" + " and Authority = 'Part'";
                 ShareClass.RunSqlCommand(strHQL);
             }
 
