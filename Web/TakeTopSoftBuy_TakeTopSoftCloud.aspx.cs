@@ -69,6 +69,9 @@ public partial class TakeTopSoftBuy_TakeTopSoftCloud : System.Web.UI.Page
         strRentUserNumber = TB_UserNumber.Text.Trim();
         strQuestion = "购买 版本：" + strRentProductVersion + "，用户数：" + strRentUserNumber + "人";
 
+        strQuestion = LanguageHandle.GetWord("GouMai") +  LanguageHandle.GetWord("BanBen") + "：" + strRentProductVersion + "，"+ LanguageHandle.GetWord("YongHuShu") +"：" + strRentUserNumber + LanguageHandle.GetWord("Ren");
+
+
         string strSiteCreatorName = strRentUserName;
 
         dtAnswerTime = DateTime.Now.AddHours(24);

@@ -475,7 +475,7 @@ public partial class _default : System.Web.UI.Page
         {
             strSMSCode = msg.CreateRandomCode(5);
 
-            strMsg = "短信验证码：" + strSMSCode + "，当天有效！";
+            strMsg =  "" + LanguageHandle.GetWord("DuanXinYanZhengMa") +"：" + strSMSCode + "，当天有效！";
 
             if (msg.SendMSM("Message", strUserCode, strMsg, strUserCode))
             {
