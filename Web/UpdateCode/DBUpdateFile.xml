@@ -8332,4 +8332,8 @@ AND c.table_name NOT Like '%rcj%' AND C.column_name not like '%id%' and C.column
     END LOOP;
 END $$;</SQLText>
   </DataBaseUpgradeFile>
+  <DataBaseUpgradeFile>
+    <ID>3655</ID>
+    <SQLText>Delete from  t_funinfordialbox Where inforname = '待处理的缺陷'</SQLText>
+  </DataBaseUpgradeFile>
 </DataBaseUpgradeFiles>
