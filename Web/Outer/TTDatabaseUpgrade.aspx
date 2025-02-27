@@ -80,11 +80,6 @@
                                                             <asp:Button ID="BT_CompareByHomeLanguage" runat="server" CssClass="inpuLong" Text="<%$ Resources:lang,YiBenYuDuiBi%>" OnClick="BT_CompareByHomeLanguage_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';" />
                                                             <img id="IMG_Waiting" src="../Images/Processing.gif" alt="Loading,please wait..." style="text-align: center; display: none;" />
                                                         </td>
-
-                                                        <td>
-                                                            <asp:Button ID="BT_AddResours" runat="server" CssClass="inpuLong" Text="增加资源文件数据" OnClick="BT_AddResours_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';" />
-                                                            <img id="IMG_Waiting" src="../Images/Processing.gif" alt="Loading,please wait..." style="text-align: center; display: none;" />
-                                                        </td>
                                                     </tr>
                                                 </table>
                                             </td>

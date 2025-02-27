@@ -147,6 +147,57 @@ public partial class TTDatabaseUpgrade : System.Web.UI.Page
         }
     }
 
+    protected void BT_CompareByHomeLanguage_Click(object sender, EventArgs e)
+    {
+        if (Page.IsValid)
+        {
+            string strHQL;
+            string strHomeLangCode;
+
+            strHomeLangCode = System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
+
+            strLangCode = ddlLangSwitcher.SelectedValue.Trim();
+
+            strHQL = "Truncate Table T_LanguageResourceHome";
+            ShareClass.RunSqlCommand(strHQL);
+            strHQL = "Truncate Table T_LanguageResourceOther";
+            ShareClass.RunSqlCommand(strHQL);
+
+            string strOtherLangResxFile = Server.MapPath("../App_GlobalResources//lang." + strLangCode + ".resx");
+            ResXResourceReader rrOther = new ResXResourceReader(strOtherLangResxFile);
+            IDictionaryEnumerator ideOther = rrOther.GetEnumerator();
+            while (ideOther.MoveNext())
+            {
+                strHQL = "Insert Into T_LanguageResourceOther(KeyName,KeyValue) Values('" + ideOther.Key + "','" + ideOther.Value.ToString().Replace("'", "") + "')";
+                ShareClass.RunSqlCommand(strHQL);
+            }
+            rrOther.Close();
+
+            string strHomeLangResxFile = Server.MapPath("../App_GlobalResources//lang.resx");
+            ResXResourceReader rrHome = new ResXResourceReader(strHomeLangResxFile);
+            IDictionaryEnumerator ideHome = rrHome.GetEnumerator();
+            while (ideHome.MoveNext())
+            {
+                if (ideHome.Value.ToString().Trim() == "")
+                {
+                    strHQL = "Delete From T_LanguageResourceHome Where KeyName = '" + ideHome.Key + "'";
+                    continue;
+                }
+                strHQL = "Insert Into T_LanguageResourceHome(KeyName,KeyValue) Values('" + ideHome.Key + "','" + ideHome.Value.ToString().Replace("'", "") + "')";
+                ShareClass.RunSqlCommand(strHQL);
+            }
+            rrHome.Close();
+
+            strHQL = "Select KeyName,KeyValue From T_LanguageResourceHome Where KeyName Not In (Select KeyName From T_LanguageResourceOther)";
+
+            MSExcelHandler.DataTableToExcel(strHQL, strOtherLangResxFile + ".xls");
+
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('OK！')", true);
+
+            return;
+        }
+    }
+
 
     //设置缓存更改标志，并刷新页面缓存
     protected void ChangePageCache()
@@ -252,179 +303,6 @@ public partial class TTDatabaseUpgrade : System.Web.UI.Page
         catch
         {
         }
-    }
-
-    protected void BT_CompareByHomeLanguage_Click(object sender, EventArgs e)
-    {
-        if (Page.IsValid)
-        {
-            string strHQL;
-            string strHomeLangCode;
-
-            strHomeLangCode = System.Configuration.ConfigurationManager.AppSettings["DefaultLang"];
-
-            strLangCode = ddlLangSwitcher.SelectedValue.Trim();
-
-            strHQL = "Truncate Table T_LanguageResourceHome";
-            ShareClass.RunSqlCommand(strHQL);
-            strHQL = "Truncate Table T_LanguageResourceOther";
-            ShareClass.RunSqlCommand(strHQL);
-
-            string strOtherLangResxFile = Server.MapPath("../App_GlobalResources//lang." + strLangCode + ".resx");
-            ResXResourceReader rrOther = new ResXResourceReader(strOtherLangResxFile);
-            IDictionaryEnumerator ideOther = rrOther.GetEnumerator();
-            while (ideOther.MoveNext())
-            {
-                strHQL = "Insert Into T_LanguageResourceOther(KeyName,KeyValue) Values('" + ideOther.Key + "','" + ideOther.Value.ToString().Replace("'", "") + "')";
-                ShareClass.RunSqlCommand(strHQL);
-            }
-            rrOther.Close();
-
-            string strHomeLangResxFile = Server.MapPath("../App_GlobalResources//lang.resx");
-            ResXResourceReader rrHome = new ResXResourceReader(strHomeLangResxFile);
-            IDictionaryEnumerator ideHome = rrHome.GetEnumerator();
-            while (ideHome.MoveNext())
-            {
-                if (ideHome.Value.ToString().Trim() == "")
-                {
-                    strHQL = "Delete From T_LanguageResourceHome Where KeyName = '" + ideHome.Key + "'";
-                    continue;
-                }
-                strHQL = "Insert Into T_LanguageResourceHome(KeyName,KeyValue) Values('" + ideHome.Key + "','" + ideHome.Value.ToString().Replace("'", "") + "')";
-                ShareClass.RunSqlCommand(strHQL);
-            }
-            rrHome.Close();
-
-            strHQL = "Select KeyName,KeyValue From T_LanguageResourceHome Where KeyName Not In (Select KeyName From T_LanguageResourceOther)";
-
-            MSExcelHandler.DataTableToExcel(strHQL, strOtherLangResxFile + ".xls");
-
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('OK！')", true);
-
-            return;
-        }
-    }
-
-
-
-    protected void BT_AddResours_Click(object sender, EventArgs e)
-    {
-        string resxFilePath = HttpContext.Current.Server.MapPath($"../Language/lang.resx");
-
-        LogClass.WriteLogFile(resxFilePath);
-
-        if (!File.Exists(resxFilePath))
-        {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('提示，资源文件不存在，请检查路径！')", true); 
-
-            return;
-        }
-
-        try
-        {
-            int intNumber = InsertResourcesIntoResx(resxFilePath);
-
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('OK，共增加" + intNumber.ToString() + "条资源 ！')", true); 
-        }
-        catch (Exception ex)
-        {
-            LogClass.WriteLogFile(resxFilePath + "插入资源失败：" + ex.Message); 
-        }
-    }
-
-    // 插入资源到 Lang.resx
-    public int InsertResourcesIntoResx(string resxFilePath)
-    {
-        string strHQL;
-        string strKeyWord, strPrompt, strID;
-
-        int intNumber = 0;
-
-
-
-        // 插入资源到 Lang.resx
-        strHQL = "Select ID, KeyWord,Prompt From T_AAPromptTranslate Order By ID ASC";
-        DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_AAPromptTranslate");
-        for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
-        {
-            strID = ds.Tables[0].Rows[i]["ID"].ToString().Trim();
-            strKeyWord = ds.Tables[0].Rows[i]["KeyWord"].ToString().Trim();
-            strPrompt = ds.Tables[0].Rows[i]["Prompt"].ToString().Trim();
-
-            if (!CheckIfKeyExistsInResx(resxFilePath, strKeyWord))
-            {
-                try
-                {
-                    //strHQL = "Delete From T_AAPromptTranslate Where ID = " + strID;
-                    //ShareClass.RunSqlCommand(strHQL);
-
-                    AddResource(strKeyWord, strPrompt, resxFilePath);
-                    intNumber++;
-
-                    LogClass.WriteLogFile(strID + "," + strKeyWord + "," + strPrompt + ",已经插入:" + intNumber + ",总共：" + ds.Tables[0].Rows.Count.ToString()); 
-                }
-                catch (Exception ex)
-                {
-                    LogClass.WriteLogFile(strID + "," + strKeyWord + "," + strPrompt + " 插入资源失败：" + ex.Message); 
-                }
-            }
-        }
-
-        return intNumber;
-
-    }
-
-
-    public static void AddResource(string key, string value, string resxFilePath)
-    {
-        try
-        {
-            // 创建一个 ResXResourceWriter 对象
-            using (ResXResourceWriter resxWriter = new ResXResourceWriter(resxFilePath))
-            {
-                // 读取现有的资源文件内容
-                using (ResXResourceReader resxReader = new ResXResourceReader(resxFilePath))
-                {
-                    // 遍历现有资源并写入到新的资源文件中
-                    foreach (System.Collections.DictionaryEntry entry in resxReader)
-                    {
-                        resxWriter.AddResource(entry.Key.ToString(), entry.Value);
-                    }
-                }
-
-                // 添加新的资源记录
-                resxWriter.AddResource(key, value);
-            }
-
-            Console.WriteLine($"成功插入资源记录: {key} = {value}"); 
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"插入资源记录失败: {ex.Message}"); 
-        }
-    }
-
-    static bool CheckIfKeyExistsInResx(string resxFilePath, string keyToCheck)
-    {
-        try
-        {
-            using (ResXResourceReader reader = new ResXResourceReader(resxFilePath))
-            {
-                foreach (DictionaryEntry entry in reader)
-                {
-                    if (entry.Key.ToString() == keyToCheck)
-                    {
-                        return true; // 找到相同的Key
-                    }
-                }
-            }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred: {ex.Message}");
-        }
-
-        return false; // 没有找到相同的Key
     }
 
 }
