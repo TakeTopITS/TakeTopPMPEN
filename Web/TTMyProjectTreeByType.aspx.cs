@@ -42,7 +42,7 @@ public partial class TTMyProjectTreeByType : System.Web.UI.Page
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>按类型浏览我的项目</B>";
+        node1.Text = LanguageHandle.GetWord("BAnLeiXingLiuLanWoDeXiangMuB").ToString().Trim();
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);

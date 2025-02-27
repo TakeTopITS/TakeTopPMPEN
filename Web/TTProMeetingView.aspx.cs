@@ -25,7 +25,7 @@ public partial class TTProMeetingView : System.Web.UI.Page
         string strProjectID = Request.QueryString["ProjectID"];
         string strProjectName = GetProjectName(strProjectID);
 
-        //this.Title = Resources.lang.Project + strProjectID + " " + strProjectName + " 的会议列表";
+        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + strProjectName + "的会议列表";
 
         ClientScript.RegisterStartupScript(this.GetType(), "", "<script>aHandler();</script>");
         string strUserCode = Session["UserCode"].ToString();if (Page.IsPostBack != true)

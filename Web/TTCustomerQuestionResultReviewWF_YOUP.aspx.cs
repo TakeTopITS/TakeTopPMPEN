@@ -33,7 +33,7 @@ public partial class TTCustomerQuestionResultReviewWF_YOUP : System.Web.UI.Page
 
         CustomerQuestion customerQuestion = (CustomerQuestion)lst[0];
 
-        //this.Title = "客户问题：" + strQuestionID + " " + customerQuestion.Question.Trim() + Resources.lang.PingShen;
+        //this.Title = "客户问题：" + strQuestionID + " " + customerQuestion.Question.Trim() + LanguageHandle.GetWord("PingShen").ToString().Trim();
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
         {
@@ -43,9 +43,9 @@ public partial class TTCustomerQuestionResultReviewWF_YOUP : System.Web.UI.Page
 
             ShareClass.LoadWFTemplate(strUserCode, "CustomerServiceReview", DL_TemName);
 
-            LoadRelatedWL("CustomerServiceReview", "客服", int.Parse(strQuestionID));
+            LoadRelatedWL("CustomerServiceReview", LanguageHandle.GetWord("KeFu").ToString().Trim(), int.Parse(strQuestionID));
 
-            TB_WLName.Text = Resources.lang.KEHUFUWU  + strQuestionID  + customerQuestion.ID.ToString() + Resources.lang.PingShen;
+            TB_WLName.Text = LanguageHandle.GetWord("KEHUFUWU").ToString().Trim()  + strQuestionID  + customerQuestion.ID.ToString() + LanguageHandle.GetWord("PingShen").ToString().Trim();
 
             HL_RelatedWorkFlowTemplate.Enabled = true;
             HL_RelatedWorkFlowTemplate.NavigateUrl = "TTAttachWorkFlowTemplate.aspx?RelatedType=CustomerService&RelatedID=" + strQuestionID;
@@ -84,7 +84,7 @@ public partial class TTCustomerQuestionResultReviewWF_YOUP : System.Web.UI.Page
         workFlow.CreatorName = strCreatorName;
         workFlow.CreateTime = dtCreateTime;
         workFlow.Status = "New";
-        workFlow.RelatedType = "客服";
+        workFlow.RelatedType = LanguageHandle.GetWord("KeFu").ToString().Trim();
         workFlow.RelatedID = int.Parse(strQuestionID);
         workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
 
@@ -115,13 +115,13 @@ public partial class TTCustomerQuestionResultReviewWF_YOUP : System.Web.UI.Page
 
             xmlProcess.DbToXML(strCmdText, "T_CustomerQuestion", strXMLFile2);
 
-            LoadRelatedWL("CustomerServiceReview", "客服", int.Parse(strQuestionID));
+            LoadRelatedWL("CustomerServiceReview", LanguageHandle.GetWord("KeFu").ToString().Trim(), int.Parse(strQuestionID));
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZKFPSSGZLSCDGZLGLYMJHCGZLS+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZKFPSSGZLSCDGZLGLYMJHCGZLS").ToString().Trim()+"')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZKFPSSGZLSB+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZKFPSSGZLSB").ToString().Trim()+"')", true);
         }
     }
 

@@ -153,13 +153,13 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
             defectAssignRecordBLL.UpdateDefectAssignRecord(defectAssignRecord, int.Parse(strID));
             LoadAssignRecord(strID);
 
-            TB_Message.Text = strUserName + " 受理了你的缺陷: " + strDefectID + " " + strDefectName;
+            TB_Message.Text = strUserName + LanguageHandle.GetWord("ShouLiLeNiDeQueXian").ToString().Trim() + strDefectID + " " + strDefectName;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ChengGong + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ChengGong").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSLSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -189,12 +189,12 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
             defectAssignRecordBLL.UpdateDefectAssignRecord(defectAssignRecord, int.Parse(strID));
             LoadAssignRecord(strID);
 
-            TB_Message.Text = strUserName + " 拒绝了你的缺陷: " + strDefectID + " " + strDefectName;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ChengGong + "')", true);
+            TB_Message.Text = strUserName + LanguageHandle.GetWord("JuJueLeNiDeQueXian").ToString().Trim() + strDefectID + " " + strDefectName;
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ChengGong").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJJSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJJSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -235,7 +235,7 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
 
         if (strOperation == "" | strOperatorCode == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFPSBFPRYJGZYHSLRBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFPSBFPRYJGZYHSLRBNWKJC").ToString().Trim() + "')", true);
             return;
         }
 
@@ -266,20 +266,20 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
             defectAssignRecordBLL.AddDefectAssignRecord(defectAssignRecord);
 
             //更改前缺陷分派记录状态
-            updateDefectAssignRecordStatus(intPriorID, "已分派");
+            updateDefectAssignRecordStatus(intPriorID, "已分派"); 
 
             LoadAssignRecord(strID);
             LoadChildRecord(strID);
 
-            ShareClass.SendInstantMessage(Resources.lang.QueXianFenPaiTongZi, strUserName + Resources.lang.GeiNiFenPaiLeXuQiu + " :" + strDefectID + "  " + strDefectName + "，" + Resources.lang.QingJiShiChuLi, strUserCode, strOperatorCode);
+            ShareClass.SendInstantMessage(LanguageHandle.GetWord("QueXianFenPaiTongZi").ToString().Trim(), strUserName + LanguageHandle.GetWord("GeiNiFenPaiLeXuQiu").ToString().Trim() + " :" + strDefectID + "  " + strDefectName + "，" + LanguageHandle.GetWord("QingJiShiChuLi").ToString().Trim(), strUserCode, strOperatorCode);
 
-            TB_AssignMessage.Text = strUserName + Resources.lang.GeiNiFenPaiLeQueXian + "：" + strDefectID + "  " + strDefectName + "，" + Resources.lang.QingJiShiChuLi;
+            TB_AssignMessage.Text = strUserName + LanguageHandle.GetWord("GeiNiFenPaiLeQueXian").ToString().Trim() + "：" + strDefectID + "  " + strDefectName + "，" + LanguageHandle.GetWord("QingJiShiChuLi").ToString().Trim();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFPCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFPCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFPSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFPSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -305,8 +305,8 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>总项目</B>";
-        node1.Target = GetProjectId("总项目");
+        node1.Text = LanguageHandle.GetWord("BZongXiangMuB").ToString().Trim();
+        node1.Target = GetProjectId(LanguageHandle.GetWord("ZongXiangMu").ToString().Trim());
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
 
@@ -453,7 +453,7 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
                 project.Status = "New";
                 project.StatusValue = "InProgress";
 
-                project.CurrencyType = "人民币";
+                project.CurrencyType = "人民币"; 
                 project.ParentID = intParentID;
 
                 try
@@ -526,7 +526,7 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
                     {
                     }
 
-                    TB_TransferProjectMsg.Text = strUserName + " 把缺陷：" + strDefectID + " " + strDefectName + " 转成了项目给你，请及时受理！";
+                    TB_TransferProjectMsg.Text = strUserName + LanguageHandle.GetWord("BaQueXian").ToString().Trim() + strDefectID + " " + strDefectName + LanguageHandle.GetWord("ZhuaiChengLeXiangMuGeiNiQingJi").ToString().Trim();
 
                     BT_Approve.Enabled = false;
                     BT_Refuse.Enabled = false;
@@ -565,21 +565,21 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
                         }
                     }
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYCGZCXM + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYCGZCXM").ToString().Trim() + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZXMSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZXMSBJC").ToString().Trim() + "')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXSNDYJCNJCXZCXM + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXSNDYJCNJCXZCXM").ToString().Trim() + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZXRWKBNZCXMJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZXRWKBNZCXMJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -700,12 +700,12 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
             defectAssignRecordBLL.UpdateDefectAssignRecord(defectAssignRecord, int.Parse(strID));
             LoadAssignRecord(strID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ChengGong + "')", true);
-            TB_Message.Text = strUserName + " 正在处理你的缺陷: " + strDefectID + " " + strDefectName;
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ChengGong").ToString().Trim() + "')", true);
+            TB_Message.Text = strUserName + LanguageHandle.GetWord("ZhengZaiChuLiNiDeQueXian").ToString().Trim() + strDefectID + " " + strDefectName;
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZHDSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZHDSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -732,13 +732,13 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
             defectAssignRecordBLL.UpdateDefectAssignRecord(defectAssignRecord, int.Parse(strID));
             LoadAssignRecord(strID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ChengGong + "')", true);
-            TB_Message.Text = strUserName + " 完成了你的缺陷: " + strDefectID + " " + strDefectName;
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ChengGong").ToString().Trim() + "')", true);
+            TB_Message.Text = strUserName + LanguageHandle.GetWord("WanChengLeNiDeQueXian").ToString().Trim() + strDefectID + " " + strDefectName;
 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZWCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -764,12 +764,12 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
             defectAssignRecordBLL.UpdateDefectAssignRecord(defectAssignRecord, int.Parse(strID));
             LoadAssignRecord(strID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ChengGong + "')", true);
-            TB_Message.Text = strUserName + " 挂起了你的缺陷: " + strDefectID + " " + strDefectName;
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ChengGong").ToString().Trim() + "')", true);
+            TB_Message.Text = strUserName + LanguageHandle.GetWord("GuaQiLeNiDeQueXian").ToString().Trim() + strDefectID + " " + strDefectName;
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -783,7 +783,7 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
 
         if (TB_Content.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZJNRBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZJNRBNWKJC").ToString().Trim() + "')", true);
             return;
         }
 
@@ -800,11 +800,11 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
 
             LoadAssignRecord(strID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -825,7 +825,7 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
         try
         {
             defectmentBLL.UpdateDefectment(defectment, int.Parse(strDefectID));
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXGBCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXGBCG").ToString().Trim() + "')", true);
 
             BT_Refuse.Enabled = false;
             BT_Approve.Enabled = false;
@@ -837,7 +837,7 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXGBSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXGBSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -857,7 +857,7 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
         try
         {
             defectmentBLL.UpdateDefectment(defectment, int.Parse(strDefectID));
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXJHCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXJHCG").ToString().Trim() + "')", true);
 
             BT_Refuse.Enabled = true;
             BT_Approve.Enabled = true;
@@ -867,11 +867,11 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
             BT_TBD.Enabled = true;
             BT_TransferProject.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ChengGong + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ChengGong").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXJHSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXJHSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -886,7 +886,7 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
         {
             Msg msg = new Msg();
 
-            strSubject = "缺陷处理情况反馈";
+            strSubject = LanguageHandle.GetWord("QueXianChuLiQingKuangFanKui").ToString().Trim();
             strMsg = TB_Message.Text.Trim();
 
             if (CB_ReturnMsg.Checked == true)
@@ -900,7 +900,7 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
             }
         }
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFSWB + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFSWB").ToString().Trim() + "')", true);
 
     }
 
@@ -914,7 +914,7 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
         {
             Msg msg = new Msg();
 
-            strSubject = "缺陷分派通知";
+            strSubject = LanguageHandle.GetWord("QueXianFenPaTongZhi").ToString().Trim();
 
             strMsg = TB_AssignMessage.Text.Trim();
 
@@ -929,7 +929,7 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
             }
         }
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFSWB + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFSWB").ToString().Trim() + "')", true);
     }
 
 
@@ -949,8 +949,8 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
         {
             Msg msg = new Msg();
 
-            strSubject = "缺陷转项通知";
-            strMsg = ShareClass.GetUserName(strUserCode).Trim() + " 把缺陷：" + strDefectID + " " + strDefectName + "转成项目给你，请及时受理！";
+            strSubject = LanguageHandle.GetWord("QueXianZhuaiXiangTongZhi").ToString().Trim();
+            strMsg = ShareClass.GetUserName(strUserCode).Trim() + LanguageHandle.GetWord("BaQueXian").ToString().Trim() + strDefectID + " " + strDefectName + LanguageHandle.GetWord("ZhuaiChengXiangMuGeiNiQingJiSh").ToString().Trim();
 
             if (CB_SMS.Checked == true)
             {
@@ -963,7 +963,7 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
             }
         }
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFSWB + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFSWB").ToString().Trim() + "')", true);
 
     }
 
@@ -1022,11 +1022,11 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
         {
             defectAssignRecordBLL.UpdateDefectAssignRecord(defectAssignRecord, int.Parse(strID));
             LoadChildRecord(strPriorID);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -1052,7 +1052,7 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
         }
     }
 

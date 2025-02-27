@@ -62,72 +62,72 @@ public partial class TTGDLineWeldEdit : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strProjectCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXMBNWKZ+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXMBNWKZ").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strPipelineLevel))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGDDJBNWFFZF+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGDDJBNWFFZF").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strArea))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZYBNWFFZF+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYBNWFFZF").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strLineNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGXHBNWFFZF+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGXHBNWFFZF").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strOrderNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCXBNWFFZF+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCXBNWFFZF").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strLineLevel))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGXDJBNWFFZF+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGXDJBNWFFZF").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strMediumCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJZDHBNWFFZF+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJZDHBNWFFZF").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strIsom_no))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDXTHBNWFFZF+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDXTHBNWFFZF").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strPipelineRule))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGDGGBNWFFZF+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGDGGBNWFFZF").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strEdition))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCBNWFFZF+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCBNWFFZF").ToString().Trim()+"')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strPublicTime))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZFBRBNWKBC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZFBRBNWKBC").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strPressurePack1))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSYB1BNWFFZF+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSYB1BNWFFZF").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strPressureMpa))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSJYLBNWFFZF+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSJYLBNWFFZF").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strDesignTemperature))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSJWDBNWFFZF+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSJWDBNWFFZF").ToString().Trim()+"')", true);
                 return;
             }
 
@@ -147,7 +147,7 @@ public partial class TTGDLineWeldEdit : System.Web.UI.Page
 
                     if (HF_ID.Value.Trim() != strNewID.Trim())
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXMYJCZDDXTHZXTXDXTH+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXMYJCZDDXTHZXTXDXTH").ToString().Trim()+"')", true);
                         return;
                     }
                 }
@@ -190,7 +190,7 @@ public partial class TTGDLineWeldEdit : System.Web.UI.Page
                 DataTable dtCheckProjectIsom = ShareClass.GetDataSetFromSql(strCheckProjectIsomSQL, "CheckProjectIsom").Tables[0];
                 if (dtCheckProjectIsom != null && dtCheckProjectIsom.Rows.Count > 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXMYJCZDDXTHZXTXDXTH+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXMYJCZDDXTHZXTXDXTH").ToString().Trim()+"')", true);
                     return;
                 }
 

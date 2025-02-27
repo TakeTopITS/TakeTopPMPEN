@@ -31,7 +31,7 @@ public partial class TTStudentManagement : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
         {
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             DataBinder(LB_BelongDepartCode.Text.Trim());
@@ -88,7 +88,7 @@ public partial class TTStudentManagement : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_StudentNumber.Text = "学生数：" + dtStudent.Rows.Count.ToString() ;
+        LB_StudentNumber.Text = LanguageHandle.GetWord("XueShengShu").ToString().Trim() + dtStudent.Rows.Count.ToString() ;
     }
 
     protected void BT_Find_Click(object sender, EventArgs e)
@@ -116,7 +116,7 @@ public partial class TTStudentManagement : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_StudentNumber.Text = "学生数：" + dtStudent.Rows.Count.ToString() ;
+        LB_StudentNumber.Text = LanguageHandle.GetWord("XueShengShu").ToString().Trim() + dtStudent.Rows.Count.ToString() ;
     }
 
 

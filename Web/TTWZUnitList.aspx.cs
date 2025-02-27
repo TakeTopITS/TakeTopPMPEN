@@ -51,19 +51,19 @@ public partial class TTWZUnitList : System.Web.UI.Page
         string strUnitName = TXT_UnitName.Text.Trim();
         if (string.IsNullOrEmpty(strUnitName))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDWMCBNWKBC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDWMCBNWKBC").ToString().Trim()+"')", true);
             return;
         }
         else
         {
             if (!ShareClass.CheckStringRight(strUnitName))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDWMCBNWFFZFCXG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDWMCBNWFFZFCXG").ToString().Trim()+"')", true);
                 return;
             }
             if (strUnitName.Length > 4)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDWMCBNCG4GZFXG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDWMCBNCG4GZFXG").ToString().Trim()+"')", true);
                 return;
             }
         }
@@ -84,7 +84,7 @@ public partial class TTWZUnitList : System.Web.UI.Page
                     WZSpan wZCheckSpan = (WZSpan)lstCheckUnit[0];
                     if (wZCheckSpan.ID.ToString() != strID)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDWMCYJCZBYZFTJ+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDWMCYJCZBYZFTJ").ToString().Trim()+"')", true);
                         return;
                     }
                 }
@@ -104,7 +104,7 @@ public partial class TTWZUnitList : System.Web.UI.Page
             int.TryParse(ShareClass.ObjectToString(dtCheckUnit.Rows[0]["RowNumber"]), out intCheckUnitCount);
             if (intCheckUnitCount > 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDWMCYJCZBYZFTJ+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDWMCYJCZBYZFTJ").ToString().Trim()+"')", true);
                 return;
             }
 
@@ -128,7 +128,7 @@ public partial class TTWZUnitList : System.Web.UI.Page
         TXT_UnitName.BackColor = Color.White;
 
         DataBinder();
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
     }
 
 
@@ -150,19 +150,19 @@ public partial class TTWZUnitList : System.Web.UI.Page
         //string strUnitName = TXT_UnitName.Text.Trim();
         //if (string.IsNullOrEmpty(strUnitName))
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDWMCBNWKBC+"')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDWMCBNWKBC").ToString().Trim()+"')", true);
         //    return;
         //}
         //else
         //{
         //    if (!ShareClass.CheckStringRight(strUnitName))
         //    {
-        //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDWMCBNWFFZFCXG+"')", true);
+        //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDWMCBNWFFZFCXG").ToString().Trim()+"')", true);
         //        return;
         //    }
         //    if (strUnitName.Length > 4)
         //    {
-        //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDWMCBNCG4GZFXG+"')", true);
+        //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDWMCBNCG4GZFXG").ToString().Trim()+"')", true);
         //        return;
         //    }
         //}
@@ -175,7 +175,7 @@ public partial class TTWZUnitList : System.Web.UI.Page
         //int.TryParse(ShareClass.ObjectToString(dtCheckUnit.Rows[0]["RowNumber"]), out intCheckUnitCount);
         //if (intCheckUnitCount > 0)
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDWMCYJCZBYZFTJ+"')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDWMCYJCZBYZFTJ").ToString().Trim()+"')", true);
         //    return;
         //}
 
@@ -195,7 +195,7 @@ public partial class TTWZUnitList : System.Web.UI.Page
 
 
         //DataBinder();
-        //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
+        //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
     }
 
     protected void BT_Edit_Click(object sender, EventArgs e)
@@ -205,19 +205,19 @@ public partial class TTWZUnitList : System.Web.UI.Page
         string strUnitName = TXT_UnitName.Text.Trim();
         if (string.IsNullOrEmpty(strUnitName))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDWMCBNWKBC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDWMCBNWKBC").ToString().Trim()+"')", true);
             return;
         }
         else
         {
             if (!ShareClass.CheckStringRight(strUnitName))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDWMCBNWFFZFCXG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDWMCBNWFFZFCXG").ToString().Trim()+"')", true);
                 return;
             }
             if (strUnitName.Length > 4)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDWMCBNCG4GZFXG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDWMCBNCG4GZFXG").ToString().Trim()+"')", true);
                 return;
             }
         }
@@ -238,7 +238,7 @@ public partial class TTWZUnitList : System.Web.UI.Page
                     WZSpan wZCheckSpan = (WZSpan)lstCheckUnit[0];
                     if (wZCheckSpan.ID.ToString() != strID)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDWMCYJCZBYZFTJ+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDWMCYJCZBYZFTJ").ToString().Trim()+"')", true);
                         return;
                     }
                 }
@@ -252,13 +252,13 @@ public partial class TTWZUnitList : System.Web.UI.Page
         else
         {
             //提示先选择要修改的单位
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZDWMC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZDWMC").ToString().Trim()+"')", true);
             return;
 
         }
 
         DataBinder();
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
     }
 
 
@@ -324,7 +324,7 @@ public partial class TTWZUnitList : System.Web.UI.Page
 
                     DataBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
                 }
             }
         }

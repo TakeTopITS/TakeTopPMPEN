@@ -167,9 +167,9 @@ public partial class TTBMSupBidByExp : System.Web.UI.Page
         string strHQL;
         IList lst;
         BMSupBidByExpBLL bMSupBidByExpBLL = new BMSupBidByExpBLL();
-        if (TB_BidStatus.Text.Trim() != "未开标" || string.IsNullOrEmpty(TB_BidStatus.Text) || TB_BidStatus.Text.Trim() == "")
+        if (TB_BidStatus.Text.Trim() != LanguageHandle.GetWord("WeiKaiBiao").ToString().Trim() || string.IsNullOrEmpty(TB_BidStatus.Text) || TB_BidStatus.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGTBYKBWXZCR + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGTBYKBWXZCR").ToString().Trim() + "')", true);
             return;
         }
 
@@ -189,11 +189,11 @@ public partial class TTBMSupBidByExp : System.Web.UI.Page
                 LoadBMSupplierBidList(GetBMExpertID(strUserCode.Trim()));
                 LoadBMSupBidByExpList(bMSupBidByExp.SupplierBidID.ToString(), strUserCode.Trim());
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZRCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZRCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZRSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZRSBJC").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
 
@@ -213,11 +213,11 @@ public partial class TTBMSupBidByExp : System.Web.UI.Page
                 LoadBMSupplierBidList(GetBMExpertID(strUserCode.Trim()));
                 LoadBMSupBidByExpList(bMSupBidByExp.SupplierBidID.ToString(), strUserCode.Trim());
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZRCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZRCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZRSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZRSBJC").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
 
@@ -469,7 +469,7 @@ public partial class TTBMSupBidByExp : System.Web.UI.Page
     {
         if (strBidStatus.Trim().Equals("Y"))
         {
-            return "中标";
+            return "中标"; 
         }
         else if (strBidStatus.Trim().Equals("N"))
         {
@@ -477,7 +477,7 @@ public partial class TTBMSupBidByExp : System.Web.UI.Page
         }
         else
         {
-            return "未开标";
+            return LanguageHandle.GetWord("WeiKaiBiao").ToString().Trim();
         }
     }
 }

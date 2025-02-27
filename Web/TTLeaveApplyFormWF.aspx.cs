@@ -59,7 +59,7 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
             TB_DepartCode.Text = ShareClass.GetDepartCodeFromUserCode(strUserCode);
             LB_DepartName.Text = ShareClass.GetDepartName(TB_DepartCode.Text.Trim());
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(Resources.lang.ZZJGT, TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
         }
     }
 
@@ -94,7 +94,7 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
         }
         else
         {
-            RB_LeaveType.Items.Add(new ListItem("-1 无考勤流程", ""));
+            RB_LeaveType.Items.Add(new ListItem(LanguageHandle.GetWord("1MoKaoQinLiuCheng").ToString().Trim(), ""));
         }
     }
 
@@ -479,13 +479,13 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
     {
         if (RB_LeaveType.SelectedValue.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJLXWBXBXBZYJLXKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJLXWBXBXBZYJLXKJC").ToString().Trim() + "')", true);
             RB_LeaveType.Focus();
             return;
         }
         if (DLC_StartTime.Text.Trim() == "" || DLC_EndTime.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKSSJYJSSJDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKSSJYJSSJDBNWKJC").ToString().Trim() + "')", true);
             DLC_StartTime.Focus();
             DLC_EndTime.Focus();
             return;
@@ -497,7 +497,7 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
 
         if (dtBacktime < dtDepartTime)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKSSJBNDYJSSJJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKSSJBNDYJSSJJC").ToString().Trim() + "')", true);
             DLC_StartTime.Focus();
             DLC_EndTime.Focus();
             return;
@@ -505,7 +505,7 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
 
         if (dtBacktime.Year != dtDepartTime.Year & dtBacktime.Month != dtDepartTime.Month)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('警告，不能申请跨年和跨月的请假，请检查！')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoBuNengShenQingKuaNian").ToString().Trim()+"')", true);
             DLC_StartTime.Focus();
             DLC_EndTime.Focus();
             return;
@@ -538,7 +538,7 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
 
             LoadLeaveApplyForm(strUserCode);
 
-            LoadRelatedWL("AttendanceManagement", "请假", int.Parse(LB_ID.Text.Trim()));
+            LoadRelatedWL("AttendanceManagement", LanguageHandle.GetWord("QingJia").ToString().Trim(), int.Parse(LB_ID.Text.Trim()));
 
             string strLeaveType;
             strLeaveType = RB_LeaveType.SelectedValue.Trim();
@@ -547,11 +547,11 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
             LB_TotalLeaveDaysForCurrentMonth.Text = ShareClass.GetTotalLeaveDayNumberInCurrentMonth(strLeaveType, strUserCode, DateTime.Now.ToString("yyyyMMdd"));
             LB_TotalLeaveDaysForCurrentYear.Text = ShareClass.GetTotalLeaveDayNumberInCurrentYear(strLeaveType, strUserCode, DateTime.Now.ToString("yyyyMMdd"));
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
         }
     }
 
@@ -571,13 +571,13 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
     {
         if (RB_LeaveType.SelectedValue.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJLXWBXBXBZYJLXKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJLXWBXBXBZYJLXKJC").ToString().Trim() + "')", true);
             RB_LeaveType.Focus();
             return;
         }
         if (DLC_StartTime.Text.Trim() == "" || DLC_EndTime.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKSSJYJSSJDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKSSJYJSSJDBNWKJC").ToString().Trim() + "')", true);
             DLC_StartTime.Focus();
             DLC_EndTime.Focus();
             return;
@@ -590,7 +590,7 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
 
         if (dtBacktime < dtDepartTime)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKSSJBNDYJSSJJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKSSJBNDYJSSJJC").ToString().Trim() + "')", true);
             DLC_StartTime.Focus();
             DLC_EndTime.Focus();
             return;
@@ -598,7 +598,7 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
 
         if (dtBacktime.Year != dtDepartTime.Year & dtBacktime.Month != dtDepartTime.Month)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('警告，不能申请跨年和跨月的请假，请检查！')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoBuNengShenQingKuaNian").ToString().Trim()+"')", true);
             DLC_StartTime.Focus();
             DLC_EndTime.Focus();
             return;
@@ -643,13 +643,13 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
 
                 //从流程中打开的业务单
                 //更改工作流关联的数据文件
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AttendanceManagement", "请假", LB_ID.Text.Trim(), "0");
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AttendanceManagement", LanguageHandle.GetWord("QingJia").ToString().Trim(), LB_ID.Text.Trim(), "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     string strCmdText = "select * from T_LeaveApplyForm where ID = " + LB_ID.Text;
                     if (strToDoWLID == null)
                     {
-                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("AttendanceManagement", "请假", LB_ID.Text.Trim());
+                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("AttendanceManagement", LanguageHandle.GetWord("QingJia").ToString().Trim(), LB_ID.Text.Trim());
                     }
 
                     if (strToDoWLID != null)
@@ -658,11 +658,11 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
                         ShareClass.UpdateWokflowRelatedXMLFile("MainTable", strToDoWLID, strToDoWLDetailID, strCmdText);
                     }
                 }
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
             }
         }
     }
@@ -679,7 +679,7 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
         strTemName = DL_TemName.SelectedValue.Trim();
         if (strTemName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWLCMBBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWLCMBBNWKJC").ToString().Trim() + "')", true);
             return strWLID;
         }
 
@@ -714,7 +714,7 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
         }
         else
         {
-            workFlow.RelatedType = "请假";
+            workFlow.RelatedType = LanguageHandle.GetWord("QingJia").ToString().Trim();
             workFlow.RelatedID = int.Parse(strID);
         }
 
@@ -749,7 +749,7 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
         strXMLFile2 = Server.MapPath(strXMLFile2);
         xmlProcess.DbToXML(strCmdText, "T_LeaveApplyForm", strXMLFile2);
 
-        LoadRelatedWL("AttendanceManagement", "请假", int.Parse(LB_ID.Text.Trim()));
+        LoadRelatedWL("AttendanceManagement", LanguageHandle.GetWord("QingJia").ToString().Trim(), int.Parse(LB_ID.Text.Trim()));
 
         DL_Status.SelectedValue = "InProgress";
 
@@ -758,13 +758,13 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
 
         BT_SubmitApply.Enabled = false;
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJSSCCG + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJSSCCG").ToString().Trim() + "')", true);
         //}
         //catch
         //{
         //    strWLID = "0";
 
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJSSCSBKNSMCZSGDJC + "')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJSSCSBKNSMCZSGDJC").ToString().Trim() + "')", true);
         //}
 
         LoadLeaveApplyForm(strUserCode);
@@ -772,7 +772,7 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
         //catch
         //{
         //    strWLID = "0";
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
         //}
 
         return strWLID;
@@ -802,7 +802,7 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
         {
             string strID = e.Item.Cells[3].Text.Trim();
 
-            int intWLNumber = LoadRelatedWL("AttendanceManagement", "请假", int.Parse(strID));
+            int intWLNumber = LoadRelatedWL("AttendanceManagement", LanguageHandle.GetWord("QingJia").ToString().Trim(), int.Parse(strID));
             if (intWLNumber > 0)
             {
                 BT_New.Visible = false;
@@ -815,7 +815,7 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
             }
 
             //从流程中打开的业务单
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AttendanceManagement", "请假", strID, "0");
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AttendanceManagement", LanguageHandle.GetWord("QingJia").ToString().Trim(), strID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_New.Visible = true;
@@ -852,7 +852,7 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
                 TB_Duty.Text = leaveApplyForm.Duty.Trim();
                 LB_DepartName.Text = leaveApplyForm.DepartName.Trim();
 
-                LoadRelatedWL("AttendanceManagement", "请假", int.Parse(LB_ID.Text.Trim()));
+                LoadRelatedWL("AttendanceManagement", LanguageHandle.GetWord("QingJia").ToString().Trim(), int.Parse(LB_ID.Text.Trim()));
 
                 string strLeaveType;
                 strLeaveType = RB_LeaveType.SelectedValue.Trim();
@@ -879,7 +879,7 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
             {
                 if (intWLNumber > 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBCZGLDGZLJLBNSCJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBCZGLDGZLJLBNSCJC").ToString().Trim() + "')", true);
                     return;
                 }
 
@@ -902,11 +902,11 @@ public partial class TTLeaveApplyFormWF : System.Web.UI.Page
                     LB_TotalLeaveDaysForCurrentYear.Text = ShareClass.GetTotalLeaveDayNumberInCurrentYear(strLeaveType, strUserCode, DateTime.Now.ToString("yyyyMMdd"));
 
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
             }
         }

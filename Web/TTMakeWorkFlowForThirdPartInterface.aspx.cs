@@ -47,7 +47,7 @@ public partial class TTMakeWorkFlowForThirdPartInterface : System.Web.UI.Page
 
             LoadWorkFlow(strUserCode);
 
-            HL_WLRelatedDoc.NavigateUrl = "TTWLRelatedDoc.aspx?DocType=…Û∫À&WLID=" + strWLID;
+            HL_WLRelatedDoc.NavigateUrl = "TTWLRelatedDoc.aspx?DocType=…Û∫À&WLID=" + strWLID; 
         }
     }
 
@@ -100,12 +100,12 @@ public partial class TTMakeWorkFlowForThirdPartInterface : System.Web.UI.Page
             }
             catch
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZBCSBJC + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "');</script>");
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZXJSBCSHSDSJWJXMLWJBNWKZ + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZXJSBCSHSDSJWJXMLWJBNWKZ").ToString().Trim() + "');</script>");
 
         }
     }
@@ -127,7 +127,7 @@ public partial class TTMakeWorkFlowForThirdPartInterface : System.Web.UI.Page
         strTemName = DL_TemName.SelectedValue.Trim();
         strXMLFile = FUP_File.PostedFile.FileName;
 
-        strHQL = "from Approve as approve where approve.Type = '…Û∫À' and approve.RelatedID = " + strWLID;
+        strHQL = "from Approve as approve where approve.Type = '…Û∫À' and approve.RelatedID = " + strWLID; 
         ApproveBLL approveBLL = new ApproveBLL();
         lst = approveBLL.GetAllApproves(strHQL);
 
@@ -159,18 +159,18 @@ public partial class TTMakeWorkFlowForThirdPartInterface : System.Web.UI.Page
                 DataGrid3.DataSource = ds;
                 DataGrid3.DataBind();
 
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZBCCG + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "');</script>");
 
             }
             catch
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZBCSBJC + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "');</script>");
 
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZYCZSPJLBNXGLJC + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZYCZSPJLBNXGLJC").ToString().Trim() + "');</script>");
         }
 
         HL_WLRelatedDoc.NavigateUrl = "TTWLRelatedDoc.aspx?WLID=" + strWLID;
@@ -183,7 +183,7 @@ public partial class TTMakeWorkFlowForThirdPartInterface : System.Web.UI.Page
 
         strWLID = LB_WLID.Text.Trim();
 
-        strHQL = "from Approve as approve where approve.Type = '…Û∫À' and approve.RelatedID = " + strWLID;
+        strHQL = "from Approve as approve where approve.Type = '…Û∫À' and approve.RelatedID = " + strWLID; 
         ApproveBLL approveBLL = new ApproveBLL();
         lst = approveBLL.GetAllApproves(strHQL);
 
@@ -202,12 +202,12 @@ public partial class TTMakeWorkFlowForThirdPartInterface : System.Web.UI.Page
             }
             catch
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSCSBJC + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "');</script>");
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZYCZSPJLBNSCLJC + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZYCZSPJLBNSCLJC").ToString().Trim() + "');</script>");
         }
 
     }
@@ -489,7 +489,7 @@ public partial class TTMakeWorkFlowForThirdPartInterface : System.Web.UI.Page
                 }
                 catch
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSCSBJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "');</script>");
                     return "";
                 }
             }

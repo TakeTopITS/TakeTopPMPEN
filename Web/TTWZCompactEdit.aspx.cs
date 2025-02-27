@@ -40,7 +40,7 @@ public partial class TTWZCompactEdit : System.Web.UI.Page
                 if (listCompact != null && listCompact.Count > 0)
                 {
                     //先增加附件
-                    string InDocument = "上传的附件路径";
+                    string InDocument = LanguageHandle.GetWord("ShangChuanDeFuJianLuJing").ToString().Trim();
 
                     WZCompact wZCompact = (WZCompact)listCompact[0];
                     wZCompact.ProjectCode = TXT_ProjectCode.Text;
@@ -64,9 +64,9 @@ public partial class TTWZCompactEdit : System.Web.UI.Page
             {
                 //增加
                 //先增加附件
-                string InDocument = "上传的附件路径";
+                string InDocument = LanguageHandle.GetWord("ShangChuanDeFuJianLuJing").ToString().Trim();
                 WZCompact wZCompact = new WZCompact();
-                wZCompact.CompactCode = "自动生成合同号01"; //TXT_CompactCode.Text.Trim();
+                wZCompact.CompactCode = LanguageHandle.GetWord("ZiDongShengChengGeTongHao01").ToString().Trim(); //TXT_CompactCode.Text.Trim();
                 wZCompact.ProjectCode = TXT_ProjectCode.Text;
                 wZCompact.SupplierCode = TXT_SupplierCode.Text;
                 wZCompact.CompactName = TXT_CompactName.Text;

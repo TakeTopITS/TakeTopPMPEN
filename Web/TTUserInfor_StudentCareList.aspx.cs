@@ -33,7 +33,7 @@ public partial class TTUserInfor_StudentCareList : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
         {
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
 
@@ -93,7 +93,7 @@ public partial class TTUserInfor_StudentCareList : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_StudentNumber.Text = "学生数：" + dtStudent.Rows.Count.ToString() ;
+        LB_StudentNumber.Text = LanguageHandle.GetWord("XueShengShu").ToString().Trim() + dtStudent.Rows.Count.ToString() ;
     }
 
 
@@ -120,7 +120,7 @@ public partial class TTUserInfor_StudentCareList : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_StudentNumber.Text = "学生数：" + dtStudent.Rows.Count.ToString() ;
+        LB_StudentNumber.Text = LanguageHandle.GetWord("XueShengShu").ToString().Trim() + dtStudent.Rows.Count.ToString() ;
     }
 
     protected void TreeView1_SelectedNodeChanged(object sender, EventArgs e)

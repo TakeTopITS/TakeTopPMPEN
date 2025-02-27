@@ -119,9 +119,9 @@ public partial class TTWZWearyList : System.Web.UI.Page
                 {
                     WZWeary wZWeary = (WZWeary)listWZWeary[0];
 
-                    if (wZWeary.Process == "生效")
+                    if (wZWeary.Process == LanguageHandle.GetWord("ShengXiao").ToString().Trim())
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDWSXZTBYXSC + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDWSXZTBYXSC").ToString().Trim() + "')", true);
                         return;
                     }
 
@@ -130,7 +130,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
                     //重新加载列表
                     DataWearyBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
                 }
 
             }
@@ -188,20 +188,20 @@ public partial class TTWZWearyList : System.Web.UI.Page
                 {
                     WZWeary wZWeary = (WZWeary)listWZWeary[0];
 
-                    if (wZWeary.Process != "编制")
+                    if (wZWeary.Process != LanguageHandle.GetWord("BianZhi").ToString().Trim())
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWBZZTBYXBP + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWBZZTBYXBP").ToString().Trim() + "')", true);
                         return;
                     }
 
-                    wZWeary.Process = "报批";
+                    wZWeary.Process = LanguageHandle.GetWord("BaoPi").ToString().Trim();
 
                     wZWearyBLL.UpdateWZWeary(wZWeary, wZWeary.WearyCode);
 
                     //重新加载列表
                     DataWearyBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTJCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJCG").ToString().Trim() + "')", true);
                 }
             }
             else if (cmdName == "execute")
@@ -217,7 +217,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
 
                     if (wZWeary.Process != "Approved")
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWPZZTBYXZX + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWPZZTBYXZX").ToString().Trim() + "')", true);
                         return;
                     }
 
@@ -251,14 +251,14 @@ public partial class TTWZWearyList : System.Web.UI.Page
                     wZWeary.WearyBalance = decimalTotalMoney;
                     wZWeary.RowNumber = intTotalNumber;
                     wZWeary.OverNumber = intTotalNumber;
-                    wZWeary.Process = "生效";
+                    wZWeary.Process = LanguageHandle.GetWord("ShengXiao").ToString().Trim();
 
                     wZWearyBLL.UpdateWZWeary(wZWeary, wZWeary.WearyCode);
 
                     //重新加载列表
                     DataWearyBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZXCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZXCG").ToString().Trim() + "')", true);
                 }
             }
             else if (cmdName == "calc")
@@ -272,9 +272,9 @@ public partial class TTWZWearyList : System.Web.UI.Page
                 {
                     WZWeary wZWeary = (WZWeary)listWZWeary[0];
 
-                    if (wZWeary.Process != "生效")
+                    if (wZWeary.Process != LanguageHandle.GetWord("ShengXiao").ToString().Trim())
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWSXZTBYXJS + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWSXZTBYXJS").ToString().Trim() + "')", true);
                         return;
                     }
 
@@ -302,7 +302,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
                     //重新加载列表
                     DataWearyBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJSCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJSCG").ToString().Trim() + "')", true);
                 }
             }
             else if (cmdName == "total")
@@ -327,13 +327,13 @@ public partial class TTWZWearyList : System.Web.UI.Page
             if (string.IsNullOrEmpty(strStoreRoom))
             {
                 string strNewProgress = HF_NewProcess.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择库别！');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择库别！');ControlStatusChange('" + strNewProgress + "');", true); 
                 return;
             }
             if (string.IsNullOrEmpty(strMainLeader))
             {
                 string strNewProgress = HF_NewProcess.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择主管领导！');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择主管领导！');ControlStatusChange('" + strNewProgress + "');", true); 
                 return;
             }
 
@@ -349,10 +349,10 @@ public partial class TTWZWearyList : System.Web.UI.Page
                 {
                     WZWeary wZWeary = (WZWeary)lstWeary[0];
 
-                    if (wZWeary.Process == "生效")
+                    if (wZWeary.Process == LanguageHandle.GetWord("ShengXiao").ToString().Trim())
                     {
                         string strNewProgress = HF_NewProcess.Value;
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('进度为生效状态，不允许修改！');ControlStatusChange('" + strNewProgress + "');", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('进度为生效状态，不允许修改！');ControlStatusChange('" + strNewProgress + "');", true); 
                         return;
                     }
 
@@ -376,7 +376,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
                 wZWeary.WearyBalance = 0;
                 wZWeary.OverNumber = 0;
                 wZWeary.Remark = strRemark;
-                wZWeary.Process = "编制";
+                wZWeary.Process = LanguageHandle.GetWord("BianZhi").ToString().Trim();
                 wZWeary.MainLeader = strMainLeader;
                 wZWeary.Marker = strUserCode;
 
@@ -389,7 +389,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
             //重新加载列表
             DataWearyBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatusCloseChange();", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatusCloseChange();", true); 
         }
         catch (Exception ex)
         { }
@@ -407,13 +407,13 @@ public partial class TTWZWearyList : System.Web.UI.Page
             if (string.IsNullOrEmpty(strStoreRoom))
             {
                 string strNewProgress = HF_NewProcess.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择库别！');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择库别！');ControlStatusChange('" + strNewProgress + "');", true); 
                 return;
             }
             if (string.IsNullOrEmpty(strMainLeader))
             {
                 string strNewProgress = HF_NewProcess.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择主管领导！');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择主管领导！');ControlStatusChange('" + strNewProgress + "');", true); 
                 return;
             }
 
@@ -428,7 +428,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
             wZWeary.WearyBalance = 0;
             wZWeary.OverNumber = 0;
             wZWeary.Remark = strRemark;
-            wZWeary.Process = "编制";
+            wZWeary.Process = LanguageHandle.GetWord("BianZhi").ToString().Trim();
             wZWeary.MainLeader = strMainLeader;
             wZWeary.Marker = strUserCode;
 
@@ -440,7 +440,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
             //重新加载列表
             DataWearyBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatusCloseChange();", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatusCloseChange();", true); 
         }
         catch (Exception ex)
         { }
@@ -457,13 +457,13 @@ public partial class TTWZWearyList : System.Web.UI.Page
             if (string.IsNullOrEmpty(strStoreRoom))
             {
                 string strNewProgress = HF_NewProcess.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择库别！');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择库别！');ControlStatusChange('" + strNewProgress + "');", true); 
                 return;
             }
             if (string.IsNullOrEmpty(strMainLeader))
             {
                 string strNewProgress = HF_NewProcess.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择主管领导！');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择主管领导！');ControlStatusChange('" + strNewProgress + "');", true); 
                 return;
             }
 
@@ -479,10 +479,10 @@ public partial class TTWZWearyList : System.Web.UI.Page
                 {
                     WZWeary wZWeary = (WZWeary)lstWeary[0];
 
-                    if (wZWeary.Process == "生效")
+                    if (wZWeary.Process == LanguageHandle.GetWord("ShengXiao").ToString().Trim())
                     {
                         string strNewProgress = HF_NewProcess.Value;
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('进度为生效状态，不允许修改！');ControlStatusChange('" + strNewProgress + "');", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('进度为生效状态，不允许修改！');ControlStatusChange('" + strNewProgress + "');", true); 
                         return;
                     }
 
@@ -497,14 +497,14 @@ public partial class TTWZWearyList : System.Web.UI.Page
             {
                 //增加
                 string strNewProgress = HF_NewProcess.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要修改的积压列表！');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要修改的积压列表！');ControlStatusChange('" + strNewProgress + "');", true); 
                 return;
             }
 
             //重新加载列表
             DataWearyBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatusCloseChange();", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatusCloseChange();", true); 
         }
         catch (Exception ex)
         { }
@@ -537,7 +537,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
             if (!ShareClass.CheckIsNumber(strYear))
             {
                 string strNewProgress = HF_NewProcess.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('统计年份必须为整数！');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('统计年份必须为整数！');ControlStatusChange('" + strNewProgress + "');", true); 
                 return;
             }
 
@@ -583,13 +583,13 @@ public partial class TTWZWearyList : System.Web.UI.Page
                 //重新加载列表
                 DataWearyBinder();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('统计完成！');ControlStatusCloseChange();", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('统计完成！');ControlStatusCloseChange();", true); 
             }
         }
         else
         {
             string strNewProgress = HF_NewProcess.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择积压单！');ControlStatusChange('" + strNewProgress + "');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择积压单！');ControlStatusChange('" + strNewProgress + "');", true); 
             return;
         }
     }
@@ -614,12 +614,12 @@ public partial class TTWZWearyList : System.Web.UI.Page
 
             //查询积压计划
             string strSelectWearyHQL = string.Format(@"select * from T_WZWeary where WearyCode in ({0})
-                        and Process = '生效'", strWhereWearyCode);
+                        and Process = '生效'", strWhereWearyCode); 
             DataTable dtSelectWeary = ShareClass.GetDataSetFromSql(strSelectWearyHQL, "SelectWeary").Tables[0];
 
             //文件名：《〈积压编号〉＋号积压计划》
 
-            Export3Excel(dtSelectWeary, "进度为生效的积压计划");
+            Export3Excel(dtSelectWeary, "进度为生效的积压计划"); 
 
             string strNewProgress = HF_NewProcess.Value;
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "ControlStatusChange('" + strNewProgress + "');", true);
@@ -628,7 +628,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
         else
         {
             string strNewProgress = HF_NewProcess.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要导出的积压列表！');ControlStatusChange('" + strNewProgress + "');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要导出的积压列表！');ControlStatusChange('" + strNewProgress + "');", true); 
             return;
         }
     }
@@ -653,7 +653,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
 
             //查询积压计划
             //            string strSelectWearyHQL = string.Format(@"select * from T_WZWeary where WearyCode in ({0})
-            //                        and Process = '生效'", strWhereWearyCode);
+            //                        and Process = '生效'", strWhereWearyCode); 
             //            DataTable dtSelectWeary = ShareClass.GetDataSetFromSql(strSelectWearyHQL, "SelectWeary").Tables[0];
 
 
@@ -661,7 +661,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
             string strSelectWearyDetailHQL = string.Format(@"select s.* from T_WZWeary w
                         left join T_WZStore s on w.WearyCode = s.WearyCode
                         where w.WearyCode in ({0})
-                        and w.Process = '生效'", strWhereWearyCode);
+                        and w.Process = '生效'", strWhereWearyCode); 
             DataTable dtSelectWearyDetail = ShareClass.GetDataSetFromSql(strSelectWearyDetailHQL, "SelectWearyDetail").Tables[0];
 
             //文件名：《〈积压编号〉＋号积压计划》、《〈积压编号〉＋号积压计划明细
@@ -670,7 +670,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
 
             //Export3Excel(dtSelectWeary, "进度为生效的积压计划");
 
-            Export3Excel(dtSelectWearyDetail, "积压计划明细");
+            Export3Excel(dtSelectWearyDetail, "积压计划明细"); 
 
             string strNewProgress = HF_NewProcess.Value;
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "ControlStatusChange('" + strNewProgress + "');", true);
@@ -678,7 +678,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
         else
         {
             string strNewProgress = HF_NewProcess.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要导出的积压列表！');ControlStatusChange('" + strNewProgress + "');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要导出的积压列表！');ControlStatusChange('" + strNewProgress + "');", true); 
             return;
         }
     }
@@ -708,7 +708,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
             DataTable dtSelectWeary = ShareClass.GetDataSetFromSql(strSelectWearyHQL, "SelectWeary").Tables[0];
 
             //文件名：《〈积压编号〉＋号积压计划》
-            Export3Excel(dtSelectWeary, "进度为完成的积压计划");
+            Export3Excel(dtSelectWeary, "进度为完成的积压计划"); 
 
             string strNewProgress = HF_NewProcess.Value;
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "ControlStatusChange('" + strNewProgress + "');", true);
@@ -716,7 +716,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
         else
         {
             string strNewProgress = HF_NewProcess.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要导出的积压列表！');ControlStatusChange('" + strNewProgress + "');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要导出的积压列表！');ControlStatusChange('" + strNewProgress + "');", true); 
             return;
         }
     }
@@ -754,7 +754,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
             //文件名：《〈积压编号〉＋号积压计划》、《〈积压编号〉＋号积压计划发料单》
             //Export3Excel(dtSelectWeary, "进度为完成的积压计划");
 
-            Export3Excel(dtSelectSend, "积压计划发料单");
+            Export3Excel(dtSelectSend, "积压计划发料单"); 
 
             string strNewProgress = HF_NewProcess.Value;
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "ControlStatusChange('" + strNewProgress + "');", true);
@@ -762,7 +762,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
         else
         {
             string strNewProgress = HF_NewProcess.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要导出的积压列表！');ControlStatusChange('" + strNewProgress + "');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要导出的积压列表！');ControlStatusChange('" + strNewProgress + "');", true); 
             return;
         }
     }
@@ -825,7 +825,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
         string strEditWearyCode = HF_NewWearyCode.Value;
         if (string.IsNullOrEmpty(strEditWearyCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDJYLB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDJYLB").ToString().Trim() + "')", true);
             return;
         }
 
@@ -857,7 +857,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
         string strEditWearyCode = HF_NewWearyCode.Value;
         if (string.IsNullOrEmpty(strEditWearyCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDJYLB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDJYLB").ToString().Trim() + "')", true);
             return;
         }
 
@@ -868,9 +868,9 @@ public partial class TTWZWearyList : System.Web.UI.Page
         {
             WZWeary wZWeary = (WZWeary)listWZWeary[0];
 
-            if (wZWeary.Process == "生效")
+            if (wZWeary.Process == LanguageHandle.GetWord("ShengXiao").ToString().Trim())
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDWSXZTBYXSC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDWSXZTBYXSC").ToString().Trim() + "')", true);
                 return;
             }
 
@@ -880,7 +880,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
             DataWearyBinder();
 
             string strNewProgress = HF_NewProcess.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "');ControlStatusCloseChange();", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "');ControlStatusCloseChange();", true);
         }
         else
         {
@@ -896,7 +896,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
         string strEditWearyCode = HF_NewWearyCode.Value;
         if (string.IsNullOrEmpty(strEditWearyCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDJYLB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDJYLB").ToString().Trim() + "')", true);
             return;
         }
 
@@ -912,7 +912,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
         string strEditWearyCode = HF_NewWearyCode.Value;
         if (string.IsNullOrEmpty(strEditWearyCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDJYLB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDJYLB").ToString().Trim() + "')", true);
             return;
         }
 
@@ -924,21 +924,21 @@ public partial class TTWZWearyList : System.Web.UI.Page
             WZWeary wZWeary = (WZWeary)listWZWeary[0];
 
             string strNewProgress = HF_NewProcess.Value;
-            if (wZWeary.Process != "编制")
+            if (wZWeary.Process != LanguageHandle.GetWord("BianZhi").ToString().Trim())
             {
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWBZZTBYXBP + "');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWBZZTBYXBP").ToString().Trim() + "');ControlStatusChange('" + strNewProgress + "');", true);
                 return;
             }
 
-            wZWeary.Process = "报批";
+            wZWeary.Process = LanguageHandle.GetWord("BaoPi").ToString().Trim();
 
             wZWearyBLL.UpdateWZWeary(wZWeary, wZWeary.WearyCode);
 
             //重新加载列表
             DataWearyBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTJCG + "');ControlStatusCloseChange();", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJCG").ToString().Trim() + "');ControlStatusCloseChange();", true);
         }
     }
 
@@ -949,7 +949,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
         string strEditWearyCode = HF_NewWearyCode.Value;
         if (string.IsNullOrEmpty(strEditWearyCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDJYLB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDJYLB").ToString().Trim() + "')", true);
             return;
         }
 
@@ -963,7 +963,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
             string strNewProgress = HF_NewProcess.Value;
             if (wZWeary.Process != "Approved")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWPZZTBYXZX + "');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWPZZTBYXZX").ToString().Trim() + "');ControlStatusChange('" + strNewProgress + "');", true);
                 return;
             }
 
@@ -997,14 +997,14 @@ public partial class TTWZWearyList : System.Web.UI.Page
             wZWeary.WearyBalance = decimalTotalMoney;
             wZWeary.RowNumber = intTotalNumber;
             wZWeary.OverNumber = intTotalNumber;
-            wZWeary.Process = "生效";
+            wZWeary.Process = LanguageHandle.GetWord("ShengXiao").ToString().Trim();
 
             wZWearyBLL.UpdateWZWeary(wZWeary, wZWeary.WearyCode);
 
             //重新加载列表
             DataWearyBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZXCG + "');ControlStatusCloseChange();", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZXCG").ToString().Trim() + "');ControlStatusCloseChange();", true);
         }
         else
         {
@@ -1020,7 +1020,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
         string strEditWearyCode = HF_NewWearyCode.Value;
         if (string.IsNullOrEmpty(strEditWearyCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDJYLB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDJYLB").ToString().Trim() + "')", true);
             return;
         }
 
@@ -1032,9 +1032,9 @@ public partial class TTWZWearyList : System.Web.UI.Page
             WZWeary wZWeary = (WZWeary)listWZWeary[0];
 
             string strNewProgress = HF_NewProcess.Value;
-            if (wZWeary.Process != "生效")
+            if (wZWeary.Process != LanguageHandle.GetWord("ShengXiao").ToString().Trim())
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWSXZTBYXJS + "');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWSXZTBYXJS").ToString().Trim() + "');ControlStatusChange('" + strNewProgress + "');", true);
                 return;
             }
 
@@ -1062,7 +1062,7 @@ public partial class TTWZWearyList : System.Web.UI.Page
             //重新加载列表
             DataWearyBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJSCG + "');ControlStatusCloseChange();", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJSCG").ToString().Trim() + "');ControlStatusCloseChange();", true);
         }
         else
         {

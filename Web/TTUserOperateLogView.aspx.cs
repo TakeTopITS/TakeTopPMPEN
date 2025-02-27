@@ -34,7 +34,7 @@ public partial class TTUserOperateLogView : System.Web.UI.Page
 
                 strOperateTime = Request.QueryString["OperateTime"].Trim();
 
-                LB_ReportName.Text = Resources.lang.ChengYuan + "£º " + strUserCode + " " + strUserName + " " + Resources.lang.CaoZuoRiZhiBaoBiao;
+                LB_ReportName.Text = LanguageHandle.GetWord("ChengYuan").ToString().Trim() + "£º " + strUserCode + " " + strUserName + " " + LanguageHandle.GetWord("CaoZuoRiZhiBaoBiao").ToString().Trim();
 
                 DLC_BeginDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 DLC_EndDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
@@ -53,7 +53,7 @@ public partial class TTUserOperateLogView : System.Web.UI.Page
                 DataList1.DataSource = ds;
                 DataList1.DataBind();
 
-                LB_QueryScope.Text = Resources.lang.ShiJian + DateTime.Parse(DLC_BeginDate.Text).ToString("yyyyMMdd");
+                LB_QueryScope.Text = LanguageHandle.GetWord("ShiJian").ToString().Trim() + DateTime.Parse(DLC_BeginDate.Text).ToString("yyyyMMdd");
             }
             catch
             {
@@ -77,7 +77,7 @@ public partial class TTUserOperateLogView : System.Web.UI.Page
         DataList1.DataSource = ds;
         DataList1.DataBind();
 
-        LB_QueryScope.Text = Resources.lang.ZZSJSy;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZSJSy").ToString().Trim();
     }
 
 
@@ -101,7 +101,7 @@ public partial class TTUserOperateLogView : System.Web.UI.Page
         DataList1.DataBind();
 
 
-        LB_QueryScope.Text = Resources.lang.KaiShiRiQi + ":" + strStartDate + Resources.lang.JieShuRiQi + ":" + strEndDate;
+        LB_QueryScope.Text = LanguageHandle.GetWord("KaiShiRiQi").ToString().Trim() + ":" + strStartDate + LanguageHandle.GetWord("JieShuRiQi").ToString().Trim() + ":" + strEndDate;
     }
 
 }

@@ -25,7 +25,7 @@ public partial class TTSuperWorkPlanMain : System.Web.UI.Page
 
         strUserCode = Session["UserCode"].ToString();
 
-        //this.Title = Resources.lang.Project + strProjectID + " " + strProjectName + " 的实施计划（全局管理）！";
+        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + strProjectName + "的实施计划（全局管理）！";
     }
 
 

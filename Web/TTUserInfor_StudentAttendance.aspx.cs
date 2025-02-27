@@ -173,7 +173,7 @@ public partial class TTUserInfor_StudentAttendance : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            lblMsg.Text = string.Format("<span style='color:red' >导入时出现以下错误: {0}!</span>", ex.Message);
+            lblMsg.Text = string.Format(LanguageHandle.GetWord("spanstylecolorredDaoRuShiChuXi").ToString().Trim(), ex.Message);
         }
 
     }
@@ -193,25 +193,25 @@ public partial class TTUserInfor_StudentAttendance : System.Web.UI.Page
             lineNumber++;
             try
             {
-                string strStudentCode = ShareClass.ObjectToString(row["学生编码"]);
+                string strStudentCode = ShareClass.ObjectToString(row[LanguageHandle.GetWord("XueShengBianMa").ToString().Trim()]);
                 if (string.IsNullOrEmpty(strStudentCode))
                 {
-                    resultMsg += string.Format("第{0}行，学生编码不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangXueShengBianMaBuNengWei").ToString().Trim(), lineNumber);
                     continue;
                 }
-                string strStudentName = ShareClass.ObjectToString(row["学生姓名"]);
+                string strStudentName = ShareClass.ObjectToString(row[LanguageHandle.GetWord("XueShengXingMing").ToString().Trim()]);
                 if (string.IsNullOrEmpty(strStudentName))
                 {
-                    resultMsg += string.Format("第{0}行，学生姓名不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangXueShengXingMingBuNengW").ToString().Trim(), lineNumber);
                     continue;
                 }
 
 
                 //日期
-                string strPayMoney = ShareClass.ObjectToString(row["日期"]);
+                string strPayMoney = ShareClass.ObjectToString(row[LanguageHandle.GetWord("RiJi").ToString().Trim()]);
                 if (string.IsNullOrEmpty(strPayMoney))
                 {
-                    resultMsg += string.Format("第{0}行，日期不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangRiJiBuNengWeiKongbr").ToString().Trim(), lineNumber);
                     continue;
                 }
                 
@@ -219,7 +219,7 @@ public partial class TTUserInfor_StudentAttendance : System.Web.UI.Page
             }
             catch (Exception ex)
             {
-                lblMsg.Text = string.Format("<span style='color:red' >导入时出现以下错误: {0}!</span>", ex.Message);
+                lblMsg.Text = string.Format(LanguageHandle.GetWord("spanstylecolorredDaoRuShiChuXi").ToString().Trim(), ex.Message);
             }
 
         }
@@ -252,11 +252,11 @@ public partial class TTUserInfor_StudentAttendance : System.Web.UI.Page
             
 
             lineNumber++;
-            strStudentCode = ShareClass.ObjectToString(row["学生编码"]);
-            strStudentName = ShareClass.ObjectToString(row["学生姓名"]);
-            strAttendanceTime = ShareClass.ObjectToString(row["日期"]);
+            strStudentCode = ShareClass.ObjectToString(row[LanguageHandle.GetWord("XueShengBianMa").ToString().Trim()]);
+            strStudentName = ShareClass.ObjectToString(row[LanguageHandle.GetWord("XueShengXingMing").ToString().Trim()]);
+            strAttendanceTime = ShareClass.ObjectToString(row[LanguageHandle.GetWord("RiJi").ToString().Trim()]);
 
-            strIsStudy = ShareClass.ObjectToString(row["是否上学"]);
+            strIsStudy = ShareClass.ObjectToString(row[LanguageHandle.GetWord("ShiFouShangXue").ToString().Trim()]);
 
             ProjectMemberStudentAttendance projectMemberStudentAttendance = new ProjectMemberStudentAttendance();
             projectMemberStudentAttendance.StudentCode = strStudentCode;
@@ -274,11 +274,11 @@ public partial class TTUserInfor_StudentAttendance : System.Web.UI.Page
         {
             if (successCount == dtExcel.Rows.Count)
             {
-                resultMsg += string.Format("<br/>已成功导入 {0} 条数据", successCount);
+                resultMsg += string.Format(LanguageHandle.GetWord("brYiChengGongDaoRu0TiaoShuJu").ToString().Trim(), successCount);
             }
             else
             {
-                resultMsg += string.Format("<br/>已成功导入 {0} 条数据， 共有 {1} 条数据验证失败", successCount, dtExcel.Rows.Count - successCount);
+                resultMsg += string.Format(LanguageHandle.GetWord("brYiChengGongDaoRu0TiaoShuJuGo").ToString().Trim(), successCount, dtExcel.Rows.Count - successCount);
             }
 
             //重新加载列表
@@ -288,7 +288,7 @@ public partial class TTUserInfor_StudentAttendance : System.Web.UI.Page
         }
         else
         {
-            resultMsg += string.Format("<br/>未导入数据， 共有 {0} 条数据验证失败", dtExcel.Rows.Count - successCount);
+            resultMsg += string.Format(LanguageHandle.GetWord("brWeiDaoRuShuJuGongYou0TiaoShu").ToString().Trim(), dtExcel.Rows.Count - successCount);
         }
 
         return false;

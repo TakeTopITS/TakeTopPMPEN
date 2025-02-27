@@ -38,7 +38,7 @@ public partial class TTProRelatedUserSummary : System.Web.UI.Page
         lst = projectBLL.GetAllProjects(strHQL);
         Project project = (Project)lst[0];
 
-        //this.Title = Resources.lang.Project + strProjectID + " " + project.ProjectName + "的项目成员";
+        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + project.ProjectName + "的项目成员";
 
 
        if (Page.IsPostBack != true)

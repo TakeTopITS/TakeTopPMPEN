@@ -27,7 +27,7 @@ public partial class TakeTopSiteLeft : System.Web.UI.Page
         {
             if (strHomeModuleName == "" | strHomeModuleName == null)
             {
-                strHomeModuleName = Resources.lang.HomePage;
+                strHomeModuleName = LanguageHandle.GetWord("HomePage").ToString().Trim();
             }
 
             LB_HomeModuleName.Text = strHomeModuleName;
@@ -210,7 +210,7 @@ public partial class TakeTopSiteLeft : System.Web.UI.Page
                     {
                         if (strMsg != "")
                         {
-                            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSTRMSG + "');</script>");
+                            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSTRMSG").ToString().Trim() + "');</script>");
 
                             strHQL = "Insert Into T_UserLoginManageMsgRelatedUser(LoginID,UserCode,UserName)";
                             strHQL += " Values(" + strLoginID + ",'" + strUserCode + "','" + strUserName + "')";
@@ -227,7 +227,7 @@ public partial class TakeTopSiteLeft : System.Web.UI.Page
                             ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_UserLoginManage");
                             if (ds.Tables[0].Rows.Count == 0)
                             {
-                                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSTRMSG + "');</script>");
+                                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSTRMSG").ToString().Trim() + "');</script>");
 
                                 strHQL = "Insert Into T_UserLoginManageMsgRelatedUser(LoginID,UserCode,UserName)";
                                 strHQL += " Values(" + strLoginID + ",'" + strUserCode + "','" + strUserName + "')";

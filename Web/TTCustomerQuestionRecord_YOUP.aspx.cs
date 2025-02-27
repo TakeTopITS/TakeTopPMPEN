@@ -87,8 +87,8 @@ public partial class TTCustomerQuestionRecord_YOUP : System.Web.UI.Page
         TreeNode node3 = new TreeNode();
         TreeNode node4 = new TreeNode();
 
-        node1.Text = "<B>客户服务需求列表</B>";
-        node1.Target = "客户服务需求列表";
+        node1.Text = LanguageHandle.GetWord("BKeHuFuWuXuQiuLieBiaoB").ToString().Trim();
+        node1.Target = LanguageHandle.GetWord("KeHuFuWuXuQiuLieBiao").ToString().Trim();
         node1.Expanded = false;
         TreeView1.Nodes.Add(node1);
 
@@ -303,7 +303,7 @@ public partial class TTCustomerQuestionRecord_YOUP : System.Web.UI.Page
 
         if (TB_Company.Text.Trim() == "" | TB_ContactPerson.Text.Trim() == "" | TB_PhoneNumber.Text.Trim() == "" | strQuestion == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSDMXMDH1JBZLDBNWKJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSDMXMDH1JBZLDBNWKJC").ToString().Trim()+"')", true);
         }
         else
         {
@@ -368,11 +368,11 @@ public partial class TTCustomerQuestionRecord_YOUP : System.Web.UI.Page
                     InitialCustomerQuestionTree(strRelatedCustomerCode);
                 }
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTJCG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTJCG").ToString().Trim()+"')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTJSBJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTJSBJC").ToString().Trim()+"')", true);
             }
         }
     }
@@ -401,7 +401,7 @@ public partial class TTCustomerQuestionRecord_YOUP : System.Web.UI.Page
 
         if (TB_Company.Text.Trim() == "" | TB_ContactPerson.Text.Trim() == "" | TB_PhoneNumber.Text.Trim() == "" | strQuestion == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSDMXMDH1JBZLDBNWKJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSDMXMDH1JBZLDBNWKJC").ToString().Trim()+"')", true);
         }
         else
         {
@@ -458,16 +458,16 @@ public partial class TTCustomerQuestionRecord_YOUP : System.Web.UI.Page
                         InitialCustomerQuestionTree(strRelatedCustomerCode);
                     }
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSBWTMYSLZCKYXGJC+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSBWTMYSLZCKYXGJC").ToString().Trim()+"')", true);
                 }
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCWXGSBJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCWXGSBJC").ToString().Trim()+"')", true);
             }
         }
     }
@@ -537,16 +537,16 @@ public partial class TTCustomerQuestionRecord_YOUP : System.Web.UI.Page
                     InitialCustomerQuestionTree(strRelatedCustomerCode);
                 }
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSBWTMYBSLCKYSCJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSBWTMYBSLCKYSCJC").ToString().Trim()+"')", true);
             }
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCWSCSBJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCWSCSBJC").ToString().Trim()+"')", true);
         }
     }
 
@@ -616,14 +616,14 @@ public partial class TTCustomerQuestionRecord_YOUP : System.Web.UI.Page
 
             //推送消息给受理人
             Msg msg = new Msg();
-            string strMsg = Resources.lang.FuWuXuQiu + ":" + customerQuestion.Question.Trim() + "," + Resources.lang.ZZYaoNiChuLi;
+            string strMsg = LanguageHandle.GetWord("FuWuXuQiu").ToString().Trim() + ":" + customerQuestion.Question.Trim() + "," + LanguageHandle.GetWord("ZZYaoNiChuLi").ToString().Trim();
             msg.SendMSM("Message",strOperatorCode, strMsg, strUserCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZDCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZDCG").ToString().Trim()+"')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZDSBJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZDSBJC").ToString().Trim()+"')", true);
         }
     }
 
@@ -645,7 +645,7 @@ public partial class TTCustomerQuestionRecord_YOUP : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Document as document where document.RelatedType = '客服' and document.RelatedID = " + strQuestionID;
+        strHQL = "from Document as document where document.RelatedType = '客服' and document.RelatedID = " + strQuestionID; 
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);

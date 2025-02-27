@@ -37,11 +37,11 @@ public partial class TTCollaborationView : System.Web.UI.Page
         if (lst.Count > 0)
         {
             Collaboration collaboration = (Collaboration)lst[0];
-            //this.Title = "协作： " + strCoID + " " + collaboration.CollaborationName.Trim() + " 详细内容!";
+            //this.Title = "协作：" + strCoID + " " + collaboration.CollaborationName.Trim() + " 详细内容!";
         }
         else
         {
-            Response.Write("此协作不存在，可能已被删除,请检查!");
+            Response.Write(LanguageHandle.GetWord("CiXieZuoBuCunZaiKeNengYiBeiSha").ToString().Trim());
         }
     }
 }

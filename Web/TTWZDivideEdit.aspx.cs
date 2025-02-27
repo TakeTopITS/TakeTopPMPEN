@@ -36,13 +36,13 @@ public partial class TTWZDivideEdit : System.Web.UI.Page
             strDLCode = strDLCode.EndsWith(",") ? strDLCode.TrimEnd(',') : strDLCode;
             if (string.IsNullOrEmpty(strDivideType))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZYLBBNWKBC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZYLBBNWKBC").ToString().Trim()+"')", true);
                 return;
             }
 
             if (string.IsNullOrEmpty(strDLCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDLDMBNWKBC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDLDMBNWKBC").ToString().Trim()+"')", true);
                 return;
             }
 
@@ -67,7 +67,7 @@ public partial class TTWZDivideEdit : System.Web.UI.Page
                 int intTypeRowNumber = int.Parse(dtCheckDivide.Rows[0]["RowNumber"].ToString());
                 if (intTypeRowNumber > 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZYLBYCZWZF+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZYLBYCZWZF").ToString().Trim()+"')", true);
                     return;
                 }
 
@@ -80,7 +80,7 @@ public partial class TTWZDivideEdit : System.Web.UI.Page
                     int intDLRowNumber = int.Parse(dtCheckDLDivide.Rows[0]["RowNumber"].ToString());
                     if (intDLRowNumber > 0)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSDLARRDLCODEIYCZWZF+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSDLARRDLCODEIYCZWZF").ToString().Trim()+"')", true);
                         return;
                     }
                 }

@@ -47,7 +47,7 @@ public partial class TTMeetingView : System.Web.UI.Page
             }
             else
             {
-                Response.Write("此会议资料不存在，可能已被删除，请检查！");
+                Response.Write(LanguageHandle.GetWord("CiHuiYiZiLiaoBuCunZaiKeNengYiB").ToString().Trim());
             }
         }
     }  

@@ -61,22 +61,22 @@ public partial class TTWZProjectRepleAdd : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strProjectName))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXMMCBYXWKBC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXMMCBYXWKBC").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strProjectName))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXMMCBNBHFFZF+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXMMCBNBHFFZF").ToString().Trim()+"')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strProjectManager))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXMJLBYXWKBC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXMJLBYXWKBC").ToString().Trim()+"')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strStartTime))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZKGRBYXWKBC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZKGRBYXWKBC").ToString().Trim()+"')", true);
                 return;
             }
 
@@ -93,50 +93,50 @@ public partial class TTWZProjectRepleAdd : System.Web.UI.Page
                 if (projectList != null && projectList.Count > 0)
                 {
                     WZProject wZProject = (WZProject)projectList[0];
-                    if (wZProject.Progress == "立项")
+                    if (wZProject.Progress == LanguageHandle.GetWord("LiXiang").ToString().Trim())
                     {
-                        if (wZProject.PowerPurchase == "有")
+                        if (wZProject.PowerPurchase == LanguageHandle.GetWord("You").ToString().Trim())
                         {
                             //if (string.IsNullOrEmpty(strStoreRoom))
                             //{
-                            //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZKBBYXWKBC+"')", true);
+                            //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZKBBYXWKBC").ToString().Trim()+"')", true);
                             //    return;
                             //}
                             //if (string.IsNullOrEmpty(strDelegateAgent))
                             //{
-                            //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZWTDLRBYXWKBC+"')", true);
+                            //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZWTDLRBYXWKBC").ToString().Trim()+"')", true);
                             //    return;
                             //}
                             //if (string.IsNullOrEmpty(strPurchaseManager))
                             //{
-                            //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCGJLBYXWKBC+"')", true);
+                            //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCGJLBYXWKBC").ToString().Trim()+"')", true);
                             //    return;
                             //}
                             //if (string.IsNullOrEmpty(strPurchaseEngineer))
                             //{
-                            //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCGGCSBYXWKBC+"')", true);
+                            //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCGGCSBYXWKBC").ToString().Trim()+"')", true);
                             //    return;
                             //}
                             //if (string.IsNullOrEmpty(strContracter))
                             //{
-                            //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZHTYBYXWKBC+"')", true);
+                            //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZHTYBYXWKBC").ToString().Trim()+"')", true);
                             //    return;
                             //}
                             //if (string.IsNullOrEmpty(strChecker))
                             //{
-                            //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCJYBYXWKBC+"')", true);
+                            //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCJYBYXWKBC").ToString().Trim()+"')", true);
                             //    return;
                             //}
                             //if (string.IsNullOrEmpty(strSafekeep))
                             //{
-                            //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBGYBYXWKBC+"')", true);
+                            //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBGYBYXWKBC").ToString().Trim()+"')", true);
                             //    return;
                             //}
                         }
                         else {
                             if (string.IsNullOrEmpty(strPurchaseEngineer))
                             {
-                                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCGGCSBYXWKBC+"')", true);
+                                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCGGCSBYXWKBC").ToString().Trim()+"')", true);
                                 return;
                             }
                         }
@@ -162,7 +162,7 @@ public partial class TTWZProjectRepleAdd : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBNBJLX+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBNBJLX").ToString().Trim()+"')", true);
                 return;
             }
 
@@ -235,7 +235,7 @@ public partial class TTWZProjectRepleAdd : System.Web.UI.Page
             TXT_Marker.Text = ShareClass.ObjectToString(drProject["MarkerName"]);
 
 
-            if (strPowerPurchase.Trim() == "有")
+            if (strPowerPurchase.Trim() == LanguageHandle.GetWord("You").ToString().Trim())
             {
                 //DDL_StoreRoom.Enabled = true;
                 //DDL_StoreRoom.BackColor = Color.CornflowerBlue;

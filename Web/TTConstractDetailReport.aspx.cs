@@ -130,28 +130,28 @@ public partial class TTConstractDetailReport : System.Web.UI.Page
         strConstractName = "%" + TB_ConstractName.Text.Trim() + "%";
 
 
-        strHQL = @"select c.PartA as '单位',
-                    c.ConstractCode as '合同号',
-                    COALESCE(i.InvoiceAmount,0) as '合同金额',
-                    COALESCE(p.PayableAccount,0) as '订货金额',
-                    COALESCE(r.PayableRecordAmount,0) as '国外进货成本',
-                    COALESCE(p.PayableAccount,0) as '国内进货成本',
-                    COALESCE(f.InnerEntryTax,0) as '进口关税',
-                    COALESCE(f.InnerAddedValueTax,0) as '进口增值税',
-                    COALESCE(p.PayOtherAccount,0) as '其他费用总额',
-                    COALESCE(r.HandlingCharge,0) as '银行手续费',
-                    COALESCE(p.OtherAccount,0) as '其他付费',
-                    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) as '应交增值税',
-                    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) * 12 / 100 as '应交地税',
-                    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 as '印花税',
-                    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 as '防洪费',
+        strHQL = @"select c.PartA as '单位', 
+                    c.ConstractCode as '合同号', 
+                    COALESCE(i.InvoiceAmount,0) as '合同金额', 
+                    COALESCE(p.PayableAccount,0) as '订货金额', 
+                    COALESCE(r.PayableRecordAmount,0) as '国外进货成本', 
+                    COALESCE(p.PayableAccount,0) as '国内进货成本', 
+                    COALESCE(f.InnerEntryTax,0) as '进口关税', 
+                    COALESCE(f.InnerAddedValueTax,0) as '进口增值税', 
+                    COALESCE(p.PayOtherAccount,0) as '其他费用总额', 
+                    COALESCE(r.HandlingCharge,0) as '银行手续费', 
+                    COALESCE(p.OtherAccount,0) as '其他付费', 
+                    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) as '应交增值税', 
+                    (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) * 12 / 100 as '应交地税', 
+                    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 as '印花税', 
+                    COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 as '防洪费', 
                     (COALESCE(i.InvoiceAmount,0)-COALESCE(r.PayableRecordAmount,0)-COALESCE(p.PayableAccount,0)-COALESCE(f.InnerEntryTax,0)-
                     COALESCE(f.InnerAddedValueTax,0)-COALESCE(p.PayOtherAccount,0)-COALESCE(r.HandlingCharge,0)-COALESCE(p.OtherAccount,0)-0)-
                     (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) -
                     (COALESCE(i.InvoiceAmount,0) / 117 * 17 -COALESCE(f.InnerAddedValueTax,0) - COALESCE(p.PayableAccount,0) / 117 * 17) * 12 / 100 -
                     COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000 - 
                     COALESCE(i.InvoiceAmount,0) / 117 * 100 * 3 / 10000
-                    as '合同利润'
+                    as '合同利润' 
                     from T_Constract c
                     left join 
                     (

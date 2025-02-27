@@ -35,7 +35,7 @@ public partial class TTWorkFlowInfoPathDataViewForBrowse : System.Web.UI.Page
         else
         {
             strXSNFile = Request.QueryString["XSNFile"];
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZJGXSNFILEWKJC + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGXSNFILEWKJC").ToString().Trim() + "');</script>");
             return;
         }
         LB_XSNFile.Text = strXSNFile;
@@ -96,7 +96,7 @@ public partial class TTWorkFlowInfoPathDataViewForBrowse : System.Web.UI.Page
         }
         catch
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZJGCGZLMBBCZQJC + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGCGZLMBBCZQJC").ToString().Trim() + "');</script>");
         }
     }
 

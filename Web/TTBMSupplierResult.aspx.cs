@@ -24,7 +24,7 @@ public partial class TTBMSupplierResult : System.Web.UI.Page
 
     protected void GetBMSupplierInfo(string strSupplierCode)
     {
-        lbl_CodePerson.Text = "个人帐号：" + strSupplierCode.Trim();
+        lbl_CodePerson.Text = LanguageHandle.GetWord("GeRenZhangHao").ToString().Trim() + strSupplierCode.Trim();
         if (strSupplierCode.Trim().Contains("-"))
         {
             strSupplierCode = strSupplierCode.Trim().Substring(0, strSupplierCode.Trim().IndexOf("-"));
@@ -131,7 +131,7 @@ public partial class TTBMSupplierResult : System.Web.UI.Page
     {
         if (strBidStatus.Trim().Equals("Y"))
         {
-            return "中标";
+            return "中标"; 
         }
         else if (strBidStatus.Trim().Equals("N"))
         {
@@ -139,7 +139,7 @@ public partial class TTBMSupplierResult : System.Web.UI.Page
         }
         else
         {
-            return "未开标";
+            return "未开标"; 
         }
     }
 
@@ -164,20 +164,20 @@ public partial class TTBMSupplierResult : System.Web.UI.Page
         IList lst = bMContractPreparationBLL.GetAllBMContractPreparations(strHQL);
         if (lst.Count > 0 && lst != null)
         {
-            return "合同已签订";
+            return "合同已签订"; 
         }
         else
         {
             if (strStatus.Trim().Equals("New"))
             {
-                return "合同洽谈新建";
+                return "合同洽谈新建"; 
             }
             else if (strStatus.Trim().Equals("Unqualified"))
             {
-                return "合同洽谈审核不合格";
+                return "合同洽谈审核不合格"; 
             }
             else
-                return "合同洽谈中";
+                return "合同洽谈中"; 
         }
     }
 

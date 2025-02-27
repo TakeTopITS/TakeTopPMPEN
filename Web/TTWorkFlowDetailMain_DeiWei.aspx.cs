@@ -48,6 +48,6 @@ public partial class TTWorkFlowDetailMain_DeiWei : System.Web.UI.Page
 
         strWLName = workFlow.WLName.Trim();
 
-        this.Title = Resources.lang.Workflow + ": " + strWLID + " " + strWLName + Resources.lang.ShenPi;
+        this.Title = LanguageHandle.GetWord("Workflow").ToString().Trim() + ": " + strWLID + " " + strWLName + LanguageHandle.GetWord("ShenPi").ToString().Trim();
     }
 }

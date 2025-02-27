@@ -61,7 +61,7 @@ public partial class TTProjectWorkFlowManageForAlone : System.Web.UI.Page
                 strHQL += " or (RelatedType = 'ExpenseApply' and RelatedID in (select ID from T_ExpenseApplyWL where RelatedID = " + strProjectID + "))";
                 strHQL += " or (RelatedType = 'ExpenseClaim' and RelatedID in (select ECID from T_ExpenseClaim where RelatedID = " + strProjectID + "))";
                 strHQL += " Or (RelatedType = 'Task' and RelatedID in (Select TaskID From T_ProjectTask Where ProjectID = " + strProjectID + "))";
-                strHQL += " Or (RelatedType = '风险' and RelatedID in (Select ID From T_ProjectRisk Where ProjectID = " + strProjectID + "))";
+                strHQL += "Or (RelatedType = '风险' and RelatedID in (Select ID From T_ProjectRisk Where ProjectID =" + strProjectID + "))"; 
                 strHQL += " Or (RelatedType = 'Requirement' and RelatedID in (Select ReqID From T_RelatedReq Where ProjectID = " + strProjectID + "))";
                 strHQL += " ) And Status not in ('Updating','Closed','CaseClosed'))";
                 strHQL += " And A.Status in ('InProgress','Reviewing','Signing','ReReview') ";
@@ -80,7 +80,7 @@ public partial class TTProjectWorkFlowManageForAlone : System.Web.UI.Page
                 strHQL += " or (RelatedType = 'ExpenseApply' and RelatedID in (select ID from T_ExpenseApplyWL where RelatedID = " + strProjectID + "))";
                 strHQL += " or (RelatedType = 'ExpenseClaim' and RelatedID in (select ECID from T_ExpenseClaim where RelatedID = " + strProjectID + "))";
                 strHQL += " Or (RelatedType = 'Task' and RelatedID in (Select TaskID From T_ProjectTask Where ProjectID = " + strProjectID + "))";
-                strHQL += " Or (RelatedType = '风险' and RelatedID in (Select ID From T_ProjectRisk Where ProjectID = " + strProjectID + "))";
+                strHQL += "Or (RelatedType = '风险' and RelatedID in (Select ID From T_ProjectRisk Where ProjectID =" + strProjectID + "))"; 
                 strHQL += " Or (RelatedType = 'Requirement' and RelatedID in (Select ReqID From T_RelatedReq Where ProjectID = " + strProjectID + "))";
                 strHQL += " ) And Status not in ('Updating','Closed','CaseClosed'))";
                 strHQL += " And A.Status in ('Approved','Rejected') ";
@@ -99,7 +99,7 @@ public partial class TTProjectWorkFlowManageForAlone : System.Web.UI.Page
                 strHQL += " or (workFlow.RelatedType = 'ExpenseApply' and workFlow.RelatedID in (select expenseApplyWL.ID from ExpenseApplyWL as expenseApplyWL where expenseApplyWL.RelatedID = " + strProjectID + "))";
                 strHQL += " or (workFlow.RelatedType = 'ExpenseClaim' and workFlow.RelatedID in (select expenseClaim.ECID from ExpenseClaim as expenseClaim where expenseClaim.RelatedID = " + strProjectID + "))";
                 strHQL += " or (workFlow.RelatedType = 'Task' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
-                strHQL += " or (workFlow.RelatedType = '风险' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";
+                strHQL += "or (workFlow.RelatedType = '风险' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))"; 
                 strHQL += " or (workFlow.RelatedType = 'Requirement' and workFlow.RelatedID in (select relatedReq from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
                 strHQL += " ) and workFlow.Status not in ('Updating','Closed','CaseClosed'))";
                 strHQL += " Order by workFlow.WLID DESC";
@@ -109,7 +109,7 @@ public partial class TTProjectWorkFlowManageForAlone : System.Web.UI.Page
                 SetWorkFlowRecordColor();
                 LB_Sql3.Text = strHQL;
 
-                LB_QueryScope.Text = Resources.lang.Project + strProjectID;
+                LB_QueryScope.Text = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID;
             }
             else
             {
@@ -120,7 +120,7 @@ public partial class TTProjectWorkFlowManageForAlone : System.Web.UI.Page
                 strHQL += " or (RelatedType = 'ExpenseApply' and RelatedID in (select ID from T_ExpenseApplyWL where RelatedID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")))";
                 strHQL += " or (RelatedType = 'ExpenseClaim' and RelatedID in (select ECID from T_ExpenseClaim where RelatedID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")))";
                 strHQL += "  Or (RelatedType = 'Task' and RelatedID in (Select TaskID From T_ProjectTask Where ProjectID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")))";
-                strHQL += "  Or (RelatedType = '风险' and RelatedID in (Select ID From T_ProjectRisk Where ProjectID in (Select ProjectID From T_RelatedUser  where UserCode = " + "'" + strUserCode + "'" + ")))";
+                strHQL += "  Or (RelatedType = '风险' and RelatedID in (Select ID From T_ProjectRisk Where ProjectID in (Select ProjectID From T_RelatedUser  where UserCode = " + "'" + strUserCode + "'" + ")))"; 
                 strHQL += "  Or (RelatedType = 'Requirement' and RelatedID in (Select ReqID From T_RelatedReq Where ProjectID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")))";
                 strHQL += " ) and Status not in ('Passed','Updating','Closed','CaseClosed'))";
                 strHQL += " And A.Status in ('InProgress','Reviewing','Signing','ReReview') ";
@@ -140,7 +140,7 @@ public partial class TTProjectWorkFlowManageForAlone : System.Web.UI.Page
                 strHQL += " or (RelatedType = 'ExpenseApply' and RelatedID in (select ID from T_ExpenseApplyWL where RelatedID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")))";
                 strHQL += " or (RelatedType = 'ExpenseClaim' and RelatedID in (select ECID from T_ExpenseClaim where RelatedID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")))";
                 strHQL += "  Or (RelatedType = 'Task' and RelatedID in (Select TaskID From T_ProjectTask Where ProjectID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")))";
-                strHQL += "  Or (RelatedType = '风险' and RelatedID in (Select ID From T_ProjectRisk Where ProjectID in (Select ProjectID From T_RelatedUser  where UserCode = " + "'" + strUserCode + "'" + ")))";
+                strHQL += "  Or (RelatedType = '风险' and RelatedID in (Select ID From T_ProjectRisk Where ProjectID in (Select ProjectID From T_RelatedUser  where UserCode = " + "'" + strUserCode + "'" + ")))"; 
                 strHQL += "  Or (RelatedType = 'Requirement' and RelatedID in (Select ReqID From T_RelatedReq Where ProjectID in (Select ProjectID From T_RelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")))";
                 strHQL += " ) and Status not in ('Updating','Closed','CaseClosed'))";
                 strHQL += " And A.Status in ('Approved','Rejected') ";
@@ -158,7 +158,7 @@ public partial class TTProjectWorkFlowManageForAlone : System.Web.UI.Page
                 strHQL += " or (workFlow.RelatedType = 'ExpenseApply' and workFlow.RelatedID in (select expenseApplyWL.ID from ExpenseApplyWL as expenseApplyWL where expenseApplyWL.RelatedID in  (Select relatedUser.ProjectID from RelatedUser as relatedUser where relatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";
                 strHQL += " or (workFlow.RelatedType = 'ExpenseClaim' and workFlow.RelatedID in (select expenseClaim.ECID from ExpenseClaim as expenseClaim where expenseClaim.RelatedID in  (Select relatedUser.ProjectID from RelatedUser as relatedUser where relatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";
                 strHQL += " or (workFlow.RelatedType = 'Task' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID in (Select relatedUser.ProjectID from RelatedUser as relatedUser where relatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";
-                strHQL += " or (workFlow.RelatedType = '风险' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID in (Select relatedUser.ProjectID from RelatedUser as relatedUser where relatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";
+                strHQL += " or (workFlow.RelatedType = '风险' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID in (Select relatedUser.ProjectID from RelatedUser as relatedUser where relatedUser.UserCode = " + "'" + strUserCode + "'" + ")))"; 
                 strHQL += " or (workFlow.RelatedType = 'Requirement' and workFlow.RelatedID in (select relatedReq from RelatedReq as relatedReq where relatedReq.ProjectID in (Select relatedUser.ProjectID from RelatedUser as relatedUser where relatedUser.UserCode = " + "'" + strUserCode + "'" + ")))";
                 strHQL += " ) and workFlow.Status not in ('Updating','Closed','CaseClosed'))";
                 strHQL += " Order by workFlow.WLID DESC";
@@ -168,7 +168,7 @@ public partial class TTProjectWorkFlowManageForAlone : System.Web.UI.Page
                 SetWorkFlowRecordColor();
                 LB_Sql3.Text = strHQL;
 
-                LB_QueryScope.Text = Resources.lang.XiangMu + ":" + Resources.lang.SuoYou;
+                LB_QueryScope.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + ":" + LanguageHandle.GetWord("SuoYou").ToString().Trim();
             }
         }
     }

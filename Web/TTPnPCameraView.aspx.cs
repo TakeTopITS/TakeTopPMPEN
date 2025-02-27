@@ -43,7 +43,7 @@ public partial class TTPnPCameraView : System.Web.UI.Page
             i.CameraPass,i.CreatorName,i.CreateTime,i.ID,i.CameraType from T_CameraInfo i 
             left join T_Department d on i.ForeignID = d.DepartCode and i.CameraType = 1
             left join T_Project p on i.ForeignID = cast(p.ProjectID as varchar(50)) and i.CameraType = 2
-            order by i.CreateTime desc");
+            order by i.CreateTime desc"); 
         DataTable dtCameraInfo = ShareClass.GetDataSetFromSql(strCameraInfoHQL, "strCameraInfoHQL").Tables[0];
 
         DG_CameraList.DataSource = dtCameraInfo;

@@ -78,7 +78,7 @@ public partial class TTWZCollectPrintList : System.Web.UI.Page
     private void DataCompactBander()
     {
         WZCompactBLL wZCompactBLL = new WZCompactBLL();
-        string strWZCompactHQL = string.Format("from WZCompact as wZCompact where Compacter = '{0}' and Progress = '²Ä¼ì' and CollectMoney > 0", strUserCode);
+        string strWZCompactHQL = string.Format("from WZCompact as wZCompact where Compacter = '{0}' and Progress = '²Ä¼ì' and CollectMoney > 0", strUserCode); 
         IList listCompact = wZCompactBLL.GetAllWZCompacts(strWZCompactHQL);
 
         DDL_Compact.DataSource = listCompact;
@@ -119,7 +119,7 @@ public partial class TTWZCollectPrintList : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZYDYDSLD + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZYDYDSLD").ToString().Trim() + "')", true);
             return;
         }
     }

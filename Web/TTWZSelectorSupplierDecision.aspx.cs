@@ -45,7 +45,7 @@ public partial class TTWZSelectorSupplierDecision : System.Web.UI.Page
 //                                                left join T_WZPurchase p on a.PurchaseCode = p.PurchaseCode
 //                                                left join T_WZSupplierApplyComment c on c.PurchaseCode = a.PurchaseCode
 //                                                and c.ExpertCode = a.SupplierCode
-//                                                where p.PurchaseCode = '{0}'", strPurchaseCode);
+//                                                where p.PurchaseCode = '{0}'", strPurchaseCode); 
 
 
 //        string strPurchaseHQL = string.Format(@"select p.*,c.ExpertCode,c.SupplierCode as SelectSupplierCode,c.Suggest,a.SumApplyMoney from T_WZSupplierApplyComment c
@@ -82,7 +82,7 @@ public partial class TTWZSelectorSupplierDecision : System.Web.UI.Page
 //                            left join T_WZPurchase p on a.PurchaseCode = p.PurchaseCode
 //                            left join T_WZSupplierApplyComment c on c.PurchaseCode = a.PurchaseCode
 //                            and c.ExpertCode = a.SupplierCode
-//                            where p.PurchaseCode = '{0}'", strPurchaseCode);
+//                            where p.PurchaseCode = '{0}'", strPurchaseCode); 
 
         string strPurchaseHQL = string.Format(@"select ps.*,COALESCE(t.SelectCount,0) as SelectCount from T_WZPurchaseSupplier ps
                                 left join 

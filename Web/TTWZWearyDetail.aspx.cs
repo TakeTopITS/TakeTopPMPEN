@@ -66,9 +66,9 @@ public partial class TTWZWearyDetail : System.Web.UI.Page
                 {
                     WZWeary wZWeary = (WZWeary)listWZWeary[0];
 
-                    if (wZWeary.Process != "报批")
+                    if (wZWeary.Process != LanguageHandle.GetWord("BaoPi").ToString().Trim())
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBWBPZTBNPZ+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBWBPZTBNPZ").ToString().Trim()+"')", true);
                         return;
                     }
 
@@ -79,7 +79,7 @@ public partial class TTWZWearyDetail : System.Web.UI.Page
                     //重新加载列表
                     DataWearyBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZPZCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZPZCG").ToString().Trim()+"')", true);
                 }
             }
         }

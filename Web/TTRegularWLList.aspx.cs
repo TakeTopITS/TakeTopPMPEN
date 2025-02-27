@@ -67,13 +67,13 @@ public partial class TTReqularWLList : System.Web.UI.Page
         WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
         WorkFlowTemplate workFlowTemplate = new WorkFlowTemplate();
 
-        node0.Text = "<table background='ImagesSkin/main_n_bj.jpg' border='0' cellpadding='0' cellspacing='0' width='165px'><tr><td style='width:165px;'><B><B> " + Resources.lang.CYLCSQ + "</B></td></tr></table>";
+        node0.Text = "<table background='ImagesSkin/main_n_bj.jpg' border='0' cellpadding='0' cellspacing='0' width='165px'><tr><td style='width:165px;'><B><B> " + LanguageHandle.GetWord("CYLCSQ").ToString().Trim() + "</B></td></tr></table>";
         node0.Target = "0";
         node0.Expanded = true;
         TreeView.Nodes.Add(node0);
 
         node1 = new TreeNode();
-        node1.Text = "<B>" + Resources.lang.CYLC + "</B>";
+        node1.Text = "<B>" + LanguageHandle.GetWord("CYLC").ToString().Trim() + "</B>";
         node1.Target = "1";
         node1.Expanded = true;
         node0.ChildNodes.Add(node1);
@@ -105,7 +105,7 @@ public partial class TTReqularWLList : System.Web.UI.Page
         }
 
         node2 = new TreeNode();
-        node2.Text = "<B>" + Resources.lang.ShenQingLeiXing + "</B>";
+        node2.Text = "<B>" + LanguageHandle.GetWord("ShenQingLeiXing").ToString().Trim() + "</B>";
         node2.Target = "1";
         node2.Expanded = true;
         node0.ChildNodes.Add(node2);
@@ -134,14 +134,14 @@ public partial class TTReqularWLList : System.Web.UI.Page
         }
 
         node3 = new TreeNode();
-        node3.Text = "<B>" + Resources.lang.BaoBiao + "</B>";
+        node3.Text = "<B>" + LanguageHandle.GetWord("BaoBiao").ToString().Trim() + "</B>";
         node3.Target = "1";
         node3.Expanded = true;
         node0.ChildNodes.Add(node3);
 
         node6 = new TreeNode();
 
-        node6.Text = "<A href=TTExpenseApplyWFView.aspx Target=Right>" + Resources.lang.FYSQHZ + "</a>";
+        node6.Text = "<A href=TTExpenseApplyWFView.aspx Target=Right>" + LanguageHandle.GetWord("FYSQHZ").ToString().Trim() + "</a>";
         node6.Target = "TTExpenseApplyWFView";
         node6.Expanded = true;
 
@@ -149,7 +149,7 @@ public partial class TTReqularWLList : System.Web.UI.Page
 
         node5 = new TreeNode();
 
-        node5.Text = "<A href=TTExpenseClaimView.aspx Target=Right>" + Resources.lang.FYBXHZ + "</a>";
+        node5.Text = "<A href=TTExpenseClaimView.aspx Target=Right>" + LanguageHandle.GetWord("FYBXHZ").ToString().Trim() + "</a>";
         node5.Target = "TTExpenseClaimView";
         node5.Expanded = true;
 

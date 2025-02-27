@@ -79,20 +79,20 @@ public partial class TTVisitRegistration_StudentEdit : System.Web.UI.Page
 
         if (string.IsNullOrEmpty(strVisitName))
         {
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBFRXMBNWKBC+"')", true);
-            Response.Write("<script>alert('"+Resources.lang.ZZBFRXMBNWKBC+"');</script>");
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBFRXMBNWKBC").ToString().Trim()+"')", true);
+            Response.Write("<script>alert('"+LanguageHandle.GetWord("ZZBFRXMBNWKBC").ToString().Trim()+"');</script>");
             return;
         }
         if (string.IsNullOrEmpty(strVisitCardName))
         {
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZLFRZJBNWKBC+"')", true);
-            Response.Write("<script>alert('"+Resources.lang.ZZLFRZJBNWKBC+"');</script>");
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZLFRZJBNWKBC").ToString().Trim()+"')", true);
+            Response.Write("<script>alert('"+LanguageHandle.GetWord("ZZLFRZJBNWKBC").ToString().Trim()+"');</script>");
             return;
         }
         if (string.IsNullOrEmpty(strReceiverName))
         {
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDRBNWKBC+"')", true);
-            Response.Write("<script>alert('"+Resources.lang.ZZJDRBNWKBC+"');</script>");
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDRBNWKBC").ToString().Trim()+"')", true);
+            Response.Write("<script>alert('"+LanguageHandle.GetWord("ZZJDRBNWKBC").ToString().Trim()+"');</script>");
             return;
         }
 
@@ -118,8 +118,8 @@ public partial class TTVisitRegistration_StudentEdit : System.Web.UI.Page
 
                 visitRegistration_StudentBLL.UpdateVisitRegistration_Student(visitRegistration_Student, visitRegistration_Student.ID);
 
-                Response.Write("<script>alert('"+Resources.lang.ZZBCCG+"');</script>");
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
+                Response.Write("<script>alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"');</script>");
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
             }
 
         }
@@ -138,8 +138,8 @@ public partial class TTVisitRegistration_StudentEdit : System.Web.UI.Page
 
             visitRegistration_StudentBLL.AddVisitRegistration_Student(visitRegistration_Student);
 
-            Response.Write("<script>alert('"+Resources.lang.ZZXZCG+"');</script>");
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZCG+"')", true);
+            Response.Write("<script>alert('"+LanguageHandle.GetWord("ZZXZCG").ToString().Trim()+"');</script>");
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZCG").ToString().Trim()+"')", true);
         }
 
         //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "LoadParentLit();", true);

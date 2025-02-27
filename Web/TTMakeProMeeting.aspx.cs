@@ -33,7 +33,7 @@ public partial class TTMakeProMeeting : System.Web.UI.Page
 
         LB_ProjectID.Text = strProjectID;
 
-        //this.Title = Resources.lang.Project + strProjectID + " " + strProjectName + " 的会议安排！";      
+        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + strProjectName + "的会议安排！";      
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
         {
@@ -132,7 +132,7 @@ public partial class TTMakeProMeeting : System.Web.UI.Page
                     {
                         if (dt.Rows[i]["UserCode"].ToString().Trim() == strUserCode)
                         {
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCCYYCZBNZFJRJC + "')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCYYCZBNZFJRJC").ToString().Trim() + "')", true);
                             return;
                         }
                     }
@@ -149,12 +149,12 @@ public partial class TTMakeProMeeting : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGCCYCZBNZFTJ + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCCYCZBNZFTJ").ToString().Trim() + "')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWXJLBNTJHYCY + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWXJLBNTJHYCY").ToString().Trim() + "')", true);
             }
         }
         catch
@@ -271,17 +271,17 @@ public partial class TTMakeProMeeting : System.Web.UI.Page
             LoadMeetingAttendant(strMeetingID);
             LoadMyCreatedMeetingList(strProjectID, strUserCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
 
          
             HL_RelatedDoc.Enabled = true;
             BT_Send.Enabled = true;
 
-            TB_Message.Text = "会议通知：" + strMeetingID + " " + meeting.Name.Trim() + "，" + meeting.Address.Trim() + "，主持人：" + meeting.Host.Trim() + ",召集人：" + meeting.Organizer.Trim() + "，请准时参加！";
+            TB_Message.Text = LanguageHandle.GetWord("HuiYiTongZhi").ToString().Trim() + strMeetingID + " " + meeting.Name.Trim() + "，" + meeting.Address.Trim() + LanguageHandle.GetWord("ZhuChiRen").ToString().Trim() + meeting.Host.Trim() + LanguageHandle.GetWord("ShaoJiRen").ToString().Trim() + meeting.Organizer.Trim() + LanguageHandle.GetWord("QingZhunShiCanJia").ToString().Trim();
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -353,13 +353,13 @@ public partial class TTMakeProMeeting : System.Web.UI.Page
 
             LoadMyCreatedMeetingList(strProjectID, strUserCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGGCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGGCG").ToString().Trim() + "')", true);
 
-            TB_Message.Text = "会议通知：" + strMeetingID + " " + meeting.Name.Trim() + "，" + meeting.Address.Trim() + "，主持人：" + meeting.Host.Trim() + ",召集人：" + meeting.Organizer.Trim() + "，请准时参加！";
+            TB_Message.Text = LanguageHandle.GetWord("HuiYiTongZhi").ToString().Trim() + strMeetingID + " " + meeting.Name.Trim() + "，" + meeting.Address.Trim() + LanguageHandle.GetWord("ZhuChiRen").ToString().Trim() + meeting.Host.Trim() + LanguageHandle.GetWord("ShaoJiRen").ToString().Trim() + meeting.Organizer.Trim() + LanguageHandle.GetWord("QingZhunShiCanJia").ToString().Trim();
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGGSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGGSBJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -488,7 +488,7 @@ public partial class TTMakeProMeeting : System.Web.UI.Page
 
                 LoadMeetingAttendant(strMeetingID);
 
-                TB_Message.Text = "你已被邀请参加会议：" + strMeetingID + " " + meeting.Name.Trim() + "，主持人：" + meeting.Host.Trim() + ",召集人：" + meeting.Organizer.Trim() + "，请准时参加！";
+                TB_Message.Text = LanguageHandle.GetWord("NiYiBeiYaoQingCanJiaHuiYi").ToString().Trim() + strMeetingID + " " + meeting.Name.Trim() + LanguageHandle.GetWord("ZhuChiRen").ToString().Trim() + meeting.Host.Trim() + LanguageHandle.GetWord("ShaoJiRen").ToString().Trim() + meeting.Organizer.Trim() + LanguageHandle.GetWord("QingZhunShiCanJia").ToString().Trim();
 
 
                 HL_RelatedDoc.Enabled = true;
@@ -540,7 +540,7 @@ public partial class TTMakeProMeeting : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -692,7 +692,7 @@ public partial class TTMakeProMeeting : System.Web.UI.Page
 
                 if (CB_MSM.Checked == true | CB_Mail.Checked == true)
                 {
-                    strSubject = " 项目会议通知";
+                    strSubject = LanguageHandle.GetWord("XiangMuHuiYiTongZhi").ToString().Trim();
 
                     if (CB_MSM.Checked == true)
                     {
@@ -707,7 +707,7 @@ public partial class TTMakeProMeeting : System.Web.UI.Page
             }
         }
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXMHYTZFSWB + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXMHYTZFSWB").ToString().Trim() + "')", true);
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
     }

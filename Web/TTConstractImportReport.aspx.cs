@@ -130,12 +130,12 @@ public partial class TTConstractImportReport : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = Resources.lang.HeTongJinKouYiLanBiao + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("HeTongJinKouYiLanBiao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 CreateExcel(fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDCDSJYWJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
             }
         }
     }
@@ -160,7 +160,7 @@ public partial class TTConstractImportReport : System.Web.UI.Page
         strConstractClass = "%" + DDL_ConstractClass.SelectedValue + "%";
         strCurrencyType = "%" + DL_CurrencyType.SelectedValue.Trim() + "%";
 
-        strHQL = "Select ConstractCode 合同代码,TotalAmount 申报金额,ImportDate 进口日期,Customs 进口口岸,ReportDate 申报日期,EntryCode 报关单号,EntryCode 报关单号,PreEntryCode 预录单号,Currency 币别,ExchangeRate 汇率,TotalEntryTax 关税,TotalAddedValueTax 增值税 from  V_ConstractImportReport Where";
+        strHQL = "Select ConstractCode 合同代码,TotalAmount 申报金额,ImportDate 进口日期,Customs 进口口岸,ReportDate 申报日期,EntryCode 报关单号,EntryCode 报关单号,PreEntryCode 预录单号,Currency 币别,ExchangeRate 汇率,TotalEntryTax 关税,TotalAddedValueTax 增值税 from  V_ConstractImportReport Where"; 
         strHQL += " (ConstractCode in (Select ConstractCode From T_Constract Where  DepartCode in " + strDepartString + ")";
         strHQL += " Or (ConstractCode in (Select ConstractCode From T_ConstractRelatedUser Where UserCode like  " + "'" + strLikeUserCode + "'" + ")))";
         strHQL += " and ConstractCode Like " + "'" + strConstractCode + "'";

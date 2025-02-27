@@ -48,7 +48,7 @@ public partial class TTWorkFlowTemplateView : System.Web.UI.Page
         }
 
         strTempName = GetWLTemplate(strIdentifyString);
-        //this.Title = "工作流模板：" + strTempName + " 审批步骤列表";    
+        //this.Title = "工作流模板：" + strTempName + "审批步骤列表";    
 
         strUserCode = Session["UserCode"].ToString();      
 
@@ -141,12 +141,12 @@ public partial class TTWorkFlowTemplateView : System.Web.UI.Page
 
             if (strMark == "0")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGZLMBDYBCCG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGZLMBDYBCCG").ToString().Trim()+"')", true);
             }
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCWBCSBJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCWBCSBJC").ToString().Trim()+"')", true);
         }
     }
 }

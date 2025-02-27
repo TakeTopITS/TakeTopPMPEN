@@ -259,13 +259,13 @@ public partial class TTMakeAssetAdjustRecord : System.Web.UI.Page
 
         if (strOwnerCode == "" | strType == "" | strAssetCode == "" | strPosition == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBGRLXZCBMCKZRHYXDBNWKJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBGRLXZCBMCKZRHYXDBNWKJC").ToString().Trim()+"')", true);
             return;
         }
 
         if (!IsAssetData(strAssetCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGZCBCZWFDZJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGZCBCZWFDZJC").ToString().Trim()+"')", true);
             return;
         }
 
@@ -287,7 +287,7 @@ public partial class TTMakeAssetAdjustRecord : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBGRDMCCCWCRJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBGRDMCCCWCRJC").ToString().Trim()+"')", true);
             return;
         }
         asset.Type = strType;
@@ -323,11 +323,11 @@ public partial class TTMakeAssetAdjustRecord : System.Web.UI.Page
                 }
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDZCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDZCG").ToString().Trim()+"')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDZCCJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDZCCJC").ToString().Trim()+"')", true);
         }
     }
 
@@ -401,7 +401,7 @@ public partial class TTMakeAssetAdjustRecord : System.Web.UI.Page
 
         if (strOwnerCode == "" | strType == "" | strAssetCode == "" | strSpec == "" | strPosition == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZYSRHYXDBNWKJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim()+"')", true);
         }
         else
         {
@@ -421,7 +421,7 @@ public partial class TTMakeAssetAdjustRecord : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBGRDMCCCWCRJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBGRDMCCCWCRJC").ToString().Trim()+"')", true);
                 return;
             }
             assetAdjustRecord.Type = strType;

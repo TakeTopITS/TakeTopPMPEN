@@ -59,7 +59,7 @@ public partial class MailDesktop : System.Web.UI.Page
 
                 ///重新绑定控件的数据				
                 BindFolderData();
-                Response.Write("<script>alert('" + "删除数据成功，请妥善保管好你的数据！" + "');</script>");
+                Response.Write("<script>alert('" + LanguageHandle.GetWord("ShanChuShuJuChengGongQingTuoSh").ToString().Trim() + "');</script>");
             }
             catch (Exception ex)
             {   ///跳转到异常错误处理页面
@@ -77,7 +77,7 @@ public partial class MailDesktop : System.Web.UI.Page
         ImageButton deleteBtn = (ImageButton)e.Row.FindControl("DeleteBtn");
         if (deleteBtn != null)
         {
-            deleteBtn.Attributes.Add("onclick", "return confirm('你确定要删除所选择的数据项吗？');");
+            deleteBtn.Attributes.Add("onclick", "return confirm('你确定要删除所选择的数据项吗？');"); 
         }
     }
 }

@@ -33,7 +33,7 @@ public partial class TTProjectBudgetReport : System.Web.UI.Page
             LB_UserCode.Text = strUserCode;
             LB_UserName.Text = strUserName;
 
-            LB_ReportName.Text = Resources.lang.Project + strProjectID + " " + ShareClass.GetProjectName(strProjectID);
+            LB_ReportName.Text = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + ShareClass.GetProjectName(strProjectID);
 
             LoadProjectExpenseByAccount(strProjectID, "All");
         }

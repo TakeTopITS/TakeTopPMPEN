@@ -71,19 +71,19 @@ public partial class TTNoTitleDocumentTreeView : System.Web.UI.Page
 
         if (strRelatedType == "Collaboration")
         {
-            strRelatedType = "协作";
+            strRelatedType = "协作"; 
             strRelatedName = GetCollaborationName(strRelatedID);
         }
 
         if (strRelatedType == "Meeting")
         {
-            strRelatedType = "会议";
+            strRelatedType = "会议"; 
             strRelatedName = GetMeetingName(strRelatedID);
         }
 
         if (strRelatedType == "CustomerQuestion")
         {
-            strRelatedType = "客服";
+            strRelatedType = "客服"; 
             strRelatedName = GetCustomerQuestionName(strRelatedID);
         }
 
@@ -95,10 +95,10 @@ public partial class TTNoTitleDocumentTreeView : System.Web.UI.Page
                 strHQL = "from Document as document where ";
                 strHQL += " ((document.RelatedType = 'Project' and document.RelatedID = " + strProjectID + ")";
                 strHQL += " or (document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
-                strHQL += " or (document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";
+                strHQL += "or (document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))"; 
                 strHQL += " or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
                 strHQL += " or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
-                strHQL += " or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID = " + strProjectID + ")))";
+                strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))"; 
 
             }
 
@@ -107,7 +107,7 @@ public partial class TTNoTitleDocumentTreeView : System.Web.UI.Page
                 strHQL = "from Document as document where ";
                 strHQL += " (document.RelatedType = 'Plan' and document.RelatedID = " + strRelatedID;
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or (document.Visible in ( '部门','全体'))))";
+                strHQL += " or (document.Visible in ( '部门','全体'))))"; 
             }
 
             if (strRelatedType == "Task")
@@ -116,19 +116,19 @@ public partial class TTNoTitleDocumentTreeView : System.Web.UI.Page
                 strHQL += " (((document.RelatedType = 'Task' and document.RelatedID = " + strRelatedID + " )";
                 strHQL += " or ( document.RelatedType = 'Plan' and document.RelatedID in ( Select projectTask.PlanID from ProjectTask as projectTask where projectTask.TaskID = " + strRelatedID + ")))";
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or (document.Visible in ( '部门','全体'))))";
+                strHQL += " or (document.Visible in ( '部门','全体'))))"; 
             }
 
             if (strRelatedType == "Risk")
             {
                 strHQL = "from Document as document where ";
-                strHQL += " ((document.RelatedType = '风险' and document.RelatedID = " + strRelatedID;
+                strHQL += " ((document.RelatedType = '风险' and document.RelatedID = " + strRelatedID; 
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or (document.Visible = '部门' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";
-                strHQL += " or ( document.Visible = '全体'))) ";
-                strHQL += " or ((document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='风险' and meeting.RelatedID = " + strRelatedID + "))";
+                strHQL += " or (document.Visible = '部门' and document.DepartCode = " + "'" + strDepartCode + "'" + " )"; 
+                strHQL += " or ( document.Visible = '全体'))) "; 
+                strHQL += "or ((document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='风险' and meeting.RelatedID =" + strRelatedID + "))"; 
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or ( document.Visible = '会议'))))";
+                strHQL += " or ( document.Visible = '会议'))))"; 
             }
 
             if (strRelatedType == "Requirement")
@@ -136,11 +136,11 @@ public partial class TTNoTitleDocumentTreeView : System.Web.UI.Page
                 strHQL = "from Document as document where ";
                 strHQL += " ((document.RelatedType = 'Requirement' and document.RelatedID = " + strRelatedID;
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or (document.Visible = '部门' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";
-                strHQL += " or ( document.Visible = '全体'))) ";
-                strHQL += " or ((document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Requirement' and meeting.RelatedID = " + strRelatedID + "))";
+                strHQL += " or (document.Visible = '部门' and document.DepartCode = " + "'" + strDepartCode + "'" + " )"; 
+                strHQL += " or ( document.Visible = '全体'))) "; 
+                strHQL += "or ((document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Requirement' and meeting.RelatedID =" + strRelatedID + "))"; 
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or ( document.Visible = '会议'))))";
+                strHQL += " or ( document.Visible = '会议'))))"; 
             }
 
             if (strRelatedType == "Workflow")
@@ -148,30 +148,30 @@ public partial class TTNoTitleDocumentTreeView : System.Web.UI.Page
                 strHQL = "from Document as document where document.Status <> 'Deleted' ";
                 strHQL += " and (document.RelatedType = 'Workflow' and document.RelatedID = " + strRelatedID;
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or (document.Visible = '部门' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";
-                strHQL += " or ( document.Visible = '全体'))) ";
-                strHQL += " or ((document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Workflow' and meeting.RelatedID = " + strRelatedID + "))";
+                strHQL += " or (document.Visible = '部门' and document.DepartCode = " + "'" + strDepartCode + "'" + " )"; 
+                strHQL += " or ( document.Visible = '全体'))) "; 
+                strHQL += "or ((document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Workflow' and meeting.RelatedID =" + strRelatedID + "))"; 
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or ( document.Visible = '会议')))";
+                strHQL += " or ( document.Visible = '会议')))"; 
             }
 
-            if (strRelatedType == "协作")
+            if (strRelatedType == "协作") 
             {
-                strHQL = " from Document as document where document.RelatedType = '协作' and document.RelatedID = " + strRelatedID;
+                strHQL = " from Document as document where document.RelatedType = '协作' and document.RelatedID = " + strRelatedID; 
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or (document.Visible = '全体' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " )))";
+                strHQL += " or (document.Visible = '全体' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " )))"; 
             }
 
-            if (strRelatedType == "会议")
+            if (strRelatedType == "会议") 
             {
-                strHQL = " from Document as document where document.RelatedType = '会议' and document.RelatedID = " + strRelatedID;
+                strHQL = " from Document as document where document.RelatedType = '会议' and document.RelatedID = " + strRelatedID; 
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or (document.Visible = '会议' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " )))";
+                strHQL += " or (document.Visible = '会议' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " )))"; 
             }
 
-            if (strRelatedType == "客服")
+            if (strRelatedType == "客服") 
             {
-                strHQL = " from Document as document where document.RelatedType = '客服' and document.RelatedID = " + strRelatedID;
+                strHQL = " from Document as document where document.RelatedType = '客服' and document.RelatedID = " + strRelatedID; 
                 strHQL += " and (document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
 
             }
@@ -185,9 +185,9 @@ public partial class TTNoTitleDocumentTreeView : System.Web.UI.Page
             DataGrid1.DataSource = lst;
             DataGrid1.DataBind();
 
-            LB_Count.Text = Resources.lang.CXDDWJS + ": " + lst.Count.ToString();
+            LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
 
-            LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
 
             InitialProTree();
 
@@ -202,7 +202,7 @@ public partial class TTNoTitleDocumentTreeView : System.Web.UI.Page
                 DataGrid2.DataSource = ds;
                 DataGrid2.DataBind();
 
-                LB_UnUploadMustDocCount.Text = Resources.lang.CXDDWJS + ": " + ds.Tables[0].Rows.Count.ToString();
+                LB_UnUploadMustDocCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + ds.Tables[0].Rows.Count.ToString();
 
                 TR_UnUploadForMustDocList.Visible = true;
             }
@@ -225,7 +225,7 @@ public partial class TTNoTitleDocumentTreeView : System.Web.UI.Page
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = strRelatedType + "：" + strRelatedID + " " + strRelatedName + " 文档列表";
+        node1.Text = strRelatedType + "：" + strRelatedID + " " + strRelatedName + LanguageHandle.GetWord("WenDangLieBiao").ToString().Trim();
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -239,10 +239,10 @@ public partial class TTNoTitleDocumentTreeView : System.Web.UI.Page
             strHQL += " Select distinct document.DocType from Document as document where  ((";
             strHQL += " (document.RelatedType = 'Project' and document.RelatedID = " + strProjectID + ")";
             strHQL += " or (document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
-            strHQL += " or (document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";
+            strHQL += "or (document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))"; 
             strHQL += " or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
             strHQL += " or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
-            strHQL += " or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Project' and  meeting.RelatedID = " + strProjectID + "))";
+            strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Project' and  meeting.RelatedID =" + strProjectID + "))"; 
             strHQL += " )";
             strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' ))";
         }
@@ -313,9 +313,9 @@ public partial class TTNoTitleDocumentTreeView : System.Web.UI.Page
                 DataGrid1.DataSource = lst2;
                 DataGrid1.DataBind();
 
-                LB_FindCondition.Text = Resources.lang.CXFWWJLX + strDocType;
+                LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + strDocType;
 
-                LB_Count.Text = Resources.lang.CXDDWJS + ": " + lst2.Count.ToString();
+                LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst2.Count.ToString();
             }
         }
         else
@@ -326,9 +326,9 @@ public partial class TTNoTitleDocumentTreeView : System.Web.UI.Page
             DataGrid1.DataSource = lst2;
             DataGrid1.DataBind();
 
-            LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
 
-            LB_Count.Text = Resources.lang.CXDDWJS + ": " + lst2.Count.ToString();
+            LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst2.Count.ToString();
         }
 
     }

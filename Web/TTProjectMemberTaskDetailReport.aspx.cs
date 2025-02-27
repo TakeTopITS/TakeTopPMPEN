@@ -30,7 +30,7 @@ public partial class TTProjectMemberTaskDetailReport : System.Web.UI.Page
 
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text = "项目成员任务表";
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMuChengYuanRenWuBiao").ToString().Trim();
 
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
@@ -39,7 +39,7 @@ public partial class TTProjectMemberTaskDetailReport : System.Web.UI.Page
             DLC_BeginDate.Text = DateTime.Now.Year.ToString() + "-01-01";
             DLC_EndDate.Text = DateTime.Now.Year.ToString() + "-12-31";
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
         
             ShareClass.InitialAllProjectTree(TreeView2, strDepartString);
@@ -152,19 +152,19 @@ public partial class TTProjectMemberTaskDetailReport : System.Web.UI.Page
 
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select DepartCode as '组别',
-                   UserName as '姓名',
+        strHQL = @"Select DepartCode as '组别', 
+                   UserName as '姓名', 
                    ProjectName as 'Project',
                    PlanName as 'Plan',
                    TaskName as 'Task',
-                   PlanBeginTime as '计划预计开始时间',
-                   PlanEndTime as '计划预计结束时间',
-                   TaskBeginDate as '任务预计开始时间',
-                   TaskFirstOperateTime as '任务受理时间',
-                   TaskEndDate as '任务预计结束时间',
-                   TaskLastestOperateTime as '任务最新操作时间',
-                   Status as '任务状态',
-                   TaskLog as '任务日志'
+                   PlanBeginTime as '计划预计开始时间', 
+                   PlanEndTime as '计划预计结束时间', 
+                   TaskBeginDate as '任务预计开始时间', 
+                   TaskFirstOperateTime as '任务受理时间', 
+                   TaskEndDate as '任务预计结束时间', 
+                   TaskLastestOperateTime as '任务最新操作时间', 
+                   Status as '任务状态', 
+                   TaskLog as '任务日志' 
                    From V_ProjectMemberTaskDetailReport";
 
 
@@ -189,9 +189,9 @@ public partial class TTProjectMemberTaskDetailReport : System.Web.UI.Page
         LB_ResultNumber.Text = dtProject.Rows.Count.ToString();
 
 
-        Export3Excel(dtProject, "项目成员任务.xls");
+        Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuChengYuanRenWuxls").ToString().Trim());
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true); 
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

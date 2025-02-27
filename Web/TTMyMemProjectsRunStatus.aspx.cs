@@ -88,7 +88,7 @@ public partial class TTMyMemProjectsRunStatus : System.Web.UI.Page
             ShareClass.SetRiskLabelColor(DataGrid3, 1);
             ShareClass.SetDefectLabelColor(DataGrid3, 1);
 
-            LB_QueryScope.Text = Resources.lang.ZZLeader + strUserCode + " " + strUserName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZLeader").ToString().Trim() + strUserCode + " " + strUserName;
 
             ShareClass.LoadMemberByUserCodeForDataGrid(strUserCode, "Project", DataGrid1);
 
@@ -150,7 +150,7 @@ public partial class TTMyMemProjectsRunStatus : System.Web.UI.Page
 
         LB_Underling.Text = strUnderlingCode;
 
-        LB_QueryScope.Text = Resources.lang.ZZLeader + strUserCode + strUserName + Resources.lang.ZZXiaShu + strUnderlingCode + strUnderLingName;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZLeader").ToString().Trim() + strUserCode + strUserName + LanguageHandle.GetWord("ZZXiaShu").ToString().Trim() + strUnderlingCode + strUnderLingName;
 
         ProjectBLL projectBLL = new ProjectBLL();
 
@@ -188,7 +188,7 @@ public partial class TTMyMemProjectsRunStatus : System.Web.UI.Page
                 strHQL += " and project.ProjectType = '" + DL_ProjectType.SelectedValue.Trim() + "'";
             }
             strHQL += " and " + "project.Status = " + "'" + strStatus + "'" + " order by project.ProjectID DESC";
-            LB_QueryScope.Text = Resources.lang.ZZLeader + strUserCode + strUserName + Resources.lang.ZZXMZT + strStatus;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZLeader").ToString().Trim() + strUserCode + strUserName + LanguageHandle.GetWord("ZZXMZT").ToString().Trim() + strStatus;
 
         }
         else
@@ -200,7 +200,7 @@ public partial class TTMyMemProjectsRunStatus : System.Web.UI.Page
                 strHQL += " and project.ProjectType = '" + DL_ProjectType.SelectedValue.Trim() + "'";
             }
             strHQL += " and " + "project.Status = " + "'" + strStatus + "'" + " order by project.ProjectID DESC";
-            LB_QueryScope.Text = Resources.lang.ZZLeader + strUserCode + strUserName + Resources.lang.ZZXiaShu + strUnderling + strUnderLingName + Resources.lang.ZZXMZT + strStatus;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZLeader").ToString().Trim() + strUserCode + strUserName + LanguageHandle.GetWord("ZZXiaShu").ToString().Trim() + strUnderling + strUnderLingName + LanguageHandle.GetWord("ZZXMZT").ToString().Trim() + strStatus;
         }
 
         ProjectBLL projectBLL = new ProjectBLL();
@@ -230,7 +230,7 @@ public partial class TTMyMemProjectsRunStatus : System.Web.UI.Page
 
         strUserName = ShareClass.GetUserName(strUserCode);
 
-        LB_QueryScope.Text = Resources.lang.ZZLeader + strUserCode + strUserName;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZLeader").ToString().Trim() + strUserCode + strUserName;
 
         LB_Underling.Text = "";
 
@@ -285,15 +285,15 @@ public partial class TTMyMemProjectsRunStatus : System.Web.UI.Page
     {
         string strBTText = BT_DisplayStatus.Text;
 
-        if (strBTText == Resources.lang.ShowStatus)
+        if (strBTText == LanguageHandle.GetWord("ShowStatus").ToString().Trim())
         {
             DataGrid2.Visible = true;
-            BT_DisplayStatus.Text = "ÒþÈ¥ÏîÄ¿×´Ì¬";
+            BT_DisplayStatus.Text = LanguageHandle.GetWord("YinQuXiangMuZhuangTai").ToString().Trim();
         }
         else
         {
             DataGrid2.Visible = false;
-            BT_DisplayStatus.Text = Resources.lang.ShowStatus;
+            BT_DisplayStatus.Text = LanguageHandle.GetWord("ShowStatus").ToString().Trim();
         }
     }
     
@@ -405,7 +405,7 @@ public partial class TTMyMemProjectsRunStatus : System.Web.UI.Page
         ShareClass.SetRiskLabelColor(DataGrid3, 1);
         ShareClass.SetDefectLabelColor(DataGrid3, 1);
 
-        LB_QueryScope.Text = Resources.lang.ZZXMMBHZH + TB_ProjectName.Text.Trim() + Resources.lang.StatusAll;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZXMMBHZH").ToString().Trim() + TB_ProjectName.Text.Trim() + LanguageHandle.GetWord("StatusAll").ToString().Trim();
 
         LB_Sql.Text = strHQL;
     }
@@ -453,7 +453,7 @@ public partial class TTMyMemProjectsRunStatus : System.Web.UI.Page
         ShareClass.SetRiskLabelColor(DataGrid3, 1);
         ShareClass.SetDefectLabelColor(DataGrid3, 1);
 
-        LB_QueryScope.Text = Resources.lang.ZZLiXiangRen + TB_ProjectName.Text.Trim() + Resources.lang.StatusAll;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZLiXiangRen").ToString().Trim() + TB_ProjectName.Text.Trim() + LanguageHandle.GetWord("StatusAll").ToString().Trim();
 
         LB_Sql.Text = strHQL;
     }
@@ -488,7 +488,7 @@ public partial class TTMyMemProjectsRunStatus : System.Web.UI.Page
         ShareClass.SetRiskLabelColor(DataGrid3, 1);
         ShareClass.SetDefectLabelColor(DataGrid3, 1);
 
-        LB_QueryScope.Text = Resources.lang.ZZLiXiangRen + TB_ProjectName.Text.Trim() + Resources.lang.StatusAll;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZLiXiangRen").ToString().Trim() + TB_ProjectName.Text.Trim() + LanguageHandle.GetWord("StatusAll").ToString().Trim();
 
         LB_Sql.Text = strHQL;
     }

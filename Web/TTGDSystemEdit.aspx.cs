@@ -42,22 +42,22 @@ public partial class TTGDSystemEdit : System.Web.UI.Page
 
             if (!ShareClass.CheckStringRight(strTheSystem))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXTHBNWFFZF+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXTHBNWFFZF").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strInstructions))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSMBNWFFZF+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSMBNWFFZF").ToString().Trim()+"')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strMCDate))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZMCRBNWKBC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZMCRBNWKBC").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strRemark))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBZBNWFFZF+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBZBNWFFZF").ToString().Trim()+"')", true);
                 return;
             }
 

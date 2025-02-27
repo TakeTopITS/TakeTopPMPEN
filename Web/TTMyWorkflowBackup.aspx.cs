@@ -80,7 +80,7 @@ public partial class TTMyWorkflowBackup : System.Web.UI.Page
 
             LB_Sql.Text = strHQL;
 
-            LB_QueryScope.Text = Resources.lang.ZZGZLSQZSY;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZGZLSQZSY").ToString().Trim();
         }
     }
 
@@ -89,7 +89,7 @@ public partial class TTMyWorkflowBackup : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        LB_QueryScope.Text = Resources.lang.GongZuoLiu + ": " + Resources.lang.SuoYou;
+        LB_QueryScope.Text = LanguageHandle.GetWord("GongZuoLiu").ToString().Trim() + ": " + LanguageHandle.GetWord("SuoYou").ToString().Trim();
 
         LB_DepartCode.Text = "";
         LB_OperatorCode.Text = "";
@@ -120,7 +120,7 @@ public partial class TTMyWorkflowBackup : System.Web.UI.Page
         strHQL += " and Status <> 'New'";
         strHQL += " Order by WLID DESC";
 
-        LB_QueryScope.Text = Resources.lang.ZZApplicantAll + " " + Resources.lang.ZhuangTai + ":" + strStatus;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicantAll").ToString().Trim() + " " + LanguageHandle.GetWord("ZhuangTai").ToString().Trim() + ":" + strStatus;
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowBackup");
         DataGrid3.DataSource = ds;
@@ -156,7 +156,7 @@ public partial class TTMyWorkflowBackup : System.Web.UI.Page
 
         strWFID = NB_WFID.Amount.ToString();
 
-        LB_QueryScope.Text = Resources.lang.BianHao + ":" + strWFID;
+        LB_QueryScope.Text = LanguageHandle.GetWord("BianHao").ToString().Trim() + ":" + strWFID;
 
         LB_DepartCode.Text = "";
         LB_OperatorCode.Text = "";
@@ -253,7 +253,7 @@ public partial class TTMyWorkflowBackup : System.Web.UI.Page
         strStartTime = DateTime.Parse(DLC_StartTime.Text).ToString("yyyyMMdd");
         strEndTime = DateTime.Parse(DLC_EndTime.Text).ToString("yyyyMMdd");
 
-        LB_QueryScope.Text = Resources.lang.MingChen + ":" + strWFName;
+        LB_QueryScope.Text = LanguageHandle.GetWord("MingChen").ToString().Trim() + ":" + strWFName;
 
         LB_DepartCode.Text = "";
         LB_OperatorCode.Text = "";

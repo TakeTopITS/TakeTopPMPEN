@@ -31,7 +31,7 @@ public partial class TTMakeBookManage : System.Web.UI.Page
         {
             txt_Borrow.Text = strUserCode;
 
-            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             BindDDLOther();
@@ -108,11 +108,11 @@ public partial class TTMakeBookManage : System.Web.UI.Page
         }
         else if (DropDownList1.SelectedValue.Trim().Equals("1"))//图书
         {
-            strHQL += " and BookType='图书' Order By ReferenceNo ASC ";
+            strHQL += " and BookType='图书' Order By ReferenceNo ASC "; 
         }
         else//标准
         {
-            strHQL += " and BookType='标准' Order By BarCode ASC ";
+            strHQL += " and BookType='标准' Order By BarCode ASC "; 
         }
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_BookInformation");
 
@@ -246,29 +246,29 @@ public partial class TTMakeBookManage : System.Web.UI.Page
                 string fileName = string.Empty;
                 if (DropDownList1.SelectedValue.Trim().Equals("0"))
                 {
-                    fileName = "标准与图书信息_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("BiaoZhunYuTuShuXinXi").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else if (DropDownList1.SelectedValue.Trim().Equals("1"))
                 {
-                    fileName = "图书信息_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("TuShuXinXi").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else
                 {
-                    fileName = "标准信息_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("BiaoZhunXinXi").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 CreateExcel(getExportBookList(), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDCDSJYWJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
             }
         }
     }
 
     protected DataTable getExportBookList()
     {
-        string strHQL = "Select BookType '类型',BookClassificationName '标准或图书分类',ClassificationCode '分类码',ReferenceNo '登记号',BarCode '标准号',BookName '标准或图书名称'," +
-            "BookPublishersName '出版社',Author '作者',Translator '译者',BookNum '可借数量',BookUseNum '已借数量',Price '价格',Introduction '备注',PublicationDate '出版/实施日期' From T_BookInformation Where 1=1 ";
+        string strHQL = "Select BookType '类型',BookClassificationName '标准或图书分类',ClassificationCode '分类码',ReferenceNo '登记号',BarCode '标准号',BookName '标准或图书名称'," + 
+            "BookPublishersName '出版社',Author '作者',Translator '译者',BookNum '可借数量',BookUseNum '已借数量',Price '价格',Introduction '备注',PublicationDate '出版/实施日期' From T_BookInformation Where 1=1 "; 
         if (!string.IsNullOrEmpty(txt_BarCode.Text.Trim()))
         {
             strHQL += " and BarCode like '%" + txt_BarCode.Text.Trim() + "%' ";
@@ -299,11 +299,11 @@ public partial class TTMakeBookManage : System.Web.UI.Page
         }
         else if (DropDownList1.SelectedValue.Trim().Equals("1"))//图书
         {
-            strHQL += " and BookType='图书' Order By ReferenceNo ASC ";
+            strHQL += " and BookType='图书' Order By ReferenceNo ASC "; 
         }
         else//标准
         {
-            strHQL += " and BookType='标准' Order By BarCode ASC ";
+            strHQL += " and BookType='标准' Order By BarCode ASC "; 
         }
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_BookInformation");
         return ds.Tables[0];
@@ -338,23 +338,23 @@ public partial class TTMakeBookManage : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = "书籍借阅情况_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("ShuJiJieYueQingKuang").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
 
                 CreateExcel(getExportBookBorrowList(), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDCDSJYWJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
             }
         }
     }
 
     protected DataTable getExportBookBorrowList()
     {
-        string strHQL = " Select bookBorrowRecord.BookClassificationName '标准或图书分类',bookBorrowRecord.ReferenceNo '登记号',bookBorrowRecord.BarCode '标准号'," +
-            "bookBorrowRecord.BookName '标准或图书名称',bookBorrowRecord.BookPublishersName '出版社',bookBorrowRecord.BookUseNum '借出数量',bookBorrowRecord.Status '状态'," +
-            "bookBorrowRecord.BorrowCode '借阅者编码',bookBorrowRecord.BorrowName '借阅者名称',projectMember.DepartName as '借阅者单位',projectMember.OfficePhone as '办公电话'," +
-            "projectMember.MobilePhone as '手机号码',bookBorrowRecord.ReaderTypeName as '借阅者类型' From T_BookBorrowRecord as bookBorrowRecord,T_ProjectMember as projectMember Where bookBorrowRecord.BorrowCode=projectMember.UserCode " +
+        string strHQL = " Select bookBorrowRecord.BookClassificationName '标准或图书分类',bookBorrowRecord.ReferenceNo '登记号',bookBorrowRecord.BarCode '标准号'," + 
+            LanguageHandle.GetWord("bookBorrowRecordBookNameBiaoZh").ToString().Trim() +
+            LanguageHandle.GetWord("bookBorrowRecordBorrowCodeJieY").ToString().Trim() +
+            "projectMember.MobilePhone as '手机号码',bookBorrowRecord.ReaderTypeName as '借阅者类型' From T_BookBorrowRecord as bookBorrowRecord,T_ProjectMember as projectMember Where bookBorrowRecord.BorrowCode=projectMember.UserCode " + 
             "and bookBorrowRecord.BookInfoId in (Select ID From T_BookInformation Where 1=1 ";
 
         if (!string.IsNullOrEmpty(txt_BarCode.Text.Trim()))

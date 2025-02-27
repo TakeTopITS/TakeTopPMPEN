@@ -28,7 +28,7 @@ public partial class TTProRelatedDefectSummary : System.Web.UI.Page
         IList lst;
         string strUserName;
 
-        //this.Title = Resources.lang.Project + strProjectID + " 相关需求";
+        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " 相关需求";
 
         LB_UserCode.Text = strUserCode;
         strUserName = GetUserName(strUserCode);
@@ -45,7 +45,7 @@ public partial class TTProRelatedDefectSummary : System.Web.UI.Page
             DataGrid1.DataSource = lst;
             DataGrid1.DataBind();
 
-            LB_ReportName.Text = Resources.lang.XiangMu + ": " + strProjectID + " " + Resources.lang.QueXianBaoBiao;
+            LB_ReportName.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + ": " + strProjectID + " " + LanguageHandle.GetWord("QueXianBaoBiao").ToString().Trim();
             string strCmdText = "select Status as XName,count(*) as YNumber from T_Defectment ";
             strCmdText += " where DefectID in (select DefectID from T_RelatedDefect where ProjectID  = " + strProjectID + ")  Group By Status";
 

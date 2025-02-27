@@ -21,7 +21,7 @@ public partial class TTUserInfor_StudentCostList : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
         {
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT, TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
 
@@ -80,7 +80,7 @@ public partial class TTUserInfor_StudentCostList : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_StudentNumber.Text = "学生数：" + dtStudent.Rows.Count.ToString();
+        LB_StudentNumber.Text = LanguageHandle.GetWord("XueShengShu").ToString().Trim() + dtStudent.Rows.Count.ToString();
     }
 
 
@@ -107,7 +107,7 @@ public partial class TTUserInfor_StudentCostList : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_StudentNumber.Text = "学生数：" + dtStudent.Rows.Count.ToString();
+        LB_StudentNumber.Text = LanguageHandle.GetWord("XueShengShu").ToString().Trim() + dtStudent.Rows.Count.ToString();
     }
 
 
@@ -152,7 +152,7 @@ public partial class TTUserInfor_StudentCostList : System.Web.UI.Page
                 projectMemberStudentCostBLL.UpdateProjectMemberStudentCost(projectMemberStudentCost, int.Parse(strCmdArgu));
 
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
         }
     }

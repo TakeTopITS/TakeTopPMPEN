@@ -55,7 +55,7 @@ public partial class TTWZPickingPlanDetail : System.Web.UI.Page
     {
         TV_Type.Nodes.Clear();
         TreeNode Node = new TreeNode();
-        Node.Text = "全部材料";
+        Node.Text = LanguageHandle.GetWord("QuanBuCaiLiao").ToString().Trim();
         Node.Value = "all|0|0|0";
         string strDLSQL = "select * from T_WZMaterialDL";
         DataTable dtDL = ShareClass.GetDataSetFromSql(strDLSQL, "DL").Tables[0];
@@ -146,7 +146,7 @@ public partial class TTWZPickingPlanDetail : System.Web.UI.Page
 
                     LB_PickingPlan_SelectedIndexChanged(null, null);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
                 }
             }
         }
@@ -210,7 +210,7 @@ public partial class TTWZPickingPlanDetail : System.Web.UI.Page
                     string strPickingPlanNumberHQL = "update T_WZPickingPlan set DetailCount = DetailCount -1 where PlanCode = '" + wZPickingPlanDetail.PlanCode + "'";
                     ShareClass.RunSqlCommand(strPickingPlanNumberHQL);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
                 }
             }
         }
@@ -237,7 +237,7 @@ public partial class TTWZPickingPlanDetail : System.Web.UI.Page
                     IList lstCheckPlanDetail = wZPickingPlanDetailBLL.GetAllWZPickingPlanDetails(strCheckPlanDetailHQL);
                     if (lstCheckPlanDetail != null && lstCheckPlanDetail.Count > 0)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGCLZJHMXZYJCZBNZTJ+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGCLZJHMXZYJCZBNZTJ").ToString().Trim()+"')", true);
                         return;
                     }
 
@@ -250,7 +250,7 @@ public partial class TTWZPickingPlanDetail : System.Web.UI.Page
                         wZPickingPlanDetail.PlanCode = wZPickingPlan.PlanCode;
                         wZPickingPlanDetail.ObjectCode = arrArges[0];
                         wZPickingPlanDetail.OldCode = arrArges[0];
-                        wZPickingPlanDetail.Progress = "录入";
+                        wZPickingPlanDetail.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
                         wZPickingPlanDetail.IsMark = 0;
 
                         //增加物资到领料计划明细
@@ -267,7 +267,7 @@ public partial class TTWZPickingPlanDetail : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZJH+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZJH").ToString().Trim()+"')", true);
                 }
             }
         }
@@ -308,12 +308,12 @@ public partial class TTWZPickingPlanDetail : System.Web.UI.Page
                 string strPlanNumber = TXT_PlanNumber.Text.Trim();
                 if (string.IsNullOrEmpty(strPlanNumber))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXTXJHSL+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXTXJHSL").ToString().Trim()+"')", true);
                     return;
                 }
                 if (!ShareClass.CheckIsNumber(strPlanNumber))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJHSLBXWXSHZZS+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJHSLBXWXSHZZS").ToString().Trim()+"')", true);
                     return;
                 }
 
@@ -331,7 +331,7 @@ public partial class TTWZPickingPlanDetail : System.Web.UI.Page
                 TXT_ConvertPlanNumber.Text = decimalResult.ToString("#0.00");
             }
             else {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZJHMX+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZJHMX").ToString().Trim()+"')", true);
                 return;
             }
         }
@@ -349,12 +349,12 @@ public partial class TTWZPickingPlanDetail : System.Web.UI.Page
                 string strConvertPlanNumber = TXT_ConvertPlanNumber.Text.Trim();
                 if (string.IsNullOrEmpty(strConvertPlanNumber))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXTXJHSL+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXTXJHSL").ToString().Trim()+"')", true);
                     return;
                 }
                 if (!ShareClass.CheckIsNumber(strConvertPlanNumber))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJHSLBXWXSHZZS+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJHSLBXWXSHZZS").ToString().Trim()+"')", true);
                     return;
                 }
 
@@ -369,7 +369,7 @@ public partial class TTWZPickingPlanDetail : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZJHMX+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZJHMX").ToString().Trim()+"')", true);
                 return;
             }
         }

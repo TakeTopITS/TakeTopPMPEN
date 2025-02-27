@@ -41,7 +41,7 @@ public partial class TTWZRequestApprove : System.Web.UI.Page
                     left join T_WZSupplier s on r.SupplierCode = s.SupplierCode
                     where r.Approver ='{0}' 
                     and r.Progress in ('请款','审核','报销') 
-                    order by r.RequestTime desc", strUserCode);
+                    order by r.RequestTime desc", strUserCode); 
         DataTable dtRequest = ShareClass.GetDataSetFromSql(strRequestHQL, "Request").Tables[0];
 
         DG_Request.DataSource = dtRequest;
@@ -64,20 +64,20 @@ public partial class TTWZRequestApprove : System.Web.UI.Page
                 {
                     WZRequest wZRequest = (WZRequest)listRequest[0];
 
-                    if (wZRequest.Progress != "请款")
+                    if (wZRequest.Progress != LanguageHandle.GetWord("QingKuan").ToString().Trim())
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBSKZTBNSH+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBSKZTBNSH").ToString().Trim()+"')", true);
                         return;
                     }
 
-                    wZRequest.Progress = "审核";
+                    wZRequest.Progress = LanguageHandle.GetWord("ShenHe").ToString().Trim();
 
                     wZRequestBLL.UpdateWZRequest(wZRequest, wZRequest.RequestCode);
 
                     //加载请款单列表
                     DataRequestBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSHCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSHCG").ToString().Trim()+"')", true);
                 }
             }
             else if (cmdName == "notRequest")
@@ -91,20 +91,20 @@ public partial class TTWZRequestApprove : System.Web.UI.Page
                 {
                     WZRequest wZRequest = (WZRequest)listRequest[0];
 
-                    if (wZRequest.Progress != "审核")
+                    if (wZRequest.Progress != LanguageHandle.GetWord("ShenHe").ToString().Trim())
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBSSHZTBNTH+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBSSHZTBNTH").ToString().Trim()+"')", true);
                         return;
                     }
 
-                    wZRequest.Progress = "请款";
+                    wZRequest.Progress = LanguageHandle.GetWord("QingKuan").ToString().Trim();
 
                     wZRequestBLL.UpdateWZRequest(wZRequest, wZRequest.RequestCode);
 
                     //加载请款单列表
                     DataRequestBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTHCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTHCG").ToString().Trim()+"')", true);
                 }
             }
             else if (cmdName == "account")
@@ -118,13 +118,13 @@ public partial class TTWZRequestApprove : System.Web.UI.Page
                 {
                     WZRequest wZRequest = (WZRequest)listRequest[0];
 
-                    if (wZRequest.Progress != "审核")
+                    if (wZRequest.Progress != LanguageHandle.GetWord("ShenHe").ToString().Trim())
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBSSHZTBNBX+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBSSHZTBNBX").ToString().Trim()+"')", true);
                         return;
                     }
 
-                    wZRequest.Progress = "报销";
+                    wZRequest.Progress = LanguageHandle.GetWord("BaoXiao").ToString().Trim();
                     wZRequest.CancelTime = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
 
                     wZRequestBLL.UpdateWZRequest(wZRequest, wZRequest.RequestCode);
@@ -134,7 +134,7 @@ public partial class TTWZRequestApprove : System.Web.UI.Page
                     //加载请款单列表
                     DataRequestBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBXCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBXCG").ToString().Trim()+"')", true);
                 }
             }
             else if (cmdName == "notAccount")
@@ -148,13 +148,13 @@ public partial class TTWZRequestApprove : System.Web.UI.Page
                 {
                     WZRequest wZRequest = (WZRequest)listRequest[0];
 
-                    if (wZRequest.Progress != "报销" || wZRequest.Approver.Trim() != strUserCode || wZRequest.IsPay != 0)
+                    if (wZRequest.Progress != LanguageHandle.GetWord("BaoXiao").ToString().Trim() || wZRequest.Approver.Trim() != strUserCode || wZRequest.IsPay != 0)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBSBXZTHZSHRBZHZFKBZBW0BNTH+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBSBXZTHZSHRBZHZFKBZBW0BNTH").ToString().Trim()+"')", true);
                         return;
                     }
 
-                    wZRequest.Progress = "审核";
+                    wZRequest.Progress = LanguageHandle.GetWord("ShenHe").ToString().Trim();
                     wZRequest.CancelTime = "-";
                     wZRequest.BeforePayMoney = 0;
                     wZRequest.Arrearage = 0;
@@ -166,7 +166,7 @@ public partial class TTWZRequestApprove : System.Web.UI.Page
                     //加载请款单列表
                     DataRequestBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTHCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTHCG").ToString().Trim()+"')", true);
                 }
             }
         }
@@ -253,7 +253,7 @@ public partial class TTWZRequestApprove : System.Web.UI.Page
                 {
                     WZCollect wZCollect = (WZCollect)listCollect[i];
                     wZCollect.FinanceApprove = wZRequest.Approver;
-                    wZCollect.PayProcess = "报销";
+                    wZCollect.PayProcess = LanguageHandle.GetWord("BaoXiao").ToString().Trim();
 
                     wZCollectBLL.UpdateWZCollect(wZCollect, wZCollect.CollectCode);
                 }
@@ -323,7 +323,7 @@ public partial class TTWZRequestApprove : System.Web.UI.Page
                 {
                     WZCollect wZCollect = (WZCollect)listCollect[i];
                     wZCollect.FinanceApprove = "-";
-                    wZCollect.PayProcess = "录入";
+                    wZCollect.PayProcess = LanguageHandle.GetWord("LuRu").ToString().Trim();
 
                     wZCollectBLL.UpdateWZCollect(wZCollect, wZCollect.CollectCode);
                 }

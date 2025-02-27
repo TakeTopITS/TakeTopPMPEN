@@ -38,13 +38,13 @@ public partial class TTMyWorkDetailMain : System.Web.UI.Page
 
         strWLName = workFlow.WLName.Trim();
 
-        this.Title = Resources.lang.WoDeGongZuoLiu + ": " + strWLID + " " + strWLName;
+        this.Title = LanguageHandle.GetWord("WoDeGongZuoLiu").ToString().Trim() + ": " + strWLID + " " + strWLName;
 
         strCreatorCode = workFlow.CreatorCode.Trim();
 
         if (strUserCode != strCreatorCode )
         {
-            string strErrorMsg = Resources.lang.ZZJGNBSZLCDFQRBNCKCLCQJC;
+            string strErrorMsg = LanguageHandle.GetWord("ZZJGNBSZLCDFQRBNCKCLCQJC").ToString().Trim();
             Response.Redirect("TTDisplayCustomErrorMessage.aspx?ErrorMsg=" + strErrorMsg);
         }
     }

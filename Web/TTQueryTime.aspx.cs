@@ -40,14 +40,14 @@ public partial class TTQueryTime : System.Web.UI.Page
 
         if (strHQLQuery == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGSQLYJBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSQLYJBNWKJC").ToString().Trim() + "')", true);
             return;
         }
 
         if (TB_SQLCode.Text.Trim().ToLower().Contains("create ") || TB_SQLCode.Text.Trim().ToLower().Contains("execute ") || TB_SQLCode.Text.Trim().ToLower().Contains("delete ") || TB_SQLCode.Text.Trim().ToLower().Contains("update") || TB_SQLCode.Text.Trim().ToLower().Contains("drop ")
          || TB_SQLCode.Text.Trim().ToLower().Contains("insert ") || TB_SQLCode.Text.Trim().ToLower().Contains("alter "))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGZNSSELECTCYJBNSDELETEUPDATEINSERTCREATEDROPYJJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGZNSSELECTCYJBNSDELETEUPDATEINSERTCREATEDROPYJJC").ToString().Trim() + "')", true);
             TB_SQLCode.Focus();
             return;
         }
@@ -60,7 +60,7 @@ public partial class TTQueryTime : System.Web.UI.Page
 
             TimeSpan ts = dtHQLBack - dtHQLBefore;
 
-            lbl_Time.Text = ts.TotalSeconds.ToString() + Resources.lang.Miao;
+            lbl_Time.Text = ts.TotalSeconds.ToString() + LanguageHandle.GetWord("Miao").ToString().Trim();
 
             LB_Sql.Text = strHQLQuery;
 
@@ -69,7 +69,7 @@ public partial class TTQueryTime : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGYFCWJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGYFCWJC").ToString().Trim() + "')", true);
         }
     }
 

@@ -190,7 +190,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
 
                 if (e.CommandName == "Assign")
                 {
-                    LoadRelatedWL("BidManagement", "投标", int.Parse(strID));
+                    LoadRelatedWL("BidManagement", LanguageHandle.GetWord("TouBiao").ToString().Trim(), int.Parse(strID));
 
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popAssignWindow','true') ", true);
                 }
@@ -204,7 +204,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
         string strID = HF_ID.Value.Trim();
         if (string.IsNullOrEmpty(strID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZYXGDTBLB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZYXGDTBLB").ToString().Trim() + "')", true);
             return;
         }
 
@@ -214,7 +214,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
         string strTenderCode = TB_TenderCode.Text.Trim();
         if (string.IsNullOrEmpty(strTenderCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZBBHDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZBBHDBNWKJC").ToString().Trim() + "')", true);
             return;
         }
 
@@ -257,7 +257,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('警告，工本费和代理费必须为数字类型，请检查！')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoGongBenFeiHeDaiLiFeiB").ToString().Trim()+"')", true);
                 return;
             }
             tender_HYYQ.TenderStatus = DL_TenderStatus.SelectedValue.Trim();
@@ -339,11 +339,11 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
             //重新加载列表
             LoadTenderInfo("");
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZBJLBCZJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZBJLBCZJC").ToString().Trim() + "')", true);
             return;
         }
     }
@@ -353,7 +353,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
         string strID = HF_ID.Value.Trim();
         if (string.IsNullOrEmpty(strID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZYXGDTBLB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZYXGDTBLB").ToString().Trim() + "')", true);
             return;
         }
 
@@ -375,7 +375,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('警告，工本费和代理费必须为数字类型，请检查！')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoGongBenFeiHeDaiLiFeiB").ToString().Trim()+"')", true);
                 return;
             }
             tender_HYYQ.TenderStatus = DL_TenderStatus.SelectedValue.Trim();
@@ -387,11 +387,11 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
             //重新加载列表
             LoadTenderInfo("");
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZRWCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZRWCCG").ToString().Trim() + "')", true);
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZBJLBCZJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZBJLBCZJC").ToString().Trim() + "')", true);
             return;
         }
     }
@@ -508,11 +508,11 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
 
             loadTenderExpense(HF_ID.Value.Trim());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSB").ToString().Trim() + "')", true);
         }
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -530,11 +530,11 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
 
             loadTenderExpense(HF_ID.Value.Trim());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -647,7 +647,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
 
         if (intTenderID < 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZTBLB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZTBLB").ToString().Trim() + "')", true);
             return;
         }
 
@@ -672,11 +672,11 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
             //加载发票列表
             LoadTenderInvoiceInfo(intTenderID.ToString());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFPXZCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFPXZCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFPXZSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFPXZSB").ToString().Trim() + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -690,7 +690,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
 
         if (intTenderID < 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZTBLB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZTBLB").ToString().Trim() + "')", true);
             return;
         }
 
@@ -699,7 +699,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
 
         if (intInvoiceID < 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZYXGDFPLB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZYXGDFPLB").ToString().Trim() + "')", true);
             return;
         }
 
@@ -730,11 +730,11 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
                 //加载发票列表
                 LoadTenderInvoiceInfo(intTenderID.ToString());
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFPXGCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFPXGCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFPXGSB + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFPXGSB").ToString().Trim() + "')", true);
             }
         }
 
@@ -788,7 +788,7 @@ public partial class TTTenderFinanceList_BYJF : System.Web.UI.Page
 
             }
 
-            if (strWarningType == "退保证金")
+            if (strWarningType == "退保证金") 
             {
                 strHQL = "Select *  From T_Tender_HYYQ Where  IsReceiveMargin <> 0 and to_char(cast( ReceiveMarginTime as date),'yyyymmdd') <= to_char(now()+ReceiveMarginDay*'1 day'::interval,'yyyymmdd') ";
                 strHQL += " and CreatorCode = " + "'" + strUserCode + "'";

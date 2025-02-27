@@ -84,7 +84,7 @@ public partial class TTProjectReqHandlePage : System.Web.UI.Page
             DataList_Handling.DataBind();
 
             strHQL = "Select * from T_ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and reqAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成')";
+            strHQL += " and reqAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成')"; 
             strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from T_Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " and reqAssignRecord.ReqID in (select relatedReq.ReqID from T_RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + ")";
             strHQL += " Order by reqAssignRecord.MoveTime DESC limit 40";
@@ -93,7 +93,7 @@ public partial class TTProjectReqHandlePage : System.Web.UI.Page
             DataList_FinishedUnAssigned.DataBind();
 
             strHQL = "Select * from T_ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and reqAssignRecord.status = '已分派'";
+            strHQL += " and reqAssignRecord.status = '已分派'"; 
             strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from T_Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " and reqAssignRecord.ReqID in (select relatedReq.ReqID from T_RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + ")";
             strHQL += " Order by reqAssignRecord.MoveTime DESC limit 40";
@@ -122,7 +122,7 @@ public partial class TTProjectReqHandlePage : System.Web.UI.Page
             DataList_Handling.DataBind();
 
             strHQL = "Select * from T_ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and reqAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成')";
+            strHQL += " and reqAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成')"; 
             strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from T_Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " and reqAssignRecord.ReqID in (select relatedReq.ReqID from T_RelatedReq as relatedReq where relatedReq.ProjectID not in (select project.ProjectID from T_Project as project where project.Status in ('New','Review','Hided','Deleted','Archived')))";
             strHQL += " Order by reqAssignRecord.MoveTime DESC limit 40";
@@ -131,7 +131,7 @@ public partial class TTProjectReqHandlePage : System.Web.UI.Page
             DataList_FinishedUnAssigned.DataBind();
 
             strHQL = "Select * from T_ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and reqAssignRecord.Status = '已分派'";
+            strHQL += " and reqAssignRecord.Status = '已分派'"; 
             strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from T_Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " and reqAssignRecord.ReqID in (select relatedReq.ReqID from T_RelatedReq as relatedReq where relatedReq.ProjectID not in (select project.ProjectID from T_Project as project where project.Status in ('New','Review','Hided','Deleted','Archived')))";
             strHQL += " Order by reqAssignRecord.MoveTime DESC limit 40";

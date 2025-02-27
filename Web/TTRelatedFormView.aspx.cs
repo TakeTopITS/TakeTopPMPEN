@@ -122,7 +122,7 @@ public partial class TTRelatedFormView : System.Web.UI.Page
             Response.Redirect("TTProjectRiskView.aspx?RiskID=" + strRelatedID);
         }
 
-        if (strRelatedType == "会议")
+        if (strRelatedType == "会议") 
         {
             Response.Redirect("TTMeetingView.aspx?ID=" + strRelatedID);
         }
@@ -137,12 +137,12 @@ public partial class TTRelatedFormView : System.Web.UI.Page
             Response.Redirect("TTExpenseClaimListView.aspx?ECID=" + strRelatedID);
         }
 
-        if (strRelatedType == "协作")
+        if (strRelatedType == "协作") 
         {
             Response.Redirect("TTCollaborationView.aspx?CoID=" + strRelatedID);
         }
 
-        if (strRelatedType == "合同")
+        if (strRelatedType == "合同") 
         {
             Response.Redirect("TTConstractView.aspx?ID=" + strRelatedID);
         }
@@ -152,21 +152,21 @@ public partial class TTRelatedFormView : System.Web.UI.Page
             Response.Redirect("TTProjectPlanView.aspx?PlanID=" + strRelatedID);
         }
 
-        if (strRelatedType == "客服")
+        if (strRelatedType == "客服") 
         {
             Response.Redirect("TTCustomerQuestionView.aspx?ID=" + strRelatedID);
         }
 
-        if (strRelatedType == "大计划")
+        if (strRelatedType == "大计划") 
         {
             Response.Redirect("TTPlanView.aspx?PlanID=" + strRelatedID);
         }
 
         if (strRelatedType == "Other")
         {
-            Response.Write("--此业务无关联表单！");
+            Response.Write(LanguageHandle.GetWord("CiYeWuMoGuanLianBiaoChan").ToString().Trim());
 
-            //this.Title = "--此业务无关联表单！";
+            //this.Title = LanguageHandle.GetWord("CiYeWuMoGuanLianBiaoChan").ToString().Trim();
         }
     }
 }

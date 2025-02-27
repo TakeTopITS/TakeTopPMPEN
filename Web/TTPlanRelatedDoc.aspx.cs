@@ -51,8 +51,8 @@ public partial class TTPlanRelatedDoc : System.Web.UI.Page
         //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
         {
-            ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "大计划", strPlanID, strPlanName);
-            LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
+            ShareClass.InitialDocTypeTree(TreeView1, strUserCode, LanguageHandle.GetWord("DaJiHua").ToString().Trim(), strPlanID, strPlanName);
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
 
             LoadRelatedDoc(strPlanID);
 
@@ -90,8 +90,8 @@ public partial class TTPlanRelatedDoc : System.Web.UI.Page
             DocType docType = (DocType)lst1[0];
             strDocType = docType.Type.Trim();
 
-            strHQL = " from Document as document where document.RelatedType = '大计划' and document.RelatedID = " + strPlanID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";
-            LB_FindCondition.Text = Resources.lang.CXFWWJLX + strDocType;
+            strHQL = "from Document as document where document.RelatedType = '大计划' and document.RelatedID =" + strPlanID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC"; 
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + strDocType;
 
             //设置缺省的文件类型
             ShareClass.SetDefaultDocType(strDocType, LB_DocTypeID, TB_DocType);
@@ -100,15 +100,15 @@ public partial class TTPlanRelatedDoc : System.Web.UI.Page
         }
         else
         {
-            strHQL = " from Document as document where document.RelatedType = '大计划' and document.RelatedID = " + strPlanID + " and document.Status <> 'Deleted' Order by document.DocID DESC";
-            LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
+            strHQL = "from Document as document where document.RelatedType = '大计划' and document.RelatedID =" + strPlanID + " and document.Status <> 'Deleted' Order by document.DocID DESC"; 
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
         }
 
         lst2 = documentBLL.GetAllDocuments(strHQL);
         DataGrid1.DataSource = lst2;
         DataGrid1.DataBind();
 
-        LB_TotalCount.Text = Resources.lang.CXDDWJS + ": " + lst2.Count.ToString();
+        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst2.Count.ToString();
     }
 
 
@@ -154,11 +154,11 @@ public partial class TTPlanRelatedDoc : System.Web.UI.Page
                     //删除更多文档
                     ShareClass.DeleteMoreDocByDataGrid(DataGrid1);
 
-                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "大计划", strPlanID, strPlanName);
+                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, LanguageHandle.GetWord("DaJiHua").ToString().Trim(), strPlanID, strPlanName);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFFCZNBNSCBRSCDWJ + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFFCZNBNSCBRSCDWJ").ToString().Trim() + "')", true);
                 }
             }
 
@@ -175,7 +175,7 @@ public partial class TTPlanRelatedDoc : System.Web.UI.Page
                 }
                 e.Item.ForeColor = Color.Red;
 
-                TB_WLName.Text = Resources.lang.WenJian + strDocID + strDocName + Resources.lang.PingShen;
+                TB_WLName.Text = LanguageHandle.GetWord("WenJian").ToString().Trim() + strDocID + strDocName + LanguageHandle.GetWord("PingShen").ToString().Trim();
 
                 BT_SubmitApply.Enabled = true;
 
@@ -193,7 +193,7 @@ public partial class TTPlanRelatedDoc : System.Web.UI.Page
             string strDocTypeID = LB_DocTypeID.Text.Trim();
             if (strDocTypeID == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGWDLXBNWKJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWDLXBNWKJC").ToString().Trim() + "')", true);
                 return;
             }
             string strDocType = GetDocTypeName(strDocTypeID);
@@ -219,14 +219,14 @@ public partial class TTPlanRelatedDoc : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + strFileName3);
             if (fi.Exists)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZCZTMWJSCSBGMHZSC + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "');</script>");
             }
             else
             {
                 DocumentBLL documentBLL = new DocumentBLL();
                 Document document = new Document();
 
-                document.RelatedType = "大计划";
+                document.RelatedType = LanguageHandle.GetWord("DaJiHua").ToString().Trim();
                 document.DocType = strDocType;
                 document.DocTypeID = int.Parse(strDocTypeID);
                 document.RelatedID = int.Parse(strPlanID);
@@ -250,17 +250,17 @@ public partial class TTPlanRelatedDoc : System.Web.UI.Page
 
 
                     LoadRelatedDoc(strPlanID);
-                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "大计划", strPlanID, strPlanName);
+                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, LanguageHandle.GetWord("DaJiHua").ToString().Trim(), strPlanID, strPlanName);
                 }
                 catch
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSCSBJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "');</script>");
                 }
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZZYSCDWJ + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "');</script>");
         }
     }
 
@@ -359,11 +359,11 @@ public partial class TTPlanRelatedDoc : System.Web.UI.Page
 
             LoadRelatedWL("DocumentReview", "Document", int.Parse(strDocID));
 
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZWJPSSSCDGZLGLYMJHCGZLS + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZWJPSSSCDGZLGLYMJHCGZLS").ToString().Trim() + "');</script>");
         }
         catch
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZWJPSSSB + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZWJPSSSB").ToString().Trim() + "');</script>");
         }
     }
 
@@ -438,13 +438,13 @@ public partial class TTPlanRelatedDoc : System.Web.UI.Page
         strDepartCode = GetDepartCode(strUserCode);
 
         strHQL = "from Document as document where ";
-        strHQL += " ((document.RelatedType = '大计划' and document.RelatedID = " + strPlanID;
+        strHQL += " ((document.RelatedType = '大计划' and document.RelatedID = " + strPlanID; 
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or (document.Visible = '部门' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";
-        strHQL += " or ( document.Visible = '全体'))) ";
-        strHQL += " or ((document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='大计划' and meeting.RelatedID = " + strPlanID + "))";
+        strHQL += " or (document.Visible = '部门' and document.DepartCode = " + "'" + strDepartCode + "'" + " )"; 
+        strHQL += " or ( document.Visible = '全体'))) "; 
+        strHQL += "or ((document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='大计划' and meeting.RelatedID =" + strPlanID + "))"; 
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or ( document.Visible = '会议'))))";
+        strHQL += " or ( document.Visible = '会议'))))"; 
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' order by document.DocID DESC";
 
         DocumentBLL documentBLL = new DocumentBLL();
@@ -454,7 +454,7 @@ public partial class TTPlanRelatedDoc : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_TotalCount.Text = Resources.lang.CXDDWJS + ": " + lst.Count.ToString();
+        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
     }
 
     protected string GetDocTypeName(string strDocTypeID)

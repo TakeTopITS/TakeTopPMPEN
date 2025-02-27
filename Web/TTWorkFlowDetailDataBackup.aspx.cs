@@ -84,7 +84,7 @@ public partial class TTWorkFlowDetailDataBackup : System.Web.UI.Page
             }
             catch
             {
-                Response.Write("------错误，此工作流数据文件不存在，不能审批，请检查！");
+                Response.Write(LanguageHandle.GetWord("CuoWuCiGongZuoLiuShuJuWenJianB").ToString().Trim());
                 return;
             }
 
@@ -186,7 +186,7 @@ public partial class TTWorkFlowDetailDataBackup : System.Web.UI.Page
                 }
                 catch
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZDKSPSJSBKNSXYGZLMBDBKSYDBDSCWJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZDKSPSJSBKNSXYGZLMBDBKSYDBDSCWJC").ToString().Trim() + "');</script>");
                 }
             }
         }

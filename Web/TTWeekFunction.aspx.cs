@@ -32,7 +32,7 @@ public partial class TTWeekFunction : System.Web.UI.Page
         IList listCarCheckWeek = carCheckWeekBLL.GetAllCarCheckWeeks(strCarCheckWeekHQL);
         TV_Weeks.Nodes.Clear();
         TreeNode Node = new TreeNode();
-        Node.Text = "全部";
+        Node.Text = LanguageHandle.GetWord("QuanBu").ToString().Trim();
         Node.Value = "all|all";
         if (listCarCheckWeek != null && listCarCheckWeek.Count > 0)
         {
@@ -46,7 +46,7 @@ public partial class TTWeekFunction : System.Web.UI.Page
                 NodeChild.Value = "carCheckWeekName|" + strWeekCode;
                 //周检计划表
                 TreeNode NodeWeekPlan = new TreeNode();
-                NodeWeekPlan.Text = "周检计划表";
+                NodeWeekPlan.Text = LanguageHandle.GetWord("ZhouJianJiHuaBiao").ToString().Trim();
                 NodeWeekPlan.Value = "carCheckWeekPlan|" + strWeekCode;
 
                 CustomModuleBLL customModuleBLL1 = new CustomModuleBLL();
@@ -71,7 +71,7 @@ public partial class TTWeekFunction : System.Web.UI.Page
                 NodeChild.ChildNodes.Add(NodeWeekPlan);
                 //周检问题表
                 TreeNode NodeWeekProblem = new TreeNode();
-                NodeWeekProblem.Text = "周检问题表";
+                NodeWeekProblem.Text = LanguageHandle.GetWord("ZhouJianWenTiBiao").ToString().Trim();
                 NodeWeekProblem.Value = "carCheckWeekProblem|" + strWeekCode;
 
                 CustomModuleBLL customModuleBLL2 = new CustomModuleBLL();
@@ -96,7 +96,7 @@ public partial class TTWeekFunction : System.Web.UI.Page
                 NodeChild.ChildNodes.Add(NodeWeekProblem);
                 //会议讲评记录
                 TreeNode NodeWeekRecord = new TreeNode();
-                NodeWeekRecord.Text = "会议讲评记录";
+                NodeWeekRecord.Text = LanguageHandle.GetWord("HuiYiJiangPingJiLu").ToString().Trim();
                 NodeWeekRecord.Value = "carCheckWeekRecord|" + strWeekCode;
 
                 CustomModuleBLL customModuleBLL3 = new CustomModuleBLL();
@@ -121,7 +121,7 @@ public partial class TTWeekFunction : System.Web.UI.Page
                 NodeChild.ChildNodes.Add(NodeWeekRecord);
                 //问题整改通知单
                 TreeNode NodeWeekNotice = new TreeNode();
-                NodeWeekNotice.Text = "问题整改通知单";
+                NodeWeekNotice.Text = LanguageHandle.GetWord("WenTiZhengGaiTongZhiChan").ToString().Trim();
                 NodeWeekNotice.Value = "carCheckWeekNotice|" + strWeekCode;
 
                 CustomModuleBLL customModuleBLL4 = new CustomModuleBLL();
@@ -146,7 +146,7 @@ public partial class TTWeekFunction : System.Web.UI.Page
                 NodeChild.ChildNodes.Add(NodeWeekNotice);
                 //问题汇总
                 TreeNode NodeWeekTotal = new TreeNode();
-                NodeWeekTotal.Text = "问题汇总";
+                NodeWeekTotal.Text = LanguageHandle.GetWord("WenTiHuiZong").ToString().Trim();
                 NodeWeekTotal.Value = "carCheckWeekTotal|" + strWeekCode;
 
                 CustomModuleBLL customModuleBLL5 = new CustomModuleBLL();
@@ -257,12 +257,12 @@ public partial class TTWeekFunction : System.Web.UI.Page
             }
             catch
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('新增出错，请检查！');ShowDiv();</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertXinZengChuCuoQingJi").ToString().Trim());
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('客户代码和名称不能为空，请检查！');ShowDiv();</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertKeHuDaiMaHeMingChen").ToString().Trim());
         }
     }
 
@@ -306,21 +306,21 @@ public partial class TTWeekFunction : System.Web.UI.Page
                     carCheckWeekBLL.UpdateCarCheckWeek(carCheckWeek, strWeekCode);
 
                     LoadWeekTree();
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('保存成功！');ShowDiv();</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertBaoCunChengGongShow").ToString().Trim());
                 }
                 catch
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('修改出错，请检查！');ShowDiv();</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertXiuGaiChuCuoQingJia").ToString().Trim());
                 }
             }
             else
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('不能修改客户代码，只可以修改其它信息！');ShowDiv();</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertBuNengXiuGaiKeHuDai").ToString().Trim());
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('供应商代码和名称不能为空，请检查！');ShowDiv();</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertGongYingShangDaiMaH").ToString().Trim());
         }
     }
 
@@ -373,7 +373,7 @@ public partial class TTWeekFunction : System.Web.UI.Page
                 else
                 {
                     mainFrame.Attributes.Add("src", "");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('未设定客户开发的模组！请先设定模组');ShowDiv();</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertWeiSheDingKeHuKaiFa").ToString().Trim());
                 }
             }
             else if (arrSelectNodeValue[0] == "carCheckWeekProblem")
@@ -402,7 +402,7 @@ public partial class TTWeekFunction : System.Web.UI.Page
                 else
                 {
                     mainFrame.Attributes.Add("src", "");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('未设定客户开发的模组！请先设定模组');ShowDiv();</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertWeiSheDingKeHuKaiFa").ToString().Trim());
                 }
             }
             else if (arrSelectNodeValue[0] == "carCheckWeekRecord")
@@ -431,7 +431,7 @@ public partial class TTWeekFunction : System.Web.UI.Page
                 else
                 {
                     mainFrame.Attributes.Add("src", "");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('未设定客户开发的模组！请先设定模组');ShowDiv();</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertWeiSheDingKeHuKaiFa").ToString().Trim());
                 }
             }
             else if (arrSelectNodeValue[0] == "carCheckWeekNotice")
@@ -460,7 +460,7 @@ public partial class TTWeekFunction : System.Web.UI.Page
                 else
                 {
                     mainFrame.Attributes.Add("src", "");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('未设定客户开发的模组！请先设定模组');ShowDiv();</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertWeiSheDingKeHuKaiFa").ToString().Trim());
                 }
             }
             else if (arrSelectNodeValue[0] == "carCheckWeekTotal")
@@ -489,7 +489,7 @@ public partial class TTWeekFunction : System.Web.UI.Page
                 else
                 {
                     mainFrame.Attributes.Add("src", "");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('未设定客户开发的模组！请先设定模组');ShowDiv();</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertWeiSheDingKeHuKaiFa").ToString().Trim());
                 }
             }
             else if (arrSelectNodeValue[0] == "child")

@@ -35,7 +35,7 @@ public partial class TTMyWorkDetailMainDeWei : System.Web.UI.Page
 
         strWLName = workFlow.WLName.Trim();
 
-        this.Title = Resources.lang.WoDeGongZuoLiu + ": " + strWLID + " " + strWLName;
+        this.Title = LanguageHandle.GetWord("WoDeGongZuoLiu").ToString().Trim() + ": " + strWLID + " " + strWLName;
 
         strCreatorCode = workFlow.CreatorCode.Trim();
 

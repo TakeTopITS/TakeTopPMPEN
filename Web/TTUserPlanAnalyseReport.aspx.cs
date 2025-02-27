@@ -46,10 +46,10 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
             DLC_StartTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
             DLC_EndTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
-            LB_ProjectMemberOwner.Text = Resources.lang.SYCYLB;
+            LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SYCYLB").ToString().Trim();
 
             strHQL = "from ProjectMember as projectMember ";
             strHQL += " Where projectMember.DepartCode in " + strDepartString;
@@ -59,7 +59,7 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
             DataGrid1.DataSource = lst;
             DataGrid1.DataBind();
 
-            LB_UserNumber.Text = Resources.lang.GCXD + lst.Count.ToString();
+            LB_UserNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + lst.Count.ToString();
             LB_Sql.Text = strHQL;
         }
     }
@@ -109,7 +109,7 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
             DataGrid1.DataSource = ds;
             DataGrid1.DataBind();
 
-            LB_UserNumber.Text = Resources.lang.GCXD + ds.Tables[0].Rows.Count ;
+            LB_UserNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + ds.Tables[0].Rows.Count ;
             LB_Sql.Text = strHQL;
 
             LB_DepartCode.Text = strDepartCode;
@@ -120,7 +120,7 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
     {
         string strHQL;
        
-        LB_ProjectMemberOwner.Text = Resources.lang.SYCYLB;
+        LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SYCYLB").ToString().Trim();
 
         string strDepartString = LB_DepartString.Text.Trim();
         string strPlanOperator = DL_PlanOperator.SelectedValue.Trim();
@@ -159,7 +159,7 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
         DataGrid1.DataSource = ds;
         DataGrid1.DataBind();
 
-        LB_UserNumber.Text = Resources.lang.GCXD + ds.Tables [0].Rows.Count  ;
+        LB_UserNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + ds.Tables [0].Rows.Count  ;
         LB_Sql.Text = strHQL;
 
         LB_DepartCode.Text = "";
@@ -185,12 +185,12 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = "用户成员信息_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("YongHuChengYuanXinXi").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 CreateExcel(getUserList(), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGDCDSJYWJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim()+"')", true);
             }
         }
     }
@@ -234,9 +234,9 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
            
             if (strPlanOperator == "<")
             {
-                strHQL = "Select UserCode '代码',UserName '姓名',Gender '性别',Age '年龄',DepartCode '部门代码',DepartName '部门名称'," +
-               "Duty '职责',OfficePhone '办公电话',MobilePhone '移动电话',EMail 'EMail',WorkScope '工作范围',JoinDate '加入日期',Status '状态'," +
-               "RefUserCode '参考工号',IDCard '身份证号',SortNumber '顺序号'" +
+                strHQL = "Select UserCode '代码',UserName '姓名',Gender '性别',Age '年龄',DepartCode '部门代码',DepartName '部门名称'," + 
+               "Duty '职责',OfficePhone '办公电话',MobilePhone '移动电话',EMail 'EMail',WorkScope '工作范围',JoinDate '加入日期',Status '状态'," + 
+               LanguageHandle.GetWord("RefUserCodeCanKaoGongHaoIDCard").ToString().Trim() +
                "From T_ProjectMember Where DepartCode in " + strDepartString + " ";
 
                 if (!string.IsNullOrEmpty(TB_UserCode.Text.Trim()))
@@ -255,9 +255,9 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
             }
             else
             {
-                strHQL = "Select B.UserCode '代码',B.UserName '姓名',B.Gender '性别',B.Age '年龄',B.DepartCode '部门代码',B.DepartName '部门名称'," +
-               "B.Duty '职责',B.OfficePhone '办公电话',B.MobilePhone '移动电话',B.EMail 'EMail',B.WorkScope '工作范围',B.JoinDate '加入日期',B.Status '状态'," +
-               "B.RefUserCode '参考工号',B.IDCard '身份证号',B.SortNumber '顺序号'" +
+                strHQL = "Select B.UserCode '代码',B.UserName '姓名',B.Gender '性别',B.Age '年龄',B.DepartCode '部门代码',B.DepartName '部门名称'," + 
+               "B.Duty '职责',B.OfficePhone '办公电话',B.MobilePhone '移动电话',B.EMail 'EMail',B.WorkScope '工作范围',B.JoinDate '加入日期',B.Status '状态'," + 
+               LanguageHandle.GetWord("BRefUserCodeCanKaoGongHaoBIDCa").ToString().Trim() +
                "From T_Plan A, T_ProjectMember B Where A.CreatorCode = B.UserCode and B.DepartCode in " + strDepartString + " ";
 
                 if (!string.IsNullOrEmpty(TB_UserCode.Text.Trim()))
@@ -281,9 +281,9 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
         {
             if (strPlanOperator == "<")
             {
-                strHQL = "Select UserCode '代码',UserName '姓名',Gender '性别',Age '年龄',DepartCode '部门代码',DepartName '部门名称'," +
-                "Duty '职责',OfficePhone '办公电话',MobilePhone '移动电话',EMail 'EMail',WorkScope '工作范围',JoinDate '加入日期',Status '状态'," +
-                "RefUserCode '参考工号',IDCard '身份证号',SortNumber '顺序号' " +
+                strHQL = "Select UserCode '代码',UserName '姓名',Gender '性别',Age '年龄',DepartCode '部门代码',DepartName '部门名称'," + 
+                "Duty '职责',OfficePhone '办公电话',MobilePhone '移动电话',EMail 'EMail',WorkScope '工作范围',JoinDate '加入日期',Status '状态'," + 
+                LanguageHandle.GetWord("RefUserCodeCanKaoGongHaoIDCard").ToString().Trim() +
                 "From T_ProjectMember Where DepartCode = '" + strDepartCode + "'";
                 strHQL += " and UserCode in (Select UserCode From T_SystemActiveUser )";
                 strHQL += " and UserCode not in ";
@@ -293,9 +293,9 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
             }
             else
             {
-                strHQL = "Select B.UserCode '代码',B.UserName '姓名',B.Gender '性别',B.Age '年龄',B.DepartCode '部门代码',B.DepartName '部门名称'," +
-               "B.Duty '职责',B.OfficePhone '办公电话',B.MobilePhone '移动电话',B.EMail 'EMail',B.WorkScope '工作范围',B.JoinDate '加入日期',B.Status '状态'," +
-               "B.RefUserCode '参考工号',B.IDCard '身份证号',B.SortNumber '顺序号' " +
+                strHQL = "Select B.UserCode '代码',B.UserName '姓名',B.Gender '性别',B.Age '年龄',B.DepartCode '部门代码',B.DepartName '部门名称'," + 
+               "B.Duty '职责',B.OfficePhone '办公电话',B.MobilePhone '移动电话',B.EMail 'EMail',B.WorkScope '工作范围',B.JoinDate '加入日期',B.Status '状态'," + 
+               LanguageHandle.GetWord("BRefUserCodeCanKaoGongHaoBIDCa").ToString().Trim() +
                "From T_Plan A, T_ProjectMember B Where A.CreatorCode = B.UserCode and B.DepartCode  = '" + strDepartCode + "'";
 
                 if (!string.IsNullOrEmpty(TB_UserCode.Text.Trim()))
@@ -326,11 +326,11 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
         IList lst = systemActiveUserBLL.GetAllSystemActiveUsers(strHQL);
         if (lst.Count > 0 && lst != null)
         {
-            return "已开通";
+            return "已开通"; 
         }
         else
         {
-            return "未开通";
+            return "未开通"; 
         }
     }
 }

@@ -26,7 +26,7 @@ public partial class TTProjectMemberGradeList : System.Web.UI.Page
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (!IsPostBack)
         {
-            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             strHQL = "from Department as department Where department.DepartCode in " + strDepartString;
@@ -83,13 +83,13 @@ public partial class TTProjectMemberGradeList : System.Web.UI.Page
             string strGradeName = TXT_GradeName.Text.Trim();
             if (string.IsNullOrEmpty(strGradeName))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZNJBNWKBC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZNJBNWKBC").ToString().Trim()+"')", true);
                 return;
             }
 
             if (!ShareClass.CheckStringRight(strGradeName))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZNJBNWFFZFCXG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZNJBNWFFZFCXG").ToString().Trim()+"')", true);
                 return;
             }
 
@@ -98,7 +98,7 @@ public partial class TTProjectMemberGradeList : System.Web.UI.Page
 
             if (strDepartCode == "" | strDepartName == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGGSBMBNWKJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGGSBMBNWKJC").ToString().Trim()+"')", true);
                 return;
             }
 
@@ -110,7 +110,7 @@ public partial class TTProjectMemberGradeList : System.Web.UI.Page
             int.TryParse(ShareClass.ObjectToString(dtCheckGrade.Rows[0]["RowNumber"]), out intCheckGradeCount);
             if (intCheckGradeCount > 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZNJYJCZBYZFTJ+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZNJYJCZBYZFTJ").ToString().Trim()+"')", true);
                 return;
             }
 
@@ -127,11 +127,11 @@ public partial class TTProjectMemberGradeList : System.Web.UI.Page
             DataBinder();
 
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
         }
         catch (Exception ex)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXJYCJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXJYCJC").ToString().Trim()+"')", true);
         }
     }
 
@@ -148,13 +148,13 @@ public partial class TTProjectMemberGradeList : System.Web.UI.Page
             string strGradeName = TXT_GradeName.Text.Trim();
             if (string.IsNullOrEmpty(strGradeName))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZNJBNWKBC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZNJBNWKBC").ToString().Trim()+"')", true);
                 return;
             }
 
             if (!ShareClass.CheckStringRight(strGradeName))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZNJBNWFFZFCXG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZNJBNWFFZFCXG").ToString().Trim()+"')", true);
                 return;
             }
             string strDepartCode = LB_BelongDepartCode.Text.Trim();
@@ -162,7 +162,7 @@ public partial class TTProjectMemberGradeList : System.Web.UI.Page
 
             if (strDepartCode == "" | strDepartName == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGGSBMBNWKJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGGSBMBNWKJC").ToString().Trim()+"')", true);
                 return;
             }
 
@@ -184,7 +184,7 @@ public partial class TTProjectMemberGradeList : System.Web.UI.Page
                         ProjectMemberGrade wZCheckGrade = (ProjectMemberGrade)lstCheckGrade[0];
                         if (wZCheckGrade.ID.ToString() != strID)
                         {
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZNJYJCZBYZFTJ+"')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZNJYJCZBYZFTJ").ToString().Trim()+"')", true);
                             return;
                         }
                     }
@@ -199,7 +199,7 @@ public partial class TTProjectMemberGradeList : System.Web.UI.Page
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSZBCLCNJDGSBMXXMYGGMCXXYCNJXCZBJ+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSZBCLCNJDGSBMXXMYGGMCXXYCNJXCZBJ").ToString().Trim()+"')", true);
                     }
                  
                     projectMemberGradeBLL.UpdateProjectMemberGrade(projectMemberGrade, int.Parse(strID));
@@ -208,17 +208,17 @@ public partial class TTProjectMemberGradeList : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZYXGDNJLB+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZYXGDNJLB").ToString().Trim()+"')", true);
                 return;
             }
 
             DataBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGXCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGXCG").ToString().Trim()+"')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGXYCJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGXYCJC").ToString().Trim()+"')", true);
         }
     }
 
@@ -271,7 +271,7 @@ public partial class TTProjectMemberGradeList : System.Web.UI.Page
             {
                 if (getExistedClassCount(strCmdArgu) > 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGCNJXCZBJBNSCJC+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGCNJXCZBJBNSCJC").ToString().Trim()+"')", true);
                     return;
                 }
 
@@ -288,7 +288,7 @@ public partial class TTProjectMemberGradeList : System.Web.UI.Page
 
                     DataBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
                 }
             }
         }

@@ -38,10 +38,10 @@ public partial class TTAllLeaveInformation : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
         {
             LoadLeaveType();
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT,TreeView1, strUserCode.Trim());
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode.Trim());
             LB_DepartString.Text = strDepartString;
 
-            LB_ProjectMemberOwner.Text = "所有请假信息列表：";
+            LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SuoYouQingJiaXinXiLieBiao").ToString().Trim();
 
             strHQL = "from LeaveApplyForm as leaveApplyForm ";
             strHQL += " Where leaveApplyForm.DepartCode in " + strDepartString;
@@ -62,9 +62,9 @@ public partial class TTAllLeaveInformation : System.Web.UI.Page
                 }
             }
 
-            LB_LeaveInfoNumber.Text = Resources.lang.GCXD + lst.Count.ToString() + " 条";
-            //lbl_DayHourTotal.Text = "共请假：" + strHourNum + " 小时；合计：" + strDayNum + " 天";
-            lbl_DayHourTotal.Text = "共请假：" + strHourNum + " 小时；";
+            LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + lst.Count.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
+            //lbl_DayHourTotal.Text = LanguageHandle.GetWord("GongQingJia").ToString().Trim() + strHourNum + "小时；合计：" + strDayNum + "天";
+            lbl_DayHourTotal.Text = LanguageHandle.GetWord("GongQingJia").ToString().Trim() + strHourNum + LanguageHandle.GetWord("XiaoShi").ToString().Trim();
 
             LB_Sql.Text = strHQL;
         }
@@ -95,8 +95,8 @@ public partial class TTAllLeaveInformation : System.Web.UI.Page
 
             intCount = LoadUserByDepartCodeForDataGrid(strDepartCode, DataGrid1);
 
-            LB_ProjectMemberOwner.Text = strDepartName + " 的请假信息：";
-            LB_LeaveInfoNumber.Text = Resources.lang.GCXD + intCount.ToString() + " 条";
+            LB_ProjectMemberOwner.Text = strDepartName + LanguageHandle.GetWord("DeQingJiaXinXi").ToString().Trim();
+            LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + intCount.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
 
             LB_DepartCode.Text = strDepartCode;
         }
@@ -123,7 +123,7 @@ public partial class TTAllLeaveInformation : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        LB_ProjectMemberOwner.Text = "所有请假信息列表：";
+        LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SuoYouQingJiaXinXiLieBiao").ToString().Trim();
 
         string strDepartString = LB_DepartString.Text.Trim();
 
@@ -166,8 +166,8 @@ public partial class TTAllLeaveInformation : System.Web.UI.Page
             }
         }
 
-        LB_LeaveInfoNumber.Text = Resources.lang.GCXD + lst.Count.ToString() + " 条";
-        lbl_DayHourTotal.Text = "共请假：" + strHourNum + " 小时；";
+        LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + lst.Count.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
+        lbl_DayHourTotal.Text = LanguageHandle.GetWord("GongQingJia").ToString().Trim() + strHourNum + LanguageHandle.GetWord("XiaoShi").ToString().Trim();
 
         LB_Sql.Text = strHQL;
 
@@ -194,12 +194,12 @@ public partial class TTAllLeaveInformation : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = "请假信息_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("QingJiaXinXi").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 CreateExcel(getUserList(), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDCDSJYWJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
             }
         }
     }
@@ -235,8 +235,8 @@ public partial class TTAllLeaveInformation : System.Web.UI.Page
         {
             string strDepartString = LB_DepartString.Text.Trim();
 
-            strHQL = "Select ID '编号',UserName '请假人',DepartCode '部门代码',DepartName '部门名称',Duty '职位',LeaveType '请假类型',StartTime '开始时间'," +
-                "EndTime '结束时间',ApplyBecause '请假事由',CreateTime '请假日期',Status '状态' from T_LeaveApplyForm Where DepartCode in " + strDepartString + " ";
+            strHQL = "Select ID '编号',UserName '请假人',DepartCode '部门代码',DepartName '部门名称',Duty '职位',LeaveType '请假类型',StartTime '开始时间'," + 
+                "EndTime '结束时间',ApplyBecause '请假事由',CreateTime '请假日期',Status '状态' from T_LeaveApplyForm Where DepartCode in" + strDepartString + " "; 
 
             if (!string.IsNullOrEmpty(DL_Status.SelectedValue.Trim()))
             {
@@ -266,8 +266,8 @@ public partial class TTAllLeaveInformation : System.Web.UI.Page
         }
         else//按组织架构查询的
         {
-            strHQL = "Select ID '编号',UserName '请假人',DepartCode '部门代码',DepartName '部门名称',Duty '职位',LeaveType '请假类型',StartTime '开始时间'," +
-                "EndTime '结束时间',ApplyBecause '请假事由',CreateTime '请假日期',Status '状态' from T_LeaveApplyForm Where DepartCode = '" + strDepartCode + "' Order by ID DESC ";
+            strHQL = "Select ID '编号',UserName '请假人',DepartCode '部门代码',DepartName '部门名称',Duty '职位',LeaveType '请假类型',StartTime '开始时间'," + 
+                "EndTime '结束时间',ApplyBecause '请假事由',CreateTime '请假日期',Status '状态' from T_LeaveApplyForm Where DepartCode = '" + strDepartCode + "' Order by ID DESC "; 
 
         }
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_LeaveApplyForm");

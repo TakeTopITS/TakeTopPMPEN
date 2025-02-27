@@ -61,7 +61,7 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
             DLC_ArrivalTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
             DLC_PurTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityAsset(Resources.lang.ZZJGT, TreeView1, strUserCode);
+            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityAsset(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
 
             strHQL = "from JNUnit as jnUnit order by jnUnit.SortNumber ASC";
             JNUnitBLL jnUnitBLL = new JNUnitBLL();
@@ -209,7 +209,7 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
 
             //WorkFlow,如果此单和工作流相关，那么依工作流状态决定能否保存单据数据
             string strCreateUserCode = getAssetPurchaseOrderCreatorCode(strPOID);
-            ShareClass.MainTableChangeWorkflowRelatedModule(strUserCode, "资产采购单", strPOID, strCreateUserCode, strRelatedWorkflowID, strRelatedWorkflowStepID, strRelatedWorkflowStepDetailID, BT_CreateMain, BT_NewMain, BT_CreateDetail, BT_NewDetail, strMainTableCanEdit);
+            ShareClass.MainTableChangeWorkflowRelatedModule(strUserCode, LanguageHandle.GetWord("ZiChanCaiGouChan").ToString().Trim(), strPOID, strCreateUserCode, strRelatedWorkflowID, strRelatedWorkflowStepID, strRelatedWorkflowStepDetailID, BT_CreateMain, BT_NewMain, BT_CreateDetail, BT_NewDetail, strMainTableCanEdit);
 
             //从流程中打开的业务单
             string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AssetProcurement", "Assets", strPOID, "0");
@@ -261,7 +261,7 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
                 }
 
 
-                TB_WLName.Text = Resources.lang.GouMai + assetPurchaseOrder.POName.Trim() + Resources.lang.ShenQing;
+                TB_WLName.Text = LanguageHandle.GetWord("GouMai").ToString().Trim() + assetPurchaseOrder.POName.Trim() + LanguageHandle.GetWord("ShenQing").ToString().Trim();
 
                 LoadRelatedWL("AssetProcurement", "Assets", assetPurchaseOrder.POID);
 
@@ -289,7 +289,7 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
                 //Workflow,如果存在关联工作流，那么要执行下面的代码
                 if (!ShareClass.MainTableDeleteWorkflowRelatedModule(strUserCode, strCreateUserCode, strRelatedWorkflowID, strRelatedWorkflowStepID, strRelatedWorkflowStepDetailID, strMainTableCanDelete))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click22", "alert('" + Resources.lang.ZZSBNWQSCQJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click22", "alert('" + LanguageHandle.GetWord("ZZSBNWQSCQJC").ToString().Trim() + "')", true);
                     return;
                 }
 
@@ -302,7 +302,7 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
                     ShareClass.RunSqlCommand(strHQL);
 
                     //Workflow,删除流程模组关联记录
-                    ShareClass.DeleteModuleToRelatedWorkflow(strRelatedWorkflowID, strRelatedWorkflowStepID, strRelatedWorkflowStepDetailID, "资产采购单", strPOID);
+                    ShareClass.DeleteModuleToRelatedWorkflow(strRelatedWorkflowID, strRelatedWorkflowStepID, strRelatedWorkflowStepDetailID, LanguageHandle.GetWord("ZiChanCaiGouChan").ToString().Trim(), strPOID);
 
 
                     BT_SubmitApply.Enabled = false;
@@ -312,7 +312,7 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCCJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCCJC").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -390,7 +390,7 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWCGRDMBZCWCRJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWCGRDMBZCWCRJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -417,12 +417,12 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
 
 
             //Workflow,添加模组关联流程记录
-            ShareClass.AddModuleToRelatedWorkflow(strRelatedWorkflowID, strRelatedWorkflowStepID, strRelatedWorkflowStepDetailID, "资产采购单", strPOID);
+            ShareClass.AddModuleToRelatedWorkflow(strRelatedWorkflowID, strRelatedWorkflowStepID, strRelatedWorkflowStepDetailID, LanguageHandle.GetWord("ZiChanCaiGouChan").ToString().Trim(), strPOID);
 
             NB_Amount.Amount = 0;
 
 
-            TB_WLName.Text = Resources.lang.GouMai + strPOName + Resources.lang.ShenQing;
+            TB_WLName.Text = LanguageHandle.GetWord("GouMai").ToString().Trim() + strPOName + LanguageHandle.GetWord("ShenQing").ToString().Trim();
 
             BT_SubmitApply.Enabled = true;
 
@@ -431,7 +431,7 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXJCCKNCGMCZD50GHZHBZZSZD100GHZGDJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXJCCKNCGMCZD50GHZHBZZSZD100GHZGDJC").ToString().Trim() + "')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
     }
@@ -474,7 +474,7 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWCGRDMBZCWCRJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWCGRDMBZCWCRJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -513,11 +513,11 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
                 }
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
         }
     }
 
@@ -742,7 +742,7 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
             }
 
             //WorkFlow,如果此单和工作流相关，那么依工作流状态决定能否保存单据数据
-            ShareClass.DetailTableChangeWorkflowRelatedModule(strUserCode, "资产采购单", strPOID, strRelatedWorkflowID, strRelatedWorkflowStepID, strRelatedWorkflowStepDetailID, BT_CreateMain, BT_NewMain, BT_CreateDetail, BT_NewDetail, strDetailTableCanAdd, strDetailTableCanEdit);
+            ShareClass.DetailTableChangeWorkflowRelatedModule(strUserCode, LanguageHandle.GetWord("ZiChanCaiGouChan").ToString().Trim(), strPOID, strRelatedWorkflowID, strRelatedWorkflowStepID, strRelatedWorkflowStepDetailID, BT_CreateMain, BT_NewMain, BT_CreateDetail, BT_NewDetail, strDetailTableCanAdd, strDetailTableCanEdit);
 
             //从流程中打开的业务单
             string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("AssetProcurement", "Assets", strPOID, "0");
@@ -818,7 +818,7 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
                     strCreateUserCode = getAssetPurchaseOrderCreatorCode(strPOID);
                     if (!ShareClass.DetailTableDeleteWorkflowRelatedModule(strUserCode, strCreateUserCode, strRelatedWorkflowID, strRelatedWorkflowStepID, strRelatedWorkflowStepDetailID, strDetailTableCanDelete))
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click33", "alert('" + Resources.lang.ZZSBNWQSCQJC + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click33", "alert('" + LanguageHandle.GetWord("ZZSBNWQSCQJC").ToString().Trim() + "')", true);
                         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
                         return;
@@ -847,11 +847,11 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
                         }
                     }
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -886,7 +886,7 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
         if (intWLNumber > 0 & strToDoWLID == null)
         {
             BT_SubmitApply.Enabled = false;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBCZGLDGZLJLBNSCJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBCZGLDGZLJLBNSCJC").ToString().Trim() + "')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
             return;
         }
@@ -938,7 +938,7 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
 
         if (strType == "" | strAssetName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYSRHYXDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
         }
         else
         {
@@ -970,7 +970,7 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWSRDMBZCWCRJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWSRDMBZCWCRJC").ToString().Trim() + "')", true);
                 return;
             }
 
@@ -1012,14 +1012,14 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
                     }
                 }
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
             }
         }
@@ -1061,7 +1061,7 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
 
         if (strType == "" | strAssetName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYSRHYXDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
         }
         else
         {
@@ -1095,7 +1095,7 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWSZDMBZCWCRJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWSZDMBZCWCRJC").ToString().Trim() + "')", true);
                 return;
             }
 
@@ -1134,14 +1134,14 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
                     }
                 }
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
 
@@ -1151,7 +1151,7 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
 
     protected void BT_AllPurAsset_Click(object sender, EventArgs e)
     {
-        //    LB_AssetOwner.Text = Resources.lang.SYCGZCLB + ": ";
+        //    LB_AssetOwner.Text = LanguageHandle.GetWord("SYCGZCLB").ToString().Trim() + ": ";
         //    LB_AssetOwner.Visible = true;
 
         string strUserCode = LB_UserCode.Text.Trim();
@@ -1183,7 +1183,7 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
 
         if (strTemName == "")
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSSCSBLCMBBNWKJC + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC").ToString().Trim() + "');</script>");
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popAssignWindow','true') ", true);
 
@@ -1244,13 +1244,13 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
             xmlProcess.DbToXML(strCmdText, "T_AssetPurchaseOrder", strXMLFile2);
 
             //Workflow,添加模组关联流程记录
-            ShareClass.AddModuleToRelatedWorkflow(strWLID, "0", "0", "资产采购单", strPOID);
+            ShareClass.AddModuleToRelatedWorkflow(strWLID, "0", "0", LanguageHandle.GetWord("ZiChanCaiGouChan").ToString().Trim(), strPOID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZCCGSSCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZCCGSSCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZCCGSSBKNGZLMCGCZD25GHZJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZCCGSSBKNGZLMCGCZD25GHZJC").ToString().Trim() + "')", true);
             return "0";
         }
 
@@ -1392,7 +1392,7 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
         else
         {
             strHQL = "from AssetPurchaseOrder as assetPurchaseOrder where ";
-            strHQL += " assetPurchaseOrder.POID in (Select workFlowRelatedModule.RelatedID  From WorkFlowRelatedModule as workFlowRelatedModule Where workFlowRelatedModule.RelatedModuleName = '资产采购单' and workFlowRelatedModule.WorkflowID = " + strRelatedWorkflowID + ")";
+            strHQL += "assetPurchaseOrder.POID in (Select workFlowRelatedModule.RelatedID  From WorkFlowRelatedModule as workFlowRelatedModule Where workFlowRelatedModule.RelatedModuleName = '资产采购单' and workFlowRelatedModule.WorkflowID =" + strRelatedWorkflowID + ")"; 
         }
         strHQL += " Order by assetPurchaseOrder.POID DESC";
 

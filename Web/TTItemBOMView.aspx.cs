@@ -35,7 +35,7 @@ public partial class TTItemBOMView : System.Web.UI.Page
 
         string strUserCode = Session["UserCode"].ToString();if (Page.IsPostBack != true)
         {
-            LB_ProductName.Text = Resources.lang.ChanPing + Resources.lang.MingCheng + ":" + ShareClass.GetItemName(strRelatedType) + "                 " + Resources.lang.ChanPinBianHao + ":" + strRelatedType;
+            LB_ProductName.Text = LanguageHandle.GetWord("ChanPing").ToString().Trim() + LanguageHandle.GetWord("MingCheng").ToString().Trim() + ":" + ShareClass.GetItemName(strRelatedType) + "                 " + LanguageHandle.GetWord("ChanPinBianHao").ToString().Trim() + ":" + strRelatedType;
 
             strHQL = "Select ItemCode ,ItemName  ,Type ,ModelNumber,Specification ,Brand,Number ,Unit ,''as Comment From T_ItemRelatedOrderBomToExpendDetailData Where RelatedType = " + "'" + strRelatedType + "'" + " and RelatedID = " + strRelatedID;
             strHQL += " Order By OrderTime DESC";

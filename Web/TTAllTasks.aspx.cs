@@ -37,7 +37,7 @@ public partial class TTAllTasks : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "ajustHeight", "AdjustDivHeight();", true);
         if (Page.IsPostBack == false)
         {
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT, TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             LoadProjectTaskAssignRecord("");
@@ -120,7 +120,7 @@ public partial class TTAllTasks : System.Web.UI.Page
 
             strHQL = "Select * from T_TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strOperatorCode + "'";
             strHQL += " and taskAssignRecord.OperatorCode in (Select projectMember.UserCode From T_ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
-            strHQL += " and taskAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成','已分派') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) ";
+            strHQL += " and taskAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成','已分派') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) "; 
             strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask  where projectTask.Status <> 'Closed')";
             strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.Status not in ('New','Hided','Deleted','Archived'))))";
             strHQL += " Order by taskAssignRecord.MoveTime DESC limit 40";
@@ -165,7 +165,7 @@ public partial class TTAllTasks : System.Web.UI.Page
 
             strHQL = "Select * from T_TaskAssignRecord as taskAssignRecord where ";
             strHQL += "  taskAssignRecord.OperatorCode in (Select projectMember.UserCode From T_ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
-            strHQL += " and taskAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成','已分派') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) ";
+            strHQL += " and taskAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成','已分派') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) "; 
             strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask  where projectTask.Status <> 'Closed')";
             strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.Status not in ('New','Hided','Deleted','Archived'))))";
             strHQL += " Order by taskAssignRecord.MoveTime DESC limit 40";

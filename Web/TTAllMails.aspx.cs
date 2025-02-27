@@ -39,9 +39,9 @@ public partial class TTAllMails : System.Web.UI.Page
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack == false)
         {
-            LB_QueryScope.Text = Resources.lang.ZZMailOwnerALL;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZMailOwnerALL").ToString().Trim();
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
         }
     }
 
@@ -58,7 +58,7 @@ public partial class TTAllMails : System.Web.UI.Page
             strDepartCode = treeNode.Target.Trim();
             strDepartName = GetDepartName(strDepartCode);
 
-            LB_QueryScope.Text = Resources.lang.ZZZBuMen + strDepartName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen").ToString().Trim() + strDepartName;
 
             ShareClass.LoadUserByDepartCodeForDataGrid(strDepartCode, DataGrid1);
         }
@@ -74,7 +74,7 @@ public partial class TTAllMails : System.Web.UI.Page
         LB_OperatorCode.Text = strOperatorCode;
         LB_OperatorName.Text = strOperatorName;
 
-        LB_QueryScope.Text = Resources.lang.ZZMailOwner + strOperatorCode + strOperatorName;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZMailOwner").ToString().Trim() + strOperatorCode + strOperatorName;
 
         InitOperationTree(strOperatorCode);
 
@@ -94,7 +94,7 @@ public partial class TTAllMails : System.Web.UI.Page
         msg.ReceiveMailByUserCode(strUserCode, strDocSavePath);
 
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYJSFWC + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYJSFWC").ToString().Trim() + "')", true);
     }
 
     protected void OperationView_SelectedNodeChanged(object sender, EventArgs e)
@@ -128,12 +128,12 @@ public partial class TTAllMails : System.Web.UI.Page
 
         mailFolderNode.ChildNodes.Clear();
 
-        CreateMailFolder(strUserCode, "New", "新收邮件");
-        CreateMailFolder(strUserCode, "Read", "已阅邮件");
-        CreateMailFolder(strUserCode, "Waiting", "待发邮件");
-        CreateMailFolder(strUserCode, "Send", "已发邮件");
-        CreateMailFolder(strUserCode, "Draft", "草稿箱");
-        CreateMailFolder(strUserCode, "Rubbish", "垃圾箱");
+        CreateMailFolder(strUserCode, "New", LanguageHandle.GetWord("XinShouYouJian").ToString().Trim());
+        CreateMailFolder(strUserCode, "Read", LanguageHandle.GetWord("YiYueYouJian").ToString().Trim());
+        CreateMailFolder(strUserCode, "Waiting", LanguageHandle.GetWord("DaiFaYouJian").ToString().Trim());
+        CreateMailFolder(strUserCode, "Send", LanguageHandle.GetWord("YiFaYouJian").ToString().Trim());
+        CreateMailFolder(strUserCode, "Draft", LanguageHandle.GetWord("CaoGaoXiang").ToString().Trim());
+        CreateMailFolder(strUserCode, "Rubbish", LanguageHandle.GetWord("LaJiXiang").ToString().Trim());
 
         strHQL = "FROM Folders as folders where folders.OwnerCode = " + "'" + strUserCode + "'" + " order by folders.FolderID ASC";
         FoldersBLL foldersBLL = new FoldersBLL();

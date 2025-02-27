@@ -50,7 +50,7 @@ public partial class TTProjectDetailView : System.Web.UI.Page
             }
             else
             {
-                string strErrorMsg = Resources.lang.ZZGLZLBCZKNYBSCQJC;
+                string strErrorMsg = LanguageHandle.GetWord("ZZGLZLBCZKNYBSCQJC").ToString().Trim();
 
                 Response.Redirect("TTDisplayCustomErrorMessage.aspx?ErrorMsg=" + strErrorMsg);
             }

@@ -36,11 +36,11 @@ public partial class TTProjectPlanView : System.Web.UI.Page
         if (lst.Count > 0)
         {
             WorkPlan workPlan = (WorkPlan)lst[0];
-            //this.Title = Resources.lang.JiHua + ": " + strPlanID + " " + workPlan.Name.Trim() + " 详细内容!";
+            //this.Title = LanguageHandle.GetWord("JiHua").ToString().Trim() + ": " + strPlanID + " " + workPlan.Name.Trim() + " 详细内容!";
         }
         else
         {
-            Response.Write("此计划不存在，可能已被删除,请检查!");
+            Response.Write(LanguageHandle.GetWord("CiJiHuaBuCunZaiKeNengYiBeiShan").ToString().Trim());
         }
     }
 }

@@ -31,13 +31,13 @@ public partial class TTProRelatedTaskView : System.Web.UI.Page
         IList lst;
 
         string strProjectName = ShareClass.GetProjectName(strProjectID);
-        //this.Title = Resources.lang.Project + strProjectID + " " + strProjectName + " 的任务分派！";
+        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + strProjectName + "的任务分派！";
         LB_UserCode.Text = strUserCode;
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
         {
-            LB_ReportName.Text = Resources.lang.XiangMu + ": " + strProjectID + " " + Resources.lang.RenWuBaoBiao;
+            LB_ReportName.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + ": " + strProjectID + " " + LanguageHandle.GetWord("RenWuBaoBiao").ToString().Trim();
             string strCmdText = "select Status as XName,count(*) as YNumber from T_ProjectTask ";
             strCmdText += " where ProjectID = " + strProjectID + " Group By Status";
             string strChartTitle = "ReportView";

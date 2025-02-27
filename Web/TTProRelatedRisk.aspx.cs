@@ -32,7 +32,7 @@ public partial class TTProRelatedRisk : System.Web.UI.Page
 
         strProjectName = GetProjectName(strProjectID);
 
-        //this.Title = Resources.lang.Project + strProjectID + " " + strProjectName + "的风险列表";
+        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + strProjectName + "的风险列表";
 
         LB_UserCode.Text = strUserCode;
         LB_UserName.Text = strUserName;
@@ -42,7 +42,7 @@ public partial class TTProRelatedRisk : System.Web.UI.Page
             DLC_EffectDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
             DLC_FindDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            InitialTemplatePrjectRiskTree(TreeView1, strUserCode, Resources.lang.ZongXiangMu, Resources.lang.ZZTSDSSFF, Resources.lang.MuBanXiangMu, Resources.lang.CommonProject);
+            InitialTemplatePrjectRiskTree(TreeView1, strUserCode, LanguageHandle.GetWord("ZongXiangMu").ToString().Trim(), LanguageHandle.GetWord("ZZTSDSSFF").ToString().Trim(), LanguageHandle.GetWord("MuBanXiangMu").ToString().Trim(), LanguageHandle.GetWord("CommonProject").ToString().Trim());
 
             LoadProjectRiskList(strProjectID);
         }
@@ -85,7 +85,7 @@ public partial class TTProRelatedRisk : System.Web.UI.Page
         Project project = new Project();
 
 
-        strHQL = "from Project as project where project.ProjectClass = '模板项目' ";
+        strHQL = "from Project as project where project.ProjectClass = '模板项目' "; 
         strHQL += " and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         lst = projectBLL.GetAllProjects(strHQL);
 
@@ -109,7 +109,7 @@ public partial class TTProRelatedRisk : System.Web.UI.Page
             TemplateProjectTreeView.DataBind();
         }
 
-        strHQL = "from Project as project where project.ProjectClass = '常规项目' and  project.PMCode = " + "'" + strUserCode + "'";
+        strHQL = "from Project as project where project.ProjectClass = '常规项目' and  project.PMCode = " + "'" + strUserCode + "'"; 
         strHQL += "  and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
 
         lst = projectBLL.GetAllProjects(strHQL);
@@ -309,7 +309,7 @@ public partial class TTProRelatedRisk : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -404,7 +404,7 @@ public partial class TTProRelatedRisk : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -443,12 +443,12 @@ public partial class TTProRelatedRisk : System.Web.UI.Page
 
             LoadProjectRiskList(strProjectID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
     }

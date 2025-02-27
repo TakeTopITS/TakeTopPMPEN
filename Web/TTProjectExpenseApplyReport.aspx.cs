@@ -35,7 +35,7 @@ public partial class TTProjectExpenseApplyReport : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strUserName = GetUserName(strUserCode);
 
-        //this.Title = Resources.lang.Project + strProjectID + " " + strProjectName + " 经费申请汇总！";
+        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + strProjectName + "经费申请汇总！";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack == false)
         {
@@ -59,10 +59,10 @@ public partial class TTProjectExpenseApplyReport : System.Web.UI.Page
                 deExpense += expenseApplyWL.Amount;
             }
 
-            LB_Member.Text = Resources.lang.SuoYouChenYuan;
+            LB_Member.Text = LanguageHandle.GetWord("SuoYouChenYuan").ToString().Trim();
             LB_Amount.Text = deExpense.ToString();
 
-            LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll + strUserCode + strUserName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim() + strUserCode + strUserName;
         }
     }
 
@@ -108,10 +108,10 @@ public partial class TTProjectExpenseApplyReport : System.Web.UI.Page
                     deExpense += expenseApplyWL.Amount;
                 }
 
-                LB_Member.Text = Resources.lang.SuoYouChenYuan;
+                LB_Member.Text = LanguageHandle.GetWord("SuoYouChenYuan").ToString().Trim();
                 LB_Amount.Text = deExpense.ToString();
 
-                LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll + strUserCode + strUserName;
+                LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim() + strUserCode + strUserName;
                 LB_Sql.Text = strHQL;
 
                 LoadRelatedWL("ExpenseRequest", "Project", 0);
@@ -177,10 +177,10 @@ public partial class TTProjectExpenseApplyReport : System.Web.UI.Page
             deExpense += expenseApplyWL.Amount;
         }
 
-        LB_Member.Text = Resources.lang.SuoYouChenYuan;
+        LB_Member.Text = LanguageHandle.GetWord("SuoYouChenYuan").ToString().Trim();
         LB_Amount.Text = deExpense.ToString();
 
-        LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim();
 
         LoadRelatedWL("ExpenseRequest", "Project", 0);
     }

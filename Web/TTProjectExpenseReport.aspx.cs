@@ -29,7 +29,7 @@ public partial class TTProjectExpenseReport : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strUserName = ShareClass.GetUserName(strUserCode);
 
-        //this.Title = Resources.lang.Project + strProjectName + " 支出费用汇总！";
+        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectName + " 支出费用汇总！";
 
         if (Page.IsPostBack == false)
         {
@@ -53,15 +53,15 @@ public partial class TTProjectExpenseReport : System.Web.UI.Page
                 deConfirmExpense += decimal.Parse(ds.Tables[0].Rows[i][1].ToString());
             }
 
-            LB_Member.Text = Resources.lang.SuoYouChenYuan;
+            LB_Member.Text = LanguageHandle.GetWord("SuoYouChenYuan").ToString().Trim();
 
             LB_ConfirmAmount.Text = deConfirmExpense.ToString();
 
-            LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim();
 
 
-            LB_ReportName.Text = Resources.lang.XiangMu + ": " + strProjectID + " " + Resources.lang.YSYFYBB;
-            string strChartTitle = Resources.lang.XMFYYSFBT;
+            LB_ReportName.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + ": " + strProjectID + " " + LanguageHandle.GetWord("YSYFYBB").ToString().Trim();
+            string strChartTitle = LanguageHandle.GetWord("XMFYYSFBT").ToString().Trim();
             strHQL = @"Select A.ProjectID, A.Account as XName,SUM(A.ConfirmAmount) as YNumber,COALESCE(B.Amount,0) as ZNumber
                   From T_ProExpense A LEFT JOIN T_ProjectBudget B ON A.ProjectID = B.ProjectID AND A.Account = B.Account 
                       WHERE  A.ProjectID = " + strProjectID + " Group By A.ProjectID ,A.Account,B.Amount ";
@@ -115,10 +115,10 @@ public partial class TTProjectExpenseReport : System.Web.UI.Page
                 LB_Member.Text = strUserName;
                 LB_ConfirmAmount.Text = deConfirmExpense.ToString();
 
-                LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll + strUserCode + strUserName;
+                LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim() + strUserCode + strUserName;
                 LB_Sql.Text = strHQL;
 
-                LB_ReportName.Text = Resources.lang.XiangMu + ": " + strProjectID + " " + Resources.lang.XMFYFBT;
+                LB_ReportName.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + ": " + strProjectID + " " + LanguageHandle.GetWord("XMFYFBT").ToString().Trim();
 
                 strHQL = @"Select A.ProjectID, A.Account as XName,SUM(A.ConfirmAmount) as YNumber,COALESCE(B.Amount,0) as ZNumber
                   From T_ProExpense A LEFT JOIN T_ProjectBudget B ON A.ProjectID = B.ProjectID AND A.Account = B.Account 
@@ -153,13 +153,13 @@ public partial class TTProjectExpenseReport : System.Web.UI.Page
             deConfirmExpense += decimal.Parse(ds.Tables[0].Rows[i][1].ToString());
         }
 
-        LB_Member.Text = Resources.lang.SuoYouChenYuan;
+        LB_Member.Text = LanguageHandle.GetWord("SuoYouChenYuan").ToString().Trim();
 
         LB_ConfirmAmount.Text = deConfirmExpense.ToString();
 
-        LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim();
 
-        string strChartTitle = Resources.lang.XMFYYSFBT;
+        string strChartTitle = LanguageHandle.GetWord("XMFYYSFBT").ToString().Trim();
         strHQL = @"Select A.ProjectID, A.Account as XName,SUM(A.ConfirmAmount) as YNumber,COALESCE(B.Amount,0) as ZNumber
                   From T_ProExpense A LEFT JOIN T_ProjectBudget B ON A.ProjectID = B.ProjectID AND A.Account = B.Account 
                       WHERE  A.ProjectID = " + strProjectID + " Group By A.ProjectID ,A.Account,B.Amount ";

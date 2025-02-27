@@ -80,7 +80,7 @@ public partial class TakeTopLRTop : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
 
         string licenseKey = System.Configuration.ConfigurationManager.AppSettings["CopyRight"];
-        if (licenseKey != "泰顶-拓鼎-钟礼月")
+        if (licenseKey != LanguageHandle.GetWord("TaiDingTaDingZhongLiYue").ToString().Trim())
         {
             Response.Write("<script>top.window.location.href = 'TTDisplayErrors.aspx';</script>");
             return;
@@ -111,13 +111,13 @@ public partial class TakeTopLRTop : System.Web.UI.Page
 
             if (string.Compare(strNoticeDate, strDeadline) > 0 & string.Compare(strDeadline, strCurrentDate) >= 0)
             {
-                strMessage = "请注意，系统授权将于 " + strDeadlineDate + " 到期，请尽快续费和备份数据！";
+                strMessage = LanguageHandle.GetWord("QingZhuYiJiTongShouQuanJiangYu").ToString().Trim() + strDeadlineDate + LanguageHandle.GetWord("DaoJiQingJinKuaiXuFeiHeBeiFenS").ToString().Trim();
             }
             else
             {
                 if (string.Compare(strCurrentDate, strDeadline) > 0)
                 {
-                    strMessage = "请注意，系统授权已于 " + strDeadline + " 过期，请续费再使用！";
+                    strMessage = LanguageHandle.GetWord("QingZhuYiJiTongShouQuanYiYu").ToString().Trim() + strDeadline + LanguageHandle.GetWord("GuoJiQingXuFeiZaiShiYong").ToString().Trim();
                 }
                 else
                 {

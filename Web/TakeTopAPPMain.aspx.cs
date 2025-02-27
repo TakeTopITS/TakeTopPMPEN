@@ -51,7 +51,7 @@ public partial class TakeTopAPPMain : System.Web.UI.Page
 
             try
             {
-                SetAnalystModuleVisible(strUserCode, "分析图", strLangCode, strUserType);
+                SetAnalystModuleVisible(strUserCode, "分析图", strLangCode, strUserType); 
             }
             catch
             {
@@ -76,7 +76,7 @@ public partial class TakeTopAPPMain : System.Web.UI.Page
         strHQL = "Update T_ProjectMember Set WeChatOpenID ='',WeChatUserID='',WeChatDeviceID='' Where UserCode = '" + strUserCode + "'";
         ShareClass.RunSqlCommand(strHQL);
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZNDZHHWXHYJJCSD + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZNDZHHWXHYJJCSD").ToString().Trim() + "')", true);
     }
 
     protected void BindModuleData(string strUserCode, string strUserType, string strForbitModule, string strLangCode)
@@ -90,7 +90,7 @@ public partial class TakeTopAPPMain : System.Web.UI.Page
                 ||rtrim(B.UserType)  and A.Visible = 'YES' and A.IsDeleted = 'NO' and A.ModuleName <> '分析图'
                 and A.ModuleType In ('APP','DIYAPP') and A.UserType = 'INNER' and B.UserType = '{3}' 
                 and B.UserCode = '{0}' and B.Visible = 'YES' and B.ModuleType in('APP','DIYAPP') and position(rtrim(A.ModuleName)||',' in '{1}') = 0
-                and A.LangCode = '{2}' Order By A.SortNumber ASC", strUserCode, strForbitModule, strLangCode, strUserType);
+                and A.LangCode = '{2}' Order By A.SortNumber ASC", strUserCode, strForbitModule, strLangCode, strUserType); 
 
         DataTable dtModule = ShareClass.GetDataSetFromSql(strHQL, "Module").Tables[0];
         DataView dvModule = new DataView(dtModule);
@@ -115,7 +115,7 @@ public partial class TakeTopAPPMain : System.Web.UI.Page
                 strHomeModuleName = strHomeModuleName.Substring(0, 12);
             }
 
-            if (strModuleName == "新闻")
+            if (strModuleName == LanguageHandle.GetWord("XinWen").ToString().Trim())
             {
                 try
                 {
@@ -126,7 +126,7 @@ public partial class TakeTopAPPMain : System.Web.UI.Page
                 }
             }
 
-            if (strModuleName == "待办事项")
+            if (strModuleName == LanguageHandle.GetWord("DaiBanShiXiang").ToString().Trim())
             {
                 try
                 {
@@ -261,7 +261,7 @@ public partial class TakeTopAPPMain : System.Web.UI.Page
         strHQL = "Select * From T_HeadLine ";
         strHQL += " Where (RelatedDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))  or RelatedDepartCode = '" + strDepartCode + "')";
         strHQL += " and LangCode = '" + strLangCode + "' and ID Not in (Select NewsID From T_NewsRelatedUser Where UserCode  = '" + strUserCode + "')";
-        strHQL += " And Type = " + "'" + strUserType + "'" + " and Status = '发布' Order By ID DESC";
+        strHQL += " And Type = " + "'" + strUserType + "'" + " and Status = '发布' Order By ID DESC"; 
 
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");
 

@@ -64,12 +64,12 @@ public partial class TTWZTurnEdit : System.Web.UI.Page
         for (int i = 0; i < dtTurnDetail.Rows.Count; i++)
         {
             strProgress = dtTurnDetail.Rows[i]["Progress"].ToString();
-            if (strProgress == "录入")
+            if (strProgress == LanguageHandle.GetWord("LuRu").ToString().Trim())
             {
                 DG_TurnDetail.Items[i].Cells[16].Text = "";
             }
 
-            if(GetWZTurnProgress(dtTurnDetail.Rows[i]["TurnCode"].ToString()) == "签收")
+            if(GetWZTurnProgress(dtTurnDetail.Rows[i]["TurnCode"].ToString()) == LanguageHandle.GetWord("QianShou").ToString().Trim())
             {
                 ((LinkButton)(DG_TurnDetail.Items[i].FindControl("LinkButton1"))).Visible = false;
             }
@@ -99,7 +99,7 @@ public partial class TTWZTurnEdit : System.Web.UI.Page
                     if (listWZPickingPlanDetail != null && listWZPickingPlanDetail.Count > 0)
                     {
                         WZPickingPlanDetail wZPickingPlanDetail = (WZPickingPlanDetail)listWZPickingPlanDetail[0];
-                        wZPickingPlanDetail.Progress = "录入";
+                        wZPickingPlanDetail.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
                         wZPickingPlanDetail.TurnCode = "-";
                         wZPickingPlanDetailBLL.UpdateWZPickingPlanDetail(wZPickingPlanDetail, int.Parse(wZTurnDetail.PlanCode));
                     }
@@ -123,7 +123,7 @@ public partial class TTWZTurnEdit : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZDYJDMXBCZ + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDYJDMXBCZ").ToString().Trim() + "')", true);
                     return;
                 }
             }
@@ -164,7 +164,7 @@ public partial class TTWZTurnEdit : System.Web.UI.Page
                     DataTable dtCheckTurnDetail = ShareClass.GetDataSetFromSql(strCheckWZTurnDetailHQL, "TurnDetail").Tables[0];
                     if (dtCheckTurnDetail != null && dtCheckTurnDetail.Rows.Count > 0)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZDJHMXYJZYJDMXZBNZF + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDJHMXYJZYJDMXZBNZF").ToString().Trim() + "')", true);
                         return;
                     }
 
@@ -182,16 +182,16 @@ public partial class TTWZTurnEdit : System.Web.UI.Page
                         {
                             WZPickingPlan wZPickingPlan = (WZPickingPlan)listWZPickingPlan[0];
                             ////领料计划<进度> = “签收”，领料计划〈项目编码〉＝移交单〈项目编码〉， 领料计划〈单位编号〉＝移交单〈单位编号〉，领料计划〈采购工程师〉＝移交单〈采购工程师〉，领料计划〈供应方式〉＝“甲供”
-                            //if (wZPickingPlan.Progress == "签收"
+                            //if (wZPickingPlan.Progress == LanguageHandle.GetWord("QianShou").ToString().Trim()
                             //    && wZPickingPlan.ProjectCode == wZTurn.ProjectCode
                             //    && wZPickingPlan.UnitCode == wZTurn.UnitCode
                             //    && wZPickingPlan.PurchaseEngineer.Trim() == wZTurn.PurchaseEngineer.Trim()
-                            //    && wZPickingPlan.SupplyMethod == "甲供")
+                            //    && wZPickingPlan.SupplyMethod == LanguageHandle.GetWord("JiaGong").ToString().Trim())
                             //{
                             if ( wZPickingPlan.ProjectCode == wZTurn.ProjectCode
                                && wZPickingPlan.UnitCode == wZTurn.UnitCode
                                && wZPickingPlan.PurchaseEngineer.Trim() == wZTurn.PurchaseEngineer.Trim()
-                               && wZPickingPlan.SupplyMethod == "甲供")
+                               && wZPickingPlan.SupplyMethod == LanguageHandle.GetWord("JiaGong").ToString().Trim())
                             {
                                 WZPickingPlanDetailBLL wZPickingPlanDetailBLL = new WZPickingPlanDetailBLL();
                                 string strWZPickingPlanDetailHQL = string.Format(@"from WZPickingPlanDetail as wZPickingPlanDetail where ID = {0}", arrCmdArges[0]);
@@ -208,7 +208,7 @@ public partial class TTWZTurnEdit : System.Web.UI.Page
                                     wZTurnDetail.MaterialPerson = wZTurn.MaterialPerson;
                                     wZTurnDetail.PickingCode = wZPickingPlan.PlanCode;
                                     wZTurnDetail.TicketTime = DateTime.Now;
-                                    wZTurnDetail.Progress = "录入";
+                                    wZTurnDetail.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
                                     wZTurnDetail.IsMark = 0;
                                     wZTurnDetail.PlanCode = wZPickingPlanDetail.ID.ToString();
                                     wZTurnDetail.ObjectCode = wZPickingPlanDetail.ObjectCode;
@@ -224,7 +224,7 @@ public partial class TTWZTurnEdit : System.Web.UI.Page
                                     int intMaxTurnDetailID = int.Parse(dtMaxTurnDetailID.Rows[0]["ID"].ToString());
 
                                     //修改计划明细的进度和移交单编号
-                                    wZPickingPlanDetail.Progress = "移交";
+                                    wZPickingPlanDetail.Progress = LanguageHandle.GetWord("YiJiao").ToString().Trim();
                                     wZPickingPlanDetail.TurnCode = intMaxTurnDetailID + "";
                                     wZPickingPlanDetail.IsMark = -1;
                                     wZPickingPlanDetailBLL.UpdateWZPickingPlanDetail(wZPickingPlanDetail, wZPickingPlanDetail.ID);
@@ -239,7 +239,7 @@ public partial class TTWZTurnEdit : System.Web.UI.Page
                             }
                             else
                             {
-                                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSDJHMXJDYWSLLFSWJGXMBMDWBHCGGCSYYDDYJDXXXT + "')", true);
+                                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSDJHMXJDYWSLLFSWJGXMBMDWBHCGGCSYYDDYJDXXXT").ToString().Trim() + "')", true);
                                 return;
                             }
                         }
@@ -247,7 +247,7 @@ public partial class TTWZTurnEdit : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZYJDH + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZYJDH").ToString().Trim() + "')", true);
                     return;
                 }
             }
@@ -259,7 +259,7 @@ public partial class TTWZTurnEdit : System.Web.UI.Page
     {
         WZPickingPlanBLL wZPickingPlanBLL = new WZPickingPlanBLL();
         //string strWZPickingPlanHQL = "from WZPickingPlan as wZPickingPlan where SupplyMethod = '甲供' and Progress = '签收' order by MarkerTime desc";
-        string strWZPickingPlanHQL = "from WZPickingPlan as wZPickingPlan where SupplyMethod = '甲供'  order by MarkerTime desc";
+        string strWZPickingPlanHQL = "from WZPickingPlan as wZPickingPlan where SupplyMethod = '甲供'  order by MarkerTime desc"; 
         IList listWZPickingPlan = wZPickingPlanBLL.GetAllWZPickingPlans(strWZPickingPlanHQL);
 
         LB_PickingPlan.DataSource = listWZPickingPlan;

@@ -69,16 +69,16 @@ public partial class TTSelectorProductModuleNew : System.Web.UI.Page
                         strShowHtml += "<tr><td>" + strModuleNameHtml + "</td></tr>";
                     }
                     else {
-                        strShowHtml += "<tr><td>无模块名称数据</td></tr>";
+                        strShowHtml += LanguageHandle.GetWord("trtdMoMoKuaiMingChenShuJutdtr").ToString().Trim();
                     }
                 }
             }
             else {
-                strShowHtml = "<tr><td>无类型数据</td></tr>";
+                strShowHtml = LanguageHandle.GetWord("trtdMoLeiXingShuJutdtr").ToString().Trim();
             }
         }
         else {
-            strShowHtml = "<tr><td>无数据</td></tr>";
+            strShowHtml = LanguageHandle.GetWord("trtdMoShuJutdtr").ToString().Trim();
         }
 
         LT_ShowHtml.Text = strShowHtml;

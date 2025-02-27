@@ -94,7 +94,7 @@ public partial class TTAPPUserAttendanceRecordForMeSAAS : System.Web.UI.Page
 
         if (strLeaderCode == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZQXXZSMDKQGUIZE + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZQXXZSMDKQGUIZE").ToString().Trim() + "')", true);
             return;
         }
 

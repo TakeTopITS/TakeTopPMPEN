@@ -134,13 +134,13 @@ public partial class DefaultMobileDemo : System.Web.UI.Page
 
         if (strUserCode == "" | strPassword == "")
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZYHMHMMDBNWKJC + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZYHMHMMDBNWKJC").ToString().Trim() + "');</script>");
             return;
         }
 
         if (ShareClass.SqlFilter(strUserCode) | ShareClass.SqlFilter(strPassword))
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZZHHYFFZHDLSB + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZZHHYFFZHDLSB").ToString().Trim() + "');</script>");
             return;
         }
 
@@ -149,7 +149,7 @@ public partial class DefaultMobileDemo : System.Web.UI.Page
         //    //如果存在升级语句，那么升级数据库
         //    if (TakeTopCore.CoreShareClass.UpgradeDataBase() == false)
         //    {
-        //        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZJGSJSJSBKNSSSAMPLEYHJC + "');</script>");
+        //        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGSJSJSBKNSSSAMPLEYHJC").ToString().Trim() + "');</script>");
         //    }
         //}
         //catch (Exception err)
@@ -344,7 +344,7 @@ public partial class DefaultMobileDemo : System.Web.UI.Page
             }
             else
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZJGYHDMHMMCWHYBZZSY + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGYHDMHMMCWHYBZZSY").ToString().Trim() + "');</script>");
             }
         }
         catch (Exception err)
@@ -376,22 +376,22 @@ public partial class DefaultMobileDemo : System.Web.UI.Page
         {
             strSMSCode = msg.CreateRandomCode(5);
 
-            strMsg = "短信验证码：" + strSMSCode + "，当天有效！";
+            strMsg =  LanguageHandle.GetWord("DuanXinYanZhengMa") +"：" + strSMSCode + "," + LanguageHandle.GetWord("DangTianYouXiao");
 
             if (msg.SendMSM("Message", strUserCode, strMsg, strUserCode))
             {
                 InsertOrUpdateSMSCode(strUserCode, strSMSCode);
 
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZDXYZMYFSCS + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZDXYZMYFSCS").ToString().Trim() + "');</script>");
             }
             else
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZJGDXYZMFSSBJCDXJKHWLLJ + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGDXYZMFSSBJCDXJKHWLLJ").ToString().Trim() + "');</script>");
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZJGYHDMHMMCWBNDDXMJC + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGYHDMHMMCWBNDDXMJC").ToString().Trim() + "');</script>");
         }
     }
 

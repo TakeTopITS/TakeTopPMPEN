@@ -30,15 +30,15 @@ public partial class TTBDBudgetMCheck : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
         {
-            lbl_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            lbl_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
 
-            if (DropDownList1.SelectedValue.Trim() == "预算标准")
+            if (DropDownList1.SelectedValue.Trim() == "预算标准") 
             {
                 Budget_Base.Visible = true;
                 Budget_Operation.Visible = false;
                 Button1.Visible = true;
             }
-            else if (DropDownList1.SelectedValue.Trim() == "预算记录")
+            else if (DropDownList1.SelectedValue.Trim() == "预算记录") 
             {
                 Budget_Base.Visible = false;
                 Budget_Operation.Visible = true;
@@ -68,12 +68,12 @@ public partial class TTBDBudgetMCheck : System.Web.UI.Page
             lbl_DepartCode.Text = treeNode.Target.Trim();
             txt_DepartName.Text = ShareClass.GetDepartName(lbl_DepartCode.Text);
 
-            if (DropDownList1.SelectedValue.Trim() == "预算标准")
+            if (DropDownList1.SelectedValue.Trim() == "预算标准") 
             {
                 Budget_Base.Visible = true;
                 Budget_Operation.Visible = false;
             }
-            else if (DropDownList1.SelectedValue.Trim() == "预算记录")
+            else if (DropDownList1.SelectedValue.Trim() == "预算记录") 
             {
                 Budget_Base.Visible = false;
                 Budget_Operation.Visible = true;
@@ -188,7 +188,7 @@ public partial class TTBDBudgetMCheck : System.Web.UI.Page
             lbl_DepartCode.Text = "";
         }
 
-        strHQL = "Select A.*,B.UserName From T_BDBaseDataRecord A,T_ProjectMember B Where A.EnterCode=B.UserCode and (A.Type='Operation' or A.Type='实际')";
+        strHQL = "Select A.*,B.UserName From T_BDBaseDataRecord A,T_ProjectMember B Where A.EnterCode=B.UserCode and (A.Type='Operation' or A.Type='实际')"; 
         strHQL += " and B.DepartCode In " + strDepartString;
 
        
@@ -224,12 +224,12 @@ public partial class TTBDBudgetMCheck : System.Web.UI.Page
 
     protected void BT_Query_Click(object sender, EventArgs e)
     {
-        if (DropDownList1.SelectedValue.Trim() == "预算标准")
+        if (DropDownList1.SelectedValue.Trim() == "预算标准") 
         {
             Budget_Base.Visible = true;
             Budget_Operation.Visible = false;
         }
-        else if (DropDownList1.SelectedValue.Trim() == "预算记录")
+        else if (DropDownList1.SelectedValue.Trim() == "预算记录") 
         {
             Budget_Base.Visible = false;
             Budget_Operation.Visible = true;
@@ -267,7 +267,7 @@ public partial class TTBDBudgetMCheck : System.Web.UI.Page
     {
         if (DropDownList1.SelectedValue.Trim() == "" || string.IsNullOrEmpty(DropDownList1.SelectedValue))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDCSJYSLXBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCSJYSLXBJC").ToString().Trim() + "')", true);
             return;
         }
         if (Page.IsValid)
@@ -276,31 +276,31 @@ public partial class TTBDBudgetMCheck : System.Web.UI.Page
             {
                 Random a = new Random();
                 string fileName;
-                if (DropDownList1.SelectedValue.Trim() == "预算标准")
+                if (DropDownList1.SelectedValue.Trim() == "预算标准") 
                 {
-                    fileName = "预算标准_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("YuSuanBiaoZhun").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                     CreateExcel(getExportBookList(), fileName);
                 }
                 else
                 {
-                    fileName = "预算记录_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("YuSuanJiLu").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                     CreateExcel(getExportBookList1(), fileName);
                 }
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDCDSJYWJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
             }
         }
     }
 
     protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
     {
-        if (DropDownList1.SelectedValue.Trim() == "预算标准")
+        if (DropDownList1.SelectedValue.Trim() == "预算标准") 
         {
             Button1.Visible = true;
         }
-        else if (DropDownList1.SelectedValue.Trim() == "预算记录")
+        else if (DropDownList1.SelectedValue.Trim() == "预算记录") 
         {
             Button1.Visible = true;
         }
@@ -379,7 +379,7 @@ public partial class TTBDBudgetMCheck : System.Web.UI.Page
 
     protected DataTable getExportBookList()
     {
-        string strHQL = "Select A.ID '编号',A.DepartName '部门名称',B.AccountName '会计科目',A.YearNum '年份',A.MonthNum '月份',A.MoneyNum '金额' From T_BDBaseData A,T_Account B Where A.AccountName=B.AccountCode and (A.Type='Base' or A.Type='Budget')";
+        string strHQL = "Select A.ID '编号',A.DepartName '部门名称',B.AccountName '会计科目',A.YearNum '年份',A.MonthNum '月份',A.MoneyNum '金额' From T_BDBaseData A,T_Account B Where A.AccountName=B.AccountCode and (A.Type='Base' or A.Type='Budget')"; 
 
 
         if (!string.IsNullOrEmpty(txt_DepartName.Text.Trim()))
@@ -407,7 +407,7 @@ public partial class TTBDBudgetMCheck : System.Web.UI.Page
 
     protected DataTable getExportBookList1()
     {
-        string strHQL = "Select A.ID '编号',A.DepartName '部门名称',C.AccountName '会计科目',A.YearNum '年份',A.MonthNum '月份',A.MoneyNum '金额',B.UserName '申请人' From T_BDBaseData A,T_ProjectMember B,T_Account C Where A.EnterCode=B.UserCode and A.AccountName=C.AccountCode and (A.Type='Operation' or A.Type='实际')";
+        string strHQL = "Select A.ID '编号',A.DepartName '部门名称',C.AccountName '会计科目',A.YearNum '年份',A.MonthNum '月份',A.MoneyNum '金额',B.UserName '申请人' From T_BDBaseData A,T_ProjectMember B,T_Account C Where A.EnterCode=B.UserCode and A.AccountName=C.AccountCode and (A.Type='Operation' or A.Type='实际')"; 
 
 
         if (!string.IsNullOrEmpty(txt_DepartName.Text.Trim()))

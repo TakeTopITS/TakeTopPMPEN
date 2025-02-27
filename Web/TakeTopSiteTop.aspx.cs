@@ -106,7 +106,7 @@ public partial class TakeTopSiteTop : System.Web.UI.Page
         string strHQL;
 
         strHQL = "Select * from T_HeadLine where LangCode = " + "'" + strLangCode + "'";
-        strHQL += " and Type = 'External'and Status = '发布' and IsHead = 'YES'";
+        strHQL += " and Type = 'External'and Status = '发布' and IsHead = 'YES'"; 
         strHQL += " Order by ID DESC";
         DataTable dtHeadLine = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "HeadLine").Tables[0];
         DataView dvHeadLine = new DataView(dtHeadLine);

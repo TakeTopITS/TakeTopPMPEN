@@ -22,13 +22,13 @@ public partial class TTAppApproveRecord : System.Web.UI.Page
 
         if (strType == "WorkFlow")
         {
-            //this.Title = "工作流：" + strRelatedID + " " + strWLName + "  审核记录！";
-            LB_WorkFlow.Text = "工作流：" + strRelatedID + " " + strWLName + "  审核记录";
+            //this.Title = LanguageHandle.GetWord("GongZuoLiu").ToString().Trim() + strRelatedID + " " + strWLName + "审核记录！";
+            LB_WorkFlow.Text = LanguageHandle.GetWord("GongZuoLiu").ToString().Trim() + strRelatedID + " " + strWLName + LanguageHandle.GetWord("ShenHeJiLu").ToString().Trim();
         }
         else
         {
-            //this.Title = "工作流：" + strRelatedID + " " + strWLName + " 步骤：" + strStepID + "  审核记录！";
-            LB_WorkFlow.Text = "工作流：" + strRelatedID + " " + strWLName + " 步骤：" + strStepID + "  审核记录";
+            //this.Title = LanguageHandle.GetWord("GongZuoLiu").ToString().Trim() + strRelatedID + " " + strWLName + LanguageHandle.GetWord("BuZhou").ToString().Trim() + strStepID + "审核记录！";
+            LB_WorkFlow.Text = LanguageHandle.GetWord("GongZuoLiu").ToString().Trim() + strRelatedID + " " + strWLName + LanguageHandle.GetWord("BuZhou").ToString().Trim() + strStepID + LanguageHandle.GetWord("ShenHeJiLu").ToString().Trim();
         }
 
         if (Page.IsPostBack != true)

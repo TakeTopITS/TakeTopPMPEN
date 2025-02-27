@@ -64,127 +64,127 @@ public partial class TTWZStoreEdit : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strStockCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZKB+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZKB").ToString().Trim()+"')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strStockCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZWZDM+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZWZDM").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strCheckCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJHBNWFFZFC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJHBNWFFZFC").ToString().Trim()+"')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strYearTime))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCSRBNWKBC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCSRBNWKBC").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strYearNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCSSLZNSXSHZZS+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCSSLZNSXSHZZS").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strYearPrice))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCSDJZNSXSHZZS+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCSDJZNSXSHZZS").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strYearMoney))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCSJEZNSXSHZZS+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCSJEZNSXSHZZS").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strInNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZRKSLZNSXSHZZS+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZRKSLZNSXSHZZS").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strInMoney))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZRKJEZNSXSHZZS+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZRKJEZNSXSHZZS").ToString().Trim()+"')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strEndInTime))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZMCRKBNWKBC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZMCRKBNWKBC").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strOutNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCKSLZNSXSHZZS+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCKSLZNSXSHZZS").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strOutPrice))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCKJEZNSXSHZZS+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCKJEZNSXSHZZS").ToString().Trim()+"')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strEndOutTime))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZMCCKBNWKBC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZMCCKBNWKBC").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strStoreNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZKCSLZNSXSHZZS+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZKCSLZNSXSHZZS").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strStorePrice))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZKCDJZNSXSHZZS+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZKCDJZNSXSHZZS").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strStoreMoney))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZKCJEZNSXSHZZS+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZKCJEZNSXSHZZS").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strGoodsCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZHWHBNWFFZFC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZHWHBNWFFZFC").ToString().Trim()+"')", true);
                 return;
             }
             if (strIsMark != "0" && strIsMark != "-1")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSYBJBXW0HZ1+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSYBJBXW0HZ1").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strDownRatio))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJZBLZNSXSHZZS+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJZBLZNSXSHZZS").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strDownMoney))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJZJEZNSXSHZZS+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJZJEZNSXSHZZS").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strCleanMoney))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJEZNSXSHZZS+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJEZNSXSHZZS").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strDownCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJZBHBNWFFZFC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJZBHBNWFFZFC").ToString().Trim()+"')", true);
                 return;
             }
             if (strDownDesc != "0" && strDownDesc != "-1")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSYBJBXW0HZ1+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSYBJBXW0HZ1").ToString().Trim()+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strWearyCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJYBHBNWFFZFC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJYBHBNWFFZFC").ToString().Trim()+"')", true);
                 return;
             }
             if (strWearyDesc != "0" && strWearyDesc != "-1")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSYBJBXW0HZ1+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSYBJBXW0HZ1").ToString().Trim()+"')", true);
                 return;
             }
            
@@ -271,7 +271,7 @@ public partial class TTWZStoreEdit : System.Web.UI.Page
                 {
                     //库存中存在当前物资  直接添加数量
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZKCZCZDDKCLBWZDMCJHDLBZZDDWZDJXG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZKCZCZDDKCLBWZDMCJHDLBZZDDWZDJXG").ToString().Trim()+"')", true);
                     return;
                 }
                 else

@@ -29,7 +29,7 @@ public partial class TTWZSelectorProjectPurchase : System.Web.UI.Page
         //        from T_WZProject p
         //        left join T_ProjectMember m on p.ProjectManager = m.UserCode
         //        where p.Progress = '¿ª¹¤'
-        //        and p.PurchaseEngineer = '{0}'", strUserCode);
+        //        and p.PurchaseEngineer = '{0}'", strUserCode); 
 
         string strProjectHQL = string.Format(@"select p.*,
                     pp.UserName as ProjectManagerName,
@@ -58,7 +58,7 @@ public partial class TTWZSelectorProjectPurchase : System.Web.UI.Page
                     (
                     select ProjectCode from T_Project
                     where Status in ('Deleted')
-                    )", strUserCode);
+                    )", strUserCode); 
 
 
         strProjectHQL += " order by p.MarkTime desc";

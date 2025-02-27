@@ -90,20 +90,20 @@ public partial class TTVendorInfoImport : System.Web.UI.Page
     {
         if (ExcelToDBTest() == -1)
         {
-            LB_ErrorText.Text += Resources.lang.ZZDRSBEXECLBLDSJYCJC ;
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZDRSBEXECLBLDSJYCJC").ToString().Trim() ;
             return;
         }
         else
         {
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGNZEXCELWJ ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim() ;
                 return;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim() ;
                 return;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -112,7 +112,7 @@ public partial class TTVendorInfoImport : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                LB_ErrorText.Text += Resources.lang.ZZEXCLEBDRSB ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim() ;
             }
             else
             {
@@ -129,7 +129,7 @@ public partial class TTVendorInfoImport : System.Web.UI.Page
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += Resources.lang.ZZJGEXCELBWKBWSJ ;
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim() ;
                 }
                 else
                 {
@@ -138,26 +138,26 @@ public partial class TTVendorInfoImport : System.Web.UI.Page
 
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        if (dr[i]["代码"].ToString().Trim() != "")
+                        if (dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim() != "")
                         {
-                            string strVendorCode = dr[i]["代码"].ToString().Trim();
+                            string strVendorCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
 
                             try
                             {
-                                vendor.VendorCode = dr[i]["代码"].ToString().Trim();
-                                vendor.VendorName = dr[i]["名称"].ToString().Trim();
-                                vendor.Type = dr[i]["行业类型"].ToString().Trim();
-                                vendor.ContactName = dr[i]["联系人"].ToString().Trim();
-                                vendor.Tel1 = dr[i]["电话"].ToString().Trim();
+                                vendor.VendorCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
+                                vendor.VendorName = dr[i][LanguageHandle.GetWord("MingChen").ToString().Trim()].ToString().Trim();
+                                vendor.Type = dr[i][LanguageHandle.GetWord("HangYeLeiXing").ToString().Trim()].ToString().Trim();
+                                vendor.ContactName = dr[i][LanguageHandle.GetWord("LianJiRen").ToString().Trim()].ToString().Trim();
+                                vendor.Tel1 = dr[i][LanguageHandle.GetWord("DianHua").ToString().Trim()].ToString().Trim();
                                 vendor.EmailAddress = dr[i]["EMail"].ToString().Trim();
-                                vendor.RegistrationAddressCN = dr[i]["中文地址"].ToString().Trim();
-                                vendor.RegistrationAddressEN = dr[i]["英文地址"].ToString().Trim();
-                                vendor.Bank = dr[i]["结算银行"].ToString().Trim();
-                                vendor.BankAccount = dr[i]["银行帐号"].ToString().Trim();
-                                vendor.Currency = dr[i]["结算币别"].ToString().Trim();
+                                vendor.RegistrationAddressCN = dr[i][LanguageHandle.GetWord("ZhongWenDeZhi").ToString().Trim()].ToString().Trim();
+                                vendor.RegistrationAddressEN = dr[i][LanguageHandle.GetWord("YingWenDeZhi").ToString().Trim()].ToString().Trim();
+                                vendor.Bank = dr[i][LanguageHandle.GetWord("JieSuanYinHang").ToString().Trim()].ToString().Trim();
+                                vendor.BankAccount = dr[i][LanguageHandle.GetWord("YinHangZhangHao").ToString().Trim()].ToString().Trim();
+                                vendor.Currency = dr[i][LanguageHandle.GetWord("JieSuanBiBie").ToString().Trim()].ToString().Trim();
                                 try
                                 {
-                                    vendor.DeviceName = dr[i]["设备名称"].ToString().Trim();
+                                    vendor.DeviceName = dr[i][LanguageHandle.GetWord("SheBeiMingChen").ToString().Trim()].ToString().Trim();
                                 }
                                 catch
                                 {
@@ -198,16 +198,16 @@ public partial class TTVendorInfoImport : System.Web.UI.Page
                             }
                             catch (Exception err)
                             {
-                                LB_ErrorText.Text += Resources.lang.ZZJGDRSBJC + " : " + Resources.lang.HangHao + ": " + (i + 2).ToString() + " , " + Resources.lang.DaiMa + ": " + strVendorCode + " : " + err.Message.ToString() + "<br/>"; ;
+                                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strVendorCode + " : " + err.Message.ToString() + "<br/>"; ;
 
-                                LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + Resources.lang.ZZJGDRSBJC + " : " + Resources.lang.HangHao + ": " + (i + 2).ToString() + " , " + Resources.lang.DaiMa + ": " + strVendorCode + " : " + err.Message.ToString());
+                                LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strVendorCode + " : " + err.Message.ToString());
                             }
                         }
                     }
 
                     LoadVendorList(strUserCode);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZEXCLEBDRCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRCG").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -228,13 +228,13 @@ public partial class TTVendorInfoImport : System.Web.UI.Page
 
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGNZEXCELWJ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim();
                 j = -1;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim() ;
                 j = -1;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -243,7 +243,7 @@ public partial class TTVendorInfoImport : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                LB_ErrorText.Text += Resources.lang.ZZEXCLEBDRSB;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim();
                 j = -1;
             }
             else
@@ -270,7 +270,7 @@ public partial class TTVendorInfoImport : System.Web.UI.Page
 
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        strVendorCode = dr[i]["代码"].ToString().Trim();
+                        strVendorCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
 
                         if (strVendorCode != "")
                         {
@@ -278,31 +278,31 @@ public partial class TTVendorInfoImport : System.Web.UI.Page
                             lst = vendorBLL.GetAllVendors(strHQL);
                             if (lst != null && lst.Count > 0)//存在，则不操作
                             {
-                                LB_ErrorText.Text += dr[i]["名称"].ToString().Trim() + Resources.lang.ZZYCZDRSBQJC;
+                                LB_ErrorText.Text += dr[i][LanguageHandle.GetWord("MingChen").ToString().Trim()].ToString().Trim() + LanguageHandle.GetWord("ZZYCZDRSBQJC").ToString().Trim();
                                 j = -1;
                             }
                             else//新增
                             {
-                                vendor.VendorCode = dr[i]["代码"].ToString().Trim();
-                                vendor.VendorName = dr[i]["名称"].ToString().Trim();
+                                vendor.VendorCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
+                                vendor.VendorName = dr[i][LanguageHandle.GetWord("MingChen").ToString().Trim()].ToString().Trim();
 
-                                if (CheckIndustryType(dr[i]["行业类型"].ToString().Trim()))
+                                if (CheckIndustryType(dr[i][LanguageHandle.GetWord("HangYeLeiXing").ToString().Trim()].ToString().Trim()))
                                 {
-                                    vendor.Type = dr[i]["行业类型"].ToString().Trim();
+                                    vendor.Type = dr[i][LanguageHandle.GetWord("HangYeLeiXing").ToString().Trim()].ToString().Trim();
                                 }
                                 else
                                 {
-                                    LB_ErrorText.Text += dr[i]["行业类型"].ToString().Trim() + " 行业类型不存在，请在参数设置模块设置！";
+                                    LB_ErrorText.Text += dr[i][LanguageHandle.GetWord("HangYeLeiXing").ToString().Trim()].ToString().Trim() + LanguageHandle.GetWord("HangYeLeiXingBuCunZaiQingZaiCa").ToString().Trim();
                                     j = -1;
                                 }
 
-                                if (CheckCurrencyType(dr[i]["结算币别"].ToString().Trim()))
+                                if (CheckCurrencyType(dr[i][LanguageHandle.GetWord("JieSuanBiBie").ToString().Trim()].ToString().Trim()))
                                 {
-                                    vendor.Currency = dr[i]["结算币别"].ToString().Trim();
+                                    vendor.Currency = dr[i][LanguageHandle.GetWord("JieSuanBiBie").ToString().Trim()].ToString().Trim();
                                 }
                                 else
                                 {
-                                    LB_ErrorText.Text += dr[i]["结算币别"].ToString().Trim() + Resources.lang.ZZBBBCZQZCSSZMKSZ;
+                                    LB_ErrorText.Text += dr[i][LanguageHandle.GetWord("JieSuanBiBie").ToString().Trim()].ToString().Trim() + LanguageHandle.GetWord("ZZBBBCZQZCSSZMKSZ").ToString().Trim();
                                     j = -1;
                                 }
                             }

@@ -50,7 +50,7 @@ public partial class TTUserLogonLog : System.Web.UI.Page
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL1, "T_LogonLog");
 
 
-            LB_QueryScope.Text = Resources.lang.RiQi + ":" + dtSelectedDate.ToShortDateString() + "," + Resources.lang.CiShu + lst.Count.ToString() + "," + Resources.lang.RenShu + ds.Tables[0].Rows.Count.ToString();
+            LB_QueryScope.Text = LanguageHandle.GetWord("RiQi").ToString().Trim() + ":" + dtSelectedDate.ToShortDateString() + "," + LanguageHandle.GetWord("CiShu").ToString().Trim() + lst.Count.ToString() + "," + LanguageHandle.GetWord("RenShu").ToString().Trim() + ds.Tables[0].Rows.Count.ToString();
 
         }
     }
@@ -87,7 +87,7 @@ public partial class TTUserLogonLog : System.Web.UI.Page
 
         LoadUserLogonLog();
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJSWC + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJSWC").ToString().Trim() + "')", true);
     }
 
     protected void Calendar1_SelectionChanged(object sender, EventArgs e)
@@ -107,7 +107,7 @@ public partial class TTUserLogonLog : System.Web.UI.Page
         strHQL = "Select Distinct(UserCode) From T_LogonLog where to_char(LoginTime,'yyyymmdd') = " + "'" + dtSelectedDate.ToString("yyyyMMdd") + "'" + " Group By UserCode";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_LogonLog");
 
-        LB_QueryScope.Text = Resources.lang.RiQi + ":" + dtSelectedDate.ToShortDateString() + "," + Resources.lang.CiShu + lst.Count.ToString() + "," + Resources.lang.RenShu + ds.Tables[0].Rows.Count.ToString();
+        LB_QueryScope.Text = LanguageHandle.GetWord("RiQi").ToString().Trim() + ":" + dtSelectedDate.ToShortDateString() + "," + LanguageHandle.GetWord("CiShu").ToString().Trim() + lst.Count.ToString() + "," + LanguageHandle.GetWord("RenShu").ToString().Trim() + ds.Tables[0].Rows.Count.ToString();
     }
 
     protected void BT_FindUserName_Click(object sender, EventArgs e)
@@ -128,7 +128,7 @@ public partial class TTUserLogonLog : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        LB_QueryScope.Text = Resources.lang.UserName + strUserName + "£¬" + Resources.lang.CiShu + lst.Count.ToString();
+        LB_QueryScope.Text = LanguageHandle.GetWord("UserName").ToString().Trim() + strUserName + "£¬" + LanguageHandle.GetWord("CiShu").ToString().Trim() + lst.Count.ToString();
     }
 
     protected void BT_FindIP_Click(object sender, EventArgs e)
@@ -149,7 +149,7 @@ public partial class TTUserLogonLog : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        LB_QueryScope.Text = "IP" + strUserIP + "£¬" + Resources.lang.CiShu + ":" + lst.Count.ToString();
+        LB_QueryScope.Text = "IP" + strUserIP + "£¬" + LanguageHandle.GetWord("CiShu").ToString().Trim() + ":" + lst.Count.ToString();
     }
 
     protected void BT_FindDeviceType_Click(object sender, EventArgs e)
@@ -169,7 +169,7 @@ public partial class TTUserLogonLog : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        LB_QueryScope.Text = Resources.lang.LeiXin + strDeviceType + "£¬" + Resources.lang.CiShu + ":" + lst.Count.ToString();
+        LB_QueryScope.Text = LanguageHandle.GetWord("LeiXin").ToString().Trim() + strDeviceType + "£¬" + LanguageHandle.GetWord("CiShu").ToString().Trim() + ":" + lst.Count.ToString();
     }
 
     protected void LoadUserLogonLog()
@@ -187,7 +187,7 @@ public partial class TTUserLogonLog : System.Web.UI.Page
         strHQL1 = "Select Distinct(UserCode) From T_LogonLog  Group By UserCode";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL1, "T_LogonLog");
 
-        LB_QueryScope.Text = Resources.lang.CiShu + lst.Count.ToString() + Resources.lang.RenShu + ds.Tables[0].Rows.Count.ToString();
+        LB_QueryScope.Text = LanguageHandle.GetWord("CiShu").ToString().Trim() + lst.Count.ToString() + LanguageHandle.GetWord("RenShu").ToString().Trim() + ds.Tables[0].Rows.Count.ToString();
     }
 
 }

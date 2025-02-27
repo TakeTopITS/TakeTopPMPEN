@@ -46,7 +46,7 @@ public partial class TTDocumentTypeSet : System.Web.UI.Page
             DL_Authority.DataSource = lst;
             DL_Authority.DataBind();
 
-            DL_Authority.Items.Insert(0, new ListItem("集团", "集团"));
+            DL_Authority.Items.Insert(0, new ListItem("集团", "集团")); 
 
             ShareClass.InitialAllDocTypeTree(TreeView1);
         }
@@ -104,7 +104,7 @@ public partial class TTDocumentTypeSet : System.Web.UI.Page
         }
         catch
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+Resources.lang.ZZCWJC+"');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+LanguageHandle.GetWord("ZZCWJC").ToString().Trim()+"');</script>");
         }
     }
 
@@ -132,11 +132,11 @@ public partial class TTDocumentTypeSet : System.Web.UI.Page
 
             ShareClass.InitialAllDocTypeTree(TreeView1);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCSBJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim()+"')", true);
         }
 
     }
@@ -167,7 +167,7 @@ public partial class TTDocumentTypeSet : System.Web.UI.Page
 
             if (lst.Count > 0)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+Resources.lang.ZZJGZGWJLXCZCLXWJNBNSC+"');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+LanguageHandle.GetWord("ZZJGZGWJLXCZCLXWJNBNSC").ToString().Trim()+"');</script>");
             }
             else
             {
@@ -177,11 +177,11 @@ public partial class TTDocumentTypeSet : System.Web.UI.Page
 
                     ShareClass.InitialAllDocTypeTree(TreeView1);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCSBJC+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim()+"')", true);
                 }
             }
         }
@@ -229,11 +229,11 @@ public partial class TTDocumentTypeSet : System.Web.UI.Page
                 docTypeBLL.UpdateDocType(docType, intID);
 
                 ShareClass.InitialAllDocTypeTree(TreeView1);
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCSBJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim()+"')", true);
             }
         }
     }

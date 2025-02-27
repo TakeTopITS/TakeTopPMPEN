@@ -342,14 +342,14 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
         //先导入物料主数据
         if (ExcelToDataTrainingForItem() == -1)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导入失败，数据有误，请检查！')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZDaoRuShiBaiShuJuYouWuQingJia").ToString().Trim()+"')", true);
             return;
         }
 
         //导入项目关联物料数据
         if (ExelToDBTestForProjectItem() == -1)
         {
-            LB_ErrorText.Text += Resources.lang.ZZDRSBEXECLBLDSJYCJC;
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZDRSBEXECLBLDSJYCJC").ToString().Trim();
 
             return;
         }
@@ -357,13 +357,13 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
         {
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGNZEXCELWJ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim();
                 return;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
                 return;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -372,7 +372,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                LB_ErrorText.Text += Resources.lang.ZZEXCLEBDRSB;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim();
             }
             else
             {
@@ -389,13 +389,13 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += Resources.lang.ZZJGEXCELBWKBWSJ;
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim();
                 }
                 else
                 {
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        strItemCode = dr[i]["代码"].ToString().Trim();
+                        strItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
 
                         if (strItemCode != "")
                         {
@@ -408,7 +408,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                                 //判断物料是否在项目预算中已存在
                                 if (CheckProjectRelatedItemIsExisted(strItemCode, strProjectID))
                                 {
-                                    LB_ErrorText.Text += "错误，代码： " + strItemCode + "已存在，不能重复添加，请检查！";
+                                    LB_ErrorText.Text += LanguageHandle.GetWord("CuoWuDaiMa").ToString().Trim() + strItemCode + LanguageHandle.GetWord("YiCunZaiBuNengChongFuTianJiaQi").ToString().Trim();
                                     continue;
                                 }
 
@@ -420,49 +420,49 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                                     ProjectRelatedItem projectRelatedItem = new ProjectRelatedItem();
 
                                     projectRelatedItem.ProjectID = int.Parse(strProjectID);
-                                    projectRelatedItem.ItemCode = dr[i]["代码"].ToString().Trim();
-                                    projectRelatedItem.ItemName = dr[i]["名称"].ToString().Trim();
+                                    projectRelatedItem.ItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
+                                    projectRelatedItem.ItemName = dr[i][LanguageHandle.GetWord("MingChen").ToString().Trim()].ToString().Trim();
 
-                                    projectRelatedItem.FirstDirectory = dr[i]["一级目录"].ToString().Trim();
-                                    projectRelatedItem.SecondDirectory = dr[i]["二级目录"].ToString().Trim();
-                                    projectRelatedItem.ThirdDirectory = dr[i]["三级目录"].ToString().Trim();
-                                    projectRelatedItem.FourthDirectory = dr[i]["四级目录"].ToString().Trim();
+                                    projectRelatedItem.FirstDirectory = dr[i][LanguageHandle.GetWord("YiJiMuLu").ToString().Trim()].ToString().Trim();
+                                    projectRelatedItem.SecondDirectory = dr[i][LanguageHandle.GetWord("ErJiMuLu").ToString().Trim()].ToString().Trim();
+                                    projectRelatedItem.ThirdDirectory = dr[i][LanguageHandle.GetWord("SanJiMuLu").ToString().Trim()].ToString().Trim();
+                                    projectRelatedItem.FourthDirectory = dr[i][LanguageHandle.GetWord("SiJiMuLu").ToString().Trim()].ToString().Trim();
 
 
-                                    projectRelatedItem.BomVersionID = int.Parse(dr[i]["BOM版本"].ToString().Trim());
-                                    projectRelatedItem.Number = decimal.Parse(dr[i]["数量"].ToString().Trim());
-                                    projectRelatedItem.Unit = dr[i]["单位"].ToString().Trim();
-                                    projectRelatedItem.ReservedNumber = decimal.Parse(dr[i]["保留数量"].ToString().Trim());
-                                    projectRelatedItem.DefaultProcess = dr[i]["缺省工艺"].ToString().Trim();
-                                    projectRelatedItem.Status = dr[i]["状态"].ToString().Trim();
+                                    projectRelatedItem.BomVersionID = int.Parse(dr[i][LanguageHandle.GetWord("BOMBanBen").ToString().Trim()].ToString().Trim());
+                                    projectRelatedItem.Number = decimal.Parse(dr[i][LanguageHandle.GetWord("ShuLiang").ToString().Trim()].ToString().Trim());
+                                    projectRelatedItem.Unit = dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim();
+                                    projectRelatedItem.ReservedNumber = decimal.Parse(dr[i][LanguageHandle.GetWord("BaoLiuShuLiang").ToString().Trim()].ToString().Trim());
+                                    projectRelatedItem.DefaultProcess = dr[i][LanguageHandle.GetWord("QueShengGongYi").ToString().Trim()].ToString().Trim();
+                                    projectRelatedItem.Status = dr[i]["状态"].ToString().Trim(); 
 
-                                    projectRelatedItem.AleadyPurchased = decimal.Parse(dr[i]["已采购量"].ToString().Trim());
+                                    projectRelatedItem.AleadyPurchased = decimal.Parse(dr[i][LanguageHandle.GetWord("YiCaiGouLiang").ToString().Trim()].ToString().Trim());
 
                                     try
                                     {
-                                        projectRelatedItem.AleadyPick = decimal.Parse(dr[i]["已领料量"].ToString().Trim());
+                                        projectRelatedItem.AleadyPick = decimal.Parse(dr[i][LanguageHandle.GetWord("YiLingLiaoLiang").ToString().Trim()].ToString().Trim());
                                     }
                                     catch
                                     {
                                         projectRelatedItem.AleadyPick = 0;
                                     }
 
-                                    projectRelatedItem.AleadyCheckOut = decimal.Parse(dr[i]["已出库量"].ToString().Trim());
-                                    projectRelatedItem.AleadyCheckIn = decimal.Parse(dr[i]["已入库量"].ToString().Trim());
-                                    projectRelatedItem.AleadyProduction = decimal.Parse(dr[i]["已生产量"].ToString().Trim());
+                                    projectRelatedItem.AleadyCheckOut = decimal.Parse(dr[i][LanguageHandle.GetWord("YiChuKuLiang").ToString().Trim()].ToString().Trim());
+                                    projectRelatedItem.AleadyCheckIn = decimal.Parse(dr[i][LanguageHandle.GetWord("YiRuKuLiang").ToString().Trim()].ToString().Trim());
+                                    projectRelatedItem.AleadyProduction = decimal.Parse(dr[i][LanguageHandle.GetWord("YiShengChanLiang").ToString().Trim()].ToString().Trim());
                                     try
                                     {
-                                        projectRelatedItem.AleadySale = decimal.Parse(dr[i]["已销售量"].ToString().Trim());
+                                        projectRelatedItem.AleadySale = decimal.Parse(dr[i][LanguageHandle.GetWord("YiXiaoShouLiang").ToString().Trim()].ToString().Trim());
                                     }
                                     catch
                                     {
                                         projectRelatedItem.AleadySale = 0;
                                     }
 
-                                    projectRelatedItem.PurchasePrice = decimal.Parse(dr[i]["单价"].ToString().Trim());
-                                    projectRelatedItem.SalePrice = decimal.Parse(dr[i]["单价"].ToString().Trim());
+                                    projectRelatedItem.PurchasePrice = decimal.Parse(dr[i][LanguageHandle.GetWord("ChanJia").ToString().Trim()].ToString().Trim());
+                                    projectRelatedItem.SalePrice = decimal.Parse(dr[i][LanguageHandle.GetWord("ChanJia").ToString().Trim()].ToString().Trim());
 
-                                    projectRelatedItem.Comment = dr[i]["备注"].ToString().Trim();
+                                    projectRelatedItem.Comment = dr[i][LanguageHandle.GetWord("BeiZhu").ToString().Trim()].ToString().Trim();
 
                                     projectRelatedItem.ModelNumber = item.ModelNumber;
                                     projectRelatedItem.Specification = item.Specification;
@@ -474,8 +474,8 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                                 }
                                 catch (Exception err)
                                 {
-                                    LB_ErrorText.Text += Resources.lang.ZZJGDRSBJC + " : " + Resources.lang.HangHao + ": " + (i + 2).ToString() + " , " + Resources.lang.DaiMa + ": " + strItemCode + " : " + err.Message.ToString() + "<br/>"; ;
-                                    LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + Resources.lang.ZZJGDRSBJC + " : " + Resources.lang.HangHao + ": " + (i + 2).ToString() + " , " + Resources.lang.DaiMa + ": " + strItemCode + " : " + err.Message.ToString());
+                                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strItemCode + " : " + err.Message.ToString() + "<br/>"; ;
+                                    LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strItemCode + " : " + err.Message.ToString());
                                 }
                             }
 
@@ -485,7 +485,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
                     LoadProjectRelatedItem(strProjectID);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZEXCLEBDRCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRCG").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -501,13 +501,13 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
         {
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGNZEXCELWJ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim();
                 j = -1;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
                 j = -1;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -516,7 +516,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                LB_ErrorText.Text += Resources.lang.ZZEXCLEBDRSB;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim();
                 j = -1;
             }
             else
@@ -534,14 +534,14 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += Resources.lang.ZZJGEXCELBWKBWSJ;
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim();
                     j = -1;
                 }
                 else
                 {
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        strItemCode = dr[i]["代码"].ToString().Trim();
+                        strItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
 
                         if (strItemCode != "")
                         {
@@ -550,36 +550,36 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                             IList lst = itemBLL.GetAllItems(strHQL);
                             if (lst != null && lst.Count > 0)//存在，则不操作
                             {
-                                CheckAndAddUnit(dr[i]["单位"].ToString().Trim());
+                                CheckAndAddUnit(dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim());
 
 
                                 try
                                 {
-                                    decimal.Parse(dr[i]["已领料量"].ToString().Trim());
-                                    decimal.Parse(dr[i]["已销售量"].ToString().Trim());
+                                    decimal.Parse(dr[i][LanguageHandle.GetWord("YiLingLiaoLiang").ToString().Trim()].ToString().Trim());
+                                    decimal.Parse(dr[i][LanguageHandle.GetWord("YiXiaoShouLiang").ToString().Trim()].ToString().Trim());
                                 }
                                 catch
                                 {
                                     j = -1;
 
-                                    LB_ErrorText.Text += "模板表格过时，请下载最新的导入模板表！";
+                                    LB_ErrorText.Text += LanguageHandle.GetWord("MoBanBiaoGeGuoShiQingXiaZaiZui").ToString().Trim();
                                     continue;
                                 }
 
 
                                 try
                                 {
-                                    decimal.Parse(dr[i]["数量"].ToString().Trim());
-                                    decimal.Parse(dr[i]["保留数量"].ToString().Trim());
-                                    decimal.Parse(dr[i]["已采购量"].ToString().Trim());
-                                    decimal.Parse(dr[i]["已出库量"].ToString().Trim());
-                                    decimal.Parse(dr[i]["已生产量"].ToString().Trim());
+                                    decimal.Parse(dr[i][LanguageHandle.GetWord("ShuLiang").ToString().Trim()].ToString().Trim());
+                                    decimal.Parse(dr[i][LanguageHandle.GetWord("BaoLiuShuLiang").ToString().Trim()].ToString().Trim());
+                                    decimal.Parse(dr[i][LanguageHandle.GetWord("YiCaiGouLiang").ToString().Trim()].ToString().Trim());
+                                    decimal.Parse(dr[i][LanguageHandle.GetWord("YiChuKuLiang").ToString().Trim()].ToString().Trim());
+                                    decimal.Parse(dr[i][LanguageHandle.GetWord("YiShengChanLiang").ToString().Trim()].ToString().Trim());
                                 }
                                 catch
                                 {
                                     j = -1;
 
-                                    LB_ErrorText.Text += Resources.lang.ZZZDRSBSLBLSLYWSZ;
+                                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZZDRSBSLBLSLYWSZ").ToString().Trim();
                                     continue;
                                 }
 
@@ -588,7 +588,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                             {
                                 j = -1;
 
-                                LB_ErrorText.Text += strItemCode + Resources.lang.ZZZWLDMBCZQJC;
+                                LB_ErrorText.Text += strItemCode + LanguageHandle.GetWord("ZZZWLDMBCZQJC").ToString().Trim();
                                 continue;
                             }
 
@@ -614,12 +614,12 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = "Project" + strProjectID + "关联物料_" + DateTime.Now.ToString("yyyyMMddHHmmss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = "Project" + strProjectID + LanguageHandle.GetWord("GuanLianWuLiao").ToString().Trim() + DateTime.Now.ToString("yyyyMMddHHmmss") + "-" + a.Next(100, 999) + ".xls";
                 CreateExcel(fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDCDSJYWJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
             }
         }
     }
@@ -663,7 +663,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
               ,A.AleadyProduction 已生产量
               ,A.AleadySale 已销售量
 							
-			  FROM T_ProjectRelatedItem A,T_Item B  Where A.ItemCode = B.ItemCode AND  A.ProjectID = {0} Order By A.ID DESC", strProjectID);
+			  FROM T_ProjectRelatedItem A,T_Item B  Where A.ItemCode = B.ItemCode AND  A.ProjectID = {0} Order By A.ID DESC", strProjectID); 
 
 
         MSExcelHandler.DataTableToExcel(strHQL, fileName);
@@ -682,7 +682,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
         if (ExelToDBTestForItem() == -1)
         {
-            LB_ErrorText.Text += Resources.lang.ZZDRSBEXECLBLDSJYCJC;
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZDRSBEXECLBLDSJYCJC").ToString().Trim();
 
             return -1;
         }
@@ -691,7 +691,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             dePurchasePrice = NB_PurchasePrice.Amount;
             deSalePrice = NB_SalePrice.Amount;
             deSafetyStock = NB_SalePrice.Amount;
-            strCurrencyType = "人民币";
+            strCurrencyType = "人民币"; 
             dePULeadTime = NB_PULeadTime.Amount;
             deMFLeadTime = NB_MFLeadTime.Amount;
             deHRCost = NB_HRCost.Amount;
@@ -706,13 +706,13 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGNZEXCELWJ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim();
                 return -1;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
                 return -1;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -721,7 +721,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click444", "alert('" + Resources.lang.ZZEXCLEBDRSB + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click444", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim() + "')", true);
                 return -1;
             }
             else
@@ -739,14 +739,14 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += Resources.lang.ZZJGEXCELBWKBWSJ;
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim();
                     return -1;
                 }
                 else
                 {
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        strItemCode = dr[i]["代码"].ToString().Trim();
+                        strItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
 
                         if (strItemCode != "")
                         {
@@ -760,13 +760,13 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                             {
                                 Item item = new Item();
 
-                                item.ItemCode = dr[i]["代码"].ToString().Trim();
-                                item.ItemName = dr[i]["名称"].ToString().Trim();
-                                item.Type = dr[i]["属性（采购件、自制件、外协件、交付件）"].ToString().Trim(); ;
-                                strBigType = dr[i]["大类（物料、资产）"].ToString().Trim();
+                                item.ItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
+                                item.ItemName = dr[i][LanguageHandle.GetWord("MingChen").ToString().Trim()].ToString().Trim();
+                                item.Type = dr[i]["属性（采购件、自制件、外协件、交付件）"].ToString().Trim(); ; 
+                                strBigType = dr[i]["大类（物料、资产）"].ToString().Trim(); 
 
                                 item.BigType = "";
-                                if (strBigType == "物料")
+                                if (strBigType == LanguageHandle.GetWord("WuLiao").ToString().Trim())
                                 {
                                     item.BigType = "Goods";
                                 }
@@ -775,14 +775,14 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                                     item.BigType = "Asset";
                                 }
 
-                                item.SmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim();
-                                item.Specification = dr[i]["规格"].ToString().Trim();
-                                item.ModelNumber = dr[i]["型号"].ToString().Trim();
-                                item.Brand = dr[i]["品牌"].ToString().Trim();
-                                item.Unit = dr[i]["单位"].ToString().Trim();
+                                item.SmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim(); 
+                                item.Specification = dr[i][LanguageHandle.GetWord("GuiGe").ToString().Trim()].ToString().Trim();
+                                item.ModelNumber = dr[i][LanguageHandle.GetWord("XingHao").ToString().Trim()].ToString().Trim();
+                                item.Brand = dr[i][LanguageHandle.GetWord("PinPai").ToString().Trim()].ToString().Trim();
+                                item.Unit = dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim();
 
-                                item.RegistrationNumber = dr[i]["注册证号"].ToString().Trim();
-                                item.PackingType = dr[i]["包装方式"].ToString().Trim();
+                                item.RegistrationNumber = dr[i][LanguageHandle.GetWord("ZhuCeZhengHao").ToString().Trim()].ToString().Trim();
+                                item.PackingType = dr[i]["包装方式"].ToString().Trim(); 
 
                                 item.PULeadTime = dePULeadTime;
                                 item.MFLeadTime = deMFCost;
@@ -814,7 +814,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                                 ShareClass.RunSqlCommand(strHQL);
 
                                 //strHQL = "Insert Into T_ItemBom(ItemCode,ParentItemCode,ChildItemCode,Number,Unit,DefaultProcess,ChildItemVerID,VerID)";
-                                //strHQL += " Values(" + "'" + strItemCode + "'" + "," + "'" + strItemCode + "'" + "," + "'" + strItemCode + "'" + ",1," + "'" + dr[i]["单位"].ToString().Trim() + "'" + "," + "'" + strDefaultProcess + "'" + ",1,1)";
+                                //strHQL += " Values(" + "'" + strItemCode + "'" + "," + "'" + strItemCode + "'" + "," + "'" + strItemCode + "'" + ",1," + "'" + dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim() + "'" + "," + "'" + strDefaultProcess + "'" + ",1,1)";
                                 //ShareClass.RunSqlCommand(strHQL);
 
 
@@ -830,7 +830,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                         }
                     }
 
-                    //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZEXCLEBDRCG + "')", true);
+                    //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRCG").ToString().Trim() + "')", true);
                 }
 
                 return 1;
@@ -846,13 +846,13 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
         if (FileUpload_Training.HasFile == false)
         {
-            LB_ErrorText.Text += Resources.lang.ZZJGNZEXCELWJ;
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim();
             j = -1;
         }
         string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
         if (IsXls != ".xls" & IsXls != ".xlsx")
         {
-            LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ;
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
             j = -1;
         }
         string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -861,7 +861,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
         FileInfo fi = new FileInfo(strDocSavePath + newfilename);
         if (fi.Exists)
         {
-            LB_ErrorText.Text += Resources.lang.ZZEXCLEBDRSB;
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim();
             j = -1;
         }
         else
@@ -879,36 +879,36 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             int rowsnum = dt.Rows.Count;
             if (rowsnum == 0)
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGEXCELBWKBWSJ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim();
                 j = -1;
             }
             else
             {
                 for (int i = 0; i < dr.Length; i++)
                 {
-                    strItemCode = dr[i]["代码"].ToString().Trim();
+                    strItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
 
                     if (strItemCode != "")
                     {
-                        CheckAndAddUnit(dr[i]["单位"].ToString().Trim());
+                        CheckAndAddUnit(dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim());
 
-                        string strBigType = dr[i]["大类（物料、资产）"].ToString().Trim();
-                        if (strBigType != "物料" & strBigType != "Assets")
+                        string strBigType = dr[i]["大类（物料、资产）"].ToString().Trim(); 
+                        if (strBigType != LanguageHandle.GetWord("WuLiao").ToString().Trim() & strBigType != "Assets")
                         {
-                            LB_ErrorText.Text += "导入失败，大类只能设为 物料 或 资产，不能为 " + strBigType + " 请检查！";
+                            LB_ErrorText.Text += LanguageHandle.GetWord("DaoRuShiBaiDaLeiZhiNengSheWeiW").ToString().Trim() + strBigType + LanguageHandle.GetWord("QingJianCha").ToString().Trim();
                             j = -1;
                         }
 
-                        string strSmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim();
+                        string strSmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim(); 
                         if (CheckSmallType(strSmallType, strBigType) == 0)
                         {
-                            if (strBigType != "物料")
+                            if (strBigType != LanguageHandle.GetWord("WuLiao").ToString().Trim())
                             {
-                                LB_ErrorText.Text += "导入失败，小类：" + strSmallType + " 不存在，请先在【基础数据（外置）】模块设置！";
+                                LB_ErrorText.Text += LanguageHandle.GetWord("DaoRuShiBaiXiaoLei").ToString().Trim() + strSmallType + LanguageHandle.GetWord("BuCunZaiQingXianZaiJiChuShuJuW").ToString().Trim();
                             }
                             else
                             {
-                                LB_ErrorText.Text += "导入失败，小类：" + strSmallType + " 不存在，请先在【物料类型】模块设置！";
+                                LB_ErrorText.Text += LanguageHandle.GetWord("DaoRuShiBaiXiaoLei").ToString().Trim() + strSmallType + LanguageHandle.GetWord("BuCunZaiQingXianZaiWuLiaoLeiXi").ToString().Trim();
                             }
 
                             j = -1;
@@ -925,7 +925,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
     {
         string strHQL;
 
-        if (strBigType == "物料")
+        if (strBigType == LanguageHandle.GetWord("WuLiao").ToString().Trim())
         {
             strHQL = "Select Type From T_GoodsType Where Type = '" + strType + "'";
         }
@@ -987,7 +987,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
         //判断物料是否在项目预算中已存在
         if (CheckProjectRelatedItemIsExisted(strItemCode, strProjectID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('提示，此物料已存在，不能重复添加，请检查！')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZDiShiCiWuLiaoYiCunZaiBuNengC").ToString().Trim()+"')", true);
             return;
         }
 
@@ -1045,11 +1045,11 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
             LoadProjectRelatedItem(strProjectID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJRXMCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJRXMCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJRSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJRSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -1117,16 +1117,16 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
                 BT_DeleteToProject.Enabled = false;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('失败，此物资预算已被采用，不能删除，请检查！')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShiBaiCiWuZiYuSuanYiBeiCaiYo").ToString().Trim()+"')", true);
             }
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -1179,16 +1179,16 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
                 LoadProjectRelatedItem(strProjectID);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBWZYSYBCYBNSCQJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBWZYSYBCYBNSCQJC").ToString().Trim() + "')", true);
             }
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWSCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -1213,7 +1213,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + err.Message.ToString() + "')", true);
             }
 
-            strHQL = "Update T_ProjectRelatedItem Set Status = '固化' Where ProjectID = " + strProjectID;
+            strHQL = "Update T_ProjectRelatedItem Set Status = '固化' Where ProjectID = " + strProjectID; 
             ShareClass.RunSqlCommand(strHQL);
 
             LoadProjectRelatedItem(strProjectID);
@@ -1221,13 +1221,13 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             TakeTopBOM.InitialProjectItemBomTree(strProjectID, strVerID, TreeView2);
             LB_ProRelatedItemBomCost.Text = TakeTopBOM.SumProjectItemBomCost(strProjectID, strVerID).ToString("F2");
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGHBOMCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGHBOMCG").ToString().Trim() + "')", true);
 
 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCCXZJXGCPZXMLHZJXMCPBOMBBH + "')", true);
+            ScriptManager.RegisterStartupScript(UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCXZJXGCPZXMLHZJXMCPBOMBBH").ToString().Trim() + "')", true);
         }
     }
 
@@ -1260,10 +1260,10 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
         projectRelatedItemBom.Number = 1;
         projectRelatedItemBom.ReservedNumber = 0;
-        projectRelatedItemBom.Unit = "个";
+        projectRelatedItemBom.Unit = LanguageHandle.GetWord("Ge").ToString().Trim();
         projectRelatedItemBom.VerID = int.Parse(strVerID);
 
-        projectRelatedItemBom.ItemType = "成品";
+        projectRelatedItemBom.ItemType = "成品"; 
         projectRelatedItemBom.Specification = GetProjectSpecification(strProjectID);
         projectRelatedItem.Brand = "";
         projectRelatedItem.ModelNumber = "";
@@ -1277,8 +1277,8 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
         projectRelatedItemBom.HRCost = 0;
         projectRelatedItemBom.MTCost = 0;
 
-        projectRelatedItemBom.Comment = "项目名称";
-        projectRelatedItemBom.DefaultProcess = "自制";
+        projectRelatedItemBom.Comment = LanguageHandle.GetWord("XiangMuMingChen").ToString().Trim();
+        projectRelatedItemBom.DefaultProcess = LanguageHandle.GetWord("ZiZhi").ToString().Trim();
         projectRelatedItemBom.PhotoURL = "";
         projectRelatedItemBom.SortNumber = 0;
 
@@ -1362,7 +1362,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             projectRelatedItemBom.HRCost = projectRelatedItem.HRCost;
             projectRelatedItemBom.MTCost = projectRelatedItem.MTCost;
 
-            projectRelatedItemBom.Comment = "物料资料";
+            projectRelatedItemBom.Comment = LanguageHandle.GetWord("WuLiaoZiLiao").ToString().Trim();
             projectRelatedItemBom.DefaultProcess = strDefaultProcess;
             projectRelatedItemBom.PhotoURL = projectRelatedItem.PhotoURL;
             projectRelatedItemBom.SortNumber = 0;
@@ -1442,7 +1442,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             projectRelatedItemBom.HRCost = itemBom.HRCost;
             projectRelatedItemBom.MTCost = itemBom.MTCost;
 
-            projectRelatedItemBom.Comment = "物料资料";
+            projectRelatedItemBom.Comment = LanguageHandle.GetWord("WuLiaoZiLiao").ToString().Trim();
             projectRelatedItemBom.DefaultProcess = itemBom.DefaultProcess.Trim();
 
             projectRelatedItemBom.SortNumber = 0;
@@ -1705,7 +1705,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
         LoadProjectRelatedItem(strProjectID);
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFZWC + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZWC").ToString().Trim() + "')", true);
         //ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popParentProjectItemWindow','false') ", true);
     }
 
@@ -1751,16 +1751,16 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                     ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + err.Message.ToString() + "')", true);
                 }
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZSBCXMZKNCZCBBHJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBCXMZKNCZCBBHJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -1771,7 +1771,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
         if (DL_ChangeProjectItemBomVersionID.Items.Count == 1)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBMXMBXBLYGJHBB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBMXMBXBLYGJHBB").ToString().Trim() + "')", true);
             return;
         }
 
@@ -1803,11 +1803,11 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
                 }
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -1863,7 +1863,7 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             {
                 ShareClass.RunSqlCommand(strHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBBLXYGG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBBLXYGG").ToString().Trim() + "')", true);
             }
             catch
             {
@@ -1997,11 +1997,11 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
 
             BT_DeleteFormBom.Enabled = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGXGSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGXGSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -2034,11 +2034,11 @@ public partial class TTProjectRelatedItem : System.Web.UI.Page
             BT_UpdateFormBom.Enabled = false;
             BT_DeleteFormBom.Enabled = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
         }
     }
 

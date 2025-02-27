@@ -39,11 +39,11 @@ public partial class TTProjectTaskReviewWL : System.Web.UI.Page
 
         ProjectTask projectTask = (ProjectTask)lst[0];
         strProjectID = projectTask.ProjectID.ToString();
-        //this.Title = "项目任务：" + strTaskID + " " + projectTask.Task.Trim() + Resources.lang.PingShen;
+        //this.Title = "项目任务：" + strTaskID + " " + projectTask.Task.Trim() + LanguageHandle.GetWord("PingShen").ToString().Trim();
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
         {
-            TB_WLName.Text = Resources.lang.XiangMuRenWu + strTaskID + projectTask.Task.Trim() + Resources.lang.PingShen;
+            TB_WLName.Text = LanguageHandle.GetWord("XiangMuRenWu").ToString().Trim() + strTaskID + projectTask.Task.Trim() + LanguageHandle.GetWord("PingShen").ToString().Trim();
 
             strReviewType = "Task";
             strReviewType = "%" + strReviewType + "%";
@@ -134,13 +134,13 @@ public partial class TTProjectTaskReviewWL : System.Web.UI.Page
 
             LoadRelatedWL("TaskReview", "Task", int.Parse(strTaskID));
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXMRWPSSGZLSCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXMRWPSSGZLSCCG").ToString().Trim() + "')", true);
         }
         catch
         {
 
             strWLID = "0";
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZRWPSSGZLSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZRWPSSGZLSB").ToString().Trim() + "')", true);
         }
 
         return strWLID;

@@ -49,7 +49,7 @@ public partial class TTProjectHumanResourcesMonthlyReports : System.Web.UI.Page
         {
             if (strYearMonth.Trim() == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSNYBNWKCZSBJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSNYBNWKCZSBJC").ToString().Trim()+"')", true);
                 DLC_YearMonth.Focus();
                 return;
             }
@@ -80,7 +80,7 @@ public partial class TTProjectHumanResourcesMonthlyReports : System.Web.UI.Page
         {
             if (strYearMonth.Trim() == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSNYBNWKCZSBJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSNYBNWKCZSBJC").ToString().Trim()+"')", true);
                 DLC_YearMonth.Focus();
                 return;
             }
@@ -120,17 +120,17 @@ public partial class TTProjectHumanResourcesMonthlyReports : System.Web.UI.Page
                 string fileName = string.Empty;
                 if (ddl_ProjectID.SelectedValue.Trim() == "0")
                 {
-                    fileName = "全体项目汇总月对照_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("QuanTiXiangMuHuiZongYueDuiZhao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else
                 {
-                    fileName = "项目人力资源月报_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("XiangMuRenLiZiYuanYueBao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 CreateExcel(getExportBookList(), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGDCDSJYWJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim()+"')", true);
             }
         }
     }
@@ -163,7 +163,7 @@ public partial class TTProjectHumanResourcesMonthlyReports : System.Web.UI.Page
         string strYearMonth = DLC_YearMonth.Text.Trim() == "" ? DateTime.Now.ToString("yyyy-MM") : DLC_YearMonth.Text.Trim();
         if (ddl_ProjectID.SelectedValue.Trim() == "0")
         {
-            strHQL = "select A.WorkType '工种',A.WeekTotal1 '第一周',A.WeekTotal2 '第二周',A.WeekTotal3 '第三周',A.WeekTotal4 '第四周',COALESCE(B.WeekTotal,0) '储备量' from (select WorkType," +
+            strHQL = "select A.WorkType '工种',A.WeekTotal1 '第一周',A.WeekTotal2 '第二周',A.WeekTotal3 '第三周',A.WeekTotal4 '第四周',COALESCE(B.WeekTotal,0) '储备量' from (select WorkType," + 
                 " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) and WeekNum=1 then NumberUsed else 0 end) WeekTotal1 ," +
                 " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) and WeekNum=2 then NumberUsed else 0 end) WeekTotal2 ," +
                 " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) and WeekNum=3 then NumberUsed else 0 end) WeekTotal3 ," +
@@ -175,10 +175,10 @@ public partial class TTProjectHumanResourcesMonthlyReports : System.Web.UI.Page
         }
         else
         {
-            strHQL = "select WorkType '工种', sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) and WeekNum=1 then NumberUsed else 0 end) '第一周' ," +
-                " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) and WeekNum=2 then NumberUsed else 0 end) '第二周' ," +
-                " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) and WeekNum=3 then NumberUsed else 0 end) '第三周' ," +
-                " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) and WeekNum=4 then NumberUsed else 0 end) '第四周' from " +
+            strHQL = "select WorkType '工种', sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) and WeekNum=1 then NumberUsed else 0 end) '第一周' ," + 
+                " sum(case when '" + strYearMonth.Trim() + LanguageHandle.GetWord("SUBSTRINGtocharYearMonthyyyymm").ToString().Trim() +
+                " sum(case when '" + strYearMonth.Trim() + LanguageHandle.GetWord("SUBSTRINGtocharYearMonthyyyymm").ToString().Trim() +
+                " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) and WeekNum=4 then NumberUsed else 0 end) '第四周' from " + 
                 "T_ProjectMemberSchedule where ProjectID='" + ddl_ProjectID.SelectedValue.Trim() + "' group by WorkType";
         }
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectMemberSchedule");

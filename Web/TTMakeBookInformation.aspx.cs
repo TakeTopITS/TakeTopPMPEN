@@ -43,7 +43,7 @@ public partial class TTMakeBookInformation : System.Web.UI.Page
 
             LoadBookType();
 
-            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityAsset(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityAsset(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             LoadBookList(strUserCode, "0");
@@ -97,7 +97,7 @@ public partial class TTMakeBookInformation : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(TB_BookName.Text.Trim()) || TB_BookName.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGTSMCBNWKCZSBJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGTSMCBNWKCZSBJC").ToString().Trim()+"')", true);
             TB_BookName.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -138,7 +138,7 @@ public partial class TTMakeBookInformation : System.Web.UI.Page
         bookInformation.UseNum = 0;
         bookInformation.Version = TB_Version.Text.Trim();
         bookInformation.BookImage = strBookImage;
-        bookInformation.BookType = "图书";
+        bookInformation.BookType = "图书"; 
         bookInformation.ClassificationCode = "";
 
         try
@@ -148,13 +148,13 @@ public partial class TTMakeBookInformation : System.Web.UI.Page
        
             BT_DeletePhoto.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
 
             LoadBookList(strUserCode, "0");
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCSB+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCSB").ToString().Trim()+"')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -164,7 +164,7 @@ public partial class TTMakeBookInformation : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(TB_BookName.Text.Trim()) || TB_BookName.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGTSMCBNWKCZSBJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGTSMCBNWKCZSBJC").ToString().Trim()+"')", true);
             TB_BookName.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -204,20 +204,20 @@ public partial class TTMakeBookInformation : System.Web.UI.Page
         bookInformation.Translator = TB_Translator.Text.Trim();
         bookInformation.Version = TB_Version.Text.Trim();
         bookInformation.BookImage = strBookImage;
-        bookInformation.BookType = "图书";
+        bookInformation.BookType = "图书"; 
         bookInformation.ClassificationCode = "";
 
         try
         {
             bookInformationBLL.UpdateBookInformation(bookInformation, bookInformation.ID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
 
             LoadBookList(strUserCode, "1");
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCSB+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCSB").ToString().Trim()+"')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -241,7 +241,7 @@ public partial class TTMakeBookInformation : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('删除" + Resources.lang.ZZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShanChuLanguageHandleGetWord").ToString().Trim()+"')", true); 
         }
     }
 
@@ -345,17 +345,17 @@ public partial class TTMakeBookInformation : System.Web.UI.Page
                 }
                 catch
                 {
-                    //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传"+Resources.lang.ZZSBJC+"')", true);
+                    //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShangChuanLanguageHandleGetW").ToString().Trim()+"')", true);
                 }
             }
             else
             {
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZYSCDWJ+"')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim()+"')", true);
             }
         }
         else
         {
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZYSCDWJ+"')", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim()+"')", true);
         }
 
     }
@@ -426,13 +426,13 @@ public partial class TTMakeBookInformation : System.Web.UI.Page
 
                     BT_DeletePhoto.Enabled = false;
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
 
                     LoadBookList(strUserCode, "0");
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -448,7 +448,7 @@ public partial class TTMakeBookInformation : System.Web.UI.Page
         string strHQL;
         string strDepartString = LB_DepartString.Text.Trim();
 
-        strHQL = "Select * From T_BookInformation Where BookType = '图书' ";
+        strHQL = "Select * From T_BookInformation Where BookType = '图书' "; 
         strHQL += " and DepartCode in " + strDepartString;
         if (!string.IsNullOrEmpty(TextBox2.Text.Trim()))
         {
@@ -472,7 +472,7 @@ public partial class TTMakeBookInformation : System.Web.UI.Page
         string strHQL;
         IList lst;
         //绑定分类BindDDL();
-        strHQL = "Select * From T_BookClassification Where DataType='图书分类' Order By ID ASC ";
+        strHQL = "Select * From T_BookClassification Where DataType='图书分类' Order By ID ASC "; 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_BookClassification");
         DL_BookClassificationId.DataSource = ds;
         DL_BookClassificationId.DataBind();

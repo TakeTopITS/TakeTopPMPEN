@@ -99,13 +99,13 @@ public partial class DefaultWeiXinSAASBackup : System.Web.UI.Page
 
         if (strUserCode == "" | strPassword == "")
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZYHMHMMDBNWKJC + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZYHMHMMDBNWKJC").ToString().Trim() + "');</script>");
             return;
         }
 
         if (ShareClass.SqlFilter(strUserCode) | ShareClass.SqlFilter(strPassword))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZHHYFFZHDLSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZHHYFFZHDLSB").ToString().Trim() + "')", true);
             return;
         }
 
@@ -237,7 +237,7 @@ public partial class DefaultWeiXinSAASBackup : System.Web.UI.Page
                 if (CheckAndSetWXOpenID(strWeiXinCode, strUserCode) == false)
                 {
                     LB_ErrorMsg.Visible = true;
-                    LB_ErrorMsg.Text = Resources.lang.ZZDLSBNDWXIDYPLYZHSY + "（" + LB_ErrorMsg.Text + "）" + Resources.lang.ZZSYQLXXTGLY;
+                    LB_ErrorMsg.Text = LanguageHandle.GetWord("ZZDLSBNDWXIDYPLYZHSY").ToString().Trim() + "（" + LB_ErrorMsg.Text + "）" + LanguageHandle.GetWord("ZZSYQLXXTGLY").ToString().Trim();
 
                     return;
                 }
@@ -263,9 +263,9 @@ public partial class DefaultWeiXinSAASBackup : System.Web.UI.Page
             else
             {
                 LB_ErrorMsg.Visible = true;
-                LB_ErrorMsg.Text = Resources.lang.ZZSBYYKNRX1YHDMHMMCW2BSAPPYHHYBZZSY;
+                LB_ErrorMsg.Text = LanguageHandle.GetWord("ZZSBYYKNRX1YHDMHMMCW2BSAPPYHHYBZZSY").ToString().Trim();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBYYKNRX1YHDMHMMCW2BSAPPYHHYBZZSY + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBYYKNRX1YHDMHMMCW2BSAPPYHHYBZZSY").ToString().Trim() + "')", true);
             }
         }
         catch (Exception err)
@@ -348,22 +348,22 @@ public partial class DefaultWeiXinSAASBackup : System.Web.UI.Page
         {
             strSMSCode = msg.CreateRandomCode(5);
 
-            strMsg = "短信验证码：" + strSMSCode + "，当天有效！";
+            strMsg =  LanguageHandle.GetWord("DuanXinYanZhengMa") +"：" + strSMSCode + "," + LanguageHandle.GetWord("DangTianYouXiao");
 
             if (msg.SendMSM("Message", strUserCode, strMsg, strUserCode))
             {
                 InsertOrUpdateSMSCode(strUserCode, strSMSCode);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZDXYZMYFSCS + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDXYZMYFSCS").ToString().Trim() + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDXYZMFSSBJCDXJKHWLLJ + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDXYZMFSSBJCDXJKHWLLJ").ToString().Trim() + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGYHDMHMMCWBNDDXMJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGYHDMHMMCWBNDDXMJC").ToString().Trim() + "')", true);
         }
     }
 

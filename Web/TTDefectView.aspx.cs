@@ -44,7 +44,7 @@ public partial class TTDefectView : System.Web.UI.Page
             }
             else
             {
-                Response.Write("此缺陷不存在，可能已被删除,请检查!");
+                Response.Write(LanguageHandle.GetWord("CiQueXianBuCunZaiKeNengYiBeiSh").ToString().Trim());
             }
         }
     }

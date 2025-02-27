@@ -40,8 +40,8 @@ public partial class TTProjectAssetPurchaseReport : System.Web.UI.Page
             //strRelatedType = "Project";
         }
 
-        //this.Title = strRelatedType + " " + strRelatedID + " 物料采购报表";
-        LB_ReportName.Text =  Resources.lang.ZiChanCaiGouBaoBiao;
+        //this.Title = strRelatedType + " " + strRelatedID + "物料采购报表";
+        LB_ReportName.Text =  LanguageHandle.GetWord("ZiChanCaiGouBaoBiao").ToString().Trim();
 
         LB_UserCode.Text = strUserCode;
         strUserName = ShareClass.GetUserName(strUserCode);

@@ -23,7 +23,7 @@ public partial class TTTrainingUserInfoManage : System.Web.UI.Page
         }
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (!IsPostBack)
         {
-            IsPlayButton(strUserCode.Trim(), "培训管理");
+            IsPlayButton(strUserCode.Trim(), LanguageHandle.GetWord("PeiXunGuanLi").ToString().Trim());
             BindCheckData();
         }
     }
@@ -58,39 +58,39 @@ public partial class TTTrainingUserInfoManage : System.Web.UI.Page
                 string fileName = string.Empty;
                 if (ddl_TrainingType.SelectedValue.Trim() == "PleaseSelect")
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSPXXLBBJC+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSPXXLBBJC").ToString().Trim()+"')", true);
                     ddl_TrainingType.Focus();
                     return;
                 }
                 else if (ddl_TrainingType.SelectedValue.Trim() == "EmployeeTraining")
                 {
-                    fileName = "员工培训_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("YuanGongPeiXun").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else if (ddl_TrainingType.SelectedValue.Trim() == "TrainingRecord")
                 {
-                    fileName = "培训记录_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("PeiXunJiLu").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else if (ddl_TrainingType.SelectedValue.Trim() == "SpecialOperations")
                 {
-                    fileName = "特种作业_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("TeChongZuoYe").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else if (ddl_TrainingType.SelectedValue.Trim() == "SpecialEquipment")
                 {
-                    fileName = "特种设备_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("TeChongSheBei").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else if (ddl_TrainingType.SelectedValue.Trim() == "WeldingCertification")
                 {
-                    fileName = "焊接持证_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("HanJieChiZheng").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else if (ddl_TrainingType.SelectedValue.Trim() == "ConstructionManagerCertificate")
                 {
-                    fileName = "施工管理员证_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("ShiGongGuanLiYuanZheng").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 CreateExcel(getExportBookList(), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGDCDSJYWJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim()+"')", true);
             }
         }
     }
@@ -173,9 +173,9 @@ public partial class TTTrainingUserInfoManage : System.Web.UI.Page
         DataSet ds = new DataSet();
         if (ddl_TrainingType.SelectedValue.Trim() == "EmployeeTraining")
         {
-            string strHQL = "select A.ID '序号',B.IDCard '身份证号',B.UserName '姓名',B.Gender '性别',A.ProfessionalSkillLevel '职业技能等级'," +
-                "A.ProfessionSkillNumber '职业技能鉴定证书编号',A.ValidityType '鉴定工种',A.ReleaseTime '发证日期',A.AnnValidTime '安恐有效期',"+
-                "A.AnnCertificateNo '安恐证书编号',A.EnglishRiew '涉外英语考核',A.TrainingInfo '培训相关信息',A.Remark '备注' " +
+            string strHQL = "select A.ID '序号',B.IDCard '身份证号',B.UserName '姓名',B.Gender '性别',A.ProfessionalSkillLevel '职业技能等级'," + 
+                "A.ProfessionSkillNumber '职业技能鉴定证书编号',A.ValidityType '鉴定工种',A.ReleaseTime '发证日期',A.AnnValidTime '安恐有效期',"+ 
+                LanguageHandle.GetWord("AAnnCertificateNoAnKongZhengSh").ToString().Trim() +
                 "from T_TREmployeeTraining A,T_ProjectMember B Where A.UserCode=B.UserCode ";
             if (txt_NumberNo.Text.Trim() != "" && !string.IsNullOrEmpty(txt_NumberNo.Text))
             {
@@ -217,9 +217,9 @@ public partial class TTTrainingUserInfoManage : System.Web.UI.Page
         }
         else if (ddl_TrainingType.SelectedValue.Trim() == "TrainingRecord")
         {
-            string strHQL = "select A.ID '序号',B.IDCard '身份证号',B.UserName '姓名',B.Gender '性别',A.TrainingProject '培训项目'," +
-                "A.TrainingAccord '培训依据',A.TrainingUnit '举办单位',A.TrainingAddress '培训地点',A.TrainingContent '培训内容'," +
-                "A.TrainingTime '培训日期' from T_TRTrainingRecordEmp A,T_ProjectMember B Where A.UserCode=B.UserCode ";
+            string strHQL = "select A.ID '序号',B.IDCard '身份证号',B.UserName '姓名',B.Gender '性别',A.TrainingProject '培训项目'," + 
+                LanguageHandle.GetWord("ATrainingAccordPeiXunYiJuATrai").ToString().Trim() +
+                "A.TrainingTime '培训日期' from T_TRTrainingRecordEmp A,T_ProjectMember B Where A.UserCode=B.UserCode "; 
             if (txt_NumberNo.Text.Trim() != "" && !string.IsNullOrEmpty(txt_NumberNo.Text))
             {
                 strHQL += " and B.IDCard like '%" + txt_NumberNo.Text.Trim() + "%' ";
@@ -259,8 +259,8 @@ public partial class TTTrainingUserInfoManage : System.Web.UI.Page
         }
         else if (ddl_TrainingType.SelectedValue.Trim() == "SpecialOperations")
         {
-            string strHQL = "select A.ID '序号',B.IDCard '身份证号',B.UserName '姓名',B.Gender '性别',B.WorkType '用工类别',A.SpeOpeType '特种作业类别'," +
-                "A.SpeOpeProject '特种作业准操项目',A.SpeOpeStartTime '特种作业取证日期',A.SpeOpeReviewTime '特种作业复审日期',A.SpeOpeNumber '特种作业证书编号',A.Remark '备注' " +
+            string strHQL = "select A.ID '序号',B.IDCard '身份证号',B.UserName '姓名',B.Gender '性别',B.WorkType '用工类别',A.SpeOpeType '特种作业类别'," + 
+                LanguageHandle.GetWord("ASpeOpeProjectTeChongZuoYeZhun").ToString().Trim() +
                 "from T_TRSpecialOperations A,T_ProjectMember B Where A.UserCode=B.UserCode ";
             if (txt_NumberNo.Text.Trim() != "" && !string.IsNullOrEmpty(txt_NumberNo.Text))
             {
@@ -301,8 +301,8 @@ public partial class TTTrainingUserInfoManage : System.Web.UI.Page
         }
         else if (ddl_TrainingType.SelectedValue.Trim() == "SpecialEquipment")
         {
-            string strHQL = "select A.ID '序号',B.IDCard '身份证号',B.UserName '姓名',B.Gender '性别',B.WorkType '用工类别',A.SpeEquType '特种设备类别'," +
-                "A.SpeEquProject '特种设备准操项目',A.SpeEquStartTime '特种设备取证日期',A.SpeEquReviewTime '特种设备复审日期',A.SpeEquNumber '特种设备证书编号',A.Remark '备注' " +
+            string strHQL = "select A.ID '序号',B.IDCard '身份证号',B.UserName '姓名',B.Gender '性别',B.WorkType '用工类别',A.SpeEquType '特种设备类别'," + 
+                LanguageHandle.GetWord("ASpeEquProjectTeChongSheBeiZhu").ToString().Trim() +
                 "from T_TRSpecialEquipment A,T_ProjectMember B Where A.UserCode=B.UserCode ";
             if (txt_NumberNo.Text.Trim() != "" && !string.IsNullOrEmpty(txt_NumberNo.Text))
             {
@@ -343,8 +343,8 @@ public partial class TTTrainingUserInfoManage : System.Web.UI.Page
         }
         else if (ddl_TrainingType.SelectedValue.Trim() == "WeldingCertification")
         {
-            string strHQL = "select A.ID '序号',B.IDCard '身份证号',B.UserName '姓名',B.Gender '性别',A.CertificateNo '特种设备焊接操作人员证件编码'," +
-                "A.WelderSeal '焊工钢印',A.HolderProject '持证项目',A.ValidTime '持证项目有效期',A.Unit '单位',A.Remark '备注' from T_TRHolderWelder A," +
+            string strHQL = "select A.ID '序号',B.IDCard '身份证号',B.UserName '姓名',B.Gender '性别',A.CertificateNo '特种设备焊接操作人员证件编码'," + 
+                "A.WelderSeal '焊工钢印',A.HolderProject '持证项目',A.ValidTime '持证项目有效期',A.Unit '单位',A.Remark '备注' from T_TRHolderWelder A," + 
                 "T_ProjectMember B Where A.UserCode=B.UserCode ";
             if (txt_NumberNo.Text.Trim() != "" && !string.IsNullOrEmpty(txt_NumberNo.Text))
             {
@@ -386,8 +386,8 @@ public partial class TTTrainingUserInfoManage : System.Web.UI.Page
         }
         else if (ddl_TrainingType.SelectedValue.Trim() == "ConstructionManagerCertificate")
         {
-            string strHQL = "select A.ID '序号',B.IDCard '身份证号',B.UserName '姓名',B.Gender '性别',B.BirthDay '出生日期',A.Unit '单位',B.WorkType '用工类别',A.Job '岗位职务'," +
-                "A.CertificateNo '岗位证书编号',A.CertificateOffice '发证机关',A.CertificateTime '岗位证书取证日期',A.CertificateReviewTime '岗位证书复审日期',A.Remark '备注' " +
+            string strHQL = "select A.ID '序号',B.IDCard '身份证号',B.UserName '姓名',B.Gender '性别',B.BirthDay '出生日期',A.Unit '单位',B.WorkType '用工类别',A.Job '岗位职务'," + 
+                LanguageHandle.GetWord("ACertificateNoGangWeiZhengShuB").ToString().Trim() +
                 "from T_TRPostCertificate A,T_ProjectMember B Where A.UserCode=B.UserCode ";
             if (txt_NumberNo.Text.Trim() != "" && !string.IsNullOrEmpty(txt_NumberNo.Text))
             {

@@ -35,7 +35,7 @@ public partial class TTTaskAssignRecord : System.Web.UI.Page
             DataList2.DataBind();
 
             strTask = ShareClass.GetProjectTaskName(strTaskID);
-            LB_Title.Text = "任务：" + strTaskID + "  " + strTask + " 的所有分派记录！";
+            LB_Title.Text = LanguageHandle.GetWord("RenWu").ToString().Trim() + strTaskID + "  " + strTask + LanguageHandle.GetWord("DeSuoYouFenPaJiLu").ToString().Trim();
 
             LoadGoodsApplicationDetail("AfterSale", strTaskID);
 

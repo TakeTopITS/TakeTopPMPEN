@@ -1,4 +1,4 @@
-ï»¿
+
 using System;
 using System.CodeDom;
 using System.CodeDom.Compiler;
@@ -65,9 +65,9 @@ public static class ShareClass
     public static string SystemDBer = "";
     public static DateTime systemStartupTime = DateTime.Now;
 
-    #region ç”¨æˆ·ç™»å½•æœºåˆ¶
+    #region ÓÃ»§µÇÂ¼»úÖÆ
 
-    //è·å–å·¦è¾¹æ å±•å¼€çŠ¶æ€
+    //»ñÈ¡×ó±ßÀ¸Õ¹¿ª×´Ì¬
     public static string GetLeftBarExtendStatus(string strUserCode)
     {
         string strHQL;
@@ -85,7 +85,7 @@ public static class ShareClass
     }
 
 
-    //æ›´æ–°å·¦è¾¹æ å±•å¼€çŠ¶æ€
+    //¸üĞÂ×ó±ßÀ¸Õ¹¿ª×´Ì¬
     public static void UpdateLeftBarExtendStatus(string strUserCode, string strLeftBarExtend)
     {
         string strHQL;
@@ -94,7 +94,7 @@ public static class ShareClass
         ShareClass.RunSqlCommand(strHQL);
     }
 
-    //é‡å®šå‘é¡µé¢åˆ°æŒ‡å®šæ¡†æ¶
+    //ÖØ¶¨ÏòÒ³Ãæµ½Ö¸¶¨¿ò¼Ü
     public static void Redirect(this HttpResponse response, string url, string target, string windowFeatures)
     {
         if ((String.IsNullOrEmpty(target) ||
@@ -127,7 +127,7 @@ public static class ShareClass
     }
 
 
-    //æ‰§è¡Œå®šæ—¶å™¨é¡µ
+    //Ö´ĞĞ¶¨Ê±Æ÷Ò³
     public static void ExecuteTakeTopTimer()
     {
         if (ShareClass.SystemLatestLoginUser == "")
@@ -143,9 +143,9 @@ public static class ShareClass
 
                 //System.Net.HttpWebRequest _HttpWebRequest = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(strUrl);
                 //System.Net.HttpWebResponse _HttpWebResponse = (System.Net.HttpWebResponse)_HttpWebRequest.GetResponse();
-                //System.IO.Stream _Stream = _HttpWebResponse.GetResponseStream();//å¾—åˆ°å›å†™çš„å­—èŠ‚æµ 
+                //System.IO.Stream _Stream = _HttpWebResponse.GetResponseStream();//µÃµ½»ØĞ´µÄ×Ö½ÚÁ÷ 
 
-                // æ‰§è¡Œ AnotherPage.aspxï¼Œå¹¶å°†å…¶è¾“å‡ºåŒ…å«åœ¨å½“å‰é¡µé¢ä¸­
+                // Ö´ĞĞ AnotherPage.aspx£¬²¢½«ÆäÊä³ö°üº¬ÔÚµ±Ç°Ò³ÃæÖĞ
                 string strUrl = "TakeTopTimer.aspx";
                 //HttpContext.Current.Server.Execute(strUrl);
             }
@@ -154,14 +154,14 @@ public static class ShareClass
                 //LogClass.WriteLogFile(err.Message.ToString());
             }
 
-            //æœ€åç™»å½•ç”¨æˆ·
+            //×îºóµÇÂ¼ÓÃ»§
             ShareClass.SystemLatestLoginUser = "";
         }
     }
 
 
 
-    //åˆå§‹åŒ–ç”¨æˆ·æ¨¡ç»„
+    //³õÊ¼»¯ÓÃ»§Ä£×é
     public static void InitialUserModules(string strSampleUserCode, string strCurrentUserCode)
     {
         string strHQL;
@@ -180,12 +180,12 @@ public static class ShareClass
         ShareClass.RunSqlCommand(strHQL);
     }
 
-    //å–å¾—æœåŠ¡å™¨æ“ä½œç³»ç»Ÿç±»å‹:UNIX Or WIN
+    //È¡µÃ·şÎñÆ÷²Ù×÷ÏµÍ³ÀàĞÍ:UNIX Or WIN
     public static string GetSystemType()
     {
-        //è·å–ç³»ç»Ÿä¿¡æ¯
+        //»ñÈ¡ÏµÍ³ĞÅÏ¢
         System.OperatingSystem osInfo = System.Environment.OSVersion;
-        //è·å–æ“ä½œç³»ç»ŸID
+        //»ñÈ¡²Ù×÷ÏµÍ³ID
         System.PlatformID platformID = osInfo.Platform;
 
         return platformID.ToString();
@@ -201,7 +201,7 @@ public static class ShareClass
         return System.Web.HttpUtility.UrlDecode(strURL);
     }
 
-    //å–å¾—å½“å‰æ¨¡ç»„çš„å½“å‰è¯­è¨€åç§°
+    //È¡µÃµ±Ç°Ä£×éµÄµ±Ç°ÓïÑÔÃû³Æ
     public static string GetPageTitle(string strPageName)
     {
         string strHQL;
@@ -242,7 +242,7 @@ public static class ShareClass
         }
     }
 
-    //è®¾ç½®ç¼“å­˜æ›´æ”¹æ ‡å¿—
+    //ÉèÖÃ»º´æ¸ü¸Ä±êÖ¾
     public static void SetPageCacheMark(string strMark)
     {
         string strHQL;
@@ -250,10 +250,10 @@ public static class ShareClass
         ShareClass.RunSqlCommand(strHQL);
     }
 
-    //ç»™ç›¸å…³é¡µé¢æ–‡ä»¶æ·»åŠ ç©ºè¡Œä»¥åˆ·æ–°é¡µé¢ç¼“å­˜
+    //¸øÏà¹ØÒ³ÃæÎÄ¼şÌí¼Ó¿ÕĞĞÒÔË¢ĞÂÒ³Ãæ»º´æ
     public static void AddSpaceLineToFileForRefreshCache()
     {
-        //åœ¨å¹³å°å·¦è¾¹æ å¢åŠ ä¸€è¡Œæ³¨é‡Š
+        //ÔÚÆ½Ì¨×ó±ßÀ¸Ôö¼ÓÒ»ĞĞ×¢ÊÍ
         ShareClass.AddSpaceLineToFile("TakeTopLRTop.aspx", "<%--***--%>");
         ShareClass.AddSpaceLineToFile("TakeTopLRExLeft.aspx", "<%--***--%>");
         ShareClass.AddSpaceLineToFile("TakeTopCSLRLeft.aspx", "<%--***--%>");
@@ -285,25 +285,25 @@ public static class ShareClass
         ShareClass.AddSpaceLineToFile("TTPersonalSpaceWorkflowForOuter.aspx", "<%--***--%>");
     }
 
-    //ç»™ä¸»ç•Œé¢å·¦è¾¹æ ç›¸å…³é¡µé¢æ–‡ä»¶æ·»åŠ ç©ºè¡Œä»¥åˆ·æ–°é¡µé¢ç¼“å­˜
+    //¸øÖ÷½çÃæ×ó±ßÀ¸Ïà¹ØÒ³ÃæÎÄ¼şÌí¼Ó¿ÕĞĞÒÔË¢ĞÂÒ³Ãæ»º´æ
     public static void AddSpaceLineToLeftColumnForRefreshCache()
     {
-        ////åœ¨å¹³å°å·¦è¾¹æ å¢åŠ ä¸€è¡Œæ³¨é‡Š
+        ////ÔÚÆ½Ì¨×ó±ßÀ¸Ôö¼ÓÒ»ĞĞ×¢ÊÍ
         //ShareClass.AddSpaceLineToFile("TakeTopLRExLeft.aspx", "<%--***--%>");
         //ShareClass.AddSpaceLineToFile("TakeTopCSLRLeft.aspx", "<%--***--%>");
         //ShareClass.AddSpaceLineToFile("TakeTopLRTop.aspx", "<%--***--%>");
     }
 
-    //ç»™ä¸»ç•Œé¢ä¸ªäººç©ºé—´ç›¸å…³é¡µé¢æ–‡ä»¶æ·»åŠ ç©ºè¡Œä»¥åˆ·æ–°é¡µé¢ç¼“å­˜
+    //¸øÖ÷½çÃæ¸öÈË¿Õ¼äÏà¹ØÒ³ÃæÎÄ¼şÌí¼Ó¿ÕĞĞÒÔË¢ĞÂÒ³Ãæ»º´æ
     public static void AddSpaceLineToPersonalSpaceForRefreshCache()
     {
-        //é¡µé¢æ–‡ä»¶åŠ æ³¨é‡Šå­—ç¬¦ï¼Œä»¥åˆ·æ–°ç¼“å­˜
+        //Ò³ÃæÎÄ¼ş¼Ó×¢ÊÍ×Ö·û£¬ÒÔË¢ĞÂ»º´æ
         ShareClass.AddSpaceLineToFile("TakeTopPersonalSpace.aspx", "<%--***--%>");
         ShareClass.AddSpaceLineToFile("TakeTopPersonalSpaceForOuterUser.aspx", "<%--***--%>");
         ShareClass.AddSpaceLineToFile("TakeTopPersonalSpaceSAAS.aspx", "<%--***--%>");
     }
 
-    //åˆå§‹åŒ–å®ä½“ç±»ï¼Œä»¥åŠ å¿«åç»­çš„æ“ä½œé€Ÿåº¦
+    //³õÊ¼»¯ÊµÌåÀà£¬ÒÔ¼Ó¿ìºóĞøµÄ²Ù×÷ËÙ¶È
     public static void InitialNhibernateEntryClass()
     {
         try
@@ -318,10 +318,10 @@ public static class ShareClass
         }
     }
 
-    //æ ¹æ®ç”¨æˆ·ç™»å½•IPå’Œç”¨æˆ·ååˆ¤æ–­æ˜¯å¦é˜»æ­¢æ­¤ç”¨æˆ·ç™»å½•ç³»ç»Ÿ
+    //¸ù¾İÓÃ»§µÇÂ¼IPºÍÓÃ»§ÃûÅĞ¶ÏÊÇ·ñ×èÖ¹´ËÓÃ»§µÇÂ¼ÏµÍ³
     public static bool CheckUserLoginManage(string strUserCode, string strUserName)
     {
-        //æ ¹æ®ç”¨æˆ·ç™»å½•IPåˆ¤æ–­æ˜¯å¦é˜»æ­¢ç”¨æˆ·ç™»å½•ç³»ç»Ÿ
+        //¸ù¾İÓÃ»§µÇÂ¼IPÅĞ¶ÏÊÇ·ñ×èÖ¹ÓÃ»§µÇÂ¼ÏµÍ³
         string strHQL;
         string strLoginID, strIsAllMember, strIsForbidLogin, strLoginUserCode;
         string strMsg, strIP, strUserHostAddress;
@@ -407,7 +407,7 @@ public static class ShareClass
         }
     }
 
-    //åˆå§‹åŒ–é¡µé¢é“¾æ¥æ¨¡ç»„
+    //³õÊ¼»¯Ò³ÃæÁ´½ÓÄ£×é
     public static void CopyAllModuleForHomeLanguage()
     {
         string strHQL, strLangHQL;
@@ -442,7 +442,7 @@ public static class ShareClass
         }
     }
 
-    //åˆ¤æ–­ç”¨æˆ·æ˜¯å¦æœ‰æ­¤æ¨¡ç»„
+    //ÅĞ¶ÏÓÃ»§ÊÇ·ñÓĞ´ËÄ£×é
     public static bool IsExistModuleByUserCode(string strUserCode, string strModuleName, string strModuleType, string strUserType)
     {
         string strHQL = "Select * From T_ProModule Where UserCode = " + "'" + strUserCode + "'" + " and ModuleName = " + "'" + strModuleName + "'" + " and ModuleType = " + "'" + strModuleType + "'";
@@ -459,7 +459,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æ¨¡ç»„HOMEåç§°
+    //È¡µÃÄ£×éHOMEÃû³Æ
     public static string GetHomeModuleName(string strModuleName, string strLangCode)
     {
         string strHQL;
@@ -477,7 +477,7 @@ public static class ShareClass
         }
     }
 
-    //æ ¹æ®ç”¨æˆ·ä»£ç å’Œç™»å½•IPåˆ¤æ–­æ˜¯å¦é˜»æ­¢ç”¨æˆ·ç™»å½•ç³»ç»Ÿ
+    //¸ù¾İÓÃ»§´úÂëºÍµÇÂ¼IPÅĞ¶ÏÊÇ·ñ×èÖ¹ÓÃ»§µÇÂ¼ÏµÍ³
     public static DataSet GetUserLoginManageDataSet(string strUserCode)
     {
         string strHQL;
@@ -494,7 +494,7 @@ public static class ShareClass
         return ds;
     }
 
-    //å–ç”¨æˆ·ç™»å½•å®šåˆ¶æ¶ˆæ¯
+    //È¡ÓÃ»§µÇÂ¼¶¨ÖÆÏûÏ¢
     public static string GetUserLoginMessage(string strUserCode)
     {
         string strHQL;
@@ -522,7 +522,7 @@ public static class ShareClass
         }
     }
 
-    //æ’å…¥ç”¨æˆ·æ—¥å¿—
+    //²åÈëÓÃ»§ÈÕÖ¾
     public static void InsertUserLogonLog(string strUserCode, string strUserName, string strDeviceType)
     {
         string strUserHostAddress = HttpContext.Current.Request.UserHostAddress.Trim();
@@ -539,7 +539,7 @@ public static class ShareClass
         }
         catch
         {
-            //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('è­¦å‘Šï¼Œç”¨æˆ·ç™»å½•æ—¥å¿—æˆ–è¯¦ç»†æ“ä½œæ—¥å¿—è®°å½•å·²è¶…è¿‡21äº¿ï¼Œè¯·åŠæ—¶æ¸…ç©ºç™»å½•æ—¥å¿—è¡¨ï¼');</script>");
+            //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('¾¯¸æ£¬ÓÃ»§µÇÂ¼ÈÕÖ¾»òÏêÏ¸²Ù×÷ÈÕÖ¾¼ÇÂ¼ÒÑ³¬¹ı21ÒÚ£¬Çë¼°Ê±Çå¿ÕµÇÂ¼ÈÕÖ¾±í£¡');</script>");
         }
     }
 
@@ -563,7 +563,7 @@ public static class ShareClass
         }
         catch
         {
-            //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('è­¦å‘Šï¼Œç”¨æˆ·ç™»å½•æ—¥å¿—æˆ–è¯¦ç»†æ“ä½œæ—¥å¿—è®°å½•å·²è¶…è¿‡21äº¿ï¼Œè¯·åŠæ—¶æ¸…ç©ºç™»å½•æ—¥å¿—è¡¨ï¼');</script>");
+            //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('¾¯¸æ£¬ÓÃ»§µÇÂ¼ÈÕÖ¾»òÏêÏ¸²Ù×÷ÈÕÖ¾¼ÇÂ¼ÒÑ³¬¹ı21ÒÚ£¬Çë¼°Ê±Çå¿ÕµÇÂ¼ÈÕÖ¾±í£¡');</script>");
         }
     }
 
@@ -640,64 +640,64 @@ public static class ShareClass
         string strDirectory, strDocSavePath, strYearMonth;
         int intResult;
 
-        //åˆ›å»ºç§äººæ–‡ä»¶ç›®å½•
+        //´´½¨Ë½ÈËÎÄ¼şÄ¿Â¼
         strDocSavePath = HttpContext.Current.Server.MapPath("Doc");
         strYearMonth = DateTime.Now.ToString("yyyyMM");
 
         strDirectory = strDocSavePath + "\\" + strYearMonth + "\\" + strUserCode + "\\Doc";
         intResult = CreateDirectory(strDirectory);
         //if (intResult == 2)
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create Doc Director ï¼')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create Doc Director £¡')", true);
 
         strDirectory = strDocSavePath + "\\" + strYearMonth + "\\" + strUserCode + "\\Images";
         intResult = CreateDirectory(strDirectory);
         //if (intResult == 2)
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create Images Director ï¼')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create Images Director £¡')", true);
 
         strDirectory = strDocSavePath + "\\" + strYearMonth + "\\" + strUserCode + "\\MailAttachments";
         intResult = CreateDirectory(strDirectory);
         //if (intResult == 2)
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create  MailAttachments Director ï¼')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create  MailAttachments Director £¡')", true);
 
         strDirectory = strDocSavePath + "\\XML";
         intResult = CreateDirectory(strDirectory);
         //if (intResult == 2)
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create  XML Director ï¼')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create  XML Director £¡')", true);
 
         strDirectory = strDocSavePath + "\\Log";
         intResult = CreateDirectory(strDirectory);
         //if (intResult == 2)
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create  XML Director ï¼')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create  XML Director £¡')", true);
 
         strDirectory = strDocSavePath + "\\WorkFlowTemplate";
         intResult = CreateDirectory(strDirectory);
         //if (intResult == 2)
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create  WorkFlowTemplate Director ï¼')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create  WorkFlowTemplate Director £¡')", true);
 
         strDirectory = strDocSavePath + "\\UserPhoto";
         intResult = CreateDirectory(strDirectory);
         //if (intResult == 2)
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create  UserPhoto Director ï¼')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create  UserPhoto Director £¡')", true);
 
         strDirectory = strDocSavePath + "\\Report";
         intResult = CreateDirectory(strDirectory);
         //if (intResult == 2)
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create  Report Director ï¼')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create  Report Director £¡')", true);
 
         strDirectory = strDocSavePath + "\\RTXAccount";
         intResult = CreateDirectory(strDirectory);
         //if (intResult == 2)
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create RTXAccount Director ï¼')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create RTXAccount Director £¡')", true);
 
         strDirectory = strDocSavePath + "\\BackupDB";
         intResult = CreateDirectory(strDirectory);
         //if (intResult == 2)
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create RTXAccount Director ï¼')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create RTXAccount Director £¡')", true);
 
         //strDirectory = strDocSavePath + "\\" + strYearMonth + "\\BackupDB";
         //intResult = CreateDirectory(strDirectory);
         ////if (intResult == 2)
-        ////    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create  BackupDB Director ï¼')", true);
+        ////    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Failed to create  BackupDB Director £¡')", true);
     }
 
     public static int CreateDirectory(string strDirectory)
@@ -725,17 +725,17 @@ public static class ShareClass
     }
 
     //   /****************************************
-    // * å‡½æ•°åç§°ï¼šGetDirectoryLength(string dirPath)
-    // * åŠŸèƒ½è¯´æ˜ï¼šè·å–æ–‡ä»¶å¤¹å¤§å°
-    // * å‚    æ•°ï¼šdirPath:æ–‡ä»¶å¤¹è¯¦ç»†è·¯å¾„
-    // * è°ƒç”¨ç¤ºåˆ—ï¼š
+    // * º¯ÊıÃû³Æ£ºGetDirectoryLength(string dirPath)
+    // * ¹¦ÄÜËµÃ÷£º»ñÈ¡ÎÄ¼ş¼Ğ´óĞ¡
+    // * ²Î    Êı£ºdirPath:ÎÄ¼ş¼ĞÏêÏ¸Â·¾¶
+    // * µ÷ÓÃÊ¾ÁĞ£º
     // *           string Path = Server.MapPath("templates");
     // *           Response.Write(EC.FileObj.GetDirectoryLength(Path));
     //*****************************************/
     /// <summary>
-    /// è·å–æ–‡ä»¶å¤¹å¤§å°
+    /// »ñÈ¡ÎÄ¼ş¼Ğ´óĞ¡
     /// </summary>
-    /// <param name="dirPath">æ–‡ä»¶å¤¹è·¯å¾„</param>
+    /// <param name="dirPath">ÎÄ¼ş¼ĞÂ·¾¶</param>
     /// <returns></returns>
     public static long GetDirectoryLength(string dirPath)
     {
@@ -758,7 +758,7 @@ public static class ShareClass
         return len;
     }
 
-    //è·å–æŸä¸ªæ–‡ä»¶å¤¹çš„å¤§å°ï¼ˆæ–¹æ³•ä¸€ï¼‰
+    //»ñÈ¡Ä³¸öÎÄ¼ş¼ĞµÄ´óĞ¡£¨·½·¨Ò»£©
     public static long GetFoldSize(string dirPath)
     {
         FileInfo info = new FileInfo(dirPath);
@@ -766,7 +766,7 @@ public static class ShareClass
         return info.Length;
     }
 
-    //ç”Ÿæˆæ•°æ®åº“åªè¯»ç”¨æˆ·IDï¼Œä¸€èˆ¬äºæŠ¥è¡¨è®¾è®¡è€…
+    //Éú³ÉÊı¾İ¿âÖ»¶ÁÓÃ»§ID£¬Ò»°ãÓÚ±¨±íÉè¼ÆÕß
     public static string getDBReadOnlyUserID()
     {
         string[] strConnectStringList;
@@ -775,7 +775,7 @@ public static class ShareClass
         return (strConnectStringList[1].Replace(".aspx", "") + "DBReadOnlyUser").ToLower();
     }
 
-    //å¯†ç ç”Ÿæˆå™¨
+    //ÃÜÂëÉú³ÉÆ÷
     public static string genernalPassword()
     {
         string chars = "0123456789ABCDEFGHIJKLMNOPQSTUVWXYZabcdefghijklmnpqrstuvwxyz@*";
@@ -787,9 +787,9 @@ public static class ShareClass
             str = "";
             for (int i = 0; i < 8; i++)
             {
-                str += chars[randrom.Next(chars.Length)];//randrom.Next(int i)è¿”å›ä¸€ä¸ªå°äºæ‰€æŒ‡å®šæœ€å¤§å€¼çš„éè´Ÿéšæœºæ•°
+                str += chars[randrom.Next(chars.Length)];//randrom.Next(int i)·µ»ØÒ»¸öĞ¡ÓÚËùÖ¸¶¨×î´óÖµµÄ·Ç¸ºËæ»úÊı
             }
-            //ä¸ç¬¦åˆæ­£åˆ™ï¼Œé‡æ–°ç”Ÿæˆ
+            //²»·ûºÏÕıÔò£¬ÖØĞÂÉú³É
             if (!Regex.IsMatch(str, @"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$"))
             {
                 continue;
@@ -811,11 +811,11 @@ public static class ShareClass
         return BitConverter.ToInt32(rndBytes, 0);
     }
 
-    #endregion ç”¨æˆ·ç™»å½•æœºåˆ¶
+    #endregion ÓÃ»§µÇÂ¼»úÖÆ
 
-    #region å‘˜å·¥æ¡£æ¡ˆæ“ä½œ
+    #region Ô±¹¤µµ°¸²Ù×÷
 
-    //åˆ¤æ–­ç”¨æˆ·æ˜¯å¦è¿˜åœ¨å­˜åœ¨äººäº‹æ¡£æ¡ˆ
+    //ÅĞ¶ÏÓÃ»§ÊÇ·ñ»¹ÔÚ´æÔÚÈËÊÂµµ°¸
     public static bool CheckUserIsExist(string strUserCode)
     {
         string strHQL;
@@ -844,7 +844,7 @@ public static class ShareClass
 
         strHQL = "Select DepartCode,DepartName From T_Department Where ParentCode = " + "'" + strParentCode + "'";
         strHQL += " and ((Authority = 'All')";
-        strHQL += " or ((Authority = 'éƒ¨åˆ†') ";
+        strHQL += " or ((Authority = 'Part') ";
         strHQL += " and (DepartCode in (select DepartCode from T_DepartmentUser where UserCode =" + "'" + strUserCode + "'" + "))))";
         strHQL += " Order By DepartCode ASC";
 
@@ -952,7 +952,7 @@ public static class ShareClass
         return deTotalPoint;
     }
 
-    //å–å¾—æ­¤å‘˜å·¥å½“å¹´çš„æ­¤ç±»å‹çš„è¯·å‡å¤©æ•°
+    //È¡µÃ´ËÔ±¹¤µ±ÄêµÄ´ËÀàĞÍµÄÇë¼ÙÌìÊı
     public static string GetTotalLeaveDayNumberInCurrentYear(string strLeaveType, string strApplicantCode, string strLeaveTime)
     {
         string strHQL;
@@ -972,7 +972,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æ­¤å‘˜å·¥å½“æœˆçš„æ­¤ç±»å‹çš„è¯·å‡å¤©æ•°
+    //È¡µÃ´ËÔ±¹¤µ±ÔÂµÄ´ËÀàĞÍµÄÇë¼ÙÌìÊı
     public static string GetTotalLeaveDayNumberInCurrentMonth(string strLeaveType, string strApplicantCode, string strLeaveTime)
     {
         string strHQL;
@@ -992,7 +992,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æ­¤å‘˜å·¥å½“å¹´çš„æ‰€æœ‰ç±»å‹çš„è¯·å‡å¤©æ•°
+    //È¡µÃ´ËÔ±¹¤µ±ÄêµÄËùÓĞÀàĞÍµÄÇë¼ÙÌìÊı
     public static string GetTotalAllLeaveDayNumberInCurrentYear(string strLeaveType, string strApplicantCode, string strLeaveTime)
     {
         string strHQL;
@@ -1011,7 +1011,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æ­¤å‘˜å·¥å½“æœˆçš„æ‰€æœ‰ç±»å‹çš„è¯·å‡å¤©æ•°
+    //È¡µÃ´ËÔ±¹¤µ±ÔÂµÄËùÓĞÀàĞÍµÄÇë¼ÙÌìÊı
     public static string GetTotalAllLeaveDayNumberInCurrentMonth(string strLeaveType, string strApplicantCode, string strLeaveTime)
     {
         string strHQL;
@@ -1030,7 +1030,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æ­¤å‘˜å·¥å½“å¹´çš„æ­¤ç±»å‹çš„è¯·å‡å¤©æ•°
+    //È¡µÃ´ËÔ±¹¤µ±ÄêµÄ´ËÀàĞÍµÄÇë¼ÙÌìÊı
     public static string GetTotalOvertimeDayNumberInCurrentYear(string strOvertimeType, string strApplicantCode, string strOvertimeTime)
     {
         string strHQL;
@@ -1050,7 +1050,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æ­¤å‘˜å·¥å½“æœˆçš„æ­¤ç±»å‹çš„è¯·å‡å¤©æ•°
+    //È¡µÃ´ËÔ±¹¤µ±ÔÂµÄ´ËÀàĞÍµÄÇë¼ÙÌìÊı
     public static string GetTotalOvertimeDayNumberInCurrentMonth(string strOvertimeType, string strApplicantCode, string strOvertimeTime)
     {
         string strHQL;
@@ -1070,7 +1070,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æ­¤å‘˜å·¥å½“å¹´çš„æ‰€æœ‰ç±»å‹çš„è¯·å‡å¤©æ•°
+    //È¡µÃ´ËÔ±¹¤µ±ÄêµÄËùÓĞÀàĞÍµÄÇë¼ÙÌìÊı
     public static string GetTotalAllOvertimeDayNumberInCurrentYear(string strOvertimeType, string strApplicantCode, string strOvertimeTime)
     {
         string strHQL;
@@ -1089,7 +1089,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æ­¤å‘˜å·¥å½“æœˆçš„æ‰€æœ‰ç±»å‹çš„è¯·å‡å¤©æ•°
+    //È¡µÃ´ËÔ±¹¤µ±ÔÂµÄËùÓĞÀàĞÍµÄÇë¼ÙÌìÊı
     public static string GetTotalAllOvertimeDayNumberInCurrentMonth(string strOvertimeType, string strApplicantCode, string strOvertimeTime)
     {
         string strHQL;
@@ -1108,7 +1108,7 @@ public static class ShareClass
         }
     }
 
-    //è®¡ç®—KPIçš„ç³»ç»Ÿè¯„åˆ†
+    //¼ÆËãKPIµÄÏµÍ³ÆÀ·Ö
     public static decimal CalculateSystemPoint(string strKPICheckID)
     {
         string strHQL1, strHQL2;
@@ -1210,11 +1210,11 @@ public static class ShareClass
         return decimal.Parse(strTotalSqlPoint);
     }
 
-    #endregion å‘˜å·¥æ¡£æ¡ˆæ“ä½œ
+    #endregion Ô±¹¤µµ°¸²Ù×÷
 
-    #region è´¢åŠ¡æˆ–ç‰©æ–™æ“ä½œå‡½æ•°
+    #region ²ÆÎñ»òÎïÁÏ²Ù×÷º¯Êı
 
-    //å–å¾—ç‰©æ–™ç±»å‹
+    //È¡µÃÎïÁÏÀàĞÍ
     public static string GetItemType(string strItemCode)
     {
         string strHQL;
@@ -1248,7 +1248,7 @@ public static class ShareClass
         return flag;
     }
 
-    //ç‰©æ–™å…¥åº“æ“ä½œ
+    //ÎïÁÏÈë¿â²Ù×÷
     public static void addOrUpdateGoods(string strCountMethod, string strGoodsID, string strCIOID, string strGoodsCode, string strGoodsName, string strSN, decimal deNumber, string strUnitName,
        string strOwnerCode, string strType, string strSpec, string strModelNumber, string strPosition, string strWHPosition, decimal dePrice, string strIsTaxPrice, string strCurrencyType, DateTime dtBuyTime, int intWarrantyPeriod,
        string strManufacturer, string strMemo, string strCheckInDetailID, string strPhotoURL, decimal deOldCheckInNumber, decimal deOldCheckInPrice,
@@ -1278,7 +1278,7 @@ public static class ShareClass
             }
             catch
             {
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBGRDMCCCWCRJC + "')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBGRDMCCCWCRJC").ToString().Trim() + "')", true);
                 return;
             }
             goods.Type = strType;
@@ -1310,7 +1310,7 @@ public static class ShareClass
 
                 strGoodsID = ShareClass.GetMyCreatedMaxGoodsID().ToString();
 
-                //è®°å½•å…¥åº“ç‰©æ–™å­˜å…¥çš„IDå·
+                //¼ÇÂ¼Èë¿âÎïÁÏ´æÈëµÄIDºÅ
                 try
                 {
                     strHQL = "Update T_GoodsCheckInOrderDetail Set ToGoodsID = " + strGoodsID;
@@ -1354,7 +1354,7 @@ public static class ShareClass
                     }
                     catch
                     {
-                        //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBGRDMCCCWCRJC + "')", true);
+                        //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBGRDMCCCWCRJC").ToString().Trim() + "')", true);
                         return;
                     }
                     goods.Type = strType;
@@ -1397,7 +1397,7 @@ public static class ShareClass
                     ShareClass.CountGoodsStockByMWAM(strGoodsID, deNumber, dePrice, deOldCheckInNumber, deOldCheckInPrice);
                 }
 
-                //è®°å½•å…¥åº“ç‰©æ–™å­˜å…¥çš„IDå·
+                //¼ÇÂ¼Èë¿âÎïÁÏ´æÈëµÄIDºÅ
                 try
                 {
                     strHQL = "Update T_GoodsCheckInOrderDetail Set ToGoodsID = " + strGoodsID;
@@ -1416,7 +1416,7 @@ public static class ShareClass
     }
 
 
-    //åˆ¤æ–­æ˜¯å¦å­˜åœ¨ç›¸åŒçš„ç‰©æ–™åº“å­˜
+    //ÅĞ¶ÏÊÇ·ñ´æÔÚÏàÍ¬µÄÎïÁÏ¿â´æ
     public static string CheckSameGoodsExistInStock(string strGoodsCode, string strType, string strModelNumber, string strSpecification, string strManufacture, string strWareHouse, string strWHPosition)
     {
         string strHQL;
@@ -1436,7 +1436,7 @@ public static class ShareClass
     }
 
 
-    //ä¾ç›¸å…³ç±»å‹ï¼Œæ›´æ”¹ç›¸å…³ä¸šåŠ¡è¡¨å•çš„æ•°é‡
+    //ÒÀÏà¹ØÀàĞÍ£¬¸ü¸ÄÏà¹ØÒµÎñ±íµ¥µÄÊıÁ¿
     public static void UpdateGoodsRelatedBusinessNubmer(string strRelatedType, string strRelatedID, string strGoodsCode, string strSourceType, string strSourceID, DataGrid DataGrid1)
     {
         string strHQL;
@@ -1529,13 +1529,13 @@ public static class ShareClass
             ShareClass.RunSqlCommand(strHQL);
         }
 
-        //æ›´æ”¹é¡¹ç›®å…³è”ç‰©èµ„ä¸‹å•é‡
+        //¸ü¸ÄÏîÄ¿¹ØÁªÎï×ÊÏÂµ¥Á¿
         if (strSourceType == "GoodsPJRecord")
         {
             UpdatProjectRelatedItemNumber(strSourceType, strSourceID);
         }
 
-        //ä¾å•æ®ä¸»ä½“å…³è”ç±»å‹æ›´æ–°é¡¹ç›®ç‰©èµ„é¢„ç®—çš„ç‰©æ–™ä»£ç çš„é¢„ç®—ä½¿ç”¨é‡
+        //ÒÀµ¥¾İÖ÷Ìå¹ØÁªÀàĞÍ¸üĞÂÏîÄ¿Îï×ÊÔ¤ËãµÄÎïÁÏ´úÂëµÄÔ¤ËãÊ¹ÓÃÁ¿
         if (strRelatedType == "Project")
         {
             UpdateProjectRelatedItemNumberByBudgetBusinessType("CHECKIN", strRelatedType, strRelatedID, strGoodsCode);
@@ -1544,7 +1544,7 @@ public static class ShareClass
     }
 
 
-    //ä¾å•æ®ä¸»ä½“å…³è”ç±»å‹æ›´æ–°é¡¹ç›®ç‰©èµ„é¢„ç®—çš„ç‰©æ–™ä»£ç çš„é¢„ç®—ä½¿ç”¨é‡
+    //ÒÀµ¥¾İÖ÷Ìå¹ØÁªÀàĞÍ¸üĞÂÏîÄ¿Îï×ÊÔ¤ËãµÄÎïÁÏ´úÂëµÄÔ¤ËãÊ¹ÓÃÁ¿
     public static void UpdateProjectRelatedItemNumberByBudgetBusinessType(string strBusinessType, string strRelatedType, string strRelatedID, string strGoodsCode)
     {
         string strHQL;
@@ -1665,7 +1665,7 @@ public static class ShareClass
         }
     }
 
-    //åˆ¤æ–­éœ€æ±‚é‡æ˜¯å¦å¤§äºé¢„ç®—é‡ï¼Œé€‚ç”¨äºé¡¹ç›®ç‰©èµ„é¢„ç®—
+    //ÅĞ¶ÏĞèÇóÁ¿ÊÇ·ñ´óÓÚÔ¤ËãÁ¿£¬ÊÊÓÃÓÚÏîÄ¿Îï×ÊÔ¤Ëã
     public static bool checkRequireNumberIsMoreHaveNumberForProjectRelatedItemNumber(string strProjectRelatedItemID, string strAleadyNumberColumnName, decimal deNumber)
     {
         string strHQL;
@@ -1707,7 +1707,7 @@ public static class ShareClass
         DataGrid1.DataBind();
     }
 
-    //åŠ æƒå¹³å‡æ³•è®¡ç®—åº“å­˜
+    //¼ÓÈ¨Æ½¾ù·¨¼ÆËã¿â´æ
     public static void CountGoodsStockByMWAM(string strGoodsID, decimal deCheckInNumber, decimal deCheckInPrice, decimal deOldCheckInNumber, decimal deOldCheckInPrice)
     {
         string strHQL;
@@ -1738,7 +1738,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—ç‰©æ–™åº“å­˜å‡ºå…¥ç®—æ³•
+    //È¡µÃÎïÁÏ¿â´æ³öÈëËã·¨
     public static string GetGoodsStockCountMethod(string strWHName)
     {
         string strHQL;
@@ -1781,7 +1781,7 @@ public static class ShareClass
     }
 
     /// <summary>
-    /// Liujp 2013-07-17 æ›´æ–°ç‰©æ–™ç™»è®°å…¥åº“è¡¨æ—¶ï¼Œæ›´æ–°ç‰©æ–™è¡¨ä¸­ä»“åº“å­—æ®µ
+    /// Liujp 2013-07-17 ¸üĞÂÎïÁÏµÇ¼ÇÈë¿â±íÊ±£¬¸üĞÂÎïÁÏ±íÖĞ²Ö¿â×Ö¶Î
     /// </summary>
     /// <param name="goodsCheckInOrderId"></param>
     /// <param name="strPosition"></param>
@@ -1794,7 +1794,7 @@ public static class ShareClass
         ShareClass.RunSqlCommand(strHQL);
     }
 
-    //è·å–æœ¬å¸åç§°
+    //»ñÈ¡±¾±ÒÃû³Æ
     public static string GetHomeCurrencyType()
     {
         string strHQL;
@@ -1808,12 +1808,12 @@ public static class ShareClass
         }
         else
         {
-            return Resources.lang.RenMinBi;
+            return LanguageHandle.GetWord("RenMinBi").ToString().Trim();
         }
     }
 
     /// <summary>
-    /// åˆ¤æ–­æ˜¯å¦å·²è®¾ç½®æ ‡å‡†é‡‘é¢
+    /// ÅĞ¶ÏÊÇ·ñÒÑÉèÖÃ±ê×¼½ğ¶î
     /// </summary>
     /// <param name="strID"></param>
     /// <param name="strDepartCode"></param>
@@ -1846,7 +1846,7 @@ public static class ShareClass
     }
 
     /// <summary>
-    /// å–å¾—é¢„ç®—ä½™é¢
+    /// È¡µÃÔ¤ËãÓà¶î
     /// </summary>
     /// <param name="strID"></param>
     /// <param name="strDepartCode"></param>
@@ -1890,7 +1890,7 @@ public static class ShareClass
         return deBalance;
     }
 
-    //å–å¾—éƒ¨é—¨é¢„ç®—è®°å½•ID
+    //È¡µÃ²¿ÃÅÔ¤Ëã¼ÇÂ¼ID
     public static int GetBMBaseDataID(string strDepartCode, string strAccountCode, string strAccountName, int strYearNum, int strMonthNum, string strType)
     {
         string strHQL = "From BDBaseData as bDBaseData where bDBaseData.DepartCode = '" + strDepartCode + "' and bDBaseData.AccountCode = '" + strAccountCode + "' and bDBaseData.AccountName='" + strAccountName + "' and " +
@@ -1909,7 +1909,7 @@ public static class ShareClass
         }
     }
 
-    //æŠŠæŠ¥é”€è´¹ç”¨åˆ—å…¥é¢„ç®—è´¹ç”¨
+    //°Ñ±¨Ïú·ÑÓÃÁĞÈëÔ¤Ëã·ÑÓÃ
     public static void AddClaimExpenseToBudget(string strAccountCode, string strAccountName, int intBDBaseDataID, string strUserCode, decimal deAmount, int intYear, int intMonth)
     {
         string strDepartCode, strDepartName;
@@ -1947,7 +1947,7 @@ public static class ShareClass
         }
     }
 
-    //æŒ‰ç±»å‹å–ä»£ç è§„åˆ™çš„çŠ¶æ€
+    //°´ÀàĞÍÈ¡´úÂë¹æÔòµÄ×´Ì¬
     public static string GetCodeRuleStatusByType(string strCodeType)
     {
         string strHQL;
@@ -1964,7 +1964,7 @@ public static class ShareClass
         }
     }
 
-    //æŒ‰ä»£ç è§„åˆ™å–å¾—ç›¸å…³ä»£ç 
+    //°´´úÂë¹æÔòÈ¡µÃÏà¹Ø´úÂë
     public static string GetCodeByRule(string strCodeType, string strObjectType, string strID)
     {
         string strHQL;
@@ -2058,19 +2058,19 @@ public static class ShareClass
         }
     }
 
-    //ç”Ÿæˆä»“åº“æ ‘ï¼ˆæ ¹æ®æƒé™å’Œéƒ¨é—¨èµ„äº§ç®¡ç†å‘˜ï¼‰
+    //Éú³É²Ö¿âÊ÷£¨¸ù¾İÈ¨ÏŞºÍ²¿ÃÅ×Ê²ú¹ÜÀíÔ±£©
     public static void InitialWarehouseTreeByAuthorityAsset(TreeView TreeView, String strUserCode, string strDepartString)
     {
         string strHQL, strWareHouse;
         IList lst;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>ä»“åº“åˆ—è¡¨</B>";
+        node1.Text = "<B>²Ö¿âÁĞ±í</B>";  
         node1.Target = "1";
         node1.Expanded = true;
         TreeView.Nodes.Add(node1);
@@ -2137,7 +2137,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æƒé™å†…ä»“åº“åˆ—è¡¨
+    //È¡µÃÈ¨ÏŞÄÚ²Ö¿âÁĞ±í
     public static void LoadWareHouseListByAuthorityForDropDownList(string strUserCode, DropDownList DL_WareHouse)
     {
         string strHQL;
@@ -2158,7 +2158,7 @@ public static class ShareClass
         DL_WareHouse.Items.Insert(0, new ListItem("--Select--", ""));
     }
 
-    //å–å¾—ä»“åº“ä»“ä½åˆ—è¡¨
+    //È¡µÃ²Ö¿â²ÖÎ»ÁĞ±í
     public static void LoadWareHousePositions(string strWHName, DropDownList DL_WHPosition)
     {
         string strHQL;
@@ -2234,7 +2234,7 @@ public static class ShareClass
 
     public static void SetInterval(DropDownList DDL, string strParentID, string interval)
     {
-        interval += "â”œ";
+        interval += "©À";
 
         DataTable list = GetAccountList(strParentID);
         if (list.Rows.Count > 0 && list != null)
@@ -2243,7 +2243,7 @@ public static class ShareClass
             {
                 DDL.Items.Add(new ListItem(string.Format("{0}{1}", interval, list.Rows[i]["AccountType"].ToString().Trim() + "-" + list.Rows[i]["AccountName"].ToString().Trim()), list.Rows[i]["AccountCode"].ToString().Trim()));
 
-                ///é€’å½’
+                ///µİ¹é
                 SetInterval(DDL, list.Rows[i]["ID"].ToString().Trim(), interval);
             }
         }
@@ -2363,7 +2363,7 @@ public static class ShareClass
 
         string strReOrPay, strRelatedAccount, strRelatedAccountCode, strReceivableID, strPayableID;
 
-        //å¦‚æœä¸šåŠ¡å•å…³è”äº†åˆåŒï¼Œå°±ä¸ä½œåº”ä»˜æˆ–åº”æ”¶
+        //Èç¹ûÒµÎñµ¥¹ØÁªÁËºÏÍ¬£¬¾Í²»×÷Ó¦¸¶»òÓ¦ÊÕ
         if (IsBusinessFormRelatedConstract(strRelatedType, strRelatedID))
         {
             return 0;
@@ -2745,7 +2745,7 @@ public static class ShareClass
         }
     }
 
-    //æ’å…¥æ”¶ä»˜æ¬¾è®°å½•
+    //²åÈëÊÕ¸¶¿î¼ÇÂ¼
     public static void InsertReceivablesOrPayableRecord(string strReOrPay, int intRelatedID, Decimal deAmount, string strCurrencyType, string strReOrPayerType, string strReOrPayer, string strOperatorCode, int intRelatedProjectID)
     {
         if (strReOrPay == "Receivables")
@@ -2820,7 +2820,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æ±‡ç‡
+    //È¡µÃ»ãÂÊ
     public static decimal GetExchangeRateByCurrencyType(string strCurrencyType)
     {
         string strHQL;
@@ -2838,11 +2838,11 @@ public static class ShareClass
         }
     }
 
-    #endregion è´¢åŠ¡æˆ–ç‰©æ–™æ“ä½œå‡½æ•°
+    #endregion ²ÆÎñ»òÎïÁÏ²Ù×÷º¯Êı
 
-    #region é¡¹ç›®ç›¸å…³æ“ä½œå‡½æ•°
+    #region ÏîÄ¿Ïà¹Ø²Ù×÷º¯Êı
 
-    //åˆ—å‡ºå¯ç”¨çš„å·¥ä½œæµæ¨¡æ¿
+    //ÁĞ³ö¿ÉÓÃµÄ¹¤×÷Á÷Ä£°å
     public static void LoadProjectPlanStartupRelatedWorkflowTemplate(string strUserCode, DropDownList DL_TemName)
     {
         string strHQL;
@@ -2863,7 +2863,7 @@ public static class ShareClass
         DL_TemName.Items.Insert(0, new ListItem("--Select--", ""));
     }
 
-    //åˆ¤æ–­å½“å‰ç”¨æˆ·æœ‰æ²¡æœ‰ä¿®æ”¹ç”¨æˆ·è®¡åˆ’çš„æƒé™
+    //ÅĞ¶Ïµ±Ç°ÓÃ»§ÓĞÃ»ÓĞĞŞ¸ÄÓÃ»§¼Æ»®µÄÈ¨ÏŞ
     public static string CheckUserIsCanUpdatePlan(string strProjectID, string strVerID)
     {
         string strHQL;
@@ -2876,7 +2876,7 @@ public static class ShareClass
             return "False";
         }
 
-        //ä¾é¡¹ç›®å±æ€§æ˜¯å¦é”å®šå·²å¯åŠ¨çš„é¡¹ç›®è®¡åˆ’åˆ¤æ–­èƒ½å¦ä¿®æ”¹è®¡åˆ’
+        //ÒÀÏîÄ¿ÊôĞÔÊÇ·ñËø¶¨ÒÑÆô¶¯µÄÏîÄ¿¼Æ»®ÅĞ¶ÏÄÜ·ñĞŞ¸Ä¼Æ»®
         if (CheckProjectPlanCanBeUpdate(strProjectID) == "NO")
         {
             return "False";
@@ -2930,10 +2930,10 @@ public static class ShareClass
         }
     }
 
-    //ä¾é¡¹ç›®å±æ€§æ˜¯å¦é”å®šå·²å¯åŠ¨çš„é¡¹ç›®è®¡åˆ’åˆ¤æ–­èƒ½å¦ä¿®æ”¹è®¡åˆ’
+    //ÒÀÏîÄ¿ÊôĞÔÊÇ·ñËø¶¨ÒÑÆô¶¯µÄÏîÄ¿¼Æ»®ÅĞ¶ÏÄÜ·ñĞŞ¸Ä¼Æ»®
     public static string CheckProjectPlanCanBeUpdate(string strProjectID)
     {
-        //åˆ¤æ–­èƒ½å¦æ›´æ”¹è®¡åˆ’
+        //ÅĞ¶ÏÄÜ·ñ¸ü¸Ä¼Æ»®
         if (ShareClass.CheckStartupPlanIsLock(strProjectID) == "YES" & ShareClass.CheckProjectPlanIsStartup(strProjectID) == "YES")
         {
             return "NO";
@@ -2944,7 +2944,7 @@ public static class ShareClass
         }
     }
 
-    //åˆ¤æ–­èƒ½å¦æ›´æ”¹é¡¹ç›®è®¡åˆ’
+    //ÅĞ¶ÏÄÜ·ñ¸ü¸ÄÏîÄ¿¼Æ»®
     public static string CheckProjectPlanIsStartup(string strProjectID)
     {
         string strHQL;
@@ -2962,7 +2962,7 @@ public static class ShareClass
         }
     }
 
-    //åˆ¤æ–­æ˜¯å¦é”å®šå·²å¯åŠ¨çš„é¡¹ç›®è®¡åˆ’
+    //ÅĞ¶ÏÊÇ·ñËø¶¨ÒÑÆô¶¯µÄÏîÄ¿¼Æ»®
     public static string CheckStartupPlanIsLock(string strProjectID)
     {
         string strHQL;
@@ -2980,7 +2980,7 @@ public static class ShareClass
         }
     }
 
-    //æ£€æŸ¥é¡¹ç›®æˆå‘˜æ˜¯å¦å·²å­˜åœ¨
+    //¼ì²éÏîÄ¿³ÉÔ±ÊÇ·ñÒÑ´æÔÚ
     public static int CheckProjectMemberIsExisted(string strProjectID, string strUserCode)
     {
         string strHQL;
@@ -2991,7 +2991,7 @@ public static class ShareClass
         return ds.Tables[0].Rows.Count;
     }
 
-    //è®¾ç½®é£é™©æ–‡æœ¬é¢œè‰²
+    //ÉèÖÃ·çÏÕÎÄ±¾ÑÕÉ«
     public static void SetRiskLabelColor(DataGrid dataGrid, int intCellNumber)
     {
         string strProjectID;
@@ -3008,7 +3008,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æ²¡æœ‰æŒ‰æ—¶å®Œæˆçš„é£é™©æ•°é‡
+    //È¡µÃÃ»ÓĞ°´Ê±Íê³ÉµÄ·çÏÕÊıÁ¿
     public static int GetRiskUnFinishNumber(string strProjectID)
     {
         string strHQL;
@@ -3019,7 +3019,7 @@ public static class ShareClass
         return ds.Tables[0].Rows.Count;
     }
 
-    //è®¾ç½®ç¼ºé™·æ–‡æœ¬é¢œè‰²
+    //ÉèÖÃÈ±ÏİÎÄ±¾ÑÕÉ«
     public static void SetDefectLabelColor(DataGrid dataGrid, int intCellNumber)
     {
         string strProjectID;
@@ -3036,7 +3036,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æ²¡æœ‰æŒ‰æ—¶å®Œæˆçš„ç¼ºé™·æ•°é‡
+    //È¡µÃÃ»ÓĞ°´Ê±Íê³ÉµÄÈ±ÏİÊıÁ¿
     public static int GetDefectUnFinishNumber(string strProjectID)
     {
         string strHQL;
@@ -3048,7 +3048,7 @@ public static class ShareClass
     }
 
 
-    //å–å¾—é¡¹ç›®æ€»ç¡®è®¤å·¥æ—¶
+    //È¡µÃÏîÄ¿×ÜÈ·ÈÏ¹¤Ê±
     public static string GetProjectTotalConfirmWorkHour(string strProjectID)
     {
         string strHQL;
@@ -3061,7 +3061,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—é¡¹ç›®æœªè§£å†³é£é™©æ€»æ•°
+    //È¡µÃÏîÄ¿Î´½â¾ö·çÏÕ×ÜÊı
     public static string GetProjectTotalUNFinishRiskNumber(string strProjectID)
     {
         string strCmdText;
@@ -3075,7 +3075,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—é¡¹ç›®é£é™©æ€»æ•°
+    //È¡µÃÏîÄ¿·çÏÕ×ÜÊı
     public static string GetProjectTotalRiskNumber(string strProjectID)
     {
         string strCmdText;
@@ -3088,13 +3088,13 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—é¡¹ç›®æœªè§£å†³é£é™©æ€»æ•°/é¡¹ç›®é£é™©æ€»æ•°
+    //È¡µÃÏîÄ¿Î´½â¾ö·çÏÕ×ÜÊı/ÏîÄ¿·çÏÕ×ÜÊı
     public static string GetProjectRiskUnFinishAndFinishNumber(string strProjectID)
     {
         return GetProjectTotalUNFinishRiskNumber(strProjectID) + "/" + GetProjectTotalRiskNumber(strProjectID);
     }
 
-    //å–å¾—é¡¹ç›®æœªå…³é—­ç¼ºé™·æ€»æ•°
+    //È¡µÃÏîÄ¿Î´¹Ø±ÕÈ±Ïİ×ÜÊı
     public static string GetProjectTotalUNFinishDefectNumber(string strProjectID)
     {
         string strCmdText;
@@ -3108,7 +3108,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—é¡¹ç›®ç¼ºé™·æ€»æ•°
+    //È¡µÃÏîÄ¿È±Ïİ×ÜÊı
     public static string GetProjectTotalDefectNumber(string strProjectID)
     {
         string strCmdText;
@@ -3121,13 +3121,13 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—é¡¹ç›®æœªå…³é—­ç¼ºé™·æ€»æ•°/é¡¹ç›®ç¼ºé™·æ€»æ•°
+    //È¡µÃÏîÄ¿Î´¹Ø±ÕÈ±Ïİ×ÜÊı/ÏîÄ¿È±Ïİ×ÜÊı
     public static string GetProjectDefectUnFinishAndFinishNumber(string strProjectID)
     {
         return GetProjectTotalUNFinishDefectNumber(strProjectID) + "/" + GetProjectTotalDefectNumber(strProjectID);
     }
 
-    //å–å¾—é¡¹ç›®æ–‡æ¡£æ€»æ•°
+    //È¡µÃÏîÄ¿ÎÄµµ×ÜÊı
     public static string GetProjectDocumentNumber(string strProjectID)
     {
         string strHQL;
@@ -3138,13 +3138,13 @@ public static class ShareClass
         strHQL = string.Format(@"Select  DocName  from T_Document as document where ((document.RelatedType = 'Project' and document.RelatedID = {0})
                    or (((document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from T_RelatedReq as relatedReq where relatedReq.ProjectID = {0}))
                    or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From T_WorkFlow as workFlow Where workFlow.RelatedType = 'Project' and workFlow.RelatedID = {0}))
-                   or (document.RelatedType = 'é£é™©' and document.RelatedID in (select projectRisk.ID from T_ProjectRisk as projectRisk where projectRisk.ProjectID = {0}))
+                   or (document.RelatedType = '·çÏÕ' and document.RelatedID in (select projectRisk.ID from T_ProjectRisk as projectRisk where projectRisk.ProjectID = {0}))
                    or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.ProjectID = {0}))
                    or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID From T_ImplePlan as workPlan where workPlan.ProjectID = {0}))
                    or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From T_WorkFlow as workFlow Where workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID From T_ImplePlan as workPlan where workPlan.ProjectID = {0})))
-                   or (document.RelatedType = 'ä¼šè®®' and document.RelatedID in (select meeting.ID from T_Meeting as meeting where meeting.RelatedID = {0}))
+                   or (document.RelatedType = '»áÒé' and document.RelatedID in (select meeting.ID from T_Meeting as meeting where meeting.RelatedID = {0}))
                    )))
-                   and rtrim(ltrim(document.Status)) <> 'Deleted'", strProjectID, strUserCode, strDepartCode);
+                   and rtrim(ltrim(document.Status)) <> 'Deleted'", strProjectID, strUserCode, strDepartCode);  
 
         //LogClass.WriteLogFile(strHQL);
 
@@ -3153,7 +3153,7 @@ public static class ShareClass
         return ds1.Tables[0].Rows.Count.ToString();
     }
 
-    //å–å¾—é¡¹ç›®è®¡åˆ’æŒ‰æ¨¡æ¿å®é™…æäº¤çš„æ–‡æ¡£æ•°å’Œæ¨¡æ¿è§„å®šåº”æäº¤çš„æ–‡æ¡£æ•°
+    //È¡µÃÏîÄ¿¼Æ»®°´Ä£°åÊµ¼ÊÌá½»µÄÎÄµµÊıºÍÄ£°å¹æ¶¨Ó¦Ìá½»µÄÎÄµµÊı
     public static string GetProjectDocmentNumberAndRequiseDocument(string strProjectID)
     {
         string strHQL1, strHQL2;
@@ -3173,7 +3173,7 @@ public static class ShareClass
     }
 
 
-    //åˆ—å‡ºé¡¹ç›®é‡Œç¨‹ç¢‘çŠ¶æ€å›¾
+    //ÁĞ³öÏîÄ¿Àï³Ì±®×´Ì¬Í¼
     public static void DisplayRelatedMileStoneStepDump(string strProjectID, string strVerID, Repeater Repeater1)
     {
         string strHQL;
@@ -3216,7 +3216,7 @@ public static class ShareClass
 
 
 
-    //åˆ—å‡ºé¡¹ç›®ç±»å‹ 
+    //ÁĞ³öÏîÄ¿ÀàĞÍ 
     public static void LoadProjectType(DropDownList DL_ProjectType)
     {
         string strHQL;
@@ -3229,7 +3229,7 @@ public static class ShareClass
         DL_ProjectType.DataBind();
     }
 
-    //åˆ—å‡ºé¡¹ç›®çŠ¶æ€
+    //ÁĞ³öÏîÄ¿×´Ì¬
     public static void LoadProjectForPMStatus(string strProjectType, string strLangCode, DropDownList DL_Status)
     {
         string strHQL;
@@ -3261,7 +3261,7 @@ public static class ShareClass
         }
     }
 
-    //åˆ—å‡ºé¡¹ç›®çŠ¶æ€
+    //ÁĞ³öÏîÄ¿×´Ì¬
     public static void LoadProjectStatusForDataGrid(string strLangCode, DataGrid dataGrid)
     {
         string strHQL;
@@ -3276,7 +3276,7 @@ public static class ShareClass
         dataGrid.DataBind();
     }
 
-    //åˆ—å‡ºå‚ä¸çš„é¡¹ç›®çŠ¶æ€
+    //ÁĞ³ö²ÎÓëµÄÏîÄ¿×´Ì¬
     public static void LoadInvolvedProjectStatusForDataGrid(string strLangCode, DataGrid dataGrid)
     {
         string strHQL;
@@ -3291,7 +3291,7 @@ public static class ShareClass
         dataGrid.DataBind();
     }
 
-    //åˆ—å‡ºé¡¹ç›®çŠ¶æ€
+    //ÁĞ³öÏîÄ¿×´Ì¬
     public static void LoadProjectStatusForDropDownList(string strLangCode, DropDownList DL_Status)
     {
         string strHQL;
@@ -3308,7 +3308,7 @@ public static class ShareClass
         DL_Status.Items.Insert(0, new ListItem("--Select--", ""));
     }
 
-    //æ·»åŠ é¡¹ç›®æˆå‘˜
+    //Ìí¼ÓÏîÄ¿³ÉÔ±
     public static void AddProjectMember(string strProjectID, string strActorCode, string strActor, string strWorkDetail, string strStatus)
     {
         string strProjectName = ShareClass.GetProjectName(strProjectID);
@@ -3319,7 +3319,7 @@ public static class ShareClass
 
         string strJoinDate = DateTime.Now.ToString("yyyy-MM-dd");
         string strLeaveDate = DateTime.Now.ToString("yyyy-MM-dd");
-        string strSalaryMethod = "å·¥æ—¶";
+        string strSalaryMethod = "¹¤Ê±";  
         decimal dePromissionScale = 0;
         decimal deHourSalary = 0;
         string strCanUpdatePlan = "YES";
@@ -3362,7 +3362,7 @@ public static class ShareClass
     }
 
 
-    //ä¾è®¡åˆ’IDå–å¾—é¡¹ç›®ç±»å‹
+    //ÒÀ¼Æ»®IDÈ¡µÃÏîÄ¿ÀàĞÍ
     public static string GetProjectTypeByPlanID(string strPlanID)
     {
         string strHQL;
@@ -3380,7 +3380,7 @@ public static class ShareClass
         }
     }
 
-    //ä¾è®¡åˆ’IDå–å¾—é¡¹ç›®ID
+    //ÒÀ¼Æ»®IDÈ¡µÃÏîÄ¿ID
     public static string GetProjectIDByPlanID(string strPlanID)
     {
         string strHQL;
@@ -3398,7 +3398,7 @@ public static class ShareClass
         }
     }
 
-    //åˆ¤æ–­æ˜¯å¦è¦è®¡åˆ’å‘˜ç¡®è®¤ä»»åŠ¡æ—¶åº¦æ‰èƒ½å½±å“è®¡åˆ’è¿›åº¦
+    //ÅĞ¶ÏÊÇ·ñÒª¼Æ»®Ô±È·ÈÏÈÎÎñÊ±¶È²ÅÄÜÓ°Ïì¼Æ»®½ø¶È
     public static string GetPlanProgressNeedPlanerConfirmByProject(string strProjectID)
     {
         string strHQL = "Select PlanProgressNeedPlanerConfirm From T_Project Where ProjectID = " + strProjectID;
@@ -3414,7 +3414,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—é¡¹ç›®è®¡åˆ’çš„KEY ID
+    //È¡µÃÏîÄ¿¼Æ»®µÄKEY ID
     public static string GetProjectPlanKeyIDByVerID(string strProjectID, string strVerID)
     {
         string strHQL;
@@ -3436,7 +3436,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—é¡¹ç›®çŠ¶æ€å€¼
+    //È¡µÃÏîÄ¿×´Ì¬Öµ
     public static string GetProjectStatusValue(string strProjectID)
     {
         string strHQL = "from Project as project where project.ProjectID = " + strProjectID;
@@ -3447,7 +3447,7 @@ public static class ShareClass
         return project.StatusValue.Trim();
     }
 
-    //å–å¾—é¡¹ç›®å¤§ç±»
+    //È¡µÃÏîÄ¿´óÀà
     public static string GetProjectClass(string strProjectID)
     {
         string strHQL = "from Project as project where project.ProjectID = " + strProjectID;
@@ -3458,7 +3458,7 @@ public static class ShareClass
         return strProjectClass;
     }
 
-    //å–æ˜¨ç«‹é¡¹è€…ä»£ç 
+    //È¡×òÁ¢ÏîÕß´úÂë
     public static string GetProjectCreatorCode(string strProjectID)
     {
         string strHQL = "from Project as project where project.ProjectID = " + strProjectID;
@@ -3469,7 +3469,7 @@ public static class ShareClass
         return project.UserCode.Trim();
     }
 
-    //å¦‚æœé¡¹ç›®å·²ç»éªŒæ”¶\ç»“æ¡ˆ\å½’æ¡£ï¼Œé‚£ä¹ˆä¸èƒ½æ›´æ”¹è®¡åˆ’ä¿¡æ¯
+    //Èç¹ûÏîÄ¿ÒÑ¾­ÑéÊÕ\½á°¸\¹éµµ£¬ÄÇÃ´²»ÄÜ¸ü¸Ä¼Æ»®ĞÅÏ¢
     public static bool CheckProjectIsFinish(string strProjectID)
     {
         string strHQL;
@@ -3486,7 +3486,7 @@ public static class ShareClass
         }
     }
 
-    //æ£€æŸ¥ç”¨æˆ·æ˜¯å¦è®¡åˆ’å‘˜
+    //¼ì²éÓÃ»§ÊÇ·ñ¼Æ»®Ô±
     public static bool CheckMemberIsProjectPlanOperator(string strProjectID, string strUserCode)
     {
         string strHQL;
@@ -3506,7 +3506,7 @@ public static class ShareClass
         }
     }
 
-    //æ›´æ–°æµç¨‹çš„å·¥æ—¶
+    //¸üĞÂÁ÷³ÌµÄ¹¤Ê±
     public static void UpdateWorkFlowManHour(string strRelatedType, string strRelatedID, string strWLID, string strID, decimal deManHour)
     {
         string strHQL;
@@ -3534,7 +3534,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æµç¨‹çš„å·¥æ—¶æ€»é¢
+    //È¡µÃÁ÷³ÌµÄ¹¤Ê±×Ü¶î
     public static decimal GetWorkflowTotalManHour(string strWLID)
     {
         string strHQL;
@@ -3552,7 +3552,7 @@ public static class ShareClass
         }
     }
 
-    //æ›´æ–°æµç¨‹çš„å·¥æ—¶
+    //¸üĞÂÁ÷³ÌµÄ¹¤Ê±
     public static void UpdateWorkFlowExpense(string strRelatedType, string strRelatedID, string strWLID, string strID)
     {
         string strHQL;
@@ -3582,7 +3582,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æµç¨‹å®¡æ‰¹è®°å½•çš„è´¹ç”¨æ€»é¢
+    //È¡µÃÁ÷³ÌÉóÅú¼ÇÂ¼µÄ·ÑÓÃ×Ü¶î
     public static decimal GetWorkflowStepDetailTotalExpense(string strID)
     {
         string strHQL;
@@ -3600,7 +3600,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æµç¨‹çš„è´¹ç”¨æ€»é¢
+    //È¡µÃÁ÷³ÌµÄ·ÑÓÃ×Ü¶î
     public static decimal GetWorkflowTotalExpense(string strWLID)
     {
         string strHQL;
@@ -3636,7 +3636,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—è®¡åˆ’è´Ÿè´£äººåç§°
+    //È¡µÃ¼Æ»®¸ºÔğÈËÃû³Æ
     public static string getProjectPlanLeaderName(string strPlanID)
     {
         string strHQL;
@@ -3661,7 +3661,7 @@ public static class ShareClass
         }
     }
 
-    //æŠŠè´Ÿè´£äººä»£ç ä¸ºç©ºæ›´æ–°ä¸ºä¸ä¸ºç©º
+    //°Ñ¸ºÔğÈË´úÂëÎª¿Õ¸üĞÂÎª²»Îª¿Õ
     public static void UpdateProjectWorkPlanLeaderCodeToNotNull(string strProjectID, string strVerID)
     {
         string strHQL;
@@ -3677,7 +3677,7 @@ public static class ShareClass
         ShareClass.RunSqlCommand(strHQL);
     }
 
-    //åªæœ‰ç«‹é¡¹è€…ï¼Œé¡¹ç›®ç»ç†ï¼Œè®¡åˆ’åˆ›å»ºå‘˜ï¼Œæ‰èƒ½åˆ†æ´¾è®¡åˆ’èµ„æº
+    //Ö»ÓĞÁ¢ÏîÕß£¬ÏîÄ¿¾­Àí£¬¼Æ»®´´½¨Ô±£¬²ÅÄÜ·ÖÅÉ¼Æ»®×ÊÔ´
     public static bool CheckUserCanAssignRecourceForPlan(string strPlanID, string strCurrentUserCode)
     {
         string strHQL;
@@ -3738,7 +3738,7 @@ public static class ShareClass
         }
     }
 
-    //åªæœ‰ç«‹é¡¹è€…ï¼Œé¡¹ç›®ç»ç†ï¼Œè®¡åˆ’åˆ›å»ºå‘˜ï¼Œé¡¹ç›®è´Ÿè´£äººï¼Œè®¡åˆ’è´Ÿè´£äººæ‰èƒ½å‘èµ·æµç¨‹å’Œä»»åŠ¡
+    //Ö»ÓĞÁ¢ÏîÕß£¬ÏîÄ¿¾­Àí£¬¼Æ»®´´½¨Ô±£¬ÏîÄ¿¸ºÔğÈË£¬¼Æ»®¸ºÔğÈË²ÅÄÜ·¢ÆğÁ÷³ÌºÍÈÎÎñ
     public static bool CheckUserCanControlProjectPlan(string strPlanID, string strCurrentUserCode)
     {
         string strHQL;
@@ -3811,7 +3811,7 @@ public static class ShareClass
         }
     }
 
-    //åªæœ‰ç«‹é¡¹è€…ï¼Œé¡¹ç›®ç»ç†ï¼Œè®¡åˆ’åˆ›å»ºå‘˜ï¼Œé¡¹ç›®è´Ÿè´£äººï¼Œè®¡åˆ’è´Ÿè´£äººæ‰èƒ½æµè§ˆè®¡åˆ’æ•°æ®
+    //Ö»ÓĞÁ¢ÏîÕß£¬ÏîÄ¿¾­Àí£¬¼Æ»®´´½¨Ô±£¬ÏîÄ¿¸ºÔğÈË£¬¼Æ»®¸ºÔğÈË²ÅÄÜä¯ÀÀ¼Æ»®Êı¾İ
     public static bool CheckUserCanViewProjectPlan(string strPlanID, string strCurrentUserCode)
     {
         string strHQL;
@@ -3884,7 +3884,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—è®¡åˆ’åˆ›å»ºè€…
+    //È¡µÃ¼Æ»®´´½¨Õß
     public static string GetProjectPlanCreatorCode(string strPlanID)
     {
         string strHQL;
@@ -3899,7 +3899,7 @@ public static class ShareClass
         return workPlan.CreatorCode.Trim();
     }
 
-    //å–å¾—ä»»åŠ¡å…³è”è®¡åˆ’çš„è®¡åˆ’çš„è´Ÿè´£äººä»£ç 
+    //È¡µÃÈÎÎñ¹ØÁª¼Æ»®µÄ¼Æ»®µÄ¸ºÔğÈË´úÂë
     public static string GetProjectPlanLeaderCode(string strPlanID)
     {
         string strHQL;
@@ -3920,7 +3920,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—ä»»åŠ¡å†…å®¹
+    //È¡µÃÈÎÎñÄÚÈİ
     public static string GetProjectPlanDetail(string strPlanID)
     {
         string strHQL;
@@ -3941,7 +3941,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—ä»»åŠ¡å…³è”è®¡åˆ’çš„è®¡åˆ’çš„è´Ÿè´£äººåç§°
+    //È¡µÃÈÎÎñ¹ØÁª¼Æ»®µÄ¼Æ»®µÄ¸ºÔğÈËÃû³Æ
     public static string GetProjectPlanLeaderName(string strPlanID)
     {
         string strHQL;
@@ -3962,7 +3962,7 @@ public static class ShareClass
         }
     }
 
-    //ä¾è®¡åˆ’å·å–å¾—æ­¤è®¡åˆ’çš„ç‰ˆæœ¬å·
+    //ÒÀ¼Æ»®ºÅÈ¡µÃ´Ë¼Æ»®µÄ°æ±¾ºÅ
     public static string getProjectWorkPlanVerIDByPlanID(string strPlanID)
     {
         string strHQL;
@@ -3973,7 +3973,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString().Trim();
     }
 
-    //å–å¾—é¡¹ç›®è®¡åˆ’æœ€å¤§çš„ç‰ˆæœ¬å·
+    //È¡µÃÏîÄ¿¼Æ»®×î´óµÄ°æ±¾ºÅ
     public static string GetLargestProjectPlanVerID(string strProjectID)
     {
         string strHQL;
@@ -3984,7 +3984,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç‰ˆæœ¬å·ID
+    //È¡µÃ°æ±¾ºÅID
     public static int GetProjectPlanVersionID(string strProjectID, string strType)
     {
         string strHQL;
@@ -4006,7 +4006,7 @@ public static class ShareClass
         }
     }
 
-    //ä¾è®¡åˆ’ç±»å‹å–å¾—ç‰ˆæœ¬å·
+    //ÒÀ¼Æ»®ÀàĞÍÈ¡µÃ°æ±¾ºÅ
     public static int GetProjectPlanVersionIDByType(string strProjectID, string strType)
     {
         string strHQL;
@@ -4028,7 +4028,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—ç‰ˆæœ¬å·
+    //È¡µÃ°æ±¾ºÅ
     public static int GetProjectPlanVerID(string strProjectID, string strType)
     {
         string strHQL;
@@ -4050,7 +4050,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—é¡¹ç›®è®¡åˆ’ç›¸å…³çš„é¡¹ç›®IDå·
+    //È¡µÃÏîÄ¿¼Æ»®Ïà¹ØµÄÏîÄ¿IDºÅ
     public static string getProjectIDByPlanID(string strPlanID)
     {
         string strHQL;
@@ -4061,7 +4061,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString().Trim();
     }
 
-    //æ›´æ–°ä»»åŠ¡çš„å·¥æ—¶å’Œè´¹ç”¨
+    //¸üĞÂÈÎÎñµÄ¹¤Ê±ºÍ·ÑÓÃ
     public static void UpdateTaskExpenseManHourSummary(string strTaskID)
     {
         string strHQL;
@@ -4093,7 +4093,7 @@ public static class ShareClass
         projectTaskBLL.UpdateProjectTask(projectTask, projectTask.TaskID);
     }
 
-    //å½“æ›´æ”¹ä»»åŠ¡è¿›åº¦
+    //µ±¸ü¸ÄÈÎÎñ½ø¶È
     public static decimal UpdateTaskProgress(string strTaskID)
     {
         string strHQL;
@@ -4124,7 +4124,7 @@ public static class ShareClass
         return deProgress;
     }
 
-    //æ›´æ–°å·¥ä½œæµå…³è”é¡¹ç›®è®¡åˆ’å®Œæˆç¨‹åº¦
+    //¸üĞÂ¹¤×÷Á÷¹ØÁªÏîÄ¿¼Æ»®Íê³É³Ì¶È
     public static void UpdateProjectPlanSchedule(string strRelatedType, string strRelatedID)
     {
         try
@@ -4139,7 +4139,7 @@ public static class ShareClass
         }
     }
 
-    //ä¾è®¡åˆ’ç›¸å…³å·¥ä½œæµå’Œä»»åŠ¡ï¼Œæ›´æ–°é¡¹ç›®æ­¤è®¡åˆ’è¿›åº¦å’Œæ€»è¿›åº¦
+    //ÒÀ¼Æ»®Ïà¹Ø¹¤×÷Á÷ºÍÈÎÎñ£¬¸üĞÂÏîÄ¿´Ë¼Æ»®½ø¶ÈºÍ×Ü½ø¶È
     public static void UpdateTaskOrWorkflowPlanProgressAndExpenseWorkHour(string strPlanID)
     {
         string strHQL;
@@ -4168,7 +4168,7 @@ public static class ShareClass
             strHQL += " Where Parent_ID = 0 and ProjectID =" + strProjectID + " and VerID = " + strVerID;
             ShareClass.RunSqlCommand(strHQL);
 
-            //å¦‚æœä»»åŠ¡æ˜¯é¡¹ç›®è®¡åˆ’äº§ç”Ÿçš„ï¼Œé‚£ä¹ˆæ›´æ”¹è®¡åˆ’å·¥æ—¶å’Œè´¹ç”¨
+            //Èç¹ûÈÎÎñÊÇÏîÄ¿¼Æ»®²úÉúµÄ£¬ÄÇÃ´¸ü¸Ä¼Æ»®¹¤Ê±ºÍ·ÑÓÃ
             strHQL = "update T_ImplePlan Set ActualHour = " + ShareClass.GetTotalRealManHourByPlan(strPlanID);
             strHQL += ",Expense = " + ShareClass.GetTotalRealExpenseByPlan(strPlanID);
             strHQL += " Where ID = " + strPlanID;
@@ -4179,7 +4179,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—å…³è”ä»»åŠ¡çš„æœªå®Œæˆé‡
+    //È¡µÃ¹ØÁªÈÎÎñµÄÎ´Íê³ÉÁ¿
     public static decimal GetTaskUnFinishedNumber(string strTaskID)
     {
         string strHQL;
@@ -4197,7 +4197,7 @@ public static class ShareClass
         }
     }
 
-    //å½“æ›´æ”¹ä»»åŠ¡å®Œæˆé‡
+    //µ±¸ü¸ÄÈÎÎñÍê³ÉÁ¿
     public static decimal UpdateTaskFinishedNumber(string strTaskID)
     {
         string strHQL;
@@ -4228,7 +4228,7 @@ public static class ShareClass
         return deFinishedNumber;
     }
 
-    //æ›´æ–°å·¥ä½œæµå…³è”é¡¹ç›®è®¡åˆ’å·²å®Œæˆé‡
+    //¸üĞÂ¹¤×÷Á÷¹ØÁªÏîÄ¿¼Æ»®ÒÑÍê³ÉÁ¿
     public static void UpdateProjectPlanFinishedNumber(string strRelatedType, string strRelatedID)
     {
         try
@@ -4243,7 +4243,7 @@ public static class ShareClass
         }
     }
 
-    //ä¾è®¡åˆ’ç›¸å…³ä»»åŠ¡ï¼Œæ›´æ–°é¡¹ç›®æ­¤è®¡åˆ’çš„å·²å®Œæˆé‡
+    //ÒÀ¼Æ»®Ïà¹ØÈÎÎñ£¬¸üĞÂÏîÄ¿´Ë¼Æ»®µÄÒÑÍê³ÉÁ¿
     public static void UpdateTaskPlanFinishedNumber(string strPlanID)
     {
         string strHQL;
@@ -4272,7 +4272,7 @@ public static class ShareClass
     }
 
 
-    //å¦‚æœæµç¨‹æ˜¯ç”±é¡¹ç›®æˆ–é¡¹ç›®è®¡åˆ’å‘èµ·çš„ï¼Œé‚£ä¹ˆå¢åŠ é¡¹ç›®æ—¥å¿—åˆ°é¡¹ç›®ä¸­
+    //Èç¹ûÁ÷³ÌÊÇÓÉÏîÄ¿»òÏîÄ¿¼Æ»®·¢ÆğµÄ£¬ÄÇÃ´Ôö¼ÓÏîÄ¿ÈÕÖ¾µ½ÏîÄ¿ÖĞ
     public static void UpdateProjectDaiyWorkByWorkflow(string strRelatedType, string strRelatedID, string strWLID, string strContent, string strUserCode)
     {
         if (strRelatedType == "Project" || strRelatedType == "Plan")
@@ -4301,7 +4301,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—å…³è”ä»»åŠ¡å’Œæµç¨‹çš„è®¡åˆ’æ€»è¿›åº¦
+    //È¡µÃ¹ØÁªÈÎÎñºÍÁ÷³ÌµÄ¼Æ»®×Ü½ø¶È
     public static decimal GetTaskOrWorkflowPlanProgress(string strPlanID)
     {
         decimal deProgress, deTaskProgress, deWorkflowProgress;
@@ -4321,7 +4321,7 @@ public static class ShareClass
         return deProgress;
     }
 
-    //å–å¾—è®¡åˆ’ç›¸å…³ä»»åŠ¡è¿›åº¦
+    //È¡µÃ¼Æ»®Ïà¹ØÈÎÎñ½ø¶È
     public static decimal GetTaskPlanProgress(string strPlanID)
     {
         string strHQL;
@@ -4348,7 +4348,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—è®¡åˆ’ç›¸å…³å·¥ä½œæµçš„å¹³å‡è¿›åº¦
+    //È¡µÃ¼Æ»®Ïà¹Ø¹¤×÷Á÷µÄÆ½¾ù½ø¶È
     public static decimal GetWorkflowtPlanProgress(string strPlanID)
     {
         string strHQL1, strHQL;
@@ -4394,19 +4394,19 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—é¡¹ç›®è¿›åº¦ï¼Œå·¥æ—¶ï¼Œè´¹ç”¨çš„ç›¸å…³æ•°æ®ï¼Œç”¨äºé¡¹ç›®ç»ç†
+    //È¡µÃÏîÄ¿½ø¶È£¬¹¤Ê±£¬·ÑÓÃµÄÏà¹ØÊı¾İ£¬ÓÃÓÚÏîÄ¿¾­Àí
     public static string getCurrentDateTaskTotalForPM(string strProjectID, string strUserCode, string strWorkDate)
     {
-        return Resources.lang.DangRiRenWu + ":" + Resources.lang.JingDu + ":" + getCurrentDateTotalProgressForPM(strProjectID) + "%," + Resources.lang.ManHour + ":" + getCurrentDateTotalManHourByOneOperator(strProjectID, strUserCode, strWorkDate) + "," + Resources.lang.FeiYong + ":" + getCurrentDateTotalExpenseByOneOperator(strProjectID, strUserCode, strWorkDate);
+        return LanguageHandle.GetWord("DangRiRenWu").ToString().Trim() + ":" + LanguageHandle.GetWord("JingDu").ToString().Trim() + ":" + getCurrentDateTotalProgressForPM(strProjectID) + "%," + LanguageHandle.GetWord("ManHour").ToString().Trim() + ":" + getCurrentDateTotalManHourByOneOperator(strProjectID, strUserCode, strWorkDate) + "," + LanguageHandle.GetWord("FeiYong").ToString().Trim() + ":" + getCurrentDateTotalExpenseByOneOperator(strProjectID, strUserCode, strWorkDate);
     }
 
-    //å–å¾—é¡¹ç›®è¿›åº¦ï¼Œå·¥æ—¶ï¼Œè´¹ç”¨çš„ç›¸å…³æ•°æ®ï¼Œç”¨äºé¡¹ç›®æˆå‘˜
+    //È¡µÃÏîÄ¿½ø¶È£¬¹¤Ê±£¬·ÑÓÃµÄÏà¹ØÊı¾İ£¬ÓÃÓÚÏîÄ¿³ÉÔ±
     public static string getCurrentDateTaskTotalForMember(string strProjectID, string strUserCode, string strWorkDate)
     {
-        return Resources.lang.DangRiRenWu + ":" + Resources.lang.JingDu + ":" + getCurrentDateTotalProgressForMember(strProjectID, strUserCode) + "%," + Resources.lang.ManHour + ":" + getCurrentDateTotalManHourByOneOperator(strProjectID, strUserCode, strWorkDate) + "," + Resources.lang.FeiYong + ":" + getCurrentDateTotalExpenseByOneOperator(strProjectID, strUserCode, strWorkDate);
+        return LanguageHandle.GetWord("DangRiRenWu").ToString().Trim() + ":" + LanguageHandle.GetWord("JingDu").ToString().Trim() + ":" + getCurrentDateTotalProgressForMember(strProjectID, strUserCode) + "%," + LanguageHandle.GetWord("ManHour").ToString().Trim() + ":" + getCurrentDateTotalManHourByOneOperator(strProjectID, strUserCode, strWorkDate) + "," + LanguageHandle.GetWord("FeiYong").ToString().Trim() + ":" + getCurrentDateTotalExpenseByOneOperator(strProjectID, strUserCode, strWorkDate);
     }
 
-    //å–å¾—é¡¹ç›®è‡³å½“æ—¥æ—¶çš„æ€»è¿›åº¦ï¼Œç”¨äºé¡¹ç›®ç»ç†
+    //È¡µÃÏîÄ¿ÖÁµ±ÈÕÊ±µÄ×Ü½ø¶È£¬ÓÃÓÚÏîÄ¿¾­Àí
     public static string getCurrentDateTotalProgressForPM(string strProjectID)
     {
         if (decimal.Parse(getCurrentDateTaskTotalProgressForPM(strProjectID)) == 0 || decimal.Parse(getCurrentDateWorkflowTotalProgressForPM(strProjectID)) == 0)
@@ -4419,7 +4419,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—é¡¹ç›®è‡³å½“æ—¥æ—¶çš„æ€»è¿›åº¦ï¼Œç”¨äºé¡¹ç›®æˆå‘˜
+    //È¡µÃÏîÄ¿ÖÁµ±ÈÕÊ±µÄ×Ü½ø¶È£¬ÓÃÓÚÏîÄ¿³ÉÔ±
     public static string getCurrentDateTotalProgressForMember(string strProjectID, string strUserCode)
     {
         if (decimal.Parse(getCurrentDateTaskTotalProgressForMember(strProjectID, strUserCode)) == 0 || decimal.Parse(getCurrentDateWorkflowTotalProgressForMember(strProjectID, strUserCode)) == 0)
@@ -4432,7 +4432,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—å½“æ—¥å®æ–½é¡¹ç›®æ€»å·¥æ—¶
+    //È¡µÃµ±ÈÕÊµÊ©ÏîÄ¿×Ü¹¤Ê±
     public static string getCurrentDateTotalManHourByOneOperator(string strProjectID, string strUserCode, string strWorkDate)
     {
         string strHQL;
@@ -4461,7 +4461,7 @@ public static class ShareClass
         return (decimal.Parse(ds1.Tables[0].Rows[0][0].ToString()) + decimal.Parse(ds2.Tables[0].Rows[0][0].ToString())).ToString();
     }
 
-    //å–å¾—å½“æ—¥å®æ–½é¡¹ç›®æ€»è´¹ç”¨
+    //È¡µÃµ±ÈÕÊµÊ©ÏîÄ¿×Ü·ÑÓÃ
     public static string getCurrentDateTotalExpenseByOneOperator(string strProjectID, string strUserCode, string strWorkDate)
     {
         string strHQL;
@@ -4489,7 +4489,7 @@ public static class ShareClass
         return (decimal.Parse(ds1.Tables[0].Rows[0][0].ToString()) + decimal.Parse(ds2.Tables[0].Rows[0][0].ToString())).ToString();
     }
 
-    //å–å¾—å½“æ—¥å®æ–½é¡¹ç›®ä»»åŠ¡æ€»è¿›åº¦ï¼Œç”¨äºé¡¹ç›®ç»ç†
+    //È¡µÃµ±ÈÕÊµÊ©ÏîÄ¿ÈÎÎñ×Ü½ø¶È£¬ÓÃÓÚÏîÄ¿¾­Àí
     public static string getCurrentDateTaskTotalProgressForPM(string strProjectID)
     {
         string strHQL;
@@ -4514,7 +4514,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—å½“æ—¥å®æ–½é¡¹ç›®æ€»è¿›åº¦ï¼Œç”¨äºé¡¹ç›®æˆå‘˜
+    //È¡µÃµ±ÈÕÊµÊ©ÏîÄ¿×Ü½ø¶È£¬ÓÃÓÚÏîÄ¿³ÉÔ±
     public static string getCurrentDateTaskTotalProgressForMember(string strProjectID, string strUserCode)
     {
         string strHQL;
@@ -4540,7 +4540,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—è®¡åˆ’ç›¸å…³å·¥ä½œæµçš„å¹³å‡è¿›åº¦ï¼Œç”¨äºé¡¹ç›®ç»ç†
+    //È¡µÃ¼Æ»®Ïà¹Ø¹¤×÷Á÷µÄÆ½¾ù½ø¶È£¬ÓÃÓÚÏîÄ¿¾­Àí
     public static string getCurrentDateWorkflowTotalProgressForPM(string strProjectID)
     {
         string strHQL1, strHQL;
@@ -4588,7 +4588,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—è®¡åˆ’ç›¸å…³å·¥ä½œæµçš„å¹³å‡è¿›åº¦ï¼Œç”¨äºé¡¹ç›®æˆå‘˜
+    //È¡µÃ¼Æ»®Ïà¹Ø¹¤×÷Á÷µÄÆ½¾ù½ø¶È£¬ÓÃÓÚÏîÄ¿³ÉÔ±
     public static string getCurrentDateWorkflowTotalProgressForMember(string strProjectID, string strUserCode)
     {
         string strHQL1, strHQL;
@@ -4637,7 +4637,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—å‘¨æœ«å¼€å§‹æ—¶é—´
+    //È¡µÃÖÜÄ©¿ªÊ¼Ê±¼ä
     public static string GetWeekendFirstDay()
     {
         string strHQL;
@@ -4655,7 +4655,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—å‘¨æœ«ç»“æŸæ—¶é—´
+    //È¡µÃÖÜÄ©½áÊøÊ±¼ä
     public static string GetWeekendSecondDay()
     {
         string strHQL;
@@ -4673,7 +4673,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—å‘¨æœ«æ˜¯å¦å·¥ä½œæ—¥
+    //È¡µÃÖÜÄ©ÊÇ·ñ¹¤×÷ÈÕ
     public static string GetWeekendsAreWorkdays()
     {
         string strHQL;
@@ -4691,7 +4691,7 @@ public static class ShareClass
         }
     }
 
-    //ä¾æ‹›æ ‡ç±»å‹æ·»åŠ å…³è”çš„å·¥ä½œæµæ¨¡æ¿
+    //ÒÀÕĞ±êÀàĞÍÌí¼Ó¹ØÁªµÄ¹¤×÷Á÷Ä£°å
     public static string AddRelatedWorkFlowTemplateByBMBidType(string strBMBidType, string strBMBidPlanID)
     {
         string strHQL;
@@ -4705,7 +4705,7 @@ public static class ShareClass
         return strHQL;
     }
 
-    //ä¾é¡¹ç›®ç±»å‹æ·»åŠ å…³è”çš„å·¥ä½œæµæ¨¡æ¿
+    //ÒÀÏîÄ¿ÀàĞÍÌí¼Ó¹ØÁªµÄ¹¤×÷Á÷Ä£°å
     public static void AddRelatedWorkFlowTemplateByProjectType(string strRelatedType, string strRelatedID, string strKeyWord, string strKeyType, string strKeyRelatedType)
     {
         string strHQL;
@@ -4726,7 +4726,7 @@ public static class ShareClass
         }
     }
 
-    //ä¾é¡¹ç›®ç±»å‹æ·»åŠ å…³è”çš„æ–‡æ¡£æ¨¡æ¿
+    //ÒÀÏîÄ¿ÀàĞÍÌí¼Ó¹ØÁªµÄÎÄµµÄ£°å
     public static void AddRelatedDocumentTemplateByProjectType(string strRelatedType, string strRelatedID, string strKeyWord, string strKeyType)
     {
         string strHQL;
@@ -4750,7 +4750,7 @@ public static class ShareClass
 
     }
 
-    //å–å¾—MRPè®¡åˆ’å•æ®ç±»å‹
+    //È¡µÃMRP¼Æ»®µ¥¾İÀàĞÍ
     public static string GetRelatedBusinessTypeAndName(string strRelatedType, string strRelatedID)
     {
         string strHQL;
@@ -4811,7 +4811,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—MRPè®¡åˆ’å•æ®ç±»å‹
+    //È¡µÃMRP¼Æ»®µ¥¾İÀàĞÍ
     public static string GetMRPFormTypeAndName(string strSourceType, string strSourceRecordID)
     {
         string strHQL;
@@ -4872,7 +4872,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—å…¶å®ƒå…±ç”¨çŠ¶æ€çš„æœ¬è¯­
+    //È¡µÃÆäËü¹²ÓÃ×´Ì¬µÄ±¾Óï
     public static string GetStatusHomeNameByOtherStatus(string strStatus)
     {
         string strHQL;
@@ -4895,7 +4895,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—è®¡åˆ’çŠ¶æ€çš„æœ¬è¯­
+    //È¡µÃ¼Æ»®×´Ì¬µÄ±¾Óï
     public static string GetStatusHomeNameByPlanStatus(string strStatus)
     {
         string strHQL;
@@ -4918,7 +4918,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—éœ€æ±‚çŠ¶æ€çš„æœ¬è¯­
+    //È¡µÃĞèÇó×´Ì¬µÄ±¾Óï
     public static string GetStatusHomeNameByRequirementStatus(string strStatus)
     {
         string strHQL;
@@ -4941,7 +4941,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—éœ€æ±‚çŠ¶æ€çš„æœ¬è¯­
+    //È¡µÃĞèÇó×´Ì¬µÄ±¾Óï
     public static string GetStatusHomeNameByDefectmentStatus(string strStatus)
     {
         string strHQL;
@@ -4964,7 +4964,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—å·¥ä½œæµçŠ¶æ€çš„æœ¬è¯­
+    //È¡µÃ¹¤×÷Á÷×´Ì¬µÄ±¾Óï
     public static string GetStatusHomeNameByTaskStatus(string strStatus)
     {
         string strHQL;
@@ -4987,7 +4987,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—å·¥ä½œæµçŠ¶æ€çš„æœ¬è¯­
+    //È¡µÃ¹¤×÷Á÷×´Ì¬µÄ±¾Óï
     public static string GetStatusHomeNameByWorkflowStatus(string strStatus)
     {
         string strHQL;
@@ -5011,7 +5011,7 @@ public static class ShareClass
         }
     }
 
-    //åˆ¤æ–­æ˜¯å¦æ—¶æ˜¯è¶…æ—¶è‡ªåŠ¨å®¡æ‰¹é€šè¿‡çš„æ­¥éª¤
+    //ÅĞ¶ÏÊÇ·ñÊ±ÊÇ³¬Ê±×Ô¶¯ÉóÅúÍ¨¹ıµÄ²½Öè
     public static string GetWorkflowStepStatusByAuto(string strStepID)
     {
         string strHQL;
@@ -5021,7 +5021,7 @@ public static class ShareClass
 
         if (ds.Tables[0].Rows.Count > 0)
         {
-            return Resources.lang.CaoShi;
+            return LanguageHandle.GetWord("CaoShi").ToString().Trim();
         }
         else
         {
@@ -5029,7 +5029,7 @@ public static class ShareClass
         }
     }
 
-    //åˆ¤æ–­æ˜¯å¦æ—¶æ˜¯è¶…æ—¶è‡ªåŠ¨å®¡æ‰¹é€šè¿‡çš„å·¥ä½œæµ
+    //ÅĞ¶ÏÊÇ·ñÊ±ÊÇ³¬Ê±×Ô¶¯ÉóÅúÍ¨¹ıµÄ¹¤×÷Á÷
     public static string GetWorkflowStatusByAuto(string strWLID)
     {
         string strHQL;
@@ -5039,7 +5039,7 @@ public static class ShareClass
 
         if (ds.Tables[0].Rows.Count > 0)
         {
-            return Resources.lang.CaoShi;
+            return LanguageHandle.GetWord("CaoShi").ToString().Trim();
         }
         else
         {
@@ -5047,7 +5047,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—é¡¹ç›®çŠ¶æ€çš„æœ¬è¯­
+    //È¡µÃÏîÄ¿×´Ì¬µÄ±¾Óï
     public static string GetStatusHomeNameByProjectStatus(string strStatus, string strProjectType)
     {
         string strHQL;
@@ -5068,7 +5068,7 @@ public static class ShareClass
         }
     }
 
-    //æ£€æŸ¥ç”¨æˆ·æ˜¯å¦æ˜¯é¡¹ç›®é¡¹ç›®æˆå‘˜
+    //¼ì²éÓÃ»§ÊÇ·ñÊÇÏîÄ¿ÏîÄ¿³ÉÔ±
     public static bool CheckUserIsProjectMember(string strProjectID, string strUserCode)
     {
         string strHQL;
@@ -5085,7 +5085,7 @@ public static class ShareClass
         }
     }
 
-    //æ£€æŸ¥ç”¨æˆ·æ˜¯å¦æ˜¯é¡¹ç›®ç»ç†
+    //¼ì²éÓÃ»§ÊÇ·ñÊÇÏîÄ¿¾­Àí
     public static bool CheckUserIsProjectManager(string strProjectID, string strUserCode)
     {
         string strHQL;
@@ -5102,7 +5102,7 @@ public static class ShareClass
         }
     }
 
-    //æ£€æŸ¥ç”¨æˆ·æ˜¯å¦æ˜¯ç«‹é¡¹è€…
+    //¼ì²éÓÃ»§ÊÇ·ñÊÇÁ¢ÏîÕß
     public static bool CheckUserIsProjectCreator(string strProjectID, string strUserCode)
     {
         string strHQL;
@@ -5119,7 +5119,7 @@ public static class ShareClass
         }
     }
 
-    //æ£€æŸ¥ç”¨æˆ·æ˜¯å¦èƒ½æ”¹é¡¹ç›®è®¡åˆ’
+    //¼ì²éÓÃ»§ÊÇ·ñÄÜ¸ÄÏîÄ¿¼Æ»®
     public static bool CheckMemberCanUpdatePlanByUserCode(string strProjectID, string strUserCode)
     {
         string strHQL;
@@ -5140,7 +5140,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—é¡¹ç›®æˆå‘˜åˆ—è¡¨
+    //È¡µÃÏîÄ¿³ÉÔ±ÁĞ±í
     public static void LoadProjectMember(string strProjectID, DropDownList DL_OperatorCode)
     {
         string strHQL;
@@ -5154,7 +5154,7 @@ public static class ShareClass
         DL_OperatorCode.Items.Insert(0, new ListItem("--Select--", ""));
     }
 
-    //å–å¾—é¡¹ç›®æˆå‘˜å’Œä¸‹å±æˆå‘˜çš„åˆ—è¡¨
+    //È¡µÃÏîÄ¿³ÉÔ±ºÍÏÂÊô³ÉÔ±µÄÁĞ±í
     public static void LoadProjectMemberAndDirectMember(string strProjectID, string strUserCode, DropDownList DL_OperatorCode)
     {
         string strHQL;
@@ -5177,7 +5177,7 @@ public static class ShareClass
         DL_OperatorCode.Items.Insert(0, new ListItem(strOperatorName, strOperatorCode));
     }
 
-    //å–å¾—ä¸‹å±æˆå‘˜åˆ—è¡¨
+    //È¡µÃÏÂÊô³ÉÔ±ÁĞ±í
     public static void LoadMemberList(string strUserCode, DropDownList DL_OperatorCode)
     {
         string strHQL;
@@ -5249,7 +5249,7 @@ public static class ShareClass
         DL_WorkRequest.DataBind();
     }
 
-    //å–å¾—ä»»åŠ¡è®°å½•ç±»å‹åˆ—è¡¨
+    //È¡µÃÈÎÎñ¼ÇÂ¼ÀàĞÍÁĞ±í
     public static void LoadTaskRecordType(DropDownList DL_RecordType)
     {
         string strHQL;
@@ -5263,7 +5263,7 @@ public static class ShareClass
         //DL_RecordType.Items.Insert(0, new ListItem("--Select--", ""));
     }
 
-    //å–å¾—å½“å‰æ—¶é—´é¡¹ç›®åº”å®Œæˆçš„è¿›åº¦
+    //È¡µÃµ±Ç°Ê±¼äÏîÄ¿Ó¦Íê³ÉµÄ½ø¶È
     public static int GetProjectDefaultFinishPercent(string strProjectID)
     {
         string strHQL;
@@ -5335,7 +5335,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—å½“å‰æ—¶é—´é¡¹ç›®åº”å®Œæˆçš„æˆæœ¬
+    //È¡µÃµ±Ç°Ê±¼äÏîÄ¿Ó¦Íê³ÉµÄ³É±¾
     public static Decimal GetProjectDefaultFinishCost(string strProjectID)
     {
         string strHQL;
@@ -5361,7 +5361,7 @@ public static class ShareClass
                 }
                 catch (OverflowException e)
                 {
-                    // decimal å€¼è¶…å‡ºintå€¼èŒƒå›´
+                    // decimal Öµ³¬³öintÖµ·¶Î§
                     return 0;
                 }
             }
@@ -5376,7 +5376,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—é¡¹ç›®æ´»åŠ¨è®¡åˆ’ç‰ˆæœ¬çš„ç‰ˆæœ¬å·
+    //È¡µÃÏîÄ¿»î¶¯¼Æ»®°æ±¾µÄ°æ±¾ºÅ
     public static int GetProjectPlanVersionVerID(string strProjectID, string strType)
     {
         string strHQL;
@@ -5398,7 +5398,7 @@ public static class ShareClass
         }
     }
 
-    //åˆ¤æ–­æ˜¯å¦å­˜åœ¨åŒä»£ç é¡¹ç›®
+    //ÅĞ¶ÏÊÇ·ñ´æÔÚÍ¬´úÂëÏîÄ¿
     public static int GetProjecCountByProjectCodeAndID(string strProjectCode, string strProjectID)
     {
         string strHQL;
@@ -5409,7 +5409,7 @@ public static class ShareClass
         return ds.Tables[0].Rows.Count;
     }
 
-    //å–å¾—é¡¹ç›®ç›´æ¥å‘èµ·çš„å·¥ä½œæµçš„å®é™…å·¥æ—¶
+    //È¡µÃÏîÄ¿Ö±½Ó·¢ÆğµÄ¹¤×÷Á÷µÄÊµ¼Ê¹¤Ê±
     public static string GetTotalRealManHourByProjectWorkflowStepDetail(string strWLID, string strWorkDate)
     {
         string strHQL;
@@ -5422,7 +5422,7 @@ public static class ShareClass
         return decimal.Parse(ds2.Tables[0].Rows[0][0].ToString()).ToString();
     }
 
-    //å–å¾—é¡¹ç›®ç›´æ¥å‘èµ·çš„å·¥ä½œæµçš„å®é™…è´¹ç”¨
+    //È¡µÃÏîÄ¿Ö±½Ó·¢ÆğµÄ¹¤×÷Á÷µÄÊµ¼Ê·ÑÓÃ
     public static string GetTotalRealExpenseByProjectWorkflowStepDetail(string strWLID, string strWorkDate)
     {
         string strHQL;
@@ -5435,7 +5435,7 @@ public static class ShareClass
         return decimal.Parse(ds2.Tables[0].Rows[0][0].ToString()).ToString();
     }
 
-    //å–å¾—è®¡åˆ’ç›¸å…³ä»»åŠ¡å’Œå·¥ä½œæµçš„å®é™…å·¥æ—¶
+    //È¡µÃ¼Æ»®Ïà¹ØÈÎÎñºÍ¹¤×÷Á÷µÄÊµ¼Ê¹¤Ê±
     public static string GetTotalRealManHourByPlan(string strPlanID)
     {
         string strHQL;
@@ -5451,7 +5451,7 @@ public static class ShareClass
         return (decimal.Parse(ds1.Tables[0].Rows[0][0].ToString()) + decimal.Parse(ds2.Tables[0].Rows[0][0].ToString())).ToString();
     }
 
-    //å–å¾—è®¡åˆ’ç›¸å…³ä»»åŠ¡å’Œå·¥ä½œæµçš„å®é™…è´¹ç”¨
+    //È¡µÃ¼Æ»®Ïà¹ØÈÎÎñºÍ¹¤×÷Á÷µÄÊµ¼Ê·ÑÓÃ
     public static string GetTotalRealExpenseByPlan(string strPlanID)
     {
         string strHQL;
@@ -5542,11 +5542,11 @@ public static class ShareClass
         }
     }
 
-    #endregion é¡¹ç›®ç›¸å…³æ“ä½œå‡½æ•°
+    #endregion ÏîÄ¿Ïà¹Ø²Ù×÷º¯Êı
 
-    #region é¡¹ç›®è´¹ç”¨è®¡ç®—
+    #region ÏîÄ¿·ÑÓÃ¼ÆËã
 
-    //åˆ é™¤æ›´å¤šæ–‡æ¡£
+    //É¾³ı¸ü¶àÎÄµµ
     public static void DeleteMoreDocByDataGrid(DataGrid dataGrid1)
     {
         string strHQL;
@@ -5571,7 +5571,7 @@ public static class ShareClass
         }
     }
 
-    //æ£€æŸ¥ç›¸åº”ç§‘ç›®é¡¹ç›®é¢„ç®—æœ‰æ²¡æœ‰è¶…æ”¯
+    //¼ì²éÏàÓ¦¿ÆÄ¿ÏîÄ¿Ô¤ËãÓĞÃ»ÓĞ³¬Ö§
     public static bool CheckProjectExpenseBudget(string strProjectID, string strAccount, decimal deExpense)
     {
         string strHQL;
@@ -5637,7 +5637,7 @@ public static class ShareClass
         }
     }
 
-    //æ£€æŸ¥é¡¹ç›®ç‰©èµ„ä»˜æ¬¾ç”³è¯·å•ç›¸å¯¹åº”ç§‘ç›®é¡¹ç›®é¢„ç®—æœ‰æ²¡æœ‰è¶…æ”¯
+    //¼ì²éÏîÄ¿Îï×Ê¸¶¿îÉêÇëµ¥Ïà¶ÔÓ¦¿ÆÄ¿ÏîÄ¿Ô¤ËãÓĞÃ»ÓĞ³¬Ö§
     public static bool CheckProjectExpenseBudgetByProjectMaterialPayApplicant(string strProjectID, string strAccount, decimal deExpense)
     {
         string strHQL;
@@ -5705,7 +5705,7 @@ public static class ShareClass
     }
 
 
-    //ä¾åœ¨ç”¨ç‰ˆé¡¹ç›®è®¡åˆ’è¿›åº¦æ›´æ”¹å½“å‰æ—¶é—´é¡¹ç›®å®Œæˆè¿›åº¦
+    //ÒÀÔÚÓÃ°æÏîÄ¿¼Æ»®½ø¶È¸ü¸Äµ±Ç°Ê±¼äÏîÄ¿Íê³É½ø¶È
     public static void UpdateProjectScheduleByActivityPlanSchedule(string strProjectID)
     {
         string strHQL;
@@ -5752,7 +5752,7 @@ public static class ShareClass
     }
 
 
-    //è®¡ç®—é¡¹ç›®è¿›åº¦
+    //¼ÆËãÏîÄ¿½ø¶È
     public static void FinishPercentPicture(DataGrid dataGrid, int intCellNumber)
     {
         string strProjectID;
@@ -5812,7 +5812,7 @@ public static class ShareClass
 
     }
 
-    //è®¡ç®—é¡¹ç›®è´¹ç”¨ä¸é¢„ç®—è¿›åº¦
+    //¼ÆËãÏîÄ¿·ÑÓÃÓëÔ¤Ëã½ø¶È
     public static void FinChargePercentByRow(DataGrid dataGrid, int intCellNumber)
     {
         string strProjectID;
@@ -5841,7 +5841,7 @@ public static class ShareClass
 
                 deBudget = project.Budget;
 
-                //å®é™…è´¹ç”¨å’Œé¢„ç®—å¯¹æ¯”
+                //Êµ¼Ê·ÑÓÃºÍÔ¤Ëã¶Ô±È
                 strHQL = "from ProRealCharge as proRealCharge where proRealCharge.ProjectID = " + strProjectID;
                 lst = proRealChargeBLL.GetAllProRealCharges(strHQL);
                 if (lst.Count == 0)
@@ -5901,7 +5901,7 @@ public static class ShareClass
         }
     }
 
-    //è®¾ç½®é¡¹ç›®æ—¶é—´å’Œè¶…æœŸå¤©æ•°
+    //ÉèÖÃÏîÄ¿Ê±¼äºÍ³¬ÆÚÌìÊı
     public static void SetProjectStartAndEndTime(DataGrid dataGrid, int intCellNumber)
     {
         int i;
@@ -5931,7 +5931,7 @@ public static class ShareClass
             {
                 if (strProjectStatus == "CaseClosed" | strProjectStatus == "Cancel")
                 {
-                    ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_MoreTime")).Text = Resources.lang.ChaoQi;
+                    ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_MoreTime")).Text = LanguageHandle.GetWord("ChaoQi").ToString().Trim();
                     ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_DelayDays")).Text = "0";
                     ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_MoreTime")).BackColor = Color.White;
                     ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_MoreTime")).ForeColor = Color.Green;
@@ -5940,7 +5940,7 @@ public static class ShareClass
                 }
                 else
                 {
-                    ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_MoreTime")).Text = Resources.lang.ChaoQi;
+                    ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_MoreTime")).Text = LanguageHandle.GetWord("ChaoQi").ToString().Trim();
                     ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_DelayDays")).Text = intDays.ToString();
                     ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_BeginDate")).BackColor = Color.Red;
                     ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_EndDate")).BackColor = Color.Red;
@@ -5952,7 +5952,7 @@ public static class ShareClass
             {
                 if (strProjectStatus == "CaseClosed" | strProjectStatus == "Cancel")
                 {
-                    ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_MoreTime")).Text = Resources.lang.ShengYu;
+                    ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_MoreTime")).Text = LanguageHandle.GetWord("ShengYu").ToString().Trim();
                     ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_DelayDays")).Text = "0";
                     ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_MoreTime")).BackColor = Color.White;
                     ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_MoreTime")).ForeColor = Color.Green;
@@ -5961,7 +5961,7 @@ public static class ShareClass
                 }
                 else
                 {
-                    ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_MoreTime")).Text = Resources.lang.ShengYu;
+                    ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_MoreTime")).Text = LanguageHandle.GetWord("ShengYu").ToString().Trim();
                     ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_DelayDays")).Text = (0 - intDays).ToString();
                     ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_MoreTime")).BackColor = Color.White;
                     ((System.Web.UI.WebControls.Label)dataGrid.Items[i].FindControl("LB_MoreTime")).ForeColor = Color.Green;
@@ -5972,13 +5972,13 @@ public static class ShareClass
         }
     }
 
-    //æ›¿æ¢HTMLæ ‡è®°
+    //Ìæ»»HTML±ê¼Ç
     public static string NoHTML(string Htmlstring)
     {
-        //åˆ é™¤è„šæœ¬
+        //É¾³ı½Å±¾
         Htmlstring = Regex.Replace(Htmlstring, @"<script[^>]*?>.*?</script>", "", RegexOptions.IgnoreCase);
 
-        //åˆ é™¤HTML
+        //É¾³ıHTML
         Htmlstring = Regex.Replace(Htmlstring, @"<(.[^>]*)>", "", RegexOptions.IgnoreCase);
         Htmlstring = Regex.Replace(Htmlstring, @"([\r\n])[\s]+", "", RegexOptions.IgnoreCase);
         Htmlstring = Regex.Replace(Htmlstring, @"-->", "", RegexOptions.IgnoreCase);
@@ -6001,7 +6001,7 @@ public static class ShareClass
         return Htmlstring;
     }
 
-    //å¾—åˆ°é¡¹ç›®æ—¥å¿—é•¿åº¦(è¶…è¿‡ä¸Šé™å€¼è®¾ä¸ºä¸Šé™å€¼ï¼‰
+    //µÃµ½ÏîÄ¿ÈÕÖ¾³¤¶È(³¬¹ıÉÏÏŞÖµÉèÎªÉÏÏŞÖµ£©
     public static int GetDailyWorkLogLength(string strWorkLog)
     {
         int intLength, intCharUpper;
@@ -6018,7 +6018,7 @@ public static class ShareClass
         return intLength;
     }
 
-    //å¾—åˆ°ç”¨æˆ·æ¯æ—¥ä¸Šä¼ çš„é¡¹ç›®æ–‡æ¡£æ•°(è¶…è¿‡ä¸Šé™å€¼è®¾ä¸ºä¸Šé™å€¼ï¼‰
+    //µÃµ½ÓÃ»§Ã¿ÈÕÉÏ´«µÄÏîÄ¿ÎÄµµÊı(³¬¹ıÉÏÏŞÖµÉèÎªÉÏÏŞÖµ£©
     public static int GetDailyUploadDocNumber(string strUserCode, string strProjectID)
     {
         string strHQL;
@@ -6030,14 +6030,14 @@ public static class ShareClass
 
         strHQL = "from Document as document where (((document.RelatedType = 'Project' and document.RelatedID = " + strProjectID + ")";
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or (document.Visible in ( 'éƒ¨é—¨','å…¨ä½“'))))";
+        strHQL += " or (document.Visible in ( 'Department','Entire'))))";
         strHQL += " or (((document.RelatedType = 'Requirement' and document.RelatedID in (select relatedDefect.DefectID from RelatedDefect as relatedDefect where relatedDefect.ProjectID = " + strProjectID + "))";
-        strHQL += " or (document.RelatedType = 'é£é™©' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";
+        strHQL += " or (document.RelatedType = '·çÏÕ' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";  
         strHQL += " or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
         strHQL += " or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
-        strHQL += " or (document.RelatedType = 'ä¼šè®®' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Project' and  meeting.RelatedID = " + strProjectID + "))";
-        strHQL += " and ((document.Visible in ('ä¼šè®®','éƒ¨é—¨') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";
-        strHQL += " or (document.Visible = 'å…¨ä½“' )))))";
+        strHQL += " or (document.RelatedType = '»áÒé' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Project' and  meeting.RelatedID = " + strProjectID + "))";  
+        strHQL += " and ((document.Visible in ('»áÒé','Department') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";  
+        strHQL += " or (document.Visible = 'Entire' )))))";
         strHQL += " and to_char(document.UploadTime,'yyyymmdd') = " + "'" + strCurrentDate + "'";
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
 
@@ -6148,7 +6148,7 @@ public static class ShareClass
         return intDocUpper;
     }
 
-    //å–å¾—é¡¹ç›®ç±»å‹åç§°
+    //È¡µÃÏîÄ¿ÀàĞÍÃû³Æ
     public static string GetDocTypeName(string strDocTypeID)
     {
         DocTypeBLL docTypeBLL = new DocTypeBLL();
@@ -6161,11 +6161,11 @@ public static class ShareClass
         return docType.Type.Trim();
     }
 
-    #endregion é¡¹ç›®è´¹ç”¨è®¡ç®—
+    #endregion ÏîÄ¿·ÑÓÃ¼ÆËã
 
-    #region å·¥ä½œæµç›¸å…³æ“ä½œå‡½æ•°
+    #region ¹¤×÷Á÷Ïà¹Ø²Ù×÷º¯Êı
 
-    //è®¾ç½®ç¼ºçœçš„æ–‡ä»¶ç±»å‹
+    //ÉèÖÃÈ±Ê¡µÄÎÄ¼şÀàĞÍ
     public static void SetDefaultDocType(string strDocType, Label LB_DocTypeID, TextBox TB_DocType)
     {
         string strHQL;
@@ -6188,7 +6188,7 @@ public static class ShareClass
         }
     }
 
-    //è®¾ç½®ç¼ºçœçš„å·¥ä½œæµæ¨¡æ¿æ ‘
+    //ÉèÖÃÈ±Ê¡µÄ¹¤×÷Á÷Ä£°åÊ÷
     public static void SetDefaultWorkflowTemplate(string strDocType, DropDownList DL_TemName)
     {
         string strHQL;
@@ -6203,7 +6203,7 @@ public static class ShareClass
         DL_TemName.DataBind();
     }
 
-    //è®¾ç½®å¯¹è±¡ç›¸å…³ç¼ºçœçš„å·¥ä½œæµæ¨¡æ¿
+    //ÉèÖÃ¶ÔÏóÏà¹ØÈ±Ê¡µÄ¹¤×÷Á÷Ä£°å
     public static void SetDefaultWorkflowTemplateByRelateName(string strRelatedType, string strRelatedID, string strRelateName, DropDownList DL_WorkFlowTemName)
     {
         string strHQL;
@@ -6230,7 +6230,7 @@ public static class ShareClass
 
     }
 
-    //æ ¹æ®æ–‡æ¡£æœ‰æ— å·¥ä½œæµæƒ…å†µéšè—åˆ é™¤æŒ‰é’®
+    //¸ù¾İÎÄµµÓĞÎŞ¹¤×÷Á÷Çé¿öÒş²ØÉ¾³ı°´Å¥
     public static void HideDataGridDeleteButtonForDocUploadPage(DataGrid dataGrid1)
     {
         string strHQL;
@@ -6265,7 +6265,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æ–‡æ¡£ç›¸å…³å·¥ä½œæµæ•°é‡
+    //È¡µÃÎÄµµÏà¹Ø¹¤×÷Á÷ÊıÁ¿
     public static int GetRelatedWorkflowCountForDoc(string strRelatedType, string strRelatedID, string strRelatedName)
     {
         string strHQL;
@@ -6278,7 +6278,7 @@ public static class ShareClass
         return ds.Tables[0].Rows.Count;
     }
 
-    //å–å¾—æ–‡æ¡£
+    //È¡µÃÎÄµµ
     public static Document GetDocumentByDocID(string strDocID)
     {
         string strHQL;
@@ -6294,7 +6294,7 @@ public static class ShareClass
     }
 
 
-    //å–å¾—å·¥ä½œæµæ¨¡æ¿æ˜¯å¦æ˜¯è‡ªåŠ¨æ¿€æ´»çŠ¶æ€
+    //È¡µÃ¹¤×÷Á÷Ä£°åÊÇ·ñÊÇ×Ô¶¯¼¤»î×´Ì¬
     public static string GetWorkflowTemplateIsAutoActiveStatus(string strTemName)
     {
         string strHQL;
@@ -6312,7 +6312,7 @@ public static class ShareClass
     }
 
 
-    //è‡ªåŠ¨é™„åŠ å…¶å®ƒå·²é€‰æ‹©çš„è¦è¯„å®¡çš„å·¥ä½œæµæ–‡ä»¶
+    //×Ô¶¯¸½¼ÓÆäËüÒÑÑ¡ÔñµÄÒªÆÀÉóµÄ¹¤×÷Á÷ÎÄ¼ş
     public static void AddMoreWLSelectedDocumentForUploadDocPage(DataGrid dataGrid1, int intRelatedID, string strExcludeID)
     {
         string strDocID;
@@ -6338,7 +6338,7 @@ public static class ShareClass
         }
     }
 
-    //è‡ªåŠ¨é™„åŠ è¦è¯„å®¡çš„å·¥ä½œæµæ–‡ä»¶
+    //×Ô¶¯¸½¼ÓÒªÆÀÉóµÄ¹¤×÷Á÷ÎÄ¼ş
     public static void AddWLDocumentForUploadDocPage(string strFromDocID, int intRelatedID)
     {
         string strHQL;
@@ -6353,13 +6353,13 @@ public static class ShareClass
         document.RelatedID = intRelatedID;
         document.RelatedName = strFromDocID;
         document.UploadTime = DateTime.Now;
-        document.Status = Resources.lang.YiPingSheng;
+        document.Status = LanguageHandle.GetWord("YiPingSheng").ToString().Trim();
 
         try
         {
             documentBLL.AddDocument(document);
 
-            strHQL = string.Format(@"Update T_Document Set Status = '{0}' Where DocID = {1}", Resources.lang.YiPingSheng, strFromDocID);
+            strHQL = string.Format(@"Update T_Document Set Status = '{0}' Where DocID = {1}", LanguageHandle.GetWord("YiPingSheng").ToString().Trim(), strFromDocID);
             ShareClass.RunSqlCommand(strHQL);
         }
         catch
@@ -6367,7 +6367,7 @@ public static class ShareClass
         }
     }
 
-    //æ›´æ”¹æ–‡æ¡£å…³è”ç±»å‹å’ŒID
+    //¸ü¸ÄÎÄµµ¹ØÁªÀàĞÍºÍID
     public static void UpdateDocumentRelatedTypeAndRelatedID(string strDocID, string strRelatedType, int intRelatedID)
     {
         string strHQL;
@@ -6391,7 +6391,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—å…³è”å·¥ä½œæµçš„çŠ¶æ€
+    //È¡µÃ¹ØÁª¹¤×÷Á÷µÄ×´Ì¬
     public static string GetRelatedWorkflowStatus(string strRelatedType, string strRelatedID)
     {
         string strHQL;
@@ -6404,11 +6404,11 @@ public static class ShareClass
         }
         else
         {
-            return Resources.lang.NoReviewed;
+            return LanguageHandle.GetWord("NoReviewed").ToString().Trim();
         }
     }
 
-    //å–å¾—å…³è”å·¥ä½œæµçš„çŠ¶æ€
+    //È¡µÃ¹ØÁª¹¤×÷Á÷µÄ×´Ì¬
     public static string GetRelatedWorkflowStatusForDocUploadPage(string strDocName, string strDocID1)
     {
         string strHQL;
@@ -6418,15 +6418,15 @@ public static class ShareClass
 
         if (ds.Tables[0].Rows.Count > 0)
         {
-            return Resources.lang.YiPingSheng;
+            return LanguageHandle.GetWord("YiPingSheng").ToString().Trim();
         }
         else
         {
-            return Resources.lang.NoReviewed;
+            return LanguageHandle.GetWord("NoReviewed").ToString().Trim();
         }
     }
 
-    //å–å¾—å‰æ­¥å®¡æ‰¹äºº
+    //È¡µÃÇ°²½ÉóÅúÈË
     public static string GetPriorStepLastestOperator(string strWLID, string strStepID, string strStepDetailID)
     {
         string strHQL1, strHQL2, strHQL3;
@@ -6497,7 +6497,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—ä¸‹ä¸€æ­¥å®¡æ‰¹äºº
+    //È¡µÃÏÂÒ»²½ÉóÅúÈË
     public static string GetNextStepLastestOperator(string strWLID, string strStepID, string strStepDetailID)
     {
         string strHQL1, strHQL2, strHQL3;
@@ -6569,7 +6569,7 @@ public static class ShareClass
     }
 
 
-    //å–å¾—æœ€æ–°ä¸€æ­¥å®¡æ‰¹äºº
+    //È¡µÃ×îĞÂÒ»²½ÉóÅúÈË
     public static string GetLastestStepLastestOperator(string strWLID)
     {
         string strHQL1;
@@ -6608,7 +6608,7 @@ public static class ShareClass
     }
 
 
-    //å–å¾—ä¸šåŠ¡è¡¨å•å…³è”çš„æµç¨‹ID
+    //È¡µÃÒµÎñ±íµ¥¹ØÁªµÄÁ÷³ÌID
     public static string GetBusinessRelatedWorkFlowID(string strWLType, string strRelatedType, string strRelatedID)
     {
         string strHQL;
@@ -6629,7 +6629,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—ä¸šåŠ¡è¡¨å•å…³è”çš„æµç¨‹æ­¥éª¤æ¨¡æ¿æ˜¯å¦å¯ä»¥å…¨è¡¨ç¼–è¾‘
+    //È¡µÃÒµÎñ±íµ¥¹ØÁªµÄÁ÷³Ì²½ÖèÄ£°åÊÇ·ñ¿ÉÒÔÈ«±í±à¼­
     public static string GetWorkflowTemplateStepFullAllowEditValue(string strWLType, string strRelatedType, string strRelatedID, string strStepSortNumber)
     {
         string strTemName, strAllowFullEdit;
@@ -6671,7 +6671,7 @@ public static class ShareClass
         return strAllowFullEdit;
     }
 
-    //å–å¾—å·¥ä½œæµåç§°
+    //È¡µÃ¹¤×÷Á÷Ãû³Æ
     public static string GetWorkFlowName(string strWLID)
     {
         string strHQL;
@@ -6687,7 +6687,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0]["WLName"].ToString().Trim();
     }
 
-    //å–å¾—å·¥ä½œæµç±»å‹
+    //È¡µÃ¹¤×÷Á÷ÀàĞÍ
     public static string GetWorkFlowType(string strWLID)
     {
         string strHQL;
@@ -6704,7 +6704,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0]["WLType"].ToString().Trim();
     }
 
-    //å–å¾—å·¥ä½œæµå…³è”ç±»å‹
+    //È¡µÃ¹¤×÷Á÷¹ØÁªÀàĞÍ
     public static string GetWorkFlowRelatedType(string strWLID)
     {
         string strHQL;
@@ -6721,7 +6721,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0]["RelatedType"].ToString().Trim();
     }
 
-    //å–å¾—å·¥ä½œæµå…³è”ID
+    //È¡µÃ¹¤×÷Á÷¹ØÁªID
     public static string GetWorkFlowRelatedID(string strWLID)
     {
         string strHQL;
@@ -6738,7 +6738,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0]["RelatedID"].ToString().Trim();
     }
 
-    //å–å¾—å·¥ä½œæµå½“å‰æ­¥éª¤æ¨¡æ¿æ˜¯å¦å…è®¸åŠ ç­¾
+    //È¡µÃ¹¤×÷Á÷µ±Ç°²½ÖèÄ£°åÊÇ·ñÔÊĞí¼ÓÇ©
     public static string GetWorkflowTemplateStepAllowCurrentStepAddApprover(string strStepID)
     {
         string strHQL;
@@ -6756,7 +6756,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—å·¥ä½œæµä¸‹ä¸€æ­¥éª¤æ¨¡æ¿æ˜¯å¦å…è®¸åŠ ç­¾
+    //È¡µÃ¹¤×÷Á÷ÏÂÒ»²½ÖèÄ£°åÊÇ·ñÔÊĞí¼ÓÇ©
     public static string GetWorkflowTemplateStepAllowNextStepAddApprover(string strStepID)
     {
         string strHQL;
@@ -6774,7 +6774,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æ­¤æµç¨‹çš„ä¸Šçº§æµç¨‹ID
+    //È¡µÃ´ËÁ÷³ÌµÄÉÏ¼¶Á÷³ÌID
     public static string GetParentWorklowID(string strWLID)
     {
         string strHQL;
@@ -6792,7 +6792,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æ­¤æµç¨‹çš„ä¸Šçº§æµç¨‹æ­¥éª¤ID
+    //È¡µÃ´ËÁ÷³ÌµÄÉÏ¼¶Á÷³Ì²½ÖèID
     public static string GetParentWorklowStepID(string strWLID)
     {
         string strHQL;
@@ -6810,7 +6810,7 @@ public static class ShareClass
         }
     }
 
-    //ä¾æ­¥éª¤IDï¼Œå–å¾—æ­¤æµç¨‹çš„ä¸‹çº§æµç¨‹ID
+    //ÒÀ²½ÖèID£¬È¡µÃ´ËÁ÷³ÌµÄÏÂ¼¶Á÷³ÌID
     public static string GetChildWorklowIDByStepID(string strWLID, string strStepID)
     {
         string strHQL;
@@ -6827,7 +6827,7 @@ public static class ShareClass
         }
     }
 
-    //BusinessForm,è£…è½½å…³è”ä¿¡æ¯
+    //BusinessForm,×°ÔØ¹ØÁªĞÅÏ¢
     public static void LoadBusinessForm(string strRelatedType, string strRelatedID, string strTemName, System.Web.UI.HtmlControls.HtmlIframe IFrame_RelatedInformation)
     {
         string strURL;
@@ -6844,7 +6844,7 @@ public static class ShareClass
         IFrame_RelatedInformation.Attributes.Add("src", strURL);
     }
 
-    //BusinessForm,ä¾ç±»å‹å’ŒIDå–å¾—æµç¨‹æ¨¡æ¿åç§°
+    //BusinessForm,ÒÀÀàĞÍºÍIDÈ¡µÃÁ÷³ÌÄ£°åÃû³Æ
     public static string getBusinessFormTemName(string strRelatedType, string strRelatedID)
     {
         string strHQL;
@@ -6864,7 +6864,7 @@ public static class ShareClass
         }
     }
 
-    //BusinessForm,åˆ—å‡ºä¸šåŠ¡è¡¨å•ç±»å‹
+    //BusinessForm,ÁĞ³öÒµÎñ±íµ¥ÀàĞÍ
     public static void LoadWorkflowType(DropDownList DL_WLType, string strLangCode)
     {
         string strHQL;
@@ -6881,7 +6881,7 @@ public static class ShareClass
         DL_WLType.Items.Insert(0, new ListItem("--Select--", "0"));
     }
 
-    //BusinessForm,å–ä¸šåŠ¡è¡¨å•æ¨¡æ¿åç§°
+    //BusinessForm,È¡ÒµÎñ±íµ¥Ä£°åÃû³Æ
     public static string GetWorkTemplateType(string strTemName)
     {
         IList lst;
@@ -6905,7 +6905,7 @@ public static class ShareClass
         return strTemType;
     }
 
-    //æ›´æ”¹å·¥ä½œæµå…³è”çš„æ•°æ®æ–‡ä»¶
+    //¸ü¸Ä¹¤×÷Á÷¹ØÁªµÄÊı¾İÎÄ¼ş
     //strCmdText = "select * from T_AssetPurchaseOrder where POID = " + strPOID;
     public static void UpdateWokflowRelatedXMLFile(string strTableType, string strWLID, string strWLStepDetailID, string strCmdText)
     {
@@ -6939,7 +6939,7 @@ public static class ShareClass
         }
     }
 
-    //BusinessFormï¼Œå…³è”ç›¸åº”çš„ä¸šåŠ¡è¡¨å•æ¨¡æ¿
+    //BusinessForm£¬¹ØÁªÏàÓ¦µÄÒµÎñ±íµ¥Ä£°å
     public static void SaveRelatedBusinessForm(string strRelatedType, string strRelatedID, string strTemName, string strAllowUpdate, string strUserCode)
     {
         string strHQL;
@@ -6977,7 +6977,7 @@ public static class ShareClass
         }
     }
 
-    //BusinessForm,å–å¾—ä¸šåŠ¡è¡¨å•æ¨¡æ¿åç§°
+    //BusinessForm,È¡µÃÒµÎñ±íµ¥Ä£°åÃû³Æ
     public static string getRelatedBusinessFormTemName(string strRelatedType, string strRelatedID)
     {
         string strHQL;
@@ -6995,7 +6995,7 @@ public static class ShareClass
         }
     }
 
-    //BusinessForm,å¤„ç†å…³è”çš„ä¸šåŠ¡è¡¨å•æ•°æ®
+    //BusinessForm,´¦Àí¹ØÁªµÄÒµÎñ±íµ¥Êı¾İ
     public static void InsertOrUpdateTaskAssignRecordWFXMLData(string strRelatedType, string strRelatedID, string strAssignType, string strAssignID, string strUserCode)
     {
         string strHQL;
@@ -7023,7 +7023,7 @@ public static class ShareClass
         }
     }
 
-    //åˆ—å‡ºæµç¨‹å…³è”æ¨¡ç»„
+    //ÁĞ³öÁ÷³Ì¹ØÁªÄ£×é
     public static void LoadWorkFlowTStepRelatedModule(Repeater RP_RelatedModule, string strWorkflowID, string strWorkflowStepID, string strWorkflowStepDetailID, string strStepGUID, string strLangCode, string strUserCode)
     {
         string strHQL;
@@ -7044,10 +7044,10 @@ public static class ShareClass
         RP_RelatedModule.DataBind();
     }
 
-    //å¦‚æµç¨‹ç›¸å…³æ¨¡ç»„ï¼Œåˆå§‹åŒ–
+    //ÈçÁ÷³ÌÏà¹ØÄ£×é£¬³õÊ¼»¯
     public static void InitialWorkflowRelatedModule(string strRelatedWorkflowID, string strRelatedWorkflowStepID, Button BT_CreateMain, LinkButton BT_NewMain, Button BT_CreateDetail, LinkButton BT_NewDetail, string strMainTableCanAdd, string strDetailTableCanAdd, string strMainTableCanEdit, string strDetailTableCanEdit)
     {
-        //WorkFlow,å¦‚æœæ˜¯ç”±å·¥ä½œæµå¯åŠ¨çš„ä¸šåŠ¡ï¼Œé‚£ä¹ˆéšè—æ¨¡ç³ŠæŸ¥è¯¢åŠŸèƒ½
+        //WorkFlow,Èç¹ûÊÇÓÉ¹¤×÷Á÷Æô¶¯µÄÒµÎñ£¬ÄÇÃ´Òş²ØÄ£ºı²éÑ¯¹¦ÄÜ
         if (strRelatedWorkflowID != null)
         {
             if (strMainTableCanAdd == "YES")
@@ -7088,13 +7088,13 @@ public static class ShareClass
         }
     }
 
-    //å¦‚æµç¨‹ç›¸å…³æ¨¡ç»„ï¼Œä¸»è¡¨åˆå§‹åŒ–
+    //ÈçÁ÷³ÌÏà¹ØÄ£×é£¬Ö÷±í³õÊ¼»¯
     public static void MainTableChangeWorkflowRelatedModule(string strCurrentUserCode, string strRelatedBusinessType, string strRelatedBusinessID, string strRelatedBusinessCreatorCode, string strRelatedWorkflowID, string strRelatedWorkflowStepID, string strRelatedWorkflowStepDetailID, Button BT_CreateMain, LinkButton BT_NewMain, Button BT_CreateDetail, LinkButton BT_NewDetail, string strMainTableCanEdit)
     {
-        //WorkFlow,å¦‚æœæ­¤å•å’Œå·¥ä½œæµç›¸å…³ï¼Œé‚£ä¹ˆä¾å·¥ä½œæµçŠ¶æ€å†³å®šèƒ½å¦ä¿å­˜å•æ®æ•°æ®
+        //WorkFlow,Èç¹û´Ëµ¥ºÍ¹¤×÷Á÷Ïà¹Ø£¬ÄÇÃ´ÒÀ¹¤×÷Á÷×´Ì¬¾ö¶¨ÄÜ·ñ±£´æµ¥¾İÊı¾İ
         string strWFStatus, strStepStatus;
 
-        //ä¸ä»æµç¨‹å¯åŠ¨æ—¶ï¼Œåˆ¤æ–­æœ‰æ²¡æœ‰ç›¸å…³çš„æµç¨‹è®°å½•
+        //²»´ÓÁ÷³ÌÆô¶¯Ê±£¬ÅĞ¶ÏÓĞÃ»ÓĞÏà¹ØµÄÁ÷³Ì¼ÇÂ¼
         if (strRelatedWorkflowID == null)
         {
             WorkFlowRelatedModule workFlowRelatedModule = ShareClass.getModuleToRelatedWorkflow(strRelatedBusinessType, strRelatedBusinessID);
@@ -7129,10 +7129,10 @@ public static class ShareClass
         }
     }
 
-    //å¦‚æµç¨‹ç›¸å…³æ¨¡ç»„ï¼Œä¸»è¡¨åˆ é™¤
+    //ÈçÁ÷³ÌÏà¹ØÄ£×é£¬Ö÷±íÉ¾³ı
     public static bool MainTableDeleteWorkflowRelatedModule(string strCurrentUserCode, string strRelatedBusinessCreatorCode, string strRelatedWorkflowID, string strRelatedWorkflowStepID, string strRelatedWorkflowStepDetailID, string strMainTableCanDelete)
     {
-        //Workflow,å¦‚æœå­˜åœ¨å…³è”å·¥ä½œæµï¼Œé‚£ä¹ˆè¦æ‰§è¡Œä¸‹é¢çš„ä»£ç 
+        //Workflow,Èç¹û´æÔÚ¹ØÁª¹¤×÷Á÷£¬ÄÇÃ´ÒªÖ´ĞĞÏÂÃæµÄ´úÂë
         string strWFStatus, strStepStatus;
 
         if (strRelatedWorkflowID != null)
@@ -7155,13 +7155,13 @@ public static class ShareClass
         return true;
     }
 
-    //å¦‚æµç¨‹ç›¸å…³æ¨¡ç»„ï¼Œæ˜ç»†è¡¨åˆå§‹åŒ–
+    //ÈçÁ÷³ÌÏà¹ØÄ£×é£¬Ã÷Ï¸±í³õÊ¼»¯
     public static void DetailTableChangeWorkflowRelatedModule(string strCurrentUserCode, string strRelatedBusinessType, string strRelatedBusinessID, string strRelatedWorkflowID, string strRelatedWorkflowStepID, string strRelatedWorkflowStepDetailID, Button BT_CreateMain, LinkButton BT_NewMain, Button BT_CreateDetail, LinkButton BT_NewDetail, string strDetailTableCanAdd, string strDetailTableCanEdit)
     {
-        //WorkFlow,å¦‚æœæ­¤å•å’Œå·¥ä½œæµç›¸å…³ï¼Œé‚£ä¹ˆä¾å·¥ä½œæµçŠ¶æ€å†³å®šèƒ½å¦ä¿å­˜å•æ®æ•°æ®
+        //WorkFlow,Èç¹û´Ëµ¥ºÍ¹¤×÷Á÷Ïà¹Ø£¬ÄÇÃ´ÒÀ¹¤×÷Á÷×´Ì¬¾ö¶¨ÄÜ·ñ±£´æµ¥¾İÊı¾İ
         string strWFStatus, strStepStatus;
 
-        //ä¸ä»æµç¨‹å¯åŠ¨æ—¶ï¼Œåˆ¤æ–­æœ‰æ²¡æœ‰ç›¸å…³çš„æµç¨‹è®°å½•
+        //²»´ÓÁ÷³ÌÆô¶¯Ê±£¬ÅĞ¶ÏÓĞÃ»ÓĞÏà¹ØµÄÁ÷³Ì¼ÇÂ¼
         if (strRelatedWorkflowID == null)
         {
             WorkFlowRelatedModule workFlowRelatedModule = ShareClass.getModuleToRelatedWorkflow(strRelatedBusinessType, strRelatedBusinessID);
@@ -7204,7 +7204,7 @@ public static class ShareClass
         }
     }
 
-    //å¦‚æµç¨‹ç›¸å…³æ¨¡ç»„ï¼Œæ˜ç»†è¡¨åˆ é™¤
+    //ÈçÁ÷³ÌÏà¹ØÄ£×é£¬Ã÷Ï¸±íÉ¾³ı
     public static bool DetailTableDeleteWorkflowRelatedModule(string strCurrentUserCode, string strRelatedBusinessCreatorCode, string strRelatedWorkflowID, string strRelatedWorkflowStepID, string strRelatedWorkflowStepDetailID, string strDetailTableCanDelete)
     {
         string strWFStatus, strStepStatus;
@@ -7235,7 +7235,7 @@ public static class ShareClass
         return true;
     }
 
-    //å–å¾—æµç¨‹æ“ä½œæ˜ç»†è¡¨
+    //È¡µÃÁ÷³Ì²Ù×÷Ã÷Ï¸±í
     public static WorkFlowStepDetail GetWorkFlowStepDetail(string strWorkflowStepDetailID)
     {
         string strHQL;
@@ -7255,7 +7255,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æµç¨‹æ¨¡æ¿æ­¥éª¤
+    //È¡µÃÁ÷³ÌÄ£°å²½Öè
     public static WorkFlowTStep GetWorkFlowTStep(string strTemName, int intSortNumber)
     {
         string strHQL;
@@ -7270,7 +7270,7 @@ public static class ShareClass
         return workFlowTStep;
     }
 
-    //å–å¾—æµç¨‹æ­¥éª¤
+    //È¡µÃÁ÷³Ì²½Öè
     public static WorkFlowStep GetWorkFlowStep(string strStepID)
     {
         string strHQL;
@@ -7346,7 +7346,7 @@ public static class ShareClass
         }
     }
 
-    //æ·»åŠ æ¨¡ç»„å…³è”æµç¨‹è®°å½•
+    //Ìí¼ÓÄ£×é¹ØÁªÁ÷³Ì¼ÇÂ¼
     public static void AddModuleToRelatedWorkflow(string strWorkflowID, string strWorkflowStepID, string strWorkflowStepDetailID, string strRelatedModuleName, string strRelatedID)
     {
         if (strWorkflowID != null)
@@ -7370,7 +7370,7 @@ public static class ShareClass
         }
     }
 
-    //åˆ é™¤æ¨¡ç»„å…³è”æµç¨‹è®°å½•
+    //É¾³ıÄ£×é¹ØÁªÁ÷³Ì¼ÇÂ¼
     public static void DeleteModuleToRelatedWorkflow(string strWorkflowID, string strWorkflowStepID, string strWorkflowStepDetailID, string strRelatedModuleName, string strRelatedID)
     {
         if (strWorkflowID != null)
@@ -7390,7 +7390,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æ¨¡ç»„ç›¸å…³æµç¨‹è®°å½•
+    //È¡µÃÄ£×éÏà¹ØÁ÷³Ì¼ÇÂ¼
     public static WorkFlowRelatedModule getModuleToRelatedWorkflow(string strRelatedModuleName, string strRelatedID)
     {
         string strHQL;
@@ -7410,7 +7410,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æ˜¯å¦è‡ªåŠ¨æ¿€æ´»å·¥ä½œæµ
+    //È¡µÃÊÇ·ñ×Ô¶¯¼¤»î¹¤×÷Á÷
     public static string GetWorkflowTemplateAutoActive(string strTemName)
     {
         string strHQL;
@@ -7421,7 +7421,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString().Trim();
     }
 
-    //å–å¾—å·¥ä½œæµå…³è”çš„MainTableID
+    //È¡µÃ¹¤×÷Á÷¹ØÁªµÄMainTableID
     public static int GetWorkflowMainTableID(string strWFID)
     {
         string strHQL;
@@ -7439,7 +7439,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—å·¥ä½œæµXMLæ–‡ä»¶
+    //È¡µÃ¹¤×÷Á÷XMLÎÄ¼ş
     public static string GetWorkflowXMLFile(string strWFID)
     {
         string strHQL;
@@ -7462,7 +7462,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—å·¥ä½œæµæ¨¡æ¿è®¾è®¡ç±»å‹
+    //È¡µÃ¹¤×÷Á÷Ä£°åÉè¼ÆÀàĞÍ
     public static string GetWLTemplateDesignType(string strTemName)
     {
         string strHQL;
@@ -7477,7 +7477,7 @@ public static class ShareClass
         return workFlowTemplate.DesignType.Trim();
     }
 
-    //å–å¾—å·¥ä½œæµæ¨¡æ¿ä¸²
+    //È¡µÃ¹¤×÷Á÷Ä£°å´®
     public static string GetWLTemplateIdentifyString(string strTemName)
     {
         string strHQL;
@@ -7499,7 +7499,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—å·¥ä½œæµæ¨¡æ¿å
+    //È¡µÃ¹¤×÷Á÷Ä£°åÃû
     public static string GetWLTemplateNameByIdentifyString(string strIdentifyString)
     {
         string strHQL;
@@ -7711,7 +7711,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æµç¨‹æ­¥åºå·
+    //È¡µÃÁ÷³Ì²½ĞòºÅ
     public static int GetWorkFlowCurrentStepSortNumber(string strStepID)
     {
         string strHQL;
@@ -7730,7 +7730,7 @@ public static class ShareClass
         return intSortNumber;
     }
 
-    //æ›´æ”¹æµç¨‹ç›¸å…³å¯¹è±¡çŠ¶æ€
+    //¸ü¸ÄÁ÷³ÌÏà¹Ø¶ÔÏó×´Ì¬
     public static bool UpdateRelatedBusinessStatus(string strWFType, string strRelatedID, string strOperation)
     {
         string strHQL;
@@ -7798,11 +7798,11 @@ public static class ShareClass
         return strWFDefinition;
     }
 
-    #endregion å·¥ä½œæµç›¸å…³æ“ä½œå‡½æ•°
+    #endregion ¹¤×÷Á÷Ïà¹Ø²Ù×÷º¯Êı
 
-    #region å®šä¹‰å„ç§ä¸šåŠ¡æ ‘
+    #region ¶¨Òå¸÷ÖÖÒµÎñÊ÷
 
-    ////è®¾ç½®å‘˜å·¥éƒ¨é—¨ä¸²
+    ////ÉèÖÃÔ±¹¤²¿ÃÅ´®
     //public static void UpdateUserDepartstring(string strMemberCode)
     //{
     //    string strHQL;
@@ -7835,7 +7835,7 @@ public static class ShareClass
     //}
 
 
-    ////å–å¾—å‘˜å·¥çˆ¶çº§éƒ¨é—¨ä¸²
+    ////È¡µÃÔ±¹¤¸¸¼¶²¿ÃÅ´®
     //public static string GetUserParentDepartStringByAuthority(string strMemberCode)
     //{
     //    string strHQL;
@@ -7852,7 +7852,7 @@ public static class ShareClass
     //    }
     //}
 
-    ////å–å¾—å‘˜å·¥å­çº§éƒ¨é—¨ä¸²
+    ////È¡µÃÔ±¹¤×Ó¼¶²¿ÃÅ´®
     //public static string GetUserUnderDepartStringByAuthority(string strMemberCode)
     //{
     //    string strHQL;
@@ -7869,7 +7869,7 @@ public static class ShareClass
     //    }
     //}
 
-    //å®šä¹‰åˆåŒæ ‘
+    //¶¨ÒåºÏÍ¬Ê÷
     public static void InitialConstractTree(TreeView ConstractTreeView)
     {
         string strHQL;
@@ -7877,13 +7877,13 @@ public static class ShareClass
 
         string strConstractID, strConstractCode, strConstractName;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         ConstractTreeView.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>" + Resources.lang.WoDeHeTong + "</B>";
+        node1.Text = "<B>" + LanguageHandle.GetWord("WoDeHeTong").ToString().Trim() + "</B>";
         node1.Target = "";
         node1.Expanded = true;
         ConstractTreeView.Nodes.Add(node1);
@@ -7964,7 +7964,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—åˆåŒåç§°
+    //È¡µÃºÏÍ¬Ãû³Æ
     public static string GetConstractName(string strConstractCode)
     {
         string strHQL;
@@ -7985,7 +7985,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—åˆåŒIDå·
+    //È¡µÃºÏÍ¬IDºÅ
     public static int GetConstractID(string strConstractCode)
     {
         string strHQL;
@@ -8007,19 +8007,19 @@ public static class ShareClass
     }
 
 
-    //å®šä¹‰æ‰€æœ‰æ–‡æ¡£ç±»å‹æ ‘
+    //¶¨ÒåËùÓĞÎÄµµÀàĞÍÊ÷
     public static void InitialAllDocTypeTree(TreeView TreeView3)
     {
         string strHQL, strDocTypeID, strDocType;
         IList lst;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView3.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<Strong>" + Resources.lang.WenDangLeiXing + "</Strong>"; ;
+        node1.Text = "<Strong>" + LanguageHandle.GetWord("WenDangLeiXing").ToString().Trim() + "</Strong>"; ;
         node1.Target = "0";
         node1.Expanded = true;
         TreeView3.Nodes.Add(node1);
@@ -8094,23 +8094,23 @@ public static class ShareClass
         string strHQL, strDocTypeID, strDocType, strDepartCode;
         IList lst;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView3.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<Strong>" + Resources.lang.WenDangLeiXing + "</Strong>";
+        node1.Text = "<Strong>" + LanguageHandle.GetWord("WenDangLeiXing").ToString().Trim() + "</Strong>";
         node1.Target = "0";
         node1.Expanded = true;
         TreeView3.Nodes.Add(node1);
 
         strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
-        strHQL = "from DocType as docType  where ((docType.SaveType = 'å…¬å¸') or (docType.SaveType = 'é›†å›¢') or (docType.SaveType = 'All') ";
+        strHQL = "from DocType as docType  where ((docType.SaveType = 'Company') or (docType.SaveType = 'Group') or (docType.SaveType = 'All') ";
         strHQL += " or (docType.UserCode = " + "'" + strUserCode + "'" + ")";
-        strHQL += " or (docType.SaveType = 'éƒ¨é—¨' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
-        strHQL += " or (docType.SaveType not in ('All','é›†å›¢','å…¬å¸','ä¸ªäºº','éƒ¨é—¨') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
+        strHQL += " or (docType.SaveType = 'Department' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
+        strHQL += " or (docType.SaveType not in ('All','Group','Company','Individual','Department') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
         strHQL += " and docType.ParentID not in (select docType.ID from DocType as docType)";
         strHQL += " order by docType.SortNumber ASC";
 
@@ -8148,10 +8148,10 @@ public static class ShareClass
         DocTypeBLL docTypeBLL = new DocTypeBLL();
         DocType docType = new DocType();
 
-        strHQL = "from DocType as docType  where ((docType.SaveType = 'å…¬å¸') or (docType.SaveType = 'é›†å›¢')  or (docType.SaveType = 'All') ";
+        strHQL = "from DocType as docType  where ((docType.SaveType = 'Company') or (docType.SaveType = 'Group')  or (docType.SaveType = 'All') ";
         strHQL += " or (docType.UserCode = " + "'" + strUserCode + "'" + ")";
-        strHQL += " or (docType.SaveType = 'éƒ¨é—¨' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
-        strHQL += " or (docType.SaveType not in ('All','é›†å›¢','å…¬å¸','ä¸ªäºº','éƒ¨é—¨') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
+        strHQL += " or (docType.SaveType = 'Department' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
+        strHQL += " or (docType.SaveType not in ('All','Group','Company','Individual','Department') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
         strHQL += " and docType.ParentID = " + strParentID;
         strHQL += " order by docType.SortNumber ASC";
 
@@ -8184,13 +8184,13 @@ public static class ShareClass
         string strHQL, strDocTypeID, strDocType, strDepartCode;
         IList lst;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView3.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<Strong>" + Resources.lang.WenDangLeiXing + "</Strong>";
+        node1.Text = "<Strong>" + LanguageHandle.GetWord("WenDangLeiXing").ToString().Trim() + "</Strong>";
         node1.Target = "0";
         node1.Expanded = true;
         TreeView3.Nodes.Add(node1);
@@ -8199,21 +8199,21 @@ public static class ShareClass
 
         if (strUserCode == "ADMIN")
         {
-            strHQL = "from DocType as docType  where ((docType.SaveType = 'å…¬å¸') or (docType.SaveType = 'é›†å›¢')  or (docType.SaveType = 'All')";
+            strHQL = "from DocType as docType  where ((docType.SaveType = 'Company') or (docType.SaveType = 'Group')  or (docType.SaveType = 'All')";
             strHQL += " or (docType.UserCode = " + "'" + strUserCode + "'" + ")";
-            strHQL += " or (docType.SaveType = 'éƒ¨é—¨' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
-            strHQL += " or (docType.SaveType not in ('All','é›†å›¢','å…¬å¸','ä¸ªäºº','éƒ¨é—¨') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
+            strHQL += " or (docType.SaveType = 'Department' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
+            strHQL += " or (docType.SaveType not in ('All','Group','Company','Individual','Department') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
             strHQL += " and docType.ParentID not in (select docType.ID from DocType as docType)";
             strHQL += " order by docType.SortNumber ASC";
         }
         else
         {
-            strHQL = "from DocType as docType  where ((docType.SaveType = 'å…¬å¸') or (docType.SaveType = 'é›†å›¢')  or (docType.SaveType = 'All') ";
+            strHQL = "from DocType as docType  where ((docType.SaveType = 'Company') or (docType.SaveType = 'Group')  or (docType.SaveType = 'All') ";
             strHQL += " or (docType.UserCode = " + "'" + strUserCode + "'" + ")";
-            strHQL += " or (docType.SaveType = 'éƒ¨é—¨' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
-            strHQL += " or (docType.SaveType not in ('All','é›†å›¢','å…¬å¸','ä¸ªäºº','éƒ¨é—¨') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
+            strHQL += " or (docType.SaveType = 'Department' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
+            strHQL += " or (docType.SaveType not in ('All','Group','Company','Individual','Department') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
             strHQL += " and docType.ParentID not in (select docType.ID from DocType as docType)";
-            strHQL += " and docType.Type not in ('ä»»åŠ¡åº“','çŸ¥è¯†åº“')";
+            strHQL += " and docType.Type not in ('ÈÎÎñ¿â','ÖªÊ¶¿â')";  
             strHQL += " order by docType.SortNumber ASC";
         }
 
@@ -8253,21 +8253,21 @@ public static class ShareClass
 
         if (strUserCode == "ADMIN")
         {
-            strHQL = "from DocType as docType  where ((docType.SaveType = 'å…¬å¸') or (docType.SaveType = 'é›†å›¢')  or (docType.SaveType = 'All')";
+            strHQL = "from DocType as docType  where ((docType.SaveType = 'Company') or (docType.SaveType = 'Group')  or (docType.SaveType = 'All')";
             strHQL += " or (docType.UserCode = " + "'" + strUserCode + "'" + ")";
-            strHQL += " or (docType.SaveType = 'éƒ¨é—¨' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
-            strHQL += " or (docType.SaveType not in ('All','é›†å›¢','å…¬å¸','ä¸ªäºº','éƒ¨é—¨') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
+            strHQL += " or (docType.SaveType = 'Department' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
+            strHQL += " or (docType.SaveType not in ('All','Group','Company','Individual','Department') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
             strHQL += " and docType.ParentID = " + strParentID;
             strHQL += " order by docType.SortNumber ASC";
         }
         else
         {
-            strHQL = "from DocType as docType  where ((docType.SaveType = 'å…¬å¸') or (docType.SaveType = 'é›†å›¢')  or (docType.SaveType = 'All') ";
+            strHQL = "from DocType as docType  where ((docType.SaveType = 'Company') or (docType.SaveType = 'Group')  or (docType.SaveType = 'All') ";
             strHQL += " or (docType.UserCode = " + "'" + strUserCode + "'" + ")";
-            strHQL += " or (docType.SaveType = 'éƒ¨é—¨' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
-            strHQL += " or (docType.SaveType not in ('All','é›†å›¢','å…¬å¸','ä¸ªäºº','éƒ¨é—¨') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
+            strHQL += " or (docType.SaveType = 'Department' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
+            strHQL += " or (docType.SaveType not in ('All','Group','Company','Individual','Department') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
             strHQL += " and docType.ParentID = " + strParentID;
-            strHQL += " and docType.Type not in ('ä»»åŠ¡åº“','çŸ¥è¯†åº“')";
+            strHQL += " and docType.Type not in ('ÈÎÎñ¿â','ÖªÊ¶¿â')";  
             strHQL += " order by docType.SortNumber ASC";
         }
         lst1 = docTypeBLL.GetAllDocTypes(strHQL);
@@ -8294,7 +8294,7 @@ public static class ShareClass
         }
     }
 
-    //ä¾ç›¸å…³ç±»å‹å®šä¹‰æ–‡æ¡£ç±»å‹æ ‘
+    //ÒÀÏà¹ØÀàĞÍ¶¨ÒåÎÄµµÀàĞÍÊ÷
     public static void InitialDocTypeTree(TreeView TreeView1, string strUserCode, string strRelatedType, string strRelatedID, string strRelatedName)
     {
         string strHQL;
@@ -8304,19 +8304,19 @@ public static class ShareClass
 
         int j = 1;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        if (strRelatedType == "çŸ¥è¯†ç®¡ç†")
+        if (strRelatedType == "ÖªÊ¶¹ÜÀí")  
         {
-            node1.Text = Resources.lang.WSCDSYWD;
+            node1.Text = LanguageHandle.GetWord("WSCDSYWD").ToString().Trim();
         }
         else
         {
-            node1.Text = strRelatedType + "ï¼š" + strRelatedID + " " + strRelatedName + " " + Resources.lang.WenDangLieBiao;
+            node1.Text = strRelatedType + "£º" + strRelatedID + " " + strRelatedName + " " + LanguageHandle.GetWord("WenDangLieBiao").ToString().Trim();
         }
         node1.Target = "0";
         node1.Expanded = true;
@@ -8331,14 +8331,14 @@ public static class ShareClass
             strHQL = "from DocTypeFilter as docTypeFilter where docTypeFilter.DocType in (";
             strHQL += "Select distinct document.DocType from Document as document where (((document.RelatedType = 'Project' and document.RelatedID = " + strRelatedID + ")";
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( 'éƒ¨é—¨','å…¨ä½“'))))";
+            strHQL += " or (document.Visible in ( 'Department','Entire'))))";
             strHQL += " or (((document.RelatedType = 'Requirement' and document.RelatedID in (select relatedDefect.DefectID from RelatedDefect as relatedDefect where relatedDefect.ProjectID = " + strRelatedID + "))";
-            strHQL += " or (document.RelatedType = 'é£é™©' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strRelatedID + "))";
+            strHQL += " or (document.RelatedType = '·çÏÕ' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strRelatedID + "))";  
             strHQL += " or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strRelatedID + "))";
             strHQL += " or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strRelatedID + "))";
-            strHQL += " or (document.RelatedType = 'ä¼šè®®' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Project' and  meeting.RelatedID = " + strRelatedID + "))";
-            strHQL += " and ((document.Visible in ('ä¼šè®®','éƒ¨é—¨') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";
-            strHQL += " or (document.Visible = 'å…¨ä½“' )))))";
+            strHQL += " or (document.RelatedType = '»áÒé' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Project' and  meeting.RelatedID = " + strRelatedID + "))";  
+            strHQL += " and ((document.Visible in ('»áÒé','Department') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";  
+            strHQL += " or (document.Visible = 'Entire' )))))";
             strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' )";
         }
 
@@ -8349,7 +8349,7 @@ public static class ShareClass
             strHQL += " and document.Status <> 'Deleted' )";
         }
 
-        if (strRelatedType == "çŸ¥è¯†ç®¡ç†")
+        if (strRelatedType == "ÖªÊ¶¹ÜÀí")  
         {
             strHQL = "from DocTypeFilter as docTypeFilter where docTypeFilter.DocType in (";
             strHQL += "Select distinct document.DocType from Document as document where document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'";
@@ -8388,7 +8388,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æ–‡ä»¶ç±»å‹åˆ—è¡¨
+    //È¡µÃÎÄ¼şÀàĞÍÁĞ±í
     public static IList GetDocTypeList(string strUserCode)
     {
         string strHQL, strDepartCode;
@@ -8398,21 +8398,21 @@ public static class ShareClass
 
         if (strUserCode == "ADMIN")
         {
-            strHQL = "from DocType as docType  where ((docType.SaveType = 'å…¬å¸') or (docType.SaveType = 'é›†å›¢') or (docType.SaveType = 'All')";
+            strHQL = "from DocType as docType  where ((docType.SaveType = 'Company') or (docType.SaveType = 'Group') or (docType.SaveType = 'All')";
             strHQL += " or (docType.UserCode = " + "'" + strUserCode + "'" + ")";
-            strHQL += " or (docType.SaveType = 'éƒ¨é—¨' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
-            strHQL += " or (docType.SaveType not in ('All','é›†å›¢','å…¬å¸','ä¸ªäºº','éƒ¨é—¨') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
+            strHQL += " or (docType.SaveType = 'Department' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
+            strHQL += " or (docType.SaveType not in ('All','Group','Company','Individual','Department') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
             strHQL += " and docType.ParentID not in (select docType.ID from DocType as docType)";
             strHQL += " order by docType.SortNumber ASC";
         }
         else
         {
-            strHQL = "from DocType as docType  where ((docType.SaveType = 'å…¬å¸') or (docType.SaveType = 'é›†å›¢')  or (docType.SaveType = 'All')";
+            strHQL = "from DocType as docType  where ((docType.SaveType = 'Company') or (docType.SaveType = 'Group')  or (docType.SaveType = 'All')";
             strHQL += " or (docType.UserCode = " + "'" + strUserCode + "'" + ")";
-            strHQL += " or (docType.SaveType = 'éƒ¨é—¨' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
-            strHQL += " or (docType.SaveType not in ('All','é›†å›¢','å…¬å¸','ä¸ªäºº','éƒ¨é—¨') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
+            strHQL += " or (docType.SaveType = 'Department' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
+            strHQL += " or (docType.SaveType not in ('All','Group','Company','Individual','Department') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
             strHQL += " and docType.ParentID not in (select docType.ID from DocType as docType)";
-            strHQL += " and docType.Type not in ('ä»»åŠ¡åº“','çŸ¥è¯†åº“')";
+            strHQL += " and docType.Type not in ('ÈÎÎñ¿â','ÖªÊ¶¿â')";  
             strHQL += " order by docType.SortNumber ASC";
         }
         DocTypeBLL docTypeBLL = new DocTypeBLL();
@@ -8421,7 +8421,7 @@ public static class ShareClass
         return lst;
     }
 
-    //å–å¾—æ–‡æ¡£ç±»å‹çš„ä¸Šçº§ç±»å‹
+    //È¡µÃÎÄµµÀàĞÍµÄÉÏ¼¶ÀàĞÍ
     public static string getDocParentTypeByID(string strTypeID)
     {
         string strHQL;
@@ -8446,7 +8446,7 @@ public static class ShareClass
     }
 
     /// <summary>
-    /// å®šä¹‰ç«£å·¥èµ„æ–™æ˜¾ç¤ºçš„é¡¹ç›®æ ‘ç»“æ„ By LiuJianping 2013-09-13
+    /// ¶¨Òå¿¢¹¤×ÊÁÏÏÔÊ¾µÄÏîÄ¿Ê÷½á¹¹ By LiuJianping 2013-09-13
     /// </summary>
     /// <param name="TreeView1"></param>
     /// <param name="strUserCode"></param>
@@ -8454,13 +8454,13 @@ public static class ShareClass
     {
         string strHQL, strProjectID, strProject;
         string strProjectIDString = "";
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<A href=TTCompletionDataManage.aspx?TargetID=Project_0 Target=Right><B>" + Resources.lang.WCYDXMHTMDZXM + "</B></a>";
+        node1.Text = "<A href=TTCompletionDataManage.aspx?TargetID=Project_0 Target=Right><B>" + LanguageHandle.GetWord("WCYDXMHTMDZXM").ToString().Trim() + "</B></a>";
         node1.Target = "Project" + "_" + "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -8493,14 +8493,14 @@ public static class ShareClass
     }
 
     /// <summary>
-    /// æ ¹æ®æ£€ç´¢æ¡ä»¶è·å–é¢„ç®—è´¹ç”¨  2013-11-15  By LiuJianping
+    /// ¸ù¾İ¼ìË÷Ìõ¼ş»ñÈ¡Ô¤Ëã·ÑÓÃ  2013-11-15  By LiuJianping
     /// </summary>
-    /// <param name="dg">DataGridæ§ä»¶</param>
-    /// <param name="strDepartCode">éƒ¨é—¨ç¼–ç -éç©º</param>
-    /// <param name="strAccountName">ä¼šè®¡ç§‘ç›®-å¯ç©º</param>
-    /// <param name="strYearNum">å¹´ä»½-éç©º ä¸ºç©ºçš„è¯ï¼Œç”¨0ä»£è¡¨</param>
-    /// <param name="strMonthNum">æœˆä»½-éç©ºï¼Œ0ä»£è¡¨ç©º</param>
-    /// <param name="strType">è´¹ç”¨ç±»å‹ åŸºç¡€ã€æ“ä½œä¸¤ç§ï¼ŒåŸºç¡€å³ä¸ºé¢„ç®—è´¹ç”¨è®¾ç½®çš„æ ‡å‡†é¢åº¦ï¼›æ“ä½œå³ä¸ºå®é™…é¢„ç®—è´¹ç”¨è®°å½•çš„ç”³è¯·é¢åº¦</param>
+    /// <param name="dg">DataGrid¿Ø¼ş</param>
+    /// <param name="strDepartCode">²¿ÃÅ±àÂë-·Ç¿Õ</param>
+    /// <param name="strAccountName">»á¼Æ¿ÆÄ¿-¿É¿Õ</param>
+    /// <param name="strYearNum">Äê·İ-·Ç¿Õ Îª¿ÕµÄ»°£¬ÓÃ0´ú±í</param>
+    /// <param name="strMonthNum">ÔÂ·İ-·Ç¿Õ£¬0´ú±í¿Õ</param>
+    /// <param name="strType">·ÑÓÃÀàĞÍ »ù´¡¡¢²Ù×÷Á½ÖÖ£¬»ù´¡¼´ÎªÔ¤Ëã·ÑÓÃÉèÖÃµÄ±ê×¼¶î¶È£»²Ù×÷¼´ÎªÊµ¼ÊÔ¤Ëã·ÑÓÃ¼ÇÂ¼µÄÉêÇë¶î¶È</param>
     public static void GetBMBaseDataList(ref DataGrid dg, string strDepartCode, string strAccountName, int strYearNum, int strMonthNum, string strType)
     {
         string strHQL = "From BDBaseData as bDBaseData where bDBaseData.DepartCode = '" + strDepartCode + "' and bDBaseData.AccountName='" + strAccountName + "' and " +
@@ -8517,7 +8517,7 @@ public static class ShareClass
         dg.DataBind();
     }
 
-    //å…¨å±€é¡¹ç›®æ ‘ï¼Œè¿˜æœ‰åˆ é™¤çº¿çš„
+    //È«¾ÖÏîÄ¿Ê÷£¬»¹ÓĞÉ¾³ıÏßµÄ
     public static void InitialPrjectTreeWithDeleteLine(TreeView TreeView1)
     {
         string strHQL;
@@ -8525,13 +8525,13 @@ public static class ShareClass
 
         string strProjectID, strProject;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node2 = new TreeNode();
 
-        node1.Text = "<B>1." + Resources.lang.ZongXiangMu + " </B>";
+        node1.Text = "<B>1." + LanguageHandle.GetWord("ZongXiangMu").ToString().Trim() + " </B>";
         node1.Target = "1";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -8549,9 +8549,9 @@ public static class ShareClass
             project = (Project)lst[i];
 
             strProjectID = project.ProjectID.ToString();
-            if (project.ProjectClass.Trim() == "æ¨¡æ¿é¡¹ç›®")
+            if (project.ProjectClass.Trim() == "Ä£°åÏîÄ¿")  
             {
-                strProject = "[<font size='2'  color='#FF0000'>" + Resources.lang.MoBan + "</font>]" + project.ProjectName.Trim();
+                strProject = "[<font size='2'  color='#FF0000'>" + LanguageHandle.GetWord("MoBan").ToString().Trim() + "</font>]" + project.ProjectName.Trim();
             }
             else
             {
@@ -8592,9 +8592,9 @@ public static class ShareClass
         {
             project = (Project)lst1[i];
             strProjectID = project.ProjectID.ToString();
-            if (project.ProjectClass.Trim() == "æ¨¡æ¿é¡¹ç›®")
+            if (project.ProjectClass.Trim() == "Ä£°åÏîÄ¿")  
             {
-                strProject = "[<font size='2'  color='#FF0000'>" + Resources.lang.MoBan + "</font>]" + project.ProjectName.Trim();
+                strProject = "[<font size='2'  color='#FF0000'>" + LanguageHandle.GetWord("MoBan").ToString().Trim() + "</font>]" + project.ProjectName.Trim();
             }
             else
             {
@@ -8626,7 +8626,7 @@ public static class ShareClass
         }
     }
 
-    //å®šä¹‰æ‰€æœ‰é¡¹ç›®æ ‘
+    //¶¨ÒåËùÓĞÏîÄ¿Ê÷
     public static void InitialAllProjectTree(TreeView TreeView1, string strDepartString)
     {
         string strHQL;
@@ -8635,13 +8635,13 @@ public static class ShareClass
         string strProjectID, strProject;
         String strUserCode = HttpContext.Current.Session["UserCode"].ToString().Trim();
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<A href=TTAllProjectDocuments.aspx?TargetID=Project_0 Target=Right><B> " + Resources.lang.SYXMHTMDZXM + "</B></a>";
+        node1.Text = "<A href=TTAllProjectDocuments.aspx?TargetID=Project_0 Target=Right><B> " + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + "</B></a>";
         node1.Target = "Project" + "_" + "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -8711,7 +8711,7 @@ public static class ShareClass
         }
     }
 
-    //å®šä¹‰æ‰€æœ‰é¡¹ç›®æ ‘ FOR YYUP
+    //¶¨ÒåËùÓĞÏîÄ¿Ê÷ FOR YYUP
     public static void InitialAllProjectTree_YYUP(TreeView TreeView1, string strDepartString)
     {
         string strHQL;
@@ -8722,13 +8722,13 @@ public static class ShareClass
 
         strProductLineRelated = ShareClass.GetDepartSuperUserRelatedProductLineFromUserCode(strUserCode);
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<A href=TTAllProjectDocuments.aspx?TargetID=Project_0 Target=Right><B>" + Resources.lang.SYXMHTMDZXM + "</B></a>";
+        node1.Text = "<A href=TTAllProjectDocuments.aspx?TargetID=Project_0 Target=Right><B>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + "</B></a>";
         node1.Target = "Project" + "_" + "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -8805,7 +8805,7 @@ public static class ShareClass
         }
     }
 
-    //å®šä¹‰ç›´æ¥æˆå‘˜çš„é¡¹ç›®æ ‘
+    //¶¨ÒåÖ±½Ó³ÉÔ±µÄÏîÄ¿Ê÷
     public static void InitialMembersProjectTree(TreeView TreeView1, string strUserCode)
     {
         string strHQL;
@@ -8816,13 +8816,13 @@ public static class ShareClass
         strProductLineRelated = ShareClass.GetDepartRelatedProductLineFromUserCode(strUserCode);
         strOperatorDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>" + Resources.lang.WDZJCYDXMHTMDZXM + " </B>";
+        node1.Text = "<B>" + LanguageHandle.GetWord("WDZJCYDXMHTMDZXM").ToString().Trim() + " </B>";
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -8888,7 +8888,7 @@ public static class ShareClass
         }
     }
 
-    //å®šä¹‰ç›´æ¥æˆå‘˜çš„é¡¹ç›®æ ‘ FOR YYUP
+    //¶¨ÒåÖ±½Ó³ÉÔ±µÄÏîÄ¿Ê÷ FOR YYUP
     public static void InitialMembersProjectTree_YYUP(TreeView TreeView1, string strUserCode)
     {
         string strHQL;
@@ -8899,13 +8899,13 @@ public static class ShareClass
         strProductLineRelated = ShareClass.GetDepartRelatedProductLineFromUserCode(strUserCode);
         strOperatorDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>" + Resources.lang.WDZJCYDXMHTMDZXM + " </B>";
+        node1.Text = "<B>" + LanguageHandle.GetWord("WDZJCYDXMHTMDZXM").ToString().Trim() + " </B>";
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -8978,19 +8978,19 @@ public static class ShareClass
         }
     }
 
-    //å®šä¹‰æˆ‘çš„çš„é¡¹ç›®æ ‘
+    //¶¨ÒåÎÒµÄµÄÏîÄ¿Ê÷
     public static void InitialMyProjectTree(TreeView TreeView1, string strUserCode)
     {
         string strHQL, strProjectID, strProject;
         IList lst;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>" + Resources.lang.WDXMHTMDZXM + " </B>";
+        node1.Text = "<B>" + LanguageHandle.GetWord("WDXMHTMDZXM").ToString().Trim() + " </B>";
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -9055,7 +9055,7 @@ public static class ShareClass
         }
     }
 
-    //å®šä¹‰æ‰€æœ‰é¡¹ç›®æ–‡æ¡£æ ‘
+    //¶¨ÒåËùÓĞÏîÄ¿ÎÄµµÊ÷
     public static string InitialAllProjectDocTree(TreeView TreeView1, string strUserCode, string strQueryCount, string strOperationType, string strMinProjectID, string strMaxProjectID)
     {
         string strHQL;
@@ -9064,14 +9064,14 @@ public static class ShareClass
 
         strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthoritySuperUser(strUserCode);
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
         TreeNode node4 = new TreeNode();
 
-        node1.Text = "<A href=TTAllProjectDocuments.aspx?TargetID=Project_0 Target=Right><B>" + Resources.lang.SYXMHTMDZXM + " </B></a>";
+        node1.Text = "<A href=TTAllProjectDocuments.aspx?TargetID=Project_0 Target=Right><B>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + " </B></a>";
         node1.Target = "Project" + "_" + "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -9121,7 +9121,7 @@ public static class ShareClass
             if (getChildProjectNumber(strProjectID, strDepartString) > 0)
             {
                 node4 = new TreeNode();
-                node4.Text = "å­é¡¹ç›®";
+                node4.Text = "×ÓÏîÄ¿";  
                 node4.Target = strProjectID + "_ChildrenProject";
                 node4.Expanded = false;
                 node3.ChildNodes.Add(node4);
@@ -9152,7 +9152,7 @@ public static class ShareClass
         }
     }
 
-    //æ£€æŸ¥é¡¹ç›®æ˜¯å¦åŒ…å«å­é¡¹ç›®
+    //¼ì²éÏîÄ¿ÊÇ·ñ°üº¬×ÓÏîÄ¿
     public static int getChildProjectNumber(string strParentProjectID, string strDepartString)
     {
         string strHQL;
@@ -9206,7 +9206,7 @@ public static class ShareClass
             if (getChildProjectNumber(strProjectID, strDepartString) > 0)
             {
                 node4 = new TreeNode();
-                node4.Text = "å­é¡¹ç›®";
+                node4.Text = "×ÓÏîÄ¿";  
                 node4.Target = strProjectID + "_ChildrenProject";
                 node4.Expanded = false;
                 node.ChildNodes.Add(node4);
@@ -9215,7 +9215,7 @@ public static class ShareClass
         }
     }
 
-    //å®šä¹‰æ‰€æœ‰é¡¹ç›®ï¼ˆç¿»é¡µæŸ¥è¯¢ï¼‰
+    //¶¨ÒåËùÓĞÏîÄ¿£¨·­Ò³²éÑ¯£©
     public static string InitialAllProjectTreeForPageFind(TreeView TreeView1, string strUserCode, string strQueryCount, string strOperationType, string strMinProjectID, string strMaxProjectID)
     {
         string strHQL;
@@ -9224,14 +9224,14 @@ public static class ShareClass
 
         strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthoritySuperUser(strUserCode);
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
         TreeNode node4 = new TreeNode();
 
-        node1.Text = "<B>" + Resources.lang.SYXMHTMDZXM + "</B>";
+        node1.Text = "<B>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + "</B>";
         node1.Target = "1";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -9338,7 +9338,7 @@ public static class ShareClass
         }
     }
 
-    //å®šä¹‰æ‰€æœ‰é¡¹ç›®ï¼ˆç¿»é¡µæŸ¥è¯¢ï¼‰ For YYUP
+    //¶¨ÒåËùÓĞÏîÄ¿£¨·­Ò³²éÑ¯£© For YYUP
     public static string InitialAllProjectTreeForPageFind_YYUP(TreeView TreeView1, string strUserCode, string strQueryCount, string strOperationType, string strMinProjectID, string strMaxProjectID)
     {
         string strHQL;
@@ -9351,14 +9351,14 @@ public static class ShareClass
         strProductLineRelated = ShareClass.GetDepartSuperUserRelatedProductLineFromUserCode(strUserCode);
         strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthoritySuperUser(strUserCode);
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
         TreeNode node4 = new TreeNode();
 
-        node1.Text = "<B>" + Resources.lang.SYXMHTMDZXM + "</B>";
+        node1.Text = "<B>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + "</B>";
         node1.Target = "1";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -9480,7 +9480,7 @@ public static class ShareClass
         }
     }
 
-    //å®šä¹‰æ‰€æœ‰é¡¹ç›®æ–‡æ¡£æ ‘ FOR YYUP
+    //¶¨ÒåËùÓĞÏîÄ¿ÎÄµµÊ÷ FOR YYUP
     public static string InitialAllProjectDocTree_YYUP(TreeView TreeView1, string strUserCode, string strQueryCount, string strOperationType, string strMinProjectID, string strMaxProjectID)
     {
         string strHQL;
@@ -9490,14 +9490,14 @@ public static class ShareClass
         strProductLineRelated = ShareClass.GetDepartSuperUserRelatedProductLineFromUserCode(strUserCode);
         strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthoritySuperUser(strUserCode);
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
         TreeNode node4 = new TreeNode();
 
-        node1.Text = "<A href=TTAllProjectDocuments.aspx?TargetID=Project_0 Target=Right><B>" + Resources.lang.SYXMHTMDZXM + " </B></a>";
+        node1.Text = "<A href=TTAllProjectDocuments.aspx?TargetID=Project_0 Target=Right><B>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + " </B></a>";
         node1.Target = "Project" + "_" + "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -9565,7 +9565,7 @@ public static class ShareClass
             if (getChildProjectNumber(strProjectID, strDepartString) > 0)
             {
                 node4 = new TreeNode();
-                node4.Text = "å­é¡¹ç›®";
+                node4.Text = "×ÓÏîÄ¿";  
                 node4.Target = strProjectID + "_ChildrenProject";
                 node4.Expanded = false;
                 node3.ChildNodes.Add(node4);
@@ -9630,7 +9630,7 @@ public static class ShareClass
             if (getChildProjectNumber(strProjectID, strDepartString) > 0)
             {
                 node4 = new TreeNode();
-                node4.Text = "å­é¡¹ç›®";
+                node4.Text = "×ÓÏîÄ¿";  
                 node4.Target = strProjectID + "_ChildrenProject";
                 node4.Expanded = false;
                 node.ChildNodes.Add(node4);
@@ -9639,7 +9639,7 @@ public static class ShareClass
         }
     }
 
-    //é¡¹ç›®æ–‡æ¡£ï¼ˆåŒ…å«ä»»åŠ¡ï¼Œæµç¨‹ï¼Œéœ€æ±‚ï¼Œé£é™©ç­‰æ‰€æœ‰é¡¹ç›®ç›¸å…³çš„æ–‡æ¡£ï¼‰
+    //ÏîÄ¿ÎÄµµ£¨°üº¬ÈÎÎñ£¬Á÷³Ì£¬ĞèÇó£¬·çÏÕµÈËùÓĞÏîÄ¿Ïà¹ØµÄÎÄµµ£©
     public static void AllProjectDocTreeShowIncludeAll(string strUserCode, string strProjectID, TreeNode treeNode)
     {
         string strHQL;
@@ -9651,14 +9651,14 @@ public static class ShareClass
         TreeNode treeNode1 = new TreeNode();
 
         treeNode1 = new TreeNode();
-        treeNode1.Text = "<A href=TTAllProjectDocuments.aspx?TargetID=ProjectPlan_0&ProjectID=" + strProjectID + " Target=Right>è®¡åˆ’</a>";
+        treeNode1.Text = "<A href=TTAllProjectDocuments.aspx?TargetID=ProjectPlan_0&ProjectID=" + strProjectID + " Target=Right>¼Æ»®</a>";  
         treeNode1.Target = "ProjectPlan" + "_" + "0";
         treeNode1.Expanded = false;
         treeNode.ChildNodes.Add(treeNode1);
         TakeTopPlan.InitialProjectPlanTreeOnTreeNode(treeNode1, strProjectID, GetProjectPlanVersion(strProjectID, "InUse").ToString());
 
         treeNode1 = new TreeNode();
-        treeNode1.Text = "<A href=TTAllProjectDocuments.aspx?TargetID=ProjectTask_0&ProjectID=" + strProjectID + " Target=Right>ä»»åŠ¡</a>";
+        treeNode1.Text = "<A href=TTAllProjectDocuments.aspx?TargetID=ProjectTask_0&ProjectID=" + strProjectID + " Target=Right>ÈÎÎñ</a>";  
         treeNode1.Target = "ProjectTask_0";
         treeNode1.Expanded = false;
         treeNode.ChildNodes.Add(treeNode1);
@@ -9682,7 +9682,7 @@ public static class ShareClass
         }
 
         treeNode1 = new TreeNode();
-        treeNode1.Text = "<A href=TTAllProjectDocuments.aspx?TargetID=Defect_0&ProjectID=" + strProjectID + " Target=Right>éœ€æ±‚</a>";
+        treeNode1.Text = "<A href=TTAllProjectDocuments.aspx?TargetID=Defect_0&ProjectID=" + strProjectID + " Target=Right>ĞèÇó</a>";  
         treeNode1.Target = "Defect_0";
         treeNode1.Expanded = false;
         treeNode.ChildNodes.Add(treeNode1);
@@ -9705,7 +9705,7 @@ public static class ShareClass
             node.Expanded = false;
         }
         treeNode1 = new TreeNode();
-        treeNode1.Text = "<A href=TTAllProjectDocuments.aspx?TargetID=WorkFlow_0&ProjectID=" + strProjectID + " Target=Right>å·¥ä½œæµ</a>";
+        treeNode1.Text = "<A href=TTAllProjectDocuments.aspx?TargetID=WorkFlow_0&ProjectID=" + strProjectID + " Target=Right>¹¤×÷Á÷</a>";  
         treeNode1.Target = "WorkFlow_0";
         treeNode1.Expanded = false;
         treeNode.ChildNodes.Add(treeNode1);
@@ -9713,7 +9713,7 @@ public static class ShareClass
         strHQL = "from WorkFlow as workFlow where";
         strHQL += " ((workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + ")";
         strHQL += " or (workFlow.RelatedType = 'Task' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
-        strHQL += " or (workFlow.RelatedType = 'é£é™©' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";
+        strHQL += " or (workFlow.RelatedType = '·çÏÕ' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";  
         strHQL += " or (workFlow.RelatedType = 'Requirement' and workFlow.RelatedID in (select relatedDefect from RelatedDefect as relatedDefect where relatedDefect.ProjectID = " + strProjectID + ")))";
         strHQL += " and workFlow.WLID in (Select document.RelatedID from Document as document where document.RelatedType = 'Workflow' and document.Status <> 'Deleted')";
         strHQL += " Order by workFlow.WLID DESC";
@@ -9734,12 +9734,12 @@ public static class ShareClass
         }
 
         treeNode1 = new TreeNode();
-        treeNode1.Text = "<A href=TTAllProjectDocuments.aspx?TargetID=Risk_0&ProjectID=" + strProjectID + " Target=Right>é£é™©</a>";
+        treeNode1.Text = "<A href=TTAllProjectDocuments.aspx?TargetID=Risk_0&ProjectID=" + strProjectID + " Target=Right>·çÏÕ</a>";  
         treeNode1.Target = "Risk_0";
         treeNode1.Expanded = false;
         treeNode.ChildNodes.Add(treeNode1);
         strHQL = "From ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID;
-        strHQL += " and projectRisk.ID in (Select document.RelatedID from Document as document where document.RelatedType = 'é£é™©' and document.Status <> 'Deleted')";
+        strHQL += " and projectRisk.ID in (Select document.RelatedID from Document as document where document.RelatedType = '·çÏÕ' and document.Status <> 'Deleted')";  
         strHQL += " Order by projectRisk.ID DESC";
         ProjectRiskBLL projectRiskBLL = new ProjectRiskBLL();
         lst = projectRiskBLL.GetAllProjectRisks(strHQL);
@@ -9758,7 +9758,7 @@ public static class ShareClass
         }
     }
 
-    //å®šä¹‰æ‰€æœ‰é¡¹ç›®çš„é¡¹ç›®æ ‘(å…³è”é¡µé¢é“¾æ¥ï¼‰
+    //¶¨ÒåËùÓĞÏîÄ¿µÄÏîÄ¿Ê÷(¹ØÁªÒ³ÃæÁ´½Ó£©
     public static string InitialAllProjectRelatedPageTree(TreeView TreeView1, string strUserCode, string strRelatedType, string strQueryCount, string strOperationType, string strMinProjectID, string strMaxProjectID)
     {
         string strHQL;
@@ -9767,7 +9767,7 @@ public static class ShareClass
 
         strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthoritySuperUser(strUserCode);
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
@@ -9775,64 +9775,64 @@ public static class ShareClass
 
         if (strRelatedType == "Defect")
         {
-            node1.Text = "<A href=TTProjectDefectmentManage.aspx?ProjectID=0" + " Target=Right>" + Resources.lang.SYXMHTMDZXM + " </B></a>";
+            node1.Text = "<A href=TTProjectDefectmentManage.aspx?ProjectID=0" + " Target=Right>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + " </B></a>";
         }
         if (strRelatedType == "ProjectTask")
         {
-            node1.Text = "<A href=TTAllProjectTask.aspx?ProjectID=0" + " Target=Right>" + Resources.lang.SYXMHTMDZXM + " </B></a>";
+            node1.Text = "<A href=TTAllProjectTask.aspx?ProjectID=0" + " Target=Right>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + " </B></a>";
         }
         if (strRelatedType == "ProjectDoc")
         {
-            node1.Text = "<A href=TTProjectDocManage.aspx?Project_0" + " Target=Right>" + Resources.lang.SYXMHTMDZXM + " </B></a>";
+            node1.Text = "<A href=TTProjectDocManage.aspx?Project_0" + " Target=Right>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + " </B></a>";
         }
         if (strRelatedType == "WorkFlow")
         {
-            node1.Text = "<A href=TTProjectWorkFlowManage.aspx?ProjectID=0" + " Target=Right>" + Resources.lang.SYXMHTMDZXM + " </B></a>";
+            node1.Text = "<A href=TTProjectWorkFlowManage.aspx?ProjectID=0" + " Target=Right>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + " </B></a>";
         }
 
         if (strRelatedType == "ProjectRisk")
         {
-            node1.Text = "<A href=TTProjectRiskManage.aspx?ProjectID=0" + " Target=Right>" + Resources.lang.SYXMHTMDZXM + " </B></a>";
+            node1.Text = "<A href=TTProjectRiskManage.aspx?ProjectID=0" + " Target=Right>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + " </B></a>";
         }
 
         if (strRelatedType == "ProjectBonus")
         {
-            node1.Text = "<B>" + Resources.lang.SYXMHTMDZXM + "</B>";
+            node1.Text = "<B>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + "</B>";
         }
 
         if (strRelatedType == "ProjectExpense")
         {
-            node1.Text = "<B>" + Resources.lang.SYXMHTMDZXM + "</B>";
+            node1.Text = "<B>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + "</B>";
         }
 
         if (strRelatedType == "ProjectIncomeAndExpense")
         {
-            node1.Text = "<B>" + Resources.lang.SYXMHTMDZXM + "</B>";
+            node1.Text = "<B>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + "</B>";
         }
 
         if (strRelatedType == "InAndOut")
         {
-            node1.Text = "<B>" + Resources.lang.SYXMHTMDZXM + "</B>";
+            node1.Text = "<B>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + "</B>";
         }
 
         if (strRelatedType == "MakeBudget" | strRelatedType == "MakeBudgetAll")
         {
-            node1.Text = "<B>" + Resources.lang.XiangMuYuSuan + "</B>";
+            node1.Text = "<B>" + LanguageHandle.GetWord("XiangMuYuSuan").ToString().Trim() + "</B>";
         }
 
         if (strRelatedType == "MakeItemBudget")
         {
-            node1.Text = "<B>" + Resources.lang.XiangMuWuZiYuSuan + "</B>";
+            node1.Text = "<B>" + LanguageHandle.GetWord("XiangMuWuZiYuSuan").ToString().Trim() + "</B>";
         }
 
         if (strRelatedType == "BudgetReport")
         {
-            node1.Text = "<B>" + Resources.lang.SYXMHTMDZXM + "</B>";
+            node1.Text = "<B>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + "</B>";
         }
 
         if (strRelatedType == "MaterialExpenseApply")
         {
-            node1.Text = "<B>é¡¹ç›®ç‰©èµ„è´¹ç”¨ç”³è¯·</B>";
+            node1.Text = "<B>ÏîÄ¿Îï×Ê·ÑÓÃÉêÇë</B>";  
         }
 
         node1.Target = "0";
@@ -10072,7 +10072,7 @@ public static class ShareClass
         }
     }
 
-    //å®šä¹‰æ‰€æœ‰é¡¹ç›®çš„é¡¹ç›®æ ‘(å…³è”é¡µé¢é“¾æ¥ï¼‰--FOR YYUP
+    //¶¨ÒåËùÓĞÏîÄ¿µÄÏîÄ¿Ê÷(¹ØÁªÒ³ÃæÁ´½Ó£©--FOR YYUP
     public static string InitialAllProjectRelatedPageTree_YYUP(TreeView TreeView1, string strUserCode, string strRelatedType, string strQueryCount, string strOperationType, string strMinProjectID, string strMaxProjectID)
     {
         string strHQL;
@@ -10084,7 +10084,7 @@ public static class ShareClass
         string strDepartString;
         strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthoritySuperUser(strUserCode);
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
@@ -10092,49 +10092,49 @@ public static class ShareClass
 
         if (strRelatedType == "Defect")
         {
-            node1.Text = "<A href=TTProjectDefectmentManage.aspx?ProjectID=0" + " Target=Right><B>" + Resources.lang.SYXMHTMDZXM + " </B></a>";
+            node1.Text = "<A href=TTProjectDefectmentManage.aspx?ProjectID=0" + " Target=Right><B>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + " </B></a>";
         }
         if (strRelatedType == "ProjectTask")
         {
-            node1.Text = "<A href=TTAllProjectTask.aspx?ProjectID=0" + " Target=Right><B>" + Resources.lang.SYXMHTMDZXM + " </B></a>";
+            node1.Text = "<A href=TTAllProjectTask.aspx?ProjectID=0" + " Target=Right><B>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + " </B></a>";
         }
         if (strRelatedType == "ProjectDoc")
         {
-            node1.Text = "<A href=TTProjectDocManage.aspx?Project_0" + " Target=Right><B>" + Resources.lang.SYXMHTMDZXM + " </B></a>";
+            node1.Text = "<A href=TTProjectDocManage.aspx?Project_0" + " Target=Right><B>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + " </B></a>";
         }
         if (strRelatedType == "WorkFlow")
         {
-            node1.Text = "<A href=TTProjectWorkFlowManage.aspx?ProjectID=0" + " Target=Right><B>" + Resources.lang.SYXMHTMDZXM + " </B></a>";
+            node1.Text = "<A href=TTProjectWorkFlowManage.aspx?ProjectID=0" + " Target=Right><B>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + " </B></a>";
         }
 
         if (strRelatedType == "ProjectRisk")
         {
-            node1.Text = "<A href=TTProjectRiskManage.aspx?ProjectID=0" + " Target=Right><B>" + Resources.lang.SYXMHTMDZXM + " </B></a>";
+            node1.Text = "<A href=TTProjectRiskManage.aspx?ProjectID=0" + " Target=Right><B>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + " </B></a>";
         }
 
         if (strRelatedType == "ProjectBonus")
         {
-            node1.Text = "<B>" + Resources.lang.SYXMHTMDZXM + " </B>";
+            node1.Text = "<B>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + " </B>";
         }
 
         if (strRelatedType == "ProjectExpense")
         {
-            node1.Text = "<B>" + Resources.lang.SYXMHTMDZXM + " </B>";
+            node1.Text = "<B>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + " </B>";
         }
 
         if (strRelatedType == "ProjectIncomeAndExpense")
         {
-            node1.Text = "<B>" + Resources.lang.SYXMHTMDZXM + " </B>";
+            node1.Text = "<B>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + " </B>";
         }
 
         if (strRelatedType == "InAndOut")
         {
-            node1.Text = "<B>" + Resources.lang.SYXMHTMDZXM + " </B>";
+            node1.Text = "<B>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + " </B>";
         }
 
         if (strRelatedType == "Budget")
         {
-            node1.Text = "<B>" + Resources.lang.SYXMHTMDZXM + " </B>";
+            node1.Text = "<B>" + LanguageHandle.GetWord("SYXMHTMDZXM").ToString().Trim() + " </B>";
         }
 
         node1.Target = "0";
@@ -10347,7 +10347,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æœ€å¤§é¡¹ç›®IDå·
+    //È¡µÃ×î´óÏîÄ¿IDºÅ
     public static int GetMaxProjectIDForAllProjectList(int intProjectID, int intProjectCount, string strDepartString)
     {
         string strHQL;
@@ -10368,7 +10368,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æœ€å°é¡¹ç›®IDå·
+    //È¡µÃ×îĞ¡ÏîÄ¿IDºÅ
     public static int GetMinProjectIDForAllProjectList(string strDepartString, int intProjectCount)
     {
         string strHQL;
@@ -10387,20 +10387,20 @@ public static class ShareClass
         }
     }
 
-    //å®šä¹‰å‚ä¸é¡¹ç›®æ–‡æ¡£æ ‘
+    //¶¨Òå²ÎÓëÏîÄ¿ÎÄµµÊ÷
     public static void InitialInvolvedProjectDocTree(TreeView TreeView1, string strUserCode)
     {
         string strHQL, strProjectID, strProject;
         IList lst;
         string strProjectIDString = "";
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<A href=TTProjectDocManage.aspx?TargetID=Project_0 Target=Right><B>" + Resources.lang.WCYDXMHTMDZXM + "</B></a>";
+        node1.Text = "<A href=TTProjectDocManage.aspx?TargetID=Project_0 Target=Right><B>" + LanguageHandle.GetWord("WCYDXMHTMDZXM").ToString().Trim() + "</B></a>";
         node1.Target = "Project" + "_" + "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -10436,7 +10436,7 @@ public static class ShareClass
         }
     }
 
-    //é¡¹ç›®æ–‡æ¡£ï¼ˆåŒ…å«ä»»åŠ¡ï¼Œéœ€æ±‚ï¼Œè®¡åˆ’ï¼Œé£é™©ç­‰é¡¹ç›®ç›¸å…³çš„æ–‡æ¡£ï¼‰
+    //ÏîÄ¿ÎÄµµ£¨°üº¬ÈÎÎñ£¬ĞèÇó£¬¼Æ»®£¬·çÏÕµÈÏîÄ¿Ïà¹ØµÄÎÄµµ£©
     public static void InvolvedProjectDocTreeShowIncludeAll(string strUserCode, string strProjectID, TreeNode treeNode)
     {
         string strHQL;
@@ -10447,17 +10447,17 @@ public static class ShareClass
         TreeNode node = new TreeNode();
         TreeNode treeNode1 = new TreeNode();
 
-        //ç”Ÿæˆè®¡åˆ’èŠ‚ç‚¹
+        //Éú³É¼Æ»®½Úµã
         treeNode1 = new TreeNode();
-        treeNode1.Text = "<A href=TTProjectDocManage.aspx?TargetID=ProjectPlan_0&ProjectID=" + strProjectID + " Target=Right>è®¡åˆ’</a>";
+        treeNode1.Text = "<A href=TTProjectDocManage.aspx?TargetID=ProjectPlan_0&ProjectID=" + strProjectID + " Target=Right>¼Æ»®</a>";  
         treeNode1.Target = "ProjectPlan" + "_" + "0";
         treeNode1.Expanded = false;
         treeNode.ChildNodes.Add(treeNode1);
         TakeTopPlan.InitialProjectPlanTreeOnTreeNode(treeNode1, strProjectID, GetProjectPlanVersion(strProjectID, "InUse").ToString());
 
-        //ç”Ÿæˆä»»åŠ¡èŠ‚ç‚¹
+        //Éú³ÉÈÎÎñ½Úµã
         treeNode1 = new TreeNode();
-        treeNode1.Text = "<A href=TTProjectDocManage.aspx?TargetID=ProjectTask_0&ProjectID=" + strProjectID + " Target=Right>ä»»åŠ¡</a>";
+        treeNode1.Text = "<A href=TTProjectDocManage.aspx?TargetID=ProjectTask_0&ProjectID=" + strProjectID + " Target=Right>ÈÎÎñ</a>";  
         treeNode1.Target = "ProjectTask_0";
         treeNode1.Expanded = false;
         treeNode.ChildNodes.Add(treeNode1);
@@ -10480,9 +10480,9 @@ public static class ShareClass
             node.Expanded = false;
         }
 
-        //ç”Ÿæˆéœ€æ±‚èŠ‚ç‚¹
+        //Éú³ÉĞèÇó½Úµã
         treeNode1 = new TreeNode();
-        treeNode1.Text = "<A href=TTProjectDocManage.aspx?TargetID=Req_0&ProjectID=" + strProjectID + " Target=Right>éœ€æ±‚</a>";
+        treeNode1.Text = "<A href=TTProjectDocManage.aspx?TargetID=Req_0&ProjectID=" + strProjectID + " Target=Right>ĞèÇó</a>";  
         treeNode1.Target = "Defect_0";
         treeNode1.Expanded = false;
         treeNode.ChildNodes.Add(treeNode1);
@@ -10505,9 +10505,9 @@ public static class ShareClass
             node.Expanded = false;
         }
 
-        //ç”Ÿæˆç¼ºé™·èŠ‚ç‚¹
+        //Éú³ÉÈ±Ïİ½Úµã
         treeNode1 = new TreeNode();
-        treeNode1.Text = "<A href=TTProjectDocManage.aspx?TargetID=Defect_0&ProjectID=" + strProjectID + " Target=Right>ç¼ºé™·</a>";
+        treeNode1.Text = "<A href=TTProjectDocManage.aspx?TargetID=Defect_0&ProjectID=" + strProjectID + " Target=Right>È±Ïİ</a>";  
         treeNode1.Target = "Defect_0";
         treeNode1.Expanded = false;
         treeNode.ChildNodes.Add(treeNode1);
@@ -10530,11 +10530,11 @@ public static class ShareClass
             node.Expanded = false;
         }
 
-        //ç”Ÿæˆå·¥ä½œæµèŠ‚ç‚¹
+        //Éú³É¹¤×÷Á÷½Úµã
         strHQL = "from WorkFlow as workFlow where";
         strHQL += " ((workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + ")";
         strHQL += " or (workFlow.RelatedType = 'Task' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
-        strHQL += " or (workFlow.RelatedType = 'é£é™©' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";
+        strHQL += " or (workFlow.RelatedType = '·çÏÕ' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";  
         strHQL += " or (workFlow.RelatedType = 'Requirement' and workFlow.RelatedID in (select relatedDefect from RelatedDefect as relatedDefect where relatedDefect.ProjectID = " + strProjectID + ")))";
         strHQL += " and workFlow.WLID in (Select document.RelatedID from Document as document where document.RelatedType = 'Workflow' and document.Status <> 'Deleted')";
         strHQL += " Order by workFlow.WLID DESC";
@@ -10554,14 +10554,14 @@ public static class ShareClass
             node.Expanded = false;
         }
 
-        //ç”Ÿæˆé£é™©èŠ‚ç‚¹
+        //Éú³É·çÏÕ½Úµã
         treeNode1 = new TreeNode();
-        treeNode1.Text = "<A href=TTProjectDocManage.aspx?TargetID=Risk_0&ProjectID=" + strProjectID + " Target=Right>é£é™©</a>";
+        treeNode1.Text = "<A href=TTProjectDocManage.aspx?TargetID=Risk_0&ProjectID=" + strProjectID + " Target=Right>·çÏÕ</a>";  
         treeNode1.Target = "Risk_0";
         treeNode1.Expanded = false;
         treeNode.ChildNodes.Add(treeNode1);
         strHQL = "From ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID; ;
-        strHQL += " and projectRisk.ID in (Select document.RelatedID from Document as document where document.RelatedType = 'é£é™©' and document.Status <> 'Deleted')";
+        strHQL += " and projectRisk.ID in (Select document.RelatedID from Document as document where document.RelatedType = '·çÏÕ' and document.Status <> 'Deleted')";  
         strHQL += " Order by projectRisk.ID DESC";
         ProjectRiskBLL projectRiskBLL = new ProjectRiskBLL();
         lst = projectRiskBLL.GetAllProjectRisks(strHQL);
@@ -10580,7 +10580,7 @@ public static class ShareClass
         }
     }
 
-    //å®šä¹‰å‚ä¸é¡¹ç›®çš„é¡¹ç›®æ ‘(å…³è”é¡µé¢é“¾æ¥ï¼‰
+    //¶¨Òå²ÎÓëÏîÄ¿µÄÏîÄ¿Ê÷(¹ØÁªÒ³ÃæÁ´½Ó£©
     public static void InitialInvolvedProjectRelatedPageTree(TreeView TreeView1, string strUserCode, string strRelatedType)
     {
         string strHQL, strProjectID, strProject;
@@ -10588,7 +10588,7 @@ public static class ShareClass
 
         string strProjectIDString = "";
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
@@ -10596,47 +10596,47 @@ public static class ShareClass
 
         if (strRelatedType == "Req")
         {
-            node1.Text = "<A href=TTProjectReqHandlePage.aspx?ProjectID=0" + " Target=Right><B>" + Resources.lang.WCYDXMHTMDZXM + "</B></a>";
+            node1.Text = "<A href=TTProjectReqHandlePage.aspx?ProjectID=0" + " Target=Right><B>" + LanguageHandle.GetWord("WCYDXMHTMDZXM").ToString().Trim() + "</B></a>";
         }
 
         if (strRelatedType == "Defect")
         {
-            node1.Text = "<A href=TTProjectDefectmentHandlePage.aspx?ProjectID=0" + " Target=Right><B>" + Resources.lang.WCYDXMHTMDZXM + "</B></a>";
+            node1.Text = "<A href=TTProjectDefectmentHandlePage.aspx?ProjectID=0" + " Target=Right><B>" + LanguageHandle.GetWord("WCYDXMHTMDZXM").ToString().Trim() + "</B></a>";
         }
 
         if (strRelatedType == "ProjectTask")
         {
-            node1.Text = "<A href=TTProjectTaskHandlePage.aspx?ProjectID=0" + " Target=Right><B>" + Resources.lang.WCYDXMHTMDZXM + "</B></a>";
+            node1.Text = "<A href=TTProjectTaskHandlePage.aspx?ProjectID=0" + " Target=Right><B>" + LanguageHandle.GetWord("WCYDXMHTMDZXM").ToString().Trim() + "</B></a>";
         }
 
         if (strRelatedType == "ProjectTask_JYX")
         {
-            node1.Text = "<A href=TTProjectTaskHandlePage.aspx?ProjectID=0" + " Target=Right><B>" + Resources.lang.WCYDXMHTMDZXM + "</B></a>";
+            node1.Text = "<A href=TTProjectTaskHandlePage.aspx?ProjectID=0" + " Target=Right><B>" + LanguageHandle.GetWord("WCYDXMHTMDZXM").ToString().Trim() + "</B></a>";
         }
 
         if (strRelatedType == "ProjectDoc")
         {
-            node1.Text = "<A href=TTProjectDocManage.aspx?ProjectID=0" + " Target=Right><B>" + Resources.lang.WCYDXMHTMDZXM + "</B></a>";
+            node1.Text = "<A href=TTProjectDocManage.aspx?ProjectID=0" + " Target=Right><B>" + LanguageHandle.GetWord("WCYDXMHTMDZXM").ToString().Trim() + "</B></a>";
         }
         if (strRelatedType == "WorkFlow")
         {
-            node1.Text = "<A href=TTProjectWorkFlowManage.aspx?ProjectID=0" + " Target=Right><B>" + Resources.lang.WCYDXMHTMDZXM + "</B></a>";
+            node1.Text = "<A href=TTProjectWorkFlowManage.aspx?ProjectID=0" + " Target=Right><B>" + LanguageHandle.GetWord("WCYDXMHTMDZXM").ToString().Trim() + "</B></a>";
         }
         if (strRelatedType == "InAndOut")
         {
-            node1.Text = "<A href=TTProjectIncomeExpense.aspx?ProjectID=0" + " Target=Right><B>" + Resources.lang.WCYDXMHTMDZXM + "</B></a>";
+            node1.Text = "<A href=TTProjectIncomeExpense.aspx?ProjectID=0" + " Target=Right><B>" + LanguageHandle.GetWord("WCYDXMHTMDZXM").ToString().Trim() + "</B></a>";
         }
         if (strRelatedType == "ProjectCost")
         {
-            node1.Text = "<A href=TTRCJProjectTotalCostFee.aspx?ProjectID=0" + " Target=Right><B>" + Resources.lang.WCYDXMHTMDZXM + "</B></a>";
+            node1.Text = "<A href=TTRCJProjectTotalCostFee.aspx?ProjectID=0" + " Target=Right><B>" + LanguageHandle.GetWord("WCYDXMHTMDZXM").ToString().Trim() + "</B></a>";
         }
         if (strRelatedType == "ProjectCostCheck")
         {
-            node1.Text = "<A href=TTRCJProjectFundStartPlanApproval.aspx?ProjectID=0" + " Target=Right><B>" + Resources.lang.WCYDXMHTMDZXM + "</B></a>";
+            node1.Text = "<A href=TTRCJProjectFundStartPlanApproval.aspx?ProjectID=0" + " Target=Right><B>" + LanguageHandle.GetWord("WCYDXMHTMDZXM").ToString().Trim() + "</B></a>";
         }
         if (strRelatedType == "ProjectIncomeAndExpense")
         {
-            node1.Text = "<A href=TTRCJProjectCost.aspx?ProjectID=0" + " Target=Right><B>" + Resources.lang.WCYDXMHTMDZXM + "</B></a>";
+            node1.Text = "<A href=TTRCJProjectCost.aspx?ProjectID=0" + " Target=Right><B>" + LanguageHandle.GetWord("WCYDXMHTMDZXM").ToString().Trim() + "</B></a>";
         }
 
         node1.Target = "0";
@@ -10808,19 +10808,19 @@ public static class ShareClass
 
 
 
-    //å®šä¹‰å‚ä¸é¡¹ç›®çš„é¡¹ç›®æ ‘
+    //¶¨Òå²ÎÓëÏîÄ¿µÄÏîÄ¿Ê÷
     public static void InitialInvolvedProjectTree(TreeView TreeView1, string strUserCode)
     {
         string strHQL, strProjectID, strProject;
         IList lst;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>" + Resources.lang.WCYDXMHTMDZXM + "</B>";
+        node1.Text = "<B>" + LanguageHandle.GetWord("WCYDXMHTMDZXM").ToString().Trim() + "</B>";
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -10884,19 +10884,19 @@ public static class ShareClass
         }
     }
 
-    //å®šä¹‰æˆ‘ä¸»å¯¼çš„å’Œæˆ‘å‚ä¸é¡¹ç›®çš„é¡¹ç›®æ ‘
+    //¶¨ÒåÎÒÖ÷µ¼µÄºÍÎÒ²ÎÓëÏîÄ¿µÄÏîÄ¿Ê÷
     public static void InitialMyUnderTakeAndInvolvedProjectTree(TreeView TreeView1, string strUserCode)
     {
         string strHQL, strProjectID, strProject;
         IList lst;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>" + Resources.lang.WCYDXMHTMDZXM + "</B>";
+        node1.Text = "<B>" + LanguageHandle.GetWord("WCYDXMHTMDZXM").ToString().Trim() + "</B>";
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -10960,19 +10960,19 @@ public static class ShareClass
         }
     }
 
-    //å®šä¹‰é¡¹ç›®æ ‘ï¼ˆæ ¹æ®æƒé™ï¼‰
+    //¶¨ÒåÏîÄ¿Ê÷£¨¸ù¾İÈ¨ÏŞ£©
     public static void InitialPrjectTreeByAuthority(TreeView TreeView1, string strUserCode)
     {
         string strHQL, strProjectID, strProjectName;
         //string strUserCode;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>1." + Resources.lang.ZongXiangMu + "</B>";
+        node1.Text = "<B>1." + LanguageHandle.GetWord("ZongXiangMu").ToString().Trim() + "</B>";
         node1.Target = "1";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -11030,19 +11030,19 @@ public static class ShareClass
         }
     }
 
-    //å®šä¹‰è‡ªå·±å»ºç«‹çš„é¡¹ç›®çš„é¡¹ç›®æ ‘
+    //¶¨Òå×Ô¼º½¨Á¢µÄÏîÄ¿µÄÏîÄ¿Ê÷
     public static void InitialMyCreateProjectTree(TreeView TreeView1, string strUserCode)
     {
         string strHQL, strProjectID, strProject;
         IList lst;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>" + Resources.lang.WJLDXM + "</B>";
+        node1.Text = "<B>" + LanguageHandle.GetWord("WJLDXM").ToString().Trim() + "</B>";
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -11107,20 +11107,20 @@ public static class ShareClass
         }
     }
 
-    //æˆ‘è´Ÿè´£çš„é¡¹ç›®çš„é¡¹ç›®æ ‘(ç”¨äºé¡¹ç›®é£é™©ç®¡ç†ï¼‰
+    //ÎÒ¸ºÔğµÄÏîÄ¿µÄÏîÄ¿Ê÷(ÓÃÓÚÏîÄ¿·çÏÕ¹ÜÀí£©
     public static void InitialMyTakeOverProjectTree(TreeView TreeView1, string strUserCode)
     {
         string strHQL, strProjectID, strProject;
         IList lst;
         string strProjectIDString = "";
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<A href=TTProjectRiskManage.aspx?ProjectID=0 Target=Right>" + "<B>" + Resources.lang.WFZDXM + "</B>" + "</a>";
+        node1.Text = "<A href=TTProjectRiskManage.aspx?ProjectID=0 Target=Right>" + "<B>" + LanguageHandle.GetWord("WFZDXM").ToString().Trim() + "</B>" + "</a>";
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -11208,20 +11208,20 @@ public static class ShareClass
         }
     }
 
-    //æˆ‘è´Ÿè´£çš„é¡¹ç›®çš„é¡¹ç›®æ ‘(ç”¨äºé¡¹ç›®é£é™©ç®¡ç†ï¼‰
+    //ÎÒ¸ºÔğµÄÏîÄ¿µÄÏîÄ¿Ê÷(ÓÃÓÚÏîÄ¿·çÏÕ¹ÜÀí£©
     public static void InitialAllProjectTree(TreeView TreeView1, string strUserCode, string strDepartString)
     {
         string strHQL, strProjectID, strProject;
         IList lst;
         string strProjectIDString = "";
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<A href=TTProjectRiskManage.aspx?ProjectID=0 Target=Right>" + "<B>" + Resources.lang.WFZDXM + "</B>" + "</a>";
+        node1.Text = "<A href=TTProjectRiskManage.aspx?ProjectID=0 Target=Right>" + "<B>" + LanguageHandle.GetWord("WFZDXM").ToString().Trim() + "</B>" + "</a>";
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -11264,7 +11264,7 @@ public static class ShareClass
         }
     }
 
-    //ç»´æŠ¤é¡¹ç›®æ—¥å¿—
+    //Î¬»¤ÏîÄ¿ÈÕÖ¾
     public static void UpdateDailyWork(string strUserCode, string strProjectID, string strRelatedType, string strRelatedID, string strWorkDetail)
     {
         string strHQL;
@@ -11281,7 +11281,7 @@ public static class ShareClass
 
             strImpactByDetail = ShareClass.GetProjectTypeImpactByDetail(strProjectID);
 
-            strWorkDetail = " [" + strRelatedType + ":" + strRelatedID + "]WorkLogï¼š" + strWorkDetail + " ";
+            strWorkDetail = " [" + strRelatedType + ":" + strRelatedID + "]WorkLog£º" + strWorkDetail + " ";
 
             strHQL = "from DailyWork as dailyWork where dailyWork.UserCode = " + "'" + strUserCode + "'" + " and dailyWork.ProjectID = " + strProjectID + " and to_char(dailyWork.WorkDate,'yyyymmdd') = to_char(now(),'yyyymmdd')";
             DailyWorkBLL dailyWorkBLL = new DailyWorkBLL();
@@ -11293,18 +11293,18 @@ public static class ShareClass
             {
                 if (strUserCode == strPMCode)
                 {
-                    dailyWork.Type = "ä¸»å¯¼";
+                    dailyWork.Type = "Ö÷µ¼";  
                 }
                 else
                 {
-                    dailyWork.Type = "å‚ä¸";
+                    dailyWork.Type = "²ÎÓë";  
                 }
 
                 dailyWork.Charge = decimal.Parse(ShareClass.getCurrentDateTotalExpenseByOneOperator(strProjectID, strUserCode, DateTime.Now.ToString("yyyyMMdd")));
                 dailyWork.ManHour = decimal.Parse(ShareClass.getCurrentDateTotalManHourByOneOperator(strProjectID, strUserCode, DateTime.Now.ToString("yyyyMMdd")));
                 dailyWork.ConfirmManHour = dailyWork.ManHour;
 
-                //æ›´æ”¹è´Ÿè´£çš„å·¥ä½œè¿›åº¦
+                //¸ü¸Ä¸ºÔğµÄ¹¤×÷½ø¶È
                 if (strImpactByDetail == "YES")
                 {
                     dailyWork.FinishPercent = decimal.Parse(ShareClass.getCurrentDateTotalProgressForMember(strProjectID, strUserCode));
@@ -11347,18 +11347,18 @@ public static class ShareClass
 
                 if (strUserCode == strPMCode)
                 {
-                    dailyWork.Type = "ä¸»å¯¼";
+                    dailyWork.Type = "Ö÷µ¼";  
                 }
                 else
                 {
-                    dailyWork.Type = "å‚ä¸";
+                    dailyWork.Type = "²ÎÓë";  
                 }
 
                 dailyWork.Charge = decimal.Parse(ShareClass.getCurrentDateTotalExpenseByOneOperator(strProjectID, strUserCode, DateTime.Now.ToString("yyyyMMdd")));
                 dailyWork.ManHour = decimal.Parse(ShareClass.getCurrentDateTotalManHourByOneOperator(strProjectID, strUserCode, DateTime.Now.ToString("yyyyMMdd")));
                 dailyWork.ConfirmManHour = dailyWork.ManHour;
 
-                //æ›´æ”¹è´Ÿè´£çš„å·¥ä½œè¿›åº¦
+                //¸ü¸Ä¸ºÔğµÄ¹¤×÷½ø¶È
                 if (strImpactByDetail == "YES")
                 {
                     dailyWork.FinishPercent = decimal.Parse(ShareClass.getCurrentDateTotalProgressForMember(strProjectID, strUserCode));
@@ -11385,7 +11385,7 @@ public static class ShareClass
         }
     }
 
-    //ç»´æŠ¤é¡¹ç›®ç»ç†é¡¹ç›®æ—¥å¿—
+    //Î¬»¤ÏîÄ¿¾­ÀíÏîÄ¿ÈÕÖ¾
     public static void UpdateDailyWorkForPM(string strProjectID, string strRelatedType, string strRelatedID, string strWorkDetail)
     {
         string strHQL;
@@ -11402,7 +11402,7 @@ public static class ShareClass
 
             strImpactByDetail = ShareClass.GetProjectTypeImpactByDetail(strProjectID);
 
-            strWorkDetail = " [" + strRelatedType + ":" + strRelatedID + "]WorkLogï¼š" + strWorkDetail + " ";
+            strWorkDetail = " [" + strRelatedType + ":" + strRelatedID + "]WorkLog£º" + strWorkDetail + " ";
 
             strHQL = "from DailyWork as dailyWork where dailyWork.UserCode = " + "'" + strPMCode + "'" + " and dailyWork.ProjectID = " + strProjectID + " and to_char(dailyWork.WorkDate,'yyyymmdd') = to_char(now(),'yyyymmdd')";
             DailyWorkBLL dailyWorkBLL = new DailyWorkBLL();
@@ -11412,13 +11412,13 @@ public static class ShareClass
 
             if (lst.Count == 0)
             {
-                dailyWork.Type = "ä¸»å¯¼";
+                dailyWork.Type = "Ö÷µ¼";  
 
                 dailyWork.Charge = decimal.Parse(ShareClass.getCurrentDateTotalExpenseByOneOperator(strProjectID, strPMCode, DateTime.Now.ToString("yyyyMMdd")));
                 dailyWork.ManHour = decimal.Parse(ShareClass.getCurrentDateTotalManHourByOneOperator(strProjectID, strPMCode, DateTime.Now.ToString("yyyyMMdd")));
                 dailyWork.ConfirmManHour = dailyWork.ManHour;
 
-                //æ›´æ”¹è´Ÿè´£çš„å·¥ä½œè¿›åº¦
+                //¸ü¸Ä¸ºÔğµÄ¹¤×÷½ø¶È
                 if (strImpactByDetail == "YES")
                 {
                     dailyWork.FinishPercent = decimal.Parse(ShareClass.getCurrentDateTotalProgressForPM(strProjectID));
@@ -11449,7 +11449,7 @@ public static class ShareClass
                 {
                     dailyWorkBLL.AddDailyWork(dailyWork);
 
-                    //æ›´æ”¹è´Ÿè´£çš„é¡¹ç›®æ€»è¿›åº¦
+                    //¸ü¸Ä¸ºÔğµÄÏîÄ¿×Ü½ø¶È
                     if (strImpactByDetail == "YES")
                     {
                         UpdateProjectCompleteDegree(strProjectID, dailyWork.FinishPercent);
@@ -11465,13 +11465,13 @@ public static class ShareClass
                 intID = dailyWork.WorkID;
                 //dailyWork.DailySummary += "<BR/>" + strWorkDetail;
 
-                dailyWork.Type = "ä¸»å¯¼";
+                dailyWork.Type = "Ö÷µ¼";  
 
                 dailyWork.Charge = decimal.Parse(ShareClass.getCurrentDateTotalExpenseByOneOperator(strProjectID, strPMCode, DateTime.Now.ToString("yyyyMMdd")));
                 dailyWork.ManHour = decimal.Parse(ShareClass.getCurrentDateTotalManHourByOneOperator(strProjectID, strPMCode, DateTime.Now.ToString("yyyyMMdd")));
                 dailyWork.ConfirmManHour = dailyWork.ManHour;
 
-                //æ›´æ”¹è´Ÿè´£çš„å·¥ä½œè¿›åº¦
+                //¸ü¸Ä¸ºÔğµÄ¹¤×÷½ø¶È
                 if (strImpactByDetail == "YES")
                 {
                     dailyWork.FinishPercent = decimal.Parse(ShareClass.getCurrentDateTotalProgressForPM(strProjectID));
@@ -11487,7 +11487,7 @@ public static class ShareClass
                 {
                     dailyWorkBLL.UpdateDailyWork(dailyWork, intID);
 
-                    //æ›´æ”¹è´Ÿè´£çš„é¡¹ç›®æ€»è¿›åº¦
+                    //¸ü¸Ä¸ºÔğµÄÏîÄ¿×Ü½ø¶È
                     if (strImpactByDetail == "YES")
                     {
                         UpdateProjectCompleteDegree(strProjectID, dailyWork.FinishPercent);
@@ -11524,7 +11524,7 @@ public static class ShareClass
         }
     }
 
-    //å®šä¹‰ä¾éƒ¨é—¨èŒç§°å‘˜å·¥KPIè€ƒæ ¸æ ‘
+    //¶¨ÒåÒÀ²¿ÃÅÖ°³ÆÔ±¹¤KPI¿¼ºËÊ÷
     public static void InitialKPICheckTreeByDepartPosition(TreeView TreeView1, String strDepartCode, string strPosition)
     {
         string strHQL1, strHQL2;
@@ -11533,7 +11533,7 @@ public static class ShareClass
         string strDepartName;
         string strUserCode, strUserName;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
@@ -11597,7 +11597,7 @@ public static class ShareClass
         TreeView1.DataBind();
     }
 
-    //å®šä¹‰å‘˜å·¥KPIè€ƒæ ¸æ ‘
+    //¶¨ÒåÔ±¹¤KPI¿¼ºËÊ÷
     public static void InitialKPICheckTreeByUserCode(TreeView TreeView1, String strUserCode)
     {
         string strHQL1;
@@ -11605,7 +11605,7 @@ public static class ShareClass
 
         string strUserName;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
@@ -11641,7 +11641,7 @@ public static class ShareClass
         TreeView1.DataBind();
     }
 
-    //å®šä¹‰å‘˜å·¥KPIè€ƒæ ¸æ ‘
+    //¶¨ÒåÔ±¹¤KPI¿¼ºËÊ÷
     public static void InitialKPICheckTreeByDepartCode(TreeView TreeView1, String strDepartCode, string strDepartString)
     {
         string strHQL1;
@@ -11649,7 +11649,7 @@ public static class ShareClass
 
         string strDepartName;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
@@ -11685,7 +11685,7 @@ public static class ShareClass
         TreeView1.DataBind();
     }
 
-    //å®šä¹‰é¡¹ç›®æˆå‘˜æ ‘
+    //¶¨ÒåÏîÄ¿³ÉÔ±Ê÷
     public static void InitialProjectMemberTree(TreeView TreeView, string strProjectID)
     {
         string strHQL;
@@ -11701,14 +11701,14 @@ public static class ShareClass
         ProRelatedUser proRelatedUser = new ProRelatedUser();
         RelatedUser relatedUser = new RelatedUser();
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node2 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>" + Resources.lang.XMTD + "</B>";
+        node1.Text = "<B>" + LanguageHandle.GetWord("XMTD").ToString().Trim() + "</B>";
         node1.Target = "0";
         node1.Expanded = true;
         TreeView.Nodes.Add(node1);
@@ -11721,8 +11721,8 @@ public static class ShareClass
         strPMName = project.PMName.Trim();
 
         node2 = new TreeNode();
-        node2.Text = "[" + Resources.lang.XiangMuJingLi + "]";
-        node2.Target = Resources.lang.XiangMuJingLi;
+        node2.Text = "[" + LanguageHandle.GetWord("XiangMuJingLi").ToString().Trim() + "]";
+        node2.Target = LanguageHandle.GetWord("XiangMuJingLi").ToString().Trim();
         node2.Expanded = true;
         node1.ChildNodes.Add(node2);
 
@@ -11788,19 +11788,19 @@ public static class ShareClass
         TreeView.DataBind();
     }
 
-    //å®šä¹‰é¡¹ç›®å§”å‘˜ç®¡ç†çš„é¡¹ç›®æ ‘ï¼ˆæ ¹æ®é¡¹ç›®å§”å‘˜ä¼šï¼‰
+    //¶¨ÒåÏîÄ¿Î¯Ô±¹ÜÀíµÄÏîÄ¿Ê÷£¨¸ù¾İÏîÄ¿Î¯Ô±»á£©
     public static void InitialPrjectTreeByAuthorityProjectLeader(TreeView TreeView1, string strUserCode, string strDepartString)
     {
         string strHQL, strProjectID, strProject;
         IList lst;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>1." + Resources.lang.ZongXiangMu + "</B>";
+        node1.Text = "<B>1." + LanguageHandle.GetWord("ZongXiangMu").ToString().Trim() + "</B>";
         node1.Target = "1";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -11866,7 +11866,7 @@ public static class ShareClass
         }
     }
 
-    //å®šä¹‰äººä¸ªè®¡åˆ’æ ‘
+    //¶¨ÒåÈË¸ö¼Æ»®Ê÷
     public static void InitialPlanTreeByUserCode(TreeView TreeView1, String strUserCode, string strRelatedType)
     {
         string strHQL;
@@ -11878,13 +11878,13 @@ public static class ShareClass
 
         string strPlanID, strPlanName, strBackupPlanID;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>" + strUserName + " " + Resources.lang.Plan + "</B>";
+        node1.Text = "<B>" + strUserName + " " + LanguageHandle.GetWord("Plan").ToString().Trim() + "</B>";
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -11922,7 +11922,7 @@ public static class ShareClass
         }
     }
 
-    //å®šä¹‰äººä¸ªè®¡åˆ’æ ‘
+    //¶¨ÒåÈË¸ö¼Æ»®Ê÷
     public static void InitialPlanTreeByUserCode(TreeView TreeView1, String strUserCode, String strRelatedType, String strRelatedID, String strRelatedCode)
     {
         string strHQL;
@@ -11933,7 +11933,7 @@ public static class ShareClass
 
         strUserName = ShareClass.GetUserName(strUserCode);
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
@@ -11941,11 +11941,11 @@ public static class ShareClass
 
         if (strRelatedType != "OTHER")
         {
-            node1.Text = "<B>" + strUserName + ":" + " " + Resources.lang.Plan + "</B>";
+            node1.Text = "<B>" + strUserName + ":" + " " + LanguageHandle.GetWord("Plan").ToString().Trim() + "</B>";
         }
         else
         {
-            node1.Text = "<B>" + strUserName + " " + Resources.lang.Plan + "</B>";
+            node1.Text = "<B>" + strUserName + " " + LanguageHandle.GetWord("Plan").ToString().Trim() + "</B>";
         }
         node1.Target = "0";
         node1.Expanded = true;
@@ -12041,7 +12041,7 @@ public static class ShareClass
         }
     }
 
-    //å®šä¹‰KPIåº“æ ‘
+    //¶¨ÒåKPI¿âÊ÷
     public static void InitialKPITree(TreeView TreeView1)
     {
         string strHQL;
@@ -12049,13 +12049,13 @@ public static class ShareClass
 
         string strKPIType;
 
-        //æ·»åŠ æ ¹èŠ‚ç‚¹
+        //Ìí¼Ó¸ù½Úµã
         TreeView1.Nodes.Clear();
 
         TreeNode node1 = new TreeNode();
         TreeNode node2 = new TreeNode();
 
-        node1.Text = "<B>" + "KPI " + Resources.lang.MuBanKu + "</B>";
+        node1.Text = "<B>" + "KPI " + LanguageHandle.GetWord("MuBanKu").ToString().Trim() + "</B>";
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);
@@ -12115,11 +12115,11 @@ public static class ShareClass
         }
     }
 
-    #endregion å®šä¹‰å„ç§ä¸šåŠ¡æ ‘
+    #endregion ¶¨Òå¸÷ÖÖÒµÎñÊ÷
 
-    #region å–å¾—ç”¨æˆ·åˆ›å»ºçš„å¯¹è±¡çš„æœ€å¤§IDå·
+    #region È¡µÃÓÃ»§´´½¨µÄ¶ÔÏóµÄ×î´óIDºÅ
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æ¨¡ç»„æœ€å¤§æ¨¡ç»„å·
+    //È¡µÃÓÃ»§´´½¨µÄÄ£×é×î´óÄ£×éºÅ
     public static string GetMyCreatedMaxModuleID()
     {
         string strHQL;
@@ -12131,7 +12131,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„é¡¹ç›®æœ€å¤§é¡¹ç›®å·
+    //È¡µÃÓÃ»§´´½¨µÄÏîÄ¿×î´óÏîÄ¿ºÅ
     public static string GetMyCreatedMaxUserLoginManageID()
     {
         string strHQL;
@@ -12143,7 +12143,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§åˆ†æå›¾å½¢å·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´ó·ÖÎöÍ¼ĞÎºÅ
     public static string GetMyCreatedMaxSystemAnalystChartID()
     {
         string strHQL;
@@ -12155,7 +12155,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„é¡¹ç›®æœ€å¤§é¡¹ç›®å·
+    //È¡µÃÓÃ»§´´½¨µÄÏîÄ¿×î´óÏîÄ¿ºÅ
     public static string GetMyCreatedMaxProjectID(string strUserCode)
     {
         string strHQL;
@@ -12170,7 +12170,7 @@ public static class ShareClass
         return project.ProjectID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„éœ€æ±‚æœ€å¤§éœ€æ±‚å·
+    //È¡µÃÓÃ»§´´½¨µÄĞèÇó×î´óĞèÇóºÅ
     public static string GetMyCreatedMaxDefectID(string strUserCode)
     {
         string strHQL;
@@ -12185,7 +12185,7 @@ public static class ShareClass
         return defectment.DefectID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„éœ€æ±‚æœ€å¤§éœ€æ±‚å·
+    //È¡µÃÓÃ»§´´½¨µÄĞèÇó×î´óĞèÇóºÅ
     public static string GetMyCreatedMaxReqID(string strUserCode)
     {
         string strHQL;
@@ -12200,7 +12200,7 @@ public static class ShareClass
         return requirement.ReqID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„ä¼šè®®æœ€å¤§ä¼šè®®å·
+    //È¡µÃÓÃ»§´´½¨µÄ»áÒé×î´ó»áÒéºÅ
     public static string GetMyCreatedMaxMeetingID(string strUserCode)
     {
         string strHQL;
@@ -12215,7 +12215,7 @@ public static class ShareClass
         return meeting.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§ä¼šè®®å®¤ç¼–å·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´ó»áÒéÊÒ±àºÅ
     public static string GetMyCreatedMaxMeetingRoomID()
     {
         string strHQL;
@@ -12230,7 +12230,7 @@ public static class ShareClass
         return meetingRoom.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§é¡¹ç›®ä»»åŠ¡å·ï¼š
+    //È¡µÃÓÃ»§´´½¨µÄ×î´óÏîÄ¿ÈÎÎñºÅ£º
     public static string GetMyCreatedMaxTaskID(string strProjectID, string strUserCode)
     {
         string strHQL = "from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + " Order by projectTask.TaskID DESC";
@@ -12243,7 +12243,7 @@ public static class ShareClass
         return projectTask.TaskID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§é¡¹ç›®é£é™©å·ï¼š
+    //È¡µÃÓÃ»§´´½¨µÄ×î´óÏîÄ¿·çÏÕºÅ£º
     public static string GetMyCreatedMaxRiskID(string strProjectID)
     {
         string strHQL;
@@ -12258,7 +12258,7 @@ public static class ShareClass
         return projectRisk.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§é¡¹ç›®åˆ†æ´¾è®°å½•å·ï¼š
+    //È¡µÃÓÃ»§´´½¨µÄ×î´óÏîÄ¿·ÖÅÉ¼ÇÂ¼ºÅ£º
     public static string GetMyCreatedMaxTaskAssignRecordID(string strTaskID, string strUserCode)
     {
         string strHQL = "from TaskAssignRecord as taskAssignRecord where taskAssignRecord.TaskID = " + strTaskID + " and taskAssignRecord.AssignManCode = " + "'" + strUserCode + "'" + " Order by taskAssignRecord.ID Desc";
@@ -12270,7 +12270,7 @@ public static class ShareClass
         return taskAssignRecord.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§ç¼ºé™·åˆ†æ´¾è®°å½•å·ï¼š
+    //È¡µÃÓÃ»§´´½¨µÄ×î´óÈ±Ïİ·ÖÅÉ¼ÇÂ¼ºÅ£º
     public static string GetMyCreatedMaxDefectAssignRecordID(string strDefectID, string strUserCode)
     {
         string strHQL = "from DefectAssignRecord as defectAssignRecord where defectAssignRecord.DefectID = " + strDefectID + " and defectAssignRecord.AssignManCode = " + "'" + strUserCode + "'" + " Order by defectAssignRecord.ID Desc";
@@ -12282,7 +12282,7 @@ public static class ShareClass
         return defectAssignRecord.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§éœ€æ±‚åˆ†æ´¾è®°å½•å·ï¼š
+    //È¡µÃÓÃ»§´´½¨µÄ×î´óĞèÇó·ÖÅÉ¼ÇÂ¼ºÅ£º
     public static string GetMyCreatedMaxReqAssignRecordID(string strReqID, string strUserCode)
     {
         string strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.ReqID = " + strReqID + " and reqAssignRecord.AssignManCode = " + "'" + strUserCode + "'" + " Order by reqAssignRecord.ID Desc";
@@ -12294,7 +12294,7 @@ public static class ShareClass
         return reqAssignRecord.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§åˆåŒå·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´óºÏÍ¬ºÅ
     public static string GetMyCreatedMaxConstractID(string strUserCode)
     {
         string strHQL;
@@ -12309,7 +12309,7 @@ public static class ShareClass
         return constract.ConstractID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„åˆåŒä¸šåŠ¡å‘˜æœ€å¤§çš„IDå·
+    //È¡µÃÓÃ»§´´½¨µÄºÏÍ¬ÒµÎñÔ±×î´óµÄIDºÅ
     public static string GetMyCreatedMaxConstractSalesID(string strConstractCode)
     {
         string strHQL;
@@ -12320,7 +12320,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„åˆåŒå˜æ›´åæœ€å¤§çš„IDå·
+    //È¡µÃÓÃ»§´´½¨µÄºÏÍ¬±ä¸üºó×î´óµÄIDºÅ
     public static string GetMyCreatedMaxConstractChangeRecordID(string strConstractCode)
     {
         string strHQL;
@@ -12331,7 +12331,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„åˆåŒæŠ¥å…³å•æœ€å¤§çš„IDå·
+    //È¡µÃÓÃ»§´´½¨µÄºÏÍ¬±¨¹Øµ¥×î´óµÄIDºÅ
     public static string GetMyCreatedMaxConstractEntryID(string strConstractCode)
     {
         string strHQL;
@@ -12342,7 +12342,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§çš„åˆåŒä»˜æ¬¾å·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´óµÄºÏÍ¬¸¶¿îºÅ
     public static string GetMyCreatedMaxConstractPayableID(string strConstractCode)
     {
         string strHQL;
@@ -12357,7 +12357,7 @@ public static class ShareClass
         return constractPayable.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§çš„åˆåŒä»˜æ¬¾å·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´óµÄºÏÍ¬¸¶¿îºÅ
     public static string GetMyCreatedMaxConstractPayablePlanID(string strRelatedType, string strRelatedID)
     {
         string strHQL;
@@ -12373,7 +12373,7 @@ public static class ShareClass
         return constractPayable.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§çš„åˆåŒä»˜æ¬¾è®°å½•å·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´óµÄºÏÍ¬¸¶¿î¼ÇÂ¼ºÅ
     public static string GetMyCreatedMaxConstractPayableRecordID(string strPayableID)
     {
         string strHQL;
@@ -12388,7 +12388,7 @@ public static class ShareClass
         return constractPayableRecord.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§çš„åˆåŒæ”¶æ¬¾å·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´óµÄºÏÍ¬ÊÕ¿îºÅ
     public static string GetMyCreatedMaxConstractReceivableID(string strConstractCode)
     {
         string strHQL;
@@ -12403,7 +12403,7 @@ public static class ShareClass
         return constractReceivables.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§çš„åˆåŒæ”¶æ¬¾å·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´óµÄºÏÍ¬ÊÕ¿îºÅ
     public static string GetMyCreatedMaxConstractReceivablePlanID(string strRelatedType, string strRelatedID)
     {
         string strHQL;
@@ -12419,7 +12419,7 @@ public static class ShareClass
         return constractReceivables.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§çš„åˆåŒæ”¶æ¬¾è®°å½•å·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´óµÄºÏÍ¬ÊÕ¿î¼ÇÂ¼ºÅ
     public static string GetMyCreatedMaxConstractReceivableRecordID(string strReceivablesID)
     {
         string strHQL;
@@ -12434,7 +12434,7 @@ public static class ShareClass
         return constractReceivablesRecord.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§åä½œå·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´óĞ­×÷ºÅ
     public static string GetMyCreatedMaxColloaborationID(string strUserCode)
     {
         string strHQL;
@@ -12445,7 +12445,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString().Trim();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„çŸ­ä¿¡ç¼–å·
+    //È¡µÃÓÃ»§´´½¨µÄ¶ÌĞÅ±àºÅ
     public static string GetMyCreatedMaxSMSID(string strUserCode)
     {
         string strHQL;
@@ -12456,7 +12456,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç»„ç»‡çº§ä¿¡æ¯æ¨é€çš„ç¼–å·
+    //È¡µÃ×éÖ¯¼¶ĞÅÏ¢ÍÆËÍµÄ±àºÅ
     public static string GetMyCreatedMaxDepartmentMsgPushID(string strUserCode)
     {
         string strHQL;
@@ -12467,7 +12467,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§å·¥ä½œæµç¼–å·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´ó¹¤×÷Á÷±àºÅ
     public static string GetMyCreatedWorkFlowID(string strUserCode)
     {
         string strHQL;
@@ -12482,7 +12482,7 @@ public static class ShareClass
         return workFlow.WLID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§å·¥ä½œæµæ­¥éª¤ç¼–å·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´ó¹¤×÷Á÷²½Öè±àºÅ
     public static string GetMyCreatedWorkFlowStepID(string strWLID)
     {
         string strHQL;
@@ -12500,7 +12500,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§å·¥ä½œæµæ¨¡æ¿æ­¥éª¤å·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´ó¹¤×÷Á÷Ä£°å²½ÖèºÅ
     public static string GetMyCreatedWorkFlowTStepID(string strTemName)
     {
         string strHQL;
@@ -12515,7 +12515,7 @@ public static class ShareClass
         return workFlowTStep.StepID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§å·¥ä½œæµæ­¥éª¤ç»†èŠ‚å·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´ó¹¤×÷Á÷²½ÖèÏ¸½ÚºÅ
     public static string GetMyCreatedMaxWorkFlowTStepOperatorID(string strStepID)
     {
         string strHQL;
@@ -12530,7 +12530,7 @@ public static class ShareClass
         return workFlowTStepOperator.ID.ToString();
     }
 
-    ////å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§å·¥ä½œæµæ­¥éª¤æ“ä½œå·
+    ////È¡µÃÓÃ»§´´½¨µÄ×î´ó¹¤×÷Á÷²½Öè²Ù×÷ºÅ
     //public static string GetMyCreatedMaxWorkFlowTStepOperationID(string strStepID)
     //{
     //    string strHQL = "from WorkFlowTStepOperation as workFlowTStepOperation where workFlowTStepOperation.StepID = " + strStepID + " Order by workFlowTStepOperation.OperationID DESC";
@@ -12542,7 +12542,7 @@ public static class ShareClass
     //    return workFlowTStepOperation.OperationID.ToString();
     //}
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§å·¥ä½œæµæ¨¡æ¿XMLèŠ‚ç‚¹å…³è”å˜é‡IDå·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´ó¹¤×÷Á÷Ä£°åXML½Úµã¹ØÁª±äÁ¿IDºÅ
     public static string GetMyCreatedMaxWFTemplateXMLNodeGlobalVariableID()
     {
         string strHQL;
@@ -12553,7 +12553,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§å·¥ä½œæµæ­¥éª¤æ¡ä»¶å·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´ó¹¤×÷Á÷²½ÖèÌõ¼şºÅ
     public static string GetMyCreatedMaxWorkFlowTStepConditionID()
     {
         string strHQL;
@@ -12568,7 +12568,7 @@ public static class ShareClass
         return wlTStepCondition.ConID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§å·¥ä½œæµæ­¥éª¤æ¡ä»¶è¡¨è¾¾å¼å·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´ó¹¤×÷Á÷²½ÖèÌõ¼ş±í´ïÊ½ºÅ
     public static string GetMyCreatedMaxWorkFlowTStepConditionExpressionID()
     {
         string strHQL;
@@ -12583,7 +12583,7 @@ public static class ShareClass
         return wlTStepConditionExpression.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§å·¥ä½œæµæ­¥éª¤æ¡ä»¶è¡¨è¾¾å¼å·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´ó¹¤×÷Á÷²½ÖèÌõ¼ş±í´ïÊ½ºÅ
     public static string GetMyCreatedMaxWFTStepRelatedTem(string strStepID)
     {
         string strHQL;
@@ -12594,7 +12594,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§è§’è‰²ç»„æˆå‘˜å·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´ó½ÇÉ«×é³ÉÔ±ºÅ
     public static string GetMyCreatedMaxActorGroupDetailID(string strGroupName)
     {
         string strHQL;
@@ -12620,7 +12620,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§é¡¹ç›®æˆå‘˜IDå·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´óÏîÄ¿³ÉÔ±IDºÅ
     public static string GetMyCreatedMaxProjectRelatedUserID(string strProjectID)
     {
         string strHQL;
@@ -12631,7 +12631,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§é¡¹ç›®è´¹ç”¨å·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´óÏîÄ¿·ÑÓÃºÅ
     public static string GetMyCreatedMaxProExpenseID(string strProjectID, string strUserCode)
     {
         string strHQL;
@@ -12646,7 +12646,7 @@ public static class ShareClass
         return proExpense.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§é¡¹ç›®è´¹ç”¨å·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´óÏîÄ¿·ÑÓÃºÅ
     public static string GetMyCreatedMaxProBudgetID(string strProjectID)
     {
         string strHQL;
@@ -12661,7 +12661,7 @@ public static class ShareClass
         return projectBudget.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§é¡¹ç›®è´¹ç”¨å·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´óÏîÄ¿·ÑÓÃºÅ
     public static string GetMyCreatedMaxAllProBudgetID(string strProjectID)
     {
         string strHQL;
@@ -12673,7 +12673,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§é¡¹ç›®è®¡åˆ’å·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´óÏîÄ¿¼Æ»®ºÅ
     public static string GetMyCreatedMaxProPlanID(string strProjectID, string strVerID)
     {
         string strHQL;
@@ -12688,7 +12688,7 @@ public static class ShareClass
         return workPlan.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„é¡¹ç›®è®¡åˆ’æˆå‘˜çš„æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄÏîÄ¿¼Æ»®³ÉÔ±µÄ×î´óIDºÅ
     public static string GetMyCreatedMaxPlanMemberID(string strPlanID)
     {
         string strHQL;
@@ -12703,7 +12703,7 @@ public static class ShareClass
         return planMember.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„è´¹ç”¨ç”³è¯·æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄ·ÑÓÃÉêÇë×î´óIDºÅ
     public static string GetMyCreatedMaxExpenseApplyWLID(string strUserCode)
     {
         string strHQL;
@@ -12718,7 +12718,7 @@ public static class ShareClass
         return expenseApplyWL.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„è´¹ç”¨æŠ¥é”€æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄ·ÑÓÃ±¨Ïú×î´óIDºÅ
     public static string GetMyCreatedMaxExpenseClaimWLID(string strUserCode)
     {
         string strHQL;
@@ -12733,7 +12733,7 @@ public static class ShareClass
         return expenseClaim.ECID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„è´¹ç”¨æŠ¥é”€åç»†çš„æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄ·ÑÓÃ±¨ÏúÃûÏ¸µÄ×î´óIDºÅ
     public static string GetMyCreatedMaxExpenseClaimDetailID(string strUserCode)
     {
         string strHQL;
@@ -12751,7 +12751,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æœ€å¤§çš„æµ‹è¯•ç”¨ä¾‹å·
+    //È¡µÃ×î´óµÄ²âÊÔÓÃÀıºÅ
     public static string GetMyCreatedMaxTaskTestCaseID()
     {
         string strHQL;
@@ -12766,7 +12766,7 @@ public static class ShareClass
         return taskTestCase.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„èµ„äº§é‡‡è´­å•æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄ×Ê²ú²É¹ºµ¥×î´óIDºÅ
     public static string GetMyCreatedMaxAssetPurchaseOrderID(string strUserCode)
     {
         string strHQL;
@@ -12781,7 +12781,7 @@ public static class ShareClass
         return assetPurchaseOrder.POID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„é¡¹ç›®ç‰©èµ„è´¹ç”¨ç”³è¯·å•æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄÏîÄ¿Îï×Ê·ÑÓÃÉêÇëµ¥×î´óIDºÅ
     public static string GetMyCreatedMaxProjectMaterialPaymentApplicantID(string strUserCode)
     {
         string strHQL;
@@ -12796,7 +12796,7 @@ public static class ShareClass
         return projectMaterialPaymentApplicant.AOID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„é¡¹ç›®ç‰©èµ„è´¹ç”¨ç”³è¯·å•æ˜ç»†æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄÏîÄ¿Îï×Ê·ÑÓÃÉêÇëµ¥Ã÷Ï¸×î´óIDºÅ
     public static string GetMyCreatedMaxProjectMaterialPaymentApplicantDetailID(string strAOID)
     {
         string strHQL;
@@ -12811,7 +12811,7 @@ public static class ShareClass
         return projectMaterialPaymentApplicantDetail.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„èµ„äº§è´¹ç”¨ç”³è¯·å•æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄ×Ê²ú·ÑÓÃÉêÇëµ¥×î´óIDºÅ
     public static string GetMyCreatedMaxSupplierAssetPaymentApplicantID(string strUserCode)
     {
         string strHQL;
@@ -12826,7 +12826,7 @@ public static class ShareClass
         return supplierAssetPaymentApplicant.AOID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„èµ„äº§è´¹ç”¨ç”³è¯·å•æ˜ç»†æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄ×Ê²ú·ÑÓÃÉêÇëµ¥Ã÷Ï¸×î´óIDºÅ
     public static string GetMyCreatedMaxSupplierAssetPaymentApplicantDetailID(string strAOID)
     {
         string strHQL;
@@ -12841,7 +12841,7 @@ public static class ShareClass
         return supplierAssetPaymentApplicantDetail.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„ç‰©æ–™é‡‡è´­å•æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄÎïÁÏ²É¹ºµ¥×î´óIDºÅ
     public static string GetMyCreatedMaxGoodsPurchaseOrderID(string strUserCode)
     {
         string strHQL;
@@ -12856,7 +12856,7 @@ public static class ShareClass
         return goodsPurchaseOrder.POID.ToString();
     }
 
-    //å–å¾—ç‰©æ–™ä¾›è´§å•çš„æœ€å¤§ID
+    //È¡µÃÎïÁÏ¹©»õµ¥µÄ×î´óID
     public static string GetMyCreatedMaxGoodsSupplyOrderID(string strUserCode)
     {
         string strHQL;
@@ -12867,7 +12867,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç‰©æ–™ç”Ÿäº§å•çš„æœ€å¤§ID
+    //È¡µÃÎïÁÏÉú²úµ¥µÄ×î´óID
     public static string GetMyCreatedMaxGoodsProductionOrderID(string strUserCode)
     {
         string strHQL;
@@ -12878,7 +12878,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç‰©æ–™ç”Ÿäº§å•æ˜ç»†çš„æœ€å¤§ID
+    //È¡µÃÎïÁÏÉú²úµ¥Ã÷Ï¸µÄ×î´óID
     public static string GetMyCreatedMaxGoodsProductionOrderDetailID(string strPDID)
     {
         string strHQL;
@@ -12889,7 +12889,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—èµ„äº§å…¥åº“å•çš„æœ€å¤§ID
+    //È¡µÃ×Ê²úÈë¿âµ¥µÄ×î´óID
     public static string GetMyCreatedMaxAssetCheckInID(string strUserCode)
     {
         string strHQL;
@@ -12900,7 +12900,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„èµ„äº§é‡‡è´­æ˜ç»†æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄ×Ê²ú²É¹ºÃ÷Ï¸×î´óIDºÅ
     public static string GetMyCreatedMaxAssetPurRecordID(string strPOID)
     {
         string strHQL;
@@ -12915,7 +12915,7 @@ public static class ShareClass
         return assetPurRecord.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„ç‰©æ–™é‡‡è´­æ˜ç»†æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄÎïÁÏ²É¹ºÃ÷Ï¸×î´óIDºÅ
     public static string GetMyCreatedMaxGoodsPurRecordID(string strPOID)
     {
         string strHQL;
@@ -12930,7 +12930,7 @@ public static class ShareClass
         return goodsPurRecord.ID.ToString();
     }
 
-    //å–å¾—ç‰©æ–™ä¾›è´§å•æ˜ç»†çš„æœ€å¤§ID
+    //È¡µÃÎïÁÏ¹©»õµ¥Ã÷Ï¸µÄ×î´óID
     public static string GetMyCreatedMaxGoodsSupplyOrderDetailID(string strSUID)
     {
         string strHQL;
@@ -12941,7 +12941,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„åˆåŒç‰©æ–™æ˜ç»†è¡¨æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄºÏÍ¬ÎïÁÏÃ÷Ï¸±í×î´óIDºÅ
     public static string GetMyCreatedMaxConstractRelatedGoodsID(string strConstractCode)
     {
         string strHQL;
@@ -12956,7 +12956,7 @@ public static class ShareClass
         return constractRelatedGoods.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„å®¢æˆ·ç‰©æ–™æ˜ç»†è¡¨æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄ¿Í»§ÎïÁÏÃ÷Ï¸±í×î´óIDºÅ
     public static string GetMyCreatedMaxCustomerRelatedGoodsInforID(string strCustomerCode)
     {
         string strHQL;
@@ -12971,7 +12971,7 @@ public static class ShareClass
         return customerRelatedGoodsInfor.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„ä¾›åº”å•†ç‰©æ–™æ˜ç»†è¡¨æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄ¹©Ó¦ÉÌÎïÁÏÃ÷Ï¸±í×î´óIDºÅ
     public static string GetMyCreatedMaxVendorRelatedGoodsInforID(string strVendorCode)
     {
         string strHQL;
@@ -12986,7 +12986,7 @@ public static class ShareClass
         return vendorRelatedGoodsInfor.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„åˆåŒæ”¶è´§è®¡åˆ’æ˜ç»†è¡¨æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄºÏÍ¬ÊÕ»õ¼Æ»®Ã÷Ï¸±í×î´óIDºÅ
     public static string GetMyCreatedMaxConstractGoodsReceiptPlanID(string strConstractCode)
     {
         string strHQL;
@@ -13001,7 +13001,7 @@ public static class ShareClass
         return constractGoodsReceiptPlan.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„åˆåŒæ”¶è´§è®°å½•æ˜ç»†è¡¨æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄºÏÍ¬ÊÕ»õ¼ÇÂ¼Ã÷Ï¸±í×î´óIDºÅ
     public static string GetMyCreatedMaxConstractGoodsReceiptRecordID(string strReceiptPlanID)
     {
         string strHQL;
@@ -13016,7 +13016,7 @@ public static class ShareClass
         return constractGoodsReceiptRecord.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„åˆåŒå‘è´§è®¡åˆ’æ˜ç»†è¡¨æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄºÏÍ¬·¢»õ¼Æ»®Ã÷Ï¸±í×î´óIDºÅ
     public static string GetMyCreatedMaxConstractGoodsDeliveryPlanID(string strConstractCode)
     {
         string strHQL;
@@ -13031,7 +13031,7 @@ public static class ShareClass
         return constractGoodsDeliveryPlan.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„åˆåŒå‘è´§è®°å½•æ˜ç»†è¡¨æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄºÏÍ¬·¢»õ¼ÇÂ¼Ã÷Ï¸±í×î´óIDºÅ
     public static string GetMyCreatedMaxConstractGoodsDeliveryRecordID(string strDeliveryPlanID)
     {
         string strHQL;
@@ -13046,7 +13046,7 @@ public static class ShareClass
         return constractGoodsDeliveryRecord.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„èµ„äº§ç”³è¯·è¡¨æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄ×Ê²úÉêÇë±í×î´óIDºÅ
     public static string GetMyCreatedMaxAssetApplicationID(string strUserCode)
     {
         string strHQL;
@@ -13061,7 +13061,7 @@ public static class ShareClass
         return assetApplication.AAID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„èµ„äº§ç”³è¯·è¡¨æ˜ç»†æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄ×Ê²úÉêÇë±íÃ÷Ï¸×î´óIDºÅ
     public static string GetMyCreatedMaxAssetApplicationDetailID(string strAAID)
     {
         string strHQL;
@@ -13076,7 +13076,7 @@ public static class ShareClass
         return assetApplicationDetail.ID.ToString();
     }
 
-    //å–å¾—èµ„äº§å…¥åº“å•æœ€å¤§çš„å•å·
+    //È¡µÃ×Ê²úÈë¿âµ¥×î´óµÄµ¥ºÅ
     public static int GetMyCreatedMaxAssetCheckInDetailID(string strCIOID)
     {
         string strHQL;
@@ -13087,7 +13087,7 @@ public static class ShareClass
         return int.Parse(ds.Tables[0].Rows[0][0].ToString());
     }
 
-    //å–å¾—èµ„äº§å‡ºåº“å•æœ€å¤§çš„å•å·
+    //È¡µÃ×Ê²ú³ö¿âµ¥×î´óµÄµ¥ºÅ
     public static int GetMyCreatedMaxAssetShipmentNO(string strUserCode)
     {
         string strHQL;
@@ -13098,7 +13098,7 @@ public static class ShareClass
         return int.Parse(ds.Tables[0].Rows[0][0].ToString());
     }
 
-    //å–å¾—èµ„äº§å‡ºåº“å•æ˜ç»†çš„æœ€å¤§ID
+    //È¡µÃ×Ê²ú³ö¿âµ¥Ã÷Ï¸µÄ×î´óID
     public static int GetMyCreatedMaxAssetShipmentDetailID()
     {
         string strHQL;
@@ -13109,7 +13109,7 @@ public static class ShareClass
         return int.Parse(ds.Tables[0].Rows[0][0].ToString());
     }
 
-    //å–å¾—ç”¨æˆ·å»ºç«‹çš„æœ€æ–°çš„èµ„äº§
+    //È¡µÃÓÃ»§½¨Á¢µÄ×îĞÂµÄ×Ê²ú
     public static string GetMyCreatedMaxAssetCode(string strUserCode)
     {
         string strHQL;
@@ -13124,7 +13124,7 @@ public static class ShareClass
         return asset.AssetCode.Trim();
     }
 
-    //å–å¾—ç”¨æˆ·å»ºç«‹çš„èµ„äº§æœ€æ–°è°ƒé…è®°å½•ID
+    //È¡µÃÓÃ»§½¨Á¢µÄ×Ê²ú×îĞÂµ÷Åä¼ÇÂ¼ID
     public static string GetMyCreatedMaxAssetuserRecordID(string strAssetCode)
     {
         string strHQL = "from AssetUserRecord as assetUserRecord where assetUserRecord.AssetCode = " + "'" + strAssetCode + "'" + " Order by assetUserRecord.ID DESC";
@@ -13135,7 +13135,7 @@ public static class ShareClass
         return assetUserRecord.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·å»ºç«‹çš„èµ„äº§ç»´æŠ¤æœ€æ–°è®°å½•ID
+    //È¡µÃÓÃ»§½¨Á¢µÄ×Ê²úÎ¬»¤×îĞÂ¼ÇÂ¼ID
     public static string GetMyCreatedMaxAssetMtRecordID(string strAssetCode)
     {
         string strHQL = "from AssetMTRecord as assetMTRecord where assetMTRecord.AssetCode = " + "'" + strAssetCode + "'" + " Order by assetMTRecord.ID DESC";
@@ -13148,7 +13148,7 @@ public static class ShareClass
         return assetMTRecord.ID.ToString();
     }
 
-    //å–å¾—ç‰©æ–™é”€å”®å•æœ€å¤§çš„è®°å½•å·
+    //È¡µÃÎïÁÏÏúÊÛµ¥×î´óµÄ¼ÇÂ¼ºÅ
     public static string GetMyCreatedMaxScheduleDailyWorkID()
     {
         string strHQL;
@@ -13159,7 +13159,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—çŒè˜äººå‘˜çš„æœ€å¤§ID
+    //È¡µÃÁÔÆ¸ÈËÔ±µÄ×î´óID
     public static string GetMyCreatedMaxCandidateID(string strUserCode)
     {
         string strHQL;
@@ -13170,7 +13170,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç‰©æ–™å…¥åº“å•çš„æœ€å¤§ID
+    //È¡µÃÎïÁÏÈë¿âµ¥µÄ×î´óID
     public static string GetMyCreatedMaxGoodsCheckInID(string strUserCode)
     {
         string strHQL;
@@ -13181,7 +13181,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç‰©æ–™é”€å”®å•çš„æœ€å¤§ID
+    //È¡µÃÎïÁÏÏúÊÛµ¥µÄ×î´óID
     public static string GetMyCreatedMaxGoodsSaleOrderID(string strUserCode)
     {
         string strHQL;
@@ -13192,7 +13192,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç‰©æ–™é”€å”®å•æœ€å¤§çš„è®°å½•å·
+    //È¡µÃÎïÁÏÏúÊÛµ¥×î´óµÄ¼ÇÂ¼ºÅ
     public static string GetMyCreatedMaxGoodsSaleRecordID(string strSOID)
     {
         string strHQL;
@@ -13203,7 +13203,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç‰©æ–™é”€å”®æŠ¥ä»·å•çš„æœ€å¤§ID
+    //È¡µÃÎïÁÏÏúÊÛ±¨¼Ûµ¥µÄ×î´óID
     public static string GetMyCreatedMaxGoodsSaleQuotationOrderID(string strUserCode)
     {
         string strHQL;
@@ -13214,7 +13214,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç‰©æ–™é”€å”®å•æœ€å¤§çš„è®°å½•å·
+    //È¡µÃÎïÁÏÏúÊÛµ¥×î´óµÄ¼ÇÂ¼ºÅ
     public static string GetMyCreatedMaxGoodsSaleQuotationOrderDetailID(string strQOID)
     {
         string strHQL;
@@ -13225,7 +13225,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„ç‰©æ–™å‡ºè´§é€šçŸ¥è¡¨æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄÎïÁÏ³ö»õÍ¨Öª±í×î´óIDºÅ
     public static string GetMyCreatedMaxGoodsCheckOutNoticeOrderID(string strUserCode)
     {
         string strHQL;
@@ -13240,7 +13240,7 @@ public static class ShareClass
         return goodsCheckOutNoticeOrder.COOID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„ç‰©æ–™å‡ºè´§é€šçŸ¥è¡¨æ˜ç»†æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄÎïÁÏ³ö»õÍ¨Öª±íÃ÷Ï¸×î´óIDºÅ
     public static string GetMyCreatedMaxGoodsCheckOutNoticeOrderDetailID(string strAAID)
     {
         string strHQL;
@@ -13255,7 +13255,7 @@ public static class ShareClass
         return goodsCheckOutNoticeOrderDetail.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„ç‰©æ–™ç”³è¯·è¡¨æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄÎïÁÏÉêÇë±í×î´óIDºÅ
     public static string GetMyCreatedMaxGoodsApplicationID(string strUserCode)
     {
         string strHQL;
@@ -13270,7 +13270,7 @@ public static class ShareClass
         return goodsApplication.AAID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„ç‰©æ–™ç”³è¯·è¡¨æ˜ç»†æœ€å¤§IDå·
+    //È¡µÃÓÃ»§´´½¨µÄÎïÁÏÉêÇë±íÃ÷Ï¸×î´óIDºÅ
     public static string GetMyCreatedMaxGoodsApplicationDetailID(string strAAID)
     {
         string strHQL;
@@ -13285,7 +13285,7 @@ public static class ShareClass
         return goodsApplicationDetail.ID.ToString();
     }
 
-    //å–å¾—ç‰©æ–™MRPè®¡åˆ’æœ€å¤§çš„å•å·
+    //È¡µÃÎïÁÏMRP¼Æ»®×î´óµÄµ¥ºÅ
     public static int GetMyCreatedMaxGoodsMrpMainPlanVerID(string strCreatorCode)
     {
         string strHQL;
@@ -13296,7 +13296,7 @@ public static class ShareClass
         return int.Parse(ds.Tables[0].Rows[0][0].ToString());
     }
 
-    //å–å¾—ç‰©æ–™MRPè®¡åˆ’æ˜ç»†æœ€å¤§çš„å•å·
+    //È¡µÃÎïÁÏMRP¼Æ»®Ã÷Ï¸×î´óµÄµ¥ºÅ
     public static int GetMyCreatedMaxGoodsMrpMainPlanVerDetailID(string strPlanVerID)
     {
         string strHQL;
@@ -13307,7 +13307,7 @@ public static class ShareClass
         return int.Parse(ds.Tables[0].Rows[0][0].ToString());
     }
 
-    //å–å¾—ç‰©æ–™å…¥åº“å•æœ€å¤§çš„å•å·
+    //È¡µÃÎïÁÏÈë¿âµ¥×î´óµÄµ¥ºÅ
     public static int GetMyCreatedMaxGoodsCheckInDetailID(string strCIOID)
     {
         string strHQL;
@@ -13318,7 +13318,7 @@ public static class ShareClass
         return int.Parse(ds.Tables[0].Rows[0][0].ToString());
     }
 
-    //å–å¾—å…¥åº“å­˜ç‰©æ–™æœ€å¤§çš„ID
+    //È¡µÃÈë¿â´æÎïÁÏ×î´óµÄID
     public static int GetMyCreatedMaxGoodsID()
     {
         string strHQL;
@@ -13329,7 +13329,7 @@ public static class ShareClass
         return int.Parse(ds.Tables[0].Rows[0][0].ToString());
     }
 
-    //å–å¾—ç‰©æ–™å‡ºåº“å•æœ€å¤§çš„å•å·
+    //È¡µÃÎïÁÏ³ö¿âµ¥×î´óµÄµ¥ºÅ
     public static int GetMyCreatedMaxGoodsShipmentNO(string strUserCode)
     {
         string strHQL;
@@ -13340,7 +13340,7 @@ public static class ShareClass
         return int.Parse(ds.Tables[0].Rows[0][0].ToString());
     }
 
-    //å–å¾—ç‰©æ–™å‡ºåº“å•æœ€å¤§çš„å•å·
+    //È¡µÃÎïÁÏ³ö¿âµ¥×î´óµÄµ¥ºÅ
     public static int GetMyCreatedMaxGoodsBorrowNO(string strUserCode)
     {
         string strHQL;
@@ -13351,7 +13351,7 @@ public static class ShareClass
         return int.Parse(ds.Tables[0].Rows[0][0].ToString());
     }
 
-    //å–å¾—ç‰©æ–™é€€è´§å•æœ€å¤§çš„å•å·
+    //È¡µÃÎïÁÏÍË»õµ¥×î´óµÄµ¥ºÅ
     public static int GetMyCreatedMaxGoodsROID(string strUserCode)
     {
         string strHQL;
@@ -13362,7 +13362,7 @@ public static class ShareClass
         return int.Parse(ds.Tables[0].Rows[0][0].ToString());
     }
 
-    //å–å¾—ç‰©æ–™é€è´§å•æœ€å¤§çš„å•å·
+    //È¡µÃÎïÁÏËÍ»õµ¥×î´óµÄµ¥ºÅ
     public static int GetMyCreatedMaxGoodsDeliveryOrderID(string strUserCode)
     {
         string strHQL;
@@ -13373,7 +13373,7 @@ public static class ShareClass
         return int.Parse(ds.Tables[0].Rows[0][0].ToString());
     }
 
-    //å–å¾—ç‰©æ–™é€è´§å•æ˜ç»†è¡¨æœ€å¤§çš„è®°å½•å·
+    //È¡µÃÎïÁÏËÍ»õµ¥Ã÷Ï¸±í×î´óµÄ¼ÇÂ¼ºÅ
     public static int GetMyCreatedMaxGoodsDeliveryOrderDetailID(string strUserCode)
     {
         string strHQL;
@@ -13384,7 +13384,7 @@ public static class ShareClass
         return int.Parse(ds.Tables[0].Rows[0][0].ToString());
     }
 
-    //å–å¾—èµ„äº§é€€è´§å•æœ€å¤§çš„å•å·
+    //È¡µÃ×Ê²úÍË»õµ¥×î´óµÄµ¥ºÅ
     public static int GetMyCreatedMaxAssetROID(string strUserCode)
     {
         string strHQL;
@@ -13395,7 +13395,7 @@ public static class ShareClass
         return int.Parse(ds.Tables[0].Rows[0][0].ToString());
     }
 
-    //å–å¾—ç‰©æ–™é€€è´§å•æ˜ç»†çš„æœ€å¤§ID
+    //È¡µÃÎïÁÏÍË»õµ¥Ã÷Ï¸µÄ×î´óID
     public static int GetMyCreatedMaxGoodsReturnDetailID()
     {
         string strHQL;
@@ -13406,7 +13406,7 @@ public static class ShareClass
         return int.Parse(ds.Tables[0].Rows[0][0].ToString());
     }
 
-    //å–å¾—èµ„äº§é€€åº“å•æ˜ç»†çš„æœ€å¤§ID
+    //È¡µÃ×Ê²úÍË¿âµ¥Ã÷Ï¸µÄ×î´óID
     public static int GetMyCreatedMaxAssetReturnDetailID()
     {
         string strHQL;
@@ -13417,7 +13417,7 @@ public static class ShareClass
         return int.Parse(ds.Tables[0].Rows[0][0].ToString());
     }
 
-    //å–å¾—ç‰©æ–™å‡ºåº“å•æ˜ç»†çš„æœ€å¤§ID
+    //È¡µÃÎïÁÏ³ö¿âµ¥Ã÷Ï¸µÄ×î´óID
     public static int GetMyCreatedMaxGoodsShipmentDetailID()
     {
         string strHQL;
@@ -13428,7 +13428,7 @@ public static class ShareClass
         return int.Parse(ds.Tables[0].Rows[0][0].ToString());
     }
 
-    //å–å¾—ç‰©æ–™å‡ºåº“å•æ˜ç»†çš„æœ€å¤§ID
+    //È¡µÃÎïÁÏ³ö¿âµ¥Ã÷Ï¸µÄ×î´óID
     public static int GetMyCreatedMaxGoodsBorrowOrderDetailID()
     {
         string strHQL;
@@ -13439,7 +13439,7 @@ public static class ShareClass
         return int.Parse(ds.Tables[0].Rows[0][0].ToString());
     }
 
-    //å–å¾—ç”¨æˆ·å»ºç«‹çš„æœ€æ–°çš„ç‰©æ–™
+    //È¡µÃÓÃ»§½¨Á¢µÄ×îĞÂµÄÎïÁÏ
     public static string GetMyCreatedMaxGoodsCode(string strUserCode)
     {
         string strHQL;
@@ -13454,7 +13454,7 @@ public static class ShareClass
         return goods.GoodsCode.Trim();
     }
 
-    //å–å¾—ç”¨æˆ·å»ºç«‹çš„ç‰©æ–™æœ€æ–°è°ƒé…è®°å½•ID
+    //È¡µÃÓÃ»§½¨Á¢µÄÎïÁÏ×îĞÂµ÷Åä¼ÇÂ¼ID
     public static string GetMyCreatedMaxGoodsuserRecordID(string strGoodsCode)
     {
         string strHQL = "from GoodsUserRecord as goodsUserRecord where goodsUserRecord.GoodsCode = " + "'" + strGoodsCode + "'" + " Order by goodsUserRecord.ID DESC";
@@ -13465,7 +13465,7 @@ public static class ShareClass
         return goodsUserRecord.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·å»ºç«‹çš„ç‰©æ–™ç»´æŠ¤æœ€æ–°è®°å½•ID
+    //È¡µÃÓÃ»§½¨Á¢µÄÎïÁÏÎ¬»¤×îĞÂ¼ÇÂ¼ID
     public static string GetMyCreatedMaxGoodsMtRecordID(string strGoodsCode)
     {
         string strHQL = "from GoodsMTRecord as goodsMTRecord where goodsMTRecord.GoodsCode = " + "'" + strGoodsCode + "'" + " Order by goodsMTRecord.ID DESC";
@@ -13478,7 +13478,7 @@ public static class ShareClass
         return goodsMTRecord.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·å»ºç«‹çš„æœ€å¤§çš„å®¢æˆ·é—®é¢˜å·
+    //È¡µÃÓÃ»§½¨Á¢µÄ×î´óµÄ¿Í»§ÎÊÌâºÅ
     public static string GetMyCreatedMaxCustomerQuestionID(string strUserCode)
     {
         string strHQL;
@@ -13493,7 +13493,7 @@ public static class ShareClass
         return customerQuestion.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·å»ºç«‹çš„å®¢æˆ·é—®é¢˜è®°å½•æœ€å¤§çš„è®°å½•å·
+    //È¡µÃÓÃ»§½¨Á¢µÄ¿Í»§ÎÊÌâ¼ÇÂ¼×î´óµÄ¼ÇÂ¼ºÅ
     public static string GetMyCreatedMaxcustomerQuestionDetailID(string strQuestionID)
     {
         string strHQL;
@@ -13508,7 +13508,7 @@ public static class ShareClass
         return customerQuestionHandleRecord.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·å»ºç«‹çš„å‘˜å·¥èµ„æ–™æ•™è‚²ç»å†æœ€å¤§è®°å½•å·
+    //È¡µÃÓÃ»§½¨Á¢µÄÔ±¹¤×ÊÁÏ½ÌÓı¾­Àú×î´ó¼ÇÂ¼ºÅ
     public static string GetMyCreatedMaxEducationExpericenceID(string strUserCode)
     {
         string strHQL;
@@ -13523,7 +13523,7 @@ public static class ShareClass
         return educationExperience.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·å»ºç«‹çš„å‘˜å·¥èµ„æ–™å·¥ä½œç»å†æœ€å¤§è®°å½•å·
+    //È¡µÃÓÃ»§½¨Á¢µÄÔ±¹¤×ÊÁÏ¹¤×÷¾­Àú×î´ó¼ÇÂ¼ºÅ
     public static string GetMyCreatedMaxWorkExperienceID(string strUserCode)
     {
         string strHQL;
@@ -13539,7 +13539,7 @@ public static class ShareClass
         return workExperience.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·å»ºç«‹çš„å‘˜å·¥èµ„æ–™å®¶åº­æˆå‘˜æœ€å¤§IDå·
+    //È¡µÃÓÃ»§½¨Á¢µÄÔ±¹¤×ÊÁÏ¼ÒÍ¥³ÉÔ±×î´óIDºÅ
     public static string GetMyCreatedMaxFamilyMemberID(string strUserCode)
     {
         string strHQL;
@@ -13554,7 +13554,7 @@ public static class ShareClass
         return familyMember.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·å»ºç«‹çš„å‘˜å·¥èµ„æ–™å¼‚åŠ¨è®°å½•æœ€å¤§IDå·
+    //È¡µÃÓÃ»§½¨Á¢µÄÔ±¹¤×ÊÁÏÒì¶¯¼ÇÂ¼×î´óIDºÅ
     public static string GetMyCreatedMaxUserTransactionRecordID(string strUserCode)
     {
         string strHQL;
@@ -13565,7 +13565,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç”¨æˆ·è€ƒå‹¤è§„åˆ™æœ€å¤§IDå·
+    //È¡µÃÓÃ»§¿¼ÇÚ¹æÔò×î´óIDºÅ
     public static string GetMyCreatedMaxUserAttendanceRule(string strUserCode)
     {
         string strHQL;
@@ -13581,7 +13581,7 @@ public static class ShareClass
         return userAttendanceRule.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·å»ºç«‹çš„æ—¥ç¨‹æœ€å¤§IDå·
+    //È¡µÃÓÃ»§½¨Á¢µÄÈÕ³Ì×î´óIDºÅ
     public static string GetMyCreatedMaxScheduleID(string strUserCode)
     {
         string strHQL;
@@ -13596,7 +13596,7 @@ public static class ShareClass
         return schedule.ID.ToString();
     }
 
-    // å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§æ–°é—»IDå·
+    // È¡µÃÓÃ»§´´½¨µÄ×î´óĞÂÎÅIDºÅ
     public static string GetMyCreatedMaxHeadLineID(string strUserCode)
     {
         string strHQL;
@@ -13611,7 +13611,7 @@ public static class ShareClass
         return headLine.ID.ToString();
     }
 
-    // å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§å…¬æ–‡IDå·
+    // È¡µÃÓÃ»§´´½¨µÄ×î´ó¹«ÎÄIDºÅ
     public static string GetMyCreatedMaxOfficialDocumentID(string strUserCode)
     {
         string strHQL;
@@ -13626,7 +13626,7 @@ public static class ShareClass
         return officialDocument.ID.ToString();
     }
 
-    // å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§æ–°é—»IDå·
+    // È¡µÃÓÃ»§´´½¨µÄ×î´óĞÂÎÅIDºÅ
     public static string GetMyCreatedMaxMailSignInfoID(string strUserCode)
     {
         string strHQL;
@@ -13637,7 +13637,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç”¨æˆ·åˆ›å»ºçš„æœ€å¤§è”ç³»äººç¼–å·
+    //È¡µÃÓÃ»§´´½¨µÄ×î´óÁªÏµÈË±àºÅ
     public static string GetMyCreatedMaxContactInforID(string strUserCode)
     {
         string strHQL;
@@ -13652,7 +13652,7 @@ public static class ShareClass
         return contactInfor.ID.ToString();
     }
 
-    //å–å¾—ç”¨æˆ·å±‚æ¬¡çš„æœ€å¤§çš„IDå·
+    //È¡µÃÓÃ»§²ã´ÎµÄ×î´óµÄIDºÅ
     public static string GetMyCreatedMaxMemberLevelID()
     {
         string strHQL;
@@ -13667,7 +13667,7 @@ public static class ShareClass
         return memberLevel.ID.ToString();
     }
 
-    //å–å¾—è½¦è¾†ç”³è¯·çš„æœ€å¤§çš„IDå·
+    //È¡µÃ³µÁ¾ÉêÇëµÄ×î´óµÄIDºÅ
     public static string GetMyCreatedMaxCarApplyFormID()
     {
         string strHQL;
@@ -13678,7 +13678,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—è½¦è¾†ç”³è¯·çš„æœ€å¤§çš„IDå·
+    //È¡µÃ³µÁ¾ÉêÇëµÄ×î´óµÄIDºÅ
     public static string GetMyCreatedMaxCarAssignFormID()
     {
         string strHQL;
@@ -13689,7 +13689,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—å‘˜å·¥å…¼èŒæœ€å¤§çš„IDå·
+    //È¡µÃÔ±¹¤¼æÖ°×î´óµÄIDºÅ
     public static string GetMyCreatedMaxPartTimeJobID()
     {
         string strHQL;
@@ -13700,7 +13700,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—è®¡åˆ’æœ€å¤§çš„IDå·
+    //È¡µÃ¼Æ»®×î´óµÄIDºÅ
     public static string GetMyCreatedMaxPlanID(string strUserCode)
     {
         string strHQL;
@@ -13711,7 +13711,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—è®¡åˆ’ç›®æ ‡æœ€å¤§çš„IDå·
+    //È¡µÃ¼Æ»®Ä¿±ê×î´óµÄIDºÅ
     public static string GetMyCreatedMaxPlanTargetID(string strPlanID)
     {
         string strHQL;
@@ -13722,7 +13722,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—è®¡åˆ’é¢†å¯¼æœ€å¤§çš„IDå·
+    //È¡µÃ¼Æ»®Áìµ¼×î´óµÄIDºÅ
     public static string GetMyCreatedMaxPlanRelatedLeaderID(string strPlanID)
     {
         string strHQL;
@@ -13733,7 +13733,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—è®¡åˆ’é¢†å¯¼è¯„è®ºæœ€å¤§çš„IDå·
+    //È¡µÃ¼Æ»®Áìµ¼ÆÀÂÛ×î´óµÄIDºÅ
     public static string GetMyCreatedMaxPlanLeaderReviewID(string strPlanID)
     {
         string strHQL;
@@ -13744,7 +13744,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—è®¡åˆ’æ—¥å¿—çš„æœ€å¤§çš„IDå·
+    //È¡µÃ¼Æ»®ÈÕÖ¾µÄ×î´óµÄIDºÅ
     public static string GetMyCreatedMaxPlanWorkLogID(string strPlanID)
     {
         string strHQL;
@@ -13755,7 +13755,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—KPIæœ€å¤§çš„IDå·
+    //È¡µÃKPI×î´óµÄIDºÅ
     public static string GetMyCreatedMaxKPIID()
     {
         string strHQL;
@@ -13766,7 +13766,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—KPIèŒç§°æ¨¡æ¿æœ€å¤§çš„IDå·
+    //È¡µÃKPIÖ°³ÆÄ£°å×î´óµÄIDºÅ
     public static string GetMyCreatedMaxKPIDepartPositionTemplateID()
     {
         string strHQL;
@@ -13777,7 +13777,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—å‘˜å·¥KPIè€ƒæ ¸æœ€å¤§çš„IDå·
+    //È¡µÃÔ±¹¤KPI¿¼ºË×î´óµÄIDºÅ
     public static string GetMyCreatedMaxUserKPICheckID()
     {
         string strHQL;
@@ -13788,7 +13788,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—å‘˜å·¥KPIè€ƒæ ¸æœ€å¤§çš„IDå·
+    //È¡µÃÔ±¹¤KPI¿¼ºË×î´óµÄIDºÅ
     public static string GetMyCreatedMaxUserKPICheckDetailID()
     {
         string strHQL;
@@ -13799,7 +13799,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç”¨ç½‘ç«™åœ°å€çš„ç¼–å·
+    //È¡µÃÓÃÍøÕ¾µØÖ·µÄ±àºÅ
     public static string GetMyCreatedMaxWebSiteID(string strUserCode)
     {
         string strHQL;
@@ -13810,7 +13810,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—æŠ¥è¡¨æ¨¡æ¿çš„æœ€å¤§IDå·
+    //È¡µÃ±¨±íÄ£°åµÄ×î´óIDºÅ
     public static string GetMyCreatedMaxReportTemplateID(string strUserCode)
     {
         string strHQL;
@@ -13821,7 +13821,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ä¸Šä¼ æ–‡æ¡£çš„æœ€å¤§IDå·
+    //È¡µÃÉÏ´«ÎÄµµµÄ×î´óIDºÅ
     public static string GetMyCreatedMaxDocID(string strUserCode)
     {
         string strHQL;
@@ -13832,7 +13832,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—æ•°æ®äº¤å‘½ä»¤çš„æœ€å¤§IDå·
+    //È¡µÃÊı¾İ½»ÃüÁîµÄ×î´óIDºÅ
     public static string GetMyCreatedSystemExchangeDBSqlOrderID()
     {
         string strHQL;
@@ -13843,11 +13843,11 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    #endregion å–å¾—ç”¨æˆ·åˆ›å»ºçš„å¯¹è±¡çš„æœ€å¤§IDå·
+    #endregion È¡µÃÓÃ»§´´½¨µÄ¶ÔÏóµÄ×î´óIDºÅ
 
-    #region å–å¾—å„ç§å¯¹è±¡IDå·æˆ–åç§°
+    #region È¡µÃ¸÷ÖÖ¶ÔÏóIDºÅ»òÃû³Æ
 
-    //å–å¾—é¡¹ç›®IDï¼ˆæ ¹æ®é¡¹ç›®åç§°ï¼‰
+    //È¡µÃÏîÄ¿ID£¨¸ù¾İÏîÄ¿Ãû³Æ£©
     public static string GetProjectID(string strProjectName)
     {
         string strHQL;
@@ -13862,7 +13862,7 @@ public static class ShareClass
         return project.ProjectID.ToString();
     }
 
-    //å–å¾—é¡¹ç›®åç§°ï¼ˆæ ¹æ®é¡¹ç›®å·ï¼‰
+    //È¡µÃÏîÄ¿Ãû³Æ£¨¸ù¾İÏîÄ¿ºÅ£©
     public static string GetProjectName(string strProjectID)
     {
         string strHQL = "from Project as project where project.ProjectID = " + strProjectID;
@@ -13874,7 +13874,7 @@ public static class ShareClass
         return strProjectName;
     }
 
-    //å–å¾—é¡¹ç›®å®æ–½ï¼ˆæ ¹æ®é¡¹ç›®å·ï¼‰
+    //È¡µÃÏîÄ¿ÊµÊ©£¨¸ù¾İÏîÄ¿ºÅ£©
     public static Project GetProject(string strProjectID)
     {
         string strHQL = "from Project as project where project.ProjectID = " + strProjectID;
@@ -13885,7 +13885,7 @@ public static class ShareClass
         return project;
     }
 
-    //å–æ˜¯é¡¹ç›®çŠ¶æ€ï¼ˆæ ¹æ®é¡¹ç›®å·ï¼‰
+    //È¡ÊÇÏîÄ¿×´Ì¬£¨¸ù¾İÏîÄ¿ºÅ£©
     public static string GetProjectStatus(string strProjectID)
     {
         string strHQL;
@@ -13900,7 +13900,7 @@ public static class ShareClass
         return project.Status.Trim();
     }
 
-    //å–å¾—é¡¹ç›®ç»ç†ä»£ç ï¼ˆæ ¹æ®é¡¹ç›®å·ï¼‰
+    //È¡µÃÏîÄ¿¾­Àí´úÂë£¨¸ù¾İÏîÄ¿ºÅ£©
     public static string GetProjectPMCode(string strProjectID)
     {
         string strHQL = "from Project as project where project.ProjectID = " + strProjectID;
@@ -13911,7 +13911,7 @@ public static class ShareClass
         return project.PMCode.Trim();
     }
 
-    //å–å¾—é¡¹ç›®è®¡åˆ’ç‰ˆæœ¬
+    //È¡µÃÏîÄ¿¼Æ»®°æ±¾
     public static int GetProjectPlanVersion(string strProjectID, string strType)
     {
         string strHQL;
@@ -13932,7 +13932,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æ­¤é¡¹ç›®ç±»å‹çš„é¡¹ç›®æ˜¯å¦å—ç»†èŠ‚ï¼ˆè®¡åˆ’ï¼Œä»»åŠ¡ï¼Œå·¥ä½œæµï¼‰å½±å“
+    //È¡µÃ´ËÏîÄ¿ÀàĞÍµÄÏîÄ¿ÊÇ·ñÊÜÏ¸½Ú£¨¼Æ»®£¬ÈÎÎñ£¬¹¤×÷Á÷£©Ó°Ïì
     public static string GetProjectTypeImpactByDetail(string strProjectID)
     {
         string strHQL;
@@ -13952,7 +13952,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—é¡¹ç›®ä»»åŠ¡åç§°
+    //È¡µÃÏîÄ¿ÈÎÎñÃû³Æ
     public static string GetProjectTaskName(string strTaskID)
     {
         string strHQL;
@@ -13966,7 +13966,7 @@ public static class ShareClass
         return projectTask.Task.Trim();
     }
 
-    //å–å¾—éœ€æ±‚å¯¹è±¡ï¼ˆæ ¹æ®éœ€æ±‚å·ï¼‰
+    //È¡µÃĞèÇó¶ÔÏó£¨¸ù¾İĞèÇóºÅ£©
     public static Defectment GetDefectment(string strDefectID)
     {
         string strHQL = "from Defectment as defectment where defectment.DefectID = " + strDefectID;
@@ -13979,7 +13979,7 @@ public static class ShareClass
         return defectment;
     }
 
-    //å–å¾—éœ€æ±‚å¯¹è±¡ï¼ˆæ ¹æ®éœ€æ±‚å·ï¼‰
+    //È¡µÃĞèÇó¶ÔÏó£¨¸ù¾İĞèÇóºÅ£©
     public static Requirement GetRequirement(string strReqID)
     {
         string strHQL = "from Requirement as requirement where requirement.ReqID = " + strReqID;
@@ -13992,7 +13992,7 @@ public static class ShareClass
         return requirement;
     }
 
-    //å–å¾—éƒ¨é—¨åç§°
+    //È¡µÃ²¿ÃÅÃû³Æ
     public static string GetDepartName(string strDepartCode)
     {
         string strHQL;
@@ -14004,7 +14004,7 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    //å–å¾—ç”¨æˆ·éƒ¨é—¨ä»£ç (æ ¹æ®ç”¨æˆ·ä»£ç ï¼‰
+    //È¡µÃÓÃ»§²¿ÃÅ´úÂë(¸ù¾İÓÃ»§´úÂë£©
     public static string GetParentDepartCodeFromDepartCode(string strDepartCode)
     {
         string strHQL;
@@ -14019,7 +14019,7 @@ public static class ShareClass
         return department.ParentCode.Trim();
     }
 
-    //å–å¾—ç”¨æˆ·éƒ¨é—¨ä»£ç (æ ¹æ®ç”¨æˆ·ä»£ç ï¼‰
+    //È¡µÃÓÃ»§²¿ÃÅ´úÂë(¸ù¾İÓÃ»§´úÂë£©
     public static string GetDepartCodeFromUserCode(string strUserCode)
     {
         string strDepartCode, strHQL;
@@ -14032,7 +14032,7 @@ public static class ShareClass
         return strDepartCode.Trim();
     }
 
-    //å–å¾—å®¢æˆ·å½’å±éƒ¨é—¨ä»£ç (æ ¹æ®å®¢æˆ·ä»£ç ï¼‰
+    //È¡µÃ¿Í»§¹éÊô²¿ÃÅ´úÂë(¸ù¾İ¿Í»§´úÂë£©
     public static string GetDepartCodeFromCustomerCode(string strCustomerCode)
     {
         string strHQL;
@@ -14046,7 +14046,7 @@ public static class ShareClass
         return customer.BelongDepartCode.Trim();
     }
 
-    //å–å¾—ç”¨æˆ·éƒ¨é—¨äº§å“çº¿ç›¸å…³(æ ¹æ®ç”¨æˆ·ä»£ç ï¼‰
+    //È¡µÃÓÃ»§²¿ÃÅ²úÆ·ÏßÏà¹Ø(¸ù¾İÓÃ»§´úÂë£©
     public static string GetDepartRelatedProductLineFromUserCode(string strUserCode)
     {
         string strHQL;
@@ -14070,7 +14070,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—ç”¨æˆ·éƒ¨é—¨è¶…çº§ç”¨æˆ·äº§å“çº¿ç›¸å…³(æ ¹æ®ç”¨æˆ·ä»£ç ï¼‰
+    //È¡µÃÓÃ»§²¿ÃÅ³¬¼¶ÓÃ»§²úÆ·ÏßÏà¹Ø(¸ù¾İÓÃ»§´úÂë£©
     public static string GetDepartSuperUserRelatedProductLineFromUserCode(string strUserCode)
     {
         string strHQL;
@@ -14148,7 +14148,7 @@ public static class ShareClass
         return strUserName;
     }
 
-    //ä¾ç”¨æˆ·ä»£ç å–å¾—ç”¨æˆ·å
+    //ÒÀÓÃ»§´úÂëÈ¡µÃÓÃ»§Ãû
     public static string GetUserCodeByUserName(string strUserName)
     {
         string strHQL;
@@ -14329,7 +14329,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—å•†å“å¯¹è±¡
+    //È¡µÃÉÌÆ·¶ÔÏó
     public static Goods GetGoods(string strGoodsCode)
     {
         string strHQL;
@@ -14360,7 +14360,7 @@ public static class ShareClass
         return strGoodsName;
     }
 
-    //å–å¾—ç‰©æ–™åº“å­˜é‡
+    //È¡µÃÎïÁÏ¿â´æÁ¿
     public static string GetMaterialsStockNumber(string strGoodsCode)
     {
         string strHQL;
@@ -14371,11 +14371,11 @@ public static class ShareClass
         return ds.Tables[0].Rows[0][0].ToString();
     }
 
-    #endregion å–å¾—å„ç§å¯¹è±¡IDå·æˆ–åç§°
+    #endregion È¡µÃ¸÷ÖÖ¶ÔÏóIDºÅ»òÃû³Æ
 
-    #region RTXæ“ä½œæ–¹æ³•
+    #region RTX²Ù×÷·½·¨
 
-    //æ·»åŠ ç”¨æˆ·ç»™RTX,ç®€å•æ–¹æ³•
+    //Ìí¼ÓÓÃ»§¸øRTX,¼òµ¥·½·¨
     public static bool AddRTXUser(string strUser, string strDepart)
     {
         string strHQL;
@@ -14385,7 +14385,7 @@ public static class ShareClass
         string strServerPort;
         string strWebSite;
 
-        RTXSAPILib.RTXSAPIRootObj RootObj;  //å£°æ˜ä¸€ä¸ªæ ¹å¯¹è±¡
+        RTXSAPILib.RTXSAPIRootObj RootObj;  //ÉùÃ÷Ò»¸ö¸ù¶ÔÏó
 
         strHQL = "From RTXConfig as rtxConfig";
         RTXConfigBLL rtxConfigBLL = new RTXConfigBLL();
@@ -14406,11 +14406,11 @@ public static class ShareClass
                 return false;
             }
 
-            RootObj = new RTXSAPIRootObj();     //åˆ›å»ºæ ¹å¯¹è±¡
-            RootObj.ServerIP = strServerIP; //è®¾ç½®æœåŠ¡å™¨IP
-            RootObj.ServerPort = Convert.ToInt16(strServerPort); //è®¾ç½®æœåŠ¡å™¨ç«¯å£
+            RootObj = new RTXSAPIRootObj();     //´´½¨¸ù¶ÔÏó
+            RootObj.ServerIP = strServerIP; //ÉèÖÃ·şÎñÆ÷IP
+            RootObj.ServerPort = Convert.ToInt16(strServerPort); //ÉèÖÃ·şÎñÆ÷¶Ë¿Ú
 
-            //å‘é€ä¿¡æ¯
+            //·¢ËÍĞÅÏ¢
             try
             {
                 RootObj.UserManager.AddUser(strUser, 0);
@@ -14427,7 +14427,7 @@ public static class ShareClass
         return true;
     }
 
-    //åˆ é™¤ç”¨æˆ·RTXï¼Œç®€å•æ–¹æ³•
+    //É¾³ıÓÃ»§RTX£¬¼òµ¥·½·¨
     public static bool DeleteRTXUser(string strUser)
     {
         string strHQL;
@@ -14437,7 +14437,7 @@ public static class ShareClass
         string strServerPort;
         string strWebSite;
 
-        RTXSAPILib.RTXSAPIRootObj RootObj;  //å£°æ˜ä¸€ä¸ªæ ¹å¯¹è±¡
+        RTXSAPILib.RTXSAPIRootObj RootObj;  //ÉùÃ÷Ò»¸ö¸ù¶ÔÏó
 
         strHQL = "From RTXConfig as rtxConfig";
         RTXConfigBLL rtxConfigBLL = new RTXConfigBLL();
@@ -14458,11 +14458,11 @@ public static class ShareClass
                 return false;
             }
 
-            RootObj = new RTXSAPIRootObj();     //åˆ›å»ºæ ¹å¯¹è±¡
-            RootObj.ServerIP = strServerIP; //è®¾ç½®æœåŠ¡å™¨IP
-            RootObj.ServerPort = Convert.ToInt16(strServerPort); //è®¾ç½®æœåŠ¡å™¨ç«¯å£
+            RootObj = new RTXSAPIRootObj();     //´´½¨¸ù¶ÔÏó
+            RootObj.ServerIP = strServerIP; //ÉèÖÃ·şÎñÆ÷IP
+            RootObj.ServerPort = Convert.ToInt16(strServerPort); //ÉèÖÃ·şÎñÆ÷¶Ë¿Ú
 
-            //å‘é€ä¿¡æ¯
+            //·¢ËÍĞÅÏ¢
             try
             {
                 RootObj.UserManager.DeleteUser(strUser);
@@ -14477,7 +14477,7 @@ public static class ShareClass
         return true;
     }
 
-    //æ·»åŠ éƒ¨é—¨ç»™RTX,ç®€å•æ–¹æ³•
+    //Ìí¼Ó²¿ÃÅ¸øRTX,¼òµ¥·½·¨
     public static bool AddRTXDepartment(string strDepart, string strParentDepart)
     {
         string strHQL;
@@ -14487,7 +14487,7 @@ public static class ShareClass
         string strServerPort;
         string strWebSite;
 
-        RTXSAPILib.RTXSAPIRootObj RootObj;  //å£°æ˜ä¸€ä¸ªæ ¹å¯¹è±¡
+        RTXSAPILib.RTXSAPIRootObj RootObj;  //ÉùÃ÷Ò»¸ö¸ù¶ÔÏó
 
         strHQL = "From RTXConfig as rtxConfig";
         RTXConfigBLL rtxConfigBLL = new RTXConfigBLL();
@@ -14508,11 +14508,11 @@ public static class ShareClass
                 return false;
             }
 
-            RootObj = new RTXSAPIRootObj();     //åˆ›å»ºæ ¹å¯¹è±¡
-            RootObj.ServerIP = strServerIP; //è®¾ç½®æœåŠ¡å™¨IP
-            RootObj.ServerPort = Convert.ToInt16(strServerPort); //è®¾ç½®æœåŠ¡å™¨ç«¯å£
+            RootObj = new RTXSAPIRootObj();     //´´½¨¸ù¶ÔÏó
+            RootObj.ServerIP = strServerIP; //ÉèÖÃ·şÎñÆ÷IP
+            RootObj.ServerPort = Convert.ToInt16(strServerPort); //ÉèÖÃ·şÎñÆ÷¶Ë¿Ú
 
-            //å‘é€ä¿¡æ¯
+            //·¢ËÍĞÅÏ¢
             try
             {
                 RootObj.DeptManager.AddDept(strDepart, strParentDepart);
@@ -14528,7 +14528,7 @@ public static class ShareClass
         return true;
     }
 
-    //åˆ é™¤RTXéƒ¨é—¨ï¼Œç®€å•æ–¹æ³•
+    //É¾³ıRTX²¿ÃÅ£¬¼òµ¥·½·¨
     public static bool DeleteRTXDepartment(string strDepart)
     {
         string strHQL;
@@ -14538,7 +14538,7 @@ public static class ShareClass
         string strServerPort;
         string strWebSite;
 
-        RTXSAPILib.RTXSAPIRootObj RootObj;  //å£°æ˜ä¸€ä¸ªæ ¹å¯¹è±¡
+        RTXSAPILib.RTXSAPIRootObj RootObj;  //ÉùÃ÷Ò»¸ö¸ù¶ÔÏó
 
         strHQL = "From RTXConfig as rtxConfig";
         RTXConfigBLL rtxConfigBLL = new RTXConfigBLL();
@@ -14559,11 +14559,11 @@ public static class ShareClass
                 return false;
             }
 
-            RootObj = new RTXSAPIRootObj();     //åˆ›å»ºæ ¹å¯¹è±¡
-            RootObj.ServerIP = strServerIP; //è®¾ç½®æœåŠ¡å™¨IP
-            RootObj.ServerPort = Convert.ToInt16(strServerPort); //è®¾ç½®æœåŠ¡å™¨ç«¯å£
+            RootObj = new RTXSAPIRootObj();     //´´½¨¸ù¶ÔÏó
+            RootObj.ServerIP = strServerIP; //ÉèÖÃ·şÎñÆ÷IP
+            RootObj.ServerPort = Convert.ToInt16(strServerPort); //ÉèÖÃ·şÎñÆ÷¶Ë¿Ú
 
-            //å‘é€ä¿¡æ¯
+            //·¢ËÍĞÅÏ¢
             try
             {
                 RootObj.DeptManager.DelDept(strDepart, true);
@@ -14578,13 +14578,13 @@ public static class ShareClass
         return true;
     }
 
-    public static bool RTXADDDEPT(int Pdeptid, string Deptid, string name, string info)//æ·»åŠ éƒ¨é—¨
+    public static bool RTXADDDEPT(int Pdeptid, string Deptid, string name, string info)//Ìí¼Ó²¿ÃÅ
     {
-        //ä½œç”¨:æ·»åŠ éƒ¨é—¨
-        //å‚æ•°è¯´æ˜:Pdeptid:æ‰€å±éƒ¨é—¨()ä¸Šçº§éƒ¨é—¨çš„ID
-        //deptid:å¢åŠ çš„è¯¥éƒ¨é—¨çš„ID
-        //name:è¯¥å¢åŠ éƒ¨é—¨çš„åç§°
-        //info:è¯¥å¢åŠ éƒ¨é—¨çš„ç›¸å…³ä¿¡æ¯
+        //×÷ÓÃ:Ìí¼Ó²¿ÃÅ
+        //²ÎÊıËµÃ÷:Pdeptid:ËùÊô²¿ÃÅ()ÉÏ¼¶²¿ÃÅµÄID
+        //deptid:Ôö¼ÓµÄ¸Ã²¿ÃÅµÄID
+        //name:¸ÃÔö¼Ó²¿ÃÅµÄÃû³Æ
+        //info:¸ÃÔö¼Ó²¿ÃÅµÄÏà¹ØĞÅÏ¢
 
         try
         {
@@ -14606,12 +14606,12 @@ public static class ShareClass
         }
     }
 
-    public static bool RTXDelDEPT(string dpmtid, string delall)//åˆ é™¤éƒ¨é—¨
+    public static bool RTXDelDEPT(string dpmtid, string delall)//É¾³ı²¿ÃÅ
     {
-        //ä½œç”¨:åˆ é™¤éƒ¨é—¨
-        //å‚æ•°è¯´æ˜:
-        //dpmtid:è¦åˆ é™¤éƒ¨é—¨çš„IDå·
-        //delall:åˆ é™¤éƒ¨é—¨çš„ä¸‹å±éƒ¨é—¨çš„é€‰æ‹©(0ä¸ºä¸åˆ é™¤,ä¸ºåˆ é™¤)
+        //×÷ÓÃ:É¾³ı²¿ÃÅ
+        //²ÎÊıËµÃ÷:
+        //dpmtid:ÒªÉ¾³ı²¿ÃÅµÄIDºÅ
+        //delall:É¾³ı²¿ÃÅµÄÏÂÊô²¿ÃÅµÄÑ¡Ôñ(0Îª²»É¾³ı,ÎªÉ¾³ı)
         try
         {
             RTXObjectClass RTXObj = new RTXObjectClass();
@@ -14630,16 +14630,16 @@ public static class ShareClass
         }
     }
 
-    public static bool RTXADDUSER(string Dpmid, string Nick, string pwd, string name, string rtxnumber, string mobile)//æ·»åŠ ç”¨æˆ·
+    public static bool RTXADDUSER(string Dpmid, string Nick, string pwd, string name, string rtxnumber, string mobile)//Ìí¼ÓÓÃ»§
     {
-        //ä½œç”¨:æ·»åŠ ç”¨æˆ·
-        //å‚æ•°è¯´æ˜:
-        //Dpmid:ç”¨æˆ·æ‰€å±äºçš„IDå·
-        //Nick:ç”¨æˆ·çš„ç™»é™†å
-        //pwd:ç”¨æˆ·çš„ç™»é™†å¯†ç 
-        //name:ç”¨æˆ·å
-        //rtxnumber:ç”¨æˆ·çš„RTXå·ç 
-        //mobile:ç”¨æˆ·çš„æ‰‹æœºå·ç 
+        //×÷ÓÃ:Ìí¼ÓÓÃ»§
+        //²ÎÊıËµÃ÷:
+        //Dpmid:ÓÃ»§ËùÊôÓÚµÄIDºÅ
+        //Nick:ÓÃ»§µÄµÇÂ½Ãû
+        //pwd:ÓÃ»§µÄµÇÂ½ÃÜÂë
+        //name:ÓÃ»§Ãû
+        //rtxnumber:ÓÃ»§µÄRTXºÅÂë
+        //mobile:ÓÃ»§µÄÊÖ»úºÅÂë
         try
         {
             RTXObjectClass RTXObj = new RTXObjectClass();
@@ -14662,10 +14662,10 @@ public static class ShareClass
         }
     }
 
-    public static bool RTXDelUSR(string unick)//åˆ é™¤ç”¨æˆ·
+    public static bool RTXDelUSR(string unick)//É¾³ıÓÃ»§
     {
-        //ä½œç”¨:åˆ é™¤ç”¨æˆ·
-        //å‚æ•°è¯´æ˜:unick:ç”¨æˆ·çš„ç™»é™†åæˆ–ç”¨æˆ·çš„RTXå·ç éƒ½å¯
+        //×÷ÓÃ:É¾³ıÓÃ»§
+        //²ÎÊıËµÃ÷:unick:ÓÃ»§µÄµÇÂ½Ãû»òÓÃ»§µÄRTXºÅÂë¶¼¿É
         try
         {
             RTXObjectClass RTXObj = new RTXObjectClass();
@@ -14682,11 +14682,11 @@ public static class ShareClass
         }
     }
 
-    #endregion RTXæ“ä½œæ–¹æ³•
+    #endregion RTX²Ù×÷·½·¨
 
-    #region é‚®ä»¶æ“ä½œæ–¹æ³•
+    #region ÓÊ¼ş²Ù×÷·½·¨
 
-    //å‘é€ä¿¡æ¯å’Œé‚®ä»¶
+    //·¢ËÍĞÅÏ¢ºÍÓÊ¼ş
     public static void SendInstantMessage(string strSubject, string strMsg, string strSentUserCode, string strReciverUserCode)
     {
         Msg msg = new Msg();
@@ -14707,7 +14707,7 @@ public static class ShareClass
         //}
     }
 
-    //æ¥æ”¶é‚®ä»¶æ–¹æ³•
+    //½ÓÊÕÓÊ¼ş·½·¨
     public static void ReceiveMail(string POP3Server, string strUserCode, string strLoginName, string strPassword, int intPort, string strDocSavePath)
     {
         string file1, file2;
@@ -14730,7 +14730,7 @@ public static class ShareClass
             _POP3Client.Authenticate(strLoginName, strPassword, true);
 
             var q = (from POP3_ClientMessage x in _POP3Client.Messages select x).OrderBy(x => -x.SequenceNumber);
-            foreach (POP3_ClientMessage message in q)//å€’åºå¯¹äºæ–°é‚®ä»¶æ¯”è¾ƒå¿«
+            foreach (POP3_ClientMessage message in q)//µ¹Ğò¶ÔÓÚĞÂÓÊ¼ş±È½Ï¿ì
             {
                 try
                 {
@@ -14743,7 +14743,7 @@ public static class ShareClass
 
                 try
                 {
-                    ///ä¿å­˜æ”¶å–é‚®ä»¶çš„é™„ä»¶
+                    ///±£´æÊÕÈ¡ÓÊ¼şµÄ¸½¼ş
                     mime = Mail_Message.ParseFromByte(message.MessageToByte());
 
                     if (mime.BodyHtmlText != null)
@@ -14771,16 +14771,16 @@ public static class ShareClass
                         }
                     }
 
-                    //æ”¶å–é‚®ä»¶
+                    //ÊÕÈ¡ÓÊ¼ş
                     if (nMailID > 0)
                     {
                         for (n = 0; n < mime.Attachments.Length; n++)
                         {
-                            ///æ·»åŠ å•ä¸ªé™„ä»¶
+                            ///Ìí¼Óµ¥¸ö¸½¼ş
                             ///
                             try
                             {
-                                //ä¸‹é¢æ˜¯æ¥æ”¶é™„ä»¶çš„æ–¹æ³•
+                                //ÏÂÃæÊÇ½ÓÊÕ¸½¼şµÄ·½·¨
                                 decodedDataStream = ((MIME_b_SinglepartBase)mime.Attachments[n].Body).GetDataStream();
                                 file1 = mime.Attachments[n].ContentType.Param_Name;
 
@@ -14793,7 +14793,7 @@ public static class ShareClass
                                     intMailAttachmentContain = int.Parse(fs.Length.ToString());
                                 }
 
-                                ///ä¿å­˜æ”¶å–é‚®ä»¶çš„é™„ä»¶
+                                ///±£´æÊÕÈ¡ÓÊ¼şµÄ¸½¼ş
                                 imail.SaveAsMailAttachment(
                                     file1,
                                     "Doc\\" + DateTime.Now.ToString("yyyyMM") + "\\" + strUserCode + "\\MailAttachments\\" + file1,
@@ -14807,7 +14807,7 @@ public static class ShareClass
                         }
                     }
 
-                    //åˆ é™¤å·²æ”¶å–çš„é‚®ä»¶
+                    //É¾³ıÒÑÊÕÈ¡µÄÓÊ¼ş
                     message.MarkForDeletion();
                 }
                 catch (Exception err)
@@ -14826,7 +14826,7 @@ public static class ShareClass
         }
     }
 
-    //å‘é€é‚®ä»¶æ–¹æ³•ï¼ˆæ— é™„ä»¶ï¼Œå†…éƒ¨æˆå‘˜é—´ç›¸äº’å‘é€ï¼‰
+    //·¢ËÍÓÊ¼ş·½·¨£¨ÎŞ¸½¼ş£¬ÄÚ²¿³ÉÔ±¼äÏà»¥·¢ËÍ£©
     public static bool SendMail(string strUserCode, string strSubject, string strBody, string strSendUserCode)
     {
         int nContain = 0;
@@ -14867,7 +14867,7 @@ public static class ShareClass
         if (mailProfile.Email == null)
             return false;
 
-        ///æ·»åŠ å‘ä»¶äººåœ°å€
+        ///Ìí¼Ó·¢¼şÈËµØÖ·
         string strFrom = mailProfile.Email.Trim();
 
         if (strFrom == "")
@@ -14882,11 +14882,11 @@ public static class ShareClass
         mailMsg.CC.Add(strTo);
         nContain += strTo.Length;
 
-        ///æ·»åŠ é‚®ä»¶ä¸»é¢˜
+        ///Ìí¼ÓÓÊ¼şÖ÷Ìâ
         mailMsg.Subject = strSubject;
         nContain += strSubject.Length;
 
-        ///æ·»åŠ é‚®ä»¶å†…å®¹
+        ///Ìí¼ÓÓÊ¼şÄÚÈİ
         mailMsg.Body = strBody;
         mailMsg.BodyEncoding = Encoding.UTF8;
         mailMsg.IsBodyHtml = true;
@@ -14898,21 +14898,21 @@ public static class ShareClass
         try
         {
             //mailMsg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate", "1");
-            ////ç”¨æˆ·å
+            ////ÓÃ»§Ãû
             //mailMsg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendusername", mailProfile.AliasName.Trim());
-            ////å¯†ç 
+            ////ÃÜÂë
             //mailMsg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendpassword", mailProfile.Password.Trim());
 
             IMail mail = new Mail();
             SmtpClient smtpClient = new SmtpClient(mailProfile.SmtpServerIP, mailProfile.SmtpServerPort);
             smtpClient.UseDefaultCredentials = false;
             smtpClient.Credentials = new NetworkCredential(mailProfile.AliasName.Trim(), mailProfile.Password.Trim());
-            /*æŒ‡å®šå¦‚ä½•å¤„ç†å¾…å‘çš„é‚®ä»¶*/
+            /*Ö¸¶¨ÈçºÎ´¦Àí´ı·¢µÄÓÊ¼ş*/
             smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
 
             try
             {
-                //å‘é€é‚®ä»¶
+                //·¢ËÍÓÊ¼ş
                 smtpClient.Send(mailMsg);
 
                 nMailID = mail.SaveAsMail(mailMsg.Subject, mailMsg.Body, strFrom,
@@ -14936,11 +14936,11 @@ public static class ShareClass
         }
     }
 
-    #endregion é‚®ä»¶æ“ä½œæ–¹æ³•
+    #endregion ÓÊ¼ş²Ù×÷·½·¨
 
-    #region æ–‡ä»¶å¤¹COPYã€å›¾ç‰‡ç¼©æ”¾ã€æ¡ç ã€äºŒç»´ç åŠŸèƒ½
+    #region ÎÄ¼ş¼ĞCOPY¡¢Í¼Æ¬Ëõ·Å¡¢ÌõÂë¡¢¶şÎ¬Âë¹¦ÄÜ
 
-    //å¤åˆ¶æ–‡ä»¶å¤¹
+    //¸´ÖÆÎÄ¼ş¼Ğ
     //bool copy = CopyDirectory("c:\\temp\\index\\", "c:\\temp\\newindex\\", true);
     public static bool CopyDirectory(string SourcePath, string DestinationPath, bool overwriteexisting)
     {
@@ -14979,12 +14979,12 @@ public static class ShareClass
 
 
 
-    //åœ¨æ–‡ä»¶ä¸Šå¢åŠ ä¸€è¡Œæ•°æ®
+    //ÔÚÎÄ¼şÉÏÔö¼ÓÒ»ĞĞÊı¾İ
     public static void AddSpaceLineToFile(string strFileName, string strString)
     {
         try
         {
-            string path = HttpContext.Current.Server.MapPath(strFileName);//æ–‡ä»¶çš„è·¯å¾„ï¼Œä¿è¯æ–‡ä»¶å­˜åœ¨ã€‚
+            string path = HttpContext.Current.Server.MapPath(strFileName);//ÎÄ¼şµÄÂ·¾¶£¬±£Ö¤ÎÄ¼ş´æÔÚ¡£
             FileStream fs = new FileStream(path, FileMode.Append);
             StreamWriter sw = new StreamWriter(fs);
             sw.WriteLine(strString);
@@ -14996,7 +14996,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—äºŒç»´ç å›¾ç‰‡æ–‡ä»¶URL
+    //È¡µÃ¶şÎ¬ÂëÍ¼Æ¬ÎÄ¼şURL
     public static string GetQRCodeURLByZXingNet(String strURL, int intWidth, int intHeight)
     {
         try
@@ -15010,7 +15010,7 @@ public static class ShareClass
 
             if (Directory.Exists(strDocSavePath) == false)
             {
-                //å¦‚æœä¸å­˜åœ¨å°±åˆ›å»ºfileæ–‡ä»¶å¤¹{
+                //Èç¹û²»´æÔÚ¾Í´´½¨fileÎÄ¼ş¼Ğ{
                 Directory.CreateDirectory(strDocSavePath);
             }
 
@@ -15020,12 +15020,12 @@ public static class ShareClass
         }
         catch (Exception ex)
         {
-            //å¼‚å¸¸è¾“å‡º
+            //Òì³£Êä³ö
             return ex.Message.ToString();
         }
     }
 
-    //æ¡å½¢ç ï¼šBarCode, äºŒç»´ç  ä¸å¸¦å›¾ï¼šNoLogoQrCode,å¸¦å›¾ï¼šHaveLogoQrCode
+    //ÌõĞÎÂë£ºBarCode, ¶şÎ¬Âë ²»´øÍ¼£ºNoLogoQrCode,´øÍ¼£ºHaveLogoQrCode
     public static string ShowQrCodeForTaskAssignRecord(string strAssignID, int intWidth, int intHight)
     {
         string strHQL;
@@ -15051,17 +15051,17 @@ public static class ShareClass
 
                 if (strBarType == "NoLogoQrCode")
                 {
-                    //ä¸å¸¦å›¾äºŒç»´ç 
+                    //²»´øÍ¼¶şÎ¬Âë
                     imgTemp = BarcodeHelper.GenerateNoLogoQrCode(strQrCodeString, intWidth, intHight);
                 }
                 else if (strBarType == "HaveLogoQrCode")
                 {
-                    //å¸¦å›¾äºŒç»´ç 
+                    //´øÍ¼¶şÎ¬Âë
                     imgTemp = BarcodeHelper.GenerateHaveLogoQrCode(strQrCodeString, intWidth, intHight);
                 }
                 else if (strBarType == "BarCode")
                 {
-                    //æ¡å½¢ç 
+                    //ÌõĞÎÂë
                     imgTemp = BarcodeHelper.GenerateBarCode(strQrCodeString, 10, 50);
                 }
                 else
@@ -15069,7 +15069,7 @@ public static class ShareClass
                     return "";
                 }
 
-                ////å¸¦å›¾äºŒç»´ç 
+                ////´øÍ¼¶şÎ¬Âë
                 //System.Drawing.Bitmap imgTemp = BarcodeHelper.GenerateHaveLogoQrCode(strQrCodeString, 240, 240);
 
                 string strFileName = strQrCodeString + "BarCode" + DateTime.Now.ToString("yyyyMMddHHmmsssssfffffff") + ".gif";
@@ -15078,7 +15078,7 @@ public static class ShareClass
 
                 if (Directory.Exists(strDocSavePath) == false)
                 {
-                    //å¦‚æœä¸å­˜åœ¨å°±åˆ›å»ºfileæ–‡ä»¶å¤¹{
+                    //Èç¹û²»´æÔÚ¾Í´´½¨fileÎÄ¼ş¼Ğ{
                     Directory.CreateDirectory(strDocSavePath);
                 }
 
@@ -15116,13 +15116,13 @@ public static class ShareClass
     }
 
     /// <summary>
-    /// å›¾ç‰‡ç¼©æ”¾
+    /// Í¼Æ¬Ëõ·Å
     /// </summary>
-    /// <param name="savePath">å›¾ç‰‡ç›¸å¯¹è·¯å¾„</param>
-    /// <param name="fileName">å›¾ç‰‡åç§°</param>
-    /// <param name="destWidth">ç¼©æ”¾å®½åº¦</param>
-    /// <param name="destHeight">é«˜åº¦</param>
-    /// <param name="type">1--å›ºå®šç¼©æ”¾ï¼›2--æŒ‰æ¯”ä¾‹ç¼©æ”¾ï¼›3--æŒ‡å®šå®½åº¦,å®½åº¦å¤§äºæŒ‡å®šå®½åº¦æŒ‰æŒ‡å®šå®½åº¦è¿›è¡Œç­‰æ¯”ç¼©æ”¾ï¼Œå°äºæŒ‡å®šå®½åº¦æŒ‰åŸå›¾å¤§å°ä¸Šä¼ ï¼›4--åŸå›¾ç›´æ¥ä¸Šä¼ </param>
+    /// <param name="savePath">Í¼Æ¬Ïà¶ÔÂ·¾¶</param>
+    /// <param name="fileName">Í¼Æ¬Ãû³Æ</param>
+    /// <param name="destWidth">Ëõ·Å¿í¶È</param>
+    /// <param name="destHeight">¸ß¶È</param>
+    /// <param name="type">1--¹Ì¶¨Ëõ·Å£»2--°´±ÈÀıËõ·Å£»3--Ö¸¶¨¿í¶È,¿í¶È´óÓÚÖ¸¶¨¿í¶È°´Ö¸¶¨¿í¶È½øĞĞµÈ±ÈËõ·Å£¬Ğ¡ÓÚÖ¸¶¨¿í¶È°´Ô­Í¼´óĞ¡ÉÏ´«£»4--Ô­Í¼Ö±½ÓÉÏ´«</param>
     /// <returns></returns>
     public static void ReducesPic(string savePath, string fileName, int destWidth, int destHeight, int type)
     {
@@ -15132,7 +15132,7 @@ public static class ShareClass
 
             string Allpath = savePath;
 
-            //ç”ŸæˆåŸå›¾
+            //Éú³ÉÔ­Í¼
             System.IO.Stream stream = System.IO.File.OpenRead(Allpath + fileName);
             System.Drawing.Image oImage = System.Drawing.Image.FromStream(stream);
             stream.Close();
@@ -15144,16 +15144,16 @@ public static class ShareClass
             int oWidth = oImage.Width;
             int oHeight = oImage.Height;
 
-            int tWidth = destWidth; //è®¾ç½®ç¼©ç•¥å›¾åˆå§‹å®½åº¦
-            int tHeight = destHeight; //è®¾ç½®ç¼©ç•¥å›¾åˆå§‹é«˜åº¦
+            int tWidth = destWidth; //ÉèÖÃËõÂÔÍ¼³õÊ¼¿í¶È
+            int tHeight = destHeight; //ÉèÖÃËõÂÔÍ¼³õÊ¼¸ß¶È
 
-            //æŒ‰æŒ‡å®šå®½é«˜ç¼©æ”¾
+            //°´Ö¸¶¨¿í¸ßËõ·Å
             if (type == 1)
             {
                 tWidth = destWidth;
                 tHeight = destHeight;
             }
-            //æŒ‰æ¯”ä¾‹è®¡ç®—å‡ºç¼©ç•¥å›¾çš„å®½åº¦å’Œé«˜åº¦
+            //°´±ÈÀı¼ÆËã³öËõÂÔÍ¼µÄ¿í¶ÈºÍ¸ß¶È
             else if (type == 2)
             {
                 if (oWidth > tWidth || oHeight > tHeight)
@@ -15169,11 +15169,11 @@ public static class ShareClass
                 }
                 else
                 {
-                    tWidth = oWidth; //åŸå›¾å®½åº¦
-                    tHeight = oHeight; //åŸå›¾é«˜åº¦
+                    tWidth = oWidth; //Ô­Í¼¿í¶È
+                    tHeight = oHeight; //Ô­Í¼¸ß¶È
                 }
             }
-            //æŒ‡å®šå®½åº¦,å®½åº¦å¤§äºæŒ‡å®šå®½åº¦æŒ‰æŒ‡å®šå®½åº¦è¿›è¡Œç­‰æ¯”ç¼©æ”¾ï¼Œå°äºæŒ‡å®šå®½åº¦æŒ‰åŸå›¾å¤§å°ä¸Šä¼ 
+            //Ö¸¶¨¿í¶È,¿í¶È´óÓÚÖ¸¶¨¿í¶È°´Ö¸¶¨¿í¶È½øĞĞµÈ±ÈËõ·Å£¬Ğ¡ÓÚÖ¸¶¨¿í¶È°´Ô­Í¼´óĞ¡ÉÏ´«
             else if (type == 3)
             {
                 if (oWidth >= tWidth)
@@ -15189,16 +15189,16 @@ public static class ShareClass
                 }
                 else
                 {
-                    tWidth = oWidth; //åŸå›¾å®½åº¦
-                    tHeight = oHeight; //åŸå›¾é«˜åº¦
+                    tWidth = oWidth; //Ô­Í¼¿í¶È
+                    tHeight = oHeight; //Ô­Í¼¸ß¶È
                 }
             }
             else
             {
-                tWidth = oWidth; //åŸå›¾å®½åº¦
-                tHeight = oHeight; //åŸå›¾é«˜åº¦
+                tWidth = oWidth; //Ô­Í¼¿í¶È
+                tHeight = oHeight; //Ô­Í¼¸ß¶È
             }
-            //ç”Ÿæˆç¼©ç•¥åŸå›¾
+            //Éú³ÉËõÂÔÔ­Í¼
             oImage = oImage.GetThumbnailImage(tWidth, tHeight, callb, IntPtr.Zero);
             oImage.Save(Allpath + fileName);
         }
@@ -15210,13 +15210,13 @@ public static class ShareClass
     }
 
     /// <summary>
-    /// ç”Ÿæˆç¼©ç•¥å›¾
+    /// Éú³ÉËõÂÔÍ¼
     /// </summary>
-    /// <param name="originalImagePath">æºå›¾è·¯å¾„ï¼ˆç‰©ç†è·¯å¾„ï¼‰</param>
-    /// <param name="thumbnailPath">ç¼©ç•¥å›¾è·¯å¾„ï¼ˆç‰©ç†è·¯å¾„ï¼‰</param>
-    /// <param name="width">ç¼©ç•¥å›¾å®½åº¦</param>
-    /// <param name="height">ç¼©ç•¥å›¾é«˜åº¦</param>
-    /// <param name="mode">ç”Ÿæˆç¼©ç•¥å›¾çš„æ–¹å¼</param>
+    /// <param name="originalImagePath">Ô´Í¼Â·¾¶£¨ÎïÀíÂ·¾¶£©</param>
+    /// <param name="thumbnailPath">ËõÂÔÍ¼Â·¾¶£¨ÎïÀíÂ·¾¶£©</param>
+    /// <param name="width">ËõÂÔÍ¼¿í¶È</param>
+    /// <param name="height">ËõÂÔÍ¼¸ß¶È</param>
+    /// <param name="mode">Éú³ÉËõÂÔÍ¼µÄ·½Ê½</param>
     public static void MakeThumbnail(string originalImagePath, string thumbnailPath, int width, int height, string mode)
     {
         System.Drawing.Image originalImage = System.Drawing.Image.FromFile(originalImagePath);
@@ -15227,18 +15227,18 @@ public static class ShareClass
         int ow = originalImage.Width;
         int oh = originalImage.Height; switch (mode)
         {
-            case "HW"://æŒ‡å®šé«˜å®½ç¼©æ”¾ï¼ˆå¯èƒ½å˜å½¢ï¼‰
+            case "HW"://Ö¸¶¨¸ß¿íËõ·Å£¨¿ÉÄÜ±äĞÎ£©
                 break;
 
-            case "W"://æŒ‡å®šå®½ï¼Œé«˜æŒ‰æ¯”ä¾‹
+            case "W"://Ö¸¶¨¿í£¬¸ß°´±ÈÀı
                 toheight = originalImage.Height * width / originalImage.Width;
                 break;
 
-            case "H"://æŒ‡å®šé«˜ï¼Œå®½æŒ‰æ¯”ä¾‹
+            case "H"://Ö¸¶¨¸ß£¬¿í°´±ÈÀı
                 towidth = originalImage.Width * height / originalImage.Height;
                 break;
 
-            case "Cut"://æŒ‡å®šé«˜å®½è£å‡ï¼ˆä¸å˜å½¢ï¼‰
+            case "Cut"://Ö¸¶¨¸ß¿í²Ã¼õ£¨²»±äĞÎ£©
                 if ((double)originalImage.Width / (double)originalImage.Height > (double)towidth / (double)toheight)
                 {
                     oh = originalImage.Height;
@@ -15257,17 +15257,17 @@ public static class ShareClass
 
             default:
                 break;
-        } //æ–°å»ºä¸€ä¸ªbmpå›¾ç‰‡
-        System.Drawing.Image bitmap = new System.Drawing.Bitmap(towidth, toheight); //æ–°å»ºä¸€ä¸ªç”»æ¿
-        System.Drawing.Graphics g = System.Drawing.Graphics.FromImage(bitmap); //è®¾ç½®é«˜è´¨é‡æ’å€¼æ³•
-        g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.High; //è®¾ç½®é«˜è´¨é‡,ä½é€Ÿåº¦å‘ˆç°å¹³æ»‘ç¨‹åº¦
-        g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality; //æ¸…ç©ºç”»å¸ƒå¹¶ä»¥é€æ˜èƒŒæ™¯è‰²å¡«å……
-        g.Clear(System.Drawing.Color.Transparent); //åœ¨æŒ‡å®šä½ç½®å¹¶ä¸”æŒ‰æŒ‡å®šå¤§å°ç»˜åˆ¶åŸå›¾ç‰‡çš„æŒ‡å®šéƒ¨åˆ†
+        } //ĞÂ½¨Ò»¸öbmpÍ¼Æ¬
+        System.Drawing.Image bitmap = new System.Drawing.Bitmap(towidth, toheight); //ĞÂ½¨Ò»¸ö»­°å
+        System.Drawing.Graphics g = System.Drawing.Graphics.FromImage(bitmap); //ÉèÖÃ¸ßÖÊÁ¿²åÖµ·¨
+        g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.High; //ÉèÖÃ¸ßÖÊÁ¿,µÍËÙ¶È³ÊÏÖÆ½»¬³Ì¶È
+        g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality; //Çå¿Õ»­²¼²¢ÒÔÍ¸Ã÷±³¾°É«Ìî³ä
+        g.Clear(System.Drawing.Color.Transparent); //ÔÚÖ¸¶¨Î»ÖÃ²¢ÇÒ°´Ö¸¶¨´óĞ¡»æÖÆÔ­Í¼Æ¬µÄÖ¸¶¨²¿·Ö
         g.DrawImage(originalImage, new System.Drawing.Rectangle(0, 0, towidth, toheight),
         new System.Drawing.Rectangle(x, y, ow, oh),
         System.Drawing.GraphicsUnit.Pixel); try
         {
-            //ä»¥jpgæ ¼å¼ä¿å­˜ç¼©ç•¥å›¾
+            //ÒÔjpg¸ñÊ½±£´æËõÂÔÍ¼
             bitmap.Save(thumbnailPath, System.Drawing.Imaging.ImageFormat.Jpeg);
         }
         catch (Exception e)
@@ -15282,11 +15282,11 @@ public static class ShareClass
         }
     }
 
-    #endregion æ–‡ä»¶å¤¹COPYã€å›¾ç‰‡ç¼©æ”¾ã€æ¡ç ã€äºŒç»´ç åŠŸèƒ½
+    #endregion ÎÄ¼ş¼ĞCOPY¡¢Í¼Æ¬Ëõ·Å¡¢ÌõÂë¡¢¶şÎ¬Âë¹¦ÄÜ
 
-    #region DataSet,DataGrid,DropDownList æ“ä½œå‡½æ•°
+    #region DataSet,DataGrid,DropDownList ²Ù×÷º¯Êı
 
-    //ç»‘å®šé¡¹ç›®å…³è”è§’è‰²ç»„
+    //°ó¶¨ÏîÄ¿¹ØÁª½ÇÉ«×é
     public static void LoadProjectActorGroupForDropDownList(DropDownList DL_Visible, string strProjectID)
     {
         string strHQL;
@@ -15310,12 +15310,12 @@ public static class ShareClass
         string strProductType = System.Configuration.ConfigurationManager.AppSettings["ProductType"];
         if (strSystemVersionType == "SAAS" || strProductType.IndexOf("SAAS") > -1)
         {
-            strHQL = "Select distinct GroupName,HomeName from T_ActorGroup where (GroupName = 'ä¸ªäºº' or GroupName = 'å…¨ä½“')";
+            strHQL = "Select distinct GroupName,HomeName from T_ActorGroup where (GroupName = 'Individual' or GroupName = 'Entire')";
             strHQL += " and LangCode = " + "'" + strLangCode + "'";
         }
         else
         {
-            strHQL = "Select distinct GroupName,HomeName from T_ActorGroup where (GroupName = 'ä¸ªäºº' or GroupName = 'å…¨ä½“' ";
+            strHQL = "Select distinct GroupName,HomeName from T_ActorGroup where (GroupName = 'Individual' or GroupName = 'Entire' ";
             strHQL += " Or GroupName in (select ActorGroupName from T_RelatedActorGroup where RelatedType = 'Project' and RelatedID = " + strProjectID + ")";
             strHQL += " Or BelongDepartCode in " + strDepartString;
             strHQL += " Or MakeUserCode = " + "'" + strUserCode + "')";
@@ -15327,7 +15327,7 @@ public static class ShareClass
         DL_Visible.DataBind();
     }
 
-    //ç»‘å®šè§’è‰²ç»„ï¼Œå…¨ä½“é€‚ç”¨
+    //°ó¶¨½ÇÉ«×é£¬È«ÌåÊÊÓÃ
     public static void LoadActorGroupDropDownList(DropDownList DL_Visible, string strUserCode)
     {
         string strHQL;
@@ -15339,7 +15339,7 @@ public static class ShareClass
         strDepartString = TakeTopCore.CoreShareClass.InitialUnderDepartmentStringByAuthority(strUserCode);
         strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
-        strHQL = "Select rtrim(GroupName) as GroupName ,rtrim(HomeName) as HomeName from T_ActorGroup where GroupName <> 'å…¨ä½“' and Type = 'All' ";
+        strHQL = "Select rtrim(GroupName) as GroupName ,rtrim(HomeName) as HomeName from T_ActorGroup where GroupName <> 'Entire' and Type = 'All' ";
         strHQL += " and (BelongDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))";
         strHQL += " Or BelongDepartCode in " + strDepartString + ")";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
@@ -15349,7 +15349,7 @@ public static class ShareClass
         DL_Visible.DataBind();
     }
 
-    //ç»‘å®šè§’è‰²ç»„ï¼Œå…¨ä½“é€‚ç”¨
+    //°ó¶¨½ÇÉ«×é£¬È«ÌåÊÊÓÃ
     public static void LoadWorkflowActorGroupDropDownList(DropDownList DL_Visible, string strUserCode)
     {
         string strHQL;
@@ -15371,7 +15371,7 @@ public static class ShareClass
         DL_Visible.DataBind();
     }
 
-    //ç»‘å®šé“¶è¡Œ
+    //°ó¶¨ÒøĞĞ
     public static void LoadBankForDropDownList(DropDownList DL_Bank)
     {
         string strHQL;
@@ -15387,7 +15387,7 @@ public static class ShareClass
         DL_Bank.Items.Insert(0, new ListItem("--Select--", ""));
     }
 
-    //ç»‘å®šå¸åˆ«
+    //°ó¶¨±Ò±ğ
     public static void LoadCurrencyForDropDownList(DropDownList DL_Currency)
     {
         string strHQL;
@@ -15402,7 +15402,7 @@ public static class ShareClass
         DL_Currency.Items.Insert(0, new ListItem("--Select--", ""));
     }
 
-    //ç»‘å®šæ”¶ä»˜æ¬¾æ–¹å¼
+    //°ó¶¨ÊÕ¸¶¿î·½Ê½
     public static void LoadReceivePayWayForDropDownList(DropDownList DL_ReAndPayType)
     {
         string strHQL;
@@ -15416,7 +15416,7 @@ public static class ShareClass
         //DL_ReAndPayType.Items.Insert(0, new ListItem("--Select--", ""));
     }
 
-    //ä¾æƒé™åˆ—å‡ºå®¢æˆ·
+    //ÒÀÈ¨ÏŞÁĞ³ö¿Í»§
     public static void LoadCustomer(DropDownList DL_Customer, string strUserCode)
     {
         string strHQL;
@@ -15439,7 +15439,7 @@ public static class ShareClass
         DL_Customer.Items.Insert(0, new ListItem("--Select--", ""));
     }
 
-    //ä¾æƒé™åˆ—å‡ºä¾›åº”å•†å’Œæ‰¿åŒ…å•†
+    //ÒÀÈ¨ÏŞÁĞ³ö¹©Ó¦ÉÌºÍ³Ğ°üÉÌ
     public static void LoadVendorList(DropDownList DL_VendorList, string strUserCode)
     {
         string strHQL;
@@ -15461,7 +15461,7 @@ public static class ShareClass
         DL_VendorList.Items.Insert(0, new ListItem("--Select--", ""));
     }
 
-    //ç»‘å®šDataGrid
+    //°ó¶¨DataGrid
     public static void DataGridBindingDataSet(string strHQL, DataGrid dataGrid)
     {
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_TakeTopTable");
@@ -15470,7 +15470,7 @@ public static class ShareClass
         dataGrid.DataBind();
     }
 
-    //ç»‘å®šDataList
+    //°ó¶¨DataList
     public static void DataGridBindingDataSet(string strHQL, DataList dataList)
     {
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_TakeTopTable");
@@ -15479,7 +15479,7 @@ public static class ShareClass
         dataList.DataBind();
     }
 
-    //åŸºäºéƒ¨é—¨åˆ—è¡¨å‘˜å·¥åˆ°DATAGRID
+    //»ùÓÚ²¿ÃÅÁĞ±íÔ±¹¤µ½DATAGRID
     public static int LoadUserByDepartCodeForDataGrid(string strDepartCode, DataGrid dataGrid)
     {
         string strHQL;
@@ -15494,7 +15494,7 @@ public static class ShareClass
         return lst.Count;
     }
 
-    //åŸºäºéƒ¨é—¨åˆ—è¡¨å‘˜å·¥KIPåˆ°DATAGRID
+    //»ùÓÚ²¿ÃÅÁĞ±íÔ±¹¤KIPµ½DATAGRID
     public static int LoadUserKPIByDepartCodeForDataGrid(string strDepartString, DataGrid dataGrid)
     {
         string strHQL;
@@ -15509,7 +15509,7 @@ public static class ShareClass
         return ds.Tables[0].Rows.Count;
     }
 
-    //åŸºäºéƒ¨é—¨åˆ—è¡¨å‘˜å·¥åˆ°DATAGRID
+    //»ùÓÚ²¿ÃÅÁĞ±íÔ±¹¤µ½DATAGRID
     public static int LoadUserByDepartStringForDataGrid(string strDepartString, DataGrid dataGrid)
     {
         string strHQL;
@@ -15545,7 +15545,7 @@ public static class ShareClass
         DL_Duty.Items.Insert(0, new ListItem("--Select--", ""));
     }
 
-    //åŸºäºé¡¹ç›®æˆå‘˜åˆ—è¡¨åˆ°DATAGRID
+    //»ùÓÚÏîÄ¿³ÉÔ±ÁĞ±íµ½DATAGRID
     public static void LoadProjectMemberByProjectIDForDataGrid(string strProjectID, DataGrid dataGrid)
     {
         string strHQL;
@@ -15559,7 +15559,7 @@ public static class ShareClass
         dataGrid.DataBind();
     }
 
-    //åŸºäºç›´æ¥æˆå‘˜åˆ—è¡¨åˆ°DATAGRID
+    //»ùÓÚÖ±½Ó³ÉÔ±ÁĞ±íµ½DATAGRID
     public static void LoadMemberByUserCodeForDataGrid(string strUserCode, string strAuthorityType, DataGrid dataGrid)
     {
         string strHQL;
@@ -15628,7 +15628,7 @@ public static class ShareClass
         dataGrid.DataBind();
     }
 
-    //åŸºäºç›´æ¥æˆå‘˜åˆ—è¡¨åˆ°DropDownList
+    //»ùÓÚÖ±½Ó³ÉÔ±ÁĞ±íµ½DropDownList
     public static void LoadMemberByUserCodeForDropDownList(string strUserCode, DropDownList dropDownList)
     {
         string strHQL;
@@ -15651,7 +15651,7 @@ public static class ShareClass
         dropDownList.Items.Insert(0, new ListItem("--Select--", ""));
     }
 
-    //å•ä½åˆ—è¡¨åˆ°DropDownList
+    //µ¥Î»ÁĞ±íµ½DropDownList
     public static void LoadUnitForDropDownList(DropDownList DL_Unit)
     {
         string strHQL;
@@ -15666,7 +15666,7 @@ public static class ShareClass
         DL_Unit.Items.Insert(0, new ListItem("--Select--", ""));
     }
 
-    //åŸºäºç›´æ¥æˆå‘˜åˆ—è¡¨åˆ°DropDownList
+    //»ùÓÚÖ±½Ó³ÉÔ±ÁĞ±íµ½DropDownList
     public static void LoadPMByUserCodeForDropDownList(string strUserCode, string strDepartString, DropDownList dropDownList)
     {
         string strHQL;
@@ -15689,7 +15689,7 @@ public static class ShareClass
         dropDownList.DataBind();
     }
 
-    //æ ‡è®°è¢«é€‰å–çš„DATAGRIDè¡Œä¸ºçº¢è‰²
+    //±ê¼Ç±»Ñ¡È¡µÄDATAGRIDĞĞÎªºìÉ«
     public static void ColorDataGridSelectRow(DataGrid dataGrid, DataGridCommandEventArgs e)
     {
         for (int i = 0; i < dataGrid.Items.Count; i++)
@@ -15700,16 +15700,16 @@ public static class ShareClass
         e.Item.ForeColor = Color.Red;
     }
 
-    #endregion DataSet,DataGrid,DropDownList æ“ä½œå‡½æ•°
+    #endregion DataSet,DataGrid,DropDownList ²Ù×÷º¯Êı
 
-    #region SQLå‡½æ•°\XMLå‡½æ•°\WebServiceè°ƒç”¨æ–¹æ³•
+    #region SQLº¯Êı\XMLº¯Êı\WebServiceµ÷ÓÃ·½·¨
 
 
-    //æ‰§è¡Œä¸€èˆ¬å¤„ç†ç¨‹åº
-    //å½“content-type:  application/x-www-from-urlencodeæ—¶ï¼Œå‚æ•°æ ¼å¼ä¸ºï¼šname="zzzz"&id="aaaaa"
+    //Ö´ĞĞÒ»°ã´¦Àí³ÌĞò
+    //µ±content-type:  application/x-www-from-urlencodeÊ±£¬²ÎÊı¸ñÊ½Îª£ºname="zzzz"&id="aaaaa"
     /// <summary>
-    /// æ‰§è¡Œä¸€èˆ¬å¤„ç†ç¨‹åº
-    /// è°ƒç”¨æ–¹æ³•ï¼šstring strResult = GetPostDataPage("http://localhost:16422/Web/Handler/test.ashx", "");
+    /// Ö´ĞĞÒ»°ã´¦Àí³ÌĞò
+    /// µ÷ÓÃ·½·¨£ºstring strResult = GetPostDataPage("http://localhost:16422/Web/Handler/test.ashx", "");
     /// </summary>
     /// <param name="posturl"></param>
     /// <param name="postData"></param>
@@ -15723,10 +15723,10 @@ public static class ShareClass
         HttpWebRequest defectuest = null;
         Encoding encoding = Encoding.UTF8;
         byte[] data = encoding.GetBytes(postData);
-        // å‡†å¤‡è¯·æ±‚...
+        // ×¼±¸ÇëÇó...
         try
         {
-            // è®¾ç½®å‚æ•°
+            // ÉèÖÃ²ÎÊı
             defectuest = WebRequest.Create(posturl) as HttpWebRequest;
             CookieContainer cookieContainer = new CookieContainer();
             defectuest.CookieContainer = cookieContainer;
@@ -15738,7 +15738,7 @@ public static class ShareClass
             outstream = defectuest.GetRequestStream();
             outstream.Write(data, 0, data.Length);
             outstream.Close();
-            //å‘é€è¯·æ±‚å¹¶è·å–ç›¸åº”å›åº”æ•°æ®
+            //·¢ËÍÇëÇó²¢»ñÈ¡ÏàÓ¦»ØÓ¦Êı¾İ
 
             //response = defectuest.GetResponse() as HttpWebResponse;
             HttpWebResponse res;
@@ -15751,10 +15751,10 @@ public static class ShareClass
                 res = (HttpWebResponse)ex.Response;
             }
 
-            //ç›´åˆ°defectuest.GetResponse()ç¨‹åºæ‰å¼€å§‹å‘ç›®æ ‡ç½‘é¡µå‘é€Postè¯·æ±‚
+            //Ö±µ½defectuest.GetResponse()³ÌĞò²Å¿ªÊ¼ÏòÄ¿±êÍøÒ³·¢ËÍPostÇëÇó
             instream = res.GetResponseStream();
             sr = new StreamReader(instream, encoding);
-            //è¿”å›ç»“æœç½‘é¡µï¼ˆhtmlï¼‰ä»£ç 
+            //·µ»Ø½á¹ûÍøÒ³£¨html£©´úÂë
             string content = sr.ReadToEnd();
             string err = string.Empty;
 
@@ -15767,7 +15767,7 @@ public static class ShareClass
         }
     }
 
-    //åºåˆ—åŒ–SQL
+    //ĞòÁĞ»¯SQL
     public static string Escape(string str)
     {
         StringBuilder sb = new StringBuilder();
@@ -15780,7 +15780,7 @@ public static class ShareClass
         return sb.ToString();
     }
 
-    //ååºåˆ—åŒ–SQL
+    //·´ĞòÁĞ»¯SQL
     public static string UnEscape(string str)
     {
         StringBuilder sb = new StringBuilder();
@@ -15796,14 +15796,14 @@ public static class ShareClass
         return sb.ToString();
     }
 
-    //åˆ›å»ºæ•°æ®åº“ç”¨æˆ·
+    //´´½¨Êı¾İ¿âÓÃ»§
     public static bool CreateDBUserAccount(string loginUser, string password, string strIsSecurityadmin)
     {
         string cmdText1, cmdText2;
 
         try
         {
-            ////åˆ›å»ºç™»é™†å¸æˆ·ï¼ˆcreate loginï¼‰
+            ////´´½¨µÇÂ½ÕÊ»§£¨create login£©
             cmdText1 = string.Format(@"create user {0} with password '{1}';", loginUser, password);
             ShareClass.RunSqlCommand(cmdText1);
         }
@@ -15826,7 +15826,7 @@ public static class ShareClass
         return true;
     }
 
-    //æˆäºˆç”¨æˆ·æ•°æ®åº“æƒé™
+    //ÊÚÓèÓÃ»§Êı¾İ¿âÈ¨ÏŞ
     public static bool AuthorizationDBToUser(string loginUser, string password, string databasename, string strIsSecurityadmin)
     {
         string cmdText1;
@@ -15834,7 +15834,7 @@ public static class ShareClass
         {
             if (strIsSecurityadmin == "NO")
             {
-                ////å°†æ•°æ®åº“åªè¯»æƒé™èµ‹äºˆloginuser
+                ////½«Êı¾İ¿âÖ»¶ÁÈ¨ÏŞ¸³Óèloginuser
                 cmdText1 = string.Format(@"REVOKE CREATE ON SCHEMA public from public;
                     GRANT SELECT ON ALL TABLES IN SCHEMA public TO {0};
                     ALTER DEFAULT PRIVILEGES IN SCHEMA public grant select on tables to {0}; ", loginUser, password);
@@ -15842,14 +15842,14 @@ public static class ShareClass
             }
             else
             {
-                ////å°†æ•°æ®åº“çš„æ‰€æœ‰æƒé™èµ‹äºˆloginuserï¼Œå¦åˆ™åªèƒ½ç™»å½•psqlï¼Œæ²¡æœ‰ä»»ä½•æ•°æ®åº“æ“ä½œæƒé™
+                ////½«Êı¾İ¿âµÄËùÓĞÈ¨ÏŞ¸³Óèloginuser£¬·ñÔòÖ»ÄÜµÇÂ¼psql£¬Ã»ÓĞÈÎºÎÊı¾İ¿â²Ù×÷È¨ÏŞ
                 cmdText1 = string.Format(@"REVOKE ALL PRIVILEGES ON ALL TABLES IN SCHEMA public FROM {1};
                                  grant all privileges on database {2}{0}{2} to {1};
                                  alter database {2}{0}{2} owner to {1};
                                  ", databasename, loginUser, "\"");
                 ShareClass.RunSqlCommand(cmdText1);
 
-                //æˆäºˆè‡ªå»ºç«™ç‚¹ç”¨æˆ·æ‰€æœ‰æƒé™
+                //ÊÚÓè×Ô½¨Õ¾µãÓÃ»§ËùÓĞÈ¨ÏŞ
                 GanttAllPrivilegesToSiteUser(databasename, loginUser);
             }
         }
@@ -15861,19 +15861,19 @@ public static class ShareClass
         return true;
     }
 
-    //æˆäºˆè‡ªå»ºç«™ç‚¹ç”¨æˆ·æ‰€æœ‰æƒé™
+    //ÊÚÓè×Ô½¨Õ¾µãÓÃ»§ËùÓĞÈ¨ÏŞ
     public static void GanttAllPrivilegesToSiteUser(string strSiteDBName, string strSiteUser)
     {
         string strConnectString;
 
         try
         {
-            // è·å–è¿æ¥å­—ç¬¦ä¸²
+            // »ñÈ¡Á¬½Ó×Ö·û´®
             strConnectString = ShareClass.GetSiteConnectString(strSiteDBName);
             var conn = new NpgsqlConnection(strConnectString);
             conn.Open();
 
-            // è¿è¡Œ SQL å‘½ä»¤
+            // ÔËĞĞ SQL ÃüÁî
             string sql = string.Format(@"ALTER USER {0} WITH CREATEROLE;GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO {0};ALTER USER {0} WITH SUPERUSER;", strSiteUser);
             var cmd = new NpgsqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
@@ -15885,7 +15885,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—è‡ªå»ºç«™ç‚¹çš„æ•°æ®åº“è¿æ¥ä¸²
+    //È¡µÃ×Ô½¨Õ¾µãµÄÊı¾İ¿âÁ¬½Ó´®
     public static string GetSiteConnectString(string strSiteDBName)
     {
         string strConnectString, strDBName;
@@ -15901,20 +15901,20 @@ public static class ShareClass
 
 
 
-    //ç›´æ¥åˆ é™¤æŒ‡å®šç›®å½•ä¸‹çš„æ‰€æœ‰æ–‡ä»¶
+    //Ö±½ÓÉ¾³ıÖ¸¶¨Ä¿Â¼ÏÂµÄËùÓĞÎÄ¼ş
     public static void DeleteFileUnderDirectory(string strDirectory)
     {
         try
         {
-            //å»é™¤æ–‡ä»¶å¤¹å’Œå­æ–‡ä»¶çš„åªè¯»å±æ€§
-            //å»é™¤æ–‡ä»¶å¤¹çš„åªè¯»å±æ€§
+            //È¥³ıÎÄ¼ş¼ĞºÍ×ÓÎÄ¼şµÄÖ»¶ÁÊôĞÔ
+            //È¥³ıÎÄ¼ş¼ĞµÄÖ»¶ÁÊôĞÔ
             System.IO.DirectoryInfo fileInfo = new DirectoryInfo(strDirectory);
             fileInfo.Attributes = FileAttributes.Normal & FileAttributes.Directory;
 
-            //å»é™¤æ–‡ä»¶çš„åªè¯»å±æ€§
+            //È¥³ıÎÄ¼şµÄÖ»¶ÁÊôĞÔ
             System.IO.File.SetAttributes(strDirectory, System.IO.FileAttributes.Normal);
 
-            //åˆ¤æ–­æ–‡ä»¶å¤¹æ˜¯å¦è¿˜å­˜åœ¨
+            //ÅĞ¶ÏÎÄ¼ş¼ĞÊÇ·ñ»¹´æÔÚ
             if (Directory.Exists(strDirectory))
             {
                 foreach (string f in Directory.GetFileSystemEntries(strDirectory))
@@ -15923,7 +15923,7 @@ public static class ShareClass
                     {
                         try
                         {
-                            //å¦‚æœæœ‰å­æ–‡ä»¶åˆ é™¤æ–‡ä»¶
+                            //Èç¹ûÓĞ×ÓÎÄ¼şÉ¾³ıÎÄ¼ş
                             File.Delete(f);
                         }
                         catch
@@ -15934,7 +15934,7 @@ public static class ShareClass
                     {
                         try
                         {
-                            //å¾ªç¯é€’å½’åˆ é™¤å­æ–‡ä»¶å¤¹
+                            //Ñ­»·µİ¹éÉ¾³ı×ÓÎÄ¼ş¼Ğ
                             DeleteFileUnderDirectory(f);
                         }
                         catch
@@ -15944,7 +15944,7 @@ public static class ShareClass
                 }
             }
         }
-        catch (Exception ex) // å¼‚å¸¸å¤„ç†
+        catch (Exception ex) // Òì³£´¦Àí
         {
         }
     }
@@ -15990,7 +15990,7 @@ public static class ShareClass
     }
 
 
-    //è‡ªåŠ¨å¤‡ä»½ç³»ç»Ÿæ•°æ®
+    //×Ô¶¯±¸·İÏµÍ³Êı¾İ
     public static void AutoBackupDataBySystem()
     {
         string strHQL1, strHQL2;
@@ -16000,7 +16000,7 @@ public static class ShareClass
         {
             try
             {
-                //å¤‡ä»½æ•°æ®åº“
+                //±¸·İÊı¾İ¿â
                 ShareClass.BackupCurrentSiteDB(ShareClass.GetSystemDBName(), ShareClass.GetSystemDBBackupSaveDir(), "Timer", "SELF");
             }
             catch (Exception err)
@@ -16015,7 +16015,7 @@ public static class ShareClass
         {
             try
             {
-                //å¤‡ä»½æ–‡æ¡£
+                //±¸·İÎÄµµ
                 ShareClass.BackupCurrentSiteDoc("Timer");
             }
             catch (Exception err)
@@ -16026,7 +16026,7 @@ public static class ShareClass
     }
 
 
-    //å¤‡ä»½å¹³å°æ–‡æ¡£
+    //±¸·İÆ½Ì¨ÎÄµµ
     public static int BackupCurrentSiteDoc(string strBackupUser)
     {
         string strDirectory, strBackupPeriodDay, strBackupDirectorySavePath, strBackupDirectory;
@@ -16073,13 +16073,13 @@ public static class ShareClass
             intResult = ShareClass.CreateDirectory(strBackupDirectorySavePath);
             if (intResult == 2)
             {
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('è­¦å‘Šï¼Œå¤‡ä»½ç›®å½•åˆ›å»º"+Resources.lang.ZZSBJC+"')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¾¯¸æ£¬±¸·İÄ¿Â¼´´½¨"+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+"')", true);
                 return -1;
             }
         }
         else
         {
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click033", "alert('" + Resources.lang.ZZJGBFMLBNWKJC + "')", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click033", "alert('" + LanguageHandle.GetWord("ZZJGBFMLBNWKJC").ToString().Trim() + "')", true);
             return 1;
         }
 
@@ -16091,7 +16091,7 @@ public static class ShareClass
         {
             try
             {
-                //åˆ¤æ–­å½“æœˆæ˜¯ä¸æ˜¯ç¬¬ä¸€æ¬¡å¤‡ä»½
+                //ÅĞ¶Ïµ±ÔÂÊÇ²»ÊÇµÚÒ»´Î±¸·İ
                 if (GetCurrentMonthBackupNumber() == 0)
                 {
                     strDocDirectory = DateTime.Now.AddMonths(-1).ToString("yyyyMM");
@@ -16202,35 +16202,35 @@ public static class ShareClass
                 strErrorMsg += "Copy Log directory Error: " + err.Message.ToString() + ";";
             }
 
-            //å†™æ—¥å¿—
+            //Ğ´ÈÕÖ¾
             string strInsertBackLogHQL = string.Format(@"insert into T_BackDocLog(BackTime,BackDocUrl,UserCode,UserName,IsSucc) values('{0}','{1}','{2}','{3}',1)",
                 DateTime.Now, strBackupDirectorySavePath, strBackupUser, strBackupUser);
             ShareClass.RunSqlCommand(strInsertBackLogHQL);
 
             if (strErrorMsg == "")
             {
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click044", "alert('" + Resources.lang.ZZBeiFenChengGong + "')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click044", "alert('" + LanguageHandle.GetWord("ZZBeiFenChengGong").ToString().Trim() + "')", true);
                 return 1;
             }
             else
             {
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click055", "alert('" + Resources.lang.ZZBeiFenShiBaiQingJianCha + ": " + strErrorMsg + "')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click055", "alert('" + LanguageHandle.GetWord("ZZBeiFenShiBaiQingJianCha").ToString().Trim() + ": " + strErrorMsg + "')", true);
                 return -1;
             }
         }
         catch (Exception err)
         {
-            //å†™æ—¥å¿—
+            //Ğ´ÈÕÖ¾
             string strInsertBackLogHQL = string.Format(@"insert into T_BackDocLog(BackTime,BackDocUrl,UserCode,UserName,IsSucc) values('{0}','{1}','{2}','{3}',0)",
                 DateTime.Now, strBackupDirectorySavePath, strBackupUser, strBackupUser);
             ShareClass.RunSqlCommand(strInsertBackLogHQL);
 
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click066", "alert('" + Resources.lang.ZZBeiFenShiBaiQingJianCha + ": " + err.Message.ToString() + "')", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click066", "alert('" + LanguageHandle.GetWord("ZZBeiFenShiBaiQingJianCha").ToString().Trim() + ": " + err.Message.ToString() + "')", true);
             return -1;
         }
     }
 
-    //å–å¾—å½“æœˆå¤‡ä»½æ¬¡æ•°
+    //È¡µÃµ±ÔÂ±¸·İ´ÎÊı
     public static int GetCurrentMonthBackupNumber()
     {
         string strHQL;
@@ -16240,7 +16240,7 @@ public static class ShareClass
         return ds.Tables[0].Rows.Count;
     }
 
-    //å–å¾—æœ€æ–°å¤‡ä»½æ–‡æ¡£æ—¶é—´
+    //È¡µÃ×îĞÂ±¸·İÎÄµµÊ±¼ä
     public static string GetAllreadyBackupDocLastestTime()
     {
         string strHQL;
@@ -16257,7 +16257,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—æœ€æ–°å¤‡ä»½æ–‡æ¡£æ—¶é—´
+    //È¡µÃ×îĞÂ±¸·İÎÄµµÊ±¼ä
     public static string GetAllreadyBackupDBLastestTime()
     {
         string strHQL;
@@ -16274,7 +16274,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—ä¸Šæ¬¡å¤‡ä»½æ—¶é—´åˆ°ç°åœ¨çš„æœˆä»½
+    //È¡µÃÉÏ´Î±¸·İÊ±¼äµ½ÏÖÔÚµÄÔÂ·İ
     public static int GetBackupDBLastestTimeDifferMonth()
     {
         string strHQL;
@@ -16298,7 +16298,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—è¯­è¨€èµ„æºæ–‡ä»¶çš„KEYå€¼
+    //È¡µÃÓïÑÔ×ÊÔ´ÎÄ¼şµÄKEYÖµ
     public static string GetLanguageResourceKeyValue(string strLangCode, string strKey)
     {
         string strResouceFile = "lang." + strLangCode.Trim() + ".resx";
@@ -16312,7 +16312,7 @@ public static class ShareClass
         }
     }
 
-    //å¼‚æ­¥æ‰§è¡Œé¡µé¢
+    //Òì²½Ö´ĞĞÒ³Ãæ
     public static void SyncProjectPlanSchedule(string strURL)
     {
         string strSPInterfaceURL;
@@ -16327,7 +16327,7 @@ public static class ShareClass
             {
                 using (WebResponse wr = req.GetResponse())
                 {
-                    //åœ¨è¿™é‡Œå¯¹æ¥æ”¶åˆ°çš„é¡µé¢å†…å®¹è¿›è¡Œå¤„ç†
+                    //ÔÚÕâÀï¶Ô½ÓÊÕµ½µÄÒ³ÃæÄÚÈİ½øĞĞ´¦Àí
                 }
             }
             catch
@@ -16338,17 +16338,17 @@ public static class ShareClass
     }
 
 
-    /*  åŠ¨æ€è°ƒç”¨WebServiceç¤ºä¾‹
+    /*  ¶¯Ì¬µ÷ÓÃWebServiceÊ¾Àı
         //string url = "http://www.webxml.com.cn/WebServices/WeatherWebservice.asmx";
         //string[] args = new string[1];
-        //args[0] = "æ­å·";
+        //args[0] = "º¼Öİ";
         //object result = ShareClass.InvokeWebService(url, "getWeatherbyCityName", args);
         //Response.Write(result.ToString());
-        //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + result.ToString() + "ï¼');</script>");
+        //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + result.ToString() + "£¡');</script>");
     */
 
-    //æ‰§è¡Œä¸€èˆ¬å¤„ç†ç¨‹åº
-    //å½“content-type:  application/x-www-from-urlencodeæ—¶ï¼Œå‚æ•°æ ¼å¼ä¸ºï¼šname="zzzz"&id="aaaaa"
+    //Ö´ĞĞÒ»°ã´¦Àí³ÌĞò
+    //µ±content-type:  application/x-www-from-urlencodeÊ±£¬²ÎÊı¸ñÊ½Îª£ºname="zzzz"&id="aaaaa"
     public static string GetResponseByPost(string apiUrl, string queryString)
     {
         string responseString = string.Empty;
@@ -16401,11 +16401,11 @@ public static class ShareClass
     #region InvokeWebService
 
     /// < summary>
-    /// åŠ¨æ€è°ƒç”¨webæœåŠ¡
+    /// ¶¯Ì¬µ÷ÓÃweb·şÎñ
     /// < /summary>
-    /// < param name="url">WSDLæœåŠ¡åœ°å€< /param>
-    /// < param name="methodname">æ–¹æ³•å< /param>
-    /// < param name="args">å‚æ•°< /param>
+    /// < param name="url">WSDL·şÎñµØÖ·< /param>
+    /// < param name="methodname">·½·¨Ãû< /param>
+    /// < param name="args">²ÎÊı< /param>
     /// < returns>< /returns>
     public static object InvokeWebService(string url, string methodname, object[] args)
     {
@@ -16413,12 +16413,12 @@ public static class ShareClass
     }
 
     /// < summary>
-    /// åŠ¨æ€è°ƒç”¨webæœåŠ¡
+    /// ¶¯Ì¬µ÷ÓÃweb·şÎñ
     /// < /summary>
-    /// < param name="url">WSDLæœåŠ¡åœ°å€< /param>
-    /// < param name="classname">ç±»å< /param>
-    /// < param name="methodname">æ–¹æ³•å< /param>
-    /// < param name="args">å‚æ•°< /param>
+    /// < param name="url">WSDL·şÎñµØÖ·< /param>
+    /// < param name="classname">ÀàÃû< /param>
+    /// < param name="methodname">·½·¨Ãû< /param>
+    /// < param name="args">²ÎÊı< /param>
     /// < returns>< /returns>
     public static object InvokeWebService(string url, string classname, string methodname, object[] args)
     {
@@ -16430,7 +16430,7 @@ public static class ShareClass
 
         try
         {
-            //è·å–WSDL
+            //»ñÈ¡WSDL
             WebClient wc = new WebClient();
             Stream stream = wc.OpenRead(url + "?WSDL");
             ServiceDescription sd = ServiceDescription.Read(stream);
@@ -16438,13 +16438,13 @@ public static class ShareClass
             sdi.AddServiceDescription(sd, "", "");
             CodeNamespace cn = new CodeNamespace(@namespace);
 
-            //ç”Ÿæˆå®¢æˆ·ç«¯ä»£ç†ç±»ä»£ç 
+            //Éú³É¿Í»§¶Ë´úÀíÀà´úÂë
             CodeCompileUnit ccu = new CodeCompileUnit();
             ccu.Namespaces.Add(cn);
             sdi.Import(cn, ccu);
             CSharpCodeProvider icc = new CSharpCodeProvider();
 
-            //è®¾å®šç¼–è¯‘å‚æ•°
+            //Éè¶¨±àÒë²ÎÊı
             CompilerParameters cplist = new CompilerParameters();
             cplist.GenerateExecutable = false;
             cplist.GenerateInMemory = true;
@@ -16453,7 +16453,7 @@ public static class ShareClass
             cplist.ReferencedAssemblies.Add("System.Web.Services.dll");
             cplist.ReferencedAssemblies.Add("System.Data.dll");
 
-            //ç¼–è¯‘ä»£ç†ç±»
+            //±àÒë´úÀíÀà
             CompilerResults cr = icc.CompileAssemblyFromDom(cplist, ccu);
             if (true == cr.Errors.HasErrors)
             {
@@ -16466,7 +16466,7 @@ public static class ShareClass
                 throw new Exception(sb.ToString());
             }
 
-            //ç”Ÿæˆä»£ç†å®ä¾‹ï¼Œå¹¶è°ƒç”¨æ–¹æ³•
+            //Éú³É´úÀíÊµÀı£¬²¢µ÷ÓÃ·½·¨
             System.Reflection.Assembly assembly = cr.CompiledAssembly;
             Type t = assembly.GetType(@namespace + "." + classname, true, true);
             object obj = Activator.CreateInstance(t);
@@ -16495,7 +16495,7 @@ public static class ShareClass
 
     #endregion InvokeWebService
 
-    //ä¿å­˜å·¥ä½œæµXMLæ•°æ®åˆ°å·¥ä½œæµè¡¨
+    //±£´æ¹¤×÷Á÷XMLÊı¾İµ½¹¤×÷Á÷±í
     public static bool UpdateWFXMLData(string strXMLName, string strWFID)
     {
         string strHQL;
@@ -16506,7 +16506,7 @@ public static class ShareClass
 
         try
         {
-            //æŠŠæµç¨‹XMLæ•°æ®ä¿å­˜åœ¨WFXMLDataåˆ—
+            //°ÑÁ÷³ÌXMLÊı¾İ±£´æÔÚWFXMLDataÁĞ
             XmlDocument document = new XmlDocument();
             document.Load(strXMLName);
 
@@ -16543,7 +16543,7 @@ public static class ShareClass
         }
     }
 
-    //æŠŠXMLæ–‡æ¡£è½¬æˆå­—ç¬¦ä¸²
+    //°ÑXMLÎÄµµ×ª³É×Ö·û´®
     public static string xmlDocument2String(XmlDocument doc)
     {
         MemoryStream stream = new MemoryStream();
@@ -16558,7 +16558,7 @@ public static class ShareClass
         return xmlstring;
     }
 
-    //SQLå–å¾—æ•°æ®é›†
+    //SQLÈ¡µÃÊı¾İ¼¯
     public static DataSet GetDataSetFromSql(string strHQL, string strTableName)
     {
         NpgsqlConnection myConnection = new NpgsqlConnection(
@@ -16573,7 +16573,7 @@ public static class ShareClass
         sda.Fill(ds, strTableName);
         myConnection.Close();
 
-        //---ä¿å­˜ç”¨æˆ·æ“ä½œæ—¥å¿—åˆ°æ—¥å¿—è¡¨-------
+        //---±£´æÓÃ»§²Ù×÷ÈÕÖ¾µ½ÈÕÖ¾±í-------
         InsertUserOperateLog(strHQL);
 
         if (myCommand != null)
@@ -16584,7 +16584,7 @@ public static class ShareClass
         return ds;
     }
 
-    //SQLå–å¾—æ•°æ®é›†,æ‰§è¡Œæ“ä½œæ—¥å¿—ä¸å­˜å…¥æ—¥å¿—è¡¨
+    //SQLÈ¡µÃÊı¾İ¼¯,Ö´ĞĞ²Ù×÷ÈÕÖ¾²»´æÈëÈÕÖ¾±í
     public static DataSet GetDataSetFromSqlNOOperateLog(string strHQL, string strTableName)
     {
         NpgsqlConnection myConnection = new NpgsqlConnection(
@@ -16608,24 +16608,24 @@ public static class ShareClass
         return ds;
     }
 
-    //è¿è¡ŒSQLè¯­å¥
+    //ÔËĞĞSQLÓï¾ä
     public static void RunSqlCommand(string strCmdText)
     {
         NpgsqlConnection myConnection = new NpgsqlConnection(
                ConfigurationManager.ConnectionStrings["SQLCONNECTIONSTRING"].ConnectionString);
 
-        ///åˆ›å»ºCommand
+        ///´´½¨Command
         NpgsqlCommand myCommand = new NpgsqlCommand(strCmdText, myConnection);
         myCommand.CommandTimeout = 600;
 
-        ///æ‰“å¼€é“¾æ¥
+        ///´ò¿ªÁ´½Ó
         myConnection.Open();
 
         myCommand.ExecuteNonQuery();
 
         myConnection.Close();
 
-        //---ä¿å­˜ç”¨æˆ·æ“ä½œæ—¥å¿—åˆ°æ—¥å¿—è¡¨-------
+        //---±£´æÓÃ»§²Ù×÷ÈÕÖ¾µ½ÈÕÖ¾±í-------
         InsertUserOperateLog(strCmdText);
 
         if (myCommand != null)
@@ -16634,7 +16634,7 @@ public static class ShareClass
         }
     }
 
-    //è¿è¡Œå¸¦è¿”å›å‚æ•°çš„å­˜å‚¨è¿‡ç¨‹
+    //ÔËĞĞ´ø·µ»Ø²ÎÊıµÄ´æ´¢¹ı³Ì
     public static void RunSQLProcedure(string pro, List<NpgsqlParameter> values, ref Hashtable htReturn)
     {
         NpgsqlConnection myConnection = new NpgsqlConnection(
@@ -16649,7 +16649,7 @@ public static class ShareClass
             myCommand.Parameters.Add(sp);
         }
 
-        ///æ‰“å¼€é“¾æ¥
+        ///´ò¿ªÁ´½Ó
         myConnection.Open();
         myCommand.ExecuteNonQuery();
 
@@ -16671,7 +16671,7 @@ public static class ShareClass
         }
     }
 
-    //ä¿å­˜ç”¨æˆ·æ“ä½œæ—¥å¿—åˆ°æ—¥å¿—è¡¨
+    //±£´æÓÃ»§²Ù×÷ÈÕÖ¾µ½ÈÕÖ¾±í
     public static void InsertUserOperateLog(string strHQL)
     {
         string strSQL;
@@ -16716,7 +16716,7 @@ public static class ShareClass
 
 
 
-    //è¿è¡Œå¸¦è¿”å›å‚æ•°çš„å­˜å‚¨è¿‡ç¨‹
+    //ÔËĞĞ´ø·µ»Ø²ÎÊıµÄ´æ´¢¹ı³Ì
     public static DataSet RunSQLProcedure(string pro, List<SqlParameter> values)
     {
         NpgsqlConnection myConnection = new NpgsqlConnection(
@@ -16733,7 +16733,7 @@ public static class ShareClass
 
         NpgsqlDataAdapter sda = new NpgsqlDataAdapter();
         sda.SelectCommand = myCommand;
-        sda.SelectCommand.CommandTimeout = 600;  //å–æ¶ˆè¶…æ—¶é»˜è®¤è®¾ç½®  é»˜è®¤æ˜¯30s   å¢åŠ ä¸€æ¡è®¾ç½®
+        sda.SelectCommand.CommandTimeout = 600;  //È¡Ïû³¬Ê±Ä¬ÈÏÉèÖÃ  Ä¬ÈÏÊÇ30s   Ôö¼ÓÒ»ÌõÉèÖÃ
         DataSet ds = new DataSet();
         sda.Fill(ds);
 
@@ -16747,17 +16747,17 @@ public static class ShareClass
         return ds;
     }
 
-    //è¿è¡ŒSQLè¯­å¥,æ‰§è¡Œæ“ä½œæ—¥å¿—ä¸å­˜å…¥æ—¥å¿—è¡¨
+    //ÔËĞĞSQLÓï¾ä,Ö´ĞĞ²Ù×÷ÈÕÖ¾²»´æÈëÈÕÖ¾±í
     public static void RunSqlCommandForNOOperateLog(string strCmdText)
     {
         NpgsqlConnection myConnection = new NpgsqlConnection(
                ConfigurationManager.ConnectionStrings["SQLCONNECTIONSTRING"].ConnectionString);
 
-        ///åˆ›å»ºCommand
+        ///´´½¨Command
         NpgsqlCommand myCommand = new NpgsqlCommand(strCmdText, myConnection);
         myCommand.CommandTimeout = 600;
 
-        ///æ‰“å¼€é“¾æ¥
+        ///´ò¿ªÁ´½Ó
         myConnection.Open();
 
         myCommand.ExecuteNonQuery();
@@ -16770,7 +16770,7 @@ public static class ShareClass
         }
     }
 
-    //è¿‡æ»¤éæ³•å­—ç¬¦ï¼Œé˜²æ­¢æ³¨å…¥å¼æ”»æ”»å‡»
+    //¹ıÂË·Ç·¨×Ö·û£¬·ÀÖ¹×¢ÈëÊ½¹¥¹¥»÷
     public static bool SqlFilter(string InText)
     {
         string word = "and|exec|insert|select|delete|update|chr|mid|master|or|truncate|char|declare|join|or|;|-|+|*|%|";
@@ -16787,7 +16787,7 @@ public static class ShareClass
         return false;
     }
 
-    //ä»EXCELè¯»å–åˆ°æ•°æ®é›†
+    //´ÓEXCEL¶ÁÈ¡µ½Êı¾İ¼¯
     public static DataSet ExcelToDataSet(string filenameurl, string table)
     {
         string strConn;
@@ -16795,7 +16795,7 @@ public static class ShareClass
 
         if (extension.ToLower() == ".xlsx")
         {
-            //2013ç‰ˆåŠä»¥ä¸Šç‰ˆæœ¬å¯¼å…¥
+            //2013°æ¼°ÒÔÉÏ°æ±¾µ¼Èë
             strConn = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + filenameurl + ";Extended Properties='Excel 12.0;IMEX=1'";
         }
         else
@@ -16809,7 +16809,7 @@ public static class ShareClass
         return ds;
     }
 
-    //å€’å‡ºEXCELæ–‡ä»¶
+    //µ¹³öEXCELÎÄ¼ş
     public static void CreateExcel(string strHQL, string fileName, Page page)
     {
         int i = 0, j = 0;
@@ -16843,7 +16843,7 @@ public static class ShareClass
         HttpContext.Current.Response.End();
     }
 
-    //DataGridå¯¼å‡ºä¸ºEXCEL
+    //DataGridµ¼³öÎªEXCEL
     public static void DataGridExportToExecl(DataGrid dataGrid, string strTableTitle, string strFileName, DataSet ds)
     {
         dataGrid.AllowPaging = false;
@@ -16869,7 +16869,7 @@ public static class ShareClass
     }
 
 
-    //ModifyWebConfigDBConnectionString ä¿®æ”¹web.configçš„è¿æ¥æ•°æ®åº“çš„å­—ç¬¦ä¸²ã€å¹³å°åç§°å’Œæ˜¯å¦OEMç‰ˆ
+    //ModifyWebConfigDBConnectionString ĞŞ¸Äweb.configµÄÁ¬½ÓÊı¾İ¿âµÄ×Ö·û´®¡¢Æ½Ì¨Ãû³ÆºÍÊÇ·ñOEM°æ
     public static bool ModifyWebConfigDBConnectionStringAndSystemName(string strSiteDirectory, string NhibernateConnectionString, string SQLConnectionString, string GanttSQLConnectionString, string strDBOwerID, string strPassword, string strDBName, string strSysteName, string strSiteAppURL, string strRentProductType, string strRentProductVersionType, string strIsOEM)
     {
         try
@@ -16888,7 +16888,7 @@ public static class ShareClass
 
             bool FoundIt = false;
 
-            //ä¿®æ”¹NHibernateæ•°æ®åº“è¿æ¥å‚æ•°
+            //ĞŞ¸ÄNHibernateÊı¾İ¿âÁ¬½Ó²ÎÊı
             strDBServerName = GetDBServerName("connection.connection_string");
             foreach (System.Xml.XmlNode Node in xmlDocument["configuration"]["hibernate-configuration"]["session-factory"])
             {
@@ -16908,7 +16908,7 @@ public static class ShareClass
 
 
 
-            //ä¿®æ”¹å¹³å°åç§°
+            //ĞŞ¸ÄÆ½Ì¨Ãû³Æ
             foreach (System.Xml.XmlNode Node in xmlDocument["configuration"]["appSettings"])
             {
                 if (Node.Name == "add")
@@ -16925,7 +16925,7 @@ public static class ShareClass
                 //throw new InstallException("Error when writing the config file: web.config");
             }
 
-            //ä¿®æ”¹å¹³å°URL
+            //ĞŞ¸ÄÆ½Ì¨URL
             foreach (System.Xml.XmlNode Node in xmlDocument["configuration"]["appSettings"])
             {
                 if (Node.Name == "add")
@@ -16942,7 +16942,7 @@ public static class ShareClass
                 //throw new InstallException("Error when writing the config file: web.config");
             }
 
-            //ä¿®æ”¹äº§å“ç±»å‹
+            //ĞŞ¸Ä²úÆ·ÀàĞÍ
             foreach (System.Xml.XmlNode Node in xmlDocument["configuration"]["appSettings"])
             {
                 if (Node.Name == "add")
@@ -16959,7 +16959,7 @@ public static class ShareClass
                 //throw new InstallException("Error when writing the config file: web.config");
             }
 
-            //ä¿®æ”¹äº§å“ç‰ˆæœ¬
+            //ĞŞ¸Ä²úÆ·°æ±¾
             foreach (System.Xml.XmlNode Node in xmlDocument["configuration"]["appSettings"])
             {
                 if (Node.Name == "add")
@@ -16976,7 +16976,7 @@ public static class ShareClass
                 //throw new InstallException("Error when writing the config file: web.config");
             }
 
-            //ä¿®æ”¹IdentityèŠ‚ç‚¹ADMINISTRATOR å¯†ç 
+            //ĞŞ¸ÄIdentity½ÚµãADMINISTRATOR ÃÜÂë
             string strIdentityPassword = GetIdentityUserPassword();
             foreach (System.Xml.XmlNode Node in xmlDocument["configuration"]["system.web"])
             {
@@ -16991,7 +16991,7 @@ public static class ShareClass
                 //throw new InstallException("Error when writing the config file: web.config");
             }
 
-            //ä¿®æ”¹OEMç‰ˆæœ¬ç±»å‹
+            //ĞŞ¸ÄOEM°æ±¾ÀàĞÍ
             if (strIsOEM == "YES")
             {
                 foreach (System.Xml.XmlNode Node in xmlDocument["configuration"]["appSettings"])
@@ -17015,7 +17015,7 @@ public static class ShareClass
             xmlDocument.Save(FileInfo.FullName);
 
 
-            //ä¿®æ”¹SQlæ•°æ®åº“è¿æ¥å‚æ•°
+            //ĞŞ¸ÄSQlÊı¾İ¿âÁ¬½Ó²ÎÊı
             strDBServerName = GetDBServerName("connectionString");
             foreach (System.Xml.XmlNode Node in xmlDocument["configuration"]["connectionStrings"])
             {
@@ -17053,7 +17053,7 @@ public static class ShareClass
         }
     }
 
-    //é…ç½®POSTGRESQL
+    //ÅäÖÃPOSTGRESQL
     public static void ConfigPostgreSqlPGPassFile(string strDBName)
     {
         try
@@ -17077,7 +17077,7 @@ public static class ShareClass
         }
     }
 
-    //å¤‡ä»½OEMç«™ç‚¹æ•°æ®åº“
+    //±¸·İOEMÕ¾µãÊı¾İ¿â
     public static void BackupOEMSiteDB(string strSiteDBName, string strBackupDBSavePath, string strBackupOperatorName)
     {
         int intResult;
@@ -17085,7 +17085,7 @@ public static class ShareClass
         intResult = ShareClass.CreateDirectory(strBackupDBSavePath);
         if (intResult == 2)
         {
-            LogClass.WriteLogFile("è­¦å‘Šï¼Œå¤‡ä»½ç›®å½•åˆ›å»º" + Resources.lang.ZZSBJC);
+            LogClass.WriteLogFile("¾¯¸æ£¬±¸·İÄ¿Â¼´´½¨" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim());  
             return;
         }
 
@@ -17099,7 +17099,7 @@ public static class ShareClass
         }
     }
 
-    //å¤‡ä»½å¹³å°æ•°æ®åº“
+    //±¸·İÆ½Ì¨Êı¾İ¿â
     public static int BackupCurrentSiteDB(string strDBName, string strBackupDirectory, string strBackupOperatorName, string strBackupType)
     {
         string strBackupDBName, strBackupDBSavePathName, strBackupDirectorySavePath, strAppDBServer, strAppDBPort, strAppDBPassword;
@@ -17126,17 +17126,17 @@ public static class ShareClass
             intResult = ShareClass.CreateDirectory(strBackupDirectorySavePath);
             if (intResult == 2)
             {
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('è­¦å‘Šï¼Œå¤‡ä»½ç›®å½•åˆ›å»º"+Resources.lang.ZZSBJC+"')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('¾¯¸æ£¬±¸·İÄ¿Â¼´´½¨"+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+"')", true);
                 return 2;
             }
         }
         else
         {
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGBFMLBNWKJC + "')", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGBFMLBNWKJC").ToString().Trim() + "')", true);
             return -4;
         }
 
-        //ç”Ÿæˆæ‰¹å¤„ç†
+        //Éú³ÉÅú´¦Àí
         string bat = string.Format("set PGPASSWORD={5}\r\necho on\r\n{0} -h {1} -p {2} -U postgres -F c -b -v -f \"{3}\" {4}",
            HttpContext.Current.Server.MapPath("PGTools") + "\\pg_dump.exe",
             strAppDBServer,
@@ -17152,10 +17152,10 @@ public static class ShareClass
         theProcess.StartInfo.FileName = strBackupDirectorySavePath + "\\backup.bat";
         //theProcess.StartInfo.Arguments = arguments;
         theProcess.StartInfo.CreateNoWindow = true;
-        theProcess.Start();//å¯åŠ¨ç¨‹åº
+        theProcess.Start();//Æô¶¯³ÌĞò
         theProcess.WaitForExit();
 
-        //å†™æ—¥å¿—
+        //Ğ´ÈÕÖ¾
         string strInsertBackLogHQL = string.Format(@"insert into T_BackDBLog(BackTime,BackDBUrl,UserCode,UserName,IsSucc) values('{0}','{1}','{2}','{3}',1)",
             DateTime.Now, strBackupDBSavePathName, strBackupOperatorName, strBackupOperatorName);
         ShareClass.RunSqlCommand(strInsertBackLogHQL);
@@ -17163,7 +17163,7 @@ public static class ShareClass
         return 0;
     }
 
-    //å–å¾—æ•°æ®åº“å¤‡ä»½è·¯å¾„
+    //È¡µÃÊı¾İ¿â±¸·İÂ·¾¶
     public static string GetSystemDBBackupSaveDir()
     {
         string strDirectory = "";
@@ -17188,19 +17188,19 @@ public static class ShareClass
         return strDirectory;
     }
 
-    //-------------ä»æ¨¡æ¿ç«™ç‚¹æ¢å¤æ•°æ®åº“--------------------------------------------------------------------
+    //-------------´ÓÄ£°åÕ¾µã»Ö¸´Êı¾İ¿â--------------------------------------------------------------------
     public static bool RestoreDatabaseFromTemplateDB(string strDBName, string strDBRestoreFile)
     {
         return RestoreDatabase(strDBName, strDBRestoreFile);
     }
 
-    //-------------ä»OEMç”¨æˆ·ç«™ç‚¹æ¢å¤æ•°æ®åº“--------------------------------------------------------------------
+    //-------------´ÓOEMÓÃ»§Õ¾µã»Ö¸´Êı¾İ¿â--------------------------------------------------------------------
     public static bool RestoreDatabaseFromOEMUserDB(string strDBName, string strDBRestoreFile)
     {
         return RestoreDatabase(strDBName, strDBRestoreFile);
     }
 
-    //-------------ä»æ¨¡æ¿ç«™ç‚¹æ¢å¤æ•°æ®åº“(å¤‡ç”¨ï¼‰--------------------------------------------------------------------
+    //-------------´ÓÄ£°åÕ¾µã»Ö¸´Êı¾İ¿â(±¸ÓÃ£©--------------------------------------------------------------------
     public static bool RestoreDatabase(string strDBName, string strDBRestoreFile)
     {
         string strAppDBPasswd, strAppDBServer, strAppDBPort;
@@ -17211,7 +17211,7 @@ public static class ShareClass
 
         string strDirectory = strDBRestoreFile.Substring(0, strDBRestoreFile.LastIndexOf("\\"));
 
-        //ç”Ÿæˆæ‰¹å¤„ç†
+        //Éú³ÉÅú´¦Àí
         string bat = string.Format("set PGPASSWORD={0}\r\necho on\r\n{5} -h {1} -p {2} -U postgres -w -d {3} -v {4}",
             strAppDBPasswd,
             strAppDBServer,
@@ -17225,7 +17225,7 @@ public static class ShareClass
         try
         {
             string strHQL;
-            //åˆ¤æ–­æ˜¯å¦å­˜åœ¨åŒåæ•°æ®åº“
+            //ÅĞ¶ÏÊÇ·ñ´æÔÚÍ¬ÃûÊı¾İ¿â
             strHQL = "SELECT u.datname  FROM pg_catalog.pg_database u where u.datname='" + strDBName.ToLower() + "'";
             if (!IsExistedSqlServerInstanceOrDB(strHQL))
             {
@@ -17238,7 +17238,7 @@ public static class ShareClass
             theProcess.StartInfo.FileName = strDirectory + @"\restore.bat";
             //theProcess.StartInfo.Arguments = arguments;
             theProcess.StartInfo.CreateNoWindow = true;
-            theProcess.Start();//å¯åŠ¨ç¨‹åº
+            theProcess.Start();//Æô¶¯³ÌĞò
             theProcess.WaitForExit();
 
             return true;
@@ -17251,7 +17251,7 @@ public static class ShareClass
         }
     }
 
-    //åˆ¤æ–­æ˜¯å¦å­˜åœ¨æ•°æ®åº“å®ä¾‹æˆ–æ•°æ®åº“
+    //ÅĞ¶ÏÊÇ·ñ´æÔÚÊı¾İ¿âÊµÀı»òÊı¾İ¿â
     public static bool IsExistedSqlServerInstanceOrDB(string strHQL)
     {
         try
@@ -17305,7 +17305,7 @@ public static class ShareClass
         }
     }
 
-    //å–å¾—å½“å‰æ•°æ®åº“æœåŠ¡å™¨å®ä¾‹åç§°
+    //È¡µÃµ±Ç°Êı¾İ¿â·şÎñÆ÷ÊµÀıÃû³Æ
     public static string GetDBServerName(string strConfigKeyType)
     {
         string strConfigKeyValue;
@@ -17325,7 +17325,7 @@ public static class ShareClass
 
         if (strConfigKeyType == "connection.connection_string")
         {
-            //ä¿®æ”¹æ•°æ®åº“è¿æ¥å‚æ•°
+            //ĞŞ¸ÄÊı¾İ¿âÁ¬½Ó²ÎÊı
             foreach (System.Xml.XmlNode Node in xmlDocument["configuration"]["hibernate-configuration"]["session-factory"])
             {
                 if (Node.Name == "property")
@@ -17366,7 +17366,7 @@ public static class ShareClass
         return strDBServerName.Trim();
     }
 
-    //å–å¾—IdentityèŠ‚ADMINISTRATOR PASSWORD
+    //È¡µÃIdentity½ÚADMINISTRATOR PASSWORD
     public static string GetIdentityUserPassword()
     {
         string strIdentityUserPassword = "";
@@ -17380,7 +17380,7 @@ public static class ShareClass
         System.Xml.XmlDocument xmlDocument = new System.Xml.XmlDocument();
         xmlDocument.Load(FileInfo.FullName);
 
-        //ä¿®æ”¹æ•°æ®åº“è¿æ¥å‚æ•°
+        //ĞŞ¸ÄÊı¾İ¿âÁ¬½Ó²ÎÊı
         foreach (System.Xml.XmlNode Node in xmlDocument["configuration"]["system.web"])
         {
             if (Node.Name == "identity")
@@ -17393,7 +17393,7 @@ public static class ShareClass
     }
 
 
-    //å–å¾—æ•°æ®åº“å
+    //È¡µÃÊı¾İ¿âÃû
     public static string GetSystemDBName()
     {
         string strConnectString, strDBName;
@@ -17408,7 +17408,7 @@ public static class ShareClass
         return strDBName;
     }
 
-    //å–å¾—æ•°æ®åº“ç”¨æˆ·
+    //È¡µÃÊı¾İ¿âÓÃ»§
     public static string GetSystemDBUser()
     {
         string strConnectString, strDBUser;
@@ -17423,7 +17423,7 @@ public static class ShareClass
         return strDBUser;
     }
 
-    //å–å¾—æ•°æ®åº“å¯†ç 
+    //È¡µÃÊı¾İ¿âÃÜÂë
     public static string GetSystemDBPassword()
     {
         string strConnectString, strDBPassword;
@@ -17438,7 +17438,7 @@ public static class ShareClass
         return strDBPassword;
     }
 
-    //å–å¾—æ•°æ®åº“æœåŠ¡å™¨åç§°
+    //È¡µÃÊı¾İ¿â·şÎñÆ÷Ãû³Æ
     public static string GetSystemDBServer()
     {
         string strConnectString, strDBServer;
@@ -17453,7 +17453,7 @@ public static class ShareClass
         return strDBServer;
     }
 
-    //å–å¾—æ•°æ®åº“æœåŠ¡å™¨ç«¯å£
+    //È¡µÃÊı¾İ¿â·şÎñÆ÷¶Ë¿Ú
     public static string GetSystemDBServerPort()
     {
         string strConnectString, strDBServerPort;
@@ -17468,7 +17468,7 @@ public static class ShareClass
         return strDBServerPort;
     }
 
-    //å–å¾—ç§Ÿç”¨ç«™ç‚¹çš„æ•°æ®åº“è¿æ¥ä¸²
+    //È¡µÃ×âÓÃÕ¾µãµÄÊı¾İ¿âÁ¬½Ó´®
     public static string GetRentSiteConnecting(string strRentSiteDBName)
     {
         string strConnectString, strDBName;
@@ -17481,19 +17481,19 @@ public static class ShareClass
         return strConnectString;
     }
 
-    //æˆäºˆç§Ÿç”¨ç«™ç‚¹ç”¨æˆ·æ‰€æœ‰æƒé™
+    //ÊÚÓè×âÓÃÕ¾µãÓÃ»§ËùÓĞÈ¨ÏŞ
     public static void GanttAllPrivilegesToUser(string strRentSiteDBName, string strRentSiteUser)
     {
         string strConnectString;
 
         try
         {
-            // è·å–è¿æ¥å­—ç¬¦ä¸²
+            // »ñÈ¡Á¬½Ó×Ö·û´®
             strConnectString = GetRentSiteConnecting(strRentSiteDBName);
             var conn = new NpgsqlConnection(strConnectString);
             conn.Open();
 
-            // è¿è¡Œ SQL å‘½ä»¤
+            // ÔËĞĞ SQL ÃüÁî
             string sql = "GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO " + strRentSiteUser;
             var cmd = new NpgsqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
@@ -17506,19 +17506,19 @@ public static class ShareClass
     }
 
 
-    #endregion SQLå‡½æ•°\XMLå‡½æ•°\WebServiceè°ƒç”¨æ–¹æ³•
+    #endregion SQLº¯Êı\XMLº¯Êı\WebServiceµ÷ÓÃ·½·¨
 
-    #region IPã€MACåœ°å€å’Œç§»åŠ¨è®¾å¤‡å‡½æ•°
+    #region IP¡¢MACµØÖ·ºÍÒÆ¶¯Éè±¸º¯Êı
 
     /// <summary>
-    /// å¾—åˆ°å½“å‰ç½‘ç«™çš„æ ¹åœ°å€
+    /// µÃµ½µ±Ç°ÍøÕ¾µÄ¸ùµØÖ·
     /// </summary>
     /// <returns></returns>
     /// <summary>
     public static string GetCurrentSiteRootPath()
     {
         string secure = "off";
-        // æ˜¯å¦ä¸ºSSLè®¤è¯ç«™ç‚¹
+        // ÊÇ·ñÎªSSLÈÏÖ¤Õ¾µã
 
         try
         {
@@ -17533,10 +17533,10 @@ public static class ShareClass
 
 
         httpProtocol = "http://";
-        // æœåŠ¡å™¨åç§°
+        // ·şÎñÆ÷Ãû³Æ
         string serverName = HttpContext.Current.Request.ServerVariables["Server_Name"];
         string port = HttpContext.Current.Request.ServerVariables["SERVER_PORT"];
-        // åº”ç”¨æœåŠ¡åç§°
+        // Ó¦ÓÃ·şÎñÃû³Æ
         string applicationName = HttpContext.Current.Request.ApplicationPath;
 
         if (applicationName.Substring(applicationName.Length - 1, 1) != "/")
@@ -17549,16 +17549,16 @@ public static class ShareClass
         }
     }
 
-//å¾—åˆ°å½“å‰ç½‘ç«™çš„æ ¹åœ°å€,ä¸åŒ…å«ç«™ç‚¹å,
+//µÃµ½µ±Ç°ÍøÕ¾µÄ¸ùµØÖ·,²»°üº¬Õ¾µãÃû,
 public static string GetCurrentSiteRootPathNoSiteName()
     {
-        // æ˜¯å¦ä¸ºSSLè®¤è¯ç«™ç‚¹
+        // ÊÇ·ñÎªSSLÈÏÖ¤Õ¾µã
         string secure = HttpContext.Current.Request.ServerVariables["HTTPS"];
         string httpProtocol = (secure == "on" ? "https://" : "http://");
-        // æœåŠ¡å™¨åç§°
+        // ·şÎñÆ÷Ãû³Æ
         string serverName = HttpContext.Current.Request.ServerVariables["Server_Name"];
         string port = HttpContext.Current.Request.ServerVariables["SERVER_PORT"];
-        // åº”ç”¨æœåŠ¡åç§°
+        // Ó¦ÓÃ·şÎñÃû³Æ
         string applicationName = HttpContext.Current.Request.ApplicationPath;
 
         if (applicationName.Substring(applicationName.Length - 1, 1) != "/")
@@ -17572,7 +17572,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
     }
 
     // <summary>
-    /// è·å¾—æµè§ˆå™¨ç±»å‹å­—ç¬¦ 
+    /// »ñµÃä¯ÀÀÆ÷ÀàĞÍ×Ö·û 
     /// </summary>
     /// <param name="browser"></param>
     /// <returns>FF(Firfox) SF(Safari) OE(Opera) IE</returns>
@@ -17609,7 +17609,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
     }
 
     /// <summary>
-    /// æ ¹æ® Agent åˆ¤æ–­æ˜¯å¦æ˜¯æ™ºèƒ½æ‰‹æœº
+    /// ¸ù¾İ Agent ÅĞ¶ÏÊÇ·ñÊÇÖÇÄÜÊÖ»ú
     /// </summary>
     /// <returns></returns>
     public static bool IsMobileDeviceCheckAgent()
@@ -17618,7 +17618,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
         string agent = HttpContext.Current.Request.UserAgent;
         string[] keywords = { "Android", "iPhone", "iPod", "iPad", "Windows Phone", "MQQBrowser" };
 
-        //æ’é™¤Window æ¡Œé¢ç³»ç»Ÿ å’Œ è‹¹æœæ¡Œé¢ç³»ç»Ÿ
+        //ÅÅ³ıWindow ×ÀÃæÏµÍ³ ºÍ Æ»¹û×ÀÃæÏµÍ³
         if (!agent.Contains("Windows NT") && !agent.Contains("Macintosh"))
         {
             return true;
@@ -17629,7 +17629,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
         }
     }
 
-    //åˆ¤æ–­æ˜¯å¦æ˜¯IOSè®¾å¤‡
+    //ÅĞ¶ÏÊÇ·ñÊÇIOSÉè±¸
     public static bool isIOSDevice()
     {
         bool isIPhone = HttpContext.Current.Request.UserAgent.Contains("iPhone");
@@ -17646,7 +17646,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
         }
     }
 
-    /// æ ¹æ® Agent åˆ¤æ–­æ˜¯å¦æ˜¯IOSè®¾å¤‡
+    /// ¸ù¾İ Agent ÅĞ¶ÏÊÇ·ñÊÇIOSÉè±¸
     ///
     ///
     public static bool CheckAgentIsIOSDevice()
@@ -17654,7 +17654,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
         bool flag = false;
         string agent = HttpContext.Current.Request.UserAgent;
         string[] keywords = { "iPhone", "iPod", "iPad" };
-        //æ’é™¤Window æ¡Œé¢ç³»ç»Ÿ å’Œ è‹¹æœæ¡Œé¢ç³»ç»Ÿ
+        //ÅÅ³ıWindow ×ÀÃæÏµÍ³ ºÍ Æ»¹û×ÀÃæÏµÍ³
         if (!agent.Contains("Windows NT") && !agent.Contains("Macintosh"))
         {
             foreach (string item in keywords)
@@ -17669,7 +17669,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
         return flag;
     }
 
-    //å–å¾—IPæ‰€åœ¨åœ°å€å
+    //È¡µÃIPËùÔÚµØÖ·Ãû
     public static string GetUserLocation(string userIP)
     {
         try
@@ -17677,7 +17677,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
             WebClient webGetting = new WebClient();
             //string userIP = HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"].ToString();
             string ipQueryResult = webGetting.DownloadString("http://www.ip.cn/getip.php?action=queryip&ip_url=" + userIP);
-            string startString = @"æ¥è‡ªï¼š";
+            string startString = @"À´×Ô£º";  
             int startIndex = ipQueryResult.LastIndexOf(startString) + startString.Length;
             int endIndex = ipQueryResult.LastIndexOf(@" ", startIndex);
             return ipQueryResult.Substring(startIndex, ipQueryResult.Length - startIndex);
@@ -17695,7 +17695,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
             WebClient webGetting = new WebClient();
             string userIP = HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"].ToString();
             string ipQueryResult = webGetting.DownloadString("http://www.ip.cn/getip.php?action=queryip&ip_url=" + userIP);
-            string startString = @"æ¥è‡ªï¼š";
+            string startString = @"À´×Ô£º";  
             int startIndex = ipQueryResult.LastIndexOf(startString) + startString.Length;
             int endIndex = ipQueryResult.LastIndexOf(@" ", startIndex);
             return ipQueryResult.Substring(startIndex, ipQueryResult.Length - startIndex);
@@ -17706,7 +17706,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
         }
     }
 
-    public static string GetIPinArea(string strIP)//strIPä¸ºIP
+    public static string GetIPinArea(string strIP)//strIPÎªIP
     {
         string stringIpAddress = "";
 
@@ -17714,16 +17714,16 @@ public static string GetCurrentSiteRootPathNoSiteName()
 
         //try
         //{
-        //    using (XmlReader read = XmlReader.Create(sURL))//è·å–è¿”å›çš„xmlæ ¼å¼æ–‡ä»¶å†…å®¹
+        //    using (XmlReader read = XmlReader.Create(sURL))//»ñÈ¡·µ»ØµÄxml¸ñÊ½ÎÄ¼şÄÚÈİ
         //    {
         //        while (read.Read())
         //        {
         //            switch (read.NodeType)
         //            {
-        //                case XmlNodeType.Text://å–xmlæ ¼å¼æ–‡ä»¶å½“ä¸­çš„æ–‡æœ¬å†…å®¹
-        //                    if (string.Format("{0}", read.Value).ToString().Trim() != strIP)//youdaoè¿”å›çš„xmlæ ¼å¼æ–‡ä»¶å†…å®¹ä¸€ä¸ªæ˜¯IPï¼Œå¦ä¸€ä¸ªæ˜¯IPåœ°å€
+        //                case XmlNodeType.Text://È¡xml¸ñÊ½ÎÄ¼şµ±ÖĞµÄÎÄ±¾ÄÚÈİ
+        //                    if (string.Format("{0}", read.Value).ToString().Trim() != strIP)//youdao·µ»ØµÄxml¸ñÊ½ÎÄ¼şÄÚÈİÒ»¸öÊÇIP£¬ÁíÒ»¸öÊÇIPµØÖ·
         //                    {
-        //                        stringIpAddress = string.Format("{0}", read.Value).ToString().Trim();//èµ‹å€¼
+        //                        stringIpAddress = string.Format("{0}", read.Value).ToString().Trim();//¸³Öµ
         //                    }
         //                    break;
         //                //other
@@ -17737,7 +17737,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
 
             if (stringIpAddress == "")
             {
-                return "å†…ç½‘:" + strIP;
+                return "ÄÚÍø:" + strIP;  
             }
             else
             {
@@ -17772,7 +17772,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
     }
 
     /// <summary>
-    /// ç»çº¬åº¦åæ ‡
+    /// ¾­Î³¶È×ø±ê
     /// </summary>
     public class Degree
     {
@@ -17801,10 +17801,10 @@ public static string GetCurrentSiteRootPathNoSiteName()
 
     public class CoordDispose
     {
-        private const double EARTH_RADIUS = 6378137.0;//åœ°çƒåŠå¾„(ç±³)
+        private const double EARTH_RADIUS = 6378137.0;//µØÇò°ë¾¶(Ã×)
 
         /// <summary>
-        /// è§’åº¦æ•°è½¬æ¢ä¸ºå¼§åº¦å…¬å¼
+        /// ½Ç¶ÈÊı×ª»»Îª»¡¶È¹«Ê½
         /// </summary>
         /// <param name="d"></param>
         /// <returns></returns>
@@ -17814,7 +17814,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
         }
 
         /// <summary>
-        /// å¼§åº¦è½¬æ¢ä¸ºè§’åº¦æ•°å…¬å¼
+        /// »¡¶È×ª»»Îª½Ç¶ÈÊı¹«Ê½
         /// </summary>
         /// <param name="d"></param>
         /// <returns></returns>
@@ -17824,7 +17824,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
         }
 
         /// <summary>
-        /// è®¡ç®—ä¸¤ä¸ªç»çº¬åº¦ä¹‹é—´çš„ç›´æ¥è·ç¦»
+        /// ¼ÆËãÁ½¸ö¾­Î³¶ÈÖ®¼äµÄÖ±½Ó¾àÀë
         /// </summary>
         public static double GetDistance(Degree Degree1, Degree Degree2)
         {
@@ -17840,7 +17840,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
         }
 
         /// <summary>
-        /// è®¡ç®—ä¸¤ä¸ªç»çº¬åº¦ä¹‹é—´çš„ç›´æ¥è·ç¦»(google ç®—æ³•)
+        /// ¼ÆËãÁ½¸ö¾­Î³¶ÈÖ®¼äµÄÖ±½Ó¾àÀë(google Ëã·¨)
         /// </summary>
         public static double GetDistanceGoogle(Degree Degree1, Degree Degree2)
         {
@@ -17855,16 +17855,16 @@ public static string GetCurrentSiteRootPathNoSiteName()
         }
 
         /// <summary>
-        /// ä»¥ä¸€ä¸ªç»çº¬åº¦ä¸ºä¸­å¿ƒè®¡ç®—å‡ºå››ä¸ªé¡¶ç‚¹
+        /// ÒÔÒ»¸ö¾­Î³¶ÈÎªÖĞĞÄ¼ÆËã³öËÄ¸ö¶¥µã
         /// </summary>
-        /// <param name="distance">åŠå¾„(ç±³)</param>
+        /// <param name="distance">°ë¾¶(Ã×)</param>
         /// <returns></returns>
         public static Degree[] GetDegreeCoordinates(Degree Degree1, double distance)
         {
             double dlng = 2 * Math.Asin(Math.Sin(distance / (2 * EARTH_RADIUS)) / Math.Cos(Degree1.X));
-            dlng = degrees(dlng);//ä¸€å®šè½¬æ¢æˆè§’åº¦æ•°  åŸPHPæ–‡ç« è¿™ä¸ªåœ°æ–¹è¯´çš„ä¸æ¸…æ¥šæ ¹æœ¬ä¸æ­£ç¡® åæ¥lzåˆæŸ¥äº†å¾ˆå¤šèµ„æ–™ç»ˆäºæå®šäº†
+            dlng = degrees(dlng);//Ò»¶¨×ª»»³É½Ç¶ÈÊı  Ô­PHPÎÄÕÂÕâ¸öµØ·½ËµµÄ²»Çå³ş¸ù±¾²»ÕıÈ· ºóÀ´lzÓÖ²éÁËºÜ¶à×ÊÁÏÖÕÓÚ¸ã¶¨ÁË
             double dlat = distance / EARTH_RADIUS;
-            dlat = degrees(dlat);//ä¸€å®šè½¬æ¢æˆè§’åº¦æ•°
+            dlat = degrees(dlat);//Ò»¶¨×ª»»³É½Ç¶ÈÊı
             return new Degree[] { new Degree(Math.Round(Degree1.X + dlat,6), Math.Round(Degree1.Y - dlng,6)),//left-top
                                   new Degree(Math.Round(Degree1.X - dlat,6), Math.Round(Degree1.Y - dlng,6)),//left-bottom
                                   new Degree(Math.Round(Degree1.X + dlat,6), Math.Round(Degree1.Y + dlng,6)),//right-top
@@ -17873,7 +17873,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
         }
 
         /// <summary>
-        /// æµ‹è¯•æ–¹æ³•
+        /// ²âÊÔ·½·¨
         /// </summary>
         private static void Main(string[] args)
         {
@@ -18017,14 +18017,14 @@ public static string GetCurrentSiteRootPathNoSiteName()
         }
     }
 
-    #endregion IPã€MACåœ°å€å’Œç§»åŠ¨è®¾å¤‡å‡½æ•°
+    #endregion IP¡¢MACµØÖ·ºÍÒÆ¶¯Éè±¸º¯Êı
 
-    #region æ•°æ®è¡¨å’Œè‡ªå®šä¹‰è¡¨å•çš„åŠŸèƒ½
+    #region Êı¾İ±íºÍ×Ô¶¨Òå±íµ¥µÄ¹¦ÄÜ
 
-    //åŠ ä¸Šå…³è”RelatedID,RelatedType,RelatedCode TODO:CAOJIAN(æ›¹å¥)
+    //¼ÓÉÏ¹ØÁªRelatedID,RelatedType,RelatedCode TODO:CAOJIAN(²Ü½¡)
 
     /// <summary>
-    ///  å…¨éƒ¨ä¸ºæ•°å­—
+    ///  È«²¿ÎªÊı×Ö
     /// </summary>
     public static bool CheckIsAllNumber(string strValue)
     {
@@ -18034,12 +18034,12 @@ public static string GetCurrentSiteRootPathNoSiteName()
         if (ma.Success)
         {
             IsBool = true;
-            //éƒ½ä¸ºæ•°å­—
+            //¶¼ÎªÊı×Ö
         }
         return IsBool;
     }
 
-    //å°†DataSetè½¬æ¢ä¸ºxmlå¯¹è±¡å­—ç¬¦ä¸²
+    //½«DataSet×ª»»Îªxml¶ÔÏó×Ö·û´®
     public static string ConvertDataSetToXML(DataSet xmlDS)
     {
         MemoryStream stream = null;
@@ -18048,10 +18048,10 @@ public static string GetCurrentSiteRootPathNoSiteName()
         try
         {
             stream = new MemoryStream();
-            //ä»streamè£…è½½åˆ°XmlTextReader
+            //´Óstream×°ÔØµ½XmlTextReader
             writer = new XmlTextWriter(stream, Encoding.Unicode);
 
-            //ç”¨WriteXmlæ–¹æ³•å†™å…¥æ–‡ä»¶.
+            //ÓÃWriteXml·½·¨Ğ´ÈëÎÄ¼ş.
             xmlDS.WriteXml(writer);
             int count = (int)stream.Length;
             byte[] arr = new byte[count];
@@ -18072,7 +18072,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
         }
     }
 
-    //å°†xmlå¯¹è±¡å†…å®¹å­—ç¬¦ä¸²è½¬æ¢ä¸ºDataSet
+    //½«xml¶ÔÏóÄÚÈİ×Ö·û´®×ª»»ÎªDataSet
     public static DataSet ConvertXMLToDataSet(string xmlData)
     {
         StringReader stream = null;
@@ -18081,7 +18081,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
         {
             DataSet xmlDS = new DataSet();
             stream = new StringReader(xmlData);
-            //ä»streamè£…è½½åˆ°XmlTextReader
+            //´Óstream×°ÔØµ½XmlTextReader
             reader = new XmlTextReader(stream);
             xmlDS.ReadXml(reader);
             return xmlDS;
@@ -18098,10 +18098,10 @@ public static string GetCurrentSiteRootPathNoSiteName()
     }
 
     /// <summary>
-    /// å†™XMLåˆ°æ–‡ä»¶å¤¹ä¸­
+    /// Ğ´XMLµ½ÎÄ¼ş¼ĞÖĞ
     /// </summary>
-    /// <param name="xml">xmlå­—ç¬¦ä¸²</param>
-    /// <param name="filePath">è·¯å¾„</param>
+    /// <param name="xml">xml×Ö·û´®</param>
+    /// <param name="filePath">Â·¾¶</param>
     /// <returns></returns>
     private static void InsertXML(string xml, string filePath)
     {
@@ -18123,9 +18123,9 @@ public static string GetCurrentSiteRootPathNoSiteName()
     }
 
     /// <summary>
-    ///  è¯»å–XMLæ–‡ä»¶
+    ///  ¶ÁÈ¡XMLÎÄ¼ş
     /// </summary>
-    /// <param name="filePath">è·¯å¾„</param>
+    /// <param name="filePath">Â·¾¶</param>
     /// <returns></returns>
     public static string ReadXML(string filePath)
     {
@@ -18135,7 +18135,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
     }
 
     /// <summary>
-    ///  æ£€æŸ¥æ•°æ®åº“å¤‡ä»½æ—¶é—´æ˜¯å¦è¶…æ—¶
+    ///  ¼ì²éÊı¾İ¿â±¸·İÊ±¼äÊÇ·ñ³¬Ê±
     /// </summary>
     public static string CheckBackDBOverTime()
     {
@@ -18148,18 +18148,18 @@ public static string GetCurrentSiteRootPathNoSiteName()
             int.TryParse(dtBackDB.Rows[0]["DayPeriod"] == DBNull.Value ? "0" : dtBackDB.Rows[0]["DayPeriod"].ToString(), out intDay);
             if (intDay > 0)
             {
-                strResult = "å¤‡ä»½é—´éš”æ—¶é—´å·²åˆ°ï¼Œéœ€è¦é‡æ–°å¤‡ä»½ï¼";
+                strResult = "±¸·İ¼ä¸ôÊ±¼äÒÑµ½£¬ĞèÒªÖØĞÂ±¸·İ£¡";  
             }
             else
             {
-                strResult = "å¤‡ä»½é—´éš”æ—¶é—´æœªåˆ°ï¼";
+                strResult = "±¸·İ¼ä¸ôÊ±¼äÎ´µ½£¡";  
             }
         }
         return strResult;
     }
 
     /// <summary>
-    ///  éªŒè¯æ˜¯å¦ä¸ºæ•°å­—
+    ///  ÑéÖ¤ÊÇ·ñÎªÊı×Ö
     /// </summary>
     public static bool CheckIsNumber(string strValue)
     {
@@ -18174,7 +18174,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
     }
 
     /// <summary>
-    /// objectå‹è½¬æ¢ä¸ºstringå‹
+    /// objectĞÍ×ª»»ÎªstringĞÍ
     /// </summary>
     /// <param name="value"></param>
     /// <returns></returns>
@@ -18184,7 +18184,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
     }
 
     /// <summary>
-    /// objectå‹è½¬æ¢ä¸ºstringå‹
+    /// objectĞÍ×ª»»ÎªstringĞÍ
     /// </summary>
     /// <param name="value"></param>
     /// <param name="defaultValue"></param>
@@ -18194,7 +18194,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
         return (null == value || value == DBNull.Value) ? defaultValue : value.ToString();
     }
 
-    //åˆ¤æ–­éæ³•å­—ç¬¦
+    //ÅĞ¶Ï·Ç·¨×Ö·û
     public static bool CheckStringRight(string str_char)
     {
         if (str_char.IndexOf("'") >= 0)
@@ -18295,14 +18295,14 @@ public static string GetCurrentSiteRootPathNoSiteName()
         }
     }
 
-    //ç‰©èµ„ç³»ç»Ÿé€šç”¨åŠŸèƒ½
+    //Îï×ÊÏµÍ³Í¨ÓÃ¹¦ÄÜ
     public static void UpdateXLCodeStatus(string strXLCode)
     {
         string strUpdateXLCodeHQL = "update T_WZMaterialXL set IsMark = -1 where XLCode = '" + strXLCode + "'";
         ShareClass.RunSqlCommand(strUpdateXLCodeHQL);
     }
 
-    //æŠŠç¬¦åˆæ¡ä»¶çš„æ—¥æœŸè®¾ä¸ºç©º
+    //°Ñ·ûºÏÌõ¼şµÄÈÕÆÚÉèÎª¿Õ
     public static string SetDateStringToEmpty(string strDateString)
     {
         if (strDateString.IndexOf("0001") >= 0)
@@ -18315,7 +18315,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
         }
     }
 
-    //æˆªå–ç›¸åº”çš„å­—æ•°
+    //½ØÈ¡ÏàÓ¦µÄ×ÖÊı
     public static string StringCutByRequire(string strString, int intShowCount)
     {
         string strResult = string.Empty;
@@ -18359,49 +18359,49 @@ public static string GetCurrentSiteRootPathNoSiteName()
         return strResult;
     }
 
-    //å–å¾—å½“æœˆå¼€å§‹æ—¥æœŸ
+    //È¡µÃµ±ÔÂ¿ªÊ¼ÈÕÆÚ
     public static DateTime getCurrentMonthStartDay()
     {
         DateTime dt = DateTime.Now;
-        //æœ¬æœˆç¬¬ä¸€å¤©æ—¶é—´      
+        //±¾ÔÂµÚÒ»ÌìÊ±¼ä      
         DateTime dt_First = dt.AddDays(1 - (dt.Day));
-        //è·å¾—æŸå¹´æŸæœˆçš„å¤©æ•°    
+        //»ñµÃÄ³ÄêÄ³ÔÂµÄÌìÊı    
         int year = dt.Date.Year;
         int month = dt.Date.Month;
         int dayCount = DateTime.DaysInMonth(year, month);
-        //æœ¬æœˆæœ€åä¸€å¤©æ—¶é—´    
+        //±¾ÔÂ×îºóÒ»ÌìÊ±¼ä    
         DateTime dt_Last = dt_First.AddDays(dayCount - 1);
 
         return dt_First;
     }
 
-    //å–å¾—å½“æœˆç»“æŸæ—¥æœŸ
+    //È¡µÃµ±ÔÂ½áÊøÈÕÆÚ
     public static DateTime getCurrentMonthEndDay()
     {
         DateTime dt = DateTime.Now;
-        //æœ¬æœˆç¬¬ä¸€å¤©æ—¶é—´      
+        //±¾ÔÂµÚÒ»ÌìÊ±¼ä      
         DateTime dt_First = dt.AddDays(1 - (dt.Day));
-        //è·å¾—æŸå¹´æŸæœˆçš„å¤©æ•°    
+        //»ñµÃÄ³ÄêÄ³ÔÂµÄÌìÊı    
         int year = dt.Date.Year;
         int month = dt.Date.Month;
         int dayCount = DateTime.DaysInMonth(year, month);
-        //æœ¬æœˆæœ€åä¸€å¤©æ—¶é—´    
+        //±¾ÔÂ×îºóÒ»ÌìÊ±¼ä    
         DateTime dt_Last = dt_First.AddDays(dayCount - 1);
 
         return dt_Last;
     }
 
-    //å¡«å……å¹´æœˆå’Œæœˆä»½æ–¹ä¾¿ç”¨æˆ·é€‰æ‹©
+    //Ìî³äÄêÔÂºÍÔÂ·İ·½±ãÓÃ»§Ñ¡Ôñ
     public static void InitYearMonthList(DropDownList DDL_YearList, DropDownList DDL_MonthList)
     {
-        //å¹´ä»½
+        //Äê·İ
         DateTime dt = DateTime.Now;
         for (int i = dt.Year - 15; i < dt.Year + 85; i++)
         {
             DDL_YearList.Items.Add(new ListItem(i.ToString()));
         }
         DDL_YearList.SelectedValue = dt.Year.ToString();
-        //æœˆä»½
+        //ÔÂ·İ
         for (int i = 1; i <= 12; i++)
         {
             DDL_MonthList.Items.Add(new ListItem(i.ToString()));
@@ -18409,7 +18409,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
         DDL_MonthList.SelectedValue = dt.Month.ToString();
     }
 
-    //è·å–å¹´ä»½å­—ç¬¦ä¸²ï¼ˆ201601è¡¨ç¤º2016å¹´1æœˆï¼‰
+    //»ñÈ¡Äê·İ×Ö·û´®£¨201601±íÊ¾2016Äê1ÔÂ£©
     public static string GetYearMonthString(DropDownList DDL_YearList, DropDownList DDL_MonthList)
     {
         int month = Convert.ToInt32(DDL_MonthList.Text);
@@ -18418,7 +18418,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
         return DDL_YearList.Text + str;
     }
 
-    //åˆ¤æ–­æ”¶å…¥çš„å­—ç¬¦ä¸²æ˜¯å¦åˆæ³•
+    //ÅĞ¶ÏÊÕÈëµÄ×Ö·û´®ÊÇ·ñºÏ·¨
     public static bool IsValidYearMonth(string ymstr)
     {
         if (ymstr.Trim().Length != 6)
@@ -18441,34 +18441,34 @@ public static string GetCurrentSiteRootPathNoSiteName()
 
     //// <summary>
 
-    /// äººæ°‘å¸å¤§å°å†™é‡‘é¢è½¬æ¢
+    /// ÈËÃñ±Ò´óĞ¡Ğ´½ğ¶î×ª»»
     /// </summary>
     public static class RMBCapitalization
     {
-        private const string DXSZ = "é›¶å£¹è´°åè‚†ä¼é™†æŸ’æŒç–";
-        private const string DXDW = "æ¯«å˜åˆ†è§’å…ƒæ‹¾ä½°ä»Ÿè¬æ‹¾ä½°ä»Ÿäº¿æ‹¾ä½°ä»Ÿè¬å…†æ‹¾ä½°ä»Ÿè¬äº¿äº¬æ‹¾ä½°ä»Ÿè¬äº¿å…†å“";
-        private const string SCDW = "å…ƒæ‹¾ä½°ä»Ÿè¬äº¿äº¬å…†å“";
+        private const string DXSZ = "ÁãÒ¼·¡ÈşËÁÎéÂ½Æâ°Æ¾Á";  
+        private const string DXDW = "ºÁÀå·Ö½ÇÔªÊ°°ÛÇªÈfÊ°°ÛÇªÒÚÊ°°ÛÇªÈfÕ×Ê°°ÛÇªÈfÒÚ¾©Ê°°ÛÇªÈfÒÚÕ×Ûò";  
+        private const string SCDW = "ÔªÊ°°ÛÇªÈfÒÚ¾©Õ×Ûò";  
 
         /// <summary>
-        /// è½¬æ¢æ•´æ•°ä¸ºå¤§å†™é‡‘é¢
-        /// æœ€é«˜ç²¾åº¦ä¸ºå“ï¼Œä¿ç•™å°æ•°ç‚¹å4ä½ï¼Œå®é™…ç²¾åº¦ä¸ºäº¿å…†å·²ç»è¶³å¤Ÿäº†ï¼Œç†è®ºä¸Šç²¾åº¦æ— é™åˆ¶ï¼Œå¦‚ä¸‹æ‰€ç¤ºï¼š
-        /// åºå·:...30.29.28.27.26.25.24  23.22.21.20.19.18  17.16.15.14.13  12.11.10.9   8 7.6.5.4  . 3.2.1.0
-        /// å•ä½:...å“å…†äº¿è¬ä»Ÿä½°æ‹¾        äº¬äº¿è¬ä»Ÿä½°æ‹¾       å…†è¬ä»Ÿä½°æ‹¾      äº¿ä»Ÿä½°æ‹¾     è¬ä»Ÿä½°æ‹¾å…ƒ . è§’åˆ†å˜æ¯«
-        /// æ•°å€¼:...1000000               000000             00000           0000         00000      . 0000
-        /// ä¸‹é¢åˆ—å‡ºç½‘ä¸Šæœç´¢åˆ°çš„æ•°è¯å•ä½ï¼š
-        /// å…ƒã€åã€ç™¾ã€åƒã€ä¸‡ã€äº¿ã€å…†ã€äº¬ã€å“ã€ç§­ã€ç©°ã€æ²Ÿã€æ¶§ã€æ­£ã€è½½ã€æ
+        /// ×ª»»ÕûÊıÎª´óĞ´½ğ¶î
+        /// ×î¸ß¾«¶ÈÎªÛò£¬±£ÁôĞ¡Êıµãºó4Î»£¬Êµ¼Ê¾«¶ÈÎªÒÚÕ×ÒÑ¾­×ã¹»ÁË£¬ÀíÂÛÉÏ¾«¶ÈÎŞÏŞÖÆ£¬ÈçÏÂËùÊ¾£º
+        /// ĞòºÅ:...30.29.28.27.26.25.24  23.22.21.20.19.18  17.16.15.14.13  12.11.10.9   8 7.6.5.4  . 3.2.1.0
+        /// µ¥Î»:...ÛòÕ×ÒÚÈfÇª°ÛÊ°        ¾©ÒÚÈfÇª°ÛÊ°       Õ×ÈfÇª°ÛÊ°      ÒÚÇª°ÛÊ°     ÈfÇª°ÛÊ°Ôª . ½Ç·ÖÀåºÁ
+        /// ÊıÖµ:...1000000               000000             00000           0000         00000      . 0000
+        /// ÏÂÃæÁĞ³öÍøÉÏËÑË÷µ½µÄÊı´Êµ¥Î»£º
+        /// Ôª¡¢Ê®¡¢°Ù¡¢Ç§¡¢Íò¡¢ÒÚ¡¢Õ×¡¢¾©¡¢Ûò¡¢ïö¡¢ğ¦¡¢¹µ¡¢½§¡¢Õı¡¢ÔØ¡¢¼«
         /// </summary>
-        /// <param name="capValue">æ•´æ•°å€¼</param>
-        /// <returns>è¿”å›å¤§å†™é‡‘é¢</returns>
+        /// <param name="capValue">ÕûÊıÖµ</param>
+        /// <returns>·µ»Ø´óĞ´½ğ¶î</returns>
         public static string ConvertIntToUppercaseAmount(string capValue)
         {
-            string currCap = "";    //å½“å‰é‡‘é¢
-            string capResult = "";  //ç»“æœé‡‘é¢
-            string currentUnit = "";//å½“å‰å•ä½
-            string resultUnit = ""; //ç»“æœå•ä½
-            int prevChar = -1;      //ä¸Šä¸€ä½çš„å€¼
-            int currChar = 0;       //å½“å‰ä½çš„å€¼
-            int posIndex = 4;       //ä½ç½®ç´¢å¼•ï¼Œä»"å…ƒ"å¼€å§‹
+            string currCap = "";    //µ±Ç°½ğ¶î
+            string capResult = "";  //½á¹û½ğ¶î
+            string currentUnit = "";//µ±Ç°µ¥Î»
+            string resultUnit = ""; //½á¹ûµ¥Î»
+            int prevChar = -1;      //ÉÏÒ»Î»µÄÖµ
+            int currChar = 0;       //µ±Ç°Î»µÄÖµ
+            int posIndex = 4;       //Î»ÖÃË÷Òı£¬´Ó"Ôª"¿ªÊ¼
 
             if (Convert.ToDouble(capValue) == 0) return "";
             for (int i = capValue.Length - 1; i >= 0; i--)
@@ -18476,40 +18476,40 @@ public static string GetCurrentSiteRootPathNoSiteName()
                 currChar = Convert.ToInt16(capValue.Substring(i, 1));
                 if (posIndex > 30)
                 {
-                    //å·²è¶…å‡ºæœ€å¤§ç²¾åº¦"å“"ã€‚æ³¨ï¼šå¯ä»¥å°†30æ”¹æˆ22ï¼Œä½¿ä¹‹ç²¾ç¡®åˆ°å…†äº¿å°±è¶³å¤Ÿäº†
+                    //ÒÑ³¬³ö×î´ó¾«¶È"Ûò"¡£×¢£º¿ÉÒÔ½«30¸Ä³É22£¬Ê¹Ö®¾«È·µ½Õ×ÒÚ¾Í×ã¹»ÁË
                     break;
                 }
                 else if (currChar != 0)
                 {
-                    //å½“å‰ä½ä¸ºéé›¶å€¼ï¼Œåˆ™ç›´æ¥è½¬æ¢æˆå¤§å†™é‡‘é¢
+                    //µ±Ç°Î»Îª·ÇÁãÖµ£¬ÔòÖ±½Ó×ª»»³É´óĞ´½ğ¶î
                     currCap = DXSZ.Substring(currChar, 1) + DXDW.Substring(posIndex, 1);
                 }
                 else
                 {
-                    //é˜²æ­¢è½¬æ¢åå‡ºç°å¤šä½™çš„é›¶,ä¾‹å¦‚ï¼š3000020
+                    //·ÀÖ¹×ª»»ºó³öÏÖ¶àÓàµÄÁã,ÀıÈç£º3000020
                     switch (posIndex)
                     {
-                        case 4: currCap = "å…ƒ"; break;
-                        case 8: currCap = "è¬"; break;
-                        case 12: currCap = "äº¿"; break;
-                        case 17: currCap = "å…†"; break;
-                        case 23: currCap = "äº¬"; break;
-                        case 30: currCap = "å“"; break;
+                        case 4: currCap = "Ôª"; break;  
+                        case 8: currCap = "Èf"; break;  
+                        case 12: currCap = "ÒÚ"; break;  
+                        case 17: currCap = "Õ×"; break;  
+                        case 23: currCap = "¾©"; break;  
+                        case 30: currCap = "Ûò"; break;  
                         default: break;
                     }
                     if (prevChar != 0)
                     {
                         if (currCap != "")
                         {
-                            if (currCap != "å…ƒ") currCap += "é›¶";
+                            if (currCap != "Ôª") currCap += "Áã";  
                         }
                         else
                         {
-                            currCap = "é›¶";
+                            currCap = "Áã";  
                         }
                     }
                 }
-                //å¯¹ç»“æœè¿›è¡Œå®¹é”™å¤„ç†
+                //¶Ô½á¹û½øĞĞÈİ´í´¦Àí
                 if (capResult.Length > 0)
                 {
                     resultUnit = capResult.Substring(0, 1);
@@ -18531,11 +18531,11 @@ public static string GetCurrentSiteRootPathNoSiteName()
         }
 
         /// <summary>
-        /// è½¬æ¢å°æ•°ä¸ºå¤§å†™é‡‘é¢
+        /// ×ª»»Ğ¡ÊıÎª´óĞ´½ğ¶î
         /// </summary>
-        /// <param name="capValue">å°æ•°å€¼</param>
-        /// <param name="addZero">æ˜¯å¦å¢åŠ é›¶ä½</param>
-        /// <returns>è¿”å›å¤§å†™é‡‘é¢</returns>
+        /// <param name="capValue">Ğ¡ÊıÖµ</param>
+        /// <param name="addZero">ÊÇ·ñÔö¼ÓÁãÎ»</param>
+        /// <returns>·µ»Ø´óĞ´½ğ¶î</returns>
         public static string ConvertDecToUppercaseAmount(string capValue, bool addZero)
         {
             string currCap = "";
@@ -18560,7 +18560,7 @@ public static string GetCurrentSiteRootPathNoSiteName()
                     }
                     else if (prevChar != 0)
                     {
-                        currCap = "é›¶";
+                        currCap = "Áã";  
                     }
                 }
                 capResult += currCap;
@@ -18572,20 +18572,20 @@ public static string GetCurrentSiteRootPathNoSiteName()
         }
 
         /// <summary>
-        /// äººæ°‘å¸å¤§å†™é‡‘é¢
+        /// ÈËÃñ±Ò´óĞ´½ğ¶î
         /// </summary>
-        /// <param name="value">äººæ°‘å¸æ•°å­—é‡‘é¢å€¼</param>
-        /// <returns>è¿”å›äººæ°‘å¸å¤§å†™é‡‘é¢</returns>
+        /// <param name="value">ÈËÃñ±ÒÊı×Ö½ğ¶îÖµ</param>
+        /// <returns>·µ»ØÈËÃñ±Ò´óĞ´½ğ¶î</returns>
         public static string RMBAmount(double value)
         {
             string capResult = "";
-            string capValue = string.Format("{0:f4}", value);       //æ ¼å¼åŒ–
-            int dotPos = capValue.IndexOf(".");                     //å°æ•°ç‚¹ä½ç½®
-            bool addInt = (Convert.ToInt32(capValue.Substring(dotPos + 1)) == 0);//æ˜¯å¦åœ¨ç»“æœä¸­åŠ "æ•´"
-            bool addMinus = (capValue.Substring(0, 1) == "-");      //æ˜¯å¦åœ¨ç»“æœä¸­åŠ "è´Ÿ"
-            int beginPos = addMinus ? 1 : 0;                        //å¼€å§‹ä½ç½®
-            string capInt = capValue.Substring(beginPos, dotPos);   //æ•´æ•°
-            string capDec = capValue.Substring(dotPos + 1);         //å°æ•°
+            string capValue = string.Format("{0:f4}", value);       //¸ñÊ½»¯
+            int dotPos = capValue.IndexOf(".");                     //Ğ¡ÊıµãÎ»ÖÃ
+            bool addInt = (Convert.ToInt32(capValue.Substring(dotPos + 1)) == 0);//ÊÇ·ñÔÚ½á¹ûÖĞ¼Ó"Õû"
+            bool addMinus = (capValue.Substring(0, 1) == "-");      //ÊÇ·ñÔÚ½á¹ûÖĞ¼Ó"¸º"
+            int beginPos = addMinus ? 1 : 0;                        //¿ªÊ¼Î»ÖÃ
+            string capInt = capValue.Substring(beginPos, dotPos);   //ÕûÊı
+            string capDec = capValue.Substring(dotPos + 1);         //Ğ¡Êı
 
             if (dotPos > 0)
             {
@@ -18596,11 +18596,11 @@ public static string GetCurrentSiteRootPathNoSiteName()
             {
                 capResult = ConvertIntToUppercaseAmount(capDec);
             }
-            if (addMinus) capResult = "è´Ÿ" + capResult;
-            if (addInt) capResult += "æ•´";
+            if (addMinus) capResult = "¸º" + capResult;  
+            if (addInt) capResult += "Õû";  
             return capResult;
         }
     }
 
-    #endregion æ•°æ®è¡¨å’Œè‡ªå®šä¹‰è¡¨å•çš„åŠŸèƒ½
+    #endregion Êı¾İ±íºÍ×Ô¶¨Òå±íµ¥µÄ¹¦ÄÜ
 }

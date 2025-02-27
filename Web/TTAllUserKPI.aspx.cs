@@ -43,10 +43,10 @@ public partial class TTAllUserKPI : System.Web.UI.Page
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
         {
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT, TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
-            LB_ProjectMemberOwner.Text = Resources.lang.SYCYLB;
+            LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SYCYLB").ToString().Trim();
 
             strHQL = "Select * From V_UserKPIList";
             strHQL += " Where DepartCode in " + strDepartString;
@@ -56,7 +56,7 @@ public partial class TTAllUserKPI : System.Web.UI.Page
             DataGrid1.DataBind();
 
 
-            LB_UserNumber.Text = Resources.lang.GCXD + ds.Tables[0].Rows.Count.ToString();
+            LB_UserNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + ds.Tables[0].Rows.Count.ToString();
             LB_Sql.Text = strHQL;
         }
     }
@@ -77,8 +77,8 @@ public partial class TTAllUserKPI : System.Web.UI.Page
 
             intCount = ShareClass.LoadUserKPIByDepartCodeForDataGrid(strDepartString, DataGrid1);
 
-            LB_ProjectMemberOwner.Text = strDepartName + " 的成员：";
-            LB_UserNumber.Text = Resources.lang.GCXD + intCount.ToString();
+            LB_ProjectMemberOwner.Text = strDepartName + LanguageHandle.GetWord("DeChengYuan").ToString().Trim();
+            LB_UserNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + intCount.ToString();
 
             ShareClass.InitialKPICheckTreeByDepartCode(TreeView2, strDepartCode, strDepartString);
 
@@ -122,7 +122,7 @@ public partial class TTAllUserKPI : System.Web.UI.Page
         string strHQL;
 
 
-        LB_ProjectMemberOwner.Text = Resources.lang.SYCYLB;
+        LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SYCYLB").ToString().Trim();
 
         string strDepartString = LB_DepartString.Text.Trim();
 
@@ -137,7 +137,7 @@ public partial class TTAllUserKPI : System.Web.UI.Page
         DataGrid1.DataSource = ds;
         DataGrid1.DataBind();
 
-        LB_UserNumber.Text = Resources.lang.GCXD + ds.Tables[0].Rows.Count.ToString();
+        LB_UserNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + ds.Tables[0].Rows.Count.ToString();
         LB_Sql.Text = strHQL;
 
         LB_DepartCode.Text = "";
@@ -161,12 +161,12 @@ public partial class TTAllUserKPI : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = "员工KPI考核表_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("YuanGongKPIKaoHeBiao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 CreateExcel(fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDCDSJYWJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
             }
         }
     }
@@ -198,14 +198,14 @@ public partial class TTAllUserKPI : System.Web.UI.Page
         }
         else//按组织架构查询的
         {
-            strDepartString = TakeTopCore.CoreShareClass.InitialUnderDepartmentStringByAuthorityAndDepartCode(strDepartCode, strUserCode);
+            strDepartString = TakeTopCore.CoreShareClass.InitialUnderDepartmentStringByAuthorityAndDepartCode(strDepartCode, strUserCode); 
 
             strHQL = string.Format(@"Select UserCode 代码,UserName 姓名,Gender 性别,DepartCode 部门代码,DepartName 部门名称,
                 Duty 职责,KPICheckID 编号,KPICheckName KPI考核名称,TotalSelfPoint 自评分,TotalLeaderPoint 领导评分,TotalThirdPartPoint 第三方评分,TotalSqlPoint 系统评分,TotalHRPoint 人事评分,TotalPoint 总分
                 From V_UserKPIList Where DepartCode in ") + strDepartString   + " Order By StartTime DESC";
         }
 
-        MSExcelHandler.DataTableToExcel(strHQL, fileName);
+        MSExcelHandler.DataTableToExcel(strHQL, fileName); 
     }
 
     protected string GetUserStatus(string strUserCode)
@@ -215,11 +215,11 @@ public partial class TTAllUserKPI : System.Web.UI.Page
         IList lst = systemActiveUserBLL.GetAllSystemActiveUsers(strHQL);
         if (lst.Count > 0 && lst != null)
         {
-            return "已开通";
+            return "已开通"; 
         }
         else
         {
-            return "未开通";
+            return "未开通"; 
         }
     }
 }

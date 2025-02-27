@@ -41,7 +41,7 @@ public partial class TTWorkFlowDesignerSL : System.Web.UI.Page
         strTemName = ds.Tables[0].Rows[0][0].ToString().Trim();
         strWFDefinition = ds.Tables[0].Rows[0][1].ToString().Trim();
 
-        //this.Title = "工作流模板：" + strTemName + " 设计" ;             
+        //this.Title = "工作流模板：" + strTemName + "设计" ;             
 
         if (Page.IsPostBack == false)
         {
@@ -76,11 +76,11 @@ public partial class TTWorkFlowDesignerSL : System.Web.UI.Page
         {
             SaveWFChart(strTemName, strWFCharString);
 
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZBCCG + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "');</script>");
         }
         catch
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZBCSBJC + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "');</script>");
         }
     }
 

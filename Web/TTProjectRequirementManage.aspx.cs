@@ -69,7 +69,7 @@ public partial class TTProjectRequirementManage : System.Web.UI.Page
             SetReqRecordColor(DataGrid4);
 
             strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and (reqAssignRecord.Status in ('¾Ü¾ø','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))";
+            strHQL += " and (reqAssignRecord.Status in ('¾Ü¾ø','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))"; 
             strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " and reqAssignRecord.ReqID in ( select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + ")";
             strHQL += " Order by reqAssignRecord.ID DESC";
@@ -111,7 +111,7 @@ public partial class TTProjectRequirementManage : System.Web.UI.Page
 
             strProjectName = GetProjectName(strProjectID);
 
-            LB_QueryScope.Text = Resources.lang.Project + strProjectName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectName;
         }
         else
         {
@@ -129,7 +129,7 @@ public partial class TTProjectRequirementManage : System.Web.UI.Page
             SetReqRecordColor(DataGrid4);
 
             strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and (reqAssignRecord.Status in ('¾Ü¾ø','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))";
+            strHQL += " and (reqAssignRecord.Status in ('¾Ü¾ø','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))"; 
             strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " and reqAssignRecord.ReqID in ( select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID not in (select project.ProjectID from Project as project where project.Status in ('New','Review','Hided','Deleted','Archived')))";
             strHQL += " Order by reqAssignRecord.ID DESC";
@@ -166,7 +166,7 @@ public partial class TTProjectRequirementManage : System.Web.UI.Page
 
             SetReqRecordColor(DataGrid3);
 
-            LB_QueryScope.Text = Resources.lang.StatusAll;
+            LB_QueryScope.Text = LanguageHandle.GetWord("StatusAll").ToString().Trim();
         }
     }
 
@@ -268,7 +268,7 @@ public partial class TTProjectRequirementManage : System.Web.UI.Page
             dtNowDate = DateTime.Now;
             strStatus = dataGrid.Items[i].Cells[7].Text.Trim();
 
-            if (strStatus != "Completed" & strStatus != "ÒÑÍê³É")
+            if (strStatus != "Completed" & strStatus != LanguageHandle.GetWord("YiWanCheng").ToString().Trim())
             {
                 if (dtFinishedDate < dtNowDate)
                 {

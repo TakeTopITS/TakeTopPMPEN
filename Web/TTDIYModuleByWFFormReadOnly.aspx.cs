@@ -121,7 +121,7 @@ public partial class TTDIYModuleByWFFormReadOnly : System.Web.UI.Page
 
         if (intResult == 0)
         {
-            xdoc.Text = "错误，相应模板或模板文件不存在，请检查！";
+            xdoc.Text = LanguageHandle.GetWord("CuoWuXiangYingMoBanHuoMoBanWen").ToString().Trim();
         }
         else
         {
@@ -178,7 +178,7 @@ public partial class TTDIYModuleByWFFormReadOnly : System.Web.UI.Page
 
         if (intResult == 0)
         {
-            xdoc.Text = Resources.lang.SBZGZLMBHSJWJBCZKNYBSCQJC;
+            xdoc.Text = LanguageHandle.GetWord("SBZGZLMBHSJWJBCZKNYBSCQJC").ToString().Trim();
         }
 
         //附加用户自定义的JSCode到页面
@@ -217,7 +217,7 @@ public partial class TTDIYModuleByWFFormReadOnly : System.Web.UI.Page
 
             if (intWLID == 0)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBJC + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBJC").ToString().Trim() + "');</script>");
             }
             else
             {
@@ -277,7 +277,7 @@ public partial class TTDIYModuleByWFFormReadOnly : System.Web.UI.Page
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBZZXMBTXGZLS + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBZZXMBTXGZLS").ToString().Trim() + "');</script>");
         }
     }
 
@@ -303,7 +303,7 @@ public partial class TTDIYModuleByWFFormReadOnly : System.Web.UI.Page
 
             if (intWLID == 0)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBJC + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBJC").ToString().Trim() + "');</script>");
             }
             else
             {
@@ -357,14 +357,14 @@ public partial class TTDIYModuleByWFFormReadOnly : System.Web.UI.Page
                 {
                 }
 
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJGZLSCG + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJGZLSCG").ToString().Trim() + "');</script>");
             }
 
             //HL_RelatedDoc.NavigateUrl = "javascript:popShowByURL('" + HL_RelatedDoc.NavigateUrl + "','ChartView','99%','99%',window.location);";
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBZZXMBTXGZLS + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBZZXMBTXGZLS").ToString().Trim() + "');</script>");
         }
     }
 
@@ -382,7 +382,7 @@ public partial class TTDIYModuleByWFFormReadOnly : System.Web.UI.Page
 
         if (intResult == 0)
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZBCSBJC + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "');</script>");
         }
         else
         {
@@ -427,7 +427,7 @@ public partial class TTDIYModuleByWFFormReadOnly : System.Web.UI.Page
             {
             }
 
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZBCCG + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "');</script>");
         }
     }
 
@@ -529,7 +529,7 @@ public partial class TTDIYModuleByWFFormReadOnly : System.Web.UI.Page
         }
         else
         {
-            xdoc.Text = "请先注册表单模板.";
+            xdoc.Text = LanguageHandle.GetWord("QingXianZhuCeBiaoChanMoBan").ToString().Trim();
         }
     }
 
@@ -632,7 +632,7 @@ public partial class TTDIYModuleByWFFormReadOnly : System.Web.UI.Page
         }
         else
         {
-            xdoc.Text = "请先注册表单模板.";
+            xdoc.Text = LanguageHandle.GetWord("QingXianZhuCeBiaoChanMoBan").ToString().Trim();
         }
     }
 }

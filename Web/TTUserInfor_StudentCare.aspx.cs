@@ -155,7 +155,7 @@ public partial class TTUserInfor_StudentCare : System.Web.UI.Page
             }
 
             DataBinder(HF_StudentCode.Value);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
         }
         catch (Exception ex) { }
     }
@@ -265,7 +265,7 @@ public partial class TTUserInfor_StudentCare : System.Web.UI.Page
                     projectMemberStudentCareBLL.DeleteProjectMemberStudentCare(projectMemberStudentCare);
 
                     DataBinder(HF_StudentCode.Value);
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
                 }
             }
         }

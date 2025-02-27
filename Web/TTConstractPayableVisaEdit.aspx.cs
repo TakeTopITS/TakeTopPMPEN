@@ -73,7 +73,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
 
             LoadConstractPayableVisa(strProjectID, strUserCode);
 
-            //strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityAsset(Resources.lang.ZZJGT, TreeView1, strUserCode);
+            //strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityAsset(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
             //LB_DepartString.Text = strDepartString;
         }
     }
@@ -118,7 +118,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
 
             strVisaID = e.Item.Cells[3].Text.Trim();
 
-            intWLNumber = GetRelatedWorkFlowNumber("VisaManagement", "合同签证", strVisaID);
+            intWLNumber = GetRelatedWorkFlowNumber("VisaManagement", LanguageHandle.GetWord("GeTongQianZheng").ToString().Trim(), strVisaID);
             if (intWLNumber > 0)
             {
                 BT_NewMain.Visible = false;
@@ -131,7 +131,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
             }
 
             //从流程中打开的业务单
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("VisaManagement", "合同签证", strVisaID, "0");
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("VisaManagement", LanguageHandle.GetWord("GeTongQianZheng").ToString().Trim(), strVisaID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_NewMain.Visible = true;
@@ -164,9 +164,9 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
                 LoadConstractPayableVisaDetail(strVisaID);
                 LoadRelatedConstract(strVisaID);
 
-                TB_WLName.Text = Resources.lang.HeTongQiaZhen + constractPayableVisa.VisaName.Trim() + Resources.lang.ShenQing;
+                TB_WLName.Text = LanguageHandle.GetWord("HeTongQiaZhen").ToString().Trim() + constractPayableVisa.VisaName.Trim() + LanguageHandle.GetWord("ShenQing").ToString().Trim();
 
-                LoadRelatedWL("VisaManagement", "合同签证", constractPayableVisa.ID);
+                LoadRelatedWL("VisaManagement", LanguageHandle.GetWord("GeTongQianZheng").ToString().Trim(), constractPayableVisa.ID);
 
                 if (e.CommandName == "Update")
                 {
@@ -183,7 +183,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
             {
                 strUserCode = LB_UserCode.Text.Trim();
 
-                intWLNumber = GetRelatedWorkFlowNumber("VisaManagement", "合同签证", strVisaID);
+                intWLNumber = GetRelatedWorkFlowNumber("VisaManagement", LanguageHandle.GetWord("GeTongQianZheng").ToString().Trim(), strVisaID);
                 if (intWLNumber > 0)
                 {
                     return;
@@ -198,7 +198,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
                     ShareClass.RunSqlCommand(strHQL);
 
                     //Workflow,删除流程模组关联记录
-                    ShareClass.DeleteModuleToRelatedWorkflow(strRelatedWorkflowID, strRelatedWorkflowStepID, strRelatedWorkflowStepDetailID, "资产采购单", strVisaID);
+                    ShareClass.DeleteModuleToRelatedWorkflow(strRelatedWorkflowID, strRelatedWorkflowStepID, strRelatedWorkflowStepDetailID, "资产采购单", strVisaID); 
 
                     BT_SubmitApply.Enabled = false;
 
@@ -207,7 +207,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCCJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCCJC").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -276,7 +276,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
             strVisaID = GetMyCreatedMaxConstractPayableVisaID();
             LB_VisaID.Text = strVisaID;
 
-            TB_WLName.Text = Resources.lang.HeTongQiaZhen + strVisaName + Resources.lang.ShenQing;
+            TB_WLName.Text = LanguageHandle.GetWord("HeTongQiaZhen").ToString().Trim() + strVisaName + LanguageHandle.GetWord("ShenQing").ToString().Trim();
 
             BT_SubmitApply.Enabled = true;
 
@@ -337,14 +337,14 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
 
             //从流程中打开的业务单
             //更改工作流关联的数据文件
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("VisaManagement", "合同", strVisaID, "0");
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("VisaManagement", LanguageHandle.GetWord("GeTong").ToString().Trim(), strVisaID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 string strCmdText;
 
                 if (strToDoWLID == null)
                 {
-                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("VisaManagement", "合同", strVisaID);
+                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("VisaManagement", LanguageHandle.GetWord("GeTong").ToString().Trim(), strVisaID);
                 }
 
                 if (strToDoWLDetailID == null)
@@ -367,11 +367,11 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
                 }
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
         }
     }
 
@@ -410,7 +410,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
 
             strVisaID = LB_VisaID.Text.Trim();
 
-            int intWLNumber = GetRelatedWorkFlowNumber("VisaManagement", "合同", strVisaID);
+            int intWLNumber = GetRelatedWorkFlowNumber("VisaManagement", LanguageHandle.GetWord("GeTong").ToString().Trim(), strVisaID);
             if (intWLNumber > 0)
             {
                 BT_NewMain.Visible = false;
@@ -423,7 +423,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
             }
 
             //从流程中打开的业务单
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("VisaManagement", "合同", strVisaID, "0");
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("VisaManagement", LanguageHandle.GetWord("GeTong").ToString().Trim(), strVisaID, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_NewMain.Visible = true;
@@ -458,7 +458,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
 
             if (e.CommandName == "Delete")
             {
-                intWLNumber = GetRelatedWorkFlowNumber("VisaManagement", "合同签证", strVisaID);
+                intWLNumber = GetRelatedWorkFlowNumber("VisaManagement", LanguageHandle.GetWord("GeTongQianZheng").ToString().Trim(), strVisaID);
                 if (intWLNumber > 0)
                 {
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -479,13 +479,13 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
 
                     //从流程中打开的业务单
                     //更改工作流关联的数据文件
-                    strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("VisaManagement", "合同签证", strVisaID, "0");
+                    strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("VisaManagement", LanguageHandle.GetWord("GeTongQianZheng").ToString().Trim(), strVisaID, "0");
                     if (strToDoWLID != null | strAllowFullEdit == "YES")
                     {
                         string strCmdText = "select * from T_ConstractPayableVisa where ID = " + strVisaID;
                         if (strToDoWLID == null)
                         {
-                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("VisaManagement", "合同签证", strVisaID);
+                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("VisaManagement", LanguageHandle.GetWord("GeTongQianZheng").ToString().Trim(), strVisaID);
                         }
 
                         if (strToDoWLDetailID == null)
@@ -506,11 +506,11 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
                         }
                     }
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -542,11 +542,11 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
         }
 
         strVisaID = LB_VisaID.Text.Trim();
-        int intWLNumber = GetRelatedWorkFlowNumber("VisaManagement", "合同签证", strVisaID);
+        int intWLNumber = GetRelatedWorkFlowNumber("VisaManagement", LanguageHandle.GetWord("GeTongQianZheng").ToString().Trim(), strVisaID);
         if (intWLNumber > 0 & strToDoWLID == null)
         {
             BT_SubmitApply.Enabled = false;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBCZGLDGZLJLBNSCJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBCZGLDGZLJLBNSCJC").ToString().Trim() + "')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
             return;
         }
@@ -585,7 +585,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
 
         if (strVisaDetailName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYSRHYXDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
         }
         else
         {
@@ -613,14 +613,14 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
 
                 //从流程中打开的业务单
                 //更改工作流关联的数据文件
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("VisaManagement", "合同", strVisaID, "0");
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("VisaManagement", LanguageHandle.GetWord("GeTong").ToString().Trim(), strVisaID, "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     string strCmdText;
 
                     if (strToDoWLID == null)
                     {
-                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("VisaManagement", "合同", strVisaID);
+                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("VisaManagement", LanguageHandle.GetWord("GeTong").ToString().Trim(), strVisaID);
                     }
 
                     if (strToDoWLDetailID == null)
@@ -644,14 +644,14 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
                 }
 
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }
             catch (Exception err)
             {
                 LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
             }
         }
@@ -680,7 +680,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
         dePrice = NB_VisaPrice.Amount;
         if (strVisaDetailName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYSRHYXDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
         }
         else
         {
@@ -706,14 +706,14 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
 
                 //从流程中打开的业务单
                 //更改工作流关联的数据文件
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("VisaManagement", "合同", strVisaID, "0");
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("VisaManagement", LanguageHandle.GetWord("GeTong").ToString().Trim(), strVisaID, "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     string strCmdText;
 
                     if (strToDoWLID == null)
                     {
-                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("VisaManagement", "合同", strVisaID);
+                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("VisaManagement", LanguageHandle.GetWord("GeTong").ToString().Trim(), strVisaID);
                     }
 
                     if (strToDoWLDetailID == null)
@@ -736,14 +736,14 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
                     }
                 }
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }
             catch (Exception err)
             {
                 LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
             }
         }
@@ -809,7 +809,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
 
         if (strTemName == "")
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSSCSBLCMBBNWKJC + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC").ToString().Trim() + "');</script>");
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popAssignWindow','true') ", true);
 
@@ -830,7 +830,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
         workFlow.CreatorCode = strCreatorCode;
         workFlow.CreatorName = strCreatorName;
         workFlow.CreateTime = DateTime.Now;
-        workFlow.RelatedType = "合同签证";
+        workFlow.RelatedType = LanguageHandle.GetWord("GeTongQianZheng").ToString().Trim();
         workFlow.Status = "New";
         workFlow.RelatedID = int.Parse(strVisaID);
         workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
@@ -860,7 +860,7 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
 
             strWLID = ShareClass.GetMyCreatedWorkFlowID(strUserCode);
 
-            LoadRelatedWL(strWLType, "合同签证", int.Parse(strVisaID));
+            LoadRelatedWL(strWLType, LanguageHandle.GetWord("GeTongQianZheng").ToString().Trim(), int.Parse(strVisaID));
 
             UpdateConstractPayableVisaStatus(strVisaID, "InProgress");
             DL_VisaStatus.SelectedValue = "InProgress";
@@ -869,11 +869,11 @@ public partial class TTConstractPayableVisaEdit : System.Web.UI.Page
             strXMLFile2 = Server.MapPath(strXMLFile2);
             xmlProcess.DbToXML(strCmdText, "T_ConstractPayableVisa", strXMLFile2);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZCCGSSCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZCCGSSCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZCCGSSBKNGZLMCGCZD25GHZJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZCCGSSBKNGZLMCGCZD25GHZJC").ToString().Trim() + "')", true);
             return "0";
         }
 

@@ -70,12 +70,12 @@ public partial class TTUserInfor_StudentCost : System.Web.UI.Page
 
         if (string.IsNullOrEmpty(strGradeID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZNJ+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZNJ").ToString().Trim()+"')", true);
             return;
         }
         if (string.IsNullOrEmpty(strClassID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZBJ+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZBJ").ToString().Trim()+"')", true);
             return;
         }
 
@@ -133,7 +133,7 @@ public partial class TTUserInfor_StudentCost : System.Web.UI.Page
             LoadProjectMemberStudentCostInfo(intGradeID, intClassID);
         }
         else {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZWSJL+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZWSJL").ToString().Trim()+"')", true);
             return;
         }
     }
@@ -159,12 +159,12 @@ public partial class TTUserInfor_StudentCost : System.Web.UI.Page
 
         if (string.IsNullOrEmpty(strGradeID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZNJ+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZNJ").ToString().Trim()+"')", true);
             return;
         }
         if (string.IsNullOrEmpty(strClassID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZBJ+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZBJ").ToString().Trim()+"')", true);
             return;
         }
 

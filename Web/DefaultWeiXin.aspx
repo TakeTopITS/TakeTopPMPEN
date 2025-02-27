@@ -32,7 +32,7 @@
         input#TB_Password {
             border: none;
             border-bottom: 2px #249bf9 solid;
-            line-height: 2em;
+            line-height: 2em; 
         }
     </style>
 
@@ -162,8 +162,7 @@
                         <table width="70%" border="0" align="center" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td style="padding-left: 0px;">
-                                    <img alt="" src="Logo/APPLoginLogo.png" width="100%" />
-                                    <br />
+                                    <img alt="" src="Logo/APPLoginLogo.png" width="100%" />                              <br />
                                     <br />
                                 </td>
                             </tr>

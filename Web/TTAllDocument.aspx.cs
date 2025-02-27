@@ -38,7 +38,7 @@ public partial class TTAllDocument : System.Web.UI.Page
             strHQL = "from Document as document";
             strHQL += " Where ((document.DepartCode in " + strDepartString;
 
-            strHQL += " ) Or document.Visible = '集团' or document.Visible = 'All')";
+            strHQL += " ) Or document.Visible = '集团' or document.Visible = 'All')"; 
             strHQL += " and document.Status <> 'Deleted'";
             strHQL += " Order by document.DocID DESC";
             DocumentBLL documentBLL = new DocumentBLL();
@@ -46,12 +46,12 @@ public partial class TTAllDocument : System.Web.UI.Page
             DataGrid1.DataSource = lst;
             DataGrid1.DataBind();
 
-            LB_Count.Text = Resources.lang.CXDDWJS + ": " + lst.Count.ToString();
+            LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
 
             LB_Sql.Text = strHQL;
-            LB_FindCondition.Text = Resources.lang.CXFWSCZ + ": " + "'" + ShareClass.GetUserName(strUserCode) + "'";
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWSCZ").ToString().Trim() + ": " + "'" + ShareClass.GetUserName(strUserCode) + "'";
 
-            LB_TotalCount.Text = "总文件数：" + lst.Count.ToString();
+            LB_TotalCount.Text = LanguageHandle.GetWord("ZongWenJianShu").ToString().Trim() + lst.Count.ToString();
 
             ShareClass.InitialAllDocTypeTree(TreeView1);
         }
@@ -98,7 +98,7 @@ public partial class TTAllDocument : System.Web.UI.Page
             strHQL = "from Document as document where document.DocTypeID = " + "'" + strDocTypeID + "'";
             strHQL += " and (document.DepartCode in " + strDepartString;
 
-            strHQL += " Or document.Visible = '集团' or document.Visible = 'All')";
+            strHQL += " Or document.Visible = '集团' or document.Visible = 'All')"; 
             strHQL += " and document.Status <> 'Deleted'";
             strHQL += " Order by document.DocID DESC";
             lst = documentBLL.GetAllDocuments(strHQL);
@@ -107,7 +107,7 @@ public partial class TTAllDocument : System.Web.UI.Page
 
             LB_Sql.Text = strHQL;
 
-            LB_FindCondition.Text = Resources.lang.CXFWWJLX + "'" + docType.Type.Trim() + "'";
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + "'" + docType.Type.Trim() + "'";
 
             if (docType.UserCode.Trim() == strUserCode & DataGrid1.Items.Count == 0)
             {
@@ -130,14 +130,14 @@ public partial class TTAllDocument : System.Web.UI.Page
             strHQL = "from Document as document where ";
             strHQL += " (document.DepartCode in " + strDepartString;
 
-            strHQL += " Or document.Visible = '集团' or document.Visible = 'All')";
+            strHQL += " Or document.Visible = '集团' or document.Visible = 'All')"; 
             strHQL += " and document.Status <> 'Deleted'";
             strHQL += " Order by document.DocID DESC";
             lst = documentBLL.GetAllDocuments(strHQL);
             DataGrid1.DataSource = lst;
             DataGrid1.DataBind();
 
-            LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
 
             LB_Sql.Text = strHQL;
 
@@ -146,7 +146,7 @@ public partial class TTAllDocument : System.Web.UI.Page
             NB_DocTypeSort.Text = "";
         }
 
-        LB_Count.Text = Resources.lang.CXDDWJS + ": " + lst.Count.ToString();
+        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
     }
 
     protected void DataGrid1_PageIndexChanged(object sender, DataGridPageChangedEventArgs e)
@@ -211,7 +211,7 @@ public partial class TTAllDocument : System.Web.UI.Page
 
             if (strUserCode != docType.UserCode.Trim() | DataGrid1.Items.Count > 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZGWJLXBSNCJDHCZCLXWJNBNSC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZGWJLXBSNCJDHCZCLXWJNBNSC").ToString().Trim() + "')", true);
             }
             else
             {
@@ -221,11 +221,11 @@ public partial class TTAllDocument : System.Web.UI.Page
 
                     ShareClass.InitialUserDocTypeTree(TreeView1, strUserCode);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSB + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSB").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -256,7 +256,7 @@ public partial class TTAllDocument : System.Web.UI.Page
 
             if (strUserCode != docType.UserCode.Trim())
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZGWJLXBSNCJDNBNGG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZGWJLXBSNCJDNBNGG").ToString().Trim() + "')", true);
             }
             else
             {
@@ -270,11 +270,11 @@ public partial class TTAllDocument : System.Web.UI.Page
 
                     ShareClass.InitialUserDocTypeTree(TreeView1, strUserCode);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -292,11 +292,11 @@ public partial class TTAllDocument : System.Web.UI.Page
 
         if (strUploadManName == "")
         {
-            LB_FindCondition.Text = Resources.lang.CXFWSYWD;
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWSYWD").ToString().Trim();
         }
         else
         {
-            LB_FindCondition.Text = Resources.lang.SCZXMBH + ": " + "'" + strUploadManName + "'";
+            LB_FindCondition.Text = LanguageHandle.GetWord("SCZXMBH").ToString().Trim() + ": " + "'" + strUploadManName + "'";
         }
 
         string strDepartString = LB_DepartString.Text.Trim();
@@ -308,7 +308,7 @@ public partial class TTAllDocument : System.Web.UI.Page
         strHQL += " and document.DocName like " + "'" + strDocName + "'";
         strHQL += " and document.DepartCode in " + strDepartString;
 
-        strHQL += " ) Or document.Visible = '集团' or document.Visible = 'All')";
+        strHQL += " ) Or document.Visible = '集团' or document.Visible = 'All')"; 
         strHQL += " and document.Status <> 'Deleted'";
         strHQL += " Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
@@ -318,7 +318,7 @@ public partial class TTAllDocument : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_Count.Text = Resources.lang.CXDDWJS + ": " + lst.Count.ToString();
+        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
     }
 
     protected string GetDocTypeCreator(string strDocTypeID)

@@ -82,7 +82,7 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
 
             LB_Sql.Text = strHQL;
 
-            LB_QueryScope.Text = Resources.lang.ZZGZLSQZSY;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZGZLSQZSY").ToString().Trim();
         }
     }
 
@@ -129,7 +129,7 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
         IList lst;
 
         string strUserCode = LB_UserCode.Text.Trim();
-        LB_QueryScope.Text = Resources.lang.ZZGZLSQZSY;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZGZLSQZSY").ToString().Trim();
 
         LB_DepartCode.Text = "";
         LB_OperatorCode.Text = "";
@@ -161,7 +161,7 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
         LB_OperatorCode.Text = strOperatorCode;
         LB_OperatorName.Text = strOperatorName;
 
-        LB_QueryScope.Text = Resources.lang.ZZApplicant + strOperatorCode + strOperatorName;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicant").ToString().Trim() + strOperatorCode + strOperatorName;
 
         DataGrid3.CurrentPageIndex = 0;
 
@@ -197,7 +197,7 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
             strHQL += " and workFlow.Status <> 'New'";
             strHQL += " Order by workFlow.WLID DESC";
 
-            LB_QueryScope.Text = Resources.lang.ZZGZLSQZSY + Resources.lang.ZhuangTai + ":" + strStatus;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZGZLSQZSY").ToString().Trim() + LanguageHandle.GetWord("ZhuangTai").ToString().Trim() + ":" + strStatus;
         }
         else
         {
@@ -207,7 +207,7 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
             strHQL += " and " + "workFlow.Status = " + "'" + strStatus + "'";
             strHQL += " and workFlow.Status <> 'New'";
             strHQL += " order by workFlow.WLID DESC";
-            LB_QueryScope.Text = Resources.lang.ZZApplicant + strOperatorCode + strOperatorName + Resources.lang.XuQiuZhuangTai + ":" + strStatus;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicant").ToString().Trim() + strOperatorCode + strOperatorName + LanguageHandle.GetWord("XuQiuZhuangTai").ToString().Trim() + ":" + strStatus;
         }
 
 
@@ -254,7 +254,7 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
             strHQL += " and workFlow.CreatorCode in (Select memberLevel.UnderCode From MemberLevel as memberLevel Where memberLevel.WorkflowVisible = 'YES' and memberLevel.UserCode = " + "'" + strUserCode + "'" + ")";
             strHQL += " and workFlow.Status <> 'New'";
             strHQL += " Order by workFlow.WLID DESC";
-            LB_QueryScope.Text = Resources.lang.ZZGZLSQZSY + Resources.lang.LeiXin + ":" + strWLType;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZGZLSQZSY").ToString().Trim() + LanguageHandle.GetWord("LeiXin").ToString().Trim() + ":" + strWLType;
         }
         else
         {
@@ -265,7 +265,7 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
                 strHQL += " and workFlow.TemName Like " + "'" + strWFTemName + "'";
                 strHQL += " and workFlow.Status <> 'New'";
                 strHQL += " order by workFlow.WLID DESC";
-                LB_QueryScope.Text = Resources.lang.ZZApplicant + strOperatorCode + " " + strOperatorName + Resources.lang.LeiXin + ":" + strWLType;
+                LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicant").ToString().Trim() + strOperatorCode + " " + strOperatorName + LanguageHandle.GetWord("LeiXin").ToString().Trim() + ":" + strWLType;
             }
             else
             {
@@ -274,7 +274,7 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
                 strHQL += " and workFlow.TemName Like " + "'" + strWFTemName + "'";
                 strHQL += " and workFlow.Status <> 'New'";
                 strHQL += " order by workFlow.WLID DESC";
-                LB_QueryScope.Text = Resources.lang.ZZApplicant + strOperatorCode + " " + strOperatorName + Resources.lang.LeiXin + ":" + strWLType + Resources.lang.ZhuangTai + strStatus;
+                LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicant").ToString().Trim() + strOperatorCode + " " + strOperatorName + LanguageHandle.GetWord("LeiXin").ToString().Trim() + ":" + strWLType + LanguageHandle.GetWord("ZhuangTai").ToString().Trim() + strStatus;
             }
         }
 
@@ -299,7 +299,7 @@ public partial class TTMyMemberWorkFlows : System.Web.UI.Page
         strStartTime = DateTime.Parse(DLC_StartTime.Text).ToString("yyyyMMdd");
         strEndTime = DateTime.Parse(DLC_EndTime.Text).ToString("yyyyMMdd");
 
-        LB_QueryScope.Text = "¹¤×÷Á÷±àºÅ£º" + strWFID;
+        LB_QueryScope.Text = LanguageHandle.GetWord("GongZuoLiuBianHao").ToString().Trim() + strWFID;
 
         LB_DepartCode.Text = "";
         LB_OperatorCode.Text = "";

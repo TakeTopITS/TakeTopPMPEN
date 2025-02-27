@@ -30,7 +30,7 @@ public partial class TTMakeBookManageOut : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
         {
-            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             BindDDLOther();
@@ -58,7 +58,7 @@ public partial class TTMakeBookManageOut : System.Web.UI.Page
 
     protected void LoadBookList(string strBarCode, string strBookName, string strReferenceNo, string strAuthor, string strBookClassificationId, string strBookPublishersId, string strBelongDepartCode)
     {
-        string strHQL = " Select *,(Case when BookType='标准' then BookImage else '' end) BookImageNew From T_BookInformation Where 1=1 ";
+        string strHQL = " Select *,(Case when BookType='标准' then BookImage else '' end) BookImageNew From T_BookInformation Where 1=1 "; 
         if (!string.IsNullOrEmpty(strBarCode.Trim()))
         {
             strHQL += " and BarCode like '%" + strBarCode.Trim() + "%' ";
@@ -93,11 +93,11 @@ public partial class TTMakeBookManageOut : System.Web.UI.Page
         }
         else if (DropDownList1.SelectedValue.Trim().Equals("1"))//图书
         {
-            strHQL += " and BookType='图书' Order By ReferenceNo ASC ";
+            strHQL += " and BookType='图书' Order By ReferenceNo ASC "; 
         }
         else//标准
         {
-            strHQL += " and BookType='标准' Order By BarCode ASC ";
+            strHQL += " and BookType='标准' Order By BarCode ASC "; 
         }
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_BookInformation");
 
@@ -109,7 +109,7 @@ public partial class TTMakeBookManageOut : System.Web.UI.Page
 
     protected void LoadBookBorrowRecord()
     {
-        string strHQL = "Select A.*,(Case when B.BookType='标准' then B.BookImage else '' end) BookImageNew  From T_BookBorrowRecord As A,T_BookInformation As B Where A.BorrowCode='" + strUserCode.Trim() + "' and A.BookInfoId=B.ID Order By A.BarCode ASC ";
+        string strHQL = "Select A.*,(Case when B.BookType='标准' then B.BookImage else '' end) BookImageNew  From T_BookBorrowRecord As A,T_BookInformation As B Where A.BorrowCode='" + strUserCode.Trim() + "' and A.BookInfoId=B.ID Order By A.BarCode ASC "; 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_BookBorrowRecord");
 
         DataGrid2.CurrentPageIndex = 0;

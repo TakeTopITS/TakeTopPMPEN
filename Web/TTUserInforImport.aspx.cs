@@ -156,7 +156,7 @@ public partial class TTUserInforImport : System.Web.UI.Page
                 DL_UserType.SelectedValue = "OUTER";
                 DL_WorkType.SelectedValue = "";
 
-                DL_SystemMDIStyle.SelectedValue = "左右下展";
+                DL_SystemMDIStyle.SelectedValue = "左右下展"; 
                 DL_AllowDevice.SelectedValue = "ALL";
                 TB_UserRTXCode.Text = "";
                 NB_SortNumber.Amount = 0;
@@ -179,14 +179,14 @@ public partial class TTUserInforImport : System.Web.UI.Page
 
         if (strUserCode == "" & strUserName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZSBXSRYHDMHMCZYCNC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZSBXSRYHDMHMCZYCNC").ToString().Trim() + "')", true);
             return;
         }
 
         string strDepartString = LB_DepartString.Text.Trim();
         if (ShareClass.VerifyUserCode(strUserCode, strDepartString) == false | ShareClass.VerifyUserName(strUserName, strDepartString) == false)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGNMYXCZCYHJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGNMYXCZCYHJC").ToString().Trim() + "')", true);
             return;
         }
 
@@ -264,7 +264,7 @@ public partial class TTUserInforImport : System.Web.UI.Page
             DL_UserType.SelectedValue = "OUTER";
             DL_WorkType.SelectedValue = "";
 
-            DL_SystemMDIStyle.SelectedValue = "左右下展";
+            DL_SystemMDIStyle.SelectedValue = "左右下展"; 
             DL_AllowDevice.SelectedValue = "ALL";
             TB_UserRTXCode.Text = "";
             NB_SortNumber.Amount = 0;
@@ -273,7 +273,7 @@ public partial class TTUserInforImport : System.Web.UI.Page
             BT_UploadPhoto.Enabled = false;
             BT_DeletePhoto.Enabled = false;
             BT_TakePhoto.Enabled = false;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZMYCYHJCYHDMHMCSFZ + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZMYCYHJCYHDMHMCSFZ").ToString().Trim() + "')", true);
         }
     }
 
@@ -334,7 +334,7 @@ public partial class TTUserInforImport : System.Web.UI.Page
             strHQL = "Update T_ProjectMember Set PhotoURL = '' Where UserCode = " + "'" + strusercode + "'";
             ShareClass.RunSqlCommand(strHQL);
 
-            AddCustomerOperationRecord(strusercode, "删除图片信息");
+            AddCustomerOperationRecord(strusercode, LanguageHandle.GetWord("ShanChuTuPianXinXi").ToString().Trim());
 
             IM_MemberPhoto.ImageUrl = "";
             HL_MemberPhoto.NavigateUrl = "";
@@ -342,11 +342,11 @@ public partial class TTUserInforImport : System.Web.UI.Page
 
             LoadCustomerOperationRecord(strUserCode.Trim());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -392,7 +392,7 @@ public partial class TTUserInforImport : System.Web.UI.Page
                     strHQL = "Update T_ProjectMember Set PhotoURL = " + "'" + strFileName3 + "'" + " Where UserCode = " + "'" + strUserCode + "'";
                     ShareClass.RunSqlCommand(strHQL);
 
-                    AddCustomerOperationRecord(strUserCode, "更新图片信息");
+                    AddCustomerOperationRecord(strUserCode, LanguageHandle.GetWord("GengXinTuPianXinXi").ToString().Trim());
 
                     IM_MemberPhoto.ImageUrl = strFileName3;
                     HL_MemberPhoto.NavigateUrl = strFileName3;
@@ -400,21 +400,21 @@ public partial class TTUserInforImport : System.Web.UI.Page
 
                     LoadCustomerOperationRecord(strLoginUserCode);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCHCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCHCG").ToString().Trim() + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZYSCDTP + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDTP").ToString().Trim() + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZYSCDTP + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDTP").ToString().Trim() + "')", true);
         }
     }
 
@@ -437,13 +437,13 @@ public partial class TTUserInforImport : System.Web.UI.Page
         {
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
                 return;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
                 return;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -452,7 +452,7 @@ public partial class TTUserInforImport : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                LB_ErrorText.Text += Resources.lang.ZZEXCLEBDRSB;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim();
             }
             else
             {
@@ -470,13 +470,13 @@ public partial class TTUserInforImport : System.Web.UI.Page
 
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += Resources.lang.ZZJGEXCELBWKBWSJ;
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim();
                 }
                 else
                 {
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        strNewUserCode = dr[i]["成员代码"].ToString().Trim().ToUpper();
+                        strNewUserCode = dr[i][LanguageHandle.GetWord("ChengYuanDaiMa").ToString().Trim()].ToString().Trim().ToUpper();
 
                         if (strNewUserCode != "")
                         {
@@ -493,24 +493,24 @@ public partial class TTUserInforImport : System.Web.UI.Page
                                 try
                                 {
                                     projectMember.UserCode = strNewUserCode;
-                                    projectMember.UserName = dr[i]["成员姓名"].ToString().Trim();
-                                    projectMember.Gender = dr[i]["性别"].ToString().Trim() == "" ? "Male" : dr[i]["性别"].ToString().Trim();
-                                    projectMember.Age = int.Parse(dr[i]["年龄"].ToString().Trim() == "" ? "0" : dr[i]["年龄"].ToString().Trim());
-                                    projectMember.Password = dr[i]["密码"].ToString().Trim() == "" ? EncryptPassword("12345678", "MD5") : EncryptPassword(dr[i]["密码"].ToString().Trim(), "MD5");
-                                    projectMember.RefUserCode = dr[i]["参考工号"].ToString().Trim() == "" ? strNewUserCode : dr[i]["参考工号"].ToString().Trim();
-                                    projectMember.SortNumber = int.Parse(dr[i]["顺序号"].ToString().Trim() == "" ? "0" : dr[i]["顺序号"].ToString().Trim());
+                                    projectMember.UserName = dr[i][LanguageHandle.GetWord("ChengYuanXingMing").ToString().Trim()].ToString().Trim();
+                                    projectMember.Gender = dr[i][LanguageHandle.GetWord("XingBie").ToString().Trim()].ToString().Trim() == "" ? "Male" : dr[i][LanguageHandle.GetWord("XingBie").ToString().Trim()].ToString().Trim();
+                                    projectMember.Age = int.Parse(dr[i][LanguageHandle.GetWord("NianLing").ToString().Trim()].ToString().Trim() == "" ? "0" : dr[i][LanguageHandle.GetWord("NianLing").ToString().Trim()].ToString().Trim());
+                                    projectMember.Password = dr[i][LanguageHandle.GetWord("MiMa").ToString().Trim()].ToString().Trim() == "" ? EncryptPassword("12345678", "MD5") : EncryptPassword(dr[i][LanguageHandle.GetWord("MiMa").ToString().Trim()].ToString().Trim(), "MD5");
+                                    projectMember.RefUserCode = dr[i][LanguageHandle.GetWord("CanKaoGongHao").ToString().Trim()].ToString().Trim() == "" ? strNewUserCode : dr[i][LanguageHandle.GetWord("CanKaoGongHao").ToString().Trim()].ToString().Trim();
+                                    projectMember.SortNumber = int.Parse(dr[i][LanguageHandle.GetWord("ShunXuHao").ToString().Trim()].ToString().Trim() == "" ? "0" : dr[i][LanguageHandle.GetWord("ShunXuHao").ToString().Trim()].ToString().Trim());
 
-                                    projectMember.DepartCode = dr[i]["部门代码"].ToString().Trim() == "" ? ShareClass.GetDepartCodeFromUserCode(strUserCode.Trim()) : dr[i]["部门代码"].ToString().Trim();
-                                    projectMember.DepartName = dr[i]["部门名称"].ToString().Trim() == "" ? ShareClass.GetDepartName(projectMember.DepartCode.Trim()) : dr[i]["部门名称"].ToString().Trim();
+                                    projectMember.DepartCode = dr[i][LanguageHandle.GetWord("BuMenDaiMa").ToString().Trim()].ToString().Trim() == "" ? ShareClass.GetDepartCodeFromUserCode(strUserCode.Trim()) : dr[i][LanguageHandle.GetWord("BuMenDaiMa").ToString().Trim()].ToString().Trim();
+                                    projectMember.DepartName = dr[i][LanguageHandle.GetWord("BuMenMingChen").ToString().Trim()].ToString().Trim() == "" ? ShareClass.GetDepartName(projectMember.DepartCode.Trim()) : dr[i][LanguageHandle.GetWord("BuMenMingChen").ToString().Trim()].ToString().Trim();
 
-                                    projectMember.ChildDepartment = dr[i]["子部门"].ToString().Trim();
-                                    projectMember.Duty = dr[i]["职务"].ToString().Trim();
-                                    projectMember.OfficePhone = dr[i]["办公电话"].ToString().Trim();
-                                    projectMember.MobilePhone = dr[i]["手机"].ToString().Trim();
+                                    projectMember.ChildDepartment = dr[i][LanguageHandle.GetWord("ZiBuMen").ToString().Trim()].ToString().Trim();
+                                    projectMember.Duty = dr[i][LanguageHandle.GetWord("ZhiWu").ToString().Trim()].ToString().Trim();
+                                    projectMember.OfficePhone = dr[i][LanguageHandle.GetWord("BanGongDianHua").ToString().Trim()].ToString().Trim();
+                                    projectMember.MobilePhone = dr[i][LanguageHandle.GetWord("ShouJi").ToString().Trim()].ToString().Trim();
                                     projectMember.EMail = dr[i]["E_Mail"].ToString().Trim();
-                                    projectMember.JoinDate = DateTime.Parse(dr[i]["加入日期"].ToString().Trim() == "" ? DateTime.Now.ToString("yyyy-MM-dd") : dr[i]["加入日期"].ToString().Trim());
-                                    projectMember.WorkScope = dr[i]["工作范围"].ToString().Trim();
-                                    projectMember.Status = dr[i]["状态"].ToString().Trim() == "" ? "Employed" : dr[i]["状态"].ToString().Trim();
+                                    projectMember.JoinDate = DateTime.Parse(dr[i]["加入日期"].ToString().Trim() == "" ? DateTime.Now.ToString("yyyy-MM-dd") : dr[i]["加入日期"].ToString().Trim()); 
+                                    projectMember.WorkScope = dr[i][LanguageHandle.GetWord("GongZuoFanWei").ToString().Trim()].ToString().Trim();
+                                    projectMember.Status = dr[i]["状态"].ToString().Trim() == "" ? "Employed" : dr[i]["状态"].ToString().Trim(); 
 
                                     try
                                     {
@@ -527,7 +527,7 @@ public partial class TTUserInforImport : System.Web.UI.Page
                                     projectMember.UserType = DL_UserType.SelectedValue.Trim();
                                     projectMember.WorkType = DL_WorkType.SelectedValue.Trim();
 
-                                    projectMember.UserRTXCode = dr[i]["RTX帐户"].ToString().Trim() == "" ? strNewUserCode + projectMember.UserName.Trim() : dr[i]["RTX帐户"].ToString().Trim();
+                                    projectMember.UserRTXCode = dr[i][LanguageHandle.GetWord("RTXZhangHu").ToString().Trim()].ToString().Trim() == "" ? strNewUserCode + projectMember.UserName.Trim() : dr[i][LanguageHandle.GetWord("RTXZhangHu").ToString().Trim()].ToString().Trim();
                                     projectMember.MDIStyle = DL_SystemMDIStyle.SelectedValue.Trim();
                                     projectMember.AllowDevice = DL_AllowDevice.SelectedValue.Trim();
                                     projectMember.CreatorCode = strUserCode.Trim();
@@ -557,15 +557,15 @@ public partial class TTUserInforImport : System.Web.UI.Page
                                     projectMember.Comment = "";
 
                                     projectMemberBLL.AddProjectMember(projectMember);
-                                    AddCustomerOperationRecord(projectMember.UserCode.Trim(), "新增用户信息");
+                                    AddCustomerOperationRecord(projectMember.UserCode.Trim(), LanguageHandle.GetWord("XinZengYongHuXinXi").ToString().Trim());
                                 }
                                 catch (Exception err)
                                 {
                                     strErrorUserCodeString += strNewUserCode + ",";
 
-                                    LB_ErrorText.Text += Resources.lang.ZZJGDRSBJC + " : " + Resources.lang.HangHao + ": " + (i + 2).ToString() + " , " + Resources.lang.DaiMa + ": " + strNewUserCode + " : " + err.Message.ToString() + "<br/>"; ;
+                                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strNewUserCode + " : " + err.Message.ToString() + "<br/>"; ;
 
-                                    LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + Resources.lang.ZZJGDRSBJC + " : " + Resources.lang.HangHao + ": " + (i + 2).ToString() + " , " + Resources.lang.DaiMa + ": " + strNewUserCode + " : " + err.Message.ToString());
+                                    LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strNewUserCode + " : " + err.Message.ToString());
                                 }
 
                                 //增加用户到RTX
@@ -574,8 +574,8 @@ public partial class TTUserInforImport : System.Web.UI.Page
                                     strHQL = "insert T_MailBoxAuthority(UserCode,PasswordSet,DeleteOperate) Values (" + "'" + strNewUserCode + "'" + ",'YES','YES'" + ")";
                                     ShareClass.RunSqlCommand(strHQL);
 
-                                    strUser = dr[i]["参考工号"].ToString().Trim() + dr[i]["成员姓名"].ToString().Trim();
-                                    strDepart = dr[i]["部门代码"].ToString().Trim() + " " + dr[i]["部门名称"].ToString().Trim();
+                                    strUser = dr[i][LanguageHandle.GetWord("CanKaoGongHao").ToString().Trim()].ToString().Trim() + dr[i][LanguageHandle.GetWord("ChengYuanXingMing").ToString().Trim()].ToString().Trim();
+                                    strDepart = dr[i][LanguageHandle.GetWord("BuMenDaiMa").ToString().Trim()].ToString().Trim() + " " + dr[i][LanguageHandle.GetWord("BuMenMingChen").ToString().Trim()].ToString().Trim();
 
                                     ShareClass.AddRTXUser(strUser, strDepart);
                                 }
@@ -613,11 +613,11 @@ public partial class TTUserInforImport : System.Web.UI.Page
 
                     if (strErrorUserCodeString == "")
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click555", "alert('" + Resources.lang.ZZEXCLEBDRBWC + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click555", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRBWC").ToString().Trim() + "')", true);
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click666", "alert('" + Resources.lang.ZZEXCLEBDRJBWCDXMRYSJDRSBSTRERRORUSERCODESTRINGJC + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click666", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRJBWCDXMRYSJDRSBSTRERRORUSERCODESTRINGJC").ToString().Trim() + "')", true);
                     }
                 }
             }
@@ -633,15 +633,15 @@ public partial class TTUserInforImport : System.Web.UI.Page
         {
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGNZEXCELWJ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim();
                 j = -1;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click222", "alert('" + Resources.lang.ZZJGZKYZEXCELWJ + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click222", "alert('" + LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim() + "')", true);
                 j = -1;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -650,7 +650,7 @@ public partial class TTUserInforImport : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                LB_ErrorText.Text += Resources.lang.ZZEXCLEBDRSB;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim();
 
                 j = -1;
             }
@@ -670,7 +670,7 @@ public partial class TTUserInforImport : System.Web.UI.Page
 
                 if (rowsnum == 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click333", "alert('" + Resources.lang.ZZJGEXCELBWKBWSJ + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click333", "alert('" + LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim() + "')", true);
                     j = -1;
                 }
                 else
@@ -680,7 +680,7 @@ public partial class TTUserInforImport : System.Web.UI.Page
                         //LogClass.WriteLogFile(dr[i][1].ToString());
                         //LogClass.WriteLogFile(dr[i][2].ToString());
 
-                        string strusercode = dr[i]["成员代码"].ToString().Trim().ToUpper();
+                        string strusercode = dr[i][LanguageHandle.GetWord("ChengYuanDaiMa").ToString().Trim()].ToString().Trim().ToUpper();
                         if (strusercode != "")
                         {
                             ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
@@ -688,7 +688,7 @@ public partial class TTUserInforImport : System.Web.UI.Page
                             IList lst = projectMemberBLL.GetAllProjectMembers(strHQL);
                             if (lst != null && lst.Count > 0)//存在，则不操作
                             {
-                                LB_ErrorText.Text += Resources.lang.ZZJGCZXTZHDYGDRICYDMTOSTRINGTRIMDRICYXMTOSTRINGTRIMJC;
+                                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGCZXTZHDYGDRICYDMTOSTRINGTRIMDRICYXMTOSTRINGTRIMJC").ToString().Trim();
 
                                 j = -1;
                             }
@@ -697,40 +697,40 @@ public partial class TTUserInforImport : System.Web.UI.Page
                                 ProjectMember projectMember = new ProjectMember();
 
                                 projectMember.UserCode = strusercode;
-                                projectMember.UserName = dr[i]["成员姓名"].ToString().Trim();
-                                projectMember.Gender = dr[i]["性别"].ToString().Trim() == "" ? "Male" : dr[i]["性别"].ToString().Trim();
-                                projectMember.Age = int.Parse(dr[i]["年龄"].ToString().Trim() == "" ? "0" : dr[i]["年龄"].ToString().Trim());
-                                projectMember.Password = dr[i]["密码"].ToString().Trim() == "" ? EncryptPassword("12345678", "MD5") : EncryptPassword(dr[i]["密码"].ToString().Trim(), "MD5");
-                                projectMember.RefUserCode = dr[i]["参考工号"].ToString().Trim() == "" ? strusercode : dr[i]["参考工号"].ToString().Trim();
-                                projectMember.SortNumber = int.Parse(dr[i]["顺序号"].ToString().Trim() == "" ? "0" : dr[i]["顺序号"].ToString().Trim());
+                                projectMember.UserName = dr[i][LanguageHandle.GetWord("ChengYuanXingMing").ToString().Trim()].ToString().Trim();
+                                projectMember.Gender = dr[i][LanguageHandle.GetWord("XingBie").ToString().Trim()].ToString().Trim() == "" ? "Male" : dr[i][LanguageHandle.GetWord("XingBie").ToString().Trim()].ToString().Trim();
+                                projectMember.Age = int.Parse(dr[i][LanguageHandle.GetWord("NianLing").ToString().Trim()].ToString().Trim() == "" ? "0" : dr[i][LanguageHandle.GetWord("NianLing").ToString().Trim()].ToString().Trim());
+                                projectMember.Password = dr[i][LanguageHandle.GetWord("MiMa").ToString().Trim()].ToString().Trim() == "" ? EncryptPassword("12345678", "MD5") : EncryptPassword(dr[i][LanguageHandle.GetWord("MiMa").ToString().Trim()].ToString().Trim(), "MD5");
+                                projectMember.RefUserCode = dr[i][LanguageHandle.GetWord("CanKaoGongHao").ToString().Trim()].ToString().Trim() == "" ? strusercode : dr[i][LanguageHandle.GetWord("CanKaoGongHao").ToString().Trim()].ToString().Trim();
+                                projectMember.SortNumber = int.Parse(dr[i][LanguageHandle.GetWord("ShunXuHao").ToString().Trim()].ToString().Trim() == "" ? "0" : dr[i][LanguageHandle.GetWord("ShunXuHao").ToString().Trim()].ToString().Trim());
 
-                                if (CheckDepartment(dr[i]["部门代码"].ToString().Trim(), dr[i]["部门名称"].ToString().Trim()) > 0)
+                                if (CheckDepartment(dr[i][LanguageHandle.GetWord("BuMenDaiMa").ToString().Trim()].ToString().Trim(), dr[i][LanguageHandle.GetWord("BuMenMingChen").ToString().Trim()].ToString().Trim()) > 0)
                                 {
-                                    projectMember.DepartCode = dr[i]["部门代码"].ToString().Trim() == "" ? ShareClass.GetDepartCodeFromUserCode(strUserCode.Trim()) : dr[i]["部门代码"].ToString().Trim();
-                                    projectMember.DepartName = dr[i]["部门名称"].ToString().Trim() == "" ? ShareClass.GetDepartName(projectMember.DepartCode.Trim()) : dr[i]["部门名称"].ToString().Trim();
+                                    projectMember.DepartCode = dr[i][LanguageHandle.GetWord("BuMenDaiMa").ToString().Trim()].ToString().Trim() == "" ? ShareClass.GetDepartCodeFromUserCode(strUserCode.Trim()) : dr[i][LanguageHandle.GetWord("BuMenDaiMa").ToString().Trim()].ToString().Trim();
+                                    projectMember.DepartName = dr[i][LanguageHandle.GetWord("BuMenMingChen").ToString().Trim()].ToString().Trim() == "" ? ShareClass.GetDepartName(projectMember.DepartCode.Trim()) : dr[i][LanguageHandle.GetWord("BuMenMingChen").ToString().Trim()].ToString().Trim();
                                 }
                                 else
                                 {
-                                    LB_ErrorText.Text += Resources.lang.ZZJGCBMDMHMCBYZHBZNGXFWDRIBMDMTOSTRINGTRIMDRIBMMCTOSTRINGTRIMJC + dr[i]["部门代码"].ToString().Trim() + ", " + dr[i]["部门名称"].ToString().Trim();
+                                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGCBMDMHMCBYZHBZNGXFWDRIBMDMTOSTRINGTRIMDRIBMMCTOSTRINGTRIMJC").ToString().Trim() + dr[i][LanguageHandle.GetWord("BuMenDaiMa").ToString().Trim()].ToString().Trim() + ", " + dr[i][LanguageHandle.GetWord("BuMenMingChen").ToString().Trim()].ToString().Trim();
                                    
                                     j = -1;
                                 }
 
-                                projectMember.ChildDepartment = dr[i]["子部门"].ToString().Trim();
-                                projectMember.Duty = dr[i]["职务"].ToString().Trim();
-                                projectMember.OfficePhone = dr[i]["办公电话"].ToString().Trim();
-                                projectMember.MobilePhone = dr[i]["手机"].ToString().Trim();
+                                projectMember.ChildDepartment = dr[i][LanguageHandle.GetWord("ZiBuMen").ToString().Trim()].ToString().Trim();
+                                projectMember.Duty = dr[i][LanguageHandle.GetWord("ZhiWu").ToString().Trim()].ToString().Trim();
+                                projectMember.OfficePhone = dr[i][LanguageHandle.GetWord("BanGongDianHua").ToString().Trim()].ToString().Trim();
+                                projectMember.MobilePhone = dr[i][LanguageHandle.GetWord("ShouJi").ToString().Trim()].ToString().Trim();
                                 projectMember.EMail = dr[i]["E_Mail"].ToString().Trim();
-                                projectMember.JoinDate = DateTime.Parse(dr[i]["加入日期"].ToString().Trim() == "" ? DateTime.Now.ToString("yyyy-MM-dd") : dr[i]["加入日期"].ToString().Trim());
-                                projectMember.WorkScope = dr[i]["工作范围"].ToString().Trim();
-                                projectMember.Status = dr[i]["状态"].ToString().Trim() == "" ? "Employed" : dr[i]["状态"].ToString().Trim();
+                                projectMember.JoinDate = DateTime.Parse(dr[i]["加入日期"].ToString().Trim() == "" ? DateTime.Now.ToString("yyyy-MM-dd") : dr[i]["加入日期"].ToString().Trim()); 
+                                projectMember.WorkScope = dr[i][LanguageHandle.GetWord("GongZuoFanWei").ToString().Trim()].ToString().Trim();
+                                projectMember.Status = dr[i]["状态"].ToString().Trim() == "" ? "Employed" : dr[i]["状态"].ToString().Trim(); 
                                 projectMember.PhotoURL = "";
 
                                 projectMember.JobTitle = TB_JobTitle.Text.Trim();
                                 projectMember.UserType = DL_UserType.SelectedValue.Trim();
                                 projectMember.WorkType = DL_WorkType.SelectedValue.Trim();
 
-                                projectMember.UserRTXCode = dr[i]["RTX帐户"].ToString().Trim() == "" ? strusercode + projectMember.UserName.Trim() : dr[i]["RTX帐户"].ToString().Trim();
+                                projectMember.UserRTXCode = dr[i][LanguageHandle.GetWord("RTXZhangHu").ToString().Trim()].ToString().Trim() == "" ? strusercode + projectMember.UserName.Trim() : dr[i][LanguageHandle.GetWord("RTXZhangHu").ToString().Trim()].ToString().Trim();
                                 projectMember.MDIStyle = DL_SystemMDIStyle.SelectedValue.Trim();
                                 projectMember.AllowDevice = DL_AllowDevice.SelectedValue.Trim();
                                 projectMember.CreatorCode = strUserCode.Trim();

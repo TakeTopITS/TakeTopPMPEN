@@ -139,7 +139,7 @@ public partial class TTWZPlanChange : System.Web.UI.Page
                 {
                     WZPickingPlan wZPickingPlan = (WZPickingPlan)listWZPickingPlan[0];
 
-                    if (wZPickingPlan.SupplyMethod == "自购")
+                    if (wZPickingPlan.SupplyMethod == LanguageHandle.GetWord("ZiGou").ToString().Trim())
                     {
                         //手动将当前月，该计划下所有〈结算标记〉＝“-1”的发料单退单；
                         string strWZSendHQL = string.Format(@"select s.* from T_WZSend s
@@ -152,7 +152,7 @@ public partial class TTWZPlanChange : System.Web.UI.Page
                         DataTable dtSend = ShareClass.GetDataSetFromSql(strWZSendHQL, "WZSend").Tables[0];
                         if (dtSend != null && dtSend.Rows.Count > 0)
                         {
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGJHXYFLDJSBJW1DWTD+"')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGJHXYFLDJSBJW1DWTD").ToString().Trim()+"')", true);
                             return;
                         }
 
@@ -165,7 +165,7 @@ public partial class TTWZPlanChange : System.Web.UI.Page
                         DataTable dtDelSend = ShareClass.GetDataSetFromSql(strDelWZSendHQL, "DelWZSend").Tables[0];
                         if (dtDelSend != null && dtDelSend.Rows.Count > 0)
                         {
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGJHXYFLDJSBJW0DWSC+"')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGJHXYFLDJSBJW0DWSC").ToString().Trim()+"')", true);
                             return;
                         }
 
@@ -181,7 +181,7 @@ public partial class TTWZPlanChange : System.Web.UI.Page
                             string strMessage = string.Empty;
                             int intRowCount = 0;
                             string strResult = string.Empty;
-                            strResult += "发料单号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实发数量&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;计划金额<br />";
+                            strResult += LanguageHandle.GetWord("FaLiaoChanHaonbspnbspnbspnbspn").ToString().Trim();
                             foreach (DataRow drAllSend in dtAllSend.Rows)
                             {
                                 string strSendCode = ShareClass.ObjectToString(drAllSend["SendCode"]);
@@ -195,7 +195,7 @@ public partial class TTWZPlanChange : System.Web.UI.Page
 
                                 strResult += strSendCode + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + decimalActualNumber + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + decimalPlanMoney + "<br />";
                             }
-                            strMessage = "该计划下已生效的发料单共" + intRowCount + "条<br />";
+                            strMessage = LanguageHandle.GetWord("GaiJiHuaXiaYiShengXiaoDeFaLiao").ToString().Trim() + intRowCount + LanguageHandle.GetWord("Tiaobr").ToString().Trim();
                             strMessage += strResult;
 
                             HF_Message.Value = strMessage;
@@ -203,7 +203,7 @@ public partial class TTWZPlanChange : System.Web.UI.Page
                             return;
                         }
                     }
-                    else if (wZPickingPlan.SupplyMethod == "甲供")
+                    else if (wZPickingPlan.SupplyMethod == LanguageHandle.GetWord("JiaGong").ToString().Trim())
                     {
                         //领料计划〈计划编号〉＝移交明细〈计划编号〉												
                         //移交明细〈凭证标记〉＝“-1”												
@@ -216,7 +216,7 @@ public partial class TTWZPlanChange : System.Web.UI.Page
                             string strMessage = string.Empty;
                             int intRowCount = 0;
                             string strResult = string.Empty;
-                            strResult += "移交单号&nbsp;&nbsp;&nbsp;&nbsp;实领数量&nbsp;&nbsp;&nbsp;&nbsp;开票金额&nbsp;&nbsp;&nbsp;&nbsp; 预算金额<br />";
+                            strResult += LanguageHandle.GetWord("YiJiaoChanHaonbspnbspnbspnbspS").ToString().Trim();
                             foreach (DataRow drTurnDetail in dtTurnDetail.Rows)
                             {
                                 string strTurnCode = ShareClass.ObjectToString(drTurnDetail["TurnCode"]);
@@ -229,7 +229,7 @@ public partial class TTWZPlanChange : System.Web.UI.Page
                                 intRowCount++;
                                 strResult += strTurnCode + "&nbsp;&nbsp;&nbsp;&nbsp;" + decimalActualNumber + "&nbsp;&nbsp;&nbsp;&nbsp;" + decimalTicketMoney + "&nbsp;&nbsp;&nbsp;&nbsp; " + decimalPlanMoney + "<br />";
                             }
-                            strMessage = "该计划下已摊入成本的甲方发料单共" + intRowCount + "条<br />";
+                            strMessage = LanguageHandle.GetWord("GaiJiHuaXiaYiTanRuChengBenDeJi").ToString().Trim() + intRowCount + LanguageHandle.GetWord("Tiaobr").ToString().Trim();
                             strMessage += strResult;
 
                             HF_TurnMessage.Value = strMessage;
@@ -241,13 +241,13 @@ public partial class TTWZPlanChange : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZXDLLDW+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZXDLLDW").ToString().Trim()+"')", true);
                 return;
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZLLJH+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZLLJH").ToString().Trim()+"')", true);
             return;
         }
     }
@@ -294,7 +294,7 @@ public partial class TTWZPlanChange : System.Web.UI.Page
                         ShareClass.RunSqlCommand(strUpdateSendHQL);
                     }
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTHCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTHCG").ToString().Trim()+"')", true);
                 }
             }
         }
@@ -358,7 +358,7 @@ public partial class TTWZPlanChange : System.Web.UI.Page
                         ShareClass.RunSqlCommand(strUpdateTurnDetailHQL);
                     }
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTHCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTHCG").ToString().Trim()+"')", true);
                 }
             }
         }

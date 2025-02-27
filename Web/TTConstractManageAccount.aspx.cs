@@ -122,9 +122,9 @@ public partial class TTConstractManageAccount : System.Web.UI.Page
             T_Project.EndDate as proenddate,
             t_constract.startdate - t_constract.enddate as duration,
             t_constract.warranty,
-            CASE WHEN t_constract.type like '%收入%' THEN (case when (select sum(T_ConstractReceivables.ReceivablesAccount) from T_ConstractReceivables where T_ConstractReceivables.ConstractCode=t_constract.constractcode)=0 
+            CASE WHEN t_constract.type like '%收入%' THEN (case when (select sum(T_ConstractReceivables.ReceivablesAccount) from T_ConstractReceivables where T_ConstractReceivables.ConstractCode=t_constract.constractcode)=0  
             then 0 else  (select T_ConstractReceivables.ReceiverAccount / T_ConstractReceivables.ReceivablesAccount from T_ConstractReceivables where T_ConstractReceivables.ConstractCode=t_constract.constractcode) end) 
-            WHEN t_constract.type like '%支出%' THEN (case when (select sum(T_ConstractPayable.PayableAccount) from T_ConstractPayable,T_ConstractPayableRecord 
+            WHEN t_constract.type like '%支出%' THEN (case when (select sum(T_ConstractPayable.PayableAccount) from T_ConstractPayable,T_ConstractPayableRecord  
             where T_ConstractPayableRecord.PayableID=T_ConstractPayable.ID and T_ConstractPayableRecord.ConstractCode=t_constract.constractcode)=0 then 0 
             else (select T_ConstractPayableRecord.OutOfPocketAccount / T_ConstractPayable.PayableAccount from T_ConstractPayable,T_ConstractPayableRecord 
             where T_ConstractPayableRecord.PayableID=T_ConstractPayable.ID and T_ConstractPayableRecord.ConstractCode=t_constract.constractcode) end) END AS prepaypercent,
@@ -206,7 +206,7 @@ public partial class TTConstractManageAccount : System.Web.UI.Page
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>" + Resources.lang.WoDeHeTong + "</B>";
+        node1.Text = "<B>" + LanguageHandle.GetWord("WoDeHeTong").ToString().Trim() + "</B>";
         node1.Target = "";
         node1.Expanded = true;
         ConstractTreeView.Nodes.Add(node1);
@@ -309,7 +309,7 @@ public partial class TTConstractManageAccount : System.Web.UI.Page
 
 public class EmptyGridview
 {
-    private static string emptyText = "没有查询到相应信息";
+    private static string emptyText = LanguageHandle.GetWord("MeiYouChaXunDaoXiangYingXinXi").ToString().Trim();
 
     public EmptyGridview()
     {

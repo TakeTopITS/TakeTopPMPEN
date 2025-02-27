@@ -27,7 +27,7 @@ public partial class TTProjectImplementProfitCostAndStatusReport : System.Web.UI
         strLangCode = Session["LangCode"].ToString();
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text = "项目利润成本状态报表";
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMuLiRunChengBenZhuangTaiB").ToString().Trim();
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
@@ -35,7 +35,7 @@ public partial class TTProjectImplementProfitCostAndStatusReport : System.Web.UI
             DLC_BeginDate.Text = DateTime.Now.Year.ToString() + "-01-01";
             DLC_EndDate.Text = DateTime.Now.Year.ToString() + "-12-31";
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT, TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             ShareClass.InitialAllProjectTree(TreeView2, strDepartString);
@@ -64,7 +64,7 @@ public partial class TTProjectImplementProfitCostAndStatusReport : System.Web.UI
 
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strChartTitle = "利润成本分布图";
+        strChartTitle = LanguageHandle.GetWord("LiRunChengBenFenBuTu").ToString().Trim();
         strHQL = @"Select Account as XName,SUM(Amount) as YNumber From V_ProjectProfitAndCostChart 
                       Where ";
 
@@ -82,7 +82,7 @@ public partial class TTProjectImplementProfitCostAndStatusReport : System.Web.UI
         IFrame_Chart_ProfitCost.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strHQL);
 
 
-        strChartTitle = "项目状态分布图";
+        strChartTitle = LanguageHandle.GetWord("XiangMuZhuangTaiFenBuTu").ToString().Trim();
         strHQL = @"Select Status as XName,COUNT(*) as YNumber From V_ProjectStatusNumberChart
                       Where ";
 
@@ -139,7 +139,7 @@ public partial class TTProjectImplementProfitCostAndStatusReport : System.Web.UI
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyy-MM-dd");
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select Account as '科目',SUM(Amount) as '金额' From V_ProjectProfitAndCostChart 
+        strHQL = @"Select Account as '科目',SUM(Amount) as '金额' From V_ProjectProfitAndCostChart  
                       Where ";
 
         if (strProjectID != "")
@@ -200,11 +200,11 @@ public partial class TTProjectImplementProfitCostAndStatusReport : System.Web.UI
 
         DataTable dtProject = ds.Tables[0];
 
-        Export3Excel(dtProject, "项目利润成本统计表.xls");
+        Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuLiRunChengBenTongJiBiao").ToString().Trim());
 
         LB_ResultNumber.Text = GridView1.Rows.Count.ToString();
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true); 
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

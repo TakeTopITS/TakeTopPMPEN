@@ -89,7 +89,7 @@ public partial class TTWZCompactLawList : System.Web.UI.Page
                 if (listCompact != null && listCompact.Count == 1)
                 {
                     WZCompact wZCompact = (WZCompact)listCompact[0];
-                    if (wZCompact.Progress == "生效")
+                    if (wZCompact.Progress == LanguageHandle.GetWord("ShengXiao").ToString().Trim())
                     {
                         wZCompact.Progress = "Approved";
                         wZCompact.ApproveTime = DateTime.Now.ToString("yyyy-MM-dd");
@@ -98,11 +98,11 @@ public partial class TTWZCompactLawList : System.Web.UI.Page
 
                         DataBinder();
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZPZCG+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZPZCG").ToString().Trim()+"')", true);
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZHTJDBSCBZTBNPZ+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZHTJDBSCBZTBNPZ").ToString().Trim()+"')", true);
                         return;
                     }
                 }
@@ -117,20 +117,20 @@ public partial class TTWZCompactLawList : System.Web.UI.Page
                 if (listCompact != null && listCompact.Count == 1)
                 {
                     WZCompact wZCompact = (WZCompact)listCompact[0];
-                    if (wZCompact.Progress == "生效")
+                    if (wZCompact.Progress == LanguageHandle.GetWord("ShengXiao").ToString().Trim())
                     {
-                        wZCompact.Progress = "草签";
+                        wZCompact.Progress = LanguageHandle.GetWord("CaoQian").ToString().Trim();
                         wZCompact.ApproveTime = "";
 
                         wZCompactBLL.UpdateWZCompact(wZCompact, wZCompact.CompactCode);
 
                         DataBinder();
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTHCG+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTHCG").ToString().Trim()+"')", true);
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZHTJDBSCBZTBNTH+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZHTJDBSCBZTBNTH").ToString().Trim()+"')", true);
                         return;
                     }
                 }

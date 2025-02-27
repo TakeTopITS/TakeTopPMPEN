@@ -31,7 +31,7 @@ public partial class TTAssetApplicationReport : System.Web.UI.Page
         strRelatedID = Request.QueryString["RelatedID"];
 
 
-        LB_ReportName.Text = Resources.lang.ZiChanLingYongBaoBiao;
+        LB_ReportName.Text = LanguageHandle.GetWord("ZiChanLingYongBaoBiao").ToString().Trim();
 
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);

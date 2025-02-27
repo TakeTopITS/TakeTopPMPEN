@@ -554,7 +554,7 @@ public partial class TTWorkFlowCommonDataViewForBrowse : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + Resources.lang.ZZJGCGZLMBBCZQJC + "')", true);
+            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCGZLMBBCZQJC").ToString().Trim() + "')", true);
         }
 
      

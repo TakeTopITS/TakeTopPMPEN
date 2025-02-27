@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Resources;
 using System.Web;
 
@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 namespace TakeTopGantt.handler
 {
     /// <summary>
-    /// GetPageModuleDataForGanttChartRightMemu 的摘要说明
+    /// GetPageModuleDataForGanttChartRightMemu ��ժҪ˵��
     /// </summary>
     public class GetPageModuleDataForGanttChartRightMemu : IHttpHandler
     {

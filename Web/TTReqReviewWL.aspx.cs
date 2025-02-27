@@ -35,7 +35,7 @@ public partial class TTReqReviewWL : System.Web.UI.Page
         DataList1.DataBind();
 
         Requirement requirement = (Requirement)lst[0];
-        //this.Title = "需求：" + strReqID + " " + requirement.ReqName + Resources.lang.PingShen;
+        //this.Title = "需求：" + strReqID + " " + requirement.ReqName + LanguageHandle.GetWord("PingShen").ToString().Trim();
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
         {
@@ -56,7 +56,7 @@ public partial class TTReqReviewWL : System.Web.UI.Page
             LoadRelatedWL("RequirementReview", "Requirement", int.Parse(strReqID));
 
 
-            TB_WLName.Text = Resources.lang.XuQiu  + strReqID  + requirement.ReqName + Resources.lang.PingShen;
+            TB_WLName.Text = LanguageHandle.GetWord("XuQiu").ToString().Trim()  + strReqID  + requirement.ReqName + LanguageHandle.GetWord("PingShen").ToString().Trim();
             //HL_WLTem.NavigateUrl = "TTRelatedWorkFlowTemplate.aspx?RelatedType=Req&RelatedID=" + strReqID;
         }
     }
@@ -143,11 +143,11 @@ public partial class TTReqReviewWL : System.Web.UI.Page
 
             LoadRelatedWL("RequirementReview", "Requirement", int.Parse(strReqID));
 
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXPSSGZLSCDGZLGLYMJHCGZLS+"')", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXPSSGZLSCDGZLGLYMJHCGZLS").ToString().Trim()+"')", true);
         }
         catch
         {
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXPSSGZLSB+"')", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXPSSGZLSB").ToString().Trim()+"')", true);
         }
 
         return strWLID;

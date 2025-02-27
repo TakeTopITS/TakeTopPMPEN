@@ -97,9 +97,9 @@ public partial class TTConstractView : System.Web.UI.Page
             CountInvoiceAmount(strConstractCode);
 
 
-            LoadRelatedDocByDocType(strConstractCode, "补充协议", DataGrid19);
-            LoadRelatedDocByDocType(strConstractCode, "合同依据", DataGrid20);
-            LoadRelatedDocByDocType(strConstractCode, "项目其他信息", DataGrid21);
+            LoadRelatedDocByDocType(strConstractCode, LanguageHandle.GetWord("BuChongXieYi").ToString().Trim(), DataGrid19);
+            LoadRelatedDocByDocType(strConstractCode, LanguageHandle.GetWord("GeTongYiJu").ToString().Trim(), DataGrid20);
+            LoadRelatedDocByDocType(strConstractCode, LanguageHandle.GetWord("XiangMuJiTaXinXi").ToString().Trim(), DataGrid21);
 
             LB_ConstractCode.Text = strConstractCode;
 
@@ -455,9 +455,9 @@ public partial class TTConstractView : System.Web.UI.Page
         strUserCode = LB_UserCode.Text.Trim();
 
         strHQL = "from Document as document where ";
-        strHQL += " (document.RelatedType = '合同' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + ")";
-        strHQL += " or document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = '合同' and workFlow.RelatedID in ( select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + "))";
-        strHQL += " or document.RelatedType = '协作' and document.RelatedID in (Select collaboration.CoID From Collaboration as collaboration Where collaboration.RelatedType = 'CONSTRACT' and collaboration.RelatedCode =" + "'" + strConstractCode + "'" + "))";
+        strHQL += " (document.RelatedType = '合同' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + ")"; 
+        strHQL += " or document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = '合同' and workFlow.RelatedID in ( select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + "))"; 
+        strHQL += " or document.RelatedType = '协作' and document.RelatedID in (Select collaboration.CoID From Collaboration as collaboration Where collaboration.RelatedType = 'CONSTRACT' and collaboration.RelatedCode =" + "'" + strConstractCode + "'" + "))"; 
         strHQL += " and document.DocType = '" + strDocType + "'";
 
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";

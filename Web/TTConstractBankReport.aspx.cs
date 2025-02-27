@@ -130,12 +130,12 @@ public partial class TTConstractBankReport : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = Resources.lang.YinHangBaoBiao + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("YinHangBaoBiao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 CreateExcel(fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDCDSJYWJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
             }
         }
     }
@@ -160,7 +160,7 @@ public partial class TTConstractBankReport : System.Web.UI.Page
         strBank = "%" + strBank + "%";
 
         strUnitName = TXT_UnitName.Text.Trim();
-        strHQL = "Select to_char(OperateTime, 'yyyy/mm/dd') 时间,Bank 银行,BillCode 原始单号,ConstractCode 合同代码,Currency 币别, sum(ReciverAmount) 收入 ,sum(PayableAmount) 支出,UnitName 单位,sum(HandlingCharge) 手续费,sum(Balance) 每日现金余额  from V_ConstractBankReport Where";
+        strHQL = "Select to_char(OperateTime, 'yyyy/mm/dd') 时间,Bank 银行,BillCode 原始单号,ConstractCode 合同代码,Currency 币别, sum(ReciverAmount) 收入 ,sum(PayableAmount) 支出,UnitName 单位,sum(HandlingCharge) 手续费,sum(Balance) 每日现金余额  from V_ConstractBankReport Where"; 
         strHQL += " ((ConstractCode in (Select ConstractCode From T_Constract Where DepartCode in " + strDepartString + "))";
         strHQL += " Or (ConstractCode in (Select ConstractCode From T_ConstractRelatedUser Where UserCode like  " + "'" + strLikeUserCode + "'" + ")))";
         strHQL += " and ConstractCode Like " + "'" + strConstractCode + "'";

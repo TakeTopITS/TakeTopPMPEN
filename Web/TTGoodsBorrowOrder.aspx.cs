@@ -144,7 +144,7 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
             LB_BorrowNO.Text = strBorrowNO;
 
 
-            int intWLNumber = LoadRelatedWL("MaterialBorrowing", "物料", int.Parse(strBorrowNO));
+            int intWLNumber = LoadRelatedWL("MaterialBorrowing", LanguageHandle.GetWord("WuLiao").ToString().Trim(), int.Parse(strBorrowNO));
             if (intWLNumber > 0)
             {
                 BT_NewMain.Visible = false;
@@ -160,7 +160,7 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
                 BT_SubmitApply.Enabled = true;
             }
 
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialBorrowing", "物料", strBorrowNO, "0");
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialBorrowing", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strBorrowNO, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_NewMain.Visible = true;
@@ -220,7 +220,7 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
 
             if (e.CommandName == "Delete")
             {
-                intWLNumber = LoadRelatedWL("MaterialBorrowing", "物料", int.Parse(strBorrowNO));
+                intWLNumber = LoadRelatedWL("MaterialBorrowing", LanguageHandle.GetWord("WuLiao").ToString().Trim(), int.Parse(strBorrowNO));
                 if (intWLNumber > 0)
                 {
                     return;
@@ -242,7 +242,7 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCCKNCZMXJLJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCCKNCZMXJLJC").ToString().Trim() + "')", true);
                 }
             }
 
@@ -377,11 +377,11 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
             LoadGoodsBorrowOrderDetail(strBorrowNO);
 
        
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -437,13 +437,13 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
 
             //从流程中打开的业务单
             //更改工作流关联的数据文件
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialBorrowing", "物料", strBorrowNO, "0");
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialBorrowing", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strBorrowNO, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 string strCmdText = "select BorrowNO as DetailBorrowNO, * from T_GoodsBorrowOrder where BorrowNO = " + strBorrowNO;
                 if (strToDoWLID == null)
                 {
-                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialBorrowing", "物料", strBorrowNO);
+                    strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialBorrowing", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strBorrowNO);
                 }
 
                 if (strToDoWLID != null)
@@ -452,11 +452,11 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
                 }
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -633,7 +633,7 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
 
             string strBorrowNO = LB_BorrowNO.Text.Trim();
          
-            int intWLNumber = LoadRelatedWL("MaterialBorrowing", "物料", int.Parse(strBorrowNO));
+            int intWLNumber = LoadRelatedWL("MaterialBorrowing", LanguageHandle.GetWord("WuLiao").ToString().Trim(), int.Parse(strBorrowNO));
             if (intWLNumber > 0)
             {
                 BT_NewMain.Visible = false;
@@ -647,7 +647,7 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
                 BT_SubmitApply.Enabled = true;
             }
 
-            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialBorrowing", "物料", strBorrowNO, "0");
+            string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialBorrowing", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strBorrowNO, "0");
             if (strToDoWLID != null | strAllowFullEdit == "YES")
             {
                 BT_NewMain.Visible = true;
@@ -689,7 +689,7 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
 
             if (e.CommandName == "Delete")
             {
-                intWLNumber = LoadRelatedWL("MaterialBorrowing", "物料", int.Parse(strBorrowNO));
+                intWLNumber = LoadRelatedWL("MaterialBorrowing", LanguageHandle.GetWord("WuLiao").ToString().Trim(), int.Parse(strBorrowNO));
 
                 if (intWLNumber > 0 & strToDoWLID == null)
                 {
@@ -710,14 +710,14 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
 
                     //从流程中打开的业务单
                     //更改工作流关联的数据文件
-                    strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialBorrowing", "物料", strBorrowNO, "0");
+                    strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialBorrowing", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strBorrowNO, "0");
                     if (strToDoWLID != null | strAllowFullEdit == "YES")
                     {
                         string strCmdText;
                         strCmdText = "select BorrowNO as DetailBorrowNO, * from T_GoodsBorrowOrder where BorrowNO = " + strBorrowNO;
                         if (strToDoWLID == null)
                         {
-                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialBorrowing", "物料", strBorrowNO);
+                            strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialBorrowing", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strBorrowNO);
                         }
 
                         if (strToDoWLID != null)
@@ -732,11 +732,11 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
                         }
                     }
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -768,12 +768,12 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
         }
 
         strBorrowNO = LB_BorrowNO.Text.Trim();
-        int intWLNumber = LoadRelatedWL("MaterialBorrowing", "物料", int.Parse(strBorrowNO));
+        int intWLNumber = LoadRelatedWL("MaterialBorrowing", LanguageHandle.GetWord("WuLiao").ToString().Trim(), int.Parse(strBorrowNO));
         if (intWLNumber > 0 & strToDoWLID == null)
         {
             BT_SubmitApply.Enabled = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBCZGLDGZLJLBNSCJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBCZGLDGZLJLBNSCJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
 
@@ -819,7 +819,7 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
 
         if (strGoodsCode == "" | strGoodsName == "" | strSpec == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYSRHYXDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
 
@@ -862,14 +862,14 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
 
                 //从流程中打开的业务单
                 //更改工作流关联的数据文件
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialBorrowing", "物料", strBorrowNO, "0");
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialBorrowing", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strBorrowNO, "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     string strCmdText;
                     strCmdText = "select BorrowNO as DetailBorrowNO, * from T_GoodsBorrowOrder where BorrowNO = " + strBorrowNO;
                     if (strToDoWLID == null)
                     {
-                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialBorrowing", "物料", strBorrowNO);
+                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialBorrowing", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strBorrowNO);
                     }
 
                     if (strToDoWLID != null)
@@ -884,14 +884,14 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
                     }
                 }
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
 
@@ -924,7 +924,7 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
 
         if (strGoodsCode == "" | strGoodsName == "" | strSpec == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYSRHYXDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
 
@@ -966,14 +966,14 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
 
                 //从流程中打开的业务单
                 //更改工作流关联的数据文件
-                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialBorrowing", "物料", strBorrowNO, "0");
+                string strAllowFullEdit = ShareClass.GetWorkflowTemplateStepFullAllowEditValue("MaterialBorrowing", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strBorrowNO, "0");
                 if (strToDoWLID != null | strAllowFullEdit == "YES")
                 {
                     string strCmdText;
                     strCmdText = "select BorrowNO as DetailBorrowNO, * from T_GoodsBorrowOrder where BorrowNO = " + strBorrowNO;
                     if (strToDoWLID == null)
                     {
-                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialBorrowing", "物料", strBorrowNO);
+                        strToDoWLID = ShareClass.GetBusinessRelatedWorkFlowID("MaterialBorrowing", LanguageHandle.GetWord("WuLiao").ToString().Trim(), strBorrowNO);
                     }
 
                     if (strToDoWLID != null)
@@ -988,13 +988,13 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
                     }
                 }
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true','popDetailWindow') ", true);
 
@@ -1020,7 +1020,7 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
         strTemName = DL_TemName.SelectedValue.Trim();
         if (strTemName == "")
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSSCSBLCMBBNWKJC + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC").ToString().Trim() + "');</script>");
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popAssignWindow','true') ", true);
 
@@ -1046,7 +1046,7 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
             workFlow.CreatorName = ShareClass.GetUserName(strUserCode);
             workFlow.Description = strApplyReason;
             workFlow.XMLFile = strXMLFile2;
-            workFlow.RelatedType = "物料";
+            workFlow.RelatedType = LanguageHandle.GetWord("WuLiao").ToString().Trim();
             workFlow.RelatedID = int.Parse(strBorrowNO);
             workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
 
@@ -1079,23 +1079,23 @@ public partial class TTGoodsBorrowOrder : System.Web.UI.Page
                 strXMLFile2 = Server.MapPath(strXMLFile2);
                 xmlProcess.DbToXML(strCmdText, "T_GoodsApplication", strXMLFile2);
 
-                LoadRelatedWL("MaterialBorrowing", "物料", int.Parse(strBorrowNO));
+                LoadRelatedWL("MaterialBorrowing", LanguageHandle.GetWord("WuLiao").ToString().Trim(), int.Parse(strBorrowNO));
 
                 BT_SubmitApply.Enabled = false;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGZLSCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGZLSCCG").ToString().Trim() + "')", true);
             }
             catch
             {
                 strWLID = "0";
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGZLSSCSB + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGZLSSCSB").ToString().Trim() + "')", true);
             }
         }
         catch
         {
             strWLID = "0";
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
         }
 
 

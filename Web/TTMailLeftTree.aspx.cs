@@ -81,12 +81,12 @@ public partial class LeftTree : System.Web.UI.Page
             return;
         }
 
-        CreateMailFolder(strUserCode, "New", Resources.lang.ZZNewMail);
-        CreateMailFolder(strUserCode, "Read", Resources.lang.ZZReadMail);
-        CreateMailFolder(strUserCode, "Waiting", Resources.lang.ZZWaitingMail);
-        CreateMailFolder(strUserCode, "Send", Resources.lang.ZZSendMail);
-        CreateMailFolder(strUserCode, "Draft", Resources.lang.ZZDraftBox);
-        CreateMailFolder(strUserCode, "Rubbish", Resources.lang.ZZRubbishBox);
+        CreateMailFolder(strUserCode, "New", LanguageHandle.GetWord("ZZNewMail").ToString().Trim());
+        CreateMailFolder(strUserCode, "Read", LanguageHandle.GetWord("ZZReadMail").ToString().Trim());
+        CreateMailFolder(strUserCode, "Waiting", LanguageHandle.GetWord("ZZWaitingMail").ToString().Trim());
+        CreateMailFolder(strUserCode, "Send", LanguageHandle.GetWord("ZZSendMail").ToString().Trim());
+        CreateMailFolder(strUserCode, "Draft", LanguageHandle.GetWord("ZZDraftBox").ToString().Trim());
+        CreateMailFolder(strUserCode, "Rubbish", LanguageHandle.GetWord("ZZRubbishBox").ToString().Trim());
 
         strHQL = "FROM Folders as folders where folders.OwnerCode = " + "'" + strUserCode + "'" + " order by folders.FolderID ASC";
         FoldersBLL foldersBLL = new FoldersBLL();
@@ -174,7 +174,7 @@ public partial class LeftTree : System.Web.UI.Page
         }
         catch
         {
-            Response.Write(Resources.lang.ZZJGYXCSPZYWTBNSVYJQJC);
+            Response.Write(LanguageHandle.GetWord("ZZJGYXCSPZYWTBNSVYJQJC").ToString().Trim());
         }
     }
 
@@ -361,16 +361,16 @@ public partial class LeftTree : System.Web.UI.Page
 
         ///添加邮件主题
         mailMsg.Subject = mails.Title.Trim();
-        mailMsg.Subject = mailMsg.Subject.Replace("审批通知", Resources.lang.ZZShengPiTongZhi);
+        mailMsg.Subject = mailMsg.Subject.Replace(LanguageHandle.GetWord("ShenPiTongZhi").ToString().Trim(), LanguageHandle.GetWord("ZZShengPiTongZhi").ToString().Trim());
 
         nContain += mails.Title.Trim().Length;
 
         ///添加邮件内容
         mailMsg.Body = mails.Body.Trim();
 
-        mailMsg.Body = mailMsg.Body.Replace("通知：你好，你有审批工作，内容：自审 ，请及时登录管理平台进行处理，此信息来自：系统管理员！", Resources.lang.ZZTZNHNYSPGZNRZSQJSDLGLPTJXCLZXXLZXTGLY);
-        mailMsg.Body = mailMsg.Body.Replace("通知：你好，你有审批工作，内容：", Resources.lang.ZZTZNHNYSPGZNR);
-        mailMsg.Body = mailMsg.Body.Replace("请及时登录管理平台进行处理，此信息来自：系统管理员！", Resources.lang.ZZQJSDLGLPTJXCLZXXLZXTGLY);
+        mailMsg.Body = mailMsg.Body.Replace(LanguageHandle.GetWord("TongZhiNiHaoNiYouShenPiGongZuo").ToString().Trim(), LanguageHandle.GetWord("ZZTZNHNYSPGZNRZSQJSDLGLPTJXCLZXXLZXTGLY").ToString().Trim());
+        mailMsg.Body = mailMsg.Body.Replace(LanguageHandle.GetWord("TongZhiNiHaoNiYouShenPiGongZuo").ToString().Trim(), LanguageHandle.GetWord("ZZTZNHNYSPGZNR").ToString().Trim());
+        mailMsg.Body = mailMsg.Body.Replace(LanguageHandle.GetWord("QingJiShiDengLuGuanLiPingTaiJi").ToString().Trim(), LanguageHandle.GetWord("ZZQJSDLGLPTJXCLZXXLZXTGLY").ToString().Trim());
 
         mailMsg.BodyEncoding = Encoding.UTF8;
         mailMsg.IsBodyHtml = true;

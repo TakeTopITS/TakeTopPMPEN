@@ -45,7 +45,7 @@ public partial class TTDailyWorkTaskView : System.Web.UI.Page
 
             DataList1.DataSource = ds;
             DataList1.DataBind();
-            LB_QueryScope.Text = Resources.lang.ZZXMCYSY;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZXMCYSY").ToString().Trim();
 
             LB_Total.Text = ShareClass.getCurrentDateTaskTotalForMember(strProjectID, strUserCode, DateTime.Now.ToString("yyyyMMdd"));
 
@@ -62,11 +62,11 @@ public partial class TTDailyWorkTaskView : System.Web.UI.Page
 
             //if (ds.Tables[0].Rows.Count > 0)
             //{
-            //    LB_Total.Text = Resources.lang.FeiYong + ": " + ds.Tables[0].Rows[0][0].ToString() + ", " + Resources.lang.GongSi + ": " + ds.Tables[0].Rows[0][1].ToString() + ", " + Resources.lang.JingDu + ": " + ds.Tables[0].Rows[0][2].ToString() + "%";
+            //    LB_Total.Text = LanguageHandle.GetWord("FeiYong").ToString().Trim() + ": " + ds.Tables[0].Rows[0][0].ToString() + ", " + LanguageHandle.GetWord("GongSi").ToString().Trim() + ": " + ds.Tables[0].Rows[0][1].ToString() + ", " + LanguageHandle.GetWord("JingDu").ToString().Trim() + ": " + ds.Tables[0].Rows[0][2].ToString() + "%";
             //}
             //else
             //{
-            //    LB_Total.Text = Resources.lang.FeiYong + ": " + "0, " + Resources.lang.GongSi + ": " +  "0, " + Resources.lang.JingDu + ": " + "0%";
+            //    LB_Total.Text = LanguageHandle.GetWord("FeiYong").ToString().Trim() + ": " + "0, " + LanguageHandle.GetWord("GongSi").ToString().Trim() + ": " +  "0, " + LanguageHandle.GetWord("JingDu").ToString().Trim() + ": " + "0%";
             //}
 
 

@@ -44,7 +44,7 @@ public partial class TTWZObjectCodeEdit : System.Web.UI.Page
 
             if (fi.Exists)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+Resources.lang.ZZCZTMWJSCSBGMHZSC+"');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim()+"');</script>");
             }
 
             if (Directory.Exists(strDocSavePath) == false)
@@ -71,7 +71,7 @@ public partial class TTWZObjectCodeEdit : System.Web.UI.Page
             }
             catch (Exception ex)
             {
-                lblMsg.Text = string.Format("<span style='color:red' >导入时出现以下错误: {0}!</span>", ex.Message);
+                lblMsg.Text = string.Format(LanguageHandle.GetWord("spanstylecolorredDaoRuShiChuXi").ToString().Trim(), ex.Message);
             }
         }
     }
@@ -96,9 +96,9 @@ public partial class TTWZObjectCodeEdit : System.Web.UI.Page
             lineNumber++;
             try
             {
-                string strXLCode = ShareClass.ObjectToString(row["小类代码"]);
-                string strObjectName = ShareClass.ObjectToString(row["物资名称"]);
-                string strModel = ShareClass.ObjectToString(row["规格型号"]);
+                string strXLCode = ShareClass.ObjectToString(row[LanguageHandle.GetWord("XiaoLeiDaiMa").ToString().Trim()]);
+                string strObjectName = ShareClass.ObjectToString(row[LanguageHandle.GetWord("WuZiMingChen").ToString().Trim()]);
+                string strModel = ShareClass.ObjectToString(row[LanguageHandle.GetWord("GuiGeXingHao").ToString().Trim()]);
 
                 if (string.IsNullOrEmpty(strXLCode) && string.IsNullOrEmpty(strObjectName) && string.IsNullOrEmpty(strModel))
                 {
@@ -111,99 +111,99 @@ public partial class TTWZObjectCodeEdit : System.Web.UI.Page
                 }
                 else
                 {
-                    resultMsg += string.Format("第{0}行，物资名称不能重复<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangWuZiMingChenBuNengChong").ToString().Trim(), lineNumber);
                     continue;
                 }
 
                 if (string.IsNullOrEmpty(strXLCode))
                 {
-                    resultMsg += string.Format("第{0}行，小类代码不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangXiaoLeiDaiMaBuNengWeiKo").ToString().Trim(), lineNumber);
                     continue;
                 }
                 string strXLCodeHQL = "select count(1) from T_WZMaterialXL where XLCode = '" + strXLCode + "'";
                 DataTable dtXLCode = ShareClass.GetDataSetFromSql(strXLCodeHQL, "strXLCodeHQL").Tables[0];
                 if (dtXLCode == null || dtXLCode.Rows.Count == 0)
                 {
-                    resultMsg += string.Format("第{0}行，小类代码在小类基础数据表中不存在<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangXiaoLeiDaiMaZaiXiaoLeiJ").ToString().Trim(), lineNumber);
                     continue;
                 }
                 if (string.IsNullOrEmpty(strObjectName))
                 {
-                    resultMsg += string.Format("第{0}行，物资名称不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangWuZiMingChenBuNengWeiKo").ToString().Trim(), lineNumber);
                     continue;
                 }
                 if (string.IsNullOrEmpty(strModel))
                 {
-                    resultMsg += string.Format("第{0}行，规格型号不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangGuiGeXingHaoBuNengWeiKo").ToString().Trim(), lineNumber);
                     continue;
                 }
-                if (string.IsNullOrEmpty(ShareClass.ObjectToString(row["标准"])))
+                if (string.IsNullOrEmpty(ShareClass.ObjectToString(row[LanguageHandle.GetWord("BiaoZhun").ToString().Trim()])))
                 {
-                    resultMsg += string.Format("第{0}行，标准不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangBiaoZhunBuNengWeiKongbr").ToString().Trim(), lineNumber);
                     continue;
                 }
-                if (string.IsNullOrEmpty(ShareClass.ObjectToString(row["级别"])))
+                if (string.IsNullOrEmpty(ShareClass.ObjectToString(row[LanguageHandle.GetWord("JiBie").ToString().Trim()])))
                 {
-                    resultMsg += string.Format("第{0}行，级别不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangJiBieBuNengWeiKongbr").ToString().Trim(), lineNumber);
                     continue;
                 }
-                if (string.IsNullOrEmpty(ShareClass.ObjectToString(row["计量单位"])))
+                if (string.IsNullOrEmpty(ShareClass.ObjectToString(row[LanguageHandle.GetWord("JiLiangChanWei").ToString().Trim()])))
                 {
-                    resultMsg += string.Format("第{0}行，计量单位不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangJiLiangChanWeiBuNengWei").ToString().Trim(), lineNumber);
                     continue;
                 }
-                if (string.IsNullOrEmpty(ShareClass.ObjectToString(row["换算单位"])))
+                if (string.IsNullOrEmpty(ShareClass.ObjectToString(row[LanguageHandle.GetWord("HuanSuanChanWei").ToString().Trim()])))
                 {
-                    resultMsg += string.Format("第{0}行，计量单位不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangJiLiangChanWeiBuNengWei").ToString().Trim(), lineNumber);
                     continue;
                 }
-                if (string.IsNullOrEmpty(ShareClass.ObjectToString(row["换算系数"])))
+                if (string.IsNullOrEmpty(ShareClass.ObjectToString(row[LanguageHandle.GetWord("HuanSuanJiShu").ToString().Trim()])))
                 {
-                    resultMsg += string.Format("第{0}行，换算系数不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangHuanSuanJiShuBuNengWeiK").ToString().Trim(), lineNumber);
                     continue;
                 }
-                if (string.IsNullOrEmpty(ShareClass.ObjectToString(row["对照描述"])))
+                if (string.IsNullOrEmpty(ShareClass.ObjectToString(row[LanguageHandle.GetWord("DuiZhaoMiaoShu").ToString().Trim()])))
                 {
-                    resultMsg += string.Format("第{0}行，对照描述不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangDuiZhaoMiaoShuBuNengWei").ToString().Trim(), lineNumber);
                     continue;
                 }
-                if (string.IsNullOrEmpty(ShareClass.ObjectToString(row["对照标准"])))
+                if (string.IsNullOrEmpty(ShareClass.ObjectToString(row[LanguageHandle.GetWord("DuiZhaoBiaoZhun").ToString().Trim()])))
                 {
-                    resultMsg += string.Format("第{0}行，对照标准不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangDuiZhaoBiaoZhunBuNengWe").ToString().Trim(), lineNumber);
                     continue;
                 }
 
                 //验证计量单位，换算单位是否在计量单位表中存在
-                string strUnit = ShareClass.ObjectToString(row["计量单位"]);
+                string strUnit = ShareClass.ObjectToString(row[LanguageHandle.GetWord("JiLiangChanWei").ToString().Trim()]);
                 string strUnitHQL = "select count(1) as RowNumber from T_WZSpan where UnitName = '" + strUnit + "'";
                 DataTable dtUnit = ShareClass.GetDataSetFromSql(strUnitHQL, "strUnitHQL").Tables[0];
                 if (dtUnit == null || dtUnit.Rows.Count == 0)
                 {
-                    resultMsg += string.Format("第{0}行，计量单位在计量单位的基础表中不存在<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangJiLiangChanWeiZaiJiLian").ToString().Trim(), lineNumber);
                     continue;
                 }
 
-                string strConvertUnit = ShareClass.ObjectToString(row["换算单位"]);
+                string strConvertUnit = ShareClass.ObjectToString(row[LanguageHandle.GetWord("HuanSuanChanWei").ToString().Trim()]);
                 string strConvertUnitHQL = "select count(1) as RowNumber from T_WZSpan where UnitName = '" + strConvertUnit + "'";
                 DataTable dtConvertUnit = ShareClass.GetDataSetFromSql(strConvertUnitHQL, "strConvertUnitHQL").Tables[0];
                 if (dtConvertUnit == null || dtConvertUnit.Rows.Count == 0)
                 {
-                    resultMsg += string.Format("第{0}行，换算单位在计量单位的基础表中不存在<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangHuanSuanChanWeiZaiJiLia").ToString().Trim(), lineNumber);
                     continue;
                 }
 
                 //换算系统必须为整形或者带小数点
-                string strConvertRatio = ShareClass.ObjectToString(row["换算系数"]);
+                string strConvertRatio = ShareClass.ObjectToString(row[LanguageHandle.GetWord("HuanSuanJiShu").ToString().Trim()]);
                 bool IsBool = ShareClass.CheckIsNumber(strConvertRatio);
                 if (!IsBool)
                 {
-                    resultMsg += string.Format("第{0}行，换算系数只能是小数<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangHuanSuanJiShuZhiNengShi").ToString().Trim(), lineNumber);
                     continue;
                 }
             }
             catch (Exception ex)
             {
-                lblMsg.Text = string.Format("<span style='color:red' >导入时出现以下错误: {0}!</span>", ex.Message);
+                lblMsg.Text = string.Format(LanguageHandle.GetWord("spanstylecolorredDaoRuShiChuXi").ToString().Trim(), ex.Message);
             }
 
         }
@@ -237,32 +237,32 @@ public partial class TTWZObjectCodeEdit : System.Web.UI.Page
             string strReferStandard = string.Empty;
 
             lineNumber++;
-            strXLCode = ShareClass.ObjectToString(row["小类代码"]).Trim();
-            strObjectName = ShareClass.ObjectToString(row["物资名称"]);
+            strXLCode = ShareClass.ObjectToString(row[LanguageHandle.GetWord("XiaoLeiDaiMa").ToString().Trim()]).Trim();
+            strObjectName = ShareClass.ObjectToString(row[LanguageHandle.GetWord("WuZiMingChen").ToString().Trim()]);
 
             if (string.IsNullOrEmpty(strXLCode) && string.IsNullOrEmpty(strObjectName))
             {
                 break;
             }
 
-            strModel = ShareClass.ObjectToString(row["规格型号"]);
-            strCriterion = ShareClass.ObjectToString(row["标准"]);
-            strGrade = ShareClass.ObjectToString(row["级别"]);
-            strUnit = ShareClass.ObjectToString(row["计量单位"]);
+            strModel = ShareClass.ObjectToString(row[LanguageHandle.GetWord("GuiGeXingHao").ToString().Trim()]);
+            strCriterion = ShareClass.ObjectToString(row[LanguageHandle.GetWord("BiaoZhun").ToString().Trim()]);
+            strGrade = ShareClass.ObjectToString(row[LanguageHandle.GetWord("JiBie").ToString().Trim()]);
+            strUnit = ShareClass.ObjectToString(row[LanguageHandle.GetWord("JiLiangChanWei").ToString().Trim()]);
             string strUnitHQL = "select ID from T_WZSpan where UnitName = '" + strUnit + "'";
             DataTable dtUnit = ShareClass.GetDataSetFromSql(strUnitHQL, "strUnitHQL").Tables[0];
             int intUnit = 0;
             int.TryParse(dtUnit.Rows[0]["ID"].ToString(), out intUnit);
-            strConvertUnit = ShareClass.ObjectToString(row["换算单位"]);
+            strConvertUnit = ShareClass.ObjectToString(row[LanguageHandle.GetWord("HuanSuanChanWei").ToString().Trim()]);
             string strConvertUnitHQL = "select ID from T_WZSpan where UnitName = '" + strConvertUnit + "'";
             DataTable dtConvertUnit = ShareClass.GetDataSetFromSql(strConvertUnitHQL, "strConvertUnitHQL").Tables[0];
             int intConvertUnit = 0;
             int.TryParse(dtConvertUnit.Rows[0]["ID"].ToString(), out intConvertUnit);
-            strConvertRatio = ShareClass.ObjectToString(row["换算系数"]);
+            strConvertRatio = ShareClass.ObjectToString(row[LanguageHandle.GetWord("HuanSuanJiShu").ToString().Trim()]);
             decimal decimalConvertRatio = 0;
             decimal.TryParse(strConvertRatio, out decimalConvertRatio);
-            strReferDesc = ShareClass.ObjectToString(row["对照描述"]);
-            strReferStandard = ShareClass.ObjectToString(row["对照标准"]);
+            strReferDesc = ShareClass.ObjectToString(row[LanguageHandle.GetWord("DuiZhaoMiaoShu").ToString().Trim()]);
+            strReferStandard = ShareClass.ObjectToString(row[LanguageHandle.GetWord("DuiZhaoBiaoZhun").ToString().Trim()]);
 
             WZObjectRefer wZObjectRefer = new WZObjectRefer();
             wZObjectRefer.ObjectCode = "-"; //BasePageOrder.module.GetQueueObjectCode(strXLCode);//物资代码
@@ -289,11 +289,11 @@ public partial class TTWZObjectCodeEdit : System.Web.UI.Page
         {
             if (successCount == dtExcel.Rows.Count)
             {
-                resultMsg += string.Format("<br/>已成功导入 {0} 条数据", successCount);
+                resultMsg += string.Format(LanguageHandle.GetWord("brYiChengGongDaoRu0TiaoShuJu").ToString().Trim(), successCount);
             }
             else
             {
-                resultMsg += string.Format("<br/>已成功导入 {0} 条数据， 共有 {1} 条数据验证失败", successCount, dtExcel.Rows.Count - successCount);
+                resultMsg += string.Format(LanguageHandle.GetWord("brYiChengGongDaoRu0TiaoShuJuGo").ToString().Trim(), successCount, dtExcel.Rows.Count - successCount);
             }
 
             //重新加载列表
@@ -303,7 +303,7 @@ public partial class TTWZObjectCodeEdit : System.Web.UI.Page
         }
         else
         {
-            resultMsg += string.Format("<br/>未导入数据， 共有 {0} 条数据验证失败", dtExcel.Rows.Count - successCount);
+            resultMsg += string.Format(LanguageHandle.GetWord("brWeiDaoRuShuJuGongYou0TiaoShu").ToString().Trim(), dtExcel.Rows.Count - successCount);
         }
 
         return false;
@@ -314,10 +314,10 @@ public partial class TTWZObjectCodeEdit : System.Web.UI.Page
         // 下载项目对应相应模板.
         try
         {
-            string templatePath = Server.MapPath("Doc/Templates/对照代码.xls");
+            string templatePath = Server.MapPath(LanguageHandle.GetWord("DocTemplatesDuiZhaoDaiMaxls").ToString().Trim());
 
 
-            FileUtils.Download(templatePath, string.Format("{0}.xls", "对照代码"), Response, false);
+            FileUtils.Download(templatePath, string.Format("{0}.xls", LanguageHandle.GetWord("DuiZhaoDaiMa").ToString().Trim()), Response, false);
         }
         catch (Exception ex)
         { }
@@ -365,7 +365,7 @@ public partial class TTWZObjectCodeEdit : System.Web.UI.Page
                             and Model = '{2}'
                             and Criterion = '{3}'
                             and Grade = '{4}'
-                            and Unit = {5}", strXLCode, strObjectName, strModel, strCriterion, strGrade, intUnit);
+                            and Unit = {5}", strXLCode, strObjectName, strModel, strCriterion, strGrade, intUnit); 
                         ShareClass.RunSqlCommand(strUpdateObjectReferHQL);
                     }
                     else
@@ -405,7 +405,7 @@ public partial class TTWZObjectCodeEdit : System.Web.UI.Page
                             and Unit = {5}", strXLCode, strObjectName, strModel, strCriterion, strGrade, intUnit, strObjectCode);
                         ShareClass.RunSqlCommand(strUpdateObjectReferHQL);
 
-                        resultMsg += string.Format("物资代码：{0}，小类代码{1}，物资名称{2}，规格型号{3}，标准{4}，级别{5}，成功同步到物资代码表<br/>",
+                        resultMsg += string.Format(LanguageHandle.GetWord("WuZiDaiMa0XiaoLeiDaiMa1WuZiMin").ToString().Trim(),
                             strObjectCode, strXLCode, strObjectName, strModel, strCriterion, strGrade);
                     }
 
@@ -418,7 +418,7 @@ public partial class TTWZObjectCodeEdit : System.Web.UI.Page
             }
         }
         catch (Exception ex) {
-            lblMsg.Text = string.Format("<span style='color:red' >导入时出现以下错误: {0}!</span>", ex.Message);
+            lblMsg.Text = string.Format(LanguageHandle.GetWord("spanstylecolorredDaoRuShiChuXi").ToString().Trim(), ex.Message);
         }
     }
 

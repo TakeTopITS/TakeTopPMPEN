@@ -28,7 +28,7 @@ public partial class TTTakeTopIM : System.Web.UI.Page
 
         if (Page.IsPostBack != true)
         {
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
 
             LoadActiveUserList();
 
@@ -50,14 +50,14 @@ public partial class TTTakeTopIM : System.Web.UI.Page
         {
             strDepartCode = treeNode.Target.Trim();
 
-            LB_UserType.Text = Resources.lang.BuMenChengYuan;
+            LB_UserType.Text = LanguageHandle.GetWord("BuMenChengYuan").ToString().Trim();
             ShareClass.LoadUserByDepartCodeForDataGrid(strDepartCode, DataGrid1);
         }
     }
 
     protected void BT_AllActiveUser_Click(object sender, EventArgs e)
     {
-        LB_UserType.Text = Resources.lang.ZaiXianYongHu;
+        LB_UserType.Text = LanguageHandle.GetWord("ZaiXianYongHu").ToString().Trim();
         LoadActiveUserList();
     }
 

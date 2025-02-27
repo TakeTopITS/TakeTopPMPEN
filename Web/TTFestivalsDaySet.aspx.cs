@@ -205,11 +205,11 @@ public partial class TTFestivalsDaySet : System.Web.UI.Page
         {
             CopyFestivalsDayToYear(this.ddl_year.SelectedValue, this.ddl_copy.SelectedValue);
             CopyExchangeDayToYear(this.ddl_year.SelectedValue, this.ddl_copy.SelectedValue);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "Script2", "alert('提示，复制成功！')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "Script2", "alert('" +LanguageHandle.GetWord("ZZDiShiFuZhiChengGong").ToString().Trim()+"')", true);
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "Script1", "alert('警告，复制到的年份不能等于或小于被复制的年份，请检查！')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "Script1", "alert('" +LanguageHandle.GetWord("ZZJingGaoFuZhiDaoDeNianFenBuNe").ToString().Trim()+"')", true);
         }
 
     }

@@ -59,7 +59,7 @@ public partial class TTGDIsomJointList : System.Web.UI.Page
                 string strIsom_no = HF_Isom_no.Value;
                 DataBinder(strIsom_no);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
             }
 
         }

@@ -86,7 +86,7 @@ public partial class TTPersonalSpaceProject : System.Web.UI.Page
         strLangCode = Session["LangCode"].ToString();
 
         strUserName = Session["UserName"].ToString();
-        strUserInfo = Resources.lang.YongHu + ": " + strUserCode + "  " + strUserName;
+        strUserInfo = LanguageHandle.GetWord("YongHu").ToString().Trim() + ": " + strUserCode + "  " + strUserName;
 
 
         try

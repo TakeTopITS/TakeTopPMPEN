@@ -25,7 +25,7 @@ public partial class TTImplePlanView : System.Web.UI.Page
         IList lst;
         int intPlanID;
 
-        //this.Title = Resources.lang.Project + strProjectID + " " + strProjectName + " 的实施计划！";
+        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + strProjectName + "的实施计划！";
 
 
         HL_ProPlanGanttRight.NavigateUrl = "TTWorkPlanGanttForProject.aspx?pid=" + strProjectID;

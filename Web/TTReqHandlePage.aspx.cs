@@ -94,22 +94,22 @@ public partial class TTReqHandlePage : System.Web.UI.Page
         SetReqRecordColor(ds, DataList_Handling, "InProgress");
 
         strHQL = "Select * from T_ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and reqAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成')";
+        strHQL += " and reqAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成')"; 
         strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from T_Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by reqAssignRecord.MoveTime DESC limit 40";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_ReqAssignRecord");
         DataList_FinishedUnAssigned.DataSource = ds;
         DataList_FinishedUnAssigned.DataBind();
-        SetReqRecordColor(ds, DataList_FinishedUnAssigned, "已完成");
+        SetReqRecordColor(ds, DataList_FinishedUnAssigned, "已完成"); 
 
         strHQL = "Select * from T_ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and reqAssignRecord.status = '已分派'";
+        strHQL += " and reqAssignRecord.status = '已分派'"; 
         strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from T_Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by reqAssignRecord.MoveTime DESC limit 40";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_ReqAssignRecord");
         DataList_Assigned.DataSource = ds;
         DataList_Assigned.DataBind();
-        SetReqRecordColor(ds, DataList_Assigned, "已分派");
+        SetReqRecordColor(ds, DataList_Assigned, "已分派"); 
     }
 
     protected void DataGrid5_PageIndexChanged(object sender, DataGridPageChangedEventArgs e)

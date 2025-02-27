@@ -26,7 +26,7 @@ public partial class TTConfirmProjectExpenseForFIN : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strUserName = Session["UserName"].ToString();
 
-        //this.Title = Resources.lang.Project + strProjectName + " 支出费用汇总！";
+        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectName + " 支出费用汇总！";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickParentA", " aHandler();", true);
         if (Page.IsPostBack == false)
@@ -51,11 +51,11 @@ public partial class TTConfirmProjectExpenseForFIN : System.Web.UI.Page
                 deConfirmExpense += proExpense.ConfirmAmount;
             }
 
-            LB_Member.Text = Resources.lang.SuoYouChenYuan;
+            LB_Member.Text = LanguageHandle.GetWord("SuoYouChenYuan").ToString().Trim();
             LB_Amount.Text = deExpense.ToString();
             LB_ConfirmAmount.Text = deConfirmExpense.ToString();
 
-            LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll + strUserCode + strUserName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim() + strUserCode + strUserName;
 
             LB_ProjectID.Text = strProjectID;
         }
@@ -107,7 +107,7 @@ public partial class TTConfirmProjectExpenseForFIN : System.Web.UI.Page
                 LB_Amount.Text = deExpense.ToString();
                 LB_ConfirmAmount.Text = deConfirmExpense.ToString();
 
-                LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll + strUserCode + strUserName;
+                LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim() + strUserCode + strUserName;
                 LB_Sql.Text = strHQL;
             }
         }
@@ -136,11 +136,11 @@ public partial class TTConfirmProjectExpenseForFIN : System.Web.UI.Page
             deConfirmExpense += proExpense.ConfirmAmount;
         }
 
-        LB_Member.Text = Resources.lang.SuoYouChenYuan;
+        LB_Member.Text = LanguageHandle.GetWord("SuoYouChenYuan").ToString().Trim();
         LB_Amount.Text = deExpense.ToString();
         LB_ConfirmAmount.Text = deConfirmExpense.ToString();
 
-        LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim();
     }
 
     protected void DataList1_ItemCommand(object sender, DataListCommandEventArgs e)
@@ -167,7 +167,7 @@ public partial class TTConfirmProjectExpenseForFIN : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWSRZDJEGS + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWSRZDJEGS").ToString().Trim() + "')", true);
                 return;
             }
 
@@ -185,11 +185,11 @@ public partial class TTConfirmProjectExpenseForFIN : System.Web.UI.Page
                 strProjectID = proExpense.ProjectID.ToString();
                 UpdateDailyProjectExpense(strOperatorCode, strProjectID, proExpense.RegisterDate);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
             }
         }
     }
@@ -248,11 +248,11 @@ public partial class TTConfirmProjectExpenseForFIN : System.Web.UI.Page
         {
             if (strOperatorCode == ShareClass.GetProjectPMCode(strProjectID))
             {
-                dailyWork.Type = "主导";
+                dailyWork.Type = "主导"; 
             }
             else
             {
-                dailyWork.Type = "参与";
+                dailyWork.Type = "参与"; 
             }
             dailyWork.UserCode = strOperatorCode;
             dailyWork.UserName = ShareClass.GetUserName(strOperatorCode);
@@ -261,7 +261,7 @@ public partial class TTConfirmProjectExpenseForFIN : System.Web.UI.Page
             dailyWork.Address = "";
             dailyWork.ProjectID = int.Parse(strProjectID);
             dailyWork.ProjectName = ShareClass.GetProjectName(strProjectID);
-            dailyWork.DailySummary = "输入项目相关费用";
+            dailyWork.DailySummary = LanguageHandle.GetWord("ShuRuXiangMuXiangGuanFeiYong").ToString().Trim();
             dailyWork.Achievement = "";
             dailyWork.Charge = deAmount;
             dailyWork.ConfirmCharge = deConfirmAmount;

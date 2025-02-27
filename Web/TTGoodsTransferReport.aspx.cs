@@ -256,9 +256,9 @@ public partial class TTGoodsTransferReport : System.Web.UI.Page
 
         DataTable dtSaleOrder = ds.Tables[0];
 
-        Export3Excel(dtSaleOrder, "物料调拨报表.xls");
+        Export3Excel(dtSaleOrder, LanguageHandle.GetWord("WuLiaoDiaoBoBaoBiaoxls").ToString().Trim());
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true); 
     }
 
 

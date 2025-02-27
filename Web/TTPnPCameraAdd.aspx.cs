@@ -50,7 +50,7 @@ public partial class TTPnPCameraAdd : System.Web.UI.Page
         //    Node.ExpandAll();
         //    TV_Department.Nodes.Add(Node);
         //}
-        TakeTopCore.CoreShareClass.InitialAllDepartmentTree( Resources.lang.ZZJGT,TV_Department);
+        TakeTopCore.CoreShareClass.InitialAllDepartmentTree( LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TV_Department);
     }
 
 

@@ -23,7 +23,7 @@ public partial class TTWFChartViewSL : System.Web.UI.Page
         strTemName = ds.Tables[0].Rows[0][0].ToString().Trim();
         strWFDefinition = ds.Tables[0].Rows[0][1].ToString().Trim();
 
-        this.Title = Resources.lang.GongZuoLiu + ": " + strTemName + Resources.lang.LiuChengTu;
+        this.Title = LanguageHandle.GetWord("GongZuoLiu").ToString().Trim() + ": " + strTemName + LanguageHandle.GetWord("LiuChengTu").ToString().Trim();
 
         if (Page.IsPostBack == false)
         {
@@ -55,7 +55,7 @@ public partial class TTWFChartViewSL : System.Web.UI.Page
 
                         if (strStatus == "InProgress")
                         {
-                            strNewStepName = strStepName + "¡ï¡ï¡ï¡¾" + Resources.lang.JinXingZhong + "¡¿";
+                            strNewStepName = strStepName + "¡ï¡ï¡ï¡¾" + LanguageHandle.GetWord("JinXingZhong").ToString().Trim() + "¡¿";
                             strNewGUIDStep = strGUIDStep.Replace(strStepName, strNewStepName);
 
                             strWFDefinition = strWFDefinition.Replace(strGUIDStep, strNewGUIDStep);
@@ -63,7 +63,7 @@ public partial class TTWFChartViewSL : System.Web.UI.Page
 
                         if (strStatus == "Passed")
                         {
-                            strNewStepName = strStepName + "???¡¾" + Resources.lang.TongGuo + "¡¿";
+                            strNewStepName = strStepName + "???¡¾" + LanguageHandle.GetWord("TongGuo").ToString().Trim() + "¡¿";
                             strNewGUIDStep = strGUIDStep.Replace(strStepName, strNewStepName);
 
                             strWFDefinition = strWFDefinition.Replace(strGUIDStep, strNewGUIDStep);
@@ -72,7 +72,7 @@ public partial class TTWFChartViewSL : System.Web.UI.Page
 
                         if (strStatus == "Rejected")
                         {
-                            strNewStepName = strStepName + "X X X¡¾" + Resources.lang.BoHui + "¡¿";
+                            strNewStepName = strStepName + "X X X¡¾" + LanguageHandle.GetWord("BoHui").ToString().Trim() + "¡¿";
                             strNewGUIDStep = strGUIDStep.Replace(strStepName, strNewStepName);
 
                             strWFDefinition = strWFDefinition.Replace(strGUIDStep, strNewGUIDStep);

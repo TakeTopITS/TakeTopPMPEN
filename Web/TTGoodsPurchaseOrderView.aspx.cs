@@ -35,7 +35,7 @@ public partial class TTGoodsPurchaseOrderView : System.Web.UI.Page
         {
             LoadGoodsPurchaseOrder(strPOID);
 
-            string strWFID = GetRelatedWFID("MaterialProcurement", "ŒÔ¡œ", int.Parse(strPOID)).ToString();
+            string strWFID = GetRelatedWFID("MaterialProcurement", LanguageHandle.GetWord("WuLiao").ToString().Trim(), int.Parse(strPOID)).ToString();
             if (strWFID != "0")
             {
                 LB_WorkFlowStatus.Text = GetStatusHomeNameByWorkflowStatus(strWFID);

@@ -213,7 +213,7 @@ public partial class TTWPQMWeldProQua : System.Web.UI.Page
         TB_Code.Text = wPQMWeldProQua.Code.Trim();
         if (TB_Code.Text.Trim() == "" || string.IsNullOrEmpty(TB_Code.Text))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSPDBMSCCWJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSPDBMSCCWJC").ToString().Trim()+"')", true);
             TB_Code.Focus();
             return;
         }
@@ -261,11 +261,11 @@ public partial class TTWPQMWeldProQua : System.Web.UI.Page
             HL_Complety.Enabled = true;
             HL_Complety.NavigateUrl = "TTWPQMWeldProQuaAll.aspx?Code=" + TB_Code.Text.Trim() + "";
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZCG").ToString().Trim()+"')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZSBJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim()+"')", true);
         }
     }
 
@@ -350,11 +350,11 @@ public partial class TTWPQMWeldProQua : System.Web.UI.Page
             HL_Complety.Enabled = true;
             HL_Complety.NavigateUrl = "TTWPQMWeldProQuaAll.aspx?Code=" + TB_Code.Text.Trim() + "";
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCSBJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim()+"')", true);
         }
     }
 
@@ -375,11 +375,11 @@ public partial class TTWPQMWeldProQua : System.Web.UI.Page
             BT_Delete.Visible = false;
             HL_Complety.Visible = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSBJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+"')", true);
         }
     }
 

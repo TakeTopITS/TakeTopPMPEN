@@ -85,7 +85,7 @@ public partial class TTPersonalSpaceMembersWebAddress : System.Web.UI.Page
         strLangCode = Session["LangCode"].ToString();
 
         strUserName = Session["UserName"].ToString();
-        strUserInfo = Resources.lang.YongHu + ": " + strUserCode + "  " + strUserName;
+        strUserInfo = LanguageHandle.GetWord("YongHu").ToString().Trim() + ": " + strUserCode + "  " + strUserName;
 
         try
         {
@@ -122,11 +122,11 @@ public partial class TTPersonalSpaceMembersWebAddress : System.Web.UI.Page
 
         if (strUserCode != strAgencyCode)
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZYSZSTRAGENCYNAMEWNDGZLSPDLRXZXSWNZJJK + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZYSZSTRAGENCYNAMEWNDGZLSPDLRXZXSWNZJJK").ToString().Trim() + "');</script>");
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZYXGZLSPDL + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZYXGZLSPDL").ToString().Trim() + "');</script>");
         }
     }
 

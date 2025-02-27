@@ -44,7 +44,7 @@ public partial class TTWZPurchaseDetailEditaspx : System.Web.UI.Page
                             where Progress = '签收'
                             and PurchaseEngineer = '{0}'
                             and ProjectCode = '{1}'
-                            and SupplyMethod = '自购'", wZPurchase.PurchaseEngineer, wZPurchase.ProjectCode);
+                            and SupplyMethod = '自购'", wZPurchase.PurchaseEngineer, wZPurchase.ProjectCode); 
                 IList listWZPickingPlan = wZPickingPlanBLL.GetAllWZPickingPlans(strWZPickingPlanHQL);
 
                 LB_PickingPlan.DataSource = listWZPickingPlan;
@@ -125,7 +125,7 @@ public partial class TTWZPurchaseDetailEditaspx : System.Web.UI.Page
                         decimal.TryParse(arrArges[3], out decimalConvertNumber);
                         wZPurchaseDetail.ConvertNumber = decimalConvertNumber;
                         wZPurchaseDetail.PlanMoney = wZPurchaseDetail.PurchaseNumber * GetMarketByObjectCode(arrArges[1]);
-                        wZPurchaseDetail.Progress = "录入";
+                        wZPurchaseDetail.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
 
 
                         wZPurchaseDetailBLL.AddWZPurchaseDetail(wZPurchaseDetail);
@@ -140,7 +140,7 @@ public partial class TTWZPurchaseDetailEditaspx : System.Web.UI.Page
                             ShareClass.RunSqlCommand(strUpdatePurchaseHQL);
                         }
                         //修改计划明细的使用标记
-                        string strUpdatePlanDetailHQL = string.Format(@"update T_WZPickingPlanDetail set Progress = '询价',PurchaseCode='{0}',IsMark = -1 where ID = {1}", wZPurchase.PurchaseCode, intPlanDetailID);
+                        string strUpdatePlanDetailHQL = string.Format(@"update T_WZPickingPlanDetail set Progress = '询价',PurchaseCode='{0}',IsMark = -1 where ID = {1}", wZPurchase.PurchaseCode, intPlanDetailID); 
                         ShareClass.RunSqlCommand(strUpdatePlanDetailHQL);
                         //重新加载采购清单
                         DataPurchaseDetailBinder();
@@ -150,7 +150,7 @@ public partial class TTWZPurchaseDetailEditaspx : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZCGWJ+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZCGWJ").ToString().Trim()+"')", true);
                     return;
                 }
             }
@@ -205,9 +205,9 @@ public partial class TTWZPurchaseDetailEditaspx : System.Web.UI.Page
                 {
                     WZPurchaseDetail wZPurchaseDetail = (WZPurchaseDetail)listWZPurchaseDetail[0];
 
-                    if (wZPurchaseDetail.Progress != "录入" || wZPurchaseDetail.IsMark != 0)
+                    if (wZPurchaseDetail.Progress != LanguageHandle.GetWord("LuRu").ToString().Trim() || wZPurchaseDetail.IsMark != 0)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBWLRYJSYBJBW0SBYXSC+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBWLRYJSYBJBW0SBYXSC").ToString().Trim()+"')", true);
                         return;
                     }
 
@@ -224,7 +224,7 @@ public partial class TTWZPurchaseDetailEditaspx : System.Web.UI.Page
                         ShareClass.RunSqlCommand(strUpdatePurchaseHQL);
                     }
                     //修改计划明细的使用标记
-                    string strUpdatePlanDetailHQL = string.Format(@"update T_WZPickingPlanDetail set Progress = '录入',PurchaseCode='-',IsMark = 0 where ID = {0}", wZPurchaseDetail.ID);
+                    string strUpdatePlanDetailHQL = string.Format(@"update T_WZPickingPlanDetail set Progress = '录入',PurchaseCode='-',IsMark = 0 where ID = {0}", wZPurchaseDetail.ID); 
                     ShareClass.RunSqlCommand(strUpdatePlanDetailHQL);
 
                     //重新加载采购清单
@@ -305,17 +305,17 @@ public partial class TTWZPurchaseDetailEditaspx : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strMajorType))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZYLBBNWKBC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZYLBBNWKBC").ToString().Trim()+"')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strPurchaseNumber) || decimalPurchaseNumber <= 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCGSLBNW0HZKXG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCGSLBNW0HZKXG").ToString().Trim()+"')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strPlanMoney) || decimalPlanMoney <= 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZYJFYBNW0HZKXG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYJFYBNW0HZKXG").ToString().Trim()+"')", true);
                 return;
             }
 
@@ -352,12 +352,12 @@ public partial class TTWZPurchaseDetailEditaspx : System.Web.UI.Page
                 //重新加载采购清单
                 DataPurchaseDetailBinder();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
             }
 
         }
         else {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZCGD+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZCGD").ToString().Trim()+"')", true);
             return;
         }
     }

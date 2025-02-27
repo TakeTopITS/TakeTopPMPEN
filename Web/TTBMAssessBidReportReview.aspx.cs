@@ -161,14 +161,14 @@ public partial class TTBMAssessBidReportReview : System.Web.UI.Page
         {
             bMAssessBidReportBLL.UpdateBMAssessBidReport(bMAssessBidReport, bMAssessBidReport.ID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSHCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSHCG").ToString().Trim()+"')", true);
 
             LoadBMAssessBidReportList();
             LoadBMSupplierBidList(bMAssessBidReport.AssessBidRecordID.ToString().Trim());
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSHSBJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSHSBJC").ToString().Trim()+"')", true);
         }
     }
 
@@ -227,7 +227,7 @@ public partial class TTBMAssessBidReportReview : System.Web.UI.Page
         string strId, strHQL;
         IList lst;
 
-        if (e.CommandName == "中标")
+        if (e.CommandName == LanguageHandle.GetWord("ZhongBiao").ToString().Trim())
         {
             strId = e.Item.Cells[1].Text.Trim();
 
@@ -412,7 +412,7 @@ public partial class TTBMAssessBidReportReview : System.Web.UI.Page
     {
         if (strBidStatus.Trim().Equals("Y"))
         {
-            return "中标";
+            return LanguageHandle.GetWord("ZhongBiao").ToString().Trim();
         }
         else if (strBidStatus.Trim().Equals("N"))
         {
@@ -420,7 +420,7 @@ public partial class TTBMAssessBidReportReview : System.Web.UI.Page
         }
         else
         {
-            return "未开标";
+            return "未开标"; 
         }
     }
 }

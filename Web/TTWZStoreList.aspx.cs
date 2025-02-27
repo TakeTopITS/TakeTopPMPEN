@@ -75,7 +75,7 @@ public partial class TTWZStoreList : System.Web.UI.Page
 
                     if (wZStore.IsMark != 0)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSYBJBW0BYXSC + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSYBJBW0BYXSC").ToString().Trim() + "')", true);
                         return;
                     }
 
@@ -85,7 +85,7 @@ public partial class TTWZStoreList : System.Web.UI.Page
                     DataBinder();
 
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
                 }
 
             }

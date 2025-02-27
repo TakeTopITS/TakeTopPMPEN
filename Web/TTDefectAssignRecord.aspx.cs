@@ -27,7 +27,7 @@ public partial class TTDefectAssignRecord : System.Web.UI.Page
         strDefectID = defectment.DefectID.ToString();
         strDefectName = defectment.DefectName.Trim();
 
-        //this.Title = "缺陷：" + strDefectID + "  " + strDefectName + " 的所有分派记录！";
+        //this.Title = LanguageHandle.GetWord("QueXian").ToString().Trim() + strDefectID + "  " + strDefectName + LanguageHandle.GetWord("DeSuoYouFenPaJiLu").ToString().Trim();
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
@@ -38,7 +38,7 @@ public partial class TTDefectAssignRecord : System.Web.UI.Page
             DataList2.DataSource = lst;
             DataList2.DataBind();
 
-            LB_Title.Text = "缺陷：" + strDefectID + "  " + strDefectName + " 的所有分派记录！";
+            LB_Title.Text = LanguageHandle.GetWord("QueXian").ToString().Trim() + strDefectID + "  " + strDefectName + LanguageHandle.GetWord("DeSuoYouFenPaJiLu").ToString().Trim();
 
             HL_BusinessForm.NavigateUrl = "TTRelatedDIYBusinessForm.aspx?RelatedType=Defect&RelatedID=" + strDefectID + "&IdentifyString=" + ShareClass.GetWLTemplateIdentifyString(ShareClass.getBusinessFormTemName("Defect", strDefectID));
         }

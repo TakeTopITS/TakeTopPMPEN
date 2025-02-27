@@ -192,7 +192,7 @@ public partial class TTCustomerAssetRecord : System.Web.UI.Page
     {
         if (TB_POName.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTSMCBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSMCBNWKJC").ToString().Trim() + "')", true);
             TB_POName.Focus();
             return;
         }
@@ -207,7 +207,7 @@ public partial class TTCustomerAssetRecord : System.Web.UI.Page
         purchaseOrder.PurTime = DateTime.Now;
         purchaseOrder.ArrivalTime = DateTime.Now;
         purchaseOrder.Amount = 0;
-        purchaseOrder.Comment = "第三方设备：" + TB_Comment.Text.Trim();
+        purchaseOrder.Comment = LanguageHandle.GetWord("DiSanFangSheBei").ToString().Trim() + TB_Comment.Text.Trim();
         purchaseOrder.Status = "New";
         purchaseOrder.CurrencyType = DL_CurrencyType.SelectedValue.Trim();
         purchaseOrder.RelatedID = 0;
@@ -232,11 +232,11 @@ public partial class TTCustomerAssetRecord : System.Web.UI.Page
 
             LoadPurchaseOrderDetail(LB_POID.Text.Trim());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZCCKNMCZD100GHZHBZZSZD200GHZGDJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCCKNMCZD100GHZHBZZSZD200GHZGDJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -261,7 +261,7 @@ public partial class TTCustomerAssetRecord : System.Web.UI.Page
     {
         if (TB_POName.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTSMCBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSMCBNWKJC").ToString().Trim() + "')", true);
             TB_POName.Focus();
             return;
         }
@@ -276,7 +276,7 @@ public partial class TTCustomerAssetRecord : System.Web.UI.Page
             purchaseOrder.POName = TB_POName.Text.Trim();
             purchaseOrder.PurManName = ShareClass.GetUserName(strUserCode.Trim());
             purchaseOrder.Amount = NB_Amount.Amount;
-            purchaseOrder.Comment = "第三方设备：" + TB_Comment.Text.Trim();
+            purchaseOrder.Comment = LanguageHandle.GetWord("DiSanFangSheBei").ToString().Trim() + TB_Comment.Text.Trim();
             purchaseOrder.Status = DL_POStatus.SelectedValue.Trim();
 
             try
@@ -287,11 +287,11 @@ public partial class TTCustomerAssetRecord : System.Web.UI.Page
 
                 LoadPurchaseOrderDetail(LB_POID.Text.Trim());
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
             }
         }
     }
@@ -322,11 +322,11 @@ public partial class TTCustomerAssetRecord : System.Web.UI.Page
             LoadPurchaseOrder(strUserCode.Trim());
             LoadPurchaseOrderDetail(strPOID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCCJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCCJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -360,7 +360,7 @@ public partial class TTCustomerAssetRecord : System.Web.UI.Page
     {
         if (DL_Type.SelectedValue.Trim() == "" | TB_AssetName.Text.Trim() == "" | TB_Spec.Text.Trim() == "" | TB_AssetCode.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZLXMCGGDMZRHYXDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZLXMCGGDMZRHYXDBNWKJC").ToString().Trim() + "')", true);
 
             return;
         }
@@ -405,11 +405,11 @@ public partial class TTCustomerAssetRecord : System.Web.UI.Page
             NB_Amount.Amount = SumPurchaseOrderAmount(assetPurRecord.POID.ToString());
             UpdatePurchaseOrderAmount(assetPurRecord.POID.ToString(), NB_Amount.Amount);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXJCCJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXJCCJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -421,7 +421,7 @@ public partial class TTCustomerAssetRecord : System.Web.UI.Page
         strID = LB_ID.Text.Trim();
         if (DL_Type.SelectedValue.Trim() == "" | TB_AssetName.Text.Trim() == "" | TB_Spec.Text.Trim() == "" | TB_AssetCode.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZLXMCGGDMZRHYXDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZLXMCGGDMZRHYXDBNWKJC").ToString().Trim() + "')", true);
 
             return;
         }
@@ -463,12 +463,12 @@ public partial class TTCustomerAssetRecord : System.Web.UI.Page
                 NB_Amount.Amount = SumPurchaseOrderAmount(assetPurRecord.POID.ToString());
                 UpdatePurchaseOrderAmount(assetPurRecord.POID.ToString(), NB_Amount.Amount);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
 
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
             }
         }
     }
@@ -498,11 +498,11 @@ public partial class TTCustomerAssetRecord : System.Web.UI.Page
             BT_Update.Visible = false;
             BT_Delete.Visible = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -653,13 +653,13 @@ public partial class TTCustomerAssetRecord : System.Web.UI.Page
     {
         if (FileUpload_Training.HasFile == false)
         {
-            LB_ErrorText.Text += Resources.lang.ZZTSNZEXCELWJ ;
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZTSNZEXCELWJ").ToString().Trim() ;
             return;
         }
         string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
         if (IsXls != ".xls" & IsXls != ".xlsx")
         {
-            LB_ErrorText.Text += Resources.lang.ZZTSZKYZEXCELWJ ;
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZTSZKYZEXCELWJ").ToString().Trim() ;
             return;
         }
         string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -668,7 +668,7 @@ public partial class TTCustomerAssetRecord : System.Web.UI.Page
         FileInfo fi = new FileInfo(strDocSavePath + newfilename);
         if (fi.Exists)
         {
-            LB_ErrorText.Text += Resources.lang.ZZEXCLEBDRSB ;
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim() ;
         }
         else
         {
@@ -685,13 +685,13 @@ public partial class TTCustomerAssetRecord : System.Web.UI.Page
             int rowsnum = dt.Rows.Count;
             if (rowsnum == 0)
             {
-                LB_ErrorText.Text += Resources.lang.ZZTSEXCELBWKBWSJ ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZTSEXCELBWKBWSJ").ToString().Trim() ;
             }
             else
             {
                 string strPOID = "0";
                 #region [添加主表数据]
-                string strCurrencyType = dr[0]["币种"].ToString().Trim();
+                string strCurrencyType = dr[0]["币种"].ToString().Trim(); 
                 AddAssetPurchaseOrderData(ref strPOID, strCurrencyType);
                 #endregion
 
@@ -701,25 +701,25 @@ public partial class TTCustomerAssetRecord : System.Web.UI.Page
                 for (int i = 0; i < dr.Length; i++)
                 {
                     assetPurRecord.POID = int.Parse(strPOID.Trim());
-                    assetPurRecord.Type = dr[i]["类型"].ToString().Trim();
-                    assetPurRecord.AssetCode = dr[i]["代码"].ToString().Trim();
-                    assetPurRecord.AssetName = dr[i]["名称"].ToString().Trim();
-                    assetPurRecord.Number = decimal.Parse(dr[i]["数量"].ToString().Trim() == "" ? "0" : dr[i]["数量"].ToString().Trim());
-                    assetPurRecord.Unit = dr[i]["单位"].ToString().Trim();
-                    assetPurRecord.Price = decimal.Parse(dr[i]["单价"].ToString().Trim() == "" ? "0" : dr[i]["单价"].ToString().Trim());
-                    assetPurRecord.ModelNumber = dr[i]["型号"].ToString().Trim();
-                    assetPurRecord.Spec = dr[i]["规格"].ToString().Trim();
-                    assetPurRecord.PurReason = dr[i]["登记理由"].ToString().Trim();
+                    assetPurRecord.Type = dr[i]["类型"].ToString().Trim(); 
+                    assetPurRecord.AssetCode = dr[i]["代码"].ToString().Trim(); 
+                    assetPurRecord.AssetName = dr[i]["名称"].ToString().Trim(); 
+                    assetPurRecord.Number = decimal.Parse(dr[i]["数量"].ToString().Trim() == "" ? "0" : dr[i]["数量"].ToString().Trim()); 
+                    assetPurRecord.Unit = dr[i]["单位"].ToString().Trim(); 
+                    assetPurRecord.Price = decimal.Parse(dr[i]["单价"].ToString().Trim() == "" ? "0" : dr[i]["单价"].ToString().Trim()); 
+                    assetPurRecord.ModelNumber = dr[i]["型号"].ToString().Trim(); 
+                    assetPurRecord.Spec = dr[i]["规格"].ToString().Trim(); 
+                    assetPurRecord.PurReason = dr[i]["登记理由"].ToString().Trim(); 
                     assetPurRecord.PurTime = DateTime.Now;
-                    assetPurRecord.Status = dr[i]["状态"].ToString().Trim();
+                    assetPurRecord.Status = dr[i]["状态"].ToString().Trim(); 
                     assetPurRecord.RelatedType = "Other";
                     assetPurRecord.RelatedID = 0;
                     assetPurRecord.ApplicantCode = strUserCode.Trim();
                     assetPurRecord.ApplicantName = ShareClass.GetUserName(strUserCode.Trim());
                     assetPurRecord.Supplier = dr[i]["Supplier"].ToString().Trim();
-                    assetPurRecord.SupplierPhone = dr[i]["供应商电话"].ToString().Trim();
+                    assetPurRecord.SupplierPhone = dr[i]["供应商电话"].ToString().Trim(); 
                     assetPurRecord.Amount = assetPurRecord.Price * assetPurRecord.Number;
-                    assetPurRecord.CurrencyType = dr[i]["币种"].ToString().Trim();
+                    assetPurRecord.CurrencyType = dr[i]["币种"].ToString().Trim(); 
 
 
                     assetPurRecordBLL.AddAssetPurRecord(assetPurRecord);
@@ -732,7 +732,7 @@ public partial class TTCustomerAssetRecord : System.Web.UI.Page
 
                 LoadPurchaseOrder(strUserCode.Trim());
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZEXCLEBDRGXCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRGXCG").ToString().Trim() + "')", true);
             }
         }
     }
@@ -742,7 +742,7 @@ public partial class TTCustomerAssetRecord : System.Web.UI.Page
         AssetPurchaseOrderBLL purchaseOrderBLL = new AssetPurchaseOrderBLL();
         AssetPurchaseOrder purchaseOrder = new AssetPurchaseOrder();
 
-        purchaseOrder.POName = "导入数据";
+        purchaseOrder.POName = LanguageHandle.GetWord("DaoRuShuJu").ToString().Trim();
         purchaseOrder.PurManCode = strUserCode.Trim();
         purchaseOrder.PurManName = ShareClass.GetUserName(strUserCode.Trim());
         purchaseOrder.OperatorCode = strUserCode.Trim();
@@ -750,7 +750,7 @@ public partial class TTCustomerAssetRecord : System.Web.UI.Page
         purchaseOrder.PurTime = DateTime.Now;
         purchaseOrder.ArrivalTime = DateTime.Now;
         purchaseOrder.Amount = 0;
-        purchaseOrder.Comment = "第三方设备：导入数据";
+        purchaseOrder.Comment = LanguageHandle.GetWord("DiSanFangSheBeiDaoRuShuJu").ToString().Trim();
         purchaseOrder.Status = "New";
         purchaseOrder.CurrencyType = strCurrencyType;
         purchaseOrder.RelatedID = 0;

@@ -74,7 +74,7 @@ public partial class TTWFTemplateView : System.Web.UI.Page
             HL_XMLFile.NavigateUrl = ShareClass.GetWorkFlowLastestXMLFile(strTemName);
         }
     }
-    
+
 
     protected void DataGrid2_ItemCommand(object sender, DataGridCommandEventArgs e)
     {
@@ -119,7 +119,7 @@ public partial class TTWFTemplateView : System.Web.UI.Page
             {
                 if (strWFXML.IndexOf(strGUID) > -1)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click11", "alert(警告，流程图中有此步骤节点，不能删除，请检查！')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click11", "alert('" +LanguageHandle.GetWord("ZZJingGaoLiuChengTuZhongYouCiB").ToString().Trim()+"')", true); 
                     return;
                 }
                 else
@@ -134,16 +134,16 @@ public partial class TTWFTemplateView : System.Web.UI.Page
                             LoadWorkFlowTStep(strTemName);
                             LoadWorkFlowTStepOperator(strStepID);
 
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click22", "alert(删除成功！')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click22", "alert('" +LanguageHandle.GetWord("ZZShanChuChengGong").ToString().Trim()+"')", true); 
                         }
                         catch
                         {
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click33", "alert(删除失败，请检查！')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click33", "alert('" +LanguageHandle.GetWord("ZZShanChuShiBaiQingJianCha").ToString().Trim()+"')", true); 
                         }
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click44", "alert(警告，此流程不是你创建的，你也不是超级管理员，没有权限删除，请检查！')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click44", "alert('" +LanguageHandle.GetWord("ZZJingGaoCiLiuChengBuShiNiChua").ToString().Trim()+"')", true); 
                         return;
                     }
                 }
@@ -172,7 +172,7 @@ public partial class TTWFTemplateView : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert(保存失败，你不是此流程模板的创建者，不能保存些流程图片！')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZBaoCunShiBaiNiBuShiCiLiuChen").ToString().Trim()+"')", true); 
         }
     }
 
@@ -314,12 +314,12 @@ public partial class TTWFTemplateView : System.Web.UI.Page
 
             if (strMark == "0")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWBCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWBCSBJC").ToString().Trim() + "')", true);
         }
     }
 

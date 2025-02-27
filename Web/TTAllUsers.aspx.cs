@@ -44,10 +44,10 @@ public partial class TTAllUsers : System.Web.UI.Page
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
         {
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT, TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
-            LB_ProjectMemberOwner.Text = Resources.lang.SYCYLB;
+            LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SYCYLB").ToString().Trim();
 
             strHQL = "from ProjectMember as projectMember ";
             strHQL += " Where projectMember.DepartCode in " + strDepartString;
@@ -56,7 +56,7 @@ public partial class TTAllUsers : System.Web.UI.Page
             DataGrid1.DataSource = lst;
             DataGrid1.DataBind();
 
-            LB_UserNumber.Text = Resources.lang.GCXD + lst.Count.ToString();
+            LB_UserNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + lst.Count.ToString();
             LB_Sql.Text = strHQL;
 
 
@@ -80,19 +80,19 @@ public partial class TTAllUsers : System.Web.UI.Page
     {
         string strChartTitle, strCmdText;
 
-        strChartTitle = Resources.lang.YGXBBLT;
+        strChartTitle = LanguageHandle.GetWord("YGXBBLT").ToString().Trim();
         strCmdText = @"Select Gender as XName, Count(*) as YNumber
             From T_ProjectMember Where DepartCode in " + strDepartString;
         strCmdText += " Group By Gender";
         IFrame_Chart_MemberGender.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
-        strChartTitle = Resources.lang.YGZTBLT;
+        strChartTitle = LanguageHandle.GetWord("YGZTBLT").ToString().Trim();
         strCmdText = @"Select Status as XName, Count(*) as YNumber
             From T_ProjectMember Where DepartCode in " + strDepartString;
         strCmdText += " Group By Status";
         IFrame_Chart_MemberStatus.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
-        strChartTitle = Resources.lang.YGZCQST;
+        strChartTitle = LanguageHandle.GetWord("YGZCQST").ToString().Trim();
         strCmdText = @"Select SUBSTRING(to_char(JoinDate,'yyyymmdd'),0,7)  as XName,COALESCE(Count(*),0) as YNumber
             From T_ProjectMember Where CAST(SUBSTRING(to_char(JoinDate,'yyyymmdd'),0,5) as int) > extract(year from now()) - 4   
             And  DepartCode in " + strDepartString;
@@ -119,8 +119,8 @@ public partial class TTAllUsers : System.Web.UI.Page
 
             intCount = ShareClass.LoadUserByDepartCodeForDataGrid(strDepartCode, DataGrid1);
 
-            LB_ProjectMemberOwner.Text = strDepartName + Resources.lang.Membes;
-            LB_UserNumber.Text = Resources.lang.GCXD + intCount.ToString();
+            LB_ProjectMemberOwner.Text = strDepartName + LanguageHandle.GetWord("Membes").ToString().Trim();
+            LB_UserNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + intCount.ToString();
 
             ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
             strHQL = "from ProjectMember as projectMember where projectMember.Gender = 'Male'";
@@ -137,19 +137,19 @@ public partial class TTAllUsers : System.Web.UI.Page
 
             string strChartTitle, strCmdText;
 
-            strChartTitle = Resources.lang.YGXBBLT;
+            strChartTitle = LanguageHandle.GetWord("YGXBBLT").ToString().Trim();
             strCmdText = @"Select Gender as XName, Count(*) as YNumber
             From T_ProjectMember Where DepartCode = " + "'" + strDepartCode + "'";
             strCmdText += " Group By Gender";
             IFrame_Chart_MemberGender.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
-            strChartTitle = Resources.lang.YGZTBLT;
+            strChartTitle = LanguageHandle.GetWord("YGZTBLT").ToString().Trim();
             strCmdText = @"Select Status as XName, Count(*) as YNumber
             From T_ProjectMember Where DepartCode = " + "'" + strDepartCode + "'";
             strCmdText += " Group By Status";
             IFrame_Chart_MemberStatus.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
-            strChartTitle = Resources.lang.YGZCQST;
+            strChartTitle = LanguageHandle.GetWord("YGZCQST").ToString().Trim();
             strCmdText = @"Select SUBSTRING(to_char(JoinDate,'yyyymmdd'),0,7) as XName,COALESCE(Count(*),0) as YNumber
             From T_ProjectMember Where CAST(SUBSTRING(to_char(JoinDate,'yyyymmdd'),0,5) as int) > extract(year from now()) - 4   
             And  DepartCode = " + "'" + strDepartCode + "'";
@@ -163,7 +163,7 @@ public partial class TTAllUsers : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        LB_ProjectMemberOwner.Text = Resources.lang.SYCYLB;
+        LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("SYCYLB").ToString().Trim();
 
         string strDepartString = LB_DepartString.Text.Trim();
 
@@ -182,7 +182,7 @@ public partial class TTAllUsers : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        LB_UserNumber.Text = Resources.lang.GCXD + lst.Count.ToString();
+        LB_UserNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + lst.Count.ToString();
         LB_Sql.Text = strHQL;
 
 
@@ -200,7 +200,7 @@ public partial class TTAllUsers : System.Web.UI.Page
 
         string strChartTitle, strCmdText;
 
-        strChartTitle = Resources.lang.YGXBBLT;
+        strChartTitle = LanguageHandle.GetWord("YGXBBLT").ToString().Trim();
         strCmdText = @"Select Gender as XName, Count(*) as YNumber
             From T_ProjectMember Where ";
         strCmdText += " UserCode Like " + "'" + strUserCode + "'";
@@ -210,7 +210,7 @@ public partial class TTAllUsers : System.Web.UI.Page
         strCmdText += " Group By Gender";
         IFrame_Chart_MemberGender.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
-        strChartTitle = Resources.lang.YGZTBLT;
+        strChartTitle = LanguageHandle.GetWord("YGZTBLT").ToString().Trim();
         strCmdText = @"Select Status as XName, Count(*) as YNumber
             From T_ProjectMember Where ";
         strCmdText += " UserCode Like " + "'" + strUserCode + "'";
@@ -220,7 +220,7 @@ public partial class TTAllUsers : System.Web.UI.Page
         strCmdText += " Group By Status";
         IFrame_Chart_MemberStatus.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
-        strChartTitle = Resources.lang.YGZCQST;
+        strChartTitle = LanguageHandle.GetWord("YGZCQST").ToString().Trim();
         strCmdText = @"Select SUBSTRING(to_char(JoinDate,'yyyymmdd'),0,7) as XName,COALESCE(Count(*),0) as YNumber
             From T_ProjectMember Where CAST(SUBSTRING(to_char(JoinDate,'yyyymmdd'),0,5) as int) > extract(year from now()) - 4";
         strCmdText += " and UserCode Like " + "'" + strUserCode + "'";
@@ -254,12 +254,12 @@ public partial class TTAllUsers : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = "用户成员信息" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("YongHuChengYuanXinXi").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 CreateExcel(fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDCDSJYWJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
             }
         }
     }
@@ -277,7 +277,7 @@ public partial class TTAllUsers : System.Web.UI.Page
                 Duty 职责,OfficePhone 办公电话,MobilePhone 移动电话,EMail EMail,WorkScope 工作范围,JoinDate 加入日期,Status 状态,
                 RefUserCode 参考工号,IDCard 身份证号,SortNumber 顺序号,(case when UserCode in (select UserCode from T_SystemActiveUser) then '已开通'
 								 else '未开通' end) 权限 
-                From T_ProjectMember Where DepartCode in {0}", strDepartString); 
+                From T_ProjectMember Where DepartCode in {0}", strDepartString);  
 
             if (!string.IsNullOrEmpty(DL_Status.SelectedValue.Trim()))
             {
@@ -299,7 +299,7 @@ public partial class TTAllUsers : System.Web.UI.Page
                   Duty 职责,OfficePhone 办公电话, MobilePhone 移动电话,EMail EMail, WorkScope 工作范围,JoinDate 加入日期, Status 状态,
                 RefUserCode 参考工号, IDCard 身份证号,SortNumber 顺序号,(case when UserCode in (select UserCode from T_SystemActiveUser) then '已开通'
                                  else '未开通' end) 权限
-                From T_ProjectMember Where DepartCode = '{0}') Order by SortNumber ASC ", strDepartCode); 
+                From T_ProjectMember Where DepartCode = '{0}') Order by SortNumber ASC ", strDepartCode);  
         }
 
         MSExcelHandler.DataTableToExcel(strHQL, fileName);
@@ -313,11 +313,11 @@ public partial class TTAllUsers : System.Web.UI.Page
         IList lst = systemActiveUserBLL.GetAllSystemActiveUsers(strHQL);
         if (lst.Count > 0 && lst != null)
         {
-            return "已开通";
+            return "已开通"; 
         }
         else
         {
-            return "未开通";
+            return "未开通"; 
         }
     }
 }

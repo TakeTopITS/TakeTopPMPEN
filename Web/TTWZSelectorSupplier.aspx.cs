@@ -77,7 +77,7 @@ public partial class TTWZSelectorSupplier : System.Web.UI.Page
                         left join T_ProjectMember l on s.CompetentLeadership = l.UserCode
                         where 
                         s.Grade <> 'Disabled'
-                        and s.Progress in ('登记','Approved', '复审')
+                        and s.Progress in ('登记','Approved', '复审') 
                         and s.ReviewDate::timestamp  > now()";
 
         //if (strSupplierCode != null & strSupplierCode != "")
@@ -97,6 +97,6 @@ public partial class TTWZSelectorSupplier : System.Web.UI.Page
         DG_List.DataSource = dtSupplier;
         DG_List.DataBind();
 
-        LB_TotalNumber.Text = "共：" + dtSupplier.Rows.Count.ToString() + " 条";
+        LB_TotalNumber.Text = LanguageHandle.GetWord("Gong").ToString().Trim() + dtSupplier.Rows.Count.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
     }
 }

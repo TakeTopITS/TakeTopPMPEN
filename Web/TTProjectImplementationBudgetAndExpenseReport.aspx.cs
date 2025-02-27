@@ -27,7 +27,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
         strLangCode = Session["LangCode"].ToString();
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text = "项目预算与费用报表";
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMuYuSuanYuFeiYongBaoBiao").ToString().Trim();
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
@@ -35,7 +35,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
             DLC_BeginDate.Text = DateTime.Now.Year.ToString() + "-01-01";
             DLC_EndDate.Text = DateTime.Now.Year.ToString() + "-12-31";
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT, TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             ShareClass.InitialAllProjectTree(TreeView2, strDepartString);
@@ -76,7 +76,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
         strBeginTime = DateTime.Parse(DLC_BeginDate.Text).ToString("yyyy-MM-dd");
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyy-MM-dd");
 
-        LB_ReportName.Text = Resources.lang.XiangMu + Resources.lang.YSYFYBB;
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + LanguageHandle.GetWord("YSYFYBB").ToString().Trim();
         LB_ReportTime.Text = "( " + strBeginTime + "---" + strEndTime + " )";
 
         if (strProjectID != "")
@@ -84,7 +84,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
             strHQL = string.Format(@"Select 科目, sum(COALESCE(预算,0)) as 预算, sum(COALESCE(费用,0)) as 费用 From(
    Select * From(Select A.ProjectID, A.Account as 科目, COALESCE(sum(A.Amount), 0) as 预算 From T_ProjectBudget A Where A.ProjectID = {0}  Group By A.Account, A.ProjectID) as AA
    LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as 科目A, SUM(A.ConfirmAmount) as 费用 From T_ProExpense A Where A.ProjectID = {0} And A.EffectDate >= '{2}' And A.EffectDate <= '{3}'  Group By A.Account, A.ProjectID) as BB ON BB.科目A = AA.科目
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {0} AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectID, strPMName,strBeginTime,strEndTime);
+   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {0} AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectID, strPMName,strBeginTime,strEndTime); 
 
         }
         else
@@ -92,7 +92,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
             strHQL = string.Format(@"Select 科目, sum(COALESCE(预算,0)) as 预算, sum(COALESCE(费用,0)) as 费用 From(
    Select * From(Select A.ProjectID, A.Account as 科目, COALESCE(sum(A.Amount), 0) as 预算 From T_ProjectBudget A Where  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as AA
    LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as 科目A, SUM(A.ConfirmAmount) as 费用 From T_ProExpense A Where  A.EffectDate >= '{2}' And A.EffectDate <= '{3}' and  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as BB ON BB.科目A = AA.科目
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}') AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectName, strPMName, strBeginTime, strEndTime);
+   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}') AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectName, strPMName, strBeginTime, strEndTime); 
 
         }
 
@@ -121,7 +121,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
         strBeginTime = DateTime.Parse(DLC_BeginDate.Text).ToString("yyyy-MM-dd");
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyy-MM-dd");
 
-        LB_ReportName.Text = Resources.lang.XiangMu + Resources.lang.YSYFYBB;
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + LanguageHandle.GetWord("YSYFYBB").ToString().Trim();
         LB_ReportTime.Text = "( " + strBeginTime + "---" + strEndTime + " )";
 
         if (strProjectID != "")
@@ -129,7 +129,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
             strHQL = string.Format(@"Select 科目, sum(COALESCE(预算,0)) as 预算, sum(COALESCE(费用,0)) as 费用 From(
    Select * From(Select A.ProjectID, A.Account as 科目, COALESCE(sum(A.Amount), 0) as 预算 From T_ProjectBudget A Where A.ProjectID = {0}  Group By A.Account, A.ProjectID) as AA
    LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as 科目A, SUM(A.ConfirmAmount) as 费用 From T_ProExpense A Where A.ProjectID = {0} And A.EffectDate >= '{2}' And A.EffectDate <= '{3}'  Group By A.Account, A.ProjectID) as BB ON BB.科目A = AA.科目
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {0} AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectID, strPMName, strBeginTime, strEndTime);
+   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {0} AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectID, strPMName, strBeginTime, strEndTime); 
 
         }
         else
@@ -137,7 +137,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
             strHQL = string.Format(@"Select 科目, sum(COALESCE(预算,0)) as 预算, sum(COALESCE(费用,0)) as 费用 From(
    Select * From(Select A.ProjectID, A.Account as 科目, COALESCE(sum(A.Amount), 0) as 预算 From T_ProjectBudget A Where  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as AA
    LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as 科目A, SUM(A.ConfirmAmount) as 费用 From T_ProExpense A Where  A.EffectDate >= '{2}' And A.EffectDate <= '{3}' and  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as BB ON BB.科目A = AA.科目
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}') AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectName, strPMName, strBeginTime, strEndTime);
+   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}') AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectName, strPMName, strBeginTime, strEndTime); 
 
         }
 
@@ -147,11 +147,11 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
 
         DataTable dtProject = ds.Tables[0];
 
-        Export3Excel(dtProject, "项目预算与费用统计报表.xls");
+        Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuYuSuanYuFeiYongTongJiBa").ToString().Trim());
 
         LB_ResultNumber.Text = GridView1.Rows.Count.ToString();
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true); 
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)
@@ -193,16 +193,16 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
         strBeginTime = DateTime.Parse(DLC_BeginDate.Text).ToString("yyyy-MM-dd");
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyy-MM-dd");
 
-        LB_ReportName.Text = Resources.lang.XiangMu + Resources.lang.YSYFYBB;
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + LanguageHandle.GetWord("YSYFYBB").ToString().Trim();
         LB_ReportTime.Text = "( " + strBeginTime + "---" + strEndTime + " )";
-        strChartTitle = "预算费用分布图";
+        strChartTitle = LanguageHandle.GetWord("YuSuanFeiYongFenBuTu").ToString().Trim();
 
         if (strProjectID != "")
         {
             strHQL = string.Format(@"Select 科目 as XName, sum(COALESCE(预算,0)) as YNumber, sum(COALESCE(费用,0)) as ZNumber From(
    Select * From(Select A.ProjectID, A.Account as 科目, COALESCE(sum(A.Amount), 0) as 预算 From T_ProjectBudget A Where A.ProjectID = {0}  Group By A.Account, A.ProjectID) as AA
    LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as 科目A, SUM(A.ConfirmAmount) as 费用 From T_ProExpense A Where A.ProjectID = {0} And A.EffectDate >= '{2}' And A.EffectDate <= '{3}'  Group By A.Account, A.ProjectID) as BB ON BB.科目A = AA.科目
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {0} AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectID, strPMName, strBeginTime, strEndTime);
+   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID = {0} AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectID, strPMName, strBeginTime, strEndTime); 
 
         }
         else
@@ -210,7 +210,7 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
             strHQL = string.Format(@"Select 科目 as XName, sum(COALESCE(预算,0)) as YNumber, sum(COALESCE(费用,0)) as ZNumber From(
    Select * From(Select A.ProjectID, A.Account as 科目, COALESCE(sum(A.Amount), 0) as 预算 From T_ProjectBudget A Where  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as AA
    LEFT JOIN(Select A.ProjectID AS BProjectID, A.Account as 科目A, SUM(A.ConfirmAmount) as 费用 From T_ProExpense A Where  A.EffectDate >= '{2}' And A.EffectDate <= '{3}' and  A.ProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}')  Group By A.Account, A.ProjectID) as BB ON BB.科目A = AA.科目
-   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}') AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectName, strPMName, strBeginTime, strEndTime);
+   LEFT JOIN(Select A.ProjectID AS CProjectID, A.PMName From T_PROJECT A) as CC  ON CC.CProjectID in (Select ProjectID From T_Project Where ProjectName Like '{0}') AND CC.PMName LIKE '{1}') AS KK Group By 科目", strProjectName, strPMName, strBeginTime, strEndTime); 
 
         }
 
@@ -313,9 +313,9 @@ public partial class TTProjectImplementationBudgetAndExpenseReport : System.Web.
         strBeginTime = DateTime.Parse(DLC_BeginDate.Text).ToString("yyyy-MM-dd");
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyy-MM-dd");
 
-        LB_ReportName.Text = Resources.lang.XiangMu + Resources.lang.YSYFYBB;
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + LanguageHandle.GetWord("YSYFYBB").ToString().Trim();
         LB_ReportTime.Text = "( " + strBeginTime + "---" + strEndTime + " )";
-        strChartTitle = Resources.lang.XMFYYSFBT;
+        strChartTitle = LanguageHandle.GetWord("XMFYYSFBT").ToString().Trim();
 
 
         strHQL = @"Select COALESCE(SUM(B.Amount),0) - COALESCE(SUM(A.ConfirmAmount),0)

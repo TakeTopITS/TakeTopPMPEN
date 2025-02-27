@@ -73,7 +73,7 @@ public partial class TTModuleFlowDesignerJS : System.Web.UI.Page
             TB_WFIdentifyString.Text = strIdentifyString;
             if (strWFDefinition == "")
             {
-                strWFDefinition = "{states:{rect2:{type:'start',text:{text:'开始'}, attr:{ x:209, y:72, width:50, height:50}, props:{guid:{value:'4af6bc4b-7ed9-0b0b-e3a0-91c9d8fd92d1'},text:{value:'开始'}}}},paths:{},props:{props:{name:{value:'新建流程'},key:{value:''},desc:{value:''}}}}";
+                strWFDefinition = LanguageHandle.GetWord("statesrect2typestarttexttextKa").ToString().Trim();
             }
             TB_WFXML.Text = strWFDefinition;
             TB_WFName.Text = strModuleName;
@@ -122,7 +122,7 @@ public partial class TTModuleFlowDesignerJS : System.Web.UI.Page
             //设置缓存更改标志，并刷新页面缓存
             ChangePageCache();
 
-            ClientScript.RegisterStartupScript(this.GetType(), "1", "<script>alert('" + Resources.lang.ZZBCCG + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "1", "<script>alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "');</script>");
 
             //刷新左边栏
             ClientScript.RegisterStartupScript(this.GetType(), "2", "<script>ReloadLeftBar();</script>");
@@ -132,7 +132,7 @@ public partial class TTModuleFlowDesignerJS : System.Web.UI.Page
         {
             LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
 
-            ClientScript.RegisterStartupScript(this.GetType(), "3", "<script>alert('" + Resources.lang.ZZBCSB + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "3", "<script>alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "');</script>");
         }
     }
 

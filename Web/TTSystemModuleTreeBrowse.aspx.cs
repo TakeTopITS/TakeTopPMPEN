@@ -62,7 +62,7 @@ public partial class TTSystemModuleTreeBrowse : System.Web.UI.Page
         TreeNode node1 = new TreeNode();
         TreeNode node2 = new TreeNode();
 
-        node1.Text = "<b>" + Resources.lang.NeiBuYongHuYongMoZu + "<b>";
+        node1.Text = "<b>" + LanguageHandle.GetWord("NeiBuYongHuYongMoZu").ToString().Trim() + "<b>";
         node1.Target = "0";
         node1.Expanded = true;
         treeView.Nodes.Add(node1);
@@ -162,7 +162,7 @@ public partial class TTSystemModuleTreeBrowse : System.Web.UI.Page
         TreeNode node1 = new TreeNode();
         TreeNode node2 = new TreeNode();
 
-        node1.Text = "<b>" + Resources.lang.WaiBuYongHuYongMoZu + "<b>";
+        node1.Text = "<b>" + LanguageHandle.GetWord("WaiBuYongHuYongMoZu").ToString().Trim() + "<b>";
         node1.Target = "0";
         node1.Expanded = true;
         treeView.Nodes.Add(node1);
@@ -261,7 +261,7 @@ public partial class TTSystemModuleTreeBrowse : System.Web.UI.Page
         TreeNode node1 = new TreeNode();
         TreeNode node2 = new TreeNode();
 
-        node1.Text = "<b>Ò³ÃæÄ£×é<b>";
+        node1.Text = LanguageHandle.GetWord("bXieMianMoZub").ToString().Trim();
         node1.Target = "0";
         node1.Expanded = true;
         treeView.Nodes.Add(node1);

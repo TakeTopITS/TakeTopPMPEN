@@ -26,7 +26,7 @@ public partial class TTMakeBookBorrow : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
         {
             DLC_BorrowDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
-            LB_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityAsset(Resources.lang.ZZJGT, TreeView1, strUserCode);
+            LB_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityAsset(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
             //BindDDL();
             BindDDLOther();
             GetBackDate(DLC_BorrowDate.Text.Trim(), ddl_ReaderTypeId.SelectedValue.Trim());
@@ -55,7 +55,7 @@ public partial class TTMakeBookBorrow : System.Web.UI.Page
                 DLC_BackDate.Text = DateTime.Parse(strborrowdate).AddDays(strBorrowDays).ToString("yyyy-MM-dd");
                 if (bookReaderType.BorrowDays > 0 && bookReaderType.BorrowNum > 0)
                 {
-                    TB_Remark.Text = "可借阅天数：" + strBorrowDays.ToString() + "；借阅数量：" + lbl_BorrowNum.Text.Trim() + "本/份！";
+                    TB_Remark.Text = LanguageHandle.GetWord("KeJieYueTianShu").ToString().Trim() + strBorrowDays.ToString() + LanguageHandle.GetWord("JieYueShuLiang").ToString().Trim() + lbl_BorrowNum.Text.Trim() + LanguageHandle.GetWord("BenFen").ToString().Trim();
                 }
                 else
                     TB_Remark.Text = "";
@@ -133,11 +133,11 @@ public partial class TTMakeBookBorrow : System.Web.UI.Page
         }
         if (DropDownList1.SelectedValue.Trim().Equals("1"))
         {
-            strHQL += " and BookType = '图书' ";
+            strHQL += " and BookType = '图书' "; 
         }
         else if (DropDownList1.SelectedValue.Trim().Equals("2"))
         {
-            strHQL += " and BookType = '标准' ";
+            strHQL += " and BookType = '标准' "; 
         }
         strHQL += " Order By ID DESC ";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_BookInformation");
@@ -166,30 +166,30 @@ public partial class TTMakeBookBorrow : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(TB_ApplicantCode.Text.Trim()))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJYRBNWKJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJYRBNWKJC").ToString().Trim() + "')", true);
                 TB_ApplicantCode.Focus();
                 return;
             }
             if (!IsNumeric(txtBookUseNum.Text.Trim()))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSRZDJYSLYDY0DZSJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSRZDJYSLYDY0DZSJC").ToString().Trim() + "')", true);
                 txtBookUseNum.Focus();
                 return;
             }
             if (txtBookUseNum.Text.Trim().Contains(".") || txtBookUseNum.Text.Trim().Contains("-"))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSRZDJYSLYDY0DZSJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSRZDJYSLYDY0DZSJC").ToString().Trim() + "')", true);
                 txtBookUseNum.Focus();
                 return;
             }
             if (DateTime.Parse(DLC_BorrowDate.Text.Trim()) > DateTime.Parse(DLC_BackDate.Text.Trim()))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWJYSJBNDYYJGHSJJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWJYSJBNDYYJGHSJJC").ToString().Trim() + "')", true);
                 return;
             }
             if (GetBookBorrowNum(TB_ApplicantCode.Text.Trim()) + int.Parse(txtBookUseNum.Text.Trim()) > int.Parse(lbl_BorrowNum.Text.Trim()) && int.Parse(lbl_BorrowNum.Text.Trim()) > 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWJYZSLYCCYHKJSLXZJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWJYZSLYCCYHKJSLXZJC").ToString().Trim() + "')", true);
                 return;
             }
 
@@ -199,7 +199,7 @@ public partial class TTMakeBookBorrow : System.Web.UI.Page
             lst = bookInformationBLL.GetAllBookInformation(strHQL);
             BookInformation bookInformation = (BookInformation)lst[0];
             BookBorrowRecord bookBorrowRecord = new BookBorrowRecord();
-            bookBorrowRecord.Status = "借出";
+            bookBorrowRecord.Status = LanguageHandle.GetWord("JieChu").ToString().Trim();
             bookBorrowRecord.BookInfoId = bookInformation.ID;
             bookBorrowRecord.BarCode = bookInformation.BarCode;
             bookBorrowRecord.BookName = bookInformation.BookName;
@@ -225,14 +225,14 @@ public partial class TTMakeBookBorrow : System.Web.UI.Page
 
             if (int.Parse(txtBookUseNum.Text.Trim()) > bookInformation.BookNum)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWJYSLYCCSJSLJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWJYSLYCCSJSLJC").ToString().Trim() + "')", true);
                 return;
             }
             bookBorrowRecordBLL.AddBookBorrowRecord(bookBorrowRecord);
-            UpdateBookInformation(bookBorrowRecord.BookUseNum.ToString(), "1", "借出", bookBorrowRecord.BookInfoId.ToString());//更新书籍信息表
+            UpdateBookInformation(bookBorrowRecord.BookUseNum.ToString(), "1", LanguageHandle.GetWord("JieChu").ToString().Trim(), bookBorrowRecord.BookInfoId.ToString());//更新书籍信息表
             LoadBookBorrowRecord(TB_ApplicantCode.Text.Trim());
             LoadBookList(txt_BarCode.Text.Trim(), txt_BookName.Text.Trim(), txt_ReferenceNo.Text.Trim(), txt_Author.Text.Trim(), ddl_BookClassificationId.SelectedValue.Trim(), ddl_BookPublishersId.SelectedValue.Trim());
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYHJYSJCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYHJYSJCG").ToString().Trim() + "')", true);
         }
     }
 
@@ -320,14 +320,14 @@ public partial class TTMakeBookBorrow : System.Web.UI.Page
             BookBorrowRecordBLL bookBorrowRecordBLL = new BookBorrowRecordBLL();
             lst = bookBorrowRecordBLL.GetAllBookBorrowRecord(strHQL);
             BookBorrowRecord bookBorrowRecord = (BookBorrowRecord)lst[0];
-            bookBorrowRecord.Status = "归还";
+            bookBorrowRecord.Status = LanguageHandle.GetWord("GuiHai").ToString().Trim();
             bookBorrowRecord.RealBackDate = DateTime.Parse(DateTime.Now.ToString());
 
             bookBorrowRecordBLL.UpdateBookBorrowRecord(bookBorrowRecord, bookBorrowRecord.ID);
-            UpdateBookInformation(bookBorrowRecord.BookUseNum.ToString(), "0", "归还", bookBorrowRecord.BookInfoId.ToString());//更新书籍信息表
+            UpdateBookInformation(bookBorrowRecord.BookUseNum.ToString(), "0", LanguageHandle.GetWord("GuiHai").ToString().Trim(), bookBorrowRecord.BookInfoId.ToString());//更新书籍信息表
             LoadBookBorrowRecord(TB_ApplicantCode.Text.Trim());
             LoadBookList(txt_BarCode.Text.Trim(), txt_BookName.Text.Trim(), txt_ReferenceNo.Text.Trim(), txt_Author.Text.Trim(), ddl_BookClassificationId.SelectedValue.Trim(), ddl_BookPublishersId.SelectedValue.Trim());
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYHGHSJCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYHGHSJCG").ToString().Trim() + "')", true);
         }
     }
 
@@ -357,7 +357,7 @@ public partial class TTMakeBookBorrow : System.Web.UI.Page
 
     protected int GetBookBorrowNum(string strBorrowCode)
     {
-        string strHQL = " Select * From T_BookBorrowRecord Where BorrowCode='" + strBorrowCode + "' and Status<>'归还' Order By ID DESC ";
+        string strHQL = " Select * From T_BookBorrowRecord Where BorrowCode='" + strBorrowCode + "' and Status<>'归还' Order By ID DESC"; 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_BookBorrowRecord");
         if (ds.Tables[0].Rows.Count > 0 && ds != null)
         {
@@ -389,7 +389,7 @@ public partial class TTMakeBookBorrow : System.Web.UI.Page
         if (lst.Count > 0 && lst != null)
         {
             BookInformation bookInformation = (BookInformation)lst[0];
-            if (strStatus.Trim().Equals("归还"))
+            if (strStatus.Trim().Equals(LanguageHandle.GetWord("GuiHai").ToString().Trim()))
             {
                 bookInformation.BookUseNum = bookInformation.BookUseNum - int.Parse(strBookUseNum);
                 bookInformation.BookNum = bookInformation.BookNum + int.Parse(strBookUseNum);
@@ -410,7 +410,7 @@ public partial class TTMakeBookBorrow : System.Web.UI.Page
         HiddenField hfStatus = (HiddenField)e.Item.FindControl("hfStatus");
         if (hfStatus != null)
         {
-            if (hfStatus.Value.Trim().Equals("借出"))
+            if (hfStatus.Value.Trim().Equals(LanguageHandle.GetWord("JieChu").ToString().Trim()))
             {
                 if (btn_Back != null)
                 {
@@ -421,7 +421,7 @@ public partial class TTMakeBookBorrow : System.Web.UI.Page
                     btn_Back.Visible = false;
                 }
             }
-            else if (hfStatus.Value.Trim().Equals("归还"))
+            else if (hfStatus.Value.Trim().Equals(LanguageHandle.GetWord("GuiHai").ToString().Trim()))
             {
                 if (btn_Back != null)
                 {
@@ -514,7 +514,7 @@ public partial class TTMakeBookBorrow : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGGJYRBCZJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGJYRBCZJC").ToString().Trim() + "')", true);
             TB_ApplicantCode.Focus();
         }
     }
@@ -546,7 +546,7 @@ public partial class TTMakeBookBorrow : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGGJYRBCZJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGJYRBCZJC").ToString().Trim() + "')", true);
             TB_ApplicantCode.Focus();
         }
     }

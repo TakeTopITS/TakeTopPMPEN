@@ -32,7 +32,7 @@ public partial class TTWorkPlanRelatedWorkflowListView : System.Web.UI.Page
 
         if (ShareClass.CheckUserCanViewProjectPlan(strPlanID, strUserCode) == false)
         {
-            Response.Redirect("TTDisplayCustomErrorMessage.aspx?ErrorMsg='" + Resources.lang.ZZJGZYXMJLJHYJHCJRHLXZJHFZRCNJXZCZQJC + "'");
+            Response.Redirect("TTDisplayCustomErrorMessage.aspx?ErrorMsg='" + LanguageHandle.GetWord("ZZJGZYXMJLJHYJHCJRHLXZJHFZRCNJXZCZQJC").ToString().Trim() + "'");
         }
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
@@ -49,7 +49,7 @@ public partial class TTWorkPlanRelatedWorkflowListView : System.Web.UI.Page
 
             LB_Sql.Text = strHQL;
 
-            LB_QueryScope.Text = Resources.lang.ZZGZLSQZSY;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZGZLSQZSY").ToString().Trim();
         }
     }
 

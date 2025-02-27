@@ -64,7 +64,7 @@ public partial class TTProjectExpenseApplyWF : System.Web.UI.Page
 
             BT_SubmitApply.Enabled = false;
 
-            TB_ExpenseName.Text = Resources.lang.Project + strRelatedID + " " + strRelatedTitle + " ·ÑÓÃÉêÇë";
+            TB_ExpenseName.Text = LanguageHandle.GetWord("Project").ToString().Trim() + strRelatedID + " " + strRelatedTitle + LanguageHandle.GetWord("FeiYongShenQing").ToString().Trim();
         }
     }
 
@@ -134,7 +134,7 @@ public partial class TTProjectExpenseApplyWF : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -172,12 +172,12 @@ public partial class TTProjectExpenseApplyWF : System.Web.UI.Page
         {
             expenseApplyWLBLL.UpdateExpenseApplyWL(expenseApplyWL, int.Parse(strID));
             LoadExpenseApply(strUserCode, strRelatedType, strRelatedID);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
        }
@@ -267,12 +267,12 @@ public partial class TTProjectExpenseApplyWF : System.Web.UI.Page
                 LoadRelatedWL("ExpenseRequest", "Other", int.Parse(strID));
 
                 DL_Status.SelectedValue = "InProgress";
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFYSSCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFYSSCCG").ToString().Trim() + "')", true);
             }
             catch
             {
                 strWLID = "0";
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFYSSCSB + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFYSSCSB").ToString().Trim() + "')", true);
             }
 
             LoadExpenseApply(strUserCode, strRelatedType, strRelatedID);
@@ -280,7 +280,7 @@ public partial class TTProjectExpenseApplyWF : System.Web.UI.Page
         catch
         {
             strWLID = "0";
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
         }
 
         return strWLID;
@@ -427,7 +427,7 @@ public partial class TTProjectExpenseApplyWF : System.Web.UI.Page
 
                 if (intWLNumber > 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBCZGLDGZLJLBNSCJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBCZGLDGZLJLBNSCJC").ToString().Trim() + "')", true);
                     return;
                 }
 
@@ -447,7 +447,7 @@ public partial class TTProjectExpenseApplyWF : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
             }
         }

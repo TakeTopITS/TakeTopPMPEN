@@ -68,8 +68,7 @@
                                             <td>
                                                 <table>
                                                     <tr>
-                                                        <td>
-                                                            语言资源文件差异：
+                                                        <td>语言资源文件差异：
                                                         </td>
                                                         <td>
                                                             <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,YuYan%>"></asp:Label>： </td>
@@ -81,11 +80,10 @@
                                                             <asp:Button ID="BT_CompareByHomeLanguage" runat="server" CssClass="inpuLong" Text="<%$ Resources:lang,YiBenYuDuiBi%>" OnClick="BT_CompareByHomeLanguage_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';" />
                                                             <img id="IMG_Waiting" src="../Images/Processing.gif" alt="Loading,please wait..." style="text-align: center; display: none;" />
                                                         </td>
+
                                                         <td>
-                                                            <asp:Button ID="BT_GetLanguageResource" runat="server" CssClass="inpuLong" OnClick="BT_GetLanguageResource_Click" Text="<%$ Resources:lang,QDXTTSYYZY%>" />
-                                                        </td>
-                                                        <td>
-                                                            <asp:Button ID="BT_ReplaceLanguageResource" runat="server" CssClass="inpuLong" Text="<%$ Resources:lang,DuYiYanDuiBi%>" OnClick="BT_ReplaceLanguageResource_Click" />
+                                                            <asp:Button ID="BT_AddResours" runat="server" CssClass="inpuLong" Text="增加资源文件数据" OnClick="BT_AddResours_Click" OnClientClick="javascript:document.getElementById('IMG_Waiting').style.display = 'block';" />
+                                                            <img id="IMG_Waiting" src="../Images/Processing.gif" alt="Loading,please wait..." style="text-align: center; display: none;" />
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -212,7 +210,7 @@
             <div style="position: absolute; left: 50%; top: 50%;">
                 <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
                     <ProgressTemplate>
-                        <img src="Images/Processing.gif" alt="Loading,please wait..." />
+                        <img src="../Images/Processing.gif" alt="Loading,please wait..." />
                     </ProgressTemplate>
                 </asp:UpdateProgress>
             </div>

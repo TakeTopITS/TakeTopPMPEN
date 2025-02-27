@@ -96,23 +96,23 @@ public partial class TTDefectHandlePageThirdPart : System.Web.UI.Page
         SetReqRecordColor(ds, DataList_Handling, "InProgress");
 
         strHQL = "Select * from T_DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and defectAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成')";
+        strHQL += " and defectAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成')"; 
         strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from T_Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by defectAssignRecord.MoveTime DESC limit 40";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_DefectAssignRecord");
         DataList_FinishedUnAssigned.DataSource = ds;
         DataList_FinishedUnAssigned.DataBind();
-        SetReqRecordColor(ds, DataList_FinishedUnAssigned, "已完成");
+        SetReqRecordColor(ds, DataList_FinishedUnAssigned, "已完成"); 
 
 
         strHQL = "Select * from T_DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and defectAssignRecord.Status = '已分派'";
+        strHQL += " and defectAssignRecord.Status = '已分派'"; 
         strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from T_Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by defectAssignRecord.MoveTime DESC limit 40";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_DefectAssignRecord");
         DataList_Assigned.DataSource = ds;
         DataList_Assigned.DataBind();
-        SetReqRecordColor(ds, DataList_Assigned, "已分派");
+        SetReqRecordColor(ds, DataList_Assigned, "已分派"); 
     }
 
     protected void LoadDefectment(string strUserCode)

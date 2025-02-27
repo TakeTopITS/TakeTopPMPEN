@@ -46,7 +46,7 @@ public partial class TTAssetManage : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
         {
-            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityAsset(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityAsset(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
 
             LB_DepartString.Text = strDepartString;
 
@@ -60,7 +60,7 @@ public partial class TTAssetManage : System.Web.UI.Page
             string strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
             ShareClass.LoadUserByDepartCodeForDataGrid(strDepartCode, DataGrid3);
 
-            LB_AssetOwner.Text = Resources.lang.SYZCLB;
+            LB_AssetOwner.Text = LanguageHandle.GetWord("SYZCLB").ToString().Trim();
 
             strHQL = "from Asset as asset where ";
             strHQL += " asset.OwnerCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
@@ -88,7 +88,7 @@ public partial class TTAssetManage : System.Web.UI.Page
             strDepartCode = treeNode.Target.Trim();
             strDepartName = treeNode.Text.Trim();
 
-            LB_AssetOwner.Text = strDepartName + Resources.lang.DZCLB;
+            LB_AssetOwner.Text = strDepartName + LanguageHandle.GetWord("DZCLB").ToString().Trim();
             strHQL = "from Asset as asset where asset.OwnerCode in (select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + ") ";
             strHQL += " and asset.Number > 0";
             strHQL += " and asset.Status = 'InUse' Order by asset.ID DESC";
@@ -111,7 +111,7 @@ public partial class TTAssetManage : System.Web.UI.Page
         string strOwnerCode = "%" + TB_AssetCode.Text.Trim() + "%";
         string strAssetName = "%" + TB_AssetName.Text.Trim() + "%";
 
-        LB_AssetOwner.Text = Resources.lang.SYZCLB;
+        LB_AssetOwner.Text = LanguageHandle.GetWord("SYZCLB").ToString().Trim();
         strDepartString = LB_DepartString.Text.Trim();
 
         strHQL = "from Asset as asset where ";
@@ -138,7 +138,7 @@ public partial class TTAssetManage : System.Web.UI.Page
         string strUserCode = ((Button)e.Item.FindControl("BT_UserCode")).Text.Trim();
         string strUserName = ((Button)e.Item.FindControl("BT_UserName")).Text.Trim();
 
-        LB_AssetOwner.Text = strUserName + Resources.lang.DZCLB;
+        LB_AssetOwner.Text = strUserName + LanguageHandle.GetWord("DZCLB").ToString().Trim();
 
         strHQL = "from Asset as asset where asset.OwnerCode = " + "'" + strUserCode + "'";
         strHQL += " and asset.Number > 0";

@@ -55,7 +55,7 @@ public partial class TTWFChartViewJS : System.Web.UI.Page
 
         strWFDefinition = ds.Tables[0].Rows[0][1].ToString().Trim();
 
-        this.Title = Resources.lang.GongZuoLiu + ": " + strTemName + Resources.lang.LiuChengTu;
+        this.Title = LanguageHandle.GetWord("GongZuoLiu").ToString().Trim() + ": " + strTemName + LanguageHandle.GetWord("LiuChengTu").ToString().Trim();
 
 
         if (Page.IsPostBack == false)
@@ -96,7 +96,7 @@ public partial class TTWFChartViewJS : System.Web.UI.Page
 
                         if (strStatus == "InProgress")
                         {
-                            //strNewStepName = strStepName + "¡¾" + Resources.lang.JinXingZhong + "¡¿";
+                            //strNewStepName = strStepName + "¡¾" + LanguageHandle.GetWord("JinXingZhong").ToString().Trim() + "¡¿";
 
                             strNewStepName = strStepName;
                             strNewGUIDStep = strGUIDStep.Replace(strStepName, strNewStepName);
@@ -108,7 +108,7 @@ public partial class TTWFChartViewJS : System.Web.UI.Page
 
                         if (strStatus == "Passed")
                         {
-                            //strNewStepName = strStepName + "¡¾" + Resources.lang.TongGuo + "¡¿";
+                            //strNewStepName = strStepName + "¡¾" + LanguageHandle.GetWord("TongGuo").ToString().Trim() + "¡¿";
 
                             strNewStepName = strStepName;
                             strNewGUIDStep = strGUIDStep.Replace(strStepName, strNewStepName);
@@ -120,7 +120,7 @@ public partial class TTWFChartViewJS : System.Web.UI.Page
 
                         if (strStatus == "Rejected")
                         {
-                            //strNewStepName = strStepName + "¡¾" + Resources.lang.TongGuo + "¡¿";
+                            //strNewStepName = strStepName + "¡¾" + LanguageHandle.GetWord("TongGuo").ToString().Trim() + "¡¿";
 
                             strNewStepName = strStepName;
                             strNewGUIDStep = strGUIDStep.Replace(strStepName, strNewStepName);

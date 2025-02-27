@@ -39,7 +39,7 @@ public partial class TTProjectRelatedReqMain : System.Web.UI.Page
         lst = projectBLL.GetAllProjects(strHQL);
         Project project = (Project)lst[0];
 
-        //this.Title = Resources.lang.Project + strProjectID + project.ProjectName + "的相关需求";
+        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + project.ProjectName + "的相关需求";
 
         LB_UserCode.Text = strUserCode;
         LB_UserName.Text = strUserName;
@@ -62,7 +62,7 @@ public partial class TTProjectRelatedReqMain : System.Web.UI.Page
 
     protected void BT_RecordDefect_Click(object sender, EventArgs e)
     {
-        string strURL = "popShowByURL('TTMakeProjectRequirement.aspx?ProjectID=" + strProjectID + "','" + Resources.lang.CreateReq + "', 800, 600,window.location);";
+        string strURL = "popShowByURL('TTMakeProjectRequirement.aspx?ProjectID=" + strProjectID + "','" + LanguageHandle.GetWord("CreateReq").ToString().Trim() + "', 800, 600,window.location);";
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop12", strURL, true);
     }
 
@@ -105,7 +105,7 @@ public partial class TTProjectRelatedReqMain : System.Web.UI.Page
         {
             if (strStatus == "CaseClosed" || strStatus == "Suspended" || strStatus == "Cancel")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBCXMYBJAGHX + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBCXMYBJAGHX").ToString().Trim() + "')", true);
             }
             else
             {

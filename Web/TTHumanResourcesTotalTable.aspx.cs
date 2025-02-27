@@ -44,7 +44,7 @@ public partial class TTHumanResourcesTotalTable : System.Web.UI.Page
     protected void LoadProjectMemberScheduleList(string strProjectID, string strType)
     {
         string strHQL;
-        if (strType.Trim() == "按工种")
+        if (strType.Trim() == LanguageHandle.GetWord("AnGongChong").ToString().Trim())
         {
             if (strProjectID.Trim() == "0")
             {
@@ -109,19 +109,19 @@ public partial class TTHumanResourcesTotalTable : System.Web.UI.Page
             {
                 Random a = new Random();
                 string fileName = string.Empty;
-                if (DropDownList1.SelectedValue.Trim().Equals("按工种"))
+                if (DropDownList1.SelectedValue.Trim().Equals(LanguageHandle.GetWord("AnGongChong").ToString().Trim()))
                 {
-                    fileName = "项目人力资源表按工种_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("XiangMuRenLiZiYuanBiaoAnGongCh").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else
                 {
-                    fileName = "项目人力资源表按子组_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("XiangMuRenLiZiYuanBiaoAnZiZu").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 CreateExcel(getExportBookList(), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDCDSJYWJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
             }
         }
     }
@@ -151,17 +151,17 @@ public partial class TTHumanResourcesTotalTable : System.Web.UI.Page
     protected DataTable getExportBookList()
     {
         string strHQL;
-        if (DropDownList1.SelectedValue.Trim() == "按工种")
+        if (DropDownList1.SelectedValue.Trim() == LanguageHandle.GetWord("AnGongChong").ToString().Trim())
         {
             if (ddl_ProjectID.SelectedValue.Trim() == "0")
             {
-                strHQL = "select C.WorkType '职称/工种',C.NumberUsedTotal '计划工时',COALESCE(D.NumberAllTotal,0) '储备工时' from (select A.WorkType,SUM(NumberUsed) NumberUsedTotal from " +
+                strHQL = "select C.WorkType '职称/工种',C.NumberUsedTotal '计划工时',COALESCE(D.NumberAllTotal,0) '储备工时' from (select A.WorkType,SUM(NumberUsed) NumberUsedTotal from " + 
                     "T_ProjectMemberSchedule A group by A.WorkType) C left join (select B.WorkType,SUM(NumberAll) NumberAllTotal " +
                     "from T_ProjectMemberScheduleBase B group by B.WorkType) D on C.WorkType=D.WorkType";
             }
             else
             {
-                strHQL = "select C.WorkType '职称/工种',C.NumberUsedTotal '计划工时',COALESCE(D.NumberAllTotal,0) '储备工时' from (select A.WorkType,SUM(NumberUsed) NumberUsedTotal from " +
+                strHQL = "select C.WorkType '职称/工种',C.NumberUsedTotal '计划工时',COALESCE(D.NumberAllTotal,0) '储备工时' from (select A.WorkType,SUM(NumberUsed) NumberUsedTotal from " + 
                     "T_ProjectMemberSchedule A where A.ProjectID='" + ddl_ProjectID.SelectedValue.Trim() + "' group by A.WorkType) C left join (select B.WorkType,SUM(NumberAll) NumberAllTotal " +
                     "from T_ProjectMemberScheduleBase B where B.ProjectID='" + ddl_ProjectID.SelectedValue.Trim() + "' group by B.WorkType) D on C.WorkType=D.WorkType";
             }
@@ -170,13 +170,13 @@ public partial class TTHumanResourcesTotalTable : System.Web.UI.Page
         {
             if (ddl_ProjectID.SelectedValue.Trim() == "0")
             {
-                strHQL = "select C.HumanSubgroups '人力子组',C.NumberUsedTotal '计划工时',COALESCE(D.NumberAllTotal,0) '储备工时' from (select A.HumanSubgroups,SUM(NumberUsed) NumberUsedTotal from " +
+                strHQL = "select C.HumanSubgroups '人力子组',C.NumberUsedTotal '计划工时',COALESCE(D.NumberAllTotal,0) '储备工时' from (select A.HumanSubgroups,SUM(NumberUsed) NumberUsedTotal from " + 
                     "T_ProjectMemberSchedule A group by A.HumanSubgroups) C left join (select B.HumanSubgroups,SUM(NumberAll) NumberAllTotal " +
                     "from T_ProjectMemberScheduleBase B group by B.HumanSubgroups) D on C.HumanSubgroups=D.HumanSubgroups";
             }
             else
             {
-                strHQL = "select C.HumanSubgroups '人力子组',C.NumberUsedTotal '计划工时',COALESCE(D.NumberAllTotal,0) '储备工时' from (select A.HumanSubgroups,SUM(NumberUsed) NumberUsedTotal from " +
+                strHQL = "select C.HumanSubgroups '人力子组',C.NumberUsedTotal '计划工时',COALESCE(D.NumberAllTotal,0) '储备工时' from (select A.HumanSubgroups,SUM(NumberUsed) NumberUsedTotal from " + 
                     "T_ProjectMemberSchedule A where A.ProjectID='" + ddl_ProjectID.SelectedValue.Trim() + "' group by A.HumanSubgroups) C left join (select B.HumanSubgroups,SUM(NumberAll) NumberAllTotal " +
                     "from T_ProjectMemberScheduleBase B where B.ProjectID='" + ddl_ProjectID.SelectedValue.Trim() + "' group by B.HumanSubgroups) D on C.HumanSubgroups=D.HumanSubgroups";
             }

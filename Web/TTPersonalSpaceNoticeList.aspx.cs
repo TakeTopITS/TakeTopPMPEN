@@ -76,7 +76,7 @@ public partial class TTPersonalSpaceNoticeList : System.Web.UI.Page
         strLangCode = Session["LangCode"].ToString();
 
         strUserName = Session["UserName"].ToString();
-        strUserInfo = Resources.lang.YongHu + ": " + strUserCode + "  " + strUserName;
+        strUserInfo = LanguageHandle.GetWord("YongHu").ToString().Trim() + ": " + strUserCode + "  " + strUserName;
         //LB_SuperDepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthoritySuperUser(strUserCode);
 
         try
@@ -126,7 +126,7 @@ public partial class TTPersonalSpaceNoticeList : System.Web.UI.Page
         {
             strHQL += " And Scope = 'External'";
         }
-        strHQL += " And Status = '发布' Order By DocID DESC";
+        strHQL += " And Status = '发布' Order By DocID DESC"; 
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_PublicNotice");
         DataGrid7.DataSource = ds;
         DataGrid7.DataBind();

@@ -63,9 +63,9 @@ public partial class TTWZPayAudit : System.Web.UI.Page
                 {
                     WZPay wZPay = (WZPay)listWZPay[0];
 
-                    if (wZPay.Progress != "±¨Åú")
+                    if (wZPay.Progress != LanguageHandle.GetWord("BaoPi").ToString().Trim())
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBSBPZTBNPZ + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBSBPZTBNPZ").ToString().Trim() + "')", true);
                         return;
                     }
 

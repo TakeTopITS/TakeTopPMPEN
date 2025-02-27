@@ -69,7 +69,7 @@ public partial class TTScheduleEventLesderReview : System.Web.UI.Page
 
             if (lst.Count > 0)
             {
-                BT_Summit.Text = "ÐÞ ¸Ä";
+                BT_Summit.Text = LanguageHandle.GetWord("XiuGai").ToString().Trim();
                 ScheduleEventLeaderReview scheduleEventLeaderReview = (ScheduleEventLeaderReview)lst[0];
 
                 if (strIsMobileDevice == "YES")
@@ -187,7 +187,7 @@ public partial class TTScheduleEventLesderReview : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTJSBJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTJSBJC").ToString().Trim()+"')", true);
         }
     }
 

@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DefaultDemo.aspx.cs" Inherits="DefaultDemo" %>
+ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DefaultDemo.aspx.cs" Inherits="DefaultDemo" %>
 
 <%@ Import Namespace="System.Globalization" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -94,7 +94,7 @@
                     </div>-->
                     <div class="loginleft">
                         <div class="lfbox">
-                            <!-- <p class="lflogo">Ì©¶¦ÍØ¶¥</p> -->
+                            <!-- <p class="lflogo">Ì©ï¿½ï¿½ï¿½Ø¶ï¿½</p> -->
                             <p><asp:Label ID="LB_SystemName" runat="server"></asp:Label></p>
                     </div>
                 </div>

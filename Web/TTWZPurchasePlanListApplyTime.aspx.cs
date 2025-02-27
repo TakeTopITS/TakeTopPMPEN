@@ -90,13 +90,13 @@ public partial class TTWZPurchasePlanListApplyTime : System.Web.UI.Page
 
                     wZPurchaseBLL.UpdateWZPurchase(wZPurchase, HF_PurchaseCode.Value);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true); 
                     return;
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购文件不存在！');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购文件不存在！');", true); 
                 return;
             }
         }

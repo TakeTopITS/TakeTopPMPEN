@@ -43,13 +43,13 @@ public partial class TTProjectIncomeExpenseSAAS : System.Web.UI.Page
             strProjectID = "0";
             LB_ProjectIncomeExpenseTitle.Text = "";
 
-            strChartTitle =  Resources.lang.XMFYFBT;
+            strChartTitle =  LanguageHandle.GetWord("XMFYFBT").ToString().Trim();
         }
         else
         {
             LB_ProjectIncomeExpenseTitle.Text = strProjectID + " " + ShareClass.GetProjectName(strProjectID);
 
-            strChartTitle = strProjectID + " " + ShareClass.GetProjectName(strProjectID) + " " + Resources.lang.XMFYFBT;
+            strChartTitle = strProjectID + " " + ShareClass.GetProjectName(strProjectID) + " " + LanguageHandle.GetWord("XMFYFBT").ToString().Trim();
         }
 
         strUserCode = Session["UserCode"].ToString();

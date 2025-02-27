@@ -48,7 +48,7 @@ public partial class TTLTCandidateManage : System.Web.UI.Page
         {
             LB_LTCandidateInformationOwner.Text = "";
 
-            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             strHQL = "Select * From T_LTCandidateInformation Where BelongDepartCode in " + strDepartString;
@@ -57,7 +57,7 @@ public partial class TTLTCandidateManage : System.Web.UI.Page
             DataGrid1.DataSource = ds1;
             DataGrid1.DataBind();
 
-            LB_UserNumber.Text = Resources.lang.GCXD + " : " + ds1.Tables[0].Rows.Count.ToString();
+            LB_UserNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + " : " + ds1.Tables[0].Rows.Count.ToString();
             LB_Sql.Text = strHQL;
         }
     }
@@ -87,7 +87,7 @@ public partial class TTLTCandidateManage : System.Web.UI.Page
             intCount = ds1.Tables[0].Rows.Count;
 
             LB_LTCandidateInformationOwner.Text = strDepartName + " ：";
-            LB_UserNumber.Text = Resources.lang.GCXD + " : " + intCount.ToString();
+            LB_UserNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + " : " + intCount.ToString();
 
             LB_DepartCode.Text = strDepartCode;
         }
@@ -120,7 +120,7 @@ public partial class TTLTCandidateManage : System.Web.UI.Page
         DataGrid1.DataSource = ds;
         DataGrid1.DataBind();
 
-        LB_UserNumber.Text = Resources.lang.GCXD + " : " + ds.Tables[0].Rows.Count.ToString();
+        LB_UserNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + " : " + ds.Tables[0].Rows.Count.ToString();
         LB_Sql.Text = strHQL;
 
         LB_DepartCode.Text = "";
@@ -146,14 +146,14 @@ public partial class TTLTCandidateManage : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = "候选人信息_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("HouShuaRenXinXi").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 string strDepartCode = LB_DepartCode.Text.Trim();
 
                 CreateExcel(strDepartCode, fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDCDSJYWJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
             }
         }
     }
@@ -191,7 +191,7 @@ public partial class TTLTCandidateManage : System.Web.UI.Page
             strHQL += " Order by CreateTime ASC";
         }
 
-        MSExcelHandler.DataTableToExcel(strHQL, fileName);
+        MSExcelHandler.DataTableToExcel(strHQL, fileName); 
     }
 
 }

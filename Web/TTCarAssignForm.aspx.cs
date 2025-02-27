@@ -48,8 +48,8 @@ public partial class TTCarAssignForm : System.Web.UI.Page
             ShareClass.LoadUnderUserByDutyAndAuthorityAsset("DRIVER", strUserCode, DL_Driver);
             ShareClass.LoadUnderUserByDutyAndAuthorityAsset("GUARD", strUserCode, DL_Guard);
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(Resources.lang.ZZJGT,TreeView1, strUserCode);
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(Resources.lang.ZZJGT,TreeView2, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView2, strUserCode);
 
             LoadCarApplyFormByAuthority(strUserCode);
             LoadCarAssignForm(strUserCode);
@@ -202,7 +202,7 @@ public partial class TTCarAssignForm : System.Web.UI.Page
 
         if (dtBacktime < dtDepartTime)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJHHCSJBNXYJHYCSJJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJHHCSJBNXYJHYCSJJC").ToString().Trim()+"')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -210,7 +210,7 @@ public partial class TTCarAssignForm : System.Web.UI.Page
         }
         if(IsCarAssignForm(strCarCode,dtDepartTime.ToString(),dtBacktime.ToString()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGCZTYDSJNYBPCYLCBNTSPCJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGCZTYDSJNYBPCYLCBNTSPCJC").ToString().Trim()+"')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -220,7 +220,7 @@ public partial class TTCarAssignForm : System.Web.UI.Page
         {
             if (IsCarAssignFormByApplyFormID(NB_ApplyFormID.Amount.ToString().Trim(), string.Empty))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGSDYPCWXZCPCJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGSDYPCWXZCPCJC").ToString().Trim()+"')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -280,17 +280,17 @@ public partial class TTCarAssignForm : System.Web.UI.Page
 
             HL_PringAssignForm.NavigateUrl = "TTCarAssignFormPrint.aspx?ID=" + strID;
 
-            strMessage = "出车通知：" + "目的地：" + strDestination + ",申请人：" + strApplicantName + ",随车人：" + strAttendant;
-            strMessage += ",出发时间：" + dtDepartTime.ToString("yyyy-MM-dd HH:MM") + ",返回时间：" + dtBacktime.ToString("yyyy-MM-dd HH:MM");
-            strMessage += ",请准时出发1";
+            strMessage = LanguageHandle.GetWord("ChuCheTongZhi").ToString().Trim() + LanguageHandle.GetWord("MuDeDe").ToString().Trim() + strDestination + LanguageHandle.GetWord("ShenQingRen").ToString().Trim() + strApplicantName + LanguageHandle.GetWord("SuiCheRen").ToString().Trim() + strAttendant;
+            strMessage += LanguageHandle.GetWord("ChuFaShiJian").ToString().Trim() + dtDepartTime.ToString("yyyy-MM-dd HH:MM") + LanguageHandle.GetWord("FanHuiShiJian").ToString().Trim() + dtBacktime.ToString("yyyy-MM-dd HH:MM");
+            strMessage += LanguageHandle.GetWord("QingZhunShiChuFa1").ToString().Trim();
 
             TB_Message.Text = strMessage;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCSB+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCSB").ToString().Trim()+"')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -337,7 +337,7 @@ public partial class TTCarAssignForm : System.Web.UI.Page
 
         if (dtBacktime < dtDepartTime)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJHHCSJBNXYJHYCSJJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJHHCSJBNXYJHYCSJJC").ToString().Trim()+"')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -347,7 +347,7 @@ public partial class TTCarAssignForm : System.Web.UI.Page
         {
             if (IsCarAssignForm(strCarCode, dtDepartTime.ToString(), dtBacktime.ToString()))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGCZTYDSJNYBPCYLCBNTSPCJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGCZTYDSJNYBPCYLCBNTSPCJC").ToString().Trim()+"')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -358,7 +358,7 @@ public partial class TTCarAssignForm : System.Web.UI.Page
         {
             if (IsCarAssignForm2(strCarCode, dtDepartTime.ToString(), dtBacktime.ToString(), int.Parse(strID)))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGCZTYDSJNYBPCYLCBNTSPCJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGCZTYDSJNYBPCYLCBNTSPCJC").ToString().Trim()+"')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -369,7 +369,7 @@ public partial class TTCarAssignForm : System.Web.UI.Page
         {
             if (IsCarAssignFormByApplyFormID(NB_ApplyFormID.Amount.ToString().Trim(), LB_ID.Text.Trim()))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGSDYPCWXZCPCJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGSDYPCWXZCPCJC").ToString().Trim()+"')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -407,18 +407,18 @@ public partial class TTCarAssignForm : System.Web.UI.Page
 
             LoadCarAssignForm(strUserCode);
 
-            strMessage = "出车通知：" + "目的地：" + strDestination + ",申请人：" + strApplicantName + ",随车人：" + strAttendant;
-            strMessage += ",出发时间：" + dtDepartTime.ToString("yyyy-MM-dd HH:MM") + ",返回时间：" + dtBacktime.ToString("yyyy-MM-dd HH:MM");
-            strMessage += ",请准时出发！";
+            strMessage = LanguageHandle.GetWord("ChuCheTongZhi").ToString().Trim() + LanguageHandle.GetWord("MuDeDe").ToString().Trim() + strDestination + LanguageHandle.GetWord("ShenQingRen").ToString().Trim() + strApplicantName + LanguageHandle.GetWord("SuiCheRen").ToString().Trim() + strAttendant;
+            strMessage += LanguageHandle.GetWord("ChuFaShiJian").ToString().Trim() + dtDepartTime.ToString("yyyy-MM-dd HH:MM") + LanguageHandle.GetWord("FanHuiShiJian").ToString().Trim() + dtBacktime.ToString("yyyy-MM-dd HH:MM");
+            strMessage += LanguageHandle.GetWord("QingZhunShiChuFa").ToString().Trim();
 
             TB_Message.Text = strMessage;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCSB+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCSB").ToString().Trim()+"')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -500,15 +500,15 @@ public partial class TTCarAssignForm : System.Web.UI.Page
 
                     HL_PringAssignForm.NavigateUrl = "TTCarAssignFormPrint.aspx?ID=" + strID;
 
-                    strMessage = "出车通知：" + "目的地：" + carAssignForm.Destination.Trim() + ",申请人：" + carAssignForm.ApplicantName.Trim() + ",随车人：" + carAssignForm.Attendant.Trim();
-                    strMessage += ",出发时间：" + carAssignForm.DepartTime.ToString("yyyy-MM-dd HH:MM") + ",返回时间：" + carAssignForm.BackTime.ToString("yyyy-MM-dd HH:MM");
-                    strMessage += ",请准时出发！";
+                    strMessage = LanguageHandle.GetWord("ChuCheTongZhi").ToString().Trim() + LanguageHandle.GetWord("MuDeDe").ToString().Trim() + carAssignForm.Destination.Trim() + LanguageHandle.GetWord("ShenQingRen").ToString().Trim() + carAssignForm.ApplicantName.Trim() + LanguageHandle.GetWord("SuiCheRen").ToString().Trim() + carAssignForm.Attendant.Trim();
+                    strMessage += LanguageHandle.GetWord("ChuFaShiJian").ToString().Trim() + carAssignForm.DepartTime.ToString("yyyy-MM-dd HH:MM") + LanguageHandle.GetWord("FanHuiShiJian").ToString().Trim() + carAssignForm.BackTime.ToString("yyyy-MM-dd HH:MM");
+                    strMessage += LanguageHandle.GetWord("QingZhunShiChuFa").ToString().Trim();
 
                     TB_Message.Text = strMessage;
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCCKSCPCDDSJHMWBZXLLBZJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCKSCPCDDSJHMWBZXLLBZJC").ToString().Trim() + "')", true);
                 }
 
                 if (e.CommandName == "Update")
@@ -538,11 +538,11 @@ public partial class TTCarAssignForm : System.Web.UI.Page
 
                     LoadCarAssignForm(strUserCode);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBKNFYMCHYTZSGDJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBKNFYMCHYTZSGDJC").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -619,7 +619,7 @@ public partial class TTCarAssignForm : System.Web.UI.Page
 
         if (dtRealBacktime < dtRealDepartTime)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSJHCSJBNXYSJYCSJJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSJHCSJBNXYSJYCSJJC").ToString().Trim()+"')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -627,7 +627,7 @@ public partial class TTCarAssignForm : System.Web.UI.Page
         }
         if (IsCarAssignForm2(strCarCode, dtRealDepartTime.ToString(), dtRealBacktime.ToString(), int.Parse(strID)))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGCZTYDSJNYBPCYLCBNTSPCJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGCZTYDSJNYBPCYLCBNTSPCJC").ToString().Trim()+"')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -652,12 +652,12 @@ public partial class TTCarAssignForm : System.Web.UI.Page
 
             LoadCarAssignForm(strUserCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCSBJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim()+"')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -701,7 +701,7 @@ public partial class TTCarAssignForm : System.Web.UI.Page
 
         if (CB_SendMsg.Checked == true | CB_SendMail.Checked == true)
         {
-            strSubject = "出车通知";
+            strSubject = LanguageHandle.GetWord("ChuCheTongZhi").ToString().Trim();
             strMsg = TB_Message.Text.Trim();
 
             if (CB_SendMsg.Checked == true)
@@ -715,7 +715,7 @@ public partial class TTCarAssignForm : System.Web.UI.Page
             }
         }
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZFSWB+"')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZFSWB").ToString().Trim()+"')", true);
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
     }

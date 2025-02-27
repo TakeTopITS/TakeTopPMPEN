@@ -1,4 +1,4 @@
-ï»¿using ProjectMgt.BLL;
+using ProjectMgt.BLL;
 using ProjectMgt.Model;
 
 using System;
@@ -20,8 +20,8 @@ public partial class TTSystemDataManageForImplementationBeginner : System.Web.UI
 
         LogClass.WriteLogFile("test");
 
-        //åˆ¤æ–­ åˆå§‹é˜¶æ®µæ•°æ®æ¸…é™¤  æ¨¡ç»„æ˜¯å¦å­˜åœ¨
-        if (checkModuleIsExisted("å®žæ–½é˜¶æ®µæ•°æ®ç®¡ç†") == false)
+        //ÅÐ¶Ï ³õÊ¼½×¶ÎÊý¾ÝÇå³ý  Ä£×éÊÇ·ñ´æÔÚ
+        if (checkModuleIsExisted("ÊµÊ©½×¶ÎÊý¾Ý¹ÜÀí") == false)
         {
             Response.Redirect("../TTDisplayErrors.aspx");
             return;
@@ -60,14 +60,14 @@ public partial class TTSystemDataManageForImplementationBeginner : System.Web.UI
 
         try
         {
-            //å¤‡ä»½æ•°æ®åº“
+            //±¸·ÝÊý¾Ý¿â
             ShareClass.BackupCurrentSiteDB(ShareClass.GetSystemDBName(), ShareClass.GetSystemDBBackupSaveDir(), strUserName, "SELF");
 
             strHQL1 = "Select * from T_SystemDataManageForBeginer Where OperationName = 'ClearData' and IsForbit = 'NO'";
             ds1 = ShareClass.GetDataSetFromSql(strHQL1, "T_SystemDataManageForBeginer");
             if (ds1.Tables[0].Rows.Count > 0)
             {
-                //å¤‡ä»½æˆåŠŸåŽï¼Œè®©è¿™äº›æŒ‰é’®å¯ç”¨
+                //±¸·Ý³É¹¦ºó£¬ÈÃÕâÐ©°´Å¥¿ÉÓÃ
                 BT_ClearAssetData.Visible = true;
                 BT_ClearDepartmentData.Visible = true;
                 BT_ClearItemData.Visible = true;
@@ -99,12 +99,12 @@ public partial class TTSystemDataManageForImplementationBeginner : System.Web.UI
             {
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¤‡ä»½æˆåŠŸï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('±¸·Ý³É¹¦£¡')", true);
         }
         catch (Exception err)
         {
             LogClass.WriteLogFile("Error page: " + HttpContext.Current.Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('å¤‡ä»½å¤±è´¥ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('±¸·ÝÊ§°Ü£¬Çë¼ì²é£¡')", true);
         }
     }
 
@@ -122,11 +122,11 @@ public partial class TTSystemDataManageForImplementationBeginner : System.Web.UI
             if (checkIsCanClear())
             {
                 ShareClass.RunSqlCommand(strHQL);
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æ¸…é™¤æˆåŠŸï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Çå³ý³É¹¦£¡')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æ¸…é™¤å¤±è´¥ï¼Œåº”è¯¥æ˜¯æ²¡æœ‰å¤‡ä»½æ•°æ®åº“ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Çå³ýÊ§°Ü£¬Ó¦¸ÃÊÇÃ»ÓÐ±¸·ÝÊý¾Ý¿â£¬Çë¼ì²é£¡')", true);
             }
 
         }
@@ -149,11 +149,11 @@ public partial class TTSystemDataManageForImplementationBeginner : System.Web.UI
             if (checkIsCanClear())
             {
                 ShareClass.RunSqlCommand(strHQL);
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æ¸…é™¤æˆåŠŸï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Çå³ý³É¹¦£¡')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æ¸…é™¤å¤±è´¥ï¼Œåº”è¯¥æ˜¯æ²¡æœ‰å¤‡ä»½æ•°æ®åº“ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Çå³ýÊ§°Ü£¬Ó¦¸ÃÊÇÃ»ÓÐ±¸·ÝÊý¾Ý¿â£¬Çë¼ì²é£¡')", true);
             }
         }
     }
@@ -173,11 +173,11 @@ public partial class TTSystemDataManageForImplementationBeginner : System.Web.UI
             if (checkIsCanClear())
             {
                 ShareClass.RunSqlCommand(strHQL);
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æ¸…é™¤æˆåŠŸï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Çå³ý³É¹¦£¡')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æ¸…é™¤å¤±è´¥ï¼Œåº”è¯¥æ˜¯æ²¡æœ‰å¤‡ä»½æ•°æ®åº“ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Çå³ýÊ§°Ü£¬Ó¦¸ÃÊÇÃ»ÓÐ±¸·ÝÊý¾Ý¿â£¬Çë¼ì²é£¡')", true);
             }
         }
     }
@@ -211,11 +211,11 @@ public partial class TTSystemDataManageForImplementationBeginner : System.Web.UI
             if (checkIsCanClear())
             {
                 ShareClass.RunSqlCommand(strHQL);
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æ¸…é™¤æˆåŠŸï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Çå³ý³É¹¦£¡')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æ¸…é™¤å¤±è´¥ï¼Œåº”è¯¥æ˜¯æ²¡æœ‰å¤‡ä»½æ•°æ®åº“ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Çå³ýÊ§°Ü£¬Ó¦¸ÃÊÇÃ»ÓÐ±¸·ÝÊý¾Ý¿â£¬Çë¼ì²é£¡')", true);
             }
         }
     }
@@ -262,11 +262,11 @@ public partial class TTSystemDataManageForImplementationBeginner : System.Web.UI
             if (checkIsCanClear())
             {
                 ShareClass.RunSqlCommand(strHQL);
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æ¸…é™¤æˆåŠŸï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Çå³ý³É¹¦£¡')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æ¸…é™¤å¤±è´¥ï¼Œåº”è¯¥æ˜¯æ²¡æœ‰å¤‡ä»½æ•°æ®åº“ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Çå³ýÊ§°Ü£¬Ó¦¸ÃÊÇÃ»ÓÐ±¸·ÝÊý¾Ý¿â£¬Çë¼ì²é£¡')", true);
             }
         }
     }
@@ -284,11 +284,11 @@ public partial class TTSystemDataManageForImplementationBeginner : System.Web.UI
             if (checkIsCanClear())
             {
                 ShareClass.RunSqlCommand(strHQL);
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æ¸…é™¤æˆåŠŸï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Çå³ý³É¹¦£¡')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æ¸…é™¤å¤±è´¥ï¼Œåº”è¯¥æ˜¯æ²¡æœ‰å¤‡ä»½æ•°æ®åº“ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Çå³ýÊ§°Ü£¬Ó¦¸ÃÊÇÃ»ÓÐ±¸·ÝÊý¾Ý¿â£¬Çë¼ì²é£¡')", true);
             }
         }
     }
@@ -306,11 +306,11 @@ public partial class TTSystemDataManageForImplementationBeginner : System.Web.UI
             if (checkIsCanClear())
             {
                 ShareClass.RunSqlCommand(strHQL);
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æ¸…é™¤æˆåŠŸï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Çå³ý³É¹¦£¡')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æ¸…é™¤å¤±è´¥ï¼Œåº”è¯¥æ˜¯æ²¡æœ‰å¤‡ä»½æ•°æ®åº“ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Çå³ýÊ§°Ü£¬Ó¦¸ÃÊÇÃ»ÓÐ±¸·ÝÊý¾Ý¿â£¬Çë¼ì²é£¡')", true);
             }
 
         }
@@ -331,11 +331,11 @@ public partial class TTSystemDataManageForImplementationBeginner : System.Web.UI
             if (checkIsCanClear())
             {
                 ShareClass.RunSqlCommand(strHQL);
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æ¸…é™¤æˆåŠŸï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Çå³ý³É¹¦£¡')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æ¸…é™¤å¤±è´¥ï¼Œåº”è¯¥æ˜¯æ²¡æœ‰å¤‡ä»½æ•°æ®åº“ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Çå³ýÊ§°Ü£¬Ó¦¸ÃÊÇÃ»ÓÐ±¸·ÝÊý¾Ý¿â£¬Çë¼ì²é£¡')", true);
             }
         }
     }
@@ -353,11 +353,11 @@ public partial class TTSystemDataManageForImplementationBeginner : System.Web.UI
             if (checkIsCanClear())
             {
                 ShareClass.RunSqlCommand(strHQL);
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æ¸…é™¤æˆåŠŸï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Çå³ý³É¹¦£¡')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('æ¸…é™¤å¤±è´¥ï¼Œåº”è¯¥æ˜¯æ²¡æœ‰å¤‡ä»½æ•°æ®åº“ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('Çå³ýÊ§°Ü£¬Ó¦¸ÃÊÇÃ»ÓÐ±¸·ÝÊý¾Ý¿â£¬Çë¼ì²é£¡')", true);
             }
 
         }
@@ -388,28 +388,28 @@ public partial class TTSystemDataManageForImplementationBeginner : System.Web.UI
 
                     BT_ForbitClear.Enabled = false;
 
-                    //åˆ é™¤ å®žæ–½é˜¶æ®µæ•°æ®ç®¡ç† æ¨¡ç»„
-                    strHQL2 = "Delete From T_ProModuleLevel Where ModuleName = 'å®žæ–½é˜¶æ®µæ•°æ®ç®¡ç†'";
+                    //É¾³ý ÊµÊ©½×¶ÎÊý¾Ý¹ÜÀí Ä£×é
+                    strHQL2 = "Delete From T_ProModuleLevel Where ModuleName = 'ÊµÊ©½×¶ÎÊý¾Ý¹ÜÀí'";
                     ShareClass.RunSqlCommand(strHQL2);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ç¦ç”¨æˆåŠŸï¼')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('½ûÓÃ³É¹¦£¡')", true);
                 }
                 catch (Exception err)
                 {
                     LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('ç¦ç”¨å¤±è´¥ï¼Œè¯·æ£€æŸ¥ï¼')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('½ûÓÃÊ§°Ü£¬Çë¼ì²é£¡')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBMYCWJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBMYCWJC").ToString().Trim() + "')", true);
                 return;
             }
         }
     }
 
-    //æ£€æŸ¥æ˜¯å¦å¯ä»¥æ¸…é™¤æ•°æ®
+    //¼ì²éÊÇ·ñ¿ÉÒÔÇå³ýÊý¾Ý
     protected bool checkIsCanClear()
     {
         string strHQL1;
@@ -426,12 +426,12 @@ public partial class TTSystemDataManageForImplementationBeginner : System.Web.UI
         }
     }
 
-    //åˆ¤æ–­ åˆå§‹é˜¶æ®µæ•°æ®æ¸…é™¤  æ¨¡ç»„æ˜¯å¦å­˜åœ¨
+    //ÅÐ¶Ï ³õÊ¼½×¶ÎÊý¾ÝÇå³ý  Ä£×éÊÇ·ñ´æÔÚ
     protected bool checkModuleIsExisted(string strModuleName)
     {
         string strHQL;
 
-        strHQL = "Select *  From T_ProModuleLevel Where ModuleName = 'å®žæ–½é˜¶æ®µæ•°æ®ç®¡ç†'";
+        strHQL = "Select *  From T_ProModuleLevel Where ModuleName = 'ÊµÊ©½×¶ÎÊý¾Ý¹ÜÀí'";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProModuleLevel");
 
         if (ds.Tables[0].Rows.Count > 0)

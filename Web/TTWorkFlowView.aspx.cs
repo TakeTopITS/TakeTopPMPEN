@@ -41,7 +41,7 @@ public partial class TTWorkFlowView : System.Web.UI.Page
             }
             else
             {
-                Response.Write("此工作流不存在，可能已被删除，请检查！");
+                Response.Write(LanguageHandle.GetWord("CiGongZuoLiuBuCunZaiKeNengYiBe").ToString().Trim());
             }
         }
     }

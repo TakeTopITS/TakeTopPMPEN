@@ -61,7 +61,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
             DLC_StartTime.Text = ShareClass.getCurrentMonthStartDay().ToString("yyyy-MM-dd");
             DLC_EndTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(Resources.lang.ZZJGT, TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
 
             var dtLeave = GetLeaveTypeAll();
             if (dtLeave != null)
@@ -117,7 +117,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
         catch(Exception ex)
         {
             LogClass.WriteLogFile(ex.Message.ToString());
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('错误，部门和子部门员工人数太多，内存不够，请检查!')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZCuoWuBuMenHeZiBuMenYuanGongR").ToString().Trim()+"')", true);
         }
     }
 
@@ -130,7 +130,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
         if (strDepartCode == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('警告，请先选择部门再查询！')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoQingXianShuaZeBuMenZa").ToString().Trim()+"')", true);
             return null;
         }
 
@@ -152,12 +152,12 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
         strStartTime = startTime.ToString("yyyy-MM-dd");
         strEndTime = endTime.ToString("yyyy-MM-dd");
-        Label4.Text = string.Format("统计时间：{0}至{1}", strStartTime, strEndTime);
+        Label4.Text = string.Format(LanguageHandle.GetWord("TongJiShiJian0Zhi1").ToString().Trim(), strStartTime, strEndTime);
 
         if (strStartTime.Substring(0, 8) != strEndTime.Substring(0, 8))
         {
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click",
-                "alert('警告，开始结束日期只能选择同一个月份！')", true);
+                "alert('" +LanguageHandle.GetWord("ZZJingGaoKaiShiJieShuRiJiZhiNe").ToString().Trim()+"')", true);
             return null;
         }
 
@@ -309,7 +309,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
         var dt = ds.Tables[0];
         Random a = new Random();
-        string fileName = "员工考勤报表" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+        string fileName = LanguageHandle.GetWord("YuanGongKaoQinBaoBiao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
 
         try
         {
@@ -317,8 +317,8 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
             ISheet sheet = workbook.CreateSheet("Sheet1");
             //删除多余列UserCode、工号1、工号2
             dt.Columns.Remove("UserCode");
-            dt.Columns.Remove("工号1");
-            dt.Columns.Remove("工号2");
+            dt.Columns.Remove(LanguageHandle.GetWord("GongHao1").ToString().Trim());
+            dt.Columns.Remove(LanguageHandle.GetWord("GongHao2").ToString().Trim());
             var colNum = dt.Columns.Count;
 
             var startTime = DateTime.Parse(DLC_StartTime.Text);
@@ -332,12 +332,12 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
             CellRangeAddress region = new CellRangeAddress(rowIndex, rowIndex, 0, colNum - 1);
             sheet.AddMergedRegion(region);
             var cell = sheet.CreateRow(rowIndex).CreateCell(0);
-            cell.SetCellValue("月度汇总    统计日期：" + strStartTime + "至" + strEndTime);
+            cell.SetCellValue("月度汇总    统计日期：" + strStartTime + "至" + strEndTime); 
 
             var style = workbook.CreateCellStyle() as HSSFCellStyle;
             var font = workbook.CreateFont() as HSSFFont;
             font.IsBold = true;//加粗
-            font.FontName = "宋体";
+            font.FontName = LanguageHandle.GetWord("SongTi").ToString().Trim();
             font.FontHeightInPoints = 24;
             style.SetFont(font);
             ((HSSFSheet)sheet).SetEnclosedBorderOfRegion(region, NPOI.SS.UserModel.BorderStyle.Thin, HSSFColor.Black.Index);
@@ -350,10 +350,10 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
             sheet.AddMergedRegion(region);
             cell = sheet.CreateRow(rowIndex).CreateCell(0);
             //            cell.SetCellValue("月度汇总    统计日期：" + strStartTime + "至" + strEndTime);
-            cell.SetCellValue("报表生成时间：" + DateTime.Now.ToString("yyyy-MM-dd HH:mm"));
+            cell.SetCellValue("报表生成时间：" + DateTime.Now.ToString("yyyy-MM-dd HH:mm")); 
             style = workbook.CreateCellStyle() as HSSFCellStyle;
             font = workbook.CreateFont() as HSSFFont;
-            font.FontName = "宋体";
+            font.FontName = LanguageHandle.GetWord("SongTi").ToString().Trim();
             font.FontHeightInPoints = 14;
             style.SetFont(font);
             ((HSSFSheet)sheet).SetEnclosedBorderOfRegion(region, NPOI.SS.UserModel.BorderStyle.Thin, HSSFColor.Black.Index);
@@ -364,7 +364,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
             style = workbook.CreateCellStyle() as HSSFCellStyle;
             font = workbook.CreateFont() as HSSFFont;
-            font.FontName = "宋体";
+            font.FontName = LanguageHandle.GetWord("SongTi").ToString().Trim();
             font.FontHeightInPoints = 12;
             style.SetFont(font);
             SetCellBorder(style);
@@ -372,7 +372,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
             var row1 = sheet.CreateRow(rowIndex);
             var row2 = sheet.CreateRow(rowIndex + 1);
-            string[] cols = new string[] { "姓名", "部门", "工号", "职位" };
+            string[] cols = new string[] { LanguageHandle.GetWord("XingMing").ToString().Trim(), LanguageHandle.GetWord("BuMen").ToString().Trim(), LanguageHandle.GetWord("GongHao").ToString().Trim(), LanguageHandle.GetWord("ZhiWei").ToString().Trim() };
             var colIndex = 0;
             for (; colIndex < cols.Length; colIndex++)
             {
@@ -395,7 +395,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
             }
 
             cell = row1.CreateCell(colIndex);
-            cell.SetCellValue("请假(小时)");
+            cell.SetCellValue("请假(小时)"); 
             ((HSSFSheet)sheet).SetEnclosedBorderOfRegion(region, NPOI.SS.UserModel.BorderStyle.Thin, HSSFColor.Black.Index);
             cell.CellStyle = style;
 
@@ -408,8 +408,8 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
             cols = new string[]
             {
-                "出勤天数", "应出勤天数", "迟到次数", "迟到时长(分钟)", "旷工迟到次数",
-                "早退次数", "早退时长(分钟)", "旷工天数", "夜班天数"
+                LanguageHandle.GetWord("ChuQinTianShu").ToString().Trim(), LanguageHandle.GetWord("YingChuQinTianShu").ToString().Trim(), LanguageHandle.GetWord("ChiDaoCiShu").ToString().Trim(), LanguageHandle.GetWord("ChiDaoShiChangFenZhong").ToString().Trim(), LanguageHandle.GetWord("KuangGongChiDaoCiShu").ToString().Trim(),
+                LanguageHandle.GetWord("ZaoTuiCiShu").ToString().Trim(), LanguageHandle.GetWord("ZaoTuiShiChangFenZhong").ToString().Trim(), LanguageHandle.GetWord("KuangGongTianShu").ToString().Trim(), LanguageHandle.GetWord("YeBanTianShu").ToString().Trim()
             };
 
             for (var i = 0; i < cols.Length; i++)
@@ -432,7 +432,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
             }
 
             cell = row1.CreateCell(colIndex);
-            cell.SetCellValue("加班时长(小时)");
+            cell.SetCellValue("加班时长(小时)"); 
             ((HSSFSheet)sheet).SetEnclosedBorderOfRegion(region, NPOI.SS.UserModel.BorderStyle.Thin, HSSFColor.Black.Index);
             cell.CellStyle = style;
 
@@ -447,7 +447,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
             region = new CellRangeAddress(rowIndex, rowIndex, colIndex, colIndex + totalDays - 1);
             sheet.AddMergedRegion(region);
             cell = row1.CreateCell(colIndex);
-            cell.SetCellValue("考勤结果");
+            cell.SetCellValue("考勤结果"); 
             ((HSSFSheet)sheet).SetEnclosedBorderOfRegion(region, NPOI.SS.UserModel.BorderStyle.Thin, HSSFColor.Black.Index);
             cell.CellStyle = style;
 
@@ -564,7 +564,7 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
     //    if (strDepartCode == "")
     //    {
-    //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('警告，请先选择部门再查询！')", true);
+    //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoQingXianShuaZeBuMenZa").ToString().Trim()+"')", true);
     //        return null;
     //    }
 
@@ -586,12 +586,12 @@ public partial class TTUserAttendanceReportNew : System.Web.UI.Page
 
     //    strStartTime = startTime.ToString("yyyy-MM-dd");
     //    strEndTime = endTime.ToString("yyyy-MM-dd");
-    //    Label4.Text = string.Format("统计时间：{0}至{1}", strStartTime, strEndTime);
+    //    Label4.Text = string.Format(LanguageHandle.GetWord("TongJiShiJian0Zhi1").ToString().Trim(), strStartTime, strEndTime);
 
     //    if (strStartTime.Substring(0, 8) != strEndTime.Substring(0, 8))
     //    {
     //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click",
-    //            "alert('警告，开始结束日期只能选择同一个月份！')", true);
+    //            "alert('" +LanguageHandle.GetWord("ZZJingGaoKaiShiJieShuRiJiZhiNe").ToString().Trim()+"')", true);
     //        return null;
     //    }
 

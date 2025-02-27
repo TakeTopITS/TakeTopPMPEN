@@ -67,7 +67,7 @@ public partial class TTUserPWDFindSAAS : System.Web.UI.Page
                 {
                     try
                     {
-                        msg.SendPhoneMSMBySP(strMobilePhone, "项目宝验证码: " + TB_Password.Text.Trim(), "ADMIN");
+                        msg.SendPhoneMSMBySP(strMobilePhone, LanguageHandle.GetWord("XiangMuBaoYanZhengMa").ToString().Trim() + TB_Password.Text.Trim(), "ADMIN");
                     }
                     catch
                     {
@@ -75,7 +75,7 @@ public partial class TTUserPWDFindSAAS : System.Web.UI.Page
 
                     try
                     {
-                        msg.SendMail(strSendUserCode, "项目宝验证码", strCheckCode, "ADMIN");
+                        msg.SendMail(strSendUserCode, LanguageHandle.GetWord("XiangMuBaoYanZhengMa").ToString().Trim(), strCheckCode, "ADMIN");
                     }
                     catch
                     {
@@ -87,7 +87,7 @@ public partial class TTUserPWDFindSAAS : System.Web.UI.Page
                         string strOpenID = TakeTopCore.WXHelper.GetUserWeXinOpenIDByUserCode(strSendUserCode);
                         if (strOpenID != "")
                         {
-                            msg.SendWeChatGZMsg(strOpenID, "项目宝验证码: " + strCheckCode);
+                            msg.SendWeChatGZMsg(strOpenID, LanguageHandle.GetWord("XiangMuBaoYanZhengMa").ToString().Trim() + strCheckCode);
                         }
                     }
                     catch
@@ -100,12 +100,12 @@ public partial class TTUserPWDFindSAAS : System.Web.UI.Page
 
             }).Start();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZNHYZMYFSDWXGZHTDGLBQDKNDWXCK + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZNHYZMYFSDWXGZHTDGLBQDKNDWXCK").ToString().Trim() + "')", true);
 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFSSBQJCNYMYGZWXGCHTDGLB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFSSBQJCNYMYGZWXGCHTDGLB").ToString().Trim() + "')", true);
         }
     }
 
@@ -119,7 +119,7 @@ public partial class TTUserPWDFindSAAS : System.Web.UI.Page
 
         if (strUserCode == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSJHBNWKQJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSJHBNWKQJC").ToString().Trim() + "')", true);
             return;
         }
 
@@ -128,14 +128,14 @@ public partial class TTUserPWDFindSAAS : System.Web.UI.Page
         strCheckCode2 = Session[strUserCode + "CheckCode"].ToString();
         if (strCheckCode1 != strCheckCode2 | strCheckCode1 == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZNZMCWQJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZNZMCWQJC").ToString().Trim() + "')", true);
             return;
         }
 
         Regex mobileReg = new Regex("[0-9]{11,11}");
         if (!mobileReg.IsMatch(strUserCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSJHMBZQQJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSJHMBZQQJC").ToString().Trim() + "')", true);
             return;
         }
 
@@ -143,14 +143,14 @@ public partial class TTUserPWDFindSAAS : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProjectMember");
         if (ds.Tables[0].Rows.Count == 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCSJHBCZQJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCSJHBCZQJC").ToString().Trim() + "')", true);
             return;
         }
 
         strPassword = TB_Password.Text.Trim();
         if (strPassword.Length < 8)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZSBMMCDBXDYHDY8WJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBMMCDBXDYHDY8WJC").ToString().Trim() + "')", true);
             return;
         }
 
@@ -159,11 +159,11 @@ public partial class TTUserPWDFindSAAS : System.Web.UI.Page
             strHQL = "Update T_ProjectMember SET Password = '" + EncryptPassword(TB_Password.Text.Trim(), "MD5") + "' Where UserCode = '" + strUserCode + "'";
             ShareClass.RunSqlCommand(strHQL);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZMMGGCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZMMGGCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZMMGGSBQJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZMMGGSBQJC").ToString().Trim() + "')", true);
         }
     }
 

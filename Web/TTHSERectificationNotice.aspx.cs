@@ -68,19 +68,19 @@ public partial class TTHSERectificationNotice : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(TB_Name.Text.Trim()) || TB_Name.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGMCBNWKCZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGMCBNWKCZSBJC").ToString().Trim() + "')", true);
             TB_Name.Focus();
             return;
         }
         if (IsHSERectificationNoticeCode(string.Empty, TB_Name.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGMCYCZCZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGMCYCZCZSBJC").ToString().Trim() + "')", true);
             TB_Name.Focus();
             return;
         }
         if (string.IsNullOrEmpty(DL_SafeInspectId.SelectedValue.Trim()) || DL_SafeInspectId.SelectedValue.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGAJCJLBXCZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGAJCJLBXCZSBJC").ToString().Trim() + "')", true);
             DL_SafeInspectId.Focus();
             return;
         }
@@ -116,11 +116,11 @@ public partial class TTHSERectificationNotice : System.Web.UI.Page
             //BT_Delete.Visible = true;
             //BT_Delete.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
 
@@ -134,19 +134,19 @@ public partial class TTHSERectificationNotice : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(TB_Name.Text.Trim()) || TB_Name.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGMCBNWKCZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGMCBNWKCZSBJC").ToString().Trim() + "')", true);
             TB_Name.Focus();
             return;
         }
         if (IsHSERectificationNoticeCode(LB_Code.Text.Trim(), TB_Name.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGMCYCZCZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGMCYCZCZSBJC").ToString().Trim() + "')", true);
             TB_Name.Focus();
             return;
         }
         if (string.IsNullOrEmpty(DL_SafeInspectId.SelectedValue.Trim()) || DL_SafeInspectId.SelectedValue.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGAJCJLBXCZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGAJCJLBXCZSBJC").ToString().Trim() + "')", true);
             DL_SafeInspectId.Focus();
             return;
         }
@@ -183,11 +183,11 @@ public partial class TTHSERectificationNotice : System.Web.UI.Page
             //BT_Delete.Visible = true;
             //BT_Delete.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
 
         }
@@ -199,7 +199,7 @@ public partial class TTHSERectificationNotice : System.Web.UI.Page
         string strCode = LB_Code.Text.Trim();
         if (IsHSERectification(strCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZAYHZGZYDYGZGTZDWFSC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZAYHZGZYDYGZGTZDWFSC").ToString().Trim() + "')", true);
             return;
         }
 
@@ -214,11 +214,11 @@ public partial class TTHSERectificationNotice : System.Web.UI.Page
             //BT_Update.Visible = false;
             //BT_Delete.Visible = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -319,19 +319,19 @@ public partial class TTHSERectificationNotice : System.Web.UI.Page
             HSESafeInspectionRecord hSESafeInspectionRecord = (HSESafeInspectionRecord)lst[0];
             DLC_InspectionDate.Text = hSESafeInspectionRecord.InspectionDate.ToString("yyyy-MM-dd");
             TB_QESEngineerCode.Text = hSESafeInspectionRecord.QESEngineer.Trim();
-            TB_Inspectors.Text = hSESafeInspectionRecord.InspectionTeamLeader.Trim() + "(组长)  " + hSESafeInspectionRecord.InspectorsCode.Trim();
+            TB_Inspectors.Text = hSESafeInspectionRecord.InspectionTeamLeader.Trim() + LanguageHandle.GetWord("ZuChang").ToString().Trim() + hSESafeInspectionRecord.InspectorsCode.Trim();
             TB_ProjectManager.Text = hSESafeInspectionRecord.ProjectManager.Trim();
             if (!string.IsNullOrEmpty(hSESafeInspectionRecord.InspectionOverView.Trim()) && !string.IsNullOrEmpty(hSESafeInspectionRecord.InspectContentFindings.Trim()))
             {
-                lbl_InspectionOverViews.Text = "检查情况概述：" + hSESafeInspectionRecord.InspectionOverView.Trim() + "。</br>检查内容及其发现：" + hSESafeInspectionRecord.InspectContentFindings.Trim();
+                lbl_InspectionOverViews.Text = LanguageHandle.GetWord("JianChaQingKuangGaiShu").ToString().Trim() + hSESafeInspectionRecord.InspectionOverView.Trim() + LanguageHandle.GetWord("brJianChaNeiRongJiJiFaXian").ToString().Trim() + hSESafeInspectionRecord.InspectContentFindings.Trim();
             }
             else if (string.IsNullOrEmpty(hSESafeInspectionRecord.InspectionOverView.Trim()) && !string.IsNullOrEmpty(hSESafeInspectionRecord.InspectContentFindings.Trim()))
             {
-                lbl_InspectionOverViews.Text = "检查内容及其发现：" + hSESafeInspectionRecord.InspectContentFindings.Trim();
+                lbl_InspectionOverViews.Text = LanguageHandle.GetWord("JianChaNeiRongJiJiFaXian").ToString().Trim() + hSESafeInspectionRecord.InspectContentFindings.Trim();
             }
             else if (!string.IsNullOrEmpty(hSESafeInspectionRecord.InspectionOverView.Trim()) && string.IsNullOrEmpty(hSESafeInspectionRecord.InspectContentFindings.Trim()))
             {
-                lbl_InspectionOverViews.Text = "检查情况概述：" + hSESafeInspectionRecord.InspectionOverView.Trim() + "。";
+                lbl_InspectionOverViews.Text = LanguageHandle.GetWord("JianChaQingKuangGaiShu").ToString().Trim() + hSESafeInspectionRecord.InspectionOverView.Trim() + "。";
             }
             else
             {

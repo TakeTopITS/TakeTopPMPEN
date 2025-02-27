@@ -152,12 +152,12 @@ public partial class TTConstractPayableReport : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = Resources.lang.HeTongFuKuanQingKuangBaoBiao + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("HeTongFuKuanQingKuangBaoBiao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 CreateExcel(fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDCDSJYWJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
             }
         }
     }
@@ -185,7 +185,7 @@ public partial class TTConstractPayableReport : System.Web.UI.Page
         strCurrencyType = "%" + DL_CurrencyType.SelectedValue.Trim() + "%";
 
 
-        strHQL = "select  BillCode 原始单号,ConstractCode 合同代码,ConstractName 合同名称,PayableAccount 应付金额,to_char(PayableTime,'yyyy/mm/dd') 应付时间,OutOfPocketAccount 实付金额,HandlingCharge 手续费,UNPayAmount 未付金额,Receiver 收款方,PartA 甲方单位,PartAOperator 负责人,CurrencyType 币别 from V_ConstractPayableReportSummary where 1=1 ";
+        strHQL = "select  BillCode 原始单号,ConstractCode 合同代码,ConstractName 合同名称,PayableAccount 应付金额,to_char(PayableTime,'yyyy/mm/dd') 应付时间,OutOfPocketAccount 实付金额,HandlingCharge 手续费,UNPayAmount 未付金额,Receiver 收款方,PartA 甲方单位,PartAOperator 负责人,CurrencyType 币别 from V_ConstractPayableReportSummary where 1=1 "; 
 
         if (!string.IsNullOrEmpty(strPartA))
         {

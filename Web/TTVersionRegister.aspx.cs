@@ -48,7 +48,7 @@ public partial class TTVersionRegister : System.Web.UI.Page
             }
 
             string strIsOEMVersion = System.Configuration.ConfigurationManager.AppSettings["IsOEMVersion"];
-            LB_Copyright.Text = "Copyright? 泰顶拓鼎(TakeTop Software)2006-2026 " + "<a href=https://www.taketopits.com>www.taketopits.com</a>";
+            LB_Copyright.Text = LanguageHandle.GetWord("CopyrightTaiDingTaDingTakeTopS").ToString().Trim() + "<a href=https://www.taketopits.com>www.taketopits.com</a>";
 
             string strServerName = System.Configuration.ConfigurationManager.AppSettings["ServerName"];
             LB_ServerName.Text = strServerName;
@@ -80,7 +80,7 @@ public partial class TTVersionRegister : System.Web.UI.Page
                     {
                         strRegisterCode = strCPUCode;
 
-                        LB_MySN.Text = "错误，此机器必须连互联网才能获取序列号，请检查网络连接！";
+                        LB_MySN.Text = LanguageHandle.GetWord("CuoWuCiJiQiBiXuLianHuLianWangC").ToString().Trim();
                         LB_MySN.ForeColor = Color.Red;
                     }
                     else
@@ -100,12 +100,12 @@ public partial class TTVersionRegister : System.Web.UI.Page
                     strSiteName = license.GetSiteName(strServerName);
                     strForbitModule = license.GetForbitModuleString(strServerName).TrimEnd(',');
 
-                    LB_LicenseNumber.Text = "授权类型：" + strLicenseType + "，版本：" + strVerType + "，站点名：" + strSiteName + " ，授权用户数：WEB: " + intWEBLicenseNumber.ToString() + ", APP: " + intAPPLicenseNumber.ToString() + "，有效期至：" + strDeadline + "，禁用模块：" + strForbitModule;
-                    LB_LicenseNumber.Text += "，现有用户数：" + "WEB：" + GetCurrentWebUserNumber() + ", APP：" + GetCurrentAppUserNumber();
+                    LB_LicenseNumber.Text = "授权类型：" + strLicenseType + "，版本：" + strVerType + "，站点名：" + strSiteName + "，授权用户数：WEB:" + intWEBLicenseNumber.ToString() + ", APP: " + intAPPLicenseNumber.ToString() + "，有效期至：" + strDeadline + "，禁用模块：" + strForbitModule; 
+                    LB_LicenseNumber.Text += LanguageHandle.GetWord("XianYouYongHuShu").ToString().Trim() + "WEB：" + GetCurrentWebUserNumber() + ", APP：" + GetCurrentAppUserNumber();
                 }
                 else
                 {
-                    LB_LicenseNumber.Text += "，现有用户数：" + "WEB：" + GetCurrentWebUserNumber() + ", APP：" + GetCurrentAppUserNumber();
+                    LB_LicenseNumber.Text += LanguageHandle.GetWord("XianYouYongHuShu").ToString().Trim() + "WEB：" + GetCurrentWebUserNumber() + ", APP：" + GetCurrentAppUserNumber();
                 }
             }
             catch (System.Exception err)
@@ -131,7 +131,7 @@ public partial class TTVersionRegister : System.Web.UI.Page
 
         if (strRegisterCodeNew == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZCSBZCMBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZCSBZCMBNWKJC").ToString().Trim() + "')", true);
             return;
         }
         else
@@ -192,14 +192,14 @@ public partial class TTVersionRegister : System.Web.UI.Page
                             strSiteName = license.GetSiteName(strServerName);
                             strForbitModule = license.GetForbitModuleString(strServerName);
 
-                            LB_LicenseNumber.Text = "授权类型：" + strLicenseType + "，版本：" + strVerType + "，站点名：" + strSiteName + " ，用户数 WEB: " + intWEBLicenseNumber.ToString() + ", APP: " + intAPPLicenseNumber.ToString() + "，有效期至：" + strDeadline + "，禁用模块：" + strForbitModule;
+                            LB_LicenseNumber.Text = "授权类型：" + strLicenseType + "，版本：" + strVerType + "，站点名：" + strSiteName + "，用户数 WEB:" + intWEBLicenseNumber.ToString() + ", APP: " + intAPPLicenseNumber.ToString() + "，有效期至：" + strDeadline + "，禁用模块：" + strForbitModule; 
                             BT_Register.ToolTip = strRegisterCodeNew;
 
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZCCG + "')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZCCG").ToString().Trim() + "')", true);
                         }
                         catch
                         {
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZCSBJC + "')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZCSBJC").ToString().Trim() + "')", true);
                         }
                     }
                     else
@@ -223,23 +223,23 @@ public partial class TTVersionRegister : System.Web.UI.Page
                             //设置缓存更改标志
                             ChangePageCache();
 
-                            LB_LicenseNumber.Text = "授权类型：" + strLicenseType + "，版本：" + strVerType + "，站点名：" + strSiteName + " ，用户数 WEB: " + intWEBLicenseNumber.ToString() + ", APP: " + intAPPLicenseNumber.ToString() + "，有效期至：" + strDeadline;
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZCCG + "')", true);
+                            LB_LicenseNumber.Text = "授权类型：" + strLicenseType + "，版本：" + strVerType + "，站点名：" + strSiteName + "，用户数 WEB:" + intWEBLicenseNumber.ToString() + ", APP: " + intAPPLicenseNumber.ToString() + "，有效期至：" + strDeadline; 
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZCCG").ToString().Trim() + "')", true);
                         }
                         catch
                         {
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZCSBZCMBNXRHTJCGXLJCS + "')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZCSBZCMBNXRHTJCGXLJCS").ToString().Trim() + "')", true);
                         }
                     }
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBZCMBDJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZCMBDJC").ToString().Trim() + "')", true);
                 }
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBZCMBDJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZCMBDJC").ToString().Trim() + "')", true);
             }
         }
     }
@@ -252,7 +252,7 @@ public partial class TTVersionRegister : System.Web.UI.Page
             if (TakeTopCore.CoreShareClass.UpgradeDataBase() == false)
             {
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGSJSJSBKNSSSAMPLEYHJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSJSJSBKNSSSAMPLEYHJC").ToString().Trim() + "')", true);
             }
             else
             {
@@ -260,13 +260,13 @@ public partial class TTVersionRegister : System.Web.UI.Page
                 ChangePageCache();
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSJCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSJCG").ToString().Trim() + "')", true);
 
         }
         catch (Exception err)
         {
             LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSJSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSJSBJC").ToString().Trim() + "')", true);
         }
     }
 

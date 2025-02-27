@@ -40,15 +40,15 @@ public partial class TTCustomerQuestionRelatedDoc : System.Web.UI.Page
         CustomerQuestion customerQuestion = (CustomerQuestion)lst[0];
         strQuestionName = customerQuestion.Question.Trim();
 
-        //this.Title = "客服：" + strQuestionID +  " 的相关文档";
+        //this.Title = "客服：" + strQuestionID +  "的相关文档";
 
         LB_UserCode.Text = strUserCode;
         LB_UserName.Text = strUserName;
 
         if (Page.IsPostBack == false)
         {
-            ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "客服", strQuestionID, "");
-            LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
+            ShareClass.InitialDocTypeTree(TreeView1, strUserCode, LanguageHandle.GetWord("KeFu").ToString().Trim(), strQuestionID, "");
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
 
             LoadRelatedDoc(strQuestionID);
 
@@ -85,8 +85,8 @@ public partial class TTCustomerQuestionRelatedDoc : System.Web.UI.Page
             DocType docType = (DocType)lst1[0];
             strDocType = docType.Type.Trim();
 
-            strHQL = " from Document as document where document.RelatedType = '客服' and document.RelatedID = " + strQuestionID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";
-            LB_FindCondition.Text = Resources.lang.CXFWWJLX + ": " + strDocType;
+            strHQL = "from Document as document where document.RelatedType = '客服' and document.RelatedID =" + strQuestionID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC"; 
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + ": " + strDocType;
 
             //设置缺省的文件类型
             ShareClass.SetDefaultDocType(strDocType, LB_DocTypeID, TB_DocType);
@@ -96,15 +96,15 @@ public partial class TTCustomerQuestionRelatedDoc : System.Web.UI.Page
         }
         else
         {
-            strHQL = " from Document as document where document.RelatedType = '客服' and document.RelatedID = " + strQuestionID + " and document.Status <> 'Deleted' Order by document.DocID DESC";
-            LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
+            strHQL = "from Document as document where document.RelatedType = '客服' and document.RelatedID =" + strQuestionID + " and document.Status <> 'Deleted' Order by document.DocID DESC"; 
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
         }
 
         lst2 = documentBLL.GetAllDocuments(strHQL);
         DataGrid1.DataSource = lst2;
         DataGrid1.DataBind();
 
-        LB_TotalCount.Text = Resources.lang.CXDDWJS + ": " + lst2.Count.ToString();
+        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst2.Count.ToString();
     }
 
     protected void TreeView3_SelectedNodeChanged(object sender, EventArgs e)
@@ -151,7 +151,7 @@ public partial class TTCustomerQuestionRelatedDoc : System.Web.UI.Page
                 }
                 else
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZFFCZNBNSCBRSCDWJ + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZFFCZNBNSCBRSCDWJ").ToString().Trim() + "');</script>");
                 }
             }
 
@@ -168,7 +168,7 @@ public partial class TTCustomerQuestionRelatedDoc : System.Web.UI.Page
                 }
                 e.Item.ForeColor = Color.Red;
 
-                TB_WLName.Text = Resources.lang.PingShen + Resources.lang.WenJian + strDocID + strDocName;
+                TB_WLName.Text = LanguageHandle.GetWord("PingShen").ToString().Trim() + LanguageHandle.GetWord("WenJian").ToString().Trim() + strDocID + strDocName;
 
                 BT_SubmitApply.Enabled = true;
 
@@ -187,7 +187,7 @@ public partial class TTCustomerQuestionRelatedDoc : System.Web.UI.Page
             string strDocTypeID = LB_DocTypeID.Text.Trim();
             if (strDocTypeID == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGWDLXBNWKJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWDLXBNWKJC").ToString().Trim() + "')", true);
                 return;
             }
             string strDocType = GetDocTypeName(strDocTypeID);
@@ -218,21 +218,21 @@ public partial class TTCustomerQuestionRelatedDoc : System.Web.UI.Page
             {
                 //if (this.AttachFile.ContentLength > 1024)
                 //{
-                //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGBNSCDYSZDWJ + "')", true);
+                //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGBNSCDYSZDWJ").ToString().Trim() + "')", true);
                 //    return;
                 //}
             }
 
             if (fi.Exists)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCZTMWJSCSBGMHZSC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "')", true);
             }
             else
             {
                 DocumentBLL documentBLL = new DocumentBLL();
                 Document document = new Document();
 
-                document.RelatedType = "客服";
+                document.RelatedType = LanguageHandle.GetWord("KeFu").ToString().Trim();
                 document.DocTypeID = int.Parse(strDocTypeID);
                 document.DocType = strDocType;
                 document.RelatedID = int.Parse(strQuestionID);
@@ -257,17 +257,17 @@ public partial class TTCustomerQuestionRelatedDoc : System.Web.UI.Page
 
 
                     LoadRelatedDoc(strQuestionID);
-                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "客服", strQuestionID, "");
+                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, LanguageHandle.GetWord("KeFu").ToString().Trim(), strQuestionID, "");
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZYSCDWJ + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "')", true);
         }
     }
 
@@ -366,11 +366,11 @@ public partial class TTCustomerQuestionRelatedDoc : System.Web.UI.Page
 
             LoadRelatedWL("DocumentReview", "Document", int.Parse(strDocID));
 
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZWJPSSSCDGZLGLYMJHCGZLS + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZWJPSSSCDGZLGLYMJHCGZLS").ToString().Trim() + "');</script>");
         }
         catch
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZWJPSSSB + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZWJPSSSB").ToString().Trim() + "');</script>");
         }
     }
 
@@ -470,7 +470,7 @@ public partial class TTCustomerQuestionRelatedDoc : System.Web.UI.Page
         strUserCode = LB_UserCode.Text.Trim();
         strDepartCode = GetDepartCode(strUserCode);
 
-        strHQL = " from Document as document where document.RelatedType = '客服' and document.RelatedID = " + strQuestionID;
+        strHQL = " from Document as document where document.RelatedType = '客服' and document.RelatedID = " + strQuestionID; 
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);
@@ -479,7 +479,7 @@ public partial class TTCustomerQuestionRelatedDoc : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_TotalCount.Text = Resources.lang.CXDDWJS + ": " + lst.Count.ToString();
+        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
     }
 
     protected string GetDocTypeName(string strDocTypeID)

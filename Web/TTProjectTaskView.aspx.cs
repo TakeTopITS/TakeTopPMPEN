@@ -41,11 +41,11 @@ public partial class TTProjectTaskView : System.Web.UI.Page
             {
                 ProjectTask projectTask = (ProjectTask)lst[0];
               
-                //this.Title = " 任务: " + strTaskID + " " + projectTask.Task.Trim() + " 详细信息";
+                //this.Title = "任务:" + strTaskID + " " + projectTask.Task.Trim() + " 详细信息";
             }
             else
             {
-                Response.Write("此项目任务不存在，可能已被删除，请检查！");
+                Response.Write(LanguageHandle.GetWord("CiXiangMuRenWuBuCunZaiKeNengYi").ToString().Trim());
             }
         }
     }  

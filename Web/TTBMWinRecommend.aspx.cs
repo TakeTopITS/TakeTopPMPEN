@@ -227,7 +227,7 @@ public partial class TTBMWinRecommend : System.Web.UI.Page
         string strId, strHQL;
         IList lst;
 
-        if (e.CommandName == "中标")
+        if (e.CommandName == LanguageHandle.GetWord("ZhongBiao").ToString().Trim())
         {
             strId = e.Item.Cells[1].Text.Trim();
 
@@ -439,7 +439,7 @@ public partial class TTBMWinRecommend : System.Web.UI.Page
     {
         if (strBidStatus.Trim().Equals("Y"))
         {
-            return "中标";
+            return LanguageHandle.GetWord("ZhongBiao").ToString().Trim();
         }
         else if (strBidStatus.Trim().Equals("N"))
         {
@@ -447,7 +447,7 @@ public partial class TTBMWinRecommend : System.Web.UI.Page
         }
         else
         {
-            return "未开标";
+            return "未开标"; 
         }
     }
 
@@ -482,7 +482,7 @@ public partial class TTBMWinRecommend : System.Web.UI.Page
             for (int i = 0; i < lst.Count; i++)
             {
                 BMSupBidByExp bMSupBidByExp = (BMSupBidByExp)lst[i];
-                result += "专家 " + ShareClass.GetUserName(bMSupBidByExp.ExportCode.Trim()) + "：" + bMSupBidByExp.ExportResult.Trim() + "；";
+                result += LanguageHandle.GetWord("ZhuanGu").ToString().Trim() + ShareClass.GetUserName(bMSupBidByExp.ExportCode.Trim()) + "：" + bMSupBidByExp.ExportResult.Trim() + "；";
             }
         }
         return result;
@@ -559,7 +559,7 @@ public partial class TTBMWinRecommend : System.Web.UI.Page
         strTemName = DL_TemName.SelectedValue.Trim();
         if (strTemName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWLCMBMCBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWLCMBMCBNWKJC").ToString().Trim() + "')", true);
             return strWLID;
         }
 
@@ -622,7 +622,7 @@ public partial class TTBMWinRecommend : System.Web.UI.Page
 
                 BT_SubmitApply.Visible = false;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZBTJSCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZBTJSCCG").ToString().Trim() + "')", true);
             }
             catch
             {
@@ -631,7 +631,7 @@ public partial class TTBMWinRecommend : System.Web.UI.Page
                 BT_SubmitApply.Visible = true;
                 BT_SubmitApply.Enabled = true;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZBTJSCSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZBTJSCSBJC").ToString().Trim() + "')", true);
             }
         }
         catch
@@ -639,7 +639,7 @@ public partial class TTBMWinRecommend : System.Web.UI.Page
             strWLID = "0";
             BT_SubmitApply.Visible = true;
             BT_SubmitApply.Enabled = true;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZBTJSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZBTJSCSBJC").ToString().Trim() + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindowWorkflow','false') ", true);
@@ -758,7 +758,7 @@ public partial class TTBMWinRecommend : System.Web.UI.Page
             HL_BMBidFile.Enabled = true;
             HL_BMBidFile.NavigateUrl = "TTBMPerformanceEvaluation.aspx?BidPlanID=" + bMBidPlan.ID.ToString();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCPRZJCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCPRZJCG").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
 

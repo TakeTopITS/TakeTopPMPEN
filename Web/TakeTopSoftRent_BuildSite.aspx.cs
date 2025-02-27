@@ -54,14 +54,14 @@ public partial class TakeTopSoftRent_BuildSite : System.Web.UI.Page
 
         if (strSiteAppSystemName == "" | strSiteAppName == "")
         {
-            LB_Message.Text = "提示，带*号的都不能空，请检查！";
+            LB_Message.Text = LanguageHandle.GetWord("DiShiDaiHaoDeDouBuNengKongQing").ToString().Trim();
         }
         else
         {
 
             if(!isAlphabeticNoSpace(strSiteAppName))
             {
-                LB_Message.Text = "警告，站点名称只能由字母组成，不能有汉字、数字、标点符号，也不能有空格，请检查！";
+                LB_Message.Text = LanguageHandle.GetWord("JingGaoZhanDianMingChenZhiNeng").ToString().Trim();
                 return;
             }
 
@@ -92,7 +92,7 @@ public partial class TakeTopSoftRent_BuildSite : System.Web.UI.Page
                 DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentSiteBaseData");
                 if (ds.Tables[0].Rows.Count == 0)
                 {
-                    LB_Message.Text = "创建失败，没有你选取的产品版本的可用站点基础参数，请检查！";
+                    LB_Message.Text = LanguageHandle.GetWord("ChuangJianShiBaiMeiYouNiShuaQu").ToString().Trim();
                     return;
                 }
 
@@ -133,7 +133,7 @@ public partial class TakeTopSoftRent_BuildSite : System.Web.UI.Page
 
                 if (UrlIsExist(strSiteAppURL))
                 {
-                    LB_Message.Text = "创建失败，存在相同名称的站点，请检查！";
+                    LB_Message.Text = LanguageHandle.GetWord("ChuangJianShiBaiCunZaiXiangTon").ToString().Trim();
                     return;
                 }
 
@@ -190,7 +190,7 @@ public partial class TakeTopSoftRent_BuildSite : System.Web.UI.Page
                 try
                 {
                     string strCSOperatorCode = ShareClass.GetWebSiteCustomerServiceOperatorCode(strWebSite);
-                    string strMSMMsg = strRentUserName + "(电话：" + strRentUserPhoneNumber + "）已创建:" + strRentProductName + "(" + strRentProductVersion + ") 租用站点：" + strSiteAppURL;
+                    string strMSMMsg = strRentUserName + LanguageHandle.GetWord("DianHua").ToString().Trim() + strRentUserPhoneNumber + LanguageHandle.GetWord("YiChuangJian").ToString().Trim() + strRentProductName + "(" + strRentProductVersion + LanguageHandle.GetWord("ZuYongZhanDian").ToString().Trim() + strSiteAppURL;
                     Action action = new Action(delegate ()
                     {
                         Msg msg = new Msg();
@@ -203,11 +203,11 @@ public partial class TakeTopSoftRent_BuildSite : System.Web.UI.Page
                         {
                         }
 
-                        string strEMailMsg = "你好，你" + strServerType + "的：" + strSiteAppSystemName + " 已创建站点，地址是：" + strSiteAppURL + " ,登录帐号：ADMIN 密码：12345678 ，请放心使用，有问题请随时联系客服（021-51085119），谢谢，此邮件发自泰顶拓鼎集团！";
+                        string strEMailMsg = LanguageHandle.GetWord("NiHaoNi").ToString().Trim() + strServerType + LanguageHandle.GetWord("De").ToString().Trim() + strSiteAppSystemName + LanguageHandle.GetWord("YiChuangJianZhanDianDeZhiShi").ToString().Trim() + strSiteAppURL + LanguageHandle.GetWord("DengLuZhangHaoADMINMiMa1234567").ToString().Trim();
 
                         try
                         {
-                            msg.SendMailByEmail(strRentUserEMail, "站点创建通知", strEMailMsg, "ADMIN");
+                            msg.SendMailByEmail(strRentUserEMail, LanguageHandle.GetWord("ZhanDianChuangJianTongZhi").ToString().Trim(), strEMailMsg, "ADMIN");
                         }
                         catch
                         {

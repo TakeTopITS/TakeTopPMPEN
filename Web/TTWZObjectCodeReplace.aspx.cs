@@ -44,7 +44,7 @@ public partial class TTWZObjectCodeReplace : System.Web.UI.Page
 
             if (fi.Exists)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+Resources.lang.ZZCZTMWJSCSBGMHZSC+"');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim()+"');</script>");
             }
 
             if (Directory.Exists(strDocSavePath) == false)
@@ -71,7 +71,7 @@ public partial class TTWZObjectCodeReplace : System.Web.UI.Page
             }
             catch (Exception ex)
             {
-                lblMsg.Text = string.Format("<span style='color:red' >导入时出现以下错误: {0}!</span>", ex.Message);
+                lblMsg.Text = string.Format(LanguageHandle.GetWord("spanstylecolorredDaoRuShiChuXi").ToString().Trim(), ex.Message);
             }
         }
     }
@@ -91,8 +91,8 @@ public partial class TTWZObjectCodeReplace : System.Web.UI.Page
             lineNumber++;
             try
             {
-                string strOldObjectCode = ShareClass.ObjectToString(row["原物资代码"]);
-                string strNewObjectCode = ShareClass.ObjectToString(row["新物资代码"]);
+                string strOldObjectCode = ShareClass.ObjectToString(row[LanguageHandle.GetWord("YuanWuZiDaiMa").ToString().Trim()]);
+                string strNewObjectCode = ShareClass.ObjectToString(row[LanguageHandle.GetWord("XinWuZiDaiMa").ToString().Trim()]);
 
                 if (string.IsNullOrEmpty(strOldObjectCode) && string.IsNullOrEmpty(strNewObjectCode))
                 {
@@ -101,12 +101,12 @@ public partial class TTWZObjectCodeReplace : System.Web.UI.Page
 
                 if (string.IsNullOrEmpty(strOldObjectCode))
                 {
-                    resultMsg += string.Format("第{0}行，原物资代码不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangYuanWuZiDaiMaBuNengWeiK").ToString().Trim(), lineNumber);
                     continue;
                 }
                 if (string.IsNullOrEmpty(strNewObjectCode))
                 {
-                    resultMsg += string.Format("第{0}行，新物资代码不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangXinWuZiDaiMaBuNengWeiKo").ToString().Trim(), lineNumber);
                     continue;
                 }
 
@@ -122,7 +122,7 @@ public partial class TTWZObjectCodeReplace : System.Web.UI.Page
 
                 if (strOldBigCode != strNewBigCode)
                 {
-                    resultMsg += string.Format("第{0}行，原物资代码与新物资代码大类不相等<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangYuanWuZiDaiMaYuXinWuZiD").ToString().Trim(), lineNumber);
                     continue;
                 }
                 //if (strOldObjectCode != strNewObjectCode)
@@ -132,7 +132,7 @@ public partial class TTWZObjectCodeReplace : System.Web.UI.Page
                 //}
                 if (strOldSmallCode == strNewSmallCode)
                 {
-                    resultMsg += string.Format("第{0}行，原物资代码与新物资代码在同一个小类下面，不允许替换，只能替换不同中类，小类下面的物资代码<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangYuanWuZiDaiMaYuXinWuZiD").ToString().Trim(), lineNumber);
                     continue;
                 }
 
@@ -140,7 +140,7 @@ public partial class TTWZObjectCodeReplace : System.Web.UI.Page
                 DataTable dtNewZLCode = ShareClass.GetDataSetFromSql(strNewZLCodeHQL, "NewZLCode").Tables[0];
                 if (dtNewZLCode == null || dtNewZLCode.Rows.Count == 0)
                 {
-                    resultMsg += string.Format("第{0}行，新物资代码在中类基础数据表中不存在<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangXinWuZiDaiMaZaiZhongLei").ToString().Trim(), lineNumber);
                     continue;
                 }
 
@@ -149,7 +149,7 @@ public partial class TTWZObjectCodeReplace : System.Web.UI.Page
                 DataTable dtNewXLCode = ShareClass.GetDataSetFromSql(strNewXLCodeHQL, "NewXLCode").Tables[0];
                 if (dtNewXLCode == null || dtNewXLCode.Rows.Count == 0)
                 {
-                    resultMsg += string.Format("第{0}行，新物资代码在小类基础数据表中不存在<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangXinWuZiDaiMaZaiXiaoLeiJ").ToString().Trim(), lineNumber);
                     continue;
                 }
 
@@ -157,7 +157,7 @@ public partial class TTWZObjectCodeReplace : System.Web.UI.Page
             }
             catch (Exception ex)
             {
-                lblMsg.Text = string.Format("<span style='color:red' >导入时出现以下错误: {0}!</span>", ex.Message);
+                lblMsg.Text = string.Format(LanguageHandle.GetWord("spanstylecolorredDaoRuShiChuXi").ToString().Trim(), ex.Message);
             }
 
         }
@@ -183,8 +183,8 @@ public partial class TTWZObjectCodeReplace : System.Web.UI.Page
             string strNewObjectCode = string.Empty;
 
             lineNumber++;
-            strOldObjectCode = ShareClass.ObjectToString(row["原物资代码"]);
-            strNewObjectCode = ShareClass.ObjectToString(row["新物资代码"]);
+            strOldObjectCode = ShareClass.ObjectToString(row[LanguageHandle.GetWord("YuanWuZiDaiMa").ToString().Trim()]);
+            strNewObjectCode = ShareClass.ObjectToString(row[LanguageHandle.GetWord("XinWuZiDaiMa").ToString().Trim()]);
 
             if (string.IsNullOrEmpty(strOldObjectCode) && string.IsNullOrEmpty(strNewObjectCode))
             {
@@ -205,11 +205,11 @@ public partial class TTWZObjectCodeReplace : System.Web.UI.Page
         {
             if (successCount == dtExcel.Rows.Count)
             {
-                resultMsg += string.Format("<br/>已成功导入 {0} 条数据", successCount);
+                resultMsg += string.Format(LanguageHandle.GetWord("brYiChengGongDaoRu0TiaoShuJu").ToString().Trim(), successCount);
             }
             else
             {
-                resultMsg += string.Format("<br/>已成功导入 {0} 条数据， 共有 {1} 条数据验证失败", successCount, dtExcel.Rows.Count - successCount);
+                resultMsg += string.Format(LanguageHandle.GetWord("brYiChengGongDaoRu0TiaoShuJuGo").ToString().Trim(), successCount, dtExcel.Rows.Count - successCount);
             }
 
             //重新加载列表
@@ -219,7 +219,7 @@ public partial class TTWZObjectCodeReplace : System.Web.UI.Page
         }
         else
         {
-            resultMsg += string.Format("<br/>未导入数据， 共有 {0} 条数据验证失败", dtExcel.Rows.Count - successCount);
+            resultMsg += string.Format(LanguageHandle.GetWord("brWeiDaoRuShuJuGongYou0TiaoShu").ToString().Trim(), dtExcel.Rows.Count - successCount);
         }
 
         return false;
@@ -456,11 +456,11 @@ public partial class TTWZObjectCodeReplace : System.Web.UI.Page
                 }
             }
 
-            resultMsg += "新物资代码替换原物资代码成功<br/>";
+            resultMsg += LanguageHandle.GetWord("XinWuZiDaiMaTiHuanYuanWuZiDaiM").ToString().Trim();
         }
         catch (Exception ex)
         {
-            lblMsg.Text = string.Format("<span style='color:red' >导入时出现以下错误: {0}!</span>", ex.Message);
+            lblMsg.Text = string.Format(LanguageHandle.GetWord("spanstylecolorredDaoRuShiChuXi").ToString().Trim(), ex.Message);
         }
     }
     

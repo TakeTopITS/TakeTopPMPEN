@@ -95,7 +95,7 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
                 string strProgress = HF_Progress.Value;
                 string strIsMark = HF_IsMark.Value;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择工程项目！');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择工程项目！');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true); 
                 return;
             }
             if (string.IsNullOrEmpty(strSupplierCode))
@@ -103,7 +103,7 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
                 string strProgress = HF_Progress.Value;
                 string strIsMark = HF_IsMark.Value;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择供应商！');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择供应商！');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true); 
                 return;
             }
             if (string.IsNullOrEmpty(strCompactName))
@@ -111,7 +111,7 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
                 string strProgress = HF_Progress.Value;
                 string strIsMark = HF_IsMark.Value;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('合同名称不能为空，请补充！');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('合同名称不能为空，请补充！');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true); 
                 return;
             }
             if (string.IsNullOrEmpty(strControlMoney))
@@ -119,7 +119,7 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
                 string strProgress = HF_Progress.Value;
                 string strIsMark = HF_IsMark.Value;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('价格监审不能为空，请补充！');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('价格监审不能为空，请补充！');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true); 
                 return;
             }
 
@@ -182,7 +182,7 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
                 wZCompact.MarkTime = DateTime.Now;
                 wZCompact.SingTime = "";
                 wZCompact.ControlMoney = strControlMoney;
-                wZCompact.Progress = "录入";
+                wZCompact.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
 
                 //时间暂时先赋值，不然会报错 TODO
                 wZCompact.VerifyTime = "";
@@ -216,7 +216,7 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
                     string strProgress = HF_Progress.Value;
                     string strIsMark = HF_IsMark.Value;
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('未找到采购工程师对应的需方记录！');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('未找到采购工程师对应的需方记录！');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true); 
                     return;
                 }
             }
@@ -318,7 +318,7 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
 
                     if (fi.Exists)
                     {
-                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('存在同名文件，上传失败，请改名后再上传！');ControlStatusChange('" + strProgress + "','" + strIsMark + "');</script>");
+                        ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertCunZaiTongMingWenJi").ToString().Trim() + strProgress + "','" + strIsMark + "');</script>");
                         return;
                     }
 
@@ -347,11 +347,11 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
                     }
 
                     //重新加载报价文件列表
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传合同文本成功！');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传合同文本成功！');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true); 
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true); 
                     return;
                 }
             }
@@ -379,7 +379,7 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
 
                     if (fi.Exists)
                     {
-                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('存在同名文件，上传失败，请改名后再上传！');ControlStatusChange('" + strProgress + "','" + strIsMark + "');</script>");
+                        ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertCunZaiTongMingWenJi").ToString().Trim() + strProgress + "','" + strIsMark + "');</script>");
                     }
 
                     if (Directory.Exists(strDocSavePath) == false)
@@ -396,11 +396,11 @@ public partial class TTWZCompactListEdit : System.Web.UI.Page
                     HF_CompactTextURL.Value = "Doc\\" + DateTime.Now.ToString("yyyyMM") + "\\" + strUserCode + "\\Doc\\" + strFileName3;
 
                     //重新加载报价文件列表
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传合同文本成功！');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传合同文本成功！');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true); 
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');ControlStatusChange('" + strProgress + "','" + strIsMark + "');", true); 
                     return;
                 }
             }

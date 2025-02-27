@@ -85,7 +85,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
                     or p.ExpertCode3 = '{0}'
                     or p.PurchaseManager = '{0}'
                     )
-                    order by p.MarkTime desc", strUserCode);
+                    order by p.MarkTime desc", strUserCode); 
         DataTable dtPurchase = ShareClass.GetDataSetFromSql(strPurchaseHQL, "Purchase").Tables[0];
 
         DG_List.DataSource = dtPurchase;
@@ -99,7 +99,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
             dtPurchaseEndTime = DateTime.Parse(dtPurchase.Rows[i]["PurchaseEndTime"].ToString());
             strProgress = dtPurchase.Rows[i]["Progress"].ToString();
 
-            if((strProgress == "询价" | strProgress == "评标") & dtPurchaseEndTime <= DateTime .Now )
+            if((strProgress == LanguageHandle.GetWord("XunJia").ToString().Trim() | strProgress == LanguageHandle.GetWord("PingBiao").ToString().Trim()) & dtPurchaseEndTime <= DateTime .Now )
             {
                 ((LinkButton)(DG_List.Items[i].FindControl("LIB_Tender"))).Visible = true;
             }
@@ -188,7 +188,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
                     or p.ExpertCode3 = '{0}'
                     or p.PurchaseManager = '{0}'
                     )
-                    ", strUserCode);
+                    ", strUserCode); 
 
         if (!string.IsNullOrEmpty(HF_SortPurchaseCode.Value))
         {
@@ -217,7 +217,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
             dtPurchaseEndTime = DateTime.Parse(dtPurchase.Rows[i]["PurchaseEndTime"].ToString());
             strProgress = dtPurchase.Rows[i]["Progress"].ToString();
 
-            if ((strProgress == "询价" | strProgress == "评标") & dtPurchaseEndTime <= DateTime.Now)
+            if ((strProgress == LanguageHandle.GetWord("XunJia").ToString().Trim() | strProgress == LanguageHandle.GetWord("PingBiao").ToString().Trim()) & dtPurchaseEndTime <= DateTime.Now)
             {
                 ((LinkButton)(DG_List.Items[i].FindControl("LIB_Tender"))).Visible = true;
             }
@@ -283,7 +283,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
                     or p.ExpertCode3 = '{0}'
                     or p.PurchaseManager = '{0}'
                     )
-                    ", strUserCode);
+                    ", strUserCode); 
 
         if (!string.IsNullOrEmpty(HF_SortProjectCode.Value))
         {
@@ -313,7 +313,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
             dtPurchaseEndTime = DateTime.Parse(dtPurchase.Rows[i]["PurchaseEndTime"].ToString());
             strProgress = dtPurchase.Rows[i]["Progress"].ToString();
 
-            if ((strProgress == "询价" | strProgress == "评标") & dtPurchaseEndTime <= DateTime.Now)
+            if ((strProgress == LanguageHandle.GetWord("XunJia").ToString().Trim() | strProgress == LanguageHandle.GetWord("PingBiao").ToString().Trim()) & dtPurchaseEndTime <= DateTime.Now)
             {
                 ((LinkButton)(DG_List.Items[i].FindControl("LIB_Tender"))).Visible = true;
             }
@@ -379,7 +379,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
                     or p.ExpertCode3 = '{0}'
                     or p.PurchaseManager = '{0}'
                     )
-                    ", strUserCode);
+                    ", strUserCode); 
 
         if (!string.IsNullOrEmpty(HF_SortPurchaseStartTime.Value))
         {
@@ -409,7 +409,7 @@ public partial class TTWZPurchaseDecisionList : System.Web.UI.Page
             dtPurchaseEndTime = DateTime.Parse(dtPurchase.Rows[i]["PurchaseEndTime"].ToString());
             strProgress = dtPurchase.Rows[i]["Progress"].ToString();
 
-            if ((strProgress == "询价" | strProgress == "评标") & dtPurchaseEndTime <= DateTime.Now)
+            if ((strProgress == LanguageHandle.GetWord("XunJia").ToString().Trim() | strProgress == LanguageHandle.GetWord("PingBiao").ToString().Trim()) & dtPurchaseEndTime <= DateTime.Now)
             {
                 ((LinkButton)(DG_List.Items[i].FindControl("LIB_Tender"))).Visible = true;
             }

@@ -66,7 +66,7 @@ public partial class TTConstractManagement : System.Web.UI.Page
             DataGrid3.DataSource = lst;
             DataGrid3.DataBind();
 
-            LB_ConstractOwner.Text = "我的所有合同列表：";
+            LB_ConstractOwner.Text = LanguageHandle.GetWord("WoDeSuoYouGeTongLieBiao").ToString().Trim();
 
             strHQL = "from Constract as constract where  constract.Status not in ('Archived','Deleted') ";
             strHQL += " and (constract.RecorderCode = " + "'" + strUserCode + "'" + " Or constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + "))";
@@ -87,7 +87,7 @@ public partial class TTConstractManagement : System.Web.UI.Page
     protected void CreateConstractAnalystChart(string strUserCode)
     {
         string strChartTitle, strCmdText;
-        strChartTitle = Resources.lang.HTLXBLT;
+        strChartTitle = LanguageHandle.GetWord("HTLXBLT").ToString().Trim();
         strCmdText = @"Select Type as XName, Count(*) as YNumber
             From T_Constract Where (RecorderCode = " + "'" + strUserCode + "'" + " Or ConstractCode in (select ConstractCode from T_ConstractRelatedUser where UserCode = " + "'" + strUserCode + "'" + "))";
         strCmdText += " Group By Type";
@@ -96,7 +96,7 @@ public partial class TTConstractManagement : System.Web.UI.Page
 
         //ShareClass.CreateAnalystPieChart(strCmdText, Chart_ConstractType, SeriesChartType.Pie, strChartTitle, "XName", "YNumber", "Default");
 
-        strChartTitle = Resources.lang.HTZTBLT;
+        strChartTitle = LanguageHandle.GetWord("HTZTBLT").ToString().Trim();
         strCmdText = @"Select Status as XName, Count(*) as YNumber
              From T_Constract Where (RecorderCode = " + "'" + strUserCode + "'" + " Or ConstractCode in (select ConstractCode from T_ConstractRelatedUser where UserCode = " + "'" + strUserCode + "'" + "))";
         strCmdText += " Group By Status";
@@ -105,7 +105,7 @@ public partial class TTConstractManagement : System.Web.UI.Page
 
         //ShareClass.CreateAnalystPieChart(strCmdText, Chart_ConstractStatus, SeriesChartType.Pie, strChartTitle, "XName", "YNumber", "Default");
 
-        strChartTitle = Resources.lang.HTZCQST;
+        strChartTitle = LanguageHandle.GetWord("HTZCQST").ToString().Trim();
         strCmdText = @"Select SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,7) as XName,COALESCE(Sum(A.Amount * B.ExchangeRate),0) as YNumber
             From T_Constract A,T_CurrencyType B Where A.Currency = B.Type and CAST(SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,5) as int) > extract(year from now()) - 4   
             And  (A.RecorderCode = " + "'" + strUserCode + "'" + " Or A.ConstractCode in (select ConstractCode from T_ConstractRelatedUser where UserCode = " + "'" + strUserCode + "'" + "))";
@@ -122,7 +122,7 @@ public partial class TTConstractManagement : System.Web.UI.Page
         string strUserCode = ((Button)e.Item.FindControl("BT_UserCode")).Text.Trim();
         string strUserName = ((Button)e.Item.FindControl("BT_UserName")).Text.Trim();
 
-        LB_ConstractOwner.Text = strUserName + " 签订的合同列表：";
+        LB_ConstractOwner.Text = strUserName + LanguageHandle.GetWord("QianDingDeGeTongLieBiao").ToString().Trim();
 
         string strHQL = "from Constract as constract where constract.RecorderCode = " + "'" + strUserCode + "'" + "  and constract.Status not in ('Archived','Deleted')  ";
         strHQL += " and constract.ConstractCode in (select constractRelatedUser.ConstractCode from ConstractRelatedUser as constractRelatedUser where constractRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")";
@@ -144,19 +144,19 @@ public partial class TTConstractManagement : System.Web.UI.Page
 
         string strChartTitle, strCmdText;
 
-        strChartTitle = Resources.lang.HTLXBLT;
+        strChartTitle = LanguageHandle.GetWord("HTLXBLT").ToString().Trim();
         strCmdText = @"Select Type as XName, Count(*) as YNumber
             From T_Constract Where (RecorderCode = " + "'" + strUserCode + "'" + " Or ConstractCode in (select ConstractCode from T_ConstractRelatedUser where UserCode = " + "'" + strUserCode + "'" + "))";
         strCmdText += " Group By Type";
         IFrame_Chart_ConstractType.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
-        strChartTitle = Resources.lang.HTZTBLT;
+        strChartTitle = LanguageHandle.GetWord("HTZTBLT").ToString().Trim();
         strCmdText = @"Select Status as XName, Count(*) as YNumber
              From T_Constract Where (RecorderCode = " + "'" + strUserCode + "'" + " Or ConstractCode in (select ConstractCode from T_ConstractRelatedUser where UserCode = " + "'" + strUserCode + "'" + "))";
         strCmdText += " Group By Status";
         IFrame_Chart_ConstractStatus.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
-        strChartTitle = Resources.lang.HTZCQST;
+        strChartTitle = LanguageHandle.GetWord("HTZCQST").ToString().Trim();
         strCmdText = @"Select SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,7) as XName,COALESCE(Sum(A.Amount * B.ExchangeRate),0) as YNumber
             From T_Constract A,T_CurrencyType B Where A.Currency = B.Type and CAST(SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,5) as int) > extract(year from now()) - 4   
             And  (A.RecorderCode = " + "'" + strUserCode + "'" + " Or A.ConstractCode in (select ConstractCode from T_ConstractRelatedUser where UserCode = " + "'" + strUserCode + "'" + "))";
@@ -185,17 +185,17 @@ public partial class TTConstractManagement : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_ConstractOwner.Text = "大类: " + strConstractClass + " 的合同：";
+        LB_ConstractOwner.Text = LanguageHandle.GetWord("DaLei").ToString().Trim() + strConstractClass + LanguageHandle.GetWord("DeGeTong").ToString().Trim();
 
         string strChartTitle, strCmdText;
 
-        strChartTitle = Resources.lang.HTZTBLT;
+        strChartTitle = LanguageHandle.GetWord("HTZTBLT").ToString().Trim();
         strCmdText = @"Select Status as XName, Count(*) as YNumber From T_Constract  Where ConstractClass = " + "'" + strConstractClass + "'" + " and Status not in ('Cancel','Deleted') ";
         strCmdText += " and (RecorderCode = " + "'" + strUserCode + "'" + " Or ConstractCode in (select ConstractCode from T_ConstractRelatedUser where UserCode = " + "'" + strUserCode + "'" + "))";
         strCmdText += " Group By Status";
         IFrame_Chart_ConstractStatus.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
-        strChartTitle = Resources.lang.HTZCQST;
+        strChartTitle = LanguageHandle.GetWord("HTZCQST").ToString().Trim();
         strCmdText = @"Select SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,7) as XName,COALESCE(Sum(A.Amount * B.ExchangeRate),0) as YNumber
             From T_Constract A,T_CurrencyType B Where A.Currency = B.Type and CAST(SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,5) as int) > extract(year from now()) - 4  and A.ConstractClass = " + "'" + strConstractClass + "'" + " and A.Status not in ('Cancel','Deleted') ";
         strCmdText += " And (A.RecorderCode = " + "'" + strUserCode + "'" + " Or A.ConstractCode in (select ConstractCode from T_ConstractRelatedUser where UserCode = " + "'" + strUserCode + "'" + "))";
@@ -215,7 +215,7 @@ public partial class TTConstractManagement : System.Web.UI.Page
         string strPartAOperator = "%" + TB_PartAOperator.Text.Trim() + "%";
 
 
-        LB_ConstractOwner.Text = "所有合同列表：";
+        LB_ConstractOwner.Text = LanguageHandle.GetWord("SuoYouGeTongLieBiao").ToString().Trim();
 
         string strHQL = "from Constract as constract where  constract.Status not in ('Archived','Deleted') ";
         strHQL += " and constract.Type Like " + "'" + strType + "'";
@@ -236,7 +236,7 @@ public partial class TTConstractManagement : System.Web.UI.Page
 
         string strChartTitle, strCmdText;
 
-        strChartTitle = Resources.lang.HTZTBLT;
+        strChartTitle = LanguageHandle.GetWord("HTZTBLT").ToString().Trim();
         strCmdText = @"Select Status as XName, Count(*) as YNumber From T_Constract  Where Type Like " + "'" + strType + "'" + " and Status not in ('Cancel','Deleted') ";
         strCmdText += " and ConstractCode Like " + "'" + strConstractCode + "'";
         strCmdText += " and ConstractName Like " + "'" + strConstractName + "'";
@@ -247,7 +247,7 @@ public partial class TTConstractManagement : System.Web.UI.Page
         strCmdText += " Group By Status";
         IFrame_Chart_ConstractType.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
-        strChartTitle = Resources.lang.HTZCQST;
+        strChartTitle = LanguageHandle.GetWord("HTZCQST").ToString().Trim();
         strCmdText = @"Select SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,7) as XName,COALESCE(Sum(A.Amount * B.ExchangeRate),0) as YNumber
             From T_Constract A,T_CurrencyType B Where A.Currency = B.Type and CAST(SUBSTRING(to_char(A.SignDate,'yyyymmdd'),0,5) as int) > extract(year from now()) - 4   and A.Status not in ('Cancel','Deleted') ";
         strCmdText += " And  (A.RecorderCode = " + "'" + strUserCode + "'" + " Or A.ConstractCode in (select ConstractCode from T_ConstractRelatedUser where UserCode = " + "'" + strUserCode + "'" + "))";

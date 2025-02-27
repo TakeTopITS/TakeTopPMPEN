@@ -113,7 +113,7 @@ public partial class DefaultWeiXinSAAS : System.Web.UI.Page
         if (strSimpleName != "" && strSiteURL == "")
         {
             TB_CompanyName.Focus();
-            LB_Copyright.Text = Resources.lang.ZZGSMCBCZQJC;
+            LB_Copyright.Text = LanguageHandle.GetWord("ZZGSMCBCZQJC").ToString().Trim();
             LB_Copyright.ForeColor = Color.Red;
             return;
         }
@@ -121,14 +121,14 @@ public partial class DefaultWeiXinSAAS : System.Web.UI.Page
         if (strSiteURL == "" | strUserCode == "" | strPassword == "")
         {
             TB_UserCode.Focus();
-            LB_Copyright.Text = Resources.lang.ZZYSGXDBNWKQJC;
+            LB_Copyright.Text = LanguageHandle.GetWord("ZZYSGXDBNWKQJC").ToString().Trim();
             LB_Copyright.ForeColor = Color.Red;
             return;
         }
 
         if (ShareClass.SqlFilter(strUserCode) | ShareClass.SqlFilter(strPassword) | ShareClass.SqlFilter(strSiteURL))
         {
-            LB_Copyright.Text = Resources.lang.ZZZHHYFFZHDLSB;
+            LB_Copyright.Text = LanguageHandle.GetWord("ZZZHHYFFZHDLSB").ToString().Trim();
             LB_Copyright.ForeColor = Color.Red;
             return;
         }
@@ -138,7 +138,7 @@ public partial class DefaultWeiXinSAAS : System.Web.UI.Page
         if (strUserInforIsRight.ToLower() == "false")
         {
             TB_UserCode.Focus();
-            LB_Copyright.Text = Resources.lang.ZZJGYHDMHMMCWHYBZZSY;
+            LB_Copyright.Text = LanguageHandle.GetWord("ZZJGYHDMHMMCWHYBZZSY").ToString().Trim();
             LB_Copyright.ForeColor = Color.Red;
             return;
         }
@@ -177,22 +177,22 @@ public partial class DefaultWeiXinSAAS : System.Web.UI.Page
         {
             strSMSCode = msg.CreateRandomCode(5);
 
-            strMsg = "短信验证码：" + strSMSCode + "，当天有效！";
+            strMsg =  LanguageHandle.GetWord("DuanXinYanZhengMa") +"：" + strSMSCode + "," + LanguageHandle.GetWord("DangTianYouXiao");
 
             if (msg.SendMSM("Message", strUserCode, strMsg, strUserCode))
             {
                 InsertOrUpdateSMSCode(strUserCode, strSMSCode);
 
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZDXYZMYFSCS + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZDXYZMYFSCS").ToString().Trim() + "');</script>");
             }
             else
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZJGDXYZMFSSBJCDXJKHWLLJ + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGDXYZMFSSBJCDXJKHWLLJ").ToString().Trim() + "');</script>");
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZJGYHDMHMMCWBNDDXMJC + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGYHDMHMMCWBNDDXMJC").ToString().Trim() + "');</script>");
         }
     }
 

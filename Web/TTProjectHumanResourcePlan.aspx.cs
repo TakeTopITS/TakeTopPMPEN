@@ -51,26 +51,26 @@ public partial class TTProjectHumanResourcePlan : System.Web.UI.Page
         {
             if (strYearMonth.Trim() == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTSNYBNWKCZSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSNYBNWKCZSBJC").ToString().Trim() + "')", true);
                 DLC_YearMonth.Focus();
                 return;
             }
             else
             {
                 DateTime dt = DateTime.Parse(strYearMonth.Trim());
-                Label14.Text = dt.ToString("yyyy年MM月");
-                Label15.Text = dt.AddMonths(1).ToString("yyyy年MM月");
-                Label16.Text = dt.AddMonths(2).ToString("yyyy年MM月");
-                Label17.Text = dt.AddMonths(3).ToString("yyyy年MM月");
-                Label18.Text = dt.AddMonths(4).ToString("yyyy年MM月");
-                Label19.Text = dt.AddMonths(5).ToString("yyyy年MM月");
-                Label20.Text = dt.AddMonths(6).ToString("yyyy年MM月");
-                Label21.Text = dt.AddMonths(7).ToString("yyyy年MM月");
-                Label22.Text = dt.AddMonths(8).ToString("yyyy年MM月");
-                Label23.Text = dt.AddMonths(9).ToString("yyyy年MM月");
-                Label24.Text = dt.AddMonths(10).ToString("yyyy年MM月");
-                Label25.Text = dt.AddMonths(11).ToString("yyyy年MM月");
-                Label26.Text = dt.AddMonths(12).ToString("yyyy年MM月");
+                Label14.Text = dt.ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label15.Text = dt.AddMonths(1).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label16.Text = dt.AddMonths(2).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label17.Text = dt.AddMonths(3).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label18.Text = dt.AddMonths(4).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label19.Text = dt.AddMonths(5).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label20.Text = dt.AddMonths(6).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label21.Text = dt.AddMonths(7).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label22.Text = dt.AddMonths(8).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label23.Text = dt.AddMonths(9).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label24.Text = dt.AddMonths(10).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label25.Text = dt.AddMonths(11).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label26.Text = dt.AddMonths(12).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
                 strHQL = "select * from (select WorkType," +
                     " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal ," +
                     " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'1 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal1 ," +
@@ -87,7 +87,7 @@ public partial class TTProjectHumanResourcePlan : System.Web.UI.Page
                     " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'12 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal12  " +
                     "from T_ProjectMemberSchedule group by WorkType " +
                     "union all " +
-                    "select WorkType ||'储备量' WorkType, sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal ," +
+                    "select WorkType ||'储备量' WorkType, sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal ," + 
                     " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'1 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal1 ," +
                     " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'2 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal2 ," +
                     " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'3 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal3 ," +
@@ -117,26 +117,26 @@ public partial class TTProjectHumanResourcePlan : System.Web.UI.Page
         {
             if (strYearMonth.Trim() == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTSNYBNWKCZSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSNYBNWKCZSBJC").ToString().Trim() + "')", true);
                 DLC_YearMonth.Focus();
                 return;
             }
             else
             {
                 DateTime dt = DateTime.Parse(strYearMonth.Trim());
-                Label1.Text = dt.ToString("yyyy年MM月");
-                Label2.Text = dt.AddMonths(1).ToString("yyyy年MM月");
-                Label3.Text = dt.AddMonths(2).ToString("yyyy年MM月");
-                Label4.Text = dt.AddMonths(3).ToString("yyyy年MM月");
-                Label5.Text = dt.AddMonths(4).ToString("yyyy年MM月");
-                Label6.Text = dt.AddMonths(5).ToString("yyyy年MM月");
-                Label7.Text = dt.AddMonths(6).ToString("yyyy年MM月");
-                Label8.Text = dt.AddMonths(7).ToString("yyyy年MM月");
-                Label9.Text = dt.AddMonths(8).ToString("yyyy年MM月");
-                Label10.Text = dt.AddMonths(9).ToString("yyyy年MM月");
-                Label11.Text = dt.AddMonths(10).ToString("yyyy年MM月");
-                Label12.Text = dt.AddMonths(11).ToString("yyyy年MM月");
-                Label13.Text = dt.AddMonths(12).ToString("yyyy年MM月");
+                Label1.Text = dt.ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label2.Text = dt.AddMonths(1).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label3.Text = dt.AddMonths(2).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label4.Text = dt.AddMonths(3).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label5.Text = dt.AddMonths(4).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label6.Text = dt.AddMonths(5).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label7.Text = dt.AddMonths(6).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label8.Text = dt.AddMonths(7).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label9.Text = dt.AddMonths(8).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label10.Text = dt.AddMonths(9).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label11.Text = dt.AddMonths(10).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label12.Text = dt.AddMonths(11).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
+                Label13.Text = dt.AddMonths(12).ToString(LanguageHandle.GetWord("yyyyNianMMYue").ToString().Trim());
                 strHQL = "select WorkType," +
                     " sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal ," +
                     " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'1 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal1 ," +
@@ -181,11 +181,11 @@ public partial class TTProjectHumanResourcePlan : System.Web.UI.Page
                 string fileName = string.Empty;
                 if (ddl_ProjectID.SelectedValue.Trim() == "0")
                 {
-                    fileName = "全体项目汇总计划对照_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("QuanTiXiangMuHuiZongJiHuaDuiZh").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else
                 {
-                    fileName = "项目人力资源总计划_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("XiangMuRenLiZiYuanZongJiHua").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
 
                 string strHQL;
@@ -247,7 +247,7 @@ public partial class TTProjectHumanResourcePlan : System.Web.UI.Page
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDCDSJYWJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
             }
         }
     }

@@ -41,7 +41,7 @@ public partial class TTWZAdvanceApprove : System.Web.UI.Page
         string strWZAdvanceHQL = string.Format(@"select a.*,m.UserName as MarkerName from T_WZAdvance a
                     left join T_ProjectMember m on a.Marker = m.UserCode 
                     where a.Progress ='报批' 
-                    order by a.AdvanceTime desc", strUserCode);
+                    order by a.AdvanceTime desc", strUserCode); 
         DataTable dtWZAdvance = ShareClass.GetDataSetFromSql(strWZAdvanceHQL, "Advance").Tables[0];
 
         DG_Advance.DataSource = dtWZAdvance;
@@ -72,9 +72,9 @@ public partial class TTWZAdvanceApprove : System.Web.UI.Page
                 {
                     WZAdvance wZAdvance = (WZAdvance)listWZAdvance[0];
 
-                    if (wZAdvance.Progress != "报批")
+                    if (wZAdvance.Progress != LanguageHandle.GetWord("BaoPi").ToString().Trim())
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSYBJBW0BYXBJ + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSYBJBW0BYXBJ").ToString().Trim() + "')", true);
                         return;
                     }
 
@@ -85,7 +85,7 @@ public partial class TTWZAdvanceApprove : System.Web.UI.Page
                     //重新加载列表
                     DataAdvanceBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZPZCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZPZCG").ToString().Trim() + "')", true);
                 }
             }
         }

@@ -45,7 +45,7 @@ public partial class TTKPILeaderReview : System.Web.UI.Page
 
         UserKPICheck userKPICheck = GetUserKPICheck(strKPICheckID);
 
-        //this.Title = "员工: " + userKPICheck.UserName.Trim() + " 绩效 " + strKPICheckID + " 评核";
+        //this.Title = "员工: " + userKPICheck.UserName.Trim() + "绩效" + strKPICheckID + "评核";
 
         //生成同部门同职称员工绩效评分对比柱状图
         CreateSameDepartmentJobTitleKPIScoringChart(strUserCode, userKPICheck);
@@ -104,7 +104,7 @@ public partial class TTKPILeaderReview : System.Web.UI.Page
         dtStartTime = userKPICheck.StartTime;
         dtEndTime = userKPICheck.EndTime;
 
-        strChartTitle = userKPICheck.KPICheckName + " 部门：" + strDepartName + " 职称：" + strJobTitle + " 成员绩效总评分对比图";
+        strChartTitle = userKPICheck.KPICheckName + LanguageHandle.GetWord("BuMen").ToString().Trim() + strDepartName + LanguageHandle.GetWord("ZhiChen").ToString().Trim() + strJobTitle + LanguageHandle.GetWord("ChengYuanJiXiaoZongPingFenDuiB").ToString().Trim();
 
         strHQL = "Select UserName as XName,TotalPoint as YNumber From T_UserKPICheck ";
         strHQL += " Where UserCode in (Select UserCode From T_ProjectMember Where DepartCode = " + "'" + strDepartCode + "'" + " and JobTitle = " + "'" + strJobTitle + "'" + ")";
@@ -209,7 +209,7 @@ public partial class TTKPILeaderReview : System.Web.UI.Page
         deLeaderPoint = NB_Point.Amount;
         if (deLeaderPoint > 100)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGFSBNDY100JC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGFSBNDY100JC").ToString().Trim() + "')", true);
             return;
         }
 
@@ -253,11 +253,11 @@ public partial class TTKPILeaderReview : System.Web.UI.Page
                 //列出KPI评论列表
                 LoadKPIReviewList(strKPIID);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }
@@ -291,11 +291,11 @@ public partial class TTKPILeaderReview : System.Web.UI.Page
                 //列出KPI评论列表
                 LoadKPIReviewList(strKPIID);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }

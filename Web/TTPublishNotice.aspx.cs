@@ -45,7 +45,7 @@ public partial class TTPublishNotice : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
         {
-            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityNewsNotice(Resources.lang.ZZJGT, TreeView1, strUserCode);
+            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityNewsNotice(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
 
             strHQL = "from PublicNotice as publicNotice where publicNotice.UploadManCode = " + "'" + strUserCode + "'" + " and publicNotice.DocType in ('AnnouncementDocument','NotificationDocument') and publicNotice.Status <> 'Deleted' Order by publicNotice.DocID DESC";
             PublicNoticeBLL publicNoticeBLL = new PublicNoticeBLL();
@@ -110,11 +110,11 @@ public partial class TTPublishNotice : System.Web.UI.Page
                 //设置缓存更改标志，并刷新页面缓存
                 ChangePageCache();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFFCZNBNSCBRSCDWJ + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFFCZNBNSCBRSCDWJ").ToString().Trim() + "')", true);
             }
         }
     }
@@ -151,14 +151,14 @@ public partial class TTPublishNotice : System.Web.UI.Page
 
             if (strDepartCode == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGSBMBNWKSCSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGSBMBNWKSCSBJC").ToString().Trim() + "')", true);
 
                 return;
             }
 
             if (fi.Exists)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCZTMWJSCSBGMHZSC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "')", true);
             }
             else
             {
@@ -175,7 +175,7 @@ public partial class TTPublishNotice : System.Web.UI.Page
                 publicNotice.RelatedDepartCode = strDepartCode;
                 publicNotice.RelatedDepartName = strDepratName;
                 publicNotice.Scope = DL_Scope.SelectedValue.Trim();
-                publicNotice.Status = "发布";
+                publicNotice.Status = "发布"; 
 
 
                 try
@@ -197,13 +197,13 @@ public partial class TTPublishNotice : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZYSCDWJ + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "')", true);
 
         }
     }

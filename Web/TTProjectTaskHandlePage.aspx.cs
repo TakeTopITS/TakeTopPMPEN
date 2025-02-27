@@ -96,7 +96,7 @@ public partial class TTProjectTaskHandlePage : System.Web.UI.Page
             SetTaskRecordColorForDataList(ds, DataList_Handling, "InProgress");
 
             strHQL = "Select * from T_TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and taskAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成') ";
+            strHQL += " and taskAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成') "; 
             strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask  where projectTask.Status <> 'Closed')";
             strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.ProjectID = " + strProjectID + " and project.Status not in ('New','Hided','Deleted','Archived')))";
             strHQL += " Order by taskAssignRecord.MoveTime DESC limit 40";
@@ -108,14 +108,14 @@ public partial class TTProjectTaskHandlePage : System.Web.UI.Page
 
             strHQL = "Select * from T_TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
             //strHQL += " and (taskAssignRecord.ID in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) and  taskAssignRecord.Status in ('拒绝','Suspended','Cancel','Plan','Accepted','ToHandle','InProgress','InProgress','Completed','已完成','已分派'))";
-            strHQL += " and  taskAssignRecord.Status = '已分派'";
+            strHQL += " and  taskAssignRecord.Status = '已分派'"; 
             strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.Status <> 'Closed')";
             strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.ProjectID = " + strProjectID + " and project.Status not in ('New','Hided','Deleted','Archived')))";
             strHQL += " Order by taskAssignRecord.MoveTime DESC limit 40";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_TaskAssignRecord");
             DataList_Assigned.DataSource = ds;
             DataList_Assigned.DataBind();
-            SetTaskRecordColorForDataList(ds, DataList_Assigned, "已分派");
+            SetTaskRecordColorForDataList(ds, DataList_Assigned, "已分派"); 
         }
         else
         {
@@ -140,26 +140,26 @@ public partial class TTProjectTaskHandlePage : System.Web.UI.Page
             SetTaskRecordColorForDataList(ds, DataList_Handling,"Processed");
 
             strHQL = "Select * from T_TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and taskAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成') ";
+            strHQL += " and taskAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成') "; 
             strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask  where projectTask.Status <> 'Closed')";
             strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.ProjectID <> 1 and project.Status not in ('New','Hided','Deleted','Archived')))";
             strHQL += " Order by taskAssignRecord.MoveTime DESC limit 40";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_TaskAssignRecord");
             DataList_FinishedUnAssigned.DataSource = ds;
             DataList_FinishedUnAssigned.DataBind();
-            SetTaskRecordColorForDataList(ds, DataList_FinishedUnAssigned,"已完成");
+            SetTaskRecordColorForDataList(ds, DataList_FinishedUnAssigned,"已完成"); 
 
 
             strHQL = "Select * from T_TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
             //strHQL += " and (taskAssignRecord.ID in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) and  taskAssignRecord.Status in ('拒绝','Suspended','Cancel','Plan','Accepted','ToHandle','InProgress','InProgress','Completed','已完成','已分派'))";
-            strHQL += " and taskAssignRecord.Status = '已分派'";
+            strHQL += " and taskAssignRecord.Status = '已分派'"; 
             strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.Status <> 'Closed')";
             strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.ProjectID <> 1 and project.Status not in ('New','Hided','Deleted','Archived')))";
             strHQL += " Order by taskAssignRecord.MoveTime DESC limit 40";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_TaskAssignRecord");
             DataList_Assigned.DataSource = ds;
             DataList_Assigned.DataBind();
-            SetTaskRecordColorForDataList(ds, DataList_Assigned, "已分派");
+            SetTaskRecordColorForDataList(ds, DataList_Assigned, "已分派"); 
         }
     }
 
@@ -240,7 +240,7 @@ public partial class TTProjectTaskHandlePage : System.Web.UI.Page
         DataGrid4.DataBind();
         SetProTaskColorForDataGrid(DataGrid4);
         LB_Sql4.Text = strHQL;
-        LB_TotalNumber4.Text = "记录数：" + lst.Count.ToString();
+        LB_TotalNumber4.Text = LanguageHandle.GetWord("JiLuShu").ToString().Trim() + lst.Count.ToString();
 
         if (strProjectID != "0")
         {
@@ -262,7 +262,7 @@ public partial class TTProjectTaskHandlePage : System.Web.UI.Page
         DataGrid6.DataBind();
         SetProTaskColorForDataGrid(DataGrid6);
         LB_Sql6.Text = strHQL;
-        LB_TotalNumber6.Text = "记录数：" + lst.Count.ToString();
+        LB_TotalNumber6.Text = LanguageHandle.GetWord("JiLuShu").ToString().Trim() + lst.Count.ToString();
 
         FinishPercentPicture4();
         FinishPercentPicture6();

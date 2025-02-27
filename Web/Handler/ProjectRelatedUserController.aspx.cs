@@ -1,11 +1,11 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-//æ•°æ®å±‚ç›¸å…³çš„é¡¹ç›®
+//Êı¾İ²ãÏà¹ØµÄÏîÄ¿
 using TakeTopGantt.models;
 using Devart.Data.Linq;
 using Devart.Data.PostgreSql.Linq;
@@ -37,7 +37,7 @@ namespace TakeTopGantt.handler
             String data = null;
             projects[] jsonData = null;
 
-            //åœ¨æ–°å»ºçš„é¡¹ç›®ä¸­ï¼Œ å¯èƒ½id=â€œâ€æˆ–ç©ºï¼Œ 
+            //ÔÚĞÂ½¨µÄÏîÄ¿ÖĞ£¬ ¿ÉÄÜid=¡°¡±»ò¿Õ£¬ 
             var settings = new JsonSerializerSettings();
             settings.NullValueHandling = NullValueHandling.Ignore;
 
@@ -63,13 +63,13 @@ namespace TakeTopGantt.handler
                 //    break;
 
             }
-            //ç›´æ¥ç”¨è¿™ä¸ªè¾“å‡º
+            //Ö±½ÓÓÃÕâ¸öÊä³ö
             this.Response.Write(ret);
             this.Response.End();
         }
 
 
-        //æŸ¥è¯¢
+        //²éÑ¯
         public Object Get()
         {
             int pid = Convert.ToInt32(Request["pid"]);
@@ -79,7 +79,7 @@ namespace TakeTopGantt.handler
 
         //public Object Create(projects[] jsonData)
         //{
-        //    //ç›´æ¥insertåˆ°æ•°æ®è¡¨ä¸­
+        //    //Ö±½Óinsertµ½Êı¾İ±íÖĞ
         //    _db.projects.InsertAllOnSubmit(jsonData);
         //    _db.SubmitChanges(ConflictMode.ContinueOnConflict);
         //    return jsonData;

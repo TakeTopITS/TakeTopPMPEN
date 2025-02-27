@@ -46,12 +46,12 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
 
         if (strRelatedType == "Constract")
         {
-            //this.Title = "合同" + ": " + GetConstractCode(strRelatedID) + " " + GetConstractName(strRelatedID) + " 转项目";
+            //this.Title = LanguageHandle.GetWord("GeTong").ToString().Trim() + ": " + GetConstractCode(strRelatedID) + " " + GetConstractName(strRelatedID) + " 转项目";
         }
 
         if (strRelatedType == "tender")
         {
-            //this.Title = "招标" + ": " + strRelatedID + " " + GetBMAnnInvitationName(strRelatedID) + " 转项目";
+            //this.Title = LanguageHandle.GetWord("QiaoBiao").ToString().Trim() + ": " + strRelatedID + " " + GetBMAnnInvitationName(strRelatedID) + " 转项目";
         }
 
         if (strRelatedType == "Other")
@@ -70,7 +70,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
 
                 if (strRelatedType == "tender")
                 {
-                    HT_ProjectDetail.Text = "邀请函内容：" + GetBMAnnInvitationRemark(strRelatedID) + "。    中标信息：" + GetSupplierBidName(strRelatedID);
+                    HT_ProjectDetail.Text = LanguageHandle.GetWord("YaoQingHanNeiRong").ToString().Trim() + GetBMAnnInvitationRemark(strRelatedID) + LanguageHandle.GetWord("ZhongBiaoXinXi").ToString().Trim() + GetSupplierBidName(strRelatedID);
                 }
             }
             else
@@ -80,7 +80,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
 
                 if (strRelatedType == "tender")
                 {
-                    HE_ProjectDetail.Text = "邀请函内容：" + GetBMAnnInvitationRemark(strRelatedID) + "。    中标信息：" + GetSupplierBidName(strRelatedID);
+                    HE_ProjectDetail.Text = LanguageHandle.GetWord("YaoQingHanNeiRong").ToString().Trim() + GetBMAnnInvitationRemark(strRelatedID) + LanguageHandle.GetWord("ZhongBiaoXinXi").ToString().Trim() + GetSupplierBidName(strRelatedID);
                 }
             }
 
@@ -89,9 +89,9 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
 
             ShareClass.InitialPrjectTreeByAuthority(TreeView1, strUserCode);
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityProjectLeader(Resources.lang.ZZJGT, TreeView2, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityProjectLeader(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView2, strUserCode);
             ShareClass.LoadMemberByUserCodeForDropDownList(strUserCode, DL_PM);
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityProjectLeader(Resources.lang.ZZJGT, TreeView3, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityProjectLeader(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView3, strUserCode);
 
             ShareClass.LoadCurrencyType(DL_CurrencyType);
 
@@ -99,17 +99,17 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
 
             if (strRelatedType == "Customer")
             {
-                TB_ProjectName.Text = "Customer" + ": " + strRelatedID + " " + GetCustomerName(strRelatedID) + " 项目";
+                TB_ProjectName.Text = "Customer" + ": " + strRelatedID + " " + GetCustomerName(strRelatedID) + LanguageHandle.GetWord("XiangMu").ToString().Trim();
                 LoadCustomerRelatedProject(strRelatedID);
             }
             if (strRelatedType == "Constract")
             {
-                TB_ProjectName.Text = "合同" + ": " + GetConstractCode(strRelatedID) + " " + GetConstractName(strRelatedID) + " 项目";
+                TB_ProjectName.Text = LanguageHandle.GetWord("GeTong").ToString().Trim() + ": " + GetConstractCode(strRelatedID) + " " + GetConstractName(strRelatedID) + LanguageHandle.GetWord("XiangMu").ToString().Trim();
                 LoadConstractRelatedProject(GetConstractCode(strRelatedID));
             }
             if (strRelatedType == "tender")
             {
-                TB_ProjectName.Text = "招标" + ": " + strRelatedID + " " + GetBMAnnInvitationName(strRelatedID) + " 项目";
+                TB_ProjectName.Text = LanguageHandle.GetWord("QiaoBiao").ToString().Trim() + ": " + strRelatedID + " " + GetBMAnnInvitationName(strRelatedID) + LanguageHandle.GetWord("XiangMu").ToString().Trim();
                 LoadBMAnnInvitRelatedProject(strRelatedID);
             }
 
@@ -193,7 +193,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
             return result;
         }
         else
-            return "未开标！";
+            return "未开标！"; 
     }
 
     protected void TreeView1_SelectedNodeChanged(object sender, EventArgs e)
@@ -317,11 +317,11 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
             strHQL = "Update T_RelatedBusinessForm Set AllowUpdate = '" + strAllowUpdate + "'  Where RelatedType = 'Project' and RelatedID = " + strProjectID;
             ShareClass.RunSqlCommand(strHQL);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGGCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGGCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGGSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGGSBJC").ToString().Trim() + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -402,7 +402,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
         {
             if (ShareClass.GetProjecCountByProjectCodeAndID(strProjectCode, "0") > 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBCZXTDXMDMDXMJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBCZXTDXMDMDXMJC").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
                 return;
@@ -416,7 +416,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
 
         if (strPMCode == "" | strStatus == "" | strBeginDate == "" | strEndDate == "" | strProject == "" | strDetail == "" | strAcceptStandard == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYSRHYXDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -434,7 +434,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
             project.CustomerPMName = strCustomerPMName;
             project.ProjectName = strProject;
             project.ProjectType = strProjectType;
-            project.ProjectClass = "常规项目";
+            project.ProjectClass = LanguageHandle.GetWord("ChangGuiXiangMu").ToString().Trim();
             project.ProjectAmount = NB_ProjectAmount.Amount;
             project.Budget = decimal.Parse(strBudget);
             project.CurrencyType = DL_CurrencyType.SelectedValue.Trim();
@@ -484,7 +484,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
                 HL_ProjectCostManageEdit.Enabled = true;
                 HL_ProjectCostManageEdit.NavigateUrl = "TTProjectCostManageEdit.aspx?ProjectID=" + strProjectID;
 
-                TB_Message.Text = strUserName + " 给你建立了项目 ：" + strProjectID + " " + strProject + "，请及时收理！";
+                TB_Message.Text = strUserName + LanguageHandle.GetWord("GeiNiJianLiLeXiangMu").ToString().Trim() + strProjectID + " " + strProject + LanguageHandle.GetWord("QingJiShiShouLi").ToString().Trim();
 
                 //插入项目关联表
                 InsertIntoRelatedProject(strProjectID);
@@ -531,19 +531,19 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
                 //判断立项后是不是自动发起流程
                 if (GetProjectTypeAutoRunWFAfterMakeProject(strProjectType) == "YES")
                 {
-                    string strURL = "popShowByURL(" + "'TTRelatedDIYWorkflowForm.aspx?RelatedType=Project&RelatedID=" + strProjectID + "','" + Resources.lang.RunByWF + "', 800, 600,window.location);";
+                    string strURL = "popShowByURL(" + "'TTRelatedDIYWorkflowForm.aspx?RelatedType=Project&RelatedID=" + strProjectID + "','" + LanguageHandle.GetWord("RunByWF").ToString().Trim() + "', 800, 600,window.location);";
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop12", strURL, true);
 
                     //Response.Redirect("TTRelatedDIYWorkflowForm.aspx?RelatedType=Project&RelatedID=" + strProjectID);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
                 }
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }
@@ -644,7 +644,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
         {
             if (ShareClass.GetProjecCountByProjectCodeAndID(strProjectCode, strProjectID) > 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBCZXTDXMDMDXMJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBCZXTDXMDMDXMJC").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
                 return;
@@ -653,7 +653,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
 
         if (strPMCode == "" | strStatus == "" | strBeginDate == "" | strEndDate == "" | strProject == "" | strDetail == "" | strAcceptStandard == "" | strParentID == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYSRHYXDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -706,7 +706,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
 
             if (strProjectID == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWXXMBNXGJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWXXMBNXGJC").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             }
@@ -754,15 +754,15 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
 
                     ShareClass.InitialPrjectTreeByAuthority(TreeView1, strUserCode);
 
-                    TB_Message.Text = strUserName + " 更新了项目： " + strProjectID + " " + strProject + "的内容,请关注，特此通知！";
+                    TB_Message.Text = strUserName + LanguageHandle.GetWord("GengXinLeXiangMu").ToString().Trim() + strProjectID + " " + strProject + LanguageHandle.GetWord("DeNeiRongQingGuanZhuTeCiTongZh").ToString().Trim();
 
                     LB_Sql.Text = strHQL;
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
                 }
@@ -869,7 +869,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
 
         strMsg = TB_Message.Text.Trim();
 
-        strSubject = "项目通知";
+        strSubject = LanguageHandle.GetWord("XiangMuTongZhi").ToString().Trim();
 
         Msg msg = new Msg();
 
@@ -894,11 +894,11 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
                 }
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXXFSCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXXFSCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXXFSSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXXFSSBJC").ToString().Trim() + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -1068,7 +1068,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
                     strProjectID = LB_ProjectID.Text.Trim();
                     ShareClass.LoadBusinessForm("Project", strProjectID, DL_WFTemplate.SelectedValue.Trim(), IFrame_RelatedInformation);
 
-                    TB_Message.Text = strUserName + " 给你建立了项目 ：" + strProjectID + " " + strProjectName + "，请及时收理！";
+                    TB_Message.Text = strUserName + LanguageHandle.GetWord("GeiNiJianLiLeXiangMu").ToString().Trim() + strProjectID + " " + strProjectName + LanguageHandle.GetWord("QingJiShiShouLi").ToString().Trim();
 
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
                 }
@@ -1076,7 +1076,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
                 {
                     BT_Send.Enabled = false;
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCCYYKNS1STXGZXM2CXMFXMBCZ3XMZTLBZMYCXMDZTJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCYYKNS1STXGZXM2CXMFXMBCZ3XMZTLBZMYCXMDZTJC").ToString().Trim() + "')", true);
                 }
             }
 
@@ -1129,13 +1129,13 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
 
 
 
-                    TB_Message.Text = strUserName + " 删除了项目： " + strProjectID + " " + strProjectName + "的内容,请关注，特此通知！";
+                    TB_Message.Text = strUserName + LanguageHandle.GetWord("ShanChuLeXiangMu").ToString().Trim() + strProjectID + " " + strProjectName + LanguageHandle.GetWord("DeNeiRongQingGuanZhuTeCiTongZh").ToString().Trim();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "(" + Resources.lang.ZZCCYYKNS1STXGZXM2CXMFXMBCZ3XMZTLBZMYCXMDZTJC + ")" + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "(" + LanguageHandle.GetWord("ZZCCYYKNS1STXGZXM2CXMFXMBCZ3XMZTLBZMYCXMDZTJC").ToString().Trim() + ")" + "')", true);
                 }
             }
         }
@@ -1179,7 +1179,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
             strProjectID = "0";
         }
 
-        //strURL = "popShowByURL(" + "'TTRelatedDIYBusinessForm.aspx?RelatedType=Project&RelatedID=" + strProjectID + "&IdentifyString=" + strIdentifyString + "','" + Resources.lang.XiangGuanYeWuDan + "', 800, 600,window.location);";
+        //strURL = "popShowByURL(" + "'TTRelatedDIYBusinessForm.aspx?RelatedType=Project&RelatedID=" + strProjectID + "&IdentifyString=" + strIdentifyString + "','" + LanguageHandle.GetWord("XiangGuanYeWuDan").ToString().Trim() + "', 800, 600,window.location);";
         //ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop12", strURL, true);
 
         strURL = "TTRelatedDIYBusinessForm.aspx?RelatedType=Project&RelatedID=" + strProjectID + "&IdentifyString=" + strIdentifyString;
@@ -1204,11 +1204,11 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
         {
             ShareClass.RunSqlCommand(strHQL);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -1318,13 +1318,13 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
                         if (lst.Count == 0)
                         {
                             DL_StatusValue.SelectedValue = "InProgress";
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGCZTMYTJPSHPSMTGZTZBNGWTG + "')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMYTJPSHPSMTGZTZBNGWTG").ToString().Trim() + "')", true);
                         }
                     }
                     else
                     {
                         DL_StatusValue.SelectedValue = "InProgress";
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGCZTMYTJPSHPSMTGZTZBNGWTG + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZTMYTJPSHPSMTGZTZBNGWTG").ToString().Trim() + "')", true);
                     }
                 }
             }
@@ -1332,7 +1332,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
         else
         {
             DL_StatusValue.SelectedValue = "InProgress";
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGCWKJLBNGBZTZXZXM + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCWKJLBNGBZTZXZXM").ToString().Trim() + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -1374,7 +1374,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
                             if (lst != null && lst.Count > 0)
                             {
                                 ProjectMember projectMember = (ProjectMember)lst[0];
-                                AddRelatedUserData(projectMember, project, "投标者");
+                                AddRelatedUserData(projectMember, project, LanguageHandle.GetWord("TouBiaoZhe").ToString().Trim());
                             }
 
                             strHQL = "From BMSupplierLink as bMSupplierLink Where bMSupplierLink.SupplierCode='" + bMSupplierInfo.Code.Trim() + "' ";
@@ -1390,7 +1390,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
                                     if (lst != null && lst.Count > 0)
                                     {
                                         ProjectMember projectMember = (ProjectMember)lst[0];
-                                        AddRelatedUserData(projectMember, project, "投标者");
+                                        AddRelatedUserData(projectMember, project, LanguageHandle.GetWord("TouBiaoZhe").ToString().Trim());
                                     }
                                     continue;
                                 }
@@ -1413,7 +1413,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
                         if (lst != null && lst.Count > 0)
                         {
                             ProjectMember projectMember = (ProjectMember)lst[0];
-                            AddRelatedUserData(projectMember, project, "投标者");
+                            AddRelatedUserData(projectMember, project, LanguageHandle.GetWord("TouBiaoZhe").ToString().Trim());
                         }
 
                         strHQL = "From BMSupplierLink as bMSupplierLink Where bMSupplierLink.SupplierCode='" + bMSupplierInfo.Code.Trim() + "' ";
@@ -1429,7 +1429,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
                                 if (lst != null && lst.Count > 0)
                                 {
                                     ProjectMember projectMember = (ProjectMember)lst[0];
-                                    AddRelatedUserData(projectMember, project, "投标者");
+                                    AddRelatedUserData(projectMember, project, LanguageHandle.GetWord("TouBiaoZhe").ToString().Trim());
                                 }
                                 continue;
                             }
@@ -1467,7 +1467,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
                                 if (lst != null && lst.Count > 0)
                                 {
                                     ProjectMember projectMember = (ProjectMember)lst[0];
-                                    AddRelatedUserData(projectMember, project, "评标者");
+                                    AddRelatedUserData(projectMember, project, LanguageHandle.GetWord("PingBiaoZhe").ToString().Trim());
                                 }
                                 continue;
                             }
@@ -1487,7 +1487,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
                             if (lst != null && lst.Count > 0)
                             {
                                 ProjectMember projectMember = (ProjectMember)lst[0];
-                                AddRelatedUserData(projectMember, project, "评标者");
+                                AddRelatedUserData(projectMember, project, LanguageHandle.GetWord("PingBiaoZhe").ToString().Trim());
                             }
                         }
                     }
@@ -1514,7 +1514,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
                                 if (lst != null && lst.Count > 0)
                                 {
                                     ProjectMember projectMember = (ProjectMember)lst[0];
-                                    AddRelatedUserData(projectMember, project, "评标者");
+                                    AddRelatedUserData(projectMember, project, LanguageHandle.GetWord("PingBiaoZhe").ToString().Trim());
                                 }
                                 continue;
                             }
@@ -1534,7 +1534,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
                             if (lst != null && lst.Count > 0)
                             {
                                 ProjectMember projectMember = (ProjectMember)lst[0];
-                                AddRelatedUserData(projectMember, project, "评标者");
+                                AddRelatedUserData(projectMember, project, LanguageHandle.GetWord("PingBiaoZhe").ToString().Trim());
                             }
                         }
                     }
@@ -1557,7 +1557,7 @@ public partial class TTMakeProjectFromOther : System.Web.UI.Page
         relatedUser.ProjectID = pj.ProjectID;
         relatedUser.ProjectName = pj.ProjectName.Trim();
         relatedUser.PromissionScale = 0;
-        relatedUser.SalaryMethod = "提成";
+        relatedUser.SalaryMethod = LanguageHandle.GetWord("DiCheng").ToString().Trim();
         relatedUser.SMSCount = 0;
         relatedUser.Status = "Plan";
         relatedUser.UnitHourSalary = 0;

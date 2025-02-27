@@ -28,7 +28,7 @@ public partial class NewFolder : System.Web.UI.Page
 			IFolder folder = new Folder();
 			///执行数据库操作
 			folder.NewFolder(Name.Text.Trim(),strUserCode);
-			Response.Write("<script>alert('" + "添加数据成功，请妥善保管好你的数据！" + "');</script>");
+			Response.Write("<script>alert('" + LanguageHandle.GetWord("TianJiaShuJuChengGongQingTuoSh").ToString().Trim() + "');</script>");
             
 		}
 		catch(Exception ex)

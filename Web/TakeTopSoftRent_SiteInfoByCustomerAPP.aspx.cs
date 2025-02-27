@@ -136,7 +136,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomerAPP : System.Web.UI.Page
                 }
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('已更新现有容量！')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZYiGengXinXianYouRongLiang").ToString().Trim()+"')", true);
         }
         catch (Exception ex)
         {
@@ -216,7 +216,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomerAPP : System.Web.UI.Page
             {
                 try
                 {
-                    LB_SiteMsg.Text = "正在升级这个站点，大概需要5分钟，请耐心等候......";
+                    LB_SiteMsg.Text = LanguageHandle.GetWord("ZhengZaiShengJiZheGeZhanDianDa").ToString().Trim();
                     IFrame_Site.Src = strSiteURL + @"/" + strSiteCreatorAppName + @"/TakeTopSoftRent_UpdateSiteAuto.aspx?SiteName=" + strSiteName + "&SiteAppName=" + strSiteAppName + "&SiteDirectory=" + strSiteDirectory + "&SiteTemplateDirectory=" + strSiteTemplateDirectory + "&DBLoginUserID=" + strDBLoginUserID + "&DBUserLoginPassword=" + strDBUserLoginPassword + "&SiteDBName=" + strSiteDBName + "&SiteAppSystemName=" + strSiteAppSystemName + "&SiteAppURL=" + strSiteAppURL + "&RentProductName=" + strRentProductName + "&RentUserEMail=" + strRentUserEMail + "&ServerType=" + strServerType + "&RentProductVersion=" + strRentProductVersion + "&SiteVirtualDirectoryPhysicalPath=" + strSiteVirtualDirectoryPhysicalPath + "&IsOEM=" + strIsOEM + "&SiteID=" + strID; ;
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindowSite','true') ", true);
 
@@ -226,11 +226,11 @@ public partial class TakeTopSoftRent_SiteInfoByCustomerAPP : System.Web.UI.Page
                         Action action = new Action(delegate ()
                         {
                             Msg msg = new Msg();
-                            string strEMailMsg = "你好，你" + strServerType + "的：" + strSiteAppSystemName + " 站点：" + strSiteAppURL + " 已被升级到最新版，升级后第一次打开会较慢，大约要5到10分钟才会出现登录页面，如有问题，请联系泰顶拓鼎客服（021-51085119），谢谢，此邮件来自泰顶拓鼎集团！";
+                            string strEMailMsg = LanguageHandle.GetWord("NiHaoNi").ToString().Trim() + strServerType + LanguageHandle.GetWord("De").ToString().Trim() + strSiteAppSystemName + LanguageHandle.GetWord("ZhanDian").ToString().Trim() + strSiteAppURL + LanguageHandle.GetWord("YiBeiShengJiDaoZuiXinBanShengJ").ToString().Trim();
 
                             try
                             {
-                                msg.SendMailByEmail(strRentUserEMail, "站点升级通知", strEMailMsg, "ADMIN");
+                                msg.SendMailByEmail(strRentUserEMail, LanguageHandle.GetWord("ZhanDianShengJiTongZhi").ToString().Trim(), strEMailMsg, "ADMIN");
                             }
                             catch (Exception ex)
                             {
@@ -245,7 +245,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomerAPP : System.Web.UI.Page
                 catch (Exception err)
                 {
                     LB_ErrorMsg.Text = err.Message.ToString();
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('站点升级失败，请检查！')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhanDianShengJiShiBaiQingJia").ToString().Trim()+"')", true);
                 }
             }
 
@@ -257,7 +257,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomerAPP : System.Web.UI.Page
                     string strZipDocName = strSiteAppName + "Doc" + DateTime.Now.ToString("yyyyMMddHHMMssff") + ".zip";
                     string strDownloadDocURL = strSiteAppURL + @"/BackupDoc/" + strZipDocName;
 
-                    LB_SiteMsg.Text = "正在发送这个站点备份文件，大概需要5分钟，请耐心等候......";
+                    LB_SiteMsg.Text = LanguageHandle.GetWord("ZhengZaiFaSongZheGeZhanDianBei").ToString().Trim();
                     IFrame_Site.Src = strSiteURL + @"/" + strSiteCreatorAppName + @"/TakeTopSoftRent_SendSiteBackupDocAuto.aspx?SiteName=" + strSiteName + "&SiteAppName=" + strSiteAppName + "&SiteDirectory=" + strSiteDirectory + "&SiteVirtualDirectoryPhysicalPath=" + strSiteVirtualDirectoryPhysicalPath + "&SiteTemplateDirectory=" + strSiteTemplateDirectory + "&DBLoginUserID=" + strDBLoginUserID + "&DBUserLoginPassword=" + strDBUserLoginPassword + "&SiteDBName=" + strSiteDBName + "&SiteAppSystemName=" + strSiteAppSystemName + "&SiteAppURL=" + strSiteAppURL + "&RentProductName=" + strRentProductName + "&RentUserEMail=" + strRentUserEMail + "&ZipDocName=" + strZipDocName + "&ServerType=" + strServerType;
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindowSite','true') ", true);
 
@@ -267,11 +267,11 @@ public partial class TakeTopSoftRent_SiteInfoByCustomerAPP : System.Web.UI.Page
                         Action action = new Action(delegate ()
                         {
                             Msg msg = new Msg();
-                            string strEMailMsg = "你好，你" + strServerType + "的： " + strSiteAppSystemName + " 站点：" + strSiteAppURL + " 的数据备份文件下载地址是: " + strDownloadDocURL + "，请及时下载，如有问题请联系客服（021-51085119），谢谢，此邮件来自泰顶拓鼎集团！";
+                            string strEMailMsg = LanguageHandle.GetWord("NiHaoNi").ToString().Trim() + strServerType + LanguageHandle.GetWord("De").ToString().Trim() + strSiteAppSystemName + LanguageHandle.GetWord("ZhanDian").ToString().Trim() + strSiteAppURL + LanguageHandle.GetWord("DeShuJuBeiFenWenJianXiaZaiDeZh").ToString().Trim() + strDownloadDocURL + LanguageHandle.GetWord("QingJiShiXiaZaiRuYouWenTiQingL").ToString().Trim();
 
                             try
                             {
-                                msg.SendMailByEmail(strRentUserEMail, "备份文件下载通知", strEMailMsg, "ADMIN");
+                                msg.SendMailByEmail(strRentUserEMail, LanguageHandle.GetWord("BeiFenWenJianXiaZaiTongZhi").ToString().Trim(), strEMailMsg, "ADMIN");
                             }
                             catch (Exception ex)
                             {
@@ -286,7 +286,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomerAPP : System.Web.UI.Page
                 catch (Exception err)
                 {
                     LB_ErrorMsg.Text = err.Message.ToString();
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('提示，发送失败，请检查')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZDiShiFaSongShiBaiQingJianCha").ToString().Trim()+"')", true);
                 }
             }
 
@@ -294,7 +294,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomerAPP : System.Web.UI.Page
             {
                 try
                 {
-                    LB_SiteMsg.Text = "正在删除这个站点，大概需要5分钟，请耐心等候......";
+                    LB_SiteMsg.Text = LanguageHandle.GetWord("ZhengZaiShanChuZheGeZhanDianDa").ToString().Trim();
 
                     IFrame_Site.Src = strSiteURL + @"/" + strSiteCreatorAppName + @"/TakeTopSoftRent_DeleteSiteAuto.aspx?SiteName=" + strSiteName + "&SiteAppName=" + strSiteAppName + "&SiteDirectory=" + strSiteDirectory + "&SiteVirtualDirectoryPhysicalPath=" + strSiteVirtualDirectoryPhysicalPath + "&SiteTemplateDirectory=" + strSiteTemplateDirectory + "&DBLoginUserID=" + strDBLoginUserID + "&DBUserLoginPassword=" + strDBUserLoginPassword + "&SiteDBName=" + strSiteDBName + "&SiteAppSystemName=" + strSiteAppSystemName + "&SiteAppURL=" + strSiteAppURL + "&RentProductName=" + strRentProductName + "&RentUserEMail=" + strRentUserEMail + "&ServerType=" + strServerType;
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindowSite','true') ", true);
@@ -309,11 +309,11 @@ public partial class TakeTopSoftRent_SiteInfoByCustomerAPP : System.Web.UI.Page
                         Action action = new Action(delegate ()
                         {
                             Msg msg = new Msg();
-                            string strEMailMsg = "你好，你" + strServerType + "的：" + strSiteAppSystemName + " 站点：" + strSiteAppURL + " 已被删除，如有问题，请联系客服（021-51085119），谢谢，此邮件来自泰顶拓鼎集团！";
+                            string strEMailMsg = LanguageHandle.GetWord("NiHaoNi").ToString().Trim() + strServerType + LanguageHandle.GetWord("De").ToString().Trim() + strSiteAppSystemName + LanguageHandle.GetWord("ZhanDian").ToString().Trim() + strSiteAppURL + LanguageHandle.GetWord("YiBeiShanChuRuYouWenTiQingLian").ToString().Trim();
 
                             try
                             {
-                                msg.SendMailByEmail(strRentUserEMail, "站点删除通知", strEMailMsg, "ADMIN");
+                                msg.SendMailByEmail(strRentUserEMail, LanguageHandle.GetWord("ZhanDianShanChuTongZhi").ToString().Trim(), strEMailMsg, "ADMIN");
                             }
                             catch (Exception ex)
                             {
@@ -328,7 +328,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomerAPP : System.Web.UI.Page
                 catch (Exception err)
                 {
                     LB_ErrorMsg.Text = err.Message.ToString();
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
             }
 
@@ -361,7 +361,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomerAPP : System.Web.UI.Page
 
                         ((TextBox)e.Item.FindControl("TB_CurrentCapacity")).Text = strFolderSize;
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('已更新现有容量！')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZYiGengXinXianYouRongLiang").ToString().Trim()+"')", true);
 
                     }
                     catch (Exception ex)
@@ -371,7 +371,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomerAPP : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('提示，此站点不存在，请检查！')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZDiShiCiZhanDianBuCunZaiQingJ").ToString().Trim()+"')", true);
                 }
             }
 
@@ -385,7 +385,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomerAPP : System.Web.UI.Page
                         strHQL = "Update T_RentSiteInfoByCustomer Set BuyCapacity = " + strCurrentCapacity + " Where ID = " + strID;
                         ShareClass.RunSqlCommand(strHQL);
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZBaoCunChengGong").ToString().Trim()+"')", true);
                     }
                     catch (Exception ex)
                     {
@@ -394,7 +394,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomerAPP : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('提示，此站点不存在，请检查！')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZDiShiCiZhanDianBuCunZaiQingJ").ToString().Trim()+"')", true);
                 }
             }
 
@@ -402,7 +402,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomerAPP : System.Web.UI.Page
             {
                 if (UrlIsExist(strSiteAppURL))
                 {
-                    LB_SiteMsg.Text = "正在保存这个站点的虚拟目录的绝对路径，大概需要1分钟，请耐心等候......";
+                    LB_SiteMsg.Text = LanguageHandle.GetWord("ZhengZaiBaoCunZheGeZhanDianDeX").ToString().Trim();
                     strSiteVirtualDirectoryPhysicalPath = ((TextBox)e.Item.FindControl("TB_SiteVirtualDirectoryPhysicalPath")).Text.Trim();
 
                     strHQL = "Update T_RentSiteInfoByCustomer Set SiteVirtualDirectoryPhysicalPath = '" + strSiteVirtualDirectoryPhysicalPath + "' Where ID = " + strID;
@@ -415,7 +415,7 @@ public partial class TakeTopSoftRent_SiteInfoByCustomerAPP : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('提示，此站点不存在，请检查！')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZDiShiCiZhanDianBuCunZaiQingJ").ToString().Trim()+"')", true);
                 }
             }
 
@@ -432,12 +432,12 @@ public partial class TakeTopSoftRent_SiteInfoByCustomerAPP : System.Web.UI.Page
                     }
                     catch
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                     }
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('提示，此站点还存在，记录不能删除，请检查！')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZDiShiCiZhanDianHaiCunZaiJiLu").ToString().Trim()+"')", true);
                 }
             }
         }

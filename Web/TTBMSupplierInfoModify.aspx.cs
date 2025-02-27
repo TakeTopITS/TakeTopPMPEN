@@ -109,7 +109,7 @@ public partial class TTBMSupplierInfoModify : System.Web.UI.Page
     {
         string strHQL;
         IList lst;
-        lbl_Code.Text = "个人帐号：" + strCode.Trim();
+        lbl_Code.Text = LanguageHandle.GetWord("GeRenZhangHao").ToString().Trim() + strCode.Trim();
         if (strCode.Trim().Contains("-"))
         {
             strCode = strCode.Trim().Substring(0, strCode.Trim().IndexOf("-"));
@@ -300,14 +300,14 @@ public partial class TTBMSupplierInfoModify : System.Web.UI.Page
 
         if (string.IsNullOrEmpty(TB_Code.Text.Trim()) || string.IsNullOrEmpty(TB_Name.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGYBMYMCDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGYBMYMCDBNWKJC").ToString().Trim() + "')", true);
             TB_Code.Focus();
             TB_Name.Focus();
             return;
         }
         if (TB_Code.Text.Trim().Contains("-") || TB_Code.Text.Trim().Contains(","))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWYBMGZYWBNBHDJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWYBMGZYWBNBHDJC").ToString().Trim() + "')", true);
             TB_Code.Focus();
             return;
         }
@@ -321,18 +321,18 @@ public partial class TTBMSupplierInfoModify : System.Web.UI.Page
 
             if (!TB_Code.Text.Trim().Equals(bMSupplierInfo.Code.Trim()))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGYBMBNGGJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGYBMBNGGJC").ToString().Trim() + "')", true);
                 return;
             }
             //if (bMSupplierInfo.Status.Trim().Equals("Qualified"))
             //{
-            //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGYXXYBSHHGWXZGG+"')", true);
+            //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGYXXYBSHHGWXZGG").ToString().Trim()+"')", true);
             //    return;
             //}
 
             if (TB_Code.Text.Trim() == "" | TB_PhoneNum.Text.Trim() == "" | TB_Name.Text.Trim() == "" | TB_BusinessLicense.Text.Trim() == "" | DLC_SetUpTime.Text.Trim() == "" | TB_RegisteredCapital.Text.Trim() == "" | TB_BusinessLicense.Text.Trim() == "" | TB_RegisteredCapital.Text.Trim() == "" | TB_SupplyScope.Text.Trim() == "" | TB_Qualification.Text.Trim() == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('警告，带*号的不能为空，请检查！')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoDaiHaoDeBuNengWeiKong").ToString().Trim()+"')", true);
                 return;
             }
 
@@ -359,12 +359,12 @@ public partial class TTBMSupplierInfoModify : System.Web.UI.Page
             }
             else if (strAccessoriesPath.Equals("1"))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCZTMWJSCSBGMHZSC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "')", true);
                 return;
             }
             else if (strAccessoriesPath.Equals("2"))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 return;
             }
             else
@@ -400,11 +400,11 @@ public partial class TTBMSupplierInfoModify : System.Web.UI.Page
                 LoadBMSupplierLink(bMSupplierInfo.Code.Trim());
                 LoadBMSupplierCertification(bMSupplierInfo.Code.Trim());
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
             }
         }
         else//新增
@@ -441,12 +441,12 @@ public partial class TTBMSupplierInfoModify : System.Web.UI.Page
             }
             else if (strAccessoriesPath.Equals("1"))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCZTMWJSCSBGMHZSC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "')", true);
                 return;
             }
             else if (strAccessoriesPath.Equals("2"))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 return;
             }
             else
@@ -484,11 +484,11 @@ public partial class TTBMSupplierInfoModify : System.Web.UI.Page
                 LoadBMSupplierLink(bMSupplierInfo.Code.Trim());
                 LoadBMSupplierCertification(bMSupplierInfo.Code.Trim());
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
             }
         }
     }
@@ -564,12 +564,12 @@ public partial class TTBMSupplierInfoModify : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(LB_SupplierInfoID.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZGYSXXXZLXRXXSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZGYSXXXZLXRXXSB").ToString().Trim() + "')", true);
             return;
         }
         //if (DL_Status.SelectedValue.Trim().Equals("Qualified"))
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZYSHDGRXXWFCZXZLXRXXSB+"')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYSHDGRXXWFCZXZLXRXXSB").ToString().Trim()+"')", true);
         //    return;
         //}
         BMSupplierLinkBLL bMSupplierLinkBLL = new BMSupplierLinkBLL();
@@ -597,7 +597,7 @@ public partial class TTBMSupplierInfoModify : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTSXZSBLXRZDBMGZWYBMBHSFZDGCJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSXZSBLXRZDBMGZWYBMBHSFZDGCJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindowLink','false') ", true);
         }
@@ -637,7 +637,7 @@ public partial class TTBMSupplierInfoModify : System.Web.UI.Page
         IList lst;
         //if (DL_Status.SelectedValue.Trim().Equals("Qualified"))
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZYSHDGRXXWFCZXGLXRXXSB+"')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYSHDGRXXWFCZXGLXRXXSB").ToString().Trim()+"')", true);
         //    return;
         //}
 
@@ -661,7 +661,7 @@ public partial class TTBMSupplierInfoModify : System.Web.UI.Page
 
             LoadBMSupplierLink(bMSupplierLink.SupplierCode.Trim());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
@@ -675,7 +675,7 @@ public partial class TTBMSupplierInfoModify : System.Web.UI.Page
         string strHQL;
         //if (DL_Status.SelectedValue.Trim().Equals("Qualified"))
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZYSHDGRXXWFCZSCLXRXXSB+"')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYSHDGRXXWFCZSCLXRXXSB").ToString().Trim()+"')", true);
         //    return;
         //}
         BMSupplierLinkBLL bMSupplierLinkBLL = new BMSupplierLinkBLL();
@@ -697,7 +697,7 @@ public partial class TTBMSupplierInfoModify : System.Web.UI.Page
 
             LoadBMSupplierLink(bMSupplierLink.SupplierCode.Trim());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
         }
         catch
         {
@@ -757,12 +757,12 @@ public partial class TTBMSupplierInfoModify : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(LB_SupplierInfoID.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZGYSXXXZZZZSXXSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZGYSXXXZZZZSXXSB").ToString().Trim() + "')", true);
             return;
         }
         //if (DL_Status.SelectedValue.Trim().Equals("Qualified"))
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZYSHDGRXXWFCZXZZZZSXXSB+"')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYSHDGRXXWFCZXZZZZSXXSB").ToString().Trim()+"')", true);
         //    return;
         //}
 
@@ -780,12 +780,12 @@ public partial class TTBMSupplierInfoModify : System.Web.UI.Page
         }
         else if (strAttach.Equals("1"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCZTMWJSCSBGMHZSC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "')", true);
             return;
         }
         else if (strAttach.Equals("2"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
             return;
         }
         else
@@ -830,7 +830,7 @@ public partial class TTBMSupplierInfoModify : System.Web.UI.Page
         IList lst;
         //if (DL_Status.SelectedValue.Trim().Equals("Qualified"))
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZYSHDGRXXWFCZXGZZZSXXSB+"')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYSHDGRXXWFCZXGZZZSXXSB").ToString().Trim()+"')", true);
         //    return;
         //}
 
@@ -845,12 +845,12 @@ public partial class TTBMSupplierInfoModify : System.Web.UI.Page
         }
         else if (strAttach.Equals("1"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCZTMWJSCSBGMHZSC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "')", true);
             return;
         }
         else if (strAttach.Equals("2"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
             return;
         }
         else
@@ -868,7 +868,7 @@ public partial class TTBMSupplierInfoModify : System.Web.UI.Page
 
             LoadBMSupplierCertification(bMSupplierCertification.SupplierCode.Trim());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
@@ -882,7 +882,7 @@ public partial class TTBMSupplierInfoModify : System.Web.UI.Page
         string strHQL;
         //if (DL_Status.SelectedValue.Trim().Equals("Qualified"))
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZYSHDGRXXWFCZSCZZZSXXSB+"')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYSHDGRXXWFCZSCZZZSXXSB").ToString().Trim()+"')", true);
         //    return;
         //}
         BMSupplierCertificationBLL bMSupplierCertificationBLL = new BMSupplierCertificationBLL();
@@ -901,7 +901,7 @@ public partial class TTBMSupplierInfoModify : System.Web.UI.Page
 
             LoadBMSupplierCertification(bMSupplierCertification.SupplierCode.Trim());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
         }
         catch
         {

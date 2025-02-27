@@ -108,8 +108,8 @@ public partial class TTAllProjectDocuments : System.Web.UI.Page
             DataGrid1.DataSource = lst;
             DataGrid1.DataBind();
 
-            LB_FindCondition2.Text = " 文件上传者包含：" + strUploadManName;
-            LB_Count.Text = Resources.lang.CXDDWJS + ": " + lst.Count.ToString();
+            LB_FindCondition2.Text = LanguageHandle.GetWord("WenJianShangChuanZheBaoHan").ToString().Trim() + strUploadManName;
+            LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
         }
         catch
         {
@@ -133,8 +133,8 @@ public partial class TTAllProjectDocuments : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        LB_FindCondition2.Text = " 文件类型：" + strDocType;
-        LB_Count.Text = Resources.lang.CXDDWJS + ": " + lst.Count.ToString();
+        LB_FindCondition2.Text = LanguageHandle.GetWord("WenJianLeiXing").ToString().Trim() + strDocType;
+        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
     }
 
     protected void LoadProjectDoc(string strUserCode, string strRelatedType, string strRelatedID)
@@ -185,19 +185,19 @@ public partial class TTAllProjectDocuments : System.Web.UI.Page
 
         if (strRelatedType == "Collaboration")
         {
-            strRelatedType = "协作";
+            strRelatedType = "协作"; 
             strRelatedName = GetCollaborationName(strRelatedID);
         }
 
         if (strRelatedType == "Meeting")
         {
-            strRelatedType = "会议";
+            strRelatedType = "会议"; 
             strRelatedName = GetMeetingName(strRelatedID);
         }
 
         if (strRelatedType == "CustomerQuestion")
         {
-            strRelatedType = "客服";
+            strRelatedType = "客服"; 
             strRelatedName = GetCustomerQuestionName(strRelatedID);
         }
 
@@ -205,10 +205,10 @@ public partial class TTAllProjectDocuments : System.Web.UI.Page
         {
             strHQL = "from Document as document where ((document.RelatedType = 'Project' and document.RelatedID = " + strRelatedID + ")";
             strHQL += " or (document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strRelatedID + "))";
-            strHQL += " or (document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strRelatedID + "))";
+            strHQL += "or (document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strRelatedID + "))"; 
             strHQL += " or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strRelatedID + "))";
             strHQL += " or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strRelatedID + "))";
-            strHQL += " or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID = " + strRelatedID + ")))";
+            strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strRelatedID + ")))"; 
         }
 
         if (strRelatedType == "Plan")
@@ -227,37 +227,37 @@ public partial class TTAllProjectDocuments : System.Web.UI.Page
         if (strRelatedType == "Risk")
         {
             strHQL = "from Document as document where ";
-            strHQL += " ((document.RelatedType = '风险' and document.RelatedID = " + strRelatedID + ")";
-            strHQL += " or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='风险' and meeting.RelatedID = " + strRelatedID + ")))";
+            strHQL += "((document.RelatedType = '风险' and document.RelatedID =" + strRelatedID + ")"; 
+            strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='风险' and meeting.RelatedID =" + strRelatedID + ")))"; 
         }
 
         if (strRelatedType == "Requirement")
         {
             strHQL = "from Document as document where ";
             strHQL += " ((document.RelatedType = 'Requirement' and document.RelatedID = " + strRelatedID + ")";
-            strHQL += " or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Requirement' and meeting.RelatedID = " + strRelatedID + ")))";
+            strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Requirement' and meeting.RelatedID =" + strRelatedID + ")))"; 
         }
 
         if (strRelatedType == "Workflow")
         {
             strHQL = "from Document as document where ";
             strHQL += " ((document.RelatedType = 'Workflow' and document.RelatedID = " + strRelatedID + ")"; ;
-            strHQL += " or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Workflow' and meeting.RelatedID = " + strRelatedID + ")))";
+            strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Workflow' and meeting.RelatedID =" + strRelatedID + ")))"; 
         }
 
-        if (strRelatedType == "协作")
+        if (strRelatedType == "协作") 
         {
-            strHQL = " from Document as document where document.RelatedType = '协作' and document.RelatedID = " + strRelatedID;
+            strHQL = " from Document as document where document.RelatedType = '协作' and document.RelatedID = " + strRelatedID; 
         }
 
-        if (strRelatedType == "会议")
+        if (strRelatedType == "会议") 
         {
-            strHQL = " from Document as document where document.RelatedType = '会议' and document.RelatedID = " + strRelatedID;
+            strHQL = " from Document as document where document.RelatedType = '会议' and document.RelatedID = " + strRelatedID; 
         }
 
-        if (strRelatedType == "客服")
+        if (strRelatedType == "客服") 
         {
-            strHQL = " from Document as document where document.RelatedType = '客服' and document.RelatedID = " + strRelatedID;
+            strHQL = " from Document as document where document.RelatedType = '客服' and document.RelatedID = " + strRelatedID; 
         }
 
         strHQL += " and document.DepartCode in " + strDepartString;
@@ -273,9 +273,9 @@ public partial class TTAllProjectDocuments : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        LB_Count.Text = Resources.lang.CXDDWJS + ": " + lst.Count.ToString();
+        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
 
-        LB_FindCondition1.Text = Resources.lang.ChaXunFanWeiShi + ": " + strRelatedType + ":" + strRelatedID + " " + strRelatedName + " ";
+        LB_FindCondition1.Text = LanguageHandle.GetWord("ChaXunFanWeiShi").ToString().Trim() + ": " + strRelatedType + ":" + strRelatedID + " " + strRelatedName + " ";
         LB_FindCondition2.Text = "";
     }
 
@@ -321,27 +321,27 @@ public partial class TTAllProjectDocuments : System.Web.UI.Page
 
         if (strRelatedType == "Collaboration")
         {
-            strRelatedType = "协作";
+            strRelatedType = "协作"; 
         }
 
         if (strRelatedType == "Meeting")
         {
-            strRelatedType = "会议";
+            strRelatedType = "会议"; 
         }
 
         if (strRelatedType == "CustomerQuestion")
         {
-            strRelatedType = "客服";
+            strRelatedType = "客服"; 
         }
 
         if (strRelatedType == "Project")
         {
             strHQL = "from Document as document where ((document.RelatedType = 'Project' and document.RelatedID = " + strRelatedID + ")";
             strHQL += " or (document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strRelatedID + "))";
-            strHQL += " or (document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strRelatedID + "))";
+            strHQL += "or (document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strRelatedID + "))"; 
             strHQL += " or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strRelatedID + "))";
             strHQL += " or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strRelatedID + "))";
-            strHQL += " or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID = " + strRelatedID + ")))";
+            strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strRelatedID + ")))"; 
 
         }
 
@@ -361,37 +361,37 @@ public partial class TTAllProjectDocuments : System.Web.UI.Page
         if (strRelatedType == "Risk")
         {
             strHQL = "from Document as document where ";
-            strHQL += " ((document.RelatedType = '风险' and document.RelatedID  in (Select projectRisk.ID From ProjectRisk as projectRisk Where projectRisk.ProjectID = " + strProjectID + "))";
-            strHQL += " or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='风险' and meeting.RelatedID = " + strRelatedID + ")))";
+            strHQL += "((document.RelatedType = '风险' and document.RelatedID  in (Select projectRisk.ID From ProjectRisk as projectRisk Where projectRisk.ProjectID =" + strProjectID + "))"; 
+            strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='风险' and meeting.RelatedID =" + strRelatedID + ")))"; 
         }
 
         if (strRelatedType == "Requirement")
         {
             strHQL = "from Document as document where ";
             strHQL += " ((document.RelatedType = 'Requirement' and document.RelatedID  in (Select relatedReq.ReqID From RelatedReq as relatedReq Where relatedReq.ProjectID = " + strProjectID + "))";
-            strHQL += " or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Requirement' and meeting.RelatedID = " + strRelatedID + ")))";
+            strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Requirement' and meeting.RelatedID =" + strRelatedID + ")))"; 
         }
 
         if (strRelatedType == "Workflow")
         {
             strHQL = "from Document as document where ";
             strHQL += " ((document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID from WorkFlow as workFlow where workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + "))";
-            strHQL += " or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Workflow' and meeting.RelatedID = " + strRelatedID + ")))";
+            strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Workflow' and meeting.RelatedID =" + strRelatedID + ")))"; 
         }
 
-        if (strRelatedType == "会议")
+        if (strRelatedType == "会议") 
         {
-            strHQL = " from Document as document where document.RelatedType = '会议' and document.RelatedID  in (Select meeting.ID from Meeting as meeting where meeting.RelatedType = 'Project' and meeting.RelatedID = " + strProjectID + ")";
+            strHQL = "from Document as document where document.RelatedType = '会议' and document.RelatedID  in (Select meeting.ID from Meeting as meeting where meeting.RelatedType = 'Project' and meeting.RelatedID =" + strProjectID + ")"; 
         }
 
-        if (strRelatedType == "协作")
+        if (strRelatedType == "协作") 
         {
-            strHQL = " from Document as document where document.RelatedType = '协作' and document.RelatedID = " + strRelatedID;
+            strHQL = " from Document as document where document.RelatedType = '协作' and document.RelatedID = " + strRelatedID; 
         }
 
-        if (strRelatedType == "客服")
+        if (strRelatedType == "客服") 
         {
-            strHQL = " from Document as document where document.RelatedType = '客服' and document.RelatedID = " + strRelatedID;
+            strHQL = " from Document as document where document.RelatedType = '客服' and document.RelatedID = " + strRelatedID; 
         }
 
         strHQL += " and document.DepartCode in " + strDepartString;
@@ -407,9 +407,9 @@ public partial class TTAllProjectDocuments : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        LB_Count.Text = Resources.lang.CXDDWJS + ": " + lst.Count.ToString();
+        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
 
-        LB_FindCondition1.Text = Resources.lang.ChaXunFanWeiShi + ": " + strRelatedType + ":" + strRelatedID + " " + strRelatedName + " ";
+        LB_FindCondition1.Text = LanguageHandle.GetWord("ChaXunFanWeiShi").ToString().Trim() + ": " + strRelatedType + ":" + strRelatedID + " " + strRelatedName + " ";
         LB_FindCondition2.Text = "";
     }
 
@@ -436,9 +436,9 @@ public partial class TTAllProjectDocuments : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        LB_Count.Text = Resources.lang.CXDDWJS + ": " + lst.Count.ToString();
+        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
 
-        LB_FindCondition1.Text = Resources.lang.CXFWXMSY;
+        LB_FindCondition1.Text = LanguageHandle.GetWord("CXFWXMSY").ToString().Trim();
         LB_FindCondition2.Text = "";
     }
 

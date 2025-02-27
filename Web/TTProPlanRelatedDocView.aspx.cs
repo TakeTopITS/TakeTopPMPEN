@@ -44,7 +44,7 @@ public partial class TTProPlanRelatedDocView : System.Web.UI.Page
         lst = projectBLL.GetAllProjects(strHQL);
         Project project = (Project)lst[0];
 
-        //this.Title = Resources.lang.Project + strProjectID + " " + project.ProjectName.Trim() + "   的计划：" + strPlanID + " " + workPlan.Name.Trim() + " 的相关文档";
+        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + project.ProjectName.Trim() + "的计划：" + strPlanID + " " + workPlan.Name.Trim() + " 的相关文档";
 
         LB_PlanID.Text = strPlanID;
         LB_ProjectID.Text = strProjectID;
@@ -84,7 +84,7 @@ public partial class TTProPlanRelatedDocView : System.Web.UI.Page
             }
             else
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+Resources.lang.ZZFFCZNBNSCBRSCDWJ+"');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+LanguageHandle.GetWord("ZZFFCZNBNSCBRSCDWJ").ToString().Trim()+"');</script>");
             }
         }
     }
@@ -137,7 +137,7 @@ public partial class TTProPlanRelatedDocView : System.Web.UI.Page
         strHQL = "from Document as document where ";
         strHQL += " (document.RelatedType = 'Plan' and document.RelatedID = " + strPlanID;
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or (document.Visible in ( '部门','全体'))))";
+        strHQL += " or (document.Visible in ( '部门','全体'))))"; 
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
 
         documentBLL = new DocumentBLL();

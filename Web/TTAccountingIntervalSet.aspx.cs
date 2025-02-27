@@ -70,51 +70,51 @@ public partial class TTAccountingIntervalSet : System.Web.UI.Page
     {
         if (DL_FinancialID.SelectedValue.Trim()=="")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSZTWBXJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSZTWBXJC").ToString().Trim()+"')", true);
             DL_FinancialID.Focus();
             return;
         }
         string FinancialStatus = GetFinancialStatus(DL_FinancialID.SelectedValue.Trim());
         if (FinancialStatus != "OPEN")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSGZTYGBJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSGZTYGBJC").ToString().Trim()+"')", true);
             DL_FinancialID.Focus();
             return;
         }
         if (TB_IntervalCode.Text.Trim() == "" || string.IsNullOrEmpty(TB_IntervalCode.Text))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSJBMBNWKJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSJBMBNWKJC").ToString().Trim()+"')", true);
             TB_IntervalCode.Focus();
             return;
         }
         if (TB_IntervalName.Text.Trim() == "" || string.IsNullOrEmpty(TB_IntervalName.Text))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSJMCBNWKJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSJMCBNWKJC").ToString().Trim()+"')", true);
             TB_IntervalName.Focus();
             return;
         }
         if (DLC_StartTime.Text.Trim() == "" || string.IsNullOrEmpty(DLC_StartTime.Text))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSKSRBNWKJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSKSRBNWKJC").ToString().Trim()+"')", true);
             DLC_StartTime.Focus();
             return;
         }
         if (DLC_EndTime.Text.Trim() == "" || string.IsNullOrEmpty(DLC_EndTime.Text))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSJSRBNWKJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSJSRBNWKJC").ToString().Trim()+"')", true);
             DLC_EndTime.Focus();
             return;
         }
         if (DateTime.Parse(DLC_StartTime.Text.Trim()) > DateTime.Parse(DLC_EndTime.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSKSRBNDYJSRJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSKSRBNDYJSRJC").ToString().Trim()+"')", true);
             DLC_StartTime.Focus();
             DLC_EndTime.Focus();
             return;
         }
         if (IsAccountingIntervalSet(TB_IntervalCode.Text.Trim(), string.Empty))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSGJBMYCZJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSGJBMYCZJC").ToString().Trim()+"')", true);
             TB_IntervalCode.Focus();
             return;
         }
@@ -141,11 +141,11 @@ public partial class TTAccountingIntervalSet : System.Web.UI.Page
 
             LoadAccountingIntervalSetList(txt_IntervalInfo.Text.Trim(), ddlStatus.SelectedValue.Trim());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJXZCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJXZCG").ToString().Trim()+"')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJXZSB+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJXZSB").ToString().Trim()+"')", true);
         }
     }
 
@@ -169,56 +169,56 @@ public partial class TTAccountingIntervalSet : System.Web.UI.Page
     {
         if (DL_FinancialID.SelectedValue.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSZTWBXJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSZTWBXJC").ToString().Trim()+"')", true);
             DL_FinancialID.Focus();
             return;
         }
         string FinancialStatus = GetFinancialStatus(DL_FinancialID.SelectedValue.Trim());
         if (FinancialStatus != "OPEN")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSGZTYGBJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSGZTYGBJC").ToString().Trim()+"')", true);
             DL_FinancialID.Focus();
             return;
         }
         if (TB_IntervalCode.Text.Trim() == "" || string.IsNullOrEmpty(TB_IntervalCode.Text))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSJBMBNWKJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSJBMBNWKJC").ToString().Trim()+"')", true);
             TB_IntervalCode.Focus();
             return;
         }
         if (TB_IntervalName.Text.Trim() == "" || string.IsNullOrEmpty(TB_IntervalName.Text))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSJMCBNWKJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSJMCBNWKJC").ToString().Trim()+"')", true);
             TB_IntervalName.Focus();
             return;
         }
         if (DLC_StartTime.Text.Trim() == "" || string.IsNullOrEmpty(DLC_StartTime.Text))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSKSRBNWKJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSKSRBNWKJC").ToString().Trim()+"')", true);
             DLC_StartTime.Focus();
             return;
         }
         if (DLC_EndTime.Text.Trim() == "" || string.IsNullOrEmpty(DLC_EndTime.Text))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSJSRBNWKJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSJSRBNWKJC").ToString().Trim()+"')", true);
             DLC_EndTime.Focus();
             return;
         }
         if (DateTime.Parse(DLC_StartTime.Text.Trim()) > DateTime.Parse(DLC_EndTime.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSKSRBNDYJSRJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSKSRBNDYJSRJC").ToString().Trim()+"')", true);
             DLC_StartTime.Focus();
             DLC_EndTime.Focus();
             return;
         }
         if (TB_ID.Text.Trim() == "" || string.IsNullOrEmpty(TB_ID.Text))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSGSJBCZJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSGSJBCZJC").ToString().Trim()+"')", true);
             return;
         }
         if (IsAccountingIntervalSet(TB_IntervalCode.Text.Trim(), TB_ID.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSGJBMYCZJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSGJBMYCZJC").ToString().Trim()+"')", true);
             TB_IntervalCode.Focus();
             return;
         }
@@ -247,11 +247,11 @@ public partial class TTAccountingIntervalSet : System.Web.UI.Page
 
                 LoadAccountingIntervalSetList(txt_IntervalInfo.Text.Trim(), ddlStatus.SelectedValue.Trim());
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGXCG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGXCG").ToString().Trim()+"')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGXSB+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGXSB").ToString().Trim()+"')", true);
             }
         }
     }
@@ -284,7 +284,7 @@ public partial class TTAccountingIntervalSet : System.Web.UI.Page
         string strCode = TB_ID.Text.Trim();
         if (TB_ID.Text.Trim() == "" || string.IsNullOrEmpty(TB_ID.Text))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTSGSJBCZJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTSGSJBCZJC").ToString().Trim()+"')", true);
             return;
         }
         strHQL = "Delete From T_AccountingIntervalSet Where ID = '" + strCode + "' ";
@@ -300,11 +300,11 @@ public partial class TTAccountingIntervalSet : System.Web.UI.Page
 
             LoadAccountingIntervalSetList(txt_IntervalInfo.Text.Trim(), ddlStatus.SelectedValue.Trim());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSBJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSBJC").ToString().Trim()+"')", true);
         }
     }
 

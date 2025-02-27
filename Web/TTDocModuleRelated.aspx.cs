@@ -67,17 +67,17 @@ public partial class TTDocModuleRelated : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strProductLine))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCPXBYXWKBC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCPXBYXWKBC").ToString().Trim()+"')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strSubordinateIndustry))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXYBYXWKBC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXYBYXWKBC").ToString().Trim()+"')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strModuleIDs) || string.IsNullOrEmpty(strModuleNames))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZMKBYXWKBC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZMKBYXWKBC").ToString().Trim()+"')", true);
                 return;
             }
             

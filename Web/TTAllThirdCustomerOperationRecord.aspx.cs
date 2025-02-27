@@ -38,10 +38,10 @@ public partial class TTAllThirdCustomerOperationRecord : System.Web.UI.Page
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
         {
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT,TreeView1, strUserCode.Trim());
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode.Trim());
             LB_DepartString.Text = strDepartString;
             
-            LB_ProjectMemberOwner.Text = "第三方操作记录列表：";
+            LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("DiSanFangCaoZuoJiLuLieBiao").ToString().Trim();
 
             strHQL = "from CustomerOperationRecord as customerOperationRecord where customerOperationRecord.UserCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
             strHQL += " Order By customerOperationRecord.ID ";
@@ -50,7 +50,7 @@ public partial class TTAllThirdCustomerOperationRecord : System.Web.UI.Page
             DataGrid1.DataSource = lst;
             DataGrid1.DataBind();
 
-            LB_LeaveInfoNumber.Text = Resources.lang.GCXD + lst.Count.ToString() + " 条记录";
+            LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + lst.Count.ToString() + LanguageHandle.GetWord("TiaoJiLu").ToString().Trim();
 
             LB_Sql.Text = strHQL;
         }
@@ -71,8 +71,8 @@ public partial class TTAllThirdCustomerOperationRecord : System.Web.UI.Page
 
             intCount = LoadUserByDepartCodeForDataGrid(strDepartCode, DataGrid1);
 
-            LB_ProjectMemberOwner.Text = strDepartName + " 的第三方操作记录：";
-            LB_LeaveInfoNumber.Text = Resources.lang.GCXD + intCount.ToString() + " 条";
+            LB_ProjectMemberOwner.Text = strDepartName + LanguageHandle.GetWord("DeDiSanFangCaoZuoJiLu").ToString().Trim();
+            LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + intCount.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
 
             LB_DepartCode.Text = strDepartCode;
         }
@@ -98,7 +98,7 @@ public partial class TTAllThirdCustomerOperationRecord : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        LB_ProjectMemberOwner.Text = "第三方操作记录列表：";
+        LB_ProjectMemberOwner.Text = LanguageHandle.GetWord("DiSanFangCaoZuoJiLuLieBiao").ToString().Trim();
 
         string strDepartString = LB_DepartString.Text.Trim();
 
@@ -125,7 +125,7 @@ public partial class TTAllThirdCustomerOperationRecord : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        LB_LeaveInfoNumber.Text = Resources.lang.GCXD + lst.Count.ToString() + " 条";
+        LB_LeaveInfoNumber.Text = LanguageHandle.GetWord("GCXD").ToString().Trim() + lst.Count.ToString() + LanguageHandle.GetWord("Tiao").ToString().Trim();
 
         LB_Sql.Text = strHQL;
 
@@ -152,12 +152,12 @@ public partial class TTAllThirdCustomerOperationRecord : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = "第三方操作记录_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("DiSanFangCaoZuoJiLu").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 CreateExcel(getUserList(), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGDCDSJYWJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim()+"')", true);
             }
         }
     }
@@ -193,7 +193,7 @@ public partial class TTAllThirdCustomerOperationRecord : System.Web.UI.Page
         {
             string strDepartString = LB_DepartString.Text.Trim();
 
-            strHQL = "Select ID '编号',UserCode '用户代码',UserName '用户姓名',CreaterName '操作人',CreateTime '操作时间',Remark '操作备注' from T_CustomerOperationRecord where " +
+            strHQL = "Select ID '编号',UserCode '用户代码',UserName '用户姓名',CreaterName '操作人',CreateTime '操作时间',Remark '操作备注' from T_CustomerOperationRecord where " + 
                 "UserCode in (Select UserCode From T_ProjectMember Where DepartCode in " + strDepartString + ")";
         
             if (!string.IsNullOrEmpty(TB_UserCode.Text.Trim()))
@@ -216,7 +216,7 @@ public partial class TTAllThirdCustomerOperationRecord : System.Web.UI.Page
         }
         else//按组织架构查询的
         {
-            strHQL = "Select ID '编号',UserCode '用户代码',UserName '用户姓名',CreaterName '操作人',CreateTime '操作时间',Remark '操作备注' from T_CustomerOperationRecord where " +
+            strHQL = "Select ID '编号',UserCode '用户代码',UserName '用户姓名',CreaterName '操作人',CreateTime '操作时间',Remark '操作备注' from T_CustomerOperationRecord where " + 
                 "UserCode in (Select UserCode From T_ProjectMember Where DepartCode = '" + strDepartCode + "') Order by ID ASC ";
 
         }

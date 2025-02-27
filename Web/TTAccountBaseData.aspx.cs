@@ -34,7 +34,7 @@ public partial class TTAccountBaseData : System.Web.UI.Page
     {
         if (TB_AccountName.Text.Trim() == "" || TB_AccountType.Text.Trim() == "" || TB_SortNumber.Text.Trim() == "" || TB_TypeArea.Text.Trim() == "" || TB_AccountCode.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTSZDNRBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSZDNRBNWKJC").ToString().Trim() + "')", true);
             TB_AccountName.Focus();
             TB_AccountType.Focus();
             TB_SortNumber.Focus();
@@ -44,7 +44,7 @@ public partial class TTAccountBaseData : System.Web.UI.Page
         }
         if (IsAccount(TB_AccountCode.Text.Trim(), TB_AccountType.Text.Trim(), TB_TypeArea.Text.Trim(), string.Empty))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTSGKMXXYCZJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSGKMXXYCZJC").ToString().Trim() + "')", true);
             TB_AccountCode.Focus();
             TB_AccountType.Focus();
             TB_TypeArea.Focus();
@@ -70,11 +70,11 @@ public partial class TTAccountBaseData : System.Web.UI.Page
             AccountTree(TreeView1);
             LoadAccount();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -106,7 +106,7 @@ public partial class TTAccountBaseData : System.Web.UI.Page
     {
         if (TB_AccountName.Text.Trim() == "" || TB_AccountType.Text.Trim() == "" || TB_SortNumber.Text.Trim() == "" || TB_TypeArea.Text.Trim() == "" || TB_AccountCode.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTSZDNRBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSZDNRBNWKJC").ToString().Trim() + "')", true);
             TB_AccountName.Focus();
             TB_AccountType.Focus();
             TB_SortNumber.Focus();
@@ -116,7 +116,7 @@ public partial class TTAccountBaseData : System.Web.UI.Page
         }
         if (IsAccount(TB_AccountCode.Text.Trim(), TB_AccountType.Text.Trim(), TB_TypeArea.Text.Trim(), lbl_ID.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTSGKMXXYCZJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSGKMXXYCZJC").ToString().Trim() + "')", true);
             TB_AccountCode.Focus();
             TB_AccountType.Focus();
             TB_TypeArea.Focus();
@@ -125,7 +125,7 @@ public partial class TTAccountBaseData : System.Web.UI.Page
 
         if(DL_ParentID.SelectedValue.Trim() == lbl_ID.Text.Trim())
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('警告，不能选自身作为父科目，请检查！')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoBuNengShuaZiShenZuoWe").ToString().Trim()+"')", true);
             return;
         }
 
@@ -150,16 +150,16 @@ public partial class TTAccountBaseData : System.Web.UI.Page
                 AccountTree(TreeView1);
                 LoadAccount();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSJBCZJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSJBCZJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -264,7 +264,7 @@ public partial class TTAccountBaseData : System.Web.UI.Page
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "0：" + "会计科目列表";
+        node1.Text = "0：" + LanguageHandle.GetWord("HuiJiKeMuLieBiao").ToString().Trim();
         node1.Target = "0";
         node1.Expanded = true;
         tv.Nodes.Add(node1);
@@ -325,13 +325,13 @@ public partial class TTAccountBaseData : System.Web.UI.Page
         if (dt != null && dt.Rows.Count > 0)
         {
             DL_ParentID.Items.Clear();
-            DL_ParentID.Items.Insert(0, new ListItem("一级科目", "0"));
+            DL_ParentID.Items.Insert(0, new ListItem("一级科目", "0")); 
             SetInterval(DL_ParentID, "0", " ");
         }
         else
         {
             DL_ParentID.Items.Clear();
-            DL_ParentID.Items.Insert(0, new ListItem("一级科目", "0"));
+            DL_ParentID.Items.Insert(0, new ListItem("一级科目", "0")); 
         }
     }
 
@@ -393,12 +393,12 @@ public partial class TTAccountBaseData : System.Web.UI.Page
         string strCode = lbl_ID.Text.Trim();
         if (lbl_ID.Text.Trim() == "" || string.IsNullOrEmpty(lbl_ID.Text))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('提示，该" + Resources.lang.ZZSJBCZJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZDiShiGaiLanguageHandleGetWor").ToString().Trim()+"')", true); 
             return;
         }
         if (IsAccountChild(strCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTSGKMXYZKMXSCZKM + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSGKMXYZKMXSCZKM").ToString().Trim() + "')", true);
             return;
         }
         strHQL = "From Account as account where account.ID = '" + strCode + "'";
@@ -416,16 +416,16 @@ public partial class TTAccountBaseData : System.Web.UI.Page
             LoadAccount();
             if (IsAccountCode(account.AccountCode.Trim()))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCGGKMBMYBYYJKBCGKMBM + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCGGKMBMYBYYJKBCGKMBM").ToString().Trim() + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
             }
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
         }
     }
 

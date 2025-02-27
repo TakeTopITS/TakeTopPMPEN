@@ -58,7 +58,7 @@ public partial class TTReqManage : System.Web.UI.Page
             SetReqRecordColor(DataGrid4);
 
             strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and (reqAssignRecord.Status in ('¾Ü¾ø','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))";
+            strHQL += " and (reqAssignRecord.Status in ('¾Ü¾ø','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))"; 
             strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " Order by reqAssignRecord.ID DESC";
             reqAssignRecordBLL = new ReqAssignRecordBLL();
@@ -109,7 +109,7 @@ public partial class TTReqManage : System.Web.UI.Page
             DataGrid2.DataSource = lst;
             DataGrid2.DataBind();
 
-            LB_QueryScope.Text = Resources.lang.StatusAll;
+            LB_QueryScope.Text = LanguageHandle.GetWord("StatusAll").ToString().Trim();
         }
     }
 
@@ -135,7 +135,7 @@ public partial class TTReqManage : System.Web.UI.Page
         SetReqRecordColor(DataGrid4);
 
         strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and (reqAssignRecord.Status in ('¾Ü¾ø','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))";
+        strHQL += " and (reqAssignRecord.Status in ('¾Ü¾ø','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))"; 
         strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by reqAssignRecord.ID DESC";
         reqAssignRecordBLL = new ReqAssignRecordBLL();
@@ -172,14 +172,14 @@ public partial class TTReqManage : System.Web.UI.Page
 
         SetReqRecordColor(DataGrid3);
 
-        LB_QueryScope.Text = Resources.lang.StatusAll;
+        LB_QueryScope.Text = LanguageHandle.GetWord("StatusAll").ToString().Trim();
     }
 
     protected void DataGrid2_ItemCommand(object sender, DataGridCommandEventArgs e)
     {
         string strStatus = ((Button)e.Item.FindControl("BT_Status")).Text.Trim();
 
-        LB_QueryScope.Text = Resources.lang.Status + strStatus;
+        LB_QueryScope.Text = LanguageHandle.GetWord("Status").ToString().Trim() + strStatus;
 
         string strUserCode = LB_UserCode.Text;
         string strHQL;
@@ -199,7 +199,7 @@ public partial class TTReqManage : System.Web.UI.Page
         SetReqRecordColor(DataGrid4);
 
         strHQL = "from ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and (reqAssignRecord.Status in ('¾Ü¾ø','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))";
+        strHQL += " and (reqAssignRecord.Status in ('¾Ü¾ø','Completed','Suspended','Cancel') and reqAssignRecord.ID not in (select reqAssignRecord.PriorID from ReqAssignRecord as reqAssignRecord))"; 
         strHQL += " and reqAssignRecord.ReqID not in (select requirement.ReqID from Requirement as requirement where requirement.ReqID not in (select requirement.ReqID from Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived')))";
         strHQL += " and reqAssignRecord.Status = " + "'" + strStatus + "'" + " Order by reqAssignRecord.ID DESC";
         reqAssignRecordBLL = new ReqAssignRecordBLL();
@@ -333,7 +333,7 @@ public partial class TTReqManage : System.Web.UI.Page
             dtNowDate = DateTime.Now;
             strStatus = dataGrid.Items[i].Cells[7].Text.Trim();
 
-            if (strStatus != "Completed" & strStatus != "ÒÑÍê³É")
+            if (strStatus != "Completed" & strStatus != LanguageHandle.GetWord("YiWanCheng").ToString().Trim())
             {
                 if (dtFinishedDate < dtNowDate)
                 {

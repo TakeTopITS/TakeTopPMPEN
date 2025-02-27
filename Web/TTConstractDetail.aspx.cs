@@ -142,11 +142,11 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
             //LoadRelatedDocByDocType(strConstractCode, "合同内容", DataGrid18);
 
-            LoadRelatedDocByDocType(strConstractCode, "补充协议", DataGrid19);
+            LoadRelatedDocByDocType(strConstractCode, LanguageHandle.GetWord("BuChongXieYi").ToString().Trim(), DataGrid19);
             LoadContractBasisDocument(strConstractCode);
 
             //LoadRelatedDocByDocType(strConstractCode, "合同依据", DataGrid20);
-            LoadRelatedDocByDocType(strConstractCode, "项目其他信息", DataGrid21);
+            LoadRelatedDocByDocType(strConstractCode, LanguageHandle.GetWord("XiangMuJiTaXinXi").ToString().Trim(), DataGrid21);
 
             ShareClass.LoadCurrencyForDropDownList(DL_EncryCurrency);
             ShareClass.LoadCurrencyForDropDownList(DL_EntryCurrencyForInner);
@@ -198,7 +198,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
             LB_ReceivablesCurrency.Text = strCurrencyType;
 
             DataSet ds;
-            strHQL = "Select HomeModuleName, PageName || " + "'" + strConstractCode + "&RelatedID=" + constract.ConstractID.ToString() + "' as ModulePage  From T_ProModuleLevelForPage Where ParentModule = '合同执行' and LangCode = '" + strLangCode + "' and Visible ='YES' Order By SortNumber ASC";
+            strHQL = "Select HomeModuleName, PageName || " + "'" + strConstractCode + "&RelatedID=" + constract.ConstractID.ToString() + "' as ModulePage  From T_ProModuleLevelForPage Where ParentModule = '合同执行' and LangCode = '" + strLangCode + "' and Visible ='YES' Order By SortNumber ASC"; 
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProModuleLevelForPage");
             Repeater1.DataSource = ds;
             Repeater1.DataBind();
@@ -385,7 +385,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZSBDJRYDMCWCWCRJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBDJRYDMCWCWCRJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popReceivablesWindow','true') ", true);
 
@@ -452,7 +452,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popReceivablesWindow','true') ", true);
         }
@@ -501,7 +501,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXGSBDJRYDMCWCWCRJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXGSBDJRYDMCWCWCRJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popReceivablesWindow','true') ", true);
 
@@ -566,11 +566,11 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
             LoadConstractReceivables(strConstractCode, strAuthority);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popReceivablesWindow','true') ", true);
         }
@@ -718,7 +718,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWDJRYDMCWCWCRJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWDJRYDMCWCWCRJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popPayableWindow','true') ", true);
 
@@ -802,7 +802,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popPayableWindow','true') ", true);
         }
@@ -853,7 +853,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWDJRYDMCWCWCRJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWDJRYDMCWCWCRJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popPayableWindow','true') ", true);
 
@@ -938,11 +938,11 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
             LoadConstractPayable(strConstractCode, strAuthority);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popPayableWindow','true') ", true);
         }
@@ -1016,11 +1016,11 @@ public partial class TTConstractDetail : System.Web.UI.Page
                     constractRelatedGoodsBLL.DeleteConstractRelatedGoods(constractRelatedGoods);
 
                     LoadConstractRelatedGoodsList(strConstractCode);
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
             }
 
@@ -1213,7 +1213,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
         if (strType == "" | strGoodsName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYSRHYXDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popGoodsListWindow','false') ", true);
 
         }
@@ -1262,11 +1262,11 @@ public partial class TTConstractDetail : System.Web.UI.Page
                 LoadConstractRelatedGoodsList(strConstractCode);
 
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popGoodsListWindow','false') ", true);
             }
@@ -1304,7 +1304,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
         if (strType == "" | strGoodsName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYSRHYXDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popGoodsListWindow','false') ", true);
         }
@@ -1349,11 +1349,11 @@ public partial class TTConstractDetail : System.Web.UI.Page
                 LoadConstractRelatedGoodsList(strConstractCode);
 
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popGoodsListWindow','false') ", true);
             }
@@ -1419,11 +1419,11 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
                     LoadConstractGoodsReceiptPlanList(strConstractCode);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -1661,7 +1661,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
         if (strType == "" | strGoodsName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYSRHYXDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popReceivePlanWindow','false') ", true);
         }
@@ -1702,11 +1702,11 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
                 LoadConstractGoodsReceiptPlanList(strConstractCode);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popReceivePlanWindow','false') ", true);
             }
@@ -1745,7 +1745,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
         if (strType == "" | strGoodsName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYSRHYXDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popReceivePlanWindow','false') ", true);
         }
@@ -1781,12 +1781,12 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
                 LoadConstractGoodsReceiptPlanList(strConstractCode);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
 
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popReceivePlanWindow','false') ", true);
             }
@@ -1853,11 +1853,11 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
                     LoadConstractGoodsDeliveryPlanList(strConstractCode);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -2085,7 +2085,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
         if (strType == "" | strGoodsName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYSRHYXDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
         }
         else
         {
@@ -2124,11 +2124,11 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
                 LoadConstractGoodsDeliveryPlanList(strConstractCode);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popDeliveryPlanWindow','false') ", true);
             }
@@ -2164,7 +2164,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
             if (TB_ContractBasisDocumentType.Text.Trim() == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('提示，文档类型不能为空，请检查！')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZDiShiWenDangLeiXingBuNengWei").ToString().Trim()+"')", true);
                 return;
             }
 
@@ -2212,9 +2212,9 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
     protected void BT_RefreshContractInfor_Click(object sender, EventArgs e)
     {
-        LoadRelatedDocByDocType(strConstractCode, "补充协议", DataGrid19);
+        LoadRelatedDocByDocType(strConstractCode, LanguageHandle.GetWord("BuChongXieYi").ToString().Trim(), DataGrid19);
 
-        LoadRelatedDocByDocType(strConstractCode, "项目其他信息", DataGrid21);
+        LoadRelatedDocByDocType(strConstractCode, LanguageHandle.GetWord("XiangMuJiTaXinXi").ToString().Trim(), DataGrid21);
     }
 
 
@@ -2281,7 +2281,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
         if (strType == "" | strGoodsName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYSRHYXDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSRHYXDBNWKJC").ToString().Trim() + "')", true);
         }
         else
         {
@@ -2317,12 +2317,12 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
                 LoadConstractGoodsDeliveryPlanList(strConstractCode);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
 
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popDeliveryPlanWindow','false') ", true);
             }
@@ -2400,7 +2400,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZSBCZXTDBGHJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBCZXTDBGHJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popEntryOrderWindow','true') ", true);
         }
@@ -2457,7 +2457,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBCZXTDBGHJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBCZXTDBGHJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popEntryOrderWindow','true') ", true);
         }
@@ -2525,7 +2525,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -2582,7 +2582,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -2648,7 +2648,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZSBCZXTDBGHJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBCZXTDBGHJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popEntryInnerWindow','true') ", true);
         }
@@ -2688,7 +2688,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBCZXTDBGHJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBCZXTDBGHJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popEntryInnerWindow','true') ", true);
         }
@@ -2803,7 +2803,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -2927,7 +2927,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -3008,7 +3008,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popSalesWindow','false') ", true);
         }
@@ -3056,7 +3056,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popSalesWindows','false') ", true);
         }
@@ -3137,7 +3137,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -3216,7 +3216,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -3280,7 +3280,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popInvoiceWindow','true') ", true);
         }
@@ -3326,11 +3326,11 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
             CountInvoiceAmount(strConstractCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popInvoiceWindow','true') ", true);
         }
@@ -4125,27 +4125,27 @@ public partial class TTConstractDetail : System.Web.UI.Page
         //先导入物料主数据
         if (ExcelToDataTrainingForItem() == -1)
         {
-            LB_ErrorText.Text += "导入失败，数据有误，请检查！";
+            LB_ErrorText.Text += LanguageHandle.GetWord("DaoRuShiBaiShuJuYouWuQingJianC").ToString().Trim();
             return;
         }
 
         //导入项目关联物料数据
         if (ExelToDBTestForProjectItem() == -1)
         {
-            LB_ErrorText.Text += Resources.lang.ZZDRSBEXECLBLDSJYCJC;
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZDRSBEXECLBLDSJYCJC").ToString().Trim();
             return;
         }
         else
         {
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGNZEXCELWJ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim();
                 return;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
                 return;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -4154,7 +4154,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                LB_ErrorText.Text += Resources.lang.ZZEXCLEBDRSB;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim();
             }
             else
             {
@@ -4171,13 +4171,13 @@ public partial class TTConstractDetail : System.Web.UI.Page
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += Resources.lang.ZZJGEXCELBWKBWSJ;
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim();
                 }
                 else
                 {
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        strItemCode = dr[i]["代码"].ToString().Trim();
+                        strItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
 
                         if (strItemCode != "")
                         {
@@ -4190,7 +4190,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
                                 //判断物料是否在项目预算中已存在
                                 if (CheckConstractRelatedGoodsIsExisted(strItemCode, strConstractCode))
                                 {
-                                    LB_ErrorText.Text += "错误，代码： " + strItemCode + "已存在，不能重复添加，请检查！";
+                                    LB_ErrorText.Text += LanguageHandle.GetWord("CuoWuDaiMa").ToString().Trim() + strItemCode + LanguageHandle.GetWord("YiCunZaiBuNengChongFuTianJiaQi").ToString().Trim();
                                     continue;
                                 }
 
@@ -4203,20 +4203,20 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
                                     constractRelatedGoods.ConstractCode = strConstractCode;
 
-                                    constractRelatedGoods.FirstDirectory = dr[i]["一级目录"].ToString().Trim();
-                                    constractRelatedGoods.SecondDirectory = dr[i]["二级目录"].ToString().Trim();
-                                    constractRelatedGoods.ThirdDirectory = dr[i]["三级目录"].ToString().Trim();
-                                    constractRelatedGoods.FourthDirectory = dr[i]["四级目录"].ToString().Trim();
+                                    constractRelatedGoods.FirstDirectory = dr[i][LanguageHandle.GetWord("YiJiMuLu").ToString().Trim()].ToString().Trim();
+                                    constractRelatedGoods.SecondDirectory = dr[i][LanguageHandle.GetWord("ErJiMuLu").ToString().Trim()].ToString().Trim();
+                                    constractRelatedGoods.ThirdDirectory = dr[i][LanguageHandle.GetWord("SanJiMuLu").ToString().Trim()].ToString().Trim();
+                                    constractRelatedGoods.FourthDirectory = dr[i][LanguageHandle.GetWord("SiJiMuLu").ToString().Trim()].ToString().Trim();
 
-                                    constractRelatedGoods.GoodsCode = dr[i]["代码"].ToString().Trim();
-                                    constractRelatedGoods.GoodsName = dr[i]["名称"].ToString().Trim();
+                                    constractRelatedGoods.GoodsCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
+                                    constractRelatedGoods.GoodsName = dr[i][LanguageHandle.GetWord("MingChen").ToString().Trim()].ToString().Trim();
 
-                                    constractRelatedGoods.Number = decimal.Parse(dr[i]["数量"].ToString().Trim());
-                                    constractRelatedGoods.Unit = dr[i]["单位"].ToString().Trim();
-                                    constractRelatedGoods.Price = decimal.Parse(dr[i]["单价"].ToString().Trim());
-                                    constractRelatedGoods.Amount = decimal.Parse(dr[i]["金额"].ToString().Trim());
+                                    constractRelatedGoods.Number = decimal.Parse(dr[i][LanguageHandle.GetWord("ShuLiang").ToString().Trim()].ToString().Trim());
+                                    constractRelatedGoods.Unit = dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim();
+                                    constractRelatedGoods.Price = decimal.Parse(dr[i][LanguageHandle.GetWord("ChanJia").ToString().Trim()].ToString().Trim());
+                                    constractRelatedGoods.Amount = decimal.Parse(dr[i][LanguageHandle.GetWord("JinE").ToString().Trim()].ToString().Trim());
 
-                                    constractRelatedGoods.Comment = dr[i]["备注"].ToString().Trim();
+                                    constractRelatedGoods.Comment = dr[i][LanguageHandle.GetWord("BeiZhu").ToString().Trim()].ToString().Trim();
 
                                     constractRelatedGoods.ModelNumber = item.ModelNumber;
                                     constractRelatedGoods.Spec = item.Specification;
@@ -4230,8 +4230,8 @@ public partial class TTConstractDetail : System.Web.UI.Page
                                 }
                                 catch (Exception err)
                                 {
-                                    LB_ErrorText.Text += Resources.lang.ZZJGDRSBJC + " : " + Resources.lang.HangHao + ": " + (i + 2).ToString() + " , " + Resources.lang.DaiMa + ": " + strItemCode + " : " + err.Message.ToString() + "<br/>"; ;
-                                    LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + Resources.lang.ZZJGDRSBJC + " : " + Resources.lang.HangHao + ": " + (i + 2).ToString() + " , " + Resources.lang.DaiMa + ": " + strItemCode + " : " + err.Message.ToString());
+                                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strItemCode + " : " + err.Message.ToString() + "<br/>"; ;
+                                    LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (i + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strItemCode + " : " + err.Message.ToString());
                                 }
                             }
 
@@ -4241,7 +4241,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
                     LoadConstractRelatedGoodsList(strConstractCode);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZEXCLEBDRCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRCG").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -4259,13 +4259,13 @@ public partial class TTConstractDetail : System.Web.UI.Page
         {
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGNZEXCELWJ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim();
                 j = -1;
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
                 j = -1;
             }
             string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -4274,7 +4274,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                LB_ErrorText.Text += Resources.lang.ZZEXCLEBDRSB;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim();
                 j = -1;
             }
             else
@@ -4292,14 +4292,14 @@ public partial class TTConstractDetail : System.Web.UI.Page
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += Resources.lang.ZZJGEXCELBWKBWSJ;
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim();
                     j = -1;
                 }
                 else
                 {
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        strItemCode = dr[i]["代码"].ToString().Trim();
+                        strItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
 
                         if (strItemCode != "")
                         {
@@ -4308,20 +4308,20 @@ public partial class TTConstractDetail : System.Web.UI.Page
                             IList lst = itemBLL.GetAllItems(strHQL);
                             if (lst != null && lst.Count > 0)//存在，则不操作
                             {
-                                CheckAndAddUnit(dr[i]["单位"].ToString().Trim());
+                                CheckAndAddUnit(dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim());
 
                                 try
                                 {
-                                    decimal.Parse(dr[i]["数量"].ToString().Trim());
-                                    decimal.Parse(dr[i]["保留数量"].ToString().Trim());
-                                    decimal.Parse(dr[i]["已采购量"].ToString().Trim());
-                                    decimal.Parse(dr[i]["已出库量"].ToString().Trim());
+                                    decimal.Parse(dr[i][LanguageHandle.GetWord("ShuLiang").ToString().Trim()].ToString().Trim());
+                                    decimal.Parse(dr[i][LanguageHandle.GetWord("BaoLiuShuLiang").ToString().Trim()].ToString().Trim());
+                                    decimal.Parse(dr[i][LanguageHandle.GetWord("YiCaiGouLiang").ToString().Trim()].ToString().Trim());
+                                    decimal.Parse(dr[i][LanguageHandle.GetWord("YiChuKuLiang").ToString().Trim()].ToString().Trim());
                                 }
                                 catch
                                 {
                                     j = -1;
 
-                                    LB_ErrorText.Text += Resources.lang.ZZZDRSBSLBLSLYWSZ;
+                                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZZDRSBSLBLSLYWSZ").ToString().Trim();
                                     continue;
                                 }
 
@@ -4330,7 +4330,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
                             {
                                 j = -1;
 
-                                LB_ErrorText.Text += strItemCode + Resources.lang.ZZZWLDMBCZQJC;
+                                LB_ErrorText.Text += strItemCode + LanguageHandle.GetWord("ZZZWLDMBCZQJC").ToString().Trim();
                                 continue;
                             }
 
@@ -4362,13 +4362,13 @@ public partial class TTConstractDetail : System.Web.UI.Page
         string strUserName = Session["UserName"].ToString();
 
         strDefaultProcess = "";
-        strCurrencyType = "人民币";
+        strCurrencyType = "人民币"; 
 
         int intWarrantyPeriod;
 
         if (ExelToDBTestForItem() == -1)
         {
-            LB_ErrorText.Text += Resources.lang.ZZDRSBEXECLBLDSJYCJC;
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZDRSBEXECLBLDSJYCJC").ToString().Trim();
             return -1;
         }
         else
@@ -4380,14 +4380,14 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
             if (FileUpload_Training.HasFile == false)
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGNZEXCELWJ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim();
                 return -1;
 
             }
             string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
             if (IsXls != ".xls" & IsXls != ".xlsx")
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
                 return -1;
 
             }
@@ -4397,7 +4397,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
             FileInfo fi = new FileInfo(strDocSavePath + newfilename);
             if (fi.Exists)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click444", "alert('" + Resources.lang.ZZEXCLEBDRSB + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click444", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim() + "')", true);
                 return -1;
             }
             else
@@ -4415,14 +4415,14 @@ public partial class TTConstractDetail : System.Web.UI.Page
                 int rowsnum = dt.Rows.Count;
                 if (rowsnum == 0)
                 {
-                    LB_ErrorText.Text += Resources.lang.ZZJGEXCELBWKBWSJ;
+                    LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim();
                     return -1;
                 }
                 else
                 {
                     for (int i = 0; i < dr.Length; i++)
                     {
-                        strItemCode = dr[i]["代码"].ToString().Trim();
+                        strItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
 
                         if (strItemCode != "")
                         {
@@ -4436,13 +4436,13 @@ public partial class TTConstractDetail : System.Web.UI.Page
                             {
                                 Item item = new Item();
 
-                                item.ItemCode = dr[i]["代码"].ToString().Trim();
-                                item.ItemName = dr[i]["名称"].ToString().Trim();
-                                item.Type = dr[i]["属性（采购件、自制件、外协件、交付件）"].ToString().Trim();
-                                strBigType = dr[i]["大类（物料、资产）"].ToString().Trim();
+                                item.ItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
+                                item.ItemName = dr[i][LanguageHandle.GetWord("MingChen").ToString().Trim()].ToString().Trim();
+                                item.Type = dr[i]["属性（采购件、自制件、外协件、交付件）"].ToString().Trim(); 
+                                strBigType = dr[i]["大类（物料、资产）"].ToString().Trim(); 
 
                                 item.BigType = "";
-                                if (strBigType == "物料")
+                                if (strBigType == LanguageHandle.GetWord("WuLiao").ToString().Trim())
                                 {
                                     item.BigType = "Goods";
                                 }
@@ -4451,20 +4451,20 @@ public partial class TTConstractDetail : System.Web.UI.Page
                                     item.BigType = "Asset";
                                 }
 
-                                item.SmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim();
-                                item.Specification = dr[i]["规格"].ToString().Trim();
-                                item.ModelNumber = dr[i]["型号"].ToString().Trim();
-                                item.Brand = dr[i]["品牌"].ToString().Trim();
-                                item.Unit = dr[i]["单位"].ToString().Trim();
+                                item.SmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim(); 
+                                item.Specification = dr[i][LanguageHandle.GetWord("GuiGe").ToString().Trim()].ToString().Trim();
+                                item.ModelNumber = dr[i][LanguageHandle.GetWord("XingHao").ToString().Trim()].ToString().Trim();
+                                item.Brand = dr[i][LanguageHandle.GetWord("PinPai").ToString().Trim()].ToString().Trim();
+                                item.Unit = dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim();
 
-                                item.RegistrationNumber = dr[i]["注册证号"].ToString().Trim();
-                                item.PackingType = dr[i]["包装方式"].ToString().Trim();
+                                item.RegistrationNumber = dr[i][LanguageHandle.GetWord("ZhuCeZhengHao").ToString().Trim()].ToString().Trim();
+                                item.PackingType = dr[i]["包装方式"].ToString().Trim(); 
 
                                 item.PULeadTime = 0;
                                 item.MFLeadTime = 0;
 
-                                item.PurchasePrice = decimal.Parse(dr[i]["单价"].ToString().Trim());
-                                item.SalePrice = decimal.Parse(dr[i]["单价"].ToString().Trim());
+                                item.PurchasePrice = decimal.Parse(dr[i][LanguageHandle.GetWord("ChanJia").ToString().Trim()].ToString().Trim());
+                                item.SalePrice = decimal.Parse(dr[i][LanguageHandle.GetWord("ChanJia").ToString().Trim()].ToString().Trim());
                                 item.CurrencyType = strCurrencyType;
 
                                 item.HRCost = 0;
@@ -4486,11 +4486,11 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
                                 itemBLL.AddItem(item);
 
-                                strHQL = "Insert Into T_ItemBomVersion(ItemCode,VerID,Type,RelatedType,RelatedID) Values(" + "'" + strItemCode + "'" + ",1,'标准','SYSTEM',0)";
+                                strHQL = "Insert Into T_ItemBomVersion(ItemCode,VerID,Type,RelatedType,RelatedID) Values(" + "'" + strItemCode + "'" + ",1,'标准','SYSTEM',0)"; 
                                 ShareClass.RunSqlCommand(strHQL);
 
                                 //strHQL = "Insert Into T_ItemBom(ItemCode,ParentItemCode,ChildItemCode,Number,Unit,DefaultProcess,ChildItemVerID,VerID)";
-                                //strHQL += " Values(" + "'" + strItemCode + "'" + "," + "'" + strItemCode + "'" + "," + "'" + strItemCode + "'" + ",1," + "'" + dr[i]["单位"].ToString().Trim() + "'" + "," + "'" + strDefaultProcess + "'" + ",1,1)";
+                                //strHQL += " Values(" + "'" + strItemCode + "'" + "," + "'" + strItemCode + "'" + "," + "'" + strItemCode + "'" + ",1," + "'" + dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim() + "'" + "," + "'" + strDefaultProcess + "'" + ",1,1)";
                                 //ShareClass.RunSqlCommand(strHQL);
 
 
@@ -4505,7 +4505,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
                         }
                     }
 
-                    //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZEXCLEBDRCG + "')", true);
+                    //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZEXCLEBDRCG").ToString().Trim() + "')", true);
                 }
 
                 return 1;
@@ -4523,13 +4523,13 @@ public partial class TTConstractDetail : System.Web.UI.Page
 
         if (FileUpload_Training.HasFile == false)
         {
-            LB_ErrorText.Text += Resources.lang.ZZJGNZEXCELWJ;
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim();
             j = -1;
         }
         string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower();
         if (IsXls != ".xls" & IsXls != ".xlsx")
         {
-            LB_ErrorText.Text += Resources.lang.ZZJGZKYZEXCELWJ;
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim();
             j = -1;
         }
         string filename = FileUpload_Training.FileName.ToString();  //获取Execle文件名
@@ -4538,7 +4538,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
         FileInfo fi = new FileInfo(strDocSavePath + newfilename);
         if (fi.Exists)
         {
-            LB_ErrorText.Text += Resources.lang.ZZEXCLEBDRSB;
+            LB_ErrorText.Text += LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim();
             j = -1;
         }
         else
@@ -4556,35 +4556,35 @@ public partial class TTConstractDetail : System.Web.UI.Page
             int rowsnum = dt.Rows.Count;
             if (rowsnum == 0)
             {
-                LB_ErrorText.Text += Resources.lang.ZZJGEXCELBWKBWSJ;
+                LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim();
                 j = -1;
             }
             else
             {
                 for (int i = 0; i < dr.Length; i++)
                 {
-                    strItemCode = dr[i]["代码"].ToString().Trim();
+                    strItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
                     if (strItemCode != "")
                     {
-                        CheckAndAddUnit(dr[i]["单位"].ToString().Trim());
+                        CheckAndAddUnit(dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim());
 
-                        string strBigType = dr[i]["大类（物料、资产）"].ToString().Trim();
-                        if (strBigType != "物料" & strBigType != "Assets")
+                        string strBigType = dr[i]["大类（物料、资产）"].ToString().Trim(); 
+                        if (strBigType != LanguageHandle.GetWord("WuLiao").ToString().Trim() & strBigType != "Assets")
                         {
-                            LB_ErrorText.Text += "导入失败，大类只能设为 物料 或 资产，请检查！";
+                            LB_ErrorText.Text += LanguageHandle.GetWord("DaoRuShiBaiDaLeiZhiNengSheWeiW").ToString().Trim();
                             j = -1;
                         }
 
-                        string strSmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim();
+                        string strSmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim(); 
                         if (CheckSmallType(strSmallType, strBigType) == 0)
                         {
-                            if (strBigType != "物料")
+                            if (strBigType != LanguageHandle.GetWord("WuLiao").ToString().Trim())
                             {
-                                LB_ErrorText.Text += "导入失败，小类：" + strSmallType + " 不存在，请先在【基础数据（外置）】模块设置！";
+                                LB_ErrorText.Text += LanguageHandle.GetWord("DaoRuShiBaiXiaoLei").ToString().Trim() + strSmallType + LanguageHandle.GetWord("BuCunZaiQingXianZaiJiChuShuJuW").ToString().Trim();
                             }
                             else
                             {
-                                LB_ErrorText.Text += "导入失败，小类：" + strSmallType + " 不存在，请先在【物料类型】模块设置！";
+                                LB_ErrorText.Text += LanguageHandle.GetWord("DaoRuShiBaiXiaoLei").ToString().Trim() + strSmallType + LanguageHandle.GetWord("BuCunZaiQingXianZaiWuLiaoLeiXi").ToString().Trim();
                             }
                             j = -1;
                         }
@@ -4600,7 +4600,7 @@ public partial class TTConstractDetail : System.Web.UI.Page
     {
         string strHQL;
 
-        if (strBigType == "物料")
+        if (strBigType == LanguageHandle.GetWord("WuLiao").ToString().Trim())
         {
             strHQL = "Select Type From T_GoodsType Where Type = '" + strType + "'";
         }
@@ -4672,9 +4672,9 @@ public partial class TTConstractDetail : System.Web.UI.Page
         strUserCode = LB_UserCode.Text.Trim();
 
         strHQL = "from Document as document where ";
-        strHQL += " (document.RelatedType = '合同' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + ")";
-        strHQL += " or document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = '合同' and workFlow.RelatedID in ( select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + "))";
-        strHQL += " or document.RelatedType = '协作' and document.RelatedID in (Select collaboration.CoID From Collaboration as collaboration Where collaboration.RelatedType = 'CONSTRACT' and collaboration.RelatedCode =" + "'" + strConstractCode + "'" + "))";
+        strHQL += " (document.RelatedType = '合同' and document.RelatedID in (select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + ")"; 
+        strHQL += " or document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = '合同' and workFlow.RelatedID in ( select constract.ConstractID from Constract as constract where constract.ConstractCode =" + "'" + strConstractCode + "'" + "))"; 
+        strHQL += " or document.RelatedType = '协作' and document.RelatedID in (Select collaboration.CoID From Collaboration as collaboration Where collaboration.RelatedType = 'CONSTRACT' and collaboration.RelatedCode =" + "'" + strConstractCode + "'" + "))"; 
         strHQL += " and document.DocType = '" + strDocType + "'";
 
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";

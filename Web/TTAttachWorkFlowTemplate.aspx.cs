@@ -47,25 +47,25 @@ public partial class TTAttachWorkFlowTemplate : System.Web.UI.Page
         if (strRelatedType == "Req")
         {
             strRelatedName = GetRequirementName(strRelatedID);
-            //this.Title = "需求：" + strRelatedID + " " + strRelatedName + " 的工作流模板设置";
+            //this.Title = "需求：" + strRelatedID + " " + strRelatedName + "的工作流模板设置";
         }
 
         if (strRelatedType == "Meeting")
         {
             strRelatedName = GetMeetingName(strRelatedID);
-            //this.Title = "会议：" + strRelatedID + " " + strRelatedName + " 的工作流模板设置";
+            //this.Title = "会议：" + strRelatedID + " " + strRelatedName + "的工作流模板设置";
         }
 
         if (strRelatedType == "ProjectRisk")
         {
             strRelatedName = GetProjectRiskName(strRelatedID);
-            //this.Title = "风险：" + strRelatedID + " " + strRelatedName + " 的工作流模板设置";
+            //this.Title = "风险：" + strRelatedID + " " + strRelatedName + "的工作流模板设置";
         }
 
         if (strRelatedType == "Constract")
         {
             strRelatedName = GetConstractName(strRelatedID);
-            //this.Title = "合同：" + GetConstractCode(strRelatedID) + " " + strRelatedName + " 的工作流模板设置";
+            //this.Title = "合同：" + GetConstractCode(strRelatedID) + " " + strRelatedName + "的工作流模板设置";
         }
 
         if(strRelatedType == "Tender")
@@ -76,7 +76,7 @@ public partial class TTAttachWorkFlowTemplate : System.Web.UI.Page
         if (strRelatedType == "CustomerService")
         {
             strRelatedName = GetCustomerQuestionName(strRelatedID);
-            //this.Title = Resources.lang.KEHUFUWU  + strRelatedID + " " + strRelatedName + " 的工作流模板设置";
+            //this.Title = LanguageHandle.GetWord("KEHUFUWU").ToString().Trim()  + strRelatedID + " " + strRelatedName + "的工作流模板设置";
         }
 
         if (strRelatedType == "ProjectType")
@@ -192,12 +192,12 @@ public partial class TTAttachWorkFlowTemplate : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWJC").ToString().Trim() + "')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTJSBZGGZLMBYBTJBNZFTJ + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJSBZGGZLMBYBTJBNZFTJ").ToString().Trim() + "')", true);
             }
         }
     }

@@ -52,7 +52,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
             TB_DepartCode.Text = ShareClass.GetDepartCodeFromUserCode(strUserCode);
             LB_DepartName.Text = ShareClass.GetDepartName(TB_DepartCode.Text.Trim());
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(Resources.lang.ZZJGT, TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
         }
     }
 
@@ -87,7 +87,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
         }
         else
         {
-            RB_LeaveType.Items.Add(new ListItem("-1 ÎÞ¿¼ÇÚÁ÷³Ì", ""));
+            RB_LeaveType.Items.Add(new ListItem(LanguageHandle.GetWord("1MoKaoQinLiuCheng").ToString().Trim(), ""));
         }
     }
 
@@ -470,13 +470,13 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
     {
         if (RB_LeaveType.SelectedValue.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJLXWBXBXBZYJLXKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJLXWBXBXBZYJLXKJC").ToString().Trim() + "')", true);
             RB_LeaveType.Focus();
             return;
         }
         if (DLC_StartTime.Text.Trim() == "" || DLC_EndTime.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKSSJYJSSJDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKSSJYJSSJDBNWKJC").ToString().Trim() + "')", true);
             DLC_StartTime.Focus();
             DLC_EndTime.Focus();
             return;
@@ -488,7 +488,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
 
         if (dtBacktime < dtDepartTime)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKSSJBNDYJSSJJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKSSJBNDYJSSJJC").ToString().Trim() + "')", true);
             DLC_StartTime.Focus();
             DLC_EndTime.Focus();
             return;
@@ -529,11 +529,11 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
             LB_TotalLeaveDaysForCurrentMonth.Text = ShareClass.GetTotalLeaveDayNumberInCurrentMonth(strLeaveType, strUserCode, DateTime.Now.ToString("yyyyMMdd"));
             LB_TotalLeaveDaysForCurrentYear.Text = ShareClass.GetTotalLeaveDayNumberInCurrentYear(strLeaveType, strUserCode, DateTime.Now.ToString("yyyyMMdd"));
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
         }
     }
 
@@ -553,13 +553,13 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
     {
         if (RB_LeaveType.SelectedValue.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJLXWBXBXBZYJLXKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJLXWBXBXBZYJLXKJC").ToString().Trim() + "')", true);
             RB_LeaveType.Focus();
             return;
         }
         if (DLC_StartTime.Text.Trim() == "" || DLC_EndTime.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKSSJYJSSJDBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKSSJYJSSJDBNWKJC").ToString().Trim() + "')", true);
             DLC_StartTime.Focus();
             DLC_EndTime.Focus();
             return;
@@ -572,7 +572,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
 
         if (dtBacktime < dtDepartTime)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKSSJBNDYJSSJJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKSSJBNDYJSSJJC").ToString().Trim() + "')", true);
             DLC_StartTime.Focus();
             DLC_EndTime.Focus();
             return;
@@ -633,11 +633,11 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
                     }
                 }
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
             }
         }
     }
@@ -655,7 +655,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
         strTemName = DL_TemName.SelectedValue.Trim();
         if (strTemName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWLCMBBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWLCMBBNWKJC").ToString().Trim() + "')", true);
             return strWLID;
         }
 
@@ -723,13 +723,13 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
 
                 BT_SubmitApply.Enabled = false;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJSSCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJSSCCG").ToString().Trim() + "')", true);
             }
             catch
             {
                 strWLID = "0";
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJSSCSBKNSMCZSGDJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJSSCSBKNSMCZSGDJC").ToString().Trim() + "')", true);
             }
 
             LoadLeaveApplyForm(strUserCode);
@@ -737,7 +737,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
         catch
         {
             strWLID = "0";
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
         }
 
         return strWLID;
@@ -846,7 +846,7 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
             {
                 if (intWLNumber > 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBCZGLDGZLJLBNSCJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBCZGLDGZLJLBNSCJC").ToString().Trim() + "')", true);
                     return;
                 }
 
@@ -869,11 +869,11 @@ public partial class TTAPPLeaveApplyFormWF : System.Web.UI.Page
                     LB_TotalLeaveDaysForCurrentYear.Text = ShareClass.GetTotalLeaveDayNumberInCurrentYear(strLeaveType, strUserCode, DateTime.Now.ToString("yyyyMMdd"));
 
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
             }
         }

@@ -44,7 +44,7 @@ public partial class TTAllExpenseApplySummaryReport : System.Web.UI.Page
             LB_UserCode.Text = strUserCode;
             LB_UserName.Text = strUserName;
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             strHQL = "from ExpenseApplyWL as expenseApplyWL where  expenseApplyWL.ApplicantCode = " + "'" + strUserCode + "'";
@@ -67,7 +67,7 @@ public partial class TTAllExpenseApplySummaryReport : System.Web.UI.Page
 
             LB_Amount.Text = deExpense.ToString();
 
-            LB_QueryScope.Text = Resources.lang.ZZZhiXingZhe + strUserCode + strUserName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZhe").ToString().Trim() + strUserCode + strUserName;
         }
     }
    
@@ -86,7 +86,7 @@ public partial class TTAllExpenseApplySummaryReport : System.Web.UI.Page
             strDepartCode = treeNode.Target.Trim();
             strDepartName = GetDepartName(strDepartCode);
 
-            LB_QueryScope.Text = Resources.lang.ZZZBuMen + strDepartName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen").ToString().Trim() + strDepartName;
 
             ShareClass.LoadUserByDepartCodeForDataGrid(strDepartCode, DataGrid1);
 
@@ -107,7 +107,7 @@ public partial class TTAllExpenseApplySummaryReport : System.Web.UI.Page
             LB_Amount.Text = deExpense.ToString();
 
 
-            LB_QueryScope.Text = Resources.lang.ZZZBuMen + strDepartName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen").ToString().Trim() + strDepartName;
             LB_Sql.Text = strHQL;
 
             LB_OperatorCode.Text = "";
@@ -147,7 +147,7 @@ public partial class TTAllExpenseApplySummaryReport : System.Web.UI.Page
 
         LB_Amount.Text = deExpense.ToString();
 
-        LB_QueryScope.Text = Resources.lang.ZZZhiXingZhe + strUserCode + " " + strUserName;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZhe").ToString().Trim() + strUserCode + " " + strUserName;
         LB_Sql.Text = strHQL;
 
         LoadRelatedWL("ExpenseRequest", -1);
@@ -214,7 +214,7 @@ public partial class TTAllExpenseApplySummaryReport : System.Web.UI.Page
 
         LB_Amount.Text = deExpense.ToString();
 
-        LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim();
 
         LoadRelatedWL("ExpenseRequest", -1);
     }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ProjectRelatedUnitController.aspx.cs" Inherits="TakeTopGantt.handler.ProjectRelatedUnitController" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ProjectRelatedUnitController.aspx.cs" Inherits="TakeTopGantt.handler.ProjectRelatedUnitController" %>
 
 <!DOCTYPE html>
 

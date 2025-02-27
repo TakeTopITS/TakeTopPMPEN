@@ -47,7 +47,7 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
         }
         catch
         {
-            xdoc.Text = Resources.lang.SBZGZLMBHSJWJBCZKNYBSCQJC;
+            xdoc.Text = LanguageHandle.GetWord("SBZGZLMBHSJWJBCZKNYBSCQJC").ToString().Trim();
             return;
         }
 
@@ -66,7 +66,7 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
                 strTemName = GetWorkFlowTemName(strIdentifyString);
                 if (strTemName == "")
                 {
-                    xdoc.Text = Resources.lang.SBZGZLMBHSJWJBCZKNYBSCQJC;
+                    xdoc.Text = LanguageHandle.GetWord("SBZGZLMBHSJWJBCZKNYBSCQJC").ToString().Trim();
                     return;
                 }
                 strXSNFile = GetWorkFlowTemXSNFile(strIdentifyString);
@@ -111,7 +111,7 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
         }
         catch
         {
-            xdoc.Text = Resources.lang.ZZZBCXXBCZYGSMYDY;
+            xdoc.Text = LanguageHandle.GetWord("ZZZBCXXBCZYGSMYDY").ToString().Trim();
         }
     }
 
@@ -154,8 +154,8 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
 
         if (intResult == 0)
         {
-            LB_Msg.Text = Resources.lang.ZZBCSBJC;
-            //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZBCSBJC + "');</script>");
+            LB_Msg.Text = LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim();
+            //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "');</script>");
         }
         else
         {
@@ -172,8 +172,8 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
             LoadBusinessFormRelatedWorkFlowTemplate(strRelatedType, strRelatedID);
             DL_WorkflowTemplate.SelectedValue = strXSNFile;
 
-            LB_Msg.Text = Resources.lang.ZZBCCG;
-            //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZBCCG + "');</script>");
+            LB_Msg.Text = LanguageHandle.GetWord("ZZBCCG").ToString().Trim();
+            //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "');</script>");
         }
     }
 
@@ -195,11 +195,11 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
             //列出关联的流程模板
             LoadBusinessFormRelatedWorkFlowTemplate(strRelatedType, strRelatedID);
 
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSCCG + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "');</script>");
         }
         catch
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSCSBJC + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "');</script>");
         }
     }
 
@@ -281,13 +281,13 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
 
         if (intResult == 0)
         {
-            xdoc.Text = Resources.lang.CWXYMBWJBCZQJC;
+            xdoc.Text = LanguageHandle.GetWord("CWXYMBWJBCZQJC").ToString().Trim();
             return;
         }
 
         if (intResult == -1)
         {
-            xdoc.Text = Resources.lang.CWBDMBZCSBQJC;
+            xdoc.Text = LanguageHandle.GetWord("CWBDMBZCSBQJC").ToString().Trim();
             return;
         }
 
@@ -328,7 +328,7 @@ public partial class TTRelatedDIYBusinessForm : System.Web.UI.Page
 
         if (intResult == 0)
         {
-            xdoc.Text = Resources.lang.SBZGZLMBHSJWJBCZKNYBSCQJC;
+            xdoc.Text = LanguageHandle.GetWord("SBZGZLMBHSJWJBCZKNYBSCQJC").ToString().Trim();
         }
 
 

@@ -151,7 +151,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + Resources.lang.ZZJGCGZLMBBCZQJC + "')", true);
+                ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCGZLMBBCZQJC").ToString().Trim() + "')", true);
             }
 
             //判断计划进度是否受任务和流程进度影响
@@ -352,7 +352,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
             {
                 if (intResult == 1)
                 {
-                    string strMsgText = Resources.lang.JHCGYGBDQYMM;
+                    string strMsgText = LanguageHandle.GetWord("JHCGYGBDQYMM").ToString().Trim();
                     string strIsCloseCurrentWFPage = "NO";
                     try
                     {
@@ -373,7 +373,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
 
                 if (intResult == 2)
                 {
-                    ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + Resources.lang.ZZJHCGXYBSPZYNXDQXZ + "')", true);
+                    ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJHCGXYBSPZYNXDQXZ").ToString().Trim() + "')", true);
 
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click333", "ChangeMenu(0)", true);
                 }
@@ -382,7 +382,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
             {
                 if (intResult == 1)
                 {
-                    string strMsgText = Resources.lang.JHCGYGBDQYMM;
+                    string strMsgText = LanguageHandle.GetWord("JHCGYGBDQYMM").ToString().Trim();
                     string strIsCloseCurrentWFPage = "NO";
                     try
                     {
@@ -404,7 +404,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
 
                 if (intResult == 2)
                 {
-                    ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click222", "alert('" + Resources.lang.ZZJHCGXYBSPZYNXDQXZ + "')", true);
+                    ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click222", "alert('" + LanguageHandle.GetWord("ZZJHCGXYBSPZYNXDQXZ").ToString().Trim() + "')", true);
 
                     ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click333", "ChangeMenu(0)", true);
                 }
@@ -413,7 +413,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
 
         if (intResult == -1)
         {
-            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click444", "alert('" + Resources.lang.ZZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click444", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -437,7 +437,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + Resources.lang.ZZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -461,7 +461,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + Resources.lang.ZZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -486,7 +486,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + Resources.lang.ZZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -510,7 +510,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + Resources.lang.ZZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -558,7 +558,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + Resources.lang.ZZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
         }
 
         ////发送没有发送的信息
@@ -577,7 +577,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
             {
                 ShareClass.UpdateProjectPlanSchedule(strRelatedType, strRelatedID);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYYXGLJHJD + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYYXGLJHJD").ToString().Trim() + "')", true);
             }
         }
     }
@@ -665,7 +665,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
                 LB_OperatorName.Text = workFlowStepDetail.OperatorName.Trim();
 
                 BT_Send.Enabled = true;
-                TB_Message.Text = Resources.lang.GZLSPTZNHNYLCSC + ": " + LB_WLID.Text.Trim() + " " + TB_WLName.Text.Trim() + Resources.lang.YSPQJSCL;
+                TB_Message.Text = LanguageHandle.GetWord("GZLSPTZNHNYLCSC").ToString().Trim() + ": " + LB_WLID.Text.Trim() + " " + TB_WLName.Text.Trim() + LanguageHandle.GetWord("YSPQJSCL").ToString().Trim();
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop11", "popShow('popwindowWFTStepDetail','false') ", true);
             }
@@ -675,7 +675,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
                 string strUserCode;
 
                 strUserCode = Session["UserCode"].ToString();
-                LB_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(Resources.lang.ZZJGT, TreeView2, strUserCode);
+                LB_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView2, strUserCode);
 
                 LoadAdditionApprover(strStepID, strUserCode);
 
@@ -757,7 +757,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowStepDetail");
         if (ds.Tables[0].Rows.Count > 0)
         {
-            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('警告，此成员已存在，不能重复添加，请检查！')", true);
+            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoCiChengYuanYiCunZaiBu").ToString().Trim()+"')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindowAddApprover','false') ", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop34455", "popShow('popwindowWFTStepDetail','true','popwindowAddApprover') ", true);
@@ -770,7 +770,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
 
         if (strApproverComment == "")
         {
-            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('警告，工作内容不能空，请检查！')", true);
+            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoGongZuoNeiRongBuNengK").ToString().Trim()+"')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindowAddApprover','false') ", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop34455", "popShow('popwindowWFTStepDetail','true','popwindowAddApprover') ", true);
@@ -957,7 +957,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
                 ShareClass.RunSqlCommand(strHQL);
             }
 
-            string strMsgText = Resources.lang.BCCGYGBDQYMM;
+            string strMsgText = LanguageHandle.GetWord("BCCGYGBDQYMM").ToString().Trim();
             string strIsCloseCurrentWFPage = "NO";
             try
             {
@@ -968,7 +968,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
             }
             if (strIsCloseCurrentWFPage != "YES")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click111", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click111", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
             else
             {
@@ -977,7 +977,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click222", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click222", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindowWFTStepDetail','false') ", true);
@@ -1144,7 +1144,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
 
         if (CB_SendMsg.Checked == true | CB_SendMail.Checked == true)
         {
-            strSubject = "工作流审批通知";
+            strSubject = LanguageHandle.GetWord("GongZuoLiuShenPiTongZhi").ToString().Trim();
             strMsg = TB_Message.Text.Trim();
 
             if (CB_SendMsg.Checked == true)
@@ -1158,7 +1158,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
             }
         }
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFSWB + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFSWB").ToString().Trim() + "')", true);
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindowWFTStepDetail','false') ", true);
     }
@@ -1206,7 +1206,7 @@ public partial class TTMyWorkFlowDetail : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZJSBXMHCWWCXMSC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZJSBXMHCWWCXMSC").ToString().Trim() + "')", true);
         }
     }
 

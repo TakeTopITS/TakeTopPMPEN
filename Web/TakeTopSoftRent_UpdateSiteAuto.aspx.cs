@@ -35,7 +35,7 @@ public partial class TakeTopSoftRent_UpdateSiteAuto : System.Web.UI.Page
         strSiteName = Request.QueryString["SiteName"];
         strSiteAppName = Request.QueryString["SiteAppName"];
 
-        LB_Message.Text = "正在升级你的应用站点，大概需要5分钟，请耐心等候......";
+        LB_Message.Text = LanguageHandle.GetWord("ZhengZaiShengJiNiDeYingYongZha").ToString().Trim();
 
         if (Page.IsPostBack == false)
         {
@@ -44,16 +44,16 @@ public partial class TakeTopSoftRent_UpdateSiteAuto : System.Web.UI.Page
                 try
                 {
                     UpdateSite();
-                    LB_Message.Text = "站点升级成功！";
+                    LB_Message.Text = LanguageHandle.GetWord("ZhanDianShengJiChengGong").ToString().Trim();
                 }
                 catch
                 {
-                    LB_Message.Text = "站点升级失败，请检查！";
+                    LB_Message.Text = LanguageHandle.GetWord("ZhanDianShengJiShiBaiQingJianC").ToString().Trim();
                 }
             }
             else
             {
-                LB_Message.Text = "提示，此站点不存在，请检查！";
+                LB_Message.Text = LanguageHandle.GetWord("DiShiCiZhanDianBuCunZaiQingJia").ToString().Trim();
             }
 
             IMB_Process.Visible = false;
@@ -101,7 +101,7 @@ public partial class TakeTopSoftRent_UpdateSiteAuto : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentSiteBaseData");
         if (ds.Tables[0].Rows.Count == 0)
         {
-            LB_Message.Text = "创建失败，没有你选取的产品版本的可用站点基础参数，请检查！";
+            LB_Message.Text = LanguageHandle.GetWord("ChuangJianShiBaiMeiYouNiShuaQu").ToString().Trim();
             return;
         }
         strRentProductType = ds.Tables[0].Rows[0]["RentProductType"].ToString().Trim();

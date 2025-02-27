@@ -13,6 +13,6 @@ public partial class TTXMLFileView : System.Web.UI.Page
 
         Response.Redirect(strXMLFileName);
 
-        //this.Title = "XML文件：" + strXMLFileName + " 内容显示！";
+        //this.Title = "XML文件：" + strXMLFileName + "内容显示！";
     }
 }

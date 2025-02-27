@@ -28,8 +28,8 @@ public partial class TTPnPCameraDetail : System.Web.UI.Page
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (!IsPostBack)
         {
-            TakeTopCore.CoreShareClass.InitialAllDepartmentTree( Resources.lang.ZZJGT,TV_DepartMent);
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT,TV_Organization, strUserCode);
+            TakeTopCore.CoreShareClass.InitialAllDepartmentTree( LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TV_DepartMent);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TV_Organization, strUserCode);
         }
     }
 
@@ -46,7 +46,7 @@ public partial class TTPnPCameraDetail : System.Web.UI.Page
                                 left join T_Department d on i.ForeignID = d.DepartCode and i.CameraType = 1
                                 left join T_Project p on i.ForeignID = cast( p.ProjectID as varchar(50)) and i.CameraType = 2
                                 where i.ForeignID = '{0}'
-                                order by i.CreateTime desc", strForeignID);
+                                order by i.CreateTime desc", strForeignID); 
         DataTable dtCameraInfo = ShareClass.GetDataSetFromSql(strCameraInfoHQL, "strCameraInfoHQL").Tables[0];
         if (strType == "depart")
         {

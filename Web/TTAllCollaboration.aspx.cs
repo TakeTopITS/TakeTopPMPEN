@@ -43,7 +43,7 @@ public partial class TTAllCollaboration : System.Web.UI.Page
             string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthoritySuperUser(strUserCode);
             LB_DepartString.Text = strDepartString;
 
-            LB_QueryScope.Text = Resources.lang.StatusAll;
+            LB_QueryScope.Text = LanguageHandle.GetWord("StatusAll").ToString().Trim();
 
             CollaborationBLL collaborationBLL = new CollaborationBLL();
 

@@ -32,9 +32,9 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
         {
             ShareClass.InitialUserDocTypeTree(TreeView1, strUserCode);
 
-            LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(Resources.lang.ZZJGT, TreeView2, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView2, strUserCode);
 
             LoadDocument("");
 
@@ -89,7 +89,7 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
 
                 strHQL = " from Document as document where document.DocTypeID = " + strDocTypeID;
                 strHQL += " and document.Status <> 'Deleted' Order by document.DocID DESC";
-                LB_FindCondition.Text = Resources.lang.CXFWWJLX + strDocType;
+                LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + strDocType;
 
                 //设置缺省的文件类型
                 ShareClass.SetDefaultDocType(strDocType, LB_DocTypeID, TB_DocType);
@@ -104,7 +104,7 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
 
             strHQL = " from Document as document where ";
             strHQL += " and document.Status <> 'Deleted' Order by document.DocID DESC";
-            LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
         }
 
         lst2 = documentBLL.GetAllDocuments(strHQL);
@@ -113,7 +113,7 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_TotalCount.Text = Resources.lang.CXDDWJS + ": " + lst2.Count.ToString();
+        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst2.Count.ToString();
     }
 
     protected void TreeView3_SelectedNodeChanged(object sender, EventArgs e)
@@ -186,7 +186,7 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
                 //显示关联公司名称
                 GetDocRelatedDepartment(strDocID, document.Visible.Trim());
 
-                TB_WLName.Text = Resources.lang.PingShen + Resources.lang.WenJian  + strDocID  + strDocName ;
+                TB_WLName.Text = LanguageHandle.GetWord("PingShen").ToString().Trim() + LanguageHandle.GetWord("WenJian").ToString().Trim()  + strDocID  + strDocName ;
 
                 BT_EditSave.Enabled = true;
                 BT_SubmitApply.Enabled = true;
@@ -206,7 +206,7 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
 
         strType = DL_Visible.SelectedValue.Trim();
 
-        if (strType == "公司")
+        if (strType == LanguageHandle.GetWord("GongSi").ToString().Trim())
         {
             LB_SelectCompany.Visible = true;
             LB_RelatedDepartCode.Visible = true;
@@ -248,7 +248,7 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
             string strDocTypeID = LB_DocTypeID.Text.Trim();
             if (strDocTypeID == "")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZJGWDLXBNWKJC + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGWDLXBNWKJC").ToString().Trim() + "');</script>");
                 return;
             }
             string strDocType = GetDocTypeName(strDocTypeID);
@@ -263,11 +263,11 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
             string strDocID;
             string strFileName1, strExtendName;
 
-            if (strVisible == "公司")
+            if (strVisible == LanguageHandle.GetWord("GongSi").ToString().Trim())
             {
                 if (strRelatedDepartCode == "")
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSBXWGSDBXZGLGSJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSBXWGSDBXZGLGSJC").ToString().Trim() + "');</script>");
                     return;
                 }
             }
@@ -299,14 +299,14 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
 
                         if (fi.Exists)
                         {
-                            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZCZTMWJSCSBGMHZSC + "');</script>");
+                            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "');</script>");
                         }
                         else
                         {
 
                             Document document = new Document();
 
-                            document.RelatedType = "知识管理";
+                            document.RelatedType = "知识管理"; 
                             document.DocTypeID = int.Parse(strDocTypeID);
                             document.DocType = strDocType;
                             document.Author = strAuthor;
@@ -335,7 +335,7 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
                             //ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "知识管理", "0", "0");
                             ShareClass.InitialUserDocTypeTree(TreeView1, strUserCode);
 
-                            if (strVisible == "公司")
+                            if (strVisible == LanguageHandle.GetWord("GongSi").ToString().Trim())
                             {
                                 strHQL = "Insert Into T_DocRelatedDepartment(DocID,DepartCode,DepartName) Values(" + strDocID + "," + "'" + strRelatedDepartCode + "'" + "," + "'" + strRelatedDepartName + "'" + ")";
 
@@ -345,9 +345,9 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
 
                             BT_SubmitApply.Enabled = true;
 
-                            TB_Message.Text = ShareClass.GetUserName(strUserCode) + " 上传了文件：" + strFileName2 + "，请及时查看！";
+                            TB_Message.Text = ShareClass.GetUserName(strUserCode) + LanguageHandle.GetWord("ShangChuanLeWenJian").ToString().Trim() + strFileName2 + LanguageHandle.GetWord("QingJiShiChaKan").ToString().Trim();
 
-                            TB_WLName.Text = Resources.lang.PingShen + Resources.lang.WenJian + strDocID  + strFileName2 ;
+                            TB_WLName.Text = LanguageHandle.GetWord("PingShen").ToString().Trim() + LanguageHandle.GetWord("WenJian").ToString().Trim() + strDocID  + strFileName2 ;
                             LoadRelatedWL("DocumentReview", "Document", int.Parse(strDocID));
                         }
                     }
@@ -355,12 +355,12 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZYSCDWJ + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "')", true);
             }
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGXZYBLXSZZWDLX + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGXZYBLXSZZWDLX").ToString().Trim() + "')", true);
 
             return;
         }
@@ -375,7 +375,7 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
             string strDocTypeID = LB_DocTypeID.Text.Trim();
             if (strDocTypeID == "")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZJGWDLXBNWKJC + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGWDLXBNWKJC").ToString().Trim() + "');</script>");
                 return;
             }
             string strDocType = GetDocTypeName(strDocTypeID);
@@ -387,7 +387,7 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
             strHQL = string.Format(@"update T_Document set DocTypeID = {0},DocType='{1}',Visible='{2}' where DocID={3}", int.Parse(strDocTypeID), strDocType, strVisible, intDocID);
             ShareClass.RunSqlCommand(strHQL);
 
-            if (strVisible == "公司")
+            if (strVisible == LanguageHandle.GetWord("GongSi").ToString().Trim())
             {
                 string strRelatedDepartCode = LB_RelatedDepartCode.Text.Trim();
                 string strRelatedDepartName = ShareClass.GetDepartName(strRelatedDepartCode);
@@ -414,11 +414,11 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
 
             BT_SubmitApply.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch (Exception ex)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -442,7 +442,7 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
             ActorGroupDetail actorGroupDetail = new ActorGroupDetail();
             strHQL = "from ActorGroupDetail as actorGroupDetail where actorGroupDetail.GroupName = " + "'" + strVisible + "'";
             lst = actorGroupDetailBLL.GetAllActorGroupDetails(strHQL);
-            strSubject = "文件查阅通知";
+            strSubject = LanguageHandle.GetWord("WenJianChaYueTongZhi").ToString().Trim();
 
             for (i = 0; i < lst.Count; i++)
             {
@@ -461,7 +461,7 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
             }
         }
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFSWB + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFSWB").ToString().Trim() + "')", true);
     }
 
     protected void DataGrid1_PageIndexChanged(object sender, DataGridPageChangedEventArgs e)
@@ -503,7 +503,7 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
 
         if (strTemName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSSCSBLCMBBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC").ToString().Trim() + "')", true);
             return "0";
         }
 
@@ -559,13 +559,13 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
 
             AddWLDocument(strDocID, int.Parse(strWLID));
 
-            //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+Resources.lang.ZZWJPSSSCDGZLGLYMJHCGZLS+"');</script>");
+            //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+LanguageHandle.GetWord("ZZWJPSSSCDGZLGLYMJHCGZLS").ToString().Trim()+"');</script>");
         }
         catch
         {
             strWLID = "0";
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZWJPSSSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWJPSSSB").ToString().Trim() + "')", true);
         }
 
         return strWLID;
@@ -670,7 +670,7 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_TotalCount.Text = Resources.lang.CXDDWJS + ": " + lst.Count.ToString();
+        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
     }
 
     protected int GetWLID(string strWLName, string strWLType, string strXMLFile, string strCreatorCode, DateTime dtCreateTime)
@@ -725,7 +725,7 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
         }
         else
         {
-            if (strVisible == "公司")
+            if (strVisible == LanguageHandle.GetWord("GongSi").ToString().Trim())
             {
                 LB_SelectCompany.Visible = true;
                 LB_RelatedDepartCode.Visible = true;
@@ -779,7 +779,7 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            strResult = "出错了";
+            strResult = LanguageHandle.GetWord("ChuCuoLe").ToString().Trim();
         }
         return strResult;
     }

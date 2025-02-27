@@ -24,7 +24,7 @@ public partial class TTConfirmDailyWorkBonus : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strUserName = Session["UserName"].ToString();
 
-        //this.Title = "项目： " + strProjectName + " 工时确认！";
+        //this.Title = "项目：" + strProjectName + "工时确认！";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickParentA", " aHandler();", true); if (Page.IsPostBack == false)
         {
@@ -54,7 +54,7 @@ public partial class TTConfirmDailyWorkBonus : System.Web.UI.Page
             LB_Bonus.Text = deBonus.ToString();
             LB_ConfirmBonus.Text = deConfirmBonus.ToString();
 
-            LB_QueryScope.Text = Resources.lang.ZZXMJL + strUserCode + " " + strUserName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZXMJL").ToString().Trim() + strUserCode + " " + strUserName;
             LB_Sql.Text = strHQL;
 
             HL_ProjectDailyWorkBonusReport.NavigateUrl = "TTProjectDailyWorkBonusReport.aspx?ProjectID=" + strProjectID;
@@ -110,7 +110,7 @@ public partial class TTConfirmDailyWorkBonus : System.Web.UI.Page
                 LB_Bonus.Text = deBonus.ToString();
                 LB_ConfirmBonus.Text = deConfirmBonus.ToString();
 
-                LB_QueryScope.Text = Resources.lang.ZZZhiXingZhe + strUserCode + strUserName;
+                LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZhe").ToString().Trim() + strUserCode + strUserName;
                 LB_Sql.Text = strHQL;
             }
         }
@@ -147,7 +147,7 @@ public partial class TTConfirmDailyWorkBonus : System.Web.UI.Page
         LB_Bonus.Text = deBonus.ToString();
         LB_ConfirmBonus.Text = deConfirmBonus.ToString();
 
-        LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim();
     }
 
     protected void DataList1_ItemCommand(object sender, DataListCommandEventArgs e)
@@ -172,7 +172,7 @@ public partial class TTConfirmDailyWorkBonus : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWSRZDSZGS + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWSRZDSZGS").ToString().Trim() + "')", true);
                 return;
             }
 
@@ -181,13 +181,13 @@ public partial class TTConfirmDailyWorkBonus : System.Web.UI.Page
             try
             {
                 dailyWorkBLL.UpdateDailyWork(dailyWork, int.Parse(strWorkID));
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGXJJCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGXJJCG").ToString().Trim() + "')", true);
 
                 LoadDailyWork();
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGXJJSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGXJJSBJC").ToString().Trim() + "')", true);
             }
         }
     }

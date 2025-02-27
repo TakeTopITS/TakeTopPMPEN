@@ -107,7 +107,7 @@ public partial class TTMyMembersKPI : System.Web.UI.Page
         dtStartTime = userKPICheck.StartTime;
         dtEndTime = userKPICheck.EndTime;
 
-        strChartTitle = "我的直接成员绩效总评分对比图";
+        strChartTitle = LanguageHandle.GetWord("WoDeZhiJieChengYuanJiXiaoZongP").ToString().Trim();
 
         strHQL = "Select UserName as XName,TotalPoint as YNumber From T_UserKPICheck ";
         strHQL += " Where UserCode in (Select UnderCode From T_MemberLevel Where Usercode = " + "'" + strUserCode + "')";

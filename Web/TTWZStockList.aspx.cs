@@ -67,14 +67,14 @@ public partial class TTWZStockList : System.Web.UI.Page
                 if (listStock != null && listStock.Count == 1)
                 {
                     WZStock wZStock = (WZStock)listStock[0];
-                    if (wZStock.StockCode == "直属总库" || wZStock.StockCode == "容器一库" || wZStock.StockCode == "容器二库" || wZStock.StockCode == "计量库" || wZStock.StockCode == "二级库")
+                    if (wZStock.StockCode == LanguageHandle.GetWord("ZhiShuZongKu").ToString().Trim() || wZStock.StockCode == LanguageHandle.GetWord("RongQiYiKu").ToString().Trim() || wZStock.StockCode == LanguageHandle.GetWord("RongQiErKu").ToString().Trim() || wZStock.StockCode == LanguageHandle.GetWord("JiLiangKu").ToString().Trim() || wZStock.StockCode == LanguageHandle.GetWord("ErJiKu").ToString().Trim())
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZSZKRYKREKJLKEJKBYXSC+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZSZKRYKREKJLKEJKBYXSC").ToString().Trim()+"')", true);
                         return;
                     }
                     if (wZStock.IsMark == -1)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSYBJW1BYXSC+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSYBJW1BYXSC").ToString().Trim()+"')", true);
                         return;
                     }
 
@@ -83,7 +83,7 @@ public partial class TTWZStockList : System.Web.UI.Page
                     //重新加载列表
                     DataBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
                 }
             }
             else if (cmdName == "edit")
@@ -145,32 +145,32 @@ public partial class TTWZStockList : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strSafekeep))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGJSJK+"')", true);
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBGYBNWKZ+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGJSJK").ToString().Trim()+"')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBGYBNWKZ").ToString().Trim()+"')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strChecker))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGJSJK+"')", true);
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCLYBNWKZ+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGJSJK").ToString().Trim()+"')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCLYBNWKZ").ToString().Trim()+"')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strStockDesc))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGJSJK+"')", true);
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZKBSMBNWKBC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGJSJK").ToString().Trim()+"')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZKBSMBNWKBC").ToString().Trim()+"')", true);
                 return;
             }
             else
             {
                 if (!ShareClass.CheckStringRight(strStockDesc))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZKBSMBNWFFZFCXG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZKBSMBNWFFZFCXG").ToString().Trim()+"')", true);
                     return;
                 }
                 if (strStockDesc.Length > 30)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZKBSMBNCG30GZFXG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZKBSMBNCG30GZFXG").ToString().Trim()+"')", true);
                     return;
                 }
             }
@@ -237,7 +237,7 @@ public partial class TTWZStockList : System.Web.UI.Page
         TXT_Checker.BackColor = Color.White;
         TXT_StockDesc.BackColor = Color.White;
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatus()", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatus()", true); 
     }
 
     protected void BT_Create_Click(object sender, EventArgs e)
@@ -272,12 +272,12 @@ public partial class TTWZStockList : System.Web.UI.Page
 
         //    if (!ShareClass.CheckStringRight(strStockDesc))
         //    {
-        //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZKBSMBNWFFZFCXG+"')", true);
+        //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZKBSMBNWFFZFCXG").ToString().Trim()+"')", true);
         //        return;
         //    }
         //    if (strStockDesc.Length > 30)
         //    {
-        //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZKBSMBNCG30GZFXG+"')", true);
+        //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZKBSMBNCG30GZFXG").ToString().Trim()+"')", true);
         //        return;
         //    }
 
@@ -330,12 +330,12 @@ public partial class TTWZStockList : System.Web.UI.Page
 
             if (!ShareClass.CheckStringRight(strStockDesc))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZKBSMBNWFFZFCXG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZKBSMBNWFFZFCXG").ToString().Trim()+"')", true);
                 return;
             }
             if (strStockDesc.Length > 30)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZKBSMBNCG30GZFXG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZKBSMBNCG30GZFXG").ToString().Trim()+"')", true);
                 return;
             }
 
@@ -363,14 +363,14 @@ public partial class TTWZStockList : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZYXGDKB+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZYXGDKB").ToString().Trim()+"')", true);
                 return;
             }
 
             DataBinder();
         }
         catch (Exception ex) { }
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatus()", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatus()", true); 
     }
 
 
@@ -407,11 +407,11 @@ public partial class TTWZStockList : System.Web.UI.Page
                     ShareClass.RunSqlCommand(strUpdateStockSQL);
                 }
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZZSYBJWC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZZSYBJWC").ToString().Trim()+"')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZSMYKCLB+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZSMYKCLB").ToString().Trim()+"')", true);
                 return;
             }
         }
@@ -446,82 +446,82 @@ public partial class TTWZStockList : System.Web.UI.Page
     protected void BT_Start_Click(object sender, EventArgs e)
     {
         string strResult = string.Empty;
-        string strTotalHQL = "select * from T_WZStock where StockCode = '直属总库'";
+        string strTotalHQL = "select * from T_WZStock where StockCode = '直属总库'"; 
         DataTable dtTotal = ShareClass.GetDataSetFromSql(strTotalHQL, "strTotalHQL").Tables[0];
         if (dtTotal == null || dtTotal.Rows.Count == 0)
         {
             //创建 直属总库
             string strInsertTotalHQL = string.Format(@"insert into T_WZStock(StockCode,StockDesc,IsMark,IsCancel)
-                            values('{0}','{1}',-1,0)", "直属总库", "用于各行政单位自营项目（包括消耗、劳保、维修及自用料等）");
+                            values('{0}','{1}',-1,0)", LanguageHandle.GetWord("ZhiShuZongKu").ToString().Trim(), "用于各行政单位自营项目（包括消耗、劳保、维修及自用料等）"); 
             ShareClass.RunSqlCommand(strInsertTotalHQL);
-            strResult += "直属总库创建成功！";
+            strResult += LanguageHandle.GetWord("ZhiShuZongKuChuangJianChengGon").ToString().Trim();
         }
         else {
-            strResult += "直属总库已经存在！";
+            strResult += LanguageHandle.GetWord("ZhiShuZongKuYiJingCunZai").ToString().Trim();
         }
 
 
-        string strContainerOneHQL = "select * from T_WZStock where StockCode = '容器一库'";
+        string strContainerOneHQL = "select * from T_WZStock where StockCode = '容器一库'"; 
         DataTable dtContainerOne = ShareClass.GetDataSetFromSql(strContainerOneHQL, "ContainerOne").Tables[0];
         if (dtContainerOne == null || dtContainerOne.Rows.Count == 0)
         {
             //创建 容器一库
             string strInsertContainerOneHQL = string.Format(@"insert into T_WZStock(StockCode,StockDesc,IsMark,IsCancel)
-                            values('{0}','{1}',-1,0)", "容器一库", "用于容器制造厂压力容器制造项目");
+                            values('{0}','{1}',-1,0)", LanguageHandle.GetWord("RongQiYiKu").ToString().Trim(), "用于容器制造厂压力容器制造项目"); 
             ShareClass.RunSqlCommand(strInsertContainerOneHQL);
-            strResult += "容器一库创建成功！";
+            strResult += LanguageHandle.GetWord("RongQiYiKuChuangJianChengGong").ToString().Trim();
         }
         else
         {
-            strResult += "容器一库已经存在！";
+            strResult += LanguageHandle.GetWord("RongQiYiKuYiJingCunZai").ToString().Trim();
         }
 
-        string strContainerTwoHQL = "select * from T_WZStock where StockCode = '容器二库'";
+        string strContainerTwoHQL = "select * from T_WZStock where StockCode = '容器二库'"; 
         DataTable dtContainerTwo = ShareClass.GetDataSetFromSql(strContainerTwoHQL, "ContainerTwo").Tables[0];
         if (dtContainerTwo == null || dtContainerTwo.Rows.Count == 0)
         {
             //创建 容器二库
             string strInsertContainerTwoHQL = string.Format(@"insert into T_WZStock(StockCode,StockDesc,IsMark,IsCancel)
-                            values('{0}','{1}',-1,0)", "容器二库", "用于兰江公司压力容器制造项目");
+                            values('{0}','{1}',-1,0)", LanguageHandle.GetWord("RongQiErKu").ToString().Trim(), "用于兰江公司压力容器制造项目"); 
             ShareClass.RunSqlCommand(strInsertContainerTwoHQL);
-            strResult += "容器二库创建成功！";
+            strResult += LanguageHandle.GetWord("RongQiErKuChuangJianChengGong").ToString().Trim();
         }
         else
         {
-            strResult += "容器二库已经存在！";
+            strResult += LanguageHandle.GetWord("RongQiErKuYiJingCunZai").ToString().Trim();
         }
 
-        string strAmountHQL = "select * from T_WZStock where StockCode = '计量库'";
+        string strAmountHQL = "select * from T_WZStock where StockCode = '计量库'"; 
         DataTable dtAmount = ShareClass.GetDataSetFromSql(strAmountHQL, "Amount").Tables[0];
         if (dtAmount == null || dtAmount.Rows.Count == 0)
         {
             //创建 计量库
             string strInsertContainerTwoHQL = string.Format(@"insert into T_WZStock(StockCode,StockDesc,IsMark,IsCancel)
-                            values('{0}','{1}',-1,0)", "计量库", "用于兰江公司压力容器制造项目");
+                            values('{0}','{1}',-1,0)", LanguageHandle.GetWord("JiLiangKu").ToString().Trim(), "用于兰江公司压力容器制造项目"); 
             ShareClass.RunSqlCommand(strInsertContainerTwoHQL);
-            strResult += "计量库创建成功！";
+            strResult += LanguageHandle.GetWord("JiLiangKuChuangJianChengGong").ToString().Trim();
         }
         else
         {
-            strResult += "计量库已经存在！";
+            strResult += LanguageHandle.GetWord("JiLiangKuYiJingCunZai").ToString().Trim();
         }
 
-        string strSecondLevelHQL = "select * from T_WZStock where StockCode = '二级库'";
+        string strSecondLevelHQL = "select * from T_WZStock where StockCode = '二级库'"; 
         DataTable dtSecondLevel = ShareClass.GetDataSetFromSql(strSecondLevelHQL, "SecondLevel").Tables[0];
         if (dtSecondLevel == null || dtSecondLevel.Rows.Count == 0)
         {
             //创建 二级库
             string strInsertContainerTwoHQL = string.Format(@"insert into T_WZStock(StockCode,StockDesc,IsMark,IsCancel)
-                            values('{0}','{1}',-1,0)", "二级库", "特定用于兰州石化公司集中采购的劳保用品核算");
+                            values('{0}','{1}',-1,0)", LanguageHandle.GetWord("ErJiKu").ToString().Trim(), "特定用于兰州石化公司集中采购的劳保用品核算"); 
             ShareClass.RunSqlCommand(strInsertContainerTwoHQL);
-            strResult += "二级库创建成功！";
+            strResult += LanguageHandle.GetWord("ErJiKuChuangJianChengGong").ToString().Trim();
         }
         else
         {
-            strResult += "二级库已经存在！";
+            strResult += LanguageHandle.GetWord("ErJiKuYiJingCunZai").ToString().Trim();
         }
 
-        string strUpdateSQL = "update T_WZStock set IsMark = -1 where StockCode in ('直属总库','容器一库','容器二库','计量库','二级库')";
+        string strUpdateSQL = "update T_WZStock set IsMark = -1 where StockCode in ('直属总库','容器一库','容器二库','计量库','二级库')"; 
         ShareClass.RunSqlCommand(strUpdateSQL);
 
         DataBinder();
@@ -570,12 +570,12 @@ public partial class TTWZStockList : System.Web.UI.Page
                 {
                     ShareClass.RunSqlCommand(sbSql.ToString());
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZZSYBJWC+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZZSYBJWC").ToString().Trim()+"')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZSMYKCLB+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZSMYKCLB").ToString().Trim()+"')", true);
                 return;
             }
         }
@@ -599,14 +599,14 @@ public partial class TTWZStockList : System.Web.UI.Page
             lock (this)
             {
                 bool isExist = true;
-                string strStockCodeHQL = "select COUNT(1) as RowNumber from T_WZStock where StockCode like '自营%'";
+                string strStockCodeHQL = "select COUNT(1) as RowNumber from T_WZStock where StockCode like '自营%'"; 
                 DataTable dtStock = ShareClass.GetDataSetFromSql(strStockCodeHQL, "Stock").Tables[0];
                 int intStockCodeNumber = 0;
                 int.TryParse(dtStock.Rows[0]["RowNumber"].ToString(), out intStockCodeNumber);
                 intStockCodeNumber = intStockCodeNumber + 1;
                 do
                 {
-                    strNewStockCode = "自营" + intStockCodeNumber.ToString() + "库";
+                    strNewStockCode = LanguageHandle.GetWord("ZiYing").ToString().Trim() + intStockCodeNumber.ToString() + LanguageHandle.GetWord("Ku").ToString().Trim();
 
                     //验证新的库别Code是否存在
                     string strCheckNewStockCodeHQL = "select count(1) as RowNumber from T_WZStock where StockCode = '" + strNewStockCode + "'";

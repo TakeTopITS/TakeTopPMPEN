@@ -184,7 +184,7 @@
                                                                 
                                                                 <ItemStyle CssClass="itemStyle" />
                                                                 <Columns>
-                                                                    <asp:TemplateColumn HeaderText=Resources.lang.ZZZBuMen>
+                                                                    <asp:TemplateColumn HeaderText="Resources.lang.ZZZBuMen">
                                                                         <ItemTemplate>
                                                                             <%--<input type="button" class="inpuLong" onclick='LoadCamera("<%# Eval("TypeName") %>    ", "<%# Eval("DPName")%>    ","<%# Eval("ServerIP")%>    ","<%# Eval("CameraName")%>    ",<%# Eval("ID")%>)' value='<%# Eval("CameraName") %>' />--%>
                                                                             <asp:HyperLink ID="HL_CamraName" NavigateUrl ="TTPnPCameraShow_Vision.aspx" runat="server"  text='<%# Eval("CameraName") %>' Target ="rightCamera"></asp:HyperLink>

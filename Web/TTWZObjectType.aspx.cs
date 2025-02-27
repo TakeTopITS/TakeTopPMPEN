@@ -90,7 +90,7 @@ public partial class TTWZObjectType : System.Web.UI.Page
             ShareClass.RunSqlCommand(strXLSQL);
         }
         else {
-            Response.Write("<script>alert('小类不能再添加子级了！');</script>");
+            Response.Write(LanguageHandle.GetWord("scriptalertXiaoLeiBuNengZaiTia").ToString().Trim());
         }
         LoadTree();
     }

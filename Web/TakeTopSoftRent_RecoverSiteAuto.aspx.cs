@@ -96,14 +96,14 @@ public partial class TakeTopSoftRent_RecoverSiteAuto : System.Web.UI.Page
 
             if (VerifyWebSiteAppIsExist(strSiteName, strSiteAppName))
             {
-                LB_Message.Text = "恢复失败，存在相同名称的站点，请检查！";
+                LB_Message.Text = LanguageHandle.GetWord("HuiFuShiBaiCunZaiXiangTongMing").ToString().Trim();
                 return;
             }
 
             //恢复站点应用
             RecoverSiteAPP(strRentProductType, strRentProductVersionType, strSiteAppSystemName, strSiteAppName, strSiteAppURL, strSiteName, strSiteBindingInfo, strSiteDirectory, strSiteTemplateDirectory, strSiteVirtualDirectoryName, strSiteVirtualDirectoryPhysicalPath, strSiteDBName, strSiteDBRestoreFile, strSiteDBSetupDirectory, strSiteDBLoginUserID, strSiteDBUserLoginPassword, strIsOEM);
 
-            LB_Message.Text = "站点恢复成功，你可以打开和收藏此站点 <br/> <a href='" + strSiteAppURL + "' target='_blank'>" + strSiteAppURL + "</a>";
+            LB_Message.Text = LanguageHandle.GetWord("ZhanDianHuiFuChengGongNiKeYiDa").ToString().Trim() + strSiteAppURL + "' target='_blank'>" + strSiteAppURL + "</a>";
             LB_CloseMessage.Visible = false;
 
             //LB_Message.Text = strSiteDBRestoreFile;

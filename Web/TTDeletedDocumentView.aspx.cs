@@ -55,7 +55,7 @@ public partial class TTDeletedDocumentView : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_Count.Text = Resources.lang.CXDDWJS + ": " + lst.Count.ToString();
+        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
     }
 
     protected void DataGrid1_ItemCommand(object sender, DataGridCommandEventArgs e)
@@ -100,7 +100,7 @@ public partial class TTDeletedDocumentView : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
 
-        LB_Count.Text = Resources.lang.CXDDWJS + ": " + lst.Count.ToString();
+        LB_Count.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
 
         LB_Sql.Text = strHQL;
     }

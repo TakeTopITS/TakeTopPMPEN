@@ -30,7 +30,7 @@ public partial class TTProjectMemberManHourReportForAlone : System.Web.UI.Page
 
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text =  Resources.lang.XiangMu + ": " + strProjectID + " " + strProjectName + " 成员工时表";
+        LB_ReportName.Text =  LanguageHandle.GetWord("XiangMu").ToString().Trim() + ": " + strProjectID + " " + strProjectName + LanguageHandle.GetWord("ChengYuanGongShiBiao").ToString().Trim();
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
@@ -120,13 +120,13 @@ public partial class TTProjectMemberManHourReportForAlone : System.Web.UI.Page
         strBeginTime = DateTime.Parse(DLC_BeginDate.Text).ToString("yyyyMMdd");
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyyMMdd");
 
-        strHQL = @"Select DepartCode as '部门',
-                   UserName as '姓名',
-                   DepartCode as '部门代码',
-                   DepartName as '部门名称',
-                   WorkDate as '工作时间',
-                   sum(ManHour) as '申报工时',
-                   sum(ConfirmManHour) as '确认工时'
+        strHQL = @"Select DepartCode as '部门', 
+                   UserName as '姓名', 
+                   DepartCode as '部门代码', 
+                   DepartName as '部门名称', 
+                   WorkDate as '工作时间', 
+                   sum(ManHour) as '申报工时', 
+                   sum(ConfirmManHour) as '确认工时' 
                    From V_ProjectMemberManHourSummary";
         strHQL += " Where ProjectID = " + strProjectID;
         strHQL += " and to_char(WorkDate,'yyyymmdd') >= " + "'" + strBeginTime + "'";
@@ -137,9 +137,9 @@ public partial class TTProjectMemberManHourReportForAlone : System.Web.UI.Page
 
         DataTable dtProject = ShareClass.GetDataSetFromSql(strHQL, "project").Tables[0];
 
-        Export3Excel(dtProject, Resources.lang.XiangMu + ": " + strProjectID + " " + strProjectName + " 成员工时汇总表.xls");
+        Export3Excel(dtProject, LanguageHandle.GetWord("XiangMu").ToString().Trim() + ": " + strProjectID + " " + strProjectName + LanguageHandle.GetWord("ChengYuanGongShiHuiZongBiaoxls").ToString().Trim());
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true); 
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

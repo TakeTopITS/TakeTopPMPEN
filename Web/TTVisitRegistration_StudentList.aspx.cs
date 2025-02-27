@@ -143,7 +143,7 @@ public partial class TTVisitRegistration_StudentList : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('没有找到相应的拜访记录！');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('没有找到相应的拜访记录！');", true); 
             return;
         }
     }

@@ -25,14 +25,14 @@ public partial class TTGoodsUserRecord : System.Web.UI.Page
 
         string strGoodsID = Request.QueryString["ID"];
 
-        //this.Title = "物料编号：" + strGoodsID + " 用户记录！";
+        //this.Title = "物料编号：" + strGoodsID + "用户记录！";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
         {
             DLC_BeginUseTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
             DLC_EndUseTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(Resources.lang.ZZJGT, TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
 
             string strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
             strHQL = "from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'";
@@ -143,13 +143,13 @@ public partial class TTGoodsUserRecord : System.Web.UI.Page
 
         if (deNumber1 > deNumber2 | deNumber2 == 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCCCJLSLWLHSLBNDYCLPKCSLJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCCJLSLWLHSLBNDYCLPKCSLJC").ToString().Trim() + "')", true);
             return;
         }
 
         if (strGoodsCode == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYHBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYHBNWKJC").ToString().Trim() + "')", true);
         }
         else
         {
@@ -199,11 +199,11 @@ public partial class TTGoodsUserRecord : System.Web.UI.Page
 
                 LoadGoodsUserRecord();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTIAOBOCHENGGONG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTIAOBOCHENGGONG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTIAOBOSHIBAI + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTIAOBOSHIBAI").ToString().Trim() + "')", true);
             }
         }
     }

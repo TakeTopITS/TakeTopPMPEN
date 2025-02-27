@@ -80,7 +80,7 @@ public partial class TTWZCardList : System.Web.UI.Page
                     WZCard wZCard = (WZCard)listWZCard[0];
                     if (wZCard.IsMark != 0)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSYBJBW0BYXSC+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSYBJBW0BYXSC").ToString().Trim()+"')", true);
                         return;
                     }
                     wZCardBLL.DeleteWZCard(wZCard);
@@ -88,7 +88,7 @@ public partial class TTWZCardList : System.Web.UI.Page
                     //重新加载列表
                     DataBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
                 }
 
             }
@@ -140,7 +140,7 @@ public partial class TTWZCardList : System.Web.UI.Page
             
             if (string.IsNullOrEmpty(strCardName))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZPZMCBNWKBC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZPZMCBNWKBC").ToString().Trim()+"')", true);
                 return;
             }
 
@@ -170,7 +170,7 @@ public partial class TTWZCardList : System.Web.UI.Page
                 wZCard.CardCode = strNewCardCode;
                 wZCard.CardName = strCardName;
                 wZCard.CardTime = DateTime.Now;
-                wZCard.Progress = "录入";
+                wZCard.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
                 wZCard.CardMarker = strUserCode;
 
 
@@ -188,7 +188,7 @@ public partial class TTWZCardList : System.Web.UI.Page
             TXT_CardName.BackColor = Color.White;
             LB_CardCode.BackColor = Color.White;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
         }
         catch (Exception ex)
         { }

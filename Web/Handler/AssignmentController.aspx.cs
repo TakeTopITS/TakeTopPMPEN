@@ -1,10 +1,10 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-//æ•°æ®å±‚ç›¸å…³çš„é¡¹ç›®
+//Êý¾Ý²ãÏà¹ØµÄÏîÄ¿
 using TakeTopGantt.models;
 using Devart.Data.Linq;
 using Newtonsoft.Json.Converters;
@@ -30,11 +30,11 @@ namespace TakeTopGantt.handler
             String data = null;
             assignment[] jsonData = null;
 
-            //åœ¨æ–°å»ºçš„é¡¹ç›®ä¸­ï¼Œ å¯èƒ½id=â€œâ€æˆ–ç©ºï¼Œ 
+            //ÔÚÐÂ½¨µÄÏîÄ¿ÖÐ£¬ ¿ÉÄÜid=¡°¡±»ò¿Õ£¬ 
             var settings = new JsonSerializerSettings();
             settings.NullValueHandling = NullValueHandling.Ignore;
 
-            //åˆ¤æ–­å½“å‰ç”¨æˆ·æœ‰æ²¡æœ‰ä¿®æ”¹ç”¨æˆ·è®¡åˆ’çš„æƒé™
+            //ÅÐ¶Ïµ±Ç°ÓÃ»§ÓÐÃ»ÓÐÐÞ¸ÄÓÃ»§¼Æ»®µÄÈ¨ÏÞ
             int pid = Convert.ToInt32(Request["pid"]);
             if (GanttShareClass.CheckUserCanUpdatePlan(pid.ToString()) == false || GanttShareClass.CheckIsCanUpdatePlanByProjectStatus(pid.ToString()) == false)
             {
@@ -66,7 +66,7 @@ namespace TakeTopGantt.handler
                     break;
 
             }
-            //ç›´æŽ¥ç”¨è¿™ä¸ªè¾“å‡º
+            //Ö±½ÓÓÃÕâ¸öÊä³ö
             this.Response.Write(ret);
             this.Response.End();
         }
@@ -80,16 +80,16 @@ namespace TakeTopGantt.handler
 
         public Object Create(assignment[] jsonData)
         {
-            ////æŸ¥æ‰¾é¡¹ç›®çš„id
+            ////²éÕÒÏîÄ¿µÄid
             //int taskid = Convert.ToInt32(Request["taskid"]);
 
-            ////å¼ºè¡Œè®¾ç½®taskidï¼Œ é¿å…
+            ////Ç¿ÐÐÉèÖÃtaskid£¬ ±ÜÃâ
             //foreach (assignment a in jsonData)
             //{
             //    a.task_id = taskid;
             //}
 
-            //ç›´æŽ¥insertåˆ°æ•°æ®è¡¨ä¸­
+            //Ö±½Óinsertµ½Êý¾Ý±íÖÐ
             var jsonData2 = jsonData.Where(b => b.resourceid != null);
             _db.assignment.InsertAllOnSubmit(jsonData2);
             _db.SubmitChanges(ConflictMode.ContinueOnConflict);

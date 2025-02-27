@@ -25042,6 +25042,9 @@
   <data name="TaXingTu" xml:space="preserve">
     <value>塔形图</value>
   </data>
+  <data name="YGZXZYZ" xml:space="preserve">
+    <value />
+  </data>
   <data name="HengXiangZhuZhuangTu" xml:space="preserve">
     <value>横向柱装图</value>
   </data>
@@ -27489,50 +27492,5 @@
   </data>
   <data name="ZZJGWEBYHYJZGSQWEBYHSQJC" xml:space="preserve">
     <value>警告，WEB用户数已经超过授权的WEB用户数，请检查！</value>
-  </data>
-  <data name="ZZQDHJHRRBNGGQDYQDM" xml:space="preserve">
-    <value>启动后，计划内容不能更改，确定要启动吗？</value>
-  </data>
-  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
-    <value>在执行项目总数</value>
-  </data>
-  <data name="NianDuXingZeng" xml:space="preserve">
-    <value>年度新增</value>
-  </data>
-  <data name="NianDuWanCheng" xml:space="preserve">
-    <value>年度完成</value>
-  </data>
-  <data name="NianDuYanWuXiangMuShu" xml:space="preserve">
-    <value>严重延误项目数 </value>
-  </data>
-  <data name="JingDuZhengChang" xml:space="preserve">
-    <value>进度正常</value>
-  </data>
-  <data name="QingDuYanWu" xml:space="preserve">
-    <value>轻度延误</value>
-  </data>
-  <data name="NianDuChengBenHeShuan" xml:space="preserve">
-    <value>年度成本核算</value>
-  </data>
-  <data name="ChengBenChaoZiXiangMuShu" xml:space="preserve">
-    <value>成本超支项目数</value>
-  </data>
-  <data name="NianDuXiangMuGongShiTouRu" xml:space="preserve">
-    <value>年度项目工时投入</value>
-  </data>
-  <data name="NianDuTeiBaoRenShu" xml:space="preserve">
-    <value>年度填报人数</value>
-  </data>
-  <data name="ZaiZhiXingRenWuZhongShu" xml:space="preserve">
-    <value>在执行任务总数</value>
-  </data>
-  <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
-    <value>项目年度回款</value>
-  </data>
-  <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
-    <value>启动后，计划内容不能更改，确定要启动吗？</value>
-  </data>
-  <data name="UpdateingDatabase" xml:space="preserve">
-    <value>因数据库有更新，系统正在升级，要花几分钟，不要关闭此窗口，请耐心等待！  </value>
   </data>
 </root>

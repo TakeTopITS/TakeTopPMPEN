@@ -258,9 +258,9 @@ public partial class TTGoodsShipmentReport : System.Web.UI.Page
 
         DataTable dtSaleOrder = ds.Tables[0];
 
-        Export3Excel(dtSaleOrder, "物料出库报表.xls");
+        Export3Excel(dtSaleOrder, LanguageHandle.GetWord("WuLiaoChuKuBaoBiaoxls").ToString().Trim());
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true); 
     }
 
 

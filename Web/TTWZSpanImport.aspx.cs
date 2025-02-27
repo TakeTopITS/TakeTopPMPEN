@@ -45,7 +45,7 @@ public partial class TTWZSpanImport : System.Web.UI.Page
 
             if (fi.Exists)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZCZTMWJSCSBGMHZSC + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "');</script>");
             }
 
             if (Directory.Exists(strDocSavePath) == false)
@@ -72,7 +72,7 @@ public partial class TTWZSpanImport : System.Web.UI.Page
             }
             catch (Exception ex)
             {
-                lblMsg.Text = string.Format("<span style='color:red' >导入时出现以下错误: {0}!</span>", ex.Message);
+                lblMsg.Text = string.Format(LanguageHandle.GetWord("spanstylecolorredDaoRuShiChuXi").ToString().Trim(), ex.Message);
             }
         }
     }
@@ -92,7 +92,7 @@ public partial class TTWZSpanImport : System.Web.UI.Page
             lineNumber++;
             try
             {
-                string strDLCode = ShareClass.ObjectToString(row["计量单位"]);
+                string strDLCode = ShareClass.ObjectToString(row[LanguageHandle.GetWord("JiLiangChanWei").ToString().Trim()]);
 
                 if (string.IsNullOrEmpty(strDLCode))
                 {
@@ -101,13 +101,13 @@ public partial class TTWZSpanImport : System.Web.UI.Page
 
                 if (string.IsNullOrEmpty(strDLCode))
                 {
-                    resultMsg += string.Format("第{0}行，计量单位不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangJiLiangChanWeiBuNengWei").ToString().Trim(), lineNumber);
                     continue;
                 }
             }
             catch (Exception ex)
             {
-                lblMsg.Text = string.Format("<span style='color:red' >导入时出现以下错误: {0}!</span>", ex.Message);
+                lblMsg.Text = string.Format(LanguageHandle.GetWord("spanstylecolorredDaoRuShiChuXi").ToString().Trim(), ex.Message);
             }
 
         }
@@ -136,7 +136,7 @@ public partial class TTWZSpanImport : System.Web.UI.Page
             try
             {
                 lineNumber++;
-                strUnitName = ShareClass.ObjectToString(row["计量单位"]);
+                strUnitName = ShareClass.ObjectToString(row[LanguageHandle.GetWord("JiLiangChanWei").ToString().Trim()]);
 
                 if (string.IsNullOrEmpty(strUnitName))
                 {
@@ -153,7 +153,7 @@ public partial class TTWZSpanImport : System.Web.UI.Page
             }
             catch (Exception err)
             {
-                LogClass.WriteLogFile(this.GetType().BaseType.Name + "："  + Resources.lang.ZZJGDRSBJC + " : " + Resources.lang.HangHao + ": " + (lineNumber + 2).ToString() + " , " + Resources.lang.DaiMa + ": " + strUnitName + " : " + err.Message.ToString());
+                LogClass.WriteLogFile(this.GetType().BaseType.Name + "："  + LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (lineNumber + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strUnitName + " : " + err.Message.ToString());
             }
         }
 
@@ -161,11 +161,11 @@ public partial class TTWZSpanImport : System.Web.UI.Page
         {
             if (successCount == dtExcel.Rows.Count)
             {
-                resultMsg += string.Format("<br/>已成功导入 {0} 条数据", successCount);
+                resultMsg += string.Format(LanguageHandle.GetWord("brYiChengGongDaoRu0TiaoShuJu").ToString().Trim(), successCount);
             }
             else
             {
-                resultMsg += string.Format("<br/>已成功导入 {0} 条数据， 共有 {1} 条数据验证失败", successCount, dtExcel.Rows.Count - successCount);
+                resultMsg += string.Format(LanguageHandle.GetWord("brYiChengGongDaoRu0TiaoShuJuGo").ToString().Trim(), successCount, dtExcel.Rows.Count - successCount);
             }
 
             //重新加载列表
@@ -175,7 +175,7 @@ public partial class TTWZSpanImport : System.Web.UI.Page
         }
         else
         {
-            resultMsg += string.Format("<br/>未导入数据， 共有 {0} 条数据验证失败", dtExcel.Rows.Count - successCount);
+            resultMsg += string.Format(LanguageHandle.GetWord("brWeiDaoRuShuJuGongYou0TiaoShu").ToString().Trim(), dtExcel.Rows.Count - successCount);
         }
 
         return false;
@@ -186,10 +186,10 @@ public partial class TTWZSpanImport : System.Web.UI.Page
         // 下载项目对应相应模板.
         try
         {
-            string templatePath = Server.MapPath("Doc/Templates/对照代码.xls");
+            string templatePath = Server.MapPath(LanguageHandle.GetWord("DocTemplatesDuiZhaoDaiMaxls").ToString().Trim());
 
 
-            FileUtils.Download(templatePath, string.Format("{0}.xls", "对照代码"), Response, false);
+            FileUtils.Download(templatePath, string.Format("{0}.xls", LanguageHandle.GetWord("DuiZhaoDaiMa").ToString().Trim()), Response, false);
         }
         catch (Exception ex)
         { }

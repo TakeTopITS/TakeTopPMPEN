@@ -396,11 +396,11 @@ public partial class TTAppProjectTaskDetail : System.Web.UI.Page
             taskAssignRecordBLL.UpdateTaskAssignRecord(taskAssignRecord, int.Parse(strID));
             LoadAssignRecord(strID);
 
-            TB_Message.Text = strUserName + " 受理了你的任务： " + strTaskID + " " + strTaskName;
+            TB_Message.Text = strUserName + LanguageHandle.GetWord("ShouLiLeNiDeRenWu").ToString().Trim() + strTaskID + " " + strTaskName;
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSLSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -456,12 +456,12 @@ public partial class TTAppProjectTaskDetail : System.Web.UI.Page
             taskAssignRecordBLL.UpdateTaskAssignRecord(taskAssignRecord, int.Parse(strID));
             LoadAssignRecord(strID);
 
-            TB_Message.Text = strUserName + " 拒绝了你的任务： " + strTaskID + " " + strTaskName;
+            TB_Message.Text = strUserName + LanguageHandle.GetWord("JuJueLeNiDeRenWu").ToString().Trim() + strTaskID + " " + strTaskName;
 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJJSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJJSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -502,7 +502,7 @@ public partial class TTAppProjectTaskDetail : System.Web.UI.Page
 
         if (strOperation == "" | strOperatorCode == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFPSBGZYHSLRBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFPSBGZYHSLRBNWKJC").ToString().Trim() + "')", true);
             return;
         }
 
@@ -542,15 +542,15 @@ public partial class TTAppProjectTaskDetail : System.Web.UI.Page
             LoadAssignRecord(LB_AssignID.Text);
             LoadChildRecord(intPriorID.ToString());
 
-            ShareClass.SendInstantMessage(Resources.lang.RenWuFenPaiTongZhi, ShareClass.GetUserName(strUserCode) + Resources.lang.GeiNiFenPaiLeRenWu + " :" + intTaskID.ToString() + "  " + strTask + "，" + Resources.lang.QingJiShiChuLi, strUserCode, strOperatorCode);
+            ShareClass.SendInstantMessage(LanguageHandle.GetWord("RenWuFenPaiTongZhi").ToString().Trim(), ShareClass.GetUserName(strUserCode) + LanguageHandle.GetWord("GeiNiFenPaiLeRenWu").ToString().Trim() + " :" + intTaskID.ToString() + "  " + strTask + "，" + LanguageHandle.GetWord("QingJiShiChuLi").ToString().Trim(), strUserCode, strOperatorCode);
 
-            TB_AssignMessage.Text = ShareClass.GetUserName(strUserCode) + Resources.lang.GeiNiFenPaiLeRenWu + " :" + intTaskID.ToString() + "  " + "，" + Resources.lang.QingJiShiChuLi;
+            TB_AssignMessage.Text = ShareClass.GetUserName(strUserCode) + LanguageHandle.GetWord("GeiNiFenPaiLeRenWu").ToString().Trim() + " :" + intTaskID.ToString() + "  " + "，" + LanguageHandle.GetWord("QingJiShiChuLi").ToString().Trim();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFPCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFPCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFPSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFPSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -566,7 +566,7 @@ public partial class TTAppProjectTaskDetail : System.Web.UI.Page
         if (strTemName != "")
         {
             strIdentifyString = ShareClass.GetWLTemplateIdentifyString(strTemName);
-            strURL = "popShowByURL(" + "'TTRelatedDIYBusinessForm.aspx?RelatedType=TaskRecord&RelatedID=" + strTaskRedordID + "&IdentifyString=" + strIdentifyString + "','" + Resources.lang.XiangGuanYeWuDan + "', 800, 600,window.location);";
+            strURL = "popShowByURL(" + "'TTRelatedDIYBusinessForm.aspx?RelatedType=TaskRecord&RelatedID=" + strTaskRedordID + "&IdentifyString=" + strIdentifyString + "','" + LanguageHandle.GetWord("XiangGuanYeWuDan").ToString().Trim() + "', 800, 600,window.location);";
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop12", strURL, true);
         }
 
@@ -598,7 +598,7 @@ public partial class TTAppProjectTaskDetail : System.Web.UI.Page
 
             if (fi.Exists)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZCZTMWJSCSBGMHZSC + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "');</script>");
             }
             else
             {
@@ -617,13 +617,13 @@ public partial class TTAppProjectTaskDetail : System.Web.UI.Page
                 }
                 catch
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSCSBJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "');</script>");
                 }
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZZYSCDWJ + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "');</script>");
         }
     }
 
@@ -698,13 +698,13 @@ public partial class TTAppProjectTaskDetail : System.Web.UI.Page
 
             ShareClass.UpdateDailyWork(strUserCode, strProjectID, "Task", strTaskID, strContent);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
 
-            TB_Message.Text = strUserName + " 正在处理你的任务： " + strTaskID + " " + strTaskName;
+            TB_Message.Text = strUserName + LanguageHandle.GetWord("ZhengZaiChuLiNiDeRenWu").ToString().Trim() + strTaskID + " " + strTaskName;
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -777,14 +777,14 @@ public partial class TTAppProjectTaskDetail : System.Web.UI.Page
 
             ShareClass.UpdateDailyWork(strUserCode, strProjectID, "Task", strTaskID, strContent);
 
-            TB_Message.Text = strUserName + " 完成了你的任务： " + strTaskID + " " + strTaskName;
+            TB_Message.Text = strUserName + LanguageHandle.GetWord("WanChengLeNiDeRenWu").ToString().Trim() + strTaskID + " " + strTaskName;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZWCCGNRYTJDDTXMRZDXMCLYMZL + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWCCGNRYTJDDTXMRZDXMCLYMZL").ToString().Trim() + "')", true);
 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZWCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -840,11 +840,11 @@ public partial class TTAppProjectTaskDetail : System.Web.UI.Page
 
                 //提交当天的项目日志
                 ShareClass.UpdateDailyWork(strUserCode, strProjectID, "Task", strTaskID, strContent);
-                TB_Message.Text = strUserName + " 完成了你的任务： " + strTaskID + " " + strTaskName;
+                TB_Message.Text = strUserName + LanguageHandle.GetWord("WanChengLeNiDeRenWu").ToString().Trim() + strTaskID + " " + strTaskName;
 
                 //确认更改关联计划的进度、费用和工时
                 ShareClass.UpdateTaskOrWorkflowPlanProgressAndExpenseWorkHour(strPlanID);
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYYXGLJHJD + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYYXGLJHJD").ToString().Trim() + "')", true);
             }
             catch
             {
@@ -886,12 +886,12 @@ public partial class TTAppProjectTaskDetail : System.Web.UI.Page
             LoadAssignRecord(strID);
 
 
-            TB_Message.Text = strUserName + " 挂起了你的任务： " + strTaskID + " " + strTaskName;
+            TB_Message.Text = strUserName + LanguageHandle.GetWord("GuaQiLeNiDeRenWu").ToString().Trim() + strTaskID + " " + strTaskName;
 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -912,7 +912,7 @@ public partial class TTAppProjectTaskDetail : System.Web.UI.Page
         try
         {
             projectTaskBLL.UpdateProjectTask(projectTask, int.Parse(strTaskID));
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZRWGBCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZRWGBCG").ToString().Trim() + "')", true);
 
             BT_Finish.Enabled = false;
             BT_TBD.Enabled = false;
@@ -923,7 +923,7 @@ public partial class TTAppProjectTaskDetail : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZRWGBSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZRWGBSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -943,7 +943,7 @@ public partial class TTAppProjectTaskDetail : System.Web.UI.Page
         try
         {
             projectTaskBLL.UpdateProjectTask(projectTask, int.Parse(strTaskID));
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZRWJHCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZRWJHCG").ToString().Trim() + "')", true);
 
             BT_Finish.Enabled = true;
             BT_TBD.Enabled = true;
@@ -954,7 +954,7 @@ public partial class TTAppProjectTaskDetail : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZRWJHSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZRWJHSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -966,7 +966,7 @@ public partial class TTAppProjectTaskDetail : System.Web.UI.Page
 
         if (CB_ReturnMsg.Checked == true | CB_ReturnMail.Checked == true)
         {
-            strSubject = Resources.lang.ZZRWCLQKFK;
+            strSubject = LanguageHandle.GetWord("ZZRWCLQKFK").ToString().Trim();
             strMsg = TB_Message.Text.Trim();
 
             if (CB_ReturnMsg.Checked == true)
@@ -980,7 +980,7 @@ public partial class TTAppProjectTaskDetail : System.Web.UI.Page
             }
         }
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFSWB + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFSWB").ToString().Trim() + "')", true);
     }
 
     protected void BT_SendAssignMsg_Click(object sender, EventArgs e)
@@ -993,7 +993,7 @@ public partial class TTAppProjectTaskDetail : System.Web.UI.Page
 
         if (CB_SendMsg.Checked == true | CB_SendMail.Checked == true)
         {
-            strSubject = Resources.lang.RenWuFenPaiTongZhi;
+            strSubject = LanguageHandle.GetWord("RenWuFenPaiTongZhi").ToString().Trim();
             strMsg = TB_AssignMessage.Text.Trim();
 
             if (CB_SendMsg.Checked == true)
@@ -1007,7 +1007,7 @@ public partial class TTAppProjectTaskDetail : System.Web.UI.Page
             }
         }
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFSWB + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFSWB").ToString().Trim() + "')", true);
     }
 
     protected void DataGrid2_ItemCommand(object sender, DataGridCommandEventArgs e)
@@ -1111,11 +1111,11 @@ public partial class TTAppProjectTaskDetail : System.Web.UI.Page
         {
             taskAssignRecordBLL.UpdateTaskAssignRecord(taskAssignRecord, int.Parse(strID));
             LoadChildRecord(strPriorID);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -1140,7 +1140,7 @@ public partial class TTAppProjectTaskDetail : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
         }
     }
 

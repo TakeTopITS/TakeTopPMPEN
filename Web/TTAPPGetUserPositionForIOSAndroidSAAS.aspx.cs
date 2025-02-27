@@ -106,7 +106,7 @@ public partial class TTAPPGetUserPositionForIOSAndroidSAAS : System.Web.UI.Page
                     }
                     if (ds.Tables[0].Rows[0]["MCheckInIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                     {
-                        RBL_ShiftType.Items.Add(new ListItem(Resources.lang.ZaoBanShangBanShiJian, "MorningWorkStartTime"));
+                        RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("ZaoBanShangBanShiJian").ToString().Trim(), "MorningWorkStartTime"));
                         RBL_ShiftType.Items[0].Selected = true;
                     }
 
@@ -119,7 +119,7 @@ public partial class TTAPPGetUserPositionForIOSAndroidSAAS : System.Web.UI.Page
                     }
                     if (ds.Tables[0].Rows[0]["MCheckOutIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                     {
-                        RBL_ShiftType.Items.Add(new ListItem(Resources.lang.ZaoBanXiaBanShiJian, "MorningWorkEndTime"));
+                        RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("ZaoBanXiaBanShiJian").ToString().Trim(), "MorningWorkEndTime"));
                         RBL_ShiftType.Items[0].Selected = true;
                     }
 
@@ -133,7 +133,7 @@ public partial class TTAPPGetUserPositionForIOSAndroidSAAS : System.Web.UI.Page
                     }
                     if (ds.Tables[0].Rows[0]["ACheckInIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                     {
-                        RBL_ShiftType.Items.Add(new ListItem(Resources.lang.ZhongBanShangBanShiJian, "AfternoonWorkStartTime"));
+                        RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("ZhongBanShangBanShiJian").ToString().Trim(), "AfternoonWorkStartTime"));
                         RBL_ShiftType.Items[0].Selected = true;
                     }
 
@@ -146,7 +146,7 @@ public partial class TTAPPGetUserPositionForIOSAndroidSAAS : System.Web.UI.Page
                     }
                     if (ds.Tables[0].Rows[0]["ACheckOutIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                     {
-                        RBL_ShiftType.Items.Add(new ListItem(Resources.lang.ZhongBanXiaBanShiJian, "AfternoonWorkEndTime"));
+                        RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("ZhongBanXiaBanShiJian").ToString().Trim(), "AfternoonWorkEndTime"));
                         RBL_ShiftType.Items[0].Selected = true;
                     }
 
@@ -159,7 +159,7 @@ public partial class TTAPPGetUserPositionForIOSAndroidSAAS : System.Web.UI.Page
                     }
                     if (ds.Tables[0].Rows[0]["NCheckInIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                     {
-                        RBL_ShiftType.Items.Add(new ListItem(Resources.lang.WanBanShangBanShiJian, "NightShiftStartTime"));
+                        RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("WanBanShangBanShiJian").ToString().Trim(), "NightShiftStartTime"));
                         RBL_ShiftType.Items[0].Selected = true;
                     }
 
@@ -172,7 +172,7 @@ public partial class TTAPPGetUserPositionForIOSAndroidSAAS : System.Web.UI.Page
                     }
                     if (ds.Tables[0].Rows[0]["NCheckOutIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                     {
-                        RBL_ShiftType.Items.Add(new ListItem(Resources.lang.WanBanXiaBanShiJian, "NightShiftEndTime"));
+                        RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("WanBanXiaBanShiJian").ToString().Trim(), "NightShiftEndTime"));
                         RBL_ShiftType.Items[0].Selected = true;
                     }
 
@@ -185,7 +185,7 @@ public partial class TTAPPGetUserPositionForIOSAndroidSAAS : System.Web.UI.Page
                     }
                     if (ds.Tables[0].Rows[0]["OCheckInIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                     {
-                        RBL_ShiftType.Items.Add(new ListItem(Resources.lang.JiaBanShangBanShiJian, "MidnightWorkStartTime"));
+                        RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("JiaBanShangBanShiJian").ToString().Trim(), "MidnightWorkStartTime"));
                         RBL_ShiftType.Items[0].Selected = true;
                     }
 
@@ -198,7 +198,7 @@ public partial class TTAPPGetUserPositionForIOSAndroidSAAS : System.Web.UI.Page
                     }
                     if (ds.Tables[0].Rows[0]["OCheckOutIsMust"].ToString().Trim() == "YES" && douMinutes < 30)
                     {
-                        RBL_ShiftType.Items.Add(new ListItem(Resources.lang.JiaBanXiaBanShiJian, "MidnightWorkEndTime"));
+                        RBL_ShiftType.Items.Add(new ListItem(LanguageHandle.GetWord("JiaBanXiaBanShiJian").ToString().Trim(), "MidnightWorkEndTime"));
                         RBL_ShiftType.Items[0].Selected = true;
                     }
 
@@ -279,7 +279,7 @@ public partial class TTAPPGetUserPositionForIOSAndroidSAAS : System.Web.UI.Page
 
         if (strLeaderCode == "")
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZBNQDGSZGBNWKQJC + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBNQDGSZGBNWKQJC").ToString().Trim() + "');</script>");
             return;
         }
 
@@ -359,7 +359,7 @@ public partial class TTAPPGetUserPositionForIOSAndroidSAAS : System.Web.UI.Page
             }
             else
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "333", "<script>alert('" + Resources.lang.ZZQXZBCLX + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "333", "<script>alert('" + LanguageHandle.GetWord("ZZQXZBCLX").ToString().Trim() + "');</script>");
                 return;
             }
 

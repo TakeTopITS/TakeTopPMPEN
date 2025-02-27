@@ -92,11 +92,11 @@ public partial class TTWorkFlowDesignerJS : System.Web.UI.Page
 
             workFlowTemplateBLL.UpdateWorkFlowTemplate(workFlowTemplate, strTemName);
             
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZBCCG + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "');</script>");
         }
         catch
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZBCSB + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "');</script>");
         }
     }
 

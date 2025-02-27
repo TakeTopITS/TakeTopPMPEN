@@ -36,7 +36,7 @@ public partial class TTMakeStandBookInformation : System.Web.UI.Page
 
             LoadBookType();
 
-            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityAsset(Resources.lang.ZZJGT, TreeView1, strUserCode);
+            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthorityAsset(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             LoadBookList(strUserCode, "0");
@@ -91,7 +91,7 @@ public partial class TTMakeStandBookInformation : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(TB_BarCode.Text.Trim()) || TB_BarCode.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGBZBHBNWKCZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGBZBHBNWKCZSBJC").ToString().Trim() + "')", true);
             TB_BarCode.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -100,7 +100,7 @@ public partial class TTMakeStandBookInformation : System.Web.UI.Page
         }
         if (string.IsNullOrEmpty(TB_BookName.Text.Trim()) || TB_BookName.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGBZMCBNWKCZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGBZMCBNWKCZSBJC").ToString().Trim() + "')", true);
             TB_BookName.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -109,7 +109,7 @@ public partial class TTMakeStandBookInformation : System.Web.UI.Page
         }
         if (IsBookInformation(TB_BarCode.Text.Trim(), string.Empty))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGBZBHZSJBZYCZJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGBZBHZSJBZYCZJC").ToString().Trim() + "')", true);
             TB_BarCode.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -147,20 +147,20 @@ public partial class TTMakeStandBookInformation : System.Web.UI.Page
         bookInformation.UseNum = 0;
         bookInformation.Version = TB_Version.Text.Trim();
         bookInformation.BookImage = HL_StandardDocURL.NavigateUrl;
-        bookInformation.BookType = "标准";
+        bookInformation.BookType = "标准"; 
         bookInformation.ClassificationCode = TextBox1.Text.Trim();
 
         try
         {
             bookInformationBLL.AddBookInformation(bookInformation);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
 
             LoadBookList(strUserCode, "0");
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -171,7 +171,7 @@ public partial class TTMakeStandBookInformation : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(TB_BarCode.Text.Trim()) || TB_BarCode.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGBZBHBNWKCZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGBZBHBNWKCZSBJC").ToString().Trim() + "')", true);
             TB_BarCode.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -180,7 +180,7 @@ public partial class TTMakeStandBookInformation : System.Web.UI.Page
         }
         if (string.IsNullOrEmpty(TB_BookName.Text.Trim()) || TB_BookName.Text.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGBZMCBNWKCZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGBZMCBNWKCZSBJC").ToString().Trim() + "')", true);
             TB_BookName.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -189,7 +189,7 @@ public partial class TTMakeStandBookInformation : System.Web.UI.Page
         }
         if (IsBookInformation(TB_BarCode.Text.Trim(), string.IsNullOrEmpty(lbl_ID.Text.Trim()) ? "0" : lbl_ID.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGBZBHZSJBZYCZJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGBZBHZSJBZYCZJC").ToString().Trim() + "')", true);
             TB_BarCode.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -228,20 +228,20 @@ public partial class TTMakeStandBookInformation : System.Web.UI.Page
         bookInformation.Translator = TB_Translator.Text.Trim();
         bookInformation.Version = TB_Version.Text.Trim();
         bookInformation.BookImage = HL_StandardDocURL.NavigateUrl;
-        bookInformation.BookType = "标准";
+        bookInformation.BookType = "标准"; 
         bookInformation.ClassificationCode = TextBox1.Text.Trim();
 
         try
         {
             bookInformationBLL.UpdateBookInformation(bookInformation, bookInformation.ID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
 
             LoadBookList(strUserCode, "1");
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
 
@@ -309,13 +309,13 @@ public partial class TTMakeStandBookInformation : System.Web.UI.Page
                 {
                     ShareClass.RunSqlCommand(strHQL);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
 
                     LoadBookList(strUserCode, "0");
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -332,7 +332,7 @@ public partial class TTMakeStandBookInformation : System.Web.UI.Page
         string strHQL;
         string strDepartString = LB_DepartString.Text.Trim();
 
-        strHQL = "Select * From T_BookInformation Where BookType = '标准' ";
+        strHQL = "Select * From T_BookInformation Where BookType = '标准' "; 
         strHQL += " and DepartCode in " + strDepartString;
 
         if (!string.IsNullOrEmpty(TextBox2.Text.Trim()))
@@ -358,7 +358,7 @@ public partial class TTMakeStandBookInformation : System.Web.UI.Page
         string strHQL;
         IList lst;
         //绑定分类BindDDL();
-        strHQL = "Select ID,ClassificationType || '_' || ClassificationCode || '_' || Remark as ClassificationName From T_BookClassification Where DataType='标准分类' Order By ID ASC ";
+        strHQL = "Select ID,ClassificationType || '_' || ClassificationCode || '_' || Remark as ClassificationName From T_BookClassification Where DataType='标准分类' Order By ID ASC "; 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_BookClassification");
         DL_BookClassificationId.DataSource = ds;
         DL_BookClassificationId.DataBind();
@@ -423,11 +423,11 @@ public partial class TTMakeStandBookInformation : System.Web.UI.Page
         string strHQL;
         if (!string.IsNullOrEmpty(strId.Trim()))
         {
-            strHQL = "Select BarCode From T_BookInformation Where BookType = '标准' and BarCode='" + strBarCode + "' and ID<>'" + strId + "' ";
+            strHQL = "Select BarCode From T_BookInformation Where BookType = '标准' and BarCode='" + strBarCode + "' and ID<>'" + strId + "' "; 
         }
         else
         {
-            strHQL = "Select BarCode From T_BookInformation Where BookType = '标准' and BarCode='" + strBarCode + "'";
+            strHQL = "Select BarCode From T_BookInformation Where BookType = '标准' and BarCode='" + strBarCode + "'"; 
         }
         DataTable dt = ShareClass.GetDataSetFromSql(strHQL, "T_BookInformation").Tables[0];
         if (dt.Rows.Count > 0 && dt != null)

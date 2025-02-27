@@ -1,10 +1,10 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-//æ•°æ®å±‚ç›¸å…³çš„é¡¹ç›®
+//Êı¾İ²ãÏà¹ØµÄÏîÄ¿
 using TakeTopGantt.models;
 using Devart.Data.Linq;
 using Newtonsoft.Json.Converters;
@@ -30,12 +30,12 @@ namespace TakeTopGantt.handler
             String data = null;
             dependency[] jsonData = null;
 
-            //åœ¨æ–°å»ºçš„é¡¹ç›®ä¸­ï¼Œ å¯èƒ½id=â€œâ€æˆ–ç©ºï¼Œ 
+            //ÔÚĞÂ½¨µÄÏîÄ¿ÖĞ£¬ ¿ÉÄÜid=¡°¡±»ò¿Õ£¬ 
             var settings = new JsonSerializerSettings();
             settings.NullValueHandling = NullValueHandling.Ignore;
 
-            //åˆ¤æ–­å½“å‰ç”¨æˆ·æœ‰æ²¡æœ‰ä¿®æ”¹ç”¨æˆ·è®¡åˆ’çš„æƒé™
-            //åˆ¤æ–­å½“å‰ç”¨æˆ·æœ‰æ²¡æœ‰ä¿®æ”¹ç”¨æˆ·è®¡åˆ’çš„æƒé™
+            //ÅĞ¶Ïµ±Ç°ÓÃ»§ÓĞÃ»ÓĞĞŞ¸ÄÓÃ»§¼Æ»®µÄÈ¨ÏŞ
+            //ÅĞ¶Ïµ±Ç°ÓÃ»§ÓĞÃ»ÓĞĞŞ¸ÄÓÃ»§¼Æ»®µÄÈ¨ÏŞ
             int pid = Convert.ToInt32(Request["pid"]);
             if (GanttShareClass.CheckUserCanUpdatePlan(pid.ToString()) == false || GanttShareClass.CheckIsCanUpdatePlanByProjectStatus(pid.ToString()) == false)
             {
@@ -67,7 +67,7 @@ namespace TakeTopGantt.handler
                     break;
 
             }
-            //ç›´æ¥ç”¨è¿™ä¸ªè¾“å‡º
+            //Ö±½ÓÓÃÕâ¸öÊä³ö
             this.Response.Write(ret);
             this.Response.End();
         }
@@ -75,7 +75,7 @@ namespace TakeTopGantt.handler
 
         public Object Get()
         {
-            //æŸ¥æ‰¾é¡¹ç›®çš„id
+            //²éÕÒÏîÄ¿µÄid
             int pid = Convert.ToInt32(Request["pid"]);
             return _db.dependency.Where(b => b.pid == pid);
         }
@@ -83,16 +83,16 @@ namespace TakeTopGantt.handler
 
         public Object Create(dependency[] jsonData)
         {
-            //æŸ¥æ‰¾é¡¹ç›®çš„id
+            //²éÕÒÏîÄ¿µÄid
             int pid = Convert.ToInt32(Request["pid"]);
 
-            //å¼ºè¡Œè®¾ç½®pidï¼Œ é¿å…
+            //Ç¿ĞĞÉèÖÃpid£¬ ±ÜÃâ
             foreach (dependency t in jsonData)
             {
                 t.pid = pid;
             }
 
-            //ç›´æ¥insertåˆ°æ•°æ®è¡¨ä¸­
+            //Ö±½Óinsertµ½Êı¾İ±íÖĞ
             _db.dependency.InsertAllOnSubmit(jsonData);
             _db.SubmitChanges(ConflictMode.ContinueOnConflict);
             return jsonData;
@@ -109,7 +109,7 @@ namespace TakeTopGantt.handler
                     dep.to_id = d.to_id;
                     dep.pid = d.pid;
                     dep.type = d.type;
-                    //todo æ²¡æœ‰lag day
+                    //todo Ã»ÓĞlag day
                 }
             }
             _db.SubmitChanges();

@@ -37,7 +37,7 @@ public partial class TTGDPressureObjectEdit : System.Web.UI.Page
 
             if (!ShareClass.CheckStringRight(strPressureObject))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSYJZBNWFFZF+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSYJZBNWFFZF").ToString().Trim()+"')", true);
                 return;
             }
 

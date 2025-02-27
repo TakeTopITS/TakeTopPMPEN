@@ -48,7 +48,7 @@ public partial class TTExpenseApplicationToFinanceHandleForm : System.Web.UI.Pag
             LB_UserCode.Text = strUserCode;
             LB_UserName.Text = strUserName;
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT, TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             strHQL = "from ExpenseApplyWL as expenseApplyWL where ";
@@ -72,7 +72,7 @@ public partial class TTExpenseApplicationToFinanceHandleForm : System.Web.UI.Pag
 
             LB_Amount.Text = deExpense.ToString();
 
-            LB_QueryScope.Text = Resources.lang.ZZZhiXingZhe + strUserCode + strUserName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZhe").ToString().Trim() + strUserCode + strUserName;
         }
     }
 
@@ -91,7 +91,7 @@ public partial class TTExpenseApplicationToFinanceHandleForm : System.Web.UI.Pag
             strDepartCode = treeNode.Target.Trim();
             strDepartName = GetDepartName(strDepartCode);
 
-            LB_QueryScope.Text = Resources.lang.ZZZBuMen + strDepartName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen").ToString().Trim() + strDepartName;
 
             ShareClass.LoadUserByDepartCodeForDataGrid(strDepartCode, DataGrid1);
 
@@ -114,7 +114,7 @@ public partial class TTExpenseApplicationToFinanceHandleForm : System.Web.UI.Pag
             LB_Amount.Text = deExpense.ToString();
 
 
-            LB_QueryScope.Text = Resources.lang.ZZZBuMen + strDepartName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen").ToString().Trim() + strDepartName;
             LB_Sql.Text = strHQL;
 
             LB_OperatorCode.Text = "";
@@ -155,7 +155,7 @@ public partial class TTExpenseApplicationToFinanceHandleForm : System.Web.UI.Pag
 
         LB_Amount.Text = deExpense.ToString();
 
-        LB_QueryScope.Text = Resources.lang.ZZZhiXingZhe + strUserCode + " " + strUserName;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZhe").ToString().Trim() + strUserCode + " " + strUserName;
         LB_Sql.Text = strHQL;
 
         LoadRelatedWL("ExpenseRequest", -1);
@@ -202,7 +202,7 @@ public partial class TTExpenseApplicationToFinanceHandleForm : System.Web.UI.Pag
                         strAccount = expenseApplyWL.Account.Trim();
 
                         intReAndPayalbeID = ShareClass.InsertReceivablesOrPayableByAccount("Payables", "ExpenseAO", "ExpenseAO", strID, strID, strAccountCode, strAccount, deAmount, strCurrencyType, strReAndPayer, strUserCode, intProjectID);
-                        ShareClass.InsertReceivablesOrPayableRecord("Payables", intReAndPayalbeID, deAmount, "в╙ук", strCurrencyType, strReAndPayer, strUserCode, intProjectID);
+                        ShareClass.InsertReceivablesOrPayableRecord("Payables", intReAndPayalbeID, deAmount, "в╙ук", strCurrencyType, strReAndPayer, strUserCode, intProjectID); 
 
                         strHQL = "Update T_ConstractPayable Set OutOfPocketAccount = " + deAmount.ToString() + ",UNPayAmount = 0 Where ID = " + intReAndPayalbeID.ToString();
                         ShareClass.RunSqlCommand(strHQL);
@@ -212,16 +212,16 @@ public partial class TTExpenseApplicationToFinanceHandleForm : System.Web.UI.Pag
 
                         e.Item.Cells[8].Text = "Recorded";
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJZCG + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG").ToString().Trim() + "')", true);
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBZYZTWTGHWCDCNJZJC + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBZYZTWTGHWCDCNJZJC").ToString().Trim() + "')", true);
                     }
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBBNZFJZ + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBNZFJZ").ToString().Trim() + "')", true);
                 }
             }
 
@@ -301,7 +301,7 @@ public partial class TTExpenseApplicationToFinanceHandleForm : System.Web.UI.Pag
 
         LB_Amount.Text = deExpense.ToString();
 
-        LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim();
 
         LoadRelatedWL("ExpenseRequest", -1);
     }

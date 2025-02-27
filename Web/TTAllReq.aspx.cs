@@ -48,7 +48,7 @@ public partial class TTAllReq : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
         {
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT, TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             strHQL = "from Requirement as requirement ";
@@ -62,7 +62,7 @@ public partial class TTAllReq : System.Web.UI.Page
 
             LB_Sql.Text = strHQL;
 
-            LB_QueryScope.Text = Resources.lang.ZZXQSQZSY;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZXQSQZSY").ToString().Trim();
 
 
             strHQL = "from ReqStatus as reqStatus";
@@ -90,7 +90,7 @@ public partial class TTAllReq : System.Web.UI.Page
             strDepartCode = treeNode.Target.Trim();
             strDepartName = GetDepartName(strDepartCode);
 
-            LB_QueryScope.Text = Resources.lang.ZZZBuMen + strDepartName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen").ToString().Trim() + strDepartName;
 
             ShareClass.LoadUserByDepartCodeForDataGrid(strDepartCode, DataGrid1);
 
@@ -111,7 +111,7 @@ public partial class TTAllReq : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        LB_QueryScope.Text = Resources.lang.ZZXQSQZSY;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZXQSQZSY").ToString().Trim();
 
         DataGrid1.Visible = false;
 
@@ -142,7 +142,7 @@ public partial class TTAllReq : System.Web.UI.Page
 
         LB_DepartCode.Text = "";
 
-        LB_QueryScope.Text = Resources.lang.Applicant + ":" + strOperatorCode + strOperatorName;
+        LB_QueryScope.Text = LanguageHandle.GetWord("Applicant").ToString().Trim() + ":" + strOperatorCode + strOperatorName;
 
         RequirementBLL requirementBLL = new RequirementBLL();
         IList lst = requirementBLL.GetAllRequirements(strHQL);
@@ -168,7 +168,7 @@ public partial class TTAllReq : System.Web.UI.Page
             strHQL += " and requirement.ApplicantCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
             strHQL += " order by requirement.ReqID DESC";
 
-            LB_QueryScope.Text = Resources.lang.ZZApplicantAll + " " + Resources.lang.ZhuangTai + ":" + strStatus;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicantAll").ToString().Trim() + " " + LanguageHandle.GetWord("ZhuangTai").ToString().Trim() + ":" + strStatus;
         }
 
 
@@ -180,7 +180,7 @@ public partial class TTAllReq : System.Web.UI.Page
                 strHQL = "from Requirement as requirement where requirement.ApplicantCode = " + "'" + strOperatorCode + "'" + " and " + "requirement.Status = " + "'" + strStatus + "'";
                 strHQL += " and requirement.ApplicantCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
                 strHQL += " order by requirement.ReqID DESC";
-                LB_QueryScope.Text = Resources.lang.Applicant + ":" + strOperatorCode + strOperatorName + " " + Resources.lang.ZhuangTai + ":" + strStatus;
+                LB_QueryScope.Text = LanguageHandle.GetWord("Applicant").ToString().Trim() + ":" + strOperatorCode + strOperatorName + " " + LanguageHandle.GetWord("ZhuangTai").ToString().Trim() + ":" + strStatus;
             }
             else
             {
@@ -189,7 +189,7 @@ public partial class TTAllReq : System.Web.UI.Page
                 strHQL = "from Requirement as requirement where requirement.ApplicantCode in (select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + ") and " + "requirement.Status = " + "'" + strStatus + "'";
                 strHQL += " and requirement.ApplicantCode in (Select projectMember.UserCode From ProjectMember as projectMember Where projectMember.DepartCode in " + strDepartString + ")";
                 strHQL += " order by requirement.ReqID DESC";
-                LB_QueryScope.Text = Resources.lang.ZZZBuMen + strDepartName + " &nbsp;&nbsp;ÐèÇó×´Ì¬£º" + strStatus;
+                LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen").ToString().Trim() + strDepartName + LanguageHandle.GetWord("nbspnbspXuQiuZhuangTai").ToString().Trim() + strStatus;
 
             }
         }

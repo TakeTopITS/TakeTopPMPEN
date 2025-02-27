@@ -69,7 +69,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
                     (
                     select ProjectCode from T_Project
                     where Status in ('Deleted')
-                    )", strUserCode);
+                    )", strUserCode); 
        
         if (!string.IsNullOrEmpty(strProjectCode))
         {
@@ -139,17 +139,17 @@ public partial class TTWZProjectReple : System.Web.UI.Page
                 if (projectList != null && projectList.Count == 1)
                 {
                     WZProject wZProject = (WZProject)projectList[0];
-                    if (wZProject.Progress == "立项")
+                    if (wZProject.Progress == LanguageHandle.GetWord("LiXiang").ToString().Trim())
                     {
                         if (string.IsNullOrEmpty(wZProject.StoreRoom) && string.IsNullOrEmpty(wZProject.PurchaseManager) &&
                             string.IsNullOrEmpty(wZProject.PurchaseEngineer) && string.IsNullOrEmpty(wZProject.Contracter) &&
                             string.IsNullOrEmpty(wZProject.Checker) && string.IsNullOrEmpty(wZProject.Safekeep))
                         {
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKGZXWCLXLMDJCZL + "')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKGZXWCLXLMDJCZL").ToString().Trim() + "')", true);
                             return;
                         }
 
-                        wZProject.Progress = "开工";
+                        wZProject.Progress = LanguageHandle.GetWord("KaiGong").ToString().Trim();
                         wZProjectBLL.UpdateWZProject(wZProject, cmdArges);
 
                         //重新加载列表
@@ -162,7 +162,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
                         //把按钮状态禁用
                         ControlStatusCloseChange();
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKGCG + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKGCG").ToString().Trim() + "')", true);
                     }
                 }
             }
@@ -176,9 +176,9 @@ public partial class TTWZProjectReple : System.Web.UI.Page
                 if (projectList != null && projectList.Count == 1)
                 {
                     WZProject wZProject = (WZProject)projectList[0];
-                    if (wZProject.Progress == "开工")
+                    if (wZProject.Progress == LanguageHandle.GetWord("KaiGong").ToString().Trim())
                     {
-                        wZProject.Progress = "立项";
+                        wZProject.Progress = LanguageHandle.GetWord("LiXiang").ToString().Trim();
                         wZProjectBLL.UpdateWZProject(wZProject, cmdArges);
 
                         //重新加载列表
@@ -191,7 +191,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
                         //把按钮状态禁用
                         ControlStatusCloseChange();
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKGTHCG + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKGTHCG").ToString().Trim() + "')", true);
                     }
                 }
             }
@@ -277,7 +277,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
                     left join T_ProjectMember pa on p.Marker = pa.UserCode
                     left join T_ProjectMember pu on p.SupplementEditor = pu.UserCode
                     where p.Progress != '录入' 
-                    and (p.SupplementEditor = '{0}' or p.SupplementEditor = '-')", strUserCode);
+                    and (p.SupplementEditor = '{0}' or p.SupplementEditor = '-')", strUserCode); 
 
         if (!string.IsNullOrEmpty(strProjectCode))
         {
@@ -352,7 +352,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
                     left join T_ProjectMember pa on p.Marker = pa.UserCode
                     left join T_ProjectMember pu on p.SupplementEditor = pu.UserCode
                     where p.Progress != '录入' 
-                    and (p.SupplementEditor = '{0}' or p.SupplementEditor = '-')", strUserCode);
+                    and (p.SupplementEditor = '{0}' or p.SupplementEditor = '-')", strUserCode); 
 
         if (!string.IsNullOrEmpty(strProjectCode))
         {
@@ -426,7 +426,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
                     left join T_ProjectMember pa on p.Marker = pa.UserCode
                     left join T_ProjectMember pu on p.SupplementEditor = pu.UserCode
                     where p.Progress != '录入' 
-                    and (p.SupplementEditor = '{0}' or p.SupplementEditor = '-')", strUserCode);
+                    and (p.SupplementEditor = '{0}' or p.SupplementEditor = '-')", strUserCode); 
 
         if (!string.IsNullOrEmpty(strProjectCode))
         {
@@ -490,7 +490,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
         //无，则写记录：工程项目〈使用标记〉＝“0”，然后继续做下一条												
         //循环检查，直到工程项目表单最后一条记录后结束												
         WZProjectBLL wZProjectBLL = new WZProjectBLL();
-        string strProjectHQL = "from WZProject as wZProject where Progress = '开工'";
+        string strProjectHQL = "from WZProject as wZProject where Progress = '开工'"; 
         IList listProject = wZProjectBLL.GetAllWZProjects(strProjectHQL);
         if (listProject != null && listProject.Count > 0)
         {
@@ -522,13 +522,13 @@ public partial class TTWZProjectReple : System.Web.UI.Page
             //把按钮状态禁用
             ControlStatusCloseChange();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('重做使用标记完成！');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('重做使用标记完成！');", true); 
         }
         else
         {
             //把按钮状态禁用
             //ControlStatusCloseChange();
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('暂时没有进度在开工的项目，请稍后有开工项目时再重做使用标记！');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('暂时没有进度在开工的项目，请稍后有开工项目时再重做使用标记！');", true); 
             return;
         }
     }
@@ -570,7 +570,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
                             COALESCE(SUM(CompactMoney),0) as TotalCompactMoney 
                             from T_WZCompact
                             where Progress = '生效'
-                            and ProjectCode = '{0}'", strProjectCode);
+                            and ProjectCode = '{0}'", strProjectCode); 
                 DataTable dtCompact = ShareClass.GetDataSetFromSql(strCompactHQL, "Compact").Tables[0];
                 decimal decimalContractMoney = 0;
                 decimal.TryParse(ShareClass.ObjectToString(dtCompact.Rows[0]["TotalCompactMoney"]), out decimalContractMoney);
@@ -630,14 +630,14 @@ public partial class TTWZProjectReple : System.Web.UI.Page
             //把按钮状态禁用
             ControlStatusCloseChange();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('项目统计完成！');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('项目统计完成！');", true); 
         }
         else
         {
             //把按钮状态禁用
             //ControlStatusCloseChange();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('暂时没有项目，请稍后有项目时再做项目统计！');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('暂时没有项目，请稍后有项目时再做项目统计！');", true); 
             return;
         }
     }
@@ -664,7 +664,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
         string strEditProjectCode = HF_ProjectCode.Value;
         if (string.IsNullOrEmpty(strEditProjectCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDXM + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDXM").ToString().Trim() + "')", true);
             return;
         }
 
@@ -683,7 +683,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
         string strEditProjectCode = HF_ProjectCode.Value;
         if (string.IsNullOrEmpty(strEditProjectCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDXM + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDXM").ToString().Trim() + "')", true);
             return;
         }
 
@@ -693,13 +693,13 @@ public partial class TTWZProjectReple : System.Web.UI.Page
         if (projectList != null && projectList.Count == 1)
         {
             WZProject wZProject = (WZProject)projectList[0];
-            if (wZProject.Progress == "立项")
+            if (wZProject.Progress == LanguageHandle.GetWord("LiXiang").ToString().Trim())
             {
                 string strCurrentProgress = wZProject.Progress;
                 string strSupplementEditor = wZProject.SupplementEditor;
                 string strAuthorityPurchase = wZProject.PowerPurchase.Trim();
 
-                if (strAuthorityPurchase == "有")
+                if (strAuthorityPurchase == LanguageHandle.GetWord("You").ToString().Trim())
                 {
                     if (string.IsNullOrEmpty(wZProject.StoreRoom) || string.IsNullOrEmpty(wZProject.PurchaseManager) ||
                       string.IsNullOrEmpty(wZProject.PurchaseEngineer) || string.IsNullOrEmpty(wZProject.Contracter) ||
@@ -707,7 +707,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
                     {
                         ////按钮控制
                         //ControlStatusChange(HF_Progress.Value, HF_SupplementEditor.Value);
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKGZXWCLXLMDJCZL + "');", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKGZXWCLXLMDJCZL").ToString().Trim() + "');", true);
                         return;
                     }
                 }
@@ -718,12 +718,12 @@ public partial class TTWZProjectReple : System.Web.UI.Page
                     {
                         ////按钮控制
                         //ControlStatusChange(HF_Progress.Value, HF_SupplementEditor.Value);
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKGZXWCLXLMDJCZL + "');", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKGZXWCLXLMDJCZL").ToString().Trim() + "');", true);
                         return;
                     }
                 }
 
-                wZProject.Progress = "开工";
+                wZProject.Progress = LanguageHandle.GetWord("KaiGong").ToString().Trim();
                 wZProjectBLL.UpdateWZProject(wZProject, strEditProjectCode);
 
                 //重新加载列表
@@ -735,7 +735,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
 
                 //把按钮状态禁用
                 ControlStatusCloseChange();
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKGCG + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKGCG").ToString().Trim() + "');", true);
             }
         }
     }
@@ -748,7 +748,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
         string strEditProjectCode = HF_ProjectCode.Value;
         if (string.IsNullOrEmpty(strEditProjectCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDXM + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDXM").ToString().Trim() + "')", true);
             return;
         }
 
@@ -758,9 +758,9 @@ public partial class TTWZProjectReple : System.Web.UI.Page
         if (projectList != null && projectList.Count == 1)
         {
             WZProject wZProject = (WZProject)projectList[0];
-            if (wZProject.Progress == "开工")
+            if (wZProject.Progress == LanguageHandle.GetWord("KaiGong").ToString().Trim())
             {
-                wZProject.Progress = "立项";
+                wZProject.Progress = LanguageHandle.GetWord("LiXiang").ToString().Trim();
                 wZProjectBLL.UpdateWZProject(wZProject, strEditProjectCode);
 
                 //重新加载列表
@@ -773,7 +773,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
                 //把按钮状态禁用
                 ControlStatusCloseChange();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKGTHCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKGTHCG").ToString().Trim() + "')", true);
             }
         }
     }
@@ -786,7 +786,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
         string strEditProjectCode = HF_ProjectCode.Value;
         if (string.IsNullOrEmpty(strEditProjectCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDXM + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDXM").ToString().Trim() + "')", true);
             return;
         }
 
@@ -807,7 +807,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
     {
         BT_NewBrowse.Enabled = true;
 
-        if ((strProgress == "立项") && (strSupplementEditor == null || strSupplementEditor == "" || strSupplementEditor == strUserCode || strSupplementEditor == "-") && strIsMark != "-1")
+        if ((strProgress == LanguageHandle.GetWord("LiXiang").ToString().Trim()) && (strSupplementEditor == null || strSupplementEditor == "" || strSupplementEditor == strUserCode || strSupplementEditor == "-") && strIsMark != "-1")
         {
 
             BT_NewEdit.Enabled = true;
@@ -818,7 +818,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
 
         }
 
-        if (strProgress == "立项")
+        if (strProgress == LanguageHandle.GetWord("LiXiang").ToString().Trim())
         {
             BT_NewStart.Enabled = true;
 
@@ -829,7 +829,7 @@ public partial class TTWZProjectReple : System.Web.UI.Page
 
         }
 
-        if (strProgress == "开工" && strIsMark != "-1")
+        if (strProgress == LanguageHandle.GetWord("KaiGong").ToString().Trim() && strIsMark != "-1")
         {
             BT_NewReturnStart.Enabled = true;
         }

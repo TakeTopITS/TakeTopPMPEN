@@ -1,11 +1,11 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-//æ•°æ®å±‚ç›¸å…³çš„é¡¹ç›®
+//Êý¾Ý²ãÏà¹ØµÄÏîÄ¿
 using TakeTopGantt.models;
 using Devart.Data.Linq;
 using Newtonsoft.Json.Converters;
@@ -31,11 +31,11 @@ namespace TakeTopGantt.handler
             String data = null;
             task[] jsonData = null;
 
-            //åœ¨æ–°å»ºçš„é¡¹ç›®ä¸­ï¼Œ å¯èƒ½id=â€œâ€æˆ–ç©ºï¼Œ 
+            //ÔÚÐÂ½¨µÄÏîÄ¿ÖÐ£¬ ¿ÉÄÜid=¡°¡±»ò¿Õ£¬ 
             var settings = new JsonSerializerSettings();
             settings.NullValueHandling = NullValueHandling.Ignore;
 
-            //åˆ¤æ–­å½“å‰ç”¨æˆ·æœ‰æ²¡æœ‰ä¿®æ”¹ç”¨æˆ·è®¡åˆ’çš„æƒé™
+            //ÅÐ¶Ïµ±Ç°ÓÃ»§ÓÐÃ»ÓÐÐÞ¸ÄÓÃ»§¼Æ»®µÄÈ¨ÏÞ
             int pid = Convert.ToInt32(Request["pid"]);
             if (GanttShareClass.CheckUserCanUpdatePlan(pid.ToString()) == false || GanttShareClass.CheckIsCanUpdatePlanByProjectStatus(pid.ToString()) == false)
             {
@@ -73,16 +73,16 @@ namespace TakeTopGantt.handler
         }
 
         /*********************************************************
-         * ä»¥ä¸‹åˆ†åˆ«æ˜¯å¢žåˆ æ”¹æŸ¥çš„å…·ä½“å®žçŽ°
+         * ÒÔÏÂ·Ö±ðÊÇÔöÉ¾¸Ä²éµÄ¾ßÌåÊµÏÖ
          * *******************************************************/
-        //èŽ·å–è®¡åˆ’åˆ—è¡¨
+        //»ñÈ¡¼Æ»®ÁÐ±í
         public object Get()
         {
             extganttDataContext _db = new extganttDataContext();
-            //æŸ¥æ‰¾é¡¹ç›®çš„id
+            //²éÕÒÏîÄ¿µÄid
             int pid = Convert.ToInt32(Request["pid"]);
 
-            //å–å€¼æ˜¯parent_id = nullæ˜¯
+            //È¡ÖµÊÇparent_id = nullÊÇ
             var rootTasks = _db.task.Where(b => b.parent_id == 0 && b.pid == pid);
             List<NestedTaskModel> roots = new List<NestedTaskModel>();
 
@@ -97,19 +97,19 @@ namespace TakeTopGantt.handler
         }
 
 
-        //æ–°å»ºè®¡åˆ’ï¼Œ æ³¨æ„è®¡åˆ’çš„pidåº”è¯¥ä¿å­˜
+        //ÐÂ½¨¼Æ»®£¬ ×¢Òâ¼Æ»®µÄpidÓ¦¸Ã±£´æ
         public Object Create(task[] jsonData)
         {
-            //æŸ¥æ‰¾é¡¹ç›®çš„id
+            //²éÕÒÏîÄ¿µÄid
             int pid = Convert.ToInt32(Request["pid"]);
 
             extganttDataContext _db = new extganttDataContext();
 
-            //å¼ºè¡Œè®¾ç½®pidï¼Œ é¿å…å¤šä¸ªé¡¹ç›®æ··æ·†
+            //Ç¿ÐÐÉèÖÃpid£¬ ±ÜÃâ¶à¸öÏîÄ¿»ìÏý
             foreach (task t in jsonData)
             {
                 t.pid = pid;
-                //bryntum ä¼šå°†rootèŠ‚ç‚¹çš„parentidè®¾ç½®ä¸ºnullï¼Œ æˆ‘ä»¬è½¯ä»¶æ˜¯ç”¨0æ¥åˆ¤æ–­çš„
+                //bryntum »á½«root½ÚµãµÄparentidÉèÖÃÎªnull£¬ ÎÒÃÇÈí¼þÊÇÓÃ0À´ÅÐ¶ÏµÄ
                 if (t.parent_id == null)
                 {
                     t.parent_id = 0;
@@ -129,7 +129,7 @@ namespace TakeTopGantt.handler
             return roots;
         }
 
-        //è®¡åˆ’çš„æ›´æ–°æ“ä½œ
+        //¼Æ»®µÄ¸üÐÂ²Ù×÷
         public Object Update(task[] jsonData)
         {
             extganttDataContext _db = new extganttDataContext();
@@ -191,7 +191,7 @@ namespace TakeTopGantt.handler
 
                     t.remark = vals.remark;
                     t.taskcolor = vals.taskcolor;
-                    //bryntum ä¼šå°†rootèŠ‚ç‚¹çš„parentidè®¾ç½®ä¸ºnullï¼Œ æˆ‘ä»¬è½¯ä»¶æ˜¯ç”¨0æ¥åˆ¤æ–­çš„
+                    //bryntum »á½«root½ÚµãµÄparentidÉèÖÃÎªnull£¬ ÎÒÃÇÈí¼þÊÇÓÃ0À´ÅÐ¶ÏµÄ
                     if (t.parent_id == null)
                     {
                         t.parent_id = 0;
@@ -219,7 +219,7 @@ namespace TakeTopGantt.handler
             {
                 task taskInDb = _db.task.SingleOrDefault(b => b.id == t.id);
 
-                //å…ˆåˆ é™¤è®¡åˆ’çš„å…³è”å…³ç³»ï¼Œå†åˆ é™¤è®¡åˆ’
+                //ÏÈÉ¾³ý¼Æ»®µÄ¹ØÁª¹ØÏµ£¬ÔÙÉ¾³ý¼Æ»®
                 if (taskInDb != null)
                 {
                     var deps = _db.dependency.Where(b => (b.to_id == t.id || b.from_id == t.id));
@@ -231,11 +231,11 @@ namespace TakeTopGantt.handler
             return new { success = true };
         }
 
-        //è®¾ç½®Taskçš„å­èŠ‚ç‚¹
+        //ÉèÖÃTaskµÄ×Ó½Úµã
         protected void SetNodeChildren(NestedTaskModel node)
         {
             extganttDataContext _db = new extganttDataContext();
-            //æŸ¥æ‰¾nodeçš„å„¿å­èŠ‚ç‚¹
+            //²éÕÒnodeµÄ¶ù×Ó½Úµã
             var children = _db.task.Where(b => b.parent_id == node.id);
 
             if (children.Count<task>() > 0)
@@ -251,7 +251,7 @@ namespace TakeTopGantt.handler
                 }
 
                 // Last step, sort children on the 'index' field
-                //æœ€åŽä¸€æ­¥ï¼Œè®¾ç½®nodeçš„index
+                //×îºóÒ»²½£¬ÉèÖÃnodeµÄindex
                 node.children = node.children.OrderBy(a => a.index).ToList();
             }
             node.leaf = (node.children == null);

@@ -46,55 +46,55 @@ public partial class TTRelatedWorkFlowTemplate : System.Web.UI.Page
         if (strRelatedType == "Project")
         {
             strRelatedName = GetProjectName(strRelatedID);
-            //this.Title = Resources.lang.Project + strRelatedID + " " + strRelatedName + " 的工作流模板设置";
+            //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strRelatedID + " " + strRelatedName + "的工作流模板设置";
         }
 
         if (strRelatedType == "ProjectTask")
         {
             strRelatedName = GetProjectTaskName(strRelatedID);
-            //this.Title = "项目任务：" + strRelatedID + " " + strRelatedName + " 的工作流模板设置";
+            //this.Title = LanguageHandle.GetWord("XiangMuRenWu").ToString().Trim() + strRelatedID + " " + strRelatedName + "的工作流模板设置";
         }
 
         if (strRelatedType == "ProjectPlan")
         {
             strRelatedName = GetProjectPlanName(strRelatedID);
-            //this.Title = "项目计划：" + strRelatedID + " " + strRelatedName + " 的工作流模板设置";
+            //this.Title = LanguageHandle.GetWord("XiangMuJiHua").ToString().Trim() + strRelatedID + " " + strRelatedName + "的工作流模板设置";
         }
 
         if (strRelatedType == "Req")
         {
             strRelatedName = GetRequirementName(strRelatedID);
-            //this.Title  = "需求：" + strRelatedID + " " + strRelatedName + " 的工作流模板设置";
+            //this.Title  = LanguageHandle.GetWord("XuQiu").ToString().Trim() + strRelatedID + " " + strRelatedName + "的工作流模板设置";
         }
 
         if (strRelatedType == "Meeting")
         {
             strRelatedName = GetMeetingName(strRelatedID);
-            //this.Title = "会议：" + strRelatedID + " " + strRelatedName + " 的工作流模板设置";
+            //this.Title = LanguageHandle.GetWord("HuiYi").ToString().Trim() + strRelatedID + " " + strRelatedName + "的工作流模板设置";
         }
 
         if (strRelatedType == "ProjectRisk")
         {
             strRelatedName = GetProjectRiskName(strRelatedID);
-            //this.Title = "风险：" + strRelatedID + " " + strRelatedName + " 的工作流模板设置";
+            //this.Title = LanguageHandle.GetWord("FengXian").ToString().Trim() + strRelatedID + " " + strRelatedName + "的工作流模板设置";
         }
 
         if (strRelatedType == "Constract")
         {
             strRelatedName = GetConstractName(strRelatedID);
-            //this.Title = "合同：" + GetConstractCode(strRelatedID) + " " + strRelatedName + "  的工作流模板设置";
+            //this.Title = "合同：" + GetConstractCode(strRelatedID) + " " + strRelatedName + "的工作流模板设置";
         }
 
         if (strRelatedType == "Collaboration")
         {
             strRelatedName = GetCollaborationName(strRelatedID);
-            //this.Title = "协作：" + strRelatedID + " " + strRelatedName + " 的工作流模板设置";
+            //this.Title = "协作：" + strRelatedID + " " + strRelatedName + "的工作流模板设置";
         }
 
         if (strRelatedType == "CustomerService")
         {
             strRelatedName = GetCustomerQuestionName(strRelatedID);
-            //this.Title = Resources.lang.KEHUFUWU  + strRelatedID + " " + strRelatedName + " 的工作流模板设置";
+            //this.Title = LanguageHandle.GetWord("KEHUFUWU").ToString().Trim()  + strRelatedID + " " + strRelatedName + "的工作流模板设置";
         }
 
 
@@ -105,35 +105,35 @@ public partial class TTRelatedWorkFlowTemplate : System.Web.UI.Page
         {
             if (strRelatedType == "Project")
             {
-                TB_WFTemName.Text = Resources.lang.Project + strRelatedID + " " + "       评审流程";
+                TB_WFTemName.Text = LanguageHandle.GetWord("Project").ToString().Trim() + strRelatedID + " " + LanguageHandle.GetWord("PingShenLiuCheng").ToString().Trim();
             }
 
             if (strRelatedType == "ProjectTask")
             {
-                TB_WFTemName.Text = "项目任务：" + strRelatedID + " " + "       评审流程";
+                TB_WFTemName.Text = LanguageHandle.GetWord("XiangMuRenWu").ToString().Trim() + strRelatedID + " " + LanguageHandle.GetWord("PingShenLiuCheng").ToString().Trim();
             }
 
             if (strRelatedType == "ProjectPlan")
             {
-                TB_WFTemName.Text = "项目计划：" + strRelatedID + " " + "       评审流程";
+                TB_WFTemName.Text = LanguageHandle.GetWord("XiangMuJiHua").ToString().Trim() + strRelatedID + " " + LanguageHandle.GetWord("PingShenLiuCheng").ToString().Trim();
 
             }
 
             if (strRelatedType == "Req")
             {
-                TB_WFTemName.Text = "需求：" + strRelatedID + " " + "       评审流程";
+                TB_WFTemName.Text = LanguageHandle.GetWord("XuQiu").ToString().Trim() + strRelatedID + " " + LanguageHandle.GetWord("PingShenLiuCheng").ToString().Trim();
 
             }
 
             if (strRelatedType == "Meeting")
             {
-                TB_WFTemName.Text = "会议：" + strRelatedID + " " + "       评审流程";
+                TB_WFTemName.Text = LanguageHandle.GetWord("HuiYi").ToString().Trim() + strRelatedID + " " + LanguageHandle.GetWord("PingShenLiuCheng").ToString().Trim();
 
             }
 
             if (strRelatedType == "ProjectRisk")
             {
-                TB_WFTemName.Text = "风险：" + strRelatedID + " " + "       评审流程";
+                TB_WFTemName.Text = LanguageHandle.GetWord("FengXian").ToString().Trim() + strRelatedID + " " + LanguageHandle.GetWord("PingShenLiuCheng").ToString().Trim();
 
             }
 
@@ -204,7 +204,7 @@ public partial class TTRelatedWorkFlowTemplate : System.Web.UI.Page
             workFlowTemplate.XSNFile = @"Template\CommonBusinessForm.xsn";
             workFlowTemplate.PageFile = "";
 
-            workFlowTemplate.WFDefinition = "{states:{rect2:{type:'start',text:{text:'开始'}, attr:{ x:209, y:72, width:50, height:50}, props:{guid:{value:'4af6bc4b-7ed9-0b0b-e3a0-91c9d8fd92d1'},text:{value:'开始'}}}},paths:{},props:{props:{name:{value:'新建流程'},key:{value:''},desc:{value:''}}}}";
+            workFlowTemplate.WFDefinition = LanguageHandle.GetWord("statesrect2typestarttexttextKa").ToString().Trim();
 
 
             try
@@ -225,7 +225,7 @@ public partial class TTRelatedWorkFlowTemplate : System.Web.UI.Page
 
                     SelectWorkflowTemplateByTemName(strWorkFlowTemName);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ChengGong + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ChengGong").ToString().Trim() + "')", true);
                 }
                 catch
                 {
@@ -233,12 +233,12 @@ public partial class TTRelatedWorkFlowTemplate : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZSBKNCXTMCMBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBKNCXTMCMBJC").ToString().Trim() + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGZLMCBNWK + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGZLMCBNWK").ToString().Trim() + "')", true);
         }
     }
 
@@ -321,7 +321,7 @@ public partial class TTRelatedWorkFlowTemplate : System.Web.UI.Page
                 HL_WorkFlowDesigner.ForeColor = Color.Red;
             }
 
-            LB_DesignWorkflowTemplate.Text = strTemName + " " + Resources.lang.LiuChengMuBan + Resources.lang.SheJi;
+            LB_DesignWorkflowTemplate.Text = strTemName + " " + LanguageHandle.GetWord("LiuChengMuBan").ToString().Trim() + LanguageHandle.GetWord("SheJi").ToString().Trim();
 
             strRelatedUserCode = LB_RelatedUserCode.Text.Trim();
             strUserCode = LB_UserCode.Text.Trim();
@@ -378,7 +378,7 @@ public partial class TTRelatedWorkFlowTemplate : System.Web.UI.Page
 
         if (strNewTemName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBXMBMCBNKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBXMBMCBNKJC").ToString().Trim() + "')", true);
             return;
         }
 
@@ -405,11 +405,11 @@ public partial class TTRelatedWorkFlowTemplate : System.Web.UI.Page
             }
 
             LoadRelatedWorkFlowTemplateByType(strRelatedType, strRelatedID, strWFType);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFZCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWFZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWFZSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -440,11 +440,11 @@ public partial class TTRelatedWorkFlowTemplate : System.Web.UI.Page
             DL_WLType.SelectedValue = strNewWLType;
             LoadRelatedWorkFlowTemplateByType(strRelatedType, strRelatedID, strNewWLType);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBianGenChengGong + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBianGenChengGong").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBianGenShiBai + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBianGenShiBai").ToString().Trim() + "')", true);
         }
     }
 
@@ -461,11 +461,11 @@ public partial class TTRelatedWorkFlowTemplate : System.Web.UI.Page
         try
         {
             ShareClass.RunSqlCommand(strHQL);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGeiBianCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGeiBianCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGeiBianSBQJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGeiBianSBQJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -492,11 +492,11 @@ public partial class TTRelatedWorkFlowTemplate : System.Web.UI.Page
 
             BT_DeleteWFTemplate.Enabled = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCGZLMBCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCGZLMBCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -546,21 +546,21 @@ public partial class TTRelatedWorkFlowTemplate : System.Web.UI.Page
                     HL_XSNFile.NavigateUrl = strFileName3;
                     HL_XSNFile.Target = "_blank";
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCHCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCHCG").ToString().Trim() + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZYSCDWJ + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZYSCDWJ + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "')", true);
         }
     }
 
@@ -580,11 +580,11 @@ public partial class TTRelatedWorkFlowTemplate : System.Web.UI.Page
             HL_XSNFile.NavigateUrl = "";
             HL_XSNFile.Target = "_blank";
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -634,11 +634,11 @@ public partial class TTRelatedWorkFlowTemplate : System.Web.UI.Page
         try
         {
             workFlowTemplateBLL.UpdateWorkFlowTemplate(workFlowTemplate, strTemName);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
         }
     }
     protected void DataGrid1_ItemCommand(object sender, DataGridCommandEventArgs e)
@@ -772,7 +772,7 @@ public partial class TTRelatedWorkFlowTemplate : System.Web.UI.Page
 
             LoadRelatedWorkFlowTemplateByType(strRelatedType, strRelatedID, strWFType);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
@@ -880,7 +880,7 @@ public partial class TTRelatedWorkFlowTemplate : System.Web.UI.Page
             HL_WorkFlowDesigner.ForeColor = Color.Red;
         }
 
-        LB_DesignWorkflowTemplate.Text = strTemName + " " + Resources.lang.LiuChengMuBan + Resources.lang.SheJi;
+        LB_DesignWorkflowTemplate.Text = strTemName + " " + LanguageHandle.GetWord("LiuChengMuBan").ToString().Trim() + LanguageHandle.GetWord("SheJi").ToString().Trim();
 
         strRelatedUserCode = LB_RelatedUserCode.Text.Trim();
         strUserCode = LB_UserCode.Text.Trim();
@@ -1020,7 +1020,7 @@ public partial class TTRelatedWorkFlowTemplate : System.Web.UI.Page
         TreeNode node3 = new TreeNode();
         TreeNode node4 = new TreeNode();
 
-        node0.Text = "<B>角色组</B>";
+        node0.Text = LanguageHandle.GetWord("BJiaoSeZuB").ToString().Trim();
         node0.Target = "0";
         node0.Expanded = true;
         TreeView.Nodes.Add(node0);
@@ -1049,7 +1049,7 @@ public partial class TTRelatedWorkFlowTemplate : System.Web.UI.Page
         }
 
         node2 = new TreeNode();
-        node2.Text = "<B>所有</B>";
+        node2.Text = LanguageHandle.GetWord("BSuoYouB").ToString().Trim();
         node2.Target = "1";
         node2.Expanded = false;
         node0.ChildNodes.Add(node2);

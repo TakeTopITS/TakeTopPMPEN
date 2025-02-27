@@ -87,7 +87,7 @@ public partial class TTBMWinResultView : System.Web.UI.Page
     {
         if (strBidStatus.Trim().Equals("Y"))
         {
-            return "中标";
+            return "中标"; 
         }
         else if (strBidStatus.Trim().Equals("N"))
         {
@@ -95,7 +95,7 @@ public partial class TTBMWinResultView : System.Web.UI.Page
         }
         else
         {
-            return "未开标";
+            return "未开标"; 
         }
     }
 
@@ -130,7 +130,7 @@ public partial class TTBMWinResultView : System.Web.UI.Page
             for (int i = 0; i < lst.Count; i++)
             {
                 BMSupBidByExp bMSupBidByExp = (BMSupBidByExp)lst[i];
-                result += "专家 " + ShareClass.GetUserName(bMSupBidByExp.ExportCode.Trim()) + "：" + bMSupBidByExp.ExportResult.Trim() + "；";
+                result += LanguageHandle.GetWord("ZhuanGu").ToString().Trim() + ShareClass.GetUserName(bMSupBidByExp.ExportCode.Trim()) + "：" + bMSupBidByExp.ExportResult.Trim() + "；";
             }
         }
         return result;

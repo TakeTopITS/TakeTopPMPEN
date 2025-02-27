@@ -84,7 +84,7 @@ public partial class TTProExpenseView : System.Web.UI.Page
 
                     if (ShareClass.CheckUserCanViewProjectPlan(strPlanID, strUserCode) == false)
                     {
-                        Response.Redirect("TTDisplayCustomErrorMessage.aspx?ErrorMsg='" + Resources.lang.ZZJGZYXMJLJHYJHCJRHLXZJHFZRCNJXZCZQJC + "'");
+                        Response.Redirect("TTDisplayCustomErrorMessage.aspx?ErrorMsg='" + LanguageHandle.GetWord("ZZJGZYXMJLJHYJHCJRHLXZJHFZRCNJXZCZQJC").ToString().Trim() + "'");
                     }
                 }
             }

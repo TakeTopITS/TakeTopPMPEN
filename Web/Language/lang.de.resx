@@ -27621,12 +27621,6 @@
   <data name="CaiWuZhangWuLei1" xml:space="preserve">
     <value>Classe di contabilità finanziaria</value>
   </data>
-  <data name="DaiChuLiYeWu1" xml:space="preserve">
-    <value>In attesa di business</value>
-  </data>
-  <data name="DaJiaGou1" xml:space="preserve">
-    <value>prendere l'architettura</value>
-  </data>
   <data name="GSCSNDDASWXH1" xml:space="preserve">
     <value>Formato: numero di serie CS + + quattro cifre del codice (0001-9999)</value>
   </data>
@@ -27785,5 +27779,8 @@
   </data>
   <data name="UpdateingDatabase" xml:space="preserve">
     <value>The database is being updated, and the system is currently undergoing an upgrade. This process will take a few minutes. Please do not close this window and wait patiently. Thank you!</value>
+  </data>
+  <data name="DangTianYouXiao" xml:space="preserve">
+    <value>Valid for the day</value>
   </data>
 </root>

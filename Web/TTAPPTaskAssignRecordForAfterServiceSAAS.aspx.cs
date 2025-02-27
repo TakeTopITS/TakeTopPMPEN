@@ -75,7 +75,7 @@ public partial class TTAPPTaskAssignRecordForAfterServiceSAAS : System.Web.UI.Pa
                 strTemName = ds.Tables[0].Rows[0]["TemName"].ToString().Trim();
                 strIdentifyString = ShareClass.GetWLTemplateIdentifyString(strTemName);
 
-                strURL = "popShowByURL(" + "'TTRelatedDIYBusinessForm.aspx?RelatedType=TaskRecord&RelatedID=" + strID + "&IdentifyString=" + strIdentifyString + "','" + Resources.lang.XiangGuanYeWuDan + "', 800, 600,window.location);";
+                strURL = "popShowByURL(" + "'TTRelatedDIYBusinessForm.aspx?RelatedType=TaskRecord&RelatedID=" + strID + "&IdentifyString=" + strIdentifyString + "','" + LanguageHandle.GetWord("XiangGuanYeWuDan").ToString().Trim() + "', 800, 600,window.location);";
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop12", strURL, true);
             }
         }

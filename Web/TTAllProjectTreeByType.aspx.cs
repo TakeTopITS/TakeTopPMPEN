@@ -47,7 +47,7 @@ public partial class TTAllProjectTreeByType : System.Web.UI.Page
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>按类型浏览所有项目</B>";
+        node1.Text = LanguageHandle.GetWord("BAnLeiXingLiuLanSuoYouXiangMuB").ToString().Trim();
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);

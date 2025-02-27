@@ -47,8 +47,8 @@ public partial class TTMeetingDoc : System.Web.UI.Page
         {
             ShareClass.InitialUserDocTypeTree(TreeView3, strUserCode);
 
-            ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "会议", strMeetingID, strMeetingName);
-            LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
+            ShareClass.InitialDocTypeTree(TreeView1, strUserCode, LanguageHandle.GetWord("HuiYi").ToString().Trim(), strMeetingID, strMeetingName);
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
 
             LoadMeetingDoc(strUserCode, strMeetingID);
 
@@ -88,8 +88,8 @@ public partial class TTMeetingDoc : System.Web.UI.Page
             LB_DocTypeID.Text = docType.ID.ToString();
             TB_DocType.Text = docType.Type.Trim();
 
-            strHQL = " from Document as document where document.RelatedType = '会议' and document.RelatedID = " + strMeetingID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";
-            LB_FindCondition.Text = Resources.lang.CXFWWJLX + strDocType;
+            strHQL = "from Document as document where document.RelatedType = '会议' and document.RelatedID =" + strMeetingID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC"; 
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + strDocType;
 
             //设置缺省的文件类型
             ShareClass.SetDefaultDocType(strDocType, LB_DocTypeID, TB_DocType);
@@ -101,15 +101,15 @@ public partial class TTMeetingDoc : System.Web.UI.Page
             LB_DocTypeID.Text = "";
             TB_DocType.Text = "";
 
-            strHQL = " from Document as document where document.RelatedType = '会议' and document.RelatedID = " + strMeetingID + " and document.Status <> 'Deleted' Order by document.DocID DESC";
-            LB_FindCondition.Text = Resources.lang.CXFWWJLXSY;
+            strHQL = "from Document as document where document.RelatedType = '会议' and document.RelatedID =" + strMeetingID + " and document.Status <> 'Deleted' Order by document.DocID DESC"; 
+            LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
         }
 
         lst2 = documentBLL.GetAllDocuments(strHQL);
         DataGrid1.DataSource = lst2;
         DataGrid1.DataBind();
 
-        LB_TotalCount.Text = Resources.lang.CXDDWJS + ": " + lst2.Count.ToString();
+        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst2.Count.ToString();
 
         //根据文档有无工作流情况隐藏删除按钮
         ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);
@@ -155,11 +155,11 @@ public partial class TTMeetingDoc : System.Web.UI.Page
                     ShareClass.DeleteMoreDocByDataGrid(DataGrid1);
 
                     LoadMeetingDoc(strUserCode, strMeetingID);
-                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "会议", strMeetingID, strMeetingName);
+                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, LanguageHandle.GetWord("HuiYi").ToString().Trim(), strMeetingID, strMeetingName);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFFCZNBNSCBRSCDWJ + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFFCZNBNSCBRSCDWJ").ToString().Trim() + "')", true);
                 }
             }
 
@@ -176,7 +176,7 @@ public partial class TTMeetingDoc : System.Web.UI.Page
                 }
                 e.Item.ForeColor = Color.Red;
 
-                TB_WLName.Text = Resources.lang.PingShen + Resources.lang.WenJian  + strDocID + strDocName;
+                TB_WLName.Text = LanguageHandle.GetWord("PingShen").ToString().Trim() + LanguageHandle.GetWord("WenJian").ToString().Trim()  + strDocID + strDocName;
 
                 BT_SubmitApply.Enabled = true;
 
@@ -204,7 +204,7 @@ public partial class TTMeetingDoc : System.Web.UI.Page
             string strDocTypeID = LB_DocTypeID.Text.Trim();
             if (strDocTypeID == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGWDLXBNWKJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGWDLXBNWKJC").ToString().Trim() + "')", true);
                 return;
             }
             string strDocType = GetDocTypeName(strDocTypeID);
@@ -231,14 +231,14 @@ public partial class TTMeetingDoc : System.Web.UI.Page
 
             if (fi.Exists)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCZTMWJSCSBGMHZSC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "')", true);
             }
             else
             {
                 DocumentBLL documentBLL = new DocumentBLL();
                 Document document = new Document();
 
-                document.RelatedType = "会议";
+                document.RelatedType = LanguageHandle.GetWord("HuiYi").ToString().Trim();
                 document.DepartCode = strDepartCode; document.DepartName = ShareClass.GetDepartName(strDepartCode);
                 document.DocTypeID = int.Parse(strDocTypeID);
                 document.DocType = strDocType;
@@ -262,19 +262,19 @@ public partial class TTMeetingDoc : System.Web.UI.Page
                     AttachFile.MoveTo(strDocSavePath + strFileName3, Brettle.Web.NeatUpload.MoveToOptions.Overwrite);
 
                     LoadMeetingDoc(strUserCode, strMeetingID);
-                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, "会议", strMeetingID, strMeetingName);
+                    ShareClass.InitialDocTypeTree(TreeView1, strUserCode, LanguageHandle.GetWord("HuiYi").ToString().Trim(), strMeetingID, strMeetingName);
 
-                    TB_Message.Text = strUserName + " 上传了会议：" + strMeetingID + " " + strMeetingName + " 的文档： " + strFileName2 + "，请及时阅读！";
+                    TB_Message.Text = strUserName + LanguageHandle.GetWord("ShangChuanLeHuiYi").ToString().Trim() + strMeetingID + " " + strMeetingName + LanguageHandle.GetWord("DeWenDang").ToString().Trim() + strFileName2 + LanguageHandle.GetWord("QingJiShiYueDou").ToString().Trim();
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZYSCDWJ + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "')", true);
         }
     }
 
@@ -325,7 +325,7 @@ public partial class TTMeetingDoc : System.Web.UI.Page
 
                 if (CB_MSM.Checked == true | CB_Mail.Checked == true)
                 {
-                    strSubject = "会议文档上传通知";
+                    strSubject = LanguageHandle.GetWord("HuiYiWenDangShangChuanTongZhi").ToString().Trim();
 
                     if (CB_MSM.Checked == true)
                     {
@@ -340,7 +340,7 @@ public partial class TTMeetingDoc : System.Web.UI.Page
             }
         }
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFSWC + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFSWC").ToString().Trim() + "')", true);
     }
 
     protected void BT_SubmitApply_Click(object sender, EventArgs e)
@@ -421,16 +421,16 @@ public partial class TTMeetingDoc : System.Web.UI.Page
             //工作流模板是否是自动激活状态
             if (ShareClass.GetWorkflowTemplateIsAutoActiveStatus(strTemName) == "NO")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZWJPSSSCDGZLGLYMJHCGZLS + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWJPSSSCDGZLGLYMJHCGZLS").ToString().Trim() + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGZLFQCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGZLFQCG").ToString().Trim() + "')", true);
             }
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZWJPSSSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWJPSSSB").ToString().Trim() + "')", true);
         }
     }
 
@@ -519,7 +519,7 @@ public partial class TTMeetingDoc : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = " from Document as document where document.RelatedType = '会议' and document.RelatedID = " + strMeetingID + " and document.Status <> 'Deleted' Order by document.DocID DESC";
+        strHQL = "from Document as document where document.RelatedType = '会议' and document.RelatedID =" + strMeetingID + " and document.Status <> 'Deleted' Order by document.DocID DESC"; 
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);
         DataGrid1.DataSource = lst;
@@ -527,7 +527,7 @@ public partial class TTMeetingDoc : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_TotalCount.Text = Resources.lang.CXDDWJS + ": " + lst.Count.ToString();
+        LB_TotalCount.Text = LanguageHandle.GetWord("CXDDWJS").ToString().Trim() + ": " + lst.Count.ToString();
 
         //根据文档有无工作流情况隐藏删除按钮
         ShareClass.HideDataGridDeleteButtonForDocUploadPage(DataGrid1);

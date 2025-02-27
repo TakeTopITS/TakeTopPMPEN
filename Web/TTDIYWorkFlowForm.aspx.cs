@@ -65,13 +65,13 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
 
         if (intResult == 0)
         {
-            xdoc.Text = Resources.lang.CWXYMBWJBCZQJC;
+            xdoc.Text = LanguageHandle.GetWord("CWXYMBWJBCZQJC").ToString().Trim();
             return;
         }
 
         if (intResult == -1)
         {
-            xdoc.Text = Resources.lang.CWBDMBZCSBQJC;
+            xdoc.Text = LanguageHandle.GetWord("CWBDMBZCSBQJC").ToString().Trim();
             return;
         }
 
@@ -174,7 +174,7 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
 
         if (intResult == 0)
         {
-            xdoc.Text = Resources.lang.SBZGZLMBHSJWJBCZKNYBSCQJC;
+            xdoc.Text = LanguageHandle.GetWord("SBZGZLMBHSJWJBCZKNYBSCQJC").ToString().Trim();
         }
 
         string strDesignType = ShareClass.GetWLTemplateDesignType(strTemName);
@@ -248,7 +248,7 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ShiBai + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ShiBai").ToString().Trim() + "');</script>");
         }
     }
 
@@ -291,7 +291,7 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
 
         if (intResult == 0)
         {
-            xdoc.Text = Resources.lang.SBZGZLMBHSJWJBCZKNYBSCQJC;
+            xdoc.Text = LanguageHandle.GetWord("SBZGZLMBHSJWJBCZKNYBSCQJC").ToString().Trim();
         }
     }
 
@@ -337,39 +337,39 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
                 }
                 catch
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZJGZXJZTJSJSBJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGZXJZTJSJSBJC").ToString().Trim() + "');</script>");
                 }
 
                 if (intWLID == 0)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSSCSBLCMBBNWKJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC").ToString().Trim() + "');</script>");
                 }
 
                 if (intWLID == -1)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBXYSJWJBNCGBCJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBXYSJWJBNCGBCJC").ToString().Trim() + "');</script>");
                 }
 
                 if (intWLID == -2)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBBNSCXGZLJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBBNSCXGZLJC").ToString().Trim() + "');</script>");
                 }
 
                 if (intWLID == -3)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBGZLMCHMSBNWKJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBGZLMCHMSBNWKJC").ToString().Trim() + "');</script>");
                 }
 
                 if (intWLID == -4)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBCLCMBMYSZYWJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBCLCMBMYSZYWJC").ToString().Trim() + "');</script>");
                 }
 
                 if (intWLID == -5)
                 {
                     //检查必填项不为空
                     string strCanNotNullFieldList = WFShareClass.GetCanNotNullFieldListFromWFTemplate(strWLTemName);
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBBTXSTRCANNOTNULLFIELDLISTBNWKJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBBTXSTRCANNOTNULLFIELDLISTBNWKJC").ToString().Trim() + "');</script>");
                 }
             }
             else
@@ -432,7 +432,7 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBZZXMBTXGZLS + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBZZXMBTXGZLS").ToString().Trim() + "');</script>");
         }
     }
 
@@ -476,39 +476,39 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
                 }
                 catch
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZJGZXJZTJSJSBJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGZXJZTJSJSBJC").ToString().Trim() + "');</script>");
                 }
 
                 if (intWLID == 0)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSSCSBLCMBBNWKJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC").ToString().Trim() + "');</script>");
                 }
 
                 if (intWLID == -1)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBXYSJWJBNCGBCJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBXYSJWJBNCGBCJC").ToString().Trim() + "');</script>");
                 }
 
                 if (intWLID == -2)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBBNSCXGZLJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBBNSCXGZLJC").ToString().Trim() + "');</script>");
                 }
 
                 if (intWLID == -3)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBGZLMCHMSBNWKJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBGZLMCHMSBNWKJC").ToString().Trim() + "');</script>");
                 }
 
                 if (intWLID == -4)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBCLCMBMYSZYWJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBCLCMBMYSZYWJC").ToString().Trim() + "');</script>");
                 }
 
                 if (intWLID == -5)
                 {
                     //检查必填项不为空
                     string strCanNotNullFieldList = WFShareClass.GetCanNotNullFieldListFromWFTemplate(strWLTemName);
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBBTXSTRCANNOTNULLFIELDLISTBNWKJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBBTXSTRCANNOTNULLFIELDLISTBNWKJC").ToString().Trim() + "');</script>");
                 }
             }
             else
@@ -567,14 +567,14 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
 
                 }).Start();
 
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJGZLSCG + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJGZLSCG").ToString().Trim() + "');</script>");
             }
 
             //HL_RelatedDoc.NavigateUrl = "javascript:popShowByURL('" + HL_RelatedDoc.NavigateUrl + "','ChartView','99%','99%',window.location);";
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBZZXMBTXGZLS + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBZZXMBTXGZLS").ToString().Trim() + "');</script>");
         }
     }
 
@@ -602,7 +602,7 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
 
         if (intResult == 0)
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZBCSBJC + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "');</script>");
         }
         else
         {
@@ -645,7 +645,7 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
 
             }).Start();
 
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZBCCG + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "');</script>");
         }
     }
 
@@ -776,7 +776,7 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
                         }
                         else
                         {
-                            xdoc.Text = "请先注册表单模板.";
+                            xdoc.Text = LanguageHandle.GetWord("QingXianZhuCeBiaoChanMoBan").ToString().Trim();
                         }
                     }
                     catch (Exception ex) { }
@@ -786,7 +786,7 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
         }
         else
         {
-            xdoc.Text = "请先注册表单模板.";
+            xdoc.Text = LanguageHandle.GetWord("QingXianZhuCeBiaoChanMoBan").ToString().Trim();
         }
     }
 
@@ -851,7 +851,7 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
                         }
                         else
                         {
-                            xdoc.Text = "请先注册表单模板.";
+                            xdoc.Text = LanguageHandle.GetWord("QingXianZhuCeBiaoChanMoBan").ToString().Trim();
                         }
                     }
                     catch (Exception ex) { }
@@ -861,7 +861,7 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
         }
         else
         {
-            xdoc.Text = "请先注册表单模板.";
+            xdoc.Text = LanguageHandle.GetWord("QingXianZhuCeBiaoChanMoBan").ToString().Trim();
         }
     }
 
@@ -893,12 +893,12 @@ public partial class _TTDIYWorkFlowForm : System.Web.UI.Page
             }
             else
             {
-                xdoc.Text = Resources.lang.QingXianZhuCheBiaoDanMoBan;
+                xdoc.Text = LanguageHandle.GetWord("QingXianZhuCheBiaoDanMoBan").ToString().Trim();
             }
         }
         catch
         {
-            xdoc.Text = Resources.lang.CWNSXDGZLSJXMLWJBSZGLCMBDXMLDSJWJQJC;
+            xdoc.Text = LanguageHandle.GetWord("CWNSXDGZLSJXMLWJBSZGLCMBDXMLDSJWJQJC").ToString().Trim();
         }
     }
 

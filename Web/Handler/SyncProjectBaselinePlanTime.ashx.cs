@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,7 +7,7 @@ using System.Web.SessionState;
 namespace TakeTopGantt.handler
 {
     /// <summary>
-    /// SyncProjectBaselinePlanTime çš„æ‘˜è¦è¯´æ˜
+    /// SyncProjectBaselinePlanTime µÄÕªÒªËµÃ÷
     /// </summary>
     public class SyncProjectBaselinePlanTime : IHttpHandler, IReadOnlySessionState
     {
@@ -15,7 +15,7 @@ namespace TakeTopGantt.handler
         {
             context.Response.ContentType = "text/plain";
 
-            //string strPID = context.Request.Form["pid"];   //æ–‡æœ¬æ¡†å†…å®¹(Getä¼ å‚å¯¹åº”QueryString)
+            //string strPID = context.Request.Form["pid"];   //ÎÄ±¾¿òÄÚÈİ(Get´«²Î¶ÔÓ¦QueryString)
 
             string strPID = context.Request.QueryString["pid"].ToString().Trim();
 

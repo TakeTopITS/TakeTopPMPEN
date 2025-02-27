@@ -234,11 +234,11 @@ public partial class TTWZPurchaseScaling : System.Web.UI.Page
                 strHQL = "Update T_WZPurchase Set TotalMoney = " + strTotalMoney + " Where PurchaseCode = " + "'" + strPurchaseCode + "'";
                 ShareClass.RunSqlCommand(strHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('定标成功！');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('定标成功！');", true); 
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('定标失败，请检查！');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('定标失败，请检查！');", true); 
             }
         }
     }
@@ -292,11 +292,11 @@ public partial class TTWZPurchaseScaling : System.Web.UI.Page
                 strHQL = "Update T_WZPurchase Set TotalMoney = " + strTotalMoney + " Where PurchaseCode = " + "'" + strPurchaseCode + "'";
                 ShareClass.RunSqlCommand(strHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('定标成功！');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('定标成功！');", true); 
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('定标失败，请检查！');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('定标失败，请检查！');", true); 
             }
         }
     }

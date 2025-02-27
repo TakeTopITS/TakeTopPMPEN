@@ -732,7 +732,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + Resources.lang.ZZJGCGZLMBBCZQJC + "')", true);
+            ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCGZLMBBCZQJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -849,7 +849,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
             string strCurrencyType = expenseClaim.CurrencyType.Trim();
             string strReAndPayer = expenseClaim.ApplicantCode.Trim() + expenseClaim.ApplicantName.Trim();
             string strStatus = expenseClaim.Status.Trim();
-            string strPayMethod = "转账";
+            string strPayMethod = LanguageHandle.GetWord("ZhuaiZhang").ToString().Trim();
 
             strApplicantCode = expenseClaim.ApplicantCode.Trim();
             strRelatedType = expenseClaim.RelatedType.Trim();
@@ -898,16 +898,16 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
 
                     ((Label)(DataList6.Items[0].FindControl("LB_Status"))).Text = "Recorded";
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJZCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG").ToString().Trim() + "')", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('只有流程状态为通过或结案的才能记账！')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhiYouLiuChengZhuangTaiWeiTo").ToString().Trim()+"')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBBNZFJZ + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBNZFJZ").ToString().Trim() + "')", true);
             }
         }
     }
@@ -964,7 +964,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                         //把申报费用列入项目费用
                         if (intProjectID > 1)
                         {
-                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, "物资采购费用", deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
+                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, LanguageHandle.GetWord("WuZiCaiGouFeiYong").ToString().Trim(), deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
                         }
                     }
 
@@ -972,16 +972,16 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     ShareClass.RunSqlCommand(strHQL);
 
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJZCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG").ToString().Trim() + "')", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('只有流程状态为通过或结案的才能记账！')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhiYouLiuChengZhuangTaiWeiTo").ToString().Trim()+"')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBBNZFJZ + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBNZFJZ").ToString().Trim() + "')", true);
             }
         }
     }
@@ -1008,7 +1008,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
             string strApplicantName = bMPurchaseApplication.Application;
             strAccountCode = bMPurchaseApplication.AccountCode.Trim();
             strAccountName = bMPurchaseApplication.AccountName.Trim();
-            string strPayMethod = "转账";
+            string strPayMethod = LanguageHandle.GetWord("ZhuaiZhang").ToString().Trim();
 
             if (strStatus != "Recorded")
             {
@@ -1023,7 +1023,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     //把申报费用列入项目费用
                     if (intProjectID > 1)
                     {
-                        ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, "工程分包费用", deAmount, strCurrencyType, strApplicantCode, strApplicantName);
+                        ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, LanguageHandle.GetWord("GongChengFenBaoFeiYong").ToString().Trim(), deAmount, strCurrencyType, strApplicantCode, strApplicantName);
                     }
 
                     strHQL = "Update T_BMPurchaseApplication Set Status = 'Recorded' Where ID = " + strID;
@@ -1031,16 +1031,16 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
 
                     ((Label)(DataList32.Items[0].FindControl("LB_Status"))).Text = "Recorded";
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJZCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG").ToString().Trim() + "')", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('只有流程状态为通过或结案的才能记账！')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhiYouLiuChengZhuangTaiWeiTo").ToString().Trim()+"')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBBNZFJZ + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBNZFJZ").ToString().Trim() + "')", true);
             }
         }
     }
@@ -1098,7 +1098,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                         //把申报费用列入项目费用
                         if (intProjectID > 1)
                         {
-                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, "物资采购费用", deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
+                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, LanguageHandle.GetWord("WuZiCaiGouFeiYong").ToString().Trim(), deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
                         }
                     }
 
@@ -1106,16 +1106,16 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     ShareClass.RunSqlCommand(strHQL);
 
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJZCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG").ToString().Trim() + "')", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('只有流程状态为通过或结案的才能记账！')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhiYouLiuChengZhuangTaiWeiTo").ToString().Trim()+"')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBBNZFJZ + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBNZFJZ").ToString().Trim() + "')", true);
             }
         }
     }
@@ -1172,7 +1172,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                         //把申报费用列入项目费用
                         if (intProjectID > 1)
                         {
-                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, "资产采购费用", deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
+                            ShareClass.AddConstractPayAmountToProExpense(intProjectID.ToString(), intReAndPayalbeID.ToString(), strAccountCode, strAccountName, LanguageHandle.GetWord("ZiChanCaiGouFeiYong").ToString().Trim(), deDetailAmount, strCurrencyType, strApplicantCode, strApplicantName);
                         }
                     }
 
@@ -1180,16 +1180,16 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                     ShareClass.RunSqlCommand(strHQL);
 
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJZCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJZCG").ToString().Trim() + "')", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('只有流程状态为通过或结案的才能记账！')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhiYouLiuChengZhuangTaiWeiTo").ToString().Trim()+"')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBBNZFJZ + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBBNZFJZ").ToString().Trim() + "')", true);
             }
         }
     }
@@ -1218,11 +1218,11 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                 strHQL = "Update T_ConstractPayableVisa Set RelatedImpact = '" + strRelatedImpact + "' Where ID = " + strID;
                 ShareClass.RunSqlCommand(strHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('只有流程状态不为通过或结案的才能保存！')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhiYouLiuChengZhuangTaiBuWei").ToString().Trim()+"')", true);
             }
         }
 
@@ -1237,11 +1237,11 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
                 strHQL = "Update T_ConstractPayableVisa Set RelatedResult = '" + strRelatedResult + "' Where ID = " + strID;
                 ShareClass.RunSqlCommand(strHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('只有流程状态不为通过或结案的才能保存！')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhiYouLiuChengZhuangTaiBuWei").ToString().Trim()+"')", true);
             }
         }
     }
@@ -1558,11 +1558,11 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
         strHQL = "from Document as document where document.Status <> 'Deleted' ";
         strHQL += " and (document.RelatedType = 'Workflow' and (document.RelatedID = " + strWLID + " Or document.RelatedID in (Select wfStepRelatedWF.WFChildID From WFStepRelatedWF as wfStepRelatedWF Where wfStepRelatedWF.WFID = " + strWLID + ")";
         strHQL += " Or document.RelatedID in (Select wfStepRelatedWF.WFID From WFStepRelatedWF as wfStepRelatedWF Where wfStepRelatedWF.WFChildID = " + strWLID + "))";
-        strHQL += " or ((document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Workflow' and (meeting.RelatedID = " + strWLID + " or meeting.RelatedID in (Select wfStepRelatedWF.WFChildID From WFStepRelatedWF as wfStepRelatedWF Where wfStepRelatedWF.WFID = " + strWLID + "))))";
+        strHQL += "or ((document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Workflow' and (meeting.RelatedID =" + strWLID + " or meeting.RelatedID in (Select wfStepRelatedWF.WFChildID From WFStepRelatedWF as wfStepRelatedWF Where wfStepRelatedWF.WFID = " + strWLID + "))))"; 
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or ( document.Visible = '会议')))";
+        strHQL += " or ( document.Visible = '会议')))"; 
         strHQL += " and (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or (document.Visible in ( '部门','全体')))";
+        strHQL += " or (document.Visible in ( '部门','全体')))"; 
         strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))))";
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
@@ -1590,20 +1590,20 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
 
             strHQL = "from Document as document where (((document.RelatedType = 'Project' and document.RelatedID = " + strProjectID + ")";
             strHQL += " and (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( '部门','全体')))";
+            strHQL += " or (document.Visible in ( '部门','全体')))"; 
             strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))))";
 
             strHQL += " or (((document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
             //strHQL += " or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + "))";
 
-            strHQL += " or (document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID = " + strProjectID + "))";
+            strHQL += "or (document.RelatedType = '风险' and document.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))"; 
             strHQL += " or (document.RelatedType = 'Task' and document.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
             strHQL += " or (document.RelatedType = 'Plan' and document.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
             //strHQL += " or (document.RelatedType = 'Workflow' and document.RelatedID in (Select workFlow.WLID From WorkFlow as workFlow Where workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + ")))";
-            strHQL += " or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID = " + strProjectID + "))";
+            strHQL += "or (document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + "))"; 
 
-            strHQL += " and ((document.Visible in ('会议','部门') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";
-            strHQL += " or (document.Visible = '全体' )))))";
+            strHQL += " and ((document.Visible in ('会议','部门') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) "; 
+            strHQL += " or (document.Visible = '全体' )))))"; 
             strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
 
             DocumentBLL documentBLL = new DocumentBLL();

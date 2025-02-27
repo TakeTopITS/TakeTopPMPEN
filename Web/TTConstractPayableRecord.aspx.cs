@@ -191,7 +191,7 @@ public partial class TTConstractPayableRecord : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZSBDJRYDMCWCWCRJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBDJRYDMCWCWCRJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
 
@@ -241,7 +241,7 @@ public partial class TTConstractPayableRecord : System.Web.UI.Page
 
             if (strRelatedType == "Project" & intRelatedID > 0)
             {
-                ShareClass.AddConstractPayAmountToProExpense(intRelatedID.ToString(), strPayableID, strPayAccountCode, strPayAccount, "合同付款", deOutOfPocketAccount + deHandlingCharge, strCurrency, strRecorderCode, strRecorderName);
+                ShareClass.AddConstractPayAmountToProExpense(intRelatedID.ToString(), strPayableID, strPayAccountCode, strPayAccount, LanguageHandle.GetWord("GeTongFuKuan").ToString().Trim(), deOutOfPocketAccount + deHandlingCharge, strCurrency, strRecorderCode, strRecorderName);
             }
 
             //关联商品采购单的项目的费用处理
@@ -258,7 +258,7 @@ public partial class TTConstractPayableRecord : System.Web.UI.Page
 
                     if (strRelatedFormType == "Project" & intRelatedFormID > 0)
                     {
-                        ShareClass.AddConstractPayAmountToProExpense(intRelatedFormID.ToString(), strPayableID, strPayAccountCode, strPayAccount, "物料采购付款", deOutOfPocketAccount + deHandlingCharge, strCurrency, strRecorderCode, strRecorderName);
+                        ShareClass.AddConstractPayAmountToProExpense(intRelatedFormID.ToString(), strPayableID, strPayAccountCode, strPayAccount, LanguageHandle.GetWord("WuLiaoCaiGouFuKuan").ToString().Trim(), deOutOfPocketAccount + deHandlingCharge, strCurrency, strRecorderCode, strRecorderName);
                     }
                 }
             }
@@ -277,7 +277,7 @@ public partial class TTConstractPayableRecord : System.Web.UI.Page
 
                     if (strRelatedFormType == "Project" & intRelatedFormID > 0)
                     {
-                        ShareClass.AddConstractPayAmountToProExpense(intRelatedFormID.ToString(), strPayableID, strPayAccountCode, strPayAccount, "资产采购付款", deOutOfPocketAccount + deHandlingCharge, strCurrency, strRecorderCode, strRecorderName);
+                        ShareClass.AddConstractPayAmountToProExpense(intRelatedFormID.ToString(), strPayableID, strPayAccountCode, strPayAccount, LanguageHandle.GetWord("ZiChanCaiGouFuKuan").ToString().Trim(), deOutOfPocketAccount + deHandlingCharge, strCurrency, strRecorderCode, strRecorderName);
                     }
                 }
             }
@@ -287,7 +287,7 @@ public partial class TTConstractPayableRecord : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -344,7 +344,7 @@ public partial class TTConstractPayableRecord : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXGSBDJRYDMCWCWCRJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXGSBDJRYDMCWCWCRJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             return;
@@ -396,7 +396,7 @@ public partial class TTConstractPayableRecord : System.Web.UI.Page
 
             if (strRelatedType == "Project" & intRelatedID > 0)
             {
-                ShareClass.UpdateConstractPayAmountToProExpense(intRelatedID.ToString(), strID, strPayAccountCode, strPayAccount, "合同付款", deOutOfPocketAccount + deHandlingCharge, strCurrency, strRecorderCode, strRecorderName);
+                ShareClass.UpdateConstractPayAmountToProExpense(intRelatedID.ToString(), strID, strPayAccountCode, strPayAccount, LanguageHandle.GetWord("GeTongFuKuan").ToString().Trim(), deOutOfPocketAccount + deHandlingCharge, strCurrency, strRecorderCode, strRecorderName);
             }
 
             //关联采购单的项目的费用处理
@@ -413,7 +413,7 @@ public partial class TTConstractPayableRecord : System.Web.UI.Page
 
                     if (strRelatedFormType == "Project" & intRelatedFormID > 0)
                     {
-                        ShareClass.UpdateConstractPayAmountToProExpense(intRelatedFormID.ToString(), strID, strPayAccountCode, strPayAccount, "物料采购付款", deOutOfPocketAccount + deHandlingCharge, strCurrency, strRecorderCode, strRecorderName);
+                        ShareClass.UpdateConstractPayAmountToProExpense(intRelatedFormID.ToString(), strID, strPayAccountCode, strPayAccount, LanguageHandle.GetWord("WuLiaoCaiGouFuKuan").ToString().Trim(), deOutOfPocketAccount + deHandlingCharge, strCurrency, strRecorderCode, strRecorderName);
                     }
                 }
             }
@@ -432,7 +432,7 @@ public partial class TTConstractPayableRecord : System.Web.UI.Page
 
                     if (strRelatedFormType == "Project" & intRelatedFormID > 0)
                     {
-                        ShareClass.UpdateConstractPayAmountToProExpense(intRelatedFormID.ToString(), strPayableID, strPayAccountCode, strPayAccount, "资产采购付款", deOutOfPocketAccount + deHandlingCharge, strCurrency, strRecorderCode, strRecorderName);
+                        ShareClass.UpdateConstractPayAmountToProExpense(intRelatedFormID.ToString(), strPayableID, strPayAccountCode, strPayAccount, LanguageHandle.GetWord("ZiChanCaiGouFuKuan").ToString().Trim(), deOutOfPocketAccount + deHandlingCharge, strCurrency, strRecorderCode, strRecorderName);
                     }
                 }
             }
@@ -440,11 +440,11 @@ public partial class TTConstractPayableRecord : System.Web.UI.Page
             //刷新应付款信息
             LoadConstractPayable(strPayableID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -594,7 +594,7 @@ public partial class TTConstractPayableRecord : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
             }
         }

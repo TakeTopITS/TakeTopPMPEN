@@ -139,7 +139,7 @@ public partial class TTWZCardImport : System.Web.UI.Page
         string strCardCode = DDL_Card.SelectedValue;
         if (string.IsNullOrEmpty(strCardCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZCWPZ + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZCWPZ").ToString().Trim() + "')", true);
             return;
         }
         //比对
@@ -205,7 +205,7 @@ public partial class TTWZCardImport : System.Web.UI.Page
                 {
                     //当〈No编号〉相等，其余 2 项条件相等但不唯一时
 
-                    wZCardImport.ImportStatus = "记录重复";
+                    wZCardImport.ImportStatus = "记录重复"; 
 
                     wZCardImportBLL.UpdateWZCardImport(wZCardImport, wZCardImport.ID);
 
@@ -221,7 +221,7 @@ public partial class TTWZCardImport : System.Web.UI.Page
                 IList listWZTurnDetail2 = wZTurnDetailBLL.GetAllWZTurnDetails(strWZTurnDetailHQL2);
                 if (listWZTurnDetail2 != null && listWZTurnDetail2.Count > 0)
                 {
-                    wZCardImport.ImportStatus = "数据错误";
+                    wZCardImport.ImportStatus = "数据错误"; 
 
                     wZCardImportBLL.UpdateWZCardImport(wZCardImport, wZCardImport.ID);
 
@@ -235,7 +235,7 @@ public partial class TTWZCardImport : System.Web.UI.Page
                 IList listWZTurnDetail3 = wZTurnDetailBLL.GetAllWZTurnDetails(strWZTurnDetailHQL3);
                 if (listWZTurnDetail3 == null || listWZTurnDetail3.Count == 0)
                 {
-                    wZCardImport.ImportStatus = "无记录";
+                    wZCardImport.ImportStatus = "无记录"; 
 
                     wZCardImportBLL.UpdateWZCardImport(wZCardImport, wZCardImport.ID);
 
@@ -252,7 +252,7 @@ public partial class TTWZCardImport : System.Web.UI.Page
         DataTurnDetailBinder();
         DataCardImportBinder();
 
-        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZBDWC + "');</script>");
+        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBDWC").ToString().Trim() + "');</script>");
     }
 
     protected void BT_Export_Click(object sender, EventArgs e)
@@ -261,10 +261,10 @@ public partial class TTWZCardImport : System.Web.UI.Page
         string strCardCode = DDL_Card.SelectedValue;
         if (string.IsNullOrEmpty(strCardCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZCWPZ + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZCWPZ").ToString().Trim() + "')", true);
             return;
         }
-        string strFileName = strCardCode + "号财务凭证未对料单";
+        string strFileName = strCardCode + LanguageHandle.GetWord("HaoCaiWuPingZhengWeiDuiLiaoCha").ToString().Trim();
         string strWZCardHQL = "select * from T_WZCardImport";
         DataTable dtWZCard = ShareClass.GetDataSetFromSql(strWZCardHQL, "WZCard").Tables[0];
         //ExcelUtils.Export2Excel(DG_CardImportList, strFileName);
@@ -293,7 +293,7 @@ public partial class TTWZCardImport : System.Web.UI.Page
 
             if (fi.Exists)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZCZTMWJSCSBGMHZSC + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "');</script>");
             }
 
             if (Directory.Exists(strDocSavePath) == false)
@@ -319,11 +319,11 @@ public partial class TTWZCardImport : System.Web.UI.Page
                 lblMsg.Text = string.Format("<span style='color:red' >{0}</span>", resultMsg);
 
 
-                //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+Resources.lang.ZZDRCG+"');</script>");
+                //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+LanguageHandle.GetWord("ZZDRCG").ToString().Trim()+"');</script>");
             }
             catch (Exception ex)
             {
-                lblMsg.Text = string.Format("<span style='color:red' >导入时出现以下错误: {0}!</span>", ex.Message);
+                lblMsg.Text = string.Format(LanguageHandle.GetWord("spanstylecolorredDaoRuShiChuXi").ToString().Trim(), ex.Message);
             }
         }
     }
@@ -343,13 +343,13 @@ public partial class TTWZCardImport : System.Web.UI.Page
             lineNumber++;
             try
             {
-                string strID = ShareClass.ObjectToString(row["序号"]);
-                string strNoCode = ShareClass.ObjectToString(row["No编号"]);
-                string strObjectName = ShareClass.ObjectToString(row["物资名称"]);
-                string strOutNumber = ShareClass.ObjectToString(row["出库数量"]);
-                string strOutPrice = ShareClass.ObjectToString(row["出库单价"]);
-                string strOutMoney = ShareClass.ObjectToString(row["出库金额"]);
-                string strPlanMoney = ShareClass.ObjectToString(row["预算金额"]);
+                string strID = ShareClass.ObjectToString(row[LanguageHandle.GetWord("XuHao").ToString().Trim()]);
+                string strNoCode = ShareClass.ObjectToString(row[LanguageHandle.GetWord("NoBianHao").ToString().Trim()]);
+                string strObjectName = ShareClass.ObjectToString(row[LanguageHandle.GetWord("WuZiMingChen").ToString().Trim()]);
+                string strOutNumber = ShareClass.ObjectToString(row[LanguageHandle.GetWord("ChuKuShuLiang").ToString().Trim()]);
+                string strOutPrice = ShareClass.ObjectToString(row[LanguageHandle.GetWord("ChuKuChanJia").ToString().Trim()]);
+                string strOutMoney = ShareClass.ObjectToString(row[LanguageHandle.GetWord("ChuKuJinE").ToString().Trim()]);
+                string strPlanMoney = ShareClass.ObjectToString(row[LanguageHandle.GetWord("YuSuanJinE").ToString().Trim()]);
 
                 if (string.IsNullOrEmpty(strID) && string.IsNullOrEmpty(strNoCode) && string.IsNullOrEmpty(strObjectName)
                     && string.IsNullOrEmpty(strOutNumber) && string.IsNullOrEmpty(strOutPrice)
@@ -359,75 +359,75 @@ public partial class TTWZCardImport : System.Web.UI.Page
                 }
                 if (string.IsNullOrEmpty(strID))
                 {
-                    resultMsg += string.Format("第{0}行，序号不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangXuHaoBuNengWeiKongbr").ToString().Trim(), lineNumber);
                     continue;
                 }
                 if (string.IsNullOrEmpty(strNoCode))
                 {
-                    resultMsg += string.Format("第{0}行，No编号不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangNoBianHaoBuNengWeiKongb").ToString().Trim(), lineNumber);
                     continue;
                 }
                 if (string.IsNullOrEmpty(strObjectName))
                 {
-                    resultMsg += string.Format("第{0}行，物资名称不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangWuZiMingChenBuNengWeiKo").ToString().Trim(), lineNumber);
                     continue;
                 }
                 if (string.IsNullOrEmpty(strOutNumber))
                 {
-                    resultMsg += string.Format("第{0}行，出库数量不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangChuKuShuLiangBuNengWeiK").ToString().Trim(), lineNumber);
                     continue;
                 }
                 else
                 {
                     if (!ShareClass.CheckIsNumber(strOutNumber))
                     {
-                        resultMsg += string.Format("第{0}行，出库数量必须为数字类型<br/>", lineNumber);
+                        resultMsg += string.Format(LanguageHandle.GetWord("Di0HangChuKuShuLiangBiXuWeiShu").ToString().Trim(), lineNumber);
                         continue;
                     }
                 }
                 if (string.IsNullOrEmpty(strOutPrice))
                 {
-                    resultMsg += string.Format("第{0}行，出库单价不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangChuKuChanJiaBuNengWeiKo").ToString().Trim(), lineNumber);
                     continue;
                 }
                 else
                 {
                     if (!ShareClass.CheckIsNumber(strOutPrice))
                     {
-                        resultMsg += string.Format("第{0}行，出库单价必须为小数类型<br/>", lineNumber);
+                        resultMsg += string.Format(LanguageHandle.GetWord("Di0HangChuKuChanJiaBiXuWeiXiao").ToString().Trim(), lineNumber);
                         continue;
                     }
                 }
                 if (string.IsNullOrEmpty(strOutMoney))
                 {
-                    resultMsg += string.Format("第{0}行，出库金额不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangChuKuJinEBuNengWeiKongb").ToString().Trim(), lineNumber);
                     continue;
                 }
                 else
                 {
                     if (!ShareClass.CheckIsNumber(strOutMoney))
                     {
-                        resultMsg += string.Format("第{0}行，出库金额必须为小数类型<br/>", lineNumber);
+                        resultMsg += string.Format(LanguageHandle.GetWord("Di0HangChuKuJinEBiXuWeiXiaoShu").ToString().Trim(), lineNumber);
                         continue;
                     }
                 }
                 if (string.IsNullOrEmpty(strPlanMoney))
                 {
-                    resultMsg += string.Format("第{0}行，预算金额不能为空<br/>", lineNumber);
+                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangYuSuanJinEBuNengWeiKong").ToString().Trim(), lineNumber);
                     continue;
                 }
                 else
                 {
                     if (!ShareClass.CheckIsNumber(strPlanMoney))
                     {
-                        resultMsg += string.Format("第{0}行，预算金额必须为小数类型<br/>", lineNumber);
+                        resultMsg += string.Format(LanguageHandle.GetWord("Di0HangYuSuanJinEBiXuWeiXiaoSh").ToString().Trim(), lineNumber);
                         continue;
                     }
                 }
             }
             catch (Exception ex)
             {
-                lblMsg.Text = string.Format("<span style='color:red' >导入时出现以下错误: {0}!</span>", ex.Message);
+                lblMsg.Text = string.Format(LanguageHandle.GetWord("spanstylecolorredDaoRuShiChuXi").ToString().Trim(), ex.Message);
             }
 
         }
@@ -460,13 +460,13 @@ public partial class TTWZCardImport : System.Web.UI.Page
             try
             {
                 lineNumber++;
-                int.TryParse(ShareClass.ObjectToString(row["序号"]), out intID);
-                strNoCode = ShareClass.ObjectToString(row["No编号"]);
-                strObjectName = ShareClass.ObjectToString(row["物资名称"]);
-                decimal.TryParse(ShareClass.ObjectToString(row["出库数量"]), out decimalOutNumber);
-                decimal.TryParse(ShareClass.ObjectToString(row["出库单价"]), out decimalOutPrice);
-                decimal.TryParse(ShareClass.ObjectToString(row["出库金额"]), out decimalOutMoney);
-                decimal.TryParse(ShareClass.ObjectToString(row["预算金额"]), out decimalPlanMoney);
+                int.TryParse(ShareClass.ObjectToString(row[LanguageHandle.GetWord("XuHao").ToString().Trim()]), out intID);
+                strNoCode = ShareClass.ObjectToString(row[LanguageHandle.GetWord("NoBianHao").ToString().Trim()]);
+                strObjectName = ShareClass.ObjectToString(row[LanguageHandle.GetWord("WuZiMingChen").ToString().Trim()]);
+                decimal.TryParse(ShareClass.ObjectToString(row[LanguageHandle.GetWord("ChuKuShuLiang").ToString().Trim()]), out decimalOutNumber);
+                decimal.TryParse(ShareClass.ObjectToString(row[LanguageHandle.GetWord("ChuKuChanJia").ToString().Trim()]), out decimalOutPrice);
+                decimal.TryParse(ShareClass.ObjectToString(row[LanguageHandle.GetWord("ChuKuJinE").ToString().Trim()]), out decimalOutMoney);
+                decimal.TryParse(ShareClass.ObjectToString(row[LanguageHandle.GetWord("YuSuanJinE").ToString().Trim()]), out decimalPlanMoney);
 
                 if (intID == 0 && string.IsNullOrEmpty(strNoCode) && string.IsNullOrEmpty(strObjectName)
                         && decimalOutNumber == 0 && decimalOutPrice == 0
@@ -496,7 +496,7 @@ public partial class TTWZCardImport : System.Web.UI.Page
             }
             catch (Exception err)
             {
-                LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + Resources.lang.ZZJGDRSBJC + " : " + Resources.lang.HangHao + ": " + (lineNumber + 2).ToString() + " , " + Resources.lang.DaiMa + ": " + strNoCode + " : " + err.Message.ToString());
+                LogClass.WriteLogFile(this.GetType().BaseType.Name + "：" + LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (lineNumber + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strNoCode + " : " + err.Message.ToString());
             }
         }
 
@@ -504,7 +504,7 @@ public partial class TTWZCardImport : System.Web.UI.Page
         {
             if (successCount == dtExcel.Rows.Count)
             {
-                resultMsg += string.Format("<br/>已成功导入 {0} 条数据", successCount);
+                resultMsg += string.Format(LanguageHandle.GetWord("brYiChengGongDaoRu0TiaoShuJu").ToString().Trim(), successCount);
             }
             //else
             //{
@@ -518,7 +518,7 @@ public partial class TTWZCardImport : System.Web.UI.Page
         }
         else
         {
-            resultMsg += string.Format("<br/>未导入数据， 共有 {0} 条数据验证失败", dtExcel.Rows.Count - successCount);
+            resultMsg += string.Format(LanguageHandle.GetWord("brWeiDaoRuShuJuGongYou0TiaoShu").ToString().Trim(), dtExcel.Rows.Count - successCount);
         }
 
         return false;

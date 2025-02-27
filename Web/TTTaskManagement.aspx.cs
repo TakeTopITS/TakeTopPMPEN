@@ -90,7 +90,7 @@ public partial class TTTaskManagement : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
         LB_Sql1.Text = strHQL;
-        LB_TotalNumber1.Text = "记录数：" + lst.Count.ToString();
+        LB_TotalNumber1.Text = LanguageHandle.GetWord("JiLuShu").ToString().Trim() + lst.Count.ToString();
         SetTaskRecordColor(DataGrid1);
     }
 
@@ -121,11 +121,11 @@ public partial class TTTaskManagement : System.Web.UI.Page
         DataGrid1.DataSource = lst;
         DataGrid1.DataBind();
         LB_Sql1.Text = strHQL;
-        LB_TotalNumber1.Text = "记录数：" + lst.Count.ToString();
+        LB_TotalNumber1.Text = LanguageHandle.GetWord("JiLuShu").ToString().Trim() + lst.Count.ToString();
         SetTaskRecordColor(DataGrid1);
 
         strHQL = "from TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and (taskAssignRecord.Status in ('拒绝','Completed','Suspended','Cancel','待分派') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord))";
+        strHQL += " and (taskAssignRecord.Status in ('拒绝','Completed','Suspended','Cancel','待分派') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord))"; 
         strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> 'Closed')";
         strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('New','Hided','Deleted','Archived'))))";
         strHQL += " Order by taskAssignRecord.ID DESC";
@@ -134,7 +134,7 @@ public partial class TTTaskManagement : System.Web.UI.Page
         DataGrid2.DataSource = lst;
         DataGrid2.DataBind();
         LB_Sql2.Text = strHQL;
-        LB_TotalNumber2.Text = "记录数：" + lst.Count.ToString();
+        LB_TotalNumber2.Text = LanguageHandle.GetWord("JiLuShu").ToString().Trim() + lst.Count.ToString();
         SetTaskRecordColor(DataGrid2);
 
         strHQL = "Select * from T_TaskAssignRecord where AssignManCode = " + "'" + strUserCode + "'";
@@ -145,7 +145,7 @@ public partial class TTTaskManagement : System.Web.UI.Page
         DataGrid3.DataSource = ds;
         DataGrid3.DataBind();
         LB_Sql3.Text = strHQL;
-        LB_TotalNumber3.Text = "记录数：" + ds.Tables[0].Rows.Count.ToString();
+        LB_TotalNumber3.Text = LanguageHandle.GetWord("JiLuShu").ToString().Trim() + ds.Tables[0].Rows.Count.ToString();
         SetTaskRecordColor(DataGrid3);
 
         strHQL = "Select * from T_TaskAssignRecord where OperatorCode = " + "'" + strUserCode + "'";
@@ -157,10 +157,10 @@ public partial class TTTaskManagement : System.Web.UI.Page
         DataGrid5.DataSource = ds;
         DataGrid5.DataBind();
         LB_Sql5.Text = strHQL;
-        LB_TotalNumber5.Text = "记录数：" + lst.Count.ToString();
+        LB_TotalNumber5.Text = LanguageHandle.GetWord("JiLuShu").ToString().Trim() + lst.Count.ToString();
         SetTaskRecordColor(DataGrid5);
 
-        LB_QueryScope.Text = Resources.lang.ZZCXHWSY;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZCXHWSY").ToString().Trim();
     }
 
     protected string GetTaskPriority(string strTaskID)
@@ -325,7 +325,7 @@ public partial class TTTaskManagement : System.Web.UI.Page
         DataGrid4.DataBind();
         SetProTaskColor(DataGrid4);
         LB_Sql4.Text = strHQL;
-        LB_TotalNumber4.Text = "记录数：" + lst.Count.ToString();
+        LB_TotalNumber4.Text = LanguageHandle.GetWord("JiLuShu").ToString().Trim() + lst.Count.ToString();
 
 
         strHQL = "from ProjectTask as projectTask where projectTask.MakeManCode = " + "'" + strUserCode + "'";
@@ -337,7 +337,7 @@ public partial class TTTaskManagement : System.Web.UI.Page
         DataGrid6.DataBind();
         SetProTaskColor(DataGrid6);
         LB_Sql6.Text = strHQL;
-        LB_TotalNumber6.Text = "记录数：" + lst.Count.ToString();
+        LB_TotalNumber6.Text = LanguageHandle.GetWord("JiLuShu").ToString().Trim() + lst.Count.ToString();
     }
 
     protected void DataGrid1_PageIndexChanged(object sender, DataGridPageChangedEventArgs e)
@@ -383,7 +383,7 @@ public partial class TTTaskManagement : System.Web.UI.Page
         DataGrid3.DataSource = ds;
         DataGrid3.DataBind();
         LB_Sql3.Text = strHQL;
-        LB_TotalNumber3.Text = "记录数：" + ds.Tables[0].Rows.Count.ToString();
+        LB_TotalNumber3.Text = LanguageHandle.GetWord("JiLuShu").ToString().Trim() + ds.Tables[0].Rows.Count.ToString();
 
         FinishPercentPicture3();
         SetTaskRecordColor(DataGrid3);
@@ -441,7 +441,7 @@ public partial class TTTaskManagement : System.Web.UI.Page
         string strUserCode, strHQL;
         IList lst;
 
-        LB_QueryScope.Text = Resources.lang.ZZCXHWSY;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZCXHWSY").ToString().Trim();
 
         TaskAssignRecordBLL taskAssignRecordBLL = new TaskAssignRecordBLL();
 
@@ -459,7 +459,7 @@ public partial class TTTaskManagement : System.Web.UI.Page
         SetTaskRecordColor(DataGrid1);
 
         strHQL = "from TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and (taskAssignRecord.Status in ('拒绝','Completed','Suspended','Cancel') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord))";
+        strHQL += " and (taskAssignRecord.Status in ('拒绝','Completed','Suspended','Cancel') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord))"; 
         strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> 'Closed')";
         strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('New','Hided','Deleted','Archived'))))";
         strHQL += " Order by taskAssignRecord.ID DESC";
@@ -533,7 +533,7 @@ public partial class TTTaskManagement : System.Web.UI.Page
             dtNowDate = DateTime.Now;
             strStatus = dataGrid.Items[i].Cells[7].Text.Trim();
 
-            if (strStatus != "Completed" & strStatus != "已完成")
+            if (strStatus != "Completed" & strStatus != LanguageHandle.GetWord("YiWanCheng").ToString().Trim())
             {
                 if (dtFinishedDate < dtNowDate)
                 {

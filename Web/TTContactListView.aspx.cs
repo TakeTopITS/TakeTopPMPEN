@@ -34,7 +34,7 @@ public partial class TTContactListView : System.Web.UI.Page
         {
             strRelatedType = "Project";
 
-            //this.Title = Resources.lang.Project + strRelatedType + " " + strRelatedID + " 联系人列表";
+            //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strRelatedType + " " + strRelatedID + "联系人列表";
         }
 
         if (strRelatedType == "Customer")

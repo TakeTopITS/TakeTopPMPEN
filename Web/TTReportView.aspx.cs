@@ -47,8 +47,8 @@ public partial class TTReportView : System.Web.UI.Page
             string strDBUserID = GetDatabaseReadOnlyUserID().ToLower();
             if (strDBUserID == "")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "111", "<script>alert('" + Resources.lang.ZZTSSJBBYDSJKYHIDWK + "');</script>");
-                Response.Write(Resources.lang.ZZTSSJBBYDSJKYHIDWK);
+                ClientScript.RegisterStartupScript(this.GetType(), "111", "<script>alert('" + LanguageHandle.GetWord("ZZTSSJBBYDSJKYHIDWK").ToString().Trim() + "');</script>");
+                Response.Write(LanguageHandle.GetWord("ZZTSSJBBYDSJKYHIDWK").ToString().Trim());
                 return;
             }
 
@@ -143,8 +143,8 @@ public partial class TTReportView : System.Web.UI.Page
             string strDBUserID = GetDatabaseReadOnlyUserID().ToLower();
             if (strDBUserID == "")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "111", "<script>alert('" + Resources.lang.ZZTSSJBBYDSJKYHIDWK + "');</script>");
-                Response.Write(Resources.lang.ZZTSSJBBYDSJKYHIDWK);
+                ClientScript.RegisterStartupScript(this.GetType(), "111", "<script>alert('" + LanguageHandle.GetWord("ZZTSSJBBYDSJKYHIDWK").ToString().Trim() + "');</script>");
+                Response.Write(LanguageHandle.GetWord("ZZTSSJBBYDSJKYHIDWK").ToString().Trim());
                 return "";
             }
 

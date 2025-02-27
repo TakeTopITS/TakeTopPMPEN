@@ -185,23 +185,23 @@ public partial class TTGoodsPurchaseReport : System.Web.UI.Page
 
         strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthorityAsset(strUserCode);
 
-        strHQL = @"Select  B.GPOName '名称' 
-            ,B.PurManName '业务员'
+        strHQL = @"Select  B.GPOName '名称'  
+            ,B.PurManName '业务员' 
             ,B.Supplier 'Supplier'
 
-            ,A.ID '编号'
-            ,A.GoodsCode '代码'
-            ,A.GoodsName '商品名称'
-            ,A.ModelNumber '型号'
-            ,A.Spec '规格'
-            ,A.Number '数量'
-            ,A.Unit '单位'
-            ,A.Price '单价'
-            ,A.SupplyNumber '供货量'
-            ,A.ReturnNumber '退货量'
-            ,A.Amount '金额'
-            ,B.CurrencyType '币别'
-            ,B.PurTime '时间'
+            ,A.ID '编号' 
+            ,A.GoodsCode '代码' 
+            ,A.GoodsName '商品名称' 
+            ,A.ModelNumber '型号' 
+            ,A.Spec '规格' 
+            ,A.Number '数量' 
+            ,A.Unit '单位' 
+            ,A.Price '单价' 
+            ,A.SupplyNumber '供货量' 
+            ,A.ReturnNumber '退货量' 
+            ,A.Amount '金额' 
+            ,B.CurrencyType '币别' 
+            ,B.PurTime '时间' 
             from T_GoodsPurRecord A,T_GoodsPurchaseOrder B where A.POID = B.POID";
 
         strHQL += " and to_char(A.PurTime,'yyyymmdd')  >= " + "'" + strStartTime + "'" + "  and to_char(A.PurTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
@@ -220,9 +220,9 @@ public partial class TTGoodsPurchaseReport : System.Web.UI.Page
 
         DataTable dtSaleOrder = ds.Tables[0];
 
-        Export3Excel(dtSaleOrder, "采购订单报表.xls");
+        Export3Excel(dtSaleOrder, LanguageHandle.GetWord("CaiGouDingChanBaoBiaoxls").ToString().Trim());
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true); 
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

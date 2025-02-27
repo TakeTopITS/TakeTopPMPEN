@@ -25,7 +25,7 @@ public partial class TTInvolvedProjectRelatedDefectMain : System.Web.UI.Page
         string strProjectID = Request.QueryString["ProjectID"];
 
         string strProject = GetProjectName(strProjectID);
-        //this.Title = Resources.lang.Project + strProjectID + " " + strProject + " 相关需求";
+        //this.Title = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectID + " " + strProject + "相关需求";
     }
 
     protected string GetProjectName(string strProjectID)

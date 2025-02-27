@@ -43,7 +43,7 @@ public partial class TTArchiveConstract : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
         {
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
 
             strHQL = "from ConstractBigType as constractBigType Order by constractBigType.SortNumber ASC";
             ConstractBigTypeBLL constractBigTypeBLL = new ConstractBigTypeBLL();
@@ -61,7 +61,7 @@ public partial class TTArchiveConstract : System.Web.UI.Page
             string strDepartCode = GetDepartCode(strUserCode);
             ShareClass.LoadUserByDepartCodeForDataGrid(strDepartCode, DataGrid3);
 
-            LB_ConstractOwner.Text = "我的所有合同列表：";
+            LB_ConstractOwner.Text = LanguageHandle.GetWord("WoDeSuoYouGeTongLieBiao").ToString().Trim();
 
             strHQL = "from Constract as constract where constract.Status not in ('Cancel','Deleted') ";
             strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
@@ -87,11 +87,11 @@ public partial class TTArchiveConstract : System.Web.UI.Page
             strDepartCode = treeNode.Target.Trim();
             strDepartName = ShareClass.GetDepartName(strDepartCode);
 
-            LB_ConstractOwner.Text = strDepartName + " 签订的合同列表：";
+            LB_ConstractOwner.Text = strDepartName + LanguageHandle.GetWord("QianDingDeGeTongLieBiao").ToString().Trim();
 
             ShareClass.LoadUserByDepartCodeForDataGrid(strDepartCode, DataGrid3);
 
-            LB_ConstractOwner.Text = strDepartName + " 签订的合同列表：";
+            LB_ConstractOwner.Text = strDepartName + LanguageHandle.GetWord("QianDingDeGeTongLieBiao").ToString().Trim();
             strHQL = "from Constract as constract where constract.ConstractCode in (Select constractSales.ConstractCode From ConstractSales as constractSales Where constractSales.SalesName in (select projectMember.UserName from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))  and constract.Status not in ('Archived','Deleted')";
             strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
             ConstractBLL constractBLL = new ConstractBLL();
@@ -124,7 +124,7 @@ public partial class TTArchiveConstract : System.Web.UI.Page
 
         LB_Sql.Text = strHQL;
 
-        LB_ConstractOwner.Text = "大类: " + strConstractClass + " 的合同：";
+        LB_ConstractOwner.Text = LanguageHandle.GetWord("DaLei").ToString().Trim() + strConstractClass + LanguageHandle.GetWord("DeGeTong").ToString().Trim();
     }
 
     protected void DataGrid1_ItemCommand(object sender, DataGridCommandEventArgs e)
@@ -146,13 +146,13 @@ public partial class TTArchiveConstract : System.Web.UI.Page
             {
                 if (strStatus == "Archived")
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCHTYGDBYZJXGDDZLJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCHTYGDBYZJXGDDZLJC").ToString().Trim() + "')", true);
                     return;
                 }
 
-                if (strStatus != "Completed" & strStatus != "已完成")
+                if (strStatus != "Completed" & strStatus != LanguageHandle.GetWord("YiWanCheng").ToString().Trim())
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCHTHMYJABNGDJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCHTHMYJABNGDJC").ToString().Trim() + "')", true);
                     return;
                 }
 
@@ -163,18 +163,18 @@ public partial class TTArchiveConstract : System.Web.UI.Page
                 {
                     constractBLL.UpdateConstract(constract, int.Parse(strConstractID));
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGDCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGDCG").ToString().Trim() + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGDSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGDSBJC").ToString().Trim() + "')", true);
                 }
             }
             else
             {
                 if (strStatus != "Archived")
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCHTZTBWGDBNCXJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCHTZTBWGDBNCXJC").ToString().Trim() + "')", true);
 
                     return;
                 }
@@ -186,11 +186,11 @@ public partial class TTArchiveConstract : System.Web.UI.Page
                 {
                     constractBLL.UpdateConstract(constract, int.Parse(strConstractID));
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('撤消" + Resources.lang.ZZGDCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZCheXiaoLanguageHandleGetWord").ToString().Trim()+"')", true); 
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('撤消" + Resources.lang.ZZGDSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZCheXiaoLanguageHandleGetWord").ToString().Trim()+"')", true); 
                 }
             }
 
@@ -208,7 +208,7 @@ public partial class TTArchiveConstract : System.Web.UI.Page
             string strDepartCode = ((Button)e.Item.FindControl("BT_DepartCode")).Text.Trim();
             string strDepartName = ((Button)e.Item.FindControl("BT_DepartName")).Text.Trim();
 
-            LB_ConstractOwner.Text = strDepartName + " 签订的合同列表：";
+            LB_ConstractOwner.Text = strDepartName + LanguageHandle.GetWord("QianDingDeGeTongLieBiao").ToString().Trim();
             strHQL = "from Constract as constract where constract.ConstractCode in ";
             strHQL += " (select constractSales.ConstractCode from ConstractSales as constractSales Where constractSales.SalesName ";
             strHQL += " in ( Select projectMember.UserName  Where from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
@@ -233,7 +233,7 @@ public partial class TTArchiveConstract : System.Web.UI.Page
         string strUserCode = ((Button)e.Item.FindControl("BT_UserCode")).Text.Trim();
         string strUserName = ((Button)e.Item.FindControl("BT_UserName")).Text.Trim();
 
-        LB_ConstractOwner.Text = strUserName + " 签订的合同列表：";
+        LB_ConstractOwner.Text = strUserName + LanguageHandle.GetWord("QianDingDeGeTongLieBiao").ToString().Trim();
 
         strHQL = "from Constract as constract where constract.ConstractCode in (Select constractSales.ConstractCode from ConstractSales as constractSales Where constractSales.SalesName = " + "'" + strUserName + "'" + ")  and constract.Status not in ('Archived','Deleted')";
         strHQL += " order by constract.SignDate DESC,constract.ConstractCode DESC";
@@ -257,7 +257,7 @@ public partial class TTArchiveConstract : System.Web.UI.Page
         string strPartA = "%" + TB_PartA.Text.Trim() + "%";
 
 
-        LB_ConstractOwner.Text = "类型: " + strType + " 的合同：";
+        LB_ConstractOwner.Text = LanguageHandle.GetWord("LeiXing").ToString().Trim() + strType + LanguageHandle.GetWord("DeGeTong").ToString().Trim();
 
         if (strPartA != "%%")
         {

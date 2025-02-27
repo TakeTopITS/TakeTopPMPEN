@@ -53,7 +53,7 @@ public partial class TTViewMail : System.Web.UI.Page
                 DeleteBtn.Enabled = false;
             }
         }
-        DeleteBtn.Attributes.Add("onclick", "return confirm(" + Resources.lang.ZZNQDYSCSXYJM + ");");
+        DeleteBtn.Attributes.Add("onclick", "return confirm(" + LanguageHandle.GetWord("ZZNQDYSCSXYJM").ToString().Trim() + ");");
     }
 
     private void BindFolderData()
@@ -183,27 +183,27 @@ public partial class TTViewMail : System.Web.UI.Page
         string strFolderKeyWord = folders.KeyWord.Trim();
         if (strFolderKeyWord == "New")
         {
-            strFolderName = Resources.lang.ZZNewMail;
+            strFolderName = LanguageHandle.GetWord("ZZNewMail").ToString().Trim();
         }
         if (strFolderKeyWord == "Read")
         {
-            strFolderName = Resources.lang.ZZReadMail;
+            strFolderName = LanguageHandle.GetWord("ZZReadMail").ToString().Trim();
         }
         if (strFolderKeyWord == "Waiting")
         {
-            strFolderName = Resources.lang.ZZWaitingMail;
+            strFolderName = LanguageHandle.GetWord("ZZWaitingMail").ToString().Trim();
         }
         if (strFolderKeyWord == "Send")
         {
-            strFolderName = Resources.lang.ZZSendMail;
+            strFolderName = LanguageHandle.GetWord("ZZSendMail").ToString().Trim();
         }
         if (strFolderKeyWord == "Draft")
         {
-            strFolderName = Resources.lang.ZZDraftBox;
+            strFolderName = LanguageHandle.GetWord("ZZDraftBox").ToString().Trim();
         }
         if (strFolderKeyWord == "Rubbish")
         {
-            strFolderName = Resources.lang.ZZRubbishBox;
+            strFolderName = LanguageHandle.GetWord("ZZRubbishBox").ToString().Trim();
         }
 
         return strFolderName;

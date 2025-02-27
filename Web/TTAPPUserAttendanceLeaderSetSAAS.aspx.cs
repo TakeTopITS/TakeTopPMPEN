@@ -49,7 +49,7 @@ public partial class TTAPPUserAttendanceLeaderSetSAAS : System.Web.UI.Page
         DataSet ds1 = ShareClass.GetDataSetFromSql(strHQL, "T_ContactInfor");
         if (ds1.Tables[0].Rows.Count == 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGNBZCZGKQYQZLBNJRQJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGNBZCZGKQYQZLBNJRQJC").ToString().Trim() + "')", true);
             return;
         }
 

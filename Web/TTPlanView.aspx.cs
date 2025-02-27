@@ -32,7 +32,7 @@ public partial class TTPlanView : System.Web.UI.Page
         Plan plan = (Plan)lst[0];
         strPlanName = plan.PlanName.Trim();
 
-        //this.Title = Resources.lang.JiHua + ": " + strPlanID + " " + strPlanName + " 处理";
+        //this.Title = LanguageHandle.GetWord("JiHua").ToString().Trim() + ": " + strPlanID + " " + strPlanName + " 处理";
 
          string strUserCode = Session["UserCode"].ToString();if (Page.IsPostBack == false)
         {

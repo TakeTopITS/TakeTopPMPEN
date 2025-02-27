@@ -135,7 +135,7 @@ public partial class TTWZPurchaseDelegateList : System.Web.UI.Page
                     strProgress = wZPurchase.Progress.Trim();
                     dePlanMoney = wZPurchase.PlanMoney;
 
-                    if (strDecision == strUserCode & strProgress == "报批" & dePlanMoney < 300000)
+                    if (strDecision == strUserCode & strProgress == LanguageHandle.GetWord("BaoPi").ToString().Trim() & dePlanMoney < 300000)
                     {
                         BT_Decision.Enabled = true;
                     }
@@ -369,14 +369,14 @@ public partial class TTWZPurchaseDelegateList : System.Web.UI.Page
 
             string strHQL;
             //采购文件
-            strHQL = "Update T_WZPurchase Set Progress = '决策' Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'";
+            strHQL = "Update T_WZPurchase Set Progress = '决策' Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'"; 
             ShareClass.RunSqlCommand(strHQL);
 
             //报价单
-            strHQL = "Update T_WZPurchaseOfferRecord Set Progress = '决策'  Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'";
+            strHQL = "Update T_WZPurchaseOfferRecord Set Progress = '决策'  Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'"; 
             ShareClass.RunSqlCommand(strHQL);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true); 
         }
         catch (Exception ex)
         {
@@ -413,15 +413,15 @@ public partial class TTWZPurchaseDelegateList : System.Web.UI.Page
 
                 string strHQL;
                 //采购文件
-                strHQL = "Update T_WZPurchase Set Progress = '报批' Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'";
+                strHQL = "Update T_WZPurchase Set Progress = '报批' Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'"; 
                 ShareClass.RunSqlCommand(strHQL);
 
                 //报价单
-                strHQL = "Update T_WZPurchaseOfferRecord Set Progress = '报批'  Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'";
+                strHQL = "Update T_WZPurchaseOfferRecord Set Progress = '报批'  Where PurchaseCode = " + "'" + HF_PurchaseCode.Value + "'"; 
                 ShareClass.RunSqlCommand(strHQL);
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('取消成功！');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('取消成功！');", true); 
         }
         catch (Exception ex)
         {

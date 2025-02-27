@@ -94,31 +94,31 @@ public partial class TakeTopLRExLeft : System.Web.UI.Page
         strUserName = Session["UserName"].ToString();
         if (strUserCode == "ADMIN")
         {
-            if (ShareClass.IsExistModuleByUserCode("ADMIN", "管控中心", "SYSTEM", strUserType) == false)
+            if (ShareClass.IsExistModuleByUserCode("ADMIN", LanguageHandle.GetWord("GuanKongZhongXin").ToString().Trim(), "SYSTEM", strUserType) == false)
             {
-                strHQL = "Insert Into T_ProModule(ModuleName,UserCode,Visible,ModuleType,UserType) Values('管控中心','ADMIN','YES','SYSTEM','" + strUserType + "')";
+                strHQL = "Insert Into T_ProModule(ModuleName,UserCode,Visible,ModuleType,UserType) Values('管控中心','ADMIN','YES','SYSTEM','" + strUserType + "')"; 
                 ShareClass.RunSqlCommand(strHQL);
             }
             else
             {
-                strHQL = "Update T_ProModule Set Visible = 'YES' Where ModuleName = '管控中心' and UserCode = 'ADMIN'";
+                strHQL = "Update T_ProModule Set Visible = 'YES' Where ModuleName = '管控中心' and UserCode = 'ADMIN'"; 
                 ShareClass.RunSqlCommand(strHQL);
             }
 
-            if (ShareClass.IsExistModuleByUserCode("ADMIN", "系统模组设定", "SYSTEM", strUserType) == false)
+            if (ShareClass.IsExistModuleByUserCode("ADMIN", LanguageHandle.GetWord("JiTongMoZuSheDing").ToString().Trim(), "SYSTEM", strUserType) == false)
             {
-                strHQL = "Insert Into T_ProModule(ModuleName,UserCode,Visible,ModuleType,UserType) Values('系统模组设定','ADMIN','YES','SYSTEM','" + strUserType + "')";
+                strHQL = "Insert Into T_ProModule(ModuleName,UserCode,Visible,ModuleType,UserType) Values('系统模组设定','ADMIN','YES','SYSTEM','" + strUserType + "')"; 
                 ShareClass.RunSqlCommand(strHQL);
             }
             else
             {
-                strHQL = "Update T_ProModule Set Visible = 'YES' Where ModuleName = '系统模组设定' and UserCode = 'ADMIN'";
+                strHQL = "Update T_ProModule Set Visible = 'YES' Where ModuleName = '系统模组设定' and UserCode = 'ADMIN'"; 
                 ShareClass.RunSqlCommand(strHQL);
             }
 
-            strHQL = "Update T_ProModuleLevel Set Visible = 'YES' Where ModuleName = '管控中心'";
+            strHQL = "Update T_ProModuleLevel Set Visible = 'YES' Where ModuleName = '管控中心'"; 
             ShareClass.RunSqlCommand(strHQL);
-            strHQL = "Update T_ProModuleLevel Set Visible = 'YES' Where ModuleName = '系统模组设定'";
+            strHQL = "Update T_ProModuleLevel Set Visible = 'YES' Where ModuleName = '系统模组设定'"; 
             ShareClass.RunSqlCommand(strHQL);
         }
 

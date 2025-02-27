@@ -109,7 +109,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
             strWLType = ShareClass.GetWorkFlowType(strWLID);
             strWFName = ShareClass.GetWorkFlowName(strWLID);
             strStatus = ds.Tables[0].Rows[i]["Status"].ToString().Trim();
-            strContent = "同意完成通过";
+            strContent = LanguageHandle.GetWord("TongYiWanChengTongGuo").ToString().Trim();
             strStepID = ds.Tables[0].Rows[i]["StepID"].ToString();
             strStepName = ds.Tables[0].Rows[i]["StepName"].ToString();
             strID = ds.Tables[0].Rows[i]["ID"].ToString();
@@ -151,7 +151,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
                             {
                                 //发送信息通知申请者
                                 Msg msg = new Msg();
-                                msg.SendMSM("Message", strCreatorCode, strOperatorCode + strOperatorName + Resources.lang.YiJing + Resources.lang.CaoShi + Resources.lang.ZiDong + Resources.lang.PiZhun + Resources.lang.GongZuoLiuShenQing + " : " + strWLID + strWFName + "," + Resources.lang.BuZhou + ": " + strStepID + strStepName, strOperatorCode);
+                                msg.SendMSM("Message", strCreatorCode, strOperatorCode + strOperatorName + LanguageHandle.GetWord("YiJing").ToString().Trim() + LanguageHandle.GetWord("CaoShi").ToString().Trim() + LanguageHandle.GetWord("ZiDong").ToString().Trim() + LanguageHandle.GetWord("PiZhun").ToString().Trim() + LanguageHandle.GetWord("GongZuoLiuShenQing").ToString().Trim() + " : " + strWLID + strWFName + "," + LanguageHandle.GetWord("BuZhou").ToString().Trim() + ": " + strStepID + strStepName, strOperatorCode);
                             }
                             catch
                             {
@@ -170,7 +170,7 @@ public partial class TakeTopTimer : System.Web.UI.Page
                             try
                             {
                                 Msg msg = new Msg();
-                                msg.SendMsgToOtherMemberForWorkflow(strOperatorCode, strTemName, strTStepID, strWLID, strWFName, strStepID, strStepName, "AgreeNotice", Resources.lang.CaoShi + Resources.lang.ZiDong + Resources.lang.PiZhun);
+                                msg.SendMsgToOtherMemberForWorkflow(strOperatorCode, strTemName, strTStepID, strWLID, strWFName, strStepID, strStepName, "AgreeNotice", LanguageHandle.GetWord("CaoShi").ToString().Trim() + LanguageHandle.GetWord("ZiDong").ToString().Trim() + LanguageHandle.GetWord("PiZhun").ToString().Trim());
                             }
                             catch
                             {

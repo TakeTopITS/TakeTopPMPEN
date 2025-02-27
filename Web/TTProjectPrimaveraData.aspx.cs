@@ -36,7 +36,7 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
     {
         if (ddl_Code.SelectedValue.Trim() == "" || string.IsNullOrEmpty(ddl_Code.SelectedValue.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGZYXDDCJKBMJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGZYXDDCJKBMJC").ToString().Trim()+"')", true);
             return;
         }
         AddOrUpdatePrimProjectList();
@@ -46,7 +46,7 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
     {
         if (ddl_Code.SelectedValue.Trim() == "" || string.IsNullOrEmpty(ddl_Code.SelectedValue.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGZYXDDCJKBMJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGZYXDDCJKBMJC").ToString().Trim()+"')", true);
             return;
         }
         AddOrUpdatePrimProjCostList();
@@ -92,8 +92,8 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
         ///创建链接
         SqlConnection con = new SqlConnection(GetDataBaseLinkAddress(ddl_Code.SelectedValue.Trim()));
         ///定义SQL语句
-        string cmdText = "SELECT proj_id '项目编号',proj_short_name '项目代码',guid '项目标识码',plan_start_date '项目开始日期'," +
-            "COALESCE(plan_end_date,plan_start_date) '项目结束日期',create_date '项目创建时间' FROM PROJECT Order by proj_id ASC ";
+        string cmdText = "SELECT proj_id '项目编号',proj_short_name '项目代码',guid '项目标识码',plan_start_date '项目开始日期'," + 
+            "COALESCE(plan_end_date,plan_start_date) '项目结束日期',create_date '项目创建时间' FROM PROJECT Order by proj_id ASC "; 
         ///打开链接
         con.Open();
         ///创建Command
@@ -116,7 +116,7 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
         int rowsnum = dt.Rows.Count;
         if (rowsnum == 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGP6XMWBSBWSJ+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGP6XMWBSBWSJ").ToString().Trim()+"')", true);
         }
         else
         {
@@ -124,27 +124,27 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
             for (int i = 0; i < dr.Length; i++)
             {
                 project.AcceptStandard = "";
-                project.BeginDate = DateTime.Parse(string.IsNullOrEmpty(dr[i]["项目开始日期"].ToString()) ? DateTime.Now.ToString() : dr[i]["项目开始日期"].ToString());
+                project.BeginDate = DateTime.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("XiangMuKaiShiRiJi").ToString().Trim()].ToString()) ? DateTime.Now.ToString() : dr[i][LanguageHandle.GetWord("XiangMuKaiShiRiJi").ToString().Trim()].ToString());
                 project.Budget = 0;
                 project.CustomerPMName = "";
-                project.EndDate = DateTime.Parse(string.IsNullOrEmpty(dr[i]["项目结束日期"].ToString()) ? DateTime.Now.ToString() : dr[i]["项目结束日期"].ToString());
+                project.EndDate = DateTime.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("XiangMuJieShuRiJi").ToString().Trim()].ToString()) ? DateTime.Now.ToString() : dr[i][LanguageHandle.GetWord("XiangMuJieShuRiJi").ToString().Trim()].ToString());
                 project.FinishPercent = 0;
-                project.MakeDate = DateTime.Parse(string.IsNullOrEmpty(dr[i]["项目创建时间"].ToString()) ? DateTime.Now.ToString() : dr[i]["项目创建时间"].ToString());
+                project.MakeDate = DateTime.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("XiangMuChuangJianShiJian").ToString().Trim()].ToString()) ? DateTime.Now.ToString() : dr[i][LanguageHandle.GetWord("XiangMuChuangJianShiJian").ToString().Trim()].ToString());
                 project.ManHour = 0;
                 project.ManNumber = 0;
                 project.ParentID = 0;
                 project.PMCode = strUserCode.Trim();
                 project.PMName = GetUserName(strUserCode).Trim();
                 project.ProjectAmount = 0;
-                project.ProjectClass = "常规项目";
+                project.ProjectClass = LanguageHandle.GetWord("ChangGuiXiangMu").ToString().Trim();
                 project.ProjectDetail = "";
-                project.ProjectName = getPrimProjName(dr[i]["项目编号"].ToString(), dr[i]["项目代码"].ToString()).Trim();
-                project.ProjectType = "Primavera项目";
+                project.ProjectName = getPrimProjName(dr[i][LanguageHandle.GetWord("XiangMuBianHao").ToString().Trim()].ToString(), dr[i][LanguageHandle.GetWord("XiangMuDaiMa").ToString().Trim()].ToString()).Trim();
+                project.ProjectType = "Primavera项目"; 
                 project.Status = "New";
                 project.StatusValue = "InProgress";
                 project.UserCode = strUserCode.Trim();
                 project.UserName = GetUserName(strUserCode).Trim();
-                int ProjectId = getProjectIdByPrimavera(dr[i]["项目标识码"].ToString());
+                int ProjectId = getProjectIdByPrimavera(dr[i][LanguageHandle.GetWord("XiangMuBiaoShiMa").ToString().Trim()].ToString());
 
                 if (ProjectId == 0)//新增
                 {
@@ -152,9 +152,9 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
 
                     projectPrimavera.BeginDate = project.BeginDate;
                     projectPrimavera.EndDate = project.EndDate;
-                    projectPrimavera.Guid = dr[i]["项目标识码"].ToString().Trim();
+                    projectPrimavera.Guid = dr[i][LanguageHandle.GetWord("XiangMuBiaoShiMa").ToString().Trim()].ToString().Trim();
                     projectPrimavera.MakeDate = project.MakeDate;
-                    projectPrimavera.ProjectCode = dr[i]["项目代码"].ToString().Trim();
+                    projectPrimavera.ProjectCode = dr[i][LanguageHandle.GetWord("XiangMuDaiMa").ToString().Trim()].ToString().Trim();
                     projectPrimavera.ProjectID = getMaxProjectId(project);
                     projectPrimavera.ProjectName = project.ProjectName;
 
@@ -165,12 +165,12 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
                     string strHQL = "from Project as project where project.ProjectID='" + ProjectId.ToString().Trim() + "' ";
                     IList lst = projectBLL.GetAllProjects(strHQL);
                     Project project1 = (Project)lst[0];
-                    project1.BeginDate = DateTime.Parse(string.IsNullOrEmpty(dr[i]["项目开始日期"].ToString()) ? DateTime.Now.ToString() : dr[i]["项目开始日期"].ToString());
-                    project1.EndDate = DateTime.Parse(string.IsNullOrEmpty(dr[i]["项目结束日期"].ToString()) ? DateTime.Now.ToString() : dr[i]["项目结束日期"].ToString());
-                    project1.MakeDate = DateTime.Parse(string.IsNullOrEmpty(dr[i]["项目创建时间"].ToString()) ? DateTime.Now.ToString() : dr[i]["项目创建时间"].ToString());
+                    project1.BeginDate = DateTime.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("XiangMuKaiShiRiJi").ToString().Trim()].ToString()) ? DateTime.Now.ToString() : dr[i][LanguageHandle.GetWord("XiangMuKaiShiRiJi").ToString().Trim()].ToString());
+                    project1.EndDate = DateTime.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("XiangMuJieShuRiJi").ToString().Trim()].ToString()) ? DateTime.Now.ToString() : dr[i][LanguageHandle.GetWord("XiangMuJieShuRiJi").ToString().Trim()].ToString());
+                    project1.MakeDate = DateTime.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("XiangMuChuangJianShiJian").ToString().Trim()].ToString()) ? DateTime.Now.ToString() : dr[i][LanguageHandle.GetWord("XiangMuChuangJianShiJian").ToString().Trim()].ToString());
                     project1.PMCode = strUserCode.Trim();
                     project1.PMName = GetUserName(strUserCode).Trim();
-                    project1.ProjectName = getPrimProjName(dr[i]["项目编号"].ToString(), dr[i]["项目代码"].ToString()).Trim();
+                    project1.ProjectName = getPrimProjName(dr[i][LanguageHandle.GetWord("XiangMuBianHao").ToString().Trim()].ToString(), dr[i][LanguageHandle.GetWord("XiangMuDaiMa").ToString().Trim()].ToString()).Trim();
                     project1.UserCode = strUserCode.Trim();
                     project1.UserName = GetUserName(strUserCode).Trim();
 
@@ -181,9 +181,9 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
                     ProjectPrimavera projectPrimavera1 = (ProjectPrimavera)lst[0];
                     projectPrimavera1.BeginDate = project1.BeginDate;
                     projectPrimavera1.EndDate = project1.EndDate;
-                    projectPrimavera1.Guid = dr[i]["项目标识码"].ToString().Trim();
+                    projectPrimavera1.Guid = dr[i][LanguageHandle.GetWord("XiangMuBiaoShiMa").ToString().Trim()].ToString().Trim();
                     projectPrimavera1.MakeDate = project1.MakeDate;
-                    projectPrimavera1.ProjectCode = dr[i]["项目代码"].ToString().Trim();
+                    projectPrimavera1.ProjectCode = dr[i][LanguageHandle.GetWord("XiangMuDaiMa").ToString().Trim()].ToString().Trim();
                     projectPrimavera1.ProjectID = ProjectId;
                     projectPrimavera1.ProjectName = project1.ProjectName;
 
@@ -196,11 +196,11 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
             for (int j = 0; j < dr.Length; j++)
             {
                 //项目Id
-                string strGuid = dr[j]["项目标识码"].ToString().Trim();
+                string strGuid = dr[j][LanguageHandle.GetWord("XiangMuBiaoShiMa").ToString().Trim()].ToString().Trim();
                 int strProjId = getProjectIdByPrimavera(strGuid);
 
                 //父级项目ID
-                string strParentGuid = getPrimProjGuid(getPrimProjParentId(dr[j]["项目编号"].ToString(), dr[j]["项目代码"].ToString()).ToString()).Trim();
+                string strParentGuid = getPrimProjGuid(getPrimProjParentId(dr[j][LanguageHandle.GetWord("XiangMuBianHao").ToString().Trim()].ToString(), dr[j][LanguageHandle.GetWord("XiangMuDaiMa").ToString().Trim()].ToString()).ToString()).Trim();
                 int strParentProjId = getProjectIdByPrimavera(strParentGuid);
 
                 string strHQL = "from Project as project where project.ProjectID='" + strProjId.ToString().Trim() + "' ";
@@ -213,7 +213,7 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
             }
             #endregion
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXMWBSSJDRCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXMWBSSJDRCG").ToString().Trim()+"')", true);
         }
     }
 
@@ -247,8 +247,8 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
         ///创建链接
         SqlConnection con = new SqlConnection(GetDataBaseLinkAddress(ddl_Code.SelectedValue.Trim()));
         ///定义SQL语句
-        string cmdText = "SELECT cost_item_id '序号',A.proj_id '项目编号',A.task_id '作业编号',target_cost '完成时预算费用',act_cost '完成时实际费用'," +
-            "act_cost+remain_cost '完成时总费用',A.create_date '创建时间',B.guid '项目标识码',C.guid '作业标识码' FROM PROJCOST as A,PROJECT as B,TASK as C " +
+        string cmdText = "SELECT cost_item_id '序号',A.proj_id '项目编号',A.task_id '作业编号',target_cost '完成时预算费用',act_cost '完成时实际费用'," + 
+            "act_cost+remain_cost '完成时总费用',A.create_date '创建时间',B.guid '项目标识码',C.guid '作业标识码' FROM PROJCOST as A,PROJECT as B,TASK as C " + 
             "Where A.proj_id=B.proj_id and A.task_id=C.task_id ";
         ///打开链接
         con.Open();
@@ -273,7 +273,7 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
         int rowsnum = dt.Rows.Count;
         if (rowsnum == 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGP6XMFYBWSJ+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGP6XMFYBWSJ").ToString().Trim()+"')", true);
         }
         else
         {
@@ -281,33 +281,33 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
             for (int i = 0; i < dr.Length; i++)
             {
                 //项目Id
-                string strGuid = dr[i]["项目标识码"].ToString().Trim();
+                string strGuid = dr[i][LanguageHandle.GetWord("XiangMuBiaoShiMa").ToString().Trim()].ToString().Trim();
                 int strProjId = getProjectIdByPrimavera(strGuid);
                 //作业ID
-                string strtaskGuid = dr[i]["作业标识码"].ToString().Trim();
+                string strtaskGuid = dr[i][LanguageHandle.GetWord("ZuoYeBiaoShiMa").ToString().Trim()].ToString().Trim();
                 int strTaskId = getTaskIdByPrimavera(strtaskGuid);
                 if (strProjId > 0 && strTaskId > 0)
                 {
                     projectBudget.ProjectID = strProjId;
                     projectBudget.Account = "Other";
-                    projectBudget.Amount = decimal.Parse(string.IsNullOrEmpty(dr[i]["完成时预算费用"].ToString()) ? "0" : dr[i]["完成时预算费用"].ToString());
-                    projectBudget.CreateTime = DateTime.Parse(string.IsNullOrEmpty(dr[i]["创建时间"].ToString()) ? DateTime.Now.ToString() : dr[i]["创建时间"].ToString());
+                    projectBudget.Amount = decimal.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("WanChengShiYuSuanFeiYong").ToString().Trim()].ToString()) ? "0" : dr[i][LanguageHandle.GetWord("WanChengShiYuSuanFeiYong").ToString().Trim()].ToString());
+                    projectBudget.CreateTime = DateTime.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("ChuangJianShiJian").ToString().Trim()].ToString()) ? DateTime.Now.ToString() : dr[i][LanguageHandle.GetWord("ChuangJianShiJian").ToString().Trim()].ToString());
                     projectBudget.CreatorCode = strUserCode.Trim();
                     projectBudget.CreatorName = GetUserName(strUserCode).Trim();
-                    projectBudget.Description = "primavera 6导入项目费用";
+                    projectBudget.Description = LanguageHandle.GetWord("primavera6DaoRuXiangMuFeiYong").ToString().Trim();
 
-                    DeleteProjectPrimaveraBudget(dr[i]["序号"].ToString().Trim());//导入前，先删除原来数据(有的话则删除)
+                    DeleteProjectPrimaveraBudget(dr[i][LanguageHandle.GetWord("XuHao").ToString().Trim()].ToString().Trim());//导入前，先删除原来数据(有的话则删除)
 
                     projectBudgetBLL.AddProjectBudget(projectBudget);
 
-                    projectPrimaveraBudget.BudgetAmount = decimal.Parse(string.IsNullOrEmpty(dr[i]["完成时预算费用"].ToString().Trim()) ? "0" : dr[i]["完成时预算费用"].ToString().Trim());
+                    projectPrimaveraBudget.BudgetAmount = decimal.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("WanChengShiYuSuanFeiYong").ToString().Trim()].ToString().Trim()) ? "0" : dr[i][LanguageHandle.GetWord("WanChengShiYuSuanFeiYong").ToString().Trim()].ToString().Trim());
                     projectPrimaveraBudget.ProjBudgID = getMaxProjectBudgetId(projectBudget);
-                    projectPrimaveraBudget.ProjGuid = dr[i]["项目标识码"].ToString().Trim();
+                    projectPrimaveraBudget.ProjGuid = dr[i][LanguageHandle.GetWord("XiangMuBiaoShiMa").ToString().Trim()].ToString().Trim();
                     projectPrimaveraBudget.ProjectID = projectBudget.ProjectID;
-                    projectPrimaveraBudget.RealAmount = decimal.Parse(string.IsNullOrEmpty(dr[i]["完成时实际费用"].ToString().Trim()) ? "0" : dr[i]["完成时实际费用"].ToString().Trim());
-                    projectPrimaveraBudget.TotalAmount = decimal.Parse(string.IsNullOrEmpty(dr[i]["完成时总费用"].ToString().Trim()) ? "0" : dr[i]["完成时总费用"].ToString().Trim());
+                    projectPrimaveraBudget.RealAmount = decimal.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("WanChengShiShiJiFeiYong").ToString().Trim()].ToString().Trim()) ? "0" : dr[i][LanguageHandle.GetWord("WanChengShiShiJiFeiYong").ToString().Trim()].ToString().Trim());
+                    projectPrimaveraBudget.TotalAmount = decimal.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("WanChengShiZongFeiYong").ToString().Trim()].ToString().Trim()) ? "0" : dr[i][LanguageHandle.GetWord("WanChengShiZongFeiYong").ToString().Trim()].ToString().Trim());
                     projectPrimaveraBudget.TaskID = strTaskId;
-                    projectPrimaveraBudget.P6ID = int.Parse(string.IsNullOrEmpty(dr[i]["序号"].ToString().Trim()) ? "0" : dr[i]["序号"].ToString().Trim());
+                    projectPrimaveraBudget.P6ID = int.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("XuHao").ToString().Trim()].ToString().Trim()) ? "0" : dr[i][LanguageHandle.GetWord("XuHao").ToString().Trim()].ToString().Trim());
 
                     projectPrimaveraBudgetBLL.AddProjectPrimaveraBudget(projectPrimaveraBudget);
 
@@ -320,7 +320,7 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
             }
             #endregion
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXMFYSJDRCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXMFYSJDRCG").ToString().Trim()+"')", true);
         }
     }
 
@@ -330,8 +330,8 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
         ///创建链接
         SqlConnection con = new SqlConnection(GetDataBaseLinkAddress(ddl_Code.SelectedValue.Trim()));
         ///定义SQL语句
-        string cmdText = "SELECT task_id '作业编号',A.proj_id '项目编号',wbs_id 'WBS编号',task_code '作业编码',task_name '作业名称',A.guid '作业标识码',A.create_date '创建时间',"+
-            "COALESCE(target_start_date,restart_date) '作业开始日期',COALESCE(target_end_date,reend_date) '作业结束日期',B.guid '项目标识码' FROM TASK as A,PROJECT as B where A.proj_id=B.proj_id ";
+        string cmdText = "SELECT task_id '作业编号',A.proj_id '项目编号',wbs_id 'WBS编号',task_code '作业编码',task_name '作业名称',A.guid '作业标识码',A.create_date '创建时间',"+ 
+            "COALESCE(target_start_date,restart_date) '作业开始日期',COALESCE(target_end_date,reend_date) '作业结束日期',B.guid '项目标识码' FROM TASK as A,PROJECT as B where A.proj_id=B.proj_id "; 
         ///打开链接
         con.Open();
         ///创建Command
@@ -353,7 +353,7 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
         int rowsnum = dt.Rows.Count;
         if (rowsnum == 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGP6XMZYBWSJ+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGP6XMZYBWSJ").ToString().Trim()+"')", true);
         }
         else
         {
@@ -361,7 +361,7 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
             for (int i = 0; i < dr.Length; i++)
             {
                 //项目Id
-                string strGuid = dr[i]["项目标识码"].ToString().Trim();
+                string strGuid = dr[i][LanguageHandle.GetWord("XiangMuBiaoShiMa").ToString().Trim()].ToString().Trim();
                 int strProjId = getProjectIdByPrimavera(strGuid);
                 if (strProjId == 0)
                 {
@@ -369,22 +369,22 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
                 else
                 {
                     projectPrimaveraTask.ProjectID = strProjId;
-                    projectPrimaveraTask.TaskCode = dr[i]["作业编码"].ToString().Trim();
-                    projectPrimaveraTask.BeginDate = DateTime.Parse(string.IsNullOrEmpty(dr[i]["作业开始日期"].ToString()) ? DateTime.Now.ToString() : dr[i]["作业开始日期"].ToString());
-                    projectPrimaveraTask.EndDate = DateTime.Parse(string.IsNullOrEmpty(dr[i]["作业结束日期"].ToString()) ? DateTime.Now.ToString() : dr[i]["作业结束日期"].ToString());
-                    projectPrimaveraTask.CreateDate = DateTime.Parse(string.IsNullOrEmpty(dr[i]["创建时间"].ToString()) ? DateTime.Now.ToString() : dr[i]["创建时间"].ToString());
-                    projectPrimaveraTask.ProjGuid = dr[i]["项目标识码"].ToString().Trim();
-                    projectPrimaveraTask.TaskGuid = dr[i]["作业标识码"].ToString().Trim();
-                    projectPrimaveraTask.TaskName = dr[i]["作业名称"].ToString().Trim();
+                    projectPrimaveraTask.TaskCode = dr[i][LanguageHandle.GetWord("ZuoYeBianMa").ToString().Trim()].ToString().Trim();
+                    projectPrimaveraTask.BeginDate = DateTime.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("ZuoYeKaiShiRiJi").ToString().Trim()].ToString()) ? DateTime.Now.ToString() : dr[i][LanguageHandle.GetWord("ZuoYeKaiShiRiJi").ToString().Trim()].ToString());
+                    projectPrimaveraTask.EndDate = DateTime.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("ZuoYeJieShuRiJi").ToString().Trim()].ToString()) ? DateTime.Now.ToString() : dr[i][LanguageHandle.GetWord("ZuoYeJieShuRiJi").ToString().Trim()].ToString());
+                    projectPrimaveraTask.CreateDate = DateTime.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("ChuangJianShiJian").ToString().Trim()].ToString()) ? DateTime.Now.ToString() : dr[i][LanguageHandle.GetWord("ChuangJianShiJian").ToString().Trim()].ToString());
+                    projectPrimaveraTask.ProjGuid = dr[i][LanguageHandle.GetWord("XiangMuBiaoShiMa").ToString().Trim()].ToString().Trim();
+                    projectPrimaveraTask.TaskGuid = dr[i][LanguageHandle.GetWord("ZuoYeBiaoShiMa").ToString().Trim()].ToString().Trim();
+                    projectPrimaveraTask.TaskName = dr[i][LanguageHandle.GetWord("ZuoYeMingChen").ToString().Trim()].ToString().Trim();
 
-                    DeleteProjectPrimaveraTask(dr[i]["作业标识码"].ToString().Trim());//导入前，先删除原来数据(有的话则删除)
+                    DeleteProjectPrimaveraTask(dr[i][LanguageHandle.GetWord("ZuoYeBiaoShiMa").ToString().Trim()].ToString().Trim());//导入前，先删除原来数据(有的话则删除)
 
                     projectPrimaveraTaskBLL.AddProjectPrimaveraTask(projectPrimaveraTask);
                 }
             }
             #endregion
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXMZYSJDRCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXMZYSJDRCG").ToString().Trim()+"')", true);
         }
     }
 
@@ -408,7 +408,7 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
     {
         if (ddl_Code.SelectedValue.Trim() == "" || string.IsNullOrEmpty(ddl_Code.SelectedValue.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGZYXDDCJKBMJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGZYXDDCJKBMJC").ToString().Trim()+"')", true);
             return;
         }
         AddOrUpdatePrimProjTaskList();
@@ -558,7 +558,7 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Project as project where project.ProjectName='" + pj.ProjectName.Trim() + "' and project.ProjectType = 'Primavera项目' and project.PMCode = '" + pj.PMCode.Trim() + "' and project.UserCode = '" + pj.UserCode.Trim() + "' Order by project.ProjectID DESC";
+        strHQL = "from Project as project where project.ProjectName='" + pj.ProjectName.Trim() + "' and project.ProjectType = 'Primavera项目' and project.PMCode = '" + pj.PMCode.Trim() + "' and project.UserCode = '" + pj.UserCode.Trim() + "' Order by project.ProjectID DESC"; 
         ProjectBLL projectBLL = new ProjectBLL();
         lst = projectBLL.GetAllProjects(strHQL);
         Project project = (Project)lst[0];
@@ -702,7 +702,7 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
     {
         if (ddl_Code.SelectedValue.Trim() == "" || string.IsNullOrEmpty(ddl_Code.SelectedValue.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGZYXDDCJKBMJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGZYXDDCJKBMJC").ToString().Trim()+"')", true);
             return;
         }
         if (Page.IsValid)
@@ -710,13 +710,13 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = "Prim项目数据_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("PrimXiangMuShuJu").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
 
                 CreateExcel(getPrimProjectList(), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGDCDSJYWJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim()+"')", true);
             }
         }
     }
@@ -724,7 +724,7 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
     {
         if (ddl_Code.SelectedValue.Trim() == "" || string.IsNullOrEmpty(ddl_Code.SelectedValue.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGZYXDDCJKBMJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGZYXDDCJKBMJC").ToString().Trim()+"')", true);
             return;
         }
         if (Page.IsValid)
@@ -732,13 +732,13 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = "Prim项目费用数据_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("PrimXiangMuFeiYongShuJu").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
 
                 CreateExcel(getPrimProjCostList(), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGDCDSJYWJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim()+"')", true);
             }
         }
     }
@@ -746,7 +746,7 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
     {
         if (ddl_Code.SelectedValue.Trim() == "" || string.IsNullOrEmpty(ddl_Code.SelectedValue.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGZYXDDCJKBMJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGZYXDDCJKBMJC").ToString().Trim()+"')", true);
             return;
         }
         if (Page.IsValid)
@@ -754,13 +754,13 @@ public partial class TTProjectPrimaveraData : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = "Prim项目作业数据_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("PrimXiangMuZuoYeShuJu").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
 
                 CreateExcel(getPrimProjTaskList(), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGDCDSJYWJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim()+"')", true);
             }
         }
     }

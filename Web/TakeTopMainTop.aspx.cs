@@ -51,7 +51,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
         
             strUserName = ShareClass.GetUserName(strUserCode);
             LB_UserName.Text = strUserName;
-            LB_SystemMsg.Text = Resources.lang.NiHao + "，" + Resources.lang.HuanYingNiShiYong + " " + System.Configuration.ConfigurationManager.AppSettings["SystemName"];       
+            LB_SystemMsg.Text = LanguageHandle.GetWord("NiHao").ToString().Trim() + "，" + LanguageHandle.GetWord("HuanYingNiShiYong").ToString().Trim() + " " + System.Configuration.ConfigurationManager.AppSettings["SystemName"];       
 
             //清空页面缓存，用于改变皮肤
             SetPageNoCache();
@@ -60,7 +60,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
             //设置待处理事项
             LB_SuperDepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthoritySuperUser(strUserCode);
-            LB_UnHandledCase.Text = GetUNHandledWorkCount(strUserCode, strLangCode).ToString() + " " + Resources.lang.ToDoList;
+            LB_UnHandledCase.Text = GetUNHandledWorkCount(strUserCode, strLangCode).ToString() + " " + LanguageHandle.GetWord("ToDoList").ToString().Trim();
 
             AsyncWork();
         }
@@ -128,7 +128,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click66", "alert('" + Resources.lang.ZZGGSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click66", "alert('" + LanguageHandle.GetWord("ZZGGSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -315,7 +315,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
         strVerType = LB_VerType.Text.Trim();
 
         #region 追加信息提示框信息  By LiuJianping 2014-02-12
-        if (lbl_FunInfoDialBoxNum.Text.Trim() != "无追加的信息提示框")
+        if (lbl_FunInfoDialBoxNum.Text.Trim() != LanguageHandle.GetWord("MoZhuiJiaDeXinXiDiShiKuang").ToString().Trim())
         {
             string[] tempOldNumList = lbl_FunInfoDialBoxNum.Text.Trim().Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
             StringBuilder NewNumList = new StringBuilder();//数量
@@ -363,7 +363,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
                                 }
 
                                 strMessageType = random.Next(1, 100).ToString();
-                                strMessage = "强制通知：" + funInforDialBox.InforName.Trim() + ": " + ds.Tables[0].Rows.Count.ToString();
+                                strMessage = LanguageHandle.GetWord("JiangZhiTongZhi").ToString().Trim() + funInforDialBox.InforName.Trim() + ": " + ds.Tables[0].Rows.Count.ToString();
 
                                 strURL = funInforDialBox.LinkAddress.Trim() + "&URLType=POP";
                                 strJavaScriptFuntion = "opAdvert('" + strMessageType + "'," + "'TTDisplayPOPMessage.aspx?URL=" + strURL + "&Msg=" + strMessage + "');";
@@ -401,20 +401,20 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
                         if (int.Parse(tempNewNumList[m]) > int.Parse(tempOldNumList[m]))
                         {
-                            strMessage += tempNewInforNameList[m] + "：" + (int.Parse(tempNewNumList[m]) - int.Parse(tempOldNumList[m])).ToString() + " 条要处理！";
+                            strMessage += tempNewInforNameList[m] + "：" + (int.Parse(tempNewNumList[m]) - int.Parse(tempOldNumList[m])).ToString() + LanguageHandle.GetWord("TiaoYaoChuLi").ToString().Trim();
 
                             strMessageType = tempNewInforNameList[m] + random.Next(1, 100).ToString();
 
                             if (tempNewIsSendMsgList[m].ToString().Trim() == "YES")
                             {
                                 Msg msg = new Msg();
-                                msg.SendMSM("Message", strUserCode, tempNewInforNameList[m] + "：" + (int.Parse(tempNewNumList[m]) - int.Parse(tempOldNumList[m])).ToString() + " 条要处理！", strUserCode);
+                                msg.SendMSM("Message", strUserCode, tempNewInforNameList[m] + "：" + (int.Parse(tempNewNumList[m]) - int.Parse(tempOldNumList[m])).ToString() + LanguageHandle.GetWord("TiaoYaoChuLi").ToString().Trim(), strUserCode);
                             }
 
                             if (tempNewIsSendEmailList[m].ToString().Trim() == "YES")
                             {
                                 Msg msg = new Msg();
-                                msg.SendMail(strUserCode, tempNewInforNameList[m], tempNewInforNameList[m] + "：" + (int.Parse(tempNewNumList[m]) - int.Parse(tempOldNumList[m])).ToString() + " 条要处理！", strUserCode);
+                                msg.SendMail(strUserCode, tempNewInforNameList[m], tempNewInforNameList[m] + "：" + (int.Parse(tempNewNumList[m]) - int.Parse(tempOldNumList[m])).ToString() + LanguageHandle.GetWord("TiaoYaoChuLi").ToString().Trim(), strUserCode);
                             }
 
                             ////Updated 20160123
@@ -502,12 +502,12 @@ public partial class TakeTopMainTop : System.Web.UI.Page
             }
             else
             {
-                lbl_FunInfoDialBoxNum.Text = "没有新的信息";
+                lbl_FunInfoDialBoxNum.Text = LanguageHandle.GetWord("MeiYouXinDeXinXi").ToString().Trim();
             }
         }
         else
         {
-            lbl_FunInfoDialBoxNum.Text = "没有新的信息";
+            lbl_FunInfoDialBoxNum.Text = LanguageHandle.GetWord("MeiYouXinDeXinXi").ToString().Trim();
         }
 
         return i;
@@ -700,15 +700,15 @@ public partial class TakeTopMainTop : System.Web.UI.Page
 
                     TB_OldToBeHandledNumber.Text = intNewCount.ToString();
 
-                    BT_OpenIMByPC.ToolTip = ds.Tables[0].Rows.Count + " 条消息";
-                    BT_OpenIMByMobile.ToolTip = ds.Tables[0].Rows.Count + " 条消息";
+                    BT_OpenIMByPC.ToolTip = ds.Tables[0].Rows.Count + LanguageHandle.GetWord("TiaoXiaoXi").ToString().Trim();
+                    BT_OpenIMByMobile.ToolTip = ds.Tables[0].Rows.Count + LanguageHandle.GetWord("TiaoXiaoXi").ToString().Trim();
 
                     BT_OpenIMByPC.Visible = true;
 
                     BT_CloseIMByPC.Visible = false;
                     BT_OpenIMByMobile.Visible = false;
 
-                    strMsg = "有" + ds.Tables[0].Rows.Count + "条协作要处理！";
+                    strMsg = LanguageHandle.GetWord("You").ToString().Trim() + ds.Tables[0].Rows.Count + LanguageHandle.GetWord("TiaoXieZuoYaoChuLi").ToString().Trim();
 
                     try
                     {
@@ -723,7 +723,7 @@ public partial class TakeTopMainTop : System.Web.UI.Page
                 else
                 {
                     BT_CloseIMByPC.Visible = true;
-                    BT_CloseIMByPC.ToolTip = ds.Tables[0].Rows.Count + " 条消息";
+                    BT_CloseIMByPC.ToolTip = ds.Tables[0].Rows.Count + LanguageHandle.GetWord("TiaoXiaoXi").ToString().Trim();
 
                     BT_OpenIMByPC.Visible = false;
                     BT_OpenIMByMobile.Visible = false;

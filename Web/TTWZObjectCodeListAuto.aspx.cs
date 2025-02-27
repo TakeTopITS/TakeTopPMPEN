@@ -116,7 +116,7 @@ public partial class TTWZObjectCodeListAuto : System.Web.UI.Page
 
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZZSYBJCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZZSYBJCG").ToString().Trim()+"')", true);
         }
 
     }

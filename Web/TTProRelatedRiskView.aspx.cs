@@ -49,7 +49,7 @@ public partial class TTProRelatedRiskView : System.Web.UI.Page
 
             LB_Sql.Text = strHQL;
 
-            LB_ReportName.Text = Resources.lang.XiangMu + ": " + strProjectID + " " + Resources.lang.FengXianBaoBiao;
+            LB_ReportName.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + ": " + strProjectID + " " + LanguageHandle.GetWord("FengXianBaoBiao").ToString().Trim();
             string strCmdText = "select Status as XName,count(*) as YNumber from T_ProjectRisk ";
             strCmdText += " where ProjectID = " + strProjectID + " Group By Status";
 

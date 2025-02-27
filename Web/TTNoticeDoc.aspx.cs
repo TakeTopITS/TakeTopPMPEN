@@ -35,19 +35,19 @@ public partial class TTNoticeDoc : System.Web.UI.Page
 
         if (Page.IsPostBack != true)
         {
-            strHQL = "from DocType as docType  where docType.Type in ('AnnouncementDocument','NotificationDocument') and ((docType.SaveType = '公司') ";
+            strHQL = "from DocType as docType  where docType.Type in ('AnnouncementDocument','NotificationDocument') and ((docType.SaveType = '公司') "; 
             strHQL += " or (docType.UserCode = " + "'" + strUserCode + "'" + ")";
-            strHQL += " or (docType.SaveType = '部门' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))";
-            strHQL += " or (docType.SaveType not in ('公司','个人','部门') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))";
+            strHQL += " or (docType.SaveType = '部门' and docType.UserCode in (Select projectMember.UserCode from ProjectMember as projectMember where projectMember.DepartCode = " + "'" + strDepartCode + "'" + "))"; 
+            strHQL += " or (docType.SaveType not in ('公司','个人','部门') and docType.SaveType in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + ")))"; 
             strHQL += " Order by docType.SortNumber ASC";
             DocTypeBLL docTypeBLL = new DocTypeBLL();
             lst = docTypeBLL.GetAllDocTypes(strHQL);
             DL_DocType.DataSource = lst;
             DL_DocType.DataBind();
 
-            LB_DocOwner.Text = "公司公告文件列表：";
+            LB_DocOwner.Text = LanguageHandle.GetWord("GongSiGongGaoWenJianLieBiao").ToString().Trim();
           
-            strHQL = "from Document as document where ((document.Visible = '公司') or (document.DepartCode = " + "'" +strDepartCode+ "'" + ")) and document.DocType in ('AnnouncementDocument','NotificationDocument') and document.Status <> 'Deleted' Order by document.DocID DESC";
+            strHQL = "from Document as document where ((document.Visible = '公司') or (document.DepartCode = " + "'" +strDepartCode+ "'" + ")) and document.DocType in ('AnnouncementDocument','NotificationDocument') and document.Status <> 'Deleted' Order by document.DocID DESC"; 
 
             DocumentBLL documentBLL = new DocumentBLL();
             lst = documentBLL.GetAllDocuments(strHQL);
@@ -101,8 +101,8 @@ public partial class TTNoticeDoc : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        LB_DocOwner.Text = "类型: " + strDocType + " 的文档列表：";
-        strHQL = "from Document as document where  document.DocType = " + "'" + strDocType + "'" + " and ((document.DepartCode = " + "'" + strDepartCode + "'" + ") or (document.Visible = '公司')) and document.Status<> 'Deleted' Order by document.DocID DESC";
+        LB_DocOwner.Text = LanguageHandle.GetWord("LeiXing").ToString().Trim() + strDocType + LanguageHandle.GetWord("DeWenDangLieBiao").ToString().Trim();
+        strHQL = "from Document as document where  document.DocType = " + "'" + strDocType + "'" + " and ((document.DepartCode = " + "'" + strDepartCode + "'" + ") or (document.Visible = '公司')) and document.Status<> 'Deleted' Order by document.DocID DESC"; 
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);
         DataGrid1.DataSource = lst;
@@ -132,10 +132,10 @@ public partial class TTNoticeDoc : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        LB_DocOwner.Text = "文件名包含: " + strDocName + " 字符串的文档列表：";
+        LB_DocOwner.Text = LanguageHandle.GetWord("WenJianMingBaoHan").ToString().Trim() + strDocName + LanguageHandle.GetWord("ZiFuChuanDeWenDangLieBiao").ToString().Trim();
 
         strDocName = "%" + strDocName + "%";
-        strHQL = "from Document as document where document.DocName like " + "'" + strDocName + "'" + " and ((document.Visible = '公司') or (document.DepartCode = " + "'" +strDepartCode+ "'" + ")) and document.DocType in ('AnnouncementDocument','NotificationDocument') and document.Status <> 'Deleted'  Order by document.DocID DESC";
+        strHQL = "from Document as document where document.DocName like " + "'" + strDocName + "'" + " and ((document.Visible = '公司') or (document.DepartCode = " + "'" +strDepartCode+ "'" + ")) and document.DocType in ('AnnouncementDocument','NotificationDocument') and document.Status <> 'Deleted'  Order by document.DocID DESC"; 
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);
         DataGrid1.DataSource = lst;

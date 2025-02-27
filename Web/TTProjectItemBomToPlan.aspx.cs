@@ -63,7 +63,7 @@ public partial class TTProjectItemBomToPlan : System.Web.UI.Page
             {
                 LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCCXZXMCPMKZJCPBOMBBHSJ + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCXZXMCPMKZJCPBOMBBHSJ").ToString().Trim() + "')", true);
             }
         }
     }
@@ -129,7 +129,7 @@ public partial class TTProjectItemBomToPlan : System.Web.UI.Page
             projectRelatedItemBom.MFCost = item.MFCost;
             projectRelatedItemBom.HRCost = item.HRCost;
             projectRelatedItemBom.MTCost = item.MTCost;
-            projectRelatedItemBom.Comment = "物料资料";
+            projectRelatedItemBom.Comment = LanguageHandle.GetWord("WuLiaoZiLiao").ToString().Trim();
 
             projectRelatedItemBomBLL.AddProjectRelatedItemBom(projectRelatedItemBom);
 
@@ -175,16 +175,16 @@ public partial class TTProjectItemBomToPlan : System.Web.UI.Page
 
                 TakeTopBOM.InitialProjectItemBomTree(strProjectID, intVerID.ToString(), TreeView2);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZSBCXMZKNCZCBBHJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBCXMZKNCZCBBHJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -195,7 +195,7 @@ public partial class TTProjectItemBomToPlan : System.Web.UI.Page
 
         if (DL_PlanVersionID.Items.Count == 1)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBMXMBXBLYGJHBB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBMXMBXBLYGJHBB").ToString().Trim() + "')", true);
             return;
         }
 
@@ -219,11 +219,11 @@ public partial class TTProjectItemBomToPlan : System.Web.UI.Page
                 TakeTopBOM.InitialProjectItemBomTree(strProjectID, strVerID, TreeView2);
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -237,7 +237,7 @@ public partial class TTProjectItemBomToPlan : System.Web.UI.Page
 
         if (strOldVerID == strNewVerID)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGFZHBFZDBOMBBHBNXTJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGFZHBFZDBOMBBHBNXTJC").ToString().Trim() + "')", true);
             return;
         }
 
@@ -257,11 +257,11 @@ public partial class TTProjectItemBomToPlan : System.Web.UI.Page
 
             TakeTopBOM.InitialProjectItemBomTree(strProjectID, strNewVerID, TreeView2);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFZCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGFZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGFZSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -310,7 +310,7 @@ public partial class TTProjectItemBomToPlan : System.Web.UI.Page
             {
                 ShareClass.RunSqlCommand(strHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBBLXYGG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBBLXYGG").ToString().Trim() + "')", true);
             }
             catch
             {
@@ -330,13 +330,13 @@ public partial class TTProjectItemBomToPlan : System.Web.UI.Page
 
         if (DL_ChangeProjectItemBomVersionID.Items.Count == 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWBOMBBHBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWBOMBBHBNWKJC").ToString().Trim() + "')", true);
             return;
         }
 
         if (DL_PlanVersionID.Items.Count == 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWYZRDJHBBHBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWYZRDJHBBHBNWKJC").ToString().Trim() + "')", true);
             return;
         }
 
@@ -358,11 +358,11 @@ public partial class TTProjectItemBomToPlan : System.Web.UI.Page
         {
             TakeTopPlan.InitialProjectPlanTree(TreeView1, strProjectID, strPlanVerID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZJHCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZJHCG").ToString().Trim() + "')", true);
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWZJHSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWZJHSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -471,7 +471,7 @@ public partial class TTProjectItemBomToPlan : System.Web.UI.Page
         workPlan.WorkID = 0;
         workPlan.PriorID = 0;
         workPlan.VerID = int.Parse(strPlanVerID);
-        workPlan.Name = strItemCode + " " + strItemName + " (规格：" + projectRelatedItemBom.Specification.Trim() +  "，工艺：" + strDefaultProcess + ")";
+        workPlan.Name = strItemCode + " " + strItemName + LanguageHandle.GetWord("GuiGe").ToString().Trim() + projectRelatedItemBom.Specification.Trim() +  LanguageHandle.GetWord("GongYi").ToString().Trim() + strDefaultProcess + ")";
         workPlan.Start_Date = dtBeginDate;
         workPlan.End_Date = dtEndDate;
         workPlan.Resource = "";
@@ -629,7 +629,7 @@ public partial class TTProjectItemBomToPlan : System.Web.UI.Page
             workPlan.WorkID = 0;
             workPlan.PriorID = 0;
             workPlan.VerID = int.Parse(strPlanVerID);
-            workPlan.Name = strItemCode + " " + strItemName + " (规格：" + projectRelatedItemBom.Specification.Trim() + "，工艺：" + strDefaultProcess + ")";
+            workPlan.Name = strItemCode + " " + strItemName + LanguageHandle.GetWord("GuiGe").ToString().Trim() + projectRelatedItemBom.Specification.Trim() + LanguageHandle.GetWord("GongYi").ToString().Trim() + strDefaultProcess + ")";
             workPlan.Start_Date = dtBeginDate;
             workPlan.End_Date = dtParentBeginDate;
             workPlan.Resource = "";
@@ -735,7 +735,7 @@ public partial class TTProjectItemBomToPlan : System.Web.UI.Page
 
         if (intVerID > 100 | intVerID < 1)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGBBHZNS1100ZJDSZ + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGBBHZNS1100ZJDSZ").ToString().Trim() + "')", true);
             return;
         }
 
@@ -776,16 +776,16 @@ public partial class TTProjectItemBomToPlan : System.Web.UI.Page
 
                 HL_ProPlanGanttNew.NavigateUrl = "TTWorkPlanGanttForProject.aspx?pid=" + strProjectID + "&VerID=" + intVerID.ToString();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZSBCXMZKNCZCBBHJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBCXMZKNCZCBBHJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -798,7 +798,7 @@ public partial class TTProjectItemBomToPlan : System.Web.UI.Page
 
         if (DL_PlanVersionID.Items.Count == 1)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBMXMBXBLYGJHBB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBMXMBXBLYGJHBB").ToString().Trim() + "')", true);
             return;
         }
 
@@ -834,11 +834,11 @@ public partial class TTProjectItemBomToPlan : System.Web.UI.Page
                 HL_ProPlanGanttNew.NavigateUrl = "TTWorkPlanGanttForProject.aspx?pid=" + strProjectID + "&VerID=" + strVerID;
 
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBKNBCZCBBHJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBKNBCZCBBHJC").ToString().Trim() + "')", true);
             }
         }
     }
@@ -908,7 +908,7 @@ public partial class TTProjectItemBomToPlan : System.Web.UI.Page
 
             TreeNode node3 = new TreeNode();
 
-            node3.Text = "<Strong>" + strItemCode + "." + strItemName + "</Strong> (数量：" + deNumber.ToString() + "，预留量：" + deReservedNumber + " " + strUnit + ")";
+            node3.Text = "<Strong>" + strItemCode + "." + strItemName + LanguageHandle.GetWord("StrongShuLiang").ToString().Trim() + deNumber.ToString() + LanguageHandle.GetWord("YuLiuLiang").ToString().Trim() + deReservedNumber + " " + strUnit + ")";
             node3.Target = Guid.NewGuid().ToString();
 
             node3.Expanded = true;
@@ -953,7 +953,7 @@ public partial class TTProjectItemBomToPlan : System.Web.UI.Page
             deReservedNumber = itemBom.ReservedNumber;
             strUnit = itemBom.Unit.Trim();
 
-            node.Text = strChildItemCode + "." + strChildItemName + " (数量：" + deNumber.ToString() + "，预留量：" + deReservedNumber.ToString() + " " + strUnit + ")";
+            node.Text = strChildItemCode + "." + strChildItemName + LanguageHandle.GetWord("ShuLiang").ToString().Trim() + deNumber.ToString() + LanguageHandle.GetWord("YuLiuLiang").ToString().Trim() + deReservedNumber.ToString() + " " + strUnit + ")";
             node.Target = Guid.NewGuid().ToString();
 
             node.Expanded = true;

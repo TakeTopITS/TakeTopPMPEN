@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WorkflowController.aspx.cs" Inherits="TakeTopGantt.handler.WorkflowController" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WorkflowController.aspx.cs" Inherits="TakeTopGantt.handler.WorkflowController" %>
 
 <!DOCTYPE html>
 

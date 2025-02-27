@@ -32,10 +32,10 @@ public partial class TTBDBudgetMGraph : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (!IsPostBack)
         {
-            lbl_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT,TreeView2, strUserCode);
+            lbl_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView2, strUserCode);
 
             DropDownList2.Enabled = false;
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
             //LoadDepartInformation();
             TextBox1.Enabled = false;
 
@@ -64,20 +64,20 @@ public partial class TTBDBudgetMGraph : System.Web.UI.Page
             lbl_DCode.Text = treeNode.Target.Trim();
             lbl_DName.Text = ShareClass.GetDepartName(lbl_DCode.Text);
             TextBox1.Text = ShareClass.GetDepartName(lbl_DCode.Text);
-            DropDownList1.SelectedValue = "部门+科目";
+            DropDownList1.SelectedValue = "部门+科目"; 
         }
     }
 
     protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
     {
-        if (DropDownList1.SelectedValue.Trim() == "部门")
+        if (DropDownList1.SelectedValue.Trim() == "部门") 
         {
             DropDownList2.Items.Clear();
             DropDownList2.Items.Insert(0, new ListItem("--Select--", ""));
             DropDownList2.Enabled = false;
             TextBox1.Enabled = false;
         }
-        else if (DropDownList1.SelectedValue.Trim() == "科目")
+        else if (DropDownList1.SelectedValue.Trim() == "科目") 
         {
             DropDownList2.Items.Clear();
             DropDownList2.Items.Insert(0, new ListItem("--Select--", ""));
@@ -98,16 +98,16 @@ public partial class TTBDBudgetMGraph : System.Web.UI.Page
         {
             if (string.IsNullOrEmpty(txt_Year.Text) || txt_Year.Text.Trim() == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTSNFBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSNFBJC").ToString().Trim() + "')", true);
                 txt_Year.Focus();
                 return;
             }
         }
-        if (DropDownList1.SelectedValue.Trim() == "部门+科目")
+        if (DropDownList1.SelectedValue.Trim() == "部门+科目") 
         {
             if (string.IsNullOrEmpty(lbl_DCode.Text) || lbl_DCode.Text.Trim() == "")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTSBMBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTSBMBJC").ToString().Trim() + "')", true);
                 return;
             }
         }
@@ -121,20 +121,20 @@ public partial class TTBDBudgetMGraph : System.Web.UI.Page
     {
         string strResult = string.Empty;
 
-        if (DropDownList1.SelectedValue.Trim() == "部门")
+        if (DropDownList1.SelectedValue.Trim() == "部门") 
         {
 
-            strResult = Resources.lang.ABMTJFYFB;
+            strResult = LanguageHandle.GetWord("ABMTJFYFB").ToString().Trim();
         }
-        else if (DropDownList1.SelectedValue.Trim() == "科目")
+        else if (DropDownList1.SelectedValue.Trim() == "科目") 
         {
 
-            strResult = Resources.lang.AKMTJFYFB;
+            strResult = LanguageHandle.GetWord("AKMTJFYFB").ToString().Trim();
         }
         else
         {
 
-            strResult = lbl_DName.Text.Trim() + "的费用分布：";
+            strResult = lbl_DName.Text.Trim() + LanguageHandle.GetWord("DeFeiYongFenBu").ToString().Trim();
         }
 
 
@@ -143,9 +143,9 @@ public partial class TTBDBudgetMGraph : System.Web.UI.Page
         string strdepartcode = lbl_DCode.Text.Trim();
 
         string strHQL;
-        if (DropDownList1.SelectedValue.Trim() == "部门")
+        if (DropDownList1.SelectedValue.Trim() == "部门") 
         {
-            strHQL = "Select DepartName as XName,SUM(MoneyNum) as YNumber From T_BDBaseDataRecord Where (Type='Operation' or Type='实际')";
+            strHQL = "Select DepartName as XName,SUM(MoneyNum) as YNumber From T_BDBaseDataRecord Where (Type='Operation' or Type='实际')"; 
             if (!string.IsNullOrEmpty(stryear) && stryear != "")
             {
                 strHQL += " and YearNum='" + stryear + "' ";
@@ -156,9 +156,9 @@ public partial class TTBDBudgetMGraph : System.Web.UI.Page
             }
             strHQL += " Group By DepartName ";
         }
-        else if (DropDownList1.SelectedValue.Trim() == "科目")
+        else if (DropDownList1.SelectedValue.Trim() == "科目") 
         {
-            strHQL = "Select B.AccountName as XName,SUM(A.MoneyNum) as YNumber From T_BDBaseDataRecord A,T_Account B Where A.AccountCode=B.AccountCode and (A.Type='Operation' or A.Type='实际')";
+            strHQL = "Select B.AccountName as XName,SUM(A.MoneyNum) as YNumber From T_BDBaseDataRecord A,T_Account B Where A.AccountCode=B.AccountCode and (A.Type='Operation' or A.Type='实际')"; 
             if (!string.IsNullOrEmpty(stryear) && stryear != "")
             {
                 strHQL += " and A.YearNum='" + stryear + "' ";
@@ -171,7 +171,7 @@ public partial class TTBDBudgetMGraph : System.Web.UI.Page
         }
         else
         {
-            strHQL = "Select B.AccountName as XName,SUM(A.MoneyNum) as YNumber From T_BDBaseDataRecord A,T_Account B Where A.AccountCode=B.AccountCode and (A.Type='Operation' or A.Type='实际')";
+            strHQL = "Select B.AccountName as XName,SUM(A.MoneyNum) as YNumber From T_BDBaseDataRecord A,T_Account B Where A.AccountCode=B.AccountCode and (A.Type='Operation' or A.Type='实际')"; 
             if (!string.IsNullOrEmpty(stryear) && stryear != "")
             {
                 strHQL += " and A.YearNum='" + stryear + "' ";
@@ -199,7 +199,7 @@ public partial class TTBDBudgetMGraph : System.Web.UI.Page
 
             intSum += intMoneyCount;
 
-            strNameProfile += strName + ":" + intMoneyCount.ToString() + "元     ";
+            strNameProfile += strName + ":" + intMoneyCount.ToString() + LanguageHandle.GetWord("Yuan").ToString().Trim();
         }
 
         LB_ProjectStatus.Text = strResult + ": " + strNameProfile.Trim();

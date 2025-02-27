@@ -96,7 +96,7 @@ public partial class TTPersonalSpaceNews : System.Web.UI.Page
             {
                 strHQL += " And Type = 'External'";
             }
-            strHQL += " and Status = '发布' and IsHead = 'YES'";
+            strHQL += " and Status = '发布' and IsHead = 'YES'"; 
             strHQL += " Order By ID DESC limit 1";
             DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");
             if (ds.Tables[0].Rows.Count > 0)
@@ -128,7 +128,7 @@ public partial class TTPersonalSpaceNews : System.Web.UI.Page
                 strHQL += " And Type = 'External'";
             }
             strHQL += " and NewsType = '" + strNewsType + "'";
-            strHQL += " and Status = '发布' and IsHead != 'YES'";
+            strHQL += " and Status = '发布' and IsHead != 'YES'"; 
             strHQL += " Order By ID DESC Limit 1";
             DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");
             if (ds.Tables[0].Rows.Count > 0)

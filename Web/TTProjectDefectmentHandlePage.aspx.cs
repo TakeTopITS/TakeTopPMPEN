@@ -90,7 +90,7 @@ public partial class TTProjectDefectmentHandlePage : System.Web.UI.Page
             DataList_Handling.DataBind();
 
             strHQL = "Select * from T_DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and defectAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成')";
+            strHQL += " and defectAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成')"; 
             strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from T_Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " and defectAssignRecord.DefectID in (select relatedDefect.DefectID from T_RelatedDefect as relatedDefect where relatedDefect.ProjectID = " + strProjectID + ")";
             strHQL += " Order by defectAssignRecord.MoveTime DESC limit 40";
@@ -99,7 +99,7 @@ public partial class TTProjectDefectmentHandlePage : System.Web.UI.Page
             DataList_FinishedUnAssigned.DataBind();
 
             strHQL = "Select * from T_DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and defectAssignRecord.Status = '已分派'";
+            strHQL += " and defectAssignRecord.Status = '已分派'"; 
             strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from T_Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " and defectAssignRecord.DefectID in (select relatedDefect.DefectID from T_RelatedDefect as relatedDefect where relatedDefect.ProjectID = " + strProjectID + ")";
             strHQL += " Order by defectAssignRecord.MoveTime DESC limit 40";
@@ -128,7 +128,7 @@ public partial class TTProjectDefectmentHandlePage : System.Web.UI.Page
             DataList_Handling.DataBind();
 
             strHQL = "Select * from T_DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and defectAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成')";
+            strHQL += " and defectAssignRecord.Status in ('拒绝','Suspended','Cancel','Completed','已完成')"; 
             strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from T_Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " and defectAssignRecord.DefectID in (select relatedDefect.DefectID from T_RelatedDefect as relatedDefect where relatedDefect.ProjectID not in (select project.ProjectID from T_Project as project where project.Status in ('New','Review','Hided','Deleted','Archived')))";
             strHQL += " Order by defectAssignRecord.MoveTime  DESC limit 40";
@@ -137,7 +137,7 @@ public partial class TTProjectDefectmentHandlePage : System.Web.UI.Page
             DataList_FinishedUnAssigned.DataBind();
 
             strHQL = "Select * from T_DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and defectAssignRecord.Status = '已分派'";
+            strHQL += " and defectAssignRecord.Status = '已分派'"; 
             strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from T_Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " and defectAssignRecord.DefectID in (select relatedDefect.DefectID from T_RelatedDefect as relatedDefect where relatedDefect.ProjectID not in (select project.ProjectID from T_Project as project where project.Status in ('New','Review','Hided','Deleted','Archived')))";
             strHQL += " Order by defectAssignRecord.MoveTime  DESC limit 40";

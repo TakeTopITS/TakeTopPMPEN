@@ -51,7 +51,7 @@ public partial class WeiXinIndex : System.Web.UI.Page
             else
             {
                 WriteContent("failed:" + signature + "," + CheckSignature.GetSignature(timestamp, nonce, strToken) + "。" +
-                            "如果你在浏览器中看到这句话，说明此地址可以被作为微信公众账号后台的Url，请注意保持Token一致。");
+                            LanguageHandle.GetWord("RuGuoNiZaiLiuLanQiZhongKanDaoZ").ToString().Trim());
             }
             Response.End();
         }

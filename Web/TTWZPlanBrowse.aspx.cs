@@ -78,7 +78,7 @@ public partial class TTWZPlanBrowse : System.Web.UI.Page
             LB_Day.Text = DateTime.Now.ToString("dd");
 
             string strProgress = ShareClass.ObjectToString(drPlan["Progress"]);
-            if (strProgress != "«© ’")
+            if (strProgress != LanguageHandle.GetWord("QianShou").ToString().Trim())
             {
                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "notPrintFunction();", true);
             }

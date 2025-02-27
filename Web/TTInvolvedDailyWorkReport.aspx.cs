@@ -32,7 +32,7 @@ public partial class TTInvolvedDailyWorkReport : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strUserName = ShareClass.GetUserName(strUserCode);
 
-        LB_ReportName.Text = "项目： " + strProjectID + " " + strProjectName + " 工作日志报表";
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + strProjectID + " " + strProjectName + LanguageHandle.GetWord("GongZuoRiZhiBaoBiao").ToString().Trim();
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
@@ -75,7 +75,7 @@ public partial class TTInvolvedDailyWorkReport : System.Web.UI.Page
             LB_TimeScope.Text = DLC_BeginDate.Text + "---" + DLC_EndDate.Text;
 
 
-            LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim();
             LB_Sql.Text = strHQL;
         }
     }
@@ -112,7 +112,7 @@ public partial class TTInvolvedDailyWorkReport : System.Web.UI.Page
         LB_ConfirmManHour.Text = deConfirmManHour.ToString();
         LB_ConfirmIncome.Text = deConfirmSalary.ToString();
 
-        LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim();
     }
 
     protected void BT_DateFind_Click(object sender, EventArgs e)

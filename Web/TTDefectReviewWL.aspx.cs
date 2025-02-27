@@ -36,7 +36,7 @@ public partial class TTDefectReviewWL : System.Web.UI.Page
         DataList1.DataBind();
 
         Defectment defectment = (Defectment)lst[0];
-        //this.Title = "È±ÏÝ£º" + strDefectID + " " + defectment.DefectName + Resources.lang.PingShen;
+        //this.Title = "È±ÏÝ£º" + strDefectID + " " + defectment.DefectName + LanguageHandle.GetWord("PingShen").ToString().Trim();
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
@@ -57,7 +57,7 @@ public partial class TTDefectReviewWL : System.Web.UI.Page
             LoadRelatedWL("DefectReview", "Defect", int.Parse(strDefectID));
 
 
-            TB_WLName.Text = Resources.lang.QueXian  + strDefectID + defectment.DefectName + Resources.lang.PingShen;
+            TB_WLName.Text = LanguageHandle.GetWord("QueXian").ToString().Trim()  + strDefectID + defectment.DefectName + LanguageHandle.GetWord("PingShen").ToString().Trim();
             //HL_WLTem.NavigateUrl = "TTRelatedWorkFlowTemplate.aspx?RelatedType=Defect&RelatedID=" + strDefectID;
         }
     }
@@ -144,11 +144,11 @@ public partial class TTDefectReviewWL : System.Web.UI.Page
 
             LoadRelatedWL("DefectReview", "Defect", int.Parse(strDefectID));
 
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXPSSGZLSCDGZLGLYMJHCGZLS+"')", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXPSSGZLSCDGZLGLYMJHCGZLS").ToString().Trim()+"')", true);
         }
         catch
         {
-            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXPSSGZLSB+"')", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXPSSGZLSB").ToString().Trim()+"')", true);
         }
 
         return strWLID;

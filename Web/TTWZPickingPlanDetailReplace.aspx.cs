@@ -102,7 +102,7 @@ public partial class TTWZPickingPlanDetailReplace : System.Web.UI.Page
     {
         TV_Type.Nodes.Clear();
         TreeNode Node = new TreeNode();
-        Node.Text = "È«²¿²ÄÁÏ";
+        Node.Text = LanguageHandle.GetWord("QuanBuCaiLiao").ToString().Trim();
         Node.Value = "all|0|0|0";
         string strDLSQL = "select * from T_WZMaterialDL";
         DataTable dtDL = ShareClass.GetDataSetFromSql(strDLSQL, "DL").Tables[0];
@@ -264,14 +264,14 @@ public partial class TTWZPickingPlanDetailReplace : System.Web.UI.Page
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJHMXDSYBJBW0BNTH+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJHMXDSYBJBW0BNTH").ToString().Trim()+"')", true);
                         return;
                     }
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZWZDMHJHMX+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZWZDMHJHMX").ToString().Trim()+"')", true);
                 return;
             }
         }

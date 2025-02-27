@@ -24,7 +24,7 @@ public partial class TTCustomerQuestionHandleRecord : System.Web.UI.Page
 
         string strQuestionID = Request.QueryString["QuestionID"];
 
-        //this.Title = "客户问题：" + strQuestionID  + " 处理记录";
+        //this.Title = "客户问题：" + strQuestionID  + "处理记录";
 
         string strUserCode = Session["UserCode"].ToString();
         if (Page.IsPostBack == false)

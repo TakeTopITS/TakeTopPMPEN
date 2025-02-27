@@ -27,7 +27,7 @@ public partial class TTRTXTest : System.Web.UI.Page
         }
         catch
         {
-            Response.Write("创建RTX服务失败，请检查！");
+            Response.Write(LanguageHandle.GetWord("ChuangJianRTXFuWuShiBaiQingJia").ToString().Trim());
         }
 
     }
@@ -37,11 +37,11 @@ public partial class TTRTXTest : System.Web.UI.Page
         {
             RootObj.SendNotify(txtReceivers.Text, txtMsgTitle.Text, Convert.ToInt32(txtTime.Text), txtMsgContent.Text); //获取版本信息
 
-            txtResult.Text = "发送成功！";
+            txtResult.Text = LanguageHandle.GetWord("FaSongChengGong").ToString().Trim();
         }
         catch
         {
-            txtResult.Text = "发送失败！";
+            txtResult.Text = LanguageHandle.GetWord("FaSongShiBai").ToString().Trim();
         }
     }
 
@@ -54,7 +54,7 @@ public partial class TTRTXTest : System.Web.UI.Page
         }
         catch 
         {
-            txtResult.Text = "获取用户状态失败！";
+            txtResult.Text = LanguageHandle.GetWord("HuoQuYongHuZhuangTaiShiBai").ToString().Trim();
         }
     }
    
@@ -67,7 +67,7 @@ public partial class TTRTXTest : System.Web.UI.Page
         }
         catch 
         {
-            txtResult.Text = "获取版本信息失败！";
+            txtResult.Text = LanguageHandle.GetWord("HuoQuBanBenXinXiShiBai").ToString().Trim();
         }
     }
     protected void Button5_Click(object sender, EventArgs e)
@@ -78,7 +78,7 @@ public partial class TTRTXTest : System.Web.UI.Page
         }
         catch 
         {
-            txtResult.Text = "获取用户权限信息失败！";
+            txtResult.Text = LanguageHandle.GetWord("HuoQuYongHuQuanXianXinXiShiBai").ToString().Trim();
         }
     }
 }

@@ -25042,6 +25042,9 @@
   <data name="TaXingTu" xml:space="preserve">
     <value>塔形图</value>
   </data>
+  <data name="YGZXZYZ" xml:space="preserve">
+    <value />
+  </data>
   <data name="HengXiangZhuZhuangTu" xml:space="preserve">
     <value>横向柱装图</value>
   </data>
@@ -27568,59 +27571,6 @@
   <data name="DianJiDaKaiTaoHuangYeMian" xml:space="preserve">
     <value>点击打开导航页面</value>
   </data>
-  <data name="SheJi" xml:space="preserve">
-    <value>设计</value>
-  </data>
-  <data name="ZaiZiXingXiangMuZhongShu" xml:space="preserve">
-    <value>在执行项目总数</value>
-  </data>
-  <data name="NianDuXingZeng" xml:space="preserve">
-    <value>年度新增</value>
-    <comment>年度新增</comment>
-  </data>
-  <data name="NianDuWanCheng" xml:space="preserve">
-    <value>年度完成</value>
-    <comment>年度完成</comment>
-  </data>
-  <data name="NianDuYanWuXiangMuShu" xml:space="preserve">
-    <value>严重延误项目数 </value>
-    <comment>严重延误项目数 </comment>
-  </data>
-  <data name="JingDuZhengChang" xml:space="preserve">
-    <value>进度正常</value>
-    <comment>进度正常</comment>
-  </data>
-  <data name="QingDuYanWu" xml:space="preserve">
-    <value>轻度延误</value>
-    <comment>轻度延误</comment>
-  </data>
-  <data name="NianDuXiangMuHuiKan" xml:space="preserve">
-    <value>年度项目回款</value>
-  </data>
-  <data name="NianDuChengBenHeShuan" xml:space="preserve">
-    <value>年度成本核算</value>
-    <comment>年度成本核算</comment>
-  </data>
-  <data name="ChengBenChaoZiXiangMuShu" xml:space="preserve">
-    <value>成本超支项目数</value>
-    <comment>成本超支项目数</comment>
-  </data>
-  <data name="NianDuXiangMuGongShiTouRu" xml:space="preserve">
-    <value>年度项目工时投入</value>
-    <comment>年度项目工时投入</comment>
-  </data>
-  <data name="NianDuTeiBaoRenShu" xml:space="preserve">
-    <value>年度填报人数</value>
-    <comment>年度填报人数</comment>
-  </data>
-  <data name="ZaiZhiXingRenWuZhongShu" xml:space="preserve">
-    <value>在执行任务总数</value>
-    <comment>在执行任务总数</comment>
-  </data>
-  <data name="XiangMuNianDuhHuiKan" xml:space="preserve">
-    <value>项目年度回款</value>
-    <comment>项目年度回款</comment>
-  </data>
   <data name="YGZYGDMTAKETOPUSERCODEBMCTAKETOPDEPARTMENTCYAQKLBNSYHDeleteUpdateDropAlterYJ" xml:space="preserve">
     <value />
   </data>
@@ -27862,7 +27812,7 @@
     <value />
   </data>
   <data name="ZZQDHJHRRBNGGQDYQDM1" xml:space="preserve">
-    <value>启动后，计划内容不能更改，确定要启动吗？</value>
+    <value />
   </data>
   <data name="String13" xml:space="preserve">
     <value />
@@ -28353,6 +28303,12 @@
   <data name="YuLieYuShuanZongE2" xml:space="preserve">
     <value />
   </data>
+  <data name="ZDYBZGDWZBGDYYKQDYG1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ZDYBZGDWZBGDYYKQDYG2" xml:space="preserve">
+    <value />
+  </data>
   <data name="ZiDong1" xml:space="preserve">
     <value />
   </data>
@@ -28413,8 +28369,7 @@
   <data name="ZZYuanMiMaChuWuHouWeiKong2" xml:space="preserve">
     <value />
   </data>
-  <data name="UpdateingDatabase" xml:space="preserve">
-    <value>因数据库有更新，系统正在升级，要花几分钟，不要关闭此窗口，请耐心等待！  </value>
-    <comment>因数据库有更新，系统正在升级，要花几分钟，不要关闭此窗口，请耐心等待！  </comment>
+  <data name="SheJi" xml:space="preserve">
+    <value>设计</value>
   </data>
 </root>

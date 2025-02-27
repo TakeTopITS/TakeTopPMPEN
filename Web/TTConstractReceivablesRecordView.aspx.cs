@@ -48,7 +48,7 @@ public partial class TTConstractReceivablesRecordView : System.Web.UI.Page
         strReceivablesCurrency = constractReceivables.CurrencyType.Trim();
         deReceivablesExchangeRate = ShareClass.GetExchangeRateByCurrencyType(strReceivablesCurrency);
 
-        //this.Title = "收款计划：" + strReceivablesID + " 执行情况";
+        //this.Title = "收款计划：" + strReceivablesID + "执行情况";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)

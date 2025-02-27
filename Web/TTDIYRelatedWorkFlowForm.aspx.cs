@@ -154,10 +154,10 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
         if (strRelatedType == "Constract")
         {
-            strCNRelatedType = "合同";
+            strCNRelatedType = "合同"; 
             strRelatedName = GetConstractName(strRelatedID);
 
-            strOriginRelatedType = "合同";
+            strOriginRelatedType = "合同"; 
             strOriginRelateID = strRelatedID;
 
             //装载相应的业务数据
@@ -172,10 +172,10 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
         if (strRelatedType == "Tender")
         {
-            strCNRelatedType = "投标";
+            strCNRelatedType = "投标"; 
             strRelatedName = GetTenderName(strRelatedID);
 
-            strOriginRelatedType = "投标";
+            strOriginRelatedType = "投标"; 
             strOriginRelateID = strRelatedID;
 
             //装载相应的业务数据
@@ -336,13 +336,13 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
             if (intResult == 0)
             {
-                xdoc.Text = Resources.lang.CWXYMBWJBCZQJC;
+                xdoc.Text = LanguageHandle.GetWord("CWXYMBWJBCZQJC").ToString().Trim();
                 return;
             }
 
             if (intResult == -1)
             {
-                xdoc.Text = Resources.lang.CWBDMBZCSBQJC;
+                xdoc.Text = LanguageHandle.GetWord("CWBDMBZCSBQJC").ToString().Trim();
                 return;
             }
 
@@ -357,12 +357,12 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
             if (strProjectRelatedType == "ProjectPlan")
             {
-                TB_WorkFlowName.Text = Resources.lang.XiangMuJiHua + strOriginRelateID + strRelatedName + strTemName;
+                TB_WorkFlowName.Text = LanguageHandle.GetWord("XiangMuJiHua").ToString().Trim() + strOriginRelateID + strRelatedName + strTemName;
             }
 
             if (strRelatedType == "Constract")
             {
-                strCNRelatedType = "合同";
+                strCNRelatedType = "合同"; 
                 TB_WorkFlowName.Text = strCNRelatedType + GetConstractCode(strRelatedID) + strRelatedName + strTemName;
             }
 
@@ -401,7 +401,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
         }
         catch (Exception err)
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "HH99H", "<script>alert('警告，此流程模板没有关联自定义表单或模块页面，请检查！');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "HH99H", LanguageHandle.GetWord("scriptalertJingGaoCiLiuChengMo").ToString().Trim());
             LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
         }
     }
@@ -464,7 +464,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
         if (intResult == 0)
         {
-            xdoc.Text = Resources.lang.SBZGZLMBHSJWJBCZKNYBSCQJC;
+            xdoc.Text = LanguageHandle.GetWord("SBZGZLMBHSJWJBCZKNYBSCQJC").ToString().Trim();
         }
 
         //列表项增加提示
@@ -632,7 +632,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ShiBai + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ShiBai").ToString().Trim() + "');</script>");
         }
     }
 
@@ -673,7 +673,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
         if (intResult == 0)
         {
-            xdoc.Text = Resources.lang.SBZGZLMBHSJWJBCZKNYBSCQJC;
+            xdoc.Text = LanguageHandle.GetWord("SBZGZLMBHSJWJBCZKNYBSCQJC").ToString().Trim();
         }
     }
 
@@ -693,7 +693,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
         if (strWLTemName == "" | strWLTemName == null)
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSSCSBLCMBBNWKJC + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC").ToString().Trim() + "');</script>");
             return;
         }
 
@@ -737,22 +737,22 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
             {
                 if (intWLID == 0)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSSCSBLCMBBNWKJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC").ToString().Trim() + "');</script>");
                 }
 
                 if (intWLID == -1)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBXYSJWJBNCGBCJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBXYSJWJBNCGBCJC").ToString().Trim() + "');</script>");
                 }
 
                 if (intWLID == -2)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBBNSCXGZLJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBBNSCXGZLJC").ToString().Trim() + "');</script>");
                 }
 
                 if (intWLID == -3)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBGZLMCHMSBNWKJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBGZLMCHMSBNWKJC").ToString().Trim() + "');</script>");
                 }
 
                 try
@@ -761,7 +761,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
                 }
                 catch
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZJGZXJZTJSJSBJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGZXJZTJSJSBJC").ToString().Trim() + "');</script>");
                 }
             }
             else
@@ -810,7 +810,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBZZXMBTXGZLS + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBZZXMBTXGZLS").ToString().Trim() + "');</script>");
         }
     }
 
@@ -829,7 +829,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
         if (strWLTemName == "" | strWLTemName == null)
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSSCSBLCMBBNWKJC + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC").ToString().Trim() + "');</script>");
             return;
         }
 
@@ -874,22 +874,22 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
             {
                 if (intWLID == 0)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSSCSBLCMBBNWKJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC").ToString().Trim() + "');</script>");
                 }
 
                 if (intWLID == -1)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBXYSJWJBNCGBCJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBXYSJWJBNCGBCJC").ToString().Trim() + "');</script>");
                 }
 
                 if (intWLID == -2)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBBNSCXGZLJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBBNSCXGZLJC").ToString().Trim() + "');</script>");
                 }
 
                 if (intWLID == -3)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBGZLMCHMSBNWKJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBGZLMCHMSBNWKJC").ToString().Trim() + "');</script>");
                 }
 
                 try
@@ -898,7 +898,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
                 }
                 catch
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZJGZXJZTJSJSBJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGZXJZTJSJSBJC").ToString().Trim() + "');</script>");
                 }
             }
             else
@@ -955,14 +955,14 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
                 {
                 }
 
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJGZLSCG + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJGZLSCG").ToString().Trim() + "');</script>");
             }
 
             //HL_RelatedDoc.NavigateUrl = "javascript:popShowByURL('" + HL_RelatedDoc.NavigateUrl + "','ChartView','99%','99%',window.location);";
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZTJSBZZXMBTXGZLS + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZTJSBZZXMBTXGZLS").ToString().Trim() + "');</script>");
         }
     }
 
@@ -990,7 +990,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
         if (intResult == 0)
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZBCSBJC + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "');</script>");
         }
         else
         {
@@ -1030,7 +1030,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
 
             }).Start();
 
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZBCCG + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "');</script>");
         }
     }
 
@@ -1195,12 +1195,12 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
             }
             else
             {
-                xdoc.Text = Resources.lang.QingXianZhuCheBiaoDanMoBan;
+                xdoc.Text = LanguageHandle.GetWord("QingXianZhuCheBiaoDanMoBan").ToString().Trim();
             }
         }
         catch
         {
-            xdoc.Text = Resources.lang.CWNSXDGZLSJXMLWJBSZGLCMBDXMLDSJWJQJC;
+            xdoc.Text = LanguageHandle.GetWord("CWNSXDGZLSJXMLWJBSZGLCMBDXMLDSJWJQJC").ToString().Trim();
         }
     }
 
@@ -1244,7 +1244,7 @@ public partial class TTDIYRelatedWorkFlowForm : System.Web.UI.Page
         }
         else
         {
-            xdoc.Text = "请先注册表单模板.";
+            xdoc.Text = LanguageHandle.GetWord("QingXianZhuCeBiaoChanMoBan").ToString().Trim();
         }
     }
 

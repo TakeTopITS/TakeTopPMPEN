@@ -61,7 +61,7 @@ public partial class Sender : System.Web.UI.Page
                 Mails mails = (Mails)lst[0];
 
                 To.Text = mails.FromAddress.Trim();
-                Title.Text = "回复：" + mails.Title;
+                Title.Text = LanguageHandle.GetWord("HuiFu").ToString().Trim() + mails.Title;
 
                 strBody = "<BR/><BR/><BR/><BR/>" + strSignInfo + "<BR/>" + "-------On " + mails.SenderDate.ToString() + ",the mail from " + mails.FromAddress + " as belows:" + "</n>" + mails.Body.Trim();
                 //strBody += "<BR/>" + mails.ToAddress;
@@ -131,7 +131,7 @@ public partial class Sender : System.Web.UI.Page
 
             if (fi.Exists)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZCZTMWJSCSBGMHZSC + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "');</script>");
             }
             else
             {
@@ -150,13 +150,13 @@ public partial class Sender : System.Web.UI.Page
                 }
                 catch
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZSCSBJC + "');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "');</script>");
                 }
             }
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZZYSCDWJ + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "');</script>");
         }
     }
 
@@ -281,7 +281,7 @@ public partial class Sender : System.Web.UI.Page
                     else
                     {
                         strAttachDocFullURL = Request.ServerVariables["HTTP_HOST"] + Request.ApplicationPath + "/" + attachments.Url.Trim();
-                        strAttachmentUrlList += "</br>附件：<a href=http://" + strAttachDocFullURL + " target=_blank >" + attachments.Name.Trim() + "</a>";
+                        strAttachmentUrlList += "</br>附件：<a href=http://" + strAttachDocFullURL + " target=_blank >" + attachments.Name.Trim() + "</a>"; 
                     }
 
                     nContain += int.Parse(f.Length.ToString());
@@ -490,7 +490,7 @@ public partial class Sender : System.Web.UI.Page
                     else
                     {
                         strAttachDocFullURL = Request.ServerVariables["HTTP_HOST"] + Request.ApplicationPath + "/" + attachments.Url.Trim();
-                        strAttachmentUrlList += "</br>附件：<a href=http://" + strAttachDocFullURL + " target=_blank >" + attachments.Name.Trim() + "</a>";
+                        strAttachmentUrlList += "</br>附件：<a href=http://" + strAttachDocFullURL + " target=_blank >" + attachments.Name.Trim() + "</a>"; 
                     }
 
                     nContain += int.Parse(f.Length.ToString());

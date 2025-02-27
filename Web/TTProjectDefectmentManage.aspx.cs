@@ -70,7 +70,7 @@ public partial class TTProjectDefectmentManage : System.Web.UI.Page
             SetDefectRecordColor(DataGrid4);
 
             strHQL = "from DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and (defectAssignRecord.Status in ('¾Ü¾ø','Completed','Suspended','Cancel') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord))";
+            strHQL += " and (defectAssignRecord.Status in ('¾Ü¾ø','Completed','Suspended','Cancel') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord))"; 
             strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " and defectAssignRecord.DefectID in ( select relatedDefect.DefectID from RelatedDefect as relatedDefect where relatedDefect.ProjectID = " + strProjectID + ")";
             strHQL += " Order by defectAssignRecord.ID DESC";
@@ -112,7 +112,7 @@ public partial class TTProjectDefectmentManage : System.Web.UI.Page
 
             strProjectName = GetProjectName(strProjectID);
 
-            LB_QueryScope.Text = Resources.lang.Project + strProjectName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("Project").ToString().Trim() + strProjectName;
         }
         else
         {
@@ -130,7 +130,7 @@ public partial class TTProjectDefectmentManage : System.Web.UI.Page
             SetDefectRecordColor(DataGrid4);
 
             strHQL = "from DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and (defectAssignRecord.Status in ('¾Ü¾ø','Completed','Suspended','Cancel') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord))";
+            strHQL += " and (defectAssignRecord.Status in ('¾Ü¾ø','Completed','Suspended','Cancel') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord))"; 
             strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " and defectAssignRecord.DefectID in ( select relatedDefect.DefectID from RelatedDefect as relatedDefect where relatedDefect.ProjectID not in (select project.ProjectID from Project as project where project.Status in ('New','Review','Hided','Deleted','Archived')))";
             strHQL += " Order by defectAssignRecord.ID DESC";
@@ -167,7 +167,7 @@ public partial class TTProjectDefectmentManage : System.Web.UI.Page
 
             SetDefectRecordColor(DataGrid3);
 
-            LB_QueryScope.Text = Resources.lang.StatusAll;
+            LB_QueryScope.Text = LanguageHandle.GetWord("StatusAll").ToString().Trim();
         }
     }
 
@@ -269,7 +269,7 @@ public partial class TTProjectDefectmentManage : System.Web.UI.Page
             dtNowDate = DateTime.Now;
             strStatus = dataGrid.Items[i].Cells[7].Text.Trim();
 
-            if (strStatus != "Completed" & strStatus != "ÒÑÍê³É")
+            if (strStatus != "Completed" & strStatus != LanguageHandle.GetWord("YiWanCheng").ToString().Trim())
             {
                 if (dtFinishedDate < dtNowDate)
                 {

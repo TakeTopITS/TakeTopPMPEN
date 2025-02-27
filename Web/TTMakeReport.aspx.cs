@@ -38,8 +38,8 @@ public partial class TTMakeReport : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
         {
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(Resources.lang.ZZJGT, TreeView2, strUserCode);
-            LB_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT, TreeView3, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView2, strUserCode);
+            LB_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView3, strUserCode);
 
             LoadReportType();
             if (Session["ReportType"] != null)
@@ -181,7 +181,7 @@ public partial class TTMakeReport : System.Web.UI.Page
                 e.Item.ForeColor = Color.Red;
 
                 BT_Send.Enabled = true;
-                TB_Message.Text = "系统通知，有新报表：" + TB_ReportName.Text.Trim() + "，请及时阅读！";
+                TB_Message.Text = LanguageHandle.GetWord("JiTongTongZhiYouXinBaoBiao").ToString().Trim() + TB_ReportName.Text.Trim() + LanguageHandle.GetWord("QingJiShiYueDou").ToString().Trim();
 
                 LoadReportRelatedUser(strReportID);
 
@@ -230,7 +230,7 @@ public partial class TTMakeReport : System.Web.UI.Page
                     LoadReportByType(strReportType);
                 }
 
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.XGKSRYYJQBQC + "')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("XGKSRYYJQBQC").ToString().Trim() + "')", true);
             }
         }
     }
@@ -263,7 +263,7 @@ public partial class TTMakeReport : System.Web.UI.Page
         intCount = GetSameNameReportTemplateCount(strNewTemName);
         if (intCount > 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXJSBCZTMBBMBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXJSBCZTMBBMBJC").ToString().Trim() + "')", true);
             return;
         }
 
@@ -297,11 +297,11 @@ public partial class TTMakeReport : System.Web.UI.Page
 
             LoadReportTemplateByType(strReportType);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFZCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZSBJC").ToString().Trim() + "')", true);
         }
 
     }
@@ -324,14 +324,14 @@ public partial class TTMakeReport : System.Web.UI.Page
 
         if (intCount > 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXJSBCZTMBBMBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXJSBCZTMBBMBJC").ToString().Trim() + "')", true);
             return;
         }
 
 
         if (strType == "" | strTemName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXJSBMBLXHMCBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXJSBMBLXHMCBNWKJC").ToString().Trim() + "')", true);
             return;
         }
         else
@@ -365,11 +365,11 @@ public partial class TTMakeReport : System.Web.UI.Page
                 HL_ReportDesigner.Enabled = true;
                 HL_ReportDesigner.NavigateUrl = "TTReportDesigner.aspx?TemID=" + strTemID + "&ReportID=0";
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
             }
         }
     }
@@ -395,13 +395,13 @@ public partial class TTMakeReport : System.Web.UI.Page
         intCount = GetSameNameReportTemplateCountByID(strTemName, strID);
         if (intCount > 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXGSBCZTMBBMBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXGSBCZTMBBMBJC").ToString().Trim() + "')", true);
             return;
         }
 
         if (strType == "" | strTemName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXGSBMBLXHMCBNWKJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXGSBMBLXHMCBNWKJC").ToString().Trim() + "')", true);
             return;
         }
         else
@@ -425,11 +425,11 @@ public partial class TTMakeReport : System.Web.UI.Page
 
                 LoadReportTemplateByType(strType);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
             }
         }
     }
@@ -456,11 +456,11 @@ public partial class TTMakeReport : System.Web.UI.Page
             BT_DeleteTem.Enabled = false;
             HL_ReportDesigner.Enabled = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -497,13 +497,13 @@ public partial class TTMakeReport : System.Web.UI.Page
                 LoadReportByType(strReportType);
             }
 
-            TB_Message.Text = "系统通知，有新报表：" + TB_ReportName.Text.Trim() + "，请及时阅读！";
+            TB_Message.Text = LanguageHandle.GetWord("JiTongTongZhiYouXinBaoBiao").ToString().Trim() + TB_ReportName.Text.Trim() + LanguageHandle.GetWord("QingJiShiYueDou").ToString().Trim();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGMCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGMCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGMSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGMSBJC").ToString().Trim() + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popVisualWindow','false') ", true);
@@ -571,7 +571,7 @@ public partial class TTMakeReport : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZBBCNZJKSRY + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZBBCNZJKSRY").ToString().Trim() + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popVisualWindow','true', 'popwindow') ", true);
@@ -626,7 +626,7 @@ public partial class TTMakeReport : System.Web.UI.Page
 
                 if (CB_MSM.Checked == true | CB_Mail.Checked == true)
                 {
-                    strSubject = "报表阅读通知";
+                    strSubject = LanguageHandle.GetWord("BaoBiaoYueDouTongZhi").ToString().Trim();
 
                     if (CB_MSM.Checked == true)
                     {
@@ -641,7 +641,7 @@ public partial class TTMakeReport : System.Web.UI.Page
             }
         }
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTZFSWB + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTZFSWB").ToString().Trim() + "')", true);
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popVisualWindow','false') ", true);
     }
 

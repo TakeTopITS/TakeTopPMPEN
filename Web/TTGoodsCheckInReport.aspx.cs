@@ -128,7 +128,7 @@ public partial class TTGoodsCheckInReport : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWRKDHZNSZSJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWRKDHZNSZSJC").ToString().Trim() + "')", true);
                 return;
             }
 
@@ -218,7 +218,7 @@ public partial class TTGoodsCheckInReport : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWRKDHZNSZSJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWRKDHZNSZSJC").ToString().Trim() + "')", true);
                 return;
             }
 
@@ -244,9 +244,9 @@ public partial class TTGoodsCheckInReport : System.Web.UI.Page
 
         DataTable dtSaleOrder = ds.Tables[0];
 
-        Export3Excel(dtSaleOrder, "物料入库报表.xls");
+        Export3Excel(dtSaleOrder, LanguageHandle.GetWord("WuLiaoRuKuBaoBiaoxls").ToString().Trim());
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true); 
     }
 
 

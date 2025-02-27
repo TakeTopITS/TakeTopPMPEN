@@ -47,7 +47,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
             }
             catch (Exception exp)
             {
-                lb_ShowMessage1.Text = "错误提示：操作出现异常： " + exp.Message;
+                lb_ShowMessage1.Text = LanguageHandle.GetWord("CuoWuDiShiCaoZuoChuXianYiChang").ToString().Trim() + exp.Message;
             }
         }
     }
@@ -112,7 +112,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
         }
         catch (Exception exp)
         {
-            lb_ShowMessage1.Text = "错误提示：查询操作出现异常： " + exp.Message;
+            lb_ShowMessage1.Text = LanguageHandle.GetWord("CuoWuDiShiChaXunCaoZuoChuXianY").ToString().Trim() + exp.Message;
         }
     }
 
@@ -143,7 +143,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
         }
         catch (Exception exp)
         {
-            lb_ShowMessage1.Text = "错误提示：操作出现异常： " + exp.Message;
+            lb_ShowMessage1.Text = LanguageHandle.GetWord("CuoWuDiShiCaoZuoChuXianYiChang").ToString().Trim() + exp.Message;
         }
     }
 
@@ -158,7 +158,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
         }
         catch (Exception exp)
         {
-            lb_ShowMessage1.Text = "错误提示：操作出现异常： " + exp.Message;
+            lb_ShowMessage1.Text = LanguageHandle.GetWord("CuoWuDiShiCaoZuoChuXianYiChang").ToString().Trim() + exp.Message;
         }
     }
 
@@ -171,7 +171,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
 
         if (res.Tables["T_RCJProjectTotalSummaryPerformance"].Rows.Count == 0)
         {
-            lb_ShowMessage1.Text = "结果提示：还没有项目收支绩效汇总信息出来！";
+            lb_ShowMessage1.Text = LanguageHandle.GetWord("JieGuoDiShiHaiMeiYouXiangMuSho").ToString().Trim();
             return;
         }
 
@@ -258,7 +258,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage1.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage1.Text = "错误提示：查询该子项的价格调整信息列表出错：" + exp.Message;
+            lb_ShowMessage1.Text = LanguageHandle.GetWord("CuoWuDiShiChaXunGaiZiXiangDeJi").ToString().Trim() + exp.Message;
             return;
         }
     }
@@ -270,28 +270,28 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
         {
             //根据导出模板生成临时文件
             string filePath = Server.MapPath("~/Template/" + Guid.NewGuid().ToString() + ".xls");
-            File.Copy(Server.MapPath("~/Template/绩效汇总数据导出模板.xls"), filePath);
+            File.Copy(Server.MapPath(LanguageHandle.GetWord("TemplateJiXiaoHuiZongShuJuDaoC").ToString().Trim()), filePath);
 
             //导出绩效基准数据
-            ExportCostRecordToExcel(filePath, "绩效汇总数据.xls");
+            ExportCostRecordToExcel(filePath, LanguageHandle.GetWord("JiXiaoHuiZongShuJuxls").ToString().Trim());
 
             //导出实际工作量数据
-            //ExportWorkRecordToExcel(filePath, "绩效汇总数据.xls");
+            //ExportWorkRecordToExcel(filePath, LanguageHandle.GetWord("JiXiaoHuiZongShuJuxls").ToString().Trim());
 
             //文件保存到本地
             Response.ContentType = "application/ms-excel";
-            Response.AppendHeader("Content-Disposition", "attachment;filename=绩效汇总数据.xls");
+            Response.AppendHeader("Content-Disposition", LanguageHandle.GetWord("attachmentfilenameJiXiaoHuiZon").ToString().Trim());
             Response.BinaryWrite(File.ReadAllBytes(filePath));
 
             File.Delete(filePath);
 
             lb_ShowMessage1.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage1.Text = "操作提示： 绩效汇总数据导入到Excel文件成功!";
+            lb_ShowMessage1.Text = LanguageHandle.GetWord("CaoZuoDiShiJiXiaoHuiZongShuJuD").ToString().Trim();
         }
         catch (Exception exp)
         {
             lb_ShowMessage1.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage1.Text = "错误提示：绩效汇总数据导入到Excel文件出错：" + exp.Message;
+            lb_ShowMessage1.Text = LanguageHandle.GetWord("CuoWuDiShiJiXiaoHuiZongShuJuDa").ToString().Trim() + exp.Message;
             return;
         }
     }
@@ -317,7 +317,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
 
                 for (int i = 0; i < res.Tables[0].Rows.Count; i++)
                 {
-                    StringBuilder sbcom = new StringBuilder("insert into [实际工作列表$] values('");
+                    StringBuilder sbcom = new StringBuilder("insert into [实际工作列表$] values('"); 
 
                     sbcom.Append(res.Tables[0].Rows[i]["TypeName"].ToString());
                     sbcom.Append("',");
@@ -351,7 +351,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage1.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage1.Text = "错误提示： 绩效实际工作数据导入到Excel文件失败!" + exp.Message;
+            lb_ShowMessage1.Text = LanguageHandle.GetWord("CuoWuDiShiJiXiaoShiJiGongZuoSh").ToString().Trim() + exp.Message;
         }
     }
 
@@ -498,7 +498,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage1.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage1.Text = "错误提示： 绩效汇总数据导入到Excel文件失败!"+exp.Message;
+            lb_ShowMessage1.Text = LanguageHandle.GetWord("CuoWuDiShiJiXiaoHuiZongShuJuDa").ToString().Trim()+exp.Message;
         }
     }
 
@@ -573,11 +573,11 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
 
             ShareClass.RunSqlCommand(sql.ToString());
 
-            lb_ShowMessage1.Text = "成功清除所有测试数据，请刷新重试。";
+            lb_ShowMessage1.Text = LanguageHandle.GetWord("ChengGongQingChuSuoYouCeShiShu").ToString().Trim();
         }
         catch (Exception exp)
         {
-            lb_ShowMessage1.Text = "错误提示：清除所有测试数据操作出现异常： " + exp.Message;
+            lb_ShowMessage1.Text = LanguageHandle.GetWord("CuoWuDiShiQingChuSuoYouCeShiSh").ToString().Trim() + exp.Message;
         }
     }
     protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -680,7 +680,7 @@ public partial class TTRCJProjectCost : System.Web.UI.Page
         }
         catch (Exception exp)
         {
-            lb_ShowMessage1.Text = "错误提示：获取年列表操作出现异常： " + exp.Message;
+            lb_ShowMessage1.Text = LanguageHandle.GetWord("CuoWuDiShiHuoQuNianLieBiaoCaoZ").ToString().Trim() + exp.Message;
         }
     }
 }

@@ -21,7 +21,7 @@ public partial class TTConfirmProjectManHour : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strUserName = Session["UserName"].ToString();
 
-        //this.Title = "项目： " + strProjectName + " 工时确认！";
+        //this.Title = "项目：" + strProjectName + "工时确认！";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickParentA", " aHandler();", true);
         if (Page.IsPostBack == false)
@@ -57,11 +57,11 @@ public partial class TTConfirmProjectManHour : System.Web.UI.Page
             LB_ConfirmManHour.Text = deConfirmManHour.ToString();
             LB_ConfirmIncome.Text = deConfirmSalary.ToString();
 
-            LB_Member1.Text = Resources.lang.SuoYouChenYuan;
-            LB_Member2.Text = Resources.lang.SuoYouChenYuan;
+            LB_Member1.Text = LanguageHandle.GetWord("SuoYouChenYuan").ToString().Trim();
+            LB_Member2.Text = LanguageHandle.GetWord("SuoYouChenYuan").ToString().Trim();
 
 
-            LB_QueryScope.Text = Resources.lang.ZZXMJL + strUserCode + " " + strUserName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZXMJL").ToString().Trim() + strUserCode + " " + strUserName;
             LB_Sql.Text = strHQL;
         }
     }
@@ -123,7 +123,7 @@ public partial class TTConfirmProjectManHour : System.Web.UI.Page
                 LB_Member1.Text = strUserCode + " " + strUserName;
                 LB_Member2.Text = strUserCode + " " + strUserName;
 
-                LB_QueryScope.Text = Resources.lang.ZZZhiXingZhe + strUserCode + strUserName;
+                LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZhe").ToString().Trim() + strUserCode + strUserName;
                 LB_Sql.Text = strHQL;
             }
         }
@@ -161,10 +161,10 @@ public partial class TTConfirmProjectManHour : System.Web.UI.Page
         LB_ConfirmManHour.Text = deConfirmManHour.ToString();
         LB_ConfirmIncome.Text = deConfirmSalary.ToString();
 
-        LB_Member1.Text = Resources.lang.SuoYouChenYuan;
-        LB_Member2.Text = Resources.lang.SuoYouChenYuan;
+        LB_Member1.Text = LanguageHandle.GetWord("SuoYouChenYuan").ToString().Trim();
+        LB_Member2.Text = LanguageHandle.GetWord("SuoYouChenYuan").ToString().Trim();
 
-        LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim();
     }
 
     protected void DataList1_ItemCommand(object sender, DataListCommandEventArgs e)
@@ -189,7 +189,7 @@ public partial class TTConfirmProjectManHour : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWSRZDSZGS + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWSRZDSZGS").ToString().Trim() + "')", true);
                 return;
             }
 
@@ -202,13 +202,13 @@ public partial class TTConfirmProjectManHour : System.Web.UI.Page
             try
             {
                 dailyWorkBLL.UpdateDailyWork(dailyWork, int.Parse(strWorkID));
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
 
                 LoadDailyWork();
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
             }
         }
     }

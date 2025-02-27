@@ -62,7 +62,7 @@ public partial class TTWorkPlanListView : System.Web.UI.Page
 
                 if (DateTime.Parse(strEndTime) < dtNowTime)
                 {
-                    if (strStatus != "Completed" & strStatus != "已完成")
+                    if (strStatus != "Completed" & strStatus != LanguageHandle.GetWord("YiWanCheng").ToString().Trim())
                     {
                         DataGrid1.Items[i].ForeColor = Color.Red;
                     }
@@ -80,7 +80,7 @@ public partial class TTWorkPlanListView : System.Web.UI.Page
             DataGrid2.DataBind();
 
             LB_Plan.Visible = true;
-            LB_Plan.Text = "我参与的计划：" + strWorkID + " " + strPlanName + " 的详细内容：";
+            LB_Plan.Text = LanguageHandle.GetWord("WoCanYuDeJiHua").ToString().Trim() + strWorkID + " " + strPlanName + LanguageHandle.GetWord("DeXiangXiNeiRong").ToString().Trim();
         }
     }
 
@@ -123,7 +123,7 @@ public partial class TTWorkPlanListView : System.Web.UI.Page
 
             if (DateTime.Parse(strEndTime) < dtNowTime)
             {
-                if (strStatus != "Completed" & strStatus != "已完成")
+                if (strStatus != "Completed" & strStatus != LanguageHandle.GetWord("YiWanCheng").ToString().Trim())
                 {
                     DataGrid1.Items[i].ForeColor = Color.Red;
                 }

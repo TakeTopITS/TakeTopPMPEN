@@ -57,7 +57,7 @@ public partial class TTItemCodeSet : System.Web.UI.Page
         {
             if (dt.Rows[i]["Type"].ToString().Trim() == strGoodsType.Trim())
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCCYYCZBNZFJRJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCYYCZBNZFJRJC").ToString().Trim() + "')", true);
                 return;
             }
         }
@@ -311,7 +311,7 @@ public partial class TTItemCodeSet : System.Web.UI.Page
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = Resources.lang.LiaoPinLeiXing;
+        node1.Text = LanguageHandle.GetWord("LiaoPinLeiXing").ToString().Trim();
         node1.Target = "0";
         node1.Expanded = true;
         tv.Nodes.Add(node1);

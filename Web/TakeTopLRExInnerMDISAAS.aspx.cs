@@ -27,7 +27,7 @@ public partial class TakeTopLRExInnerMDISAAS : System.Web.UI.Page
         }
         catch (Exception err)
         {
-            //Response.Write(Resources.lang.ZZTSFWQFMQCXDL);
+            //Response.Write(LanguageHandle.GetWord("ZZTSFWQFMQCXDL").ToString().Trim());
         }
     }
 

@@ -31,7 +31,7 @@ public partial class TTWorkFlowXmlNameSpace : System.Web.UI.Page
         LB_UserCode.Text = strUserCode;
         LB_TemName.Text = strTemName;
 
-        //this.Title = "工作流模板：" + strTemName + " 命名空间设置"; 
+        //this.Title = "工作流模板：" + strTemName + "命名空间设置"; 
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack == false)
         {
@@ -110,7 +110,7 @@ public partial class TTWorkFlowXmlNameSpace : System.Web.UI.Page
             {
                 xmlNameSpaceBLL.AddXmlNameSpace(xmlNameSpace);
                
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZCG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZCG").ToString().Trim()+"')", true);
                 LoadXmlNameSpace(strTemName);
 
                 BT_Update.Enabled = false;
@@ -118,13 +118,13 @@ public partial class TTWorkFlowXmlNameSpace : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZSBJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim()+"')", true);
 
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZMMKJSXBNWKJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZMMKJSXBNWKJC").ToString().Trim()+"')", true);
 
         }
     }
@@ -158,7 +158,7 @@ public partial class TTWorkFlowXmlNameSpace : System.Web.UI.Page
             {
                 xmlNameSpaceBLL.UpdateXmlNameSpace(xmlNameSpace, int.Parse(strID));
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
                 LoadXmlNameSpace(strTemName);
 
                 BT_Update.Enabled = false;
@@ -166,13 +166,13 @@ public partial class TTWorkFlowXmlNameSpace : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCSBJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim()+"')", true);
 
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZMMKJSXBNWKJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZMMKJSXBNWKJC").ToString().Trim()+"')", true);
 
         }      
 
@@ -206,7 +206,7 @@ public partial class TTWorkFlowXmlNameSpace : System.Web.UI.Page
             {
                 xmlNameSpaceBLL.DeleteXmlNameSpace(xmlNameSpace);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
                 LoadXmlNameSpace(strTemName);
 
                 BT_Update.Enabled = false;
@@ -214,13 +214,13 @@ public partial class TTWorkFlowXmlNameSpace : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCSBJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim()+"')", true);
 
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZMMKJSXBNWKJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZMMKJSXBNWKJC").ToString().Trim()+"')", true);
 
         }   
     }

@@ -38,31 +38,31 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
         if (strRelatedType == "Project")
         {
             strRelatedName = GetProjectName(strRelatedID);
-            //this.Title = "Project" + strRelatedID + " " + strRelatedName + " 角色组设置！";
+            //this.Title = "Project" + strRelatedID + " " + strRelatedName + "角色组设置！";
         }
 
         if (strRelatedType == "ProjectTask")
         {
             strRelatedName = GetProjectTaskName(strRelatedID);
-            //this.Title = "项目任务：" + strRelatedID + " " + strRelatedName + " 角色组设置！";
+            //this.Title = LanguageHandle.GetWord("XiangMuRenWu").ToString().Trim() + strRelatedID + " " + strRelatedName + "角色组设置！";
         }
 
         if (strRelatedType == "Req")
         {
             strRelatedName = GetRequirementName(strRelatedID);
-            //this.Title = "需求：" + strRelatedID + " " + strRelatedName + " 的工作流模板设置";
+            //this.Title = LanguageHandle.GetWord("XuQiu").ToString().Trim() + strRelatedID + " " + strRelatedName + "的工作流模板设置";
         }
 
         if (strRelatedType == "Meeting")
         {
             strRelatedName = GetMeetingName(strRelatedID);
-            //this.Title = "会议：" + strRelatedID + " " + strRelatedName + " 的工作流模板设置";
+            //this.Title = LanguageHandle.GetWord("HuiYi").ToString().Trim() + strRelatedID + " " + strRelatedName + "的工作流模板设置";
         }
 
         if (strRelatedType == "ProjectRisk")
         {
             strRelatedName = GetProjectRiskName(strRelatedID);
-            //this.Title = "风险：" + strRelatedID + " " + strRelatedName + " 的工作流模板设置";
+            //this.Title = LanguageHandle.GetWord("FengXian").ToString().Trim() + strRelatedID + " " + strRelatedName + "的工作流模板设置";
         }
 
         LB_UserCode.Text = strUserCode;
@@ -74,36 +74,36 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
         {
             if (strRelatedType == "Project")
             {
-                TB_ActorGroup.Text = Resources.lang.Project + strRelatedID + "          组";
+                TB_ActorGroup.Text = LanguageHandle.GetWord("Project").ToString().Trim() + strRelatedID + LanguageHandle.GetWord("Zu").ToString().Trim();
             }
 
             if (strRelatedType == "ProjectTask")
             {
-                TB_ActorGroup.Text = "项目任务：" + strRelatedID + "        组";
+                TB_ActorGroup.Text = LanguageHandle.GetWord("XiangMuRenWu").ToString().Trim() + strRelatedID + LanguageHandle.GetWord("Zu").ToString().Trim();
             }
 
             if (strRelatedType == "Req")
             {
-                TB_ActorGroup.Text = "需求：" + strRelatedID + "        组";
+                TB_ActorGroup.Text = LanguageHandle.GetWord("XuQiu").ToString().Trim() + strRelatedID + LanguageHandle.GetWord("Zu").ToString().Trim();
             }
 
-            if (strRelatedType == "会议")
+            if (strRelatedType == "会议") 
             {
-                TB_ActorGroup.Text = "会议：" + strRelatedID + "        组";
+                TB_ActorGroup.Text = LanguageHandle.GetWord("HuiYi").ToString().Trim() + strRelatedID + LanguageHandle.GetWord("Zu").ToString().Trim();
             }
 
             if (strRelatedType == "ProjectRisk")
             {
-                TB_ActorGroup.Text = "风险：" + strRelatedID + "        组";
+                TB_ActorGroup.Text = LanguageHandle.GetWord("FengXian").ToString().Trim() + strRelatedID + LanguageHandle.GetWord("Zu").ToString().Trim();
             }
 
             if (strUserType == "INNER")
             {
-                TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(Resources.lang.ZZJGT,TreeView1, strUserCode);
+                TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
             }
             else
             {
-                TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(Resources.lang.ZZJGT,TreeView1, strUserCode);
+                TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
             }
 
             if (strRelatedType == "Project")
@@ -183,7 +183,7 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
             lst = actorGroupBLL.GetAllActorGroups(strHQL);
             if (lst.Count > 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCZTMDJSZQJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCZTMDJSZQJC").ToString().Trim() + "')", true);
                 return;
             }
 
@@ -220,12 +220,12 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJSZZMBNWK + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJSZZMBNWK").ToString().Trim() + "')", true);
         }
     }
 
@@ -255,7 +255,7 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
 
             string strRelatedUserCode = LB_RelatedUserCode.Text.Trim();
 
-            if (strUserCode != strMakeUserCode | strGroupName == "个人" | strGroupName == "全体" | strGroupName == "公司" | strGroupName == "集团")
+            if (strUserCode != strMakeUserCode | strGroupName == LanguageHandle.GetWord("GeRen").ToString().Trim() | strGroupName == LanguageHandle.GetWord("QuanTi").ToString().Trim() | strGroupName == LanguageHandle.GetWord("GongSi").ToString().Trim() | strGroupName == LanguageHandle.GetWord("JiTuan").ToString().Trim())
             {
                 BT_New.Enabled = false;
             
@@ -283,11 +283,11 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
             ShareClass.RunSqlCommand(strHQL);
             LoadRelatedActorGroup(strRelatedType, strRelatedID, strLangCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCJSZCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCJSZCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGSCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -444,7 +444,7 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('删除" + Resources.lang.ZZCCJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShanChuLanguageHandleGetWord").ToString().Trim()+"')", true); 
                 }
             }
         }
@@ -544,12 +544,12 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
         }
     }
 
@@ -584,11 +584,11 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
 
             LoadActorGroupDetail(strGroupName);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('修改" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZXiuGaiLanguageHandleGetWordZ").ToString().Trim()+"')", true); 
         }
     }
 
@@ -644,7 +644,7 @@ public partial class TTRelatedActorGroup : System.Web.UI.Page
         IList lst;
 
 
-        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('个人','部门','公司','集团','All')";
+        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('个人','部门','公司','集团','All')"; 
         strHQL += " and (actorGroup.BelongDepartCode in " + strDepartString;
         strHQL += " Or actorGroup.MakeUserCode = " + "'" + strUserCode + "'" + ")";
         strHQL += " and actorGroup.LangCode = " + "'" + strLangCode + "'";

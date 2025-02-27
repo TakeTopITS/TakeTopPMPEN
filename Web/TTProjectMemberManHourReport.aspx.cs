@@ -28,7 +28,7 @@ public partial class TTProjectMemberManHourReport : System.Web.UI.Page
 
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text = "项目成员工时汇总表";
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMuChengYuanGongShiHuiZong").ToString().Trim();
 
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
@@ -37,7 +37,7 @@ public partial class TTProjectMemberManHourReport : System.Web.UI.Page
             DLC_BeginDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
             DLC_EndDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             ShareClass.InitialAllProjectTree(TreeView2, strDepartString);
@@ -98,14 +98,14 @@ public partial class TTProjectMemberManHourReport : System.Web.UI.Page
         strBeginTime = DateTime.Parse(DLC_BeginDate.Text).ToString("yyyyMMdd");
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyyMMdd");
 
-        strHQL = @"Select UserCode as '代码',
-                   UserName as '姓名',
-                   DepartCode as '部门代码',
-                   DepartName as '部门名称',
-                   ProjectID as '项目ID',
+        strHQL = @"Select UserCode as '代码', 
+                   UserName as '姓名', 
+                   DepartCode as '部门代码', 
+                   DepartName as '部门名称', 
+                   ProjectID as '项目ID', 
                    ProjectName as 'Project',
-                   sum(ManHour) as '申报工时',
-                   sum(ConfirmManHour) as '确认工时'
+                   sum(ManHour) as '申报工时', 
+                   sum(ConfirmManHour) as '确认工时' 
                    From V_ProjectMemberManHourSummary";
 
         strHQL += " Where DepartName Like " + "'" + strDepartName + "'";
@@ -125,9 +125,9 @@ public partial class TTProjectMemberManHourReport : System.Web.UI.Page
 
         DataTable dtProject = ShareClass.GetDataSetFromSql(strHQL, "project").Tables[0];
 
-        Export3Excel(dtProject, "项目成员工时汇总表.xls");
+        Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuChengYuanGongShiHuiZong").ToString().Trim());
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true); 
     }
 
     protected void SumManHour(DataSet ds)

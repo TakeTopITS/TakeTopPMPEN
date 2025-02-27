@@ -29,14 +29,14 @@ public partial class TTProjectManHourIncomeAndExpenseReport : System.Web.UI.Page
 
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text = "项目工时和费用汇总表";
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMuGongShiHeFeiYongHuiZong").ToString().Trim();
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack == false)
         {
             DLC_BeginDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
             DLC_EndDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             //LoadProjectManHourAndExpenseReportForJHKC();
@@ -91,11 +91,11 @@ public partial class TTProjectManHourIncomeAndExpenseReport : System.Web.UI.Page
         }
         else
         {
-            dv.RowFilter = "项目名称 Like '%" + strProjectName + "%'";
+            dv.RowFilter = LanguageHandle.GetWord("XiangMuMingChenLike").ToString().Trim() + strProjectName + "%'";
         }
 
-        dv.RowFilter += " And 项目负责人 Like '%" + strPMName + "%'";
-        dv.RowFilter += " And 开始时间 >= '" + strBeginTime + "' And 结束时间 <= '" + strEndTime + "'";
+        dv.RowFilter += LanguageHandle.GetWord("AndXiangMuFuZeRenLike").ToString().Trim() + strPMName + "%'";
+        dv.RowFilter += LanguageHandle.GetWord("AndKaiShiShiJian").ToString().Trim() + strBeginTime + LanguageHandle.GetWord("AndJieShuShiJian").ToString().Trim() + strEndTime + "'";
         dv.Sort += " ProjectID DESC";
 
         GridView1.DataSource = dv;
@@ -133,9 +133,9 @@ public partial class TTProjectManHourIncomeAndExpenseReport : System.Web.UI.Page
         }
         else
         {
-            dv.RowFilter = "项目名称 Like '%" + strProjectName + "%'";
+            dv.RowFilter = LanguageHandle.GetWord("XiangMuMingChenLike").ToString().Trim() + strProjectName + "%'";
         }
-        dv.RowFilter += " And 开始时间 >= '" + strBeginTime + "' And 结束时间 <= '" + strEndTime + "'";
+        dv.RowFilter += LanguageHandle.GetWord("AndKaiShiShiJian").ToString().Trim() + strBeginTime + LanguageHandle.GetWord("AndJieShuShiJian").ToString().Trim() + strEndTime + "'";
         dv.Sort += " ProjectID DESC";
 
         GridView1.DataSource = dv;
@@ -143,11 +143,11 @@ public partial class TTProjectManHourIncomeAndExpenseReport : System.Web.UI.Page
 
         DataTable dtProject = dv.ToTable();
 
-        Export3Excel(dtProject, "项目工时和费用汇总报表.xls");
+        Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuGongShiHeFeiYongHuiZong").ToString().Trim());
 
         LB_ResultNumber.Text = GridView1.Rows.Count.ToString();
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true); 
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

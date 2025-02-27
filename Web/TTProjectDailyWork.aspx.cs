@@ -34,7 +34,7 @@ public partial class TTProjectDailyWork : System.Web.UI.Page
         strUserCode = Session["UserCode"].ToString();
         strUserName = ShareClass.GetUserName(strUserCode);
 
-        LB_ReportName.Text = Resources.lang.XiangMu + Resources.lang.GongZuoRiZhi;
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMu").ToString().Trim() + LanguageHandle.GetWord("GongZuoRiZhi").ToString().Trim();
        
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
@@ -77,7 +77,7 @@ public partial class TTProjectDailyWork : System.Web.UI.Page
 
             LB_Member.Text = "ALL Member";
 
-            LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim();
             LB_Sql.Text = strHQL;
         }
     }
@@ -138,7 +138,7 @@ public partial class TTProjectDailyWork : System.Web.UI.Page
                 LB_MemberName.Text = strUserName;
                 LB_Member.Text = strUserCode + " " + strUserName;
 
-                LB_QueryScope.Text = Resources.lang.ZZZhiXingZhe + strUserCode + strUserName;
+                LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZhe").ToString().Trim() + strUserCode + strUserName;
                 LB_Sql.Text = strHQL;
             }
         }
@@ -184,7 +184,7 @@ public partial class TTProjectDailyWork : System.Web.UI.Page
         LB_MemberName.Text = "";
         LB_Member.Text = "All Member";
 
-        LB_QueryScope.Text = Resources.lang.ZZZhiXingZheAll;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZZhiXingZheAll").ToString().Trim();
     }
 
     protected void BT_DateFind_Click(object sender, EventArgs e)
@@ -239,7 +239,7 @@ public partial class TTProjectDailyWork : System.Web.UI.Page
         LB_ConfirmManHour.Text = deConfirmManHour.ToString();
         LB_ConfirmIncome.Text = deConfirmSalary.ToString();
 
-        LB_QueryScope.Text = Resources.lang.KaiShiRiQi + ":" + strStartDate + Resources.lang.JieShuRiQi + ":" + strEndDate;
+        LB_QueryScope.Text = LanguageHandle.GetWord("KaiShiRiQi").ToString().Trim() + ":" + strStartDate + LanguageHandle.GetWord("JieShuRiQi").ToString().Trim() + ":" + strEndDate;
 
         LB_TimeScope.Text = strStartDate + "-" + strEndDate;
     }

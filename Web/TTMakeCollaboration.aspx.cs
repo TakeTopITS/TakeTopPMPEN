@@ -83,12 +83,12 @@ public partial class TTMakeCollaboration : System.Web.UI.Page
 
         if (strRelatedType == "MEETING")
         {
-            strRelatedTypeCN = "会议";
+            strRelatedTypeCN = LanguageHandle.GetWord("HuiYi").ToString().Trim();
         }
 
         if (strRelatedType == "WORKFLOW")
         {
-            strRelatedTypeCN = "流程";
+            strRelatedTypeCN = LanguageHandle.GetWord("LiuCheng").ToString().Trim();
         }
 
         if (strRelatedType == "PROJECT")
@@ -98,7 +98,7 @@ public partial class TTMakeCollaboration : System.Web.UI.Page
 
         if (strRelatedType == "ProPlan")
         {
-            strRelatedTypeCN = "项目计划";
+            strRelatedTypeCN = LanguageHandle.GetWord("XiangMuJiHua").ToString().Trim();
         }
 
         if (strRelatedType == "REQ")
@@ -108,17 +108,17 @@ public partial class TTMakeCollaboration : System.Web.UI.Page
 
         if (strRelatedType == "CONSTRACT")
         {
-            strRelatedTypeCN = "合同";
+            strRelatedTypeCN = LanguageHandle.GetWord("GeTong").ToString().Trim();
         }
 
         if (strRelatedType == "CANDIDATE")
         {
-            strRelatedTypeCN = "候选人";
+            strRelatedTypeCN = LanguageHandle.GetWord("HouShuaRen").ToString().Trim();
         }
 
         if (strRelatedType == "GoodsPO")
         {
-            strRelatedTypeCN = "采购订单";
+            strRelatedTypeCN = LanguageHandle.GetWord("CaiGouDingChan").ToString().Trim();
         }
        
    
@@ -135,7 +135,7 @@ public partial class TTMakeCollaboration : System.Web.UI.Page
             //}
 
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthority(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
 
 
             if (strRelatedType == "OTHER" | strRelatedType == "WORKFLOW" | strRelatedType == "REQ")
@@ -333,12 +333,12 @@ public partial class TTMakeCollaboration : System.Web.UI.Page
 
             HL_RelatedDoc.Enabled = true;
             HL_RelatedDoc.NavigateUrl = "TTCollaborationRelatedDoc.aspx?RelatedID=" + strCOID;
-            TB_Message.Text = "你已被邀请参加协作：" + strCOID + " " + strCollaborationName + "，邀请者：" + ShareClass.GetUserName(strUserCode) + " " + "，请准时参加！";
+            TB_Message.Text = LanguageHandle.GetWord("NiYiBeiYaoQingCanJiaXieZuo").ToString().Trim() + strCOID + " " + strCollaborationName + LanguageHandle.GetWord("YaoQingZhe").ToString().Trim() + ShareClass.GetUserName(strUserCode) + " " + LanguageHandle.GetWord("QingZhunShiCanJia").ToString().Trim();
 
             LoadCollaborationMember(strCOID);
             LoadCollaborationList(strUserCode, strRelatedType, strRelatedID, strIdentifyString, strRelatedCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
 
         }
         catch(Exception err)
@@ -405,12 +405,12 @@ public partial class TTMakeCollaboration : System.Web.UI.Page
 
             LoadCollaborationList(strUserCode, strRelatedType, strRelatedID, strIdentifyString, strRelatedCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
@@ -442,11 +442,11 @@ public partial class TTMakeCollaboration : System.Web.UI.Page
 
             LoadCollaborationList(strUserCode, strRelatedType, strRelatedID, strIdentifyString, strRelatedCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGBCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGBCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGBSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGBSBJC").ToString().Trim() + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -478,11 +478,11 @@ public partial class TTMakeCollaboration : System.Web.UI.Page
 
             LoadCollaborationList(strUserCode, strRelatedType, strRelatedID, strIdentifyString, strRelatedCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJHCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJHCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJHSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJHSBJC").ToString().Trim() + "')", true);
         }
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
@@ -498,7 +498,7 @@ public partial class TTMakeCollaboration : System.Web.UI.Page
 
         if (struserCode.Trim() == usercodeGold)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCJZBYJRXTHZDJRJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCJZBYJRXTHZDJRJC").ToString().Trim() + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
             return;
@@ -511,7 +511,7 @@ public partial class TTMakeCollaboration : System.Web.UI.Page
         {
             if (dt.Rows[i]["UserCode"].ToString().Trim() == struserCode.Trim())
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCCYYCZBNZFJRJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCCYYCZBNZFJRJC").ToString().Trim() + "')", true);
 
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
                 return;
@@ -666,7 +666,7 @@ public partial class TTMakeCollaboration : System.Web.UI.Page
 
 
                 HL_RelatedDoc.NavigateUrl = "TTCollaborationRelatedDoc.aspx?RelatedID=" + strID;
-                TB_Message.Text = "你已被邀请参加协作：" + strID + " " + collaboration.CollaborationName.Trim() + "，邀请者：" + collaboration.CreatorName.Trim() + " " + "，请准时参加！";
+                TB_Message.Text = LanguageHandle.GetWord("NiYiBeiYaoQingCanJiaXieZuo").ToString().Trim() + strID + " " + collaboration.CollaborationName.Trim() + LanguageHandle.GetWord("YaoQingZhe").ToString().Trim() + collaboration.CreatorName.Trim() + " " + LanguageHandle.GetWord("QingZhunShiCanJia").ToString().Trim();
 
                 HL_RelatedDoc.Enabled = true;
                 BT_Close.Enabled = true;
@@ -704,11 +704,11 @@ public partial class TTMakeCollaboration : System.Web.UI.Page
                     LoadCollaborationMember(strID);
                     LoadCollaborationList(strUserCode, strRelatedType, strRelatedID, strIdentifyString, strRelatedCode);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -812,7 +812,7 @@ public partial class TTMakeCollaboration : System.Web.UI.Page
 
                 if (CB_MSM.Checked == true | CB_Mail.Checked == true)
                 {
-                    strSubject = "协作通知";
+                    strSubject = LanguageHandle.GetWord("XieZuoTongZhi").ToString().Trim();
 
                     if (CB_MSM.Checked == true)
                     {
@@ -827,7 +827,7 @@ public partial class TTMakeCollaboration : System.Web.UI.Page
             }
         }
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZTZFSWB + "')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZTZFSWB").ToString().Trim() + "')", true);
 
         ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
     }

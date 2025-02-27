@@ -72,7 +72,7 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
         TreeNode node1 = new TreeNode();
         TreeNode node2 = new TreeNode();
 
-        node1.Text = "<b>" + Resources.lang.XiTongMoZu + "<b>";
+        node1.Text = "<b>" + LanguageHandle.GetWord("XiTongMoZu").ToString().Trim() + "<b>";
         node1.Target = "0";
         node1.Expanded = true;
         treeView.Nodes.Add(node1);
@@ -288,13 +288,13 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
 
         if (intLevel > 2 & strNewModuleType != "SITE")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZDSCBNZJZMZQJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZDSCBNZJZMZQJC").ToString().Trim() + "')", true);
             return;
         }
 
         if (strNewModuleType != strSelectModuleType & strNewModuleType == "SITE")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZWZMZZNFZMZMZZXQJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWZMZZNFZMZMZZXQJC").ToString().Trim() + "')", true);
             return;
         }
 
@@ -355,11 +355,11 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
                 ShareClass.RunSqlCommand(strHQL);
             }
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFZCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZSBJC").ToString().Trim() + "')", true);
         }
 
         LoadChildModule("", strModuleType, strUserType, strLangCode);
@@ -433,21 +433,21 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
 
                     LoadChildModule(strParentModule, strModuleType, strUserType, strLangCode);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCHCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCHCG").ToString().Trim() + "')", true);
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZYSCDWJ + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZYSCDWJ + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "')", true);
         }
     }
 
@@ -482,11 +482,11 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
 
             LoadChildModule(strParentModule, strModuleType, strUserType, strLangCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -512,19 +512,19 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
 
         if (strModuleName.IndexOf("NONE") >= 0 | strForbitModule.IndexOf(strModuleName + ",") >= 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZJGMZMCBNWNONEBQBNDJYMZMCQDNQJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZJGMZMCBNWNONEBQBNDJYMZMCQDNQJC").ToString().Trim() + "')", true);
             return;
         }
 
         if (strModuleType == "SYSTEM" | strModuleType == "APP")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGNZXZZDYLXDMZJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGNZXZZDYLXDMZJC").ToString().Trim() + "')", true);
             return;
         }
 
         if (GetExistAllSameModuleNumber(strModuleName, strUserType, "") > 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZJGCZXTMCXTMZLXXTYHLXDMZBNCFZJ + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZJGCZXTMCXTMZLXXTYHLXDMZBNCFZJ").ToString().Trim() + "')", true);
             return;
         }
 
@@ -536,19 +536,19 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
                 strModuleName = strInnerModuleName;
                 TB_ModuleName.Text = strModuleName;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCYMCZNZMZXMZZNKYSBMM + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCYMCZNZMZXMZZNKYSBMM").ToString().Trim() + "')", true);
             }
         }
 
         if (GetChildModuleNumber(strModuleName, strParentModuleName, strModuleType, strUserType, strLangCode) > 0 | strModuleName == strParentModuleName)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBNBZMZSWHMZDHMZQJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBNBZMZSWHMZDHMZQJC").ToString().Trim() + "')", true);
             return;
         }
 
         if (strModuleName == strOldModuleName)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGNBNZJHFMZMCXTDMZJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGNBNZJHFMZMCXTDMZJC").ToString().Trim() + "')", true);
 
             return;
         }
@@ -557,7 +557,7 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
         {
             if (GetTopProModuleCount(strModuleName, strModuleType) > 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGCZXTMCYJMZZJSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGCZXTMCYJMZZJSBJC").ToString().Trim() + "')", true);
                 return;
             }
 
@@ -583,11 +583,11 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
             //设置缓存更改标志，并刷新页面缓存
             ChangePageCache();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXJCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXJCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -627,13 +627,13 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
         string strForbitModule = Session["ForbitModule"].ToString();
         if (strModuleName.IndexOf("NONE") >= 0 | strForbitModule.IndexOf(strModuleName + ",") >= 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZJGMZMCBNWNONEBQBNDJYMZMCQDNQJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZJGMZMCBNWNONEBQBNDJYMZMCQDNQJC").ToString().Trim() + "')", true);
             return;
         }
 
         if (strModuleName != strOldModuleName & GetExistAllSameModuleNumber(strModuleName, strUserType, strID) > 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZJGCZXTMCXTMZLXXTYHLXDMZBNCFZJ + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZJGCZXTMCXTMZLXXTYHLXDMZBNCFZJ").ToString().Trim() + "')", true);
             return;
         }
 
@@ -645,13 +645,13 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
                 strModuleName = strInnerModuleName;
                 TB_ModuleName.Text = strModuleName;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCYMCZNZMZXMZZNKYSBMM + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCYMCZNZMZXMZZNKYSBMM").ToString().Trim() + "')", true);
             }
         }
 
         if (GetChildModuleNumber(strModuleName, strParentModuleName, strModuleType, strUserType, strLangCode) > 0 | strModuleName == strParentModuleName)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBNBZMZSWHMZDHMZQJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBNBZMZSWHMZDHMZQJC").ToString().Trim() + "')", true);
             return;
         }
 
@@ -678,7 +678,7 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
 
             LoadChildModule(strParentModule, strModuleType, strUserType, strLangCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
 
 
             InitialModuleTree(TreeView1, strUserType, ddlLangSwitcher.SelectedValue.Trim());
@@ -689,7 +689,7 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -731,11 +731,11 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
             //设置缓存更改标志，并刷新页面缓存
             ChangePageCache();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -792,11 +792,11 @@ public partial class TTSystemModuleSetForPage : System.Web.UI.Page
             //设置缓存更改标志，并刷新页面缓存
             ChangePageCache();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
         }
     }
 

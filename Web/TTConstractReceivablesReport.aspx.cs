@@ -121,12 +121,12 @@ public partial class TTConstractReceivablesReport : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = Resources.lang.HeTongShouKuanQingKuangBaoBiao + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("HeTongShouKuanQingKuangBaoBiao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 CreateExcel(fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDCDSJYWJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
             }
         }
     }
@@ -161,7 +161,7 @@ public partial class TTConstractReceivablesReport : System.Web.UI.Page
         strReceivablesStartTime = DateTime.Parse(DLC_ReceivablesStartTime.Text).ToString("yyyyMMdd");
         strReceivablesEndTime = DateTime.Parse(DLC_ReceivablesEndTime.Text).ToString("yyyyMMdd");
 
-        strHQL = "Select BillCode 原始单号,ConstractCode 合同代码,ConstractName 合同名称,ReceivablesAccount 应收金额,to_char(ReceivablesTime,'yyyy/mm/dd') 应收时间,ReceiverAccount 实收金额,UNReceiveAmount 未收金额,Payer 付款方,PartA 甲方单位,PartAOperator 负责人,CurrencyType 币别 from  V_ConstractReceivablesReportSummary where 1=1 ";
+        strHQL = "Select BillCode 原始单号,ConstractCode 合同代码,ConstractName 合同名称,ReceivablesAccount 应收金额,to_char(ReceivablesTime,'yyyy/mm/dd') 应收时间,ReceiverAccount 实收金额,UNReceiveAmount 未收金额,Payer 付款方,PartA 甲方单位,PartAOperator 负责人,CurrencyType 币别 from  V_ConstractReceivablesReportSummary where 1=1 "; 
         strHQL += " and PartA like  " + "'" + strPartA + "'";
         if (strOperatorName != "%%")
         {

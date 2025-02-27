@@ -52,7 +52,7 @@ public partial class TTWLManage : System.Web.UI.Page
             DLC_StartTime.Text = DateTime.Now.Year.ToString() + "-01-01"; 
             DLC_EndTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            LB_QueryScope.Text = Resources.lang.StatusAll;
+            LB_QueryScope.Text = LanguageHandle.GetWord("StatusAll").ToString().Trim();
 
             strHQL = " from WLType as wlType";
             strHQL += " Where wlType.LangCode = " + "'" + strLangCode + "'";
@@ -190,7 +190,7 @@ public partial class TTWLManage : System.Web.UI.Page
 
         strWFID = NB_WFID.Amount.ToString();
 
-        LB_QueryScope.Text = Resources.lang.GongZuoLiuBianHao + strWFID;
+        LB_QueryScope.Text = LanguageHandle.GetWord("GongZuoLiuBianHao").ToString().Trim() + strWFID;
 
         DataGrid1.CurrentPageIndex = 0;
         DataGrid3.CurrentPageIndex = 0;
@@ -279,7 +279,7 @@ public partial class TTWLManage : System.Web.UI.Page
         strStartTime = DLC_StartTime.Text;
         strEndTime = DLC_EndTime.Text;
 
-        LB_QueryScope.Text = Resources.lang.KaiShiRiQi + ":" + strStartTime + Resources.lang.JieShuRiQi + ":" + strEndTime;
+        LB_QueryScope.Text = LanguageHandle.GetWord("KaiShiRiQi").ToString().Trim() + ":" + strStartTime + LanguageHandle.GetWord("JieShuRiQi").ToString().Trim() + ":" + strEndTime;
 
         DataGrid1.CurrentPageIndex = 0;
         DataGrid3.CurrentPageIndex = 0;
@@ -484,11 +484,11 @@ public partial class TTWLManage : System.Web.UI.Page
 
         if (strUserCode != strAgencyCode)
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZYSZSTRAGENCYNAMEWNDGZLSPDLRXZXSWNZJJK + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZYSZSTRAGENCYNAMEWNDGZLSPDLRXZXSWNZJJK").ToString().Trim() + "');</script>");
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZYXGZLSPDL + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZYXGZLSPDL").ToString().Trim() + "');</script>");
         }
     }
 
@@ -545,7 +545,7 @@ public partial class TTWLManage : System.Web.UI.Page
         IList lst;
 
         string strUserCode = LB_UserCode.Text;
-        LB_QueryScope.Text = Resources.lang.StatusAll;
+        LB_QueryScope.Text = LanguageHandle.GetWord("StatusAll").ToString().Trim();
 
         DataSet ds = new DataSet();
 
@@ -612,7 +612,7 @@ public partial class TTWLManage : System.Web.UI.Page
     {
         string strStatus = ((Button)e.Item.FindControl("BT_Status")).Text.Trim();
 
-        LB_QueryScope.Text = Resources.lang.ZhuangTai + strStatus;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZhuangTai").ToString().Trim() + strStatus;
 
         string strUserCode = LB_UserCode.Text.Trim();
         string strHQL;

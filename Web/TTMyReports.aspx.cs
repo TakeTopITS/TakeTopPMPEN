@@ -105,7 +105,7 @@ public partial class TTMyReports : System.Web.UI.Page
 
                 if (e.CommandName == "Read")
                 {
-                    strHQL = "Update T_ReportRelatedUser Set Status = '已阅' Where ReportID = " + strReportID + " and UserCode = " + "'" + strUserCode + "'";
+                    strHQL = "Update T_ReportRelatedUser Set Status = '已阅' Where ReportID =" + strReportID + " and UserCode = " + "'" + strUserCode + "'"; 
                     ShareClass.RunSqlCommand(strHQL);
 
                     LoadUNReadReport(strUserCode);
@@ -239,7 +239,7 @@ public partial class TTMyReports : System.Web.UI.Page
 
 
         strHQL = "From Report as report Where report.TemName = " + "'" + strReportTemplate + "'";
-        strHQL += " and report.ID in (Select reportRelatedUser.ReportID From ReportRelatedUser as reportRelatedUser Where reportRelatedUser.Status = '已阅' and reportRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")";
+        strHQL += " and report.ID in (Select reportRelatedUser.ReportID From ReportRelatedUser as reportRelatedUser Where reportRelatedUser.Status = '已阅' and reportRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")"; 
         strHQL += " Order By report.ID DESC";
         lst = reportBLL.GetAllReports(strHQL);
 
@@ -267,7 +267,7 @@ public partial class TTMyReports : System.Web.UI.Page
         LB_Sql1.Text = strHQL;
 
         strHQL = "From Report as report Where report.ReportType = " + "'" + strReportType + "'";
-        strHQL += " and report.ID in (Select reportRelatedUser.ReportID From ReportRelatedUser as reportRelatedUser Where reportRelatedUser.Status = '已阅' and reportRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")";
+        strHQL += " and report.ID in (Select reportRelatedUser.ReportID From ReportRelatedUser as reportRelatedUser Where reportRelatedUser.Status = '已阅' and reportRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")"; 
         strHQL += " Order By report.ID DESC";
         lst = reportBLL.GetAllReports(strHQL);
 
@@ -300,7 +300,7 @@ public partial class TTMyReports : System.Web.UI.Page
         IList lst;
 
         strHQL = "From Report as report  where ";
-        strHQL += " report.ID in (Select reportRelatedUser.ReportID From ReportRelatedUser as reportRelatedUser Where reportRelatedUser.Status = '已阅' and reportRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")";
+        strHQL += " report.ID in (Select reportRelatedUser.ReportID From ReportRelatedUser as reportRelatedUser Where reportRelatedUser.Status = '已阅' and reportRelatedUser.UserCode = " + "'" + strUserCode + "'" + ")"; 
         strHQL += " Order By report.ID DESC";
         ReportBLL reportBLL = new ReportBLL();
         lst = reportBLL.GetAllReports(strHQL);

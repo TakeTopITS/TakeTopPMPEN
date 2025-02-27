@@ -35,7 +35,7 @@ public partial class TTAccountPayRecordSummary : System.Web.UI.Page
             DLC_EndTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
             ShareClass.LoadAccountForDDL(ddl_Account);
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             ShareClass.LoadCurrencyForDropDownList(DL_Currency);
@@ -156,12 +156,12 @@ public partial class TTAccountPayRecordSummary : System.Web.UI.Page
         }
         string strChartTitle;
 
-        strChartTitle = Resources.lang.SFKMJEFBT;
+        strChartTitle = LanguageHandle.GetWord("SFKMJEFBT").ToString().Trim();
         IFrame_Chart_Pie.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strHQL);
 
         LB_Sql2.Text = strHQL;
 
-        strChartTitle = Resources.lang.TQSJSFKDBT;
+        strChartTitle = LanguageHandle.GetWord("TQSJSFKDBT").ToString().Trim();
 
         strHQL = @"Select COALESCE(A.OutOfPocketTime, B.ReceiverTime) as XName,
             COALESCE(A.PayMoney, 0) AS YNumber, COALESCE(B.ReceiverMoney, 0) AS ZNumber,
@@ -243,7 +243,7 @@ public partial class TTAccountPayRecordSummary : System.Web.UI.Page
 
         string strChartTitle;
 
-        strChartTitle = Resources.lang.SFKMJEFBT;
+        strChartTitle = LanguageHandle.GetWord("SFKMJEFBT").ToString().Trim();
         strHQL = "Select Account as XName,COALESCE(Sum(OutOfPocketAccount),0) as YNumber from T_ConstractPayable";
         strHQL += " Where OperatorCode in (Select UserCode From T_ProjectMember Where DepartCode in " + strDepartString + ")";
         strHQL += " Group By Account";
@@ -254,7 +254,7 @@ public partial class TTAccountPayRecordSummary : System.Web.UI.Page
         //Chart_Pie.Visible = true;
         LB_Sql2.Text = strHQL;
 
-        strChartTitle = Resources.lang.TQSJSFKDBT;
+        strChartTitle = LanguageHandle.GetWord("TQSJSFKDBT").ToString().Trim();
 
         strHQL = @"Select COALESCE(A.OutOfPocketTime, B.ReceiverTime) as XName,
             COALESCE(A.PayMoney, 0) AS YNumber, COALESCE(B.ReceiverMoney, 0) AS ZNumber,
@@ -288,12 +288,12 @@ public partial class TTAccountPayRecordSummary : System.Web.UI.Page
 
         string strChartTitle;
 
-        strChartTitle = Resources.lang.SFKMJEFBT;
+        strChartTitle = LanguageHandle.GetWord("SFKMJEFBT").ToString().Trim();
         strHQL = LB_Sql2.Text.Trim();
         IFrame_Chart_Pie.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strHQL);
 
 
-        strChartTitle = Resources.lang.TQSJSFKDBT;
+        strChartTitle = LanguageHandle.GetWord("TQSJSFKDBT").ToString().Trim();
         strHQL = LB_Sql3.Text.Trim();
         IFrame_Chart_PayAndReceive.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Column&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strHQL);
 

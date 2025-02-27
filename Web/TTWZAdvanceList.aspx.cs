@@ -57,7 +57,7 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
     private void DataProjectBinder()
     {
         WZProjectBLL wZProjectBLL = new WZProjectBLL();
-        string strProjectHQL = "from WZProject as wZProject where PowerPurchase = '有' order by MarkTime desc";
+        string strProjectHQL = "from WZProject as wZProject where PowerPurchase = '有' order by MarkTime desc"; 
         IList listProject = wZProjectBLL.GetAllWZProjects(strProjectHQL);
 
         DDL_Project.DataSource = listProject;
@@ -101,9 +101,9 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
                 if (listWZAdvance != null && listWZAdvance.Count == 1)
                 {
                     WZAdvance wZAdvance = (WZAdvance)listWZAdvance[0];
-                    if (wZAdvance.Progress != "录入" || wZAdvance.IsMark != 0)
+                    if (wZAdvance.Progress != LanguageHandle.GetWord("LuRu").ToString().Trim() || wZAdvance.IsMark != 0)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBWLRYJSYBJBW0BYXSC+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBWLRYJSYBJBW0BYXSC").ToString().Trim()+"')", true);
                         return;
                     }
 
@@ -133,7 +133,7 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
 
                     if (wZAdvance.IsMark != 0)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSYBJBW0BYXBJ+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSYBJBW0BYXBJ").ToString().Trim()+"')", true);
                         return;
                     }
 
@@ -152,13 +152,13 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
                 {
                     WZAdvance wZAdvance = (WZAdvance)listWZAdvance[0];
 
-                    if (wZAdvance.Progress != "录入")
+                    if (wZAdvance.Progress != LanguageHandle.GetWord("LuRu").ToString().Trim())
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBSLRZTBNBP+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBSLRZTBNBP").ToString().Trim()+"')", true);
                         return;
                     }
 
-                    wZAdvance.Progress = "报批";
+                    wZAdvance.Progress = LanguageHandle.GetWord("BaoPi").ToString().Trim();
 
                     wZAdvanceBLL.UpdateWZAdvance(wZAdvance, wZAdvance.AdvanceCode);
 
@@ -179,7 +179,7 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
 
                     if (wZAdvance.Progress != "Approved")
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBSLRZTBNBP+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBSLRZTBNBP").ToString().Trim()+"')", true);
                         return;
                     }
 
@@ -194,9 +194,9 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
                     {
                         foreach (DataRow dr in dtCheck1.Rows)
                         {
-                            if (!"生效,材检".Contains(ShareClass.ObjectToString(dr["Progress"])))
+                            if (!LanguageHandle.GetWord("ShengXiaoCaiJian").ToString().Trim().Contains(ShareClass.ObjectToString(dr["Progress"])))
                             {
-                                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZYHTJDBSSXHCJXCL+"')", true);
+                                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYHTJDBSSXHCJXCL").ToString().Trim()+"')", true);
                                 return;
                             }
                             else
@@ -207,7 +207,7 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZBDXYDHTLB+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZBDXYDHTLB").ToString().Trim()+"')", true);
                         return;
                     }
 
@@ -224,9 +224,9 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
                         {
                             foreach (DataRow dr in dtCheck2.Rows)
                             {
-                                if (!"报销,完成".Contains(ShareClass.ObjectToString(dr["Progress"])))
+                                if (!LanguageHandle.GetWord("BaoXiaoWanCheng").ToString().Trim().Contains(ShareClass.ObjectToString(dr["Progress"])))
                                 {
-                                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZYHTJDBSSXHCJXCL+"')", true);
+                                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYHTJDBSSXHCJXCL").ToString().Trim()+"')", true);
                                     return;
                                 }
                                 else
@@ -237,13 +237,13 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
                         }
                         else
                         {
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZBDXYDKDLB+"')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZBDXYDKDLB").ToString().Trim()+"')", true);
                             return;
                         }
 
                         if (IsCheck2)
                         {
-                            wZAdvance.Progress = "付款";
+                            wZAdvance.Progress = LanguageHandle.GetWord("FuKuan").ToString().Trim();
                             wZAdvanceBLL.UpdateWZAdvance(wZAdvance, wZAdvance.AdvanceCode);
 
                             WZAdvanceDetailBLL wZAdvanceDetailBLL = new WZAdvanceDetailBLL();
@@ -256,8 +256,8 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
                                 {
                                     WZAdvanceDetail wZAdvanceDetail = (WZAdvanceDetail)listWZAdvanceDetail[i];
 
-                                    //预付明细<预付进度> = "付款"
-                                    wZAdvanceDetail.PayProgress = "付款";
+                                    //预付明细<预付进度> = LanguageHandle.GetWord("FuKuan").ToString().Trim()
+                                    wZAdvanceDetail.PayProgress = LanguageHandle.GetWord("FuKuan").ToString().Trim();
 
                                     wZAdvanceDetailBLL.UpdateWZAdvanceDetail(wZAdvanceDetail, wZAdvanceDetail.ID);
 
@@ -281,7 +281,7 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
                             //重新加载预付款列表
                             DataAdvanceBinder();
 
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZXCG+"')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZXCG").ToString().Trim()+"')", true);
                         }
                     }
                 }
@@ -316,20 +316,20 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
             if (string.IsNullOrEmpty(strProjectCode))
             {
                 string strNewProgress = HF_NewProgress.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('项目编码不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('项目编码不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true); 
                 return;
             }
 
             if (string.IsNullOrEmpty(strAdvanceName))
             {
                 string strNewProgress = HF_NewProgress.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('预付款名称不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('预付款名称不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true); 
                 return;
             }
             if (!ShareClass.CheckStringRight(strAdvanceName))
             {
                 string strNewProgress = HF_NewProgress.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('预付款名称不能为非法字符！');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('预付款名称不能为非法字符！');ControlStatusChange('" + strNewProgress + "');", true); 
                 return;
             }
 
@@ -358,7 +358,7 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
                     //重新加载
                     DataAdvanceBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatusCloseChange();", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatusCloseChange();", true); 
                 }
             }
             else
@@ -374,14 +374,14 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
                 wZAdvance.AdvanceName = strAdvanceName;
                 wZAdvance.AdvanceTime = DateTime.Now;
                 wZAdvance.Marker = strUserCode;
-                wZAdvance.Progress = "录入";
+                wZAdvance.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
 
                 wZAdvanceBLL.AddWZAdvance(wZAdvance);
 
                 //重新加载
                 DataAdvanceBinder();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatusCloseChange();", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatusCloseChange();", true); 
             }
         }
         catch (Exception ex) { }
@@ -399,20 +399,20 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
             if (string.IsNullOrEmpty(strProjectCode))
             {
                 string strNewProgress = HF_NewProgress.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('项目编码不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('项目编码不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true); 
                 return;
             }
 
             if (string.IsNullOrEmpty(strAdvanceName))
             {
                 string strNewProgress = HF_NewProgress.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('预付款名称不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('预付款名称不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true); 
                 return;
             }
             if (!ShareClass.CheckStringRight(strAdvanceName))
             {
                 string strNewProgress = HF_NewProgress.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('预付款名称不能为非法字符！');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('预付款名称不能为非法字符！');ControlStatusChange('" + strNewProgress + "');", true); 
                 return;
             }
 
@@ -425,14 +425,14 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
             wZAdvance.AdvanceName = strAdvanceName;
             wZAdvance.AdvanceTime = DateTime.Now;
             wZAdvance.Marker = strUserCode;
-            wZAdvance.Progress = "录入";
+            wZAdvance.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
 
             wZAdvanceBLL.AddWZAdvance(wZAdvance);
 
             //重新加载
             DataAdvanceBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('新建成功！');ControlStatusCloseChange();", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('新建成功！');ControlStatusCloseChange();", true); 
         }
         catch (Exception ex) { }
     }
@@ -449,20 +449,20 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
             if (string.IsNullOrEmpty(strProjectCode))
             {
                 string strNewProgress = HF_NewProgress.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('项目编码不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('项目编码不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true); 
                 return;
             }
 
             if (string.IsNullOrEmpty(strAdvanceName))
             {
                 string strNewProgress = HF_NewProgress.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('预付款名称不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('预付款名称不能为空，请补充！');ControlStatusChange('" + strNewProgress + "');", true); 
                 return;
             }
             if (!ShareClass.CheckStringRight(strAdvanceName))
             {
                 string strNewProgress = HF_NewProgress.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('预付款名称不能为非法字符！');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('预付款名称不能为非法字符！');ControlStatusChange('" + strNewProgress + "');", true); 
                 return;
             }
 
@@ -486,14 +486,14 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
                     //重新加载
                     DataAdvanceBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('修改成功！');ControlStatusCloseChange();", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('修改成功！');ControlStatusCloseChange();", true); 
                 }
             }
             else
             {
                 //增加
                 string strNewProgress = HF_NewProgress.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要修改的预付计划列表！');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要修改的预付计划列表！');ControlStatusChange('" + strNewProgress + "');", true); 
                 return;
             }
         }
@@ -571,7 +571,7 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
         string strEditAdvanceCode = HF_NewAdvanceCode.Value;
         if (string.IsNullOrEmpty(strEditAdvanceCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDYFKLB+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDYFKLB").ToString().Trim()+"')", true);
             return;
         }
 
@@ -587,7 +587,7 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
 
             if (wZAdvance.IsMark != 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSYBJBW0BYXBJ+"');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSYBJBW0BYXBJ").ToString().Trim()+"');ControlStatusChange('" + strNewProgress + "');", true);
                 return;
             }
 
@@ -608,7 +608,7 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
         string strEditAdvanceCode = HF_NewAdvanceCode.Value;
         if (string.IsNullOrEmpty(strEditAdvanceCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDYFKLB+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDYFKLB").ToString().Trim()+"')", true);
             return;
         }
 
@@ -618,10 +618,10 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
         if (listWZAdvance != null && listWZAdvance.Count == 1)
         {
             WZAdvance wZAdvance = (WZAdvance)listWZAdvance[0];
-            if (wZAdvance.Progress != "录入" || wZAdvance.IsMark != 0)
+            if (wZAdvance.Progress != LanguageHandle.GetWord("LuRu").ToString().Trim() || wZAdvance.IsMark != 0)
             {
                 string strNewProgress = HF_NewProgress.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBWLRYJSYBJBW0BYXSC+"');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBWLRYJSYBJBW0BYXSC").ToString().Trim()+"');ControlStatusChange('" + strNewProgress + "');", true);
                 return;
             }
 
@@ -642,7 +642,7 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
         string strEditAdvanceCode = HF_NewAdvanceCode.Value;
         if (string.IsNullOrEmpty(strEditAdvanceCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDYFKLB+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDYFKLB").ToString().Trim()+"')", true);
             return;
         }
 
@@ -657,7 +657,7 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
         string strEditAdvanceCode = HF_NewAdvanceCode.Value;
         if (string.IsNullOrEmpty(strEditAdvanceCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDYFKLB+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDYFKLB").ToString().Trim()+"')", true);
             return;
         }
 
@@ -668,14 +668,14 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
         {
             WZAdvance wZAdvance = (WZAdvance)listWZAdvance[0];
 
-            if (wZAdvance.Progress != "录入")
+            if (wZAdvance.Progress != LanguageHandle.GetWord("LuRu").ToString().Trim())
             {
                 string strNewProgress = HF_NewProgress.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBSLRZTBNBP+"');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBSLRZTBNBP").ToString().Trim()+"');ControlStatusChange('" + strNewProgress + "');", true);
                 return;
             }
 
-            wZAdvance.Progress = "报批";
+            wZAdvance.Progress = LanguageHandle.GetWord("BaoPi").ToString().Trim();
 
             wZAdvanceBLL.UpdateWZAdvance(wZAdvance, wZAdvance.AdvanceCode);
 
@@ -694,7 +694,7 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
         string strEditAdvanceCode = HF_NewAdvanceCode.Value;
         if (string.IsNullOrEmpty(strEditAdvanceCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDYFKLB+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDYFKLB").ToString().Trim()+"')", true);
             return;
         }
 
@@ -708,7 +708,7 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
             if (wZAdvance.Progress != "Approved")
             {
                 string strNewProgress = HF_NewProgress.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBSLRZTBNBP+"');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBSLRZTBNBP").ToString().Trim()+"');ControlStatusChange('" + strNewProgress + "');", true);
                 return;
             }
 
@@ -723,10 +723,10 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
             {
                 foreach (DataRow dr in dtCheck1.Rows)
                 {
-                    if (!"生效,材检".Contains(ShareClass.ObjectToString(dr["Progress"])))
+                    if (!LanguageHandle.GetWord("ShengXiaoCaiJian").ToString().Trim().Contains(ShareClass.ObjectToString(dr["Progress"])))
                     {
                         string strNewProgress = HF_NewProgress.Value;
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZYHTJDBSSXHCJXCL+"');ControlStatusChange('" + strNewProgress + "');", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYHTJDBSSXHCJXCL").ToString().Trim()+"');ControlStatusChange('" + strNewProgress + "');", true);
                         return;
                     }
                     else
@@ -738,7 +738,7 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
             else
             {
                 string strNewProgress = HF_NewProgress.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZBDXYDHTLB+"');ControlStatusChange('" + strNewProgress + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZBDXYDHTLB").ToString().Trim()+"');ControlStatusChange('" + strNewProgress + "');", true);
                 return;
             }
 
@@ -755,10 +755,10 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
                 {
                     foreach (DataRow dr in dtCheck2.Rows)
                     {
-                        if (!"报销,完成".Contains(ShareClass.ObjectToString(dr["Progress"])))
+                        if (!LanguageHandle.GetWord("BaoXiaoWanCheng").ToString().Trim().Contains(ShareClass.ObjectToString(dr["Progress"])))
                         {
                             string strNewProgress = HF_NewProgress.Value;
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZYHTJDBSSXHCJXCL+"');ControlStatusChange('" + strNewProgress + "');", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYHTJDBSSXHCJXCL").ToString().Trim()+"');ControlStatusChange('" + strNewProgress + "');", true);
                             return;
                         }
                         else
@@ -770,13 +770,13 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
                 else
                 {
                     string strNewProgress = HF_NewProgress.Value;
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZBDXYDKDLB+"');ControlStatusChange('" + strNewProgress + "');", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZBDXYDKDLB").ToString().Trim()+"');ControlStatusChange('" + strNewProgress + "');", true);
                     return;
                 }
 
                 if (IsCheck2)
                 {
-                    wZAdvance.Progress = "付款";
+                    wZAdvance.Progress = LanguageHandle.GetWord("FuKuan").ToString().Trim();
                     wZAdvanceBLL.UpdateWZAdvance(wZAdvance, wZAdvance.AdvanceCode);
 
                     WZAdvanceDetailBLL wZAdvanceDetailBLL = new WZAdvanceDetailBLL();
@@ -789,8 +789,8 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
                         {
                             WZAdvanceDetail wZAdvanceDetail = (WZAdvanceDetail)listWZAdvanceDetail[i];
 
-                            //预付明细<预付进度> = "付款"
-                            wZAdvanceDetail.PayProgress = "付款";
+                            //预付明细<预付进度> = LanguageHandle.GetWord("FuKuan").ToString().Trim()
+                            wZAdvanceDetail.PayProgress = LanguageHandle.GetWord("FuKuan").ToString().Trim();
 
                             wZAdvanceDetailBLL.UpdateWZAdvanceDetail(wZAdvanceDetail, wZAdvanceDetail.ID);
 
@@ -814,7 +814,7 @@ public partial class TTWZAdvanceList : System.Web.UI.Page
                     //重新加载预付款列表
                     DataAdvanceBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZXCG+"');ControlStatusCloseChange();", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZXCG").ToString().Trim()+"');ControlStatusCloseChange();", true);
                 }
             }
         }

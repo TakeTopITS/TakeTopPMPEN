@@ -54,7 +54,7 @@ public partial class TTAllMemberPlansBackup : System.Web.UI.Page
                 HE_ReviewDetail.Visible = true;
             }
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
         }
     }
 
@@ -108,7 +108,7 @@ public partial class TTAllMemberPlansBackup : System.Web.UI.Page
         if (treeNode.Target == "0")
         {
             strPlanID = treeNode.Target.Trim();
-            strPlanName = "我的计划";
+            strPlanName = LanguageHandle.GetWord("WoDeJiHua").ToString().Trim();
         }
         else
         {
@@ -145,7 +145,7 @@ public partial class TTAllMemberPlansBackup : System.Web.UI.Page
         dtEndTime = DateTime.Parse(ds.Tables[0].Rows[0]["EndTime"].ToString());
         strPlanType = ds.Tables[0].Rows[0]["PlanType"].ToString();
 
-        strChartTitle = ds.Tables[0].Rows[0]["PlanName"].ToString() + " " + strDepartName + " 部门成员计划评分对比图";
+        strChartTitle = ds.Tables[0].Rows[0]["PlanName"].ToString() + " " + strDepartName + LanguageHandle.GetWord("BuMenChengYuanJiHuaPingFenDuiB").ToString().Trim();
 
         strHQL = "Select (CreatorCode||CreatorName) as XName,ScoringByLeader as YNumber From T_PlanBackup ";
         strHQL += " Where CreatorCode in (Select UserCode From T_ProjectMember Where DepartCode = " + "'" + strDepartCode + "'" + ")";
@@ -280,7 +280,7 @@ public partial class TTAllMemberPlansBackup : System.Web.UI.Page
         TreeNode node1 = new TreeNode();
         TreeNode node3 = new TreeNode();
 
-        node1.Text = "<B>" + strUserName + " " + Resources.lang.Plan + "</B>";
+        node1.Text = "<B>" + strUserName + " " + LanguageHandle.GetWord("Plan").ToString().Trim() + "</B>";
         node1.Target = "0";
         node1.Expanded = true;
         TreeView1.Nodes.Add(node1);

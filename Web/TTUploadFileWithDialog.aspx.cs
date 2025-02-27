@@ -53,7 +53,7 @@ public partial class TTUploadFileWithDialog : System.Web.UI.Page
             string strDocTypeID = LB_DocTypeID.Text;
             if (strDocTypeID == "")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZJGWDLXBNWKJC + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZJGWDLXBNWKJC").ToString().Trim() + "');</script>");
                 return;
             }
 
@@ -78,7 +78,7 @@ public partial class TTUploadFileWithDialog : System.Web.UI.Page
 
             if (fi.Exists)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZCZTMWJSCSBGMHZSC + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "');</script>");
             }
             else
             {
@@ -117,7 +117,7 @@ public partial class TTUploadFileWithDialog : System.Web.UI.Page
         }
         else
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZZYSCDWJ + "');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "');</script>");
         }
     }
 
@@ -142,7 +142,7 @@ public partial class TTUploadFileWithDialog : System.Web.UI.Page
         strDepartString = TakeTopCore.CoreShareClass.InitialUnderDepartmentStringByAuthority(strUserCode);
         strDepartCode = ShareClass.GetDepartCodeFromUserCode(strUserCode);
 
-        strHQL = "Select GroupName,HomeName from T_ActorGroup where GroupName <> '全体' and  Type = 'All' ";
+        strHQL = "Select GroupName,HomeName from T_ActorGroup where GroupName <> '全体' and  Type = 'All' "; 
         strHQL += " and (BelongDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))";
         strHQL += " Or BelongDepartCode in " + strDepartString + ")";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";

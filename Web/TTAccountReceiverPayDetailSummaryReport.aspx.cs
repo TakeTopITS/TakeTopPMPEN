@@ -32,7 +32,7 @@ public partial class TTAccountReceiverPayDetailSummaryReport : System.Web.UI.Pag
             LoadAccountFinancialSet();
 
             ShareClass.LoadAccountForDDL(ddl_Account);
-            TakeTopCore.CoreShareClass.InitialAllDepartmentTree( Resources.lang.ZZJGT,TreeView1);
+            TakeTopCore.CoreShareClass.InitialAllDepartmentTree( LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1);
 
             LoadAccountGeneralLedgerList(DL_Financial.SelectedValue.Trim(), DL_Interval.SelectedValue.Trim(), ddl_Account.SelectedValue.Trim(), ddl_Type.SelectedValue.Trim(), LB_DepartString.Text);
         }
@@ -270,29 +270,29 @@ public partial class TTAccountReceiverPayDetailSummaryReport : System.Web.UI.Pag
                 string fileName = "";
                 if (ddl_Type.SelectedValue.Trim() == "0")
                 {
-                    fileName = "收支明细汇总表_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("ShouZhiMingXiHuiZongBiao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else if (ddl_Type.SelectedValue.Trim() == "1")
                 {
-                    fileName = "收款明细汇总表_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("ShouKuanMingXiHuiZongBiao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 else if (ddl_Type.SelectedValue.Trim() == "")
                 {
-                    fileName = "付款明细汇总表_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                    fileName = LanguageHandle.GetWord("FuKuanMingXiHuiZongBiao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 }
                 CreateExcel(getAccountGeneralLedgerList(DL_Financial.SelectedValue.Trim(), DL_Interval.SelectedValue.Trim(), ddl_Account.SelectedValue.Trim(), ddl_Type.SelectedValue.Trim(), LB_DepartString.Text), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDCDSJYWJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim() + "')", true);
             }
         }
     }
 
     protected DataTable getAccountGeneralLedgerList(string strFinancialID, string strIntervalID, string strAccountCode, string strType, string strDepartCode)
     {
-        string strHQL = "select E.AccountType '科目类型',A.AccountName '会计科目','性质'=case when ReceivablesRecordID>0 then '收款' when PayableRecordID>0 then '付款' else '上期结转' end," +
-            "FinancialName '财务帐套',IntervalName '财务区间',TotalMoney '发生金额',CurrencyType '币种',UserName '操作人',CreateTime '操作时间' from T_AccountGeneralLedger A," +
+        string strHQL = "select E.AccountType '科目类型',A.AccountName '会计科目','性质'=case when ReceivablesRecordID>0 then '收款' when PayableRecordID>0 then '付款' else '上期结转' end," + 
+            "FinancialName '财务帐套',IntervalName '财务区间',TotalMoney '发生金额',CurrencyType '币种',UserName '操作人',CreateTime '操作时间' from T_AccountGeneralLedger A," + 
             "T_AccountFinancialSet B,T_AccountingIntervalSet C,T_ProjectMember D,T_Account E where A.FinancialCode=B.FinancialCode and A.IntervalCode=C.IntervalCode and A.Creater=D.UserCode and A.AccountCode=E.AccountCode ";
         if (strFinancialID.Trim() != "")
         {
@@ -449,15 +449,15 @@ public partial class TTAccountReceiverPayDetailSummaryReport : System.Web.UI.Pag
     {
         if (strReceivablesRecordID == "0" && strPayableRecordID == "0")
         {
-            return "上期结转";
+            return "上期结转"; 
         }
         else if (strReceivablesRecordID == "0" && strPayableRecordID != "0")
         {
-            return "付款";
+            return "付款"; 
         }
         else if (strReceivablesRecordID != "0" && strPayableRecordID == "0")
         {
-            return "收款";
+            return "收款"; 
         }
         else
             return "";

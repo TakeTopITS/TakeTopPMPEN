@@ -43,11 +43,11 @@ public partial class TTReqRelatedDocView : System.Web.UI.Page
             strHQL = "from Document as document where ";
             strHQL += " (document.RelatedType = 'Requirement' and document.RelatedID = " + strReqID;
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible = '部门' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";
-            strHQL += " or ( document.Visible = '全体'))) ";
-            strHQL += " or ((document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Requirement' and meeting.RelatedID = " + strReqID + "))";
+            strHQL += " or (document.Visible = '部门' and document.DepartCode = " + "'" + strDepartCode + "'" + " )"; 
+            strHQL += " or ( document.Visible = '全体'))) "; 
+            strHQL += "or ((document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Requirement' and meeting.RelatedID =" + strReqID + "))"; 
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or ( document.Visible = '会议')))";
+            strHQL += " or ( document.Visible = '会议')))"; 
             strHQL += " and document.Status <> 'Deleted' ";
             strHQL += " order by document.DocID DESC";
 

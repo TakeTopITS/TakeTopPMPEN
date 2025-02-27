@@ -52,7 +52,7 @@ public partial class TTCompanyNotice : System.Web.UI.Page
 
         strHQL = "Select DocID,DocType,DocName,Address,RelatedDepartName,UploadManCode,UploadManName,UploadTime From T_PublicNotice ";
         strHQL += " Where (RelatedDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))  or RelatedDepartCode = '" + strDepartCode + "')";
-        strHQL += " And Status = '发布' Order By DocID DESC";
+        strHQL += " And Status = '发布' Order By DocID DESC"; 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_PublicNotice");
 
         DataGrid1.DataSource = ds;

@@ -149,7 +149,7 @@ public partial class TTBMSupplierInfoView : System.Web.UI.Page
     {
         if (strBidStatus.Trim().Equals("Y"))
         {
-            return "中标";
+            return "中标"; 
         }
         else if (strBidStatus.Trim().Equals("N"))
         {
@@ -157,7 +157,7 @@ public partial class TTBMSupplierInfoView : System.Web.UI.Page
         }
         else
         {
-            return "未开标";
+            return "未开标"; 
         }
     }
 
@@ -182,20 +182,20 @@ public partial class TTBMSupplierInfoView : System.Web.UI.Page
         IList lst = bMContractPreparationBLL.GetAllBMContractPreparations(strHQL);
         if (lst.Count > 0 && lst != null)
         {
-            return "合同已签订";
+            return "合同已签订"; 
         }
         else
         {
             if (strStatus.Trim().Equals("New"))
             {
-                return "合同洽谈新建";
+                return "合同洽谈新建"; 
             }
             else if (strStatus.Trim().Equals("Unqualified"))
             {
-                return "合同洽谈审核不合格";
+                return "合同洽谈审核不合格"; 
             }
             else
-                return "合同洽谈中";
+                return "合同洽谈中"; 
         }
     }
 
@@ -271,7 +271,7 @@ public partial class TTBMSupplierInfoView : System.Web.UI.Page
             for (int i = 0; i < lst.Count; i++)
             {
                 BMSupBidByExp bMSupBidByExp = (BMSupBidByExp)lst[i];
-                result += "专家 " + ShareClass.GetUserName(bMSupBidByExp.ExportCode.Trim()) + "：" + bMSupBidByExp.ExportResult.Trim() + "；";
+                result += LanguageHandle.GetWord("ZhuanGu").ToString().Trim() + ShareClass.GetUserName(bMSupBidByExp.ExportCode.Trim()) + "：" + bMSupBidByExp.ExportResult.Trim() + "；";
             }
         }
         return result;

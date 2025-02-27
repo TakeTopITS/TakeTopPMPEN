@@ -103,14 +103,14 @@ public partial class TTWZCardFinance : System.Web.UI.Page
         string strCardCode = LB_Card.SelectedValue;
         if (string.IsNullOrEmpty(strCardCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZCWPZ+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZCWPZ").ToString().Trim()+"')", true);
             return;
         }
 
         string strNoCode = TXT_NoCode.Text.Trim();
         if (string.IsNullOrEmpty(strNoCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSRNOBH+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRNOBH").ToString().Trim()+"')", true);
             return;
         }
 
@@ -140,12 +140,12 @@ public partial class TTWZCardFinance : System.Web.UI.Page
                 DataTurnDetailNoCodeBinder();
                 LB_Card_SelectedIndexChanged(null, null);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZWYNOCODEDYJDMX+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZWYNOCODEDYJDMX").ToString().Trim()+"')", true);
             return;
         }
     }
@@ -159,7 +159,7 @@ public partial class TTWZCardFinance : System.Web.UI.Page
             string strPlanPrice = TXT_PlanPrice.Text.Trim();
             if (string.IsNullOrEmpty(strPlanMoney) || strPlanMoney == "0")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZYSJEBNWK0BC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYSJEBNWK0BC").ToString().Trim()+"')", true);
                 return;
             }
             decimal decimalPlanMoney = 0;
@@ -205,12 +205,12 @@ public partial class TTWZCardFinance : System.Web.UI.Page
                     //重新加载列表
                     LB_Card_SelectedIndexChanged(null, null);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
                 }
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZBJDYJDMX+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZBJDYJDMX").ToString().Trim()+"')", true);
                 return;
             }
         }
@@ -223,7 +223,7 @@ public partial class TTWZCardFinance : System.Web.UI.Page
         string strCardCode = LB_Card.SelectedValue;
         if (string.IsNullOrEmpty(strCardCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZCWPZ+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZCWPZ").ToString().Trim()+"')", true);
             return;
         }
 
@@ -234,7 +234,7 @@ public partial class TTWZCardFinance : System.Web.UI.Page
         if (listCard != null && listCard.Count > 0)
         {
             WZCard wZCard = (WZCard)listCard[0];
-            wZCard.Progress = "下发";
+            wZCard.Progress = LanguageHandle.GetWord("XiaFa").ToString().Trim();
             wZCard.CardTime = DateTime.Now;
 
             wZCardBLL.UpdateWZCard(wZCard, wZCard.CardCode);
@@ -265,7 +265,7 @@ public partial class TTWZCardFinance : System.Web.UI.Page
                 }
                 if (isTrue)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCG").ToString().Trim()+"')", true);
                 }
             }
         }
@@ -277,10 +277,10 @@ public partial class TTWZCardFinance : System.Web.UI.Page
         string strCardCode = LB_Card.SelectedValue;
         if (string.IsNullOrEmpty(strCardCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZCWPZ+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZCWPZ").ToString().Trim()+"')", true);
             return;
         }
-        string strFileName = strCardCode + "号财务凭证";
+        string strFileName = strCardCode + LanguageHandle.GetWord("HaoCaiWuPingZheng").ToString().Trim();
         string strWZTurnDetailHQL = string.Format(@"select * from T_WZTurnDetail 
                             where  CardCode = '{0}' 
                             order by NoCode", strCardCode);
@@ -351,7 +351,7 @@ public partial class TTWZCardFinance : System.Web.UI.Page
 
                     if (wZTurnDetail.IsMark == -1)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSYBJW1SBNSC+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSYBJW1SBNSC").ToString().Trim()+"')", true);
                         return;
                     }
 
@@ -423,7 +423,7 @@ public partial class TTWZCardFinance : System.Web.UI.Page
             string strPlanMoney = TXT_PlanMoney.Text.Trim();
             if (!ShareClass.CheckIsNumber(strPlanMoney))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZYSJEBXWXSHZZS+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYSJEBXWXSHZZS").ToString().Trim()+"')", true);
                 return;
             }
 
@@ -451,7 +451,7 @@ public partial class TTWZCardFinance : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZBJDYJDMX+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZBJDYJDMX").ToString().Trim()+"')", true);
             return;
         }
     }

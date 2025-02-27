@@ -40,13 +40,13 @@ public partial class TTRiskRelatedDocView : System.Web.UI.Page
             //this.Title = "风险：" + strRiskID + " " + projectRisk.Risk + " 文档列表";
 
             strHQL = "from Document as document where ";
-            strHQL += " (document.RelatedType = '风险' and document.RelatedID = " + strRiskID;
+            strHQL += " (document.RelatedType = '风险' and document.RelatedID = " + strRiskID; 
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible = '部门' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";
-            strHQL += " or ( document.Visible = '全体'))) ";
-            strHQL += " or ((document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='风险' and meeting.RelatedID = " + strRiskID + "))";
+            strHQL += " or (document.Visible = '部门' and document.DepartCode = " + "'" + strDepartCode + "'" + " )"; 
+            strHQL += " or ( document.Visible = '全体'))) "; 
+            strHQL += "or ((document.RelatedType = '会议' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='风险' and meeting.RelatedID =" + strRiskID + "))"; 
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or ( document.Visible = '会议')))";
+            strHQL += " or ( document.Visible = '会议')))"; 
             strHQL += " and document.Status <> 'Deleted' ";
             strHQL += " order by document.DocID DESC";
 

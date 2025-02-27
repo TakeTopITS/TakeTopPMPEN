@@ -24,7 +24,7 @@ public partial class TTGoodsUserRecordList : System.Web.UI.Page
 
         string strGoodsID = Request.QueryString["ID"];
 
-        //this.Title = "物料编号：" + strGoodsID + " 用户记录！";
+        //this.Title = "物料编号：" + strGoodsID + "用户记录！";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
         { 

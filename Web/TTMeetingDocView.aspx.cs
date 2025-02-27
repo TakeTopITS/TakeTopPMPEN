@@ -67,7 +67,7 @@ public partial class TTMeetingDocView : System.Web.UI.Page
             }
             else
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+Resources.lang.ZZJGNBNSCBRSCDWJ+"');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+LanguageHandle.GetWord("ZZJGNBNSCBRSCDWJ").ToString().Trim()+"');</script>");
             }
         }
     }
@@ -139,10 +139,10 @@ public partial class TTMeetingDocView : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Document as document where document.RelatedType = '会议' ";
+        strHQL = "from Document as document where document.RelatedType = '会议' "; 
         strHQL += " and document.RelatedID = " + strMeetingID;
-        strHQL += " and ((document.Visible = '全体' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " ))";
-        strHQL += " or  (document.Visible = '个人' and document.UploadManCode = " + "'" + strUserCode + "'" + "))";
+        strHQL += " and ((document.Visible = '全体' and document.RelatedID in (select meetingAttendant.MeetingID from MeetingAttendant as meetingAttendant where meetingAttendant.UserCode = " + "'" + strUserCode + "'" + " ))"; 
+        strHQL += " or  (document.Visible = '个人' and document.UploadManCode = " + "'" + strUserCode + "'" + "))"; 
         strHQL += " Order by document.DocID DESC";
 
         DocumentBLL documentBLL = new DocumentBLL();

@@ -24,7 +24,7 @@ public partial class TTAssetUserRecordList : System.Web.UI.Page
 
         string strAssetID = Request.QueryString["ID"];
 
-        //this.Title = "资产编号：" + strAssetID + " 用户记录！";
+        //this.Title = "资产编号：" + strAssetID + "用户记录！";
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)

@@ -55,14 +55,14 @@ public partial class TTWZSupplierRegisterList : System.Web.UI.Page
                 {
                     WZSupplierRegister wZSupplierRegister = (WZSupplierRegister)supplierList[0];
 
-                    wZSupplierRegister.Progress = "提交";
+                    wZSupplierRegister.Progress = LanguageHandle.GetWord("DiJiao").ToString().Trim();
 
                     wZSupplierRegisterBLL.UpdateWZSupplierRegister(wZSupplierRegister, wZSupplierRegister.ID);
 
                     //重新加载列表
                     DataBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTJCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTJCG").ToString().Trim()+"')", true);
                 }
 
             }
@@ -76,14 +76,14 @@ public partial class TTWZSupplierRegisterList : System.Web.UI.Page
                 {
                     WZSupplierRegister wZSupplierRegister = (WZSupplierRegister)supplierList[0];
 
-                    wZSupplierRegister.Progress = "录入";
+                    wZSupplierRegister.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
 
                     wZSupplierRegisterBLL.UpdateWZSupplierRegister(wZSupplierRegister, wZSupplierRegister.ID);
 
                     //重新加载列表
                     DataBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTJTHCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTJTHCG").ToString().Trim()+"')", true);
                 }
 
             }

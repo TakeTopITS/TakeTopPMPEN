@@ -27,7 +27,7 @@ public partial class TTProjectImplementTotalFinanceReport : System.Web.UI.Page
         strLangCode = Session["LangCode"].ToString();
         strUserCode = Session["UserCode"].ToString();
 
-        LB_ReportName.Text = "项目里程碑数据报表";
+        LB_ReportName.Text = LanguageHandle.GetWord("XiangMuLiChengBeiShuJuBaoBiao").ToString().Trim();
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
@@ -35,7 +35,7 @@ public partial class TTProjectImplementTotalFinanceReport : System.Web.UI.Page
             DLC_BeginDate.Text = DateTime.Now.Year.ToString() + "-01-01";
             DLC_EndDate.Text = DateTime.Now.Year.ToString() + "-12-31";
 
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT, TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             ShareClass.InitialAllProjectTree(TreeView2, strDepartString);
@@ -50,7 +50,7 @@ public partial class TTProjectImplementTotalFinanceReport : System.Web.UI.Page
     {
         string strChartTitle, strCmdText;
 
-        strChartTitle = DateTime.Now.Year.ToString() + "年度实施项目产值";
+        strChartTitle = DateTime.Now.Year.ToString() + LanguageHandle.GetWord("NianDuShiShiXiangMuChanZhi").ToString().Trim();
          strCmdText = @"Select SUBSTRING(to_char(A.ReceiverTime,'yyyymmdd'),0,7) as XName,COALESCE(Sum(A.ReceiverAccount),0) as YNumber
                      From T_ConstractReceivables A
                      Left Join T_Project B On A.RelatedProjectID = B.ProjectID 
@@ -59,7 +59,7 @@ public partial class TTProjectImplementTotalFinanceReport : System.Web.UI.Page
         IFrame_Chart_ProjectAnnualOutput.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Line&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
 
-        strChartTitle = DateTime.Now.Year.ToString() + "年度实施项目财务状态统计";
+        strChartTitle = DateTime.Now.Year.ToString() + LanguageHandle.GetWord("NianDuShiShiXiangMuCaiWuZhuang").ToString().Trim();
         strCmdText = @"Select B.Status as XName,COALESCE(Sum(A.ReceiverAccount),0) as YNumber
                      From T_ConstractReceivables A,T_Project B
                      Where A.RelatedProjectID = B.ProjectID
@@ -68,7 +68,7 @@ public partial class TTProjectImplementTotalFinanceReport : System.Web.UI.Page
         IFrame_Chart_ConstractStatus.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Pie&ChartName=" + strChartTitle + "&SqlCode=" + ShareClass.Escape(strCmdText);
 
        
-        strChartTitle = DateTime.Now.Year.ToString() + "年度实施项目状态一览表";
+        strChartTitle = DateTime.Now.Year.ToString() + LanguageHandle.GetWord("NianDuShiShiXiangMuZhuangTaiYi").ToString().Trim();
         strCmdText = @"Select Status as XName, Count(*) as YNumber
             From T_Project Where SUBSTRING (to_char(BeginDate,'yyyymmdd'),0,5) = SUBSTRING (to_char(now(),'yyyymmdd'),0,5) 
             Group By Status ";
@@ -123,11 +123,11 @@ public partial class TTProjectImplementTotalFinanceReport : System.Web.UI.Page
         }
         else
         {
-            dv.RowFilter = "项目 Like '%" + strProjectName + "%'";
+            dv.RowFilter = LanguageHandle.GetWord("XiangMuLike").ToString().Trim() + strProjectName + "%'";
         }
 
-        dv.RowFilter += " And 项目经理 Like '%" + strPMName + "%'";
-        dv.RowFilter += " And 开始时间 >= '" + strBeginTime + "' And 结束时间 <= '" + strEndTime + "'";
+        dv.RowFilter += LanguageHandle.GetWord("AndXiangMuJingLiLike").ToString().Trim() + strPMName + "%'";
+        dv.RowFilter += LanguageHandle.GetWord("AndKaiShiShiJian").ToString().Trim() + strBeginTime + LanguageHandle.GetWord("AndJieShuShiJian").ToString().Trim() + strEndTime + "'";
         dv.Sort += " ProjectID2 DESC";
 
         GridView1.DataSource = dv;
@@ -166,10 +166,10 @@ public partial class TTProjectImplementTotalFinanceReport : System.Web.UI.Page
         }
         else
         {
-            dv.RowFilter = "项目 Like '%" + strProjectName + "%'";
+            dv.RowFilter = LanguageHandle.GetWord("XiangMuLike").ToString().Trim() + strProjectName + "%'";
         }
-        dv.RowFilter += " And 项目经理 Like '%" + strPMName + "%'";
-        dv.RowFilter += " And 开始时间 >= '" + strBeginTime + "' And 结束时间 <= '" + strEndTime + "'";
+        dv.RowFilter += LanguageHandle.GetWord("AndXiangMuJingLiLike").ToString().Trim() + strPMName + "%'";
+        dv.RowFilter += LanguageHandle.GetWord("AndKaiShiShiJian").ToString().Trim() + strBeginTime + LanguageHandle.GetWord("AndJieShuShiJian").ToString().Trim() + strEndTime + "'";
         dv.Sort += " ProjectID2 DESC";
 
         GridView1.DataSource = dv;
@@ -177,11 +177,11 @@ public partial class TTProjectImplementTotalFinanceReport : System.Web.UI.Page
 
         DataTable dtProject = dv.ToTable();
 
-        Export3Excel(dtProject, "项目里程碑数据报表.xls");
+        Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuLiChengBeiShuJuBaoBiaox").ToString().Trim());
 
         LB_ResultNumber.Text = GridView1.Rows.Count.ToString();
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true); 
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

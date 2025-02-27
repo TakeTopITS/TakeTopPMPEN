@@ -65,11 +65,11 @@ public partial class TTConstractReviewWL : System.Web.UI.Page
             DL_TemName.DataSource = ds;
             DL_TemName.DataBind();
 
-            TB_WLName.Text = Resources.lang.HeTong + strConstractCode  + strConstract + Resources.lang.PingShen;
+            TB_WLName.Text = LanguageHandle.GetWord("HeTong").ToString().Trim() + strConstractCode  + strConstract + LanguageHandle.GetWord("PingShen").ToString().Trim();
 
             HL_WLTem.NavigateUrl = "TTRelatedWorkFlowTemplate.aspx?RelatedType=Constract&RelatedID=" + strConstractID;
 
-            LoadRelatedWL("ContractReview", "合同", int.Parse(strConstractID));
+            LoadRelatedWL("ContractReview", LanguageHandle.GetWord("GeTong").ToString().Trim(), int.Parse(strConstractID));
 
 
             HL_RelatedWorkFlowTemplate.Enabled = true;
@@ -100,7 +100,7 @@ public partial class TTConstractReviewWL : System.Web.UI.Page
 
         if (strTemName == "")
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+Resources.lang.ZZSSCSBLCMBBNWKJC+"');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+LanguageHandle.GetWord("ZZSSCSBLCMBBNWKJC").ToString().Trim()+"');</script>");
             return "0";
         }
 
@@ -119,7 +119,7 @@ public partial class TTConstractReviewWL : System.Web.UI.Page
         workFlow.CreatorName = strCreatorName;
         workFlow.CreateTime = dtCreateTime;
         workFlow.Status = "New";
-        workFlow.RelatedType = "合同";
+        workFlow.RelatedType = LanguageHandle.GetWord("GeTong").ToString().Trim();
         workFlow.RelatedID = int.Parse(strConstractID);
         workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
 
@@ -154,14 +154,14 @@ public partial class TTConstractReviewWL : System.Web.UI.Page
 
             xmlProcess.DbToXML(strCmdText, "T_Constract", strXMLFile2);
 
-            LoadRelatedWL("ContractReview", "合同", int.Parse(strConstractID));
+            LoadRelatedWL("ContractReview", LanguageHandle.GetWord("GeTong").ToString().Trim(), int.Parse(strConstractID));
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZHTPSSGZLSCCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZHTPSSGZLSCCG").ToString().Trim()+"')", true);
         }
         catch
         {
             strWLID = "0";
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZHTPSSGZLSCSB+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZHTPSSGZLSCSB").ToString().Trim()+"')", true);
         }
 
         return strWLID;

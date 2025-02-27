@@ -87,7 +87,7 @@ public partial class TTMyMemberPlans : System.Web.UI.Page
         if (treeNode.Target == "0")
         {
             strPlanID = treeNode.Target.Trim();
-            strPlanName = "我的计划";
+            strPlanName = LanguageHandle.GetWord("WoDeJiHua").ToString().Trim();
         }
         else
         {
@@ -119,7 +119,7 @@ public partial class TTMyMemberPlans : System.Web.UI.Page
         dtStartTime = plan.StartTime;
         dtEndTime = plan.EndTime;
         strPlanType = plan.PlanType.Trim();
-        strChartTitle = plan.PlanName.Trim() + " " + " 直接成员计划评分对比图";
+        strChartTitle = plan.PlanName.Trim() + " " + LanguageHandle.GetWord("ZhiJieChengYuanJiHuaPingFenDui").ToString().Trim();
 
         strHQL = "Select (CreatorCode || CreatorName) as XName,ScoringByLeader as YNumber From T_Plan ";
         strHQL += " Where CreatorCode in (Select UnderCode From T_MemberLevel Where UserCode = " + "'" + strUserCode + "'" + ")";
@@ -207,11 +207,11 @@ public partial class TTMyMemberPlans : System.Web.UI.Page
                 UpdatePlanLeaderScoring(strPlanID);
                 LoadPlan(strPlanID);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
             }
         }
     }
@@ -285,11 +285,11 @@ public partial class TTMyMemberPlans : System.Web.UI.Page
             LoadPlan(strPlanID);
             AddLeader(strUserCode, strUserName);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -331,11 +331,11 @@ public partial class TTMyMemberPlans : System.Web.UI.Page
             LoadPlanRelatedLeaderRecord(strPlanID);
             LoadPlanRelatedLeaderHandleRecord(strPlanID, strUserCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -351,7 +351,7 @@ public partial class TTMyMemberPlans : System.Web.UI.Page
         strPlanID = LB_PlanID.Text.Trim();
         strLeaderCode = strUserCode;
         strLeaderName = strUserName;
-        strActor = "领导";
+        strActor = LanguageHandle.GetWord("LingDao").ToString().Trim();
         dtJoinTime = DateTime.Now;
         strStatus = "Approved";
 

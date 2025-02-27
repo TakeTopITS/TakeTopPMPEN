@@ -198,23 +198,23 @@ public partial class TTGoodsReturnReportForSale : System.Web.UI.Page
 
         strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthorityAsset(strUserCode);
 
-        strHQL = @"Select  B.ReturnName '名称' 
-            ,B.OperatorName '业务员'
+        strHQL = @"Select  B.ReturnName '名称'  
+            ,B.OperatorName '业务员' 
             ,B.CustomerName 'Customer'
-            ,B.ReturnTime '时间'
-            ,A.ID '编号'
-            ,A.GoodsCode '代码'
-            ,A.GoodsName '商品名称'
-            ,A.Number '数量'
-            ,A.ModelNumber '型号'
-            ,A.Spec '规格'
-            ,A.UnitName '单位'
-            ,A.Price '单价'
-            ,A.Amount '金额'
-            ,B.CurrencyType '币别'
-            ,B.CarCode '车号'
-            ,B.Driver '司机'
-            ,A.ReturnReason '备注'
+            ,B.ReturnTime '时间' 
+            ,A.ID '编号' 
+            ,A.GoodsCode '代码' 
+            ,A.GoodsName '商品名称' 
+            ,A.Number '数量' 
+            ,A.ModelNumber '型号' 
+            ,A.Spec '规格' 
+            ,A.UnitName '单位' 
+            ,A.Price '单价' 
+            ,A.Amount '金额' 
+            ,B.CurrencyType '币别' 
+            ,B.CarCode '车号' 
+            ,B.Driver '司机' 
+            ,A.ReturnReason '备注' 
             from T_GoodsReturnDetail A,T_GoodsReturnOrder B where A.ROID = B.ROID And B.Type = 'SALE'";
 
         strHQL += " and to_char(B.ReturnTime,'yyyymmdd')  >= " + "'" + strStartTime + "'" + "  and to_char(B.ReturnTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
@@ -232,9 +232,9 @@ public partial class TTGoodsReturnReportForSale : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_GoodsSaleRecord");
         DataTable dtSaleOrder = ds.Tables[0];
 
-        Export3Excel(dtSaleOrder, "销售退货报表.xls");
+        Export3Excel(dtSaleOrder, LanguageHandle.GetWord("XiaoShouTuiHuoBaoBiaoxls").ToString().Trim());
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true); 
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

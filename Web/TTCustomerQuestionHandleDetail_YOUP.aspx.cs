@@ -77,7 +77,7 @@ public partial class TTCustomerQuestionHandleDetail_YOUP : System.Web.UI.Page
             DataList1.DataSource = lst;
             DataList1.DataBind();
 
-            if (ISActorGroupDetailByUserCode(strUserCode.Trim(), "电销员"))
+            if (ISActorGroupDetailByUserCode(strUserCode.Trim(), LanguageHandle.GetWord("DianXiaoYuan").ToString().Trim()))
             {
                 DataList1.Visible = true;
                 DataList2.Visible = false;
@@ -276,11 +276,11 @@ public partial class TTCustomerQuestionHandleDetail_YOUP : System.Web.UI.Page
             BT_Add.Enabled = true;
             BT_Finish.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSLCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSLSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -307,11 +307,11 @@ public partial class TTCustomerQuestionHandleDetail_YOUP : System.Web.UI.Page
             BT_Add.Enabled = false;
             BT_Finish.Enabled = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('退出" + Resources.lang.ZZTCSLCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZTuiChuLanguageHandleGetWordZ").ToString().Trim()+"')", true); 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('退出" + Resources.lang.ZZTCSLSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZTuiChuLanguageHandleGetWordZ").ToString().Trim()+"')", true); 
         }
     }
 
@@ -335,11 +335,11 @@ public partial class TTCustomerQuestionHandleDetail_YOUP : System.Web.UI.Page
             customerQuestionBLL.UpdateCustomerQuestion(customerQuestion, int.Parse(strQuestionID));
             LoadCustomerQuestion(strQuestionID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZWCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZWCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -363,11 +363,11 @@ public partial class TTCustomerQuestionHandleDetail_YOUP : System.Web.UI.Page
             customerQuestionBLL.UpdateCustomerQuestion(customerQuestion, int.Parse(strQuestionID));
             LoadCustomerQuestion(strQuestionID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -400,14 +400,14 @@ public partial class TTCustomerQuestionHandleDetail_YOUP : System.Web.UI.Page
 
             //推送消息给受理人
             Msg msg = new Msg();
-            string strMsg = Resources.lang.FuWuXuQiu + ":" + customerQuestion.Question.Trim() + "," + Resources.lang.ZZYaoNiChuLi;
+            string strMsg = LanguageHandle.GetWord("FuWuXuQiu").ToString().Trim() + ":" + customerQuestion.Question.Trim() + "," + LanguageHandle.GetWord("ZZYaoNiChuLi").ToString().Trim();
             msg.SendMSM("Message", strOperatorCode, strMsg, strUserCode);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZDCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZDCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZDSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZDSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -482,11 +482,11 @@ public partial class TTCustomerQuestionHandleDetail_YOUP : System.Web.UI.Page
             LoadRelatedDoc(strQuestionID);
 
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -559,11 +559,11 @@ public partial class TTCustomerQuestionHandleDetail_YOUP : System.Web.UI.Page
             LoadCustomerQuestionHandleRecord(strQuestionID);
             LoadRelatedDoc(strQuestionID);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
         }
     }
 
@@ -591,11 +591,11 @@ public partial class TTCustomerQuestionHandleDetail_YOUP : System.Web.UI.Page
             BT_Update.Enabled = false;
             BT_Delete.Enabled = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
         }
 
         LoadCustomerQuestionHandleRecord(strQuestionID);
@@ -693,7 +693,7 @@ public partial class TTCustomerQuestionHandleDetail_YOUP : System.Web.UI.Page
         DataList1.DataSource = lst;
         DataList1.DataBind();
 
-        if (ISActorGroupDetailByUserCode(strUserCode.Trim(), "电销员"))
+        if (ISActorGroupDetailByUserCode(strUserCode.Trim(), LanguageHandle.GetWord("DianXiaoYuan").ToString().Trim()))
         {
             DataList1.Visible = true;
             DataList2.Visible = false;
@@ -720,7 +720,7 @@ public partial class TTCustomerQuestionHandleDetail_YOUP : System.Web.UI.Page
         DataList4.DataSource = lst;
         DataList4.DataBind();
 
-        if (ISActorGroupDetailByUserCode(strUserCode.Trim(), "电销员"))
+        if (ISActorGroupDetailByUserCode(strUserCode.Trim(), LanguageHandle.GetWord("DianXiaoYuan").ToString().Trim()))
         {
             DataList4.Visible = true;
             DataList3.Visible = false;
@@ -737,7 +737,7 @@ public partial class TTCustomerQuestionHandleDetail_YOUP : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from Document as document where document.RelatedType = '客服' and document.RelatedID = " + strQuestionID;
+        strHQL = "from Document as document where document.RelatedType = '客服' and document.RelatedID = " + strQuestionID; 
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
         lst = documentBLL.GetAllDocuments(strHQL);

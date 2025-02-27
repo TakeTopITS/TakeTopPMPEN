@@ -20,7 +20,7 @@ public partial class TTWorkPlanOneStepTransferChildPlanToTask : System.Web.UI.Pa
 
         if (ShareClass.CheckUserCanControlProjectPlan(strPlanID, strCurrentUserCode) == false)
         {
-            Response.Redirect("TTDisplayCustomErrorMessage.aspx?ErrorMsg='" + Resources.lang.ZZJGZYXMJLJHYJHCJRHLXZJHFZRCNJXZCZQJC + "'");
+            Response.Redirect("TTDisplayCustomErrorMessage.aspx?ErrorMsg='" + LanguageHandle.GetWord("ZZJGZYXMJLJHYJHCJRHLXZJHFZRCNJXZCZQJC").ToString().Trim() + "'");
         }
 
 
@@ -33,18 +33,18 @@ public partial class TTWorkPlanOneStepTransferChildPlanToTask : System.Web.UI.Pa
 
             if (iLeader > 0)
             {
-                LB_Message.Text = Resources.lang.ZZZZJHZRWBFCGCGHYJHMYZDQMR;
+                LB_Message.Text = LanguageHandle.GetWord("ZZZZJHZRWBFCGCGHYJHMYZDQMR").ToString().Trim();
             }
             else
             {
-                LB_Message.Text = Resources.lang.ZZZZJHZRWCGWC;
+                LB_Message.Text = LanguageHandle.GetWord("ZZZZJHZRWCGWC").ToString().Trim();
             }
         }
         catch (Exception err)
         {
             LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
 
-            LB_Message.Text = Resources.lang.ZZJGZJHZRWSBQJC;
+            LB_Message.Text = LanguageHandle.GetWord("ZZJGZJHZRWSBQJC").ToString().Trim();
         }
     }
 

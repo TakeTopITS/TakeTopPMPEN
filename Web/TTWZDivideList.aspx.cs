@@ -45,7 +45,7 @@ public partial class TTWZDivideList : System.Web.UI.Page
                     WZDivide wZDivide = (WZDivide)divideList[0];
                     if (wZDivide.IsMark == -1)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSYBJW1BYXSC+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSYBJW1BYXSC").ToString().Trim()+"')", true);
                         return;
                     }
 
@@ -54,7 +54,7 @@ public partial class TTWZDivideList : System.Web.UI.Page
                     //重新加载列表
                     DataBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
                 }
 
             }

@@ -52,7 +52,7 @@ public partial class TTMyMemberWorkFlowsBackup : System.Web.UI.Page
             DLC_StartTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
             DLC_EndTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             strHQL = "from WLType as wlType ";
@@ -84,7 +84,7 @@ public partial class TTMyMemberWorkFlowsBackup : System.Web.UI.Page
 
             LB_Sql.Text = strHQL;
 
-            LB_QueryScope.Text = Resources.lang.ZZGZLSQZSY;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZGZLSQZSY").ToString().Trim();
         }
     }
 
@@ -101,7 +101,7 @@ public partial class TTMyMemberWorkFlowsBackup : System.Web.UI.Page
             strDepartCode = treeNode.Target.Trim();
             strDepartName = ShareClass.GetDepartName(strDepartCode);
 
-            LB_QueryScope.Text = Resources.lang.ZZZBuMen + strDepartName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen").ToString().Trim() + strDepartName;
 
             ShareClass.LoadUserByDepartCodeForDataGrid(strDepartCode, DataGrid1);
 
@@ -115,7 +115,7 @@ public partial class TTMyMemberWorkFlowsBackup : System.Web.UI.Page
             DataGrid3.DataSource = ds;
             DataGrid3.DataBind();
 
-            LB_QueryScope.Text = Resources.lang.ZZZBuMen + strDepartName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen").ToString().Trim() + strDepartName;
             LB_Sql.Text = strHQL;
 
             LB_OperatorCode.Text = "";
@@ -131,7 +131,7 @@ public partial class TTMyMemberWorkFlowsBackup : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        LB_QueryScope.Text = Resources.lang.GongZuoLiu + ": " + Resources.lang.SuoYou;
+        LB_QueryScope.Text = LanguageHandle.GetWord("GongZuoLiu").ToString().Trim() + ": " + LanguageHandle.GetWord("SuoYou").ToString().Trim();
 
         DataGrid1.Visible = false;
 
@@ -162,7 +162,7 @@ public partial class TTMyMemberWorkFlowsBackup : System.Web.UI.Page
         LB_OperatorCode.Text = strOperatorCode;
         LB_OperatorName.Text = strOperatorName;
 
-        LB_QueryScope.Text = Resources.lang.ZZApplicant + strOperatorCode + strOperatorName;
+        LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicant").ToString().Trim() + strOperatorCode + strOperatorName;
 
         string strDepartString;
         strDepartString = LB_DepartString.Text.Trim();
@@ -199,7 +199,7 @@ public partial class TTMyMemberWorkFlowsBackup : System.Web.UI.Page
             strHQL += " and Status <> 'New'";
             strHQL += " Order by WLID DESC";
 
-            LB_QueryScope.Text = Resources.lang.ZZApplicantAll + " " + Resources.lang.ZhuangTai + ":" + strStatus;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicantAll").ToString().Trim() + " " + LanguageHandle.GetWord("ZhuangTai").ToString().Trim() + ":" + strStatus;
         }
         else
         {
@@ -209,7 +209,7 @@ public partial class TTMyMemberWorkFlowsBackup : System.Web.UI.Page
                 strHQL += " and CreatorCode in (Select UnderCode From T_MemberLevel Where WorkflowVisible = 'YES' and UserCode = " + "'" + strUserCode + "'" + ")";
                 strHQL += " and Status <> 'New'";
                 strHQL += " Order by WLID DESC";
-                LB_QueryScope.Text = Resources.lang.ZZZBuMen + strDepartCode + " " + strDepartName + Resources.lang.ZhuangTai + ":" + strStatus;
+                LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen").ToString().Trim() + strDepartCode + " " + strDepartName + LanguageHandle.GetWord("ZhuangTai").ToString().Trim() + ":" + strStatus;
             }
             else
             {
@@ -218,7 +218,7 @@ public partial class TTMyMemberWorkFlowsBackup : System.Web.UI.Page
                 strHQL += " and CreatorCode in (Select UnderCode From T_MemberLevel Where WorkflowVisible = 'YES' and UserCode = " + "'" + strUserCode + "'" + ")";
                 strHQL += " and Status <> 'New'";
                 strHQL += " Order by WLID DESC";
-                LB_QueryScope.Text = Resources.lang.ZZApplicant + strOperatorCode + strOperatorName + Resources.lang.ZhuangTai + ":" + strStatus;
+                LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicant").ToString().Trim() + strOperatorCode + strOperatorName + LanguageHandle.GetWord("ZhuangTai").ToString().Trim() + ":" + strStatus;
             }
         }
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WorkFlowBackup");
@@ -260,7 +260,7 @@ public partial class TTMyMemberWorkFlowsBackup : System.Web.UI.Page
             DataGrid3.DataBind();
 
 
-            LB_QueryScope.Text = Resources.lang.ZZZBuMen + strDepartName;
+            LB_QueryScope.Text = LanguageHandle.GetWord("ZZZBuMen").ToString().Trim() + strDepartName;
             LB_Sql.Text = strHQL;
 
             LB_OperatorCode.Text = "";
@@ -296,7 +296,7 @@ public partial class TTMyMemberWorkFlowsBackup : System.Web.UI.Page
 
         strWFID = NB_WFID.Amount.ToString();
 
-        LB_QueryScope.Text = Resources.lang.BianHao + ":" + strWFID;
+        LB_QueryScope.Text = LanguageHandle.GetWord("BianHao").ToString().Trim() + ":" + strWFID;
 
         LB_DepartCode.Text = "";
         LB_OperatorCode.Text = "";
@@ -394,7 +394,7 @@ public partial class TTMyMemberWorkFlowsBackup : System.Web.UI.Page
         strStartTime = DateTime.Parse(DLC_StartTime.Text).ToString("yyyyMMdd");
         strEndTime = DateTime.Parse(DLC_EndTime.Text).ToString("yyyyMMdd");
 
-        LB_QueryScope.Text = Resources.lang.MingChen + ":" + strWFName;
+        LB_QueryScope.Text = LanguageHandle.GetWord("MingChen").ToString().Trim() + ":" + strWFName;
 
         LB_DepartCode.Text = "";
         LB_OperatorCode.Text = "";

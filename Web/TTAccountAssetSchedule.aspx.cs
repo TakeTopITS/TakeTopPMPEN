@@ -130,20 +130,20 @@ public partial class TTAccountAssetSchedule : System.Web.UI.Page
             try
             {
                 Random a = new Random();
-                string fileName = "资产明细表_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+                string fileName = LanguageHandle.GetWord("ZiChanMingXiBiao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                 CreateExcel(getAccountGeneralLedgerList(DL_Financial.SelectedValue.Trim(), DL_Interval.SelectedValue.Trim()), fileName);
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGDCDSJYWJC+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGDCDSJYWJC").ToString().Trim()+"')", true);
             }
         }
     }
 
     protected DataTable getAccountGeneralLedgerList(string strFinancialID, string strIntervalID)
     {
-        string strHQL = "select E.AccountType '科目类型',A.AccountName '会计科目','性质'=case when ReceivablesRecordID>0 then '收款' when PayableRecordID>0 then '付款' else '上期结转' end," +
-            "FinancialName '财务帐套',IntervalName '财务区间',TotalMoney '发生金额',CurrencyType '币种',UserName '操作人',CreateTime '操作时间' from T_AccountGeneralLedger A," +
+        string strHQL = "select E.AccountType '科目类型',A.AccountName '会计科目','性质'=case when ReceivablesRecordID>0 then '收款' when PayableRecordID>0 then '付款' else '上期结转' end," + 
+            "FinancialName '财务帐套',IntervalName '财务区间',TotalMoney '发生金额',CurrencyType '币种',UserName '操作人',CreateTime '操作时间' from T_AccountGeneralLedger A," + 
             "T_AccountFinancialSet B,T_AccountingIntervalSet C,T_ProjectMember D,T_Account E where A.FinancialCode=B.FinancialCode and A.IntervalCode=C.IntervalCode and A.Creater=D.UserCode and A.AccountCode=E.AccountCode ";
         if (strFinancialID.Trim() != "")
         {
@@ -266,15 +266,15 @@ public partial class TTAccountAssetSchedule : System.Web.UI.Page
     {
         if (strReceivablesRecordID == "0" && strPayableRecordID == "0")
         {
-            return "上期结转";
+            return "上期结转"; 
         }
         else if (strReceivablesRecordID == "0" && strPayableRecordID != "0")
         {
-            return "付款";
+            return "付款"; 
         }
         else if (strReceivablesRecordID != "0" && strPayableRecordID == "0")
         {
-            return "收款";
+            return "收款"; 
         }
         else
             return "";

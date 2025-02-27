@@ -44,7 +44,7 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
             DLC_StartTime.Text = ShareClass.getCurrentMonthStartDay().ToString("yyyy-MM-dd");
             DLC_EndTime.Text = ShareClass.getCurrentMonthEndDay().ToString("yyyy-MM-dd");
 
-            TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(Resources.lang.ZZJGT, TreeView1, strUserCode);
+            TakeTopCore.CoreShareClass.InitialDepartmentTreeByUserInfor(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1, strUserCode);
         }
     }
 
@@ -78,7 +78,7 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
 
         if(strDepartCode == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('警告，请先选择部门再查询！')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoQingXianShuaZeBuMenZa").ToString().Trim()+"')", true);
             return;
         }
 
@@ -153,7 +153,7 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
 
         if (strDepartCode == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('警告，请先选择部门再导出！')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoQingXianShuaZeBuMenZa").ToString().Trim()+"')", true);
             return;
         }
 
@@ -211,7 +211,7 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_UserAttendanceRecord");
 
         Random a = new Random();
-        string fileName = "员工考勤报表_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
+        string fileName = LanguageHandle.GetWord("YuanGongKaoQinBaoBiao").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
 
         string strTableTitle = @"<table cellspacing='0' cellpadding='4' id='DataGrid3' style='color:#333333;width:100%;border-collapse:collapse;'>
                 <tr class='itemStyle'>
@@ -228,7 +228,7 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
                        
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                       员工考勤报表
+                       员工考勤报表 
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
                       
@@ -249,36 +249,36 @@ public partial class TTUserAttendanceReport : System.Web.UI.Page
                 </tr>
                 <tr class='itemStyle'>
                     <td class='itemBorder' align='center' style='width:4%;'> ID</td>
-                    <td class='itemBorder' align='center' style='width:8%;'>姓名</td>
-                    <td class='itemBorder' align='center' style='width:6%;'>出勤日期</td>
+                    <td class='itemBorder' align='center' style='width:8%;'>姓名</td> 
+                    <td class='itemBorder' align='center' style='width:6%;'>出勤日期</td> 
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        上午上班时间
+                        上午上班时间 
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        上午下班时间
+                        上午下班时间 
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        下午上班时间
+                        下午上班时间 
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        下午下班时间
+                        下午下班时间 
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        晚班上班时间
+                        晚班上班时间 
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        晚班下班时间
+                        晚班下班时间 
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        午夜上班时间
+                        午夜上班时间 
                     </td>
                     <td class='itemBorder' align='center' style='width:8%;'>
-                        午夜下班时间
+                        午夜下班时间 
                     </td>
-                    <td class='itemBorder' align='center' style='width:6%;'>允许最大距离 (米)</td>
-                    <td class='itemBorder' align='center' style='width:4%;'>迟到 (分)</td>
-                    <td class='itemBorder' align='center' style='width:4%;'>早退 (分)</td>
-                    <td class='itemBorder' align='center'>位置</td>
+                    <td class='itemBorder' align='center' style='width:6%;'>允许最大距离 (米)</td> 
+                    <td class='itemBorder' align='center' style='width:4%;'>迟到 (分)</td> 
+                    <td class='itemBorder' align='center' style='width:4%;'>早退 (分)</td> 
+                    <td class='itemBorder' align='center'>位置</td> 
                 </tr>
             </table>";
         try

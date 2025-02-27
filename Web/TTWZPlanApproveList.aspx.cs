@@ -48,7 +48,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
                         left join T_ProjectMember pf on pp.FeeManage = pf.UserCode
                         left join T_ProjectMember pe on pp.PurchaseEngineer = pe.UserCode
                         where pp.FeeManage = '{0}' 
-                        and pp.Progress != '录入'", strUserCode);
+                        and pp.Progress != '录入'", strUserCode); 
 
         string strProgress = DDL_Progress.SelectedValue;
         if (!string.IsNullOrEmpty(strProgress))
@@ -118,9 +118,9 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
                 else if (cmdName == "sign")
                 {
                     //审核
-                    if (wZPickingPlan.Progress == "提报")
+                    if (wZPickingPlan.Progress == LanguageHandle.GetWord("DiBao").ToString().Trim())
                     {
-                        wZPickingPlan.Progress = "审核";
+                        wZPickingPlan.Progress = LanguageHandle.GetWord("ShenHe").ToString().Trim();
                         wZPickingPlan.ReturnReason = "";
                         wZPickingPlan.ApproveTime = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
 
@@ -129,18 +129,18 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
                         //重新加载列表
                         DataBinder();
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSHCG+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSHCG").ToString().Trim()+"')", true);
                     }
                 }
                 else if (cmdName == "signReturn")
                 {
                     //退回审核
-                    if (wZPickingPlan.Progress == "审核")
+                    if (wZPickingPlan.Progress == LanguageHandle.GetWord("ShenHe").ToString().Trim())
                     {
                         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "ClickSignReturn('" + cmdArges + "')", true);
                         return;
 
-                        //wZPickingPlan.Progress = "提报";
+                        //wZPickingPlan.Progress = LanguageHandle.GetWord("DiBao").ToString().Trim();
                         //wZPickingPlan.ApproveTime = "-";
                         //wZPickingPlan.ReturnReason = TXT_ReturnReason.Text.Trim();
 
@@ -149,7 +149,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
                         ////重新加载列表
                         //DataBinder();
 
-                        //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSHTHCG+"')", true);
+                        //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSHTHCG").ToString().Trim()+"')", true);
                     }
                     else
                     {
@@ -159,11 +159,11 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
                 else if (cmdName == "notApprove")
                 {
                     //驳回
-                    if (wZPickingPlan.Progress == "提报")
+                    if (wZPickingPlan.Progress == LanguageHandle.GetWord("DiBao").ToString().Trim())
                     {
                         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "ClickReturn('" + cmdArges + "')", true);
                         return;
-                        //wZPickingPlan.Progress = "提报";
+                        //wZPickingPlan.Progress = LanguageHandle.GetWord("DiBao").ToString().Trim();
                         //wZPickingPlan.ReturnReason = TXT_ReturnReason.Text.Trim();
 
                         //wZPickingPlanBLL.UpdateWZPickingPlan(wZPickingPlan, cmdArges);
@@ -171,7 +171,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
                         ////重新加载列表
                         //DataBinder();
 
-                        //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSHBTGCG+"')", true);
+                        //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSHBTGCG").ToString().Trim()+"')", true);
                     }
                 }
             }
@@ -200,7 +200,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
         string strEditPlanCode = HF_NewPlanCode.Value;
         if (string.IsNullOrEmpty(strEditPlanCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击要操作的计划！');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击要操作的计划！');", true); 
             return;
         }
 
@@ -213,9 +213,9 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
         if (listWZPickingPlan != null && listWZPickingPlan.Count == 1)
         {
             WZPickingPlan wZPickingPlan = (WZPickingPlan)listWZPickingPlan[0];
-            if (wZPickingPlan.Progress == "提报")
+            if (wZPickingPlan.Progress == LanguageHandle.GetWord("DiBao").ToString().Trim())
             {
-                wZPickingPlan.Progress = "审核";
+                wZPickingPlan.Progress = LanguageHandle.GetWord("ShenHe").ToString().Trim();
                 wZPickingPlan.ReturnReason = "";
                 wZPickingPlan.ApproveTime = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
 
@@ -224,7 +224,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
                 //重新加载列表
                 DataBinder();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSHCG+"');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSHCG").ToString().Trim()+"');", true);
             }
             else
             {
@@ -244,7 +244,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
         string strEditPlanCode = HF_NewPlanCode.Value;
         if (string.IsNullOrEmpty(strEditPlanCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击要操作的计划！');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击要操作的计划！');", true); 
             return;
         }
 
@@ -258,7 +258,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
         string strEditPlanCode = HF_NewPlanCode.Value;
         if (string.IsNullOrEmpty(strEditPlanCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击要操作的计划！');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击要操作的计划！');", true); 
             return;
         }
 
@@ -274,7 +274,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
         string strEditPlanCode = HF_NewPlanCode.Value;
         if (string.IsNullOrEmpty(strEditPlanCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击要操作的计划！');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击要操作的计划！');", true); 
             return;
         }
 
@@ -291,7 +291,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
         string strEditPlanCode = HF_NewPlanCode.Value;
         if (string.IsNullOrEmpty(strEditPlanCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击要操作的计划！');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先点击要操作的计划！');", true); 
             return;
         }
 
@@ -312,9 +312,9 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
             WZPickingPlan wZPickingPlan = (WZPickingPlan)listWZPickingPlan[0];
 
             //退回审核
-            if (wZPickingPlan.Progress == "审核")
+            if (wZPickingPlan.Progress == LanguageHandle.GetWord("ShenHe").ToString().Trim())
             {
-                wZPickingPlan.Progress = "提报";
+                wZPickingPlan.Progress = LanguageHandle.GetWord("DiBao").ToString().Trim();
                 wZPickingPlan.ApproveTime = "-";
                 //wZPickingPlan.ReturnReason = HF_WriteText.Value;
                 //wZPickingPlan.ReturnReason = TB_AduditReturnReason.Text.Trim();
@@ -324,7 +324,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
                 //重新加载列表
                 DataBinder();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSHTHCG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSHTHCG").ToString().Trim()+"')", true);
             }
             else
             {
@@ -351,9 +351,9 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
             WZPickingPlan wZPickingPlan = (WZPickingPlan)listWZPickingPlan[0];
 
             //退回录入
-            if (wZPickingPlan.Progress == "提报")
+            if (wZPickingPlan.Progress == LanguageHandle.GetWord("DiBao").ToString().Trim())
             {
-                wZPickingPlan.Progress = "录入";
+                wZPickingPlan.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
                 wZPickingPlan.CommitTime = "-";
                 //wZPickingPlan.ReturnReason = HF_WriteText.Value;
 
@@ -364,7 +364,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
                 //重新加载列表
                 DataBinder();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJHTHCG + "！');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJHTHCG").ToString().Trim() + "！');", true);
             }
             else
             {
@@ -423,7 +423,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
                         left join T_ProjectMember pf on pp.FeeManage = pf.UserCode
                         left join T_ProjectMember pe on pp.PurchaseEngineer = pe.UserCode
                         where pp.FeeManage = '{0}' 
-                        and pp.Progress != '录入'", strUserCode);
+                        and pp.Progress != '录入'", strUserCode); 
 
         string strProgress = DDL_Progress.SelectedValue;
         if (!string.IsNullOrEmpty(strProgress))
@@ -486,7 +486,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
                         left join T_ProjectMember pf on pp.FeeManage = pf.UserCode
                         left join T_ProjectMember pe on pp.PurchaseEngineer = pe.UserCode
                         where pp.FeeManage = '{0}' 
-                        and pp.Progress != '录入'", strUserCode);
+                        and pp.Progress != '录入'", strUserCode); 
 
         string strProgress = DDL_Progress.SelectedValue;
         if (!string.IsNullOrEmpty(strProgress))
@@ -548,7 +548,7 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
                         left join T_ProjectMember pf on pp.FeeManage = pf.UserCode
                         left join T_ProjectMember pe on pp.PurchaseEngineer = pe.UserCode
                         where pp.FeeManage = '{0}' 
-                        and pp.Progress != '录入'", strUserCode);
+                        and pp.Progress != '录入'", strUserCode); 
 
         string strProgress = DDL_Progress.SelectedValue;
         if (!string.IsNullOrEmpty(strProgress))
@@ -600,14 +600,14 @@ public partial class TTWZPlanApproveList : System.Web.UI.Page
         BT_NewDetailBrowse.Enabled = true;
 
 
-        if (objProgress == "提报" && objFeeManage == objUserCode)
+        if (objProgress == LanguageHandle.GetWord("DiBao").ToString().Trim() && objFeeManage == objUserCode)
         {
             BT_NewAudit.Enabled = true;
             BT_NewAuditReturn.Enabled = false;
             BT_NewPlanReturn.Enabled = true;
 
         }
-        else if (objProgress == "审核" && objFeeManage == objUserCode)
+        else if (objProgress == LanguageHandle.GetWord("ShenHe").ToString().Trim() && objFeeManage == objUserCode)
         {
             BT_NewAudit.Enabled = false;
             BT_NewAuditReturn.Enabled = true;

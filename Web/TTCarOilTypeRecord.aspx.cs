@@ -153,7 +153,7 @@ public partial class TTCarOilTypeRecord : System.Web.UI.Page
         CarOilTypeRecord carOilTypeRecord = new CarOilTypeRecord();
         if (string.IsNullOrEmpty(ddl_OilInformation.SelectedValue) || ddl_OilInformation.SelectedValue.Trim().Equals("0"))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGYLBNWK+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGYLBNWK").ToString().Trim()+"')", true);
             return;
         }
         carOilTypeRecord.CarNo = LB_ID.Text.Trim();//车牌号
@@ -180,12 +180,12 @@ public partial class TTCarOilTypeRecord : System.Web.UI.Page
             DataGrid2.DataBind();
 
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZCG").ToString().Trim()+"')", true);
 
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZSB+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZSB").ToString().Trim()+"')", true);
         }
     }
 
@@ -284,13 +284,13 @@ public partial class TTCarOilTypeRecord : System.Web.UI.Page
     {
         if (FileUpload1.HasFile == false)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGNZEXCELWJ+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGNZEXCELWJ").ToString().Trim()+"')", true);
             return;
         }
         string IsXls = System.IO.Path.GetExtension(FileUpload1.FileName).ToString().ToLower();
         if (IsXls != ".xls" & IsXls != ".xlsx")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGZKYZEXCELWJ+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGZKYZEXCELWJ").ToString().Trim()+"')", true);
             return;
         }
 
@@ -303,7 +303,7 @@ public partial class TTCarOilTypeRecord : System.Web.UI.Page
         FileInfo fi = new FileInfo(strDocSavePath + newfilename);
         if (fi.Exists)
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+Resources.lang.ZZEXCLEBDRSB+"');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+LanguageHandle.GetWord("ZZEXCLEBDRSB").ToString().Trim()+"');</script>");
         }
         else
         {
@@ -320,21 +320,21 @@ public partial class TTCarOilTypeRecord : System.Web.UI.Page
             int rowsnum = dt.Rows.Count;
             if (rowsnum == 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGEXCELBWKBWSJ+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGEXCELBWKBWSJ").ToString().Trim()+"')", true);
             }
             else
             {
                 for (int i = 0; i < dr.Length; i++)
                 {
-                    carOilTypeRecord.CarNo = dr[i]["车牌号"].ToString();
-                    carOilTypeRecord.OilTypeId = int.Parse(string.IsNullOrEmpty(dr[i]["油料编号"].ToString()) ? "0" : dr[i]["油料编号"].ToString());
-                    carOilTypeRecord.OilName = dr[i]["油料名称"].ToString();
-                    carOilTypeRecord.Type = dr[i]["油料型号"].ToString();
-                    carOilTypeRecord.DepartCode = dr[i]["归属部门编码"].ToString();
-                    carOilTypeRecord.OilNum = decimal.Parse(string.IsNullOrEmpty(dr[i]["加油数量"].ToString()) ? "0" : dr[i]["加油数量"].ToString());
-                    carOilTypeRecord.OilPrice = decimal.Parse(string.IsNullOrEmpty(dr[i]["单价"].ToString()) ? "0" : dr[i]["单价"].ToString());
-                    carOilTypeRecord.OilMoney = decimal.Parse(dr[i]["金额"].ToString());
-                    carOilTypeRecord.CreateTime = DateTime.Parse(string.IsNullOrEmpty(dr[i]["创建时间"].ToString()) ? DateTime.Now.ToString() : dr[i]["创建时间"].ToString());
+                    carOilTypeRecord.CarNo = dr[i][LanguageHandle.GetWord("ChePaiHao").ToString().Trim()].ToString();
+                    carOilTypeRecord.OilTypeId = int.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("YouLiaoBianHao").ToString().Trim()].ToString()) ? "0" : dr[i][LanguageHandle.GetWord("YouLiaoBianHao").ToString().Trim()].ToString());
+                    carOilTypeRecord.OilName = dr[i][LanguageHandle.GetWord("YouLiaoMingChen").ToString().Trim()].ToString();
+                    carOilTypeRecord.Type = dr[i]["油料型号"].ToString(); 
+                    carOilTypeRecord.DepartCode = dr[i][LanguageHandle.GetWord("GuiShuBuMenBianMa").ToString().Trim()].ToString();
+                    carOilTypeRecord.OilNum = decimal.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("JiaYouShuLiang").ToString().Trim()].ToString()) ? "0" : dr[i][LanguageHandle.GetWord("JiaYouShuLiang").ToString().Trim()].ToString());
+                    carOilTypeRecord.OilPrice = decimal.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("ChanJia").ToString().Trim()].ToString()) ? "0" : dr[i][LanguageHandle.GetWord("ChanJia").ToString().Trim()].ToString());
+                    carOilTypeRecord.OilMoney = decimal.Parse(dr[i][LanguageHandle.GetWord("JinE").ToString().Trim()].ToString());
+                    carOilTypeRecord.CreateTime = DateTime.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("ChuangJianShiJian").ToString().Trim()].ToString()) ? DateTime.Now.ToString() : dr[i][LanguageHandle.GetWord("ChuangJianShiJian").ToString().Trim()].ToString());
                     try
                     {
                         carOilTypeRecordBLL.AddCarOilTypeRecord(carOilTypeRecord);
@@ -343,12 +343,12 @@ public partial class TTCarOilTypeRecord : System.Web.UI.Page
                     catch
                     {
                         int num = i + 1;
-                        string Msg = "警告，Excel表部分数据导入成功，从第'" + num + "'条开始，导入失败，请先把导入成功的数据删除后，再次导入，谢谢！";
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZMSG+"')", true);
+                        string Msg = LanguageHandle.GetWord("JingGaoExcelBiaoBuFenShuJuDaoR").ToString().Trim() + num + LanguageHandle.GetWord("TiaoKaiShiDaoRuShiBaiQingXianB").ToString().Trim();
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZMSG").ToString().Trim()+"')", true);
                         return;
                     }
                 }
-                Response.Write("<script>alert('Excle表导入成功!')</script>");
+                Response.Write(LanguageHandle.GetWord("scriptalertExcleBiaoDaoRuCheng").ToString().Trim());
             }
         }
     }

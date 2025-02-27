@@ -81,7 +81,7 @@ public partial class TTWZExpertList : System.Web.UI.Page
                     //重新加载列表
                     DataBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
                 }
 
             }
@@ -108,57 +108,57 @@ public partial class TTWZExpertList : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strName))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('专家名称不能为空，请补充！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('专家名称不能为空，请补充！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true); 
                 return;
             }
             if (string.IsNullOrEmpty(strJob))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('职务不能为空，请补充！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('职务不能为空，请补充！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true); 
                 return;
             }
             if (!ShareClass.CheckStringRight(strJob))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('职务不能为非法字符！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('职务不能为非法字符！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true); 
                 return;
             }
             if (strJob.Length >6)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('职务不能超过6个字符串！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('职务不能超过6个字符串！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true); 
                 return;
             }
             if (string.IsNullOrEmpty(strJobTitle))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('职称不能为空，请补充！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('职称不能为空，请补充！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true); 
                 return;
             }
             if (!ShareClass.CheckStringRight(strJobTitle))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('职称不能为非法字符！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('职称不能为非法字符！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true); 
                 return;
             }
             if (strJobTitle.Length > 6)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('职称不能超过6个字符串！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('职称不能超过6个字符串！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true); 
                 return;
             }
             if (string.IsNullOrEmpty(strPhone))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('移动电话不能为空，请补充！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('移动电话不能为空，请补充！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true); 
                 return;
             }
             if (!ShareClass.CheckStringRight(strPhone))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('移动电话不能为非法字符！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('移动电话不能为非法字符！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true); 
                 return;
             }
             if (strPhone.Length > 11)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('移动电话不能超过11位字符！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('移动电话不能超过11位字符！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true); 
                 return;
             }
             if (string.IsNullOrEmpty(strExpertType))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('专业范围不能为空，请补充！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('专业范围不能为空，请补充！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true); 
                 return;
             }
 
@@ -175,7 +175,7 @@ public partial class TTWZExpertList : System.Web.UI.Page
                     //判断新的专家代码查询出来的专家编号是否与原来的相等
                     if (wZExpertDatabase.ExpertNumber.Trim() != HF_ExpertNumber.Value.Trim())
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('专家已经存在，不允许重复添加！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('专家已经存在，不允许重复添加！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true); 
                         return;
                     }
 
@@ -200,7 +200,7 @@ public partial class TTWZExpertList : System.Web.UI.Page
                 int intCheckNameNumber = int.Parse(dtCheckName.Rows[0]["RowNumber"].ToString());
                 if (intCheckNameNumber > 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('专家已经存在，不允许重复添加！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('专家已经存在，不允许重复添加！');ControlStatusChange('" + strNewCreateCode + "','" + strUserCode + "');", true); 
                     return;
                 }
                 
@@ -242,7 +242,7 @@ public partial class TTWZExpertList : System.Web.UI.Page
             TXT_JobTitle.BackColor = Color.White;
             
             //Response.Redirect("TTWZExpertList.aspx");
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatusCloseChange();", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatusCloseChange();", true); 
         }
         catch (Exception ex)
         { }
@@ -303,7 +303,7 @@ public partial class TTWZExpertList : System.Web.UI.Page
         string strEditExpertCode = HF_NewExpertCode.Value;
         if (string.IsNullOrEmpty(strEditExpertCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZYCZDZJLB+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZYCZDZJLB").ToString().Trim()+"')", true);
             return;
         }
 
@@ -350,7 +350,7 @@ public partial class TTWZExpertList : System.Web.UI.Page
         string strEditExpertCode = HF_NewExpertCode.Value;
         if (string.IsNullOrEmpty(strEditExpertCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZYCZDZJLB+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZYCZDZJLB").ToString().Trim()+"')", true);
             return;
         }
 
@@ -381,7 +381,7 @@ public partial class TTWZExpertList : System.Web.UI.Page
             TXT_Phone.BackColor = Color.White;
             TXT_JobTitle.BackColor = Color.White;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"');ControlStatusCloseChange();", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"');ControlStatusCloseChange();", true);
         }
         else {
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "ControlStatusCloseChange();", true);

@@ -59,10 +59,10 @@ public partial class TTWZCollectList : System.Web.UI.Page
                             left join T_WZSpan k on o.Unit = k.ID
                             where c.Contacter ='{0}' 
                             and c.Progress in ('录入','材检','开票') 
-                           ", strUserCode);
+                           ", strUserCode); 
 
         string strProgress = DDL_Progress.SelectedValue;
-        if (!string.IsNullOrEmpty(strProgress) & strProgress != "全部")
+        if (!string.IsNullOrEmpty(strProgress) & strProgress != LanguageHandle.GetWord("QuanBu").ToString().Trim())
         {
             strCollectHQL += " and c.Progress = '" + strProgress + "'";
         }
@@ -97,7 +97,7 @@ public partial class TTWZCollectList : System.Web.UI.Page
     private void DataCompactBander()
     {
         WZCompactBLL wZCompactBLL = new WZCompactBLL();
-        string strWZCompactHQL = string.Format("from WZCompact as wZCompact where Compacter = '{0}' and Progress = '生效' order by MarkTime desc", strUserCode);
+        string strWZCompactHQL = string.Format("from WZCompact as wZCompact where Compacter = '{0}' and Progress = '生效' order by MarkTime desc", strUserCode); 
         IList listCompact = wZCompactBLL.GetAllWZCompacts(strWZCompactHQL);
 
         LB_Compact.DataSource = listCompact;
@@ -141,9 +141,9 @@ public partial class TTWZCollectList : System.Web.UI.Page
                 if (listCollect != null && listCollect.Count == 1)
                 {
                     WZCollect wZCollect = (WZCollect)listCollect[0];
-                    if (wZCollect.Progress != "录入" || wZCollect.Contacter != strUserCode)
+                    if (wZCollect.Progress != LanguageHandle.GetWord("LuRu").ToString().Trim() || wZCollect.Contacter != strUserCode)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWLRYJHTYBWDDLYHSBYXSC + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWLRYJHTYBWDDLYHSBYXSC").ToString().Trim() + "')", true);
                         return;
                     }
 
@@ -153,7 +153,7 @@ public partial class TTWZCollectList : System.Web.UI.Page
                     DG_Collect.CurrentPageIndex = 0;
                     DataCollectBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
                 }
 
             }
@@ -201,7 +201,7 @@ public partial class TTWZCollectList : System.Web.UI.Page
                         TXT_CollectMoney.Text = (wZCompactDetail.CompactPrice * wZCollect.ActualNumber).ToString();
                     }
 
-                    if (wZCollect.CollectMethod == "红票")
+                    if (wZCollect.CollectMethod == LanguageHandle.GetWord("GongPiao").ToString().Trim())
                     {
                         TXT_ActualNumber.BackColor = Color.Red;
                     }
@@ -221,21 +221,21 @@ public partial class TTWZCollectList : System.Web.UI.Page
                 if (listCollect != null && listCollect.Count == 1)
                 {
                     WZCollect wZCollect = (WZCollect)listCollect[0];
-                    if (wZCollect.Progress == "录入")
+                    if (wZCollect.Progress == LanguageHandle.GetWord("LuRu").ToString().Trim())
                     {
                         string strCheckCode = wZCollect.CheckCode;
 
-                        wZCollect.Progress = "材检";
+                        wZCollect.Progress = LanguageHandle.GetWord("CaiJian").ToString().Trim();
 
                         //if (!string.IsNullOrEmpty(strCheckCode) && strCheckCode != "-")
                         //{
                         //    //材检
-                        //    wZCollect.Progress = "材检";
+                        //    wZCollect.Progress = LanguageHandle.GetWord("CaiJian").ToString().Trim();
                         //}
                         //else
                         //{
                         //    //开票
-                        //    wZCollect.Progress = "开票";
+                        //    wZCollect.Progress = LanguageHandle.GetWord("KaiPiao").ToString().Trim();
                         //}
 
                         wZCollectBLL.UpdateWZCollect(wZCollect, wZCollect.CollectCode);
@@ -243,11 +243,11 @@ public partial class TTWZCollectList : System.Web.UI.Page
                         //重新加载收料单列表
                         DataCollectBinder();
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTJCG + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJCG").ToString().Trim() + "')", true);
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWLRBNTJ + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWLRBNTJ").ToString().Trim() + "')", true);
                         return;
                     }
                 }
@@ -261,20 +261,20 @@ public partial class TTWZCollectList : System.Web.UI.Page
                 if (listCollect != null && listCollect.Count == 1)
                 {
                     WZCollect wZCollect = (WZCollect)listCollect[0];
-                    if (wZCollect.Progress == "开票" || wZCollect.Progress == "材检")
+                    if (wZCollect.Progress == LanguageHandle.GetWord("KaiPiao").ToString().Trim() || wZCollect.Progress == LanguageHandle.GetWord("CaiJian").ToString().Trim())
                     {
-                        wZCollect.Progress = "录入";
+                        wZCollect.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
 
                         wZCollectBLL.UpdateWZCollect(wZCollect, wZCollect.CollectCode);
 
                         //重新加载收料单列表
                         DataCollectBinder();
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKPTHCG + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKPTHCG").ToString().Trim() + "')", true);
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWKPHZCJZTBNTH + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWKPHZCJZTBNTH").ToString().Trim() + "')", true);
                         return;
                     }
                 }
@@ -288,20 +288,20 @@ public partial class TTWZCollectList : System.Web.UI.Page
                 if (listCollect != null && listCollect.Count == 1)
                 {
                     WZCollect wZCollect = (WZCollect)listCollect[0];
-                    if (wZCollect.Progress == "开票" || wZCollect.Progress == "材检")
+                    if (wZCollect.Progress == LanguageHandle.GetWord("KaiPiao").ToString().Trim() || wZCollect.Progress == LanguageHandle.GetWord("CaiJian").ToString().Trim())
                     {
-                        wZCollect.Progress = "录入";
+                        wZCollect.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
 
                         wZCollectBLL.UpdateWZCollect(wZCollect, wZCollect.CollectCode);
 
                         //重新加载收料单列表
                         DataCollectBinder();
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCJTHCG + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCJTHCG").ToString().Trim() + "')", true);
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWKPHZCJZTBNTH + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWKPHZCJZTBNTH").ToString().Trim() + "')", true);
                         return;
                     }
                 }
@@ -357,10 +357,10 @@ public partial class TTWZCollectList : System.Web.UI.Page
                     wZCollect.CollectCode = strNewCollectCode;
                     wZCollect.TicketTime = DateTime.Now;
 
-                    wZCollect.CollectMethod = "蓝票";
+                    wZCollect.CollectMethod = LanguageHandle.GetWord("LanPiao").ToString().Trim();
 
                     wZCollect.Contacter = strUserCode;
-                    wZCollect.Progress = "录入";
+                    wZCollect.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
                     wZCollect.CompactDetailID = wZCompactDetail.ID;
                     wZCollect.PlanDetailID = wZCompactDetail.PlanDetailID;
                     wZCollect.ObjectCode = wZCompactDetail.ObjectCode;
@@ -427,7 +427,7 @@ public partial class TTWZCollectList : System.Web.UI.Page
                     DataCollectBinder();
                     DataCompactDetailBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTJCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJCG").ToString().Trim() + "')", true);
                 }
             }
         }
@@ -461,17 +461,17 @@ public partial class TTWZCollectList : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strCollectMethod))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSLFSBNWKBC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLFSBNWKBC").ToString().Trim() + "')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strActualNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSSSLBNWKBC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSSSLBNWKBC").ToString().Trim() + "')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strRatio))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSLBNWKBC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLBNWKBC").ToString().Trim() + "')", true);
                 return;
             }
 
@@ -491,7 +491,7 @@ public partial class TTWZCollectList : System.Web.UI.Page
             decimal decimalRatioMoney = 0;
             decimal.TryParse(strRatioMoney, out decimalRatioMoney);
 
-            //if (strCollectMethod == "红票")
+            //if (strCollectMethod == LanguageHandle.GetWord("GongPiao").ToString().Trim())
             //{
             //    decimalActualNumber = decimalActualNumber > 0 ? (-1 * decimalActualNumber) : decimalActualNumber;
             //}
@@ -554,13 +554,13 @@ public partial class TTWZCollectList : System.Web.UI.Page
                     //重新加载收料单列表
                     DataCollectBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
                 }
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZYXGDSLD + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZYXGDSLD").ToString().Trim() + "')", true);
             return;
         }
     }
@@ -583,17 +583,17 @@ public partial class TTWZCollectList : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strCollectMethod))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSLFSBNWKBC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLFSBNWKBC").ToString().Trim() + "')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strActualNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSSSLBNWKBC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSSSLBNWKBC").ToString().Trim() + "')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strRatio))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSLBNWKBC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLBNWKBC").ToString().Trim() + "')", true);
                 return;
             }
 
@@ -613,7 +613,7 @@ public partial class TTWZCollectList : System.Web.UI.Page
             decimal decimalRatioMoney = 0;
             decimal.TryParse(strRatioMoney, out decimalRatioMoney);
 
-            //if (strCollectMethod == "红票")
+            //if (strCollectMethod == LanguageHandle.GetWord("GongPiao").ToString().Trim())
             //{
             //    decimalActualNumber = decimalActualNumber > 0 ? (-1 * decimalActualNumber) : decimalActualNumber;
             //}
@@ -676,13 +676,13 @@ public partial class TTWZCollectList : System.Web.UI.Page
                     //重新加载收料单列表
                     DataCollectBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
                 }
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZYXGDSLD + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZYXGDSLD").ToString().Trim() + "')", true);
             return;
         }
     }
@@ -705,17 +705,17 @@ public partial class TTWZCollectList : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strCollectMethod))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSLFSBNWKBC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLFSBNWKBC").ToString().Trim() + "')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strActualNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSSSLBNWKBC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSSSLBNWKBC").ToString().Trim() + "')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strRatio))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSLBNWKBC + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLBNWKBC").ToString().Trim() + "')", true);
                 return;
             }
 
@@ -735,7 +735,7 @@ public partial class TTWZCollectList : System.Web.UI.Page
             decimal decimalRatioMoney = 0;
             decimal.TryParse(strRatioMoney, out decimalRatioMoney);
 
-            //if (strCollectMethod == "红票")
+            //if (strCollectMethod == LanguageHandle.GetWord("GongPiao").ToString().Trim())
             //{
             //    decimalActualNumber = decimalActualNumber > 0 ? (-1 * decimalActualNumber) : decimalActualNumber;
             //}
@@ -798,13 +798,13 @@ public partial class TTWZCollectList : System.Web.UI.Page
                     //重新加载收料单列表
                     DataCollectBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
                 }
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZYXGDSLD + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZYXGDSLD").ToString().Trim() + "')", true);
             return;
         }
     }
@@ -858,10 +858,10 @@ public partial class TTWZCollectList : System.Web.UI.Page
                             wZCollect.CollectCode = strNewCollectCode;
                             wZCollect.TicketTime = DateTime.Now;
 
-                            wZCollect.CollectMethod = "蓝票";
+                            wZCollect.CollectMethod = LanguageHandle.GetWord("LanPiao").ToString().Trim();
 
                             wZCollect.Contacter = strUserCode;
-                            wZCollect.Progress = "录入";
+                            wZCollect.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
                             wZCollect.CompactDetailID = wZCompactDetail.ID;
                             wZCollect.PlanDetailID = wZCompactDetail.PlanDetailID;
                             wZCollect.ObjectCode = wZCompactDetail.ObjectCode;
@@ -929,7 +929,7 @@ public partial class TTWZCollectList : System.Web.UI.Page
             DataCollectBinder();
             DataCompactDetailBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('标注批量" + Resources.lang.ZZTJCG + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZBiaoZhuPiLiangLanguageHandle").ToString().Trim()+"')", true); 
         }
     }
 
@@ -954,10 +954,10 @@ public partial class TTWZCollectList : System.Web.UI.Page
                             left join T_WZSpan k on o.Unit = k.ID
                             where c.Contacter ='{0}' 
                             and c.Progress in ('录入','材检','开票') 
-                           ", strUserCode);
+                           ", strUserCode); 
 
         string strProgress = DDL_Progress.SelectedValue;
-        if (!string.IsNullOrEmpty(strProgress) & strProgress != "全部")
+        if (!string.IsNullOrEmpty(strProgress) & strProgress != LanguageHandle.GetWord("QuanBu").ToString().Trim())
         {
             strCollectHQL += " and c.Progress = '" + strProgress + "'";
         }
@@ -1009,10 +1009,10 @@ public partial class TTWZCollectList : System.Web.UI.Page
                             left join T_WZSpan k on o.Unit = k.ID
                             where c.Contacter ='{0}' 
                             and c.Progress in ('录入','材检','开票') 
-                           ", strUserCode);
+                           ", strUserCode); 
 
         string strProgress = DDL_Progress.SelectedValue;
-        if (!string.IsNullOrEmpty(strProgress) & strProgress != "全部")
+        if (!string.IsNullOrEmpty(strProgress) & strProgress != LanguageHandle.GetWord("QuanBu").ToString().Trim())
         {
             strCollectHQL += " and c.Progress = '" + strProgress + "'";
         }
@@ -1064,10 +1064,10 @@ public partial class TTWZCollectList : System.Web.UI.Page
                             left join T_WZSpan k on o.Unit = k.ID
                             where c.Contacter ='{0}' 
                             and c.Progress in ('录入','材检','开票') 
-                           ", strUserCode);
+                           ", strUserCode); 
 
         string strProgress = DDL_Progress.SelectedValue;
-        if (!string.IsNullOrEmpty(strProgress) & strProgress != "全部")
+        if (!string.IsNullOrEmpty(strProgress) & strProgress != LanguageHandle.GetWord("QuanBu").ToString().Trim())
         {
             strCollectHQL += " and c.Progress = '" + strProgress + "'";
         }
@@ -1127,7 +1127,7 @@ public partial class TTWZCollectList : System.Web.UI.Page
             decimal decimalActualNumber = 0;
             decimal.TryParse(TXT_ActualNumber.Text.Trim(), out decimalActualNumber);
 
-            if (strCollectMethod == "红票")
+            if (strCollectMethod == LanguageHandle.GetWord("GongPiao").ToString().Trim())
             {
                 decimalActualNumber = decimalActualNumber > 0 ? -1 * decimalActualNumber : decimalActualNumber;
 
@@ -1180,7 +1180,7 @@ public partial class TTWZCollectList : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('警告，实收金额和实收数量必须为数字,且实收数量不能为0，请检查！')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoShiShouJinEHeShiShouS").ToString().Trim()+"')", true);
             return;
         }
     }
@@ -1198,7 +1198,7 @@ public partial class TTWZCollectList : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('警告，实收单价和实收数量必须为数字，请检查！')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoShiShouChanJiaHeShiSh").ToString().Trim()+"')", true);
             return;
         }
 
@@ -1210,12 +1210,12 @@ public partial class TTWZCollectList : System.Web.UI.Page
 
         //    if (!ShareClass.CheckIsNumber(strActualNumber))
         //    {
-        //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSSSLBXWXSHZZS + "')", true);
+        //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSSSLBXWXSHZZS").ToString().Trim() + "')", true);
         //        return;
         //    }
         //    if (!ShareClass.CheckIsNumber(strRatio))
         //    {
-        //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSLBXWXSHZZS + "')", true);
+        //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLBXWXSHZZS").ToString().Trim() + "')", true);
         //        return;
         //    }
 
@@ -1260,7 +1260,7 @@ public partial class TTWZCollectList : System.Web.UI.Page
         //}
         //else
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZYXGDSLD + "')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZYXGDSLD").ToString().Trim() + "')", true);
         //    return;
         //}
     }
@@ -1279,7 +1279,7 @@ public partial class TTWZCollectList : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('警告，实收金额和实购金额必须为数字，请检查！')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJingGaoShiShouJinEHeShiGouJi").ToString().Trim()+"')", true);
             return;
         }
 
@@ -1291,12 +1291,12 @@ public partial class TTWZCollectList : System.Web.UI.Page
 
         //    if (!ShareClass.CheckIsNumber(strActualNumber))
         //    {
-        //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSSSLBXWXSHZZS + "')", true);
+        //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSSSLBXWXSHZZS").ToString().Trim() + "')", true);
         //        return;
         //    }
         //    if (!ShareClass.CheckIsNumber(strRatio))
         //    {
-        //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSLBXWXSHZZS + "')", true);
+        //        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLBXWXSHZZS").ToString().Trim() + "')", true);
         //        return;
         //    }
 
@@ -1340,7 +1340,7 @@ public partial class TTWZCollectList : System.Web.UI.Page
         //}
         //else
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZYXGDSLD + "')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZYXGDSLD").ToString().Trim() + "')", true);
         //    return;
         //}
     }

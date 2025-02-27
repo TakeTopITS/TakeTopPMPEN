@@ -27645,12 +27645,6 @@
   <data name="ChuLiRen2" xml:space="preserve">
     <value>處理人</value>
   </data>
-  <data name="CuoWu1" xml:space="preserve">
-    <value>错误</value>
-  </data>
-  <data name="CuoWu2" xml:space="preserve">
-    <value>錯誤</value>
-  </data>
   <data name="FaQiRen1" xml:space="preserve">
     <value>发起人</value>
   </data>
@@ -27911,5 +27905,8 @@
   </data>
   <data name="UpdateingDatabase" xml:space="preserve">
     <value>因数据库有更新，系统正在升级，要花几分钟，不要关闭此窗口，请耐心等待！  </value>
+  </data>
+  <data name="DangTianYouXiao" xml:space="preserve">
+    <value>当天有效</value>
   </data>
 </root>

@@ -36,7 +36,7 @@ public partial class TTAccountPaymentExpend : System.Web.UI.Page
 
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true); if (Page.IsPostBack != true)
         {
-            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(Resources.lang.ZZJGT,TreeView1, strUserCode);
+            string strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
             LB_DepartString.Text = strDepartString;
 
             LoadAccountFinancialSet();
@@ -203,39 +203,39 @@ public partial class TTAccountPaymentExpend : System.Web.UI.Page
     {
         //if (DL_FinancialID.SelectedValue.Trim() == "0")
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGHJZTWBXJC+"')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGHJZTWBXJC").ToString().Trim()+"')", true);
         //    DL_FinancialID.Focus();
         //    return;
         //}
         //string FinancialStatus = GetFinancialStatus(DL_FinancialID.SelectedValue.Trim());
         //if (FinancialStatus != "OPEN")
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGGHJZTYGBJC+"')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGGHJZTYGBJC").ToString().Trim()+"')", true);
         //    DL_FinancialID.Focus();
         //    return;
         //}
         //if (DL_IntervalID.SelectedValue.Trim() == "0")
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGHJJWBXJC+"')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGHJJWBXJC").ToString().Trim()+"')", true);
         //    DL_IntervalID.Focus();
         //    return;
         //}
         //string IntervalStatus = GetIntervalStatus(DL_IntervalID.SelectedValue.Trim());
         //if (IntervalStatus != "OPEN")
         //{
-        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGGHJJYGBJC+"')", true);
+        //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGGHJJYGBJC").ToString().Trim()+"')", true);
         //    DL_IntervalID.Focus();
         //    return;
         //}
         if (DL_AccountID.SelectedValue.Trim() == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGHJKMWBXJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGHJKMWBXJC").ToString().Trim()+"')", true);
             DL_AccountID.Focus();
             return;
         }
         if (NB_TotalMoney.Amount < 0 || NB_TotalMoney.Amount > decimal.Parse(lbl_TotalMoney.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJGCZJEYWJC+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJGCZJEYWJC").ToString().Trim()+"')", true);
             NB_TotalMoney.Focus();
             return;
         }
@@ -258,11 +258,11 @@ public partial class TTAccountPaymentExpend : System.Web.UI.Page
 
             LoadConstractPayableRecordList(txt_PaymentInfo.Text.Trim(), LB_DepartString.Text.Trim());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCZCG+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCZCG").ToString().Trim()+"')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCZSB+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCZSB").ToString().Trim()+"')", true);
         }
     }
 
@@ -375,12 +375,12 @@ public partial class TTAccountPaymentExpend : System.Web.UI.Page
 
     protected string GetAccountGeneralLedgerStatus(string strID)
     {
-        string flag = "未出账";
+        string flag = LanguageHandle.GetWord("WeiChuZhang").ToString().Trim();
         string strHQL = "Select * From T_AccountGeneralLedger Where PayableRecordID='" + strID + "' ";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_AccountGeneralLedger");
         if (ds != null && ds.Tables[0].Rows.Count > 0)
         {
-            flag = "已出账";
+            flag = LanguageHandle.GetWord("YiChuZhang").ToString().Trim();
         }
         return flag;
     }
@@ -436,7 +436,7 @@ public partial class TTAccountPaymentExpend : System.Web.UI.Page
         flag = GetCheckDataList(DataGrid1, ref constractPayableRecordId);
         if (!flag)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZCZX+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZCZX").ToString().Trim()+"')", true);
             return;
         }
         else
@@ -472,7 +472,7 @@ public partial class TTAccountPaymentExpend : System.Web.UI.Page
 
                 LoadConstractPayableRecordList(txt_PaymentInfo.Text.Trim(), LB_DepartString.Text.Trim());
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('批量"+Resources.lang.ZZCZCG+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZPiLiangLanguageHandleGetWord").ToString().Trim()+"')", true); 
             }
         }
     }

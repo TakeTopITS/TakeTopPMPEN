@@ -20,57 +20,57 @@ public partial class TTCustomerRegisterFromWebSite_TakeTopSoft : System.Web.UI.P
         {
             if (strSystemType == "XMB")
             {
-                LB_Product.Text = "泰顶项目宝";
+                LB_Product.Text = LanguageHandle.GetWord("TaiDingXiangMuBao").ToString().Trim();
             }
 
             if (strSystemType == "ECMP")
             {
-                LB_Product.Text = "项目综合管理平台";
+                LB_Product.Text = LanguageHandle.GetWord("XiangMuZengGeGuanLiPingTai").ToString().Trim();
             }
 
             if (strSystemType == "GEPMP")
             {
-                LB_Product.Text = "项目管理平台";
+                LB_Product.Text = LanguageHandle.GetWord("XiangMuGuanLiPingTai").ToString().Trim();
             }
 
             if (strSystemType == "RDPMP")
             {
-                LB_Product.Text = "研发项目管理平台";
+                LB_Product.Text = LanguageHandle.GetWord("YanFaXiangMuGuanLiPingTai").ToString().Trim();
             }
 
             if (strSystemType == "GAPMP")
             {
-                LB_Product.Text = "政务项目管理平台";
+                LB_Product.Text = LanguageHandle.GetWord("ZhengWuXiangMuGuanLiPingTai").ToString().Trim();
             }
 
             if (strSystemType == "ENPMP")
             {
-                LB_Product.Text = "工程项目管理平台";
+                LB_Product.Text = LanguageHandle.GetWord("GongChengXiangMuGuanLiPingTai").ToString().Trim();
             }
 
             if (strSystemType == "SIMP")
             {
-                LB_Product.Text = "系统集成项目管理平台";
+                LB_Product.Text = LanguageHandle.GetWord("JiTongJiChengXiangMuGuanLiPing").ToString().Trim();
             }
 
             if (strSystemType == "SOMP")
             {
-                LB_Product.Text = "软件实施项目管理平台";
+                LB_Product.Text = LanguageHandle.GetWord("RuanJianShiShiXiangMuGuanLiPin").ToString().Trim();
             }
 
             if (strSystemType == "ERP")
             {
-                LB_Product.Text = "项目型ERP平台";
+                LB_Product.Text = LanguageHandle.GetWord("XiangMuXingERPPingTai").ToString().Trim();
             }
 
             if (strSystemType == "CRM")
             {
-                LB_Product.Text = "CRM平台";
+                LB_Product.Text = LanguageHandle.GetWord("CRMPingTai").ToString().Trim();
             }
 
             if (strSystemType == "CMP")
             {
-                LB_Product.Text = "协同OA平台";
+                LB_Product.Text = LanguageHandle.GetWord("XieTongOAPingTai").ToString().Trim();
             }
         }
     }
@@ -96,7 +96,7 @@ public partial class TTCustomerRegisterFromWebSite_TakeTopSoft : System.Web.UI.P
 
         if (strCompany == "" | strContactPerson == "" | strPhoneNumber == "" | strQuestion == "")
         {
-            LB_Message.Text = "提交失败，带*号项不能为空，请检查！";
+            LB_Message.Text = LanguageHandle.GetWord("DiJiaoShiBaiDaiHaoXiangBuNengW").ToString().Trim();
         }
         else
         {
@@ -104,7 +104,7 @@ public partial class TTCustomerRegisterFromWebSite_TakeTopSoft : System.Web.UI.P
             {
                 TB_CheckCode.Text = "";
 
-                LB_Message.Text = "提交失败，验证码错误，请检查！";
+                LB_Message.Text = LanguageHandle.GetWord("DiJiaoShiBaiYanZhengMaCuoWuQin").ToString().Trim();
                 return;
             }
 
@@ -112,7 +112,7 @@ public partial class TTCustomerRegisterFromWebSite_TakeTopSoft : System.Web.UI.P
             try
             {
                 string strCSOperatorCode = ShareClass.GetWebSiteCustomerServiceOperatorCode(strWebSite);
-                string strNofiInfo = "提示：公司: " + strCompany + " 的员工: " + strContactPerson + "( " + strPhoneNumber + " )" + " 提交了：" + strType + " 的试用信息，请关注！！！";
+                string strNofiInfo = LanguageHandle.GetWord("DiShiGongSi").ToString().Trim() + strCompany + LanguageHandle.GetWord("DeYuanGong").ToString().Trim() + strContactPerson + "( " + strPhoneNumber + " )" + LanguageHandle.GetWord("DiJiaoLe").ToString().Trim() + strType + LanguageHandle.GetWord("DeShiYongXinXiQingGuanZhu").ToString().Trim();
                 Action action = new Action(delegate ()
                 {
                     try
@@ -212,7 +212,7 @@ public partial class TTCustomerRegisterFromWebSite_TakeTopSoft : System.Web.UI.P
             }
             catch
             {
-                LB_Message.Text = "提交失败，请检查！";
+                LB_Message.Text = LanguageHandle.GetWord("DiJiaoShiBaiQingJianCha").ToString().Trim();
             }
         }
     }
