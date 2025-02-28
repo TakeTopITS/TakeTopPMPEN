@@ -185,7 +185,7 @@ public partial class TTWZStorePrintList : System.Web.UI.Page
                         ) t 
                         ) x
                         ) y
-                        left join T_WZMaterialDL l on y.DLCode = l.DLCode", strStockCode, strYear, strPreviousMonth, strMonth, strNextMonth, strPreviousYear, strNextYear);   //ChineseWord
+                        left join T_WZMaterialDL l on y.DLCode = l.DLCode", strStockCode, strYear, strPreviousMonth, strMonth, strNextMonth, strPreviousYear, strNextYear);
 
         DataTable dtStore = ShareClass.GetDataSetFromSql(strHQL, "Store").Tables[0];
 
@@ -200,27 +200,27 @@ public partial class TTWZStorePrintList : System.Web.UI.Page
         foreach (DataRow drStore in dtStore.Rows)
         {
             decimal decimalStorePreviousMoney = 0;
-            decimal.TryParse(ShareClass.ObjectToString(drStore[LanguageHandle.GetWord("ShangJiJieE").ToString().Trim()]), out decimalStorePreviousMoney);
+            decimal.TryParse(ShareClass.ObjectToString(drStore["上期结额"]), out decimalStorePreviousMoney);
             decimalPreviousMoney += decimalStorePreviousMoney;
 
             decimal decimalStoreCurrentCollectMoney = 0;
-            decimal.TryParse(ShareClass.ObjectToString(drStore[LanguageHandle.GetWord("BenJiShouE").ToString().Trim()]), out decimalStoreCurrentCollectMoney);
+            decimal.TryParse(ShareClass.ObjectToString(drStore["本期收额"]), out decimalStoreCurrentCollectMoney);
             decimalCurrentCollectMoney += decimalStoreCurrentCollectMoney;
 
             decimal decimalStoreTotalCollectMoney = 0;
-            decimal.TryParse(ShareClass.ObjectToString(drStore[LanguageHandle.GetWord("LeiJiShouE").ToString().Trim()]), out decimalStoreTotalCollectMoney);
+            decimal.TryParse(ShareClass.ObjectToString(drStore["累计收额"]), out decimalStoreTotalCollectMoney);
             decimalTotalCollectMoney += decimalStoreTotalCollectMoney;
 
             decimal decimalStoreCurrentSendMoney = 0;
-            decimal.TryParse(ShareClass.ObjectToString(drStore[LanguageHandle.GetWord("BenJiFaE").ToString().Trim()]), out decimalStoreCurrentSendMoney);
+            decimal.TryParse(ShareClass.ObjectToString(drStore["本期发额"]), out decimalStoreCurrentSendMoney);
             decimalCurrentSendMoney += decimalStoreCurrentSendMoney;
 
             decimal decimalStoreTotalSendMoney = 0;
-            decimal.TryParse(ShareClass.ObjectToString(drStore[LanguageHandle.GetWord("LeiJiFaE").ToString().Trim()]), out decimalStoreTotalSendMoney);
+            decimal.TryParse(ShareClass.ObjectToString(drStore["累计发额"]), out decimalStoreTotalSendMoney);
             decimalTotalSendMoney += decimalStoreTotalSendMoney;
 
             decimal decimalStoreCurrentMoney = 0;
-            decimal.TryParse(ShareClass.ObjectToString(drStore[LanguageHandle.GetWord("BenJiJieE").ToString().Trim()]), out decimalStoreCurrentMoney);
+            decimal.TryParse(ShareClass.ObjectToString(drStore["本期结额"]), out decimalStoreCurrentMoney);
             decimalCurrentMoney += decimalStoreCurrentMoney;
         }
 
@@ -255,7 +255,7 @@ public partial class TTWZStorePrintList : System.Web.UI.Page
         DDL_StockCode.DataSource = lstStock;
         DDL_StockCode.DataBind();
 
-        DDL_StockCode.Items.Insert(0, new ListItem("All", ""));   //ChineseWord
+        DDL_StockCode.Items.Insert(0, new ListItem("全部", ""));
     }
 
     private void DataYearMonthBinder()

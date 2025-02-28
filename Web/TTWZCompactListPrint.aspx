@@ -285,7 +285,7 @@
                                 Width="100%">
                                 <Columns>
 
-                                    <asp:BoundColumn DataField="CompactCode" HeaderText="Contract Number">
+                                    <asp:BoundColumn DataField="CompactCode" HeaderText="合同编号">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                     </asp:BoundColumn>
                                     <asp:BoundColumn DataField="PurchaseCode" HeaderText="采购编号">
@@ -294,7 +294,7 @@
                                     <asp:BoundColumn DataField="PlanCode" HeaderText="计划编号">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="ObjectCode" HeaderText="Material Code">
+                                    <asp:BoundColumn DataField="ObjectCode" HeaderText="物资代码">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                     </asp:BoundColumn>
                                     <asp:TemplateColumn>
@@ -342,7 +342,7 @@
                                     <asp:BoundColumn DataField="CompactPrice" HeaderText="合同单价">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="5%" />
                                     </asp:BoundColumn>
-                                    <asp:BoundColumn DataField="CompactMoney" HeaderText="ContractAmount">
+                                    <asp:BoundColumn DataField="CompactMoney" HeaderText="合同金额">
                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="5%" />
                                     </asp:BoundColumn>
 

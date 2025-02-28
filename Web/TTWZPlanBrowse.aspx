@@ -219,7 +219,7 @@
                                                                       <td style="text-align: center" class="formItemBgStyle" colspan="4">
                                                                         <p class="noprint">
                                                                             <input id="print" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                                                type="button" value="Closed" />&nbsp;
+                                                                                type="button" value="¹Ø±Õ" />&nbsp;
                                                                         <input id="print0" class="inpu" onclick="printpage();" type="button" value="´òÓ¡" />
                                                                         </p>
                                                                     </td>

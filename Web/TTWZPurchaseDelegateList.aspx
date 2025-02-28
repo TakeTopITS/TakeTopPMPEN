@@ -85,9 +85,9 @@
                                                 <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,Gong%>"></asp:Label><asp:Label ID="LB_RecordCount" runat="server" Text="0"></asp:Label><asp:Label ID="Label4" runat="server" Text="<%$ Resources:lang,Tiao%>"></asp:Label>
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>：<asp:DropDownList ID="DDL_Progress" runat="server">
-                                                    <asp:ListItem Value="Approval" Text="<%$ Resources:lang,BaoPi%>" />
+                                                    <asp:ListItem Value="报批" Text="<%$ Resources:lang,BaoPi%>" />
 
-                                                    <asp:ListItem Value="Decision" Text="<%$ Resources:lang,JueCe%>" />
+                                                    <asp:ListItem Value="决策" Text="<%$ Resources:lang,JueCe%>" />
                                                 </asp:DropDownList>&nbsp;
                                                 <asp:Button ID="BT_Search" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ChaXun%>" OnClick="BT_Search_Click" />
                                             </td>
@@ -280,7 +280,7 @@
 
                                                                     <%--<input type="button" value="查看供应商报价" class="inpuLong" onclick='ClickToDetail("<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>")' />--%>
                                                                     <%--<a href='TTWZPurchaseDecision.aspx?PurchaseCode=<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>'>查看供应商报价</a>--%>
-                                                                    <%--<asp:Button ID="Button1" runat="server" CssClass="inpu" Text="Approved" CommandName="approval" CommandArgument='<%# Eval("PurchaseCode") %>' Visible='<%# Eval("Progress").ToString()=="呈报" ? true : false %>' />
+                                                                    <%--<asp:Button ID="Button1" runat="server" CssClass="inpu" Text="批准" CommandName="approval" CommandArgument='<%# Eval("PurchaseCode") %>' Visible='<%# Eval("Progress").ToString()=="呈报" ? true : false %>' />
                                                                     <asp:Button ID="Button2" runat="server" CssClass="inpu" Text="退回" CommandName="notApproval" CommandArgument='<%# Eval("PurchaseCode") %>' Visible='<%# Eval("Progress").ToString()=="呈报" ? true : false %>' />--%>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
@@ -314,10 +314,10 @@
                                                             <asp:BoundColumn DataField="TenderCompetentName" HeaderText="招标主管">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ControlMoneyName" HeaderText="Price Audit">
+                                                            <asp:BoundColumn DataField="ControlMoneyName" HeaderText="价格监审">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="DisciplinarySupervisionName" HeaderText="Disciplinary Supervision">
+                                                            <asp:BoundColumn DataField="DisciplinarySupervisionName" HeaderText="纪检监督">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="ExpertCode1Name" HeaderText="专家1">
@@ -338,7 +338,7 @@
                                                             <asp:BoundColumn DataField="UpLeaderName" HeaderText="上级领导">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="PurchaseMethod" HeaderText="Procurement Method">
+                                                            <asp:BoundColumn DataField="PurchaseMethod" HeaderText="采购方式">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
                                                             <asp:TemplateColumn>
@@ -469,7 +469,7 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("DecisionTime").ToString(),10) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                            <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">
@@ -627,7 +627,7 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("MainSupplier").ToString(), 190) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="Grade" HeaderText="Level">
+                                                            <asp:BoundColumn DataField="Grade" HeaderText="级别">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
                                                             <%--<asp:BoundColumn DataField="InTime" HeaderText="登记日期">
@@ -716,7 +716,7 @@
                                                             </asp:DropDownList>
                                                             &nbsp; &nbsp;<asp:Button ID="BT_Decision" runat="server" CssClass="inpu" Text="<%$ Resources:lang,JueCe%>" OnClick="BT_Decision_Click" Enabled="false" />
                                                             &nbsp; &nbsp;<asp:Button ID="BT_DecisionCancel" runat="server" CssClass="inpu" Text="<%$ Resources:lang,JueCe%>" OnClick="BT_DecisionCancel_Click" Enabled="false" />
-                                                            &nbsp;<%--<asp:Button ID="BT_Decision" runat="server" Text="Decision" CssClass="inpu" Enabled="true" OnClick="BT_Decision_Click" />--%></td>
+                                                            &nbsp;<%--<asp:Button ID="BT_Decision" runat="server" Text="决策" CssClass="inpu" Enabled="true" OnClick="BT_Decision_Click" />--%></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="formItemBgStyle">

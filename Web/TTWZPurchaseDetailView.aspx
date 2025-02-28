@@ -190,7 +190,7 @@
                                                                                     <asp:BoundColumn DataField="PlanCode" HeaderText="计划编号">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="ObjectCode" HeaderText="Material Code">
+                                                                                    <asp:BoundColumn DataField="ObjectCode" HeaderText="物资代码">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:TemplateColumn>
@@ -211,7 +211,7 @@
                                                                                             <%# ShareClass.StringCutByRequire(Eval("Tenders").ToString(), 192) %>
                                                                                         </ItemTemplate>
                                                                                     </asp:TemplateColumn>
-                                                                                    <asp:BoundColumn DataField="SerialNumber" HeaderText="SerialNumber">
+                                                                                    <asp:BoundColumn DataField="SerialNumber" HeaderText="序号">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:TemplateColumn>
@@ -301,7 +301,7 @@
                                                                                     <asp:BoundColumn DataField="TotalMoney" HeaderText="决策金额">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="4%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                                                    <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">

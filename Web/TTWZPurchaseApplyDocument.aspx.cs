@@ -73,7 +73,7 @@ public partial class TTWZPurchaseApplyDocument : System.Web.UI.Page
 
                     if (fi.Exists)
                     {
-                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "');</script>");
+                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZCZTMWJSCSBGMHZSC + "');</script>");
                     }
 
                     if (Directory.Exists(strDocSavePath) == false)
@@ -105,11 +105,11 @@ public partial class TTWZPurchaseApplyDocument : System.Web.UI.Page
 
 
                     //重新加载报价文件列表
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCBJWJCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCBJWJCG + "')", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZYSCDWJ + "')", true);
                     return;
                 }
             }
@@ -117,7 +117,7 @@ public partial class TTWZPurchaseApplyDocument : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZCGWJ").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZCGWJ + "')", true);
             return;
         }
     }

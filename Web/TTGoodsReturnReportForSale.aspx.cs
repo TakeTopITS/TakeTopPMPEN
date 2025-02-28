@@ -198,23 +198,23 @@ public partial class TTGoodsReturnReportForSale : System.Web.UI.Page
 
         strDepartString = TakeTopCore.CoreShareClass.InitialDepartmentStringByAuthorityAsset(strUserCode);
 
-        strHQL = @"Select  B.ReturnName 'Name'    //ChineseWord
-            ,B.OperatorName 'Salesperson'   //ChineseWord
+        strHQL = @"Select  B.ReturnName 'Name'    
+            ,B.OperatorName 'Salesperson'   
             ,B.CustomerName 'Customer'
-            ,B.ReturnTime 'Time'   //ChineseWord
-            ,A.ID 'Number'   //ChineseWord
-            ,A.GoodsCode 'Code'   //ChineseWord
-            ,A.GoodsName 'ProductName'   //ChineseWord
-            ,A.Number 'Quantity'   //ChineseWord
-            ,A.ModelNumber 'Model'   //ChineseWord
-            ,A.Spec 'Specification'   //ChineseWord
-            ,A.UnitName 'Unit'   //ChineseWord
-            ,A.Price 'UnitPrice'   //ChineseWord
-            ,A.Amount 'Amount'   //ChineseWord
-            ,B.CurrencyType 'Currency'   //ChineseWord
-            ,B.CarCode 'VehicleNumber'   //ChineseWord
-            ,B.Driver 'Driver'   //ChineseWord
-            ,A.ReturnReason 'Remark'   //ChineseWord
+            ,B.ReturnTime 'Time'   
+            ,A.ID 'Number'   
+            ,A.GoodsCode 'Code'   
+            ,A.GoodsName 'ProductName'   
+            ,A.Number 'Quantity'   
+            ,A.ModelNumber 'Model'   
+            ,A.Spec 'Specification'   
+            ,A.UnitName 'Unit'   
+            ,A.Price 'UnitPrice'   
+            ,A.Amount 'Amount'   
+            ,B.CurrencyType 'Currency'   
+            ,B.CarCode 'VehicleNumber'   
+            ,B.Driver 'Driver'   
+            ,A.ReturnReason 'Remark'   
             from T_GoodsReturnDetail A,T_GoodsReturnOrder B where A.ROID = B.ROID And B.Type = 'SALE'";
 
         strHQL += " and to_char(B.ReturnTime,'yyyymmdd')  >= " + "'" + strStartTime + "'" + "  and to_char(B.ReturnTime,'yyyymmdd') <= " + "'" + strEndTime + "'";
@@ -234,7 +234,7 @@ public partial class TTGoodsReturnReportForSale : System.Web.UI.Page
 
         Export3Excel(dtSaleOrder, LanguageHandle.GetWord("XiaoShouTuiHuoBaoBiaoxls").ToString().Trim());
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);   //ChineseWord
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);   
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

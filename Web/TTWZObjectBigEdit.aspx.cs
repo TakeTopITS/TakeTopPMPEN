@@ -44,7 +44,7 @@ public partial class TTWZObjectBigEdit : System.Web.UI.Page
 
             if (fi.Exists)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim()+"');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+Resources.lang.ZZCZTMWJSCSBGMHZSC+"');</script>");
             }
 
             if (Directory.Exists(strDocSavePath) == false)
@@ -71,7 +71,7 @@ public partial class TTWZObjectBigEdit : System.Web.UI.Page
             }
             catch (Exception ex)
             {
-                lblMsg.Text = string.Format(LanguageHandle.GetWord("spanstylecolorredDaoRuShiChuXi").ToString().Trim(), ex.Message);
+                lblMsg.Text = string.Format("<span style='color:red' >导入时出现以下错误: {0}!</span>", ex.Message);
             }
         }
     }
@@ -91,48 +91,48 @@ public partial class TTWZObjectBigEdit : System.Web.UI.Page
             lineNumber++;
             try
             {
-                string strDLCode = ShareClass.ObjectToString(row[LanguageHandle.GetWord("DaLeiDaiMa").ToString().Trim()]);
-                string strDLName = ShareClass.ObjectToString(row[LanguageHandle.GetWord("DaLeiMingChen").ToString().Trim()]);
-                string strDLDesc = ShareClass.ObjectToString(row[LanguageHandle.GetWord("DaLeiShuiMing").ToString().Trim()]);
+                string strDLCode = ShareClass.ObjectToString(row["大类代码"]);
+                string strDLName = ShareClass.ObjectToString(row["大类名称"]);
+                string strDLDesc = ShareClass.ObjectToString(row["大类说明"]);
                 if (string.IsNullOrEmpty(strDLCode))
                 {
-                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangDaLeiDaiMaBuNengWeiKong").ToString().Trim(), lineNumber);
+                    resultMsg += string.Format("第{0}行，大类代码不能为空<br/>", lineNumber);
                     continue;
                 }
                 if (!ShareClass.CheckStringRight(strDLCode))
                 {
-                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangDaLeiDaiMaBuNengBaoHanF").ToString().Trim(), lineNumber);
+                    resultMsg += string.Format("第{0}行，大类代码不能包含非法字符<br/>", lineNumber);
                     continue;
                 }
                 if (strDLCode.Length != 2)
                 {
-                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangDaLeiDaiMaZhiNengWei2Ge").ToString().Trim(), lineNumber);
+                    resultMsg += string.Format("第{0}行，大类代码只能为2个字符<br/>", lineNumber);
                     continue;
                 }
                 if (string.IsNullOrEmpty(strDLName))
                 {
-                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangDaLeiMingChenBuNengWeiK").ToString().Trim(), lineNumber);
+                    resultMsg += string.Format("第{0}行，大类名称不能为空<br/>", lineNumber);
                     continue;
                 }
                 if (!ShareClass.CheckStringRight(strDLName))
                 {
-                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangDaLeiMingChenBuNengBaoH").ToString().Trim(), lineNumber);
+                    resultMsg += string.Format("第{0}行，大类名称不能包含非法字符<br/>", lineNumber);
                     continue;
                 }
                 if (strDLCode.Length > 22)
                 {
-                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangDaLeiMingChenBuNengChao").ToString().Trim(), lineNumber);
+                    resultMsg += string.Format("第{0}行，大类名称不能超过22个字符<br/>", lineNumber);
                     continue;
                 }
                 if (strDLDesc.Length > 30)
                 {
-                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangDaLeiShuiMingBuNengChao").ToString().Trim(), lineNumber);
+                    resultMsg += string.Format("第{0}行，大类说明不能超过22个字符<br/>", lineNumber);
                     continue;
                 }
             }
             catch (Exception ex)
             {
-                lblMsg.Text = string.Format(LanguageHandle.GetWord("spanstylecolorredDaoRuShiChuXi").ToString().Trim(), ex.Message);
+                lblMsg.Text = string.Format("<span style='color:red' >导入时出现以下错误: {0}!</span>", ex.Message);
             }
 
         }
@@ -158,9 +158,9 @@ public partial class TTWZObjectBigEdit : System.Web.UI.Page
             string strDLName = string.Empty;
             string strDLDesc = string.Empty;
             lineNumber++;
-            strDLCode = ShareClass.ObjectToString(row[LanguageHandle.GetWord("DaLeiDaiMa").ToString().Trim()]);
-            strDLName = ShareClass.ObjectToString(row[LanguageHandle.GetWord("DaLeiMingChen").ToString().Trim()]);
-            strDLDesc = ShareClass.ObjectToString(row[LanguageHandle.GetWord("DaLeiShuiMing").ToString().Trim()]);
+            strDLCode = ShareClass.ObjectToString(row["大类代码"]);
+            strDLName = ShareClass.ObjectToString(row["大类名称"]);
+            strDLDesc = ShareClass.ObjectToString(row["大类说明"]);
 
             WZMaterialDL wZMaterialDL = new WZMaterialDL();
             wZMaterialDL.DLCode = strDLCode;
@@ -176,18 +176,18 @@ public partial class TTWZObjectBigEdit : System.Web.UI.Page
         {
             if (successCount == dtExcel.Rows.Count)
             {
-                resultMsg += string.Format(LanguageHandle.GetWord("brYiChengGongDaoRu0TiaoShuJu").ToString().Trim(), successCount);
+                resultMsg += string.Format("<br/>已成功导入 {0} 条数据", successCount);
             }
             else
             {
-                resultMsg += string.Format(LanguageHandle.GetWord("brYiChengGongDaoRu0TiaoShuJuGo").ToString().Trim(), successCount, dtExcel.Rows.Count - successCount);
+                resultMsg += string.Format("<br/>已成功导入 {0} 条数据， 共有 {1} 条数据验证失败", successCount, dtExcel.Rows.Count - successCount);
             }
 
             return true;
         }
         else
         {
-            resultMsg += string.Format(LanguageHandle.GetWord("brWeiDaoRuShuJuGongYou0TiaoShu").ToString().Trim(), dtExcel.Rows.Count - successCount);
+            resultMsg += string.Format("<br/>未导入数据， 共有 {0} 条数据验证失败", dtExcel.Rows.Count - successCount);
         }
 
         return false;
@@ -198,10 +198,10 @@ public partial class TTWZObjectBigEdit : System.Web.UI.Page
         // 下载项目对应相应模板.
         try
         {
-            string templatePath = Server.MapPath(LanguageHandle.GetWord("DocTemplatesDaLeiDaiMaxls").ToString().Trim());
+            string templatePath = Server.MapPath("Doc/Templates/大类代码.xls");
 
 
-            FileUtils.Download(templatePath, string.Format("{0}.xls", LanguageHandle.GetWord("DaLeiDaiMa").ToString().Trim()), Response, false);
+            FileUtils.Download(templatePath, string.Format("{0}.xls", "大类代码"), Response, false);
         }
         catch (Exception ex)
         { }
@@ -230,7 +230,7 @@ public partial class TTWZObjectBigEdit : System.Web.UI.Page
 
                 if (fi.Exists)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim()+"');</script>");
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+Resources.lang.ZZCZTMWJSCSBGMHZSC+"');</script>");
                 }
 
                 if (Directory.Exists(strDocSavePath) == false)
@@ -246,7 +246,7 @@ public partial class TTWZObjectBigEdit : System.Web.UI.Page
                 string strName = Path.GetFileNameWithoutExtension(strFileName2);
                 LT_Template.Text = "<a href=\"" + strUrl + "\" class=\"notTab\" target=\"_blank\">" + strName + "</a>";
 
-                string strCheckTemplateFileHQL = string.Format("select * from T_WZTemplateFile where TemplateType = 'MajorCategory'");   //ChineseWord
+                string strCheckTemplateFileHQL = string.Format("select * from T_WZTemplateFile where TemplateType = '大类'");
                 DataTable dtCheckTemplateFile = ShareClass.GetDataSetFromSql(strCheckTemplateFileHQL, "TemplateFile").Tables[0];
                 if (dtCheckTemplateFile != null && dtCheckTemplateFile.Rows.Count > 0)
                 {
@@ -262,17 +262,17 @@ public partial class TTWZObjectBigEdit : System.Web.UI.Page
                 else {
                     //不存在，添加
                     string strInsertTemplateFileSQL = string.Format(@"insert into T_WZTemplateFile(TemplateType,TemplateName,TemplateUrl)
-                                    values('{0}', '{1}','{2}')", "MajorCategory", strName, strUrl);   //ChineseWord
+                                    values('{0}', '{1}','{2}')", "大类", strName, strUrl);
                     ShareClass.RunSqlCommand(strInsertTemplateFileSQL);
                 }
 
-                Response.Write(LanguageHandle.GetWord("scriptalertShangChuanChengGong").ToString().Trim());
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCBJWJCG").ToString().Trim()+"')", true);
+                Response.Write("<script>alert('上传成功！');</script>");
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCBJWJCG+"')", true);
             }
             else
             {
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim()+"')", true);
-                Response.Write("<script>alert('"+LanguageHandle.GetWord("ZZZYSCDWJ").ToString().Trim()+"');</script>");
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZYSCDWJ+"')", true);
+                Response.Write("<script>alert('"+Resources.lang.ZZZYSCDWJ+"');</script>");
                 return;
             }
         }
@@ -283,7 +283,7 @@ public partial class TTWZObjectBigEdit : System.Web.UI.Page
 
     private void DataTemplateFileBinder()
     {
-        string strTemplateFileHQL = string.Format("select * from T_WZTemplateFile where TemplateType = 'MajorCategory'");   //ChineseWord
+        string strTemplateFileHQL = string.Format("select * from T_WZTemplateFile where TemplateType = '大类'");
         DataTable dtTemplateFile = ShareClass.GetDataSetFromSql(strTemplateFileHQL, "TemplateFile").Tables[0];
 
         if (dtTemplateFile != null && dtTemplateFile.Rows.Count > 0)

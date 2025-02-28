@@ -43,7 +43,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
     {
         TV_BigObject.Nodes.Clear();
         TreeNode Node = new TreeNode();
-        Node.Text = LanguageHandle.GetWord("SuoYouDaLei").ToString().Trim();
+        Node.Text = "所有大类";
         Node.Value = "all";
         string strDLSQL = "select * from T_WZMaterialDL order by DLCode";
         DataTable dtDL = ShareClass.GetDataSetFromSql(strDLSQL, "DL").Tables[0];
@@ -139,9 +139,9 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
                 {
                     WZMaterialZL wZMaterialZL = (WZMaterialZL)listZL[0];
 
-                    if (wZMaterialZL.CreateProgress != LanguageHandle.GetWord("LuRu").ToString().Trim() || wZMaterialZL.Creater != strUserCode)
+                    if (wZMaterialZL.CreateProgress != "录入" || wZMaterialZL.Creater != strUserCode)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBWLRHZBSCJRBYXBJ").ToString().Trim()+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBWLRHZBSCJRBYXBJ+"')", true);
                         return;
                     }
 
@@ -167,9 +167,9 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
                 {
                     WZMaterialZL wZMaterialZL = (WZMaterialZL)listZL[0];
 
-                    if (wZMaterialZL.CreateProgress != LanguageHandle.GetWord("LuRu").ToString().Trim() || wZMaterialZL.Creater != strUserCode)
+                    if (wZMaterialZL.CreateProgress != "录入" || wZMaterialZL.Creater != strUserCode)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBWLRHZBSCJRBYXSC").ToString().Trim()+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBWLRHZBSCJRBYXSC+"')", true);
                         return;
                     }
 
@@ -186,10 +186,10 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
             else if (cmdName == "request")
             {
                 string cmdArges = e.CommandArgument.ToString();
-                string strCmdHQL = "update T_WZMaterialZL set CreateProgress = 'Application' where ZLCode= '" + cmdArges + "'";   //ChineseWord
+                string strCmdHQL = "update T_WZMaterialZL set CreateProgress = '申请' where ZLCode= '" + cmdArges + "'";
                 ShareClass.RunSqlCommand(strCmdHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCG").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCG+"')", true);
 
                 //重新加载列表
                 string strTreeSelectedNode = TV_BigObject.SelectedValue;
@@ -201,10 +201,10 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
             else if (cmdName == "returnRequest")
             {
                 string cmdArges = e.CommandArgument.ToString();
-                string strCmdHQL = "update T_WZMaterialZL set CreateProgress = '录入' where ZLCode= '" + cmdArges + "'";   //ChineseWord
+                string strCmdHQL = "update T_WZMaterialZL set CreateProgress = '录入' where ZLCode= '" + cmdArges + "'";
                 ShareClass.RunSqlCommand(strCmdHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTHCG").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTHCG+"')", true);
 
                 //重新加载列表
                 string strTreeSelectedNode = TV_BigObject.SelectedValue;
@@ -237,23 +237,23 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
                 //判断中类代码的前两位是不是大类编码
                 if (strZLCode.Length != 4)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类代码应为4位，请修改！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类代码应为4位，请修改！');", true);
                     return;
                 }
                 else if (strTreeSelectedNode != strZLCode.Substring(0, 2))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类代码的前两位，与大类代码保持一致！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类代码的前两位，与大类代码保持一致！');", true);
                     return;
                 }
                 if (!ShareClass.CheckStringRight(strZLCode))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类代码不能是非法字符！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类代码不能是非法字符！');", true);
                     return;
                 }
 
                 if (string.IsNullOrEmpty(TXT_ZLName.Text.Trim()))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类名称不能为空，请补充！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类名称不能为空，请补充！');", true);
                     return;
                 }
 
@@ -263,7 +263,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
                 if (dtZL != null && dtZL.Rows.Count > 0)
                 {
                     //提示已经存在中类代码
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类代码已经存在，不能重复，请修改！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类代码已经存在，不能重复，请修改！');", true);
                     return;
                 }
                 else
@@ -273,12 +273,12 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
 
                     if (!ShareClass.CheckStringRight(strZLName))
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类名称不能是非法字符！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类名称不能是非法字符！');", true);
                         return;
                     }
                     if (strZLName.Length > 22)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类名称不能超过22个字符串！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类名称不能超过22个字符串！');", true);
                         return;
                     }
 
@@ -288,7 +288,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
                     if (dtZLName != null && dtZLName.Rows.Count > 0)
                     {
                         //提示已经存在中类代码
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类名称已经存在，不能重复，请修改！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类名称已经存在，不能重复，请修改！');", true);
                         return;
                     }
                     else
@@ -296,7 +296,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
 
                         if (!ShareClass.CheckStringRight(strZLDesc))
                         {
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类描述不能是非法字符！');", true);   //ChineseWord
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类描述不能是非法字符！');", true);
                             return;
                         }
 
@@ -305,7 +305,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
                         wZMaterialZL.ZLName = strZLName;
                         wZMaterialZL.ZLDesc = strZLDesc;
                         wZMaterialZL.IsMark = 0;
-                        wZMaterialZL.CreateProgress = LanguageHandle.GetWord("LuRu").ToString().Trim();
+                        wZMaterialZL.CreateProgress = "录入";
                         wZMaterialZL.Creater = Session["UserCode"] == null ? "" : Session["UserCode"].ToString().Trim();
                         wZMaterialZL.CreateTitle = 0;
 
@@ -321,7 +321,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
                         TXT_ZLName.BackColor = Color.White;
                         TXT_ZLDesc.BackColor = Color.White;
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('新建成功！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('新建成功！');", true);
                     }
                 }
             }
@@ -339,22 +339,22 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
 
                     if (string.IsNullOrEmpty(strZLCode))
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类代码不能为空，请补充！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类代码不能为空，请补充！');", true);
                         return;
                     }
                     if (strZLCode.Length != 4)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类代码只能为4位！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类代码只能为4位！');", true);
                         return;
                     }
                     if (!ShareClass.CheckStringRight(strZLName))
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类名称不能是非法字符！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类名称不能是非法字符！');", true);
                         return;
                     }
                     if (strZLName.Length > 22)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类名称不能超过22个字符串！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类名称不能超过22个字符串！');", true);
                         return;
                     }
 
@@ -366,14 +366,14 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
                         if (ShareClass.ObjectToString(dtZLName.Rows[0]["ZLCode"]) != strZLCode)
                         {
                             //提示已经存在中类名称
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类名称已经存在，不能重复，请修改！');", true);   //ChineseWord
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类名称已经存在，不能重复，请修改！');", true);
                             return;
                         }
                     }
 
                     if (!ShareClass.CheckStringRight(strZLDesc))
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类描述不能是非法字符！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类描述不能是非法字符！');", true);
                         return;
                     }
 
@@ -394,7 +394,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
                     TXT_ZLName.BackColor = Color.White;
                     TXT_ZLDesc.BackColor = Color.White;
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('修改成功！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('修改成功！');", true);
 
                 }
             }
@@ -404,7 +404,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
             //提示已经存在中类代码
             string strNewProgress = HF_NewProgress.Value;
             string strNewCreater = HF_NewCreater.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择大类代码节点！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择大类代码节点！');", true);
             return;
         }
     }
@@ -429,18 +429,18 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
             if (strZLCode.Length < 2 || strTreeSelectedNode.Length < 2)
             {
                 //提示已经存在中类代码
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('大类代码，或者中类代码不能少于2位！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('大类代码，或者中类代码不能少于2位！');", true);
                 return;
             }
             else if (strTreeSelectedNode != strZLCode.Substring(0, 2))
             {
                 //提示已经存在中类代码
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类代码的前两位，与大类代码保持一致！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类代码的前两位，与大类代码保持一致！');", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strZLCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类代码不能是非法字符！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类代码不能是非法字符！');", true);
                 return;
             }
 
@@ -450,7 +450,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
             if (dtZL != null && dtZL.Rows.Count > 0)
             {
                 //提示已经存在中类代码
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类代码已经存在，不能重复，请修改！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类代码已经存在，不能重复，请修改！');", true);
                 return;
             }
             else
@@ -460,12 +460,12 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
 
                 if (!ShareClass.CheckStringRight(strZLName))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类名称不能是非法字符！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类名称不能是非法字符！');", true);
                     return;
                 }
                 if (!ShareClass.CheckStringRight(strZLDesc))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类描述不能是非法字符！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类描述不能是非法字符！');", true);
                     return;
                 }
 
@@ -474,7 +474,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
                 wZMaterialZL.ZLName = strZLName;
                 wZMaterialZL.ZLDesc = strZLDesc;
                 wZMaterialZL.IsMark = 0;
-                wZMaterialZL.CreateProgress = LanguageHandle.GetWord("LuRu").ToString().Trim();
+                wZMaterialZL.CreateProgress = "录入";
                 wZMaterialZL.Creater = Session["UserCode"] == null ? "" : Session["UserCode"].ToString().Trim();
                 wZMaterialZL.CreateTitle = 0;
 
@@ -490,7 +490,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
                 TXT_ZLName.BackColor = Color.White;
                 TXT_ZLDesc.BackColor = Color.White;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('新建成功！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('新建成功！');", true);
             }
 
         }
@@ -499,7 +499,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
             //提示已经存在中类代码
             string strNewProgress = HF_NewProgress.Value;
             string strNewCreater = HF_NewCreater.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择大类代码节点！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择大类代码节点！');", true);
             return;
         }
     }
@@ -521,7 +521,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
             if (string.IsNullOrEmpty(HF_ZLCode.Value))
             {
                 //提示请先选择要修改的中类代码
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要修改的中类代码！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要修改的中类代码！');", true);
                 return;
             }
             else
@@ -538,17 +538,17 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
 
                     if (string.IsNullOrEmpty(strZLCode))
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类代码不能为空，请补充！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类代码不能为空，请补充！');", true);
                         return;
                     }
                     if (!ShareClass.CheckStringRight(strZLName))
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类名称不能是非法字符！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类名称不能是非法字符！');", true);
                         return;
                     }
                     if (!ShareClass.CheckStringRight(strZLDesc))
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类描述不能是非法字符！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('中类描述不能是非法字符！');", true);
                         return;
                     }
 
@@ -568,7 +568,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
                     TXT_ZLName.BackColor = Color.White;
                     TXT_ZLDesc.BackColor = Color.White;
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('修改成功！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('修改成功！');", true);
                 }
             }
         }
@@ -577,7 +577,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
             //提示已经存在中类代码
             string strNewProgress = HF_NewProgress.Value;
             string strNewCreater = HF_NewCreater.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择大类代码节点！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择大类代码节点！');", true);
             return;
         }
     }
@@ -673,7 +673,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
             //提示已经存在中类代码
             string strNewProgress = HF_NewProgress.Value;
             string strNewCreater = HF_NewCreater.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择大类代码节点！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择大类代码节点！');", true);
             return;
         }
     }
@@ -685,7 +685,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
         string strEditZLCode = HF_NewZLCode.Value;
         if (string.IsNullOrEmpty(strEditZLCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDZLLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDZLLB+"')", true);
             return;
         }
 
@@ -699,9 +699,9 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
         {
             WZMaterialZL wZMaterialZL = (WZMaterialZL)listZL[0];
 
-            if (wZMaterialZL.CreateProgress != LanguageHandle.GetWord("LuRu").ToString().Trim() || wZMaterialZL.Creater != strUserCode)
+            if (wZMaterialZL.CreateProgress != "录入" || wZMaterialZL.Creater != strUserCode)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBWLRHZBSCJRBYXBJ").ToString().Trim()+"');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBWLRHZBSCJRBYXBJ+"');", true);
                 return;
             }
 
@@ -727,7 +727,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
         string strEditZLCode = HF_NewZLCode.Value;
         if (string.IsNullOrEmpty(strEditZLCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDZLLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDZLLB+"')", true);
             return;
         }
 
@@ -738,11 +738,11 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
         {
             WZMaterialZL wZMaterialZL = (WZMaterialZL)listZL[0];
 
-            if (wZMaterialZL.CreateProgress != LanguageHandle.GetWord("LuRu").ToString().Trim() || wZMaterialZL.Creater != strUserCode)
+            if (wZMaterialZL.CreateProgress != "录入" || wZMaterialZL.Creater != strUserCode)
             {
                 string strNewProgress = HF_NewProgress.Value;
                 string strNewCreater = HF_NewCreater.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBWLRHZBSCJRBYXSC").ToString().Trim()+"');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBWLRHZBSCJRBYXSC+"');", true);
                 return;
             }
 
@@ -767,14 +767,14 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
         string strEditZLCode = HF_NewZLCode.Value;
         if (string.IsNullOrEmpty(strEditZLCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDZLLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDZLLB+"')", true);
             return;
         }
 
-        string strCmdHQL = "update T_WZMaterialZL set CreateProgress = 'Application' where ZLCode= '" + strEditZLCode + "'";   //ChineseWord
+        string strCmdHQL = "update T_WZMaterialZL set CreateProgress = '申请' where ZLCode= '" + strEditZLCode + "'";
         ShareClass.RunSqlCommand(strCmdHQL);
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCG").ToString().Trim()+"');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCG+"');", true);
 
         //重新加载列表
         string strTreeSelectedNode = TV_BigObject.SelectedValue;
@@ -791,14 +791,14 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
         string strEditZLCode = HF_NewZLCode.Value;
         if (string.IsNullOrEmpty(strEditZLCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDZLLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDZLLB+"')", true);
             return;
         }
 
-        string strCmdHQL = "update T_WZMaterialZL set CreateProgress = '录入' where ZLCode= '" + strEditZLCode + "'";   //ChineseWord
+        string strCmdHQL = "update T_WZMaterialZL set CreateProgress = '录入' where ZLCode= '" + strEditZLCode + "'";
         ShareClass.RunSqlCommand(strCmdHQL);
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTHCG").ToString().Trim()+"');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTHCG+"');", true);
 
         //重新加载列表
         string strTreeSelectedNode = TV_BigObject.SelectedValue;
@@ -847,7 +847,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
             //提示已经存在中类代码
             string strNewProgress = HF_NewProgress.Value;
             string strNewCreater = HF_NewCreater.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择大类代码节点！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择大类代码节点！');", true);
             return;
         }
     }
@@ -892,7 +892,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
             //提示已经存在中类代码
             string strNewProgress = HF_NewProgress.Value;
             string strNewCreater = HF_NewCreater.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择大类代码节点！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择大类代码节点！');", true);
             return;
         }
     }
@@ -938,7 +938,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
             //提示已经存在中类代码
             string strNewProgress = HF_NewProgress.Value;
             string strNewCreater = HF_NewCreater.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择大类代码节点！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择大类代码节点！');", true);
             return;
         }
     }
@@ -947,7 +947,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
     private void ControlStatusChange(string objProgress, string objCreater, string objUserCode)
     {
 
-        if (objProgress == LanguageHandle.GetWord("LuRu").ToString().Trim() && objCreater == objUserCode)
+        if (objProgress == "录入" && objCreater == objUserCode)
         {
             BT_NewEdit.Enabled = true;
             BT_NewDelete.Enabled = true;
@@ -955,7 +955,7 @@ public partial class TTWZObjectMiddleEdit : System.Web.UI.Page
             BT_NewApplyReturn.Enabled = false;
 
         }
-        else if (objProgress == LanguageHandle.GetWord("ShenQing").ToString().Trim() && objCreater == objUserCode)
+        else if (objProgress == "申请" && objCreater == objUserCode)
         {
             BT_NewEdit.Enabled = false;
             BT_NewDelete.Enabled = false;

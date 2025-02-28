@@ -96,21 +96,21 @@ public partial class TTWZPlanDetailEdit : System.Web.UI.Page
                 {
                     if (Decimal.Parse(strPlanNumber) == 0)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJHSLBXSXSHZZSBBNWL").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJHSLBXSXSHZZSBBNWL + "')", true);
                         return;
                     }
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZHSSLBXSXSHZZS").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZHSSLBXSXSHZZS + "')", true);
                     return;
                 }
                 if (!ShareClass.CheckIsNumber(strConvertPlanNumber))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZHSSLBXSXSHZZS").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZHSSLBXSXSHZZS + "')", true);
                     return;
                 }
                 if (!ShareClass.CheckStringRight(strRemark))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBZBNWFFZFC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBZBNWFFZFC + "')", true);
                     return;
                 }
 
@@ -174,7 +174,7 @@ public partial class TTWZPlanDetailEdit : System.Web.UI.Page
             }
         }
         catch (Exception ex) {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
         }
     }
 
@@ -187,12 +187,12 @@ public partial class TTWZPlanDetailEdit : System.Web.UI.Page
                 string strPlanNumber = TXT_PlanNumber.Text.Trim();
                 if (string.IsNullOrEmpty(strPlanNumber))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXTXJHSL").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXTXJHSL + "')", true);
                     return;
                 }
                 if (!ShareClass.CheckIsNumber(strPlanNumber))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJHSLBXWXSHZZS").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJHSLBXWXSHZZS + "')", true);
                     return;
                 }
 
@@ -201,7 +201,7 @@ public partial class TTWZPlanDetailEdit : System.Web.UI.Page
 
                 if(deciamlPlanNumber == 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJHSLBNWLQJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJHSLBNWLQJC + "')", true);
                     return;
                 }
 
@@ -217,7 +217,7 @@ public partial class TTWZPlanDetailEdit : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZJHMX").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZJHMX + "')", true);
                 return;
             }
         }
@@ -238,12 +238,12 @@ public partial class TTWZPlanDetailEdit : System.Web.UI.Page
                 string strConvertPlanNumber = TXT_ConvertPlanNumber.Text.Trim();
                 if (string.IsNullOrEmpty(strConvertPlanNumber))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXTXJHSL").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXTXJHSL + "')", true);
                     return;
                 }
                 if (!ShareClass.CheckIsNumber(strConvertPlanNumber))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJHSLBXWXSHZZS").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJHSLBXWXSHZZS + "')", true);
                     return;
                 }
 
@@ -252,7 +252,7 @@ public partial class TTWZPlanDetailEdit : System.Web.UI.Page
 
                 if (deciamlConvertPlanNumber == 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZHSSLBNWLQJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZHSSLBNWLQJC + "')", true);
                     return;
                 }
 
@@ -264,7 +264,7 @@ public partial class TTWZPlanDetailEdit : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZJHMX").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZJHMX + "')", true);
                 return;
             }
         }

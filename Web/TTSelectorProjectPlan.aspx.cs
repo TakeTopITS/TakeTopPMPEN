@@ -35,7 +35,7 @@ public partial class TTSelectorProjectPlan : System.Web.UI.Page
         string strProjectPlanHQL = string.Format(@"select p.*,COALESCE(r.PlanID,'0') as IsExist from T_Project p
                     left join T_ProjectPlanRelated_YYUP r on p.ProjectID = r.ProjectID
                     and r.PlanID = {0}
-                    where p.ProjectClass = 'TemplateProject'", strPlanID);   //ChineseWord
+                    where p.ProjectClass = 'TemplateProject'", strPlanID);   
         DataTable dtProjectPlan = ShareClass.GetDataSetFromSql(strProjectPlanHQL, "ProjectPlan").Tables[0];
 
         DG_List.DataSource = dtProjectPlan;

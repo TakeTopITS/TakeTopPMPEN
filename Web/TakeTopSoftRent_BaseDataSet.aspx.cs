@@ -109,7 +109,7 @@ public partial class TakeTopSoftRent_BaseDataSet : System.Web.UI.Page
                 }
                 catch
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSBJC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSBJC + "')", true);
                 }
             }
         }
@@ -193,7 +193,7 @@ public partial class TakeTopSoftRent_BaseDataSet : System.Web.UI.Page
         catch (Exception err)
         {
             LogClass.WriteLogFile("Error page: " + Request.Url.ToString() + "\n" + err.Message.ToString() + "\n" + err.StackTrace);
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSB + "')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','true') ", true);
         }
     }
@@ -242,7 +242,7 @@ public partial class TakeTopSoftRent_BaseDataSet : System.Web.UI.Page
 
             LoadRentSiteBaseData();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
         }
         catch (Exception err)
         {
@@ -321,16 +321,16 @@ public partial class TakeTopSoftRent_BaseDataSet : System.Web.UI.Page
 
                 LoadHomeSiteURL();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFZCG + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFZSBJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFZSBJC + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShiBaiYaoFuZhiDeZhanDianBuNe").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('失败，要复制的站点不能为空，请检查！')", true);
         }
     }
     protected void BT_CanUse_Click(object sender, EventArgs e)
@@ -367,12 +367,12 @@ public partial class TakeTopSoftRent_BaseDataSet : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZDiShiCiZhanDianDeShuJuYiYing").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('提示，此站点的数据已应用，不能删除，请检查！')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShiBaiYaoShanChuDeZhanDianBu").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('失败，要删除的站点不能为空，请检查！')", true);
 
         }
     }
@@ -386,7 +386,7 @@ public partial class TakeTopSoftRent_BaseDataSet : System.Web.UI.Page
 
         LoadRentSiteBaseData();
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZQuanBuGengXinChengGong").ToString().Trim()+"')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('全部更新成功！')", true);
     }
 
     protected void LoadRentSiteBaseData()

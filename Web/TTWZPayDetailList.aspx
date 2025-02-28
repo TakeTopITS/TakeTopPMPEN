@@ -180,13 +180,13 @@
                                                                                     <asp:BoundColumn DataField="CancelTime" HeaderText="报销日期">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="CompactCode" HeaderText="Contract Number">
+                                                                                    <asp:BoundColumn DataField="CompactCode" HeaderText="合同编号">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:BoundColumn DataField="SupplierCode" HeaderText="供方编号">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <%--<asp:BoundColumn DataField="Supplier" HeaderText="Supplier">
+                                                                                    <%--<asp:BoundColumn DataField="Supplier" HeaderText="供应商">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                                                     </asp:BoundColumn>--%>
                                                                                     <asp:TemplateColumn>
@@ -249,7 +249,7 @@
                                                                                     <asp:BoundColumn DataField="RequestCode" HeaderText="请款单号">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="CompactCode" HeaderText="Contract Number">
+                                                                                    <asp:BoundColumn DataField="CompactCode" HeaderText="合同编号">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:BoundColumn DataField="ProjectCode" HeaderText="项目编码">
@@ -270,7 +270,7 @@
                                                                                     <asp:BoundColumn DataField="Freight" HeaderText="运费">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="OtherObject" HeaderText="Other">
+                                                                                    <asp:BoundColumn DataField="OtherObject" HeaderText="其它">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:BoundColumn DataField="BorrowMoney" HeaderText="借款金额">
@@ -300,7 +300,7 @@
                                                                                     <asp:BoundColumn DataField="Arrearage" HeaderText="欠款">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                                                    <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:BoundColumn DataField="IsPay" HeaderText="付款标志">

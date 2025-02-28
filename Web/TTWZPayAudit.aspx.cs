@@ -63,13 +63,13 @@ public partial class TTWZPayAudit : System.Web.UI.Page
                 {
                     WZPay wZPay = (WZPay)listWZPay[0];
 
-                    if (wZPay.Progress != LanguageHandle.GetWord("BaoPi").ToString().Trim())
+                    if (wZPay.Progress != "报批")
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBSBPZTBNPZ").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBSBPZTBNPZ + "')", true);
                         return;
                     }
 
-                    wZPay.Progress = "Approved";
+                    wZPay.Progress = "批准";
 
                     wZPayBLL.UpdateWZPay(wZPay, wZPay.PayID);
 

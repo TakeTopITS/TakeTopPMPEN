@@ -540,7 +540,7 @@ public partial class TTLTCandidateInformation : System.Web.UI.Page
 
                                 ltCandidateInformation.CreateTime = DateTime.Now;
 
-                                ltCandidateInformation.Status = dr[i]["Status"].ToString().Trim() == "" ? "Employed" : dr[i]["Status"].ToString().Trim();   //ChineseWord
+                                ltCandidateInformation.Status = dr[i]["Status"].ToString().Trim() == "" ? "Employed" : dr[i]["Status"].ToString().Trim();   
                                 ltCandidateInformation.PhotoURL = "";
 
                                 ltCandidateInformationBLL.AddLTCandidateInformation(ltCandidateInformation);

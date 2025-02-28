@@ -195,7 +195,7 @@ public partial class TTProjectDetail : System.Web.UI.Page
                 Repeater3.DataSource = ds;
                 Repeater3.DataBind();
 
-                strHQL = "Select HomeModuleName, PageName || " + "'" + strProjectID + "' as ModulePage  From T_ProModuleLevelForPage Where ParentModule = 'PrincipalProjectFourthLine'  and LangCode = '" + strLangCode + "' and Visible ='YES' Order By SortNumber ASC";   //ChineseWord
+                strHQL = "Select HomeModuleName, PageName || " + "'" + strProjectID + "' as ModulePage  From T_ProModuleLevelForPage Where ParentModule = 'PrincipalProjectFourthLine'  and LangCode = '" + strLangCode + "' and Visible ='YES' Order By SortNumber ASC";   
                 ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProModuleLevelForPage");
                 Repeater4.DataSource = ds;
                 Repeater4.DataBind();
@@ -263,7 +263,7 @@ public partial class TTProjectDetail : System.Web.UI.Page
 
                 if (strLBWorkID == "-1")
                 {
-                    dailyWork.Type = "Lead";   //ChineseWord
+                    dailyWork.Type = "Lead";   
                     dailyWork.UserCode = strUserCode;
                     dailyWork.UserName = ShareClass.GetUserName(strUserCode);
                     dailyWork.WorkDate = DateTime.Now;
@@ -292,7 +292,7 @@ public partial class TTProjectDetail : System.Web.UI.Page
                         ShareClass.UpdateProjectCompleteDegree(strProjectID, deFinishPercent);
 
                         //取得提交的WorkID
-                        strHQL = "from DailyWork as dailyWork where dailyWork.Type = 'Lead' and dailyWork.ProjectID =" + strProjectID + " and " + " dailyWork.UserCode = " + "'" + strUserCode + "'" + " and " + "to_char(dailyWork.WorkDate,'yyyymmdd') = " + "'" + DateTime.Now.ToString("yyyyMMdd") + "'";   //ChineseWord
+                        strHQL = "from DailyWork as dailyWork where dailyWork.Type = 'Lead' and dailyWork.ProjectID =" + strProjectID + " and " + " dailyWork.UserCode = " + "'" + strUserCode + "'" + " and " + "to_char(dailyWork.WorkDate,'yyyymmdd') = " + "'" + DateTime.Now.ToString("yyyyMMdd") + "'";   
                         lst = dailyWorkBLL.GetAllDailyWorks(strHQL);
                         dailyWork = (DailyWork)lst[0];
                         LB_WorkID.Text = dailyWork.WorkID.ToString();

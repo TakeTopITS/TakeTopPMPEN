@@ -129,7 +129,7 @@
                                                                 <asp:BoundColumn DataField="PurchaseCode" HeaderText="采购编码">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="SupplierCode" HeaderText="Supplier">
+                                                                <asp:BoundColumn DataField="SupplierCode" HeaderText="供应商">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="15%" />
                                                                 </asp:BoundColumn>
                                                                 <%--<asp:BoundColumn DataField="SupplierName" HeaderText="供应商名称">
@@ -159,7 +159,7 @@
                                                                 <%--<asp:TemplateColumn>
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                     <ItemTemplate>
-                                                                        <input id='<%# Eval("SupplierCode") %>' type="radio" checked='<%# Eval("IsSelect") == "None" ? "false" : "true" %>' name="dlCode" />
+                                                                        <input id='<%# Eval("SupplierCode") %>' type="radio" checked='<%# Eval("IsSelect") == "没有" ? "false" : "true" %>' name="dlCode" />
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
                                                                 <asp:BoundColumn DataField="PurchaseCode" HeaderText="采购编码">
@@ -171,13 +171,13 @@
                                                                 <asp:BoundColumn DataField="SumApplyMoney" HeaderText="总价">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="SupplierCode" HeaderText="Supplier">
+                                                                <asp:BoundColumn DataField="SupplierCode" HeaderText="供应商">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:BoundColumn DataField="ProjectCode" HeaderText="项目编码">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="PurchaseMethod" HeaderText="Procurement Method">
+                                                                <asp:BoundColumn DataField="PurchaseMethod" HeaderText="采购方式">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:BoundColumn DataField="MarkTime" HeaderText="编制日期">
@@ -217,7 +217,7 @@
                                                         <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="确定" />
                                                         &nbsp;
                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                            type="button" value="Closed" />
+                                                            type="button" value="关闭" />
                                                     </div>
                                                 </td>
                                             </tr>

@@ -92,23 +92,23 @@ public partial class TTReqHandlePageThirdPart : System.Web.UI.Page
         SetReqRecordColor(ds, DataList_Handling, "InProgress");
 
         strHQL = "Select * from T_ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and reqAssignRecord.Status in ('Rejected','Suspended','Cancel','Completed','Completed') ";   //ChineseWord
+        strHQL += " and reqAssignRecord.Status in ('Rejected','Suspended','Cancel','Completed','Completed') ";   
         strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from T_Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by reqAssignRecord.MoveTime DESC limit 40";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_ReqAssignRecord");
         DataList_FinishedUnAssigned.DataSource = ds;
         DataList_FinishedUnAssigned.DataBind();
-        SetReqRecordColor(ds, DataList_FinishedUnAssigned, "Completed");   //ChineseWord
+        SetReqRecordColor(ds, DataList_FinishedUnAssigned, "Completed");   
 
 
         strHQL = "Select * from T_ReqAssignRecord as reqAssignRecord where reqAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and reqAssignRecord.status = 'Assigned'";   //ChineseWord
+        strHQL += " and reqAssignRecord.status = 'Assigned'";   
         strHQL += " and reqAssignRecord.ReqID in (select requirement.ReqID from T_Requirement as requirement where requirement.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by reqAssignRecord.MoveTime DESC limit 40";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_ReqAssignRecord");
         DataList_Assigned.DataSource = ds;
         DataList_Assigned.DataBind();
-        SetReqRecordColor(ds, DataList_Assigned, "Assigned");   //ChineseWord
+        SetReqRecordColor(ds, DataList_Assigned, "Assigned");   
 
 
     }

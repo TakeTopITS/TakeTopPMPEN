@@ -129,7 +129,7 @@
                                                                         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" ShowHeaderWhenEmpty="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowDataBound="GridView1_RowDataBound">
                                                                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                                                             <Columns>
-                                                                                <asp:BoundField DataField="ID" HeaderText="SerialNumber" />
+                                                                                <asp:BoundField DataField="ID" HeaderText="序号" />
                                                                                 <asp:BoundField DataField="CostFeeID" HeaderText="大类编号" />
                                                                                 <asp:BoundField DataField="Title" HeaderText="成本费项大类标题" />
                                                                                 <asp:BoundField DataField="CostFeeSubID" HeaderText="子类编号" />
@@ -146,7 +146,7 @@
                                                                                 <asp:BoundField DataField="ActualCost" HeaderText="实际成本" />
                                                                                 <asp:BoundField DataField="TargetCost" HeaderText="目标成本" />
                                                                                 <asp:BoundField DataField="LastTime" HeaderText="最后修改时间" />
-                                                                                <asp:CommandField ShowSelectButton="True" HeaderText="Operation" ButtonType="Button" />
+                                                                                <asp:CommandField ShowSelectButton="True" HeaderText="操作" ButtonType="Button" />
                                                                             </Columns>
                                                                             <EditRowStyle BackColor="#999999" />
                                                                             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

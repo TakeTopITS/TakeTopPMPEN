@@ -68,7 +68,7 @@ public partial class TTWZSupplierTemplateFileList : System.Web.UI.Page
                     //重新加载列表
                     DataBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
                 }
 
             }
@@ -91,12 +91,12 @@ public partial class TTWZSupplierTemplateFileList : System.Web.UI.Page
 
         if (string.IsNullOrEmpty(strTemplateContent))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSRRWLCNR").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSRRWLCNR+"')", true);
             return;
         }
         if (!ShareClass.CheckStringRight(strTemplateContent))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZRWLCNRBNWFFZFC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZRWLCNRBNWFFZFC+"')", true);
             return;
         }
 
@@ -110,7 +110,7 @@ public partial class TTWZSupplierTemplateFileList : System.Web.UI.Page
                 string strSupplierWorkFlowSQL = string.Format(@"update T_WZSupplierWorkFlow set TemplateContent = '{0}' where ID = {1}", strTemplateContent, strID);
                 ShareClass.RunSqlCommand(strSupplierWorkFlowSQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
             }
             catch (Exception ex) { }
         }
@@ -122,7 +122,7 @@ public partial class TTWZSupplierTemplateFileList : System.Web.UI.Page
                 string strSupplierWorkFlowSQL = string.Format(@"insert into T_WZSupplierWorkFlow(TemplateContent,CreateTime) values('{0}',now())", strTemplateContent);
                 ShareClass.RunSqlCommand(strSupplierWorkFlowSQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTJCG").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTJCG+"')", true);
             }
             catch (Exception ex) { }
         }

@@ -185,7 +185,7 @@
                                                             GridLines="None" ShowHeader="False" AllowPaging="True" OnPageIndexChanged="DataGrid2_PageIndexChanged">
 
                                                             <Columns>
-                                                                <asp:TemplateColumn HeaderText="Operation">
+                                                                <asp:TemplateColumn HeaderText="操作">
                                                                     <ItemTemplate>
                                                                         <asp:Button ID="BT_ID" runat="server" CssClass="inpu" Text='<%# DataBinder.Eval(Container.DataItem,"ID") %>' />
                                                                     </ItemTemplate>
@@ -195,7 +195,7 @@
 
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="6%" />
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="SupplierCode" HeaderText="UserCode">
+                                                                <asp:BoundColumn DataField="SupplierCode" HeaderText="用户代码">
                                                                     <HeaderStyle BorderColor="#394F66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True"
                                                                         HorizontalAlign="Center" />
 
@@ -249,7 +249,7 @@
                                                         </asp:DropDownList>
                                                         <asp:Label ID="Label14" runat="server" Text="<%$ Resources:lang,LeiXing %>"></asp:Label>：
                                                         <asp:DropDownList ID="DL_WFType" runat="server">
-                                                            <asp:ListItem Value="SupplierManagement" />
+                                                            <asp:ListItem Value="供应商管理" />
                                                         </asp:DropDownList><asp:HyperLink
                                                             ID="HL_WLTem" runat="server" NavigateUrl="~/TTWorkFlowTemplate.aspx" Target="_blank">
                                                             <asp:Label ID="Label13" runat="server" Text="<%$ Resources:lang,MuBanWeiHu %>"></asp:Label>
@@ -317,17 +317,17 @@
 
                                                             <ItemStyle CssClass="itemStyle" />
                                                             <Columns>
-                                                                <asp:BoundColumn DataField="WLID" HeaderText="Number">
+                                                                <asp:BoundColumn DataField="WLID" HeaderText="编号">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTMyWorkDetailMain.aspx?WLID={0}"
-                                                                    DataTextField="WLName" HeaderText="Workflow" Target="_blank">
+                                                                    DataTextField="WLName" HeaderText="工作流" Target="_blank">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="50%" />
                                                                 </asp:HyperLinkColumn>
                                                                 <asp:BoundColumn DataField="CreateTime" HeaderText="申请时间">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="20%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:TemplateColumn HeaderText="Status">
+                                                                <asp:TemplateColumn HeaderText="状态">
                                                                     <ItemTemplate>
                                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                     </ItemTemplate>

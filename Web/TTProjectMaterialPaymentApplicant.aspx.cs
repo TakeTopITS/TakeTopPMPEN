@@ -2031,7 +2031,7 @@ public partial class TTProjectMaterialPaymentApplicant : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'MaterialPurchasePayment'";   //ChineseWord
+        strHQL = "from WorkFlowTemplate as workFlowTemplate where workFlowTemplate.Type = 'MaterialPurchasePayment'";   
         strHQL += " and workFlowTemplate.Visible = 'YES' Order By workFlowTemplate.SortNumber ASC";
         WorkFlowTemplateBLL workFlowTemplateBLL = new WorkFlowTemplateBLL();
         lst = workFlowTemplateBLL.GetAllWorkFlowTemplates(strHQL);

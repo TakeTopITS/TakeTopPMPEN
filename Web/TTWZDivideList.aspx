@@ -109,7 +109,7 @@
                                                                     <a href='TTWZDivideEdit.aspx?strDivideCode=<%# DataBinder.Eval(Container.DataItem,"DivideCode") %>'>
                                                                         <asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,BianJi%>"></asp:Label></a>
                                                                     <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"DivideCode") %>' CommandName="del" CssClass="notTab" Visible='<%# Eval("IsMark").ToString()=="0" ? true : false %>'>É¾³ý</asp:LinkButton>
-                                                                    <%--<asp:Button runat="server" Text="Deleted" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"DivideCode") %>' CommandName="del" CssClass="inpu" Visible='<%# Eval("IsMark").ToString()=="0" ? true : false %>' />--%>
+                                                                    <%--<asp:Button runat="server" Text="É¾³ý" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"DivideCode") %>' CommandName="del" CssClass="inpu" Visible='<%# Eval("IsMark").ToString()=="0" ? true : false %>' />--%>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
                                                             <asp:BoundColumn DataField="DivideCode" HeaderText="×¨Òµ±àºÅ">

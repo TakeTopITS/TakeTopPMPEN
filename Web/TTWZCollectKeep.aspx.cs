@@ -53,11 +53,11 @@ public partial class TTWZCollectKeep : System.Web.UI.Page
                             left join T_ProjectMember n on c.Contacter = n.UserCode 
                             left join T_ProjectMember f on c.FinanceApprove = f.UserCode
                             where c.Safekeeper ='{0}' 
-                            and c.Progress in('开票','MaterialReceipt')  ", strUserCode);   //ChineseWord
+                            and c.Progress in('开票','收料')  ", strUserCode);
 
 
         string strProgress = DDL_Progress.SelectedValue;
-        if (!string.IsNullOrEmpty(strProgress) & strProgress != LanguageHandle.GetWord("QuanBu").ToString().Trim())
+        if (!string.IsNullOrEmpty(strProgress) & strProgress != "全部")
         {
             strCollectHQL += " and c.Progress = '" + strProgress + "'";
         }
@@ -83,29 +83,29 @@ public partial class TTWZCollectKeep : System.Web.UI.Page
             if (listCollect != null && listCollect.Count == 1)
             {
                 WZCollect wZCollect = (WZCollect)listCollect[0];
-                if (wZCollect.Progress == LanguageHandle.GetWord("KaiPiao").ToString().Trim())
+                if (wZCollect.Progress == "开票")
                 {
-                    wZCollect.Progress = LanguageHandle.GetWord("ShouLiao").ToString().Trim();
+                    wZCollect.Progress = "收料";
                     wZCollect.IsMark = -1;
                     wZCollect.CollectTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
                     string strMessage = AccountHandler(wZCollect.CollectCode);
 
-                    if (strMessage == "Success")
+                    if (strMessage == "成功")
                     {
                         //重新加载收料单列表
                         DataCollectBinder();
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSZCG").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSZCG + "')", true);
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSB").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSB + "')", true);
                     }
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCSB").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCSB + "')", true);
                     return;
                 }
             }
@@ -130,20 +130,20 @@ public partial class TTWZCollectKeep : System.Web.UI.Page
                 //    string strCollectTime = DateTime.Parse(wZCollect.CollectTime).ToString("yyyy-MM-01");
 
                 //if (strCurrentTime == strCollectTime && wZCollect.IsMark == -1)
-                if (wZCollect.Progress == LanguageHandle.GetWord("ShouLiao").ToString().Trim())
+                if (wZCollect.Progress == "收料")
                 {
-                    wZCollect.Progress = LanguageHandle.GetWord("KaiPiao").ToString().Trim();
+                    wZCollect.Progress = "开票";
                     wZCollect.IsMark = 0;
                     wZCollect.CollectTime = "";
 
                     string strMessage = NotAccountHandler(wZCollect.CollectCode);
 
-                    if (strMessage == "Success")
+                    if (strMessage == "成功")
                     {
                         //重新加载收料单列表
                         DataCollectBinder();
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTDCG").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTDCG + "')", true);
                     }
                     else
                     {
@@ -152,13 +152,13 @@ public partial class TTWZCollectKeep : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLRBSDNYHZJSBJBW1BNTD").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSLRBSDNYHZJSBJBW1BNTD + "')", true);
                     return;
                 }
                 //}
                 //else
                 //{
-                //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSTRMESSAGE").ToString().Trim() + "')", true);
+                //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSTRMESSAGE + "')", true);
                 //}
             }
         }
@@ -207,7 +207,7 @@ public partial class TTWZCollectKeep : System.Web.UI.Page
                     WZStore wZStore = (WZStore)lstWZStore[0];
                     if (wZStore.DownDesc == -1 || wZStore.WearyDesc == -1)
                     {
-                        strResult = LanguageHandle.GetWord("JiYaJiHuaHeJianZhiJiHuaBuWei0X").ToString().Trim();
+                        strResult = "积压计划和减值计划不为0，先平库，后采购！";
                         return strResult;
                     }
 
@@ -243,7 +243,7 @@ public partial class TTWZCollectKeep : System.Web.UI.Page
 
                     //收料单<收料日期>=系统日期，进度=收料，结算标记=-1
                     wZCollect.CollectTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                    wZCollect.Progress = LanguageHandle.GetWord("ShouLiao").ToString().Trim();
+                    wZCollect.Progress = "收料";
                     wZCollect.IsMark = -1;
                     //修改收料单
                     wZCollectBLL.UpdateWZCollect(wZCollect, wZCollect.CollectCode);
@@ -289,16 +289,16 @@ public partial class TTWZCollectKeep : System.Web.UI.Page
                         wZProjectBLL.UpdateWZProject(wZProject, wZProject.ProjectCode);
                     }
 
-                    //计划明细<进度> = LanguageHandle.GetWord("ShouLiao").ToString().Trim()
-                    string strPlanDetailHQL = "update T_WZPickingPlanDetail set Progress = 'MaterialReceipt' where ID = " + wZCollect.PlanDetailID;   //ChineseWord
+                    //计划明细<进度> = "收料"
+                    string strPlanDetailHQL = "update T_WZPickingPlanDetail set Progress = '收料' where ID = " + wZCollect.PlanDetailID;
                     ShareClass.RunSqlCommand(strPlanDetailHQL);
 
-                    strResult = "Success";
+                    strResult = "成功";
                 }
                 else if (lstWZStore.Count > 1)
                 {
                     //库存中存在多个当前物资
-                    strResult = LanguageHandle.GetWord("KuCunZhongCunZaiDuoGeKuBieWuZi").ToString().Trim() + strStockCode + "," + strObjectCode + "," + strCheckCode + ")";
+                    strResult = "库存中存在多个，库别，物资代码，检号一样的(" + strStockCode + "," + strObjectCode + "," + strCheckCode + ")";
                     return strResult;
                 }
                 else
@@ -345,7 +345,7 @@ public partial class TTWZCollectKeep : System.Web.UI.Page
                     //收料单<收料日期>=系统日期，进度=收料，结算标记=-1
                     //wZCollect.CollectTime = DateTime.Now;
                     wZCollect.CollectTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                    wZCollect.Progress = LanguageHandle.GetWord("ShouLiao").ToString().Trim();
+                    wZCollect.Progress = "收料";
                     wZCollect.IsMark = -1;
 
                     //修改收料单
@@ -392,11 +392,11 @@ public partial class TTWZCollectKeep : System.Web.UI.Page
                         wZProjectBLL.UpdateWZProject(wZProject, wZProject.ProjectCode);
                     }
 
-                    //计划明细<进度> = LanguageHandle.GetWord("ShouLiao").ToString().Trim()
-                    string strPlanDetailHQL = "update T_WZPickingPlanDetail set Progress = 'MaterialReceipt' where ID = " + wZCollect.PlanDetailID;   //ChineseWord
+                    //计划明细<进度> = "收料"
+                    string strPlanDetailHQL = "update T_WZPickingPlanDetail set Progress = '收料' where ID = " + wZCollect.PlanDetailID;
                     ShareClass.RunSqlCommand(strPlanDetailHQL);
 
-                    strResult = "Success";
+                    strResult = "成功";
                 }
             }
         }
@@ -499,7 +499,7 @@ public partial class TTWZCollectKeep : System.Web.UI.Page
 
                     //收料单进度=开票，结算标记=0
                     wZCollect.CollectTime = "-";
-                    wZCollect.Progress = LanguageHandle.GetWord("KaiPiao").ToString().Trim();
+                    wZCollect.Progress = "开票";
                     wZCollect.IsMark = 0;
                     //修改收料单
                     wZCollectBLL.UpdateWZCollect(wZCollect, wZCollect.CollectCode);
@@ -545,15 +545,15 @@ public partial class TTWZCollectKeep : System.Web.UI.Page
                         wZProjectBLL.UpdateWZProject(wZProject, wZProject.ProjectCode);
                     }
 
-                    //计划明细<进度> = "Contract"
-                    string strPlanDetailHQL = "update T_WZPickingPlanDetail set Progress = 'Contract' where ID = " + wZCollect.PlanDetailID;   //ChineseWord
+                    //计划明细<进度> = "合同"
+                    string strPlanDetailHQL = "update T_WZPickingPlanDetail set Progress = '合同' where ID = " + wZCollect.PlanDetailID;
                     ShareClass.RunSqlCommand(strPlanDetailHQL);
 
-                    strResult = "Success";
+                    strResult = "成功";
                 }
                 else
                 {
-                    strResult = LanguageHandle.GetWord("JingGaoKuCunZhongBuCunZaiDangQ").ToString().Trim();
+                    strResult = "警告，库存中不存在当前物资，请检查！";
                 }
             }
         }

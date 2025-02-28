@@ -23,7 +23,7 @@ public partial class _default : System.Web.UI.Page
         {
             //应用会话对象，以保持在线连接
             Session["UserCode"] = "C7094";
-            Session["UserName"] = LanguageHandle.GetWord("YuanGongC7094").ToString().Trim();
+            Session["UserName"] = "员工C7094";
             Session["IsMobileDevice"] = "NO";
             Session["IsMobileDevice"] = "NO";
             Session["SystemType"] = "WEB";

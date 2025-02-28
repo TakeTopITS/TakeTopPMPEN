@@ -96,22 +96,22 @@ public partial class TTDefectHandlePage : System.Web.UI.Page
         SetDefectRecordColor(ds, DataList_Handling, "InProgress");
 
         strHQL = "Select * from T_DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and defectAssignRecord.Status in ('Rejected','Suspended','Cancel','Completed','Completed')";   //ChineseWord
+        strHQL += " and defectAssignRecord.Status in ('Rejected','Suspended','Cancel','Completed','Completed')";   
         strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from T_Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by defectAssignRecord.MoveTime DESC limit 40";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_DefectAssignRecord");
         DataList_FinishedUnAssigned.DataSource = ds;
         DataList_FinishedUnAssigned.DataBind();
-        SetDefectRecordColor(ds, DataList_FinishedUnAssigned, "Completed");   //ChineseWord
+        SetDefectRecordColor(ds, DataList_FinishedUnAssigned, "Completed");   
 
         strHQL = "Select * from T_DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and defectAssignRecord.Status = 'Assigned'";   //ChineseWord
+        strHQL += " and defectAssignRecord.Status = 'Assigned'";   
         strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from T_Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by defectAssignRecord.MoveTime DESC limit 40";
         ds = ShareClass.GetDataSetFromSql(strHQL, "T_DefectAssignRecord");
         DataList_Assigned.DataSource = ds;
         DataList_Assigned.DataBind();
-        SetDefectRecordColor(ds, DataList_Assigned,"Assigned");   //ChineseWord
+        SetDefectRecordColor(ds, DataList_Assigned,"Assigned");   
     }
 
     protected void LoadDefectment(string strUserCode)

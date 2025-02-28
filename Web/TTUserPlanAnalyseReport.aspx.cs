@@ -234,8 +234,8 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
            
             if (strPlanOperator == "<")
             {
-                strHQL = "Select UserCode 'Code',UserName 'Name',Gender 'Gender',Age 'Age',DepartCode 'DepartmentCode',DepartName 'DepartmentName'," +   //ChineseWord
-               "Duty 'Responsibility',OfficePhone 'OfficePhone',MobilePhone 'MobilePhone',EMail 'EMail',WorkScope 'ScopeOfWork',JoinDate 'JoinDate',Status 'Status'," +   //ChineseWord
+                strHQL = "Select UserCode 'Code',UserName 'Name',Gender 'Gender',Age 'Age',DepartCode 'DepartmentCode',DepartName 'DepartmentName'," +   
+               "Duty 'Responsibility',OfficePhone 'OfficePhone',MobilePhone 'MobilePhone',EMail 'EMail',WorkScope 'ScopeOfWork',JoinDate 'JoinDate',Status 'Status'," +   
                LanguageHandle.GetWord("RefUserCodeCanKaoGongHaoIDCard").ToString().Trim() +
                "From T_ProjectMember Where DepartCode in " + strDepartString + " ";
 
@@ -255,8 +255,8 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
             }
             else
             {
-                strHQL = "Select B.UserCode 'Code',B.UserName 'Name',B.Gender 'Gender',B.Age 'Age',B.DepartCode 'DepartmentCode',B.DepartName 'DepartmentName'," +   //ChineseWord
-               "B.Duty 'Responsibility',B.OfficePhone 'OfficePhone',B.MobilePhone 'MobilePhone',B.EMail 'EMail',B.WorkScope 'ScopeOfWork',B.JoinDate 'JoinDate',B.Status 'Status'," +   //ChineseWord
+                strHQL = "Select B.UserCode 'Code',B.UserName 'Name',B.Gender 'Gender',B.Age 'Age',B.DepartCode 'DepartmentCode',B.DepartName 'DepartmentName'," +   
+               "B.Duty 'Responsibility',B.OfficePhone 'OfficePhone',B.MobilePhone 'MobilePhone',B.EMail 'EMail',B.WorkScope 'ScopeOfWork',B.JoinDate 'JoinDate',B.Status 'Status'," +   
                LanguageHandle.GetWord("BRefUserCodeCanKaoGongHaoBIDCa").ToString().Trim() +
                "From T_Plan A, T_ProjectMember B Where A.CreatorCode = B.UserCode and B.DepartCode in " + strDepartString + " ";
 
@@ -281,8 +281,8 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
         {
             if (strPlanOperator == "<")
             {
-                strHQL = "Select UserCode 'Code',UserName 'Name',Gender 'Gender',Age 'Age',DepartCode 'DepartmentCode',DepartName 'DepartmentName'," +   //ChineseWord
-                "Duty 'Responsibility',OfficePhone 'OfficePhone',MobilePhone 'MobilePhone',EMail 'EMail',WorkScope 'ScopeOfWork',JoinDate 'JoinDate',Status 'Status'," +   //ChineseWord
+                strHQL = "Select UserCode 'Code',UserName 'Name',Gender 'Gender',Age 'Age',DepartCode 'DepartmentCode',DepartName 'DepartmentName'," +   
+                "Duty 'Responsibility',OfficePhone 'OfficePhone',MobilePhone 'MobilePhone',EMail 'EMail',WorkScope 'ScopeOfWork',JoinDate 'JoinDate',Status 'Status'," +   
                 LanguageHandle.GetWord("RefUserCodeCanKaoGongHaoIDCard").ToString().Trim() +
                 "From T_ProjectMember Where DepartCode = '" + strDepartCode + "'";
                 strHQL += " and UserCode in (Select UserCode From T_SystemActiveUser )";
@@ -293,8 +293,8 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
             }
             else
             {
-                strHQL = "Select B.UserCode 'Code',B.UserName 'Name',B.Gender 'Gender',B.Age 'Age',B.DepartCode 'DepartmentCode',B.DepartName 'DepartmentName'," +   //ChineseWord
-               "B.Duty 'Responsibility',B.OfficePhone 'OfficePhone',B.MobilePhone 'MobilePhone',B.EMail 'EMail',B.WorkScope 'ScopeOfWork',B.JoinDate 'JoinDate',B.Status 'Status'," +   //ChineseWord
+                strHQL = "Select B.UserCode 'Code',B.UserName 'Name',B.Gender 'Gender',B.Age 'Age',B.DepartCode 'DepartmentCode',B.DepartName 'DepartmentName'," +   
+               "B.Duty 'Responsibility',B.OfficePhone 'OfficePhone',B.MobilePhone 'MobilePhone',B.EMail 'EMail',B.WorkScope 'ScopeOfWork',B.JoinDate 'JoinDate',B.Status 'Status'," +   
                LanguageHandle.GetWord("BRefUserCodeCanKaoGongHaoBIDCa").ToString().Trim() +
                "From T_Plan A, T_ProjectMember B Where A.CreatorCode = B.UserCode and B.DepartCode  = '" + strDepartCode + "'";
 
@@ -326,11 +326,11 @@ public partial class TTUserPlanAnalyseReport : System.Web.UI.Page
         IList lst = systemActiveUserBLL.GetAllSystemActiveUsers(strHQL);
         if (lst.Count > 0 && lst != null)
         {
-            return "Enabled";   //ChineseWord
+            return "Enabled";   
         }
         else
         {
-            return "NotEnabled";   //ChineseWord
+            return "NotEnabled";   
         }
     }
 }

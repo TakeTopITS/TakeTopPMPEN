@@ -128,12 +128,12 @@
                                                                                     <asp:Label ID="Label11" runat="server" Text="<%$ Resources:lang,ShanChu%>"></asp:Label></asp:LinkButton>
                                                                                 <%--<asp:Button ID="BT_ID" runat="server" ForeColor="Black" Text="编辑" CommandName='edit'
                                                                                     CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CssClass="inpu" />--%>
-                                                                                <%--<asp:Button ID="Button1" runat="server" ForeColor="Black" Text="Deleted" CommandName='del'
+                                                                                <%--<asp:Button ID="Button1" runat="server" ForeColor="Black" Text="删除" CommandName='del'
                                                                                     CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CssClass="inpu" />--%>
                                                                             </ItemTemplate>
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
+                                                                        <asp:BoundColumn DataField="ID" HeaderText="序号">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="30%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="UnitName" HeaderText="计量单位">

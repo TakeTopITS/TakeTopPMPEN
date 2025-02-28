@@ -266,7 +266,7 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
             defectAssignRecordBLL.AddDefectAssignRecord(defectAssignRecord);
 
             //更改前缺陷分派记录状态
-            updateDefectAssignRecordStatus(intPriorID, "Assigned");   //ChineseWord
+            updateDefectAssignRecordStatus(intPriorID, "Assigned");   
 
             LoadAssignRecord(strID);
             LoadChildRecord(strID);
@@ -453,7 +453,7 @@ public partial class TTDefectDetailThirdPart : System.Web.UI.Page
                 project.Status = "New";
                 project.StatusValue = "InProgress";
 
-                project.CurrencyType = "Renminbi";   //ChineseWord
+                project.CurrencyType = "Renminbi";   
                 project.ParentID = intParentID;
 
                 try

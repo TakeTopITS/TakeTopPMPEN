@@ -1608,8 +1608,8 @@ public partial class TTItemDataAndBomSet : System.Web.UI.Page
 
                                 item.ItemCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
                                 item.ItemName = dr[i][LanguageHandle.GetWord("MingChen").ToString().Trim()].ToString().Trim();
-                                item.Type = dr[i]["属性（采购件、自制件、外协件、交付件）"].ToString().Trim();   //ChineseWord
-                                strBigType = dr[i]["大类（物料、资产）"].ToString().Trim();   //ChineseWord
+                                item.Type = dr[i]["属性（采购件、自制件、外协件、交付件）"].ToString().Trim();   
+                                strBigType = dr[i]["大类（物料、资产）"].ToString().Trim();   
 
                                 item.BigType = "";
                                 if (strBigType == LanguageHandle.GetWord("WuLiao").ToString().Trim())
@@ -1622,14 +1622,14 @@ public partial class TTItemDataAndBomSet : System.Web.UI.Page
                                 }
 
 
-                                item.SmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim();   //ChineseWord
+                                item.SmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim();   
                                 item.Specification = dr[i][LanguageHandle.GetWord("GuiGe").ToString().Trim()].ToString().Trim();
                                 item.ModelNumber = dr[i][LanguageHandle.GetWord("XingHao").ToString().Trim()].ToString().Trim();
                                 item.Brand = dr[i][LanguageHandle.GetWord("PinPai").ToString().Trim()].ToString().Trim();
                                 item.Unit = dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim();
 
                                 item.RegistrationNumber = dr[i][LanguageHandle.GetWord("ZhuCeZhengHao").ToString().Trim()].ToString().Trim();
-                                item.PackingType = dr[i]["PackagingMethod"].ToString().Trim();   //ChineseWord
+                                item.PackingType = dr[i]["PackagingMethod"].ToString().Trim();   
 
                                 item.PULeadTime = dePULeadTime;
                                 item.MFLeadTime = deMFCost;
@@ -1770,14 +1770,14 @@ public partial class TTItemDataAndBomSet : System.Web.UI.Page
                         {
                             CheckAndAddUnit(dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim());
 
-                            string strBigType = dr[i]["大类（物料、资产）"].ToString().Trim();   //ChineseWord
+                            string strBigType = dr[i]["大类（物料、资产）"].ToString().Trim();   
                             if (strBigType != LanguageHandle.GetWord("WuLiao").ToString().Trim() & strBigType != "Assets")
                             {
                                 ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click444", "alert('" +LanguageHandle.GetWord("ZZDaoRuShiBaiDaLeiZhiNengSheWe").ToString().Trim()+"')", true);
                                 j = -1;
                             }
 
-                            string strSmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim();   //ChineseWord
+                            string strSmallType = dr[i]["小类（物料或资产类型）"].ToString().Trim();   
                             if (CheckSmallType(strSmallType, strBigType) == 0)
                             {
                                 if (strBigType != LanguageHandle.GetWord("WuLiao").ToString().Trim())
@@ -2331,7 +2331,7 @@ public partial class TTItemDataAndBomSet : System.Web.UI.Page
         }
 
         strFileName = "ITEM-" + strChildItemCode + "-Ver-" + " BOMData.xls";
-        strHQL = "Select ItemCode as  \"特料代码\",ItemName as  \"物料名称\",Type as \"类型\",ModelNumber as \"型号\",Specification as \"规格\",Brand as \"品牌\",Number as  \"用量\", Unit as \"单位\" From T_ItemRelatedOrderBomToExpendDetailData Where RelatedType = " + "'" + strRelatedType + "'" + " and RelatedID = " + strRelatedID;   //ChineseWord
+        strHQL = "Select ItemCode as  \"特料代码\",ItemName as  \"物料名称\",Type as \"类型\",ModelNumber as \"型号\",Specification as \"规格\",Brand as \"品牌\",Number as  \"用量\", Unit as \"单位\" From T_ItemRelatedOrderBomToExpendDetailData Where RelatedType = " + "'" + strRelatedType + "'" + " and RelatedID = " + strRelatedID;   
         strHQL += " Order By OrderTime DESC";
         MSExcelHandler.DataTableToExcel(strHQL, strFileName);
     }

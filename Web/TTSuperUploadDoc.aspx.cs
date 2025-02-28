@@ -306,7 +306,7 @@ public partial class TTSuperUploadDoc : System.Web.UI.Page
 
                             Document document = new Document();
 
-                            document.RelatedType = "KnowledgeManagement";   //ChineseWord
+                            document.RelatedType = "KnowledgeManagement";   
                             document.DocTypeID = int.Parse(strDocTypeID);
                             document.DocType = strDocType;
                             document.Author = strAuthor;

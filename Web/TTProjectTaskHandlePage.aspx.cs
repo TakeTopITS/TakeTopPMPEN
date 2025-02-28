@@ -96,7 +96,7 @@ public partial class TTProjectTaskHandlePage : System.Web.UI.Page
             SetTaskRecordColorForDataList(ds, DataList_Handling, "InProgress");
 
             strHQL = "Select * from T_TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and taskAssignRecord.Status in ('Rejected','Suspended','Cancel','Completed','Completed') ";   //ChineseWord
+            strHQL += " and taskAssignRecord.Status in ('Rejected','Suspended','Cancel','Completed','Completed') ";   
             strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask  where projectTask.Status <> 'Closed')";
             strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.ProjectID = " + strProjectID + " and project.Status not in ('New','Hided','Deleted','Archived')))";
             strHQL += " Order by taskAssignRecord.MoveTime DESC limit 40";
@@ -108,14 +108,14 @@ public partial class TTProjectTaskHandlePage : System.Web.UI.Page
 
             strHQL = "Select * from T_TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
             //strHQL += " and (taskAssignRecord.ID in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) and  taskAssignRecord.Status in ('Rejected','Suspended','Cancel','Plan','Accepted','ToHandle','InProgress','InProgress','Completed','Completed','Assigned'))";
-            strHQL += " and  taskAssignRecord.Status = 'Assigned'";   //ChineseWord
+            strHQL += " and  taskAssignRecord.Status = 'Assigned'";   
             strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.Status <> 'Closed')";
             strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.ProjectID = " + strProjectID + " and project.Status not in ('New','Hided','Deleted','Archived')))";
             strHQL += " Order by taskAssignRecord.MoveTime DESC limit 40";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_TaskAssignRecord");
             DataList_Assigned.DataSource = ds;
             DataList_Assigned.DataBind();
-            SetTaskRecordColorForDataList(ds, DataList_Assigned, "Assigned");   //ChineseWord
+            SetTaskRecordColorForDataList(ds, DataList_Assigned, "Assigned");   
         }
         else
         {
@@ -140,26 +140,26 @@ public partial class TTProjectTaskHandlePage : System.Web.UI.Page
             SetTaskRecordColorForDataList(ds, DataList_Handling,"Processed");
 
             strHQL = "Select * from T_TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and taskAssignRecord.Status in ('Rejected','Suspended','Cancel','Completed','Completed') ";   //ChineseWord
+            strHQL += " and taskAssignRecord.Status in ('Rejected','Suspended','Cancel','Completed','Completed') ";   
             strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask  where projectTask.Status <> 'Closed')";
             strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.ProjectID <> 1 and project.Status not in ('New','Hided','Deleted','Archived')))";
             strHQL += " Order by taskAssignRecord.MoveTime DESC limit 40";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_TaskAssignRecord");
             DataList_FinishedUnAssigned.DataSource = ds;
             DataList_FinishedUnAssigned.DataBind();
-            SetTaskRecordColorForDataList(ds, DataList_FinishedUnAssigned,"Completed");   //ChineseWord
+            SetTaskRecordColorForDataList(ds, DataList_FinishedUnAssigned,"Completed");   
 
 
             strHQL = "Select * from T_TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
             //strHQL += " and (taskAssignRecord.ID in (select taskAssignRecord.PriorID from T_TaskAssignRecord as taskAssignRecord) and  taskAssignRecord.Status in ('Rejected','Suspended','Cancel','Plan','Accepted','ToHandle','InProgress','InProgress','Completed','Completed','Assigned'))";
-            strHQL += " and taskAssignRecord.Status = 'Assigned'";   //ChineseWord
+            strHQL += " and taskAssignRecord.Status = 'Assigned'";   
             strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.Status <> 'Closed')";
             strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from T_ProjectTask as projectTask where projectTask.ProjectID in (select project.ProjectID from T_Project as project where project.ProjectID <> 1 and project.Status not in ('New','Hided','Deleted','Archived')))";
             strHQL += " Order by taskAssignRecord.MoveTime DESC limit 40";
             ds = ShareClass.GetDataSetFromSql(strHQL, "T_TaskAssignRecord");
             DataList_Assigned.DataSource = ds;
             DataList_Assigned.DataBind();
-            SetTaskRecordColorForDataList(ds, DataList_Assigned, "Assigned");   //ChineseWord
+            SetTaskRecordColorForDataList(ds, DataList_Assigned, "Assigned");   
         }
     }
 

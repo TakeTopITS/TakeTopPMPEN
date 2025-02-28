@@ -135,12 +135,12 @@
                                                         </td>
                                                         <td style="text-align: left" class="formItemBgStyle" colspan="5">
                                                             <asp:DropDownList ID="DDL_PurchaseMethod" runat="server">
-                                                                <asp:ListItem Text="<%$ Resources:lang,XunBiJia%>" Value="Inquiry and Comparison" />
-                                                                <asp:ListItem Text="<%$ Resources:lang,ZhaoBiao%>" Value="Tendering" />
-                                                                <asp:ListItem Text="<%$ Resources:lang,KuangJia%>" Value="Framework" />
+                                                                <asp:ListItem Text="<%$ Resources:lang,XunBiJia%>" Value="询比价" />
+                                                                <asp:ListItem Text="<%$ Resources:lang,ZhaoBiao%>" Value="招标" />
+                                                                <asp:ListItem Text="<%$ Resources:lang,KuangJia%>" Value="框架" />
                                                                 <asp:ListItem Text="<%$ Resources:lang,DuJia%>" Value="独家" />
                                                                 <asp:ListItem Text="<%$ Resources:lang,YiJia%>" Value="议价" />
-                                                                <asp:ListItem Text="<%$ Resources:lang,JinJi%>" Value="Emergency" />
+                                                                <asp:ListItem Text="<%$ Resources:lang,JinJi%>" Value="紧急" />
                                                                 <asp:ListItem Text="<%$ Resources:lang,XiaoE%>" Value="小额" />
                                                             </asp:DropDownList>
                                                         </td>
@@ -316,7 +316,7 @@
                                                         <td style="text-align: center" class="formItemBgStyle" colspan="6">
                                                             <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnOK_Click" />&nbsp;
                                                             <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                                type="button" value="Closed" />
+                                                                type="button" value="关闭" />
                                                         </td>
                                                     </tr>
                                                 </table>

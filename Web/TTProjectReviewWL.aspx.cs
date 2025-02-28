@@ -38,7 +38,7 @@ public partial class TTProjectReviewWL : System.Web.UI.Page
 
         if (strReviewType == "Status")
         {
-            strReviewType = "Status";   //ChineseWord
+            strReviewType = "Status";   
             TB_WLKey.Text = "StatusReview";
         }
 

@@ -27493,4 +27493,13 @@
   <data name="ZZJGWEBYHYJZGSQWEBYHSQJC" xml:space="preserve">
     <value>警告，WEB用户数已经超过授权的WEB用户数，请检查！</value>
   </data>
+  <data name="JiaoFuJingDu" xml:space="preserve">
+    <value>交付进度</value>
+  </data>
+  <data name="JiaoFu" xml:space="preserve">
+    <value>交付</value>
+  </data>
+  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
+    <value>没有找到相应的拜访记录!</value>
+  </data>
 </root>

@@ -162,7 +162,7 @@
                                                                 <asp:BoundColumn DataField="ExpertCode" HeaderText="专家编号">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
-                                                                <%--<asp:BoundColumn DataField="Name" HeaderText="Name">
+                                                                <%--<asp:BoundColumn DataField="Name" HeaderText="姓名">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>--%>
                                                                 <asp:TemplateColumn>
@@ -186,7 +186,7 @@
                                                                         <%# ShareClass.StringCutByRequire(Eval("Job").ToString(), 190) %>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <%--<asp:BoundColumn DataField="JobTitle" HeaderText="ProfessionalTitle">
+                                                                <%--<asp:BoundColumn DataField="JobTitle" HeaderText="职称">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>--%>
                                                                 <asp:TemplateColumn>
@@ -249,7 +249,7 @@
                                                         <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="确定" />
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                            type="button" value="Closed" />
+                                                            type="button" value="关闭" />
                                                     </div>
                                                 </td>
                                             </tr>

@@ -81,27 +81,27 @@ public partial class TTWZPurchaseListDetail : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strPurchaseName))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('文件名称不能为空，请补充！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('文件名称不能为空，请补充！');", true);
                 return;
             }
             if (string.IsNullOrEmpty(strProjectCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('项目编码不能为空，请补充！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('项目编码不能为空，请补充！');", true);
                 return;
             }
             if (string.IsNullOrEmpty(strPurchaseEngineer))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购工程师不能为空，请补充！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购工程师不能为空，请补充！');", true);
                 return;
             }
             if (string.IsNullOrEmpty(strDelegateAgent))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('委托代理人不能为空，请补充！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('委托代理人不能为空，请补充！');", true);
                 return;
             }
             if (string.IsNullOrEmpty(strPurchaseManager))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购经理不能为空，请补充！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购经理不能为空，请补充！');", true);
                 return;
             }
 
@@ -121,9 +121,9 @@ public partial class TTWZPurchaseListDetail : System.Web.UI.Page
                     wZPurchase = (WZPurchase)listPurchase[0];
 
 
-                    if (wZPurchase.Progress != LanguageHandle.GetWord("LuRu").ToString().Trim())
+                    if (wZPurchase.Progress != "录入")
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购文件进度不为录入，不允许修改！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购文件进度不为录入，不允许修改！');", true);
                         return;
                     }
 
@@ -156,7 +156,7 @@ public partial class TTWZPurchaseListDetail : System.Web.UI.Page
                 wZPurchase.PurchaseCode = strNewPurchaseCode;
                 
                 wZPurchase.MarkTime = DateTime.Now;
-                wZPurchase.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
+                wZPurchase.Progress = "录入";
 
                 wZPurchaseBLL.AddWZPurchase(wZPurchase);
 

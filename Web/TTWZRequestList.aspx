@@ -45,7 +45,7 @@
                 $("#BT_NewPrint").attr("disabled", "disabled");
                 $("#BT_NewPrint").removeClass("inpu");                         //打印
             }
-            else if (objProgress == "Claim for Payment") {
+            else if (objProgress == "请款") {
                 $("#BT_NewDelete").attr("disabled", "disabled");
                 $("#BT_NewDelete").removeClass("inpu");                            //删除
                 $("#BT_NewRequest").attr("disabled", "disabled");
@@ -55,7 +55,7 @@
                 $("#BT_NewPrint").attr("disabled", "disabled");
                 $("#BT_NewPrint").removeClass("inpu");                            //打印
             }
-            else if (objProgress == "Reimbursement") {
+            else if (objProgress == "报销") {
                 $("#BT_NewDelete").attr("disabled", "disabled");
                 $("#BT_NewDelete").removeClass("inpu");                            //删除
                 $("#BT_NewRequest").attr("disabled", "disabled");
@@ -336,15 +336,15 @@
                                                                     <%--<asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%#Eval("RequestCode") %>' CommandName="edit" CssClass="notTab">编辑</asp:LinkButton>--%>
                                                                     <%--<asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%#Eval("RequestCode") %>' CommandName="collect" CssClass="notTab">收料单</asp:LinkButton>--%>
                                                                     <%--<asp:LinkButton ID="LinkButton4" runat="server" CommandArgument='<%#Eval("RequestCode") %>' CommandName="request" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="录入" ? true : false %>'>请款</asp:LinkButton>--%>
-                                                                    <%--<asp:LinkButton ID="LinkButton5" runat="server" CommandArgument='<%#Eval("RequestCode") %>' CommandName="notRequest" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Claim for Payment" ? true : false %>'>退回</asp:LinkButton>--%>
-                                                                    <%--<asp:LinkButton ID="LinkButton6" runat="server" CommandArgument='<%#Eval("RequestCode") %>' CommandName="print" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Reimbursement" ? true : false %>'>打印</asp:LinkButton>--%>
+                                                                    <%--<asp:LinkButton ID="LinkButton5" runat="server" CommandArgument='<%#Eval("RequestCode") %>' CommandName="notRequest" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="请款" ? true : false %>'>退回</asp:LinkButton>--%>
+                                                                    <%--<asp:LinkButton ID="LinkButton6" runat="server" CommandArgument='<%#Eval("RequestCode") %>' CommandName="print" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="报销" ? true : false %>'>打印</asp:LinkButton>--%>
                                                                     
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
                                                             <asp:BoundColumn DataField="RequestCode" HeaderText="请款单号">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="CompactCode" HeaderText="Contract Number">
+                                                            <asp:BoundColumn DataField="CompactCode" HeaderText="合同编号">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="ProjectCode" HeaderText="项目编码">
@@ -365,7 +365,7 @@
                                                             <asp:BoundColumn DataField="Freight" HeaderText="运费">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="OtherObject" HeaderText="Other">
+                                                            <asp:BoundColumn DataField="OtherObject" HeaderText="其它">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="4%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="BorrowMoney" HeaderText="借款金额">
@@ -413,7 +413,7 @@
                                                             <asp:BoundColumn DataField="Arrearage" HeaderText="欠款">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="4%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                            <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="IsPay" HeaderText="付款标志">
@@ -597,7 +597,7 @@
                                                             <asp:BoundColumn DataField="CollectCode" HeaderText="收料单号">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="CompactCode" HeaderText="Contract Number">
+                                                            <asp:BoundColumn DataField="CompactCode" HeaderText="合同编号">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="ProjectCode" HeaderText="项目编码">
@@ -606,7 +606,7 @@
                                                             <%--<asp:BoundColumn DataField="PlanDetailID" HeaderText="计划编号">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>--%>
-                                                            <asp:BoundColumn DataField="ObjectCode" HeaderText="Material Code">
+                                                            <asp:BoundColumn DataField="ObjectCode" HeaderText="物资代码">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
                                                             <%--<asp:BoundColumn DataField="ObjectName" HeaderText="物资名称">
@@ -660,7 +660,7 @@
                                                             <asp:BoundColumn DataField="Freight" HeaderText="运费">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="3%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="OtherObject" HeaderText="Other">
+                                                            <asp:BoundColumn DataField="OtherObject" HeaderText="其它">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="3%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="ConvertNumber" HeaderText="换算数量">
@@ -699,7 +699,7 @@
                                                             <asp:BoundColumn DataField="PayProcess" HeaderText="报销进度">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                            <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">

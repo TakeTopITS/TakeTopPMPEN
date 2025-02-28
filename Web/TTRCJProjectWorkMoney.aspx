@@ -80,7 +80,7 @@
                                                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                                     <Columns>
                                                         <asp:BoundField DataField="ID" HeaderText="运算序号" />
-                                                        <asp:BoundField DataField="ItemNo" HeaderText="SerialNumber" />
+                                                        <asp:BoundField DataField="ItemNo" HeaderText="序号" />
                                                         <asp:BoundField DataField="ItemName" HeaderText="定额号" />
                                                         <asp:BoundField DataField="WorkYear" HeaderText="工作年份" />
                                                         <asp:BoundField DataField="WorkMonth" HeaderText="工作月份" />

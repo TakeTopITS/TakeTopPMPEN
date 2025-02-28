@@ -72,7 +72,7 @@
                 $("#BT_NewApplyReturn").attr("disabled", "disabled");
                 $("#BT_NewApplyReturn").removeClass("inpu");                         //…Í«ÎÕÀªÿ
             }
-            else if (objProgress == "Application" && objCreater == objUserCode) {
+            else if (objProgress == "…Í«Î" && objCreater == objUserCode) {
                 $("#BT_NewEdit").attr("disabled", "disabled");
                 $("#BT_NewEdit").removeClass("inpu");                            //±‡º≠
                 $("#BT_NewDelete").attr("disabled", "disabled");
@@ -301,11 +301,11 @@
                                                                                                                 <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ZLCode") %>' CommandName="edit" CssClass="notTab">±‡º≠</asp:LinkButton>--%>
                                                                                                                 <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ZLCode") %>' CommandName="del" CssClass="notTab">…æ≥˝</asp:LinkButton>--%>
                                                                                                                 <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ZLCode") %>' CommandName="request" CssClass="notTab" Visible='<%# (Eval("CreateProgress").ToString()=="¬º»Î" && Eval("Creater").ToString()==strUserCode) ? true : false %>'>…Í«Î</asp:LinkButton>--%>
-                                                                                                                <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ZLCode") %>' CommandName="returnRequest" CssClass="notTab" Visible='<%# (Eval("CreateProgress").ToString()=="Application" && Eval("Creater").ToString()==strUserCode) ? true : false %>'>ÕÀªÿ</asp:LinkButton>--%>
+                                                                                                                <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ZLCode") %>' CommandName="returnRequest" CssClass="notTab" Visible='<%# (Eval("CreateProgress").ToString()=="…Í«Î" && Eval("Creater").ToString()==strUserCode) ? true : false %>'>ÕÀªÿ</asp:LinkButton>--%>
 
                                                                                                             </ItemTemplate>
                                                                                                         </asp:TemplateColumn>
-                                                                                                        <asp:BoundColumn DataField="DLCode" HeaderText="Major Category Code">
+                                                                                                        <asp:BoundColumn DataField="DLCode" HeaderText="¥Û¿‡¥˙¬Î">
                                                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                                         </asp:BoundColumn>
                                                                                                         <asp:BoundColumn DataField="ZLCode" HeaderText="÷–¿‡¥˙¬Î">

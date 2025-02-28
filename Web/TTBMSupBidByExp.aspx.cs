@@ -469,7 +469,7 @@ public partial class TTBMSupBidByExp : System.Web.UI.Page
     {
         if (strBidStatus.Trim().Equals("Y"))
         {
-            return "BidWin";   //ChineseWord
+            return "BidWin";   
         }
         else if (strBidStatus.Trim().Equals("N"))
         {

@@ -1562,7 +1562,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
         strHQL += " or ( document.Visible = 'Meeting')))";  
         strHQL += " and (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or (document.Visible in ( 'Department','Entire')))";   //ChineseWord
+        strHQL += " or (document.Visible in ( 'Department','Entire')))";   
         strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))))";
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();
@@ -1590,7 +1590,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
 
             strHQL = "from Document as document where (((document.RelatedType = 'Project' and document.RelatedID = " + strProjectID + ")";
             strHQL += " and (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( 'Department','Entire')))";   //ChineseWord
+            strHQL += " or (document.Visible in ( 'Department','Entire')))";   
             strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))))";
 
             strHQL += " or (((document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
@@ -1603,7 +1603,7 @@ public partial class TTWorkFlowCommonDataView : System.Web.UI.Page
             strHQL += "or (document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + "))";  
 
             strHQL += " and ((document.Visible in ('Meeting','Department') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";  
-            strHQL += " or (document.Visible = 'Entire' )))))";   //ChineseWord
+            strHQL += " or (document.Visible = 'Entire' )))))";   
             strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
 
             DocumentBLL documentBLL = new DocumentBLL();

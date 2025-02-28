@@ -100,8 +100,8 @@
                                                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,ShouQuanCaiGou%>"></asp:Label>：</td>
                                                         <td style="text-align: left; width:20%;" class="formItemBgStyle">
                                                             <asp:DropDownList ID="TXT_PowerPurchase" runat="server" Enabled="false">
-                                                                <asp:ListItem Text="<%$ Resources:lang,You%>" Value="Yes"/>
-                                                                <asp:ListItem Text="<%$ Resources:lang,Wu%>" Value="No"/>
+                                                                <asp:ListItem Text="<%$ Resources:lang,You%>" Value="有"/>
+                                                                <asp:ListItem Text="<%$ Resources:lang,Wu%>" Value="无"/>
                                                             </asp:DropDownList>
                                                         </td>
                                                     </tr>
@@ -215,7 +215,7 @@
                                                         <td style="text-align: center" class="formItemBgStyle" colspan="6">
                                                             <asp:Button ID="btnSave" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnSave_Click" />&nbsp;
                                                     <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                        type="button" value="Closed" /><%--<input type="button" value="返回" id="BT_Return" class="inpu" onclick="window.history.go(-1);" />--%>
+                                                        type="button" value="关闭" /><%--<input type="button" value="返回" id="BT_Return" class="inpu" onclick="window.history.go(-1);" />--%>
                                                         </td>
                                                     </tr>
                                                 </table>

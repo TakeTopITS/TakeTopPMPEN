@@ -49,10 +49,10 @@ public partial class TTWZCollectCheck : System.Web.UI.Page
                             left join T_WZSpan k on o.Unit = k.ID
                             where c.Checker ='{0}' 
                             and c.Progress in ('材检','开票') 
-                            ", strUserCode);   //ChineseWord
+                            ", strUserCode);
 
         string strProgress = DDL_Progress.SelectedValue;
-        if (!string.IsNullOrEmpty(strProgress) & strProgress != LanguageHandle.GetWord("QuanBu").ToString().Trim())
+        if (!string.IsNullOrEmpty(strProgress) & strProgress != "全部")
         {
             strCollectHQL += " and c.Progress = '" + strProgress + "'";
         }
@@ -99,7 +99,7 @@ public partial class TTWZCollectCheck : System.Web.UI.Page
             if (listCollect != null && listCollect.Count == 1)
             {
                 WZCollect wZCollect = (WZCollect)listCollect[0];
-                if (wZCollect.Progress == LanguageHandle.GetWord("CaiJian").ToString().Trim())
+                if (wZCollect.Progress == "材检")
                 {
                    string strCheckCode = wZCollect.CheckCode.Trim();
                    string strChecker = wZCollect.Checker.Trim();
@@ -126,7 +126,7 @@ public partial class TTWZCollectCheck : System.Web.UI.Page
                 }
                 else
                 {
-                    //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWCJBNKP").ToString().Trim() + "')", true);
+                    //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWCJBNKP + "')", true);
                     return;
                 }
             }
@@ -142,9 +142,9 @@ public partial class TTWZCollectCheck : System.Web.UI.Page
             if (listCollect != null && listCollect.Count == 1)
             {
                 WZCollect wZCollect = (WZCollect)listCollect[0];
-                if (wZCollect.Progress == LanguageHandle.GetWord("CaiJian").ToString().Trim())
+                if (wZCollect.Progress == "材检")
                 {
-                    wZCollect.Progress = LanguageHandle.GetWord("KaiPiao").ToString().Trim();
+                    wZCollect.Progress = "开票";
                     wZCollect.CheckTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
                     wZCollectBLL.UpdateWZCollect(wZCollect, wZCollect.CollectCode);
@@ -152,11 +152,11 @@ public partial class TTWZCollectCheck : System.Web.UI.Page
                     //重新加载收料单列表
                     DataCollectBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKPCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKPCG + "')", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWCJBNKP").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWCJBNKP + "')", true);
                     return;
                 }
             }
@@ -171,9 +171,9 @@ public partial class TTWZCollectCheck : System.Web.UI.Page
             if (listCollect != null && listCollect.Count == 1)
             {
                 WZCollect wZCollect = (WZCollect)listCollect[0];
-                if (wZCollect.Progress == LanguageHandle.GetWord("KaiPiao").ToString().Trim())
+                if (wZCollect.Progress == "开票")
                 {
-                    wZCollect.Progress = LanguageHandle.GetWord("CaiJian").ToString().Trim();
+                    wZCollect.Progress = "材检";
                     wZCollect.CheckTime = "";
 
                     wZCollectBLL.UpdateWZCollect(wZCollect, wZCollect.CollectCode);
@@ -181,11 +181,11 @@ public partial class TTWZCollectCheck : System.Web.UI.Page
                     //重新加载收料单列表
                     DataCollectBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKPTHCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKPTHCG + "')", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWCJBNTH").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWCJBNTH + "')", true);
                     return;
                 }
             }
@@ -248,10 +248,10 @@ public partial class TTWZCollectCheck : System.Web.UI.Page
                             left join T_WZSpan k on o.Unit = k.ID
                             where c.Checker ='{0}' 
                             and c.Progress in ('材检','开票') 
-                            ", strUserCode);   //ChineseWord
+                            ", strUserCode);
 
         string strProgress = DDL_Progress.SelectedValue;
-        if (!string.IsNullOrEmpty(strProgress) & strProgress != LanguageHandle.GetWord("QuanBu").ToString().Trim())
+        if (!string.IsNullOrEmpty(strProgress) & strProgress != "全部")
         {
             strCollectHQL += " and c.Progress = '" + strProgress + "'";
         }
@@ -293,10 +293,10 @@ public partial class TTWZCollectCheck : System.Web.UI.Page
                             left join T_WZSpan k on o.Unit = k.ID
                             where c.Checker ='{0}' 
                             and c.Progress in ('材检','开票') 
-                            ", strUserCode);   //ChineseWord
+                            ", strUserCode);
 
         string strProgress = DDL_Progress.SelectedValue;
-        if (!string.IsNullOrEmpty(strProgress) & strProgress != LanguageHandle.GetWord("QuanBu").ToString().Trim())
+        if (!string.IsNullOrEmpty(strProgress) & strProgress != "全部")
         {
             strCollectHQL += " and c.Progress = '" + strProgress + "'";
         }
@@ -338,10 +338,10 @@ public partial class TTWZCollectCheck : System.Web.UI.Page
                             left join T_WZSpan k on o.Unit = k.ID
                             where c.Checker ='{0}' 
                             and c.Progress in ('材检','开票') 
-                            ", strUserCode);   //ChineseWord
+                            ", strUserCode);
 
         string strProgress = DDL_Progress.SelectedValue;
-        if (!string.IsNullOrEmpty(strProgress) & strProgress != LanguageHandle.GetWord("QuanBu").ToString().Trim())
+        if (!string.IsNullOrEmpty(strProgress) & strProgress != "全部")
         {
             strCollectHQL += " and c.Progress = '" + strProgress + "'";
         }

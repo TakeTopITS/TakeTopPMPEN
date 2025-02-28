@@ -563,11 +563,11 @@ public partial class TTProjectRelatedReqDoc : System.Web.UI.Page
         strHQL = "from Document as document where ";
         strHQL += " ((document.RelatedType = 'Requirement' and document.RelatedID = " + strReqID;
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or (document.Visible = 'Department' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";  //ChineseWord
-        strHQL += " or ( document.Visible = 'Entire'))) ";  //ChineseWord //ChineseWord
-        strHQL += "or ((document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Requirement' and meeting.RelatedID =" + strReqID + "))";  //ChineseWord
+        strHQL += " or (document.Visible = 'Department' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";  
+        strHQL += " or ( document.Visible = 'Entire'))) ";   
+        strHQL += "or ((document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Requirement' and meeting.RelatedID =" + strReqID + "))";  
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or ( document.Visible = 'Meeting'))))";  //ChineseWord
+        strHQL += " or ( document.Visible = 'Meeting'))))";  
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' order by document.DocID DESC";
 
         DocumentBLL documentBLL = new DocumentBLL();

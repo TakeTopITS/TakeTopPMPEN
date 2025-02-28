@@ -191,7 +191,7 @@ public partial class TTLTCandidateManage : System.Web.UI.Page
             strHQL += " Order by CreateTime ASC";
         }
 
-        MSExcelHandler.DataTableToExcel(strHQL, fileName);   //ChineseWord
+        MSExcelHandler.DataTableToExcel(strHQL, fileName);   
     }
 
 }

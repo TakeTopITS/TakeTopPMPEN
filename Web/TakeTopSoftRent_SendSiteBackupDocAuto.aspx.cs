@@ -34,7 +34,7 @@ public partial class TakeTopSoftRent_SendSiteBackupDocAuto : System.Web.UI.Page
         strSiteName = Request.QueryString["SiteName"];
         strSiteAppName = Request.QueryString["SiteAppName"];
 
-        LB_Message.Text = LanguageHandle.GetWord("ZhengZaiBeiFenNiDeZhanDianWenJ").ToString().Trim();
+        LB_Message.Text = "正在备份你的站点文件，大概需要5分钟，请耐心等候......";
 
         if (Page.IsPostBack == false)
         {
@@ -44,16 +44,16 @@ public partial class TakeTopSoftRent_SendSiteBackupDocAuto : System.Web.UI.Page
                 {
                     //发送站点备份文件
                     SendSiteBackupDoc();
-                    LB_Message.Text = LanguageHandle.GetWord("ZhanDianBeiFenWenJianFaSongChe").ToString().Trim();
+                    LB_Message.Text = "站点备份文件发送成功！";
                 }
                 catch
                 {
-                    LB_Message.Text = LanguageHandle.GetWord("DiShiFaSongShiBaiQingJianCha").ToString().Trim();
+                    LB_Message.Text = "提示，发送失败，请检查！";
                 }
             }
             else
             {
-                LB_Message.Text = LanguageHandle.GetWord("DiShiCiZhanDianBuCunZaiQingJia").ToString().Trim();
+                LB_Message.Text = "提示，此站点不存在，请检查！";
             }
         }
 

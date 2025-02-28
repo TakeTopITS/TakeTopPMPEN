@@ -85,7 +85,7 @@ public partial class TTProRelatedRisk : System.Web.UI.Page
         Project project = new Project();
 
 
-        strHQL = "from Project as project where project.ProjectClass = 'TemplateProject' ";   //ChineseWord
+        strHQL = "from Project as project where project.ProjectClass = 'TemplateProject' ";   
         strHQL += " and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
         lst = projectBLL.GetAllProjects(strHQL);
 
@@ -109,7 +109,7 @@ public partial class TTProRelatedRisk : System.Web.UI.Page
             TemplateProjectTreeView.DataBind();
         }
 
-        strHQL = "from Project as project where project.ProjectClass = 'RegularProject' and  project.PMCode = " + "'" + strUserCode + "'";   //ChineseWord
+        strHQL = "from Project as project where project.ProjectClass = 'RegularProject' and  project.PMCode = " + "'" + strUserCode + "'";   
         strHQL += "  and project.Status not in ('Deleted','Archived') order by project.ProjectID DESC";
 
         lst = projectBLL.GetAllProjects(strHQL);

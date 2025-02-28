@@ -66,20 +66,20 @@ public partial class TTWZWearyDetail : System.Web.UI.Page
                 {
                     WZWeary wZWeary = (WZWeary)listWZWeary[0];
 
-                    if (wZWeary.Process != LanguageHandle.GetWord("BaoPi").ToString().Trim())
+                    if (wZWeary.Process != "报批")
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBWBPZTBNPZ").ToString().Trim()+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBWBPZTBNPZ+"')", true);
                         return;
                     }
 
-                    wZWeary.Process = "Approved";
+                    wZWeary.Process = "批准";
 
                     wZWearyBLL.UpdateWZWeary(wZWeary, wZWeary.WearyCode);
 
                     //重新加载列表
                     DataWearyBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZPZCG").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZPZCG+"')", true);
                 }
             }
         }

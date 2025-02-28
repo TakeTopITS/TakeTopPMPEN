@@ -297,7 +297,7 @@ public partial class TTBookBaseData : System.Web.UI.Page
         {
             bookClassification.ClassificationType = strClassificationType;
             bookClassification.ClassificationCode = "";
-            bookClassification.DataType = "BookClassification";   //ChineseWord
+            bookClassification.DataType = "BookClassification";   
             bookClassification.Remark = strRemark;
 
             bookClassificationBLL.AddBookClassification(bookClassification);
@@ -324,7 +324,7 @@ public partial class TTBookBaseData : System.Web.UI.Page
             bookClassification.ID = int.Parse(strId);
             bookClassification.ClassificationCode = "";
             bookClassification.ClassificationType = strClassificationType;
-            bookClassification.DataType = "BookClassification";   //ChineseWord
+            bookClassification.DataType = "BookClassification";   
             bookClassification.Remark = strRemark;
 
             bookClassificationBLL.UpdateBookClassification(bookClassification,bookClassification.ID);
@@ -502,7 +502,7 @@ public partial class TTBookBaseData : System.Web.UI.Page
     /// </summary>
     protected void LoadBookClassification()
     {
-        string strHQL = "from BookClassification as bookClassification Where bookClassification.DataType='BookClassification' order by bookClassification.ID ASC";   //ChineseWord
+        string strHQL = "from BookClassification as bookClassification Where bookClassification.DataType='BookClassification' order by bookClassification.ID ASC";   
         BookClassificationBLL bookClassificationBLL = new BookClassificationBLL();
         IList lst = bookClassificationBLL.GetAllBookClassification(strHQL);
 
@@ -515,7 +515,7 @@ public partial class TTBookBaseData : System.Web.UI.Page
     /// </summary>
     protected void LoadBookClassification1()
     {
-        string strHQL = "from BookClassification as bookClassification Where bookClassification.DataType='StandardClassification' order by bookClassification.ID ASC";   //ChineseWord
+        string strHQL = "from BookClassification as bookClassification Where bookClassification.DataType='StandardClassification' order by bookClassification.ID ASC";   
         BookClassificationBLL bookClassificationBLL = new BookClassificationBLL();
         IList lst = bookClassificationBLL.GetAllBookClassification(strHQL);
 
@@ -682,7 +682,7 @@ public partial class TTBookBaseData : System.Web.UI.Page
         {
             bookClassification.ClassificationType = strClassificationType;
             bookClassification.ClassificationCode = strClassificationCode;
-            bookClassification.DataType = "StandardClassification";   //ChineseWord
+            bookClassification.DataType = "StandardClassification";   
             bookClassification.Remark = strRemark;
 
             bookClassificationBLL.AddBookClassification(bookClassification);
@@ -711,7 +711,7 @@ public partial class TTBookBaseData : System.Web.UI.Page
             bookClassification.ID = int.Parse(strId);
             bookClassification.ClassificationCode = strClassificationCode;
             bookClassification.ClassificationType = strClassificationType;
-            bookClassification.DataType = "StandardClassification";   //ChineseWord
+            bookClassification.DataType = "StandardClassification";   
             bookClassification.Remark = strRemark;
 
             bookClassificationBLL.UpdateBookClassification(bookClassification, bookClassification.ID);

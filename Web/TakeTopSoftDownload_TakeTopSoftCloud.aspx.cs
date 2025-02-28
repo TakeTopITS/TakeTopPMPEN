@@ -41,7 +41,7 @@ public partial class TakeTopSoftDownload_TakeTopSoftCloud : System.Web.UI.Page
     {
         string strServerType = DL_ServerType.SelectedValue.Trim();
 
-        if (strServerType == "Rent")  //ChineseWord //ChineseWord
+        if (strServerType == "租用")
         {
             TB_StorageCapacity.Enabled = true;
         }
@@ -67,24 +67,24 @@ public partial class TakeTopSoftDownload_TakeTopSoftCloud : System.Web.UI.Page
         strAddress = TB_Address.Text.Trim();
         strPostCode = "";
         strType = DL_Type.SelectedValue.Trim();
-        strQuestion = LanguageHandle.GetWord("YuanMaXiaZai").ToString().Trim();
+        strQuestion = "源码下载";
         dtAnswerTime = DateTime.Now.AddHours(24);
 
 
         if (strCompany == "" | strContactPerson == "" | strPhoneNumber == "" | strQuestion == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGDHXBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGDHXBNWKJC + "')", true);
 
-            LB_Message.Text = LanguageHandle.GetWord("DiJiaoShiBaiQingJianCha").ToString().Trim();
+            LB_Message.Text = "提交失败，请检查！";
         }
         else
         {
             if (String.Compare(Request.Cookies["CheckCode"].Value, TB_CheckCode.Text, true) != 0)
             {
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYZMCWSRZDYZM").ToString().Trim() + "')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYZMCWSRZDYZM + "')", true);
                 TB_CheckCode.Text = "";
 
-                LB_Message.Text = LanguageHandle.GetWord("YanZhengMaCuoWuQingJianCha").ToString().Trim();
+                LB_Message.Text = "验证码错误，请检查！";
                 return;
             }
 
@@ -92,7 +92,7 @@ public partial class TakeTopSoftDownload_TakeTopSoftCloud : System.Web.UI.Page
             try
             {
                 string strCSOperatorCode = ShareClass.GetWebSiteCustomerServiceOperatorCode(strWebSite);
-                string strNofiInfo = LanguageHandle.GetWord("DiShiGongSi").ToString().Trim() + strCompany + LanguageHandle.GetWord("DeYuanGong").ToString().Trim() + strContactPerson + "( " + strPhoneNumber + " )" + LanguageHandle.GetWord("DiJiaoLe").ToString().Trim() + strQuestion + LanguageHandle.GetWord("DeShenQingQingJiShiChuLi").ToString().Trim();
+                string strNofiInfo = "提示：公司: " + strCompany + " 的员工: " + strContactPerson + "( " + strPhoneNumber + " )" + " 提交了：" + strQuestion + " 的申请，请及时处理！！！";
                 Action action = new Action(delegate ()
                 {
                     try
@@ -114,25 +114,25 @@ public partial class TakeTopSoftDownload_TakeTopSoftCloud : System.Web.UI.Page
             }
 
             strSQL = " Insert into T_CustomerQuestion(Company,UserIP,UserPosition,ContactPerson,PhoneNumber,EMail,Address,PostCode,Type,Question,SummitTime,AnswerTime,Status,RecorderCode,OperatorCode,OperatorName,OperatorStatus,FromWebSite)";
-            strSQL += " Values(" + "'" + strCompany + "'" + "," + "'" + strUserIP + "'" + "," + "'" + strUserPosition + "'" + "," + "'" + strContactPerson + "'" + "," + "'" + strPhoneNumber + "'" + "," + "'" + strEMail + "'" + "," + "'" + strAddress + "'" + "," + "'" + strPostCode + "'" + "," + "'" + strType + "'" + "," + "'" + strQuestion + "'" + "," + "now(),now()+interval '1 day'," + "'New'" + ",'','','','','" + strWebSite + "')";
+            strSQL += " Values(" + "'" + strCompany + "'" + "," + "'" + strUserIP + "'" + "," + "'" + strUserPosition + "'" + "," + "'" + strContactPerson + "'" + "," + "'" + strPhoneNumber + "'" + "," + "'" + strEMail + "'" + "," + "'" + strAddress + "'" + "," + "'" + strPostCode + "'" + "," + "'" + strType + "'" + "," + "'" + strQuestion + "'" + "," + "now(),now()+interval '1 day'," + "'新建'" + ",'','','','','" + strWebSite + "')";
 
             try
             {
                 ShareClass.RunSqlCommandForNOOperateLog(strSQL);
 
-                LB_Message.Text = LanguageHandle.GetWord("DiJiaoChengGongXiaZaiLianJieZa").ToString().Trim();
+                LB_Message.Text = "提交成功，下载链接在下面，点击可下载！";
 
                 HL_SourceCodeDownload.Visible = true;
                 HL_SourceCodeDownload.NavigateUrl = "https://www.taketopits.com/Download/Setup/Develop/TakeTopPCMPDPSetup.zip";
 
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZDiJiaoChengGong").ToString().Trim()+"')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('---提交成功')", true);
             }
             catch
             {
 
-                LB_Message.Text = LanguageHandle.GetWord("DiJiaoShiBaiQingJianCha").ToString().Trim();
+                LB_Message.Text = "提交失败，请检查！";
 
-                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZDiJiaoShiBaiQingJianCha").ToString().Trim()+"')", true);
+                //ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('-----提交失败，请检查！')", true);
 
             }
         }

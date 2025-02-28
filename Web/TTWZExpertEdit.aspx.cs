@@ -47,42 +47,42 @@ public partial class TTWZExpertEdit : System.Web.UI.Page
             string strPhone = TXT_Phone.Text.Trim();
             if (string.IsNullOrEmpty(strName))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZJMCBNWKBC").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZJMCBNWKBC+"')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strJob))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZWBNWKBC").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZWBNWKBC+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strJob))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZWBNWFFZF").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZWBNWFFZF+"')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strJobTitle))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZCBNWKBC").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZCBNWKBC+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strJobTitle))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZCBNWFFZF").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZCBNWFFZF+"')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strPhone))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZLXDHBNWKBC").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZLXDHBNWKBC+"')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strPhone))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZLXDHBNWFFZF").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZLXDHBNWFFZF+"')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strExpertType))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZYFWBNWKBC").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZYFWBNWKBC+"')", true);
                 return;
             }
 
@@ -114,7 +114,7 @@ public partial class TTWZExpertEdit : System.Web.UI.Page
                 int intCheckNameNumber = int.Parse(dtCheckName.Rows[0]["RowNumber"].ToString());
                 if (intCheckNameNumber > 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZJYJCZBYXZFTJ").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZJYJCZBYXZFTJ+"')", true);
                     return;
                 }
                 //生成专家编号

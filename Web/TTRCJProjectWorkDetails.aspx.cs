@@ -60,7 +60,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
             }
             catch (Exception exp)
             {
-                lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiCaoZuoChuXianYiChang").ToString().Trim() + exp.Message;
+                lb_ShowMessage.Text = "错误提示：操作出现异常： " + exp.Message;
             }
         }
     }
@@ -89,7 +89,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         }
         catch (Exception exp)
         {
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiHuoQuNianLieBiaoCaoZ").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "错误提示：获取年列表操作出现异常： " + exp.Message;
         }
     }
 
@@ -119,7 +119,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
          }
         catch (Exception exp)
         {
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiHuoQuYueLieBiaoCaoZu").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "错误提示：获取月列表操作出现异常： " + exp.Message;
         }   
     }
 
@@ -216,7 +216,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiCaoZuoShiBai").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：操作失败！" + exp.Message;
         }
     }
 
@@ -251,7 +251,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiChaXunCaoZuoShiBai").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：查询操作失败：" + exp.Message;
 
             return true;
         }
@@ -296,7 +296,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShi").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：" + exp.Message;
             return false;
         }
 
@@ -356,7 +356,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         if (TB_WorkNumDetails.Text.Trim().Length == 0 || false == ShareClass.CheckIsNumber(TB_WorkNumDetails.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiQingZhengQueShuRuSh").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：请正确输入实际工作量再试！";
             return;
         }
 
@@ -372,18 +372,18 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         if (RCJShareClass.FloatGT( currentInputWorkNum , theRestWorkNum) )
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = string.Format(LanguageHandle.GetWord("XiaoXiDiShiQingZhengQueShuRuGo").ToString().Trim(), theRestWorkNum);
+            lb_ShowMessage.Text = string.Format("消息提示：请正确输入工作量再试！目前最多可确认的工作量为：{0:f4}", theRestWorkNum);
             return;
         }
 
         try
         {
             int confirmId = getNewConfirmID();
-            if (false == SaveDataDetailsList(0, 0, confirmId, LanguageHandle.GetWord("ZengJiaShiJiGongZuoJiLu").ToString().Trim()))
+            if (false == SaveDataDetailsList(0, 0, confirmId, "增加实际工作记录"))
                 return;
 
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiXinZengShiJiGongZuo").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：新增实际工作量成功！";
 
             InitAllDataList(sender, e, gvWorkDetails.Rows.Count , 0);
 
@@ -391,7 +391,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiXinZengShiJiGongZuo").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：新增实际工作量失败！" + exp.Message;
         }
     }
 
@@ -401,14 +401,14 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         if (gvWorkDetails.SelectedIndex == -1)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiQingShuaZeXuYaoXiuG").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：请选择需要修改的实际工作量再试！";
             return;
         }
 
         if (TB_WorkNumDetails.Text.Trim().Length == 0 || false == ShareClass.CheckIsNumber(TB_WorkNumDetails.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiQingZhengQueShuRuSh").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：请正确输入实际工作量再试！";
             return;
         }
 
@@ -425,18 +425,18 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         if (RCJShareClass.FloatGT(currentInputWorkNum, theRestWorkNum))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = string.Format(LanguageHandle.GetWord("XiaoXiDiShiQingZhengQueShuRuGo").ToString().Trim(), theRestWorkNum);
+            lb_ShowMessage.Text = string.Format("消息提示：请正确输入工作量再试！目前最多可确认的工作量为：{0:f4}", theRestWorkNum);
             return;
         }
 
         try
         {
             int confirmId = Convert.ToInt32(gvWorkDetails.Rows[gvWorkDetails.SelectedIndex].Cells[2].Text);
-            if (false == SaveDataDetailsList(1, Convert.ToInt32(TB_ID.Text), confirmId, LanguageHandle.GetWord("XiuGaiShiJiGongZuoJiLu").ToString().Trim()))
+            if (false == SaveDataDetailsList(1, Convert.ToInt32(TB_ID.Text), confirmId, "修改实际工作记录"))
                 return;
 
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiXiuGaiShiJiGongZuoL").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：修改实际工作量成功！";
 
             InitAllDataList(sender, e, gvWorkDetails.SelectedIndex , 0);
 
@@ -444,7 +444,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiXiuGaiShiJiGongZuoL").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：修改实际工作量失败！" + exp.Message;
         }
     }
 
@@ -454,18 +454,18 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         if (gvWorkDetails.SelectedIndex == -1)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiQingShuaZeYiHangJin").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：请选择一行进行删除操作！";
             return;
         }
 
         try
         {
             int confirmId = Convert.ToInt32(gvWorkDetails.Rows[gvWorkDetails.SelectedIndex].Cells[2].Text);
-            if (false == SaveDataDetailsList(2, Convert.ToInt32(TB_ID.Text), confirmId, LanguageHandle.GetWord("ShanChuShiJiGongZuoJiLu").ToString().Trim()))
+            if (false == SaveDataDetailsList(2, Convert.ToInt32(TB_ID.Text), confirmId, "删除实际工作记录"))
                 return; 
 
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiShanChuShiJiGongZuo").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：删除实际工作量成功！";
 
             InitAllDataList(sender, e,0,0);
         }
@@ -473,7 +473,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiShanChuShiJiGongZuo").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：删除实际工作量失败！" + exp.Message;
         }
     }
 
@@ -505,13 +505,13 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         TB_WorkNumConfirm.Text = "";
         TB_WorkNumMoney.Text = "";
 
-        lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiMo").ToString().Trim();
+        lb_ShowMessage.Text = "消息提示：无";
         lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
 
-        lb_ShowConfirmMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiMo").ToString().Trim();
+        lb_ShowConfirmMessage.Text = "消息提示：无";
         lb_ShowConfirmMessage.ForeColor = System.Drawing.Color.Red;
 
-        lb_ShowMoneyMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiMo").ToString().Trim();
+        lb_ShowMoneyMessage.Text = "消息提示：无";
         lb_ShowMoneyMessage.ForeColor = System.Drawing.Color.Red;
     }
 
@@ -521,10 +521,10 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         TB_WorkNumConfirm.Text = "";
         TB_WorkNumMoney.Text = "";
 
-        lb_ShowConfirmMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiMo").ToString().Trim();
+        lb_ShowConfirmMessage.Text = "消息提示：无";
         lb_ShowConfirmMessage.ForeColor = System.Drawing.Color.Red;
 
-        lb_ShowMoneyMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiMo").ToString().Trim();
+        lb_ShowMoneyMessage.Text = "消息提示：无";
         lb_ShowMoneyMessage.ForeColor = System.Drawing.Color.Red;
     }
 
@@ -533,7 +533,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         TB_ID.Text = "";
         TB_WorkNumMoney.Text = "";
 
-        lb_ShowMoneyMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiMo").ToString().Trim();
+        lb_ShowMoneyMessage.Text = "消息提示：无";
         lb_ShowMoneyMessage.ForeColor = System.Drawing.Color.Red;
     }
 
@@ -568,7 +568,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiCaoZuoShiBai").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：操作失败！" + exp.Message;
         }
     }
 
@@ -600,7 +600,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         if (TB_WorkNumConfirm.Text.Trim().Length == 0 || false == ShareClass.CheckIsNumber(TB_WorkNumConfirm.Text))
         {
             lb_ShowConfirmMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowConfirmMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiQingZhengQueShuRuGo").ToString().Trim();
+            lb_ShowConfirmMessage.Text = "消息提示：请正确输入工作确认记录再试！";
             return;
         }
         //判断目前输入的工作量是否在实际工作的工作量范围
@@ -618,7 +618,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         if (RCJShareClass.FloatGT(currentInputWorkNum , theRestWorkNum))
         {
             lb_ShowConfirmMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowConfirmMessage.Text = string.Format(LanguageHandle.GetWord("XiaoXiDiShiQingZhengQueShuRuGo").ToString().Trim(), theRestWorkNum);
+            lb_ShowConfirmMessage.Text = string.Format("消息提示：请正确输入工作确认记录再试！目前最多可确认的工作量为：{0:f4}", theRestWorkNum);
             return;
         }
 
@@ -628,7 +628,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
                 return;
 
             lb_ShowConfirmMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowConfirmMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiXinZengGongZuoQueRe").ToString().Trim();
+            lb_ShowConfirmMessage.Text = "消息提示：新增工作确认记录成功！";
 
             InitAllDataList(sender, e, gvWorkDetails.SelectedIndex, gvWorkConfirm.Rows.Count);
 
@@ -636,7 +636,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowConfirmMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowConfirmMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiXinZengGongZuoQueRe").ToString().Trim() + exp.Message;
+            lb_ShowConfirmMessage.Text = "消息提示：新增工作确认记录失败！" + exp.Message;
         }
     }
 
@@ -645,14 +645,14 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         if (gvWorkConfirm.SelectedIndex == -1)
         {
             lb_ShowConfirmMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowConfirmMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiQingShuaZeXuYaoXiuG").ToString().Trim();
+            lb_ShowConfirmMessage.Text = "消息提示：请选择需要修改的工作确认记录再试！";
             return;
         }
 
         if (TB_WorkNumConfirm.Text.Trim().Length == 0 || false == ShareClass.CheckIsNumber(TB_WorkNumConfirm.Text))
         {
             lb_ShowConfirmMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowConfirmMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiQingZhengQueShuRuGo").ToString().Trim();
+            lb_ShowConfirmMessage.Text = "消息提示：请正确输入工作确认记录再试！";
             return;
         }
 
@@ -671,7 +671,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         if (RCJShareClass.FloatGT(currentInputWorkNum , theRestWorkNum))
         {
             lb_ShowConfirmMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowConfirmMessage.Text = string.Format(LanguageHandle.GetWord("XiaoXiDiShiQingZhengQueShuRuGo").ToString().Trim(), theRestWorkNum);
+            lb_ShowConfirmMessage.Text = string.Format("消息提示：请正确输入工作确认记录再试！目前最多可确认的工作量为：{0:f4}", theRestWorkNum);
             return;
         }
 
@@ -681,14 +681,14 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
                 return;
 
             lb_ShowConfirmMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowConfirmMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiXiuGaiGongZuoQueRen").ToString().Trim();
+            lb_ShowConfirmMessage.Text = "消息提示：修改工作确认记录成功！";
 
             InitAllDataList(sender, e, gvWorkDetails.SelectedIndex, gvWorkConfirm.SelectedIndex);
         }
         catch (Exception exp)
         {
             lb_ShowConfirmMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowConfirmMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiXiuGaiGongZuoQueRen").ToString().Trim() + exp.Message;
+            lb_ShowConfirmMessage.Text = "消息提示：修改工作确认记录失败！" + exp.Message;
         }
     }
     protected void BT_DelWorkConfirm_Click(object sender, EventArgs e)
@@ -696,7 +696,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         if (gvWorkConfirm.SelectedIndex == -1)
         {
             lb_ShowConfirmMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowConfirmMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiQingShuaZeYiHangJin").ToString().Trim();
+            lb_ShowConfirmMessage.Text = "消息提示：请选择一行进行删除操作！";
             return;
         }
 
@@ -706,7 +706,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
             SaveDataConfirmList(2, Convert.ToInt32(TB_ID.Text), confirmId);
 
             lb_ShowConfirmMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowConfirmMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiShanChuGongZuoQueRe").ToString().Trim();
+            lb_ShowConfirmMessage.Text = "消息提示：删除工作确认记录成功！";
 
             InitAllDataList(sender, e , 0,0);
 
@@ -714,7 +714,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowConfirmMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowConfirmMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiShanChuGongZuoQueRe").ToString().Trim() + exp.Message;
+            lb_ShowConfirmMessage.Text = "消息提示：删除工作确认记录失败！" + exp.Message;
         }
     }
 
@@ -756,7 +756,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowConfirmMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowConfirmMessage.Text = LanguageHandle.GetWord("XiaoXiDiShi").ToString().Trim() + exp.Message;
+            lb_ShowConfirmMessage.Text = "消息提示：" + exp.Message;
             return false;
         }
 
@@ -834,7 +834,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMoneyMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMoneyMessage.Text = LanguageHandle.GetWord("XiaoXiDiShi").ToString().Trim() + exp.Message;
+            lb_ShowMoneyMessage.Text = "消息提示：" + exp.Message;
             return false;
         }
 
@@ -846,7 +846,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         if (TB_WorkNumMoney.Text.Trim().Length == 0 || false == ShareClass.CheckIsNumber(TB_WorkNumMoney.Text))
         {
             lb_ShowMoneyMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMoneyMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiQingZhengQueShuRuSh").ToString().Trim();
+            lb_ShowMoneyMessage.Text = "消息提示：请正确输入收款确认记录再试！";
             return;
         }
         //判断目前输入的收款额是否在实际工作的范围
@@ -862,25 +862,25 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         if (RCJShareClass.FloatGT(currentInputMoney , theRestMoney))
         {
             lb_ShowMoneyMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMoneyMessage.Text = string.Format(LanguageHandle.GetWord("XiaoXiDiShiQingZhengQueShuRuSh").ToString().Trim(), theRestMoney);
+            lb_ShowMoneyMessage.Text = string.Format("消息提示：请正确输入收款额再试！目前最多可确认的收款额为：{0}", theRestMoney);
             return;
         }
 
         try
         {
             int iid = Convert.ToInt32(gvWorkConfirm.Rows[gvWorkConfirm.SelectedIndex].Cells[1].Text);
-            if (false == SaveDataMoneyList(0, 0, confirmId, iid,LanguageHandle.GetWord("ZengJiaShouKuanQueRenJiLu").ToString().Trim()))
+            if (false == SaveDataMoneyList(0, 0, confirmId, iid,"增加收款确认记录"))
                 return;
 
             lb_ShowMoneyMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMoneyMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiXinZengShouKuanQueR").ToString().Trim();
+            lb_ShowMoneyMessage.Text = "消息提示：新增收款确认记录成功！";
 
             InitAllDataList(sender, e, gvWorkDetails.SelectedIndex, gvWorkConfirm.SelectedIndex);
         }
         catch (Exception exp)
         {
             lb_ShowMoneyMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMoneyMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiXinZengShouKuanQueR").ToString().Trim() + exp.Message;
+            lb_ShowMoneyMessage.Text = "消息提示：新增收款确认记录失败！" + exp.Message;
         }
     }
     protected void BT_EditWorkMoney_Click(object sender, EventArgs e)
@@ -888,14 +888,14 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         if (gvMoneyConfirm.SelectedIndex == -1)
         {
             lb_ShowMoneyMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMoneyMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiQingShuaZeXuYaoXiuG").ToString().Trim();
+            lb_ShowMoneyMessage.Text = "消息提示：请选择需要修改的收款确认记录再试！";
             return;
         }
 
         if (TB_WorkNumMoney.Text.Trim().Length == 0 || false == ShareClass.CheckIsNumber(TB_WorkNumMoney.Text))
         {
             lb_ShowMoneyMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMoneyMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiQingZhengQueShuRuSh").ToString().Trim();
+            lb_ShowMoneyMessage.Text = "消息提示：请正确输入收款确认记录再试！";
             return;
         }
         //判断目前输入的工作量是否在实际工作的工作量范围
@@ -912,25 +912,25 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         if (RCJShareClass.FloatGT(currentInputMoney, theRestMoney))
         {
             lb_ShowMoneyMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMoneyMessage.Text = string.Format(LanguageHandle.GetWord("XiaoXiDiShiQingZhengQueShuRuGo").ToString().Trim(), theRestMoney);
+            lb_ShowMoneyMessage.Text = string.Format("消息提示：请正确输入工作确认记录再试！目前最多可确认的收款额为：{0}", theRestMoney);
             return;
         }
 
         try
         {
             int iid = Convert.ToInt32(gvWorkConfirm.Rows[gvWorkConfirm.SelectedIndex].Cells[1].Text);
-            if (false == SaveDataMoneyList(1, Convert.ToInt32(TB_ID.Text), confirmId,iid, LanguageHandle.GetWord("XiuGaiShouKuanQueRenJiLu").ToString().Trim()))
+            if (false == SaveDataMoneyList(1, Convert.ToInt32(TB_ID.Text), confirmId,iid, "修改收款确认记录"))
                 return;
 
             lb_ShowMoneyMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMoneyMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiXiuGaiShouKuanQueRe").ToString().Trim();
+            lb_ShowMoneyMessage.Text = "消息提示：修改收款确认记录成功！";
 
             InitAllDataList(sender, e, gvWorkDetails.SelectedIndex, gvWorkConfirm.SelectedIndex);
         }
         catch (Exception exp)
         {
             lb_ShowMoneyMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMoneyMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiXiuGaiShouKuanQueRe").ToString().Trim() + exp.Message;
+            lb_ShowMoneyMessage.Text = "消息提示：修改收款确认记录失败！" + exp.Message;
         }
     }
     protected void BT_DelWorkMoney_Click(object sender, EventArgs e)
@@ -938,7 +938,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         if (gvMoneyConfirm.SelectedIndex == -1)
         {
             lb_ShowMoneyMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMoneyMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiQingShuaZeYiHangJin").ToString().Trim();
+            lb_ShowMoneyMessage.Text = "消息提示：请选择一行进行删除操作！";
             return;
         }
 
@@ -946,18 +946,18 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         {
             int iid = Convert.ToInt32(gvWorkConfirm.Rows[gvWorkConfirm.SelectedIndex].Cells[1].Text);
             int confirmId = Convert.ToInt32(gvWorkDetails.Rows[gvWorkDetails.SelectedIndex].Cells[2].Text);
-            if (false == SaveDataMoneyList(2, Convert.ToInt32(TB_ID.Text), confirmId,iid, LanguageHandle.GetWord("ShanChuShouKuanQueRenJiLu").ToString().Trim()))
+            if (false == SaveDataMoneyList(2, Convert.ToInt32(TB_ID.Text), confirmId,iid, "删除收款确认记录"))
                 return;
 
             lb_ShowMoneyMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMoneyMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiShanChuShouKuanQueR").ToString().Trim();
+            lb_ShowMoneyMessage.Text = "消息提示：删除收款确认记录成功！";
 
             InitAllDataList(sender, e, 0 ,0);
         }
         catch (Exception exp)
         {
             lb_ShowMoneyMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMoneyMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiShanChuShouKuanQueR").ToString().Trim() + exp.Message;
+            lb_ShowMoneyMessage.Text = "消息提示：删除收款确认记录失败！" + exp.Message;
         }
     }
 
@@ -975,7 +975,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMoneyMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMoneyMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiCaoZuoShiBai").ToString().Trim() + exp.Message;
+            lb_ShowMoneyMessage.Text = "消息提示：操作失败！" + exp.Message;
         }
     }
 
@@ -1008,7 +1008,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         if (gvWorkConfirm.SelectedIndex < 0)
         {
             lb_ShowMoneyMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMoneyMessage.Text = LanguageHandle.GetWord("WeiShuaZeDuiYingDeQueRenGongZu").ToString().Trim();
+            lb_ShowMoneyMessage.Text = "为选择对应的确认工作量再试。";
             return;
         }
 
@@ -1028,7 +1028,7 @@ public partial class T_RCJProjectWorkDetails : System.Web.UI.Page
         if (gvWorkDetails.SelectedIndex < 0)
         {
             lb_ShowConfirmMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowConfirmMessage.Text = LanguageHandle.GetWord("WeiShuaZeDuiYingDeQueRenGongZu").ToString().Trim();
+            lb_ShowConfirmMessage.Text = "为选择对应的确认工作量再试。";
             return;
         } 
         

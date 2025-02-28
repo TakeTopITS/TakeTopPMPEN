@@ -810,7 +810,7 @@ public partial class TTProjectRelatedUser_BYJF : System.Web.UI.Page
         string strGroupName = TB_ActorGroupName.Text.Trim();
         strGroupName = "%" + strGroupName + "%";
 
-        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('Individual','Department','Company','Group','All')";  //ChineseWord
+        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('Individual','Department','Company','Group','All')";  
         strHQL += " and GroupName Like " + "'" + strGroupName + "'";
         strHQL += " and (actorGroup.BlongDepartCode in " + LB_DepartString.Text.Trim();
         strHQL += " Or actorGroup.MakeUserCode = " + "'" + strUserCode + "'" + ")";
@@ -827,7 +827,7 @@ public partial class TTProjectRelatedUser_BYJF : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('Individual','Department','Company','Group','All')";  //ChineseWord
+        strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName not in ('Individual','Department','Company','Group','All')";  
         strHQL += " and (actorGroup.BelongDepartCode in " + strDepartString;
         strHQL += " Or actorGroup.MakeUserCode = " + "'" + strUserCode + "'" + ")";
         strHQL += " and actorGroup.LangCode = " + "'" + strLangCode + "'";

@@ -119,7 +119,7 @@ public partial class TTPersonalSpaceNewsList : System.Web.UI.Page
         {
             strHQL += " And Type = 'External'";
         }
-        strHQL += " and Status = 'Publish' Order By ID DESC";   //ChineseWord
+        strHQL += " and Status = 'Publish' Order By ID DESC";   
 
 
 

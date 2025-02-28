@@ -100,8 +100,8 @@
                                                                     <td style="text-align: left" class="formItemBgStyle">
                                                                         <asp:DropDownList ID="DDL_SupplyMethod" runat="server">
                                                                             <asp:ListItem Text="-" Value="" />
-                                                                            <asp:ListItem Text="<%$ Resources:lang,ZiGou%>" Value="Self-purchase" />
-                                                                            <asp:ListItem Text="<%$ Resources:lang,JiaGong%>" Value="Party A Supply" />
+                                                                            <asp:ListItem Text="<%$ Resources:lang,ZiGou%>" Value="×Ô¹º" />
+                                                                            <asp:ListItem Text="<%$ Resources:lang,JiaGong%>" Value="¼×¹©" />
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                 </tr>
@@ -124,7 +124,7 @@
                                                                     <td style="text-align: left" class="formItemBgStyle" colspan="4">
                                                                         <asp:Button ID="btnSave" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnSave_Click" />&nbsp;&nbsp;
                                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                                            type="button" value="Closed" />
+                                                                            type="button" value="¹Ø±Õ" />
 
                                                                         <asp:Button ID="BT_Department" runat="server" Text="<%$ Resources:lang,XuanZeBuMen%>" CssClass="inpu" OnClick="BT_Department_Click" Style="display: none;" />
                                                                     </td>

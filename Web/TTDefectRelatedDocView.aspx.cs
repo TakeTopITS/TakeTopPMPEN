@@ -44,7 +44,7 @@ public partial class TTDefectRelatedDocView : System.Web.UI.Page
             strHQL += " (document.RelatedType = 'Defect' and document.RelatedID = " + strDefectID;
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
             strHQL += " or (document.Visible = 'Department' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";  
-            strHQL += " or ( document.Visible = 'Entire'))) ";   //ChineseWord
+            strHQL += " or ( document.Visible = 'Entire'))) ";   
             strHQL += "or ((document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Defect' and meeting.RelatedID =" + strDefectID + "))";  
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
             strHQL += " or ( document.Visible = 'Meeting')))";  

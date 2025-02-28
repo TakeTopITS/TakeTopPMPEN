@@ -43,7 +43,7 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
     private void DataTurnBinder()
     {
         WZTurnBLL wZTurnBLL = new WZTurnBLL();
-        string strWZTurnHQL = "from WZTurn as wZTurn Where ((wZTurn.MaterialPerson = " + "'" + strUserCode + "'" + ") or (wZTurn.PurchaseEngineer = " + "'" + strUserCode + "'" + ") or( wZTurn.CheckPerson = " + "'" + strUserCode + "'" + " and wZTurn.Progress = 'Acceptance')) order by  wZTurn.TurnTime desc";
+        string strWZTurnHQL = "from WZTurn as wZTurn Where ((wZTurn.MaterialPerson = " + "'" + strUserCode + "'" + ") or (wZTurn.PurchaseEngineer = " + "'" + strUserCode + "'" + ") or( wZTurn.CheckPerson = " + "'" + strUserCode + "'" + " and wZTurn.Progress = '验收')) order by  wZTurn.TurnTime desc";
 
         IList listWZTurn = wZTurnBLL.GetAllWZTurns(strWZTurnHQL);
         LB_Turn.DataSource = listWZTurn;
@@ -80,12 +80,12 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
                 strMaterialPerson = dtTurnDetail.Rows[i]["MaterialPerson"].ToString().Trim();
 
                 strProgress = dtTurnDetail.Rows[i]["Progress"].ToString();
-                if (strProgress == LanguageHandle.GetWord("LuRu").ToString().Trim())
+                if (strProgress == "录入")
                 {
                     DG_TurnDetail.Items[i].Cells[16].Text = "";
                 }
 
-                if ((strProgress == LanguageHandle.GetWord("QianShou").ToString().Trim() | strProgress == LanguageHandle.GetWord("LuRu").ToString().Trim()) & (strMaterialPerson == strUserCode | strMaterialPerson == strUserName))
+                if ((strProgress == "签收" | strProgress == "录入") & (strMaterialPerson == strUserCode | strMaterialPerson == strUserName))
                 {
                     ((LinkButton)DG_TurnDetail.Items[i].FindControl("LBT_Virturl")).Visible = true;
                 }
@@ -104,30 +104,30 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
                 }
 
 
-                if (strPurchaseEngineer == strUserCode & strPurchaseEngineer != strMaterialPerson & GetWZTurnProgress(LB_Turn.SelectedValue) == LanguageHandle.GetWord("QianShou").ToString().Trim())
+                if (strPurchaseEngineer == strUserCode & strPurchaseEngineer != strMaterialPerson & GetWZTurnProgress(LB_Turn.SelectedValue) == "签收")
                 {
                     ((LinkButton)DG_TurnDetail.Items[i].FindControl("LBT_CancelVirturl")).Visible = false;
                 }
 
 
-                if (strProgress == LanguageHandle.GetWord("QianShou").ToString().Trim())
+                if (strProgress == "签收")
                 {
                     ((LinkButton)DG_TurnDetail.Items[i].FindControl("LBT_Edit")).Visible = false;
                 }
 
-                if (strProgress == "Completed")
-                {
-                    ((LinkButton)DG_TurnDetail.Items[i].FindControl("LBT_Edit")).Visible = false;
-                    ((LinkButton)DG_TurnDetail.Items[i].FindControl("LBT_CancelVirturl")).Visible = false;
-                }
-
-                if (strProgress == "Acceptance")
+                if (strProgress == "完成")
                 {
                     ((LinkButton)DG_TurnDetail.Items[i].FindControl("LBT_Edit")).Visible = false;
                     ((LinkButton)DG_TurnDetail.Items[i].FindControl("LBT_CancelVirturl")).Visible = false;
                 }
 
-                if (strProgress == LanguageHandle.GetWord("HeXiao").ToString().Trim())
+                if (strProgress == "验收")
+                {
+                    ((LinkButton)DG_TurnDetail.Items[i].FindControl("LBT_Edit")).Visible = false;
+                    ((LinkButton)DG_TurnDetail.Items[i].FindControl("LBT_CancelVirturl")).Visible = false;
+                }
+
+                if (strProgress == "核销")
                 {
                     ((LinkButton)DG_TurnDetail.Items[i].FindControl("LBT_Edit")).Visible = false;
                     ((LinkButton)DG_TurnDetail.Items[i].FindControl("LBT_CancelVirturl")).Visible = false;
@@ -205,12 +205,12 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
                     TXT_TicketMoney.Text = wZTurnDetail.TicketMoney.ToString();
                     TXT_ActualNumber.Text = wZTurnDetail.ActualNumber.ToString();
 
-                    if (wZTurnDetail.PickingMethod == LanguageHandle.GetWord("GongPiao").ToString().Trim())
+                    if (wZTurnDetail.PickingMethod == "红票")
                     {
                         TXT_ActualNumber.BackColor = Color.Red;
                         TXT_TicketNumber.BackColor = Color.Red;
                     }
-                    else //if (wZTurnDetail.PickingMethod == LanguageHandle.GetWord("LanPiao").ToString().Trim()) 
+                    else //if (wZTurnDetail.PickingMethod == "蓝票") 
                     {
                         TXT_ActualNumber.BackColor = Color.CornflowerBlue;
                         TXT_TicketNumber.BackColor = Color.CornflowerBlue;
@@ -221,7 +221,7 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
                     TXT_TicketPrice.BackColor = Color.CornflowerBlue;
                     TXT_TicketMoney.BackColor = Color.CornflowerBlue;
 
-                    if (wZTurnDetail.Progress.Trim() == LanguageHandle.GetWord("DaShou").ToString().Trim())
+                    if (wZTurnDetail.Progress.Trim() == "答收")
                     {
                         DDL_PickingMethod.Enabled = false;
                         TXT_TicketNumber.Enabled = false;
@@ -287,14 +287,14 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
                     {
                         WZTurnDetail wZTurnDetail = (WZTurnDetail)listWZTurnDetail[0];
 
-                        wZTurnDetail.Progress = LanguageHandle.GetWord("LingLiao").ToString().Trim();
+                        wZTurnDetail.Progress = "领料";
                         wZTurnDetail.IsMark = -1;
                         wZTurnDetailBLL.UpdateWZTurnDetail(wZTurnDetail, intTurnDetailID);
 
                         //计划明细<已供数量>=移交明细<实领数量>
                         //计划明细<缺口数量>=计划明细<计划数量>-计划明细<已供数量>
                         //计划明细<缺口换算>=计划明细<缺口数量>/物资代码<换算系数>
-                        //计划明细<进度> = 'Material Issuance'
+                        //计划明细<进度> = '发料'
                         WZPickingPlanDetailBLL wZPickingPlanDetailBLL = new WZPickingPlanDetailBLL();
                         string strWZPickingPlanDetailHQL = string.Format(@"from WZPickingPlanDetail as wZPickingPlanDetail where wZPickingPlanDetail.ID = {0}", wZTurnDetail.PlanCode);
                         IList listWZPickingPlanDetail = wZPickingPlanDetailBLL.GetAllWZPickingPlanDetails(strWZPickingPlanDetailHQL);
@@ -318,18 +318,18 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
                                     wZPickingPlanDetail.ShortConver = wZPickingPlanDetail.ShortNumber / decimalConvertRatio;
                                 }
                             }
-                            wZPickingPlanDetail.Progress = LanguageHandle.GetWord("FaLiao").ToString().Trim();
+                            wZPickingPlanDetail.Progress = "发料";
 
                             wZPickingPlanDetailBLL.UpdateWZPickingPlanDetail(wZPickingPlanDetail, int.Parse(wZTurnDetail.PlanCode));
 
                             //string strHQL;
-                            //strHQL = "Update T_WZPickingPlan Set Progress = 'Material Issuance' Where PlanCode = " + "'" + wZPickingPlanDetail.PlanCode + "'";
+                            //strHQL = "Update T_WZPickingPlan Set Progress = '发料' Where PlanCode = " + "'" + wZPickingPlanDetail.PlanCode + "'";
                             //ShareClass.RunSqlCommand(strHQL);
 
                             //重新加载移交单明细列表
                             DataTurnDetailBinder();
 
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJRKCG").ToString().Trim() + "')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJRKCG + "')", true);
                         }
                     }
                 }
@@ -351,7 +351,7 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
                     {
                         WZTurnDetail wZTurnDetail = (WZTurnDetail)listWZTurnDetail[0];
 
-                        wZTurnDetail.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
+                        wZTurnDetail.Progress = "录入";
                         wZTurnDetail.IsMark = 0;
                         wZTurnDetailBLL.UpdateWZTurnDetail(wZTurnDetail, intTurnDetailID);
 
@@ -381,14 +381,14 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
                                     wZPickingPlanDetail.ShortConver = wZPickingPlanDetail.ShortNumber / decimalConvertRatio;
                                 }
                             }
-                            wZPickingPlanDetail.Progress = LanguageHandle.GetWord("YiJiao").ToString().Trim();
+                            wZPickingPlanDetail.Progress = "移交";
 
                             wZPickingPlanDetailBLL.UpdateWZPickingPlanDetail(wZPickingPlanDetail, int.Parse(wZTurnDetail.PlanCode));
 
                             //重新加载移交单明细列表
                             DataTurnDetailBinder();
 
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXSZCG").ToString().Trim() + "')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXSZCG + "')", true);
                         }
                     }
                 }
@@ -467,7 +467,7 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
 
             if (strMaterialPerson == strUserCode)
             {
-                if (strProgress == LanguageHandle.GetWord("QianShou").ToString().Trim())
+                if (strProgress == "签收")
                 {
                     btnAccetance.Enabled = true;
 
@@ -476,14 +476,14 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
                     btnSign.Enabled = false;
                 }
 
-                if (strProgress == "Completed")
+                if (strProgress == "完成")
                 {
                     btnCheck.Enabled = true;
                     btnCancelCheck.Enabled = true;
                 }
             }
 
-            if (strProgress == LanguageHandle.GetWord("QianShou").ToString().Trim())
+            if (strProgress == "签收")
             {
                 btnSign.Enabled = false;
 
@@ -491,7 +491,7 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
                 btnReset.Enabled = false;
             }
 
-            if (strProgress == "Acceptance")
+            if (strProgress == "验收")
             {
                 btnAccetance.Enabled = false;
 
@@ -505,7 +505,7 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
                 }
             }
 
-            if (strProgress == "Completed")
+            if (strProgress == "完成")
             {
                 btnFinish.Enabled = false;
                 btnSave.Enabled = false;
@@ -514,7 +514,7 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
                 btnAccetance.Enabled = false;
             }
 
-            if (strProgress == LanguageHandle.GetWord("HeXiao").ToString().Trim())
+            if (strProgress == "核销")
             {
                 btnCheck.Enabled = false;
 
@@ -549,7 +549,7 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strID) || strID == "0" || string.IsNullOrEmpty(strActualNumber) || string.IsNullOrEmpty(strTicketPrice) || string.IsNullOrEmpty(strTicketMoney))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZYBJDYJDMX").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZYBJDYJDMX + "')", true);
                 return;
             }
 
@@ -564,39 +564,39 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
             {
                 WZTurnDetail wZTurnDetail = (WZTurnDetail)listWZTurnDetail[0];
 
-                //if (wZTurnDetail.Progress != LanguageHandle.GetWord("LuRu").ToString().Trim())
+                //if (wZTurnDetail.Progress != "录入")
                 //{
-                //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDYJDMXJDBWLRBYXBJ").ToString().Trim()+"')", true);
+                //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDYJDMXJDBWLRBYXBJ+"')", true);
                 //    return;
                 //}
 
                 if (string.IsNullOrEmpty(strNoCode))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZNOBHBNWKBC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZNOBHBNWKBC + "')", true);
                     return;
                 }
 
                 if (!ShareClass.CheckIsNumber(strActualNumber) | string.IsNullOrEmpty(strActualNumber))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZShiLingShuLiangBuNengWeiKong").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('实领数量不能为空！')", true);
                     return;
                 }
 
                 if (!ShareClass.CheckIsNumber(strTicketNumber))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKPSLZNWXS").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKPSLZNWXS + "')", true);
                     return;
                 }
 
                 if (!ShareClass.CheckIsNumber(strTicketPrice) | string.IsNullOrEmpty(strTicketPrice))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKPDJZNWXS").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKPDJZNWXS + "')", true);
                     return;
                 }
 
                 if (!ShareClass.CheckIsNumber(strTicketMoney) | string.IsNullOrEmpty(strTicketMoney))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKPJEZNWXS").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKPJEZNWXS + "')", true);
                     return;
                 }
 
@@ -648,7 +648,7 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
                 TXT_TicketMoney.BackColor = Color.White;
                 TXT_ActualNumber.BackColor = Color.White;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
             }
         }
         catch (Exception ex) { }
@@ -705,14 +705,14 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
             strID = HF_ID.Value;
 
 
-            //strHQL = "Update T_WZTurnDetail Set Progress = 'Sign for Receipt' Where TurnCode = " + "'" + strTurnCode + "'" + " and ID = " + strID;
+            //strHQL = "Update T_WZTurnDetail Set Progress = '签收' Where TurnCode = " + "'" + strTurnCode + "'" + " and ID = " + strID;
             //ShareClass.RunSqlCommand(strHQL);
 
-            //strHQL = "Select * From T_WZTurnDetail Where TurnCode = " + "'" + strTurnCode + "'" + " and Progress <> 'Sign for Receipt'";
+            //strHQL = "Select * From T_WZTurnDetail Where TurnCode = " + "'" + strTurnCode + "'" + " and Progress <> '签收'";
             //DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WZTurnDetail");
             //if (ds.Tables[0].Rows.Count == 0)
             //{
-            strHQL = "Update T_WZTurn Set Progress = 'Sign for Receipt' Where TurnCode = " + "'" + strTurnCode + "'";   //ChineseWord
+            strHQL = "Update T_WZTurn Set Progress = '签收' Where TurnCode = " + "'" + strTurnCode + "'";
             ShareClass.RunSqlCommand(strHQL);
 
             strHQL = "Update T_WZTurn Set SingTime = " + "'" + DateTime.Now.ToString("yyyy-MM-dd") + "'" + " Where TurnCode = " + "'" + strTurnCode + "'";
@@ -724,11 +724,11 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
 
             DataTurnDetailBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZQianShouChengGong").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('签收成功')", true);
         }
         catch (Exception ex)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('签收失败，请检查！')" + ex.Message.ToString(), true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('签收失败，请检查！')" + ex.Message.ToString(), true);
         }
     }
 
@@ -746,18 +746,18 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
             DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WZTurnDetail");
             if (ds.Tables[0].Rows.Count > 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZBuNengYanShouYinCunZaiJieSua").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('不能验收，因存在结算标记不为 -1 的 记录')", true);
                 return;
             }
 
-            //strHQL = "Update T_WZTurnDetail Set Progress = 'Acceptance' Where TurnCode = " + "'" + strTurnCode + "'" + " and ID = " + strID;
+            //strHQL = "Update T_WZTurnDetail Set Progress = '验收' Where TurnCode = " + "'" + strTurnCode + "'" + " and ID = " + strID;
             //ShareClass.RunSqlCommand(strHQL);
 
-            //strHQL = "Select * From T_WZTurnDetail Where TurnCode = " + "'" + strTurnCode + "'" + " and Progress <> 'Acceptance'";
+            //strHQL = "Select * From T_WZTurnDetail Where TurnCode = " + "'" + strTurnCode + "'" + " and Progress <> '验收'";
             // ds = ShareClass.GetDataSetFromSql(strHQL, "T_WZTurnDetail");
             //if (ds.Tables[0].Rows.Count == 0)
             //{
-            strHQL = "Update T_WZTurn Set Progress = 'Acceptance' Where TurnCode = " + "'" + strTurnCode + "'";
+            strHQL = "Update T_WZTurn Set Progress = '验收' Where TurnCode = " + "'" + strTurnCode + "'";
             ShareClass.RunSqlCommand(strHQL);
             //}
 
@@ -765,11 +765,11 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
 
             DataTurnDetailBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZYanShouChengGong").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('验收成功')", true);
         }
         catch (Exception ex)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZYanShouShiBaiQingJianCha").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('验收失败，请检查！')", true);
         }
     }
 
@@ -792,20 +792,20 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
             strID = HF_ID.Value;
             strTurnCode = LB_Turn.SelectedValue.Trim();
 
-            if (GetTurnProgress(strTurnCode) != "Acceptance")
+            if (GetTurnProgress(strTurnCode) != "验收")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZCiYiJiaoChanJinDuBuWeiYanSho").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('此移交单进度不为 验收 ，不能完成')", true);
                 return;
             }
 
-            //strHQL = "Update T_WZTurnDetail Set Progress = 'Completed' Where TurnCode = " + "'" + strTurnCode + "'" + " and ID = " + strID;
+            //strHQL = "Update T_WZTurnDetail Set Progress = '完成' Where TurnCode = " + "'" + strTurnCode + "'" + " and ID = " + strID;
             //ShareClass.RunSqlCommand(strHQL);
 
-            //strHQL = "Select * From T_WZTurnDetail Where TurnCode = " + "'" + strTurnCode + "'" + " and Progress <> 'Completed'";
+            //strHQL = "Select * From T_WZTurnDetail Where TurnCode = " + "'" + strTurnCode + "'" + " and Progress <> '完成'";
             //DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WZTurnDetail");
             //if (ds.Tables[0].Rows.Count == 0)
             //{
-            strHQL = "Update T_WZTurn Set Progress = 'Completed',FinishTime = now() Where TurnCode = " + "'" + strTurnCode + "'";
+            strHQL = "Update T_WZTurn Set Progress = '完成',FinishTime = now() Where TurnCode = " + "'" + strTurnCode + "'";
             ShareClass.RunSqlCommand(strHQL);
             //}
 
@@ -814,11 +814,11 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
 
             DataTurnDetailBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZWanChengChengGong").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('完成成功')", true);
         }
         catch (Exception ex)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZWanChengShiBaiQingJianCha").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('完成失败，请检查！')", true);
         }
     }
 
@@ -832,9 +832,9 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
             strID = HF_ID.Value;
             strTurnCode = LB_Turn.SelectedValue.Trim();
 
-            if (GetTurnProgress(strTurnCode) != "Completed")
+            if (GetTurnProgress(strTurnCode) != "完成")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZCiYiJiaoChanJinDuBuWeiWanChe").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('此移交单进度不为 完成 ，不能核销')", true);
                 return;
             }
 
@@ -845,10 +845,10 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
             //DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WZTurnDetail");
             //if (ds.Tables[0].Rows.Count == 0)
             //{
-            strHQL = "Update T_WZTurn Set Progress = '核销' Where TurnCode = " + "'" + strTurnCode + "'";   //ChineseWord
+            strHQL = "Update T_WZTurn Set Progress = '核销' Where TurnCode = " + "'" + strTurnCode + "'";
             ShareClass.RunSqlCommand(strHQL);
 
-            strHQL = "Update T_WZTurnDetail Set Progress = '核销' Where TurnCode = " + "'" + strTurnCode + "'";   //ChineseWord
+            strHQL = "Update T_WZTurnDetail Set Progress = '核销' Where TurnCode = " + "'" + strTurnCode + "'";
             ShareClass.RunSqlCommand(strHQL);
 
             //}
@@ -858,11 +858,11 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
 
             DataTurnDetailBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZHeXiaoChengGong").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('核销成功')", true);
         }
         catch (Exception ex)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZHeXiaoShiBaiQingJianCha").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('核销失败，请检查！')", true);
         }
     }
 
@@ -876,23 +876,23 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
             strID = HF_ID.Value;
             strTurnCode = LB_Turn.SelectedValue.Trim();
 
-            if (GetTurnProgress(strTurnCode) != LanguageHandle.GetWord("HeXiao").ToString().Trim())
+            if (GetTurnProgress(strTurnCode) != "核销")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZCiYiJiaoChanJinDuBuWeiHeXiao").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('此移交单进度不为 核销 ，不能取消核销')", true);
                 return;
             }
 
-            //strHQL = "Update T_WZTurnDetail Set Progress = 'Completed' Where TurnCode = " + "'" + strTurnCode + "'" + " and ID = " + strID;
+            //strHQL = "Update T_WZTurnDetail Set Progress = '完成' Where TurnCode = " + "'" + strTurnCode + "'" + " and ID = " + strID;
             //ShareClass.RunSqlCommand(strHQL);
 
             //strHQL = "Select * From T_WZTurnDetail Where TurnCode = " + "'" + strTurnCode + "'" + " and Progress = '核销'";
             //DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WZTurnDetail");
             //if (ds.Tables[0].Rows.Count  == 0)
             //{
-            strHQL = "Update T_WZTurn Set Progress = 'Completed' Where TurnCode = " + "'" + strTurnCode + "'";
+            strHQL = "Update T_WZTurn Set Progress = '完成' Where TurnCode = " + "'" + strTurnCode + "'";
             ShareClass.RunSqlCommand(strHQL);
 
-            strHQL = "Update T_WZTurnDetail Set Progress = 'Material Requisition' Where TurnCode = " + "'" + strTurnCode + "'";   //ChineseWord
+            strHQL = "Update T_WZTurnDetail Set Progress = '领料' Where TurnCode = " + "'" + strTurnCode + "'";
             ShareClass.RunSqlCommand(strHQL);
 
             //}
@@ -902,11 +902,11 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
 
             DataTurnDetailBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZQuXiaoLanguageHandleGetWordZ").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('取消核销成功')", true);
         }
         catch (Exception ex)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZQuXiaoLanguageHandleGetWordZ").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('取消核销失败，请检查！')", true);
         }
     }
 
@@ -918,7 +918,7 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
             string strID = HF_ID.Value;
             if (string.IsNullOrEmpty(strID) || strID == "0")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZYBJDYJDMX").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZYBJDYJDMX + "')", true);
                 return;
             }
 
@@ -927,12 +927,12 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
 
             if (!ShareClass.CheckIsNumber(strActualNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLSLBXWXSHZZS").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSLSLBXWXSHZZS + "')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strTicketPrice))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKPDJBXWXSHZZS").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKPDJBXWXSHZZS + "')", true);
                 return;
             }
 
@@ -956,7 +956,7 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
             string strID = HF_ID.Value;
             if (string.IsNullOrEmpty(strID) || strID == "0")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZYBJDYJDMX").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZYBJDYJDMX + "')", true);
                 return;
             }
 
@@ -965,12 +965,12 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
 
             if (!ShareClass.CheckIsNumber(strActualNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLSLBXWXSHZZS").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSLSLBXWXSHZZS + "')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strTicketMoney))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKPJEBXWXSHZZS").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKPJEBXWXSHZZS + "')", true);
                 return;
             }
 
@@ -997,7 +997,7 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
             string strID = HF_ID.Value;
             if (string.IsNullOrEmpty(strID) || strID == "0")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZYBJDYJDMX").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZYBJDYJDMX + "')", true);
                 return;
             }
 
@@ -1006,12 +1006,12 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
 
             if (!ShareClass.CheckIsNumber(strActualNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLSLBXWXSHZZS").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSLSLBXWXSHZZS + "')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strTicketPrice))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKPDJBXWXSHZZS").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKPDJBXWXSHZZS + "')", true);
                 return;
             }
 
@@ -1057,7 +1057,7 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
                 decimal decimalTicketNumber = 0;
                 decimal.TryParse(TXT_TicketNumber.Text.Trim(), out decimalTicketNumber);
 
-                if (strPickingMethodValue == LanguageHandle.GetWord("GongPiao").ToString().Trim())
+                if (strPickingMethodValue == "红票")
                 {
                     decimalActualNumber = decimalActualNumber > 0 ? -1 * decimalActualNumber : decimalActualNumber;
                     decimalTicketNumber = decimalTicketNumber > 0 ? -1 * decimalTicketNumber : decimalTicketNumber;
@@ -1082,7 +1082,7 @@ public partial class TTWZTurnDetailEdit : System.Web.UI.Page
                     }
                     TXT_TicketNumber.BackColor = Color.Red;
                 }
-                else if (strPickingMethodValue == LanguageHandle.GetWord("LanPiao").ToString().Trim())
+                else if (strPickingMethodValue == "蓝票")
                 {
                     decimalActualNumber = decimalActualNumber > 0 ? decimalActualNumber : -1 * decimalActualNumber;
                     decimalTicketNumber = decimalTicketNumber > 0 ? decimalTicketNumber : -1 * decimalTicketNumber;

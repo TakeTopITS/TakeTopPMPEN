@@ -34,7 +34,7 @@
                 $("#BT_NewExecute").attr("disabled", "disabled");
                 $("#BT_NewExecute").removeClass("inpu");                         //执行
             }
-            else if (objProgress == "Approved") {
+            else if (objProgress == "批准") {
                 $("#BT_NewEdit").attr("disabled", "disabled");
                 $("#BT_NewEdit").removeClass("inpu");                            //删除
                 $("#BT_NewDelete").attr("disabled", "disabled");
@@ -225,7 +225,7 @@
                                                                     <%--<asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%#Eval("PayID") %>' CommandName="del" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="录入" ? true : false %>'>删除</asp:LinkButton>--%>
                                                                     <%--<asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%#Eval("PayID") %>' CommandName="edit" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="录入" ? true : false %>'>编辑</asp:LinkButton>--%>
                                                                     <%--<asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%#Eval("PayID") %>' CommandName="request" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="录入" ? true : false %>'>报批</asp:LinkButton>--%>
-                                                                    <%--<asp:LinkButton ID="LinkButton4" runat="server" CommandArgument='<%#Eval("PayID") %>' CommandName="execute" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Approved" ? true : false %>'>执行</asp:LinkButton>--%>
+                                                                    <%--<asp:LinkButton ID="LinkButton4" runat="server" CommandArgument='<%#Eval("PayID") %>' CommandName="execute" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="批准" ? true : false %>'>执行</asp:LinkButton>--%>
                                                                     <%--<a href='TTWZPayDetail.aspx?PayID=<%# DataBinder.Eval(Container.DataItem,"PayID") %>'>明细</a>--%>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
@@ -256,7 +256,7 @@
                                                             <asp:BoundColumn DataField="MarkerName" HeaderText="编制人">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                            <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">

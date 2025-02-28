@@ -84,9 +84,9 @@
                                                                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                                                 <Columns>
                                                                     <asp:ButtonField CommandName="RefreshButton" Text="刷新" />
-                                                                    <asp:BoundField DataField="ProjectID" HeaderText="ProjectNumber" />
-                                                                    <asp:BoundField DataField="ProjectYear" HeaderText="Year" />
-                                                                    <asp:BoundField DataField="ProjectMonth" HeaderText="Month" />
+                                                                    <asp:BoundField DataField="ProjectID" HeaderText="项目号" />
+                                                                    <asp:BoundField DataField="ProjectYear" HeaderText="年份" />
+                                                                    <asp:BoundField DataField="ProjectMonth" HeaderText="月份" />
                                                                     <asp:BoundField DataField="ProjectSTCV" HeaderText="合同额(STCV)" />
                                                                     <asp:BoundField DataField="ProjectBCWS" HeaderText="计划总额(BCWS)" />
                                                                     <asp:BoundField DataField="ProjectBCWP" HeaderText="挣值总额(BCWP)" />

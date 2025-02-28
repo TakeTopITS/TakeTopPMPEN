@@ -61,7 +61,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiChaXunCaoZuoChuXian").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：查询操作出现异常：" + exp.Message;
         }
     }
 
@@ -81,7 +81,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiJiaZaiChengBaoShangL").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "错误提示：加载承包商列表信息出错：" + exp.Message;
             return;
         }
     }
@@ -92,139 +92,139 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         if (TB_ItemNo.Text.Trim().Length == 0 || ShareClass.CheckIsAllNumber(TB_ItemNo.Text) == false)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiZiXiangXuHaoShuRuYo").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【子项序号】输入有误，应全为数字，请正确输入后再试！";
             return false;
         }
         if (TB_ItemName.Text.Trim().Length == 0 || TB_ItemName.Text.Trim().Length > 256)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiDingEHaoShuRuYouWuB").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【定额号】输入有误，不能超过256个汉字，请正确输入后再试！";
             return false;
         }
         if (TB_SubItem.Text.Trim().Length == 0 || TB_SubItem.Text.Trim().Length > 256)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiFenBuFenXiangShuRuY").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【分部分项】输入有误，不能超过20个汉字，请正确输入后再试！";
             return false;
         }
         if (TB_ItemUnit.Text.Trim().Length == 0 || TB_ItemUnit.Text.Trim().Length > 5)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiChanWeiShuRuYouWuBu").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【单位】输入有误，不能超过5个汉字，请正确输入后再试！";
             return false;
         }
         if (TB_ItemCount.Text.Trim().Length == 0 || ShareClass.CheckIsNumber(TB_ItemCount.Text) == false)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiShuLiangShuRuYouWuY").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【数量】输入有误，应全为数字大于零，请正确输入后再试！";
             return false;
         }
         if (TB_ItemContent.Text.Trim().Length == 0 || TB_ItemContent.Text.Trim().Length > 256)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiDingEMingChenShuRuY").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【定额名称】输入有误，不能超过256个汉字，请正确输入后再试！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemPriceDevice.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiSheBeiYuanDingChanJ").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【设备原定单价】输入有误，应为数字且大于等于零，请正确输入后再试！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemPriceMainMaterial.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiZhuCaiYuanDingChanJ").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【主材原定单价】输入有误，应为数字且大于等于零，请正确输入后再试！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemWage.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiRenGongYuanDingChan").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【人工原定单价】输入有误，应为数字且大于等于零，请正确输入后再试！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemPriceMaterial.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiCaiLiaoYuanDingChan").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【材料原定单价】输入有误，应为数字且大于等于零，请正确输入后再试！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemPriceMachine.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiJiXieYuanDingChanJi").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【机械原定单价】输入有误，应为数字且大于等于零，请正确输入后再试！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemPriceDeviceBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiYuSuanSheBeiGeJiaSh").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【预算设备合价】输入有误，应为数字且大于等于零，请正确输入后再试！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemPriceMainMaterialBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiZhuCaiYuSuanGeJiaSh").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【主材预算合价】输入有误，应为数字且大于等于零，请正确输入后再试！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(this.tb_ProjectMaterialBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiCaiLiaoYuSuanGeJiaS").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【材料预算合价】输入有误，应为数字且大于等于零，请正确输入后再试！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(this.tb_ProjectMachineBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiJiXieYuSuanGeJiaShu").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【机械预算合价】输入有误，应为数字且大于等于零，请正确输入后再试！";
             return false;
         } 
         if (false == RCJShareClass.isNumberString(TB_ItemPriceWageBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiRenGongYuSuanGeJiaS").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【人工预算合价】输入有误，应为数字且大于等于零，请正确输入后再试！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(tb_ItemPricePurchaseFee.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiGuanLiFeiJiLiRunFei").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【管理费及利润费】输入有误，应为数字且大于等于零，请正确输入后再试！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(tb_ItemPricePurchaseFeeBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiFeiLvCuoShiFeiShuRu").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【费率措施费】输入有误，应为数字且大于等于零，请正确输入后再试！";
             return false;
         } 
         if (false == RCJShareClass.isNumberString(TB_ItemComprehensiveFeeBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiGuiFeiShuRuYouWuYin").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【规费】输入有误，应为数字且大于等于零，请正确输入后再试！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemTaxesBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiYuSuanShuiJinGeJiaS").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【预算税金合价】输入有误，应为数字且大于等于零，请正确输入后再试！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemPriceTotalBudge.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiGeJiYuSuanGeJiaShuR").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【合计预算合价】输入有误，应为数字且大于等于零，请正确输入后再试！";
             return false;
         }
         if (TB_BeginTime.Text.Trim().Length <=0 )
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiKaiShiShiJianShuRuY").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【开始时间】输入有误，请正确选择后再试！";
             return false;
         }
         if (TB_EndTime.Text.Trim().Length <= 0)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiJieShuShiJianShuRuY").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：【结束时间】输入有误，请正确选择后再试！";
             return false;
         }
 
@@ -243,14 +243,14 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             if (CheckHasRecord(DDL_PerformanceType.SelectedValue, TB_ItemNo.Text , ref iid) == true)
             {
                 lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiGaiZiXiangXuHaoYiJi").ToString().Trim();
+                lb_ShowMessage.Text = "消息提示：该子项序号已经存在，请正确输入后再试！";
                 return;
             }
 
             if (SaveDataList(0) == true)
             {
                 lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-                lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiXinZengShuJuChengGo").ToString().Trim();
+                lb_ShowMessage.Text = "消息提示：新增数据成功！";
 
                 InitDataList();
             }
@@ -259,7 +259,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiXinZengCaoZuoChuXia").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：新增操作出现异常：" + exp.Message;
         }
     }
 
@@ -315,7 +315,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             //paplData.ComprehensivePriceAdjust = Convert.ToDouble(TB_ItemPriceTotalBudge.Text);
             paplData.ProjectBCWS = Convert.ToDouble(TB_ItemPriceTotalBudge.Text);
             paplData.ItemNum = Convert.ToDouble(TB_ItemCount.Text);
-            paplData.Memo = LanguageHandle.GetWord("YuanDingJiaGe").ToString().Trim();
+            paplData.Memo = "原定价格";
 
 
             runAddDataList(bAdd,item, paplData);
@@ -323,7 +323,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiXinZengCaoZuoChuXia").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：新增操作出现异常：" + exp.Message;
 
             return false;
         }
@@ -337,7 +337,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         if (GridView1.SelectedIndex == -1)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            string strMsg = LanguageHandle.GetWord("XiaoXiDiShiQingShuaZeYiHangYao").ToString().Trim();
+            string strMsg = "消息提示：请选择一行要删除的基准数据再进行删除操作!";
             lb_ShowMessage.Text = strMsg;
             return;
         }
@@ -350,14 +350,14 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             SaveDataList(2);
 
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiZhiDingJiLuShanChuC").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：指定记录删除成功！";
 
             InitDataList();
         }
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiShanChuCaoZuoChuXia").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：删除操作出现异常：" + exp.Message;
         }
 
     }
@@ -384,14 +384,14 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         if (FileUpload_Training.HasFile == false)//HasFile用来检查FileUpload是否有指定文件
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            LB_ShowMessageImport.Text = LanguageHandle.GetWord("CuoWuDiShiQingNinShuaZeExcelWe").ToString().Trim();
+            LB_ShowMessageImport.Text = "错误提示： 请您选择Excel文件!";
             return;//当无文件时,返回
         }
         string IsXls = System.IO.Path.GetExtension(FileUpload_Training.FileName).ToString().ToLower() ;//System.IO.Path.GetExtension获得文件的扩展名
         if (IsXls != ".xls" && IsXls != ".xlsx")
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            LB_ShowMessageImport.Text = LanguageHandle.GetWord("CuoWuDiShiZhiKeYiShuaZeExcelWe").ToString().Trim();
+            LB_ShowMessageImport.Text = "错误提示： 只可以选择Excel文件!";
             return;//当选择的不是Excel文件时,返回
         }
         string filename = FileUpload_Training.FileName.ToString();              //获取Execle文件名
@@ -400,7 +400,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         FileInfo fi = new FileInfo(strDocSavePath + newfilename);
         if (fi.Exists)
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", LanguageHandle.GetWord("scriptalertExcelWenJianBuCunZa").ToString().Trim());
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('Excel文件不存在');</script>");
         }
         else
         {
@@ -422,9 +422,9 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
                 int rowsnum = ds.Tables[0].Rows.Count;
                 if (rowsnum == 0)
                 {
-                    sbExcelImportMsg.Append(LanguageHandle.GetWord("CuoWuDiShi").ToString().Trim());
+                    sbExcelImportMsg.Append("错误提示: [");
                     sbExcelImportMsg.Append(strTypeId);
-                    sbExcelImportMsg.Append(LanguageHandle.GetWord("MoShuJuDaoRuXiaYiGeLeiXingn").ToString().Trim());
+                    sbExcelImportMsg.Append("]无数据，导入下一个类型。\n");
                     continue;
                 }
                 else
@@ -439,7 +439,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
                         TB_AnalysMsg.Text = sbExcelImportMsg.ToString();
                     }
 
-                    string str = string.Format(LanguageHandle.GetWord("CongExcelWenJianDaoRuChengBenJ").ToString().Trim(), dr.Length, sucnum, strTypeId);
+                    string str = string.Format("从Excel文件导入成本绩效基准数据共{0:D}条，成功{1:D}条,专业分类：{2:s}\n", dr.Length, sucnum, strTypeId);
                     sbExcelImportMsg.Append(str);
 
                     if (sucnum > 0)
@@ -482,170 +482,170 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         if (dr[itemid].ToString().Trim().Length == 0 || ShareClass.CheckIsAllNumber(dr[itemid].ToString()) == false)
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("ZiXiangXuHaoShuRuYouWuYingQuan").ToString().Trim());
+            sbExcelImportMsg.Append("【子项序号】输入有误，应全为数字，请正确输入后再试！\n");
             return false;
         }
         itemid++;
-        sbExcelImportMsg.Append(LanguageHandle.GetWord("KaiShiDaoRuZiXiangXuHaoWei").ToString().Trim());
+        sbExcelImportMsg.Append("开始导入【子项序号】为:");
         sbExcelImportMsg.Append(dr[0].ToString());
-        sbExcelImportMsg.Append(LanguageHandle.GetWord("DeJiXiaoJiZhunShuJun").ToString().Trim());
+        sbExcelImportMsg.Append(" 的绩效基准数据-----------------\n");
         if (dr[itemid].ToString().Trim().Length == 0 || dr[itemid].ToString().Trim().Length > 256)
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiDingEHaoShuRuYouWuB").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【定额号】输入有误，不能超过256个汉字，请正确输入后再试！\n");
             return false;
         }
         itemid++;
         if (dr[itemid].ToString().Trim().Length == 0 || dr[itemid].ToString().Trim().Length > 256)
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiDingEMingChenShuRuY").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【定额名称】输入有误，不能超过256个汉字，请正确输入后再试！\n");
             return false;
         }
         itemid++;
         if (dr[itemid].ToString().Trim().Length == 0 || dr[itemid].ToString().Trim().Length > 40)
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiFenBuFenXiangShuRuY").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【分部分项】输入有误，不能超过40个汉字，请正确输入后再试！\n");
             return false;
         }
         itemid++;
         if (dr[itemid].ToString().Trim().Length == 0 || dr[itemid].ToString().Trim().Length > 5)
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiChanWeiShuRuYouWuBu").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【单位】输入有误，不能超过5个汉字，请正确输入后再试！\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiShuLiangShuRuYouWuY").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【数量】输入有误，应全为数字且大于零，请正确输入后再试！\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiSheBeiYuanDingChanJ").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【设备原定单价】输入有误，应为数字且大于等于零，请正确输入后再试！\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiZhuCaiYuanDingChanJ").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【主材原定单价】输入有误，应为数字且大于等于零，请正确输入后再试！\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiRenGongYuanDingChan").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【人工原定单价】输入有误，应为数字且大于等于零，请正确输入后再试！\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiCaiLiaoYuanDingChan").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【材料原定单价】输入有误，应为数字且大于等于零，请正确输入后再试！\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiJiXieYuanDingChanJi").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【机械原定单价】输入有误，应为数字且大于等于零，请正确输入后再试！\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiYuSuanSheBeiGeJiaSh").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【预算设备合价】输入有误，应为数字且大于等于零，请正确输入后再试！\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiZhuCaiYuSuanGeJiaSh").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【主材预算合价】输入有误，应为数字且大于等于零，请正确输入后再试！\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiRenGongYuSuanGeJiaS").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【人工预算合价】输入有误，应为数字且大于等于零，请正确输入后再试！\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiCaiLiaoYuSuanGeJiaS").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【材料预算合价】输入有误，应为数字且大于等于零，请正确输入后再试！\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiJiXieYuSuanGeJiaShu").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【机械预算合价】输入有误，应为数字且大于等于零，请正确输入后再试！\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiGuanLiFeiJiLiRunFei").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【管理费及利润费】输入有误，应为数字且大于等于零，请正确输入后再试！\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiFeiLvCuoShiFeiShuRu").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【费率措施费】输入有误，应为数字且大于等于零，请正确输入后再试！\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiGuiFeiShuRuYouWuYin").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【规费】输入有误，应为数字且大于等于零，请正确输入后再试！\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiYuSuanShuiJinGeJiaS").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【预算税金合价】输入有误，应为数字且大于等于零，请正确输入后再试！\n");
             return false;
         }
         itemid++;
         if (false == RCJShareClass.isNumberString(dr[itemid].ToString()))
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiGeJiYuSuanGeJiaShuR").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【合计预算合价】输入有误，应为数字且大于等于零，请正确输入后再试！\n");
             return false;
         }
         itemid++;
         if (dr[itemid].ToString().Trim().Length != 0 && dr[itemid].ToString().Trim().Length > 50)
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiChengBaoShangShuRuY").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【承包商】输入有误，不为空则长度50个字符，25个汉字，请正确输入后再试！\n");
             return false;
         }
         if(DDL_ProjectSupplierID.Items.FindByValue(dr[itemid].ToString().Trim()) == null)
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiChengBaoShangBuCunZ").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【承包商】不存在，请正确输入后再试！\n");
             return false;
         }
         itemid++;
         if (dr[itemid].ToString().Trim() != "0" && dr[itemid].ToString().Trim() != "1")
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiZiDongJiSuanYueJiHu").ToString().Trim());
+            sbExcelImportMsg.Append("消息提示：【自动计算月计划额】输入有误，只能为0或者1，请正确输入后再试！\n");
             return false;
         }
         itemid++;
@@ -655,14 +655,14 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             if (dr[itemid].ToString().Trim().Length != 0 && RCJShareClass.IsDate(dr[itemid].ToString().Trim()) == false)
             {
                 LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-                sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiKaiShiShiJianShuRuY").ToString().Trim());
+                sbExcelImportMsg.Append("消息提示：【开始时间】输入有误，格式为yyyy/mm/dd,请正确输入后再试！\n");
                 return false;
             }
             itemid++;
             if (dr[itemid].ToString().Trim().Length != 0 && RCJShareClass.IsDate(dr[itemid].ToString().Trim()) == false)
             {
                 LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-                sbExcelImportMsg.Append(LanguageHandle.GetWord("XiaoXiDiShiJieShuShiJianShuRuY").ToString().Trim());
+                sbExcelImportMsg.Append("消息提示：【结束时间】输入有误,格式为yyyy/mm/dd，请正确输入后再试！\n");
                 return false;
             }
         }
@@ -675,7 +675,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         //记录是否合法,如果不合法则不导入
         if (IsExcelRecordValid(dr) == false)
         {
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("DaoRuYiTiaoJiLuShiBain").ToString().Trim());
+            sbExcelImportMsg.Append("导入一条记录失败！！！\n");
             return false;
         }
 
@@ -721,7 +721,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             paplData.TaxesPriceAdjust = Convert.ToDouble(dr[19].ToString());
             paplData.ProjectBCWS = Convert.ToDouble(dr[20].ToString());
             paplData.ItemNum = Convert.ToDouble(dr[5].ToString());
-            paplData.Memo = LanguageHandle.GetWord("YuanDingJiaGe").ToString().Trim();
+            paplData.Memo = "原定价格";
 
             RCJProjectCostPerformanceList oldItem = new RCJProjectCostPerformanceList();
 
@@ -732,17 +732,17 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         }
         catch (Exception exp)
         {
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("ZiXiangXuHaoWei").ToString().Trim());
+            sbExcelImportMsg.Append("【子项序号】为:");
             sbExcelImportMsg.Append(dr[0].ToString());
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("DeJiXiaoJiZhunShuJuCaoZuoChuXi").ToString().Trim());
+            sbExcelImportMsg.Append(" 的绩效基准数据操作出现异常：");
             sbExcelImportMsg.Append(exp.Message);
             sbExcelImportMsg.Append("\n");
             return false;
         }
 
-        sbExcelImportMsg.Append(LanguageHandle.GetWord("ZiXiangXuHaoWei").ToString().Trim());
+        sbExcelImportMsg.Append("【子项序号】为:");
         sbExcelImportMsg.Append(dr[0].ToString());
-        sbExcelImportMsg.Append(LanguageHandle.GetWord("DeJiXiaoJiZhunShuJuDaoRuChengG").ToString().Trim());
+        sbExcelImportMsg.Append(" 的绩效基准数据导入成功！\n");
 
         return true;
     }
@@ -846,17 +846,17 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             TB_ItemPriceTotalBudge.Text = GridView1.Rows[GridView1.SelectedIndex].Cells[22].Text.Replace(",", "");
             DDL_ProjectSupplierID.ClearSelection();
             DDL_ProjectSupplierID.Items.FindByText(GridView1.Rows[GridView1.SelectedIndex].Cells[23].Text).Selected = true;
-            CB_IfEveryMonth.Checked = ((Label)GridView1.Rows[GridView1.SelectedIndex].FindControl("Label2")).Text.Trim() == "YES";
+            CB_IfEveryMonth.Checked = ((Label)GridView1.Rows[GridView1.SelectedIndex].FindControl("Label2")).Text.Trim() == "是";
             TB_BeginTime.Text = GridView1.Rows[GridView1.SelectedIndex].Cells[24].Text;
             TB_EndTime.Text = GridView1.Rows[GridView1.SelectedIndex].Cells[25].Text;
 
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiZhiDingJiLuChaXunCh").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：指定记录查询成功！";
         }
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiCaoZuoShiBai").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：操作失败！" + exp.Message;
         }
     }
 
@@ -866,7 +866,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         if (GridView1.SelectedIndex == -1)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            string strMsg = LanguageHandle.GetWord("XiaoXiDiShiQingShuaZeYiHangYao").ToString().Trim();
+            string strMsg = "消息提示：请选择一行要修改的基准数据再进行修改操作!";
             lb_ShowMessage.Text = strMsg;
             return;
         }
@@ -875,13 +875,13 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             return;
 
         //修改时不能修改自动分月
-        bool IsChecked = ((Label)GridView1.Rows[GridView1.SelectedIndex].FindControl("Label2")).Text.Trim() == "YES";
+        bool IsChecked = ((Label)GridView1.Rows[GridView1.SelectedIndex].FindControl("Label2")).Text.Trim() == "是";
         if (CB_IfEveryMonth.Checked != IsChecked)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            string strMsg = LanguageHandle.GetWord("XiaoXiDiShiXiuGaiCaoZuoShiBuNe").ToString().Trim();
+            string strMsg = "消息提示：修改操作时不能修改【自动计算月计划额】!";
             lb_ShowMessage.Text = strMsg;
-            CB_IfEveryMonth.Checked = ((Label)GridView1.Rows[GridView1.SelectedIndex].FindControl("Label2")).Text.Trim() == "YES";
+            CB_IfEveryMonth.Checked = ((Label)GridView1.Rows[GridView1.SelectedIndex].FindControl("Label2")).Text.Trim() == "是";
             return;
         }
 
@@ -889,7 +889,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         if (RCJShareClass.CheckTheItemNumber(ProjectId, Convert.ToInt32(DDL_PerformanceType.SelectedValue), Convert.ToInt32(TB_ItemNo.Text), 1, TB_ItemCount.Text) == false)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            string strMsg = LanguageHandle.GetWord("XiaoXiDiShiGaiXiangBCWPBuWeiLi").ToString().Trim();
+            string strMsg = "消息提示：该项BCWP不为零，修改操作时不能小于已经录入的工作总量，请正确填写后再进行修改操作!";
             lb_ShowMessage.Text = strMsg;
             return;
         }
@@ -899,7 +899,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         if (TB_ItemNo.Text != GridView1.Rows[GridView1.SelectedIndex].Cells[1].Text)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            string strMsg = LanguageHandle.GetWord("XiaoXiDiShiJinHangXiuGaiCaoZuo").ToString().Trim();
+            string strMsg = "消息提示：进行修改操作时不能修改子项序号，请正确填写后再进行修改操作!";
             lb_ShowMessage.Text = strMsg;
             return;
         }
@@ -909,14 +909,14 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             SaveDataList(1);
 
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiZhiDingJiLuXiuGaiCh").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：指定记录修改成功！";
 
             InitDataList();
         }
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiXiuGaiCaoZuoChuXian").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：修改操作出现异常：" + exp.Message;
         }
     }
 
@@ -941,7 +941,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             else
             {
                 lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiChaXunYuanYouJiXiao").ToString().Trim(); 
+                lb_ShowMessage.Text = "消息提示：查询原有绩效列表数据操作没有对应记录。"; 
                 
                 return false;
             }
@@ -949,7 +949,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiChaXunYuanYouJiXiao").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：查询原有绩效列表数据操作出现异常：" + exp.Message;
 
             return false;
         }
@@ -980,7 +980,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             else
             {
                 lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiChaXunYuanYouJiaGeD").ToString().Trim();
+                lb_ShowMessage.Text = "消息提示：查询原有价格调整数据操作没有对应记录。";
 
                 return false;
             }
@@ -988,7 +988,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiChaXunYuanYouJiaGeD").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：查询原有价格调整操作出现异常：" + exp.Message;
 
             return false;
         }
@@ -1013,17 +1013,17 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         try
         {
             sbExcelImportMsg.Remove(0, sbExcelImportMsg.Length);
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("ZhengZaiDaoChuJiXiaoJiZhunLieB").ToString().Trim());
+            sbExcelImportMsg.Append("正在导出绩效基准列表信息数据...\n");
             TB_AnalysMsg.Text = sbExcelImportMsg.ToString();
             //根据导出模板生成临时文件
             string filePath = Server.MapPath("~/Template/" + Guid.NewGuid().ToString() + ".xls");
             try
             {
-                File.Copy(Server.MapPath(LanguageHandle.GetWord("TemplateJiXiaoJiZhunShuJuDaoCh").ToString().Trim()), filePath);
+                File.Copy(Server.MapPath("~/Template/绩效基准数据导出模板.xls"), filePath);
             }
             catch (Exception exp)
             {
-                sbExcelImportMsg.Append(LanguageHandle.GetWord("MoBanCaoZuoYiChang").ToString().Trim());
+                sbExcelImportMsg.Append("模板操作异常：");
                 sbExcelImportMsg.Append(exp.Message);
                 sbExcelImportMsg.Append("\n");
                 TB_AnalysMsg.Text = sbExcelImportMsg.ToString();
@@ -1036,20 +1036,20 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             }
 
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Green;
-            LB_ShowMessageImport.Text = LanguageHandle.GetWord("CaoZuoDiShiJiXiaoJiZhunShuJuDa").ToString().Trim();
+            LB_ShowMessageImport.Text = "操作提示： 绩效基准数据导入到Excel文件成功!";
 
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("DaoChuWenJianChengGongn").ToString().Trim());
+            sbExcelImportMsg.Append("导出文件成功\n");
             TB_AnalysMsg.Text = sbExcelImportMsg.ToString();
             //文件保存到本地
 
             Response.ContentType = "application/ms-excel";
-            Response.AppendHeader("Content-Disposition", LanguageHandle.GetWord("attachmentfilenameJiXiaoJiZhun").ToString().Trim());
+            Response.AppendHeader("Content-Disposition", "attachment;filename=绩效基准数据.xls");
             Response.WriteFile(filePath);
 
         }
         catch (Exception exp)
         {
-            sbExcelImportMsg.Append(LanguageHandle.GetWord("CaoZuoYiChangQingQueRenMoBanWe").ToString().Trim());
+            sbExcelImportMsg.Append("操作异常：请确认模板文件‘绩效基准数据导出模板.xls’是否正在使用中，请关闭后再试！");
             sbExcelImportMsg.Append(exp.Message);
             sbExcelImportMsg.Append("\n");
             TB_AnalysMsg.Text = sbExcelImportMsg.ToString();
@@ -1133,11 +1133,11 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
                     int linenum = cmd.ExecuteNonQuery();
                 }
 
-                sbExcelImportMsg.Append(LanguageHandle.GetWord("DaoChu").ToString().Trim());
+                sbExcelImportMsg.Append("导出[");
                 sbExcelImportMsg.Append(strItemTypeName);
-                sbExcelImportMsg.Append(LanguageHandle.GetWord("ChengGongGong").ToString().Trim());
+                sbExcelImportMsg.Append("]成功，共");
                 sbExcelImportMsg.Append(list.Count.ToString());
-                sbExcelImportMsg.Append(LanguageHandle.GetWord("Tiaon").ToString().Trim());
+                sbExcelImportMsg.Append("条。\n");
                 TB_AnalysMsg.Text = sbExcelImportMsg.ToString();
 
                 ExcelConn.Close();
@@ -1146,9 +1146,9 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         catch (Exception exp)
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            StringBuilder sb = new StringBuilder(LanguageHandle.GetWord("CuoWuDiShiJiXiaoJiZhunShuJu").ToString().Trim());
+            StringBuilder sb = new StringBuilder("错误提示： 绩效基准数据[");
             sb.Append(strItemTypeName);
-            sb.Append(LanguageHandle.GetWord("DaoRuDaoExcelWenJianShiBai").ToString().Trim());
+            sb.Append("]导入到Excel文件失败!");
             sb.Append(exp.Message);
             LB_ShowMessageImport.Text = sb.ToString();
         }
@@ -1171,12 +1171,12 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             ShareClass.RunSqlCommand(sql.ToString());
 
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Green;
-            LB_ShowMessageImport.Text = LanguageHandle.GetWord("XiaoXiDiShiXiuGaiZhuYueJiHuaMo").ToString().Trim();
+            LB_ShowMessageImport.Text = "消息提示：修改【逐月计划】模式成功！";
         }
         catch (Exception exp)
         {
             LB_ShowMessageImport.ForeColor = System.Drawing.Color.Red;
-            LB_ShowMessageImport.Text = LanguageHandle.GetWord("CuoWuDiShiJiXiaoJiZhunShuJuDao").ToString().Trim() + exp.Message;
+            LB_ShowMessageImport.Text = "错误提示： 绩效基准数据导入到Excel文件失败!" + exp.Message;
         }
     }
 
@@ -1205,7 +1205,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
         tb_ItemPricePurchaseFeeBudget.Text = "";
         lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
         TB_SubItem.Text = "";
-        lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiMo").ToString().Trim();
+        lb_ShowMessage.Text = "消息提示：无";
     }
 
     protected void DDL_PerformanceType_SelectedIndexChanged(object sender, EventArgs e)
@@ -1225,7 +1225,7 @@ public partial class TTRCJProjectCostPerformanceBenchmar : System.Web.UI.Page
             e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor='#FFFFFF'");
 
             Label lbl1 = (Label)e.Row.FindControl("Label1");
-            if ("YES" == lbl1.Text)
+            if ("是" == lbl1.Text)
                 e.Row.ForeColor = System.Drawing.Color.Crimson;
             else
                 e.Row.ForeColor = System.Drawing.Color.Blue;

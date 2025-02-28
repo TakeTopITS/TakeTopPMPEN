@@ -54,7 +54,7 @@ public partial class TTNewCustomList : System.Web.UI.Page
         if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
         {
             LinkButton LB = (LinkButton)e.Item.FindControl("LB_Del");
-            LB.Attributes.Add("onclick", "return confirm('确定要删除此项记录吗？');");   //ChineseWord
+            LB.Attributes.Add("onclick", "return confirm('确定要删除此项记录吗？');");   
         }
     }
 }

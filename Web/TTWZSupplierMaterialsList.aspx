@@ -25,7 +25,7 @@
             $("#BT_NewBrowse").attr("class", "inpu");
             $("#BT_NewBrowse").removeAttr("disabled");
 
-            if (objProgress == "Submission1") {
+            if (objProgress == "提交1") {
                 $("#BT_NewEdit").attr("class", "inpu");
                 $("#BT_NewEdit").removeAttr("disabled");                            //编辑
                 $("#BT_NewSubmit").attr("class", "inpu");
@@ -35,7 +35,7 @@
                 $("#BT_NewPushReturn").attr("class", "inpu");
                 $("#BT_NewPushReturn").removeAttr("disabled");                          //推荐退回
             }
-            else if (objProgress == "Submission2") {
+            else if (objProgress == "提交2") {
                 $("#BT_NewEdit").attr("disabled", "disabled");
                 $("#BT_NewEdit").removeClass("inpu");                            //编辑
                 $("#BT_NewSubmit").attr("disabled", "disabled");
@@ -146,13 +146,13 @@
                                                                     <td class="formItemBgStyle">
                                                                         <%--<asp:DropDownList ID="DDL_Progress" runat="server">
                                                                             <asp:ListItem Text="" Value=""/>
-                                                                            <asp:ListItem Text="Submission1" Value="Submission1"/>
-                                                                            <asp:ListItem Text="Submission2" Value="Submission2"/>
+                                                                            <asp:ListItem Text="提交1" Value="提交1"/>
+                                                                            <asp:ListItem Text="提交2" Value="提交2"/>
                                                                         </asp:DropDownList>--%>
                                                                         <asp:DropDownList ID="DDL_Progress" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_Progress_SelectedIndexChanged">
                                                                           
-                                                                            <asp:ListItem Text="<%$ Resources:lang,TiJiaoYi%>" Value="Submission1"/>
-                                                                            <asp:ListItem Text="<%$ Resources:lang,TiJiaoEr%>" Value="Submission2"/>
+                                                                            <asp:ListItem Text="<%$ Resources:lang,TiJiaoYi%>" Value="提交1"/>
+                                                                            <asp:ListItem Text="<%$ Resources:lang,TiJiaoEr%>" Value="提交2"/>
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                     <td class="formItemBgStyle" colspan="2">
@@ -500,7 +500,7 @@
                                                                                 <%#DataBinder.Eval(Container.DataItem, "InTime", "{0:yyyy/MM/dd}")%>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                                        <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                         </asp:BoundColumn>
                                                                          <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">

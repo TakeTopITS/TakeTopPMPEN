@@ -85,7 +85,7 @@
                                                                                     <asp:Button ID="BT_CanUse" CssClass="inpu" runat="server" Text="设为在用" OnClick="BT_CanUse_Click" />
                                                                                 </td>
                                                                                 <td>
-                                                                                    <asp:Button ID="BT_Delete" CssClass="inpu" runat="server" Text="Deleted" OnClick="BT_Delete_Click" />
+                                                                                    <asp:Button ID="BT_Delete" CssClass="inpu" runat="server" Text="删除" OnClick="BT_Delete_Click" />
                                                                                 </td>
                                                                                 <td>把站点</td>
                                                                                 <td>
@@ -145,11 +145,11 @@
                                                                                             </td>
                                                                                             <td align="center" width="4%">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label12" runat="server" Text="Version"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label12" runat="server" Text="版本"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td align="center" width="4%">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label5" runat="server" Text="Type"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label5" runat="server" Text="类型"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td align="center" width="6%">
                                                                                                 <strong>
@@ -161,7 +161,7 @@
                                                                                             </td>
                                                                                             <td align="center" width="4%">
                                                                                                 <strong>
-                                                                                                    <asp:Label ID="Label6" runat="server" Text="InUse"></asp:Label></strong>
+                                                                                                    <asp:Label ID="Label6" runat="server" Text="在用"></asp:Label></strong>
                                                                                             </td>
                                                                                             <td align="center" width="5%">
                                                                                                 <strong>
@@ -207,12 +207,12 @@
                                                                             ShowHeader="False" OnItemCommand="DataGrid1_ItemCommand"
                                                                             Width="100%" Height="1px" CellPadding="4" ForeColor="#333333" GridLines="None">
                                                                             <Columns>
-                                                                                <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
+                                                                                <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                                 </asp:ButtonColumn>
                                                                                 <asp:TemplateColumn HeaderText="Delete">
                                                                                     <ItemTemplate>
-                                                                                        <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                                                        <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='删除' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                                                     </ItemTemplate>
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                                 </asp:TemplateColumn>
@@ -222,7 +222,7 @@
                                                                                 <asp:BoundColumn DataField="RentProductName" HeaderText="产品">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="RentProductVersion" HeaderText="Version">
+                                                                                <asp:BoundColumn DataField="RentProductVersion" HeaderText="版本">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="RentProductType" HeaderText="产品类型">
@@ -234,7 +234,7 @@
                                                                                 <asp:BoundColumn DataField="SiteURL" HeaderText="主站URL">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="left" Width="8%" />
                                                                                 </asp:BoundColumn>
-                                                                                <asp:BoundColumn DataField="IsCanUse" HeaderText="InUse">
+                                                                                <asp:BoundColumn DataField="IsCanUse" HeaderText="在用">
                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                                 </asp:BoundColumn>
                                                                                 <asp:BoundColumn DataField="SiteBindingInfo" HeaderText="主站端口">
@@ -328,7 +328,7 @@
                                                         </asp:DropDownList>
                                                     </td>
                                                     <td style="text-align: right; width: 10%;" class="formItemBgStyle">
-                                                        <asp:Label ID="Label24" runat="server" Text="Version"></asp:Label>:
+                                                        <asp:Label ID="Label24" runat="server" Text="版本"></asp:Label>:
                                                     </td>
                                                     <td style="text-align: left; width: 10%;" class="formItemBgStyle">
                                                         <asp:DropDownList ID="DL_ProductVerType" runat="server">
@@ -338,7 +338,7 @@
                                                         </asp:DropDownList>
                                                     </td>
                                                     <td style="text-align: right; width: 10%;" class="formItemBgStyle">
-                                                        <asp:Label ID="Label8" runat="server" Text="Type"></asp:Label>:
+                                                        <asp:Label ID="Label8" runat="server" Text="类型"></asp:Label>:
                                                     </td>
                                                     <td style="text-align: left;" class="formItemBgStyle">
                                                         <asp:DropDownList ID="DL_RentProductType" runat="server">

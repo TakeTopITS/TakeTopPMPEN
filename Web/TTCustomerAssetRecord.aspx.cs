@@ -691,7 +691,7 @@ public partial class TTCustomerAssetRecord : System.Web.UI.Page
             {
                 string strPOID = "0";
                 #region [添加主表数据]
-                string strCurrencyType = dr[0]["Currency"].ToString().Trim();   //ChineseWord
+                string strCurrencyType = dr[0]["Currency"].ToString().Trim();   
                 AddAssetPurchaseOrderData(ref strPOID, strCurrencyType);
                 #endregion
 
@@ -701,25 +701,25 @@ public partial class TTCustomerAssetRecord : System.Web.UI.Page
                 for (int i = 0; i < dr.Length; i++)
                 {
                     assetPurRecord.POID = int.Parse(strPOID.Trim());
-                    assetPurRecord.Type = dr[i]["Type"].ToString().Trim();   //ChineseWord
-                    assetPurRecord.AssetCode = dr[i]["Code"].ToString().Trim();   //ChineseWord
-                    assetPurRecord.AssetName = dr[i]["Name"].ToString().Trim();   //ChineseWord
-                    assetPurRecord.Number = decimal.Parse(dr[i]["Quantity"].ToString().Trim() == "" ? "0" : dr[i]["Quantity"].ToString().Trim());   //ChineseWord
-                    assetPurRecord.Unit = dr[i]["Unit"].ToString().Trim();   //ChineseWord
-                    assetPurRecord.Price = decimal.Parse(dr[i]["UnitPrice"].ToString().Trim() == "" ? "0" : dr[i]["UnitPrice"].ToString().Trim());   //ChineseWord
-                    assetPurRecord.ModelNumber = dr[i]["Model"].ToString().Trim();   //ChineseWord
-                    assetPurRecord.Spec = dr[i]["Specification"].ToString().Trim();   //ChineseWord
-                    assetPurRecord.PurReason = dr[i]["RegistrationReason"].ToString().Trim();   //ChineseWord
+                    assetPurRecord.Type = dr[i]["Type"].ToString().Trim();   
+                    assetPurRecord.AssetCode = dr[i]["Code"].ToString().Trim();   
+                    assetPurRecord.AssetName = dr[i]["Name"].ToString().Trim();   
+                    assetPurRecord.Number = decimal.Parse(dr[i]["Quantity"].ToString().Trim() == "" ? "0" : dr[i]["Quantity"].ToString().Trim());   
+                    assetPurRecord.Unit = dr[i]["Unit"].ToString().Trim();   
+                    assetPurRecord.Price = decimal.Parse(dr[i]["UnitPrice"].ToString().Trim() == "" ? "0" : dr[i]["UnitPrice"].ToString().Trim());   
+                    assetPurRecord.ModelNumber = dr[i]["Model"].ToString().Trim();   
+                    assetPurRecord.Spec = dr[i]["Specification"].ToString().Trim();   
+                    assetPurRecord.PurReason = dr[i]["RegistrationReason"].ToString().Trim();   
                     assetPurRecord.PurTime = DateTime.Now;
-                    assetPurRecord.Status = dr[i]["Status"].ToString().Trim();   //ChineseWord
+                    assetPurRecord.Status = dr[i]["Status"].ToString().Trim();   
                     assetPurRecord.RelatedType = "Other";
                     assetPurRecord.RelatedID = 0;
                     assetPurRecord.ApplicantCode = strUserCode.Trim();
                     assetPurRecord.ApplicantName = ShareClass.GetUserName(strUserCode.Trim());
                     assetPurRecord.Supplier = dr[i]["Supplier"].ToString().Trim();
-                    assetPurRecord.SupplierPhone = dr[i]["SupplierPhone"].ToString().Trim();   //ChineseWord
+                    assetPurRecord.SupplierPhone = dr[i]["SupplierPhone"].ToString().Trim();   
                     assetPurRecord.Amount = assetPurRecord.Price * assetPurRecord.Number;
-                    assetPurRecord.CurrencyType = dr[i]["Currency"].ToString().Trim();   //ChineseWord
+                    assetPurRecord.CurrencyType = dr[i]["Currency"].ToString().Trim();   
 
 
                     assetPurRecordBLL.AddAssetPurRecord(assetPurRecord);

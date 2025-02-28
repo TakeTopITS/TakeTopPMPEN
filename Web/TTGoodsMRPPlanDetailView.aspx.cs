@@ -82,7 +82,7 @@ public partial class TTGoodsMRPPlanDetailView : System.Web.UI.Page
         string strHQL;
 
         strHQL = "Select * From T_ItemMainPlanRelatedItemProductPlan Where PlanVerID = " + strPlanVerID + " and PlanMRPVerID = " + strPlanMRPVerID;
-        strHQL += " and ItemCode in (Select ItemCode From T_Item Where Type = 'OutsourcedPart')";   //ChineseWord
+        strHQL += " and ItemCode in (Select ItemCode From T_Item Where Type = 'OutsourcedPart')";   
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_ItemMainPlanRelatedItemProductPlan");
 
         DataGrid4.DataSource = ds;

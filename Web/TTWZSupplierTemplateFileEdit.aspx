@@ -93,7 +93,7 @@
                                                                         <asp:FileUpload ID="FUP_SupplierTemplateFile" runat="server" />
                                                                         <asp:Button ID="BT_SupplierTemplateFile" runat="server" Text="<%$ Resources:lang,ShangChuan%>" CssClass="inpu" OnClick="BT_SupplierTemplateFile_Click" />
                                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                                                type="button" value="Closed" />
+                                                                                type="button" value="¹Ø±Õ" />
                                                                         <br />
                                                                         <asp:Literal ID="LT_SupplierTemplateText" runat="server"></asp:Literal>
                                                                         <asp:HiddenField ID="HF_TemplateFileName" runat="server" />

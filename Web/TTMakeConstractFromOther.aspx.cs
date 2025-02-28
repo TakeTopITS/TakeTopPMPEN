@@ -186,7 +186,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
 
                     try
                     {
-                        DL_ConstractClass.SelectedValue = "PurchaseCategory";   //ChineseWord
+                        DL_ConstractClass.SelectedValue = "PurchaseCategory";   
                     }
                     catch
                     {
@@ -196,7 +196,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
                     try
                     {
 
-                        DL_Type.SelectedValue = "MaterialPurchase";   //ChineseWord
+                        DL_Type.SelectedValue = "MaterialPurchase";   
                     }
                     catch
                     {
@@ -224,7 +224,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
 
                     try
                     {
-                        DL_Currency.SelectedValue = "Renminbi";   //ChineseWord
+                        DL_Currency.SelectedValue = "Renminbi";   
                     }
                     catch
                     {
@@ -233,7 +233,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
 
                     try
                     {
-                        DL_ReAndPayType.SelectedValue = "Transfer";   //ChineseWord
+                        DL_ReAndPayType.SelectedValue = "Transfer";   
                     }
                     catch
                     {
@@ -1419,7 +1419,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
                             DocumentBLL documentBLL = new DocumentBLL();
                             Document document = new Document();
 
-                            document.RelatedType = "Contract";   //ChineseWord
+                            document.RelatedType = "Contract";   
 
                             document.DocTypeID = int.Parse("1");
                             strDocType = GetDocTypeName("1");
@@ -3438,7 +3438,7 @@ public partial class TTMakeConstractFromOther : System.Web.UI.Page
         DL_CustomerList.DataSource = lst;
         DL_CustomerList.DataBind();
 
-        DL_CustomerList.Items.Insert(0, new ListItem("--请选择客户--", ""));   //ChineseWord
+        DL_CustomerList.Items.Insert(0, new ListItem("--请选择客户--", ""));   
     }
 
     public string GetConstractName(string strConstractCode)

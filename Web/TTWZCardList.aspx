@@ -199,7 +199,7 @@
                                                                         <asp:BoundColumn DataField="CardMoney" HeaderText="凭证金额">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="8%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                                        <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">

@@ -63,7 +63,7 @@ public partial class TTWZNeedObjectList : System.Web.UI.Page
                     WZNeedObject wZNeedObject = (WZNeedObject)needObjectList[0];
                     if (wZNeedObject.IsMark != 0)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSYBJBW0BYXSC").ToString().Trim()+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSYBJBW0BYXSC+"')", true);
                         return;
                     }
 
@@ -72,7 +72,7 @@ public partial class TTWZNeedObjectList : System.Web.UI.Page
                     //重新加载列表
                     DataBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
                 }
 
             }

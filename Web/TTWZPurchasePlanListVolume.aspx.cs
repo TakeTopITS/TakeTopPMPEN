@@ -230,16 +230,16 @@ public partial class TTWZPurchasePlanListVolume : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strPurchaseMethod))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('供应方式不能为空，请补充！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('供应方式不能为空，请补充！');", true);
                 return;
             }
             if (string.IsNullOrEmpty(strControlMoney))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('价格监审不能为空，请补充！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('价格监审不能为空，请补充！');", true);
                 return;
             }
 
-            if (strPurchaseMethod == LanguageHandle.GetWord("XunBiJia").ToString().Trim() || strPurchaseMethod == LanguageHandle.GetWord("QiaoBiao").ToString().Trim() || strPurchaseMethod == LanguageHandle.GetWord("KuangJia").ToString().Trim())
+            if (strPurchaseMethod == "询比价" || strPurchaseMethod == "招标" || strPurchaseMethod == "框架")
             {
                 //当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数≥3
                 bool IsDaiYu = true;
@@ -250,7 +250,7 @@ public partial class TTWZPurchasePlanListVolume : System.Web.UI.Page
 
                 if (IsDaiYu == false)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('警告，保存失败，当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数要≥3，请检查！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('警告，保存失败，当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数要≥3，请检查！');", true);
                     return;
                 }
             }
@@ -273,15 +273,15 @@ public partial class TTWZPurchasePlanListVolume : System.Web.UI.Page
                 {
                     wZPurchase = (WZPurchase)listPurchase[0];
 
-                    if (wZPurchase.Progress != LanguageHandle.GetWord("DiJiao").ToString().Trim())
+                    if (wZPurchase.Progress != "提交")
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购文件进度不为提交，不允许修改！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购文件进度不为提交，不允许修改！');", true);
                         return;
                     }
 
                     if (string.IsNullOrEmpty(strControlMoney))
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('价格监审不能为空，请补充！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('价格监审不能为空，请补充！');", true);
                         return;
                     }
 
@@ -523,7 +523,7 @@ public partial class TTWZPurchasePlanListVolume : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购文件不存在！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购文件不存在！');", true);
                 return;
             }
 
@@ -562,7 +562,7 @@ public partial class TTWZPurchasePlanListVolume : System.Web.UI.Page
                     if (fi.Exists)
                     {
 
-                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "');</script>");
+                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZCZTMWJSCSBGMHZSC + "');</script>");
                     }
 
                     if (Directory.Exists(strDocSavePath) == false)
@@ -597,11 +597,11 @@ public partial class TTWZPurchasePlanListVolume : System.Web.UI.Page
 
                     //重新加载报价文件列表
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传评标文件成功！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传评标文件成功！');", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true);
                     return;
                 }
             }
@@ -612,7 +612,7 @@ public partial class TTWZPurchasePlanListVolume : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先保存采购文件，再编辑报价文件！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先保存采购文件，再编辑报价文件！');", true);
             return;
         }
     }
@@ -662,7 +662,7 @@ public partial class TTWZPurchasePlanListVolume : System.Web.UI.Page
 
                     if (fi.Exists)
                     {
-                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "');</script>");
+                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZCZTMWJSCSBGMHZSC + "');</script>");
                     }
 
                     if (Directory.Exists(strDocSavePath) == false)
@@ -691,11 +691,11 @@ public partial class TTWZPurchasePlanListVolume : System.Web.UI.Page
 
                     //重新加载报价文件列表
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传招标文件成功！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传招标文件成功！');", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true);
                     return;
                 }
             }
@@ -724,7 +724,7 @@ public partial class TTWZPurchasePlanListVolume : System.Web.UI.Page
                     if (fi.Exists)
                     {
 
-                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "');</script>");
+                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZCZTMWJSCSBGMHZSC + "');</script>");
                     }
 
                     if (Directory.Exists(strDocSavePath) == false)
@@ -741,11 +741,11 @@ public partial class TTWZPurchasePlanListVolume : System.Web.UI.Page
                     HF_PurchaseDocumentURL.Value = "Doc\\" + DateTime.Now.ToString("yyyyMM") + "\\" + strUserCode + "\\Doc\\" + strFileName3;
 
                     //重新加载报价文件列表
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传采购文件成功！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传采购文件成功！');", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true);
                     return;
                 }
             }
@@ -791,9 +791,9 @@ public partial class TTWZPurchasePlanListVolume : System.Web.UI.Page
                 {
                     WZPurchase wZPurchase = (WZPurchase)lstPurchase[0];
 
-                    if (wZPurchase.Progress != LanguageHandle.GetWord("DiJiao").ToString().Trim())
+                    if (wZPurchase.Progress != "提交")
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购文件进度不为录入，不允许选择供应商了！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购文件进度不为录入，不允许选择供应商了！');", true);
                         return;
                     }
                 }
@@ -820,12 +820,12 @@ public partial class TTWZPurchasePlanListVolume : System.Web.UI.Page
                     }
 
                     string strSupplierHQL = string.Format(@"select *  from T_WZSupplier 
-                                                            where Grade <> 'Disabled'
-                                                            and Progress in('Registration','Approved')
+                                                            where Grade <> '禁用'
+                                                            and Progress in('登记','批准')
                                                             and SupplierCode in (Select UserCode From T_ProjectMember)
                                                             and ReviewDate::timestamp  > now()  
                                                              {0} 
-                                                            order by random() limit 6", strPurchaseDetails);   //ChineseWord
+                                                            order by random() limit 6", strPurchaseDetails);
                     DataTable dtSupplier = ShareClass.GetDataSetFromSql(strSupplierHQL, "Supplier").Tables[0];
                     if (dtSupplier != null && dtSupplier.Rows.Count > 0)
                     {
@@ -842,7 +842,7 @@ public partial class TTWZPurchasePlanListVolume : System.Web.UI.Page
                                     continue;
                                 }
                             }
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('找到 1 家符合条件的供应商！');", true);   //ChineseWord
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('找到 1 家符合条件的供应商！');", true);
                             return;
                         }
                         if (dtSupplier.Rows.Count == 2)
@@ -972,13 +972,13 @@ public partial class TTWZPurchasePlanListVolume : System.Web.UI.Page
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('未找到符合条件的供应商！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('未找到符合条件的供应商！');", true);
                         return;
                     }
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先编辑采购清单，再选择供应商！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先编辑采购清单，再选择供应商！');", true);
                     return;
                 }
             }
@@ -986,7 +986,7 @@ public partial class TTWZPurchasePlanListVolume : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先保存采购文件，再编辑供应商！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先保存采购文件，再编辑供应商！');", true);
             return;
         }
     }
@@ -1017,9 +1017,9 @@ public partial class TTWZPurchasePlanListVolume : System.Web.UI.Page
                 {
                     WZPurchase wZPurchase = (WZPurchase)lstPurchase[0];
 
-                    if (wZPurchase.Progress != LanguageHandle.GetWord("DiJiao").ToString().Trim())
+                    if (wZPurchase.Progress != "提交")
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购文件进度不为录入，不允许选择专家了！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购文件进度不为录入，不允许选择专家了！');", true);
                         return;
                     }
 
@@ -1049,7 +1049,7 @@ public partial class TTWZPurchasePlanListVolume : System.Web.UI.Page
                             }
                             else
                             {
-                                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购清单的专业类别为空，不允许为空，请先补充！');", true);   //ChineseWord
+                                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购清单的专业类别为空，不允许为空，请先补充！');", true);
                                 return;
                             }
                         }
@@ -1093,7 +1093,7 @@ public partial class TTWZPurchasePlanListVolume : System.Web.UI.Page
                                 else
                                 {
                                     BT_SelectExpert1.Enabled = true;
-                                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购清单的专业类别找不到相应的专家！');", true);   //ChineseWord
+                                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购清单的专业类别找不到相应的专家！');", true);
                                     return;
                                 }
                             }
@@ -1101,13 +1101,13 @@ public partial class TTWZPurchasePlanListVolume : System.Web.UI.Page
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先编辑采购清单，再选择专家！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先编辑采购清单，再选择专家！');", true);
                         return;
                     }
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购编号不存在！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购编号不存在！');", true);
                     return;
                 }
             }
@@ -1115,7 +1115,7 @@ public partial class TTWZPurchasePlanListVolume : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先保存采购文件，再编辑采购文件！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先保存采购文件，再编辑采购文件！');", true);
             return;
         }
     }

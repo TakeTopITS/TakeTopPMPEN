@@ -31,7 +31,7 @@ public partial class TTWZExpert : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack != true)
         {
-            TakeTopCore.CoreShareClass.InitialAllDepartmentTree(LanguageHandle.GetWord("ZZJGT").ToString().Trim(), TreeView1);
+            TakeTopCore.CoreShareClass.InitialAllDepartmentTree(Resources.lang.ZZJGT, TreeView1);
 
             LoadWZExpertList(txt_ExpertInfo.Text.Trim(), ddlType.SelectedValue.Trim());
 
@@ -47,7 +47,7 @@ public partial class TTWZExpert : System.Web.UI.Page
             strHQL += " and (ExpertCode like '%" + strExpertInfo + "%' or JobTitle like '%" + strExpertInfo + "%' or ExpertType like '%" + strExpertInfo + "%' or ExpertType2 like '%" + strExpertInfo + "%' or Name like '%" + strExpertInfo + "%' or WorkUnit like '%" + strExpertInfo + "%' " +
                 "or Job like '%" + strExpertInfo + "%') ";
         }
-        if (strType.Trim() != "PleaseSelect")
+        if (strType.Trim() != "«Î—°‘Ò")
         {
             strHQL += " and Type = '" + strType + "' ";
         }
@@ -161,7 +161,7 @@ public partial class TTWZExpert : System.Web.UI.Page
                 lbl_WorkUnit.Text = "";
                 TB_ExpertCode.Text = "";
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGRYWWBRYBNWNBZJJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGGRYWWBRYBNWNBZJJC + "')", true);
             }
         }
 
@@ -227,7 +227,7 @@ public partial class TTWZExpert : System.Web.UI.Page
     {
         if (TB_ExpertCode.Text.Trim() == "" || string.IsNullOrEmpty(TB_ExpertCode.Text))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGZJBNWKCZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGZJBNWKCZSBJC + "')", true);
             TB_ExpertCode.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
@@ -236,7 +236,7 @@ public partial class TTWZExpert : System.Web.UI.Page
         }
         if (IsWZExpert(TB_ExpertCode.Text.Trim(), ddl_Type.SelectedValue.Trim(), string.Empty))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGZJYCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGGZJYCZJC + "')", true);
             TB_ExpertCode.Focus();
             ddl_Type.Focus();
 
@@ -283,11 +283,11 @@ public partial class TTWZExpert : System.Web.UI.Page
 
             LoadWZExpertList(txt_ExpertInfo.Text.Trim(), ddlType.SelectedValue.Trim());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
         }
     }
@@ -296,7 +296,7 @@ public partial class TTWZExpert : System.Web.UI.Page
     {
         if (TB_ExpertCode.Text.Trim() == "" || string.IsNullOrEmpty(TB_ExpertCode.Text))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGZJBNWKCZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGZJBNWKCZSBJC + "')", true);
             TB_ExpertCode.Focus();
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
@@ -305,7 +305,7 @@ public partial class TTWZExpert : System.Web.UI.Page
         }
         if (IsWZExpert(TB_ExpertCode.Text.Trim(), ddl_Type.SelectedValue.Trim(), lbl_ID.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGZJYCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGGZJYCZJC + "')", true);
             TB_ExpertCode.Focus();
             ddl_Type.Focus();
 
@@ -315,7 +315,7 @@ public partial class TTWZExpert : System.Web.UI.Page
         }
         if (lbl_ID.Text.Trim() == "" || string.IsNullOrEmpty(lbl_ID.Text))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGZJSJBCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGGZJSJBCZJC + "')", true);
 
             ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
 
@@ -360,11 +360,11 @@ public partial class TTWZExpert : System.Web.UI.Page
 
                 LoadWZExpertList(txt_ExpertInfo.Text.Trim(), ddlType.SelectedValue.Trim());
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZJGXCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZJGXCG + "')", true);
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZJGXSB").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZJGXSB + "')", true);
                 ScriptManager.RegisterStartupScript(UpdatePanel1, GetType(), "pop", "popShow('popwindow','false') ", true);
 
             }
@@ -377,7 +377,7 @@ public partial class TTWZExpert : System.Web.UI.Page
         string strCode = lbl_ID.Text.Trim();
         if (lbl_ID.Text.Trim() == "" || string.IsNullOrEmpty(lbl_ID.Text))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGGZJSJBCZJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGGZJSJBCZJC + "')", true);
 
             return;
         }
@@ -394,11 +394,11 @@ public partial class TTWZExpert : System.Web.UI.Page
 
             LoadWZExpertList(txt_ExpertInfo.Text.Trim(), ddlType.SelectedValue.Trim());
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBJC + "')", true);
         }
     }
 

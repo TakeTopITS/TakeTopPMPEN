@@ -146,7 +146,7 @@
 
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="ProjectNumber">
+                                                                <asp:BoundColumn DataField="ProjectID" HeaderText="项目号">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:TemplateColumn>
@@ -158,7 +158,7 @@
                                                                         <%# ShareClass.StringCutByRequire(Eval("ProjectName").ToString(), 190) %>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <%--<asp:BoundColumn DataField="BeginDate" HeaderText="StartTime">
+                                                                <%--<asp:BoundColumn DataField="BeginDate" HeaderText="开始时间">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>--%>
                                                                 <asp:TemplateColumn>
@@ -170,7 +170,7 @@
                                                                         <%#DataBinder.Eval(Container.DataItem, "BeginDate", "{0:yyyy/MM/dd}")%>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <%--<asp:BoundColumn DataField="EndDate" HeaderText="EndTime">
+                                                                <%--<asp:BoundColumn DataField="EndDate" HeaderText="结束时间">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>--%>
                                                                 <asp:TemplateColumn>
@@ -182,19 +182,16 @@
                                                                         <%#DataBinder.Eval(Container.DataItem, "EndDate", "{0:yyyy/MM/dd}")%>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:TemplateColumn HeaderText="Status">
-    <ItemTemplate>
-        <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("StatusValue").ToString()) %>
-    </ItemTemplate>
-    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
-</asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="Budget" HeaderText="Budget">
+                                                                <asp:BoundColumn DataField="StatusValue" HeaderText="进度">
+                                                                    <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
+                                                                </asp:BoundColumn>
+                                                                <asp:BoundColumn DataField="Budget" HeaderText="预算">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:BoundColumn DataField="ProjectAmount" HeaderText="项目金额">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:TemplateColumn HeaderText="Status">
+                                                                <asp:TemplateColumn HeaderText="状态">
                                                                     <ItemTemplate>
                                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                     </ItemTemplate>
@@ -218,7 +215,7 @@
                                                         <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="确定" />
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                            type="button" value="Closed" />
+                                                            type="button" value="关闭" />
                                                     </div>
                                                 </td>
                                             </tr>

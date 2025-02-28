@@ -208,7 +208,7 @@
                                                                         <asp:Button ID="btnSave" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnSave_Click" />&nbsp;&nbsp;
                                                                         <%--<input type="button" value="·µ»Ø" id="BT_Return" class="inpu" onclick="window.location.href = 'TTWZSupplierList.aspx'" />--%>
                                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                                                type="button" value="Closed" />
+                                                                                type="button" value="¹Ø±Õ" />
                                                                     </td>
                                                                 </tr>
                                                             </table>

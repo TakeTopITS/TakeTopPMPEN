@@ -230,7 +230,7 @@ public partial class TTProPlanRelatedDoc : System.Web.UI.Page
             strHQL = " Select * from T_Document as document where ";
             strHQL += " (document.RelatedType = 'Plan' and document.RelatedID = " + strPlanID;
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( 'Department','Entire'))))";   //ChineseWord
+            strHQL += " or (document.Visible in ( 'Department','Entire'))))";   
             strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted'";
         }
         else
@@ -238,7 +238,7 @@ public partial class TTProPlanRelatedDoc : System.Web.UI.Page
             strHQL = " Select * from T_Document as document where ";
             strHQL += " (document.RelatedType = 'Plan' and document.RelatedID in (Select workPlan.ID from T_ImplePlan as workPlan where workPlan.ProjectID = " + strProjectID + " and workPlan.VerID = " + strPlanVerID + ")";
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( 'Department','Entire'))))";   //ChineseWord
+            strHQL += " or (document.Visible in ( 'Department','Entire'))))";   
             strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted'";
         }
 
@@ -679,7 +679,7 @@ public partial class TTProPlanRelatedDoc : System.Web.UI.Page
             strHQL = "Select * from T_Document as document where ";
             strHQL += " (document.RelatedType = 'Plan' and document.RelatedID = " + strPlanID;
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( 'Department','Entire'))))";   //ChineseWord
+            strHQL += " or (document.Visible in ( 'Department','Entire'))))";   
             strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         }
         else
@@ -687,7 +687,7 @@ public partial class TTProPlanRelatedDoc : System.Web.UI.Page
             strHQL = "Select * from T_Document as document where ";
             strHQL += " (document.RelatedType = 'Plan' and document.RelatedID in (Select workPlan.ID from T_ImplePlan as workPlan where workPlan.ProjectID = " + strProjectID + " and workPlan.VerID = " + strPlanVerID + ")";
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( 'Department','Entire'))))";   //ChineseWord
+            strHQL += " or (document.Visible in ( 'Department','Entire'))))";   
             strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
         }
 

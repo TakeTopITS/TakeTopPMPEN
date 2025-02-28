@@ -556,7 +556,7 @@ public partial class TTCreatedProjectDetail : System.Web.UI.Page
                 project.PMCode = strNewPMCode;
                 project.PMName = strNewPMName;
 
-                ShareClass.AddProjectMember(strProjectID, strNewPMCode, "ProjectManager", "ProjectManager", DL_Status.SelectedValue.Trim());   //ChineseWord
+                ShareClass.AddProjectMember(strProjectID, strNewPMCode, "ProjectManager", "ProjectManager", DL_Status.SelectedValue.Trim());   
             }
             else
             {
@@ -566,7 +566,7 @@ public partial class TTCreatedProjectDetail : System.Web.UI.Page
                 project.UserCode = strNewPMCode;
                 project.UserName = strNewPMName;
 
-                ShareClass.AddProjectMember(strProjectID, strNewPMCode, "ProjectInitiator", "ProjectInitiator", DL_Status.SelectedValue.Trim());   //ChineseWord
+                ShareClass.AddProjectMember(strProjectID, strNewPMCode, "ProjectInitiator", "ProjectInitiator", DL_Status.SelectedValue.Trim());   
             }
 
             try

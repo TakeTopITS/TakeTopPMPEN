@@ -277,7 +277,7 @@ public partial class TTAllUsers : System.Web.UI.Page
                 Duty 职责,OfficePhone 办公电话,MobilePhone 移动电话,EMail EMail,WorkScope 工作范围,JoinDate 加入日期,Status 状态,
                 RefUserCode 参考工号,IDCard 身份证号,SortNumber 顺序号,(case when UserCode in (select UserCode from T_SystemActiveUser) then 'Enabled'
 								 else 'NotEnabled' end) 权限 
-                From T_ProjectMember Where DepartCode in {0}", strDepartString);   //ChineseWord //ChineseWord
+                From T_ProjectMember Where DepartCode in {0}", strDepartString);    
 
             if (!string.IsNullOrEmpty(DL_Status.SelectedValue.Trim()))
             {
@@ -299,7 +299,7 @@ public partial class TTAllUsers : System.Web.UI.Page
                   Duty 职责,OfficePhone 办公电话, MobilePhone 移动电话,EMail EMail, WorkScope 工作范围,JoinDate 加入日期, Status 状态,
                 RefUserCode 参考工号, IDCard 身份证号,SortNumber 顺序号,(case when UserCode in (select UserCode from T_SystemActiveUser) then 'Enabled'
                                  else 'NotEnabled' end) 权限
-                From T_ProjectMember Where DepartCode = '{0}') Order by SortNumber ASC ", strDepartCode);   //ChineseWord //ChineseWord
+                From T_ProjectMember Where DepartCode = '{0}') Order by SortNumber ASC ", strDepartCode);    
         }
 
         MSExcelHandler.DataTableToExcel(strHQL, fileName);
@@ -313,11 +313,11 @@ public partial class TTAllUsers : System.Web.UI.Page
         IList lst = systemActiveUserBLL.GetAllSystemActiveUsers(strHQL);
         if (lst.Count > 0 && lst != null)
         {
-            return "Enabled";  //ChineseWord //ChineseWord
+            return "Enabled";   
         }
         else
         {
-            return "NotEnabled";  //ChineseWord //ChineseWord
+            return "NotEnabled";   
         }
     }
 }

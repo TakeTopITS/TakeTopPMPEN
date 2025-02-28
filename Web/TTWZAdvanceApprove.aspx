@@ -117,8 +117,8 @@
                                                                     <asp:Label ID="Label12" runat="server" Text="<%$ Resources:lang,CaoZuo%>"></asp:Label>
                                                                 </HeaderTemplate>
                                                                 <ItemTemplate>
-                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%#Eval("AdvanceCode") %>' CommandName="approve" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Approval" ? true : false %>'>批准</asp:LinkButton>
-                                                                    <%--<asp:Button ID="Button2" runat="server" CssClass="inpu" Text="Approved" CommandName="approve" CommandArgument='<%# Eval("AdvanceCode") %>' Visible='<%# Eval("Progress").ToString()=="Approval" ? true : false %>' />--%>
+                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%#Eval("AdvanceCode") %>' CommandName="approve" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="报批" ? true : false %>'>批准</asp:LinkButton>
+                                                                    <%--<asp:Button ID="Button2" runat="server" CssClass="inpu" Text="批准" CommandName="approve" CommandArgument='<%# Eval("AdvanceCode") %>' Visible='<%# Eval("Progress").ToString()=="报批" ? true : false %>' />--%>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
                                                             <asp:BoundColumn DataField="AdvanceCode" HeaderText="预付款ID">
@@ -148,7 +148,7 @@
                                                             <asp:BoundColumn DataField="MarkerName" HeaderText="编制人">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                            <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">

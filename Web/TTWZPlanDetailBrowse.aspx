@@ -137,7 +137,7 @@
                                                                                 CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="20" ShowHeader="false"
                                                                                 Width="100%" OnPageIndexChanged="DG_PickPlanDetailList_PageIndexChanged">
                                                                                 <Columns>
-                                                                                    <%--   <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
+                                                                                    <%--   <asp:BoundColumn DataField="ID" HeaderText="ÐòºÅ">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                                                     </asp:BoundColumn>--%>
                                                                                     <asp:TemplateColumn>
@@ -234,7 +234,7 @@
                                                                     <td style="text-align: center" class="formItemBgStyle" colspan="3">
                                                                         <p class="noprint">
                                                                             <input id="print" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                                                type="button" value="Closed" />
+                                                                                type="button" value="¹Ø±Õ" />
                                                                             <input id="print0" class="inpu" onclick="printpage();" type="button" value="´òÓ¡" />
                                                                         </p>
                                                                     </td>

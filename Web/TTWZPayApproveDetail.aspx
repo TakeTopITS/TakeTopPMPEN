@@ -161,13 +161,13 @@
                                                                 </HeaderTemplate>
                                                                 <ItemTemplate>
 
-                                                                    <asp:LinkButton runat="server" CommandArgument='<%#Eval("ID") %>' CommandName="edit" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Approval" ? true : false %>'>
+                                                                    <asp:LinkButton runat="server" CommandArgument='<%#Eval("ID") %>' CommandName="edit" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="报批" ? true : false %>'>
                                                                         <asp:Label ID="Label19" runat="server" Text="<%$ Resources:lang,BianJi%>"></asp:Label></asp:LinkButton>
-                                                                    <%--<asp:Button ID="Button4" runat="server" CssClass="inpu" Text="编辑" CommandName="edit" CommandArgument='<%# Eval("ID") %>' Visible='<%# Eval("Progress").ToString()=="Approval" ? true : false %>' />--%>
+                                                                    <%--<asp:Button ID="Button4" runat="server" CssClass="inpu" Text="编辑" CommandName="edit" CommandArgument='<%# Eval("ID") %>' Visible='<%# Eval("Progress").ToString()=="报批" ? true : false %>' />--%>
                                                                     <asp:Button ID="Button1" runat="server" CssClass="inpu" Text="<%$ Resources:lang,ShanChu%>" CommandName="del" CommandArgument='<%# Eval("ID") %>' Visible="false" />
-                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%#Eval("ID") %>' CommandName="approve" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Approval" ? true : false %>'>
+                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%#Eval("ID") %>' CommandName="approve" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="报批" ? true : false %>'>
                                                                         <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,PiZhun%>"></asp:Label></asp:LinkButton>&nbsp;
-                                                                    <%--<asp:Button ID="Button2" runat="server" CssClass="inpu" Text="Approved" CommandName="approve" CommandArgument='<%# Eval("ID") %>' Visible='<%# Eval("Progress").ToString()=="Approval" ? true : false %>' />--%>
+                                                                    <%--<asp:Button ID="Button2" runat="server" CssClass="inpu" Text="批准" CommandName="approve" CommandArgument='<%# Eval("ID") %>' Visible='<%# Eval("Progress").ToString()=="报批" ? true : false %>' />--%>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
                                                             <asp:BoundColumn DataField="AdvanceCode" HeaderText="预付款ID">
@@ -197,7 +197,7 @@
                                                             <asp:BoundColumn DataField="MarkerName" HeaderText="编制人">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="9%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                            <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="ConfirmMoney" HeaderText="批准额度">

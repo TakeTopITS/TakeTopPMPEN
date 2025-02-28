@@ -51,7 +51,7 @@ public partial class TTDocumentReviewWF : System.Web.UI.Page
             DL_DocType.DataSource = lst;
             DL_DocType.DataBind();
 
-            strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName <> 'Entire' and  actorGroup.Type = 'All' ";   //ChineseWord
+            strHQL = "from ActorGroup as actorGroup where actorGroup.GroupName <> 'Entire' and  actorGroup.Type = 'All' ";   
             strHQL += " and actorGroup.LangCode = " + "'" + strLangCode + "'";
             strHQL += " Order by actorGroup.SortNumber ASC";
             ActorGroupBLL actorGroupBLL = new ActorGroupBLL();

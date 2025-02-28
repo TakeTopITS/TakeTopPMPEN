@@ -96,7 +96,7 @@
                                                                         <asp:Button ID="btnImport" runat="server" Text="<%$ Resources:lang,DaoRu%>" OnClick="btnImport_Click" CssClass="inpu" />&nbsp;
                                                                         <asp:Button ID="BT_Pass" runat="server" Text="<%$ Resources:lang,TiHuan%>" OnClick="BT_Pass_Click" CssClass="inpuLong" />&nbsp;
                                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                                                    type="button" value="Closed" />
+                                                                                    type="button" value="¹Ø±Õ" />
                                                                         <%--<input type="button" value="·µ»Ø" onclick="window.location.href = 'TTWZObjectCodeList.aspx'" class="inpu" />--%>
                                                                         <div id="divLoading" style="display: none; color: Red; position: absolute;">
                                                                             <img src="resources/Images/Loading.gif" /><asp:Label ID="Label8" runat="server" Text="<%$ Resources:lang,ZhengZaiDaoRuZhongQingShaoHou%>"></asp:Label>

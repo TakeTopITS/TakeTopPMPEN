@@ -59,7 +59,7 @@
                 $("#BT_NewCalc").attr("disabled", "disabled");
                 $("#BT_NewCalc").removeClass("inpu");                         //计算
             }
-            else if (objProgress == "Approved") {
+            else if (objProgress == "批准") {
                 $("#BT_NewTotal").attr("disabled", "disabled");
                 $("#BT_NewTotal").removeClass("inpu");                            //统计
                 $("#BT_NewSubmit").attr("disabled", "disabled");
@@ -347,8 +347,8 @@
                                                                     <%--<asp:Button runat="server" Text="减值库存" CssClass="inpu" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ReduceCode") %>' CommandName="store" Visible="false" />--%>
                                                                     <%--<asp:LinkButton ID="LinkButton4" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ReduceCode") %>' CommandName="total" CssClass="notTab" Visible='<%# Eval("Process").ToString()=="编制" ? true : false %>'>统计</asp:LinkButton>--%>
                                                                     <%--<asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ReduceCode") %>' CommandName="submit" CssClass="notTab" Visible='<%# Eval("Process").ToString()=="编制" ? true : false %>'>提交</asp:LinkButton>--%>
-                                                                    <%--<asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ReduceCode") %>' CommandName="check" CssClass="notTab" Visible='<%# Eval("Process").ToString()=="Approved" ? true : false %>'>检查</asp:LinkButton>--%>
-                                                                    <%--<asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ReduceCode") %>' CommandName="execute" CssClass="notTab" Visible='<%# Eval("Process").ToString()=="Approved" ? true : false %>'>执行</asp:LinkButton>--%>
+                                                                    <%--<asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ReduceCode") %>' CommandName="check" CssClass="notTab" Visible='<%# Eval("Process").ToString()=="批准" ? true : false %>'>检查</asp:LinkButton>--%>
+                                                                    <%--<asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ReduceCode") %>' CommandName="execute" CssClass="notTab" Visible='<%# Eval("Process").ToString()=="批准" ? true : false %>'>执行</asp:LinkButton>--%>
                                                                     <%--<asp:LinkButton ID="LinkButton5" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ReduceCode") %>' CommandName="calc" CssClass="notTab" Visible='<%# Eval("Process").ToString()=="生效" ? true : false %>'>计算</asp:LinkButton>--%>
                                                                     
                                                                 </ItemTemplate>
@@ -416,7 +416,7 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("Remark").ToString(), 8) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="Process" HeaderText="Progress">
+                                                            <asp:BoundColumn DataField="Process" HeaderText="进度">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="MainLeaderName" HeaderText="主管领导">
@@ -604,7 +604,7 @@
                                                                 </HeaderTemplate>
                                                                 <ItemTemplate>
 
-                                                                    <%--<asp:Button runat="server" CssClass="inpu" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="edit" Text="Modify" />--%>
+                                                                    <%--<asp:Button runat="server" CssClass="inpu" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="edit" Text="修改" />--%>
                                                                     <asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="edit" CssClass="notTab">修改</asp:LinkButton>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
@@ -614,7 +614,7 @@
                                                             <asp:BoundColumn DataField="StockCode" HeaderText="库别">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ObjectCode" HeaderText="Material Code">
+                                                            <asp:BoundColumn DataField="ObjectCode" HeaderText="物资代码">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
                                                             <%--<asp:BoundColumn DataField="ObjectName" HeaderText="物资名称">

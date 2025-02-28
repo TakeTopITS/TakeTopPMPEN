@@ -20,7 +20,7 @@ public partial class TTWZObjectType : System.Web.UI.Page
     {
         TV_Type.Nodes.Clear();
         TreeNode Node = new TreeNode();
-        Node.Text = "All";
+        Node.Text = "所有";
         Node.Value = "all|0|0|0";
         string strDLSQL = "select * from T_WZMaterialDL";
         DataTable dtDL = ShareClass.GetDataSetFromSql(strDLSQL, "DL").Tables[0];
@@ -90,7 +90,7 @@ public partial class TTWZObjectType : System.Web.UI.Page
             ShareClass.RunSqlCommand(strXLSQL);
         }
         else {
-            Response.Write(LanguageHandle.GetWord("scriptalertXiaoLeiBuNengZaiTia").ToString().Trim());
+            Response.Write("<script>alert('小类不能再添加子级了！');</script>");
         }
         LoadTree();
     }

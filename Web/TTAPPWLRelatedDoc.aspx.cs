@@ -511,17 +511,17 @@ public partial class TTAPPWLRelatedDoc : System.Web.UI.Page
         strHQL += " and (document.RelatedType = 'Workflow' and document.RelatedID = " + strWLID;
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
         strHQL += " or (document.Visible = 'Department' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";  
-        strHQL += " or ( document.Visible = 'Entire'))) ";   //ChineseWord
+        strHQL += " or ( document.Visible = 'Entire'))) ";   
         strHQL += "or ((document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Workflow' and meeting.RelatedID =" + strWLID + "))";  
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or ( document.Visible = 'Entire')))";   //ChineseWord
+        strHQL += " or ( document.Visible = 'Entire')))";   
 
-        strHQL += "or ((document.RelatedType = 'Contract' and document.RelatedID in (select workFlow.RelatedID from WorkFlow as workFlow where workFlow.RelatedType = 'Contract' and workFlow.WLID =" + strWLID + "))";   //ChineseWord
+        strHQL += "or ((document.RelatedType = 'Contract' and document.RelatedID in (select workFlow.RelatedID from WorkFlow as workFlow where workFlow.RelatedType = 'Contract' and workFlow.WLID =" + strWLID + "))";   
         //strHQL += "or ((document.RelatedType = 'Contract' and document.RelatedID in (select workFlowBackup.RelatedID from WorkFlowBackup as workFlowBackup where workFlowBackup.RelatedType = 'Contract' and workFlowBackup.WLID =" + strWLID + "))";
 
 
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-        strHQL += " or ( document.Visible = 'Entire')))";   //ChineseWord
+        strHQL += " or ( document.Visible = 'Entire')))";   
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' Order by document.DocID DESC";
 
         DocumentBLL documentBLL = new DocumentBLL();

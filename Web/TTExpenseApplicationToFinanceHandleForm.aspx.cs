@@ -202,7 +202,7 @@ public partial class TTExpenseApplicationToFinanceHandleForm : System.Web.UI.Pag
                         strAccount = expenseApplyWL.Account.Trim();
 
                         intReAndPayalbeID = ShareClass.InsertReceivablesOrPayableByAccount("Payables", "ExpenseAO", "ExpenseAO", strID, strID, strAccountCode, strAccount, deAmount, strCurrencyType, strReAndPayer, strUserCode, intProjectID);
-                        ShareClass.InsertReceivablesOrPayableRecord("Payables", intReAndPayalbeID, deAmount, "Transfer", strCurrencyType, strReAndPayer, strUserCode, intProjectID);   //ChineseWord
+                        ShareClass.InsertReceivablesOrPayableRecord("Payables", intReAndPayalbeID, deAmount, "Transfer", strCurrencyType, strReAndPayer, strUserCode, intProjectID);   
 
                         strHQL = "Update T_ConstractPayable Set OutOfPocketAccount = " + deAmount.ToString() + ",UNPayAmount = 0 Where ID = " + intReAndPayalbeID.ToString();
                         ShareClass.RunSqlCommand(strHQL);

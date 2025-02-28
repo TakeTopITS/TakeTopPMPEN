@@ -146,7 +146,7 @@ public partial class TTAllCustomerUsers : System.Web.UI.Page
             DL_UserType.SelectedValue = "OUTER";
             DL_WorkType.SelectedValue = "";
 
-            DL_SystemMDIStyle.SelectedValue = "LeftRightDownExhibition";  //ChineseWord //ChineseWord
+            DL_SystemMDIStyle.SelectedValue = "LeftRightDownExhibition";   
             DL_AllowDevice.SelectedValue = "ALL";
             TB_UserRTXCode.Text = "";
             NB_SortNumber.Amount = 0;
@@ -252,7 +252,7 @@ public partial class TTAllCustomerUsers : System.Web.UI.Page
             DL_UserType.SelectedValue = "OUTER";
             DL_WorkType.SelectedValue = "";
 
-            DL_SystemMDIStyle.SelectedValue = "LeftRightDownExhibition";  //ChineseWord //ChineseWord
+            DL_SystemMDIStyle.SelectedValue = "LeftRightDownExhibition";   
             DL_AllowDevice.SelectedValue = "ALL";
             TB_UserRTXCode.Text = "";
             NB_SortNumber.Amount = 0;
@@ -972,9 +972,9 @@ public partial class TTAllCustomerUsers : System.Web.UI.Page
                                 projectMember.OfficePhone = dr[i][LanguageHandle.GetWord("BanGongDianHua").ToString().Trim()].ToString().Trim();
                                 projectMember.MobilePhone = dr[i][LanguageHandle.GetWord("ShouJi").ToString().Trim()].ToString().Trim();
                                 projectMember.EMail = dr[i]["E_Mail"].ToString().Trim();
-                                projectMember.JoinDate = DateTime.Parse(dr[i]["JoinDate"].ToString().Trim() == "" ? DateTime.Now.ToString("yyyy-MM-dd") : dr[i]["JoinDate"].ToString().Trim());  //ChineseWord //ChineseWord
+                                projectMember.JoinDate = DateTime.Parse(dr[i]["JoinDate"].ToString().Trim() == "" ? DateTime.Now.ToString("yyyy-MM-dd") : dr[i]["JoinDate"].ToString().Trim());   
                                 projectMember.WorkScope = dr[i][LanguageHandle.GetWord("GongZuoFanWei").ToString().Trim()].ToString().Trim();
-                                projectMember.Status = dr[i]["Status"].ToString().Trim() == "" ? "Employed" : dr[i]["Status"].ToString().Trim();  //ChineseWord //ChineseWord
+                                projectMember.Status = dr[i]["Status"].ToString().Trim() == "" ? "Employed" : dr[i]["Status"].ToString().Trim();   
                                 projectMember.PhotoURL = "";
 
                                 projectMember.JobTitle = TB_JobTitle.Text.Trim();
@@ -1140,9 +1140,9 @@ public partial class TTAllCustomerUsers : System.Web.UI.Page
                             projectMember.OfficePhone = dr[i][LanguageHandle.GetWord("BanGongDianHua").ToString().Trim()].ToString().Trim();
                             projectMember.MobilePhone = dr[i][LanguageHandle.GetWord("ShouJi").ToString().Trim()].ToString().Trim();
                             projectMember.EMail = dr[i]["E_Mail"].ToString().Trim();
-                            projectMember.JoinDate = DateTime.Parse(dr[i]["JoinDate"].ToString().Trim() == "" ? DateTime.Now.ToString("yyyy-MM-dd") : dr[i]["JoinDate"].ToString().Trim());  //ChineseWord //ChineseWord
+                            projectMember.JoinDate = DateTime.Parse(dr[i]["JoinDate"].ToString().Trim() == "" ? DateTime.Now.ToString("yyyy-MM-dd") : dr[i]["JoinDate"].ToString().Trim());   
                             projectMember.WorkScope = dr[i][LanguageHandle.GetWord("GongZuoFanWei").ToString().Trim()].ToString().Trim();
-                            projectMember.Status = dr[i]["Status"].ToString().Trim() == "" ? "Employed" : dr[i]["Status"].ToString().Trim();  //ChineseWord //ChineseWord
+                            projectMember.Status = dr[i]["Status"].ToString().Trim() == "" ? "Employed" : dr[i]["Status"].ToString().Trim();   
                             projectMember.PhotoURL = "";
 
                             projectMember.JobTitle = TB_JobTitle.Text.Trim();

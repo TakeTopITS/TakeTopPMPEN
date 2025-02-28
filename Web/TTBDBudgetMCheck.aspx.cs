@@ -32,13 +32,13 @@ public partial class TTBDBudgetMCheck : System.Web.UI.Page
         {
             lbl_DepartString.Text = TakeTopCore.CoreShareClass.InitialDepartmentTreeByAuthoritySuperUser(LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1, strUserCode);
 
-            if (DropDownList1.SelectedValue.Trim() == "BudgetStandard")   //ChineseWord
+            if (DropDownList1.SelectedValue.Trim() == "BudgetStandard")   
             {
                 Budget_Base.Visible = true;
                 Budget_Operation.Visible = false;
                 Button1.Visible = true;
             }
-            else if (DropDownList1.SelectedValue.Trim() == "BudgetRecord")   //ChineseWord
+            else if (DropDownList1.SelectedValue.Trim() == "BudgetRecord")   
             {
                 Budget_Base.Visible = false;
                 Budget_Operation.Visible = true;
@@ -68,12 +68,12 @@ public partial class TTBDBudgetMCheck : System.Web.UI.Page
             lbl_DepartCode.Text = treeNode.Target.Trim();
             txt_DepartName.Text = ShareClass.GetDepartName(lbl_DepartCode.Text);
 
-            if (DropDownList1.SelectedValue.Trim() == "BudgetStandard")   //ChineseWord
+            if (DropDownList1.SelectedValue.Trim() == "BudgetStandard")   
             {
                 Budget_Base.Visible = true;
                 Budget_Operation.Visible = false;
             }
-            else if (DropDownList1.SelectedValue.Trim() == "BudgetRecord")   //ChineseWord
+            else if (DropDownList1.SelectedValue.Trim() == "BudgetRecord")   
             {
                 Budget_Base.Visible = false;
                 Budget_Operation.Visible = true;
@@ -188,7 +188,7 @@ public partial class TTBDBudgetMCheck : System.Web.UI.Page
             lbl_DepartCode.Text = "";
         }
 
-        strHQL = "Select A.*,B.UserName From T_BDBaseDataRecord A,T_ProjectMember B Where A.EnterCode=B.UserCode and (A.Type='Operation' or A.Type='Actual')";   //ChineseWord
+        strHQL = "Select A.*,B.UserName From T_BDBaseDataRecord A,T_ProjectMember B Where A.EnterCode=B.UserCode and (A.Type='Operation' or A.Type='Actual')";   
         strHQL += " and B.DepartCode In " + strDepartString;
 
        
@@ -224,12 +224,12 @@ public partial class TTBDBudgetMCheck : System.Web.UI.Page
 
     protected void BT_Query_Click(object sender, EventArgs e)
     {
-        if (DropDownList1.SelectedValue.Trim() == "BudgetStandard")   //ChineseWord
+        if (DropDownList1.SelectedValue.Trim() == "BudgetStandard")   
         {
             Budget_Base.Visible = true;
             Budget_Operation.Visible = false;
         }
-        else if (DropDownList1.SelectedValue.Trim() == "BudgetRecord")   //ChineseWord
+        else if (DropDownList1.SelectedValue.Trim() == "BudgetRecord")   
         {
             Budget_Base.Visible = false;
             Budget_Operation.Visible = true;
@@ -276,7 +276,7 @@ public partial class TTBDBudgetMCheck : System.Web.UI.Page
             {
                 Random a = new Random();
                 string fileName;
-                if (DropDownList1.SelectedValue.Trim() == "BudgetStandard")   //ChineseWord
+                if (DropDownList1.SelectedValue.Trim() == "BudgetStandard")   
                 {
                     fileName = LanguageHandle.GetWord("YuSuanBiaoZhun").ToString().Trim() + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + a.Next(100, 999) + ".xls";
                     CreateExcel(getExportBookList(), fileName);
@@ -296,11 +296,11 @@ public partial class TTBDBudgetMCheck : System.Web.UI.Page
 
     protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
     {
-        if (DropDownList1.SelectedValue.Trim() == "BudgetStandard")   //ChineseWord
+        if (DropDownList1.SelectedValue.Trim() == "BudgetStandard")   
         {
             Button1.Visible = true;
         }
-        else if (DropDownList1.SelectedValue.Trim() == "BudgetRecord")   //ChineseWord
+        else if (DropDownList1.SelectedValue.Trim() == "BudgetRecord")   
         {
             Button1.Visible = true;
         }
@@ -379,7 +379,7 @@ public partial class TTBDBudgetMCheck : System.Web.UI.Page
 
     protected DataTable getExportBookList()
     {
-        string strHQL = "Select A.ID 'Number',A.DepartName 'DepartmentName',B.AccountName 'AccountingSubjects',A.YearNum 'Year',A.MonthNum 'Month',A.MoneyNum 'Amount' From T_BDBaseData A,T_Account B Where A.AccountName=B.AccountCode and (A.Type='Base' or A.Type='Budget')";   //ChineseWord
+        string strHQL = "Select A.ID 'Number',A.DepartName 'DepartmentName',B.AccountName 'AccountingSubjects',A.YearNum 'Year',A.MonthNum 'Month',A.MoneyNum 'Amount' From T_BDBaseData A,T_Account B Where A.AccountName=B.AccountCode and (A.Type='Base' or A.Type='Budget')";   
 
 
         if (!string.IsNullOrEmpty(txt_DepartName.Text.Trim()))
@@ -407,7 +407,7 @@ public partial class TTBDBudgetMCheck : System.Web.UI.Page
 
     protected DataTable getExportBookList1()
     {
-        string strHQL = "Select A.ID 'Number',A.DepartName 'DepartmentName',C.AccountName 'AccountingSubjects',A.YearNum 'Year',A.MonthNum 'Month',A.MoneyNum 'Amount',B.UserName 'Applicant' From T_BDBaseData A,T_ProjectMember B,T_Account C Where A.EnterCode=B.UserCode and A.AccountName=C.AccountCode and (A.Type='Operation' or A.Type='Actual')";   //ChineseWord
+        string strHQL = "Select A.ID 'Number',A.DepartName 'DepartmentName',C.AccountName 'AccountingSubjects',A.YearNum 'Year',A.MonthNum 'Month',A.MoneyNum 'Amount',B.UserName 'Applicant' From T_BDBaseData A,T_ProjectMember B,T_Account C Where A.EnterCode=B.UserCode and A.AccountName=C.AccountCode and (A.Type='Operation' or A.Type='Actual')";   
 
 
         if (!string.IsNullOrEmpty(txt_DepartName.Text.Trim()))

@@ -458,10 +458,10 @@ public partial class TTBMCustomerMember : System.Web.UI.Page
 
     protected void LoadBMSupplierInfo()
     {
-        string strHQL = "Select * from (Select *,(case when Point>=90 then 'Excellent' when Point>=80 and Point<90 then 'Good' when Point>=60 and Point<80 then 'Qualified' " +   //ChineseWord
+        string strHQL = "Select * from (Select *,(case when Point>=90 then 'Excellent' when Point>=80 and Point<90 then 'Good' when Point>=60 and Point<80 then 'Qualified' " +   
         "else 'Unqualified' end) EvalueDegree,ID LinkPerID,Code LinkCode From T_BMSupplierInfo Where Status='Qualified' " +
         "union all " +
-        "Select B.*,(case when B.Point>=90 then 'Excellent' when B.Point>=80 and B.Point<90 then 'Good' when B.Point>=60 and B.Point<80 then 'Qualified' else 'Unqualified' end) ," +   //ChineseWord
+        "Select B.*,(case when B.Point>=90 then 'Excellent' when B.Point>=80 and B.Point<90 then 'Good' when B.Point>=60 and B.Point<80 then 'Qualified' else 'Unqualified' end) ," +   
         "A.ID LinkPerID,A.Code LinkCode from T_BMSupplierLink A,T_BMSupplierInfo B Where A.SupplierCode=B.Code and A.SupplierCode in (Select Code from T_BMSupplierInfo " +
         "Where Status='Qualified')) C Where 1=1 ";
 
@@ -1185,9 +1185,9 @@ public partial class TTBMCustomerMember : System.Web.UI.Page
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
         lst = projectMemberBLL.GetAllProjectMembers(strHQL);
         if (lst != null && lst.Count > 0)
-            return "Enabled";   //ChineseWord
+            return "Enabled";   
         else
-            return "NotEnabled";   //ChineseWord
+            return "NotEnabled";   
     }
 
     protected string GetSystemActionUser(string strusercode)
@@ -1199,9 +1199,9 @@ public partial class TTBMCustomerMember : System.Web.UI.Page
         SystemActiveUserBLL systemActiveUserBLL = new SystemActiveUserBLL();
         lst = systemActiveUserBLL.GetAllSystemActiveUsers(strHQL);
         if (lst != null && lst.Count > 0)
-            return "Activated";   //ChineseWord
+            return "Activated";   
         else
-            return "NotActivated";   //ChineseWord
+            return "NotActivated";   
     }
 
     protected string GetUserPhotoURL(string strUserCode)

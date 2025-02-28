@@ -637,7 +637,7 @@ public partial class TTProExpenseSAAS : System.Web.UI.Page
         {
             if (strUserCode == ShareClass.GetProjectPMCode(strProjectID))
             {
-                dailyWork.Type = "Lead";   //ChineseWord
+                dailyWork.Type = "Lead";   
             }
             else
             {

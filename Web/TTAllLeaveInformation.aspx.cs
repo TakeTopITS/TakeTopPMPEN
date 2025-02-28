@@ -235,8 +235,8 @@ public partial class TTAllLeaveInformation : System.Web.UI.Page
         {
             string strDepartString = LB_DepartString.Text.Trim();
 
-            strHQL = "Select ID 'Number',UserName 'LeaveApplicant',DepartCode 'DepartmentCode',DepartName 'DepartmentName',Duty 'Position',LeaveType 'LeaveType',StartTime 'StartTime'," +  //ChineseWord //ChineseWord
-                "EndTime 'EndTime',ApplyBecause 'ReasonForLeave',CreateTime 'LeaveDate',Status 'Status' from T_LeaveApplyForm Where DepartCode in" + strDepartString + " ";  //ChineseWord //ChineseWord
+            strHQL = "Select ID 'Number',UserName 'LeaveApplicant',DepartCode 'DepartmentCode',DepartName 'DepartmentName',Duty 'Position',LeaveType 'LeaveType',StartTime 'StartTime'," +   
+                "EndTime 'EndTime',ApplyBecause 'ReasonForLeave',CreateTime 'LeaveDate',Status 'Status' from T_LeaveApplyForm Where DepartCode in" + strDepartString + " ";   
 
             if (!string.IsNullOrEmpty(DL_Status.SelectedValue.Trim()))
             {
@@ -266,8 +266,8 @@ public partial class TTAllLeaveInformation : System.Web.UI.Page
         }
         else//按组织架构查询的
         {
-            strHQL = "Select ID 'Number',UserName 'LeaveApplicant',DepartCode 'DepartmentCode',DepartName 'DepartmentName',Duty 'Position',LeaveType 'LeaveType',StartTime 'StartTime'," +  //ChineseWord //ChineseWord
-                "EndTime 'EndTime',ApplyBecause 'ReasonForLeave',CreateTime 'LeaveDate',Status 'Status' from T_LeaveApplyForm Where DepartCode = '" + strDepartCode + "' Order by ID DESC ";  //ChineseWord //ChineseWord
+            strHQL = "Select ID 'Number',UserName 'LeaveApplicant',DepartCode 'DepartmentCode',DepartName 'DepartmentName',Duty 'Position',LeaveType 'LeaveType',StartTime 'StartTime'," +   
+                "EndTime 'EndTime',ApplyBecause 'ReasonForLeave',CreateTime 'LeaveDate',Status 'Status' from T_LeaveApplyForm Where DepartCode = '" + strDepartCode + "' Order by ID DESC ";   
 
         }
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_LeaveApplyForm");

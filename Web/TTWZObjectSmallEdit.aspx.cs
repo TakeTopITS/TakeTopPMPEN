@@ -41,7 +41,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
     {
         TV_BigObject.Nodes.Clear();
         TreeNode Node = new TreeNode();
-        Node.Text = "All";
+        Node.Text = "所有";
         Node.Value = "all|0|0|0";
         string strDLSQL = "select * from T_WZMaterialDL";
         DataTable dtDL = ShareClass.GetDataSetFromSql(strDLSQL, "DL").Tables[0];
@@ -155,9 +155,9 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
                 {
                     WZMaterialXL wZMaterialXL = (WZMaterialXL)listXL[0];
 
-                    if (wZMaterialXL.CreateProgress != LanguageHandle.GetWord("LuRu").ToString().Trim() || wZMaterialXL.Creater != strUserCode)
+                    if (wZMaterialXL.CreateProgress != "录入" || wZMaterialXL.Creater != strUserCode)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBWLRHZBSCJRBYXBJ").ToString().Trim()+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBWLRHZBSCJRBYXBJ+"')", true);
                         return;
                     }
 
@@ -185,9 +185,9 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
                 {
                     WZMaterialXL wZMaterialXL = (WZMaterialXL)listXL[0];
 
-                    if (wZMaterialXL.CreateProgress != LanguageHandle.GetWord("LuRu").ToString().Trim() || wZMaterialXL.Creater != strUserCode)
+                    if (wZMaterialXL.CreateProgress != "录入" || wZMaterialXL.Creater != strUserCode)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBWLRHZBSCJRBYXSC").ToString().Trim()+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBWLRHZBSCJRBYXSC+"')", true);
                         return;
                     }
 
@@ -206,10 +206,10 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
             else if (cmdName == "request")
             {
                 string cmdArges = e.CommandArgument.ToString();
-                string strCmdHQL = "update T_WZMaterialXL set CreateProgress = 'Application' where XLCode= '" + cmdArges + "'";   //ChineseWord
+                string strCmdHQL = "update T_WZMaterialXL set CreateProgress = '申请' where XLCode= '" + cmdArges + "'";
                 ShareClass.RunSqlCommand(strCmdHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCG").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCG+"')", true);
 
                 //重新加载列表
                 string strTreeSelectedNode = TV_BigObject.SelectedValue;
@@ -223,10 +223,10 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
             else if (cmdName == "returnRequest")
             {
                 string cmdArges = e.CommandArgument.ToString();
-                string strCmdHQL = "update T_WZMaterialXL set CreateProgress = '录入' where XLCode= '" + cmdArges + "'";   //ChineseWord
+                string strCmdHQL = "update T_WZMaterialXL set CreateProgress = '录入' where XLCode= '" + cmdArges + "'";
                 ShareClass.RunSqlCommand(strCmdHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTHCG").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTHCG+"')", true);
 
                 //重新加载列表
                 string strTreeSelectedNode = TV_BigObject.SelectedValue;
@@ -262,13 +262,13 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
                 if (strXLCode.Length != 6)
                 {
                     //提示小类代码不能少于2位
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类代码应为6位，请修改！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类代码应为6位，请修改！');", true);
                     return;
                 }
                 else if (arrTreeSelectedNode[1] != strXLCode.Substring(0, 4))
                 {
                     //提示小类代码前两位要与当前的中类代码
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类代码的前4位，与中类代码保持一致！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类代码的前4位，与中类代码保持一致！');", true);
                     return;
                 }
                 //查询中类代码是否存在
@@ -277,7 +277,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
                 if (dtXL != null && dtXL.Rows.Count > 0)
                 {
                     //提示已经存在中类代码
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类代码已经存在，不能重复，请修改！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类代码已经存在，不能重复，请修改！');", true);
                     return;
                 }
                 else
@@ -285,7 +285,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
                     string strXLName = TXT_XLName.Text.Trim();
                     if (string.IsNullOrEmpty(strXLName))
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类名称不能为空，请修改！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类名称不能为空，请修改！');", true);
                         return;
                     }
                     else {
@@ -295,7 +295,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
                         if (dtXLName != null && dtXLName.Rows.Count > 0)
                         {
                             //提示已经存在中类名称
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类名称已经存在，不能重复，请修改！');", true);   //ChineseWord
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类名称已经存在，不能重复，请修改！');", true);
                             return;
                         }
                     }
@@ -306,7 +306,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
                     wZMaterialXL.XLName = TXT_XLName.Text.Trim();
                     wZMaterialXL.XLDesc = TXT_XLDesc.Text.Trim();
                     wZMaterialXL.IsMark = 0;
-                    wZMaterialXL.CreateProgress = LanguageHandle.GetWord("LuRu").ToString().Trim();
+                    wZMaterialXL.CreateProgress = "录入";
                     wZMaterialXL.Creater = strUserCode;
                     wZMaterialXL.CreateTitle = 0;
 
@@ -327,7 +327,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
                     TXT_XLName.BackColor = Color.White;
                     TXT_XLDesc.BackColor = Color.White;
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('新增成功！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('新增成功！');", true);
                 }
             }
             else
@@ -342,7 +342,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
 
                     if (string.IsNullOrEmpty(strXLName))
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类名称不能为空，请修改！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类名称不能为空，请修改！');", true);
                         return;
                     }
                     else
@@ -355,7 +355,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
                             if (ShareClass.ObjectToString(dtXLName.Rows[0]["XLCode"]) != HF_XLCode.Value)
                             {
                                 //提示已经存在中类名称
-                                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类名称已经存在，不能重复，请修改！');", true);   //ChineseWord
+                                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类名称已经存在，不能重复，请修改！');", true);
                                 return;
                             }
                         }
@@ -377,7 +377,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
                     TXT_XLName.BackColor = Color.White;
                     TXT_XLDesc.BackColor = Color.White;
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('修改成功！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('修改成功！');", true);
                 }
             }
         }
@@ -386,7 +386,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
             //提示已经存在中类代码
             string strNewProgress = HF_NewProgress.Value;
             string strNewCreater = HF_NewCreater.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择中类代码节点！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择中类代码节点！');", true);
             return;
         }
     }
@@ -412,13 +412,13 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
             if (strXLCode.Length < 2)
             {
                 //提示小类代码不能少于2位
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类代码不能少于2位！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类代码不能少于2位！');", true);
                 return;
             }
             else if (arrTreeSelectedNode[1] != strXLCode.Substring(0, 4))
             {
                 //提示小类代码前两位要与当前的中类代码
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类代码的前4位，与中类代码保持一致！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类代码的前4位，与中类代码保持一致！');", true);
                 return;
             }
             //查询中类代码是否存在
@@ -427,7 +427,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
             if (dtXL != null && dtXL.Rows.Count > 0)
             {
                 //提示已经存在中类代码
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类代码已经存在，不能重复，请修改！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类代码已经存在，不能重复，请修改！');", true);
                 return;
             }
             else
@@ -437,12 +437,12 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
 
                 if (!ShareClass.CheckStringRight(strXLName))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类名称不能是非法字符！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类名称不能是非法字符！');", true);
                     return;
                 }
                 if (!ShareClass.CheckStringRight(strXLDesc))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类描述不能是非法字符！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('小类描述不能是非法字符！');", true);
                     return;
                 }
 
@@ -452,7 +452,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
                 wZMaterialXL.XLName = strXLName;
                 wZMaterialXL.XLDesc = strXLName;
                 wZMaterialXL.IsMark = 0;
-                wZMaterialXL.CreateProgress = LanguageHandle.GetWord("LuRu").ToString().Trim();
+                wZMaterialXL.CreateProgress = "录入";
                 wZMaterialXL.Creater = strUserCode;
                 wZMaterialXL.CreateTitle = 0;
 
@@ -470,7 +470,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
                 TXT_XLName.BackColor = Color.White;
                 TXT_XLDesc.BackColor = Color.White;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('新增成功！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('新增成功！');", true);
             }
         }
         else
@@ -478,7 +478,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
             //提示已经存在中类代码
             string strNewProgress = HF_NewProgress.Value;
             string strNewCreater = HF_NewCreater.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择中类代码节点！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择中类代码节点！');", true);
             return;
         }
     }
@@ -499,7 +499,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
             if (string.IsNullOrEmpty(HF_XLCode.Value))
             {
                 //提示请先选择要修改的小类代码
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要修改的小类代码！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要修改的小类代码！');", true);
                 return;
             }
             else
@@ -526,7 +526,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
                     TXT_XLName.BackColor = Color.White;
                     TXT_XLDesc.BackColor = Color.White;
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('修改成功！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('修改成功！');", true);
                 }
             }
         }
@@ -535,7 +535,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
             //提示已经存在中类代码
             string strNewProgress = HF_NewProgress.Value;
             string strNewCreater = HF_NewCreater.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择中类代码节点！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择中类代码节点！');", true);
             return;
         }
     }
@@ -630,7 +630,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
             //提示已经存在中类代码
             string strNewProgress = HF_NewProgress.Value;
             string strNewCreater = HF_NewCreater.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择中类代码节点！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择中类代码节点！');", true);
             return;
         }
     }
@@ -643,7 +643,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
         string strEditXLCode = HF_NewXLCode.Value;
         if (string.IsNullOrEmpty(strEditXLCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDXLLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDXLLB+"')", true);
             return;
         }
 
@@ -657,9 +657,9 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
         {
             WZMaterialXL wZMaterialXL = (WZMaterialXL)listXL[0];
 
-            if (wZMaterialXL.CreateProgress != LanguageHandle.GetWord("LuRu").ToString().Trim() || wZMaterialXL.Creater != strUserCode)
+            if (wZMaterialXL.CreateProgress != "录入" || wZMaterialXL.Creater != strUserCode)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBWLRHZBSCJRBYXBJ").ToString().Trim()+"');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBWLRHZBSCJRBYXBJ+"');", true);
                 return;
             }
 
@@ -688,7 +688,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
         string strEditXLCode = HF_NewXLCode.Value;
         if (string.IsNullOrEmpty(strEditXLCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDXLLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDXLLB+"')", true);
             return;
         }
 
@@ -699,11 +699,11 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
         {
             WZMaterialXL wZMaterialXL = (WZMaterialXL)listXL[0];
 
-            if (wZMaterialXL.CreateProgress != LanguageHandle.GetWord("LuRu").ToString().Trim() || wZMaterialXL.Creater != strUserCode)
+            if (wZMaterialXL.CreateProgress != "录入" || wZMaterialXL.Creater != strUserCode)
             {
                 string strNewProgress = HF_NewProgress.Value;
                 string strNewCreater = HF_NewCreater.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBWLRHZBSCJRBYXSC").ToString().Trim()+"');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBWLRHZBSCJRBYXSC+"');", true);
                 return;
             }
 
@@ -730,14 +730,14 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
         string strEditXLCode = HF_NewXLCode.Value;
         if (string.IsNullOrEmpty(strEditXLCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDXLLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDXLLB+"')", true);
             return;
         }
 
-        string strCmdHQL = "update T_WZMaterialXL set CreateProgress = 'Application' where XLCode= '" + strEditXLCode + "'";   //ChineseWord
+        string strCmdHQL = "update T_WZMaterialXL set CreateProgress = '申请' where XLCode= '" + strEditXLCode + "'";
         ShareClass.RunSqlCommand(strCmdHQL);
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCG").ToString().Trim()+"');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCG+"');", true);
 
         //重新加载列表
         string strTreeSelectedNode = TV_BigObject.SelectedValue;
@@ -756,14 +756,14 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
         string strEditXLCode = HF_NewXLCode.Value;
         if (string.IsNullOrEmpty(strEditXLCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDXLLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDXLLB+"')", true);
             return;
         }
 
-        string strCmdHQL = "update T_WZMaterialXL set CreateProgress = '录入' where XLCode= '" + strEditXLCode + "'";   //ChineseWord
+        string strCmdHQL = "update T_WZMaterialXL set CreateProgress = '录入' where XLCode= '" + strEditXLCode + "'";
         ShareClass.RunSqlCommand(strCmdHQL);
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTHCG").ToString().Trim()+"');", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTHCG+"');", true);
 
         //重新加载列表
         string strTreeSelectedNode = TV_BigObject.SelectedValue;
@@ -820,7 +820,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
             //提示已经存在中类代码
             string strNewProgress = HF_NewProgress.Value;
             string strNewCreater = HF_NewCreater.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择中类代码节点！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择中类代码节点！');", true);
             return;
         }
     }
@@ -921,7 +921,7 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
             //提示已经存在中类代码
             string strNewProgress = HF_NewProgress.Value;
             string strNewCreater = HF_NewCreater.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择中类代码节点！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择中类代码节点！');", true);
             return;
         }
     }
@@ -930,13 +930,13 @@ public partial class TTWZObjectSmallEdit : System.Web.UI.Page
 
     private void ControlStatusChange(string objProgress,string  objCreater,string  objUserCode) {
 
-            if (objProgress == LanguageHandle.GetWord("LuRu").ToString().Trim() && objCreater == objUserCode) {
+            if (objProgress == "录入" && objCreater == objUserCode) {
                 BT_NewEdit.Enabled = true;
                 BT_NewDelete.Enabled = true;
                 BT_NewApply.Enabled = true;
                 BT_NewApplyReturn.Enabled = false;
             }
-            else if (objProgress == LanguageHandle.GetWord("ShenQing").ToString().Trim() && objCreater == objUserCode) {
+            else if (objProgress == "申请" && objCreater == objUserCode) {
                 BT_NewEdit.Enabled = false;
                 BT_NewDelete.Enabled = false;
                 BT_NewApply.Enabled = false;

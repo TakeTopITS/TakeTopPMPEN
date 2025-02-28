@@ -50,7 +50,7 @@ public partial class TTDefectManageThirdPart : System.Web.UI.Page
             SetDefectRecordColor(DataGrid4);
 
             strHQL = "from DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-            strHQL += " and (defectAssignRecord.Status in ('Rejected','Completed','Suspended','Cancel') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord))";   //ChineseWord
+            strHQL += " and (defectAssignRecord.Status in ('Rejected','Completed','Suspended','Cancel') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord))";   
             strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
             strHQL += " Order by defectAssignRecord.ID DESC";
             defectAssignRecordBLL = new DefectAssignRecordBLL();
@@ -131,7 +131,7 @@ public partial class TTDefectManageThirdPart : System.Web.UI.Page
         SetDefectRecordColor(DataGrid4);
 
         strHQL = "from DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and (defectAssignRecord.Status in ('Rejected','Completed','Suspended','Cancel') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord))";   //ChineseWord
+        strHQL += " and (defectAssignRecord.Status in ('Rejected','Completed','Suspended','Cancel') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord))";   
         strHQL += " and defectAssignRecord.DefectID in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived'))";
         strHQL += " Order by defectAssignRecord.ID DESC";
         defectAssignRecordBLL = new DefectAssignRecordBLL();
@@ -196,7 +196,7 @@ public partial class TTDefectManageThirdPart : System.Web.UI.Page
         SetDefectRecordColor(DataGrid4);
 
         strHQL = "from DefectAssignRecord as defectAssignRecord where defectAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and (defectAssignRecord.Status in ('Rejected','Completed','Suspended','Cancel') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord))";   //ChineseWord
+        strHQL += " and (defectAssignRecord.Status in ('Rejected','Completed','Suspended','Cancel') and defectAssignRecord.ID not in (select defectAssignRecord.PriorID from DefectAssignRecord as defectAssignRecord))";   
         strHQL += " and defectAssignRecord.DefectID not in (select defectment.DefectID from Defectment as defectment where defectment.DefectID not in (select defectment.DefectID from Defectment as defectment where defectment.Status not in ('Closed','Hided','Deleted','Archived')))";
         strHQL += " and defectAssignRecord.Status = " + "'" + strStatus + "'" + " Order by defectAssignRecord.ID DESC";
         defectAssignRecordBLL = new DefectAssignRecordBLL();

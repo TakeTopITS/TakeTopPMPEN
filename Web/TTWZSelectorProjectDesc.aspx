@@ -67,7 +67,7 @@
                                                 <td class="formItemBgStyle" colspan="4">
                                                     <div style="text-align: center">
                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                            type="button" value="Closed" />
+                                                            type="button" value="¹Ø±Õ" />
                                                     </div>
                                                 </td>
                                             </tr>

@@ -149,12 +149,12 @@
                                                                 <ItemTemplate>
                                                                     <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>' CommandName="price" CssClass="notTab">询价</asp:LinkButton>
                                                                     <asp:LinkButton ID="LinkButton4" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>' CommandName="cancel" CssClass="notTab">询价取消</asp:LinkButton>
-                                                                    <%--<asp:Button ID="Button1" runat="server" CssClass="inpu" Text="询价" CommandName="price" CommandArgument='<%# Eval("PurchaseCode") %>' Visible='<%# (Eval("Progress").ToString()=="Approval" || Eval("Progress").ToString()=="Approved") ? true : false %>' />--%>
-                                                                    <%--<asp:Button ID="Button2" runat="server" CssClass="inpu" Text="呈报" CommandName="submit" CommandArgument='<%# Eval("PurchaseCode") %>' Visible='<%# Eval("Progress").ToString()=="Approval" ? true : false %>' />--%>
+                                                                    <%--<asp:Button ID="Button1" runat="server" CssClass="inpu" Text="询价" CommandName="price" CommandArgument='<%# Eval("PurchaseCode") %>' Visible='<%# (Eval("Progress").ToString()=="报批" || Eval("Progress").ToString()=="批准") ? true : false %>' />--%>
+                                                                    <%--<asp:Button ID="Button2" runat="server" CssClass="inpu" Text="呈报" CommandName="submit" CommandArgument='<%# Eval("PurchaseCode") %>' Visible='<%# Eval("Progress").ToString()=="报批" ? true : false %>' />--%>
                                                                     <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>' CommandName="report" CssClass="notTab">呈报</asp:LinkButton>
-                                                                    <%--<input type="button" value="呈报" class="inpu" onclick='ClickReport("<%# Eval("PurchaseCode") %>")' style='display:<%# Eval("Progress").ToString()=="Approval" ? "block" : "none" %>' />--%>
+                                                                    <%--<input type="button" value="呈报" class="inpu" onclick='ClickReport("<%# Eval("PurchaseCode") %>")' style='display:<%# Eval("Progress").ToString()=="报批" ? "block" : "none" %>' />--%>
                                                                     <asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>' CommandName="return" CssClass="notTab">退回</asp:LinkButton>
-                                                                    <%--<asp:Button ID="Button3" runat="server" CssClass="inpu" Text="退回" CommandName="return" CommandArgument='<%# Eval("PurchaseCode") %>' Visible='<%# Eval("Progress").ToString()=="Approval" ? true : false %>' />--%>
+                                                                    <%--<asp:Button ID="Button3" runat="server" CssClass="inpu" Text="退回" CommandName="return" CommandArgument='<%# Eval("PurchaseCode") %>' Visible='<%# Eval("Progress").ToString()=="报批" ? true : false %>' />--%>
 
                                                                     <%--<asp:Button ID="Button4" runat="server" CssClass="inpu" Text="询价取消" CommandName="cancel" CommandArgument='<%# Eval("PurchaseCode") %>' Visible='<%# Eval("Progress").ToString()=="询价" ? true : false %>' />--%>
                                                                 </ItemTemplate>
@@ -177,7 +177,7 @@
                                                             <asp:BoundColumn DataField="ProjectCode" HeaderText="项目编码">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="PurchaseMethod" HeaderText="Procurement Method">
+                                                            <asp:BoundColumn DataField="PurchaseMethod" HeaderText="采购方式">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                             </asp:BoundColumn>
                                                             <%--<asp:BoundColumn DataField="MarkTime" HeaderText="编制日期">

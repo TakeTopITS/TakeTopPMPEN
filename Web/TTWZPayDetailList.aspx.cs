@@ -64,9 +64,9 @@ public partial class TTWZPayDetailList : System.Web.UI.Page
         if (!string.IsNullOrEmpty(strPayID))
         {
             string strWZRequestHQL = string.Format(@"select * from T_WZRequest r
-                        where Progress in ('Reimbursement')
+                        where Progress in ('报销')
                         and IsFinisth = 0
-                        and ProjectCode in (select ProjectCode from T_WZPay where PayID = '{0}')", strPayID);   //ChineseWord
+                        and ProjectCode in (select ProjectCode from T_WZPay where PayID = '{0}')", strPayID);
             DataTable dtRequest = ShareClass.GetDataSetFromSql(strWZRequestHQL, "Request").Tables[0];
 
             DG_Request.DataSource = dtRequest;
@@ -106,7 +106,7 @@ public partial class TTWZPayDetailList : System.Web.UI.Page
                         wZPayDetail.PlanMoney = wZRequest.Arrearage;
                         wZPayDetail.Borrower = wZRequest.Borrower;
                         wZPayDetail.UseWay = wZRequest.UseWay;
-                        wZPayDetail.PayProcess = LanguageHandle.GetWord("LuRu").ToString().Trim();
+                        wZPayDetail.PayProcess = "录入";
 
                         wZPayDetailBLL.AddWZPayDetail(wZPayDetail);
 
@@ -134,7 +134,7 @@ public partial class TTWZPayDetailList : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZFKJH").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZFKJH+"')", true);
                     return;
                 }
             }
@@ -204,7 +204,7 @@ public partial class TTWZPayDetailList : System.Web.UI.Page
                     //重新加载付款明细列表
                     DataPayDetailBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
                 }
             }
             else if (cmdName == "edit")
@@ -280,7 +280,7 @@ public partial class TTWZPayDetailList : System.Web.UI.Page
                             wZPayDetail.PlanMoney = wZRequest.Arrearage;
                             wZPayDetail.Borrower = wZRequest.Borrower;
                             wZPayDetail.UseWay = wZRequest.UseWay;
-                            wZPayDetail.PayProcess = LanguageHandle.GetWord("LuRu").ToString().Trim();
+                            wZPayDetail.PayProcess = "录入";
 
                             wZPayDetailBLL.AddWZPayDetail(wZPayDetail);
 
@@ -308,17 +308,17 @@ public partial class TTWZPayDetailList : System.Web.UI.Page
                 //重新加载付款明细列表
                 DataPayDetailBinder();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZPLBZCG").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZPLBZCG+"')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZKD").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZKD+"')", true);
                 return;
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZFKJH").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZFKJH+"')", true);
             return;
         }
     }
@@ -332,7 +332,7 @@ public partial class TTWZPayDetailList : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strPlanMoney))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJHFKBNWKBC").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJHFKBNWKBC+"')", true);
                 return;
             }
             decimal decimalPlanMoney = 0;
@@ -371,12 +371,12 @@ public partial class TTWZPayDetailList : System.Web.UI.Page
                 //重新加载付款明细列表
                 DataPayDetailBinder();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZYXGDHTMX").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZYXGDHTMX+"')", true);
             return;
         }
     }

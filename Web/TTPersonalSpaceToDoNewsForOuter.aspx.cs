@@ -124,7 +124,7 @@ public partial class TTPersonalSpaceToDoNewsForOuter : System.Web.UI.Page
         strHQL = "Select ID,Title,Content,RelatedDepartName,PublisherCode,PublisherName,PublishTime From T_HeadLine ";
         strHQL += " Where (RelatedDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))  or RelatedDepartCode = '" + strDepartCode + "')";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
-        strHQL += " And Type = 'External' and Status = 'Publish' Order By ID DESC";   //ChineseWord
+        strHQL += " And Type = 'External' and Status = 'Publish' Order By ID DESC";   
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");
 
         DataGrid9.DataSource = ds;
@@ -139,7 +139,7 @@ public partial class TTPersonalSpaceToDoNewsForOuter : System.Web.UI.Page
             strHQL = "Select Count(*) From T_HeadLine Where ID =" + strID;
             strHQL += " And ID not in (Select NewsID From T_NewsRelatedUser Where UserCode = " + "'" + strUserCode + "'" + ")";
             strHQL += " And (RelatedDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))  or RelatedDepartCode = '" + strDepartCode + "')";
-            strHQL += " And Type = 'External' and Status = 'Publish' ";   //ChineseWord
+            strHQL += " And Type = 'External' and Status = 'Publish' ";   
             strHQL += " and LangCode = " + "'" + strLangCode + "'";
             ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");
             intNumber = int.Parse(ds.Tables[0].Rows[0][0].ToString());

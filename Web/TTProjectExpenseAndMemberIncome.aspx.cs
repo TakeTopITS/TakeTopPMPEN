@@ -344,7 +344,7 @@ public partial class TTProjectExpenseAndMemberIncome : System.Web.UI.Page
         string strHQL;
 
         strHQL = "Select COALESCE(Sum(ConfirmManHour),0) From T_DailyWork Where ProjectID = " + strProjectID;
-        strHQL += " And UserCode In (Select UserCode From T_ProjectMember Where Duty = 'Driver')";   //ChineseWord
+        strHQL += " And UserCode In (Select UserCode From T_ProjectMember Where Duty = 'Driver')";   
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_DailyWork");
 
         if (ds.Tables[0].Rows.Count > 0)

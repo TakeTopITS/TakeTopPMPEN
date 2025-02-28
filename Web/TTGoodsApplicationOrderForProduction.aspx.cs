@@ -82,7 +82,7 @@ public partial class TTGoodsApplicationOrderForProduction : System.Web.UI.Page
 
             ShareClass.InitialInvolvedProjectTree(TreeView2, strUserCode);
 
-            BT_PDMRPExpend.Attributes.Add("onclick", "if(!confirm('展开运算会覆盖前次运算的数据，您确定要进行吗？')) return false;");   //ChineseWord
+            BT_PDMRPExpend.Attributes.Add("onclick", "if(!confirm('展开运算会覆盖前次运算的数据，您确定要进行吗？')) return false;");   
         }
     }
 

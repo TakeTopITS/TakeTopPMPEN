@@ -25,7 +25,7 @@
             $("#BT_NewBrowse").attr("class", "inpu");
             $("#BT_NewBrowse").removeAttr("disabled");
 
-            if (objProgress == "Submit") {
+            if (objProgress == "提交") {
                 $("#BT_NewEdit").attr("class", "inpu");
                 $("#BT_NewEdit").removeAttr("disabled");                            //编辑
                 $("#BT_NewPush").attr("class", "inpu");
@@ -33,7 +33,7 @@
                 $("#BT_NewPushReturn").attr("disabled", "disabled");
                 $("#BT_NewPushReturn").removeClass("inpu");                         //推荐退回
             }
-            else if (objProgress == "Submission1") {
+            else if (objProgress == "提交1") {
                 $("#BT_NewEdit").attr("disabled", "disabled");
                 $("#BT_NewEdit").removeClass("inpu");                            //编辑
                 $("#BT_NewPush").attr("disabled", "disabled");
@@ -161,9 +161,9 @@
                                                                                 <td class="formItemBgStyle">
                                                                                     <asp:DropDownList ID="DDL_Progress" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_Progress_SelectedIndexChanged">
 
-                                                                                        <asp:ListItem Text="<%$ Resources:lang,TiJiao%>" Value="Submit" />
-                                                                                        <asp:ListItem Text="<%$ Resources:lang,TiJiaoYi%>" Value="Submission1" />
-                                                                                        <asp:ListItem Text="<%$ Resources:lang,PiZhun%>" Value="Approved" />
+                                                                                        <asp:ListItem Text="<%$ Resources:lang,TiJiao%>" Value="提交" />
+                                                                                        <asp:ListItem Text="<%$ Resources:lang,TiJiaoYi%>" Value="提交1" />
+                                                                                        <asp:ListItem Text="<%$ Resources:lang,PiZhun%>" Value="批准" />
                                                                                     </asp:DropDownList>
                                                                                 </td>
                                                                                 <td class="formItemBgStyle" colspan="3">
@@ -236,17 +236,17 @@
 
                                                                                             <ItemStyle CssClass="itemStyle" />
                                                                                             <Columns>
-                                                                                                <asp:BoundColumn DataField="WLID" HeaderText="Number">
+                                                                                                <asp:BoundColumn DataField="WLID" HeaderText="编号">
                                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                                                 </asp:BoundColumn>
                                                                                                 <asp:HyperLinkColumn DataNavigateUrlField="WLID" DataNavigateUrlFormatString="TTWorkFlowViewMain.aspx?WLID={0}"
-                                                                                                    DataTextField="WLName" HeaderText="Workflow" Target="_blank">
+                                                                                                    DataTextField="WLName" HeaderText="工作流" Target="_blank">
                                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="45%" />
                                                                                                 </asp:HyperLinkColumn>
                                                                                                 <asp:BoundColumn DataField="CreateTime" HeaderText="申请时间">
                                                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="25%" />
                                                                                                 </asp:BoundColumn>
-                                                                                                <asp:TemplateColumn HeaderText="Status">
+                                                                                                <asp:TemplateColumn HeaderText="状态">
                                                                                                     <ItemTemplate>
                                                                                                         <%# ShareClass. GetStatusHomeNameByOtherStatus(Eval("Status").ToString()) %>
                                                                                                     </ItemTemplate>
@@ -556,7 +556,7 @@
                                                                                 <%#DataBinder.Eval(Container.DataItem, "InTime", "{0:yyyy/MM/dd}")%>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                                        <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">

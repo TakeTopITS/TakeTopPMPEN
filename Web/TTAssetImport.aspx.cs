@@ -154,12 +154,12 @@ public partial class TTAssetImport : System.Web.UI.Page
                             try
                             {
                                 asset.AssetCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
-                                asset.AssetName = dr[i]["Name"].ToString().Trim();   //ChineseWord
+                                asset.AssetName = dr[i]["Name"].ToString().Trim();   
                                 asset.Type = dr[i][LanguageHandle.GetWord("LeiXing").ToString().Trim()].ToString().Trim();
-                                asset.Spec = dr[i]["Specification"].ToString().Trim();   //ChineseWord
-                                asset.ModelNumber = dr[i]["Model"].ToString().Trim();   //ChineseWord
-                                asset.Number = decimal.Parse(dr[i]["Quantity"].ToString().Trim());   //ChineseWord
-                                asset.Price = decimal.Parse(dr[i]["UnitPrice"].ToString().Trim());   //ChineseWord
+                                asset.Spec = dr[i]["Specification"].ToString().Trim();   
+                                asset.ModelNumber = dr[i]["Model"].ToString().Trim();   
+                                asset.Number = decimal.Parse(dr[i]["Quantity"].ToString().Trim());   
+                                asset.Price = decimal.Parse(dr[i]["UnitPrice"].ToString().Trim());   
                                 asset.CurrencyType = dr[i][LanguageHandle.GetWord("BiBie").ToString().Trim()].ToString().Trim();
                                 asset.UnitName = dr[i][LanguageHandle.GetWord("ChanWei").ToString().Trim()].ToString().Trim();
                                 asset.Position = dr[i][LanguageHandle.GetWord("CunFangCangKu").ToString().Trim()].ToString().Trim();
@@ -279,7 +279,7 @@ public partial class TTAssetImport : System.Web.UI.Page
                             else//ÐÂÔö
                             {
                                 asset.AssetCode = dr[i][LanguageHandle.GetWord("DaiMa").ToString().Trim()].ToString().Trim();
-                                asset.AssetName = dr[i]["Name"].ToString().Trim();   //ChineseWord
+                                asset.AssetName = dr[i]["Name"].ToString().Trim();   
 
                                 if (CheckAssetType(dr[i][LanguageHandle.GetWord("LeiXing").ToString().Trim()].ToString().Trim()) > 0)
                                 {
@@ -290,13 +290,13 @@ public partial class TTAssetImport : System.Web.UI.Page
                                     LB_ErrorText.Text += LanguageHandle.GetWord("ZZJGJCSJLBCZCLPLXDRILXTOSTRINGTRIMJC").ToString().Trim() + " " + dr[i][LanguageHandle.GetWord("LeiXing").ToString().Trim()].ToString().Trim();
                                     j = -1;
                                 }
-                                asset.Spec = dr[i]["Specification"].ToString().Trim();   //ChineseWord
-                                asset.ModelNumber = dr[i]["Model"].ToString().Trim();   //ChineseWord
+                                asset.Spec = dr[i]["Specification"].ToString().Trim();   
+                                asset.ModelNumber = dr[i]["Model"].ToString().Trim();   
 
                                 try
                                 {
-                                    asset.Number = decimal.Parse(dr[i]["Quantity"].ToString().Trim());   //ChineseWord
-                                    asset.Price = decimal.Parse(dr[i]["UnitPrice"].ToString().Trim());   //ChineseWord
+                                    asset.Number = decimal.Parse(dr[i]["Quantity"].ToString().Trim());   
+                                    asset.Price = decimal.Parse(dr[i]["UnitPrice"].ToString().Trim());   
                                 }
                                 catch
                                 {

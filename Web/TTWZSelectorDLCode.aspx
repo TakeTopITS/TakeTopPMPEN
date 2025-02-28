@@ -159,7 +159,7 @@
                                                                         <input id='<%#Eval("DLCode") %>' type="checkbox" name="dlCode" />
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="DLCode" HeaderText="Major Category Code">
+                                                                <asp:BoundColumn DataField="DLCode" HeaderText="大类代码">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                 </asp:BoundColumn>
                                                                 <%--<asp:BoundColumn DataField="DLName" HeaderText="大类名称">
@@ -254,7 +254,7 @@
                                                         <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="确定" />
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                            type="button" value="Closed" />
+                                                            type="button" value="关闭" />
                                                     </div>
                                                 </td>
                                             </tr>

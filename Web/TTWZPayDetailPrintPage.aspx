@@ -85,7 +85,7 @@
                 <br />
                 <p class="noprint">
                     <input id="print" type="button" class="btn" value="确认打印" onclick="printpage();" />
-                    <input id="print0" type="button" value="Closed" onclick="CloseLayer();" class="btn" />
+                    <input id="print0" type="button" value="关闭" onclick="CloseLayer();" class="btn" />
                 </p>
             </div>
         </center>

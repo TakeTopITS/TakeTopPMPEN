@@ -30,7 +30,7 @@
                 $("#BT_NewApplyReturn").attr("disabled", "disabled");
                 $("#BT_NewApplyReturn").removeClass("inpu");                         //…Í«ÎÕÀªÿ
             }
-            else if (objProgress == "Application" && objCreater == objUserCode) {
+            else if (objProgress == "…Í«Î" && objCreater == objUserCode) {
                 $("#BT_NewEdit").attr("disabled", "disabled");
                 $("#BT_NewEdit").removeClass("inpu");                            //±‡º≠
                 $("#BT_NewDelete").attr("disabled", "disabled");
@@ -268,11 +268,11 @@
                                                                                                 <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,CaoZuo%>"></asp:Label></asp:LinkButton>
                                                                                             <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"XLCode") %>' CommandName="edit" CssClass="notTab">±‡º≠</asp:LinkButton>--%>
                                                                                             <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"XLCode") %>' CommandName="del" CssClass="notTab">…æ≥˝</asp:LinkButton>--%>
-                                                                                            <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"XLCode") %>' CommandName='<%# Eval("CreateProgress").ToString()=="¬º»Î" ? "request" : "returnRequest" %>' CssClass="notTab" Text='<%# Eval("CreateProgress").ToString()=="¬º»Î" ? "Application" : "ÕÀªÿ" %>'></asp:LinkButton>--%>
+                                                                                            <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"XLCode") %>' CommandName='<%# Eval("CreateProgress").ToString()=="¬º»Î" ? "request" : "returnRequest" %>' CssClass="notTab" Text='<%# Eval("CreateProgress").ToString()=="¬º»Î" ? "…Í«Î" : "ÕÀªÿ" %>'></asp:LinkButton>--%>
 
                                                                                         </ItemTemplate>
                                                                                     </asp:TemplateColumn>
-                                                                                    <asp:BoundColumn DataField="DLCode" HeaderText="Major Category Code">
+                                                                                    <asp:BoundColumn DataField="DLCode" HeaderText="¥Û¿‡¥˙¬Î">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:BoundColumn DataField="ZLCode" HeaderText="÷–¿‡¥˙¬Î">

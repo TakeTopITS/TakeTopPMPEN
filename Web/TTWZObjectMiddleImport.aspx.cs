@@ -45,7 +45,7 @@ public partial class TTWZObjectMiddleImport : System.Web.UI.Page
 
             if (fi.Exists)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim() + "');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('" + Resources.lang.ZZCZTMWJSCSBGMHZSC + "');</script>");
             }
 
             if (Directory.Exists(strDocSavePath) == false)
@@ -72,7 +72,7 @@ public partial class TTWZObjectMiddleImport : System.Web.UI.Page
             }
             catch (Exception ex)
             {
-                lblMsg.Text = string.Format(LanguageHandle.GetWord("spanstylecolorredDaoRuShiChuXi").ToString().Trim(), ex.Message);
+                lblMsg.Text = string.Format("<span style='color:red' >导入时出现以下错误: {0}!</span>", ex.Message);
             }
         }
     }
@@ -92,11 +92,11 @@ public partial class TTWZObjectMiddleImport : System.Web.UI.Page
             lineNumber++;
             try
             {
-                string strDLCode = ShareClass.ObjectToString(row[LanguageHandle.GetWord("DaLeiDaiMa").ToString().Trim()]);
-                string strZLCode = ShareClass.ObjectToString(row[LanguageHandle.GetWord("ZhongLeiDaiMa").ToString().Trim()]);
+                string strDLCode = ShareClass.ObjectToString(row["大类代码"]);
+                string strZLCode = ShareClass.ObjectToString(row["中类代码"]);
 
-                string strObjectName = ShareClass.ObjectToString(row[LanguageHandle.GetWord("ZhongLeiMingChen").ToString().Trim()]);
-                string strModel = ShareClass.ObjectToString(row[LanguageHandle.GetWord("ZhongLeiShuiMing").ToString().Trim()]);
+                string strObjectName = ShareClass.ObjectToString(row["中类名称"]);
+                string strModel = ShareClass.ObjectToString(row["中类说明"]);
 
                 if (string.IsNullOrEmpty(strDLCode) && string.IsNullOrEmpty(strZLCode) && string.IsNullOrEmpty(strObjectName) && string.IsNullOrEmpty(strModel))
                 {
@@ -105,29 +105,29 @@ public partial class TTWZObjectMiddleImport : System.Web.UI.Page
 
                 if (string.IsNullOrEmpty(strDLCode))
                 {
-                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangDaLeiDaiMaBuNengWeiKong").ToString().Trim(), lineNumber);
+                    resultMsg += string.Format("第{0}行，大类代码不能为空<br/>", lineNumber);
                     continue;
                 }
                 if (string.IsNullOrEmpty(strZLCode))
                 {
-                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangZhongLeiDaiMaBuNengWeiK").ToString().Trim(), lineNumber);
+                    resultMsg += string.Format("第{0}行，中类代码不能为空<br/>", lineNumber);
                     continue;
                 }
                 if (string.IsNullOrEmpty(strObjectName))
                 {
-                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangXiaoLeiMingChenBuNengWe").ToString().Trim(), lineNumber);
+                    resultMsg += string.Format("第{0}行，小类名称不能为空<br/>", lineNumber);
                     continue;
                 }
                 if (string.IsNullOrEmpty(strModel))
                 {
-                    resultMsg += string.Format(LanguageHandle.GetWord("Di0HangXiaoLeiShuiMingBuNengWe").ToString().Trim(), lineNumber);
+                    resultMsg += string.Format("第{0}行，小类说明不能为空<br/>", lineNumber);
                     continue;
                 }
 
             }
             catch (Exception ex)
             {
-                lblMsg.Text = string.Format(LanguageHandle.GetWord("spanstylecolorredDaoRuShiChuXi").ToString().Trim(), ex.Message);
+                lblMsg.Text = string.Format("<span style='color:red' >导入时出现以下错误: {0}!</span>", ex.Message);
             }
 
         }
@@ -162,10 +162,10 @@ public partial class TTWZObjectMiddleImport : System.Web.UI.Page
 
             try
             {
-                strDLCode = ShareClass.ObjectToString(row[LanguageHandle.GetWord("DaLeiDaiMa").ToString().Trim()]);
-                strZLCode = ShareClass.ObjectToString(row[LanguageHandle.GetWord("ZhongLeiDaiMa").ToString().Trim()]);
-                strZLName = ShareClass.ObjectToString(row[LanguageHandle.GetWord("ZhongLeiMingChen").ToString().Trim()]);
-                strZLDesc = ShareClass.ObjectToString(row[LanguageHandle.GetWord("ZhongLeiShuiMing").ToString().Trim()]);
+                strDLCode = ShareClass.ObjectToString(row["大类代码"]);
+                strZLCode = ShareClass.ObjectToString(row["中类代码"]);
+                strZLName = ShareClass.ObjectToString(row["中类名称"]);
+                strZLDesc = ShareClass.ObjectToString(row["中类说明"]);
 
                 if (string.IsNullOrEmpty(strDLCode) && string.IsNullOrEmpty(strZLCode) && string.IsNullOrEmpty(strZLName) && string.IsNullOrEmpty(strZLDesc))
                 {
@@ -173,11 +173,11 @@ public partial class TTWZObjectMiddleImport : System.Web.UI.Page
                 }
 
 
-                strIsmark = ShareClass.ObjectToString(row[LanguageHandle.GetWord("ShiYongBiaoJi").ToString().Trim()]);
-                strCreateProgress = ShareClass.ObjectToString(row[LanguageHandle.GetWord("ChuangJianJinDu").ToString().Trim()]);
-                strCreater = ShareClass.ObjectToString(row[LanguageHandle.GetWord("ChuangJianRen").ToString().Trim()]);
+                strIsmark = ShareClass.ObjectToString(row["使用标记"]);
+                strCreateProgress = ShareClass.ObjectToString(row["创建进度"]);
+                strCreater = ShareClass.ObjectToString(row["创建人"]);
 
-                strCreateTitle = ShareClass.ObjectToString(row[LanguageHandle.GetWord("ChuangJianBiaoZhi").ToString().Trim()]);
+                strCreateTitle = ShareClass.ObjectToString(row["创建标志"]);
 
                 WZMaterialZL wZMaterialZL = new WZMaterialZL();
 
@@ -199,7 +199,7 @@ public partial class TTWZObjectMiddleImport : System.Web.UI.Page
             }
             catch (Exception err)
             {
-                LogClass.WriteLogFile(this.GetType().BaseType.Name + "："  + LanguageHandle.GetWord("ZZJGDRSBJC").ToString().Trim() + " : " + LanguageHandle.GetWord("HangHao").ToString().Trim() + ": " + (lineNumber + 2).ToString() + " , " + LanguageHandle.GetWord("DaiMa").ToString().Trim() + ": " + strZLCode + " : " + err.Message.ToString());
+                LogClass.WriteLogFile(this.GetType().BaseType.Name + "："  + Resources.lang.ZZJGDRSBJC + " : " + Resources.lang.HangHao + ": " + (lineNumber + 2).ToString() + " , " + Resources.lang.DaiMa + ": " + strZLCode + " : " + err.Message.ToString());
             }
         }
 
@@ -207,11 +207,11 @@ public partial class TTWZObjectMiddleImport : System.Web.UI.Page
         {
             if (successCount == dtExcel.Rows.Count)
             {
-                resultMsg += string.Format(LanguageHandle.GetWord("brYiChengGongDaoRu0TiaoShuJu").ToString().Trim(), successCount);
+                resultMsg += string.Format("<br/>已成功导入 {0} 条数据", successCount);
             }
             else
             {
-                resultMsg += string.Format(LanguageHandle.GetWord("brYiChengGongDaoRu0TiaoShuJuGo").ToString().Trim(), successCount, dtExcel.Rows.Count - successCount);
+                resultMsg += string.Format("<br/>已成功导入 {0} 条数据， 共有 {1} 条数据验证失败", successCount, dtExcel.Rows.Count - successCount);
             }
 
             //重新加载列表
@@ -221,7 +221,7 @@ public partial class TTWZObjectMiddleImport : System.Web.UI.Page
         }
         else
         {
-            resultMsg += string.Format(LanguageHandle.GetWord("brWeiDaoRuShuJuGongYou0TiaoShu").ToString().Trim(), dtExcel.Rows.Count - successCount);
+            resultMsg += string.Format("<br/>未导入数据， 共有 {0} 条数据验证失败", dtExcel.Rows.Count - successCount);
         }
 
         return false;
@@ -232,10 +232,10 @@ public partial class TTWZObjectMiddleImport : System.Web.UI.Page
         // 下载项目对应相应模板.
         try
         {
-            string templatePath = Server.MapPath(LanguageHandle.GetWord("DocTemplatesDuiZhaoDaiMaxls").ToString().Trim());
+            string templatePath = Server.MapPath("Doc/Templates/对照代码.xls");
 
 
-            FileUtils.Download(templatePath, string.Format("{0}.xls", LanguageHandle.GetWord("DuiZhaoDaiMa").ToString().Trim()), Response, false);
+            FileUtils.Download(templatePath, string.Format("{0}.xls", "对照代码"), Response, false);
         }
         catch (Exception ex)
         { }

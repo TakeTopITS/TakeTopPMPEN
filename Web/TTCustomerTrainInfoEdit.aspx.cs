@@ -1365,11 +1365,11 @@ public partial class TTCustomerTrainInfoEdit : System.Web.UI.Page
                     tREmployeeTraining.EnterCode = strUserCodeOld.Trim();
                     tREmployeeTraining.ProfessionalSkillLevel = dr[i][LanguageHandle.GetWord("ZhiYeJiNengDengJi").ToString().Trim()].ToString().Trim();
                     tREmployeeTraining.ProfessionSkillNumber = dr[i][LanguageHandle.GetWord("ZhiYeJiNengJianDingZhengShuBia").ToString().Trim()].ToString().Trim();
-                    tREmployeeTraining.ReleaseTime = DateTime.Parse(string.IsNullOrEmpty(dr[i]["LicenseIssuanceTime"].ToString()) ? DateTime.Now.ToString() : dr[i]["LicenseIssuanceTime"].ToString());   //ChineseWord
+                    tREmployeeTraining.ReleaseTime = DateTime.Parse(string.IsNullOrEmpty(dr[i]["LicenseIssuanceTime"].ToString()) ? DateTime.Now.ToString() : dr[i]["LicenseIssuanceTime"].ToString());   
                     tREmployeeTraining.Remark = dr[i][LanguageHandle.GetWord("BeiZhu").ToString().Trim()].ToString().Trim();
                     tREmployeeTraining.TrainingInfo = dr[i][LanguageHandle.GetWord("PeiXunXiangGuanXinXi").ToString().Trim()].ToString().Trim();
                     tREmployeeTraining.UserCode = string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("YuanGongDaiMa").ToString().Trim()].ToString()) ? GetUserCode(dr[i][LanguageHandle.GetWord("YuanGongXingMing").ToString().Trim()].ToString().Trim()) : dr[i][LanguageHandle.GetWord("YuanGongDaiMa").ToString().Trim()].ToString().Trim();
-                    tREmployeeTraining.ValidityType = dr[i]["AppraisedOccupation"].ToString().Trim();   //ChineseWord
+                    tREmployeeTraining.ValidityType = dr[i]["AppraisedOccupation"].ToString().Trim();   
                     tREmployeeTraining.EnterTime = DateTime.Now;
 
                     try
@@ -1463,7 +1463,7 @@ public partial class TTCustomerTrainInfoEdit : System.Web.UI.Page
                     tRSpecialOperations.SpeOpeProject = dr[i][LanguageHandle.GetWord("TeChongZuoYeZhunCaoXiangMu").ToString().Trim()].ToString().Trim();
                     tRSpecialOperations.SpeOpeReviewTime = DateTime.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("TeChongZuoYeFuShenShiJian").ToString().Trim()].ToString()) ? DateTime.Now.ToString() : dr[i][LanguageHandle.GetWord("TeChongZuoYeFuShenShiJian").ToString().Trim()].ToString());
                     tRSpecialOperations.SpeOpeStartTime = DateTime.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("TeChongZuoYeQuZhengShiJian").ToString().Trim()].ToString()) ? DateTime.Now.ToString() : dr[i][LanguageHandle.GetWord("TeChongZuoYeQuZhengShiJian").ToString().Trim()].ToString());
-                    tRSpecialOperations.SpeOpeType = dr[i]["SpecialOperationsCategory"].ToString().Trim();   //ChineseWord
+                    tRSpecialOperations.SpeOpeType = dr[i]["SpecialOperationsCategory"].ToString().Trim();   
                     tRSpecialOperations.UserCode = string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("YuanGongDaiMa").ToString().Trim()].ToString()) ? GetUserCode(dr[i][LanguageHandle.GetWord("YuanGongXingMing").ToString().Trim()].ToString().Trim()) : dr[i][LanguageHandle.GetWord("YuanGongDaiMa").ToString().Trim()].ToString().Trim();
                     tRSpecialOperations.EnterTime = DateTime.Now;
                     try
@@ -1554,7 +1554,7 @@ public partial class TTCustomerTrainInfoEdit : System.Web.UI.Page
                     tRSpecialEquipment.SpeEquProject = dr[i][LanguageHandle.GetWord("TeChongSheBeiZhunCaoXiangMu").ToString().Trim()].ToString().Trim();
                     tRSpecialEquipment.SpeEquReviewTime = DateTime.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("TeChongSheBeiFuShenShiJian").ToString().Trim()].ToString()) ? DateTime.Now.ToString() : dr[i][LanguageHandle.GetWord("TeChongSheBeiFuShenShiJian").ToString().Trim()].ToString());
                     tRSpecialEquipment.SpeEquStartTime = DateTime.Parse(string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("TeChongSheBeiQuZhengShiJian").ToString().Trim()].ToString()) ? DateTime.Now.ToString() : dr[i][LanguageHandle.GetWord("TeChongSheBeiQuZhengShiJian").ToString().Trim()].ToString());
-                    tRSpecialEquipment.SpeEquType = dr[i]["SpecialEquipmentOperationsCategory"].ToString().Trim();   //ChineseWord
+                    tRSpecialEquipment.SpeEquType = dr[i]["SpecialEquipmentOperationsCategory"].ToString().Trim();   
                     tRSpecialEquipment.UserCode = string.IsNullOrEmpty(dr[i][LanguageHandle.GetWord("YuanGongDaiMa").ToString().Trim()].ToString()) ? GetUserCode(dr[i][LanguageHandle.GetWord("YuanGongXingMing").ToString().Trim()].ToString().Trim()) : dr[i][LanguageHandle.GetWord("YuanGongDaiMa").ToString().Trim()].ToString().Trim();
                     tRSpecialEquipment.EnterTime = DateTime.Now;
                     try

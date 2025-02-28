@@ -80,7 +80,7 @@ public partial class TTWZNeedObjectTotal : System.Web.UI.Page
                     WZNeedObject wZNeedObject = (WZNeedObject)needObjectList[0];
                     if (wZNeedObject.IsMark != 0)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSYBJBW0BYXSC").ToString().Trim()+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSYBJBW0BYXSC+"')", true);
                         return;
                     }
 
@@ -89,7 +89,7 @@ public partial class TTWZNeedObjectTotal : System.Web.UI.Page
                     //重新加载列表
                     DataBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
                 }
 
             }
@@ -130,7 +130,7 @@ public partial class TTWZNeedObjectTotal : System.Web.UI.Page
         DataTable dtCheckNeed = ShareClass.GetDataSetFromSql(strCheckNeedSql, "Need").Tables[0];
         if (dtCheckNeed != null && dtCheckNeed.Rows.Count > 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYYJLBNXZ").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZYYJLBNXZ+"')", true);
             return;
         }
 
@@ -151,7 +151,7 @@ public partial class TTWZNeedObjectTotal : System.Web.UI.Page
         string strEditID = HF_NewID.Value;
         if (string.IsNullOrEmpty(strEditID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDXFLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDXFLB+"')", true);
             return;
         }
 
@@ -168,7 +168,7 @@ public partial class TTWZNeedObjectTotal : System.Web.UI.Page
         string strEditID = HF_NewID.Value;
         if (string.IsNullOrEmpty(strEditID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDXFLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDXFLB+"')", true);
             return;
         }
 
@@ -182,7 +182,7 @@ public partial class TTWZNeedObjectTotal : System.Web.UI.Page
             WZNeedObject wZNeedObject = (WZNeedObject)needObjectList[0];
             if (wZNeedObject.IsMark != 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSYBJBW0BYXSC").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSYBJBW0BYXSC+"')", true);
                 return;
             }
 
@@ -191,7 +191,7 @@ public partial class TTWZNeedObjectTotal : System.Web.UI.Page
             //重新加载列表
             DataBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
         }
     }
 
@@ -204,7 +204,7 @@ public partial class TTWZNeedObjectTotal : System.Web.UI.Page
         string strEditID = HF_NewID.Value;
         if (string.IsNullOrEmpty(strEditID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDXFLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDXFLB+"')", true);
             return;
         }
 

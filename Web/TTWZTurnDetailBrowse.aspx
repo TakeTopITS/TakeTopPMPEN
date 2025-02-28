@@ -89,7 +89,7 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="formItemBgStyle" colspan="2" style="text-align: left">
-                                                                        <asp:Label ID="Label26" runat="server" Text="EngineeringProject"></asp:Label>
+                                                                        <asp:Label ID="Label26" runat="server" Text="工程项目"></asp:Label>
                                                                         ： 
                                                                          <asp:Label ID="LB_ProjectName" runat="server"></asp:Label>
                                                                     </td>
@@ -130,7 +130,7 @@
                                                                                                 </td>
                                                                                                 <td width="7%" align="left">
                                                                                                     <strong>
-                                                                                                        <asp:Label ID="Label8" runat="server" Text="Specification"></asp:Label></strong>
+                                                                                                        <asp:Label ID="Label8" runat="server" Text="规格型号"></asp:Label></strong>
                                                                                                 </td>
                                                                                                 <td width="5%" align="center">
                                                                                                     <strong>
@@ -159,7 +159,7 @@
                                                                                                 </td>
                                                                                                 <td width="4%" align="center">
                                                                                                     <strong>
-                                                                                                        <asp:Label ID="Label31" runat="server" Text="MaterialReceipt"></asp:Label></strong>
+                                                                                                        <asp:Label ID="Label31" runat="server" Text="收料"></asp:Label></strong>
                                                                                                 </td>
                                                                                                 <td width="4%" align="center">
                                                                                                     <strong>
@@ -199,7 +199,7 @@
                                                                                             <%# ShareClass.StringCutByRequire(Eval("ObjectName").ToString(), 192) %>
                                                                                         </ItemTemplate>
                                                                                     </asp:TemplateColumn>
-                                                                                    <asp:BoundColumn DataField="Model" HeaderText="Specification">
+                                                                                    <asp:BoundColumn DataField="Model" HeaderText="规格型号">
                                                                                         <ItemStyle CssClass="itemBorderBlack" HorizontalAlign="Left" Width="7%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:BoundColumn DataField="UnitName" HeaderText="计量单位">
@@ -272,7 +272,7 @@
                                                                     <td style="text-align: center" class="formItemBgStyle" colspan="3">
                                                                         <p class="noprint">
                                                                             <input id="print" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                                                type="button" value="Closed" />
+                                                                                type="button" value="关闭" />
                                                                             <input id="print0" class="inpu" onclick="printpage();" type="button" value="打印" />
                                                                         </p>
                                                                         <asp:Label ID="LB_TurnDetail" runat="server" Visible="false"></asp:Label>

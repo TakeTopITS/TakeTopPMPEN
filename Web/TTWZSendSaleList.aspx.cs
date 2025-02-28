@@ -56,7 +56,7 @@ public partial class TTWZSendSaleList : System.Web.UI.Page
                     left join T_ProjectMember p on s.PurchaseEngineer = p.UserCode
                     where s.PurchaseEngineer ='{0}' 
                     and s.Progress = '录入' 
-                    order by s.TicketTime desc", strUserCode);   //ChineseWord
+                    order by s.TicketTime desc", strUserCode);
         DataTable dtSend = ShareClass.GetDataSetFromSql(strSendHQL, "Send").Tables[0];
 
         DG_Send.DataSource = dtSend;
@@ -78,7 +78,7 @@ public partial class TTWZSendSaleList : System.Web.UI.Page
     {
         TV_Type.Nodes.Clear();
         TreeNode Node = new TreeNode();
-        Node.Text = LanguageHandle.GetWord("QuanBuCaiLiao").ToString().Trim();
+        Node.Text = "全部材料";
         Node.Value = "all|0|0|0";
         string strDLSQL = "select * from T_WZMaterialDL";
         DataTable dtDL = ShareClass.GetDataSetFromSql(strDLSQL, "DL").Tables[0];
@@ -181,7 +181,7 @@ public partial class TTWZSendSaleList : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJFLD").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJFLD+"')", true);
             return;
         }
     }
@@ -232,9 +232,9 @@ public partial class TTWZSendSaleList : System.Web.UI.Page
                 if (listSend != null && listSend.Count == 1)
                 {
                     WZSend wZSend = (WZSend)listSend[0];
-                    if (wZSend.Progress != LanguageHandle.GetWord("LuRu").ToString().Trim() || wZSend.PurchaseEngineer != strUserCode)
+                    if (wZSend.Progress != "录入" || wZSend.PurchaseEngineer != strUserCode)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBWLRYJHTYBWDDLYHSBYXSC").ToString().Trim()+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBWLRYJHTYBWDDLYHSBYXSC+"')", true);
                         return;
                     }
 
@@ -300,12 +300,12 @@ public partial class TTWZSendSaleList : System.Web.UI.Page
                 if (listSend != null && listSend.Count == 1)
                 {
                     WZSend wZSend = (WZSend)listSend[0];
-                    if (wZSend.Progress == LanguageHandle.GetWord("LuRu").ToString().Trim())
+                    if (wZSend.Progress == "录入")
                     {
                         string strCheckCode = wZSend.CheckCode;
 
                         //材检
-                        wZSend.Progress = LanguageHandle.GetWord("CaiJian").ToString().Trim();
+                        wZSend.Progress = "材检";
 
 
                         wZSendBLL.UpdateWZSend(wZSend, wZSend.SendCode);
@@ -315,7 +315,7 @@ public partial class TTWZSendSaleList : System.Web.UI.Page
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZJDBWLRBNTJ").ToString().Trim()+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZJDBWLRBNTJ+"')", true);
                         return;
                     }
                 }
@@ -376,7 +376,7 @@ public partial class TTWZSendSaleList : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJFLD").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJFLD+"')", true);
                     return;
                 }
             }
@@ -390,7 +390,7 @@ public partial class TTWZSendSaleList : System.Web.UI.Page
         {
             if (!ShareClass.CheckIsNumber(strActualNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSFSLBXWXSHZZS").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSFSLBXWXSHZZS+"')", true);
                 return;
             }
             else
@@ -410,7 +410,7 @@ public partial class TTWZSendSaleList : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSFSLBNWK").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSFSLBNWK+"')", true);
             return;
         }
     }
@@ -428,12 +428,12 @@ public partial class TTWZSendSaleList : System.Web.UI.Page
 
         if (string.IsNullOrEmpty(strSendMethod))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZFLFSBNWKBC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZFLFSBNWKBC+"')", true);
             return;
         }
         if (string.IsNullOrEmpty(strProjectCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZXMBM").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZXMBM+"')", true);
             return;
         }
 
@@ -455,22 +455,22 @@ public partial class TTWZSendSaleList : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strActualNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSSSLBNWKBC").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSSSLBNWKBC+"')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strActualNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSSSLBXWXSHZZS").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSSSLBXWXSHZZS+"')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strManageRate))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGLFLBNWKBC").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGLFLBNWKBC+"')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strManageRate))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGLFLBXWXSHZZS").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGLFLBXWXSHZZS+"')", true);
                 return;
             }
 
@@ -511,7 +511,7 @@ public partial class TTWZSendSaleList : System.Web.UI.Page
                 //重新加载发料单列表
                 DataSendBinder();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
             }
         }
         else
@@ -523,9 +523,9 @@ public partial class TTWZSendSaleList : System.Web.UI.Page
             wZSend.SendCode = CreateNewSendCode();          //发料编号
             wZSend.TicketTime = DateTime.Now;
             wZSend.PurchaseEngineer = strUserCode;
-            wZSend.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
+            wZSend.Progress = "录入";
             wZSend.IsMark = 0;
-            wZSend.SendMethod = LanguageHandle.GetWord("LanPiao").ToString().Trim();//strSendMethod;
+            wZSend.SendMethod = "蓝票";//strSendMethod;
             wZSend.ProjectCode = "-";//strProjectCode;
             wZSend.StoreRoom = strStoreRoom;
             wZSend.UnitCode = strUnitCode;
@@ -543,7 +543,7 @@ public partial class TTWZSendSaleList : System.Web.UI.Page
             //重新加载发料单列表
             DataSendBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
         }
     }
 
@@ -662,7 +662,7 @@ public partial class TTWZSendSaleList : System.Web.UI.Page
             {
                 if (!ShareClass.CheckIsNumber(strSalePrice))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXSDJBXWXSHZZS").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXSDJBXWXSHZZS+"')", true);
                     return;
                 }
                 else
@@ -684,12 +684,12 @@ public partial class TTWZSendSaleList : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXSDJBNWK").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXSDJBNWK+"')", true);
                 return;
             }
         }
         else {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZFLD").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZFLD+"')", true);
             return;
         }
     }
@@ -708,7 +708,7 @@ public partial class TTWZSendSaleList : System.Web.UI.Page
             {
                 if (!ShareClass.CheckIsNumber(strManageRate))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGLFLBXWXSHZZS").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGLFLBXWXSHZZS+"')", true);
                     return;
                 }
                 else
@@ -727,13 +727,13 @@ public partial class TTWZSendSaleList : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGLFLBNWK").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGLFLBNWK+"')", true);
                 return;
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZFLD").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZFLD+"')", true);
             return;
         }
     }

@@ -42,7 +42,7 @@
                 $("#BT_NewReturnStart").attr("disabled", "disabled");   
                 $("#BT_NewReturnStart").removeClass("inpu");                         //开工退回
             }
-            else if (objProgress == "Start Work") {
+            else if (objProgress == "开工") {
                 $("#BT_NewStart").attr("disabled", "disabled");
                 $("#BT_NewStart").removeClass("inpu");                         //开工
                 $("#BT_NewReturnStart").attr("class", "inpu");
@@ -142,7 +142,7 @@
                                                                 <asp:ListItem Text="<%$ Resources:lang,QuanBu%>" Value=""/>
                                                                 <asp:ListItem Text="<%$ Resources:lang,LuRu%>" Value="录入"/>
                                                                 <asp:ListItem Text="<%$ Resources:lang,LiXiang%>" Value="立项"/>
-                                                                <asp:ListItem Text="<%$ Resources:lang,KaiGong%>" Value="Start Work"/>
+                                                                <asp:ListItem Text="<%$ Resources:lang,KaiGong%>" Value="开工"/>
                                                                 <asp:ListItem Text="<%$ Resources:lang,HeXiao%>" Value="核销"/>
                                                             </asp:DropDownList>
                                                         </td>
@@ -364,7 +364,7 @@
                                                                     <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("ProjectCode") +"|"+Eval("Progress")+"|"+Eval("SupplementEditor")+"|"+Eval("IsMark") %>' CommandName="click" CssClass="notTab">
                                                                         <asp:Label ID="Label47" runat="server" Text="<%$ Resources:lang,CaoZuo%>"></asp:Label></asp:LinkButton>
                                                                     <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ProjectCode") %>' CommandName="start" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="立项" ? true : false %>'>开工</asp:LinkButton>--%>
-                                                                    <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ProjectCode") %>' CommandName="startReturn" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Start Work" ? true : false %>'>开工退回</asp:LinkButton>--%>
+                                                                    <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ProjectCode") %>' CommandName="startReturn" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="开工" ? true : false %>'>开工退回</asp:LinkButton>--%>
 
                                                                     <%--<asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ProjectCode") %>' CommandName="browse" CssClass="notTab">浏览</asp:LinkButton>--%>
                                                                     
@@ -386,7 +386,7 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("ProjectName").ToString(), 23) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="ProjectManagerName" HeaderText="ProjectManager">
+                                                            <asp:BoundColumn DataField="ProjectManagerName" HeaderText="项目经理">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
                                                             <asp:TemplateColumn>
@@ -504,7 +504,7 @@
                                                             <asp:BoundColumn DataField="TheBudget" HeaderText="甲领预算">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="3%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ContractMoney" HeaderText="ContractAmount">
+                                                            <asp:BoundColumn DataField="ContractMoney" HeaderText="合同金额">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="3%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="AcceptMoney" HeaderText="实购金额">
@@ -522,7 +522,7 @@
                                                             <asp:BoundColumn DataField="FinishingRate" HeaderText="采购进度%">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                            <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">

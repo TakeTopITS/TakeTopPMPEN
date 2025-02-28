@@ -51,7 +51,7 @@ public partial class TakeTopAPPMain : System.Web.UI.Page
 
             try
             {
-                SetAnalystModuleVisible(strUserCode, "AnalysisChart", strLangCode, strUserType);  //ChineseWord //ChineseWord
+                SetAnalystModuleVisible(strUserCode, "AnalysisChart", strLangCode, strUserType);   
             }
             catch
             {
@@ -90,7 +90,7 @@ public partial class TakeTopAPPMain : System.Web.UI.Page
                 ||rtrim(B.UserType)  and A.Visible = 'YES' and A.IsDeleted = 'NO' and A.ModuleName <> 'AnalysisChart'
                 and A.ModuleType In ('APP','DIYAPP') and A.UserType = 'INNER' and B.UserType = '{3}' 
                 and B.UserCode = '{0}' and B.Visible = 'YES' and B.ModuleType in('APP','DIYAPP') and position(rtrim(A.ModuleName)||',' in '{1}') = 0
-                and A.LangCode = '{2}' Order By A.SortNumber ASC", strUserCode, strForbitModule, strLangCode, strUserType);  //ChineseWord //ChineseWord
+                and A.LangCode = '{2}' Order By A.SortNumber ASC", strUserCode, strForbitModule, strLangCode, strUserType);   
 
         DataTable dtModule = ShareClass.GetDataSetFromSql(strHQL, "Module").Tables[0];
         DataView dvModule = new DataView(dtModule);
@@ -261,7 +261,7 @@ public partial class TakeTopAPPMain : System.Web.UI.Page
         strHQL = "Select * From T_HeadLine ";
         strHQL += " Where (RelatedDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))  or RelatedDepartCode = '" + strDepartCode + "')";
         strHQL += " and LangCode = '" + strLangCode + "' and ID Not in (Select NewsID From T_NewsRelatedUser Where UserCode  = '" + strUserCode + "')";
-        strHQL += " And Type = " + "'" + strUserType + "'" + " and Status = 'Publish' Order By ID DESC";  //ChineseWord //ChineseWord
+        strHQL += " And Type = " + "'" + strUserType + "'" + " and Status = 'Publish' Order By ID DESC";   
 
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");
 

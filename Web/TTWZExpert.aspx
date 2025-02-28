@@ -72,10 +72,10 @@
 
                                                                         <asp:Label ID="Label25" runat="server" Text="<%$ Resources:lang,ZhuanJiaLeiXing%>"></asp:Label>：
                                                                                     <asp:DropDownList ID="ddlType" runat="server">
-                                                                                        <asp:ListItem Value="PleaseSelect" Text="<%$ Resources:lang,QingXuanZe%>" />
-                                                                                        <asp:ListItem Value="MaterialBiddingExpert" Text="<%$ Resources:lang,WuZiZhaoBiaoZhuanJia%>" />
-                                                                                        <asp:ListItem Value="EngineeringBiddingExpert" Text="<%$ Resources:lang,GongChengZhaoBiaoZhuanJia%>" />
-                                                                                        <asp:ListItem Value="OtherBiddingExpert" Text="<%$ Resources:lang,QiTaZhaoBiaoZhuanJia%>" />
+                                                                                        <asp:ListItem Value="请选择" Text="<%$ Resources:lang,QingXuanZe%>" />
+                                                                                        <asp:ListItem Value="物资招标专家" Text="<%$ Resources:lang,WuZiZhaoBiaoZhuanJia%>" />
+                                                                                        <asp:ListItem Value="工程招标专家" Text="<%$ Resources:lang,GongChengZhaoBiaoZhuanJia%>" />
+                                                                                        <asp:ListItem Value="其他招标专家" Text="<%$ Resources:lang,QiTaZhaoBiaoZhuanJia%>" />
                                                                                     </asp:DropDownList>
 
                                                                         <asp:Label ID="lbl_sql" runat="server" Visible="False"></asp:Label>
@@ -150,12 +150,12 @@
                                                                 OnPageIndexChanged="DataGrid1_PageIndexChanged" PageSize="25" ShowHeader="False"
                                                                 Width="100%">
                                                                 <Columns>
-                                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='Modify' /&gt;&lt;/div&gt;">
+                                                                    <asp:ButtonColumn ButtonType="LinkButton" CommandName="Update" Text="&lt;div&gt;&lt;img src=ImagesSkin/Update.png border=0 alt='修改' /&gt;&lt;/div&gt;">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:ButtonColumn>
                                                                     <asp:TemplateColumn HeaderText="Delete">
                                                                         <ItemTemplate>
-                                                                            <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='Deleted' /&gt;&lt;/div&gt;"></asp:LinkButton>
+                                                                            <asp:LinkButton ID="LBT_Delete" CommandName="Delete" runat="server" OnClientClick="return confirm(getDeleteMsgByLangCode())" Text="&lt;div&gt;&lt;img src=ImagesSkin/Delete.png border=0 alt='删除' /&gt;&lt;/div&gt;"></asp:LinkButton>
                                                                         </ItemTemplate>
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                     </asp:TemplateColumn>
@@ -163,11 +163,11 @@
                                                                     <asp:BoundColumn DataField="ExpertCode" HeaderText="ExpertCode">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Name" HeaderText="Name" Visible="false">
+                                                                    <asp:BoundColumn DataField="Name" HeaderText="姓名" Visible="false">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTBMExpertInfoView.aspx?ExpertID={0}" DataTextField="Name" HeaderText="Name" Target="_blank">
+                                                                    <asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="TTBMExpertInfoView.aspx?ExpertID={0}" DataTextField="Name" HeaderText="姓名" Target="_blank">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                     </asp:HyperLinkColumn>
@@ -179,11 +179,11 @@
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="JobTitle" HeaderText="ProfessionalTitle">
+                                                                    <asp:BoundColumn DataField="JobTitle" HeaderText="职称">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="Phone" HeaderText="MobilePhone">
+                                                                    <asp:BoundColumn DataField="Phone" HeaderText="移动电话">
                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                                         <HeaderStyle BorderColor="#394f66" BorderStyle="Solid" BorderWidth="1px" Font-Bold="true" HorizontalAlign="Center" />
                                                                     </asp:BoundColumn>
@@ -338,8 +338,8 @@
                                                     <asp:Label ID="Label10" runat="server" Text="<%$ Resources:lang,CaiGouZhuanJia%>"></asp:Label>：</td>
                                                 <td class="formItemBgStyle" style="text-align: left">
                                                     <asp:DropDownList ID="ddl_ProcurementCategory" runat="server">
-                                                        <asp:ListItem Value="NO" Text="<%$ Resources:lang,Fou%>" />
-                                                        <asp:ListItem Value="YES" Text="<%$ Resources:lang,Shi%>" />
+                                                        <asp:ListItem Value="否" Text="<%$ Resources:lang,Fou%>" />
+                                                        <asp:ListItem Value="是" Text="<%$ Resources:lang,Shi%>" />
                                                     </asp:DropDownList>
                                                 </td>
                                             </tr>

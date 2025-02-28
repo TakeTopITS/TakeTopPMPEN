@@ -68,7 +68,7 @@ public partial class TTWZCompactCheckListNew : System.Web.UI.Page
     public void DataCompactBinder()
     {
         WZCompactBLL wZCompactBLL = new WZCompactBLL();
-        string strWZCompactHQL = "from WZCompact as wZCompact where Progress in ('生效','材检') and Checker = '" + strUserCode + "' order by CompactCode desc";   //ChineseWord
+        string strWZCompactHQL = "from WZCompact as wZCompact where Progress in ('生效','材检') and Checker = '" + strUserCode + "' order by CompactCode desc";
         IList listCompact = wZCompactBLL.GetAllWZCompacts(strWZCompactHQL);
 
         LB_Compact.DataSource = listCompact;
@@ -167,20 +167,20 @@ public partial class TTWZCompactCheckListNew : System.Web.UI.Page
             if (listCompact != null && listCompact.Count == 1)
             {
                 WZCompact wZCompact = (WZCompact)listCompact[0];
-                if (wZCompact.Progress == LanguageHandle.GetWord("ShengXiao").ToString().Trim())
+                if (wZCompact.Progress == "生效")
                 {
                     wZCompact.CheckIsMark = -1;
-                    wZCompact.Progress = LanguageHandle.GetWord("CaiJian").ToString().Trim();
+                    wZCompact.Progress = "材检";
 
                     wZCompactBLL.UpdateWZCompact(wZCompact, wZCompact.CompactCode);
 
                     DataCompactCheckBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCJCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCJCG + "')", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZHTJDBSSXZTBNCJ").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZHTJDBSSXZTBNCJ + "')", true);
                     return;
                 }
             }
@@ -195,20 +195,20 @@ public partial class TTWZCompactCheckListNew : System.Web.UI.Page
             if (listCompact != null && listCompact.Count == 1)
             {
                 WZCompact wZCompact = (WZCompact)listCompact[0];
-                if (wZCompact.Progress == LanguageHandle.GetWord("CaiJian").ToString().Trim())
+                if (wZCompact.Progress == "材检")
                 {
                     wZCompact.CheckIsMark = 0;
-                    wZCompact.Progress = LanguageHandle.GetWord("ShengXiao").ToString().Trim();
+                    wZCompact.Progress = "生效";
 
                     wZCompactBLL.UpdateWZCompact(wZCompact, wZCompact.CompactCode);
 
                     DataCompactCheckBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTHCG + "')", true);
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZHTJDBSCJZTBNTH").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZHTJDBSCJZTBNTH + "')", true);
                     return;
                 }
             }
@@ -285,7 +285,7 @@ public partial class TTWZCompactCheckListNew : System.Web.UI.Page
                     wZCompactCheck.ExecutionStandard = wZCompactDetail.Criterion;
                     wZCompactCheck.Checker = strUserCode;
                     wZCompactCheck.CheckerDate = "";
-                    wZCompactCheck.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
+                    wZCompactCheck.Progress = "录入";
 
                     wZCompactCheck.CompactDetailID = wZCompactDetail.ID;
 
@@ -293,7 +293,7 @@ public partial class TTWZCompactCheckListNew : System.Web.UI.Page
                 }
 
 
-                wZCompactDetail.CheckCode = LanguageHandle.GetWord("ZhengZaiCaiJian").ToString().Trim();
+                wZCompactDetail.CheckCode = "正在材检";
                 wZCompactDetail.IsCheck = 1;
 
                 wZCompactDetailBLL.UpdateWZCompactDetail(wZCompactDetail, wZCompactDetail.ID);
@@ -417,7 +417,7 @@ public partial class TTWZCompactCheckListNew : System.Web.UI.Page
         string strEditID = HF_NewID.Value;
         if (string.IsNullOrEmpty(strEditID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDJHLB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDJHLB + "')", true);
             return;
         }
 
@@ -436,7 +436,7 @@ public partial class TTWZCompactCheckListNew : System.Web.UI.Page
 
             //删除成功
             DataCompactCheckBinder();
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
 
             ControlStatusCloseChange();
         }
@@ -448,7 +448,7 @@ public partial class TTWZCompactCheckListNew : System.Web.UI.Page
         string strEditID = HF_NewID.Value;
         if (string.IsNullOrEmpty(strEditID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDJHLB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDJHLB + "')", true);
             return;
         }
 
@@ -462,7 +462,7 @@ public partial class TTWZCompactCheckListNew : System.Web.UI.Page
         string strEditID = HF_NewID.Value;
         if (string.IsNullOrEmpty(strEditID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDJHLB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDJHLB + "')", true);
             return;
         }
 
@@ -473,7 +473,7 @@ public partial class TTWZCompactCheckListNew : System.Web.UI.Page
         {
             WZCompactCheck wZCompactCheck = (WZCompactCheck)listWZCompactCheck[0];
 
-            wZCompactCheck.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
+            wZCompactCheck.Progress = "录入";
             wZCompactCheck.CheckCode = "";
 
             wZCompactCheckBLL.UpdateWZCompactCheck(wZCompactCheck, wZCompactCheck.ID);
@@ -481,12 +481,12 @@ public partial class TTWZCompactCheckListNew : System.Web.UI.Page
             //合同明细〈检号〉＝“正在材检” 												
             //合同明细〈材检标志〉＝“0”												
 
-            string strCompactDetailSQL = "update T_WZCompactDetail set CheckCode ='正在材检',IsCheck=0 where id = " + wZCompactCheck.CompactDetailID;   //ChineseWord
+            string strCompactDetailSQL = "update T_WZCompactDetail set CheckCode ='正在材检',IsCheck=0 where id = " + wZCompactCheck.CompactDetailID;
             ShareClass.RunSqlCommand(strCompactDetailSQL);
 
             //检号退回成功
             DataCompactCheckBinder();
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJianHaoLanguageHandleGetWord").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('检号" + Resources.lang.ZZTHCG + "')", true);
 
             ControlStatusCloseChange();
         }
@@ -494,7 +494,7 @@ public partial class TTWZCompactCheckListNew : System.Web.UI.Page
 
     private void ControlStatusChange(string strCompactDetailID, string strProgress)
     {
-        if (strProgress == LanguageHandle.GetWord("LuRu").ToString().Trim())
+        if (strProgress == "录入")
         {
             BT_NewRecordDelete.Enabled = true;
             BT_NewCheckCodeEdit.Enabled = true;
@@ -517,7 +517,7 @@ public partial class TTWZCompactCheckListNew : System.Web.UI.Page
             int.TryParse(ShareClass.ObjectToString(dtCompactDetail.Rows[0]["IsMark"]), out intIsMark);
         }
 
-        if (strProgress == LanguageHandle.GetWord("CaiJian").ToString().Trim() && intIsMark == 0)
+        if (strProgress == "材检" && intIsMark == 0)
         {
             BT_NewCheckCodeReturn.Enabled = true;
         }
@@ -572,17 +572,17 @@ public partial class TTWZCompactCheckListNew : System.Web.UI.Page
                 }
 
                 DataCompactDetailBinder();
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZGeTongLanguageHandleGetWordZ").ToString().Trim()+"')", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('合同" + Resources.lang.ZZCJCG + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZMYFHTJDHTMXJL").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZMYFHTJDHTMXJL + "')", true);
                 return;
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZHT").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZHT + "')", true);
             return;
         }
     }
@@ -597,7 +597,7 @@ public partial class TTWZCompactCheckListNew : System.Web.UI.Page
             string strWZCompactDetailHQL = string.Format(@"from WZCompactDetail as wZCompactDetail
                             where CompactCode = '{0}'
                             and (CheckCode = '' or CheckCode = '正在材检')
-                            and IsMark = 0", strCompactCode);   //ChineseWord
+                            and IsMark = 0", strCompactCode);
             IList lstCompactDetail = wZCompactDetailBLL.GetAllWZCompactDetails(strWZCompactDetailHQL);
 
             if (lstCompactDetail != null && lstCompactDetail.Count > 0)
@@ -612,17 +612,17 @@ public partial class TTWZCompactCheckListNew : System.Web.UI.Page
                 }
 
                 DataCompactDetailBinder();
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZGeTongCaiJianLanguageHandleG").ToString().Trim()+"')", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('合同材检" + Resources.lang.ZZTHCG + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZMYFHTJDHTMXJL").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZMYFHTJDHTMXJL + "')", true);
                 return;
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZHT").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZHT + "')", true);
             return;
         }
     }

@@ -34,7 +34,7 @@
             }
 
 
-            if (objProgress == "Application") {
+            if (objProgress == "申请") {
                 $("#BT_NewApprove").attr("class", "inpu");
                 $("#BT_NewApprove").removeAttr("disabled");                            //批准
             }
@@ -45,7 +45,7 @@
 
             }
 
-            if (objProgress == "Approved" && objIsMark=="0") {
+            if (objProgress == "批准" && objIsMark=="0") {
                 $("#BT_NewApproveReturn").attr("class", "inpu");
                 $("#BT_NewApproveReturn").removeAttr("disabled");                         //批准撤消
             }
@@ -262,11 +262,11 @@
 
                                                                                 <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("XLCode")+"|"+Eval("CreateProgress")+"|"+Eval("IsMark") %>' CommandName="click" CssClass="notTab">操作</asp:LinkButton>
                                                                                 <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"XLCode") %>' CommandName="edit" CssClass="notTab">编辑</asp:LinkButton>--%>
-                                                                                <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"XLCode") %>' CommandName='<%# Eval("CreateProgress").ToString()=="Application" ? "approve" : "notApprove" %>' CssClass="notTab" Text='<%# Eval("CreateProgress").ToString()=="Application" ? "Approved" : "撤销" %>'></asp:LinkButton>--%>
+                                                                                <%--<asp:LinkButton runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"XLCode") %>' CommandName='<%# Eval("CreateProgress").ToString()=="申请" ? "approve" : "notApprove" %>' CssClass="notTab" Text='<%# Eval("CreateProgress").ToString()=="申请" ? "批准" : "撤销" %>'></asp:LinkButton>--%>
 
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="DLCode" HeaderText="Major Category Code">
+                                                                        <asp:BoundColumn DataField="DLCode" HeaderText="大类代码">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="ZLCode" HeaderText="中类代码">

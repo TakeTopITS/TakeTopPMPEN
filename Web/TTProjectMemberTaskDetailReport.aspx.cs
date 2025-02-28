@@ -152,19 +152,19 @@ public partial class TTProjectMemberTaskDetailReport : System.Web.UI.Page
 
         strStatus = "%" + DL_Status.SelectedValue + "%";
 
-        strHQL = @"Select DepartCode as 'Group',   //ChineseWord
-                   UserName as 'Name',   //ChineseWord
+        strHQL = @"Select DepartCode as 'Group',   
+                   UserName as 'Name',   
                    ProjectName as 'Project',
                    PlanName as 'Plan',
                    TaskName as 'Task',
-                   PlanBeginTime as 'PlannedStartTime',   //ChineseWord
-                   PlanEndTime as 'PlannedEndTime',   //ChineseWord
-                   TaskBeginDate as 'TaskEstimatedStartTime',   //ChineseWord
-                   TaskFirstOperateTime as 'TaskAcceptanceTime',   //ChineseWord
-                   TaskEndDate as 'TaskEstimatedEndTime',   //ChineseWord
-                   TaskLastestOperateTime as 'TaskLatestOperationTime',   //ChineseWord
-                   Status as 'TaskStatus',   //ChineseWord
-                   TaskLog as 'TaskLog'   //ChineseWord
+                   PlanBeginTime as 'PlannedStartTime',   
+                   PlanEndTime as 'PlannedEndTime',   
+                   TaskBeginDate as 'TaskEstimatedStartTime',   
+                   TaskFirstOperateTime as 'TaskAcceptanceTime',   
+                   TaskEndDate as 'TaskEstimatedEndTime',   
+                   TaskLastestOperateTime as 'TaskLatestOperationTime',   
+                   Status as 'TaskStatus',   
+                   TaskLog as 'TaskLog'   
                    From V_ProjectMemberTaskDetailReport";
 
 
@@ -191,7 +191,7 @@ public partial class TTProjectMemberTaskDetailReport : System.Web.UI.Page
 
         Export3Excel(dtProject, LanguageHandle.GetWord("XiangMuChengYuanRenWuxls").ToString().Trim());
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);   //ChineseWord
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);   
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

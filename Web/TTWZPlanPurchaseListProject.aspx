@@ -80,7 +80,7 @@
                                                                     <td style="text-align: center" class="formItemBgStyle" colspan="3">
                                                                         <asp:Button ID="btnSave" runat="server" Text="<%$ Resources:lang,BianGeng%>" CssClass="inpu" OnClick="btnSave_Click" />&nbsp;
                                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                                                type="button" value="Closed" />
+                                                                                type="button" value="¹Ø±Õ" />
                                                                     </td>
                                                                 </tr>
                                                             </table>

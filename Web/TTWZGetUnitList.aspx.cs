@@ -77,7 +77,7 @@ public partial class TTWZGetUnitList : System.Web.UI.Page
                     WZGetUnit wZGetUnit = (WZGetUnit)unitList[0];
                     if (wZGetUnit.IsMark == -1)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSYBJW1BYXSC").ToString().Trim()+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSYBJW1BYXSC+"')", true);
                         return;
                     }
 
@@ -85,7 +85,7 @@ public partial class TTWZGetUnitList : System.Web.UI.Page
 
                     //重新加载列表
                     DataBinder();
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
                 }
 
             }
@@ -109,22 +109,22 @@ public partial class TTWZGetUnitList : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strUnitName))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZLingLiaoChanWeiBuNengWeiKong").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('领料单位不能为空，请补充！');ControlStatusChange('" + strNewIsMark + "')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strLeader))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZZhuGuanLingDaoBuNengWeiKongQ").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('主管领导不能为空，请补充！');ControlStatusChange('" + strNewIsMark + "')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strFeeManage))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZFeiKongZhuGuanBuNengWeiKongQ").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('费控主管不能为空，请补充！');ControlStatusChange('" + strNewIsMark + "')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strMaterialPerson))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZCaiLiaoYuanBuNengWeiKongQing").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('材料员不能为空，请补充！');ControlStatusChange('" + strNewIsMark + "')", true);
                 return;
             }
 
@@ -168,7 +168,7 @@ public partial class TTWZGetUnitList : System.Web.UI.Page
             TXT_UnitName.Text = "";
             TXT_Leader.Text = "";
             HF_Leader.Value = "";
-            DDL_UnitType.SelectedValue = "行政单位";   //ChineseWord
+            DDL_UnitType.SelectedValue = "行政单位";
             TXT_FeeManage.Text = "";
             HF_FeeManage.Value = "";
             TXT_MaterialPerson.Text = "";
@@ -183,7 +183,7 @@ public partial class TTWZGetUnitList : System.Web.UI.Page
             //重新加载
             DataBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatusCloseChange();", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');ControlStatusCloseChange();", true);
             //Response.Redirect("TTWZGetUnitList.aspx");
         }
         catch (Exception ex)
@@ -205,7 +205,7 @@ public partial class TTWZGetUnitList : System.Web.UI.Page
         TXT_UnitName.Text = "";
         TXT_Leader.Text ="";
         HF_Leader.Value ="";
-        DDL_UnitType.SelectedValue = "行政单位";   //ChineseWord
+        DDL_UnitType.SelectedValue = "行政单位";
         TXT_FeeManage.Text = "";
         HF_FeeManage.Value = "";
         TXT_MaterialPerson.Text = "";
@@ -236,7 +236,7 @@ public partial class TTWZGetUnitList : System.Web.UI.Page
         TXT_UnitName.Text = "";
         TXT_Leader.Text = "";
         HF_Leader.Value = "";
-        DDL_UnitType.SelectedValue = "行政单位";   //ChineseWord
+        DDL_UnitType.SelectedValue = "行政单位";
         TXT_FeeManage.Text = "";
         HF_FeeManage.Value = "";
         TXT_MaterialPerson.Text = "";
@@ -258,7 +258,7 @@ public partial class TTWZGetUnitList : System.Web.UI.Page
         string strEditUnitCode = HF_NewUnitCode.Value;
         if (string.IsNullOrEmpty(strEditUnitCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDLLDWLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDLLDWLB+"')", true);
             return;
         }
 
@@ -295,11 +295,11 @@ public partial class TTWZGetUnitList : System.Web.UI.Page
             TXT_UnitCode.Text = strNewUnitCode;
             if (strNewUnitCode.Contains("01"))
             {
-                DDL_UnitType.SelectedValue = "行政单位";   //ChineseWord
+                DDL_UnitType.SelectedValue = "行政单位";
             }
             else
             {
-                DDL_UnitType.SelectedValue = "ProjectDepartment";   //ChineseWord
+                DDL_UnitType.SelectedValue = "项目部";
             }
             TXT_UnitName.Text = ShareClass.ObjectToString(drGetUnit["UnitName"]);// wZGetUnit.UnitName;
             TXT_Leader.Text = ShareClass.ObjectToString(drGetUnit["LeaderName"]);//wZGetUnit.Leader;
@@ -329,7 +329,7 @@ public partial class TTWZGetUnitList : System.Web.UI.Page
         string strEditUnitCode = HF_NewUnitCode.Value;
         if (string.IsNullOrEmpty(strEditUnitCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDLLDWLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDLLDWLB+"')", true);
             return;
         }
 
@@ -344,7 +344,7 @@ public partial class TTWZGetUnitList : System.Web.UI.Page
             WZGetUnit wZGetUnit = (WZGetUnit)unitList[0];
             if (wZGetUnit.IsMark == -1)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSYBJW1BYXSC").ToString().Trim()+"');ControlStatusChange('" + strNewIsMark + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSYBJW1BYXSC+"');ControlStatusChange('" + strNewIsMark + "');", true);
                 return;
             }
 
@@ -357,7 +357,7 @@ public partial class TTWZGetUnitList : System.Web.UI.Page
             TXT_UnitName.Text = "";
             TXT_Leader.Text = "";
             HF_Leader.Value = "";
-            DDL_UnitType.SelectedValue = "行政单位";   //ChineseWord
+            DDL_UnitType.SelectedValue = "行政单位";
             TXT_FeeManage.Text = "";
             HF_FeeManage.Value = "";
             TXT_MaterialPerson.Text = "";
@@ -371,7 +371,7 @@ public partial class TTWZGetUnitList : System.Web.UI.Page
 
             //重新加载列表
             DataBinder();
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"');ControlStatusCloseChange();", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"');ControlStatusCloseChange();", true);
         }
         else {
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "ControlStatusChange('" + strNewIsMark + "')", true);
@@ -392,7 +392,7 @@ public partial class TTWZGetUnitList : System.Web.UI.Page
                 int intGetUnitCodeNumber = 0;
                 do
                 {
-                    if (strUnitType == "行政单位")   //ChineseWord
+                    if (strUnitType == "行政单位")
                     {
                         //以行政单位作为领料单位的部分，在创建本表单时直接导入，后期变更由物资管理员负责编辑，编号范围控制在0101-0199之间
                         int intRowNumber = 0;
@@ -406,7 +406,7 @@ public partial class TTWZGetUnitList : System.Web.UI.Page
                             strNewUnitCode = "01" + intRowNumber.ToString();
                         }
                     }
-                    else if (strUnitType == "ProjectDepartment")   //ChineseWord
+                    else if (strUnitType == "项目部")
                     {
                         //以项目部作为领料单位的部分，由经营管理部负责编辑，编号范围控制在0201-9999之间
                         int intRowNumber = 0;

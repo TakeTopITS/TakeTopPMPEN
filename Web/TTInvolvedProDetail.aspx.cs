@@ -196,7 +196,7 @@ public partial class TTInvolvedProDetail : System.Web.UI.Page
                 Repeater1.DataSource = ds;
                 Repeater1.DataBind();
 
-                strHQL = "Select HomeModuleName, PageName || " + "'" + strProjectID + "' as ModulePage  From T_ProModuleLevelForPage Where ParentModule = 'ParticipateProjectSecondLine'  and LangCode = '" + strLangCode + "' and Visible ='YES' Order By SortNumber ASC";   //ChineseWord
+                strHQL = "Select HomeModuleName, PageName || " + "'" + strProjectID + "' as ModulePage  From T_ProModuleLevelForPage Where ParentModule = 'ParticipateProjectSecondLine'  and LangCode = '" + strLangCode + "' and Visible ='YES' Order By SortNumber ASC";   
                 ds = ShareClass.GetDataSetFromSql(strHQL, "T_ProModuleLevelForPage");
                 Repeater2.DataSource = ds;
                 Repeater2.DataBind();

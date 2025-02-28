@@ -447,7 +447,7 @@ public partial class TTBMWinRecommend : System.Web.UI.Page
         }
         else
         {
-            return "Unopened Bid";   //ChineseWord
+            return "Unopened Bid";   
         }
     }
 

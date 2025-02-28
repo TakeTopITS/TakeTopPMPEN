@@ -3009,7 +3009,7 @@ public partial class TTMakeGoodsPurchase : System.Web.UI.Page
         else
         {
             strHQL = "from GoodsPurchaseOrder as goodsPurchaseOrder where ";
-            strHQL += "goodsPurchaseOrder.POID in (Select workFlowRelatedModule.RelatedID  From WorkFlowRelatedModule as workFlowRelatedModule Where workFlowRelatedModule.RelatedModuleName = 'MaterialPurchaseOrder' and workFlowRelatedModule.WorkflowID =" + strRelatedWorkflowID + ")";   //ChineseWord
+            strHQL += "goodsPurchaseOrder.POID in (Select workFlowRelatedModule.RelatedID  From WorkFlowRelatedModule as workFlowRelatedModule Where workFlowRelatedModule.RelatedModuleName = 'MaterialPurchaseOrder' and workFlowRelatedModule.WorkflowID =" + strRelatedWorkflowID + ")";   
             strHQL += " Order by goodsPurchaseOrder.POID DESC";
         }
 

@@ -185,7 +185,7 @@ public partial class TTConstractPayableReport : System.Web.UI.Page
         strCurrencyType = "%" + DL_CurrencyType.SelectedValue.Trim() + "%";
 
 
-        strHQL = "select  BillCode 原始单号,ConstractCode 合同代码,ConstractName 合同名称,PayableAccount 应付金额,to_char(PayableTime,'yyyy/mm/dd') 应付时间,OutOfPocketAccount 实付金额,HandlingCharge 手续费,UNPayAmount 未付金额,Receiver 收款方,PartA 甲方单位,PartAOperator 负责人,CurrencyType 币别 from V_ConstractPayableReportSummary where 1=1 ";   //ChineseWord
+        strHQL = "select  BillCode 原始单号,ConstractCode 合同代码,ConstractName 合同名称,PayableAccount 应付金额,to_char(PayableTime,'yyyy/mm/dd') 应付时间,OutOfPocketAccount 实付金额,HandlingCharge 手续费,UNPayAmount 未付金额,Receiver 收款方,PartA 甲方单位,PartAOperator 负责人,CurrencyType 币别 from V_ConstractPayableReportSummary where 1=1 ";   
 
         if (!string.IsNullOrEmpty(strPartA))
         {

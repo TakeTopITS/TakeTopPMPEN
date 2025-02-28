@@ -37,7 +37,7 @@ public partial class TTWZSelectorDepartment2 : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "clickA", "aHandler();", true);
         if (Page.IsPostBack == false)
         {
-            TakeTopCore.CoreShareClass.InitialAllDepartmentTree( LanguageHandle.GetWord("ZZJGT").ToString().Trim(),TreeView1);
+            TakeTopCore.CoreShareClass.InitialAllDepartmentTree( Resources.lang.ZZJGT,TreeView1);
         }
     }
 

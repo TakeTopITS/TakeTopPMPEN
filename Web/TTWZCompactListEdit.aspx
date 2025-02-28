@@ -127,7 +127,7 @@
                                                                 <tr>
                                                                     <td style="text-align: center" class="formItemBgStyle" colspan="6">
                                                                         <asp:Button ID="btnSave" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnSave_Click" />&nbsp;
-                                                                        <input type="button" value="Closed" id="BT_Return" class="inpu" onclick="window.close();" />
+                                                                        <input type="button" value="¹Ø±Õ" id="BT_Return" class="inpu" onclick="window.close();" />
                                                                     </td>
                                                                 </tr>
                                                             </table>

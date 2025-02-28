@@ -377,7 +377,7 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("CancelTime")==null ? "":Eval("CancelTime").ToString(),10) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                                        <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">

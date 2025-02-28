@@ -31,7 +31,7 @@ public partial class TTRCJProjectSummaryPerformance : System.Web.UI.Page
             }
             catch (Exception exp)
             {
-                lb_showMessage.Text = LanguageHandle.GetWord("CuoWuDiShiCaoZuoChuXianYiChang").ToString().Trim() + exp.Message;
+                lb_showMessage.Text = "错误提示：操作出现异常： " + exp.Message;
             }
         }
     }
@@ -60,7 +60,7 @@ public partial class TTRCJProjectSummaryPerformance : System.Web.UI.Page
         }
         catch (Exception exp)
         {
-            lb_showMessage.Text = LanguageHandle.GetWord("CuoWuDiShiCaoZuoChuXianYiChang").ToString().Trim() + exp.Message;
+            lb_showMessage.Text = "错误提示：操作出现异常： " + exp.Message;
         }
     }
 
@@ -103,7 +103,7 @@ public partial class TTRCJProjectSummaryPerformance : System.Web.UI.Page
             catch (Exception exp)
             {
                 lb_showMessage.ForeColor = System.Drawing.Color.Red;
-                lb_showMessage.Text = LanguageHandle.GetWord("XiaoXiDiShi").ToString().Trim() + exp.Message;
+                lb_showMessage.Text = "消息提示：" + exp.Message;
             }
         }
     }

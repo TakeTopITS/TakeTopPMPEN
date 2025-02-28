@@ -229,7 +229,7 @@ public partial class TTMakeCustomer : System.Web.UI.Page
         strAreaAddress = "%" + TB_FindArea.Text.Trim() + "%";
         strAgencyName = "%" + TB_AgencyName.Text.Trim() + "%";
 
-        strHQL = "Select distinct A.CustomerCode 'CustomerCode',B.CustomerName 'CustomerName',F_GetCustomerRelatedUserString(A.CustomerCode) 'VisiblePersonnel' from T_CustomerRelatedUser A, T_Customer B where A.CustomerCode = B.CustomerCode ";   //ChineseWord
+        strHQL = "Select distinct A.CustomerCode 'CustomerCode',B.CustomerName 'CustomerName',F_GetCustomerRelatedUserString(A.CustomerCode) 'VisiblePersonnel' from T_CustomerRelatedUser A, T_Customer B where A.CustomerCode = B.CustomerCode ";   
         strHQL += " and B.Type like  " + "'" + strIndustryType + "'";
         strHQL += " and B.CustomerCode like " + "'" + strCustomerCode + "'";
         strHQL += " and B.CustomerName like  " + "'" + strCustomerName + "'";

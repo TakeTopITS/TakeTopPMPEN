@@ -126,9 +126,9 @@ public partial class TTWZPlanList : System.Web.UI.Page
                 }
                 else if (cmdName == "del")
                 {
-                    if (wZPickingPlan.Progress != LanguageHandle.GetWord("LuRu").ToString().Trim() || wZPickingPlan.IsMark != 0)
+                    if (wZPickingPlan.Progress != "录入" || wZPickingPlan.IsMark != 0)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWLRYJSYBJBW0SBYXSC").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWLRYJSYBJBW0SBYXSC + "')", true);
                         return;
                     }
                     wZPickingPlanBLL.DeleteWZPickingPlan(wZPickingPlan);
@@ -137,19 +137,19 @@ public partial class TTWZPlanList : System.Web.UI.Page
                     DG_List.CurrentPageIndex = 0;
                     DataBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
                 }
                 else if (cmdName == "submit")
                 {
-                    if (wZPickingPlan.Progress == LanguageHandle.GetWord("LuRu").ToString().Trim())
+                    if (wZPickingPlan.Progress == "录入")
                     {
                         if (wZPickingPlan.DetailCount == 0)
                         {
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXTJJHMXZTJJH").ToString().Trim() + "')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXTJJHMXZTJJH + "')", true);
                             return;
                         }
 
-                        wZPickingPlan.Progress = LanguageHandle.GetWord("DiBao").ToString().Trim();
+                        wZPickingPlan.Progress = "提报";
                         wZPickingPlan.CommitTime = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
                         wZPickingPlan.ReturnReason = "";
 
@@ -158,14 +158,14 @@ public partial class TTWZPlanList : System.Web.UI.Page
                         //重新加载列表
                         DataBinder();
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJHTJCG").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJHTJCG + "')", true);
                     }
                 }
                 else if (cmdName == "submitReturn")
                 {
-                    if (wZPickingPlan.Progress == LanguageHandle.GetWord("DiBao").ToString().Trim())
+                    if (wZPickingPlan.Progress == "提报")
                     {
-                        wZPickingPlan.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
+                        wZPickingPlan.Progress = "录入";
                         wZPickingPlan.CommitTime = "-";
 
                         wZPickingPlanBLL.UpdateWZPickingPlan(wZPickingPlan, cmdArges);
@@ -173,7 +173,7 @@ public partial class TTWZPlanList : System.Web.UI.Page
                         //重新加载列表
                         DataBinder();
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJHTHCG").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJHTHCG + "')", true);
                     }
                 }
                 else if (cmdName == "edit")
@@ -217,7 +217,7 @@ public partial class TTWZPlanList : System.Web.UI.Page
         string strEditPlanCode = HF_PlanCode.Value;
         if (string.IsNullOrEmpty(strEditPlanCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDJH").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDJH + "')", true);
             return;
         }
 
@@ -232,7 +232,7 @@ public partial class TTWZPlanList : System.Web.UI.Page
         string strEditPlanCode = HF_PlanCode.Value;
         if (string.IsNullOrEmpty(strEditPlanCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDJH").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDJH + "')", true);
             return;
         }
 
@@ -246,10 +246,10 @@ public partial class TTWZPlanList : System.Web.UI.Page
         if (listWZPickingPlan != null && listWZPickingPlan.Count == 1)
         {
             WZPickingPlan wZPickingPlan = (WZPickingPlan)listWZPickingPlan[0];
-            if (wZPickingPlan.Progress != LanguageHandle.GetWord("LuRu").ToString().Trim() || wZPickingPlan.IsMark != 0)
+            if (wZPickingPlan.Progress != "录入" || wZPickingPlan.IsMark != 0)
             {
                 ControlStatusChange(strProgress, strPlanMarker, strUserCode, strIsMark);
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWLRYJSYBJBW0SBYXSC").ToString().Trim() + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWLRYJSYBJBW0SBYXSC + "');", true);
                 return;
             }
             wZPickingPlanBLL.DeleteWZPickingPlan(wZPickingPlan);
@@ -258,7 +258,7 @@ public partial class TTWZPlanList : System.Web.UI.Page
             DG_List.CurrentPageIndex = 0;
             DataBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "');", true);
         }
         else
         {
@@ -272,7 +272,7 @@ public partial class TTWZPlanList : System.Web.UI.Page
         if (string.IsNullOrEmpty(strEditPlanCode))
         {
             ControlStatusCloseChange();
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDJH").ToString().Trim() + "');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDJH + "');", true);
             return;
         }
 
@@ -287,7 +287,7 @@ public partial class TTWZPlanList : System.Web.UI.Page
         if (string.IsNullOrEmpty(strEditPlanCode))
         {
             ControlStatusCloseChange();
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDJH").ToString().Trim() + "');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDJH + "');", true);
             return;
         }
 
@@ -295,7 +295,7 @@ public partial class TTWZPlanList : System.Web.UI.Page
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_WZPickingPlanDetail");
         if(ds.Tables [0].Rows.Count > 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click0", "alert('" + LanguageHandle.GetWord("JGJHMXJHSLCZWLDJLBNTJQJC").ToString().Trim() + "');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click0", "alert('" + Resources.lang.JGJHMXJHSLCZWLDJLBNTJQJC + "');", true);
             return;
         }
 
@@ -305,15 +305,15 @@ public partial class TTWZPlanList : System.Web.UI.Page
         if (listWZPickingPlan != null && listWZPickingPlan.Count == 1)
         {
             WZPickingPlan wZPickingPlan = (WZPickingPlan)listWZPickingPlan[0];
-            if (wZPickingPlan.Progress == LanguageHandle.GetWord("LuRu").ToString().Trim())
+            if (wZPickingPlan.Progress == "录入")
             {
                 if (wZPickingPlan.DetailCount == 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click1", "alert('" + LanguageHandle.GetWord("ZZXTJJHMXZTJJH").ToString().Trim() + "');", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click1", "alert('" + Resources.lang.ZZXTJJHMXZTJJH + "');", true);
                     return;
                 }
 
-                wZPickingPlan.Progress = LanguageHandle.GetWord("DiBao").ToString().Trim();
+                wZPickingPlan.Progress = "提报";
                 wZPickingPlan.CommitTime = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
                 wZPickingPlan.ReturnReason = "";
 
@@ -322,7 +322,7 @@ public partial class TTWZPlanList : System.Web.UI.Page
                 //重新加载列表
                 DataBinder();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click2", "alert('" + LanguageHandle.GetWord("ZZJHTJCG").ToString().Trim() + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click2", "alert('" + Resources.lang.ZZJHTJCG + "');", true);
             }
             else
             {
@@ -340,7 +340,7 @@ public partial class TTWZPlanList : System.Web.UI.Page
         string strEditPlanCode = HF_PlanCode.Value;
         if (string.IsNullOrEmpty(strEditPlanCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDJH").ToString().Trim() + "');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDJH + "');", true);
             return;
         }
 
@@ -350,9 +350,9 @@ public partial class TTWZPlanList : System.Web.UI.Page
         if (listWZPickingPlan != null && listWZPickingPlan.Count == 1)
         {
             WZPickingPlan wZPickingPlan = (WZPickingPlan)listWZPickingPlan[0];
-            if (wZPickingPlan.Progress == LanguageHandle.GetWord("DiBao").ToString().Trim())
+            if (wZPickingPlan.Progress == "提报")
             {
-                wZPickingPlan.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
+                wZPickingPlan.Progress = "录入";
                 wZPickingPlan.CommitTime = "-";
 
                 wZPickingPlanBLL.UpdateWZPickingPlan(wZPickingPlan, strEditPlanCode);
@@ -360,7 +360,7 @@ public partial class TTWZPlanList : System.Web.UI.Page
                 //重新加载列表
                 DataBinder();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJHTHCG").ToString().Trim() + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJHTHCG + "');", true);
             }
             else
             {
@@ -380,7 +380,7 @@ public partial class TTWZPlanList : System.Web.UI.Page
         if (string.IsNullOrEmpty(strEditPlanCode))
         {
             ControlStatusCloseChange();
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDJH").ToString().Trim() + "');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDJH + "');", true);
             return;
         }
 
@@ -398,7 +398,7 @@ public partial class TTWZPlanList : System.Web.UI.Page
         if (string.IsNullOrEmpty(strEditPlanCode))
         {
             ControlStatusCloseChange();
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDJH").ToString().Trim() + "');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDJH + "');", true);
             return;
         }
 
@@ -638,14 +638,14 @@ public partial class TTWZPlanList : System.Web.UI.Page
             BT_NewSubmitReturn.Enabled = false;
         }
 
-        if (objProgress == LanguageHandle.GetWord("LuRu").ToString().Trim())
+        if (objProgress == "录入")
         {
             BT_NewEdit.Enabled = true;
             BT_NewPlanSubmit.Enabled = true;
             BT_NewSubmitReturn.Enabled = false;
 
         }
-        else if (objProgress == LanguageHandle.GetWord("DiBao").ToString().Trim())
+        else if (objProgress == "提报")
         {
             BT_NewEdit.Enabled = false;
             BT_NewPlanSubmit.Enabled = false;
@@ -660,7 +660,7 @@ public partial class TTWZPlanList : System.Web.UI.Page
 
         }
 
-        if (objProgress == LanguageHandle.GetWord("LuRu").ToString().Trim() && objPlanMarker == objUserCode && objIsMark == "0")
+        if (objProgress == "录入" && objPlanMarker == objUserCode && objIsMark == "0")
         {
             BT_NewDelete.Enabled = true;
 
@@ -671,7 +671,7 @@ public partial class TTWZPlanList : System.Web.UI.Page
 
         }
 
-        if (objProgress == LanguageHandle.GetWord("LuRu").ToString().Trim() && objPlanMarker == objUserCode)
+        if (objProgress == "录入" && objPlanMarker == objUserCode)
         {
             BT_NewDetail.Visible = true;
 

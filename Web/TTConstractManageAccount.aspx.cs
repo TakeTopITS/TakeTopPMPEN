@@ -122,9 +122,9 @@ public partial class TTConstractManageAccount : System.Web.UI.Page
             T_Project.EndDate as proenddate,
             t_constract.startdate - t_constract.enddate as duration,
             t_constract.warranty,
-            CASE WHEN t_constract.type like '%收入%' THEN (case when (select sum(T_ConstractReceivables.ReceivablesAccount) from T_ConstractReceivables where T_ConstractReceivables.ConstractCode=t_constract.constractcode)=0    //ChineseWord
+            CASE WHEN t_constract.type like '%收入%' THEN (case when (select sum(T_ConstractReceivables.ReceivablesAccount) from T_ConstractReceivables where T_ConstractReceivables.ConstractCode=t_constract.constractcode)=0    
             then 0 else  (select T_ConstractReceivables.ReceiverAccount / T_ConstractReceivables.ReceivablesAccount from T_ConstractReceivables where T_ConstractReceivables.ConstractCode=t_constract.constractcode) end) 
-            WHEN t_constract.type like '%支出%' THEN (case when (select sum(T_ConstractPayable.PayableAccount) from T_ConstractPayable,T_ConstractPayableRecord    //ChineseWord
+            WHEN t_constract.type like '%支出%' THEN (case when (select sum(T_ConstractPayable.PayableAccount) from T_ConstractPayable,T_ConstractPayableRecord    
             where T_ConstractPayableRecord.PayableID=T_ConstractPayable.ID and T_ConstractPayableRecord.ConstractCode=t_constract.constractcode)=0 then 0 
             else (select T_ConstractPayableRecord.OutOfPocketAccount / T_ConstractPayable.PayableAccount from T_ConstractPayable,T_ConstractPayableRecord 
             where T_ConstractPayableRecord.PayableID=T_ConstractPayable.ID and T_ConstractPayableRecord.ConstractCode=t_constract.constractcode) end) END AS prepaypercent,

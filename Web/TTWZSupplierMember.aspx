@@ -107,8 +107,8 @@
                                                                 </td>
                                                                 <td style="text-align: left" class="formItemBgStyle">
                                                                     <asp:DropDownList ID="DL_Gender" runat="server" AutoPostBack="True">
-                                                                        <asp:ListItem Selected="True" Value="Male" Text="<%$ Resources:lang,Nan%>" />
-                                                                        <asp:ListItem Value="Female" Text="<%$ Resources:lang,Nv%>" />
+                                                                        <asp:ListItem Selected="True" Value="男" Text="<%$ Resources:lang,Nan%>" />
+                                                                        <asp:ListItem Value="女" Text="<%$ Resources:lang,Nv%>" />
                                                                     </asp:DropDownList>
                                                                 </td>
                                                             </tr>
@@ -270,9 +270,9 @@
                                                                 </td>
                                                                 <td style="text-align: left;" class="formItemBgStyle">
                                                                     <asp:DropDownList ID="DL_Status" runat="server">
-                                                                        <asp:ListItem Value="Employed" Text="<%$ Resources:lang,ZaiZhi%>" />
-                                                                        <asp:ListItem Value="Resign" Text="<%$ Resources:lang,LiZhi%>" />
-                                                                        <asp:ListItem Value="Stop" Text="<%$ Resources:lang,ZhongZhi%>" />
+                                                                        <asp:ListItem Value="在职" Text="<%$ Resources:lang,ZaiZhi%>" />
+                                                                        <asp:ListItem Value="离职" Text="<%$ Resources:lang,LiZhi%>" />
+                                                                        <asp:ListItem Value="终止" Text="<%$ Resources:lang,ZhongZhi%>" />
                                                                     </asp:DropDownList>
                                                                 </td>
                                                                 <td style="text-align: left;" class="formItemBgStyle"></td>
@@ -295,8 +295,8 @@
                                                                     <asp:Label ID="Label18" runat="server" Text="<%$ Resources:lang,ZhuJieMianFengGe%>"></asp:Label>：</td>
                                                                 <td class="formItemBgStyle" style="height: 12px; text-align: left;">
                                                                     <asp:DropDownList ID="DL_SystemMDIStyle" runat="server" Enabled="false">
-                                                                        <asp:ListItem Value="LeftRightDownExhibition" Text="<%$ Resources:lang,ZuoYouXiaZhan%>" />
-                                                                        <asp:ListItem Value="UpAndDownLinkage" Text="<%$ Resources:lang,ShangXiaLianDong%>" />
+                                                                        <asp:ListItem Value="左右下展" Text="<%$ Resources:lang,ZuoYouXiaZhan%>" />
+                                                                        <asp:ListItem Value="上下联动" Text="<%$ Resources:lang,ShangXiaLianDong%>" />
                                                                     </asp:DropDownList>
                                                                 </td>
                                                                 <td class="formItemBgStyle" style="height: 12px; text-align: left;"></td>
@@ -439,7 +439,7 @@
                                                                     </ItemTemplate>
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                                 </asp:TemplateColumn>
-                                                                <asp:TemplateColumn HeaderText="Active">
+                                                                <asp:TemplateColumn HeaderText="激活">
                                                                     <ItemTemplate>
                                                                         <%# GetSystemActionUser(Eval("SupplierCode").ToString().Trim()) %>
                                                                     </ItemTemplate>

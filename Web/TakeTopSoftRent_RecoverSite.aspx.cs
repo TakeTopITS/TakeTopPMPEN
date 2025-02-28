@@ -52,7 +52,7 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
 
         if (strSiteAppSystemName == "" | strSiteAppName == "")
         {
-            LB_Message.Text = LanguageHandle.GetWord("DiShiDaiHaoDeDouBuNengKongQing").ToString().Trim();
+            LB_Message.Text = "提示，带*号的都不能空，请检查！";
         }
         else
         {
@@ -79,7 +79,7 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
                 DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_RentSiteBaseData");
                 if (ds.Tables[0].Rows.Count == 0)
                 {
-                    LB_Message.Text = LanguageHandle.GetWord("HuiFuShiBaiMeiYouNiShuaQuDeCha").ToString().Trim();
+                    LB_Message.Text = "恢复失败，没有你选取的产品版本的可用站点基础参数，请检查！";
                     return;
                 }
 
@@ -110,7 +110,7 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
 
                 if (UrlIsExist(strSiteAppURL))
                 {
-                    LB_Message.Text = LanguageHandle.GetWord("ShiBaiCunZaiXiangTongMingChenD").ToString().Trim();
+                    LB_Message.Text = "失败，存在相同名称的站点，请检查！";
                     return;
                 }
 
@@ -167,7 +167,7 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
                 try
                 {
                     string strCSOperatorCode = ShareClass.GetWebSiteCustomerServiceOperatorCode(strWebSite);
-                    string strMSMMsg = strRentUserName + LanguageHandle.GetWord("DianHua").ToString().Trim() + strRentUserPhoneNumber + LanguageHandle.GetWord("YiHuiFu").ToString().Trim() + strRentProductName + "(" + strRentProductVersion + LanguageHandle.GetWord("ZuYongZhanDian").ToString().Trim() + strSiteAppURL;
+                    string strMSMMsg = strRentUserName + "(电话：" + strRentUserPhoneNumber + "）已恢复:" + strRentProductName + "(" + strRentProductVersion + ") 租用站点：" + strSiteAppURL;
                     Action action = new Action(delegate ()
                     {
                         Msg msg = new Msg();
@@ -180,11 +180,11 @@ public partial class TakeTopSoftRent_RecoverSite : System.Web.UI.Page
                         {
                         }
 
-                        string strEMailMsg = LanguageHandle.GetWord("NiHaoNi").ToString().Trim() + strServerType + LanguageHandle.GetWord("DeTaiDingTaDing").ToString().Trim() + strRentProductName + LanguageHandle.GetWord("YiHuiFuZhanDianDeZhiShi").ToString().Trim() + strSiteAppURL + LanguageHandle.GetWord("DengLuZhangHaoADMINMiMa1234567").ToString().Trim();
+                        string strEMailMsg = "你好，你" + strServerType + "的：泰顶拓鼎" + strRentProductName + " 已恢复站点，地址是：" + strSiteAppURL + " ,登录帐号：ADMIN 密码：12345678 ，请放心使用，有问题请随时联系客服（021-51085119），谢谢，此邮件发自泰顶拓鼎集团！";
 
                         try
                         {
-                            msg.SendMailByEmail(strRentUserEMail, LanguageHandle.GetWord("ZhanDianHuiFuTongZhi").ToString().Trim(), strEMailMsg, "ADMIN");
+                            msg.SendMailByEmail(strRentUserEMail, "站点恢复通知", strEMailMsg, "ADMIN");
                         }
                         catch
                         {

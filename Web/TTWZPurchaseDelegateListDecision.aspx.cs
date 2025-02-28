@@ -131,7 +131,7 @@ public partial class TTWZPurchaseDelegateListDecision : System.Web.UI.Page
         }
 
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true);   //ChineseWord
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true);
     }
 
     protected void BT_Assessment_Click(object sender, EventArgs e)
@@ -144,9 +144,9 @@ public partial class TTWZPurchaseDelegateListDecision : System.Web.UI.Page
         {
             WZPurchase wZPurchase = (WZPurchase)lstPurchase[0];
 
-            if (wZPurchase.Progress != LanguageHandle.GetWord("PingBiao").ToString().Trim()) 
+            if (wZPurchase.Progress != "评标")
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购文件进度不为评标，不允许修改！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购文件进度不为评标，不允许修改！');", true);
                 return;
             }
 

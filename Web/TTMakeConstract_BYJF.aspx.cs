@@ -3548,7 +3548,7 @@ public partial class TTMakeConstract_BYJF : System.Web.UI.Page
         DL_CustomerList.DataSource = lst;
         DL_CustomerList.DataBind();
 
-        DL_CustomerList.Items.Insert(0, new ListItem("--请选择客户--", ""));   //ChineseWord
+        DL_CustomerList.Items.Insert(0, new ListItem("--请选择客户--", ""));   
     }
 
 

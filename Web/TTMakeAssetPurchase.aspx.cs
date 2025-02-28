@@ -1392,7 +1392,7 @@ public partial class TTMakeAssetPurchase : System.Web.UI.Page
         else
         {
             strHQL = "from AssetPurchaseOrder as assetPurchaseOrder where ";
-            strHQL += "assetPurchaseOrder.POID in (Select workFlowRelatedModule.RelatedID  From WorkFlowRelatedModule as workFlowRelatedModule Where workFlowRelatedModule.RelatedModuleName = 'AssetPurchaseOrder' and workFlowRelatedModule.WorkflowID =" + strRelatedWorkflowID + ")";   //ChineseWord
+            strHQL += "assetPurchaseOrder.POID in (Select workFlowRelatedModule.RelatedID  From WorkFlowRelatedModule as workFlowRelatedModule Where workFlowRelatedModule.RelatedModuleName = 'AssetPurchaseOrder' and workFlowRelatedModule.WorkflowID =" + strRelatedWorkflowID + ")";   
         }
         strHQL += " Order by assetPurchaseOrder.POID DESC";
 

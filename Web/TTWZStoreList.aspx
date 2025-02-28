@@ -201,7 +201,7 @@
                                                                 <ItemTemplate>
                                                                     <a href='TTWZStoreEdit.aspx?id=<%# DataBinder.Eval(Container.DataItem,"ID") %>' class="notTab">
                                                                         <asp:Label ID="Label30" runat="server" Text="<%$ Resources:lang,BianJi%>"></asp:Label></a>
-                                                                    <%--<asp:Button ID="BT_Del" runat="server" CssClass="inpu" Text="Deleted" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" />--%>
+                                                                    <%--<asp:Button ID="BT_Del" runat="server" CssClass="inpu" Text="删除" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" />--%>
                                                                     <asp:LinkButton ID="LB_Del" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab">
                                                                         <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,ShanChu%>"></asp:Label>
                                                                     </asp:LinkButton>
@@ -210,7 +210,7 @@
                                                             <asp:BoundColumn DataField="StockCode" HeaderText="库别">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ObjectCode" HeaderText="Material Code">
+                                                            <asp:BoundColumn DataField="ObjectCode" HeaderText="物资代码">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
                                                             <%--<asp:BoundColumn DataField="ObjectName" HeaderText="物资名称">
@@ -255,7 +255,7 @@
                                                             <asp:BoundColumn DataField="YearPrice" HeaderText="初始单价">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="3%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="YearMoney" HeaderText="Initial Amount">
+                                                            <asp:BoundColumn DataField="YearMoney" HeaderText="初始金额">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="4%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="InNumber" HeaderText="入库数量">
@@ -291,7 +291,7 @@
                                                                     <asp:Label ID="Label36" runat="server" Text="<%$ Resources:lang,MoCiChuKu%>"  ></asp:Label>
                                                                 </HeaderTemplate>
                                                                 <ItemTemplate>
-                                                                <%--<asp:Label ID="Label36" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "EndOutTime", "{0:yyyy/MM/dd}")%>' Visible='<%# Eval("Progress").ToString()=="Material Issuance" ? true : false %>'   ></asp:Label>--%>    
+                                                                <%--<asp:Label ID="Label36" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "EndOutTime", "{0:yyyy/MM/dd}")%>' Visible='<%# Eval("Progress").ToString()=="发料" ? true : false %>'   ></asp:Label>--%>    
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
                                                             <asp:BoundColumn DataField="StoreNumber" HeaderText="库存数量">

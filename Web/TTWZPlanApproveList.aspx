@@ -24,7 +24,7 @@
             $("#BT_NewDetailBrowse").attr("class", "inpu");
             $("#BT_NewDetailBrowse").removeAttr("disabled");
 
-            if (objProgress == "Submit for Approval" && objFeeManage == objUserCode) {
+            if (objProgress == "提报" && objFeeManage == objUserCode) {
                 $("#BT_NewAudit").attr("class", "inpu");
                 $("#BT_NewAudit").removeAttr("disabled");                            //审核
                 $("#BT_NewAuditReturn").attr("disabled", "disabled");
@@ -32,7 +32,7 @@
                 $("#BT_NewPlanReturn").attr("class", "inpu");
                 $("#BT_NewPlanReturn").removeAttr("disabled");                          //计划退回
             }
-            else if (objProgress == "Review" && objFeeManage == objUserCode) {
+            else if (objProgress == "审核" && objFeeManage == objUserCode) {
                 $("#BT_NewAudit").attr("disabled", "disabled");
                 $("#BT_NewAudit").removeClass("inpu");                            //审核
                 $("#BT_NewAuditReturn").attr("class", "inpu");
@@ -158,9 +158,9 @@
                                                             <asp:Label ID="Label2" runat="server" Text="<%$ Resources:lang,JinDu%>"></asp:Label>：<asp:DropDownList ID="DDL_Progress" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_Progress_SelectedIndexChanged">
                                                                 <asp:ListItem Text="<%$ Resources:lang,QuanBu%>" Value="" />
                                                                 <asp:ListItem Text="<%$ Resources:lang,LuRu%>" Value="录入" />
-                                                                <asp:ListItem Text="<%$ Resources:lang,TiBao%>" Value="Submit for Approval" />
-                                                                <asp:ListItem Text="<%$ Resources:lang,ShenHe%>" Value="Review" />
-                                                                <asp:ListItem Text="<%$ Resources:lang,QianShou%>" Value="Sign for Receipt" />
+                                                                <asp:ListItem Text="<%$ Resources:lang,TiBao%>" Value="提报" />
+                                                                <asp:ListItem Text="<%$ Resources:lang,ShenHe%>" Value="审核" />
+                                                                <asp:ListItem Text="<%$ Resources:lang,QianShou%>" Value="签收" />
                                                                 <asp:ListItem Text="<%$ Resources:lang,HeXiao%>" Value="核销" />
                                                             </asp:DropDownList>&nbsp;
                                                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:lang,XiangMuBianMa%>"></asp:Label>：<asp:TextBox ID="TXT_ProjectCode" runat="server"></asp:TextBox>&nbsp;
@@ -320,9 +320,9 @@
                                                                             <ItemTemplate>
 
                                                                                 <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("PlanCode") %>' CommandName="click" CssClass="notTab">操作</asp:LinkButton>
-                                                                                <%--<asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PlanCode") %>' CommandName="sign" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Submit for Approval" ? true : false %>'>审核</asp:LinkButton>--%>
-                                                                                <%--<asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PlanCode") %>' CommandName="signReturn" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Review" ? true : false %>'>退回审核</asp:LinkButton>--%>
-                                                                                <%--<asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PlanCode") %>' CommandName="notApprove" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="Submit for Approval" ? true : false %>'>驳回</asp:LinkButton>--%>
+                                                                                <%--<asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PlanCode") %>' CommandName="sign" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="提报" ? true : false %>'>审核</asp:LinkButton>--%>
+                                                                                <%--<asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PlanCode") %>' CommandName="signReturn" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="审核" ? true : false %>'>退回审核</asp:LinkButton>--%>
+                                                                                <%--<asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"PlanCode") %>' CommandName="notApprove" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="提报" ? true : false %>'>驳回</asp:LinkButton>--%>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
                                                                         <asp:BoundColumn DataField="PlanCode" HeaderText="计划编号">
@@ -436,7 +436,7 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("CancelTime").ToString(),10) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                                        <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">

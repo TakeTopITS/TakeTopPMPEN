@@ -32,7 +32,7 @@
                 $("#BT_NewReportReturn").attr("class", "inpu");
                 $("#BT_NewReportReturn").removeAttr("disabled");                          //报批退回
             }
-            else if (objProgress == "Approved") {
+            else if (objProgress == "批准") {
                 $("#BT_NewEdit").attr("disabled", "disabled");
                 $("#BT_NewEdit").removeClass("inpu");                            //编辑
                 $("#BT_NewApproval").attr("disabled", "disabled");
@@ -157,13 +157,13 @@
                                                                     <td class="formItemBgStyle">
                                                                         <%--<asp:DropDownList ID="DDL_Progress" runat="server">
                                                                             <asp:ListItem Text="" Value=""/>
-                                                                            <asp:ListItem Text="Submission1" Value="Submission1"/>
-                                                                            <asp:ListItem Text="Submission2" Value="Submission2"/>
+                                                                            <asp:ListItem Text="提交1" Value="提交1"/>
+                                                                            <asp:ListItem Text="提交2" Value="提交2"/>
                                                                         </asp:DropDownList>--%>
                                                                         <asp:DropDownList ID="DDL_Progress" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DDL_Progress_SelectedIndexChanged">
                                                                             
                                                                             <asp:ListItem Text="<%$ Resources:lang,TiJiaoSan%>" Value="提交3"/>
-                                                                            <asp:ListItem Text="<%$ Resources:lang,PiZhun%>" Value="Approved"/>
+                                                                            <asp:ListItem Text="<%$ Resources:lang,PiZhun%>" Value="批准"/>
                                                                         </asp:DropDownList>
                                                                     </td>
                                                                     <td class="formItemBgStyle">
@@ -505,7 +505,7 @@
                                                                                 <%#DataBinder.Eval(Container.DataItem, "InTime", "{0:yyyy/MM/dd}")%>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                                        <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                         </asp:BoundColumn>
                                                                          <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">

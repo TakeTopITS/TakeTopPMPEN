@@ -142,7 +142,7 @@ public partial class TTRelatedFormView : System.Web.UI.Page
             Response.Redirect("TTCollaborationView.aspx?CoID=" + strRelatedID);
         }
 
-        if (strRelatedType == "Contract")   //ChineseWord
+        if (strRelatedType == "Contract")   
         {
             Response.Redirect("TTConstractView.aspx?ID=" + strRelatedID);
         }
@@ -157,7 +157,7 @@ public partial class TTRelatedFormView : System.Web.UI.Page
             Response.Redirect("TTCustomerQuestionView.aspx?ID=" + strRelatedID);
         }
 
-        if (strRelatedType == "MasterPlan")   //ChineseWord
+        if (strRelatedType == "MasterPlan")   
         {
             Response.Redirect("TTPlanView.aspx?PlanID=" + strRelatedID);
         }

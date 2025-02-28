@@ -190,7 +190,7 @@ public partial class TTAllUsersForNoUpdatePassword : System.Web.UI.Page
 
         }
 
-        MSExcelHandler.DataTableToExcel(strHQL, fileName);  //ChineseWord //ChineseWord
+        MSExcelHandler.DataTableToExcel(strHQL, fileName);   
     }
 
 
@@ -201,11 +201,11 @@ public partial class TTAllUsersForNoUpdatePassword : System.Web.UI.Page
         IList lst = systemActiveUserBLL.GetAllSystemActiveUsers(strHQL);
         if (lst.Count > 0 && lst != null)
         {
-            return "Enabled";  //ChineseWord //ChineseWord
+            return "Enabled";   
         }
         else
         {
-            return "NotEnabled";  //ChineseWord //ChineseWord
+            return "NotEnabled";   
         }
     }
 }

@@ -131,7 +131,7 @@ public partial class TTBMSupplierResult : System.Web.UI.Page
     {
         if (strBidStatus.Trim().Equals("Y"))
         {
-            return "BidWin";   //ChineseWord
+            return "BidWin";   
         }
         else if (strBidStatus.Trim().Equals("N"))
         {
@@ -139,7 +139,7 @@ public partial class TTBMSupplierResult : System.Web.UI.Page
         }
         else
         {
-            return "Unopened Bid";   //ChineseWord
+            return "Unopened Bid";   
         }
     }
 
@@ -164,20 +164,20 @@ public partial class TTBMSupplierResult : System.Web.UI.Page
         IList lst = bMContractPreparationBLL.GetAllBMContractPreparations(strHQL);
         if (lst.Count > 0 && lst != null)
         {
-            return "ContractSigned";   //ChineseWord
+            return "ContractSigned";   
         }
         else
         {
             if (strStatus.Trim().Equals("New"))
             {
-                return "NewContractNegotiation";   //ChineseWord
+                return "NewContractNegotiation";   
             }
             else if (strStatus.Trim().Equals("Unqualified"))
             {
-                return "ContractNegotiationReviewFailed";   //ChineseWord
+                return "ContractNegotiationReviewFailed";   
             }
             else
-                return "ContractNegotiationInProgress";   //ChineseWord
+                return "ContractNegotiationInProgress";   
         }
     }
 

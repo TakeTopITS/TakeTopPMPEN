@@ -85,7 +85,7 @@
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 <asp:Label ID="Label5" runat="server" Text="<%$ Resources:lang,JinDu%>" Visible="false"></asp:Label>
                                                 <asp:DropDownList ID="DDL_Progress" runat="server" OnSelectedIndexChanged="DDL_Progress_SelectedIndexChanged" AutoPostBack="True" Visible="false">
-                                                    <asp:ListItem Value="Decision" Text="<%$ Resources:lang,JueCe%>" />
+                                                    <asp:ListItem Value="决策" Text="<%$ Resources:lang,JueCe%>" />
                                                 </asp:DropDownList>
 
                                             </td>
@@ -278,7 +278,7 @@
 
                                                                     <%--<input type="button" value="查看供应商报价" class="inpuLong" onclick='ClickToDetail("<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>")' />--%>
                                                                     <%--<a href='TTWZPurchaseDecision.aspx?PurchaseCode=<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>'>查看供应商报价</a>--%>
-                                                                    <%--<asp:Button ID="Button1" runat="server" CssClass="inpu" Text="Approved" CommandName="approval" CommandArgument='<%# Eval("PurchaseCode") %>' Visible='<%# Eval("Progress").ToString()=="呈报" ? true : false %>' />
+                                                                    <%--<asp:Button ID="Button1" runat="server" CssClass="inpu" Text="批准" CommandName="approval" CommandArgument='<%# Eval("PurchaseCode") %>' Visible='<%# Eval("Progress").ToString()=="呈报" ? true : false %>' />
                                                                     <asp:Button ID="Button2" runat="server" CssClass="inpu" Text="退回" CommandName="notApproval" CommandArgument='<%# Eval("PurchaseCode") %>' Visible='<%# Eval("Progress").ToString()=="呈报" ? true : false %>' />--%>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
@@ -312,10 +312,10 @@
                                                             <asp:BoundColumn DataField="TenderCompetentName" HeaderText="招标主管">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ControlMoneyName" HeaderText="Price Audit">
+                                                            <asp:BoundColumn DataField="ControlMoneyName" HeaderText="价格监审">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="DisciplinarySupervisionName" HeaderText="Disciplinary Supervision">
+                                                            <asp:BoundColumn DataField="DisciplinarySupervisionName" HeaderText="纪检监督">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="ExpertCode1Name" HeaderText="专家1">
@@ -336,7 +336,7 @@
                                                             <asp:BoundColumn DataField="UpLeaderName" HeaderText="上级领导">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="PurchaseMethod" HeaderText="Procurement Method">
+                                                            <asp:BoundColumn DataField="PurchaseMethod" HeaderText="采购方式">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
                                                             <asp:TemplateColumn>
@@ -467,7 +467,7 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("DecisionTime").ToString(),10) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                            <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">
@@ -626,7 +626,7 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("MainSupplier").ToString(), 190) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="Grade" HeaderText="Level">
+                                                            <asp:BoundColumn DataField="Grade" HeaderText="级别">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
                                                             <%--<asp:BoundColumn DataField="InTime" HeaderText="登记日期">
@@ -828,7 +828,7 @@
                                                                         <asp:BoundColumn DataField="PlanCode" HeaderText="计划编号">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="ObjectCode" HeaderText="Material Code">
+                                                                        <asp:BoundColumn DataField="ObjectCode" HeaderText="物资代码">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:TemplateColumn>
@@ -849,7 +849,7 @@
                                                                                 <%# ShareClass.StringCutByRequire(Eval("Tenders").ToString(), 192) %>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
-                                                                        <asp:BoundColumn DataField="SerialNumber" HeaderText="SerialNumber">
+                                                                        <asp:BoundColumn DataField="SerialNumber" HeaderText="序号">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:TemplateColumn>
@@ -939,7 +939,7 @@
                                                                         <asp:BoundColumn DataField="TotalMoney" HeaderText="决策金额">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                                        <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">

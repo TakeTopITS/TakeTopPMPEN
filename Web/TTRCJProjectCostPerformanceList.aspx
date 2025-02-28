@@ -114,15 +114,15 @@
                                                         <asp:CommandField ShowSelectButton="True">
                                                             <ItemStyle Wrap="False" />
                                                         </asp:CommandField>
-                                                        <asp:BoundField DataField="ItemNo" HeaderText="SerialNumber" />
+                                                        <asp:BoundField DataField="ItemNo" HeaderText="序号" />
                                                         <asp:BoundField DataField="ItemName" HeaderText="定额号">
                                                             <ItemStyle Wrap="False" />
                                                         </asp:BoundField>
                                                         <asp:BoundField DataField="TypeName" HeaderText="专业分类">
                                                             <ItemStyle Wrap="False" />
                                                         </asp:BoundField>
-                                                        <asp:BoundField DataField="ItemUnit" HeaderText="Unit" />
-                                                        <asp:BoundField DataField="ItemNum" HeaderText="Quantity" DataFormatString="{0:N3}" HtmlEncode="False" />
+                                                        <asp:BoundField DataField="ItemUnit" HeaderText="单位" />
+                                                        <asp:BoundField DataField="ItemNum" HeaderText="数量" DataFormatString="{0:N3}" HtmlEncode="False" />
                                                         <asp:BoundField DataField="ItemContent" HeaderText="定额名称">
                                                             <ItemStyle Wrap="False" />
                                                         </asp:BoundField>
@@ -148,16 +148,16 @@
                                                         <asp:BoundField DataField="Name" HeaderText="承包商">
                                                             <ItemStyle Wrap="False" />
                                                         </asp:BoundField>
-                                                        <asp:BoundField DataField="BeginTime" HeaderText="StartTime" DataFormatString="{0:yyyy/MM/dd}" />
-                                                        <asp:BoundField DataField="EndTime" HeaderText="EndTime" DataFormatString="{0:yyyy/MM/dd}" />
+                                                        <asp:BoundField DataField="BeginTime" HeaderText="开始时间" DataFormatString="{0:yyyy/MM/dd}" />
+                                                        <asp:BoundField DataField="EndTime" HeaderText="结束时间" DataFormatString="{0:yyyy/MM/dd}" />
                                                         <asp:TemplateField HeaderText="自动分月">
                                                             <ItemTemplate>
-                                                                <asp:Label ID="Label2" runat="server" Text='<%# Eval("IfSplit").ToString() == "1" ? "YES":"NO" %>'></asp:Label>
+                                                                <asp:Label ID="Label2" runat="server" Text='<%# Eval("IfSplit").ToString() == "1" ? "是":"否" %>'></asp:Label>
                                                             </ItemTemplate>
                                                         </asp:TemplateField>
                                                         <asp:TemplateField HeaderText="价格已调整">
                                                             <ItemTemplate>
-                                                                <asp:Label ID="Label1" runat="server" Text='<%# Eval("ItemPriceChanged").ToString() == "1" ? "YES":"NO" %>'></asp:Label>
+                                                                <asp:Label ID="Label1" runat="server" Text='<%# Eval("ItemPriceChanged").ToString() == "1" ? "是":"否" %>'></asp:Label>
                                                             </ItemTemplate>
                                                         </asp:TemplateField>
                                                     </Columns>

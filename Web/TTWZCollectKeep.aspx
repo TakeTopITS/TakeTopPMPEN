@@ -223,15 +223,15 @@
                                                                 <ItemTemplate>
 
                                                                     <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"CollectCode") %>' CommandName="account" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="开票" ? true : false %>'>上帐</asp:LinkButton>
-                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"CollectCode") %>' CommandName="notAccount" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="MaterialReceipt" ? true : false %>'>退票</asp:LinkButton>
-                                                                    <asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"CollectCode") %>' CommandName="print" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="MaterialReceipt" ? true : false %>'>打印</asp:LinkButton>
+                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"CollectCode") %>' CommandName="notAccount" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="收料" ? true : false %>'>退票</asp:LinkButton>
+                                                                    <asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"CollectCode") %>' CommandName="print" CssClass="notTab" Visible='<%# Eval("Progress").ToString()=="收料" ? true : false %>'>打印</asp:LinkButton>
 
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
                                                             <asp:BoundColumn DataField="CollectCode" HeaderText="收料单号">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="CompactCode" HeaderText="Contract Number">
+                                                            <asp:BoundColumn DataField="CompactCode" HeaderText="合同编号">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="ProjectCode" HeaderText="项目编码">
@@ -240,7 +240,7 @@
                                                             <%--<asp:BoundColumn DataField="PlanDetailID" HeaderText="计划编号" Visible="false">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>--%>
-                                                            <asp:BoundColumn DataField="ObjectCode" HeaderText="Material Code">
+                                                            <asp:BoundColumn DataField="ObjectCode" HeaderText="物资代码">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
                                                             <%--<asp:BoundColumn DataField="ObjectName" HeaderText="物资名称">
@@ -294,7 +294,7 @@
                                                             <asp:BoundColumn DataField="Freight" HeaderText="运费">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="3%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="OtherObject" HeaderText="Other">
+                                                            <asp:BoundColumn DataField="OtherObject" HeaderText="其它">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="3%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="ConvertNumber" HeaderText="换算数量">
@@ -360,7 +360,7 @@
                                                             <asp:BoundColumn DataField="PayProcess" HeaderText="报销进度">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                            <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">

@@ -248,7 +248,7 @@ public partial class TTConfirmProjectExpenseForFIN : System.Web.UI.Page
         {
             if (strOperatorCode == ShareClass.GetProjectPMCode(strProjectID))
             {
-                dailyWork.Type = "Lead";   //ChineseWord
+                dailyWork.Type = "Lead";   
             }
             else
             {

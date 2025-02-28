@@ -107,7 +107,7 @@
                                                                         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" ShowHeaderWhenEmpty="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" PageSize="12" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowDataBound="GridView1_RowDataBound">
                                                                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                                                             <Columns>
-                                                                                <asp:BoundField DataField="ID" HeaderText="SerialNumber" />
+                                                                                <asp:BoundField DataField="ID" HeaderText="序号" />
                                                                                 <asp:BoundField DataField="CostFeeID" HeaderText="大类编号" />
                                                                                 <asp:BoundField DataField="Title" HeaderText="成本费项大类标题" />
                                                                                 <asp:BoundField DataField="CostFeeSubID" HeaderText="子类编号" />
@@ -115,7 +115,7 @@
                                                                                 <asp:BoundField DataField="WorkYear" HeaderText="登记年份" />
                                                                                 <asp:BoundField DataField="WorkMonth" HeaderText="登记月份" />
                                                                                 <asp:BoundField DataField="FeeMoney" HeaderText="成本费用" />
-                                                                                <asp:BoundField DataField="Memo" HeaderText="Remark" />
+                                                                                <asp:BoundField DataField="Memo" HeaderText="备注" />
                                                                                 <asp:BoundField DataField="LastTime" HeaderText="登记时间" />
                                                                                 <asp:CommandField ShowSelectButton="True" />
                                                                             </Columns>

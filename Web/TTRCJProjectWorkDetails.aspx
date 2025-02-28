@@ -224,7 +224,7 @@
                                                         <asp:CommandField HeaderText="选择" ShowSelectButton="True" />
                                                         <asp:BoundField DataField="ID" HeaderText="运算序号" />
                                                         <asp:BoundField DataField="WorkConfirmID" HeaderText="确认序号" />
-                                                        <asp:BoundField DataField="ItemNo" HeaderText="SerialNumber" />
+                                                        <asp:BoundField DataField="ItemNo" HeaderText="序号" />
                                                         <asp:BoundField DataField="ItemName" HeaderText="定额号" />
                                                         <asp:BoundField DataField="WorkYear" HeaderText="工作年份" />
                                                         <asp:BoundField DataField="WorkMonth" HeaderText="工作月份" />
@@ -373,7 +373,7 @@
                                                     <Columns>
                                                         <asp:CommandField HeaderText="选择" ShowSelectButton="True" />
                                                         <asp:BoundField DataField="ID" HeaderText="运算序号" />
-                                                        <asp:BoundField DataField="ItemNo" HeaderText="SerialNumber" />
+                                                        <asp:BoundField DataField="ItemNo" HeaderText="序号" />
                                                         <asp:BoundField DataField="ItemName" HeaderText="定额号" />
                                                         <asp:BoundField DataField="WorkYear" HeaderText="工作年份" />
                                                         <asp:BoundField DataField="WorkMonth" HeaderText="工作月份" />
@@ -526,7 +526,7 @@
                                                     <Columns>
                                                         <asp:CommandField HeaderText="选择" ShowSelectButton="True" />
                                                         <asp:BoundField DataField="ID" HeaderText="运算序号" />
-                                                        <asp:BoundField DataField="ItemNo" HeaderText="SerialNumber" />
+                                                        <asp:BoundField DataField="ItemNo" HeaderText="序号" />
                                                         <asp:BoundField DataField="ItemName" HeaderText="定额号" />
                                                         <asp:BoundField DataField="WorkYear" HeaderText="工作年份" />
                                                         <asp:BoundField DataField="WorkMonth" HeaderText="工作月份" />

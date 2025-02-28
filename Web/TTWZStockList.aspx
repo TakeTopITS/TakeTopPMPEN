@@ -194,7 +194,7 @@
                                                                             <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab" Visible='<%# Eval("IsMark").ToString()=="-1" ? false : true %>'>
                                                                                 <asp:Label ID="Label20" runat="server" Text="<%$ Resources:lang,ShanChu%>"></asp:Label></asp:LinkButton>
                                                                             <%--<asp:Button runat="server" Text="±à¼­" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="edit" CssClass="inpu" />--%>
-                                                                            <%--<asp:Button runat="server" Text="Deleted" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="inpu" Visible='<%# Eval("IsMark").ToString()=="-1" ? false : true %>' />--%>
+                                                                            <%--<asp:Button runat="server" Text="É¾³ý" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="inpu" Visible='<%# Eval("IsMark").ToString()=="-1" ? false : true %>' />--%>
 
                                                                         </ItemTemplate>
                                                                     </asp:TemplateColumn>

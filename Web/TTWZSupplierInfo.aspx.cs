@@ -60,13 +60,13 @@ public partial class TTWZSupplierInfo : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(TXT_SupplierPass.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGYHMMBNWKCZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGYHMMBNWKCZSBJC + "')", true);
             TXT_SupplierPass.Focus();
             return;
         }
         if (string.IsNullOrEmpty(TXT_SupplierName.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGYHMBNWKCZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGYHMBNWKCZSBJC + "')", true);
             TXT_SupplierName.Focus();
             return;
         }
@@ -87,11 +87,11 @@ public partial class TTWZSupplierInfo : System.Web.UI.Page
 
             BT_SubmitApply.Visible = true;
             BT_SubmitApply.Enabled = true;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZCG + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZSBJC + "')", true);
         }
     }
 
@@ -100,19 +100,19 @@ public partial class TTWZSupplierInfo : System.Web.UI.Page
     {
         if (string.IsNullOrEmpty(LB_SupplierCode.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGXZGYSLBZJXXG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGXZGYSLBZJXXG + "')", true);
             // LB_SupplierCode.Focus();
             return;
         }
         if (string.IsNullOrEmpty(TXT_SupplierPass.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGYHMMBNWKCZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGYHMMBNWKCZSBJC + "')", true);
             TXT_SupplierPass.Focus();
             return;
         }
         if (string.IsNullOrEmpty(TXT_SupplierName.Text.Trim()))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGYHMBNWKCZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGYHMBNWKCZSBJC + "')", true);
             TXT_SupplierName.Focus();
             return;
         }
@@ -131,11 +131,11 @@ public partial class TTWZSupplierInfo : System.Web.UI.Page
 
             LoadWZSupplierInfoList();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCSBJC + "')", true);
         }
     }
 
@@ -145,7 +145,7 @@ public partial class TTWZSupplierInfo : System.Web.UI.Page
         string strID = HF_ID.Value.Trim();
         if (string.IsNullOrEmpty(strID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJGXZGYSLBZJXXG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJGXZGYSLBZJXXG + "')", true);
             return;
         }
 
@@ -159,11 +159,11 @@ public partial class TTWZSupplierInfo : System.Web.UI.Page
 
             LoadWZSupplierInfoList();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBJC + "')", true);
         }
     }
 
@@ -203,7 +203,7 @@ public partial class TTWZSupplierInfo : System.Web.UI.Page
             BT_SubmitApply.Visible = true;
             BT_SubmitApply.Enabled = true;
 
-            LoadRelatedWL(DL_WFType.SelectedValue.Trim(), "Other", int.Parse(HF_ID.Value.Trim()));
+            LoadRelatedWL(DL_WFType.SelectedValue.Trim(), "其它", int.Parse(HF_ID.Value.Trim()));
         }
     }
 
@@ -226,7 +226,7 @@ public partial class TTWZSupplierInfo : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from WorkFlow as workFlow where workFlow.WLType = " + "'" + strWLType + "'" + " and workFlow.RelatedType In (" + "'" + strRelatedType + "','Other')" + " and workFlow.RelatedID = " + intRelatedID.ToString();
+        strHQL = "from WorkFlow as workFlow where workFlow.WLType = " + "'" + strWLType + "'" + " and workFlow.RelatedType In (" + "'" + strRelatedType + "','其它')" + " and workFlow.RelatedID = " + intRelatedID.ToString();
         strHQL += " Order by workFlow.WLID DESC";
         WorkFlowBLL workFlowBLL = new WorkFlowBLL();
         lst = workFlowBLL.GetAllWorkFlows(strHQL);
@@ -247,13 +247,13 @@ public partial class TTWZSupplierInfo : System.Web.UI.Page
         strTemName = DL_TemName.SelectedValue.Trim();
         if (strTemName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCWLCMBBNWKJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCWLCMBBNWKJC + "')", true);
             return strWLID;
         }
 
         XMLProcess xmlProcess = new XMLProcess();
 
-        //strHQL = "Update T_CarApplyForm Set Status = 'InProgress' Where ID = " + strID;
+        //strHQL = "Update T_CarApplyForm Set Status = '处理中' Where ID = " + strID;
 
         try
         {
@@ -267,33 +267,33 @@ public partial class TTWZSupplierInfo : System.Web.UI.Page
 
             workFlow.WLName = DL_WFType.SelectedValue.Trim();
             workFlow.WLType = DL_WFType.SelectedValue.Trim();
-            workFlow.Status = "New";
+            workFlow.Status = "新建";
             workFlow.TemName = DL_TemName.SelectedValue.Trim();
             workFlow.CreateTime = DateTime.Now;
             workFlow.CreatorCode = strUserCode;
             workFlow.CreatorName = ShareClass.GetUserName(strUserCode.Trim());
             workFlow.Description = TXT_SupplierName.Text.Trim();
             workFlow.XMLFile = strXMLFile2;
-            workFlow.RelatedType = "Other";
+            workFlow.RelatedType = "其它";
             workFlow.RelatedID = int.Parse(strID);
-            workFlow.DIYNextStep = "YES"; workFlow.IsPlanMainWorkflow = "NO";
+            workFlow.DIYNextStep = "Yes"; workFlow.IsPlanMainWorkflow = "NO";
 
             if (CB_SMS.Checked == true)
             {
-                workFlow.ReceiveSMS = "YES";
+                workFlow.ReceiveSMS = "Yes";
             }
             else
             {
-                workFlow.ReceiveSMS = "NO";
+                workFlow.ReceiveSMS = "No";
             }
 
             if (CB_Mail.Checked == true)
             {
-                workFlow.ReceiveEMail = "YES";
+                workFlow.ReceiveEMail = "Yes";
             }
             else
             {
-                workFlow.ReceiveEMail = "NO";
+                workFlow.ReceiveEMail = "No";
             }
 
             try
@@ -306,16 +306,16 @@ public partial class TTWZSupplierInfo : System.Web.UI.Page
                 strXMLFile2 = Server.MapPath(strXMLFile2);
                 xmlProcess.DbToXML(strCmdText, "T_BMBidPlan", strXMLFile2);
 
-                LoadRelatedWL(DL_WFType.SelectedValue.Trim(), "Other", int.Parse(strID));
+                LoadRelatedWL(DL_WFType.SelectedValue.Trim(), "其它", int.Parse(strID));
 
-                //DL_Status.SelectedValue = "InProgress";
+                //DL_Status.SelectedValue = "处理中";
 
                 BT_Update.Visible = false;
                 BT_Delete.Visible = false;
 
                 BT_SubmitApply.Visible = false;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGYSSCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGYSSCCG + "')", true);
             }
             catch
             {
@@ -328,7 +328,7 @@ public partial class TTWZSupplierInfo : System.Web.UI.Page
                 BT_Delete.Visible = true;
                 BT_Delete.Enabled = true;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZGongYingShangShengChengLangu").ToString().Trim()+"')", true); 
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('供应商生成" + Resources.lang.ZZSBJC + "')", true);
             }
 
             LoadWZSupplierInfoList();
@@ -344,7 +344,7 @@ public partial class TTWZSupplierInfo : System.Web.UI.Page
             BT_Delete.Visible = true;
             BT_Delete.Enabled = true;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZGongYingShangShengChengLangu").ToString().Trim()+"')", true); 
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('供应商生成" + Resources.lang.ZZSBJC + "')", true);
         }
 
         return strWLID;
@@ -398,9 +398,9 @@ public partial class TTWZSupplierInfo : System.Web.UI.Page
             DL_TemName.Items.Insert(0, new ListItem("--Select--", ""));
         }
 
-        LoadRelatedWL(strtype, "Other", int.Parse(HF_ID.Value.Trim()));
+        LoadRelatedWL(strtype, "其它", int.Parse(HF_ID.Value.Trim()));
 
-        int intWLNumber = GetRelatedWorkFlowNumber(strtype, "Other", HF_ID.Value.Trim());
+        int intWLNumber = GetRelatedWorkFlowNumber(strtype, "其它", HF_ID.Value.Trim());
 
         if (intWLNumber > 0)
         {

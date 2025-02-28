@@ -325,13 +325,13 @@ public partial class TTAccountBaseData : System.Web.UI.Page
         if (dt != null && dt.Rows.Count > 0)
         {
             DL_ParentID.Items.Clear();
-            DL_ParentID.Items.Insert(0, new ListItem("PrimarySubject", "0"));  //ChineseWord //ChineseWord
+            DL_ParentID.Items.Insert(0, new ListItem("PrimarySubject", "0"));   
             SetInterval(DL_ParentID, "0", " ");
         }
         else
         {
             DL_ParentID.Items.Clear();
-            DL_ParentID.Items.Insert(0, new ListItem("PrimarySubject", "0"));  //ChineseWord //ChineseWord
+            DL_ParentID.Items.Insert(0, new ListItem("PrimarySubject", "0"));   
         }
     }
 

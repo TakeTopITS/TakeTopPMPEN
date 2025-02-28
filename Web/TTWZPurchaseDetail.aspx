@@ -124,7 +124,7 @@
                                                                         <asp:Button ID="BT_Save" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="BT_Save_Click" />&nbsp;
                                                                         <asp:Button ID="BT_Reset" runat="server" Text="<%$ Resources:lang,QuXiao%>" CssClass="inpu" OnClick="BT_Reset_Click" />&nbsp;
                                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                                                 type="button" value="Closed" />
+                                                                                 type="button" value="关闭" />
                                                                         <%--<asp:Button ID="BT_MajorType" runat="server" Text="同步专业类别" CssClass="inpuLong" OnClick="BT_MajorType_Click" />--%>
                                                                         <asp:Button ID="BT_RelaceLoad" runat="server" Text="<%$ Resources:lang,ChongXinJiaZaiLieBiao%>" OnClick="BT_RelaceLoad_Click" CssClass="inpu" style="display:none;" />
                                                                     </td>
@@ -140,7 +140,7 @@
                                                             <asp:Button ID="BT_SortSearch" runat="server" Text="<%$ Resources:lang,LieBiaoPaiXu%>" CssClass="inpu" OnClick="BT_SortSearch_Click" />
                                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                             <input id="Button2" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                                                 type="button" value="Closed" />
+                                                                                 type="button" value="关闭" />
                                                             <asp:HiddenField ID="HF_SortSearch" runat="server" />
                                                         </td>
                                                     </tr>
@@ -274,7 +274,7 @@
                                                                                         </HeaderTemplate>
                                                                                         <ItemTemplate>
                                                                                             <%--<asp:Button ID="Button1" runat="server" CssClass="inpu" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="edit" Text="编辑" />--%>
-                                                                                            <%--<asp:Button ID="Button2" runat="server" CssClass="inpu" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="Deleted" />--%>
+                                                                                            <%--<asp:Button ID="Button2" runat="server" CssClass="inpu" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="删除" />--%>
                                                                                             <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="edit" CssClass="notTab">
                                                                                                 <asp:Label ID="Label77" runat="server" Text="<%$ Resources:lang,BianJi%>"></asp:Label> </asp:LinkButton>
                                                                                             <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab">
@@ -287,7 +287,7 @@
                                                                                     <asp:BoundColumn DataField="PlanCode" HeaderText="计划编号">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="ObjectCode" HeaderText="Material Code">
+                                                                                    <asp:BoundColumn DataField="ObjectCode" HeaderText="物资代码">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:TemplateColumn>
@@ -308,7 +308,7 @@
                                                                                             <%# ShareClass.StringCutByRequire(Eval("Tenders").ToString(), 192) %>
                                                                                         </ItemTemplate>
                                                                                     </asp:TemplateColumn>
-                                                                                    <asp:BoundColumn DataField="SerialNumber" HeaderText="SerialNumber">
+                                                                                    <asp:BoundColumn DataField="SerialNumber" HeaderText="序号">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:TemplateColumn>
@@ -398,7 +398,7 @@
                                                                                     <asp:BoundColumn DataField="TotalMoney" HeaderText="决策金额">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="4%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                                                    <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">
@@ -631,13 +631,13 @@
                                                                                             <%# ShareClass.StringCutByRequire(Eval("Remark").ToString(), 192) %>
                                                                                         </ItemTemplate>
                                                                                     </asp:TemplateColumn>
-                                                                                    <asp:BoundColumn DataField="ObjectCode" HeaderText="Material Code">
+                                                                                    <asp:BoundColumn DataField="ObjectCode" HeaderText="物资代码">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:BoundColumn DataField="PurchaseCode" HeaderText="采购编号">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="ContractCode" HeaderText="Contract Number">
+                                                                                    <asp:BoundColumn DataField="ContractCode" HeaderText="合同编号">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:BoundColumn DataField="TurnCode" HeaderText="移交编号">
@@ -646,7 +646,7 @@
                                                                                     <asp:BoundColumn DataField="StoreSign" HeaderText="平库标志">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                                                    <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:BoundColumn DataField="OldCode" HeaderText="原代码">

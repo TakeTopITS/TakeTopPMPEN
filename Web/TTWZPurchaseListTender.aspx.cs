@@ -69,7 +69,7 @@ public partial class TTWZPurchaseListTender : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strTenderCompetentName))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('招标主管不能为空，请补充！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('招标主管不能为空，请补充！');", true);
                 return;
             }
 

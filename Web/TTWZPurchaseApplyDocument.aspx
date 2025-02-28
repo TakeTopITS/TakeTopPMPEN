@@ -92,7 +92,7 @@
                                                     <tr>
                                                         <td style="text-align: center" class="formItemBgStyle" colspan="2">
                                                             <input id="btnClose()" class="inpu" onclick="LoadParentLit()"
-                                                                type="button" value="Closed" />
+                                                                type="button" value="¹Ø±Õ" />
                                                         </td>
                                                     </tr>
                                                 </table>

@@ -84,7 +84,7 @@
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 <asp:Button ID="BT_Save" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="BT_Save_Click" />&nbsp;
                                                 <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                                type="button" value="Closed" />
+                                                                type="button" value="¹Ø±Õ" />
                                             </td>
                                         </tr>
                                     </table>

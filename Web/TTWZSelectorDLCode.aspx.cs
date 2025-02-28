@@ -50,7 +50,7 @@ public partial class TTWZSelectorDLCode : System.Web.UI.Page
 
                     Button btShowCollect = (Button)e.Item.FindControl("BT_ShowCollect");
                     string strShowText = btShowCollect.Text;
-                    if (strShowText == LanguageHandle.GetWord("ZhanKai").ToString().Trim())
+                    if (strShowText == "展开")
                     {
                         DG_List.Visible = true;
                         //绑定中类
@@ -65,13 +65,13 @@ public partial class TTWZSelectorDLCode : System.Web.UI.Page
                         dgZL.DataBind();
 
                         //改变按钮文本
-                        btShowCollect.Text = LanguageHandle.GetWord("ShouSu").ToString().Trim();
+                        btShowCollect.Text = "收缩";
                     }
                     else {
                         DG_List.Visible = false;
 
                         //改变按钮文本
-                        btShowCollect.Text = LanguageHandle.GetWord("ZhanKai").ToString().Trim();
+                        btShowCollect.Text = "展开";
                     }
                     
                 }

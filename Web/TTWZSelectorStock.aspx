@@ -185,7 +185,7 @@
                                                         <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="È·¶¨" />
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                            type="button" value="Closed" />
+                                                            type="button" value="¹Ø±Õ" />
                                                     </div>
                                                 </td>
                                             </tr>

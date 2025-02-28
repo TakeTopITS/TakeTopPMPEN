@@ -149,7 +149,7 @@
 
                                                                                 <asp:LinkButton runat="server" CommandArgument='<%# Eval("ID") %>' CommandName="del" CssClass="notTab">
                                                                                     <asp:Label ID="Label31" runat="server" Text="<%$ Resources:lang,ShanChu%>"></asp:Label></asp:LinkButton>
-                                                                                <%--<asp:Button ID="Button1" runat="server" CssClass="inpu" Text="Deleted" CommandName="del" CommandArgument='<%# Eval("ID") %>' />--%>
+                                                                                <%--<asp:Button ID="Button1" runat="server" CssClass="inpu" Text="删除" CommandName="del" CommandArgument='<%# Eval("ID") %>' />--%>
                                                                             </ItemTemplate>
                                                                         </asp:TemplateColumn>
                                                                         <asp:BoundColumn DataField="TurnCode" HeaderText="移交单号">
@@ -203,7 +203,7 @@
                                                                         <asp:BoundColumn DataField="PickingPlanCode" HeaderText="计划编号">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="ObjectCode" HeaderText="Material Code">
+                                                                        <asp:BoundColumn DataField="ObjectCode" HeaderText="物资代码">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="TicketNumber" HeaderText="开票数量">
@@ -227,7 +227,7 @@
                                                                         <asp:BoundColumn DataField="MaterialPersonName" HeaderText="材料员">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                                        <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">
@@ -320,7 +320,7 @@
                                                             <asp:BoundColumn DataField="PlanCode" HeaderText="计划编号">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ObjectCode" HeaderText="Material Code">
+                                                            <asp:BoundColumn DataField="ObjectCode" HeaderText="物资代码">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="PlanNumber" HeaderText="计划数量">
@@ -332,7 +332,7 @@
                                                             <asp:BoundColumn DataField="PlanCost" HeaderText="预计费用">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="10%" />
                                                             </asp:BoundColumn>
-                                                            <%--<asp:BoundColumn DataField="Remark" HeaderText="Remark">
+                                                            <%--<asp:BoundColumn DataField="Remark" HeaderText="备注">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="10%" />
                                                             </asp:BoundColumn>--%>
                                                             <asp:TemplateColumn>
@@ -344,7 +344,7 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("Remark").ToString(), 190) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                            <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="10%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="OldCode" HeaderText="原代码">

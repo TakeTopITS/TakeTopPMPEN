@@ -756,7 +756,7 @@ public partial class TTProjectTaskDetail : System.Web.UI.Page
             string strAssignID = ShareClass.GetMyCreatedMaxTaskAssignRecordID(intTaskID.ToString(), strUserCode);
 
             //更改前分派记录状态
-            updateTaskAssignRecordStatus(intPriorID, "Assigned");   //ChineseWord
+            updateTaskAssignRecordStatus(intPriorID, "Assigned");   
 
             //BusinessForm,处理关联的业务表单数据
             ShareClass.InsertOrUpdateTaskAssignRecordWFXMLData("TaskRecord", intPriorID.ToString(), "TaskRecord", strAssignID, strUserCode);

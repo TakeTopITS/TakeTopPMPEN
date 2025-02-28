@@ -56,12 +56,12 @@ public partial class TTWZObjectBigDetail : System.Web.UI.Page
 
         if (!ShareClass.CheckStringRight(strDLDesc))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDLMSBNSFFZFC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDLMSBNSFFZFC+"')", true);
             return;
         }
         if (strDLDesc.Length > 30)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDLMSBNCG30GZFTXSY30GZFC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDLMSBNCG30GZFTXSY30GZFC+"')", true);
             return;
         }
 
@@ -77,7 +77,7 @@ public partial class TTWZObjectBigDetail : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDJMZNSBJDLMSCZWX").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDJMZNSBJDLMSCZWX+"')", true);
             return;
         }
 

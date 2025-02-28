@@ -28372,4 +28372,12 @@
   <data name="SheJi" xml:space="preserve">
     <value>设计</value>
   </data>
+  <data name="JiaoFu" xml:space="preserve">
+    <value>交付</value>
+    <comment>交付</comment>
+  </data>
+  <data name="MoYouCaoDaoBaiFangJiLu" xml:space="preserve">
+    <value>没有找到相应的拜访记录!</value>
+    <comment>没有找到相应的拜访记录!</comment>
+  </data>
 </root>

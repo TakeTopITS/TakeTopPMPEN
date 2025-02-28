@@ -66,7 +66,7 @@ public partial class TTWZSendList : System.Web.UI.Page
                         left join T_ProjectMember p on s.PurchaseEngineer = p.UserCode
                         where s.PurchaseEngineer ='{0}' 
                         and s.Progress in ('录入','材检','开票') 
-                        order by s.TicketTime desc", strUserCode);   //ChineseWord
+                        order by s.TicketTime desc", strUserCode);
         DataTable dtSend = ShareClass.GetDataSetFromSql(strSendHQL, "Send").Tables[0];
 
         DG_Send.DataSource = dtSend;
@@ -92,9 +92,9 @@ public partial class TTWZSendList : System.Web.UI.Page
         WZPickingPlanBLL wZPickingPlanBLL = new WZPickingPlanBLL();
         string strWZPickingPlanHQL = string.Format(@"from WZPickingPlan as wZPickingPlan 
                                                     where PurchaseEngineer = '{0}' 
-                                                    and Progress = 'Sign for Receipt' 
-                                                    and SupplyMethod='Self-purchase' 
-                                                    order by MarkerTime desc", strUserCode);   //ChineseWord
+                                                    and Progress = '签收' 
+                                                    and SupplyMethod='自购' 
+                                                    order by MarkerTime desc", strUserCode);
         IList listWZPickingPlan = wZPickingPlanBLL.GetAllWZPickingPlans(strWZPickingPlanHQL);
 
         LB_Plan.DataSource = listWZPickingPlan;
@@ -195,9 +195,9 @@ public partial class TTWZSendList : System.Web.UI.Page
                 if (listSend != null && listSend.Count == 1)
                 {
                     WZSend wZSend = (WZSend)listSend[0];
-                    if (wZSend.Progress != LanguageHandle.GetWord("LuRu").ToString().Trim() || wZSend.PurchaseEngineer != strUserCode)
+                    if (wZSend.Progress != "录入" || wZSend.PurchaseEngineer != strUserCode)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWLRYJHTYBWDDLYHSBYXSC").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWLRYJHTYBWDDLYHSBYXSC + "')", true);
                         return;
                     }
 
@@ -207,7 +207,7 @@ public partial class TTWZSendList : System.Web.UI.Page
                     DG_Send.CurrentPageIndex = 0;
                     DataSendBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
                 }
             }
             else if (cmdName == "edit")
@@ -247,7 +247,7 @@ public partial class TTWZSendList : System.Web.UI.Page
                     TXT_GoodsCode.Text = wZSend.GoodsCode;                   //货位号
                     TXT_ManageRate.Text = wZSend.ManageRate.ToString();      //管理费率
 
-                    if (wZSend.SendMethod == LanguageHandle.GetWord("GongPiao").ToString().Trim())
+                    if (wZSend.SendMethod == "红票")
                     {
                         TXT_ActualNumber.BackColor = Color.Red;
                     }
@@ -273,18 +273,18 @@ public partial class TTWZSendList : System.Web.UI.Page
                 if (listSend != null && listSend.Count == 1)
                 {
                     WZSend wZSend = (WZSend)listSend[0];
-                    if (wZSend.Progress == LanguageHandle.GetWord("LuRu").ToString().Trim())
+                    if (wZSend.Progress == "录入")
                     {
                         string strCheckCode = wZSend.CheckCode;
                         if (!string.IsNullOrEmpty(strCheckCode))
                         {
                             //材检
-                            wZSend.Progress = LanguageHandle.GetWord("CaiJian").ToString().Trim();
+                            wZSend.Progress = "材检";
                         }
                         else
                         {
                             //开票
-                            wZSend.Progress = LanguageHandle.GetWord("KaiPiao").ToString().Trim();
+                            wZSend.Progress = "开票";
                         }
 
                         wZSendBLL.UpdateWZSend(wZSend, wZSend.SendCode);
@@ -292,11 +292,11 @@ public partial class TTWZSendList : System.Web.UI.Page
                         //重新加载收料单列表
                         DataSendBinder();
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJCG").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTJCG + "')", true);
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWLRBNTJ").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWLRBNTJ + "')", true);
                         return;
                     }
                 }
@@ -311,18 +311,18 @@ public partial class TTWZSendList : System.Web.UI.Page
                 if (listSend != null && listSend.Count == 1)
                 {
                     WZSend wZSend = (WZSend)listSend[0];
-                    if (wZSend.Progress == LanguageHandle.GetWord("KaiPiao").ToString().Trim())
+                    if (wZSend.Progress == "开票")
                     {
                         string strCheckCode = wZSend.CheckCode;
                         //if (!string.IsNullOrEmpty(strCheckCode))
                         //{
                         //材检
-                        wZSend.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
+                        wZSend.Progress = "录入";
                         //}
                         //else
                         //{
                         //    //开票
-                        //    wZSend.Progress = LanguageHandle.GetWord("KaiPiao").ToString().Trim();
+                        //    wZSend.Progress = "开票";
                         //}
 
                         wZSendBLL.UpdateWZSend(wZSend, wZSend.SendCode);
@@ -330,11 +330,11 @@ public partial class TTWZSendList : System.Web.UI.Page
                         //重新加载收料单列表
                         DataSendBinder();
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTHCG + "')", true);
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWLRBNTJ").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWLRBNTJ + "')", true);
                         return;
                     }
                 }
@@ -349,18 +349,18 @@ public partial class TTWZSendList : System.Web.UI.Page
                 if (listSend != null && listSend.Count == 1)
                 {
                     WZSend wZSend = (WZSend)listSend[0];
-                    if (wZSend.Progress == LanguageHandle.GetWord("CaiJian").ToString().Trim())
+                    if (wZSend.Progress == "材检")
                     {
                         string strCheckCode = wZSend.CheckCode;
                         //if (!string.IsNullOrEmpty(strCheckCode))
                         //{
                         //材检
-                        wZSend.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
+                        wZSend.Progress = "录入";
                         //}
                         //else
                         //{
                         //    //开票
-                        //    wZSend.Progress = LanguageHandle.GetWord("KaiPiao").ToString().Trim();
+                        //    wZSend.Progress = "开票";
                         //}
 
                         wZSendBLL.UpdateWZSend(wZSend, wZSend.SendCode);
@@ -368,11 +368,11 @@ public partial class TTWZSendList : System.Web.UI.Page
                         //重新加载收料单列表
                         DataSendBinder();
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTHCG + "')", true);
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWLRBNTJ").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWLRBNTJ + "')", true);
                         return;
                     }
                 }
@@ -425,9 +425,9 @@ public partial class TTWZSendList : System.Web.UI.Page
                     wZSend.SendCode = CreateNewSendCode();          //发料编号
                     wZSend.TicketTime = DateTime.Now;
                     wZSend.PurchaseEngineer = strUserCode;
-                    wZSend.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
+                    wZSend.Progress = "录入";
                     wZSend.IsMark = 0;
-                    wZSend.SendMethod = LanguageHandle.GetWord("LanPiao").ToString().Trim();
+                    wZSend.SendMethod = "蓝票";
 
                     //发料单〈项目编码〉〈库别〉〈单位编号〉〈领料单位〉＝领料计划〈项目编码〉〈库别〉〈单位编号〉〈领料单位〉
                     wZSend.ProjectCode = wZPickingPlan.ProjectCode;
@@ -542,7 +542,7 @@ public partial class TTWZSendList : System.Web.UI.Page
 
                         if (wZStore.StockCode != DDL_StoreRoom.SelectedValue)
                         {
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKCBYZ").ToString().Trim() + "')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKCBYZ + "')", true);
                             return;
                         }
 
@@ -580,7 +580,7 @@ public partial class TTWZSendList : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJFLD").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJFLD + "')", true);
                     return;
                 }
             }
@@ -594,7 +594,7 @@ public partial class TTWZSendList : System.Web.UI.Page
         {
             if (!ShareClass.CheckIsNumber(strActualNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSFSLBXWXSHZZS").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSFSLBXWXSHZZS + "')", true);
                 return;
             }
             else
@@ -616,7 +616,7 @@ public partial class TTWZSendList : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSFSLBNWK").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSFSLBNWK + "')", true);
             return;
         }
     }
@@ -642,27 +642,27 @@ public partial class TTWZSendList : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strSendMethod))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFLFSBNWKBC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFLFSBNWKBC + "')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strActualNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSSSLBNWKBC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSSSLBNWKBC + "')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strActualNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSSSLBXWXSHZZS").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSSSLBXWXSHZZS + "')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strManageRate))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGLFLBNWKBC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGLFLBNWKBC + "')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strManageRate))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGLFLBXWXSHZZS").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGLFLBXWXSHZZS + "')", true);
                 return;
             }
 
@@ -698,12 +698,12 @@ public partial class TTWZSendList : System.Web.UI.Page
                 //重新加载发料单列表
                 DataSendBinder();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZYXGDSLD").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZYXGDSLD + "')", true);
             return;
         }
     }
@@ -764,9 +764,9 @@ public partial class TTWZSendList : System.Web.UI.Page
                             wZSend.SendCode = CreateNewSendCode();          //发料编号
                             wZSend.TicketTime = DateTime.Now;
                             wZSend.PurchaseEngineer = strUserCode;
-                            wZSend.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
+                            wZSend.Progress = "录入";
                             wZSend.IsMark = 0;
-                            wZSend.SendMethod = LanguageHandle.GetWord("LanPiao").ToString().Trim();
+                            wZSend.SendMethod = "蓝票";
 
                             //发料单〈项目编码〉〈库别〉〈单位编号〉〈领料单位〉＝领料计划〈项目编码〉〈库别〉〈单位编号〉〈领料单位〉
                             wZSend.ProjectCode = wZPickingPlan.ProjectCode;
@@ -838,7 +838,7 @@ public partial class TTWZSendList : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZJHMX").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZJHMX + "')", true);
             return;
         }
     }
@@ -851,7 +851,7 @@ public partial class TTWZSendList : System.Web.UI.Page
             decimal decimalActualNumber = 0;
             decimal.TryParse(TXT_ActualNumber.Text.Trim(), out decimalActualNumber);
 
-            if (strSendMethod == LanguageHandle.GetWord("GongPiao").ToString().Trim())
+            if (strSendMethod == "红票")
             {
                 decimalActualNumber = decimalActualNumber > 0 ? -1 * decimalActualNumber : decimalActualNumber;
 
@@ -947,7 +947,7 @@ public partial class TTWZSendList : System.Web.UI.Page
         string strEditSendCode = HF_NewSendCode.Value;
         if (string.IsNullOrEmpty(strEditSendCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDFLDLB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDFLDLB + "')", true);
             return;
         }
 
@@ -978,7 +978,7 @@ public partial class TTWZSendList : System.Web.UI.Page
             TXT_GoodsCode.Text = wZSend.GoodsCode;                   //货位号
             TXT_ManageRate.Text = wZSend.ManageRate.ToString();      //管理费率
 
-            if (wZSend.SendMethod == LanguageHandle.GetWord("GongPiao").ToString().Trim())
+            if (wZSend.SendMethod == "红票")
             {
                 TXT_ActualNumber.BackColor = Color.Red;
             }
@@ -1008,7 +1008,7 @@ public partial class TTWZSendList : System.Web.UI.Page
         string strEditSendCode = HF_NewSendCode.Value;
         if (string.IsNullOrEmpty(strEditSendCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDFLDLB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDFLDLB + "')", true);
             return;
         }
 
@@ -1018,9 +1018,9 @@ public partial class TTWZSendList : System.Web.UI.Page
         if (listSend != null && listSend.Count == 1)
         {
             WZSend wZSend = (WZSend)listSend[0];
-            if (wZSend.Progress != LanguageHandle.GetWord("LuRu").ToString().Trim() || wZSend.PurchaseEngineer != strUserCode)
+            if (wZSend.Progress != "录入" || wZSend.PurchaseEngineer != strUserCode)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWLRYJHTYBWDDLYHSBYXSC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWLRYJHTYBWDDLYHSBYXSC + "')", true);
                 return;
             }
 
@@ -1030,7 +1030,7 @@ public partial class TTWZSendList : System.Web.UI.Page
             DG_Send.CurrentPageIndex = 0;
             DataSendBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
         }
     }
 
@@ -1040,7 +1040,7 @@ public partial class TTWZSendList : System.Web.UI.Page
         string strEditSendCode = HF_NewSendCode.Value;
         if (string.IsNullOrEmpty(strEditSendCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDFLDLB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDFLDLB + "')", true);
             return;
         }
 
@@ -1050,18 +1050,18 @@ public partial class TTWZSendList : System.Web.UI.Page
         if (listSend != null && listSend.Count == 1)
         {
             WZSend wZSend = (WZSend)listSend[0];
-            if (wZSend.Progress == LanguageHandle.GetWord("LuRu").ToString().Trim())
+            if (wZSend.Progress == "录入")
             {
                 string strCheckCode = wZSend.CheckCode;
                 if (!string.IsNullOrEmpty(strCheckCode))
                 {
                     //材检
-                    wZSend.Progress = LanguageHandle.GetWord("CaiJian").ToString().Trim();
+                    wZSend.Progress = "材检";
                 }
                 else
                 {
                     //开票
-                    wZSend.Progress = LanguageHandle.GetWord("KaiPiao").ToString().Trim();
+                    wZSend.Progress = "开票";
                 }
 
                 wZSendBLL.UpdateWZSend(wZSend, wZSend.SendCode);
@@ -1069,11 +1069,11 @@ public partial class TTWZSendList : System.Web.UI.Page
                 //重新加载收料单列表
                 DataSendBinder();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTJCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTJCG + "')", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWLRBNTJ").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWLRBNTJ + "')", true);
                 return;
             }
         }
@@ -1085,7 +1085,7 @@ public partial class TTWZSendList : System.Web.UI.Page
         string strEditSendCode = HF_NewSendCode.Value;
         if (string.IsNullOrEmpty(strEditSendCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDFLDLB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDFLDLB + "')", true);
             return;
         }
     }
@@ -1096,7 +1096,7 @@ public partial class TTWZSendList : System.Web.UI.Page
         string strEditSendCode = HF_NewSendCode.Value;
         if (string.IsNullOrEmpty(strEditSendCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDFLDLB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDFLDLB + "')", true);
             return;
         }
     }
@@ -1107,7 +1107,7 @@ public partial class TTWZSendList : System.Web.UI.Page
         string strEditSendCode = HF_NewSendCode.Value;
         if (string.IsNullOrEmpty(strEditSendCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDFLDLB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDFLDLB + "')", true);
             return;
         }
 
@@ -1120,8 +1120,8 @@ public partial class TTWZSendList : System.Web.UI.Page
         string strHQL;
    
         strHQL = " Select CarCode From T_CarInformation Where ";
-        strHQL += " Status='InUse' ";
-        //      strHQL += " and Status='InUse' and CarCode not in (Select CarCode From T_CarAssignForm Where Status='Departure') ";
+        strHQL += " Status='在用' ";
+        //      strHQL += " and Status='在用' and CarCode not in (Select CarCode From T_CarAssignForm Where Status='出车') ";
         strHQL += " Order By PurchaseTime DESC";
 
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_CarInformation");

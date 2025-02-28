@@ -193,7 +193,7 @@
                                                    <asp:ListItem Text="" Value="" />
                                                    <asp:ListItem Text="<%$ Resources:lang,LuRu%>" Value="录入" />
                                                    <asp:ListItem Text="<%$ Resources:lang,KaiPiao%>" Value="开票" />
-                                                   <asp:ListItem Value="MaterialReceipt" />
+                                                   <asp:ListItem Value="收料" />
 
                                                </asp:DropDownList>&nbsp;
                                                           
@@ -413,7 +413,7 @@
                                                             <asp:BoundColumn DataField="CollectCode" HeaderText="收料单号">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="CompactCode" HeaderText="Contract Number">
+                                                            <asp:BoundColumn DataField="CompactCode" HeaderText="合同编号">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="StoreRoom" HeaderText="库别">
@@ -449,13 +449,13 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("ObjectName").ToString(), 192) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="Model" HeaderText="Specification">
+                                                            <asp:BoundColumn DataField="Model" HeaderText="规格型号">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="2%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Criterion" HeaderText="Standard">
+                                                            <asp:BoundColumn DataField="Criterion" HeaderText="标准">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="2%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Grade" HeaderText="Level">
+                                                            <asp:BoundColumn DataField="Grade" HeaderText="级别">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="2%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="UnitName" HeaderText="计量单位">
@@ -500,7 +500,7 @@
                                                             <asp:BoundColumn DataField="Freight" HeaderText="运费">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="2%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="OtherObject" HeaderText="Other">
+                                                            <asp:BoundColumn DataField="OtherObject" HeaderText="其它">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="2%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="TicketNumber" HeaderText="发票号码">
@@ -515,7 +515,7 @@
                                                             <asp:BoundColumn DataField="PlanCode" HeaderText="计划编号">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="2%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="ObjectCode" HeaderText="Material Code">
+                                                            <asp:BoundColumn DataField="ObjectCode" HeaderText="物资代码">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="ConvertNumber" HeaderText="换算数量">
@@ -548,7 +548,7 @@
                                                             <asp:BoundColumn DataField="PayProcess" HeaderText="报销进度">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                            <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="IsMark" HeaderText="结算标记">
@@ -729,13 +729,13 @@
                                                                         <asp:BoundColumn DataField="ObjectName" HeaderText="物资名称">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="8%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Model" HeaderText="Specification">
+                                                                        <asp:BoundColumn DataField="Model" HeaderText="规格型号">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Criterion" HeaderText="Standard">
+                                                                        <asp:BoundColumn DataField="Criterion" HeaderText="标准">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Grade" HeaderText="Level">
+                                                                        <asp:BoundColumn DataField="Grade" HeaderText="级别">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="4%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="UnitName" HeaderText="计量单位">
@@ -759,7 +759,7 @@
                                                                         <asp:BoundColumn DataField="CompactPrice" HeaderText="合同单价">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="CompactMoney" HeaderText="ContractAmount">
+                                                                        <asp:BoundColumn DataField="CompactMoney" HeaderText="合同金额">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="4%" />
                                                                         </asp:BoundColumn>
 
@@ -769,7 +769,7 @@
                                                                         <asp:BoundColumn DataField="CollectMoney" HeaderText="收料金额">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="CompactCode" HeaderText="Contract Number">
+                                                                        <asp:BoundColumn DataField="CompactCode" HeaderText="合同编号">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="PurchaseCode" HeaderText="采购编号">
@@ -778,7 +778,7 @@
                                                                         <asp:BoundColumn DataField="PlanCode" HeaderText="计划编号">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="ObjectCode" HeaderText="Material Code">
+                                                                        <asp:BoundColumn DataField="ObjectCode" HeaderText="物资代码">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="StandardCode" HeaderText="规格书编号">
@@ -787,7 +787,7 @@
                                                                         <asp:BoundColumn DataField="Factory" HeaderText="生产厂家">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="6%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Remark" HeaderText="Remark">
+                                                                        <asp:BoundColumn DataField="Remark" HeaderText="备注">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="6%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">

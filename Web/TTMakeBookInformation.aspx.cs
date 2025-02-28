@@ -138,7 +138,7 @@ public partial class TTMakeBookInformation : System.Web.UI.Page
         bookInformation.UseNum = 0;
         bookInformation.Version = TB_Version.Text.Trim();
         bookInformation.BookImage = strBookImage;
-        bookInformation.BookType = "Book";   //ChineseWord
+        bookInformation.BookType = "Book";   
         bookInformation.ClassificationCode = "";
 
         try
@@ -204,7 +204,7 @@ public partial class TTMakeBookInformation : System.Web.UI.Page
         bookInformation.Translator = TB_Translator.Text.Trim();
         bookInformation.Version = TB_Version.Text.Trim();
         bookInformation.BookImage = strBookImage;
-        bookInformation.BookType = "Book";   //ChineseWord
+        bookInformation.BookType = "Book";   
         bookInformation.ClassificationCode = "";
 
         try
@@ -448,7 +448,7 @@ public partial class TTMakeBookInformation : System.Web.UI.Page
         string strHQL;
         string strDepartString = LB_DepartString.Text.Trim();
 
-        strHQL = "Select * From T_BookInformation Where BookType = 'Book' ";   //ChineseWord
+        strHQL = "Select * From T_BookInformation Where BookType = 'Book' ";   
         strHQL += " and DepartCode in " + strDepartString;
         if (!string.IsNullOrEmpty(TextBox2.Text.Trim()))
         {
@@ -472,7 +472,7 @@ public partial class TTMakeBookInformation : System.Web.UI.Page
         string strHQL;
         IList lst;
         //∞Û∂®∑÷¿‡BindDDL();
-        strHQL = "Select * From T_BookClassification Where DataType='BookClassification' Order By ID ASC ";   //ChineseWord
+        strHQL = "Select * From T_BookClassification Where DataType='BookClassification' Order By ID ASC ";   
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_BookClassification");
         DL_BookClassificationId.DataSource = ds;
         DL_BookClassificationId.DataBind();

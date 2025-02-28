@@ -92,7 +92,7 @@ public partial class TakeTopSiteNewsList : System.Web.UI.Page
         string strHQL;
     
         strHQL = "Select ID,Title,Content,RelatedDepartName,PublisherCode,PublisherName,PublishTime From T_HeadLine ";
-        strHQL += "Where Type = 'External' and Status = 'Publish' ";  //ChineseWord //ChineseWord
+        strHQL += "Where Type = '外部' and Status = '发布' ";
         strHQL += " and LangCode = " + "'" + strLangCode + "'";
         strHQL += " Order By ID DESC";
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");

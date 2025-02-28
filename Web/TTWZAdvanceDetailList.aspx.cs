@@ -66,7 +66,7 @@ public partial class TTWZAdvanceDetailList : System.Web.UI.Page
             string strWZCompactHQL = string.Format(@"select * from T_WZCompact as wZCompact
                         where Progress in ('生效','材检')
                         and ProjectCode = (select ProjectCode from T_WZAdvance where AdvanceCode = '{0}')
-                        and CompactCode not in (select CompactCode from T_WZRequest)", strAdvanceCode);   //ChineseWord
+                        and CompactCode not in (select CompactCode from T_WZRequest)", strAdvanceCode);
             DataTable dtCompact = ShareClass.GetDataSetFromSql(strWZCompactHQL, "Compact").Tables[0];
 
             DG_Compact.DataSource = dtCompact;
@@ -104,7 +104,7 @@ public partial class TTWZAdvanceDetailList : System.Web.UI.Page
                     wZAdvanceDetail.SupplierCode = wZCompact.SupplierCode;
                     wZAdvanceDetail.SupplierName = GetSuppliceNameBySuppliceCode(wZCompact.SupplierCode);
                     wZAdvanceDetail.PayMoney = wZCompact.CompactMoney - wZCompact.BeforePayMoney;
-                    wZAdvanceDetail.PayProgress = LanguageHandle.GetWord("LuRu").ToString().Trim();
+                    wZAdvanceDetail.PayProgress = "录入";
 
                     wZAdvanceDetailBLL.AddWZAdvanceDetail(wZAdvanceDetail);
 
@@ -129,7 +129,7 @@ public partial class TTWZAdvanceDetailList : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZYFK").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZYFK+"')", true);
                 return;
             }
         }
@@ -193,7 +193,7 @@ public partial class TTWZAdvanceDetailList : System.Web.UI.Page
                 //重新加载预付款明细列表
                 DataAdvanceDetailBinder();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
             }
         }
         else if (cmdName == "edit")
@@ -219,12 +219,12 @@ public partial class TTWZAdvanceDetailList : System.Web.UI.Page
                 TXT_PayMoney.Text = wZAdvanceDetail.PayMoney.ToString();
                 DDL_UseWay.SelectedValue = wZAdvanceDetail.UseWay;
                 #region 对状态控件
-                //if (wZAdvanceDetail.PayProgress != LanguageHandle.GetWord("LuRu").ToString().Trim())
+                //if (wZAdvanceDetail.PayProgress != "录入")
                 //{
                 //    TXT_PayMoney.ReadOnly = true;
                 //    DDL_UseWay.Enabled = false;
 
-                //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSYBJBW0SBYXXG").ToString().Trim()+"')", true);
+                //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSYBJBW0SBYXXG+"')", true);
                 //    return;
                 //}
                 //else
@@ -286,7 +286,7 @@ public partial class TTWZAdvanceDetailList : System.Web.UI.Page
                             wZAdvanceDetail.SupplierCode = wZCompact.SupplierCode;
                             wZAdvanceDetail.SupplierName = GetSuppliceNameBySuppliceCode(wZCompact.SupplierCode);
                             wZAdvanceDetail.PayMoney = wZCompact.CompactMoney - wZCompact.BeforePayMoney;
-                            wZAdvanceDetail.PayProgress = LanguageHandle.GetWord("LuRu").ToString().Trim();
+                            wZAdvanceDetail.PayProgress = "录入";
 
                             wZAdvanceDetailBLL.AddWZAdvanceDetail(wZAdvanceDetail);
 
@@ -312,13 +312,13 @@ public partial class TTWZAdvanceDetailList : System.Web.UI.Page
                 DataAdvanceDetailBinder();
             }
             else {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZHT").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZHT+"')", true);
                 return;
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZYFK").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZYFK+"')", true);
             return;
         }
     }
@@ -332,12 +332,12 @@ public partial class TTWZAdvanceDetailList : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strPayMoney))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYFKBNWKBC").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZYFKBNWKBC+"')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strUseWay))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYTBNWKBC").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZYTBNWKBC+"')", true);
                 return;
             }
             decimal decimalPayMoney = 0;
@@ -372,12 +372,12 @@ public partial class TTWZAdvanceDetailList : System.Web.UI.Page
                                     where AdvanceCode = '{0}'", decimalTotalPayMoney, wZAdvanceDetail.AdvanceCode);
                 ShareClass.RunSqlCommand(strUpdateWZAdvanceHQL);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZYXGDHTMX").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZYXGDHTMX+"')", true);
             return;
         }
     }

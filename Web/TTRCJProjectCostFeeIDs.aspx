@@ -233,7 +233,7 @@
                                                                                         <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("IsFixed") %>'></asp:TextBox>
                                                                                     </EditItemTemplate>
                                                                                     <ItemTemplate>
-                                                                                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("IsFixed").ToString().Trim()=="0"?"NO":"YES" %>'></asp:Label>
+                                                                                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("IsFixed").ToString().Trim()=="0"?"·ñ":"ÊÇ" %>'></asp:Label>
                                                                                     </ItemTemplate>
                                                                                 </asp:TemplateField>
                                                                                 <asp:CommandField ShowSelectButton="True" />

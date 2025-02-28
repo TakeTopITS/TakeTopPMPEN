@@ -127,14 +127,14 @@
                                                                         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" ShowHeaderWhenEmpty="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" PageSize="12" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowDataBound="GridView1_RowDataBound">
                                                                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                                                             <Columns>
-                                                                                <asp:BoundField DataField="ID" HeaderText="SerialNumber" />
+                                                                                <asp:BoundField DataField="ID" HeaderText="序号" />
                                                                                 <asp:BoundField DataField="Amount" HeaderText="申请金额" />
                                                                                 <asp:BoundField DataField="Purpose" HeaderText="用途说明" />
                                                                                 <asp:BoundField DataField="CostFeeID" HeaderText="大类编号" />
                                                                                 <asp:BoundField DataField="Title" HeaderText="临时设施项目（大类）" />
                                                                                 <asp:BoundField DataField="CostFeeSubID" HeaderText="子类编号" />
                                                                                 <asp:BoundField DataField="SubTitle" HeaderText="间接费项目分类" />
-                                                                                <asp:BoundField DataField="AccountName" HeaderText="AccountingSubjects" />
+                                                                                <asp:BoundField DataField="AccountName" HeaderText="会计科目" />
                                                                                 <asp:BoundField DataField="BudgetTime" HeaderText="预算年月" />
                                                                                 <asp:BoundField DataField="AmountLevel" HeaderText="金额标准" />
                                                                                 <asp:TemplateField HeaderText="审核标记">
@@ -142,7 +142,7 @@
                                                                                         <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("IsReviewed") %>'></asp:TextBox>
                                                                                     </EditItemTemplate>
                                                                                     <ItemTemplate>
-                                                                                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("IsReviewed").ToString().Trim()=="0"?"NO":"YES" %>'></asp:Label>
+                                                                                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("IsReviewed").ToString().Trim()=="0"?"否":"是" %>'></asp:Label>
                                                                                     </ItemTemplate>
                                                                                 </asp:TemplateField>
                                                                                 <asp:BoundField DataField="ActualAmount" HeaderText="执行金额" />

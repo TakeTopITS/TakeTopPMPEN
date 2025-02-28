@@ -190,7 +190,7 @@
                                                                 <tr>
                                                                     <td style="text-align: center" class="formItemBgStyle" colspan="6">
                                                                         <%--<asp:Button ID="btnSave" runat="server" Text="±£´æ" CssClass="inpu" OnClick="btnSave_Click" />--%>&nbsp;&nbsp;
-                                                                        <input type="button" value="Closed" id="BT_Return" class="inpu" onclick="CloseLayer();" />
+                                                                        <input type="button" value="¹Ø±Õ" id="BT_Return" class="inpu" onclick="CloseLayer();" />
                                                                     </td>
                                                                 </tr>
                                                                 <tr style="display:none;">

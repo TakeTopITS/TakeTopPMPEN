@@ -121,7 +121,7 @@ public partial class TTOtherTaskDetail : System.Web.UI.Page
 
             if (strProjectID == "1")
             {
-                strHQL = "Select HomeModuleName, PageName || " + "'" + strTaskID + "' as ModulePage  From T_ProModuleLevelForPage Where ParentModule = 'TaskHandling' and modulename <> 'DailyProjectLog' and LangCode = '" + strLangCode + "' and Visible ='YES' Order By SortNumber ASC";   //ChineseWord
+                strHQL = "Select HomeModuleName, PageName || " + "'" + strTaskID + "' as ModulePage  From T_ProModuleLevelForPage Where ParentModule = 'TaskHandling' and modulename <> 'DailyProjectLog' and LangCode = '" + strLangCode + "' and Visible ='YES' Order By SortNumber ASC";   
             }
             else
             {
@@ -424,7 +424,7 @@ public partial class TTOtherTaskDetail : System.Web.UI.Page
             string strAssignID = ShareClass.GetMyCreatedMaxTaskAssignRecordID(intTaskID.ToString(), strUserCode);
 
             //更改前分派记录状态
-            updateTaskAssignRecordStatus(intPriorID, "Assigned");   //ChineseWord
+            updateTaskAssignRecordStatus(intPriorID, "Assigned");   
 
             //BusinessForm,处理关联的业务表单数据
             ShareClass.InsertOrUpdateTaskAssignRecordWFXMLData("TaskRecord", intPriorID.ToString(), "TaskRecord", strAssignID, strUserCode);

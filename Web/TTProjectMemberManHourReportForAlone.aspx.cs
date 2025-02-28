@@ -121,12 +121,12 @@ public partial class TTProjectMemberManHourReportForAlone : System.Web.UI.Page
         strEndTime = DateTime.Parse(DLC_EndDate.Text).ToString("yyyyMMdd");
 
         strHQL = @"Select DepartCode as 'Department',  
-                   UserName as 'Name',   //ChineseWord
-                   DepartCode as 'DepartmentCode',   //ChineseWord
-                   DepartName as 'DepartmentName',   //ChineseWord
-                   WorkDate as 'WorkingHours',   //ChineseWord
-                   sum(ManHour) as 'DeclaredLaborHours',   //ChineseWord
-                   sum(ConfirmManHour) as 'ConfirmedLaborHours'   //ChineseWord
+                   UserName as 'Name',   
+                   DepartCode as 'DepartmentCode',   
+                   DepartName as 'DepartmentName',   
+                   WorkDate as 'WorkingHours',   
+                   sum(ManHour) as 'DeclaredLaborHours',   
+                   sum(ConfirmManHour) as 'ConfirmedLaborHours'   
                    From V_ProjectMemberManHourSummary";
         strHQL += " Where ProjectID = " + strProjectID;
         strHQL += " and to_char(WorkDate,'yyyymmdd') >= " + "'" + strBeginTime + "'";
@@ -139,7 +139,7 @@ public partial class TTProjectMemberManHourReportForAlone : System.Web.UI.Page
 
         Export3Excel(dtProject, LanguageHandle.GetWord("XiangMu").ToString().Trim() + ": " + strProjectID + " " + strProjectName + LanguageHandle.GetWord("ChengYuanGongShiHuiZongBiaoxls").ToString().Trim());
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);   //ChineseWord
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('导出成功！');", true);   
     }
 
     public void Export3Excel(DataTable dtData, string strFileName)

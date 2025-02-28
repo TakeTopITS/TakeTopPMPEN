@@ -49,9 +49,9 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
                     left join T_ProjectMember a on s.CompetentMaterials = a.UserCode
                     left join T_ProjectMember c on s.ContractWhose = c.UserCode
                     left join T_ProjectMember l on s.CompetentLeadership = l.UserCode
-                    where s.Progress in('Approved','Registration','Review')
+                    where s.Progress in('批准','登记','复审')
                     and s.Auditor = '{0}'
-                    and now()::date- s.ReviewDate::timestamp::date <= {1}", strUserCode, 0);   //ChineseWord
+                    and now()::date- s.ReviewDate::timestamp::date <= {1}", strUserCode, 0);
 
         string strProgress = DDL_Progress.SelectedValue;
         if (!string.IsNullOrEmpty(strProgress))
@@ -110,9 +110,9 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
                 {
                     WZSupplier wZSupplier = (WZSupplier)supplierList[0];
 
-                    //if (wZSupplier.Progress != LanguageHandle.GetWord("DengJi").ToString().Trim())
+                    //if (wZSupplier.Progress != "登记")
                     //{
-                    //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZGYSJDBWPZBNFS").ToString().Trim()+"')", true);
+                    //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZGYSJDBWPZBNFS+"')", true);
                     //    return;
                     //}
 
@@ -130,7 +130,7 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
                     HF_ReviewDocumentURL.Value = strReviewDocumentURL;
                     LT_ReviewDocument.Text = "<a href=\"" + strReviewDocumentURL + "\" class=\"notTab\" target=\"_blank\">" + strReviewDocument + "</a>";
 
-                    LoadRelatedWL("SupplierManagement", "Supplier", int.Parse(strEditID));
+                    LoadRelatedWL("供应商管理", "供应商", int.Parse(strEditID));
                 }
             }
         }
@@ -165,13 +165,13 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
             if (string.IsNullOrEmpty(strReviewDocument) || string.IsNullOrEmpty(strReviewDocumentURL))
             {
                 //string strProgress = HF_Progress.Value;
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('复审资料不能为空！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('复审资料不能为空！');", true);
                 return;
             }
 
             if (string.IsNullOrEmpty(strReviewResult))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择复审结论！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择复审结论！');", true);
                 return;
             }
 
@@ -184,9 +184,9 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
 
 
                 string strGrade = wZSupplier.Grade;
-                if (strGrade == LanguageHandle.GetWord("LinShi").ToString().Trim() && strReviewResult == LanguageHandle.GetWord("BaoChi").ToString().Trim())
+                if (strGrade == "临时" && strReviewResult == "保持")
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('临时供应商资格复审，不允许保持！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('临时供应商资格复审，不允许保持！');", true);
                     return;
                 }
 
@@ -194,7 +194,7 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
                 wZSupplier.ReviewDocument = strReviewDocument;
                 wZSupplier.ReviewDocumentURL = strReviewDocumentURL;
 
-                //wZSupplier.Progress = LanguageHandle.GetWord("FuShen").ToString().Trim();
+                //wZSupplier.Progress = "复审";
 
                 wZSupplierBLL.UpdateWZSupplier(wZSupplier, wZSupplier.ID);
 
@@ -214,7 +214,7 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
 
                 //DDL_ReviewResult.BackColor = Color.White;
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true);
             }
             else
             {
@@ -226,7 +226,7 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
         {
             //string strNewProgress = HF_NewProgress.Value;
             //string strNewAuditor = HF_NewAuditor.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要复审的供应商！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择要复审的供应商！');", true);
             return;
         }
     }
@@ -260,7 +260,7 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
 
                     if (fi.Exists)
                     {
-                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim()+"');</script>");
+                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+Resources.lang.ZZCZTMWJSCSBGMHZSC+"');</script>");
                     }
 
                     if (Directory.Exists(strDocSavePath) == false)
@@ -291,13 +291,13 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
                     }
 
                     //重新加载报价文件列表
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传复审文件成功！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传复审文件成功！');", true);
                 }
                 else
                 {
                     //string strNewProgress = HF_NewProgress.Value;
                     //string strNewAuditor = HF_NewAuditor.Value;
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true);
                     return;
                 }
             }
@@ -328,7 +328,7 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
 
                     if (fi.Exists)
                     {
-                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+LanguageHandle.GetWord("ZZCZTMWJSCSBGMHZSC").ToString().Trim()+"');</script>");
+                        ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('"+Resources.lang.ZZCZTMWJSCSBGMHZSC+"');</script>");
                     }
 
                     if (Directory.Exists(strDocSavePath) == false)
@@ -346,13 +346,13 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
 
                     //重新加载报价文件列表
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传复审文件成功！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上传复审文件成功！');", true);
                 }
                 else
                 {
                     //string strNewProgress = HF_NewProgress.Value;
                     //string strNewAuditor = HF_NewAuditor.Value;
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请选择要上传的文件！');", true);
                     return;
                 }
             }
@@ -388,7 +388,7 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
         string strEditID = HF_NewID.Value;
         if (string.IsNullOrEmpty(strEditID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZYCZDGYSLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZYCZDGYSLB+"')", true);
             return;
         }
 
@@ -433,14 +433,14 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
         string strEditID = HF_NewID.Value;
         if (string.IsNullOrEmpty(strEditID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZYCZDGYSLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZYCZDGYSLB+"')", true);
             return;
         }
 
         string strReviewResult = DDL_ReviewResult.SelectedValue.Trim();
         if(strReviewResult == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZFSJRBNWKQJC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZFSJRBNWKQJC + "')", true);
             return;
         }
 
@@ -449,7 +449,7 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
         string strSupplierName = TXT_SupplierName.Text.Trim();
         if (string.IsNullOrEmpty(strReviewDocument) |  strSupplierName == "")
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSXXDBNWKBQXBC").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYSXXDBNWKBQXBC + "')", true);
             return;
         }
 
@@ -460,7 +460,7 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
         {
             WZSupplier wZSupplier = (WZSupplier)supplierList[0];
 
-            wZSupplier.Progress = LanguageHandle.GetWord("FuShen").ToString().Trim();
+            wZSupplier.Progress = "复审";
 
             wZSupplierBLL.UpdateWZSupplier(wZSupplier, wZSupplier.ID);
 
@@ -469,7 +469,7 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
 
             ControlStatusCloseChange();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('复审成功！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('复审成功！');", true);
         }
         else
         {
@@ -485,7 +485,7 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
         string strEditID = HF_NewID.Value;
         if (string.IsNullOrEmpty(strEditID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZYCZDGYSLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZYCZDGYSLB+"')", true);
             return;
         }
 
@@ -496,7 +496,7 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
         {
             WZSupplier wZSupplier = (WZSupplier)supplierList[0];
 
-            wZSupplier.Progress = LanguageHandle.GetWord("DengJi").ToString().Trim();
+            wZSupplier.Progress = "登记";
 
             wZSupplierBLL.UpdateWZSupplier(wZSupplier, wZSupplier.ID);
 
@@ -505,7 +505,7 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
 
             ControlStatusCloseChange();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('复审退回成功！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('复审退回成功！');", true);
         }
         else
         {
@@ -523,7 +523,7 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
         string strEditID = HF_NewID.Value;
         if (string.IsNullOrEmpty(strEditID))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZYCZDGYSLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZYCZDGYSLB+"')", true);
             return;
         }
 
@@ -546,7 +546,7 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
         string strHQL;
         IList lst;
 
-        strHQL = "from WorkFlow as workFlow where workFlow.WLType = " + "'" + strWLType + "'" + " and workFlow.RelatedType In (" + "'" + strRelatedType + "','Other')" + " and workFlow.RelatedID = " + intRelatedID.ToString();
+        strHQL = "from WorkFlow as workFlow where workFlow.WLType = " + "'" + strWLType + "'" + " and workFlow.RelatedType In (" + "'" + strRelatedType + "','其它')" + " and workFlow.RelatedID = " + intRelatedID.ToString();
         strHQL += " Order by workFlow.WLID DESC";
         WorkFlowBLL workFlowBLL = new WorkFlowBLL();
         lst = workFlowBLL.GetAllWorkFlows(strHQL);
@@ -561,14 +561,14 @@ public partial class TTWZSupplierReview : System.Web.UI.Page
     {
         BT_NewBrowse.Enabled = true;
 
-        if (objProgress == LanguageHandle.GetWord("DengJi").ToString().Trim() && objAuditor == objUserCode)
+        if (objProgress == "登记" && objAuditor == objUserCode)
         {
             BT_NewEdit.Enabled = true;
             BT_NewReview.Enabled = true;
             BT_NewReviewReturn.Enabled = false;
 
         }
-        else if (objProgress == LanguageHandle.GetWord("FuShen").ToString().Trim() && objAuditor == objUserCode)
+        else if (objProgress == "复审" && objAuditor == objUserCode)
         {
             BT_NewEdit.Enabled = false;
             BT_NewReview.Enabled = false;

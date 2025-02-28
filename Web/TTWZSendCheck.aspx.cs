@@ -53,7 +53,7 @@ public partial class TTWZSendCheck : System.Web.UI.Page
                     left join T_ProjectMember p on s.PurchaseEngineer = p.UserCode
                     where s.Checker ='{0}' 
                     and s.Progress in ('材检','开票') 
-                    order by s.TicketTime desc", strUserCode);   //ChineseWord
+                    order by s.TicketTime desc", strUserCode);
         DataTable dtSend = ShareClass.GetDataSetFromSql(strSendHQL, "Send").Tables[0];
 
         DG_Send.DataSource = dtSend;
@@ -77,12 +77,12 @@ public partial class TTWZSendCheck : System.Web.UI.Page
                 if (listSend != null && listSend.Count == 1)
                 {
                     WZSend wZSend = (WZSend)listSend[0];
-                    if (wZSend.Progress == LanguageHandle.GetWord("CaiJian").ToString().Trim())
+                    if (wZSend.Progress == "材检")
                     {
                         string strCheckCode = wZSend.CheckCode;
 
                         //开票
-                        wZSend.Progress = LanguageHandle.GetWord("KaiPiao").ToString().Trim();
+                        wZSend.Progress = "开票";
                         wZSend.CheckTime = DateTime.Now.ToString();
 
                         wZSendBLL.UpdateWZSend(wZSend, wZSend.SendCode);
@@ -90,11 +90,11 @@ public partial class TTWZSendCheck : System.Web.UI.Page
                         //重新加载收料单列表
                         DataSendBinder();
 
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZKPCG").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZKPCG + "')", true);
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWCJBNKP").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWCJBNKP + "')", true);
                         return;
                     }
                 }

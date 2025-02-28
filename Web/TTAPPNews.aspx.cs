@@ -98,7 +98,7 @@ public partial class TTAPPNews : System.Web.UI.Page
 
         strHQL = "Select ID,Title,Content,RelatedDepartName,PublisherCode,PublisherName,PublishTime,'*' as Mark From T_HeadLine ";
         strHQL += " Where (RelatedDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))  or RelatedDepartCode = '" + strDepartCode + "')";
-        strHQL += " And Type = " + "'" + strUserType + "'" + " and Status = 'Publish' Order By ID DESC";   //ChineseWord
+        strHQL += " And Type = " + "'" + strUserType + "'" + " and Status = 'Publish' Order By ID DESC";   
         DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");
 
         DataGrid1.DataSource = ds;

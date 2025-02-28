@@ -102,13 +102,13 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
 
         if (strRelatedType == "LargePlan")
         {
-            strRelatedType = "MasterPlan";   //ChineseWord
+            strRelatedType = "MasterPlan";   
             strRelatedName = GetPlanName(strRelatedID);
         }
 
         if (strRelatedType == "BOM")
         {
-            strRelatedType = "Material";   //ChineseWord
+            strRelatedType = "Material";   
             string strRelatedItemCode = Request.QueryString["RelatedItemCode"].Trim();
             strRelatedID = GetItemBomVersionBomID(strRelatedItemCode, strRelatedID);
         }
@@ -138,7 +138,7 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
                 {
                     strHQL = "from Document as document where (((document.RelatedType = 'Project' and document.RelatedID = " + strProjectID + ")";
                     strHQL += " and (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                    strHQL += " or (document.Visible in ( 'Department','Entire')))";   //ChineseWord
+                    strHQL += " or (document.Visible in ( 'Department','Entire')))";   
                     strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))))";
 
                     strHQL += " or (document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
@@ -155,7 +155,7 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
 
                     strHQL += "or (document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + "))";  
                     strHQL += " and ((document.Visible in ('Meeting','Department') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";  
-                    strHQL += " or (document.Visible = 'Entire' )))";   //ChineseWord
+                    strHQL += " or (document.Visible = 'Entire' )))";   
                 }
             }
 
@@ -165,7 +165,7 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
                 strHQL += " (document.RelatedType = 'Plan' and document.RelatedID = " + strRelatedID;
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
                 strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))";
-                strHQL += " or (document.Visible in ( 'Department','Entire'))))";   //ChineseWord
+                strHQL += " or (document.Visible in ( 'Department','Entire'))))";   
             }
 
             if (strRelatedType == "Task")
@@ -175,7 +175,7 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
                 strHQL += " or ( document.RelatedType = 'Plan' and document.RelatedID in ( Select projectTask.PlanID from ProjectTask as projectTask where projectTask.TaskID = " + strRelatedID + ")))";
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
                 strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))";
-                strHQL += " or (document.Visible in ( 'Department','Entire'))))";   //ChineseWord
+                strHQL += " or (document.Visible in ( 'Department','Entire'))))";   
             }
 
             if (strRelatedType == "Risk")
@@ -184,7 +184,7 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
                 strHQL += " ((document.RelatedType = 'Risk' and document.RelatedID = " + strRelatedID;  
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
                 strHQL += " or (document.Visible = 'Department' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";  
-                strHQL += " or ( document.Visible = 'Entire'))) ";   //ChineseWord
+                strHQL += " or ( document.Visible = 'Entire'))) ";   
                 strHQL += "or ((document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Risk' and meeting.RelatedID =" + strRelatedID + "))";  
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
                 strHQL += " or ( document.Visible = 'Meeting'))))";  
@@ -196,7 +196,7 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
                 strHQL += " ((document.RelatedType = 'Requirement' and document.RelatedID = " + strRelatedID;
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
                 strHQL += " or (document.Visible = 'Department' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";  
-                strHQL += " or ( document.Visible = 'Entire'))) ";   //ChineseWord
+                strHQL += " or ( document.Visible = 'Entire'))) ";   
                 strHQL += "or ((document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Requirement' and meeting.RelatedID =" + strRelatedID + "))";  
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
                 strHQL += " or ( document.Visible = 'Meeting'))))";  
@@ -208,7 +208,7 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
                 strHQL += " ((document.RelatedType = 'Defect' and document.RelatedID = " + strRelatedID;
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
                 strHQL += " or (document.Visible = 'Department' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";  
-                strHQL += " or ( document.Visible = 'Entire'))) ";   //ChineseWord
+                strHQL += " or ( document.Visible = 'Entire'))) ";   
                 strHQL += "or ((document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Requirement' and meeting.RelatedID =" + strRelatedID + "))";  
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
                 strHQL += " or ( document.Visible = 'Meeting'))))";  
@@ -220,7 +220,7 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
                 strHQL += " and (document.RelatedType = 'Workflow' and document.RelatedID = " + strRelatedID;
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
                 strHQL += " or (document.Visible = 'Department' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";  
-                strHQL += " or ( document.Visible = 'Entire'))) ";   //ChineseWord
+                strHQL += " or ( document.Visible = 'Entire'))) ";   
                 strHQL += "or ((document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Workflow' and meeting.RelatedID =" + strRelatedID + "))";  
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
                 strHQL += " or ( document.Visible = 'Meeting')))";  
@@ -230,7 +230,7 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
             {
                 strHQL = " from Document as document where document.RelatedType = 'Collaboration' and document.RelatedID = " + strRelatedID;  
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " )))";   //ChineseWord
+                strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select collaborationMember.CoID from CollaborationMember as collaborationMember where collaborationMember.UserCode = " + "'" + strUserCode + "'" + " )))";   
             }
 
             if (strRelatedType == "Meeting")  
@@ -247,16 +247,16 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
 
             }
 
-            if (strRelatedType == "MasterPlan")   //ChineseWord
+            if (strRelatedType == "MasterPlan")   
             {
-                strHQL = " from Document as document where document.RelatedType = 'MasterPlan' and document.RelatedID = " + strRelatedID;   //ChineseWord
+                strHQL = " from Document as document where document.RelatedType = 'MasterPlan' and document.RelatedID = " + strRelatedID;   
                 strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-                strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select planRelatedLeader.PlanID from PlanRelatedLeader as planRelatedLeader where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + ")))";   //ChineseWord
+                strHQL += " or (document.Visible = 'Entire' and document.RelatedID in (select planRelatedLeader.PlanID from PlanRelatedLeader as planRelatedLeader where planRelatedLeader.LeaderCode = " + "'" + strUserCode + "'" + ")))";   
             }
 
-            if (strRelatedType == "Material")   //ChineseWord
+            if (strRelatedType == "Material")   
             {
-                strHQL = " from Document as document where document.RelatedType = 'Material' and document.RelatedID = " + strRelatedID;   //ChineseWord
+                strHQL = " from Document as document where document.RelatedType = 'Material' and document.RelatedID = " + strRelatedID;   
                 strHQL += " and (document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
 
             }
@@ -348,7 +348,7 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
         {
             strHQL = "from DocTypeFilter as docTypeFilter where docTypeFilter.DocTypeID In (Select document.DocTypeID from Document as document where (((document.RelatedType = 'Project' and document.RelatedID = " + strProjectID + ")";
             strHQL += " and (((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
-            strHQL += " or (document.Visible in ( 'Department','Entire')))";   //ChineseWord
+            strHQL += " or (document.Visible in ( 'Department','Entire')))";   
             strHQL += " or (document.Visible in (select actorGroupDetail.GroupName from ActorGroupDetail as actorGroupDetail where actorGroupDetail.UserCode = " + "'" + strUserCode + "'" + " ))))";
 
             strHQL += " or (document.RelatedType = 'Requirement' and document.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
@@ -365,7 +365,7 @@ public partial class TTDocumentTreeView : System.Web.UI.Page
 
             strHQL += "or (document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + "))";  
             strHQL += " and ((document.Visible in ('Meeting','Department') and document.DepartCode = " + "'" + strDepartCode + "'" + " ) ";  
-            strHQL += " or (document.Visible = 'Entire' ))))";   //ChineseWord
+            strHQL += " or (document.Visible = 'Entire' ))))";   
         }
         else
         {

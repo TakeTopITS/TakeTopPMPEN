@@ -34,7 +34,7 @@ public partial class TTCSNews : System.Web.UI.Page
         {
             strHQL = "Select ID,Title,Content From T_HeadLine Where ";
             strHQL += " (RelatedDepartCode in (select ParentDepartCode from F_GetParentDepartCode(" + "'" + strDepartCode + "'" + "))  or RelatedDepartCode = '" + strDepartCode + "')";
-            strHQL += " and Type = 'External'and Status = 'Publish' Order By ID DESC limit 1";   //ChineseWord
+            strHQL += " and Type = 'External'and Status = 'Publish' Order By ID DESC limit 1";   
             DataSet ds = ShareClass.GetDataSetFromSqlNOOperateLog(strHQL, "T_HeadLine");
 
             if (ds.Tables[0].Rows.Count > 0)

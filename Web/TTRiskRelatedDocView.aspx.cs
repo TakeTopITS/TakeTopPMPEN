@@ -43,7 +43,7 @@ public partial class TTRiskRelatedDocView : System.Web.UI.Page
             strHQL += " (document.RelatedType = 'Risk' and document.RelatedID = " + strRiskID;  
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
             strHQL += " or (document.Visible = 'Department' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";  
-            strHQL += " or ( document.Visible = 'Entire'))) ";   //ChineseWord
+            strHQL += " or ( document.Visible = 'Entire'))) ";   
             strHQL += "or ((document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='Risk' and meeting.RelatedID =" + strRiskID + "))";  
             strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
             strHQL += " or ( document.Visible = 'Meeting')))";  

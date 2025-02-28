@@ -1178,7 +1178,7 @@ public partial class TTProExpense : System.Web.UI.Page
                                 proExpense.Description = dr[i][LanguageHandle.GetWord("YongTu").ToString().Trim()].ToString().Trim();
                                 proExpense.Amount = decimal.Parse(dr[i][LanguageHandle.GetWord("JinE").ToString().Trim()].ToString().Trim());
                                 proExpense.ConfirmAmount = decimal.Parse(dr[i][LanguageHandle.GetWord("JinE").ToString().Trim()].ToString().Trim());
-                                proExpense.CurrencyType = dr[i]["Currency"].ToString().Trim();   //ChineseWord
+                                proExpense.CurrencyType = dr[i]["Currency"].ToString().Trim();   
                                 proExpense.EffectDate = DateTime.Parse(dr[i][LanguageHandle.GetWord("FaShengRiJi").ToString().Trim()].ToString().Trim());
                                 proExpense.RegisterDate = DateTime.Now;
 
@@ -1294,7 +1294,7 @@ public partial class TTProExpense : System.Web.UI.Page
                                 proExpense.Description = dr[i][LanguageHandle.GetWord("YongTu").ToString().Trim()].ToString().Trim();
                                 proExpense.Amount = decimal.Parse(dr[i][LanguageHandle.GetWord("JinE").ToString().Trim()].ToString().Trim());
                                 proExpense.ConfirmAmount = decimal.Parse(dr[i][LanguageHandle.GetWord("JinE").ToString().Trim()].ToString().Trim());
-                                proExpense.CurrencyType = dr[i]["Currency"].ToString().Trim();   //ChineseWord
+                                proExpense.CurrencyType = dr[i]["Currency"].ToString().Trim();   
                                 proExpense.EffectDate = DateTime.Parse(dr[i][LanguageHandle.GetWord("FaShengRiJi").ToString().Trim()].ToString().Trim());
                                 proExpense.RegisterDate = DateTime.Now;
 
@@ -1501,7 +1501,7 @@ public partial class TTProExpense : System.Web.UI.Page
 
             if (strUserCode == ShareClass.GetProjectPMCode(strProjectID))
             {
-                dailyWork.Type = "Lead";   //ChineseWord
+                dailyWork.Type = "Lead";   
             }
             else
             {

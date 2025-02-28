@@ -138,7 +138,7 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("ProjectName").ToString(), 190) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="ProjectManagerName" HeaderText="ProjectManager">
+                                                            <asp:BoundColumn DataField="ProjectManagerName" HeaderText="项目经理">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="50%" />
                                                             </asp:BoundColumn>
                                                         </Columns>
@@ -159,7 +159,7 @@
                                                         <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="确定" />
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                            type="button" value="Closed" />
+                                                            type="button" value="关闭" />
                                                     </div>
                                                 </td>
                                             </tr>

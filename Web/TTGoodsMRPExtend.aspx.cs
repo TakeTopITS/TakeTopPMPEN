@@ -55,7 +55,7 @@ public partial class TTGoodsMRPExtend : System.Web.UI.Page
 
             ShareClass.LoadWFTemplate(strUserCode, "PlanApproval", DL_TemName);
 
-            BT_MRPExtend.Attributes.Add("onclick", "if(!confirm('展开运算会覆盖前次运算的数据，您确定要进行吗？')) return false;");   //ChineseWord
+            BT_MRPExtend.Attributes.Add("onclick", "if(!confirm('展开运算会覆盖前次运算的数据，您确定要进行吗？')) return false;");   
         }
     }
 

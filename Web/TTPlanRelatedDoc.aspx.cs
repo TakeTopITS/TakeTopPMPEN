@@ -90,7 +90,7 @@ public partial class TTPlanRelatedDoc : System.Web.UI.Page
             DocType docType = (DocType)lst1[0];
             strDocType = docType.Type.Trim();
 
-            strHQL = "from Document as document where document.RelatedType = 'MasterPlan' and document.RelatedID =" + strPlanID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";   //ChineseWord
+            strHQL = "from Document as document where document.RelatedType = 'MasterPlan' and document.RelatedID =" + strPlanID + " and  document.DocType = " + "'" + strDocType + "'" + " and document.Status <> 'Deleted' Order by document.DocID DESC";   
             LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLX").ToString().Trim() + strDocType;
 
             //设置缺省的文件类型
@@ -100,7 +100,7 @@ public partial class TTPlanRelatedDoc : System.Web.UI.Page
         }
         else
         {
-            strHQL = "from Document as document where document.RelatedType = 'MasterPlan' and document.RelatedID =" + strPlanID + " and document.Status <> 'Deleted' Order by document.DocID DESC";   //ChineseWord
+            strHQL = "from Document as document where document.RelatedType = 'MasterPlan' and document.RelatedID =" + strPlanID + " and document.Status <> 'Deleted' Order by document.DocID DESC";   
             LB_FindCondition.Text = LanguageHandle.GetWord("CXFWWJLXSY").ToString().Trim();
         }
 
@@ -438,11 +438,11 @@ public partial class TTPlanRelatedDoc : System.Web.UI.Page
         strDepartCode = GetDepartCode(strUserCode);
 
         strHQL = "from Document as document where ";
-        strHQL += " ((document.RelatedType = 'MasterPlan' and document.RelatedID = " + strPlanID;   //ChineseWord
+        strHQL += " ((document.RelatedType = 'MasterPlan' and document.RelatedID = " + strPlanID;   
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
         strHQL += " or (document.Visible = 'Department' and document.DepartCode = " + "'" + strDepartCode + "'" + " )";  
-        strHQL += " or ( document.Visible = 'Entire'))) ";   //ChineseWord
-        strHQL += "or ((document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='MasterPlan' and meeting.RelatedID =" + strPlanID + "))";   //ChineseWord
+        strHQL += " or ( document.Visible = 'Entire'))) ";   
+        strHQL += "or ((document.RelatedType = 'Meeting' and document.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedType='MasterPlan' and meeting.RelatedID =" + strPlanID + "))";   
         strHQL += " and ((document.UploadManCode = " + "'" + strUserCode + "'" + " and document.DepartCode = " + "'" + strDepartCode + "'" + ")";
         strHQL += " or ( document.Visible = 'Meeting'))))";  
         strHQL += " and rtrim(ltrim(document.Status)) <> 'Deleted' order by document.DocID DESC";

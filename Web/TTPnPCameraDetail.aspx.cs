@@ -46,7 +46,7 @@ public partial class TTPnPCameraDetail : System.Web.UI.Page
                                 left join T_Department d on i.ForeignID = d.DepartCode and i.CameraType = 1
                                 left join T_Project p on i.ForeignID = cast( p.ProjectID as varchar(50)) and i.CameraType = 2
                                 where i.ForeignID = '{0}'
-                                order by i.CreateTime desc", strForeignID);   //ChineseWord
+                                order by i.CreateTime desc", strForeignID);   
         DataTable dtCameraInfo = ShareClass.GetDataSetFromSql(strCameraInfoHQL, "strCameraInfoHQL").Tables[0];
         if (strType == "depart")
         {

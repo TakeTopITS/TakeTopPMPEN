@@ -62,20 +62,20 @@ public partial class TTWZReduceEdit : System.Web.UI.Page
                 {
                     WZReduce wZReduce = (WZReduce)listWZReduce[0];
 
-                    if (wZReduce.Process != LanguageHandle.GetWord("BaoPi").ToString().Trim())
+                    if (wZReduce.Process != "报批")
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWBPZTBNPZ").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWBPZTBNPZ + "')", true);
                         return;
                     }
 
-                    wZReduce.Process = "Approved";
+                    wZReduce.Process = "批准";
 
                     wZReduceBLL.UpdateWZReduce(wZReduce, wZReduce.ReduceCode);
 
                     //重新加载列表
                     DataReduceBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZPZCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZPZCG + "')", true);
                 }
             }
         }

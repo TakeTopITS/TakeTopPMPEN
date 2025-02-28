@@ -41,7 +41,7 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             catch (Exception exp)
             {
                 lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessageID.Text = LanguageHandle.GetWord("XiaoXiDiShiDouQuChengBenFeiXia").ToString().Trim() + exp.Message;
+                lb_ShowMessageID.Text = "消息提示：读取成本费项大类信息列表失败！" + exp.Message;
             }
         }
     }
@@ -88,7 +88,7 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
         tbID.Text = GV_CostFeeID.Rows[GV_CostFeeID.SelectedIndex].Cells[0].Text;
         tbTitle.Text = GV_CostFeeID.Rows[GV_CostFeeID.SelectedIndex].Cells[1].Text;
         Label lbl1 = (Label)GV_CostFeeID.Rows[GV_CostFeeID.SelectedIndex].FindControl("Label1");
-        if (LanguageHandle.GetWord("ZhiJieFeiXiangXiangMu").ToString().Trim() == lbl1.Text)
+        if ("直接费项项目" == lbl1.Text)
             DDL_FeeType.SelectedIndex = 0;
         else
             DDL_FeeType.SelectedIndex = 1;
@@ -103,7 +103,7 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
         if (tbTitle.Text.Trim().Length == 0 || tbTitle.Text.Trim().Length > 50)
         {
             lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageID.Text = LanguageHandle.GetWord("XiaoXiDiShiZhongWenBiaoTiBuNen").ToString().Trim();
+            lb_ShowMessageID.Text = "消息提示：[中文标题]不能为空，应在50个字符（25个汉字）,请重新输入再试！";
             return false;
         }
 
@@ -123,9 +123,9 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             if (true == IsExistSameItem(0, tbTitle.Text, true))
             {
                 lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-                StringBuilder sb = new StringBuilder(LanguageHandle.GetWord("XiaoXiDiShiXinZengCaoZuoShiBai").ToString().Trim());
+                StringBuilder sb = new StringBuilder("消息提示：新增操作失败，成本费项名【");
                 sb.Append(tbTitle.Text);
-                sb.Append(LanguageHandle.GetWord("YiJingCunZaiBuNengChongFuTianJ").ToString().Trim());
+                sb.Append("】已经存在，不能重复添加！");
                 lb_ShowMessageID.Text = sb.ToString() ;
                 return;
             } 
@@ -138,14 +138,14 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             cfiBll.AddRCJProjectCostFeeIDs(cfi);
 
             lb_ShowMessageID.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessageID.Text = LanguageHandle.GetWord("XiaoXiDiShiXinZengCaoZuoChengG").ToString().Trim();
+            lb_ShowMessageID.Text = "消息提示：新增操作成功！";
 
             InitDataListForIDs();
         }
         catch (Exception exp)
         {
             lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageID.Text = LanguageHandle.GetWord("XiaoXiDiShiXinZengCaoZuoShiBai").ToString().Trim() + exp.Message;
+            lb_ShowMessageID.Text = "消息提示：新增操作失败，请检查成本费项大类编号是否重复：" + exp.Message;
         }
     }
 
@@ -162,16 +162,16 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             if (GV_CostFeeID.SelectedIndex == -1)
             {
                 lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessageID.Text = LanguageHandle.GetWord("XiaoXiDiShiQingShuaZeYiHangJin").ToString().Trim();
+                lb_ShowMessageID.Text = "消息提示：请选择一行进行修改操作！";
                 return;
             }
 
             if (true == IsExistSameItem(Convert.ToInt32(tbID.Text), tbTitle.Text, false))
             {
                 lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-                StringBuilder sb = new StringBuilder(LanguageHandle.GetWord("XiaoXiDiShiXiuGaiCaoZuoShiBaiY").ToString().Trim());
+                StringBuilder sb = new StringBuilder("消息提示：修改操作失败，要修改的成本费项名【");
                 sb.Append(tbTitle.Text);
-                sb.Append(LanguageHandle.GetWord("YiJingCunZaiBuNengChongFuTianJ").ToString().Trim());
+                sb.Append("】已经存在，不能重复添加！");
                 lb_ShowMessageID.Text = sb.ToString();
                 return;
             } 
@@ -185,14 +185,14 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             cfiBll.UpdateRCJProjectCostFeeIDs(cfi,cfi.ID);
 
             lb_ShowMessageID.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessageID.Text = LanguageHandle.GetWord("XiaoXiDiShiXiuGaiCaoZuoChengGo").ToString().Trim();
+            lb_ShowMessageID.Text = "消息提示：修改操作成功！";
 
             InitDataListForIDs();
         }
         catch (Exception exp)
         {
             lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageID.Text = LanguageHandle.GetWord("XiaoXiDiShiXiuGaiCaoZuoShiBaiQ").ToString().Trim() + exp.Message;
+            lb_ShowMessageID.Text = "消息提示：修改操作失败，请检查成本费项大类编号是否重复：" + exp.Message;
         }       
     }
 
@@ -217,7 +217,7 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             if (GV_CostFeeID.SelectedIndex == -1)
             {
                 lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessageID.Text = LanguageHandle.GetWord("XiaoXiDiShiQingShuaZeYiHangJin").ToString().Trim();
+                lb_ShowMessageID.Text = "消息提示：请选择一行进行删除操作！";
                 return;
             }
 
@@ -225,7 +225,7 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             if(IfExistsSubIds() == true)
             {
                 lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessageID.Text = LanguageHandle.GetWord("XiaoXiDiShiQingXianShanChuGaiC").ToString().Trim();
+                lb_ShowMessageID.Text = "消息提示：请先删除该成本费项下的子类项目后再进行删除操作！";
                 return;
             }
 
@@ -237,14 +237,14 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             cfiBll.DeleteRCJProjectCostFeeIDs(cfi);
 
             lb_ShowMessageID.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessageID.Text = LanguageHandle.GetWord("XiaoXiDiShiShanChuCaoZuoChengG").ToString().Trim();
+            lb_ShowMessageID.Text = "消息提示：删除操作成功！";
 
             InitDataListForIDs();
         }
         catch (Exception exp)
         {
             lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageID.Text = LanguageHandle.GetWord("XiaoXiDiShiShanChuCaoZuoShiBai").ToString().Trim() + exp.Message;
+            lb_ShowMessageID.Text = "消息提示：删除操作失败：" + exp.Message;
         }
 
     }
@@ -270,7 +270,7 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
         TB_FeeType.Text = GV_CostFeeSubID.Rows[GV_CostFeeSubID.SelectedIndex].Cells[1].Text;
         TB_SubFeeTitle.Text = GV_CostFeeSubID.Rows[GV_CostFeeSubID.SelectedIndex].Cells[2].Text;
         Label lbl1 = (Label)GV_CostFeeSubID.Rows[GV_CostFeeSubID.SelectedIndex].FindControl("Label1");
-        if ("NO" == lbl1.Text)
+        if ("否" == lbl1.Text)
             DDL_IsFixed.SelectedIndex = 1;
         else
             DDL_IsFixed.SelectedIndex = 0;
@@ -281,7 +281,7 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
         if (TB_SubFeeTitle.Text.Trim().Length == 0 || tbTitle.Text.Trim().Length > 50)
         {
             lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageSubID.Text = LanguageHandle.GetWord("XiaoXiDiShiZhongWenBiaoTiBuNen").ToString().Trim();
+            lb_ShowMessageSubID.Text = "消息提示：[中文标题]不能为空，应在50个字符（25个汉字），请重新输入再试！";
             return false;
         }
 
@@ -299,7 +299,7 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
         if (GV_CostFeeID.SelectedIndex == -1)
         {
             lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageSubID.Text = LanguageHandle.GetWord("XiaoXiDiShiQingShuaZeYiHangDaL").ToString().Trim();
+            lb_ShowMessageSubID.Text = "消息提示：请选择一行大类费项再进行修改操作！";
             return;
         }
 
@@ -308,9 +308,9 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             if (true == IsExistSameSubItem(0, TB_SubFeeTitle.Text, true))
             {
                 lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-                StringBuilder sb = new StringBuilder(LanguageHandle.GetWord("XiaoXiDiShiXinZengCaoZuoShiBai").ToString().Trim());
+                StringBuilder sb = new StringBuilder("消息提示：新增操作失败，要新增的成本费子项名【");
                 sb.Append(TB_SubFeeTitle.Text);
-                sb.Append(LanguageHandle.GetWord("YiJingCunZaiBuNengChongFuTianJ").ToString().Trim());
+                sb.Append("】已经存在，不能重复添加！");
                 lb_ShowMessageSubID.Text = sb.ToString();
                 return;
             } 
@@ -324,14 +324,14 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             cfsiBll.AddRCJProjectCostFeeSubIDs(cfsi);
 
             lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessageSubID.Text = LanguageHandle.GetWord("XiaoXiDiShiXinZengCaoZuoChengG").ToString().Trim();
+            lb_ShowMessageSubID.Text = "消息提示：新增操作成功！";
 
             InitDataListForSubIDs();
         }
         catch (Exception exp)
         {
             lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageSubID.Text = LanguageHandle.GetWord("XiaoXiDiShiXinZengCaoZuoShiBai").ToString().Trim() + exp.Message;
+            lb_ShowMessageSubID.Text = "消息提示：新增操作失败，请检查成本费项子类编号是否重复：" + exp.Message;
         }
     }
 
@@ -348,16 +348,16 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             if (GV_CostFeeSubID.SelectedIndex == -1)
             {
                 lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessageSubID.Text = LanguageHandle.GetWord("XiaoXiDiShiQingShuaZeYiHangJin").ToString().Trim();
+                lb_ShowMessageSubID.Text = "消息提示：请选择一行进行修改操作！";
                 return;
             }
 
             if (true == IsExistSameSubItem(Convert.ToInt32(TB_SubID.Text) , TB_SubFeeTitle.Text, false))
             {
                 lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-                StringBuilder sb = new StringBuilder(LanguageHandle.GetWord("XiaoXiDiShiXiuGaiCaoZuoShiBaiY").ToString().Trim());
+                StringBuilder sb = new StringBuilder("消息提示：修改操作失败，要修改的成本费子项名【");
                 sb.Append(TB_SubFeeTitle.Text);
-                sb.Append(LanguageHandle.GetWord("YiJingCunZaiBuNengChongFuTianJ").ToString().Trim());
+                sb.Append("】已经存在，不能重复添加！");
                 lb_ShowMessageSubID.Text = sb.ToString();
                 return;
             }
@@ -372,14 +372,14 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             cfsiBll.UpdateRCJProjectCostFeeSubIDs(cfsi, cfsi.ID);
 
             lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessageSubID.Text = LanguageHandle.GetWord("XiaoXiDiShiXiuGaiCaoZuoChengGo").ToString().Trim();
+            lb_ShowMessageSubID.Text = "消息提示：修改操作成功！";
 
             InitDataListForSubIDs();
         }
         catch (Exception exp)
         {
             lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageSubID.Text = LanguageHandle.GetWord("XiaoXiDiShiXiuGaiCaoZuoShiBaiQ").ToString().Trim() + exp.Message;
+            lb_ShowMessageSubID.Text = "消息提示：修改操作失败，请检查成本费项大类编号是否重复：" + exp.Message;
         } 
     }
 
@@ -392,16 +392,16 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             if (GV_CostFeeSubID.SelectedIndex == -1)
             {
                 lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessageSubID.Text = LanguageHandle.GetWord("XiaoXiDiShiQingShuaZeYiHangJin").ToString().Trim();
+                lb_ShowMessageSubID.Text = "消息提示：请选择一行进行删除操作！";
                 return;
             }
 
             //如果是固定子类费项则不可以删除
             Label lbl1 = (Label)GV_CostFeeSubID.Rows[GV_CostFeeSubID.SelectedIndex].FindControl("Label1");
-            if ("YES" == lbl1.Text)
+            if ("是" == lbl1.Text)
             {
                 lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessageSubID.Text = LanguageHandle.GetWord("XiaoXiDiShiGuDingZiLeiFeiXiang").ToString().Trim();
+                lb_ShowMessageSubID.Text = "消息提示：固定子类费项不可以进行删除操作！";
                 return;
             }
 
@@ -413,14 +413,14 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
             cfsiBll.DeleteRCJProjectCostFeeSubIDs(cfsi);
 
             lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessageSubID.Text = LanguageHandle.GetWord("XiaoXiDiShiShanChuCaoZuoChengG").ToString().Trim();
+            lb_ShowMessageSubID.Text = "消息提示：删除操作成功！";
 
             InitDataListForSubIDs();
         }
         catch (Exception exp)
         {
             lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageSubID.Text = LanguageHandle.GetWord("XiaoXiDiShiShanChuCaoZuoShiBai").ToString().Trim() + exp.Message;
+            lb_ShowMessageSubID.Text = "消息提示：删除操作失败：" + exp.Message;
         }
 
     }
@@ -450,7 +450,7 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessageID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageID.Text = LanguageHandle.GetWord("XiaoXiDiShiChaXunCaoZuoShiBai").ToString().Trim() + exp.Message;
+            lb_ShowMessageID.Text = "消息提示：查询操作失败：" + exp.Message;
 
             return true;
         }
@@ -482,7 +482,7 @@ public partial class TTRCJProjectCostFeeIDs : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessageSubID.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessageSubID.Text = LanguageHandle.GetWord("XiaoXiDiShiChaXunCaoZuoShiBai").ToString().Trim() + exp.Message;
+            lb_ShowMessageSubID.Text = "消息提示：查询操作失败：" + exp.Message;
 
             return true;
         }

@@ -40,8 +40,8 @@ public partial class TTWZAdvanceApprove : System.Web.UI.Page
     {
         string strWZAdvanceHQL = string.Format(@"select a.*,m.UserName as MarkerName from T_WZAdvance a
                     left join T_ProjectMember m on a.Marker = m.UserCode 
-                    where a.Progress ='Approval' 
-                    order by a.AdvanceTime desc", strUserCode);   //ChineseWord
+                    where a.Progress ='报批' 
+                    order by a.AdvanceTime desc", strUserCode);
         DataTable dtWZAdvance = ShareClass.GetDataSetFromSql(strWZAdvanceHQL, "Advance").Tables[0];
 
         DG_Advance.DataSource = dtWZAdvance;
@@ -72,20 +72,20 @@ public partial class TTWZAdvanceApprove : System.Web.UI.Page
                 {
                     WZAdvance wZAdvance = (WZAdvance)listWZAdvance[0];
 
-                    if (wZAdvance.Progress != LanguageHandle.GetWord("BaoPi").ToString().Trim())
+                    if (wZAdvance.Progress != "报批")
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSYBJBW0BYXBJ").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSYBJBW0BYXBJ + "')", true);
                         return;
                     }
 
-                    wZAdvance.Progress = "Approved";
+                    wZAdvance.Progress = "批准";
 
                     wZAdvanceBLL.UpdateWZAdvance(wZAdvance, wZAdvance.AdvanceCode);
 
                     //重新加载列表
                     DataAdvanceBinder();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZPZCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZPZCG + "')", true);
                 }
             }
         }

@@ -159,11 +159,11 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strPurchaseMethod))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('供应方式不能为空，请补充！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('供应方式不能为空，请补充！');", true);
                 return;
             }
 
-            if (strPurchaseMethod == LanguageHandle.GetWord("XunBiJia").ToString().Trim() || strPurchaseMethod == LanguageHandle.GetWord("QiaoBiao").ToString().Trim() || strPurchaseMethod == LanguageHandle.GetWord("KuangJia").ToString().Trim())
+            if (strPurchaseMethod == "询比价" || strPurchaseMethod == "招标" || strPurchaseMethod == "框架")
             {
                 //当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数≥3
                 bool IsDaiYu = true;
@@ -173,7 +173,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
                 }
                 if (IsDaiYu)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数≥3！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数≥3！');", true);
                     return;
                 }
             }
@@ -413,7 +413,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购文件不存在！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('采购文件不存在！');", true);
                 return;
             }
 
@@ -427,7 +427,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
     protected void BT_SelectSupplier1_Click(object sender, EventArgs e)
     {
         string strPurchaseMothod = DDL_PurchaseMethod.SelectedValue;
-        //if (strPurchaseMothod == "独家" || strPurchaseMothod == "议价" || strPurchaseMothod == "Emergency" || strPurchaseMothod == "小额")
+        //if (strPurchaseMothod == "独家" || strPurchaseMothod == "议价" || strPurchaseMothod == "紧急" || strPurchaseMothod == "小额")
         //{
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "SelectSupplier('HF_Supplier1','TXT_Supplier1');", true);
         //}
@@ -436,7 +436,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
     protected void BT_SelectSupplier2_Click(object sender, EventArgs e)
     {
         string strPurchaseMothod = DDL_PurchaseMethod.SelectedValue;
-        //if (strPurchaseMothod == "独家" || strPurchaseMothod == "议价" || strPurchaseMothod == "Emergency" || strPurchaseMothod == "小额")
+        //if (strPurchaseMothod == "独家" || strPurchaseMothod == "议价" || strPurchaseMothod == "紧急" || strPurchaseMothod == "小额")
         //{
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "SelectSupplier('HF_Supplier2','TXT_Supplier2');", true);
         //}
@@ -446,7 +446,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
     protected void BT_SelectSupplier3_Click(object sender, EventArgs e)
     {
         string strPurchaseMothod = DDL_PurchaseMethod.SelectedValue;
-        //if (strPurchaseMothod == "独家" || strPurchaseMothod == "议价" || strPurchaseMothod == "Emergency" || strPurchaseMothod == "小额")
+        //if (strPurchaseMothod == "独家" || strPurchaseMothod == "议价" || strPurchaseMothod == "紧急" || strPurchaseMothod == "小额")
         //{
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "SelectSupplier('HF_Supplier3','TXT_Supplier3');", true);
         //}
@@ -457,7 +457,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
     protected void BT_SelectSupplier4_Click(object sender, EventArgs e)
     {
         string strPurchaseMothod = DDL_PurchaseMethod.SelectedValue;
-        //if (strPurchaseMothod == "独家" || strPurchaseMothod == "议价" || strPurchaseMothod == "Emergency" || strPurchaseMothod == "小额")
+        //if (strPurchaseMothod == "独家" || strPurchaseMothod == "议价" || strPurchaseMothod == "紧急" || strPurchaseMothod == "小额")
         //{
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "SelectSupplier('HF_Supplier4','TXT_Supplier4');", true);
         //}
@@ -468,7 +468,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
     protected void BT_SelectSupplier5_Click(object sender, EventArgs e)
     {
         string strPurchaseMothod = DDL_PurchaseMethod.SelectedValue;
-        //if (strPurchaseMothod == "独家" || strPurchaseMothod == "议价" || strPurchaseMothod == "Emergency" || strPurchaseMothod == "小额")
+        //if (strPurchaseMothod == "独家" || strPurchaseMothod == "议价" || strPurchaseMothod == "紧急" || strPurchaseMothod == "小额")
         //{
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "SelectSupplier('HF_Supplier5','TXT_Supplier5');", true);
         //}
@@ -478,7 +478,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
     protected void BT_SelectSupplier6_Click(object sender, EventArgs e)
     {
         string strPurchaseMothod = DDL_PurchaseMethod.SelectedValue;
-        //if (strPurchaseMothod == "独家" || strPurchaseMothod == "议价" || strPurchaseMothod == "Emergency" || strPurchaseMothod == "小额")
+        //if (strPurchaseMothod == "独家" || strPurchaseMothod == "议价" || strPurchaseMothod == "紧急" || strPurchaseMothod == "小额")
         //{
             ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "SelectSupplier('HF_Supplier6','TXT_Supplier6');", true);
         //}
@@ -512,7 +512,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
         string strSupplier3 = HF_Supplier3.Value;
 
 
-        if (strPurchaseMethod == LanguageHandle.GetWord("XunBiJia").ToString().Trim() || strPurchaseMethod == LanguageHandle.GetWord("QiaoBiao").ToString().Trim() || strPurchaseMethod == LanguageHandle.GetWord("KuangJia").ToString().Trim())
+        if (strPurchaseMethod == "询比价" || strPurchaseMethod == "招标" || strPurchaseMethod == "框架")
         {
             //当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数≥3
             bool IsDaiYu = true;
@@ -522,7 +522,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
             }
             if (IsDaiYu)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数≥3！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数≥3！');", true);
 
                 HF_Supplier1.Value = strSupplier11;
                 TXT_Supplier1.Text = strSupplierName11;
@@ -563,7 +563,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
         string strSupplier3 = HF_Supplier3.Value;
 
 
-        if (strPurchaseMethod == LanguageHandle.GetWord("XunBiJia").ToString().Trim() || strPurchaseMethod == LanguageHandle.GetWord("QiaoBiao").ToString().Trim() || strPurchaseMethod == LanguageHandle.GetWord("KuangJia").ToString().Trim())
+        if (strPurchaseMethod == "询比价" || strPurchaseMethod == "招标" || strPurchaseMethod == "框架")
         {
             //当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数≥3
             bool IsDaiYu = true;
@@ -573,7 +573,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
             }
             if (IsDaiYu)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数≥3！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数≥3！');", true);
 
                 HF_Supplier2.Value = strSupplier22;
                 TXT_Supplier2.Text = strSupplierName22;
@@ -615,7 +615,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
         string strSupplier3 = HF_Supplier3.Value;
 
 
-        if (strPurchaseMethod == LanguageHandle.GetWord("XunBiJia").ToString().Trim() || strPurchaseMethod == LanguageHandle.GetWord("QiaoBiao").ToString().Trim() || strPurchaseMethod == LanguageHandle.GetWord("KuangJia").ToString().Trim())
+        if (strPurchaseMethod == "询比价" || strPurchaseMethod == "招标" || strPurchaseMethod == "框架")
         {
             //当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数≥3
             bool IsDaiYu = true;
@@ -625,7 +625,7 @@ public partial class TTWZPurchaseUpLeadListEdit : System.Web.UI.Page
             }
             if (IsDaiYu)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数≥3！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('当采购文件〈采购方式〉＝询比价、招标、框架时，供应商个数≥3！');", true);
 
                 HF_Supplier3.Value = strSupplier33;
                 TXT_Supplier3.Text = strSupplierName33;

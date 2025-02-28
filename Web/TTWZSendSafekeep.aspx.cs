@@ -53,8 +53,8 @@ public partial class TTWZSendSafekeep : System.Web.UI.Page
                     left join T_ProjectMember f on s.Safekeeper = f.UserCode
                     left join T_ProjectMember p on s.PurchaseEngineer = p.UserCode
                     where s.Safekeeper ='{0}' 
-                    and s.Progress in ('开票','Material Issuance') 
-                    order by s.TicketTime desc", strUserCode);   //ChineseWord
+                    and s.Progress in ('开票','发料') 
+                    order by s.TicketTime desc", strUserCode);
         DataTable dtSend = ShareClass.GetDataSetFromSql(strSendHQL, "Send").Tables[0];
 
         DG_Send.DataSource = dtSend;
@@ -78,20 +78,20 @@ public partial class TTWZSendSafekeep : System.Web.UI.Page
                 if (listSend != null && listSend.Count == 1)
                 {
                     WZSend wZSend = (WZSend)listSend[0];
-                    if (wZSend.Progress == LanguageHandle.GetWord("KaiPiao").ToString().Trim())
+                    if (wZSend.Progress == "开票")
                     {
-                        wZSend.Progress = LanguageHandle.GetWord("FaLiao").ToString().Trim();
+                        wZSend.Progress = "发料";
                         wZSend.IsMark = -1;
                         wZSend.SendTime = DateTime.Now.ToString();
 
                         //上帐
                         string strMessage = AccountHandler(wZSend.SendCode);
-                        if (strMessage == "Success")
+                        if (strMessage == "成功")
                         {
                             //重新加载收料单列表
                             DataSendBinder();
 
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSZCG").ToString().Trim() + "')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSZCG + "')", true);
                         }
                         else
                         {
@@ -100,7 +100,7 @@ public partial class TTWZSendSafekeep : System.Web.UI.Page
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWKPBNSZ").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWKPBNSZ + "')", true);
                         return;
                     }
                 }
@@ -116,20 +116,20 @@ public partial class TTWZSendSafekeep : System.Web.UI.Page
                 if (listSend != null && listSend.Count == 1)
                 {
                     WZSend wZSend = (WZSend)listSend[0];
-                    if (wZSend.Progress == LanguageHandle.GetWord("FaLiao").ToString().Trim())
+                    if (wZSend.Progress == "发料")
                     {
-                        wZSend.Progress = LanguageHandle.GetWord("KaiPiao").ToString().Trim();
+                        wZSend.Progress = "开票";
                         wZSend.IsMark = 0;
                         wZSend.SendTime = "-";
 
                         //上帐
                         string strMessage = cancelAccountHandler(wZSend.SendCode);
-                        if (strMessage == "Success")
+                        if (strMessage == "成功")
                         {
                             //重新加载收料单列表
                             DataSendBinder();
 
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZQuXiaoShangZhangChengGong").ToString().Trim()+"')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('取消上帐成功')", true);
                         }
                         else
                         {
@@ -138,7 +138,7 @@ public partial class TTWZSendSafekeep : System.Web.UI.Page
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" +LanguageHandle.GetWord("ZZJinDuBuWeiFaLiaoBuNengQuXiao").ToString().Trim()+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('进度不为发料，不能取消上帐！')", true);
                         return;
                     }
                 }
@@ -213,7 +213,7 @@ public partial class TTWZSendSafekeep : System.Web.UI.Page
 
                     //发料单<收料日期>=系统日期，进度=发料，结算标记=-1
                     wZSend.SendTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                    wZSend.Progress = LanguageHandle.GetWord("FaLiao").ToString().Trim();
+                    wZSend.Progress = "发料";
                     wZSend.IsMark = -1;
                     //修改收料单
                     wZSendBLL.UpdateWZSend(wZSend, wZSend.SendCode);
@@ -252,30 +252,30 @@ public partial class TTWZSendSafekeep : System.Web.UI.Page
                         wZProjectBLL.UpdateWZProject(wZProject, wZProject.ProjectCode);
                     }
 
-                    //计划明细<进度> = LanguageHandle.GetWord("FaLiao").ToString().Trim()
-                    string strUpdatePlanDetailHQL = "update T_WZPickingPlanDetail set Progress = 'Material Issuance' where ID = " + wZSend.PlanDetaiID;   //ChineseWord
+                    //计划明细<进度> = "发料"
+                    string strUpdatePlanDetailHQL = "update T_WZPickingPlanDetail set Progress = '发料' where ID = " + wZSend.PlanDetaiID;
                     ShareClass.RunSqlCommand(strUpdatePlanDetailHQL);
 
-                    strResult = "Success";
+                    strResult = "成功";
                     return strResult;
                 }
                 else if (lstWZStore.Count > 1)
                 {
                     //库存中存在多个当前物资
-                    strResult = LanguageHandle.GetWord("KuCunZhongCunZaiDuoGeKuBieWuZi").ToString().Trim() + strStockCode + "," + strObjectCode + "," + strCheckCode + ")";
+                    strResult = "库存中存在多个，库别，物资代码，检号一样的(" + strStockCode + "," + strObjectCode + "," + strCheckCode + ")";
                     return strResult;
                 }
                 else
                 {
                     //库存中不存在当前物资
-                    strResult = LanguageHandle.GetWord("KuCunZhongBuCunZaiDangQianWuZi").ToString().Trim() + strStockCode + "," + strObjectCode + "," + strCheckCode + ")";
+                    strResult = "库存中不存在当前物资，库别，物资代码，检号一样的(" + strStockCode + "," + strObjectCode + "," + strCheckCode + ")";
                     return strResult;
                 }
             }
         }
         catch (Exception ex)
         {
-            strResult = LanguageHandle.GetWord("ChuCuoLeQingLianJiGuanLiYuan").ToString().Trim();
+            strResult = "出错了，请联系管理员！";
         }
         return strResult;
     }
@@ -333,7 +333,7 @@ public partial class TTWZSendSafekeep : System.Web.UI.Page
 
                     //发料单<收料日期>=系统日期，进度=发料，结算标记=-1
                     wZSend.SendTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                    wZSend.Progress = LanguageHandle.GetWord("KaiPiao").ToString().Trim();
+                    wZSend.Progress = "开票";
                     wZSend.IsMark = 0;
                     //修改收料单
                     wZSendBLL.UpdateWZSend(wZSend, wZSend.SendCode);
@@ -372,23 +372,23 @@ public partial class TTWZSendSafekeep : System.Web.UI.Page
                         wZProjectBLL.UpdateWZProject(wZProject, wZProject.ProjectCode);
                     }
 
-                    //计划明细<进度> = LanguageHandle.GetWord("FaLiao").ToString().Trim()
-                    string strUpdatePlanDetailHQL = "update T_WZPickingPlanDetail set Progress = '开票' where ID = " + wZSend.PlanDetaiID;   //ChineseWord
+                    //计划明细<进度> = "发料"
+                    string strUpdatePlanDetailHQL = "update T_WZPickingPlanDetail set Progress = '开票' where ID = " + wZSend.PlanDetaiID;
                     ShareClass.RunSqlCommand(strUpdatePlanDetailHQL);
 
-                    strResult = "Success";
+                    strResult = "成功";
                     return strResult;
                 }
                 else if (lstWZStore.Count > 1)
                 {
                     //库存中存在多个当前物资
-                    strResult = LanguageHandle.GetWord("KuCunZhongCunZaiDuoGeKuBieWuZi").ToString().Trim() + strStockCode + "," + strObjectCode + "," + strCheckCode + ")";
+                    strResult = "库存中存在多个，库别，物资代码，检号一样的(" + strStockCode + "," + strObjectCode + "," + strCheckCode + ")";
                     return strResult;
                 }
                 else
                 {
                     //库存中不存在当前物资
-                    strResult = LanguageHandle.GetWord("KuCunZhongBuCunZaiDangQianWuZi").ToString().Trim() + strStockCode + "," + strObjectCode + "," + strCheckCode + ")";
+                    strResult = "库存中不存在当前物资，库别，物资代码，检号一样的(" + strStockCode + "," + strObjectCode + "," + strCheckCode + ")";
                     return strResult;
                 }
             }

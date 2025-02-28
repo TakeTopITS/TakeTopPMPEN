@@ -47,7 +47,7 @@ public partial class TTRCJProjectAdjustPrice : System.Web.UI.Page
             catch (Exception exp)
             {
                 lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiChaXunCaoZuoChuXianY").ToString().Trim() + exp.Message;
+                lb_ShowMessage.Text = "错误提示：查询操作出现异常： " + exp.Message;
             }
         }
     }
@@ -57,97 +57,97 @@ public partial class TTRCJProjectAdjustPrice : System.Web.UI.Page
         if (false == RCJShareClass.isNumberString(TB_ItemNum.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiShuLiangShuRuYouWuYi").ToString().Trim();
+            lb_ShowMessage.Text = "错误提示：数量输入有误，应为数字且大于等于零，请正确输入后再进行操作！";
             return false;
         } 
         if (false == RCJShareClass.isNumberString(TB_DeviceAdjust.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiSheBeiDiaoZhengChanJ").ToString().Trim();
+            lb_ShowMessage.Text = "错误提示：设备调整单价输入有误，应为数字且大于等于零，请正确输入后再进行操作！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_MainAdjust.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiZhuCaiDiaoZhengChanJ").ToString().Trim();
+            lb_ShowMessage.Text = "错误提示：主材调整单价输入有误，应为数字且大于等于零，请正确输入后再进行操作！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_WageAdjust.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiRenGongDiaoZhengChan").ToString().Trim();
+            lb_ShowMessage.Text = "错误提示：人工调整单价输入有误，应为数字且大于等于零，请正确输入后再进行操作！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_MartAdjust.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiCaiLiaoDiaoZhengChan").ToString().Trim();
+            lb_ShowMessage.Text = "错误提示：材料调整单价输入有误，应为数字且大于等于零，请正确输入后再进行操作！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_MachineAdjust.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiJiXieDiaoZhengChanJi").ToString().Trim();
+            lb_ShowMessage.Text = "错误提示：机械调整单价输入有误，应为数字且大于等于零，请正确输入后再进行操作！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemTaxesBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiDiaoZhengShuiJinGeJi").ToString().Trim();
+            lb_ShowMessage.Text = "错误提示：调整税金合价输入有误，应为数字且大于等于零，请正确输入后再进行操作！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(tb_ProjectBCWS.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiYuSuanGeJiGeJiaBCWSS").ToString().Trim();
+            lb_ShowMessage.Text = "错误提示：预算合计合价(BCWS)输入有误，应为数字且大于等于零，请正确输入后再进行操作！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemPriceDeviceBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiYuSuanSheBeiGeJiaShu").ToString().Trim();
+            lb_ShowMessage.Text = "错误提示：预算设备合价输入有误，应为数字且大于等于零，请正确输入后再进行操作！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemPriceMainMaterialBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiZhuCaiYuSuanGeJiaShu").ToString().Trim();
+            lb_ShowMessage.Text = "错误提示：主材预算合价输入有误，应为数字且大于等于零，请正确输入后再进行操作！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemPriceWageBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiRenGongYuSuanGeJiaSh").ToString().Trim();
+            lb_ShowMessage.Text = "错误提示：人工预算合价输入有误，应为数字且大于等于零，请正确输入后再进行操作！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(tb_ProjectMaterialBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiCaiLiaoYuSuanGeJiaSh").ToString().Trim();
+            lb_ShowMessage.Text = "错误提示：材料预算合价输入有误，应为数字且大于等于零，请正确输入后再进行操作！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(tb_ProjectMachineBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiJiXieYuSuanGeJiaShuR").ToString().Trim();
+            lb_ShowMessage.Text = "错误提示：机械预算合价输入有误，应为数字且大于等于零，请正确输入后再进行操作！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(tb_ItemPricePurchaseFee.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiGuanLiFeiJiLiRunFeiS").ToString().Trim();
+            lb_ShowMessage.Text = "错误提示：管理费及利润费输入有误，应为数字且大于等于零，请正确输入后再进行操作！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(tb_ItemPricePurchaseFeeBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiFeiLvCuoShiFeiShuRuY").ToString().Trim();
+            lb_ShowMessage.Text = "错误提示：费率措施费输入有误，应为数字且大于等于零，请正确输入后再进行操作！";
             return false;
         }
         if (false == RCJShareClass.isNumberString(TB_ItemComprehensiveFeeBudget.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiGuiFeiShuRuYouWuYing").ToString().Trim();
+            lb_ShowMessage.Text = "错误提示：规费输入有误，应为数字且大于等于零，请正确输入后再进行操作！";
             return false;
         }
 
@@ -170,7 +170,7 @@ public partial class TTRCJProjectAdjustPrice : System.Web.UI.Page
             )
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiDiaoZhengJiaGeBuNeng").ToString().Trim();
+            lb_ShowMessage.Text = "错误提示：调整价格不能为空，请正确输入后再进行操作！";
             return false;
         }
 
@@ -196,7 +196,7 @@ public partial class TTRCJProjectAdjustPrice : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiChaXunJiaGeDiaoZheng").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "错误提示：查询价格调整信息出现异常： " + exp.Message;
         }
     }
 
@@ -207,13 +207,13 @@ public partial class TTRCJProjectAdjustPrice : System.Web.UI.Page
 
         try
         {
-            if(false == SaveDataList(0, 0 , LanguageHandle.GetWord("ZengJiaDiaoZhengJia").ToString().Trim() ))
+            if(false == SaveDataList(0, 0 , "增加调整价" ))
                 return;
 
             InitDataLog(); 
             
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiJiaGeDiaoZhengXinZe").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：价格调整新增成功！";
 
             InitDataList();
 
@@ -221,7 +221,7 @@ public partial class TTRCJProjectAdjustPrice : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiJiaGeDiaoZhengXinZen").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "错误提示：价格调整新增出现异常： " + exp.Message;
         }
     }
 
@@ -284,7 +284,7 @@ public partial class TTRCJProjectAdjustPrice : System.Web.UI.Page
         TB_ItemComprehensiveFeeBudget.Text = "";
 
         lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-        lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiMo").ToString().Trim();
+        lb_ShowMessage.Text = "消息提示：无";
     }
 
     protected void DDL_PerformanceType_SelectedIndexChanged(object sender, EventArgs e)
@@ -310,7 +310,7 @@ public partial class TTRCJProjectAdjustPrice : System.Web.UI.Page
         if (GridView1.SelectedIndex == -1)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            string strMsg = LanguageHandle.GetWord("XiaoXiDiShiQingShuaZeYiHangYao").ToString().Trim();
+            string strMsg = "消息提示：请选择一行要修改的价格调整数据再进行删除操作!";
             lb_ShowMessage.Text = strMsg;
             return;
         }
@@ -319,7 +319,7 @@ public partial class TTRCJProjectAdjustPrice : System.Web.UI.Page
         if (GridView1.Rows.Count <= 1 || GridView1.SelectedIndex == 0)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiBuNengXiuGaiYuanDin").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：不能修改原定单价。";
             return;
         }
 
@@ -328,7 +328,7 @@ public partial class TTRCJProjectAdjustPrice : System.Web.UI.Page
         if (RCJShareClass.CheckTheItemNumber(ProjectId, Convert.ToInt32(DDL_PerformanceType.SelectedValue), Convert.ToInt32(TB_ItemNo.Text), adjustid, TB_ItemNum.Text) == false)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            string strMsg = LanguageHandle.GetWord("XiaoXiDiShiGaiXiangBCWPBuWeiLi").ToString().Trim();
+            string strMsg = "消息提示：该项BCWP不为零，修改操作时不能小于已经录入的工作总量，请正确填写后再进行修改操作!";
             lb_ShowMessage.Text = strMsg;
             return;
         }
@@ -340,20 +340,20 @@ public partial class TTRCJProjectAdjustPrice : System.Web.UI.Page
         {
             int selectId = Convert.ToInt32(GridView1.Rows[GridView1.SelectedIndex].Cells[2].Text);
 
-            if (false == SaveDataList(1, selectId, "ModifyAdjustedPrice"))   //ChineseWord
+            if (false == SaveDataList(1, selectId, "修改调整价"))
                 return;
 
             InitDataLog();
 
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiJiaGeDiaoZhengXiuGa").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：价格调整修改成功！";
 
             InitDataList();
         }
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("CuoWuDiShiJiaGeDiaoZhengXiuGai").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "错误提示：价格调整修改出现异常： " + exp.Message;
         }
     }
 
@@ -362,7 +362,7 @@ public partial class TTRCJProjectAdjustPrice : System.Web.UI.Page
         if (GridView1.SelectedIndex == -1)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            string strMsg = LanguageHandle.GetWord("XiaoXiDiShiQingShuaZeYiHangYao").ToString().Trim();
+            string strMsg = "消息提示：请选择一行要删除的价格调整数据再进行删除操作!";
             lb_ShowMessage.Text = strMsg;
             return;
         }
@@ -371,7 +371,7 @@ public partial class TTRCJProjectAdjustPrice : System.Web.UI.Page
         if (GridView1.Rows.Count <= 1 || GridView1.SelectedIndex == 0)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiBuNengShanChuYuanDi").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：不能删除原定单价。";
             return;
         }
 
@@ -379,13 +379,13 @@ public partial class TTRCJProjectAdjustPrice : System.Web.UI.Page
         try
         {
             int selectId = Convert.ToInt32(GridView1.Rows[GridView1.SelectedIndex].Cells[2].Text);
-            if (false == SaveDataList(2, selectId, "DeleteAdjustedPrice"))   //ChineseWord
+            if (false == SaveDataList(2, selectId, "删除调整价"))
                 return; 
             
             InitDataLog();
 
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiZhiDingJiLuShanChuC").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：指定记录删除成功！";
 
             InitDataList();
 
@@ -394,7 +394,7 @@ public partial class TTRCJProjectAdjustPrice : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiShanChuCaoZuoChuXia").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：删除操作出现异常：" + exp.Message;
         }
     }
 
@@ -459,7 +459,7 @@ public partial class TTRCJProjectAdjustPrice : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShi").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：" + exp.Message;
             return false;
         }
 
@@ -504,7 +504,7 @@ public partial class TTRCJProjectAdjustPrice : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiChaXunRiZhiShuJuCao").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：查询日志数据操作出现异常：" + exp.Message;
         }
     }
 }

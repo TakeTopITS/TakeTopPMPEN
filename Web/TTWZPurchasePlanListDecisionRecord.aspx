@@ -216,7 +216,7 @@
                                                                         <asp:BoundColumn DataField="SignTime" HeaderText="评标日期">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                                        <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
                                                                     </Columns>
@@ -315,7 +315,7 @@
                                                         <td style="text-align: center" class="formItemBgStyle" colspan="6">
                                                             <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="auto-style1" OnClick="btnOK_Click" />&nbsp;
                                                             <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                                type="button" value="Closed" />
+                                                                type="button" value="关闭" />
                                                         </td>
                                                     </tr>
                                                 </table>

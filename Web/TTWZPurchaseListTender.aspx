@@ -141,7 +141,7 @@
                                                         <td class="formItemBgStyle" colspan="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                             <asp:Button ID="btnOK" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="btnOK_Click" />&nbsp;
                                                             <input id="btnClose()" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                                type="button" value="Closed" />
+                                                                type="button" value="¹Ø±Õ" />
 
                                                         </td>
                                                     </tr>

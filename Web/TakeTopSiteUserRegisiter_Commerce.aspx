@@ -105,8 +105,8 @@
                </td>
                 <td style="text-align: left" class="formItemBgStyle">
                     <asp:DropDownList ID="DL_Gender" runat="server" AutoPostBack="True">
-                    <asp:ListItem Selected="True" Value="Male" Text="<%$ Resources:lang,Nan%>" />
-                    <asp:ListItem Value="Female" Text="<%$ Resources:lang,Nv%>" />
+                    <asp:ListItem Selected="True" Value="男" Text="<%$ Resources:lang,Nan%>" />
+                    <asp:ListItem Value="女" Text="<%$ Resources:lang,Nv%>" />
                   </asp:DropDownList>
                 </td>
               </tr>
@@ -220,9 +220,9 @@
                 <td style="text-align: right" class="formItemBgStyle"><asp:Label ID="Label15" runat="server" Text="<%$ Resources:lang,ZhuangTai%>"></asp:Label>
                   ： </td>
                 <td colspan="2" style="text-align: left;" class="formItemBgStyle"><asp:DropDownList ID="DL_Status" runat="server">
-                    <asp:ListItem Value="Employed" Text="<%$ Resources:lang,ZaiZhi%>" />
-                    <asp:ListItem Value="Resign" Text="<%$ Resources:lang,LiZhi%>" />
-                    <asp:ListItem Value="Stop" Text="<%$ Resources:lang,ZhongZhi%>" />
+                    <asp:ListItem Value="在职" Text="<%$ Resources:lang,ZaiZhi%>" />
+                    <asp:ListItem Value="离职" Text="<%$ Resources:lang,LiZhi%>" />
+                    <asp:ListItem Value="终止" Text="<%$ Resources:lang,ZhongZhi%>" />
                   </asp:DropDownList>
                   <asp:Button ID="BT_Find" runat="server" CssClass="inpu" OnClick="BT_Find_Click" Text="<%$ Resources:lang,ChaXun%>" />
                   <asp:Button ID="BT_Update" runat="server" CssClass="inpu" Enabled="False" OnClick="BT_Update_Click" Text="<%$ Resources:lang,BaoCun%>" Visible="false" /></td>
@@ -447,8 +447,8 @@
               <td style="text-align: Right;"  class="formItemBgStyle"><asp:Label ID="Label32" runat="server" Text="<%$ Resources:lang,HunYinZhuangTai%>"></asp:Label>
                 ： </td>
               <td style="text-align: left;"  class="formItemBgStyle"><asp:DropDownList ID="DL_MaritalStatus" runat="server">
-                  <asp:ListItem Value="Unmarried" Text="<%$ Resources:lang,WeiHun%>" />
-                  <asp:ListItem Value="Married" Text="<%$ Resources:lang,YiHun%>" />
+                  <asp:ListItem Value="未婚" Text="<%$ Resources:lang,WeiHun%>" />
+                  <asp:ListItem Value="已婚" Text="<%$ Resources:lang,YiHun%>" />
                 </asp:DropDownList></td>
             </tr>
             <tr>

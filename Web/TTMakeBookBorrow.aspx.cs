@@ -133,11 +133,11 @@ public partial class TTMakeBookBorrow : System.Web.UI.Page
         }
         if (DropDownList1.SelectedValue.Trim().Equals("1"))
         {
-            strHQL += " and BookType = 'Book' ";   //ChineseWord
+            strHQL += " and BookType = 'Book' ";   
         }
         else if (DropDownList1.SelectedValue.Trim().Equals("2"))
         {
-            strHQL += " and BookType = 'Standard' ";   //ChineseWord
+            strHQL += " and BookType = 'Standard' ";   
         }
         strHQL += " Order By ID DESC ";
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_BookInformation");
@@ -357,7 +357,7 @@ public partial class TTMakeBookBorrow : System.Web.UI.Page
 
     protected int GetBookBorrowNum(string strBorrowCode)
     {
-        string strHQL = " Select * From T_BookBorrowRecord Where BorrowCode='" + strBorrowCode + "' and Status<>'Return' Order By ID DESC";   //ChineseWord
+        string strHQL = " Select * From T_BookBorrowRecord Where BorrowCode='" + strBorrowCode + "' and Status<>'Return' Order By ID DESC";   
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_BookBorrowRecord");
         if (ds.Tables[0].Rows.Count > 0 && ds != null)
         {

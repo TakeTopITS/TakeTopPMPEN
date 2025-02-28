@@ -64,7 +64,7 @@ public partial class TTBDBudgetMGraph : System.Web.UI.Page
             lbl_DCode.Text = treeNode.Target.Trim();
             lbl_DName.Text = ShareClass.GetDepartName(lbl_DCode.Text);
             TextBox1.Text = ShareClass.GetDepartName(lbl_DCode.Text);
-            DropDownList1.SelectedValue = "DepartmentSubject";   //ChineseWord
+            DropDownList1.SelectedValue = "DepartmentSubject";   
         }
     }
 
@@ -77,7 +77,7 @@ public partial class TTBDBudgetMGraph : System.Web.UI.Page
             DropDownList2.Enabled = false;
             TextBox1.Enabled = false;
         }
-        else if (DropDownList1.SelectedValue.Trim() == "Subject")   //ChineseWord
+        else if (DropDownList1.SelectedValue.Trim() == "Subject")   
         {
             DropDownList2.Items.Clear();
             DropDownList2.Items.Insert(0, new ListItem("--Select--", ""));
@@ -103,7 +103,7 @@ public partial class TTBDBudgetMGraph : System.Web.UI.Page
                 return;
             }
         }
-        if (DropDownList1.SelectedValue.Trim() == "DepartmentSubject")   //ChineseWord
+        if (DropDownList1.SelectedValue.Trim() == "DepartmentSubject")   
         {
             if (string.IsNullOrEmpty(lbl_DCode.Text) || lbl_DCode.Text.Trim() == "")
             {
@@ -126,7 +126,7 @@ public partial class TTBDBudgetMGraph : System.Web.UI.Page
 
             strResult = LanguageHandle.GetWord("ABMTJFYFB").ToString().Trim();
         }
-        else if (DropDownList1.SelectedValue.Trim() == "Subject")   //ChineseWord
+        else if (DropDownList1.SelectedValue.Trim() == "Subject")   
         {
 
             strResult = LanguageHandle.GetWord("AKMTJFYFB").ToString().Trim();
@@ -145,7 +145,7 @@ public partial class TTBDBudgetMGraph : System.Web.UI.Page
         string strHQL;
         if (DropDownList1.SelectedValue.Trim() == "Department")  
         {
-            strHQL = "Select DepartName as XName,SUM(MoneyNum) as YNumber From T_BDBaseDataRecord Where (Type='Operation' or Type='Actual')";   //ChineseWord
+            strHQL = "Select DepartName as XName,SUM(MoneyNum) as YNumber From T_BDBaseDataRecord Where (Type='Operation' or Type='Actual')";   
             if (!string.IsNullOrEmpty(stryear) && stryear != "")
             {
                 strHQL += " and YearNum='" + stryear + "' ";
@@ -156,9 +156,9 @@ public partial class TTBDBudgetMGraph : System.Web.UI.Page
             }
             strHQL += " Group By DepartName ";
         }
-        else if (DropDownList1.SelectedValue.Trim() == "Subject")   //ChineseWord
+        else if (DropDownList1.SelectedValue.Trim() == "Subject")   
         {
-            strHQL = "Select B.AccountName as XName,SUM(A.MoneyNum) as YNumber From T_BDBaseDataRecord A,T_Account B Where A.AccountCode=B.AccountCode and (A.Type='Operation' or A.Type='Actual')";   //ChineseWord
+            strHQL = "Select B.AccountName as XName,SUM(A.MoneyNum) as YNumber From T_BDBaseDataRecord A,T_Account B Where A.AccountCode=B.AccountCode and (A.Type='Operation' or A.Type='Actual')";   
             if (!string.IsNullOrEmpty(stryear) && stryear != "")
             {
                 strHQL += " and A.YearNum='" + stryear + "' ";
@@ -171,7 +171,7 @@ public partial class TTBDBudgetMGraph : System.Web.UI.Page
         }
         else
         {
-            strHQL = "Select B.AccountName as XName,SUM(A.MoneyNum) as YNumber From T_BDBaseDataRecord A,T_Account B Where A.AccountCode=B.AccountCode and (A.Type='Operation' or A.Type='Actual')";   //ChineseWord
+            strHQL = "Select B.AccountName as XName,SUM(A.MoneyNum) as YNumber From T_BDBaseDataRecord A,T_Account B Where A.AccountCode=B.AccountCode and (A.Type='Operation' or A.Type='Actual')";   
             if (!string.IsNullOrEmpty(stryear) && stryear != "")
             {
                 strHQL += " and A.YearNum='" + stryear + "' ";

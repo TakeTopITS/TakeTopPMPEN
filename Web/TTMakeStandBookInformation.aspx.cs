@@ -147,7 +147,7 @@ public partial class TTMakeStandBookInformation : System.Web.UI.Page
         bookInformation.UseNum = 0;
         bookInformation.Version = TB_Version.Text.Trim();
         bookInformation.BookImage = HL_StandardDocURL.NavigateUrl;
-        bookInformation.BookType = "Standard";   //ChineseWord
+        bookInformation.BookType = "Standard";   
         bookInformation.ClassificationCode = TextBox1.Text.Trim();
 
         try
@@ -228,7 +228,7 @@ public partial class TTMakeStandBookInformation : System.Web.UI.Page
         bookInformation.Translator = TB_Translator.Text.Trim();
         bookInformation.Version = TB_Version.Text.Trim();
         bookInformation.BookImage = HL_StandardDocURL.NavigateUrl;
-        bookInformation.BookType = "Standard";   //ChineseWord
+        bookInformation.BookType = "Standard";   
         bookInformation.ClassificationCode = TextBox1.Text.Trim();
 
         try
@@ -332,7 +332,7 @@ public partial class TTMakeStandBookInformation : System.Web.UI.Page
         string strHQL;
         string strDepartString = LB_DepartString.Text.Trim();
 
-        strHQL = "Select * From T_BookInformation Where BookType = 'Standard' ";   //ChineseWord
+        strHQL = "Select * From T_BookInformation Where BookType = 'Standard' ";   
         strHQL += " and DepartCode in " + strDepartString;
 
         if (!string.IsNullOrEmpty(TextBox2.Text.Trim()))
@@ -358,7 +358,7 @@ public partial class TTMakeStandBookInformation : System.Web.UI.Page
         string strHQL;
         IList lst;
         //∞Û∂®∑÷¿‡BindDDL();
-        strHQL = "Select ID,ClassificationType || '_' || ClassificationCode || '_' || Remark as ClassificationName From T_BookClassification Where DataType='StandardClassification' Order By ID ASC ";   //ChineseWord
+        strHQL = "Select ID,ClassificationType || '_' || ClassificationCode || '_' || Remark as ClassificationName From T_BookClassification Where DataType='StandardClassification' Order By ID ASC ";   
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_BookClassification");
         DL_BookClassificationId.DataSource = ds;
         DL_BookClassificationId.DataBind();
@@ -423,11 +423,11 @@ public partial class TTMakeStandBookInformation : System.Web.UI.Page
         string strHQL;
         if (!string.IsNullOrEmpty(strId.Trim()))
         {
-            strHQL = "Select BarCode From T_BookInformation Where BookType = 'Standard' and BarCode='" + strBarCode + "' and ID<>'" + strId + "' ";   //ChineseWord
+            strHQL = "Select BarCode From T_BookInformation Where BookType = 'Standard' and BarCode='" + strBarCode + "' and ID<>'" + strId + "' ";   
         }
         else
         {
-            strHQL = "Select BarCode From T_BookInformation Where BookType = 'Standard' and BarCode='" + strBarCode + "'";   //ChineseWord
+            strHQL = "Select BarCode From T_BookInformation Where BookType = 'Standard' and BarCode='" + strBarCode + "'";   
         }
         DataTable dt = ShareClass.GetDataSetFromSql(strHQL, "T_BookInformation").Tables[0];
         if (dt.Rows.Count > 0 && dt != null)

@@ -113,7 +113,7 @@
                                                                         <asp:Button ID="BT_Save" runat="server" Text="<%$ Resources:lang,BaoCun%>" CssClass="inpu" OnClick="BT_Save_Click" />&nbsp;&nbsp;
                                                                         <asp:Button ID="BT_Close" runat="server" CssClass="inpu" Text="<%$ Resources:lang,GuanBi%>" OnClick="BT_Close_Click" />
                                                                         <%-- <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                                             type="button" value="Closed" />--%>
+                                                                             type="button" value="关闭" />--%>
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -212,7 +212,7 @@
                                                                                         </HeaderTemplate>
                                                                                         <ItemTemplate>
                                                                                             <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("ID")+"|"+Eval("ObjectCode")+"|"+Eval("ObjectName")+"|"+Eval("ApplyMoney")+"|"+Eval("ReplaceCode")+"|"+Eval("PurchaseDetailID") %>' CommandName="edit" CssClass="notTab" Visible='<%# Eval("Progress").ToString().Trim()=="询价" ? true : false %>'>报价</asp:LinkButton>
-                                                                                            <%--<asp:Button ID="Button1" runat="server" CssClass="inpu" CommandArgument='<%# Eval("ID")+"|"+Eval("ObjectCode")+"|"+Eval("SupplierApplyMoney")+"|"+Eval("ObjectName") %>' CommandName="edit" Text="Quotation" Visible='<%# Eval("Progress").ToString()=="询价" ? true : false %>' />--%>
+                                                                                            <%--<asp:Button ID="Button1" runat="server" CssClass="inpu" CommandArgument='<%# Eval("ID")+"|"+Eval("ObjectCode")+"|"+Eval("SupplierApplyMoney")+"|"+Eval("ObjectName") %>' CommandName="edit" Text="报价" Visible='<%# Eval("Progress").ToString()=="询价" ? true : false %>' />--%>
                                                                                         </ItemTemplate>
                                                                                     </asp:TemplateColumn>
                                                                                     <asp:BoundColumn DataField="PurchaseCode" HeaderText="采购编号">
@@ -224,7 +224,7 @@
                                                                                     <asp:BoundColumn DataField="Tenders" HeaderText="标段">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="SerialNumber" HeaderText="SerialNumber">
+                                                                                    <asp:BoundColumn DataField="SerialNumber" HeaderText="序号">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:TemplateColumn>
@@ -269,7 +269,7 @@
                                                                                     <asp:BoundColumn DataField="PurchaseNumber" HeaderText="采购数量">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="5%" />
                                                                                     </asp:BoundColumn>
-                                                                                    <asp:BoundColumn DataField="ApplyMoney" HeaderText="Quotation">
+                                                                                    <asp:BoundColumn DataField="ApplyMoney" HeaderText="报价">
                                                                                         <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="5%" />
                                                                                     </asp:BoundColumn>
                                                                                     <asp:BoundColumn DataField="TotalMoney" HeaderText="报价合计">

@@ -35,7 +35,7 @@ public partial class TTWZPurchaseDecision : System.Web.UI.Page
     {
 
 
-        string strPurchaseHQL = string.Format(@"select p.*,a.SupplierCode,a.SumApplyMoney,COALESCE(c.ExpertCode, 'None') as IsSelect,c.Suggest,sl.SupplierName,ps.DocumentName as SupplierDocumentName,ps.DocumentURL as SupplierDocumentURL from
+        string strPurchaseHQL = string.Format(@"select p.*,a.SupplierCode,a.SumApplyMoney,COALESCE(c.ExpertCode, 'ц╩сп') as IsSelect,c.Suggest,sl.SupplierName,ps.DocumentName as SupplierDocumentName,ps.DocumentURL as SupplierDocumentURL from
                                                 (
                                                 select t.SupplierCode,t.PurchaseCode,Sum(t.ApplyMoney) as SumApplyMoney from
                                                 (
@@ -52,7 +52,7 @@ public partial class TTWZPurchaseDecision : System.Web.UI.Page
                                                 left join T_WZSupplier sl on a.SupplierCode = sl.SupplierCode
                                                 left join T_WZPurchaseSupplier ps on a.SupplierCode = ps.SupplierCode
                                                 and a.PurchaseCode = ps.PurchaseCode
-                                                where p.PurchaseCode = '{0}'", strPurchaseCode, strUserCode);   //ChineseWord
+                                                where p.PurchaseCode = '{0}'", strPurchaseCode, strUserCode);
         DataTable dtPurchase = ShareClass.GetDataSetFromSql(strPurchaseHQL, "Purchase").Tables[0];
 
         DG_List.DataSource = dtPurchase;
@@ -84,7 +84,7 @@ public partial class TTWZPurchaseDecision : System.Web.UI.Page
                 DataTable dtCheckPurchase = ShareClass.GetDataSetFromSql(strCheckPurchaseHQL, "CheckPurchase").Tables[0];
                 if (dtCheckPurchase != null && dtCheckPurchase.Rows.Count > 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCGBJBZJZRHKSSJN").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCGBJBZJZRHKSSJN+"')", true);
                     return;
                 }
 
@@ -97,7 +97,7 @@ public partial class TTWZPurchaseDecision : System.Web.UI.Page
                     //WZSupplierApplyComment wZSupplierApplyComment = (WZSupplierApplyComment)lstWZSupplierApplyComment[0];
                     //if (wZSupplierApplyComment.SupplierCode == cmdArges)
                     //{
-                    //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYJZLDGYSBXYZFDJ").ToString().Trim()+"')", true);
+                    //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZYJZLDGYSBXYZFDJ+"')", true);
                     //    return;
                     //}
 
@@ -120,7 +120,7 @@ public partial class TTWZPurchaseDecision : System.Web.UI.Page
 
                 DataBinder(HF_PurchaseCode.Value);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZCG").ToString().Trim()+"')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZCG+"')", true);
 
 
             }
@@ -145,7 +145,7 @@ public partial class TTWZPurchaseDecision : System.Web.UI.Page
         DataTable dtCheckPurchase = ShareClass.GetDataSetFromSql(strCheckPurchaseHQL, "CheckPurchase").Tables[0];
         if (dtCheckPurchase != null && dtCheckPurchase.Rows.Count > 0)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZCGBJBZJZRHKSSJN").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZCGBJBZJZRHKSSJN+"')", true);
             return;
         }
 
@@ -158,7 +158,7 @@ public partial class TTWZPurchaseDecision : System.Web.UI.Page
             //WZSupplierApplyComment wZSupplierApplyComment = (WZSupplierApplyComment)lstWZSupplierApplyComment[0];
             //if (wZSupplierApplyComment.SupplierCode == strSupplierCode)
             //{
-            //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZYJZLDGYSBXYZFDJ").ToString().Trim()+"')", true);
+            //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZYJZLDGYSBXYZFDJ+"')", true);
             //    return;
             //}
 
@@ -183,6 +183,6 @@ public partial class TTWZPurchaseDecision : System.Web.UI.Page
 
         DataBinder(HF_PurchaseCode.Value);
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZCG").ToString().Trim()+"')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZCG+"')", true);
     }
 }

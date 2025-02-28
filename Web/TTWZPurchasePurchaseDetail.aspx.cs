@@ -48,10 +48,10 @@ public partial class TTWZPurchasePurchaseDetail : System.Web.UI.Page
 
                 WZPickingPlanBLL wZPickingPlanBLL = new WZPickingPlanBLL();
                 string strWZPickingPlanHQL = string.Format(@"from WZPickingPlan as wZPickingPlan
-                            where Progress = 'Sign for Receipt'
+                            where Progress = '签收'
                             and PurchaseEngineer = '{0}'
                             and ProjectCode = '{1}'
-                            and SupplyMethod = 'Self-purchase'", wZPurchase.PurchaseEngineer, wZPurchase.ProjectCode);   //ChineseWord
+                            and SupplyMethod = '自购'", wZPurchase.PurchaseEngineer, wZPurchase.ProjectCode);
                 IList listWZPickingPlan = wZPickingPlanBLL.GetAllWZPickingPlans(strWZPickingPlanHQL);
 
                 LB_PickingPlan.DataSource = listWZPickingPlan;
@@ -107,7 +107,7 @@ public partial class TTWZPurchasePurchaseDetail : System.Web.UI.Page
                     IList lstCheckPurchaseDetail = wZPurchaseDetailBLL.GetAllWZPurchaseDetails(strCheckPurchaseDetailHQL);
                     if (lstCheckPurchaseDetail != null && lstCheckPurchaseDetail.Count > 0)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGJHMXZCGDZYJCZBNZTJ").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGJHMXZCGDZYJCZBNZTJ + "')", true);
                         return;
                     }
 
@@ -131,7 +131,7 @@ public partial class TTWZPurchasePurchaseDetail : System.Web.UI.Page
                         decimal.TryParse(arrArges[3], out decimalConvertNumber);
                         wZPurchaseDetail.ConvertNumber = decimalConvertNumber;
                         wZPurchaseDetail.PlanMoney = wZPurchaseDetail.PurchaseNumber * GetMarketByObjectCode(arrArges[1]);
-                        wZPurchaseDetail.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
+                        wZPurchaseDetail.Progress = "录入";
 
 
                         wZPurchaseDetailBLL.AddWZPurchaseDetail(wZPurchaseDetail);
@@ -146,7 +146,7 @@ public partial class TTWZPurchasePurchaseDetail : System.Web.UI.Page
                             ShareClass.RunSqlCommand(strUpdatePurchaseHQL);
                         }
                         //修改计划明细的使用标记
-                        string strUpdatePlanDetailHQL = string.Format(@"update T_WZPickingPlanDetail set Progress = '询价',PurchaseCode='{0}',IsMark = -1 where ID = {1}", wZPurchase.PurchaseCode, intPlanDetailID);   //ChineseWord
+                        string strUpdatePlanDetailHQL = string.Format(@"update T_WZPickingPlanDetail set Progress = '询价',PurchaseCode='{0}',IsMark = -1 where ID = {1}", wZPurchase.PurchaseCode, intPlanDetailID);
                         ShareClass.RunSqlCommand(strUpdatePlanDetailHQL);
                         //重新加载采购清单
                         DataPurchaseDetailBinder(strPurchaseCode);
@@ -156,7 +156,7 @@ public partial class TTWZPurchasePurchaseDetail : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCGWJ").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZCGWJ + "')", true);
                     return;
                 }
             }
@@ -211,9 +211,9 @@ public partial class TTWZPurchasePurchaseDetail : System.Web.UI.Page
                 {
                     WZPurchaseDetail wZPurchaseDetail = (WZPurchaseDetail)listWZPurchaseDetail[0];
 
-                    if (wZPurchaseDetail.Progress != LanguageHandle.GetWord("LuRu").ToString().Trim() || wZPurchaseDetail.IsMark != 0)
+                    if (wZPurchaseDetail.Progress != "录入" || wZPurchaseDetail.IsMark != 0)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZJDBWLRYJSYBJBW0SBYXSC").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZJDBWLRYJSYBJBW0SBYXSC + "')", true);
                         return;
                     }
 
@@ -230,7 +230,7 @@ public partial class TTWZPurchasePurchaseDetail : System.Web.UI.Page
                         ShareClass.RunSqlCommand(strUpdatePurchaseHQL);
                     }
                     //修改计划明细的使用标记
-                    string strUpdatePlanDetailHQL = string.Format(@"update T_WZPickingPlanDetail set Progress = '录入',PurchaseCode='-',IsMark = 0 where ID = {0}", wZPurchaseDetail.ID);   //ChineseWord
+                    string strUpdatePlanDetailHQL = string.Format(@"update T_WZPickingPlanDetail set Progress = '录入',PurchaseCode='-',IsMark = 0 where ID = {0}", wZPurchaseDetail.ID);
                     ShareClass.RunSqlCommand(strUpdatePlanDetailHQL);
 
                     //重新加载采购清单
@@ -303,18 +303,18 @@ public partial class TTWZPurchasePurchaseDetail : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strMajorType))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYLBBNWKBC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZYLBBNWKBC + "')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strPurchaseNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCGSLBXWXSHZZS").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCGSLBXWXSHZZS + "')", true);
                 return;
             }
 
             if (!ShareClass.CheckIsNumber(strPlanMoney))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYJFYBXWXSHZZS").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYJFYBXWXSHZZS + "')", true);
                 return;
             }
 
@@ -351,13 +351,13 @@ public partial class TTWZPurchasePurchaseDetail : System.Web.UI.Page
                 //重新加载采购清单
                 DataPurchaseDetailBinder(HF_PurchaseCode.Value);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
             }
 
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCGD").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZCGD + "')", true);
             return;
         }
     }
@@ -430,12 +430,12 @@ public partial class TTWZPurchasePurchaseDetail : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strPurchaseNumber) || decimalPurchaseNumber <= 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCGSLBNW0HZKXG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCGSLBNW0HZKXG + "')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strPurchaseNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCGSLBXWXSHZZS").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCGSLBXWXSHZZS + "')", true);
                 return;
             }
 
@@ -458,7 +458,7 @@ public partial class TTWZPurchasePurchaseDetail : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCGD").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZCGD + "')", true);
             return;
         }
     }
@@ -475,12 +475,12 @@ public partial class TTWZPurchasePurchaseDetail : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strConvertNumber) || decimalConvertNumber <= 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYJFYBNW0HZKXG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYJFYBNW0HZKXG + "')", true);
                 return;
             }
             if (!ShareClass.CheckIsNumber(strConvertNumber))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYJFYBXWXSHZZS").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYJFYBXWXSHZZS + "')", true);
                 return;
             }
 
@@ -500,7 +500,7 @@ public partial class TTWZPurchasePurchaseDetail : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZCGD").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZCGD + "')", true);
             return;
         }
     }

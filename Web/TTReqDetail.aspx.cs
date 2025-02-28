@@ -287,7 +287,7 @@ public partial class TTReqDetail : System.Web.UI.Page
             string strAssignID = ShareClass.GetMyCreatedMaxReqAssignRecordID(strReqID, strUserCode);
 
             //更改需求分派记录状态
-             updateReqAssignRecordStatus(intPriorID, "Assigned");   //ChineseWord
+             updateReqAssignRecordStatus(intPriorID, "Assigned");   
 
             //BusinessForm,处理关联的业务表单数据
             ShareClass.InsertOrUpdateTaskAssignRecordWFXMLData("ReqRecord", intPriorID.ToString(), "ReqRecord", strAssignID, strUserCode);
@@ -418,7 +418,7 @@ public partial class TTReqDetail : System.Web.UI.Page
                 project.ManNumber = 0;
                 project.Status = "New";
                 project.StatusValue = "InProgress";
-                project.CurrencyType = "Renminbi";   //ChineseWord
+                project.CurrencyType = "Renminbi";   
                 project.ParentID = intParentID;
 
                 project.Priority = "COMMON";

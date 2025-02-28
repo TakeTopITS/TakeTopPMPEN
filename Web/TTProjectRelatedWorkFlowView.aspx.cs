@@ -51,10 +51,10 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
             strHQL += " or (workFlow.RelatedType = 'ExpenseApply' and workFlow.RelatedID in (select expenseApplyWL.ID from ExpenseApplyWL as expenseApplyWL where expenseApplyWL.RelatedID = " + strProjectID + "))";
             strHQL += " or (workFlow.RelatedType = 'ExpenseClaim' and workFlow.RelatedID in (select expenseClaim.ECID from ExpenseClaim as expenseClaim where expenseClaim.RelatedID = " + strProjectID + "))";
             strHQL += " or (workFlow.RelatedType = 'Requirement' and workFlow.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
-            strHQL += "or (workFlow.RelatedType = 'Risk' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  //ChineseWord
+            strHQL += "or (workFlow.RelatedType = 'Risk' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  
             strHQL += " or (workFlow.RelatedType = 'Task' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
             strHQL += " or (workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
-            strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  //ChineseWord
+            strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  
             strHQL += " Order by workFlow.WLID DESC";
             WorkFlowBLL workFlowBLL = new WorkFlowBLL();
             lst = workFlowBLL.GetAllWorkFlows(strHQL);
@@ -89,10 +89,10 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
             strHQL += " or (RelatedType = 'ExpenseApply' and RelatedID in (select ID from T_ExpenseApplyWL where RelatedID = " + strProjectID + "))";
             strHQL += " or (RelatedType = 'ExpenseClaim' and RelatedID in (select ECID from T_ExpenseClaim where RelatedID = " + strProjectID + "))";
             strHQL += " or (RelatedType = 'Requirement' and RelatedID in (select ReqID from T_RelatedReq where ProjectID = " + strProjectID + "))";
-            strHQL += "or (RelatedType = 'Risk' and RelatedID in (select ID from T_ProjectRisk where ProjectID =" + strProjectID + "))";  //ChineseWord
+            strHQL += "or (RelatedType = 'Risk' and RelatedID in (select ID from T_ProjectRisk where ProjectID =" + strProjectID + "))";  
             strHQL += " or (RelatedType = 'Task' and RelatedID in (select TaskID from T_ProjectTask where ProjectID = " + strProjectID + "))";
             strHQL += " or (RelatedType = 'Plan' and RelatedID in (select ID From T_ImplePlan where ProjectID = " + strProjectID + "))";
-            strHQL += "or (RelatedType = 'Meeting' and RelatedID in (select ID from T_Meeting where RelatedID =" + strProjectID + ")))";  //ChineseWord
+            strHQL += "or (RelatedType = 'Meeting' and RelatedID in (select ID from T_Meeting where RelatedID =" + strProjectID + ")))";  
             strHQL += " Group By Status ";
             IFrame_Chart1.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Bar&ChartName=" + LB_ReportName.Text + "&SqlCode=" + ShareClass.Escape(strHQL);
 
@@ -120,10 +120,10 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
         strHQL = "from WorkFlow as workFlow Where  ";
         strHQL += " ((workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + ")";
         strHQL += " or (workFlow.RelatedType = 'Requirement' and workFlow.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
-        strHQL += "or (workFlow.RelatedType = 'Risk' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  //ChineseWord
+        strHQL += "or (workFlow.RelatedType = 'Risk' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  
         strHQL += " or (workFlow.RelatedType = 'Task' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
         strHQL += " or (workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
-        strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  //ChineseWord
+        strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  
         strHQL += " Order by workFlow.WLID DESC";
         WorkFlowBLL workFlowBLL = new WorkFlowBLL();
         lst = workFlowBLL.GetAllWorkFlows(strHQL);
@@ -137,10 +137,10 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
         strHQL += " or (RelatedType = 'ExpenseApply' and RelatedID in (select ID from T_ExpenseApplyWL where RelatedID = " + strProjectID + "))";
         strHQL += " or (RelatedType = 'ExpenseClaim' and RelatedID in (select ECID from T_ExpenseClaim where RelatedID = " + strProjectID + "))";
         strHQL += " or (RelatedType = 'Requirement' and RelatedID in (select ReqID from T_RelatedReq where ProjectID = " + strProjectID + "))";
-        strHQL += "or (RelatedType = 'Risk' and RelatedID in (select ID from T_ProjectRisk where ProjectID =" + strProjectID + "))";  //ChineseWord
+        strHQL += "or (RelatedType = 'Risk' and RelatedID in (select ID from T_ProjectRisk where ProjectID =" + strProjectID + "))";  
         strHQL += " or (RelatedType = 'Task' and RelatedID in (select TaskID from T_ProjectTask where ProjectID = " + strProjectID + "))";
         strHQL += " or (RelatedType = 'Plan' and RelatedID in (select ID From T_ImplePlan where ProjectID = " + strProjectID + "))";
-        strHQL += "or (RelatedType = 'Meeting' and RelatedID in (select ID from T_Meeting where RelatedID =" + strProjectID + ")))";  //ChineseWord
+        strHQL += "or (RelatedType = 'Meeting' and RelatedID in (select ID from T_Meeting where RelatedID =" + strProjectID + ")))";  
         strHQL += " Group By Status ";
         IFrame_Chart1.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Bar&ChartName=WorkFlow&SqlCode=" + ShareClass.Escape(strHQL);
 
@@ -169,10 +169,10 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
         strHQL = "from WorkFlow as workFlow where workFlow.CreatorCode = " + "'" + strOperatorCode + "'";
         strHQL += " and ((workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + ")";
         strHQL += " or (workFlow.RelatedType = 'Requirement' and workFlow.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
-        strHQL += "or (workFlow.RelatedType = 'Risk' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  //ChineseWord
+        strHQL += "or (workFlow.RelatedType = 'Risk' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  
         strHQL += " or (workFlow.RelatedType = 'Task' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
         strHQL += " or (workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
-        strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  //ChineseWord
+        strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  
         strHQL += " Order by workFlow.WLID DESC";
         WorkFlowBLL workFlowBLL = new WorkFlowBLL();
         lst = workFlowBLL.GetAllWorkFlows(strHQL);
@@ -187,10 +187,10 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
         strHQL += " or (RelatedType = 'ExpenseApply' and RelatedID in (select ID from T_ExpenseApplyWL where RelatedID = " + strProjectID + "))";
         strHQL += " or (RelatedType = 'ExpenseClaim' and RelatedID in (select ECID from T_ExpenseClaim where RelatedID = " + strProjectID + "))";
         strHQL += " or (RelatedType = 'Requirement' and RelatedID in (select ReqID from T_RelatedReq where ProjectID = " + strProjectID + "))";
-        strHQL += "or (RelatedType = 'Risk' and RelatedID in (select ID from T_ProjectRisk where ProjectID =" + strProjectID + "))";  //ChineseWord
+        strHQL += "or (RelatedType = 'Risk' and RelatedID in (select ID from T_ProjectRisk where ProjectID =" + strProjectID + "))";  
         strHQL += " or (RelatedType = 'Task' and RelatedID in (select TaskID from T_ProjectTask where ProjectID = " + strProjectID + "))";
         strHQL += " or (RelatedType = 'Plan' and RelatedID in (select ID From T_ImplePlan where ProjectID = " + strProjectID + "))";
-        strHQL += "or (RelatedType = 'Meeting' and RelatedID in (select ID from T_Meeting where RelatedID =" + strProjectID + ")))";  //ChineseWord
+        strHQL += "or (RelatedType = 'Meeting' and RelatedID in (select ID from T_Meeting where RelatedID =" + strProjectID + ")))";  
         strHQL += " Group By Status ";
         IFrame_Chart1.Src = "TTTakeTopAnalystChartSet.aspx?FormType=Single&ChartType=Bar&ChartName=WorkFlow&SqlCode=" + ShareClass.Escape(strHQL);
 
@@ -217,10 +217,10 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
             strHQL += " and workFlow.CreatorCode = " + "'" + strOperatorCode + "'";
             strHQL += " and ((workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + ")";
             strHQL += " or (workFlow.RelatedType = 'Requirement' and workFlow.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
-            strHQL += "or (workFlow.RelatedType = 'Risk' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  //ChineseWord
+            strHQL += "or (workFlow.RelatedType = 'Risk' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  
             strHQL += " or (workFlow.RelatedType = 'Task' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
             strHQL += " or (workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
-            strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  //ChineseWord
+            strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  
             strHQL += " Order by workFlow.WLID DESC";
 
             LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicantAll").ToString().Trim() + " " + LanguageHandle.GetWord("ZhuangTai").ToString().Trim() + ":" + strStatus;
@@ -233,10 +233,10 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
             strHQL += " and " + "workFlow.Status = " + "'" + strStatus + "'";
             strHQL += " and ((workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + ")";
             strHQL += " or (workFlow.RelatedType = 'Requirement' and workFlow.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
-            strHQL += "or (workFlow.RelatedType = 'Risk' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  //ChineseWord
+            strHQL += "or (workFlow.RelatedType = 'Risk' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  
             strHQL += " or (workFlow.RelatedType = 'Task' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
             strHQL += " or (workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
-            strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  //ChineseWord
+            strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  
             strHQL += " Order by workFlow.WLID DESC";
 
             LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicant").ToString().Trim() + strOperatorCode + strOperatorName + LanguageHandle.GetWord("ZhuagTai").ToString().Trim() + " £º" + strStatus;
@@ -290,10 +290,10 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
             strHQL = "from WorkFlow as workFlow where workFlow.WLType = " + "'" + strWLType + "'";
             strHQL += " and ((workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + ")";
             strHQL += " or (workFlow.RelatedType = 'Requirement' and workFlow.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
-            strHQL += "or (workFlow.RelatedType = 'Risk' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  //ChineseWord
+            strHQL += "or (workFlow.RelatedType = 'Risk' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  
             strHQL += " or (workFlow.RelatedType = 'Task' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
             strHQL += " or (workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
-            strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  //ChineseWord
+            strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  
             strHQL += " Order by workFlow.WLID DESC";
 
             LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicantAll").ToString().Trim() + " " + LanguageHandle.GetWord("LeiXin").ToString().Trim() + ":" + strWLType;
@@ -306,10 +306,10 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
                 strHQL = "from WorkFlow as workFlow where workFlow.CreatorCode = " + "'" + strOperatorCode + "'" + " and " + "workFlow.WLType = " + "'" + strWLType + "'";
                 strHQL += " and ((workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + ")";
                 strHQL += " or (workFlow.RelatedType = 'Requirement' and workFlow.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
-                strHQL += "or (workFlow.RelatedType = 'Risk' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  //ChineseWord
+                strHQL += "or (workFlow.RelatedType = 'Risk' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  
                 strHQL += " or (workFlow.RelatedType = 'Task' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
                 strHQL += " or (workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
-                strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  //ChineseWord
+                strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  
                 strHQL += " Order by workFlow.WLID DESC";
 
                 LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicant").ToString().Trim() + strOperatorCode + " " + strOperatorName + LanguageHandle.GetWord("LeiXin").ToString().Trim() + ":" + strWLType;
@@ -322,10 +322,10 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
                 strHQL = "from WorkFlow as workFlow where workFlow.CreatorCode = " + "'" + strOperatorCode + "'" + " and " + "workFlow.WLType = " + "'" + strWLType + "'" + " and workFlow.Status = " + "'" + strStatus + "'";
                 strHQL += " and ((workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + ")";
                 strHQL += " or (workFlow.RelatedType = 'Requirement' and workFlow.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
-                strHQL += "or (workFlow.RelatedType = 'Risk' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  //ChineseWord
+                strHQL += "or (workFlow.RelatedType = 'Risk' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  
                 strHQL += " or (workFlow.RelatedType = 'Task' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
                 strHQL += " or (workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
-                strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  //ChineseWord
+                strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  
                 strHQL += " Order by workFlow.WLID DESC";
 
                 LB_QueryScope.Text = LanguageHandle.GetWord("ZZApplicant").ToString().Trim() + strOperatorCode + " " + strOperatorName + LanguageHandle.GetWord("LeiXin").ToString().Trim() + ":" + strWLType + LanguageHandle.GetWord("ZhuangTai").ToString().Trim() + ":" + strStatus;
@@ -366,10 +366,10 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
             strHQL = "from WorkFlow as workFlow where workFlow.WLID = " + strWFID;
             strHQL += " and ((workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + ")";
             strHQL += " or (workFlow.RelatedType = 'Requirement' and workFlow.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
-            strHQL += "or (workFlow.RelatedType = 'Risk' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  //ChineseWord
+            strHQL += "or (workFlow.RelatedType = 'Risk' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  
             strHQL += " or (workFlow.RelatedType = 'Task' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
             strHQL += " or (workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
-            strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  //ChineseWord
+            strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  
             strHQL += " Order by workFlow.WLID DESC";
 
             WorkFlowBLL workFlowBLL = new WorkFlowBLL();
@@ -408,10 +408,10 @@ public partial class TTProjectRelatedWorkFlowView : System.Web.UI.Page
             strHQL = "from WorkFlow as workFlow where workFlow.WLName Like " + "'" + strWFName + "'";
             strHQL += " and ((workFlow.RelatedType = 'Project' and workFlow.RelatedID = " + strProjectID + ")";
             strHQL += " or (workFlow.RelatedType = 'Requirement' and workFlow.RelatedID in (select relatedReq.ReqID from RelatedReq as relatedReq where relatedReq.ProjectID = " + strProjectID + "))";
-            strHQL += "or (workFlow.RelatedType = 'Risk' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  //ChineseWord
+            strHQL += "or (workFlow.RelatedType = 'Risk' and workFlow.RelatedID in (select projectRisk.ID from ProjectRisk as projectRisk where projectRisk.ProjectID =" + strProjectID + "))";  
             strHQL += " or (workFlow.RelatedType = 'Task' and workFlow.RelatedID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.ProjectID = " + strProjectID + "))";
             strHQL += " or (workFlow.RelatedType = 'Plan' and workFlow.RelatedID in (select workPlan.ID from WorkPlan as workPlan where workPlan.ProjectID = " + strProjectID + "))";
-            strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  //ChineseWord
+            strHQL += "or (workFlow.RelatedType = 'Meeting' and workFlow.RelatedID in (select meeting.ID from Meeting as meeting where meeting.RelatedID =" + strProjectID + ")))";  
             strHQL += " Order by workFlow.WLID DESC";
 
             WorkFlowBLL workFlowBLL = new WorkFlowBLL();

@@ -105,19 +105,19 @@ public partial class TTWZObjectBigList : System.Web.UI.Page
         string strDLCode = HF_DLCode.Value;
         if (string.IsNullOrEmpty(strDLCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZDLLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZDLLB+"')", true);
             return;
         }
 
         string strDLDesc = TXT_DLDesc.Text.Trim();
         if (!ShareClass.CheckStringRight(strDLDesc))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDLMSBNSFFZFC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDLMSBNSFFZFC+"')", true);
             return;
         }
         if (strDLDesc.Length > 30)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZDLMSBNCG30GZFTXSY30GZFC").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZDLMSBNCG30GZFTXSY30GZFC+"')", true);
             return;
         }
 
@@ -137,7 +137,7 @@ public partial class TTWZObjectBigList : System.Web.UI.Page
         //重新加载列表
         DataBinder();
 
-        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZBCCG").ToString().Trim()+"')", true);
+        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZBCCG+"')", true);
 
         HF_DLCode.Value = "";
         HF_DLName.Value = "";

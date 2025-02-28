@@ -164,7 +164,7 @@
                                                                     <tr>
                                                                         <td style="text-align: center" class="formItemBgStyle" colspan="6">
                                                                             <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                                                type="button" value="Closed" />
+                                                                                type="button" value="¹Ø±Õ" />
                                                                         </td>
                                                                     </tr>
                                                                 </table>

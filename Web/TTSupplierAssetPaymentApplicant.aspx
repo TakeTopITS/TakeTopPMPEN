@@ -307,11 +307,11 @@
                                                                 <asp:TextBox ID="TB_Attachment" runat="server" Width="80%"></asp:TextBox>
                                                                 <asp:DropDownList ID="DL_Attachment" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DL_Attachment_SelectedIndexChanged">
                                                                     <asp:ListItem Value="">---Select--- </asp:ListItem>
-                                                                    <asp:ListItem Value="项目请购单">项目请购单</asp:ListItem>
-                                                                    <asp:ListItem Value="比价表">比价表</asp:ListItem>
-                                                                    <asp:ListItem Value="采购合同">采购合同</asp:ListItem>
-                                                                    <asp:ListItem Value="供应商送货单">供应商送货单</asp:ListItem>
-                                                                    <asp:ListItem Value="收款收据">收款收据</asp:ListItem>
+                                                                    <asp:ListItem Value="ProjectPurchaseRequisition" Text="<%$ Resources:lang,XiangMuQingGouDan%>"></asp:ListItem>
+                                                                    <asp:ListItem Value="PriceComparisonSheet" Text="<%$ Resources:lang,BiJiaBiao%>"></asp:ListItem>
+                                                                    <asp:ListItem Value="ProcurementContract" Text="<%$ Resources:lang,CaiGouHeTong%>"></asp:ListItem>
+                                                                    <asp:ListItem Value="SupplierDeliveryNote" Text="<%$ Resources:lang,GongYingShangShongHuoDan%>"></asp:ListItem>
+                                                                    <asp:ListItem Value="PaymentReceipt" Text="<%$ Resources:lang,ShouKuanShouJu%>"></asp:ListItem>
                                                                 </asp:DropDownList>
                                                             </td>
                                                         </tr>

@@ -60,7 +60,7 @@ public partial class TTWZPlanEdit : System.Web.UI.Page
          
             if (string.IsNullOrEmpty(strSupplyMethod) | string.IsNullOrEmpty(strSinceNumber) | string.IsNullOrEmpty(strProjectCode) | string.IsNullOrEmpty(strPlanName) | string.IsNullOrEmpty(strPickingUnit))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYSGXDBNWKQJC").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYSGXDBNWKQJC + "')", true);
                 return;
             }
 
@@ -96,7 +96,7 @@ public partial class TTWZPlanEdit : System.Web.UI.Page
                 if (intCheckSinceNumber > 0)
                 {
                     //自编号已经存在！
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZBHYJCZGG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZBHYJCZGG + "')", true);
                     return;
                 }
 
@@ -121,7 +121,7 @@ public partial class TTWZPlanEdit : System.Web.UI.Page
                 //wZPickingPlan.SignTime = DateTime.Now;
                 //wZPickingPlan.CancelTime = DateTime.Now;
 
-                wZPickingPlan.Progress = LanguageHandle.GetWord("LuRu").ToString().Trim();
+                wZPickingPlan.Progress = "录入";
                 wZPickingPlan.IsMark = 0;
 
                 wZPickingPlanBLL.AddWZPickingPlan(wZPickingPlan);
@@ -205,12 +205,12 @@ public partial class TTWZPlanEdit : System.Web.UI.Page
 
             string strProgress = ShareClass.ObjectToString(drPlan["Progress"]);
 
-            if(ShareClass.ObjectToString(drPlan["SupplyMethod"]) != LanguageHandle.GetWord("JiaGong").ToString().Trim())
+            if(ShareClass.ObjectToString(drPlan["SupplyMethod"]) != "甲供")
             {
                 DDL_SupplyMethod.Enabled = false;
             }
 
-            if (strProgress == LanguageHandle.GetWord("LuRu").ToString().Trim())
+            if (strProgress == "录入")
             {
                 TXT_SinceNumber.ReadOnly = false;
                 TXT_PlanName.ReadOnly = false;
@@ -235,7 +235,7 @@ public partial class TTWZPlanEdit : System.Web.UI.Page
                 TXT_PurchaseEngineer.ReadOnly = true;
             }
 
-            if(GetPickingUnitType(ShareClass.ObjectToString(drPlan["ProjectCode"])) == LanguageHandle.GetWord("XiangMuBu").ToString().Trim())
+            if(GetPickingUnitType(ShareClass.ObjectToString(drPlan["ProjectCode"])) == "项目部")
             {
                 btnPickingUnit.Visible = false;
             }
@@ -277,7 +277,7 @@ public partial class TTWZPlanEdit : System.Web.UI.Page
     private void DataProjectBinder()
     {
         WZProjectBLL wZProjectBLL = new WZProjectBLL();
-        string strProjectHQL = "from WZProject as wZProject where Progress = 'Start Work' and IsStatus != 'Closed' order by MarkTime desc";   //ChineseWord
+        string strProjectHQL = "from WZProject as wZProject where Progress = '开工' and IsStatus != '关闭' order by MarkTime desc";
         IList listProject = wZProjectBLL.GetAllWZProjects(strProjectHQL);
 
         DDL_Project.DataSource = listProject;
@@ -318,9 +318,9 @@ public partial class TTWZPlanEdit : System.Web.UI.Page
 
                 string strPowerPurchase = ShareClass.ObjectToString(drProject["PowerPurchase"]);
 
-                if (strPowerPurchase == LanguageHandle.GetWord("Mo").ToString().Trim())
+                if (strPowerPurchase == "无")
                 {
-                    DDL_SupplyMethod.SelectedValue = LanguageHandle.GetWord("JiaGong").ToString().Trim();
+                    DDL_SupplyMethod.SelectedValue = "甲供";
                     DDL_SupplyMethod.Enabled = false;
                 }
                 else
@@ -330,7 +330,7 @@ public partial class TTWZPlanEdit : System.Web.UI.Page
                 }
 
                 string strUnitType = ShareClass.ObjectToString(drProject["UnitType"]);
-                if (strUnitType == LanguageHandle.GetWord("XiangMuBu").ToString().Trim())
+                if (strUnitType == "项目部")
                 {
                     TXT_PickingUnit.Text = ShareClass.ObjectToString(drProject["ProjectName"]);
                     HF_Department.Value = ShareClass.ObjectToString(drProject["ProjectCode"]);

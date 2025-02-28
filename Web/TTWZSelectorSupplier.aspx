@@ -276,7 +276,7 @@
                                                                         <%# ShareClass.StringCutByRequire(Eval("MainSupplier").ToString(), 190) %>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateColumn>
-                                                                <asp:BoundColumn DataField="Grade" HeaderText="Level">
+                                                                <asp:BoundColumn DataField="Grade" HeaderText="级别">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                                 </asp:BoundColumn>
                                                                 <%--<asp:BoundColumn DataField="ApproveTime" HeaderText="登记日期">
@@ -327,7 +327,7 @@
                                                                 <asp:BoundColumn DataField="AuditorName" HeaderText="责任工程师">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="3%" />
                                                                 </asp:BoundColumn>
-                                                                <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                                <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                     <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="2%" />
                                                                 </asp:BoundColumn>
                                                                 <asp:TemplateColumn>
@@ -531,7 +531,7 @@
                                                         <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="确定" />
                                                         &nbsp;
                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false;CloseLayer();"
-                                                            type="button" value="Closed" />
+                                                            type="button" value="关闭" />
                                                         <asp:TextBox ID="TextBox1" runat="server" Visible="false"></asp:TextBox>
                                                     </div>
                                                 </td>

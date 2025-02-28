@@ -91,7 +91,7 @@
                                                                     <a href='TTWZProjectNatureEdit.aspx?id=<%# DataBinder.Eval(Container.DataItem,"ID") %>' class="notTab">
                                                                         <asp:Label ID="Label6" runat="server" Text="<%$ Resources:lang,BianJi%>"></asp:Label></a>
                                                                     <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" CssClass="notTab" Visible='<%# Eval("IsMark").ToString()=="0" ? true : false %>'>É¾³ý</asp:LinkButton>
-                                                                    <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="Deleted" />--%>
+                                                                    <%--<asp:Button ID="Button1" CssClass="inpu" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"ID") %>' CommandName="del" Text="É¾³ý" />--%>
                                                                     
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>

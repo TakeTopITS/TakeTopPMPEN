@@ -28,8 +28,8 @@ public partial class TTWZSelectorProjectPurchase : System.Web.UI.Page
         //        m.UserName as ProjectManagerName
         //        from T_WZProject p
         //        left join T_ProjectMember m on p.ProjectManager = m.UserCode
-        //        where p.Progress = 'Start Work'
-        //        and p.PurchaseEngineer = '{0}'", strUserCode);   //ChineseWord
+        //        where p.Progress = '开工'
+        //        and p.PurchaseEngineer = '{0}'", strUserCode);
 
         string strProjectHQL = string.Format(@"select p.*,
                     pp.UserName as ProjectManagerName,
@@ -51,14 +51,14 @@ public partial class TTWZSelectorProjectPurchase : System.Web.UI.Page
                     left join T_ProjectMember ps on p.Safekeep = ps.UserCode
                     left join T_ProjectMember pa on p.Marker = pa.UserCode
                     left join T_ProjectMember pu on p.SupplementEditor = pu.UserCode
-                    where p.Progress = 'Start Work'                                     
+                    where p.Progress = '开工'                                     
                 
                     and (p.SupplementEditor = '{0}' or p.SupplementEditor = '-')
                     and ProjectCode not in 
                     (
                     select ProjectCode from T_Project
-                    where Status in ('Deleted')
-                    )", strUserCode);   //ChineseWord
+                    where Status in ('删除')
+                    )", strUserCode);
 
 
         strProjectHQL += " order by p.MarkTime desc";

@@ -87,7 +87,7 @@ public partial class TTProjectHumanResourcePlan : System.Web.UI.Page
                     " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'12 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberUsed else 0 end) MonthTotal12  " +
                     "from T_ProjectMemberSchedule group by WorkType " +
                     "union all " +
-                    "select WorkType ||'ReserveQuantity' WorkType, sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal ," +   //ChineseWord
+                    "select WorkType ||'ReserveQuantity' WorkType, sum(case when '" + strYearMonth.Trim() + "' = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal ," +   
                     " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'1 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal1 ," +
                     " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'2 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal2 ," +
                     " sum(case when SUBSTRING(to_char('" + dt + "'::timestamp+'3 month'::interval,'yyyy-mm-dd'),0,8) = SUBSTRING(to_char(YearMonth,'yyyy-mm-dd'),0,8) then NumberAll else 0 end) MonthTotal3 ," +

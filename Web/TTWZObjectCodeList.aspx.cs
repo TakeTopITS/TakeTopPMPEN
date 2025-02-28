@@ -24,7 +24,7 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
         strUserCode = Session["UserCode"] == null ? "" : Session["UserCode"].ToString().Trim();
 
         ProjectMemberBLL projectMemberBLL = new ProjectMemberBLL();
-        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "Material Code", strUserCode);
+        Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", strUserCode);  //Label1.Text = ShareClass.GetPageTitle(this.GetType().BaseType.Name + ".aspx"); bool blVisible = TakeTopSecurity.TakeTopLicense.GetAuthobility(this.GetType().BaseType.Name + ".aspx", "物资代码", strUserCode);
         if (blVisible == false)
         {
             Response.Redirect("TTDisplayErrors.aspx");
@@ -43,7 +43,7 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
     {
         TV_Type.Nodes.Clear();
         TreeNode Node = new TreeNode();
-        Node.Text = "All";
+        Node.Text = "所有";
         Node.Value = "all|0|0|0";
         string strDLSQL = "select * from T_WZMaterialDL";
         DataTable dtDL = ShareClass.GetDataSetFromSql(strDLSQL, "DL").Tables[0];
@@ -137,7 +137,7 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
 
                     if (wZObject.Creater != strUserCode || wZObject.IsMark != 0)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSYBJBW0HZBSCJRBYXSC").ToString().Trim()+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSYBJBW0HZBSCJRBYXSC+"')", true);
                         return;
                     }
 
@@ -151,7 +151,7 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
 
                     DataBinder(arrSelectedValue[0], arrSelectedValue[1], arrSelectedValue[2], arrTreeSelectedText[1]);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"')", true);
                 }
 
             }
@@ -173,7 +173,7 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZWZDMZNTJZXLSM").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZWZDMZNTJZXLSM+"')", true);
                 }
             }
         }
@@ -228,47 +228,47 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
                 //物资名称，规格型号，级别，标准，任意一个内容为空，提示数据空缺，请补充
                 if (string.IsNullOrEmpty(strObjectName))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('物资名称不能为空，请补充！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('物资名称不能为空，请补充！');", true);
                     return;
                 }
                 if (string.IsNullOrEmpty(strModel))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('规格型号不能为空，请补充！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('规格型号不能为空，请补充！');", true);
                     return;
                 }
                 if (string.IsNullOrEmpty(strGrade))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('级别不能为空，请补充！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('级别不能为空，请补充！');", true);
                     return;
                 }
                 if (string.IsNullOrEmpty(strCriterion))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('标准不能为空，请补充！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('标准不能为空，请补充！');", true);
                     return;
                 }
                 if (intConvertUnit == 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('换算单位错误，请修改！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('换算单位错误，请修改！');", true);
                     return;
                 }
                 if (!ShareClass.CheckIsNumber(strConvertRatio))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('换算系数必须为小数类型，请修改！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('换算系数必须为小数类型，请修改！');", true);
                     return;
                 }
                 //if (!ShareClass.CheckIsNumber(strMarket))
                 //{
-                //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCJBXWXSLXXG").ToString().Trim()+"')", true);
+                //    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCJBXWXSLXXG+"')", true);
                 //    return;
                 //}
                 if (intUnit == intConvertUnit && decimalRatio != 1)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('换算系数错误，请修改！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('换算系数错误，请修改！');", true);
                     return;
                 }
                 if (intUnit != intConvertUnit && (decimalRatio == 0 || decimalRatio == 1))
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('换算关系错误，请修改！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('换算关系错误，请修改！');", true);
                     return;
                 }
 
@@ -311,7 +311,7 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
                     DataTable dtCheckObject = ShareClass.GetDataSetFromSql(strCheckObjectHQL, "strCheckObjectHQL").Tables[0];
                     if (dtCheckObject != null && dtCheckObject.Rows.Count > 0)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('记录重复，请修改！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('记录重复，请修改！');", true);
                         return;
                     }
 
@@ -349,11 +349,11 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
                 DataBinder(arrSelectedValue[0], arrSelectedValue[1], arrSelectedValue[2], arrTreeSelectedText[1]);
 
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('保存成功！');", true);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZWZDMZNTJZXLSM").ToString().Trim()+"');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZWZDMZNTJZXLSM+"');", true);
             }
         }
     }
@@ -422,13 +422,13 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZWZDMZNTJZXLSM").ToString().Trim()+"');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZWZDMZNTJZXLSM+"');", true);
                 return;
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择小类代码！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择小类代码！');", true);
             return;
         }
     }
@@ -613,7 +613,7 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
         DDL_ConvertUnit.DataSource = lstWZSpan;
         DDL_ConvertUnit.DataBind();
 
-        DDL_ConvertUnit.Items.Insert(0, new ListItem("选择", "0"));   //ChineseWord
+        DDL_ConvertUnit.Items.Insert(0, new ListItem("选择", "0"));
     }
 
 
@@ -625,7 +625,7 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
         string strEditObjectCode = HF_NewObjectCode.Value;
         if (string.IsNullOrEmpty(strEditObjectCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDWZDMLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDWZDMLB+"')", true);
             return;
         }
 
@@ -648,7 +648,7 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZWZDMZNTJZXLSM").ToString().Trim()+"');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZWZDMZNTJZXLSM+"');", true);
         }
     }
 
@@ -660,7 +660,7 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
         string strEditObjectCode = HF_NewObjectCode.Value;
         if (string.IsNullOrEmpty(strEditObjectCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDWZDMLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDWZDMLB+"')", true);
             return;
         }
 
@@ -676,7 +676,7 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
 
             if (wZObject.Creater != strUserCode || wZObject.IsMark != 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSYBJBW0HZBSCJRBYXSC").ToString().Trim()+"');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSYBJBW0HZBSCJRBYXSC+"');", true);
                 return;
             }
 
@@ -690,10 +690,10 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
 
             DataBinder(arrSelectedValue[0], arrSelectedValue[1], arrSelectedValue[2], arrTreeSelectedText[1]);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSCCG").ToString().Trim()+"');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSCCG+"');", true);
         }
         else {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSYBJBW0HZBSCJRBYXSC").ToString().Trim()+"');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSYBJBW0HZBSCJRBYXSC+"');", true);
         }
     }
 
@@ -705,7 +705,7 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
         string strEditObjectCode = HF_NewObjectCode.Value;
         if (string.IsNullOrEmpty(strEditObjectCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDWZDMLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDWZDMLB+"')", true);
             return;
         }
 
@@ -798,13 +798,13 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
 
             DataBinder(arrSelectedValue[0], arrSelectedValue[1], arrSelectedValue[2], arrTreeSelectedText[1]);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZZSYBJCG").ToString().Trim()+"');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZZSYBJCG+"');", true);
 
         }
         else {
             string strNewCreater = HF_NewCreater.Value;
             string strNewIsMark = HF_NewIsMark.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZSYBJBW0HZBSCJRBYXSC").ToString().Trim()+"');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZSYBJBW0HZBSCJRBYXSC+"');", true);
         }
     }
 
@@ -816,7 +816,7 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
         string strEditObjectCode = HF_NewObjectCode.Value;
         if (string.IsNullOrEmpty(strEditObjectCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDWZDMLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDWZDMLB+"')", true);
             return;
         }
 
@@ -835,7 +835,7 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
         string strEditObjectCode = HF_NewObjectCode.Value;
         if (string.IsNullOrEmpty(strEditObjectCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDJYCZDWZDMLB").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDJYCZDWZDMLB+"')", true);
             return;
         }
 
@@ -901,12 +901,12 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
 
             DataBinder(arrSelectedValue[0], arrSelectedValue[1], arrSelectedValue[2], arrTreeSelectedText[1]);
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTHCG").ToString().Trim()+"');", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTHCG+"');", true);
         }
         else {
             string strNewCreater = HF_NewCreater.Value;
             string strNewIsMark = HF_NewIsMark.Value;
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('新的物资代码不存在，请填写正确的物资代码！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('新的物资代码不存在，请填写正确的物资代码！');", true);
             return;
         }
     }
@@ -1029,13 +1029,13 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
 
                     DataBinder(arrSelectedValue[0], arrSelectedValue[1], arrSelectedValue[2], arrTreeSelectedText[1]);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZZZSYBJCG").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZZZSYBJCG+"')", true);
                 }
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZDLZLHXLDM").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZDLZLHXLDM+"')", true);
             return;
         }
     }
@@ -1103,30 +1103,30 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
 
                             DataBinder(arrSelectedValue[0], arrSelectedValue[1], arrSelectedValue[2], arrTreeSelectedText[1]);
 
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTHCG").ToString().Trim()+"')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTHCG+"')", true);
                         }
                         else
                         {
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXDWZDMBZBXZWZBZCZ").ToString().Trim()+"')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXDWZDMBZBXZWZBZCZ+"')", true);
                             return;
                         }
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZTXXDWZDM").ToString().Trim()+"')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZTXXDWZDM+"')", true);
                         return;
                     }
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZWZDM").ToString().Trim()+"')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZWZDM+"')", true);
                     return;
                 }
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+LanguageHandle.GetWord("ZZXZDLZLHXLDM").ToString().Trim()+"')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('"+Resources.lang.ZZXZDLZLHXLDM+"')", true);
             return;
         }
     }
@@ -1153,7 +1153,7 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择小类代码！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择小类代码！');", true);
                 return;
             }
         }
@@ -1218,7 +1218,7 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择小类代码！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择小类代码！');", true);
             }
         }
         else {
@@ -1282,7 +1282,7 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择小类代码！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择小类代码！');", true);
             }
         }
         else {
@@ -1347,7 +1347,7 @@ public partial class TTWZObjectCodeList : System.Web.UI.Page
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择小类代码！');", true);   //ChineseWord
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('请先选择小类代码！');", true);
             }
         }
         else {

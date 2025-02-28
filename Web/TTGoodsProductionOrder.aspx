@@ -214,7 +214,7 @@
                                                     <asp:DropDownList ID="DL_ProductionType" runat="server" Width="150px">
                                                         <asp:ListItem Value="SelfMade" Text="<%$ Resources:lang,ZiZhi%>" />
                                                         <asp:ListItem Value="OutSourcing" Text="<%$ Resources:lang,WeiWai%>" />
-                                                        <asp:ListItem Value="Delivery" Text="½»¸¶" />
+                                                        <asp:ListItem Value="Delivery"  Text="<%$ Resources:lang,JiaoFu%>"  />
                                                     </asp:DropDownList>
                                                 </td>
                                             </tr>

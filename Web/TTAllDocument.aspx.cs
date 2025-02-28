@@ -38,7 +38,7 @@ public partial class TTAllDocument : System.Web.UI.Page
             strHQL = "from Document as document";
             strHQL += " Where ((document.DepartCode in " + strDepartString;
 
-            strHQL += " ) Or document.Visible = 'Group' or document.Visible = 'All')";  //ChineseWord
+            strHQL += " ) Or document.Visible = 'Group' or document.Visible = 'All')";  
             strHQL += " and document.Status <> 'Deleted'";
             strHQL += " Order by document.DocID DESC";
             DocumentBLL documentBLL = new DocumentBLL();
@@ -98,7 +98,7 @@ public partial class TTAllDocument : System.Web.UI.Page
             strHQL = "from Document as document where document.DocTypeID = " + "'" + strDocTypeID + "'";
             strHQL += " and (document.DepartCode in " + strDepartString;
 
-            strHQL += " Or document.Visible = 'Group' or document.Visible = 'All')";  //ChineseWord
+            strHQL += " Or document.Visible = 'Group' or document.Visible = 'All')";  
             strHQL += " and document.Status <> 'Deleted'";
             strHQL += " Order by document.DocID DESC";
             lst = documentBLL.GetAllDocuments(strHQL);
@@ -130,7 +130,7 @@ public partial class TTAllDocument : System.Web.UI.Page
             strHQL = "from Document as document where ";
             strHQL += " (document.DepartCode in " + strDepartString;
 
-            strHQL += " Or document.Visible = 'Group' or document.Visible = 'All')";  //ChineseWord
+            strHQL += " Or document.Visible = 'Group' or document.Visible = 'All')";  
             strHQL += " and document.Status <> 'Deleted'";
             strHQL += " Order by document.DocID DESC";
             lst = documentBLL.GetAllDocuments(strHQL);
@@ -308,7 +308,7 @@ public partial class TTAllDocument : System.Web.UI.Page
         strHQL += " and document.DocName like " + "'" + strDocName + "'";
         strHQL += " and document.DepartCode in " + strDepartString;
 
-        strHQL += " ) Or document.Visible = 'Group' or document.Visible = 'All')";  //ChineseWord
+        strHQL += " ) Or document.Visible = 'Group' or document.Visible = 'All')";  
         strHQL += " and document.Status <> 'Deleted'";
         strHQL += " Order by document.DocID DESC";
         DocumentBLL documentBLL = new DocumentBLL();

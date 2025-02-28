@@ -245,7 +245,7 @@
                                                                         <asp:BoundColumn DataField="PickingPlanCode" HeaderText="计划编号">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="ObjectCode" HeaderText="Material Code">
+                                                                        <asp:BoundColumn DataField="ObjectCode" HeaderText="物资代码">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
                                                                         <%--<asp:BoundColumn DataField="ObjectName" HeaderText="物资名称">
@@ -299,7 +299,7 @@
                                                                         <asp:BoundColumn DataField="MaterialPersonName" HeaderText="材料员">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
-                                                                        <asp:BoundColumn DataField="Progress" HeaderText="Progress">
+                                                                        <asp:BoundColumn DataField="Progress" HeaderText="进度">
                                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="4%" />
                                                                         </asp:BoundColumn>
                                                                         <asp:BoundColumn DataField="IsMark" HeaderText="使用标记">
@@ -397,7 +397,7 @@
                                                         CellPadding="4" ForeColor="#333333" GridLines="None" Height="1px" PageSize="20" ShowHeader="false"
                                                         Width="100%" OnPageIndexChanged="DG_CardImportList_PageIndexChanged">
                                                         <Columns>
-                                                            <asp:BoundColumn DataField="ID" HeaderText="SerialNumber">
+                                                            <asp:BoundColumn DataField="ID" HeaderText="序号">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>
                                                             <%--<asp:BoundColumn DataField="NoCode" HeaderText="No编号">
@@ -436,12 +436,9 @@
                                                             <asp:BoundColumn DataField="PlanMoney" HeaderText="预算金额">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="5%" />
                                                             </asp:BoundColumn>
-                                                            <asp:TemplateColumn HeaderText="Status">
-    <ItemTemplate>
-        <%# ShareClass.GetStatusHomeNameByOtherStatus(Eval("ImportStatus").ToString()) %>
-    </ItemTemplate>
-    <ItemStyle CssClass="itemBorder" HorizontalAlign="Left" Width="5%" />
-</asp:TemplateColumn>
+                                                            <asp:BoundColumn DataField="ImportStatus" HeaderText="导入状态">
+                                                                <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
+                                                            </asp:BoundColumn>
                                                             <%--<asp:BoundColumn DataField="CardCode" HeaderText="凭证编号">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="5%" />
                                                             </asp:BoundColumn>--%>

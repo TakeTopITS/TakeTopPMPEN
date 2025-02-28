@@ -91,7 +91,7 @@ public partial class TTAppTask : System.Web.UI.Page
         LB_Sql1.Text = strHQL;
 
         strHQL = "from TaskAssignRecord as taskAssignRecord where taskAssignRecord.OperatorCode = " + "'" + strUserCode + "'";
-        strHQL += " and (taskAssignRecord.Status in ('Rejected','Completed','Suspended','Cancel') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord))";   //ChineseWord
+        strHQL += " and (taskAssignRecord.Status in ('Rejected','Completed','Suspended','Cancel') and taskAssignRecord.ID not in (select taskAssignRecord.PriorID from TaskAssignRecord as taskAssignRecord))";   
         strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where projectTask.Status <> 'Closed')";
         strHQL += " and taskAssignRecord.TaskID in (select projectTask.TaskID from ProjectTask as projectTask where (projectTask.ProjectID = 1) or (projectTask.ProjectID in (select project.ProjectID from Project as project where project.Status not in ('New','Hided','Deleted','Archived'))))";
         strHQL += " Order by taskAssignRecord.ID DESC";

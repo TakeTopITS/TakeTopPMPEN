@@ -291,8 +291,8 @@ public partial class TTAccountAssetPayment : System.Web.UI.Page
 
     protected DataTable getAccountGeneralLedgerList(string strFinancialID, string strIntervalID, string strAccountCode, string strType, string strDepartCode)
     {
-        string strHQL = "select E.AccountType 'SubjectType',A.AccountName 'AccountingSubjects','Nature'=case when ReceivablesRecordID>0 then 'Receipt' when PayableRecordID>0 then 'Payment' else 'CarryForwardFromPreviousPeriod' end," +  //ChineseWord //ChineseWord
-            "FinancialName 'FinancialAccountingSet',IntervalName 'FinancialPeriod',TotalMoney 'AmountOccurred',CurrencyType 'Currency',UserName 'Operator',CreateTime 'OperationTime' from T_AccountGeneralLedger A," +  //ChineseWord //ChineseWord
+        string strHQL = "select E.AccountType 'SubjectType',A.AccountName 'AccountingSubjects','Nature'=case when ReceivablesRecordID>0 then 'Receipt' when PayableRecordID>0 then 'Payment' else 'CarryForwardFromPreviousPeriod' end," +   
+            "FinancialName 'FinancialAccountingSet',IntervalName 'FinancialPeriod',TotalMoney 'AmountOccurred',CurrencyType 'Currency',UserName 'Operator',CreateTime 'OperationTime' from T_AccountGeneralLedger A," +   
             "T_AccountFinancialSet B,T_AccountingIntervalSet C,T_ProjectMember D,T_Account E where A.FinancialCode=B.FinancialCode and A.IntervalCode=C.IntervalCode and A.Creater=D.UserCode and A.AccountCode=E.AccountCode ";
         if (strFinancialID.Trim() != "")
         {
@@ -449,15 +449,15 @@ public partial class TTAccountAssetPayment : System.Web.UI.Page
     {
         if (strReceivablesRecordID == "0" && strPayableRecordID == "0")
         {
-            return "CarryForwardFromPreviousPeriod";  //ChineseWord //ChineseWord
+            return "CarryForwardFromPreviousPeriod";   
         }
         else if (strReceivablesRecordID == "0" && strPayableRecordID != "0")
         {
-            return "Payment";  //ChineseWord //ChineseWord
+            return "Payment";   
         }
         else if (strReceivablesRecordID != "0" && strPayableRecordID == "0")
         {
-            return "Receipt";  //ChineseWord //ChineseWord
+            return "Receipt";   
         }
         else
             return "";

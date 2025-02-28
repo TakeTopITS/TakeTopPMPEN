@@ -32,7 +32,7 @@ public partial class TTWZSelectorSupplierDecision : System.Web.UI.Page
     {
 
 
-//        string strPurchaseHQL = string.Format(@"select p.*,a.SupplierCode,a.SumApplyMoney,COALESCE(c.ExpertCode, 'None') as IsSelect,c.Suggest from
+//        string strPurchaseHQL = string.Format(@"select p.*,a.SupplierCode,a.SumApplyMoney,COALESCE(c.ExpertCode, '没有') as IsSelect,c.Suggest from
 //                                                (
 //                                                select t.SupplierCode,t.PurchaseCode,Sum(t.ApplyMoney) as SumApplyMoney from
 //                            (
@@ -45,7 +45,7 @@ public partial class TTWZSelectorSupplierDecision : System.Web.UI.Page
 //                                                left join T_WZPurchase p on a.PurchaseCode = p.PurchaseCode
 //                                                left join T_WZSupplierApplyComment c on c.PurchaseCode = a.PurchaseCode
 //                                                and c.ExpertCode = a.SupplierCode
-//                                                where p.PurchaseCode = '{0}'", strPurchaseCode);   //ChineseWord
+//                                                where p.PurchaseCode = '{0}'", strPurchaseCode);
 
 
 //        string strPurchaseHQL = string.Format(@"select p.*,c.ExpertCode,c.SupplierCode as SelectSupplierCode,c.Suggest,a.SumApplyMoney from T_WZSupplierApplyComment c
@@ -66,7 +66,7 @@ public partial class TTWZSelectorSupplierDecision : System.Web.UI.Page
 //                            where c.PurchaseCode ='{0}'", strPurchaseCode);
 
 
-//        string strPurchaseHQL = string.Format(@"select p.*,a.SupplierCode,a.SumApplyMoney,COALESCE(c.ExpertCode, 'None') as IsSelect,c.Suggest from
+//        string strPurchaseHQL = string.Format(@"select p.*,a.SupplierCode,a.SumApplyMoney,COALESCE(c.ExpertCode, '没有') as IsSelect,c.Suggest from
 //                            (
 //                            select t.SupplierCode,t.PurchaseCode,Sum(t.ApplyMoney) as SumApplyMoney from
 //                            (
@@ -82,7 +82,7 @@ public partial class TTWZSelectorSupplierDecision : System.Web.UI.Page
 //                            left join T_WZPurchase p on a.PurchaseCode = p.PurchaseCode
 //                            left join T_WZSupplierApplyComment c on c.PurchaseCode = a.PurchaseCode
 //                            and c.ExpertCode = a.SupplierCode
-//                            where p.PurchaseCode = '{0}'", strPurchaseCode);   //ChineseWord
+//                            where p.PurchaseCode = '{0}'", strPurchaseCode);
 
         string strPurchaseHQL = string.Format(@"select ps.*,COALESCE(t.SelectCount,0) as SelectCount from T_WZPurchaseSupplier ps
                                 left join 

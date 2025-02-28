@@ -399,7 +399,7 @@ public partial class TTMailTransfer : System.Web.UI.Page
                     else
                     {
                         strAttachDocFullURL = Request.ServerVariables["HTTP_HOST"] + Request.ApplicationPath + "/" + attachments.Url.Trim();
-                        strAttachmentUrlList += "</br>¸½¼þ£º<a href=http://" + strAttachDocFullURL + " target=_blank >" + attachments.Name.Trim() + "</a>";   //ChineseWord
+                        strAttachmentUrlList += "</br>¸½¼þ£º<a href=http://" + strAttachDocFullURL + " target=_blank >" + attachments.Name.Trim() + "</a>";   
                     }
 
                     nContain += int.Parse(f.Length.ToString());

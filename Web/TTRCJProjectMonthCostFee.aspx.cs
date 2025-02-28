@@ -42,7 +42,7 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
             catch (Exception exp)
             {
                 lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiDouQuChengBenFeiShi").ToString().Trim() + exp.Message;
+                lb_ShowMessage.Text = "消息提示：读取成本费实际发生信息列表失败！" + exp.Message;
             }
         }
     }
@@ -94,7 +94,7 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiDouQuChengBenZiXian").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：读取成本子项列表信息失败！" + exp.Message;
         }
     }
 
@@ -117,7 +117,7 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiCaoZuoShiBai").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：操作失败！" + exp.Message;
         }
     }
 
@@ -131,7 +131,7 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiDouQuChengBenZiXian").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：读取成本子项列表信息失败！" + exp.Message;
         }
     }
     protected void btnDeleteItem_Click(object sender, EventArgs e)
@@ -139,7 +139,7 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
         if (GridView1.SelectedIndex == -1)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiQingShuaZeYiHangJin").ToString().Trim() ;
+            lb_ShowMessage.Text = "消息提示：请选择一行进行删除操作！" ;
             return;
         }
 
@@ -153,14 +153,14 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
             mcfBll.DeleteRCJProjectMonthCostFee(mcfData);
 
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiShanChuShiJiFaSheng").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：删除实际发生成本成功！";
 
             InitDataList();
         }
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiShanChuShiJiFaSheng").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：删除实际发生成本失败！" + exp.Message;
         }
     }
 
@@ -169,14 +169,14 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
         if (DDL_CostSubFee.SelectedIndex == -1)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiChengBenFeiXiangZiL").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：[成本费项子类]没有选择项，请先输入该大类的子项后再试！";
             return;
         }
 
         if (TB_CostFee.Text.Trim().Length == 0 || false == ShareClass.CheckIsNumber(TB_CostFee.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiChengBenFeiYongShuR").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：[成本费用]输入有误，请输入数字再试！";
             return ;
         }
 
@@ -207,14 +207,14 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
             mcfBll.AddRCJProjectMonthCostFee(mcfData);
 
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiZengJiaShiJiFaSheng").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：增加实际发生成本成功！";
 
             InitDataList();
         }
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiZengJiaShiJiFaSheng").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：增加实际发生成本失败！" + exp.Message;
         }
     }
     protected void btnEditItem_Click(object sender, EventArgs e)
@@ -222,14 +222,14 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
         if (DDL_CostSubFee.SelectedIndex == -1)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiChengBenFeiXiangZiL").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：[成本费项子类]没有选择项，请先输入该大类的子项后再试！";
             return;
         } 
         
         if (TB_CostFee.Text.Trim().Length == 0 || false == ShareClass.CheckIsNumber(TB_CostFee.Text))
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiChengBenFeiYongShuR").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：[成本费用]输入有误，请输入数字再试！";
             return;
         }
 
@@ -260,14 +260,14 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
             mcfBll.UpdateRCJProjectMonthCostFee(mcfData , mcfData.ID);
 
             lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiXiuGaiShiJiFaShengC").ToString().Trim();
+            lb_ShowMessage.Text = "消息提示：修改实际发生成本成功！";
 
             InitDataList();
         }
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiXiuGaiShiJiFaShengC").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：修改实际发生成本失败！" + exp.Message;
         }
     }
 
@@ -301,7 +301,7 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiChaXunCaoZuoShiBai").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：查询操作失败：" + exp.Message;
 
             return true;
         }
@@ -339,19 +339,19 @@ public partial class TTRCJProjectMonthCostFee : System.Web.UI.Page
             if (ds.Tables[0].Rows.Count > 0)
             {
                 lb_ShowMessage.ForeColor = System.Drawing.Color.Green;
-                lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiChaXunDaoDuiYingDeJ").ToString().Trim();
+                lb_ShowMessage.Text = "消息提示：查询到对应的记录！";
             }
             else
             {
                 lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-                lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiMeiYouChaXunDaoDuiY").ToString().Trim();
+                lb_ShowMessage.Text = "消息提示：没有查询到对应的记录！";
 
             }
         }
         catch (Exception exp)
         {
             lb_ShowMessage.ForeColor = System.Drawing.Color.Red;
-            lb_ShowMessage.Text = LanguageHandle.GetWord("XiaoXiDiShiChaXunCaoZuoShiBai").ToString().Trim() + exp.Message;
+            lb_ShowMessage.Text = "消息提示：查询操作失败：" + exp.Message;
         }
     }
 

@@ -161,8 +161,8 @@
                                                                     <asp:Label ID="Label16" runat="server" Text="<%$ Resources:lang,CaoZuo%>"></asp:Label>
                                                                 </HeaderTemplate>
                                                                 <ItemTemplate>
-                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"SupplierCode") %>' CommandName="request" CssClass="notTab" Text='<%# Eval("IsSelect").ToString() == "None" ? "选择" : "已选择" %>'></asp:LinkButton>
-                                                                    <%--<input type="button" value='<%# Eval("IsSelect").ToString() == "None" ? "选择" : "已选择" %>' class="inpu" onclick='ClickSign("<%# Eval("SupplierCode") %>    ")' />--%>
+                                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"SupplierCode") %>' CommandName="request" CssClass="notTab" Text='<%# Eval("IsSelect").ToString() == "没有" ? "选择" : "已选择" %>'></asp:LinkButton>
+                                                                    <%--<input type="button" value='<%# Eval("IsSelect").ToString() == "没有" ? "选择" : "已选择" %>' class="inpu" onclick='ClickSign("<%# Eval("SupplierCode") %>    ")' />--%>
                                                                     <a href='TTWZPurchaseDecisionDetail.aspx?PurchaseCode=<%# DataBinder.Eval(Container.DataItem,"PurchaseCode") %>&SupplierCode=<%# DataBinder.Eval(Container.DataItem,"SupplierCode") %>'>
                                                                         <asp:Label ID="Label24" runat="server" Text="<%$ Resources:lang,ChaKanBaoJia%>"></asp:Label></a>
                                                                 </ItemTemplate>
@@ -185,7 +185,7 @@
                                                             <asp:BoundColumn DataField="SumApplyMoney" HeaderText="供应商报价">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Right" Width="7%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="SupplierCode" HeaderText="Supplier">
+                                                            <asp:BoundColumn DataField="SupplierCode" HeaderText="供应商">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                             </asp:BoundColumn>
                                                             <%--<asp:BoundColumn DataField="SupplierName" HeaderText="供应商名称">
@@ -212,7 +212,7 @@
                                                             <asp:BoundColumn DataField="ProjectCode" HeaderText="项目编码">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                             </asp:BoundColumn>
-                                                            <asp:BoundColumn DataField="PurchaseMethod" HeaderText="Procurement Method">
+                                                            <asp:BoundColumn DataField="PurchaseMethod" HeaderText="采购方式">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="7%" />
                                                             </asp:BoundColumn>
                                                             <%--<asp:BoundColumn DataField="MarkTime" HeaderText="编制日期">

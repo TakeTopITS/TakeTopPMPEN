@@ -266,7 +266,7 @@ public partial class TTReqDetailThirdPart : System.Web.UI.Page
             reqAssignRecordBLL.AddReqAssignRecord(reqAssignRecord);
 
             //更改需求分派记录状态
-            updateReqAssignRecordStatus(intPriorID, "Assigned");   //ChineseWord
+            updateReqAssignRecordStatus(intPriorID, "Assigned");   
 
             LoadAssignRecord(strID);
             LoadChildRecord(strID);

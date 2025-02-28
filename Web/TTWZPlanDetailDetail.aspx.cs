@@ -105,7 +105,7 @@ public partial class TTWZPlanDetailDetail : System.Web.UI.Page
     {
         TV_Type.Nodes.Clear();
         TreeNode Node = new TreeNode();
-        Node.Text = LanguageHandle.GetWord("QuanBuCaiLiao").ToString().Trim();
+        Node.Text = "全部材料";
         Node.Value = "all|0|0|0";
         string strDLSQL = "select * from T_WZMaterialDL";
         DataTable dtDL = ShareClass.GetDataSetFromSql(strDLSQL, "DL").Tables[0];
@@ -224,12 +224,12 @@ public partial class TTWZPlanDetailDetail : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(strObjectCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZYJHMXLB").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZYJHMXLB + "')", true);
                 return;
             }
             if (string.IsNullOrEmpty(strNewObjectCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZZWZLBXDWZDM").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZZWZLBXDWZDM + "')", true);
                 return;
             }
 
@@ -256,7 +256,7 @@ public partial class TTWZPlanDetailDetail : System.Web.UI.Page
                     //重新加载计划明细列表
                     DataPickingPlanDetailBinder(strPlanCode);
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZTHCG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZTHCG + "')", true);
                 }
             }
         }

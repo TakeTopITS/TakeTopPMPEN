@@ -58,7 +58,7 @@ public partial class TTMakeBookManageOut : System.Web.UI.Page
 
     protected void LoadBookList(string strBarCode, string strBookName, string strReferenceNo, string strAuthor, string strBookClassificationId, string strBookPublishersId, string strBelongDepartCode)
     {
-        string strHQL = " Select *,(Case when BookType='Standard' then BookImage else '' end) BookImageNew From T_BookInformation Where 1=1 ";   //ChineseWord
+        string strHQL = " Select *,(Case when BookType='Standard' then BookImage else '' end) BookImageNew From T_BookInformation Where 1=1 ";   
         if (!string.IsNullOrEmpty(strBarCode.Trim()))
         {
             strHQL += " and BarCode like '%" + strBarCode.Trim() + "%' ";
@@ -93,11 +93,11 @@ public partial class TTMakeBookManageOut : System.Web.UI.Page
         }
         else if (DropDownList1.SelectedValue.Trim().Equals("1"))//Í¼Êé
         {
-            strHQL += " and BookType='Book' Order By ReferenceNo ASC ";   //ChineseWord
+            strHQL += " and BookType='Book' Order By ReferenceNo ASC ";   
         }
         else//±ê×¼
         {
-            strHQL += " and BookType='Standard' Order By BarCode ASC ";   //ChineseWord
+            strHQL += " and BookType='Standard' Order By BarCode ASC ";   
         }
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_BookInformation");
 
@@ -109,7 +109,7 @@ public partial class TTMakeBookManageOut : System.Web.UI.Page
 
     protected void LoadBookBorrowRecord()
     {
-        string strHQL = "Select A.*,(Case when B.BookType='Standard' then B.BookImage else '' end) BookImageNew  From T_BookBorrowRecord As A,T_BookInformation As B Where A.BorrowCode='" + strUserCode.Trim() + "' and A.BookInfoId=B.ID Order By A.BarCode ASC ";   //ChineseWord
+        string strHQL = "Select A.*,(Case when B.BookType='Standard' then B.BookImage else '' end) BookImageNew  From T_BookBorrowRecord As A,T_BookInformation As B Where A.BorrowCode='" + strUserCode.Trim() + "' and A.BookInfoId=B.ID Order By A.BarCode ASC ";   
         DataSet ds = ShareClass.GetDataSetFromSql(strHQL, "T_BookBorrowRecord");
 
         DataGrid2.CurrentPageIndex = 0;

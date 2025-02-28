@@ -115,7 +115,7 @@
                                                             </ItemTemplate>
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                         </asp:TemplateColumn>
-                                                        <asp:BoundColumn DataField="UserName" HeaderText="Name">
+                                                        <asp:BoundColumn DataField="UserName" HeaderText="姓名">
                                                             <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" />
                                                         </asp:BoundColumn>
                                                     </Columns>
@@ -137,7 +137,7 @@
                                                     <input id="btnOk" class="inpu" onclick="return chooseUpdate()" type="button" value="确定" />
                                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <input id="btnClose()" class="inpu" onclick="window.returnValue = false; CloseLayer();"
-                                                            type="button" value="Closed" />
+                                                            type="button" value="关闭" />
                                                 </div>
                                             </td>
                                         </tr>

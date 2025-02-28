@@ -88,7 +88,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
                         left join T_WZSupplier s6 on p.SupplierCode6 = s6.SupplierCode
 
                         where (p.PurchaseEngineer = '{0}' or p.TenderCompetent = '{0}') ", strUserCode);
-        //and p.Progress in ('Submit','上报','Approved')", strUserCode);
+        //and p.Progress in ('提交','上报','批准')", strUserCode);
         string strSearchProgress = DDL_SearchProgress.SelectedValue;
         if (!string.IsNullOrEmpty(strSearchProgress))
         {
@@ -194,7 +194,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZYCYCYYSEXMESSAGE").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZYCYCYYSEXMESSAGE + "')", true);
         }
     }
 
@@ -204,7 +204,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
         string strEditPurchaseCode = HF_NewPurchaseCode.Value;
         if (string.IsNullOrEmpty(strEditPurchaseCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDCGLB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDCGLB + "')", true);
             return;
         }
 
@@ -219,7 +219,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
         string strEditPurchaseCode = HF_NewPurchaseCode.Value;
         if (string.IsNullOrEmpty(strEditPurchaseCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDCGLB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDCGLB + "')", true);
             return;
         }
 
@@ -238,14 +238,14 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
             //              点击“取消”后，关闭上报对话框，退出上报程序												
             if (wZPurchase.PurchaseEngineer.Trim() == strUserCode)
             {
-                wZPurchase.Progress = LanguageHandle.GetWord("ShangBao").ToString().Trim();
+                wZPurchase.Progress = "上报";
 
                 wZPurchaseBLL.UpdateWZPurchase(wZPurchase, wZPurchase.PurchaseCode);
 
                 //重新加载列表
                 DataBinder();
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBCG").ToString().Trim() + "');", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBCG + "');", true);
             }
             else if (wZPurchase.TenderCompetent.Trim() == strUserCode)
             {
@@ -262,7 +262,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
         string strEditPurchaseCode = HF_NewPurchaseCode.Value;
         if (string.IsNullOrEmpty(strEditPurchaseCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDCGLB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDCGLB + "')", true);
             return;
         }
 
@@ -273,7 +273,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
         {
             WZPurchase wZPurchase = (WZPurchase)listPurchase[0];
 
-            wZPurchase.Progress = LanguageHandle.GetWord("DiJiao").ToString().Trim();
+            wZPurchase.Progress = "提交";
             wZPurchase.UpLeader = "";
 
             wZPurchaseBLL.UpdateWZPurchase(wZPurchase, wZPurchase.PurchaseCode);
@@ -283,7 +283,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
 
             ControlStatusCloseChange();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上报退回成功！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('上报退回成功！');", true);
         }
     }
 
@@ -294,7 +294,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
         string strEditPurchaseCode = HF_NewPurchaseCode.Value;
         if (string.IsNullOrEmpty(strEditPurchaseCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDCGLB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDCGLB + "')", true);
             return;
         }
 
@@ -386,35 +386,35 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
                                                             ShareClass.ObjectToString(drPurchaseDetail["Grade"]),
                                                             intUnit,
                                                             decimalPurchaseNumber,
-                                                            0, 0, "", "", LanguageHandle.GetWord("XunJia").ToString().Trim());
+                                                            0, 0, "", "", "询价");
                             }
                         }
 
 
-                        wZPurchase.Progress = LanguageHandle.GetWord("XunJia").ToString().Trim();
+                        wZPurchase.Progress = "询价";
                         wZPurchaseBLL.UpdateWZPurchase(wZPurchase, strEditPurchaseCode);
 
                         string strUpdatePurchaseDetailSQL = string.Format(@"update T_WZPurchaseDetail
                             set Progress = '询价'
-                            where PurchaseCode = '{0}'", strEditPurchaseCode);   //ChineseWord
+                            where PurchaseCode = '{0}'", strEditPurchaseCode);
                         ShareClass.RunSqlCommand(strUpdatePurchaseDetailSQL);
 
                         string strUpdatePlanDetailSQL = string.Format(@"update T_WZPickingPlanDetail
                             set Progress = '询价'
-                            where PurchaseCode = '{0}'", strEditPurchaseCode);   //ChineseWord
+                            where PurchaseCode = '{0}'", strEditPurchaseCode);
                         ShareClass.RunSqlCommand(strUpdatePlanDetailSQL);
 
                         ShareClass.RunSqlCommand(strInsertPurchaseOfferRecordSQL);
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('当前采购文件未选择采购清单！');", true);   //ChineseWord
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('当前采购文件未选择采购清单！');", true);
                         return;
                     }
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('当前采购文件未选择供应商！');", true);   //ChineseWord
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('当前采购文件未选择供应商！');", true);
                     return;
                 }
                 //                ② 写记录：												
@@ -448,7 +448,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
             DataBinder();
 
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('询价成功！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('询价成功！');", true);
 
         }
     }
@@ -460,7 +460,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
         string strEditPurchaseCode = HF_NewPurchaseCode.Value;
         if (string.IsNullOrEmpty(strEditPurchaseCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDCGLB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDCGLB + "')", true);
             return;
         }
 
@@ -471,17 +471,17 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
         {
             WZPurchase wZPurchase = (WZPurchase)listPurchase[0];
 
-            wZPurchase.Progress = "Approved";
+            wZPurchase.Progress = "批准";
             wZPurchaseBLL.UpdateWZPurchase(wZPurchase, strEditPurchaseCode);
 
             string strUpdatePurchaseDetailSQL = string.Format(@"update T_WZPurchaseDetail
                             set Progress = '录入'
-                            where PurchaseCode = '{0}'", strEditPurchaseCode);   //ChineseWord
+                            where PurchaseCode = '{0}'", strEditPurchaseCode);
             ShareClass.RunSqlCommand(strUpdatePurchaseDetailSQL);
 
             string strUpdatePlanDetailSQL = string.Format(@"update T_WZPickingPlanDetail
                             set Progress = '录入'
-                            where PurchaseCode = '{0}'", strEditPurchaseCode);   //ChineseWord
+                            where PurchaseCode = '{0}'", strEditPurchaseCode);
             ShareClass.RunSqlCommand(strUpdatePlanDetailSQL);
 
             //先删除
@@ -491,7 +491,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
             //重新加载列表
             DataBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('询价退回成功！');", true);   //ChineseWord
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('询价退回成功！');", true);
         }
     }
 
@@ -502,7 +502,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
         string strEditPurchaseCode = HF_NewPurchaseCode.Value;
         if (string.IsNullOrEmpty(strEditPurchaseCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDCGLB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDCGLB + "')", true);
             return;
         }
 
@@ -515,18 +515,18 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
         {
             WZPurchase wZPurchase = (WZPurchase)listPurchase[0];
 
-            wZPurchase.Progress = LanguageHandle.GetWord("PingBiao").ToString().Trim();
+            wZPurchase.Progress = "评标";
             wZPurchaseBLL.UpdateWZPurchase(wZPurchase, strEditPurchaseCode);
 
             string strUpdatePurchaseOfferRecordSQL = string.Format(@"update T_WZPurchaseOfferRecord
                             set Progress = '评标'
-                            where PurchaseCode = '{0}'", strEditPurchaseCode);   //ChineseWord
+                            where PurchaseCode = '{0}'", strEditPurchaseCode);
             ShareClass.RunSqlCommand(strUpdatePurchaseOfferRecordSQL);
 
             //重新加载列表
             DataBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZPBCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZPBCG + "')", true);
         }
     }
 
@@ -538,7 +538,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
         string strEditPurchaseCode = HF_NewPurchaseCode.Value;
         if (string.IsNullOrEmpty(strEditPurchaseCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDCGLB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDCGLB + "')", true);
             return;
         }
 
@@ -552,7 +552,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
         string strEditPurchaseCode = HF_NewPurchaseCode.Value;
         if (string.IsNullOrEmpty(strEditPurchaseCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDCGLB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDCGLB + "')", true);
             return;
         }
         //② 点击【报批】按钮，写记录：												
@@ -568,13 +568,13 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
         {
             WZPurchase wZPurchase = (WZPurchase)listPurchase[0];
 
-            wZPurchase.Progress = LanguageHandle.GetWord("BaoPi").ToString().Trim();
+            wZPurchase.Progress = "报批";
             wZPurchaseBLL.UpdateWZPurchase(wZPurchase, strEditPurchaseCode);
 
             //报价单
             string strUpdatePurchaseOfferRecordSQL = string.Format(@"update T_WZPurchaseOfferRecord
-                        set Progress = 'Approval'
-                        where PurchaseCode = '{0}'", strEditPurchaseCode);   //ChineseWord
+                        set Progress = '报批'
+                        where PurchaseCode = '{0}'", strEditPurchaseCode);
             ShareClass.RunSqlCommand(strUpdatePurchaseOfferRecordSQL);
 
 
@@ -585,7 +585,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
             BT_NewApprovalReturn.Enabled = true;
 
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBPCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBPCG + "')", true);
         }
     }
 
@@ -595,7 +595,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
         string strEditPurchaseCode = HF_NewPurchaseCode.Value;
         if (string.IsNullOrEmpty(strEditPurchaseCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDCGLB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDCGLB + "')", true);
             return;
         }
 
@@ -611,13 +611,13 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
         {
             WZPurchase wZPurchase = (WZPurchase)listPurchase[0];
 
-            wZPurchase.Progress = LanguageHandle.GetWord("PingBiao").ToString().Trim();
+            wZPurchase.Progress = "评标";
             wZPurchaseBLL.UpdateWZPurchase(wZPurchase, strEditPurchaseCode);
 
             //报价单
             string strUpdatePurchaseOfferRecordSQL = string.Format(@"update T_WZPurchaseOfferRecord
                         set Progress = '评标'
-                        where PurchaseCode = '{0}'", strEditPurchaseCode);   //ChineseWord
+                        where PurchaseCode = '{0}'", strEditPurchaseCode);
             ShareClass.RunSqlCommand(strUpdatePurchaseOfferRecordSQL);
 
             //重新加载列表
@@ -626,7 +626,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
             BT_NewApproval.Enabled = true;
             BT_NewApprovalReturn.Enabled = false;
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBPTHCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBPTHCG + "')", true);
         }
     }
 
@@ -636,7 +636,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
         string strEditPurchaseCode = HF_NewPurchaseCode.Value;
         if (string.IsNullOrEmpty(strEditPurchaseCode))
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXDJYCZDCGLB").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXDJYCZDCGLB + "')", true);
             return;
         }
 
@@ -687,7 +687,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
         //                left join T_ProjectMember t on p.TenderCompetent = t.UserCode
         //                left join T_ProjectMember s on p.Decision = s.UserCode
         //                where (p.PurchaseEngineer = '{0}' or p.TenderCompetent = '{0}')
-        //                and p.Progress in ('Submit','上报','Approved')", strUserCode);   //ChineseWord
+        //                and p.Progress in ('提交','上报','批准')", strUserCode);
         //string strSearchProgress = DDL_SearchProgress.SelectedValue;
         //if (!string.IsNullOrEmpty(strSearchProgress))
         //{
@@ -747,7 +747,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
                         left join T_WZSupplier s6 on p.SupplierCode6 = s6.SupplierCode
 
                         where (p.PurchaseEngineer = '{0}' or p.TenderCompetent = '{0}') ", strUserCode);
-        //and p.Progress in ('Submit','上报','Approved')", strUserCode);
+        //and p.Progress in ('提交','上报','批准')", strUserCode);
         string strSearchProgress = DDL_SearchProgress.SelectedValue;
         if (!string.IsNullOrEmpty(strSearchProgress))
         {
@@ -812,7 +812,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
         //                left join T_ProjectMember t on p.TenderCompetent = t.UserCode
         //                left join T_ProjectMember s on p.Decision = s.UserCode
         //                where (p.PurchaseEngineer = '{0}' or p.TenderCompetent = '{0}')
-        //                and p.Progress in ('Submit','上报','Approved')", strUserCode);   //ChineseWord
+        //                and p.Progress in ('提交','上报','批准')", strUserCode);
         //string strSearchProgress = DDL_SearchProgress.SelectedValue;
         //if (!string.IsNullOrEmpty(strSearchProgress))
         //{
@@ -872,7 +872,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
                         left join T_WZSupplier s6 on p.SupplierCode6 = s6.SupplierCode
 
                         where (p.PurchaseEngineer = '{0}' or p.TenderCompetent = '{0}') ", strUserCode);
-        //and p.Progress in ('Submit','上报','Approved')", strUserCode);
+        //and p.Progress in ('提交','上报','批准')", strUserCode);
         string strSearchProgress = DDL_SearchProgress.SelectedValue;
         if (!string.IsNullOrEmpty(strSearchProgress))
         {
@@ -935,7 +935,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
         //                left join T_ProjectMember t on p.TenderCompetent = t.UserCode
         //                left join T_ProjectMember s on p.Decision = s.UserCode
         //                where (p.PurchaseEngineer = '{0}' or p.TenderCompetent = '{0}')
-        //                and p.Progress in ('Submit','上报','Approved')", strUserCode);   //ChineseWord
+        //                and p.Progress in ('提交','上报','批准')", strUserCode);
         //string strSearchProgress = DDL_SearchProgress.SelectedValue;
         //if (!string.IsNullOrEmpty(strSearchProgress))
         //{
@@ -995,7 +995,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
                         left join T_WZSupplier s6 on p.SupplierCode6 = s6.SupplierCode
 
                         where (p.PurchaseEngineer = '{0}' or p.TenderCompetent = '{0}') ", strUserCode);
-        //and p.Progress in ('Submit','上报','Approved')", strUserCode);
+        //and p.Progress in ('提交','上报','批准')", strUserCode);
         string strSearchProgress = DDL_SearchProgress.SelectedValue;
         if (!string.IsNullOrEmpty(strSearchProgress))
         {
@@ -1040,7 +1040,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
     private void ControlStatusChange(string objTenderCompetent, string objPurchaseEngineer, string objProgress, string objIsMark, decimal objPlanMoney, string strPurchaseEndTime)
     {
 
-        if ((objTenderCompetent == strUserCode && objProgress == LanguageHandle.GetWord("DiJiao").ToString().Trim() && objPlanMoney >= 300000) || (objPurchaseEngineer == strUserCode && objProgress == LanguageHandle.GetWord("DiJiao").ToString().Trim() && objPlanMoney < 300000))
+        if ((objTenderCompetent == strUserCode && objProgress == "提交" && objPlanMoney >= 300000) || (objPurchaseEngineer == strUserCode && objProgress == "提交" && objPlanMoney < 300000))
         {
             BT_NewSetVolume.Enabled = true;                   //组卷
             BT_NewReport.Enabled = true;                   //上报
@@ -1048,7 +1048,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
             BT_NewReportReturn.Enabled = false;                   //上报退回
 
         }
-        else if ((objTenderCompetent == strUserCode && objProgress == LanguageHandle.GetWord("ShangBao").ToString().Trim() && objPlanMoney >= 300000) || (objPurchaseEngineer == strUserCode && objProgress == LanguageHandle.GetWord("ShangBao").ToString().Trim() && objPlanMoney < 300000))
+        else if ((objTenderCompetent == strUserCode && objProgress == "上报" && objPlanMoney >= 300000) || (objPurchaseEngineer == strUserCode && objProgress == "上报" && objPlanMoney < 300000))
         {
             BT_NewSetVolume.Enabled = false;                   //组卷
             BT_NewReport.Enabled = false;                    //上报
@@ -1061,12 +1061,12 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
             BT_NewReportReturn.Enabled = false;                  //上报退回
         }
 
-        if ((objTenderCompetent == strUserCode || objPurchaseEngineer == strUserCode) && objProgress == "Approved")
+        if ((objTenderCompetent == strUserCode || objPurchaseEngineer == strUserCode) && objProgress == "批准")
         {
             BT_NewEnquiry.Enabled = true;                    //询价
             BT_NewEnquiryReturn.Enabled = false;             //询价退回
         }
-        else if ((objTenderCompetent == strUserCode || objPurchaseEngineer == strUserCode) && objProgress == LanguageHandle.GetWord("XunJia").ToString().Trim())
+        else if ((objTenderCompetent == strUserCode || objPurchaseEngineer == strUserCode) && objProgress == "询价")
         {
             BT_NewEnquiry.Enabled = false;                    //询价
             BT_NewEnquiryReturn.Enabled = true;              //询价退回
@@ -1080,7 +1080,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
 
         DateTime dtPurchaseEndTime = DateTime.Now;
         DateTime.TryParse(strPurchaseEndTime, out dtPurchaseEndTime);
-        if ((objTenderCompetent == strUserCode || objPurchaseEngineer == strUserCode) && objProgress == LanguageHandle.GetWord("XunJia").ToString().Trim() && dtPurchaseEndTime <= DateTime.Now)
+        if ((objTenderCompetent == strUserCode || objPurchaseEngineer == strUserCode) && objProgress == "询价" && dtPurchaseEndTime <= DateTime.Now)
         {
             BT_NewAssessment.Enabled = true;                   //评标
         }
@@ -1089,7 +1089,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
             BT_NewAssessment.Enabled = false;                    //评标
         }
 
-        if ((objTenderCompetent == strUserCode || objPurchaseEngineer == strUserCode) && objProgress == LanguageHandle.GetWord("PingBiao").ToString().Trim())
+        if ((objTenderCompetent == strUserCode || objPurchaseEngineer == strUserCode) && objProgress == "评标")
         {
             BT_NewDecisionRecord.Enabled = true;                    //决策记录
             BT_NewApproval.Enabled = true;
@@ -1100,14 +1100,14 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
             BT_NewApproval.Enabled = false;
         }
 
-        if ((objTenderCompetent == strUserCode || objPurchaseEngineer == strUserCode) && objProgress == LanguageHandle.GetWord("BaoPi").ToString().Trim())
+        if ((objTenderCompetent == strUserCode || objPurchaseEngineer == strUserCode) && objProgress == "报批")
         {
             BT_NewApproval.Enabled = false;
             BT_NewApprovalReturn.Enabled = true;
             BT_NewScaling.Enabled = true;
         }
 
-        if (objProgress == LanguageHandle.GetWord("JueCe").ToString().Trim())
+        if (objProgress == "决策")
         {
             BT_NewScaling.Enabled = true;
             HL_NewScaling.Enabled = true;
@@ -1148,7 +1148,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
         {
             WZPurchase wZPurchase = (WZPurchase)listPurchase[0];
 
-            wZPurchase.Progress = LanguageHandle.GetWord("ShangBao").ToString().Trim();
+            wZPurchase.Progress = "上报";
             wZPurchase.PurchaseStartTime = "-";
             wZPurchase.UpLeader = arrUpLeader[0];
 
@@ -1157,7 +1157,7 @@ public partial class TTWZPurchasePlanList : System.Web.UI.Page
             //重新加载列表
             DataBinder();
 
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSBCG").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSBCG + "')", true);
         }
     }
 

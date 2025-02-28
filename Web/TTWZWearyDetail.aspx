@@ -131,8 +131,8 @@
                                                                 </HeaderTemplate>
                                                                 <ItemTemplate>
 
-                                                                    <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"WearyCode") %>' CommandName="submit" CssClass="notTab" Visible='<%# Eval("Process").ToString()=="Approval" ? true : false %>'>批准</asp:LinkButton>
-                                                                    <%--<asp:Button ID="Button1" runat="server" CssClass="inpu" Text="Approved" CommandName="submit" CommandArgument='<%# Eval("WearyCode") %>' Visible='<%# Eval("Process").ToString()=="Approval" ? true : false %>' />--%>
+                                                                    <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"WearyCode") %>' CommandName="submit" CssClass="notTab" Visible='<%# Eval("Process").ToString()=="报批" ? true : false %>'>批准</asp:LinkButton>
+                                                                    <%--<asp:Button ID="Button1" runat="server" CssClass="inpu" Text="批准" CommandName="submit" CommandArgument='<%# Eval("WearyCode") %>' Visible='<%# Eval("Process").ToString()=="报批" ? true : false %>' />--%>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
                                                             <asp:BoundColumn DataField="WearyCode" HeaderText="积压编号">
@@ -177,7 +177,7 @@
                                                                     <%# ShareClass.StringCutByRequire(Eval("Remark").ToString(), 190) %>
                                                                 </ItemTemplate>
                                                             </asp:TemplateColumn>
-                                                            <asp:BoundColumn DataField="Process" HeaderText="Progress">
+                                                            <asp:BoundColumn DataField="Process" HeaderText="进度">
                                                                 <ItemStyle CssClass="itemBorder" HorizontalAlign="Center" Width="8%" />
                                                             </asp:BoundColumn>
                                                             <asp:BoundColumn DataField="MainLeaderName" HeaderText="主管领导">

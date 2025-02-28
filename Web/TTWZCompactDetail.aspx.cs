@@ -83,8 +83,8 @@ public partial class TTWZCompactDetail : System.Web.UI.Page
                 WZPurchaseBLL wZPurchaseBLL = new WZPurchaseBLL();
                 string strWZPurchaseHQL = string.Format(@"from WZPurchase as wZPurchase 
                         where PurchaseEngineer = '{0}'
-                        and Progress in ('询价','评标','上报','Decision')
-                        and ProjectCode = '{1}' order by MarkTime desc ", wZCompact.PurchaseEngineer, wZCompact.ProjectCode);   //ChineseWord
+                        and Progress in ('询价','评标','上报','决策')
+                        and ProjectCode = '{1}' order by MarkTime desc ", wZCompact.PurchaseEngineer, wZCompact.ProjectCode);
                 IList listWZPurchase = wZPurchaseBLL.GetAllWZPurchases(strWZPurchaseHQL);
 
                 HF_SupplierCode.Value = wZCompact.SupplierCode;
@@ -135,7 +135,7 @@ public partial class TTWZCompactDetail : System.Web.UI.Page
                     DataTable dtCheckCompact = ShareClass.GetDataSetFromSql(strCheckCompactHQL, "CheckCompact").Tables[0];
                     if (dtCheckCompact != null && dtCheckCompact.Rows.Count > 0)
                     {
-                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCGDZDHTMXZYJCZ").ToString().Trim() + "')", true);
+                        ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCGDZDHTMXZYJCZ + "')", true);
                         return;
                     }
 
@@ -156,19 +156,19 @@ public partial class TTWZCompactDetail : System.Web.UI.Page
                                 string strPurchaseDetailSupplierCode = ShareClass.ObjectToString(dtPurchaseDetailSupplier.Rows[0]["SupplierCode"]);
                                 if (strCompactSupplierCode.Trim() != strPurchaseDetailSupplierCode.Trim())
                                 {
-                                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZHTLMDGYSYCGDGYSBYZ").ToString().Trim() + "')", true);
+                                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZHTLMDGYSYCGDGYSBYZ + "')", true);
                                     return;
                                 }
                             }
                             else
                             {
-                                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZCGDHWZGYS").ToString().Trim() + "')", true);
+                                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZCGDHWZGYS + "')", true);
                                 return;
                             }
                         }
                         else
                         {
-                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZHTBXXZHGYS").ToString().Trim() + "')", true);
+                            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZHTBXXZHGYS + "')", true);
                             return;
                         }
                     }
@@ -227,11 +227,11 @@ public partial class TTWZCompactDetail : System.Web.UI.Page
                     string strUpdateCompactHQL = "update T_WZCompact set CompactMoney = " + decimalCompactMoney + ",RowNumber=" + intRowNumber + ",IsMark=-1 where CompactCode = '" + strCompactCode + "'";
                     ShareClass.RunSqlCommand(strUpdateCompactHQL);
                     //修改采购清单的进度，使用标记
-                    string strUpdatePurchaseDetailHQL = "update T_WZPurchaseDetail set IsMark = -1,Progress='Contract' where ID = " + intPurchaseDetailID;   //ChineseWord
+                    string strUpdatePurchaseDetailHQL = "update T_WZPurchaseDetail set IsMark = -1,Progress='合同' where ID = " + intPurchaseDetailID;
                     ShareClass.RunSqlCommand(strUpdatePurchaseDetailHQL);
 
                     //修改领料计划明细进度
-                    string strUpdatePickingDetailHQL = "update T_WZPickingPlanDetail set Progress = 'Contract' where ID = " + intPlanDetailID;   //ChineseWord
+                    string strUpdatePickingDetailHQL = "update T_WZPickingPlanDetail set Progress = '合同' where ID = " + intPlanDetailID;
                     ShareClass.RunSqlCommand(strUpdatePickingDetailHQL);
 
                     //重新加载合同明细列表
@@ -259,7 +259,7 @@ public partial class TTWZCompactDetail : System.Web.UI.Page
                 DataTable dtCheckCompact = ShareClass.GetDataSetFromSql(strCheckCompactHQL, "CheckCompact").Tables[0];
                 if (dtCheckCompact != null && dtCheckCompact.Rows.Count > 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZWZDMZDHTMXZYJCZ").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZWZDMZDHTMXZYJCZ + "')", true);
                     return;
                 }
 
@@ -301,7 +301,7 @@ public partial class TTWZCompactDetail : System.Web.UI.Page
                 WZCompactDetail wZCompactDetail = (WZCompactDetail)listWZCompactDetail[0];
                 if (wZCompactDetail.IsMark != 0)
                 {
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSYBJBW0SBYXSC").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSYBJBW0SBYXSC + "')", true);
                     return;
                 }
 
@@ -339,7 +339,7 @@ public partial class TTWZCompactDetail : System.Web.UI.Page
                 DG_CompactDetail.CurrentPageIndex = 0;
                 DataCompactDetailBinder(strCompactCode);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCG + "')", true);
             }
         }
         else if (cmdName == "edit")
@@ -371,7 +371,7 @@ public partial class TTWZCompactDetail : System.Web.UI.Page
                     TXT_CompactMoney.ReadOnly = true;
                     LB_CompactPrice.Text = wZCompactDetail.CompactPrice.ToString();
 
-                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSYBJBW0SBYXXG").ToString().Trim() + "')", true);
+                    ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSYBJBW0SBYXXG + "')", true);
                     return;
                 }
                 else
@@ -414,7 +414,7 @@ public partial class TTWZCompactDetail : System.Web.UI.Page
         }
         catch
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBZBNBHFFZF").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBZBNBHFFZF + "')", true);
             return;
         }
     }
@@ -434,17 +434,17 @@ public partial class TTWZCompactDetail : System.Web.UI.Page
 
             if (!ShareClass.CheckStringRight(strStandardCode))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZGGSBHBNBHFFZF").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZGGSBHBNBHFFZF + "')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strFactory))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSCCJBNBHFFZF").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSCCJBNBHFFZF + "')", true);
                 return;
             }
             if (!ShareClass.CheckStringRight(strRemark))
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBZBNBHFFZF").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBZBNBHFFZF + "')", true);
                 return;
             }
 
@@ -454,13 +454,13 @@ public partial class TTWZCompactDetail : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLBXWSZX").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSLBXWSZX + "')", true);
                 return;
             }
 
             if (decimal.Parse(strCompactNumber) <= 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBIXUDAYULING").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBIXUDAYULING + "')", true);
                 return;
             }
 
@@ -470,13 +470,13 @@ public partial class TTWZCompactDetail : System.Web.UI.Page
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZSLBXWSZX").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZSLBXWSZX + "')", true);
                 return;
             }
 
             if (decimal.Parse(strCompactMoney) <= 0)
             {
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBIXUDAYULING").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBIXUDAYULING + "')", true);
                 return;
             }
 
@@ -504,12 +504,12 @@ public partial class TTWZCompactDetail : System.Web.UI.Page
                 //重新加载合同明细
                 DataCompactDetailBinder(strCompactCode);
 
-                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZBCCG").ToString().Trim() + "')", true);
+                ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZBCCG + "')", true);
             }
         }
         else
         {
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + LanguageHandle.GetWord("ZZXZYXGDHTMX").ToString().Trim() + "')", true);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, this.GetType(), "click", "alert('" + Resources.lang.ZZXZYXGDHTMX + "')", true);
             return;
         }
     }
@@ -531,7 +531,7 @@ public partial class TTWZCompactDetail : System.Web.UI.Page
     {
         TV_Type.Nodes.Clear();
         TreeNode Node = new TreeNode();
-        Node.Text = LanguageHandle.GetWord("QuanBuCaiLiao").ToString().Trim();
+        Node.Text = "全部材料";
         Node.Value = "all|0|0|0";
         string strDLSQL = "select * from T_WZMaterialDL";
         DataTable dtDL = ShareClass.GetDataSetFromSql(strDLSQL, "DL").Tables[0];

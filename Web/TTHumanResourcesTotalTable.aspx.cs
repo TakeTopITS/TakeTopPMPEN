@@ -155,13 +155,13 @@ public partial class TTHumanResourcesTotalTable : System.Web.UI.Page
         {
             if (ddl_ProjectID.SelectedValue.Trim() == "0")
             {
-                strHQL = "select C.WorkType '职称/工种',C.NumberUsedTotal 'PlannedLaborHours',COALESCE(D.NumberAllTotal,0) 'ReservedLaborHours' from (select A.WorkType,SUM(NumberUsed) NumberUsedTotal from " +   //ChineseWord
+                strHQL = "select C.WorkType '职称/工种',C.NumberUsedTotal 'PlannedLaborHours',COALESCE(D.NumberAllTotal,0) 'ReservedLaborHours' from (select A.WorkType,SUM(NumberUsed) NumberUsedTotal from " +   
                     "T_ProjectMemberSchedule A group by A.WorkType) C left join (select B.WorkType,SUM(NumberAll) NumberAllTotal " +
                     "from T_ProjectMemberScheduleBase B group by B.WorkType) D on C.WorkType=D.WorkType";
             }
             else
             {
-                strHQL = "select C.WorkType '职称/工种',C.NumberUsedTotal 'PlannedLaborHours',COALESCE(D.NumberAllTotal,0) 'ReservedLaborHours' from (select A.WorkType,SUM(NumberUsed) NumberUsedTotal from " +   //ChineseWord
+                strHQL = "select C.WorkType '职称/工种',C.NumberUsedTotal 'PlannedLaborHours',COALESCE(D.NumberAllTotal,0) 'ReservedLaborHours' from (select A.WorkType,SUM(NumberUsed) NumberUsedTotal from " +   
                     "T_ProjectMemberSchedule A where A.ProjectID='" + ddl_ProjectID.SelectedValue.Trim() + "' group by A.WorkType) C left join (select B.WorkType,SUM(NumberAll) NumberAllTotal " +
                     "from T_ProjectMemberScheduleBase B where B.ProjectID='" + ddl_ProjectID.SelectedValue.Trim() + "' group by B.WorkType) D on C.WorkType=D.WorkType";
             }
@@ -170,13 +170,13 @@ public partial class TTHumanResourcesTotalTable : System.Web.UI.Page
         {
             if (ddl_ProjectID.SelectedValue.Trim() == "0")
             {
-                strHQL = "select C.HumanSubgroups 'HumanResourceSubgroup',C.NumberUsedTotal 'PlannedLaborHours',COALESCE(D.NumberAllTotal,0) 'ReservedLaborHours' from (select A.HumanSubgroups,SUM(NumberUsed) NumberUsedTotal from " +   //ChineseWord
+                strHQL = "select C.HumanSubgroups 'HumanResourceSubgroup',C.NumberUsedTotal 'PlannedLaborHours',COALESCE(D.NumberAllTotal,0) 'ReservedLaborHours' from (select A.HumanSubgroups,SUM(NumberUsed) NumberUsedTotal from " +   
                     "T_ProjectMemberSchedule A group by A.HumanSubgroups) C left join (select B.HumanSubgroups,SUM(NumberAll) NumberAllTotal " +
                     "from T_ProjectMemberScheduleBase B group by B.HumanSubgroups) D on C.HumanSubgroups=D.HumanSubgroups";
             }
             else
             {
-                strHQL = "select C.HumanSubgroups 'HumanResourceSubgroup',C.NumberUsedTotal 'PlannedLaborHours',COALESCE(D.NumberAllTotal,0) 'ReservedLaborHours' from (select A.HumanSubgroups,SUM(NumberUsed) NumberUsedTotal from " +   //ChineseWord
+                strHQL = "select C.HumanSubgroups 'HumanResourceSubgroup',C.NumberUsedTotal 'PlannedLaborHours',COALESCE(D.NumberAllTotal,0) 'ReservedLaborHours' from (select A.HumanSubgroups,SUM(NumberUsed) NumberUsedTotal from " +   
                     "T_ProjectMemberSchedule A where A.ProjectID='" + ddl_ProjectID.SelectedValue.Trim() + "' group by A.HumanSubgroups) C left join (select B.HumanSubgroups,SUM(NumberAll) NumberAllTotal " +
                     "from T_ProjectMemberScheduleBase B where B.ProjectID='" + ddl_ProjectID.SelectedValue.Trim() + "' group by B.HumanSubgroups) D on C.HumanSubgroups=D.HumanSubgroups";
             }

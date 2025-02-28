@@ -549,7 +549,7 @@ public partial class TTBMAnnInvitation : System.Web.UI.Page
             flag1 = false;
         }
 
-        strHQL = "from WorkFlow as workFlow where workFlow.WLType = 'BidRecommendation' and workFlow.RelatedType='Other' and workFlow.RelatedID = '" + strID + "' ";   //ChineseWord
+        strHQL = "from WorkFlow as workFlow where workFlow.WLType = 'BidRecommendation' and workFlow.RelatedType='Other' and workFlow.RelatedID = '" + strID + "' ";   
         WorkFlowBLL workFlowBLL = new WorkFlowBLL();
         IList lst = workFlowBLL.GetAllWorkFlows(strHQL);
         if (lst.Count > 0 && lst != null)
